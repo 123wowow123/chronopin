@@ -2,6 +2,8 @@
 
 ## 2026-10-16
 
+* **Update:** Completed 105 production translations across seven pins in all 15 non-English locales (90 missing, 15 outdated). Verified zero remaining due pins, localized responses in every language, and unchanged English text and authors. Recovered from temporary production 502s without deployment. Artifacts: ignored `.scrape/prod-batches/translations-2026-10-16-evening/`.
+
 * **Update:** Refreshed production translations across 76 pins in all 15 non-English locales: 900 missing and 240 outdated rows (1,140 total), including 12 pins created during the run. Final global export returned zero due pins. Public localized checks covered all 76 pins and every locale; original English text and authors were unchanged. Artifacts: ignored `.scrape/prod-batches/translations-2026-10-16-refresh/` and `translations-2026-10-16-refresh-wave2/`.
 
 * **Update:** Cleared the production translation backlog across 90 pins: 1,290 missing and 60 outdated translations saved in all 15 non-English locales (1,350 rows). Final global export returned zero due pins; 30 public localized checks covered every locale, and English text and authors were verified unchanged for all 90 pins. Artifacts: ignored `.scrape/prod-batches/translations-2026-10-16-all/`.

@@ -1,30 +1,30 @@
 # Japan restaurant target audit — October 16, 2026
 
-Target: **30 distinct eligible restaurants in every tab of every city**. **411 verified memberships; 314 still missing**. This target remains incomplete; surplus in another tab does not offset a shortage.
+Target: **30 distinct eligible restaurants in every tab of every city**. **420 verified memberships; 306 still missing**. This target remains incomplete; surplus in another tab does not offset a shortage.
 
-All 24 local and production public guide counts agree after batch 62. Latest additions are Fukuoka Rokumei Coffee Just opened, Osaka Sushi Toka Coming soon and Nagoya Self Cafe Marunouchi Coming soon. Refreshed at 2026-10-17 04:05 UTC (October 17, 13:05 JST / October 16, 21:05 PDT); eligibility uses Japan local time. Baseline was 357 memberships / 368 missing. Specials count each venue once across available/upcoming offers; recent openings age out after90days and expired offers drop out automatically.
+All 24 local and production public guide counts agree after batch 64 at **420 memberships / 306 missing**, refreshed 2026-10-17T13:54:16.707503+00:00 (October 17, 22:54 JST / October 17, 06:54 PDT). Fukuoka Just opened now17 and Sapporo Just opened11. Existing Sanrio and Miyanomori enrichments add no distinct memberships. Specials count each venue once across available/upcoming offers. Earlier batch checkpoints below are historical.
 
 | City (west to east) | Coming soon | Just opened | Top restaurants | Specials |
 | --- | ---: | ---: | ---: | ---: |
-| Fukuoka | 10/30 | 14/30 | 14/30 | 23/30 |
-| Osaka | 11/30 | 14/30 | 10/30 | 16/30 |
+| Fukuoka | 10/30 | 17/30 | 14/30 | 23/30 |
+| Osaka | 11/30 | 14/30 | 10/30 | 19/30 |
 | Kyoto | 9/30 | 31/30 | 10/30 | 30/30 |
 | Nagoya | 11/30 | 22/30 | 12/30 | 17/30 |
-| Tokyo | 11/30 | 11/30 | 24/30 | 32/30 |
-| Sapporo | 7/30 | 10/30 | 30/30 | 32/30 |
+| Tokyo | 11/30 | 12/30 | 24/30 | 33/30 |
+| Sapporo | 7/30 | 11/30 | 30/30 | 32/30 |
 
 ## Each remaining shortage
 
 | City | Tab | Local | Production | Target | Shortfall |
 | --- | --- | ---: | ---: | ---: | ---: |
 | Fukuoka | Coming soon | 10 | 10 | 30 | 20 |
-| Fukuoka | Just opened | 14 | 14 | 30 | 16 |
+| Fukuoka | Just opened | 17 | 17 | 30 | 13 |
 | Fukuoka | Top restaurants | 14 | 14 | 30 | 16 |
 | Fukuoka | Specials | 23 | 23 | 30 | 7 |
 | Osaka | Coming soon | 11 | 11 | 30 | 19 |
 | Osaka | Just opened | 14 | 14 | 30 | 16 |
 | Osaka | Top restaurants | 10 | 10 | 30 | 20 |
-| Osaka | Specials | 16 | 16 | 30 | 14 |
+| Osaka | Specials | 19 | 19 | 30 | 11 |
 | Kyoto | Coming soon | 9 | 9 | 30 | 21 |
 | Kyoto | Just opened | 31 | 31 | 30 | 0 |
 | Kyoto | Top restaurants | 10 | 10 | 30 | 20 |
@@ -34,11 +34,11 @@ All 24 local and production public guide counts agree after batch 62. Latest add
 | Nagoya | Top restaurants | 12 | 12 | 30 | 18 |
 | Nagoya | Specials | 17 | 17 | 30 | 13 |
 | Tokyo | Coming soon | 11 | 11 | 30 | 19 |
-| Tokyo | Just opened | 11 | 11 | 30 | 19 |
+| Tokyo | Just opened | 12 | 12 | 30 | 18 |
 | Tokyo | Top restaurants | 24 | 24 | 30 | 6 |
-| Tokyo | Specials | 32 | 32 | 30 | 0 |
+| Tokyo | Specials | 33 | 33 | 30 | 0 |
 | Sapporo | Coming soon | 7 | 7 | 30 | 23 |
-| Sapporo | Just opened | 10 | 10 | 30 | 20 |
+| Sapporo | Just opened | 11 | 11 | 30 | 19 |
 | Sapporo | Top restaurants | 30 | 30 | 30 | 0 |
 | Sapporo | Specials | 32 | 32 | 30 | 0 |
 
@@ -61,3 +61,13 @@ Batch60 enriched the existing Sushisei Kyoto Isetan ordinary menu with43 priced 
 Batch61 adds three distinct branch pins,99 ordinary menu entries, one Specials profile containing three dated offers and28 offer-menu entries, and eight Azure gallery links. Public exact profiles, menus, credits and native guide title/image links verified in both environments; multiple offers at Anchor count once. See [batch61](restaurant-japan-30-japan61-2026-10-16.json).
 
 Batch62 adds three branches,45ordinary menu entries and eight credited Azure gallery links. No new Special or opening-date repair claimed. Toka’s service-charge rate/course roster remain unpublished; promotional renders/artwork are explicitly captioned. See [batch62](restaurant-japan-30-japan62-2026-10-16.json).
+
+
+## Batch 63 production retry completed
+
+All four branches are now published and publicly verified in both environments. All 24 counts agree at **416 memberships / 310 missing**, refreshed 2026-10-17 13:41 UTC (October 17, 22:41 JST / October 17, 06:41 PDT). The earlier timeout was resolved by paced API retries; no deployment or restart. [Batch verification](restaurant-japan-30-japan63-2026-10-16.json).
+
+
+## Batch 64 completed
+
+Four new branches and two existing-profile enrichments published through APIs. Full profiles, all 169 menu entries, 25 gallery credits and native guide cards verified. Both environments agree at **420 / 306**. [Batch evidence](restaurant-japan-30-japan64-2026-10-17.json). No new offer, opening-date repair or deployment.

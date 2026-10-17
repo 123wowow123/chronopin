@@ -1,0 +1,3574 @@
+{
+  "checkedAt": "2026-10-17",
+  "status": "published and publicly verified in local and production",
+  "country": "Japan",
+  "regions": [
+    "fukuoka",
+    "nagoya",
+    "sapporo"
+  ],
+  "entries": [
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Cafe & Dining Reen — YADO/Re Yakuin Opens in Yakuin",
+        "description": "An all-day cafe serving pancakes, French toast, open sandwiches and mocktails inside YADO/Re Yakuin.",
+        "sourceUrl": "https://yadoreyakuin.en-mn.jp/cafe/",
+        "address": "1F YADO/Re Yakuin, 1-1-28 Shirogane, Chuo-ku, Fukuoka",
+        "productName": "Cafe & Dining Reen — YADO/Re Yakuin",
+        "utcStartDateTime": "2026-09-15T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "Local Design’s September 15, 2026 exact restaurant launch release explicitly confirms this cafe opened that day; the hotel construction/renovation date is not used.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Fukuoka",
+          "Japan",
+          "Yakuin",
+          "Cafe / all-day dining"
+        ],
+        "longFormSummary": "<p>An all-day cafe serving pancakes, French toast, open sandwiches and mocktails inside YADO/Re Yakuin.<cite data-ref=\"https://yadoreyakuin.en-mn.jp/cafe/\"></cite></p><p>Local Design’s September 15, 2026 exact restaurant launch release explicitly confirms this cafe opened that day; the hotel construction/renovation date is not used.</p>",
+        "references": [
+          {
+            "url": "https://yadoreyakuin.en-mn.jp/cafe/",
+            "title": "Cafe & Dining Reen — YADO/Re Yakuin source",
+            "confidence": 90,
+            "reasoning": "Local Design’s September 15, 2026 exact restaurant launch release explicitly confirms this cafe opened that day; the hotel construction/renovation date is not used."
+          },
+          {
+            "url": "https://prtimes.jp/main/html/rd/p/000000033.000111433.html",
+            "title": "Cafe & Dining Reen — YADO/Re Yakuin source",
+            "confidence": 90,
+            "reasoning": "Local Design’s September 15, 2026 exact restaurant launch release explicitly confirms this cafe opened that day; the hotel construction/renovation date is not used."
+          },
+          {
+            "url": "https://yadoreyakuin.en-mn.jp/wp/wp-content/themes/yadore/assets/images/cafe/Reen_MENU.pdf",
+            "title": "Cafe & Dining Reen — YADO/Re Yakuin source",
+            "confidence": 90,
+            "reasoning": "Local Design’s September 15, 2026 exact restaurant launch release explicitly confirms this cafe opened that day; the hotel construction/renovation date is not used."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://yadoreyakuin.en-mn.jp/cafe/",
+          "menu": {
+            "pinSourceUrl": "https://yadoreyakuin.en-mn.jp/cafe/",
+            "name": "Cafe & Dining Reen — YADO/Re Yakuin",
+            "checkedAt": "2026-10-17",
+            "menus": [
+              {
+                "label": "Reen branch food and desserts",
+                "url": "https://yadoreyakuin.en-mn.jp/cafe/",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "Bacon-and-egg pancakes with salad and soup",
+                    "price": 2000
+                  },
+                  {
+                    "name": "Avocado-cheese pancakes with salad and soup",
+                    "price": 2000
+                  },
+                  {
+                    "name": "Blueberry-cream pancakes",
+                    "price": 1200
+                  },
+                  {
+                    "name": "Chocolate-banana ice-cream pancakes",
+                    "price": 1500
+                  },
+                  {
+                    "name": "Egg Egg Egg French toast with salad and soup",
+                    "price": 2000
+                  },
+                  {
+                    "name": "Open sandwich A — egg salad, avocado and bacon",
+                    "price": 1800
+                  },
+                  {
+                    "name": "Open sandwich A — half size",
+                    "price": 1000
+                  },
+                  {
+                    "name": "Open sandwich B — fried egg, prosciutto, tomato and cheese",
+                    "price": 1800
+                  },
+                  {
+                    "name": "Open sandwich B — half size",
+                    "price": 1000
+                  },
+                  {
+                    "name": "Grilled chicken and avocado Cobb salad bowl",
+                    "price": 1700
+                  },
+                  {
+                    "name": "Grilled salmon and avocado honey-mustard salad bowl",
+                    "price": 1700
+                  },
+                  {
+                    "name": "Poutine",
+                    "price": 1200
+                  },
+                  {
+                    "name": "Chilli-bean fries",
+                    "price": 1200
+                  },
+                  {
+                    "name": "Truffle-oil fries",
+                    "price": 900
+                  },
+                  {
+                    "name": "Shrimp fritters and chips",
+                    "price": 1100
+                  },
+                  {
+                    "name": "Chilli hot dog",
+                    "price": 1300
+                  },
+                  {
+                    "name": "Large ice-cream creme brulee",
+                    "price": 1100
+                  },
+                  {
+                    "name": "Hot-fudge sundae",
+                    "price": 900
+                  }
+                ],
+                "note": "Current exact-branch hotel-linked PDF. All prices include tax. Dine-in requires one drink. Salad and soup are included only with the three specifically labelled pancake/French-toast plates; sandwich half sizes have distinct prices. No seasonal end date published.",
+                "documentUrl": "https://yadoreyakuin.en-mn.jp/wp/wp-content/themes/yadore/assets/images/cafe/Reen_MENU.pdf"
+              },
+              {
+                "label": "Reen branch drinks and toppings",
+                "url": "https://yadoreyakuin.en-mn.jp/cafe/",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "Drip coffee — hot, regular",
+                    "price": 600
+                  },
+                  {
+                    "name": "Cold-brew iced coffee — regular",
+                    "price": 600
+                  },
+                  {
+                    "name": "Cold-brew iced coffee — large",
+                    "price": 700
+                  },
+                  {
+                    "name": "Espresso — hot",
+                    "price": 400
+                  },
+                  {
+                    "name": "Cappuccino — hot, regular",
+                    "price": 650
+                  },
+                  {
+                    "name": "Reen lemonade — regular, hot or iced",
+                    "price": 700
+                  },
+                  {
+                    "name": "Reen lemonade soda — regular",
+                    "price": 700
+                  },
+                  {
+                    "name": "Vanilla ice-cream topping",
+                    "price": 300
+                  },
+                  {
+                    "name": "Matcha ice-cream topping",
+                    "price": 300
+                  },
+                  {
+                    "name": "Heineken",
+                    "price": 800
+                  },
+                  {
+                    "name": "Heartland beer",
+                    "price": 700
+                  },
+                  {
+                    "name": "Kaku highball",
+                    "price": 650
+                  },
+                  {
+                    "name": "Riku highball",
+                    "price": 700
+                  },
+                  {
+                    "name": "Reen mojito",
+                    "price": 1200
+                  },
+                  {
+                    "name": "Reen lemon sour",
+                    "price": 900
+                  },
+                  {
+                    "name": "Americano — regular, hot or iced",
+                    "price": 500
+                  },
+                  {
+                    "name": "Americano — large, iced only",
+                    "price": 600
+                  },
+                  {
+                    "name": "Cafe latte — regular, hot or iced",
+                    "price": 650
+                  },
+                  {
+                    "name": "Cafe latte — large, iced only",
+                    "price": 750
+                  },
+                  {
+                    "name": "Caramel latte — regular, hot or iced",
+                    "price": 700
+                  },
+                  {
+                    "name": "Caramel latte — large, iced only",
+                    "price": 800
+                  },
+                  {
+                    "name": "Vanilla latte — regular, hot or iced",
+                    "price": 700
+                  },
+                  {
+                    "name": "Vanilla latte — large, iced only",
+                    "price": 800
+                  },
+                  {
+                    "name": "Yame Hoshino matcha latte — regular, hot or iced",
+                    "price": 700
+                  },
+                  {
+                    "name": "Yame Hoshino matcha latte — large, iced only",
+                    "price": 800
+                  },
+                  {
+                    "name": "Japanese black tea — regular, hot or iced",
+                    "price": 500
+                  },
+                  {
+                    "name": "Japanese black tea — large, iced only",
+                    "price": 600
+                  },
+                  {
+                    "name": "Lemongrass and rosemary herbal tea — regular, hot or iced",
+                    "price": 600
+                  },
+                  {
+                    "name": "Lemongrass and rosemary herbal tea — large, iced only",
+                    "price": 700
+                  },
+                  {
+                    "name": "German chamomile herbal tea — regular, hot or iced",
+                    "price": 600
+                  },
+                  {
+                    "name": "German chamomile herbal tea — large, iced only",
+                    "price": 700
+                  },
+                  {
+                    "name": "Cold-brew Yame sencha — regular",
+                    "price": 500
+                  },
+                  {
+                    "name": "Cold-brew Yame sencha — large",
+                    "price": 600
+                  },
+                  {
+                    "name": "Apple juice — regular",
+                    "price": 500
+                  },
+                  {
+                    "name": "Apple juice — large",
+                    "price": 600
+                  },
+                  {
+                    "name": "Green Refresh mocktail",
+                    "price": 1100
+                  },
+                  {
+                    "name": "Mira Fizz mocktail",
+                    "price": 1100
+                  },
+                  {
+                    "name": "Peach Melba Frost mocktail",
+                    "price": 1100
+                  },
+                  {
+                    "name": "Morning Cinema Roast mocktail",
+                    "price": 1100
+                  }
+                ],
+                "note": "Tax included. Hot drinks are regular size only, per PDF footer; large prices apply to iced drinks. Vanilla/matcha ice cream are toppings, not standalone dessert portions. Mocktails are alcohol-free. No service-charge rule published.",
+                "documentUrl": "https://yadoreyakuin.en-mn.jp/wp/wp-content/themes/yadore/assets/images/cafe/Reen_MENU.pdf"
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://yadoreyakuin.en-mn.jp/cafe/",
+            "name": "Cafe & Dining Reen — YADO/Re Yakuin",
+            "checkedAt": "2026-10-17",
+            "websiteUrl": "https://yadoreyakuin.en-mn.jp/cafe/",
+            "phone": null,
+            "openingHours": [
+              {
+                "days": "Breakfast",
+                "hours": "07:00–10:00; last order09:30"
+              },
+              {
+                "days": "Cafe and dining",
+                "hours": "11:00–23:00; last order22:00; daily"
+              }
+            ],
+            "detailsSourceUrl": "https://yadoreyakuin.en-mn.jp/cafe/",
+            "additionalSources": [
+              {
+                "label": "Research evidence",
+                "url": "https://prtimes.jp/main/html/rd/p/000000033.000111433.html"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://yadoreyakuin.en-mn.jp/wp/wp-content/themes/yadore/assets/images/cafe/Reen_MENU.pdf"
+              }
+            ],
+            "hoursNote": "Current hotel page separates breakfast and cafe service; do not imply continuous food service10:00–11:00. Hotel guests and local visitors welcome. Launch release lists60seats, all non-smoking. Operator corporate phone is not a verified restaurant reservation number."
+          },
+          "tile": {
+            "regionSlug": "fukuoka",
+            "kind": "opening",
+            "slug": "japan64-reen",
+            "name": "Cafe & Dining Reen — YADO/Re Yakuin",
+            "neighborhood": "Yakuin",
+            "cuisine": "Cafe / all-day dining",
+            "description": "An all-day cafe serving pancakes, French toast, open sandwiches and mocktails inside YADO/Re Yakuin.",
+            "address": "1F YADO/Re Yakuin, 1-1-28 Shirogane, Chuo-ku, Fukuoka",
+            "websiteUrl": "https://yadoreyakuin.en-mn.jp/cafe/",
+            "checkedAt": "2026-10-17",
+            "recognition": "",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-17/batch64-reen-1-62344c3dbca0a023.webp",
+            "imageCredit": "Local Design / Cafe&Dining Reen",
+            "imageSourceUrl": "https://prtimes.jp/main/html/rd/p/000000033.000111433.html",
+            "imageNote": "Operator launch gallery of Reen.",
+            "openingConfirmed": true,
+            "day": "2026-09-15"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-17/batch64-reen-1-62344c3dbca0a023.webp",
+          "sha256": "62344c3dbca0a023de1e101540230607eb9e9a31c75ef5b19e505fed7a957f3e",
+          "width": 1600,
+          "height": 1067,
+          "credit": "Local Design / Cafe&Dining Reen",
+          "note": "Operator launch gallery of Reen.",
+          "sourcePage": "https://prtimes.jp/main/html/rd/p/000000033.000111433.html"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-17/batch64-reen-2-3d3aea2625d02382.webp",
+          "sha256": "3d3aea2625d0238224c91d599f7327d2364a94d9a05f2b6bd6e41fc867ae9c14",
+          "width": 1600,
+          "height": 1067,
+          "credit": "Local Design / Cafe&Dining Reen",
+          "note": "Operator launch gallery of Reen.",
+          "sourcePage": "https://prtimes.jp/main/html/rd/p/000000033.000111433.html"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-17/batch64-reen-3-df5e61693d88c1f2.webp",
+          "sha256": "df5e61693d88c1f247bb5ca9edbef6aee44c4b103029503143f71b865b6624e8",
+          "width": 1600,
+          "height": 2400,
+          "credit": "Local Design / Cafe&Dining Reen",
+          "note": "Bacon-and-egg pancake with salad and soup, as labelled in the operator release.",
+          "sourcePage": "https://prtimes.jp/main/html/rd/p/000000033.000111433.html"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-17/batch64-reen-4-48ac9de7403226bf.webp",
+          "sha256": "48ac9de7403226bfbf894b6ad6aa7a14a9f7ce2a42438e671562e26cdb06cdbd",
+          "width": 1600,
+          "height": 2400,
+          "credit": "Local Design / Cafe&Dining Reen",
+          "note": "Egg Egg Egg French toast with salad and soup, as labelled in the operator release.",
+          "sourcePage": "https://prtimes.jp/main/html/rd/p/000000033.000111433.html"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-17/batch64-reen-5-cbe1ebf9fb3cdb62.webp",
+          "sha256": "cbe1ebf9fb3cdb62ec26a9c84c6a135607db280d3e85208d423af3f337dc5a48",
+          "width": 1600,
+          "height": 2400,
+          "credit": "Local Design / Cafe&Dining Reen",
+          "note": "Grilled chicken and avocado Cobb salad, as labelled in the operator release.",
+          "sourcePage": "https://prtimes.jp/main/html/rd/p/000000033.000111433.html"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-17/batch64-reen-6-d01b78be6a6b26ca.webp",
+          "sha256": "d01b78be6a6b26ca4bcfefa12fa33fa5b79dd98c6f30d002cb89f21a5db4275e",
+          "width": 1600,
+          "height": 2400,
+          "credit": "Local Design / Cafe&Dining Reen",
+          "note": "Poutine, as labelled in the operator release.",
+          "sourcePage": "https://prtimes.jp/main/html/rd/p/000000033.000111433.html"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-17/batch64-reen-7-7a316b81aed88d4c.webp",
+          "sha256": "7a316b81aed88d4c6cc1bd77d159f2ba9268c4d33f63c77314099d83e83d0db5",
+          "width": 1600,
+          "height": 2400,
+          "credit": "Local Design / Cafe&Dining Reen",
+          "note": "Reen mojito, as labelled in the operator release.",
+          "sourcePage": "https://prtimes.jp/main/html/rd/p/000000033.000111433.html"
+        }
+      ],
+      "verification": {
+        "local": {
+          "pinId": 16242,
+          "sourceUrl": "https://yadoreyakuin.en-mn.jp/cafe/",
+          "name": "Cafe & Dining Reen — YADO/Re Yakuin",
+          "contentId": 1665,
+          "contentRevision": 1,
+          "verifiedGalleryLinks": 7,
+          "publicPinStatus": 200
+        },
+        "production": {
+          "pinId": 16290,
+          "sourceUrl": "https://yadoreyakuin.en-mn.jp/cafe/",
+          "name": "Cafe & Dining Reen — YADO/Re Yakuin",
+          "contentId": 1665,
+          "contentRevision": 1,
+          "verifiedGalleryLinks": 7,
+          "publicPinStatus": 200
+        }
+      }
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "APOC COFFEE — Hakata Chikushiguchi Opens in Hakata Station",
+        "description": "The second APOC cafe, serving cheesecake, coffee and fresh pasta beside Hakata Station.",
+        "sourceUrl": "https://prtimes.jp/main/html/rd/p/000000005.000179600.html",
+        "address": "VIERRA Hakata Terrace, 4-38-10 Hakataekimae, Hakata-ku, Fukuoka",
+        "productName": "APOC COFFEE — Hakata Chikushiguchi",
+        "utcStartDateTime": "2026-09-18T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "WOF’s exact-branch operator announcement and contemporaneous September17firsthand preview agree on September18,2026; this is distinct from the2024Hakataekimae first branch.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Fukuoka",
+          "Japan",
+          "Hakata Station",
+          "Cafe / cheesecake"
+        ],
+        "longFormSummary": "<p>The second APOC cafe, serving cheesecake, coffee and fresh pasta beside Hakata Station.<cite data-ref=\"https://prtimes.jp/main/html/rd/p/000000005.000179600.html\"></cite></p><p>WOF’s exact-branch operator announcement and contemporaneous September17firsthand preview agree on September18,2026; this is distinct from the2024Hakataekimae first branch.</p>",
+        "references": [
+          {
+            "url": "https://prtimes.jp/main/html/rd/p/000000005.000179600.html",
+            "title": "APOC COFFEE — Hakata Chikushiguchi source",
+            "confidence": 90,
+            "reasoning": "WOF’s exact-branch operator announcement and contemporaneous September17firsthand preview agree on September18,2026; this is distinct from the2024Hakataekimae first branch."
+          },
+          {
+            "url": "https://tabe-ry.com/50059/",
+            "title": "APOC COFFEE — Hakata Chikushiguchi source",
+            "confidence": 90,
+            "reasoning": "WOF’s exact-branch operator announcement and contemporaneous September17firsthand preview agree on September18,2026; this is distinct from the2024Hakataekimae first branch."
+          },
+          {
+            "url": "https://tabelog.com/fukuoka/A4001/A400101/40074821/",
+            "title": "APOC COFFEE — Hakata Chikushiguchi source",
+            "confidence": 90,
+            "reasoning": "WOF’s exact-branch operator announcement and contemporaneous September17firsthand preview agree on September18,2026; this is distinct from the2024Hakataekimae first branch."
+          },
+          {
+            "url": "https://www.instagram.com/apoc_coffee/",
+            "title": "APOC COFFEE — Hakata Chikushiguchi source",
+            "confidence": 90,
+            "reasoning": "WOF’s exact-branch operator announcement and contemporaneous September17firsthand preview agree on September18,2026; this is distinct from the2024Hakataekimae first branch."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://prtimes.jp/main/html/rd/p/000000005.000179600.html",
+          "menu": {
+            "pinSourceUrl": "https://prtimes.jp/main/html/rd/p/000000005.000179600.html",
+            "name": "APOC COFFEE — Hakata Chikushiguchi",
+            "checkedAt": "2026-10-17",
+            "menus": [
+              {
+                "label": "APOC Chikushiguchi opening dishes",
+                "url": "https://prtimes.jp/main/html/rd/p/000000005.000179600.html",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "APOC cheesecake",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Drinkable Gorgonzola cheesecake",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Coffee",
+                    "priceLabel": "Price not published"
+                  }
+                ],
+                "note": "Operator exact-branch release names these items without prices; no flavours inferred from unlabelled photographs. Cakes and drinks have takeaway options; tax/service rules not published. The operator gallery is launch food photography, not proof of a completed dining room."
+              },
+              {
+                "label": "Chikushiguchi September opening preview",
+                "url": "https://tabe-ry.com/50059/",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Apple and caramel rare cheesecake",
+                    "price": 620,
+                    "note": "Named regular item in September17branch preview; recheck current stock."
+                  },
+                  {
+                    "name": "Mentaiko cream fresh pasta",
+                    "price": 1200,
+                    "note": "September17branch preview. No price for larger portion published."
+                  },
+                  {
+                    "name": "Shine Muscat, white-chocolate and Earl Grey cheesecake",
+                    "price": 880,
+                    "note": "Seasonal September opening sample; current availability and end date unverified."
+                  }
+                ],
+                "note": "Prices reported in the exact branch’s September17firsthand preview. Seasonal cheesecake is retained as a dated sample, not an active timed Special or guaranteed October stock. No two unnamed pasta varieties or unpriced portion supplement inferred."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://prtimes.jp/main/html/rd/p/000000005.000179600.html",
+            "name": "APOC COFFEE — Hakata Chikushiguchi",
+            "checkedAt": "2026-10-17",
+            "websiteUrl": "https://prtimes.jp/main/html/rd/p/000000005.000179600.html",
+            "phone": null,
+            "openingHours": [
+              {
+                "days": "Operator launch hours",
+                "hours": "11:30–24:00; food last order22:00, drinks23:30; irregular closures"
+              }
+            ],
+            "detailsSourceUrl": "https://prtimes.jp/main/html/rd/p/000000005.000179600.html",
+            "additionalSources": [
+              {
+                "label": "Research evidence",
+                "url": "https://tabe-ry.com/50059/"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://tabelog.com/fukuoka/A4001/A400101/40074821/"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://www.instagram.com/apoc_coffee/"
+              }
+            ],
+            "hoursNote": "Operator and opening preview say11:30opening; current crowd-edited Tabelog listing says11:00. Confirm before an early visit. Instagram returned login-oriented material; no unpublished current menu or restaurant phone inferred."
+          },
+          "tile": {
+            "regionSlug": "fukuoka",
+            "kind": "opening",
+            "slug": "japan64-apoc",
+            "name": "APOC COFFEE — Hakata Chikushiguchi",
+            "neighborhood": "Hakata Station",
+            "cuisine": "Cafe / cheesecake",
+            "description": "The second APOC cafe, serving cheesecake, coffee and fresh pasta beside Hakata Station.",
+            "address": "VIERRA Hakata Terrace, 4-38-10 Hakataekimae, Hakata-ku, Fukuoka",
+            "websiteUrl": "https://prtimes.jp/main/html/rd/p/000000005.000179600.html",
+            "checkedAt": "2026-10-17",
+            "recognition": "",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-17/batch64-apoc-1-120225f816d79143.webp",
+            "imageCredit": "WOF / APOC COFFEE",
+            "imageSourceUrl": "https://prtimes.jp/main/html/rd/p/000000005.000179600.html",
+            "imageNote": "Operator food-and-drink presentation from the exact Chikushiguchi launch release; no unlabelled dish ingredients inferred.",
+            "openingConfirmed": true,
+            "day": "2026-09-18"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-17/batch64-apoc-1-120225f816d79143.webp",
+          "sha256": "120225f816d791430474c0021e2cfbb257c456f5d99780ed7e8dba9a3fb1733a",
+          "width": 1600,
+          "height": 1067,
+          "credit": "WOF / APOC COFFEE",
+          "note": "Operator food-and-drink presentation from the exact Chikushiguchi launch release; no unlabelled dish ingredients inferred.",
+          "sourcePage": "https://prtimes.jp/main/html/rd/p/000000005.000179600.html"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-17/batch64-apoc-2-a86ef4b199dd4ffb.webp",
+          "sha256": "a86ef4b199dd4ffbb534eea9b873a739b5bb28c5ada4388c4b25d2721ddf419b",
+          "width": 1600,
+          "height": 1067,
+          "credit": "WOF / APOC COFFEE",
+          "note": "Operator food-and-drink presentation from the exact Chikushiguchi launch release; no unlabelled dish ingredients inferred.",
+          "sourcePage": "https://prtimes.jp/main/html/rd/p/000000005.000179600.html"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-17/batch64-apoc-3-97e1e9a34d45350f.webp",
+          "sha256": "97e1e9a34d45350fa3b13bd733738d10f9e7f57006b8b317c1fbf3e9903d2c85",
+          "width": 1600,
+          "height": 1067,
+          "credit": "WOF / APOC COFFEE",
+          "note": "Operator food-and-drink presentation from the exact Chikushiguchi launch release; no unlabelled dish ingredients inferred.",
+          "sourcePage": "https://prtimes.jp/main/html/rd/p/000000005.000179600.html"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-17/batch64-apoc-4-10803c73e8bb2d09.webp",
+          "sha256": "10803c73e8bb2d09d9b0924995157c737c902821314bdd3cf9e68afe3c414c38",
+          "width": 1600,
+          "height": 2400,
+          "credit": "WOF / APOC COFFEE",
+          "note": "Operator food-and-drink presentation from the exact Chikushiguchi launch release; no unlabelled dish ingredients inferred.",
+          "sourcePage": "https://prtimes.jp/main/html/rd/p/000000005.000179600.html"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-17/batch64-apoc-5-42a0e61bbb372027.webp",
+          "sha256": "42a0e61bbb37202701bf13afcfd576113611a53e07839b2c25d3825f624d61e7",
+          "width": 1600,
+          "height": 1067,
+          "credit": "WOF / APOC COFFEE",
+          "note": "Operator food-and-drink presentation from the exact Chikushiguchi launch release; no unlabelled dish ingredients inferred.",
+          "sourcePage": "https://prtimes.jp/main/html/rd/p/000000005.000179600.html"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-17/batch64-apoc-6-da9eb891a79aaa50.webp",
+          "sha256": "da9eb891a79aaa505b5cae93018da073f23e0a5b63b5373d8915ca280d8ac68f",
+          "width": 1536,
+          "height": 1024,
+          "credit": "WOF / APOC COFFEE",
+          "note": "Operator food-and-drink presentation from the exact Chikushiguchi launch release; no unlabelled dish ingredients inferred.",
+          "sourcePage": "https://prtimes.jp/main/html/rd/p/000000005.000179600.html"
+        }
+      ],
+      "verification": {
+        "local": {
+          "pinId": 16243,
+          "sourceUrl": "https://prtimes.jp/main/html/rd/p/000000005.000179600.html",
+          "name": "APOC COFFEE — Hakata Chikushiguchi",
+          "contentId": 1666,
+          "contentRevision": 1,
+          "verifiedGalleryLinks": 6,
+          "publicPinStatus": 200
+        },
+        "production": {
+          "pinId": 16291,
+          "sourceUrl": "https://prtimes.jp/main/html/rd/p/000000005.000179600.html",
+          "name": "APOC COFFEE — Hakata Chikushiguchi",
+          "contentId": 1666,
+          "contentRevision": 1,
+          "verifiedGalleryLinks": 6,
+          "publicPinStatus": 200
+        }
+      }
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Hatena Coffee — Fukuoka Tenjin Opens in Tenjin",
+        "description": "A puzzle cafe where each guest orders a puzzle and a drink, with pasta, hot sandwiches and snacks.",
+        "sourceUrl": "https://hatenacoffee.experiful.jp/locations/fukuoka/",
+        "address": "2F Best Kita-Tenjin Building, 5-7-5 Tenjin, Chuo-ku, Fukuoka",
+        "productName": "Hatena Coffee — Fukuoka Tenjin",
+        "utcStartDateTime": "2026-09-11T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "Experiful’s September10exact Fukuoka Tenjin announcement explicitly states September11,2026opening; official branch and exact Tabelog corroborate identity.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Fukuoka",
+          "Japan",
+          "Tenjin",
+          "Puzzle cafe"
+        ],
+        "longFormSummary": "<p>A puzzle cafe where each guest orders a puzzle and a drink, with pasta, hot sandwiches and snacks.<cite data-ref=\"https://hatenacoffee.experiful.jp/locations/fukuoka/\"></cite></p><p>Experiful’s September10exact Fukuoka Tenjin announcement explicitly states September11,2026opening; official branch and exact Tabelog corroborate identity.</p>",
+        "references": [
+          {
+            "url": "https://hatenacoffee.experiful.jp/locations/fukuoka/",
+            "title": "Hatena Coffee — Fukuoka Tenjin source",
+            "confidence": 90,
+            "reasoning": "Experiful’s September10exact Fukuoka Tenjin announcement explicitly states September11,2026opening; official branch and exact Tabelog corroborate identity."
+          },
+          {
+            "url": "https://prtimes.jp/main/html/rd/p/000000058.000113176.html",
+            "title": "Hatena Coffee — Fukuoka Tenjin source",
+            "confidence": 90,
+            "reasoning": "Experiful’s September10exact Fukuoka Tenjin announcement explicitly states September11,2026opening; official branch and exact Tabelog corroborate identity."
+          },
+          {
+            "url": "https://tabelog.com/fukuoka/A4001/A400103/40075013/",
+            "title": "Hatena Coffee — Fukuoka Tenjin source",
+            "confidence": 90,
+            "reasoning": "Experiful’s September10exact Fukuoka Tenjin announcement explicitly states September11,2026opening; official branch and exact Tabelog corroborate identity."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://hatenacoffee.experiful.jp/locations/fukuoka/",
+          "menu": {
+            "pinSourceUrl": "https://hatenacoffee.experiful.jp/locations/fukuoka/",
+            "name": "Hatena Coffee — Fukuoka Tenjin",
+            "checkedAt": "2026-10-17",
+            "menus": [
+              {
+                "label": "Fukuoka Tenjin drinks",
+                "url": "https://hatenacoffee.experiful.jp/locations/fukuoka/",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "Iced coffee",
+                    "price": 550
+                  },
+                  {
+                    "name": "Iced tea",
+                    "price": 550
+                  },
+                  {
+                    "name": "Iced cocoa",
+                    "price": 550
+                  },
+                  {
+                    "name": "Oolong tea",
+                    "price": 550
+                  },
+                  {
+                    "name": "Calpis",
+                    "price": 550
+                  },
+                  {
+                    "name": "Calpis soda",
+                    "price": 550
+                  },
+                  {
+                    "name": "Orange juice",
+                    "price": 550
+                  },
+                  {
+                    "name": "Cola",
+                    "price": 550
+                  },
+                  {
+                    "name": "Ginger ale",
+                    "price": 550
+                  },
+                  {
+                    "name": "Tonic water",
+                    "price": 550
+                  },
+                  {
+                    "name": "Lemon squash",
+                    "price": 550
+                  },
+                  {
+                    "name": "Kyoho grape soda",
+                    "price": 550
+                  },
+                  {
+                    "name": "Yuzu soda",
+                    "price": 550
+                  },
+                  {
+                    "name": "Hot coffee",
+                    "price": 550
+                  },
+                  {
+                    "name": "Hot tea",
+                    "price": 550
+                  },
+                  {
+                    "name": "Hot cocoa",
+                    "price": 550
+                  },
+                  {
+                    "name": "Hot oolong tea",
+                    "price": 550
+                  },
+                  {
+                    "name": "Hot Calpis",
+                    "price": 550
+                  },
+                  {
+                    "name": "Lemon sour",
+                    "price": 550
+                  },
+                  {
+                    "name": "Kyoho grape sour",
+                    "price": 550
+                  },
+                  {
+                    "name": "Yuzu sour",
+                    "price": 550
+                  },
+                  {
+                    "name": "Calpis sour",
+                    "price": 550
+                  },
+                  {
+                    "name": "Oolong highball",
+                    "price": 550
+                  },
+                  {
+                    "name": "Gin and tonic",
+                    "price": 550
+                  },
+                  {
+                    "name": "Gin buck",
+                    "price": 550
+                  },
+                  {
+                    "name": "Gin and cola",
+                    "price": 550
+                  },
+                  {
+                    "name": "Orange Blossom",
+                    "price": 550
+                  },
+                  {
+                    "name": "Moscow Mule",
+                    "price": 550
+                  },
+                  {
+                    "name": "Screwdriver",
+                    "price": 550
+                  },
+                  {
+                    "name": "Russian cola",
+                    "price": 550
+                  },
+                  {
+                    "name": "Vodka tonic",
+                    "price": 550
+                  },
+                  {
+                    "name": "Highball",
+                    "price": 550
+                  },
+                  {
+                    "name": "Cola highball",
+                    "price": 550
+                  },
+                  {
+                    "name": "Ginger highball",
+                    "price": 550
+                  },
+                  {
+                    "name": "Tonic highball",
+                    "price": 550
+                  },
+                  {
+                    "name": "Cassis orange",
+                    "price": 550
+                  },
+                  {
+                    "name": "Cassis soda",
+                    "price": 550
+                  },
+                  {
+                    "name": "Cassis oolong",
+                    "price": 550
+                  },
+                  {
+                    "name": "Fuzzy Navel",
+                    "price": 550
+                  },
+                  {
+                    "name": "Peach soda",
+                    "price": 550
+                  },
+                  {
+                    "name": "Peach oolong",
+                    "price": 550
+                  },
+                  {
+                    "name": "Plum wine — rocks, water or soda",
+                    "price": 550
+                  }
+                ],
+                "note": "Branch-linked drinks image explicitly says all¥500,¥550tax included. Each person must buy one puzzle¥1,650plus one drink for the first puzzle; minimum¥2,200. Additional puzzles do not require another drink. All listed alcohol is subject to legal drinking age."
+              },
+              {
+                "label": "Fukuoka Tenjin food and snacks",
+                "url": "https://hatenacoffee.experiful.jp/locations/fukuoka/",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "Carbonara pasta",
+                    "priceLabel": "¥700 as printed; confirm tax treatment",
+                    "note": "Exact branch-linked food-menu image. Payable tax-inclusive total is not stated in the image; not guessed."
+                  },
+                  {
+                    "name": "Peperoncino pasta",
+                    "priceLabel": "¥700 as printed; confirm tax treatment",
+                    "note": "Exact branch-linked food-menu image. Payable tax-inclusive total is not stated in the image; not guessed."
+                  },
+                  {
+                    "name": "Meat-sauce pasta",
+                    "priceLabel": "¥700 as printed; confirm tax treatment",
+                    "note": "Exact branch-linked food-menu image. Payable tax-inclusive total is not stated in the image; not guessed."
+                  },
+                  {
+                    "name": "Dashi-scented natto pasta",
+                    "priceLabel": "¥700 as printed; confirm tax treatment",
+                    "note": "Exact branch-linked food-menu image. Payable tax-inclusive total is not stated in the image; not guessed."
+                  },
+                  {
+                    "name": "Mentaiko-mayo pasta",
+                    "priceLabel": "¥700 as printed; confirm tax treatment",
+                    "note": "Exact branch-linked food-menu image. Payable tax-inclusive total is not stated in the image; not guessed."
+                  },
+                  {
+                    "name": "Crab tomato-cream pasta",
+                    "priceLabel": "¥700 as printed; confirm tax treatment",
+                    "note": "Exact branch-linked food-menu image. Payable tax-inclusive total is not stated in the image; not guessed."
+                  },
+                  {
+                    "name": "Anko-butter hot sandwich",
+                    "priceLabel": "¥700 as printed; confirm tax treatment",
+                    "note": "Exact branch-linked food-menu image. Payable tax-inclusive total is not stated in the image; not guessed."
+                  },
+                  {
+                    "name": "Caramel-nut hot sandwich",
+                    "priceLabel": "¥700 as printed; confirm tax treatment",
+                    "note": "Exact branch-linked food-menu image. Payable tax-inclusive total is not stated in the image; not guessed."
+                  },
+                  {
+                    "name": "Cheese-curry hot sandwich",
+                    "priceLabel": "¥700 as printed; confirm tax treatment",
+                    "note": "Exact branch-linked food-menu image. Payable tax-inclusive total is not stated in the image; not guessed."
+                  },
+                  {
+                    "name": "S’mores",
+                    "priceLabel": "¥1000 as printed; confirm tax treatment",
+                    "note": "Exact branch-linked food-menu image. Payable tax-inclusive total is not stated in the image; not guessed."
+                  },
+                  {
+                    "name": "White langue-de-chat cookies",
+                    "priceLabel": "¥500 as printed; confirm tax treatment",
+                    "note": "Exact branch-linked food-menu image. Payable tax-inclusive total is not stated in the image; not guessed."
+                  },
+                  {
+                    "name": "Butter cookies",
+                    "priceLabel": "¥500 as printed; confirm tax treatment",
+                    "note": "Exact branch-linked food-menu image. Payable tax-inclusive total is not stated in the image; not guessed."
+                  },
+                  {
+                    "name": "Lightly salted pretzels",
+                    "priceLabel": "¥500 as printed; confirm tax treatment",
+                    "note": "Exact branch-linked food-menu image. Payable tax-inclusive total is not stated in the image; not guessed."
+                  },
+                  {
+                    "name": "Ritz crackers",
+                    "priceLabel": "¥500 as printed; confirm tax treatment",
+                    "note": "Exact branch-linked food-menu image. Payable tax-inclusive total is not stated in the image; not guessed."
+                  },
+                  {
+                    "name": "Mixed nuts",
+                    "priceLabel": "¥500 as printed; confirm tax treatment",
+                    "note": "Exact branch-linked food-menu image. Payable tax-inclusive total is not stated in the image; not guessed."
+                  },
+                  {
+                    "name": "Soup add-on for pasta or hot sandwich",
+                    "priceLabel": "¥200 as printed; confirm tax treatment",
+                    "note": "Exact branch-linked food-menu image. Payable tax-inclusive total is not stated in the image; not guessed."
+                  }
+                ],
+                "note": "Weekday and weekend/holiday menu images checked. Soup add-on appears on the weekday image for pasta/hot sandwich; no unpriced curry inferred from generic soup-set prose. Images print¥700mains,¥1,000s’mores and¥500snacks without an explicit tax footer. Website says food starts¥500before tax/¥550including tax; individual payable food totals remain unasserted."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://hatenacoffee.experiful.jp/locations/fukuoka/",
+            "name": "Hatena Coffee — Fukuoka Tenjin",
+            "checkedAt": "2026-10-17",
+            "websiteUrl": "https://hatenacoffee.experiful.jp/locations/fukuoka/",
+            "phone": "092-235-1213",
+            "openingHours": [
+              {
+                "days": "Daily except second Thursday",
+                "hours": "11:30–22:00; last admission21:00"
+              },
+              {
+                "days": "No-staff hours",
+                "hours": "17:15–18:30; no new admission or additional orders; seated guests may remain"
+              }
+            ],
+            "detailsSourceUrl": "https://hatenacoffee.experiful.jp/locations/fukuoka/",
+            "additionalSources": [
+              {
+                "label": "Research evidence",
+                "url": "https://prtimes.jp/main/html/rd/p/000000058.000113176.html"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://tabelog.com/fukuoka/A4001/A400103/40075013/"
+              }
+            ],
+            "reservationUrl": "https://hatenacoffee.experiful.jp/locations/fukuoka/",
+            "hoursNote": "Second Thursday closed unless a public holiday. Reservations optional, reserved guests have priority when full. Cashless only; Wi-Fi/power available, no outside food/drinks/board games, all non-smoking. Bring smartphone with LINE for puzzles. No invented expiry or dining discount assigned to the puzzle game."
+          },
+          "tile": {
+            "regionSlug": "fukuoka",
+            "kind": "opening",
+            "slug": "japan64-hatena",
+            "name": "Hatena Coffee — Fukuoka Tenjin",
+            "neighborhood": "Tenjin",
+            "cuisine": "Puzzle cafe",
+            "description": "A puzzle cafe where each guest orders a puzzle and a drink, with pasta, hot sandwiches and snacks.",
+            "address": "2F Best Kita-Tenjin Building, 5-7-5 Tenjin, Chuo-ku, Fukuoka",
+            "websiteUrl": "https://hatenacoffee.experiful.jp/locations/fukuoka/",
+            "checkedAt": "2026-10-17",
+            "recognition": "",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-17/batch64-hatena-1-b65c38e0066af5e7.webp",
+            "imageCredit": "Experiful / Hatena Coffee",
+            "imageSourceUrl": "https://hatenacoffee.experiful.jp/locations/fukuoka/",
+            "imageNote": "Fukuoka Tenjin dining room from the exact operator branch page.",
+            "openingConfirmed": true,
+            "day": "2026-09-11"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-17/batch64-hatena-1-b65c38e0066af5e7.webp",
+          "sha256": "b65c38e0066af5e79a73652d0a3eb2c597ef6d660634333cedb926094a983b85",
+          "width": 1024,
+          "height": 768,
+          "credit": "Experiful / Hatena Coffee",
+          "note": "Fukuoka Tenjin dining room from the exact operator branch page.",
+          "sourcePage": "https://hatenacoffee.experiful.jp/locations/fukuoka/"
+        }
+      ],
+      "verification": {
+        "local": {
+          "pinId": 16244,
+          "sourceUrl": "https://hatenacoffee.experiful.jp/locations/fukuoka/",
+          "name": "Hatena Coffee — Fukuoka Tenjin",
+          "contentId": 1667,
+          "contentRevision": 1,
+          "verifiedGalleryLinks": 1,
+          "publicPinStatus": 200
+        },
+        "production": {
+          "pinId": 16292,
+          "sourceUrl": "https://hatenacoffee.experiful.jp/locations/fukuoka/",
+          "name": "Hatena Coffee — Fukuoka Tenjin",
+          "contentId": 1667,
+          "contentRevision": 1,
+          "verifiedGalleryLinks": 1,
+          "publicPinStatus": 200
+        }
+      }
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Night Parfait Nanakamado 64 Opens in Susukino",
+        "description": "A new Susukino night-parfait branch presenting six named opening desserts with operator-published compositions.",
+        "sourceUrl": "https://yoru-parfait-gaku.com/category/parfait/nanakamadou64/",
+        "address": "2F Plaza6-4 Building, 1 Minami6-jo Nishi4-chome, Chuo-ku, Sapporo",
+        "productName": "Night Parfait Nanakamado 64",
+        "utcStartDateTime": "2026-10-08T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "GAKU’s October8,2026post explicitly says this exact Nanakamado64branch opened that day, corroborated by October5/7advance announcements. Older Nanakamado branch opening is not substituted.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Sapporo",
+          "Japan",
+          "Susukino",
+          "Parfait cafe"
+        ],
+        "longFormSummary": "<p>A new Susukino night-parfait branch presenting six named opening desserts with operator-published compositions.<cite data-ref=\"https://yoru-parfait-gaku.com/category/parfait/nanakamadou64/\"></cite></p><p>GAKU’s October8,2026post explicitly says this exact Nanakamado64branch opened that day, corroborated by October5/7advance announcements. Older Nanakamado branch opening is not substituted.</p>",
+        "references": [
+          {
+            "url": "https://yoru-parfait-gaku.com/category/parfait/nanakamadou64/",
+            "title": "Night Parfait Nanakamado 64 source",
+            "confidence": 90,
+            "reasoning": "GAKU’s October8,2026post explicitly says this exact Nanakamado64branch opened that day, corroborated by October5/7advance announcements. Older Nanakamado branch opening is not substituted."
+          },
+          {
+            "url": "https://yoru-parfait-gaku.com/category/news/",
+            "title": "Night Parfait Nanakamado 64 source",
+            "confidence": 90,
+            "reasoning": "GAKU’s October8,2026post explicitly says this exact Nanakamado64branch opened that day, corroborated by October5/7advance announcements. Older Nanakamado branch opening is not substituted."
+          },
+          {
+            "url": "https://tabelog.com/hokkaido/A0101/A010103/1085573/",
+            "title": "Night Parfait Nanakamado 64 source",
+            "confidence": 90,
+            "reasoning": "GAKU’s October8,2026post explicitly says this exact Nanakamado64branch opened that day, corroborated by October5/7advance announcements. Older Nanakamado branch opening is not substituted."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://yoru-parfait-gaku.com/category/parfait/nanakamadou64/",
+          "menu": {
+            "pinSourceUrl": "https://yoru-parfait-gaku.com/category/parfait/nanakamadou64/",
+            "name": "Night Parfait Nanakamado 64",
+            "checkedAt": "2026-10-17",
+            "menus": [
+              {
+                "label": "Nanakamado64 opening parfaits",
+                "url": "https://yoru-parfait-gaku.com/category/parfait/nanakamadou64/",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "かきくまこ",
+                    "priceLabel": "Price not published",
+                    "note": "Persimmon compote, azuki gelato, cassis sorbet and amaretto coffee syrup; October17branch post."
+                  },
+                  {
+                    "name": "エゾシカ獣害と獣愛の隙間パフェ",
+                    "priceLabel": "Price not published",
+                    "note": "Bergamot marshmallow, sweet-potato cream, red-shiso sorbet, baked-apple gelato and clove apple compote; October17branch post. Deer is the design theme; no venison ingredient asserted."
+                  },
+                  {
+                    "name": "招き猫〜金猫は希望の願いを込めて〜",
+                    "priceLabel": "Price not published",
+                    "note": "Passion-fruit glaze, yoghurt gelato, Shine Muscat, orange and yuzu-milk gelato; October13branch post."
+                  },
+                  {
+                    "name": "純粋でお茶目な鈴蘭",
+                    "priceLabel": "Price not published",
+                    "note": "Matcha and yuzu-milk gelato, anise pear compote and white-bean cream; October13branch post. Lily-of-the-valley is the design theme, not an edible ingredient."
+                  },
+                  {
+                    "name": "苺に鶴",
+                    "priceLabel": "Price not published",
+                    "note": "Fresh strawberries, Chitose Tsuru gelato, matcha tiramisu and gelato, pine-nut florentine; October10branch post."
+                  },
+                  {
+                    "name": "クマゲラとナナカマド",
+                    "priceLabel": "Price not published",
+                    "note": "Pistachio and70%chocolate gelato, milk gelato, black-soy beans and raspberry sauce; October5branch post."
+                  }
+                ],
+                "note": "Exact64branch announcements, not the older Nanakamado shop at Minami4Nishi5. Individual prices not published in accessible operator posts. October7list’s エジシカ typo is superseded by October17エゾシカ post. No invented seasonal end date or guaranteed current stock; confirm on arrival."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://yoru-parfait-gaku.com/category/parfait/nanakamadou64/",
+            "name": "Night Parfait Nanakamado 64",
+            "checkedAt": "2026-10-17",
+            "websiteUrl": "https://yoru-parfait-gaku.com/category/parfait/nanakamadou64/",
+            "phone": null,
+            "openingHours": [
+              {
+                "days": "Sunday–Thursday and holidays",
+                "hours": "18:00–24:00; last order23:30"
+              },
+              {
+                "days": "Friday, Saturday and holiday eves",
+                "hours": "18:00–02:00next day; last order01:30"
+              }
+            ],
+            "detailsSourceUrl": "https://yoru-parfait-gaku.com/category/parfait/nanakamadou64/",
+            "additionalSources": [
+              {
+                "label": "Research evidence",
+                "url": "https://yoru-parfait-gaku.com/category/news/"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://tabelog.com/hokkaido/A0101/A010103/1085573/"
+              }
+            ],
+            "hoursNote": "October13/17operator posts update initial20:00opening to18:00; current weekday/weekend split retained. No phone, booking conditions or cover charge inferred. Operator gallery checked; no completed-room image verified."
+          },
+          "tile": {
+            "regionSlug": "sapporo",
+            "kind": "opening",
+            "slug": "japan64-nanakamado",
+            "name": "Night Parfait Nanakamado 64",
+            "neighborhood": "Susukino",
+            "cuisine": "Parfait cafe",
+            "description": "A new Susukino night-parfait branch presenting six named opening desserts with operator-published compositions.",
+            "address": "2F Plaza6-4 Building, 1 Minami6-jo Nishi4-chome, Chuo-ku, Sapporo",
+            "websiteUrl": "https://yoru-parfait-gaku.com/category/parfait/nanakamadou64/",
+            "checkedAt": "2026-10-17",
+            "recognition": "",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-17/batch64-nanakamado-1-12c4374913966720.webp",
+            "imageCredit": "GAKU / Night Parfait Nanakamado 64",
+            "imageSourceUrl": "https://yoru-parfait-gaku.com/category/parfait/nanakamadou64/",
+            "imageNote": "Kakikumako parfait, labelled in the October 17 branch announcement.",
+            "openingConfirmed": true,
+            "day": "2026-10-08"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-17/batch64-nanakamado-1-12c4374913966720.webp",
+          "sha256": "12c4374913966720f1a09c5623bcd136c9cae99ecac4705d839c5fb106ac80d3",
+          "width": 819,
+          "height": 1024,
+          "credit": "GAKU / Night Parfait Nanakamado 64",
+          "note": "Kakikumako parfait, labelled in the October 17 branch announcement.",
+          "sourcePage": "https://yoru-parfait-gaku.com/category/parfait/nanakamadou64/"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-17/batch64-nanakamado-2-2ba14a2e03f63693.webp",
+          "sha256": "2ba14a2e03f63693938dfb20616c6167535acfe0fc5d6164641d08dedc9934da",
+          "width": 794,
+          "height": 992,
+          "credit": "GAKU / Night Parfait Nanakamado 64",
+          "note": "Ezo-shika parfait, labelled in the October 17 branch announcement.",
+          "sourcePage": "https://yoru-parfait-gaku.com/category/parfait/nanakamadou64/"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-17/batch64-nanakamado-3-5cc2993cd2a4c0b3.webp",
+          "sha256": "5cc2993cd2a4c0b38a88c2ddeb89dd458325f1938a718e02f28047f588196eb8",
+          "width": 819,
+          "height": 1024,
+          "credit": "GAKU / Night Parfait Nanakamado 64",
+          "note": "Golden beckoning-cat parfait, labelled in the October 13 branch announcement.",
+          "sourcePage": "https://yoru-parfait-gaku.com/category/parfait/nanakamadou64/"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-17/batch64-nanakamado-4-a17f3d84ed9a40a7.webp",
+          "sha256": "a17f3d84ed9a40a77b5d02c4facaa0edf9defccf4ae8397c3e0240078d1beb11",
+          "width": 807,
+          "height": 1009,
+          "credit": "GAKU / Night Parfait Nanakamado 64",
+          "note": "Lily-of-the-valley parfait, labelled in the October 13 branch announcement.",
+          "sourcePage": "https://yoru-parfait-gaku.com/category/parfait/nanakamadou64/"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-17/batch64-nanakamado-5-2714b33aab90e9f0.webp",
+          "sha256": "2714b33aab90e9f011480d66f9df522ff3f3792027e860109b6bf9a0b9fc3d33",
+          "width": 810,
+          "height": 1012,
+          "credit": "GAKU / Night Parfait Nanakamado 64",
+          "note": "Strawberry and crane parfait, labelled in the October 10 branch announcement.",
+          "sourcePage": "https://yoru-parfait-gaku.com/category/parfait/nanakamadou64/"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-17/batch64-nanakamado-6-601972d9b1744327.webp",
+          "sha256": "601972d9b1744327a66573b6e85f64910b75ffc39e4c9e2f51ff8a4c86817356",
+          "width": 819,
+          "height": 1024,
+          "credit": "GAKU / Night Parfait Nanakamado 64",
+          "note": "Parfait presentation in the branch opening-day announcement, October 8.",
+          "sourcePage": "https://yoru-parfait-gaku.com/category/parfait/nanakamadou64/"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-17/batch64-nanakamado-7-d7b9a2d5ff2b392e.webp",
+          "sha256": "d7b9a2d5ff2b392e6f488e0f44620740b71c6b0ec62eb4a45221004cb66068c9",
+          "width": 819,
+          "height": 1024,
+          "credit": "GAKU / Night Parfait Nanakamado 64",
+          "note": "Black woodpecker and rowan parfait, labelled in the October 5 opening announcement.",
+          "sourcePage": "https://yoru-parfait-gaku.com/category/parfait/nanakamadou64/"
+        }
+      ],
+      "verification": {
+        "local": {
+          "pinId": 16245,
+          "sourceUrl": "https://yoru-parfait-gaku.com/category/parfait/nanakamadou64/",
+          "name": "Night Parfait Nanakamado 64",
+          "contentId": 1668,
+          "contentRevision": 1,
+          "verifiedGalleryLinks": 7,
+          "publicPinStatus": 200
+        },
+        "production": {
+          "pinId": 16293,
+          "sourceUrl": "https://yoru-parfait-gaku.com/category/parfait/nanakamadou64/",
+          "name": "Night Parfait Nanakamado 64",
+          "contentId": 1668,
+          "contentRevision": 1,
+          "verifiedGalleryLinks": 7,
+          "publicPinStatus": 200
+        }
+      }
+    },
+    {
+      "existing": true,
+      "pin": {
+        "id": 15588,
+        "parentId": null,
+        "title": "Miyanomori Coffee — Sapporo Link Tower Cafe Opens in Odori / Red Brick district",
+        "description": "A new sixty-five-seat coffee shop with a branch gallery and shorter weekend and holiday hours.",
+        "sourceUrl": "https://miyanomoricoffee.com/linktower/",
+        "longFormSummary": "<p>A new sixty-five-seat coffee shop with a branch gallery and shorter weekend and holiday hours.<cite data-ref=\"https://miyanomoricoffee.com/linktower/\"></cite></p><p>Own operator branch page explicitly states October 3, 2026 opening at 08:00. Regular weekend/holiday service opens at 10:00; do not repeat opening-day hours as ordinary Saturday hours.</p>",
+        "address": "North 2F, Urban Net Sapporo Link Tower, 1-4 Kita 1-jo Nishi 5-chome, Chuo-ku, Sapporo",
+        "location": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "price": null,
+        "priceCurrency": null,
+        "tip": null,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "Own operator branch page explicitly states October 3, 2026 opening at 08:00. Regular weekend/holiday service opens at 10:00; do not repeat opening-day hours as ordinary Saturday hours.",
+        "utcStartDateTime": "2026-10-03T00:00:00.000Z",
+        "utcEndDateTime": null,
+        "allDay": true,
+        "userId": 372,
+        "utcCreatedDateTime": "2026-10-15T00:12:23.978Z",
+        "utcUpdatedDateTime": null,
+        "utcDeletedDateTime": null,
+        "companyId": null,
+        "sourceStartDateTime": null,
+        "sourceEndDateTime": null,
+        "originalStartDate": null,
+        "delayReasoning": null,
+        "episodeCount": null,
+        "episodeStatus": null,
+        "marketVolume": null,
+        "marketVolumeAt": null,
+        "allDayStated": true,
+        "productName": "Miyanomori Coffee — Sapporo Link Tower Cafe"
+      },
+      "content": {
+        "profile": {
+          "menu": {
+            "name": "Miyanomori Coffee — Sapporo Link Tower Cafe",
+            "menus": [
+              {
+                "url": "https://miyanomoricoffee.com/linktower/",
+                "note": "Own branch page and landlord confirm coffee service but no cup names/prices or food menu. Checked own gallery and linked full-resolution food photos; those photos are unlabelled and do not establish specific pastry/dish names. Retail bean-price PDFs and other branch menus are excluded. Branch Tabelog/menu retrieval fails; searched branch-specific reports. No current verified promotion.",
+                "items": [
+                  {
+                    "name": "House-roasted coffee",
+                    "priceLabel": "Price not published"
+                  }
+                ],
+                "label": "Published branch coffee",
+                "coverage": "sample",
+                "currency": "JPY"
+              },
+              {
+                "label": "Link Tower October visit sample",
+                "url": "https://tabelog.com/rvwr/004505212/rvwdtl/B537338475/",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Apple cake",
+                    "price": 660,
+                    "note": "Price recorded in the October14exact-branch firsthand review."
+                  },
+                  {
+                    "name": "Set coffee",
+                    "price": 550,
+                    "note": "October14review price when ordered as a set; not a standalone coffee price."
+                  }
+                ],
+                "note": "Exact branch operator page, official linked gallery, landlord shop directory, branch listing and nine menu-photo listing checked. Operator publishes no text item/price roster. Tabelog raw menu/photo download was blocked; two actual ordered items and prices are confirmed in the opened firsthand review. No other Miyanomori branch menu borrowed; tax breakdown, full menu and set eligibility remain unpublished."
+              }
+            ],
+            "specials": [],
+            "checkedAt": "2026-10-17",
+            "pinSourceUrl": "https://miyanomoricoffee.com/linktower/"
+          },
+          "tile": {
+            "day": "2026-10-03",
+            "kind": "opening",
+            "name": "Miyanomori Coffee — Sapporo Link Tower Cafe",
+            "slug": "sapporo19-coffee",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/sapporo/japan-30-2026-10-13/sapporo19-coffee-11-14fdba49dde3533b.webp",
+            "address": "North 2F, Urban Net Sapporo Link Tower, 1-4 Kita 1-jo Nishi 5-chome, Chuo-ku, Sapporo",
+            "cuisine": "Cafe",
+            "checkedAt": "2026-10-14",
+            "imageNote": "Link Tower cafe dining room.",
+            "priceRange": "",
+            "regionSlug": "sapporo",
+            "websiteUrl": "https://miyanomoricoffee.com/linktower/",
+            "description": "A new sixty-five-seat coffee shop with a branch gallery and shorter weekend and holiday hours.",
+            "imageCredit": "Miyanomori Coffee / official Link Tower cafe gallery",
+            "recognition": "",
+            "neighborhood": "Odori / Red Brick district",
+            "imageSourceUrl": "https://miyanomoricoffee.com/linktower/",
+            "openingConfirmed": true
+          },
+          "details": {
+            "name": "Miyanomori Coffee — Sapporo Link Tower Cafe",
+            "phone": "011-600-6393",
+            "checkedAt": "2026-10-17",
+            "websiteUrl": "https://miyanomoricoffee.com/linktower/",
+            "openingHours": [
+              {
+                "days": "Weekdays",
+                "hours": "08:00–21:00"
+              },
+              {
+                "days": "Saturday, Sunday and public holidays",
+                "hours": "10:00–18:00"
+              },
+              {
+                "days": "Closures",
+                "hours": "Irregular; confirm before visiting"
+              }
+            ],
+            "pinSourceUrl": "https://miyanomoricoffee.com/linktower/",
+            "detailsSourceUrl": "https://miyanomoricoffee.com/linktower/",
+            "additionalSources": [
+              {
+                "url": "https://www.nttud.co.jp/sapporo_linktower/shop/",
+                "label": "Research evidence"
+              },
+              {
+                "url": "https://sapporolinktower-open.com",
+                "label": "Research evidence"
+              },
+              {
+                "url": "https://miyanomoricoffee.com/shop-list/",
+                "label": "Research evidence"
+              },
+              {
+                "url": "https://sapporokara.com/2026/09/30/urban-net-sapporo-link-tower/",
+                "label": "Research evidence"
+              },
+              {
+                "url": "https://s.tabelog.com/rvwr/004505212/reviewed_restaurants/list?Srt=D&SrtT=ud&award_year=2026&bookmark_type=1&pal=atw&review_content_exist=0&sunday=3",
+                "label": "Research evidence"
+              },
+              {
+                "label": "Opened full October14branch visit with complete set-coffee price",
+                "url": "https://tabelog.com/rvwr/004505212/rvwdtl/B537338475/"
+              }
+            ]
+          },
+          "pinSourceUrl": "https://miyanomoricoffee.com/linktower/"
+        },
+        "enabled": true
+      },
+      "photos": [],
+      "expectedBefore": {
+        "content": {
+          "menu": {
+            "name": "Miyanomori Coffee — Sapporo Link Tower Cafe",
+            "menus": [
+              {
+                "url": "https://miyanomoricoffee.com/linktower/",
+                "note": "Own branch page and landlord confirm coffee service but no cup names/prices or food menu. Checked own gallery and linked full-resolution food photos; those photos are unlabelled and do not establish specific pastry/dish names. Retail bean-price PDFs and other branch menus are excluded. Branch Tabelog/menu retrieval fails; searched branch-specific reports. No current verified promotion.",
+                "items": [
+                  {
+                    "name": "House-roasted coffee",
+                    "priceLabel": "Price not published"
+                  }
+                ],
+                "label": "Published branch coffee",
+                "coverage": "sample",
+                "currency": "JPY"
+              },
+              {
+                "url": "https://s.tabelog.com/rvwr/004505212/reviewed_restaurants/list?Srt=D&SrtT=ud&award_year=2026&bookmark_type=1&pal=atw&review_content_exist=0&sunday=3",
+                "note": "Branch-specific public indexed visit report names apple cake at ¥660. Its truncated set-coffee price is not transcribed; direct report fetch returns cache miss and branch page fails. Confirm current selection/price; no drink set discount is inferred. No dish names inferred from unlabelled operator photos.",
+                "items": [
+                  {
+                    "name": "Apple cake",
+                    "note": "October visit report updated October 13; tax treatment not published",
+                    "price": 660
+                  }
+                ],
+                "label": "Recent branch visit — October 2026",
+                "coverage": "sample",
+                "currency": "JPY"
+              }
+            ],
+            "specials": [],
+            "checkedAt": "2026-10-14",
+            "pinSourceUrl": "https://miyanomoricoffee.com/linktower/"
+          },
+          "tile": {
+            "day": "2026-10-03",
+            "kind": "opening",
+            "name": "Miyanomori Coffee — Sapporo Link Tower Cafe",
+            "slug": "sapporo19-coffee",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/sapporo/japan-30-2026-10-13/sapporo19-coffee-11-14fdba49dde3533b.webp",
+            "address": "North 2F, Urban Net Sapporo Link Tower, 1-4 Kita 1-jo Nishi 5-chome, Chuo-ku, Sapporo",
+            "cuisine": "Cafe",
+            "checkedAt": "2026-10-14",
+            "imageNote": "Link Tower cafe dining room.",
+            "priceRange": "",
+            "regionSlug": "sapporo",
+            "websiteUrl": "https://miyanomoricoffee.com/linktower/",
+            "description": "A new sixty-five-seat coffee shop with a branch gallery and shorter weekend and holiday hours.",
+            "imageCredit": "Miyanomori Coffee / official Link Tower cafe gallery",
+            "recognition": "",
+            "neighborhood": "Odori / Red Brick district",
+            "imageSourceUrl": "https://miyanomoricoffee.com/linktower/",
+            "openingConfirmed": true
+          },
+          "details": {
+            "name": "Miyanomori Coffee — Sapporo Link Tower Cafe",
+            "phone": "011-600-6393",
+            "checkedAt": "2026-10-14",
+            "websiteUrl": "https://miyanomoricoffee.com/linktower/",
+            "openingHours": [
+              {
+                "days": "Weekdays",
+                "hours": "08:00–21:00"
+              },
+              {
+                "days": "Saturday, Sunday and public holidays",
+                "hours": "10:00–18:00"
+              },
+              {
+                "days": "Closures",
+                "hours": "Irregular; confirm before visiting"
+              }
+            ],
+            "pinSourceUrl": "https://miyanomoricoffee.com/linktower/",
+            "detailsSourceUrl": "https://miyanomoricoffee.com/linktower/",
+            "additionalSources": [
+              {
+                "url": "https://www.nttud.co.jp/sapporo_linktower/shop/",
+                "label": "Research evidence"
+              },
+              {
+                "url": "https://sapporolinktower-open.com",
+                "label": "Research evidence"
+              },
+              {
+                "url": "https://miyanomoricoffee.com/shop-list/",
+                "label": "Research evidence"
+              },
+              {
+                "url": "https://sapporokara.com/2026/09/30/urban-net-sapporo-link-tower/",
+                "label": "Research evidence"
+              },
+              {
+                "url": "https://s.tabelog.com/rvwr/004505212/reviewed_restaurants/list?Srt=D&SrtT=ud&award_year=2026&bookmark_type=1&pal=atw&review_content_exist=0&sunday=3",
+                "label": "Research evidence"
+              }
+            ]
+          },
+          "pinSourceUrl": "https://miyanomoricoffee.com/linktower/"
+        }
+      },
+      "verification": {
+        "local": {
+          "pinId": 15588,
+          "sourceUrl": "https://miyanomoricoffee.com/linktower/",
+          "name": "Miyanomori Coffee — Sapporo Link Tower Cafe",
+          "contentId": 1555,
+          "contentRevision": 2,
+          "verifiedGalleryLinks": 0,
+          "publicPinStatus": 200
+        },
+        "production": {
+          "pinId": 15588,
+          "sourceUrl": "https://miyanomoricoffee.com/linktower/",
+          "name": "Miyanomori Coffee — Sapporo Link Tower Cafe",
+          "contentId": 1555,
+          "contentRevision": 2,
+          "verifiedGalleryLinks": 0,
+          "publicPinStatus": 200
+        }
+      }
+    },
+    {
+      "existing": true,
+      "pin": {
+        "id": 15510,
+        "parentId": null,
+        "title": "Sanrio House Cafe — Nagoya PARCO Opens in Sakae / Yabacho",
+        "description": "The brand’s first cafe booth, with character-themed crepes, soft serve, mini parfaits and a dated Hello Kitty birthday crepe.",
+        "sourceUrl": "https://prtimes.jp/main/html/rd/p/000004440.000018505.html",
+        "longFormSummary": "<p>The brand’s first cafe booth, with character-themed crepes, soft serve, mini parfaits and a dated Hello Kitty birthday crepe.<cite data-ref=\"https://prtimes.jp/main/html/rd/p/000004440.000018505.html\"></cite></p><p>September 24 operator release explicitly confirms October 29, 2026 at 10:00 for Nagoya PARCO, with its first cafe booth. Cafe entry is initially reservation-only. Merchandise retail is not counted as a second restaurant.</p>",
+        "address": "B1F West Building, Nagoya PARCO, 3-29-1 Sakae, Naka-ku, Nagoya",
+        "location": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "price": null,
+        "priceCurrency": null,
+        "tip": null,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "September 24 operator release explicitly confirms October 29, 2026 at 10:00 for Nagoya PARCO, with its first cafe booth. Cafe entry is initially reservation-only. Merchandise retail is not counted as a second restaurant.",
+        "utcStartDateTime": "2026-10-29T00:00:00.000Z",
+        "utcEndDateTime": null,
+        "allDay": true,
+        "userId": 372,
+        "utcCreatedDateTime": "2026-10-15T00:05:52.175Z",
+        "utcUpdatedDateTime": null,
+        "utcDeletedDateTime": null,
+        "companyId": null,
+        "sourceStartDateTime": null,
+        "sourceEndDateTime": null,
+        "originalStartDate": null,
+        "delayReasoning": null,
+        "episodeCount": null,
+        "episodeStatus": null,
+        "marketVolume": null,
+        "marketVolumeAt": null,
+        "allDayStated": true,
+        "productName": "Sanrio House Cafe — Nagoya PARCO"
+      },
+      "content": {
+        "profile": {
+          "menu": {
+            "name": "Sanrio House Cafe — Nagoya PARCO",
+            "menus": [
+              {
+                "label": "Published Nagoya cafe menu",
+                "url": "https://prtimes.jp/main/html/rd/p/000004516.000018505.html",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "Butter-and-sugar strawberry crepe",
+                    "price": 790
+                  },
+                  {
+                    "name": "Hello Kitty apple and mascarpone crepe",
+                    "price": 1680
+                  },
+                  {
+                    "name": "Pompompurin pear and praline-caramel crepe",
+                    "price": 1680
+                  },
+                  {
+                    "name": "Cinnamoroll white-peach, cinnamon-sugar and yoghurt-cream crepe",
+                    "price": 1680
+                  },
+                  {
+                    "name": "My Melody strawberry and pistachio-cream crepe",
+                    "price": 1680
+                  },
+                  {
+                    "name": "Hello Kitty soft serve",
+                    "price": 1280
+                  },
+                  {
+                    "name": "Pompompurin soft serve",
+                    "price": 1280
+                  },
+                  {
+                    "name": "Cinnamoroll soft serve",
+                    "price": 1280
+                  },
+                  {
+                    "name": "My Melody soft serve",
+                    "price": 1280
+                  },
+                  {
+                    "name": "Hello Kitty strawberry mini parfait",
+                    "price": 1580
+                  },
+                  {
+                    "name": "Pompompurin caramel-custard mini parfait",
+                    "price": 1580
+                  },
+                  {
+                    "name": "Cinnamoroll pear mini parfait",
+                    "price": 1580
+                  },
+                  {
+                    "name": "My Melody white-peach mini parfait",
+                    "price": 1580
+                  },
+                  {
+                    "name": "Initial-cookie topping",
+                    "price": 220
+                  },
+                  {
+                    "name": "Blend coffee — S",
+                    "price": 610,
+                    "note": "Hot or iced; operator-published size prices."
+                  },
+                  {
+                    "name": "Blend coffee — M",
+                    "price": 660,
+                    "note": "Hot or iced; operator-published size prices."
+                  },
+                  {
+                    "name": "Blend coffee — L",
+                    "price": 710,
+                    "note": "Hot or iced; operator-published size prices."
+                  },
+                  {
+                    "name": "Cafe latte — S",
+                    "price": 660,
+                    "note": "Hot or iced; operator-published size prices."
+                  },
+                  {
+                    "name": "Cafe latte — M",
+                    "price": 710,
+                    "note": "Hot or iced; operator-published size prices."
+                  },
+                  {
+                    "name": "Cafe latte — L",
+                    "price": 760,
+                    "note": "Hot or iced; operator-published size prices."
+                  },
+                  {
+                    "name": "Caramel latte — S",
+                    "price": 790,
+                    "note": "Hot or iced; operator-published size prices."
+                  },
+                  {
+                    "name": "Caramel latte — M",
+                    "price": 840,
+                    "note": "Hot or iced; operator-published size prices."
+                  },
+                  {
+                    "name": "Caramel latte — L",
+                    "price": 910,
+                    "note": "Hot or iced; operator-published size prices."
+                  },
+                  {
+                    "name": "White mocha latte — S",
+                    "price": 790,
+                    "note": "Hot or iced; operator-published size prices."
+                  },
+                  {
+                    "name": "White mocha latte — M",
+                    "price": 840,
+                    "note": "Hot or iced; operator-published size prices."
+                  },
+                  {
+                    "name": "White mocha latte — L",
+                    "price": 910,
+                    "note": "Hot or iced; operator-published size prices."
+                  },
+                  {
+                    "name": "Earl Grey tea — S",
+                    "price": 610,
+                    "note": "Hot or iced; operator-published size prices."
+                  },
+                  {
+                    "name": "Earl Grey tea — M",
+                    "price": 660,
+                    "note": "Hot or iced; operator-published size prices."
+                  },
+                  {
+                    "name": "Earl Grey tea — L",
+                    "price": 710,
+                    "note": "Hot or iced; operator-published size prices."
+                  },
+                  {
+                    "name": "Matcha latte — S",
+                    "price": 790,
+                    "note": "Hot or iced; operator-published size prices."
+                  },
+                  {
+                    "name": "Matcha latte — M",
+                    "price": 840,
+                    "note": "Hot or iced; operator-published size prices."
+                  },
+                  {
+                    "name": "Matcha latte — L",
+                    "price": 910,
+                    "note": "Hot or iced; operator-published size prices."
+                  },
+                  {
+                    "name": "Hojicha latte — S",
+                    "price": 790,
+                    "note": "Hot or iced; operator-published size prices."
+                  },
+                  {
+                    "name": "Hojicha latte — M",
+                    "price": 840,
+                    "note": "Hot or iced; operator-published size prices."
+                  },
+                  {
+                    "name": "Hojicha latte — L",
+                    "price": 910,
+                    "note": "Hot or iced; operator-published size prices."
+                  },
+                  {
+                    "name": "Peach-oolong tea latte — S",
+                    "price": 860,
+                    "note": "Hot or iced; operator-published size prices."
+                  },
+                  {
+                    "name": "Peach-oolong tea latte — M",
+                    "price": 910,
+                    "note": "Hot or iced; operator-published size prices."
+                  },
+                  {
+                    "name": "Peach-oolong tea latte — L",
+                    "price": 960,
+                    "note": "Hot or iced; operator-published size prices."
+                  }
+                ],
+                "note": "October15operator update supersedes earlier unpriced placeholders. All prices include tax. Up to two items per person in each category, excluding initial-cookie topping; cookies cannot be bought alone. Last order30minutes before the booked seat ends; cancellation after20minutes late. No seat duration invented."
+              },
+              {
+                "label": "Hello Kitty birthday crepe",
+                "url": "https://prtimes.jp/main/html/rd/p/000004516.000018505.html",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Hello Kitty limited iced crepe",
+                    "price": 1680,
+                    "note": "From cafe openingOctober29through plannedNovember30; earlier sell-out possible."
+                  }
+                ],
+                "note": "Operator names an iced crepe at¥1,680tax included, without a published filling/flavour; do not infer flavour from artwork. ExistingOctober29–November30offer dates preserved. Reservation required."
+              }
+            ],
+            "specials": [],
+            "checkedAt": "2026-10-17",
+            "pinSourceUrl": "https://prtimes.jp/main/html/rd/p/000004440.000018505.html"
+          },
+          "tile": {
+            "day": "2026-10-29",
+            "kind": "opening",
+            "name": "Sanrio House Cafe — Nagoya PARCO",
+            "slug": "sanrio-release",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-17/batch64-sanrio-1-ec497e8de95ae6e4.webp",
+            "address": "B1F West Building, Nagoya PARCO, 3-29-1 Sakae, Naka-ku, Nagoya",
+            "cuisine": "Cafe",
+            "checkedAt": "2026-10-17",
+            "imageNote": "Operator menu illustration: Nagoya PARCO character-crepe presentation from the operator launch release.",
+            "priceRange": "",
+            "regionSlug": "nagoya",
+            "websiteUrl": "https://mashstylelab.jp/sanriohouse/",
+            "description": "The brand’s first cafe booth, with character-themed crepes, soft serve, mini parfaits and a dated Hello Kitty birthday crepe.",
+            "imageCredit": "Mash Holdings / ©2026 SANRIO CO., LTD. APPROVAL NO. L664297",
+            "recognition": "",
+            "neighborhood": "Sakae / Yabacho",
+            "imageSourceUrl": "https://prtimes.jp/main/html/rd/p/000004516.000018505.html",
+            "openingConfirmed": true
+          },
+          "details": {
+            "name": "Sanrio House Cafe — Nagoya PARCO",
+            "phone": "052-211-9759",
+            "checkedAt": "2026-10-17",
+            "websiteUrl": "https://mashstylelab.jp/sanriohouse/",
+            "openingHours": [
+              {
+                "days": "Planned daily store/cafe hours",
+                "hours": "10:00–20:00; initial cafe entry requires reservation, confirm exact booked slot"
+              }
+            ],
+            "pinSourceUrl": "https://prtimes.jp/main/html/rd/p/000004440.000018505.html",
+            "detailsSourceUrl": "https://mashstylelab.jp/sanriohouse/",
+            "additionalSources": [
+              {
+                "url": "https://prtimes.jp/main/html/rd/p/000004440.000018505.html",
+                "label": "Research evidence"
+              },
+              {
+                "url": "https://nagoya.8agarage.co.jp/sanrio-house-nagoya-parco/",
+                "label": "Research evidence"
+              },
+              {
+                "url": "https://www.fashion-press.net/news/151312",
+                "label": "Research evidence"
+              },
+              {
+                "url": "https://mashstylelab.jp/sanriohouse/Page/News/Shop/",
+                "label": "Research evidence"
+              },
+              {
+                "url": "https://mashstylelab.jp/sanriohouse/Page/News/Web/",
+                "label": "Research evidence"
+              },
+              {
+                "url": "https://www.instagram.com/mash_sanriohouse_official/",
+                "label": "Research evidence"
+              },
+              {
+                "label": "October15named cafe menus and reservation schedule",
+                "url": "https://prtimes.jp/main/html/rd/p/000004516.000018505.html"
+              }
+            ],
+            "hoursNote": "Cafe phone activates onOctober29. Cafe TableCheck URL will be announced on operator news pageOctober21at noonJST; retail LINE is separate. October29–November3bookings openOctober21noon, November4–30openOctober29noon, December1–31openNovember10noon. No booking URL guessed."
+          },
+          "pinSourceUrl": "https://prtimes.jp/main/html/rd/p/000004440.000018505.html"
+        },
+        "enabled": true
+      },
+      "special": {
+        "regionSlug": "nagoya",
+        "profile": {
+          "name": "Sanrio House Cafe — Nagoya PARCO",
+          "menus": [
+            {
+              "label": "Published Nagoya cafe menu",
+              "url": "https://prtimes.jp/main/html/rd/p/000004516.000018505.html",
+              "currency": "JPY",
+              "coverage": "published",
+              "items": [
+                {
+                  "name": "Butter-and-sugar strawberry crepe",
+                  "price": 790
+                },
+                {
+                  "name": "Hello Kitty apple and mascarpone crepe",
+                  "price": 1680
+                },
+                {
+                  "name": "Pompompurin pear and praline-caramel crepe",
+                  "price": 1680
+                },
+                {
+                  "name": "Cinnamoroll white-peach, cinnamon-sugar and yoghurt-cream crepe",
+                  "price": 1680
+                },
+                {
+                  "name": "My Melody strawberry and pistachio-cream crepe",
+                  "price": 1680
+                },
+                {
+                  "name": "Hello Kitty soft serve",
+                  "price": 1280
+                },
+                {
+                  "name": "Pompompurin soft serve",
+                  "price": 1280
+                },
+                {
+                  "name": "Cinnamoroll soft serve",
+                  "price": 1280
+                },
+                {
+                  "name": "My Melody soft serve",
+                  "price": 1280
+                },
+                {
+                  "name": "Hello Kitty strawberry mini parfait",
+                  "price": 1580
+                },
+                {
+                  "name": "Pompompurin caramel-custard mini parfait",
+                  "price": 1580
+                },
+                {
+                  "name": "Cinnamoroll pear mini parfait",
+                  "price": 1580
+                },
+                {
+                  "name": "My Melody white-peach mini parfait",
+                  "price": 1580
+                },
+                {
+                  "name": "Initial-cookie topping",
+                  "price": 220
+                },
+                {
+                  "name": "Blend coffee — S",
+                  "price": 610,
+                  "note": "Hot or iced; operator-published size prices."
+                },
+                {
+                  "name": "Blend coffee — M",
+                  "price": 660,
+                  "note": "Hot or iced; operator-published size prices."
+                },
+                {
+                  "name": "Blend coffee — L",
+                  "price": 710,
+                  "note": "Hot or iced; operator-published size prices."
+                },
+                {
+                  "name": "Cafe latte — S",
+                  "price": 660,
+                  "note": "Hot or iced; operator-published size prices."
+                },
+                {
+                  "name": "Cafe latte — M",
+                  "price": 710,
+                  "note": "Hot or iced; operator-published size prices."
+                },
+                {
+                  "name": "Cafe latte — L",
+                  "price": 760,
+                  "note": "Hot or iced; operator-published size prices."
+                },
+                {
+                  "name": "Caramel latte — S",
+                  "price": 790,
+                  "note": "Hot or iced; operator-published size prices."
+                },
+                {
+                  "name": "Caramel latte — M",
+                  "price": 840,
+                  "note": "Hot or iced; operator-published size prices."
+                },
+                {
+                  "name": "Caramel latte — L",
+                  "price": 910,
+                  "note": "Hot or iced; operator-published size prices."
+                },
+                {
+                  "name": "White mocha latte — S",
+                  "price": 790,
+                  "note": "Hot or iced; operator-published size prices."
+                },
+                {
+                  "name": "White mocha latte — M",
+                  "price": 840,
+                  "note": "Hot or iced; operator-published size prices."
+                },
+                {
+                  "name": "White mocha latte — L",
+                  "price": 910,
+                  "note": "Hot or iced; operator-published size prices."
+                },
+                {
+                  "name": "Earl Grey tea — S",
+                  "price": 610,
+                  "note": "Hot or iced; operator-published size prices."
+                },
+                {
+                  "name": "Earl Grey tea — M",
+                  "price": 660,
+                  "note": "Hot or iced; operator-published size prices."
+                },
+                {
+                  "name": "Earl Grey tea — L",
+                  "price": 710,
+                  "note": "Hot or iced; operator-published size prices."
+                },
+                {
+                  "name": "Matcha latte — S",
+                  "price": 790,
+                  "note": "Hot or iced; operator-published size prices."
+                },
+                {
+                  "name": "Matcha latte — M",
+                  "price": 840,
+                  "note": "Hot or iced; operator-published size prices."
+                },
+                {
+                  "name": "Matcha latte — L",
+                  "price": 910,
+                  "note": "Hot or iced; operator-published size prices."
+                },
+                {
+                  "name": "Hojicha latte — S",
+                  "price": 790,
+                  "note": "Hot or iced; operator-published size prices."
+                },
+                {
+                  "name": "Hojicha latte — M",
+                  "price": 840,
+                  "note": "Hot or iced; operator-published size prices."
+                },
+                {
+                  "name": "Hojicha latte — L",
+                  "price": 910,
+                  "note": "Hot or iced; operator-published size prices."
+                },
+                {
+                  "name": "Peach-oolong tea latte — S",
+                  "price": 860,
+                  "note": "Hot or iced; operator-published size prices."
+                },
+                {
+                  "name": "Peach-oolong tea latte — M",
+                  "price": 910,
+                  "note": "Hot or iced; operator-published size prices."
+                },
+                {
+                  "name": "Peach-oolong tea latte — L",
+                  "price": 960,
+                  "note": "Hot or iced; operator-published size prices."
+                }
+              ],
+              "note": "October15operator update supersedes earlier unpriced placeholders. All prices include tax. Up to two items per person in each category, excluding initial-cookie topping; cookies cannot be bought alone. Last order30minutes before the booked seat ends; cancellation after20minutes late. No seat duration invented."
+            },
+            {
+              "label": "Hello Kitty birthday crepe",
+              "url": "https://prtimes.jp/main/html/rd/p/000004516.000018505.html",
+              "currency": "JPY",
+              "coverage": "sample",
+              "items": [
+                {
+                  "name": "Hello Kitty limited iced crepe",
+                  "price": 1680,
+                  "note": "From cafe openingOctober29through plannedNovember30; earlier sell-out possible."
+                }
+              ],
+              "note": "Operator names an iced crepe at¥1,680tax included, without a published filling/flavour; do not infer flavour from artwork. ExistingOctober29–November30offer dates preserved. Reservation required."
+            }
+          ],
+          "address": "B1F West Building, Nagoya PARCO, 3-29-1 Sakae, Naka-ku, Nagoya",
+          "specials": [
+            {
+              "kind": "other",
+              "title": "Hello Kitty birthday crepe",
+              "schedule": "Japan local time; see conditions",
+              "menuLabel": "Hello Kitty birthday crepe",
+              "sourceUrl": "https://prtimes.jp/main/html/rd/p/000004516.000018505.html",
+              "validFrom": "2026-10-29",
+              "conditions": [
+                "Cafe reservation required; retail LINE entry reservation is separate.",
+                "¥1,680tax included; filling/flavour not published.",
+                "PlannedNovember30end; may finish sooner when ingredients sell out.",
+                "Last order30minutes before the booked seat ends; booked seat duration unpublished."
+              ],
+              "discounted": false,
+              "description": "Hello Kitty limited iced crepe¥1,680tax included, from cafe launchOctober29through plannedNovember30; may sell out earlier.",
+              "limitedTime": true,
+              "availability": {
+                "windows": [
+                  {
+                    "end": "20:00",
+                    "days": [
+                      0,
+                      1,
+                      2,
+                      3,
+                      4,
+                      5,
+                      6
+                    ],
+                    "start": "10:00"
+                  }
+                ]
+              },
+              "validThrough": "2026-11-30"
+            }
+          ],
+          "checkedAt": "2026-10-17",
+          "websiteUrl": "https://mashstylelab.jp/sanriohouse/",
+          "neighborhood": "Sakae / Yabacho",
+          "pinSourceUrl": "https://prtimes.jp/main/html/rd/p/000004440.000018505.html",
+          "photo": {
+            "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-17/batch64-sanrio-1-ec497e8de95ae6e4.webp",
+            "alt": "Sanrio House Cafe — Nagoya PARCO — Operator menu illustration: Nagoya PARCO character-crepe presentation from the operator launch release.",
+            "credit": "Mash Holdings / ©2026 SANRIO CO., LTD. APPROVAL NO. L664297",
+            "sourceUrl": "https://prtimes.jp/main/html/rd/p/000004516.000018505.html",
+            "originalUrl": "https://prcdn.freetls.fastly.net/release_image/18505/4516/18505-4516-e6b7a5eba7a9e7f59fdcb57bde4e2c1b-2083x1250.jpg",
+            "checkedAt": "2026-10-17"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-17/batch64-sanrio-1-ec497e8de95ae6e4.webp",
+          "sha256": "ec497e8de95ae6e4e1c5717024a050edd1bd32004660181d1dd798f6ceaf7f98",
+          "width": 1600,
+          "height": 960,
+          "credit": "Mash Holdings / ©2026 SANRIO CO., LTD. APPROVAL NO. L664297",
+          "note": "Operator menu illustration: Nagoya PARCO character-crepe presentation from the operator launch release.",
+          "sourcePage": "https://prtimes.jp/main/html/rd/p/000004516.000018505.html"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-17/batch64-sanrio-2-80e8e0527e04e391.webp",
+          "sha256": "80e8e0527e04e391b594e86f5cef202f5478f954bd014691371d0fc0d934cf47",
+          "width": 1600,
+          "height": 640,
+          "credit": "Mash Holdings / ©2026 SANRIO CO., LTD. APPROVAL NO. L664297",
+          "note": "Operator menu illustration: Nagoya PARCO character soft-serve presentation from the operator release.",
+          "sourcePage": "https://prtimes.jp/main/html/rd/p/000004516.000018505.html"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-17/batch64-sanrio-3-d243e1c7e4dee635.webp",
+          "sha256": "d243e1c7e4dee635bc5dbbfbfd078a9bccb2af56141b40ba067725cb812ae71c",
+          "width": 1600,
+          "height": 512,
+          "credit": "Mash Holdings / ©2026 SANRIO CO., LTD. APPROVAL NO. L664297",
+          "note": "Operator menu illustration: Nagoya PARCO character mini-parfait presentation from the operator release.",
+          "sourcePage": "https://prtimes.jp/main/html/rd/p/000004516.000018505.html"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-17/batch64-sanrio-4-e811f0615f26e738.webp",
+          "sha256": "e811f0615f26e738b6fc8c4966289e4a1ea8b3241c79e7ff9625e99c4612fbcc",
+          "width": 1083,
+          "height": 2083,
+          "credit": "Mash Holdings / ©2026 SANRIO CO., LTD. APPROVAL NO. L664297",
+          "note": "Operator menu illustration: Limited Hello Kitty iced-crepe presentation; scheduled through November 30, subject to stock.",
+          "sourcePage": "https://prtimes.jp/main/html/rd/p/000004516.000018505.html"
+        }
+      ],
+      "expectedBefore": {
+        "content": {
+          "menu": {
+            "name": "Sanrio House Cafe — Nagoya PARCO",
+            "menus": [
+              {
+                "url": "https://prtimes.jp/main/html/rd/p/000004440.000018505.html",
+                "note": "Operator names these actual cafe items without prices or specific flavour names. Hello Kitty, My Melody, Pompompurin and Cinnamoroll themes have different flavours, but flavours are not inferred from merchandise illustrations. Store and cafe use separate reservation systems: initial cafe visits require TableCheck, retail entry uses official LINE. No confirmed cafe-booking URL was found in the checked operator release, brand/shop-news/web-news pages, official social profile or branch-specific reporting. Do not treat retail LINE as a cafe reservation. Nagoya property/menu photos remain unpublished in accessible galleries; release photos depict merchandise and are excluded.",
+                "items": [
+                  {
+                    "name": "Character-marshmallow crepe",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Character-marshmallow soft serve",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Character-marshmallow mini parfait",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Coffee",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Tea",
+                    "priceLabel": "Price not published"
+                  }
+                ],
+                "label": "Published Nagoya cafe menu",
+                "coverage": "sample",
+                "currency": "JPY"
+              },
+              {
+                "url": "https://prtimes.jp/main/html/rd/p/000004440.000018505.html",
+                "note": "Offered from the October 29 cafe opening through November 30, planned; may end earlier when ingredients run out. Price and flavour not published. The November 1 birthday is the theme, not the start date. Cafe reservation required. Retail purchases/gifts are not assumed to be food promotions.",
+                "items": [
+                  {
+                    "name": "Hello Kitty birthday crepe",
+                    "priceLabel": "Price not published"
+                  }
+                ],
+                "label": "Hello Kitty birthday crepe",
+                "coverage": "sample",
+                "currency": "JPY"
+              }
+            ],
+            "specials": [],
+            "checkedAt": "2026-10-14",
+            "pinSourceUrl": "https://prtimes.jp/main/html/rd/p/000004440.000018505.html"
+          },
+          "tile": {
+            "day": "2026-10-29",
+            "kind": "opening",
+            "name": "Sanrio House Cafe — Nagoya PARCO",
+            "slug": "sanrio-release",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan/replacements-2026-10-14/sanrio-opening-art-c17f0a09b55bdbd6.webp",
+            "address": "B1F West Building, Nagoya PARCO, 3-29-1 Sakae, Naka-ku, Nagoya",
+            "cuisine": "Cafe",
+            "checkedAt": "2026-10-14",
+            "imageNote": "Official Sanrio House artwork from the Nagoya PARCO cafe-opening announcement. Representative opening artwork, not a photograph of the cafe or its food.",
+            "priceRange": "",
+            "regionSlug": "nagoya",
+            "websiteUrl": "https://mashstylelab.jp/sanriohouse/",
+            "description": "The brand’s first cafe booth, with character-themed crepes, soft serve, mini parfaits and a dated Hello Kitty birthday crepe.",
+            "imageCredit": "Image: Mash Holdings · ©2026 SANRIO CO., LTD. APPROVAL NO. L664297",
+            "recognition": "",
+            "neighborhood": "Sakae / Yabacho",
+            "imageSourceUrl": "https://prtimes.jp/main/html/rd/p/000004440.000018505.html",
+            "openingConfirmed": true
+          },
+          "details": {
+            "name": "Sanrio House Cafe — Nagoya PARCO",
+            "phone": null,
+            "checkedAt": "2026-10-14",
+            "websiteUrl": "https://mashstylelab.jp/sanriohouse/",
+            "openingHours": [
+              {
+                "days": "Planned daily store/cafe hours",
+                "hours": "10:00–20:00; initial cafe entry requires reservation, confirm exact booked slot"
+              }
+            ],
+            "pinSourceUrl": "https://prtimes.jp/main/html/rd/p/000004440.000018505.html",
+            "detailsSourceUrl": "https://mashstylelab.jp/sanriohouse/",
+            "additionalSources": [
+              {
+                "url": "https://prtimes.jp/main/html/rd/p/000004440.000018505.html",
+                "label": "Research evidence"
+              },
+              {
+                "url": "https://nagoya.8agarage.co.jp/sanrio-house-nagoya-parco/",
+                "label": "Research evidence"
+              },
+              {
+                "url": "https://www.fashion-press.net/news/151312",
+                "label": "Research evidence"
+              },
+              {
+                "url": "https://mashstylelab.jp/sanriohouse/Page/News/Shop/",
+                "label": "Research evidence"
+              },
+              {
+                "url": "https://mashstylelab.jp/sanriohouse/Page/News/Web/",
+                "label": "Research evidence"
+              },
+              {
+                "url": "https://www.instagram.com/mash_sanriohouse_official/",
+                "label": "Research evidence"
+              }
+            ]
+          },
+          "pinSourceUrl": "https://prtimes.jp/main/html/rd/p/000004440.000018505.html"
+        },
+        "special": {
+          "name": "Sanrio House Cafe — Nagoya PARCO",
+          "menus": [
+            {
+              "url": "https://prtimes.jp/main/html/rd/p/000004440.000018505.html",
+              "note": "Operator names these actual cafe items without prices or specific flavour names. Hello Kitty, My Melody, Pompompurin and Cinnamoroll themes have different flavours, but flavours are not inferred from merchandise illustrations. Store and cafe use separate reservation systems: initial cafe visits require TableCheck, retail entry uses official LINE. No confirmed cafe-booking URL was found in the checked operator release, brand/shop-news/web-news pages, official social profile or branch-specific reporting. Do not treat retail LINE as a cafe reservation. Nagoya property/menu photos remain unpublished in accessible galleries; release photos depict merchandise and are excluded.",
+              "items": [
+                {
+                  "name": "Character-marshmallow crepe",
+                  "priceLabel": "Price not published"
+                },
+                {
+                  "name": "Character-marshmallow soft serve",
+                  "priceLabel": "Price not published"
+                },
+                {
+                  "name": "Character-marshmallow mini parfait",
+                  "priceLabel": "Price not published"
+                },
+                {
+                  "name": "Coffee",
+                  "priceLabel": "Price not published"
+                },
+                {
+                  "name": "Tea",
+                  "priceLabel": "Price not published"
+                }
+              ],
+              "label": "Published Nagoya cafe menu",
+              "coverage": "sample",
+              "currency": "JPY"
+            },
+            {
+              "url": "https://prtimes.jp/main/html/rd/p/000004440.000018505.html",
+              "note": "Offered from the October 29 cafe opening through November 30, planned; may end earlier when ingredients run out. Price and flavour not published. The November 1 birthday is the theme, not the start date. Cafe reservation required. Retail purchases/gifts are not assumed to be food promotions.",
+              "items": [
+                {
+                  "name": "Hello Kitty birthday crepe",
+                  "priceLabel": "Price not published"
+                }
+              ],
+              "label": "Hello Kitty birthday crepe",
+              "coverage": "sample",
+              "currency": "JPY"
+            }
+          ],
+          "address": "B1F West Building, Nagoya PARCO, 3-29-1 Sakae, Naka-ku, Nagoya",
+          "specials": [
+            {
+              "kind": "other",
+              "title": "Hello Kitty birthday crepe",
+              "schedule": "Japan local time; see conditions",
+              "menuLabel": "Hello Kitty birthday crepe",
+              "sourceUrl": "https://prtimes.jp/main/html/rd/p/000004440.000018505.html",
+              "validFrom": "2026-10-29",
+              "conditions": [
+                "Cafe reservation required; retail LINE entry reservation is separate.",
+                "Price and flavour not published.",
+                "Planned November 30 end; may finish sooner when ingredients sell out."
+              ],
+              "discounted": false,
+              "description": "An operator-announced birthday-themed crepe, starting with the cafe opening and planned through November 30.",
+              "limitedTime": true,
+              "availability": {
+                "windows": [
+                  {
+                    "end": "20:00",
+                    "days": [
+                      0,
+                      1,
+                      2,
+                      3,
+                      4,
+                      5,
+                      6
+                    ],
+                    "start": "10:00"
+                  }
+                ]
+              },
+              "validThrough": "2026-11-30"
+            }
+          ],
+          "checkedAt": "2026-10-14",
+          "websiteUrl": "https://mashstylelab.jp/sanriohouse/",
+          "neighborhood": "Sakae / Yabacho",
+          "pinSourceUrl": "https://prtimes.jp/main/html/rd/p/000004440.000018505.html"
+        }
+      },
+      "verification": {
+        "local": {
+          "pinId": 15510,
+          "sourceUrl": "https://prtimes.jp/main/html/rd/p/000004440.000018505.html",
+          "name": "Sanrio House Cafe — Nagoya PARCO",
+          "contentId": 1480,
+          "contentRevision": 3,
+          "verifiedGalleryLinks": 4,
+          "publicPinStatus": 200
+        },
+        "production": {
+          "pinId": 15510,
+          "sourceUrl": "https://prtimes.jp/main/html/rd/p/000004440.000018505.html",
+          "name": "Sanrio House Cafe — Nagoya PARCO",
+          "contentId": 1480,
+          "contentRevision": 3,
+          "verifiedGalleryLinks": 4,
+          "publicPinStatus": 200
+        }
+      }
+    }
+  ],
+  "verifiedAtUtc": "2026-10-17T13:54:16.707503+00:00",
+  "verification": {
+    "local": [
+      {
+        "pinId": 16242,
+        "sourceUrl": "https://yadoreyakuin.en-mn.jp/cafe/",
+        "name": "Cafe & Dining Reen — YADO/Re Yakuin",
+        "contentId": 1665,
+        "contentRevision": 1,
+        "verifiedGalleryLinks": 7,
+        "publicPinStatus": 200
+      },
+      {
+        "pinId": 16243,
+        "sourceUrl": "https://prtimes.jp/main/html/rd/p/000000005.000179600.html",
+        "name": "APOC COFFEE — Hakata Chikushiguchi",
+        "contentId": 1666,
+        "contentRevision": 1,
+        "verifiedGalleryLinks": 6,
+        "publicPinStatus": 200
+      },
+      {
+        "pinId": 16244,
+        "sourceUrl": "https://hatenacoffee.experiful.jp/locations/fukuoka/",
+        "name": "Hatena Coffee — Fukuoka Tenjin",
+        "contentId": 1667,
+        "contentRevision": 1,
+        "verifiedGalleryLinks": 1,
+        "publicPinStatus": 200
+      },
+      {
+        "pinId": 16245,
+        "sourceUrl": "https://yoru-parfait-gaku.com/category/parfait/nanakamadou64/",
+        "name": "Night Parfait Nanakamado 64",
+        "contentId": 1668,
+        "contentRevision": 1,
+        "verifiedGalleryLinks": 7,
+        "publicPinStatus": 200
+      },
+      {
+        "pinId": 15588,
+        "sourceUrl": "https://miyanomoricoffee.com/linktower/",
+        "name": "Miyanomori Coffee — Sapporo Link Tower Cafe",
+        "contentId": 1555,
+        "contentRevision": 2,
+        "verifiedGalleryLinks": 0,
+        "publicPinStatus": 200
+      },
+      {
+        "pinId": 15510,
+        "sourceUrl": "https://prtimes.jp/main/html/rd/p/000004440.000018505.html",
+        "name": "Sanrio House Cafe — Nagoya PARCO",
+        "contentId": 1480,
+        "contentRevision": 3,
+        "verifiedGalleryLinks": 4,
+        "publicPinStatus": 200
+      }
+    ],
+    "production": [
+      {
+        "pinId": 16290,
+        "sourceUrl": "https://yadoreyakuin.en-mn.jp/cafe/",
+        "name": "Cafe & Dining Reen — YADO/Re Yakuin",
+        "contentId": 1665,
+        "contentRevision": 1,
+        "verifiedGalleryLinks": 7,
+        "publicPinStatus": 200
+      },
+      {
+        "pinId": 16291,
+        "sourceUrl": "https://prtimes.jp/main/html/rd/p/000000005.000179600.html",
+        "name": "APOC COFFEE — Hakata Chikushiguchi",
+        "contentId": 1666,
+        "contentRevision": 1,
+        "verifiedGalleryLinks": 6,
+        "publicPinStatus": 200
+      },
+      {
+        "pinId": 16292,
+        "sourceUrl": "https://hatenacoffee.experiful.jp/locations/fukuoka/",
+        "name": "Hatena Coffee — Fukuoka Tenjin",
+        "contentId": 1667,
+        "contentRevision": 1,
+        "verifiedGalleryLinks": 1,
+        "publicPinStatus": 200
+      },
+      {
+        "pinId": 16293,
+        "sourceUrl": "https://yoru-parfait-gaku.com/category/parfait/nanakamadou64/",
+        "name": "Night Parfait Nanakamado 64",
+        "contentId": 1668,
+        "contentRevision": 1,
+        "verifiedGalleryLinks": 7,
+        "publicPinStatus": 200
+      },
+      {
+        "pinId": 15588,
+        "sourceUrl": "https://miyanomoricoffee.com/linktower/",
+        "name": "Miyanomori Coffee — Sapporo Link Tower Cafe",
+        "contentId": 1555,
+        "contentRevision": 2,
+        "verifiedGalleryLinks": 0,
+        "publicPinStatus": 200
+      },
+      {
+        "pinId": 15510,
+        "sourceUrl": "https://prtimes.jp/main/html/rd/p/000004440.000018505.html",
+        "name": "Sanrio House Cafe — Nagoya PARCO",
+        "contentId": 1480,
+        "contentRevision": 3,
+        "verifiedGalleryLinks": 4,
+        "publicPinStatus": 200
+      }
+    ],
+    "localGuideCards": [
+      {
+        "pinId": 16242,
+        "region": "fukuoka",
+        "view": "new",
+        "nativeApiHrefVerified": true,
+        "initialHtmlTitleAndImageLinks": true,
+        "guideStatus": 200,
+        "offers": []
+      },
+      {
+        "pinId": 16243,
+        "region": "fukuoka",
+        "view": "new",
+        "nativeApiHrefVerified": true,
+        "initialHtmlTitleAndImageLinks": true,
+        "guideStatus": 200,
+        "offers": []
+      },
+      {
+        "pinId": 16244,
+        "region": "fukuoka",
+        "view": "new",
+        "nativeApiHrefVerified": true,
+        "initialHtmlTitleAndImageLinks": true,
+        "guideStatus": 200,
+        "offers": []
+      },
+      {
+        "pinId": 16245,
+        "region": "sapporo",
+        "view": "new",
+        "nativeApiHrefVerified": true,
+        "initialHtmlTitleAndImageLinks": true,
+        "guideStatus": 200,
+        "offers": []
+      },
+      {
+        "pinId": 15588,
+        "region": "sapporo",
+        "view": "new",
+        "nativeApiHrefVerified": true,
+        "initialHtmlTitleAndImageLinks": true,
+        "guideStatus": 200,
+        "offers": []
+      },
+      {
+        "pinId": 15510,
+        "region": "nagoya",
+        "view": "discounts",
+        "nativeApiHrefVerified": true,
+        "initialHtmlTitleAndImageLinks": true,
+        "guideStatus": 200,
+        "offers": [
+          {
+            "id": "https://prtimes.jp/main/html/rd/p/000004440.000018505.html#0",
+            "name": "Sanrio House Cafe — Nagoya PARCO",
+            "neighborhood": "Sakae / Yabacho",
+            "address": "B1F West Building, Nagoya PARCO, 3-29-1 Sakae, Naka-ku, Nagoya",
+            "restaurantHref": "/pin/15510/sanrio-house-cafe-nagoya-parco-opens-in-sakae-yabacho",
+            "checkedAt": "2026-10-17",
+            "special": {
+              "kind": "other",
+              "title": "Hello Kitty birthday crepe",
+              "schedule": "Japan local time; see conditions",
+              "menuLabel": "Hello Kitty birthday crepe",
+              "sourceUrl": "https://prtimes.jp/main/html/rd/p/000004516.000018505.html",
+              "validFrom": "2026-10-29",
+              "conditions": [
+                "Cafe reservation required; retail LINE entry reservation is separate.",
+                "¥1,680tax included; filling/flavour not published.",
+                "PlannedNovember30end; may finish sooner when ingredients sell out.",
+                "Last order30minutes before the booked seat ends; booked seat duration unpublished."
+              ],
+              "discounted": false,
+              "description": "Hello Kitty limited iced crepe¥1,680tax included, from cafe launchOctober29through plannedNovember30; may sell out earlier.",
+              "limitedTime": true,
+              "availability": {
+                "windows": [
+                  {
+                    "end": "20:00",
+                    "days": [
+                      0,
+                      1,
+                      2,
+                      3,
+                      4,
+                      5,
+                      6
+                    ],
+                    "start": "10:00"
+                  }
+                ]
+              },
+              "validThrough": "2026-11-30"
+            },
+            "venueKey": "prtimes.jp/main/html/rd/p/000004440.000018505.html",
+            "photo": {
+              "alt": "Sanrio House Cafe — Nagoya PARCO — Operator menu illustration: Nagoya PARCO character-crepe presentation from the operator launch release.",
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-17/batch64-sanrio-1-ec497e8de95ae6e4.webp",
+              "credit": "Mash Holdings / ©2026 SANRIO CO., LTD. APPROVAL NO. L664297",
+              "checkedAt": "2026-10-17",
+              "sourceUrl": "https://prtimes.jp/main/html/rd/p/000004516.000018505.html",
+              "originalUrl": "https://prcdn.freetls.fastly.net/release_image/18505/4516/18505-4516-e6b7a5eba7a9e7f59fdcb57bde4e2c1b-2083x1250.jpg"
+            },
+            "menu": {
+              "url": "https://prtimes.jp/main/html/rd/p/000004516.000018505.html",
+              "note": "Operator names an iced crepe at¥1,680tax included, without a published filling/flavour; do not infer flavour from artwork. ExistingOctober29–November30offer dates preserved. Reservation required.",
+              "items": [
+                {
+                  "name": "Hello Kitty limited iced crepe",
+                  "note": "From cafe openingOctober29through plannedNovember30; earlier sell-out possible.",
+                  "price": 1680
+                }
+              ],
+              "label": "Hello Kitty birthday crepe",
+              "coverage": "sample",
+              "currency": "JPY"
+            },
+            "startsAt": "2026-10-29T01:00:00.000Z",
+            "end": "20:00",
+            "offers": [
+              {
+                "id": "https://prtimes.jp/main/html/rd/p/000004440.000018505.html#0",
+                "name": "Sanrio House Cafe — Nagoya PARCO",
+                "neighborhood": "Sakae / Yabacho",
+                "address": "B1F West Building, Nagoya PARCO, 3-29-1 Sakae, Naka-ku, Nagoya",
+                "restaurantHref": "/pin/15510/sanrio-house-cafe-nagoya-parco-opens-in-sakae-yabacho",
+                "checkedAt": "2026-10-17",
+                "special": {
+                  "kind": "other",
+                  "title": "Hello Kitty birthday crepe",
+                  "schedule": "Japan local time; see conditions",
+                  "menuLabel": "Hello Kitty birthday crepe",
+                  "sourceUrl": "https://prtimes.jp/main/html/rd/p/000004516.000018505.html",
+                  "validFrom": "2026-10-29",
+                  "conditions": [
+                    "Cafe reservation required; retail LINE entry reservation is separate.",
+                    "¥1,680tax included; filling/flavour not published.",
+                    "PlannedNovember30end; may finish sooner when ingredients sell out.",
+                    "Last order30minutes before the booked seat ends; booked seat duration unpublished."
+                  ],
+                  "discounted": false,
+                  "description": "Hello Kitty limited iced crepe¥1,680tax included, from cafe launchOctober29through plannedNovember30; may sell out earlier.",
+                  "limitedTime": true,
+                  "availability": {
+                    "windows": [
+                      {
+                        "end": "20:00",
+                        "days": [
+                          0,
+                          1,
+                          2,
+                          3,
+                          4,
+                          5,
+                          6
+                        ],
+                        "start": "10:00"
+                      }
+                    ]
+                  },
+                  "validThrough": "2026-11-30"
+                },
+                "venueKey": "prtimes.jp/main/html/rd/p/000004440.000018505.html",
+                "photo": {
+                  "alt": "Sanrio House Cafe — Nagoya PARCO — Operator menu illustration: Nagoya PARCO character-crepe presentation from the operator launch release.",
+                  "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-17/batch64-sanrio-1-ec497e8de95ae6e4.webp",
+                  "credit": "Mash Holdings / ©2026 SANRIO CO., LTD. APPROVAL NO. L664297",
+                  "checkedAt": "2026-10-17",
+                  "sourceUrl": "https://prtimes.jp/main/html/rd/p/000004516.000018505.html",
+                  "originalUrl": "https://prcdn.freetls.fastly.net/release_image/18505/4516/18505-4516-e6b7a5eba7a9e7f59fdcb57bde4e2c1b-2083x1250.jpg"
+                },
+                "menu": {
+                  "url": "https://prtimes.jp/main/html/rd/p/000004516.000018505.html",
+                  "note": "Operator names an iced crepe at¥1,680tax included, without a published filling/flavour; do not infer flavour from artwork. ExistingOctober29–November30offer dates preserved. Reservation required.",
+                  "items": [
+                    {
+                      "name": "Hello Kitty limited iced crepe",
+                      "note": "From cafe openingOctober29through plannedNovember30; earlier sell-out possible.",
+                      "price": 1680
+                    }
+                  ],
+                  "label": "Hello Kitty birthday crepe",
+                  "coverage": "sample",
+                  "currency": "JPY"
+                },
+                "startsAt": "2026-10-29T01:00:00.000Z",
+                "end": "20:00"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "productionGuideCards": [
+      {
+        "pinId": 16290,
+        "region": "fukuoka",
+        "view": "new",
+        "nativeApiHrefVerified": true,
+        "initialHtmlTitleAndImageLinks": true,
+        "guideStatus": 200,
+        "offers": []
+      },
+      {
+        "pinId": 16291,
+        "region": "fukuoka",
+        "view": "new",
+        "nativeApiHrefVerified": true,
+        "initialHtmlTitleAndImageLinks": true,
+        "guideStatus": 200,
+        "offers": []
+      },
+      {
+        "pinId": 16292,
+        "region": "fukuoka",
+        "view": "new",
+        "nativeApiHrefVerified": true,
+        "initialHtmlTitleAndImageLinks": true,
+        "guideStatus": 200,
+        "offers": []
+      },
+      {
+        "pinId": 16293,
+        "region": "sapporo",
+        "view": "new",
+        "nativeApiHrefVerified": true,
+        "initialHtmlTitleAndImageLinks": true,
+        "guideStatus": 200,
+        "offers": []
+      },
+      {
+        "pinId": 15588,
+        "region": "sapporo",
+        "view": "new",
+        "nativeApiHrefVerified": true,
+        "initialHtmlTitleAndImageLinks": true,
+        "guideStatus": 200,
+        "offers": []
+      },
+      {
+        "pinId": 15510,
+        "region": "nagoya",
+        "view": "discounts",
+        "nativeApiHrefVerified": true,
+        "initialHtmlTitleAndImageLinks": true,
+        "guideStatus": 200,
+        "offers": [
+          {
+            "id": "https://prtimes.jp/main/html/rd/p/000004440.000018505.html#0",
+            "name": "Sanrio House Cafe — Nagoya PARCO",
+            "neighborhood": "Sakae / Yabacho",
+            "address": "B1F West Building, Nagoya PARCO, 3-29-1 Sakae, Naka-ku, Nagoya",
+            "restaurantHref": "/pin/15510/sanrio-house-cafe-nagoya-parco-opens-in-sakae-yabacho",
+            "checkedAt": "2026-10-17",
+            "special": {
+              "kind": "other",
+              "title": "Hello Kitty birthday crepe",
+              "schedule": "Japan local time; see conditions",
+              "menuLabel": "Hello Kitty birthday crepe",
+              "sourceUrl": "https://prtimes.jp/main/html/rd/p/000004516.000018505.html",
+              "validFrom": "2026-10-29",
+              "conditions": [
+                "Cafe reservation required; retail LINE entry reservation is separate.",
+                "¥1,680tax included; filling/flavour not published.",
+                "PlannedNovember30end; may finish sooner when ingredients sell out.",
+                "Last order30minutes before the booked seat ends; booked seat duration unpublished."
+              ],
+              "discounted": false,
+              "description": "Hello Kitty limited iced crepe¥1,680tax included, from cafe launchOctober29through plannedNovember30; may sell out earlier.",
+              "limitedTime": true,
+              "availability": {
+                "windows": [
+                  {
+                    "end": "20:00",
+                    "days": [
+                      0,
+                      1,
+                      2,
+                      3,
+                      4,
+                      5,
+                      6
+                    ],
+                    "start": "10:00"
+                  }
+                ]
+              },
+              "validThrough": "2026-11-30"
+            },
+            "venueKey": "prtimes.jp/main/html/rd/p/000004440.000018505.html",
+            "photo": {
+              "alt": "Sanrio House Cafe — Nagoya PARCO — Operator menu illustration: Nagoya PARCO character-crepe presentation from the operator launch release.",
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-17/batch64-sanrio-1-ec497e8de95ae6e4.webp",
+              "credit": "Mash Holdings / ©2026 SANRIO CO., LTD. APPROVAL NO. L664297",
+              "checkedAt": "2026-10-17",
+              "sourceUrl": "https://prtimes.jp/main/html/rd/p/000004516.000018505.html",
+              "originalUrl": "https://prcdn.freetls.fastly.net/release_image/18505/4516/18505-4516-e6b7a5eba7a9e7f59fdcb57bde4e2c1b-2083x1250.jpg"
+            },
+            "menu": {
+              "url": "https://prtimes.jp/main/html/rd/p/000004516.000018505.html",
+              "note": "Operator names an iced crepe at¥1,680tax included, without a published filling/flavour; do not infer flavour from artwork. ExistingOctober29–November30offer dates preserved. Reservation required.",
+              "items": [
+                {
+                  "name": "Hello Kitty limited iced crepe",
+                  "note": "From cafe openingOctober29through plannedNovember30; earlier sell-out possible.",
+                  "price": 1680
+                }
+              ],
+              "label": "Hello Kitty birthday crepe",
+              "coverage": "sample",
+              "currency": "JPY"
+            },
+            "startsAt": "2026-10-29T01:00:00.000Z",
+            "end": "20:00",
+            "offers": [
+              {
+                "id": "https://prtimes.jp/main/html/rd/p/000004440.000018505.html#0",
+                "name": "Sanrio House Cafe — Nagoya PARCO",
+                "neighborhood": "Sakae / Yabacho",
+                "address": "B1F West Building, Nagoya PARCO, 3-29-1 Sakae, Naka-ku, Nagoya",
+                "restaurantHref": "/pin/15510/sanrio-house-cafe-nagoya-parco-opens-in-sakae-yabacho",
+                "checkedAt": "2026-10-17",
+                "special": {
+                  "kind": "other",
+                  "title": "Hello Kitty birthday crepe",
+                  "schedule": "Japan local time; see conditions",
+                  "menuLabel": "Hello Kitty birthday crepe",
+                  "sourceUrl": "https://prtimes.jp/main/html/rd/p/000004516.000018505.html",
+                  "validFrom": "2026-10-29",
+                  "conditions": [
+                    "Cafe reservation required; retail LINE entry reservation is separate.",
+                    "¥1,680tax included; filling/flavour not published.",
+                    "PlannedNovember30end; may finish sooner when ingredients sell out.",
+                    "Last order30minutes before the booked seat ends; booked seat duration unpublished."
+                  ],
+                  "discounted": false,
+                  "description": "Hello Kitty limited iced crepe¥1,680tax included, from cafe launchOctober29through plannedNovember30; may sell out earlier.",
+                  "limitedTime": true,
+                  "availability": {
+                    "windows": [
+                      {
+                        "end": "20:00",
+                        "days": [
+                          0,
+                          1,
+                          2,
+                          3,
+                          4,
+                          5,
+                          6
+                        ],
+                        "start": "10:00"
+                      }
+                    ]
+                  },
+                  "validThrough": "2026-11-30"
+                },
+                "venueKey": "prtimes.jp/main/html/rd/p/000004440.000018505.html",
+                "photo": {
+                  "alt": "Sanrio House Cafe — Nagoya PARCO — Operator menu illustration: Nagoya PARCO character-crepe presentation from the operator launch release.",
+                  "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-17/batch64-sanrio-1-ec497e8de95ae6e4.webp",
+                  "credit": "Mash Holdings / ©2026 SANRIO CO., LTD. APPROVAL NO. L664297",
+                  "checkedAt": "2026-10-17",
+                  "sourceUrl": "https://prtimes.jp/main/html/rd/p/000004516.000018505.html",
+                  "originalUrl": "https://prcdn.freetls.fastly.net/release_image/18505/4516/18505-4516-e6b7a5eba7a9e7f59fdcb57bde4e2c1b-2083x1250.jpg"
+                },
+                "menu": {
+                  "url": "https://prtimes.jp/main/html/rd/p/000004516.000018505.html",
+                  "note": "Operator names an iced crepe at¥1,680tax included, without a published filling/flavour; do not infer flavour from artwork. ExistingOctober29–November30offer dates preserved. Reservation required.",
+                  "items": [
+                    {
+                      "name": "Hello Kitty limited iced crepe",
+                      "note": "From cafe openingOctober29through plannedNovember30; earlier sell-out possible.",
+                      "price": 1680
+                    }
+                  ],
+                  "label": "Hello Kitty birthday crepe",
+                  "coverage": "sample",
+                  "currency": "JPY"
+                },
+                "startsAt": "2026-10-29T01:00:00.000Z",
+                "end": "20:00"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "all24CountsAgree": true,
+    "counts": [
+      {
+        "environment": "production",
+        "city": "fukuoka",
+        "view": "upcoming",
+        "count": 10,
+        "ids": [
+          "15398",
+          "15410",
+          "15411",
+          "15415",
+          "15424",
+          "15425",
+          "15426",
+          "15427",
+          "15914",
+          "15924"
+        ]
+      },
+      {
+        "environment": "production",
+        "city": "fukuoka",
+        "view": "new",
+        "count": 17,
+        "ids": [
+          "15399",
+          "15400",
+          "15401",
+          "15409",
+          "15412",
+          "15414",
+          "15421",
+          "15422",
+          "15423",
+          "15428",
+          "15969",
+          "16026",
+          "16027",
+          "16078",
+          "16290",
+          "16291",
+          "16292"
+        ]
+      },
+      {
+        "environment": "production",
+        "city": "fukuoka",
+        "view": "top",
+        "count": 14,
+        "ids": [
+          "15402",
+          "15403",
+          "15404",
+          "15405",
+          "15406",
+          "15407",
+          "15408",
+          "15413",
+          "15416",
+          "15417",
+          "15418",
+          "15419",
+          "15420",
+          "15429"
+        ]
+      },
+      {
+        "environment": "production",
+        "city": "fukuoka",
+        "view": "discounts",
+        "count": 23,
+        "ids": [
+          "https://and-gallery.com/#hukuoka",
+          "https://fukuokaseahawk.hiltonjapan.co.jp/restaurants/clouds",
+          "https://fukuokaseahawk.hiltonjapan.co.jp/restaurants/seala",
+          "https://prtimes.jp/main/html/rd/p/000000064.000152670.html",
+          "https://pukutoco.com/shi-yanyan-ropponmatu/",
+          "https://pukutoco.com/sumomo-bakery-1007open/",
+          "https://pukutoco.com/sumomobakery-akasaka1019open/",
+          "https://toeihotel-fukuoka.com/restaurant/bistro_atrie/",
+          "https://www.eggsnthingsjapan.com/hakata/",
+          "https://www.f-sunpalace.com/restaurant/lagoon/",
+          "https://www.fuk.hotelokura.co.jp/restaurant/lechampdor/",
+          "https://www.gate-hotel.jp/fukuoka/rb/agfukuoka.html",
+          "https://www.hiramatsurestaurant.jp/hiramatsu-hakata/",
+          "https://www.hotelnikko-fukuoka.com/restaurant/benkei/",
+          "https://www.hotelnikko-fukuoka.com/restaurant/celebrites/",
+          "https://www.hotelnikko-fukuoka.com/restaurant/serena/",
+          "https://www.hotpepper.jp/strJ001276550/",
+          "https://www.kys-newotani.co.jp/hakata/restaurant/castillian-bar/",
+          "https://www.orec.co.jp/greenlab-fukuoka/",
+          "https://www.princehotels.co.jp/momochihama/restaurant/yocaterrace/",
+          "https://www.quil-fait-bon.com/pages/fukuoka",
+          "https://www.recent-hotel.com/restaurant/",
+          "https://www.tenchika.com/shop/h_b_antique/"
+        ]
+      },
+      {
+        "environment": "production",
+        "city": "osaka",
+        "view": "upcoming",
+        "count": 11,
+        "ids": [
+          "15432",
+          "15445",
+          "15447",
+          "15448",
+          "15449",
+          "15458",
+          "15913",
+          "15925",
+          "15975",
+          "16023",
+          "16079"
+        ]
+      },
+      {
+        "environment": "production",
+        "city": "osaka",
+        "view": "new",
+        "count": 14,
+        "ids": [
+          "15431",
+          "15435",
+          "15436",
+          "15437",
+          "15438",
+          "15439",
+          "15446",
+          "15451",
+          "15452",
+          "15453",
+          "15454",
+          "15455",
+          "15456",
+          "15457"
+        ]
+      },
+      {
+        "environment": "production",
+        "city": "osaka",
+        "view": "top",
+        "count": 10,
+        "ids": [
+          "15430",
+          "15433",
+          "15434",
+          "15440",
+          "15441",
+          "15442",
+          "15443",
+          "15444",
+          "15450",
+          "15971"
+        ]
+      },
+      {
+        "environment": "production",
+        "city": "osaka",
+        "view": "discounts",
+        "count": 19,
+        "ids": [
+          "https://and-gallery.com/#nanba",
+          "https://big-step.co.jp/shop/detail/63",
+          "https://conrad-osaka.hiltonjapan.co.jp/restaurants/40skybar",
+          "https://conrad-osaka.hiltonjapan.co.jp/restaurants/atmos",
+          "https://cross-osaka.orixhotelsandresorts.com/#restaurant",
+          "https://csm-cafe.ltr-online.com/lp/csm-cafe-s022",
+          "https://icosaka.com/offer/pierre_autumnmenu/",
+          "https://jblm2024.wixsite.com/fujiyama-tokyo/%E8%A4%87%E8%A3%BD-namba-osaka",
+          "https://osaka.ekimaru.com/shopguide/detail/103",
+          "https://osaka.hiltonjapan.co.jp/plans/restaurants/other/myplace-happyhour",
+          "https://patinahotels.com/osaka/drink-and-dine/p72",
+          "https://prtimes.jp/main/html/rd/p/000000001.000192433.html/",
+          "https://restaurant-yamaya.com/brand/mentai-shokudo/restaurant/links_umeda",
+          "https://www.daimaru.co.jp/shinsaibashi/restaurant/cucina-bella.html",
+          "https://www.gate-hotel.jp/osaka/rb/aosaka.html",
+          "https://www.gate-hotel.jp/osaka/rb/peaks.html",
+          "https://www.hotpepper.jp/strJ004661366/",
+          "https://www.quil-fait-bon.com/pages/grand-front-osaka",
+          "https://www.regine.stregisosaka.com/"
+        ]
+      },
+      {
+        "environment": "production",
+        "city": "kyoto",
+        "view": "upcoming",
+        "count": 9,
+        "ids": [
+          "15483",
+          "15499",
+          "15500",
+          "15909",
+          "15910",
+          "15911",
+          "15912",
+          "15922",
+          "15931"
+        ]
+      },
+      {
+        "environment": "production",
+        "city": "kyoto",
+        "view": "new",
+        "count": 31,
+        "ids": [
+          "15460",
+          "15461",
+          "15462",
+          "15463",
+          "15464",
+          "15465",
+          "15466",
+          "15467",
+          "15468",
+          "15469",
+          "15470",
+          "15471",
+          "15472",
+          "15473",
+          "15474",
+          "15475",
+          "15476",
+          "15477",
+          "15478",
+          "15479",
+          "15480",
+          "15481",
+          "15482",
+          "15489",
+          "15490",
+          "15491",
+          "15492",
+          "15493",
+          "15494",
+          "15495",
+          "15498"
+        ]
+      },
+      {
+        "environment": "production",
+        "city": "kyoto",
+        "view": "top",
+        "count": 10,
+        "ids": [
+          "15459",
+          "15484",
+          "15485",
+          "15486",
+          "15487",
+          "15488",
+          "15496",
+          "15497",
+          "15501",
+          "15973"
+        ]
+      },
+      {
+        "environment": "production",
+        "city": "kyoto",
+        "view": "discounts",
+        "count": 30,
+        "ids": [
+          "https://hotelfauchonkyoto.com/ja/gourmet/fauchon-salon-de-the-kyoto/",
+          "https://kyoto.hiltonjapan.co.jp/restaurants/teori",
+          "https://www.instagram.com/jbowl_ritsumeikan_mae/",
+          "https://www.keihanhotels-resorts.co.jp/kyoto-centuryhotel/topics/happyhour-2/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/011/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/012/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/013/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/014/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/015/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/016/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/017/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/018/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/019/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/020/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/022/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/023/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/026/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/028/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/031/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/033/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/039/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/040/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/042/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/043/",
+          "https://www.princess-kyoto.co.jp/restaurant/ambercourt/",
+          "https://www.princess-kyoto.co.jp/restaurant/darley/",
+          "https://www.princess-kyoto.co.jp/restaurant/hisuien/",
+          "https://www.princess-kyoto.co.jp/restaurant/hoen/",
+          "https://www.princess-kyoto.co.jp/restaurant/sagano/",
+          "https://www.quil-fait-bon.com/pages/kyoto"
+        ]
+      },
+      {
+        "environment": "production",
+        "city": "nagoya",
+        "view": "upcoming",
+        "count": 11,
+        "ids": [
+          "15510",
+          "15512",
+          "15517",
+          "15518",
+          "15521",
+          "15522",
+          "15900",
+          "15901",
+          "15902",
+          "16075",
+          "16080"
+        ]
+      },
+      {
+        "environment": "production",
+        "city": "nagoya",
+        "view": "new",
+        "count": 22,
+        "ids": [
+          "15509",
+          "15511",
+          "15515",
+          "15516",
+          "15519",
+          "15520",
+          "15898",
+          "15899",
+          "15915",
+          "15916",
+          "15917",
+          "15918",
+          "15919",
+          "15920",
+          "15921",
+          "15932",
+          "15964",
+          "15965",
+          "16020",
+          "16021",
+          "16022",
+          "16076"
+        ]
+      },
+      {
+        "environment": "production",
+        "city": "nagoya",
+        "view": "top",
+        "count": 12,
+        "ids": [
+          "15502",
+          "15503",
+          "15504",
+          "15505",
+          "15506",
+          "15507",
+          "15508",
+          "15513",
+          "15514",
+          "15523",
+          "15524",
+          "15972"
+        ]
+      },
+      {
+        "environment": "production",
+        "city": "nagoya",
+        "view": "discounts",
+        "count": 17,
+        "ids": [
+          "https://and-gallery.com/#nagoya",
+          "https://csm-cafe.ltr-online.com/lp/csm-cafe-s017",
+          "https://kinzan.nagoya/archives/news/2853/",
+          "https://lebeurrenoisettetokyo.com/nagoya/",
+          "https://nagoya.hiltonjapan.co.jp/restaurants/hideaway3-3",
+          "https://nagoya.hiltonjapan.co.jp/restaurants/inplace3-3",
+          "https://nagoya.hiltonjapan.co.jp/restaurants/ouchou",
+          "https://nagoya.parco.jp/shop/detail/?cd=009191",
+          "https://prtimes.jp/main/html/rd/p/000004440.000018505.html",
+          "https://www.anacrowneplaza-nagoya.jp/pages/restaurant_gardencourt",
+          "https://www.anacrowneplaza-nagoya.jp/pages/restaurant_karin",
+          "https://www.anacrowneplaza-nagoya.jp/pages/restaurant_stargate",
+          "https://www.anacrowneplaza-nagoya.jp/pages/restaurant_winglounge",
+          "https://www.associa.com/nma/restaurant/pergola/",
+          "https://www.centralpark.co.jp/shop/sharecafe/",
+          "https://www.komeda.co.jp/shop/detail.html?id=1215",
+          "https://www.quil-fait-bon.com/pages/nagoya-sakae"
+        ]
+      },
+      {
+        "environment": "production",
+        "city": "tokyo",
+        "view": "upcoming",
+        "count": 11,
+        "ids": [
+          "15526",
+          "15538",
+          "15541",
+          "15544",
+          "15546",
+          "15555",
+          "15556",
+          "15557",
+          "15923",
+          "15929",
+          "15930"
+        ]
+      },
+      {
+        "environment": "production",
+        "city": "tokyo",
+        "view": "new",
+        "count": 12,
+        "ids": [
+          "15527",
+          "15539",
+          "15540",
+          "15551",
+          "15552",
+          "15553",
+          "15554",
+          "15558",
+          "15966",
+          "15967",
+          "15968",
+          "16289"
+        ]
+      },
+      {
+        "environment": "production",
+        "city": "tokyo",
+        "view": "top",
+        "count": 24,
+        "ids": [
+          "15525",
+          "15528",
+          "15529",
+          "15530",
+          "15531",
+          "15532",
+          "15533",
+          "15534",
+          "15535",
+          "15536",
+          "15537",
+          "15542",
+          "15543",
+          "15545",
+          "15547",
+          "15548",
+          "15549",
+          "15550",
+          "15559",
+          "15560",
+          "15561",
+          "15562",
+          "15903",
+          "15974"
+        ]
+      },
+      {
+        "environment": "production",
+        "city": "tokyo",
+        "view": "discounts",
+        "count": 33,
+        "ids": [
+          "https://and-gallery.com/#ikebukuro",
+          "https://and-gallery.com/#yurakucho",
+          "https://cocco.eastone.co.jp/shop/gotanda",
+          "https://cocco.eastone.co.jp/shop/kameido",
+          "https://conrad-tokyo.hiltonjapan.co.jp/restaurants/cerise",
+          "https://conrad-tokyo.hiltonjapan.co.jp/restaurants/chinablue",
+          "https://conrad-tokyo.hiltonjapan.co.jp/restaurants/twentyeight",
+          "https://csm-cafe.ltr-online.com/lp/csm-cafe-s012",
+          "https://miabocca.eastone.co.jp/shop/Ikebukuro",
+          "https://miabocca.eastone.co.jp/shop/Shakujii-park",
+          "https://miabocca.eastone.co.jp/shop/Shinjuku-takasimaya",
+          "https://prtimes.jp/main/html/rd/p/000000048.000152772.html",
+          "https://prtimes.jp/main/html/rd/p/000000356.000048489.html",
+          "https://prtimes.jp/main/html/rd/p/000000592.000071323.html",
+          "https://prtimes.jp/main/html/rd/p/000004178.000003860.html",
+          "https://sarabethsrestaurants.jp/location/omotesando/",
+          "https://sarabethsrestaurants.jp/location/shinagawa/",
+          "https://sarabethsrestaurants.jp/location/shinjuku/",
+          "https://sarabethsrestaurants.jp/location/tokyo/",
+          "https://shop.gyro.holdings/detail/131809/",
+          "https://store-info.skylark.co.jp/syabuyo/map/198490/",
+          "https://tokyo.hiltonjapan.co.jp/restaurants/st_georges_bar",
+          "https://www.andaztokyo.jp/restaurants/jp/thetavern-grill-lounge",
+          "https://www.herofield.com/bbq/tokyoprince/",
+          "https://www.hiramatsurestaurant.jp/jardindessens-tokyo/",
+          "https://www.mesm.jp/en/eat-drink/chefs-theatre.html",
+          "https://www.newotani.co.jp/tokyo/restaurant/gardenlounge/",
+          "https://www.quil-fait-bon.com/pages/aoyama",
+          "https://www.quil-fait-bon.com/pages/grand-maison-ginza",
+          "https://www.quil-fait-bon.com/pages/shinjuku",
+          "https://www.quil-fait-bon.com/pages/tokyo-dome-city",
+          "https://www.quil-fait-bon.com/pages/tokyo-skytree-town-solamachi",
+          "https://www.sunamo.jp/floor/shop_detail.html?UC=1_028"
+        ]
+      },
+      {
+        "environment": "production",
+        "city": "sapporo",
+        "view": "upcoming",
+        "count": 7,
+        "ids": [
+          "15568",
+          "15569",
+          "15570",
+          "15571",
+          "15597",
+          "15926",
+          "15970"
+        ]
+      },
+      {
+        "environment": "production",
+        "city": "sapporo",
+        "view": "new",
+        "count": 11,
+        "ids": [
+          "15580",
+          "15586",
+          "15587",
+          "15588",
+          "15589",
+          "15590",
+          "15591",
+          "15592",
+          "15595",
+          "15596",
+          "16293"
+        ]
+      },
+      {
+        "environment": "production",
+        "city": "sapporo",
+        "view": "top",
+        "count": 30,
+        "ids": [
+          "15563",
+          "15564",
+          "15565",
+          "15566",
+          "15567",
+          "15572",
+          "15573",
+          "15574",
+          "15575",
+          "15576",
+          "15577",
+          "15578",
+          "15579",
+          "15581",
+          "15582",
+          "15583",
+          "15584",
+          "15585",
+          "15593",
+          "15594",
+          "15598",
+          "15599",
+          "15600",
+          "15601",
+          "15602",
+          "15603",
+          "15604",
+          "15605",
+          "15606",
+          "15607"
+        ]
+      },
+      {
+        "environment": "production",
+        "city": "sapporo",
+        "view": "discounts",
+        "count": 32,
+        "ids": [
+          "https://chocottosushi-kiwami.owst.jp/",
+          "https://cocco.eastone.co.jp/shop/kitahachijo",
+          "https://cocco.eastone.co.jp/shop/kitaichijo",
+          "https://cocco.eastone.co.jp/shop/kotoniekimae",
+          "https://cocco.eastone.co.jp/shop/miyanosawa",
+          "https://cocco.eastone.co.jp/shop/shindohigashi",
+          "https://cocco.eastone.co.jp/shop/souen",
+          "https://gracery.com/sapporo/restaurant/971/",
+          "https://grand1934.com/restaurant/garden-dining-waraku/",
+          "https://grand1934.com/restaurant/kokaku/",
+          "https://grand1934.com/restaurant/lobby-lounge-mizar/",
+          "https://grand1934.com/restaurant/northern-terrace-diner/",
+          "https://grand1934.com/restaurant/old-saloon1934/",
+          "https://miabocca.eastone.co.jp/shop/Kita2jo",
+          "https://miabocca.eastone.co.jp/shop/Kotoni-station",
+          "https://miabocca.eastone.co.jp/shop/Sapporo-station",
+          "https://miabocca.eastone.co.jp/shop/atsubetsuminami",
+          "https://miabocca.eastone.co.jp/shop/sapporoduo",
+          "https://store-info.skylark.co.jp/syabuyo/map/198489/",
+          "https://www.anahisapporosusukino.com/restaurants/verde/",
+          "https://www.hyatt.com/hyatt-centric/ja-JP/ctsct-hyatt-centric-sapporo/dining",
+          "https://www.jrhotels.co.jp/tower/restaurant/skyj/",
+          "https://www.keioplaza-sapporo.co.jp/restaurants/akizu/",
+          "https://www.keioplaza-sapporo.co.jp/restaurants/crossvault/",
+          "https://www.keioplaza-sapporo.co.jp/restaurants/glass/",
+          "https://www.keioplaza-sapporo.co.jp/restaurants/miyama/",
+          "https://www.keioplaza-sapporo.co.jp/restaurants/yamanami/",
+          "https://www.princehotels.co.jp/sapporo/restaurant/alldaydininggrandeur",
+          "https://www.princehotels.co.jp/sapporo/restaurant/fuyojo",
+          "https://www.princehotels.co.jp/sapporo/restaurant/katsura",
+          "https://www.princehotels.co.jp/sapporo/restaurant/top_prince",
+          "https://www.tokyuhotels.co.jp/sapporostream/restaurant/splish/plan/angel_devil/index.html"
+        ]
+      }
+    ],
+    "memberships": 420,
+    "shortfall": 306,
+    "newBranches": 4,
+    "existingVenueUpdates": 2,
+    "publishedMenuEntries": 169,
+    "newVenueMenuEntries": 127,
+    "galleryLinksAdded": 25,
+    "newOffers": 0
+  }
+}

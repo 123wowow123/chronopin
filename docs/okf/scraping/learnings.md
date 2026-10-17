@@ -15,6 +15,11 @@ Entry format: `## YYYY-MM-DD - <job>`, then `* **Learned**`, `* **Feedback**` (o
 
 
 
+## 2026-10-16 - Production translation completion, seven pins
+
+* **Done:** Saved 105 production translations across seven pins in all 15 non-English locales: 90 missing rows and 15 outdated rows. The final global export returned zero due pins. Public checks covered every affected pin and all 15 locales, and original English fields and authors were verified unchanged. Artifacts: ignored `.scrape/prod-batches/translations-2026-10-16-evening/`. No deployment.
+* **Learned:** Restaurant “dated menus” means menus with published validity dates, not obsolete menus. Make the restaurant the subject of opening titles so a shopping-mall branch label does not become a mall-opening announcement. Production temporarily timed out and returned 502s during saves; retain successful receipts, check coverage before retrying, and resume remaining rows after recovery.
+
 ## 2026-10-16 - Production translation refresh and concurrent additions
 
 * **Done:** Saved 1,140 production translations across 76 pins in all 15 non-English locales: 900 missing and 240 outdated. Included 12 new pins found during the run. Final global export showed zero due pins; public localized checks covered every pin and locale, and all English fields and authors were preserved. Exports, reviewed corrections, saves and verification are in ignored `.scrape/prod-batches/translations-2026-10-16-refresh/` and `translations-2026-10-16-refresh-wave2/`.
