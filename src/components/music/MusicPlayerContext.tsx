@@ -292,7 +292,13 @@ export function MusicPlayerProvider({ children }: { children: ReactNode }) {
     const src = track.audioUrl || '';
     if (src) {
       audioRef.current.src = src;
-      audioRef.current.currentTime = 0;
+      try {
+        if (audioRef.current.currentTime !== 0) {
+          audioRef.current.currentTime = 0;
+        }
+      } catch {
+        // Ignored: readyState reset already sets currentTime to 0 per HTML5 spec
+      }
       audioRef.current.play().catch((err) => {
         console.warn('Autoplay refused or audio source error:', err);
       });
