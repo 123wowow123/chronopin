@@ -81,6 +81,14 @@ services:
     depends_on:
       - app
     restart: unless-stopped
+    # The access log (Caddyfile, accesslog) goes to stdout, roughly 2 GB a day
+    # at today's traffic (estimated): keep the newest 2 GB so it can never fill
+    # the disk (2026-10-17).
+    logging:
+      driver: json-file
+      options:
+        max-size: 50m
+        max-file: '40'
 
   # The build stage, source and dev dependencies included, for the one-off
   # scripts the standalone image leaves out:

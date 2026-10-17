@@ -32,7 +32,9 @@ export const GET = route(async (request: NextRequest) => {
     const result = await weather.forPlace({ latitude, longitude });
     return result ? json(result, 200, CACHE) : noContent();
   } catch (err) {
-    log.error('localWeather', (err as Error)?.message);
-    return new Response(null, { status: 502 });
+    // One line when a quota trips (weather.ts), not one per request, and a
+    // short cache so the browser stops asking while it lasts.
+    if (!weather.quotaExhausted()) log.error('localWeather', (err as Error)?.message);
+    return new Response(null, { status: 502, headers: { 'Cache-Control': 'private, max-age=300' } });
   }
 });
