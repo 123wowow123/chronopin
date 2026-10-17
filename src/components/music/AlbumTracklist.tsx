@@ -69,14 +69,14 @@ export function AlbumTracklist({
                   type="button"
                   onClick={() => togglePlay(entry, queue)}
                   aria-label={`${playing ? 'Pause' : 'Play'} 30 second preview of ${t.title}`}
-                  className="flex size-6 shrink-0 cursor-pointer items-center justify-center rounded-full bg-[var(--green)] text-[#fffef0]"
+                  className="flex size-6 shrink-0 cursor-pointer items-center justify-center rounded-full border border-[var(--green,#1f7a4d)]/40 text-[var(--green,#1f7a4d)] transition-colors hover:bg-[var(--green,#1f7a4d)]/10"
                 >
                   <svg className="size-3 fill-current" viewBox="0 0 24 24">
                     {playing ? <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z" /> : <path d="M8 5v14l11-7z" />}
                   </svg>
                 </button>
                 <span className="w-5 shrink-0 text-right font-mono text-[10px] tabular-nums text-[var(--soft)]">{t.n}</span>
-                <span className={`min-w-0 flex-1 truncate ${isThis ? 'font-semibold text-[var(--green)]' : 'text-[var(--text)]'}`}>
+                <span className={`min-w-0 flex-1 truncate ${isThis ? 'font-semibold text-[var(--green,#1f7a4d)]' : 'text-[var(--text)]'}`}>
                   {t.title}
                 </span>
                 <span className="font-mono text-[10px] text-[var(--soft)]">0:30</span>
