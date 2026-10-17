@@ -25,11 +25,13 @@ const norm = (s: string) => s.toLowerCase().replace(/\(.*?\)|\[.*?\]/g, '').repl
 export function AlbumTracklist({
   song,
   open: initiallyOpen = false,
+  scroll = true,
 }: {
   song: MusicRankingEntry;
   pinHref?: string;
   queue?: MusicRankingEntry[];
   open?: boolean;
+  scroll?: boolean;
 }) {
   const album = song.album;
   const [open, setOpen] = useState(initiallyOpen);
@@ -40,7 +42,7 @@ export function AlbumTracklist({
   const kind = album.kind === 'album' ? 'Album' : album.kind === 'ep' ? 'EP' : 'Single';
 
   return (
-    <div className="mb-2 rounded-lg border border-[var(--rule)]/60 bg-[var(--paper)]/80 text-xs">
+    <div className={`${scroll ? 'mb-2 ' : ''}rounded-lg border border-[var(--rule)]/60 bg-[var(--paper)]/80 text-xs`}>
       <button
         type="button"
         onClick={() => setOpen((v) => !v)}
@@ -56,13 +58,13 @@ export function AlbumTracklist({
         </span>
       </button>
       {open ? (
-        <ol className="max-h-64 divide-y divide-[var(--rule)]/50 overflow-y-auto border-t border-[var(--rule)]/60">
+        <ol className={`divide-y divide-[var(--rule)]/50 border-t border-[var(--rule)]/60 ${scroll ? 'max-h-64 overflow-y-auto overscroll-contain pb-1' : ''}`}>
           {queue.map((entry, i) => {
             const t = album.tracks[i];
             const playing = currentTrack?.id === entry.id && isPlaying;
             const isThis = norm(t.title) === norm(song.title);
             return (
-              <li key={t.n} className="flex items-center gap-2 px-2.5 py-1">
+              <li key={t.n} className="flex items-center gap-2 px-2.5 py-1.5">
                 <button
                   type="button"
                   onClick={() => togglePlay(entry, queue)}

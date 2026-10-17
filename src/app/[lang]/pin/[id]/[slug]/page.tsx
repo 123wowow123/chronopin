@@ -527,10 +527,7 @@ async function PinBody({
                 <p className="text-sm font-semibold text-ink">
                   #{musicEntry.rank} on {musicEntry.chartName} ({musicEntry.year})
                 </p>
-                <p className="text-xs text-muted">
-                  {musicEntry.chartAuthority}{musicEntry.streamsOrUnits ? ` · ${musicEntry.streamsOrUnits}` : ''}
-                </p>
-                <div className="mt-1.5 flex flex-wrap items-center gap-x-2 gap-y-1 text-xs text-muted">
+                <div className="mt-1 flex flex-wrap items-center gap-x-2 gap-y-1 text-xs text-muted">
                   {(() => {
                     const pill = 'inline-flex items-center rounded-full bg-raised px-2.5 py-0.5 text-xs font-medium text-ink ring-1 ring-line ring-inset transition-colors hover:bg-raised-2 hover:no-underline';
                     const q = (v: string) => `/search?q=${encodeURIComponent(v)}`;
@@ -556,13 +553,16 @@ async function PinBody({
                     );
                   })()}
                 </div>
+                <p className="mt-1.5 text-xs text-muted">
+                  {musicEntry.chartAuthority}{musicEntry.streamsOrUnits ? ` · ${musicEntry.streamsOrUnits}` : ''}
+                </p>
               </div>
             </div>
             <MusicPinNav entry={musicEntry} adjacent={musicAdjacent} variant="card" autoplay={autoplay} />
           </div>
           {musicEntry.album ? (
             <div className="mt-3">
-              <AlbumTracklist song={musicEntry} open />
+              <AlbumTracklist song={musicEntry} open scroll={false} />
             </div>
           ) : null}
         </div>

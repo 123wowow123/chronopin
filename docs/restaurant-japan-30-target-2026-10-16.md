@@ -1,16 +1,16 @@
 # Japan restaurant target audit — October 16, 2026
 
-Target: **30 distinct eligible restaurants in every tab of every city**. **423 verified memberships; 303 still missing**. This target remains incomplete; surplus in another tab does not offset a shortage.
+Target: **30 distinct eligible restaurants in every tab of every city**. **425 verified memberships; 300 still missing**. This target remains incomplete; surplus in another tab does not offset a shortage.
 
-All 24 local and production public guide counts agree after batch 65 at **423 memberships / 303 missing**, refreshed 2026-10-17T14:01:17.159218+00:00 (October 17, 23:01 JST / October 17, 07:01 PDT). Nagoya Just opened now24 (six short), Sapporo Just opened12 and Fukuoka Just opened17. Existing menu enrichments add no distinct memberships. Specials count each venue once across available/upcoming offers. Earlier batch checkpoints below are historical.
+All 24 local and production public guide counts agree after batch 66 at **425 memberships / 300 missing**, refreshed 2026-10-17T16:27:53.619480+00:00 (October 18, 01:27 JST / October 17, 09:27 PDT). Kyoto Coming soon10, Tokyo Coming soon12 and Fukuoka Specials24. Tokyo Specials has aged from33to32since the prior audit; its surplus does not reduce another tab’s shortage. Current Japan-local date is October18. Specials count each venue once across available/upcoming windows. Earlier batch checkpoints below are historical.
 
 | City (west to east) | Coming soon | Just opened | Top restaurants | Specials |
 | --- | ---: | ---: | ---: | ---: |
-| Fukuoka | 10/30 | 17/30 | 14/30 | 23/30 |
+| Fukuoka | 10/30 | 17/30 | 14/30 | 24/30 |
 | Osaka | 11/30 | 14/30 | 10/30 | 19/30 |
-| Kyoto | 9/30 | 31/30 | 10/30 | 30/30 |
+| Kyoto | 10/30 | 31/30 | 10/30 | 30/30 |
 | Nagoya | 11/30 | 24/30 | 12/30 | 17/30 |
-| Tokyo | 11/30 | 12/30 | 24/30 | 33/30 |
+| Tokyo | 12/30 | 12/30 | 24/30 | 32/30 |
 | Sapporo | 7/30 | 12/30 | 30/30 | 32/30 |
 
 ## Each remaining shortage
@@ -20,12 +20,12 @@ All 24 local and production public guide counts agree after batch 65 at **423 me
 | Fukuoka | Coming soon | 10 | 10 | 30 | 20 |
 | Fukuoka | Just opened | 17 | 17 | 30 | 13 |
 | Fukuoka | Top restaurants | 14 | 14 | 30 | 16 |
-| Fukuoka | Specials | 23 | 23 | 30 | 7 |
+| Fukuoka | Specials | 24 | 24 | 30 | 6 |
 | Osaka | Coming soon | 11 | 11 | 30 | 19 |
 | Osaka | Just opened | 14 | 14 | 30 | 16 |
 | Osaka | Top restaurants | 10 | 10 | 30 | 20 |
 | Osaka | Specials | 19 | 19 | 30 | 11 |
-| Kyoto | Coming soon | 9 | 9 | 30 | 21 |
+| Kyoto | Coming soon | 10 | 10 | 30 | 20 |
 | Kyoto | Just opened | 31 | 31 | 30 | 0 |
 | Kyoto | Top restaurants | 10 | 10 | 30 | 20 |
 | Kyoto | Specials | 30 | 30 | 30 | 0 |
@@ -33,10 +33,10 @@ All 24 local and production public guide counts agree after batch 65 at **423 me
 | Nagoya | Just opened | 24 | 24 | 30 | 6 |
 | Nagoya | Top restaurants | 12 | 12 | 30 | 18 |
 | Nagoya | Specials | 17 | 17 | 30 | 13 |
-| Tokyo | Coming soon | 11 | 11 | 30 | 19 |
+| Tokyo | Coming soon | 12 | 12 | 30 | 18 |
 | Tokyo | Just opened | 12 | 12 | 30 | 18 |
 | Tokyo | Top restaurants | 24 | 24 | 30 | 6 |
-| Tokyo | Specials | 33 | 33 | 30 | 0 |
+| Tokyo | Specials | 32 | 32 | 30 | 0 |
 | Sapporo | Coming soon | 7 | 7 | 30 | 23 |
 | Sapporo | Just opened | 12 | 12 | 30 | 18 |
 | Sapporo | Top restaurants | 30 | 30 | 30 | 0 |
@@ -76,3 +76,8 @@ Four new branches and two existing-profile enrichments published through APIs. F
 ## Batch 65 completed
 
 Three new branches and an existing upcoming branch menu refresh published through APIs. Full profiles, all 309 menu entries, 18 gallery credits and native guide cards verified. Both environments agree at **423 / 303**. [Batch evidence](restaurant-japan-30-japan65-2026-10-17.json). No new offer, opening-date repair or deployment.
+
+
+## Batch 66 completed
+
+Three new exact branches,104menu entries and18credited Azure links published through APIs, with one Specials venue and ten dated windows (six current/upcoming). Both environments and public native links/menus/cards verified;11boundary checks include holiday pricing and November11at11:11cutoff. **425memberships /300missing**. [Batch evidence](restaurant-japan-30-japan66-2026-10-17.json). Six opening-history placeholders and nine precision gaps persist. No deployment.

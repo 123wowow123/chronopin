@@ -830,5 +830,27 @@
       "precision": "year",
       "reason": "October 2014 chef interview explicitly dates this exact branch opening to 1997. September 11 is an estimated department-store timeline anchor; exact restaurant month/day remains unverified."
     }
+  ],
+  "followupResearch": [
+    {
+      "checkedAt": "2026-10-17T16:27:53.619480+00:00",
+      "batch": 66,
+      "outcome": "No opening-date correction: all six missing branch openings and nine finer-precision gaps remain unresolved.",
+      "sources": [
+        {
+          "url": "https://www.imhds.co.jp/content/dam/imhds/assets/pdf/ja/ir/stockholder/report/isetan/2005_121_report_i.pdf",
+          "evidence": "Printed45/PDFpage25 visually checked; tenant-list heading on prior page is March31,2006. Kyoto11FTenichi,Sushisei,Shozankaku,Mollette,Anticafeand4FFlags listed. Presence by2006does not establish original opening."
+        },
+        {
+          "url": "https://www.touyoutei.co.jp/company/",
+          "evidence": "Chronology omits Isetan11Frestaurant opening; B2DELI is a distinct unit."
+        },
+        {
+          "url": "https://tenichi.co.jp/history/",
+          "evidence": "1997entry is Tenichi Museum, not Kyoto Isetan restaurant; cannot transfer date."
+        }
+      ],
+      "nextStep": "Find exact-branch operator opening histories, contemporary launch notices or original1997tenant documents; do not convert the2006list date into a branch opening."
+    }
   ]
 }

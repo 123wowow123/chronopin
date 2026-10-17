@@ -4469,7 +4469,29 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
     "originCountry": "China",
     "originCountryCode": "CN",
     "originFlag": "🇨🇳",
-    "originContinent": "Asia"
+    "originContinent": "Asia",
+    "album": {
+      "title": "小美滿 (電影《熱辣滾燙》熱辣陪伴曲)",
+      "kind": "single",
+      "url": "https://music.apple.com/tw/album/%E5%B0%8F%E7%BE%8E%E6%BB%BF-%E9%9B%BB%E5%BD%B1-%E7%86%B1%E8%BE%A3%E6%BB%BE%E7%87%99-%E7%86%B1%E8%BE%A3%E9%99%AA%E4%BC%B4%E6%9B%B2-single/1733140194?uo=4",
+      "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/67/7e/01/677e01f1-9b73-21ce-21df-15189f1ab71d/4711508066349.jpg/600x600bb.jpg",
+      "releaseDate": "2024-02-06",
+      "trackCount": 2,
+      "tracks": [
+        {
+          "n": 1,
+          "title": "小美滿 (電影《熱辣滾燙》熱辣陪伴曲)",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/ee/5b/2e/ee5b2e2b-db3b-60b9-9c74-041d9260c41b/mzaf_1709032246711042027.plus.aac.p.m4a",
+          "durationMs": 214200
+        },
+        {
+          "n": 2,
+          "title": "小美滿 (伴奏版)",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/d8/17/33/d8173310-a614-6774-f43e-13692c77a29b/mzaf_15085185835344143860.plus.aac.p.m4a",
+          "durationMs": 214200
+        }
+      ]
+    }
   },
   {
     "id": "jp-2025-1",
@@ -7528,7 +7550,29 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
     "originCountry": "China",
     "originCountryCode": "CN",
     "originFlag": "🇨🇳",
-    "originContinent": "Asia"
+    "originContinent": "Asia",
+    "album": {
+      "title": "小美滿 (電影《熱辣滾燙》熱辣陪伴曲)",
+      "kind": "single",
+      "url": "https://music.apple.com/tw/album/%E5%B0%8F%E7%BE%8E%E6%BB%BF-%E9%9B%BB%E5%BD%B1-%E7%86%B1%E8%BE%A3%E6%BB%BE%E7%87%99-%E7%86%B1%E8%BE%A3%E9%99%AA%E4%BC%B4%E6%9B%B2-single/1733140194?uo=4",
+      "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/67/7e/01/677e01f1-9b73-21ce-21df-15189f1ab71d/4711508066349.jpg/600x600bb.jpg",
+      "releaseDate": "2024-02-06",
+      "trackCount": 2,
+      "tracks": [
+        {
+          "n": 1,
+          "title": "小美滿 (電影《熱辣滾燙》熱辣陪伴曲)",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/ee/5b/2e/ee5b2e2b-db3b-60b9-9c74-041d9260c41b/mzaf_1709032246711042027.plus.aac.p.m4a",
+          "durationMs": 214200
+        },
+        {
+          "n": 2,
+          "title": "小美滿 (伴奏版)",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/d8/17/33/d8173310-a614-6774-f43e-13692c77a29b/mzaf_15085185835344143860.plus.aac.p.m4a",
+          "durationMs": 214200
+        }
+      ]
+    }
   },
   {
     "id": "jp-2024-1",
@@ -10449,7 +10493,23 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
     "originCountry": "China",
     "originCountryCode": "CN",
     "originFlag": "🇨🇳",
-    "originContinent": "Asia"
+    "originContinent": "Asia",
+    "album": {
+      "title": "花开忘忧",
+      "kind": "single",
+      "url": "https://music.apple.com/us/album/%E8%8A%B1%E5%BC%80%E5%BF%98%E5%BF%A7-single/1645047495?uo=4",
+      "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/29/41/89/2941894d-965e-e897-88ea-52d38d7fea3b/cover.jpg/600x600bb.jpg",
+      "releaseDate": "2022-09-10",
+      "trackCount": 1,
+      "tracks": [
+        {
+          "n": 1,
+          "title": "花开忘忧",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/01/23/85/012385af-0823-6b07-8fbd-7b3378d090ce/mzaf_8769851925374573879.plus.aac.p.m4a",
+          "durationMs": 252669
+        }
+      ]
+    }
   },
   {
     "id": "jp-2023-1",
@@ -13758,7 +13818,29 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
     "originCountry": "China",
     "originCountryCode": "CN",
     "originFlag": "🇨🇳",
-    "originContinent": "Asia"
+    "originContinent": "Asia",
+    "album": {
+      "title": "Blossom",
+      "kind": "single",
+      "url": "https://music.apple.com/tw/album/blossom-single/1610982903?uo=4",
+      "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/fb/02/42/fb024208-344a-4e0b-07cb-9b13019d67d5/886449952748.jpg/600x600bb.jpg",
+      "releaseDate": "2022-03-01",
+      "trackCount": 2,
+      "tracks": [
+        {
+          "n": 1,
+          "title": "漸暖",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/d9/76/3b/d9763bbb-5af2-0242-ef5d-8da335d39e8c/mzaf_12434718071029476308.plus.aac.p.m4a",
+          "durationMs": 190390
+        },
+        {
+          "n": 2,
+          "title": "漸暖(伴奏)",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/93/63/c2/9363c2f5-c17d-df44-cec8-5c246422bc22/mzaf_5101635643982313276.plus.aac.p.m4a",
+          "durationMs": 190390
+        }
+      ]
+    }
   },
   {
     "id": "jp-2022-1",
@@ -16933,7 +17015,29 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
     "originCountry": "China",
     "originCountryCode": "CN",
     "originFlag": "🇨🇳",
-    "originContinent": "Asia"
+    "originContinent": "Asia",
+    "album": {
+      "title": "白月光与朱砂痣",
+      "kind": "single",
+      "url": "https://music.apple.com/br/album/%E7%99%BD%E6%9C%88%E5%85%89%E4%B8%8E%E6%9C%B1%E7%A0%82%E7%97%A3-single/1667092113?uo=4",
+      "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music113/v4/b3/e2/4b/b3e24b05-f297-7875-cde9-1896b96140c1/cover.jpg/600x600bb.jpg",
+      "releaseDate": "2021-01-07",
+      "trackCount": 2,
+      "tracks": [
+        {
+          "n": 1,
+          "title": "白月光与朱砂痣",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/8e/43/51/8e435124-40f1-3ce2-f3ed-e7f927cd04f4/mzaf_12637753071654704259.plus.aac.p.m4a",
+          "durationMs": 204215
+        },
+        {
+          "n": 2,
+          "title": "白月光与朱砂痣 (和声伴奏版)",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/27/e8/10/27e81079-b244-e2da-691a-ce7cad454ea8/mzaf_9324049873965521019.plus.aac.p.m4a",
+          "durationMs": 204250
+        }
+      ]
+    }
   },
   {
     "id": "jp-2021-1",
@@ -16962,7 +17066,113 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
     "originCountryCode": "JP",
     "originFlag": "🇯🇵",
     "originContinent": "Asia",
-    "originArea": "Japan"
+    "originArea": "Japan",
+    "album": {
+      "title": "壱",
+      "kind": "album",
+      "url": "https://music.apple.com/jp/album/%E5%A3%B1/1599542521?uo=4",
+      "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/d9/de/51/d9de5146-6d3a-2002-bc8f-77e2e47c1c3b/4547366544138.jpg/600x600bb.jpg",
+      "releaseDate": "2022-01-12",
+      "trackCount": 16,
+      "tracks": [
+        {
+          "n": 1,
+          "title": "ベテルギウス",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/f2/8f/18/f28f1878-cdf7-53a9-b8ee-820061f41e1a/mzaf_277230674872791140.plus.aac.p.m4a",
+          "durationMs": 230600
+        },
+        {
+          "n": 2,
+          "title": "ドライフラワー",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/78/66/28/7866287d-f34b-9b3a-24dc-fca78a709153/mzaf_7226301736226398991.plus.aac.p.m4a",
+          "durationMs": 286360
+        },
+        {
+          "n": 3,
+          "title": "花鳥風月",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/12/47/67/124767d2-e9d1-e3df-f306-5d4fa140558c/mzaf_12384333366924187478.plus.aac.p.m4a",
+          "durationMs": 205600
+        },
+        {
+          "n": 4,
+          "title": "ミズキリ",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/49/f1/81/49f1817e-ad2a-c8ba-6773-ec84f7e53056/mzaf_16867041966017998625.plus.aac.p.m4a",
+          "durationMs": 208400
+        },
+        {
+          "n": 5,
+          "title": "シャッター",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/e1/b8/2d/e1b82d21-d863-413e-ddc1-c82b7786be3c/mzaf_11283734638334183179.plus.aac.p.m4a",
+          "durationMs": 248947
+        },
+        {
+          "n": 6,
+          "title": "ミザリー",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/96/b9/24/96b9243c-e8a2-2792-3ed0-fadaa33342f6/mzaf_4433259959210847335.plus.aac.p.m4a",
+          "durationMs": 242067
+        },
+        {
+          "n": 7,
+          "title": "レオ",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/be/6d/b1/be6db110-416a-6947-7bb2-1351db2cd6f3/mzaf_8985955062526393411.plus.aac.p.m4a",
+          "durationMs": 238973
+        },
+        {
+          "n": 8,
+          "title": "ピーターパン",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/c3/75/87/c37587e5-5f82-eff9-cf18-4562b26e1e21/mzaf_6121521981486236317.plus.aac.p.m4a",
+          "durationMs": 214213
+        },
+        {
+          "n": 9,
+          "title": "スマホウォーズ",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/02/9c/7c/029c7cd8-ce47-cd75-cb3e-6be60c1ed274/mzaf_9966255362159697879.plus.aac.p.m4a",
+          "durationMs": 229227
+        },
+        {
+          "n": 10,
+          "title": "夏音",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/29/9f/ee/299fee0b-50ef-3ec9-5ce8-dc7540734a21/mzaf_15896446523883206259.plus.aac.p.m4a",
+          "durationMs": 239200
+        },
+        {
+          "n": 11,
+          "title": "背中",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/99/72/66/9972667e-fe17-6934-a726-9781110d229a/mzaf_2459148809411601702.plus.aac.p.m4a",
+          "durationMs": 237920
+        },
+        {
+          "n": 12,
+          "title": "かごめ",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/36/90/03/3690036c-1beb-9a53-c55a-c82f8cf2e3be/mzaf_5655654166673777453.plus.aac.p.m4a",
+          "durationMs": 272427
+        },
+        {
+          "n": 13,
+          "title": "桜晴",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/0d/9e/3a/0d9e3a53-233a-a58b-5b75-6cbab5dece8c/mzaf_18078302923123072563.plus.aac.p.m4a",
+          "durationMs": 238240
+        },
+        {
+          "n": 14,
+          "title": "インフィニティ",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/3f/c1/d3/3fc1d37c-96c3-2613-6edc-0dc9e04fd32d/mzaf_18124567435387868068.plus.aac.p.m4a",
+          "durationMs": 245400
+        },
+        {
+          "n": 15,
+          "title": "飛行船",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/f4/85/56/f4855673-b2fc-6d42-f891-fbd7a24d1156/mzaf_1534189693662854294.plus.aac.p.m4a",
+          "durationMs": 195720
+        },
+        {
+          "n": 16,
+          "title": "かくれんぼ",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/ca/99/3f/ca993f43-9162-7b47-1906-c3153f27fbfc/mzaf_4612707023718952170.plus.aac.p.m4a",
+          "durationMs": 271427
+        }
+      ]
+    }
   },
   {
     "id": "jp-2021-2",
@@ -24965,7 +25175,149 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
     "originCountry": "China",
     "originCountryCode": "CN",
     "originFlag": "🇨🇳",
-    "originContinent": "Asia"
+    "originContinent": "Asia",
+    "album": {
+      "title": "NAMANANA - The 3rd Album",
+      "kind": "album",
+      "url": "https://music.apple.com/gb/album/namanana-the-3rd-album/1439328418?uo=4",
+      "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music128/v4/63/10/d2/6310d215-3307-991f-b824-b91091b446e4/cover.jpg/600x600bb.jpg",
+      "releaseDate": "2018-10-19",
+      "trackCount": 22,
+      "tracks": [
+        {
+          "n": 1,
+          "title": "集結號",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/09/d8/ae/09d8ae9d-7c02-3f7e-dbc7-cfc63585b5fd/mzaf_14530698648720628149.plus.aac.p.m4a",
+          "durationMs": 85386
+        },
+        {
+          "n": 2,
+          "title": "夢不落雨林",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/88/26/9c/88269cba-a57d-7cee-2143-e5274dfe60be/mzaf_14042709425566985511.plus.aac.p.m4a",
+          "durationMs": 208887
+        },
+        {
+          "n": 3,
+          "title": "愛到這",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/39/24/03/3924037d-8345-b488-f285-4daed64ab8ca/mzaf_8111570843704472767.plus.aac.p.m4a",
+          "durationMs": 223316
+        },
+        {
+          "n": 4,
+          "title": "催眠術",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/47/c5/dc/47c5dc23-8064-2a9b-a4f9-ee4e67ee4aa0/mzaf_17692400201429263173.plus.aac.p.m4a",
+          "durationMs": 186601
+        },
+        {
+          "n": 5,
+          "title": "愛的引力",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/cf/5d/65/cf5d6504-e1c3-f650-3823-702ea484c9c3/mzaf_3883907935804828924.plus.aac.p.m4a",
+          "durationMs": 211152
+        },
+        {
+          "n": 6,
+          "title": "堅持",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/2e/d4/6c/2ed46c45-90a2-908e-7f6f-4453a454d763/mzaf_3431761691400053034.plus.aac.p.m4a",
+          "durationMs": 191270
+        },
+        {
+          "n": 7,
+          "title": "幸福上癮",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/42/0a/04/420a048f-7cd4-9337-f95a-e10324beb0c5/mzaf_4200903638297466157.plus.aac.p.m4a",
+          "durationMs": 172113
+        },
+        {
+          "n": 8,
+          "title": "麻婆豆腐",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/24/7d/1f/247d1f1f-ef1d-e521-cea1-7b15b95b747b/mzaf_11396725697319218119.plus.aac.p.m4a",
+          "durationMs": 162233
+        },
+        {
+          "n": 9,
+          "title": "香水",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/6c/de/54/6cde54f2-fe0b-23fd-e49f-5b5f3e439851/mzaf_758904814489310145.plus.aac.p.m4a",
+          "durationMs": 250007
+        },
+        {
+          "n": 10,
+          "title": "快門回溯",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/39/86/33/39863330-694c-9560-69db-bfd0113263b4/mzaf_13252524455149572932.plus.aac.p.m4a",
+          "durationMs": 211540
+        },
+        {
+          "n": 11,
+          "title": "貝殼女孩",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/69/8d/63/698d638f-40fa-1ead-d5f4-5839093a2564/mzaf_2589768331934777480.plus.aac.p.m4a",
+          "durationMs": 195567
+        },
+        {
+          "n": 12,
+          "title": "The Assembly Call",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/22/47/25/2247256b-dd38-cd30-8c95-34889fb899be/mzaf_4648560039718644216.plus.aac.p.m4a",
+          "durationMs": 85386
+        },
+        {
+          "n": 13,
+          "title": "NAMANANA",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/6d/5a/33/6d5a3347-9044-d298-fc62-524bd8202715/mzaf_17025229293838028018.plus.aac.p.m4a",
+          "durationMs": 208887
+        },
+        {
+          "n": 14,
+          "title": "Give Me A Chance",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/59/4e/9a/594e9a07-e663-f63a-16f1-3bd0c21f4ec9/mzaf_9175146293812012700.plus.aac.p.m4a",
+          "durationMs": 223316
+        },
+        {
+          "n": 15,
+          "title": "Lay U Down",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/b1/6c/fc/b16cfc3a-5d71-c536-f654-f6f01bc6d9f6/mzaf_9739598104230329095.plus.aac.p.m4a",
+          "durationMs": 186601
+        },
+        {
+          "n": 16,
+          "title": "Save You",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/64/8d/87/648d8773-3049-c409-3a33-ce1eca8e1fa3/mzaf_10056235634460695629.plus.aac.p.m4a",
+          "durationMs": 211152
+        },
+        {
+          "n": 17,
+          "title": "Hold On",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/11/8f/14/118f14c9-d8a6-f846-de60-a661ebc0aec0/mzaf_642853832243254983.plus.aac.p.m4a",
+          "durationMs": 191270
+        },
+        {
+          "n": 18,
+          "title": "Thing for You",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/df/da/b9/dfdab92a-1414-5ed4-be08-2f6711ade765/mzaf_12652890813118990930.plus.aac.p.m4a",
+          "durationMs": 172113
+        },
+        {
+          "n": 19,
+          "title": "Mapo Tofu",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/b7/ac/6a/b7ac6a41-9895-245c-257c-06ec82d6a840/mzaf_12961308702441232548.plus.aac.p.m4a",
+          "durationMs": 162233
+        },
+        {
+          "n": 20,
+          "title": "Flavor",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/0c/07/7b/0c077b34-1dd8-1085-db70-5d32a56d653b/mzaf_6900226356186659989.plus.aac.p.m4a",
+          "durationMs": 250007
+        },
+        {
+          "n": 21,
+          "title": "Don’t Let Me Go",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/d6/1d/f6/d61df683-42c9-6592-796f-4a23dd5add1c/mzaf_13258207492913394319.plus.aac.p.m4a",
+          "durationMs": 211540
+        },
+        {
+          "n": 22,
+          "title": "Tattoo",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/fc/20/5d/fc205dc0-c4bc-cdc4-4044-9b4338c46bfa/mzaf_10065172117058433071.plus.aac.p.m4a",
+          "durationMs": 195567
+        }
+      ]
+    }
   },
   {
     "id": "jp-2018-1",
