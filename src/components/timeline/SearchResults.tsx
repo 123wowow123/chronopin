@@ -20,6 +20,7 @@ import { useManualScrollRestoration } from '@/lib/client/scrollRestoration';
 import { useTodayHold } from '@/lib/client/todayHold';
 import { useCulturalDays } from '@/lib/client/culturalDays';
 import { loadSpecialtyDays } from '@/lib/client/specialtyDays';
+import { trackEvent } from '@/lib/client/analytics';
 import { useQueryState } from '@/lib/client/urlState';
 import { useTimeZone } from '@/lib/client/timeZone';
 import { daysBetween, dayKeyIn, monthDayOf } from '@/lib/format';
@@ -179,6 +180,12 @@ export function SearchResults({
   // Any search can sort: a filter-only one (tag:, user:) has no scores, so
   // by relevance it keeps date order but still gets the grid and start filter.
   const canSort = !!query.trim();
+
+  // GA4's built-in site search report reads search_term from view_search_results.
+  useEffect(() => {
+    const term = query.trim();
+    if (term) trackEvent('view_search_results', { search_term: term.slice(0, 100) });
+  }, [query]);
   const [sortBy, setSortBy] = useState<SortBy>(initialPage.sort);
   const [relevanceShown, setRelevanceShown] = useState(sortBy === 'relevance');
   // Relevance loses the timeline's sense of when, so it filters by start instead.
