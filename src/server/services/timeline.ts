@@ -23,6 +23,10 @@ export type TimelineQuery = {
   fromDateTime?: string | null;
   around?: { dateTime: string; pinId: number } | null;
   lastPinId?: number;
+  // How many pins to take either side of now (or of `around`) on the first
+  // page; later pages are always pageSize. The home page asks for fewer: it
+  // renders every card on the server.
+  initialSize?: number;
   onlyFavorites?: boolean;
   createdSince?: Date | null;
   // The ring around the viewer a pin's place has to fall inside, or null for
@@ -39,17 +43,18 @@ export async function timelineMinConfidence(): Promise<number | null> {
   return settingMinConfidence(await getTimelineConfidence());
 }
 
-export async function getPins({ userId, fromDateTime, around, lastPinId, onlyFavorites, createdSince, near, timeZone = 'UTC' }: TimelineQuery): Promise<Pins> {
+export async function getPins({ userId, fromDateTime, around, lastPinId, initialSize, onlyFavorites, createdSince, near, timeZone = 'UTC' }: TimelineQuery): Promise<Pins> {
+  const first = initialSize && initialSize > 0 ? Math.min(initialSize, pageSize) : pageSize;
   // A watched list keeps every pin, so it never needs the setting.
   const min = onlyFavorites ? null : await timelineMinConfidence();
   if (!fromDateTime) {
     if (around && !onlyFavorites) {
-      return Pins.queryInitialByDate(new Date(around.dateTime), userId, pageSize, pageSize, createdSince, min, around.pinId, near, timeZone);
+      return Pins.queryInitialByDate(new Date(around.dateTime), userId, first, first, createdSince, min, around.pinId, near, timeZone);
     }
     const now = new Date();
     return onlyFavorites
-      ? Pins.queryInitialByDateFilterByHasFavorite(now, userId, pageSize, pageSize, createdSince, near)
-      : Pins.queryInitialByDate(now, userId, pageSize, pageSize, createdSince, min, 0, near, timeZone);
+      ? Pins.queryInitialByDateFilterByHasFavorite(now, userId, first, first, createdSince, near)
+      : Pins.queryInitialByDate(now, userId, first, first, createdSince, min, 0, near, timeZone);
   }
 
   if (fromDateTime[0] !== '-') {

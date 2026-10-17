@@ -29,6 +29,12 @@ type Props = PageProps<'/[lang]'>;
 // that deliberate wait. The first load still streams from the static shell.
 export const instant = false;
 
+// Pins either side of now on the first render (later pages are 25): each card
+// is rendered on the server, and the first page was 1.1 MB of HTML and the
+// slowest route when the VM was overloaded (2026-10-17). The timeline loads
+// the next page on scroll, as it always has.
+const HOME_FIRST_PAGE = 15;
+
 function first(value: string | string[] | undefined) {
   return Array.isArray(value) ? value[0] : value;
 }
@@ -92,6 +98,7 @@ async function HomeTimeline({ searchParams }: Pick<Props, 'searchParams'>) {
       {
         fromDateTime,
         lastPinId: Number(first(params.last_pin_id)) || 0,
+        initialSize: HOME_FIRST_PAGE,
         around: focusPin ? { dateTime: focusPin.utcStartDateTime, pinId: focusPin.id } : null,
       },
       postedWithin,

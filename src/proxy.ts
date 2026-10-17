@@ -7,6 +7,7 @@ import { pinPath } from '@/lib/seo';
 import { topicSlug } from '@/lib/topics';
 import * as db from '@/server/db';
 import { sessionOf, TOKEN_COOKIE } from '@/server/auth';
+import { homeCacheKey, homeCopy, validTimeZone, type HomeCopy } from '@/server/homeCache';
 import { cookieGate, GATE_COOKIE, GATE_MAX_AGE, GATE_PARAM } from '@/server/cookieGate';
 import { botRetryAfter, ipRetryAfter, PREFETCH_COST, SHED_RETRY_AFTER } from '@/server/botLimit';
 import HeavyUserPlan from '@/server/model/heavyUserPlan';
@@ -57,6 +58,45 @@ function isLimitExempt(pathname: string): boolean {
   return /^\/(?:heavy-use|login|signup)(?:\/|$)/.test(splitLocale(pathname).path);
 }
 
+// The signed-out home page is rendered once a minute per language and time
+// zone and handed to everyone else (src/server/homeCache.ts). The copy is made
+// by asking this same server for the page, with a header only this process
+// knows, which skips every check here and goes straight to the page.
+const FILL_HEADER = 'x-home-fill';
+
+function fillSecret(): string {
+  const g = globalThis as unknown as { __chronopinHomeFill?: string };
+  return (g.__chronopinHomeFill ??= crypto.randomUUID());
+}
+
+// The routing every page request ends with: English paths are rewritten to /en.
+function routed(request: NextRequest): NextResponse {
+  const { locale: prefix, path } = splitLocale(request.nextUrl.pathname);
+  if (prefix) return NextResponse.next();
+  const url = request.nextUrl.clone();
+  url.pathname = `/${DEFAULT_LOCALE}${path === '/' ? '' : path}`;
+  return NextResponse.rewrite(url);
+}
+
+async function renderHome(pathname: string, timeZone: string): Promise<HomeCopy | null> {
+  const res = await fetch(`http://127.0.0.1:${process.env.PORT || 3000}${pathname}`, {
+    redirect: 'manual',
+    signal: AbortSignal.timeout(90_000),
+    headers: { accept: 'text/html', 'user-agent': 'Mozilla/5.0 (home page copy)', cookie: `tz=${encodeURIComponent(timeZone)}`, [FILL_HEADER]: fillSecret() },
+  });
+  // Only a plain page is kept: not a redirect or error, and nothing that sets a cookie.
+  if (res.status !== 200 || res.headers.has('set-cookie') || !(res.headers.get('content-type') ?? '').includes('text/html')) return null;
+  return {
+    status: 200,
+    headers: [
+      ['content-type', res.headers.get('content-type')!],
+      ['cache-control', 'private, no-store'],
+    ],
+    body: new Uint8Array(await res.arrayBuffer()),
+    madeAt: Date.now(),
+  };
+}
+
 // The answer to a pin request the cookie gate stopped (src/server/cookieGate.ts).
 // Prefetches and RSC fetches are answered 403 instead of redirected: the client
 // then loads the page normally, which is redirected as a first visit.
@@ -105,6 +145,8 @@ function tooManyRequests(request: NextRequest, wait: number, light: boolean): Ne
 // visit, is sent from a plain path to that language's.
 export async function proxy(request: NextRequest) {
   const { pathname, search } = request.nextUrl;
+  // The home page copy being made (renderHome): not counted, limited or gated.
+  if (request.headers.get(FILL_HEADER) === fillSecret()) return routed(request);
 
   // Crawlers are counted here, on the page request itself: they rarely run
   // the script that counts a view. Browsers pass straight through it.
@@ -204,12 +246,22 @@ export async function proxy(request: NextRequest) {
   const topic = await checkTopicPath(request, path, locale);
   if (topic) return topic;
 
-  if (!prefix) {
-    const url = request.nextUrl.clone();
-    url.pathname = `/${DEFAULT_LOCALE}${path === '/' ? '' : path}`;
-    return NextResponse.rewrite(url);
+  // Signed-out visitors to the home page get a copy made at most a minute ago.
+  const homeKey = homeCacheKey({
+    method: request.method,
+    path,
+    locale,
+    search,
+    signedIn: !!session,
+    clientNavigation: prefetch || request.headers.has('rsc') || request.headers.has('next-url'),
+    accept: request.headers.get('accept'),
+    timeZone: validTimeZone(request.cookies.get('tz')?.value),
+  });
+  if (homeKey) {
+    const copy = await homeCopy(homeKey, () => renderHome(pathname, homeKey.split('|')[1]));
+    if (copy) return new NextResponse(copy.body as BodyInit, { status: copy.status, headers: copy.headers });
   }
-  return NextResponse.next();
+  return routed(request);
 }
 
 // The language picker's choice, else (with none made) the browser's

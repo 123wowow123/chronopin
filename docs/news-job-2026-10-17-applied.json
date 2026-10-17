@@ -1,0 +1,176 @@
+{
+  "job": "news",
+  "requestedSlot": "2026-10-17T06:00:00-07:00",
+  "trigger": "manual",
+  "localRunId": 11,
+  "newPinIds": [
+    16352,
+    16353,
+    16354,
+    16355
+  ],
+  "maintainedPinIds": [
+    6659,
+    4162,
+    16017,
+    238,
+    1993
+  ],
+  "eventInfo": {
+    "checked": 40,
+    "refreshed": 29,
+    "handRetained": [
+      4893,
+      4897,
+      4900,
+      4905,
+      4913,
+      5200,
+      5202,
+      5439,
+      5493,
+      5496,
+      5518
+    ]
+  },
+  "sentiment": {
+    "existingVerified": 272,
+    "authoredNew": 2,
+    "totalDistinct": 274,
+    "excludedInconsistentPins": [
+      15801,
+      15802,
+      15803
+    ]
+  },
+  "trades": {
+    "filings": 2,
+    "trades": 7,
+    "unmatched": [],
+    "failed": [],
+    "production": {
+      "added": 7,
+      "missing": []
+    }
+  },
+  "ads": {
+    "pinChecked": 63,
+    "productChecked": 36,
+    "holidayChecked": 80,
+    "holidayMetadataPublished": 146,
+    "newAds": 0,
+    "newlyBrokenHolidayIds": [
+      49,
+      45
+    ],
+    "translatedTitles": 30,
+    "locales": 15,
+    "coverage": {
+      "PinAd": {
+        "translations": 945,
+        "missing": []
+      },
+      "HolidayAd": {
+        "translations": 2190,
+        "missing": []
+      }
+    }
+  },
+  "models": {
+    "arenaPublishedOn": "2026-10-15",
+    "awaiting": [
+      {
+        "pinId": 15144,
+        "title": "Ministral 8B and Ministral 3B Released",
+        "model": "Ministral 3 3B 2512",
+        "price": 0.09999999999999999,
+        "year": 2025,
+        "daysWaiting": 731
+      },
+      {
+        "pinId": 1814,
+        "title": "OpenAI o3-pro Released",
+        "model": "o3 Pro",
+        "price": 30,
+        "year": 2025,
+        "daysWaiting": 494
+      },
+      {
+        "pinId": 1818,
+        "title": "GPT-5.1-Codex-Max Released",
+        "model": "GPT-5.1-Codex-Max",
+        "price": 2.708333333333334,
+        "year": 2025,
+        "daysWaiting": 332
+      },
+      {
+        "pinId": 1821,
+        "title": "GPT-5.3-Codex Released",
+        "model": "GPT-5.3-Codex",
+        "price": 3.791666666666666,
+        "year": 2026,
+        "daysWaiting": 254
+      },
+      {
+        "pinId": 15133,
+        "title": "Qwen3.5-397B-A17B and Qwen3.5-Plus Released",
+        "model": "Qwen3.5 Plus 2026-04-20",
+        "price": 0.5499999999999999,
+        "year": 2026,
+        "daysWaiting": 243
+      },
+      {
+        "pinId": 4815,
+        "title": "Claude Haiku 5.5 Released",
+        "model": "Claude Haiku 5.5",
+        "price": 0.16666666666666666,
+        "year": 2026,
+        "daysWaiting": 10
+      }
+    ],
+    "needsFrontierTag": [],
+    "scoredModels": 143
+  },
+  "mediaManifest": "docs/okf/scraping/media/news-2026-10-17.json",
+  "researchGaps": [
+    "Monthly WTI series returned no listed event/contracts; no synthetic forecast created.",
+    "SPIEL 5200 hand-price conflict queued as revisit 103; prior MotoGP and Melbourne Cup ticket conflicts retained.",
+    "Pins 15801–15803 have inconsistent company/text and need repair before scoring.",
+    "Eleven holiday price tiers lack a newly verified qualifying US Amazon listing; searches included operator/marketplace alternatives.",
+    "Six model matches remain awaiting overall leaderboard data; no WebDev score substituted."
+  ],
+  "deploymentPerformed": false,
+  "productionRunId": 11,
+  "status": "ok",
+  "finishedAt": "2026-10-17T21:52:18.849Z",
+  "publicPageChecks": [
+    {
+      "pinId": 16352,
+      "status": 200,
+      "title": "Katie Zacharia Leaves the White House Press Secretary Role",
+      "titlePresent": true,
+      "seconds": 3.45
+    },
+    {
+      "pinId": 16353,
+      "status": 200,
+      "title": "Trump Is Expected to Name a New Permanent Press Secretary",
+      "titlePresent": true,
+      "seconds": 7.39
+    },
+    {
+      "pinId": 16354,
+      "status": 200,
+      "title": "Lockheed Martin Announces $300 Million Grand Prairie Expansion",
+      "titlePresent": true,
+      "seconds": 35.22
+    },
+    {
+      "pinId": 16355,
+      "status": 200,
+      "title": "Mosaic Schedules 199 Job Cuts at South Fort Meade",
+      "titlePresent": true,
+      "seconds": 2.17
+    }
+  ]
+}
