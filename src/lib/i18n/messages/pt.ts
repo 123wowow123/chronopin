@@ -2024,6 +2024,7 @@ const pt: Messages = {
     urgencyLow: 'Menor preço em {days} dias',
     programs: {
       advertise: { title: 'Anuncie no Chronopin', body: 'Alcance quem acompanha o que vem por aí. A partir de US$ 5 por 1.000 impressões.', cta: 'Criar seu anúncio' },
+      heavyuser: { title: 'Leia sem limites', body: 'Sem anúncios nem limite de leitura, por US$ 4 ao mês ou US$ 5 por 30 dias.', cta: 'Seja um usuário intenso' },
       sponsored: { title: 'Patrocinado', cta: 'Visitar site' },
       prime: { title: 'Experimente o Amazon Prime grátis', body: 'Entrega rápida e grátis, Prime Video e muito mais.', cta: 'Começar o teste grátis' },
       audible: { title: 'Experimente o Audible grátis', body: 'Audiolivros, podcasts e originais, grátis para novos membros experimentarem.', cta: 'Começar a ouvir' },

@@ -2028,6 +2028,7 @@ const ko: Messages = {
     urgencyLow: '{days}일 최저가',
     programs: {
       advertise: { title: 'Chronopin에 광고하기', body: '다가오는 일을 챙겨 보는 사람들에게 닿으세요. 1,000회 노출에 5달러부터.', cta: '광고 만들기' },
+      heavyuser: { title: '제한 없이 읽기', body: '광고도 열람 제한도 없이, 월 4달러 또는 30일 5달러.', cta: '헤비 유저 되기' },
       sponsored: { title: '스폰서', cta: '사이트 방문' },
       prime: { title: 'Amazon Prime 무료 체험', body: '빠른 무료 배송, Prime Video 등 다양한 혜택.', cta: '무료 체험 시작' },
       audible: { title: 'Audible 무료 체험', body: '오디오북, 팟캐스트, 오리지널 콘텐츠. 신규 회원은 무료로 체험할 수 있습니다.', cta: '듣기 시작' },

@@ -1,4 +1,5 @@
 import * as db from '../db';
+import HeavyUserPlan from './heavyUserPlan';
 
 // The $1 a month ad-free plan (0177): one row per user who has subscribed,
 // kept in step with the Stripe subscription by the webhook. Static queries, as
@@ -34,7 +35,8 @@ export default class AdFreeSubscription {
   }
 
   static async isActive(userId: number): Promise<boolean> {
-    return (await AdFreeSubscription.status(userId)).active;
+    // The heavy user plan (0191) turns ads off too.
+    return (await AdFreeSubscription.status(userId)).active || (await HeavyUserPlan.isActive(userId));
   }
 
   static async customerId(userId: number): Promise<string | null> {

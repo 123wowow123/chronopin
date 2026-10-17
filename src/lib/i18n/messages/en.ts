@@ -2038,6 +2038,7 @@ const en = {
     urgencyLow: '{days}-day low price',
     programs: {
       advertise: { title: 'Advertise on Chronopin', body: 'Reach people who follow what is coming next. From $5 for 1,000 views.', cta: 'Create your ad' },
+      heavyuser: { title: 'Read without limits', body: 'No ads and no reading limit, for $4 a month or $5 for 30 days.', cta: 'Go heavy user' },
       sponsored: { title: 'Sponsored', cta: 'Visit site' },
       prime: { title: 'Try Amazon Prime free', body: 'Fast, free delivery, Prime Video and more.', cta: 'Start a free trial' },
       audible: { title: 'Try Audible free', body: 'Audiobooks, podcasts and originals, free to try for new members.', cta: 'Start listening' },

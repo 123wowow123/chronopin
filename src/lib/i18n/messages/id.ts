@@ -2037,6 +2037,7 @@ const id: Messages = {
     urgencyLow: 'Harga terendah {days} hari',
     programs: {
       advertise: { title: 'Beriklan di Chronopin', body: 'Jangkau orang yang mengikuti apa yang akan datang. Mulai $5 untuk 1.000 tayangan.', cta: 'Buat iklan Anda' },
+      heavyuser: { title: 'Baca tanpa batas', body: 'Tanpa iklan dan tanpa batas membaca: $4 per bulan atau $5 untuk 30 hari.', cta: 'Jadi pengguna berat' },
       sponsored: { title: 'Bersponsor', cta: 'Kunjungi situs' },
       prime: { title: 'Coba Amazon Prime gratis', body: 'Pengiriman cepat dan gratis, Prime Video, dan banyak lagi.', cta: 'Mulai uji coba gratis' },
       audible: { title: 'Coba Audible gratis', body: 'Buku audio, podcast, dan karya orisinal, gratis dicoba untuk anggota baru.', cta: 'Mulai mendengarkan' },

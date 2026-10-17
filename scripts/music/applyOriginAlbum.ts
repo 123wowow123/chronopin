@@ -86,7 +86,9 @@ console.log({ entries: catalog.length, missingOrigin, noAlbum, partial });
       if (e.id === 'fr-2026-1') { e.weeksAtNumberOne = 17; e.songStats.weeksAtNumberOne = 17; }
       else if (e.weeksAtNumberOne != null) e.songStats.weeksAtNumberOne = e.weeksAtNumberOne;
     }
-    const a = o.album;
+    // Albums replaced on 2026-10-17 after the compilation review: the researched album stats described the old match.
+    const albumChanged = new Set(['ng-2026-1', 'de-2023-1', 'de-2022-1', 'it-2022-1', 'es-2020-1', 'za-2019-1', 'it-2024-1', 'es-2021-1', 'fr-2022-1', 'fr-2021-1', 'es-2018-1', 'tw-2017-1', 'gb-2018-1']);
+    const a = albumChanged.has(e.id) ? null : o.album;
     if (a) a.certifications = (a.certifications ?? []).filter((c: any) => c?.body && c?.level);
     if (a?.peak && !(Number.isInteger(a.peak.position) && a.peak.position >= 1 && a.peak.chart)) a.peak = null;
     if (a && e.album && ((a.certifications?.length ?? 0) > 0 || a.units || a.peak) && okUrl(a.sourceUrl)) {

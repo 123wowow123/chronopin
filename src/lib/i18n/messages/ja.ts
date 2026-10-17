@@ -2027,6 +2027,7 @@ const ja: Messages = {
     urgencyLow: '{days}日間の最安値',
     programs: {
       advertise: { title: 'Chronopinに広告を出す', body: 'これから起こることを追う人に届けます。1,000回表示で5ドルから。', cta: '広告を作成' },
+      heavyuser: { title: '制限なしで読もう', body: '広告なし、閲覧制限なし。月4ドル、または30日間5ドル。', cta: 'ヘビーユーザーになる' },
       sponsored: { title: 'スポンサー', cta: 'サイトを見る' },
       prime: { title: 'Amazonプライムを無料で体験', body: 'お急ぎ便無料、Prime Videoなど特典がいっぱい。', cta: '無料体験を始める' },
       audible: { title: 'Audibleを無料で体験', body: 'オーディオブック、ポッドキャスト、オリジナル作品。新規会員は無料で体験できます。', cta: '聴き始める' },

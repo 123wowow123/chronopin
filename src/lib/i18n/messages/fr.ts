@@ -2033,6 +2033,7 @@ const fr: Messages = {
     urgencyLow: 'Prix le plus bas depuis {days} jours',
     programs: {
       advertise: { title: 'Faites de la publicité sur Chronopin', body: 'Touchez ceux qui suivent ce qui arrive. Dès 5 $ les 1 000 affichages.', cta: 'Créer votre annonce' },
+      heavyuser: { title: 'Lisez sans limites', body: 'Sans publicité ni limite de lecture, pour 4 $ par mois ou 5 $ les 30 jours.', cta: 'Devenir gros utilisateur' },
       sponsored: { title: 'Sponsorisé', cta: 'Visiter le site' },
       prime: { title: 'Essayez Amazon Prime gratuitement', body: 'Livraison rapide et gratuite, Prime Video et plus encore.', cta: 'Commencer l’essai gratuit' },
       audible: { title: 'Essayez Audible gratuitement', body: 'Livres audio, podcasts et créations originales, gratuits à l’essai pour les nouveaux membres.', cta: 'Commencer l’écoute' },

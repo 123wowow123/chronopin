@@ -2036,6 +2036,7 @@ const vi: Messages = {
     urgencyLow: 'Giá thấp nhất trong {days} ngày',
     programs: {
       advertise: { title: 'Quảng cáo trên Chronopin', body: 'Tiếp cận những người theo dõi điều sắp diễn ra. Từ $5 cho 1.000 lượt hiển thị.', cta: 'Tạo quảng cáo của bạn' },
+      heavyuser: { title: 'Đọc không giới hạn', body: 'Không quảng cáo, không giới hạn đọc: $4 mỗi tháng hoặc $5 cho 30 ngày.', cta: 'Trở thành người dùng nhiều' },
       sponsored: { title: 'Được tài trợ', cta: 'Truy cập trang' },
       prime: { title: 'Dùng thử Amazon Prime miễn phí', body: 'Giao hàng nhanh miễn phí, Prime Video và nhiều hơn nữa.', cta: 'Bắt đầu dùng thử miễn phí' },
       audible: { title: 'Dùng thử Audible miễn phí', body: 'Sách nói, podcast và nội dung gốc, thành viên mới được dùng thử miễn phí.', cta: 'Bắt đầu nghe' },

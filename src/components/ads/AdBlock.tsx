@@ -38,6 +38,8 @@ let queue: Promise<unknown> = Promise.resolve();
 const PROGRAM_TILE: Record<string, { icon: IconName; background: string; color: string }> = {
   // Our own ad for the self-serve portal, and the plain tile of a bought ad with no picture.
   advertise: { icon: 'sparkle', background: 'linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%)', color: '#fff' },
+  // Our own ad for the heavy user plan (0191): amber to rose, a bolt for speed.
+  heavyuser: { icon: 'bolt', background: 'linear-gradient(135deg, #f59e0b 0%, #e11d48 100%)', color: '#fff' },
   sponsored: { icon: 'tag', background: '#334155', color: '#fff' },
   prime: { icon: 'bolt', background: '#00a8e1', color: '#fff' },
   audible: { icon: 'sparkle', background: '#f7991c', color: '#1d1d1d' },

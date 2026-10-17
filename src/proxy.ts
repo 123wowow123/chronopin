@@ -7,7 +7,8 @@ import { pinPath } from '@/lib/seo';
 import { topicSlug } from '@/lib/topics';
 import * as db from '@/server/db';
 import { sessionOf, TOKEN_COOKIE } from '@/server/auth';
-import { botRetryAfter, SHED_RETRY_AFTER } from '@/server/botLimit';
+import { botRetryAfter, ipRetryAfter, PREFETCH_COST, SHED_RETRY_AFTER } from '@/server/botLimit';
+import HeavyUserPlan from '@/server/model/heavyUserPlan';
 import BotVisit from '@/server/model/botVisit';
 import LandingVisit from '@/server/model/landingVisit';
 import Person from '@/server/model/person';
@@ -49,6 +50,29 @@ async function canonicalPath(id: number): Promise<string | null> {
   return path;
 }
 
+// Pages that stay open to a visitor over the limit: the plan's own page and
+// signing in or up to buy it.
+function isLimitExempt(pathname: string): boolean {
+  return /^\/(?:heavy-use|login|signup)(?:\/|$)/.test(splitLocale(pathname).path);
+}
+
+// The answer to a visitor over the limit: a page that offers the heavy user
+// plan (a rewrite, so the address stays) when a browser asked for a page, else
+// plain text. Both are 429 with Retry-After. A heavy user over their light
+// limit just waits.
+function tooManyRequests(request: NextRequest, wait: number, light: boolean): NextResponse {
+  const headers = { 'Retry-After': String(wait) };
+  const wantsPage = request.method === 'GET' && (request.headers.get('accept') ?? '').includes('text/html') && !request.headers.has('rsc');
+  if (!wantsPage || light) {
+    return new NextResponse('Too many requests - please slow down.', { status: 429, headers: { ...headers, 'Content-Type': 'text/plain; charset=utf-8' } });
+  }
+  const cookie = request.cookies.get(LOCALE_COOKIE)?.value;
+  const locale = cookie && isLocale(cookie) ? cookie : DEFAULT_LOCALE;
+  const url = new URL(`/${locale}/heavy-use`, request.url);
+  url.searchParams.set('limited', '1');
+  return NextResponse.rewrite(url, { status: 429, headers });
+}
+
 // Every page is routed under its language (src/app/[lang]). English keeps the
 // plain paths: they are rewritten to /en here, and /en/... redirects back to
 // them, so each page has one English URL. A visitor who picked another
@@ -69,6 +93,20 @@ export async function proxy(request: NextRequest) {
   // them - it is where they read the Crawl-delay - and so does llms.txt, the
   // one page written for them.
   const retryAfter = pathname === '/robots.txt' || pathname === '/llms.txt' ? null : botRetryAfter(bot);
+  // Everyone no bot name explains gets a request budget (ipRetryAfter), which
+  // catches scrapers posing as browsers: per signed-in user, else per address
+  // (Caddy appends the address it saw, so the last X-Forwarded-For entry is
+  // the real one). Admins are exempt, and a heavy user plan swaps the budget
+  // for a light one. Whoever runs out is shown the plan's page
+  // (src/app/[lang]/heavy-use), which itself and the sign-in pages stay open.
+  const session = await sessionOf(request.cookies.get(TOKEN_COOKIE)?.value);
+  if (retryAfter == null && !bot && !session?.admin && !isLimitExempt(pathname)) {
+    const key = session ? `u:${session.id}` : `ip:${request.headers.get('x-forwarded-for')?.split(',').pop()?.trim() ?? ''}`;
+    const light = session ? await HeavyUserPlan.isActive(session.id).catch(() => false) : false;
+    const prefetching = request.headers.has('next-router-prefetch') || request.headers.get('purpose') === 'prefetch';
+    const wait = ipRetryAfter(key, light, Date.now(), prefetching ? PREFETCH_COST : 1);
+    if (wait != null) return tooManyRequests(request, wait, light);
+  }
   if (retryAfter != null) {
     // 503 while the server sheds crawlers to protect itself (botLimit.shedding);
     // 429 when a bot is over its own budget.
@@ -108,7 +146,6 @@ export async function proxy(request: NextRequest) {
   // counted once.
   const prefetch = request.headers.has('next-router-prefetch') || request.headers.get('purpose') === 'prefetch';
   const reload = isReload(request.headers.get('cache-control'), request.headers.get('pragma'));
-  const session = await sessionOf(request.cookies.get(TOKEN_COOKIE)?.value);
   const counted = !bot && !prefetch && !reload && request.method === 'GET' && !session?.admin;
   // Each viewer counts once a day: by user id, else the visitor cookie (set
   // when they first view a pin), else address and user agent.

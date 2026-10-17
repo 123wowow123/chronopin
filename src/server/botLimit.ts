@@ -121,3 +121,40 @@ export function botRetryAfter(bot: Bot | null, now = Date.now()): number | null 
   }
   return Math.ceil(Math.max((1 - bucket.tokens) / PER_SECOND, (1 - shared.tokens) / SHARED_PER_SECOND));
 }
+
+// Everyone who is not a named bot, by address or signed-in user. A scraper
+// that sends a browser user agent is not a Bot above, so every unidentified
+// visitor gets a generous budget: well beyond a person clicking and
+// prefetching, well below a crawler (owner asked 2026-10-17 after Singapore
+// traffic looked like bots). A visitor who runs out is shown the heavy user
+// plan (src/app/[lang]/heavy-use): with it the budget is LIGHT_*, still a limit
+// but ten times looser. Admins and named crawlers have their own rules.
+export const IP_BURST = 50;
+export const IP_PER_SECOND = 2;
+export const LIGHT_BURST = 1_200;
+export const LIGHT_PER_SECOND = 20;
+const IP_MAX_ENTRIES = 20_000;
+
+// A link prefetch (cost PREFETCH_COST) is a page's worth of links loading in
+// the background, not a person asking for pages, so it spends a quarter token.
+// `key` is "ip:<address>" or "u:<user id>". Null when the request may go on,
+// else the seconds to wait.
+export const PREFETCH_COST = 0.25;
+export function ipRetryAfter(key: string, light = false, now = Date.now(), cost = 1): number | null {
+  if (!key || key === 'ip:') return null;
+  const burst = light ? LIGHT_BURST : IP_BURST;
+  const perSecond = light ? LIGHT_PER_SECOND : IP_PER_SECOND;
+  const g = globalThis as unknown as { __chronopinIpLimits?: Map<string, Bucket> };
+  const buckets = (g.__chronopinIpLimits ??= new Map());
+  const bucket = buckets.get(key) ?? { tokens: burst, at: now };
+  refill(bucket, now, burst, perSecond);
+  // Re-insert so the map stays in least-recently-used order.
+  buckets.delete(key);
+  buckets.set(key, bucket);
+  if (buckets.size > IP_MAX_ENTRIES) buckets.delete(buckets.keys().next().value!);
+  if (bucket.tokens >= cost) {
+    bucket.tokens -= cost;
+    return null;
+  }
+  return Math.ceil((cost - bucket.tokens) / perSecond);
+}

@@ -2033,6 +2033,7 @@ const de: Messages = {
     urgencyLow: '{days}-Tage-Tiefstpreis',
     programs: {
       advertise: { title: 'Werbung auf Chronopin', body: 'Erreiche Menschen, die verfolgen, was als Nächstes kommt. Ab 5 $ für 1.000 Einblendungen.', cta: 'Anzeige erstellen' },
+      heavyuser: { title: 'Lies ohne Limits', body: 'Keine Werbung, kein Leselimit: 4 $ im Monat oder 5 $ für 30 Tage.', cta: 'Vielnutzer werden' },
       sponsored: { title: 'Anzeige', cta: 'Website besuchen' },
       prime: { title: 'Amazon Prime gratis testen', body: 'Schneller, kostenloser Versand, Prime Video und mehr.', cta: 'Gratis testen' },
       audible: { title: 'Audible gratis testen', body: 'Hörbücher, Podcasts und Originals, für Neukunden gratis zum Testen.', cta: 'Jetzt hören' },

@@ -2,6 +2,7 @@
 // AdFreeSubscription. Shared by the webhook and by the checkout return.
 
 import AdFreeSubscription from '../model/adFreeSubscription';
+import HeavyUserPlan from '../model/heavyUserPlan';
 import { stripeRequest } from '../stripe';
 
 type StripeSubscription = {
@@ -41,6 +42,23 @@ export async function recordSubscription(subscription: StripeSubscription, known
     currentPeriodEnd: periodEnd(subscription),
     // Newer API versions schedule a cancellation as a cancel_at date and leave
     // cancel_at_period_end false; either means the plan will not renew.
+    cancelAtPeriodEnd: subscription.cancel_at_period_end === true || typeof subscription.cancel_at === 'number',
+  });
+  return true;
+}
+
+// The heavy user plan's $4 subscription (0191), found from heavyUserId in its
+// metadata or the subscription saved earlier. False when it is nobody's.
+export async function recordHeavySubscription(subscription: StripeSubscription): Promise<boolean> {
+  const customerId = typeof subscription.customer === 'string' ? subscription.customer : subscription.customer.id;
+  const fromMetadata = Number(subscription.metadata?.heavyUserId);
+  const userId = Number.isInteger(fromMetadata) && fromMetadata > 0 ? fromMetadata : await HeavyUserPlan.userIdForSubscription(subscription.id);
+  if (!userId) return false;
+  await HeavyUserPlan.saveSubscription(userId, {
+    customerId,
+    subscriptionId: subscription.id,
+    status: subscription.status,
+    currentPeriodEnd: periodEnd(subscription),
     cancelAtPeriodEnd: subscription.cancel_at_period_end === true || typeof subscription.cancel_at === 'number',
   });
   return true;

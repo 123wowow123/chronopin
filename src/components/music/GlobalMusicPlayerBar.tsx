@@ -1,6 +1,6 @@
 'use client';
 
-import { useMemo, useRef } from 'react';
+import { useMemo, useRef, useState } from 'react';
 import Link from '@/components/ui/Link';
 import { Icon } from '@/components/ui/Icon';
 import { useMusicPlayer } from './MusicPlayerContext';
@@ -35,6 +35,26 @@ export function GlobalMusicPlayerBar() {
   } = useMusicPlayer();
 
   const progressRef = useRef<HTMLDivElement>(null);
+  // Mobile: drag the dock down to dismiss it.
+  const [dragY, setDragY] = useState(0);
+  const [dragging, setDragging] = useState(false);
+  const touchStartY = useRef<number | null>(null);
+  const DISMISS_DISTANCE = 70;
+  const onTouchStart = (e: React.TouchEvent) => {
+    touchStartY.current = e.touches[0].clientY;
+    setDragging(true);
+  };
+  const onTouchMove = (e: React.TouchEvent) => {
+    if (touchStartY.current === null) return;
+    setDragY(Math.max(0, e.touches[0].clientY - touchStartY.current));
+  };
+  const onTouchEnd = () => {
+    const dismiss = dragY > DISMISS_DISTANCE;
+    touchStartY.current = null;
+    setDragging(false);
+    setDragY(0);
+    if (dismiss) closePlayer();
+  };
   const locateHash = currentTrack
     ? `#year=${currentTrack.year}&continent=${encodeURIComponent(currentTrack.originContinent ?? currentTrack.continent)}&track=${encodeURIComponent(currentTrack.id.replace(/~t\d+$/, ''))}`
     : '';
@@ -65,8 +85,21 @@ export function GlobalMusicPlayerBar() {
       <aside
         role="region"
         aria-label="Audio player dock"
+        onTouchStart={onTouchStart}
+        onTouchMove={onTouchMove}
+        onTouchEnd={onTouchEnd}
+        onTouchCancel={onTouchEnd}
+        style={{
+          transform: dragY ? `translateY(${dragY}px)` : undefined,
+          opacity: dragY ? Math.max(0.4, 1 - dragY / 200) : undefined,
+          transition: dragging ? 'none' : undefined,
+        }}
         className="w-full rounded-2xl border border-line bg-popover/98 px-4 py-3 text-ink shadow-[0_12px_40px_rgb(0_0_0/0.45)] ring-1 ring-white/10 dark:ring-white/10 backdrop-blur-xl transition-all duration-300 ease-out sm:px-6"
       >
+        {/* Mobile swipe-down handle */}
+        <div aria-hidden="true" className="-mt-1.5 mb-1.5 flex justify-center sm:hidden">
+          <span className="h-1 w-10 rounded-full bg-faint/60" />
+        </div>
         <div className="flex flex-col gap-2.5 sm:gap-2">
           <div className="flex items-center justify-between gap-3">
             {/* Left: Artwork, Track Title & Artist */}
@@ -145,7 +178,7 @@ export function GlobalMusicPlayerBar() {
               </div>
             </div>
 
-            {/* Mobile Play / Full Song / Prev / Next / Close button */}
+            {/* Mobile Play / Full Song / Prev / Next (swipe the dock down to close) */}
             <div className="flex items-center gap-1.5 shrink-0 sm:hidden">
               {currentTrack.youtubeId && pinHref ? (
                 <Link
@@ -201,16 +234,6 @@ export function GlobalMusicPlayerBar() {
               >
                 <svg className="size-4 fill-current" viewBox="0 0 24 24">
                   <path d="M6 18l8.5-6L6 6v12zM16 6v12h2V6h-2z" />
-                </svg>
-              </button>
-              <button
-                type="button"
-                onClick={closePlayer}
-                className="flex size-8 items-center justify-center rounded-full bg-raised/70 hover:bg-raised-2 text-muted hover:text-ink active:scale-95 transition-all cursor-pointer ring-1 ring-line/50"
-                aria-label="Close audio player"
-              >
-                <svg className="size-4" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5} fill="none">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
                 </svg>
               </button>
             </div>

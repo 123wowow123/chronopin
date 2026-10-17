@@ -2027,6 +2027,7 @@ const zh: Messages = {
     urgencyLow: '{days} 天最低价',
     programs: {
       advertise: { title: '在 Chronopin 投放广告', body: '触达关注即将发生之事的人。1,000 次展示起价 5 美元。', cta: '创建广告' },
+      heavyuser: { title: '无限制阅读', body: '无广告、无阅读限制，每月 4 美元或 30 天 5 美元。', cta: '成为重度用户' },
       sponsored: { title: '赞助', cta: '访问网站' },
       prime: { title: '免费试用 Amazon Prime', body: '快速免费配送、Prime Video 等更多权益。', cta: '开始免费试用' },
       audible: { title: '免费试用 Audible', body: '有声书、播客和原创节目，新会员可免费试用。', cta: '开始收听' },

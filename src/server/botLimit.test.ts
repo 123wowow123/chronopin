@@ -116,3 +116,24 @@ describe('botRetryAfter', () => {
     expect(botRetryAfter({ name: 'TestAiBot-b', kind: 'ai' }, t0)).toBeNull();
   });
 });
+
+import { ipRetryAfter, IP_BURST, LIGHT_BURST, PREFETCH_COST } from './botLimit';
+describe('ipRetryAfter', () => {
+  it('lets a burst through, then asks the address to wait', () => {
+    const now = 1_000_000;
+    for (let i = 0; i < IP_BURST; i++) expect(ipRetryAfter('ip:203.0.113.9', false, now)).toBeNull();
+    expect(ipRetryAfter('ip:203.0.113.9', false, now)).toBeGreaterThan(0);
+    expect(ipRetryAfter('ip:203.0.113.10', false, now)).toBeNull();
+    expect(ipRetryAfter('ip:', false, now)).toBeNull();
+  });
+  it('gives the heavy user plan a looser but real limit', () => {
+    const now = 2_000_000;
+    for (let i = 0; i < LIGHT_BURST; i++) expect(ipRetryAfter('u:7', true, now)).toBeNull();
+    expect(ipRetryAfter('u:7', true, now)).toBeGreaterThan(0);
+  });
+  it('charges a prefetch a quarter of a request', () => {
+    const now = 3_000_000;
+    for (let i = 0; i < IP_BURST * 4; i++) expect(ipRetryAfter('ip:198.51.100.1', false, now, PREFETCH_COST)).toBeNull();
+    expect(ipRetryAfter('ip:198.51.100.1', false, now, PREFETCH_COST)).toBeGreaterThan(0);
+  });
+});

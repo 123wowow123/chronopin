@@ -1,6 +1,7 @@
 import config from '@/server/config';
 import { HttpError, json, route } from '@/server/http';
-import { fetchSubscription, recordSubscription } from '@/server/services/billing';
+import HeavyUserPlan from '@/server/model/heavyUserPlan';
+import { fetchSubscription, recordHeavySubscription, recordSubscription } from '@/server/services/billing';
 import { adSubscriptionChanged, confirmAdPayment, confirmAdSubscription, renewAdSubscription } from '@/server/services/sponsoredAds';
 import { verifyStripeSignature } from '@/server/stripe';
 import log from '@/server/util/log';
@@ -22,6 +23,27 @@ export const POST = route(async (request: Request) => {
   }
   const event = JSON.parse(raw) as StripeEvent;
   const object = event.data.object;
+
+  // The heavy user plan (0191) marks its sessions and subscriptions with heavyUserId.
+  const heavyMetadata = (object.metadata as Record<string, string> | null | undefined)?.heavyUserId;
+  if (heavyMetadata) {
+    const userId = Number(heavyMetadata);
+    if (event.type === 'checkout.session.completed' && object.mode === 'subscription' && object.subscription) {
+      const known = await recordHeavySubscription(await fetchSubscription(String(object.subscription)));
+      if (!known) log.warn(`[billing] heavy checkout ${object.id} had no user`);
+    } else if (
+      (event.type === 'checkout.session.completed' || event.type === 'checkout.session.async_payment_succeeded') &&
+      object.mode === 'payment' &&
+      object.payment_status === 'paid' &&
+      Number.isInteger(userId) && userId > 0
+    ) {
+      // $5 once: 30 days more, counted once per session.
+      await HeavyUserPlan.addMonth(userId, typeof object.customer === 'string' ? object.customer : null, String(object.id));
+    } else if (event.type.startsWith('customer.subscription.') && object.id) {
+      await recordHeavySubscription(await fetchSubscription(String(object.id)));
+    }
+    return json({ received: true });
+  }
 
   const adMetadata = (object.metadata as Record<string, string> | null | undefined)?.sponsoredAdId;
   if (event.type === 'checkout.session.completed' && object.mode === 'subscription' && adMetadata) {

@@ -19,8 +19,23 @@
 	}
 }
 
+# One JSON line per request (client IP, user agent, path, status) on the
+# container's stdout, for telling bots from people: docker logs docker-caddy-1.
+# Cookies and auth headers are dropped. Added 2026-10-17.
+(accesslog) {
+	log {
+		output stdout
+		format filter {
+			wrap json
+			request>headers>Cookie delete
+			request>headers>Authorization delete
+		}
+	}
+}
+
 www.chronopin.com {
 	encode zstd gzip
+	import accesslog
 	import upstreams
 }
 
