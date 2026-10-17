@@ -13,7 +13,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
     "country": "Canada",
     "countryCode": "CA",
     "countryFlag": "🇨🇦",
-    "sourceUrl": "https://www.billboard.com/charts/canadian-hot-100/",
+    "sourceUrl": "https://www.billboard.com/charts/canadian-hot-100/#ca-2026-1",
     "releaseDate": "2024-09-27",
     "genres": [
       "Synth-Trap",
@@ -92,7 +92,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
     "country": "United States",
     "countryCode": "US",
     "countryFlag": "🇺🇸",
-    "sourceUrl": "https://www.billboard.com/charts/hot-100/",
+    "sourceUrl": "https://www.billboard.com/charts/hot-100/#us-2026-2",
     "releaseDate": "2024-08-16",
     "genres": [
       "Pop Soul",
@@ -118,7 +118,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
     "country": "United States",
     "countryCode": "US",
     "countryFlag": "🇺🇸",
-    "sourceUrl": "https://www.billboard.com/charts/hot-100/",
+    "sourceUrl": "https://www.billboard.com/charts/hot-100/#us-2026-3",
     "releaseDate": "2024-08-23",
     "genres": [
       "Pop-Rock",
@@ -196,7 +196,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
     "country": "Colombia",
     "countryCode": "CO",
     "countryFlag": "🇨🇴",
-    "sourceUrl": "https://monitorlatino.com/",
+    "sourceUrl": "https://monitorlatino.com/#co-2026-1",
     "releaseDate": "2024-06-21",
     "genres": [
       "Merengue",
@@ -352,7 +352,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
     "country": "United Kingdom",
     "countryCode": "GB",
     "countryFlag": "🇬🇧",
-    "sourceUrl": "https://www.officialcharts.com/charts/singles-chart/",
+    "sourceUrl": "https://www.officialcharts.com/charts/singles-chart/#gb-2026-1",
     "releaseDate": "2024-10-18",
     "genres": [
       "Pop-Punk",
@@ -378,7 +378,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
     "country": "United Kingdom",
     "countryCode": "GB",
     "countryFlag": "🇬🇧",
-    "sourceUrl": "https://www.officialcharts.com/charts/singles-chart/",
+    "sourceUrl": "https://www.officialcharts.com/charts/singles-chart/#gb-2026-2",
     "releaseDate": "2024-10-18",
     "genres": [
       "Indie Pop",
@@ -615,7 +615,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
     "country": "Australia",
     "countryCode": "AU",
     "countryFlag": "🇦🇺",
-    "sourceUrl": "https://www.aria.com.au/charts/singles-chart",
+    "sourceUrl": "https://www.aria.com.au/charts/singles-chart#au-2026-1",
     "releaseDate": "2024-10-18",
     "genres": [
       "Pop-Punk",
@@ -695,7 +695,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
     "country": "Canada",
     "countryCode": "CA",
     "countryFlag": "🇨🇦",
-    "sourceUrl": "https://www.billboard.com/charts/canadian-hot-100/",
+    "sourceUrl": "https://www.billboard.com/charts/canadian-hot-100/#ca-2025-2",
     "releaseDate": "2024-05-17",
     "genres": [
       "Pop",
@@ -775,7 +775,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
     "country": "United States",
     "countryCode": "US",
     "countryFlag": "🇺🇸",
-    "sourceUrl": "https://www.billboard.com/charts/hot-100/",
+    "sourceUrl": "https://www.billboard.com/charts/hot-100/#us-2025-2",
     "releaseDate": "2024-05-04",
     "genres": [
       "West Coast Hip-Hop",
@@ -801,7 +801,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
     "country": "United States",
     "countryCode": "US",
     "countryFlag": "🇺🇸",
-    "sourceUrl": "https://www.billboard.com/charts/hot-100/",
+    "sourceUrl": "https://www.billboard.com/charts/hot-100/#us-2025-3",
     "releaseDate": "2024-04-11",
     "genres": [
       "Pop",
@@ -1257,7 +1257,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
     "country": "South Korea",
     "countryCode": "KR",
     "countryFlag": "🇰🇷",
-    "sourceUrl": "https://circlechart.kr/",
+    "sourceUrl": "https://circlechart.kr/#kr-2025-2",
     "releaseDate": "2024-03-25",
     "genres": [
       "Pluggnb",
@@ -1445,7 +1445,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
     "country": "United States",
     "countryCode": "US",
     "countryFlag": "🇺🇸",
-    "sourceUrl": "https://www.billboard.com/charts/year-end/2024/hot-100-songs/",
+    "sourceUrl": "https://www.billboard.com/charts/year-end/2024/hot-100-songs/#us-2024-2",
     "releaseDate": "2024-05-10",
     "genres": [
       "Country",
@@ -1471,7 +1471,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
     "country": "United States",
     "countryCode": "US",
     "countryFlag": "🇺🇸",
-    "sourceUrl": "https://www.billboard.com/charts/year-end/2024/hot-100-songs/",
+    "sourceUrl": "https://www.billboard.com/charts/year-end/2024/hot-100-songs/#us-2024-3",
     "releaseDate": "2024-05-04",
     "genres": [
       "West Coast Hip-Hop",
@@ -1685,7 +1685,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
     "country": "Sweden",
     "countryCode": "SE",
     "countryFlag": "🇸🇪",
-    "sourceUrl": "https://www.sverigetopplistan.se/",
+    "sourceUrl": "https://www.sverigetopplistan.se/#se-2024-1",
     "releaseDate": "2023-01-06",
     "genres": [
       "EPA-dunk",
@@ -1926,7 +1926,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
     "country": "South Korea",
     "countryCode": "KR",
     "countryFlag": "🇰🇷",
-    "sourceUrl": "https://circlechart.kr/",
+    "sourceUrl": "https://circlechart.kr/#kr-2024-2",
     "releaseDate": "2024-05-13",
     "genres": [
       "Hyperpop",
@@ -1953,7 +1953,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
     "country": "Taiwan",
     "countryCode": "TW",
     "countryFlag": "🇹🇼",
-    "sourceUrl": "https://www.kkbox.com/",
+    "sourceUrl": "https://www.kkbox.com/#tw-2024-1",
     "releaseDate": "2024-04-12",
     "genres": [
       "Dance-Pop",
@@ -2006,7 +2006,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
     "country": "New Zealand",
     "countryCode": "NZ",
     "countryFlag": "🇳🇿",
-    "sourceUrl": "https://nztop40.co.nz/",
+    "sourceUrl": "https://nztop40.co.nz/#nz-2024-1",
     "releaseDate": "2023-10-27",
     "genres": [
       "Soul",
@@ -2059,7 +2059,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
     "country": "Mexico",
     "countryCode": "MX",
     "countryFlag": "🇲🇽",
-    "sourceUrl": "https://monitorlatino.com/",
+    "sourceUrl": "https://monitorlatino.com/#mx-2023-1",
     "releaseDate": "2023-03-17",
     "genres": [
       "Corridos Tumbados",
@@ -2112,7 +2112,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
     "country": "United States",
     "countryCode": "US",
     "countryFlag": "🇺🇸",
-    "sourceUrl": "https://www.billboard.com/charts/year-end/2023/hot-100-songs/",
+    "sourceUrl": "https://www.billboard.com/charts/year-end/2023/hot-100-songs/#us-2023-2",
     "releaseDate": "2022-12-09",
     "genres": [
       "R&B",
@@ -2138,7 +2138,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
     "country": "United States",
     "countryCode": "US",
     "countryFlag": "🇺🇸",
-    "sourceUrl": "https://www.billboard.com/charts/year-end/2023/hot-100-songs/",
+    "sourceUrl": "https://www.billboard.com/charts/year-end/2023/hot-100-songs/#us-2023-3",
     "releaseDate": "2023-04-14",
     "genres": [
       "Country",
@@ -2190,7 +2190,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
     "country": "Brazil",
     "countryCode": "BR",
     "countryFlag": "🇧🇷",
-    "sourceUrl": "https://pro-musicabr.org.br/",
+    "sourceUrl": "https://pro-musicabr.org.br/#br-2023-1",
     "releaseDate": "2023-02-02",
     "genres": [
       "Agroplay",
@@ -2216,7 +2216,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
     "country": "Colombia",
     "countryCode": "CO",
     "countryFlag": "🇨🇴",
-    "sourceUrl": "https://monitorlatino.com/",
+    "sourceUrl": "https://monitorlatino.com/#co-2023-1",
     "releaseDate": "2023-02-24",
     "genres": [
       "Reggaeton",
@@ -2242,7 +2242,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
     "country": "France",
     "countryCode": "FR",
     "countryFlag": "🇫🇷",
-    "sourceUrl": "https://snepmusique.com/",
+    "sourceUrl": "https://snepmusique.com/#fr-2023-1",
     "releaseDate": "2022-12-02",
     "genres": [
       "French Rap",
@@ -2268,7 +2268,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
     "country": "Germany",
     "countryCode": "DE",
     "countryFlag": "🇩🇪",
-    "sourceUrl": "https://www.offiziellecharts.de/",
+    "sourceUrl": "https://www.offiziellecharts.de/#de-2023-1",
     "releaseDate": "2023-01-19",
     "genres": [
       "Deutschpop",
@@ -2294,7 +2294,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
     "country": "Italy",
     "countryCode": "IT",
     "countryFlag": "🇮🇹",
-    "sourceUrl": "https://www.fimi.it/",
+    "sourceUrl": "https://www.fimi.it/#it-2023-1",
     "releaseDate": "2023-05-05",
     "genres": [
       "Italo-Disco",
@@ -2320,7 +2320,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
     "country": "Spain",
     "countryCode": "ES",
     "countryFlag": "🇪🇸",
-    "sourceUrl": "https://www.promusicae.es/",
+    "sourceUrl": "https://www.promusicae.es/#es-2023-1",
     "releaseDate": "2022-12-19",
     "genres": [
       "80s Synth-Pop",
@@ -2346,7 +2346,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
     "country": "Sweden",
     "countryCode": "SE",
     "countryFlag": "🇸🇪",
-    "sourceUrl": "https://www.sverigetopplistan.se/",
+    "sourceUrl": "https://www.sverigetopplistan.se/#se-2023-1",
     "releaseDate": "2023-02-25",
     "genres": [
       "Dance-Pop",
@@ -2425,7 +2425,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
     "country": "Nigeria",
     "countryCode": "NG",
     "countryFlag": "🇳🇬",
-    "sourceUrl": "https://www.turntablecharts.com/",
+    "sourceUrl": "https://www.turntablecharts.com/#ng-2023-1",
     "releaseDate": "2023-06-16",
     "genres": [
       "Fuji",
@@ -2451,7 +2451,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
     "country": "South Africa",
     "countryCode": "ZA",
     "countryFlag": "🇿🇦",
-    "sourceUrl": "https://theofficialsacharts.co.za/",
+    "sourceUrl": "https://theofficialsacharts.co.za/#za-2023-1",
     "releaseDate": "2023-04-28",
     "genres": [
       "Amapiano"
@@ -2476,7 +2476,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
     "country": "China",
     "countryCode": "CN",
     "countryFlag": "🇨🇳",
-    "sourceUrl": "https://y.qq.com/",
+    "sourceUrl": "https://y.qq.com/#cn-2023-1",
     "releaseDate": "2023-07-19",
     "genres": [
       "Folk Rock",
@@ -2528,7 +2528,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
     "country": "Japan",
     "countryCode": "JP",
     "countryFlag": "🇯🇵",
-    "sourceUrl": "https://www.billboard-japan.com/charts/detail?a=hot100_year&year=2023",
+    "sourceUrl": "https://www.billboard-japan.com/charts/detail?a=hot100_year&year=2023#jp-2023-2",
     "releaseDate": "2020-05-27",
     "genres": [
       "J-Rock",
@@ -2554,7 +2554,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
     "country": "South Korea",
     "countryCode": "KR",
     "countryFlag": "🇰🇷",
-    "sourceUrl": "https://circlechart.kr/",
+    "sourceUrl": "https://circlechart.kr/#kr-2023-1",
     "releaseDate": "2022-12-19",
     "genres": [
       "Baltimore Club",
@@ -2580,7 +2580,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
     "country": "South Korea",
     "countryCode": "KR",
     "countryFlag": "🇰🇷",
-    "sourceUrl": "https://circlechart.kr/",
+    "sourceUrl": "https://circlechart.kr/#kr-2023-2",
     "releaseDate": "2023-07-14",
     "genres": [
       "UK Garage",
@@ -2606,7 +2606,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
     "country": "Taiwan",
     "countryCode": "TW",
     "countryFlag": "🇹🇼",
-    "sourceUrl": "https://www.kkbox.com/",
+    "sourceUrl": "https://www.kkbox.com/#tw-2023-1",
     "releaseDate": "2023-04-18",
     "genres": [
       "Mandopop",
@@ -2658,7 +2658,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
     "country": "New Zealand",
     "countryCode": "NZ",
     "countryFlag": "🇳🇿",
-    "sourceUrl": "https://nztop40.co.nz/",
+    "sourceUrl": "https://nztop40.co.nz/#nz-2023-1",
     "releaseDate": "2021-12-03",
     "genres": [
       "Reggae",
@@ -2710,7 +2710,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
     "country": "Mexico",
     "countryCode": "MX",
     "countryFlag": "🇲🇽",
-    "sourceUrl": "https://monitorlatino.com/",
+    "sourceUrl": "https://monitorlatino.com/#mx-2022-1",
     "releaseDate": "2022-05-06",
     "genres": [
       "Reggaeton",
@@ -2763,7 +2763,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
     "country": "United States",
     "countryCode": "US",
     "countryFlag": "🇺🇸",
-    "sourceUrl": "https://www.billboard.com/charts/year-end/2022/hot-100-songs/",
+    "sourceUrl": "https://www.billboard.com/charts/year-end/2022/hot-100-songs/#us-2022-2",
     "releaseDate": "2022-04-01",
     "genres": [
       "Synth-Pop",
@@ -2789,7 +2789,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
     "country": "United States",
     "countryCode": "US",
     "countryFlag": "🇺🇸",
-    "sourceUrl": "https://www.billboard.com/charts/year-end/2022/hot-100-songs/",
+    "sourceUrl": "https://www.billboard.com/charts/year-end/2022/hot-100-songs/#us-2022-3",
     "releaseDate": "2021-07-09",
     "genres": [
       "Pop-Punk",
@@ -2815,7 +2815,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
     "country": "Argentina",
     "countryCode": "AR",
     "countryFlag": "🇦🇷",
-    "sourceUrl": "https://www.billboard.com/charts/argentina-hot-100/",
+    "sourceUrl": "https://www.billboard.com/charts/argentina-hot-100/#ar-2022-1",
     "releaseDate": "2022-07-06",
     "genres": [
       "EDM",
@@ -2841,7 +2841,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
     "country": "Brazil",
     "countryCode": "BR",
     "countryFlag": "🇧🇷",
-    "sourceUrl": "https://pro-musicabr.org.br/",
+    "sourceUrl": "https://pro-musicabr.org.br/#br-2022-1",
     "releaseDate": "2021-10-14",
     "genres": [
       "Sertanejo",
@@ -2867,7 +2867,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
     "country": "Colombia",
     "countryCode": "CO",
     "countryFlag": "🇨🇴",
-    "sourceUrl": "https://monitorlatino.com/",
+    "sourceUrl": "https://monitorlatino.com/#co-2022-1",
     "releaseDate": "2022-04-21",
     "genres": [
       "Afro-Fusion",
@@ -2893,7 +2893,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
     "country": "France",
     "countryCode": "FR",
     "countryFlag": "🇫🇷",
-    "sourceUrl": "https://snepmusique.com/",
+    "sourceUrl": "https://snepmusique.com/#fr-2022-1",
     "releaseDate": "2021-12-03",
     "genres": [
       "French Hip-Hop",
@@ -2919,7 +2919,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
     "country": "Germany",
     "countryCode": "DE",
     "countryFlag": "🇩🇪",
-    "sourceUrl": "https://www.offiziellecharts.de/",
+    "sourceUrl": "https://www.offiziellecharts.de/#de-2022-1",
     "releaseDate": "2022-03-25",
     "genres": [
       "Schlager",
@@ -2945,7 +2945,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
     "country": "Italy",
     "countryCode": "IT",
     "countryFlag": "🇮🇹",
-    "sourceUrl": "https://www.fimi.it/",
+    "sourceUrl": "https://www.fimi.it/#it-2022-1",
     "releaseDate": "2022-02-02",
     "genres": [
       "Italo-Pop",
@@ -2971,7 +2971,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
     "country": "Spain",
     "countryCode": "ES",
     "countryFlag": "🇪🇸",
-    "sourceUrl": "https://www.promusicae.es/",
+    "sourceUrl": "https://www.promusicae.es/#es-2022-1",
     "releaseDate": "2022-07-28",
     "genres": [
       "Mambo",
@@ -2997,7 +2997,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
     "country": "Sweden",
     "countryCode": "SE",
     "countryFlag": "🇸🇪",
-    "sourceUrl": "https://www.sverigetopplistan.se/",
+    "sourceUrl": "https://www.sverigetopplistan.se/#se-2022-1",
     "releaseDate": "2022-02-26",
     "genres": [
       "Indie Pop",
@@ -3049,7 +3049,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
     "country": "Nigeria",
     "countryCode": "NG",
     "countryFlag": "🇳🇬",
-    "sourceUrl": "https://www.turntablecharts.com/",
+    "sourceUrl": "https://www.turntablecharts.com/#ng-2022-1",
     "releaseDate": "2022-05-13",
     "genres": [
       "Afro-Fusion",
@@ -3075,7 +3075,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
     "country": "South Africa",
     "countryCode": "ZA",
     "countryFlag": "🇿🇦",
-    "sourceUrl": "https://theofficialsacharts.co.za/",
+    "sourceUrl": "https://theofficialsacharts.co.za/#za-2022-1",
     "releaseDate": "2022-08-19",
     "genres": [
       "Skhanda",
@@ -3101,7 +3101,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
     "country": "China",
     "countryCode": "CN",
     "countryFlag": "🇨🇳",
-    "sourceUrl": "https://y.qq.com/",
+    "sourceUrl": "https://y.qq.com/#cn-2022-1",
     "releaseDate": "2022-09-10",
     "genres": [
       "Mandopop",
@@ -3153,7 +3153,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
     "country": "Japan",
     "countryCode": "JP",
     "countryFlag": "🇯🇵",
-    "sourceUrl": "https://www.billboard-japan.com/charts/detail?a=hot100_year&year=2022",
+    "sourceUrl": "https://www.billboard-japan.com/charts/detail?a=hot100_year&year=2022#jp-2022-2",
     "releaseDate": "2022-06-08",
     "genres": [
       "J-Pop",
@@ -3179,7 +3179,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
     "country": "South Korea",
     "countryCode": "KR",
     "countryFlag": "🇰🇷",
-    "sourceUrl": "https://circlechart.kr/",
+    "sourceUrl": "https://circlechart.kr/#kr-2022-1",
     "releaseDate": "2022-04-05",
     "genres": [
       "K-Pop",
@@ -3205,7 +3205,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
     "country": "South Korea",
     "countryCode": "KR",
     "countryFlag": "🇰🇷",
-    "sourceUrl": "https://circlechart.kr/",
+    "sourceUrl": "https://circlechart.kr/#kr-2022-2",
     "releaseDate": "2022-03-14",
     "genres": [
       "Pop-Punk",
@@ -3231,7 +3231,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
     "country": "Taiwan",
     "countryCode": "TW",
     "countryFlag": "🇹🇼",
-    "sourceUrl": "https://www.kkbox.com/",
+    "sourceUrl": "https://www.kkbox.com/#tw-2022-1",
     "releaseDate": "2022-07-06",
     "genres": [
       "Mandopop",
@@ -3283,7 +3283,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
     "country": "New Zealand",
     "countryCode": "NZ",
     "countryFlag": "🇳🇿",
-    "sourceUrl": "https://nztop40.co.nz/",
+    "sourceUrl": "https://nztop40.co.nz/#nz-2022-1",
     "releaseDate": "2021-12-17",
     "genres": [
       "Roots Reggae",
@@ -3335,7 +3335,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
     "country": "Mexico",
     "countryCode": "MX",
     "countryFlag": "🇲🇽",
-    "sourceUrl": "https://monitorlatino.com/",
+    "sourceUrl": "https://monitorlatino.com/#mx-2021-1",
     "releaseDate": "2021-05-20",
     "genres": [
       "Synth-Pop",
@@ -3388,7 +3388,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
     "country": "United States",
     "countryCode": "US",
     "countryFlag": "🇺🇸",
-    "sourceUrl": "https://www.billboard.com/charts/year-end/2021/hot-100-songs/",
+    "sourceUrl": "https://www.billboard.com/charts/year-end/2021/hot-100-songs/#us-2021-2",
     "releaseDate": "2021-01-08",
     "genres": [
       "Bedroom Pop",
@@ -3414,7 +3414,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
     "country": "United States",
     "countryCode": "US",
     "countryFlag": "🇺🇸",
-    "sourceUrl": "https://www.billboard.com/charts/year-end/2021/hot-100-songs/",
+    "sourceUrl": "https://www.billboard.com/charts/year-end/2021/hot-100-songs/#us-2021-3",
     "releaseDate": "2020-08-09",
     "genres": [
       "Synth-Pop",
@@ -3440,7 +3440,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
     "country": "Argentina",
     "countryCode": "AR",
     "countryFlag": "🇦🇷",
-    "sourceUrl": "https://www.billboard.com/charts/argentina-hot-100/",
+    "sourceUrl": "https://www.billboard.com/charts/argentina-hot-100/#ar-2021-1",
     "releaseDate": "2021-03-10",
     "genres": [
       "Cumbia 420",
@@ -3466,7 +3466,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
     "country": "Brazil",
     "countryCode": "BR",
     "countryFlag": "🇧🇷",
-    "sourceUrl": "https://pro-musicabr.org.br/",
+    "sourceUrl": "https://pro-musicabr.org.br/#br-2021-1",
     "releaseDate": "2021-02-05",
     "genres": [
       "Sertanejo",
@@ -3492,7 +3492,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
     "country": "Colombia",
     "countryCode": "CO",
     "countryFlag": "🇨🇴",
-    "sourceUrl": "https://monitorlatino.com/",
+    "sourceUrl": "https://monitorlatino.com/#co-2021-1",
     "releaseDate": "2020-09-21",
     "genres": [
       "Cumbia",
@@ -3518,7 +3518,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
     "country": "France",
     "countryCode": "FR",
     "countryFlag": "🇫🇷",
-    "sourceUrl": "https://snepmusique.com/",
+    "sourceUrl": "https://snepmusique.com/#fr-2021-1",
     "releaseDate": "2021-02-26",
     "genres": [
       "French Urban Pop",
@@ -3544,7 +3544,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
     "country": "Germany",
     "countryCode": "DE",
     "countryFlag": "🇩🇪",
-    "sourceUrl": "https://www.offiziellecharts.de/",
+    "sourceUrl": "https://www.offiziellecharts.de/#de-2021-1",
     "releaseDate": "2021-01-21",
     "genres": [
       "Sea Shanty",
@@ -3570,7 +3570,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
     "country": "Italy",
     "countryCode": "IT",
     "countryFlag": "🇮🇹",
-    "sourceUrl": "https://www.fimi.it/",
+    "sourceUrl": "https://www.fimi.it/#it-2021-1",
     "releaseDate": "2021-05-14",
     "genres": [
       "Italo-Pop",
@@ -3596,7 +3596,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
     "country": "Spain",
     "countryCode": "ES",
     "countryFlag": "🇪🇸",
-    "sourceUrl": "https://www.promusicae.es/",
+    "sourceUrl": "https://www.promusicae.es/#es-2021-1",
     "releaseDate": "2020-11-06",
     "genres": [
       "Flamenco Pop",
@@ -3622,7 +3622,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
     "country": "Sweden",
     "countryCode": "SE",
     "countryFlag": "🇸🇪",
-    "sourceUrl": "https://www.sverigetopplistan.se/",
+    "sourceUrl": "https://www.sverigetopplistan.se/#se-2021-1",
     "releaseDate": "2021-01-15",
     "genres": [
       "Swedish Pop",
@@ -3674,7 +3674,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
     "country": "United Kingdom",
     "countryCode": "GB",
     "countryFlag": "🇬🇧",
-    "sourceUrl": "https://www.officialcharts.com/chart-news/the-official-top-40-biggest-songs-of-2021__34842/",
+    "sourceUrl": "https://www.officialcharts.com/chart-news/the-official-top-40-biggest-songs-of-2021__34842/#gb-2021-2",
     "releaseDate": "2021-05-14",
     "genres": [
       "Pop-Punk",
@@ -3700,7 +3700,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
     "country": "Nigeria",
     "countryCode": "NG",
     "countryFlag": "🇳🇬",
-    "sourceUrl": "https://www.turntablecharts.com/",
+    "sourceUrl": "https://www.turntablecharts.com/#ng-2021-1",
     "releaseDate": "2020-10-30",
     "genres": [
       "Afrobeats",
@@ -3726,7 +3726,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
     "country": "South Africa",
     "countryCode": "ZA",
     "countryFlag": "🇿🇦",
-    "sourceUrl": "https://theofficialsacharts.co.za/",
+    "sourceUrl": "https://theofficialsacharts.co.za/#za-2021-1",
     "releaseDate": "2020-12-11",
     "genres": [
       "Amapiano",
@@ -3752,19 +3752,19 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
     "country": "China",
     "countryCode": "CN",
     "countryFlag": "🇨🇳",
-    "sourceUrl": "https://y.qq.com/",
-    "releaseDate": "2021-06-18",
+    "sourceUrl": "https://y.qq.com/#cn-2021-1",
+    "releaseDate": "2012-07-16",
     "genres": [
       "Mandopop",
       "Pop"
     ],
-    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/4c/5d/31/4c5d3166-3a4b-fb3c-473e-1776ff947466/13DMGIM04437.rgb.jpg/600x600bb.jpg",
-    "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/c4/ff/40/c4ff4047-0d40-85f8-f67a-e95410fe9227/mzaf_7104381620048921689.plus.aac.p.m4a",
-    "youtubeId": "Rcce8j5eI3k",
-    "youtubeUrl": "https://www.youtube.com/watch?v=Rcce8j5eI3k",
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/91/6e/56/916e5611-0641-3131-2872-e54d66fc785a/8433391720011.jpg/600x600bb.jpg",
+    "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/a5/39/5c/a5395c5e-1191-ffd8-509e-3c4823374983/mzaf_14931248648433066625.plus.aac.p.m4a",
+    "youtubeId": "bW-ShHAgb68",
+    "youtubeUrl": "https://www.youtube.com/watch?v=bW-ShHAgb68",
     "streamsOrUnits": "TME Uni Chart Top 5, 200M+ streams",
     "weeksAtNumberOne": 4,
-    "summary": "Celebrated Chinese singer-songwriter Silence Wang's modern re-recording topped TME's Uni Chart and became a nationwide streaming anthem."
+    "summary": "Celebrated Chinese singer-songwriter Silence Wang's title track topped TME's Uni Chart and became a nationwide streaming anthem."
   },
   {
     "id": "jp-2021-1",
@@ -3804,7 +3804,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
     "country": "Japan",
     "countryCode": "JP",
     "countryFlag": "🇯🇵",
-    "sourceUrl": "https://www.billboard-japan.com/charts/detail?a=hot100_year&year=2021",
+    "sourceUrl": "https://www.billboard-japan.com/charts/detail?a=hot100_year&year=2021#jp-2021-2",
     "releaseDate": "2020-10-14",
     "genres": [
       "Anisong",
@@ -3830,7 +3830,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
     "country": "South Korea",
     "countryCode": "KR",
     "countryFlag": "🇰🇷",
-    "sourceUrl": "https://circlechart.kr/",
+    "sourceUrl": "https://circlechart.kr/#kr-2021-1",
     "releaseDate": "2021-01-27",
     "genres": [
       "K-Pop",
@@ -3856,7 +3856,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
     "country": "South Korea",
     "countryCode": "KR",
     "countryFlag": "🇰🇷",
-    "sourceUrl": "https://circlechart.kr/",
+    "sourceUrl": "https://circlechart.kr/#kr-2021-2",
     "releaseDate": "2021-05-21",
     "genres": [
       "Dance-Pop",
@@ -3882,7 +3882,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
     "country": "Taiwan",
     "countryCode": "TW",
     "countryFlag": "🇹🇼",
-    "sourceUrl": "https://www.kkbox.com/",
+    "sourceUrl": "https://www.kkbox.com/#tw-2021-1",
     "releaseDate": "2020-08-25",
     "genres": [
       "Acoustic Pop",
@@ -3934,7 +3934,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
     "country": "New Zealand",
     "countryCode": "NZ",
     "countryFlag": "🇳🇿",
-    "sourceUrl": "https://nztop40.co.nz/",
+    "sourceUrl": "https://nztop40.co.nz/#nz-2021-1",
     "releaseDate": "2020-12-04",
     "genres": [
       "Reggae",
@@ -3987,7 +3987,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
     "country": "Mexico",
     "countryCode": "MX",
     "countryFlag": "🇲🇽",
-    "sourceUrl": "https://monitorlatino.com/",
+    "sourceUrl": "https://monitorlatino.com/#mx-2020-1",
     "releaseDate": "2020-02-29",
     "genres": [
       "Reggaeton",
@@ -4040,7 +4040,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
     "country": "United States",
     "countryCode": "US",
     "countryFlag": "🇺🇸",
-    "sourceUrl": "https://www.billboard.com/charts/year-end/2020/hot-100-songs/",
+    "sourceUrl": "https://www.billboard.com/charts/year-end/2020/hot-100-songs/#us-2020-2",
     "releaseDate": "2019-12-06",
     "genres": [
       "Hip-Hop",
@@ -4066,7 +4066,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
     "country": "United States",
     "countryCode": "US",
     "countryFlag": "🇺🇸",
-    "sourceUrl": "https://www.billboard.com/charts/year-end/2020/hot-100-songs/",
+    "sourceUrl": "https://www.billboard.com/charts/year-end/2020/hot-100-songs/#us-2020-3",
     "releaseDate": "2019-10-31",
     "genres": [
       "Nu-Disco",
@@ -4092,7 +4092,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
     "country": "Argentina",
     "countryCode": "AR",
     "countryFlag": "🇦🇷",
-    "sourceUrl": "https://www.billboard.com/charts/argentina-hot-100",
+    "sourceUrl": "https://www.billboard.com/charts/argentina-hot-100#ar-2020-1",
     "releaseDate": "2020-11-27",
     "genres": [
       "Latin Trap",
@@ -4118,7 +4118,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
     "country": "Brazil",
     "countryCode": "BR",
     "countryFlag": "🇧🇷",
-    "sourceUrl": "https://pro-musicabr.org.br/",
+    "sourceUrl": "https://pro-musicabr.org.br/#br-2020-1",
     "releaseDate": "2019-12-05",
     "genres": [
       "Sertanejo",
@@ -4144,7 +4144,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
     "country": "Colombia",
     "countryCode": "CO",
     "countryFlag": "🇨🇴",
-    "sourceUrl": "https://monitorlatino.com/",
+    "sourceUrl": "https://monitorlatino.com/#co-2020-1",
     "releaseDate": "2020-07-29",
     "genres": [
       "Reggaeton",
@@ -4170,7 +4170,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
     "country": "France",
     "countryCode": "FR",
     "countryFlag": "🇫🇷",
-    "sourceUrl": "https://snepmusique.com/",
+    "sourceUrl": "https://snepmusique.com/#fr-2020-1",
     "releaseDate": "2020-03-09",
     "genres": [
       "French Hip-Hop",
@@ -4196,7 +4196,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
     "country": "Germany",
     "countryCode": "DE",
     "countryFlag": "🇩🇪",
-    "sourceUrl": "https://www.offiziellecharts.de/",
+    "sourceUrl": "https://www.offiziellecharts.de/#de-2020-1",
     "releaseDate": "2019-11-29",
     "genres": [
       "Synth-Pop",
@@ -4222,7 +4222,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
     "country": "Italy",
     "countryCode": "IT",
     "countryFlag": "🇮🇹",
-    "sourceUrl": "https://www.fimi.it/",
+    "sourceUrl": "https://www.fimi.it/#it-2020-1",
     "releaseDate": "2020-06-12",
     "genres": [
       "Reggae Pop",
@@ -4248,7 +4248,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
     "country": "Spain",
     "countryCode": "ES",
     "countryFlag": "🇪🇸",
-    "sourceUrl": "https://www.promusicae.es/",
+    "sourceUrl": "https://www.promusicae.es/#es-2020-1",
     "releaseDate": "2020-10-08",
     "genres": [
       "Pasodoble",
@@ -4275,7 +4275,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
     "country": "Sweden",
     "countryCode": "SE",
     "countryFlag": "🇸🇪",
-    "sourceUrl": "https://www.sverigetopplistan.se/",
+    "sourceUrl": "https://www.sverigetopplistan.se/#se-2020-1",
     "releaseDate": "2020-01-17",
     "genres": [
       "Swedish Pop",
@@ -4327,7 +4327,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
     "country": "United Kingdom",
     "countryCode": "GB",
     "countryFlag": "🇬🇧",
-    "sourceUrl": "https://www.officialcharts.com/chart-news/the-official-top-40-biggest-songs-of-2020__31976/",
+    "sourceUrl": "https://www.officialcharts.com/chart-news/the-official-top-40-biggest-songs-of-2020__31976/#gb-2020-2",
     "releaseDate": "2019-09-18",
     "genres": [
       "Slap House",
@@ -4353,7 +4353,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
     "country": "Nigeria",
     "countryCode": "NG",
     "countryFlag": "🇳🇬",
-    "sourceUrl": "https://www.turntablecharts.com/",
+    "sourceUrl": "https://www.turntablecharts.com/#ng-2020-1",
     "releaseDate": "2020-05-22",
     "genres": [
       "Afrobeats",
@@ -4379,7 +4379,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
     "country": "South Africa",
     "countryCode": "ZA",
     "countryFlag": "🇿🇦",
-    "sourceUrl": "https://theofficialsacharts.co.za/",
+    "sourceUrl": "https://theofficialsacharts.co.za/#za-2020-1",
     "releaseDate": "2019-11-29",
     "genres": [
       "Afro-House",
@@ -4405,7 +4405,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
     "country": "China",
     "countryCode": "CN",
     "countryFlag": "🇨🇳",
-    "sourceUrl": "https://y.qq.com/",
+    "sourceUrl": "https://y.qq.com/#cn-2020-1",
     "releaseDate": "2016-05-20",
     "genres": [
       "Mandopop",
@@ -4457,7 +4457,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
     "country": "Japan",
     "countryCode": "JP",
     "countryFlag": "🇯🇵",
-    "sourceUrl": "https://www.billboard-japan.com/charts/detail?a=hot100_year&year=2020",
+    "sourceUrl": "https://www.billboard-japan.com/charts/detail?a=hot100_year&year=2020#jp-2020-2",
     "releaseDate": "2019-04-22",
     "genres": [
       "Anisong",
@@ -4483,7 +4483,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
     "country": "South Korea",
     "countryCode": "KR",
     "countryFlag": "🇰🇷",
-    "sourceUrl": "https://circlechart.kr/",
+    "sourceUrl": "https://circlechart.kr/#kr-2020-1",
     "releaseDate": "2020-01-13",
     "genres": [
       "K-Pop",
@@ -4509,7 +4509,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
     "country": "South Korea",
     "countryCode": "KR",
     "countryFlag": "🇰🇷",
-    "sourceUrl": "https://circlechart.kr/",
+    "sourceUrl": "https://circlechart.kr/#kr-2020-2",
     "releaseDate": "2020-08-21",
     "genres": [
       "Disco-Pop",
@@ -4535,7 +4535,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
     "country": "Taiwan",
     "countryCode": "TW",
     "countryFlag": "🇹🇼",
-    "sourceUrl": "https://www.kkbox.com/",
+    "sourceUrl": "https://www.kkbox.com/#tw-2020-1",
     "releaseDate": "2020-04-10",
     "genres": [
       "Mandopop",
@@ -4587,7 +4587,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
     "country": "New Zealand",
     "countryCode": "NZ",
     "countryFlag": "🇳🇿",
-    "sourceUrl": "https://nztop40.co.nz/",
+    "sourceUrl": "https://nztop40.co.nz/#nz-2020-1",
     "releaseDate": "2020-06-11",
     "genres": [
       "Siren Jam",
@@ -4639,7 +4639,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
     "country": "Mexico",
     "countryCode": "MX",
     "countryFlag": "🇲🇽",
-    "sourceUrl": "https://monitorlatino.com/",
+    "sourceUrl": "https://monitorlatino.com/#mx-2019-1",
     "releaseDate": "2019-01-24",
     "genres": [
       "Reggaeton",
@@ -4691,7 +4691,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
     "country": "United States",
     "countryCode": "US",
     "countryFlag": "🇺🇸",
-    "sourceUrl": "https://www.billboard.com/charts/year-end/2019/hot-100-songs/",
+    "sourceUrl": "https://www.billboard.com/charts/year-end/2019/hot-100-songs/#us-2019-2",
     "releaseDate": "2019-03-29",
     "genres": [
       "Electropop",
@@ -4717,7 +4717,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
     "country": "United States",
     "countryCode": "US",
     "countryFlag": "🇺🇸",
-    "sourceUrl": "https://www.billboard.com/charts/year-end/2019/hot-100-songs/",
+    "sourceUrl": "https://www.billboard.com/charts/year-end/2019/hot-100-songs/#us-2019-3",
     "releaseDate": "2018-10-19",
     "genres": [
       "Pop-Rap",
@@ -4743,7 +4743,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
     "country": "Argentina",
     "countryCode": "AR",
     "countryFlag": "🇦🇷",
-    "sourceUrl": "https://www.billboard.com/charts/argentina-hot-100",
+    "sourceUrl": "https://www.billboard.com/charts/argentina-hot-100#ar-2019-1",
     "releaseDate": "2019-04-03",
     "genres": [
       "Latin Trap",
@@ -4769,7 +4769,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
     "country": "Brazil",
     "countryCode": "BR",
     "countryFlag": "🇧🇷",
-    "sourceUrl": "https://pro-musicabr.org.br/",
+    "sourceUrl": "https://pro-musicabr.org.br/#br-2019-1",
     "releaseDate": "2019-05-17",
     "genres": [
       "Sertanejo",
@@ -4795,7 +4795,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
     "country": "Colombia",
     "countryCode": "CO",
     "countryFlag": "🇨🇴",
-    "sourceUrl": "https://monitorlatino.com/",
+    "sourceUrl": "https://monitorlatino.com/#co-2019-1",
     "releaseDate": "2019-03-28",
     "genres": [
       "Reggaeton",
@@ -4821,7 +4821,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
     "country": "France",
     "countryCode": "FR",
     "countryFlag": "🇫🇷",
-    "sourceUrl": "https://snepmusique.com/",
+    "sourceUrl": "https://snepmusique.com/#fr-2019-1",
     "releaseDate": "2019-03-22",
     "genres": [
       "Cloud Rap",
@@ -4847,7 +4847,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
     "country": "Germany",
     "countryCode": "DE",
     "countryFlag": "🇩🇪",
-    "sourceUrl": "https://www.offiziellecharts.de/",
+    "sourceUrl": "https://www.offiziellecharts.de/#de-2019-1",
     "releaseDate": "2019-06-21",
     "genres": [
       "German Rap",
@@ -4873,7 +4873,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
     "country": "Italy",
     "countryCode": "IT",
     "countryFlag": "🇮🇹",
-    "sourceUrl": "https://www.fimi.it/top-of-the-music/",
+    "sourceUrl": "https://www.fimi.it/top-of-the-music/#it-2019-1",
     "releaseDate": "2019-02-06",
     "genres": [
       "Trap Pop",
@@ -4899,7 +4899,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
     "country": "Spain",
     "countryCode": "ES",
     "countryFlag": "🇪🇸",
-    "sourceUrl": "https://www.promusicae.es/",
+    "sourceUrl": "https://www.promusicae.es/#es-2019-1",
     "releaseDate": "2019-03-28",
     "genres": [
       "Reggaeton",
@@ -4925,7 +4925,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
     "country": "Sweden",
     "countryCode": "SE",
     "countryFlag": "🇸🇪",
-    "sourceUrl": "https://www.sverigetopplistan.se/",
+    "sourceUrl": "https://www.sverigetopplistan.se/#se-2019-1",
     "releaseDate": "2019-04-10",
     "genres": [
       "EDM",
@@ -4977,7 +4977,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
     "country": "Nigeria",
     "countryCode": "NG",
     "countryFlag": "🇳🇬",
-    "sourceUrl": "https://www.turntablecharts.com/",
+    "sourceUrl": "https://www.turntablecharts.com/#ng-2019-1",
     "releaseDate": "2018-11-16",
     "genres": [
       "Afro-fusion",
@@ -5003,7 +5003,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
     "country": "South Africa",
     "countryCode": "ZA",
     "countryFlag": "🇿🇦",
-    "sourceUrl": "https://theofficialsacharts.co.za/",
+    "sourceUrl": "https://theofficialsacharts.co.za/#za-2019-1",
     "releaseDate": "2019-09-27",
     "genres": [
       "Gqom",
@@ -5029,7 +5029,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
     "country": "China",
     "countryCode": "CN",
     "countryFlag": "🇨🇳",
-    "sourceUrl": "https://y.qq.com/",
+    "sourceUrl": "https://y.qq.com/#cn-2019-1",
     "releaseDate": "2019-01-10",
     "genres": [
       "Mandopop",
@@ -5081,7 +5081,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
     "country": "South Korea",
     "countryCode": "KR",
     "countryFlag": "🇰🇷",
-    "sourceUrl": "https://circlechart.kr/",
+    "sourceUrl": "https://circlechart.kr/#kr-2019-1",
     "releaseDate": "2019-04-12",
     "genres": [
       "Funk-Pop",
@@ -5107,7 +5107,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
     "country": "Taiwan",
     "countryCode": "TW",
     "countryFlag": "🇹🇼",
-    "sourceUrl": "https://www.kkbox.com/",
+    "sourceUrl": "https://www.kkbox.com/#tw-2019-1",
     "releaseDate": "2019-04-01",
     "genres": [
       "Hip-Hop",
@@ -5159,7 +5159,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
     "country": "New Zealand",
     "countryCode": "NZ",
     "countryFlag": "🇳🇿",
-    "sourceUrl": "https://nztop40.co.nz/",
+    "sourceUrl": "https://nztop40.co.nz/#nz-2019-1",
     "releaseDate": "2019-06-28",
     "genres": [
       "Indie Pop",
@@ -5211,7 +5211,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
     "country": "Mexico",
     "countryCode": "MX",
     "countryFlag": "🇲🇽",
-    "sourceUrl": "https://monitorlatino.com/",
+    "sourceUrl": "https://monitorlatino.com/#mx-2018-1",
     "releaseDate": "2018-02-16",
     "genres": [
       "Latin Pop",
@@ -5263,7 +5263,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
     "country": "United States",
     "countryCode": "US",
     "countryFlag": "🇺🇸",
-    "sourceUrl": "https://www.billboard.com/charts/year-end/2018/hot-100-songs/",
+    "sourceUrl": "https://www.billboard.com/charts/year-end/2018/hot-100-songs/#us-2018-2",
     "releaseDate": "2017-09-26",
     "genres": [
       "Pop Ballad",
@@ -5289,7 +5289,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
     "country": "United States",
     "countryCode": "US",
     "countryFlag": "🇺🇸",
-    "sourceUrl": "https://www.billboard.com/charts/year-end/2018/hot-100-songs/",
+    "sourceUrl": "https://www.billboard.com/charts/year-end/2018/hot-100-songs/#us-2018-3",
     "releaseDate": "2018-07-10",
     "genres": [
       "Bounce",
@@ -5315,7 +5315,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
     "country": "Argentina",
     "countryCode": "AR",
     "countryFlag": "🇦🇷",
-    "sourceUrl": "https://www.billboard.com/charts/argentina-hot-100",
+    "sourceUrl": "https://www.billboard.com/charts/argentina-hot-100#ar-2018-1",
     "releaseDate": "2018-11-05",
     "genres": [
       "Latin Trap",
@@ -5341,7 +5341,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
     "country": "Brazil",
     "countryCode": "BR",
     "countryFlag": "🇧🇷",
-    "sourceUrl": "https://pro-musicabr.org.br/",
+    "sourceUrl": "https://pro-musicabr.org.br/#br-2018-1",
     "releaseDate": "2018-02-09",
     "genres": [
       "Sertanejo"
@@ -5366,7 +5366,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
     "country": "Colombia",
     "countryCode": "CO",
     "countryFlag": "🇨🇴",
-    "sourceUrl": "https://monitorlatino.com/",
+    "sourceUrl": "https://monitorlatino.com/#co-2018-1",
     "releaseDate": "2018-03-02",
     "genres": [
       "Dancehall",
@@ -5392,7 +5392,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
     "country": "France",
     "countryCode": "FR",
     "countryFlag": "🇫🇷",
-    "sourceUrl": "https://snepmusique.com/",
+    "sourceUrl": "https://snepmusique.com/#fr-2018-1",
     "releaseDate": "2018-03-09",
     "genres": [
       "French Pop",
@@ -5418,7 +5418,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
     "country": "Germany",
     "countryCode": "DE",
     "countryFlag": "🇩🇪",
-    "sourceUrl": "https://www.offiziellecharts.de/",
+    "sourceUrl": "https://www.offiziellecharts.de/#de-2018-1",
     "releaseDate": "2018-06-08",
     "genres": [
       "EDM",
@@ -5444,7 +5444,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
     "country": "Italy",
     "countryCode": "IT",
     "countryFlag": "🇮🇹",
-    "sourceUrl": "https://www.fimi.it/top-of-the-music/",
+    "sourceUrl": "https://www.fimi.it/top-of-the-music/#it-2018-1",
     "releaseDate": "2018-06-01",
     "genres": [
       "Italodance",
@@ -5470,7 +5470,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
     "country": "Spain",
     "countryCode": "ES",
     "countryFlag": "🇪🇸",
-    "sourceUrl": "https://www.promusicae.es/",
+    "sourceUrl": "https://www.promusicae.es/#es-2018-1",
     "releaseDate": "2018-05-30",
     "genres": [
       "Nuevo Flamenco",
@@ -5496,7 +5496,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
     "country": "Sweden",
     "countryCode": "SE",
     "countryFlag": "🇸🇪",
-    "sourceUrl": "https://www.sverigetopplistan.se/",
+    "sourceUrl": "https://www.sverigetopplistan.se/#se-2018-1",
     "releaseDate": "2018-02-23",
     "genres": [
       "Dance-Pop",
@@ -5549,7 +5549,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
     "country": "Nigeria",
     "countryCode": "NG",
     "countryFlag": "🇳🇬",
-    "sourceUrl": "https://www.turntablecharts.com/",
+    "sourceUrl": "https://www.turntablecharts.com/#ng-2018-1",
     "releaseDate": "2018-02-20",
     "genres": [
       "Afrobeats"
@@ -5574,7 +5574,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
     "country": "South Africa",
     "countryCode": "ZA",
     "countryFlag": "🇿🇦",
-    "sourceUrl": "https://theofficialsacharts.co.za/",
+    "sourceUrl": "https://theofficialsacharts.co.za/#za-2018-1",
     "releaseDate": "2018-03-23",
     "genres": [
       "Bolobedu House",
@@ -5600,7 +5600,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
     "country": "China",
     "countryCode": "CN",
     "countryFlag": "🇨🇳",
-    "sourceUrl": "https://y.qq.com/",
+    "sourceUrl": "https://y.qq.com/#cn-2018-1",
     "releaseDate": "2018-11-20",
     "genres": [
       "C-Pop",
@@ -5652,7 +5652,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
     "country": "South Korea",
     "countryCode": "KR",
     "countryFlag": "🇰🇷",
-    "sourceUrl": "https://circlechart.kr/",
+    "sourceUrl": "https://circlechart.kr/#kr-2018-1",
     "releaseDate": "2018-01-25",
     "genres": [
       "Pop-Rap",
@@ -5678,7 +5678,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
     "country": "Taiwan",
     "countryCode": "TW",
     "countryFlag": "🇹🇼",
-    "sourceUrl": "https://www.kkbox.com/",
+    "sourceUrl": "https://www.kkbox.com/#tw-2018-1",
     "releaseDate": "2018-01-18",
     "genres": [
       "Mandopop",
@@ -5730,7 +5730,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
     "country": "New Zealand",
     "countryCode": "NZ",
     "countryFlag": "🇳🇿",
-    "sourceUrl": "https://nztop40.co.nz/",
+    "sourceUrl": "https://nztop40.co.nz/#nz-2018-1",
     "releaseDate": "2017-11-03",
     "genres": [
       "Pop",
@@ -5782,7 +5782,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
     "country": "Mexico",
     "countryCode": "MX",
     "countryFlag": "🇲🇽",
-    "sourceUrl": "https://monitorlatino.com/",
+    "sourceUrl": "https://monitorlatino.com/#mx-2017-1",
     "releaseDate": "2017-01-13",
     "genres": [
       "Reggaeton",
@@ -5834,7 +5834,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
     "country": "United States",
     "countryCode": "US",
     "countryFlag": "🇺🇸",
-    "sourceUrl": "https://www.billboard.com/charts/year-end/2017/hot-100-songs/",
+    "sourceUrl": "https://www.billboard.com/charts/year-end/2017/hot-100-songs/#us-2017-2",
     "releaseDate": "2017-04-17",
     "genres": [
       "Reggaeton",
@@ -5860,7 +5860,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
     "country": "United States",
     "countryCode": "US",
     "countryFlag": "🇺🇸",
-    "sourceUrl": "https://www.billboard.com/charts/year-end/2017/hot-100-songs/",
+    "sourceUrl": "https://www.billboard.com/charts/year-end/2017/hot-100-songs/#us-2017-3",
     "releaseDate": "2017-01-30",
     "genres": [
       "R&B",
@@ -5886,7 +5886,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
     "country": "Argentina",
     "countryCode": "AR",
     "countryFlag": "🇦🇷",
-    "sourceUrl": "https://www.billboard.com/charts/argentina-hot-100",
+    "sourceUrl": "https://www.billboard.com/charts/argentina-hot-100#ar-2017-1",
     "releaseDate": "2017-06-30",
     "genres": [
       "Reggaeton",
@@ -5912,7 +5912,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
     "country": "Brazil",
     "countryCode": "BR",
     "countryFlag": "🇧🇷",
-    "sourceUrl": "https://pro-musicabr.org.br/",
+    "sourceUrl": "https://pro-musicabr.org.br/#br-2017-1",
     "releaseDate": "2017-05-31",
     "genres": [
       "Pop",
@@ -5938,7 +5938,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
     "country": "Colombia",
     "countryCode": "CO",
     "countryFlag": "🇨🇴",
-    "sourceUrl": "https://monitorlatino.com/",
+    "sourceUrl": "https://monitorlatino.com/#co-2017-1",
     "releaseDate": "2017-06-30",
     "genres": [
       "Moombahton",
@@ -5964,7 +5964,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
     "country": "France",
     "countryCode": "FR",
     "countryFlag": "🇫🇷",
-    "sourceUrl": "https://snepmusique.com/",
+    "sourceUrl": "https://snepmusique.com/#fr-2017-1",
     "releaseDate": "2017-10-13",
     "genres": [
       "Chanson",
@@ -5990,7 +5990,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
     "country": "Germany",
     "countryCode": "DE",
     "countryFlag": "🇩🇪",
-    "sourceUrl": "https://www.offiziellecharts.de/",
+    "sourceUrl": "https://www.offiziellecharts.de/#de-2017-1",
     "releaseDate": "2017-09-29",
     "genres": [
       "German Hip-Hop",
@@ -6016,7 +6016,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
     "country": "Italy",
     "countryCode": "IT",
     "countryFlag": "🇮🇹",
-    "sourceUrl": "https://www.fimi.it/top-of-the-music/",
+    "sourceUrl": "https://www.fimi.it/top-of-the-music/#it-2017-1",
     "releaseDate": "2017-09-22",
     "genres": [
       "Indie Pop",
@@ -6042,7 +6042,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
     "country": "Spain",
     "countryCode": "ES",
     "countryFlag": "🇪🇸",
-    "sourceUrl": "https://www.promusicae.es/",
+    "sourceUrl": "https://www.promusicae.es/#es-2017-1",
     "releaseDate": "2017-02-24",
     "genres": [
       "Latin Pop",
@@ -6068,7 +6068,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
     "country": "Sweden",
     "countryCode": "SE",
     "countryFlag": "🇸🇪",
-    "sourceUrl": "https://www.sverigetopplistan.se/",
+    "sourceUrl": "https://www.sverigetopplistan.se/#se-2017-1",
     "releaseDate": "2017-08-11",
     "genres": [
       "Dance",
@@ -6120,7 +6120,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
     "country": "Nigeria",
     "countryCode": "NG",
     "countryFlag": "🇳🇬",
-    "sourceUrl": "https://www.turntablecharts.com/",
+    "sourceUrl": "https://www.turntablecharts.com/#ng-2017-1",
     "releaseDate": "2017-06-02",
     "genres": [
       "Afrobeats",
@@ -6146,7 +6146,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
     "country": "South Africa",
     "countryCode": "ZA",
     "countryFlag": "🇿🇦",
-    "sourceUrl": "https://theofficialsacharts.co.za/",
+    "sourceUrl": "https://theofficialsacharts.co.za/#za-2017-1",
     "releaseDate": "2017-10-20",
     "genres": [
       "Gqom",
@@ -6172,7 +6172,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
     "country": "China",
     "countryCode": "CN",
     "countryFlag": "🇨🇳",
-    "sourceUrl": "https://y.qq.com/",
+    "sourceUrl": "https://y.qq.com/#cn-2017-1",
     "releaseDate": "2016-12-30",
     "genres": [
       "Mandopop",
@@ -6224,7 +6224,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
     "country": "South Korea",
     "countryCode": "KR",
     "countryFlag": "🇰🇷",
-    "sourceUrl": "https://circlechart.kr/",
+    "sourceUrl": "https://circlechart.kr/#kr-2017-1",
     "releaseDate": "2017-01-07",
     "genres": [
       "Ballad",
@@ -6251,7 +6251,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
     "country": "Taiwan",
     "countryCode": "TW",
     "countryFlag": "🇹🇼",
-    "sourceUrl": "https://www.kkbox.com/",
+    "sourceUrl": "https://www.kkbox.com/#tw-2017-1",
     "releaseDate": "2016-05-20",
     "genres": [
       "Mandopop",
@@ -6303,7 +6303,7 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
     "country": "New Zealand",
     "countryCode": "NZ",
     "countryFlag": "🇳🇿",
-    "sourceUrl": "https://nztop40.co.nz/",
+    "sourceUrl": "https://nztop40.co.nz/#nz-2017-1",
     "releaseDate": "2017-03-02",
     "genres": [
       "Electropop",
