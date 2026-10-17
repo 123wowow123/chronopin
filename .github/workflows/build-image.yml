@@ -52,6 +52,22 @@ jobs:
           done
           exit 1
 
+      # The Dockerfile's node base image hits the same throttling inside
+      # buildx, which cannot see the runner's local images. Probe the manifest
+      # (the call that fails) and hand the build whichever registry answers.
+      - name: Pick node base image
+        id: node
+        run: |
+          ecr=public.ecr.aws/docker/library/node:24-alpine
+          mirror=mirror.gcr.io/library/node:24-alpine
+          for attempt in 1 2 3; do
+            docker manifest inspect "$ecr" >/dev/null 2>&1 && { echo "image=$ecr" >> "$GITHUB_OUTPUT"; exit 0; }
+            docker manifest inspect "$mirror" >/dev/null 2>&1 && { echo "image=$mirror" >> "$GITHUB_OUTPUT"; exit 0; }
+            echo "probe attempt $attempt failed; waiting $((attempt * 20))s"
+            sleep $((attempt * 20))
+          done
+          echo "image=$ecr" >> "$GITHUB_OUTPUT"
+
       - uses: docker/setup-buildx-action@v4
         with:
           driver-opts: image=public.ecr.aws/vend/moby/buildkit:buildx-stable-1
@@ -70,6 +86,7 @@ jobs:
           context: .
           file: Docker/Dockerfile
           target: build
+          build-args: NODE_IMAGE=${{ steps.node.outputs.image }}
           push: true
           tags: |
             ${{ env.REGISTRY }}/chronopin-tools:${{ github.sha }}
@@ -82,6 +99,7 @@ jobs:
         with:
           context: .
           file: Docker/Dockerfile
+          build-args: NODE_IMAGE=${{ steps.node.outputs.image }}
           push: true
           tags: |
             ${{ env.REGISTRY }}/chronopin:${{ github.sha }}

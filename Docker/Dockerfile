@@ -8,8 +8,12 @@
 # The base image comes from AWS ECR Public's mirror of Docker Hub's official
 # node image: GitHub's shared runners are rate limited by Docker Hub (429).
 
+# The workflow passes NODE_IMAGE: AWS ECR Public normally, Google's Docker Hub
+# mirror when ECR Public answers 429 "Data limit exceeded" (2026-10-17).
+ARG NODE_IMAGE=public.ecr.aws/docker/library/node:24-alpine
+
 # --- Dependencies and build ---------------------------------------------------
-FROM public.ecr.aws/docker/library/node:24-alpine AS build
+FROM ${NODE_IMAGE} AS build
 WORKDIR /code
 
 # Chromium for the scraper comes from apk in the runtime image.
@@ -26,7 +30,7 @@ COPY . .
 RUN --mount=type=cache,target=/code/.next/cache npm run build
 
 # --- Runtime --------------------------------------------------------------------
-FROM public.ecr.aws/docker/library/node:24-alpine AS runtime
+FROM ${NODE_IMAGE} AS runtime
 WORKDIR /app
 
 # Chromium and fonts for puppeteer (page scraping); bind-tools for nslookup.
