@@ -7,6 +7,7 @@ import { pinPath } from '@/lib/seo';
 import { topicSlug } from '@/lib/topics';
 import * as db from '@/server/db';
 import { sessionOf, TOKEN_COOKIE } from '@/server/auth';
+import { cookieGate, GATE_COOKIE, GATE_MAX_AGE, GATE_PARAM } from '@/server/cookieGate';
 import { botRetryAfter, ipRetryAfter, PREFETCH_COST, SHED_RETRY_AFTER } from '@/server/botLimit';
 import HeavyUserPlan from '@/server/model/heavyUserPlan';
 import BotVisit from '@/server/model/botVisit';
@@ -56,6 +57,30 @@ function isLimitExempt(pathname: string): boolean {
   return /^\/(?:heavy-use|login|signup)(?:\/|$)/.test(splitLocale(pathname).path);
 }
 
+// The answer to a pin request the cookie gate stopped (src/server/cookieGate.ts).
+// Prefetches and RSC fetches are answered 403 instead of redirected: the client
+// then loads the page normally, which is redirected as a first visit.
+function gated(request: NextRequest, action: 'issue' | 'strip' | 'blocked'): NextResponse {
+  if (action === 'blocked') {
+    return new NextResponse('Cookies are required to view this page. Please enable them and reload.', {
+      status: 403,
+      headers: { 'Content-Type': 'text/plain; charset=utf-8', 'Cache-Control': 'no-store' },
+    });
+  }
+  const client = request.headers.has('next-router-prefetch') || request.headers.has('rsc');
+  if (client && action === 'issue') return new NextResponse(null, { status: 403, headers: { 'Cache-Control': 'no-store' } });
+  const url = request.nextUrl.clone();
+  if (action === 'issue') url.searchParams.set(GATE_PARAM, '1');
+  else url.searchParams.delete(GATE_PARAM);
+  const response = NextResponse.redirect(url, 307);
+  response.headers.set('Cache-Control', 'no-store');
+  if (action === 'issue') {
+    const secure = (request.headers.get('x-forwarded-proto') ?? request.nextUrl.protocol.replace(':', '')) === 'https';
+    response.cookies.set(GATE_COOKIE, '1', { path: '/', maxAge: GATE_MAX_AGE, sameSite: 'lax', httpOnly: true, secure });
+  }
+  return response;
+}
+
 // The answer to a visitor over the limit: a page that offers the heavy user
 // plan (a rewrite, so the address stays) when a browser asked for a page, else
 // plain text. Both are 429 with Retry-After. A heavy user over their light
@@ -100,6 +125,19 @@ export async function proxy(request: NextRequest) {
   // for a light one. Whoever runs out is shown the plan's page
   // (src/app/[lang]/heavy-use), which itself and the sign-in pages stay open.
   const session = await sessionOf(request.cookies.get(TOKEN_COOKIE)?.value);
+  // Pin pages are not rendered for a client that keeps no cookies (cookieGate).
+  if (retryAfter == null) {
+    const gate = cookieGate({
+      path: splitLocale(pathname).path,
+      method: request.method,
+      bot: !!bot,
+      signedIn: !!session,
+      hasVisitorCookie: request.cookies.has('vid'),
+      hasGateCookie: request.cookies.get(GATE_COOKIE)?.value === '1',
+      hasGateParam: request.nextUrl.searchParams.has(GATE_PARAM),
+    });
+    if (gate !== 'pass') return gated(request, gate);
+  }
   if (retryAfter == null && !bot && !session?.admin && !isLimitExempt(pathname)) {
     const key = session ? `u:${session.id}` : `ip:${request.headers.get('x-forwarded-for')?.split(',').pop()?.trim() ?? ''}`;
     const light = session ? await HeavyUserPlan.isActive(session.id).catch(() => false) : false;
