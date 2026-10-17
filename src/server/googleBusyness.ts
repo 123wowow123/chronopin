@@ -38,6 +38,7 @@
 // popular-times feeds) - swap the body of scrape() for that call and the rest
 // of this file, the API and the UI stay as they are.
 
+import { shedding } from './botLimit';
 import config from './config';
 import log from './util/log';
 
@@ -95,6 +96,11 @@ export function liveBusyness(placeId: string): Promise<PlaceBusy | null> {
     return hit.promise;
   }
   if (breakerOpen()) {
+    return Promise.resolve(null);
+  }
+  // A Chromium launch costs seconds of CPU: not while the server is struggling
+  // (botLimit.shedding), when people's page loads need it more (2026-10-17).
+  if (shedding()) {
     return Promise.resolve(null);
   }
 

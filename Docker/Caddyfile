@@ -36,6 +36,12 @@
 www.chronopin.com {
 	encode zstd gzip
 	import accesslog
+	# Emergency (2026-10-17): link prefetches each made the app render a page,
+	# about ten per page view, and took the 2-vCPU VM down. Answer them empty;
+	# the browser fetches the page normally when a link is clicked. Remove once
+	# the Link component's prefetch={false} is deployed and load is back to normal.
+	@prefetch header Next-Router-Prefetch *
+	respond @prefetch 204
 	import upstreams
 }
 

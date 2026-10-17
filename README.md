@@ -436,3 +436,10 @@ album songs should all have 30 playback
 
 
 apple program resources for apple music referal program
+
+
+cache warmup should happen after startup gradually when there is no load from deployment. skip low visit pages like. only need warmup for chinese and english pages
+/L/privacy
+/L/about
+/L/terms
+/L/contact
