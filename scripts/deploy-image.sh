@@ -62,7 +62,11 @@ fi
 # The Caddyfile is bind-mounted, so rsync --inplace keeps its inode and the
 # reload sees the change.
 C='docker compose -f Docker/docker-compose.prod.yml'
-WAIT='n=0; until curl -fsS -o /dev/null -m 10 "http://$ip:9000/"; do n=$((n+1)); [ $n -ge 60 ] && { echo "$ip never answered"; exit 1; }; sleep 3; done'
+# A new app answering its first page can take well over 10s while the VM is busy
+# (2026-10-17: three deploys gave up at 60 x 10s and left both apps running), so
+# each probe gets 30s and the wait runs up to ~22 minutes. A failure leaves
+# whatever is running running: stop or recreate nothing until one answers.
+WAIT='n=0; until curl -fsS -o /dev/null -m 30 "http://$ip:9000/"; do n=$((n+1)); [ $n -ge 40 ] && { echo "$ip never answered after about $((n * 33))s. Nothing was stopped: check docker ps and the load, and stop neither app container until one of them answers."; exit 1; }; sleep 3; done'
 IP='$(docker inspect -f "{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}" $($C ps -q SVC))'
 
 ipof() { printf '%s' "$IP" | sed "s/SVC/$1/"; }
@@ -87,6 +91,9 @@ warm .standby-ip
 
 ssh -i "$KEY" "$HOST" "set -eu; cd chronopin
 C='$C'
+# The standby covers the site while app is recreated: do not recreate app
+# without a running one (2026-10-17 the standby died and the site went down).
+[ \"\$(docker inspect -f '{{.State.Running}}' docker-app-next-1 2>/dev/null)\" = true ] || { echo 'The standby (app-next) is not running; not recreating app.'; exit 1; }
 \$C up -d --no-build app
 ip=$(ipof app); $WAIT
 echo \$ip > .app-ip"
