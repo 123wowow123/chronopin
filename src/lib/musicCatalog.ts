@@ -26,101 +26,6 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
     "summary": "Ella Langley's \"Choosin' Texas\" has spent the most weeks at number one on the Canadian Hot 100 in 2026 so far (22 weeks through the issue dated October 17, 2026)."
   },
   {
-    "id": "mx-2026-1",
-    "year": 2026,
-    "rank": 1,
-    "title": "Tu Name",
-    "artist": "Fuerza Regida",
-    "chartName": "Monitor Latino Mexico Top 100",
-    "chartAuthority": "Monitor Latino / AMPROFON",
-    "continent": "North America",
-    "country": "Mexico",
-    "countryCode": "MX",
-    "countryFlag": "🇲🇽",
-    "sourceUrl": "https://charts.monitorlatino.com/top20/Print/Mexico/General/20261012",
-    "releaseDate": "2024-02-14",
-    "genres": [
-      "Musica Mexicana",
-      "Corridos"
-    ],
-    "artworkUrl": "",
-    "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/73/2f/fe/732ffe2f-6868-0716-d5de-c11e8d37163c/mzaf_17968000229087224931.plus.aac.p.m4a",
-    "summary": "Unverified: no source found confirming \"Tu Name\" by Fuerza Regida as #1 on Monitor Latino Mexico Top 100 for 2026 (checked 2026-10-17)."
-  },
-  {
-    "id": "us-2026-1",
-    "year": 2026,
-    "rank": 1,
-    "title": "Birds of a Feather",
-    "artist": "Billie Eilish",
-    "chartName": "Billboard Hot 100",
-    "chartAuthority": "Billboard / Luminate",
-    "continent": "North America",
-    "country": "United States",
-    "countryCode": "US",
-    "countryFlag": "🇺🇸",
-    "sourceUrl": "https://en.wikipedia.org/wiki/List_of_Billboard_Hot_100_number_ones_of_2026",
-    "releaseDate": "2024-05-17",
-    "genres": [
-      "Pop",
-      "Alt-Pop"
-    ],
-    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/92/9f/69/929f69f1-9977-3a44-d674-11f70c852d1b/24UMGIM36186.rgb.jpg/600x600bb.jpg",
-    "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/34/31/d3/3431d34e-847f-5d66-df83-0bce688d997e/mzaf_18106743962423782018.plus.aac.p.m4a",
-    "youtubeId": "V9PVRfjEBTI",
-    "youtubeUrl": "https://www.youtube.com/watch?v=V9PVRfjEBTI",
-    "summary": "Billie Eilish's 'Birds of a Feather' ranked No. 5 on Billboard's 2025 Year-End Hot 100; no 2026 Year-End list has been published yet.",
-    "pinId": 16031
-  },
-  {
-    "id": "us-2026-2",
-    "year": 2026,
-    "rank": 2,
-    "title": "Die With a Smile",
-    "artist": "Lady Gaga & Bruno Mars",
-    "chartName": "Billboard Hot 100",
-    "chartAuthority": "Billboard / Luminate",
-    "continent": "North America",
-    "country": "United States",
-    "countryCode": "US",
-    "countryFlag": "🇺🇸",
-    "sourceUrl": "https://en.wikipedia.org/wiki/List_of_Billboard_Hot_100_number_ones_of_2026",
-    "releaseDate": "2024-08-16",
-    "genres": [
-      "Pop Soul",
-      "Soft Rock"
-    ],
-    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/11/ae/f2/11aef294-f57c-bab9-c9fc-529162984e62/24UMGIM85348.rgb.jpg/600x600bb.jpg",
-    "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/07/6a/99/076a99ed-b946-431b-6f1f-54fa187ca5bd/mzaf_8102882277995122875.plus.aac.p.m4a",
-    "youtubeId": "kPa7bsKwL-c",
-    "youtubeUrl": "https://www.youtube.com/watch?v=kPa7bsKwL-c",
-    "summary": "Lady Gaga and Bruno Mars' 'Die With a Smile' was Billboard's No. 1 song of 2025; no 2026 Year-End list has been published yet."
-  },
-  {
-    "id": "us-2026-3",
-    "year": 2026,
-    "rank": 3,
-    "title": "Taste",
-    "artist": "Sabrina Carpenter",
-    "chartName": "Billboard Hot 100",
-    "chartAuthority": "Billboard / Luminate",
-    "continent": "North America",
-    "country": "United States",
-    "countryCode": "US",
-    "countryFlag": "🇺🇸",
-    "sourceUrl": "https://en.wikipedia.org/wiki/List_of_Billboard_Hot_100_number_ones_of_2026",
-    "releaseDate": "2024-08-23",
-    "genres": [
-      "Pop-Rock",
-      "Country-Pop"
-    ],
-    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/f6/15/d0/f615d0ab-e0c4-575d-907e-1cc084642357/24UMGIM61704.rgb.jpg/600x600bb.jpg",
-    "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/26/57/a6/2657a620-c596-e0e4-efa2-e814f3572d1c/mzaf_5475540510703120797.plus.aac.p.m4a",
-    "youtubeId": "KEG7b851Ric",
-    "youtubeUrl": "https://www.youtube.com/watch?v=KEG7b851Ric",
-    "summary": "Sabrina Carpenter's 'Taste' (2024) does not appear among Hot 100 number ones from 2022 to 2026; no 2026 Year-End list has been published yet."
-  },
-  {
     "id": "ar-2026-1",
     "year": 2026,
     "rank": 1,
@@ -165,30 +70,6 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/62/ec/58/62ec58ca-872b-d85a-255b-3236eb61d7b6/196873588636.jpg/600x600bb.jpg",
     "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/12/43/25/124325e1-eb1a-b1b5-2aed-4766a4f29450/mzaf_10602439532559095961.plus.aac.p.m4a",
     "summary": "Ranked #1 in a Pro-Música-attributed list of the 50 most-played songs in Brazil for January-June 2026 (Spotify, YouTube, Deezer, Apple Music, Amazon Music, Napster)."
-  },
-  {
-    "id": "co-2026-1",
-    "year": 2026,
-    "rank": 1,
-    "title": "Si Antes Te Hubiera Conocido",
-    "artist": "Karol G",
-    "chartName": "Monitor Latino Colombia",
-    "chartAuthority": "Monitor Latino",
-    "continent": "Latin America",
-    "country": "Colombia",
-    "countryCode": "CO",
-    "countryFlag": "🇨🇴",
-    "sourceUrl": "https://monitorlatino.com/#co-2026-1",
-    "releaseDate": "2024-06-20",
-    "genres": [
-      "Merengue",
-      "Latin Pop"
-    ],
-    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/a0/60/94/a060947c-54d8-0fad-c558-eed12600224c/24UMGIM62705.rgb.jpg/600x600bb.jpg",
-    "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/0f/07/33/0f0733c9-76b3-39f9-9115-9031acd75839/mzaf_249954100848422596.plus.aac.p.m4a",
-    "youtubeId": "MgsdDfdGdHc",
-    "youtubeUrl": "https://www.youtube.com/watch?v=MgsdDfdGdHc",
-    "summary": "Unverified: no source found confirming \"Si Antes Te Hubiera Conocido\" by Karol G as #1 on Monitor Latino Colombia for 2026 (checked 2026-10-17)."
   },
   {
     "id": "fr-2026-1",
@@ -264,50 +145,6 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
     "youtubeId": "kqTEc17L2Os",
     "youtubeUrl": "https://www.youtube.com/watch?v=kqTEc17L2Os",
     "summary": "Samurai Jay and Vito Salamanca's Ossessione led FIMI's first-half 2026 singles chart, ahead of Sayf's Tu mi piaci tanto and Sal Da Vinci's Per sempre si, after a run of consecutive weeks at number one."
-  },
-  {
-    "id": "es-2026-1",
-    "year": 2026,
-    "rank": 1,
-    "title": "DURO",
-    "artist": "Quevedo",
-    "chartName": "PROMUSICAE Top 100 Canciones",
-    "chartAuthority": "PROMUSICAE / AGEDI",
-    "continent": "Europe",
-    "country": "Spain",
-    "countryCode": "ES",
-    "countryFlag": "🇪🇸",
-    "sourceUrl": "https://en.wikipedia.org/wiki/List_of_number-one_singles_of_2026_(Spain)",
-    "releaseDate": "2024-11-22",
-    "genres": [
-      "Reggaeton",
-      "Latin Urban"
-    ],
-    "artworkUrl": "",
-    "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/1b/fa/44/1bfa4422-df33-f9a5-7a97-04add045f55b/mzaf_7443580570573870043.plus.aac.p.m4a",
-    "summary": "PROMUSICAE has not published a 2026 year-end list; Wikipedia's weekly list through 2 October 2026 names Clarent & Quevedo's 'Jukiar' as the latest streaming number one."
-  },
-  {
-    "id": "se-2026-1",
-    "year": 2026,
-    "rank": 1,
-    "title": "Unga & fria",
-    "artist": "Fröken Snusk",
-    "chartName": "Sverigetopplistan Årslistor",
-    "chartAuthority": "GLF / Ifpi Sverige",
-    "continent": "Europe",
-    "country": "Sweden",
-    "countryCode": "SE",
-    "countryFlag": "🇸🇪",
-    "sourceUrl": "https://en.wikipedia.org/wiki/List_of_number-one_singles_and_albums_in_Sweden",
-    "releaseDate": "2024-02-10",
-    "genres": [
-      "EPA-dunk",
-      "Dance-Pop"
-    ],
-    "artworkUrl": "",
-    "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/95/15/8d/95158d20-a3f8-6873-b916-4669474871ce/mzaf_4216220627406691994.plus.aac.p.m4a",
-    "summary": "Sverigetopplistan had not published a 2026 year-end singles list as of 17 October 2026, so no 2026 year-end number one can be named."
   },
   {
     "id": "gb-2026-1",
@@ -435,125 +272,6 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
     "summary": "Ariana Grande's \"Hate That I Made You Love Me\" has the most weeks at number one (15) on the Official Singapore Chart in the 2026 issues listed through 1 October."
   },
   {
-    "id": "cn-2026-1",
-    "year": 2026,
-    "rank": 1,
-    "title": "Chen Mo De Tie Gui (沉没的铁轨)",
-    "artist": "Joker Xue & Shan Yichun (薛之谦 / 单依纯)",
-    "chartName": "TME Tencent Music Uni Chart",
-    "chartAuthority": "Tencent Music Entertainment",
-    "continent": "Asia",
-    "country": "China",
-    "countryCode": "CN",
-    "countryFlag": "🇨🇳",
-    "sourceUrl": "https://yobang.tencentmusic.com/chart/uni-chart/rankList/?issue=202639",
-    "releaseDate": "2024-05-18",
-    "genres": [
-      "Mandopop",
-      "Ballad"
-    ],
-    "artworkUrl": "",
-    "summary": "Unverified: no source found confirming \"Chen Mo De Tie Gui (沉没的铁轨)\" by Joker Xue & Shan Yichun (薛之谦 / 单依纯) as #1 on TME Tencent Music Uni Chart for 2026 (checked 2026-10-17)."
-  },
-  {
-    "id": "jp-2026-1",
-    "year": 2026,
-    "rank": 1,
-    "title": "Lilac (ライラック)",
-    "artist": "Mrs. GREEN APPLE",
-    "chartName": "Billboard Japan Hot 100 (Oricon Annual)",
-    "chartAuthority": "Billboard Japan / Oricon",
-    "continent": "Asia",
-    "country": "Japan",
-    "countryCode": "JP",
-    "countryFlag": "🇯🇵",
-    "sourceUrl": "https://www.billboard-japan.com/charts/detail?a=hot100",
-    "releaseDate": "2024-04-12",
-    "genres": [
-      "J-Rock",
-      "J-Pop"
-    ],
-    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/4c/3b/b2/4c3bb247-3be8-0c57-aa9a-7f1775a7b7a8/24UMGIM32931.rgb.jpg/600x600bb.jpg",
-    "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/0a/c4/5d/0ac45d4d-62ad-9609-4528-78c849392f49/mzaf_15781851599354670952.plus.aac.p.m4a",
-    "youtubeId": "QjrkrVmC-8M",
-    "youtubeUrl": "https://www.youtube.com/watch?v=QjrkrVmC-8M",
-    "summary": "Unverified: no source found confirming \"Lilac (ライラック)\" by Mrs. GREEN APPLE as #1 on Billboard Japan Hot 100 (Oricon Annual) for 2026 (checked 2026-10-17).",
-    "pinId": 16069
-  },
-  {
-    "id": "jp-2026-2",
-    "year": 2026,
-    "rank": 2,
-    "title": "Garakuta (がらくた)",
-    "artist": "Kenshi Yonezu (米津玄師)",
-    "chartName": "Billboard Japan Hot 100 (Oricon Annual)",
-    "chartAuthority": "Billboard Japan / Oricon",
-    "continent": "Asia",
-    "country": "Japan",
-    "countryCode": "JP",
-    "countryFlag": "🇯🇵",
-    "sourceUrl": "https://www.billboard-japan.com/charts/detail?a=hot100",
-    "releaseDate": "2024-08-20",
-    "genres": [
-      "J-Pop",
-      "Alternative Rock"
-    ],
-    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/3e/b2/13/3eb21367-be26-2634-d90f-bc8182d3d0b2/4547366699760.jpg/600x600bb.jpg",
-    "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/97/86/ff/9786ffe0-4d41-6b75-9cae-740d309821b9/mzaf_12691685362962680957.plus.aac.p.m4a",
-    "youtubeId": "2mUC91bXt60",
-    "youtubeUrl": "https://www.youtube.com/watch?v=2mUC91bXt60",
-    "summary": "Unverified: no source found confirming \"Garakuta (がらくた)\" by Kenshi Yonezu (米津玄師) as #1 on Billboard Japan Hot 100 (Oricon Annual) for 2026 (checked 2026-10-17)."
-  },
-  {
-    "id": "kr-2026-1",
-    "year": 2026,
-    "rank": 1,
-    "title": "APT.",
-    "artist": "ROSÉ & Bruno Mars",
-    "chartName": "Circle Digital Chart (year-end)",
-    "chartAuthority": "Korea Music Content Association (KMCA)",
-    "continent": "Asia",
-    "country": "South Korea",
-    "countryCode": "KR",
-    "countryFlag": "🇰🇷",
-    "sourceUrl": "https://en.wikipedia.org/wiki/List_of_Circle_Digital_Chart_number_ones_of_2026",
-    "releaseDate": "2024-10-18",
-    "genres": [
-      "K-Pop",
-      "Pop-Punk"
-    ],
-    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/2d/1a/7d/2d1a7d91-587e-0ceb-d434-327bd66d9e86/075679628312.jpg/600x600bb.jpg",
-    "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/7a/15/38/7a1538f3-f41a-a2eb-0f24-8eb6712ee043/mzaf_7740628412097685267.plus.aac.p.m4a",
-    "youtubeId": "ekr2nIex040",
-    "youtubeUrl": "https://www.youtube.com/watch?v=ekr2nIex040",
-    "summary": "APT. by ROSÉ and Bruno Mars (released October 2024) topped the Circle Digital Chart weekly list in late 2024 and early 2025.",
-    "pinId": 16066
-  },
-  {
-    "id": "kr-2026-2",
-    "year": 2026,
-    "rank": 2,
-    "title": "Whiplash",
-    "artist": "aespa",
-    "chartName": "Circle Digital Chart (year-end)",
-    "chartAuthority": "Korea Music Content Association (KMCA)",
-    "continent": "Asia",
-    "country": "South Korea",
-    "countryCode": "KR",
-    "countryFlag": "🇰🇷",
-    "sourceUrl": "https://en.wikipedia.org/wiki/List_of_Circle_Digital_Chart_number_ones_of_2026",
-    "releaseDate": "2024-10-21",
-    "genres": [
-      "K-Pop",
-      "Tech-House"
-    ],
-    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/d5/c1/f5/d5c1f505-f588-775f-df05-c672a8ec22e9/888735949562_Cover.jpg/600x600bb.jpg",
-    "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/7d/1b/a1/7d1ba15e-19fb-0411-e503-61e4379abd10/mzaf_16342830676435185944.plus.aac.p.m4a",
-    "youtubeId": "jWQx2f-CErU",
-    "youtubeUrl": "https://www.youtube.com/watch?v=jWQx2f-CErU",
-    "summary": "Whiplash by aespa (released 2024-10-21) ranked second on Circle Chart's 2025 year-end digital chart."
-  },
-  {
     "id": "tw-2026-1",
     "year": 2026,
     "rank": 1,
@@ -599,29 +317,6 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=nUsrYVxrDwI",
     "weeksAtNumberOne": 16,
     "summary": "No ARIA year-end chart exists yet for 2026; Ella Langley's \"Choosin' Texas\" has the most weeks at No. 1 on the weekly ARIA Singles Chart in 2026 so far (16 through the chart dated 12 Oct 2026, ahead of Olivia Dean's \"Man I Need\" with 15)."
-  },
-  {
-    "id": "nz-2026-1",
-    "year": 2026,
-    "rank": 1,
-    "title": "Ocean Demon",
-    "artist": "L.A.B.",
-    "chartName": "Recorded Music NZ Official Top 40",
-    "chartAuthority": "Recorded Music NZ",
-    "continent": "Oceania",
-    "country": "New Zealand",
-    "countryCode": "NZ",
-    "countryFlag": "🇳🇿",
-    "sourceUrl": "https://en.wikipedia.org/wiki/List_of_number-one_singles_from_the_2020s_(New_Zealand)",
-    "releaseDate": "2024-02-23",
-    "genres": [
-      "Reggae",
-      "Roots",
-      "Funk"
-    ],
-    "artworkUrl": "",
-    "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/81/61/36/816136b9-20b5-a981-dafc-18ef701e3b94/mzaf_3032778527982085604.plus.aac.p.m4a",
-    "summary": "Unverified: no source found confirming \"Ocean Demon\" by L.A.B. as #1 on Recorded Music NZ Official Top 40 for 2026 (checked 2026-10-17)."
   },
   {
     "id": "ca-2025-1",
@@ -4866,30 +4561,6 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
     "summary": "Lewis Capaldi's Someone You Loved was the UK's biggest song of 2019 with 2.33m chart sales and seven weeks at Number 1."
   },
   {
-    "id": "ng-2019-1",
-    "year": 2019,
-    "rank": 1,
-    "title": "On the Low",
-    "artist": "Burna Boy",
-    "chartName": "TurnTable Official Nigeria Top 100",
-    "chartAuthority": "TurnTable Charts",
-    "continent": "Africa",
-    "country": "Nigeria",
-    "countryCode": "NG",
-    "countryFlag": "🇳🇬",
-    "sourceUrl": "https://thenativemag.com/turntablecharts-commence-top50/",
-    "releaseDate": "2018-11-16",
-    "genres": [
-      "Afro-fusion",
-      "Afrobeats"
-    ],
-    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/8d/58/f1/8d58f169-5f12-3574-3ba1-3a482eefe459/075679849304.jpg/600x600bb.jpg",
-    "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/a6/73/df/a673dff2-f2eb-621f-a3fa-38b723ac488a/mzaf_8213395260997444914.plus.aac.p.m4a",
-    "youtubeId": "Ecl8Aod0Tl0",
-    "youtubeUrl": "https://www.youtube.com/watch?v=Ecl8Aod0Tl0",
-    "summary": "No TurnTable Nigeria chart existed in 2019; TurnTable launched its first chart in July 2020."
-  },
-  {
     "id": "za-2019-1",
     "year": 2019,
     "rank": 1,
@@ -5434,53 +5105,6 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
     "summary": "Calvin Harris and Dua Lipa's One Kiss was the UK's biggest single of 2018, ahead of Drake's God's Plan by just 7,000 combined sales, after eight weeks at Number 1."
   },
   {
-    "id": "ng-2018-1",
-    "year": 2018,
-    "rank": 1,
-    "title": "Soco",
-    "artist": "Wizkid ft. Terri, Spotless & Ceeza Milli",
-    "chartName": "TurnTable Official Nigeria Top 100",
-    "chartAuthority": "TurnTable Charts",
-    "continent": "Africa",
-    "country": "Nigeria",
-    "countryCode": "NG",
-    "countryFlag": "🇳🇬",
-    "sourceUrl": "https://thenativemag.com/turntablecharts-commence-top50/",
-    "releaseDate": "2018-02-20",
-    "genres": [
-      "Afrobeats"
-    ],
-    "artworkUrl": "",
-    "audioUrl": "/api/music/preview/464037062",
-    "youtubeId": "1VrWaED18_g",
-    "youtubeUrl": "https://www.youtube.com/watch?v=1VrWaED18_g",
-    "summary": "No TurnTable Nigeria chart existed in 2018; TurnTable launched its first chart in July 2020."
-  },
-  {
-    "id": "za-2018-1",
-    "year": 2018,
-    "rank": 1,
-    "title": "Skeleton Move",
-    "artist": "Master KG ft. Zanda Zakuza",
-    "chartName": "The Official South African Charts (TOSAC)",
-    "chartAuthority": "Recording Industry of South Africa (RiSA)",
-    "continent": "Africa",
-    "country": "South Africa",
-    "countryCode": "ZA",
-    "countryFlag": "🇿🇦",
-    "sourceUrl": "https://risa.org.za/",
-    "releaseDate": "2018-06-29",
-    "genres": [
-      "Bolobedu House",
-      "Afropop"
-    ],
-    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/0a/7d/2a/0a7d2aab-d69f-af27-a00f-51cb276921ea/757572833849.jpg/600x600bb.jpg",
-    "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/52/f3/1b/52f31ba1-c5f5-857d-b0cc-00ef2645c3a2/mzaf_16477944121318518576.plus.aac.p.m4a",
-    "youtubeId": "MRukwQzGMs8",
-    "youtubeUrl": "https://www.youtube.com/watch?v=MRukwQzGMs8",
-    "summary": "Master KG's \"Skeleton Move\" (feat. Zanda Zakuza) was released on 29 June 2018; no chart source found confirming it as the 2018 South African #1."
-  },
-  {
     "id": "sg-2018-1",
     "year": 2018,
     "rank": 1,
@@ -5777,28 +5401,6 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
     "summary": "Ranked number 3 on Billboard's 2017 Year-End Hot 100 singles list, which names That's What I Like Bruno Mars; it reached number one on the weekly Hot 100 for 1 week."
   },
   {
-    "id": "ar-2017-1",
-    "year": 2017,
-    "rank": 1,
-    "title": "Mi Gente",
-    "artist": "J Balvin & Willy William",
-    "chartName": "Billboard Argentina Hot 100",
-    "chartAuthority": "Billboard Argentina / CAPIF",
-    "continent": "Latin America",
-    "country": "Argentina",
-    "countryCode": "AR",
-    "countryFlag": "🇦🇷",
-    "sourceUrl": "https://en.wikipedia.org/wiki/List_of_number-one_hits_of_2017_(Argentina)",
-    "releaseDate": "2017-06-30",
-    "genres": [
-      "Reggaeton",
-      "Latin Pop"
-    ],
-    "artworkUrl": "",
-    "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/de/bf/1f/debf1ffb-3440-93ce-b0a8-1477874a2419/mzaf_16600081962078547731.plus.aac.p.m4a",
-    "summary": "Unverified: no source found confirming \"Mi Gente\" by J Balvin & Willy William as #1 on Billboard Argentina Hot 100 for 2017 (checked 2026-10-17)."
-  },
-  {
     "id": "br-2017-1",
     "year": 2017,
     "rank": 1,
@@ -5998,102 +5600,6 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
     "streamsOrUnits": "3.2 million combined sales (787,000 sales, 248 million streams)",
     "weeksAtNumberOne": 14,
     "summary": "Ed Sheeran's Shape Of You was the UK's biggest single of 2017 with 3.2m combined sales and 14 weeks at Number 1 between January and April."
-  },
-  {
-    "id": "ng-2017-1",
-    "year": 2017,
-    "rank": 1,
-    "title": "Fall",
-    "artist": "Davido",
-    "chartName": "TurnTable Official Nigeria Top 100",
-    "chartAuthority": "TurnTable Charts",
-    "continent": "Africa",
-    "country": "Nigeria",
-    "countryCode": "NG",
-    "countryFlag": "🇳🇬",
-    "sourceUrl": "https://thenativemag.com/turntablecharts-commence-top50/",
-    "releaseDate": "2017-06-02",
-    "genres": [
-      "Afrobeats",
-      "Pop"
-    ],
-    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/e8/25/10/e825104f-95ac-5638-38bf-a3a3563ac24b/886446558943.jpg/600x600bb.jpg",
-    "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/43/26/76/43267638-733c-c6e6-2252-9d6f448d3061/mzaf_9692574823920042259.plus.aac.p.m4a",
-    "youtubeId": "3Iyuym-Gci0",
-    "youtubeUrl": "https://www.youtube.com/watch?v=3Iyuym-Gci0",
-    "summary": "No TurnTable Nigeria chart existed in 2017; TurnTable launched its first chart in July 2020."
-  },
-  {
-    "id": "za-2017-1",
-    "year": 2017,
-    "rank": 1,
-    "title": "Omunye",
-    "artist": "Distruction Boyz ft. Benny Maverick & Dladla Mshunqisi",
-    "chartName": "The Official South African Charts (TOSAC)",
-    "chartAuthority": "Recording Industry of South Africa (RiSA)",
-    "continent": "Africa",
-    "country": "South Africa",
-    "countryCode": "ZA",
-    "countryFlag": "🇿🇦",
-    "sourceUrl": "https://risa.org.za/",
-    "releaseDate": "2017-10-06",
-    "genres": [
-      "Gqom",
-      "South African House"
-    ],
-    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/70/b9/f9/70b9f920-2fdb-fe11-945b-0c7e62075bc0/DB_Cover_3000x3000.jpg/600x600bb.jpg",
-    "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/96/2f/31/962f31ea-0bc2-e265-867d-857c44ef4bdb/mzaf_4699601921924364661.plus.aac.p.m4a",
-    "youtubeId": "26-dVJa5Ejc",
-    "youtubeUrl": "https://www.youtube.com/watch?v=26-dVJa5Ejc",
-    "summary": "Distruction Boyz's \"Omunye\" (feat. Benny Maverick and Dladla Mshunqisi) is the lead single of Gqom Is the Future, released 6 October 2017; no source found ranking it #1 for 2017."
-  },
-  {
-    "id": "sg-2017-1",
-    "year": 2017,
-    "rank": 1,
-    "title": "Wind Coat (风衣)",
-    "artist": "Stefanie Sun (孙燕姿)",
-    "chartName": "RIAS chart (unverified)",
-    "chartAuthority": "Recording Industry Association Singapore (RIAS)",
-    "continent": "Asia",
-    "country": "Singapore",
-    "countryCode": "SG",
-    "countryFlag": "🇸🇬",
-    "sourceUrl": "https://www.rias.org.sg/the-official-singapore-chart/",
-    "releaseDate": "2017-11-09",
-    "genres": [
-      "Mandopop",
-      "Acoustic"
-    ],
-    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/11/43/34/1143346f-1d34-a812-738d-41b941c49fa3/00602567102038.rgb.jpg/600x600bb.jpg",
-    "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/e6/03/c6/e603c6c8-f39e-83dc-da2d-df16ec61c677/mzaf_7997443692342386297.plus.aac.p.m4a",
-    "youtubeId": "cfOsmenwU6w",
-    "youtubeUrl": "https://www.youtube.com/watch?v=cfOsmenwU6w",
-    "summary": "Unverified: no source found confirming \"Wind Coat (风衣)\" by Stefanie Sun (孙燕姿) as #1 on RIAS chart (unverified) for 2017 (checked 2026-10-17)."
-  },
-  {
-    "id": "cn-2017-1",
-    "year": 2017,
-    "rank": 1,
-    "title": "Light Years Away (光年之外)",
-    "artist": "G.E.M.",
-    "chartName": "TME Tencent Music Uni Chart",
-    "chartAuthority": "Tencent Music Entertainment",
-    "continent": "Asia",
-    "country": "China",
-    "countryCode": "CN",
-    "countryFlag": "🇨🇳",
-    "sourceUrl": "https://zh.wikipedia.org/wiki/腾讯音乐榜",
-    "releaseDate": "2016-12-30",
-    "genres": [
-      "Mandopop",
-      "Ballad"
-    ],
-    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/23/65/4a/23654a78-6769-a2ec-bfd7-e032ea71c65a/191018640989.jpg/600x600bb.jpg",
-    "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/97/4f/e7/974fe739-8319-f45d-a4fa-34d77b1bec25/mzaf_2902864200094899486.plus.aac.p.m4a",
-    "youtubeId": "T4SimnaiktU",
-    "youtubeUrl": "https://www.youtube.com/watch?v=T4SimnaiktU",
-    "summary": "Unverified: no source found confirming \"Light Years Away (光年之外)\" by G.E.M. as #1 on TME Tencent Music Uni Chart for 2017 (checked 2026-10-17)."
   },
   {
     "id": "jp-2017-1",

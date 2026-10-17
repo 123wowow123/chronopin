@@ -102,15 +102,15 @@ describe('music', () => {
     expect(asiaGroups[0].countries[0].country).toBe('Singapore');
   });
 
-  it('includes Singapore with full 10-year coverage in Asia ordered first', () => {
+  it('includes Singapore with 9-year coverage (2018-2026) in Asia ordered first', () => {
     const asiaCountries = COUNTRIES_BY_CONTINENT['Asia'];
     expect(asiaCountries[0].name).toBe('Singapore');
     expect(asiaCountries[0].code).toBe('SG');
     expect(asiaCountries[0].longitude).toBe(103.82);
 
     const sgRankings = SEED_MUSIC_RANKINGS.filter((r) => r.countryCode === 'SG');
-    expect(sgRankings.length).toBe(10);
-    for (const yr of YEARS_AVAILABLE) {
+    expect(sgRankings.length).toBe(9);
+    for (const yr of YEARS_AVAILABLE.filter((y) => y >= 2018)) {
       const match = sgRankings.find((r) => r.year === yr);
       expect(match).toBeDefined();
       expect(match?.pinId).toBeGreaterThan(0);
@@ -152,15 +152,15 @@ describe('music', () => {
 
   it('looks up music ranking entry by id or title', async () => {
     const { getMusicRankingEntry, getMusicRankingByTitleOrPin } = await import('./music');
-    const usEntry = getMusicRankingEntry('us-2026-1');
+    const usEntry = getMusicRankingEntry('us-2025-1');
     expect(usEntry).toBeDefined();
-    expect(usEntry?.title).toBe('Birds of a Feather');
-    expect(usEntry?.artist).toBe('Billie Eilish');
+    expect(usEntry?.title).toBe('Die With a Smile');
+    expect(usEntry?.artist).toBe('Lady Gaga & Bruno Mars');
     expect(usEntry?.youtubeId).toMatch(/^[a-zA-Z0-9_-]{11}$/);
 
-    const byTitle = getMusicRankingByTitleOrPin(99999, 'Billie Eilish — Birds of a Feather');
+    const byTitle = getMusicRankingByTitleOrPin(99999, 'Lady Gaga & Bruno Mars — Die With a Smile');
     expect(byTitle).toBeDefined();
-    expect(byTitle?.artist).toBe('Billie Eilish');
+    expect(byTitle?.artist).toBe('Lady Gaga & Bruno Mars');
   });
 
   it('populates backing pinId for all seed music rankings', () => {
