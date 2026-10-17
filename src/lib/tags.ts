@@ -292,7 +292,7 @@ export function isPredictedPin(pin: {
   sourceUrl?: string | null;
   references?: { url?: string | null }[] | null;
 }): boolean {
-  if (pin.tags?.some((t) => t.name.toLowerCase() === PREDICTED_TAG.toLowerCase())) {
+  if (pin.tags?.some((t) => t?.name?.toLowerCase() === PREDICTED_TAG.toLowerCase())) {
     return true;
   }
   if (pin.dateConfidence === 'estimated' && pinMarketRefs(pin).length > 0) {

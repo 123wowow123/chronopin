@@ -114,7 +114,7 @@ export const VENUE_TAGS = [
 
 export function isTicketedVenue(pin: PinJson): boolean {
   const hasPlace = !!pin.address || (pin.latitude != null && pin.longitude != null);
-  return hasPlace && !!pin.tags?.some((tag) => VENUE_TAGS.includes(tag.name.trim().toLowerCase()));
+  return hasPlace && !!pin.tags?.some((tag) => typeof tag?.name === 'string' && VENUE_TAGS.includes(tag.name.trim().toLowerCase()));
 }
 
 // The Event's offers: the ticket price, sale state and link read off the

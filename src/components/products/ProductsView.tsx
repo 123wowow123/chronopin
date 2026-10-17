@@ -38,7 +38,7 @@ function blurb(pin: ProductPin): string {
 }
 
 function isExceptionalProduct(pin: ProductPin): boolean {
-  if (pin.tags?.some((t) => t.name.toLowerCase() === 'exceptional')) return true;
+  if (pin.tags?.some((t) => t?.name?.toLowerCase() === 'exceptional')) return true;
   const r = pin.rating;
   if (r && r.max > 0 && r.score / r.max >= 0.95) return true;
   return false;
