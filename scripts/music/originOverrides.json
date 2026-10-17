@@ -1,114 +1,133 @@
 {
- "lauta": {
-  "code": "AR"
- },
- "olly": {
-  "code": "IT"
- },
- "dynoro": {
-  "code": "IT"
- },
- "fido": {
-  "code": "NG"
- },
- "charlie zhou shen": {
-  "code": "CN"
- },
- "tnt teens in times": {
-  "code": "CN"
- },
- "da zi": {
-  "code": "CN"
- },
- "lay zhang": {
-  "code": "CN"
- },
- "rosé": {
-  "code": "KR"
- },
- "brave girls": {
-  "code": "KR"
- },
- "changmo": {
-  "code": "KR"
- },
- "diego_no": {
-  "code": "KR"
- },
- "ikon": {
-  "code": "KR"
- },
- "miley cyrus": {
-  "code": "US"
- },
- "lil nas": {
-  "code": "US"
- },
- "dave": {
-  "code": "GB"
- },
- "official hige dandism": {
-  "code": "JP"
- },
- "kenshi yonezu": {
-  "code": "JP"
- },
- "gen hoshino": {
-  "code": "JP"
- },
- "tones": {
-  "code": "AU"
- },
- "elaine": {
-  "code": "ZA"
- },
- "k.o": {
-  "code": "ZA"
- },
- "jay chou": {
-  "code": "TW"
- },
- "joão gustavo e murilo": {
-  "code": "BR"
- },
- "hugo": {
-  "code": "BR"
- },
- "israel": {
-  "code": "BR"
- },
- "jorge": {
-  "code": "BR"
- },
- "panda": {
-  "code": "BR"
- },
- "diego": {
-  "code": "BR"
- },
- "the box": {
-  "code": "BR"
- },
- "gb-2018-1": {
-  "code": "GB",
-  "album": false
- },
- "fr-2022-1": {
-  "album": false
- },
- "fr-2021-1": {
-  "album": false
- },
- "es-2018-1": {
-  "album": false
- },
- "tw-2017-1": {
-  "album": false
- },
- "it-2024-1": {
-  "album": false
- },
- "es-2021-1": {
-  "album": false
- }
+  "lauta": {
+    "code": "AR"
+  },
+  "olly": {
+    "code": "IT"
+  },
+  "dynoro": {
+    "code": "IT"
+  },
+  "fido": {
+    "code": "NG"
+  },
+  "charlie zhou shen": {
+    "code": "CN"
+  },
+  "tnt teens in times": {
+    "code": "CN"
+  },
+  "da zi": {
+    "code": "CN"
+  },
+  "lay zhang": {
+    "code": "CN"
+  },
+  "rosé": {
+    "code": "KR"
+  },
+  "brave girls": {
+    "code": "KR"
+  },
+  "changmo": {
+    "code": "KR"
+  },
+  "diego_no": {
+    "code": "KR"
+  },
+  "ikon": {
+    "code": "KR"
+  },
+  "miley cyrus": {
+    "code": "US"
+  },
+  "lil nas": {
+    "code": "US"
+  },
+  "dave": {
+    "code": "GB"
+  },
+  "official hige dandism": {
+    "code": "JP"
+  },
+  "kenshi yonezu": {
+    "code": "JP"
+  },
+  "gen hoshino": {
+    "code": "JP"
+  },
+  "tones": {
+    "code": "AU"
+  },
+  "elaine": {
+    "code": "ZA"
+  },
+  "k.o": {
+    "code": "ZA"
+  },
+  "jay chou": {
+    "code": "TW"
+  },
+  "joão gustavo e murilo": {
+    "code": "BR"
+  },
+  "hugo": {
+    "code": "BR"
+  },
+  "israel": {
+    "code": "BR"
+  },
+  "jorge": {
+    "code": "BR"
+  },
+  "panda": {
+    "code": "BR"
+  },
+  "diego": {
+    "code": "BR"
+  },
+  "the box": {
+    "code": "BR"
+  },
+  "gb-2018-1": {
+    "code": "GB",
+    "album": false
+  },
+  "fr-2022-1": {
+    "album": false
+  },
+  "fr-2021-1": {
+    "album": false
+  },
+  "es-2018-1": {
+    "album": false
+  },
+  "tw-2017-1": {
+    "album": false
+  },
+  "it-2024-1": {
+    "album": false
+  },
+  "es-2021-1": {
+    "album": false
+  },
+  "gb-2022-3": {
+    "code": "NG",
+    "area": "Lagos",
+    "album": false
+  },
+  "ng-2018-1": {
+    "code": "NG",
+    "area": "Lagos",
+    "album": false
+  },
+  "kr-2021-3": {
+    "code": "KR",
+    "area": "Seoul",
+    "album": false
+  },
+  "jp-2025-3": {
+    "code": "KR",
+    "area": "Seoul"
+  }
 }

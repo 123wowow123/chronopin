@@ -28,15 +28,20 @@ export async function musicRankings(_locale: Locale = DEFAULT_LOCALE): Promise<M
 
     const pinBySourceUrl = new Map<string, number>();
     const pinByTrackTitle = new Map<string, number>();
+    const pinByExactTitle = new Map<string, number>();
 
     for (const r of rows) {
       if (r.sourceUrl) pinBySourceUrl.set(r.sourceUrl.toLowerCase(), r.id);
       if (r.productName) pinByTrackTitle.set(r.productName.toLowerCase(), r.id);
       pinByTrackTitle.set(r.title.toLowerCase(), r.id);
+      pinByExactTitle.set(r.title.toLowerCase(), r.id);
     }
 
     return SEED_MUSIC_RANKINGS.map((entry) => {
+      // The same song and source page repeat across ranks and countries, so the exact pin title wins.
+      const exactTitle = `${entry.artist} — "${entry.title}" (${entry.chartName} #${entry.rank} ${entry.year})`.toLowerCase();
       const pinId =
+        pinByExactTitle.get(exactTitle) ??
         (entry.sourceUrl ? pinBySourceUrl.get(entry.sourceUrl.toLowerCase()) : undefined) ??
         pinByTrackTitle.get(entry.title.toLowerCase()) ??
         rows.find((r) => r.title.toLowerCase().includes(entry.title.toLowerCase()))?.id;

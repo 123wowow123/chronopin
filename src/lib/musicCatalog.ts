@@ -191,6 +191,266 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
     }
   },
   {
+    "id": "us-2026-1",
+    "year": 2026,
+    "rank": 1,
+    "title": "Choosin' Texas",
+    "artist": "Ella Langley",
+    "chartName": "Luminate Midyear 2026 Top Songs (U.S. on-demand streams)",
+    "chartAuthority": "Luminate",
+    "continent": "North America",
+    "country": "United States",
+    "countryCode": "US",
+    "countryFlag": "🇺🇸",
+    "sourceUrl": "https://www.artistdirect.com/news/2026-07-17-women-dominate-luminates-2026-midyear-streaming-and-radio-charts",
+    "releaseDate": "2025-10-17",
+    "genres": [
+      "Country"
+    ],
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/e2/91/4d/e2914d0a-7f1d-f04c-fbf4-c50b38548838/196873638690.jpg/600x600bb.jpg",
+    "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/38/49/4c/38494cb4-f9e0-1db4-0b84-8c478cb55390/mzaf_4251933786704889664.plus.aac.p.m4a",
+    "youtubeId": "nUsrYVxrDwI",
+    "youtubeUrl": "https://www.youtube.com/watch?v=nUsrYVxrDwI",
+    "streamsOrUnits": "nearly 571 million U.S. on-demand streams, Jan-Jun 2026",
+    "weeksAtNumberOne": 24,
+    "summary": "Ella Langley's Choosin' Texas leads Luminate's first-half 2026 U.S. streaming list with nearly 571 million on-demand streams; it also spent 24 non-consecutive weeks atop the Billboard Hot 100 by the 17 October 2026 chart. No year-to-date Billboard Hot 100 ranking is published, so this is Luminate's midyear ranking (report released 15 July 2026).",
+    "originCountry": "United States",
+    "originCountryCode": "US",
+    "originFlag": "🇺🇸",
+    "originContinent": "North America",
+    "originArea": "Montgomery",
+    "album": {
+      "title": "Dandelion",
+      "kind": "album",
+      "url": "https://music.apple.com/us/album/dandelion/1869436835?uo=4",
+      "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/a1/ba/64/a1ba6484-f462-1b88-ddff-d4c014d5f265/196874018361.jpg/600x600bb.jpg",
+      "releaseDate": "2026-04-10",
+      "trackCount": 18,
+      "tracks": [
+        {
+          "n": 1,
+          "title": "Froggy Went A Courtin' - Intro",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/2c/78/4e/2c784eec-e455-6122-649e-450b8a3a65f3/mzaf_7681926218505145308.plus.aac.p.m4a",
+          "durationMs": 23240
+        },
+        {
+          "n": 2,
+          "title": "Dandelion",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/20/cf/6f/20cf6fb8-f9e4-674b-5a06-db44559da44a/mzaf_16191065150564774858.plus.aac.p.m4a",
+          "durationMs": 240946
+        },
+        {
+          "n": 3,
+          "title": "Choosin' Texas",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/11/d6/3e/11d63e12-7e7e-e297-14e5-815c7b0a1248/mzaf_11639498575020843766.plus.aac.p.m4a",
+          "durationMs": 231747
+        },
+        {
+          "n": 4,
+          "title": "We Know Us",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/be/08/d9/be08d93d-7656-932a-c299-f3b0043280bf/mzaf_14185374054587913454.plus.aac.p.m4a",
+          "durationMs": 186213
+        },
+        {
+          "n": 5,
+          "title": "Low Lights",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/2c/0c/7d/2c0c7d78-135e-1cc3-347d-71c7cce37678/mzaf_4572596365287183263.plus.aac.p.m4a",
+          "durationMs": 232747
+        },
+        {
+          "n": 6,
+          "title": "Be Her",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/c8/7c/d4/c87cd4df-1197-1d1d-a07c-c5139d59a58f/mzaf_8671653320488087674.plus.aac.p.m4a",
+          "durationMs": 217240
+        },
+        {
+          "n": 7,
+          "title": "You & Me Time",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/12/2b/f9/122bf9a7-f430-ae13-ae06-b692fa5a5a19/mzaf_14467933095573266453.plus.aac.p.m4a",
+          "durationMs": 200800
+        },
+        {
+          "n": 8,
+          "title": "Loving Life Again",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/cd/f7/c9/cdf7c910-e4c6-9828-c83a-9e7a215bb70c/mzaf_1496635585165093785.plus.aac.p.m4a",
+          "durationMs": 226413
+        },
+        {
+          "n": 9,
+          "title": "Bottom Of Your Boots",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/3b/d7/b3/3bd7b3b3-8cab-d10c-934a-42ee6902bcbd/mzaf_16594195873383296587.plus.aac.p.m4a",
+          "durationMs": 199080
+        },
+        {
+          "n": 10,
+          "title": "Speaking Terms",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/14/7f/53/147f53aa-2920-5c6a-2833-a3a40cf070d0/mzaf_16194248786634665803.plus.aac.p.m4a",
+          "durationMs": 263200
+        },
+        {
+          "n": 11,
+          "title": "I Gotta Quit",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/37/12/5d/37125d0f-8ca1-0f23-d10b-e270e2686308/mzaf_10636954858707979573.plus.aac.p.m4a",
+          "durationMs": 141853
+        },
+        {
+          "n": 12,
+          "title": "It Wasn't God Who Made Honky Tonk Angels",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/dd/f3/8e/ddf38ed6-ec7a-8c5e-c8ef-aca7ed87dd05/mzaf_15345198778703593447.plus.aac.p.m4a",
+          "durationMs": 203067
+        },
+        {
+          "n": 13,
+          "title": "Last Call For Us",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/9a/90/10/9a901084-faed-ec00-76e3-4f3c20c497e7/mzaf_4552359531245196204.plus.aac.p.m4a",
+          "durationMs": 211213
+        },
+        {
+          "n": 14,
+          "title": "Broken",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/ff/81/d1/ff81d17e-ddf6-6c0a-c213-b67a5dbc7ba5/mzaf_7851926692791909453.plus.aac.p.m4a",
+          "durationMs": 183853
+        },
+        {
+          "n": 15,
+          "title": "Somethin' Simple",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/db/fa/6b/dbfa6b22-6753-b080-1be7-b465520d5887/mzaf_4722427448315734107.plus.aac.p.m4a",
+          "durationMs": 207587
+        },
+        {
+          "n": 16,
+          "title": "Butterfly Season",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/38/f0/be/38f0be3f-4c0c-03d5-f680-324e44a06f4c/mzaf_1830352921333007577.plus.aac.p.m4a",
+          "durationMs": 212947
+        },
+        {
+          "n": 17,
+          "title": "Most Good Things Do (Acoustic)",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/7a/ad/cd/7aadcd18-d661-1ebb-35df-c187a04e2448/mzaf_6687715118558868150.plus.aac.p.m4a",
+          "durationMs": 178010
+        },
+        {
+          "n": 18,
+          "title": "Froggy Went A Courtin' - Outro",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/a5/5f/3b/a55f3b67-7ae9-625b-5db1-83389a0676a2/mzaf_15653409160424128787.plus.aac.p.m4a",
+          "durationMs": 51390
+        }
+      ]
+    }
+  },
+  {
+    "id": "us-2026-2",
+    "year": 2026,
+    "rank": 2,
+    "title": "Man I Need",
+    "artist": "Olivia Dean",
+    "chartName": "Luminate Midyear 2026 Top Songs (U.S. on-demand streams)",
+    "chartAuthority": "Luminate",
+    "continent": "North America",
+    "country": "United States",
+    "countryCode": "US",
+    "countryFlag": "🇺🇸",
+    "sourceUrl": "https://www.artistdirect.com/news/2026-07-17-women-dominate-luminates-2026-midyear-streaming-and-radio-charts",
+    "releaseDate": "2025-08-15",
+    "genres": [
+      "Pop",
+      "R&B"
+    ],
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/08/e2/21/08e22164-7c0b-1522-818f-e0e74f62dc49/25UMGIM69703.rgb.jpg/600x600bb.jpg",
+    "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/42/bb/5b/42bb5b21-2550-6205-bf3c-334b0e7d6199/mzaf_17462928687872215879.plus.aac.p.m4a",
+    "youtubeId": "oIv_Y2RPQ_A",
+    "youtubeUrl": "https://www.youtube.com/watch?v=oIv_Y2RPQ_A",
+    "streamsOrUnits": "just over 340 million U.S. on-demand streams, Jan-Jun 2026",
+    "summary": "Olivia Dean's Man I Need is second on Luminate's first-half 2026 U.S. streaming list with just over 340 million on-demand streams (report released 15 July 2026); it peaked at No. 2 on the Billboard Hot 100. No year-to-date Billboard Hot 100 ranking is published, so this is Luminate's midyear ranking.",
+    "originCountry": "United Kingdom",
+    "originCountryCode": "GB",
+    "originFlag": "🇬🇧",
+    "originContinent": "Europe",
+    "originArea": "United Kingdom",
+    "album": {
+      "title": "The Art of Loving",
+      "kind": "album",
+      "url": "https://music.apple.com/us/album/the-art-of-loving/1817609404?uo=4",
+      "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/08/e2/21/08e22164-7c0b-1522-818f-e0e74f62dc49/25UMGIM69703.rgb.jpg/600x600bb.jpg",
+      "releaseDate": "2025-09-26",
+      "trackCount": 12,
+      "tracks": [
+        {
+          "n": 1,
+          "title": "The Art of Loving (Intro)",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/76/47/30/764730b9-d557-9461-6df5-a39a9fe82bf3/mzaf_17486685486372164821.plus.aac.p.m4a",
+          "durationMs": 40500
+        },
+        {
+          "n": 2,
+          "title": "Nice To Each Other",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/d9/ae/f8/d9aef823-263d-bbd0-cd01-97eba4b0900f/mzaf_14298659467220432482.plus.aac.p.m4a",
+          "durationMs": 209000
+        },
+        {
+          "n": 3,
+          "title": "Lady Lady",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/be/90/2e/be902eec-3bec-e89d-8f0c-3b49f69851bc/mzaf_17638690683305205707.plus.aac.p.m4a",
+          "durationMs": 209000
+        },
+        {
+          "n": 4,
+          "title": "Close Up",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/93/b5/99/93b59984-029d-d73f-c575-aa21601e4fc7/mzaf_1200742269724092543.plus.aac.p.m4a",
+          "durationMs": 195000
+        },
+        {
+          "n": 5,
+          "title": "So Easy (To Fall In Love)",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/b3/0a/c0/b30ac06f-1b78-f579-8e72-e2fc9eb3a2c8/mzaf_7319723033619206839.plus.aac.p.m4a",
+          "durationMs": 169000
+        },
+        {
+          "n": 6,
+          "title": "Let Alone The One You Love",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/76/fd/a7/76fda712-9b17-cb4e-60e1-778722a3699a/mzaf_1878967998753496127.plus.aac.p.m4a",
+          "durationMs": 186000
+        },
+        {
+          "n": 7,
+          "title": "Man I Need",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/42/bb/5b/42bb5b21-2550-6205-bf3c-334b0e7d6199/mzaf_17462928687872215879.plus.aac.p.m4a",
+          "durationMs": 184000
+        },
+        {
+          "n": 8,
+          "title": "Something Inbetween",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/32/f1/45/32f14596-37d3-f56d-3c7b-543e1c1d7a50/mzaf_9256344387771548882.plus.aac.p.m4a",
+          "durationMs": 152000
+        },
+        {
+          "n": 9,
+          "title": "Loud",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/33/d2/64/33d26407-aad4-cf77-6ba6-b073eee6b20c/mzaf_6068675239347555796.plus.aac.p.m4a",
+          "durationMs": 184000
+        },
+        {
+          "n": 10,
+          "title": "Baby Steps",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/19/5b/c1/195bc137-5328-ff71-57fe-93bc0de164e3/mzaf_4047170032859127297.plus.aac.p.m4a",
+          "durationMs": 197000
+        },
+        {
+          "n": 11,
+          "title": "A Couple Minutes",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/c3/86/aa/c386aa57-9cd9-42d5-8406-7e805c33119e/mzaf_15443155590438636047.plus.aac.p.m4a",
+          "durationMs": 212000
+        },
+        {
+          "n": 12,
+          "title": "I've Seen It",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/c9/6e/06/c96e06c5-6032-5ed3-2751-06d81037d7a7/mzaf_12345235615752231810.plus.aac.p.m4a",
+          "durationMs": 126000
+        }
+      ]
+    }
+  },
+  {
     "id": "ar-2026-1",
     "year": 2026,
     "rank": 1,
@@ -1188,6 +1448,171 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
     }
   },
   {
+    "id": "gb-2026-3",
+    "year": 2026,
+    "rank": 3,
+    "title": "Ordinary",
+    "artist": "Alex Warren",
+    "chartName": "Official Charts UK Singles",
+    "chartAuthority": "Official Charts Company",
+    "continent": "Europe",
+    "country": "United Kingdom",
+    "countryCode": "GB",
+    "countryFlag": "🇬🇧",
+    "sourceUrl": "https://www.officialcharts.com/chart-news/official-biggest-songs-of-2026",
+    "releaseDate": "2025-02-07",
+    "genres": [
+      "Pop"
+    ],
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/46/78/fb/4678fb84-d19e-f11b-93ff-4dc17660bff8/075679619075.jpg/600x600bb.jpg",
+    "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/f4/2f/82/f42f82e5-e164-dd14-4f9a-2767d0215bae/mzaf_2512873933120069750.plus.aac.p.m4a",
+    "youtubeId": "u2ah9tWTkmk",
+    "youtubeUrl": "https://www.youtube.com/watch?v=u2ah9tWTkmk",
+    "streamsOrUnits": "over 104 million combined UK streams in 2026 to the end of Q3",
+    "summary": "Alex Warren's Ordinary is third on Official Charts' biggest songs of 2026 so far (to the end of Q3, published 14 October 2026), with over 104 million combined UK streams this year; the 2026 year-end chart is not yet published.",
+    "originCountry": "United States",
+    "originCountryCode": "US",
+    "originFlag": "🇺🇸",
+    "originContinent": "North America",
+    "originArea": "United States",
+    "album": {
+      "title": "You'll Be Alright, Kid",
+      "kind": "album",
+      "url": "https://music.apple.com/gb/album/youll-be-alright-kid/1817735146?uo=4",
+      "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/c7/1e/c9/c71ec9f8-f6fd-5374-0e5c-3419539618f4/075679607942.jpg/600x600bb.jpg",
+      "releaseDate": "2025-07-18",
+      "trackCount": 21,
+      "tracks": [
+        {
+          "n": 1,
+          "title": "Eternity",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/03/07/7e/03077eab-29b7-8094-35d0-58a8946b4f42/mzaf_10809461095988930094.plus.aac.p.m4a",
+          "durationMs": 189554
+        },
+        {
+          "n": 2,
+          "title": "The Outside",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/95/25/68/95256815-0b76-d617-c58f-603397769b1a/mzaf_541626292521069730.plus.aac.p.m4a",
+          "durationMs": 183854
+        },
+        {
+          "n": 3,
+          "title": "First Time On Earth",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/fb/ad/86/fbad868f-cb6d-3a32-3525-53bb7fd8e09d/mzaf_6350887257206374470.plus.aac.p.m4a",
+          "durationMs": 161053
+        },
+        {
+          "n": 4,
+          "title": "Bloodline (with Jelly Roll)",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/a4/3b/28/a43b286d-3c4b-b580-7167-161da7354e9b/mzaf_16121258125248690625.plus.aac.p.m4a",
+          "durationMs": 182008
+        },
+        {
+          "n": 5,
+          "title": "Never Be Far",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/7a/c5/0a/7ac50a01-1308-ba95-09d4-2d0f1ecf1a7f/mzaf_2037596672387032937.plus.aac.p.m4a",
+          "durationMs": 197930
+        },
+        {
+          "n": 6,
+          "title": "Ordinary",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/0e/3f/34/0e3f3459-29b9-6a9d-d940-4f0bf8cdce46/mzaf_17490795613422835871.plus.aac.p.m4a",
+          "durationMs": 186964
+        },
+        {
+          "n": 7,
+          "title": "Everything",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/75/54/b0/7554b08c-d69e-c080-c299-ef3ba1e7e46c/mzaf_2395328337352216105.plus.aac.p.m4a",
+          "durationMs": 168057
+        },
+        {
+          "n": 8,
+          "title": "Getaway Car",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/f1/21/f2/f121f2d9-a56d-4f97-237c-9cfeba6153e2/mzaf_971541048279735893.plus.aac.p.m4a",
+          "durationMs": 184406
+        },
+        {
+          "n": 9,
+          "title": "Who I Am",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/70/30/d1/7030d197-505e-b36a-5029-b74b3e9dd05f/mzaf_15622616766484242295.plus.aac.p.m4a",
+          "durationMs": 202358
+        },
+        {
+          "n": 10,
+          "title": "You Can't Stop This",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/eb/a9/fd/eba9fd43-410c-a2a8-e3a7-a039d0d95bda/mzaf_2860387712585200997.plus.aac.p.m4a",
+          "durationMs": 161105
+        },
+        {
+          "n": 11,
+          "title": "On My Mind",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/c6/23/bb/c623bb5e-e8fd-ae67-20ef-c0c97a55e9c5/mzaf_12067700115457864917.plus.aac.p.m4a",
+          "durationMs": 189557
+        },
+        {
+          "n": 12,
+          "title": "Burning Down",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/5a/06/a5/5a06a5f6-88ea-9c11-175b-9eadbc18aa77/mzaf_14561883066432832518.plus.aac.p.m4a",
+          "durationMs": 179437
+        },
+        {
+          "n": 13,
+          "title": "Catch My Breath",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/67/aa/b3/67aab313-9b07-a4a7-a97f-677e41554a88/mzaf_16710250336745343822.plus.aac.p.m4a",
+          "durationMs": 192892
+        },
+        {
+          "n": 14,
+          "title": "Carry You Home",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/45/58/a5/4558a592-d5be-7d3d-b445-a3c93d975d44/mzaf_5893852219068702190.plus.aac.p.m4a",
+          "durationMs": 166881
+        },
+        {
+          "n": 15,
+          "title": "Troubled Waters",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/3f/e0/a3/3fe0a3f8-9054-691a-0e28-db25f2656b04/mzaf_8111335565277452111.plus.aac.p.m4a",
+          "durationMs": 197775
+        },
+        {
+          "n": 16,
+          "title": "Heaven Without You",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/bb/be/94/bbbe9479-4f50-d4fa-9e74-01554098372e/mzaf_4310904201813144110.plus.aac.p.m4a",
+          "durationMs": 202435
+        },
+        {
+          "n": 17,
+          "title": "Before You Leave Me",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/32/47/65/32476590-01bd-b9ce-436a-3b0e73c4d276/mzaf_10069622588712070899.plus.aac.p.m4a",
+          "durationMs": 176178
+        },
+        {
+          "n": 18,
+          "title": "Save You a Seat",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/fa/b8/75/fab87528-6089-e758-bcf8-a639f1aff434/mzaf_938625871606971538.plus.aac.p.m4a",
+          "durationMs": 197574
+        },
+        {
+          "n": 19,
+          "title": "Chasing Shadows",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/9b/ac/85/9bac8536-ece5-4038-ce56-09269db84a73/mzaf_6714630150645202742.plus.aac.p.m4a",
+          "durationMs": 164028
+        },
+        {
+          "n": 20,
+          "title": "Yard Sale",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/14/63/a0/1463a091-7022-0717-f6ee-42849bada1f1/mzaf_8656566103439415828.plus.aac.p.m4a",
+          "durationMs": 174197
+        },
+        {
+          "n": 21,
+          "title": "You’ll Be Alright, Kid",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/15/b7/e7/15b7e719-c13b-a2ac-013a-061a0cb6afd7/mzaf_5881351744418051208.plus.aac.p.m4a",
+          "durationMs": 149446
+        }
+      ]
+    }
+  },
+  {
     "id": "ng-2026-1",
     "year": 2026,
     "rank": 1,
@@ -1352,6 +1777,212 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
     }
   },
   {
+    "id": "jp-2026-1",
+    "year": 2026,
+    "rank": 1,
+    "title": "IRIS OUT",
+    "artist": "Kenshi Yonezu (米津玄師)",
+    "chartName": "Billboard Japan Hot 100 Year-End",
+    "chartAuthority": "Billboard Japan / Oricon",
+    "continent": "Asia",
+    "country": "Japan",
+    "countryCode": "JP",
+    "countryFlag": "🇯🇵",
+    "sourceUrl": "https://www.billboard-japan.com/d_news/detail/161908/2",
+    "releaseDate": "2025-09-15",
+    "genres": [
+      "J-Pop"
+    ],
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/e0/f9/f1/e0f9f1f3-a088-b28d-6760-a28accabc705/4547366775181.jpg/600x600bb.jpg",
+    "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/90/85/cb/9085cb94-33c8-78bc-b8a6-4750232a210d/mzaf_5526054165895597852.plus.aac.p.m4a",
+    "youtubeId": "LmZD-TU96q4",
+    "youtubeUrl": "https://www.youtube.com/watch?v=LmZD-TU96q4",
+    "summary": "Billboard Japan's 2026 half-year Hot 100 (tracking 24 Nov 2025 to 24 May 2026, published 5 June 2026) ranks Kenshi Yonezu's Chainsaw Man: Reze Arc theme IRIS OUT first; no full-year 2026 list exists yet.",
+    "originCountry": "Japan",
+    "originCountryCode": "JP",
+    "originFlag": "🇯🇵",
+    "originContinent": "Asia",
+    "album": {
+      "title": "IRIS OUT",
+      "kind": "single",
+      "url": "https://music.apple.com/us/album/iris-out-single/1837658528?uo=4",
+      "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/e0/f9/f1/e0f9f1f3-a088-b28d-6760-a28accabc705/4547366775181.jpg/600x600bb.jpg",
+      "releaseDate": "2025-09-15",
+      "trackCount": 1,
+      "tracks": [
+        {
+          "n": 1,
+          "title": "IRIS OUT",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/90/85/cb/9085cb94-33c8-78bc-b8a6-4750232a210d/mzaf_5526054165895597852.plus.aac.p.m4a",
+          "durationMs": 151573
+        }
+      ]
+    }
+  },
+  {
+    "id": "jp-2026-2",
+    "year": 2026,
+    "rank": 2,
+    "title": "Suki Sugite Metsu (好きすぎて滅!)",
+    "artist": "M!LK",
+    "chartName": "Billboard Japan Hot 100 Year-End",
+    "chartAuthority": "Billboard Japan / Oricon",
+    "continent": "Asia",
+    "country": "Japan",
+    "countryCode": "JP",
+    "countryFlag": "🇯🇵",
+    "sourceUrl": "https://www.billboard-japan.com/d_news/detail/161908/2",
+    "releaseDate": "2025-10-27",
+    "genres": [
+      "J-Pop"
+    ],
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/d4/f9/1b/d4f91bfd-6176-4733-113f-b72f6095d5df/VEATP-44481.jpg/600x600bb.jpg",
+    "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/f0/9d/69/f09d6967-c8fa-a7a5-3fb2-8331c7aa0dee/mzaf_7054323923297483009.plus.aac.p.m4a",
+    "youtubeId": "ZVUxJsPfoX8",
+    "youtubeUrl": "https://www.youtube.com/watch?v=ZVUxJsPfoX8",
+    "summary": "Billboard Japan's 2026 half-year Hot 100 (24 Nov 2025 to 24 May 2026) ranks M!LK's Suki Sugite Metsu second; year-to-date ranking, not a final year-end chart.",
+    "originCountry": "Japan",
+    "originCountryCode": "JP",
+    "originFlag": "🇯🇵",
+    "originContinent": "Asia",
+    "originArea": "Japan"
+  },
+  {
+    "id": "jp-2026-3",
+    "year": 2026,
+    "rank": 3,
+    "title": "lulu.",
+    "artist": "Mrs. GREEN APPLE",
+    "chartName": "Billboard Japan Hot 100 Year-End",
+    "chartAuthority": "Billboard Japan / Oricon",
+    "continent": "Asia",
+    "country": "Japan",
+    "countryCode": "JP",
+    "countryFlag": "🇯🇵",
+    "sourceUrl": "https://www.billboard-japan.com/d_news/detail/161908/2",
+    "releaseDate": "2026-01-12",
+    "genres": [
+      "J-Pop",
+      "Anime"
+    ],
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/46/8a/7e/468a7ed4-cbbe-3d0e-dde6-9dcdc3792d47/199999553335.png/600x600bb.jpg",
+    "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/1d/9c/f9/1d9cf933-62ec-c1e3-807a-eb228d97efd2/mzaf_18414921213284559975.plus.aac.p.m4a",
+    "youtubeId": "MjeiIal1ZR0",
+    "youtubeUrl": "https://www.youtube.com/watch?v=MjeiIal1ZR0",
+    "summary": "Billboard Japan's 2026 half-year Hot 100 (24 Nov 2025 to 24 May 2026) ranks Mrs. GREEN APPLE's Frieren season 2 opening lulu. third; year-to-date ranking, not a final year-end chart.",
+    "originCountry": "Japan",
+    "originCountryCode": "JP",
+    "originFlag": "🇯🇵",
+    "originContinent": "Asia",
+    "originArea": "Japan",
+    "album": {
+      "title": "POPS",
+      "kind": "album",
+      "url": "https://music.apple.com/jp/album/pops/6808172946?uo=4",
+      "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/d9/cc/da/d9ccdae5-6251-b671-dbf3-5b0508dc52ad/26UM1IM13923.rgb.jpg/600x600bb.jpg",
+      "releaseDate": "2026-09-30",
+      "trackCount": 16,
+      "tracks": [
+        {
+          "n": 1,
+          "title": "Brand New",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/3b/df/bd/3bdfbd8f-139b-4d5a-1677-8f4356965f7e/mzaf_678771386738917301.plus.aac.p.m4a",
+          "durationMs": 211387
+        },
+        {
+          "n": 2,
+          "title": "共犯",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/ce/9c/15/ce9c15ce-9a24-7e58-9eaf-78711e5a019f/mzaf_1707437200112881647.plus.aac.p.m4a",
+          "durationMs": 231947
+        },
+        {
+          "n": 3,
+          "title": "シンデレラ",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/e6/6e/e6/e66ee678-60d3-0591-d338-1e9d65d6f6e6/mzaf_7489127677832868940.plus.aac.p.m4a",
+          "durationMs": 275040
+        },
+        {
+          "n": 4,
+          "title": "本と彗星",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/44/7d/03/447d034d-49ac-6fb8-ea5a-bb25e9376873/mzaf_13129030456292449770.plus.aac.p.m4a",
+          "durationMs": 316613
+        },
+        {
+          "n": 5,
+          "title": "ア・ポステリオリ",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/15/6a/84/156a845d-98c7-94d8-d385-5c75a5efb464/mzaf_6084284180588120896.plus.aac.p.m4a",
+          "durationMs": 199960
+        },
+        {
+          "n": 6,
+          "title": "GOOD DAY",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/02/c8/2e/02c82ec3-48a8-3216-c76a-a1abbd8117fd/mzaf_3588282017306712730.plus.aac.p.m4a",
+          "durationMs": 259133
+        },
+        {
+          "n": 7,
+          "title": "エピソード",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/8c/b1/cb/8cb1cb4b-b55b-4374-e048-69f835fa8c17/mzaf_12324661593896707900.plus.aac.p.m4a",
+          "durationMs": 257120
+        },
+        {
+          "n": 8,
+          "title": "lulu.",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/21/40/2d/21402d59-9d02-497d-3a81-d427601a91e6/mzaf_30532317012802434.plus.aac.p.m4a",
+          "durationMs": 272880
+        },
+        {
+          "n": 9,
+          "title": "風と町",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/51/ac/6c/51ac6c7f-b7e8-a6b4-0bd8-7523a8539242/mzaf_10177621692899265404.plus.aac.p.m4a",
+          "durationMs": 217760
+        },
+        {
+          "n": 10,
+          "title": "Really Really",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/92/a8/01/92a801c0-0a4c-588d-364e-639853767689/mzaf_14182034208850525402.plus.aac.p.m4a",
+          "durationMs": 186053
+        },
+        {
+          "n": 11,
+          "title": "プロジェクト4",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/8f/26/7c/8f267c15-eb0b-1572-67d1-cfdb625aac26/mzaf_12173523477272669074.plus.aac.p.m4a",
+          "durationMs": 258347
+        },
+        {
+          "n": 12,
+          "title": "瞞し",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/92/c5/cd/92c5cded-7c1b-20d8-7e7b-b9e49b4e50ba/mzaf_11174570556998595788.plus.aac.p.m4a",
+          "durationMs": 319653
+        },
+        {
+          "n": 13,
+          "title": "禁じた遊び",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/8e/bf/bb/8ebfbb73-cb2b-9e4b-246e-aed1ee4f8e38/mzaf_8761603923148390118.plus.aac.p.m4a",
+          "durationMs": 184013
+        },
+        {
+          "n": 14,
+          "title": "Carrying Happiness",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/6d/c0/15/6dc015f3-012b-ca8d-431c-2599d59a1d9a/mzaf_11499909557737961050.plus.aac.p.m4a",
+          "durationMs": 224067
+        },
+        {
+          "n": 15,
+          "title": "夏の影",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/52/5a/18/525a182a-1c94-a0eb-5522-3535e8212340/mzaf_11830686942797908100.plus.aac.p.m4a",
+          "durationMs": 249333
+        },
+        {
+          "n": 16,
+          "title": "Variety",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/9a/e6/4e/9ae64e78-7e48-a3a7-9484-6583d3e0e5d1/mzaf_4349709648499243127.plus.aac.p.m4a",
+          "durationMs": 313093
+        }
+      ]
+    }
+  },
+  {
     "id": "sg-2026-1",
     "year": 2026,
     "rank": 1,
@@ -1485,6 +2116,203 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
       "chart": "Official Singapore Chart (RIAS)",
       "sourceUrl": "https://en.wikipedia.org/wiki/List_of_number-one_songs_of_2026_(Singapore)",
       "asOf": "2026-10-17"
+    }
+  },
+  {
+    "id": "kr-2026-1",
+    "year": 2026,
+    "rank": 1,
+    "title": "Landing in Love (사랑하게 될 거야)",
+    "artist": "HANRORO (한로로)",
+    "chartName": "Circle Digital Chart (midyear, 1st half of 2026)",
+    "chartAuthority": "Korea Music Content Association (KMCA)",
+    "continent": "Asia",
+    "country": "South Korea",
+    "countryCode": "KR",
+    "countryFlag": "🇰🇷",
+    "sourceUrl": "https://www.soompi.com/article/1854722wpp/circle-chart-reveals-midyear-album-and-digital-charts-for-1st-half-of-2026",
+    "releaseDate": "2023-08-29",
+    "genres": [
+      "K-Pop",
+      "Indie Rock"
+    ],
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/c2/ef/87/c2ef8779-f3bb-5a1c-ef6f-c27185e62446/8809936067307.jpg/600x600bb.jpg",
+    "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/1d/14/b0/1d14b0a6-773d-7a46-fc1e-cd9855da0029/mzaf_18331909942495617093.plus.aac.p.m4a",
+    "youtubeId": "h0KIWaUEIgQ",
+    "youtubeUrl": "https://www.youtube.com/watch?v=h0KIWaUEIgQ",
+    "summary": "HANRORO's Landing in Love, the closing track of her 2023 EP Take-off, led Circle Chart's first-half 2026 digital ranking (January to June 2026). Partial year: published midyear list, accumulated weekly data through June 2026; the 2026 year-end chart is not yet published.",
+    "album": {
+      "title": "Take-off",
+      "kind": "ep",
+      "url": "https://music.apple.com/us/album/take-off-ep/1703196819?uo=4",
+      "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/c2/ef/87/c2ef8779-f3bb-5a1c-ef6f-c27185e62446/8809936067307.jpg/600x600bb.jpg",
+      "releaseDate": "2023-08-29",
+      "trackCount": 6,
+      "tracks": [
+        {
+          "n": 1,
+          "title": "Take-off",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/8f/34/68/8f34684d-b4ec-49a4-1f6d-226402541520/mzaf_1155161297442354639.plus.aac.p.m4a",
+          "durationMs": 155000
+        },
+        {
+          "n": 2,
+          "title": "Seaweed",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/2d/94/13/2d941362-fc99-2a7c-892b-620bfc790ce4/mzaf_15021263875183483890.plus.aac.p.m4a",
+          "durationMs": 225000
+        },
+        {
+          "n": 3,
+          "title": "I'm happy",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/78/dc/3d/78dc3d1d-5e10-3377-4de4-675181503e12/mzaf_10754681114265271621.plus.aac.p.m4a",
+          "durationMs": 221000
+        },
+        {
+          "n": 4,
+          "title": "Goldfish",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/5d/5c/ed/5d5cede2-c169-ce49-e490-40bf89444373/mzaf_6236884665936946471.plus.aac.p.m4a",
+          "durationMs": 212000
+        },
+        {
+          "n": 5,
+          "title": "Even if you leave,",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/b0/47/57/b0475727-8f73-e844-c58b-acfc828ac5cf/mzaf_2938555108998820774.plus.aac.p.m4a",
+          "durationMs": 272000
+        },
+        {
+          "n": 6,
+          "title": "Landing in Love",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/1d/14/b0/1d14b0a6-773d-7a46-fc1e-cd9855da0029/mzaf_18331909942495617093.plus.aac.p.m4a",
+          "durationMs": 165000
+        }
+      ]
+    }
+  },
+  {
+    "id": "kr-2026-2",
+    "year": 2026,
+    "rank": 2,
+    "title": "0+0",
+    "artist": "HANRORO (한로로)",
+    "chartName": "Circle Digital Chart (midyear, 1st half of 2026)",
+    "chartAuthority": "Korea Music Content Association (KMCA)",
+    "continent": "Asia",
+    "country": "South Korea",
+    "countryCode": "KR",
+    "countryFlag": "🇰🇷",
+    "sourceUrl": "https://www.soompi.com/article/1854722wpp/circle-chart-reveals-midyear-album-and-digital-charts-for-1st-half-of-2026",
+    "releaseDate": "2025-08-04",
+    "genres": [
+      "K-Pop",
+      "Indie Rock"
+    ],
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/c8/a4/c6/c8a4c64f-89b3-9ef2-473f-4ad423a03c5b/887928030421.jpg/600x600bb.jpg",
+    "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/71/54/44/715444f6-07c8-dee7-0d3d-e7ec40a6083b/mzaf_5365981198691637507.plus.aac.p.m4a",
+    "youtubeId": "_Ngk-DCHfD0",
+    "youtubeUrl": "https://www.youtube.com/watch?v=_Ngk-DCHfD0",
+    "summary": "HANRORO's 0+0, from the 2025 EP Jamong Salgu Club, ranked second on Circle Chart's first-half 2026 digital ranking, giving her the top two places. Partial year: published midyear list, accumulated weekly data through June 2026; the 2026 year-end chart is not yet published.",
+    "album": {
+      "title": "JAMONG SALGU CLUB",
+      "kind": "album",
+      "url": "https://music.apple.com/us/album/jamong-salgu-club/1828393588?uo=4",
+      "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/c8/a4/c6/c8a4c64f-89b3-9ef2-473f-4ad423a03c5b/887928030421.jpg/600x600bb.jpg",
+      "releaseDate": "2025-08-04",
+      "trackCount": 7,
+      "tracks": [
+        {
+          "n": 1,
+          "title": "Welcome!",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/05/67/1e/05671e72-f549-fb4a-0bfb-b1467672013d/mzaf_4278404310950122234.plus.aac.p.m4a",
+          "durationMs": 190000
+        },
+        {
+          "n": 2,
+          "title": "The Suspect",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/19/4b/fc/194bfc66-30aa-a427-add0-1f35c1f31ed6/mzaf_14655054763472774526.plus.aac.p.m4a",
+          "durationMs": 201000
+        },
+        {
+          "n": 3,
+          "title": "Light or Rain",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/73/1e/a9/731ea96e-d4d0-7142-4fe7-5e6c9a9e6fa1/mzaf_13675477594849667522.plus.aac.p.m4a",
+          "durationMs": 215000
+        },
+        {
+          "n": 4,
+          "title": "0+0",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/71/54/44/715444f6-07c8-dee7-0d3d-e7ec40a6083b/mzaf_5365981198691637507.plus.aac.p.m4a",
+          "durationMs": 192000
+        },
+        {
+          "n": 5,
+          "title": "To. __",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/47/a1/c6/47a1c633-536e-7b09-4cf1-13e9d7b0060d/mzaf_7093601110337667645.plus.aac.p.m4a",
+          "durationMs": 138000
+        },
+        {
+          "n": 6,
+          "title": "Goodbye, My Summer",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/2c/d4/a7/2cd4a72f-bef8-dd19-2fce-0ba7eca25216/mzaf_17259825084841058580.plus.aac.p.m4a",
+          "durationMs": 236000
+        },
+        {
+          "n": 7,
+          "title": "Can I Be Me?",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/bc/ab/a9/bcaba9f7-3d00-ddd0-5bcc-b1368032de31/mzaf_2820689039621122980.plus.aac.p.m4a",
+          "durationMs": 188000
+        }
+      ]
+    }
+  },
+  {
+    "id": "kr-2026-3",
+    "year": 2026,
+    "rank": 3,
+    "title": "Good Goodbye (굿 굿바이)",
+    "artist": "Hwasa (화사)",
+    "chartName": "Circle Digital Chart (midyear, 1st half of 2026)",
+    "chartAuthority": "Korea Music Content Association (KMCA)",
+    "continent": "Asia",
+    "country": "South Korea",
+    "countryCode": "KR",
+    "countryFlag": "🇰🇷",
+    "sourceUrl": "https://www.soompi.com/article/1854722wpp/circle-chart-reveals-midyear-album-and-digital-charts-for-1st-half-of-2026",
+    "releaseDate": "2025-10-15",
+    "genres": [
+      "K-Pop",
+      "Pop"
+    ],
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/7c/bd/f4/7cbdf4a9-50e6-ec52-7e54-644c80e6b86d/cover_KM0023526_1.jpg/600x600bb.jpg",
+    "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/b5/9d/98/b59d98fd-da28-fc3b-fac0-6597a4d38b36/mzaf_15044846596962205173.plus.aac.p.m4a",
+    "youtubeId": "49TirMzogYw",
+    "youtubeUrl": "https://www.youtube.com/watch?v=49TirMzogYw",
+    "summary": "Hwasa's Good Goodbye (released October 2025, four weeks at number one in January 2026) ranked third on Circle Chart's first-half 2026 digital ranking. Partial year: published midyear list, accumulated weekly data through June 2026; the 2026 year-end chart is not yet published.",
+    "originCountry": "South Korea",
+    "originCountryCode": "KR",
+    "originFlag": "🇰🇷",
+    "originContinent": "Asia",
+    "originArea": "South Korea",
+    "album": {
+      "title": "Good Goodbye",
+      "kind": "single",
+      "url": "https://music.apple.com/us/album/good-goodbye-single/1843518967?uo=4",
+      "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/7c/bd/f4/7cbdf4a9-50e6-ec52-7e54-644c80e6b86d/cover_KM0023526_1.jpg/600x600bb.jpg",
+      "releaseDate": "2025-10-15",
+      "trackCount": 2,
+      "tracks": [
+        {
+          "n": 1,
+          "title": "Good Goodbye",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/b5/9d/98/b59d98fd-da28-fc3b-fac0-6597a4d38b36/mzaf_15044846596962205173.plus.aac.p.m4a",
+          "durationMs": 223000
+        },
+        {
+          "n": 2,
+          "title": "Good Goodbye (with. Duomo)",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/bc/84/70/bc8470e7-5577-f853-28db-13672c3519fc/mzaf_10126964809921686997.plus.aac.p.m4a",
+          "durationMs": 253000
+        }
+      ]
     }
   },
   {
@@ -4324,6 +5152,130 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
     }
   },
   {
+    "id": "gb-2025-3",
+    "year": 2025,
+    "rank": 3,
+    "title": "Pink Pony Club",
+    "artist": "Chappell Roan",
+    "chartName": "Official Charts UK Singles",
+    "chartAuthority": "Official Charts Company",
+    "continent": "Europe",
+    "country": "United Kingdom",
+    "countryCode": "GB",
+    "countryFlag": "🇬🇧",
+    "sourceUrl": "https://www.officialcharts.com/charts/end-of-year-singles-chart/20250101/37501/",
+    "releaseDate": "2020-04-03",
+    "genres": [
+      "Pop",
+      "Synth-pop",
+      "Disco-pop"
+    ],
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/41/bc/fb/41bcfb43-91d5-931d-5747-fb381803143f/23UMGIM21715.rgb.jpg/600x600bb.jpg",
+    "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/fc/52/be/fc52be82-306b-6da5-286b-61056757c008/mzaf_1618848737251148796.plus.aac.p.m4a",
+    "youtubeId": "GR3Liudev18",
+    "youtubeUrl": "https://www.youtube.com/watch?v=GR3Liudev18",
+    "summary": "Chappell Roan's Pink Pony Club, first released in 2020, finished third on the Official Charts UK year-end singles chart for 2025 after reaching UK No. 1 in March 2025.",
+    "originCountry": "United States",
+    "originCountryCode": "US",
+    "originFlag": "🇺🇸",
+    "originContinent": "North America",
+    "originArea": "United States",
+    "album": {
+      "title": "The Rise and Fall of a Midwest Princess",
+      "kind": "album",
+      "url": "https://music.apple.com/gb/album/the-rise-and-fall-of-a-midwest-princess/1707412988?uo=4",
+      "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/42/a0/c5/42a0c5e6-6b98-f1f9-7d6b-6d6c61aba562/23UMGIM84225.rgb.jpg/600x600bb.jpg",
+      "releaseDate": "2023-09-22",
+      "trackCount": 14,
+      "tracks": [
+        {
+          "n": 1,
+          "title": "Femininomenon",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/9b/27/99/9b279958-de05-b78f-d04e-f174a8b4040f/mzaf_9057454552178177897.plus.aac.p.m4a",
+          "durationMs": 219711
+        },
+        {
+          "n": 2,
+          "title": "Red Wine Supernova",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/df/34/f1/df34f17a-9222-71d9-c7be-72f425516ba9/mzaf_11637842772411959222.plus.aac.p.m4a",
+          "durationMs": 192721
+        },
+        {
+          "n": 3,
+          "title": "After Midnight",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/78/96/b7/7896b772-e844-788d-4e28-cb800f63120d/mzaf_11626147083542594921.plus.aac.p.m4a",
+          "durationMs": 204857
+        },
+        {
+          "n": 4,
+          "title": "Coffee",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/ee/e6/51/eee6517a-9070-2e20-8d7a-b9a558d87c52/mzaf_637319210302446283.plus.aac.p.m4a",
+          "durationMs": 205520
+        },
+        {
+          "n": 5,
+          "title": "Casual",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/a0/15/a4/a015a449-d9ee-bd4d-faa8-ad5a950df10d/mzaf_5668904369452791603.plus.aac.p.m4a",
+          "durationMs": 232796
+        },
+        {
+          "n": 6,
+          "title": "Super Graphic Ultra Modern Girl",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/3a/ab/6e/3aab6e0b-8b00-bd85-eb24-0c59f233242a/mzaf_11157997594032396496.plus.aac.p.m4a",
+          "durationMs": 183888
+        },
+        {
+          "n": 7,
+          "title": "HOT TO GO!",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/a0/71/90/a0719058-463b-3010-88f5-35b69062a46d/mzaf_18297740068141332062.plus.aac.p.m4a",
+          "durationMs": 184841
+        },
+        {
+          "n": 8,
+          "title": "My Kink Is Karma",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/19/79/a3/1979a3d1-3c6f-1200-dad4-cd67c56b1db4/mzaf_17328535946460588063.plus.aac.p.m4a",
+          "durationMs": 222578
+        },
+        {
+          "n": 9,
+          "title": "Picture You",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/84/e7/01/84e701ef-954b-b7ea-30a6-3795e2c18454/mzaf_12084192366676309235.plus.aac.p.m4a",
+          "durationMs": 187130
+        },
+        {
+          "n": 10,
+          "title": "Kaleidoscope",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/01/13/26/01132690-83a6-7298-caa1-eae9f114c984/mzaf_6913943103642322489.plus.aac.p.m4a",
+          "durationMs": 222651
+        },
+        {
+          "n": 11,
+          "title": "Pink Pony Club",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/2f/a4/8c/2fa48c1a-e51c-44dd-1d69-acd418d3541e/mzaf_12645890156799529014.plus.aac.p.m4a",
+          "durationMs": 258035
+        },
+        {
+          "n": 12,
+          "title": "Naked In Manhattan",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/c5/41/fb/c541fbb4-6737-0eaf-d6fd-7d6cd97fac42/mzaf_11310573446350391099.plus.aac.p.m4a",
+          "durationMs": 211058
+        },
+        {
+          "n": 13,
+          "title": "California",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/f2/31/3c/f2313ca9-64f7-6d8c-ceb1-f6ff0fe88e2a/mzaf_5323367989316439288.plus.aac.p.m4a",
+          "durationMs": 198089
+        },
+        {
+          "n": 14,
+          "title": "Guilty Pleasure",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/95/9d/07/959d07ec-7bcb-e5bb-5c48-2c5c024f22fe/mzaf_3370907438622514131.plus.aac.p.m4a",
+          "durationMs": 224584
+        }
+      ]
+    }
+  },
+  {
     "id": "ng-2025-1",
     "year": 2025,
     "rank": 1,
@@ -4629,220 +5581,6 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
           "durationMs": 475772
         }
       ]
-    }
-  },
-  {
-    "id": "sg-2025-1",
-    "year": 2025,
-    "rank": 1,
-    "title": "Golden",
-    "artist": "HUNTR/X (EJAE, Audrey Nuna & Rei Ami)",
-    "chartName": "The Official Singapore Chart (RIAS)",
-    "chartAuthority": "Recording Industry Association Singapore (RIAS)",
-    "continent": "Asia",
-    "country": "Singapore",
-    "countryCode": "SG",
-    "countryFlag": "🇸🇬",
-    "sourceUrl": "https://en.wikipedia.org/wiki/List_of_number-one_songs_of_2025_(Singapore)",
-    "releaseDate": "2025-07-04",
-    "genres": [
-      "K-Pop",
-      "Pop-Rock"
-    ],
-    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/d4/a4/1a/d4a41ad2-9737-89ef-6357-26c848177461/25UMGIM90866.rgb.jpg/600x600bb.jpg",
-    "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/2d/6d/35/2d6d35ee-c766-a96f-8b20-5ac7b714a7b1/mzaf_9531979540111614014.plus.aac.p.m4a",
-    "youtubeId": "yebNIHKAC4A",
-    "youtubeUrl": "https://www.youtube.com/watch?v=yebNIHKAC4A",
-    "weeksAtNumberOne": 21,
-    "summary": "Golden by Huntrix (the fictional group from KPop Demon Hunters, voiced by EJAE, Audrey Nuna and Rei Ami) had the most weeks at number one (21) on the Official Singapore Chart in 2025.",
-    "originCountry": "United States",
-    "originCountryCode": "US",
-    "originFlag": "🇺🇸",
-    "originContinent": "North America",
-    "originArea": "United States",
-    "album": {
-      "title": "KPop Demon Hunters (Soundtrack from the Netflix Film)",
-      "kind": "album",
-      "url": "https://music.apple.com/sg/album/kpop-demon-hunters-soundtrack-from-the-netflix-film/1820264137?uo=4",
-      "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/e1/15/42/e1154273-8ecd-5702-e6e6-597f28001681/25UMGIM82363.rgb.jpg/600x600bb.jpg",
-      "releaseDate": "2025-06-20",
-      "trackCount": 12,
-      "tracks": [
-        {
-          "n": 1,
-          "title": "TAKEDOWN (JEONGYEON, JIHYO, CHAEYOUNG)",
-          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/cb/b4/69/cbb469fa-3cf8-2ab1-1cfa-03334179f1e9/mzaf_8961451398364908651.plus.aac.p.m4a",
-          "durationMs": 181192
-        },
-        {
-          "n": 2,
-          "title": "How It’s Done",
-          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/20/86/a5/2086a5ca-254e-46d6-bdeb-ebcbd4b06602/mzaf_14103626881571120058.plus.aac.p.m4a",
-          "durationMs": 176059
-        },
-        {
-          "n": 3,
-          "title": "Soda Pop",
-          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/9c/77/47/9c77475f-bbd8-a691-d45e-b759a8a52912/mzaf_7746732510469093884.plus.aac.p.m4a",
-          "durationMs": 150686
-        },
-        {
-          "n": 4,
-          "title": "Golden",
-          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/4a/9d/a1/4a9da1c4-096f-8f45-4a3b-c883c45ca451/mzaf_3059921854949935161.plus.aac.p.m4a",
-          "durationMs": 194608
-        },
-        {
-          "n": 5,
-          "title": "Strategy",
-          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/aa/cd/bb/aacdbbf5-894c-a547-1642-c6805422d877/mzaf_3671953991573159804.plus.aac.p.m4a",
-          "durationMs": 168646
-        },
-        {
-          "n": 6,
-          "title": "Takedown",
-          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/a5/d9/34/a5d934a9-289c-98e5-52be-53b5b517ffe7/mzaf_13830787768028450653.plus.aac.p.m4a",
-          "durationMs": 182017
-        },
-        {
-          "n": 7,
-          "title": "Your Idol",
-          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/d8/e7/5e/d8e75ee4-b429-2425-f1b3-e8a5c2d4b204/mzaf_2625132553354081486.plus.aac.p.m4a",
-          "durationMs": 191538
-        },
-        {
-          "n": 8,
-          "title": "Free",
-          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/b1/81/f7/b181f733-01ce-32ce-4844-a89be963c758/mzaf_1213739716850540710.plus.aac.p.m4a",
-          "durationMs": 187964
-        },
-        {
-          "n": 9,
-          "title": "What It Sounds Like",
-          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/8a/a4/b5/8aa4b5fe-5c6a-35fc-f269-88083a10878d/mzaf_1259387608313569045.plus.aac.p.m4a",
-          "durationMs": 250269
-        },
-        {
-          "n": 10,
-          "title": "사랑인가 봐 Love, Maybe",
-          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/78/84/87/788487ea-f3bc-e554-b40d-5bd0c4cacbe8/mzaf_6103080471638465896.plus.aac.p.m4a",
-          "durationMs": 185653
-        },
-        {
-          "n": 11,
-          "title": "오솔길 Path",
-          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/03/21/30/03213014-86bc-54c5-808c-8e5ca1d8d099/mzaf_14361842090332226480.plus.aac.p.m4a",
-          "durationMs": 221805
-        },
-        {
-          "n": 12,
-          "title": "Score Suite",
-          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/63/04/bd/6304bdeb-8d0e-f31c-b79c-eb36c83bdca5/mzaf_15974328548880255042.plus.aac.p.m4a",
-          "durationMs": 180000
-        }
-      ],
-      "stats": {
-        "certifications": [
-          {
-            "body": "ARIA",
-            "level": "Gold",
-            "region": "Australia",
-            "date": null
-          },
-          {
-            "body": "IFPI Austria",
-            "level": "Platinum",
-            "region": "Austria",
-            "date": null
-          },
-          {
-            "body": "Music Canada",
-            "level": "3× Platinum",
-            "region": "Canada",
-            "date": null
-          },
-          {
-            "body": "IFPI Danmark",
-            "level": "2× Platinum",
-            "region": "Denmark",
-            "date": null
-          },
-          {
-            "body": "SNEP",
-            "level": "2× Platinum",
-            "region": "France",
-            "date": null
-          },
-          {
-            "body": "FIMI",
-            "level": "Platinum",
-            "region": "Italy",
-            "date": null
-          },
-          {
-            "body": "AMPROFON",
-            "level": "Gold",
-            "region": "Mexico",
-            "date": null
-          },
-          {
-            "body": "RMNZ",
-            "level": "4× Platinum",
-            "region": "NZ",
-            "date": null
-          },
-          {
-            "body": "ZPAV",
-            "level": "2× Platinum",
-            "region": "Poland",
-            "date": null
-          },
-          {
-            "body": "AFP",
-            "level": "Platinum",
-            "region": "Portugal",
-            "date": null
-          },
-          {
-            "body": "Promusicae",
-            "level": "Platinum",
-            "region": "Spain",
-            "date": null
-          },
-          {
-            "body": "IFPI Switzerland",
-            "level": "Gold",
-            "region": "Switzerland",
-            "date": null
-          },
-          {
-            "body": "BPI",
-            "level": "2× Platinum",
-            "region": "UK",
-            "date": null
-          },
-          {
-            "body": "RIAA",
-            "level": "Platinum",
-            "region": "US",
-            "date": null
-          }
-        ],
-        "units": null,
-        "peak": {
-          "chart": "Billboard 200",
-          "position": 1
-        },
-        "sourceUrl": "https://en.wikipedia.org/wiki/KPop_Demon_Hunters_(soundtrack)"
-      }
-    },
-    "songStats": {
-      "peak": 1,
-      "weeksOnChart": null,
-      "weeksAtNumberOne": 21,
-      "chart": "The Official Singapore Chart (RIAS)",
-      "sourceUrl": "https://en.wikipedia.org/wiki/List_of_number-one_songs_of_2025_(Singapore)",
-      "asOf": "2025-12-25"
     }
   },
   {
@@ -5257,6 +5995,331 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
     }
   },
   {
+    "id": "jp-2025-3",
+    "year": 2025,
+    "rank": 3,
+    "title": "APT.",
+    "artist": "ROSÉ & Bruno Mars",
+    "chartName": "Billboard Japan Hot 100 Year-End",
+    "chartAuthority": "Billboard Japan / Oricon",
+    "continent": "Asia",
+    "country": "Japan",
+    "countryCode": "JP",
+    "countryFlag": "🇯🇵",
+    "sourceUrl": "https://www.billboard-japan.com/charts/detail?a=hot100_year&year=2025",
+    "releaseDate": "2024-10-18",
+    "genres": [
+      "Pop",
+      "K-Pop"
+    ],
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/2d/1a/7d/2d1a7d91-587e-0ceb-d434-327bd66d9e86/075679628312.jpg/600x600bb.jpg",
+    "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/7a/15/38/7a1538f3-f41a-a2eb-0f24-8eb6712ee043/mzaf_7740628412097685267.plus.aac.p.m4a",
+    "youtubeId": "ekr2nIex040",
+    "youtubeUrl": "https://www.youtube.com/watch?v=ekr2nIex040",
+    "summary": "Billboard Japan's 2025 Hot 100 year-end list ranks APT. by ROSÉ & Bruno Mars third, behind two Mrs. GREEN APPLE songs.",
+    "originCountry": "South Korea",
+    "originCountryCode": "KR",
+    "originFlag": "🇰🇷",
+    "originContinent": "Asia",
+    "album": {
+      "title": "rosie",
+      "kind": "album",
+      "url": "https://music.apple.com/jp/album/rosie/1771105914?uo=4",
+      "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/2d/14/66/2d14661b-345b-d0f3-4e86-56ef626e68aa/075679629203.jpg/600x600bb.jpg",
+      "releaseDate": "2024-12-06",
+      "trackCount": 12,
+      "tracks": [
+        {
+          "n": 1,
+          "title": "number one girl",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/8e/9f/c0/8e9fc022-999c-1c16-51c0-f45ebddda026/mzaf_8590681836583902002.plus.aac.p.m4a",
+          "durationMs": 216443
+        },
+        {
+          "n": 2,
+          "title": "3am",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/e3/9e/d1/e39ed11b-f955-0f39-a157-09637eee6afa/mzaf_11683634688750093787.plus.aac.p.m4a",
+          "durationMs": 154050
+        },
+        {
+          "n": 3,
+          "title": "two years",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/3f/6d/36/3f6d3605-5cc7-7e7d-ac56-f5912d840e04/mzaf_17889809562644811825.plus.aac.p.m4a",
+          "durationMs": 167748
+        },
+        {
+          "n": 4,
+          "title": "toxic till the end",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/45/15/49/451549d8-ddd7-dad4-0f3d-588a0c9d1b98/mzaf_17766988925119316702.plus.aac.p.m4a",
+          "durationMs": 156686
+        },
+        {
+          "n": 5,
+          "title": "drinks or coffee",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/1a/bd/88/1abd881d-a9a8-7ada-a3b4-a6fe7c5e9c63/mzaf_971448482602921935.plus.aac.p.m4a",
+          "durationMs": 133113
+        },
+        {
+          "n": 6,
+          "title": "APT.",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/70/41/42/70414259-14f5-245e-bd79-93c80401d556/mzaf_8687698460653166345.plus.aac.p.m4a",
+          "durationMs": 169917
+        },
+        {
+          "n": 7,
+          "title": "gameboy",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/e9/e9/d6/e9e9d6b1-6dd7-d496-176e-7a6c618b3698/mzaf_4422986780593938207.plus.aac.p.m4a",
+          "durationMs": 166742
+        },
+        {
+          "n": 8,
+          "title": "stay a little longer",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/34/19/97/341997d0-0f17-7c65-bcfe-23f2ba8796b6/mzaf_15289736467255215158.plus.aac.p.m4a",
+          "durationMs": 246606
+        },
+        {
+          "n": 9,
+          "title": "not the same",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/d8/90/80/d89080d4-fb6d-bc63-f285-3d08adf63e51/mzaf_306867797853877831.plus.aac.p.m4a",
+          "durationMs": 184006
+        },
+        {
+          "n": 10,
+          "title": "call it the end",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/a3/20/8e/a3208e70-145f-ccba-228b-8afc1138b338/mzaf_7646972679501127734.plus.aac.p.m4a",
+          "durationMs": 141141
+        },
+        {
+          "n": 11,
+          "title": "too bad for us",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/d6/6d/d4/d66dd4f0-9b3f-b660-17c7-d8e67dd1fc6d/mzaf_12165847492914096343.plus.aac.p.m4a",
+          "durationMs": 236249
+        },
+        {
+          "n": 12,
+          "title": "dance all night",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/ff/a1/e1/ffa1e141-f5c1-756c-6c03-60204886bc0d/mzaf_112711830354224825.plus.aac.p.m4a",
+          "durationMs": 214951
+        }
+      ]
+    },
+    "originArea": "Seoul"
+  },
+  {
+    "id": "sg-2025-1",
+    "year": 2025,
+    "rank": 1,
+    "title": "Golden",
+    "artist": "HUNTR/X (EJAE, Audrey Nuna & Rei Ami)",
+    "chartName": "The Official Singapore Chart (RIAS)",
+    "chartAuthority": "Recording Industry Association Singapore (RIAS)",
+    "continent": "Asia",
+    "country": "Singapore",
+    "countryCode": "SG",
+    "countryFlag": "🇸🇬",
+    "sourceUrl": "https://en.wikipedia.org/wiki/List_of_number-one_songs_of_2025_(Singapore)",
+    "releaseDate": "2025-07-04",
+    "genres": [
+      "K-Pop",
+      "Pop-Rock"
+    ],
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/d4/a4/1a/d4a41ad2-9737-89ef-6357-26c848177461/25UMGIM90866.rgb.jpg/600x600bb.jpg",
+    "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/2d/6d/35/2d6d35ee-c766-a96f-8b20-5ac7b714a7b1/mzaf_9531979540111614014.plus.aac.p.m4a",
+    "youtubeId": "yebNIHKAC4A",
+    "youtubeUrl": "https://www.youtube.com/watch?v=yebNIHKAC4A",
+    "weeksAtNumberOne": 21,
+    "summary": "Golden by Huntrix (the fictional group from KPop Demon Hunters, voiced by EJAE, Audrey Nuna and Rei Ami) had the most weeks at number one (21) on the Official Singapore Chart in 2025.",
+    "originCountry": "United States",
+    "originCountryCode": "US",
+    "originFlag": "🇺🇸",
+    "originContinent": "North America",
+    "originArea": "United States",
+    "album": {
+      "title": "KPop Demon Hunters (Soundtrack from the Netflix Film)",
+      "kind": "album",
+      "url": "https://music.apple.com/sg/album/kpop-demon-hunters-soundtrack-from-the-netflix-film/1820264137?uo=4",
+      "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/e1/15/42/e1154273-8ecd-5702-e6e6-597f28001681/25UMGIM82363.rgb.jpg/600x600bb.jpg",
+      "releaseDate": "2025-06-20",
+      "trackCount": 12,
+      "tracks": [
+        {
+          "n": 1,
+          "title": "TAKEDOWN (JEONGYEON, JIHYO, CHAEYOUNG)",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/cb/b4/69/cbb469fa-3cf8-2ab1-1cfa-03334179f1e9/mzaf_8961451398364908651.plus.aac.p.m4a",
+          "durationMs": 181192
+        },
+        {
+          "n": 2,
+          "title": "How It’s Done",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/20/86/a5/2086a5ca-254e-46d6-bdeb-ebcbd4b06602/mzaf_14103626881571120058.plus.aac.p.m4a",
+          "durationMs": 176059
+        },
+        {
+          "n": 3,
+          "title": "Soda Pop",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/9c/77/47/9c77475f-bbd8-a691-d45e-b759a8a52912/mzaf_7746732510469093884.plus.aac.p.m4a",
+          "durationMs": 150686
+        },
+        {
+          "n": 4,
+          "title": "Golden",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/4a/9d/a1/4a9da1c4-096f-8f45-4a3b-c883c45ca451/mzaf_3059921854949935161.plus.aac.p.m4a",
+          "durationMs": 194608
+        },
+        {
+          "n": 5,
+          "title": "Strategy",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/aa/cd/bb/aacdbbf5-894c-a547-1642-c6805422d877/mzaf_3671953991573159804.plus.aac.p.m4a",
+          "durationMs": 168646
+        },
+        {
+          "n": 6,
+          "title": "Takedown",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/a5/d9/34/a5d934a9-289c-98e5-52be-53b5b517ffe7/mzaf_13830787768028450653.plus.aac.p.m4a",
+          "durationMs": 182017
+        },
+        {
+          "n": 7,
+          "title": "Your Idol",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/d8/e7/5e/d8e75ee4-b429-2425-f1b3-e8a5c2d4b204/mzaf_2625132553354081486.plus.aac.p.m4a",
+          "durationMs": 191538
+        },
+        {
+          "n": 8,
+          "title": "Free",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/b1/81/f7/b181f733-01ce-32ce-4844-a89be963c758/mzaf_1213739716850540710.plus.aac.p.m4a",
+          "durationMs": 187964
+        },
+        {
+          "n": 9,
+          "title": "What It Sounds Like",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/8a/a4/b5/8aa4b5fe-5c6a-35fc-f269-88083a10878d/mzaf_1259387608313569045.plus.aac.p.m4a",
+          "durationMs": 250269
+        },
+        {
+          "n": 10,
+          "title": "사랑인가 봐 Love, Maybe",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/78/84/87/788487ea-f3bc-e554-b40d-5bd0c4cacbe8/mzaf_6103080471638465896.plus.aac.p.m4a",
+          "durationMs": 185653
+        },
+        {
+          "n": 11,
+          "title": "오솔길 Path",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/03/21/30/03213014-86bc-54c5-808c-8e5ca1d8d099/mzaf_14361842090332226480.plus.aac.p.m4a",
+          "durationMs": 221805
+        },
+        {
+          "n": 12,
+          "title": "Score Suite",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/63/04/bd/6304bdeb-8d0e-f31c-b79c-eb36c83bdca5/mzaf_15974328548880255042.plus.aac.p.m4a",
+          "durationMs": 180000
+        }
+      ],
+      "stats": {
+        "certifications": [
+          {
+            "body": "ARIA",
+            "level": "Gold",
+            "region": "Australia",
+            "date": null
+          },
+          {
+            "body": "IFPI Austria",
+            "level": "Platinum",
+            "region": "Austria",
+            "date": null
+          },
+          {
+            "body": "Music Canada",
+            "level": "3× Platinum",
+            "region": "Canada",
+            "date": null
+          },
+          {
+            "body": "IFPI Danmark",
+            "level": "2× Platinum",
+            "region": "Denmark",
+            "date": null
+          },
+          {
+            "body": "SNEP",
+            "level": "2× Platinum",
+            "region": "France",
+            "date": null
+          },
+          {
+            "body": "FIMI",
+            "level": "Platinum",
+            "region": "Italy",
+            "date": null
+          },
+          {
+            "body": "AMPROFON",
+            "level": "Gold",
+            "region": "Mexico",
+            "date": null
+          },
+          {
+            "body": "RMNZ",
+            "level": "4× Platinum",
+            "region": "NZ",
+            "date": null
+          },
+          {
+            "body": "ZPAV",
+            "level": "2× Platinum",
+            "region": "Poland",
+            "date": null
+          },
+          {
+            "body": "AFP",
+            "level": "Platinum",
+            "region": "Portugal",
+            "date": null
+          },
+          {
+            "body": "Promusicae",
+            "level": "Platinum",
+            "region": "Spain",
+            "date": null
+          },
+          {
+            "body": "IFPI Switzerland",
+            "level": "Gold",
+            "region": "Switzerland",
+            "date": null
+          },
+          {
+            "body": "BPI",
+            "level": "2× Platinum",
+            "region": "UK",
+            "date": null
+          },
+          {
+            "body": "RIAA",
+            "level": "Platinum",
+            "region": "US",
+            "date": null
+          }
+        ],
+        "units": null,
+        "peak": {
+          "chart": "Billboard 200",
+          "position": 1
+        },
+        "sourceUrl": "https://en.wikipedia.org/wiki/KPop_Demon_Hunters_(soundtrack)"
+      }
+    },
+    "songStats": {
+      "peak": 1,
+      "weeksOnChart": null,
+      "weeksAtNumberOne": 21,
+      "chart": "The Official Singapore Chart (RIAS)",
+      "sourceUrl": "https://en.wikipedia.org/wiki/List_of_number-one_songs_of_2025_(Singapore)",
+      "asOf": "2025-12-25"
+    }
+  },
+  {
     "id": "kr-2025-1",
     "year": 2025,
     "rank": 1,
@@ -5429,6 +6492,118 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
       "chart": "Circle Digital Chart (weekly)",
       "sourceUrl": "https://en.wikipedia.org/wiki/Whiplash_(Aespa_song)",
       "asOf": "2026-10-17"
+    }
+  },
+  {
+    "id": "kr-2025-3",
+    "year": 2025,
+    "rank": 3,
+    "title": "Golden",
+    "artist": "HUNTR/X (Huntrix)",
+    "chartName": "Circle Digital Chart (year-end)",
+    "chartAuthority": "Korea Music Content Association (KMCA)",
+    "continent": "Asia",
+    "country": "South Korea",
+    "countryCode": "KR",
+    "countryFlag": "🇰🇷",
+    "sourceUrl": "https://en.wikipedia.org/wiki/Circle_Digital_Chart",
+    "releaseDate": "2025-07-04",
+    "genres": [
+      "K-Pop",
+      "Electropop",
+      "Soundtrack"
+    ],
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/e1/15/42/e1154273-8ecd-5702-e6e6-597f28001681/25UMGIM82363.rgb.jpg/600x600bb.jpg",
+    "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/4a/9d/a1/4a9da1c4-096f-8f45-4a3b-c883c45ca451/mzaf_3059921854949935161.plus.aac.p.m4a",
+    "youtubeId": "htk6MRjmcnQ",
+    "youtubeUrl": "https://www.youtube.com/watch?v=htk6MRjmcnQ",
+    "summary": "Golden, the fictional group HUNTR/X's song from Netflix's KPop Demon Hunters, ranked third on the 2025 Circle Digital Chart year-end list.",
+    "originCountry": "United States",
+    "originCountryCode": "US",
+    "originFlag": "🇺🇸",
+    "originContinent": "North America",
+    "originArea": "United States",
+    "album": {
+      "title": "KPop Demon Hunters (Soundtrack from the Netflix Film)",
+      "kind": "album",
+      "url": "https://music.apple.com/us/album/kpop-demon-hunters-soundtrack-from-the-netflix-film/1820264137?uo=4",
+      "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/e1/15/42/e1154273-8ecd-5702-e6e6-597f28001681/25UMGIM82363.rgb.jpg/600x600bb.jpg",
+      "releaseDate": "2025-06-20",
+      "trackCount": 12,
+      "tracks": [
+        {
+          "n": 1,
+          "title": "TAKEDOWN (JEONGYEON, JIHYO, CHAEYOUNG)",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/cb/b4/69/cbb469fa-3cf8-2ab1-1cfa-03334179f1e9/mzaf_8961451398364908651.plus.aac.p.m4a",
+          "durationMs": 181192
+        },
+        {
+          "n": 2,
+          "title": "How It’s Done",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/20/86/a5/2086a5ca-254e-46d6-bdeb-ebcbd4b06602/mzaf_14103626881571120058.plus.aac.p.m4a",
+          "durationMs": 176059
+        },
+        {
+          "n": 3,
+          "title": "Soda Pop",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/9c/77/47/9c77475f-bbd8-a691-d45e-b759a8a52912/mzaf_7746732510469093884.plus.aac.p.m4a",
+          "durationMs": 150686
+        },
+        {
+          "n": 4,
+          "title": "Golden",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/4a/9d/a1/4a9da1c4-096f-8f45-4a3b-c883c45ca451/mzaf_3059921854949935161.plus.aac.p.m4a",
+          "durationMs": 194608
+        },
+        {
+          "n": 5,
+          "title": "Strategy",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/aa/cd/bb/aacdbbf5-894c-a547-1642-c6805422d877/mzaf_3671953991573159804.plus.aac.p.m4a",
+          "durationMs": 168646
+        },
+        {
+          "n": 6,
+          "title": "Takedown",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/a5/d9/34/a5d934a9-289c-98e5-52be-53b5b517ffe7/mzaf_13830787768028450653.plus.aac.p.m4a",
+          "durationMs": 182017
+        },
+        {
+          "n": 7,
+          "title": "Your Idol",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/d8/e7/5e/d8e75ee4-b429-2425-f1b3-e8a5c2d4b204/mzaf_2625132553354081486.plus.aac.p.m4a",
+          "durationMs": 191538
+        },
+        {
+          "n": 8,
+          "title": "Free",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/b1/81/f7/b181f733-01ce-32ce-4844-a89be963c758/mzaf_1213739716850540710.plus.aac.p.m4a",
+          "durationMs": 187964
+        },
+        {
+          "n": 9,
+          "title": "What It Sounds Like",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/8a/a4/b5/8aa4b5fe-5c6a-35fc-f269-88083a10878d/mzaf_1259387608313569045.plus.aac.p.m4a",
+          "durationMs": 250269
+        },
+        {
+          "n": 10,
+          "title": "사랑인가 봐 Love, Maybe",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/78/84/87/788487ea-f3bc-e554-b40d-5bd0c4cacbe8/mzaf_6103080471638465896.plus.aac.p.m4a",
+          "durationMs": 185653
+        },
+        {
+          "n": 11,
+          "title": "오솔길 Path",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/03/21/30/03213014-86bc-54c5-808c-8e5ca1d8d099/mzaf_14361842090332226480.plus.aac.p.m4a",
+          "durationMs": 221805
+        },
+        {
+          "n": 12,
+          "title": "Score Suite",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/63/04/bd/6304bdeb-8d0e-f31c-b79c-eb36c83bdca5/mzaf_15974328548880255042.plus.aac.p.m4a",
+          "durationMs": 180000
+        }
+      ]
     }
   },
   {
@@ -8074,6 +9249,83 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
     }
   },
   {
+    "id": "gb-2024-3",
+    "year": 2024,
+    "rank": 3,
+    "title": "Espresso",
+    "artist": "Sabrina Carpenter",
+    "chartName": "Official Charts UK Singles",
+    "chartAuthority": "Official Charts Company",
+    "continent": "Europe",
+    "country": "United Kingdom",
+    "countryCode": "GB",
+    "countryFlag": "🇬🇧",
+    "sourceUrl": "https://www.officialcharts.com/charts/end-of-year-singles-chart/20240101/37501/",
+    "releaseDate": "2024-04-11",
+    "genres": [
+      "Pop",
+      "Funk",
+      "Nu-disco"
+    ],
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/57/e8/7b/57e87ba0-5057-9bb9-c247-ce7dbe426e89/24UMGIM55213.rgb.jpg/600x600bb.jpg",
+    "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/e9/4d/02/e94d0230-11ee-ef94-d2cf-a5d547bd73f4/mzaf_554140808559155562.plus.aac.p.m4a",
+    "youtubeId": "eVli-tstM5E",
+    "youtubeUrl": "https://www.youtube.com/watch?v=eVli-tstM5E",
+    "weeksAtNumberOne": 7,
+    "summary": "Sabrina Carpenter's Espresso was the third biggest UK single of 2024 on the Official Charts year-end chart, after seven weeks at UK No. 1.",
+    "originCountry": "United States",
+    "originCountryCode": "US",
+    "originFlag": "🇺🇸",
+    "originContinent": "North America",
+    "originArea": "United States",
+    "album": {
+      "title": "Espresso EP",
+      "kind": "album",
+      "url": "https://music.apple.com/gb/album/espresso-ep/1746800651?uo=4",
+      "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/57/e8/7b/57e87ba0-5057-9bb9-c247-ce7dbe426e89/24UMGIM55213.rgb.jpg/600x600bb.jpg",
+      "releaseDate": "2024-05-17",
+      "trackCount": 6,
+      "tracks": [
+        {
+          "n": 1,
+          "title": "Espresso",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/37/a1/d1/37a1d152-bbc8-2223-3a1f-65def0e4c885/mzaf_13717858739450878663.plus.aac.p.m4a",
+          "durationMs": 175459
+        },
+        {
+          "n": 2,
+          "title": "Espresso (Double Shot Version)",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/b9/6a/8c/b96a8c60-3b5b-fa33-f6d8-8d5c1542eef7/mzaf_16058191268473480896.plus.aac.p.m4a",
+          "durationMs": 149064
+        },
+        {
+          "n": 3,
+          "title": "Espresso (On Vacation Version)",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/e9/4d/02/e94d0230-11ee-ef94-d2cf-a5d547bd73f4/mzaf_554140808559155562.plus.aac.p.m4a",
+          "durationMs": 175459
+        },
+        {
+          "n": 4,
+          "title": "Espresso (Decaf Version)",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/70/0d/0c/700d0c45-e282-fe59-c485-599569d088ad/mzaf_12595597925686028074.plus.aac.p.m4a",
+          "durationMs": 194716
+        },
+        {
+          "n": 5,
+          "title": "Espresso (Mochapella Version)",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/de/f2/c1/def2c105-ccc8-e68d-76c8-f9e2ae92de76/mzaf_6772404255851115001.plus.aac.p.m4a",
+          "durationMs": 175459
+        },
+        {
+          "n": 6,
+          "title": "Espresso (Espressooooo Version)",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/26/e5/d7/26e5d7d0-df8f-76b0-c2af-2002d3928bc4/mzaf_9174022881840867580.plus.aac.p.m4a",
+          "durationMs": 295459
+        }
+      ]
+    }
+  },
+  {
     "id": "ng-2024-1",
     "year": 2024,
     "rank": 1,
@@ -8245,125 +9497,6 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
       "weeksAtNumberOne": null,
       "chart": "The Official South African Charts (TOSAC)",
       "sourceUrl": "https://en.wikipedia.org/wiki/Imithandazo",
-      "asOf": "2026-10-17"
-    }
-  },
-  {
-    "id": "sg-2024-1",
-    "year": 2024,
-    "rank": 1,
-    "title": "APT.",
-    "artist": "ROSÉ & Bruno Mars",
-    "chartName": "Singapore Top 30 Digital Streaming (RIAS)",
-    "chartAuthority": "Recording Industry Association Singapore (RIAS)",
-    "continent": "Asia",
-    "country": "Singapore",
-    "countryCode": "SG",
-    "countryFlag": "🇸🇬",
-    "sourceUrl": "https://en.wikipedia.org/wiki/List_of_number-one_songs_of_2024_(Singapore)",
-    "releaseDate": "2024-10-18",
-    "genres": [
-      "Nu-Disco",
-      "Pop"
-    ],
-    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/2d/1a/7d/2d1a7d91-587e-0ceb-d434-327bd66d9e86/075679628312.jpg/600x600bb.jpg",
-    "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/7a/15/38/7a1538f3-f41a-a2eb-0f24-8eb6712ee043/mzaf_7740628412097685267.plus.aac.p.m4a",
-    "youtubeId": "ekr2nIex040",
-    "youtubeUrl": "https://www.youtube.com/watch?v=ekr2nIex040",
-    "weeksAtNumberOne": 10,
-    "summary": "ROSE and Bruno Mars' \"APT.\" was the longest-running number one of 2024 on the RIAS Top 30 Digital Streaming chart with 10 weeks (24 Oct - 26 Dec issues).",
-    "originCountry": "South Korea",
-    "originCountryCode": "KR",
-    "originFlag": "🇰🇷",
-    "originContinent": "Asia",
-    "album": {
-      "title": "rosie",
-      "kind": "album",
-      "url": "https://music.apple.com/sg/album/rosie/1771105914?uo=4",
-      "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/2d/14/66/2d14661b-345b-d0f3-4e86-56ef626e68aa/075679629203.jpg/600x600bb.jpg",
-      "releaseDate": "2024-12-06",
-      "trackCount": 12,
-      "tracks": [
-        {
-          "n": 1,
-          "title": "number one girl",
-          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/8e/9f/c0/8e9fc022-999c-1c16-51c0-f45ebddda026/mzaf_8590681836583902002.plus.aac.p.m4a",
-          "durationMs": 216443
-        },
-        {
-          "n": 2,
-          "title": "3am",
-          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/e3/9e/d1/e39ed11b-f955-0f39-a157-09637eee6afa/mzaf_11683634688750093787.plus.aac.p.m4a",
-          "durationMs": 154050
-        },
-        {
-          "n": 3,
-          "title": "two years",
-          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/3f/6d/36/3f6d3605-5cc7-7e7d-ac56-f5912d840e04/mzaf_17889809562644811825.plus.aac.p.m4a",
-          "durationMs": 167748
-        },
-        {
-          "n": 4,
-          "title": "toxic till the end",
-          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/45/15/49/451549d8-ddd7-dad4-0f3d-588a0c9d1b98/mzaf_17766988925119316702.plus.aac.p.m4a",
-          "durationMs": 156686
-        },
-        {
-          "n": 5,
-          "title": "drinks or coffee",
-          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/1a/bd/88/1abd881d-a9a8-7ada-a3b4-a6fe7c5e9c63/mzaf_971448482602921935.plus.aac.p.m4a",
-          "durationMs": 133113
-        },
-        {
-          "n": 6,
-          "title": "APT.",
-          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/70/41/42/70414259-14f5-245e-bd79-93c80401d556/mzaf_8687698460653166345.plus.aac.p.m4a",
-          "durationMs": 169917
-        },
-        {
-          "n": 7,
-          "title": "gameboy",
-          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/e9/e9/d6/e9e9d6b1-6dd7-d496-176e-7a6c618b3698/mzaf_4422986780593938207.plus.aac.p.m4a",
-          "durationMs": 166742
-        },
-        {
-          "n": 8,
-          "title": "stay a little longer",
-          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/34/19/97/341997d0-0f17-7c65-bcfe-23f2ba8796b6/mzaf_15289736467255215158.plus.aac.p.m4a",
-          "durationMs": 246606
-        },
-        {
-          "n": 9,
-          "title": "not the same",
-          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/d8/90/80/d89080d4-fb6d-bc63-f285-3d08adf63e51/mzaf_306867797853877831.plus.aac.p.m4a",
-          "durationMs": 184006
-        },
-        {
-          "n": 10,
-          "title": "call it the end",
-          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/a3/20/8e/a3208e70-145f-ccba-228b-8afc1138b338/mzaf_7646972679501127734.plus.aac.p.m4a",
-          "durationMs": 141141
-        },
-        {
-          "n": 11,
-          "title": "too bad for us",
-          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/d6/6d/d4/d66dd4f0-9b3f-b660-17c7-d8e67dd1fc6d/mzaf_12165847492914096343.plus.aac.p.m4a",
-          "durationMs": 236249
-        },
-        {
-          "n": 12,
-          "title": "dance all night",
-          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/ff/a1/e1/ffa1e141-f5c1-756c-6c03-60204886bc0d/mzaf_112711830354224825.plus.aac.p.m4a",
-          "durationMs": 214951
-        }
-      ]
-    },
-    "songStats": {
-      "peak": 1,
-      "weeksOnChart": null,
-      "weeksAtNumberOne": 10,
-      "chart": "Singapore RIAS chart",
-      "sourceUrl": "https://en.wikipedia.org/wiki/Apt._(song)",
       "asOf": "2026-10-17"
     }
   },
@@ -8701,6 +9834,153 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
     }
   },
   {
+    "id": "jp-2024-3",
+    "year": 2024,
+    "rank": 3,
+    "title": "Ikuoku Kounen (幾億光年)",
+    "artist": "Omoinotake",
+    "chartName": "Billboard Japan Hot 100 Year-End",
+    "chartAuthority": "Billboard Japan / Oricon",
+    "continent": "Asia",
+    "country": "Japan",
+    "countryCode": "JP",
+    "countryFlag": "🇯🇵",
+    "sourceUrl": "https://www.billboard-japan.com/charts/detail?a=hot100_year&year=2024",
+    "releaseDate": "2024-01-24",
+    "genres": [
+      "J-Pop"
+    ],
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/7e/e5/e6/7ee5e6f7-9c93-f121-fca0-e371dbce8f6e/4547366665246.jpg/600x600bb.jpg",
+    "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/46/af/25/46af2506-b3ed-69a7-1edc-56cd710c7939/mzaf_18226298714780731160.plus.aac.p.m4a",
+    "youtubeId": "P7bVX6fJfCg",
+    "youtubeUrl": "https://www.youtube.com/watch?v=P7bVX6fJfCg",
+    "summary": "Omoinotake's drama theme song placed third on Billboard Japan's 2024 Hot 100 year-end list, behind Bling-Bang-Bang-Born and Bansanka.",
+    "originCountry": "Japan",
+    "originCountryCode": "JP",
+    "originFlag": "🇯🇵",
+    "originContinent": "Asia",
+    "originArea": "Japan"
+  },
+  {
+    "id": "sg-2024-1",
+    "year": 2024,
+    "rank": 1,
+    "title": "APT.",
+    "artist": "ROSÉ & Bruno Mars",
+    "chartName": "Singapore Top 30 Digital Streaming (RIAS)",
+    "chartAuthority": "Recording Industry Association Singapore (RIAS)",
+    "continent": "Asia",
+    "country": "Singapore",
+    "countryCode": "SG",
+    "countryFlag": "🇸🇬",
+    "sourceUrl": "https://en.wikipedia.org/wiki/List_of_number-one_songs_of_2024_(Singapore)",
+    "releaseDate": "2024-10-18",
+    "genres": [
+      "Nu-Disco",
+      "Pop"
+    ],
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/2d/1a/7d/2d1a7d91-587e-0ceb-d434-327bd66d9e86/075679628312.jpg/600x600bb.jpg",
+    "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/7a/15/38/7a1538f3-f41a-a2eb-0f24-8eb6712ee043/mzaf_7740628412097685267.plus.aac.p.m4a",
+    "youtubeId": "ekr2nIex040",
+    "youtubeUrl": "https://www.youtube.com/watch?v=ekr2nIex040",
+    "weeksAtNumberOne": 10,
+    "summary": "ROSE and Bruno Mars' \"APT.\" was the longest-running number one of 2024 on the RIAS Top 30 Digital Streaming chart with 10 weeks (24 Oct - 26 Dec issues).",
+    "originCountry": "South Korea",
+    "originCountryCode": "KR",
+    "originFlag": "🇰🇷",
+    "originContinent": "Asia",
+    "album": {
+      "title": "rosie",
+      "kind": "album",
+      "url": "https://music.apple.com/sg/album/rosie/1771105914?uo=4",
+      "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/2d/14/66/2d14661b-345b-d0f3-4e86-56ef626e68aa/075679629203.jpg/600x600bb.jpg",
+      "releaseDate": "2024-12-06",
+      "trackCount": 12,
+      "tracks": [
+        {
+          "n": 1,
+          "title": "number one girl",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/8e/9f/c0/8e9fc022-999c-1c16-51c0-f45ebddda026/mzaf_8590681836583902002.plus.aac.p.m4a",
+          "durationMs": 216443
+        },
+        {
+          "n": 2,
+          "title": "3am",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/e3/9e/d1/e39ed11b-f955-0f39-a157-09637eee6afa/mzaf_11683634688750093787.plus.aac.p.m4a",
+          "durationMs": 154050
+        },
+        {
+          "n": 3,
+          "title": "two years",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/3f/6d/36/3f6d3605-5cc7-7e7d-ac56-f5912d840e04/mzaf_17889809562644811825.plus.aac.p.m4a",
+          "durationMs": 167748
+        },
+        {
+          "n": 4,
+          "title": "toxic till the end",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/45/15/49/451549d8-ddd7-dad4-0f3d-588a0c9d1b98/mzaf_17766988925119316702.plus.aac.p.m4a",
+          "durationMs": 156686
+        },
+        {
+          "n": 5,
+          "title": "drinks or coffee",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/1a/bd/88/1abd881d-a9a8-7ada-a3b4-a6fe7c5e9c63/mzaf_971448482602921935.plus.aac.p.m4a",
+          "durationMs": 133113
+        },
+        {
+          "n": 6,
+          "title": "APT.",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/70/41/42/70414259-14f5-245e-bd79-93c80401d556/mzaf_8687698460653166345.plus.aac.p.m4a",
+          "durationMs": 169917
+        },
+        {
+          "n": 7,
+          "title": "gameboy",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/e9/e9/d6/e9e9d6b1-6dd7-d496-176e-7a6c618b3698/mzaf_4422986780593938207.plus.aac.p.m4a",
+          "durationMs": 166742
+        },
+        {
+          "n": 8,
+          "title": "stay a little longer",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/34/19/97/341997d0-0f17-7c65-bcfe-23f2ba8796b6/mzaf_15289736467255215158.plus.aac.p.m4a",
+          "durationMs": 246606
+        },
+        {
+          "n": 9,
+          "title": "not the same",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/d8/90/80/d89080d4-fb6d-bc63-f285-3d08adf63e51/mzaf_306867797853877831.plus.aac.p.m4a",
+          "durationMs": 184006
+        },
+        {
+          "n": 10,
+          "title": "call it the end",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/a3/20/8e/a3208e70-145f-ccba-228b-8afc1138b338/mzaf_7646972679501127734.plus.aac.p.m4a",
+          "durationMs": 141141
+        },
+        {
+          "n": 11,
+          "title": "too bad for us",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/d6/6d/d4/d66dd4f0-9b3f-b660-17c7-d8e67dd1fc6d/mzaf_12165847492914096343.plus.aac.p.m4a",
+          "durationMs": 236249
+        },
+        {
+          "n": 12,
+          "title": "dance all night",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/ff/a1/e1/ffa1e141-f5c1-756c-6c03-60204886bc0d/mzaf_112711830354224825.plus.aac.p.m4a",
+          "durationMs": 214951
+        }
+      ]
+    },
+    "songStats": {
+      "peak": 1,
+      "weeksOnChart": null,
+      "weeksAtNumberOne": 10,
+      "chart": "Singapore RIAS chart",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Apt._(song)",
+      "asOf": "2026-10-17"
+    }
+  },
+  {
     "id": "kr-2024-1",
     "year": 2024,
     "rank": 1,
@@ -8914,6 +10194,81 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
       "chart": "Circle Digital Chart",
       "sourceUrl": "https://en.wikipedia.org/wiki/Plot_Twist_(TWS_song)",
       "asOf": "2026-10-17"
+    }
+  },
+  {
+    "id": "kr-2024-3",
+    "year": 2024,
+    "rank": 3,
+    "title": "Time of Our Life",
+    "artist": "DAY6 (데이식스)",
+    "chartName": "Circle Digital Chart (year-end)",
+    "chartAuthority": "Korea Music Content Association (KMCA)",
+    "continent": "Asia",
+    "country": "South Korea",
+    "countryCode": "KR",
+    "countryFlag": "🇰🇷",
+    "sourceUrl": "https://en.wikipedia.org/wiki/Circle_Digital_Chart",
+    "releaseDate": "2019-07-15",
+    "genres": [
+      "K-Pop",
+      "Pop Rock"
+    ],
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/7c/51/b4/7c51b4a5-a049-ed9c-126f-2eac310060d1/738676857337_Cover.jpg/600x600bb.jpg",
+    "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/d3/0a/16/d30a1693-6cfc-004d-7415-3a8a9ed0ef1d/mzaf_2368053571738456111.plus.aac.p.m4a",
+    "youtubeId": "vnS_jn2uibs",
+    "youtubeUrl": "https://www.youtube.com/watch?v=vnS_jn2uibs",
+    "summary": "DAY6's 2019 song Time of Our Life resurged in 2024 and ranked third on the 2024 Circle Digital Chart year-end list.",
+    "originCountry": "South Korea",
+    "originCountryCode": "KR",
+    "originFlag": "🇰🇷",
+    "originContinent": "Asia",
+    "originArea": "South Korea",
+    "album": {
+      "title": "The Book of Us : Gravity",
+      "kind": "ep",
+      "url": "https://music.apple.com/us/album/the-book-of-us-gravity-ep/1689325535?uo=4",
+      "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/7c/51/b4/7c51b4a5-a049-ed9c-126f-2eac310060d1/738676857337_Cover.jpg/600x600bb.jpg",
+      "releaseDate": "2019-07-15",
+      "trackCount": 6,
+      "tracks": [
+        {
+          "n": 1,
+          "title": "For me",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/72/1e/c0/721ec086-237a-1aa3-e755-92cf2cf6d68d/mzaf_3746600149259388527.plus.aac.p.m4a",
+          "durationMs": 207808
+        },
+        {
+          "n": 2,
+          "title": "Time of Our Life",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/d3/0a/16/d30a1693-6cfc-004d-7415-3a8a9ed0ef1d/mzaf_2368053571738456111.plus.aac.p.m4a",
+          "durationMs": 205576
+        },
+        {
+          "n": 3,
+          "title": "How to love",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/c5/fd/01/c5fd014b-6c8b-e246-960d-c0339b7aa685/mzaf_15074192049807000619.plus.aac.p.m4a",
+          "durationMs": 204396
+        },
+        {
+          "n": 4,
+          "title": "Wanna Go Back",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/87/6c/97/876c97e8-1181-47bb-00bd-d079d99170b2/mzaf_5183493495805641272.plus.aac.p.m4a",
+          "durationMs": 215787
+        },
+        {
+          "n": 5,
+          "title": "Cover",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/a2/02/00/a20200d7-a9d4-1a83-8f59-41ec200f42ef/mzaf_9153439272125710346.plus.aac.p.m4a",
+          "durationMs": 206431
+        },
+        {
+          "n": 6,
+          "title": "Best Part",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/7d/c3/a5/7dc3a520-3f8e-691b-e4e1-91e4c6bdfc09/mzaf_13284884695140903303.plus.aac.p.m4a",
+          "durationMs": 221368
+        }
+      ]
     }
   },
   {
@@ -11364,6 +12719,52 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
     }
   },
   {
+    "id": "gb-2023-3",
+    "year": 2023,
+    "rank": 3,
+    "title": "Escapism.",
+    "artist": "RAYE ft. 070 Shake",
+    "chartName": "Official Charts UK Singles",
+    "chartAuthority": "Official Charts Company",
+    "continent": "Europe",
+    "country": "United Kingdom",
+    "countryCode": "GB",
+    "countryFlag": "🇬🇧",
+    "sourceUrl": "https://www.officialcharts.com/charts/end-of-year-singles-chart/20230101/37501/",
+    "releaseDate": "2022-10-12",
+    "genres": [
+      "R&B",
+      "Electropop",
+      "Hip-hop"
+    ],
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music113/v4/5e/4d/87/5e4d87e1-2692-4262-f029-150cf601f2f5/197187195879.jpg/600x600bb.jpg",
+    "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/13/5a/89/135a893e-034b-1d11-71c8-a1e6f848d169/mzaf_12638001538529638232.plus.aac.p.m4a",
+    "youtubeId": "Dll6VJ2C7wo",
+    "youtubeUrl": "https://www.youtube.com/watch?v=Dll6VJ2C7wo",
+    "summary": "RAYE's Escapism, featuring 070 Shake, ranked third on the Official Charts UK year-end singles chart for 2023 and became her first UK No. 1 in January 2023.",
+    "originCountry": "United Kingdom",
+    "originCountryCode": "GB",
+    "originFlag": "🇬🇧",
+    "originContinent": "Europe",
+    "originArea": "United Kingdom",
+    "album": {
+      "title": "Escapism.",
+      "kind": "single",
+      "url": "https://music.apple.com/gb/album/escapism-single/1668176872?uo=4",
+      "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music113/v4/5e/4d/87/5e4d87e1-2692-4262-f029-150cf601f2f5/197187195879.jpg/600x600bb.jpg",
+      "releaseDate": "2022-10-12",
+      "trackCount": 1,
+      "tracks": [
+        {
+          "n": 1,
+          "title": "Escapism.",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/13/5a/89/135a893e-034b-1d11-71c8-a1e6f848d169/mzaf_12638001538529638232.plus.aac.p.m4a",
+          "durationMs": 272373
+        }
+      ]
+    }
+  },
+  {
     "id": "ng-2023-1",
     "year": 2023,
     "rank": 1,
@@ -11636,172 +13037,6 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
       "weeksAtNumberOne": null,
       "chart": "Official South African Charts (RiSA) / Billboard South Africa Songs",
       "sourceUrl": "https://en.wikipedia.org/wiki/Mnike",
-      "asOf": "2026-10-17"
-    }
-  },
-  {
-    "id": "sg-2023-1",
-    "year": 2023,
-    "rank": 1,
-    "title": "Seven",
-    "artist": "Jung Kook & Latto",
-    "chartName": "Singapore Top 30 Digital Streaming (RIAS)",
-    "chartAuthority": "Recording Industry Association Singapore (RIAS)",
-    "continent": "Asia",
-    "country": "Singapore",
-    "countryCode": "SG",
-    "countryFlag": "🇸🇬",
-    "sourceUrl": "https://en.wikipedia.org/wiki/List_of_number-one_songs_of_2023_(Singapore)",
-    "releaseDate": "2023-07-14",
-    "genres": [
-      "UK Garage",
-      "Pop"
-    ],
-    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/f8/7d/d2/f87dd27c-ef0c-7aef-3e17-f733d7b82c0a/196922597909_Cover.jpg/600x600bb.jpg",
-    "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/87/51/59/875159e2-7c6f-3901-5696-436a57629e17/mzaf_12581490760384518806.plus.aac.p.m4a",
-    "youtubeId": "QU9c0053UAU",
-    "youtubeUrl": "https://www.youtube.com/watch?v=QU9c0053UAU",
-    "weeksAtNumberOne": 17,
-    "summary": "Jungkook's \"Seven\" (featuring Latto) had the most weeks at number one (17) on the RIAS Top 30 Digital Streaming chart in 2023, ahead of Fifty Fifty's \"Cupid\" (14).",
-    "originCountry": "South Korea",
-    "originCountryCode": "KR",
-    "originFlag": "🇰🇷",
-    "originContinent": "Asia",
-    "originArea": "South Korea",
-    "album": {
-      "title": "GOLDEN",
-      "kind": "album",
-      "url": "https://music.apple.com/sg/album/golden/1709554767?uo=4",
-      "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/86/78/b4/8678b4b3-2341-7239-b6cb-bcfdaef0e4e0/196922656545_Cover.jpg/600x600bb.jpg",
-      "releaseDate": "2023-11-03",
-      "trackCount": 11,
-      "tracks": [
-        {
-          "n": 1,
-          "title": "3D",
-          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/ca/ee/fe/caeefe08-f09e-9cd0-f9e2-77f5518cf3ce/mzaf_17691372958688617192.plus.aac.p.m4a",
-          "durationMs": 201812
-        },
-        {
-          "n": 2,
-          "title": "Closer to You",
-          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/ba/41/ab/ba41abbe-495e-5ab2-9e8b-2efb57f892a3/mzaf_6133086150574701337.plus.aac.p.m4a",
-          "durationMs": 170995
-        },
-        {
-          "n": 3,
-          "title": "Seven (Explicit Ver.)",
-          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/62/92/d8/6292d809-a92e-79da-9022-3371353b0faa/mzaf_2149018772970192592.plus.aac.p.m4a",
-          "durationMs": 184400
-        },
-        {
-          "n": 4,
-          "title": "Standing Next to You",
-          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/17/e4/44/17e4443f-ccac-37e9-ae7e-c27652c8bb7c/mzaf_1611321858020850805.plus.aac.p.m4a",
-          "durationMs": 206020
-        },
-        {
-          "n": 5,
-          "title": "Yes or No",
-          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/44/1a/04/441a04d8-7b0e-608f-3ced-10f03338e787/mzaf_1625570654004973292.plus.aac.p.m4a",
-          "durationMs": 147557
-        },
-        {
-          "n": 6,
-          "title": "Please Don't Change",
-          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/47/ec/2e/47ec2e14-4d44-6d83-58ca-08ea7f61ce68/mzaf_15452966020393598021.plus.aac.p.m4a",
-          "durationMs": 146684
-        },
-        {
-          "n": 7,
-          "title": "Hate You",
-          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/56/db/0b/56db0ba4-26d7-bc67-4362-02a43320d592/mzaf_13801078494060384919.plus.aac.p.m4a",
-          "durationMs": 154237
-        },
-        {
-          "n": 8,
-          "title": "Somebody",
-          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/d4/3a/c5/d43ac51c-7d51-4041-a536-de17f34d6e4e/mzaf_11864053474731979586.plus.aac.p.m4a",
-          "durationMs": 168600
-        },
-        {
-          "n": 9,
-          "title": "Too Sad to Dance",
-          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/a3/2b/42/a32b4282-2014-d15b-aed6-4fd3fca79747/mzaf_5636328884743890706.plus.aac.p.m4a",
-          "durationMs": 175912
-        },
-        {
-          "n": 10,
-          "title": "Shot Glass of Tears",
-          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/eb/b6/1e/ebb61e8c-b8e3-61dc-634e-1a435b7d0e14/mzaf_18355828233238938530.plus.aac.p.m4a",
-          "durationMs": 167247
-        },
-        {
-          "n": 11,
-          "title": "Seven (Clean Ver.)",
-          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/87/fc/7c/87fc7ced-ace9-2ec4-2e8a-c9a64c841a15/mzaf_3965990725450677139.plus.aac.p.m4a",
-          "durationMs": 184160
-        }
-      ],
-      "stats": {
-        "certifications": [
-          {
-            "body": "Music Canada",
-            "level": "Platinum",
-            "region": "Canada",
-            "date": null
-          },
-          {
-            "body": "SNEP",
-            "level": "Gold",
-            "region": "France",
-            "date": null
-          },
-          {
-            "body": "FIMI",
-            "level": "Gold",
-            "region": "Italy",
-            "date": null
-          },
-          {
-            "body": "RMNZ",
-            "level": "Gold",
-            "region": "New Zealand",
-            "date": null
-          },
-          {
-            "body": "RIAJ",
-            "level": "Platinum",
-            "region": "Japan",
-            "date": null
-          },
-          {
-            "body": "KMCA",
-            "level": "2× Million",
-            "region": "South Korea",
-            "date": null
-          },
-          {
-            "body": "BPI",
-            "level": "Gold",
-            "region": "UK",
-            "date": null
-          }
-        ],
-        "units": "US debut 210,200 equivalent units (164,800 pure sales); worldwide 2.7 million units (IFPI, per Wikipedia); 244,000 US copies 2023",
-        "peak": {
-          "chart": "Billboard 200",
-          "position": 2
-        },
-        "sourceUrl": "https://en.wikipedia.org/wiki/Golden_(Jungkook_album)"
-      }
-    },
-    "songStats": {
-      "peak": 1,
-      "weeksOnChart": null,
-      "weeksAtNumberOne": 17,
-      "chart": "Singapore Top 30 Digital Streaming (RIAS)",
-      "sourceUrl": "https://en.wikipedia.org/wiki/Seven_(Jungkook_song)",
       "asOf": "2026-10-17"
     }
   },
@@ -12110,6 +13345,200 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
     }
   },
   {
+    "id": "jp-2023-3",
+    "year": 2023,
+    "rank": 3,
+    "title": "Kaijuu no Hanauta (怪獣の花唄)",
+    "artist": "Vaundy",
+    "chartName": "Billboard Japan Hot 100 Year-End",
+    "chartAuthority": "Billboard Japan / Oricon",
+    "continent": "Asia",
+    "country": "Japan",
+    "countryCode": "JP",
+    "countryFlag": "🇯🇵",
+    "sourceUrl": "https://www.billboard-japan.com/charts/detail?a=hot100_year&year=2023",
+    "releaseDate": "2020-05-27",
+    "genres": [
+      "J-Pop"
+    ],
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/8a/eb/75/8aeb7526-6fe4-a81a-5dce-c5d026e7f036/4547366655728.jpg/600x600bb.jpg",
+    "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/c5/9a/ec/c59aec70-94cd-1bac-884e-2cd8c1401abf/mzaf_17538645848549560384.plus.aac.p.m4a",
+    "youtubeId": "UM9XNpgrqVk",
+    "youtubeUrl": "https://www.youtube.com/watch?v=UM9XNpgrqVk",
+    "summary": "Vaundy's Kaijuu no Hanauta, from his 2020 debut album Strobo, ranks third on Billboard Japan's 2023 Hot 100 year-end list.",
+    "originCountry": "Japan",
+    "originCountryCode": "JP",
+    "originFlag": "🇯🇵",
+    "originContinent": "Asia",
+    "originArea": "Japan"
+  },
+  {
+    "id": "sg-2023-1",
+    "year": 2023,
+    "rank": 1,
+    "title": "Seven",
+    "artist": "Jung Kook & Latto",
+    "chartName": "Singapore Top 30 Digital Streaming (RIAS)",
+    "chartAuthority": "Recording Industry Association Singapore (RIAS)",
+    "continent": "Asia",
+    "country": "Singapore",
+    "countryCode": "SG",
+    "countryFlag": "🇸🇬",
+    "sourceUrl": "https://en.wikipedia.org/wiki/List_of_number-one_songs_of_2023_(Singapore)",
+    "releaseDate": "2023-07-14",
+    "genres": [
+      "UK Garage",
+      "Pop"
+    ],
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/f8/7d/d2/f87dd27c-ef0c-7aef-3e17-f733d7b82c0a/196922597909_Cover.jpg/600x600bb.jpg",
+    "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/87/51/59/875159e2-7c6f-3901-5696-436a57629e17/mzaf_12581490760384518806.plus.aac.p.m4a",
+    "youtubeId": "QU9c0053UAU",
+    "youtubeUrl": "https://www.youtube.com/watch?v=QU9c0053UAU",
+    "weeksAtNumberOne": 17,
+    "summary": "Jungkook's \"Seven\" (featuring Latto) had the most weeks at number one (17) on the RIAS Top 30 Digital Streaming chart in 2023, ahead of Fifty Fifty's \"Cupid\" (14).",
+    "originCountry": "South Korea",
+    "originCountryCode": "KR",
+    "originFlag": "🇰🇷",
+    "originContinent": "Asia",
+    "originArea": "South Korea",
+    "album": {
+      "title": "GOLDEN",
+      "kind": "album",
+      "url": "https://music.apple.com/sg/album/golden/1709554767?uo=4",
+      "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/86/78/b4/8678b4b3-2341-7239-b6cb-bcfdaef0e4e0/196922656545_Cover.jpg/600x600bb.jpg",
+      "releaseDate": "2023-11-03",
+      "trackCount": 11,
+      "tracks": [
+        {
+          "n": 1,
+          "title": "3D",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/ca/ee/fe/caeefe08-f09e-9cd0-f9e2-77f5518cf3ce/mzaf_17691372958688617192.plus.aac.p.m4a",
+          "durationMs": 201812
+        },
+        {
+          "n": 2,
+          "title": "Closer to You",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/ba/41/ab/ba41abbe-495e-5ab2-9e8b-2efb57f892a3/mzaf_6133086150574701337.plus.aac.p.m4a",
+          "durationMs": 170995
+        },
+        {
+          "n": 3,
+          "title": "Seven (Explicit Ver.)",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/62/92/d8/6292d809-a92e-79da-9022-3371353b0faa/mzaf_2149018772970192592.plus.aac.p.m4a",
+          "durationMs": 184400
+        },
+        {
+          "n": 4,
+          "title": "Standing Next to You",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/17/e4/44/17e4443f-ccac-37e9-ae7e-c27652c8bb7c/mzaf_1611321858020850805.plus.aac.p.m4a",
+          "durationMs": 206020
+        },
+        {
+          "n": 5,
+          "title": "Yes or No",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/44/1a/04/441a04d8-7b0e-608f-3ced-10f03338e787/mzaf_1625570654004973292.plus.aac.p.m4a",
+          "durationMs": 147557
+        },
+        {
+          "n": 6,
+          "title": "Please Don't Change",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/47/ec/2e/47ec2e14-4d44-6d83-58ca-08ea7f61ce68/mzaf_15452966020393598021.plus.aac.p.m4a",
+          "durationMs": 146684
+        },
+        {
+          "n": 7,
+          "title": "Hate You",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/56/db/0b/56db0ba4-26d7-bc67-4362-02a43320d592/mzaf_13801078494060384919.plus.aac.p.m4a",
+          "durationMs": 154237
+        },
+        {
+          "n": 8,
+          "title": "Somebody",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/d4/3a/c5/d43ac51c-7d51-4041-a536-de17f34d6e4e/mzaf_11864053474731979586.plus.aac.p.m4a",
+          "durationMs": 168600
+        },
+        {
+          "n": 9,
+          "title": "Too Sad to Dance",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/a3/2b/42/a32b4282-2014-d15b-aed6-4fd3fca79747/mzaf_5636328884743890706.plus.aac.p.m4a",
+          "durationMs": 175912
+        },
+        {
+          "n": 10,
+          "title": "Shot Glass of Tears",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/eb/b6/1e/ebb61e8c-b8e3-61dc-634e-1a435b7d0e14/mzaf_18355828233238938530.plus.aac.p.m4a",
+          "durationMs": 167247
+        },
+        {
+          "n": 11,
+          "title": "Seven (Clean Ver.)",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/87/fc/7c/87fc7ced-ace9-2ec4-2e8a-c9a64c841a15/mzaf_3965990725450677139.plus.aac.p.m4a",
+          "durationMs": 184160
+        }
+      ],
+      "stats": {
+        "certifications": [
+          {
+            "body": "Music Canada",
+            "level": "Platinum",
+            "region": "Canada",
+            "date": null
+          },
+          {
+            "body": "SNEP",
+            "level": "Gold",
+            "region": "France",
+            "date": null
+          },
+          {
+            "body": "FIMI",
+            "level": "Gold",
+            "region": "Italy",
+            "date": null
+          },
+          {
+            "body": "RMNZ",
+            "level": "Gold",
+            "region": "New Zealand",
+            "date": null
+          },
+          {
+            "body": "RIAJ",
+            "level": "Platinum",
+            "region": "Japan",
+            "date": null
+          },
+          {
+            "body": "KMCA",
+            "level": "2× Million",
+            "region": "South Korea",
+            "date": null
+          },
+          {
+            "body": "BPI",
+            "level": "Gold",
+            "region": "UK",
+            "date": null
+          }
+        ],
+        "units": "US debut 210,200 equivalent units (164,800 pure sales); worldwide 2.7 million units (IFPI, per Wikipedia); 244,000 US copies 2023",
+        "peak": {
+          "chart": "Billboard 200",
+          "position": 2
+        },
+        "sourceUrl": "https://en.wikipedia.org/wiki/Golden_(Jungkook_album)"
+      }
+    },
+    "songStats": {
+      "peak": 1,
+      "weeksOnChart": null,
+      "weeksAtNumberOne": 17,
+      "chart": "Singapore Top 30 Digital Streaming (RIAS)",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Seven_(Jungkook_song)",
+      "asOf": "2026-10-17"
+    }
+  },
+  {
     "id": "kr-2023-1",
     "year": 2023,
     "rank": 1,
@@ -12330,6 +13759,110 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
       "chart": "Circle Digital Chart",
       "sourceUrl": "https://en.wikipedia.org/wiki/Hype_Boy",
       "asOf": "2026-10-17"
+    }
+  },
+  {
+    "id": "kr-2023-3",
+    "year": 2023,
+    "rank": 3,
+    "title": "I AM",
+    "artist": "IVE (아이브)",
+    "chartName": "Circle Digital Chart (year-end)",
+    "chartAuthority": "Korea Music Content Association (KMCA)",
+    "continent": "Asia",
+    "country": "South Korea",
+    "countryCode": "KR",
+    "countryFlag": "🇰🇷",
+    "sourceUrl": "https://en.wikipedia.org/wiki/Circle_Digital_Chart",
+    "releaseDate": "2023-04-10",
+    "genres": [
+      "K-Pop"
+    ],
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/3a/23/b7/3a23b7f4-0b43-df9d-b7e4-14f992443324/197188335663.jpg/600x600bb.jpg",
+    "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/7d/58/dc/7d58dcfe-20ae-643e-d160-2bbb49628383/mzaf_15653119750983230833.plus.aac.p.m4a",
+    "youtubeId": "6ZUIwj3FgUY",
+    "youtubeUrl": "https://www.youtube.com/watch?v=6ZUIwj3FgUY",
+    "summary": "IVE's I AM, lead single of I've IVE (April 2023), ranked third on the 2023 Circle Digital Chart year-end list.",
+    "originCountry": "South Korea",
+    "originCountryCode": "KR",
+    "originFlag": "🇰🇷",
+    "originContinent": "Asia",
+    "originArea": "South Korea",
+    "album": {
+      "title": "I've IVE",
+      "kind": "album",
+      "url": "https://music.apple.com/us/album/ive-ive/1680047093?uo=4",
+      "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/3a/23/b7/3a23b7f4-0b43-df9d-b7e4-14f992443324/197188335663.jpg/600x600bb.jpg",
+      "releaseDate": "2023-04-10",
+      "trackCount": 11,
+      "tracks": [
+        {
+          "n": 1,
+          "title": "Blue Blood",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/0f/47/d2/0f47d200-f390-7e7d-bc17-64ffb6a0e200/mzaf_909386863736769486.plus.aac.p.m4a",
+          "durationMs": 167547
+        },
+        {
+          "n": 2,
+          "title": "I AM",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/7d/58/dc/7d58dcfe-20ae-643e-d160-2bbb49628383/mzaf_15653119750983230833.plus.aac.p.m4a",
+          "durationMs": 183853
+        },
+        {
+          "n": 3,
+          "title": "Kitsch",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/5a/27/b1/5a27b159-e3fb-9d6a-f1df-658e3a5c74bf/mzaf_7211557417987749745.plus.aac.p.m4a",
+          "durationMs": 195440
+        },
+        {
+          "n": 4,
+          "title": "Lips",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/72/7a/e8/727ae848-95c9-ce96-87f7-8bbeb163ad35/mzaf_16943777619710069669.plus.aac.p.m4a",
+          "durationMs": 181400
+        },
+        {
+          "n": 5,
+          "title": "Heroine",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/b3/2c/fc/b32cfc15-6672-9978-a33c-4d174126bb6b/mzaf_13822990586496135275.plus.aac.p.m4a",
+          "durationMs": 171467
+        },
+        {
+          "n": 6,
+          "title": "Mine",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/03/44/70/034470f7-1122-f2c6-bb1e-59c7d5256f8a/mzaf_3688039570806728546.plus.aac.p.m4a",
+          "durationMs": 190427
+        },
+        {
+          "n": 7,
+          "title": "Hypnosis",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/2f/2c/a6/2f2ca63b-c297-391c-8103-f4634937315c/mzaf_9243794808124748986.plus.aac.p.m4a",
+          "durationMs": 146893
+        },
+        {
+          "n": 8,
+          "title": "NOT YOUR GIRL",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/10/1d/6e/101d6e0d-1037-b82e-5c8d-dcb743164746/mzaf_927660043488076658.plus.aac.p.m4a",
+          "durationMs": 202107
+        },
+        {
+          "n": 9,
+          "title": "Next Page",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/07/8e/44/078e4407-05cc-4d7e-aeef-5891166b1152/mzaf_5685460747344515826.plus.aac.p.m4a",
+          "durationMs": 199227
+        },
+        {
+          "n": 10,
+          "title": "Cherish",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/61/ca/ff/61caffb9-b654-b883-b43f-3b245a60de87/mzaf_14259360680288176417.plus.aac.p.m4a",
+          "durationMs": 194680
+        },
+        {
+          "n": 11,
+          "title": "Shine With Me",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/16/0f/d1/160fd120-4c15-6c81-df38-029edc8e5174/mzaf_4858018808601460565.plus.aac.p.m4a",
+          "durationMs": 224747
+        }
+      ]
     }
   },
   {
@@ -14542,6 +16075,157 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
     }
   },
   {
+    "id": "gb-2022-2",
+    "year": 2022,
+    "rank": 2,
+    "title": "Bad Habits",
+    "artist": "Ed Sheeran",
+    "chartName": "Official Charts UK Singles",
+    "chartAuthority": "Official Charts Company",
+    "continent": "Europe",
+    "country": "United Kingdom",
+    "countryCode": "GB",
+    "countryFlag": "🇬🇧",
+    "sourceUrl": "https://www.officialcharts.com/charts/end-of-year-singles-chart/20221231/37501/",
+    "releaseDate": "2021-06-25",
+    "genres": [
+      "Dance-pop",
+      "Synth-pop"
+    ],
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/63/45/cc/6345cc98-aa83-ad6e-e3c9-1a36ff9838a4/190296614316.jpg/600x600bb.jpg",
+    "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/f2/08/5d/f2085d7c-a4d0-451b-4d1d-ccc3057ab6e2/mzaf_11771336260379351390.plus.aac.p.m4a",
+    "youtubeId": "orJSJGHjBLI",
+    "youtubeUrl": "https://www.youtube.com/watch?v=orJSJGHjBLI",
+    "summary": "Ed Sheeran's Bad Habits, the UK's biggest song of 2021, remained so popular that it finished second on the Official Charts UK year-end singles chart for 2022.",
+    "originCountry": "United Kingdom",
+    "originCountryCode": "GB",
+    "originFlag": "🇬🇧",
+    "originContinent": "Europe",
+    "originArea": "United Kingdom",
+    "album": {
+      "title": "=",
+      "kind": "album",
+      "url": "https://music.apple.com/gb/album/1581087024?uo=4",
+      "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/c5/d8/c6/c5d8c675-63e3-6632-33db-2401eabe574d/190296491412.jpg/600x600bb.jpg",
+      "releaseDate": "2021-10-29",
+      "trackCount": 14,
+      "tracks": [
+        {
+          "n": 1,
+          "title": "Tides",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/f2/7c/34/f27c344f-989e-507c-efcd-b74c03a51faf/mzaf_326673603382181097.plus.aac.p.m4a",
+          "durationMs": 195760
+        },
+        {
+          "n": 2,
+          "title": "Shivers",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/a8/9f/a5/a89fa5e9-8a3b-77bb-e081-866067d3f213/mzaf_13889707114574366771.plus.aac.p.m4a",
+          "durationMs": 207853
+        },
+        {
+          "n": 3,
+          "title": "First Times",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/69/70/4b/69704b4b-fdd6-b9f1-74f2-86f129ba09b2/mzaf_13164912794637483707.plus.aac.p.m4a",
+          "durationMs": 185853
+        },
+        {
+          "n": 4,
+          "title": "Bad Habits",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/25/33/48/253348ea-6ce1-888c-cce7-458809b4eb1d/mzaf_12920733111591747364.plus.aac.p.m4a",
+          "durationMs": 230747
+        },
+        {
+          "n": 5,
+          "title": "Overpass Graffiti",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/68/75/06/6875061b-3cc4-b1f2-d607-78f686ad9471/mzaf_14717825274781732145.plus.aac.p.m4a",
+          "durationMs": 236907
+        },
+        {
+          "n": 6,
+          "title": "The Joker And The Queen",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/07/5b/79/075b79fe-c65c-f554-bcf5-21ed1b6b5fbc/mzaf_9957706621758842811.plus.aac.p.m4a",
+          "durationMs": 185587
+        },
+        {
+          "n": 7,
+          "title": "Leave Your Life",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/de/fc/26/defc2669-4f37-58ff-9723-7ea3e649f3bb/mzaf_640820947760075655.plus.aac.p.m4a",
+          "durationMs": 223867
+        },
+        {
+          "n": 8,
+          "title": "Collide",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/c4/4b/99/c44b9959-383d-7fd9-c59c-8d0c2c1a5aa3/mzaf_6615348846987732518.plus.aac.p.m4a",
+          "durationMs": 210213
+        },
+        {
+          "n": 9,
+          "title": "2step",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/3c/57/73/3c5773de-5186-eb37-5dbc-3cdfe5f71129/mzaf_8769955983632520228.plus.aac.p.m4a",
+          "durationMs": 153627
+        },
+        {
+          "n": 10,
+          "title": "Stop The Rain",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/4e/91/46/4e9146f4-0f2b-962d-9df8-fb5e5a1e56a1/mzaf_5091300273577203434.plus.aac.p.m4a",
+          "durationMs": 203493
+        },
+        {
+          "n": 11,
+          "title": "Love In Slow Motion",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/ab/0a/87/ab0a879b-7b38-3abc-4aca-898e98ad05de/mzaf_7305571802023006635.plus.aac.p.m4a",
+          "durationMs": 190933
+        },
+        {
+          "n": 12,
+          "title": "Visiting Hours",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/54/ea/6a/54ea6abc-74c8-49a6-dba3-b7a92b846ead/mzaf_4097476290466046836.plus.aac.p.m4a",
+          "durationMs": 215507
+        },
+        {
+          "n": 13,
+          "title": "Sandman",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/d9/cc/e1/d9cce1a9-4e94-d087-5606-29ff8c8d3642/mzaf_14987188788437275848.plus.aac.p.m4a",
+          "durationMs": 259333
+        },
+        {
+          "n": 14,
+          "title": "Be Right Now",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/e2/95/4a/e2954af4-a69d-8cbc-97b7-d3a223490f4b/mzaf_16661786544139664034.plus.aac.p.m4a",
+          "durationMs": 211080
+        }
+      ]
+    }
+  },
+  {
+    "id": "gb-2022-3",
+    "year": 2022,
+    "rank": 3,
+    "title": "Peru",
+    "artist": "Fireboy DML & Ed Sheeran",
+    "chartName": "Official Charts UK Singles",
+    "chartAuthority": "Official Charts Company",
+    "continent": "Europe",
+    "country": "United Kingdom",
+    "countryCode": "GB",
+    "countryFlag": "🇬🇧",
+    "sourceUrl": "https://www.officialcharts.com/charts/end-of-year-singles-chart/20221231/37501/",
+    "releaseDate": "2021-07-20",
+    "genres": [
+      "Afrobeats"
+    ],
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/b9/a8/79/b9a87900-13cb-5655-2ac8-64191ee6ec5d/194690720895_cover.jpg/600x600bb.jpg",
+    "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/0a/43/e9/0a43e979-a23f-b7cb-7d39-1b82994d5010/mzaf_39468596823542521.plus.aac.p.m4a",
+    "youtubeId": "pekzpzNCNDQ",
+    "youtubeUrl": "https://www.youtube.com/watch?v=pekzpzNCNDQ",
+    "summary": "Fireboy DML's Peru (the Ed Sheeran version arrived in December 2021) was third on the Official Charts UK year-end singles chart for 2022, peaking at No. 2.",
+    "originCountry": "Nigeria",
+    "originCountryCode": "NG",
+    "originFlag": "🇳🇬",
+    "originContinent": "Africa",
+    "originArea": "Lagos"
+  },
+  {
     "id": "ng-2022-1",
     "year": 2022,
     "rank": 1,
@@ -14759,172 +16443,6 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
       "weeksAtNumberOne": null,
       "chart": "RiSA chart (South Africa)",
       "sourceUrl": "https://en.wikipedia.org/wiki/Sete_(song)",
-      "asOf": "2026-10-17"
-    }
-  },
-  {
-    "id": "sg-2022-1",
-    "year": 2022,
-    "rank": 1,
-    "title": "Ghost",
-    "artist": "Justin Bieber",
-    "chartName": "Singapore Top 30 Digital Streaming (RIAS)",
-    "chartAuthority": "Recording Industry Association Singapore (RIAS)",
-    "continent": "Asia",
-    "country": "Singapore",
-    "countryCode": "SG",
-    "countryFlag": "🇸🇬",
-    "sourceUrl": "https://en.wikipedia.org/wiki/List_of_number-one_songs_of_2022_(Singapore)",
-    "releaseDate": "2021-09-10",
-    "genres": [
-      "Piano Pop",
-      "R&B"
-    ],
-    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/f5/7a/9e/f57a9e6a-31c8-0784-dfbd-4a0120bfd4af/21UMGIM17517.rgb.jpg/600x600bb.jpg",
-    "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/26/5e/56/265e5608-89e3-57bb-1a75-76cd713c6c9e/mzaf_6189811643293728539.plus.aac.p.m4a",
-    "youtubeId": "Fp8msa5uYsc",
-    "youtubeUrl": "https://www.youtube.com/watch?v=Fp8msa5uYsc",
-    "weeksAtNumberOne": 11,
-    "summary": "Justin Bieber's \"Ghost\" had the most weeks at number one (11, Jan-Mar 2022) on the RIAS Top 30 Digital Streaming chart in 2022, ahead of Joji's \"Glimpse of Us\" (10) and Harry Styles' \"As It Was\" (9).",
-    "originCountry": "Canada",
-    "originCountryCode": "CA",
-    "originFlag": "🇨🇦",
-    "originContinent": "North America",
-    "originArea": "Canada",
-    "album": {
-      "title": "Justice",
-      "kind": "album",
-      "url": "https://music.apple.com/sg/album/justice/1556175419?uo=4",
-      "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/f5/7a/9e/f57a9e6a-31c8-0784-dfbd-4a0120bfd4af/21UMGIM17517.rgb.jpg/600x600bb.jpg",
-      "releaseDate": "2021-03-19",
-      "trackCount": 16,
-      "tracks": [
-        {
-          "n": 1,
-          "title": "2 Much",
-          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/5d/e3/29/5de32903-da70-2db2-1f65-a51e4ecf737a/mzaf_2342698462182222616.plus.aac.p.m4a",
-          "durationMs": 152796
-        },
-        {
-          "n": 2,
-          "title": "Deserve You",
-          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/c8/6b/5b/c86b5b3b-a774-bdb1-548d-eb2b79673245/mzaf_9846470667675659876.plus.aac.p.m4a",
-          "durationMs": 187239
-        },
-        {
-          "n": 3,
-          "title": "As I Am (feat. Khalid)",
-          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/c3/3a/02/c33a0201-6683-ae0e-7517-24b33f3a38b9/mzaf_13288089581074293504.plus.aac.p.m4a",
-          "durationMs": 174406
-        },
-        {
-          "n": 4,
-          "title": "Off My Face",
-          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/81/e5/be/81e5bee5-7496-9898-40f5-8074237a681d/mzaf_13416389483171575605.plus.aac.p.m4a",
-          "durationMs": 156468
-        },
-        {
-          "n": 5,
-          "title": "Holy (feat. Chance the Rapper)",
-          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/9a/00/90/9a009051-2f77-0765-bd41-5cb7fd1d30cf/mzaf_5668158147040670278.plus.aac.p.m4a",
-          "durationMs": 212093
-        },
-        {
-          "n": 6,
-          "title": "Unstable (feat. The Kid LAROI)",
-          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/e1/2e/9a/e12e9a9d-6dc1-735e-2ce5-f1d45e8ca23b/mzaf_4716692252568031804.plus.aac.p.m4a",
-          "durationMs": 158324
-        },
-        {
-          "n": 7,
-          "title": "MLK Interlude",
-          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/18/a3/67/18a367c8-e93a-4d71-4c1c-28171bf9416c/mzaf_17982326206278582136.plus.aac.p.m4a",
-          "durationMs": 104008
-        },
-        {
-          "n": 8,
-          "title": "Die For You (feat. Dominic Fike)",
-          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/01/b8/a9/01b8a9af-3050-430a-8051-169227ce1abc/mzaf_9332947533877757103.plus.aac.p.m4a",
-          "durationMs": 198426
-        },
-        {
-          "n": 9,
-          "title": "Hold On",
-          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/51/cd/9f/51cd9f46-869b-ecec-c523-161d5bd7ce15/mzaf_11971956107966947364.plus.aac.p.m4a",
-          "durationMs": 170813
-        },
-        {
-          "n": 10,
-          "title": "Somebody",
-          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/3f/3a/d3/3f3ad3c6-c9e4-6910-6bf2-3c0c1c2f23ae/mzaf_12504643382611656598.plus.aac.p.m4a",
-          "durationMs": 179415
-        },
-        {
-          "n": 11,
-          "title": "Ghost",
-          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/26/5e/56/265e5608-89e3-57bb-1a75-76cd713c6c9e/mzaf_6189811643293728539.plus.aac.p.m4a",
-          "durationMs": 153190
-        },
-        {
-          "n": 12,
-          "title": "Peaches (feat. Daniel Caesar & GIVĒON)",
-          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/e8/3d/98/e83d9822-5b19-25bd-0b68-17144b7ce9a5/mzaf_9579216489030724824.plus.aac.p.m4a",
-          "durationMs": 198082
-        },
-        {
-          "n": 13,
-          "title": "Love You Different (feat. Beam)",
-          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/4e/22/05/4e220596-71c5-5e2e-07b4-235e2e9e1108/mzaf_292713625516901260.plus.aac.p.m4a",
-          "durationMs": 186696
-        },
-        {
-          "n": 14,
-          "title": "Loved By You (feat. Burna Boy)",
-          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/04/af/67/04af674c-a058-442b-5f5e-043dba156d8c/mzaf_13365456434123839039.plus.aac.p.m4a",
-          "durationMs": 159250
-        },
-        {
-          "n": 15,
-          "title": "Anyone",
-          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/8a/70/35/8a7035b1-4ca0-bad5-ad74-e5d16ea15ef2/mzaf_5535867644959422454.plus.aac.p.m4a",
-          "durationMs": 190779
-        },
-        {
-          "n": 16,
-          "title": "Lonely",
-          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/47/0b/a6/470ba662-1f69-5c35-739b-dde45a45ef9a/mzaf_13801429552612521842.plus.aac.p.m4a",
-          "durationMs": 149190
-        }
-      ],
-      "stats": {
-        "certifications": [
-          {
-            "body": "RIAA",
-            "level": "2× Platinum",
-            "region": "US",
-            "date": null
-          },
-          {
-            "body": "ARIA",
-            "level": "2× Platinum",
-            "region": "AU",
-            "date": null
-          }
-        ],
-        "units": "154,000 album-equivalent units first week (US)",
-        "peak": {
-          "chart": "Billboard 200",
-          "position": 1
-        },
-        "sourceUrl": "https://en.wikipedia.org/wiki/Justice_(Justin_Bieber_album)"
-      }
-    },
-    "songStats": {
-      "peak": 1,
-      "weeksOnChart": null,
-      "weeksAtNumberOne": 11,
-      "chart": "Singapore Top 30 Digital Streaming (RIAS)",
-      "sourceUrl": "https://en.wikipedia.org/wiki/Ghost_(Justin_Bieber_song)",
       "asOf": "2026-10-17"
     }
   },
@@ -15230,6 +16748,282 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
     }
   },
   {
+    "id": "jp-2022-3",
+    "year": 2022,
+    "rank": 3,
+    "title": "Betelgeuse (ベテルギウス)",
+    "artist": "Yuuri (優里)",
+    "chartName": "Billboard Japan Hot 100 Year-End",
+    "chartAuthority": "Billboard Japan / Oricon",
+    "continent": "Asia",
+    "country": "Japan",
+    "countryCode": "JP",
+    "countryFlag": "🇯🇵",
+    "sourceUrl": "https://www.billboard-japan.com/charts/detail?a=hot100_year&year=2022",
+    "releaseDate": "2021-11-04",
+    "genres": [
+      "J-Pop"
+    ],
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/f1/d5/61/f1d561dc-7fab-68fa-39ac-4440d7a27940/4547366533842.jpg/600x600bb.jpg",
+    "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/82/87/4e/82874edb-a9c8-fbd3-d6ce-f47c7f2f3a99/mzaf_1692851003531218286.plus.aac.p.m4a",
+    "youtubeId": "shXIN1V4Was",
+    "youtubeUrl": "https://www.youtube.com/watch?v=shXIN1V4Was",
+    "summary": "Yuuri's Betelgeuse, a drama theme released digitally in November 2021, ranks third on Billboard Japan's 2022 Hot 100 year-end list; his Dry Flower is fifth.",
+    "originCountry": "Japan",
+    "originCountryCode": "JP",
+    "originFlag": "🇯🇵",
+    "originContinent": "Asia",
+    "originArea": "Japan",
+    "album": {
+      "title": "響",
+      "kind": "album",
+      "url": "https://music.apple.com/us/album/%E9%9F%BF/1715887692?uo=4",
+      "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/f6/7f/d2/f67fd217-9888-b19e-cec8-0902d8eb980e/4547366656039.jpg/600x600bb.jpg",
+      "releaseDate": "2023-11-29",
+      "trackCount": 12,
+      "tracks": [
+        {
+          "n": 1,
+          "title": "Billimillion -Orchestral Arrangement Version-",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/8a/b7/df/8ab7df26-e3c4-5ad7-5b45-284ca0744ad6/mzaf_10404616681869264015.plus.aac.p.m4a",
+          "durationMs": 238347
+        },
+        {
+          "n": 2,
+          "title": "Betelgeuse -Orchestral Arrangement Version-",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/77/89/3e/77893e28-0129-56d9-7590-5a2239e7d230/mzaf_4702062188222628653.plus.aac.p.m4a",
+          "durationMs": 233960
+        },
+        {
+          "n": 3,
+          "title": "Kakurenbo -Orchestral Arrangement Version-",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/33/a2/0b/33a20b41-fa3f-d2a6-a559-3970035a5e87/mzaf_16961596910731111731.plus.aac.p.m4a",
+          "durationMs": 277547
+        },
+        {
+          "n": 4,
+          "title": "Dried Flowers -Orchestral Arrangement Version-",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/9e/bf/32/9ebf3297-98f3-a37b-5832-b0df816a7363/mzaf_7600642378666513074.plus.aac.p.m4a",
+          "durationMs": 293067
+        },
+        {
+          "n": 5,
+          "title": "Adam and Eve -Orchestral Arrangement Version-",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/31/34/ed/3134ed66-6eb8-b6cd-3fbd-1cbd8198eafa/mzaf_7818073048149556122.plus.aac.p.m4a",
+          "durationMs": 227587
+        },
+        {
+          "n": 6,
+          "title": "Leo -Orchestral Arrangement Version-",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/b7/a2/e9/b7a2e94e-9cd0-64d9-6a3b-9f1f23267d8f/mzaf_16622497901113709010.plus.aac.p.m4a",
+          "durationMs": 245587
+        },
+        {
+          "n": 7,
+          "title": "Astronauts -Orchestral Arrangement Version-",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/1e/e9/3c/1ee93cc8-da71-0384-d5ad-6d1bb216f338/mzaf_2414946224581223955.plus.aac.p.m4a",
+          "durationMs": 188400
+        },
+        {
+          "n": 8,
+          "title": "Galileo falls in love -Orchestral Arrangement Version-",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/6e/85/9f/6e859f16-bd65-3eb0-2479-fe5233c716ef/mzaf_16879058900899065223.plus.aac.p.m4a",
+          "durationMs": 262200
+        },
+        {
+          "n": 9,
+          "title": "Kagome -Orchestral Arrangement Version-",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/97/da/ce/97dacea1-e6c4-709c-3a54-aa34c60431e2/mzaf_2951277639462993955.plus.aac.p.m4a",
+          "durationMs": 270107
+        },
+        {
+          "n": 10,
+          "title": "Peter Pan -Orchestral Arrangement Version-",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/ef/f9/93/eff993ce-cef6-5c04-f6c9-f442f1829bf0/mzaf_13415394936408373744.plus.aac.p.m4a",
+          "durationMs": 256960
+        },
+        {
+          "n": 11,
+          "title": "Wo -Orchestral Arrangement Version-",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/67/47/90/67479097-a45f-fbae-2503-1a6617330129/mzaf_4753437611558344055.plus.aac.p.m4a",
+          "durationMs": 173067
+        },
+        {
+          "n": 12,
+          "title": "Merry-go-round -Orchestral Arrangement Version-",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/d0/18/5e/d0185e7d-03ff-4405-d77f-e1d53a2c1ad4/mzaf_11781717869701773096.plus.aac.p.m4a",
+          "durationMs": 243800
+        }
+      ]
+    }
+  },
+  {
+    "id": "sg-2022-1",
+    "year": 2022,
+    "rank": 1,
+    "title": "Ghost",
+    "artist": "Justin Bieber",
+    "chartName": "Singapore Top 30 Digital Streaming (RIAS)",
+    "chartAuthority": "Recording Industry Association Singapore (RIAS)",
+    "continent": "Asia",
+    "country": "Singapore",
+    "countryCode": "SG",
+    "countryFlag": "🇸🇬",
+    "sourceUrl": "https://en.wikipedia.org/wiki/List_of_number-one_songs_of_2022_(Singapore)",
+    "releaseDate": "2021-09-10",
+    "genres": [
+      "Piano Pop",
+      "R&B"
+    ],
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/f5/7a/9e/f57a9e6a-31c8-0784-dfbd-4a0120bfd4af/21UMGIM17517.rgb.jpg/600x600bb.jpg",
+    "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/26/5e/56/265e5608-89e3-57bb-1a75-76cd713c6c9e/mzaf_6189811643293728539.plus.aac.p.m4a",
+    "youtubeId": "Fp8msa5uYsc",
+    "youtubeUrl": "https://www.youtube.com/watch?v=Fp8msa5uYsc",
+    "weeksAtNumberOne": 11,
+    "summary": "Justin Bieber's \"Ghost\" had the most weeks at number one (11, Jan-Mar 2022) on the RIAS Top 30 Digital Streaming chart in 2022, ahead of Joji's \"Glimpse of Us\" (10) and Harry Styles' \"As It Was\" (9).",
+    "originCountry": "Canada",
+    "originCountryCode": "CA",
+    "originFlag": "🇨🇦",
+    "originContinent": "North America",
+    "originArea": "Canada",
+    "album": {
+      "title": "Justice",
+      "kind": "album",
+      "url": "https://music.apple.com/sg/album/justice/1556175419?uo=4",
+      "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/f5/7a/9e/f57a9e6a-31c8-0784-dfbd-4a0120bfd4af/21UMGIM17517.rgb.jpg/600x600bb.jpg",
+      "releaseDate": "2021-03-19",
+      "trackCount": 16,
+      "tracks": [
+        {
+          "n": 1,
+          "title": "2 Much",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/5d/e3/29/5de32903-da70-2db2-1f65-a51e4ecf737a/mzaf_2342698462182222616.plus.aac.p.m4a",
+          "durationMs": 152796
+        },
+        {
+          "n": 2,
+          "title": "Deserve You",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/c8/6b/5b/c86b5b3b-a774-bdb1-548d-eb2b79673245/mzaf_9846470667675659876.plus.aac.p.m4a",
+          "durationMs": 187239
+        },
+        {
+          "n": 3,
+          "title": "As I Am (feat. Khalid)",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/c3/3a/02/c33a0201-6683-ae0e-7517-24b33f3a38b9/mzaf_13288089581074293504.plus.aac.p.m4a",
+          "durationMs": 174406
+        },
+        {
+          "n": 4,
+          "title": "Off My Face",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/81/e5/be/81e5bee5-7496-9898-40f5-8074237a681d/mzaf_13416389483171575605.plus.aac.p.m4a",
+          "durationMs": 156468
+        },
+        {
+          "n": 5,
+          "title": "Holy (feat. Chance the Rapper)",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/9a/00/90/9a009051-2f77-0765-bd41-5cb7fd1d30cf/mzaf_5668158147040670278.plus.aac.p.m4a",
+          "durationMs": 212093
+        },
+        {
+          "n": 6,
+          "title": "Unstable (feat. The Kid LAROI)",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/e1/2e/9a/e12e9a9d-6dc1-735e-2ce5-f1d45e8ca23b/mzaf_4716692252568031804.plus.aac.p.m4a",
+          "durationMs": 158324
+        },
+        {
+          "n": 7,
+          "title": "MLK Interlude",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/18/a3/67/18a367c8-e93a-4d71-4c1c-28171bf9416c/mzaf_17982326206278582136.plus.aac.p.m4a",
+          "durationMs": 104008
+        },
+        {
+          "n": 8,
+          "title": "Die For You (feat. Dominic Fike)",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/01/b8/a9/01b8a9af-3050-430a-8051-169227ce1abc/mzaf_9332947533877757103.plus.aac.p.m4a",
+          "durationMs": 198426
+        },
+        {
+          "n": 9,
+          "title": "Hold On",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/51/cd/9f/51cd9f46-869b-ecec-c523-161d5bd7ce15/mzaf_11971956107966947364.plus.aac.p.m4a",
+          "durationMs": 170813
+        },
+        {
+          "n": 10,
+          "title": "Somebody",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/3f/3a/d3/3f3ad3c6-c9e4-6910-6bf2-3c0c1c2f23ae/mzaf_12504643382611656598.plus.aac.p.m4a",
+          "durationMs": 179415
+        },
+        {
+          "n": 11,
+          "title": "Ghost",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/26/5e/56/265e5608-89e3-57bb-1a75-76cd713c6c9e/mzaf_6189811643293728539.plus.aac.p.m4a",
+          "durationMs": 153190
+        },
+        {
+          "n": 12,
+          "title": "Peaches (feat. Daniel Caesar & GIVĒON)",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/e8/3d/98/e83d9822-5b19-25bd-0b68-17144b7ce9a5/mzaf_9579216489030724824.plus.aac.p.m4a",
+          "durationMs": 198082
+        },
+        {
+          "n": 13,
+          "title": "Love You Different (feat. Beam)",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/4e/22/05/4e220596-71c5-5e2e-07b4-235e2e9e1108/mzaf_292713625516901260.plus.aac.p.m4a",
+          "durationMs": 186696
+        },
+        {
+          "n": 14,
+          "title": "Loved By You (feat. Burna Boy)",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/04/af/67/04af674c-a058-442b-5f5e-043dba156d8c/mzaf_13365456434123839039.plus.aac.p.m4a",
+          "durationMs": 159250
+        },
+        {
+          "n": 15,
+          "title": "Anyone",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/8a/70/35/8a7035b1-4ca0-bad5-ad74-e5d16ea15ef2/mzaf_5535867644959422454.plus.aac.p.m4a",
+          "durationMs": 190779
+        },
+        {
+          "n": 16,
+          "title": "Lonely",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/47/0b/a6/470ba662-1f69-5c35-739b-dde45a45ef9a/mzaf_13801429552612521842.plus.aac.p.m4a",
+          "durationMs": 149190
+        }
+      ],
+      "stats": {
+        "certifications": [
+          {
+            "body": "RIAA",
+            "level": "2× Platinum",
+            "region": "US",
+            "date": null
+          },
+          {
+            "body": "ARIA",
+            "level": "2× Platinum",
+            "region": "AU",
+            "date": null
+          }
+        ],
+        "units": "154,000 album-equivalent units first week (US)",
+        "peak": {
+          "chart": "Billboard 200",
+          "position": 1
+        },
+        "sourceUrl": "https://en.wikipedia.org/wiki/Justice_(Justin_Bieber_album)"
+      }
+    },
+    "songStats": {
+      "peak": 1,
+      "weeksOnChart": null,
+      "weeksAtNumberOne": 11,
+      "chart": "Singapore Top 30 Digital Streaming (RIAS)",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Ghost_(Justin_Bieber_song)",
+      "asOf": "2026-10-17"
+    }
+  },
+  {
     "id": "kr-2022-1",
     "year": 2022,
     "rank": 1,
@@ -15431,6 +17225,30 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
       "sourceUrl": "https://en.wikipedia.org/wiki/Tomboy_((G)I-dle_song)",
       "asOf": "2026-10-17"
     }
+  },
+  {
+    "id": "kr-2022-3",
+    "year": 2022,
+    "rank": 3,
+    "title": "Drunken Confession (취중고백)",
+    "artist": "Kim Min-seok (김민석)",
+    "chartName": "Circle Digital Chart (year-end)",
+    "chartAuthority": "Korea Music Content Association (KMCA)",
+    "continent": "Asia",
+    "country": "South Korea",
+    "countryCode": "KR",
+    "countryFlag": "🇰🇷",
+    "sourceUrl": "https://en.wikipedia.org/wiki/Circle_Digital_Chart",
+    "releaseDate": "2021-12-19",
+    "genres": [
+      "K-Pop",
+      "Ballad"
+    ],
+    "artworkUrl": "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=800&q=80",
+    "audioUrl": "",
+    "youtubeId": "VMQl78z1DiY",
+    "youtubeUrl": "https://www.youtube.com/watch?v=VMQl78z1DiY",
+    "summary": "Melomance vocalist Kim Min-seok's remake of Feel's 2005 song, released in December 2021, ranked third on the 2022 Circle Digital Chart year-end list."
   },
   {
     "id": "tw-2022-1",
@@ -17595,6 +19413,113 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
     }
   },
   {
+    "id": "gb-2021-3",
+    "year": 2021,
+    "rank": 3,
+    "title": "drivers license",
+    "artist": "Olivia Rodrigo",
+    "chartName": "Official Charts UK Singles",
+    "chartAuthority": "Official Charts Company",
+    "continent": "Europe",
+    "country": "United Kingdom",
+    "countryCode": "GB",
+    "countryFlag": "🇬🇧",
+    "sourceUrl": "https://www.officialcharts.com/charts/end-of-year-singles-chart/20211231/37501/",
+    "releaseDate": "2021-01-08",
+    "genres": [
+      "Pop",
+      "Power ballad",
+      "Indie pop"
+    ],
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/02/ed/8c/02ed8cab-c089-2fdd-7ce6-ab334a9a4e19/21UMGIM26093.rgb.jpg/600x600bb.jpg",
+    "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/36/62/61/366261be-0996-d73d-de6f-03417867c800/mzaf_8201528327761821135.plus.aac.p.m4a",
+    "youtubeId": "ZmDBbnmKpqQ",
+    "youtubeUrl": "https://www.youtube.com/watch?v=ZmDBbnmKpqQ",
+    "weeksAtNumberOne": 9,
+    "summary": "Olivia Rodrigo's debut single drivers license ranked third on the Official Charts UK year-end singles chart for 2021, after debuting at No. 1 and spending nine weeks there.",
+    "originCountry": "United States",
+    "originCountryCode": "US",
+    "originFlag": "🇺🇸",
+    "originContinent": "North America",
+    "originArea": "United States",
+    "album": {
+      "title": "SOUR",
+      "kind": "album",
+      "url": "https://music.apple.com/gb/album/sour/1560734944?uo=4",
+      "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/02/ed/8c/02ed8cab-c089-2fdd-7ce6-ab334a9a4e19/21UMGIM26093.rgb.jpg/600x600bb.jpg",
+      "releaseDate": "2021-05-21",
+      "trackCount": 11,
+      "tracks": [
+        {
+          "n": 1,
+          "title": "brutal",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/bd/cb/b8/bdcbb81f-6d71-3cde-7424-2c84c2350a4c/mzaf_8269166269018925457.plus.aac.p.m4a",
+          "durationMs": 143755
+        },
+        {
+          "n": 2,
+          "title": "traitor",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/c6/5b/81/c65b81ee-f32a-6a16-d218-cfe7e28cd22d/mzaf_11413515323714826263.plus.aac.p.m4a",
+          "durationMs": 229220
+        },
+        {
+          "n": 3,
+          "title": "drivers license",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/36/62/61/366261be-0996-d73d-de6f-03417867c800/mzaf_8201528327761821135.plus.aac.p.m4a",
+          "durationMs": 242014
+        },
+        {
+          "n": 4,
+          "title": "1 step forward, 3 steps back",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/aa/70/f2/aa70f2bf-adc0-b6ad-d604-adfbcef5fba9/mzaf_12249777138695508371.plus.aac.p.m4a",
+          "durationMs": 163593
+        },
+        {
+          "n": 5,
+          "title": "deja vu",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/83/5a/c2/835ac220-f31a-006f-b6a9-2acd29eb60d0/mzaf_13621843495437485054.plus.aac.p.m4a",
+          "durationMs": 215508
+        },
+        {
+          "n": 6,
+          "title": "good 4 u",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/a4/eb/3a/a4eb3aeb-eb1f-c382-0aec-ff4eafc34e9e/mzaf_238907262667616343.plus.aac.p.m4a",
+          "durationMs": 178148
+        },
+        {
+          "n": 7,
+          "title": "enough for you",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/cd/d1/9d/cdd19dfe-21b0-9302-f900-15f9490c030c/mzaf_5901577358698077847.plus.aac.p.m4a",
+          "durationMs": 202827
+        },
+        {
+          "n": 8,
+          "title": "happier",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/4d/17/85/4d17858d-b001-d33c-1c25-6761b3286540/mzaf_7847579171692049058.plus.aac.p.m4a",
+          "durationMs": 175922
+        },
+        {
+          "n": 9,
+          "title": "jealousy, jealousy",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/d9/22/93/d9229364-1e24-8c63-7e3e-6165a18656d5/mzaf_6536834655944482143.plus.aac.p.m4a",
+          "durationMs": 173171
+        },
+        {
+          "n": 10,
+          "title": "favorite crime",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/48/48/a7/4848a77f-3c17-9325-a14f-e390858be537/mzaf_8507469113631199348.plus.aac.p.m4a",
+          "durationMs": 152667
+        },
+        {
+          "n": 11,
+          "title": "hope ur ok",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/ea/4e/1e/ea4e1e72-c489-6cb4-c0a9-6e93daa0cf43/mzaf_121815402292896273.plus.aac.p.m4a",
+          "durationMs": 209500
+        }
+      ]
+    }
+  },
+  {
     "id": "ng-2021-1",
     "year": 2021,
     "rank": 1,
@@ -17745,264 +19670,6 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
           "durationMs": 396000
         }
       ]
-    }
-  },
-  {
-    "id": "sg-2021-1",
-    "year": 2021,
-    "rank": 1,
-    "title": "Stay",
-    "artist": "The Kid LAROI & Justin Bieber",
-    "chartName": "Singapore Top 30 Digital Streaming (RIAS)",
-    "chartAuthority": "Recording Industry Association Singapore (RIAS)",
-    "continent": "Asia",
-    "country": "Singapore",
-    "countryCode": "SG",
-    "countryFlag": "🇸🇬",
-    "sourceUrl": "https://en.wikipedia.org/wiki/List_of_number-one_songs_of_2021_(Singapore)",
-    "releaseDate": "2021-07-09",
-    "genres": [
-      "Folk Pop",
-      "Mandopop"
-    ],
-    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/89/59/6a/89596ab9-fa3c-8d08-4d95-a6450fa2013c/886449400515.jpg/600x600bb.jpg",
-    "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/d7/4a/84/d74a84d5-9afa-761e-b632-baab55c2a23b/mzaf_11865500880477235553.plus.aac.p.m4a",
-    "youtubeId": "kTJczUoc26U",
-    "youtubeUrl": "https://www.youtube.com/watch?v=kTJczUoc26U",
-    "weeksAtNumberOne": 11,
-    "summary": "The Kid Laroi and Justin Bieber's \"Stay\" had the most weeks at number one (11) on the RIAS Top 30 Digital Streaming chart in 2021.",
-    "originCountry": "Australia",
-    "originCountryCode": "AU",
-    "originFlag": "🇦🇺",
-    "originContinent": "Oceania",
-    "originArea": "Australia",
-    "album": {
-      "title": "F*CK LOVE 3+: OVER YOU",
-      "kind": "album",
-      "url": "https://music.apple.com/sg/album/f-ck-love-3-over-you/1579787407?uo=4",
-      "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/a8/3a/22/a83a22f7-af18-7ef6-a7de-74816c532a44/886449475421.jpg/600x600bb.jpg",
-      "releaseDate": "2021-07-27",
-      "trackCount": 35,
-      "tracks": [
-        {
-          "n": 1,
-          "title": "OVER YOU",
-          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/0c/6e/d0/0c6ed0d9-1f13-647b-3831-92cca2fdbbf9/mzaf_17327446045903968642.plus.aac.p.m4a",
-          "durationMs": 150888
-        },
-        {
-          "n": 2,
-          "title": "NOT SOBER (feat. Polo G & Stunna Gambino)",
-          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/a2/a2/98/a2a29806-7333-3b19-caf4-21de6bca13db/mzaf_11363683915561289757.plus.aac.p.m4a",
-          "durationMs": 216000
-        },
-        {
-          "n": 3,
-          "title": "STAY",
-          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/25/9a/1c/259a1c5d-c59b-ce1f-8279-c0e644dc2b9e/mzaf_3677842867275398060.plus.aac.p.m4a",
-          "durationMs": 141806
-        },
-        {
-          "n": 4,
-          "title": "SAME ENERGY",
-          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/f4/d3/75/f4d37592-93a2-7cc1-f38c-a64cf1ff3a4b/mzaf_739790291843270697.plus.aac.p.m4a",
-          "durationMs": 90353
-        },
-        {
-          "n": 5,
-          "title": "DON'T LEAVE ME (feat. G Herbo & Lil Durk)",
-          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/ae/d4/c2/aed4c2a7-f7dc-b0dc-5e86-da76508fad5e/mzaf_17585257955588551008.plus.aac.p.m4a",
-          "durationMs": 167966
-        },
-        {
-          "n": 6,
-          "title": "BAD NEWS",
-          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/fc/4a/8b/fc4a8b61-50c7-dd6c-7399-1897d3d9ccac/mzaf_10444331049060630721.plus.aac.p.m4a",
-          "durationMs": 131365
-        },
-        {
-          "n": 7,
-          "title": "STILL CHOSE YOU (feat. Mustard)",
-          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/08/47/62/0847620e-6754-303a-693a-b0514ce21693/mzaf_2520616618196968945.plus.aac.p.m4a",
-          "durationMs": 171429
-        },
-        {
-          "n": 8,
-          "title": "I DON'T KNOW",
-          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/fb/67/a0/fb67a047-a808-bd92-df43-9836ccfa12f0/mzaf_17973264099453380710.plus.aac.p.m4a",
-          "durationMs": 134303
-        },
-        {
-          "n": 9,
-          "title": "ABOUT YOU",
-          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/b3/99/24/b39924dd-f1bf-7818-78d3-90c17573e0ce/mzaf_12801377384497764114.plus.aac.p.m4a",
-          "durationMs": 128895
-        },
-        {
-          "n": 10,
-          "title": "LONELY AND F*CKED UP",
-          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/51/97/b0/5197b0ab-e05c-0563-a593-5a23b35a8c2b/mzaf_4472185446582548103.plus.aac.p.m4a",
-          "durationMs": 162819
-        },
-        {
-          "n": 11,
-          "title": "SITUATION",
-          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/90/55/7d/90557d15-a4ae-8361-bf87-e7bc551786ac/mzaf_2082565245863130720.plus.aac.p.m4a",
-          "durationMs": 104693
-        },
-        {
-          "n": 12,
-          "title": "ATTENTION",
-          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/d3/2b/1b/d32b1bd7-eba3-ad0b-7e13-ea83fb7e0f3c/mzaf_15807647748886764987.plus.aac.p.m4a",
-          "durationMs": 104525
-        },
-        {
-          "n": 13,
-          "title": "BEST FOR ME",
-          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/96/54/10/96541043-acaf-64d5-a683-42ebda3d5a38/mzaf_4155598402979298350.plus.aac.p.m4a",
-          "durationMs": 142418
-        },
-        {
-          "n": 14,
-          "title": "PIKACHU",
-          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/74/f2/9f/74f29f27-75c9-1268-f977-fd018e26dca6/mzaf_15724961312207229510.plus.aac.p.m4a",
-          "durationMs": 133724
-        },
-        {
-          "n": 15,
-          "title": "SO DONE",
-          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/70/98/9c/70989c6d-6752-3ea3-cc2b-3d92a6ff74a7/mzaf_10016296921764189828.plus.aac.p.m4a",
-          "durationMs": 126521
-        },
-        {
-          "n": 16,
-          "title": "TRAGIC (feat. YoungBoy Never Broke Again & Internet Money)",
-          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/fe/44/7f/fe447f02-c4d5-be27-6a86-9557b80dd61c/mzaf_6645436041783478120.plus.aac.p.m4a",
-          "durationMs": 153147
-        },
-        {
-          "n": 17,
-          "title": "ALWAYS DO",
-          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/ab/0b/86/ab0b86fb-a411-d684-7c31-fb63229f7c73/mzaf_13552870903607826006.plus.aac.p.m4a",
-          "durationMs": 151705
-        },
-        {
-          "n": 18,
-          "title": "FEEL SOMETHING",
-          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/22/04/a3/2204a360-dd50-8b56-69cb-4d027541ccf0/mzaf_7632018440961743879.plus.aac.p.m4a",
-          "durationMs": 139041
-        },
-        {
-          "n": 19,
-          "title": "F*CK YOU, GOODBYE (feat. Machine Gun Kelly)",
-          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/27/aa/29/27aa2992-41d1-cfaa-2256-2402190d42e7/mzaf_5951350146329822400.plus.aac.p.m4a",
-          "durationMs": 144860
-        },
-        {
-          "n": 20,
-          "title": "WITHOUT YOU",
-          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/5b/a3/91/5ba3914b-6225-f7cb-06ba-40e45b75ac08/mzaf_303359980022367496.plus.aac.p.m4a",
-          "durationMs": 161385
-        },
-        {
-          "n": 21,
-          "title": "BOOTY CALL (skit)",
-          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/41/da/01/41da019b-787d-f9b4-f3ba-d237856bd540/mzaf_7951606228300292223.plus.aac.p.m4a",
-          "durationMs": 56808
-        },
-        {
-          "n": 22,
-          "title": "MAYBE",
-          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/27/7f/9a/277f9a5f-df40-428f-669d-8f90311c567b/mzaf_12304413219279932762.plus.aac.p.m4a",
-          "durationMs": 174182
-        },
-        {
-          "n": 23,
-          "title": "WRONG (feat. Lil Mosey)",
-          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/e8/78/4e/e8784e1a-25b4-fb9f-8f18-6ed0674060aa/mzaf_12239573190371249465.plus.aac.p.m4a",
-          "durationMs": 183567
-        },
-        {
-          "n": 24,
-          "title": "I WISH",
-          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/0c/b5/ad/0cb5ade1-2b02-fe7f-6b52-b81944439419/mzaf_16971948631799026483.plus.aac.p.m4a",
-          "durationMs": 125571
-        },
-        {
-          "n": 25,
-          "title": "NOT FAIR (feat. Corbin)",
-          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/ef/49/d7/ef49d7c1-a5cc-b474-eeb2-bfc7c95ed5f4/mzaf_17574194842014481927.plus.aac.p.m4a",
-          "durationMs": 166688
-        },
-        {
-          "n": 26,
-          "title": "BATHROOM (skit)",
-          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/36/a0/c0/36a0c0c4-8bd0-bc9f-4360-bd836b811df9/mzaf_17571143281503006271.plus.aac.p.m4a",
-          "durationMs": 24940
-        },
-        {
-          "n": 27,
-          "title": "GO",
-          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/98/26/86/982686e6-d525-c732-246c-7ecefd1b0f25/mzaf_14909810769086903470.plus.aac.p.m4a",
-          "durationMs": 181688
-        },
-        {
-          "n": 28,
-          "title": "TELL ME WHY",
-          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/41/10/a0/4110a051-2d2d-d560-3a1e-7d026561aee5/mzaf_314519057866481741.plus.aac.p.m4a",
-          "durationMs": 195268
-        },
-        {
-          "n": 29,
-          "title": "SAME THING",
-          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/e7/c1/8b/e7c18b33-ab10-65de-83ce-4b4330f0e6bf/mzaf_10263012244561690622.plus.aac.p.m4a",
-          "durationMs": 124590
-        },
-        {
-          "n": 30,
-          "title": "NEW GUY (skit)",
-          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/21/30/98/21309812-0d6b-31ce-b55a-b594b9a599d1/mzaf_3784568259689295633.plus.aac.p.m4a",
-          "durationMs": 21938
-        },
-        {
-          "n": 31,
-          "title": "ERASE U",
-          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/c3/b0/ee/c3b0ee5c-8aa3-08b5-8ecf-07c5fea413aa/mzaf_16737244085333693204.plus.aac.p.m4a",
-          "durationMs": 109094
-        },
-        {
-          "n": 32,
-          "title": "RUNNING",
-          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/1b/62/32/1b6232fa-4f48-23bb-d683-ec4eba9f7c74/mzaf_11723610875035841473.plus.aac.p.m4a",
-          "durationMs": 135242
-        },
-        {
-          "n": 33,
-          "title": "WISH YOU WELL (skit)",
-          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/cf/a8/22/cfa822a4-e37a-41b3-3f21-48aa596c0c80/mzaf_664976969711671682.plus.aac.p.m4a",
-          "durationMs": 35364
-        },
-        {
-          "n": 34,
-          "title": "NEED YOU MOST (So Sick)",
-          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/b0/23/54/b0235401-8c50-687a-a0dc-6472d9a4b040/mzaf_13478749611420635505.plus.aac.p.m4a",
-          "durationMs": 135227
-        },
-        {
-          "n": 35,
-          "title": "SELFISH",
-          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/60/78/c6/6078c68a-7e39-8217-6ab2-dab76a849676/mzaf_17266615032167912277.plus.aac.p.m4a",
-          "durationMs": 196202
-        }
-      ]
-    },
-    "songStats": {
-      "peak": 1,
-      "weeksOnChart": null,
-      "weeksAtNumberOne": 11,
-      "chart": "RIAS Singapore Top 30 Digital Streaming",
-      "sourceUrl": "https://en.wikipedia.org/wiki/Stay_(The_Kid_Laroi_and_Justin_Bieber_song)",
-      "asOf": "2026-10-17"
     }
   },
   {
@@ -18335,6 +20002,356 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
     }
   },
   {
+    "id": "jp-2021-3",
+    "year": 2021,
+    "rank": 3,
+    "title": "Yoru ni Kakeru (夜に駆ける)",
+    "artist": "YOASOBI",
+    "chartName": "Billboard Japan Hot 100 Year-End",
+    "chartAuthority": "Billboard Japan / Oricon",
+    "continent": "Asia",
+    "country": "Japan",
+    "countryCode": "JP",
+    "countryFlag": "🇯🇵",
+    "sourceUrl": "https://www.billboard-japan.com/charts/detail?a=hot100_year&year=2021",
+    "releaseDate": "2019-12-15",
+    "genres": [
+      "J-Pop"
+    ],
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/fe/58/79/fe58795c-1628-230a-9ffe-300c04b6627c/194491717186.jpg/600x600bb.jpg",
+    "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/4e/73/ae/4e73ae7f-96d6-5100-d3d3-3c50c28a1f19/mzaf_6031201848020469124.plus.aac.p.m4a",
+    "youtubeId": "x8VYWazR5mE",
+    "youtubeUrl": "https://www.youtube.com/watch?v=x8VYWazR5mE",
+    "summary": "YOASOBI's debut song Yoru ni Kakeru ranks third on Billboard Japan's 2021 Hot 100 year-end list, its second consecutive year-end placing after topping the 2020 list.",
+    "originCountry": "Japan",
+    "originCountryCode": "JP",
+    "originFlag": "🇯🇵",
+    "originContinent": "Asia",
+    "originArea": "Japan",
+    "album": {
+      "title": "THE BOOK",
+      "kind": "album",
+      "url": "https://music.apple.com/us/album/the-book/1542182291?uo=4",
+      "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/7f/8c/90/7f8c90dd-e11f-30d5-271d-4b72eee970bd/195497666737.jpg/600x600bb.jpg",
+      "releaseDate": "2021-01-06",
+      "trackCount": 9,
+      "tracks": [
+        {
+          "n": 1,
+          "title": "Epilogue",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/d4/cf/75/d4cf75fa-df66-ad39-937e-30d3fbe9e152/mzaf_13621783025772681962.plus.aac.p.m4a",
+          "durationMs": 50547
+        },
+        {
+          "n": 2,
+          "title": "Encore",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/83/54/1e/83541ec7-9495-2885-40dc-f0b7714518c5/mzaf_10210180579934227710.plus.aac.p.m4a",
+          "durationMs": 271440
+        },
+        {
+          "n": 3,
+          "title": "Harujion",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/af/16/39/af16397e-6dcb-d58e-d701-fd3f2085351a/mzaf_17092126121119535374.plus.aac.p.m4a",
+          "durationMs": 198600
+        },
+        {
+          "n": 4,
+          "title": "Ano yume wo nazotte",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/ca/e6/9e/cae69eda-3b69-796c-d4a2-251c15de748c/mzaf_9028238478513443356.plus.aac.p.m4a",
+          "durationMs": 240747
+        },
+        {
+          "n": 5,
+          "title": "Probably",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/38/e7/ad/38e7ad5b-4ce3-40b7-473e-d1ecef56e771/mzaf_2333484863028259520.plus.aac.p.m4a",
+          "durationMs": 256773
+        },
+        {
+          "n": 6,
+          "title": "Gunjou",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/8e/3f/38/8e3f3837-5084-56b3-981c-e2d99d722b60/mzaf_1457094438102075041.plus.aac.p.m4a",
+          "durationMs": 248027
+        },
+        {
+          "n": 7,
+          "title": "Haruka",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/a7/a5/fe/a7a5feed-1295-0f00-09e0-8bc7020fdbeb/mzaf_12727609265499334778.plus.aac.p.m4a",
+          "durationMs": 243613
+        },
+        {
+          "n": 8,
+          "title": "Yoru ni kakeru",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/04/c0/bc/04c0bcbf-399f-b668-4c1a-8eb37f63d6e3/mzaf_8386400470233731365.plus.aac.p.m4a",
+          "durationMs": 258840
+        },
+        {
+          "n": 9,
+          "title": "Prologue",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/f8/da/cb/f8dacbf1-0cf7-ad07-2fce-003cb70d10aa/mzaf_8631286828485695181.plus.aac.p.m4a",
+          "durationMs": 35707
+        }
+      ]
+    }
+  },
+  {
+    "id": "sg-2021-1",
+    "year": 2021,
+    "rank": 1,
+    "title": "Stay",
+    "artist": "The Kid LAROI & Justin Bieber",
+    "chartName": "Singapore Top 30 Digital Streaming (RIAS)",
+    "chartAuthority": "Recording Industry Association Singapore (RIAS)",
+    "continent": "Asia",
+    "country": "Singapore",
+    "countryCode": "SG",
+    "countryFlag": "🇸🇬",
+    "sourceUrl": "https://en.wikipedia.org/wiki/List_of_number-one_songs_of_2021_(Singapore)",
+    "releaseDate": "2021-07-09",
+    "genres": [
+      "Folk Pop",
+      "Mandopop"
+    ],
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/89/59/6a/89596ab9-fa3c-8d08-4d95-a6450fa2013c/886449400515.jpg/600x600bb.jpg",
+    "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/d7/4a/84/d74a84d5-9afa-761e-b632-baab55c2a23b/mzaf_11865500880477235553.plus.aac.p.m4a",
+    "youtubeId": "kTJczUoc26U",
+    "youtubeUrl": "https://www.youtube.com/watch?v=kTJczUoc26U",
+    "weeksAtNumberOne": 11,
+    "summary": "The Kid Laroi and Justin Bieber's \"Stay\" had the most weeks at number one (11) on the RIAS Top 30 Digital Streaming chart in 2021.",
+    "originCountry": "Australia",
+    "originCountryCode": "AU",
+    "originFlag": "🇦🇺",
+    "originContinent": "Oceania",
+    "originArea": "Australia",
+    "album": {
+      "title": "F*CK LOVE 3+: OVER YOU",
+      "kind": "album",
+      "url": "https://music.apple.com/sg/album/f-ck-love-3-over-you/1579787407?uo=4",
+      "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/a8/3a/22/a83a22f7-af18-7ef6-a7de-74816c532a44/886449475421.jpg/600x600bb.jpg",
+      "releaseDate": "2021-07-27",
+      "trackCount": 35,
+      "tracks": [
+        {
+          "n": 1,
+          "title": "OVER YOU",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/0c/6e/d0/0c6ed0d9-1f13-647b-3831-92cca2fdbbf9/mzaf_17327446045903968642.plus.aac.p.m4a",
+          "durationMs": 150888
+        },
+        {
+          "n": 2,
+          "title": "NOT SOBER (feat. Polo G & Stunna Gambino)",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/a2/a2/98/a2a29806-7333-3b19-caf4-21de6bca13db/mzaf_11363683915561289757.plus.aac.p.m4a",
+          "durationMs": 216000
+        },
+        {
+          "n": 3,
+          "title": "STAY",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/25/9a/1c/259a1c5d-c59b-ce1f-8279-c0e644dc2b9e/mzaf_3677842867275398060.plus.aac.p.m4a",
+          "durationMs": 141806
+        },
+        {
+          "n": 4,
+          "title": "SAME ENERGY",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/f4/d3/75/f4d37592-93a2-7cc1-f38c-a64cf1ff3a4b/mzaf_739790291843270697.plus.aac.p.m4a",
+          "durationMs": 90353
+        },
+        {
+          "n": 5,
+          "title": "DON'T LEAVE ME (feat. G Herbo & Lil Durk)",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/ae/d4/c2/aed4c2a7-f7dc-b0dc-5e86-da76508fad5e/mzaf_17585257955588551008.plus.aac.p.m4a",
+          "durationMs": 167966
+        },
+        {
+          "n": 6,
+          "title": "BAD NEWS",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/fc/4a/8b/fc4a8b61-50c7-dd6c-7399-1897d3d9ccac/mzaf_10444331049060630721.plus.aac.p.m4a",
+          "durationMs": 131365
+        },
+        {
+          "n": 7,
+          "title": "STILL CHOSE YOU (feat. Mustard)",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/08/47/62/0847620e-6754-303a-693a-b0514ce21693/mzaf_2520616618196968945.plus.aac.p.m4a",
+          "durationMs": 171429
+        },
+        {
+          "n": 8,
+          "title": "I DON'T KNOW",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/fb/67/a0/fb67a047-a808-bd92-df43-9836ccfa12f0/mzaf_17973264099453380710.plus.aac.p.m4a",
+          "durationMs": 134303
+        },
+        {
+          "n": 9,
+          "title": "ABOUT YOU",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/b3/99/24/b39924dd-f1bf-7818-78d3-90c17573e0ce/mzaf_12801377384497764114.plus.aac.p.m4a",
+          "durationMs": 128895
+        },
+        {
+          "n": 10,
+          "title": "LONELY AND F*CKED UP",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/51/97/b0/5197b0ab-e05c-0563-a593-5a23b35a8c2b/mzaf_4472185446582548103.plus.aac.p.m4a",
+          "durationMs": 162819
+        },
+        {
+          "n": 11,
+          "title": "SITUATION",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/90/55/7d/90557d15-a4ae-8361-bf87-e7bc551786ac/mzaf_2082565245863130720.plus.aac.p.m4a",
+          "durationMs": 104693
+        },
+        {
+          "n": 12,
+          "title": "ATTENTION",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/d3/2b/1b/d32b1bd7-eba3-ad0b-7e13-ea83fb7e0f3c/mzaf_15807647748886764987.plus.aac.p.m4a",
+          "durationMs": 104525
+        },
+        {
+          "n": 13,
+          "title": "BEST FOR ME",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/96/54/10/96541043-acaf-64d5-a683-42ebda3d5a38/mzaf_4155598402979298350.plus.aac.p.m4a",
+          "durationMs": 142418
+        },
+        {
+          "n": 14,
+          "title": "PIKACHU",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/74/f2/9f/74f29f27-75c9-1268-f977-fd018e26dca6/mzaf_15724961312207229510.plus.aac.p.m4a",
+          "durationMs": 133724
+        },
+        {
+          "n": 15,
+          "title": "SO DONE",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/70/98/9c/70989c6d-6752-3ea3-cc2b-3d92a6ff74a7/mzaf_10016296921764189828.plus.aac.p.m4a",
+          "durationMs": 126521
+        },
+        {
+          "n": 16,
+          "title": "TRAGIC (feat. YoungBoy Never Broke Again & Internet Money)",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/fe/44/7f/fe447f02-c4d5-be27-6a86-9557b80dd61c/mzaf_6645436041783478120.plus.aac.p.m4a",
+          "durationMs": 153147
+        },
+        {
+          "n": 17,
+          "title": "ALWAYS DO",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/ab/0b/86/ab0b86fb-a411-d684-7c31-fb63229f7c73/mzaf_13552870903607826006.plus.aac.p.m4a",
+          "durationMs": 151705
+        },
+        {
+          "n": 18,
+          "title": "FEEL SOMETHING",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/22/04/a3/2204a360-dd50-8b56-69cb-4d027541ccf0/mzaf_7632018440961743879.plus.aac.p.m4a",
+          "durationMs": 139041
+        },
+        {
+          "n": 19,
+          "title": "F*CK YOU, GOODBYE (feat. Machine Gun Kelly)",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/27/aa/29/27aa2992-41d1-cfaa-2256-2402190d42e7/mzaf_5951350146329822400.plus.aac.p.m4a",
+          "durationMs": 144860
+        },
+        {
+          "n": 20,
+          "title": "WITHOUT YOU",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/5b/a3/91/5ba3914b-6225-f7cb-06ba-40e45b75ac08/mzaf_303359980022367496.plus.aac.p.m4a",
+          "durationMs": 161385
+        },
+        {
+          "n": 21,
+          "title": "BOOTY CALL (skit)",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/41/da/01/41da019b-787d-f9b4-f3ba-d237856bd540/mzaf_7951606228300292223.plus.aac.p.m4a",
+          "durationMs": 56808
+        },
+        {
+          "n": 22,
+          "title": "MAYBE",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/27/7f/9a/277f9a5f-df40-428f-669d-8f90311c567b/mzaf_12304413219279932762.plus.aac.p.m4a",
+          "durationMs": 174182
+        },
+        {
+          "n": 23,
+          "title": "WRONG (feat. Lil Mosey)",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/e8/78/4e/e8784e1a-25b4-fb9f-8f18-6ed0674060aa/mzaf_12239573190371249465.plus.aac.p.m4a",
+          "durationMs": 183567
+        },
+        {
+          "n": 24,
+          "title": "I WISH",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/0c/b5/ad/0cb5ade1-2b02-fe7f-6b52-b81944439419/mzaf_16971948631799026483.plus.aac.p.m4a",
+          "durationMs": 125571
+        },
+        {
+          "n": 25,
+          "title": "NOT FAIR (feat. Corbin)",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/ef/49/d7/ef49d7c1-a5cc-b474-eeb2-bfc7c95ed5f4/mzaf_17574194842014481927.plus.aac.p.m4a",
+          "durationMs": 166688
+        },
+        {
+          "n": 26,
+          "title": "BATHROOM (skit)",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/36/a0/c0/36a0c0c4-8bd0-bc9f-4360-bd836b811df9/mzaf_17571143281503006271.plus.aac.p.m4a",
+          "durationMs": 24940
+        },
+        {
+          "n": 27,
+          "title": "GO",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/98/26/86/982686e6-d525-c732-246c-7ecefd1b0f25/mzaf_14909810769086903470.plus.aac.p.m4a",
+          "durationMs": 181688
+        },
+        {
+          "n": 28,
+          "title": "TELL ME WHY",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/41/10/a0/4110a051-2d2d-d560-3a1e-7d026561aee5/mzaf_314519057866481741.plus.aac.p.m4a",
+          "durationMs": 195268
+        },
+        {
+          "n": 29,
+          "title": "SAME THING",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/e7/c1/8b/e7c18b33-ab10-65de-83ce-4b4330f0e6bf/mzaf_10263012244561690622.plus.aac.p.m4a",
+          "durationMs": 124590
+        },
+        {
+          "n": 30,
+          "title": "NEW GUY (skit)",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/21/30/98/21309812-0d6b-31ce-b55a-b594b9a599d1/mzaf_3784568259689295633.plus.aac.p.m4a",
+          "durationMs": 21938
+        },
+        {
+          "n": 31,
+          "title": "ERASE U",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/c3/b0/ee/c3b0ee5c-8aa3-08b5-8ecf-07c5fea413aa/mzaf_16737244085333693204.plus.aac.p.m4a",
+          "durationMs": 109094
+        },
+        {
+          "n": 32,
+          "title": "RUNNING",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/1b/62/32/1b6232fa-4f48-23bb-d683-ec4eba9f7c74/mzaf_11723610875035841473.plus.aac.p.m4a",
+          "durationMs": 135242
+        },
+        {
+          "n": 33,
+          "title": "WISH YOU WELL (skit)",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/cf/a8/22/cfa822a4-e37a-41b3-3f21-48aa596c0c80/mzaf_664976969711671682.plus.aac.p.m4a",
+          "durationMs": 35364
+        },
+        {
+          "n": 34,
+          "title": "NEED YOU MOST (So Sick)",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/b0/23/54/b0235401-8c50-687a-a0dc-6472d9a4b040/mzaf_13478749611420635505.plus.aac.p.m4a",
+          "durationMs": 135227
+        },
+        {
+          "n": 35,
+          "title": "SELFISH",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/60/78/c6/6078c68a-7e39-8217-6ab2-dab76a849676/mzaf_17266615032167912277.plus.aac.p.m4a",
+          "durationMs": 196202
+        }
+      ]
+    },
+    "songStats": {
+      "peak": 1,
+      "weeksOnChart": null,
+      "weeksAtNumberOne": 11,
+      "chart": "RIAS Singapore Top 30 Digital Streaming",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Stay_(The_Kid_Laroi_and_Justin_Bieber_song)",
+      "asOf": "2026-10-17"
+    }
+  },
+  {
     "id": "kr-2021-1",
     "year": 2021,
     "rank": 1,
@@ -18552,6 +20569,35 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
       "sourceUrl": "https://en.wikipedia.org/wiki/Rollin%27_(Brave_Girls_song)",
       "asOf": "2026-10-17"
     }
+  },
+  {
+    "id": "kr-2021-3",
+    "year": 2021,
+    "rank": 3,
+    "title": "Dynamite",
+    "artist": "BTS (방탄소년단)",
+    "chartName": "Gaon Digital Chart (year-end)",
+    "chartAuthority": "Korea Music Content Association (KMCA)",
+    "continent": "Asia",
+    "country": "South Korea",
+    "countryCode": "KR",
+    "countryFlag": "🇰🇷",
+    "sourceUrl": "https://en.wikipedia.org/wiki/Circle_Digital_Chart",
+    "releaseDate": "2020-08-21",
+    "genres": [
+      "K-Pop",
+      "Disco-Pop"
+    ],
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/2b/f6/82/2bf682ab-f6c5-a82e-d204-306faede272e/198704579318_Cover.jpg/600x600bb.jpg",
+    "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/63/cf/fd/63cffd1b-1f32-0d6b-afba-d445b91271bc/mzaf_9755088333292945190.plus.aac.p.m4a",
+    "youtubeId": "gdZLi9oWNZg",
+    "youtubeUrl": "https://www.youtube.com/watch?v=gdZLi9oWNZg",
+    "summary": "BTS's English-language disco-pop single Dynamite, released in August 2020, was still third on the 2021 Gaon Digital Chart year-end list.",
+    "originCountry": "South Korea",
+    "originCountryCode": "KR",
+    "originFlag": "🇰🇷",
+    "originContinent": "Asia",
+    "originArea": "Seoul"
   },
   {
     "id": "tw-2021-1",
@@ -21065,6 +23111,46 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
     }
   },
   {
+    "id": "gb-2020-3",
+    "year": 2020,
+    "rank": 3,
+    "title": "Roses (Imanbek Remix)",
+    "artist": "SAINT JHN",
+    "chartName": "Official Charts UK Singles",
+    "chartAuthority": "Official Charts Company",
+    "continent": "Europe",
+    "country": "United Kingdom",
+    "countryCode": "GB",
+    "countryFlag": "🇬🇧",
+    "sourceUrl": "https://www.officialcharts.com/charts/end-of-year-singles-chart/20200101/37501/",
+    "releaseDate": "2019-09-18",
+    "genres": [
+      "Slap house",
+      "Dance"
+    ],
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/5e/5c/ea/5e5cead2-a482-48ef-8134-f725c2b49202/mzm.lydeceiv.jpg/600x600bb.jpg",
+    "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/53/55/a3/5355a39b-3de3-7f8c-a78b-108a9e5322c6/mzaf_1619770748986638926.plus.aac.p.m4a",
+    "youtubeId": "2zToEPpFEN8",
+    "youtubeUrl": "https://www.youtube.com/watch?v=2zToEPpFEN8",
+    "summary": "Saint Jhn's Roses in its Imanbek remix was the third biggest UK single of 2020 on the Official Charts year-end chart, after reaching No. 1.",
+    "album": {
+      "title": "Roses",
+      "kind": "single",
+      "url": "https://music.apple.com/gb/album/roses-single/1711846654?uo=4",
+      "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/3c/3a/f8/3c3af84d-da1e-c574-79b2-abf3df527673/22CRGIM34076.rgb.jpg/600x600bb.jpg",
+      "releaseDate": "2018-03-30",
+      "trackCount": 1,
+      "tracks": [
+        {
+          "n": 1,
+          "title": "Roses",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/80/6a/1b/806a1b16-bff7-b0b7-eb4a-8e063eecbdbc/mzaf_9273896789319161390.plus.aac.p.m4a",
+          "durationMs": 178824
+        }
+      ]
+    }
+  },
+  {
     "id": "ng-2020-1",
     "year": 2020,
     "rank": 1,
@@ -21277,148 +23363,6 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
           "durationMs": 182857
         }
       ]
-    }
-  },
-  {
-    "id": "sg-2020-1",
-    "year": 2020,
-    "rank": 1,
-    "title": "How You Like That",
-    "artist": "BLACKPINK",
-    "chartName": "Singapore Top 30 Digital Streaming (RIAS)",
-    "chartAuthority": "Recording Industry Association Singapore (RIAS)",
-    "continent": "Asia",
-    "country": "Singapore",
-    "countryCode": "SG",
-    "countryFlag": "🇸🇬",
-    "sourceUrl": "https://en.wikipedia.org/wiki/List_of_number-one_songs_of_2020_(Singapore)",
-    "releaseDate": "2020-06-26",
-    "genres": [
-      "K-Pop",
-      "EDM-Trap"
-    ],
-    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/6e/c8/57/6ec857a9-ab4e-d731-a854-0594df54edad/BP_HYLT_DS_4000_4000.jpg/600x600bb.jpg",
-    "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/a7/b1/5d/a7b15d5c-e4a6-52e4-8700-15b13b1b9c5d/mzaf_2562596897017350825.plus.aac.p.m4a",
-    "youtubeId": "ioNng23DkIM",
-    "youtubeUrl": "https://www.youtube.com/watch?v=ioNng23DkIM",
-    "weeksAtNumberOne": 8,
-    "summary": "Blackpink's \"How You Like That\" had the most weeks at number one (8, 2 Jul - 20 Aug issues) on the RIAS Top 30 Digital Streaming chart in 2020, ahead of Tones and I's \"Dance Monkey\" (7).",
-    "originCountry": "South Korea",
-    "originCountryCode": "KR",
-    "originFlag": "🇰🇷",
-    "originContinent": "Asia",
-    "originArea": "South Korea",
-    "album": {
-      "title": "THE ALBUM",
-      "kind": "album",
-      "url": "https://music.apple.com/sg/album/the-album/1533366575?uo=4",
-      "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/a4/b0/87/a4b08794-2b73-4a46-b346-4cfdcff685b3/BLACKPINK_Crown_0728.jpg/600x600bb.jpg",
-      "releaseDate": "2020-10-02",
-      "trackCount": 8,
-      "tracks": [
-        {
-          "n": 1,
-          "title": "How You Like That",
-          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/71/08/e0/7108e09a-3aff-037f-415e-419da3b2348b/mzaf_9566413207451432755.plus.aac.p.m4a",
-          "durationMs": 180956
-        },
-        {
-          "n": 2,
-          "title": "Ice Cream",
-          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/87/50/aa/8750aa4a-e7b8-69a6-8562-437419ca481b/mzaf_12045971843863562818.plus.aac.p.m4a",
-          "durationMs": 175813
-        },
-        {
-          "n": 3,
-          "title": "Pretty Savage",
-          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/8c/bb/68/8cbb68cc-8fce-a98f-d600-735dbb3040f8/mzaf_7051899584980758213.plus.aac.p.m4a",
-          "durationMs": 199122
-        },
-        {
-          "n": 4,
-          "title": "Bet You Wanna (feat. Cardi B)",
-          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/d1/1b/c3/d11bc374-edb5-90a7-cc5a-42455707e0a4/mzaf_643088964741397220.plus.aac.p.m4a",
-          "durationMs": 159168
-        },
-        {
-          "n": 5,
-          "title": "Lovesick Girls",
-          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/75/b9/61/75b9619f-b7e7-4925-4c5f-a131a25ce23b/mzaf_4048179208896418793.plus.aac.p.m4a",
-          "durationMs": 192765
-        },
-        {
-          "n": 6,
-          "title": "Crazy Over You",
-          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/b1/b0/25/b1b02536-b921-0b14-01b4-ac36ec87bb7f/mzaf_4433067879780412042.plus.aac.p.m4a",
-          "durationMs": 161946
-        },
-        {
-          "n": 7,
-          "title": "Love To Hate Me",
-          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/15/79/62/157962de-bbbe-9655-758d-7d5ff4476832/mzaf_12355945014721741944.plus.aac.p.m4a",
-          "durationMs": 169798
-        },
-        {
-          "n": 8,
-          "title": "You Never Know",
-          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/39/b2/00/39b200cd-b3be-1c36-b0e0-bdbf07389bf3/mzaf_1272774378513494199.plus.aac.p.m4a",
-          "durationMs": 229202
-        }
-      ],
-      "stats": {
-        "certifications": [
-          {
-            "body": "KMCA",
-            "level": "Million",
-            "region": "South Korea",
-            "date": "2020-12-10"
-          },
-          {
-            "body": "BPI",
-            "level": "Gold",
-            "region": "UK",
-            "date": null
-          },
-          {
-            "body": "SNEP",
-            "level": "Gold",
-            "region": "France",
-            "date": null
-          },
-          {
-            "body": "Music Canada",
-            "level": "Gold",
-            "region": "Canada",
-            "date": null
-          },
-          {
-            "body": "ZPAV",
-            "level": "Platinum",
-            "region": "Poland",
-            "date": null
-          },
-          {
-            "body": "RMNZ",
-            "level": "Gold",
-            "region": "New Zealand",
-            "date": null
-          }
-        ],
-        "units": "1,809,795 copies (South Korea, Gaon); 1.51 million (IFPI summary, 2020 worldwide)",
-        "peak": {
-          "chart": "Billboard 200",
-          "position": 2
-        },
-        "sourceUrl": "https://en.wikipedia.org/wiki/The_Album_(Blackpink_album)"
-      }
-    },
-    "songStats": {
-      "peak": 1,
-      "weeksOnChart": null,
-      "weeksAtNumberOne": 8,
-      "chart": "Singapore Top 30 Digital Streaming (RIAS)",
-      "sourceUrl": "https://en.wikipedia.org/wiki/How_You_Like_That",
-      "asOf": "2026-10-17"
     }
   },
   {
@@ -21812,6 +23756,265 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
     }
   },
   {
+    "id": "jp-2020-3",
+    "year": 2020,
+    "rank": 3,
+    "title": "Gurenge (紅蓮華)",
+    "artist": "LiSA",
+    "chartName": "Billboard Japan Hot 100 Year-End",
+    "chartAuthority": "Billboard Japan / Oricon",
+    "continent": "Asia",
+    "country": "Japan",
+    "countryCode": "JP",
+    "countryFlag": "🇯🇵",
+    "sourceUrl": "https://www.billboard-japan.com/charts/detail?a=hot100_year&year=2020",
+    "releaseDate": "2019-04-22",
+    "genres": [
+      "J-Pop",
+      "Anime"
+    ],
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/b3/ae/3b/b3ae3bd0-47cc-6349-1d0d-a01928796a62/jacket_VVXX00432B00Z_550.jpg/600x600bb.jpg",
+    "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/d7/45/22/d7452274-6107-7ace-420b-1b509d55d067/mzaf_15546458713313472040.plus.aac.p.m4a",
+    "youtubeId": "x1FV6IrjZCY",
+    "youtubeUrl": "https://www.youtube.com/watch?v=x1FV6IrjZCY",
+    "summary": "LiSA's Demon Slayer opening theme Gurenge ranks third on Billboard Japan's 2020 Hot 100 year-end list.",
+    "originCountry": "Japan",
+    "originCountryCode": "JP",
+    "originFlag": "🇯🇵",
+    "originContinent": "Asia",
+    "originArea": "Japan",
+    "album": {
+      "title": "LEO-NiNE",
+      "kind": "album",
+      "url": "https://music.apple.com/us/album/leo-nine/1529543131?uo=4",
+      "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/51/b3/58/51b35899-bda2-50d2-2c00-b2b95999b3c3/4547366473681.jpg/600x600bb.jpg",
+      "releaseDate": "2020-10-14",
+      "trackCount": 13,
+      "tracks": [
+        {
+          "n": 1,
+          "title": "play the world! (feat. Pablo)",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/10/73/51/10735123-fb35-3533-9564-c794a2f55225/mzaf_3394028296197023820.plus.aac.p.m4a",
+          "durationMs": 258960
+        },
+        {
+          "n": 2,
+          "title": "Gurenge",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/02/9f/31/029f31d9-865f-8238-795d-0a69106cd7bd/mzaf_4087349157470098609.plus.aac.p.m4a",
+          "durationMs": 237587
+        },
+        {
+          "n": 3,
+          "title": "Harebutai",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/80/1f/d5/801fd5d0-a078-ff99-5ad3-9ce371f44d95/mzaf_7710996094669280681.plus.aac.p.m4a",
+          "durationMs": 299307
+        },
+        {
+          "n": 4,
+          "title": "Makotoshiyaka",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/e9/14/3c/e9143cb3-60d0-c3ff-6b6d-ba3bb97dff22/mzaf_8135994357451312278.plus.aac.p.m4a",
+          "durationMs": 238173
+        },
+        {
+          "n": 5,
+          "title": "cancellation",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/78/c7/9b/78c79b62-4e93-3368-87df-ec312cdb6e8a/mzaf_4563510210419125323.plus.aac.p.m4a",
+          "durationMs": 251347
+        },
+        {
+          "n": 6,
+          "title": "Aijo",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/3a/97/96/3a979673-3bf4-176a-be36-d46757f0cd61/mzaf_11061775072062567576.plus.aac.p.m4a",
+          "durationMs": 245600
+        },
+        {
+          "n": 7,
+          "title": "Akai Wana (Who Loves It?)",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/ad/b0/3c/adb03c03-2676-0768-8e90-9347ff6374f0/mzaf_4636549493167126643.plus.aac.p.m4a",
+          "durationMs": 252320
+        },
+        {
+          "n": 8,
+          "title": "Wagamama Cait Sith",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/87/b8/1d/87b81dd8-d578-ab24-0d5e-d442f4c4c8b0/mzaf_15605264543089052685.plus.aac.p.m4a",
+          "durationMs": 251400
+        },
+        {
+          "n": 9,
+          "title": "Unlasting",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/d9/84/59/d984593c-72f5-c21e-6927-6b1ab9be99a9/mzaf_939444263435718679.plus.aac.p.m4a",
+          "durationMs": 296813
+        },
+        {
+          "n": 10,
+          "title": "ADAMAS (LEO-NiNE Version)",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/bb/cd/d5/bbcdd57c-6937-a2d7-64ac-d812d46f0070/mzaf_2887891496796777284.plus.aac.p.m4a",
+          "durationMs": 223680
+        },
+        {
+          "n": 11,
+          "title": "1centi",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/57/31/b3/5731b3f3-de67-7689-224b-08e4b509fae0/mzaf_7448161690383186192.plus.aac.p.m4a",
+          "durationMs": 87507
+        },
+        {
+          "n": 12,
+          "title": "Howl (LEO-NiNE Version)",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/c2/9d/6c/c29d6c5d-7922-b5e3-849e-0bfbbbe8021d/mzaf_5899620843784209195.plus.aac.p.m4a",
+          "durationMs": 293867
+        },
+        {
+          "n": 13,
+          "title": "BEAUTIFUL WORLD",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/d0/a3/6a/d0a36a1d-d6a7-e9e0-f372-1a878379c83e/mzaf_4207648941544719790.plus.aac.p.m4a",
+          "durationMs": 312187
+        }
+      ]
+    }
+  },
+  {
+    "id": "sg-2020-1",
+    "year": 2020,
+    "rank": 1,
+    "title": "How You Like That",
+    "artist": "BLACKPINK",
+    "chartName": "Singapore Top 30 Digital Streaming (RIAS)",
+    "chartAuthority": "Recording Industry Association Singapore (RIAS)",
+    "continent": "Asia",
+    "country": "Singapore",
+    "countryCode": "SG",
+    "countryFlag": "🇸🇬",
+    "sourceUrl": "https://en.wikipedia.org/wiki/List_of_number-one_songs_of_2020_(Singapore)",
+    "releaseDate": "2020-06-26",
+    "genres": [
+      "K-Pop",
+      "EDM-Trap"
+    ],
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/6e/c8/57/6ec857a9-ab4e-d731-a854-0594df54edad/BP_HYLT_DS_4000_4000.jpg/600x600bb.jpg",
+    "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/a7/b1/5d/a7b15d5c-e4a6-52e4-8700-15b13b1b9c5d/mzaf_2562596897017350825.plus.aac.p.m4a",
+    "youtubeId": "ioNng23DkIM",
+    "youtubeUrl": "https://www.youtube.com/watch?v=ioNng23DkIM",
+    "weeksAtNumberOne": 8,
+    "summary": "Blackpink's \"How You Like That\" had the most weeks at number one (8, 2 Jul - 20 Aug issues) on the RIAS Top 30 Digital Streaming chart in 2020, ahead of Tones and I's \"Dance Monkey\" (7).",
+    "originCountry": "South Korea",
+    "originCountryCode": "KR",
+    "originFlag": "🇰🇷",
+    "originContinent": "Asia",
+    "originArea": "South Korea",
+    "album": {
+      "title": "THE ALBUM",
+      "kind": "album",
+      "url": "https://music.apple.com/sg/album/the-album/1533366575?uo=4",
+      "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/a4/b0/87/a4b08794-2b73-4a46-b346-4cfdcff685b3/BLACKPINK_Crown_0728.jpg/600x600bb.jpg",
+      "releaseDate": "2020-10-02",
+      "trackCount": 8,
+      "tracks": [
+        {
+          "n": 1,
+          "title": "How You Like That",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/71/08/e0/7108e09a-3aff-037f-415e-419da3b2348b/mzaf_9566413207451432755.plus.aac.p.m4a",
+          "durationMs": 180956
+        },
+        {
+          "n": 2,
+          "title": "Ice Cream",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/87/50/aa/8750aa4a-e7b8-69a6-8562-437419ca481b/mzaf_12045971843863562818.plus.aac.p.m4a",
+          "durationMs": 175813
+        },
+        {
+          "n": 3,
+          "title": "Pretty Savage",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/8c/bb/68/8cbb68cc-8fce-a98f-d600-735dbb3040f8/mzaf_7051899584980758213.plus.aac.p.m4a",
+          "durationMs": 199122
+        },
+        {
+          "n": 4,
+          "title": "Bet You Wanna (feat. Cardi B)",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/d1/1b/c3/d11bc374-edb5-90a7-cc5a-42455707e0a4/mzaf_643088964741397220.plus.aac.p.m4a",
+          "durationMs": 159168
+        },
+        {
+          "n": 5,
+          "title": "Lovesick Girls",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/75/b9/61/75b9619f-b7e7-4925-4c5f-a131a25ce23b/mzaf_4048179208896418793.plus.aac.p.m4a",
+          "durationMs": 192765
+        },
+        {
+          "n": 6,
+          "title": "Crazy Over You",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/b1/b0/25/b1b02536-b921-0b14-01b4-ac36ec87bb7f/mzaf_4433067879780412042.plus.aac.p.m4a",
+          "durationMs": 161946
+        },
+        {
+          "n": 7,
+          "title": "Love To Hate Me",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/15/79/62/157962de-bbbe-9655-758d-7d5ff4476832/mzaf_12355945014721741944.plus.aac.p.m4a",
+          "durationMs": 169798
+        },
+        {
+          "n": 8,
+          "title": "You Never Know",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/39/b2/00/39b200cd-b3be-1c36-b0e0-bdbf07389bf3/mzaf_1272774378513494199.plus.aac.p.m4a",
+          "durationMs": 229202
+        }
+      ],
+      "stats": {
+        "certifications": [
+          {
+            "body": "KMCA",
+            "level": "Million",
+            "region": "South Korea",
+            "date": "2020-12-10"
+          },
+          {
+            "body": "BPI",
+            "level": "Gold",
+            "region": "UK",
+            "date": null
+          },
+          {
+            "body": "SNEP",
+            "level": "Gold",
+            "region": "France",
+            "date": null
+          },
+          {
+            "body": "Music Canada",
+            "level": "Gold",
+            "region": "Canada",
+            "date": null
+          },
+          {
+            "body": "ZPAV",
+            "level": "Platinum",
+            "region": "Poland",
+            "date": null
+          },
+          {
+            "body": "RMNZ",
+            "level": "Gold",
+            "region": "New Zealand",
+            "date": null
+          }
+        ],
+        "units": "1,809,795 copies (South Korea, Gaon); 1.51 million (IFPI summary, 2020 worldwide)",
+        "peak": {
+          "chart": "Billboard 200",
+          "position": 2
+        },
+        "sourceUrl": "https://en.wikipedia.org/wiki/The_Album_(Blackpink_album)"
+      }
+    },
+    "songStats": {
+      "peak": 1,
+      "weeksOnChart": null,
+      "weeksAtNumberOne": 8,
+      "chart": "Singapore Top 30 Digital Streaming (RIAS)",
+      "sourceUrl": "https://en.wikipedia.org/wiki/How_You_Like_That",
+      "asOf": "2026-10-17"
+    }
+  },
+  {
     "id": "kr-2020-1",
     "year": 2020,
     "rank": 1,
@@ -21982,6 +24185,185 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
       "chart": "Gaon Digital Chart (weekly)",
       "sourceUrl": "https://en.wikipedia.org/wiki/Changmo",
       "asOf": "2026-10-17"
+    }
+  },
+  {
+    "id": "kr-2020-3",
+    "year": 2020,
+    "rank": 3,
+    "title": "Aloha (아로하)",
+    "artist": "Jo Jung-suk (조정석)",
+    "chartName": "Gaon Digital Chart (year-end)",
+    "chartAuthority": "Korea Music Content Association (KMCA)",
+    "continent": "Asia",
+    "country": "South Korea",
+    "countryCode": "KR",
+    "countryFlag": "🇰🇷",
+    "sourceUrl": "https://en.wikipedia.org/wiki/Circle_Digital_Chart",
+    "releaseDate": "2020-03-27",
+    "genres": [
+      "K-Pop",
+      "Ballad",
+      "OST"
+    ],
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/02/54/a1/0254a1c2-8ff7-d2e6-b45b-f5720fbcaf18/8809704413695_Cover.jpg/600x600bb.jpg",
+    "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/fc/3a/bd/fc3abdf5-30da-ef9c-3530-9daff24b64cf/mzaf_3711821529661274546.plus.aac.p.m4a",
+    "youtubeId": "3DOkxQ3HDXE",
+    "youtubeUrl": "https://www.youtube.com/watch?v=3DOkxQ3HDXE",
+    "summary": "Actor Jo Jung-suk's cover of Cool's 2001 song, from the tvN drama Hospital Playlist (OST Part 3), ranked third on the 2020 Gaon Digital Chart year-end list.",
+    "album": {
+      "title": "HOSPITAL PLAYLIST (Original Television Soundtrack)",
+      "kind": "album",
+      "url": "https://music.apple.com/us/album/hospital-playlist-original-television-soundtrack/1603348685?uo=4",
+      "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/26/99/d7/2699d781-b047-4161-2ac4-6fd319dbb565/8809704414364_Cover.jpg/600x600bb.jpg",
+      "releaseDate": "2020-06-04",
+      "trackCount": 24,
+      "tracks": [
+        {
+          "n": 1,
+          "title": "Lonely Night",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/63/81/0a/63810a06-9ba8-e616-632b-5280393a8e93/mzaf_6195887194967140918.plus.aac.p.m4a",
+          "durationMs": 242900
+        },
+        {
+          "n": 2,
+          "title": "Introduce Me a Good Person",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/0a/bc/53/0abc53ea-fbb3-7fe4-a02c-3ec479d89178/mzaf_8386454069393225924.plus.aac.p.m4a",
+          "durationMs": 183441
+        },
+        {
+          "n": 3,
+          "title": "Aloha",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/f7/8a/13/f78a1395-5623-fb82-a652-13c53ea1b304/mzaf_15409872390789204741.plus.aac.p.m4a",
+          "durationMs": 244999
+        },
+        {
+          "n": 4,
+          "title": "Confession Is Not Flashy",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/c6/e6/70/c6e670f7-85b8-0232-7f36-dd259f290340/mzaf_14167454615416346599.plus.aac.p.m4a",
+          "durationMs": 228313
+        },
+        {
+          "n": 5,
+          "title": "Beautiful My Love",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/91/66/98/9166989f-8e6b-6bb2-0d9b-c07e8c9c8b9a/mzaf_4965958618105407891.plus.aac.p.m4a",
+          "durationMs": 230970
+        },
+        {
+          "n": 6,
+          "title": "In Front of City Hall At the Subway Station",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/b7/38/7c/b7387cdb-4be8-2ecf-e8b2-41e9dd90ffd9/mzaf_13540120302811516948.plus.aac.p.m4a",
+          "durationMs": 299000
+        },
+        {
+          "n": 7,
+          "title": "You Always",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/73/1c/8d/731c8dbe-e292-221c-42cc-a5019ad172de/mzaf_982371385738665248.plus.aac.p.m4a",
+          "durationMs": 256672
+        },
+        {
+          "n": 8,
+          "title": "With My Tears",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/46/99/a7/4699a7e8-5dec-ad22-59a2-1b44e8ab8438/mzaf_17795820846232931886.plus.aac.p.m4a",
+          "durationMs": 253046
+        },
+        {
+          "n": 9,
+          "title": "The Wind Is Blowing",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/02/eb/c2/02ebc2bb-c71b-3341-46c7-5430847fd467/mzaf_10859950293011290653.plus.aac.p.m4a",
+          "durationMs": 271401
+        },
+        {
+          "n": 10,
+          "title": "Oh! What a Shiny Night (Drama Version)",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/23/55/da/2355daf3-ffff-0b6d-4510-9d41374595a8/mzaf_9259035745225453158.plus.aac.p.m4a",
+          "durationMs": 158630
+        },
+        {
+          "n": 11,
+          "title": "Canon (Drama Version)",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/d9/8f/45/d98f454f-33a8-06c8-ded3-942893485edb/mzaf_4315165264170013464.plus.aac.p.m4a",
+          "durationMs": 169838
+        },
+        {
+          "n": 12,
+          "title": "Beyond the Rainbow Forest",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/0e/85/0e/0e850ea4-4fd4-564f-18a1-8e0b28568866/mzaf_694044757825374222.plus.aac.p.m4a",
+          "durationMs": 270444
+        },
+        {
+          "n": 13,
+          "title": "While Living Life",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/10/c9/67/10c967dc-2dc1-da46-7dc7-9489f6e5b5ae/mzaf_1821888842723579354.plus.aac.p.m4a",
+          "durationMs": 245774
+        },
+        {
+          "n": 14,
+          "title": "I Knew I Love",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/80/38/94/80389432-3662-3ce9-dc59-1be910cdc7e4/mzaf_4132453247897803204.plus.aac.p.m4a",
+          "durationMs": 261506
+        },
+        {
+          "n": 15,
+          "title": "Me to you, You to Me",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/af/9b/da/af9bda1a-5745-053f-6818-01a1bcd3a561/mzaf_8825828596768856165.plus.aac.p.m4a",
+          "durationMs": 232000
+        },
+        {
+          "n": 16,
+          "title": "Sorrowful (Piano Version 1)",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/5e/a5/25/5ea525d0-d7e0-5a01-74c2-dedef94ac158/mzaf_15503119956527612196.plus.aac.p.m4a",
+          "durationMs": 278587
+        },
+        {
+          "n": 17,
+          "title": "Affect",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/36/af/e7/36afe7f0-7ee4-14f2-880a-3ddfe92f1adb/mzaf_14715947650290765996.plus.aac.p.m4a",
+          "durationMs": 121267
+        },
+        {
+          "n": 18,
+          "title": "Moving Forward (Full Version)",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/90/68/67/9068675e-3f75-ff10-1b1e-d1e52cb931be/mzaf_3267728753031580960.plus.aac.p.m4a",
+          "durationMs": 147360
+        },
+        {
+          "n": 19,
+          "title": "Frozen Dream",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/96/e3/f6/96e3f60a-dcd9-55c5-8bfd-14074fb5ce78/mzaf_17541610232292875319.plus.aac.p.m4a",
+          "durationMs": 106920
+        },
+        {
+          "n": 20,
+          "title": "Monday",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/28/2a/37/282a3713-6cc9-f4b9-ebe5-9b361a432189/mzaf_2723534177823299272.plus.aac.p.m4a",
+          "durationMs": 92507
+        },
+        {
+          "n": 21,
+          "title": "Oh! What a Shiny Night (Drama Version) [Instrumental]",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/b6/fb/e3/b6fbe319-3f4b-2f34-ccdc-ce4dca90ae9a/mzaf_8803757349487287755.plus.aac.p.m4a",
+          "durationMs": 158630
+        },
+        {
+          "n": 22,
+          "title": "Beyond the Rainbow Forest (Instrumental)",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/99/ca/71/99ca71fe-d2c7-a4d1-0389-19fd96711326/mzaf_5942075891412713481.plus.aac.p.m4a",
+          "durationMs": 270444
+        },
+        {
+          "n": 23,
+          "title": "While Living Life (Instrumental)",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/d0/11/0e/d0110e8a-2d04-de46-105a-adaf8bc8babe/mzaf_16822238195172410850.plus.aac.p.m4a",
+          "durationMs": 245774
+        },
+        {
+          "n": 24,
+          "title": "I Knew I Love (Instrumental)",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/81/46/af/8146af20-0012-c365-473b-05ec2b0f90d3/mzaf_11605509533970772777.plus.aac.p.m4a",
+          "durationMs": 261506
+        }
+      ]
     }
   },
   {
@@ -24371,6 +26753,223 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
     }
   },
   {
+    "id": "gb-2019-2",
+    "year": 2019,
+    "rank": 2,
+    "title": "Old Town Road",
+    "artist": "Lil Nas X",
+    "chartName": "Official Charts UK Singles",
+    "chartAuthority": "Official Charts Company",
+    "continent": "Europe",
+    "country": "United Kingdom",
+    "countryCode": "GB",
+    "countryFlag": "🇬🇧",
+    "sourceUrl": "https://www.officialcharts.com/charts/end-of-year-singles-chart/20190101/37501/",
+    "releaseDate": "2018-12-03",
+    "genres": [
+      "Country rap",
+      "Trap"
+    ],
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/07/d4/c3/07d4c33e-b793-d78f-bb1b-52f1e224da88/886447788264.jpg/600x600bb.jpg",
+    "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/32/9c/42/329c4214-8cce-5382-aa92-fe87e013f3d5/mzaf_14962210134357559640.plus.aac.p.m4a",
+    "youtubeId": "r7qovpFAGrQ",
+    "youtubeUrl": "https://www.youtube.com/watch?v=r7qovpFAGrQ",
+    "summary": "Lil Nas X's Old Town Road was second on the Official Charts UK year-end singles chart for 2019 behind Lewis Capaldi's Someone You Loved.",
+    "originCountry": "United States",
+    "originCountryCode": "US",
+    "originFlag": "🇺🇸",
+    "originContinent": "North America",
+    "originArea": "United States",
+    "album": {
+      "title": "7",
+      "kind": "album",
+      "url": "https://music.apple.com/gb/album/7/1468166325?uo=4",
+      "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/07/d4/c3/07d4c33e-b793-d78f-bb1b-52f1e224da88/886447788264.jpg/600x600bb.jpg",
+      "releaseDate": "2019-06-21",
+      "trackCount": 8,
+      "tracks": [
+        {
+          "n": 1,
+          "title": "Old Town Road (feat. Billy Ray Cyrus) [Remix]",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/ee/e5/52/eee552db-9d3b-f6c6-29a0-e333de97afa1/mzaf_10960271056567696079.plus.aac.p.m4a",
+          "durationMs": 157067
+        },
+        {
+          "n": 2,
+          "title": "Panini",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/8e/1f/1a/8e1f1ae5-cad4-278d-7657-522adb354141/mzaf_3671230414569172628.plus.aac.p.m4a",
+          "durationMs": 114893
+        },
+        {
+          "n": 3,
+          "title": "F9mily (You & Me)",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/67/cf/aa/67cfaa3c-7ed3-1764-28c0-cae1efd6201c/mzaf_14746752616703336556.plus.aac.p.m4a",
+          "durationMs": 162720
+        },
+        {
+          "n": 4,
+          "title": "Kick It",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/b9/ca/b4/b9cab433-79d1-b9a5-5da2-1a0606cc7d16/mzaf_17371844833977722036.plus.aac.p.m4a",
+          "durationMs": 141987
+        },
+        {
+          "n": 5,
+          "title": "Rodeo",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/7d/8f/4d/7d8f4d61-fff1-30e8-a030-4287d1c0642f/mzaf_17795958930561992872.plus.aac.p.m4a",
+          "durationMs": 158707
+        },
+        {
+          "n": 6,
+          "title": "Bring U Down",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/08/2e/6f/082e6f13-1e84-f939-2654-c1367c08e3fd/mzaf_4155965339600782091.plus.aac.p.m4a",
+          "durationMs": 131707
+        },
+        {
+          "n": 7,
+          "title": "C7osure (You Like)",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/28/e4/d2/28e4d24b-3f8d-f578-4b20-d82d46afc53e/mzaf_8676569879699574883.plus.aac.p.m4a",
+          "durationMs": 148653
+        },
+        {
+          "n": 8,
+          "title": "Old Town Road",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/32/9c/42/329c4214-8cce-5382-aa92-fe87e013f3d5/mzaf_14962210134357559640.plus.aac.p.m4a",
+          "durationMs": 113000
+        }
+      ]
+    }
+  },
+  {
+    "id": "gb-2019-3",
+    "year": 2019,
+    "rank": 3,
+    "title": "I Don't Care",
+    "artist": "Ed Sheeran & Justin Bieber",
+    "chartName": "Official Charts UK Singles",
+    "chartAuthority": "Official Charts Company",
+    "continent": "Europe",
+    "country": "United Kingdom",
+    "countryCode": "GB",
+    "countryFlag": "🇬🇧",
+    "sourceUrl": "https://www.officialcharts.com/charts/end-of-year-singles-chart/20190101/37501/",
+    "releaseDate": "2019-05-10",
+    "genres": [
+      "Electropop",
+      "Dancehall"
+    ],
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/e8/09/63/e809636b-2ea8-066e-2749-c0b94ab77052/190295384227.jpg/600x600bb.jpg",
+    "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/84/bb/fb/84bbfbcd-9f63-dfa0-8660-ff86ced2eaaa/mzaf_11693010840075646451.plus.aac.p.m4a",
+    "youtubeId": "y83x7MgzWOA",
+    "youtubeUrl": "https://www.youtube.com/watch?v=y83x7MgzWOA",
+    "weeksAtNumberOne": 8,
+    "summary": "Ed Sheeran and Justin Bieber's I Don't Care finished third on the Official Charts UK year-end singles chart for 2019 after eight consecutive weeks at No. 1.",
+    "originCountry": "United Kingdom",
+    "originCountryCode": "GB",
+    "originFlag": "🇬🇧",
+    "originContinent": "Europe",
+    "originArea": "United Kingdom",
+    "album": {
+      "title": "No.6 Collaborations Project",
+      "kind": "album",
+      "url": "https://music.apple.com/gb/album/no-6-collaborations-project/1471580171?uo=4",
+      "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/e8/09/63/e809636b-2ea8-066e-2749-c0b94ab77052/190295384227.jpg/600x600bb.jpg",
+      "releaseDate": "2019-07-12",
+      "trackCount": 15,
+      "tracks": [
+        {
+          "n": 1,
+          "title": "Beautiful People (feat. Khalid)",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/ee/18/89/ee188926-d676-0d85-b57e-93790f68c411/mzaf_5973313052079190433.plus.aac.p.m4a",
+          "durationMs": 197867
+        },
+        {
+          "n": 2,
+          "title": "South of the Border (feat. Camila Cabello & Cardi B)",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/b0/e7/7e/b0e77e55-40a6-f232-a884-7d171cb70268/mzaf_10164437563431171165.plus.aac.p.m4a",
+          "durationMs": 204467
+        },
+        {
+          "n": 3,
+          "title": "Cross Me (feat. Chance the Rapper & PnB Rock)",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/1e/f4/3a/1ef43a45-3b46-1588-465a-5f13cdfba600/mzaf_16839048763739142056.plus.aac.p.m4a",
+          "durationMs": 204833
+        },
+        {
+          "n": 4,
+          "title": "Take Me Back to London (feat. Stormzy)",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/27/33/98/2733987e-2acb-2529-e0e7-06f12d67685d/mzaf_16259114546951489496.plus.aac.p.m4a",
+          "durationMs": 189733
+        },
+        {
+          "n": 5,
+          "title": "Best Part of Me (feat. YEBBA)",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/35/ef/17/35ef17fe-53d9-2942-68cd-185a4cee8315/mzaf_12473233199504673025.plus.aac.p.m4a",
+          "durationMs": 243267
+        },
+        {
+          "n": 6,
+          "title": "I Don't Care",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/84/bb/fb/84bbfbcd-9f63-dfa0-8660-ff86ced2eaaa/mzaf_11693010840075646451.plus.aac.p.m4a",
+          "durationMs": 219947
+        },
+        {
+          "n": 7,
+          "title": "Antisocial",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/ca/a0/4f/caa04f08-9c5a-a4ee-c678-795120dbc454/mzaf_15488723599143540336.plus.aac.p.m4a",
+          "durationMs": 161747
+        },
+        {
+          "n": 8,
+          "title": "Remember The Name (feat. Eminem & 50 Cent)",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/62/eb/2f/62eb2f51-6666-4056-87fd-dbcd59d86174/mzaf_5580559939220784279.plus.aac.p.m4a",
+          "durationMs": 206443
+        },
+        {
+          "n": 9,
+          "title": "Feels (feat. Young Thug & J Hus)",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/f3/9a/d0/f39ad0cb-c848-4860-54dc-0406661c1bc2/mzaf_7249002964722254164.plus.aac.p.m4a",
+          "durationMs": 150787
+        },
+        {
+          "n": 10,
+          "title": "Put It All on Me (feat. Ella Mai)",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/0c/f0/2c/0cf02c6f-e670-3836-9439-641e560b4865/mzaf_13522359357697778751.plus.aac.p.m4a",
+          "durationMs": 197093
+        },
+        {
+          "n": 11,
+          "title": "Nothing On You (feat. Paulo Londra & Dave)",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/52/e2/5d/52e25dde-f477-f1e7-4d93-03f4ccde4cac/mzaf_17215308245701832536.plus.aac.p.m4a",
+          "durationMs": 200733
+        },
+        {
+          "n": 12,
+          "title": "I Don't Want Your Money (feat. H.E.R.)",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/33/2b/e6/332be6c7-ff11-329d-ca95-7a7ec0ec227a/mzaf_7469085965737619690.plus.aac.p.m4a",
+          "durationMs": 204507
+        },
+        {
+          "n": 13,
+          "title": "1000 Nights (feat. Meek Mill & A Boogie Wit da Hoodie)",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/c7/5a/77/c75a7706-f320-b795-6e37-d58d0130e4ee/mzaf_9284019879985047685.plus.aac.p.m4a",
+          "durationMs": 212307
+        },
+        {
+          "n": 14,
+          "title": "Way To Break My Heart (feat. Skrillex)",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/d1/1f/87/d11f8712-877f-8cd6-4d6f-17f0886fca9a/mzaf_4054135755117271392.plus.aac.p.m4a",
+          "durationMs": 190293
+        },
+        {
+          "n": 15,
+          "title": "BLOW",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/d7/71/5c/d7715c2c-c38a-f76a-886a-566b65e299b7/mzaf_2536703400761522054.plus.aac.p.m4a",
+          "durationMs": 209120
+        }
+      ]
+    }
+  },
+  {
     "id": "za-2019-1",
     "year": 2019,
     "rank": 1,
@@ -24418,172 +27017,6 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
           "durationMs": 283620
         }
       ]
-    }
-  },
-  {
-    "id": "sg-2019-1",
-    "year": 2019,
-    "rank": 1,
-    "title": "Señorita",
-    "artist": "Shawn Mendes & Camila Cabello",
-    "chartName": "Singapore Top 30 Digital Streaming (RIAS)",
-    "chartAuthority": "Recording Industry Association Singapore (RIAS)",
-    "continent": "Asia",
-    "country": "Singapore",
-    "countryCode": "SG",
-    "countryFlag": "🇸🇬",
-    "sourceUrl": "https://en.wikipedia.org/wiki/List_of_number-one_songs_of_2019_(Singapore)",
-    "releaseDate": "2019-06-21",
-    "genres": [
-      "Mandopop",
-      "Ballad"
-    ],
-    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/46/fe/4a/46fe4a39-feb4-7b8b-97b9-0187d49a46bd/19UMGIM53914.rgb.jpg/600x600bb.jpg",
-    "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/cf/06/d6/cf06d6fd-f7a0-2898-8363-67688df6c14f/mzaf_8234301186390421644.plus.aac.p.m4a",
-    "youtubeId": "Pkh8UtuejGw",
-    "youtubeUrl": "https://www.youtube.com/watch?v=Pkh8UtuejGw",
-    "weeksAtNumberOne": 13,
-    "summary": "Shawn Mendes and Camila Cabello's \"Señorita\" had the most weeks at number one (13) on the RIAS Top 30 Digital Streaming chart in 2019, ahead of Maroon 5's \"Memories\" (9).",
-    "originCountry": "Canada",
-    "originCountryCode": "CA",
-    "originFlag": "🇨🇦",
-    "originContinent": "North America",
-    "originArea": "Canada",
-    "album": {
-      "title": "Romance",
-      "kind": "album",
-      "url": "https://music.apple.com/sg/album/romance/1487577356?uo=4",
-      "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/c5/d5/7e/c5d57e36-4270-8730-d009-5e82a71016f7/886448121220.jpg/600x600bb.jpg",
-      "releaseDate": "2019-12-06",
-      "trackCount": 14,
-      "tracks": [
-        {
-          "n": 1,
-          "title": "Shameless",
-          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/ce/59/7d/ce597d1a-1c55-7a0c-a19e-0b052a4250a8/mzaf_6182093257318354435.plus.aac.p.m4a",
-          "durationMs": 219733
-        },
-        {
-          "n": 2,
-          "title": "Living Proof",
-          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/85/6c/dd/856cdde4-b1b5-21d7-3e48-b021f6952312/mzaf_8296541274300983641.plus.aac.p.m4a",
-          "durationMs": 194442
-        },
-        {
-          "n": 3,
-          "title": "Should've Said It",
-          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/62/9e/f3/629ef3fb-13b6-a4c4-c75f-bd7a61fe7d98/mzaf_18007425983513003467.plus.aac.p.m4a",
-          "durationMs": 200672
-        },
-        {
-          "n": 4,
-          "title": "My Oh My (feat. DaBaby)",
-          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/e3/c2/28/e3c22828-281c-b3e6-3553-a1690784f677/mzaf_2558720137181385830.plus.aac.p.m4a",
-          "durationMs": 171375
-        },
-        {
-          "n": 5,
-          "title": "Señorita",
-          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/65/8c/55/658c55a1-6cb6-33ce-7069-9d1e014916b7/mzaf_878666906408065129.plus.aac.p.m4a",
-          "durationMs": 190813
-        },
-        {
-          "n": 6,
-          "title": "Liar",
-          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/b3/c1/b7/b3c1b7c4-2e75-3f85-37e9-7a67543a1482/mzaf_17886688562978746778.plus.aac.p.m4a",
-          "durationMs": 208426
-        },
-        {
-          "n": 7,
-          "title": "Bad Kind of Butterflies",
-          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/48/b7/ba/48b7baed-6291-6dd9-2bfa-4c76e2fea0d8/mzaf_18090733568625729028.plus.aac.p.m4a",
-          "durationMs": 169335
-        },
-        {
-          "n": 8,
-          "title": "Easy",
-          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/e7/ec/e6/e7ece676-4102-3a44-91e0-34f946773e66/mzaf_4775089895321400876.plus.aac.p.m4a",
-          "durationMs": 194686
-        },
-        {
-          "n": 9,
-          "title": "Feel It Twice",
-          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/9b/fc/8e/9bfc8eb7-9827-4a75-7793-f13f545326dd/mzaf_12593336639049316666.plus.aac.p.m4a",
-          "durationMs": 188939
-        },
-        {
-          "n": 10,
-          "title": "Dream of You",
-          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/a4/37/04/a437049d-f81b-4eea-7eb2-e691c2a852ac/mzaf_6618837749775132712.plus.aac.p.m4a",
-          "durationMs": 222999
-        },
-        {
-          "n": 11,
-          "title": "Cry for Me",
-          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/e2/20/b1/e220b16d-95f5-5764-5450-d9635064ad83/mzaf_8327042490839835599.plus.aac.p.m4a",
-          "durationMs": 189138
-        },
-        {
-          "n": 12,
-          "title": "This Love",
-          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/29/0b/12/290b12e9-6787-960e-73a0-a7c4dcf55b60/mzaf_14806229524031623150.plus.aac.p.m4a",
-          "durationMs": 220072
-        },
-        {
-          "n": 13,
-          "title": "Used to This",
-          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/ea/12/b7/ea12b7dc-5c97-78f4-d50f-245556fae18e/mzaf_15370711589140953574.plus.aac.p.m4a",
-          "durationMs": 210002
-        },
-        {
-          "n": 14,
-          "title": "First Man",
-          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/58/16/fb/5816fb03-7bbe-5969-974c-cad0d87738fe/mzaf_6077136905760941876.plus.aac.p.m4a",
-          "durationMs": 228759
-        }
-      ],
-      "stats": {
-        "certifications": [
-          {
-            "body": "RIAA",
-            "level": "Platinum",
-            "region": "US",
-            "date": null
-          },
-          {
-            "body": "Music Canada",
-            "level": "2× Platinum",
-            "region": "Canada",
-            "date": null
-          },
-          {
-            "body": "BPI",
-            "level": "Gold",
-            "region": "UK",
-            "date": null
-          },
-          {
-            "body": "RMNZ",
-            "level": "2× Platinum",
-            "region": "New Zealand",
-            "date": null
-          }
-        ],
-        "units": null,
-        "peak": {
-          "chart": "Billboard 200",
-          "position": 3
-        },
-        "sourceUrl": "https://en.wikipedia.org/wiki/Romance_(Camila_Cabello_album)"
-      }
-    },
-    "songStats": {
-      "peak": 1,
-      "weeksOnChart": null,
-      "weeksAtNumberOne": 13,
-      "chart": "Singapore Top 30 Digital Streaming (RIAS)",
-      "sourceUrl": "https://en.wikipedia.org/wiki/List_of_number-one_songs_of_2019_(Singapore)",
-      "asOf": "2026-10-17"
     }
   },
   {
@@ -24856,6 +27289,400 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
     }
   },
   {
+    "id": "jp-2019-2",
+    "year": 2019,
+    "rank": 2,
+    "title": "Marigold (マリーゴールド)",
+    "artist": "Aimyon (あいみょん)",
+    "chartName": "Billboard Japan Hot 100 Year-End",
+    "chartAuthority": "Billboard Japan / Oricon",
+    "continent": "Asia",
+    "country": "Japan",
+    "countryCode": "JP",
+    "countryFlag": "🇯🇵",
+    "sourceUrl": "https://www.billboard-japan.com/charts/detail?a=hot100_year&year=2019",
+    "releaseDate": "2018-08-08",
+    "genres": [
+      "J-Pop",
+      "Folk Pop"
+    ],
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/3c/3b/f6/3c3bf6e8-1947-347e-f6f0-c857ca4c026f/190295490089.jpg/600x600bb.jpg",
+    "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/5a/73/39/5a7339e0-bb69-932a-8caf-02a88032c469/mzaf_9781898984182053364.plus.aac.p.m4a",
+    "youtubeId": "0xSiBpUdW4E",
+    "youtubeUrl": "https://www.youtube.com/watch?v=0xSiBpUdW4E",
+    "summary": "Aimyon's Marigold ranks second on Billboard Japan's 2019 Hot 100 year-end list, behind Kenshi Yonezu's Lemon.",
+    "album": {
+      "title": "Momentary Sixth Sense",
+      "kind": "album",
+      "url": "https://music.apple.com/us/album/momentary-sixth-sense/1446781785?uo=4",
+      "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/3c/3b/f6/3c3bf6e8-1947-347e-f6f0-c857ca4c026f/190295490089.jpg/600x600bb.jpg",
+      "releaseDate": "2019-02-13",
+      "trackCount": 12,
+      "tracks": [
+        {
+          "n": 1,
+          "title": "Only Under the Full Moon",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/a7/d1/11/a7d111c8-93e7-e9a3-f714-eef358a9b1ad/mzaf_1261355569883550750.plus.aac.p.m4a",
+          "durationMs": 205013
+        },
+        {
+          "n": 2,
+          "title": "Marigold",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/5a/73/39/5a7339e0-bb69-932a-8caf-02a88032c469/mzaf_9781898984182053364.plus.aac.p.m4a",
+          "durationMs": 306627
+        },
+        {
+          "n": 3,
+          "title": "What If...",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/f1/3e/14/f13e14a0-89fa-de3f-b681-1ed33cc27486/mzaf_17500705221998559645.plus.aac.p.m4a",
+          "durationMs": 181227
+        },
+        {
+          "n": 4,
+          "title": "A World of Just Me and You",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/18/88/50/1888501d-bb89-00f8-7384-f95f35c50b68/mzaf_5466067040743223481.plus.aac.p.m4a",
+          "durationMs": 271160
+        },
+        {
+          "n": 5,
+          "title": "Present",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/61/e0/e3/61e0e327-27ff-f557-f956-8c60e5b86d8b/mzaf_8000410773326313971.plus.aac.p.m4a",
+          "durationMs": 257933
+        },
+        {
+          "n": 6,
+          "title": "Raw Like Sushi",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/47/a3/69/47a36909-d76a-7c2d-8b39-68d17168b039/mzaf_15584109741589762599.plus.aac.p.m4a",
+          "durationMs": 229360
+        },
+        {
+          "n": 7,
+          "title": "Because I'm in Love",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/58/f7/b2/58f7b2cb-6904-97a8-b5bb-d12267fba125/mzaf_11711501968676284992.plus.aac.p.m4a",
+          "durationMs": 269253
+        },
+        {
+          "n": 8,
+          "title": "Dream Chaser Bengal",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/76/f7/8c/76f78c10-6119-4deb-6530-c47242b3c424/mzaf_2173180637867019050.plus.aac.p.m4a",
+          "durationMs": 281280
+        },
+        {
+          "n": 9,
+          "title": "Let the Night",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/cb/c8/55/cbc8559e-6726-0bd8-5b01-c40dc7a1130f/mzaf_4235480532593731909.plus.aac.p.m4a",
+          "durationMs": 238093
+        },
+        {
+          "n": 10,
+          "title": "Even If the World Ends Tomorrow",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/ca/37/d6/ca37d658-102b-49ed-e14c-e1a3c342588a/mzaf_17712896765807334504.plus.aac.p.m4a",
+          "durationMs": 262720
+        },
+        {
+          "n": 11,
+          "title": "Good Night Baby",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/89/0e/3c/890e3ca6-3a6d-b661-c403-10827a7a3cdb/mzaf_6188989393029949863.plus.aac.p.m4a",
+          "durationMs": 330640
+        },
+        {
+          "n": 12,
+          "title": "From the Corner Room on the 4th Floor",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/2f/e2/0e/2fe20ee0-d8ae-64fd-e422-f50f6e7df738/mzaf_16485522645146620529.plus.aac.p.m4a",
+          "durationMs": 98853
+        }
+      ]
+    }
+  },
+  {
+    "id": "jp-2019-3",
+    "year": 2019,
+    "rank": 3,
+    "title": "Pretender",
+    "artist": "Official HIGE DANdism",
+    "chartName": "Billboard Japan Hot 100 Year-End",
+    "chartAuthority": "Billboard Japan / Oricon",
+    "continent": "Asia",
+    "country": "Japan",
+    "countryCode": "JP",
+    "countryFlag": "🇯🇵",
+    "sourceUrl": "https://www.billboard-japan.com/charts/detail?a=hot100_year&year=2019",
+    "releaseDate": "2019-05-15",
+    "genres": [
+      "J-Pop",
+      "Pop Rock"
+    ],
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/1f/b6/36/1fb6364f-77fc-7653-3750-811631832ee9/PCCA_04785.jpg/600x600bb.jpg",
+    "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/95/8d/6b/958d6b1a-b4f1-0c72-039b-ddb2fbf6489b/mzaf_170812766685279849.plus.aac.p.m4a",
+    "youtubeId": "TQ8WlA2GXbk",
+    "youtubeUrl": "https://www.youtube.com/watch?v=TQ8WlA2GXbk",
+    "summary": "Official HIGE DANdism's Pretender ranks third on Billboard Japan's 2019 Hot 100 year-end list.",
+    "originCountry": "Japan",
+    "originCountryCode": "JP",
+    "originFlag": "🇯🇵",
+    "originContinent": "Asia",
+    "album": {
+      "title": "Traveler",
+      "kind": "album",
+      "url": "https://music.apple.com/jp/album/traveler/1479397582?uo=4",
+      "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music113/v4/9c/7d/88/9c7d883d-4477-bf68-f56f-a726030a63a2/PCCA_04822.jpg/600x600bb.jpg",
+      "releaseDate": "2019-10-09",
+      "trackCount": 14,
+      "tracks": [
+        {
+          "n": 1,
+          "title": "イエスタデイ",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/89/ea/28/89ea2861-ace6-7c5c-e253-4fb58a3a057b/mzaf_6129626854603365687.plus.aac.p.m4a",
+          "durationMs": 299164
+        },
+        {
+          "n": 2,
+          "title": "宿命",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/0d/d1/cc/0dd1cc9a-f1e5-4729-dcb1-de1f5e960dab/mzaf_4664808039350850252.plus.aac.p.m4a",
+          "durationMs": 280856
+        },
+        {
+          "n": 3,
+          "title": "Amazing",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/90/c8/1f/90c81fd9-8d4f-996b-a42a-2a114039839e/mzaf_17691867367658001384.plus.aac.p.m4a",
+          "durationMs": 231065
+        },
+        {
+          "n": 4,
+          "title": "Rowan",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/ac/4e/9d/ac4e9dba-f869-3d15-366f-367217322946/mzaf_5015650389694415480.plus.aac.p.m4a",
+          "durationMs": 284224
+        },
+        {
+          "n": 5,
+          "title": "バッドフォーミー",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/d9/08/63/d9086309-5e99-43c9-dece-8cf69b17e408/mzaf_16418685507341471716.plus.aac.p.m4a",
+          "durationMs": 235325
+        },
+        {
+          "n": 6,
+          "title": "最後の恋煩い",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/31/2b/51/312b515a-63a9-a13a-03a3-4aaaf9402a12/mzaf_11335137873690498493.plus.aac.p.m4a",
+          "durationMs": 273180
+        },
+        {
+          "n": 7,
+          "title": "ビンテージ",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/a0/47/eb/a047eb8b-b0dd-409c-71ac-c9c3a5a50aff/mzaf_10272285410586190592.plus.aac.p.m4a",
+          "durationMs": 252566
+        },
+        {
+          "n": 8,
+          "title": "Stand By You",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/e9/13/43/e9134399-daab-0315-805c-71596cc5cf6c/mzaf_15366535498748402726.plus.aac.p.m4a",
+          "durationMs": 256132
+        },
+        {
+          "n": 9,
+          "title": "FIRE GROUND",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/b7/af/e4/b7afe44d-f526-12c7-f2f0-a7b4464c5f33/mzaf_4138129610391294526.plus.aac.p.m4a",
+          "durationMs": 223416
+        },
+        {
+          "n": 10,
+          "title": "旅は道連れ",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/d3/56/f4/d356f419-5036-cd5f-6ee8-614b8202906a/mzaf_2526053727470416142.plus.aac.p.m4a",
+          "durationMs": 195735
+        },
+        {
+          "n": 11,
+          "title": "052519",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/8d/38/14/8d381487-cf32-ba28-c29d-00df43470ce6/mzaf_7512231020908485984.plus.aac.p.m4a",
+          "durationMs": 10606
+        },
+        {
+          "n": 12,
+          "title": "Pretender",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/71/93/7a/71937a82-5662-3d08-c78d-65179c560a6b/mzaf_4128339501254480840.plus.aac.p.m4a",
+          "durationMs": 326843
+        },
+        {
+          "n": 13,
+          "title": "ラストソング",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/41/70/8d/41708d9c-c432-6588-db38-4ecad0fe7985/mzaf_12498342720895133295.plus.aac.p.m4a",
+          "durationMs": 353371
+        },
+        {
+          "n": 14,
+          "title": "Travelers",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/55/a8/50/55a850e4-1f98-75c3-5053-88db6781741a/mzaf_11763890874915213695.plus.aac.p.m4a",
+          "durationMs": 106574
+        }
+      ]
+    }
+  },
+  {
+    "id": "sg-2019-1",
+    "year": 2019,
+    "rank": 1,
+    "title": "Señorita",
+    "artist": "Shawn Mendes & Camila Cabello",
+    "chartName": "Singapore Top 30 Digital Streaming (RIAS)",
+    "chartAuthority": "Recording Industry Association Singapore (RIAS)",
+    "continent": "Asia",
+    "country": "Singapore",
+    "countryCode": "SG",
+    "countryFlag": "🇸🇬",
+    "sourceUrl": "https://en.wikipedia.org/wiki/List_of_number-one_songs_of_2019_(Singapore)",
+    "releaseDate": "2019-06-21",
+    "genres": [
+      "Mandopop",
+      "Ballad"
+    ],
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/46/fe/4a/46fe4a39-feb4-7b8b-97b9-0187d49a46bd/19UMGIM53914.rgb.jpg/600x600bb.jpg",
+    "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/cf/06/d6/cf06d6fd-f7a0-2898-8363-67688df6c14f/mzaf_8234301186390421644.plus.aac.p.m4a",
+    "youtubeId": "Pkh8UtuejGw",
+    "youtubeUrl": "https://www.youtube.com/watch?v=Pkh8UtuejGw",
+    "weeksAtNumberOne": 13,
+    "summary": "Shawn Mendes and Camila Cabello's \"Señorita\" had the most weeks at number one (13) on the RIAS Top 30 Digital Streaming chart in 2019, ahead of Maroon 5's \"Memories\" (9).",
+    "originCountry": "Canada",
+    "originCountryCode": "CA",
+    "originFlag": "🇨🇦",
+    "originContinent": "North America",
+    "originArea": "Canada",
+    "album": {
+      "title": "Romance",
+      "kind": "album",
+      "url": "https://music.apple.com/sg/album/romance/1487577356?uo=4",
+      "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/c5/d5/7e/c5d57e36-4270-8730-d009-5e82a71016f7/886448121220.jpg/600x600bb.jpg",
+      "releaseDate": "2019-12-06",
+      "trackCount": 14,
+      "tracks": [
+        {
+          "n": 1,
+          "title": "Shameless",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/ce/59/7d/ce597d1a-1c55-7a0c-a19e-0b052a4250a8/mzaf_6182093257318354435.plus.aac.p.m4a",
+          "durationMs": 219733
+        },
+        {
+          "n": 2,
+          "title": "Living Proof",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/85/6c/dd/856cdde4-b1b5-21d7-3e48-b021f6952312/mzaf_8296541274300983641.plus.aac.p.m4a",
+          "durationMs": 194442
+        },
+        {
+          "n": 3,
+          "title": "Should've Said It",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/62/9e/f3/629ef3fb-13b6-a4c4-c75f-bd7a61fe7d98/mzaf_18007425983513003467.plus.aac.p.m4a",
+          "durationMs": 200672
+        },
+        {
+          "n": 4,
+          "title": "My Oh My (feat. DaBaby)",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/e3/c2/28/e3c22828-281c-b3e6-3553-a1690784f677/mzaf_2558720137181385830.plus.aac.p.m4a",
+          "durationMs": 171375
+        },
+        {
+          "n": 5,
+          "title": "Señorita",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/65/8c/55/658c55a1-6cb6-33ce-7069-9d1e014916b7/mzaf_878666906408065129.plus.aac.p.m4a",
+          "durationMs": 190813
+        },
+        {
+          "n": 6,
+          "title": "Liar",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/b3/c1/b7/b3c1b7c4-2e75-3f85-37e9-7a67543a1482/mzaf_17886688562978746778.plus.aac.p.m4a",
+          "durationMs": 208426
+        },
+        {
+          "n": 7,
+          "title": "Bad Kind of Butterflies",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/48/b7/ba/48b7baed-6291-6dd9-2bfa-4c76e2fea0d8/mzaf_18090733568625729028.plus.aac.p.m4a",
+          "durationMs": 169335
+        },
+        {
+          "n": 8,
+          "title": "Easy",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/e7/ec/e6/e7ece676-4102-3a44-91e0-34f946773e66/mzaf_4775089895321400876.plus.aac.p.m4a",
+          "durationMs": 194686
+        },
+        {
+          "n": 9,
+          "title": "Feel It Twice",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/9b/fc/8e/9bfc8eb7-9827-4a75-7793-f13f545326dd/mzaf_12593336639049316666.plus.aac.p.m4a",
+          "durationMs": 188939
+        },
+        {
+          "n": 10,
+          "title": "Dream of You",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/a4/37/04/a437049d-f81b-4eea-7eb2-e691c2a852ac/mzaf_6618837749775132712.plus.aac.p.m4a",
+          "durationMs": 222999
+        },
+        {
+          "n": 11,
+          "title": "Cry for Me",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/e2/20/b1/e220b16d-95f5-5764-5450-d9635064ad83/mzaf_8327042490839835599.plus.aac.p.m4a",
+          "durationMs": 189138
+        },
+        {
+          "n": 12,
+          "title": "This Love",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/29/0b/12/290b12e9-6787-960e-73a0-a7c4dcf55b60/mzaf_14806229524031623150.plus.aac.p.m4a",
+          "durationMs": 220072
+        },
+        {
+          "n": 13,
+          "title": "Used to This",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/ea/12/b7/ea12b7dc-5c97-78f4-d50f-245556fae18e/mzaf_15370711589140953574.plus.aac.p.m4a",
+          "durationMs": 210002
+        },
+        {
+          "n": 14,
+          "title": "First Man",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/58/16/fb/5816fb03-7bbe-5969-974c-cad0d87738fe/mzaf_6077136905760941876.plus.aac.p.m4a",
+          "durationMs": 228759
+        }
+      ],
+      "stats": {
+        "certifications": [
+          {
+            "body": "RIAA",
+            "level": "Platinum",
+            "region": "US",
+            "date": null
+          },
+          {
+            "body": "Music Canada",
+            "level": "2× Platinum",
+            "region": "Canada",
+            "date": null
+          },
+          {
+            "body": "BPI",
+            "level": "Gold",
+            "region": "UK",
+            "date": null
+          },
+          {
+            "body": "RMNZ",
+            "level": "2× Platinum",
+            "region": "New Zealand",
+            "date": null
+          }
+        ],
+        "units": null,
+        "peak": {
+          "chart": "Billboard 200",
+          "position": 3
+        },
+        "sourceUrl": "https://en.wikipedia.org/wiki/Romance_(Camila_Cabello_album)"
+      }
+    },
+    "songStats": {
+      "peak": 1,
+      "weeksOnChart": null,
+      "weeksAtNumberOne": 13,
+      "chart": "Singapore Top 30 Digital Streaming (RIAS)",
+      "sourceUrl": "https://en.wikipedia.org/wiki/List_of_number-one_songs_of_2019_(Singapore)",
+      "asOf": "2026-10-17"
+    }
+  },
+  {
     "id": "kr-2019-1",
     "year": 2019,
     "rank": 1,
@@ -25011,6 +27838,176 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
       "chart": "Circle (Gaon) Digital Chart (weekly)",
       "sourceUrl": "https://en.wikipedia.org/wiki/2002_(Anne-Marie_song)",
       "asOf": "2026-10-17"
+    }
+  },
+  {
+    "id": "kr-2019-2",
+    "year": 2019,
+    "rank": 2,
+    "title": "If There Was Practice in Love (사랑에 연습이 있었다면)",
+    "artist": "Lim Jae-hyun (임재현)",
+    "chartName": "Gaon Digital Chart (year-end)",
+    "chartAuthority": "Korea Music Content Association (KMCA)",
+    "continent": "Asia",
+    "country": "South Korea",
+    "countryCode": "KR",
+    "countryFlag": "🇰🇷",
+    "sourceUrl": "https://en.wikipedia.org/wiki/Circle_Digital_Chart",
+    "releaseDate": "2018-09-25",
+    "genres": [
+      "K-Pop",
+      "Ballad"
+    ],
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/87/be/71/87be71e9-8856-fb48-b391-64bda3d2343e/191953280981.jpg/600x600bb.jpg",
+    "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/45/7f/c4/457fc402-3b7b-ce3f-419c-1464b2903f3f/mzaf_10340901239284841136.plus.aac.p.m4a",
+    "youtubeId": "u37OQ7OE7f0",
+    "youtubeUrl": "https://www.youtube.com/watch?v=u37OQ7OE7f0",
+    "summary": "Lim Jae-hyun's debut single, released in September 2018, became a sleeper hit in 2019 and ranked second on the 2019 Gaon Digital Chart year-end list.",
+    "album": {
+      "title": "If there was practice in love",
+      "kind": "single",
+      "url": "https://music.apple.com/us/album/if-there-was-practice-in-love-single/1684467057?uo=4",
+      "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/87/be/71/87be71e9-8856-fb48-b391-64bda3d2343e/191953280981.jpg/600x600bb.jpg",
+      "releaseDate": "2018-09-25",
+      "trackCount": 2,
+      "tracks": [
+        {
+          "n": 1,
+          "title": "If there was practice in love",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/45/7f/c4/457fc402-3b7b-ce3f-419c-1464b2903f3f/mzaf_10340901239284841136.plus.aac.p.m4a",
+          "durationMs": 255882
+        },
+        {
+          "n": 2,
+          "title": "If there was practice in love (Instrumental)",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/5e/70/f1/5e70f153-0651-e169-20d1-40fd141a0961/mzaf_6117590986955676993.plus.aac.p.m4a",
+          "durationMs": 255882
+        }
+      ]
+    }
+  },
+  {
+    "id": "kr-2019-3",
+    "year": 2019,
+    "rank": 3,
+    "title": "Every Day, Every Moment (모든 날, 모든 순간)",
+    "artist": "Paul Kim (폴킴)",
+    "chartName": "Gaon Digital Chart (year-end)",
+    "chartAuthority": "Korea Music Content Association (KMCA)",
+    "continent": "Asia",
+    "country": "South Korea",
+    "countryCode": "KR",
+    "countryFlag": "🇰🇷",
+    "sourceUrl": "https://en.wikipedia.org/wiki/Circle_Digital_Chart",
+    "releaseDate": "2018-03-20",
+    "genres": [
+      "K-Pop",
+      "Ballad",
+      "OST"
+    ],
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/fb/45/a5/fb45a5f3-e172-f3c7-05df-733d16c8fc31/OST3_A_Fin.jpg/600x600bb.jpg",
+    "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/fd/02/65/fd026582-acff-107b-657e-725e82ade606/mzaf_13214848125267621317.plus.aac.p.m4a",
+    "youtubeId": "nq0BYGyH2Do",
+    "youtubeUrl": "https://www.youtube.com/watch?v=nq0BYGyH2Do",
+    "summary": "Paul Kim's 2018 drama soundtrack ballad stayed in demand through 2019 and ranked third on the 2019 Gaon Digital Chart year-end list (it was also third in 2018).",
+    "originCountry": "South Korea",
+    "originCountryCode": "KR",
+    "originFlag": "🇰🇷",
+    "originContinent": "Asia",
+    "originArea": "South Korea",
+    "album": {
+      "title": "Should We Kiss First? (Original Television Soundtrack)",
+      "kind": "album",
+      "url": "https://music.apple.com/us/album/should-we-kiss-first-original-television-soundtrack/1377465148?uo=4",
+      "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music128/v4/8e/e2/21/8ee22162-80bc-99ce-8987-04d58f6a4028/OST7_A.jpg/600x600bb.jpg",
+      "releaseDate": "2018-05-02",
+      "trackCount": 14,
+      "tracks": [
+        {
+          "n": 1,
+          "title": "Ordinary Goodbye",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/94/b2/ea/94b2eaca-575c-1386-e2be-68a0eb8bdd5f/mzaf_3340280645278223065.plus.aac.p.m4a",
+          "durationMs": 177922
+        },
+        {
+          "n": 2,
+          "title": "Is it Love",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/4c/de/30/4cde30db-9113-e62c-2b8b-5e5963c38234/mzaf_17729211329517061960.plus.aac.p.m4a",
+          "durationMs": 240752
+        },
+        {
+          "n": 3,
+          "title": "PERFECT",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/f8/28/59/f8285957-1ae8-4032-30d7-d608d1dc66e1/mzaf_2091757336652394490.plus.aac.p.m4a",
+          "durationMs": 206111
+        },
+        {
+          "n": 4,
+          "title": "Every day, Every Moment",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/ce/6d/fa/ce6dfa45-c9bb-e0b4-b263-fd0b17896370/mzaf_5305922478922450897.plus.aac.p.m4a",
+          "durationMs": 210493
+        },
+        {
+          "n": 5,
+          "title": "Monologue",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/0c/46/7a/0c467a5f-1397-d139-3bb3-340bd4fe5a84/mzaf_12713478224589952305.plus.aac.p.m4a",
+          "durationMs": 224469
+        },
+        {
+          "n": 6,
+          "title": "On My Own",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/39/f7/da/39f7da6a-6849-b184-9f87-feaadae42761/mzaf_946886468930438320.plus.aac.p.m4a",
+          "durationMs": 223044
+        },
+        {
+          "n": 7,
+          "title": "Coincidence",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/15/32/aa/1532aa14-20b7-ca5b-bd28-2ef62fa6d3fe/mzaf_8216775580896177446.plus.aac.p.m4a",
+          "durationMs": 204526
+        },
+        {
+          "n": 8,
+          "title": "Ordinary Goodbye (Instrumental)",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/2d/43/42/2d4342a5-221e-d68f-5d57-741efbb0ef6a/mzaf_5164841618474390039.plus.aac.p.m4a",
+          "durationMs": 177922
+        },
+        {
+          "n": 9,
+          "title": "Is it Love (Instrumental)",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/7f/06/40/7f0640f7-ebec-d7d0-ceec-a8f0b0116497/mzaf_2459862161677196514.plus.aac.p.m4a",
+          "durationMs": 240752
+        },
+        {
+          "n": 10,
+          "title": "PERFECT (Instrumental)",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/e7/1a/a9/e71aa999-2127-77ec-b847-057ddb8a0616/mzaf_14252016576293343656.plus.aac.p.m4a",
+          "durationMs": 206111
+        },
+        {
+          "n": 11,
+          "title": "Every day, Every Moment (Instrumental)",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/7a/c2/56/7ac25642-b07c-2de3-b31c-1b411a476dcd/mzaf_15760110079677791343.plus.aac.p.m4a",
+          "durationMs": 210493
+        },
+        {
+          "n": 12,
+          "title": "Monologue (Instrumental)",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/6e/7c/45/6e7c4519-ebe6-8416-5824-cdc9cfa36c6f/mzaf_10227854489619208498.plus.aac.p.m4a",
+          "durationMs": 224469
+        },
+        {
+          "n": 13,
+          "title": "On My Own (Instrumental)",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/0a/06/0f/0a060f1c-99b6-6051-b7e1-48dc99878313/mzaf_5321878274536551568.plus.aac.p.m4a",
+          "durationMs": 223044
+        },
+        {
+          "n": 14,
+          "title": "Coincidence (Instrumental)",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/ec/f7/d1/ecf7d194-b2dd-1691-2cef-f8d5a53243d8/mzaf_12678744408046488593.plus.aac.p.m4a",
+          "durationMs": 204526
+        }
+      ]
     }
   },
   {
@@ -27053,143 +30050,514 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
     }
   },
   {
-    "id": "sg-2018-1",
+    "id": "gb-2018-2",
     "year": 2018,
-    "rank": 1,
-    "title": "thank u, next",
-    "artist": "Ariana Grande",
-    "chartName": "Singapore Top 30 Digital Streaming (RIAS)",
-    "chartAuthority": "Recording Industry Association Singapore (RIAS)",
-    "continent": "Asia",
-    "country": "Singapore",
-    "countryCode": "SG",
-    "countryFlag": "🇸🇬",
-    "sourceUrl": "https://en.wikipedia.org/wiki/List_of_number-one_songs_of_2018_(Singapore)",
-    "releaseDate": "2018-11-03",
+    "rank": 2,
+    "title": "God's Plan",
+    "artist": "Drake",
+    "chartName": "Official Charts UK Singles",
+    "chartAuthority": "Official Charts Company",
+    "continent": "Europe",
+    "country": "United Kingdom",
+    "countryCode": "GB",
+    "countryFlag": "🇬🇧",
+    "sourceUrl": "https://www.officialcharts.com/charts/end-of-year-singles-chart/20180101/37501/",
+    "releaseDate": "2018-01-19",
     "genres": [
-      "Pop",
-      "R&B"
+      "Hip-hop",
+      "Pop rap",
+      "Trap"
     ],
-    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/bb/69/07/bb6907de-8ad4-970b-3311-121320e1bf9c/19UMGIM03691.rgb.jpg/600x600bb.jpg",
-    "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/89/96/16/8996169e-2309-a298-f6f0-e7c52fe8e176/mzaf_590631660224715451.plus.aac.p.m4a",
-    "youtubeId": "gl1aHhXnN1k",
-    "youtubeUrl": "https://www.youtube.com/watch?v=gl1aHhXnN1k",
-    "weeksAtNumberOne": 8,
-    "summary": "Ariana Grande's \"Thank U, Next\" was the longest-running number one of 2018 on the RIAS Top 30 Digital Streaming chart, with 8 consecutive weeks (8 Nov - 27 Dec issues).",
-    "originCountry": "United States",
-    "originCountryCode": "US",
-    "originFlag": "🇺🇸",
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/bb/6d/8f/bb6d8f67-6d04-10b5-dd62-eb5809ac54fc/00602567879152.rgb.jpg/600x600bb.jpg",
+    "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/c6/4a/be/c64abe74-adb4-cff5-005d-0fab3d72a806/mzaf_10276154697254415719.plus.aac.p.m4a",
+    "youtubeId": "xpVfcZ0ZcFM",
+    "youtubeUrl": "https://www.youtube.com/watch?v=xpVfcZ0ZcFM",
+    "summary": "Drake's God's Plan was second on the Official Charts UK year-end singles chart for 2018, behind One Kiss by Calvin Harris and Dua Lipa.",
+    "originCountry": "Canada",
+    "originCountryCode": "CA",
+    "originFlag": "🇨🇦",
     "originContinent": "North America",
-    "originArea": "United States",
+    "originArea": "Canada",
     "album": {
-      "title": "thank u, next",
+      "title": "Scorpion",
       "kind": "album",
-      "url": "https://music.apple.com/sg/album/thank-u-next/1450333975?uo=4",
-      "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/bb/69/07/bb6907de-8ad4-970b-3311-121320e1bf9c/19UMGIM03691.rgb.jpg/600x600bb.jpg",
-      "releaseDate": "2019-02-08",
-      "trackCount": 12,
+      "url": "https://music.apple.com/gb/album/scorpion/1406109769?uo=4",
+      "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/bb/6d/8f/bb6d8f67-6d04-10b5-dd62-eb5809ac54fc/00602567879152.rgb.jpg/600x600bb.jpg",
+      "releaseDate": "2018-06-29",
+      "trackCount": 25,
       "tracks": [
         {
           "n": 1,
-          "title": "imagine",
-          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/a0/d7/e8/a0d7e88e-3a96-18c1-6360-53160b185732/mzaf_11851770940343250582.plus.aac.p.m4a",
-          "durationMs": 212277
+          "title": "Survival",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/57/9f/89/579f89b5-0e33-0f03-1eb0-884740fafc7f/mzaf_2786485979798321832.plus.aac.p.m4a",
+          "durationMs": 136187
         },
         {
           "n": 2,
-          "title": "needy",
-          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/34/71/80/3471809a-e61a-2ae8-d27c-163a3d9afb89/mzaf_14654989245127930329.plus.aac.p.m4a",
-          "durationMs": 171569
+          "title": "Nonstop",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/e9/de/72/e9de72f8-5ddf-4dc7-314b-b075f84c089a/mzaf_1959293355792944364.plus.aac.p.m4a",
+          "durationMs": 238614
         },
         {
           "n": 3,
-          "title": "NASA",
-          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/32/59/0e/32590e4f-b6de-5cba-0f8b-9a6c5803dcf2/mzaf_1921720784067133208.plus.aac.p.m4a",
-          "durationMs": 182000
+          "title": "Elevate",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/70/93/bd/7093bdb9-2269-76cc-13bf-58bdd197cefc/mzaf_8135094129458374914.plus.aac.p.m4a",
+          "durationMs": 184960
         },
         {
           "n": 4,
-          "title": "bloodline",
-          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/69/93/d2/6993d2fd-552a-1405-b881-d9e29a892db9/mzaf_10913675113634460842.plus.aac.p.m4a",
-          "durationMs": 216900
+          "title": "Emotionless",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/0f/f4/f6/0ff4f621-6c24-e6bf-afd7-f412da02f235/mzaf_17548703518986566151.plus.aac.p.m4a",
+          "durationMs": 302173
         },
         {
           "n": 5,
-          "title": "fake smile",
-          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/c6/f6/12/c6f612d2-5c62-7d17-fd90-a413ca91914f/mzaf_14230462155424431740.plus.aac.p.m4a",
-          "durationMs": 208875
+          "title": "God's Plan",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/c6/4a/be/c64abe74-adb4-cff5-005d-0fab3d72a806/mzaf_10276154697254415719.plus.aac.p.m4a",
+          "durationMs": 198973
         },
         {
           "n": 6,
-          "title": "bad idea",
-          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/d9/ba/7b/d9ba7b6b-fc92-902c-afdc-66414f8bf496/mzaf_7203509087118317775.plus.aac.p.m4a",
-          "durationMs": 267099
+          "title": "I'm Upset",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/3f/1b/79/3f1b7974-15ef-dd06-479b-e0b787b42b5e/mzaf_6585448690219012711.plus.aac.p.m4a",
+          "durationMs": 214467
         },
         {
           "n": 7,
-          "title": "make up",
-          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/d9/64/d2/d964d2ca-fb18-5688-12fc-9633e6026465/mzaf_6516976829817943054.plus.aac.p.m4a",
-          "durationMs": 140705
+          "title": "8 Out Of 10",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/71/45/b6/7145b6c7-9469-9d62-c642-212bd98435f8/mzaf_9882979153121248126.plus.aac.p.m4a",
+          "durationMs": 195720
         },
         {
           "n": 8,
-          "title": "ghostin",
-          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/ac/ef/aa/acefaa3a-f2a4-8e5a-697f-067d79cf0f3f/mzaf_14160304074994936008.plus.aac.p.m4a",
-          "durationMs": 271461
+          "title": "Mob Ties",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/c2/fd/47/c2fd4725-e182-77d6-dea7-c716df21f9eb/mzaf_4497895745232905863.plus.aac.p.m4a",
+          "durationMs": 205147
         },
         {
           "n": 9,
-          "title": "in my head",
-          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/bd/e9/ae/bde9aed3-19a1-6409-6ab5-81df7a305fe5/mzaf_5011950890306781588.plus.aac.p.m4a",
-          "durationMs": 222945
+          "title": "Can't Take a Joke",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/94/3f/d2/943fd2f7-93c1-0d94-295e-e7dd569149b9/mzaf_14036134460862573180.plus.aac.p.m4a",
+          "durationMs": 163974
         },
         {
           "n": 10,
-          "title": "7 rings",
-          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/d5/c8/f3/d5c8f31b-1c8f-93ed-e78b-8c0bce3e8b66/mzaf_14456154925680073521.plus.aac.p.m4a",
-          "durationMs": 178631
+          "title": "Sandra's Rose",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/7b/a3/a7/7ba3a7c0-c41b-67d8-d28b-267a90c18ea6/mzaf_2900816618940566356.plus.aac.p.m4a",
+          "durationMs": 216333
         },
         {
           "n": 11,
-          "title": "thank u, next",
-          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/89/96/16/8996169e-2309-a298-f6f0-e7c52fe8e176/mzaf_590631660224715451.plus.aac.p.m4a",
-          "durationMs": 207322
+          "title": "Talk Up (feat. JAŸ-Z)",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/f0/85/e2/f085e2fb-e386-e952-632f-d3bab2f3839b/mzaf_18416411030545846896.plus.aac.p.m4a",
+          "durationMs": 223240
         },
         {
           "n": 12,
-          "title": "break up with your girlfriend, i'm bored",
-          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/dd/f8/a9/ddf8a959-42af-53c8-5dfa-4ff4844652fd/mzaf_13002311379380859940.plus.aac.p.m4a",
-          "durationMs": 190408
-        }
-      ],
-      "stats": {
-        "certifications": [
-          {
-            "body": "RIAS",
-            "level": "2× Platinum (2021)",
-            "region": "Singapore",
-            "date": null
-          },
-          {
-            "body": "RIAA",
-            "level": "2× Platinum (2020)",
-            "region": "US",
-            "date": null
-          },
-          {
-            "body": "BPI",
-            "level": "2× Platinum (2026)",
-            "region": "UK",
-            "date": null
-          }
-        ],
-        "units": null,
-        "peak": {
-          "chart": "Billboard 200",
-          "position": 1
+          "title": "Is There More",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/5d/13/b3/5d13b393-9f37-3c3f-cb7f-4d86c6c5ba0d/mzaf_2545044058406783306.plus.aac.p.m4a",
+          "durationMs": 226907
         },
-        "sourceUrl": "https://en.wikipedia.org/wiki/Thank_U,_Next_(album)"
-      }
+        {
+          "n": 13,
+          "title": "Peak",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/bb/b5/54/bbb554ba-1299-9ab8-9c69-3c70d92e60b5/mzaf_9610727952834031478.plus.aac.p.m4a",
+          "durationMs": 206027
+        },
+        {
+          "n": 14,
+          "title": "Summer Games",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/2b/2c/72/2b2c721d-3cd8-a5cc-1e0e-f2aa38deeeb6/mzaf_16817192343434693127.plus.aac.p.m4a",
+          "durationMs": 247893
+        },
+        {
+          "n": 15,
+          "title": "Jaded",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/a1/ab/46/a1ab4626-27b2-7302-a0e2-896b4ca5e4e4/mzaf_7889212121310043606.plus.aac.p.m4a",
+          "durationMs": 262453
+        },
+        {
+          "n": 16,
+          "title": "Nice For What",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/b5/df/23/b5df2301-6d1b-bd29-7521-745cc346fb13/mzaf_15429939059485588664.plus.aac.p.m4a",
+          "durationMs": 210747
+        },
+        {
+          "n": 17,
+          "title": "Finesse",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/95/81/00/9581008d-280e-0979-ac2c-bc583cb004c5/mzaf_9014627774518723411.plus.aac.p.m4a",
+          "durationMs": 182080
+        },
+        {
+          "n": 18,
+          "title": "Ratchet Happy Birthday",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/37/51/9f/37519fa0-5f1b-9a19-3433-04eb0e5c4d72/mzaf_466771708763103818.plus.aac.p.m4a",
+          "durationMs": 207307
+        },
+        {
+          "n": 19,
+          "title": "That's How You Feel",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/1a/3d/78/1a3d783f-1360-98f0-fafb-c7b81f45456e/mzaf_1157157294541961817.plus.aac.p.m4a",
+          "durationMs": 157605
+        },
+        {
+          "n": 20,
+          "title": "Blue Tint",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/8c/da/f5/8cdaf5cb-6e77-64ba-03f9-ae06a3b661db/mzaf_15844127799495511763.plus.aac.p.m4a",
+          "durationMs": 162800
+        },
+        {
+          "n": 21,
+          "title": "In My Feelings",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/df/e8/e2/dfe8e281-f90d-a00e-141e-aab9f5b0b0b1/mzaf_8379698669799841165.plus.aac.p.m4a",
+          "durationMs": 217925
+        },
+        {
+          "n": 22,
+          "title": "Don't Matter To Me",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/3d/b0/18/3db0186a-f4fb-9e83-fb97-748b14a3c25c/mzaf_3361730350476728594.plus.aac.p.m4a",
+          "durationMs": 245787
+        },
+        {
+          "n": 23,
+          "title": "After Dark (feat. Static Major & Ty Dolla $ign)",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/78/d0/c5/78d0c552-5ef7-0ded-0f34-e83394e8de9f/mzaf_2414788679123371714.plus.aac.p.m4a",
+          "durationMs": 289560
+        },
+        {
+          "n": 24,
+          "title": "Final Fantasy",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/f1/dd/fe/f1ddfe22-1986-190e-bb8f-809f30fe3563/mzaf_15511050552780778718.plus.aac.p.m4a",
+          "durationMs": 219960
+        },
+        {
+          "n": 25,
+          "title": "March 14",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/2b/7e/62/2b7e6273-6032-703f-ee4f-4f9d68d76596/mzaf_6004005963564656191.plus.aac.p.m4a",
+          "durationMs": 309560
+        }
+      ]
+    }
+  },
+  {
+    "id": "gb-2018-3",
+    "year": 2018,
+    "rank": 3,
+    "title": "Shotgun",
+    "artist": "George Ezra",
+    "chartName": "Official Charts UK Singles",
+    "chartAuthority": "Official Charts Company",
+    "continent": "Europe",
+    "country": "United Kingdom",
+    "countryCode": "GB",
+    "countryFlag": "🇬🇧",
+    "sourceUrl": "https://www.officialcharts.com/charts/end-of-year-singles-chart/20180101/37501/",
+    "releaseDate": "2018-05-18",
+    "genres": [
+      "Pop rock"
+    ],
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/b0/47/cf/b047cf32-2af6-7ed5-754e-e4eed488be27/886446561875.jpg/600x600bb.jpg",
+    "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/e8/d2/fc/e8d2fc70-afa6-230b-4e0f-32f1f99ea8b1/mzaf_18434333048034740247.plus.aac.p.m4a",
+    "youtubeId": "aAiVsqfbn5g",
+    "youtubeUrl": "https://www.youtube.com/watch?v=aAiVsqfbn5g",
+    "summary": "George Ezra's Shotgun, his first UK No. 1, ranked third on the Official Charts UK year-end singles chart for 2018.",
+    "originCountry": "United Kingdom",
+    "originCountryCode": "GB",
+    "originFlag": "🇬🇧",
+    "originContinent": "Europe",
+    "originArea": "United Kingdom",
+    "album": {
+      "title": "Staying at Tamara's",
+      "kind": "album",
+      "url": "https://music.apple.com/gb/album/staying-at-tamaras/1331589118?uo=4",
+      "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/b0/47/cf/b047cf32-2af6-7ed5-754e-e4eed488be27/886446561875.jpg/600x600bb.jpg",
+      "releaseDate": "2018-03-23",
+      "trackCount": 11,
+      "tracks": [
+        {
+          "n": 1,
+          "title": "Pretty Shining People",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/51/43/a7/5143a7ae-161f-3e09-e047-1ef238ba73ee/mzaf_2114659572959313967.plus.aac.p.m4a",
+          "durationMs": 212447
+        },
+        {
+          "n": 2,
+          "title": "Don't Matter Now",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/2c/b9/cc/2cb9ccc8-13d0-06ee-7b6c-a65900c7ffab/mzaf_15730498798136699820.plus.aac.p.m4a",
+          "durationMs": 176089
+        },
+        {
+          "n": 3,
+          "title": "Get Away",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/2d/a3/07/2da307cb-74b1-f344-f191-c754ef90177a/mzaf_9504433043504891237.plus.aac.p.m4a",
+          "durationMs": 154342
+        },
+        {
+          "n": 4,
+          "title": "Shotgun",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/e8/d2/fc/e8d2fc70-afa6-230b-4e0f-32f1f99ea8b1/mzaf_18434333048034740247.plus.aac.p.m4a",
+          "durationMs": 201287
+        },
+        {
+          "n": 5,
+          "title": "Paradise",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/7e/ba/9e/7eba9e50-dbf6-b05b-b3d4-ce65bc4b9e6b/mzaf_978641913250997778.plus.aac.p.m4a",
+          "durationMs": 222045
+        },
+        {
+          "n": 6,
+          "title": "All My Love",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/04/e8/13/04e8131e-b91a-2dbd-1c7e-2e2281a92ec1/mzaf_10737492855037690290.plus.aac.p.m4a",
+          "durationMs": 160951
+        },
+        {
+          "n": 7,
+          "title": "Sugarcoat",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/4a/b7/45/4ab74525-c946-53c8-ae6b-8d02ba03399f/mzaf_1799384995368823878.plus.aac.p.m4a",
+          "durationMs": 202126
+        },
+        {
+          "n": 8,
+          "title": "Hold My Girl",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/54/17/81/54178109-e97d-9858-820e-f9c7dad4f8ea/mzaf_15113591218006924837.plus.aac.p.m4a",
+          "durationMs": 211764
+        },
+        {
+          "n": 9,
+          "title": "Saviour (feat. First Aid Kit)",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/14/eb/ae/14ebaec0-74ce-3a5b-22ea-e0645a9ff61e/mzaf_7279643967027743701.plus.aac.p.m4a",
+          "durationMs": 212275
+        },
+        {
+          "n": 10,
+          "title": "Only a Human",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/d7/50/50/d7505063-4aa5-7e22-08df-61b721d1613e/mzaf_11107405007914786888.plus.aac.p.m4a",
+          "durationMs": 214475
+        },
+        {
+          "n": 11,
+          "title": "The Beautiful Dream",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/2c/89/11/2c8911b9-9fc4-e6dd-bc94-85d5b033456c/mzaf_6311199930373052635.plus.aac.p.m4a",
+          "durationMs": 269938
+        }
+      ]
+    }
+  },
+  {
+    "id": "ng-2018-1",
+    "year": 2018,
+    "rank": 1,
+    "title": "Soco",
+    "artist": "Starboy ft. Wizkid, Terri, Spotless & Ceeza Milli",
+    "chartName": "Guardian Nigeria Most Streamed Nigerian Songs of 2018",
+    "chartAuthority": "The Guardian Nigeria (Guardian Life), compiled from Music+, YouTube and Spotify streaming figures",
+    "continent": "Africa",
+    "country": "Nigeria",
+    "countryCode": "NG",
+    "countryFlag": "🇳🇬",
+    "sourceUrl": "https://guardian.ng/life/music/10-most-streamed-nigerian-songs-of-2018/",
+    "releaseDate": "2018-02-21",
+    "genres": [
+      "Afrobeats"
+    ],
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music118/v4/ae/e4/8e/aee48e1f-7435-31fb-af54-123a1ea5fd73/888915604601_cover.jpg/600x600bb.jpg",
+    "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/72/cf/f2/72cff2ac-5159-671a-e5bf-a9a4cc97ea8d/mzaf_1947635679742953360.plus.aac.p.m4a",
+    "youtubeId": "1VrWaED18_g",
+    "youtubeUrl": "https://www.youtube.com/watch?v=1VrWaED18_g",
+    "summary": "Guardian Life's 9 March 2019 ranking of the most streamed Nigerian songs of 2018, compared across Music+, YouTube and Spotify, puts Soco first, ahead of Davido's Assurance and Wizkid's Fever. TurnTable charts did not exist in 2018, so this editorial streaming compilation of Nigerian-made songs is the credible source found.",
+    "originCountry": "Nigeria",
+    "originCountryCode": "NG",
+    "originFlag": "🇳🇬",
+    "originContinent": "Africa",
+    "originArea": "Lagos"
+  },
+  {
+    "id": "za-2018-1",
+    "year": 2018,
+    "rank": 1,
+    "title": "God's Plan",
+    "artist": "Drake",
+    "chartName": "Deezer South Africa Most Streamed Songs Overall 2018",
+    "chartAuthority": "Deezer South Africa (via News24)",
+    "continent": "Africa",
+    "country": "South Africa",
+    "countryCode": "ZA",
+    "countryFlag": "🇿🇦",
+    "sourceUrl": "https://www.news24.com/Life/here-are-the-most-streamed-local-songs-and-albums-in-south-africa-on-deezer-20181218",
+    "releaseDate": "2018-01-19",
+    "genres": [
+      "Hip Hop",
+      "Trap"
+    ],
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/bb/6d/8f/bb6d8f67-6d04-10b5-dd62-eb5809ac54fc/00602567879152.rgb.jpg/600x600bb.jpg",
+    "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/c6/4a/be/c64abe74-adb4-cff5-005d-0fab3d72a806/mzaf_10276154697254415719.plus.aac.p.m4a",
+    "youtubeId": "xpVfcZ0ZcFM",
+    "youtubeUrl": "https://www.youtube.com/watch?v=xpVfcZ0ZcFM",
+    "summary": "Deezer South Africa's 2018 year-end list, reported by News24 on 18 December 2018, names God's Plan the most streamed song overall among South African users, ahead of Havana and Shape of You. Deezer is a single-platform source because no calendar-2018 RiSA chart was found.",
+    "originCountry": "Canada",
+    "originCountryCode": "CA",
+    "originFlag": "🇨🇦",
+    "originContinent": "North America",
+    "originArea": "Canada",
+    "album": {
+      "title": "Scorpion",
+      "kind": "album",
+      "url": "https://music.apple.com/za/album/scorpion/1406109769?uo=4",
+      "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/bb/6d/8f/bb6d8f67-6d04-10b5-dd62-eb5809ac54fc/00602567879152.rgb.jpg/600x600bb.jpg",
+      "releaseDate": "2018-06-29",
+      "trackCount": 25,
+      "tracks": [
+        {
+          "n": 1,
+          "title": "Survival",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/57/9f/89/579f89b5-0e33-0f03-1eb0-884740fafc7f/mzaf_2786485979798321832.plus.aac.p.m4a",
+          "durationMs": 136187
+        },
+        {
+          "n": 2,
+          "title": "Nonstop",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/e9/de/72/e9de72f8-5ddf-4dc7-314b-b075f84c089a/mzaf_1959293355792944364.plus.aac.p.m4a",
+          "durationMs": 238614
+        },
+        {
+          "n": 3,
+          "title": "Elevate",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/70/93/bd/7093bdb9-2269-76cc-13bf-58bdd197cefc/mzaf_8135094129458374914.plus.aac.p.m4a",
+          "durationMs": 184960
+        },
+        {
+          "n": 4,
+          "title": "Emotionless",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/0f/f4/f6/0ff4f621-6c24-e6bf-afd7-f412da02f235/mzaf_17548703518986566151.plus.aac.p.m4a",
+          "durationMs": 302173
+        },
+        {
+          "n": 5,
+          "title": "God's Plan",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/c6/4a/be/c64abe74-adb4-cff5-005d-0fab3d72a806/mzaf_10276154697254415719.plus.aac.p.m4a",
+          "durationMs": 198973
+        },
+        {
+          "n": 6,
+          "title": "I'm Upset",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/3f/1b/79/3f1b7974-15ef-dd06-479b-e0b787b42b5e/mzaf_6585448690219012711.plus.aac.p.m4a",
+          "durationMs": 214467
+        },
+        {
+          "n": 7,
+          "title": "8 Out Of 10",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/71/45/b6/7145b6c7-9469-9d62-c642-212bd98435f8/mzaf_9882979153121248126.plus.aac.p.m4a",
+          "durationMs": 195720
+        },
+        {
+          "n": 8,
+          "title": "Mob Ties",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/c2/fd/47/c2fd4725-e182-77d6-dea7-c716df21f9eb/mzaf_4497895745232905863.plus.aac.p.m4a",
+          "durationMs": 205147
+        },
+        {
+          "n": 9,
+          "title": "Can't Take a Joke",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/94/3f/d2/943fd2f7-93c1-0d94-295e-e7dd569149b9/mzaf_14036134460862573180.plus.aac.p.m4a",
+          "durationMs": 163974
+        },
+        {
+          "n": 10,
+          "title": "Sandra's Rose",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/7b/a3/a7/7ba3a7c0-c41b-67d8-d28b-267a90c18ea6/mzaf_2900816618940566356.plus.aac.p.m4a",
+          "durationMs": 216333
+        },
+        {
+          "n": 11,
+          "title": "Talk Up (feat. JAŸ-Z)",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/f0/85/e2/f085e2fb-e386-e952-632f-d3bab2f3839b/mzaf_18416411030545846896.plus.aac.p.m4a",
+          "durationMs": 223240
+        },
+        {
+          "n": 12,
+          "title": "Is There More",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/5d/13/b3/5d13b393-9f37-3c3f-cb7f-4d86c6c5ba0d/mzaf_2545044058406783306.plus.aac.p.m4a",
+          "durationMs": 226907
+        },
+        {
+          "n": 13,
+          "title": "Peak",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/bb/b5/54/bbb554ba-1299-9ab8-9c69-3c70d92e60b5/mzaf_9610727952834031478.plus.aac.p.m4a",
+          "durationMs": 206027
+        },
+        {
+          "n": 14,
+          "title": "Summer Games",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/2b/2c/72/2b2c721d-3cd8-a5cc-1e0e-f2aa38deeeb6/mzaf_16817192343434693127.plus.aac.p.m4a",
+          "durationMs": 247893
+        },
+        {
+          "n": 15,
+          "title": "Jaded",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/a1/ab/46/a1ab4626-27b2-7302-a0e2-896b4ca5e4e4/mzaf_7889212121310043606.plus.aac.p.m4a",
+          "durationMs": 262453
+        },
+        {
+          "n": 16,
+          "title": "Nice For What",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/b5/df/23/b5df2301-6d1b-bd29-7521-745cc346fb13/mzaf_15429939059485588664.plus.aac.p.m4a",
+          "durationMs": 210747
+        },
+        {
+          "n": 17,
+          "title": "Finesse",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/95/81/00/9581008d-280e-0979-ac2c-bc583cb004c5/mzaf_9014627774518723411.plus.aac.p.m4a",
+          "durationMs": 182080
+        },
+        {
+          "n": 18,
+          "title": "Ratchet Happy Birthday",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/37/51/9f/37519fa0-5f1b-9a19-3433-04eb0e5c4d72/mzaf_466771708763103818.plus.aac.p.m4a",
+          "durationMs": 207307
+        },
+        {
+          "n": 19,
+          "title": "That's How You Feel",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/1a/3d/78/1a3d783f-1360-98f0-fafb-c7b81f45456e/mzaf_1157157294541961817.plus.aac.p.m4a",
+          "durationMs": 157605
+        },
+        {
+          "n": 20,
+          "title": "Blue Tint",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/8c/da/f5/8cdaf5cb-6e77-64ba-03f9-ae06a3b661db/mzaf_15844127799495511763.plus.aac.p.m4a",
+          "durationMs": 162800
+        },
+        {
+          "n": 21,
+          "title": "In My Feelings",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/df/e8/e2/dfe8e281-f90d-a00e-141e-aab9f5b0b0b1/mzaf_8379698669799841165.plus.aac.p.m4a",
+          "durationMs": 217925
+        },
+        {
+          "n": 22,
+          "title": "Don't Matter To Me",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/3d/b0/18/3db0186a-f4fb-9e83-fb97-748b14a3c25c/mzaf_3361730350476728594.plus.aac.p.m4a",
+          "durationMs": 245787
+        },
+        {
+          "n": 23,
+          "title": "After Dark (feat. Static Major & Ty Dolla $ign)",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/78/d0/c5/78d0c552-5ef7-0ded-0f34-e83394e8de9f/mzaf_2414788679123371714.plus.aac.p.m4a",
+          "durationMs": 289560
+        },
+        {
+          "n": 24,
+          "title": "Final Fantasy",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/f1/dd/fe/f1ddfe22-1986-190e-bb8f-809f30fe3563/mzaf_15511050552780778718.plus.aac.p.m4a",
+          "durationMs": 219960
+        },
+        {
+          "n": 25,
+          "title": "March 14",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/2b/7e/62/2b7e6273-6032-703f-ee4f-4f9d68d76596/mzaf_6004005963564656191.plus.aac.p.m4a",
+          "durationMs": 309560
+        }
+      ]
     }
   },
   {
@@ -27530,6 +30898,363 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
     }
   },
   {
+    "id": "jp-2018-2",
+    "year": 2018,
+    "rank": 2,
+    "title": "U.S.A.",
+    "artist": "DA PUMP",
+    "chartName": "Billboard Japan Hot 100 Year-End",
+    "chartAuthority": "Billboard Japan / Oricon",
+    "continent": "Asia",
+    "country": "Japan",
+    "countryCode": "JP",
+    "countryFlag": "🇯🇵",
+    "sourceUrl": "https://www.billboard-japan.com/charts/detail?a=hot100_year&year=2018",
+    "releaseDate": "2018-06-06",
+    "genres": [
+      "J-Pop",
+      "Dance"
+    ],
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/3d/a7/be/3da7be51-6aad-f34b-cc30-41c9a58c3e8c/dj.wbgjeyxk.jpg/600x600bb.jpg",
+    "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/18/58/24/1858247d-b2db-51fd-d153-464b43bb9cf5/mzaf_9606921054541155442.plus.aac.p.m4a",
+    "youtubeId": "fhFwN1sFrBw",
+    "youtubeUrl": "https://www.youtube.com/watch?v=fhFwN1sFrBw",
+    "summary": "DA PUMP's U.S.A., a Japanese-language revival of the Italo-disco song, ranks second on Billboard Japan's 2018 Hot 100 year-end list, behind Lemon.",
+    "originCountry": "Japan",
+    "originCountryCode": "JP",
+    "originFlag": "🇯🇵",
+    "originContinent": "Asia",
+    "originArea": "Japan",
+    "album": {
+      "title": "DA POP COLORS",
+      "kind": "album",
+      "url": "https://music.apple.com/jp/album/da-pop-colors/1614875287?uo=4",
+      "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/e9/3e/ee/e93eee63-c531-7aa5-b670-c86c4a38a4ac/ANTCD-A0000006683.jpg/600x600bb.jpg",
+      "releaseDate": "2022-03-23",
+      "trackCount": 17,
+      "tracks": [
+        {
+          "n": 1,
+          "title": "DA POP COLORS intro.",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/bd/0e/8e/bd0e8e1f-2b26-7dd0-eed9-b81bb9351ad8/mzaf_8140212647015494659.plus.aac.p.m4a",
+          "durationMs": 70267
+        },
+        {
+          "n": 2,
+          "title": "Dream on the street",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/24/2a/b5/242ab5c7-d422-7904-56e2-fff8dc385c0a/mzaf_17885116559251161656.plus.aac.p.m4a",
+          "durationMs": 236633
+        },
+        {
+          "n": 3,
+          "title": "P.A.R.T.Y. ～ユニバース・フェスティバル～",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/f0/17/cf/f017cf73-4c83-1e20-b3f7-cacdceaf4e8b/mzaf_17895251851048708903.plus.aac.p.m4a",
+          "durationMs": 211600
+        },
+        {
+          "n": 4,
+          "title": "with Pride",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/7c/aa/cf/7caacfb9-e74e-bc11-5de0-87e612027fd6/mzaf_693977108038610105.plus.aac.p.m4a",
+          "durationMs": 247667
+        },
+        {
+          "n": 5,
+          "title": "紡 ーTSUMUGIー",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/d2/24/e3/d224e33e-c569-db01-dac4-0250672ddc3b/mzaf_10110754658968360941.plus.aac.p.m4a",
+          "durationMs": 328500
+        },
+        {
+          "n": 6,
+          "title": "Soldiers～慈しむ者たち～",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/1a/65/b7/1a65b754-223a-bfbc-8b86-3fbd1cd6b966/mzaf_13506174279590762047.plus.aac.p.m4a",
+          "durationMs": 252533
+        },
+        {
+          "n": 7,
+          "title": "Super Power",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/14/5f/5e/145f5e83-078b-b809-e8ea-82832b19034a/mzaf_15041473033844045302.plus.aac.p.m4a",
+          "durationMs": 195867
+        },
+        {
+          "n": 8,
+          "title": "Interlude ~Acapulco~",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/18/7e/d8/187ed86e-416a-5753-4023-c555d4582c4e/mzaf_1789261925157184472.plus.aac.p.m4a",
+          "durationMs": 21700
+        },
+        {
+          "n": 9,
+          "title": "Fantasista～ファンタジスタ～",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/4b/c7/03/4bc70385-e3d0-048d-c749-381a2d1d344c/mzaf_14091474028681217107.plus.aac.p.m4a",
+          "durationMs": 194467
+        },
+        {
+          "n": 10,
+          "title": "桜",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/03/ad/59/03ad5974-72e5-27a9-f7d8-b809500516d5/mzaf_3010750001227537134.plus.aac.p.m4a",
+          "durationMs": 204067
+        },
+        {
+          "n": 11,
+          "title": "Oh! My Precious!",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/8c/de/f5/8cdef54c-e67a-a09d-b84f-ea7db57be326/mzaf_6581056069021293511.plus.aac.p.m4a",
+          "durationMs": 286700
+        },
+        {
+          "n": 12,
+          "title": "C'mon & Knock Me Down",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/f0/b0/33/f0b033eb-1950-9dc3-a447-380c1eaa33c7/mzaf_6612449402478863684.plus.aac.p.m4a",
+          "durationMs": 182400
+        },
+        {
+          "n": 13,
+          "title": "DA FUNK",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/ce/21/36/ce2136d7-11d9-b648-080c-429480334677/mzaf_11222680742649191892.plus.aac.p.m4a",
+          "durationMs": 209467
+        },
+        {
+          "n": 14,
+          "title": "U.S.A.",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/83/58/9a/83589ac6-a374-8f67-dda1-463544cbd6b6/mzaf_6448448453911091528.plus.aac.p.m4a",
+          "durationMs": 239433
+        },
+        {
+          "n": 15,
+          "title": "Lean Back ~俺たちのキーワード~",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/36/0a/fc/360afc7f-85ba-d421-91ff-306198dde015/mzaf_13455796594810448716.plus.aac.p.m4a",
+          "durationMs": 183933
+        },
+        {
+          "n": 16,
+          "title": "Interlude ~Theme of tomorrow~",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/3d/ad/e8/3dade8fd-82b3-5559-3140-8f773cd45760/mzaf_3853866330516625624.plus.aac.p.m4a",
+          "durationMs": 29300
+        },
+        {
+          "n": 17,
+          "title": "Our Milestone",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/d3/ef/65/d3ef65ac-ed5a-60e6-21da-3d56c644448e/mzaf_16597421778650800989.plus.aac.p.m4a",
+          "durationMs": 217533
+        }
+      ]
+    }
+  },
+  {
+    "id": "jp-2018-3",
+    "year": 2018,
+    "rank": 3,
+    "title": "Garasu wo Ware! (ガラスを割れ!)",
+    "artist": "Keyakizaka46 (欅坂46)",
+    "chartName": "Billboard Japan Hot 100 Year-End",
+    "chartAuthority": "Billboard Japan / Oricon",
+    "continent": "Asia",
+    "country": "Japan",
+    "countryCode": "JP",
+    "countryFlag": "🇯🇵",
+    "sourceUrl": "https://www.billboard-japan.com/charts/detail?a=hot100_year&year=2018",
+    "releaseDate": "2018-03-07",
+    "genres": [
+      "J-Pop",
+      "Idol"
+    ],
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/f5/e8/c6/f5e8c6c4-5868-f703-b2b7-e725be4c38d4/jacket_SRXX02627B00Z_550.jpg/600x600bb.jpg",
+    "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/20/d2/73/20d27310-90c3-7aab-758f-fcc224f4b43b/mzaf_3884807435019490900.plus.aac.p.m4a",
+    "youtubeId": "VF2nSitbit4",
+    "youtubeUrl": "https://www.youtube.com/watch?v=VF2nSitbit4",
+    "summary": "Keyakizaka46's single Garasu wo Ware! ranks third on Billboard Japan's 2018 Hot 100 year-end list.",
+    "album": {
+      "title": "ガラスを割れ! (Special Edition)",
+      "kind": "album",
+      "url": "https://music.apple.com/us/album/%E3%82%AC%E3%83%A9%E3%82%B9%E3%82%92%E5%89%B2%E3%82%8C-special-edition/1537754632?uo=4",
+      "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/f5/e8/c6/f5e8c6c4-5868-f703-b2b7-e725be4c38d4/jacket_SRXX02627B00Z_550.jpg/600x600bb.jpg",
+      "releaseDate": "2018-03-07",
+      "trackCount": 7,
+      "tracks": [
+        {
+          "n": 1,
+          "title": "Garasu Wo Ware!",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/20/d2/73/20d27310-90c3-7aab-758f-fcc224f4b43b/mzaf_3884807435019490900.plus.aac.p.m4a",
+          "durationMs": 222667
+        },
+        {
+          "n": 2,
+          "title": "Moumorihekaerouka?",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/04/0f/a6/040fa6ac-19e5-721d-826e-04b41fea1faf/mzaf_11551605403734943543.plus.aac.p.m4a",
+          "durationMs": 260800
+        },
+        {
+          "n": 3,
+          "title": "Yoakenokodoku",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/ae/77/f3/ae77f39f-3c25-c958-e6c2-d1d3543f0cc4/mzaf_968975541047985276.plus.aac.p.m4a",
+          "durationMs": 290387
+        },
+        {
+          "n": 4,
+          "title": "Imanimiteiro",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/5d/52/e2/5d52e26d-b48c-9ae6-1ab0-c417ea50a44f/mzaf_10489107229160639834.plus.aac.p.m4a",
+          "durationMs": 276760
+        },
+        {
+          "n": 5,
+          "title": "Zenmaijikakenoyume",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/3d/40/55/3d405532-37d5-fe3b-ebc0-5f6e9bdc3c9e/mzaf_6792364269509217571.plus.aac.p.m4a",
+          "durationMs": 239027
+        },
+        {
+          "n": 6,
+          "title": "Bathroom Travel",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/f8/a4/ea/f8a4ea77-2048-b76c-d5e7-d5e327669a97/mzaf_6088367589483905716.plus.aac.p.m4a",
+          "durationMs": 232960
+        },
+        {
+          "n": 7,
+          "title": "Hunbunnokioku",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/75/e1/49/75e14931-7ad8-d78a-4448-c5483e217e70/mzaf_16743706876573879607.plus.aac.p.m4a",
+          "durationMs": 299853
+        }
+      ]
+    }
+  },
+  {
+    "id": "sg-2018-1",
+    "year": 2018,
+    "rank": 1,
+    "title": "thank u, next",
+    "artist": "Ariana Grande",
+    "chartName": "Singapore Top 30 Digital Streaming (RIAS)",
+    "chartAuthority": "Recording Industry Association Singapore (RIAS)",
+    "continent": "Asia",
+    "country": "Singapore",
+    "countryCode": "SG",
+    "countryFlag": "🇸🇬",
+    "sourceUrl": "https://en.wikipedia.org/wiki/List_of_number-one_songs_of_2018_(Singapore)",
+    "releaseDate": "2018-11-03",
+    "genres": [
+      "Pop",
+      "R&B"
+    ],
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/bb/69/07/bb6907de-8ad4-970b-3311-121320e1bf9c/19UMGIM03691.rgb.jpg/600x600bb.jpg",
+    "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/89/96/16/8996169e-2309-a298-f6f0-e7c52fe8e176/mzaf_590631660224715451.plus.aac.p.m4a",
+    "youtubeId": "gl1aHhXnN1k",
+    "youtubeUrl": "https://www.youtube.com/watch?v=gl1aHhXnN1k",
+    "weeksAtNumberOne": 8,
+    "summary": "Ariana Grande's \"Thank U, Next\" was the longest-running number one of 2018 on the RIAS Top 30 Digital Streaming chart, with 8 consecutive weeks (8 Nov - 27 Dec issues).",
+    "originCountry": "United States",
+    "originCountryCode": "US",
+    "originFlag": "🇺🇸",
+    "originContinent": "North America",
+    "originArea": "United States",
+    "album": {
+      "title": "thank u, next",
+      "kind": "album",
+      "url": "https://music.apple.com/sg/album/thank-u-next/1450333975?uo=4",
+      "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/bb/69/07/bb6907de-8ad4-970b-3311-121320e1bf9c/19UMGIM03691.rgb.jpg/600x600bb.jpg",
+      "releaseDate": "2019-02-08",
+      "trackCount": 12,
+      "tracks": [
+        {
+          "n": 1,
+          "title": "imagine",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/a0/d7/e8/a0d7e88e-3a96-18c1-6360-53160b185732/mzaf_11851770940343250582.plus.aac.p.m4a",
+          "durationMs": 212277
+        },
+        {
+          "n": 2,
+          "title": "needy",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/34/71/80/3471809a-e61a-2ae8-d27c-163a3d9afb89/mzaf_14654989245127930329.plus.aac.p.m4a",
+          "durationMs": 171569
+        },
+        {
+          "n": 3,
+          "title": "NASA",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/32/59/0e/32590e4f-b6de-5cba-0f8b-9a6c5803dcf2/mzaf_1921720784067133208.plus.aac.p.m4a",
+          "durationMs": 182000
+        },
+        {
+          "n": 4,
+          "title": "bloodline",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/69/93/d2/6993d2fd-552a-1405-b881-d9e29a892db9/mzaf_10913675113634460842.plus.aac.p.m4a",
+          "durationMs": 216900
+        },
+        {
+          "n": 5,
+          "title": "fake smile",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/c6/f6/12/c6f612d2-5c62-7d17-fd90-a413ca91914f/mzaf_14230462155424431740.plus.aac.p.m4a",
+          "durationMs": 208875
+        },
+        {
+          "n": 6,
+          "title": "bad idea",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/d9/ba/7b/d9ba7b6b-fc92-902c-afdc-66414f8bf496/mzaf_7203509087118317775.plus.aac.p.m4a",
+          "durationMs": 267099
+        },
+        {
+          "n": 7,
+          "title": "make up",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/d9/64/d2/d964d2ca-fb18-5688-12fc-9633e6026465/mzaf_6516976829817943054.plus.aac.p.m4a",
+          "durationMs": 140705
+        },
+        {
+          "n": 8,
+          "title": "ghostin",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/ac/ef/aa/acefaa3a-f2a4-8e5a-697f-067d79cf0f3f/mzaf_14160304074994936008.plus.aac.p.m4a",
+          "durationMs": 271461
+        },
+        {
+          "n": 9,
+          "title": "in my head",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/bd/e9/ae/bde9aed3-19a1-6409-6ab5-81df7a305fe5/mzaf_5011950890306781588.plus.aac.p.m4a",
+          "durationMs": 222945
+        },
+        {
+          "n": 10,
+          "title": "7 rings",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/d5/c8/f3/d5c8f31b-1c8f-93ed-e78b-8c0bce3e8b66/mzaf_14456154925680073521.plus.aac.p.m4a",
+          "durationMs": 178631
+        },
+        {
+          "n": 11,
+          "title": "thank u, next",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/89/96/16/8996169e-2309-a298-f6f0-e7c52fe8e176/mzaf_590631660224715451.plus.aac.p.m4a",
+          "durationMs": 207322
+        },
+        {
+          "n": 12,
+          "title": "break up with your girlfriend, i'm bored",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/dd/f8/a9/ddf8a959-42af-53c8-5dfa-4ff4844652fd/mzaf_13002311379380859940.plus.aac.p.m4a",
+          "durationMs": 190408
+        }
+      ],
+      "stats": {
+        "certifications": [
+          {
+            "body": "RIAS",
+            "level": "2× Platinum (2021)",
+            "region": "Singapore",
+            "date": null
+          },
+          {
+            "body": "RIAA",
+            "level": "2× Platinum (2020)",
+            "region": "US",
+            "date": null
+          },
+          {
+            "body": "BPI",
+            "level": "2× Platinum (2026)",
+            "region": "UK",
+            "date": null
+          }
+        ],
+        "units": null,
+        "peak": {
+          "chart": "Billboard 200",
+          "position": 1
+        },
+        "sourceUrl": "https://en.wikipedia.org/wiki/Thank_U,_Next_(album)"
+      }
+    }
+  },
+  {
     "id": "kr-2018-1",
     "year": 2018,
     "rank": 1,
@@ -27654,6 +31379,176 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
       "chart": "Gaon Digital Chart",
       "sourceUrl": "https://en.wikipedia.org/wiki/Love_Scenario",
       "asOf": "2026-10-17"
+    }
+  },
+  {
+    "id": "kr-2018-2",
+    "year": 2018,
+    "rank": 2,
+    "title": "Good Old Days (그날처럼)",
+    "artist": "Jang Deok Cheol (장덕철)",
+    "chartName": "Gaon Digital Chart (year-end)",
+    "chartAuthority": "Korea Music Content Association (KMCA)",
+    "continent": "Asia",
+    "country": "South Korea",
+    "countryCode": "KR",
+    "countryFlag": "🇰🇷",
+    "sourceUrl": "https://en.wikipedia.org/wiki/Circle_Digital_Chart",
+    "releaseDate": "2017-11-28",
+    "genres": [
+      "K-Pop",
+      "Ballad"
+    ],
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/9f/0c/d0/9f0cd042-8c82-f23b-3d85-92b62f795011/cover-_DS.jpg/600x600bb.jpg",
+    "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/fa/8b/95/fa8b958a-8776-f3bb-f45d-e728e1314753/mzaf_4978119344855488544.plus.aac.p.m4a",
+    "youtubeId": "v6_GwXU1lkg",
+    "youtubeUrl": "https://www.youtube.com/watch?v=v6_GwXU1lkg",
+    "summary": "Jang Deok Cheol's Good Old Days (Geunalcheoreom), released in late 2017, peaked in early 2018 and ranked second on the 2018 Gaon Digital Chart year-end list.",
+    "album": {
+      "title": "Good Old Days",
+      "kind": "single",
+      "url": "https://music.apple.com/us/album/good-old-days-single/1318136749?uo=4",
+      "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/9f/0c/d0/9f0cd042-8c82-f23b-3d85-92b62f795011/cover-_DS.jpg/600x600bb.jpg",
+      "releaseDate": "2017-11-28",
+      "trackCount": 2,
+      "tracks": [
+        {
+          "n": 1,
+          "title": "Good Old Days",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/fa/8b/95/fa8b958a-8776-f3bb-f45d-e728e1314753/mzaf_4978119344855488544.plus.aac.p.m4a",
+          "durationMs": 232391
+        },
+        {
+          "n": 2,
+          "title": "Good Old Days (Instrumental)",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/5e/a6/99/5ea69964-0c69-4129-6e17-07448bd9c5a8/mzaf_2532684106947481684.plus.aac.p.m4a",
+          "durationMs": 232826
+        }
+      ]
+    }
+  },
+  {
+    "id": "kr-2018-3",
+    "year": 2018,
+    "rank": 3,
+    "title": "Every Day, Every Moment (모든 날, 모든 순간)",
+    "artist": "Paul Kim (폴킴)",
+    "chartName": "Gaon Digital Chart (year-end)",
+    "chartAuthority": "Korea Music Content Association (KMCA)",
+    "continent": "Asia",
+    "country": "South Korea",
+    "countryCode": "KR",
+    "countryFlag": "🇰🇷",
+    "sourceUrl": "https://en.wikipedia.org/wiki/Circle_Digital_Chart",
+    "releaseDate": "2018-03-20",
+    "genres": [
+      "K-Pop",
+      "Ballad",
+      "OST"
+    ],
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/fb/45/a5/fb45a5f3-e172-f3c7-05df-733d16c8fc31/OST3_A_Fin.jpg/600x600bb.jpg",
+    "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/fd/02/65/fd026582-acff-107b-657e-725e82ade606/mzaf_13214848125267621317.plus.aac.p.m4a",
+    "youtubeId": "nq0BYGyH2Do",
+    "youtubeUrl": "https://www.youtube.com/watch?v=nq0BYGyH2Do",
+    "summary": "Paul Kim's drama soundtrack ballad Every Day, Every Moment (from SBS's Should We Kiss First?, Part 3) placed third on the 2018 Gaon Digital Chart year-end list and again third in 2019.",
+    "originCountry": "South Korea",
+    "originCountryCode": "KR",
+    "originFlag": "🇰🇷",
+    "originContinent": "Asia",
+    "originArea": "South Korea",
+    "album": {
+      "title": "Should We Kiss First? (Original Television Soundtrack)",
+      "kind": "album",
+      "url": "https://music.apple.com/us/album/should-we-kiss-first-original-television-soundtrack/1377465148?uo=4",
+      "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music128/v4/8e/e2/21/8ee22162-80bc-99ce-8987-04d58f6a4028/OST7_A.jpg/600x600bb.jpg",
+      "releaseDate": "2018-05-02",
+      "trackCount": 14,
+      "tracks": [
+        {
+          "n": 1,
+          "title": "Ordinary Goodbye",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/94/b2/ea/94b2eaca-575c-1386-e2be-68a0eb8bdd5f/mzaf_3340280645278223065.plus.aac.p.m4a",
+          "durationMs": 177922
+        },
+        {
+          "n": 2,
+          "title": "Is it Love",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/4c/de/30/4cde30db-9113-e62c-2b8b-5e5963c38234/mzaf_17729211329517061960.plus.aac.p.m4a",
+          "durationMs": 240752
+        },
+        {
+          "n": 3,
+          "title": "PERFECT",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/f8/28/59/f8285957-1ae8-4032-30d7-d608d1dc66e1/mzaf_2091757336652394490.plus.aac.p.m4a",
+          "durationMs": 206111
+        },
+        {
+          "n": 4,
+          "title": "Every day, Every Moment",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/ce/6d/fa/ce6dfa45-c9bb-e0b4-b263-fd0b17896370/mzaf_5305922478922450897.plus.aac.p.m4a",
+          "durationMs": 210493
+        },
+        {
+          "n": 5,
+          "title": "Monologue",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/0c/46/7a/0c467a5f-1397-d139-3bb3-340bd4fe5a84/mzaf_12713478224589952305.plus.aac.p.m4a",
+          "durationMs": 224469
+        },
+        {
+          "n": 6,
+          "title": "On My Own",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/39/f7/da/39f7da6a-6849-b184-9f87-feaadae42761/mzaf_946886468930438320.plus.aac.p.m4a",
+          "durationMs": 223044
+        },
+        {
+          "n": 7,
+          "title": "Coincidence",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/15/32/aa/1532aa14-20b7-ca5b-bd28-2ef62fa6d3fe/mzaf_8216775580896177446.plus.aac.p.m4a",
+          "durationMs": 204526
+        },
+        {
+          "n": 8,
+          "title": "Ordinary Goodbye (Instrumental)",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/2d/43/42/2d4342a5-221e-d68f-5d57-741efbb0ef6a/mzaf_5164841618474390039.plus.aac.p.m4a",
+          "durationMs": 177922
+        },
+        {
+          "n": 9,
+          "title": "Is it Love (Instrumental)",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/7f/06/40/7f0640f7-ebec-d7d0-ceec-a8f0b0116497/mzaf_2459862161677196514.plus.aac.p.m4a",
+          "durationMs": 240752
+        },
+        {
+          "n": 10,
+          "title": "PERFECT (Instrumental)",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/e7/1a/a9/e71aa999-2127-77ec-b847-057ddb8a0616/mzaf_14252016576293343656.plus.aac.p.m4a",
+          "durationMs": 206111
+        },
+        {
+          "n": 11,
+          "title": "Every day, Every Moment (Instrumental)",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/7a/c2/56/7ac25642-b07c-2de3-b31c-1b411a476dcd/mzaf_15760110079677791343.plus.aac.p.m4a",
+          "durationMs": 210493
+        },
+        {
+          "n": 12,
+          "title": "Monologue (Instrumental)",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/6e/7c/45/6e7c4519-ebe6-8416-5824-cdc9cfa36c6f/mzaf_10227854489619208498.plus.aac.p.m4a",
+          "durationMs": 224469
+        },
+        {
+          "n": 13,
+          "title": "On My Own (Instrumental)",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/0a/06/0f/0a060f1c-99b6-6051-b7e1-48dc99878313/mzaf_5321878274536551568.plus.aac.p.m4a",
+          "durationMs": 223044
+        },
+        {
+          "n": 14,
+          "title": "Coincidence (Instrumental)",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/ec/f7/d1/ecf7d194-b2dd-1691-2cef-f8d5a53243d8/mzaf_12678744408046488593.plus.aac.p.m4a",
+          "durationMs": 204526
+        }
+      ]
     }
   },
   {
@@ -30263,6 +34158,271 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
     }
   },
   {
+    "id": "gb-2017-2",
+    "year": 2017,
+    "rank": 2,
+    "title": "Despacito (Remix)",
+    "artist": "Luis Fonsi, Daddy Yankee & Justin Bieber",
+    "chartName": "Official Charts UK Singles",
+    "chartAuthority": "Official Charts Company",
+    "continent": "Europe",
+    "country": "United Kingdom",
+    "countryCode": "GB",
+    "countryFlag": "🇬🇧",
+    "sourceUrl": "https://www.officialcharts.com/charts/end-of-year-singles-chart/20170101/37501/",
+    "releaseDate": "2017-04-17",
+    "genres": [
+      "Reggaeton",
+      "Latin pop"
+    ],
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/e2/ef/f0/e2eff0bc-c51d-7de5-9280-6891ddcee71b/18UMGIM85289.rgb.jpg/600x600bb.jpg",
+    "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/67/63/14/67631421-3ef7-3229-006d-00dd8a2019fe/mzaf_9735765652531791540.plus.aac.p.m4a",
+    "youtubeId": "dr_GAJZviR0",
+    "youtubeUrl": "https://www.youtube.com/watch?v=dr_GAJZviR0",
+    "weeksAtNumberOne": 11,
+    "summary": "The Justin Bieber remix of Despacito was the UK's second biggest single of 2017 on the Official Charts year-end chart, behind Shape of You; the song spent 11 weeks at UK No. 1.",
+    "originCountry": "Puerto Rico",
+    "originCountryCode": "PR",
+    "originFlag": "🇵🇷",
+    "originContinent": "Latin America",
+    "originArea": "Puerto Rico",
+    "album": {
+      "title": "VIDA",
+      "kind": "album",
+      "url": "https://music.apple.com/gb/album/vida/1447401519?uo=4",
+      "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/e2/ef/f0/e2eff0bc-c51d-7de5-9280-6891ddcee71b/18UMGIM85289.rgb.jpg/600x600bb.jpg",
+      "releaseDate": "2019-02-01",
+      "trackCount": 15,
+      "tracks": [
+        {
+          "n": 1,
+          "title": "Sola",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/bd/11/e2/bd11e212-00e4-2709-71a0-2bafd4572b5f/mzaf_2319007243884572110.plus.aac.p.m4a",
+          "durationMs": 204956
+        },
+        {
+          "n": 2,
+          "title": "Apaga La Luz",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/9f/98/0a/9f980a5c-bd6d-c20e-f2e0-9131a4f87381/mzaf_12111405800439054477.plus.aac.p.m4a",
+          "durationMs": 212330
+        },
+        {
+          "n": 3,
+          "title": "Le Pido Al Cielo",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/db/e2/bb/dbe2bb70-3fc0-ad00-c1db-6068cdc75b2f/mzaf_12033804938622670314.plus.aac.p.m4a",
+          "durationMs": 247540
+        },
+        {
+          "n": 4,
+          "title": "Imposible",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/af/77/19/af77196c-54af-23ba-d605-6ae4f9f6755f/mzaf_17024349350875462587.plus.aac.p.m4a",
+          "durationMs": 164562
+        },
+        {
+          "n": 5,
+          "title": "Poco A Poco",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/f1/79/d1/f179d11a-a58c-05b0-52f8-97fe6ba096f6/mzaf_16880889977430452643.plus.aac.p.m4a",
+          "durationMs": 175783
+        },
+        {
+          "n": 6,
+          "title": "Dime Que No Te Iras",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/5f/e8/54/5fe854a6-6e4e-ffc1-8d55-acd1164c7739/mzaf_691989930013808654.plus.aac.p.m4a",
+          "durationMs": 261667
+        },
+        {
+          "n": 7,
+          "title": "Échame La Culpa",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/c6/ba/d9/c6bad99a-ebb1-ff50-85b0-1012cc9be90b/mzaf_7376478722545157521.plus.aac.p.m4a",
+          "durationMs": 173820
+        },
+        {
+          "n": 8,
+          "title": "Tanto Para Nada",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/b5/54/14/b55414a3-0e1c-e5ce-ce4d-7d94318f0e27/mzaf_7516770259297236613.plus.aac.p.m4a",
+          "durationMs": 230463
+        },
+        {
+          "n": 9,
+          "title": "Despacito",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/0d/cb/ec/0dcbec41-5e9e-bd09-7cdd-fdff44acdf78/mzaf_17345185466754008149.plus.aac.p.m4a",
+          "durationMs": 229387
+        },
+        {
+          "n": 10,
+          "title": "Más Fuerte Que Yo",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/2c/f6/a5/2cf6a5ab-e2be-dad1-c732-760c14c7872e/mzaf_16535010596242461776.plus.aac.p.m4a",
+          "durationMs": 229071
+        },
+        {
+          "n": 11,
+          "title": "Calypso",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/31/60/a5/3160a5fa-70c6-bd43-2266-2bc463741e78/mzaf_14479336907431165829.plus.aac.p.m4a",
+          "durationMs": 200993
+        },
+        {
+          "n": 12,
+          "title": "Ahí Estas Tú",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/1a/b1/d1/1ab1d18b-ffae-e22b-fc13-9daeb1ad008d/mzaf_8024673183366587956.plus.aac.p.m4a",
+          "durationMs": 202136
+        },
+        {
+          "n": 13,
+          "title": "Despacito (feat. Justin Bieber) [Remix]",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/67/63/14/67631421-3ef7-3229-006d-00dd8a2019fe/mzaf_9735765652531791540.plus.aac.p.m4a",
+          "durationMs": 230435
+        },
+        {
+          "n": 14,
+          "title": "Calypso (Remix)",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/0b/f0/8f/0bf08f5a-529b-0821-ba90-92e091b461c2/mzaf_11257245943164186012.plus.aac.p.m4a",
+          "durationMs": 185688
+        },
+        {
+          "n": 15,
+          "title": "Sola (English Version)",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/a8/6d/6a/a86d6ad0-42f4-613d-8c0a-0bb6178038cc/mzaf_6880439278473701708.plus.aac.p.m4a",
+          "durationMs": 204062
+        }
+      ]
+    }
+  },
+  {
+    "id": "gb-2017-3",
+    "year": 2017,
+    "rank": 3,
+    "title": "Castle on the Hill",
+    "artist": "Ed Sheeran",
+    "chartName": "Official Charts UK Singles",
+    "chartAuthority": "Official Charts Company",
+    "continent": "Europe",
+    "country": "United Kingdom",
+    "countryCode": "GB",
+    "countryFlag": "🇬🇧",
+    "sourceUrl": "https://www.officialcharts.com/charts/end-of-year-singles-chart/20170101/37501/",
+    "releaseDate": "2017-01-06",
+    "genres": [
+      "Folk-pop",
+      "Pop rock"
+    ],
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/15/e6/e8/15e6e8a4-4190-6a8b-86c3-ab4a51b88288/190295851286.jpg/600x600bb.jpg",
+    "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/07/be/08/07be085d-6f06-8b4e-cea1-f40b4dca3815/mzaf_12958775594313934161.plus.aac.p.m4a",
+    "youtubeId": "K0ibBPhiaG0",
+    "youtubeUrl": "https://www.youtube.com/watch?v=K0ibBPhiaG0",
+    "summary": "Ed Sheeran's Castle on the Hill, released alongside Shape of You, finished third on the Official Charts UK year-end singles chart for 2017 after peaking at No. 2.",
+    "originCountry": "United Kingdom",
+    "originCountryCode": "GB",
+    "originFlag": "🇬🇧",
+    "originContinent": "Europe",
+    "originArea": "United Kingdom",
+    "album": {
+      "title": "÷",
+      "kind": "album",
+      "url": "https://music.apple.com/gb/album/1193700601?uo=4",
+      "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music111/v4/2d/1c/4f/2d1c4fd7-018c-0529-693b-c67fea53b698/190295851286.jpg/600x600bb.jpg",
+      "releaseDate": "2017-03-03",
+      "trackCount": 12,
+      "tracks": [
+        {
+          "n": 1,
+          "title": "Eraser",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/e3/46/67/e3466779-89c1-d75f-1bfa-332f5e5283e5/mzaf_12484484177017869885.plus.aac.p.m4a",
+          "durationMs": 227587
+        },
+        {
+          "n": 2,
+          "title": "Castle on the Hill",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/3c/33/ad/3c33ada3-3bcd-776d-de13-dcd341180f34/mzaf_15232609639311249056.plus.aac.p.m4a",
+          "durationMs": 261154
+        },
+        {
+          "n": 3,
+          "title": "Dive",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/1c/93/c5/1c93c548-6273-d2e8-601b-0fff89f8d727/mzaf_17161047770630505669.plus.aac.p.m4a",
+          "durationMs": 238440
+        },
+        {
+          "n": 4,
+          "title": "Shape of You",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/cc/be/d1/ccbed15d-fec9-e47f-b110-947b068e1e82/mzaf_3029954038976757358.plus.aac.p.m4a",
+          "durationMs": 233713
+        },
+        {
+          "n": 5,
+          "title": "Perfect",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/9e/bf/41/9ebf4149-44e5-09d0-85f4-cd54784c26f3/mzaf_2777415777264952516.plus.aac.p.m4a",
+          "durationMs": 263400
+        },
+        {
+          "n": 6,
+          "title": "Galway Girl",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/3e/e4/18/3ee4188e-55a8-bdba-6ad8-d5100a7fc9c6/mzaf_11689374297492297291.plus.aac.p.m4a",
+          "durationMs": 170827
+        },
+        {
+          "n": 7,
+          "title": "Happier",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/df/d8/27/dfd82736-c663-4e21-bb79-b34aa6f5cf9e/mzaf_13581278616009861169.plus.aac.p.m4a",
+          "durationMs": 207520
+        },
+        {
+          "n": 8,
+          "title": "New Man",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/4e/10/0c/4e100ca2-9dfe-7a33-6098-fc752573729b/mzaf_15746182713231259837.plus.aac.p.m4a",
+          "durationMs": 189280
+        },
+        {
+          "n": 9,
+          "title": "Hearts Don't Break Around Here",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/2a/4c/9f/2a4c9f10-08eb-4ed1-47f1-ff2ad24af834/mzaf_10788363800710597619.plus.aac.p.m4a",
+          "durationMs": 248413
+        },
+        {
+          "n": 10,
+          "title": "What Do I Know?",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/e1/69/8d/e1698d7c-8f02-701f-8319-1cf251f3c0da/mzaf_10576396568728011859.plus.aac.p.m4a",
+          "durationMs": 237333
+        },
+        {
+          "n": 11,
+          "title": "How Would You Feel (Paean)",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/94/0a/d2/940ad288-767f-8974-2b91-82ce7046aeba/mzaf_6226017664689941164.plus.aac.p.m4a",
+          "durationMs": 280533
+        },
+        {
+          "n": 12,
+          "title": "Supermarket Flowers",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/8f/75/fb/8f75fb28-bf88-bc0f-5f52-6d047638a44c/mzaf_15657832155271048184.plus.aac.p.m4a",
+          "durationMs": 221107
+        }
+      ]
+    }
+  },
+  {
+    "id": "cn-2017-1",
+    "year": 2017,
+    "rank": 1,
+    "title": "Li Sao (离骚)",
+    "artist": "Jackson Yee (易烊千玺)",
+    "chartName": "Billboard Radio China Mandarin Top 10 of 2017",
+    "chartAuthority": "Billboard Radio China",
+    "continent": "Asia",
+    "country": "China",
+    "countryCode": "CN",
+    "countryFlag": "🇨🇳",
+    "sourceUrl": "https://www.sohu.com/a/210433402_643411",
+    "releaseDate": "2017-04-28",
+    "genres": [
+      "Mandopop"
+    ],
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/42/9f/05/429f053c-e0cb-b294-4d26-b13f167ebd9a/3615935031332.png/600x600bb.jpg",
+    "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/57/0f/dc/570fdc0b-530a-5cc3-b59d-a9be0ff929c1/mzaf_3254748610716529688.plus.aac.p.m4a",
+    "youtubeId": "QSqihPJwkeY",
+    "youtubeUrl": "https://www.youtube.com/watch?v=QSqihPJwkeY",
+    "weeksAtNumberOne": 4,
+    "summary": "Billboard Radio China's 2017 year-end Mandarin Top 10 (published 12 December 2017) puts Jackson Yee's Li Sao first after four weeks at the top of its radio chart. TME/QQ Music year-end charts began with 2018, so Billboard Radio China (radio-led, with streaming and digital sales as references) is the authority used."
+  },
+  {
     "id": "jp-2017-1",
     "year": 2017,
     "rank": 1,
@@ -30403,6 +34563,372 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
     }
   },
   {
+    "id": "jp-2017-2",
+    "year": 2017,
+    "rank": 2,
+    "title": "Shape of You (シェイプ・オブ・ユー)",
+    "artist": "Ed Sheeran",
+    "chartName": "Billboard Japan Hot 100 Year-End",
+    "chartAuthority": "Billboard Japan / Oricon",
+    "continent": "Asia",
+    "country": "Japan",
+    "countryCode": "JP",
+    "countryFlag": "🇯🇵",
+    "sourceUrl": "https://www.billboard-japan.com/charts/detail?a=hot100_year&year=2017",
+    "releaseDate": "2017-01-06",
+    "genres": [
+      "Pop"
+    ],
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/15/e6/e8/15e6e8a4-4190-6a8b-86c3-ab4a51b88288/190295851286.jpg/600x600bb.jpg",
+    "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/44/c7/4f/44c74f0d-72dc-6143-d4d0-ba14d661ca0d/mzaf_9566898362556366703.plus.aac.p.m4a",
+    "youtubeId": "JGwWNGJdvx8",
+    "youtubeUrl": "https://www.youtube.com/watch?v=JGwWNGJdvx8",
+    "summary": "Ed Sheeran's Shape of You ranks second on Billboard Japan's 2017 Hot 100 year-end list, behind Gen Hoshino's Koi.",
+    "originCountry": "United Kingdom",
+    "originCountryCode": "GB",
+    "originFlag": "🇬🇧",
+    "originContinent": "Europe",
+    "originArea": "United Kingdom",
+    "album": {
+      "title": "÷",
+      "kind": "album",
+      "url": "https://music.apple.com/us/album/1193700601?uo=4",
+      "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music111/v4/2d/1c/4f/2d1c4fd7-018c-0529-693b-c67fea53b698/190295851286.jpg/600x600bb.jpg",
+      "releaseDate": "2017-03-03",
+      "trackCount": 12,
+      "tracks": [
+        {
+          "n": 1,
+          "title": "Eraser",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/e3/46/67/e3466779-89c1-d75f-1bfa-332f5e5283e5/mzaf_12484484177017869885.plus.aac.p.m4a",
+          "durationMs": 227587
+        },
+        {
+          "n": 2,
+          "title": "Castle on the Hill",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/3c/33/ad/3c33ada3-3bcd-776d-de13-dcd341180f34/mzaf_15232609639311249056.plus.aac.p.m4a",
+          "durationMs": 261154
+        },
+        {
+          "n": 3,
+          "title": "Dive",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/1c/93/c5/1c93c548-6273-d2e8-601b-0fff89f8d727/mzaf_17161047770630505669.plus.aac.p.m4a",
+          "durationMs": 238440
+        },
+        {
+          "n": 4,
+          "title": "Shape of You",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/cc/be/d1/ccbed15d-fec9-e47f-b110-947b068e1e82/mzaf_3029954038976757358.plus.aac.p.m4a",
+          "durationMs": 233713
+        },
+        {
+          "n": 5,
+          "title": "Perfect",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/9e/bf/41/9ebf4149-44e5-09d0-85f4-cd54784c26f3/mzaf_2777415777264952516.plus.aac.p.m4a",
+          "durationMs": 263400
+        },
+        {
+          "n": 6,
+          "title": "Galway Girl",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/3e/e4/18/3ee4188e-55a8-bdba-6ad8-d5100a7fc9c6/mzaf_11689374297492297291.plus.aac.p.m4a",
+          "durationMs": 170827
+        },
+        {
+          "n": 7,
+          "title": "Happier",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/df/d8/27/dfd82736-c663-4e21-bb79-b34aa6f5cf9e/mzaf_13581278616009861169.plus.aac.p.m4a",
+          "durationMs": 207520
+        },
+        {
+          "n": 8,
+          "title": "New Man",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/4e/10/0c/4e100ca2-9dfe-7a33-6098-fc752573729b/mzaf_15746182713231259837.plus.aac.p.m4a",
+          "durationMs": 189280
+        },
+        {
+          "n": 9,
+          "title": "Hearts Don't Break Around Here",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/2a/4c/9f/2a4c9f10-08eb-4ed1-47f1-ff2ad24af834/mzaf_10788363800710597619.plus.aac.p.m4a",
+          "durationMs": 248413
+        },
+        {
+          "n": 10,
+          "title": "What Do I Know?",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/e1/69/8d/e1698d7c-8f02-701f-8319-1cf251f3c0da/mzaf_10576396568728011859.plus.aac.p.m4a",
+          "durationMs": 237333
+        },
+        {
+          "n": 11,
+          "title": "How Would You Feel (Paean)",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/94/0a/d2/940ad288-767f-8974-2b91-82ce7046aeba/mzaf_6226017664689941164.plus.aac.p.m4a",
+          "durationMs": 280533
+        },
+        {
+          "n": 12,
+          "title": "Supermarket Flowers",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/8f/75/fb/8f75fb28-bf88-bc0f-5f52-6d047638a44c/mzaf_15657832155271048184.plus.aac.p.m4a",
+          "durationMs": 221107
+        }
+      ]
+    }
+  },
+  {
+    "id": "jp-2017-3",
+    "year": 2017,
+    "rank": 3,
+    "title": "Uchiagehanabi (打上花火)",
+    "artist": "DAOKO × Kenshi Yonezu (米津玄師)",
+    "chartName": "Billboard Japan Hot 100 Year-End",
+    "chartAuthority": "Billboard Japan / Oricon",
+    "continent": "Asia",
+    "country": "Japan",
+    "countryCode": "JP",
+    "countryFlag": "🇯🇵",
+    "sourceUrl": "https://www.billboard-japan.com/charts/detail?a=hot100_year&year=2017",
+    "releaseDate": "2017-08-09",
+    "genres": [
+      "J-Pop"
+    ],
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/1b/7a/5e/1b7a5e77-b0c4-6e32-f3ee-c09c70f8378e/jacket_SRCL09571B00Z_550.jpg/600x600bb.jpg",
+    "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/e1/fb/f1/e1fbf133-dbaa-e9e2-906f-379fe9d8ae7a/mzaf_7470945555199788596.plus.aac.p.m4a",
+    "youtubeId": "-tKVN2mAKRI",
+    "youtubeUrl": "https://www.youtube.com/watch?v=-tKVN2mAKRI",
+    "summary": "The DAOKO and Kenshi Yonezu collaboration Uchiagehanabi ranks third on Billboard Japan's 2017 Hot 100 year-end list.",
+    "originCountry": "Japan",
+    "originCountryCode": "JP",
+    "originFlag": "🇯🇵",
+    "originContinent": "Asia",
+    "originArea": "Japan",
+    "album": {
+      "title": "Thank You Blue",
+      "kind": "album",
+      "url": "https://music.apple.com/us/album/thank-you-blue/1317721891?uo=4",
+      "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music128/v4/e4/84/c6/e484c611-660c-1250-d271-ab8569134c1b/TFCC-86625WW.jpg/600x600bb.jpg",
+      "releaseDate": "2017-12-20",
+      "trackCount": 14,
+      "tracks": [
+        {
+          "n": 1,
+          "title": "Uchiagehanabi",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/18/20/1a/18201ae1-b373-c8a6-aa50-42562793334c/mzaf_10466594729800317425.plus.aac.p.m4a",
+          "durationMs": 289515
+        },
+        {
+          "n": 2,
+          "title": "Step Up Love",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/cd/cb/7e/cdcb7ee9-bcb2-87bb-eb9d-6c7b0e2203ba/mzaf_9068564734975538098.plus.aac.p.m4a",
+          "durationMs": 256391
+        },
+        {
+          "n": 3,
+          "title": "Juicy",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/5c/84/95/5c84954d-7eb3-df81-091c-6a5f4317e9f4/mzaf_12615236295934764237.plus.aac.p.m4a",
+          "durationMs": 224705
+        },
+        {
+          "n": 4,
+          "title": "Samishii Kamisama",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/1f/0b/2d/1f0b2d19-2046-9194-8e9d-49485916ce74/mzaf_5051064009488137760.plus.aac.p.m4a",
+          "durationMs": 269596
+        },
+        {
+          "n": 5,
+          "title": "ShibuyaK",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/c3/69/ea/c369ea1c-5f0c-2f86-8140-985801ff9261/mzaf_16486810943089830086.plus.aac.p.m4a",
+          "durationMs": 262316
+        },
+        {
+          "n": 6,
+          "title": "Bang!",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/49/4f/e1/494fe1f8-d390-120a-32f9-c0fcfe68cf6c/mzaf_15689174734494738887.plus.aac.p.m4a",
+          "durationMs": 219454
+        },
+        {
+          "n": 7,
+          "title": "Daisuki With TeddyLoid",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/51/bf/ef/51bfef6a-272f-5f9a-c6c3-f465caddb163/mzaf_17374953763894706636.plus.aac.p.m4a",
+          "durationMs": 200189
+        },
+        {
+          "n": 8,
+          "title": "Haikei-Goodbye-Sayonara",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/e8/1b/13/e81b136f-696b-69ea-d229-b5a7246106f8/mzaf_17821228623095032058.plus.aac.p.m4a",
+          "durationMs": 226335
+        },
+        {
+          "n": 9,
+          "title": "Onaji Yoru",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/9e/16/86/9e1686fe-2e96-8e16-1f4a-82e7f2085e7a/mzaf_13829139563772101786.plus.aac.p.m4a",
+          "durationMs": 340250
+        },
+        {
+          "n": 10,
+          "title": "Gry",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/88/8f/bb/888fbb4f-be9c-97d1-ec33-c6a1a3817646/mzaf_2521902593063542866.plus.aac.p.m4a",
+          "durationMs": 177346
+        },
+        {
+          "n": 11,
+          "title": "Moshimo Bokura Ga Game No Shuyakude",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/97/a7/62/97a762b9-1a0a-8b5e-e543-77badcc492fc/mzaf_3429386675442951801.plus.aac.p.m4a",
+          "durationMs": 229939
+        },
+        {
+          "n": 12,
+          "title": "Yumemitetano Atashi",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/3c/59/bd/3c59bdd6-380c-019b-92d9-27422176de4e/mzaf_11062898920230938837.plus.aac.p.m4a",
+          "durationMs": 271803
+        },
+        {
+          "n": 13,
+          "title": "Cinderella Step",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/76/38/48/763848a0-426c-ab77-f4c9-6745ad0a77e7/mzaf_1890914676341594934.plus.aac.p.m4a",
+          "durationMs": 245101
+        },
+        {
+          "n": 14,
+          "title": "One Room Seaside Step",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/44/74/47/447447ac-80bf-9e40-4dee-d386d89980ac/mzaf_13348640616783320392.plus.aac.p.m4a",
+          "durationMs": 264063
+        }
+      ]
+    }
+  },
+  {
+    "id": "sg-2017-1",
+    "year": 2017,
+    "rank": 1,
+    "title": "Shape of You",
+    "artist": "Ed Sheeran",
+    "chartName": "Spotify Singapore Most Streamed Tracks 2017",
+    "chartAuthority": "Spotify (2017 in Music, via Bandwagon)",
+    "continent": "Asia",
+    "country": "Singapore",
+    "countryCode": "SG",
+    "countryFlag": "🇸🇬",
+    "sourceUrl": "https://www.bandwagon.asia/articles/spotify-year-end-most-streamed-singapore",
+    "releaseDate": "2017-01-06",
+    "genres": [
+      "Pop"
+    ],
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/15/e6/e8/15e6e8a4-4190-6a8b-86c3-ab4a51b88288/190295851286.jpg/600x600bb.jpg",
+    "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/44/c7/4f/44c74f0d-72dc-6143-d4d0-ba14d661ca0d/mzaf_9566898362556366703.plus.aac.p.m4a",
+    "youtubeId": "JGwWNGJdvx8",
+    "youtubeUrl": "https://www.youtube.com/watch?v=JGwWNGJdvx8",
+    "summary": "Spotify's 2017 year-end data, reported by Bandwagon on 5 December 2017, ranks Shape of You as the most streamed track in Singapore, followed by Coldplay's Something Just Like This and the Despacito remix. RIAS's chart did not cover 2017, so Spotify's year-end list is the authority used.",
+    "originCountry": "United Kingdom",
+    "originCountryCode": "GB",
+    "originFlag": "🇬🇧",
+    "originContinent": "Europe",
+    "originArea": "United Kingdom",
+    "album": {
+      "title": "÷ (Deluxe)",
+      "kind": "album",
+      "url": "https://music.apple.com/sg/album/deluxe/1193701079?uo=4",
+      "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/15/e6/e8/15e6e8a4-4190-6a8b-86c3-ab4a51b88288/190295851286.jpg/600x600bb.jpg",
+      "releaseDate": "2017-03-03",
+      "trackCount": 16,
+      "tracks": [
+        {
+          "n": 1,
+          "title": "Eraser",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/37/89/10/378910a3-b590-8daa-c6fd-7cc9b6f8279a/mzaf_15679519460476153155.plus.aac.p.m4a",
+          "durationMs": 227587
+        },
+        {
+          "n": 2,
+          "title": "Castle on the Hill",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/07/be/08/07be085d-6f06-8b4e-cea1-f40b4dca3815/mzaf_12958775594313934161.plus.aac.p.m4a",
+          "durationMs": 261154
+        },
+        {
+          "n": 3,
+          "title": "Dive",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/e0/09/a2/e009a2a8-0631-e674-08ab-c4dfef784ee7/mzaf_6040868619573536593.plus.aac.p.m4a",
+          "durationMs": 238440
+        },
+        {
+          "n": 4,
+          "title": "Shape of You",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/44/c7/4f/44c74f0d-72dc-6143-d4d0-ba14d661ca0d/mzaf_9566898362556366703.plus.aac.p.m4a",
+          "durationMs": 233713
+        },
+        {
+          "n": 5,
+          "title": "Perfect",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/c7/ba/bc/c7babc66-f598-aaa6-bcf6-307281795817/mzaf_16337361235117168274.plus.aac.p.m4a",
+          "durationMs": 263400
+        },
+        {
+          "n": 6,
+          "title": "Galway Girl",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/26/98/fc/2698fc53-3774-bd3c-8b22-f1f845eacdaf/mzaf_11930414004759637913.plus.aac.p.m4a",
+          "durationMs": 170827
+        },
+        {
+          "n": 7,
+          "title": "Happier",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/a5/a3/4e/a5a34ec0-b0d1-a1c5-32ef-31795d968b5f/mzaf_6657904390746527335.plus.aac.p.m4a",
+          "durationMs": 207520
+        },
+        {
+          "n": 8,
+          "title": "New Man",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/20/8d/d3/208dd317-8705-b266-71f1-72361c8322f9/mzaf_12670287989294954289.plus.aac.p.m4a",
+          "durationMs": 189280
+        },
+        {
+          "n": 9,
+          "title": "Hearts Don't Break Around Here",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/1c/02/fc/1c02fcba-cd14-bca6-dd4b-3774ada3ef09/mzaf_14124895800378810439.plus.aac.p.m4a",
+          "durationMs": 248413
+        },
+        {
+          "n": 10,
+          "title": "What Do I Know?",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/c8/b6/aa/c8b6aad2-086e-3957-beb6-1c352bec85f3/mzaf_6925313312696286336.plus.aac.p.m4a",
+          "durationMs": 237333
+        },
+        {
+          "n": 11,
+          "title": "How Would You Feel (Paean)",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/55/fa/51/55fa51d1-7e71-6805-434f-08213de9e58d/mzaf_18129038824542630747.plus.aac.p.m4a",
+          "durationMs": 280533
+        },
+        {
+          "n": 12,
+          "title": "Supermarket Flowers",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/44/90/04/449004e1-231a-d86c-4b22-85649318a91a/mzaf_12767011678800417401.plus.aac.p.m4a",
+          "durationMs": 221107
+        },
+        {
+          "n": 13,
+          "title": "Barcelona",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/2a/70/d7/2a70d7b3-0ac0-78ed-f400-3be17f46e930/mzaf_649909377819472443.plus.aac.p.m4a",
+          "durationMs": 191147
+        },
+        {
+          "n": 14,
+          "title": "Bibia Be Ye Ye",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/c1/76/a9/c176a91f-8c7a-72ae-6769-a4b3bfa3bcab/mzaf_17801017395853650162.plus.aac.p.m4a",
+          "durationMs": 176747
+        },
+        {
+          "n": 15,
+          "title": "Nancy Mulligan",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/5c/9a/a0/5c9aa0db-2f17-9f23-9585-a5da0059fded/mzaf_15287848746337148134.plus.aac.p.m4a",
+          "durationMs": 179787
+        },
+        {
+          "n": 16,
+          "title": "Save Myself",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/00/fe/05/00fe0516-3b65-70f5-2d30-b37397abc523/mzaf_16091944218190160985.plus.aac.p.m4a",
+          "durationMs": 247107
+        }
+      ]
+    }
+  },
+  {
     "id": "kr-2017-1",
     "year": 2017,
     "rank": 1,
@@ -30482,6 +35008,151 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
       "chart": "Gaon Digital Chart",
       "sourceUrl": "https://en.wikipedia.org/wiki/List_of_Gaon_Digital_Chart_number_ones_of_2017",
       "asOf": "2026-10-17"
+    }
+  },
+  {
+    "id": "kr-2017-2",
+    "year": 2017,
+    "rank": 2,
+    "title": "Through the Night (밤편지)",
+    "artist": "IU",
+    "chartName": "Gaon Digital Chart (year-end)",
+    "chartAuthority": "Korea Music Content Association (KMCA)",
+    "continent": "Asia",
+    "country": "South Korea",
+    "countryCode": "KR",
+    "countryFlag": "🇰🇷",
+    "sourceUrl": "https://en.wikipedia.org/wiki/Circle_Digital_Chart",
+    "releaseDate": "2017-03-24",
+    "genres": [
+      "K-Pop",
+      "Ballad"
+    ],
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music123/v4/94/ec/24/94ec2442-5add-d1ca-5eba-37f1298abfbc/cover_KM0005225_1.jpg/600x600bb.jpg",
+    "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/85/45/de/8545de32-479c-1424-9dce-5694ad9f5235/mzaf_12278878103860208085.plus.aac.p.m4a",
+    "youtubeId": "BzYnNdJhZQw",
+    "youtubeUrl": "https://www.youtube.com/watch?v=BzYnNdJhZQw",
+    "summary": "IU's ballad Through the Night (Bampyeonji) ranked second on the 2017 Gaon Digital Chart year-end list, behind Ailee's I Will Go to You Like the First Snow.",
+    "originCountry": "South Korea",
+    "originCountryCode": "KR",
+    "originFlag": "🇰🇷",
+    "originContinent": "Asia",
+    "originArea": "South Korea",
+    "album": {
+      "title": "Palette",
+      "kind": "album",
+      "url": "https://music.apple.com/us/album/palette/1229073300?uo=4",
+      "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music123/v4/94/ec/24/94ec2442-5add-d1ca-5eba-37f1298abfbc/cover_KM0005225_1.jpg/600x600bb.jpg",
+      "releaseDate": "2017-04-21",
+      "trackCount": 10,
+      "tracks": [
+        {
+          "n": 1,
+          "title": "Dlwlrma",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/d9/f7/5e/d9f75e4d-f06e-756e-57e6-938067a13482/mzaf_5923445144304354664.plus.aac.p.m4a",
+          "durationMs": 176099
+        },
+        {
+          "n": 2,
+          "title": "Palette (feat. G-DRAGON)",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/1f/02/ec/1f02ec43-61e0-b241-3832-16ce29c3d280/mzaf_8074590719931790363.plus.aac.p.m4a",
+          "durationMs": 217413
+        },
+        {
+          "n": 3,
+          "title": "Ending Scene",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/f7/d4/83/f7d48325-9e80-e80e-0f2b-ed4bd3b64e0d/mzaf_3599202116656602990.plus.aac.p.m4a",
+          "durationMs": 249242
+        },
+        {
+          "n": 4,
+          "title": "Can't Love You Anymore (with OHHYUK)",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/4f/3e/7f/4f3e7f9e-812e-d6d7-f972-a6b10686bc94/mzaf_6517451546584866045.plus.aac.p.m4a",
+          "durationMs": 195230
+        },
+        {
+          "n": 5,
+          "title": "Jam Jam",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/80/99/58/80995849-b3f2-8f25-c1c8-593182bbd8a7/mzaf_5825362826916637760.plus.aac.p.m4a",
+          "durationMs": 218160
+        },
+        {
+          "n": 6,
+          "title": "Black Out",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/cc/1e/4e/cc1e4ee9-b9af-9198-33ff-5ddff123b1c3/mzaf_1282758390563991009.plus.aac.p.m4a",
+          "durationMs": 227701
+        },
+        {
+          "n": 7,
+          "title": "Full Stop",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/2a/c9/0d/2ac90d75-9710-3d17-caa2-33dc5f664b81/mzaf_13799524916967931402.plus.aac.p.m4a",
+          "durationMs": 236189
+        },
+        {
+          "n": 8,
+          "title": "Through the Night",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/85/45/de/8545de32-479c-1424-9dce-5694ad9f5235/mzaf_12278878103860208085.plus.aac.p.m4a",
+          "durationMs": 253293
+        },
+        {
+          "n": 9,
+          "title": "Love Alone",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/7d/4a/0e/7d4a0ed8-d8d4-c642-b9ec-b70e87060af5/mzaf_10866944218014986135.plus.aac.p.m4a",
+          "durationMs": 281945
+        },
+        {
+          "n": 10,
+          "title": "Dear Name",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/bf/82/5a/bf825a28-696f-956d-8f93-df71659b4459/mzaf_12347700217389212529.plus.aac.p.m4a",
+          "durationMs": 289580
+        }
+      ]
+    }
+  },
+  {
+    "id": "kr-2017-3",
+    "year": 2017,
+    "rank": 3,
+    "title": "Like It (좋니)",
+    "artist": "Yoon Jong-shin (윤종신)",
+    "chartName": "Gaon Digital Chart (year-end)",
+    "chartAuthority": "Korea Music Content Association (KMCA)",
+    "continent": "Asia",
+    "country": "South Korea",
+    "countryCode": "KR",
+    "countryFlag": "🇰🇷",
+    "sourceUrl": "https://en.wikipedia.org/wiki/Circle_Digital_Chart",
+    "releaseDate": "2017-06-22",
+    "genres": [
+      "K-Pop",
+      "Ballad"
+    ],
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/35/78/ca/3578ca15-a8da-f968-be54-c540035768d4/8804775082016.jpg/600x600bb.jpg",
+    "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/b7/81/4a/b7814a26-d03e-a98e-62a6-fc291eafa319/mzaf_9585727612225360170.plus.aac.p.m4a",
+    "youtubeId": "cQFgFD1TzWc",
+    "youtubeUrl": "https://www.youtube.com/watch?v=cQFgFD1TzWc",
+    "summary": "Yoon Jong-shin's breakup ballad Like It (Joh-ni), released in June 2017, climbed slowly to number one and finished third on the 2017 Gaon Digital Chart year-end list.",
+    "album": {
+      "title": "LISTEN 010 Like it",
+      "kind": "single",
+      "url": "https://music.apple.com/us/album/listen-010-like-it-single/1787989434?uo=4",
+      "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/35/78/ca/3578ca15-a8da-f968-be54-c540035768d4/8804775082016.jpg/600x600bb.jpg",
+      "releaseDate": "2017-06-22",
+      "trackCount": 2,
+      "tracks": [
+        {
+          "n": 1,
+          "title": "Like it",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/b7/81/4a/b7814a26-d03e-a98e-62a6-fc291eafa319/mzaf_9585727612225360170.plus.aac.p.m4a",
+          "durationMs": 328363
+        },
+        {
+          "n": 2,
+          "title": "Like it (Inst.)",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/eb/01/ca/eb01cac3-90d8-a36a-76ef-286e3ee21225/mzaf_5369283268592819014.plus.aac.p.m4a",
+          "durationMs": 328363
+        }
+      ]
     }
   },
   {
@@ -30818,6 +35489,135 @@ export const RAW_SEED_MUSIC_RANKINGS: MusicRankingEntry[] = [
       "chart": "Recorded Music NZ Top 40 Singles",
       "sourceUrl": "https://en.wikipedia.org/wiki/Shape_of_You",
       "asOf": "2026-10-17"
+    }
+  },
+  {
+    "id": "ar-2017-1",
+    "year": 2017,
+    "rank": 1,
+    "title": "Despacito",
+    "artist": "Luis Fonsi & Daddy Yankee",
+    "chartName": "CAPIF Argentina Digital Songs (best-selling single of 2017)",
+    "chartAuthority": "CAPIF (Cámara Argentina de Productores de Fonogramas y Videogramas)",
+    "continent": "Latin America",
+    "country": "Argentina",
+    "countryCode": "AR",
+    "countryFlag": "🇦🇷",
+    "sourceUrl": "https://en.wikipedia.org/wiki/List_of_number-one_hits_of_2017_(Argentina)",
+    "releaseDate": "2017-01-12",
+    "genres": [
+      "Latin Pop",
+      "Reggaeton"
+    ],
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/e2/ef/f0/e2eff0bc-c51d-7de5-9280-6891ddcee71b/18UMGIM85289.rgb.jpg/600x600bb.jpg",
+    "audioUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/0d/cb/ec/0dcbec41-5e9e-bd09-7cdd-fdff44acdf78/mzaf_17345185466754008149.plus.aac.p.m4a",
+    "youtubeId": "kJQP7kiw5Fk",
+    "youtubeUrl": "https://www.youtube.com/watch?v=kJQP7kiw5Fk",
+    "summary": "Despacito is marked as Argentina's best-selling single of 2017 in Wikipedia's list of 2017 number-one hits, which is built on CAPIF's monthly digital sales chart; it topped the chart in February 2017. This is a best-seller designation rather than a published ranked year-end list, so only the top spot is recorded.",
+    "originCountry": "Puerto Rico",
+    "originCountryCode": "PR",
+    "originFlag": "🇵🇷",
+    "originContinent": "Latin America",
+    "originArea": "Puerto Rico",
+    "album": {
+      "title": "VIDA",
+      "kind": "album",
+      "url": "https://music.apple.com/ar/album/vida/1447401519?uo=4",
+      "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/e2/ef/f0/e2eff0bc-c51d-7de5-9280-6891ddcee71b/18UMGIM85289.rgb.jpg/600x600bb.jpg",
+      "releaseDate": "2019-02-01",
+      "trackCount": 15,
+      "tracks": [
+        {
+          "n": 1,
+          "title": "Sola",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/bd/11/e2/bd11e212-00e4-2709-71a0-2bafd4572b5f/mzaf_2319007243884572110.plus.aac.p.m4a",
+          "durationMs": 204956
+        },
+        {
+          "n": 2,
+          "title": "Apaga La Luz",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/9f/98/0a/9f980a5c-bd6d-c20e-f2e0-9131a4f87381/mzaf_12111405800439054477.plus.aac.p.m4a",
+          "durationMs": 212330
+        },
+        {
+          "n": 3,
+          "title": "Le Pido Al Cielo",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/db/e2/bb/dbe2bb70-3fc0-ad00-c1db-6068cdc75b2f/mzaf_12033804938622670314.plus.aac.p.m4a",
+          "durationMs": 247540
+        },
+        {
+          "n": 4,
+          "title": "Imposible",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/af/77/19/af77196c-54af-23ba-d605-6ae4f9f6755f/mzaf_17024349350875462587.plus.aac.p.m4a",
+          "durationMs": 164562
+        },
+        {
+          "n": 5,
+          "title": "Poco A Poco",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/f1/79/d1/f179d11a-a58c-05b0-52f8-97fe6ba096f6/mzaf_16880889977430452643.plus.aac.p.m4a",
+          "durationMs": 175783
+        },
+        {
+          "n": 6,
+          "title": "Dime Que No Te Iras",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/5f/e8/54/5fe854a6-6e4e-ffc1-8d55-acd1164c7739/mzaf_691989930013808654.plus.aac.p.m4a",
+          "durationMs": 261667
+        },
+        {
+          "n": 7,
+          "title": "Échame La Culpa",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/c6/ba/d9/c6bad99a-ebb1-ff50-85b0-1012cc9be90b/mzaf_7376478722545157521.plus.aac.p.m4a",
+          "durationMs": 173820
+        },
+        {
+          "n": 8,
+          "title": "Tanto Para Nada",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/b5/54/14/b55414a3-0e1c-e5ce-ce4d-7d94318f0e27/mzaf_7516770259297236613.plus.aac.p.m4a",
+          "durationMs": 230463
+        },
+        {
+          "n": 9,
+          "title": "Despacito",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/0d/cb/ec/0dcbec41-5e9e-bd09-7cdd-fdff44acdf78/mzaf_17345185466754008149.plus.aac.p.m4a",
+          "durationMs": 229387
+        },
+        {
+          "n": 10,
+          "title": "Más Fuerte Que Yo",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/2c/f6/a5/2cf6a5ab-e2be-dad1-c732-760c14c7872e/mzaf_16535010596242461776.plus.aac.p.m4a",
+          "durationMs": 229071
+        },
+        {
+          "n": 11,
+          "title": "Calypso",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/31/60/a5/3160a5fa-70c6-bd43-2266-2bc463741e78/mzaf_14479336907431165829.plus.aac.p.m4a",
+          "durationMs": 200993
+        },
+        {
+          "n": 12,
+          "title": "Ahí Estas Tú",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/1a/b1/d1/1ab1d18b-ffae-e22b-fc13-9daeb1ad008d/mzaf_8024673183366587956.plus.aac.p.m4a",
+          "durationMs": 202136
+        },
+        {
+          "n": 13,
+          "title": "Despacito (feat. Justin Bieber) [Remix]",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/67/63/14/67631421-3ef7-3229-006d-00dd8a2019fe/mzaf_9735765652531791540.plus.aac.p.m4a",
+          "durationMs": 230435
+        },
+        {
+          "n": 14,
+          "title": "Calypso (Remix)",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/0b/f0/8f/0bf08f5a-529b-0821-ba90-92e091b461c2/mzaf_11257245943164186012.plus.aac.p.m4a",
+          "durationMs": 185688
+        },
+        {
+          "n": 15,
+          "title": "Sola (English Version)",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/a8/6d/6a/a86d6ad0-42f4-613d-8c0a-0bb6178038cc/mzaf_6880439278473701708.plus.aac.p.m4a",
+          "durationMs": 204062
+        }
+      ]
     }
   }
 ];
