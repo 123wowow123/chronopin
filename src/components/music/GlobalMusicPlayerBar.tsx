@@ -1,7 +1,6 @@
 'use client';
 
 import { useMemo, useRef } from 'react';
-import { usePathname } from 'next/navigation';
 import Link from '@/components/ui/Link';
 import { Icon } from '@/components/ui/Icon';
 import { useMusicPlayer } from './MusicPlayerContext';
@@ -36,8 +35,6 @@ export function GlobalMusicPlayerBar() {
   } = useMusicPlayer();
 
   const progressRef = useRef<HTMLDivElement>(null);
-  const pathname = usePathname();
-  const onLanding = /\/music\/?$/.test(pathname || '');
   const locateHash = currentTrack
     ? `#year=${currentTrack.year}&continent=${encodeURIComponent(currentTrack.continent)}&track=${encodeURIComponent(currentTrack.id)}`
     : '';
@@ -221,21 +218,19 @@ export function GlobalMusicPlayerBar() {
             {/* Right desktop actions: Pin link, volume, close */}
             <div className="hidden sm:flex items-center gap-3 shrink-0">
               {/* Locate in rankings: scroll on the landing page, else go there */}
-              {currentTrack && onLanding ? (
-                <button
-                  type="button"
+              {currentTrack ? (
+                <Link
+                  href={`/music${locateHash}`}
                   className={locateClass}
-                  title="Scroll to this song in the rankings"
+                  title="Show this song in the music rankings"
                   aria-label="Show in rankings"
-                  onClick={() => {
+                  onClick={(e) => {
+                    if (!/\/music\/?$/.test(window.location.pathname)) return;
+                    e.preventDefault();
                     window.history.replaceState(null, '', window.location.pathname + window.location.search + locateHash);
                     window.dispatchEvent(new HashChangeEvent('hashchange'));
                   }}
                 >
-                  {locateInner}
-                </button>
-              ) : currentTrack ? (
-                <Link href={`/music${locateHash}`} className={locateClass} title="Open this song on the music landing page" aria-label="Show in rankings">
                   {locateInner}
                 </Link>
               ) : null}
