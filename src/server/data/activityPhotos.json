@@ -20,6 +20,16 @@
   "sha256": "848b34b675faac606cf9d8b0c2ecb7f5f7d65125cf9f9fd3f15d5df1e58adf65"
  },
  {
+  "key": "atlanta/atlanta-jazz-festival",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/atlanta/atlanta-jazz-festival-9c9909779c24009f.webp",
+  "width": 1600,
+  "height": 1199,
+  "credit": "Photo: Atlanta News First",
+  "sourceUrl": "https://www.atlantanewsfirst.com/2023/05/24/atlanta-jazz-festival-returns-piedmont-park-memorial-day-weekend",
+  "imageSourceUrl": "https://gray-wgcl-prod.gtv-cdn.com/resizer/v2/NZYPV3NW5JFDPF5YVJFN4TNODU.jpg?auth=34fd44a4add078e2ab807be7bbb57dc132e4c4e207baf4d9b1544a1d6d408b91&width=1600",
+  "sha256": "9c9909779c24009f04d95afc5479562e909b008eac422e86c023eac4fb0900cb"
+ },
+ {
   "key": "atlanta/atlanta-pride-festival",
   "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/atlanta/atlanta-pride-festival-94d1e11968ea9242.webp",
   "width": 1600,
@@ -278,6 +288,16 @@
   "sourceUrl": "https://www.wbur.org/news/2026/10/14/boston-book-festival-emily-wilson",
   "imageSourceUrl": "https://media.wbur.org/wp/2026/10/54902765224_1f9b403cf7_o.jpg",
   "sha256": "07455d10803e92f5e9bb652156ac9f1b526ee6fc2db0665387369a4725c579f0"
+ },
+ {
+  "key": "boston/boston-first-night",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/boston/boston-first-night-aa257b190d57511c.webp",
+  "width": 1600,
+  "height": 2133,
+  "credit": "EgorovaSvetlana / Wikimedia Commons (CC BY-SA 4.0) - First Night Boston ice sculpture, Copley Square",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ice_Sculpture_birth_Venus_Sandro_Botticelli_Copley_Square_Boston.jpg",
+  "imageSourceUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f7/Ice_Sculpture_birth_Venus_Sandro_Botticelli_Copley_Square_Boston.jpg",
+  "sha256": "aa257b190d57511c51ccbe37ce082e0218680441fa6259da1c64954c88fa2366"
  },
  {
   "key": "boston/boston-harbor-islands",
@@ -690,6 +710,16 @@
   "sha256": "4e8add23a3d31052a81699211416f171c819f5fb8c8a1ae018b67f32582a622f"
  },
  {
+  "key": "denver/denver-chatfield-farms-corn-maze",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/denver/denver-chatfield-farms-corn-maze-60671dd093c62aa9.webp",
+  "width": 1430,
+  "height": 956,
+  "credit": "Photo: Denver Center for the Performing Arts (Chatfield Farms corn maze)",
+  "sourceUrl": "https://www.denvercenter.org/news-center/kernel-of-truth-a-fact-finding-mission-to-the-chatfield-farms-corn-maze/",
+  "imageSourceUrl": "https://www.denvercenter.org/wp-content/uploads/2025/09/Chatfield-Corn-Maze-with-kids.jpg",
+  "sha256": "60671dd093c62aa9b61a65b16d26865f60107cf91fe83dbcfd5b83bb76b02160"
+ },
+ {
   "key": "denver/denver-cherry-creek-arts-festival",
   "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/denver/denver-cherry-creek-arts-festival-a4d350e2a22c974c.webp",
   "width": 1000,
@@ -930,6 +960,16 @@
   "sha256": "222380adf583b9586bb7e21516d9fe483bdf1a9e056ce9e45695827bd60cd8dd"
  },
  {
+  "key": "las-vegas/las-vegas-lee-canyon-summer",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/las-vegas/las-vegas-lee-canyon-summer-52f7bb318ef35d89.webp",
+  "width": 1600,
+  "height": 1200,
+  "credit": "thmeeks / Wikimedia Commons (CC BY 2.0)",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Lee_Canyon_Scenic_Ski_Lift_Happy_Riders_Mt._Charleston.jpg",
+  "imageSourceUrl": "https://upload.wikimedia.org/wikipedia/commons/6/63/Lee_Canyon_Scenic_Ski_Lift_Happy_Riders_Mt._Charleston.jpg",
+  "sha256": "52f7bb318ef35d89b6b03002fc96d8c53c7d0ceca7024449928b7d7d05fab52e"
+ },
+ {
   "key": "las-vegas/las-vegas-magical-forest",
   "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/las-vegas/las-vegas-magical-forest-6e440a65fda451de.webp",
   "width": 1600,
@@ -980,6 +1020,16 @@
   "sha256": "ac79c2c03ffbbd9a57646a71a11f4e562dedbaf00222b7f3341d7b0f9ca7da9b"
  },
  {
+  "key": "las-vegas/las-vegas-springs-preserve-haunted-harvest",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/las-vegas/las-vegas-springs-preserve-haunted-harvest-5b00346b527f0d8d.webp",
+  "width": 1600,
+  "height": 1067,
+  "credit": "Renee Grayson / Wikimedia Commons (CC BY 2.0)",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Springs_Preserve.jpg",
+  "imageSourceUrl": "https://upload.wikimedia.org/wikipedia/commons/3/34/Springs_Preserve.jpg",
+  "sha256": "5b00346b527f0d8da24d97b991dd7cecf4f058011274cb752ac99463b188018a"
+ },
+ {
   "key": "los-angeles/cinespia-hollywood-forever",
   "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/los-angeles/cinespia-hollywood-forever-b5ca4e96eb07f8ae.webp",
   "width": 1280,
@@ -1010,6 +1060,16 @@
   "sha256": "eb04f72f1d010cf36d6d6e0e1eed7399e2102769ade448f17ea39a79046a4289"
  },
  {
+  "key": "los-angeles/grand-performances-california-plaza",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/los-angeles/grand-performances-california-plaza-63341c57685f0ce8.webp",
+  "width": 1000,
+  "height": 666,
+  "credit": "Photo: Grand Performances",
+  "sourceUrl": "https://grandperformances.org/",
+  "imageSourceUrl": "https://images.squarespace-cdn.com/content/v1/60bb12d8672ab86c915cdeb1/1714074754273-X1LE7VBYVHB97MEZJAQT/_FSTOPgp082623-208.jpg",
+  "sha256": "63341c57685f0ce8d45c56adc7128065558adc1a90fa3f82019243c59a1986df"
+ },
+ {
   "key": "los-angeles/gray-whale-watching-point-vicente",
   "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/los-angeles/gray-whale-watching-point-vicente-c4175334cc7a5fc5.webp",
   "width": 1200,
@@ -1038,6 +1098,16 @@
   "sourceUrl": "https://commons.wikimedia.org/wiki/File:L.A._County_Fair_1262.jpg",
   "imageSourceUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b7/L.A._County_Fair_1262.jpg/1920px-L.A._County_Fair_1262.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
   "sha256": "2fee21b05a8e5852f35aac5a85aa38a1c7a574d494492c5b3395fa98de7fc89e"
+ },
+ {
+  "key": "los-angeles/la-marathon",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/los-angeles/la-marathon-b5befa02661f7052.webp",
+  "width": 1600,
+  "height": 672,
+  "credit": "Downtowngal / Wikimedia Commons (CC BY-SA 3.0)",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Wheelchair_racers_Los_Angeles_Marathon.jpg",
+  "imageSourceUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c5/Wheelchair_racers_Los_Angeles_Marathon.jpg",
+  "sha256": "b5befa02661f705259de08f6ea38ebb34a210339720ce4567bc685f6379349f9"
  },
  {
   "key": "los-angeles/la-zoo-lights",
@@ -1100,6 +1170,16 @@
   "sha256": "a73e6a7e5edf70cab82ce2a9bd653bdfbd7c2671667e7701db7cdaa03c152ce8"
  },
  {
+  "key": "miami/calle-ocho-music-festival",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/miami/calle-ocho-music-festival-a89e719781cb7725.webp",
+  "width": 1440,
+  "height": 900,
+  "credit": "Photo: Greater Miami Convention & Visitors Bureau (miamiandbeaches.com)",
+  "sourceUrl": "https://www.miamiandbeaches.com/event/calle-ocho-music-festival/103",
+  "imageSourceUrl": "https://assets.simpleviewinc.com/simpleview/image/upload/crm/miamifl/CalleOchoFestival_band_on_stage_0322_1440x900_D3451BEE-5056-A36A-0B2493494E0E69F7_d3460bf6-5056-a36a-0b0a9384bbf0e2f5.jpg",
+  "sha256": "a89e719781cb77257ac84e04a2d931d9264d0b09f3b30a690bea93641f798b66"
+ },
+ {
   "key": "miami/coconut-grove-arts-festival",
   "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/miami/coconut-grove-arts-festival-de3a73190434738d.webp",
   "width": 1600,
@@ -1118,6 +1198,16 @@
   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Everglades_Anhinga_Trail_Pond.jpg",
   "imageSourceUrl": "https://upload.wikimedia.org/wikipedia/commons/7/76/Everglades_Anhinga_Trail_Pond.jpg",
   "sha256": "8825af86fb186e90444744ce38c91854cbeb4d38a10ddb685776ab1cbcad6781"
+ },
+ {
+  "key": "miami/fairchild-holiday-season",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/miami/fairchild-holiday-season-8bca112283ae6319.webp",
+  "width": 1200,
+  "height": 800,
+  "credit": "Photo: Secret Miami (NightGarden at Fairchild Tropical Botanic Garden)",
+  "sourceUrl": "https://secretmiami.com/night-garden/",
+  "imageSourceUrl": "https://offloadmedia.feverup.com/secretmiami.com/wp-content/uploads/2022/10/13052913/rainbowbridge.png",
+  "sha256": "8bca112283ae63193589c9c03cfb710a1dd4ce19a4b32ea9e6b0e227f52c9e97"
  },
  {
   "key": "miami/fairchild-mango-festival",
@@ -1300,6 +1390,16 @@
   "sha256": "a96002cb49c6991cea91099018c7f34a96d8802b0f87981cec06710f1b79d25a"
  },
  {
+  "key": "minneapolis/minneapolis-mill-city-farmers-market",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/minneapolis/minneapolis-mill-city-farmers-market-0c114f530c73282b.webp",
+  "width": 1600,
+  "height": 900,
+  "credit": "Photo: Mill City Farmers Market",
+  "sourceUrl": "https://www.millcityfarmersmarket.org/",
+  "imageSourceUrl": "https://www.millcityfarmersmarket.org/wp-content/uploads/53050658323_6585efea94_k-1600x900.jpg",
+  "sha256": "0c114f530c73282b2be9edcd2aed2a3ce4ab286201dca79bc8da3c74d58c246d"
+ },
+ {
   "key": "minneapolis/minneapolis-minnehaha-falls",
   "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/minneapolis/minneapolis-minnehaha-falls-3438858753421980.webp",
   "width": 1600,
@@ -1308,6 +1408,16 @@
   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Minnehaha_Falls_01.jpg",
   "imageSourceUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Minnehaha_Falls_01.jpg/1920px-Minnehaha_Falls_01.jpg",
   "sha256": "34388587534219800073fe2114ff50fdfde1afd9d1ad543564e43c7bcdaaeae3"
+ },
+ {
+  "key": "minneapolis/minneapolis-music-and-movies-in-the-parks",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/minneapolis/minneapolis-music-and-movies-in-the-parks-dbd4d72b16c92e74.webp",
+  "width": 1600,
+  "height": 1067,
+  "credit": "Chad Davis / Wikimedia Commons (CC BY 2.0) - Lake Harriet Bandshell",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Lake_Harriet_Bandshell,_Minneapolis_(49160147127).jpg",
+  "imageSourceUrl": "https://upload.wikimedia.org/wikipedia/commons/a/ac/Lake_Harriet_Bandshell%2C_Minneapolis_%2849160147127%29.jpg",
+  "sha256": "dbd4d72b16c92e74519d6a9cb97560b9491679f56bd5d4cd7372127bfb820a23"
  },
  {
   "key": "minneapolis/minneapolis-twin-cities-marathon",
@@ -1390,6 +1500,16 @@
   "sha256": "0e71961f4a701da60cdd816d0f5c4160a4eb0014f7fd27b90438f9366b9a3c60"
  },
  {
+  "key": "nashville/iroquois-steeplechase",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/nashville/iroquois-steeplechase-2c3ce8eac9ee01f9.webp",
+  "width": 1600,
+  "height": 1067,
+  "credit": "Photo: Terry Wyatt Photography / Iroquois Steeplechase",
+  "sourceUrl": "https://www.iroquoissteeplechase.org/",
+  "imageSourceUrl": "https://images.squarespace-cdn.com/content/v1/5d9cf736ef395d2afbb523b6/06d382ed-22e8-4700-aad2-3e8868ac9fea/2026+Steeplechase.Terry+Wyatt+Photography.TW-197.jpg",
+  "sha256": "2c3ce8eac9ee01f9824b820273e4ae8c72013c8e719a04d3db0fddfcc1985fb5"
+ },
+ {
   "key": "nashville/music-city-hot-chicken-festival",
   "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/nashville/music-city-hot-chicken-festival-bf6c912f510f1bee.webp",
   "width": 1200,
@@ -1418,6 +1538,16 @@
   "sourceUrl": "https://commons.wikimedia.org/wiki/File:First_Horizon_Park_-_June_27,_2021.jpg",
   "imageSourceUrl": "https://upload.wikimedia.org/wikipedia/commons/f/fa/First_Horizon_Park_-_June_27%2C_2021.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
   "sha256": "3f93da312ae4d95e993d595df30a503117e53099debc4859a5719e24fd3dd110"
+ },
+ {
+  "key": "nashville/nashville-zoo-glow-wild",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/nashville/nashville-zoo-glow-wild-c95971cc4b6505a3.webp",
+  "width": 1400,
+  "height": 720,
+  "credit": "Photo: Nashville Zoo",
+  "sourceUrl": "https://www.nashvillezoo.org/glow-wild",
+  "imageSourceUrl": "https://assets.speakcdn.com/assets/2147/zoolumination_desktop_banner_1400x720_-_north_pole.jpg",
+  "sha256": "c95971cc4b6505a3fed12e94db0b52f24c8a99db6737714814f0678a2fd90341"
  },
  {
   "key": "nashville/predators-home-games",
@@ -1860,6 +1990,16 @@
   "sha256": "4dc11fb9c6e897d3944117650d40e4abbc3309d513b72c42069a3bd2268b617c"
  },
  {
+  "key": "san-antonio/bracken-cave-bat-flights",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/san-antonio/bracken-cave-bat-flights-c44e268b83b7878d.webp",
+  "width": 1600,
+  "height": 1065,
+  "credit": "Daniel Spiess / Wikimedia Commons (CC BY-SA 2.0)",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Bracken_Cave_Bats.jpg",
+  "imageSourceUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e9/Bracken_Cave_Bats.jpg",
+  "sha256": "c44e268b83b7878d3b6eed45b11693da988fed96a04fe2e8ab8e0e9264576891"
+ },
+ {
   "key": "san-antonio/fiesta-noche-del-rio",
   "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/san-antonio/fiesta-noche-del-rio-b1471a2deaacf79c.webp",
   "width": 800,
@@ -2048,6 +2188,16 @@
   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Julian_5_main_street.jpg",
   "imageSourceUrl": "https://upload.wikimedia.org/wikipedia/commons/5/57/Julian_5_main_street.jpg",
   "sha256": "7d9e211f2e6c782ff43aa2ee410ade086045eecc907ce7e15bfa57f466a8268e"
+ },
+ {
+  "key": "san-diego/julian-dark-sky-festival",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/san-diego/julian-dark-sky-festival-c34622b402827c06.webp",
+  "width": 1600,
+  "height": 891,
+  "credit": "Jason Amunwa / Wikimedia Commons (CC BY 3.0)",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Milky_Way_Tree_Julian_Starfest_(85487917).jpeg",
+  "imageSourceUrl": "https://upload.wikimedia.org/wikipedia/commons/2/2d/Milky_Way_Tree_Julian_Starfest_%2885487917%29.jpeg",
+  "sha256": "c34622b402827c0648e27880e6e24e3722dca20a36e47c42236350af9fa3ab74"
  },
  {
   "key": "san-diego/jungle-bells-san-diego-zoo",

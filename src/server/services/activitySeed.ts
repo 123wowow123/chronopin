@@ -5,6 +5,7 @@ import photoManifest from '@/server/data/activityPhotos.json';
 import { ACTIVITY_CATEGORY_LABELS, SEASON_LABELS, activityCity, localDay, windowEnd, windowStart, type ActivityCatalogItem } from '@/lib/activities';
 import { activityProblems, activitySourceUrls } from '@/lib/activityCatalog';
 import * as db from '../db';
+import { SearchPin } from '../model';
 import { HttpError } from '../util/httpError';
 
 export const ACTIVITY_DESK = '@TravelDesk';
@@ -82,4 +83,16 @@ export async function seedActivities(options: { cities?: string[]; dryRun?: bool
 // Source URL of the pin backing an activity (what the landing page looks up).
 export function activityPinSourceUrls(): Map<string, string> {
   return activitySourceUrls(activityCatalog);
+}
+
+// Add the catalog's pins to the search index (pins seeded by SQL never go through the pin API that indexes them).
+// Upserts one at a time so the search service is never flooded; returns how many were indexed and any failures.
+export async function indexActivityPins(): Promise<{ indexed: number; failed: number[] }> {
+  const rows = await db.query<{ id: number; title: string; description: string | null }>(
+    `SELECT "id", "title", "description" FROM "Pin" WHERE "sourceUrl" = ANY($1::text[]) AND "utcDeletedDateTime" IS NULL ORDER BY "id"`, [[...activityPinSourceUrls().values()]]);
+  const failed: number[] = [];
+  for (const row of rows) {
+    try { await new SearchPin(row).save(); } catch { failed.push(row.id); }
+  }
+  return { indexed: rows.length - failed.length, failed };
 }
