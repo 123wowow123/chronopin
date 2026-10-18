@@ -1,17 +1,17 @@
 # Japan restaurant target audit — October 16, 2026
 
-Target: **30 distinct eligible restaurants in every tab of every city**. **460 verified memberships; 265 still missing**. This target remains incomplete; surplus in another tab does not offset a shortage.
+Target: **30 distinct eligible restaurants in every tab of every city**. **464 verified memberships; 262 still missing**. This target remains incomplete; surplus in another tab does not offset a shortage.
 
-All 24 local and production public guide counts agree after batch 77 at **460 memberships / 265 missing**, refreshed 2026-10-18T21:20:01.413419+00:00 (October 19, 06:20 JST / October 18, 14:20 PDT). Morning Park Cafe adds one Tokyo Coming soon membership, bringing it to **13/30**. Five named menu entries and eight credited Azure images, full profiles, native public pin and guide title/image links verified in both environments. Thirteen local date fields that had diverged into future years were restored to the independently documented branch dates matching current production; public dates, original authors and unrelated fields verified. Production dates were not changed. Earlier checkpoints below are historical.
+All 24 local and production public guide counts agree after batch 78 at **464 memberships / 262 missing**, refreshed 2026-10-18T21:32:43.201504+00:00 (October 19, 06:32 JST / October 18, 14:32 PDT). Three new branches add Osaka Just opened2, Sapporo Just opened1and Sapporo Specials1: Osaka Just opened **21/30**, Sapporo Just opened **15/30**, Sapporo Specials **32/30**. Five hundred ninety-two menu/component entries, eighteen credited Azure gallery images, complete profiles, all seven offer schedules and four native title/image links verified in both environments. Thirty-four schedule boundaries and seven next starts passed. Expired opening discounts were not extended. Earlier checkpoints below are historical.
 
 | City (west to east) | Coming soon | Just opened | Top restaurants | Specials |
 | --- | ---: | ---: | ---: | ---: |
 | Fukuoka | 9/30 | 19/30 | 14/30 | 30/30 |
-| Osaka | 12/30 | 19/30 | 10/30 | 21/30 |
+| Osaka | 12/30 | 21/30 | 10/30 | 21/30 |
 | Kyoto | 11/30 | 31/30 | 10/30 | 30/30 |
 | Nagoya | 11/30 | 30/30 | 12/30 | 21/30 |
 | Tokyo | 13/30 | 17/30 | 24/30 | 33/30 |
-| Sapporo | 8/30 | 14/30 | 30/30 | 31/30 |
+| Sapporo | 8/30 | 15/30 | 30/30 | 32/30 |
 
 ## Each remaining shortage
 
@@ -22,7 +22,7 @@ All 24 local and production public guide counts agree after batch 77 at **460 me
 | Fukuoka | Top restaurants | 14 | 14 | 30 | 16 |
 | Fukuoka | Specials | 30 | 30 | 30 | 0 |
 | Osaka | Coming soon | 12 | 12 | 30 | 18 |
-| Osaka | Just opened | 19 | 19 | 30 | 11 |
+| Osaka | Just opened | 21 | 21 | 30 | 9 |
 | Osaka | Top restaurants | 10 | 10 | 30 | 20 |
 | Osaka | Specials | 21 | 21 | 30 | 9 |
 | Kyoto | Coming soon | 11 | 11 | 30 | 19 |
@@ -38,9 +38,9 @@ All 24 local and production public guide counts agree after batch 77 at **460 me
 | Tokyo | Top restaurants | 24 | 24 | 30 | 6 |
 | Tokyo | Specials | 33 | 33 | 30 | 0 |
 | Sapporo | Coming soon | 8 | 8 | 30 | 22 |
-| Sapporo | Just opened | 14 | 14 | 30 | 16 |
+| Sapporo | Just opened | 15 | 15 | 30 | 15 |
 | Sapporo | Top restaurants | 30 | 30 | 30 | 0 |
-| Sapporo | Specials | 31 | 31 | 30 | 0 |
+| Sapporo | Specials | 32 | 32 | 30 | 0 |
 
 ## Verification and continuation
 
@@ -116,3 +116,8 @@ Four established Fukuoka branches, 399 menu/variant entries, 12 credited Azure g
 ## Batch 77 completed
 
 Morning Park Cafe adds one Tokyo Coming soon venue, five named unpriced launch-menu entries and eight credited Azure gallery images. Thirteen local date fields restored to current production/documented branch openings; unrelated fields and original authors preserved. All 24 counts agree at **460 / 265**, October 19, 06:20 JST / October 18, 14:20 PDT. [Evidence](restaurant-japan-30-japan77-2026-10-18.json). No deployment.
+
+
+## Batch 78 completed
+
+Samjo Osaka, Sakagami Fish Center Osaka and Uotto Sapporo Station North Exit: three new branches,592menu/component entries,18gallery links and two verified drink promotions represented by seven schedule records. Four distinct memberships; all24counts agree **464 / 262**, October 19, 06:32 JST / October 18, 14:32 PDT. Full menus, sources, original authors, public pin/guide title/image links,34boundaries and seven next starts verified. [Evidence](restaurant-japan-30-japan78-2026-10-18.json). Coming soon remains under target in all six cities; new leads and exact holds recorded. No deployment.

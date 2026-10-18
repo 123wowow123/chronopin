@@ -332,7 +332,7 @@ function TradeGroup({ items, renderRow }: { items: Notification[]; renderRow: (n
         stats.set(ticker, s);
       }
     }
-    return [...stats].sort((a, b) => b[1].people.size - a[1].people.size || b[1].value - a[1].value).map(([ticker]) => ticker);
+    return [...stats].sort((a, b) => b[1].people.size - a[1].people.size || b[1].value - a[1].value).map(([ticker, s]) => [ticker, s.people.size] as const);
   };
   const tiles = [
     ['tradeBuys', sum((n) => n.tradeBuys), tickers((n) => n.tradeBuyValues), 'text-success-soft ring-success/40'],
@@ -358,7 +358,16 @@ function TradeGroup({ items, renderRow }: { items: Notification[]; renderRow: (n
                 {t(`notifications.${key}`)}
                 <span className="text-base font-semibold tabular-nums">{count}</span>
               </span>
-              {list.length ? <span className="text-[11px] break-words text-muted">{list.join(', ')}</span> : null}
+              {list.length ? (
+                <span className="mt-0.5 grid grid-cols-1 text-[11px] text-muted">
+                  {list.map(([ticker, people]) => (
+                    <span key={ticker} className="flex min-w-0 items-baseline gap-1.5">
+                      <span className="w-4 shrink-0 text-end tabular-nums">{people}</span>
+                      <span className="truncate font-medium text-ink">{ticker}</span>
+                    </span>
+                  ))}
+                </span>
+              ) : null}
             </span>
           ))}
         </span>
