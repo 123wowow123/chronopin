@@ -1224,6 +1224,8 @@ const vi: Messages = {
     kindReserved: 'Bộ lọc của trang',
     reserved: 'Bộ lọc của trang',
     savedQueries: 'Tìm kiếm phổ biến',
+    pinQuery: 'Ghim tìm kiếm này lên đầu',
+    unpinQuery: 'Bỏ ghim tìm kiếm này',
     reservedTitle: '{name}: bộ lọc riêng của trang, không phải thẻ do ai viết',
     title: 'Đám mây thẻ',
     close: 'Đóng đám mây thẻ',

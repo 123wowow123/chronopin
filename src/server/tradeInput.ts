@@ -19,7 +19,7 @@ export function readFilings(raw: unknown): FilingInput[] {
   if (raw.length > 500) throw new Error('at most 500 filings per request');
   return raw.map((f, i) => {
     const e = (f ?? {}) as Record<string, unknown>;
-    const chamber = e.chamber === 'senate' ? 'senate' : e.chamber === 'house' ? 'house' : null;
+    const chamber = e.chamber === 'senate' ? 'senate' : e.chamber === 'house' ? 'house' : e.chamber === 'executive' ? 'executive' : null;
     const filingId = typeof e.filingId === 'string' ? e.filingId.slice(0, 40) : '';
     const sourceUrl = safeUrl(typeof e.sourceUrl === 'string' ? e.sourceUrl : null);
     if (!chamber || !filingId || !sourceUrl) throw new Error(`filing ${i}: chamber, filingId and an https sourceUrl are required`);

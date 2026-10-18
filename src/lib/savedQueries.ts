@@ -76,3 +76,26 @@ export function recordRecentQuery(query: string) {
     // Storage blocked: the row just stays empty.
   }
 }
+
+// Searches the viewer pinned to the front of the row, newest pin first.
+const PINNED_KEY = 'chronopin_pinned_queries';
+
+export function pinnedQueries(): string[] {
+  try {
+    const list = JSON.parse(localStorage.getItem(PINNED_KEY) || '[]');
+    return Array.isArray(list) ? list.filter((q) => typeof q === 'string') : [];
+  } catch {
+    return [];
+  }
+}
+
+export function togglePinnedQuery(q: string): string[] {
+  const list = pinnedQueries();
+  const next = list.includes(q) ? list.filter((x) => x !== q) : [q, ...list];
+  try {
+    localStorage.setItem(PINNED_KEY, JSON.stringify(next));
+  } catch {
+    // Storage blocked: the pin just lasts until the cloud closes.
+  }
+  return next;
+}

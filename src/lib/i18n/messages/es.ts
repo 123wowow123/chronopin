@@ -1221,6 +1221,8 @@ const es: Messages = {
     kindReserved: 'Filtro del sitio',
     reserved: 'Filtros del sitio',
     savedQueries: 'Búsquedas populares',
+    pinQuery: 'Fijar esta búsqueda al principio',
+    unpinQuery: 'Desfijar esta búsqueda',
     reservedTitle: '{name}: un filtro del propio sitio, no una etiqueta escrita por nadie',
     title: 'Nube de etiquetas',
     close: 'Cerrar nube de etiquetas',

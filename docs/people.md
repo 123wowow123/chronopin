@@ -630,10 +630,27 @@ from. Filings can arrive up to 45 days after a trade; the section says it is not
   missing members since 2015 from the congress-legislators dataset (bioguide-keyed terms). It leaves
   one-to-few-day differences (death/resignation day) alone and, with `--prod`, diffs against what
   production serves.
-- **Not covered:** trades by people with no House/Senate filing (president, cabinet - they file OGE 278-T
-  reports, one PDF per report behind oge.gov's search form, no importer yet - and governors) and
-  anything filed on paper. Campaign finance (the OpenSecrets/Quiver election pages) is a
-  separate, not yet built, section.
+- **Executive branch (0194, 2026-10-18):** the president, vice president, cabinet and other appointees
+  file OGE Form 278-T. `npm run people:trades -- --executive` searches OGE's PAS index (the REST
+  endpoint behind oge.gov's "Officials' individual disclosures" search,
+  `extapps2.oge.gov/201/Presiden.nsf/API.xsp/v3/rest?search[value]=<last name>`), keeps entries whose file
+  is `...278T.pdf` and whose name fits exactly one person (role president, vice-president, cabinet or
+  other), and reads each PDF with `parseOge278T` (`src/lib/oge.ts`). `chamber = 'executive'`, the filing
+  id is the report's 32-hex id in the index, `filedDate` is the filer's e-signature date. The form does
+  not say whose account a trade was in (filer, spouse or dependent) or an asset type, so the page
+  shows no owner for these rows. A trade dated after the signature day is read as a year typo.
+  A report is stored only if every transaction-looking line was read (`complete`); otherwise it is
+  listed under `failed` and nothing is stored, so a half-read disclosure never understates trading.
+  The news job runs it with the House and Senate; backfill quietly with
+  `--executive --replace [--prod --token-file ...]`.
+- **Executive gaps (2026-10-18):** 13 of Donald Trump's 278-T reports (and several others from other
+  filers) are scanned images whose embedded text is OCR noise (`oorchase`, `8/312026`, `$1 000 0`);
+  Tesseract at 300 dpi was no better, so none of his trades are stored and no figure is guessed. They
+  need hand transcription or a cleaner copy. OGE gives other documents only on request (Request this
+  Document: Lutnick's annual 2026, Waltz's annual 2025) and the index lists no 278-T for JD Vance. Officials
+  without a person page are listed under `unmatched` (Bryan Bedford, Philip Jefferson, Eric Scott Turner,
+  Barbara Barrett, Wendy Sherman). Governors file on state forms and are not covered. Campaign finance
+  (the OpenSecrets/Quiver election pages) is a separate section, below.
 
 ## Campaign finance and opponents (0189)
 

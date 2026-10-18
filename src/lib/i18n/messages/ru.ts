@@ -1278,6 +1278,8 @@ const ru: Messages = {
     kindReserved: 'Фильтр сайта',
     reserved: 'Фильтры сайта',
     savedQueries: 'Популярные запросы',
+    pinQuery: 'Закрепить запрос в начале',
+    unpinQuery: 'Открепить запрос',
     reservedTitle: '{name}: собственный фильтр сайта, а не чей-то тег',
     title: 'Облако тегов',
     close: 'Закрыть облако тегов',

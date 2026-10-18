@@ -1215,6 +1215,8 @@ const zh: Messages = {
     kindReserved: '站点筛选',
     reserved: '站点筛选',
     savedQueries: '常用搜索',
+    pinQuery: '将此搜索置顶',
+    unpinQuery: '取消置顶此搜索',
     reservedTitle: '{name}：站点自带的筛选条件，并非他人添加的标签',
     title: '标签云',
     close: '关闭标签云',

@@ -1221,6 +1221,8 @@ const de: Messages = {
     kindReserved: 'Website-Filter',
     reserved: 'Website-Filter',
     savedQueries: 'Beliebte Suchen',
+    pinQuery: 'Suche nach vorn anheften',
+    unpinQuery: 'Suche lösen',
     reservedTitle: '{name}: ein Filter der Website, kein Tag von Nutzern',
     title: 'Tag-Wolke',
     close: 'Tag-Wolke schließen',

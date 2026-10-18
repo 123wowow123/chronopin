@@ -1215,6 +1215,8 @@ const ko: Messages = {
     kindReserved: '사이트 필터',
     reserved: '사이트 필터',
     savedQueries: '인기 검색',
+    pinQuery: '이 검색을 맨 앞에 고정',
+    unpinQuery: '이 검색 고정 해제',
     reservedTitle: '{name}: 사이트 자체 필터이며, 누군가 작성한 태그가 아닙니다',
     title: '태그 클라우드',
     close: '태그 클라우드 닫기',

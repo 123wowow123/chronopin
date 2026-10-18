@@ -2,6 +2,7 @@ import { execFileSync } from 'node:child_process';
 import { mkdtempSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import path from 'node:path';
+import { isOge278TFile, ogeReportId, parseOge278T } from '@/lib/oge';
 import { parsePtrText } from '@/lib/trades';
 import * as db from '../db';
 import PersonTrade, { type TradeFiling } from '../model/personTrade';
@@ -25,7 +26,7 @@ const STATES: Record<string, string> = {
 
 type Candidate = { id: number; name: string; bioguideId: string | null; jurisdiction: string | null; role: string };
 
-const fold = (s: string) =>
+export const fold = (s: string) =>
   s.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().replace(/\b(jr|sr|ii|iii|iv|hon|dr|mr|mrs|ms|md|do|facs|esq)\b\.?/g, '').replace(/[^a-z ]/g, ' ').replace(/\s+/g, ' ').trim();
 
 // A person's jurisdiction is the state ("Florida") for current members but the
@@ -33,7 +34,7 @@ const fold = (s: string) =>
 const inState = (p: Candidate, state: string) => !!p.jurisdiction && (p.jurisdiction === state || p.jurisdiction.startsWith(`${state}'s `));
 
 // Does the filing's first name fit the page's (exact, prefix either way)?
-const firstFits = (pageFirst: string, first: string) => pageFirst === first || pageFirst.startsWith(first) || first.startsWith(pageFirst);
+export const firstFits = (pageFirst: string, first: string) => pageFirst === first || pageFirst.startsWith(first) || first.startsWith(pageFirst);
 
 // A member by last name, first name (or a nickname-prefix) and state.
 function matchHouse(people: Candidate[], first: string, last: string, state: string): Candidate | null {
@@ -75,11 +76,46 @@ function matchSenator(people: Candidate[], first: string, last: string): Candida
   return others.length === 1 ? others[0] : null;
 }
 
+// The 278-T reports in OGE's PAS index for these people: the index is searched
+// by last name, and an entry counts when its name fits exactly one person and
+// its file is a periodic transaction report. Entries OGE only gives on request
+// ("Request this Document") have no file and are not here.
+async function fetchOgeFilings(people: Candidate[], log: (line: string) => void, unmatched: Set<string>) {
+  const found = new Map<string, { person: Candidate; filingId: string; sourceUrl: string; docDate: string | null }>();
+  for (const last of new Set(people.map((p) => fold(p.name).split(' ').pop() ?? ''))) {
+    if (!last) continue;
+    let entries: { name: string; type: string; docDate: string }[] = [];
+    try {
+      const res = await fetch(`https://extapps2.oge.gov/201/Presiden.nsf/API.xsp/v3/rest?search%5Bvalue%5D=${encodeURIComponent(last)}`, { headers: { 'User-Agent': UA } });
+      entries = ((await res.json()) as { data?: typeof entries }).data ?? [];
+    } catch (err) {
+      log(`OGE search "${last}" failed: ${(err as Error).message}`);
+      continue;
+    }
+    for (const e of entries) {
+      const url = /href='([^']+)'/.exec(e.type)?.[1];
+      if (!url || !isOge278TFile(url)) continue;
+      const [l, f = ''] = e.name.split(',').map((x) => x.trim());
+      const hits = people.filter((p) => fold(p.name).endsWith(fold(l)) && firstFits(fold(p.name).split(' ')[0], fold(f).split(' ')[0]));
+      const pick = hits.length === 1 ? hits[0] : hits.filter((p) => fold(p.name)[0] === fold(f)[0]).length === 1 ? hits.filter((p) => fold(p.name)[0] === fold(f)[0])[0] : null;
+      const id = ogeReportId(url);
+      if (!pick || !id) {
+        if (!pick) unmatched.add(`${f} ${l} (OGE)`);
+        continue;
+      }
+      found.set(id, { person: pick, filingId: id, sourceUrl: url, docDate: e.docDate?.slice(0, 10) ?? null });
+    }
+  }
+  log(`OGE: ${found.size} periodic transaction reports for ${new Set([...found.values()].map((x) => x.person.id)).size} people`);
+  return [...found.values()];
+}
+
 export type ImportResult = { filings: number; trades: number; unmatched: string[]; failed: string[] };
 
 export async function importTrades({
   house = false,
   senate = false,
+  executive = false,
   year = new Date().getFullYear(),
   days = 365,
   limit,
@@ -89,6 +125,7 @@ export async function importTrades({
 }: {
   house?: boolean;
   senate?: boolean;
+  executive?: boolean;
   year?: number;
   days?: number;
   limit?: number;
@@ -149,6 +186,23 @@ export async function importTrades({
       await store(person, { chamber: 'senate', filingId: f.filingId, filedDate: f.filedDate, sourceUrl: f.sourceUrl, trades: f.trades });
     }
   }
+  if (executive) {
+    for (const f of await fetchOgeFilings(people.filter((p) => ['president', 'vice-president', 'cabinet', 'other'].includes(p.role)), log, unmatched)) {
+      if (skipStored && (await PersonTrade.has('executive', f.filingId))) continue;
+      try {
+        const file = path.join(mkdtempSync(path.join(tmpdir(), 'oge-')), `${f.filingId}.pdf`);
+        execFileSync('curl', ['-sfL', '-A', UA, '-o', file, f.sourceUrl]);
+        const report = parseOge278T(execFileSync('pdftotext', ['-layout', file, '-'], { maxBuffer: 1 << 26 }).toString('utf8'));
+        if (!report.complete) {
+          result.failed.push(`${f.person.name} ${f.filingId}: ${report.unread || 'all'} transaction line(s) unreadable (scanned report or unknown layout) - not stored, ${f.sourceUrl}`);
+          continue;
+        }
+        await store(f.person, { chamber: 'executive', filingId: f.filingId, filedDate: report.filedDate ?? f.docDate, sourceUrl: f.sourceUrl, trades: report.trades });
+      } catch (err) {
+        result.failed.push(`${f.person.name} ${f.filingId}: ${(err as Error).message.split('\n')[0]}`);
+      }
+    }
+  }
   result.unmatched = [...unmatched];
   return result;
 }
@@ -157,17 +211,17 @@ export async function importTrades({
 // (a person is named by bioguide id, since local ids match prod's only after a pull).
 export async function recentFilings(days: number) {
   const rows = await db.query<Record<string, any>>(
-    `SELECT p."bioguideId", t."chamber", t."filingId", t."filedDate"::text AS "filedDate", t."sourceUrl", t."owner", t."asset", t."ticker", t."assetType", t."txType",
+    `SELECT p."id" AS "personId", p."bioguideId", t."chamber", t."filingId", t."filedDate"::text AS "filedDate", t."sourceUrl", t."owner", t."asset", t."ticker", t."assetType", t."txType",
             t."txDate"::text AS "txDate", t."notifiedDate"::text AS "notifiedDate", t."amountLow"::float8 AS "amountLow", t."amountHigh"::float8 AS "amountHigh"
      FROM "PersonTrade" t JOIN "Person" p ON p."id" = t."personId"
-     WHERE p."bioguideId" IS NOT NULL AND t."filedDate" >= now()::date - $1::int
+     WHERE t."filedDate" >= now()::date - $1::int
      ORDER BY t."chamber", t."filingId", t."id"`,
     [days],
   );
   const byFiling = new Map<string, any>();
   for (const r of rows) {
     const key = `${r.chamber}:${r.filingId}`;
-    const f = byFiling.get(key) ?? { bioguideId: r.bioguideId, chamber: r.chamber, filingId: r.filingId, filedDate: r.filedDate, sourceUrl: r.sourceUrl, trades: [] };
+    const f = byFiling.get(key) ?? { ...(r.bioguideId ? { bioguideId: r.bioguideId } : { personId: r.personId }), chamber: r.chamber, filingId: r.filingId, filedDate: r.filedDate, sourceUrl: r.sourceUrl, trades: [] };
     f.trades.push({ owner: r.owner, asset: r.asset, ticker: r.ticker, assetType: r.assetType, txType: r.txType, txDate: r.txDate, notifiedDate: r.notifiedDate, amountLow: r.amountLow, amountHigh: r.amountHigh });
     byFiling.set(key, f);
   }

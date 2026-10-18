@@ -31,7 +31,7 @@ export function TradesSection({ personId, name, trades, t }: { personId: number;
             <span className={tr.txType === 'purchase' ? 'text-success' : tr.txType === 'exchange' ? 'text-muted' : 'text-danger'}>{t(`person.trades.types.${tr.txType}`)}</span>
           </td>
           <td className="px-3 py-2 whitespace-nowrap tabular-nums">{formatAmountRange(tr.amountLow, tr.amountHigh)}</td>
-          <td className="px-3 py-2 whitespace-nowrap text-muted">{t(`person.trades.owners.${tr.owner}`)}</td>
+          <td className="px-3 py-2 whitespace-nowrap text-muted">{tr.chamber === 'executive' ? '—' : t(`person.trades.owners.${tr.owner}`)}</td>
           <td className="px-3 py-2 whitespace-nowrap">
             {url ? (
               <Anchor href={url} className="text-xs" title={tr.filedDate ? `${t('person.trades.filed')} ${day(tr.filedDate)}` : undefined}>

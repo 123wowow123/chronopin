@@ -2,7 +2,7 @@ import * as db from '../db';
 import type { TradeRow, ParsedTrade } from '@/lib/trades';
 
 export type TradeFiling = {
-  chamber: 'house' | 'senate';
+  chamber: 'house' | 'senate' | 'executive';
   filingId: string;
   filedDate: string | null;
   sourceUrl: string;

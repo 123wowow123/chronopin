@@ -563,10 +563,10 @@ export const TOOLS: JobTool[] = [
   {
     name: 'person_trades_update',
     description:
-      "The personTrades task's only call. Reads the House Clerk's periodic transaction reports for this year and the Senate's eFD reports from the last 30 days, saves every filing not stored yet to the people's pages (telling the people watching each person), and - when the run writes to production - sends the filings filed in the last 21 days to production, whose watchers are told of the new ones. Returns filings and trades newly stored here, what production added (and any bioguide ids it has no page for), members with no person page (unmatched) and filings that failed to read. Mechanical: nothing to review except unmatched and failed.",
+      "The personTrades task's only call. Reads the House Clerk's periodic transaction reports for this year the Senate's eFD reports from the last 30 days and the executive branch's OGE 278-T reports (president, VP, cabinet), saves every filing not stored yet to the people's pages (telling the people watching each person), and - when the run writes to production - sends the filings filed in the last 21 days to production, whose watchers are told of the new ones. Returns filings and trades newly stored here, what production added (and any bioguide ids it has no page for), members with no person page (unmatched) and filings that failed to read. Mechanical: nothing to review except unmatched and failed.",
     input_schema: obj({ days: num('Days of Senate reports to read, default 30, at most 120') }),
     run: async (input, ctx) => {
-      const result = await importTrades({ house: true, senate: true, days: int(input.days, 30, 1, 120) });
+      const result = await importTrades({ house: true, senate: true, executive: true, days: int(input.days, 30, 1, 120) });
       let prod: { added: number; missing: string[] } | null = null;
       if (process.env.JOBS_PROD_BASE?.trim()) {
         prod = { added: 0, missing: [] };

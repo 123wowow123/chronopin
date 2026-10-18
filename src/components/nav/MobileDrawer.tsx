@@ -350,6 +350,7 @@ export function MobileDrawer({ ads = false }: { ads?: boolean }) {
           <DrawerSection title="Curated" className="pb-1!">
             {link('/restaurants', 'map', 'Restaurants')}
             {link('/travel', 'globe', 'Travel')}
+            {link('/activities', 'compass', 'Activities')}
             {link('/products', 'cart', 'Products')}
             {link('/cars', 'car', 'Cars')}
             {link('/music', 'music', 'Music')}

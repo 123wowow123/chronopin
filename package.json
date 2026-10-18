@@ -87,6 +87,8 @@
     "places:resolve": "tsx scripts/places/resolve.ts",
     "places:refresh": "tsx scripts/places/refresh.ts",
     "restaurants:seed": "tsx scripts/restaurants/seed.ts",
+    "activities:seed": "tsx scripts/activities/seed.ts",
+    "activities:photos": "tsx scripts/activities/photos.ts",
     "restaurants:specials:seed": "tsx scripts/restaurants/seedSpecials.ts",
     "restaurants:specials": "tsx scripts/restaurants/specials.ts",
     "restaurants:special-pins": "tsx scripts/restaurants/seedSpecialPins.ts",

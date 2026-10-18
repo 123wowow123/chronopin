@@ -5,6 +5,8 @@
 //       the House Clerk's index + each report's PDF (pdftotext must be installed)
 //   npm run people:trades -- --senate [--days 365]
 //       the Senate's eFD search (the "I agree" step is done with a cookie jar)
+//   npm run people:trades -- --executive
+//       OGE 278-T reports (president, VP, cabinet, appointees) from OGE's PAS index
 //   --replace
 //       re-read stored filings and swap in the lines where the parse now differs
 //       (silent, no alerts); use after a parser fix. With --prod it sends replace:true
@@ -26,6 +28,7 @@ const { values: flags } = parseArgs({
   options: {
     house: { type: 'boolean', default: false },
     senate: { type: 'boolean', default: false },
+    executive: { type: 'boolean', default: false },
     year: { type: 'string' },
     days: { type: 'string', default: '365' },
     limit: { type: 'string' },
@@ -40,13 +43,14 @@ const { values: flags } = parseArgs({
 const sent: Record<string, unknown>[] = [];
 
 async function main() {
-  if (!flags.house && !flags.senate) {
-    console.log('Pass --house and/or --senate');
+  if (!flags.house && !flags.senate && !flags.executive) {
+    console.log('Pass --house, --senate and/or --executive');
     return;
   }
   const result = await importTrades({
     house: flags.house,
     senate: flags.senate,
+    executive: flags.executive,
     year: flags.year ? Number(flags.year) : undefined,
     days: Number(flags.days),
     limit: flags.limit ? Number(flags.limit) : undefined,

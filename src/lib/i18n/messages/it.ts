@@ -1212,6 +1212,8 @@ const it: Messages = {
     kindReserved: 'Filtro del sito',
     reserved: 'Filtri del sito',
     savedQueries: 'Ricerche popolari',
+    pinQuery: 'Fissa questa ricerca in testa',
+    unpinQuery: 'Rimuovi il blocco di questa ricerca',
     reservedTitle: '{name}: un filtro del sito, non un tag scritto da qualcuno',
     title: 'Nuvola di tag',
     close: 'Chiudi la nuvola di tag',

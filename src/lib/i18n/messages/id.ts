@@ -1225,6 +1225,8 @@ const id: Messages = {
     kindReserved: 'Filter situs',
     reserved: 'Filter situs',
     savedQueries: 'Pencarian populer',
+    pinQuery: 'Sematkan pencarian ini di depan',
+    unpinQuery: 'Lepas sematan pencarian ini',
     reservedTitle: '{name}: filter bawaan situs, bukan tag yang ditulis seseorang',
     title: 'Awan tag',
     close: 'Tutup awan tag',

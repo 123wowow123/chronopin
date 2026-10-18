@@ -1225,6 +1225,8 @@ const ms: Messages = {
     kindReserved: 'Penapis laman',
     reserved: 'Penapis laman',
     savedQueries: 'Carian popular',
+    pinQuery: 'Pin carian ini ke hadapan',
+    unpinQuery: 'Nyahpin carian ini',
     reservedTitle: '{name}: penapis laman itu sendiri, bukan teg yang ditulis oleh sesiapa',
     title: 'Awan teg',
     close: 'Tutup awan teg',

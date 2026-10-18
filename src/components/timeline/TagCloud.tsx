@@ -9,7 +9,7 @@ import { api } from '@/lib/client/api';
 import { hrefKeepingDate, hrefNearDay } from '@/lib/client/returnSpot';
 import { useScrollLock } from '@/lib/client/scrollLock';
 import { refineQuery, removeTerm } from '@/lib/searchTerms';
-import { recentQueries, recordQuery, recordRecentQuery, sharedQueries } from '@/lib/savedQueries';
+import { pinnedQueries, recentQueries, recordQuery, recordRecentQuery, sharedQueries, togglePinnedQuery } from '@/lib/savedQueries';
 import { cloudTags, groupSelection, groupTags, isReserved, reservedPicked, reservedTag, reservedValues, RESERVED_TAGS, type TagCount, type TagGroup } from '@/lib/tags';
 import { parseSearchQuery } from '@/server/util/searchQuery';
 import { leaveDrawerForCloud, onOpenTagCloud } from '@/lib/client/controlsDrawer';
@@ -331,34 +331,135 @@ function SavedQueries({ current, onOpen, className = '' }: { current: string; on
   const label = t('tagCloud.savedQueries');
   const [popular, setPopular] = useState<string[]>([]);
   const [recent, setRecent] = useState<string[]>([]);
+  const [pinned, setPinned] = useState<string[]>([]);
+  // A pill dragged by pointer (not the browser's drag-and-drop, whose snapshot
+  // can't change): a floating copy follows the cursor and turns amber over the zone.
+  const [drag, setDrag] = useState<{ q: string; x: number; y: number } | null>(null);
+  const [over, setOver] = useState(false);
+  const dragging = drag !== null;
+  const zone = useRef<HTMLSpanElement>(null);
+  const row = useRef<HTMLDivElement>(null);
+  // Pinning moves a pill to the front: scroll there so it is not left out of view.
+  const togglePin = (q: string) => {
+    setPinned(togglePinnedQuery(q));
+    row.current?.scrollTo({ left: 0, behavior: 'smooth' });
+  };
+  const moved = useRef(false);
+  const startDrag = (down: React.PointerEvent, q: string) => {
+    if (down.button !== 0 || down.pointerType === 'touch' || (down.target as HTMLElement).closest('[data-pin-button]')) return;
+    const from = { x: down.clientX, y: down.clientY };
+    // Keep the copy where the pill was grabbed, so it doesn't jump to the cursor.
+    const box = down.currentTarget.getBoundingClientRect();
+    const grab = { x: down.clientX - (box.left + box.width / 2), y: down.clientY - (box.top + box.height / 2) };
+    let live = false;
+    const hit = (x: number, y: number) => {
+      const r = zone.current?.getBoundingClientRect();
+      return !!r && x >= r.left - 10 && x <= r.right + 10 && y >= r.top - 10 && y <= r.bottom + 10;
+    };
+    const move = (e: PointerEvent) => {
+      if (!live && Math.hypot(e.clientX - from.x, e.clientY - from.y) < 6) return;
+      live = true;
+      moved.current = true;
+      setDrag({ q, x: e.clientX - grab.x, y: e.clientY - grab.y });
+      setOver(hit(e.clientX, e.clientY));
+    };
+    const end = (e: PointerEvent) => {
+      window.removeEventListener('pointermove', move);
+      window.removeEventListener('pointerup', end);
+      window.removeEventListener('pointercancel', end);
+      if (live && e.type === 'pointerup' && hit(e.clientX, e.clientY)) setPinned((now) => (now.includes(q) ? now : togglePinnedQuery(q)));
+      setDrag(null);
+      setOver(false);
+      // The click that follows a drag is not a search.
+      setTimeout(() => (moved.current = false), 0);
+    };
+    window.addEventListener('pointermove', move);
+    window.addEventListener('pointerup', end);
+    window.addEventListener('pointercancel', end);
+  };
   useEffect(() => {
     setRecent(recentQueries());
+    setPinned(pinnedQueries());
     sharedQueries().then(setPopular);
   }, [current]);
-  // This viewer's recent searches lead (own color), then the popular ones.
-  const list = [...new Set([...recent, ...popular])];
+  // Pinned searches lead (amber), then this viewer's recent ones (blue), then the popular ones.
+  const list = [...new Set([...pinned, ...recent, ...popular])];
   if (!list.length) return null;
   const now = current.trim().replace(/\s+/g, ' ');
+  const toneFor = (q: string) =>
+    pinned.includes(q)
+      ? `bg-amber-500/20 font-medium text-ink hover:border-amber-500 ${q === now ? 'border-amber-500' : 'border-amber-500/70'}`
+      : q === now
+        ? 'border-accent/60 bg-accent/15 text-link'
+        : recent.includes(q)
+          ? 'border-link/40 bg-link/10 text-link hover:border-link/70'
+          : 'border-line text-muted hover:border-tint/40 hover:text-ink';
   return (
     <div role="group" aria-label={label} className={`flex flex-col gap-2 ${className}`}>
       <span aria-hidden className="inline-flex items-center gap-1 text-xs font-semibold tracking-wide text-faint uppercase">
         <Icon name="search" className="size-3.5" />
         {label}
+        {/* Drop a pill here to pin it (the pin button on a pill does the same). */}
+        <span
+          ref={zone}
+          aria-hidden
+          title={t('tagCloud.pinQuery')}
+          className={`ms-1 grid size-6 place-items-center rounded-full border transition-colors ${over ? 'border-amber-500 bg-amber-500/25 text-amber-500' : dragging ? 'border-dashed border-amber-500/70 text-amber-500' : 'border-line text-faint'}`}
+        >
+          <Icon name="thumbtack" className="size-3.5" />
+        </span>
       </span>
-      <div className="flex items-center gap-2 overflow-x-auto pb-1 [scrollbar-width:thin]">
-        {list.map((q) => (
-          <button
-            key={q}
-            type="button"
-            aria-pressed={q === now}
-            onClick={() => onOpen(q)}
-            title={q}
-            className={`shrink-0 rounded-full border px-3 py-1 text-sm whitespace-nowrap transition-colors ${q === now ? 'border-accent/60 bg-accent/15 text-link' : recent.includes(q) ? 'border-link/40 bg-link/10 text-link hover:border-link/70' : 'border-line text-muted hover:border-tint/40 hover:text-ink'}`}
-          >
-            {q}
-          </button>
-        ))}
+      <div ref={row} className="-mx-1 flex items-center gap-2 overflow-x-auto px-1 py-1 [scrollbar-width:thin]">
+        {list.map((q) => {
+          const isPinned = pinned.includes(q);
+          const tone = toneFor(q);
+          return (
+            <span
+              key={q}
+              onPointerDown={(e) => startDrag(e, q)}
+              className={`group relative shrink-0 select-none transition-transform has-[[data-pill]:active]:scale-[0.97] ${drag?.q === q ? 'opacity-40' : ''}`}
+            >
+              <button type="button" data-pill aria-pressed={q === now} onClick={() => !moved.current && onOpen(q)} title={q} className={`rounded-full border py-1 text-sm whitespace-nowrap transition-colors active:scale-100 ${isPinned ? 'ps-8 pe-3' : 'px-3'} ${tone}`}>
+                {q}
+              </button>
+              {isPinned ? (
+                // Over the pinned pill's own pin icon: click it to unpin.
+                <button
+                  type="button"
+                  aria-label={t('tagCloud.unpinQuery')}
+                  title={t('tagCloud.unpinQuery')}
+                  onClick={() => togglePin(q)}
+                  data-pin-button
+                  className={`absolute start-[3px] top-1/2 grid size-6 -translate-y-1/2 place-items-center rounded-full text-amber-600 transition-colors hover:bg-amber-500 hover:text-white active:bg-amber-600 active:text-white dark:text-amber-400 ${dragging ? 'pointer-events-none' : ''}`}
+                >
+                  <Icon name="thumbtack" aria-hidden className="size-3.5" />
+                </button>
+              ) : (
+                // Covers the pill's right end on hover (a big target), inside its border, so it never resizes the pill.
+                // A solid page-colored disc under a button in the pill's own tint, so it reads clearly and still matches.
+                <span data-pin-button className={`absolute end-[3px] top-1/2 size-6 -translate-y-1/2 rounded-full bg-panel opacity-0 transition-opacity ${dragging ? 'pointer-events-none' : 'group-hover:opacity-100 has-[:focus-visible]:opacity-100'}`}>
+                  <button
+                    type="button"
+                    aria-label={t('tagCloud.pinQuery')}
+                    title={t('tagCloud.pinQuery')}
+                    onClick={() => togglePin(q)}
+                    className="grid size-full place-items-center rounded-full border border-line bg-panel text-muted transition-colors hover:border-amber-500 hover:bg-amber-500 hover:text-white active:border-amber-600 active:bg-amber-600 active:text-white"
+                  >
+                    <Icon name="thumbtack" className="size-3.5" />
+                  </button>
+                </span>
+              )}
+            </span>
+          );
+        })}
       </div>
+      {drag &&
+        createPortal(
+          <span aria-hidden style={{ left: drag.x, top: drag.y }} className="pointer-events-none fixed z-[200] -translate-x-1/2 -translate-y-1/2 rounded-full bg-panel shadow-lg">
+            <span className={`block rounded-full border px-3 py-1 text-sm whitespace-nowrap transition-colors ${over ? 'border-amber-500 bg-amber-500/60 text-ink' : toneFor(drag.q)}`}>{drag.q}</span>
+          </span>,
+          document.body,
+        )}
     </div>
   );
 }

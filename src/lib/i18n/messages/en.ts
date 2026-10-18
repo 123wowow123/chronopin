@@ -1225,6 +1225,8 @@ const en = {
     kindReserved: 'Site filter',
     reserved: 'Site filters',
     savedQueries: 'Popular searches',
+    pinQuery: 'Pin this search to the front',
+    unpinQuery: 'Unpin this search',
     reservedTitle: '{name}: the site’s own filter, not a tag anyone wrote',
     title: 'Tag cloud',
     close: 'Close tag cloud',

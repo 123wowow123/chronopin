@@ -551,8 +551,9 @@ quarterly refresh, or by hand with `npm run people:campaigns`.
 ### personTrades
 
 **Reads** nothing first; its one call, `person_trades_update`, reads this year's
-House Clerk periodic transaction reports and the Senate eFD reports of the last 30
-days (`src/server/services/personTradesImport.ts`, the same code as `npm run
+House Clerk periodic transaction reports, the Senate eFD reports of the last 30
+days and the executive branch's OGE 278-T reports (president, VP, cabinet; a scanned
+report it cannot read in full is listed under `failed` and not stored) (`src/server/services/personTradesImport.ts`, the same code as `npm run
 people:trades`), stores every filing not stored yet on the people's pages, and,
 when the run writes to production (`JOBS_PROD_BASE`), sends the filings filed in the
 last 21 days to `POST /api/admin/person-trades` as the admin. A filing is stored once

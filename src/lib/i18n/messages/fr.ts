@@ -1221,6 +1221,8 @@ const fr: Messages = {
     kindReserved: 'Filtre du site',
     reserved: 'Filtres du site',
     savedQueries: 'Recherches populaires',
+    pinQuery: 'Épingler cette recherche en premier',
+    unpinQuery: 'Désépingler cette recherche',
     reservedTitle: '{name} : un filtre du site, pas un tag écrit par quelqu’un',
     title: 'Nuage de tags',
     close: 'Fermer le nuage de tags',

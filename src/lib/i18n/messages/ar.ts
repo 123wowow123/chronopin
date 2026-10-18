@@ -1522,6 +1522,8 @@ const ar: Messages = {
     kindReserved: 'عامل تصفية الموقع',
     reserved: 'عوامل تصفية الموقع',
     savedQueries: 'عمليات بحث شائعة',
+    pinQuery: 'تثبيت هذا البحث في المقدمة',
+    unpinQuery: 'إلغاء تثبيت هذا البحث',
     reservedTitle: '{name}: عامل تصفية خاص بالموقع، وليس وسمًا كتبه أحد',
     title: 'سحابة الوسوم',
     close: 'إغلاق سحابة الوسوم',

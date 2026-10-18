@@ -196,3 +196,6 @@
 
 ## 2026-09-18
 * **Creation**: Link wikis (0026) and the OKF export were added. The Claude calls had not run yet, because the app's API key had no credit.
+
+## 2026-10-18
+* **Creation**: Added the activities landing page (`/activities`, `/activities/<city>`) with a Today tab, seasonal tabs, the `activities:seed` catalog seeder and its vertical recipe in [Vertical recipes](/scraping/verticals.md).

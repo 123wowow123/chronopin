@@ -133,7 +133,7 @@ export function formatAmountRange(low: number | null, high: number | null): stri
 
 export type TradeRow = {
   id: number;
-  chamber: 'house' | 'senate';
+  chamber: 'house' | 'senate' | 'executive';
   filingId: string;
   owner: TradeOwner;
   asset: string;

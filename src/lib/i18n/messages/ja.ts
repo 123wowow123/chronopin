@@ -1215,6 +1215,8 @@ const ja: Messages = {
     kindReserved: 'サイトのフィルター',
     reserved: 'サイトのフィルター',
     savedQueries: 'よく使う検索',
+    pinQuery: 'この検索を先頭に固定',
+    unpinQuery: 'この検索の固定を外す',
     reservedTitle: '{name}：サイト自身のフィルターで、誰かが付けたタグではありません',
     title: 'タグクラウド',
     close: 'タグクラウドを閉じる',

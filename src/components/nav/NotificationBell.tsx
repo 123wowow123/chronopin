@@ -647,6 +647,7 @@ function useDropdown() {
 const CURATED_LINKS: { href: string; label: string; icon: IconName }[] = [
   { href: '/restaurants', label: 'Restaurants', icon: 'map' },
   { href: '/travel', label: 'Travel', icon: 'globe' },
+  { href: '/activities', label: 'Activities', icon: 'compass' },
   { href: '/products', label: 'Products', icon: 'cart' },
   { href: '/cars', label: 'Cars', icon: 'car' },
   { href: '/music', label: 'Music', icon: 'music' },

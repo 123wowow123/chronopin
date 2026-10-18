@@ -1212,6 +1212,8 @@ const pt: Messages = {
     kindReserved: 'Filtro do site',
     reserved: 'Filtros do site',
     savedQueries: 'Pesquisas populares',
+    pinQuery: 'Fixar esta pesquisa no início',
+    unpinQuery: 'Desafixar esta pesquisa',
     reservedTitle: '{name}: um filtro do próprio site, não uma tag escrita por alguém',
     title: 'Nuvem de tags',
     close: 'Fechar nuvem de tags',

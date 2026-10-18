@@ -1231,6 +1231,8 @@ const hi: Messages = {
     kindReserved: 'साइट फ़िल्टर',
     reserved: 'साइट फ़िल्टर',
     savedQueries: 'लोकप्रिय खोजें',
+    pinQuery: 'इस खोज को सबसे आगे पिन करें',
+    unpinQuery: 'इस खोज का पिन हटाएँ',
     reservedTitle: '{name}: साइट का अपना फ़िल्टर, किसी का लिखा टैग नहीं',
     title: 'टैग क्लाउड',
     close: 'टैग क्लाउड बंद करें',
