@@ -1995,6 +1995,7 @@ const ko: Messages = {
       owners: { self: '본인', spouse: '배우자', joint: '공동', dependent: '부양 자녀' },
       types: { purchase: '매수', sale: '매도', partial: '일부 매도', exchange: '교환' },
       showMore: '거래 {count}건 모두 보기',
+      latest: '전체 {total}건 중 최근 {shown}건 표시',
       watch: '거래 알림 받기',
       watching: '거래 알림 받는 중',
       unwatch: '알림 해제',

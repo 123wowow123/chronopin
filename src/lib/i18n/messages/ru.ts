@@ -2092,6 +2092,7 @@ const ru: Messages = {
       owners: { self: 'Сам', spouse: 'Супруг(а)', joint: 'Совместно', dependent: 'Ребёнок на иждивении' },
       types: { purchase: 'Покупка', sale: 'Продажа', partial: 'Частичная продажа', exchange: 'Обмен' },
       showMore: 'Показать все сделки ({count})',
+      latest: 'Показаны последние {shown} из {total} сделок',
       watch: 'Уведомлять о сделках',
       watching: 'Слежу за сделками',
       unwatch: 'Не следить',

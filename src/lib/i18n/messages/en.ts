@@ -2005,6 +2005,7 @@ const en = {
       owners: { self: 'Self', spouse: 'Spouse', joint: 'Joint', dependent: 'Dependent child' },
       types: { purchase: 'Purchase', sale: 'Sale', partial: 'Partial sale', exchange: 'Exchange' },
       showMore: 'Show all {count} trades',
+      latest: 'Showing the latest {shown} of {total} trades',
       watch: 'Notify me of trades',
       watching: 'Watching trades',
       unwatch: 'Stop watching',

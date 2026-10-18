@@ -1,5 +1,5 @@
 import * as db from '../db';
-import type { TradeRow, ParsedTrade } from '@/lib/trades';
+import type { TradeRow, ParsedTrade, TradeSummary } from '@/lib/trades';
 
 export type TradeFiling = {
   chamber: 'house' | 'senate' | 'executive';
@@ -37,6 +37,22 @@ export default class PersonTrade {
       added += rows.length;
     }
     return added;
+  }
+
+  // The totals over every stored trade (the page lists only the newest ones):
+  // counts, the summed range ends, the most-traded tickers and the period.
+  static async summary(personId: number): Promise<TradeSummary> {
+    const [row] = await db.query<{ count: number; purchases: number; sales: number; low: number | null; high: number | null; first: string | null; last: string | null }>(
+      `SELECT count(*)::int AS "count", count(*) FILTER (WHERE "txType" = 'purchase')::int AS "purchases", count(*) FILTER (WHERE "txType" IN ('sale', 'partial'))::int AS "sales",
+              sum("amountLow")::float8 AS "low", sum(COALESCE("amountHigh", "amountLow"))::float8 AS "high", min("txDate")::text AS "first", max("txDate")::text AS "last"
+       FROM "PersonTrade" WHERE "personId" = $1`,
+      [personId],
+    );
+    const tickers = await db.query<{ ticker: string; count: number }>(
+      `SELECT "ticker", count(*)::int AS "count" FROM "PersonTrade" WHERE "personId" = $1 AND "ticker" IS NOT NULL GROUP BY "ticker" ORDER BY 2 DESC, 1 LIMIT 8`,
+      [personId],
+    );
+    return { count: row.count, purchases: row.purchases, sales: row.sales, volumeLow: row.low ?? 0, volumeHigh: row.high ?? 0, tickers, first: row.first, last: row.last };
   }
 
   // Re-reads of a filing whose earlier parse was wrong (a wrapped amount, a

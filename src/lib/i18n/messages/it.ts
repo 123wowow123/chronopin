@@ -1991,6 +1991,7 @@ const it: Messages = {
       owners: { self: 'Proprio', spouse: 'Coniuge', joint: 'Congiunto', dependent: 'Figlio a carico' },
       types: { purchase: 'Acquisto', sale: 'Vendita', partial: 'Vendita parziale', exchange: 'Scambio' },
       showMore: 'Mostra tutte le {count} operazioni',
+      latest: 'Le {shown} più recenti su {total} operazioni',
       watch: 'Avvisami delle operazioni',
       watching: 'Operazioni seguite',
       unwatch: 'Smetti di seguire',

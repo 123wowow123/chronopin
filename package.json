@@ -51,6 +51,7 @@
     "people:assess": "tsx scripts/people/assess.ts",
     "people:trades": "tsx scripts/people/trades.ts",
     "people:terms": "tsx scripts/people/termsFix.ts",
+    "people:oge-transcribed": "tsx scripts/people/ogeTranscribed.ts",
     "people:campaigns": "tsx scripts/people/campaigns.ts",
     "people:wiki": "tsx scripts/people/wiki.ts",
     "people:radar": "tsx scripts/people/radarMerge.ts",

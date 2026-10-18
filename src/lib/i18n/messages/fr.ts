@@ -2000,6 +2000,7 @@ const fr: Messages = {
       owners: { self: 'Lui-même', spouse: 'Conjoint', joint: 'Joint', dependent: 'Enfant à charge' },
       types: { purchase: 'Achat', sale: 'Vente', partial: 'Vente partielle', exchange: 'Échange' },
       showMore: 'Afficher les {count} opérations',
+      latest: 'Les {shown} plus récentes sur {total} transactions',
       watch: 'Me prévenir des opérations',
       watching: 'Opérations suivies',
       unwatch: 'Ne plus suivre',

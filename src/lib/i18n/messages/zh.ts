@@ -1994,6 +1994,7 @@ const zh: Messages = {
       owners: { self: '本人', spouse: '配偶', joint: '共同', dependent: '受抚养子女' },
       types: { purchase: '买入', sale: '卖出', partial: '部分卖出', exchange: '交换' },
       showMore: '显示全部 {count} 笔交易',
+      latest: '显示最近 {shown} 笔，共 {total} 笔交易',
       watch: '交易通知我',
       watching: '正在关注交易',
       unwatch: '取消关注',

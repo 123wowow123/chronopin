@@ -1990,6 +1990,7 @@ const th: Messages = {
       owners: { self: 'ตนเอง', spouse: 'คู่สมรส', joint: 'ร่วมกัน', dependent: 'บุตรที่อยู่ในอุปการะ' },
       types: { purchase: 'ซื้อ', sale: 'ขาย', partial: 'ขายบางส่วน', exchange: 'แลกเปลี่ยน' },
       showMore: 'แสดงทั้งหมด {count} รายการ',
+      latest: 'แสดง {shown} รายการล่าสุดจากทั้งหมด {total} รายการ',
       watch: 'แจ้งเตือนการซื้อขาย',
       watching: 'กำลังติดตามการซื้อขาย',
       unwatch: 'เลิกติดตาม',

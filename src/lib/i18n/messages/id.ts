@@ -2004,6 +2004,7 @@ const id: Messages = {
       owners: { self: 'Sendiri', spouse: 'Pasangan', joint: 'Bersama', dependent: 'Anak tanggungan' },
       types: { purchase: 'Pembelian', sale: 'Penjualan', partial: 'Penjualan sebagian', exchange: 'Pertukaran' },
       showMore: 'Tampilkan semua {count} transaksi',
+      latest: 'Menampilkan {shown} transaksi terbaru dari {total}',
       watch: 'Beri tahu saya tentang transaksi',
       watching: 'Memantau transaksi',
       unwatch: 'Berhenti memantau',

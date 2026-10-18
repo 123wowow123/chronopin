@@ -2003,6 +2003,7 @@ const vi: Messages = {
       owners: { self: 'Bản thân', spouse: 'Vợ/chồng', joint: 'Chung', dependent: 'Con phụ thuộc' },
       types: { purchase: 'Mua', sale: 'Bán', partial: 'Bán một phần', exchange: 'Hoán đổi' },
       showMore: 'Hiện tất cả {count} giao dịch',
+      latest: 'Hiển thị {shown} giao dịch mới nhất trong tổng số {total}',
       watch: 'Thông báo cho tôi về giao dịch',
       watching: 'Đang theo dõi giao dịch',
       unwatch: 'Bỏ theo dõi',

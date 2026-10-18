@@ -4,7 +4,7 @@ import { dateFormat } from '@/lib/format';
 import { INTL_LOCALES } from '@/lib/i18n/config';
 import type { Translator } from '@/lib/i18n/translate';
 import { safeUrl } from '@/lib/people';
-import { formatAmountRange, summarizeTrades, type TradeRow } from '@/lib/trades';
+import { formatAmountRange, summarizeTrades, type TradeRow, type TradeSummary } from '@/lib/trades';
 
 const SHOWN = 25;
 const compact = (n: number) => (n >= 1e6 ? `$${(n / 1e6).toFixed(n >= 1e7 ? 0 : 1)}M` : n >= 1e3 ? `$${Math.round(n / 1e3)}K` : `$${n}`);
@@ -12,8 +12,9 @@ const compact = (n: number) => (n >= 1e6 ? `$${(n / 1e6).toFixed(n >= 1e7 ? 0 : 
 // A person's disclosed stock trades: totals as tiles, then the table, each row
 // linking to the filing it was read from. The watch button sits in the heading
 // row, so subscribing is one click from the numbers.
-export function TradesSection({ personId, name, trades, t }: { personId: number; name: string; trades: TradeRow[]; t: Translator }) {
-  const summary = summarizeTrades(trades);
+export function TradesSection({ personId, name, trades, summary: totals, t }: { personId: number; name: string; trades: TradeRow[]; summary?: TradeSummary; t: Translator }) {
+  // The totals cover every stored trade; the table lists only the newest ones.
+  const summary = totals ?? summarizeTrades(trades);
   const intl = INTL_LOCALES[t.locale];
   const day = (iso: string) => dateFormat(intl, { dateStyle: 'medium', timeZone: 'UTC' }).format(new Date(`${iso}T00:00:00Z`));
   const tile = 'floating flex flex-col gap-1 px-4 py-3';
@@ -112,6 +113,7 @@ export function TradesSection({ personId, name, trades, t }: { personId: number;
               </div>
             </details>
           ) : null}
+          {summary.count > trades.length ? <p className="mt-2 text-xs text-subtle">{t('person.trades.latest', { shown: trades.length, total: summary.count })}</p> : null}
         </>
       ) : (
         <p className="text-sm text-muted">{t('person.trades.none')}</p>
