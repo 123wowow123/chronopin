@@ -22,13 +22,15 @@ export function buildRestaurantOffers(restaurants: Restaurant[], topRestaurants:
   const venues = [
     ...restaurants.filter((restaurant) => restaurant.confirmed && restaurant.day <= today).map((restaurant) => ({ ...restaurant, href: pinPath(restaurant) })),
     ...topRestaurants.map((restaurant) => ({ ...restaurant, href: pinPath({ id: restaurant.pinId, title: restaurant.pinTitle }) })),
-    ...supplemental.map((venue) => {
+    // Every card opens its native pin page; a venue with no backing pin is not shown until one is seeded.
+    ...supplemental.flatMap((venue) => {
       const pin = pinsBySource?.get(venue.pinSourceUrl) ?? (pinsBySource ? [...pinsBySource.entries()].find(([k]) => restaurantSourceKey(k) === restaurantSourceKey(venue.pinSourceUrl))?.[1] : undefined);
-      return {
+      if (pinsBySource && !pin) return [];
+      return [{
         ...venue,
         sourceUrl: venue.pinSourceUrl,
         href: pin ? pinPath(pin) : venue.websiteUrl,
-      };
+      }];
     }),
   ];
   const seen = new Set<string>();

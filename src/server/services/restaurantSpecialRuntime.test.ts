@@ -1,4 +1,4 @@
-import { afterEach, expect, it, vi } from 'vitest';
+import { afterEach, beforeEach, expect, it, vi } from 'vitest';
 import venues from '@/server/data/restaurantSpecials.json';
 import { listSpecialVenues, type RestaurantSpecialVenue } from '@/server/model/restaurantSpecialVenue';
 import { regionalRestaurantOffers } from './restaurantOffers';
@@ -8,6 +8,8 @@ import Pin from '@/server/model/pin';
 
 vi.mock('@/server/model/restaurantSpecialVenue', () => ({ listSpecialVenues: vi.fn() }));
 vi.mock('@/server/model/pin', () => ({ default: { findBySourceUrls: vi.fn().mockResolvedValue(new Map()) } }));
+// Every venue has a backing pin unless a test says otherwise: cards open native pin pages.
+beforeEach(() => vi.mocked(Pin.findBySourceUrls).mockImplementation(async (urls: string[]) => new Map(urls.map((url, index) => [url, { id: index + 1, title: 'Backing pin' }]))));
 afterEach(() => vi.resetAllMocks());
 function record(): RestaurantSpecialVenue {
   const { regionSlug, ...profile } = structuredClone(venues[0]);
@@ -39,4 +41,9 @@ it('resolves supplemental special venues to pin detail pages when pins exist', a
   expect(offer.restaurantHref).toBe('/pin/12345/database-pin-title');
   const [mapPin] = await restaurantSpecialMap([offer.id]);
   expect(mapPin.restaurantHref).toBe('/pin/12345/database-pin-title');
+});
+it('hides offers and map markers whose venue has no backing pin', async () => {
+  vi.mocked(listSpecialVenues).mockResolvedValue([record()]);
+  vi.mocked(Pin.findBySourceUrls).mockResolvedValue(new Map());
+  expect(await regionalRestaurantOffers([], [], '2026-10-08', 'san-diego')).toEqual([]);
 });

@@ -26,6 +26,7 @@ export function buildRestaurantSpecialMap(ids: string[], profiles: Venue[], pins
     const location = venue.location;
     if (!matches.length || !location || !Number.isFinite(location.latitude) || Math.abs(location.latitude) > 90 || !Number.isFinite(location.longitude) || Math.abs(location.longitude) > 180) return [];
     const pin = pinsBySource?.get(venue.pinSourceUrl);
+    if (pinsBySource && !pin) return [];
     return [{
       id: -(index + 1), title: venue.name, address: venue.address ?? '', categories: ['Food'],
       latitude: location.latitude, longitude: location.longitude,

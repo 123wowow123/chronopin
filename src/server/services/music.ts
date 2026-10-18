@@ -37,6 +37,7 @@ export async function musicRankings(_locale: Locale = DEFAULT_LOCALE): Promise<M
       pinByExactTitle.set(r.title.toLowerCase(), r.id);
     }
 
+    // A ranking card must open its native pin page, so entries without a backing pin are not listed.
     return SEED_MUSIC_RANKINGS.map((entry) => {
       // The same song and source page repeat across ranks and countries, so the exact pin title wins.
       const exactTitle = `${entry.artist} — "${entry.title}" (${entry.chartName} #${entry.rank} ${entry.year})`.toLowerCase();
@@ -50,7 +51,7 @@ export async function musicRankings(_locale: Locale = DEFAULT_LOCALE): Promise<M
         ...entry,
         pinId,
       };
-    });
+    }).filter((entry) => entry.pinId);
   } catch {
     // If database lookup is unavailable (e.g. during build phase), return seed items
     return SEED_MUSIC_RANKINGS;
