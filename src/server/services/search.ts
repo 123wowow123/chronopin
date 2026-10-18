@@ -204,7 +204,9 @@ export async function searchTagCounts(
   // and bands its reserved filters stand for. Otherwise a pick would zero out
   // every other value of the same field, and a left-out tag would drop off
   // the cloud with no way back.
-  const query = { ...parseSearchQuery(searchText), tags: [], excludeTags: [], confidences: [], confidenceBands: [] };
+  const parsed = parseSearchQuery(searchText);
+  const unpicked = { tags: [], excludeTags: [], confidences: [], confidenceBands: [] };
+  const query = { ...parsed, ...unpicked, alternatives: parsed.alternatives?.map((group) => ({ ...group, ...unpicked })) };
   return Pins.countSearchTags({ ...(await searchFilter(query, options)), createdSince: options.createdSince }, limit);
 }
 
@@ -219,8 +221,10 @@ function asksForNothing(query: SearchQuery, options: SearchOptions) {
 // translated title names it (searchClauses).
 async function searchFilter(query: SearchQuery, options: SearchOptions): Promise<SearchFilter> {
   const excludeTags = options.excludePredicted ? uniqueTags([...query.excludeTags, PREDICTED_TAG]) : query.excludeTags;
+  const alternatives = query.alternatives?.map((group) => (options.excludePredicted ? { ...group, excludeTags: uniqueTags([...group.excludeTags, PREDICTED_TAG]) } : group));
   return {
     ...query,
+    alternatives,
     excludeTags,
     excludePredicted: options.excludePredicted,
     hits: query.text ? await SearchPins.hits(withCompanyNames(query.text, await Company.nameIndex())) : null,

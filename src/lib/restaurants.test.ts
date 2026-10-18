@@ -50,6 +50,14 @@ describe('nearest restaurant guide', () => {
       expect(new Intl.DateTimeFormat('en-GB', { timeZone: region.timeZone, hour: '2-digit', hourCycle: 'h23' }).format(new Date('2026-10-10T00:00:00Z'))).toBe('08');
     }
   });
+  it('orders South Korea cities west to east and uses Korea time', () => {
+    const regions = RESTAURANT_REGIONS.filter((region) => region.country === 'South Korea');
+    expect(regions.map((region) => region.slug)).toEqual(['seoul', 'busan']);
+    for (const region of regions) {
+      expect(nearestRestaurantRegion(region).slug).toBe(region.slug);
+      expect(new Intl.DateTimeFormat('en-GB', { timeZone: region.timeZone, hour: '2-digit', hourCycle: 'h23' }).format(new Date('2026-10-10T00:00:00Z'))).toBe('09');
+    }
+  });
   it('routes New Zealand and Mexican visitors to their local cities and clocks', () => {
     for (const slug of ['christchurch', 'auckland', 'wellington', 'guadalajara', 'monterrey', 'mexico-city']) {
       const region = RESTAURANT_REGIONS.find((item) => item.slug === slug)!;

@@ -187,6 +187,11 @@ export type DiningTerm = DiningAxis | 'any';
 export type HotelTerm = HotelAxis | 'any';
 
 export type SearchQuery = {
+  // Set when the query joins groups of terms with OR ("tag:Predicted
+  // updated:>=2026-10-17 OR tag:Predicted posted:2026-10-18"): each group's
+  // own filters, any of which may match. The fields below then hold every
+  // group's terms merged, for the callers that only read what was asked for.
+  alternatives?: SearchQuery[];
   userNames: string[];
   // Pin ids, matching exactly those pins.
   ids: number[];
@@ -326,7 +331,34 @@ export function joinSearchQuery(parts: QueryPart[]): string {
     .trim();
 }
 
+// A standalone OR between two groups of terms, as a word of its own.
+const OR_WORD = /(?<=^|\s)OR(?=\s|$)/;
+
 export function parseSearchQuery(searchText: string | null | undefined): SearchQuery {
+  // The parts split at every OR into groups; the merged query reads them all.
+  const groups: QueryPart[][] = [[]];
+  const all: QueryPart[] = [];
+  for (const part of splitSearchQuery(searchText)) {
+    if (part.kind === 'term') {
+      groups[groups.length - 1].push(part);
+      all.push(part);
+      continue;
+    }
+    part.raw.split(OR_WORD).forEach((piece, index) => {
+      if (index > 0) groups.push([]);
+      groups[groups.length - 1].push({ kind: 'text', raw: piece });
+      all.push({ kind: 'text', raw: piece });
+    });
+  }
+  const merged = readParts(all);
+  if (groups.length > 1) {
+    const alternatives = groups.map(readParts).filter(hasFilters);
+    if (alternatives.length > 1) merged.alternatives = alternatives;
+  }
+  return merged;
+}
+
+function readParts(parts: QueryPart[]): SearchQuery {
   const query: SearchQuery = {
     userNames: [],
     ids: [],
@@ -359,7 +391,7 @@ export function parseSearchQuery(searchText: string | null | undefined): SearchQ
   };
 
   const text: string[] = [];
-  for (const part of splitSearchQuery(searchText)) {
+  for (const part of parts) {
     if (part.kind === 'text') {
       text.push(part.raw);
     } else if (part.negated) {

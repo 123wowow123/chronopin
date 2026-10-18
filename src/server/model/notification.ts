@@ -113,6 +113,7 @@ export type NotificationItem = {
   personName: string | null;
   personPhotoUrl: string | null;
   tradeFiling: string | null;
+  tradeFiledDate: string | null;
   tradeCount: number | null;
   tradeTickers: string[] | null;
   // The same filing split into its buy (purchase) and sell (sale, partial sale) groups.
@@ -413,6 +414,7 @@ export default class Notification {
                n."commentId", c."text" AS "commentText",
                n."companyId", co."name"::text AS "companyName", co."logoUrl" AS "companyLogoUrl",
                pe."name"::text AS "personName", pe."photoUrl" AS "personPhotoUrl", n."tradeFiling",
+               (SELECT MAX(t."filedDate")::text FROM "PersonTrade" t WHERE t."personId" = n."personId" AND t."filingId" = n."tradeFiling") AS "tradeFiledDate",
                (SELECT COUNT(DISTINCT COALESCE(t."ticker", t."id"::text))::int FROM "PersonTrade" t WHERE t."personId" = n."personId" AND t."filingId" = n."tradeFiling") AS "tradeCount",
                (SELECT array_agg(DISTINCT t."ticker") FILTER (WHERE t."ticker" IS NOT NULL)
                   FROM "PersonTrade" t WHERE t."personId" = n."personId" AND t."filingId" = n."tradeFiling") AS "tradeTickers",
@@ -455,7 +457,7 @@ export default class Notification {
         ORDER BY "groupKey", "utcCreatedDateTime" DESC, "id" DESC
       )
       SELECT "id", "type", "pinId", "pinTitle", "commentId", "commentText", "companyId",
-             "companyName", "companyLogoUrl", "personName", "personPhotoUrl", "tradeFiling", "tradeCount", "tradeTickers", "tradeBuys", "tradeSells", "tradeBuyTickers", "tradeSellTickers",
+             "companyName", "companyLogoUrl", "personName", "personPhotoUrl", "tradeFiling", "tradeFiledDate", "tradeCount", "tradeTickers", "tradeBuys", "tradeSells", "tradeBuyTickers", "tradeSellTickers",
              "utcCreatedDateTime", "read", "actor",
              "followingBack", "groupCount", "groupDay",
              COALESCE("pinIds"[1:${MAX_BATCH_PINS}], '{}') AS "pinIds",

@@ -1,0 +1,1331 @@
+[
+ {
+  "name": "Original Pancake House — IFC Mall Yeouido",
+  "nameKo": "오리지널 팬케이크 하우스 여의도 IFC몰점",
+  "kind": "opening",
+  "neighborhood": "Yeouido, Yeongdeungpo-gu",
+  "cuisine": "American pancake brunch",
+  "address": "B3, IFC Mall, 10 Gukjegeumyung-ro, Yeongdeungpo-gu, Seoul (next to CGV)",
+  "lat": null,
+  "lng": null,
+  "websiteUrl": "",
+  "sourceUrl": "https://www.instagram.com/se__tokyo/",
+  "description": "Food-news accounts report an Original Pancake House branch opening at IFC Mall B3 beside CGV in November 2026.",
+  "openingDate": "2026-11-30",
+  "dateEstimated": true,
+  "dateReasoning": "Influencer Instagram/Threads posts (Sept-Oct 2026) say 'November opening, exact date TBA'; 2026-11-30 is end of month. Not operator-confirmed.",
+  "openingConfirmed": false,
+  "references": [
+   {
+    "url": "https://www.instagram.com/se__tokyo/",
+    "title": "Instagram post: Yeouido Original Pancake House Nov opening",
+    "reasoning": "Only source found; third-party"
+   }
+  ],
+  "menus": [
+   {
+    "label": "Menu",
+    "url": "",
+    "currency": "KRW",
+    "coverage": "link",
+    "items": [],
+    "note": "No branch menu published. Sources checked: Instagram/Threads snippets."
+   }
+  ],
+  "phone": "",
+  "hours": [],
+  "recognition": "",
+  "photos": [],
+  "specials": [],
+  "gaps": "Operator confirmation, exact date, official source URL (sourceUrl is the third-party account; replace if operator page found).",
+  "queueReason": "only third-party influencer posts, no operator or press confirmation"
+ },
+ {
+  "name": "Chipotle — Shinsegae Gangnam",
+  "nameKo": "치폴레 신세계 강남점",
+  "kind": "opening",
+  "neighborhood": "Banpo / Express Bus Terminal, Seocho-gu",
+  "cuisine": "American Mexican fast casual",
+  "address": "B1 Sweet Park, Shinsegae Department Store Gangnam, 176 Sinbanpo-ro, Seocho-gu, Seoul (between Five Guys and Charge)",
+  "lat": null,
+  "lng": null,
+  "websiteUrl": "",
+  "sourceUrl": "https://www.mk.co.kr",
+  "description": "Chipotle's second Asian store; construction hoardings removed and seating installed, opening slipped from late September into October 2026.",
+  "openingDate": "2026-10-31",
+  "dateEstimated": true,
+  "dateReasoning": "Newspim (about 3 Oct 2026) says opening scheduled for October after slipping from late September; no day announced. 2026-10-31 is end of window; it may already have opened if sooner, verify before publishing.",
+  "openingConfirmed": false,
+  "references": [
+   {
+    "url": "https://www.mk.co.kr",
+    "title": "Maeil Business (about 12 Oct 2026): Chipotle picks Shinsegae Gangnam as store 2",
+    "reasoning": "Confirms location (article-level URL not captured)"
+   }
+  ],
+  "menus": [
+   {
+    "label": "Menu",
+    "url": "",
+    "currency": "KRW",
+    "coverage": "link",
+    "items": [],
+    "note": "No branch menu published; Gangnam-station store menu is a different branch. Sources checked: news snippets."
+   }
+  ],
+  "phone": "",
+  "hours": [
+   {
+    "days": "Mon-Thu",
+    "hours": "10:30-20:00 (department store hours, per Instagram snippet, unverified)"
+   }
+  ],
+  "recognition": "",
+  "photos": [],
+  "specials": [],
+  "gaps": "Exact day; whether already open; sourceUrl is a generic outlet root, replace with Newspim article URL.",
+  "queueReason": "announced October 2026 only; no day and only a generic outlet-root source URL; 28 Oct reported by another lane without a URL"
+ },
+ {
+  "name": "Chipotle — The Hyundai Seoul",
+  "nameKo": "치폴레 더현대 서울점",
+  "kind": "opening",
+  "neighborhood": "Yeouido, Yeongdeungpo-gu",
+  "cuisine": "American Mexican fast casual",
+  "address": "B1 Food Hall, The Hyundai Seoul, Yeouido (former strEAT location, next to Paris Croissant)",
+  "lat": null,
+  "lng": null,
+  "websiteUrl": "",
+  "sourceUrl": "https://www.insight.co.kr",
+  "description": "YTN reported Chipotle's third Korean store is scheduled at The Hyundai Seoul; operator aims for 2 more Korean stores by end of 2026.",
+  "openingDate": "2026-12-31",
+  "dateEstimated": true,
+  "dateReasoning": "No date announced; only 'by end of 2026' from operator. Low confidence placeholder.",
+  "openingConfirmed": false,
+  "references": [
+   {
+    "url": "https://www.nrn.com/fast-casual/chipotle-makes-its-debut-in-asia",
+    "title": "NRN: Chipotle makes its debut in Asia",
+    "reasoning": "Operator plans two more Korean stores by end of 2026"
+   }
+  ],
+  "menus": [
+   {
+    "label": "Menu",
+    "url": "",
+    "currency": "KRW",
+    "coverage": "link",
+    "items": [],
+    "note": "No branch menu published."
+   }
+  ],
+  "phone": "",
+  "hours": [],
+  "recognition": "",
+  "photos": [],
+  "specials": [],
+  "gaps": "Date undetermined; sourceUrl is placeholder; low confidence.",
+  "queueReason": "only \"by end of 2026\"; no branch date; placeholder source"
+ },
+ {
+  "kind": "top",
+  "lat": null,
+  "lng": null,
+  "websiteUrl": "https://seoul.intercontinental.com/ko/dining",
+  "openingDate": null,
+  "dateEstimated": true,
+  "dateReasoning": "No branch-specific opening date found in the sources checked; per policy not inferred from the host hotel or brand.",
+  "references": [
+   {
+    "url": "https://seoul.intercontinental.com/ko/promotion/dining",
+    "title": "Dining promotions - Grand InterContinental Seoul Parnas",
+    "reasoning": "Lists the Autumn Table and Fresh Fig Millefeuille offers with periods."
+   }
+  ],
+  "menus": [
+   {
+    "label": "Autumn Table with a European Flavor",
+    "url": "https://seoul.intercontinental.com/ko/promotion/dining/aRRVAUIXT-iKTZvJyclHvgAAAaAcre22",
+    "currency": "KRW",
+    "coverage": "published",
+    "items": [
+     {
+      "name": "Autumn Table set (nicoise salad with Moroccan tuna; choice of Florentine-style gorgonzola beef pasta or seafood paella; Spanish honey-glazed cod grill with chorizo; hanwoo tenderloin steak; coffee or soft drinks x3)",
+      "price": 240000
+     },
+     {
+      "name": "Fresh Fig Millefeuille",
+      "price": 93000
+     }
+    ],
+    "note": "Page does not state VAT/service treatment for these prices; the fig millefeuille price is from the promotions list (period Sep 1-Nov 30, 2026)."
+   }
+  ],
+  "phone": "02-559-7653",
+  "hours": [
+   {
+    "days": "Daily",
+    "hours": "07:00-22:00"
+   }
+  ],
+  "recognition": "",
+  "photos": [
+   {
+    "source": "https://seoul.intercontinental.com/resources/1787186913376-eebb5f8c91b344eea67d1ae6f64e2bac.jpg",
+    "credit": "Grand InterContinental Seoul Parnas (official promotion page); HTTP 200, served as application/octet-stream but JPEG magic bytes verified",
+    "sourcePage": "https://seoul.intercontinental.com/ko/promotion/dining",
+    "note": "Autumn Table promotion banner"
+   },
+   {
+    "source": "https://seoul.intercontinental.com/resources/1787188067273-71517f4e7a60419c85126b86d0ac7aef.jpg",
+    "credit": "Grand InterContinental Seoul Parnas",
+    "sourcePage": "/ko/promotion/dining",
+    "note": "Fig millefeuille banner; URL taken from page, not curl-verified"
+   }
+  ],
+  "specials": [
+   {
+    "kind": "seasonal",
+    "title": "Autumn Table with a European Flavor - 240,000 KRW set",
+    "description": "Five-part European autumn set with a choice of pasta or paella.",
+    "schedule": "Daily, Sep 1 - Nov 30, 2026",
+    "conditions": [
+     "Page does not state VAT/service charge treatment",
+     "Hotel promo page: confirm reservation requirement with restaurant"
+    ],
+    "sourceUrl": "https://seoul.intercontinental.com/ko/promotion/dining/aRRVAUIXT-iKTZvJyclHvgAAAaAcre22",
+    "discounted": false,
+    "menuLabel": "Autumn Table with a European Flavor",
+    "validFrom": "2026-09-01",
+    "validThrough": "2026-11-30",
+    "availability": {
+     "windows": [
+      {
+       "days": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+       ],
+       "start": "07:00",
+       "end": "22:00"
+      }
+     ]
+    }
+   }
+  ],
+  "gaps": "Opening date of this restaurant not found. No lat/lng. Only 2 promo banners as photos.",
+  "name": "Mercato521 (Grand InterContinental Seoul Parnas)",
+  "nameKo": "메르카토521",
+  "neighborhood": "Samseong-dong, Gangnam",
+  "cuisine": "European all-day dining",
+  "address": "Grand InterContinental Seoul Parnas, 521 Teheran-ro, Gangnam-gu, Seoul (1F)",
+  "sourceUrl": "https://seoul.intercontinental.com/ko/promotion/dining/aRRVAUIXT-iKTZvJyclHvgAAAaAcre22",
+  "description": "Hotel all-day European restaurant with an autumn set menu priced 240,000 KRW (Sep 1-Nov 30, 2026) and a fig millefeuille dessert.",
+  "queueReason": "no branch-specific opening-date evidence found (not inferred from the host hotel)"
+ },
+ {
+  "kind": "top",
+  "lat": null,
+  "lng": null,
+  "websiteUrl": "https://seoul.intercontinental.com/ko/dining",
+  "openingDate": null,
+  "dateEstimated": true,
+  "dateReasoning": "No branch-specific opening date found in the sources checked; per policy not inferred from the host hotel or brand.",
+  "references": [],
+  "menus": [
+   {
+    "label": "Eosun Hyangyeon autumn buffet",
+    "url": "https://seoul.intercontinental.com/ko/promotion/dining/Nl45BBH_SkaBf7L-gb2UFQAAAaDMftys",
+    "currency": "KRW",
+    "coverage": "published",
+    "items": [
+     {
+      "name": "Weekday lunch buffet",
+      "price": 173000
+     },
+     {
+      "name": "Weekday dinner / weekend lunch and dinner buffet",
+      "price": 198000
+     },
+     {
+      "name": "Highlights: fresh seafood, salt-grilled autumn prawns, crispy blue crab tempura, beef short-rib stew with chestnut, jujube and fig",
+      "priceLabel": "Price not published"
+     }
+    ],
+    "note": "Prices include tax and service charge per the hotel page; page does not state per-person basis."
+   }
+  ],
+  "phone": "02-559-7575",
+  "hours": [
+   {
+    "days": "Daily",
+    "hours": "06:30-22:00 (a la carte per page)"
+   }
+  ],
+  "recognition": "",
+  "photos": [
+   {
+    "source": "https://seoul.intercontinental.com/resources/1790137048642-88b1b241091a4b4cac7e95719dafc6dc.jpg",
+    "credit": "Grand InterContinental Seoul Parnas (official promotion page); HTTP 200, served as application/octet-stream but JPEG magic bytes verified",
+    "sourcePage": "https://seoul.intercontinental.com/ko/promotion/dining",
+    "note": "Eosun Hyangyeon banner"
+   }
+  ],
+  "specials": [
+   {
+    "kind": "buffet",
+    "title": "Eosun Hyangyeon autumn buffet",
+    "description": "Premium autumn gourmet event buffet.",
+    "schedule": "Weekday lunch 173,000 KRW; weekday dinner and weekends 198,000 KRW; Oct 1 - Nov 30, 2026",
+    "conditions": [
+     "Tax and service charge included",
+     "Per-person basis not stated on page",
+     "Session times not published on the promo page"
+    ],
+    "sourceUrl": "https://seoul.intercontinental.com/ko/promotion/dining/Nl45BBH_SkaBf7L-gb2UFQAAAaDMftys",
+    "discounted": false,
+    "menuLabel": "Eosun Hyangyeon autumn buffet",
+    "validFrom": "2026-10-01",
+    "validThrough": "2026-11-30",
+    "availability": {
+     "windows": []
+    }
+   }
+  ],
+  "gaps": "Opening date not found. Buffet session hours not on promo page. 1 photo.",
+  "name": "Grand Kitchen (Grand InterContinental Seoul Parnas)",
+  "nameKo": "그랜드 키친",
+  "neighborhood": "Samseong-dong, Gangnam",
+  "cuisine": "International buffet",
+  "address": "Grand InterContinental Seoul Parnas, 521 Teheran-ro, Gangnam-gu, Seoul (1F)",
+  "sourceUrl": "https://seoul.intercontinental.com/ko/promotion/dining/Nl45BBH_SkaBf7L-gb2UFQAAAaDMftys",
+  "description": "Hotel buffet restaurant running the premium autumn gourmet event Eosun Hyangyeon (Oct 1-Nov 30, 2026).",
+  "queueReason": "no branch-specific opening-date evidence found (not inferred from the host hotel)"
+ },
+ {
+  "kind": "top",
+  "lat": null,
+  "lng": null,
+  "websiteUrl": "https://seoul.intercontinental.com/ko/dining",
+  "openingDate": null,
+  "dateEstimated": true,
+  "dateReasoning": "No branch-specific opening date found in the sources checked; per policy not inferred from the host hotel or brand.",
+  "references": [],
+  "menus": [
+   {
+    "label": "Autumn Garden Royal High Tea",
+    "url": "https://seoul.intercontinental.com/ko/promotion/dining/gug5g3FYQ16F8ipYVOCIQwAAAaBf0sSX",
+    "currency": "KRW",
+    "coverage": "published",
+    "items": [
+     {
+      "name": "Royal High Tea for two (chestnut matcha parfait, black truffle sand cookie, mini financier, hojicha berry mousse, pear mousse roll cake; mini Australian-beef burger, pastrami ciabatta, chipotle shrimp sandwich, sous-vide chicken sandwich with chestnut mascarpone, Icheon rice scone)",
+      "price": 120000
+     }
+    ],
+    "note": "Tax and service charge included per page; price is for two people."
+   },
+   {
+    "label": "Golden Hour Cocktails",
+    "url": "https://seoul.intercontinental.com/ko/promotion/dining/U-XRO6OMSl28s5GCTy_JMAAAAZ0nj42-",
+    "currency": "KRW",
+    "coverage": "published",
+    "items": [
+     {
+      "name": "Free-flow cocktails (five mixologist creations, live music, Golden Hour pizza and fries) per person",
+      "price": 50000
+     },
+     {
+      "name": "Free-flow cocktails plus sparkling wine per person",
+      "price": 60000
+     }
+    ],
+    "note": "Tax and service included; 2-hour limit; cocktail names not published."
+   }
+  ],
+  "phone": "02-559-7603",
+  "hours": [
+   {
+    "days": "Daily",
+    "hours": "09:00-24:00"
+   }
+  ],
+  "recognition": "",
+  "photos": [
+   {
+    "source": "https://seoul.intercontinental.com/resources/1788313827055-8a83010558884635a514593121bfe0eb.jpg",
+    "credit": "Grand InterContinental Seoul Parnas (official promotion page); HTTP 200, served as application/octet-stream but JPEG magic bytes verified",
+    "sourcePage": "https://seoul.intercontinental.com/ko/promotion/dining",
+    "note": "High tea banner"
+   },
+   {
+    "source": "https://seoul.intercontinental.com/resources/1774484903013-089c64c9bf034bee840ae41e4e1f543b.jpg",
+    "credit": "Grand InterContinental Seoul Parnas (official promotion page); HTTP 200, served as application/octet-stream but JPEG magic bytes verified",
+    "sourcePage": "https://seoul.intercontinental.com/ko/promotion/dining",
+    "note": "Golden Hour banner"
+   }
+  ],
+  "specials": [
+   {
+    "kind": "afternoon_tea",
+    "title": "Autumn Garden Royal High Tea",
+    "description": "High tea for two using Korean autumn ingredients.",
+    "schedule": "Weekdays 14:00-17:00; weekends/holidays 12:00-14:00 and 15:00-17:00; Sep 14 - Nov 15, 2026",
+    "conditions": [
+     "120,000 KRW for two, tax and service included"
+    ],
+    "sourceUrl": "https://seoul.intercontinental.com/ko/promotion/dining/gug5g3FYQ16F8ipYVOCIQwAAAaBf0sSX",
+    "discounted": false,
+    "menuLabel": "Autumn Garden Royal High Tea",
+    "validFrom": "2026-09-14",
+    "validThrough": "2026-11-15",
+    "availability": {
+     "windows": [
+      {
+       "days": [
+        1,
+        2,
+        3,
+        4,
+        5
+       ],
+       "start": "14:00",
+       "end": "17:00"
+      },
+      {
+       "days": [
+        0,
+        6
+       ],
+       "start": "12:00",
+       "end": "14:00"
+      },
+      {
+       "days": [
+        0,
+        6
+       ],
+       "start": "15:00",
+       "end": "17:00"
+      }
+     ]
+    }
+   },
+   {
+    "kind": "happy_hour",
+    "title": "Golden Hour Cocktails (free-flow)",
+    "description": "Two-hour unlimited cocktails with live music, pizza and fries.",
+    "schedule": "Daily 18:00-20:00, Sep 1 - Oct 31, 2026",
+    "conditions": [
+     "2-hour limit",
+     "Tax and service included"
+    ],
+    "sourceUrl": "https://seoul.intercontinental.com/ko/promotion/dining/U-XRO6OMSl28s5GCTy_JMAAAAZ0nj42-",
+    "discounted": true,
+    "menuLabel": "Golden Hour Cocktails",
+    "validFrom": "2026-09-01",
+    "validThrough": "2026-10-31",
+    "availability": {
+     "windows": [
+      {
+       "days": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+       ],
+       "start": "18:00",
+       "end": "20:00"
+      }
+     ]
+    }
+   }
+  ],
+  "gaps": "Opening date not found. The Glenlivet Whisky Night (to Oct 31, from 480,000 KRW) listed but not detailed. Holiday weekend days not distinguished in windows.",
+  "name": "Lobby Lounge & Bar (Grand InterContinental Seoul Parnas)",
+  "nameKo": "로비 라운지 앤 바",
+  "neighborhood": "Samseong-dong, Gangnam",
+  "cuisine": "Lounge, afternoon tea, cocktails",
+  "address": "Grand InterContinental Seoul Parnas, 521 Teheran-ro, Gangnam-gu, Seoul (1F)",
+  "sourceUrl": "https://seoul.intercontinental.com/ko/promotion/dining/gug5g3FYQ16F8ipYVOCIQwAAAaBf0sSX",
+  "description": "Hotel lounge with an Autumn Garden Royal High Tea for two (to Nov 15) and a 2-hour free-flow Golden Hour cocktail offer (to Oct 31).",
+  "queueReason": "no branch-specific opening-date evidence found (not inferred from the host hotel)"
+ },
+ {
+  "kind": "top",
+  "lat": null,
+  "lng": null,
+  "websiteUrl": "https://seoul.intercontinental.com/ko/dining",
+  "openingDate": null,
+  "dateEstimated": true,
+  "dateReasoning": "No branch-specific opening date found in the sources checked; per policy not inferred from the host hotel or brand.",
+  "references": [],
+  "menus": [
+   {
+    "label": "Weekend Choice",
+    "url": "https://seoul.intercontinental.com/ko/promotion/dining/bAHPY84jQ_G-TMvRuK9DgAAAAZlvm6n3",
+    "currency": "KRW",
+    "coverage": "published",
+    "items": [
+     {
+      "name": "3 signature dishes",
+      "price": 150000
+     },
+     {
+      "name": "4 signature dishes",
+      "price": 170000
+     },
+     {
+      "name": "5 signature dishes",
+      "price": 190000
+     },
+     {
+      "name": "Peking duck add-on per person",
+      "price": 40000
+     },
+     {
+      "name": "Weekend Dim Sum handmade dim sum course (from)",
+      "price": 130000
+     }
+    ],
+    "note": "Weekend Choice prices include tax and service; dim sum course is weekend lunch and public holidays only (price 'from' per promos list; item detail not published)."
+   }
+  ],
+  "phone": "02-559-7620",
+  "hours": [
+   {
+    "days": "Daily",
+    "hours": "Lunch 11:30-14:30 (last order 14:00); Dinner 18:00-22:00 (last order 21:30)"
+   }
+  ],
+  "recognition": "",
+  "photos": [
+   {
+    "source": "https://seoul.intercontinental.com/resources/1758513876081-c20d1f55f2f041999532c13c5a89ec48.jpg",
+    "credit": "Grand InterContinental Seoul Parnas (official promotion page); HTTP 200, served as application/octet-stream but JPEG magic bytes verified",
+    "sourcePage": "https://seoul.intercontinental.com/ko/promotion/dining",
+    "note": "Weekend Choice banner"
+   },
+   {
+    "source": "https://seoul.intercontinental.com/resources/1779768800087-fc6e9c35ffd34771b79a2684dd810f6a.jpg",
+    "credit": "Grand InterContinental Seoul Parnas (official promotion page); HTTP 200, served as application/octet-stream but JPEG magic bytes verified",
+    "sourcePage": "https://seoul.intercontinental.com/ko/promotion/dining",
+    "note": "Weekend dim sum banner"
+   },
+   {
+    "source": "https://seoul.intercontinental.com/resources/1766047587312-4eb8d3109f544d17983f50d8d4ad28a6.jpg",
+    "credit": "Grand InterContinental Seoul Parnas (official promotion page); HTTP 200, served as application/octet-stream but JPEG magic bytes verified",
+    "sourcePage": "https://seoul.intercontinental.com/ko/promotion/dining",
+    "note": "Chef's Signature banner"
+   }
+  ],
+  "specials": [
+   {
+    "kind": "set_menu",
+    "title": "Weekend Choice",
+    "description": "Choose 3, 4 or 5 signature dishes per person at weekends.",
+    "schedule": "Weekends, Jan 1 - Dec 31, 2026",
+    "conditions": [
+     "Tax and service included",
+     "Private room needs advance booking; menu may be limited",
+     "Corkage charged for own alcohol"
+    ],
+    "sourceUrl": "https://seoul.intercontinental.com/ko/promotion/dining/bAHPY84jQ_G-TMvRuK9DgAAAAZlvm6n3",
+    "discounted": false,
+    "menuLabel": "Weekend Choice",
+    "validFrom": "2026-01-01",
+    "validThrough": "2026-12-31",
+    "availability": {
+     "windows": [
+      {
+       "days": [
+        0,
+        6
+       ],
+       "start": "11:30",
+       "end": "14:30"
+      },
+      {
+       "days": [
+        0,
+        6
+       ],
+       "start": "18:00",
+       "end": "22:00"
+      }
+     ]
+    }
+   }
+  ],
+  "gaps": "Opening date not found. Public-holiday handling not encoded. Dim sum course items not published.",
+  "name": "Wei Lou (Grand InterContinental Seoul Parnas)",
+  "nameKo": "위루",
+  "neighborhood": "Samseong-dong, Gangnam",
+  "cuisine": "Chinese (Cantonese)",
+  "address": "Grand InterContinental Seoul Parnas, 521 Teheran-ro, Gangnam-gu, Seoul (34F)",
+  "sourceUrl": "https://seoul.intercontinental.com/ko/promotion/dining/bAHPY84jQ_G-TMvRuK9DgAAAAZlvm6n3",
+  "description": "34th-floor Chinese restaurant with weekend signature-dish set lunches and dinners and a weekend dim sum course, valid through Dec 31, 2026.",
+  "queueReason": "no branch-specific opening-date evidence found (not inferred from the host hotel)"
+ },
+ {
+  "kind": "top",
+  "lat": null,
+  "lng": null,
+  "websiteUrl": "",
+  "openingDate": null,
+  "dateEstimated": true,
+  "dateReasoning": "No branch-specific opening date found in the sources checked; per policy not inferred from the host hotel or brand.",
+  "references": [],
+  "menus": [
+   {
+    "label": "Grape World",
+    "url": "https://www.segye.com/newsView/20261016506491",
+    "currency": "KRW",
+    "coverage": "published",
+    "items": [
+     {
+      "name": "Weekend/holiday grape brunch buffet (about 20 grape desserts, 11:30-13:30), adult",
+      "price": 125000
+     },
+     {
+      "name": "Weekend/holiday grape brunch buffet, child",
+      "price": 70000
+     },
+     {
+      "name": "Grape afternoon tea set for two",
+      "price": 110000
+     }
+    ],
+    "note": "Prices from Segye Ilbo 2026-10-16; tax/service not stated."
+   }
+  ],
+  "phone": "",
+  "hours": [
+   {
+    "days": "Sat/Sun/holidays",
+    "hours": "Brunch 11:30-13:30"
+   }
+  ],
+  "recognition": "",
+  "photos": [],
+  "specials": [
+   {
+    "kind": "buffet",
+    "title": "Grape brunch buffet and grape afternoon tea",
+    "description": "Shine Muscat dessert programme.",
+    "schedule": "Weekend/holiday brunch 11:30-13:30; tea set; through Oct 31, 2026",
+    "conditions": [
+     "Tax/service not stated"
+    ],
+    "sourceUrl": "https://www.segye.com/newsView/20261016506491",
+    "discounted": false,
+    "menuLabel": "Grape World",
+    "validFrom": "2026-10-17",
+    "validThrough": "2026-10-31",
+    "availability": {
+     "windows": [
+      {
+       "days": [
+        0,
+        6
+       ],
+       "start": "11:30",
+       "end": "13:30"
+      }
+     ]
+    }
+   }
+  ],
+  "gaps": "Operator page not reached (bot check); canonical sourceUrl is a news article with fragment. Opening date and address not found. validFrom is research date.",
+  "name": "The Lounge & Bar (Lotte Hotel World)",
+  "nameKo": "더 라운지 앤 바 (롯데호텔 월드)",
+  "neighborhood": "Jamsil, Songpa",
+  "cuisine": "Lounge, desserts, brunch",
+  "address": "Lotte Hotel World, Songpa-gu, Seoul (1F)",
+  "sourceUrl": "https://www.segye.com/newsView/20261016506491#lotte-hotel-world-grape",
+  "description": "Grape dessert programme 'Pauloi & Belluo Grape World' through Oct 31, 2026 with a weekend grape brunch buffet at 125,000 KRW.",
+  "queueReason": "no branch-specific opening-date evidence found (not inferred from the host hotel)"
+ },
+ {
+  "kind": "top",
+  "lat": null,
+  "lng": null,
+  "websiteUrl": "",
+  "openingDate": null,
+  "dateEstimated": true,
+  "dateReasoning": "No branch-specific opening date found in the sources checked; per policy not inferred from the host hotel or brand.",
+  "references": [],
+  "menus": [
+   {
+    "label": "Autumn wine free-flow",
+    "url": "https://www.segye.com/newsView/20261010502506",
+    "currency": "KRW",
+    "coverage": "sample",
+    "items": [
+     {
+      "name": "Raw aged-fish sashimi with minari",
+      "priceLabel": "Price not published"
+     },
+     {
+      "name": "Foie gras truffle creme brulee",
+      "priceLabel": "Price not published"
+     },
+     {
+      "name": "Free-flow: Two Hands Angels' Share, Robert Mondavi Chardonnay, Saint Clair Vicar's Choice Sauvignon Blanc Bubbles",
+      "priceLabel": "Price not published"
+     }
+    ],
+    "note": "Prices not published in article."
+   }
+  ],
+  "phone": "02-3395-6000",
+  "hours": [],
+  "recognition": "",
+  "photos": [],
+  "specials": [
+   {
+    "kind": "wine",
+    "title": "Autumn wine free-flow",
+    "description": "Unlimited wine with the autumn buffet.",
+    "schedule": "Through Oct 31, 2026; premium wines weekday dinner and weekend lunch/dinner",
+    "conditions": [
+     "Premium wines only weekday dinner and weekend lunch/dinner"
+    ],
+    "sourceUrl": "https://www.segye.com/newsView/20261010502506",
+    "discounted": false,
+    "menuLabel": "Autumn wine free-flow",
+    "validFrom": "2026-10-17",
+    "validThrough": "2026-10-31",
+    "availability": {
+     "windows": []
+    }
+   }
+  ],
+  "gaps": "Prices, opening date, address not found; expires in 2 weeks.",
+  "name": "Spectrum (Fairmont Ambassador Seoul)",
+  "nameKo": "스펙트럼",
+  "neighborhood": "Yeouido, Yeongdeungpo",
+  "cuisine": "International buffet",
+  "address": "Fairmont Ambassador Seoul, Yeouido, Seoul (5F)",
+  "sourceUrl": "https://www.segye.com/newsView/20261010502506#fairmont-spectrum",
+  "description": "Autumn buffet menu with unlimited global wines (premium wines on weekday dinner and weekend lunch/dinner) through Oct 31, 2026.",
+  "queueReason": "no branch-specific opening-date evidence found (not inferred from the host hotel)"
+ },
+ {
+  "kind": "top",
+  "lat": null,
+  "lng": null,
+  "websiteUrl": "",
+  "openingDate": null,
+  "dateEstimated": true,
+  "dateReasoning": "No branch-specific opening date found in the sources checked; per policy not inferred from the host hotel or brand.",
+  "references": [],
+  "menus": [
+   {
+    "label": "Autumn cocktails",
+    "url": "https://www.segye.com/newsView/20261010502506",
+    "currency": "KRW",
+    "coverage": "sample",
+    "items": [
+     {
+      "name": "Forest Reserve (smoky whisky, shiitake vermouth)",
+      "priceLabel": "Price not published"
+     },
+     {
+      "name": "Golden Orchard (lemon, ginger, honey)",
+      "priceLabel": "Price not published"
+     }
+    ],
+    "note": "Prices not published."
+   }
+  ],
+  "phone": "",
+  "hours": [],
+  "recognition": "",
+  "photos": [],
+  "specials": [
+   {
+    "kind": "seasonal",
+    "title": "Johnnie Walker Blue Label autumn cocktails",
+    "description": "Two signature cocktails.",
+    "schedule": "Through Oct 31, 2026",
+    "conditions": [],
+    "sourceUrl": "https://www.segye.com/newsView/20261010502506",
+    "discounted": false,
+    "menuLabel": "Autumn cocktails",
+    "validFrom": "2026-10-17",
+    "validThrough": "2026-10-31",
+    "availability": {
+     "windows": []
+    }
+   }
+  ],
+  "gaps": "Prices, hours, opening date not found.",
+  "name": "M29 (Fairmont Ambassador Seoul)",
+  "nameKo": "M29",
+  "neighborhood": "Yeouido, Yeongdeungpo",
+  "cuisine": "Rooftop cocktail bar",
+  "address": "Fairmont Ambassador Seoul, Yeouido, Seoul (29F)",
+  "sourceUrl": "https://www.segye.com/newsView/20261010502506#fairmont-m29",
+  "description": "Autumn cocktail promotion with two Johnnie Walker Blue Label signatures through Oct 31, 2026.",
+  "queueReason": "no branch-specific opening-date evidence found (not inferred from the host hotel)"
+ },
+ {
+  "kind": "top",
+  "lat": null,
+  "lng": null,
+  "websiteUrl": "",
+  "openingDate": null,
+  "dateEstimated": true,
+  "dateReasoning": "No branch-specific opening date found in the sources checked; per policy not inferred from the host hotel or brand.",
+  "references": [],
+  "menus": [
+   {
+    "label": "Chuimijinhyang autumn course",
+    "url": "https://www.segye.com/newsView/20261016506491",
+    "currency": "KRW",
+    "coverage": "sample",
+    "items": [
+     {
+      "name": "Starter; crab and truffle haehocheu",
+      "priceLabel": "Price not published"
+     },
+     {
+      "name": "Matsutake abalone in oyster sauce",
+      "priceLabel": "Price not published"
+     },
+     {
+      "name": "Kung pao king prawn",
+      "priceLabel": "Price not published"
+     },
+     {
+      "name": "Sichuan-style tenderloin",
+      "priceLabel": "Price not published"
+     },
+     {
+      "name": "Choice of jajangmyeon, jjamppong, fried rice or noodles",
+      "priceLabel": "Price not published"
+     }
+    ],
+    "note": "Price not published."
+   }
+  ],
+  "phone": "",
+  "hours": [],
+  "recognition": "",
+  "photos": [],
+  "specials": [
+   {
+    "kind": "set_menu",
+    "title": "Chuimijinhyang autumn course",
+    "description": "Seasonal Chinese course.",
+    "schedule": "Through Oct 30, 2026",
+    "conditions": [],
+    "sourceUrl": "https://www.segye.com/newsView/20261016506491",
+    "discounted": false,
+    "menuLabel": "Chuimijinhyang autumn course",
+    "validFrom": "2026-10-17",
+    "validThrough": "2026-10-30",
+    "availability": {
+     "windows": []
+    }
+   }
+  ],
+  "gaps": "Price, opening date, exact address not found.",
+  "name": "Geumryong (Grand Walkerhill Seoul)",
+  "nameKo": "금룡",
+  "neighborhood": "Gwangjang-dong, Gwangjin",
+  "cuisine": "Chinese",
+  "address": "Grand Walkerhill Seoul, Gwangjang-dong, Gwangjin-gu, Seoul",
+  "sourceUrl": "https://www.segye.com/newsView/20261016506491#walkerhill-geumryong",
+  "description": "Autumn-only course Chuimijinhyang through Oct 30, 2026.",
+  "queueReason": "no branch-specific opening-date evidence found (not inferred from the host hotel)"
+ },
+ {
+  "kind": "top",
+  "lat": null,
+  "lng": null,
+  "websiteUrl": "",
+  "openingDate": null,
+  "dateEstimated": true,
+  "dateReasoning": "No branch-specific opening date found in the sources checked; per policy not inferred from the host hotel or brand.",
+  "references": [],
+  "menus": [
+   {
+    "label": "Fall in Pavilion tea",
+    "url": "https://www.fnnews.com/news/202610070933372388",
+    "currency": "KRW",
+    "coverage": "sample",
+    "items": [
+     {
+      "name": "Chestnut manju, Hallabong tart, Tropical Garden dessert, quiche, sandwich, mini scallop canape; welcome lemon or pomegranate spritz; two coffees or teas",
+      "priceLabel": "Price not published"
+     }
+    ],
+    "note": "Price not published."
+   }
+  ],
+  "phone": "",
+  "hours": [],
+  "recognition": "",
+  "photos": [],
+  "specials": [
+   {
+    "kind": "afternoon_tea",
+    "title": "Fall in Pavilion afternoon tea",
+    "description": "Autumn tea set.",
+    "schedule": "End date not published",
+    "conditions": [
+     "DATES UNVERIFIED: end date not stated"
+    ],
+    "sourceUrl": "https://www.fnnews.com/news/202610070933372388",
+    "discounted": false,
+    "menuLabel": "Fall in Pavilion tea",
+    "validFrom": null,
+    "validThrough": null,
+    "availability": {
+     "windows": []
+    }
+   }
+  ],
+  "gaps": "Validity dates, price, opening date not found.",
+  "name": "The Pavilion (Walkerhill)",
+  "nameKo": "더파빌리온",
+  "neighborhood": "Gwangjang-dong, Gwangjin",
+  "cuisine": "Lobby lounge, afternoon tea",
+  "address": "Walkerhill, Gwangjang-dong, Gwangjin-gu, Seoul",
+  "sourceUrl": "https://www.fnnews.com/news/202610070933372388#walkerhill-pavilion",
+  "description": "'Fall in Pavilion' autumn afternoon tea set.",
+  "queueReason": "no branch-specific opening-date evidence found (not inferred from the host hotel)"
+ },
+ {
+  "kind": "top",
+  "lat": null,
+  "lng": null,
+  "websiteUrl": "",
+  "openingDate": null,
+  "dateEstimated": true,
+  "dateReasoning": "No branch-specific opening date found in the sources checked; per policy not inferred from the host hotel or brand.",
+  "references": [],
+  "menus": [
+   {
+    "label": "Autumn buffet",
+    "url": "https://www.thepublic.kr/news/articleView.html?idxno=317090",
+    "currency": "KRW",
+    "coverage": "sample",
+    "items": [
+     {
+      "name": "Red-braised pork, Mongolian beef, fish-fragrant eggplant, sesame-chili chicken, liangpi cold noodles, sweet-and-sour black-vinegar pork, shrimp toast",
+      "priceLabel": "Price not published"
+     },
+     {
+      "name": "BBQ: squid, shrimp, chicken thigh skewers, Sichuan spare ribs, Zhangzhou-style roast beef",
+      "priceLabel": "Price not published"
+     }
+    ],
+    "note": "Prices not published."
+   }
+  ],
+  "phone": "",
+  "hours": [],
+  "recognition": "",
+  "photos": [],
+  "specials": [
+   {
+    "kind": "discount",
+    "title": "Sunday dinner senior free meal / birthday 50% off",
+    "description": "One guest 60+ free when four adults dine Sunday evening; birthday guests (within 3 days) 50% off Sunday dinner buffet for 2+ adults.",
+    "schedule": "Sundays evenings, through Nov 30, 2026",
+    "conditions": [
+     "Four adults for senior-free",
+     "Birthday: 2+ adults",
+     "Naver receipt review gift"
+    ],
+    "sourceUrl": "https://www.thepublic.kr/news/articleView.html?idxno=317090",
+    "discounted": true,
+    "menuLabel": "Autumn buffet",
+    "validFrom": "2026-09-01",
+    "validThrough": "2026-11-30",
+    "availability": {
+     "windows": [
+      {
+       "days": [
+        0
+       ],
+       "start": "17:00",
+       "end": "21:00"
+      }
+     ]
+    }
+   }
+  ],
+  "gaps": "Hours/prices/address/opening date not found; Sunday window times assumed generic evening (source says 'evening').",
+  "name": "La Stella (Seoul Garden Hotel)",
+  "nameKo": "라스텔라",
+  "neighborhood": "Mapo",
+  "cuisine": "Buffet (regional Chinese)",
+  "address": "Seoul Garden Hotel, Seoul",
+  "sourceUrl": "https://www.thepublic.kr/news/articleView.html?idxno=317090#la-stella",
+  "description": "Autumn regional-Chinese buffet menu (Sep 1-Nov 30, 2026) with Sunday-dinner perks.",
+  "queueReason": "no branch-specific opening-date evidence found (not inferred from the host hotel)"
+ },
+ {
+  "kind": "top",
+  "lat": null,
+  "lng": null,
+  "websiteUrl": "",
+  "openingDate": null,
+  "dateEstimated": true,
+  "dateReasoning": "No branch-specific opening date found in the sources checked; per policy not inferred from the host hotel or brand.",
+  "references": [],
+  "menus": [
+   {
+    "label": "Danya autumn courses",
+    "url": "https://www.thepublic.kr/news/articleView.html?idxno=317090",
+    "currency": "KRW",
+    "coverage": "sample",
+    "items": [
+     {
+      "name": "Lunch omakase",
+      "priceLabel": "Price not published"
+     },
+     {
+      "name": "Dinner omakase",
+      "priceLabel": "Price not published"
+     },
+     {
+      "name": "Premium and VIP kaiseki (private room)",
+      "priceLabel": "Price not published"
+     }
+    ],
+    "note": "Prices not published."
+   }
+  ],
+  "phone": "",
+  "hours": [],
+  "recognition": "",
+  "photos": [],
+  "specials": [
+   {
+    "kind": "set_menu",
+    "title": "Autumn omakase and kaiseki",
+    "description": "Courses supervised by Chef Nam Jeong-gang.",
+    "schedule": "Sep 1 - Nov 30, 2026",
+    "conditions": [
+     "Private-room menu Mon-Wed"
+    ],
+    "sourceUrl": "https://www.thepublic.kr/news/articleView.html?idxno=317090",
+    "discounted": false,
+    "menuLabel": "Danya autumn courses",
+    "validFrom": "2026-09-01",
+    "validThrough": "2026-11-30",
+    "availability": {
+     "windows": []
+    }
+   }
+  ],
+  "gaps": "Prices, hours, address, opening date not found.",
+  "name": "Danya (Seoul Garden Hotel)",
+  "nameKo": "단야",
+  "neighborhood": "Mapo",
+  "cuisine": "Japanese (sushi omakase, kaiseki)",
+  "address": "Seoul Garden Hotel, Seoul",
+  "sourceUrl": "https://www.thepublic.kr/news/articleView.html?idxno=317090#danya",
+  "description": "Autumn sushi omakase and kaiseki courses (Sep 1-Nov 30, 2026); private-room menus Mon-Wed.",
+  "queueReason": "no branch-specific opening-date evidence found (not inferred from the host hotel)"
+ },
+ {
+  "kind": "top",
+  "lat": null,
+  "lng": null,
+  "websiteUrl": "",
+  "openingDate": null,
+  "dateEstimated": true,
+  "dateReasoning": "No branch-specific opening date found in the sources checked; per policy not inferred from the host hotel or brand.",
+  "references": [],
+  "menus": [
+   {
+    "label": "Autumn afternoon tea",
+    "url": "https://www.segye.com/newsView/20261010502506",
+    "currency": "KRW",
+    "coverage": "sample",
+    "items": [
+     {
+      "name": "Autumn tea set (chestnut/persimmon/pear/fig desserts, savories, Bonanza coffee, tea, Bellini or Peach Crush)",
+      "priceLabel": "Price not published"
+     }
+    ],
+    "note": "Price and dates not published."
+   }
+  ],
+  "phone": "",
+  "hours": [],
+  "recognition": "",
+  "photos": [],
+  "specials": [
+   {
+    "kind": "afternoon_tea",
+    "title": "Autumn afternoon tea set",
+    "description": "Seasonal tea set.",
+    "schedule": "Dates not published",
+    "conditions": [
+     "DATES UNVERIFIED"
+    ],
+    "sourceUrl": "https://www.segye.com/newsView/20261010502506",
+    "discounted": false,
+    "menuLabel": "Autumn afternoon tea",
+    "validFrom": null,
+    "validThrough": null,
+    "availability": {
+     "windows": []
+    }
+   }
+  ],
+  "gaps": "Dates, price, opening date not found.",
+  "name": "Gourmet Bar & Dining (Novotel Ambassador Seoul Dongdaemun)",
+  "nameKo": "고메 바 앤 다이닝",
+  "neighborhood": "Dongdaemun",
+  "cuisine": "Rooftop lounge, afternoon tea",
+  "address": "Novotel Ambassador Seoul Dongdaemun Hotels & Residences, Jung-gu, Seoul (20F)",
+  "sourceUrl": "https://www.segye.com/newsView/20261010502506#novotel-dongdaemun",
+  "description": "Autumn afternoon tea set with chestnut, persimmon, pear and fig desserts and Bonanza Coffee.",
+  "queueReason": "no branch-specific opening-date evidence found (not inferred from the host hotel)"
+ },
+ {
+  "kind": "top",
+  "lat": null,
+  "lng": null,
+  "websiteUrl": "https://www.tablecheck.com/shops/lemerdien-moxy-lumiere/reserve",
+  "openingDate": null,
+  "dateEstimated": true,
+  "dateReasoning": "No branch-specific opening date found in the sources checked; per policy not inferred from the host hotel or brand.",
+  "references": [
+   {
+    "url": "https://www.segye.com/newsView/20261010502506",
+    "title": "Segye Ilbo 2026-10-10",
+    "reasoning": "Describes tea contents."
+   }
+  ],
+  "menus": [
+   {
+    "label": "Rosy Atelier Afternoon Tea",
+    "url": "https://www.segye.com/newsView/20261010502506",
+    "currency": "KRW",
+    "coverage": "sample",
+    "items": [
+     {
+      "name": "Rosy Atelier tea: choice of seafood cold pasta (lobster, scallop) or vol-au-vent, desserts and savories, illy coffee or signature tea",
+      "priceLabel": "Price not published"
+     }
+    ],
+    "note": "Price not published."
+   }
+  ],
+  "phone": "+82 2 2184 7310",
+  "hours": [
+   {
+    "days": "Mon-Sat",
+    "hours": "10:00-23:00"
+   },
+   {
+    "days": "Sun",
+    "hours": "11:00-23:00"
+   }
+  ],
+  "recognition": "",
+  "photos": [],
+  "specials": [
+   {
+    "kind": "afternoon_tea",
+    "title": "Rosy Atelier Afternoon Tea",
+    "description": "Collaboration tea with free product gift, photo zone.",
+    "schedule": "No end date published",
+    "conditions": [
+     "DATES UNVERIFIED"
+    ],
+    "sourceUrl": "https://www.segye.com/newsView/20261010502506",
+    "discounted": false,
+    "menuLabel": "Rosy Atelier Afternoon Tea",
+    "validFrom": null,
+    "validThrough": null,
+    "availability": {
+     "windows": []
+    }
+   }
+  ],
+  "gaps": "Dates, price, opening date not found; collaborating brand reported inconsistently (Aveda/Olaplex/Anove).",
+  "name": "Lumiere (Le Meridien Seoul Myeongdong)",
+  "nameKo": "르미에르",
+  "neighborhood": "Myeongdong, Jung-gu",
+  "cuisine": "Lobby lounge & bar",
+  "address": "4F, 38 Myeongdong 8na-gil, Jung-gu, Seoul",
+  "sourceUrl": "https://www.tablecheck.com/shops/lemerdien-moxy-lumiere/reserve",
+  "description": "Rosy Atelier Afternoon Tea (haircare-brand collaboration) with a main of seafood cold pasta or vol-au-vent.",
+  "queueReason": "no branch-specific opening-date evidence found (not inferred from the host hotel)"
+ },
+ {
+  "kind": "top",
+  "lat": null,
+  "lng": null,
+  "websiteUrl": "",
+  "openingDate": null,
+  "dateEstimated": true,
+  "dateReasoning": "No branch-specific opening date found in the sources checked; per policy not inferred from the host hotel or brand.",
+  "references": [],
+  "menus": [
+   {
+    "label": "Grape Palette",
+    "url": "https://www.fnnews.com/news/202610070933372388",
+    "currency": "KRW",
+    "coverage": "sample",
+    "items": [
+     {
+      "name": "Grape desserts (Shine Muscat, Gold Sweet, Red Claret, Sunny Dolce)",
+      "priceLabel": "Price not published"
+     },
+     {
+      "name": "Reborn Empress Afternoon Tea",
+      "priceLabel": "Price not published"
+     },
+     {
+      "name": "First-Saturday Shine Muscat dessert buffet",
+      "priceLabel": "Price not published"
+     }
+    ],
+    "note": "Prices and venue not stated."
+   }
+  ],
+  "phone": "",
+  "hours": [],
+  "recognition": "",
+  "photos": [],
+  "specials": [
+   {
+    "kind": "seasonal",
+    "title": "Must Be Grape Palette",
+    "description": "Grape dessert programme.",
+    "schedule": "Through Nov 30, 2026",
+    "conditions": [
+     "Venue within hotel not stated"
+    ],
+    "sourceUrl": "https://www.fnnews.com/news/202610070933372388",
+    "discounted": false,
+    "menuLabel": "Grape Palette",
+    "validFrom": "2026-10-17",
+    "validThrough": "2026-11-30",
+    "availability": {
+     "windows": []
+    }
+   }
+  ],
+  "gaps": "Prices, venue, opening date not found.",
+  "name": "The Grand Lotte Seoul - Grape Palette",
+  "nameKo": "더그랜드롯데 서울",
+  "neighborhood": "Jung-gu",
+  "cuisine": "Hotel dessert/afternoon tea",
+  "address": "The Grand Lotte Seoul, Seoul",
+  "sourceUrl": "https://www.fnnews.com/news/202610070933372388#grand-lotte",
+  "description": "'Must Be Grape Palette' grape desserts through Nov 30, 2026, a Disney+ themed afternoon tea and a monthly first-Saturday Shine Muscat dessert buffet.",
+  "queueReason": "no branch-specific opening-date evidence found (not inferred from the host hotel)"
+ },
+ {
+  "kind": "top",
+  "lat": null,
+  "lng": null,
+  "websiteUrl": "",
+  "openingDate": null,
+  "dateEstimated": true,
+  "dateReasoning": "No branch-specific opening date found in the sources checked; per policy not inferred from the host hotel or brand.",
+  "references": [],
+  "menus": [
+   {
+    "label": "Champagne dinner",
+    "url": "https://www.businesskorea.co.kr/news/articleView.html?idxno=278964",
+    "currency": "KRW",
+    "coverage": "published",
+    "items": [
+     {
+      "name": "Welcome champagne with bread and butter",
+      "priceLabel": "Price not published"
+     },
+     {
+      "name": "Caviar and langoustine sandwich",
+      "priceLabel": "Price not published"
+     },
+     {
+      "name": "Fig with basil cream cheese",
+      "priceLabel": "Price not published"
+     },
+     {
+      "name": "Amberjack carpaccio",
+      "priceLabel": "Price not published"
+     },
+     {
+      "name": "French onion soup",
+      "priceLabel": "Price not published"
+     },
+     {
+      "name": "Lobster with sauces",
+      "priceLabel": "Price not published"
+     },
+     {
+      "name": "Prime tenderloin with truffle sauce",
+      "priceLabel": "Price not published"
+     },
+     {
+      "name": "Rainbow cake",
+      "priceLabel": "Price not published"
+     }
+    ],
+    "note": "Price not published."
+   }
+  ],
+  "phone": "",
+  "hours": [],
+  "recognition": "",
+  "photos": [],
+  "specials": [
+   {
+    "kind": "wine_dinner",
+    "title": "Maison 1955: A Moment of Champagne",
+    "description": "Five-champagne pairing dinner.",
+    "schedule": "Oct 23, 2026, 18:30",
+    "conditions": [
+     "Details on Ambassador Hotel Group site"
+    ],
+    "sourceUrl": "https://www.businesskorea.co.kr/news/articleView.html?idxno=278964",
+    "discounted": false,
+    "menuLabel": "Champagne dinner",
+    "validFrom": "2026-10-23",
+    "validThrough": "2026-10-23",
+    "availability": {
+     "windows": [
+      {
+       "days": [
+        5
+       ],
+       "start": "18:30",
+       "end": "21:30"
+      }
+     ]
+    }
+   }
+  ],
+  "gaps": "Price, address, opening date not found. End time assumed.",
+  "name": "1955 Grosseria (Ambassador Seoul Pullman)",
+  "nameKo": "1955 그로서리아",
+  "neighborhood": "Jung-gu",
+  "cuisine": "Wine bar / dining",
+  "address": "Ambassador Seoul Pullman Hotel, Seoul (lobby level)",
+  "sourceUrl": "https://www.businesskorea.co.kr/news/articleView.html?idxno=278964",
+  "description": "First regular wine dinner 'Maison 1955: A Moment of Champagne' on Oct 23, 2026, 18:30: five André Clouet champagnes with courses.",
+  "queueReason": "no branch-specific opening-date evidence found (not inferred from the host hotel)"
+ }
+]

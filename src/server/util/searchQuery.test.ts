@@ -332,3 +332,18 @@ describe('game info terms', () => {
     expect(q.text).toBe('zombies');
   });
 });
+
+describe('OR groups', () => {
+  it('reads each side of an OR as its own group', () => {
+    const q = parseSearchQuery('tag:Predicted updated:>=2026-10-17 OR tag:Predicted posted:2026-10-18');
+    expect(q.alternatives).toHaveLength(2);
+    expect(q.alternatives![0].updatedBounds).toHaveLength(1);
+    expect(q.alternatives![0].postedDays).toEqual([]);
+    expect(q.alternatives![1].postedDays).toEqual(['2026-10-18']);
+    expect(q.text).toBe('');
+  });
+  it('has no alternatives without an OR, or with one side empty', () => {
+    expect(parseSearchQuery('tag:A tag:B').alternatives).toBeUndefined();
+    expect(parseSearchQuery('tag:A OR').alternatives).toBeUndefined();
+  });
+});

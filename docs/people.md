@@ -616,7 +616,22 @@ from. Filings can arrive up to 45 days after a trade; the section says it is not
   disclosed N new stock trades: AAPL, NVDA" linking to `#trades` - and a Web Push
   notification where the watcher allowed them. A filing read twice tells nobody twice.
 - **Read:** `GET /api/people/:id/trades`.
-- **Not covered:** trades by people with no House/Senate filing (governors, cabinet) and
+- **Matching (2026-10-18):** former members' jurisdiction is the seat ("Maryland's 6th congressional
+  district"), so state matching accepts `State` or `State's ...`; titles and suffixes ("Mrs", "Dr",
+  "MD, FACS") are folded away; a double last name ("Paulina Luna") also matches on its last word; a
+  Mike/Michael tie within a state falls back to the first initial; members who moved to the cabinet,
+  VP's office or a governorship match on first + last name (candidate roles include cabinet, governor,
+  vice-president, president). On `--prod` a person with no bioguide id is sent by `personId` (local and
+  prod ids match after a pull). Source typos are kept as filed: Steve Cohen's Sony trade (House DocID
+  20033889) prints a transaction date of 12/26/2026 with a notification date of 01/21/2026.
+- **Former members' dates (2026-10-18):** Wikidata often leaves the end date off a member's final
+  term, so `--former` dated ~75 members from an older term and skipped 14 (e.g. Kathy Manning).
+  `npm run people:terms [-- --apply] [--prod --token-file ...]` corrects `leftOfficeDate` and adds
+  missing members since 2015 from the congress-legislators dataset (bioguide-keyed terms). It leaves
+  one-to-few-day differences (death/resignation day) alone and, with `--prod`, diffs against what
+  production serves.
+- **Not covered:** trades by people with no House/Senate filing (president, cabinet - they file OGE 278-T
+  reports, one PDF per report behind oge.gov's search form, no importer yet - and governors) and
   anything filed on paper. Campaign finance (the OpenSecrets/Quiver election pages) is a
   separate, not yet built, section.
 

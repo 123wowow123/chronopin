@@ -65,6 +65,9 @@ export type PinSearchFilters = {
 // Everything a search narrows pins to. hits are a free-text search's matches
 // with their scores (null when the search has no free text).
 export type SearchFilter = PinSearchFilters & {
+  // An OR query's groups: a pin matches when it meets all of any one group's
+  // label fields (the fields above are then only their merge, and unused).
+  alternatives?: PinSearchFilters[];
   hits: { id: number; score: number }[] | null;
   // The free text those hits came from, which also matches pins standing in
   // the place it names and those whose translated title says it
@@ -1010,199 +1013,205 @@ export function searchClauses(filter: SearchFilter) {
       score = '"hit"."score"';
     }
   }
-  // Named pins and no others, however they were found (a notification batch).
-  if (filter.ids.length) {
-    where.push(`"Pin"."id" = ANY(${add(filter.ids)}::integer[])`);
-  }
-  if (filter.userNames.length) {
-    joins.push('INNER JOIN "User" ON "User"."id" = "Pin"."userId"');
-    where.push(`"User"."userName" = ANY(${add(filter.userNames)}::citext[])`);
-  }
-  if (filter.companies.length) {
-    joins.push('INNER JOIN "Company" ON "Company"."id" = "Pin"."companyId"');
-    where.push(`"Company"."name" = ANY(${add(filter.companies)}::citext[])`);
-  }
-  // Any of these tickers ($NKE): the pin's company is listed under one, or
-  // the pin carries one as its company's stock (0029) and it was not taken off.
-  if (filter.tickers.length) {
-    const tickers = add(filter.tickers);
-    where.push(`(EXISTS (SELECT 1 FROM "Company" AS "listed" WHERE "listed"."id" = "Pin"."companyId" AND upper("listed"."tickerSymbol") = ANY(${tickers}::text[]))
-          OR EXISTS (SELECT 1 FROM "PinTicker" AS "stock" WHERE "stock"."pinId" = "Pin"."id" AND "stock"."relation" = 'company'
-            AND "stock"."utcRemovedDateTime" IS NULL AND upper("stock"."symbol") = ANY(${tickers}::text[])))`);
-  }
-  // One confidence: field, so its levels and its score bands widen each other.
-  // A band is read off the score in one pass with width_bucket, which drops a
-  // score into the bar list's gaps ([50, 75] -> 0 low, 1 medium, 2 high) -
-  // CONFIDENCE_BANDS' own order. An unscored pin buckets to NULL and is in no
-  // band, as it is on the timeline.
-  const confidence: string[] = [];
-  if (filter.confidences.length) {
-    confidence.push(`"Pin"."dateConfidence"::citext = ANY(${add(filter.confidences)}::citext[])`);
-  }
-  if (filter.confidenceBands.length) {
-    const buckets = filter.confidenceBands.map((band) => CONFIDENCE_BANDS.findIndex((b) => b.band === band));
-    confidence.push(`width_bucket(${pinConfidenceOf('Pin')}, ${add(CONFIDENCE_BARS)}::integer[]) = ANY(${add(buckets)}::integer[])`);
-  }
-  if (confidence.length) {
-    where.push(`(${confidence.join(' OR ')})`);
-  }
-  // Any of these places: a US state under either its name or its code.
-  if (filter.places.length) {
-    where.push(addressMatches(placePatterns(filter.places)));
-  }
-  // A game on any of these platforms (platform:), or rated any of these
-  // (rated:, the board then its label), from PinGameInfo.
-  if (filter.platforms.length) {
-    where.push(`EXISTS (SELECT 1 FROM "PinGameInfo" AS "g" WHERE "g"."pinId" = "Pin"."id" AND "g"."platforms" ?| ${add(filter.platforms)}::text[])`);
-  }
-  // taste: a product whose taste profile scores every one of these axes strongly.
-  // The axis names are TASTE_KEYS, so they are safe as column names.
-  if (filter.tastes.length) {
-    // taste:any asks only for a profile; axes ask for a strong score.
-    const scored = filter.tastes.filter((axis): axis is TasteAxis => axis !== 'any' && TASTE_KEYS.includes(axis)).map((axis) => `"t"."${axis}" >= ${TASTE_STRONG}`);
-    if (!scored.length && filter.tastes.includes('any')) scored.push('TRUE');
-    if (scored.length) where.push(`EXISTS (SELECT 1 FROM "PinTaste" AS "t" WHERE "t"."pinId" = "Pin"."id" AND ${scored.join(' AND ')})`);
-  }
-  // carperf: a car whose performance rubric scores every one of these axes
-  // strongly (a null axis, no published spec, never does). The axis names are
-  // CAR_PERF_KEYS, so they are safe as column names.
-  // rubric: a pin with an engineering rubric scored against any of these
-  // years' criteria (rubricYearClause: any rubric table). Beside carperf: the
-  // year is read off that same car rubric, so "carperf:range rubric:2026" is
-  // a car scoring range strongly under the 2026 criteria.
-  const years = filter.rubricYears.filter(isRubricYear);
-  const yearsParam = years.length ? add(years) : null;
-  let yearApplied = false;
-  if (filter.carPerfs.length) {
-    const scored = filter.carPerfs.filter((axis): axis is CarPerfAxis => axis !== 'any' && CAR_PERF_KEYS.includes(axis)).map((axis) => `"c"."${axis}" >= ${CAR_PERF_STRONG}`);
-    if (!scored.length && filter.carPerfs.includes('any')) scored.push('TRUE');
-    if (yearsParam && scored.length) {
-      scored.push(`"c"."rubricYear" = ANY(${yearsParam}::integer[])`);
-      yearApplied = true;
-    }
-    if (scored.length) where.push(`EXISTS (SELECT 1 FROM "PinCarPerf" AS "c" WHERE "c"."pinId" = "Pin"."id" AND ${scored.join(' AND ')})`);
-  }
-  if (yearsParam && !yearApplied) where.push(rubricYearClause(yearsParam));
-  // dining: a restaurant whose dining rubric scores every one of these axes
-  // strongly (a null axis, no published figure, never does). The axis names
-  // are DINING_KEYS, so they are safe as column names.
-  if (filter.dinings.length) {
-    const scored = filter.dinings.filter((axis): axis is DiningAxis => axis !== 'any' && DINING_KEYS.includes(axis)).map((axis) => `"d"."${axis}" >= ${DINING_STRONG}`);
-    if (!scored.length && filter.dinings.includes('any')) scored.push('TRUE');
-    if (scored.length) where.push(`EXISTS (SELECT 1 FROM "PinDining" AS "d" WHERE "d"."pinId" = "Pin"."id" AND ${scored.join(' AND ')})`);
-  }
-  // hotel: a property whose hotel rubric scores every one of these axes
-  // HOTEL_STRONG or more; 'any' is any property with a rubric. The axes are
-  // HOTEL_KEYS, so they are safe as column names.
-  if (filter.hotels.length) {
-    const scored = filter.hotels.filter((axis): axis is HotelAxis => axis !== 'any' && HOTEL_KEYS.includes(axis)).map((axis) => `"h"."${axis}" >= ${HOTEL_STRONG}`);
-    if (!scored.length && filter.hotels.includes('any')) scored.push('TRUE');
-    if (scored.length) where.push(`EXISTS (SELECT 1 FROM "PinHotel" AS "h" WHERE "h"."pinId" = "Pin"."id" AND ${scored.join(' AND ')})`);
-  }
-  // person: and the radar-axis bounds (misconduct:>3): a pin linked to a
-  // person who is any of the names given and whose best score across their
-  // life phases meets every bound. The axis names are OCTAGON_AXES, so they
-  // are safe as JSON keys here only because they are bound as parameters.
-  if (filter.people.length || filter.personAxes.length) {
-    const who: string[] = [];
-    if (filter.people.length) {
-      const names = add(filter.people.map((name) => name.toLowerCase()));
-      who.push(`(lower("pe"."name") = ANY(${names}::text[]) OR "pe"."slug" = ANY(${names}::text[]))`);
-    }
-    for (const { axis, op, value } of filter.personAxes) {
-      who.push(`(SELECT max(("ph"."axes" -> ${add(axis)}::text ->> 'score')::numeric) FROM "PersonPhase" AS "ph" WHERE "ph"."personId" = "pe"."id") ${RATING_OPS[op]} ${add(value)}::numeric`);
-    }
-    where.push(`EXISTS (SELECT 1 FROM "PinPerson" AS "pp" JOIN "Person" AS "pe" ON "pe"."id" = "pp"."personId" WHERE "pp"."pinId" = "Pin"."id" AND ${who.join(' AND ')})`);
-  }
-  if (filter.rated.length) {
-    where.push(`EXISTS (SELECT 1 FROM "PinGameInfo" AS "g" WHERE "g"."pinId" = "Pin"."id" AND lower("g"."maturityBoard" || ' ' || "g"."maturityRating") = ANY(${add(filter.rated.map((r) => r.toLowerCase()))}::text[]))`);
-  }
-  // Every rating: bound, on the pin's headline rating as its card shows it
-  // (format.ts averageRating): its review scores as percentages of their own
-  // maximums, averaged and rounded - a market's forecast left out. A pin
-  // without ratings averages to NULL and meets no bound.
-  if (filter.ratings.length) {
-    const bounds = filter.ratings.map(({ op, value }) => `"rated"."percent" ${RATING_OPS[op]} ${add(value)}::numeric`);
-    where.push(`EXISTS (
-          SELECT 1 FROM (
-            SELECT round(avg("r"."score" / "r"."scoreMax" * 100)) AS "percent"
-            FROM "PinRating" AS "r"
-            WHERE "r"."pinId" = "Pin"."id" AND "r"."scoreMax" > 0 AND "r"."source" !~* '\\yforecast$'
-          ) AS "rated"
-          WHERE ${bounds.join(' AND ')})`);
-  }
-  // Every delay: bound, on how far the start has slipped from the day first
-  // promised. A pin whose start is no later than that day has not slipped and
-  // meets none.
-  if (filter.delays.length) {
-    const bounds = filter.delays.map(({ op, unit, value }) => `${DELAY_AMOUNT[unit]} ${RATING_OPS[op]} ${add(value)}::numeric`);
-    where.push(`("Pin"."originalStartDate" IS NOT NULL AND "Pin"."utcStartDateTime" IS NOT NULL AND ${START_DAY} > "Pin"."originalStartDate" AND ${bounds.join(' AND ')})`);
-  }
-  // Any of these tags (PinTagView: the form's, its categories, the prose's
-  // and the awards').
-  if (filter.tags.length) {
-    const curated = filter.tags.some((tag) => tag.toLowerCase() === 'curated');
-    const predicted = filter.tags.some((tag) => tag.toLowerCase() === 'predicted');
-    where.push(`(EXISTS (SELECT 1 FROM "PinTagView" AS "tagged" WHERE "tagged"."pinId" = "Pin"."id" AND ("tagged"."name" = ANY(${add(filter.tags)}::citext[]) OR "tagged"."name"::text ~* ANY(${add(tagGroupPatterns(filter.tags))}::text[])))${curated ? ` OR ${CURATED}` : ''}${predicted ? ` OR ${predictedPinOf('Pin')}` : ''})`);
-  }
-  // None of these (-tag:), each read as a tag: term is, so leaving out an
-  // award body leaves out every year of it.
-  if (filter.excludeTags.length) {
-    const excludePredicted = filter.excludeTags.some((tag) => tag.toLowerCase() === 'predicted');
-    where.push(`NOT EXISTS (SELECT 1 FROM "PinTagView" AS "untagged" WHERE "untagged"."pinId" = "Pin"."id" AND ("untagged"."name" = ANY(${add(filter.excludeTags)}::citext[]) OR "untagged"."name"::text ~* ANY(${add(tagGroupPatterns(filter.excludeTags))}::text[])))`);
-    if (excludePredicted) {
-      where.push(`NOT ${predictedPinOf('Pin')}`);
-    }
-  }
   // Days as instant ranges, so the start and created indexes serve them (and
   // BC days need no date arithmetic in SQL). A date: day is the timeline's:
   // an all-day pin on its UTC date, a timed one on its date in the zone.
   const zone = filter.timeZone || 'UTC';
   const between = (column: string, from: number, to: number) => `(${column} >= ${add(new Date(from))} AND ${column} < ${add(new Date(to))})`;
   const localDay = (column: string, day: string) => between(column, dayStartIn(day, zone), dayStartIn(nextDayKey(day), zone));
-  if (filter.dates.length) {
-    const days = filter.dates.map((day) => {
-      const utc = between('"Pin"."utcStartDateTime"', dayKeyToMs(day), dayKeyToMs(nextDayKey(day)));
-      return `(("Pin"."allDay" AND ${utc}) OR (NOT "Pin"."allDay" AND ${localDay('"Pin"."utcStartDateTime"', day)}))`;
-    });
-    where.push(`(${days.join(' OR ')})`);
-  }
-  // holiday: - the days its names fall on (every year), read as date: reads a
-  // day, and narrowing the other date terms. A name nobody keeps matches nothing.
-  if (filter.holidays.length) {
-    const runs = holidayRanges(filter.holidays, zone);
-    const days = runs.map(({ from, to }) => {
-      const after = nextDayKey(to);
-      const utc = between('"Pin"."utcStartDateTime"', dayKeyToMs(from), dayKeyToMs(after));
-      const local = between('"Pin"."utcStartDateTime"', dayStartIn(from, zone), dayStartIn(after, zone));
-      return `(("Pin"."allDay" AND ${utc}) OR (NOT "Pin"."allDay" AND ${local}))`;
-    });
-    where.push(days.length ? `(${days.join(' OR ')})` : 'FALSE');
-  }
-  if (filter.postedDays.length) {
-    where.push(`(${filter.postedDays.map((day) => localDay('"Pin"."utcCreatedDateTime"', day)).join(' OR ')})`);
-  }
-  // Comparisons on those days (date:>=, posted:<, ranges), every one of them,
-  // each against the instant its day begins - UTC for an all-day pin's start,
-  // the zone otherwise.
-  for (const { op, day } of filter.dateBounds) {
-    const utc = `"Pin"."utcStartDateTime" ${op} ${add(new Date(dayKeyToMs(day)))}`;
-    const local = `"Pin"."utcStartDateTime" ${op} ${add(new Date(dayStartIn(day, zone)))}`;
-    where.push(`(("Pin"."allDay" AND ${utc}) OR (NOT "Pin"."allDay" AND ${local}))`);
-  }
-  for (const { op, day } of filter.postedBounds) {
-    where.push(`"Pin"."utcCreatedDateTime" ${op} ${add(new Date(dayStartIn(day, zone)))}`);
-  }
-  // updated: matches a pin with any update (PinUpdate) on one of the days and
-  // within every bound - one update has to meet them all, as the card's
-  // UPDATED pill reads its newest one.
-  if (filter.updatedDays.length || filter.updatedBounds.length) {
-    const on = [
-      ...(filter.updatedDays.length ? [`(${filter.updatedDays.map((day) => localDay('"u"."utcCreatedDateTime"', day)).join(' OR ')})`] : []),
-      ...filter.updatedBounds.map(({ op, day }) => `"u"."utcCreatedDateTime" ${op} ${add(new Date(dayStartIn(day, zone)))}`),
-    ];
-    where.push(`EXISTS (SELECT 1 FROM "PinUpdate" AS "u" WHERE "u"."pinId" = "Pin"."id" AND ${on.join(' AND ')})`);
-  }
+  // Every label field a query can hold, as conditions a pin must all meet.
+  const labelWhere = (filter: PinSearchFilters): string[] => {
+    const where: string[] = [];
+    // Named pins and no others, however they were found (a notification batch).
+    if (filter.ids.length) {
+      where.push(`"Pin"."id" = ANY(${add(filter.ids)}::integer[])`);
+    }
+    if (filter.userNames.length) {
+      where.push(`"Pin"."userId" IN (SELECT "User"."id" FROM "User" WHERE "User"."userName" = ANY(${add(filter.userNames)}::citext[]))`);
+    }
+    if (filter.companies.length) {
+      where.push(`"Pin"."companyId" IN (SELECT "Company"."id" FROM "Company" WHERE "Company"."name" = ANY(${add(filter.companies)}::citext[]))`);
+    }
+    // Any of these tickers ($NKE): the pin's company is listed under one, or
+    // the pin carries one as its company's stock (0029) and it was not taken off.
+    if (filter.tickers.length) {
+      const tickers = add(filter.tickers);
+      where.push(`(EXISTS (SELECT 1 FROM "Company" AS "listed" WHERE "listed"."id" = "Pin"."companyId" AND upper("listed"."tickerSymbol") = ANY(${tickers}::text[]))
+            OR EXISTS (SELECT 1 FROM "PinTicker" AS "stock" WHERE "stock"."pinId" = "Pin"."id" AND "stock"."relation" = 'company'
+              AND "stock"."utcRemovedDateTime" IS NULL AND upper("stock"."symbol") = ANY(${tickers}::text[])))`);
+    }
+    // One confidence: field, so its levels and its score bands widen each other.
+    // A band is read off the score in one pass with width_bucket, which drops a
+    // score into the bar list's gaps ([50, 75] -> 0 low, 1 medium, 2 high) -
+    // CONFIDENCE_BANDS' own order. An unscored pin buckets to NULL and is in no
+    // band, as it is on the timeline.
+    const confidence: string[] = [];
+    if (filter.confidences.length) {
+      confidence.push(`"Pin"."dateConfidence"::citext = ANY(${add(filter.confidences)}::citext[])`);
+    }
+    if (filter.confidenceBands.length) {
+      const buckets = filter.confidenceBands.map((band) => CONFIDENCE_BANDS.findIndex((b) => b.band === band));
+      confidence.push(`width_bucket(${pinConfidenceOf('Pin')}, ${add(CONFIDENCE_BARS)}::integer[]) = ANY(${add(buckets)}::integer[])`);
+    }
+    if (confidence.length) {
+      where.push(`(${confidence.join(' OR ')})`);
+    }
+    // Any of these places: a US state under either its name or its code.
+    if (filter.places.length) {
+      where.push(addressMatches(placePatterns(filter.places)));
+    }
+    // A game on any of these platforms (platform:), or rated any of these
+    // (rated:, the board then its label), from PinGameInfo.
+    if (filter.platforms.length) {
+      where.push(`EXISTS (SELECT 1 FROM "PinGameInfo" AS "g" WHERE "g"."pinId" = "Pin"."id" AND "g"."platforms" ?| ${add(filter.platforms)}::text[])`);
+    }
+    // taste: a product whose taste profile scores every one of these axes strongly.
+    // The axis names are TASTE_KEYS, so they are safe as column names.
+    if (filter.tastes.length) {
+      // taste:any asks only for a profile; axes ask for a strong score.
+      const scored = filter.tastes.filter((axis): axis is TasteAxis => axis !== 'any' && TASTE_KEYS.includes(axis)).map((axis) => `"t"."${axis}" >= ${TASTE_STRONG}`);
+      if (!scored.length && filter.tastes.includes('any')) scored.push('TRUE');
+      if (scored.length) where.push(`EXISTS (SELECT 1 FROM "PinTaste" AS "t" WHERE "t"."pinId" = "Pin"."id" AND ${scored.join(' AND ')})`);
+    }
+    // carperf: a car whose performance rubric scores every one of these axes
+    // strongly (a null axis, no published spec, never does). The axis names are
+    // CAR_PERF_KEYS, so they are safe as column names.
+    // rubric: a pin with an engineering rubric scored against any of these
+    // years' criteria (rubricYearClause: any rubric table). Beside carperf: the
+    // year is read off that same car rubric, so "carperf:range rubric:2026" is
+    // a car scoring range strongly under the 2026 criteria.
+    const years = filter.rubricYears.filter(isRubricYear);
+    const yearsParam = years.length ? add(years) : null;
+    let yearApplied = false;
+    if (filter.carPerfs.length) {
+      const scored = filter.carPerfs.filter((axis): axis is CarPerfAxis => axis !== 'any' && CAR_PERF_KEYS.includes(axis)).map((axis) => `"c"."${axis}" >= ${CAR_PERF_STRONG}`);
+      if (!scored.length && filter.carPerfs.includes('any')) scored.push('TRUE');
+      if (yearsParam && scored.length) {
+        scored.push(`"c"."rubricYear" = ANY(${yearsParam}::integer[])`);
+        yearApplied = true;
+      }
+      if (scored.length) where.push(`EXISTS (SELECT 1 FROM "PinCarPerf" AS "c" WHERE "c"."pinId" = "Pin"."id" AND ${scored.join(' AND ')})`);
+    }
+    if (yearsParam && !yearApplied) where.push(rubricYearClause(yearsParam));
+    // dining: a restaurant whose dining rubric scores every one of these axes
+    // strongly (a null axis, no published figure, never does). The axis names
+    // are DINING_KEYS, so they are safe as column names.
+    if (filter.dinings.length) {
+      const scored = filter.dinings.filter((axis): axis is DiningAxis => axis !== 'any' && DINING_KEYS.includes(axis)).map((axis) => `"d"."${axis}" >= ${DINING_STRONG}`);
+      if (!scored.length && filter.dinings.includes('any')) scored.push('TRUE');
+      if (scored.length) where.push(`EXISTS (SELECT 1 FROM "PinDining" AS "d" WHERE "d"."pinId" = "Pin"."id" AND ${scored.join(' AND ')})`);
+    }
+    // hotel: a property whose hotel rubric scores every one of these axes
+    // HOTEL_STRONG or more; 'any' is any property with a rubric. The axes are
+    // HOTEL_KEYS, so they are safe as column names.
+    if (filter.hotels.length) {
+      const scored = filter.hotels.filter((axis): axis is HotelAxis => axis !== 'any' && HOTEL_KEYS.includes(axis)).map((axis) => `"h"."${axis}" >= ${HOTEL_STRONG}`);
+      if (!scored.length && filter.hotels.includes('any')) scored.push('TRUE');
+      if (scored.length) where.push(`EXISTS (SELECT 1 FROM "PinHotel" AS "h" WHERE "h"."pinId" = "Pin"."id" AND ${scored.join(' AND ')})`);
+    }
+    // person: and the radar-axis bounds (misconduct:>3): a pin linked to a
+    // person who is any of the names given and whose best score across their
+    // life phases meets every bound. The axis names are OCTAGON_AXES, so they
+    // are safe as JSON keys here only because they are bound as parameters.
+    if (filter.people.length || filter.personAxes.length) {
+      const who: string[] = [];
+      if (filter.people.length) {
+        const names = add(filter.people.map((name) => name.toLowerCase()));
+        who.push(`(lower("pe"."name") = ANY(${names}::text[]) OR "pe"."slug" = ANY(${names}::text[]))`);
+      }
+      for (const { axis, op, value } of filter.personAxes) {
+        who.push(`(SELECT max(("ph"."axes" -> ${add(axis)}::text ->> 'score')::numeric) FROM "PersonPhase" AS "ph" WHERE "ph"."personId" = "pe"."id") ${RATING_OPS[op]} ${add(value)}::numeric`);
+      }
+      where.push(`EXISTS (SELECT 1 FROM "PinPerson" AS "pp" JOIN "Person" AS "pe" ON "pe"."id" = "pp"."personId" WHERE "pp"."pinId" = "Pin"."id" AND ${who.join(' AND ')})`);
+    }
+    if (filter.rated.length) {
+      where.push(`EXISTS (SELECT 1 FROM "PinGameInfo" AS "g" WHERE "g"."pinId" = "Pin"."id" AND lower("g"."maturityBoard" || ' ' || "g"."maturityRating") = ANY(${add(filter.rated.map((r) => r.toLowerCase()))}::text[]))`);
+    }
+    // Every rating: bound, on the pin's headline rating as its card shows it
+    // (format.ts averageRating): its review scores as percentages of their own
+    // maximums, averaged and rounded - a market's forecast left out. A pin
+    // without ratings averages to NULL and meets no bound.
+    if (filter.ratings.length) {
+      const bounds = filter.ratings.map(({ op, value }) => `"rated"."percent" ${RATING_OPS[op]} ${add(value)}::numeric`);
+      where.push(`EXISTS (
+            SELECT 1 FROM (
+              SELECT round(avg("r"."score" / "r"."scoreMax" * 100)) AS "percent"
+              FROM "PinRating" AS "r"
+              WHERE "r"."pinId" = "Pin"."id" AND "r"."scoreMax" > 0 AND "r"."source" !~* '\\yforecast$'
+            ) AS "rated"
+            WHERE ${bounds.join(' AND ')})`);
+    }
+    // Every delay: bound, on how far the start has slipped from the day first
+    // promised. A pin whose start is no later than that day has not slipped and
+    // meets none.
+    if (filter.delays.length) {
+      const bounds = filter.delays.map(({ op, unit, value }) => `${DELAY_AMOUNT[unit]} ${RATING_OPS[op]} ${add(value)}::numeric`);
+      where.push(`("Pin"."originalStartDate" IS NOT NULL AND "Pin"."utcStartDateTime" IS NOT NULL AND ${START_DAY} > "Pin"."originalStartDate" AND ${bounds.join(' AND ')})`);
+    }
+    // Any of these tags (PinTagView: the form's, its categories, the prose's
+    // and the awards').
+    if (filter.tags.length) {
+      const curated = filter.tags.some((tag) => tag.toLowerCase() === 'curated');
+      const predicted = filter.tags.some((tag) => tag.toLowerCase() === 'predicted');
+      where.push(`(EXISTS (SELECT 1 FROM "PinTagView" AS "tagged" WHERE "tagged"."pinId" = "Pin"."id" AND ("tagged"."name" = ANY(${add(filter.tags)}::citext[]) OR "tagged"."name"::text ~* ANY(${add(tagGroupPatterns(filter.tags))}::text[])))${curated ? ` OR ${CURATED}` : ''}${predicted ? ` OR ${predictedPinOf('Pin')}` : ''})`);
+    }
+    // None of these (-tag:), each read as a tag: term is, so leaving out an
+    // award body leaves out every year of it.
+    if (filter.excludeTags.length) {
+      const excludePredicted = filter.excludeTags.some((tag) => tag.toLowerCase() === 'predicted');
+      where.push(`NOT EXISTS (SELECT 1 FROM "PinTagView" AS "untagged" WHERE "untagged"."pinId" = "Pin"."id" AND ("untagged"."name" = ANY(${add(filter.excludeTags)}::citext[]) OR "untagged"."name"::text ~* ANY(${add(tagGroupPatterns(filter.excludeTags))}::text[])))`);
+      if (excludePredicted) {
+        where.push(`NOT ${predictedPinOf('Pin')}`);
+      }
+    }
+    if (filter.dates.length) {
+      const days = filter.dates.map((day) => {
+        const utc = between('"Pin"."utcStartDateTime"', dayKeyToMs(day), dayKeyToMs(nextDayKey(day)));
+        return `(("Pin"."allDay" AND ${utc}) OR (NOT "Pin"."allDay" AND ${localDay('"Pin"."utcStartDateTime"', day)}))`;
+      });
+      where.push(`(${days.join(' OR ')})`);
+    }
+    // holiday: - the days its names fall on (every year), read as date: reads a
+    // day, and narrowing the other date terms. A name nobody keeps matches nothing.
+    if (filter.holidays.length) {
+      const runs = holidayRanges(filter.holidays, zone);
+      const days = runs.map(({ from, to }) => {
+        const after = nextDayKey(to);
+        const utc = between('"Pin"."utcStartDateTime"', dayKeyToMs(from), dayKeyToMs(after));
+        const local = between('"Pin"."utcStartDateTime"', dayStartIn(from, zone), dayStartIn(after, zone));
+        return `(("Pin"."allDay" AND ${utc}) OR (NOT "Pin"."allDay" AND ${local}))`;
+      });
+      where.push(days.length ? `(${days.join(' OR ')})` : 'FALSE');
+    }
+    if (filter.postedDays.length) {
+      where.push(`(${filter.postedDays.map((day) => localDay('"Pin"."utcCreatedDateTime"', day)).join(' OR ')})`);
+    }
+    // Comparisons on those days (date:>=, posted:<, ranges), every one of them,
+    // each against the instant its day begins - UTC for an all-day pin's start,
+    // the zone otherwise.
+    for (const { op, day } of filter.dateBounds) {
+      const utc = `"Pin"."utcStartDateTime" ${op} ${add(new Date(dayKeyToMs(day)))}`;
+      const local = `"Pin"."utcStartDateTime" ${op} ${add(new Date(dayStartIn(day, zone)))}`;
+      where.push(`(("Pin"."allDay" AND ${utc}) OR (NOT "Pin"."allDay" AND ${local}))`);
+    }
+    for (const { op, day } of filter.postedBounds) {
+      where.push(`"Pin"."utcCreatedDateTime" ${op} ${add(new Date(dayStartIn(day, zone)))}`);
+    }
+    // updated: matches a pin with any update (PinUpdate) on one of the days and
+    // within every bound - one update has to meet them all, as the card's
+    // UPDATED pill reads its newest one.
+    if (filter.updatedDays.length || filter.updatedBounds.length) {
+      const on = [
+        ...(filter.updatedDays.length ? [`(${filter.updatedDays.map((day) => localDay('"u"."utcCreatedDateTime"', day)).join(' OR ')})`] : []),
+        ...filter.updatedBounds.map(({ op, day }) => `"u"."utcCreatedDateTime" ${op} ${add(new Date(dayStartIn(day, zone)))}`),
+      ];
+      where.push(`EXISTS (SELECT 1 FROM "PinUpdate" AS "u" WHERE "u"."pinId" = "Pin"."id" AND ${on.join(' AND ')})`);
+    }
+    return where;
+  };
+  const groups = (filter.alternatives?.length ?? 0) > 1 ? filter.alternatives!.map(labelWhere) : null;
+  if (groups) where.push(`(${groups.map((g) => `(${g.length ? g.join(' AND ') : 'TRUE'})`).join(' OR ')})`);
+  else where.push(...labelWhere(filter));
   // The Watch search choice: pins this user watches, and (unless predicted
   // pins are turned off) predicted pins of any company this user follows.
   if (filter.favoriteUserId != null) {

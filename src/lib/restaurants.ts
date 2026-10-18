@@ -89,6 +89,8 @@ export const RESTAURANT_REGIONS = [
   { slug: 'dalian', name: 'Dalian', country: 'China', state: 'Liaoning', timeZone: 'Asia/Shanghai', latitude: 38.914, longitude: 121.6147 },
   { slug: 'shenyang', name: 'Shenyang', country: 'China', state: 'Liaoning', timeZone: 'Asia/Shanghai', latitude: 41.8057, longitude: 123.4315 },
   { slug: 'harbin', name: 'Harbin', country: 'China', state: 'Heilongjiang', timeZone: 'Asia/Shanghai', latitude: 45.8038, longitude: 126.5349 },
+  { slug: 'seoul', name: 'Seoul', country: 'South Korea', state: 'Seoul', timeZone: 'Asia/Seoul', latitude: 37.5665, longitude: 126.978 },
+  { slug: 'busan', name: 'Busan', country: 'South Korea', state: 'Busan', timeZone: 'Asia/Seoul', latitude: 35.1796, longitude: 129.0756 },
   { slug: 'fukuoka', name: 'Fukuoka', country: 'Japan', state: 'Fukuoka', timeZone: 'Asia/Tokyo', latitude: 33.5902, longitude: 130.4017 },
   { slug: 'osaka', name: 'Osaka', country: 'Japan', state: 'Osaka', timeZone: 'Asia/Tokyo', latitude: 34.6937, longitude: 135.5023 },
   { slug: 'kyoto', name: 'Kyoto', country: 'Japan', state: 'Kyoto', timeZone: 'Asia/Tokyo', latitude: 35.0116, longitude: 135.7681 },

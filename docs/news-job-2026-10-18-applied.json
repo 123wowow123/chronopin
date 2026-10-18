@@ -1,0 +1,204 @@
+{
+  "date": "2026-10-18",
+  "slot": "06:00 America/Los_Angeles",
+  "execution": "active session",
+  "localRunId": 12,
+  "productionRunId": 12,
+  "status": "ok",
+  "newPinIds": [
+    17113,
+    17115,
+    17120,
+    17131,
+    17133
+  ],
+  "updatedExistingPinIds": [
+    6976,
+    1953,
+    1954,
+    1965,
+    1968,
+    1989,
+    16016,
+    16017
+  ],
+  "sentiment": {
+    "backlogVerified": 731,
+    "additionalVerifiedIds": [
+      17113,
+      16016
+    ],
+    "distinctPins": 733,
+    "excludedConflicts": [
+      15801,
+      15802,
+      15803
+    ],
+    "commentsPending": 0
+  },
+  "events": {
+    "read": 40,
+    "verified": 29,
+    "keptHand": 11
+  },
+  "predictionMarkets": {
+    "kalshiEvents": 4900,
+    "polymarketEvents": 1500,
+    "predictedPinsReviewed": 28,
+    "oil": {
+      "realized": [
+        {
+          "id": 17131,
+          "month": "aug",
+          "settlement": 90.75,
+          "band": [
+            88.99,
+            90.99
+          ],
+          "probability": 0.5549999999999999,
+          "estimatedDollars": 124287
+        },
+        {
+          "id": 17133,
+          "month": "sep",
+          "settlement": 97.92,
+          "band": [
+            95.99,
+            97.99
+          ],
+          "probability": 0.26499999999999996,
+          "estimatedDollars": 141514
+        }
+      ],
+      "october": {
+        "id": 16017,
+        "band": [
+          98.99,
+          100.99
+        ],
+        "probability": 0.10999999999999999,
+        "estimatedDollars": 68495
+      },
+      "wti": "KXWTIMONTHLY returned zero contracts; daily/touch books not substituted."
+    }
+  },
+  "pinHealth": {
+    "checked": 25,
+    "productionGapQueued": [
+      158
+    ]
+  },
+  "ads": {
+    "pin": {
+      "checked": 63,
+      "ok": 50,
+      "unread": 9,
+      "newlyBrokenIds": [
+        35
+      ]
+    },
+    "product": {
+      "checked": 36,
+      "ok": 34,
+      "unread": 1,
+      "newlyBrokenIds": [
+        24
+      ]
+    },
+    "holiday": {
+      "checked": 80,
+      "ok": 62,
+      "unread": 17,
+      "candidates": 10,
+      "retained": 7,
+      "newProductionIds": [
+        153,
+        154,
+        155,
+        156,
+        157,
+        158,
+        159
+      ],
+      "translationsVerified": 120
+    },
+    "translationCoverage": {
+      "PinAd": {
+        "workingAds": 56,
+        "translationRows": 945,
+        "missing": []
+      },
+      "HolidayAd": {
+        "workingAds": 150,
+        "translationRows": 2295,
+        "missing": []
+      }
+    },
+    "sponsoredPending": []
+  },
+  "personTrades": {
+    "filings": 0,
+    "trades": 0,
+    "unmatched": [],
+    "failed": [],
+    "production": {
+      "added": 0,
+      "missing": []
+    }
+  },
+  "publicPageChecks": [
+    {
+      "pinId": 17113,
+      "url": "https://www.chronopin.com/pin/17113/hitachi-energy-announces-c-479-million-london-factory-and-100-planned-jobs",
+      "status": 200,
+      "titlePresent": true,
+      "seconds": 0.45
+    },
+    {
+      "pinId": 17115,
+      "url": "https://www.chronopin.com/pin/17115/antonelli-is-favoured-for-the-2026-formula1-drivers-championship",
+      "status": 200,
+      "titlePresent": true,
+      "seconds": 1.26
+    },
+    {
+      "pinId": 17120,
+      "url": "https://www.chronopin.com/pin/17120/china-opens-technology-export-control-consultation-and-starts-registration",
+      "status": 200,
+      "titlePresent": true,
+      "seconds": 0.35
+    },
+    {
+      "pinId": 17131,
+      "url": "https://www.chronopin.com/pin/17131/brent-crude-oil-price-august2026-settles-at-us-90-75",
+      "status": 200,
+      "titlePresent": true,
+      "seconds": 1.57
+    },
+    {
+      "pinId": 17133,
+      "url": "https://www.chronopin.com/pin/17133/brent-crude-oil-price-september2026-settles-at-us-97-92",
+      "status": 200,
+      "titlePresent": true,
+      "seconds": 1.03
+    }
+  ],
+  "mediaManifest": "docs/okf/scraping/media/news-2026-10-18.json",
+  "gaps": [
+    "15801–15803 unresolved company/text identity conflicts",
+    "WTI monthly contracts empty; daily and touch markets excluded",
+    "PepsiCo Cheverly town98 affected versus WARN143, and September14 versusNovember13 dates require reconciliation",
+    "No verified publisher employment graphs for the researched workforce initiatives",
+    "Oil quota-compliance ratios, refinery-demand and commercial/SPR decomposition unavailable",
+    "Existing human SPIEL/MotoGP/MelbourneCup ticket conflicts retained",
+    "Six priced model rows still await overall Arena matching; known Ministral name mismatch",
+    "Pin158 inaccessible original source needs an archive",
+    "Holiday stocking shortages retained after product relevance exclusions",
+    "Precise Naia opening day, Hitachi parcel entrance and hiring calendar unpublished in checked sources"
+  ],
+  "deploymentPerformed": false,
+  "postRunDatabasePull": false,
+  "finishedAt": "2026-10-18T14:36:22.629Z",
+  "actions": 43,
+  "learnings": 5
+}

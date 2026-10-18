@@ -51,7 +51,7 @@ async function main() {
     save: async (personId, filing, person) => {
       if (flags['dry-run']) return filing.trades.length;
       if (flags.prod) {
-        sent.push({ ...filing, bioguideId: person.bioguideId ?? undefined });
+        sent.push(person.bioguideId ? { ...filing, bioguideId: person.bioguideId } : { ...filing, personId });
         return filing.trades.length;
       }
       const { storeFiling } = await import('@/server/services/personTrades');

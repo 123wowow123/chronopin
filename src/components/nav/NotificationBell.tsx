@@ -30,6 +30,7 @@ type Notification = {
   companyLogoUrl: string | null;
   personName: string | null;
   personPhotoUrl: string | null;
+  tradeFiledDate: string | null;
   tradeCount: number | null;
   tradeTickers: string[] | null;
   tradeBuys: number | null;
@@ -297,6 +298,70 @@ function sectionsOf(items: Notification[]): { section: Section; items: Notificat
   return sections;
 }
 
+type Entry = { kind: 'row'; n: Notification } | { kind: 'trades'; items: Notification[] };
+
+// Stock-trade rows fold into one group, placed where the newest of them sits.
+function entriesOf(rows: Notification[]): Entry[] {
+  const trades = rows.filter((n) => n.type === 'trade');
+  if (trades.length < 2) return rows.map((n) => ({ kind: 'row', n }));
+  const entries: Entry[] = [];
+  for (const n of rows) {
+    if (n.type !== 'trade') entries.push({ kind: 'row', n });
+    else if (n === trades[0]) entries.push({ kind: 'trades', items: trades });
+  }
+  return entries;
+}
+
+// The viewer's calendar day as YYYY-MM-DD, to match a filing's published date
+// (not when it was scraped).
+function localToday(): string {
+  const d = new Date();
+  return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
+}
+
+// The watched people's trades, collapsed to today's buy and sell totals with
+// their tickers; opening it lists each filing.
+function TradeGroup({ items, renderRow }: { items: Notification[]; renderRow: (n: Notification) => React.ReactNode }) {
+  const t = useT();
+  const [open, setOpen] = useState(false);
+  const listId = useId();
+  const today = items.filter((n) => n.tradeFiledDate === localToday());
+  const sum = (pick: (n: Notification) => number | null) => today.reduce((total, n) => total + (pick(n) ?? 0), 0);
+  const tickers = (pick: (n: Notification) => string[] | null) => [...new Set(today.flatMap((n) => pick(n) ?? []))];
+  const tiles = [
+    ['tradeBuys', sum((n) => n.tradeBuys), tickers((n) => n.tradeBuyTickers), 'text-success-soft ring-success/40'],
+    ['tradeSells', sum((n) => n.tradeSells), tickers((n) => n.tradeSellTickers), 'text-danger-soft ring-danger/40'],
+  ] as const;
+  return (
+    <li className="text-sm">
+      <button
+        type="button"
+        aria-expanded={open}
+        aria-controls={listId}
+        onClick={() => setOpen((o) => !o)}
+        className="flex w-full flex-col gap-1.5 px-4 py-2.5 text-start"
+      >
+        <span className="flex items-center justify-between gap-2 font-semibold text-ink">
+          {t('notifications.tradesToday')}
+          <Icon name="chevron" className={`size-4 shrink-0 text-subtle transition-transform ${open ? 'rotate-180' : ''}`} />
+        </span>
+        <span className="grid grid-cols-2 gap-2">
+          {tiles.map(([key, count, list, tone]) => (
+            <span key={key} className={`flex min-w-0 flex-col rounded-lg bg-field px-2.5 py-1.5 ring-1 ring-inset ${count ? tone : 'text-subtle ring-line'}`}>
+              <span className="flex items-baseline justify-between gap-2 text-xs font-medium">
+                {t(`notifications.${key}`)}
+                <span className="text-base font-semibold tabular-nums">{count}</span>
+              </span>
+              {list.length ? <span className="truncate text-[11px] text-muted">{list.join(', ')}</span> : null}
+            </span>
+          ))}
+        </span>
+      </button>
+      {open ? <ul id={listId} className="divide-y divide-line border-t border-line">{items.map(renderRow)}</ul> : null}
+    </li>
+  );
+}
+
 function NotificationItems({
   items,
   failed,
@@ -321,19 +386,7 @@ function NotificationItems({
     watching: t('notifications.groupWatching'),
     yours: t('notifications.groupYours'),
   };
-  return (
-    <div className={listClassName}>
-      {sectionsOf(items).map(({ section, items: rows }) => (
-        <section key={section} aria-labelledby={`${headingId}-${section}`}>
-          <h3
-            id={`${headingId}-${section}`}
-            className="sticky top-0 z-10 flex items-center justify-between border-b border-line bg-panel px-4 py-1.5 text-xs font-semibold tracking-wide text-subtle uppercase"
-          >
-            {labels[section]}
-            <span className="tabular-nums">{rows.length}</span>
-          </h3>
-          <ul className="divide-y divide-line">
-            {rows.map((n) => {
+  const renderRow = (n: Notification) => {
               const handle = n.actor.userName.replace(/^@+/, '');
               const reason = reasonOf(n, t);
               return (
@@ -471,7 +524,26 @@ function NotificationItems({
                   ) : null}
                 </li>
               );
-            })}
+  };
+  return (
+    <div className={listClassName}>
+      {sectionsOf(items).map(({ section, items: rows }) => (
+        <section key={section} aria-labelledby={`${headingId}-${section}`}>
+          <h3
+            id={`${headingId}-${section}`}
+            className="sticky top-0 z-10 flex items-center justify-between border-b border-line bg-panel px-4 py-1.5 text-xs font-semibold tracking-wide text-subtle uppercase"
+          >
+            {labels[section]}
+            <span className="tabular-nums">{rows.length}</span>
+          </h3>
+          <ul className="divide-y divide-line">
+            {entriesOf(rows).map((entry) =>
+              entry.kind === 'trades' ? (
+                <TradeGroup key="trades" items={entry.items} renderRow={renderRow} />
+              ) : (
+                renderRow(entry.n)
+              ),
+            )}
           </ul>
         </section>
       ))}

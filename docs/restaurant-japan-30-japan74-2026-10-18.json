@@ -1,0 +1,1972 @@
+{
+  "checkedAt": "2026-10-18",
+  "status": "published and publicly verified in local and production",
+  "country": "Japan",
+  "regions": [
+    "osaka",
+    "nagoya"
+  ],
+  "entries": [
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "PATISSERIE & Kissa KIGI Opens 2026-10-15",
+        "description": "A Hotta house cafe and patisserie with coffee, tea, seasonal plated desserts and visitor-documented individual cakes.",
+        "sourceUrl": "https://tabelog.com/aichi/A2301/A230112/23098019/",
+        "address": "1-25-2 Yanagigaecho, Mizuho-ku, Nagoya",
+        "productName": "PATISSERIE & Kissa KIGI",
+        "utcStartDateTime": "2026-10-15T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "Exact branch listing gives October15,2026; an opening-day firsthand visit explicitly says the shop opened that day. The Tokyo KIGI is unrelated.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Nagoya",
+          "Japan",
+          "Hotta",
+          "Patisserie and coffee"
+        ],
+        "longFormSummary": "<p>A Hotta house cafe and patisserie with coffee, tea, seasonal plated desserts and visitor-documented individual cakes.<cite data-ref=\"https://tabelog.com/aichi/A2301/A230112/23098019/\"></cite></p><p>Exact branch listing gives October15,2026; an opening-day firsthand visit explicitly says the shop opened that day. The Tokyo KIGI is unrelated.</p>",
+        "references": [
+          {
+            "url": "https://tabelog.com/aichi/A2301/A230112/23098019/",
+            "title": "PATISSERIE & Kissa KIGI — branch evidence",
+            "confidence": 90,
+            "reasoning": "Exact branch listing gives October15,2026; an opening-day firsthand visit explicitly says the shop opened that day. The Tokyo KIGI is unrelated."
+          },
+          {
+            "url": "https://tabelog.com/en/aichi/A2301/A230112/23098019/",
+            "title": "PATISSERIE & Kissa KIGI — branch evidence",
+            "confidence": 90,
+            "reasoning": "Exact branch listing gives October15,2026; an opening-day firsthand visit explicitly says the shop opened that day. The Tokyo KIGI is unrelated."
+          },
+          {
+            "url": "https://tabelog.com/en/aichi/A2301/A230112/23098019/dtlphotolst/smp2/",
+            "title": "PATISSERIE & Kissa KIGI — branch evidence",
+            "confidence": 90,
+            "reasoning": "Exact branch listing gives October15,2026; an opening-day firsthand visit explicitly says the shop opened that day. The Tokyo KIGI is unrelated."
+          },
+          {
+            "url": "https://tabelog.com/en/aichi/A2301/A230112/23098019/dtlrvwlst/B537553268/",
+            "title": "PATISSERIE & Kissa KIGI — branch evidence",
+            "confidence": 90,
+            "reasoning": "Exact branch listing gives October15,2026; an opening-day firsthand visit explicitly says the shop opened that day. The Tokyo KIGI is unrelated."
+          },
+          {
+            "url": "https://tabelog.com/en/aichi/A2301/A230112/23098019/dtlrvwlst/B537436129/",
+            "title": "PATISSERIE & Kissa KIGI — branch evidence",
+            "confidence": 90,
+            "reasoning": "Exact branch listing gives October15,2026; an opening-day firsthand visit explicitly says the shop opened that day. The Tokyo KIGI is unrelated."
+          },
+          {
+            "url": "https://tabelog.com/en/aichi/A2301/A230112/23098019/dtlrvwlst/B537441544/",
+            "title": "PATISSERIE & Kissa KIGI — branch evidence",
+            "confidence": 90,
+            "reasoning": "Exact branch listing gives October15,2026; an opening-day firsthand visit explicitly says the shop opened that day. The Tokyo KIGI is unrelated."
+          },
+          {
+            "url": "https://tabelog.com/en/aichi/A2301/A230112/23098019/dtlmenu/photo/",
+            "title": "PATISSERIE & Kissa KIGI — branch evidence",
+            "confidence": 90,
+            "reasoning": "Exact branch listing gives October15,2026; an opening-day firsthand visit explicitly says the shop opened that day. The Tokyo KIGI is unrelated."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://tabelog.com/aichi/A2301/A230112/23098019/",
+          "menu": {
+            "pinSourceUrl": "https://tabelog.com/aichi/A2301/A230112/23098019/",
+            "name": "PATISSERIE & Kissa KIGI",
+            "checkedAt": "2026-10-18",
+            "menus": [
+              {
+                "label": "KIGI seasonal dine-in desserts",
+                "url": "https://tabelog.com/en/aichi/A2301/A230112/23098019/dtlmenu/photo/",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "秋果と金木犀のパフェ",
+                    "price": 3000,
+                    "note": "Tax included; includes one drink. Photographed October15; seasonal supply may change."
+                  },
+                  {
+                    "name": "よくばりデコ",
+                    "price": 2500,
+                    "note": "Tax included; includes one drink. Photographed October15; seasonal supply may change."
+                  }
+                ],
+                "note": "Exact Nagoya branch menu photographed October15,2026. Printed rule: one drink plus one order per guest; dessert prices include a drink. No seasonal expiry is published, so no dated Special is inferred."
+              },
+              {
+                "label": "KIGI drinks",
+                "url": "https://tabelog.com/en/aichi/A2301/A230112/23098019/dtlmenu/photo/",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "ブレンドコーヒー",
+                    "price": 650,
+                    "note": "Tax included as the menu footer states for all products; photograph October15,2026."
+                  },
+                  {
+                    "name": "アメリカーノ",
+                    "price": 650,
+                    "note": "Tax included as the menu footer states for all products; photograph October15,2026."
+                  },
+                  {
+                    "name": "カフェラテ",
+                    "price": 700,
+                    "note": "Tax included as the menu footer states for all products; photograph October15,2026."
+                  },
+                  {
+                    "name": "アッサム（インド）",
+                    "price": 700,
+                    "note": "Tax included as the menu footer states for all products; photograph October15,2026."
+                  },
+                  {
+                    "name": "台湾茶（文山包種茶）",
+                    "price": 800,
+                    "note": "Tax included as the menu footer states for all products; photograph October15,2026."
+                  },
+                  {
+                    "name": "ハーブティー",
+                    "price": 700,
+                    "note": "Tax included as the menu footer states for all products; photograph October15,2026."
+                  },
+                  {
+                    "name": "ロイヤルミルクティー",
+                    "price": 700,
+                    "note": "Tax included as the menu footer states for all products; photograph October15,2026."
+                  },
+                  {
+                    "name": "100%りんごジュース（青森県産）",
+                    "price": 650,
+                    "note": "Tax included as the menu footer states for all products; photograph October15,2026."
+                  },
+                  {
+                    "name": "100%ブラッドオレンジジュース",
+                    "price": 700,
+                    "note": "Tax included as the menu footer states for all products; photograph October15,2026."
+                  },
+                  {
+                    "name": "自家製ホットジンジャー",
+                    "price": 700,
+                    "note": "Tax included as the menu footer states for all products; photograph October15,2026."
+                  },
+                  {
+                    "name": "二杯目以降のドリンク",
+                    "price": 500,
+                    "note": "Photographed menu states a flat¥500from the second drink onward; first drink remains at its listed price. Confirm eligible choices in person."
+                  }
+                ],
+                "note": "Exact Nagoya drink list; not the unrelated Tokyo KIGI. One-drink/one-order rule printed on the adjacent menu applies. No unprinted hot/iced options or serving volumes inferred."
+              },
+              {
+                "label": "KIGI visitor-documented cake examples",
+                "url": "https://tabelog.com/en/aichi/A2301/A230112/23098019/dtlrvwlst/B537436129/",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "珈琲のパリブレスト",
+                    "price": 980,
+                    "note": "Price reported by idanbo after an October2026visit; no current daily availability guaranteed."
+                  },
+                  {
+                    "name": "サントノーレ",
+                    "price": 920,
+                    "note": "Price reported by 山登り大好き on opening day October15,2026; tax-inclusive review total¥1,720with¥800tea."
+                  }
+                ],
+                "note": "Two exact-branch firsthand visits, cross-checked against the photographed gallery. These cakes are visit examples rather than a complete current operator cake list."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://tabelog.com/aichi/A2301/A230112/23098019/",
+            "name": "PATISSERIE & Kissa KIGI",
+            "checkedAt": "2026-10-18",
+            "websiteUrl": "https://www.instagram.com/kigi_kissa/",
+            "phone": null,
+            "openingHours": [
+              {
+                "days": "Thursday/Sunday",
+                "hours": "12:00–20:00"
+              },
+              {
+                "days": "Friday/Saturday",
+                "hours": "12:00–22:00"
+              },
+              {
+                "days": "Monday–Wednesday",
+                "hours": "Closed"
+              }
+            ],
+            "detailsSourceUrl": "https://www.instagram.com/kigi_kissa/",
+            "additionalSources": [
+              {
+                "label": "Branch-specific research evidence",
+                "url": "https://tabelog.com/aichi/A2301/A230112/23098019/"
+              },
+              {
+                "label": "Branch-specific research evidence",
+                "url": "https://tabelog.com/en/aichi/A2301/A230112/23098019/"
+              },
+              {
+                "label": "Branch-specific research evidence",
+                "url": "https://tabelog.com/en/aichi/A2301/A230112/23098019/dtlphotolst/smp2/"
+              },
+              {
+                "label": "Branch-specific research evidence",
+                "url": "https://tabelog.com/en/aichi/A2301/A230112/23098019/dtlrvwlst/B537553268/"
+              },
+              {
+                "label": "Branch-specific research evidence",
+                "url": "https://tabelog.com/en/aichi/A2301/A230112/23098019/dtlrvwlst/B537436129/"
+              },
+              {
+                "label": "Branch-specific research evidence",
+                "url": "https://tabelog.com/en/aichi/A2301/A230112/23098019/dtlrvwlst/B537441544/"
+              },
+              {
+                "label": "Branch-specific research evidence",
+                "url": "https://tabelog.com/en/aichi/A2301/A230112/23098019/dtlmenu/photo/"
+              }
+            ],
+            "hoursNote": "Exact branch overview, all three menu photographs, 13-photo venue gallery and all three firsthand reviews checked. Official Instagram returned a sign-in shell; Japanese listing blocked plain curl, while full exact English branch pages and large visitor photographs downloaded. All13 photographed drink/dessert price entries retained with dates and conditions. Independent cake examples are dated observations. No current full cake-case inventory or direct branch telephone verified. Twelve seats are listed; a visitor describes11, so no precise seating guarantee published. Photographs are visitor-owned, not operator images. No coupon or Special inferred from ordinary seasonal pricing."
+          },
+          "tile": {
+            "regionSlug": "nagoya",
+            "kind": "opening",
+            "slug": "japan74-kigi",
+            "name": "PATISSERIE & Kissa KIGI",
+            "neighborhood": "Hotta",
+            "cuisine": "Patisserie and coffee",
+            "description": "A Hotta house cafe and patisserie with coffee, tea, seasonal plated desserts and visitor-documented individual cakes.",
+            "address": "1-25-2 Yanagigaecho, Mizuho-ku, Nagoya",
+            "websiteUrl": "https://www.instagram.com/kigi_kissa/",
+            "checkedAt": "2026-10-18",
+            "recognition": "",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-18/batch74-kigi-0-476124fcdb98b52f.webp",
+            "imageCredit": "idanbo / Tabelog",
+            "imageSourceUrl": "https://tabelog.com/en/aichi/A2301/A230112/23098019/dtlphotolst/smp2/",
+            "imageNote": "Exact Nagoya KIGI frontage, photographed October15,2026.",
+            "openingConfirmed": true,
+            "day": "2026-10-15"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-18/batch74-kigi-0-476124fcdb98b52f.webp",
+          "sha256": "476124fcdb98b52fa0bee1ad6f50cb9dac30b2b79d95c960d60f8c26e7a2d8c5",
+          "width": 640,
+          "height": 480,
+          "credit": "idanbo / Tabelog",
+          "note": "Exact Nagoya KIGI frontage, photographed October15,2026.",
+          "sourcePage": "https://tabelog.com/en/aichi/A2301/A230112/23098019/dtlphotolst/smp2/",
+          "originalUrl": "https://tblg.k-img.com/restaurant/images/Rvw/387340/640x640_rect_0f80f82d1ce10d812ccad73e9832c34b.jpg"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-18/batch74-kigi-1-ff61602d1cb0c87f.webp",
+          "sha256": "ff61602d1cb0c87fa0c26c2370596295994c210ac6739f9d93070521502782ff",
+          "width": 640,
+          "height": 480,
+          "credit": "idanbo / Tabelog",
+          "note": "Exact Nagoya KIGI interior, photographed October15,2026.",
+          "sourcePage": "https://tabelog.com/en/aichi/A2301/A230112/23098019/dtlphotolst/smp2/",
+          "originalUrl": "https://tblg.k-img.com/restaurant/images/Rvw/387340/640x640_rect_0bf93233ae3fd8550ae9c682ac08e148.jpg"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-18/batch74-kigi-2-74fc02f7a4abec56.webp",
+          "sha256": "74fc02f7a4abec56cca9ee75abf8e32bccd6da2b00d2a3d94917100378f5576d",
+          "width": 640,
+          "height": 480,
+          "credit": "idanbo / Tabelog",
+          "note": "Coffee Paris-Brest as captioned by the visitor; photographed October15,2026, availability may change.",
+          "sourcePage": "https://tabelog.com/en/aichi/A2301/A230112/23098019/dtlphotolst/smp2/",
+          "originalUrl": "https://tblg.k-img.com/restaurant/images/Rvw/387340/640x640_rect_dfd325f55b7676d096a2c0d8ca3cf3a7.jpg"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-18/batch74-kigi-3-6675d99b742fa1ad.webp",
+          "sha256": "6675d99b742fa1ad8b024ccc7bbd303905940cd037c4c6497e93f6d96152a719",
+          "width": 480,
+          "height": 640,
+          "credit": "山登り大好き / Tabelog",
+          "note": "Exact KIGI drink menu photographed October15,2026; prices may change.",
+          "sourcePage": "https://tabelog.com/en/aichi/A2301/A230112/23098019/dtlmenu/photo/",
+          "originalUrl": "https://tblg.k-img.com/restaurant/images/Rvw/387335/640x640_rect_1b01c8eeb3f2768513311edb803f63fa.jpg"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-18/batch74-kigi-4-3e3335a462ee7f4c.webp",
+          "sha256": "3e3335a462ee7f4c9146812ea65630242984e8e26a836386c4c5e913598477dd",
+          "width": 480,
+          "height": 640,
+          "credit": "山登り大好き / Tabelog",
+          "note": "Exact KIGI seasonal dine-in menu photographed October15,2026; drink included, tax included; offerings may change.",
+          "sourcePage": "https://tabelog.com/en/aichi/A2301/A230112/23098019/dtlmenu/photo/",
+          "originalUrl": "https://tblg.k-img.com/restaurant/images/Rvw/387335/640x640_rect_fe8c26007abcf899a065186f98676198.jpg"
+        }
+      ],
+      "verification": {
+        "local": {
+          "pinId": 17228,
+          "sourceUrl": "https://tabelog.com/aichi/A2301/A230112/23098019/",
+          "name": "PATISSERIE & Kissa KIGI",
+          "contentId": 1799,
+          "contentRevision": 1,
+          "verifiedGalleryLinks": 5,
+          "publicPinStatus": 200
+        },
+        "production": {
+          "pinId": 17166,
+          "sourceUrl": "https://tabelog.com/aichi/A2301/A230112/23098019/",
+          "name": "PATISSERIE & Kissa KIGI",
+          "contentId": 1696,
+          "contentRevision": 1,
+          "verifiedGalleryLinks": 5,
+          "publicPinStatus": 200
+        }
+      }
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Nanahishi Shoten Opens 2026-08-29",
+        "description": "A ten-seat traditional-house pizza cafe with four pizza lunch courses and a separate afternoon coffee-and-dessert menu.",
+        "sourceUrl": "https://tabelog.com/aichi/A2301/A230113/23097628/",
+        "address": "4-95 Konomicho, Nishi-ku, Nagoya",
+        "productName": "Nanahishi Shoten",
+        "utcStartDateTime": "2026-08-29T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "Branch-managed listing explicitly states August29,2026; two opening-day firsthand reviews corroborate actual service at the same address. Research and review-publication dates are not substituted.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Nagoya",
+          "Japan",
+          "Shonai-dori",
+          "Pizza and cafe"
+        ],
+        "longFormSummary": "<p>A ten-seat traditional-house pizza cafe with four pizza lunch courses and a separate afternoon coffee-and-dessert menu.<cite data-ref=\"https://tabelog.com/aichi/A2301/A230113/23097628/\"></cite></p><p>Branch-managed listing explicitly states August29,2026; two opening-day firsthand reviews corroborate actual service at the same address. Research and review-publication dates are not substituted.</p>",
+        "references": [
+          {
+            "url": "https://tabelog.com/aichi/A2301/A230113/23097628/",
+            "title": "Nanahishi Shoten — branch evidence",
+            "confidence": 90,
+            "reasoning": "Branch-managed listing explicitly states August29,2026; two opening-day firsthand reviews corroborate actual service at the same address. Research and review-publication dates are not substituted."
+          },
+          {
+            "url": "https://tabelog.com/en/aichi/A2301/A230113/23097628/",
+            "title": "Nanahishi Shoten — branch evidence",
+            "confidence": 90,
+            "reasoning": "Branch-managed listing explicitly states August29,2026; two opening-day firsthand reviews corroborate actual service at the same address. Research and review-publication dates are not substituted."
+          },
+          {
+            "url": "https://tabelog.com/en/aichi/A2301/A230113/23097628/dtlphotolst/smp2/",
+            "title": "Nanahishi Shoten — branch evidence",
+            "confidence": 90,
+            "reasoning": "Branch-managed listing explicitly states August29,2026; two opening-day firsthand reviews corroborate actual service at the same address. Research and review-publication dates are not substituted."
+          },
+          {
+            "url": "https://tabelog.com/en/aichi/A2301/A230113/23097628/dtlrvwlst/B534565909/",
+            "title": "Nanahishi Shoten — branch evidence",
+            "confidence": 90,
+            "reasoning": "Branch-managed listing explicitly states August29,2026; two opening-day firsthand reviews corroborate actual service at the same address. Research and review-publication dates are not substituted."
+          },
+          {
+            "url": "https://tabelog.com/en/aichi/A2301/A230113/23097628/dtlrvwlst/B534586937/",
+            "title": "Nanahishi Shoten — branch evidence",
+            "confidence": 90,
+            "reasoning": "Branch-managed listing explicitly states August29,2026; two opening-day firsthand reviews corroborate actual service at the same address. Research and review-publication dates are not substituted."
+          },
+          {
+            "url": "https://tabelog.com/en/aichi/A2301/A230113/23097628/dtlmenu/photo/",
+            "title": "Nanahishi Shoten — branch evidence",
+            "confidence": 90,
+            "reasoning": "Branch-managed listing explicitly states August29,2026; two opening-day firsthand reviews corroborate actual service at the same address. Research and review-publication dates are not substituted."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://tabelog.com/aichi/A2301/A230113/23097628/",
+          "menu": {
+            "pinSourceUrl": "https://tabelog.com/aichi/A2301/A230113/23097628/",
+            "name": "Nanahishi Shoten",
+            "checkedAt": "2026-10-18",
+            "menus": [
+              {
+                "label": "Nanahishi pizza lunch courses",
+                "url": "https://tabelog.com/en/aichi/A2301/A230113/23097628/dtlmenu/photo/",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "マルゲリータ — lunch course",
+                    "price": 3200,
+                    "note": "Tax included. Price covers the pizza-centred lunch course, not a standalone pizza; photographed August29,2026, subject to change."
+                  },
+                  {
+                    "name": "マリナーラ — lunch course",
+                    "price": 3100,
+                    "note": "Tax included. Price covers the pizza-centred lunch course, not a standalone pizza; photographed August29,2026, subject to change."
+                  },
+                  {
+                    "name": "シラスのピザ — lunch course",
+                    "price": 3600,
+                    "note": "Tax included. Price covers the pizza-centred lunch course, not a standalone pizza; photographed August29,2026, subject to change."
+                  },
+                  {
+                    "name": "フォルマッジ — lunch course",
+                    "price": 3600,
+                    "note": "Tax included. Price covers the pizza-centred lunch course, not a standalone pizza; photographed August29,2026, subject to change."
+                  },
+                  {
+                    "name": "前菜の盛り合わせ",
+                    "priceLabel": "Price not published",
+                    "note": "Lunch-course component, no separate price published; daily contents vary."
+                  },
+                  {
+                    "name": "本日のスープ",
+                    "priceLabel": "Price not published",
+                    "note": "Lunch-course component, no separate price published; daily contents vary."
+                  },
+                  {
+                    "name": "ドリップコーヒー（HOT/ICED）",
+                    "priceLabel": "Price not published",
+                    "note": "After-meal drink choice printed on the lunch-course menu; included, no separate price."
+                  },
+                  {
+                    "name": "エスプレッソ",
+                    "priceLabel": "Price not published",
+                    "note": "After-meal drink choice printed on the lunch-course menu; included, no separate price."
+                  },
+                  {
+                    "name": "紅茶（HOT/ICED）",
+                    "priceLabel": "Price not published",
+                    "note": "After-meal drink choice printed on the lunch-course menu; included, no separate price."
+                  },
+                  {
+                    "name": "ほうじ茶（HOT/ICED）",
+                    "priceLabel": "Price not published",
+                    "note": "After-meal drink choice printed on the lunch-course menu; included, no separate price."
+                  },
+                  {
+                    "name": "本日のデザート",
+                    "priceLabel": "Price not published",
+                    "note": "Dessert named on the photographed lunch menu; no separate price or explicit inclusion in its English course header. Firsthand opening-day visits report dessert served; confirm today’s inclusion and selection."
+                  },
+                  {
+                    "name": "ティラミス",
+                    "priceLabel": "Price not published",
+                    "note": "Dessert named on the photographed lunch menu; no separate price or explicit inclusion in its English course header. Firsthand opening-day visits report dessert served; confirm today’s inclusion and selection."
+                  },
+                  {
+                    "name": "ミルクジェラート",
+                    "priceLabel": "Price not published",
+                    "note": "Dessert named on the photographed lunch menu; no separate price or explicit inclusion in its English course header. Firsthand opening-day visits report dessert served; confirm today’s inclusion and selection."
+                  }
+                ],
+                "note": "Exact branch photographed course sheet, August29. Printed header: appetizer salad + today’s soup + choice of pizza + after-meal drink. Four course prices tax included; dessert block retained with its inclusion uncertainty. Not another branch’s menu."
+              },
+              {
+                "label": "Nanahishi additional drinks",
+                "url": "https://tabelog.com/en/aichi/A2301/A230113/23097628/dtlmenu/photo/",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "グラスビール 小",
+                    "price": 350,
+                    "note": "Tax included as stated on the companion branch menu; August29photograph, subject to change. Paid additions, not assumed part of the course."
+                  },
+                  {
+                    "name": "グラスビール 中",
+                    "price": 650,
+                    "note": "Tax included as stated on the companion branch menu; August29photograph, subject to change. Paid additions, not assumed part of the course."
+                  },
+                  {
+                    "name": "グラスワイン 赤・白",
+                    "price": 650,
+                    "note": "Tax included as stated on the companion branch menu; August29photograph, subject to change. Paid additions, not assumed part of the course."
+                  },
+                  {
+                    "name": "瓶ビール（ハートランド）",
+                    "price": 650,
+                    "note": "Tax included as stated on the companion branch menu; August29photograph, subject to change. Paid additions, not assumed part of the course."
+                  },
+                  {
+                    "name": "コンブチャ（アールグレイ）",
+                    "price": 800,
+                    "note": "Tax included as stated on the companion branch menu; August29photograph, subject to change. Paid additions, not assumed part of the course."
+                  },
+                  {
+                    "name": "プレミアム柑橘ジュース",
+                    "price": 800,
+                    "note": "Tax included as stated on the companion branch menu; August29photograph, subject to change. Paid additions, not assumed part of the course."
+                  },
+                  {
+                    "name": "ほうじ茶（加賀棒茶）",
+                    "price": 650,
+                    "note": "Tax included as stated on the companion branch menu; August29photograph, subject to change. Paid additions, not assumed part of the course."
+                  },
+                  {
+                    "name": "ノンアルコールビール",
+                    "price": 600,
+                    "note": "Tax included as stated on the companion branch menu; August29photograph, subject to change. Paid additions, not assumed part of the course."
+                  },
+                  {
+                    "name": "クラフトジンジャーエール",
+                    "price": 700,
+                    "note": "Tax included as stated on the companion branch menu; August29photograph, subject to change. Paid additions, not assumed part of the course."
+                  },
+                  {
+                    "name": "クラフト梅ジュース",
+                    "price": 700,
+                    "note": "Tax included as stated on the companion branch menu; August29photograph, subject to change. Paid additions, not assumed part of the course."
+                  }
+                ],
+                "note": "Exact branch photographed drink list. Glass sizes lack volume; no free-flow entitlement inferred."
+              },
+              {
+                "label": "Nanahishi cafe15:00–18:00",
+                "url": "https://tabelog.com/en/aichi/A2301/A230113/23097628/dtlmenu/photo/",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "エスプレッソ",
+                    "price": 650,
+                    "note": "Tax included; cafe15:00–18:00as printed. September5,2026photograph, subject to change."
+                  },
+                  {
+                    "name": "ドリップコーヒー",
+                    "price": 650,
+                    "note": "Tax included; cafe15:00–18:00as printed. September5,2026photograph, subject to change."
+                  },
+                  {
+                    "name": "カフェラテ",
+                    "price": 700,
+                    "note": "Tax included; cafe15:00–18:00as printed. September5,2026photograph, subject to change."
+                  },
+                  {
+                    "name": "アイスコーヒー",
+                    "price": 650,
+                    "note": "Tax included; cafe15:00–18:00as printed. September5,2026photograph, subject to change."
+                  },
+                  {
+                    "name": "アイスカフェラテ",
+                    "price": 700,
+                    "note": "Tax included; cafe15:00–18:00as printed. September5,2026photograph, subject to change."
+                  },
+                  {
+                    "name": "ダージリンティー（HOT/ICED）",
+                    "price": 650,
+                    "note": "Tax included; cafe15:00–18:00as printed. September5,2026photograph, subject to change."
+                  },
+                  {
+                    "name": "プレミアム柑橘ジュース（不知火／いよかん）",
+                    "price": 800,
+                    "note": "Tax included; cafe15:00–18:00as printed. September5,2026photograph, subject to change."
+                  },
+                  {
+                    "name": "自家製ジンジャーエール",
+                    "price": 700,
+                    "note": "Tax included; cafe15:00–18:00as printed. September5,2026photograph, subject to change."
+                  },
+                  {
+                    "name": "自家製梅ソーダ",
+                    "price": 700,
+                    "note": "Tax included; cafe15:00–18:00as printed. September5,2026photograph, subject to change."
+                  },
+                  {
+                    "name": "日替わり焼き菓子",
+                    "price": 250,
+                    "note": "Tax included; cafe15:00–18:00as printed. September5,2026photograph, subject to change."
+                  },
+                  {
+                    "name": "ティラミス",
+                    "price": 500,
+                    "note": "Tax included; cafe15:00–18:00as printed. September5,2026photograph, subject to change."
+                  },
+                  {
+                    "name": "ミルクジェラート",
+                    "price": 500,
+                    "note": "Tax included; cafe15:00–18:00as printed. September5,2026photograph, subject to change."
+                  },
+                  {
+                    "name": "アフォガート",
+                    "price": 750,
+                    "note": "Tax included; cafe15:00–18:00as printed. September5,2026photograph, subject to change."
+                  },
+                  {
+                    "name": "オランジェット",
+                    "price": 350,
+                    "note": "Tax included; cafe15:00–18:00as printed. September5,2026photograph, subject to change."
+                  }
+                ],
+                "note": "Exact cafe-time sheet:15:00–18:00. Cafe dessert prices do not establish lunch-course surcharges or inclusions."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://tabelog.com/aichi/A2301/A230113/23097628/",
+            "name": "Nanahishi Shoten",
+            "checkedAt": "2026-10-18",
+            "websiteUrl": "https://www.instagram.com/nanahishi.7/",
+            "phone": "080-4152-6002",
+            "openingHours": [
+              {
+                "days": "Monday/Friday/Saturday/Sunday lunch",
+                "hours": "12:00–14:00"
+              },
+              {
+                "days": "Monday/Friday/Saturday/Sunday cafe",
+                "hours": "15:00–18:00"
+              },
+              {
+                "days": "Tuesday/Wednesday/Thursday",
+                "hours": "Closed"
+              }
+            ],
+            "detailsSourceUrl": "https://www.instagram.com/nanahishi.7/",
+            "additionalSources": [
+              {
+                "label": "Branch-specific research evidence",
+                "url": "https://tabelog.com/aichi/A2301/A230113/23097628/"
+              },
+              {
+                "label": "Branch-specific research evidence",
+                "url": "https://tabelog.com/en/aichi/A2301/A230113/23097628/"
+              },
+              {
+                "label": "Branch-specific research evidence",
+                "url": "https://tabelog.com/en/aichi/A2301/A230113/23097628/dtlphotolst/smp2/"
+              },
+              {
+                "label": "Branch-specific research evidence",
+                "url": "https://tabelog.com/en/aichi/A2301/A230113/23097628/dtlrvwlst/B534565909/"
+              },
+              {
+                "label": "Branch-specific research evidence",
+                "url": "https://tabelog.com/en/aichi/A2301/A230113/23097628/dtlrvwlst/B534586937/"
+              },
+              {
+                "label": "Branch-specific research evidence",
+                "url": "https://tabelog.com/en/aichi/A2301/A230113/23097628/dtlmenu/photo/"
+              }
+            ],
+            "hoursNote": "Exact corporate-member branch overview, all seven menu photographs, 40-photo gallery, two opening-day reviews and official Instagram checked. Instagram returned a sign-in shell; full English branch menus/photos downloaded via plain curl. Lunch primarily by reservation; walk-ins only when seats remain, per managed listing. Cafe has a separately photographed14-item menu. Photos/prices date August–September2026; current operator confirmation of unchanged prices remains a gap. Header does not unambiguously include dessert although firsthand visits received it; confirm directly. Current daily soup/appetizer/dessert roster unpublished; no Augustexample presented as today’s menu. Dinner was only a future plan in an Augustreview and is not advertised as operating. No verified dated discount or promotion found.",
+            "reservationUrl": "https://www.instagram.com/nanahishi.7/"
+          },
+          "tile": {
+            "regionSlug": "nagoya",
+            "kind": "opening",
+            "slug": "japan74-nanahishi",
+            "name": "Nanahishi Shoten",
+            "neighborhood": "Shonai-dori",
+            "cuisine": "Pizza and cafe",
+            "description": "A ten-seat traditional-house pizza cafe with four pizza lunch courses and a separate afternoon coffee-and-dessert menu.",
+            "address": "4-95 Konomicho, Nishi-ku, Nagoya",
+            "websiteUrl": "https://www.instagram.com/nanahishi.7/",
+            "checkedAt": "2026-10-18",
+            "recognition": "",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-18/batch74-nanahishi-0-666f23ee9f7baf60.webp",
+            "imageCredit": "idanbo / Tabelog",
+            "imageSourceUrl": "https://tabelog.com/en/aichi/A2301/A230113/23097628/dtlphotolst/smp2/",
+            "imageNote": "Exact Nanahishi Shoten exterior, photographed August29,2026.",
+            "openingConfirmed": true,
+            "day": "2026-08-29"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-18/batch74-nanahishi-0-666f23ee9f7baf60.webp",
+          "sha256": "666f23ee9f7baf602d552b8edf9189df13368c4418a507e7584cc9584eb78088",
+          "width": 640,
+          "height": 480,
+          "credit": "idanbo / Tabelog",
+          "note": "Exact Nanahishi Shoten exterior, photographed August29,2026.",
+          "sourcePage": "https://tabelog.com/en/aichi/A2301/A230113/23097628/dtlphotolst/smp2/",
+          "originalUrl": "https://tblg.k-img.com/restaurant/images/Rvw/378787/640x640_rect_d1e5d54a3251f62694ac3d26fc28f169.jpg"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-18/batch74-nanahishi-1-cb43f64f192a2910.webp",
+          "sha256": "cb43f64f192a291092abd06b188d9c4e711cda15e632954c26ecd613cba808d4",
+          "width": 640,
+          "height": 480,
+          "credit": "idanbo / Tabelog",
+          "note": "Exact Nanahishi Shoten interior, photographed August29,2026.",
+          "sourcePage": "https://tabelog.com/en/aichi/A2301/A230113/23097628/dtlphotolst/smp2/",
+          "originalUrl": "https://tblg.k-img.com/restaurant/images/Rvw/378787/640x640_rect_932df9bd255cd0bc69c79f8d26aa3ccc.jpg"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-18/batch74-nanahishi-2-081c1f6bdfc552a7.webp",
+          "sha256": "081c1f6bdfc552a7fd00de25a9c5c114bfb2aaa9efe5e5620ebeaee7f805affb",
+          "width": 640,
+          "height": 480,
+          "credit": "idanbo / Tabelog",
+          "note": "Margherita as captioned by the visitor; photographed August29,2026, lunch course presentation may change.",
+          "sourcePage": "https://tabelog.com/en/aichi/A2301/A230113/23097628/dtlphotolst/smp2/",
+          "originalUrl": "https://tblg.k-img.com/restaurant/images/Rvw/378787/640x640_rect_42381440db0e2c6d84483deaa3f66ab5.jpg"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-18/batch74-nanahishi-3-ea4ad01c4f00dca7.webp",
+          "sha256": "ea4ad01c4f00dca7929c184508c22f4751859142c48d5acf16f872538ffc2da7",
+          "width": 640,
+          "height": 480,
+          "credit": "idanbo / Tabelog",
+          "note": "Appetizer assortment as captioned by the visitor; photographed August29,2026, not a guaranteed current component roster.",
+          "sourcePage": "https://tabelog.com/en/aichi/A2301/A230113/23097628/dtlphotolst/smp2/",
+          "originalUrl": "https://tblg.k-img.com/restaurant/images/Rvw/378787/640x640_rect_6a886b694871feb35a219a4f05b8fc1a.jpg"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-18/batch74-nanahishi-4-4ddc934b7e2518e4.webp",
+          "sha256": "4ddc934b7e2518e4b73994b75f61b6d4ec2a6723ce11ec0d2b85e4c99ac26326",
+          "width": 640,
+          "height": 640,
+          "credit": "しまなつしま / Tabelog",
+          "note": "Exact branch cafe menu photographed September5,2026; cafe15:00–18:00 and tax-inclusive prices, subject to change.",
+          "sourcePage": "https://tabelog.com/en/aichi/A2301/A230113/23097628/dtlmenu/photo/",
+          "originalUrl": "https://tblg.k-img.com/restaurant/images/Rvw/380126/640x640_rect_7bea38581b41162db859aa7dc4b4187c.jpg"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-18/batch74-nanahishi-5-aa430e60315d6deb.webp",
+          "sha256": "aa430e60315d6deb1843da2154bad7011da13464ebee10f3ceb1cfa06e292720",
+          "width": 480,
+          "height": 640,
+          "credit": "idanbo / Tabelog",
+          "note": "Exact branch additional-drink menu photographed August29,2026; subject to change.",
+          "sourcePage": "https://tabelog.com/en/aichi/A2301/A230113/23097628/dtlmenu/photo/",
+          "originalUrl": "https://tblg.k-img.com/restaurant/images/Rvw/378787/640x640_rect_9b4e4360246e1551faedf4dc02999e7d.jpg"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-18/batch74-nanahishi-6-1a11f2d02d2b199f.webp",
+          "sha256": "1a11f2d02d2b199fbbd6760df74b8d37f6ab89c1b32e7811c9b7da22e0e07161",
+          "width": 480,
+          "height": 640,
+          "credit": "idanbo / Tabelog",
+          "note": "Exact branch lunch menu photographed August29,2026; four pizza course prices, not standalone pizzas; tax included, subject to change.",
+          "sourcePage": "https://tabelog.com/en/aichi/A2301/A230113/23097628/dtlmenu/photo/",
+          "originalUrl": "https://tblg.k-img.com/restaurant/images/Rvw/378787/640x640_rect_9faa6039e732aea71342048d5b31ab31.jpg"
+        }
+      ],
+      "verification": {
+        "local": {
+          "pinId": 17229,
+          "sourceUrl": "https://tabelog.com/aichi/A2301/A230113/23097628/",
+          "name": "Nanahishi Shoten",
+          "contentId": 1800,
+          "contentRevision": 1,
+          "verifiedGalleryLinks": 7,
+          "publicPinStatus": 200
+        },
+        "production": {
+          "pinId": 17167,
+          "sourceUrl": "https://tabelog.com/aichi/A2301/A230113/23097628/",
+          "name": "Nanahishi Shoten",
+          "contentId": 1697,
+          "contentRevision": 1,
+          "verifiedGalleryLinks": 7,
+          "publicPinStatus": 200
+        }
+      }
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "OSAKA HONMACHI ONO Opens 2026-12-18",
+        "description": "An upcoming second-floor ONO restaurant with a choice-of-main breakfast buffet and planned sushi-and-seafood lunch and dinner.",
+        "sourceUrl": "https://solaria-osakahonmachi.nnr-h.com/teaser#restaurant",
+        "address": "2F Solaria Nishitetsu Hotel Osaka Honmachi, 4-1-7 Honmachi, Chuo-ku, Osaka",
+        "productName": "OSAKA HONMACHI ONO",
+        "utcStartDateTime": "2026-12-18T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "Exact ONO Group employer listing explicitly announces December18,2026NEW OPEN for this restaurant and states hotel and restaurant open simultaneously. Hotel landlord release and official site corroborate the venue. The restaurant date is not inferred from building completion or the parent company’s founding.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Osaka",
+          "Japan",
+          "Honmachi",
+          "Japanese seafood and breakfast"
+        ],
+        "longFormSummary": "<p>An upcoming second-floor ONO restaurant with a choice-of-main breakfast buffet and planned sushi-and-seafood lunch and dinner.<cite data-ref=\"https://solaria-osakahonmachi.nnr-h.com/teaser#restaurant\"></cite></p><p>Exact ONO Group employer listing explicitly announces December18,2026NEW OPEN for this restaurant and states hotel and restaurant open simultaneously. Hotel landlord release and official site corroborate the venue. The restaurant date is not inferred from building completion or the parent company’s founding.</p>",
+        "references": [
+          {
+            "url": "https://solaria-osakahonmachi.nnr-h.com/teaser#restaurant",
+            "title": "OSAKA HONMACHI ONO — branch evidence",
+            "confidence": 90,
+            "reasoning": "Exact ONO Group employer listing explicitly announces December18,2026NEW OPEN for this restaurant and states hotel and restaurant open simultaneously. Hotel landlord release and official site corroborate the venue. The restaurant date is not inferred from building completion or the parent company’s founding."
+          },
+          {
+            "url": "https://prtimes.jp/main/html/rd/p/000000923.000017692.html",
+            "title": "OSAKA HONMACHI ONO — branch evidence",
+            "confidence": 90,
+            "reasoning": "Exact ONO Group employer listing explicitly announces December18,2026NEW OPEN for this restaurant and states hotel and restaurant open simultaneously. Hotel landlord release and official site corroborate the venue. The restaurant date is not inferred from building completion or the parent company’s founding."
+          },
+          {
+            "url": "https://townwork.net/viewjob/jobid_18f061640f152e42/",
+            "title": "OSAKA HONMACHI ONO — branch evidence",
+            "confidence": 90,
+            "reasoning": "Exact ONO Group employer listing explicitly announces December18,2026NEW OPEN for this restaurant and states hotel and restaurant open simultaneously. Hotel landlord release and official site corroborate the venue. The restaurant date is not inferred from building completion or the parent company’s founding."
+          },
+          {
+            "url": "https://ono-group.com/",
+            "title": "OSAKA HONMACHI ONO — branch evidence",
+            "confidence": 90,
+            "reasoning": "Exact ONO Group employer listing explicitly announces December18,2026NEW OPEN for this restaurant and states hotel and restaurant open simultaneously. Hotel landlord release and official site corroborate the venue. The restaurant date is not inferred from building completion or the parent company’s founding."
+          },
+          {
+            "url": "https://solaria-osakahonmachi.nnr-h.com/",
+            "title": "OSAKA HONMACHI ONO — branch evidence",
+            "confidence": 90,
+            "reasoning": "Exact ONO Group employer listing explicitly announces December18,2026NEW OPEN for this restaurant and states hotel and restaurant open simultaneously. Hotel landlord release and official site corroborate the venue. The restaurant date is not inferred from building completion or the parent company’s founding."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://solaria-osakahonmachi.nnr-h.com/teaser#restaurant",
+          "menu": {
+            "pinSourceUrl": "https://solaria-osakahonmachi.nnr-h.com/teaser#restaurant",
+            "name": "OSAKA HONMACHI ONO",
+            "checkedAt": "2026-10-18",
+            "menus": [
+              {
+                "label": "ONO announced breakfast",
+                "url": "https://prtimes.jp/main/html/rd/p/000000923.000017692.html",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "選べるメイン＋ハーフブッフェ",
+                    "price": 3500,
+                    "note": "Tax included; breakfast6:30–11:00. Official site describes Western, Japanese and vegan main-dish choices without naming individual dishes."
+                  }
+                ],
+                "note": "Operator/landlord release and rendered official branch site checked. Planned menu may change before December18launch. No individual dish inferred from the promotional breakfast spread."
+              },
+              {
+                "label": "ONO announced lunch and dinner",
+                "url": "https://solaria-osakahonmachi.nnr-h.com/teaser#restaurant",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "寿司",
+                    "priceLabel": "Price not published",
+                    "note": "Official branch site names sushi as a lunch/dinner focus; varieties, portions and prices are not published."
+                  },
+                  {
+                    "name": "海鮮を中心とした和食",
+                    "priceLabel": "Price not published",
+                    "note": "Official branch site names seafood-focused Japanese cooking; no exact species, course or price published."
+                  }
+                ],
+                "note": "Official restaurant section: lunch11:00–15:00and dinner17:00–23:00both planned. The3F cafe/bar is a separate venue; its¥200–1,000items are not borrowed here."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://solaria-osakahonmachi.nnr-h.com/teaser#restaurant",
+            "name": "OSAKA HONMACHI ONO",
+            "checkedAt": "2026-10-18",
+            "websiteUrl": "https://solaria-osakahonmachi.nnr-h.com/teaser#restaurant",
+            "phone": null,
+            "openingHours": [
+              {
+                "days": "Breakfast",
+                "hours": "06:30–11:00 from launch"
+              },
+              {
+                "days": "Lunch planned",
+                "hours": "11:00–15:00 from launch; confirm final service"
+              },
+              {
+                "days": "Dinner planned",
+                "hours": "17:00–23:00 from launch; confirm final service"
+              }
+            ],
+            "detailsSourceUrl": "https://solaria-osakahonmachi.nnr-h.com/teaser#restaurant",
+            "additionalSources": [
+              {
+                "label": "Branch-specific research evidence",
+                "url": "https://prtimes.jp/main/html/rd/p/000000923.000017692.html"
+              },
+              {
+                "label": "Branch-specific research evidence",
+                "url": "https://townwork.net/viewjob/jobid_18f061640f152e42/"
+              },
+              {
+                "label": "Branch-specific research evidence",
+                "url": "https://ono-group.com/"
+              },
+              {
+                "label": "Branch-specific research evidence",
+                "url": "https://solaria-osakahonmachi.nnr-h.com/"
+              }
+            ],
+            "hoursNote": "Exact hotel official rendered site/restaurant section, complete landlord release/gallery, ONO Group site and restaurant-specific employer announcement checked. Employer text opened through indexed source; plain curl blocked. Full priced lunch/dinner menu, exact dish roster, direct restaurant telephone, last orders and completed-venue photographs are not yet published in checked sources. The second-floor restaurant rendering and illustrative breakfast photograph are explicitly labelled;3F cafe/bar images/prices excluded. One¥3,500breakfast package plus named unpriced cuisine retained. No dated Special or free hotel-breakfast entitlement invented. Planned opening/menu/hours may change."
+          },
+          "tile": {
+            "regionSlug": "osaka",
+            "kind": "opening",
+            "slug": "japan74-ono",
+            "name": "OSAKA HONMACHI ONO",
+            "neighborhood": "Honmachi",
+            "cuisine": "Japanese seafood and breakfast",
+            "description": "An upcoming second-floor ONO restaurant with a choice-of-main breakfast buffet and planned sushi-and-seafood lunch and dinner.",
+            "address": "2F Solaria Nishitetsu Hotel Osaka Honmachi, 4-1-7 Honmachi, Chuo-ku, Osaka",
+            "websiteUrl": "https://solaria-osakahonmachi.nnr-h.com/teaser#restaurant",
+            "checkedAt": "2026-10-18",
+            "recognition": "",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-18/batch74-ono-0-253e004b6c0f418b.webp",
+            "imageCredit": "Nishi-Nippon Railroad / Nishitetsu Hotels via PR TIMES",
+            "imageSourceUrl": "https://prtimes.jp/main/html/rd/p/000000923.000017692.html",
+            "imageNote": "Planned second-floor ONO restaurant rendering; completed venue photography is not yet published.",
+            "openingConfirmed": true,
+            "day": "2026-12-18"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-18/batch74-ono-0-253e004b6c0f418b.webp",
+          "sha256": "253e004b6c0f418b2ddd9e0aac0b2da13e10dd0f01a47e682b23694faa5c3f07",
+          "width": 752,
+          "height": 501,
+          "credit": "Nishi-Nippon Railroad / Nishitetsu Hotels via PR TIMES",
+          "note": "Planned second-floor ONO restaurant rendering; completed venue photography is not yet published.",
+          "sourcePage": "https://prtimes.jp/main/html/rd/p/000000923.000017692.html",
+          "originalUrl": "https://prcdn.freetls.fastly.net/release_image/17692/923/17692-923-67910889ec9fa2b948fbbb802e4037e2-752x501.jpg?width=1950&height=1350&quality=85&format=jpeg&auto=webp&fit=bounds&bg-color=fff"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-18/batch74-ono-1-62a12d5b25466dfe.webp",
+          "sha256": "62a12d5b25466dfecf54d0a3860b3e39d027a01c0f491cc58095c05f2260f491",
+          "width": 509,
+          "height": 339,
+          "credit": "Nishi-Nippon Railroad / Nishitetsu Hotels via PR TIMES",
+          "note": "Operator breakfast promotional illustration; not a guaranteed dish roster or a photograph of an operating branch.",
+          "sourcePage": "https://prtimes.jp/main/html/rd/p/000000923.000017692.html",
+          "originalUrl": "https://prcdn.freetls.fastly.net/release_image/17692/923/17692-923-7e80659f7be9db6ae47474cf4f147540-509x339.jpg?width=1950&height=1350&quality=85&format=jpeg&auto=webp&fit=bounds&bg-color=fff"
+        }
+      ],
+      "verification": {
+        "local": {
+          "pinId": 17230,
+          "sourceUrl": "https://solaria-osakahonmachi.nnr-h.com/teaser#restaurant",
+          "name": "OSAKA HONMACHI ONO",
+          "contentId": 1801,
+          "contentRevision": 1,
+          "verifiedGalleryLinks": 2,
+          "publicPinStatus": 200
+        },
+        "production": {
+          "pinId": 17168,
+          "sourceUrl": "https://solaria-osakahonmachi.nnr-h.com/teaser#restaurant",
+          "name": "OSAKA HONMACHI ONO",
+          "contentId": 1698,
+          "contentRevision": 1,
+          "verifiedGalleryLinks": 2,
+          "publicPinStatus": 200
+        }
+      }
+    }
+  ],
+  "verifiedAtUtc": "2026-10-18T14:57:51.795326+00:00",
+  "verification": {
+    "local": [
+      {
+        "pinId": 17228,
+        "sourceUrl": "https://tabelog.com/aichi/A2301/A230112/23098019/",
+        "name": "PATISSERIE & Kissa KIGI",
+        "contentId": 1799,
+        "contentRevision": 1,
+        "verifiedGalleryLinks": 5,
+        "publicPinStatus": 200
+      },
+      {
+        "pinId": 17229,
+        "sourceUrl": "https://tabelog.com/aichi/A2301/A230113/23097628/",
+        "name": "Nanahishi Shoten",
+        "contentId": 1800,
+        "contentRevision": 1,
+        "verifiedGalleryLinks": 7,
+        "publicPinStatus": 200
+      },
+      {
+        "pinId": 17230,
+        "sourceUrl": "https://solaria-osakahonmachi.nnr-h.com/teaser#restaurant",
+        "name": "OSAKA HONMACHI ONO",
+        "contentId": 1801,
+        "contentRevision": 1,
+        "verifiedGalleryLinks": 2,
+        "publicPinStatus": 200
+      }
+    ],
+    "production": [
+      {
+        "pinId": 17166,
+        "sourceUrl": "https://tabelog.com/aichi/A2301/A230112/23098019/",
+        "name": "PATISSERIE & Kissa KIGI",
+        "contentId": 1696,
+        "contentRevision": 1,
+        "verifiedGalleryLinks": 5,
+        "publicPinStatus": 200
+      },
+      {
+        "pinId": 17167,
+        "sourceUrl": "https://tabelog.com/aichi/A2301/A230113/23097628/",
+        "name": "Nanahishi Shoten",
+        "contentId": 1697,
+        "contentRevision": 1,
+        "verifiedGalleryLinks": 7,
+        "publicPinStatus": 200
+      },
+      {
+        "pinId": 17168,
+        "sourceUrl": "https://solaria-osakahonmachi.nnr-h.com/teaser#restaurant",
+        "name": "OSAKA HONMACHI ONO",
+        "contentId": 1698,
+        "contentRevision": 1,
+        "verifiedGalleryLinks": 2,
+        "publicPinStatus": 200
+      }
+    ],
+    "localGuideCards": [
+      {
+        "pinId": 17228,
+        "region": "nagoya",
+        "view": "new",
+        "page": 1,
+        "nativeTitleAndImage": true,
+        "hrefs": [
+          "/pin/17228/patisserie-kissa-kigi-opens-2026-10-15"
+        ],
+        "guideStatus": 200,
+        "openingDate": "2026-10-15",
+        "offers": []
+      },
+      {
+        "pinId": 17229,
+        "region": "nagoya",
+        "view": "new",
+        "page": 2,
+        "nativeTitleAndImage": true,
+        "hrefs": [
+          "/pin/17229/nanahishi-shoten-opens-2026-08-29"
+        ],
+        "guideStatus": 200,
+        "openingDate": "2026-08-29",
+        "offers": []
+      },
+      {
+        "pinId": 17230,
+        "region": "osaka",
+        "view": "upcoming",
+        "page": 1,
+        "nativeTitleAndImage": true,
+        "hrefs": [
+          "/pin/17230/osaka-honmachi-ono-opens-2026-12-18"
+        ],
+        "guideStatus": 200,
+        "openingDate": "2026-12-18",
+        "offers": []
+      }
+    ],
+    "productionGuideCards": [
+      {
+        "pinId": 17166,
+        "region": "nagoya",
+        "view": "new",
+        "page": 1,
+        "nativeTitleAndImage": true,
+        "hrefs": [
+          "/pin/17166/patisserie-kissa-kigi-opens-2026-10-15"
+        ],
+        "guideStatus": 200,
+        "openingDate": "2026-10-15",
+        "offers": []
+      },
+      {
+        "pinId": 17167,
+        "region": "nagoya",
+        "view": "new",
+        "page": 2,
+        "nativeTitleAndImage": true,
+        "hrefs": [
+          "/pin/17167/nanahishi-shoten-opens-2026-08-29"
+        ],
+        "guideStatus": 200,
+        "openingDate": "2026-08-29",
+        "offers": []
+      },
+      {
+        "pinId": 17168,
+        "region": "osaka",
+        "view": "upcoming",
+        "page": 1,
+        "nativeTitleAndImage": true,
+        "hrefs": [
+          "/pin/17168/osaka-honmachi-ono-opens-2026-12-18"
+        ],
+        "guideStatus": 200,
+        "openingDate": "2026-12-18",
+        "offers": []
+      }
+    ],
+    "all24CountsAgree": true,
+    "counts": [
+      {
+        "environment": "production",
+        "city": "fukuoka",
+        "view": "upcoming",
+        "count": 10,
+        "ids": [
+          "15398",
+          "15410",
+          "15411",
+          "15415",
+          "15424",
+          "15425",
+          "15426",
+          "15427",
+          "15914",
+          "15924"
+        ]
+      },
+      {
+        "environment": "production",
+        "city": "fukuoka",
+        "view": "new",
+        "count": 18,
+        "ids": [
+          "15399",
+          "15400",
+          "15401",
+          "15409",
+          "15412",
+          "15414",
+          "15421",
+          "15422",
+          "15423",
+          "15428",
+          "15969",
+          "16026",
+          "16027",
+          "16078",
+          "16290",
+          "16291",
+          "16292",
+          "16326"
+        ]
+      },
+      {
+        "environment": "production",
+        "city": "fukuoka",
+        "view": "top",
+        "count": 14,
+        "ids": [
+          "15402",
+          "15403",
+          "15404",
+          "15405",
+          "15406",
+          "15407",
+          "15408",
+          "15413",
+          "15416",
+          "15417",
+          "15418",
+          "15419",
+          "15420",
+          "15429"
+        ]
+      },
+      {
+        "environment": "production",
+        "city": "fukuoka",
+        "view": "discounts",
+        "count": 26,
+        "ids": [
+          "https://333sanmitomatoramen.com/store/%e5%a4%a9%e7%a5%9e%e5%a4%a7%e5%90%8d%e6%9c%ac%e5%ba%97/",
+          "https://and-gallery.com/#hukuoka",
+          "https://cene.tokyo/collections/fukuoka-open",
+          "https://fukuoka-orientalhotel.com/restaurant/linksquare/",
+          "https://fukuokaseahawk.hiltonjapan.co.jp/restaurants/clouds",
+          "https://fukuokaseahawk.hiltonjapan.co.jp/restaurants/seala",
+          "https://kusiyatubame.owst.jp/",
+          "https://prtimes.jp/main/html/rd/p/000000064.000152670.html",
+          "https://pukutoco.com/shi-yanyan-ropponmatu/",
+          "https://pukutoco.com/sumomo-bakery-1007open/",
+          "https://pukutoco.com/sumomobakery-akasaka1019open/",
+          "https://toeihotel-fukuoka.com/restaurant/bistro_atrie/",
+          "https://www.eggsnthingsjapan.com/hakata/",
+          "https://www.f-sunpalace.com/restaurant/lagoon/",
+          "https://www.fuk.hotelokura.co.jp/restaurant/lechampdor/",
+          "https://www.gate-hotel.jp/fukuoka/rb/agfukuoka.html",
+          "https://www.hiramatsurestaurant.jp/hiramatsu-hakata/",
+          "https://www.hotelnikko-fukuoka.com/restaurant/celebrites/",
+          "https://www.hotelnikko-fukuoka.com/restaurant/serena/",
+          "https://www.hotpepper.jp/strJ001276550/",
+          "https://www.kys-newotani.co.jp/hakata/restaurant/castillian-bar/",
+          "https://www.orec.co.jp/greenlab-fukuoka/",
+          "https://www.princehotels.co.jp/momochihama/restaurant/yocaterrace/",
+          "https://www.quil-fait-bon.com/pages/fukuoka",
+          "https://www.recent-hotel.com/restaurant/",
+          "https://www.tenchika.com/shop/h_b_antique/"
+        ]
+      },
+      {
+        "environment": "production",
+        "city": "osaka",
+        "view": "upcoming",
+        "count": 12,
+        "ids": [
+          "15432",
+          "15445",
+          "15447",
+          "15448",
+          "15449",
+          "15458",
+          "15913",
+          "15925",
+          "15975",
+          "16023",
+          "16079",
+          "17168"
+        ]
+      },
+      {
+        "environment": "production",
+        "city": "osaka",
+        "view": "new",
+        "count": 19,
+        "ids": [
+          "15431",
+          "15435",
+          "15436",
+          "15437",
+          "15438",
+          "15439",
+          "15446",
+          "15451",
+          "15452",
+          "15453",
+          "15454",
+          "15455",
+          "15456",
+          "15457",
+          "17108",
+          "17109",
+          "17110",
+          "17111",
+          "17112"
+        ]
+      },
+      {
+        "environment": "production",
+        "city": "osaka",
+        "view": "top",
+        "count": 10,
+        "ids": [
+          "15430",
+          "15433",
+          "15434",
+          "15440",
+          "15441",
+          "15442",
+          "15443",
+          "15444",
+          "15450",
+          "15971"
+        ]
+      },
+      {
+        "environment": "production",
+        "city": "osaka",
+        "view": "discounts",
+        "count": 21,
+        "ids": [
+          "https://and-gallery.com/#nanba",
+          "https://big-step.co.jp/shop/detail/63",
+          "https://conrad-osaka.hiltonjapan.co.jp/restaurants/40skybar",
+          "https://conrad-osaka.hiltonjapan.co.jp/restaurants/atmos",
+          "https://cross-osaka.orixhotelsandresorts.com/#restaurant",
+          "https://csm-cafe.ltr-online.com/lp/csm-cafe-s022",
+          "https://doubletree-osaka-castle.hiltonjapan.co.jp/restaurants/lounge-bar-sen",
+          "https://doubletree-osaka-castle.hiltonjapan.co.jp/restaurants/restaurant-sen",
+          "https://gabuchiki.com/news/view/308",
+          "https://icosaka.com/offer/pierre_autumnmenu/",
+          "https://jblm2024.wixsite.com/fujiyama-tokyo/%E8%A4%87%E8%A3%BD-namba-osaka",
+          "https://osaka.ekimaru.com/shopguide/detail/103",
+          "https://osaka.hiltonjapan.co.jp/plans/restaurants/other/myplace-happyhour",
+          "https://patinahotels.com/osaka/drink-and-dine/p72",
+          "https://prtimes.jp/main/html/rd/p/000000001.000192433.html/",
+          "https://www.daimaru.co.jp/shinsaibashi/restaurant/cucina-bella.html",
+          "https://www.gate-hotel.jp/osaka/rb/aosaka.html",
+          "https://www.gate-hotel.jp/osaka/rb/peaks.html",
+          "https://www.hotpepper.jp/strJ004661366/",
+          "https://www.quil-fait-bon.com/pages/grand-front-osaka",
+          "https://www.regine.stregisosaka.com/"
+        ]
+      },
+      {
+        "environment": "production",
+        "city": "kyoto",
+        "view": "upcoming",
+        "count": 10,
+        "ids": [
+          "15483",
+          "15499",
+          "15500",
+          "15909",
+          "15910",
+          "15911",
+          "15912",
+          "15922",
+          "15931",
+          "16323"
+        ]
+      },
+      {
+        "environment": "production",
+        "city": "kyoto",
+        "view": "new",
+        "count": 31,
+        "ids": [
+          "15460",
+          "15461",
+          "15462",
+          "15463",
+          "15464",
+          "15465",
+          "15466",
+          "15467",
+          "15468",
+          "15469",
+          "15470",
+          "15471",
+          "15472",
+          "15473",
+          "15474",
+          "15475",
+          "15476",
+          "15477",
+          "15478",
+          "15479",
+          "15480",
+          "15481",
+          "15482",
+          "15489",
+          "15490",
+          "15491",
+          "15492",
+          "15493",
+          "15494",
+          "15495",
+          "15498"
+        ]
+      },
+      {
+        "environment": "production",
+        "city": "kyoto",
+        "view": "top",
+        "count": 10,
+        "ids": [
+          "15459",
+          "15484",
+          "15485",
+          "15486",
+          "15487",
+          "15488",
+          "15496",
+          "15497",
+          "15501",
+          "15973"
+        ]
+      },
+      {
+        "environment": "production",
+        "city": "kyoto",
+        "view": "discounts",
+        "count": 30,
+        "ids": [
+          "https://hotelfauchonkyoto.com/ja/gourmet/fauchon-salon-de-the-kyoto/",
+          "https://kyoto.hiltonjapan.co.jp/restaurants/teori",
+          "https://www.instagram.com/jbowl_ritsumeikan_mae/",
+          "https://www.keihanhotels-resorts.co.jp/kyoto-centuryhotel/topics/happyhour-2/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/011/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/012/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/013/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/014/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/015/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/016/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/017/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/018/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/019/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/020/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/022/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/023/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/026/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/028/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/031/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/033/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/039/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/040/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/042/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/043/",
+          "https://www.princess-kyoto.co.jp/restaurant/ambercourt/",
+          "https://www.princess-kyoto.co.jp/restaurant/darley/",
+          "https://www.princess-kyoto.co.jp/restaurant/hisuien/",
+          "https://www.princess-kyoto.co.jp/restaurant/hoen/",
+          "https://www.princess-kyoto.co.jp/restaurant/sagano/",
+          "https://www.quil-fait-bon.com/pages/kyoto"
+        ]
+      },
+      {
+        "environment": "production",
+        "city": "nagoya",
+        "view": "upcoming",
+        "count": 11,
+        "ids": [
+          "15510",
+          "15512",
+          "15517",
+          "15518",
+          "15521",
+          "15522",
+          "15900",
+          "15901",
+          "15902",
+          "16075",
+          "16080"
+        ]
+      },
+      {
+        "environment": "production",
+        "city": "nagoya",
+        "view": "new",
+        "count": 30,
+        "ids": [
+          "15509",
+          "15511",
+          "15515",
+          "15516",
+          "15519",
+          "15520",
+          "15898",
+          "15899",
+          "15915",
+          "15916",
+          "15917",
+          "15918",
+          "15919",
+          "15920",
+          "15921",
+          "15932",
+          "15964",
+          "15965",
+          "16020",
+          "16021",
+          "16022",
+          "16076",
+          "16294",
+          "16295",
+          "16767",
+          "16771",
+          "16800",
+          "17107",
+          "17166",
+          "17167"
+        ]
+      },
+      {
+        "environment": "production",
+        "city": "nagoya",
+        "view": "top",
+        "count": 12,
+        "ids": [
+          "15502",
+          "15503",
+          "15504",
+          "15505",
+          "15506",
+          "15507",
+          "15508",
+          "15513",
+          "15514",
+          "15523",
+          "15524",
+          "15972"
+        ]
+      },
+      {
+        "environment": "production",
+        "city": "nagoya",
+        "view": "discounts",
+        "count": 21,
+        "ids": [
+          "https://and-gallery.com/#nagoya",
+          "https://csm-cafe.ltr-online.com/lp/csm-cafe-s017",
+          "https://kinzan.nagoya/archives/news/2853/",
+          "https://lebeurrenoisettetokyo.com/nagoya/",
+          "https://nagoya.hiltonjapan.co.jp/restaurants/hideaway3-3",
+          "https://nagoya.hiltonjapan.co.jp/restaurants/inplace3-3",
+          "https://nagoya.hiltonjapan.co.jp/restaurants/ouchou",
+          "https://nagoya.parco.jp/shop/detail/?cd=009191",
+          "https://prtimes.jp/main/html/rd/p/000004440.000018505.html",
+          "https://www.anacrowneplaza-nagoya.jp/pages/restaurant_gardencourt",
+          "https://www.anacrowneplaza-nagoya.jp/pages/restaurant_karin",
+          "https://www.anacrowneplaza-nagoya.jp/pages/restaurant_stargate",
+          "https://www.anacrowneplaza-nagoya.jp/pages/restaurant_winglounge",
+          "https://www.associa.com/nma/restaurant/pergola/",
+          "https://www.centralpark.co.jp/shop/sharecafe/",
+          "https://www.hotpepper.jp/strJ004698778/",
+          "https://www.hotpepper.jp/strJ004699003/",
+          "https://www.komeda.co.jp/shop/detail.html?id=1215",
+          "https://www.livingroom-skybar.com/",
+          "https://www.princehotels.co.jp/nagoya/restaurant/skydining/",
+          "https://www.quil-fait-bon.com/pages/nagoya-sakae"
+        ]
+      },
+      {
+        "environment": "production",
+        "city": "tokyo",
+        "view": "upcoming",
+        "count": 13,
+        "ids": [
+          "15526",
+          "15538",
+          "15541",
+          "15544",
+          "15546",
+          "15555",
+          "15556",
+          "15557",
+          "15923",
+          "15929",
+          "15930",
+          "16325",
+          "17106"
+        ]
+      },
+      {
+        "environment": "production",
+        "city": "tokyo",
+        "view": "new",
+        "count": 12,
+        "ids": [
+          "15527",
+          "15539",
+          "15540",
+          "15551",
+          "15552",
+          "15553",
+          "15554",
+          "15558",
+          "15966",
+          "15967",
+          "15968",
+          "16289"
+        ]
+      },
+      {
+        "environment": "production",
+        "city": "tokyo",
+        "view": "top",
+        "count": 24,
+        "ids": [
+          "15525",
+          "15528",
+          "15529",
+          "15530",
+          "15531",
+          "15532",
+          "15533",
+          "15534",
+          "15535",
+          "15536",
+          "15537",
+          "15542",
+          "15543",
+          "15545",
+          "15547",
+          "15548",
+          "15549",
+          "15550",
+          "15559",
+          "15560",
+          "15561",
+          "15562",
+          "15903",
+          "15974"
+        ]
+      },
+      {
+        "environment": "production",
+        "city": "tokyo",
+        "view": "discounts",
+        "count": 32,
+        "ids": [
+          "https://and-gallery.com/#ikebukuro",
+          "https://and-gallery.com/#yurakucho",
+          "https://cocco.eastone.co.jp/shop/gotanda",
+          "https://cocco.eastone.co.jp/shop/kameido",
+          "https://conrad-tokyo.hiltonjapan.co.jp/restaurants/cerise",
+          "https://conrad-tokyo.hiltonjapan.co.jp/restaurants/chinablue",
+          "https://conrad-tokyo.hiltonjapan.co.jp/restaurants/twentyeight",
+          "https://csm-cafe.ltr-online.com/lp/csm-cafe-s012",
+          "https://miabocca.eastone.co.jp/shop/Ikebukuro",
+          "https://miabocca.eastone.co.jp/shop/Shakujii-park",
+          "https://miabocca.eastone.co.jp/shop/Shinjuku-takasimaya",
+          "https://prtimes.jp/main/html/rd/p/000000048.000152772.html",
+          "https://prtimes.jp/main/html/rd/p/000000356.000048489.html",
+          "https://prtimes.jp/main/html/rd/p/000000592.000071323.html",
+          "https://prtimes.jp/main/html/rd/p/000004178.000003860.html",
+          "https://sarabethsrestaurants.jp/location/omotesando/",
+          "https://sarabethsrestaurants.jp/location/shinagawa/",
+          "https://sarabethsrestaurants.jp/location/shinjuku/",
+          "https://sarabethsrestaurants.jp/location/tokyo/",
+          "https://store-info.skylark.co.jp/syabuyo/map/198490/",
+          "https://tokyo.hiltonjapan.co.jp/restaurants/st_georges_bar",
+          "https://www.andaztokyo.jp/restaurants/jp/thetavern-grill-lounge",
+          "https://www.herofield.com/bbq/tokyoprince/",
+          "https://www.hiramatsurestaurant.jp/jardindessens-tokyo/",
+          "https://www.mesm.jp/en/eat-drink/chefs-theatre.html",
+          "https://www.newotani.co.jp/tokyo/restaurant/gardenlounge/",
+          "https://www.quil-fait-bon.com/pages/aoyama",
+          "https://www.quil-fait-bon.com/pages/grand-maison-ginza",
+          "https://www.quil-fait-bon.com/pages/shinjuku",
+          "https://www.quil-fait-bon.com/pages/tokyo-dome-city",
+          "https://www.quil-fait-bon.com/pages/tokyo-skytree-town-solamachi",
+          "https://www.sunamo.jp/floor/shop_detail.html?UC=1_028"
+        ]
+      },
+      {
+        "environment": "production",
+        "city": "sapporo",
+        "view": "upcoming",
+        "count": 8,
+        "ids": [
+          "15568",
+          "15569",
+          "15570",
+          "15571",
+          "15597",
+          "15926",
+          "15970",
+          "17103"
+        ]
+      },
+      {
+        "environment": "production",
+        "city": "sapporo",
+        "view": "new",
+        "count": 14,
+        "ids": [
+          "15580",
+          "15586",
+          "15587",
+          "15588",
+          "15589",
+          "15590",
+          "15591",
+          "15592",
+          "15595",
+          "15596",
+          "16293",
+          "16296",
+          "17104",
+          "17105"
+        ]
+      },
+      {
+        "environment": "production",
+        "city": "sapporo",
+        "view": "top",
+        "count": 30,
+        "ids": [
+          "15563",
+          "15564",
+          "15565",
+          "15566",
+          "15567",
+          "15572",
+          "15573",
+          "15574",
+          "15575",
+          "15576",
+          "15577",
+          "15578",
+          "15579",
+          "15581",
+          "15582",
+          "15583",
+          "15584",
+          "15585",
+          "15593",
+          "15594",
+          "15598",
+          "15599",
+          "15600",
+          "15601",
+          "15602",
+          "15603",
+          "15604",
+          "15605",
+          "15606",
+          "15607"
+        ]
+      },
+      {
+        "environment": "production",
+        "city": "sapporo",
+        "view": "discounts",
+        "count": 31,
+        "ids": [
+          "https://chocottosushi-kiwami.owst.jp/",
+          "https://cocco.eastone.co.jp/shop/kitahachijo",
+          "https://cocco.eastone.co.jp/shop/kitaichijo",
+          "https://cocco.eastone.co.jp/shop/kotoniekimae",
+          "https://cocco.eastone.co.jp/shop/miyanosawa",
+          "https://cocco.eastone.co.jp/shop/shindohigashi",
+          "https://cocco.eastone.co.jp/shop/souen",
+          "https://grand1934.com/restaurant/garden-dining-waraku/",
+          "https://grand1934.com/restaurant/kokaku/",
+          "https://grand1934.com/restaurant/lobby-lounge-mizar/",
+          "https://grand1934.com/restaurant/northern-terrace-diner/",
+          "https://grand1934.com/restaurant/old-saloon1934/",
+          "https://miabocca.eastone.co.jp/shop/Kita2jo",
+          "https://miabocca.eastone.co.jp/shop/Kotoni-station",
+          "https://miabocca.eastone.co.jp/shop/Sapporo-station",
+          "https://miabocca.eastone.co.jp/shop/atsubetsuminami",
+          "https://miabocca.eastone.co.jp/shop/sapporoduo",
+          "https://store-info.skylark.co.jp/syabuyo/map/198489/",
+          "https://www.anahisapporosusukino.com/restaurants/verde/",
+          "https://www.hyatt.com/hyatt-centric/ja-JP/ctsct-hyatt-centric-sapporo/dining",
+          "https://www.jrhotels.co.jp/tower/restaurant/skyj/",
+          "https://www.keioplaza-sapporo.co.jp/restaurants/akizu/",
+          "https://www.keioplaza-sapporo.co.jp/restaurants/crossvault/",
+          "https://www.keioplaza-sapporo.co.jp/restaurants/glass/",
+          "https://www.keioplaza-sapporo.co.jp/restaurants/miyama/",
+          "https://www.keioplaza-sapporo.co.jp/restaurants/yamanami/",
+          "https://www.princehotels.co.jp/sapporo/restaurant/alldaydininggrandeur",
+          "https://www.princehotels.co.jp/sapporo/restaurant/fuyojo",
+          "https://www.princehotels.co.jp/sapporo/restaurant/katsura",
+          "https://www.princehotels.co.jp/sapporo/restaurant/top_prince",
+          "https://www.tokyuhotels.co.jp/sapporostream/restaurant/splish/plan/angel_devil/index.html"
+        ]
+      }
+    ],
+    "memberships": 449,
+    "shortfall": 275,
+    "newBranches": 3,
+    "existingProfilesUpdated": 0,
+    "menuEntriesAdded": 55,
+    "galleryLinksAdded": 14,
+    "newSpecialVenues": 0,
+    "offerRecordsAdded": 0,
+    "guideMembershipsAdded": 3,
+    "countDelta": [
+      {
+        "environment": "local",
+        "city": "osaka",
+        "view": "upcoming",
+        "before": 11,
+        "after": 12,
+        "newIds": [
+          "17230"
+        ]
+      },
+      {
+        "environment": "local",
+        "city": "nagoya",
+        "view": "new",
+        "before": 28,
+        "after": 30,
+        "newIds": [
+          "17228",
+          "17229"
+        ]
+      },
+      {
+        "environment": "production",
+        "city": "osaka",
+        "view": "upcoming",
+        "before": 11,
+        "after": 12,
+        "newIds": [
+          "17168"
+        ]
+      },
+      {
+        "environment": "production",
+        "city": "nagoya",
+        "view": "new",
+        "before": 28,
+        "after": 30,
+        "newIds": [
+          "17166",
+          "17167"
+        ]
+      }
+    ],
+    "sourceChecks": [
+      {
+        "sourceUrl": "https://tabelog.com/en/aichi/A2301/A230112/23098019/",
+        "downloaded": true,
+        "checks": [
+          "2026.10.15"
+        ],
+        "htmlBytes": 98097
+      },
+      {
+        "sourceUrl": "https://tabelog.com/en/aichi/A2301/A230112/23098019/dtlrvwlst/B537436129/",
+        "downloaded": true,
+        "checks": [
+          "980"
+        ],
+        "htmlBytes": 93240
+      },
+      {
+        "sourceUrl": "https://tabelog.com/en/aichi/A2301/A230112/23098019/dtlrvwlst/B537441544/",
+        "downloaded": true,
+        "checks": [
+          "920",
+          "1,720"
+        ],
+        "htmlBytes": 98158
+      },
+      {
+        "sourceUrl": "https://tabelog.com/en/aichi/A2301/A230113/23097628/",
+        "downloaded": true,
+        "checks": [
+          "2026.8.29",
+          "080-4152-6002"
+        ],
+        "htmlBytes": 100493
+      },
+      {
+        "sourceUrl": "https://tabelog.com/en/aichi/A2301/A230113/23097628/dtlrvwlst/B534565909/",
+        "downloaded": true,
+        "checks": [
+          "August 29, 2026"
+        ],
+        "htmlBytes": 103695
+      },
+      {
+        "sourceUrl": "https://tabelog.com/en/aichi/A2301/A230113/23097628/dtlrvwlst/B534586937/",
+        "downloaded": true,
+        "checks": [
+          "3,200"
+        ],
+        "htmlBytes": 98722
+      },
+      {
+        "sourceUrl": "https://prtimes.jp/main/html/rd/p/000000923.000017692.html",
+        "downloaded": true,
+        "checks": [
+          "3,500",
+          "OSAKA HONMACHI ONO"
+        ],
+        "htmlBytes": 273529
+      },
+      {
+        "sourceUrl": "https://solaria-osakahonmachi.nnr-h.com/",
+        "openedInBrowser": true,
+        "checks": [
+          "OSAKA HONMACHI ONO",
+          "4-1-7",
+          "3,500 tax included",
+          "Western/Japanese/vegan main choices",
+          "Sushi/seafood focus; exact dishes unpublished"
+        ],
+        "checkedAt": "2026-10-18"
+      },
+      {
+        "sourceUrl": "https://townwork.net/viewjob/jobid_18f061640f152e42/",
+        "openedInWebTool": true,
+        "plainCurl": "403",
+        "checks": [
+          "Restaurant-specific December18,2026opening",
+          "Hotel and restaurant open simultaneously",
+          "ONO Group employer"
+        ],
+        "checkedAt": "2026-10-18"
+      }
+    ],
+    "duplicateChecks": [
+      {
+        "environment": "local",
+        "query": "%KIGI%",
+        "matches": []
+      },
+      {
+        "environment": "local",
+        "query": "%Nanahishi%",
+        "matches": []
+      },
+      {
+        "environment": "local",
+        "query": "%七菱%",
+        "matches": []
+      },
+      {
+        "environment": "local",
+        "query": "%HONMACHI ONO%",
+        "matches": []
+      },
+      {
+        "environment": "production",
+        "query": "%KIGI%",
+        "matches": []
+      },
+      {
+        "environment": "production",
+        "query": "%Nanahishi%",
+        "matches": []
+      },
+      {
+        "environment": "production",
+        "query": "%七菱%",
+        "matches": []
+      },
+      {
+        "environment": "production",
+        "query": "%HONMACHI ONO%",
+        "matches": []
+      }
+    ],
+    "deployment": false
+  }
+}

@@ -9,6 +9,7 @@ import { api } from '@/lib/client/api';
 import { hrefKeepingDate, hrefNearDay } from '@/lib/client/returnSpot';
 import { useScrollLock } from '@/lib/client/scrollLock';
 import { refineQuery, removeTerm } from '@/lib/searchTerms';
+import { recordQuery, sharedQueries } from '@/lib/savedQueries';
 import { cloudTags, groupSelection, groupTags, isReserved, reservedPicked, reservedTag, reservedValues, RESERVED_TAGS, type TagCount, type TagGroup } from '@/lib/tags';
 import { parseSearchQuery } from '@/server/util/searchQuery';
 import { leaveDrawerForCloud, onOpenTagCloud } from '@/lib/client/controlsDrawer';
@@ -138,6 +139,12 @@ export function TagCloud({
   // and the tags pill open it too).
   useEffect(() => readAhead([viewUrl(countsUrl)]), [countsUrl]);
 
+  // Combined searches are remembered for the cloud's row of them.
+  useEffect(() => {
+    if (query) recordQuery(query);
+  }, [query]);
+  const openQuery = (next: string) => go(() => next, parseSearchQuery(next).tags.filter((name) => !isReserved(name)), reservedPicked(parseSearchQuery(next)), parseSearchQuery(next).excludeTags);
+
   const isSelected = (name: string) => selected.some((s) => s.toLowerCase() === name.toLowerCase());
   const isExcluded = (name: string) => excluded.some((s) => s.toLowerCase() === name.toLowerCase());
   const summary = tagSummary([...reserved, ...selected, ...excluded.map((name) => `−${name}`)], t.locale);
@@ -240,6 +247,8 @@ export function TagCloud({
           onWrappedChange={setWrapped}
           onToggle={toggle}
           onToggleReserved={toggleReserved}
+          onOpenQuery={openQuery}
+          currentQuery={query ?? ''}
           onClear={clear}
           onClose={closeCloud}
         />
@@ -305,6 +314,36 @@ function ReservedFilters({
             {filter.count}
             <span className="sr-only"> {t('tagCloud.pinsWord', { count: filter.count })}</span>
           </span>
+        </button>
+      ))}
+    </div>
+  );
+}
+
+// The combined searches this viewer runs most (savedQueries), one click each.
+function SavedQueries({ current, onOpen, className = '' }: { current: string; onOpen: (query: string) => void; className?: string }) {
+  const t = useT();
+  const [list, setList] = useState<string[]>([]);
+  useEffect(() => {
+    sharedQueries().then(setList);
+  }, [current]);
+  if (!list.length) return null;
+  return (
+    <div role="group" aria-label={t('tagCloud.savedQueries')} className={`flex flex-wrap items-center gap-2 ${className}`}>
+      <span aria-hidden className="me-0.5 inline-flex items-center gap-1 text-xs font-semibold tracking-wide text-faint uppercase">
+        <Icon name="search" className="size-3.5" />
+        {t('tagCloud.savedQueries')}
+      </span>
+      {list.map((q) => (
+        <button
+          key={q}
+          type="button"
+          aria-pressed={q === current.trim().replace(/\s+/g, ' ')}
+          onClick={() => onOpen(q)}
+          title={q}
+          className={`max-w-full rounded-full border px-3 py-1 text-start text-sm break-words transition-colors ${q === current.trim().replace(/\s+/g, ' ') ? 'border-accent/60 bg-accent/15 text-link' : 'border-line text-muted hover:border-tint/40 hover:text-ink'}`}
+        >
+          {q}
         </button>
       ))}
     </div>
@@ -391,6 +430,8 @@ function TagCloudView({
   onWrappedChange,
   onToggle,
   onToggleReserved,
+  onOpenQuery,
+  currentQuery,
   onClear,
   onClose,
 }: {
@@ -403,6 +444,8 @@ function TagCloudView({
   onWrappedChange: (wrapped: boolean) => void;
   onToggle: (name: string) => void;
   onToggleReserved: (name: string) => void;
+  onOpenQuery: (query: string) => void;
+  currentQuery: string;
   onClear: () => void;
   onClose: () => void;
 }) {
@@ -503,6 +546,7 @@ function TagCloudView({
           </span>
         </div>
         <ReservedFilters counts={counts ?? []} selected={reserved} needle={needle} onToggle={onToggleReserved} large className="border-b border-line px-5 py-2.5 max-sm:px-3" />
+        <SavedQueries current={currentQuery} onOpen={onOpenQuery} className="border-b border-line px-5 py-2.5 max-sm:px-3" />
         <div aria-busy={busy || undefined} className="relative min-h-60 flex-1 overflow-hidden">
           {failed ? (
             <p className="absolute inset-0 flex items-center justify-center text-sm text-subtle">{t('tagCloud.unavailable')}</p>

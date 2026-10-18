@@ -320,8 +320,6 @@ Build KG with people, companies, properties, vacations, products / shows
 
 
 
-- add south korea restaurant landing page
-
 - add restaurant reservation and ordering adamin portal in bunsiness account
 
 - need restaurant button to find current special discounts available
@@ -418,11 +416,7 @@ best of 2027 desert per brand per category
 
 
 
-have better model check music source link and playback and cover on landing page
-
-landing page by region mean the origin of the music needs to be produced there
-
-
 
 apple program resources for apple music referal program
 
+political figure in other countries

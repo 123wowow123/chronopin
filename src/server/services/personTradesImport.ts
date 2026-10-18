@@ -26,34 +26,53 @@ const STATES: Record<string, string> = {
 type Candidate = { id: number; name: string; bioguideId: string | null; jurisdiction: string | null; role: string };
 
 const fold = (s: string) =>
-  s.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().replace(/\b(jr|sr|ii|iii|iv|hon|dr|mr|mrs|ms)\b\.?/g, '').replace(/[^a-z ]/g, ' ').replace(/\s+/g, ' ').trim();
+  s.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().replace(/\b(jr|sr|ii|iii|iv|hon|dr|mr|mrs|ms|md|do|facs|esq)\b\.?/g, '').replace(/[^a-z ]/g, ' ').replace(/\s+/g, ' ').trim();
+
+// A person's jurisdiction is the state ("Florida") for current members but the
+// seat ("Maryland's 6th congressional district") for former ones.
+const inState = (p: Candidate, state: string) => !!p.jurisdiction && (p.jurisdiction === state || p.jurisdiction.startsWith(`${state}'s `));
+
+// Does the filing's first name fit the page's (exact, prefix either way)?
+const firstFits = (pageFirst: string, first: string) => pageFirst === first || pageFirst.startsWith(first) || first.startsWith(pageFirst);
 
 // A member by last name, first name (or a nickname-prefix) and state.
 function matchHouse(people: Candidate[], first: string, last: string, state: string): Candidate | null {
   const f = fold(first).split(' ')[0];
   const l = fold(last);
-  const pool = people.filter((p) => p.jurisdiction === (STATES[state] ?? state));
+  const lastWord = l.split(' ').pop() ?? l; // "Paulina Luna" -> luna
+  const full = STATES[state] ?? state;
+  const pool = people.filter((p) => inState(p, full));
   const hits = pool.filter((p) => {
     const parts = fold(p.name).split(' ');
-    const pf = parts[0];
-    return (fold(p.name).endsWith(l) || parts.slice(1).join(' ').includes(l)) && (pf === f || pf.startsWith(f) || f.startsWith(pf));
+    return (fold(p.name).endsWith(l) || parts.slice(1).join(' ').includes(l)) && firstFits(parts[0], f);
   });
   if (hits.length === 1) return hits[0];
-  // Nicknames and middle names ("Chuck" Fleischmann): the last name alone,
-  // when it is the only one from that state.
-  const byLast = pool.filter((p) => fold(p.name).endsWith(l) || fold(p.name).split(' ').slice(1).join(' ') === l);
-  return byLast.length === 1 ? byLast[0] : null;
+  // Nicknames and middle names ("Chuck" Fleischmann, Gerald "Gerry" Connolly):
+  // the last name alone, when it is the only one from that state.
+  const byLast = pool.filter((p) => fold(p.name).endsWith(lastWord) || fold(p.name).split(' ').slice(1).join(' ') === l);
+  if (byLast.length === 1) return byLast[0];
+  // Mike / Michael: two members share a last name in the state, one first initial fits.
+  const byInitial = byLast.filter((p) => fold(p.name)[0] === f[0]);
+  if (byInitial.length === 1) return byInitial[0];
+  // Someone who moved to the cabinet or the VP's office has no state: first and last name.
+  const national = people.filter((p) => !p.jurisdiction || !Object.values(STATES).some((s) => inState(p, s))).filter((p) => fold(p.name).endsWith(lastWord) && firstFits(fold(p.name).split(' ')[0], f));
+  if (national.length === 1) return national[0];
+  const nationalInitial = people.filter((p) => !Object.values(STATES).some((s) => inState(p, s)) && fold(p.name).endsWith(lastWord) && fold(p.name)[0] === f[0]);
+  return nationalInitial.length === 1 ? nationalInitial[0] : null;
 }
 
-// The Senate lists no state: a senator is matched on name, then on last name alone.
+// The Senate lists no state: a senator is matched on name, then on last name alone;
+// a senator who has since joined the cabinet or won another office matches on the full name.
 function matchSenator(people: Candidate[], first: string, last: string): Candidate | null {
   const l = fold(last);
   const f = fold(first).split(' ')[0];
   const senators = people.filter((p) => p.role === 'senator');
-  const hits = senators.filter((p) => fold(p.name).endsWith(l) && (fold(p.name).split(' ')[0].startsWith(f) || f.startsWith(fold(p.name).split(' ')[0])));
+  const hits = senators.filter((p) => fold(p.name).endsWith(l) && firstFits(fold(p.name).split(' ')[0], f));
   if (hits.length === 1) return hits[0];
   const byLast = senators.filter((p) => fold(p.name).endsWith(l));
-  return byLast.length === 1 ? byLast[0] : null;
+  if (byLast.length === 1) return byLast[0];
+  const others = people.filter((p) => p.role !== 'senator' && p.role !== 'representative' && fold(p.name).endsWith(l) && firstFits(fold(p.name).split(' ')[0], f));
+  return others.length === 1 ? others[0] : null;
 }
 
 export type ImportResult = { filings: number; trades: number; unmatched: string[]; failed: string[] };
@@ -78,7 +97,7 @@ export async function importTrades({
   save?: (personId: number, filing: TradeFiling, person: Candidate) => Promise<number>;
   skipStored?: boolean;
 }): Promise<ImportResult> {
-  const people = await db.query<Candidate>(`SELECT "id", "name", "bioguideId", "jurisdiction", "role" FROM "Person" WHERE "role" IN ('representative', 'senator', 'cabinet', 'other')`);
+  const people = await db.query<Candidate>(`SELECT "id", "name", "bioguideId", "jurisdiction", "role" FROM "Person" WHERE "role" IN ('representative', 'senator', 'cabinet', 'governor', 'vice-president', 'president', 'other')`);
   const result: ImportResult = { filings: 0, trades: 0, unmatched: [], failed: [] };
   const unmatched = new Set<string>();
   const store = async (person: Candidate, filing: TradeFiling) => {
