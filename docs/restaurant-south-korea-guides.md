@@ -1,5 +1,47 @@
 # South Korea restaurant guides
 
+## Dining sub-score update (2026-10-18)
+
+Checked all 50 Seoul/Busan rubrics that were missing Service, Ambience or Value.
+Chrome exposed Tripadvisor's category breakdowns that the earlier scrape missed.
+Saved 73 newly supported axis scores across 26 local pins through
+`PUT /api/pins/:id/dining`, and verified each saved row. Existing Food and Critic
+acclaim scores, authors, opening dates and pin text were preserved. The updated
+entries are synchronized in `scripts/restaurants/diningRubric.json`.
+
+The published category figures were converted using the existing dining anchors
+and half steps. New axes with fewer than 30 listing reviews are capped at 3.5;
+without fresh consistent independent corroboration, top-anchor estimates are
+capped at 4.5. Listing review totals are not category-specific sample sizes.
+Unpublished Ambience remains null at five updated venues. Bibijae's very small
+sample contains sharply conflicting service reports; the basis flags this.
+
+Added 13 review/guide citations across the eight updated pins previously below
+three saved reviews. Every updated rubric now has 3-4 citations. Added citations
+include historical firsthand blogs, clearly identified Tripadvisor guest reviews,
+Busan/Blue Ribbon guide entries and a disclosed hosted review; they are not all
+professional critic reviews. Existing citations were preserved, not re-audited.
+Historical dishes, prices, room descriptions and service observations were not
+imported as current menu or visit information. New scoring and review sources
+have references and source wikis.
+
+Two score readings were held because Tripadvisor shows a different location:
+Mitou (17 Nonhyeon-ro 151-gil versus the pin's 24 Dosan-daero 70-gil), and Mosu
+(45 Itaewon-ro 55ga-gil versus the reopened pin's 4 Hoenamu-ro 41-gil). Seven
+opened listings publish no category breakdown; another 15 searches did not
+establish a matching branch's category scores. Each of these 24 remaining venues
+has an individual reason in the research queue.
+
+All 26 production lookups by source URL returned no live pin. Production title
+checks for Mugunghwa, Imun and Mingles also returned no match. These rubric
+updates are local; production publication of the missing restaurant records is
+still outstanding. No production pin was created and no deployment was run.
+The initial research/database status recorded below is historical.
+
+Full raw readings, URLs, sample counts, prior bases, supplemental review
+disclosures, saved-score verification and the remaining queue are in
+[the dining sub-score research log](restaurant-south-korea-dining-subscores-2026-10-18.json).
+
 ## Seoul
 
 Researched October 17, 2026 (`Asia/Seoul`, KRW). Snapshot: [restaurant-south-korea-seoul-2026-10-17.json](restaurant-south-korea-seoul-2026-10-17.json) (48 entries after round two on 2026-10-18, validated offline with `parseRestaurantContent`/`parseSpecialVenue`; the `importGuide.ts` dry run needs a local admin token, which was unavailable, so it stopped at 401 after the region check). Verified offers whose branch opening date could not be found are in [restaurant-south-korea-seoul-queued-2026-10-17.json](restaurant-south-korea-seoul-queued-2026-10-17.json). Nothing was saved to any database or production; photos were uploaded to Azure Blob Storage (`restaurant-images/south-korea/researched/`) and verified by SHA-256.

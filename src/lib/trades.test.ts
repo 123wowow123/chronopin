@@ -70,3 +70,19 @@ describe('year typos', () => {
     expect(fixYearTypo('2026-12-26', '2024-01-01')).toBe('2026-12-26');
   });
 });
+
+describe('a range split by a page break', () => {
+  it('takes the upper bound from under the repeated column header', () => {
+    const text = [
+      '           International Business Machines        P                  06/16/2026 07/02/2026   $15,001 -',
+      '\fID   Owner Asset                                  Transaction Date              Notification Amount             Cap.',
+      '                                                  Type                          Date                            Gains >',
+      '                                                                                                                $200?',
+      '           Corporation Common Stock (IBM)                                                    $50,000',
+      '           [ST]',
+      '           F       S    : New',
+    ].join('\n');
+    const [t] = parsePtrText(text);
+    expect(t).toMatchObject({ asset: 'International Business Machines Corporation Common Stock (IBM)', ticker: 'IBM', amountLow: 15001, amountHigh: 50000 });
+  });
+});

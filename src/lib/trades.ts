@@ -49,10 +49,16 @@ const ROW = /^(.*?)\s+(P|S \(partial\)|S|E)\s+(\d\d\/\d\d\/\d{4})\s+(\d\d\/\d\d\
 // The filing-status / subholding / description lines that follow each row.
 const META = /^\s*(F\s+S\s*:|S\s+O\s*:|D\s+:|L\s*:|C\s*:|ID\s+Owner\s+Asset|Type\s+Date|\*|Filing ID #|Clerk of the House|T\s*$|Cap\.)/;
 
+// The column header every page repeats.
+const PAGE_HEADER = /^\s*(ID\s+Owner\s+Asset|Type\s+Date|Gains\s*>|\$200\?|\f)/;
+
 export function parsePtrText(text: string): ParsedTrade[] {
   const lines = text.split(/\r?\n/);
   const rows: (ParsedTrade & { done: boolean })[] = [];
   let current: (ParsedTrade & { done: boolean }) | null = null;
+  // A range split across a page break: the row's "$15,001 -" is the last line of
+  // one page and its "$50,000" opens the next, under the repeated column header.
+  let awaitHigh = false;
   for (let i = 0; i < lines.length; i++) {
     const line = lines[i];
     const m = ROW.exec(line);
@@ -84,8 +90,21 @@ export function parsePtrText(text: string): ParsedTrade[] {
         amountHigh: high,
         done: false,
       };
+      awaitHigh = /-\s*$/.test(amountText) && high == null;
       rows.push(current);
       continue;
+    }
+    if (awaitHigh && current) {
+      if (PAGE_HEADER.test(line) || /^\s*$/.test(line)) continue;
+      const rest = /\s(\$[\d,]+)\s*$/.exec(line);
+      if (rest) {
+        current.amountHigh = dollars(rest[1]);
+        awaitHigh = false;
+        current.done = false;
+        current.asset = `${current.asset} ${line.replace(/\s+\$[\d,]+\s*$/, '').trim()}`.trim();
+        continue;
+      }
+      awaitHigh = false;
     }
     if (!current || current.done) continue;
     if (META.test(line) || /^\s*$/.test(line)) {

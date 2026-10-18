@@ -52,3 +52,27 @@ export async function sharedQueries(): Promise<string[]> {
   const popular = await api.get<string[]>('/api/pins/popular-queries').catch(() => [] as string[]);
   return [...new Set([...popular, ...savedQueries()])].slice(0, 16);
 }
+
+// Every search this viewer ran (single filters too), newest first. Browser only.
+const RECENT_KEY = 'chronopin_recent_queries';
+const RECENT_KEEP = 12;
+
+export function recentQueries(): string[] {
+  try {
+    const list = JSON.parse(localStorage.getItem(RECENT_KEY) || '[]');
+    return Array.isArray(list) ? list.filter((q) => typeof q === 'string') : [];
+  } catch {
+    return [];
+  }
+}
+
+export function recordRecentQuery(query: string) {
+  const q = query.trim().replace(/\s+/g, ' ');
+  if (!q) return;
+  try {
+    const list = [q, ...recentQueries().filter((x) => x !== q)].slice(0, RECENT_KEEP);
+    localStorage.setItem(RECENT_KEY, JSON.stringify(list));
+  } catch {
+    // Storage blocked: the row just stays empty.
+  }
+}

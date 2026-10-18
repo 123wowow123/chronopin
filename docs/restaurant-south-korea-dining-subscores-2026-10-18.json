@@ -1,0 +1,1972 @@
+{
+  "checkedAt": "2026-10-18",
+  "method": "Chrome-rendered Tripadvisor review breakdowns; branch addresses cross-checked against guide metadata. Supplemental publisher pages opened in browser/web; tourism-guide pages extracted and rendered.",
+  "scoringPolicy": "Fill only missing Service, Ambience and Value. Retain existing Food and Critic acclaim. Interpolate existing dining anchors in half steps; cap new axes at 3.5 with fewer than 30 total reviews, or 4.5 without fresh consistent top-anchor corroboration. A listing review count is not a category-specific count.",
+  "coverage": {
+    "initialRubrics": 54,
+    "initialCompleteDinerAxes": 4,
+    "incompleteVenuesChecked": 50,
+    "updatedVenues": 26,
+    "newAxisScores": 73,
+    "heldOrUnresolvedVenues": 24,
+    "productionMissingPins": 26
+  },
+  "updates": [
+    {
+      "pinId": 17196,
+      "name": "Mugunghwa, Busan",
+      "branchAddress": "772 Gaya-daero, Busanjin-gu, Busan / 부산광역시 부산진구 가야대로 772",
+      "checkedAt": "2026-10-18",
+      "platform": "Tripadvisor",
+      "url": "https://www.tripadvisor.com/Restaurant_Review-g297884-d4033806-Reviews-Mugunghwa-Busan.html",
+      "listingReviewCount": 15,
+      "categoryReviewCounts": null,
+      "publishedScores": {
+        "food": 3,
+        "service": 4.3,
+        "ambience": null,
+        "value": 3.5
+      },
+      "previousScores": {
+        "food": 4.5,
+        "service": null,
+        "ambience": null,
+        "value": null,
+        "acclaim": null
+      },
+      "scores": {
+        "food": 4.5,
+        "service": 3.5,
+        "ambience": null,
+        "value": 1.5,
+        "acclaim": null
+      },
+      "previousBasis": "Wanderlog (read 2026-10-18) aggregates Google 4.5/5 from 53 reviews and Tripadvisor 4.5/5 from 15 reviews for Mugunghwa, Busan. Only overall ratings are shown, so they are applied to Food alone; Service, Ambience, Value and Critic acclaim have no published figure and are left null.",
+      "basis": "Tripadvisor, read 2026-10-18 (15 listing reviews; category sample counts unpublished): Service 4.3/5 -> 3.5; Ambience unpublished (null); Value 3.5/5 -> 1.5. Dining-anchor conversion. Under 30 listing reviews: new axes capped at 3.5. Food 4.5 and Critic acclaim null retained from prior cited research.",
+      "additionalReviews": [
+        {
+          "url": "https://www.tripadvisor.com/ShowUserReviews-g297884-d4033806-r612886233-Mugunghwa-Busan.html",
+          "title": "Spectacular views, traditional Korean cuisine",
+          "publishedDate": "2018-09-01",
+          "quote": "Very attentive staff who know more English than we know Korean.",
+          "note": "Firsthand diner review by plm54, not a professional critic. The permalink displays September 1; the aggregate listing displayed August 31. Historical service context, not a current menu claim."
+        },
+        {
+          "url": "https://www.cospar2024.org/download/100%20Great%20Places%20to%20Eat%20in%20Busan.pdf",
+          "title": "100 Great Places to Eat in Busan",
+          "publishedDate": null,
+          "quote": "this elegant Korean restaurant offers a panoramic view of Baekyang Mountain.",
+          "note": "Blue Ribbon Survey guide, Mugunghwa entry 55, printed page 31 (PDF page 17). Rendered and visually checked. Edition publication day not established. Address matches 772 Gaya-daero, Lotte Hotel Busan."
+        }
+      ],
+      "productionStatus": "missing pin; not published by this content update"
+    },
+    {
+      "pinId": 17142,
+      "name": "Imun Seolnongtang",
+      "branchAddress": "38-13 Ujeongguk-ro, Jongno-gu",
+      "checkedAt": "2026-10-18",
+      "platform": "Tripadvisor",
+      "url": "https://www.tripadvisor.com/Restaurant_Review-g294197-d8975159-Reviews-Imun_Seolnongtang-Seoul.html",
+      "listingReviewCount": 120,
+      "categoryReviewCounts": null,
+      "publishedScores": {
+        "food": 4,
+        "service": 3.5,
+        "ambience": 3.4,
+        "value": 3.6
+      },
+      "previousScores": {
+        "food": null,
+        "service": null,
+        "ambience": null,
+        "value": null,
+        "acclaim": 2
+      },
+      "scores": {
+        "food": null,
+        "service": 1.5,
+        "ambience": 1.5,
+        "value": 1.5,
+        "acclaim": 2
+      },
+      "previousBasis": "No diner sub-scores or rating figure was read for this venue, so Food/Service/Ambience/Value are null. Acclaim 2: listed in the MICHELIN Guide Seoul (guide page read, 2026); a Bib Gourmand is claimed by a 2022 and a 2024 blog but Foodle labels it 'Selected', so the higher tier is not counted.",
+      "basis": "Tripadvisor, read 2026-10-18 (120 listing reviews; category sample counts unpublished): Service 3.5/5 -> 1.5; Ambience 3.4/5 -> 1.5; Value 3.6/5 -> 1.5. Dining-anchor conversion. Top-anchor scores capped at 4.5 without fresh consistent independent praise. Food null and Critic acclaim 2 retained from prior cited research.",
+      "additionalReviews": [],
+      "productionStatus": "missing pin; not published by this content update"
+    },
+    {
+      "pinId": 17143,
+      "name": "Woo Lae Oak Jugyo",
+      "branchAddress": "62-29 Changgyeonggung-ro, Jung-gu",
+      "checkedAt": "2026-10-18",
+      "platform": "Tripadvisor",
+      "url": "https://www.tripadvisor.com/Restaurant_Review-g294197-d4032449-Reviews-Woo_Lae_Oak_Jugyo-Seoul.html",
+      "listingReviewCount": 122,
+      "categoryReviewCounts": null,
+      "publishedScores": {
+        "food": 4.3,
+        "service": 3.8,
+        "ambience": 3.9,
+        "value": 3.3
+      },
+      "previousScores": {
+        "food": 3,
+        "service": null,
+        "ambience": null,
+        "value": null,
+        "acclaim": 3
+      },
+      "scores": {
+        "food": 3,
+        "service": 2.0,
+        "ambience": 2.5,
+        "value": 1.5,
+        "acclaim": 3
+      },
+      "previousBasis": "Food 3 from Wanderlog's displayed ratings (4.2 from 6,529 and 4.0 from 118, read 2026-10-18); service/ambience/value not published as scores, so null. Acclaim 3: MICHELIN Bib Gourmand (Taste Korean Food, 2026: selected consistently since 2017) on the guide's Seoul entry.",
+      "basis": "Tripadvisor, read 2026-10-18 (122 listing reviews; category sample counts unpublished): Service 3.8/5 -> 2; Ambience 3.9/5 -> 2.5; Value 3.3/5 -> 1.5. Dining-anchor conversion. Top-anchor scores capped at 4.5 without fresh consistent independent praise. Food 3 and Critic acclaim 3 retained from prior cited research.",
+      "additionalReviews": [],
+      "productionStatus": "missing pin; not published by this content update"
+    },
+    {
+      "pinId": 17144,
+      "name": "Myeongdong Kyoja Main",
+      "branchAddress": "29 Myeongdong 10-gil, Jung-gu",
+      "checkedAt": "2026-10-18",
+      "platform": "Tripadvisor",
+      "url": "https://www.tripadvisor.com/Restaurant_Review-g294197-d1196214-Reviews-Myeongdong_Kyoja_Main-Seoul.html",
+      "listingReviewCount": 3546,
+      "categoryReviewCounts": null,
+      "publishedScores": {
+        "food": 4.3,
+        "service": 3.6,
+        "ambience": 3.2,
+        "value": 4
+      },
+      "previousScores": {
+        "food": null,
+        "service": null,
+        "ambience": null,
+        "value": null,
+        "acclaim": 3
+      },
+      "scores": {
+        "food": null,
+        "service": 1.5,
+        "ambience": 1.5,
+        "value": 2.5,
+        "acclaim": 3
+      },
+      "previousBasis": "No diner rating figure was opened, so Food/Service/Ambience/Value are null. Acclaim 3: MICHELIN Bib Gourmand per Simmer with Sally (2024) and the guide's Seoul entry for Myeongdong Kyoja (open since 1966, four menu items).",
+      "basis": "Tripadvisor, read 2026-10-18 (3,546 listing reviews; category sample counts unpublished): Service 3.6/5 -> 1.5; Ambience 3.2/5 -> 1.5; Value 4/5 -> 2.5. Dining-anchor conversion. Top-anchor scores capped at 4.5 without fresh consistent independent praise. Food null and Critic acclaim 3 retained from prior cited research.",
+      "additionalReviews": [],
+      "productionStatus": "missing pin; not published by this content update"
+    },
+    {
+      "pinId": 17145,
+      "name": "Tosokchon Samgyetang",
+      "branchAddress": "5 Jahamun-ro 5-gil, Jongno-gu, Seoul",
+      "checkedAt": "2026-10-18",
+      "platform": "Tripadvisor",
+      "url": "https://www.tripadvisor.com/Restaurant_Review-g294197-d1174982-Reviews-Tosokchon_Samgyetang-Seoul.html",
+      "listingReviewCount": 2723,
+      "categoryReviewCounts": null,
+      "publishedScores": {
+        "food": 4.3,
+        "service": 3.5,
+        "ambience": 3.7,
+        "value": 3.7
+      },
+      "previousScores": {
+        "food": 3,
+        "service": null,
+        "ambience": null,
+        "value": null,
+        "acclaim": null
+      },
+      "scores": {
+        "food": 3,
+        "service": 1.5,
+        "ambience": 2.0,
+        "value": 2.0,
+        "acclaim": null
+      },
+      "previousBasis": "Food 3 from Tripexpert's displayed Tripadvisor 4.2 (2,722 reviews) and Google 4.2 (11,984 reviews), read 2026-10-18. Service/ambience/value not published as scores. Acclaim null: the MICHELIN Guide Seoul entry could not be found at the guessed slug and no other guide listing was confirmed.",
+      "basis": "Tripadvisor, read 2026-10-18 (2,723 listing reviews; category sample counts unpublished): Service 3.5/5 -> 1.5; Ambience 3.7/5 -> 2; Value 3.7/5 -> 2. Dining-anchor conversion. Top-anchor scores capped at 4.5 without fresh consistent independent praise. Food 3 and Critic acclaim null retained from prior cited research.",
+      "additionalReviews": [],
+      "productionStatus": "missing pin; not published by this content update"
+    },
+    {
+      "pinId": 17146,
+      "name": "Hadongkwan",
+      "branchAddress": "12 Myeongdong 9-gil, Jung-gu",
+      "checkedAt": "2026-10-18",
+      "platform": "Tripadvisor",
+      "url": "https://www.tripadvisor.com/Restaurant_Review-g294197-d2219129-Reviews-Hadongkwan-Seoul.html",
+      "listingReviewCount": 240,
+      "categoryReviewCounts": null,
+      "publishedScores": {
+        "food": 3.8,
+        "service": 3.2,
+        "ambience": 3.4,
+        "value": 3.1
+      },
+      "previousScores": {
+        "food": 1.5,
+        "service": null,
+        "ambience": null,
+        "value": null,
+        "acclaim": 3
+      },
+      "scores": {
+        "food": 1.5,
+        "service": 1.5,
+        "ambience": 1.5,
+        "value": 1.5,
+        "acclaim": 3
+      },
+      "previousBasis": "Food 1.5 from Tripexpert/Wanderlog displayed ratings: Tripadvisor 3.5 (241) and Google 3.6 (about 2,160-2,170). Service/ambience/value null. Acclaim 3: MICHELIN Bib Gourmand (Tripexpert label, MiddleClass 2023) on the guide's Seoul entry.",
+      "basis": "Tripadvisor, read 2026-10-18 (240 listing reviews; category sample counts unpublished): Service 3.2/5 -> 1.5; Ambience 3.4/5 -> 1.5; Value 3.1/5 -> 1.5. Dining-anchor conversion. Top-anchor scores capped at 4.5 without fresh consistent independent praise. Food 1.5 and Critic acclaim 3 retained from prior cited research.",
+      "additionalReviews": [],
+      "productionStatus": "missing pin; not published by this content update"
+    },
+    {
+      "pinId": 17148,
+      "name": "Nampo Myeonok, Jung-gu",
+      "branchAddress": "24 Eulji-ro 3-gil, Jung-gu",
+      "checkedAt": "2026-10-18",
+      "platform": "Tripadvisor",
+      "url": "https://www.tripadvisor.com/Restaurant_Review-g294197-d7748368-Reviews-Nampo_Myeonok-Seoul.html",
+      "listingReviewCount": 43,
+      "categoryReviewCounts": null,
+      "publishedScores": {
+        "food": 3.7,
+        "service": 3.3,
+        "ambience": 4,
+        "value": 3.1
+      },
+      "previousScores": {
+        "food": 2,
+        "service": null,
+        "ambience": null,
+        "value": null,
+        "acclaim": 2
+      },
+      "scores": {
+        "food": 2,
+        "service": 1.5,
+        "ambience": 2.5,
+        "value": 1.5,
+        "acclaim": 2
+      },
+      "previousBasis": "Food 2 from Wanderlog's displayed rating 3.8 from 2,276 reviews (read 2026-10-18); other diner axes null. Acclaim 2: listed in the MICHELIN Guide Seoul; earlier Bib Gourmand years (2017-2021 per Asiae) are not counted as current.",
+      "basis": "Tripadvisor, read 2026-10-18 (43 listing reviews; category sample counts unpublished): Service 3.3/5 -> 1.5; Ambience 4/5 -> 2.5; Value 3.1/5 -> 1.5. Dining-anchor conversion. Top-anchor scores capped at 4.5 without fresh consistent independent praise. Food 2 and Critic acclaim 2 retained from prior cited research.",
+      "additionalReviews": [],
+      "productionStatus": "missing pin; not published by this content update"
+    },
+    {
+      "pinId": 17155,
+      "name": "La Yeon",
+      "branchAddress": "23F, Shilla Hotel, 249 Dongho-ro, Jung-gu",
+      "checkedAt": "2026-10-18",
+      "platform": "Tripadvisor",
+      "url": "https://www.tripadvisor.com/Restaurant_Review-g294197-d8380813-Reviews-La_Yeon-Seoul.html",
+      "listingReviewCount": 89,
+      "categoryReviewCounts": null,
+      "publishedScores": {
+        "food": 4.1,
+        "service": 4.6,
+        "ambience": 5,
+        "value": 3.5
+      },
+      "previousScores": {
+        "food": 4,
+        "service": null,
+        "ambience": null,
+        "value": null,
+        "acclaim": 4.5
+      },
+      "scores": {
+        "food": 4,
+        "service": 4.5,
+        "ambience": 4.5,
+        "value": 1.5,
+        "acclaim": 4.5
+      },
+      "previousBasis": "Food 4 from Google 4.5/5 (808 reviews) via Wanderlog (read 2026-10-18); Andy Hayler's 2017 review scored the cooking 14/20 (not used to move the score). No Service, Ambience or Value sub-scores are published (null). Acclaim 4.5: two MICHELIN stars in the MICHELIN Guide Seoul & Busan 2026 (down from three in earlier years; a past edition's stars are not counted).",
+      "basis": "Tripadvisor, read 2026-10-18 (89 listing reviews; category sample counts unpublished): Service 4.6/5 -> 4.5; Ambience 5/5 -> 4.5; Value 3.5/5 -> 1.5. Dining-anchor conversion. Top-anchor scores capped at 4.5 without fresh consistent independent praise. Food 4 and Critic acclaim 4.5 retained from prior cited research.",
+      "additionalReviews": [],
+      "productionStatus": "missing pin; not published by this content update"
+    },
+    {
+      "pinId": 17158,
+      "name": "Soigné",
+      "branchAddress": "#201, 2F, Sinsa square, 652 Gangnam-daero, Gangnam-gu",
+      "checkedAt": "2026-10-18",
+      "platform": "Tripadvisor",
+      "url": "https://www.tripadvisor.com/Restaurant_Review-g294197-d6352912-Reviews-Soigne_Restaurant-Seoul.html",
+      "listingReviewCount": 82,
+      "categoryReviewCounts": null,
+      "publishedScores": {
+        "food": 4.7,
+        "service": 4.7,
+        "ambience": 4.8,
+        "value": 4.2
+      },
+      "previousScores": {
+        "food": 4,
+        "service": null,
+        "ambience": null,
+        "value": null,
+        "acclaim": 4.5
+      },
+      "scores": {
+        "food": 4,
+        "service": 4.5,
+        "ambience": 4.5,
+        "value": 3.0,
+        "acclaim": 4.5
+      },
+      "previousBasis": "Food 4 from Google 4.5/5 (465 reviews) and Tripadvisor 4.5/5 (79) via Wanderlog (read 2026-10-18); Time Out's page shows 4 of 5 stars (2015, not used). No Service, Ambience or Value sub-scores are published (null). Acclaim 4.5: two MICHELIN stars in the MICHELIN Guide Seoul & Busan 2026.",
+      "basis": "Tripadvisor, read 2026-10-18 (82 listing reviews; category sample counts unpublished): Service 4.7/5 -> 4.5; Ambience 4.8/5 -> 4.5; Value 4.2/5 -> 3. Dining-anchor conversion. Top-anchor scores capped at 4.5 without fresh consistent independent praise. Food 4 and Critic acclaim 4.5 retained from prior cited research.",
+      "additionalReviews": [],
+      "productionStatus": "missing pin; not published by this content update"
+    },
+    {
+      "pinId": 17159,
+      "name": "Alla Prima",
+      "branchAddress": "13 Hakdong-ro 17-gil, Gangnam-gu",
+      "checkedAt": "2026-10-18",
+      "platform": "Tripadvisor",
+      "url": "https://www.tripadvisor.com/Restaurant_Review-g294197-d15116877-Reviews-Alla_Prima-Seoul.html",
+      "listingReviewCount": 19,
+      "categoryReviewCounts": null,
+      "publishedScores": {
+        "food": 4.5,
+        "service": 4.3,
+        "ambience": 4.7,
+        "value": 4.3
+      },
+      "previousScores": {
+        "food": 4,
+        "service": null,
+        "ambience": null,
+        "value": null,
+        "acclaim": 4.5
+      },
+      "scores": {
+        "food": 4,
+        "service": 3.5,
+        "ambience": 3.5,
+        "value": 3.5,
+        "acclaim": 4.5
+      },
+      "previousBasis": "Food 4 from Google 4.5/5 (449 reviews) via Wanderlog (read 2026-10-18). No Service, Ambience or Value sub-scores are published (null). Acclaim 4.5: two MICHELIN stars in the MICHELIN Guide Seoul & Busan 2026.",
+      "basis": "Tripadvisor, read 2026-10-18 (19 listing reviews; category sample counts unpublished): Service 4.3/5 -> 3.5; Ambience 4.7/5 -> 3.5; Value 4.3/5 -> 3.5. Dining-anchor conversion. Under 30 listing reviews: new axes capped at 3.5. Food 4 and Critic acclaim 4.5 retained from prior cited research.",
+      "additionalReviews": [],
+      "productionStatus": "missing pin; not published by this content update"
+    },
+    {
+      "pinId": 17161,
+      "name": "Evett",
+      "branchAddress": "10-5 Dosan-daero 45-gil, Gangnam-gu",
+      "checkedAt": "2026-10-18",
+      "platform": "Tripadvisor",
+      "url": "https://www.tripadvisor.com/Restaurant_Review-g294197-d17412212-Reviews-EVETT-Seoul.html",
+      "listingReviewCount": 23,
+      "categoryReviewCounts": null,
+      "publishedScores": {
+        "food": 4.4,
+        "service": 4.2,
+        "ambience": 4.5,
+        "value": 3.5
+      },
+      "previousScores": {
+        "food": 4.5,
+        "service": null,
+        "ambience": null,
+        "value": null,
+        "acclaim": 4.5
+      },
+      "scores": {
+        "food": 4.5,
+        "service": 3.0,
+        "ambience": 3.5,
+        "value": 1.5,
+        "acclaim": 4.5
+      },
+      "previousBasis": "Food 4.5 from Google 4.6/5 (303 reviews) via Wanderlog (read 2026-10-18); Travels for Stars scored it 14/20 (May 2025), noted and not used to move the score. No Service, Ambience or Value sub-scores are published (null). Acclaim 4.5: two MICHELIN stars in the MICHELIN Guide Seoul & Busan 2026.",
+      "basis": "Tripadvisor, read 2026-10-18 (23 listing reviews; category sample counts unpublished): Service 4.2/5 -> 3; Ambience 4.5/5 -> 3.5; Value 3.5/5 -> 1.5. Dining-anchor conversion. Under 30 listing reviews: new axes capped at 3.5. Food 4.5 and Critic acclaim 4.5 retained from prior cited research.",
+      "additionalReviews": [],
+      "productionStatus": "missing pin; not published by this content update"
+    },
+    {
+      "pinId": 17169,
+      "name": "The Parkview, Shilla Seoul",
+      "branchAddress": "The Shilla Seoul, Dongho-ro, Jung-gu, Seoul",
+      "checkedAt": "2026-10-18",
+      "platform": "Tripadvisor",
+      "url": "https://www.tripadvisor.com/Restaurant_Review-g294197-d10088229-Reviews-The_Parkview-Seoul.html",
+      "listingReviewCount": 26,
+      "categoryReviewCounts": null,
+      "publishedScores": {
+        "food": 4.8,
+        "service": 5,
+        "ambience": 5,
+        "value": 3.6
+      },
+      "previousScores": {
+        "food": 4,
+        "service": null,
+        "ambience": null,
+        "value": null,
+        "acclaim": null
+      },
+      "scores": {
+        "food": 4,
+        "service": 3.5,
+        "ambience": 3.5,
+        "value": 1.5,
+        "acclaim": null
+      },
+      "previousBasis": "Food 4 from Google 4.5/5 (2,231 reviews) and Tripadvisor 4.5/5 (292) for The Parkview via Wanderlog (read 2026-10-18). No Service, Ambience or Value sub-scores are published (null). Acclaim null: hotel buffet outlet not covered by a guide page that was found. Only one independent summary was read.",
+      "basis": "Tripadvisor, read 2026-10-18 (26 listing reviews; category sample counts unpublished): Service 5/5 -> 3.5; Ambience 5/5 -> 3.5; Value 3.6/5 -> 1.5. Dining-anchor conversion. Under 30 listing reviews: new axes capped at 3.5. Food 4 and Critic acclaim null retained from prior cited research.",
+      "additionalReviews": [
+        {
+          "url": "https://kissmykimchi.com/2015/08/kmk-shilla-parkview-buffet.html/",
+          "title": "KMK: Shilla Parkview Buffet",
+          "publishedDate": "2015-08-24",
+          "quote": "The staff was also very attentive and professional.",
+          "note": "Rebecca’s firsthand buffet review, opened in Chrome after web fetch failed. Historical review; its old prices and dishes are not imported as current menu information."
+        },
+        {
+          "url": "https://whatsstewin.blogspot.com/2013/11/review-seouls-best-buffet-parkview-at.html",
+          "title": "Review: Seoul's Best Buffet, The Parkview at Shilla Hotel",
+          "publishedDate": "2013-11-08",
+          "quote": "The pasta dishes were definitely misses. The ravioli was very dry as was the spinach lasagna roll-up.",
+          "note": "Firsthand second visit with both positive and negative cooking observations. Historical review, not evidence of current menu availability or current prices."
+        }
+      ],
+      "productionStatus": "missing pin; not published by this content update"
+    },
+    {
+      "pinId": 17170,
+      "name": "The Library, Shilla Seoul",
+      "branchAddress": "The Shilla Seoul, Dongho-ro, Jung-gu, Seoul (1F)",
+      "checkedAt": "2026-10-18",
+      "platform": "Tripadvisor",
+      "url": "https://www.tripadvisor.com/Restaurant_Review-g294197-d9213145-Reviews-The_Library-Seoul.html",
+      "listingReviewCount": 32,
+      "categoryReviewCounts": null,
+      "publishedScores": {
+        "food": 4.5,
+        "service": 4.9,
+        "ambience": null,
+        "value": 3.2
+      },
+      "previousScores": {
+        "food": 3.5,
+        "service": null,
+        "ambience": null,
+        "value": null,
+        "acclaim": null
+      },
+      "scores": {
+        "food": 3.5,
+        "service": 4.5,
+        "ambience": null,
+        "value": 1.5,
+        "acclaim": null
+      },
+      "previousBasis": "Food 3.5 from Google 4.3/5 (66 reviews) via Wanderlog (read 2026-10-18). No Service, Ambience or Value sub-scores are published (null). Acclaim null: no guide page found for the lounge. The only blog review is a 2014 afternoon tea visit.",
+      "basis": "Tripadvisor, read 2026-10-18 (32 listing reviews; category sample counts unpublished): Service 4.9/5 -> 4.5; Ambience unpublished (null); Value 3.2/5 -> 1.5. Dining-anchor conversion. Top-anchor scores capped at 4.5 without fresh consistent independent praise. Food 3.5 and Critic acclaim null retained from prior cited research.",
+      "additionalReviews": [
+        {
+          "url": "https://365days2play.com/2013/12/03/afternoon-tea-at-the-shilla/",
+          "title": "Afternoon tea at The Shilla",
+          "publishedDate": "2013-12-03",
+          "quote": "In fact, the highlight for me was the tea. Really, I have never drunk such delicious milk tea before.",
+          "note": "Firsthand afternoon tea at The Library, not another Shilla outlet. Historical food and beverage review; old prices and menus are not used as current information."
+        },
+        {
+          "url": "https://doremifa-seoul.blogspot.com/2011/05/munchies-library-at-shilla-hotel-for.html",
+          "title": "Munchies: The Library at Shilla Hotel for Afternoon Tea",
+          "publishedDate": "2011-05-10",
+          "quote": "Shilla's Library is dark wood and lots of light, which is nothing less than handsome.",
+          "note": "Michelle’s firsthand afternoon tea review, opened in Chrome after web fetch failed. Historical room description; does not establish the current layout or smoking policy."
+        }
+      ],
+      "productionStatus": "missing pin; not published by this content update"
+    },
+    {
+      "pinId": 17213,
+      "name": "Nagahama Mangetsu Haeundae",
+      "branchAddress": "1F, Daeyoung Building, 57 Udong 1-ro, Haeundae-gu, Busan / 부산 해운대구 우동1로 57 대영빌딩1층",
+      "checkedAt": "2026-10-18",
+      "platform": "Tripadvisor",
+      "url": "https://www.tripadvisor.com/Restaurant_Review-g297884-d14391506-Reviews-Nagahama_Mangetsu-Busan.html",
+      "listingReviewCount": 12,
+      "categoryReviewCounts": null,
+      "publishedScores": {
+        "food": 5,
+        "service": 5,
+        "ambience": 5,
+        "value": 5
+      },
+      "previousScores": {
+        "food": 3.5,
+        "service": null,
+        "ambience": null,
+        "value": null,
+        "acclaim": 3
+      },
+      "scores": {
+        "food": 3.5,
+        "service": 3.5,
+        "ambience": 3.5,
+        "value": 3.5,
+        "acclaim": 3
+      },
+      "previousBasis": "Food 3.5 from 4.3 over 1,200 ratings (Tripadvisor 3.9 from only 12 reviews, not used). Google Maps (2026-10-18) gives only an overall rating, so Service, Ambience and Value are not scored. Acclaim 3: Bib Gourmand (2026 edition).",
+      "basis": "Tripadvisor, read 2026-10-18 (12 listing reviews; category sample counts unpublished): Service 5/5 -> 3.5; Ambience 5/5 -> 3.5; Value 5/5 -> 3.5. Dining-anchor conversion. Under 30 listing reviews: new axes capped at 3.5. Food 3.5 and Critic acclaim 3 retained from prior cited research.",
+      "additionalReviews": [],
+      "productionStatus": "missing pin; not published by this content update"
+    },
+    {
+      "pinId": 17153,
+      "name": "Mingles",
+      "branchAddress": "2F, 19 Dosan-daero 67-gil, Gangnam-gu",
+      "checkedAt": "2026-10-18",
+      "platform": "Tripadvisor",
+      "url": "https://www.tripadvisor.com/Restaurant_Review-g294197-d8468424-Reviews-Mingles-Seoul.html",
+      "listingReviewCount": 201,
+      "categoryReviewCounts": null,
+      "publishedScores": {
+        "food": 4.7,
+        "service": 4.5,
+        "ambience": 4.9,
+        "value": 4.3
+      },
+      "previousScores": {
+        "food": null,
+        "service": null,
+        "ambience": null,
+        "value": null,
+        "acclaim": 5
+      },
+      "scores": {
+        "food": null,
+        "service": 4.0,
+        "ambience": 4.5,
+        "value": 3.5,
+        "acclaim": 5
+      },
+      "previousBasis": "Acclaim 5: three MICHELIN stars in the MICHELIN Guide Seoul & Busan 2026 (the only three-star in the list) and No.4 on Asia's 50 Best Restaurants 2026 (50 Discovery page). No diner platform figures could be read this pass (Wanderlog returned an error), so Food, Service, Ambience and Value are null.",
+      "basis": "Tripadvisor, read 2026-10-18 (201 listing reviews; category sample counts unpublished): Service 4.5/5 -> 4; Ambience 4.9/5 -> 4.5; Value 4.3/5 -> 3.5. Dining-anchor conversion. Top-anchor scores capped at 4.5 without fresh consistent independent praise. Food null and Critic acclaim 5 retained from prior cited research.",
+      "additionalReviews": [],
+      "productionStatus": "missing pin; not published by this content update"
+    },
+    {
+      "pinId": 17156,
+      "name": "Onjium",
+      "branchAddress": "4F, 49 Hyoja-ro, Jongno-gu",
+      "checkedAt": "2026-10-18",
+      "platform": "Tripadvisor",
+      "url": "https://www.tripadvisor.com/Restaurant_Review-g294197-d23177207-Reviews-Onjium_Restaurant-Seoul.html",
+      "listingReviewCount": 4,
+      "categoryReviewCounts": null,
+      "publishedScores": {
+        "food": 5,
+        "service": 5,
+        "ambience": 5,
+        "value": 4
+      },
+      "previousScores": {
+        "food": 4.5,
+        "service": null,
+        "ambience": null,
+        "value": null,
+        "acclaim": 4.5
+      },
+      "scores": {
+        "food": 4.5,
+        "service": 3.5,
+        "ambience": 3.5,
+        "value": 2.5,
+        "acclaim": 4.5
+      },
+      "previousBasis": "Food 4.5 from Google 4.7/5 (165 reviews) via Wanderlog (read 2026-10-18). No Service, Ambience or Value sub-scores are published (null). Acclaim 4.5: one MICHELIN star in the MICHELIN Guide Seoul & Busan 2026 (4) and No.14 on Asia's 50 Best Restaurants 2026 (top 50, 4.5; it was No.10 in 2025).",
+      "basis": "Tripadvisor, read 2026-10-18 (4 listing reviews; category sample counts unpublished): Service 5/5 -> 3.5; Ambience 5/5 -> 3.5; Value 4/5 -> 2.5. Dining-anchor conversion. Under 30 listing reviews: new axes capped at 3.5. Food 4.5 and Critic acclaim 4.5 retained from prior cited research.",
+      "additionalReviews": [],
+      "productionStatus": "missing pin; not published by this content update"
+    },
+    {
+      "pinId": 17160,
+      "name": "Restaurant Allen",
+      "branchAddress": "E205, 2F, Center field EAST, 231 Teheran-ro, Gangnam-gu",
+      "checkedAt": "2026-10-18",
+      "platform": "Tripadvisor",
+      "url": "https://www.tripadvisor.com/Restaurant_Review-g294197-d24120580-Reviews-Allen_Restaurant-Seoul.html",
+      "listingReviewCount": 5,
+      "categoryReviewCounts": null,
+      "publishedScores": {
+        "food": 5,
+        "service": 5,
+        "ambience": null,
+        "value": 5
+      },
+      "previousScores": {
+        "food": null,
+        "service": null,
+        "ambience": null,
+        "value": null,
+        "acclaim": 4.5
+      },
+      "scores": {
+        "food": null,
+        "service": 3.5,
+        "ambience": null,
+        "value": 3.5,
+        "acclaim": 4.5
+      },
+      "previousBasis": "Acclaim 4.5: two MICHELIN stars in the MICHELIN Guide Seoul & Busan 2026. No platform diner figures could be read for this venue (no Wanderlog page found), so Food, Service, Ambience and Value are null. Only two independent write-ups were found.",
+      "basis": "Tripadvisor, read 2026-10-18 (5 listing reviews; category sample counts unpublished): Service 5/5 -> 3.5; Ambience unpublished (null); Value 5/5 -> 3.5. Dining-anchor conversion. Under 30 listing reviews: new axes capped at 3.5. Food null and Critic acclaim 4.5 retained from prior cited research.",
+      "additionalReviews": [
+        {
+          "url": "https://www.experiencesluxe.com/en/destinations/asia/south-korea/seoul/restaurants/allen",
+          "title": "Allen in Seoul: Korean Terroir Reinvented with Two Michelin Stars",
+          "publishedDate": "2024-10-18",
+          "quote": "The calming ambiance of the place, combined with impeccable service, magnified this exceptional experience.",
+          "note": "Florence Consul reports a firsthand lunch. Hosted meal disclosed by publisher; editorial independence claimed, not an anonymous inspection. Address matches Centerfield EAST E205."
+        }
+      ],
+      "productionStatus": "missing pin; not published by this content update"
+    },
+    {
+      "pinId": 17162,
+      "name": "L’Amant Secret",
+      "branchAddress": "26F L'Escape Hotel, 67 Toegye-ro, Jung-gu",
+      "checkedAt": "2026-10-18",
+      "platform": "Tripadvisor",
+      "url": "https://www.tripadvisor.com/Restaurant_Review-g294197-d19408137-Reviews-L_amant_Secret-Seoul.html",
+      "listingReviewCount": 9,
+      "categoryReviewCounts": null,
+      "publishedScores": {
+        "food": 4.3,
+        "service": 5,
+        "ambience": 5,
+        "value": 4
+      },
+      "previousScores": {
+        "food": null,
+        "service": null,
+        "ambience": null,
+        "value": null,
+        "acclaim": 4
+      },
+      "scores": {
+        "food": null,
+        "service": 3.5,
+        "ambience": 3.5,
+        "value": 2.5,
+        "acclaim": 4
+      },
+      "previousBasis": "Acclaim 4: one MICHELIN star in the MICHELIN Guide Seoul & Busan 2026. No diner platform figures could be read (no Wanderlog page found), so Food, Service, Ambience and Value are null. Only two independent write-ups were found.",
+      "basis": "Tripadvisor, read 2026-10-18 (9 listing reviews; category sample counts unpublished): Service 5/5 -> 3.5; Ambience 5/5 -> 3.5; Value 4/5 -> 2.5. Dining-anchor conversion. Under 30 listing reviews: new axes capped at 3.5. Food null and Critic acclaim 4 retained from prior cited research.",
+      "additionalReviews": [
+        {
+          "url": "https://hobby.lifeishobby.com/entry/%EB%AF%B8%EC%8A%90%EB%9E%AD-1%EC%8A%A4%ED%83%80%EC%9D%98-%EB%B9%84%EB%B0%80%EC%8A%A4%EB%9F%AC%EC%9A%B4-%EC%97%B0%EC%9D%B8-%EB%9D%BC%EB%A7%9D-%EC%8B%9C%ED%81%AC%EB%A0%88-LAmant-Secret-%EB%B0%A9%EB%AC%B8-%ED%9B%84%EA%B8%B0?category=682011",
+          "title": "미슐랭 1스타의 비밀스러운 연인, 라망 시크레 (L'Amant Secret) 방문 후기",
+          "publishedDate": "2026-01-06",
+          "quote": "테이블 간격이 넓어서 오픈된 공간임에도 프라이빗한 느낌을 받을 수 있어요.",
+          "note": "LifeHobby firsthand visit dated December 16, 2025; explicitly states no sponsorship or advertising. Quote describes privacy from table spacing. Address matches 26F L’Escape, 67 Toegye-ro. Publication date January 6, 2026."
+        }
+      ],
+      "productionStatus": "missing pin; not published by this content update"
+    },
+    {
+      "pinId": 17152,
+      "name": "Hanilkwan Apgujeong",
+      "branchAddress": "14 Apgujeong-ro 38-gil, Gangnam-gu, Seoul",
+      "checkedAt": "2026-10-18",
+      "platform": "Tripadvisor",
+      "url": "https://www.tripadvisor.com/Restaurant_Review-g294197-d8985439-Reviews-Hanilkwan-Seoul.html",
+      "listingReviewCount": 17,
+      "categoryReviewCounts": null,
+      "publishedScores": {
+        "food": 4.2,
+        "service": 3.5,
+        "ambience": null,
+        "value": 3.3
+      },
+      "previousScores": {
+        "food": 2.5,
+        "service": null,
+        "ambience": null,
+        "value": null,
+        "acclaim": null
+      },
+      "scores": {
+        "food": 2.5,
+        "service": 1.5,
+        "ambience": null,
+        "value": 1.5,
+        "acclaim": null
+      },
+      "previousBasis": "Food 2.5 from Google 4.0/5 (420 reviews) via Wanderlog (read 2026-10-18); Wanderlog's summary is split on the bulgogi. No Service, Ambience or Value sub-scores are published (null). Acclaim not scored: a Bib Gourmand held in the past is lapsed (a 2026 blog says it no longer has the recognition) and no current MICHELIN Seoul page was found for Hanilkwan.",
+      "basis": "Tripadvisor, read 2026-10-18 (17 listing reviews; category sample counts unpublished): Service 3.5/5 -> 1.5; Ambience unpublished (null); Value 3.3/5 -> 1.5. Dining-anchor conversion. Under 30 listing reviews: new axes capped at 3.5. Food 2.5 and Critic acclaim null retained from prior cited research.",
+      "additionalReviews": [],
+      "productionStatus": "missing pin; not published by this content update"
+    },
+    {
+      "pinId": 17150,
+      "name": "Yeongyang Center Myeongdong Main",
+      "branchAddress": "52 Myeongdong 2-gil, Jung-gu, Seoul",
+      "checkedAt": "2026-10-18",
+      "platform": "Tripadvisor",
+      "url": "https://www.tripadvisor.com/Restaurant_Review-g294197-d6960502-Reviews-Yeongyang_Center_Myeongdong_Main-Seoul.html",
+      "listingReviewCount": 59,
+      "categoryReviewCounts": null,
+      "publishedScores": {
+        "food": 4.4,
+        "service": 3.9,
+        "ambience": 4.2,
+        "value": 3.9
+      },
+      "previousScores": {
+        "food": 3,
+        "service": null,
+        "ambience": null,
+        "value": null,
+        "acclaim": null
+      },
+      "scores": {
+        "food": 3,
+        "service": 2.5,
+        "ambience": 3.0,
+        "value": 2.5,
+        "acclaim": null
+      },
+      "previousBasis": "Google 4.1/5 from 849 reviews via Wanderlog (read 2026-10-18) scored Food 3. No Service, Ambience or Value sub-scores are published, so those are null. Critic acclaim not scored: no MICHELIN Guide Seoul page was found for the restaurant (slug lookups on guide.michelin.com returned not found), so recognition is unverified.",
+      "basis": "Tripadvisor, read 2026-10-18 (59 listing reviews; category sample counts unpublished): Service 3.9/5 -> 2.5; Ambience 4.2/5 -> 3; Value 3.9/5 -> 2.5. Dining-anchor conversion. Top-anchor scores capped at 4.5 without fresh consistent independent praise. Food 3 and Critic acclaim null retained from prior cited research.",
+      "additionalReviews": [],
+      "productionStatus": "missing pin; not published by this content update"
+    },
+    {
+      "pinId": 17147,
+      "name": "Pyeongyang Myeonok, Jangchungdong",
+      "branchAddress": "207 Jangchungdan-ro, Jung-gu",
+      "checkedAt": "2026-10-18",
+      "platform": "Tripadvisor",
+      "url": "https://www.tripadvisor.com/Restaurant_Review-g294197-d4031198-Reviews-Pyeongyang_Myeonok-Seoul.html",
+      "listingReviewCount": 52,
+      "categoryReviewCounts": null,
+      "publishedScores": {
+        "food": 4.4,
+        "service": 3.6,
+        "ambience": null,
+        "value": 3.7
+      },
+      "previousScores": {
+        "food": null,
+        "service": null,
+        "ambience": null,
+        "value": null,
+        "acclaim": 2
+      },
+      "scores": {
+        "food": null,
+        "service": 1.5,
+        "ambience": null,
+        "value": 2.0,
+        "acclaim": 2
+      },
+      "previousBasis": "No rating figure for the Jangchungdong branch was read (the Tripexpert ratings are for the Nonhyeon branch and were not used), so the diner axes are null. Acclaim 2: listed in the MICHELIN Guide Seoul ('Worth Queueing For'); Bib Gourmand status of this branch not confirmed.",
+      "basis": "Tripadvisor, read 2026-10-18 (52 listing reviews; category sample counts unpublished): Service 3.6/5 -> 1.5; Ambience unpublished (null); Value 3.7/5 -> 2. Dining-anchor conversion. Top-anchor scores capped at 4.5 without fresh consistent independent praise. Food null and Critic acclaim 2 retained from prior cited research.",
+      "additionalReviews": [],
+      "productionStatus": "missing pin; not published by this content update"
+    },
+    {
+      "pinId": 17200,
+      "name": "Chaoran, Signiel Busan",
+      "branchAddress": "30 Dalmaji-gil, Haeundae-gu, Busan / 부산광역시 해운대구 달맞이길 30",
+      "checkedAt": "2026-10-18",
+      "platform": "Tripadvisor",
+      "url": "https://www.tripadvisor.com/Restaurant_Review-g297884-d23144656-Reviews-Chaoran-Busan.html",
+      "listingReviewCount": 3,
+      "categoryReviewCounts": null,
+      "publishedScores": {
+        "food": 4,
+        "service": 4,
+        "ambience": 4,
+        "value": 4
+      },
+      "previousScores": {
+        "food": 3.5,
+        "service": null,
+        "ambience": null,
+        "value": null,
+        "acclaim": 2
+      },
+      "scores": {
+        "food": 3.5,
+        "service": 2.5,
+        "ambience": 2.5,
+        "value": 2.5,
+        "acclaim": 2
+      },
+      "previousBasis": "Food 3.5 from 4.3 over 72 ratings. Google Maps (2026-10-18) gives only an overall rating, so Service, Ambience and Value are not scored. Acclaim 2: Listed in the MICHELIN Guide Busan 2026 list without a distinction (Selected in the 2024 list per Korea Stripes).",
+      "basis": "Tripadvisor, read 2026-10-18 (3 listing reviews; category sample counts unpublished): Service 4/5 -> 2.5; Ambience 4/5 -> 2.5; Value 4/5 -> 2.5. Dining-anchor conversion. Under 30 listing reviews: new axes capped at 3.5. Food 3.5 and Critic acclaim 2 retained from prior cited research.",
+      "additionalReviews": [
+        {
+          "url": "https://www.catchtable.net/discovery/koreas-10-famous-chinese-restaurants-in-busan.html",
+          "title": "Korea's 10 Famous Chinese Restaurants in Busan",
+          "publishedDate": null,
+          "quote": "A polished homage to 1920s Hong Kong, where dim sum steams by day and cocktails glint by night",
+          "note": "Third-party dining guide’s Chaoran section describes the room and Cantonese cooking. This is editorial guide coverage, not a firsthand anonymous inspection. No publication date visible."
+        },
+        {
+          "url": "https://www.tripadvisor.com/Restaurant_Review-g297884-d23144656-Reviews-Chaoran-Busan.html",
+          "title": "Good Chinese Food",
+          "publishedDate": null,
+          "quote": "The dim sum were ok, the fried shrimps with chilly sauce were excellent.",
+          "note": "Firsthand diner review by TandTSwitzerland at Signiel Busan, not a professional critic. Browser displays May 20, 2025 while another locale displays May 22; exact publication date left null. Mixed dish assessments and original spelling retained."
+        }
+      ],
+      "productionStatus": "missing pin; not published by this content update"
+    },
+    {
+      "pinId": 17206,
+      "name": "Le DORER",
+      "branchAddress": "2F, 213-214, 37 Marine City 3-ro, Haeundae-gu, Busan / 부산 해운대구 마린시티3로 37 213호, 214호",
+      "checkedAt": "2026-10-18",
+      "platform": "Tripadvisor",
+      "url": "https://www.tripadvisor.com/Restaurant_Review-g297884-d28155873-Reviews-Le_Dorer-Busan.html",
+      "listingReviewCount": 2,
+      "categoryReviewCounts": null,
+      "publishedScores": {
+        "food": 5,
+        "service": 5,
+        "ambience": 5,
+        "value": 5
+      },
+      "previousScores": {
+        "food": 4.5,
+        "service": null,
+        "ambience": null,
+        "value": null,
+        "acclaim": 4
+      },
+      "scores": {
+        "food": 4.5,
+        "service": 3.5,
+        "ambience": 3.5,
+        "value": 3.5,
+        "acclaim": 4
+      },
+      "previousBasis": "Food 4.5 from 4.7 over 162 ratings. Google Maps (2026-10-18) gives only an overall rating, so Service, Ambience and Value are not scored. Acclaim 4: One MICHELIN Star (2026 edition, newly promoted; chef Kim Chang-uk also won the 2026 MICHELIN Young Chef Award per Korea Stripes).",
+      "basis": "Tripadvisor, read 2026-10-18 (2 listing reviews; category sample counts unpublished): Service 5/5 -> 3.5; Ambience 5/5 -> 3.5; Value 5/5 -> 3.5. Dining-anchor conversion. Under 30 listing reviews: new axes capped at 3.5. Food 4.5 and Critic acclaim 4 retained from prior cited research.",
+      "additionalReviews": [],
+      "productionStatus": "missing pin; not published by this content update"
+    },
+    {
+      "pinId": 17209,
+      "name": "Baek-il Pyeongnaeng",
+      "branchAddress": "1F, 29 Namcheonbada-ro 10beon-gil, Suyeong-gu, Busan / 부산 수영구 남천바다로10번길 29 1층",
+      "checkedAt": "2026-10-18",
+      "platform": "Tripadvisor",
+      "url": "https://www.tripadvisor.com/Restaurant_Review-g297884-d32749550-Reviews-Baek_Ill_Pyeong_Naeng-Busan.html",
+      "listingReviewCount": 1,
+      "categoryReviewCounts": null,
+      "publishedScores": {
+        "food": 5,
+        "service": 5,
+        "ambience": 5,
+        "value": 5
+      },
+      "previousScores": {
+        "food": 3,
+        "service": null,
+        "ambience": null,
+        "value": null,
+        "acclaim": 3
+      },
+      "scores": {
+        "food": 3,
+        "service": 3.5,
+        "ambience": 3.5,
+        "value": 3.5,
+        "acclaim": 3
+      },
+      "previousBasis": "Food 3.0 from 4.2 over 105 ratings. Google Maps (2026-10-18) gives only an overall rating, so Service, Ambience and Value are not scored. Acclaim 3: Bib Gourmand (2026 edition).",
+      "basis": "Tripadvisor, read 2026-10-18 (1 listing reviews; category sample counts unpublished): Service 5/5 -> 3.5; Ambience 5/5 -> 3.5; Value 5/5 -> 3.5. Dining-anchor conversion. Under 30 listing reviews: new axes capped at 3.5. Food 3 and Critic acclaim 3 retained from prior cited research.",
+      "additionalReviews": [
+        {
+          "url": "https://oecc2026.org/download/2025_Taste_of_Busan.pdf",
+          "title": "2025 Taste of Busan",
+          "publishedDate": null,
+          "quote": "the restaurant has completed the art of making authentic Pyeongyang naengmyeon, consisting of beef broth, salt, and 80% buckwheat noodles.",
+          "note": "Official Busan guide, 100.1.pyeongnaeng entry 11, printed page 176 (PDF page 89), rendered and visually checked. Line-wrap hyphenation normalized in quote. No exact publication day supplied. Address matches 1F, 29 Namcheonbada-ro 10beon-gil."
+        },
+        {
+          "url": "https://www.tripadvisor.com/ShowUserReviews-g297884-d32749550-r985417174-Baek_Ill_Pyeong_Naeng-Busan.html",
+          "title": "평양냉면에 제육 추가해서 드시는걸 추천",
+          "publishedDate": "2024-12-19",
+          "quote": "광안리에 유일하게 있는 평양냉면집. 육수에서 나는 육항이 일품입니다.",
+          "note": "Firsthand diner review by Passenger15651521682, not a professional critic. Korean original opened and checked because the automatic English translation was unreliable; original spelling retained."
+        }
+      ],
+      "productionStatus": "missing pin; not published by this content update"
+    },
+    {
+      "pinId": 17212,
+      "name": "Haemok Haeundae",
+      "branchAddress": "8 Gunam-ro 24beon-gil, Haeundae-gu, Busan / 부산 해운대구 구남로24번길 8",
+      "checkedAt": "2026-10-18",
+      "platform": "Tripadvisor",
+      "url": "https://www.tripadvisor.com/Restaurant_Review-g297884-d13823250-Reviews-Haemok-Busan.html",
+      "listingReviewCount": 13,
+      "categoryReviewCounts": null,
+      "publishedScores": {
+        "food": 5,
+        "service": 4.7,
+        "ambience": 4.3,
+        "value": 4.3
+      },
+      "previousScores": {
+        "food": 4,
+        "service": null,
+        "ambience": null,
+        "value": null,
+        "acclaim": 3
+      },
+      "scores": {
+        "food": 4,
+        "service": 3.5,
+        "ambience": 3.5,
+        "value": 3.5,
+        "acclaim": 3
+      },
+      "previousBasis": "Food 4.0 from 4.5 over 2,712 ratings. Google Maps (2026-10-18) gives only an overall rating, so Service, Ambience and Value are not scored. Acclaim 3: Bib Gourmand (2026 edition).",
+      "basis": "Tripadvisor, read 2026-10-18 (13 listing reviews; category sample counts unpublished): Service 4.7/5 -> 3.5; Ambience 4.3/5 -> 3.5; Value 4.3/5 -> 3.5. Dining-anchor conversion. Under 30 listing reviews: new axes capped at 3.5. Food 4 and Critic acclaim 3 retained from prior cited research.",
+      "additionalReviews": [],
+      "productionStatus": "missing pin; not published by this content update"
+    },
+    {
+      "pinId": 17217,
+      "name": "Bibijae",
+      "branchAddress": "45 Namcheonbada-ro 10beon-gil, Suyeong-gu, Busan / 부산 수영구 남천바다로10번길 45",
+      "checkedAt": "2026-10-18",
+      "platform": "Tripadvisor",
+      "url": "https://www.tripadvisor.com/Restaurant_Review-g297884-d32790215-Reviews-Bibijae-Busan.html",
+      "listingReviewCount": 3,
+      "categoryReviewCounts": null,
+      "publishedScores": {
+        "food": 5,
+        "service": 1,
+        "ambience": 4,
+        "value": 5
+      },
+      "previousScores": {
+        "food": 4.5,
+        "service": null,
+        "ambience": null,
+        "value": null,
+        "acclaim": 3
+      },
+      "scores": {
+        "food": 4.5,
+        "service": 1.5,
+        "ambience": 2.5,
+        "value": 3.5,
+        "acclaim": 3
+      },
+      "previousBasis": "Food 4.5 from 4.6 over 124 ratings. Google Maps (2026-10-18) gives only an overall rating, so Service, Ambience and Value are not scored. Acclaim 3: Bib Gourmand (2026 edition).",
+      "basis": "Tripadvisor, read 2026-10-18 (3 listing reviews; category sample counts unpublished): Service 1/5 -> 1.5; Ambience 4/5 -> 2.5; Value 5/5 -> 3.5. Dining-anchor conversion. Under 30 listing reviews: new axes capped at 3.5. Food 4.5 and Critic acclaim 3 retained from prior cited research. Service evidence is mixed and exceptionally thin; positive diner accounts also preserved.",
+      "additionalReviews": [
+        {
+          "url": "https://www.tripadvisor.com/ShowUserReviews-g297884-d32790215-r986680099-Bibijae-Busan.html",
+          "title": "Best Bibimbap",
+          "publishedDate": "2024-12-28",
+          "quote": "The ingredients were top quality and we loved the banchan.",
+          "note": "Firsthand diner review by SuzieLee71, not a professional critic. Permalink displays December 28; aggregate listing displayed December 27. Other diners report service problems, so this does not establish uniformly good service."
+        }
+      ],
+      "productionStatus": "missing pin; not published by this content update"
+    }
+  ],
+  "researchQueue": [
+    {
+      "pinId": 17149,
+      "name": "3rd Samgyetang",
+      "address": "56-3 Banpo-daero 28-gil, Seocho-gu",
+      "reason": "Opened 3dae Samgyejangin Tripadvisor listing at 56-3 Banpo-daero 28-gil: no readable category scores."
+    },
+    {
+      "pinId": 17163,
+      "name": "Gigas",
+      "address": "3F, 30 Toegye-ro 6ga-gil, Jung-gu",
+      "reason": "Opened Gigas Tripadvisor listing: one total review, no category scores published."
+    },
+    {
+      "pinId": 17164,
+      "name": "Mitou",
+      "address": "24 Dosan-daero 70-gil, Gangnam-gu",
+      "reason": "Held: Tripadvisor lists 17 Nonhyeon-ro 151-gil, while the pin is at 24 Dosan-daero 70-gil. Need current-branch scores; old location excluded."
+    },
+    {
+      "pinId": 17165,
+      "name": "Hinotsuki / Sushi Kanesaka (Grand InterContinental Seoul Parnas)",
+      "address": "Grand InterContinental Seoul Parnas, 521 Teheran-ro, Gangnam-gu, Seoul (1F)",
+      "reason": "Search returned Tokyo Sushi Kanesaka and unrelated Seoul sushi venues; no exact Hinotsuki branch category-score source."
+    },
+    {
+      "pinId": 17171,
+      "name": "Mosu Seoul",
+      "address": "4 Hoenamu-ro 41-gil, Yongsan-gu, Seoul",
+      "reason": "Held: Tripadvisor lists 45 Itaewon-ro 55ga-gil, while the reopened pin is at 4 Hoenamu-ro 41-gil. Need current-branch scores; old location excluded."
+    },
+    {
+      "pinId": 17202,
+      "name": "La Scala, Paradise Hotel Busan (라스칼라)",
+      "address": "296 Haeundaehaebyeon-ro, Haeundae-gu, Busan / 부산광역시 해운대구 해운대해변로 296 (Annex Building 2F)",
+      "reason": "Search returned Paradise Hotel ratings, not La Scala restaurant category scores."
+    },
+    {
+      "pinId": 17203,
+      "name": "Mori (모리)",
+      "address": "#311, 3F, Gyeongdong LEEIN: VIEW 2nd Commercial Building, 21 Gunam-ro, Haeundae-gu, Busan / 부산 해운대구 구남로 21 해운대 경동리인뷰2차 3층 311호 (204동 상가)",
+      "reason": "Search returned other countries and similarly named Busan venues; no verified Mori category-score listing."
+    },
+    {
+      "pinId": 17204,
+      "name": "Palate (팔레트)",
+      "address": "3F, 154 Dalmaji-gil 65beon-gil, Haeundae-gu, Busan / 부산 해운대구 달맞이길65번길 154 3층",
+      "reason": "Focused Tripadvisor search returned no matching restaurant score listing; qualitative Michelin and CatchTable coverage only."
+    },
+    {
+      "pinId": 17205,
+      "name": "Fiotto (피오또)",
+      "address": "2F Unit H, ECKE, 219 Dalmaji-gil 117beonga-gil, Haeundae-gu, Busan / 부산 해운대구 달맞이길117번가길 219 에케 2층 H호",
+      "reason": "CatchTable review page opened: 4.7 overall from 729 reviews, no category scores; linked Trip.com page returned 404. No matching Tripadvisor listing."
+    },
+    {
+      "pinId": 17207,
+      "name": "Jeongjitgan (정짓간 신평본점)",
+      "address": "6 Bibong-ro, Saha-gu, Busan / 부산 사하구 비봉로 6 1층 정짓간",
+      "reason": "Opened exact Jeongjitgan Sinpyeong Tripadvisor listing: one review, no category scores published."
+    },
+    {
+      "pinId": 17208,
+      "name": "Moemiljip (뫼밀집)",
+      "address": "2F, Orange Plaza, 23 Marine City 3-ro, Haeundae-gu, Busan / 부산 해운대구 마린시티3로 23 벽산 E 오렌지 프라자 2층 뫼밀집",
+      "reason": "Opened exact Moemiljip Tripadvisor listing: no category scores published."
+    },
+    {
+      "pinId": 17210,
+      "name": "Hanwolgwan (한월관)",
+      "address": "1F, 10 Gwangan-ro 62beon-gil, Suyeong-gu, Busan / 부산 수영구 광안로62번길 10 1층",
+      "reason": "Search returned Hanwol Restaurant in Jagalchi, not Hanwolgwan; namesake ratings excluded."
+    },
+    {
+      "pinId": 17211,
+      "name": "Cor Pasta Bar (코르 파스타 바)",
+      "address": "2F, 13 Dongseong-ro 25beon-gil, Busanjin-gu, Busan / 부산 부산진구 동성로25번길 13 2층",
+      "reason": "Search returned city-wide pasta lists and CatchTable; no matching Tripadvisor category-score source."
+    },
+    {
+      "pinId": 17214,
+      "name": "Shunsai Kubo Hwamyeong (슌사이쿠보 화명)",
+      "address": "1F, Geumsaem Building, 17 Yangdal-ro 4beon-gil, Buk-gu, Busan / 부산 북구 양달로4번길 17 금샘빌딩 1층",
+      "reason": "Search returned unrelated Japanese restaurants and CatchTable; no Hwamyeong branch category-score listing."
+    },
+    {
+      "pinId": 17215,
+      "name": "ARP (아르프)",
+      "address": "1F, 35 Taejong-ro 99beon-gil, Yeongdo-gu, Busan / 부산 영도구 태종로99번길 35 1층",
+      "reason": "Opened exact ARP Kitchen Tripadvisor listing: one review, no category scores published."
+    },
+    {
+      "pinId": 17216,
+      "name": "Songheonjip (송헌집)",
+      "address": "1F-2F, 18 Millak-ro 19beon-gil, Suyeong-gu, Busan / 부산 수영구 민락로19번길 18 1, 2층",
+      "reason": "Search returned Songjeong House and other namesakes; no matching Songheonjip category-score listing."
+    },
+    {
+      "pinId": 17218,
+      "name": "Tokyo Babsang (동경밥상 본점)",
+      "address": "1F, 34-6 Namcheonbada-ro, Suyeong-gu, Busan / 부산 수영구 남천바다로 34-6 1층",
+      "reason": "Search returned Bapsang/Bansang namesakes and CatchTable; no verified Tokyo Babsang category scores."
+    },
+    {
+      "pinId": 17219,
+      "name": "Anmok (안목)",
+      "address": "Rm 101, 1F, 3 Gwangnam-ro 22beon-gil, Suyeong-gu, Busan / 부산 수영구 광남로22번길 3 1층 101호",
+      "reason": "Search returned Haemok and unrelated venues; no matching Anmok category-score listing."
+    },
+    {
+      "pinId": 17220,
+      "name": "Buda Myeonok (부다면옥)",
+      "address": "2F, 36 Jungdong 1-ro, Haeundae-gu, Busan / 부산 해운대구 중동1로 36 2층",
+      "reason": "Search returned Buda Milmyeon with no reviews, not verified as the current Buda Myeonok branch."
+    },
+    {
+      "pinId": 17221,
+      "name": "Pili Pili (피리피리)",
+      "address": "1F, 54 Muhak-ro 33beon-gil, Suyeong-gu, Busan / 부산 수영구 무학로33번길 54 1층 피리피리",
+      "reason": "Opened exact Pili Pili Tripadvisor listing: no category scores published."
+    },
+    {
+      "pinId": 17222,
+      "name": "Hapcheon Gukbapjip (합천국밥집)",
+      "address": "235 Yongho-ro, Nam-gu, Busan / 부산 남구 용호로 235",
+      "reason": "Opened Hapcheon Gukbap listing at 235 Yongho-ro: no category scores published."
+    },
+    {
+      "pinId": 17223,
+      "name": "Bao Haus (바오하우스)",
+      "address": "1F, 62-9 Seojeon-ro 38beon-gil, Busanjin-gu, Busan / 부산 부산진구 서전로38번길 62-9 1층",
+      "reason": "No matching Tripadvisor listing; CatchTable and qualitative HappyCow reviews did not establish category scores."
+    },
+    {
+      "pinId": 17224,
+      "name": "Niurou Mian Guan Zi (뉴러우멘관즈)",
+      "address": "1F Rm 107, 25-4 Suyeong-ro 388beon-gil, Suyeong-gu, Busan / 부산 수영구 수영로388번길 25-4 1층 107호",
+      "reason": "Tripadvisor match was in Seoul, not Busan; wrong branch excluded."
+    },
+    {
+      "pinId": 17225,
+      "name": "Yakitori Onjeong (야키토리 온정)",
+      "address": "1F, 9-7 Dongcheon-ro 108beon-gil, Busanjin-gu, Busan / 부산 부산진구 동천로108번길 9-7 온정",
+      "reason": "Search returned Yakichori and CatchTable; no verified Yakitori Onjeong category-score listing."
+    }
+  ],
+  "limitations": [
+    "Existing reviews and recognition scores were preserved; their full historical evidence was not independently re-audited in this sub-score update.",
+    "Supplemental reviews include clearly identified firsthand guest/blog reviews and guide entries. These are not all professional critic reviews. Hosted review disclosure retained.",
+    "Several supplemental reviews are historical; do not treat their menus, prices, room layouts or service reports as current facts.",
+    "All 26 production source-URL lookups returned no live pin. No production pin was created and no deploy was requested or performed."
+  ],
+  "application": {
+    "local": [
+      {
+        "pinId": 17196,
+        "status": "verified",
+        "newAxisScores": 2,
+        "scores": {
+          "food": 4.5,
+          "service": 3.5,
+          "ambience": null,
+          "value": 1.5,
+          "acclaim": null
+        },
+        "reviewCount": 4,
+        "referencesAdded": 3,
+        "wikiResults": [
+          {
+            "url": "https://www.tripadvisor.com/ShowUserReviews-g297884-d4033806-r612886233-Mugunghwa-Busan.html",
+            "status": "saved",
+            "sourceId": 116848,
+            "version": 1
+          },
+          {
+            "url": "https://www.cospar2024.org/download/100%20Great%20Places%20to%20Eat%20in%20Busan.pdf",
+            "status": "saved",
+            "sourceId": 116849,
+            "version": 1
+          },
+          {
+            "url": "https://www.tripadvisor.com/Restaurant_Review-g297884-d4033806-Reviews-Mugunghwa-Busan.html",
+            "status": "saved",
+            "sourceId": 116847,
+            "version": 1
+          }
+        ],
+        "checkedAt": "2026-10-18T16:09:42.051Z"
+      },
+      {
+        "pinId": 17142,
+        "status": "verified",
+        "newAxisScores": 3,
+        "scores": {
+          "food": null,
+          "service": 1.5,
+          "ambience": 1.5,
+          "value": 1.5,
+          "acclaim": 2
+        },
+        "reviewCount": 4,
+        "referencesAdded": 0,
+        "wikiResults": [
+          {
+            "url": "https://www.tripadvisor.com/Restaurant_Review-g294197-d8975159-Reviews-Imun_Seolnongtang-Seoul.html",
+            "status": "saved",
+            "sourceId": 116854,
+            "version": 1
+          }
+        ],
+        "checkedAt": "2026-10-18T16:10:35.431Z"
+      },
+      {
+        "pinId": 17143,
+        "status": "verified",
+        "newAxisScores": 3,
+        "scores": {
+          "food": 3,
+          "service": 2.0,
+          "ambience": 2.5,
+          "value": 1.5,
+          "acclaim": 3
+        },
+        "reviewCount": 4,
+        "referencesAdded": 1,
+        "wikiResults": [
+          {
+            "url": "https://www.tripadvisor.com/Restaurant_Review-g294197-d4032449-Reviews-Woo_Lae_Oak_Jugyo-Seoul.html",
+            "status": "saved",
+            "sourceId": 116864,
+            "version": 1
+          }
+        ],
+        "checkedAt": "2026-10-18T16:10:36.604Z"
+      },
+      {
+        "pinId": 17144,
+        "status": "verified",
+        "newAxisScores": 3,
+        "scores": {
+          "food": null,
+          "service": 1.5,
+          "ambience": 1.5,
+          "value": 2.5,
+          "acclaim": 3
+        },
+        "reviewCount": 3,
+        "referencesAdded": 1,
+        "wikiResults": [
+          {
+            "url": "https://www.tripadvisor.com/Restaurant_Review-g294197-d1196214-Reviews-Myeongdong_Kyoja_Main-Seoul.html",
+            "status": "saved",
+            "sourceId": 116873,
+            "version": 1
+          }
+        ],
+        "checkedAt": "2026-10-18T16:10:37.812Z"
+      },
+      {
+        "pinId": 17145,
+        "status": "verified",
+        "newAxisScores": 3,
+        "scores": {
+          "food": 3,
+          "service": 1.5,
+          "ambience": 2.0,
+          "value": 2.0,
+          "acclaim": null
+        },
+        "reviewCount": 3,
+        "referencesAdded": 1,
+        "wikiResults": [
+          {
+            "url": "https://www.tripadvisor.com/Restaurant_Review-g294197-d1174982-Reviews-Tosokchon_Samgyetang-Seoul.html",
+            "status": "saved",
+            "sourceId": 116881,
+            "version": 1
+          }
+        ],
+        "checkedAt": "2026-10-18T16:10:38.989Z"
+      },
+      {
+        "pinId": 17146,
+        "status": "verified",
+        "newAxisScores": 3,
+        "scores": {
+          "food": 1.5,
+          "service": 1.5,
+          "ambience": 1.5,
+          "value": 1.5,
+          "acclaim": 3
+        },
+        "reviewCount": 4,
+        "referencesAdded": 1,
+        "wikiResults": [
+          {
+            "url": "https://www.tripadvisor.com/Restaurant_Review-g294197-d2219129-Reviews-Hadongkwan-Seoul.html",
+            "status": "saved",
+            "sourceId": 116890,
+            "version": 1
+          }
+        ],
+        "checkedAt": "2026-10-18T16:10:40.206Z"
+      },
+      {
+        "pinId": 17148,
+        "status": "verified",
+        "newAxisScores": 3,
+        "scores": {
+          "food": 2,
+          "service": 1.5,
+          "ambience": 2.5,
+          "value": 1.5,
+          "acclaim": 2
+        },
+        "reviewCount": 3,
+        "referencesAdded": 1,
+        "wikiResults": [
+          {
+            "url": "https://www.tripadvisor.com/Restaurant_Review-g294197-d7748368-Reviews-Nampo_Myeonok-Seoul.html",
+            "status": "saved",
+            "sourceId": 116899,
+            "version": 1
+          }
+        ],
+        "checkedAt": "2026-10-18T16:10:41.417Z"
+      },
+      {
+        "pinId": 17155,
+        "status": "verified",
+        "newAxisScores": 3,
+        "scores": {
+          "food": 4,
+          "service": 4.5,
+          "ambience": 4.5,
+          "value": 1.5,
+          "acclaim": 4.5
+        },
+        "reviewCount": 4,
+        "referencesAdded": 1,
+        "wikiResults": [
+          {
+            "url": "https://www.tripadvisor.com/Restaurant_Review-g294197-d8380813-Reviews-La_Yeon-Seoul.html",
+            "status": "saved",
+            "sourceId": 116911,
+            "version": 1
+          }
+        ],
+        "checkedAt": "2026-10-18T16:10:42.801Z"
+      },
+      {
+        "pinId": 17158,
+        "status": "verified",
+        "newAxisScores": 3,
+        "scores": {
+          "food": 4,
+          "service": 4.5,
+          "ambience": 4.5,
+          "value": 3.0,
+          "acclaim": 4.5
+        },
+        "reviewCount": 3,
+        "referencesAdded": 1,
+        "wikiResults": [
+          {
+            "url": "https://www.tripadvisor.com/Restaurant_Review-g294197-d6352912-Reviews-Soigne_Restaurant-Seoul.html",
+            "status": "saved",
+            "sourceId": 116926,
+            "version": 1
+          }
+        ],
+        "checkedAt": "2026-10-18T16:10:44.349Z"
+      },
+      {
+        "pinId": 17159,
+        "status": "verified",
+        "newAxisScores": 3,
+        "scores": {
+          "food": 4,
+          "service": 3.5,
+          "ambience": 3.5,
+          "value": 3.5,
+          "acclaim": 4.5
+        },
+        "reviewCount": 4,
+        "referencesAdded": 1,
+        "wikiResults": [
+          {
+            "url": "https://www.tripadvisor.com/Restaurant_Review-g294197-d15116877-Reviews-Alla_Prima-Seoul.html",
+            "status": "saved",
+            "sourceId": 116940,
+            "version": 1
+          }
+        ],
+        "checkedAt": "2026-10-18T16:10:45.606Z"
+      },
+      {
+        "pinId": 17161,
+        "status": "verified",
+        "newAxisScores": 3,
+        "scores": {
+          "food": 4.5,
+          "service": 3.0,
+          "ambience": 3.5,
+          "value": 1.5,
+          "acclaim": 4.5
+        },
+        "reviewCount": 4,
+        "referencesAdded": 1,
+        "wikiResults": [
+          {
+            "url": "https://www.tripadvisor.com/Restaurant_Review-g294197-d17412212-Reviews-EVETT-Seoul.html",
+            "status": "saved",
+            "sourceId": 116955,
+            "version": 1
+          }
+        ],
+        "checkedAt": "2026-10-18T16:10:46.821Z"
+      },
+      {
+        "pinId": 17169,
+        "status": "verified",
+        "newAxisScores": 3,
+        "scores": {
+          "food": 4,
+          "service": 3.5,
+          "ambience": 3.5,
+          "value": 1.5,
+          "acclaim": null
+        },
+        "reviewCount": 3,
+        "referencesAdded": 3,
+        "wikiResults": [
+          {
+            "url": "https://kissmykimchi.com/2015/08/kmk-shilla-parkview-buffet.html/",
+            "status": "saved",
+            "sourceId": 116969,
+            "version": 1
+          },
+          {
+            "url": "https://whatsstewin.blogspot.com/2013/11/review-seouls-best-buffet-parkview-at.html",
+            "status": "saved",
+            "sourceId": 116970,
+            "version": 1
+          },
+          {
+            "url": "https://www.tripadvisor.com/Restaurant_Review-g294197-d10088229-Reviews-The_Parkview-Seoul.html",
+            "status": "saved",
+            "sourceId": 116968,
+            "version": 1
+          }
+        ],
+        "checkedAt": "2026-10-18T16:10:48.033Z"
+      },
+      {
+        "pinId": 17170,
+        "status": "verified",
+        "newAxisScores": 2,
+        "scores": {
+          "food": 3.5,
+          "service": 4.5,
+          "ambience": null,
+          "value": 1.5,
+          "acclaim": null
+        },
+        "reviewCount": 4,
+        "referencesAdded": 3,
+        "wikiResults": [
+          {
+            "url": "https://365days2play.com/2013/12/03/afternoon-tea-at-the-shilla/",
+            "status": "saved",
+            "sourceId": 116983,
+            "version": 1
+          },
+          {
+            "url": "https://doremifa-seoul.blogspot.com/2011/05/munchies-library-at-shilla-hotel-for.html",
+            "status": "saved",
+            "sourceId": 116984,
+            "version": 1
+          },
+          {
+            "url": "https://www.tripadvisor.com/Restaurant_Review-g294197-d9213145-Reviews-The_Library-Seoul.html",
+            "status": "saved",
+            "sourceId": 116982,
+            "version": 1
+          }
+        ],
+        "checkedAt": "2026-10-18T16:10:49.264Z"
+      },
+      {
+        "pinId": 17213,
+        "status": "verified",
+        "newAxisScores": 3,
+        "scores": {
+          "food": 3.5,
+          "service": 3.5,
+          "ambience": 3.5,
+          "value": 3.5,
+          "acclaim": 3
+        },
+        "reviewCount": 3,
+        "referencesAdded": 0,
+        "wikiResults": [
+          {
+            "url": "https://www.tripadvisor.com/Restaurant_Review-g297884-d14391506-Reviews-Nagahama_Mangetsu-Busan.html",
+            "status": "saved",
+            "sourceId": 116497,
+            "version": 2
+          }
+        ],
+        "checkedAt": "2026-10-18T16:10:50.403Z"
+      },
+      {
+        "pinId": 17153,
+        "status": "verified",
+        "newAxisScores": 3,
+        "scores": {
+          "food": null,
+          "service": 4.0,
+          "ambience": 4.5,
+          "value": 3.5,
+          "acclaim": 5
+        },
+        "reviewCount": 4,
+        "referencesAdded": 1,
+        "wikiResults": [
+          {
+            "url": "https://www.tripadvisor.com/Restaurant_Review-g294197-d8468424-Reviews-Mingles-Seoul.html",
+            "status": "saved",
+            "sourceId": 117005,
+            "version": 1
+          }
+        ],
+        "checkedAt": "2026-10-18T16:10:51.576Z"
+      },
+      {
+        "pinId": 17156,
+        "status": "verified",
+        "newAxisScores": 3,
+        "scores": {
+          "food": 4.5,
+          "service": 3.5,
+          "ambience": 3.5,
+          "value": 2.5,
+          "acclaim": 4.5
+        },
+        "reviewCount": 3,
+        "referencesAdded": 1,
+        "wikiResults": [
+          {
+            "url": "https://www.tripadvisor.com/Restaurant_Review-g294197-d23177207-Reviews-Onjium_Restaurant-Seoul.html",
+            "status": "saved",
+            "sourceId": 117019,
+            "version": 1
+          }
+        ],
+        "checkedAt": "2026-10-18T16:10:52.786Z"
+      },
+      {
+        "pinId": 17160,
+        "status": "verified",
+        "newAxisScores": 2,
+        "scores": {
+          "food": null,
+          "service": 3.5,
+          "ambience": null,
+          "value": 3.5,
+          "acclaim": 4.5
+        },
+        "reviewCount": 3,
+        "referencesAdded": 2,
+        "wikiResults": [
+          {
+            "url": "https://www.experiencesluxe.com/en/destinations/asia/south-korea/seoul/restaurants/allen",
+            "status": "saved",
+            "sourceId": 117031,
+            "version": 1
+          },
+          {
+            "url": "https://www.tripadvisor.com/Restaurant_Review-g294197-d24120580-Reviews-Allen_Restaurant-Seoul.html",
+            "status": "saved",
+            "sourceId": 117030,
+            "version": 1
+          }
+        ],
+        "checkedAt": "2026-10-18T16:10:54.034Z"
+      },
+      {
+        "pinId": 17162,
+        "status": "verified",
+        "newAxisScores": 3,
+        "scores": {
+          "food": null,
+          "service": 3.5,
+          "ambience": 3.5,
+          "value": 2.5,
+          "acclaim": 4
+        },
+        "reviewCount": 3,
+        "referencesAdded": 2,
+        "wikiResults": [
+          {
+            "url": "https://hobby.lifeishobby.com/entry/%EB%AF%B8%EC%8A%90%EB%9E%AD-1%EC%8A%A4%ED%83%80%EC%9D%98-%EB%B9%84%EB%B0%80%EC%8A%A4%EB%9F%AC%EC%9A%B4-%EC%97%B0%EC%9D%B8-%EB%9D%BC%EB%A7%9D-%EC%8B%9C%ED%81%AC%EB%A0%88-LAmant-Secret-%EB%B0%A9%EB%AC%B8-%ED%9B%84%EA%B8%B0?category=682011",
+            "status": "saved",
+            "sourceId": 117043,
+            "version": 1
+          },
+          {
+            "url": "https://www.tripadvisor.com/Restaurant_Review-g294197-d19408137-Reviews-L_amant_Secret-Seoul.html",
+            "status": "saved",
+            "sourceId": 117042,
+            "version": 1
+          }
+        ],
+        "checkedAt": "2026-10-18T16:10:55.255Z"
+      },
+      {
+        "pinId": 17152,
+        "status": "verified",
+        "newAxisScores": 2,
+        "scores": {
+          "food": 2.5,
+          "service": 1.5,
+          "ambience": null,
+          "value": 1.5,
+          "acclaim": null
+        },
+        "reviewCount": 3,
+        "referencesAdded": 1,
+        "wikiResults": [
+          {
+            "url": "https://www.tripadvisor.com/Restaurant_Review-g294197-d8985439-Reviews-Hanilkwan-Seoul.html",
+            "status": "saved",
+            "sourceId": 117055,
+            "version": 1
+          }
+        ],
+        "checkedAt": "2026-10-18T16:10:56.417Z"
+      },
+      {
+        "pinId": 17150,
+        "status": "verified",
+        "newAxisScores": 3,
+        "scores": {
+          "food": 3,
+          "service": 2.5,
+          "ambience": 3.0,
+          "value": 2.5,
+          "acclaim": null
+        },
+        "reviewCount": 3,
+        "referencesAdded": 1,
+        "wikiResults": [
+          {
+            "url": "https://www.tripadvisor.com/Restaurant_Review-g294197-d6960502-Reviews-Yeongyang_Center_Myeongdong_Main-Seoul.html",
+            "status": "saved",
+            "sourceId": 117066,
+            "version": 1
+          }
+        ],
+        "checkedAt": "2026-10-18T16:10:57.622Z"
+      },
+      {
+        "pinId": 17147,
+        "status": "verified",
+        "newAxisScores": 2,
+        "scores": {
+          "food": null,
+          "service": 1.5,
+          "ambience": null,
+          "value": 2.0,
+          "acclaim": 2
+        },
+        "reviewCount": 3,
+        "referencesAdded": 1,
+        "wikiResults": [
+          {
+            "url": "https://www.tripadvisor.com/Restaurant_Review-g294197-d4031198-Reviews-Pyeongyang_Myeonok-Seoul.html",
+            "status": "saved",
+            "sourceId": 117075,
+            "version": 1
+          }
+        ],
+        "checkedAt": "2026-10-18T16:10:58.809Z"
+      },
+      {
+        "pinId": 17200,
+        "status": "verified",
+        "newAxisScores": 3,
+        "scores": {
+          "food": 3.5,
+          "service": 2.5,
+          "ambience": 2.5,
+          "value": 2.5,
+          "acclaim": 2
+        },
+        "reviewCount": 3,
+        "referencesAdded": 2,
+        "wikiResults": [
+          {
+            "url": "https://www.catchtable.net/discovery/koreas-10-famous-chinese-restaurants-in-busan.html",
+            "status": "saved",
+            "sourceId": 117090,
+            "version": 1
+          },
+          {
+            "url": "https://www.tripadvisor.com/Restaurant_Review-g297884-d23144656-Reviews-Chaoran-Busan.html",
+            "status": "saved",
+            "sourceId": 117089,
+            "version": 1
+          }
+        ],
+        "checkedAt": "2026-10-18T16:11:00.039Z"
+      },
+      {
+        "pinId": 17206,
+        "status": "verified",
+        "newAxisScores": 3,
+        "scores": {
+          "food": 4.5,
+          "service": 3.5,
+          "ambience": 3.5,
+          "value": 3.5,
+          "acclaim": 4
+        },
+        "reviewCount": 4,
+        "referencesAdded": 1,
+        "wikiResults": [
+          {
+            "url": "https://www.tripadvisor.com/Restaurant_Review-g297884-d28155873-Reviews-Le_Dorer-Busan.html",
+            "status": "saved",
+            "sourceId": 117109,
+            "version": 1
+          }
+        ],
+        "checkedAt": "2026-10-18T16:11:01.268Z"
+      },
+      {
+        "pinId": 17209,
+        "status": "verified",
+        "newAxisScores": 3,
+        "scores": {
+          "food": 3,
+          "service": 3.5,
+          "ambience": 3.5,
+          "value": 3.5,
+          "acclaim": 3
+        },
+        "reviewCount": 3,
+        "referencesAdded": 3,
+        "wikiResults": [
+          {
+            "url": "https://oecc2026.org/download/2025_Taste_of_Busan.pdf",
+            "status": "saved",
+            "sourceId": 117123,
+            "version": 1
+          },
+          {
+            "url": "https://www.tripadvisor.com/ShowUserReviews-g297884-d32749550-r985417174-Baek_Ill_Pyeong_Naeng-Busan.html",
+            "status": "saved",
+            "sourceId": 117124,
+            "version": 1
+          },
+          {
+            "url": "https://www.tripadvisor.com/Restaurant_Review-g297884-d32749550-Reviews-Baek_Ill_Pyeong_Naeng-Busan.html",
+            "status": "saved",
+            "sourceId": 117122,
+            "version": 1
+          }
+        ],
+        "checkedAt": "2026-10-18T16:11:02.469Z"
+      },
+      {
+        "pinId": 17212,
+        "status": "verified",
+        "newAxisScores": 3,
+        "scores": {
+          "food": 4,
+          "service": 3.5,
+          "ambience": 3.5,
+          "value": 3.5,
+          "acclaim": 3
+        },
+        "reviewCount": 4,
+        "referencesAdded": 1,
+        "wikiResults": [
+          {
+            "url": "https://www.tripadvisor.com/Restaurant_Review-g297884-d13823250-Reviews-Haemok-Busan.html",
+            "status": "saved",
+            "sourceId": 117139,
+            "version": 1
+          }
+        ],
+        "checkedAt": "2026-10-18T16:11:03.825Z"
+      },
+      {
+        "pinId": 17217,
+        "status": "verified",
+        "newAxisScores": 3,
+        "scores": {
+          "food": 4.5,
+          "service": 1.5,
+          "ambience": 2.5,
+          "value": 3.5,
+          "acclaim": 3
+        },
+        "reviewCount": 3,
+        "referencesAdded": 2,
+        "wikiResults": [
+          {
+            "url": "https://www.tripadvisor.com/ShowUserReviews-g297884-d32790215-r986680099-Bibijae-Busan.html",
+            "status": "saved",
+            "sourceId": 117155,
+            "version": 1
+          },
+          {
+            "url": "https://www.tripadvisor.com/Restaurant_Review-g297884-d32790215-Reviews-Bibijae-Busan.html",
+            "status": "saved",
+            "sourceId": 117154,
+            "version": 1
+          }
+        ],
+        "checkedAt": "2026-10-18T16:11:05.014Z"
+      }
+    ],
+    "production": [
+      {
+        "localId": 17196,
+        "status": "missing",
+        "sourceUrl": "https://www.lottehotel.com/busan-hotel/ko/dining/restaurant-mugunghwa"
+      },
+      {
+        "localId": 17142,
+        "status": "missing",
+        "sourceUrl": "https://guide.michelin.com/en/seoul-capital-area/kr-seoul/restaurant/imun-seolnongtang"
+      },
+      {
+        "localId": 17143,
+        "status": "missing",
+        "sourceUrl": "https://guide.michelin.com/en/seoul-capital-area/kr-seoul/restaurant/woo-lae-oak"
+      },
+      {
+        "localId": 17144,
+        "status": "missing",
+        "sourceUrl": "https://www.mdkj.co.kr/"
+      },
+      {
+        "localId": 17145,
+        "status": "missing",
+        "sourceUrl": "http://www.tosokchon.co.kr/"
+      },
+      {
+        "localId": 17146,
+        "status": "missing",
+        "sourceUrl": "https://guide.michelin.com/en/seoul-capital-area/kr-seoul/restaurant/hadongkwan"
+      },
+      {
+        "localId": 17148,
+        "status": "missing",
+        "sourceUrl": "https://guide.michelin.com/en/seoul-capital-area/kr-seoul/restaurant/nampo-myeonok"
+      },
+      {
+        "localId": 17155,
+        "status": "missing",
+        "sourceUrl": "https://guide.michelin.com/en/seoul-capital-area/kr-seoul/restaurant/la-yeon"
+      },
+      {
+        "localId": 17158,
+        "status": "missing",
+        "sourceUrl": "https://guide.michelin.com/en/seoul-capital-area/kr-seoul/restaurant/soigne"
+      },
+      {
+        "localId": 17159,
+        "status": "missing",
+        "sourceUrl": "https://guide.michelin.com/en/seoul-capital-area/kr-seoul/restaurant/alla-prima"
+      },
+      {
+        "localId": 17161,
+        "status": "missing",
+        "sourceUrl": "https://guide.michelin.com/en/seoul-capital-area/kr-seoul/restaurant/evett"
+      },
+      {
+        "localId": 17169,
+        "status": "missing",
+        "sourceUrl": "https://www.segye.com/newsView/20261018503645#shilla-parkview"
+      },
+      {
+        "localId": 17170,
+        "status": "missing",
+        "sourceUrl": "https://www.segye.com/newsView/20261016506491#shilla-library"
+      },
+      {
+        "localId": 17213,
+        "status": "missing",
+        "sourceUrl": "https://guide.michelin.com/en/busan-region/busan_1025838/restaurant/nagahama-mangetsu"
+      },
+      {
+        "localId": 17153,
+        "status": "missing",
+        "sourceUrl": "https://guide.michelin.com/en/seoul-capital-area/kr-seoul/restaurant/mingles"
+      },
+      {
+        "localId": 17156,
+        "status": "missing",
+        "sourceUrl": "https://guide.michelin.com/en/seoul-capital-area/kr-seoul/restaurant/onjium"
+      },
+      {
+        "localId": 17160,
+        "status": "missing",
+        "sourceUrl": "https://guide.michelin.com/en/seoul-capital-area/kr-seoul/restaurant/restaurant-allen"
+      },
+      {
+        "localId": 17162,
+        "status": "missing",
+        "sourceUrl": "https://guide.michelin.com/en/seoul-capital-area/kr-seoul/restaurant/l-amant-secret"
+      },
+      {
+        "localId": 17152,
+        "status": "missing",
+        "sourceUrl": "https://www.hanilkwan.co.kr/"
+      },
+      {
+        "localId": 17150,
+        "status": "missing",
+        "sourceUrl": "https://www.tastekoreanfood.com/eatout/yeongyang-center-myeongdong-koreas-original-tongdak-since-1960"
+      },
+      {
+        "localId": 17147,
+        "status": "missing",
+        "sourceUrl": "https://guide.michelin.com/en/seoul-capital-area/kr-seoul/restaurant/pyeongyang-myeonok"
+      },
+      {
+        "localId": 17200,
+        "status": "missing",
+        "sourceUrl": "https://www.lottehotel.com/busan-signiel/ko/dining/restaurant-chaoran"
+      },
+      {
+        "localId": 17206,
+        "status": "missing",
+        "sourceUrl": "https://guide.michelin.com/en/busan-region/busan_1025838/restaurant/le-dorer"
+      },
+      {
+        "localId": 17209,
+        "status": "missing",
+        "sourceUrl": "https://guide.michelin.com/en/busan-region/busan_1025838/restaurant/100-1-pyeongnaeng"
+      },
+      {
+        "localId": 17212,
+        "status": "missing",
+        "sourceUrl": "https://guide.michelin.com/en/busan-region/busan_1025838/restaurant/haemok"
+      },
+      {
+        "localId": 17217,
+        "status": "missing",
+        "sourceUrl": "https://guide.michelin.com/en/busan-region/busan_1025838/restaurant/bibijae"
+      }
+    ],
+    "deployPerformed": false
+  },
+  "verification": {
+    "localRubricsReadBack": 26,
+    "catalogMatchesLive": true,
+    "newSourceWikisReady": true,
+    "totalKoreanRubrics": 54,
+    "scoredAxisCounts": {
+      "food": 42,
+      "service": 30,
+      "ambience": 25,
+      "value": 30,
+      "acclaim": 48
+    },
+    "nativePinPageChecked": "http://localhost:3000/pin/17142/imun-seolnongtang-seoul-restaurant-guide"
+  }
+}

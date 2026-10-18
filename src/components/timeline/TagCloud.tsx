@@ -9,7 +9,7 @@ import { api } from '@/lib/client/api';
 import { hrefKeepingDate, hrefNearDay } from '@/lib/client/returnSpot';
 import { useScrollLock } from '@/lib/client/scrollLock';
 import { refineQuery, removeTerm } from '@/lib/searchTerms';
-import { recordQuery, sharedQueries } from '@/lib/savedQueries';
+import { recentQueries, recordQuery, recordRecentQuery, sharedQueries } from '@/lib/savedQueries';
 import { cloudTags, groupSelection, groupTags, isReserved, reservedPicked, reservedTag, reservedValues, RESERVED_TAGS, type TagCount, type TagGroup } from '@/lib/tags';
 import { parseSearchQuery } from '@/server/util/searchQuery';
 import { leaveDrawerForCloud, onOpenTagCloud } from '@/lib/client/controlsDrawer';
@@ -141,7 +141,10 @@ export function TagCloud({
 
   // Combined searches are remembered for the cloud's row of them.
   useEffect(() => {
-    if (query) recordQuery(query);
+    if (query) {
+      recordQuery(query);
+      recordRecentQuery(query);
+    }
   }, [query]);
   const openQuery = (next: string) => go(() => next, parseSearchQuery(next).tags.filter((name) => !isReserved(name)), reservedPicked(parseSearchQuery(next)), parseSearchQuery(next).excludeTags);
 
@@ -325,17 +328,22 @@ function ReservedFilters({
 // The combined searches this viewer runs most (savedQueries), one click each.
 function SavedQueries({ current, onOpen, className = '' }: { current: string; onOpen: (query: string) => void; className?: string }) {
   const t = useT();
-  const [list, setList] = useState<string[]>([]);
+  const label = t('tagCloud.savedQueries');
+  const [popular, setPopular] = useState<string[]>([]);
+  const [recent, setRecent] = useState<string[]>([]);
   useEffect(() => {
-    sharedQueries().then(setList);
+    setRecent(recentQueries());
+    sharedQueries().then(setPopular);
   }, [current]);
+  // This viewer's recent searches lead (own color), then the popular ones.
+  const list = [...new Set([...recent, ...popular])];
   if (!list.length) return null;
   const now = current.trim().replace(/\s+/g, ' ');
   return (
-    <div role="group" aria-label={t('tagCloud.savedQueries')} className={`flex flex-col gap-2 ${className}`}>
+    <div role="group" aria-label={label} className={`flex flex-col gap-2 ${className}`}>
       <span aria-hidden className="inline-flex items-center gap-1 text-xs font-semibold tracking-wide text-faint uppercase">
         <Icon name="search" className="size-3.5" />
-        {t('tagCloud.savedQueries')}
+        {label}
       </span>
       <div className="flex items-center gap-2 overflow-x-auto pb-1 [scrollbar-width:thin]">
         {list.map((q) => (
@@ -345,7 +353,7 @@ function SavedQueries({ current, onOpen, className = '' }: { current: string; on
             aria-pressed={q === now}
             onClick={() => onOpen(q)}
             title={q}
-            className={`shrink-0 rounded-full border px-3 py-1 text-sm whitespace-nowrap transition-colors ${q === now ? 'border-accent/60 bg-accent/15 text-link' : 'border-line text-muted hover:border-tint/40 hover:text-ink'}`}
+            className={`shrink-0 rounded-full border px-3 py-1 text-sm whitespace-nowrap transition-colors ${q === now ? 'border-accent/60 bg-accent/15 text-link' : recent.includes(q) ? 'border-link/40 bg-link/10 text-link hover:border-link/70' : 'border-line text-muted hover:border-tint/40 hover:text-ink'}`}
           >
             {q}
           </button>
