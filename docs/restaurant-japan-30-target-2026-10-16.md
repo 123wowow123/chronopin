@@ -1,8 +1,8 @@
 # Japan restaurant target audit — October 16, 2026
 
-Target: **30 distinct eligible restaurants in every tab of every city**. **468 verified memberships; 260 still missing**. This target remains incomplete; surplus in another tab does not offset a shortage.
+Target: **30 distinct eligible restaurants in every tab of every city**. **471 verified memberships; 258 still missing**. This target remains incomplete; surplus in another tab does not offset a shortage.
 
-All 24 local and production public guide counts agree after batch 80 at **468 memberships / 260 missing**, refreshed 2026-10-18T21:59:34.838552+00:00 (October 19, 06:59 JST / October 18, 14:59 PDT). Fuen Yakuin and BONTEMPS Minamihorie add two new branches, 75 menu entries, 17 credited Azure photos and one dated Instagram-follow offer. Fukuoka Just opened reaches **20/30**, Osaka Just opened **22/30**, Fukuoka Specials **32/30**. Full profiles, menus, gallery credits, three native guide title/image links, twelve schedule boundaries and the next local offer start verified in both environments. Earlier checkpoints below are historical.
+All 24 local and production public guide counts agree after batch 81 at **471 memberships / 258 missing**, refreshed 2026-10-18T22:09:57.694513+00:00 (October 19, 07:09 JST / October 18, 15:09 PDT). Other-city priority: Toroichi Ueno adds Tokyo Just opened **18/30** and Specials **34/30**; Osusumeya Susukino adds Sapporo Just opened **16/30**. Full profiles, 736 menu/course-component entries, 13 credited gallery images, three native title/image memberships and sixteen schedule boundaries verified in both environments. Kyoto/Nagoya under-target sections are next ahead of further Fukuoka/Osaka additions. Earlier checkpoints below are historical.
 
 | City (west to east) | Coming soon | Just opened | Top restaurants | Specials |
 | --- | ---: | ---: | ---: | ---: |
@@ -10,8 +10,8 @@ All 24 local and production public guide counts agree after batch 80 at **468 me
 | Osaka | 12/30 | 22/30 | 10/30 | 21/30 |
 | Kyoto | 11/30 | 31/30 | 10/30 | 30/30 |
 | Nagoya | 11/30 | 30/30 | 12/30 | 21/30 |
-| Tokyo | 13/30 | 17/30 | 24/30 | 33/30 |
-| Sapporo | 8/30 | 15/30 | 30/30 | 32/30 |
+| Tokyo | 13/30 | 18/30 | 24/30 | 34/30 |
+| Sapporo | 8/30 | 16/30 | 30/30 | 32/30 |
 
 ## Each remaining shortage
 
@@ -34,11 +34,11 @@ All 24 local and production public guide counts agree after batch 80 at **468 me
 | Nagoya | Top restaurants | 12 | 12 | 30 | 18 |
 | Nagoya | Specials | 21 | 21 | 30 | 9 |
 | Tokyo | Coming soon | 13 | 13 | 30 | 17 |
-| Tokyo | Just opened | 17 | 17 | 30 | 13 |
+| Tokyo | Just opened | 18 | 18 | 30 | 12 |
 | Tokyo | Top restaurants | 24 | 24 | 30 | 6 |
-| Tokyo | Specials | 33 | 33 | 30 | 0 |
+| Tokyo | Specials | 34 | 34 | 30 | 0 |
 | Sapporo | Coming soon | 8 | 8 | 30 | 22 |
-| Sapporo | Just opened | 15 | 15 | 30 | 15 |
+| Sapporo | Just opened | 16 | 16 | 30 | 14 |
 | Sapporo | Top restaurants | 30 | 30 | 30 | 0 |
 | Sapporo | Specials | 32 | 32 | 30 | 0 |
 
@@ -131,3 +131,8 @@ Samjo Osaka, Sakagami Fish Center Osaka and Uotto Sapporo Station North Exit: th
 ## Batch 80 completed
 
 **Batch 80 published and publicly verified (October 19, 06:59 JST / October 18, 14:59 PDT):** two new branch pins, **Fuen Malatang — Yakuin** and **BONTEMPS — Minamihorie**, with **75 menu entries and 17 credited Azure gallery links**. Fuen’s photographed board provides **52 weighed ingredient choices at ¥4.8/g**, three soups and nine priced sides/drinks/toppings; its **¥100 Instagram-follow offer ends November 10**. October 8 invitation-only media preview remains separate from October 10 public opening. BONTEMPS retains October 7 opening, eight unpriced launch staples and two **¥720 tax-inclusive** Halloween drinks; no Korean won prices or invented seasonal end date imported. Fukuoka Just opened **20/30**, Osaka Just opened **22/30**, Fukuoka Specials **32/30**. All 24 counts agree at **468 memberships / 260 missing**. Twelve schedule checks and all native pin/menu/card links, gallery credits and next start verified in both environments. Also restored four cross-contaminated content/date fields on **13 local restaurant pins** from source-backed production, preserving authors and other fields; added source/name guards to both Cleanview helper write paths and rejected all 13 stale mappings in isolated checks. [Batch evidence](restaurant-japan-30-japan80-2026-10-18.json). No application deployment.
+
+
+## Batch 81 completed
+
+**Batch 81 published and publicly verified (October 19, 07:09 JST / October 18, 15:09 PDT):** prioritized other cities with **Toroichi — Ueno (Tokyo)** and **Osusumeya — Sapporo Susukino**, adding **736 menu/course-component entries and 13 credited Azure gallery links**. Tokyo Just opened **18/30**, Sapporo Just opened **16/30**. Toroichi’s one-go Instagram-follow offer (maximum two per group, reservation/seating verification, no stacking) adds one Specials venue, represented by three records for normal service and verified November 3/23 holiday lunch. Tokyo Specials **34/30**. No expired opening event revived; conflicting ¥500 course coupon and incomplete organiser-free terms remain held. Osusumeya’s ¥3,300/¥4,400 plans remain ordinary menus. Sixteen weekday/weekend/overnight/holiday boundaries and next-start checks passed; full profiles, public menus, credits and all three native guide title/image links verified in both environments. All 24 counts agree at **471 memberships / 258 missing**. [Batch evidence](restaurant-japan-30-japan81-2026-10-18.json). No application deployment.

@@ -2931,13 +2931,13 @@
  },
  {
   "key": "los-angeles/riverside-county-fair-national-date-festival",
-  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/los-angeles/riverside-county-fair-national-date-festival-7fcdf789c84efbe5.webp",
-  "width": 800,
-  "height": 600,
-  "credit": "Wikimedia Commons, Magic Carpet Stage at Riverside County Fair and National Date Festival (2012)",
-  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Magic_Carpet_Stage_at_Riverside_County_Fair_and_National_Date_Festival_(2012).jpg",
-  "imageSourceUrl": "https://upload.wikimedia.org/wikipedia/commons/c/ca/Magic_Carpet_Stage_at_Riverside_County_Fair_and_National_Date_Festival_%282012%29.jpg",
-  "sha256": "7fcdf789c84efbe5bb732b41e6cf93db67b8f080307382f45912019539506ff3"
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/los-angeles/riverside-county-fair-national-date-festival-f8d909820cc355f7.webp",
+  "width": 1600,
+  "height": 1067,
+  "credit": "Riverside County Fair & National Date Festival (via Google Images)",
+  "sourceUrl": "https://www.datefest.org/",
+  "imageSourceUrl": "https://eventlocker.s3-accelerate.amazonaws.com/Riverside-County-Fair---National-Date-Festival_3861__1658188199__afternoon.jpg",
+  "sha256": "f8d909820cc355f78cc621234d9611966a5fdc8b2087ef26b9ea4675787d1373"
  },
  {
   "key": "los-angeles/rose-parade-pasadena",
@@ -5121,13 +5121,13 @@
  },
  {
   "key": "san-antonio/gruene-hall-live-music",
-  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/san-antonio/gruene-hall-live-music-2543387bfde9681f.webp",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/san-antonio/gruene-hall-live-music-1a8ac2ae32da8912.webp",
   "width": 1600,
   "height": 1067,
-  "credit": "Wikimedia Commons, Gruene Hall 2, Gruene, Texas",
-  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Gruene_Hall_2,_Gruene,_Texas_(8101089551).jpg",
-  "imageSourceUrl": "https://upload.wikimedia.org/wikipedia/commons/1/1c/Gruene_Hall_2%2C_Gruene%2C_Texas_%288101089551%29.jpg",
-  "sha256": "2543387bfde9681fd8c83e56b0aa2b2489f913c301dc77f91756d5199d294714"
+  "credit": "Gruene Hall exterior, gruenetexas.com (via Google Images)",
+  "sourceUrl": "https://www.gruenetexas.com/",
+  "imageSourceUrl": "https://www.gruenetexas.com/wp-content/uploads/2023/09/Gruene-Hall-Exterior.jpg",
+  "sha256": "1a8ac2ae32da891238417926a5fefb2cd673e0c6ffab2e24235d9804a6987548"
  },
  {
   "key": "san-antonio/illuminate-botanical-garden",
