@@ -26,6 +26,8 @@ interface Props {
 }
 
 // One label per year the song ranked, best rank that year, newest first.
+const PAGE_SIZE = 60;
+
 function yearLabels(song: MusicRankingEntry): { year: number; rank: number }[] {
   const best = new Map<number, number>();
   for (const c of [song, ...(song.alsoCharted ?? [])]) {
@@ -53,6 +55,8 @@ export function MusicRankingView({
   const hashReady = useRef(false);
   const [focusId, setFocusId] = useState<string | null>(null);
   const [focusNonce, setFocusNonce] = useState(0);
+  const [grown, setGrown] = useState<{ key: string; n: number }>({ key: '', n: PAGE_SIZE });
+  const sentinelRef = useRef<HTMLDivElement>(null);
   useEffect(() => {
     const readHash = () => {
       const params = new URLSearchParams(window.location.hash.replace(/^#/, ''));
@@ -107,6 +111,17 @@ export function MusicRankingView({
       query: searchQuery,
     });
   }, [initialRankings, selectedYear, selectedContinent, selectedCountry, searchQuery]);
+
+  // Flattened ordered list of tracks currently displayed on the landing page
+  const landingPageQueue = useMemo(() => {
+    return continentGroups.flatMap((g) => g.countries.flatMap((c) => c.rankings));
+  }, [continentGroups]);
+
+  // Render the charts a page at a time. A filter change starts the list over, and a deep link
+  // to a song beyond the rendered cards widens it to include that song.
+  const filterKey = `${selectedYear}|${selectedContinent}|${selectedCountry}|${searchQuery}`;
+  const focusAt = focusId ? landingPageQueue.findIndex((s) => s.id === focusId) : -1;
+  const shown = Math.max(grown.key === filterKey ? grown.n : PAGE_SIZE, focusAt + 1);
 
   // Keep the song in view when the phone rotates: remember the card nearest the top while scrolling,
   // then put it back at the same offset once the new layout has settled.
@@ -163,17 +178,43 @@ export function MusicRankingView({
     el.scrollIntoView({ block: 'center' });
   }, [focusId, focusNonce, continentGroups]);
 
-  // Flattened ordered list of tracks currently displayed on the landing page
-  const landingPageQueue = useMemo(() => {
-    return continentGroups.flatMap((g) => g.countries.flatMap((c) => c.rankings));
-  }, [continentGroups]);
-
   // Synchronize playback queue so clicking Next / Auto-play follows the visual landing page order
   useEffect(() => {
     if (landingPageQueue.length > 0) {
       setPlaylist(landingPageQueue);
     }
   }, [landingPageQueue, setPlaylist]);
+
+  const visibleGroups = useMemo(() => {
+    let left = shown;
+    const out: typeof continentGroups = [];
+    for (const g of continentGroups) {
+      const countries: (typeof g.countries) = [];
+      for (const c of g.countries) {
+        if (left <= 0) break;
+        const rankings = c.rankings.slice(0, left);
+        left -= rankings.length;
+        countries.push({ ...c, rankings });
+      }
+      if (countries.length) out.push({ ...g, countries });
+      if (left <= 0) break;
+    }
+    return out;
+  }, [continentGroups, shown]);
+
+  const hasMore = shown < landingPageQueue.length;
+  useEffect(() => {
+    const node = sentinelRef.current;
+    if (!hasMore || !node) return;
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries.some((e) => e.isIntersecting)) setGrown({ key: filterKey, n: shown + PAGE_SIZE });
+      },
+      { rootMargin: '800px 0px' },
+    );
+    observer.observe(node);
+    return () => observer.disconnect();
+  }, [hasMore, shown, filterKey]);
 
   const totalResults = useMemo(() => {
     return continentGroups.reduce(
@@ -546,7 +587,7 @@ export function MusicRankingView({
 
         {/* Hierarchical Grouping: By Continent, then by Country (West to East) */}
         <div className="space-y-20">
-          {continentGroups.map((continentGroup) => (
+          {visibleGroups.map((continentGroup) => (
             <section key={continentGroup.name} className="scroll-mt-20">
               {/* Continent Section Heading */}
               <div className="flex items-baseline justify-between border-b border-[var(--rule)] pb-4 mb-8">
@@ -556,7 +597,7 @@ export function MusicRankingView({
                     {continentGroup.name}
                   </h2>
                   <span className="rounded-full border border-[var(--rule)] bg-[var(--paper-raised)] px-2.5 py-0.5 text-xs font-semibold text-[var(--soft)]">
-                    {continentGroup.countries.reduce((acc, c) => acc + c.rankings.length, 0)} songs
+                    {(continentGroups.find((g) => g.name === continentGroup.name) ?? continentGroup).countries.reduce((acc, c) => acc + c.rankings.length, 0)} songs
                   </span>
                 </div>
                 <span className="text-xs italic text-[var(--soft)] hidden sm:inline">
@@ -817,6 +858,7 @@ export function MusicRankingView({
             </section>
           ))}
         </div>
+        {hasMore ? <div ref={sentinelRef} aria-hidden="true" style={{ height: 1 }} /> : null}
       </div>
     </main>
   );
