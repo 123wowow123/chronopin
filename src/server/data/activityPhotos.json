@@ -850,6 +850,16 @@
   "sha256": "fb940aa6ca7f6df51bb27247e932715656ed8833a7635159e21e085c5da23938"
  },
  {
+  "key": "houston/houston-restaurant-weeks",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/houston/houston-restaurant-weeks-5409982581e3d17d.webp",
+  "width": 1600,
+  "height": 1355,
+  "credit": "Photo: Houston Restaurant Weeks (official site)",
+  "sourceUrl": "https://houstonrestaurantweeks.com/",
+  "imageSourceUrl": "https://houstonrestaurantweeks.com/wp-content/uploads/2023/07/DO01000590-1.jpg",
+  "sha256": "5409982581e3d17d0b90a47be64071231f70853122fa2acba783b3a51b7185c0"
+ },
+ {
   "key": "houston/houston-rockets-home-games",
   "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/houston/houston-rockets-home-games-951df20b5e2153a7.webp",
   "width": 1600,
@@ -1010,6 +1020,16 @@
   "sha256": "08c38b8bd51d5aecfb7e894921c58d43677b3b235ef1cdb0f3dd235c98febd10"
  },
  {
+  "key": "las-vegas/las-vegas-springfest-magical-forest",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/las-vegas/las-vegas-springfest-magical-forest-63b06551a992bd30.webp",
+  "width": 1600,
+  "height": 1067,
+  "credit": "Photo: Opportunity Village (Springfest at the Magical Forest)",
+  "sourceUrl": "https://www.opportunityvillage.org/ovevents/springfest",
+  "imageSourceUrl": "https://www.opportunityvillage.org/wp-content/uploads/2025/12/IMG_0681-scaled.jpg",
+  "sha256": "63b06551a992bd3032a6676af5e8045312e8d317f3354d3cd1b24d5f272c7610"
+ },
+ {
   "key": "las-vegas/las-vegas-springs-preserve-dia-de-muertos",
   "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/las-vegas/las-vegas-springs-preserve-dia-de-muertos-ac79c2c03ffbbd9a.webp",
   "width": 1600,
@@ -1094,7 +1114,7 @@
   "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/los-angeles/la-county-fair-2fee21b05a8e5852.webp",
   "width": 1600,
   "height": 1064,
-  "credit": "Omar B\u00e1rcena / Wikimedia Commons (CC BY 2.0)",
+  "credit": "Omar Bárcena / Wikimedia Commons (CC BY 2.0)",
   "sourceUrl": "https://commons.wikimedia.org/wiki/File:L.A._County_Fair_1262.jpg",
   "imageSourceUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b7/L.A._County_Fair_1262.jpg/1920px-L.A._County_Fair_1262.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
   "sha256": "2fee21b05a8e5852f35aac5a85aa38a1c7a574d494492c5b3395fa98de7fc89e"
