@@ -23,8 +23,15 @@ for (const input of inputs) {
   try {
     if (!keys.has(input.key) || have.has(input.key)) throw new Error('unknown or already has photo');
     if (!/^https:\/\//.test(input.imageUrl) || !/^https:\/\//.test(input.pageUrl) || !input.credit?.trim()) throw new Error('needs https urls and a credit');
-    const res = await fetch(input.imageUrl, { headers: { 'User-Agent': UA }, signal: AbortSignal.timeout(40_000) });
-    if (!res.ok) throw new Error(`download ${res.status}`);
+    // Wikimedia asks for a descriptive agent and answers 429 to bursts: pace those hosts and back off.
+    const wiki = /wikimedia\.org|wikipedia\.org/.test(input.imageUrl);
+    let res: Response | undefined;
+    for (let attempt = 0; attempt < 4; attempt++) {
+      if (wiki) await new Promise((r) => setTimeout(r, 3000 * (attempt + 1)));
+      res = await fetch(input.imageUrl, { headers: { 'User-Agent': wiki ? 'ChronopinPhotoImport/1.0 (https://www.chronopin.com)' : UA }, signal: AbortSignal.timeout(40_000) });
+      if (res.status !== 429) break;
+    }
+    if (!res?.ok) throw new Error(`download ${res?.status}`);
     const data = Buffer.from(await res.arrayBuffer());
     const info = await sharp(data).metadata();
     if (!info.width || !info.height || info.width < 800 || info.height < 450) throw new Error(`too small ${info.width}x${info.height}`);
