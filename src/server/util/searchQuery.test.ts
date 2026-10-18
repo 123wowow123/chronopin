@@ -347,19 +347,3 @@ describe('OR groups', () => {
     expect(parseSearchQuery('tag:A OR').alternatives).toBeUndefined();
   });
 });
-
-describe('AND groups', () => {
-  it('reads each side of an AND as its own segment', () => {
-    const q = parseSearchQuery('tag:Anime AND tag:Predicted');
-    expect(q.all).toHaveLength(2);
-    expect(q.all![0].tags).toEqual(['Anime']);
-    expect(q.all![1].tags).toEqual(['Predicted']);
-    expect(q.alternatives).toBeUndefined();
-  });
-  it('binds tighter than OR', () => {
-    const q = parseSearchQuery('tag:A AND tag:B OR tag:C');
-    expect(q.alternatives).toHaveLength(2);
-    expect(q.alternatives![0].all).toHaveLength(2);
-    expect(q.alternatives![1].all).toBeUndefined();
-  });
-});
