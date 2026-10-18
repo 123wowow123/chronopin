@@ -135,7 +135,7 @@ const de: Messages = {
     trade: '<person></person> hat {count} neue Aktiengeschäfte gemeldet{tickers}',
     tradeBuys: 'Käufe',
     tradeSells: 'Verkäufe',
-    tradesToday: 'Aktienhandel heute',
+    tradesToday: 'Aktienhandel zuletzt',
     whyTrade: 'Du beobachtest die Geschäfte von {name}',
     whyWatch: 'Pin, den du beobachtest',
     whyThread: 'Thread, den du beobachtest',

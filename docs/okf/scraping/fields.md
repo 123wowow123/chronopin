@@ -106,6 +106,15 @@ publication placeholder must explicitly say it is not a launch date. Guide
 overviews still use their curation dates. See the
 [product-guide strategy](../../product-guide-strategy.md).
 
+## Planned energy, storage, and data-center projects
+
+Owner, 2026-10-18 (on the 51-round Cleanview batch): verify that `utcStartDateTime` across all rounds represents the project's real commercial operation / in-service date (COD), never the batch build date.
+
+1. **Planned and under-construction facilities take their target COD (`estimated`):** For a solar farm, battery storage facility (`BESS`), power plant, or data-center campus/building tagged `Planned` or `Under Construction`, `utcStartDateTime` must be its scheduled commercial operation / energization date (`dateConfidence: "estimated"` unless an exact day is formally scheduled, with `dateConfidenceReasoning` quoting the ISO/RTO queue, utility IRP/PPA, PUC docket, or developer target).
+2. **Never use the draft-build date or an announcement/permit date:** Never default `utcStartDateTime` to the date the batch script ran (e.g. `2026-10-18`), and never use a past rezoning vote, tax-abatement approval, interconnection application, or press-release date (`2022`–`2026`, `confirmed`) as the pin's start date when the pin is about the planned facility. Only a truly `Operating` facility uses its confirmed past energization date.
+3. **Re-date stale past queue targets:** Interconnection queue rows (MISO, PJM, ERCOT, SPP, CAISO, NYISO, ISO-NE) frequently carry an initial target COD that has already passed while the project remains in active study (`Planned`). Never leave a `Planned` pin on a past target date; re-check and re-date it to the active revised commercial operation window and note the queue revision in `dateConfidenceReasoning`.
+4. **Use `PUT /api/pins/:id?lightweight=1` for date/metadata backfills:** Admin `PUT` with `?lightweight=1` updates the pin and search index while skipping heavy background listeners (`refreshWiki`, sentiment, translations), avoiding production VM load. Always `GET /api/pins/:id` first and pass the complete `media` and `references` arrays back in the `PUT` payload so existing media rows are preserved.
+
 # Adding a category
 
 A category name lives in **seven files**: `categories.ts` and all six

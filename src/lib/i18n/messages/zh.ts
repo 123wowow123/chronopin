@@ -136,7 +136,7 @@ const zh: Messages = {
     trade: '<person></person> 披露了 {count} 笔新的股票交易{tickers}',
     tradeBuys: '买入',
     tradeSells: '卖出',
-    tradesToday: '今日股票交易',
+    tradesToday: '近期股票交易',
     whyTrade: '你在关注 {name} 的交易',
     whyWatch: '你关注的图钉',
     whyThread: '你关注的串',

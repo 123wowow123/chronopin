@@ -136,7 +136,7 @@ const en = {
     trade: '<person></person> disclosed {count} new stock trades{tickers}',
     tradeBuys: 'Buys',
     tradeSells: 'Sells',
-    tradesToday: 'Stock trades today',
+    tradesToday: 'Recent stock trades',
     whyTrade: 'You watch {name}’s trades',
     whyWatch: 'A pin you watch',
     whyThread: 'A thread you watch',

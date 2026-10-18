@@ -135,7 +135,7 @@ const ko: Messages = {
     trade: '<person></person> 님이 새 주식 거래 {count}건을 공개했습니다{tickers}',
     tradeBuys: '매수',
     tradeSells: '매도',
-    tradesToday: '오늘의 주식 거래',
+    tradesToday: '최근 주식 거래',
     whyTrade: '{name} 님의 거래를 지켜보는 중',
     whyWatch: '관심 핀',
     whyThread: '지켜보는 스레드',

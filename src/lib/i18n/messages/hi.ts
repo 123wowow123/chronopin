@@ -136,7 +136,7 @@ const hi: Messages = {
     trade: '<person></person> ने {count} नए शेयर लेन-देन घोषित किए{tickers}',
     tradeBuys: 'खरीद',
     tradeSells: 'बिक्री',
-    tradesToday: 'आज के शेयर ट्रेड',
+    tradesToday: 'हाल के शेयर ट्रेड',
     whyTrade: 'आप {name} के लेन-देन देख रहे हैं',
     whyWatch: 'एक पिन जिसे आप देख रहे हैं',
     whyThread: 'एक थ्रेड जिसे आप देख रहे हैं',

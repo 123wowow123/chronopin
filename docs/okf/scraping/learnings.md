@@ -15,6 +15,19 @@ Entry format: `## YYYY-MM-DD - <job>`, then `* **Learned**`, `* **Feedback**` (o
 
 
 
+## 2026-10-18 - Cleanview energy and data-center batch (Rounds 1–51, 779 pins) and start-date audit
+
+* **Done:** Published and audited all **779** Cleanview utility-scale solar, battery energy storage (`BESS`), and data-center pins across Rounds 1–51 on both local and production (`@EnergyDesk`, 3 verified USGS orthoimagery/topo/corridor media layers per pin in Azure Blob Storage `thumb`). Audited `utcStartDateTime`, `dateConfidence`, and `dateConfidenceReasoning` across all 51 rounds against `state-leads-all.json` and project filings, and reconciled **211 pins** across `drafts/*.json`, local, and production via `PUT /api/pins/:id?lightweight=1`:
+  * **123 pins in Rounds 39–51 (`fix_start_dates.py`):** Replaced placeholder `2026-10-18T12:00:00.000Z` draft-build dates with each project's scheduled commercial operation date (`2026-12-01` through `2031-06-01`, `dateConfidence: 'estimated'`).
+  * **67 pins in Rounds 6 & 8–16 (`fix_all_rounds_dates.py`):** Replaced `2022`–`2026` announcement/permit/rezoning dates (`dateConfidence: 'confirmed'`) on `Planned` and `Under Construction` projects with their scheduled commercial operation dates (`2026`–`2033`, `dateConfidence: 'estimated'`) from `state-leads-all.json` and ISO/RTO interconnection queues.
+  * **21 pins in Rounds 30–31 & 42–51 (`fix_all_rounds_dates.py`):** Re-dated `Planned` projects whose raw queue rows carried stale pre-October-2026 target dates (`2023`–`early 2026`, e.g. `battery-reynolds-white-in` #17288) to active `Q4 2026` / `2027`–`2028` commercial operation targets with explicit queue-revision reasoning.
+* **Feedback:** Owner: "are these in the right start dates?" (on planned Cleanview pins showing `10/18/2026 ESTIMATED`), then "verify dates for all rounds like this and update todo.md", and "update pin wiki on these findings".
+* **Learned:**
+  1. **Three distinct start-date traps in batch infrastructure scrapes:** (a) batch generator scripts defaulting `utcStartDateTime` to the script run date (`2026-10-18`); (b) drafting agents using an article's publication, rezoning vote, or permit filing date (`2022`–`2026`, `confirmed`) as the start date of a `Planned` or `Under Construction` facility instead of its scheduled commercial operation date (COD); and (c) copying a raw interconnection-queue target date that has already passed (`2023`–`early 2026`) for a project still tagged `Planned` without re-dating it to the active commercial operation schedule.
+  2. **Lightweight admin `PUT` for metadata/date repairs:** Calling `PUT /api/pins/:id?lightweight=1` as an admin updates the pin and search index while skipping `pinEvents` save listeners (Chromium page fetch, source wiki rebuild, sentiment, translation invalidation), keeping production CPU load flat. Always `GET /api/pins/:id` first and resend the full `media` and `references` arrays so `PUT` does not wipe attached media.
+  3. **Audit scripts must assert date parity:** Added `utcStartDateTime[:10]` and `dateConfidence` parity checks to all 44 round verification scripts (`verify_prod_24.py` and `verify_prod_r9.py`–`verify_prod_r51.py`) alongside title, source, category, summary, reference, and media checks.
+* **Changed:** Updated [Fields](fields.md#planned-energy-storage-and-data-center-projects), [Vertical recipes](verticals.md), [ToDo.md](../../../ToDo.md), and [the log](../log.md).
+
 ## 2026-10-16 - Production translation completion, seven pins
 
 * **Done:** Saved 105 production translations across seven pins in all 15 non-English locales: 90 missing rows and 15 outdated rows. The final global export returned zero due pins. Public checks covered every affected pin and all 15 locales, and original English fields and authors were verified unchanged. Artifacts: ignored `.scrape/prod-batches/translations-2026-10-16-evening/`. No deployment.

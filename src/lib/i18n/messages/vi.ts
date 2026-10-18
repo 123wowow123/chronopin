@@ -135,7 +135,7 @@ const vi: Messages = {
     trade: '<person></person> đã công bố {count} giao dịch cổ phiếu mới{tickers}',
     tradeBuys: 'Mua',
     tradeSells: 'Bán',
-    tradesToday: 'Giao dịch cổ phiếu hôm nay',
+    tradesToday: 'Giao dịch cổ phiếu gần đây',
     whyTrade: 'Bạn đang theo dõi giao dịch của {name}',
     whyWatch: 'Một ghim bạn đang quan sát',
     whyThread: 'Một chuỗi bạn đang quan sát',

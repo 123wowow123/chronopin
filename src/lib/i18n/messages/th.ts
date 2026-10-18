@@ -135,7 +135,7 @@ const th: Messages = {
     trade: '<person></person> เปิดเผยการซื้อขายหุ้นใหม่ {count} รายการ{tickers}',
     tradeBuys: 'ซื้อ',
     tradeSells: 'ขาย',
-    tradesToday: 'การซื้อขายหุ้นวันนี้',
+    tradesToday: 'การซื้อขายหุ้นล่าสุด',
     whyTrade: 'คุณกำลังติดตามการซื้อขายของ {name}',
     whyWatch: 'หมุดที่คุณติดตาม',
     whyThread: 'เธรดที่คุณติดตาม',

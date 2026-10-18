@@ -1,8 +1,8 @@
 # Japan restaurant target audit — October 16, 2026
 
-Target: **30 distinct eligible restaurants in every tab of every city**. **459 verified memberships; 266 still missing**. This target remains incomplete; surplus in another tab does not offset a shortage.
+Target: **30 distinct eligible restaurants in every tab of every city**. **460 verified memberships; 265 still missing**. This target remains incomplete; surplus in another tab does not offset a shortage.
 
-All 24 local and production public guide counts agree after batch 76 at **459 memberships / 266 missing**, refreshed 2026-10-18T15:51:31.147320+00:00 (October 19, 00:51 JST / October 18, 08:51 PDT). Four new established Fukuoka restaurant pins add four Specials memberships, bringing Fukuoka Specials to **30/30**. All retain their April 24, 2025 branch openings. Current exact-branch menus, four Munakata fair dishes through November 1, two separately timed recurring AKi offers, gallery credits and native title/image links verified in both environments. Existing records preserved; surplus does not offset another tab shortage. Earlier checkpoints below are historical.
+All 24 local and production public guide counts agree after batch 77 at **460 memberships / 265 missing**, refreshed 2026-10-18T21:20:01.413419+00:00 (October 19, 06:20 JST / October 18, 14:20 PDT). Morning Park Cafe adds one Tokyo Coming soon membership, bringing it to **13/30**. Five named menu entries and eight credited Azure images, full profiles, native public pin and guide title/image links verified in both environments. Thirteen local date fields that had diverged into future years were restored to the independently documented branch dates matching current production; public dates, original authors and unrelated fields verified. Production dates were not changed. Earlier checkpoints below are historical.
 
 | City (west to east) | Coming soon | Just opened | Top restaurants | Specials |
 | --- | ---: | ---: | ---: | ---: |
@@ -10,7 +10,7 @@ All 24 local and production public guide counts agree after batch 76 at **459 me
 | Osaka | 12/30 | 19/30 | 10/30 | 21/30 |
 | Kyoto | 11/30 | 31/30 | 10/30 | 30/30 |
 | Nagoya | 11/30 | 30/30 | 12/30 | 21/30 |
-| Tokyo | 12/30 | 17/30 | 24/30 | 33/30 |
+| Tokyo | 13/30 | 17/30 | 24/30 | 33/30 |
 | Sapporo | 8/30 | 14/30 | 30/30 | 31/30 |
 
 ## Each remaining shortage
@@ -33,7 +33,7 @@ All 24 local and production public guide counts agree after batch 76 at **459 me
 | Nagoya | Just opened | 30 | 30 | 30 | 0 |
 | Nagoya | Top restaurants | 12 | 12 | 30 | 18 |
 | Nagoya | Specials | 21 | 21 | 30 | 9 |
-| Tokyo | Coming soon | 12 | 12 | 30 | 18 |
+| Tokyo | Coming soon | 13 | 13 | 30 | 17 |
 | Tokyo | Just opened | 17 | 17 | 30 | 13 |
 | Tokyo | Top restaurants | 24 | 24 | 30 | 6 |
 | Tokyo | Specials | 33 | 33 | 30 | 0 |
@@ -52,7 +52,7 @@ Nineteen cumulative branch opening-date repairs were read back in both environme
 
 Checked exact complete saved profiles, original author presence, native public pin pages and all ordinary menu items, Azure image decode/hash/credit metadata, all 37 new venue cards across paginated guide APIs, native pin identifiers/links and upcoming offer start times. All six production guide HTML pages also returned HTTP 200 with native pin title/image links. The existing Eggs ’n Things pin exposes all 11 new menu entries; the successor starts October 21 at 09:00 JST and retains the prior October 20 expiry.
 
-Continue every under-target cell. Coming soon deficits: Fukuoka 21; Osaka 18; Kyoto 19; Nagoya 19; Tokyo 18; Sapporo 22. Nagoya Just opened remains 30/30; continue renewing its 90-day window. Kyoto Specials reaches 30, but dated offers expire and must be replenished. Detailed sources, held leads and October 17–22 expiry watch are in [research notes](restaurant-japan-30-progress-2026-10-16.md). [CSV](restaurant-japan-30-counts-2026-10-16.csv) and [production delta](restaurant-japan-production-2026-10-16.json) cover this session; older snapshots are history, not permission to overwrite current API profiles.
+Continue every under-target cell. Coming soon deficits: Fukuoka 21; Osaka 18; Kyoto 19; Nagoya 19; Tokyo 17; Sapporo 22. Nagoya Just opened remains 30/30; continue renewing its 90-day window. Kyoto Specials reaches 30, but dated offers expire and must be replenished. Detailed sources, held leads and October 17–22 expiry watch are in [research notes](restaurant-japan-30-progress-2026-10-16.md). [CSV](restaurant-japan-30-counts-2026-10-16.csv) and [production delta](restaurant-japan-production-2026-10-16.json) cover this session; older snapshots are history, not permission to overwrite current API profiles.
 
 No application code changes, build, restart or deployment. Release `157e1750` remains the previously documented deployed baseline; this content-maintenance session did not change it.
 
@@ -111,3 +111,8 @@ Five new branches, 207 menu/component entries, 27 credited Azure gallery links a
 ## Batch 76 completed
 
 Four established Fukuoka branches, 399 menu/variant entries, 12 credited Azure gallery links and six offers at four Specials venues published and publicly verified in both environments at October 19, 00:51 JST / October 18, 08:51 PDT. Fukuoka Specials **30/30**. All 24 counts agree at **459 memberships / 266 missing**. Four native guide memberships, six offer records, 42 schedule boundaries, next-start and expiry checks verified. [Batch evidence](restaurant-japan-30-japan76-2026-10-18.json). November 1 fair expiry requires renewal; remaining under-target tabs continue. No deployment.
+
+
+## Batch 77 completed
+
+Morning Park Cafe adds one Tokyo Coming soon venue, five named unpriced launch-menu entries and eight credited Azure gallery images. Thirteen local date fields restored to current production/documented branch openings; unrelated fields and original authors preserved. All 24 counts agree at **460 / 265**, October 19, 06:20 JST / October 18, 14:20 PDT. [Evidence](restaurant-japan-30-japan77-2026-10-18.json). No deployment.

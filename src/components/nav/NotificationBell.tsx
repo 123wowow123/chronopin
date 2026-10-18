@@ -37,6 +37,8 @@ type Notification = {
   tradeSells: number | null;
   tradeBuyTickers: string[] | null;
   tradeSellTickers: string[] | null;
+  tradeBuyValues: Record<string, number> | null;
+  tradeSellValues: Record<string, number> | null;
   utcCreatedDateTime: string;
   read: boolean;
   groupCount: number;
@@ -312,25 +314,29 @@ function entriesOf(rows: Notification[]): Entry[] {
   return entries;
 }
 
-// The viewer's calendar day as YYYY-MM-DD, to match a filing's published date
-// (not when it was scraped).
-function localToday(): string {
-  const d = new Date();
-  return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
-}
-
-// The watched people's trades, collapsed to today's buy and sell totals with
-// their tickers; opening it lists each filing.
+// The watched people's recent trades, collapsed to buy and sell totals with
+// their tickers (every row below counts, so the tiles always add up); opening it lists each filing.
 function TradeGroup({ items, renderRow }: { items: Notification[]; renderRow: (n: Notification) => React.ReactNode }) {
   const t = useT();
   const [open, setOpen] = useState(false);
   const listId = useId();
-  const today = items.filter((n) => n.tradeFiledDate === localToday());
-  const sum = (pick: (n: Notification) => number | null) => today.reduce((total, n) => total + (pick(n) ?? 0), 0);
-  const tickers = (pick: (n: Notification) => string[] | null) => [...new Set(today.flatMap((n) => pick(n) ?? []))];
+  const sum = (pick: (n: Notification) => number | null) => items.reduce((total, n) => total + (pick(n) ?? 0), 0);
+  // Tickers ranked by how many people traded them, then by total dollar value.
+  const tickers = (pick: (n: Notification) => Record<string, number> | null) => {
+    const stats = new Map<string, { people: Set<string>; value: number }>();
+    for (const n of items) {
+      for (const [ticker, value] of Object.entries(pick(n) ?? {})) {
+        const s = stats.get(ticker) ?? { people: new Set<string>(), value: 0 };
+        s.people.add(n.personName ?? String(n.id));
+        s.value += value;
+        stats.set(ticker, s);
+      }
+    }
+    return [...stats].sort((a, b) => b[1].people.size - a[1].people.size || b[1].value - a[1].value).map(([ticker]) => ticker);
+  };
   const tiles = [
-    ['tradeBuys', sum((n) => n.tradeBuys), tickers((n) => n.tradeBuyTickers), 'text-success-soft ring-success/40'],
-    ['tradeSells', sum((n) => n.tradeSells), tickers((n) => n.tradeSellTickers), 'text-danger-soft ring-danger/40'],
+    ['tradeBuys', sum((n) => n.tradeBuys), tickers((n) => n.tradeBuyValues), 'text-success-soft ring-success/40'],
+    ['tradeSells', sum((n) => n.tradeSells), tickers((n) => n.tradeSellValues), 'text-danger-soft ring-danger/40'],
   ] as const;
   return (
     <li className="text-sm">
@@ -352,7 +358,7 @@ function TradeGroup({ items, renderRow }: { items: Notification[]; renderRow: (n
                 {t(`notifications.${key}`)}
                 <span className="text-base font-semibold tabular-nums">{count}</span>
               </span>
-              {list.length ? <span className="truncate text-[11px] text-muted">{list.join(', ')}</span> : null}
+              {list.length ? <span className="text-[11px] break-words text-muted">{list.join(', ')}</span> : null}
             </span>
           ))}
         </span>

@@ -135,7 +135,7 @@ const ja: Messages = {
     trade: '<person></person>が新しい株式取引{count}件を開示しました{tickers}',
     tradeBuys: '買い',
     tradeSells: '売り',
-    tradesToday: '本日の株式取引',
+    tradesToday: '最近の株式取引',
     whyTrade: '{name}の取引を通知中',
     whyWatch: 'ウォッチ中のピン',
     whyThread: 'ウォッチ中のスレッド',

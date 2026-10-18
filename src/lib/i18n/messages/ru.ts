@@ -142,7 +142,7 @@ const ru: Messages = {
     trade: '<person></person> раскрыл(а) новых сделок с акциями: {count}{tickers}',
     tradeBuys: 'Покупки',
     tradeSells: 'Продажи',
-    tradesToday: 'Сделки с акциями сегодня',
+    tradesToday: 'Недавние сделки с акциями',
     whyTrade: 'Вы следите за сделками {name}',
     whyWatch: 'Отслеживаемый вами пин',
     whyThread: 'Отслеживаемая вами цепочка',

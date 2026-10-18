@@ -157,7 +157,7 @@ const ar: Messages = {
     trade: 'أفصح <person></person> عن {count} صفقات أسهم جديدة{tickers}',
     tradeBuys: 'شراء',
     tradeSells: 'بيع',
-    tradesToday: 'صفقات الأسهم اليوم',
+    tradesToday: 'صفقات الأسهم الأخيرة',
     whyTrade: 'أنت تتابع صفقات {name}',
     whyWatch: 'دبوس تراقبه',
     whyThread: 'سلسلة تراقبها',

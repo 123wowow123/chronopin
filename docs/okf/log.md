@@ -1,6 +1,7 @@
 # Update Log
 
 ## 2026-10-18
+* **Update**: Completed and audited **Rounds 1–51 (779 pins)** of the Cleanview utility-scale solar, battery energy storage (`BESS`), and hyperscale/sub-300 MW data-center batch on local and production (`@EnergyDesk`, 3 verified USGS imagery layers per pin in Azure Blob Storage `thumb`), and reconciled start dates (`utcStartDateTime`), `dateConfidence`, and `dateConfidenceReasoning` across **211 pins** via `PUT /api/pins/:id?lightweight=1` (123 pins in Rounds 39–51 moved off placeholder `2026-10-18` draft-build dates; 67 pins in Rounds 6 & 8–16 moved off `2022`–`2026` announcement/permit dates to scheduled `2026`–`2033` commercial operation dates; 21 pins in Rounds 30–31 & 42–51 re-dated from stale pre-October-2026 queue targets to active `Q4 2026` / `2027`–`2028` commercial operation targets). Added `utcStartDateTime` and `dateConfidence` parity checks to all 44 round verification scripts. Recorded in [Fields](scraping/fields.md#planned-energy-storage-and-data-center-projects), [Vertical recipes](scraping/verticals.md), and [Learnings](scraping/learnings.md).
 * **Creation**: Added the activities landing page (`/activities`, `/activities/<city>`) with a Today tab, seasonal tabs, the `activities:seed` catalog seeder and its vertical recipe in [Vertical recipes](/scraping/verticals.md).
 
 ## 2026-10-17

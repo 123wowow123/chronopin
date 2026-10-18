@@ -121,6 +121,9 @@ export type NotificationItem = {
   tradeSells: number | null;
   tradeBuyTickers: string[] | null;
   tradeSellTickers: string[] | null;
+  // Per-ticker dollar value (midpoint of the disclosed range) in this filing.
+  tradeBuyValues: Record<string, number> | null;
+  tradeSellValues: Record<string, number> | null;
   utcCreatedDateTime: Date;
   read: boolean;
   // How many notifications this entry stands for (1 unless it is a batch),
@@ -424,6 +427,10 @@ export default class Notification {
                   FROM "PersonTrade" t WHERE t."personId" = n."personId" AND t."filingId" = n."tradeFiling" AND t."txType" = 'purchase') AS "tradeBuyTickers",
                (SELECT array_agg(DISTINCT t."ticker") FILTER (WHERE t."ticker" IS NOT NULL)
                   FROM "PersonTrade" t WHERE t."personId" = n."personId" AND t."filingId" = n."tradeFiling" AND t."txType" IN ('sale', 'partial')) AS "tradeSellTickers",
+               (SELECT COALESCE(jsonb_object_agg(v."ticker", v."value"), '{}'::jsonb) FROM (SELECT t."ticker", SUM((COALESCE(t."amountLow", 0) + COALESCE(t."amountHigh", t."amountLow", 0)) / 2)::float8 AS "value"
+                  FROM "PersonTrade" t WHERE t."personId" = n."personId" AND t."filingId" = n."tradeFiling" AND t."ticker" IS NOT NULL AND t."txType" = 'purchase' GROUP BY t."ticker") v) AS "tradeBuyValues",
+               (SELECT COALESCE(jsonb_object_agg(v."ticker", v."value"), '{}'::jsonb) FROM (SELECT t."ticker", SUM((COALESCE(t."amountLow", 0) + COALESCE(t."amountHigh", t."amountLow", 0)) / 2)::float8 AS "value"
+                  FROM "PersonTrade" t WHERE t."personId" = n."personId" AND t."filingId" = n."tradeFiling" AND t."ticker" IS NOT NULL AND t."txType" IN ('sale', 'partial') GROUP BY t."ticker") v) AS "tradeSellValues",
                n."utcCreatedDateTime", n."utcReadDateTime",
                to_char((n."utcCreatedDateTime" AT TIME ZONE $2)::date, 'YYYY-MM-DD') AS "groupDay",
                ${groupKey('$2')} AS "groupKey",
@@ -457,7 +464,7 @@ export default class Notification {
         ORDER BY "groupKey", "utcCreatedDateTime" DESC, "id" DESC
       )
       SELECT "id", "type", "pinId", "pinTitle", "commentId", "commentText", "companyId",
-             "companyName", "companyLogoUrl", "personName", "personPhotoUrl", "tradeFiling", "tradeFiledDate", "tradeCount", "tradeTickers", "tradeBuys", "tradeSells", "tradeBuyTickers", "tradeSellTickers",
+             "companyName", "companyLogoUrl", "personName", "personPhotoUrl", "tradeFiling", "tradeFiledDate", "tradeCount", "tradeTickers", "tradeBuys", "tradeSells", "tradeBuyTickers", "tradeSellTickers", "tradeBuyValues", "tradeSellValues",
              "utcCreatedDateTime", "read", "actor",
              "followingBack", "groupCount", "groupDay",
              COALESCE("pinIds"[1:${MAX_BATCH_PINS}], '{}') AS "pinIds",
