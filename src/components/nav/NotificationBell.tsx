@@ -352,7 +352,10 @@ function TradeGroup({ items, renderRow }: { items: Notification[]; renderRow: (n
           <Icon name="chevron" className={`size-4 shrink-0 text-subtle transition-transform ${open ? 'rotate-180' : ''}`} />
         </span>
         <span className="grid grid-cols-2 gap-2">
-          {tiles.map(([key, count, list, tone]) => (
+          {tiles.map(([key, count, all, tone]) => {
+            // Collapsed: only tickers more than one person traded.
+            const list = open ? all : all.filter(([, people]) => people > 1);
+            return (
             <span key={key} className={`flex min-w-0 flex-col rounded-lg bg-field px-2.5 py-1.5 ring-1 ring-inset ${count ? tone : 'text-subtle ring-line'}`}>
               <span className="flex items-baseline justify-between gap-2 text-xs font-medium">
                 {t(`notifications.${key}`)}
@@ -369,7 +372,8 @@ function TradeGroup({ items, renderRow }: { items: Notification[]; renderRow: (n
                 </span>
               ) : null}
             </span>
-          ))}
+            );
+          })}
         </span>
       </button>
       {open ? <ul id={listId} className="divide-y divide-line border-t border-line">{items.map(renderRow)}</ul> : null}
