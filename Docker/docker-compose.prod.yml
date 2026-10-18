@@ -1,0 +1,115 @@
+# Production on one Azure VM (chronopin-web, Chronopin-US-West): the app,
+# PostgreSQL with PostGIS, the FAISS search service and Caddy, which serves
+# HTTPS with certificates it gets and renews by itself. See docs/deploy-azure.md.
+#
+#   docker compose -f Docker/docker-compose.prod.yml up -d --build
+#
+# Configuration and secrets come from Docker/env.prod.list on the VM, which
+# never enters git or an image (.gitignore, .dockerignore). Only Caddy's ports
+# are published; the rest talk over the compose network.
+services:
+  postgres:
+    build: ./postgis
+    image: chronopin-postgis:17
+    env_file: env.prod.list
+    # pg_stat_statements: after a deploy, run CREATE EXTENSION
+    # pg_stat_statements; once, then read the slowest queries from it.
+    command: ['postgres', '-c', 'shared_preload_libraries=pg_stat_statements']
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    restart: unless-stopped
+    healthcheck:
+      test: ['CMD-SHELL', 'pg_isready -U "$$POSTGRES_USER" -d "$$POSTGRES_DB"']
+      interval: 10s
+      retries: 10
+
+  faiss:
+    build: ./faiss
+    image: chronopin-faiss:latest
+    volumes:
+      - faiss-data:/data
+    # "Too many open files" on accept() stalled every search on 2026-10-12.
+    ulimits:
+      nofile:
+        soft: 65536
+        hard: 65536
+    restart: unless-stopped
+
+  app:
+    build:
+      context: ..
+      dockerfile: Docker/Dockerfile
+    # APP_IMAGE comes from Docker/.env, written by scripts/deploy-image.sh.
+    image: ${APP_IMAGE:-chronopin:latest}
+    env_file: env.prod.list
+    environment:
+      FAISS_URL: http://faiss:5050
+    depends_on:
+      postgres:
+        condition: service_healthy
+      faiss:
+        condition: service_started
+    restart: unless-stopped
+
+  # The standby for zero-downtime deploys (scripts/deploy-image.sh): started on
+  # the new image and warmed while `app` still serves, it takes the traffic
+  # (Caddyfile: the second upstream) while `app` is recreated, then is stopped.
+  # Never running between deploys.
+  app-next:
+    image: ${APP_IMAGE:-chronopin:latest}
+    env_file: env.prod.list
+    environment:
+      FAISS_URL: http://faiss:5050
+    depends_on:
+      postgres:
+        condition: service_healthy
+      faiss:
+        condition: service_started
+    profiles: [next]
+    restart: 'no'
+
+  caddy:
+    image: caddy:2
+    ports:
+      - '80:80'
+      - '443:443'
+      - '443:443/udp'
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy-data:/data
+      - caddy-config:/config
+    depends_on:
+      - app
+    restart: unless-stopped
+    # The access log (Caddyfile, accesslog) goes to stdout, roughly 2 GB a day
+    # at today's traffic (estimated): keep the newest 2 GB so it can never fill
+    # the disk (2026-10-17).
+    logging:
+      driver: json-file
+      options:
+        max-size: 50m
+        max-file: '40'
+
+  # The build stage, source and dev dependencies included, for the one-off
+  # scripts the standalone image leaves out:
+  #   docker compose -f Docker/docker-compose.prod.yml run --rm tools npm run db:refresh
+  tools:
+    build:
+      context: ..
+      dockerfile: Docker/Dockerfile
+      target: build
+    image: ${TOOLS_IMAGE:-chronopin-tools:latest}
+    env_file: env.prod.list
+    environment:
+      FAISS_URL: http://faiss:5050
+    working_dir: /code
+    depends_on:
+      postgres:
+        condition: service_healthy
+    profiles: [tools]
+
+volumes:
+  postgres-data:
+  faiss-data:
+  caddy-data:
+  caddy-config:

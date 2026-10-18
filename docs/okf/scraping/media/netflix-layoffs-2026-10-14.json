@@ -1,0 +1,21 @@
+{
+  "date": "2026-10-14",
+  "pinId": 15305,
+  "images": [
+    {
+      "sourceImageUrl": "https://variety.com/wp-content/uploads/2026/10/Netflix-Los-Angeles.jpg?w=1000&h=563&crop=1",
+      "sourcePageUrl": "https://variety.com/2026/tv/news/netflix-layoffs-1000-employees-1236911239/",
+      "credit": "Getty Images / Variety",
+      "caption": "Netflix\u2019s Los Angeles offices with the Hollywood sign behind them.",
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/news/netflix-layoffs-2026-10-14-getty-variety.jpg",
+      "sha256": "9b13de1a51260e66c233dabf37d9fca50276620984eecdfa79d161fcb6642b79",
+      "bytes": 70682
+    }
+  ],
+  "researchNotes": [
+    "CNBC fetched with plain curl; headline confirmed roughly 6%, body still breaking-news placeholder.",
+    "Variety fetched with plain curl; full executive memo verifies announcement date and affected teams.",
+    "CNBC image is a generic CNBC/Versant graphic, omitted. Variety supplied one verified relevant photograph. Search for CNBC YouTube coverage returned no matching current video; additional media remain unavailable.",
+    "Announcement date does not establish individual employee departure dates."
+  ]
+}

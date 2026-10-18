@@ -1,0 +1,290 @@
+{
+  "checkedAt": "2026-10-16",
+  "scope": "Existing exact-branch profile update; original menus, offer expiry, photo and author preserved",
+  "sourceUrl": "https://www.eggsnthingsjapan.com/hakata/",
+  "addedMenuLabels": [
+    "Halloween pancakes and fruit drink — October 2026",
+    "Sweet potato and apple brûlée autumn menu — 2026"
+  ],
+  "addedOfferSources": [
+    "https://www.eggsnthingsjapan.com/news/261008.html",
+    "https://www.eggsnthingsjapan.com/news/261015.html"
+  ],
+  "savedProfile": {
+    "name": "Eggs ’n Things — Canal City Hakata",
+    "menus": [
+      {
+        "url": "https://www.eggsnthingsjapan.com/wp-content/uploads/TakeOut.pdf",
+        "note": "Takeaway only: published tax-inclusive prices from the PDF currently linked by the Hakata branch. The PDF is undated. These are not dine-in or seasonal-offer prices. Omelette sides and egg cooking options are described in the original.",
+        "items": [
+          {
+            "name": "Pancakes",
+            "price": 962
+          },
+          {
+            "name": "Waffles",
+            "price": 962
+          },
+          {
+            "name": "Crepes",
+            "price": 962
+          },
+          {
+            "name": "Fruit French toast",
+            "price": 1145
+          },
+          {
+            "name": "Spinach, bacon and cheese omelette",
+            "price": 1577
+          },
+          {
+            "name": "Vegetarian omelette",
+            "price": 1491
+          },
+          {
+            "name": "Portuguese sausage and cheese omelette",
+            "price": 1599
+          },
+          {
+            "name": "Eggs ’n Burger",
+            "price": 1685
+          },
+          {
+            "name": "Avocado cheese burger",
+            "price": 1847
+          },
+          {
+            "name": "Loco moco",
+            "price": 1458
+          },
+          {
+            "name": "Garlic shrimp",
+            "price": 1728
+          },
+          {
+            "name": "Mochiko chicken plate",
+            "price": 1610
+          }
+        ],
+        "label": "Hakata linked takeaway menu",
+        "coverage": "sample",
+        "currency": "JPY",
+        "documentUrl": "https://www.eggsnthingsjapan.com/wp-content/uploads/TakeOut.pdf"
+      },
+      {
+        "url": "https://www.eggsnthingsjapan.com/news/260918.html",
+        "note": "September 24–October 20; dine-in tax-inclusive prices. Official promotion applies to domestic branches except Roppongi Hills. Pancakes have no takeaway option.",
+        "items": [
+          {
+            "name": "Mont Blanc pancakes",
+            "price": 2398
+          },
+          {
+            "name": "Pastrami beef sandwich",
+            "price": 1980
+          },
+          {
+            "name": "Apple tea — hot or iced",
+            "price": 858
+          },
+          {
+            "name": "Apple mint squash",
+            "price": 858
+          }
+        ],
+        "label": "Autumn chestnut and apple menu",
+        "coverage": "sample",
+        "currency": "JPY"
+      },
+      {
+        "url": "https://www.eggsnthingsjapan.com/news/261008.html",
+        "note": "Dated 2026 operator announcement applies to domestic branches except Roppongi Hills; Hakata included. Exact branch confirms 09:00–21:00, last orders 20:00. Order windows end at 20:00; establishment closes 21:00. Follow facility closures. Published dine-in and takeaway tax-inclusive prices kept distinct.",
+        "items": [
+          {
+            "name": "Bloody Halloween pancakes",
+            "note": "Dine-in only; tax included",
+            "price": 2860
+          },
+          {
+            "name": "Halloween cassis, cranberry and mango drink",
+            "note": "Dine-in; tax included",
+            "price": 880
+          },
+          {
+            "name": "Halloween drink — takeaway",
+            "note": "Takeaway; tax included",
+            "price": 864
+          }
+        ],
+        "label": "Halloween pancakes and fruit drink — October 2026",
+        "coverage": "sample",
+        "currency": "JPY"
+      },
+      {
+        "url": "https://www.eggsnthingsjapan.com/news/261015.html",
+        "note": "Dated 2026 operator announcement applies to domestic branches except Roppongi Hills; Hakata included. Exact branch confirms 09:00–21:00, last orders 20:00. Order windows end at 20:00; establishment closes 21:00. Follow facility closures. Published dine-in and takeaway tax-inclusive prices kept distinct.",
+        "items": [
+          {
+            "name": "Sweet potato and apple brûlée pancakes",
+            "note": "Dine-in; tax included",
+            "price": 2398
+          },
+          {
+            "name": "Maple bacon burger",
+            "note": "Dine-in; tax included",
+            "price": 2068
+          },
+          {
+            "name": "Maple latte — hot or iced",
+            "note": "Dine-in; tax included",
+            "price": 858
+          },
+          {
+            "name": "Maple cinnamon latte — hot or iced",
+            "note": "Dine-in; tax included",
+            "price": 858
+          },
+          {
+            "name": "Sweet potato and apple brûlée pancakes — takeaway",
+            "note": "Takeaway version; tax included",
+            "price": 1620
+          },
+          {
+            "name": "Maple bacon burger — takeaway",
+            "note": "Takeaway; tax included",
+            "price": 2030
+          },
+          {
+            "name": "Maple latte — takeaway, hot or iced",
+            "note": "Takeaway; tax included",
+            "price": 842
+          },
+          {
+            "name": "Maple cinnamon latte — takeaway, hot or iced",
+            "note": "Takeaway; tax included",
+            "price": 842
+          }
+        ],
+        "label": "Sweet potato and apple brûlée autumn menu — 2026",
+        "coverage": "sample",
+        "currency": "JPY"
+      }
+    ],
+    "photo": {
+      "alt": "Eggs ’n Things — Canal City Hakata — Canal City Hakata launch photograph; verify caption before use",
+      "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/fukuoka/japan-expansion-2026-10-13/eggs-0-c4b21670a2c69e0b.webp",
+      "credit": "Eggs ’n Things Japan",
+      "checkedAt": "2026-10-13",
+      "sourceUrl": "https://prtimes.jp/main/html/rd/p/000000330.000012385.html",
+      "originalUrl": "https://prcdn.freetls.fastly.net/release_image/12385/330/12385-330-36ca3f00668bb3d72dd04b31fbad0e40-2500x1750.jpg?width=1950&height=1350&quality=85%2C65&format=jpeg&auto=webp&fit=bounds&bg-color=fff"
+    },
+    "address": "2F Canal City Hakata East Building, 9-2 Gion-machi, Hakata-ku, Fukuoka",
+    "specials": [
+      {
+        "kind": "other",
+        "title": "Autumn chestnut and apple menu",
+        "schedule": "Japan local time; see conditions",
+        "menuLabel": "Autumn chestnut and apple menu",
+        "sourceUrl": "https://www.eggsnthingsjapan.com/news/260918.html",
+        "validFrom": "2026-09-24",
+        "conditions": [
+          "Last order 20:00.",
+          "Pancakes are dine-in only."
+        ],
+        "discounted": false,
+        "description": "Seasonal Mont Blanc pancakes, pastrami sandwich and apple drinks with published dine-in prices.",
+        "limitedTime": true,
+        "availability": {
+          "windows": [
+            {
+              "end": "21:00",
+              "days": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6
+              ],
+              "start": "09:00"
+            }
+          ]
+        },
+        "validThrough": "2026-10-20"
+      },
+      {
+        "kind": "other",
+        "title": "Halloween pancakes and fruit drink — October 2026",
+        "schedule": "Daily 09:00–20:00 orders, Japan local time; facility closures apply",
+        "menuLabel": "Halloween pancakes and fruit drink — October 2026",
+        "sourceUrl": "https://www.eggsnthingsjapan.com/news/261008.html",
+        "validFrom": "2026-10-16",
+        "conditions": [
+          "Published domestic branch scope excludes Roppongi Hills only; exact Hakata branch eligible.",
+          "Last orders 20:00, restaurant closes 21:00; facility closures apply.",
+          "Dine-in and takeaway prices are separate; Halloween pancakes have no takeaway option."
+        ],
+        "discounted": false,
+        "description": "Pumpkin cream pancakes with purple sweet potato whipped cream and strawberry sauce; cassis, cranberry and mango drink.",
+        "limitedTime": true,
+        "availability": {
+          "windows": [
+            {
+              "end": "20:00",
+              "days": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6
+              ],
+              "start": "09:00"
+            }
+          ]
+        },
+        "validThrough": "2026-10-31"
+      },
+      {
+        "kind": "other",
+        "title": "Sweet potato and apple brûlée autumn menu — 2026",
+        "schedule": "Daily 09:00–20:00 orders, Japan local time; facility closures apply",
+        "menuLabel": "Sweet potato and apple brûlée autumn menu — 2026",
+        "sourceUrl": "https://www.eggsnthingsjapan.com/news/261015.html",
+        "validFrom": "2026-10-21",
+        "conditions": [
+          "Published domestic branch scope excludes Roppongi Hills only; exact Hakata branch eligible.",
+          "Last orders 20:00, restaurant closes 21:00; facility closures apply.",
+          "Dine-in and takeaway prices are separate; Halloween pancakes have no takeaway option."
+        ],
+        "discounted": false,
+        "description": "Sweet potato cream and simmered apple brûlée pancakes, maple bacon beef burger and two maple lattes; dine-in and takeaway prices listed separately.",
+        "limitedTime": true,
+        "availability": {
+          "windows": [
+            {
+              "end": "20:00",
+              "days": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6
+              ],
+              "start": "09:00"
+            }
+          ]
+        },
+        "validThrough": "2026-11-24"
+      }
+    ],
+    "checkedAt": "2026-10-16",
+    "websiteUrl": "https://www.eggsnthingsjapan.com/hakata/",
+    "neighborhood": "Gion",
+    "pinSourceUrl": "https://www.eggsnthingsjapan.com/hakata/"
+  }
+}

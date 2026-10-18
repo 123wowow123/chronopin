@@ -1,0 +1,1645 @@
+{
+  "checkedAt": "2026-10-13",
+  "country": "Japan",
+  "regions": [
+    "osaka"
+  ],
+  "entries": [
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "BRISK STAND — Daimaru Shinsaibashi Opens in Shinsaibashi",
+        "description": "A recently opened burgers venue in Shinsaibashi with a branch-specific menu.",
+        "sourceUrl": "https://www.instagram.com/briskstand_daimarushinsaibashi/",
+        "address": "B2F Shinsaibashi Food Hall, Daimaru Shinsaibashi, 1-7-1 Shinsaibashisuji, Chuo-ku, Osaka",
+        "productName": "BRISK STAND — Daimaru Shinsaibashi",
+        "utcStartDateTime": "2026-09-20T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "Operator opening announcement and branch evidence confirm 2026-09-20. Dates, prices and branch identity are verified separately from other locations.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Osaka",
+          "Japan",
+          "Shinsaibashi",
+          "Burgers"
+        ],
+        "longFormSummary": "<p>A recently opened burgers venue in Shinsaibashi with a branch-specific menu.<cite data-ref=\"https://www.instagram.com/briskstand_daimarushinsaibashi/\"></cite></p><p>Operator opening announcement and branch evidence confirm 2026-09-20. Dates, prices and branch identity are verified separately from other locations.</p>",
+        "references": [
+          {
+            "url": "https://www.instagram.com/briskstand_daimarushinsaibashi/",
+            "title": "BRISK STAND — Daimaru Shinsaibashi source",
+            "confidence": 90,
+            "reasoning": "Operator opening announcement and branch evidence confirm 2026-09-20. Dates, prices and branch identity are verified separately from other locations."
+          },
+          {
+            "url": "https://prtimes.jp/main/html/rd/p/000000055.000136808.html",
+            "title": "BRISK STAND — Daimaru Shinsaibashi source",
+            "confidence": 90,
+            "reasoning": "Operator opening announcement and branch evidence confirm 2026-09-20. Dates, prices and branch identity are verified separately from other locations."
+          },
+          {
+            "url": "https://www.instagram.com/p/DcdWOq9TsKd/",
+            "title": "BRISK STAND — Daimaru Shinsaibashi source",
+            "confidence": 90,
+            "reasoning": "Operator opening announcement and branch evidence confirm 2026-09-20. Dates, prices and branch identity are verified separately from other locations."
+          },
+          {
+            "url": "https://www.brisk-stand.com/menu",
+            "title": "BRISK STAND — Daimaru Shinsaibashi source",
+            "confidence": 90,
+            "reasoning": "Operator opening announcement and branch evidence confirm 2026-09-20. Dates, prices and branch identity are verified separately from other locations."
+          },
+          {
+            "url": "https://namba.keizai.biz/headline/5939/",
+            "title": "BRISK STAND — Daimaru Shinsaibashi source",
+            "confidence": 90,
+            "reasoning": "Operator opening announcement and branch evidence confirm 2026-09-20. Dates, prices and branch identity are verified separately from other locations."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://www.instagram.com/briskstand_daimarushinsaibashi/",
+          "menu": {
+            "pinSourceUrl": "https://www.instagram.com/briskstand_daimarushinsaibashi/",
+            "name": "BRISK STAND — Daimaru Shinsaibashi",
+            "checkedAt": "2026-10-13",
+            "menus": [
+              {
+                "label": "Daimaru Shinsaibashi opening menu",
+                "url": "https://namba.keizai.biz/headline/5939/",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Kitta Yatsu — twice-seared cut burger",
+                    "price": 1650,
+                    "note": "From; patty options vary"
+                  },
+                  {
+                    "name": "Classic burger",
+                    "price": 1350,
+                    "note": "From"
+                  },
+                  {
+                    "name": "Pineapple burger",
+                    "price": 1500
+                  },
+                  {
+                    "name": "Gorgonzola burger",
+                    "price": 1650,
+                    "note": "From"
+                  },
+                  {
+                    "name": "Fried-egg topping",
+                    "price": 200
+                  },
+                  {
+                    "name": "Pickle topping",
+                    "price": 150
+                  },
+                  {
+                    "name": "Avocado topping",
+                    "price": 300
+                  }
+                ],
+                "note": "Branch-specific September 18 report supplies prices; tax treatment is not explicitly stated. Operator national PDF warns that menus vary by shop, so other branch prices and limited-event menus are not imported. Gallery interior images are planned renderings, labelled as illustrative; the card uses the branch operator-labelled burger photograph."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://www.instagram.com/briskstand_daimarushinsaibashi/",
+            "name": "BRISK STAND — Daimaru Shinsaibashi",
+            "checkedAt": "2026-10-13",
+            "websiteUrl": "https://www.instagram.com/briskstand_daimarushinsaibashi/",
+            "phone": null,
+            "openingHours": [
+              {
+                "days": "Daily",
+                "hours": "11:00–22:00; last order 21:00; irregular closures"
+              }
+            ],
+            "detailsSourceUrl": "https://www.instagram.com/briskstand_daimarushinsaibashi/",
+            "additionalSources": [
+              {
+                "label": "Research evidence",
+                "url": "https://prtimes.jp/main/html/rd/p/000000055.000136808.html"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://www.instagram.com/p/DcdWOq9TsKd/"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://www.brisk-stand.com/menu"
+              }
+            ]
+          },
+          "tile": {
+            "regionSlug": "osaka",
+            "kind": "opening",
+            "slug": "brisk-opening",
+            "name": "BRISK STAND — Daimaru Shinsaibashi",
+            "neighborhood": "Shinsaibashi",
+            "cuisine": "Burgers",
+            "description": "A recently opened burgers venue in Shinsaibashi with a branch-specific menu.",
+            "address": "B2F Shinsaibashi Food Hall, Daimaru Shinsaibashi, 1-7-1 Shinsaibashisuji, Chuo-ku, Osaka",
+            "websiteUrl": "https://www.instagram.com/briskstand_daimarushinsaibashi/",
+            "checkedAt": "2026-10-13",
+            "recognition": "",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/osaka/japan-30-2026-10-13/brisk-primary-0-09f57fce5a2c9255.webp",
+            "imageCredit": "Restaurant operator / Instagram",
+            "imageSourceUrl": "https://www.instagram.com/p/DcdWOq9TsKd/",
+            "imageNote": "Operator-labelled Kitta Yatsu single-patty burger",
+            "openingConfirmed": true,
+            "day": "2026-09-20"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/osaka/japan-30-2026-10-13/brisk-primary-0-09f57fce5a2c9255.webp",
+          "sha256": "09f57fce5a2c92558176e211915cb826c742577911a9cc17be24b6a25ce2af70",
+          "width": 640,
+          "height": 640,
+          "credit": "Restaurant operator / Instagram",
+          "note": "Operator-labelled Kitta Yatsu single-patty burger",
+          "sourcePage": "https://www.instagram.com/p/DcdWOq9TsKd/"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/osaka/japan-30-2026-10-13/brisk-date-1-d5a512fb732ac539.webp",
+          "sha256": "d5a512fb732ac539f4f0d813dd50c105ede102d63ca199815f545e56ca982c95",
+          "width": 1200,
+          "height": 840,
+          "credit": "Restaurant operator / PR TIMES",
+          "note": "Operator-published planned storefront rendering; illustrative, not a post-opening photograph",
+          "sourcePage": "https://prtimes.jp/main/html/rd/p/000000055.000136808.html"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/osaka/japan-30-2026-10-13/brisk-date-2-f91ce1d4b39570e5.webp",
+          "sha256": "f91ce1d4b39570e5550b4a83ecc5f09fe879a8bbf787895eca718b56c5e0bd60",
+          "width": 1200,
+          "height": 840,
+          "credit": "Restaurant operator / PR TIMES",
+          "note": "Operator-published planned seating rendering; illustrative, not a post-opening photograph",
+          "sourcePage": "https://prtimes.jp/main/html/rd/p/000000055.000136808.html"
+        }
+      ]
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Gyukatsu Kyoto Katsugyu — Namba Ekimae Opens in Namba",
+        "description": "A recently opened beef cutlets venue in Namba with a branch-specific menu.",
+        "sourceUrl": "https://gyukatsu-kyotokatsugyu.com/store/nambaekimae",
+        "address": "1F Mifune Namba Building, 1-4-6 Namba, Chuo-ku, Osaka",
+        "productName": "Gyukatsu Kyoto Katsugyu — Namba Ekimae",
+        "utcStartDateTime": "2026-09-18T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "Operator opening announcement and branch evidence confirm 2026-09-18. Dates, prices and branch identity are verified separately from other locations.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Osaka",
+          "Japan",
+          "Namba",
+          "Beef cutlets"
+        ],
+        "longFormSummary": "<p>A recently opened beef cutlets venue in Namba with a branch-specific menu.<cite data-ref=\"https://gyukatsu-kyotokatsugyu.com/store/nambaekimae\"></cite></p><p>Operator opening announcement and branch evidence confirm 2026-09-18. Dates, prices and branch identity are verified separately from other locations.</p>",
+        "references": [
+          {
+            "url": "https://gyukatsu-kyotokatsugyu.com/store/nambaekimae",
+            "title": "Gyukatsu Kyoto Katsugyu — Namba Ekimae source",
+            "confidence": 90,
+            "reasoning": "Operator opening announcement and branch evidence confirm 2026-09-18. Dates, prices and branch identity are verified separately from other locations."
+          },
+          {
+            "url": "https://prtimes.jp/main/html/rd/p/000000364.000014852.html",
+            "title": "Gyukatsu Kyoto Katsugyu — Namba Ekimae source",
+            "confidence": 90,
+            "reasoning": "Operator opening announcement and branch evidence confirm 2026-09-18. Dates, prices and branch identity are verified separately from other locations."
+          },
+          {
+            "url": "https://www.instagram.com/p/DdD46aOj2Xd/",
+            "title": "Gyukatsu Kyoto Katsugyu — Namba Ekimae source",
+            "confidence": 90,
+            "reasoning": "Operator opening announcement and branch evidence confirm 2026-09-18. Dates, prices and branch identity are verified separately from other locations."
+          },
+          {
+            "url": "https://gyukatsu-kyotokatsugyu.com/store/",
+            "title": "Gyukatsu Kyoto Katsugyu — Namba Ekimae source",
+            "confidence": 90,
+            "reasoning": "Operator opening announcement and branch evidence confirm 2026-09-18. Dates, prices and branch identity are verified separately from other locations."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://gyukatsu-kyotokatsugyu.com/store/nambaekimae",
+          "menu": {
+            "pinSourceUrl": "https://gyukatsu-kyotokatsugyu.com/store/nambaekimae",
+            "name": "Gyukatsu Kyoto Katsugyu — Namba Ekimae",
+            "checkedAt": "2026-10-13",
+            "menus": [
+              {
+                "label": "Published branch opening menu",
+                "url": "https://www.instagram.com/p/DdD46aOj2Xd/",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Beef sirloin cutlet set",
+                    "price": 2409
+                  }
+                ],
+                "note": "Tax included: operator opening post publishes ordinary ¥2,190 plus tax = ¥2,409 after the opening-day first-fifty ¥550 offer. That September 18 promotion is expired and excluded. Checked exact branch CMS page, operator release/post and store catalog; complete current branch menu and seasonal menu applicability remain unpublished in accessible branch data, so other-branch prices are not borrowed."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://gyukatsu-kyotokatsugyu.com/store/nambaekimae",
+            "name": "Gyukatsu Kyoto Katsugyu — Namba Ekimae",
+            "checkedAt": "2026-10-13",
+            "websiteUrl": "https://gyukatsu-kyotokatsugyu.com/store/nambaekimae",
+            "phone": "06-6732-8490",
+            "openingHours": [
+              {
+                "days": "Daily",
+                "hours": "11:00–22:00; last order 21:30"
+              }
+            ],
+            "detailsSourceUrl": "https://gyukatsu-kyotokatsugyu.com/store/nambaekimae",
+            "additionalSources": [
+              {
+                "label": "Research evidence",
+                "url": "https://prtimes.jp/main/html/rd/p/000000364.000014852.html"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://www.instagram.com/p/DdD46aOj2Xd/"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://gyukatsu-kyotokatsugyu.com/store/"
+              }
+            ]
+          },
+          "tile": {
+            "regionSlug": "osaka",
+            "kind": "opening",
+            "slug": "katsugyu-opening",
+            "name": "Gyukatsu Kyoto Katsugyu — Namba Ekimae",
+            "neighborhood": "Namba",
+            "cuisine": "Beef cutlets",
+            "description": "A recently opened beef cutlets venue in Namba with a branch-specific menu.",
+            "address": "1F Mifune Namba Building, 1-4-6 Namba, Chuo-ku, Osaka",
+            "websiteUrl": "https://gyukatsu-kyotokatsugyu.com/store/nambaekimae",
+            "checkedAt": "2026-10-13",
+            "recognition": "",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/osaka/japan-30-2026-10-13/katsugyu-date-1-eadc8cfd2c88a9a7.webp",
+            "imageCredit": "Restaurant operator / PR TIMES",
+            "imageSourceUrl": "https://prtimes.jp/main/html/rd/p/000000364.000014852.html",
+            "imageNote": "Operator-published Namba Ekimae branch interior view",
+            "openingConfirmed": true,
+            "day": "2026-09-18"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/osaka/japan-30-2026-10-13/katsugyu-date-1-eadc8cfd2c88a9a7.webp",
+          "sha256": "eadc8cfd2c88a9a73611cf1478dfaf3ed67e24b620be53b604fdff55465b4a3e",
+          "width": 1200,
+          "height": 900,
+          "credit": "Restaurant operator / PR TIMES",
+          "note": "Operator-published Namba Ekimae branch interior view",
+          "sourcePage": "https://prtimes.jp/main/html/rd/p/000000364.000014852.html"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/osaka/japan-30-2026-10-13/katsugyu-date-2-1de437d9b71cc419.webp",
+          "sha256": "1de437d9b71cc419613cd9d420407bbeb09e04c8b1ee48850b77aef0e5bcdcc4",
+          "width": 1200,
+          "height": 900,
+          "credit": "Restaurant operator / PR TIMES",
+          "note": "Operator-published Namba Ekimae branch interior view",
+          "sourcePage": "https://prtimes.jp/main/html/rd/p/000000364.000014852.html"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/osaka/japan-30-2026-10-13/katsugyu-date-3-badf85ab2ea7a002.webp",
+          "sha256": "badf85ab2ea7a00260f2bc5e3653de98b61c42d6b4d32047cf0bc972434d29ce",
+          "width": 1200,
+          "height": 900,
+          "credit": "Restaurant operator / PR TIMES",
+          "note": "Operator-published Namba Ekimae branch interior view",
+          "sourcePage": "https://prtimes.jp/main/html/rd/p/000000364.000014852.html"
+        }
+      ]
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Taco Bell — Dotonbori Opens in Dotonbori",
+        "description": "A new takeaway and delivery branch returning Taco Bell to Dotonbori, in a different property from the shop closed in 2022.",
+        "sourceUrl": "https://tacobell.jp/newz/taco-bell-%E9%81%93%E9%A0%93%E5%A0%80%E5%BA%97-2026%E5%B9%B49%E6%9C%8825%E6%97%A5%E9%87%91new-open%EF%BC%81/",
+        "address": "B1F Comrade Doton Building, 1-6-15 Dotonbori, Chuo-ku, Osaka",
+        "productName": "Taco Bell — Dotonbori",
+        "utcStartDateTime": "2026-09-25T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "Operator opening announcement and branch evidence confirm 2026-09-25. Dates, prices and branch identity are verified separately from other locations.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Osaka",
+          "Japan",
+          "Dotonbori",
+          "Mexican takeaway"
+        ],
+        "longFormSummary": "<p>A new takeaway and delivery branch returning Taco Bell to Dotonbori, in a different property from the shop closed in 2022.<cite data-ref=\"https://tacobell.jp/newz/taco-bell-%E9%81%93%E9%A0%93%E5%A0%80%E5%BA%97-2026%E5%B9%B49%E6%9C%8825%E6%97%A5%E9%87%91new-open%EF%BC%81/\"></cite></p><p>Operator opening announcement and branch evidence confirm 2026-09-25. Dates, prices and branch identity are verified separately from other locations.</p>",
+        "references": [
+          {
+            "url": "https://tacobell.jp/newz/taco-bell-%E9%81%93%E9%A0%93%E5%A0%80%E5%BA%97-2026%E5%B9%B49%E6%9C%8825%E6%97%A5%E9%87%91new-open%EF%BC%81/",
+            "title": "Taco Bell — Dotonbori source",
+            "confidence": 90,
+            "reasoning": "Operator opening announcement and branch evidence confirm 2026-09-25. Dates, prices and branch identity are verified separately from other locations."
+          },
+          {
+            "url": "https://www.instagram.com/p/DdbQwQOFNWK/",
+            "title": "Taco Bell — Dotonbori source",
+            "confidence": 90,
+            "reasoning": "Operator opening announcement and branch evidence confirm 2026-09-25. Dates, prices and branch identity are verified separately from other locations."
+          },
+          {
+            "url": "https://tacobell.jp/locations/",
+            "title": "Taco Bell — Dotonbori source",
+            "confidence": 90,
+            "reasoning": "Operator opening announcement and branch evidence confirm 2026-09-25. Dates, prices and branch identity are verified separately from other locations."
+          },
+          {
+            "url": "https://www.lmaga.jp/news/2026/09/1102979/",
+            "title": "Taco Bell — Dotonbori source",
+            "confidence": 90,
+            "reasoning": "Operator opening announcement and branch evidence confirm 2026-09-25. Dates, prices and branch identity are verified separately from other locations."
+          },
+          {
+            "url": "https://tacobell.jp/category/tacos",
+            "title": "Taco Bell — Dotonbori source",
+            "confidence": 90,
+            "reasoning": "Operator opening announcement and branch evidence confirm 2026-09-25. Dates, prices and branch identity are verified separately from other locations."
+          },
+          {
+            "url": "https://tacobell.jp/category/burrito",
+            "title": "Taco Bell — Dotonbori source",
+            "confidence": 90,
+            "reasoning": "Operator opening announcement and branch evidence confirm 2026-09-25. Dates, prices and branch identity are verified separately from other locations."
+          },
+          {
+            "url": "https://tacobell.jp/category/specialties",
+            "title": "Taco Bell — Dotonbori source",
+            "confidence": 90,
+            "reasoning": "Operator opening announcement and branch evidence confirm 2026-09-25. Dates, prices and branch identity are verified separately from other locations."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://tacobell.jp/newz/taco-bell-%E9%81%93%E9%A0%93%E5%A0%80%E5%BA%97-2026%E5%B9%B49%E6%9C%8825%E6%97%A5%E9%87%91new-open%EF%BC%81/",
+          "menu": {
+            "pinSourceUrl": "https://tacobell.jp/newz/taco-bell-%E9%81%93%E9%A0%93%E5%A0%80%E5%BA%97-2026%E5%B9%B49%E6%9C%8825%E6%97%A5%E9%87%91new-open%EF%BC%81/",
+            "name": "Taco Bell — Dotonbori",
+            "checkedAt": "2026-10-13",
+            "menus": [
+              {
+                "label": "Published Dotonbori menu",
+                "url": "https://www.lmaga.jp/news/2026/09/1102979/",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Tacos",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Burrito",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Quesadilla",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Crunchwrap Supreme",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Nachos",
+                    "priceLabel": "Price not published"
+                  }
+                ],
+                "note": "Takeaway and delivery only; no dine-in. Branch opening post/report names these items without prices. Checked operator branch announcement, current locator, national taco/burrito/specialty pages and the new-menu announcement; exact Dotonbori prices and ordering link remain unpublished. Old Dotonbori branch menu/photos from before its 2022 closure are excluded."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://tacobell.jp/newz/taco-bell-%E9%81%93%E9%A0%93%E5%A0%80%E5%BA%97-2026%E5%B9%B49%E6%9C%8825%E6%97%A5%E9%87%91new-open%EF%BC%81/",
+            "name": "Taco Bell — Dotonbori",
+            "checkedAt": "2026-10-13",
+            "websiteUrl": "https://tacobell.jp/newz/taco-bell-%E9%81%93%E9%A0%93%E5%A0%80%E5%BA%97-2026%E5%B9%B49%E6%9C%8825%E6%97%A5%E9%87%91new-open%EF%BC%81/",
+            "phone": "06-6226-8489",
+            "openingHours": [
+              {
+                "days": "Daily",
+                "hours": "11:00–22:00; takeaway and delivery only"
+              }
+            ],
+            "detailsSourceUrl": "https://tacobell.jp/newz/taco-bell-%E9%81%93%E9%A0%93%E5%A0%80%E5%BA%97-2026%E5%B9%B49%E6%9C%8825%E6%97%A5%E9%87%91new-open%EF%BC%81/",
+            "additionalSources": [
+              {
+                "label": "Research evidence",
+                "url": "https://www.instagram.com/p/DdbQwQOFNWK/"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://tacobell.jp/locations/"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://www.lmaga.jp/news/2026/09/1102979/"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://tacobell.jp/category/tacos"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://tacobell.jp/category/burrito"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://tacobell.jp/category/specialties"
+              }
+            ]
+          },
+          "tile": {
+            "regionSlug": "osaka",
+            "kind": "opening",
+            "slug": "taco-opening",
+            "name": "Taco Bell — Dotonbori",
+            "neighborhood": "Dotonbori",
+            "cuisine": "Mexican takeaway",
+            "description": "A new takeaway and delivery branch returning Taco Bell to Dotonbori, in a different property from the shop closed in 2022.",
+            "address": "B1F Comrade Doton Building, 1-6-15 Dotonbori, Chuo-ku, Osaka",
+            "websiteUrl": "https://tacobell.jp/newz/taco-bell-%E9%81%93%E9%A0%93%E5%A0%80%E5%BA%97-2026%E5%B9%B49%E6%9C%8825%E6%97%A5%E9%87%91new-open%EF%BC%81/",
+            "checkedAt": "2026-10-13",
+            "recognition": "",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/osaka/japan-30-2026-10-13/taco-report-26-c22b946a851a99d6.webp",
+            "imageCredit": "Lmaga.jp",
+            "imageSourceUrl": "https://www.lmaga.jp/news/2026/09/1102979/",
+            "imageNote": "Taco Bell（タコベル）道頓堀店の外観",
+            "openingConfirmed": true,
+            "day": "2026-09-25"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/osaka/japan-30-2026-10-13/taco-report-26-c22b946a851a99d6.webp",
+          "sha256": "c22b946a851a99d6c61601845cbac81ba9f35887e160f0fcb90e20c11d7d0c2e",
+          "width": 900,
+          "height": 600,
+          "credit": "Lmaga.jp",
+          "note": "Taco Bell（タコベル）道頓堀店の外観",
+          "sourcePage": "https://www.lmaga.jp/news/2026/09/1102979/"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/osaka/japan-30-2026-10-13/taco-report-27-7285749d34e03f84.webp",
+          "sha256": "7285749d34e03f84e5660f2eee8fa87e5cf27dd55c069fe0bfe94a5727f4ee98",
+          "width": 900,
+          "height": 600,
+          "credit": "Lmaga.jp",
+          "note": "トウモロコシの粉や小麦粉を焼いたトルティーヤに肉やレタス、チェダーチーズなどの具材を入れた「タコス」",
+          "sourcePage": "https://www.lmaga.jp/news/2026/09/1102979/"
+        }
+      ]
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Sushi & Yakitori Sushitori Shoten — Dotonbori Opens in Dotonbori",
+        "description": "A recently opened sushi and yakitori venue in Dotonbori with a branch-specific menu.",
+        "sourceUrl": "https://www.hotpepper.jp/strJ004660840/",
+        "address": "6F Doton Building, 1-6-15 Dotonbori, Chuo-ku, Osaka",
+        "productName": "Sushi & Yakitori Sushitori Shoten — Dotonbori",
+        "utcStartDateTime": "2026-09-19T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "Operator confirms September 19–20 soft opening and September 21 grand opening. September 19 is the first published service day, not the grand-opening day.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Osaka",
+          "Japan",
+          "Dotonbori",
+          "Sushi and yakitori"
+        ],
+        "longFormSummary": "<p>A recently opened sushi and yakitori venue in Dotonbori with a branch-specific menu.<cite data-ref=\"https://www.hotpepper.jp/strJ004660840/\"></cite></p><p>Operator opening announcement and branch evidence confirm 2026-09-19. Dates, prices and branch identity are verified separately from other locations.</p>",
+        "references": [
+          {
+            "url": "https://www.hotpepper.jp/strJ004660840/",
+            "title": "Sushi & Yakitori Sushitori Shoten — Dotonbori source",
+            "confidence": 90,
+            "reasoning": "Operator opening announcement and branch evidence confirm 2026-09-19. Dates, prices and branch identity are verified separately from other locations."
+          },
+          {
+            "url": "https://prtimes.jp/main/html/rd/p/000000032.000131309.html",
+            "title": "Sushi & Yakitori Sushitori Shoten — Dotonbori source",
+            "confidence": 90,
+            "reasoning": "Operator opening announcement and branch evidence confirm 2026-09-19. Dates, prices and branch identity are verified separately from other locations."
+          },
+          {
+            "url": "https://www.hotpepper.jp/strJ004660840/food/",
+            "title": "Sushi & Yakitori Sushitori Shoten — Dotonbori source",
+            "confidence": 90,
+            "reasoning": "Operator opening announcement and branch evidence confirm 2026-09-19. Dates, prices and branch identity are verified separately from other locations."
+          },
+          {
+            "url": "https://www.hotpepper.jp/strJ004660840/photo/",
+            "title": "Sushi & Yakitori Sushitori Shoten — Dotonbori source",
+            "confidence": 90,
+            "reasoning": "Operator opening announcement and branch evidence confirm 2026-09-19. Dates, prices and branch identity are verified separately from other locations."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "menu": {
+            "name": "Sushi & Yakitori Sushitori Shoten — Dotonbori",
+            "menus": [
+              {
+                "url": "https://www.hotpepper.jp/strJ004660840/food/",
+                "note": "September 30 branch-managed prices include tax. Ten-percent late-night surcharge for bills settled after 22:00. Each skewer or sushi piece is priced singly unless a set is named; slash-separated alternatives have the same published individual price. Seasonal-fish selections/prices require staff confirmation. Entry restricted to age 20 and older, including accompanied guests; smoking throughout. September 21–25 beer/highball campaign is expired.",
+                "items": [
+                  {
+                    "name": "本鮪盛り",
+                    "price": 1738
+                  },
+                  {
+                    "name": "あぶり〆鯖",
+                    "price": 968
+                  },
+                  {
+                    "name": "オススメ旬魚",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "おすすめ旬魚　3種盛り",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "おすすめ旬魚　5種盛り",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "もつ煮込み",
+                    "price": 638
+                  },
+                  {
+                    "name": "本鮪盛り ハーフ",
+                    "price": 968
+                  },
+                  {
+                    "name": "ねぎま",
+                    "price": 99
+                  },
+                  {
+                    "name": "ささみ／ハツ／ボンジリ",
+                    "price": 219
+                  },
+                  {
+                    "name": "とり皮",
+                    "price": 242
+                  },
+                  {
+                    "name": "はつもと※希少部位",
+                    "price": 219
+                  },
+                  {
+                    "name": "砂肝/せせり/レバー",
+                    "price": 253
+                  },
+                  {
+                    "name": "盛り合わせ5本",
+                    "price": 989
+                  },
+                  {
+                    "name": "本まぐろ赤身",
+                    "price": 352
+                  },
+                  {
+                    "name": "本まぐろ中とろ",
+                    "price": 572
+                  },
+                  {
+                    "name": "本まぐろ大とろ",
+                    "price": 770
+                  },
+                  {
+                    "name": "すし上7貫盛",
+                    "price": 2199
+                  },
+                  {
+                    "name": "玉子",
+                    "price": 132
+                  },
+                  {
+                    "name": "サーモン／いか",
+                    "price": 220
+                  },
+                  {
+                    "name": "蒸しエビ/真鯛/カンパチ",
+                    "price": 275
+                  },
+                  {
+                    "name": "えんがわ／えんがわ炙り／しめさば",
+                    "price": 275
+                  },
+                  {
+                    "name": "たこ／いなり",
+                    "price": 132
+                  },
+                  {
+                    "name": "いくら",
+                    "price": 550
+                  },
+                  {
+                    "name": "うに",
+                    "price": 880
+                  },
+                  {
+                    "name": "すし並7貫盛",
+                    "price": 1539
+                  },
+                  {
+                    "name": "あぶり大とろ",
+                    "price": 770
+                  },
+                  {
+                    "name": "ほたて",
+                    "price": 440
+                  },
+                  {
+                    "name": "ネギトロ／とろたく／ツナマヨ",
+                    "price": 549
+                  },
+                  {
+                    "name": "ガリ〆鯖",
+                    "price": 659
+                  },
+                  {
+                    "name": "漁師巻き",
+                    "price": 769
+                  },
+                  {
+                    "name": "ホタテいくら",
+                    "price": 769
+                  },
+                  {
+                    "name": "本鮪鉄火",
+                    "price": 1099
+                  },
+                  {
+                    "name": "うめキュウ巻／なっとう巻／なみだ巻",
+                    "price": 439
+                  },
+                  {
+                    "name": "特製タルタルの鯵フライ（1尾）",
+                    "price": 329
+                  },
+                  {
+                    "name": "カキフライ（５個）",
+                    "price": 748
+                  },
+                  {
+                    "name": "チキン南蛮",
+                    "price": 748
+                  },
+                  {
+                    "name": "タルタル追加",
+                    "price": 110
+                  },
+                  {
+                    "name": "軟骨唐揚げ",
+                    "price": 528
+                  },
+                  {
+                    "name": "ジューシー唐揚げ",
+                    "price": 638
+                  },
+                  {
+                    "name": "ポテト",
+                    "price": 462
+                  },
+                  {
+                    "name": "揚げなす",
+                    "price": 439
+                  },
+                  {
+                    "name": "白菜漬け/梅キュウ",
+                    "price": 308
+                  },
+                  {
+                    "name": "冷やしトマト/炙り明太子/うずらの醤油漬け/枝豆/冷奴",
+                    "price": 418
+                  },
+                  {
+                    "name": "角切りベーコンのポテトサラダ",
+                    "price": 528
+                  },
+                  {
+                    "name": "きゅうりの一本漬け",
+                    "price": 352
+                  },
+                  {
+                    "name": "柴漬け/らっきょ",
+                    "price": 219
+                  },
+                  {
+                    "name": "ホタルイカ沖漬け",
+                    "price": 528
+                  },
+                  {
+                    "name": "手羽餃子（1本）",
+                    "price": 329
+                  },
+                  {
+                    "name": "山芋のふわとろ焼き",
+                    "price": 572
+                  },
+                  {
+                    "name": "山芋のふわとろ焼きチーズ",
+                    "price": 638
+                  },
+                  {
+                    "name": "いくらだし巻き",
+                    "price": 748
+                  },
+                  {
+                    "name": "だし巻き",
+                    "price": 528
+                  },
+                  {
+                    "name": "明太だし巻き",
+                    "price": 638
+                  },
+                  {
+                    "name": "ごま豆腐サラダ",
+                    "price": 638
+                  },
+                  {
+                    "name": "海鮮サラダ",
+                    "price": 638
+                  },
+                  {
+                    "name": "ほっけ開き",
+                    "price": 968
+                  },
+                  {
+                    "name": "その日の焼き魚",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "串カツ5本盛り合わせ",
+                    "price": 989
+                  },
+                  {
+                    "name": "レンコン串",
+                    "price": 219
+                  },
+                  {
+                    "name": "豚ロース玉ねぎ",
+                    "price": 219
+                  },
+                  {
+                    "name": "とりささみ大葉",
+                    "price": 219
+                  },
+                  {
+                    "name": "うずら",
+                    "price": 219
+                  },
+                  {
+                    "name": "ホタテ",
+                    "price": 219
+                  },
+                  {
+                    "name": "チーズ",
+                    "price": 219
+                  },
+                  {
+                    "name": "牛串",
+                    "price": 219
+                  },
+                  {
+                    "name": "海老",
+                    "price": 219
+                  },
+                  {
+                    "name": "紅ショウガ",
+                    "price": 219
+                  },
+                  {
+                    "name": "焼きおにぎり 味噌チーズ",
+                    "price": 473
+                  },
+                  {
+                    "name": "海鮮漬け丼",
+                    "price": 528
+                  },
+                  {
+                    "name": "焼き鳥丼",
+                    "price": 528
+                  },
+                  {
+                    "name": "出汁茶づけ",
+                    "price": 418
+                  },
+                  {
+                    "name": "しじみの味噌汁",
+                    "price": 308
+                  },
+                  {
+                    "name": "シンプルTKG",
+                    "price": 308
+                  },
+                  {
+                    "name": "ガツンとTKG",
+                    "price": 418
+                  },
+                  {
+                    "name": "ネギトロロ丼",
+                    "price": 528
+                  },
+                  {
+                    "name": "あおさの味噌汁",
+                    "price": 308
+                  },
+                  {
+                    "name": "おいもさん",
+                    "price": 528
+                  }
+                ],
+                "label": "Current branch food menu",
+                "coverage": "sample",
+                "currency": "JPY"
+              }
+            ],
+            "specials": [],
+            "checkedAt": "2026-10-13",
+            "pinSourceUrl": "https://www.hotpepper.jp/strJ004660840/"
+          },
+          "tile": {
+            "day": "2026-09-19",
+            "kind": "opening",
+            "name": "Sushi & Yakitori Sushitori Shoten — Dotonbori",
+            "slug": "sushitori-opening",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/osaka/japan-30-2026-10-13/sushitori-details-27-8341dd3dc89e32eb.webp",
+            "address": "6F Doton Building, 1-6-15 Dotonbori, Chuo-ku, Osaka",
+            "cuisine": "Sushi and yakitori",
+            "checkedAt": "2026-10-13",
+            "imageNote": "Operator honmaguro menu illustration; shared brand image, not a branch property photograph",
+            "priceRange": "",
+            "regionSlug": "osaka",
+            "websiteUrl": "https://www.hotpepper.jp/strJ004660840/",
+            "description": "A recently opened sushi and yakitori venue in Dotonbori with a branch-specific menu.",
+            "imageCredit": "Restaurant operator / Hot Pepper Gourmet",
+            "recognition": "",
+            "neighborhood": "Dotonbori",
+            "imageSourceUrl": "https://www.hotpepper.jp/strJ004660840/",
+            "openingConfirmed": true
+          },
+          "details": {
+            "name": "Sushi & Yakitori Sushitori Shoten — Dotonbori",
+            "phone": null,
+            "checkedAt": "2026-10-13",
+            "websiteUrl": "https://www.hotpepper.jp/strJ004660840/",
+            "openingHours": [
+              {
+                "days": "Daily",
+                "hours": "12:00–05:00 next day; food last order 04:00, drinks 04:30"
+              }
+            ],
+            "pinSourceUrl": "https://www.hotpepper.jp/strJ004660840/",
+            "detailsSourceUrl": "https://www.hotpepper.jp/strJ004660840/",
+            "additionalSources": [
+              {
+                "url": "https://prtimes.jp/main/html/rd/p/000000032.000131309.html",
+                "label": "Research evidence"
+              },
+              {
+                "url": "https://www.hotpepper.jp/strJ004660840/food/",
+                "label": "Research evidence"
+              },
+              {
+                "url": "https://www.hotpepper.jp/strJ004660840/photo/",
+                "label": "Research evidence"
+              }
+            ]
+          },
+          "pinSourceUrl": "https://www.hotpepper.jp/strJ004660840/"
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/osaka/japan-30-2026-10-13/sushitori-details-27-8341dd3dc89e32eb.webp",
+          "sha256": "8341dd3dc89e32eb007f0239715075844ea503460eab9eced62a42f489d7230a",
+          "width": 368,
+          "height": 368,
+          "credit": "Restaurant operator / Hot Pepper Gourmet",
+          "note": "Operator honmaguro menu illustration; shared brand image, not a branch property photograph",
+          "sourcePage": "https://www.hotpepper.jp/strJ004660840/"
+        }
+      ]
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Cucina Bella — Daimaru Shinsaibashi Opens in Shinsaibashi",
+        "description": "A recently opened italian venue in Shinsaibashi with a branch-specific menu.",
+        "sourceUrl": "https://www.daimaru.co.jp/shinsaibashi/restaurant/cucina-bella.html",
+        "address": "10F Daimaru Shinsaibashi, 1-7-1 Shinsaibashisuji, Chuo-ku, Osaka",
+        "productName": "Cucina Bella — Daimaru Shinsaibashi",
+        "utcStartDateTime": "2026-09-01T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "Operator opening announcement and branch evidence confirm 2026-09-01. Dates, prices and branch identity are verified separately from other locations.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Osaka",
+          "Japan",
+          "Shinsaibashi",
+          "Italian"
+        ],
+        "longFormSummary": "<p>A recently opened italian venue in Shinsaibashi with a branch-specific menu.<cite data-ref=\"https://www.daimaru.co.jp/shinsaibashi/restaurant/cucina-bella.html\"></cite></p><p>Operator opening announcement and branch evidence confirm 2026-09-01. Dates, prices and branch identity are verified separately from other locations.</p>",
+        "references": [
+          {
+            "url": "https://www.daimaru.co.jp/shinsaibashi/restaurant/cucina-bella.html",
+            "title": "Cucina Bella — Daimaru Shinsaibashi source",
+            "confidence": 90,
+            "reasoning": "Operator opening announcement and branch evidence confirm 2026-09-01. Dates, prices and branch identity are verified separately from other locations."
+          },
+          {
+            "url": "https://www.instagram.com/reel/DcXqvRoxJdz/",
+            "title": "Cucina Bella — Daimaru Shinsaibashi source",
+            "confidence": 90,
+            "reasoning": "Operator opening announcement and branch evidence confirm 2026-09-01. Dates, prices and branch identity are verified separately from other locations."
+          },
+          {
+            "url": "https://www.tablecheck.com/ja/shops/cucinabella/reserve",
+            "title": "Cucina Bella — Daimaru Shinsaibashi source",
+            "confidence": 90,
+            "reasoning": "Operator opening announcement and branch evidence confirm 2026-09-01. Dates, prices and branch identity are verified separately from other locations."
+          },
+          {
+            "url": "https://www.tablecheck.com/ja/cucinabella",
+            "title": "Cucina Bella — Daimaru Shinsaibashi source",
+            "confidence": 90,
+            "reasoning": "Operator opening announcement and branch evidence confirm 2026-09-01. Dates, prices and branch identity are verified separately from other locations."
+          },
+          {
+            "url": "https://www8.cao.go.jp/chosei/shukujitsu/gaiyou.html",
+            "title": "Cucina Bella — Daimaru Shinsaibashi source",
+            "confidence": 90,
+            "reasoning": "Operator opening announcement and branch evidence confirm 2026-09-01. Dates, prices and branch identity are verified separately from other locations."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://www.daimaru.co.jp/shinsaibashi/restaurant/cucina-bella.html",
+          "menu": {
+            "pinSourceUrl": "https://www.daimaru.co.jp/shinsaibashi/restaurant/cucina-bella.html",
+            "name": "Cucina Bella — Daimaru Shinsaibashi",
+            "checkedAt": "2026-10-13",
+            "menus": [
+              {
+                "label": "Bella weekday lunch booking offer",
+                "url": "https://www.tablecheck.com/ja/shops/cucinabella/reserve",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Bella weekday lunch — booking offer",
+                    "price": 5000,
+                    "note": "Published ¥5,500 → ¥5,000"
+                  },
+                  {
+                    "name": "Bella weekend/holiday lunch",
+                    "price": 5500
+                  },
+                  {
+                    "name": "Five appetizers",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Bella weekday lunch booking offer; no separate item price published"
+                  },
+                  {
+                    "name": "Zeppole fried pizza",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Bella weekday lunch booking offer; no separate item price published"
+                  },
+                  {
+                    "name": "Classic carbonara — main option",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Bella weekday lunch booking offer; no separate item price published"
+                  },
+                  {
+                    "name": "Bungo Strait fresh fish grill — main option",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Bella weekday lunch booking offer; no separate item price published"
+                  },
+                  {
+                    "name": "Selected pork grill — main option",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Bella weekday lunch booking offer; no separate item price published"
+                  },
+                  {
+                    "name": "Fifteen seasonal fruit desserts",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Bella weekday lunch booking offer; no separate item price published"
+                  },
+                  {
+                    "name": "Post-meal drink free-flow",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Bella weekday lunch booking offer; no separate item price published"
+                  },
+                  {
+                    "name": "Sea-urchin tomato-cream pasta supplement",
+                    "price": 500
+                  },
+                  {
+                    "name": "Grass-fed skirt steak supplement",
+                    "price": 500
+                  },
+                  {
+                    "name": "A5 Japanese beef ichibo supplement",
+                    "price": 1000
+                  }
+                ],
+                "note": "Tax included. Select one main; supplements are additional. Weekday booking offer excludes public holidays; weekend/holiday plan is ¥5,500. Two-hour seating may apply when busy; 100% same-day cancellation for plans. Published booking page gives no expiry date for the crossed-out weekday reduction, so no expiry is invented."
+              },
+              {
+                "label": "Published branch lunch and dinner courses",
+                "url": "https://www.tablecheck.com/ja/shops/cucinabella/reserve",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Lunch Cucina",
+                    "price": 2800
+                  },
+                  {
+                    "name": "Real nine-course lunch",
+                    "price": 7000
+                  },
+                  {
+                    "name": "Cucina dinner with two-hour drink free-flow",
+                    "price": 6500
+                  },
+                  {
+                    "name": "Speciale dinner",
+                    "price": 8000
+                  },
+                  {
+                    "name": "Party A shared-food plan",
+                    "price": 6000
+                  },
+                  {
+                    "name": "Party B premium plan — lower-priced published version",
+                    "price": 7200,
+                    "note": "Minimum four diners; October 8–December 23 and from December 26; December 24–25 excluded. Confirm chosen booking plan."
+                  },
+                  {
+                    "name": "Party B premium plan — alternate published version",
+                    "price": 9000,
+                    "note": "Same-title plan with matching dates and minimum four diners; operator does not explain the price difference."
+                  },
+                  {
+                    "name": "Antipasto and salad buffet",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Cucina dinner; no separate item price published"
+                  },
+                  {
+                    "name": "Zeppole",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Cucina dinner; no separate item price published"
+                  },
+                  {
+                    "name": "Bungo Strait grilled fish or selected pork",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Cucina dinner; no separate item price published"
+                  },
+                  {
+                    "name": "Chef pasta",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Cucina dinner; no separate item price published"
+                  },
+                  {
+                    "name": "Three seasonal fruit desserts",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Cucina dinner; no separate item price published"
+                  }
+                ],
+                "note": "Tax included. Cucina dinner drink last order is 30 minutes before the two-hour limit; draft Premium Malt’s supplement ¥500. The lower-priced Party B plan is saved as dated ordinary menu content; the parallel same-title ¥9,000 listing has matching dates/party size but no explanation for the price difference; confirm the chosen plan, and no discount is inferred. Main-dish supplements vary by course; lunch dish choices are not assumed to apply to every dinner plan."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://www.daimaru.co.jp/shinsaibashi/restaurant/cucina-bella.html",
+            "name": "Cucina Bella — Daimaru Shinsaibashi",
+            "checkedAt": "2026-10-13",
+            "websiteUrl": "https://www.daimaru.co.jp/shinsaibashi/restaurant/cucina-bella.html",
+            "phone": "06-6484-6924",
+            "openingHours": [
+              {
+                "days": "Lunch",
+                "hours": "11:00–15:30; course last order 14:00, à la carte 14:30"
+              },
+              {
+                "days": "Cafe",
+                "hours": "14:30–17:00"
+              },
+              {
+                "days": "Dinner",
+                "hours": "17:00–22:00; course last order 20:00, à la carte 21:00"
+              }
+            ],
+            "detailsSourceUrl": "https://www.daimaru.co.jp/shinsaibashi/restaurant/cucina-bella.html",
+            "additionalSources": [
+              {
+                "label": "Research evidence",
+                "url": "https://www.instagram.com/reel/DcXqvRoxJdz/"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://www.tablecheck.com/ja/shops/cucinabella/reserve"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://www.tablecheck.com/ja/cucinabella"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://www8.cao.go.jp/chosei/shukujitsu/gaiyou.html"
+              }
+            ]
+          },
+          "tile": {
+            "regionSlug": "osaka",
+            "kind": "opening",
+            "slug": "bella-opening",
+            "name": "Cucina Bella — Daimaru Shinsaibashi",
+            "neighborhood": "Shinsaibashi",
+            "cuisine": "Italian",
+            "description": "A recently opened italian venue in Shinsaibashi with a branch-specific menu.",
+            "address": "10F Daimaru Shinsaibashi, 1-7-1 Shinsaibashisuji, Chuo-ku, Osaka",
+            "websiteUrl": "https://www.daimaru.co.jp/shinsaibashi/restaurant/cucina-bella.html",
+            "checkedAt": "2026-10-13",
+            "recognition": "",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/osaka/japan-30-2026-10-13/bella-guide-1-7fb72f1056a06f6c.webp",
+            "imageCredit": "Cucina Bella / TableCheck",
+            "imageSourceUrl": "https://www.tablecheck.com/ja/cucinabella",
+            "imageNote": "Cucina Bella entrance",
+            "openingConfirmed": true,
+            "day": "2026-09-01"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/osaka/japan-30-2026-10-13/bella-guide-1-7fb72f1056a06f6c.webp",
+          "sha256": "7fb72f1056a06f6c57e77f73c99287f24f7b823c66bf7e23a85cbb5398915755",
+          "width": 1200,
+          "height": 799,
+          "credit": "Cucina Bella / TableCheck",
+          "note": "Cucina Bella entrance",
+          "sourcePage": "https://www.tablecheck.com/ja/cucinabella"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/osaka/japan-30-2026-10-13/bella-guide-2-7e4ea7f1698c1a6f.webp",
+          "sha256": "7e4ea7f1698c1a6f5b1f1efdd16ef69153dfa8c0e1376a7074921611e3de638e",
+          "width": 1200,
+          "height": 799,
+          "credit": "Cucina Bella / TableCheck",
+          "note": "Cucina Bella dining room",
+          "sourcePage": "https://www.tablecheck.com/ja/cucinabella"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/osaka/japan-30-2026-10-13/bella-guide-4-c2c2714c8a9e17bf.webp",
+          "sha256": "c2c2714c8a9e17bfbc142567641ce5d52562ec6dd0a468a14e2a5ca3cf12d4be",
+          "width": 1200,
+          "height": 800,
+          "credit": "Cucina Bella / TableCheck",
+          "note": "Operator menu illustration; dishes are not individually identified",
+          "sourcePage": "https://www.tablecheck.com/ja/cucinabella"
+        }
+      ],
+      "special": {
+        "regionSlug": "osaka",
+        "profile": {
+          "pinSourceUrl": "https://www.daimaru.co.jp/shinsaibashi/restaurant/cucina-bella.html",
+          "name": "Cucina Bella — Daimaru Shinsaibashi",
+          "checkedAt": "2026-10-13",
+          "menus": [
+            {
+              "label": "Bella weekday lunch booking offer",
+              "url": "https://www.tablecheck.com/ja/shops/cucinabella/reserve",
+              "currency": "JPY",
+              "coverage": "sample",
+              "items": [
+                {
+                  "name": "Bella weekday lunch — booking offer",
+                  "price": 5000,
+                  "note": "Published ¥5,500 → ¥5,000"
+                },
+                {
+                  "name": "Bella weekend/holiday lunch",
+                  "price": 5500
+                },
+                {
+                  "name": "Five appetizers",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Bella weekday lunch booking offer; no separate item price published"
+                },
+                {
+                  "name": "Zeppole fried pizza",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Bella weekday lunch booking offer; no separate item price published"
+                },
+                {
+                  "name": "Classic carbonara — main option",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Bella weekday lunch booking offer; no separate item price published"
+                },
+                {
+                  "name": "Bungo Strait fresh fish grill — main option",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Bella weekday lunch booking offer; no separate item price published"
+                },
+                {
+                  "name": "Selected pork grill — main option",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Bella weekday lunch booking offer; no separate item price published"
+                },
+                {
+                  "name": "Fifteen seasonal fruit desserts",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Bella weekday lunch booking offer; no separate item price published"
+                },
+                {
+                  "name": "Post-meal drink free-flow",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Bella weekday lunch booking offer; no separate item price published"
+                },
+                {
+                  "name": "Sea-urchin tomato-cream pasta supplement",
+                  "price": 500
+                },
+                {
+                  "name": "Grass-fed skirt steak supplement",
+                  "price": 500
+                },
+                {
+                  "name": "A5 Japanese beef ichibo supplement",
+                  "price": 1000
+                }
+              ],
+              "note": "Tax included. Select one main; supplements are additional. Weekday booking offer excludes public holidays; weekend/holiday plan is ¥5,500. Two-hour seating may apply when busy; 100% same-day cancellation for plans. Published booking page gives no expiry date for the crossed-out weekday reduction, so no expiry is invented."
+            },
+            {
+              "label": "Published branch lunch and dinner courses",
+              "url": "https://www.tablecheck.com/ja/shops/cucinabella/reserve",
+              "currency": "JPY",
+              "coverage": "sample",
+              "items": [
+                {
+                  "name": "Lunch Cucina",
+                  "price": 2800
+                },
+                {
+                  "name": "Real nine-course lunch",
+                  "price": 7000
+                },
+                {
+                  "name": "Cucina dinner with two-hour drink free-flow",
+                  "price": 6500
+                },
+                {
+                  "name": "Speciale dinner",
+                  "price": 8000
+                },
+                {
+                  "name": "Party A shared-food plan",
+                  "price": 6000
+                },
+                {
+                  "name": "Party B premium plan — lower-priced published version",
+                  "price": 7200,
+                  "note": "Minimum four diners; October 8–December 23 and from December 26; December 24–25 excluded. Confirm chosen booking plan."
+                },
+                {
+                  "name": "Party B premium plan — alternate published version",
+                  "price": 9000,
+                  "note": "Same-title plan with matching dates and minimum four diners; operator does not explain the price difference."
+                },
+                {
+                  "name": "Antipasto and salad buffet",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Cucina dinner; no separate item price published"
+                },
+                {
+                  "name": "Zeppole",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Cucina dinner; no separate item price published"
+                },
+                {
+                  "name": "Bungo Strait grilled fish or selected pork",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Cucina dinner; no separate item price published"
+                },
+                {
+                  "name": "Chef pasta",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Cucina dinner; no separate item price published"
+                },
+                {
+                  "name": "Three seasonal fruit desserts",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Cucina dinner; no separate item price published"
+                }
+              ],
+              "note": "Tax included. Cucina dinner drink last order is 30 minutes before the two-hour limit; draft Premium Malt’s supplement ¥500. The lower-priced Party B plan is saved as dated ordinary menu content; the parallel same-title ¥9,000 listing has matching dates/party size but no explanation for the price difference; confirm the chosen plan, and no discount is inferred. Main-dish supplements vary by course; lunch dish choices are not assumed to apply to every dinner plan."
+            }
+          ],
+          "specials": [
+            {
+              "title": "Bella weekday lunch booking offer",
+              "kind": "lunch",
+              "description": "Book the Bella weekday lunch at ¥5,000 instead of the published ¥5,500, including fifteen seasonal fruit desserts.",
+              "sourceUrl": "https://www.tablecheck.com/ja/shops/cucinabella/reserve",
+              "menuLabel": "Bella weekday lunch booking offer",
+              "discounted": true,
+              "schedule": "Japan local time; see conditions",
+              "conditions": [
+                "Book the weekday plan on the linked branch booking page.",
+                "Excludes public holidays; weekend/holiday price ¥5,500.",
+                "One main choice; supplements apply.",
+                "Two-hour seating may apply when busy.",
+                "Same-day plan cancellation 100%."
+              ],
+              "availability": {
+                "windows": [
+                  {
+                    "days": [
+                      1,
+                      2,
+                      3,
+                      4,
+                      5
+                    ],
+                    "start": "11:00",
+                    "end": "14:00"
+                  }
+                ],
+                "excludesHolidays": true,
+                "holidayCalendarThrough": "2027-12-31",
+                "excludedDates": [
+                  "2026-11-03",
+                  "2026-11-23",
+                  "2027-01-01",
+                  "2027-01-11",
+                  "2027-02-11",
+                  "2027-02-23",
+                  "2027-03-21",
+                  "2027-03-22",
+                  "2027-04-29",
+                  "2027-05-03",
+                  "2027-05-04",
+                  "2027-05-05",
+                  "2027-07-19",
+                  "2027-08-11",
+                  "2027-09-20",
+                  "2027-09-23",
+                  "2027-10-11",
+                  "2027-11-03",
+                  "2027-11-23"
+                ]
+              }
+            }
+          ],
+          "address": "10F Daimaru Shinsaibashi, 1-7-1 Shinsaibashisuji, Chuo-ku, Osaka",
+          "neighborhood": "Shinsaibashi",
+          "websiteUrl": "https://www.daimaru.co.jp/shinsaibashi/restaurant/cucina-bella.html",
+          "photo": {
+            "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/osaka/japan-30-2026-10-13/bella-guide-1-7fb72f1056a06f6c.webp",
+            "alt": "Cucina Bella — Daimaru Shinsaibashi — Cucina Bella entrance",
+            "credit": "Cucina Bella / TableCheck",
+            "sourceUrl": "https://www.tablecheck.com/ja/cucinabella",
+            "originalUrl": "https://4.image.cdn.tablecheck.com/unsafe/full-fit-in/smart/https%3A%2F%2Fcdn2.tablecheck.com%2Fimages%2F6a96bc242469b9a1421693d7%2Fimages%2Foriginal%2F84d9ab25.jpg%3F1788263460",
+            "checkedAt": "2026-10-13"
+          }
+        },
+        "enabled": true
+      }
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Sushi Koki — Osaka restaurant guide",
+        "description": "A sushi counter with a published fifteen-item omakase course and seafood-broth ramen.",
+        "sourceUrl": "https://sushi881.com/koki/",
+        "address": "1F Nippo Jumbo Building, 2-1-13 Higashi Shinsaibashi, Chuo-ku, Osaka",
+        "productName": "Sushi Koki",
+        "utcStartDateTime": "2026-10-13T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "October 13 is the verification date, not an opening date. The operator branch page states March 1, 2025, while local reports state September 1, 2026; this unresolved conflict excludes the venue from Just opened.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Top Restaurants",
+          "Osaka",
+          "Japan",
+          "Higashi Shinsaibashi",
+          "Sushi"
+        ],
+        "longFormSummary": "<p>A sushi counter with a published fifteen-item omakase course and seafood-broth ramen.<cite data-ref=\"https://sushi881.com/koki/\"></cite></p><p>October 13 is the verification date, not an opening date. The operator branch page states March 1, 2025, while local reports state September 1, 2026; this unresolved conflict excludes the venue from Just opened.</p>",
+        "references": [
+          {
+            "url": "https://sushi881.com/koki/",
+            "title": "Sushi Koki source",
+            "confidence": 90,
+            "reasoning": "October 13 is the verification date, not an opening date. The operator branch page states March 1, 2025, while local reports state September 1, 2026; this unresolved conflict excludes the venue from Just opened."
+          },
+          {
+            "url": "https://www.tablecheck.com/ja/sushi-koki",
+            "title": "Sushi Koki source",
+            "confidence": 90,
+            "reasoning": "October 13 is the verification date, not an opening date. The operator branch page states March 1, 2025, while local reports state September 1, 2026; this unresolved conflict excludes the venue from Just opened."
+          },
+          {
+            "url": "https://www.instagram.com/reel/Db7Jg_kyDHR/",
+            "title": "Sushi Koki source",
+            "confidence": 90,
+            "reasoning": "October 13 is the verification date, not an opening date. The operator branch page states March 1, 2025, while local reports state September 1, 2026; this unresolved conflict excludes the venue from Just opened."
+          },
+          {
+            "url": "https://sushiyamato.net/",
+            "title": "Sushi Koki source",
+            "confidence": 90,
+            "reasoning": "October 13 is the verification date, not an opening date. The operator branch page states March 1, 2025, while local reports state September 1, 2026; this unresolved conflict excludes the venue from Just opened."
+          },
+          {
+            "url": "https://sushi881.com/",
+            "title": "Sushi Koki source",
+            "confidence": 90,
+            "reasoning": "October 13 is the verification date, not an opening date. The operator branch page states March 1, 2025, while local reports state September 1, 2026; this unresolved conflict excludes the venue from Just opened."
+          },
+          {
+            "url": "https://kansai-kaiten.com/sushikoki-osakashinsaibashi2609/",
+            "title": "Sushi Koki source",
+            "confidence": 90,
+            "reasoning": "October 13 is the verification date, not an opening date. The operator branch page states March 1, 2025, while local reports state September 1, 2026; this unresolved conflict excludes the venue from Just opened."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://sushi881.com/koki/",
+          "menu": {
+            "pinSourceUrl": "https://sushi881.com/koki/",
+            "name": "Sushi Koki",
+            "checkedAt": "2026-10-13",
+            "menus": [
+              {
+                "label": "Current branch booking menu",
+                "url": "https://www.tablecheck.com/ja/sushi-koki",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Fifteen-item omakase course with seafood-broth ramen free-flow",
+                    "price": 4400
+                  },
+                  {
+                    "name": "Seafood-broth ramen",
+                    "priceLabel": "Price not published",
+                    "note": "Included in the omakase; no separate price published"
+                  },
+                  {
+                    "name": "Celebration dessert plate",
+                    "price": 1100
+                  }
+                ],
+                "note": "Tax included. Drink prices and named individual sushi pieces remain unpublished after checking operator branch/group pages, linked Instagram and TableCheck. Sister restaurant Yamato’s detailed sample menu is not borrowed. The booking-page ¥10,000 budget header is not the course price."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://sushi881.com/koki/",
+            "name": "Sushi Koki",
+            "checkedAt": "2026-10-13",
+            "websiteUrl": "https://sushi881.com/koki/",
+            "phone": null,
+            "openingHours": [
+              {
+                "days": "Published dinner sittings",
+                "hours": "17:30–19:30 and 20:00–22:00; reservations required"
+              }
+            ],
+            "detailsSourceUrl": "https://sushi881.com/koki/",
+            "additionalSources": [
+              {
+                "label": "Research evidence",
+                "url": "https://www.tablecheck.com/ja/sushi-koki"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://www.instagram.com/reel/Db7Jg_kyDHR/"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://sushiyamato.net/"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://sushi881.com/"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://kansai-kaiten.com/sushikoki-osakashinsaibashi2609/"
+              }
+            ]
+          },
+          "tile": {
+            "regionSlug": "osaka",
+            "kind": "top",
+            "slug": "koki-branch",
+            "name": "Sushi Koki",
+            "neighborhood": "Higashi Shinsaibashi",
+            "cuisine": "Sushi",
+            "description": "A sushi counter with a published fifteen-item omakase course and seafood-broth ramen.",
+            "address": "1F Nippo Jumbo Building, 2-1-13 Higashi Shinsaibashi, Chuo-ku, Osaka",
+            "websiteUrl": "https://sushi881.com/koki/",
+            "checkedAt": "2026-10-13",
+            "recognition": "",
+            "priceRange": "",
+            "image": null,
+            "imageCredit": ""
+          }
+        },
+        "enabled": true
+      },
+      "photos": []
+    }
+  ]
+}

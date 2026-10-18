@@ -1,0 +1,160 @@
+The San Diego, New York, Los Angeles, San Francisco, Chicago, Houston, Phoenix,
+San Antonio, Philadelphia, Dallas, Miami, Boston, Seattle, Jacksonville,
+Fort Worth, Austin, San Jose, Charlotte, and Columbus guides share the regional restaurant
+page and neighborhood, opening status, and map controls. City registrations
+also feed the sitemap and each page's canonical metadata.
+
+The Canadian guides cover Victoria, Vancouver, Calgary, Edmonton, Saskatoon,
+Winnipeg, Hamilton, Toronto, Ottawa, Montréal, Québec City and Halifax. Each
+starts with three sourced established restaurant picks. They share city
+navigation, sorting and maps, use kilometre distances and regional time zones,
+and accept Canadian OpenTable booking links. Sources, menu links and rollout
+instructions are in [Canadian guide coverage](restaurant-canada-guides.md).
+
+For future collection and refresh work, follow the
+[restaurant scraping strategy](restaurant-scraping.md), including the OpenTable
+fallback, location matching, source attribution, and validation workflow.
+
+The regional catalog is in
+`src/server/data/regionalRestaurants.json`, with branch-specific menu profiles
+in `src/server/data/restaurantMenus.json` and pictures in
+Azure Blob Storage; keep public blob URLs in the catalogs and no pin image files in Git. Dates, sources, photo credits, and rendering labels
+were checked October 6, 2026. A planned day remains estimated until an opening
+is confirmed. Where reporting verifies an opening but supplies only a month,
+`openingConfirmed` records that evidence without claiming an exact day. It
+applies only while the live pin retains the catalog's date. Established
+restaurants use a guide verification date, not an
+opening date, and do not carry the Restaurant Opening tag.
+Spacca Tutto, Shinka, Gibsons Tavern, and Rosso could not be matched reliably
+to an exact street address, so their pins have no map coordinates until the
+locations can be verified. Other coordinates are street-address matches;
+individual suites inside larger buildings may be approximate.
+
+San Francisco, Chicago, Houston, Phoenix, San Antonio, Philadelphia, and Dallas
+each contain six opening listings and three MICHELIN
+Guide picks. Thirty-seven of their 63 profiles include verified menu links or
+sample items. Upcoming or unpublished menus remain explicitly unverified.
+The nine additional cities each contain six opening listings and three
+Chronopin editorial selections. These selections are not presented as external
+awards. Their 81 records include sourced photographs or labeled previews,
+street-address map coordinates, and 15 profiles with sample menu items or
+rendered operator menu pages. Future openings retain estimated dates until
+confirmed; unpublished prices, phone numbers, and schedules remain unverified.
+
+The detail page hides the menu pane when no menu items or rendered menu pages
+are available, and omits tabs that only link to an external menu.
+Restaurant pins also show a separate visit pane with an official website,
+click-to-call phone number, and opening days and hours. Branch-specific records
+live in `src/server/data/restaurantDetails.json`, with a check date and operator
+source for verified facts. Missing details stay explicitly unverified; another
+location's phone or hours are never substituted. Service schedules and overnight
+closing times retain their published meaning.
+When an operator's site omits contact details or hours, follow its reservation
+links to OpenTable before leaving the fields unverified. Confirm the restaurant
+name, location/address, and linked official site. Preserve operator facts, fill
+the missing fields, and record the booking listing in `additionalSources` with a
+field-specific label and a URL without marketing parameters. Do not treat a
+placeholder phone number as verified, or substitute another branch's schedule.
+Serpent & Stone, Élephante Dallas, Docent, and Californios include OpenTable
+provenance for phone numbers or hours obtained this way.
+Verified OpenTable listings are also stored as `reservationUrl` and appear in a
+Reserve row where product pins show their shopping buttons. An existing pin's
+OpenTable reservation handle takes precedence; no booking URL is guessed when
+neither source has one.
+Operator-linked older PDFs are labeled with their publication dates, and
+brand menus require checking the selected location's prices and availability.
+
+Run `npm run restaurants:seed` against the configured database after deploying
+the matching assets. The command uses the existing FoodDesk account; another
+existing curator can be selected with
+`npm run restaurants:seed -- --user-id 123`. It adds missing records in one
+transaction and preserves existing or deleted pins. It is safe to rerun.
+Restaurant IDs are assigned by the database; top cards resolve their detail
+links from source URLs rather than depending on an installation's IDs.
+
+Production was seeded on October 8, 2026 with all 245 regional catalog records
+(121 openings and 124 restaurant picks), authored by FoodDesk. All records were
+read back, and all 121 openings and 124 picks were verified through the live
+guide API. This includes all 36 Canadian picks. Existing specials were retained.
+San Diego's development preview remains available when its opening batch is missing.
+
+Menus labeled as samples contain selected verified items. Links to changing
+menus do not imply their prices were transcribed. Missing menus and promotions
+remain unverified; offers are never copied from another branch. Menu records
+become refresh candidates after 30 days, and offers respect any published
+validity dates.
+
+City guides show discounted menus available now in a dedicated restaurant view tab.
+An offer requires `discounted: true` and explicit `availability.windows` in
+`restaurantMenus.json`: `days` uses Sunday = 0, and `start`/`end` are local
+24-hour times with an exclusive end. Use separate windows for different weekday
+hours; an end before the start means overnight service. Published validity dates
+and `excludedDates` also apply. Holiday-restricted offers require a resolved
+branch calendar (currently US/California public holidays for Telefèric La Jolla and Cloak + Petal).
+Unpublished hours or prices alone never establish an active discount. Only
+confirmed open venues enter the section; source matching keeps offers specific
+to their branch. `menuLabel` attaches the discounted menu, and
+`excludedMenuItems` removes items with separate, unverified service hours.
+The section refreshes every 15 seconds and on tab focus using the city's time
+zone, displays conditions and the menu check date, and links to the operator
+for redemption. Chronopin does not process restaurant orders.
+Keep the Specials tab visible whenever verified active or upcoming offers exist,
+including outside service hours and without published review scores. Active and
+upcoming offers have separate sections; each upcoming card displays its next
+start date and time in the restaurant's time zone. Show each venue's earliest
+special once, up to 100 venues. Expired offers are excluded. Rating and distance
+sorting still apply; ratings determine order, not eligibility. Unknown coordinates
+sort last. Coordinates retain source and check date. Local calendar calculations
+preserve service hours through DST changes, validity dates and holiday exclusions.
+Additional established venues live in `restaurantSpecials.json`, allowing
+specials to appear without requiring a recent opening pin. Existing source
+matches keep their pin links; other venues link to their operator website.
+These venues also make their city guide discoverable. All 19 US cities have at least one qualifying venue; San Diego has 21 qualifying venues and displays up to 20 after service in the selected order. The discounts tab is hidden when the city has neither an active offer nor a qualifying future special. This eligibility check runs before neighborhood filtering, so selecting an empty neighborhood does not remove the tab. See
+[the specials audit](restaurant-specials.md) for sources and conflicts.
+
+The [October 2026 media audit](restaurant-media-audit.md) backfilled 87 existing
+restaurant pins across the catalog and historical listings. All live restaurant pins now have images. Cha Chin uses a labeled photograph
+of its future premises under the previous tenant; Pearl Diver uses its opening
+team’s official photograph. Replace these previews when new venue imagery is
+published.
+
+Price tiers are shared across landing cards, pin detail visit panes, and city opening cards. The October 6 price backfill supplies 73 additional sourced tiers (107 of the 180 city guide restaurants now have tiers); see [restaurant-price-audit.md](restaurant-price-audit.md) for evidence and the remaining unverified locations. Do not assign a default tier to fill a gap.
+
+Coming soon, Just opened, and Top restaurants each have a collection target of
+12 distinct live pins per city when verified candidates are available. This
+is not a display cap. The nightly `restaurant_regions` signal reports current
+tab counts and shortages, including cities without a newly created opening.
+Just opened retains its 90-day window and requires a confirmed opening; stale
+estimates, expired openings, deleted pins, and uncataloged top picks do not
+fill shortages. See [the refresh task](okf/scraping/daily-jobs.md#restaurantregions).
+
+## October 9, 2026 city additions
+
+Sacramento, Palm Springs, Honolulu, Nashville, Orlando, Las Vegas,
+Washington, DC, Atlanta and Fort Lauderdale were added (`RESTAURANT_REGIONS`,
+west-to-east order is enforced by a test). Each has three established picks
+(MICHELIN where the Guide covers the city; Honolulu is "Chronopin selection"
+because Hawaii is not covered), 4–5 openings, 1–2 specials venues, and
+website/phone/hours rows for every pick and opening. Research for each city
+lives in nine files under a working folder and is merged with
+`npx tsx scripts/restaurants/mergeCityGuides.ts <dir>`: it downloads each photo,
+converts it to WebP, uploads it to Azure (`restaurant-images/<region>/{top,openings,specials}/`),
+verifies the public download, and only then writes the catalogs. Re-running replaces rows by source URL.
+Then run `npm run restaurants:seed -- --regions=<slugs>` and
+`npm run restaurants:specials:seed`.
+
+Gaps to close later:
+- **Specials that do not qualify as discounts:** Honolulu (Hy's) and Palm Springs
+  (The Tropicale) publish happy-hour prices but state no discount, so
+  `discounted` is false and the discounts tab stays hidden. Fort Lauderdale's only
+  venue (Daniel's) has no OpenTable rating; its Google score was not accepted.
+- **Ratings** for the other specials venues were read from OpenTable's JSON-LD in
+  the logged-in browser (the claude-in-chrome tab loads OpenTable; curl/WebFetch
+  hit its bot wall). Use that route to verify any rating.
+- **Openings** are mostly `estimated`; several are announced, not open (Category 10,
+  The Corner Store, Mastro's, Sweetwaters, Caviar Club, Fiore del Vino, Oak Room).
+  Some photos are labeled renders, street views or sibling-location pictures.
+- **Menus:** only the sample items inside the specials rows; no full menus or menu pages.
+- **Prices (`$`-`$$$$`):** blank for Honolulu, taken from the MICHELIN tier elsewhere.
+- Existing local pins for the picks seeded before their photos were stored keep no
+  picture (the seed never adds media to an existing pin); a fresh/prod seed has them.

@@ -1,0 +1,63 @@
+{
+  "checkedAt": "2026-10-09T14:46:04.149Z",
+  "storage": "Azure Blob Storage",
+  "verifiedPhotos": 9,
+  "changedMediumIds": [],
+  "verifiedPinIds": [],
+  "photos": [
+    {
+      "previousPath": "/restaurant-images/adelaide/top/press-food-and-wine.webp",
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/adelaide/top/press-food-and-wine-a84b7d3e2442c075.webp",
+      "sha256": "a84b7d3e2442c07532b005cf1de47a06c1388a1e5e30f7b7ab3796f0f0336ae0",
+      "bytes": 178586
+    },
+    {
+      "previousPath": "/restaurant-images/brisbane/top/bistro-suzette.webp",
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/brisbane/top/bistro-suzette-a09e17e98b809c7c.webp",
+      "sha256": "a09e17e98b809c7c664a2b1cebee858ca42d1bf814e62516d01381e2e41f353a",
+      "bytes": 119754
+    },
+    {
+      "previousPath": "/restaurant-images/brisbane/top/montrachet.webp",
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/brisbane/top/montrachet-a2de76b3334202f4.webp",
+      "sha256": "a2de76b3334202f4f4ed2e5ce22322d2ff099a355a1d861c1d1185100eeae253",
+      "bytes": 101288
+    },
+    {
+      "previousPath": "/restaurant-images/brisbane/top/otto.webp",
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/brisbane/top/otto-efdabc17a02e7fe5.webp",
+      "sha256": "efdabc17a02e7fe51bb3cc7cb8f69b6b63025ff0d5252b85c96e9a6b2b00c162",
+      "bytes": 78196
+    },
+    {
+      "previousPath": "/restaurant-images/melbourne/top/attica.webp",
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/melbourne/top/attica-b3d636473ae5a16b.webp",
+      "sha256": "b3d636473ae5a16b74b1239cf7d005ba0ffeff0e099ca4e8e852c4728dc2f081",
+      "bytes": 81362
+    },
+    {
+      "previousPath": "/restaurant-images/melbourne/top/flower-drum.webp",
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/melbourne/top/flower-drum-cde42b9e0ff7f130.webp",
+      "sha256": "cde42b9e0ff7f13079358322080e8da45c955528bbc3363aeb68e1f329c42760",
+      "bytes": 38512
+    },
+    {
+      "previousPath": "/restaurant-images/perth/top/wildflower.webp",
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/perth/top/wildflower-21d72209e8dd3627.webp",
+      "sha256": "21d72209e8dd3627199c7b5eba7374398db4ee8cb85af58bf0a25fdaf64b6332",
+      "bytes": 110698
+    },
+    {
+      "previousPath": "/restaurant-images/sydney/top/bennelong.webp",
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/sydney/top/bennelong-e26cca01fbd170a5.webp",
+      "sha256": "e26cca01fbd170a56715c9c7190e1faf39b8f23f192411c5163b246b18906b92",
+      "bytes": 148058
+    },
+    {
+      "previousPath": "/restaurant-images/sydney/top/saint-peter.webp",
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/sydney/top/saint-peter-c1634d16bd26e59f.webp",
+      "sha256": "c1634d16bd26e59ff108f79f83b872817bf7432ff850e6e380de8b7b15d0387c",
+      "bytes": 99254
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+'use client';
+
+import Anchor from '@/components/ui/Anchor';
+import Link from '@/components/ui/Link';
+import { useT } from '@/lib/client/i18n';
+import { citeReasoning, orderEvidence } from '@/lib/citations';
+import type { Evidence } from '@/lib/referenceConfidence';
+
+// Text with a superscript [n] after each reference it names, linking to that
+// reference in the pin page's References panel. hrefBase is the pin's path
+// when shown away from that page. omit leaves out citations of one reference -
+// the one the text is shown next to.
+export function CitedText({ text, evidence, hrefBase, omit }: { text: string; evidence: Evidence[]; hrefBase?: string; omit?: number }) {
+  const t = useT();
+  const segments = citeReasoning(text, orderEvidence(evidence))
+    .map((segment) => (typeof segment === 'string' ? segment : { cite: segment.cite.filter((n) => n !== omit) }))
+    .filter((segment) => typeof segment === 'string' || segment.cite.length);
+  return (
+    <>
+      {segments.map((segment, i) =>
+        typeof segment === 'string' ? (
+          segment
+        ) : (
+          // A taller tap target than the 13px superscript, without moving the text.
+          <sup key={i} className="ms-px not-italic [&_a]:relative [&_a]:after:absolute [&_a]:after:-inset-y-2 [&_a]:after:inset-x-0 [&_a]:after:content-['']">
+            {segment.cite.map((n) =>
+              hrefBase ? (
+                <Link key={n} href={`${hrefBase}#ref-${n}`} aria-label={t('references.referenceN', { n })} className="font-medium">
+                  [{n}]
+                </Link>
+              ) : (
+                <Anchor key={n} href={`#ref-${n}`} aria-label={t('references.referenceN', { n })} className="font-medium">
+                  [{n}]
+                </Anchor>
+              ),
+            )}
+          </sup>
+        ),
+      )}
+    </>
+  );
+}

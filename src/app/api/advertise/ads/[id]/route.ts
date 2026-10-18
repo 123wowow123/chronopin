@@ -1,0 +1,57 @@
+import { scheduleAdTranslation } from '@/server/services/sponsoredAdTranslations';
+import type { NextRequest } from 'next/server';
+import { requireUser } from '@/server/auth';
+import { HttpError, intParam, json, noContent, readJson, route } from '@/server/http';
+import SponsoredAd from '@/server/model/sponsoredAd';
+import Ad from '@/server/model/ad';
+import * as azureBlob from '@/server/azureBlob';
+import { parseAutoTranslate, parseFields } from '@/server/services/sponsoredAds';
+
+type Ctx = { params: Promise<{ id: string }> };
+
+// Change an ad that is not paid for yet; pause / resume a live one with
+// { paused: true | false }; or set its per-day impression cap with
+// { dailyLimit: number | null }.
+export const PATCH = route(async (request: NextRequest, { params }: Ctx) => {
+  const user = await requireUser(request);
+  const id = intParam((await params).id);
+  const body = await readJson(request);
+  if ('autoTranslate' in body && Object.keys(body).length === 1) {
+    const autoTranslate = parseAutoTranslate(body.autoTranslate);
+    const owned = await SponsoredAd.getOwned(id, user.id);
+    if (!owned) throw new HttpError(404, 'No such ad.');
+    const ad = await SponsoredAd.adminUpdate(id, { autoTranslate });
+    if (!ad) throw new HttpError(404, 'No such ad.');
+    Ad.expireInventory();
+    scheduleAdTranslation(ad);
+    return json(ad);
+  }
+  if (typeof body.paused === 'boolean') {
+    if (!(await SponsoredAd.setPaused(id, user.id, body.paused))) throw new HttpError(409, 'That ad cannot be paused or resumed now.');
+    Ad.expireInventory();
+    return json({ ok: true });
+  }
+  if ('dailyLimit' in body) {
+    const raw = body.dailyLimit;
+    const limit = raw === null || raw === '' ? null : Number(raw);
+    if (limit !== null && (!Number.isInteger(limit) || limit < 1 || limit > 1000000)) {
+      throw new HttpError(422, 'The daily limit must be a whole number of at least 1, or empty for no limit.');
+    }
+    if (!(await SponsoredAd.setDailyLimit(id, user.id, limit))) throw new HttpError(409, 'The daily limit cannot be changed on this ad.');
+    Ad.expireInventory();
+    return json({ ok: true });
+  }
+  const ad = await SponsoredAd.update(id, user.id, parseFields(body));
+  if (!ad) throw new HttpError(409, 'This ad is paid for and can no longer be changed.');
+  scheduleAdTranslation(ad);
+  return json(ad);
+});
+
+// Throw away an ad that was never paid for.
+export const DELETE = route(async (request: NextRequest, { params }: Ctx) => {
+  const user = await requireUser(request);
+  const removed = await SponsoredAd.remove(intParam((await params).id), user.id);
+  if (!removed) throw new HttpError(409, 'Only an ad that is not paid for can be deleted.');
+  if (removed.imageName?.startsWith('adimg/')) await azureBlob.deleteThumb(removed.imageName).catch(() => {});
+  return noContent();
+});

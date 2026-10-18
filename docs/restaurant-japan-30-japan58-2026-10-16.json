@@ -1,0 +1,1258 @@
+{
+  "checkedAt": "2026-10-16",
+  "country": "Japan",
+  "regions": [
+    "osaka",
+    "nagoya"
+  ],
+  "entries": [
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Sugakiya — Osaka Bay Tower Opens in Bentencho",
+        "description": "A forthcoming Bentencho branch serving Sugakiya’s Japanese-style tonkotsu ramen and soft-serve desserts.",
+        "sourceUrl": "https://baytower.jp/omise/sugakiya/",
+        "address": "2F East Tower, Osaka Bay Tower, 1-2-4 Benten, Minato-ku, Osaka",
+        "productName": "Sugakiya — Osaka Bay Tower",
+        "utcStartDateTime": "2026-11-12T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "Osaka Bay Tower landlord announcement dated October 5, 2026 explicitly confirms November 12 opening of this named branch; this supersedes recruitment estimates of mid-November.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Osaka",
+          "Japan",
+          "Bentencho",
+          "Ramen / soft serve"
+        ],
+        "longFormSummary": "<p>A forthcoming Bentencho branch serving Sugakiya’s Japanese-style tonkotsu ramen and soft-serve desserts.<cite data-ref=\"https://baytower.jp/omise/sugakiya/\"></cite></p><p>Osaka Bay Tower landlord announcement dated October 5, 2026 explicitly confirms November 12 opening of this named branch; this supersedes recruitment estimates of mid-November.</p>",
+        "references": [
+          {
+            "url": "https://baytower.jp/omise/sugakiya/",
+            "title": "Sugakiya — Osaka Bay Tower source",
+            "confidence": 90,
+            "reasoning": "Osaka Bay Tower landlord announcement dated October 5, 2026 explicitly confirms November 12 opening of this named branch; this supersedes recruitment estimates of mid-November."
+          },
+          {
+            "url": "https://baytower.jp/shopnews/sugakiyaopen/",
+            "title": "Sugakiya — Osaka Bay Tower source",
+            "confidence": 90,
+            "reasoning": "Osaka Bay Tower landlord announcement dated October 5, 2026 explicitly confirms November 12 opening of this named branch; this supersedes recruitment estimates of mid-November."
+          },
+          {
+            "url": "https://www.sugakico.co.jp/menu/",
+            "title": "Sugakiya — Osaka Bay Tower source",
+            "confidence": 90,
+            "reasoning": "Osaka Bay Tower landlord announcement dated October 5, 2026 explicitly confirms November 12 opening of this named branch; this supersedes recruitment estimates of mid-November."
+          },
+          {
+            "url": "https://baytower.jp/access/",
+            "title": "Sugakiya — Osaka Bay Tower source",
+            "confidence": 90,
+            "reasoning": "Osaka Bay Tower landlord announcement dated October 5, 2026 explicitly confirms November 12 opening of this named branch; this supersedes recruitment estimates of mid-November."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://baytower.jp/omise/sugakiya/",
+          "menu": {
+            "pinSourceUrl": "https://baytower.jp/omise/sugakiya/",
+            "name": "Sugakiya — Osaka Bay Tower",
+            "checkedAt": "2026-10-16",
+            "menus": [
+              {
+                "label": "Osaka Bay Tower announced dishes",
+                "url": "https://baytower.jp/omise/sugakiya/",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Japanese-style tonkotsu ramen",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Soft-serve ice cream",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Cream zenzai with Hokkaido Dainagon azuki",
+                    "priceLabel": "Price not published"
+                  }
+                ],
+                "note": "Named by the exact landlord branch announcement. Branch prices are not published. Official national menu and branch searches checked; no national prices or other-branch seasonal dishes assigned here. Two official launch food illustrations retained; completed branch dining-room photographs are not yet published. Landlord lists 07:30 opening unusually early for this chain: retained as published, confirm before early visits."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://baytower.jp/omise/sugakiya/",
+            "name": "Sugakiya — Osaka Bay Tower",
+            "checkedAt": "2026-10-16",
+            "websiteUrl": "https://baytower.jp/omise/sugakiya/",
+            "phone": "080-6993-9353",
+            "openingHours": [
+              {
+                "days": "Announced daily hours",
+                "hours": "07:30–21:00; last order 20:30"
+              }
+            ],
+            "detailsSourceUrl": "https://baytower.jp/omise/sugakiya/",
+            "additionalSources": [
+              {
+                "label": "Research evidence",
+                "url": "https://baytower.jp/shopnews/sugakiyaopen/"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://www.sugakico.co.jp/menu/"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://baytower.jp/access/"
+              }
+            ]
+          },
+          "tile": {
+            "regionSlug": "osaka",
+            "kind": "opening",
+            "slug": "sugakiya",
+            "name": "Sugakiya — Osaka Bay Tower",
+            "neighborhood": "Bentencho",
+            "cuisine": "Ramen / soft serve",
+            "description": "A forthcoming Bentencho branch serving Sugakiya’s Japanese-style tonkotsu ramen and soft-serve desserts.",
+            "address": "2F East Tower, Osaka Bay Tower, 1-2-4 Benten, Minato-ku, Osaka",
+            "websiteUrl": "https://baytower.jp/omise/sugakiya/",
+            "checkedAt": "2026-10-16",
+            "recognition": "",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-16/batch58-sugakiya-1-1214884b57eec896.webp",
+            "imageCredit": "Sugakiya / Osaka Bay Tower",
+            "imageSourceUrl": "https://baytower.jp/omise/sugakiya/",
+            "imageNote": "Official Osaka Bay Tower launch illustration; not a completed branch interior photograph.",
+            "openingConfirmed": true,
+            "day": "2026-11-12"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-16/batch58-sugakiya-1-1214884b57eec896.webp",
+          "sha256": "1214884b57eec8967b76c22bdf901ebafd3c1ebd096f8ea3d24a54e246f28e71",
+          "width": 1050,
+          "height": 650,
+          "credit": "Sugakiya / Osaka Bay Tower",
+          "note": "Official Osaka Bay Tower launch illustration; not a completed branch interior photograph.",
+          "sourcePage": "https://baytower.jp/omise/sugakiya/"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-16/batch58-sugakiya-2-541266960e7c942e.webp",
+          "sha256": "541266960e7c942eca44590616ced7c21b18be3bbb2abc6ba2f9042389fd239b",
+          "width": 800,
+          "height": 800,
+          "credit": "Sugakiya / Osaka Bay Tower",
+          "note": "Official Osaka Bay Tower launch illustration; not a completed branch interior photograph.",
+          "sourcePage": "https://baytower.jp/omise/sugakiya/"
+        }
+      ]
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Le Beurre Noisette NAGOYA — French bistro at Nagoya Station",
+        "description": "A Nagoya Station French bistro serving dated autumn lunch and dinner courses alongside a branch-specific a la carte menu.",
+        "sourceUrl": "https://lebeurrenoisettetokyo.com/nagoya/",
+        "address": "12F JR Central Towers, 1-1-4 Meieki, Nakamura-ku, Nagoya",
+        "productName": "Le Beurre Noisette NAGOYA",
+        "utcStartDateTime": "2022-07-04T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "JR Central Building landlord release dated June 22, 2022 confirms this Towers Plaza 12F branch opens July 4, 2022 at 11:00. Same-day local opening reporting corroborates it. Employer June estimate is superseded; June 11, 2026 belongs to the separate Sakae sister branch.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Special",
+          "Nagoya",
+          "Japan",
+          "French"
+        ],
+        "longFormSummary": "<p>A Nagoya Station French bistro serving dated autumn lunch and dinner courses alongside a branch-specific a la carte menu.<cite data-ref=\"https://lebeurrenoisettetokyo.com/nagoya/\"></cite></p><p>JR Central Building landlord release dated June 22, 2022 confirms this Towers Plaza 12F branch opens July 4, 2022 at 11:00. Same-day local opening reporting corroborates it. Employer June estimate is superseded; June 11, 2026 belongs to the separate Sakae sister branch.</p>",
+        "references": [
+          {
+            "url": "https://lebeurrenoisettetokyo.com/nagoya/",
+            "title": "Le Beurre Noisette NAGOYA source",
+            "confidence": 90,
+            "reasoning": "JR Central Building landlord release dated June 22, 2022 confirms this Towers Plaza 12F branch opens July 4, 2022 at 11:00. Same-day local opening reporting corroborates it. Employer June estimate is superseded; June 11, 2026 belongs to the separate Sakae sister branch."
+          },
+          {
+            "url": "https://www.towers.jp/strage/news/file62b25c4f04d97587290402.pdf",
+            "title": "Le Beurre Noisette NAGOYA source",
+            "confidence": 90,
+            "reasoning": "JR Central Building landlord release dated June 22, 2022 confirms this Towers Plaza 12F branch opens July 4, 2022 at 11:00. Same-day local opening reporting corroborates it. Employer June estimate is superseded; June 11, 2026 belongs to the separate Sakae sister branch."
+          },
+          {
+            "url": "https://jouhou.nagoya/le-beurre-noisette/",
+            "title": "Le Beurre Noisette NAGOYA source",
+            "confidence": 90,
+            "reasoning": "JR Central Building landlord release dated June 22, 2022 confirms this Towers Plaza 12F branch opens July 4, 2022 at 11:00. Same-day local opening reporting corroborates it. Employer June estimate is superseded; June 11, 2026 belongs to the separate Sakae sister branch."
+          },
+          {
+            "url": "https://lebeurrenoisettetokyo.com/nagoya/access.html",
+            "title": "Le Beurre Noisette NAGOYA source",
+            "confidence": 90,
+            "reasoning": "JR Central Building landlord release dated June 22, 2022 confirms this Towers Plaza 12F branch opens July 4, 2022 at 11:00. Same-day local opening reporting corroborates it. Employer June estimate is superseded; June 11, 2026 belongs to the separate Sakae sister branch."
+          },
+          {
+            "url": "https://www.tablecheck.com/shops/lebeurrenoisettenagoya/reserve?menu_items=6a7ac46c871c14e234473215",
+            "title": "Le Beurre Noisette NAGOYA source",
+            "confidence": 90,
+            "reasoning": "JR Central Building landlord release dated June 22, 2022 confirms this Towers Plaza 12F branch opens July 4, 2022 at 11:00. Same-day local opening reporting corroborates it. Employer June estimate is superseded; June 11, 2026 belongs to the separate Sakae sister branch."
+          },
+          {
+            "url": "https://www.tablecheck.com/shops/lebeurrenoisettenagoya/reserve?menu_items=6a7ac9afddc418fbe3957861",
+            "title": "Le Beurre Noisette NAGOYA source",
+            "confidence": 90,
+            "reasoning": "JR Central Building landlord release dated June 22, 2022 confirms this Towers Plaza 12F branch opens July 4, 2022 at 11:00. Same-day local opening reporting corroborates it. Employer June estimate is superseded; June 11, 2026 belongs to the separate Sakae sister branch."
+          },
+          {
+            "url": "https://lebeurrenoisettetokyo.com/nagoya/lunch.html",
+            "title": "Le Beurre Noisette NAGOYA source",
+            "confidence": 90,
+            "reasoning": "JR Central Building landlord release dated June 22, 2022 confirms this Towers Plaza 12F branch opens July 4, 2022 at 11:00. Same-day local opening reporting corroborates it. Employer June estimate is superseded; June 11, 2026 belongs to the separate Sakae sister branch."
+          },
+          {
+            "url": "https://lebeurrenoisettetokyo.com/nagoya/dinner.html",
+            "title": "Le Beurre Noisette NAGOYA source",
+            "confidence": 90,
+            "reasoning": "JR Central Building landlord release dated June 22, 2022 confirms this Towers Plaza 12F branch opens July 4, 2022 at 11:00. Same-day local opening reporting corroborates it. Employer June estimate is superseded; June 11, 2026 belongs to the separate Sakae sister branch."
+          },
+          {
+            "url": "https://lebeurrenoisettetokyo.com/nagoya/drink.html",
+            "title": "Le Beurre Noisette NAGOYA source",
+            "confidence": 90,
+            "reasoning": "JR Central Building landlord release dated June 22, 2022 confirms this Towers Plaza 12F branch opens July 4, 2022 at 11:00. Same-day local opening reporting corroborates it. Employer June estimate is superseded; June 11, 2026 belongs to the separate Sakae sister branch."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://lebeurrenoisettetokyo.com/nagoya/",
+          "menu": {
+            "pinSourceUrl": "https://lebeurrenoisettetokyo.com/nagoya/",
+            "name": "Le Beurre Noisette NAGOYA",
+            "checkedAt": "2026-10-16",
+            "menus": [
+              {
+                "label": "Autumn 2026 five-course lunch",
+                "url": "https://lebeurrenoisettetokyo.com/nagoya/lunch.html",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Five-course lunch with toast drink",
+                    "price": 5800,
+                    "note": "Web booking price; published regular ¥7,000"
+                  },
+                  {
+                    "name": "Sweet-potato espuma with shiso jelly",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Autumn 2026 five-course lunch; no separate item price published"
+                  },
+                  {
+                    "name": "Flash-grilled tuna with celeriac remoulade and autumn herbs",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Autumn 2026 five-course lunch; no separate item price published"
+                  },
+                  {
+                    "name": "Autumn salmon meuniere with sansho jus and clam foam",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Autumn 2026 five-course lunch; no separate item price published"
+                  },
+                  {
+                    "name": "Roast magret duck with orange-carrot puree and five-spice sweet-sour sauce",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Autumn 2026 five-course lunch; no separate item price published"
+                  },
+                  {
+                    "name": "Shine Muscat and Kyoho millefeuille",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Autumn 2026 five-course lunch; no separate item price published"
+                  },
+                  {
+                    "name": "Coffee or tea",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Autumn 2026 five-course lunch; no separate item price published"
+                  },
+                  {
+                    "name": "Toast drink",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Autumn 2026 five-course lunch; no separate item price published"
+                  }
+                ],
+                "note": "September 10–November 11, 2026. Tax included; dinner-only service charge does not apply to lunch. Book the exact official TableCheck plan. Menu may change with supply; no exact drink brand is promised."
+              },
+              {
+                "label": "Autumn 2026 seven-course dinner",
+                "url": "https://lebeurrenoisettetokyo.com/nagoya/dinner.html",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Seven-course dinner with toast drink",
+                    "price": 7700,
+                    "note": "Tax included; 10% service additional (¥8,470 total); published regular ¥8,800 before service"
+                  },
+                  {
+                    "name": "Sweet-potato espuma with shiso jelly",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Autumn 2026 seven-course dinner; no separate item price published"
+                  },
+                  {
+                    "name": "Flash-grilled tuna with celeriac remoulade and autumn herbs",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Autumn 2026 seven-course dinner; no separate item price published"
+                  },
+                  {
+                    "name": "Mushroom cappuccino potage",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Autumn 2026 seven-course dinner; no separate item price published"
+                  },
+                  {
+                    "name": "Autumn salmon meuniere with sansho jus and clam foam",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Autumn 2026 seven-course dinner; no separate item price published"
+                  },
+                  {
+                    "name": "Roast magret duck with orange-carrot puree and five-spice sweet-sour sauce",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Autumn 2026 seven-course dinner; no separate item price published"
+                  },
+                  {
+                    "name": "Yamagata La France pear sorbet with lime meringue",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Autumn 2026 seven-course dinner; no separate item price published"
+                  },
+                  {
+                    "name": "Shine Muscat and Kyoho millefeuille",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Autumn 2026 seven-course dinner; no separate item price published"
+                  },
+                  {
+                    "name": "Coffee or tea",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Autumn 2026 seven-course dinner; no separate item price published"
+                  },
+                  {
+                    "name": "Toast drink",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Autumn 2026 seven-course dinner; no separate item price published"
+                  }
+                ],
+                "note": "September 10–November 11, 2026; official web booking required for the discount and drink benefit. Tax included, 10% service additional. Current exact TableCheck confirms ¥7,700 is not the total payable amount. Optional lobster upgrade is not included in base course. Booking is for Nagoya Station, not Tokyo or the 2026 Sakae sister branch."
+              },
+              {
+                "label": "September 10–November 11 dinner a la carte",
+                "url": "https://lebeurrenoisettetokyo.com/nagoya/dinner.html",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Flash-grilled tuna with celeriac remoulade",
+                    "price": 1500
+                  },
+                  {
+                    "name": "Twelve-vegetable terrine with three vinaigrettes",
+                    "price": 1500
+                  },
+                  {
+                    "name": "Mushroom cappuccino potage",
+                    "price": 1400
+                  },
+                  {
+                    "name": "Selected cheese platter",
+                    "price": 1500
+                  },
+                  {
+                    "name": "Autumn salmon meuniere",
+                    "price": 2500
+                  },
+                  {
+                    "name": "Ibaraki Rose pork braise with white beans and chorizo jus",
+                    "price": 2300
+                  },
+                  {
+                    "name": "Roast magret duck with orange-carrot puree",
+                    "price": 2800
+                  },
+                  {
+                    "name": "Japanese beef-cheek red-wine braise",
+                    "price": 2800
+                  },
+                  {
+                    "name": "Hokkaido Saroma black beef steak",
+                    "price": 3500
+                  },
+                  {
+                    "name": "Caramelised fig with sour-yogurt ice cream",
+                    "price": 1500
+                  },
+                  {
+                    "name": "Valrhona chocolate soup with pear and vanilla ice cream",
+                    "price": 1500
+                  },
+                  {
+                    "name": "Shine Muscat and Kyoho millefeuille",
+                    "price": 1700
+                  }
+                ],
+                "note": "Tax included, 10% dinner service additional; a la carte also has ¥550 cover per diner according to official TableCheck. Regular dishes are not automatically assigned to discounted courses."
+              },
+              {
+                "label": "Published drinks",
+                "url": "https://lebeurrenoisettetokyo.com/nagoya/drink.html",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Three-glass wine/champagne pairing — 90 ml pours",
+                    "price": 4070
+                  },
+                  {
+                    "name": "Sapporo Black Label draft beer",
+                    "price": 880
+                  },
+                  {
+                    "name": "Nonalcoholic beer",
+                    "price": 770
+                  },
+                  {
+                    "name": "Highball",
+                    "price": 935
+                  }
+                ],
+                "note": "Published branch drink prices; dinner service charge is 10% additional. Glass-wine starting prices conflict within the page (¥900 vs ¥880), so no exact wine starting price asserted."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://lebeurrenoisettetokyo.com/nagoya/",
+            "name": "Le Beurre Noisette NAGOYA",
+            "checkedAt": "2026-10-16",
+            "websiteUrl": "https://lebeurrenoisettetokyo.com/nagoya/",
+            "phone": "052-414-7013",
+            "openingHours": [
+              {
+                "days": "Daily lunch",
+                "hours": "11:00–16:00; last order 14:30"
+              },
+              {
+                "days": "Daily dinner",
+                "hours": "17:30–23:00; last order 21:30"
+              },
+              {
+                "days": "Closures",
+                "hours": "Facility closure calendar applies"
+              }
+            ],
+            "detailsSourceUrl": "https://lebeurrenoisettetokyo.com/nagoya/",
+            "additionalSources": [
+              {
+                "label": "Research evidence",
+                "url": "https://www.towers.jp/strage/news/file62b25c4f04d97587290402.pdf"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://jouhou.nagoya/le-beurre-noisette/"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://lebeurrenoisettetokyo.com/nagoya/access.html"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://www.tablecheck.com/shops/lebeurrenoisettenagoya/reserve?menu_items=6a7ac46c871c14e234473215"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://www.tablecheck.com/shops/lebeurrenoisettenagoya/reserve?menu_items=6a7ac9afddc418fbe3957861"
+              }
+            ],
+            "reservationUrl": "https://www.tablecheck.com/shops/lebeurrenoisettenagoya/reserve"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-16/batch58-lb-20-2973e26a03ff2430.webp",
+          "sha256": "2973e26a03ff2430a0101cf9b7acdc5d50190d848acadfb025cacce531d70898",
+          "width": 886,
+          "height": 590,
+          "credit": "Le Beurre Noisette NAGOYA / Akinai",
+          "note": "Nagoya Station branch dining room from its official gallery.",
+          "sourcePage": "https://lebeurrenoisettetokyo.com/nagoya/"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-16/batch58-lb-2-2af3fef0f61b7472.webp",
+          "sha256": "2af3fef0f61b7472c378c55776bfe229738923370a5b133dab98ec8f39def25f",
+          "width": 700,
+          "height": 467,
+          "credit": "Le Beurre Noisette NAGOYA / Akinai",
+          "note": "Official Nagoya branch gallery; unlabeled food is illustrative, not a current dish identification.",
+          "sourcePage": "https://lebeurrenoisettetokyo.com/nagoya/"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-16/batch58-lb-4-cddaa8b3dba953b7.webp",
+          "sha256": "cddaa8b3dba953b7d1ae2372f59465c926ce16dce83e27840e36cada1c090ef5",
+          "width": 680,
+          "height": 470,
+          "credit": "Le Beurre Noisette NAGOYA / Akinai",
+          "note": "Official Nagoya branch gallery; unlabeled food is illustrative, not a current dish identification.",
+          "sourcePage": "https://lebeurrenoisettetokyo.com/nagoya/"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-16/batch58-lb-21-1cdfe95bb58a711b.webp",
+          "sha256": "1cdfe95bb58a711bc571aa96e656523d14b6eb17bccd4bfd8b1f8ee39480cfcd",
+          "width": 1286,
+          "height": 857,
+          "credit": "Le Beurre Noisette NAGOYA / Akinai",
+          "note": "Nagoya Station branch dining room from its official gallery.",
+          "sourcePage": "https://lebeurrenoisettetokyo.com/nagoya/"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-16/batch58-lb-22-abb6863993be469c.webp",
+          "sha256": "abb6863993be469c2dd2d90e8cc0a96b6b3957cde040d5dd22821496c7d7c043",
+          "width": 1286,
+          "height": 857,
+          "credit": "Le Beurre Noisette NAGOYA / Akinai",
+          "note": "Nagoya Station branch dining room from its official gallery.",
+          "sourcePage": "https://lebeurrenoisettetokyo.com/nagoya/"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-16/batch58-lb-23-b5ae2d87be5c027b.webp",
+          "sha256": "b5ae2d87be5c027b8ee8a0eead5e6c47e87a1420b8d29ac7bf264fc09ad5c4d7",
+          "width": 786,
+          "height": 524,
+          "credit": "Le Beurre Noisette NAGOYA / Akinai",
+          "note": "Nagoya Station branch dining room from its official gallery.",
+          "sourcePage": "https://lebeurrenoisettetokyo.com/nagoya/"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-16/batch58-lb-24-d7cb9a5eb70fda08.webp",
+          "sha256": "d7cb9a5eb70fda0886cc6e053a0c618b7f40c210437ff8fd29a8c3a5a2837720",
+          "width": 1286,
+          "height": 857,
+          "credit": "Le Beurre Noisette NAGOYA / Akinai",
+          "note": "Nagoya Station branch dining room from its official gallery.",
+          "sourcePage": "https://lebeurrenoisettetokyo.com/nagoya/"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-16/batch58-lb-25-a487534832d605fd.webp",
+          "sha256": "a487534832d605fd15436bbf9e81996ef972104f30ec65a798c7dd693f2e1f9c",
+          "width": 1286,
+          "height": 857,
+          "credit": "Le Beurre Noisette NAGOYA / Akinai",
+          "note": "Nagoya Station branch dining room from its official gallery.",
+          "sourcePage": "https://lebeurrenoisettetokyo.com/nagoya/"
+        }
+      ],
+      "special": {
+        "regionSlug": "nagoya",
+        "profile": {
+          "pinSourceUrl": "https://lebeurrenoisettetokyo.com/nagoya/",
+          "name": "Le Beurre Noisette NAGOYA",
+          "checkedAt": "2026-10-16",
+          "menus": [
+            {
+              "label": "Autumn 2026 five-course lunch",
+              "url": "https://lebeurrenoisettetokyo.com/nagoya/lunch.html",
+              "currency": "JPY",
+              "coverage": "sample",
+              "items": [
+                {
+                  "name": "Five-course lunch with toast drink",
+                  "price": 5800,
+                  "note": "Web booking price; published regular ¥7,000"
+                },
+                {
+                  "name": "Sweet-potato espuma with shiso jelly",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Autumn 2026 five-course lunch; no separate item price published"
+                },
+                {
+                  "name": "Flash-grilled tuna with celeriac remoulade and autumn herbs",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Autumn 2026 five-course lunch; no separate item price published"
+                },
+                {
+                  "name": "Autumn salmon meuniere with sansho jus and clam foam",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Autumn 2026 five-course lunch; no separate item price published"
+                },
+                {
+                  "name": "Roast magret duck with orange-carrot puree and five-spice sweet-sour sauce",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Autumn 2026 five-course lunch; no separate item price published"
+                },
+                {
+                  "name": "Shine Muscat and Kyoho millefeuille",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Autumn 2026 five-course lunch; no separate item price published"
+                },
+                {
+                  "name": "Coffee or tea",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Autumn 2026 five-course lunch; no separate item price published"
+                },
+                {
+                  "name": "Toast drink",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Autumn 2026 five-course lunch; no separate item price published"
+                }
+              ],
+              "note": "September 10–November 11, 2026. Tax included; dinner-only service charge does not apply to lunch. Book the exact official TableCheck plan. Menu may change with supply; no exact drink brand is promised."
+            },
+            {
+              "label": "Autumn 2026 seven-course dinner",
+              "url": "https://lebeurrenoisettetokyo.com/nagoya/dinner.html",
+              "currency": "JPY",
+              "coverage": "sample",
+              "items": [
+                {
+                  "name": "Seven-course dinner with toast drink",
+                  "price": 7700,
+                  "note": "Tax included; 10% service additional (¥8,470 total); published regular ¥8,800 before service"
+                },
+                {
+                  "name": "Sweet-potato espuma with shiso jelly",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Autumn 2026 seven-course dinner; no separate item price published"
+                },
+                {
+                  "name": "Flash-grilled tuna with celeriac remoulade and autumn herbs",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Autumn 2026 seven-course dinner; no separate item price published"
+                },
+                {
+                  "name": "Mushroom cappuccino potage",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Autumn 2026 seven-course dinner; no separate item price published"
+                },
+                {
+                  "name": "Autumn salmon meuniere with sansho jus and clam foam",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Autumn 2026 seven-course dinner; no separate item price published"
+                },
+                {
+                  "name": "Roast magret duck with orange-carrot puree and five-spice sweet-sour sauce",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Autumn 2026 seven-course dinner; no separate item price published"
+                },
+                {
+                  "name": "Yamagata La France pear sorbet with lime meringue",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Autumn 2026 seven-course dinner; no separate item price published"
+                },
+                {
+                  "name": "Shine Muscat and Kyoho millefeuille",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Autumn 2026 seven-course dinner; no separate item price published"
+                },
+                {
+                  "name": "Coffee or tea",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Autumn 2026 seven-course dinner; no separate item price published"
+                },
+                {
+                  "name": "Toast drink",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Autumn 2026 seven-course dinner; no separate item price published"
+                }
+              ],
+              "note": "September 10–November 11, 2026; official web booking required for the discount and drink benefit. Tax included, 10% service additional. Current exact TableCheck confirms ¥7,700 is not the total payable amount. Optional lobster upgrade is not included in base course. Booking is for Nagoya Station, not Tokyo or the 2026 Sakae sister branch."
+            }
+          ],
+          "specials": [
+            {
+              "title": "Autumn 2026 five-course lunch",
+              "kind": "lunch",
+              "description": "Web-booked autumn lunch with toast drink: ¥5,800 instead of ¥7,000, tax included.",
+              "sourceUrl": "https://lebeurrenoisettetokyo.com/nagoya/lunch.html",
+              "menuLabel": "Autumn 2026 five-course lunch",
+              "discounted": true,
+              "validFrom": "2026-09-10",
+              "validThrough": "2026-11-11",
+              "schedule": "Japan local time; see conditions",
+              "conditions": [
+                "Book exact official Nagoya plan; last order 14:30.",
+                "Menu subject to ingredient changes."
+              ],
+              "availability": {
+                "windows": [
+                  {
+                    "days": [
+                      0,
+                      1,
+                      2,
+                      3,
+                      4,
+                      5,
+                      6
+                    ],
+                    "start": "11:00",
+                    "end": "16:00"
+                  }
+                ]
+              }
+            },
+            {
+              "title": "Autumn 2026 seven-course dinner",
+              "kind": "other",
+              "description": "Web-booked autumn dinner with toast drink: ¥7,700 plus 10% service (¥8,470 total), instead of ¥8,800 before service.",
+              "sourceUrl": "https://lebeurrenoisettetokyo.com/nagoya/dinner.html",
+              "menuLabel": "Autumn 2026 seven-course dinner",
+              "discounted": true,
+              "validFrom": "2026-09-10",
+              "validThrough": "2026-11-11",
+              "schedule": "Japan local time; see conditions",
+              "conditions": [
+                "Book exact official Nagoya plan; last order 21:30.",
+                "Published price includes tax; 10% service additional.",
+                "Menu subject to ingredient changes."
+              ],
+              "availability": {
+                "windows": [
+                  {
+                    "days": [
+                      0,
+                      1,
+                      2,
+                      3,
+                      4,
+                      5,
+                      6
+                    ],
+                    "start": "17:30",
+                    "end": "23:00"
+                  }
+                ]
+              }
+            }
+          ],
+          "address": "12F JR Central Towers, 1-1-4 Meieki, Nakamura-ku, Nagoya",
+          "neighborhood": "Nagoya Station",
+          "websiteUrl": "https://lebeurrenoisettetokyo.com/nagoya/",
+          "photo": {
+            "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-16/batch58-lb-20-2973e26a03ff2430.webp",
+            "alt": "Le Beurre Noisette NAGOYA — Nagoya Station branch dining room from its official gallery.",
+            "credit": "Le Beurre Noisette NAGOYA / Akinai",
+            "sourceUrl": "https://lebeurrenoisettetokyo.com/nagoya/",
+            "originalUrl": "https://lebeurrenoisettetokyo.com/nagoya/img/photo_1-11-nagoya.png",
+            "checkedAt": "2026-10-16"
+          }
+        },
+        "enabled": true
+      }
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "TERRACE & DINING ZERO — Cross Hotel Osaka",
+        "description": "A third-floor restaurant overlooking Midosuji, with weekend autumn lunches pairing a choice of main or pasta with a buffet.",
+        "sourceUrl": "https://cross-osaka.orixhotelsandresorts.com/#restaurant",
+        "address": "3F Cross Hotel Osaka, 2-5-15 Shinsaibashisuji, Chuo-ku, Osaka",
+        "productName": "TERRACE & DINING ZERO",
+        "utcStartDateTime": "2019-06-28T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "Orix operator announcement confirms the current TERRACE & DINING ZERO identity opens after a full renovation on June 28, 2019. Predecessor GLAMOROUS-X and the later November 2022 refurbishment are distinct history; no hotel founding date or 2026 menu date used.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Special",
+          "Osaka",
+          "Japan",
+          "Buffet"
+        ],
+        "longFormSummary": "<p>A third-floor restaurant overlooking Midosuji, with weekend autumn lunches pairing a choice of main or pasta with a buffet.<cite data-ref=\"https://cross-osaka.orixhotelsandresorts.com/#restaurant\"></cite></p><p>Orix operator announcement confirms the current TERRACE &amp; DINING ZERO identity opens after a full renovation on June 28, 2019. Predecessor GLAMOROUS-X and the later November 2022 refurbishment are distinct history; no hotel founding date or 2026 menu date used.</p>",
+        "references": [
+          {
+            "url": "https://cross-osaka.orixhotelsandresorts.com/#restaurant",
+            "title": "TERRACE & DINING ZERO source",
+            "confidence": 90,
+            "reasoning": "Orix operator announcement confirms the current TERRACE & DINING ZERO identity opens after a full renovation on June 28, 2019. Predecessor GLAMOROUS-X and the later November 2022 refurbishment are distinct history; no hotel founding date or 2026 menu date used."
+          },
+          {
+            "url": "https://prtimes.jp/main/html/rd/p/000000458.000023075.html",
+            "title": "TERRACE & DINING ZERO source",
+            "confidence": 90,
+            "reasoning": "Orix operator announcement confirms the current TERRACE & DINING ZERO identity opens after a full renovation on June 28, 2019. Predecessor GLAMOROUS-X and the later November 2022 refurbishment are distinct history; no hotel founding date or 2026 menu date used."
+          },
+          {
+            "url": "https://www.tablecheck.com/shops/crosshotel-osaka-zero/reserve",
+            "title": "TERRACE & DINING ZERO source",
+            "confidence": 90,
+            "reasoning": "Orix operator announcement confirms the current TERRACE & DINING ZERO identity opens after a full renovation on June 28, 2019. Predecessor GLAMOROUS-X and the later November 2022 refurbishment are distinct history; no hotel founding date or 2026 menu date used."
+          },
+          {
+            "url": "https://www8.cao.go.jp/chosei/shukujitsu/gaiyou.html",
+            "title": "TERRACE & DINING ZERO source",
+            "confidence": 90,
+            "reasoning": "Orix operator announcement confirms the current TERRACE & DINING ZERO identity opens after a full renovation on June 28, 2019. Predecessor GLAMOROUS-X and the later November 2022 refurbishment are distinct history; no hotel founding date or 2026 menu date used."
+          },
+          {
+            "url": "https://prtimes.jp/main/html/rd/p/000000604.000101028.html",
+            "title": "TERRACE & DINING ZERO source",
+            "confidence": 90,
+            "reasoning": "Orix operator announcement confirms the current TERRACE & DINING ZERO identity opens after a full renovation on June 28, 2019. Predecessor GLAMOROUS-X and the later November 2022 refurbishment are distinct history; no hotel founding date or 2026 menu date used."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://cross-osaka.orixhotelsandresorts.com/#restaurant",
+          "menu": {
+            "pinSourceUrl": "https://cross-osaka.orixhotelsandresorts.com/#restaurant",
+            "name": "TERRACE & DINING ZERO",
+            "checkedAt": "2026-10-16",
+            "menus": [
+              {
+                "label": "Autumn main or pasta lunch with buffet",
+                "url": "https://prtimes.jp/main/html/rd/p/000000604.000101028.html",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Main set with buffet — choose one main",
+                    "price": 3700
+                  },
+                  {
+                    "name": "Pasta set with buffet — choose one pasta",
+                    "price": 3200
+                  },
+                  {
+                    "name": "Awaji beef main supplement",
+                    "price": 600
+                  },
+                  {
+                    "name": "Half-size pasta supplement to main set",
+                    "price": 600
+                  },
+                  {
+                    "name": "Braised Sangen pork shoulder with apple and celery salad",
+                    "priceLabel": "Price not published",
+                    "note": "Choose one in the corresponding main or pasta set; no separate a la carte price published"
+                  },
+                  {
+                    "name": "Awaji chicken, onion and Kitasaka egg omurice",
+                    "priceLabel": "Price not published",
+                    "note": "Choose one in the corresponding main or pasta set; no separate a la carte price published"
+                  },
+                  {
+                    "name": "Salmon and pen shell bake with vermouth cream",
+                    "priceLabel": "Price not published",
+                    "note": "Choose one in the corresponding main or pasta set; no separate a la carte price published"
+                  },
+                  {
+                    "name": "Awaji beef grill with mushroom cream — supplement required",
+                    "priceLabel": "Price not published",
+                    "note": "Choose one in the corresponding main or pasta set; no separate a la carte price published"
+                  },
+                  {
+                    "name": "Root-vegetable fresh tagliatelle puttanesca",
+                    "priceLabel": "Price not published",
+                    "note": "Choose one in the corresponding main or pasta set; no separate a la carte price published"
+                  },
+                  {
+                    "name": "Saury and fennel fresh linguine with yuzu",
+                    "priceLabel": "Price not published",
+                    "note": "Choose one in the corresponding main or pasta set; no separate a la carte price published"
+                  },
+                  {
+                    "name": "Sweet-potato gnocchi with mushroom and Gorgonzola",
+                    "priceLabel": "Price not published",
+                    "note": "Choose one in the corresponding main or pasta set; no separate a la carte price published"
+                  },
+                  {
+                    "name": "Marinated salmon",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Autumn main or pasta lunch with buffet; no separate item price published"
+                  },
+                  {
+                    "name": "Pumpkin and Parmesan frittata",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Autumn main or pasta lunch with buffet; no separate item price published"
+                  },
+                  {
+                    "name": "Osaka shiitake and bacon pizza",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Autumn main or pasta lunch with buffet; no separate item price published"
+                  },
+                  {
+                    "name": "Naniwa pork soup curry",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Autumn main or pasta lunch with buffet; no separate item price published"
+                  },
+                  {
+                    "name": "Pumpkin pudding",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Autumn main or pasta lunch with buffet; no separate item price published"
+                  },
+                  {
+                    "name": "Sauteed apple with vanilla mousse and caramel",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Autumn main or pasta lunch with buffet; no separate item price published"
+                  },
+                  {
+                    "name": "Coffee",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Autumn main or pasta lunch with buffet; no separate item price published"
+                  },
+                  {
+                    "name": "Tea",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Autumn main or pasta lunch with buffet; no separate item price published"
+                  },
+                  {
+                    "name": "Children ages 4–6",
+                    "price": 1100
+                  },
+                  {
+                    "name": "Children ages 0–3",
+                    "price": 0
+                  }
+                ],
+                "note": "September 5–November 29, 2026, weekends and public holidays only; closed November 3. 11:30–15:00, last admission 13:30; no additional seating time limit within service. Tax and service included. Main or pasta are alternatives, not both included; beef and half-pasta supplements extra. Current TableCheck corroborates prices, hours and November 3 closure; its generic September 1–November 30 booking range is broader than the dated release, so no weekday service or November 30 extension inferred. Child-price fields say ages 0–3/4–6; generic booking selector age labels differ, confirm if aged seven."
+              },
+              {
+                "label": "Breakfast buffet",
+                "url": "https://www.tablecheck.com/shops/crosshotel-osaka-zero/reserve",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Breakfast buffet",
+                    "price": 3300,
+                    "note": "Tax and service included"
+                  },
+                  {
+                    "name": "Kushikatsu",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Breakfast buffet; no separate item price published"
+                  },
+                  {
+                    "name": "Omelette",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Breakfast buffet; no separate item price published"
+                  }
+                ],
+                "note": "07:00–10:30, last admission 10:00. These are regular breakfast items, separate from the dated lunch buffet; no breakfast Special inferred."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://cross-osaka.orixhotelsandresorts.com/#restaurant",
+            "name": "TERRACE & DINING ZERO",
+            "checkedAt": "2026-10-16",
+            "websiteUrl": "https://cross-osaka.orixhotelsandresorts.com/#restaurant",
+            "phone": "06-6213-8281",
+            "openingHours": [
+              {
+                "days": "Daily breakfast",
+                "hours": "07:00–10:30; last admission 10:00"
+              },
+              {
+                "days": "Weekend/holiday lunch",
+                "hours": "11:30–15:00; last admission 13:30; November 3 closed"
+              }
+            ],
+            "detailsSourceUrl": "https://cross-osaka.orixhotelsandresorts.com/#restaurant",
+            "additionalSources": [
+              {
+                "label": "Research evidence",
+                "url": "https://prtimes.jp/main/html/rd/p/000000458.000023075.html"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://www.tablecheck.com/shops/crosshotel-osaka-zero/reserve"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://www8.cao.go.jp/chosei/shukujitsu/gaiyou.html"
+              }
+            ],
+            "reservationUrl": "https://www.tablecheck.com/shops/crosshotel-osaka-zero/reserve"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-16/batch58-zero-1-f5ec498c57de2641.webp",
+          "sha256": "f5ec498c57de264144787f28b5e4297776e844b7c3b59c5bfa29ddf4990b2ede",
+          "width": 1600,
+          "height": 898,
+          "credit": "Cross Hotel Osaka / Orix Hotels & Resorts",
+          "note": "Window-side dining at TERRACE & DINING ZERO, official hotel gallery.",
+          "sourcePage": "https://cross-osaka.orixhotelsandresorts.com/#restaurant"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-16/batch58-zero-2-5079f80b7161dd37.webp",
+          "sha256": "5079f80b7161dd37b13e3413af11854015629ccce34d08a68a298e3d0d345d1c",
+          "width": 1600,
+          "height": 1067,
+          "credit": "Cross Hotel Osaka / Orix Hotels & Resorts",
+          "note": "Official autumn lunch promotional photograph; presentation may vary.",
+          "sourcePage": "https://prtimes.jp/main/html/rd/p/000000604.000101028.html"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-16/batch58-zero-3-450cfc50fb6ed40b.webp",
+          "sha256": "450cfc50fb6ed40b74177e8461af52c7ce17f88c71ceca0c75b66103957111a1",
+          "width": 1600,
+          "height": 1067,
+          "credit": "Cross Hotel Osaka / Orix Hotels & Resorts",
+          "note": "Official autumn lunch promotional photograph; presentation may vary.",
+          "sourcePage": "https://prtimes.jp/main/html/rd/p/000000604.000101028.html"
+        }
+      ],
+      "special": {
+        "regionSlug": "osaka",
+        "profile": {
+          "pinSourceUrl": "https://cross-osaka.orixhotelsandresorts.com/#restaurant",
+          "name": "TERRACE & DINING ZERO",
+          "checkedAt": "2026-10-16",
+          "menus": [
+            {
+              "label": "Autumn main or pasta lunch with buffet",
+              "url": "https://prtimes.jp/main/html/rd/p/000000604.000101028.html",
+              "currency": "JPY",
+              "coverage": "sample",
+              "items": [
+                {
+                  "name": "Main set with buffet — choose one main",
+                  "price": 3700
+                },
+                {
+                  "name": "Pasta set with buffet — choose one pasta",
+                  "price": 3200
+                },
+                {
+                  "name": "Awaji beef main supplement",
+                  "price": 600
+                },
+                {
+                  "name": "Half-size pasta supplement to main set",
+                  "price": 600
+                },
+                {
+                  "name": "Braised Sangen pork shoulder with apple and celery salad",
+                  "priceLabel": "Price not published",
+                  "note": "Choose one in the corresponding main or pasta set; no separate a la carte price published"
+                },
+                {
+                  "name": "Awaji chicken, onion and Kitasaka egg omurice",
+                  "priceLabel": "Price not published",
+                  "note": "Choose one in the corresponding main or pasta set; no separate a la carte price published"
+                },
+                {
+                  "name": "Salmon and pen shell bake with vermouth cream",
+                  "priceLabel": "Price not published",
+                  "note": "Choose one in the corresponding main or pasta set; no separate a la carte price published"
+                },
+                {
+                  "name": "Awaji beef grill with mushroom cream — supplement required",
+                  "priceLabel": "Price not published",
+                  "note": "Choose one in the corresponding main or pasta set; no separate a la carte price published"
+                },
+                {
+                  "name": "Root-vegetable fresh tagliatelle puttanesca",
+                  "priceLabel": "Price not published",
+                  "note": "Choose one in the corresponding main or pasta set; no separate a la carte price published"
+                },
+                {
+                  "name": "Saury and fennel fresh linguine with yuzu",
+                  "priceLabel": "Price not published",
+                  "note": "Choose one in the corresponding main or pasta set; no separate a la carte price published"
+                },
+                {
+                  "name": "Sweet-potato gnocchi with mushroom and Gorgonzola",
+                  "priceLabel": "Price not published",
+                  "note": "Choose one in the corresponding main or pasta set; no separate a la carte price published"
+                },
+                {
+                  "name": "Marinated salmon",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Autumn main or pasta lunch with buffet; no separate item price published"
+                },
+                {
+                  "name": "Pumpkin and Parmesan frittata",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Autumn main or pasta lunch with buffet; no separate item price published"
+                },
+                {
+                  "name": "Osaka shiitake and bacon pizza",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Autumn main or pasta lunch with buffet; no separate item price published"
+                },
+                {
+                  "name": "Naniwa pork soup curry",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Autumn main or pasta lunch with buffet; no separate item price published"
+                },
+                {
+                  "name": "Pumpkin pudding",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Autumn main or pasta lunch with buffet; no separate item price published"
+                },
+                {
+                  "name": "Sauteed apple with vanilla mousse and caramel",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Autumn main or pasta lunch with buffet; no separate item price published"
+                },
+                {
+                  "name": "Coffee",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Autumn main or pasta lunch with buffet; no separate item price published"
+                },
+                {
+                  "name": "Tea",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Autumn main or pasta lunch with buffet; no separate item price published"
+                },
+                {
+                  "name": "Children ages 4–6",
+                  "price": 1100
+                },
+                {
+                  "name": "Children ages 0–3",
+                  "price": 0
+                }
+              ],
+              "note": "September 5–November 29, 2026, weekends and public holidays only; closed November 3. 11:30–15:00, last admission 13:30; no additional seating time limit within service. Tax and service included. Main or pasta are alternatives, not both included; beef and half-pasta supplements extra. Current TableCheck corroborates prices, hours and November 3 closure; its generic September 1–November 30 booking range is broader than the dated release, so no weekday service or November 30 extension inferred. Child-price fields say ages 0–3/4–6; generic booking selector age labels differ, confirm if aged seven."
+            }
+          ],
+          "specials": [
+            {
+              "title": "Autumn main or pasta lunch with buffet",
+              "kind": "lunch",
+              "description": "Autumn lunch with buffet: pasta ¥3,200 or main ¥3,700; tax and service included.",
+              "sourceUrl": "https://prtimes.jp/main/html/rd/p/000000604.000101028.html",
+              "menuLabel": "Autumn main or pasta lunch with buffet",
+              "discounted": false,
+              "validFrom": "2026-09-05",
+              "validThrough": "2026-11-29",
+              "schedule": "Japan local time; see conditions",
+              "conditions": [
+                "Weekends and Japanese public holidays only; November 3 closed.",
+                "Last admission 13:30; seating continues until 15:00.",
+                "Main and pasta are alternatives; beef or half-pasta supplements ¥600 each.",
+                "No November 30 extension inferred from the generic booking calendar."
+              ],
+              "availability": {
+                "windows": [
+                  {
+                    "days": [
+                      0,
+                      1,
+                      2,
+                      3,
+                      4,
+                      5,
+                      6
+                    ],
+                    "start": "11:30",
+                    "end": "15:00"
+                  }
+                ],
+                "excludedDates": [
+                  "2026-09-07",
+                  "2026-09-08",
+                  "2026-09-09",
+                  "2026-09-10",
+                  "2026-09-11",
+                  "2026-09-14",
+                  "2026-09-15",
+                  "2026-09-16",
+                  "2026-09-17",
+                  "2026-09-18",
+                  "2026-09-24",
+                  "2026-09-25",
+                  "2026-09-28",
+                  "2026-09-29",
+                  "2026-09-30",
+                  "2026-10-01",
+                  "2026-10-02",
+                  "2026-10-05",
+                  "2026-10-06",
+                  "2026-10-07",
+                  "2026-10-08",
+                  "2026-10-09",
+                  "2026-10-13",
+                  "2026-10-14",
+                  "2026-10-15",
+                  "2026-10-16",
+                  "2026-10-19",
+                  "2026-10-20",
+                  "2026-10-21",
+                  "2026-10-22",
+                  "2026-10-23",
+                  "2026-10-26",
+                  "2026-10-27",
+                  "2026-10-28",
+                  "2026-10-29",
+                  "2026-10-30",
+                  "2026-11-02",
+                  "2026-11-03",
+                  "2026-11-04",
+                  "2026-11-05",
+                  "2026-11-06",
+                  "2026-11-09",
+                  "2026-11-10",
+                  "2026-11-11",
+                  "2026-11-12",
+                  "2026-11-13",
+                  "2026-11-16",
+                  "2026-11-17",
+                  "2026-11-18",
+                  "2026-11-19",
+                  "2026-11-20",
+                  "2026-11-24",
+                  "2026-11-25",
+                  "2026-11-26",
+                  "2026-11-27"
+                ]
+              },
+              "limitedTime": true
+            }
+          ],
+          "address": "3F Cross Hotel Osaka, 2-5-15 Shinsaibashisuji, Chuo-ku, Osaka",
+          "neighborhood": "Shinsaibashi / Namba",
+          "websiteUrl": "https://cross-osaka.orixhotelsandresorts.com/#restaurant",
+          "photo": {
+            "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-16/batch58-zero-1-f5ec498c57de2641.webp",
+            "alt": "TERRACE & DINING ZERO — Window-side dining at TERRACE & DINING ZERO, official hotel gallery.",
+            "credit": "Cross Hotel Osaka / Orix Hotels & Resorts",
+            "sourceUrl": "https://cross-osaka.orixhotelsandresorts.com/#restaurant",
+            "originalUrl": "https://cross-osaka.orixhotelsandresorts.com/uploads/2023/08/d5d853810da8ba69012d8e2968d68fd2-scaled.jpg",
+            "checkedAt": "2026-10-16"
+          }
+        },
+        "enabled": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,96 @@
+{
+  "completedAt": "2026-10-18T04:08:05.300176+00:00",
+  "environment": "production",
+  "operation": "translations only",
+  "pinsUpdated": 12,
+  "saved": 180,
+  "locales": [
+    "es",
+    "fr",
+    "de",
+    "ja",
+    "zh",
+    "ko",
+    "hi",
+    "ar",
+    "th",
+    "it",
+    "ru",
+    "pt",
+    "ms",
+    "vi",
+    "id"
+  ],
+  "pins": [
+    {
+      "id": 17055,
+      "title": "Brambleton-Goose Creek Clean Energy Storage Center: 430M USD, 425 MW BESS in Loudoun County, Virginia",
+      "sourceHash": "9a5f8d5414bb03bc885490d4912035d00d40b10b"
+    },
+    {
+      "id": 17056,
+      "title": "Lewis Run Clean Energy Storage Complex: 410M USD, 410 MW BESS in McKean County, Pennsylvania",
+      "sourceHash": "4cf4d40fa3ac4a25ae46d4193b12db5a0ae844d1"
+    },
+    {
+      "id": 17057,
+      "title": "Rogers Road Clean Energy Storage Facility: 480M USD, 479 MW BESS in Sussex County, Virginia",
+      "sourceHash": "b1232951b4c2bbc0f393b7ae69eaa79268d9e622"
+    },
+    {
+      "id": 17058,
+      "title": "Surry-Skiffes Creek Clean Energy Storage Center: 650M USD, 650 MW BESS in James City County, Virginia",
+      "sourceHash": "0395535c4833bf7213579b6363ff36ab2ddde1bd"
+    },
+    {
+      "id": 17059,
+      "title": "Cielo Des Moines Hyperscale Data Center Campus: 1.1B USD, 150 MW in Polk County, Iowa",
+      "sourceHash": "6c801c8c00a7e1a21056d8bca98bc354e3488a60"
+    },
+    {
+      "id": 17060,
+      "title": "CyrusOne Sangamon Hyperscale Campus Building 3: 1.2B USD, 159 MW in Sangamon County, Illinois",
+      "sourceHash": "b9385545d5147ac2aa7709d3a428f59dbb93a75e"
+    },
+    {
+      "id": 17061,
+      "title": "Rowan Bauxite III Hyperscale Campus Building 1: 450M USD, 56 MW in Frederick County, Maryland",
+      "sourceHash": "f61e54194aa9a50febfef62c97f502dfc35ed5cf"
+    },
+    {
+      "id": 17062,
+      "title": "Security Land Baltimore Hyperscale Campus: 950M USD, 150 MW in Baltimore County, Maryland",
+      "sourceHash": "0266e6671534649545c56bc8114b4567fa15d72c"
+    },
+    {
+      "id": 17063,
+      "title": "Duane Arnold Clean Solar Center Phase 1: 420M USD, 400 MWac in Linn County, Iowa",
+      "sourceHash": "c3af8e2a924f942a439f3942fa36d9a599889e2b"
+    },
+    {
+      "id": 17064,
+      "title": "Obsidian Solar Center: 440M USD, 400 MWac in Lake County, Oregon",
+      "sourceHash": "6b5c82796da5b74462b593b15cc86a8a88cd781c"
+    },
+    {
+      "id": 17065,
+      "title": "Rich Road Solar Energy Center: 290M USD, 240 MWac in St. Lawrence County, New York",
+      "sourceHash": "8cf8400f61d8d949950e29e4068f05de98951259"
+    },
+    {
+      "id": 17066,
+      "title": "Starfire Mountain Clean Solar Project: 450M USD, 410 MWac in Perry County, Kentucky",
+      "sourceHash": "5211111344805e48a7bfbb2c248243f6fb69cec2"
+    }
+  ],
+  "verification": {
+    "cumulativeExactTranslationRowsMatched": 12795,
+    "errors": [],
+    "originalPinRecordsUnchanged": true,
+    "liveApiSamplesMatched": 30,
+    "backlogCheckedAt": "2026-10-18T04:07:49.670394+00:00",
+    "remainingPins": 0,
+    "remainingTranslationRows": 0
+  },
+  "deployment": false
+}

@@ -1,0 +1,1514 @@
+{
+  "checkedAt": "2026-10-10",
+  "country": "Hong Kong",
+  "regions": [
+    "hong-kong"
+  ],
+  "entries": [
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Salisterra — Hong Kong restaurant guide",
+        "description": "Mediterranean dining above Admiralty, with seafood, seasonal vegetables and city views.",
+        "sourceUrl": "https://www.upperhouse.com/en/hongkong/restaurants-and-bars/salisterra/",
+        "address": "49/F, Upper House Hong Kong, Pacific Place, 88 Queensway, Admiralty, Hong Kong",
+        "latitude": 22.277744501958,
+        "longitude": 114.165402657429,
+        "productName": "Salisterra",
+        "utcStartDateTime": "2021-04-30T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "Salisterra replaced Cafe Gray Deluxe on the 49th floor and opened in mid-April 2021; Michelin Guide's 14 April 2021 article says it 'has officially opened', so the opening was on or before 14 April. One search summary mentioned 17 April but could not be verified; the upper-house hotel itself opened in 2009 (not this restaurant). Estimated: 2021-04 is a best estimate and 2021-04-30 is used only as a period-end sorting date, not a confirmed opening day.",
+        "parentId": null,
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Top Restaurants",
+          "Hong Kong",
+          "Admiralty",
+          "Mediterranean"
+        ],
+        "longFormSummary": "<p>Mediterranean dining above Admiralty, with seafood, seasonal vegetables and city views. <cite data-ref=\"https://www.upperhouse.com/en/hongkong/restaurants-and-bars/salisterra/\"></cite></p><p>Map position is an approximate geocoded street address, not a surveyed restaurant entrance.</p>",
+        "references": [
+          {
+            "url": "https://www.upperhouse.com/en/hongkong/restaurants-and-bars/salisterra/",
+            "title": "Salisterra — research source",
+            "confidence": 90,
+            "reasoning": "Salisterra replaced Cafe Gray Deluxe on the 49th floor and opened in mid-April 2021; Michelin Guide's 14 April 2021 article says it 'has officially opened', so the opening was on or before 14 April. One search summary mentioned 17 April but could not be verified; the upper-house hotel itself opened in 2009 (not this restaurant). Estimated: 2021-04 is a best estimate and 2021-04-30 is used only as a period-end sorting date, not a confirmed opening day."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://www.upperhouse.com/en/hongkong/restaurants-and-bars/salisterra/",
+          "menu": {
+            "pinSourceUrl": "https://www.upperhouse.com/en/hongkong/restaurants-and-bars/salisterra/",
+            "name": "Salisterra",
+            "checkedAt": "2026-10-10",
+            "menus": [
+              {
+                "label": "À la carte",
+                "url": "https://www.upperhouse.com/en/hongkong/restaurants-and-bars/salisterra/",
+                "currency": "HKD",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Smoked sardine",
+                    "price": 128
+                  },
+                  {
+                    "name": "Gillardeau oysters",
+                    "price": 178
+                  },
+                  {
+                    "name": "Lobster velouté",
+                    "price": 188
+                  },
+                  {
+                    "name": "Galician octopus",
+                    "price": 198
+                  },
+                  {
+                    "name": "Roasted Chilean sea bass",
+                    "price": 348
+                  },
+                  {
+                    "name": "Meloso rice",
+                    "price": 308
+                  },
+                  {
+                    "name": "House ravioli",
+                    "price": 208
+                  }
+                ],
+                "note": "Currently linked September 28, 2026 branch menu. HKD prices; add 10% service charge.",
+                "documentUrl": "https://edge.sitecorecloud.io/swirehotels1-swirehotels-production-ebf6/media/Project/Upper-House/upper-house/hongkong/restaurant/salisterra/Menu/A-La-Carte/A-la-carte-A4-booklet20260928ENTCfor-PR.pdf"
+              }
+            ],
+            "specials": [],
+            "location": {
+              "latitude": 22.277744501958,
+              "longitude": 114.165402657429,
+              "sourceUrl": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?f=json&SingleLine=88+Queensway%2C+Admiralty%2C+Hong+Kong&outFields=Match_addr%2CAddr_type&maxLocations=1&sourceCountry=HKG",
+              "checkedAt": "2026-10-10"
+            },
+            "photo": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/hong-kong/researched/salisterra-15-8d1f01f5d03ba770.webp",
+              "alt": "Salisterra — official restaurant photograph",
+              "credit": "Upper House Hong Kong / Salisterra",
+              "sourceUrl": "https://www.upperhouse.com/en/hongkong/restaurants-and-bars/salisterra/",
+              "originalUrl": "https://edge.sitecorecloud.io/swirehotels1-swirehotels-production-ebf6/media/Project/Upper-House/upper-house/hongkong/Images/Salisterra/1.png",
+              "checkedAt": "2026-10-10"
+            }
+          },
+          "details": {
+            "pinSourceUrl": "https://www.upperhouse.com/en/hongkong/restaurants-and-bars/salisterra/",
+            "name": "Salisterra",
+            "websiteUrl": "https://www.upperhouse.com/en/hongkong/restaurants-and-bars/salisterra/",
+            "phone": "+852 3968 1106",
+            "openingHours": [
+              {
+                "days": "Daily",
+                "hours": "Breakfast 06:30–10:30; lunch/brunch 12:00–14:30; afternoon tea 15:00–17:00; dinner 18:00–22:30"
+              }
+            ],
+            "checkedAt": "2026-10-10",
+            "detailsSourceUrl": "https://www.upperhouse.com/en/hongkong/restaurants-and-bars/salisterra/"
+          },
+          "tile": {
+            "regionSlug": "hong-kong",
+            "kind": "top",
+            "slug": "salisterra",
+            "name": "Salisterra",
+            "neighborhood": "Admiralty",
+            "cuisine": "Mediterranean",
+            "address": "49/F, Upper House Hong Kong, Pacific Place, 88 Queensway, Admiralty, Hong Kong",
+            "websiteUrl": "https://www.upperhouse.com/en/hongkong/restaurants-and-bars/salisterra/",
+            "description": "Mediterranean dining above Admiralty, with seafood, seasonal vegetables and city views.",
+            "checkedAt": "2026-10-10",
+            "recognition": "Chronopin selection",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/hong-kong/researched/salisterra-15-8d1f01f5d03ba770.webp",
+            "imageCredit": "Upper House Hong Kong / Salisterra",
+            "imageSourceUrl": "https://edge.sitecorecloud.io/swirehotels1-swirehotels-production-ebf6/media/Project/Upper-House/upper-house/hongkong/Images/Salisterra/1.png",
+            "imageNote": "Salisterra — official restaurant photograph"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "region": "hong-kong",
+          "slug": "salisterra-15",
+          "source": "https://edge.sitecorecloud.io/swirehotels1-swirehotels-production-ebf6/media/Project/Upper-House/upper-house/hongkong/Images/Salisterra/1.png",
+          "credit": "Upper House Hong Kong / Salisterra",
+          "sourcePage": "https://www.upperhouse.com/en/hongkong/restaurants-and-bars/salisterra/",
+          "note": "Salisterra — official restaurant photograph",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/hong-kong/researched/salisterra-15-8d1f01f5d03ba770.webp",
+          "sha256": "8d1f01f5d03ba7700a6fdade96f8a350281e89a48f89e83f0e635efc1bfe0522",
+          "width": 800,
+          "height": 800
+        },
+        {
+          "region": "hong-kong",
+          "slug": "salisterra-16",
+          "source": "https://edge.sitecorecloud.io/swirehotels1-swirehotels-production-ebf6/media/Project/Upper-House/upper-house/hongkong/Images/Salisterra/3.png",
+          "credit": "Upper House Hong Kong / Salisterra",
+          "sourcePage": "https://www.upperhouse.com/en/hongkong/restaurants-and-bars/salisterra/",
+          "note": "Salisterra — official restaurant photograph",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/hong-kong/researched/salisterra-16-138f79dcaf54e487.webp",
+          "sha256": "138f79dcaf54e487a500b97602dddc79bb8cb749446bb99b058e525b5c53785f",
+          "width": 800,
+          "height": 1200
+        },
+        {
+          "region": "hong-kong",
+          "slug": "salisterra-17",
+          "source": "https://edge.sitecorecloud.io/swirehotels1-swirehotels-production-ebf6/media/Project/Upper-House/upper-house/hongkong/Images/Salisterra/5.png",
+          "credit": "Upper House Hong Kong / Salisterra",
+          "sourcePage": "https://www.upperhouse.com/en/hongkong/restaurants-and-bars/salisterra/",
+          "note": "Salisterra — official restaurant photograph",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/hong-kong/researched/salisterra-17-55b42633814d228d.webp",
+          "sha256": "55b42633814d228deffe3685112d4077994e319e7cfa81cb8058b8478c15eec2",
+          "width": 800,
+          "height": 1000
+        },
+        {
+          "region": "hong-kong",
+          "slug": "salisterra-18",
+          "source": "https://edge.sitecorecloud.io/swirehotels1-swirehotels-production-ebf6/media/Project/Upper-House/upper-house/hongkong/Images/Salisterra/2.png",
+          "credit": "Upper House Hong Kong / Salisterra",
+          "sourcePage": "https://www.upperhouse.com/en/hongkong/restaurants-and-bars/salisterra/",
+          "note": "Salisterra — official restaurant photograph",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/hong-kong/researched/salisterra-18-2f24456769bfe0b6.webp",
+          "sha256": "2f24456769bfe0b6ec4a27f0c24372891901a00d48d5253185411bb813fe1a89",
+          "width": 800,
+          "height": 1200
+        },
+        {
+          "region": "hong-kong",
+          "slug": "salisterra-19",
+          "source": "https://edge.sitecorecloud.io/swirehotels1-swirehotels-production-ebf6/media/Project/Upper-House/upper-house/hongkong/Images/Salisterra/4.png",
+          "credit": "Upper House Hong Kong / Salisterra",
+          "sourcePage": "https://www.upperhouse.com/en/hongkong/restaurants-and-bars/salisterra/",
+          "note": "Salisterra — official restaurant photograph",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/hong-kong/researched/salisterra-19-691dd73c8f3359fe.webp",
+          "sha256": "691dd73c8f3359fed55f784fbc86fc512b9587820f0102fce2128540c0f2b15f",
+          "width": 800,
+          "height": 800
+        },
+        {
+          "region": "hong-kong",
+          "slug": "salisterra-20",
+          "source": "https://edge.sitecorecloud.io/swirehotels1-swirehotels-production-ebf6/media/Project/Upper-House/upper-house/hongkong/Images/Salisterra/6.png",
+          "credit": "Upper House Hong Kong / Salisterra",
+          "sourcePage": "https://www.upperhouse.com/en/hongkong/restaurants-and-bars/salisterra/",
+          "note": "Salisterra — official restaurant photograph",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/hong-kong/researched/salisterra-20-0bb60baed0eb26cc.webp",
+          "sha256": "0bb60baed0eb26cc08eca5d52f48eeac9f4e4c2d77dcf867a3ec5400c464102b",
+          "width": 800,
+          "height": 1000
+        }
+      ],
+      "geocoding": {
+        "latitude": 22.277744501958,
+        "longitude": 114.165402657429,
+        "score": 100,
+        "matchedAddress": "88 Queensway, Admiralty, Central & Western",
+        "sourceUrl": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?f=json&SingleLine=88+Queensway%2C+Admiralty%2C+Hong+Kong&outFields=Match_addr%2CAddr_type&maxLocations=1&sourceCountry=HKG"
+      }
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Ho Lee Fook — Hong Kong restaurant guide",
+        "description": "Chef Ar Chan’s contemporary Cantonese restaurant in SoHo, with wok cooking, dim sum and roast dishes.",
+        "sourceUrl": "https://www.holeefook.com.hk/",
+        "address": "3–5 Elgin Street, SoHo, Hong Kong",
+        "latitude": 22.283017724884,
+        "longitude": 114.152468961735,
+        "productName": "Ho Lee Fook",
+        "utcStartDateTime": "2014-07-31T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "Sassy Hong Kong's city guide says the restaurant 'opened its doors in July 2014'; Nuvo Magazine has chef Jowett Yu watching ovens being installed in summer 2014 and Time Out says opened 2014, all consistent. Exact day not found. It was renovated and relaunched in 2021 with a new chef, but same Elgin Street site; address varies across sources (1, 2 or 3-5 Elgin St), the restaurant's own site gives 3-5 Elgin Street. Estimated: 2014-07 is a best estimate and 2014-07-31 is used only as a period-end sorting date, not a confirmed opening day.",
+        "parentId": null,
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Top Restaurants",
+          "Hong Kong",
+          "SoHo",
+          "Modern Cantonese"
+        ],
+        "longFormSummary": "<p>Chef Ar Chan’s contemporary Cantonese restaurant in SoHo, with wok cooking, dim sum and roast dishes. <cite data-ref=\"https://www.holeefook.com.hk/\"></cite></p><p>Map position is an approximate geocoded street address, not a surveyed restaurant entrance.</p>",
+        "references": [
+          {
+            "url": "https://www.holeefook.com.hk/",
+            "title": "Ho Lee Fook — research source",
+            "confidence": 90,
+            "reasoning": "Sassy Hong Kong's city guide says the restaurant 'opened its doors in July 2014'; Nuvo Magazine has chef Jowett Yu watching ovens being installed in summer 2014 and Time Out says opened 2014, all consistent. Exact day not found. It was renovated and relaunched in 2021 with a new chef, but same Elgin Street site; address varies across sources (1, 2 or 3-5 Elgin St), the restaurant's own site gives 3-5 Elgin Street. Estimated: 2014-07 is a best estimate and 2014-07-31 is used only as a period-end sorting date, not a confirmed opening day."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://www.holeefook.com.hk/",
+          "menu": {
+            "pinSourceUrl": "https://www.holeefook.com.hk/",
+            "name": "Ho Lee Fook",
+            "checkedAt": "2026-10-10",
+            "menus": [
+              {
+                "label": "Dinner",
+                "url": "https://www.holeefook.com.hk/menu",
+                "currency": "HKD",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Crispy shiitake mushrooms with black vinegar",
+                    "price": 138
+                  },
+                  {
+                    "name": "Salt and pepper tofu",
+                    "price": 118
+                  },
+                  {
+                    "name": "Dim sum selection",
+                    "price": 168
+                  },
+                  {
+                    "name": "Chongqing chicken wings",
+                    "price": 178
+                  },
+                  {
+                    "name": "Prawn toast with okonomiyaki sauce",
+                    "price": 188
+                  },
+                  {
+                    "name": "Sweet and sour Kurobuta pork with lemon tea",
+                    "price": 328
+                  },
+                  {
+                    "name": "Abalone fried rice",
+                    "price": 178
+                  }
+                ],
+                "note": "October 2026 operator menu. Dim sum selection has two pieces each of chicken siu mai and mushroom dumplings. Confirm applicable charges with the restaurant.",
+                "documentUrl": "https://www.holeefook.com.hk/s/HLF_main_menu_Oct2026_Digital.pdf"
+              }
+            ],
+            "specials": [],
+            "location": {
+              "latitude": 22.283017724884,
+              "longitude": 114.152468961735,
+              "sourceUrl": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?f=json&SingleLine=3+Elgin+Street%2C+Hong+Kong&outFields=Match_addr%2CAddr_type&maxLocations=1&sourceCountry=HKG",
+              "checkedAt": "2026-10-10"
+            },
+            "photo": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/hong-kong/researched/holeefook-8-02c89ebb224ea3d6.webp",
+              "alt": "Ho Lee Fook — official restaurant photograph",
+              "credit": "Black Sheep Restaurants / Ho Lee Fook",
+              "sourceUrl": "https://www.holeefook.com.hk/",
+              "originalUrl": "https://images.squarespace-cdn.com/content/v1/5b963019c258b4fee2aaa328/59ce3f5c-cdb2-492e-aa31-873ee6eec29f/HoLeeFook-Interior_2.jpg",
+              "checkedAt": "2026-10-10"
+            }
+          },
+          "details": {
+            "pinSourceUrl": "https://www.holeefook.com.hk/",
+            "name": "Ho Lee Fook",
+            "websiteUrl": "https://www.holeefook.com.hk/",
+            "phone": "+852 3897 6607",
+            "openingHours": [
+              {
+                "days": "Sunday–Wednesday",
+                "hours": "18:00–22:30"
+              },
+              {
+                "days": "Thursday–Saturday",
+                "hours": "18:00–23:30"
+              }
+            ],
+            "checkedAt": "2026-10-10",
+            "detailsSourceUrl": "https://www.holeefook.com.hk/"
+          },
+          "tile": {
+            "regionSlug": "hong-kong",
+            "kind": "top",
+            "slug": "holeefook",
+            "name": "Ho Lee Fook",
+            "neighborhood": "SoHo",
+            "cuisine": "Modern Cantonese",
+            "address": "3–5 Elgin Street, SoHo, Hong Kong",
+            "websiteUrl": "https://www.holeefook.com.hk/",
+            "description": "Chef Ar Chan’s contemporary Cantonese restaurant in SoHo, with wok cooking, dim sum and roast dishes.",
+            "checkedAt": "2026-10-10",
+            "recognition": "Chronopin selection",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/hong-kong/researched/holeefook-8-02c89ebb224ea3d6.webp",
+            "imageCredit": "Black Sheep Restaurants / Ho Lee Fook",
+            "imageSourceUrl": "https://images.squarespace-cdn.com/content/v1/5b963019c258b4fee2aaa328/59ce3f5c-cdb2-492e-aa31-873ee6eec29f/HoLeeFook-Interior_2.jpg",
+            "imageNote": "Ho Lee Fook — official restaurant photograph"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "region": "hong-kong",
+          "slug": "holeefook-8",
+          "source": "https://images.squarespace-cdn.com/content/v1/5b963019c258b4fee2aaa328/59ce3f5c-cdb2-492e-aa31-873ee6eec29f/HoLeeFook-Interior_2.jpg",
+          "credit": "Black Sheep Restaurants / Ho Lee Fook",
+          "sourcePage": "https://www.holeefook.com.hk/",
+          "note": "Ho Lee Fook — official restaurant photograph",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/hong-kong/researched/holeefook-8-02c89ebb224ea3d6.webp",
+          "sha256": "02c89ebb224ea3d6c7463a1acae3324e08ba2199fd40b7373b1194d2c55a537b",
+          "width": 1400,
+          "height": 859
+        },
+        {
+          "region": "hong-kong",
+          "slug": "holeefook-3",
+          "source": "https://images.squarespace-cdn.com/content/v1/5b963019c258b4fee2aaa328/a583560b-7337-4a0f-b7bc-ad2b6138ee49/ho-lee-fook-interior.jpeg",
+          "credit": "Black Sheep Restaurants / Ho Lee Fook",
+          "sourcePage": "https://www.holeefook.com.hk/",
+          "note": "Ho Lee Fook — official restaurant photograph",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/hong-kong/researched/holeefook-3-48c016f6066458a5.webp",
+          "sha256": "48c016f6066458a55bdb8555639e4e756c0e8d7f9f31ddca5611a535bc37f42d",
+          "width": 750,
+          "height": 1215
+        },
+        {
+          "region": "hong-kong",
+          "slug": "holeefook-4",
+          "source": "https://images.squarespace-cdn.com/content/v1/5b963019c258b4fee2aaa328/5c7afca1-e3d9-4e00-95a4-9669f3b49ff9/ho-lee-fook-table-spread-dishes-14-september-2023.jpg",
+          "credit": "Black Sheep Restaurants / Ho Lee Fook",
+          "sourcePage": "https://www.holeefook.com.hk/",
+          "note": "Ho Lee Fook — official restaurant photograph (archive dishes; not a current-menu promise)",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/hong-kong/researched/holeefook-4-a651400fec4bd1ee.webp",
+          "sha256": "a651400fec4bd1ee38245cbc7f3437222014c3277f55906c8439ebe705feda8b",
+          "width": 750,
+          "height": 1100
+        },
+        {
+          "region": "hong-kong",
+          "slug": "holeefook-10",
+          "source": "https://images.squarespace-cdn.com/content/v1/5b963019c258b4fee2aaa328/4cfac2d9-2df4-4efc-8b8e-c71840c3695d/ho-lee-fook-good-fortune-club-dim-sum.jpg",
+          "credit": "Black Sheep Restaurants / Ho Lee Fook",
+          "sourcePage": "https://www.holeefook.com.hk/",
+          "note": "Ho Lee Fook — official restaurant photograph (archive dishes; not a current-menu promise)",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/hong-kong/researched/holeefook-10-1d83bd7215a9073a.webp",
+          "sha256": "1d83bd7215a9073a419826bc0a6fc7260c093abf4ff412847b12eb3e08c66a50",
+          "width": 750,
+          "height": 1100
+        }
+      ],
+      "geocoding": {
+        "latitude": 22.283017724884,
+        "longitude": 114.152468961735,
+        "score": 100,
+        "matchedAddress": "3 Elgin Street, Central, Central & Western",
+        "sourceUrl": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?f=json&SingleLine=3+Elgin+Street%2C+Hong+Kong&outFields=Match_addr%2CAddr_type&maxLocations=1&sourceCountry=HKG"
+      }
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "The Canton Library opens in Tsim Sha Tsui",
+        "description": "Aqua Restaurant Group’s new Lingnan-inspired restaurant at One Peking, with harbour views and a branch-specific dim sum menu.",
+        "sourceUrl": "https://thecantonlibrary.com.hk/",
+        "address": "29/F, One Peking, 1 Peking Road, Tsim Sha Tsui, Kowloon, Hong Kong",
+        "latitude": 22.296010932092,
+        "longitude": 114.169849424702,
+        "productName": "The Canton Library",
+        "utcStartDateTime": "2026-09-08T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "HK Hub announced a September 8 opening. The Loop’s September 23 report confirms the restaurant has opened; the operator publishes current menus, hours and reservations.",
+        "parentId": null,
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Hong Kong",
+          "Tsim Sha Tsui",
+          "Contemporary Cantonese"
+        ],
+        "longFormSummary": "<p>Aqua Restaurant Group’s new Lingnan-inspired restaurant at One Peking, with harbour views and a branch-specific dim sum menu. <cite data-ref=\"https://thehkhub.com/new-restaurant-in-hong-kong-september-2026/\"></cite></p><p>Map position is an approximate geocoded street address, not a surveyed restaurant entrance.</p>",
+        "references": [
+          {
+            "url": "https://thehkhub.com/new-restaurant-in-hong-kong-september-2026/",
+            "title": "The Canton Library — research source",
+            "confidence": 90,
+            "reasoning": "HK Hub announced a September 8 opening. The Loop’s September 23 report confirms the restaurant has opened; the operator publishes current menus, hours and reservations."
+          },
+          {
+            "url": "https://theloop.hk/author/theloophk/",
+            "title": "September 23, 2026 — Aqua opens One Peking restaurants",
+            "confidence": 90,
+            "reasoning": "Post-opening report confirms the Canton Library is operating."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://thecantonlibrary.com.hk/",
+          "menu": {
+            "pinSourceUrl": "https://thecantonlibrary.com.hk/",
+            "name": "The Canton Library",
+            "checkedAt": "2026-10-10",
+            "menus": [
+              {
+                "label": "À la carte dinner",
+                "url": "https://thecantonlibrary.com.hk/menus/a-la-carte/",
+                "currency": "HKD",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Chiu Chow prawn rolls",
+                    "price": 188
+                  },
+                  {
+                    "name": "Chef’s dim sum selection — eight pieces",
+                    "price": 298
+                  },
+                  {
+                    "name": "Tangerine-peel glazed pork loin",
+                    "price": 338
+                  },
+                  {
+                    "name": "Double-boiled chicken, sea cucumber and morel soup",
+                    "price": 288
+                  },
+                  {
+                    "name": "Crispy chicken — half",
+                    "price": 348
+                  },
+                  {
+                    "name": "Sweet and sour Iberico pork",
+                    "price": 328
+                  }
+                ],
+                "note": "Published branch menu in HKD. Confirm applicable charges with the restaurant."
+              },
+              {
+                "label": "Dim sum",
+                "url": "https://thecantonlibrary.com.hk/menus/dim-sum-menu/",
+                "currency": "HKD",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Buddha Jumps Over the Wall soup dumplings",
+                    "price": 148
+                  },
+                  {
+                    "name": "Sea cucumber dumplings",
+                    "price": 88
+                  },
+                  {
+                    "name": "Wonton noodle dumplings",
+                    "price": 108
+                  },
+                  {
+                    "name": "Pork and shrimp siu mai",
+                    "price": 98
+                  },
+                  {
+                    "name": "Barbecue pork buns",
+                    "price": 108
+                  }
+                ],
+                "note": "Published branch menu; prices in HKD."
+              },
+              {
+                "label": "Bar menu",
+                "url": "https://thecantonlibrary.com.hk/menus/bar-menu/",
+                "currency": "HKD",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Jasmine tea",
+                    "price": 38
+                  },
+                  {
+                    "name": "Americano",
+                    "price": 58
+                  },
+                  {
+                    "name": "Cappuccino",
+                    "price": 68
+                  },
+                  {
+                    "name": "Saicho jasmine sparkling tea",
+                    "price": 68
+                  }
+                ],
+                "note": "Published branch drinks menu; prices in HKD."
+              }
+            ],
+            "specials": [],
+            "location": {
+              "latitude": 22.296010932092,
+              "longitude": 114.169849424702,
+              "sourceUrl": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?f=json&SingleLine=1+Peking+Road%2C+Tsim+Sha+Tsui%2C+Hong+Kong&outFields=Match_addr%2CAddr_type&maxLocations=1&sourceCountry=HKG",
+              "checkedAt": "2026-10-10"
+            },
+            "photo": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/hong-kong/researched/canton-3-804115d07d23eeff.webp",
+              "alt": "The Canton Library — official restaurant photograph",
+              "credit": "Aqua Restaurant Group / The Canton Library",
+              "sourceUrl": "https://thecantonlibrary.com.hk/",
+              "originalUrl": "https://thecantonlibrary.com.hk/wp-content/uploads/sites/15/2026/08/pdr-1-copy-768x614.jpg",
+              "checkedAt": "2026-10-10"
+            }
+          },
+          "details": {
+            "pinSourceUrl": "https://thecantonlibrary.com.hk/",
+            "name": "The Canton Library",
+            "websiteUrl": "https://thecantonlibrary.com.hk/",
+            "phone": "+852 2982 0628",
+            "openingHours": [
+              {
+                "days": "Daily",
+                "hours": "Lunch 12:00–15:30 (last order 15:00); dinner 17:30–00:00 (last order 22:30)"
+              }
+            ],
+            "checkedAt": "2026-10-10",
+            "detailsSourceUrl": "https://thehkhub.com/new-restaurant-in-hong-kong-september-2026/"
+          },
+          "tile": {
+            "regionSlug": "hong-kong",
+            "kind": "opening",
+            "slug": "canton",
+            "name": "The Canton Library",
+            "neighborhood": "Tsim Sha Tsui",
+            "cuisine": "Contemporary Cantonese",
+            "address": "29/F, One Peking, 1 Peking Road, Tsim Sha Tsui, Kowloon, Hong Kong",
+            "websiteUrl": "https://thecantonlibrary.com.hk/",
+            "description": "Aqua Restaurant Group’s new Lingnan-inspired restaurant at One Peking, with harbour views and a branch-specific dim sum menu.",
+            "checkedAt": "2026-10-10",
+            "recognition": "",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/hong-kong/researched/canton-3-804115d07d23eeff.webp",
+            "imageCredit": "Aqua Restaurant Group / The Canton Library",
+            "imageSourceUrl": "https://thecantonlibrary.com.hk/wp-content/uploads/sites/15/2026/08/pdr-1-copy-768x614.jpg",
+            "imageNote": "The Canton Library — official restaurant photograph",
+            "day": "2026-09-08",
+            "openingConfirmed": true
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "region": "hong-kong",
+          "slug": "canton-3",
+          "source": "https://thecantonlibrary.com.hk/wp-content/uploads/sites/15/2026/08/pdr-1-copy-768x614.jpg",
+          "credit": "Aqua Restaurant Group / The Canton Library",
+          "sourcePage": "https://thecantonlibrary.com.hk/",
+          "note": "The Canton Library — official restaurant photograph",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/hong-kong/researched/canton-3-804115d07d23eeff.webp",
+          "sha256": "804115d07d23eeffdd6bcf8c924ece50142e5658c8d0f92cf2c31cda327ac01b",
+          "width": 768,
+          "height": 614
+        },
+        {
+          "region": "hong-kong",
+          "slug": "canton-1",
+          "source": "https://thecantonlibrary.com.hk/wp-content/uploads/sites/15/2026/09/Poached-Chicken-02-768x693.jpg",
+          "credit": "Aqua Restaurant Group / The Canton Library",
+          "sourcePage": "https://thecantonlibrary.com.hk/",
+          "note": "The Canton Library — official restaurant photograph",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/hong-kong/researched/canton-1-a023c25b5e1e3fe2.webp",
+          "sha256": "a023c25b5e1e3fe27cf3018085f929258e840a0899615a9717ea296e41a42653",
+          "width": 768,
+          "height": 693
+        },
+        {
+          "region": "hong-kong",
+          "slug": "canton-2",
+          "source": "https://thecantonlibrary.com.hk/wp-content/uploads/sites/15/2026/08/Lap-Sang-DSC03164-Landscape-768x512.png",
+          "credit": "Aqua Restaurant Group / The Canton Library",
+          "sourcePage": "https://thecantonlibrary.com.hk/",
+          "note": "The Canton Library — official restaurant photograph",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/hong-kong/researched/canton-2-43aeade16d5541e5.webp",
+          "sha256": "43aeade16d5541e520f5d764ee68e5e60315d97ca8b29793799a9694138f7812",
+          "width": 768,
+          "height": 512
+        },
+        {
+          "region": "hong-kong",
+          "slug": "canton-5",
+          "source": "https://thecantonlibrary.com.hk/wp-content/uploads/sites/15/2026/07/Gourmet_Cantonese_Dried_Seafood_Dumpling_02_graded-2-1024x768.jpg",
+          "credit": "Aqua Restaurant Group / The Canton Library",
+          "sourcePage": "https://thecantonlibrary.com.hk/",
+          "note": "The Canton Library — official restaurant photograph",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/hong-kong/researched/canton-5-6f6494fff3bc3ecb.webp",
+          "sha256": "6f6494fff3bc3ecb0a0ccf7c0f6ac1cb4a81b529c7f4cb5939f9073c610031fc",
+          "width": 1024,
+          "height": 768
+        },
+        {
+          "region": "hong-kong",
+          "slug": "canton-6",
+          "source": "https://thecantonlibrary.com.hk/wp-content/uploads/sites/15/2026/08/Oolong-Old-Fashioned-DSC03173-683x1024.jpg",
+          "credit": "Aqua Restaurant Group / The Canton Library",
+          "sourcePage": "https://thecantonlibrary.com.hk/",
+          "note": "The Canton Library — official restaurant photograph",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/hong-kong/researched/canton-6-51c075a431dae1ab.webp",
+          "sha256": "51c075a431dae1abffc8228f566870aa52d744a6a0bcae0663f9cb28f21c8a5d",
+          "width": 683,
+          "height": 1024
+        },
+        {
+          "region": "hong-kong",
+          "slug": "canton-7",
+          "source": "https://thecantonlibrary.com.hk/wp-content/uploads/sites/15/2026/08/Chiuchow-Tofu-Cheung-Fun-04-1-1024x768.jpg",
+          "credit": "Aqua Restaurant Group / The Canton Library",
+          "sourcePage": "https://thecantonlibrary.com.hk/",
+          "note": "The Canton Library — official restaurant photograph",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/hong-kong/researched/canton-7-e21527b4d7ac3403.webp",
+          "sha256": "e21527b4d7ac3403f0dcfc84156a03c59ac74312ccc78b7618bc757240916ca5",
+          "width": 1024,
+          "height": 768
+        }
+      ],
+      "geocoding": {
+        "latitude": 22.296010932092,
+        "longitude": 114.169849424702,
+        "score": 100,
+        "matchedAddress": "1 Peking Road, Tsim Sha Tsui, Yau Tsim Mong",
+        "sourceUrl": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?f=json&SingleLine=1+Peking+Road%2C+Tsim+Sha+Tsui%2C+Hong+Kong&outFields=Match_addr%2CAddr_type&maxLocations=1&sourceCountry=HKG"
+      }
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Bar 41 opens in Tsuen Wan",
+        "description": "A new panoramic lounge at Nina Hotel Tsuen Wan West, with October happy-hour and afternoon-tea opening offers.",
+        "sourceUrl": "https://www.ninahotelgroup.com/en/nina-hotel-tsuen-wan-west/dining/bar-41/",
+        "address": "41/F, Nina Hotel Tsuen Wan West, 8 Yeung Uk Road, Tsuen Wan, Hong Kong",
+        "latitude": 22.368769623511,
+        "longitude": 114.112961615488,
+        "productName": "Bar 41",
+        "utcStartDateTime": "2026-10-01T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "October launch reporting and operator opening promotions begin October 1, 2026. Current operator menus, hours and reservations confirm operation.",
+        "parentId": null,
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Hong Kong",
+          "Tsuen Wan",
+          "Bar and international dining"
+        ],
+        "longFormSummary": "<p>A new panoramic lounge at Nina Hotel Tsuen Wan West, with October happy-hour and afternoon-tea opening offers. <cite data-ref=\"https://thebeat.asia/hong-kong/delish/reviews/new-restaurants-bars-2026\"></cite></p><p>Map position is an approximate geocoded street address, not a surveyed restaurant entrance.</p>",
+        "references": [
+          {
+            "url": "https://thebeat.asia/hong-kong/delish/reviews/new-restaurants-bars-2026",
+            "title": "Bar 41 — research source",
+            "confidence": 90,
+            "reasoning": "October launch reporting and operator opening promotions begin October 1, 2026. Current operator menus, hours and reservations confirm operation."
+          },
+          {
+            "url": "https://www.scmp.com/lifestyle/food-drink/article/3369313/14-new-hong-kong-restaurants-and-bars-october-all-you-can-eat-wagyu-froyo",
+            "title": "SCMP October 1 — Bar 41 opening date",
+            "confidence": 90,
+            "reasoning": "October 1 reporting states the October 1, 2026 opening."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://www.ninahotelgroup.com/en/nina-hotel-tsuen-wan-west/dining/bar-41/",
+          "menu": {
+            "pinSourceUrl": "https://www.ninahotelgroup.com/en/nina-hotel-tsuen-wan-west/dining/bar-41/",
+            "name": "Bar 41",
+            "checkedAt": "2026-10-10",
+            "menus": [
+              {
+                "label": "À la carte",
+                "url": "https://www.ninahotelgroup.com/en/nina-hotel-tsuen-wan-west/dining/bar-41/",
+                "currency": "HKD",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Soup of the day with garlic bread",
+                    "price": 78
+                  },
+                  {
+                    "name": "Club sandwich with fries",
+                    "price": 168
+                  },
+                  {
+                    "name": "Wagyu and foie gras burger with fries",
+                    "price": 248
+                  },
+                  {
+                    "name": "Chilli con carne quesadillas",
+                    "price": 168
+                  },
+                  {
+                    "name": "Nasi goreng",
+                    "price": 188
+                  },
+                  {
+                    "name": "Fish and chips",
+                    "price": 198
+                  }
+                ],
+                "note": "HKD prices; add 10% service charge. Ordinary dishes are not automatically included in the happy-hour promotion.",
+                "documentUrl": "https://www.ninahotelgroup.com/media/clkjgizv/bar-41-a-la-carte-menu.pdf"
+              },
+              {
+                "label": "Happy-hour drinks",
+                "url": "https://www.ninahotelgroup.com/en/nina-hotel-tsuen-wan-west/dining/bar-41/",
+                "currency": "HKD",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Tsing Tao beer",
+                    "price": 60
+                  },
+                  {
+                    "name": "Corona Extra",
+                    "price": 80
+                  },
+                  {
+                    "name": "Chiaro Prosecco",
+                    "price": 78
+                  },
+                  {
+                    "name": "Chiaro Pinot Grigio",
+                    "price": 78
+                  },
+                  {
+                    "name": "Cosmopolitan",
+                    "price": 98
+                  },
+                  {
+                    "name": "Negroni",
+                    "price": 108
+                  }
+                ],
+                "note": "Published base prices; buy one, get one free during 17:30–20:00, October 1–31. Add 10% service charge; cannot combine offers.",
+                "documentUrl": "https://www.ninahotelgroup.com/media/4auau4s4/bar-41-happy-hour.pdf"
+              },
+              {
+                "label": "Happy-hour platters",
+                "url": "https://www.ninahotelgroup.com/en/nina-hotel-tsuen-wan-west/dining/bar-41/",
+                "currency": "HKD",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Grilled meat platter",
+                    "price": 268
+                  },
+                  {
+                    "name": "Seafood platter",
+                    "price": 268
+                  },
+                  {
+                    "name": "Ham and cheese platter",
+                    "price": 228
+                  },
+                  {
+                    "name": "One platter and two beers",
+                    "price": 398
+                  }
+                ],
+                "note": "Published base prices before the October 20% discount. Daily 17:30–20:00; add 10% service charge. Combo beer choices: Corona, Guinness, Heineken or Erdinger Weissbier.",
+                "documentUrl": "https://www.ninahotelgroup.com/media/4auau4s4/bar-41-happy-hour.pdf"
+              },
+              {
+                "label": "Afternoon tea",
+                "url": "https://www.ninahotelgroup.com/en/nina-hotel-tsuen-wan-west/dining/bar-41/",
+                "currency": "HKD",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Afternoon tea — per person",
+                    "price": 244,
+                    "note": "Minimum two guests; second guest 50% off in October. Service charge 10% of the original price."
+                  },
+                  {
+                    "name": "Iberian pork puff with aged tangerine peel",
+                    "priceLabel": "Price not published",
+                    "note": "Included in the set; no separate price."
+                  },
+                  {
+                    "name": "Crab cake with tartar sauce",
+                    "priceLabel": "Price not published",
+                    "note": "Included in the set; no separate price."
+                  },
+                  {
+                    "name": "Duck liver with Hong Kong-style French toast",
+                    "priceLabel": "Price not published",
+                    "note": "Included in the set; no separate price."
+                  },
+                  {
+                    "name": "Mini mango Napoleon",
+                    "priceLabel": "Price not published",
+                    "note": "Included in the set; no separate price."
+                  },
+                  {
+                    "name": "Man Fung peanut and black sesame mochi",
+                    "priceLabel": "Price not published",
+                    "note": "Included in the set; no separate price."
+                  }
+                ],
+                "note": "Daily 15:00–17:30; second-guest offer October 1–31, 2026. Set also includes coffee or TWG tea.",
+                "documentUrl": "https://www.ninahotelgroup.com/media/ysonoupj/bar-41-afternoon-tea-menu.pdf"
+              }
+            ],
+            "specials": [
+              {
+                "kind": "other",
+                "title": "Happy hour — buy one, get one free",
+                "description": "Selected drinks from the published happy-hour list.",
+                "schedule": "Daily 17:30–20:00, October 1–31, 2026",
+                "conditions": [
+                  "HKD prices; add 10% service charge.",
+                  "Cannot combine with another promotion or discount.",
+                  "Only the drinks listed on the happy-hour menu qualify."
+                ],
+                "sourceUrl": "https://www.ninahotelgroup.com/en/nina-hotel-tsuen-wan-west/dining/bar-41/",
+                "discounted": true,
+                "menuLabel": "Happy-hour drinks",
+                "validFrom": "2026-10-01",
+                "validThrough": "2026-10-31",
+                "availability": {
+                  "windows": [
+                    {
+                      "days": [
+                        0,
+                        1,
+                        2,
+                        3,
+                        4,
+                        5,
+                        6
+                      ],
+                      "start": "17:30",
+                      "end": "20:00"
+                    }
+                  ]
+                }
+              },
+              {
+                "kind": "other",
+                "title": "Happy hour — 20% off platters and beer combos",
+                "description": "October opening promotion on selected platters and the beer combo.",
+                "schedule": "Daily 17:30–20:00, October 1–31, 2026",
+                "conditions": [
+                  "Menu prices below are published base prices before the 20% promotion.",
+                  "Add 10% service charge; confirm the charge basis with the venue.",
+                  "Regular à la carte dishes are not verified as part of this offer."
+                ],
+                "sourceUrl": "https://www.ninahotelgroup.com/en/nina-hotel-tsuen-wan-west/dining/bar-41/",
+                "discounted": true,
+                "menuLabel": "Happy-hour platters",
+                "validFrom": "2026-10-01",
+                "validThrough": "2026-10-31",
+                "availability": {
+                  "windows": [
+                    {
+                      "days": [
+                        0,
+                        1,
+                        2,
+                        3,
+                        4,
+                        5,
+                        6
+                      ],
+                      "start": "17:30",
+                      "end": "20:00"
+                    }
+                  ]
+                }
+              },
+              {
+                "kind": "other",
+                "title": "Afternoon tea — 50% off the second guest",
+                "description": "Bar 41 × Man Fung afternoon tea, with a minimum of two guests.",
+                "schedule": "Daily 15:00–17:30, October 1–31, 2026",
+                "conditions": [
+                  "Published base price HKD 244 per person; minimum two people.",
+                  "The second guest receives 50% off; 10% service charge is based on the original price.",
+                  "Named savouries and sweets are included in the set and have no separate published prices."
+                ],
+                "sourceUrl": "https://www.ninahotelgroup.com/en/nina-hotel-tsuen-wan-west/dining/bar-41/",
+                "discounted": true,
+                "menuLabel": "Afternoon tea",
+                "validFrom": "2026-10-01",
+                "validThrough": "2026-10-31",
+                "availability": {
+                  "windows": [
+                    {
+                      "days": [
+                        0,
+                        1,
+                        2,
+                        3,
+                        4,
+                        5,
+                        6
+                      ],
+                      "start": "15:00",
+                      "end": "17:30"
+                    }
+                  ]
+                }
+              }
+            ],
+            "location": {
+              "latitude": 22.368769623511,
+              "longitude": 114.112961615488,
+              "sourceUrl": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?f=json&SingleLine=8+Yeung+Uk+Road%2C+Tsuen+Wan%2C+Hong+Kong&outFields=Match_addr%2CAddr_type&maxLocations=1&sourceCountry=HKG",
+              "checkedAt": "2026-10-10"
+            },
+            "photo": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/hong-kong/researched/bar41-31-7efa6eb8429c67d4.webp",
+              "alt": "Bar 41 — official restaurant photograph",
+              "credit": "Nina Hospitality / Bar 41",
+              "sourceUrl": "https://www.ninahotelgroup.com/en/nina-hotel-tsuen-wan-west/dining/bar-41/",
+              "originalUrl": "https://www.ninahotelgroup.com/media/l4nn1cdv/bar-41-banner-horizontal.jpg",
+              "checkedAt": "2026-10-10"
+            }
+          },
+          "details": {
+            "pinSourceUrl": "https://www.ninahotelgroup.com/en/nina-hotel-tsuen-wan-west/dining/bar-41/",
+            "name": "Bar 41",
+            "websiteUrl": "https://www.ninahotelgroup.com/en/nina-hotel-tsuen-wan-west/dining/bar-41/",
+            "phone": "+852 2280 2796",
+            "openingHours": [
+              {
+                "days": "Daily",
+                "hours": "12:00–23:00; food last order 21:30; drinks last order 22:30"
+              }
+            ],
+            "checkedAt": "2026-10-10",
+            "detailsSourceUrl": "https://thebeat.asia/hong-kong/delish/reviews/new-restaurants-bars-2026"
+          },
+          "tile": {
+            "regionSlug": "hong-kong",
+            "kind": "opening",
+            "slug": "bar41",
+            "name": "Bar 41",
+            "neighborhood": "Tsuen Wan",
+            "cuisine": "Bar and international dining",
+            "address": "41/F, Nina Hotel Tsuen Wan West, 8 Yeung Uk Road, Tsuen Wan, Hong Kong",
+            "websiteUrl": "https://www.ninahotelgroup.com/en/nina-hotel-tsuen-wan-west/dining/bar-41/",
+            "description": "A new panoramic lounge at Nina Hotel Tsuen Wan West, with October happy-hour and afternoon-tea opening offers.",
+            "checkedAt": "2026-10-10",
+            "recognition": "",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/hong-kong/researched/bar41-31-7efa6eb8429c67d4.webp",
+            "imageCredit": "Nina Hospitality / Bar 41",
+            "imageSourceUrl": "https://www.ninahotelgroup.com/media/l4nn1cdv/bar-41-banner-horizontal.jpg",
+            "imageNote": "Bar 41 — official restaurant photograph",
+            "day": "2026-10-01",
+            "openingConfirmed": true
+          }
+        },
+        "enabled": true
+      },
+      "special": {
+        "regionSlug": "hong-kong",
+        "profile": {
+          "pinSourceUrl": "https://www.ninahotelgroup.com/en/nina-hotel-tsuen-wan-west/dining/bar-41/",
+          "name": "Bar 41",
+          "checkedAt": "2026-10-10",
+          "menus": [
+            {
+              "label": "À la carte",
+              "url": "https://www.ninahotelgroup.com/en/nina-hotel-tsuen-wan-west/dining/bar-41/",
+              "currency": "HKD",
+              "coverage": "sample",
+              "items": [
+                {
+                  "name": "Soup of the day with garlic bread",
+                  "price": 78
+                },
+                {
+                  "name": "Club sandwich with fries",
+                  "price": 168
+                },
+                {
+                  "name": "Wagyu and foie gras burger with fries",
+                  "price": 248
+                },
+                {
+                  "name": "Chilli con carne quesadillas",
+                  "price": 168
+                },
+                {
+                  "name": "Nasi goreng",
+                  "price": 188
+                },
+                {
+                  "name": "Fish and chips",
+                  "price": 198
+                }
+              ],
+              "note": "HKD prices; add 10% service charge. Ordinary dishes are not automatically included in the happy-hour promotion.",
+              "documentUrl": "https://www.ninahotelgroup.com/media/clkjgizv/bar-41-a-la-carte-menu.pdf"
+            },
+            {
+              "label": "Happy-hour drinks",
+              "url": "https://www.ninahotelgroup.com/en/nina-hotel-tsuen-wan-west/dining/bar-41/",
+              "currency": "HKD",
+              "coverage": "sample",
+              "items": [
+                {
+                  "name": "Tsing Tao beer",
+                  "price": 60
+                },
+                {
+                  "name": "Corona Extra",
+                  "price": 80
+                },
+                {
+                  "name": "Chiaro Prosecco",
+                  "price": 78
+                },
+                {
+                  "name": "Chiaro Pinot Grigio",
+                  "price": 78
+                },
+                {
+                  "name": "Cosmopolitan",
+                  "price": 98
+                },
+                {
+                  "name": "Negroni",
+                  "price": 108
+                }
+              ],
+              "note": "Published base prices; buy one, get one free during 17:30–20:00, October 1–31. Add 10% service charge; cannot combine offers.",
+              "documentUrl": "https://www.ninahotelgroup.com/media/4auau4s4/bar-41-happy-hour.pdf"
+            },
+            {
+              "label": "Happy-hour platters",
+              "url": "https://www.ninahotelgroup.com/en/nina-hotel-tsuen-wan-west/dining/bar-41/",
+              "currency": "HKD",
+              "coverage": "sample",
+              "items": [
+                {
+                  "name": "Grilled meat platter",
+                  "price": 268
+                },
+                {
+                  "name": "Seafood platter",
+                  "price": 268
+                },
+                {
+                  "name": "Ham and cheese platter",
+                  "price": 228
+                },
+                {
+                  "name": "One platter and two beers",
+                  "price": 398
+                }
+              ],
+              "note": "Published base prices before the October 20% discount. Daily 17:30–20:00; add 10% service charge. Combo beer choices: Corona, Guinness, Heineken or Erdinger Weissbier.",
+              "documentUrl": "https://www.ninahotelgroup.com/media/4auau4s4/bar-41-happy-hour.pdf"
+            },
+            {
+              "label": "Afternoon tea",
+              "url": "https://www.ninahotelgroup.com/en/nina-hotel-tsuen-wan-west/dining/bar-41/",
+              "currency": "HKD",
+              "coverage": "sample",
+              "items": [
+                {
+                  "name": "Afternoon tea — per person",
+                  "price": 244,
+                  "note": "Minimum two guests; second guest 50% off in October. Service charge 10% of the original price."
+                },
+                {
+                  "name": "Iberian pork puff with aged tangerine peel",
+                  "priceLabel": "Price not published",
+                  "note": "Included in the set; no separate price."
+                },
+                {
+                  "name": "Crab cake with tartar sauce",
+                  "priceLabel": "Price not published",
+                  "note": "Included in the set; no separate price."
+                },
+                {
+                  "name": "Duck liver with Hong Kong-style French toast",
+                  "priceLabel": "Price not published",
+                  "note": "Included in the set; no separate price."
+                },
+                {
+                  "name": "Mini mango Napoleon",
+                  "priceLabel": "Price not published",
+                  "note": "Included in the set; no separate price."
+                },
+                {
+                  "name": "Man Fung peanut and black sesame mochi",
+                  "priceLabel": "Price not published",
+                  "note": "Included in the set; no separate price."
+                }
+              ],
+              "note": "Daily 15:00–17:30; second-guest offer October 1–31, 2026. Set also includes coffee or TWG tea.",
+              "documentUrl": "https://www.ninahotelgroup.com/media/ysonoupj/bar-41-afternoon-tea-menu.pdf"
+            }
+          ],
+          "specials": [
+            {
+              "kind": "other",
+              "title": "Happy hour — buy one, get one free",
+              "description": "Selected drinks from the published happy-hour list.",
+              "schedule": "Daily 17:30–20:00, October 1–31, 2026",
+              "conditions": [
+                "HKD prices; add 10% service charge.",
+                "Cannot combine with another promotion or discount.",
+                "Only the drinks listed on the happy-hour menu qualify."
+              ],
+              "sourceUrl": "https://www.ninahotelgroup.com/en/nina-hotel-tsuen-wan-west/dining/bar-41/",
+              "discounted": true,
+              "menuLabel": "Happy-hour drinks",
+              "validFrom": "2026-10-01",
+              "validThrough": "2026-10-31",
+              "availability": {
+                "windows": [
+                  {
+                    "days": [
+                      0,
+                      1,
+                      2,
+                      3,
+                      4,
+                      5,
+                      6
+                    ],
+                    "start": "17:30",
+                    "end": "20:00"
+                  }
+                ]
+              }
+            },
+            {
+              "kind": "other",
+              "title": "Happy hour — 20% off platters and beer combos",
+              "description": "October opening promotion on selected platters and the beer combo.",
+              "schedule": "Daily 17:30–20:00, October 1–31, 2026",
+              "conditions": [
+                "Menu prices below are published base prices before the 20% promotion.",
+                "Add 10% service charge; confirm the charge basis with the venue.",
+                "Regular à la carte dishes are not verified as part of this offer."
+              ],
+              "sourceUrl": "https://www.ninahotelgroup.com/en/nina-hotel-tsuen-wan-west/dining/bar-41/",
+              "discounted": true,
+              "menuLabel": "Happy-hour platters",
+              "validFrom": "2026-10-01",
+              "validThrough": "2026-10-31",
+              "availability": {
+                "windows": [
+                  {
+                    "days": [
+                      0,
+                      1,
+                      2,
+                      3,
+                      4,
+                      5,
+                      6
+                    ],
+                    "start": "17:30",
+                    "end": "20:00"
+                  }
+                ]
+              }
+            },
+            {
+              "kind": "other",
+              "title": "Afternoon tea — 50% off the second guest",
+              "description": "Bar 41 × Man Fung afternoon tea, with a minimum of two guests.",
+              "schedule": "Daily 15:00–17:30, October 1–31, 2026",
+              "conditions": [
+                "Published base price HKD 244 per person; minimum two people.",
+                "The second guest receives 50% off; 10% service charge is based on the original price.",
+                "Named savouries and sweets are included in the set and have no separate published prices."
+              ],
+              "sourceUrl": "https://www.ninahotelgroup.com/en/nina-hotel-tsuen-wan-west/dining/bar-41/",
+              "discounted": true,
+              "menuLabel": "Afternoon tea",
+              "validFrom": "2026-10-01",
+              "validThrough": "2026-10-31",
+              "availability": {
+                "windows": [
+                  {
+                    "days": [
+                      0,
+                      1,
+                      2,
+                      3,
+                      4,
+                      5,
+                      6
+                    ],
+                    "start": "15:00",
+                    "end": "17:30"
+                  }
+                ]
+              }
+            }
+          ],
+          "location": {
+            "latitude": 22.368769623511,
+            "longitude": 114.112961615488,
+            "sourceUrl": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?f=json&SingleLine=8+Yeung+Uk+Road%2C+Tsuen+Wan%2C+Hong+Kong&outFields=Match_addr%2CAddr_type&maxLocations=1&sourceCountry=HKG",
+            "checkedAt": "2026-10-10"
+          },
+          "photo": {
+            "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/hong-kong/researched/bar41-31-7efa6eb8429c67d4.webp",
+            "alt": "Bar 41 — official restaurant photograph",
+            "credit": "Nina Hospitality / Bar 41",
+            "sourceUrl": "https://www.ninahotelgroup.com/en/nina-hotel-tsuen-wan-west/dining/bar-41/",
+            "originalUrl": "https://www.ninahotelgroup.com/media/l4nn1cdv/bar-41-banner-horizontal.jpg",
+            "checkedAt": "2026-10-10"
+          },
+          "neighborhood": "Tsuen Wan",
+          "address": "41/F, Nina Hotel Tsuen Wan West, 8 Yeung Uk Road, Tsuen Wan, Hong Kong",
+          "websiteUrl": "https://www.ninahotelgroup.com/en/nina-hotel-tsuen-wan-west/dining/bar-41/"
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "region": "hong-kong",
+          "slug": "bar41-31",
+          "source": "https://www.ninahotelgroup.com/media/l4nn1cdv/bar-41-banner-horizontal.jpg",
+          "credit": "Nina Hospitality / Bar 41",
+          "sourcePage": "https://www.ninahotelgroup.com/en/nina-hotel-tsuen-wan-west/dining/bar-41/",
+          "note": "Bar 41 — official restaurant photograph",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/hong-kong/researched/bar41-31-7efa6eb8429c67d4.webp",
+          "sha256": "7efa6eb8429c67d428ff08dd947bfbfe0cf1e2673fcbe623812004c8e8d6f664",
+          "width": 1400,
+          "height": 700
+        },
+        {
+          "region": "hong-kong",
+          "slug": "bar41-41",
+          "source": "https://www.ninahotelgroup.com/media/a3fkqrck/bar-41-a-la-carte-official.jpg",
+          "credit": "Nina Hospitality / Bar 41",
+          "sourcePage": "https://www.ninahotelgroup.com/en/nina-hotel-tsuen-wan-west/dining/bar-41/",
+          "note": "Bar 41 — official restaurant photograph",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/hong-kong/researched/bar41-41-1cdbd471d95dabc1.webp",
+          "sha256": "1cdbd471d95dabc1f2cd9cd887e676d11e23af64dd9b84a13e19b81fd4f62b4f",
+          "width": 1000,
+          "height": 741
+        },
+        {
+          "region": "hong-kong",
+          "slug": "bar41-42",
+          "source": "https://www.ninahotelgroup.com/media/fx1nsbiz/bar-41-lunch-2.jpg",
+          "credit": "Nina Hospitality / Bar 41",
+          "sourcePage": "https://www.ninahotelgroup.com/en/nina-hotel-tsuen-wan-west/dining/bar-41/",
+          "note": "Bar 41 — official restaurant photograph",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/hong-kong/researched/bar41-42-366aeef6b133e0f8.webp",
+          "sha256": "366aeef6b133e0f8db6145b7bd94124d1848abc5ff996d037fcd394f42e0009a",
+          "width": 801,
+          "height": 593
+        },
+        {
+          "region": "hong-kong",
+          "slug": "bar41-43",
+          "source": "https://www.ninahotelgroup.com/media/iiboindl/bar-41-afternoon-tea-official.jpg",
+          "credit": "Nina Hospitality / Bar 41",
+          "sourcePage": "https://www.ninahotelgroup.com/en/nina-hotel-tsuen-wan-west/dining/bar-41/",
+          "note": "Bar 41 — official restaurant photograph",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/hong-kong/researched/bar41-43-aa1c4cde5ccf7a37.webp",
+          "sha256": "aa1c4cde5ccf7a37f3ea028c84d7c92133b66177bc488229f4e19bc6b72779c9",
+          "width": 1000,
+          "height": 741
+        },
+        {
+          "region": "hong-kong",
+          "slug": "bar41-44",
+          "source": "https://www.ninahotelgroup.com/media/mdpjq25k/bar-41-happy-hour-platter-official.jpg",
+          "credit": "Nina Hospitality / Bar 41",
+          "sourcePage": "https://www.ninahotelgroup.com/en/nina-hotel-tsuen-wan-west/dining/bar-41/",
+          "note": "Bar 41 — official restaurant photograph",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/hong-kong/researched/bar41-44-0dcac18843cb239e.webp",
+          "sha256": "0dcac18843cb239eae6a9ae114a86b29acfa4bdf27a83baa34f78b93625cd004",
+          "width": 1000,
+          "height": 741
+        },
+        {
+          "region": "hong-kong",
+          "slug": "bar41-45",
+          "source": "https://www.ninahotelgroup.com/media/fgrobpag/bar-41-happy-hour-official.jpg",
+          "credit": "Nina Hospitality / Bar 41",
+          "sourcePage": "https://www.ninahotelgroup.com/en/nina-hotel-tsuen-wan-west/dining/bar-41/",
+          "note": "Bar 41 — official restaurant photograph",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/hong-kong/researched/bar41-45-374504bdb8e3a6b7.webp",
+          "sha256": "374504bdb8e3a6b770811ed2d99c9fa128bb0c452c6ba7e39f7377b6ac4aab5a",
+          "width": 1000,
+          "height": 741
+        },
+        {
+          "region": "hong-kong",
+          "slug": "bar41-46",
+          "source": "https://www.ninahotelgroup.com/media/spfno2e2/bar-41-snacks-official.jpg",
+          "credit": "Nina Hospitality / Bar 41",
+          "sourcePage": "https://www.ninahotelgroup.com/en/nina-hotel-tsuen-wan-west/dining/bar-41/",
+          "note": "Bar 41 — official restaurant photograph",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/hong-kong/researched/bar41-46-7ffa79d3bfd1bdaf.webp",
+          "sha256": "7ffa79d3bfd1bdaf30201875645e704763ee13462b225fd3877cf8639f460633",
+          "width": 1000,
+          "height": 741
+        },
+        {
+          "region": "hong-kong",
+          "slug": "bar41-53",
+          "source": "https://www.ninahotelgroup.com/media/ubhb31h5/bar-41-look.jpg",
+          "credit": "Nina Hospitality / Bar 41",
+          "sourcePage": "https://www.ninahotelgroup.com/en/nina-hotel-tsuen-wan-west/dining/bar-41/",
+          "note": "Bar 41 — official restaurant photograph",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/hong-kong/researched/bar41-53-bed2671c1da1ed38.webp",
+          "sha256": "bed2671c1da1ed38425ec80ff8e6f5cec6bda3481c15e7d93d24cbd18be92297",
+          "width": 1400,
+          "height": 1050
+        },
+        {
+          "region": "hong-kong",
+          "slug": "bar41-54",
+          "source": "https://www.ninahotelgroup.com/media/dtzb2lec/20260904_nina_bar41-058_v2s.jpg",
+          "credit": "Nina Hospitality / Bar 41",
+          "sourcePage": "https://www.ninahotelgroup.com/en/nina-hotel-tsuen-wan-west/dining/bar-41/",
+          "note": "Bar 41 — official restaurant photograph",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/hong-kong/researched/bar41-54-16125ede985e8430.webp",
+          "sha256": "16125ede985e843027cb8b39a55f86b9b932341da66ebc6c99edbedd7b33bd77",
+          "width": 1400,
+          "height": 1050
+        }
+      ],
+      "geocoding": {
+        "latitude": 22.368769623511,
+        "longitude": 114.112961615488,
+        "score": 100,
+        "matchedAddress": "8 Yeung Uk Road, Tsuen Wan",
+        "sourceUrl": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?f=json&SingleLine=8+Yeung+Uk+Road%2C+Tsuen+Wan%2C+Hong+Kong&outFields=Match_addr%2CAddr_type&maxLocations=1&sourceCountry=HKG"
+      }
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "The Baker & The Bottleman — Causeway Bay plans an opening in Causeway Bay",
+        "description": "The bakery and bistro plans a new Leighton Road home in mid-to-late November 2026. Exact date, unit and new-branch menu are unannounced.",
+        "sourceUrl": "https://theforksandspoons.com.hk/homepage/the-baker-the-bottleman-prepares-to-relocate-to-leighton-road-causeway-bay-this-mid-end-november/",
+        "address": "Leighton Road, Causeway Bay, Hong Kong — street number and unit unannounced",
+        "latitude": 22.276518933989,
+        "longitude": 114.181043361036,
+        "productName": "The Baker & The Bottleman — Causeway Bay",
+        "utcStartDateTime": "2026-11-30T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "Operator’s PR agency targets mid-to-late November 2026. November 30 is a month-end sorting estimate, not a confirmed opening day.",
+        "parentId": null,
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Hong Kong",
+          "Causeway Bay",
+          "British bakery and bistro"
+        ],
+        "longFormSummary": "<p>The bakery and bistro plans a new Leighton Road home in mid-to-late November 2026. Exact date, unit and new-branch menu are unannounced. <cite data-ref=\"https://theforksandspoons.com.hk/homepage/the-baker-the-bottleman-prepares-to-relocate-to-leighton-road-causeway-bay-this-mid-end-november/\"></cite></p><p>Map position is an approximate geocoded street address, not a surveyed restaurant entrance.</p><p>Map position marks Leighton Road approximately; the new street number and unit have not been announced.</p>",
+        "references": [
+          {
+            "url": "https://theforksandspoons.com.hk/homepage/the-baker-the-bottleman-prepares-to-relocate-to-leighton-road-causeway-bay-this-mid-end-november/",
+            "title": "The Baker & The Bottleman — Causeway Bay — research source",
+            "confidence": 90,
+            "reasoning": "Operator’s PR agency targets mid-to-late November 2026. November 30 is a month-end sorting estimate, not a confirmed opening day."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://theforksandspoons.com.hk/homepage/the-baker-the-bottleman-prepares-to-relocate-to-leighton-road-causeway-bay-this-mid-end-november/",
+          "menu": {
+            "pinSourceUrl": "https://theforksandspoons.com.hk/homepage/the-baker-the-bottleman-prepares-to-relocate-to-leighton-road-causeway-bay-this-mid-end-november/",
+            "name": "The Baker & The Bottleman — Causeway Bay",
+            "checkedAt": "2026-10-10",
+            "menus": [
+              {
+                "label": "Forthcoming Causeway Bay menu",
+                "url": "https://www.thebakerandthebottleman.hk/menu",
+                "currency": "HKD",
+                "coverage": "link",
+                "items": [],
+                "note": "Checked the operator’s menu, bakery, restaurant and shop links, the relocation announcement, Foodie and branch-specific menu searches. No verified Causeway Bay menu items or prices found; former Wan Chai and expired MARROW pop-up menus are excluded."
+              }
+            ],
+            "specials": [],
+            "location": {
+              "latitude": 22.276518933989,
+              "longitude": 114.181043361036,
+              "sourceUrl": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?f=json&SingleLine=Leighton+Road%2C+Causeway+Bay%2C+Hong+Kong&outFields=Match_addr%2CAddr_type&maxLocations=1&sourceCountry=HKG",
+              "checkedAt": "2026-10-10"
+            }
+          },
+          "details": {
+            "pinSourceUrl": "https://theforksandspoons.com.hk/homepage/the-baker-the-bottleman-prepares-to-relocate-to-leighton-road-causeway-bay-this-mid-end-november/",
+            "name": "The Baker & The Bottleman — Causeway Bay",
+            "websiteUrl": "https://www.thebakerandthebottleman.hk/",
+            "phone": null,
+            "openingHours": [],
+            "checkedAt": "2026-10-10",
+            "detailsSourceUrl": "https://theforksandspoons.com.hk/homepage/the-baker-the-bottleman-prepares-to-relocate-to-leighton-road-causeway-bay-this-mid-end-november/"
+          },
+          "tile": {
+            "regionSlug": "hong-kong",
+            "kind": "opening",
+            "slug": "baker",
+            "name": "The Baker & The Bottleman — Causeway Bay",
+            "neighborhood": "Causeway Bay",
+            "cuisine": "British bakery and bistro",
+            "address": "Leighton Road, Causeway Bay, Hong Kong — street number and unit unannounced",
+            "websiteUrl": "https://www.thebakerandthebottleman.hk/",
+            "description": "The bakery and bistro plans a new Leighton Road home in mid-to-late November 2026. Exact date, unit and new-branch menu are unannounced.",
+            "checkedAt": "2026-10-10",
+            "recognition": "",
+            "priceRange": "",
+            "image": null,
+            "imageCredit": "",
+            "day": "2026-11-30",
+            "openingConfirmed": false
+          }
+        },
+        "enabled": true
+      },
+      "photos": [],
+      "geocoding": {
+        "latitude": 22.276518933989,
+        "longitude": 114.181043361036,
+        "score": 100,
+        "matchedAddress": "Causeway Bay, Leighton Road, Wan Chai, Wan Chai District",
+        "sourceUrl": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?f=json&SingleLine=Leighton+Road%2C+Causeway+Bay%2C+Hong+Kong&outFields=Match_addr%2CAddr_type&maxLocations=1&sourceCountry=HKG"
+      }
+    }
+  ],
+  "notes": "Review/import snapshot only. Live menus, details, tiles and offers are DB-managed through APIs. Photos are verified public Azure blobs. Baker future-branch menu, exact date, unit and gallery remain unpublished."
+}

@@ -1,0 +1,566 @@
+{
+  "checkedAt": "2026-10-14",
+  "imagesAdded": 19,
+  "pinsUpdated": 13,
+  "foodPins": 7,
+  "replacementArtworkPins": 6,
+  "photos": [
+    {
+      "pinId": 15410,
+      "key": "shabu-food",
+      "originalUrl": "https://www.skylark.co.jp/syabuyo/menu/recommend/images/ss_bara_pc_01.jpg",
+      "sourcePage": "https://www.skylark.co.jp/syabuyo/menu/recommend/index.html",
+      "credit": "Image: Skylark / Shabu-Yo",
+      "note": "Official Shabu-Yo pork shabu-shabu promotional image. Brand-food preview for the forthcoming Fukuoka Ito branch; prices and course availability shown in the national artwork are not confirmed for this branch.",
+      "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan/food-2026-10-14/shabu-food-a053b9cae5137bb8.webp",
+      "sha256": "a053b9cae5137bb81178610a67a56e01b665a72b7e51f40ffe2f20806e64a4dc",
+      "width": 1056,
+      "height": 1231
+    },
+    {
+      "pinId": 15556,
+      "key": "15556-food",
+      "originalUrl": "https://prcdn.freetls.fastly.net/release_image/41446/458/41446-458-966e9249bb1d860d62b554235000f6ff-3900x2780.jpg?width=1950&height=1350&quality=85%2C65&format=jpeg&auto=webp&fit=bounds&bg-color=fff",
+      "sourcePage": "https://prtimes.jp/main/html/rd/p/000000458.000041446.html#eggs-n-things",
+      "credit": "Photo: Tokyo Skytree Town / Gong cha",
+      "note": "Gong cha promotional food/drink photograph published in Tokyo Solamachi’s announcement of this branch. Illustrative opening preview; not a photograph taken at the forthcoming shop. No individual dish availability is asserted.",
+      "width": 1400,
+      "height": 998,
+      "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan/food-2026-10-14/15556-food-7e49f75c8a95fe29.webp",
+      "sha256": "7e49f75c8a95fe296d56e5063abf8e5950a4d1fcc795b6e82662e323a601975b"
+    },
+    {
+      "pinId": 15557,
+      "key": "15557-food",
+      "originalUrl": "https://prcdn.freetls.fastly.net/release_image/41446/458/41446-458-52875580322ad8ba9261dba628e3e230-3900x2600.jpg?width=1950&height=1350&quality=85%2C65&format=jpeg&auto=webp&fit=bounds&bg-color=fff",
+      "sourcePage": "https://prtimes.jp/main/html/rd/p/000000458.000041446.html#eggs-n-things",
+      "credit": "Photo: Tokyo Skytree Town / Eggs ’n Things",
+      "note": "Eggs ’n Things promotional food/drink photograph published in Tokyo Solamachi’s announcement of this branch. Illustrative opening preview; not a photograph taken at the forthcoming shop. No individual dish availability is asserted.",
+      "width": 1400,
+      "height": 933,
+      "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan/food-2026-10-14/15557-food-ade65b77385b006d.webp",
+      "sha256": "ade65b77385b006dd4df748b818650737fb9e465739b746a1909300a589a12f5"
+    },
+    {
+      "pinId": 15568,
+      "key": "olive-1",
+      "originalUrl": "https://www.olivenooka.jp/menu/images/menu/f02.png",
+      "sourcePage": "https://www.olivenooka.jp/menu/pasta.html",
+      "credit": "Photo: Olive no Oka",
+      "note": "Official Olive no Oka brand menu photograph: えびとほうれん草のトマトペペロンチーノ. Representative food preview; availability at the forthcoming Sapporo Shinkotoni branch is not yet confirmed.",
+      "width": 480,
+      "height": 420,
+      "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan/food-2026-10-14/olive-1-1557c7f154c25768.webp",
+      "sha256": "1557c7f154c25768d5470c0c9826bf48b41164b38f0675a8e407a6e37234114d"
+    },
+    {
+      "pinId": 15568,
+      "key": "olive-0",
+      "originalUrl": "https://www.olivenooka.jp/menu/images/menu/f01.png",
+      "sourcePage": "https://www.olivenooka.jp/menu/pasta.html",
+      "credit": "Photo: Olive no Oka",
+      "note": "Official Olive no Oka brand menu photograph: アーリオオーリオ・ペペロンチーノ. Representative food preview; availability at the forthcoming Sapporo Shinkotoni branch is not yet confirmed.",
+      "width": 480,
+      "height": 420,
+      "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan/food-2026-10-14/olive-0-c08d6456be60d12e.webp",
+      "sha256": "c08d6456be60d12ed48507e514b7cb9e81d14224f80624fd4f0cb46621e2b8df"
+    },
+    {
+      "pinId": 15568,
+      "key": "olive-2",
+      "originalUrl": "https://www.olivenooka.jp/menu/images/menu/f03.png",
+      "sourcePage": "https://www.olivenooka.jp/menu/pasta.html",
+      "credit": "Photo: Olive no Oka",
+      "note": "Official Olive no Oka brand menu photograph: ボンゴレビアンコ. Representative food preview; availability at the forthcoming Sapporo Shinkotoni branch is not yet confirmed.",
+      "width": 480,
+      "height": 420,
+      "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan/food-2026-10-14/olive-2-c5f13b09d0990ab0.webp",
+      "sha256": "c5f13b09d0990ab0f4467a4ae123943fea5b889de49f96e4c56aab00b6a1f722"
+    },
+    {
+      "pinId": 15597,
+      "key": "shunka-5",
+      "originalUrl": "https://kaitensushi.shunka.jp/slideimg/topimg09saramatome.jpg",
+      "sourcePage": "https://kaitensushi.shunka.jp/",
+      "credit": "Photo: Kaitensushi Hakodate Shunka",
+      "note": "Food photograph from the operator’s original Hakodate restaurant website, used as a brand-food preview. The forthcoming Sapporo branch menu and availability are unconfirmed; this is not a photograph from Sapporo.",
+      "width": 1064,
+      "height": 666,
+      "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan/food-2026-10-14/shunka-5-47779b0ebf8ebe5e.webp",
+      "sha256": "47779b0ebf8ebe5ed9b12d067c9f9aa3a1cda8fed0b31f3c68feaabddd04da1e"
+    },
+    {
+      "pinId": 15597,
+      "key": "shunka-1",
+      "originalUrl": "https://kaitensushi.shunka.jp/slideimg/topimg01ika.gif",
+      "sourcePage": "https://kaitensushi.shunka.jp/",
+      "credit": "Photo: Kaitensushi Hakodate Shunka",
+      "note": "Food photograph from the operator’s original Hakodate restaurant website, used as a brand-food preview. The forthcoming Sapporo branch menu and availability are unconfirmed; this is not a photograph from Sapporo.",
+      "width": 1064,
+      "height": 665,
+      "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan/food-2026-10-14/shunka-1-d793e9d67a458503.webp",
+      "sha256": "d793e9d67a458503ed61bc9264970c31a95926e41fe7d2c644f89eb3dd1b562b"
+    },
+    {
+      "pinId": 15570,
+      "key": "french-food-0",
+      "originalUrl": "https://prcdn.freetls.fastly.net/release_image/116722/4/116722-4-4c0fb5bbb362298c6f4fe4e9d2d4cd9d-1568x1044.jpg?width=1950&height=1350&quality=85%2C65&format=jpeg&auto=webp&fit=bounds&bg-color=fff",
+      "sourcePage": "https://prtimes.jp/main/html/rd/p/000000004.000116722.html",
+      "credit": "Photo: Rakuchin / Taishu Sakaba Frenchman",
+      "note": "Frenchman brand food photograph from the operator’s Nagoya opening release. Illustrative brand-food preview only; the forthcoming COCONO SUSUKINO branch menu, prices and availability are not confirmed.",
+      "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan/food-2026-10-14/french-food-0-1613376bc8ebab46.webp",
+      "sha256": "1613376bc8ebab46b5a5d45b7dddec420cc35f2d8fdf9b847436ea558306d174",
+      "width": 1400,
+      "height": 932
+    },
+    {
+      "pinId": 15570,
+      "key": "french-food-2",
+      "originalUrl": "https://prcdn.freetls.fastly.net/release_image/116722/4/116722-4-07e90de632f71a59ab6e23cb1f98becb-1370x913.jpg?width=1950&height=1350&quality=85%2C65&format=jpeg&auto=webp&fit=bounds&bg-color=fff",
+      "sourcePage": "https://prtimes.jp/main/html/rd/p/000000004.000116722.html",
+      "credit": "Photo: Rakuchin / Taishu Sakaba Frenchman",
+      "note": "Frenchman brand food photograph from the operator’s Nagoya opening release. Illustrative brand-food preview only; the forthcoming COCONO SUSUKINO branch menu, prices and availability are not confirmed.",
+      "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan/food-2026-10-14/french-food-2-6b0b38dbb1dbdbcb.webp",
+      "sha256": "6b0b38dbb1dbdbcb600c4d56eac6eab4e8262ed79d2c353c3e079896154a5eff",
+      "width": 1370,
+      "height": 913
+    },
+    {
+      "pinId": 15570,
+      "key": "french-food-3",
+      "originalUrl": "https://prcdn.freetls.fastly.net/release_image/116722/4/116722-4-07063ec377b1e24d5e189a2ee2ae4647-1280x1280.jpg?width=1950&height=1350&quality=85%2C65&format=jpeg&auto=webp&fit=bounds&bg-color=fff",
+      "sourcePage": "https://prtimes.jp/main/html/rd/p/000000004.000116722.html",
+      "credit": "Photo: Rakuchin / Taishu Sakaba Frenchman",
+      "note": "Frenchman brand food photograph from the operator’s Nagoya opening release. Illustrative brand-food preview only; the forthcoming COCONO SUSUKINO branch menu, prices and availability are not confirmed.",
+      "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan/food-2026-10-14/french-food-3-9f46c84696e371c1.webp",
+      "sha256": "9f46c84696e371c1596bc34d4421abd99a3891cd27dabb638be2fa2f8edc7ff8",
+      "width": 1280,
+      "height": 1280
+    },
+    {
+      "pinId": 15571,
+      "key": "hama-93",
+      "originalUrl": "https://www.hama-sushi.co.jp/assets/menu/img/nigiri/pho_maguro.png",
+      "sourcePage": "https://www.hama-sushi.co.jp/menu/",
+      "credit": "Photo: Hama Sushi",
+      "note": "Official Hama Sushi brand food photograph from the standard nigiri menu, used as a representative preview. Availability at the forthcoming Sapporo Hiraoka branch is unconfirmed.",
+      "width": 210,
+      "height": 145,
+      "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan/food-2026-10-14/hama-93-8b73b1609d456757.webp",
+      "sha256": "8b73b1609d456757ff80186636adf95a6a469f228db789cfd3779ecdd18c1244"
+    },
+    {
+      "pinId": 15571,
+      "key": "hama-103",
+      "originalUrl": "https://www.hama-sushi.co.jp/assets/menu/img/nigiri/pho_salmon.png",
+      "sourcePage": "https://www.hama-sushi.co.jp/menu/",
+      "credit": "Photo: Hama Sushi",
+      "note": "Official Hama Sushi brand food photograph from the standard nigiri menu, used as a representative preview. Availability at the forthcoming Sapporo Hiraoka branch is unconfirmed.",
+      "width": 210,
+      "height": 145,
+      "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan/food-2026-10-14/hama-103-2ea71d9802022222.webp",
+      "sha256": "2ea71d9802022222bcab49468deeb9fd271a37a451931658510c7b283ce51b14"
+    },
+    {
+      "pinId": 15425,
+      "key": "arc-employer",
+      "originalUrl": "https://c74.s3.indeed.com/ed8f96cc-45bf-41ff-bebd-5f78aa810921%40w800",
+      "sourcePage": "https://townwork.net/viewjob/jobid_fe1c93b9812691b3/",
+      "credit": "Image: Augurizm / BistroARC recruitment via Townwork",
+      "note": "Illustrative employer recruitment image for BistroARC’s forthcoming Kego restaurant. It is not verified as the finished restaurant or its final menu.",
+      "width": 800,
+      "height": 600,
+      "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan/replacements-2026-10-14/arc-employer-769bc35e6e1cc63b.webp",
+      "sha256": "769bc35e6e1cc63bc165f7b45ed3d300de89fcbc85f4c96ecebbe39361425664"
+    },
+    {
+      "pinId": 15426,
+      "key": "daimyo-employer",
+      "originalUrl": "https://d1som9eclaj1c0.cloudfront.net/upload_picture/S1790231961290_1.jpg",
+      "sourcePage": "https://job.inshokuten.com/kyushu/work/detail/93179",
+      "credit": "Image: Stance / Daimyo Bistro recruitment via 求人飲食店ドットコム",
+      "note": "Illustrative image used by the employer in Daimyo Bistro’s opening recruitment announcement. Source labels it an illustrative photo; it is not a photograph of the forthcoming Atelier Daimyo venue.",
+      "width": 750,
+      "height": 500,
+      "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan/replacements-2026-10-14/daimyo-employer-ccc5e6f8496675de.webp",
+      "sha256": "ccc5e6f8496675dee021e4736acaa2cfe81dc167eef214cd89ffa6c2bf5d1485"
+    },
+    {
+      "pinId": 15447,
+      "key": "hiyori-operator-dark",
+      "originalUrl": "https://sasaya-company.jp/mg/wp-content/themes/sasaya/img/header/sasaya02.png",
+      "sourcePage": "https://sasaya-company.jp/brand/114",
+      "credit": "Brand artwork: SASAYA Holdings",
+      "note": "Official operator branding from the Hiyori opening page, used as a temporary representative image. This is the operator’s logo, not a food or venue photograph.",
+      "width": 1200,
+      "height": 600,
+      "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan/replacements-2026-10-14/hiyori-operator-dark-d631e75691d91a00.webp",
+      "sha256": "d631e75691d91a0005d519ccb50fc3fb453ba2abb8d73021a41ef28d8dcb2d23"
+    },
+    {
+      "pinId": 15448,
+      "key": "soushi-brand",
+      "originalUrl": "https://sasaya-company.jp/mg/wp-content/uploads/2026/09/b4a805cc70edba29b7e7032ffc90f914-e1790841659377.png",
+      "sourcePage": "https://sasaya-company.jp/brand/113",
+      "credit": "Brand artwork: SASAYA Holdings",
+      "note": "Official branch branding from the restaurant’s opening page, used as a representative image while food and venue photographs remain unpublished.",
+      "width": 450,
+      "height": 450,
+      "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan/replacements-2026-10-14/soushi-brand-8cd67c4b2ec3eb80.webp",
+      "sha256": "8cd67c4b2ec3eb80447a587117681802aa595cba8e14009a7410cfefdb4cf928"
+    },
+    {
+      "pinId": 15449,
+      "key": "sato-brand",
+      "originalUrl": "https://sasaya-company.jp/mg/wp-content/uploads/2026/09/9692d3c16a4a65d96804b89fc508394c-e1790841775996.png",
+      "sourcePage": "https://sasaya-company.jp/brand/115",
+      "credit": "Brand artwork: SASAYA Holdings",
+      "note": "Official branch branding from the restaurant’s opening page, used as a representative image while food and venue photographs remain unpublished.",
+      "width": 450,
+      "height": 439,
+      "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan/replacements-2026-10-14/sato-brand-4226f1140e6bd9dc.webp",
+      "sha256": "4226f1140e6bd9dc0591b18a8c926e9f08ed18f4a73261825e4b422dd9b3d4fb"
+    },
+    {
+      "pinId": 15510,
+      "key": "sanrio-opening-art",
+      "originalUrl": "https://prcdn.freetls.fastly.net/release_image/18505/4440/18505-4440-b7a28846930a7a7be4ca71785b579cb9-1400x872.jpg?width=1950&height=1350&quality=85%2C65&format=jpeg&auto=webp&fit=bounds&bg-color=fff",
+      "sourcePage": "https://prtimes.jp/main/html/rd/p/000004440.000018505.html",
+      "credit": "Image: Mash Holdings · ©2026 SANRIO CO., LTD. APPROVAL NO. L664297",
+      "note": "Official Sanrio House artwork from the Nagoya PARCO cafe-opening announcement. Representative opening artwork, not a photograph of the cafe or its food.",
+      "width": 1400,
+      "height": 872,
+      "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan/replacements-2026-10-14/sanrio-opening-art-c17f0a09b55bdbd6.webp",
+      "sha256": "c17f0a09b55bdbd6fc7bab3b855f98498cb7cb2d76fa794fccd5c02b14d7c877"
+    }
+  ],
+  "publicPinAndGuideVerification": [
+    {
+      "pinId": 15410,
+      "verifiedMedia": 1,
+      "guideView": "upcoming",
+      "region": "fukuoka",
+      "publicPinAndGuideVerified": true
+    },
+    {
+      "pinId": 15556,
+      "verifiedMedia": 1,
+      "guideView": "upcoming",
+      "region": "tokyo",
+      "publicPinAndGuideVerified": true
+    },
+    {
+      "pinId": 15557,
+      "verifiedMedia": 1,
+      "guideView": "upcoming",
+      "region": "tokyo",
+      "publicPinAndGuideVerified": true
+    },
+    {
+      "pinId": 15568,
+      "verifiedMedia": 3,
+      "guideView": "upcoming",
+      "region": "sapporo",
+      "publicPinAndGuideVerified": true
+    },
+    {
+      "pinId": 15597,
+      "verifiedMedia": 2,
+      "guideView": "upcoming",
+      "region": "sapporo",
+      "publicPinAndGuideVerified": true
+    },
+    {
+      "pinId": 15570,
+      "verifiedMedia": 3,
+      "guideView": "upcoming",
+      "region": "sapporo",
+      "publicPinAndGuideVerified": true
+    },
+    {
+      "pinId": 15571,
+      "verifiedMedia": 2,
+      "guideView": "upcoming",
+      "region": "sapporo",
+      "publicPinAndGuideVerified": true
+    },
+    {
+      "pinId": 15425,
+      "verifiedMedia": 1,
+      "guideView": "upcoming",
+      "region": "fukuoka",
+      "publicPinAndGuideVerified": true
+    },
+    {
+      "pinId": 15426,
+      "verifiedMedia": 1,
+      "guideView": "upcoming",
+      "region": "fukuoka",
+      "publicPinAndGuideVerified": true
+    },
+    {
+      "pinId": 15447,
+      "verifiedMedia": 1,
+      "guideView": "upcoming",
+      "region": "osaka",
+      "publicPinAndGuideVerified": true
+    },
+    {
+      "pinId": 15448,
+      "verifiedMedia": 1,
+      "guideView": "upcoming",
+      "region": "osaka",
+      "publicPinAndGuideVerified": true
+    },
+    {
+      "pinId": 15449,
+      "verifiedMedia": 1,
+      "guideView": "upcoming",
+      "region": "osaka",
+      "publicPinAndGuideVerified": true
+    },
+    {
+      "pinId": 15510,
+      "verifiedMedia": 1,
+      "guideView": "upcoming",
+      "region": "nagoya",
+      "publicPinAndGuideVerified": true
+    }
+  ],
+  "policy": "Owner explicitly authorized food and other best replacement imagery. Official national brand food and original-branch previews are labelled, with no assertion of individual dishes at forthcoming branches. Employer recruitment photos are explicitly illustrative. Branding/opening artwork is labelled as such.",
+  "galleryOrdering": "Food replaces construction imagery as the lead image on pins 15568 and 15571 by lowering the existing construction-photo links to weight 0.5; original photos remain in the galleries.",
+  "deployment": "Database APIs and Azure only; no application deployment.",
+  "all21OriginallyMissingPinsVerification": [
+    {
+      "pinId": 15410,
+      "name": "Shabu-Yo — Aeon Mall Fukuoka Ito",
+      "imageCount": 1,
+      "leadImage": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan/food-2026-10-14/shabu-food-a053b9cae5137bb8.webp",
+      "credit": "Image: Skylark / Shabu-Yo · Official Shabu-Yo pork shabu-shabu promotional image. Brand-food preview for the forthcoming Fukuoka Ito branch; prices and course availability shown in the national artwork are not confirmed for this branch.",
+      "sourceUrl": "https://www.skylark.co.jp/syabuyo/menu/recommend/index.html",
+      "width": 1056,
+      "height": 1231,
+      "publicImageDecoded": true
+    },
+    {
+      "pinId": 15415,
+      "name": "SMAAK Hakata",
+      "imageCount": 3,
+      "leadImage": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan/photo-repair-2026-10-14/15415-2-99266366c8dec4c7.webp",
+      "credit": "Image: Granada / SMAAK Hakata · Official design rendering of the planned SMAAK Hakata dining room; not a completed-venue photograph.",
+      "sourceUrl": "https://prtimes.jp/main/html/rd/p/000000063.000041874.html",
+      "width": 1400,
+      "height": 812,
+      "publicImageDecoded": true
+    },
+    {
+      "pinId": 15424,
+      "name": "NODE TABLE — Richmond Hotel Fukuoka Tenjin",
+      "imageCount": 1,
+      "leadImage": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan/photo-repair-2026-10-14/15424-extra10-2-44692ca0f1372196.webp",
+      "credit": "Image: Richmond Hotel Fukuoka Tenjin · Restaurant design rendering on the hotel’s official branch dining page for its forthcoming renovation; not a completed-venue photograph. Final NODE TABLE layout is not independently confirmed.",
+      "sourceUrl": "https://richmondhotel.jp/fukuoka-tenjin/dishes/",
+      "width": 1400,
+      "height": 512,
+      "publicImageDecoded": true
+    },
+    {
+      "pinId": 15425,
+      "name": "BistroARC — Kego",
+      "imageCount": 1,
+      "leadImage": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan/replacements-2026-10-14/arc-employer-769bc35e6e1cc63b.webp",
+      "credit": "Image: Augurizm / BistroARC recruitment via Townwork · Illustrative employer recruitment image for BistroARC’s forthcoming Kego restaurant. It is not verified as the finished restaurant or its final menu.",
+      "sourceUrl": "https://townwork.net/viewjob/jobid_fe1c93b9812691b3/",
+      "width": 800,
+      "height": 600,
+      "publicImageDecoded": true
+    },
+    {
+      "pinId": 15426,
+      "name": "Daimyo Bistro — Atelier Daimyo",
+      "imageCount": 1,
+      "leadImage": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan/replacements-2026-10-14/daimyo-employer-ccc5e6f8496675de.webp",
+      "credit": "Image: Stance / Daimyo Bistro recruitment via 求人飲食店ドットコム · Illustrative image used by the employer in Daimyo Bistro’s opening recruitment announcement. Source labels it an illustrative photo; it is not a photograph of the forthcoming Atelier Daimyo venue.",
+      "sourceUrl": "https://job.inshokuten.com/kyushu/work/detail/93179",
+      "width": 750,
+      "height": 500,
+      "publicImageDecoded": true
+    },
+    {
+      "pinId": 15440,
+      "name": "Sushi Koki",
+      "imageCount": 4,
+      "leadImage": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan/photo-repair-2026-10-14/15440-more5-2-c89f5d32224bf19a.webp",
+      "credit": "Photo: 株式会社881 / Sushi Koki · Sushi pictured in Sushi Koki’s branch opening release; current individual dish availability is not asserted.",
+      "sourceUrl": "https://prtimes.jp/main/html/rd/p/000000011.000163693.html",
+      "width": 1376,
+      "height": 1032,
+      "publicImageDecoded": true
+    },
+    {
+      "pinId": 15447,
+      "name": "Yakitori to Soba Hiyori — provisional name",
+      "imageCount": 1,
+      "leadImage": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan/replacements-2026-10-14/hiyori-operator-dark-d631e75691d91a00.webp",
+      "credit": "Brand artwork: SASAYA Holdings · Official operator branding from the Hiyori opening page, used as a temporary representative image. This is the operator’s logo, not a food or venue photograph.",
+      "sourceUrl": "https://sasaya-company.jp/brand/114",
+      "width": 1200,
+      "height": 600,
+      "publicImageDecoded": true
+    },
+    {
+      "pinId": 15448,
+      "name": "Robata to Kamameshi Sōshi — provisional name",
+      "imageCount": 1,
+      "leadImage": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan/replacements-2026-10-14/soushi-brand-8cd67c4b2ec3eb80.webp",
+      "credit": "Brand artwork: SASAYA Holdings · Official branch branding from the restaurant’s opening page, used as a representative image while food and venue photographs remain unpublished.",
+      "sourceUrl": "https://sasaya-company.jp/brand/113",
+      "width": 450,
+      "height": 450,
+      "publicImageDecoded": true
+    },
+    {
+      "pinId": 15449,
+      "name": "Sumiyaki to Kamameshi Satō — provisional name",
+      "imageCount": 1,
+      "leadImage": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan/replacements-2026-10-14/sato-brand-4226f1140e6bd9dc.webp",
+      "credit": "Brand artwork: SASAYA Holdings · Official branch branding from the restaurant’s opening page, used as a representative image while food and venue photographs remain unpublished.",
+      "sourceUrl": "https://sasaya-company.jp/brand/115",
+      "width": 450,
+      "height": 439,
+      "publicImageDecoded": true
+    },
+    {
+      "pinId": 15466,
+      "name": "Ramen Ignoranc",
+      "imageCount": 4,
+      "leadImage": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan/photo-repair-2026-10-14/15466-extra0-5-ee43a3c87b9c485a.webp",
+      "credit": "Photo: Kyotopi · Ramen photographed at Ramen Ignorance in September 2026 by Kyotopi; current menu availability is not asserted.",
+      "sourceUrl": "https://kyotopi.jp/articles/ramen-ignorance",
+      "width": 640,
+      "height": 480,
+      "publicImageDecoded": true
+    },
+    {
+      "pinId": 15480,
+      "name": "Nigushi & Wine Roji Iru",
+      "imageCount": 1,
+      "leadImage": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan/photo-repair-2026-10-14/15480-more1-2-be7a02dfb8e552dc.webp",
+      "credit": "Photo: 関西ニューオープン情報 / Roji入ル · Roji入ル’s current branch sign in its September 2026 opening report. Old Km0-branded room and food images are excluded.",
+      "sourceUrl": "https://kansai-kaiten.com/rojiiru-kyoto2609/",
+      "width": 1000,
+      "height": 715,
+      "publicImageDecoded": true
+    },
+    {
+      "pinId": 15510,
+      "name": "Sanrio House Cafe — Nagoya PARCO",
+      "imageCount": 1,
+      "leadImage": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan/replacements-2026-10-14/sanrio-opening-art-c17f0a09b55bdbd6.webp",
+      "credit": "Image: Mash Holdings · ©2026 SANRIO CO., LTD. APPROVAL NO. L664297 · Official Sanrio House artwork from the Nagoya PARCO cafe-opening announcement. Representative opening artwork, not a photograph of the cafe or its food.",
+      "sourceUrl": "https://prtimes.jp/main/html/rd/p/000004440.000018505.html",
+      "width": 1400,
+      "height": 872,
+      "publicImageDecoded": true
+    },
+    {
+      "pinId": 15539,
+      "name": "Shabu-Yo — Shinjuku West Exit",
+      "imageCount": 1,
+      "leadImage": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan/photo-repair-2026-10-14/15539-tabelog-493a330d9e648891.webp",
+      "credit": "Photo: チョク76745 / Tabelog · Entrance of Shabu-Yo Shinjuku West Exit at Shinjuku West Exit Hall B3F, from the branch’s September 2026 gallery.",
+      "sourceUrl": "https://tabelog.com/tokyo/A1304/A130401/13325945/dtlphotolst/4/smp2/",
+      "width": 480,
+      "height": 640,
+      "publicImageDecoded": true
+    },
+    {
+      "pinId": 15556,
+      "name": "Gong cha — Tokyo Solamachi",
+      "imageCount": 1,
+      "leadImage": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan/food-2026-10-14/15556-food-7e49f75c8a95fe29.webp",
+      "credit": "Photo: Tokyo Skytree Town / Gong cha · Gong cha promotional food/drink photograph published in Tokyo Solamachi’s announcement of this branch. Illustrative opening preview; not a photograph taken at the forthcoming shop. No individual dish availability is asserted.",
+      "sourceUrl": "https://prtimes.jp/main/html/rd/p/000000458.000041446.html#eggs-n-things",
+      "width": 1400,
+      "height": 998,
+      "publicImageDecoded": true
+    },
+    {
+      "pinId": 15557,
+      "name": "Eggs ’n Things — Tokyo Solamachi",
+      "imageCount": 1,
+      "leadImage": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan/food-2026-10-14/15557-food-ade65b77385b006d.webp",
+      "credit": "Photo: Tokyo Skytree Town / Eggs ’n Things · Eggs ’n Things promotional food/drink photograph published in Tokyo Solamachi’s announcement of this branch. Illustrative opening preview; not a photograph taken at the forthcoming shop. No individual dish availability is asserted.",
+      "sourceUrl": "https://prtimes.jp/main/html/rd/p/000000458.000041446.html#eggs-n-things",
+      "width": 1400,
+      "height": 933,
+      "publicImageDecoded": true
+    },
+    {
+      "pinId": 15568,
+      "name": "Olive no Oka — Sapporo Shinkotoni",
+      "imageCount": 4,
+      "leadImage": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan/food-2026-10-14/olive-1-1557c7f154c25768.webp",
+      "credit": "Photo: Olive no Oka · Official Olive no Oka brand menu photograph: えびとほうれん草のトマトペペロンチーノ. Representative food preview; availability at the forthcoming Sapporo Shinkotoni branch is not yet confirmed.",
+      "sourceUrl": "https://www.olivenooka.jp/menu/pasta.html",
+      "width": 480,
+      "height": 420,
+      "publicImageDecoded": true
+    },
+    {
+      "pinId": 15569,
+      "name": "Yogurt World — COCONO SUSUKINO",
+      "imageCount": 3,
+      "leadImage": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan/photo-repair-2026-10-14/15569-extra8-1-c97df48153b9fea9.webp",
+      "credit": "Image: Yogurt World COCONO SUSUKINO / 札幌リスト · Branch-specific October 21 opening artwork for Yogurt World COCONO SUSUKINO. Promotional imagery, not a photograph of the shop.",
+      "sourceUrl": "https://sapporo-list.info/shop/yogurtworld-coconosusukino/",
+      "width": 820,
+      "height": 1024,
+      "publicImageDecoded": true
+    },
+    {
+      "pinId": 15570,
+      "name": "Frenchman — COCONO SUSUKINO",
+      "imageCount": 3,
+      "leadImage": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan/food-2026-10-14/french-food-0-1613376bc8ebab46.webp",
+      "credit": "Photo: Rakuchin / Taishu Sakaba Frenchman · Frenchman brand food photograph from the operator’s Nagoya opening release. Illustrative brand-food preview only; the forthcoming COCONO SUSUKINO branch menu, prices and availability are not confirmed.",
+      "sourceUrl": "https://prtimes.jp/main/html/rd/p/000000004.000116722.html",
+      "width": 1400,
+      "height": 932,
+      "publicImageDecoded": true
+    },
+    {
+      "pinId": 15571,
+      "name": "Hama Sushi — Sapporo Hiraoka",
+      "imageCount": 3,
+      "leadImage": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan/food-2026-10-14/hama-93-8b73b1609d456757.webp",
+      "credit": "Photo: Hama Sushi · Official Hama Sushi brand food photograph from the standard nigiri menu, used as a representative preview. Availability at the forthcoming Sapporo Hiraoka branch is unconfirmed.",
+      "sourceUrl": "https://www.hama-sushi.co.jp/menu/",
+      "width": 210,
+      "height": 145,
+      "publicImageDecoded": true
+    },
+    {
+      "pinId": 15580,
+      "name": "Shabu-Yo — Sapporo Soen",
+      "imageCount": 3,
+      "leadImage": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan/photo-repair-2026-10-14/15580-extra4-4-61fb6271142e4d26.webp",
+      "credit": "Photo: 号外NET 札幌市中央区 · Entrance of Shabu-Yo Sapporo Soen, photographed in its branch opening report.",
+      "sourceUrl": "https://sapporochuo.goguynet.jp/2026/10/02/skylark-co-jp-syabuyo/",
+      "width": 1280,
+      "height": 960,
+      "publicImageDecoded": true
+    },
+    {
+      "pinId": 15597,
+      "name": "Hakodate Shunka — Sapporo",
+      "imageCount": 2,
+      "leadImage": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan/food-2026-10-14/shunka-5-47779b0ebf8ebe5e.webp",
+      "credit": "Photo: Kaitensushi Hakodate Shunka · Food photograph from the operator’s original Hakodate restaurant website, used as a brand-food preview. The forthcoming Sapporo branch menu and availability are unconfirmed; this is not a photograph from Sapporo.",
+      "sourceUrl": "https://kaitensushi.shunka.jp/",
+      "width": 1064,
+      "height": 666,
+      "publicImageDecoded": true
+    }
+  ]
+}

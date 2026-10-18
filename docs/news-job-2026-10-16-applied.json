@@ -1,0 +1,1950 @@
+{
+  "runId": 10,
+  "job": "news",
+  "requestedSlot": "06:00 America/Los_Angeles",
+  "newPins": [
+    {
+      "created": 16015,
+      "title": "Caterpillar Allocates Up to $10 Million for North Carolina Workforce Training"
+    },
+    {
+      "created": 16016,
+      "title": "Anthropic Releases Its Next Claude Fable Model"
+    },
+    {
+      "created": 16017,
+      "title": "Brent Crude Oil Price \u2014 October 2026"
+    },
+    {
+      "created": 16018,
+      "title": "Anthropic Launches $100 Million Claude Frontier Academy to Train 10,000 Engineers"
+    },
+    {
+      "created": 16019,
+      "title": "GSK Proposes Up to 1,217 Job Cuts Across Its Belgian Sites"
+    }
+  ],
+  "maintainedPins": [
+    2825,
+    4576,
+    15161,
+    1973,
+    4055,
+    4900,
+    5093,
+    2004
+  ],
+  "events": [
+    {
+      "pinId": 253,
+      "handPreserved": false,
+      "saved": {
+        "performers": [],
+        "ticketUrl": null,
+        "lowPrice": null,
+        "highPrice": null,
+        "priceCurrency": null,
+        "tiers": [],
+        "itinerary": [],
+        "availability": null,
+        "onSaleDate": null,
+        "source": "session",
+        "sourceUrl": "https://en.wikipedia.org/wiki/2030_Winter_Olympics",
+        "checkedAt": "2026-10-16T18:00:03.018Z"
+      }
+    },
+    {
+      "pinId": 256,
+      "handPreserved": false,
+      "saved": {
+        "performers": [],
+        "ticketUrl": null,
+        "lowPrice": null,
+        "highPrice": null,
+        "priceCurrency": null,
+        "tiers": [],
+        "itinerary": [],
+        "availability": null,
+        "onSaleDate": null,
+        "source": "session",
+        "sourceUrl": "https://en.wikipedia.org/wiki/2032_Summer_Olympics",
+        "checkedAt": "2026-10-16T18:00:03.209Z"
+      }
+    },
+    {
+      "pinId": 4336,
+      "handPreserved": false,
+      "saved": {
+        "performers": [],
+        "ticketUrl": null,
+        "lowPrice": null,
+        "highPrice": null,
+        "priceCurrency": null,
+        "tiers": [],
+        "itinerary": [],
+        "availability": null,
+        "onSaleDate": null,
+        "source": "session",
+        "sourceUrl": "https://www.reaganfoundation.org/reagan-institute/centers/peace-through-strength/program/reagan-national-defense-forum-original",
+        "checkedAt": "2026-10-16T17:42:31.029Z"
+      }
+    },
+    {
+      "pinId": 4337,
+      "handPreserved": false,
+      "saved": {
+        "performers": [],
+        "ticketUrl": null,
+        "lowPrice": null,
+        "highPrice": null,
+        "priceCurrency": null,
+        "tiers": [],
+        "itinerary": [],
+        "availability": null,
+        "onSaleDate": null,
+        "source": "session",
+        "sourceUrl": "https://www.airshow.com.cn/Category_1216/Index.aspx",
+        "checkedAt": "2026-10-16T17:42:31.466Z"
+      }
+    },
+    {
+      "pinId": 4365,
+      "handPreserved": false,
+      "saved": {
+        "performers": [
+          {
+            "name": "Harry Styles",
+            "type": "Person"
+          }
+        ],
+        "ticketUrl": "https://www.ticketmaster.com/harry-styles-together-together-harryween-new-york-new-york-10-31-2026/event/3B00643506DA83DE",
+        "lowPrice": null,
+        "highPrice": null,
+        "priceCurrency": null,
+        "tiers": [],
+        "itinerary": [],
+        "availability": null,
+        "onSaleDate": null,
+        "source": "session",
+        "sourceUrl": "https://www.ticketmaster.com/harry-styles-tickets/artist/2366444",
+        "checkedAt": "2026-10-16T17:37:18.077Z"
+      }
+    },
+    {
+      "pinId": 4366,
+      "handPreserved": false,
+      "saved": {
+        "performers": [
+          {
+            "name": "Harry Styles",
+            "type": "Person"
+          }
+        ],
+        "ticketUrl": "https://www.ticketmaster.com.au/harry-styles-together-together-docklands-27-11-2026/event/25006436CFC6E40D",
+        "lowPrice": null,
+        "highPrice": null,
+        "priceCurrency": null,
+        "tiers": [],
+        "itinerary": [],
+        "availability": "SoldOut",
+        "onSaleDate": null,
+        "source": "session",
+        "sourceUrl": "https://www.ticketmaster.com.au/harry-styles-tickets/artist/2366444",
+        "checkedAt": "2026-10-16T17:40:46.572Z"
+      }
+    },
+    {
+      "pinId": 4570,
+      "handPreserved": false,
+      "saved": {
+        "performers": [],
+        "ticketUrl": null,
+        "lowPrice": null,
+        "highPrice": null,
+        "priceCurrency": null,
+        "tiers": [],
+        "itinerary": [],
+        "availability": null,
+        "onSaleDate": null,
+        "source": "session",
+        "sourceUrl": "https://irish-presidency.consilium.europa.eu/media/qkfmfrbw/2026_06_15-_indicative-calendar-ie-presidency.pdf",
+        "checkedAt": "2026-10-16T17:42:33.261Z"
+      }
+    },
+    {
+      "pinId": 4576,
+      "handPreserved": false,
+      "saved": {
+        "performers": [],
+        "ticketUrl": null,
+        "lowPrice": null,
+        "highPrice": null,
+        "priceCurrency": null,
+        "tiers": [],
+        "itinerary": [],
+        "availability": null,
+        "onSaleDate": null,
+        "source": "session",
+        "sourceUrl": "https://meetings.ccamlr.org/en/ccamlr-45",
+        "checkedAt": "2026-10-16T17:37:13.534Z"
+      }
+    },
+    {
+      "pinId": 4586,
+      "handPreserved": false,
+      "saved": {
+        "performers": [],
+        "ticketUrl": null,
+        "lowPrice": null,
+        "highPrice": null,
+        "priceCurrency": null,
+        "tiers": [],
+        "itinerary": [],
+        "availability": null,
+        "onSaleDate": null,
+        "source": "session",
+        "sourceUrl": "https://www.iccat.int/en/Meetings.html",
+        "checkedAt": "2026-10-16T17:40:44.220Z"
+      }
+    },
+    {
+      "pinId": 4591,
+      "handPreserved": false,
+      "saved": {
+        "performers": [],
+        "ticketUrl": null,
+        "lowPrice": null,
+        "highPrice": null,
+        "priceCurrency": null,
+        "tiers": [],
+        "itinerary": [],
+        "availability": null,
+        "onSaleDate": null,
+        "source": "session",
+        "sourceUrl": "https://meetings.wcpfc.int/meetings/wcpfc23",
+        "checkedAt": "2026-10-16T17:40:48.754Z"
+      }
+    },
+    {
+      "pinId": 4612,
+      "handPreserved": false,
+      "saved": {
+        "performers": [],
+        "ticketUrl": null,
+        "lowPrice": null,
+        "highPrice": null,
+        "priceCurrency": null,
+        "tiers": [],
+        "itinerary": [],
+        "availability": null,
+        "onSaleDate": null,
+        "source": "session",
+        "sourceUrl": "https://www.beaujolais.com/en/a-world-for-every-beaujolais/nouveau-by-beaujolais/",
+        "checkedAt": "2026-10-16T17:40:44.499Z"
+      }
+    },
+    {
+      "pinId": 4620,
+      "handPreserved": false,
+      "saved": {
+        "performers": [],
+        "ticketUrl": null,
+        "lowPrice": null,
+        "highPrice": null,
+        "priceCurrency": null,
+        "tiers": [],
+        "itinerary": [],
+        "availability": null,
+        "onSaleDate": null,
+        "source": "session",
+        "sourceUrl": "https://www.un.org/bbnjagreement/en",
+        "checkedAt": "2026-10-16T17:49:17.667Z"
+      }
+    },
+    {
+      "pinId": 4657,
+      "handPreserved": false,
+      "saved": {
+        "performers": [],
+        "ticketUrl": null,
+        "lowPrice": null,
+        "highPrice": null,
+        "priceCurrency": null,
+        "tiers": [],
+        "itinerary": [],
+        "availability": null,
+        "onSaleDate": null,
+        "source": "session",
+        "sourceUrl": "https://www.wto.org/english/news_e/news26_e/fish_01may26_382_e.htm",
+        "checkedAt": "2026-10-16T17:37:15.985Z"
+      }
+    },
+    {
+      "pinId": 4663,
+      "handPreserved": false,
+      "saved": {
+        "performers": [],
+        "ticketUrl": "https://bisbees.catchstat.com/",
+        "lowPrice": null,
+        "highPrice": null,
+        "priceCurrency": null,
+        "tiers": [],
+        "itinerary": [],
+        "availability": "InStock",
+        "onSaleDate": null,
+        "source": "session",
+        "sourceUrl": "https://www.bisbees.com/tournaments/bisbees-black-blue/schedule",
+        "checkedAt": "2026-10-16T17:37:13.731Z"
+      }
+    },
+    {
+      "pinId": 4671,
+      "handPreserved": false,
+      "saved": {
+        "performers": [],
+        "ticketUrl": null,
+        "lowPrice": null,
+        "highPrice": null,
+        "priceCurrency": null,
+        "tiers": [],
+        "itinerary": [],
+        "availability": null,
+        "onSaleDate": null,
+        "source": "session",
+        "sourceUrl": "https://www.narafestival.com/ice_en/",
+        "checkedAt": "2026-10-16T17:42:35.318Z"
+      }
+    },
+    {
+      "pinId": 4672,
+      "handPreserved": false,
+      "saved": {
+        "performers": [],
+        "ticketUrl": null,
+        "lowPrice": null,
+        "highPrice": null,
+        "priceCurrency": null,
+        "tiers": [],
+        "itinerary": [],
+        "availability": null,
+        "onSaleDate": null,
+        "source": "session",
+        "sourceUrl": "https://tayrivers.org/conservation-code/",
+        "checkedAt": "2026-10-16T17:49:21.839Z"
+      }
+    },
+    {
+      "pinId": 4864,
+      "handPreserved": false,
+      "saved": {
+        "performers": [],
+        "ticketUrl": "https://annapolisboatshows.ticketspice.com/2026-annapolis-sailboat-show",
+        "lowPrice": 10,
+        "highPrice": 55,
+        "priceCurrency": "USD",
+        "tiers": [
+          {
+            "label": "General Admission",
+            "price": 32
+          },
+          {
+            "note": "October 15 only, now elapsed.",
+            "label": "Preview Day",
+            "price": 55
+          },
+          {
+            "label": "Children 7\u201315",
+            "price": 10
+          },
+          {
+            "label": "Children 6 and under",
+            "price": 0
+          },
+          {
+            "note": "Sunday October 18 only; ID required at gate.",
+            "label": "Military Appreciation",
+            "price": 22
+          }
+        ],
+        "itinerary": [],
+        "availability": "InStock",
+        "onSaleDate": null,
+        "source": "session",
+        "sourceUrl": "https://www.annapolisboatshows.com/sailboat-show/",
+        "checkedAt": "2026-10-16T17:51:25.808Z"
+      }
+    },
+    {
+      "pinId": 4867,
+      "handPreserved": false,
+      "saved": {
+        "performers": [],
+        "ticketUrl": "https://ticketseicma.it/en/",
+        "lowPrice": 7,
+        "highPrice": 21.5,
+        "priceCurrency": "EUR",
+        "tiers": [
+          {
+            "note": "\u20ac20 after September 15 launch offer plus published \u20ac1.50 fixed booking fee; verify final checkout.",
+            "label": "Standard admission",
+            "price": 21.5
+          },
+          {
+            "note": "From 13:30 on public days November 5\u20138; booking fees may apply.",
+            "label": "Afternoon adult",
+            "price": 14
+          },
+          {
+            "note": "From 13:30 on public days; booking fees may apply.",
+            "label": "Afternoon children 4\u201313",
+            "price": 7
+          },
+          {
+            "note": "Registered school group with required documentation.",
+            "label": "School admission",
+            "price": 15
+          },
+          {
+            "note": "Public days only.",
+            "label": "Children 0\u20133",
+            "price": 0
+          }
+        ],
+        "itinerary": [],
+        "availability": "InStock",
+        "onSaleDate": null,
+        "source": "session",
+        "sourceUrl": "https://ticketseicma.it/en/",
+        "checkedAt": "2026-10-16T17:51:25.966Z"
+      }
+    },
+    {
+      "pinId": 4893,
+      "handPreserved": true,
+      "saved": {
+        "performers": [],
+        "ticketUrl": "https://unplugged.paxsite.com/philly/en-us/registration/buy-badges.html",
+        "lowPrice": 45,
+        "highPrice": 101.99,
+        "priceCurrency": "USD",
+        "tiers": [],
+        "itinerary": [],
+        "availability": "InStock",
+        "onSaleDate": null,
+        "source": "hand",
+        "sourceUrl": "https://unplugged.paxsite.com/philly/en-us/registration/buy-badges.html",
+        "checkedAt": "2026-09-30T00:41:06.351Z"
+      }
+    },
+    {
+      "pinId": 4897,
+      "handPreserved": true,
+      "saved": {
+        "performers": [],
+        "ticketUrl": "https://gdc.informafestivals.com/2027/registrations/Attendee",
+        "lowPrice": 99,
+        "highPrice": 1149,
+        "priceCurrency": "USD",
+        "tiers": [],
+        "itinerary": [],
+        "availability": "InStock",
+        "onSaleDate": null,
+        "source": "hand",
+        "sourceUrl": "https://gdc.informafestivals.com/2027/registrations/Attendee",
+        "checkedAt": "2026-09-30T00:43:12.714Z"
+      }
+    },
+    {
+      "pinId": 4900,
+      "handPreserved": true,
+      "saved": {
+        "performers": [],
+        "ticketUrl": "https://cart.sxsw.com/",
+        "lowPrice": 625,
+        "highPrice": 1495,
+        "priceCurrency": "USD",
+        "tiers": [],
+        "itinerary": [],
+        "availability": "InStock",
+        "onSaleDate": null,
+        "source": "hand",
+        "sourceUrl": "https://cart.sxsw.com/",
+        "checkedAt": "2026-09-30T00:44:51.378Z"
+      }
+    },
+    {
+      "pinId": 4905,
+      "handPreserved": true,
+      "saved": {
+        "performers": [],
+        "ticketUrl": "https://www.c2e2.com/en-us/buy/tickets.html",
+        "lowPrice": 50.14,
+        "highPrice": 420.73,
+        "priceCurrency": "USD",
+        "tiers": [],
+        "itinerary": [],
+        "availability": "InStock",
+        "onSaleDate": null,
+        "source": "hand",
+        "sourceUrl": "https://www.c2e2.com/en-us/buy/tickets.html",
+        "checkedAt": "2026-09-30T00:47:36.648Z"
+      }
+    },
+    {
+      "pinId": 4913,
+      "handPreserved": true,
+      "saved": {
+        "performers": [],
+        "ticketUrl": null,
+        "lowPrice": null,
+        "highPrice": null,
+        "priceCurrency": null,
+        "tiers": [],
+        "itinerary": [],
+        "availability": "PreOrder",
+        "onSaleDate": null,
+        "source": "hand",
+        "sourceUrl": "https://animenyc.com/",
+        "checkedAt": "2026-09-30T00:51:38.030Z"
+      }
+    },
+    {
+      "pinId": 4983,
+      "handPreserved": false,
+      "saved": {
+        "performers": [
+          {
+            "name": "The Founders ROCK\u2122",
+            "type": "PerformingGroup"
+          }
+        ],
+        "ticketUrl": "https://www.fintechfestival.sg/registration",
+        "lowPrice": 250,
+        "highPrice": 6000,
+        "priceCurrency": "SGD",
+        "tiers": [
+          {
+            "note": "All conference stages, MeetUp and After Hours.",
+            "label": "Delegate Pass",
+            "price": 1500
+          },
+          {
+            "note": "Senior leaders/C-suite; includes November16\u201317 Insights2040 and executive access.",
+            "label": "Executive Pass",
+            "price": 6000
+          },
+          {
+            "note": "Startup incorporated in last five years.",
+            "label": "Startup Pass",
+            "price": 650
+          },
+          {
+            "note": "Restricted meeting and exhibition access.",
+            "label": "MeetUp Pass",
+            "price": 380
+          },
+          {
+            "note": "Online only; no in-person admission.",
+            "label": "Livestream Pass",
+            "price": 250
+          },
+          {
+            "note": "Eligible official institutions.",
+            "label": "Policy Pass",
+            "price": 0
+          },
+          {
+            "note": "Current eligible staff/students.",
+            "label": "Academic Pass",
+            "price": 0
+          },
+          {
+            "note": "Exhibition and three stages; upgrades required for additional access.",
+            "label": "Trade Visitor Pass",
+            "price": 0
+          },
+          {
+            "note": "Editorial accreditation required.",
+            "label": "Media Pass",
+            "price": 0
+          },
+          {
+            "note": "Per pass; minimum three.",
+            "label": "Delegate group 3\u20135",
+            "price": 1050
+          },
+          {
+            "note": "Per pass; minimum six.",
+            "label": "Delegate group 6\u20139",
+            "price": 880
+          },
+          {
+            "note": "Per pass; minimum ten.",
+            "label": "Delegate group 10+",
+            "price": 800
+          }
+        ],
+        "itinerary": [],
+        "availability": "InStock",
+        "onSaleDate": null,
+        "source": "session",
+        "sourceUrl": "https://www.fintechfestival.sg/registration",
+        "checkedAt": "2026-10-16T17:58:48.382Z"
+      }
+    },
+    {
+      "pinId": 4986,
+      "handPreserved": false,
+      "saved": {
+        "performers": [
+          {
+            "name": "Riley Green",
+            "type": "Person"
+          },
+          {
+            "name": "Sarah McLachlan",
+            "type": "Person"
+          },
+          {
+            "name": "James Barker Band",
+            "type": "PerformingGroup"
+          }
+        ],
+        "ticketUrl": null,
+        "lowPrice": null,
+        "highPrice": null,
+        "priceCurrency": null,
+        "tiers": [],
+        "itinerary": [],
+        "availability": null,
+        "onSaleDate": null,
+        "source": "session",
+        "sourceUrl": "https://ca.billboard.com/music/music-news/riley-green-grey-cup-halftime",
+        "checkedAt": "2026-10-16T17:58:48.195Z"
+      }
+    },
+    {
+      "pinId": 5031,
+      "handPreserved": false,
+      "saved": {
+        "performers": [],
+        "ticketUrl": "https://www.valenciaciudaddelrunning.com/en/marathon/info-registration-2026/",
+        "lowPrice": 200,
+        "highPrice": 200,
+        "priceCurrency": "EUR",
+        "tiers": [],
+        "itinerary": [],
+        "availability": "SoldOut",
+        "onSaleDate": null,
+        "source": "session",
+        "sourceUrl": "https://www.visitvalencia.com/en/events-valencia/enjoy-trinidad-alfonso-zurich-marathon",
+        "checkedAt": "2026-10-16T17:58:52.405Z"
+      }
+    },
+    {
+      "pinId": 5092,
+      "handPreserved": false,
+      "saved": {
+        "performers": [],
+        "ticketUrl": "https://buyer.cantonfair.org.cn/register/buyer/email?source_type=16",
+        "lowPrice": 0,
+        "highPrice": 0,
+        "priceCurrency": "CNY",
+        "tiers": [],
+        "itinerary": [],
+        "availability": null,
+        "onSaleDate": null,
+        "source": "session",
+        "sourceUrl": "https://olachina.org/the-140th-canton-fair/",
+        "checkedAt": "2026-10-16T17:53:29.824Z"
+      }
+    },
+    {
+      "pinId": 5093,
+      "handPreserved": false,
+      "saved": {
+        "performers": [],
+        "ticketUrl": "https://f1saopaulo.com.br/en/",
+        "lowPrice": 495,
+        "highPrice": 4680,
+        "priceCurrency": "BRL",
+        "tiers": [
+          {
+            "note": "Full price; subject to availability.",
+            "label": "Sector G",
+            "price": 990
+          },
+          {
+            "note": "Eligibility must be verified.",
+            "label": "Sector G half-price",
+            "price": 495
+          },
+          {
+            "note": "Full price; subject to availability.",
+            "label": "Sector A",
+            "price": 1590
+          },
+          {
+            "note": "Eligibility must be verified.",
+            "label": "Sector A half-price",
+            "price": 795
+          },
+          {
+            "note": "Covered grandstand; full price.",
+            "label": "Sector H",
+            "price": 2850
+          },
+          {
+            "note": "Covered grandstand; eligibility required.",
+            "label": "Sector H half-price",
+            "price": 1425
+          },
+          {
+            "note": "Covered grandstand with food included; full price only.",
+            "label": "Sector D",
+            "price": 4680
+          }
+        ],
+        "itinerary": [],
+        "availability": null,
+        "onSaleDate": null,
+        "source": "session",
+        "sourceUrl": "https://f1saopaulo.com.br/en/noticias/f1-sao-paulo-gp-last-chance-to-attend-this-years-race-at-interlagos/",
+        "checkedAt": "2026-10-16T17:57:32.943Z"
+      }
+    },
+    {
+      "pinId": 5102,
+      "handPreserved": false,
+      "saved": {
+        "performers": [],
+        "ticketUrl": "https://rsvp.withgoogle.com/events/android-dev-summit-bayview/forms/registration",
+        "lowPrice": null,
+        "highPrice": null,
+        "priceCurrency": null,
+        "tiers": [],
+        "itinerary": [],
+        "availability": null,
+        "onSaleDate": null,
+        "source": "session",
+        "sourceUrl": "https://9to5google.com/2026/09/25/android-dev-summit-android-18/",
+        "checkedAt": "2026-10-16T17:53:30.147Z"
+      }
+    },
+    {
+      "pinId": 5106,
+      "handPreserved": false,
+      "saved": {
+        "performers": [],
+        "ticketUrl": null,
+        "lowPrice": null,
+        "highPrice": null,
+        "priceCurrency": null,
+        "tiers": [],
+        "itinerary": [],
+        "availability": null,
+        "onSaleDate": null,
+        "source": "session",
+        "sourceUrl": "https://www.thailandhighlights.com/thailand/loy-krathong-festival",
+        "checkedAt": "2026-10-16T17:58:50.441Z"
+      }
+    },
+    {
+      "pinId": 5124,
+      "handPreserved": false,
+      "saved": {
+        "performers": [],
+        "ticketUrl": null,
+        "lowPrice": 0,
+        "highPrice": 0,
+        "priceCurrency": "EUR",
+        "tiers": [],
+        "itinerary": [],
+        "availability": "InStock",
+        "onSaleDate": null,
+        "source": "session",
+        "sourceUrl": "https://carnetsvanille.com/en/route-du-rhum-in-saint-malo/",
+        "checkedAt": "2026-10-16T17:53:32.072Z"
+      }
+    },
+    {
+      "pinId": 5125,
+      "handPreserved": false,
+      "saved": {
+        "performers": [],
+        "ticketUrl": null,
+        "lowPrice": null,
+        "highPrice": null,
+        "priceCurrency": null,
+        "tiers": [],
+        "itinerary": [],
+        "availability": null,
+        "onSaleDate": null,
+        "source": "session",
+        "sourceUrl": "https://www.yacht.de/en/regatta/races/golden-globe-race-2026-sail-like-it-s-1968-experience-it-like-it-s-2026/",
+        "checkedAt": "2026-10-16T17:51:28.399Z"
+      }
+    },
+    {
+      "pinId": 5182,
+      "handPreserved": false,
+      "saved": {
+        "performers": [
+          {
+            "name": "Mohammed Aljaadan",
+            "type": "Person"
+          },
+          {
+            "name": "Kristalina Georgieva",
+            "type": "Person"
+          }
+        ],
+        "ticketUrl": "https://www.imfconnect.org/content/imf/en/meetings/AM26/Registration.html",
+        "lowPrice": null,
+        "highPrice": null,
+        "priceCurrency": null,
+        "tiers": [],
+        "itinerary": [],
+        "availability": null,
+        "onSaleDate": null,
+        "source": "session",
+        "sourceUrl": "https://www.imf.org/en/meetings/2026/annual",
+        "checkedAt": "2026-10-16T17:54:50.018Z"
+      }
+    },
+    {
+      "pinId": 5200,
+      "handPreserved": true,
+      "saved": {
+        "performers": [],
+        "ticketUrl": "https://www.messe-ticket.de/SWM_SHOP/Spiel2026",
+        "lowPrice": 13,
+        "highPrice": 35,
+        "priceCurrency": "EUR",
+        "tiers": [],
+        "itinerary": [],
+        "availability": "InStock",
+        "onSaleDate": null,
+        "source": "hand",
+        "sourceUrl": "https://www.messe-ticket.de/SWM_SHOP/Spiel2026",
+        "checkedAt": "2026-10-02T14:54:09.132Z"
+      }
+    },
+    {
+      "pinId": 5202,
+      "handPreserved": true,
+      "saved": {
+        "performers": [],
+        "ticketUrl": "https://tabletop.events/conventions/bgg.con-2026",
+        "lowPrice": 175,
+        "highPrice": 450,
+        "priceCurrency": "USD",
+        "tiers": [],
+        "itinerary": [],
+        "availability": "InStock",
+        "onSaleDate": null,
+        "source": "hand",
+        "sourceUrl": "https://tabletop.events/conventions/bgg.con-2026",
+        "checkedAt": "2026-10-02T14:54:48.282Z"
+      }
+    },
+    {
+      "pinId": 5439,
+      "handPreserved": true,
+      "saved": {
+        "performers": [],
+        "ticketUrl": null,
+        "lowPrice": 0,
+        "highPrice": 0,
+        "priceCurrency": "JPY",
+        "tiers": [],
+        "itinerary": [],
+        "availability": "PreOrder",
+        "onSaleDate": null,
+        "source": "hand",
+        "sourceUrl": "https://www.jumpfesta.com/",
+        "checkedAt": "2026-10-03T01:17:13.972Z"
+      }
+    },
+    {
+      "pinId": 5493,
+      "handPreserved": true,
+      "saved": {
+        "performers": [],
+        "ticketUrl": "https://tickets.formula1.com/en/f1-56257-qatar",
+        "lowPrice": 600,
+        "highPrice": 2000,
+        "priceCurrency": "QAR",
+        "tiers": [],
+        "itinerary": [],
+        "availability": "InStock",
+        "onSaleDate": null,
+        "source": "hand",
+        "sourceUrl": "https://www.qatar-tribune.com/article/249936/latest-news/formula-1-qatar-airways-qatar-grand-prix-2026-100-days-to-go-as-key-visual-unveiled",
+        "checkedAt": "2026-10-03T22:15:28.939Z"
+      }
+    },
+    {
+      "pinId": 5496,
+      "handPreserved": true,
+      "saved": {
+        "performers": [],
+        "ticketUrl": "https://www.motogp.com.au/tickets",
+        "lowPrice": 50,
+        "highPrice": 99,
+        "priceCurrency": "AUD",
+        "tiers": [],
+        "itinerary": [],
+        "availability": "InStock",
+        "onSaleDate": "2026-05-26T02:00:00.000Z",
+        "source": "hand",
+        "sourceUrl": "https://www.justbikes.com.au/news-and-reviews/ticket-guide-motogp-grand-prix-of-australia-2026/1097695",
+        "checkedAt": "2026-10-03T22:15:54.750Z"
+      }
+    },
+    {
+      "pinId": 5518,
+      "handPreserved": true,
+      "saved": {
+        "performers": [],
+        "ticketUrl": "https://www.vrc.com.au/products/2026-2027/general-admission/general-admission/?eventId=92743",
+        "lowPrice": 120,
+        "highPrice": 2195,
+        "priceCurrency": "AUD",
+        "tiers": [],
+        "itinerary": [],
+        "availability": "InStock",
+        "onSaleDate": null,
+        "source": "hand",
+        "sourceUrl": "https://www.vrc.com.au/race-days-and-events/2026-2027/lexus-melbourne-cup-day/",
+        "checkedAt": "2026-10-03T22:18:37.655Z"
+      }
+    },
+    {
+      "pinId": 5763,
+      "handPreserved": false,
+      "saved": {
+        "performers": [],
+        "ticketUrl": "https://bigtex.com/buy-tickets-new/",
+        "lowPrice": 12,
+        "highPrice": 27,
+        "priceCurrency": "USD",
+        "tiers": [
+          {
+            "note": "Starts at $10 plus $2 per-ticket fee; up to $25 plus $2 depending on day.",
+            "label": "Daily Admission",
+            "price": 12
+          },
+          {
+            "note": "Any day; published $27 including fees.",
+            "label": "Flex Ticket",
+            "price": 27
+          }
+        ],
+        "itinerary": [],
+        "availability": "InStock",
+        "onSaleDate": null,
+        "source": "session",
+        "sourceUrl": "https://bigtex.com/",
+        "checkedAt": "2026-10-16T17:57:02.431Z"
+      }
+    }
+  ],
+  "sentiments": {
+    "distinct": 135,
+    "rows": [
+      {
+        "id": 874,
+        "sentiment": 0.3,
+        "product": "A Returner's Magic Should Be Special",
+        "textHash": "a5df025fa98c3cfba44f583413dfee7d0b30848da93ef07e08df3951b279fea0"
+      },
+      {
+        "id": 4598,
+        "sentiment": 0.2,
+        "product": "",
+        "textHash": "8cb7be4ec6d72cbe0a598467fd62efb1ee4fd2c55691ca2486804e6d85973044"
+      },
+      {
+        "id": 5436,
+        "sentiment": 0.1,
+        "product": "The Summer Hikaru Died",
+        "textHash": "effd1d6ad2735400f3f39799a99ce5b6c3fb7e83c023580f77cb418c60db4074"
+      },
+      {
+        "id": 15309,
+        "sentiment": 0.4,
+        "product": "Ahsoka",
+        "textHash": "521257cc8fa569f0270b0e48cafffe6154285cbb7b4c16d10bd1682cdd76609d"
+      },
+      {
+        "id": 15310,
+        "sentiment": 0.4,
+        "product": "Bad Monkey",
+        "textHash": "bfd5eba2161c52e240f5e118bcdb9f0f6e7fc85f8108d066428ac2518e7bda76"
+      },
+      {
+        "id": 15311,
+        "sentiment": 0.4,
+        "product": "Black Doves",
+        "textHash": "17c01dd8b3e2211f1d0b584343fa3336a5a1ec5eb3cee195a97e043d1e31613e"
+      },
+      {
+        "id": 15312,
+        "sentiment": 0.4,
+        "product": "The Terminal List",
+        "textHash": "d196963fd40e6aceb73d632dd3bdc4e318417b551f551f769ac5705b7d3eb061"
+      },
+      {
+        "id": 15313,
+        "sentiment": 0.4,
+        "product": "The Lowdown",
+        "textHash": "9ddd87c436342ed94dc31ac7529d3c4628b9e02771dbddf4fe7d7736971ec12c"
+      },
+      {
+        "id": 15314,
+        "sentiment": 0.4,
+        "product": "The Rainmaker",
+        "textHash": "c686f2af7c670eddbd0182033ee6d9ea2a616036803ddcf17202ff2d63ebcf78"
+      },
+      {
+        "id": 15315,
+        "sentiment": 0.4,
+        "product": "Stick",
+        "textHash": "4a0419ed46710ebde1be60bbabf467cbb732ac49be831576def19cb1ef3d2cf7"
+      },
+      {
+        "id": 15316,
+        "sentiment": 0.4,
+        "product": "Sheriff Country",
+        "textHash": "6b6e232826ab0c7dd39412a594b8764ded44580992f77f4c647e04385d6cbe0c"
+      },
+      {
+        "id": 15317,
+        "sentiment": 0.4,
+        "product": "Marshals",
+        "textHash": "6dcfac6b95df4bdf869192c4b1879f05ee177d6e065418415999ebf1c616df09"
+      },
+      {
+        "id": 15318,
+        "sentiment": 0.4,
+        "product": "Dexter",
+        "textHash": "40069991df3d54102d3d12ee713bb501b490a1844b64be797618035d803801b6"
+      },
+      {
+        "id": 15319,
+        "sentiment": 0.4,
+        "product": "CIA",
+        "textHash": "29291f50676bed2e60ba58d89b600ca69464db5d475fb9e20b3928e441c65840"
+      },
+      {
+        "id": 15320,
+        "sentiment": 0.4,
+        "product": "Boston Blue",
+        "textHash": "a8eefe61ab798a4de8cfe27ae007514f4ab72d5152f9e5c35ad6bc6f1cc55400"
+      },
+      {
+        "id": 15321,
+        "sentiment": 0.4,
+        "product": "Best Medicine",
+        "textHash": "61038d4959e896f95315ad9863d5575126ae9b0170551e1530afaeef6d730d1b"
+      },
+      {
+        "id": 15322,
+        "sentiment": 0.4,
+        "product": "9-1-1",
+        "textHash": "bb0b02afb4f4d7169917d44e317d3bff266200de3cd3eb08e7c9bf6d46a25a73"
+      },
+      {
+        "id": 15323,
+        "sentiment": 0.4,
+        "product": "Scrubs",
+        "textHash": "ae66d54ea75a7697a52d1b9581e84c21047ce0624de5cb90ea3795e7afd45b0a"
+      },
+      {
+        "id": 15324,
+        "sentiment": 0.4,
+        "product": "The Lord of the Rings: The Rings of Power",
+        "textHash": "673bf74e5fe1c4f5da94be0a8c7758f841945c058a43fb277cc1778678cca529"
+      },
+      {
+        "id": 15325,
+        "sentiment": 0.4,
+        "product": "The Lord of the Rings: The Rings of Power",
+        "textHash": "2b64ff19cce09403bdcf724aa424cddd18ad186a1eb5a0ea23c0bb37fb5012ac"
+      },
+      {
+        "id": 15326,
+        "sentiment": 0.4,
+        "product": "Percy Jackson and the Olympians",
+        "textHash": "4ecf027569349a4d854e0e47d9912f6954a0316fbe42351a73781a689f0e93e8"
+      },
+      {
+        "id": 15327,
+        "sentiment": 0.4,
+        "product": "Percy Jackson and the Olympians",
+        "textHash": "2663cd90c4b779000b86575c9cdecea96a049a2a4184dd1f07168f0d73694a24"
+      },
+      {
+        "id": 15328,
+        "sentiment": 0.4,
+        "product": "Nobody Wants This",
+        "textHash": "b8f51d178358b3e64b55ac629af822078e1bc9cdeece053bbd166ab4a10e0f2d"
+      },
+      {
+        "id": 15329,
+        "sentiment": 0.4,
+        "product": "Nobody Wants This",
+        "textHash": "bef3efce4ad0c01dd864b83670940167f83f78e6df23edd7f09f747033bd2268"
+      },
+      {
+        "id": 15330,
+        "sentiment": 0.4,
+        "product": "St. Denis Medical",
+        "textHash": "60b7c39ccefebe26189fb1a76935fa5151096883d4fc9616aa21233b937d0b17"
+      },
+      {
+        "id": 15331,
+        "sentiment": 0.4,
+        "product": "St. Denis Medical",
+        "textHash": "78ee39e3e8a2a4e6f2b43b9077d637d307ebacced0c438cdd33aecac53e46d85"
+      },
+      {
+        "id": 15332,
+        "sentiment": 0.4,
+        "product": "Doc",
+        "textHash": "62ff079fadd367c582878f213a05f50b4f406eea3e6566f60b2a9a05da374a90"
+      },
+      {
+        "id": 15333,
+        "sentiment": 0.4,
+        "product": "Doc",
+        "textHash": "49f1262d2828584cd5da48bf5ede0fbb98a517c52f3c38c2c2d809a4f6210dc5"
+      },
+      {
+        "id": 15334,
+        "sentiment": 0.4,
+        "product": "Signora Volpe",
+        "textHash": "f1216cea556412dd553b313cdcd0103da33d260bcd457e47e14489e4ca1f1872"
+      },
+      {
+        "id": 15335,
+        "sentiment": 0.4,
+        "product": "Signora Volpe",
+        "textHash": "9753d23eb424a05478ad22ce0c7b9bdf966db3703afe38655f2276d85c21a46d"
+      },
+      {
+        "id": 15336,
+        "sentiment": 0.4,
+        "product": "Georgie & Mandy's First Marriage",
+        "textHash": "bf45e0eea00ebfaec1238a29129c614811726419c391189000ecf9758eb76671"
+      },
+      {
+        "id": 15337,
+        "sentiment": 0.4,
+        "product": "Georgie & Mandy's First Marriage",
+        "textHash": "e53a95639203b247ff18b5bfb753fc0dbde8c543c995dd74882f9a76c19e1e21"
+      },
+      {
+        "id": 15338,
+        "sentiment": 0.4,
+        "product": "NCIS",
+        "textHash": "e7ffbc33220525b4f6c5cfc5d1706a584977b5712130ab3e6e1d85b4e0846495"
+      },
+      {
+        "id": 15339,
+        "sentiment": 0.4,
+        "product": "NCIS",
+        "textHash": "9dddcfc1419688ead34c805be440d08f1f60d4ca0be77d528f811a1ddc1baa87"
+      },
+      {
+        "id": 15340,
+        "sentiment": 0.4,
+        "product": "The Hunting Wives",
+        "textHash": "b2489c833c07468be4da643e265aef8a9630cb596663099d6514e7e74bc7349c"
+      },
+      {
+        "id": 15341,
+        "sentiment": 0.4,
+        "product": "Silo",
+        "textHash": "d84415a286f7c8d7b18107e3d28cd791a987828d131ba7d74f10abf366b14a03"
+      },
+      {
+        "id": 15342,
+        "sentiment": 0.4,
+        "product": "Silo",
+        "textHash": "762f18058aba3f28285402deabdbf30270a7274b087bcbad82e70831fb249c42"
+      },
+      {
+        "id": 15343,
+        "sentiment": 0.4,
+        "product": "Silo",
+        "textHash": "f8011c75394fadf942ffc608fc4f144869ef59d11d22dbdb1f3fd1cbaae25670"
+      },
+      {
+        "id": 15344,
+        "sentiment": 0.4,
+        "product": "The Diplomat",
+        "textHash": "a0ea01afd70b91943fa268ba6683b54bcc2142b73a8594047d044a8a3bca31d0"
+      },
+      {
+        "id": 15345,
+        "sentiment": 0.4,
+        "product": "The Diplomat",
+        "textHash": "e41f41c69c36ddbfa9a979b03cc8205b7a034f9ac134cfeabb8b431405da234a"
+      },
+      {
+        "id": 15346,
+        "sentiment": 0.4,
+        "product": "The Diplomat",
+        "textHash": "b3b1a3808a927a0fd833867be190a1430574b05de847d21f43734f1944ee85d8"
+      },
+      {
+        "id": 15347,
+        "sentiment": 0.4,
+        "product": "The Gilded Age",
+        "textHash": "49283ab0e19b1847a113725c97245b360d076747dc61b53e511f9e9824b8ecd3"
+      },
+      {
+        "id": 15348,
+        "sentiment": 0.4,
+        "product": "The Gilded Age",
+        "textHash": "e8c0edce8fc4b121db0c9a13f54958eecc70938aeea3b3f4834df9e9634f6bf1"
+      },
+      {
+        "id": 15349,
+        "sentiment": 0.4,
+        "product": "The Gilded Age",
+        "textHash": "344ce8b6c4d088a9b9417d4e4b7f3272ebfef04106d4dc17832a861ee2fd9328"
+      },
+      {
+        "id": 15350,
+        "sentiment": 0.4,
+        "product": "Tracker",
+        "textHash": "ea9343a044c810f689f01869df19879b09e656ad4519b86c40fac4fe13ebbabb"
+      },
+      {
+        "id": 15351,
+        "sentiment": 0.4,
+        "product": "Tracker",
+        "textHash": "b0994982601953c50cfd2960347e8f97cde9e45d24bdde7190545e6de02320fd"
+      },
+      {
+        "id": 15352,
+        "sentiment": 0.4,
+        "product": "Tracker",
+        "textHash": "cb89d08976cf577b8f5570dabd1dedc7324bfc75fc59f1bfa05508e5e0c629b3"
+      },
+      {
+        "id": 15353,
+        "sentiment": 0.4,
+        "product": "Blue Lights",
+        "textHash": "97be1c067f510975fd733696b8fa4758a7a300ee3db09f0e5ddaa03d633563d1"
+      },
+      {
+        "id": 15354,
+        "sentiment": 0.4,
+        "product": "Blue Lights",
+        "textHash": "8a3461c17b72f7a5b2206c25f41e1987f510b2cb6c7397ef6d65a39b925982da"
+      },
+      {
+        "id": 15355,
+        "sentiment": 0.4,
+        "product": "Blue Lights",
+        "textHash": "8aa62ce0a7c6a7f03fa8befdef960b6159cb13682df44be9af4368bd32282026"
+      },
+      {
+        "id": 15356,
+        "sentiment": 0.4,
+        "product": "Elsbeth",
+        "textHash": "e1c3ee539a5443225c603fd0addf69d9cf14682ccf0f88921c7c85da370837a3"
+      },
+      {
+        "id": 15357,
+        "sentiment": 0.4,
+        "product": "Elsbeth",
+        "textHash": "045c3446b6f93aa048950e514bf63cc13f61ac41e8220fbda9b61e281a906922"
+      },
+      {
+        "id": 15358,
+        "sentiment": 0.4,
+        "product": "Elsbeth",
+        "textHash": "45134dec3166b98421d28bbaf9b4d68ae3ae4f8a3677cfffe7c91230d6acebc3"
+      },
+      {
+        "id": 15359,
+        "sentiment": 0.4,
+        "product": "Law & Order Toronto: Criminal Intent",
+        "textHash": "ec08d2abe5317e6a7a421e9c335a53d410255dbaee06e6ec1b29fd6cdf82a148"
+      },
+      {
+        "id": 15360,
+        "sentiment": 0.4,
+        "product": "Law & Order Toronto: Criminal Intent",
+        "textHash": "dd2a5691aaebddb4f8dea8bce64361eb0739a197e45630fb07565bd2b60f5106"
+      },
+      {
+        "id": 15361,
+        "sentiment": 0.4,
+        "product": "Law & Order Toronto: Criminal Intent",
+        "textHash": "e376d76d1dd5fdfea68b8a2962fe278ea715b51c72555bc991f7b54456bbcab5"
+      },
+      {
+        "id": 15362,
+        "sentiment": 0.4,
+        "product": "Blue Box",
+        "textHash": "74c2d057d9f572c350dcca52fefd56c3571e8b30108b09faff8fb21ce7ec6824"
+      },
+      {
+        "id": 15363,
+        "sentiment": 0.4,
+        "product": "Sakamoto Days",
+        "textHash": "bad4571ab8c98b3ace095738993dffe07e3bd49bffd5e3e9219ba49168235349"
+      },
+      {
+        "id": 15364,
+        "sentiment": 0.4,
+        "product": "Reincarnated as a Sword",
+        "textHash": "c91e79446bf51b8e9a612f0b397396d5b64dcc626bf1fbe0d60ae7fe33dca1b2"
+      },
+      {
+        "id": 15365,
+        "sentiment": 0.4,
+        "product": "The Unwanted Undead Adventurer",
+        "textHash": "922b0a398de32831c35c522c532620e0107236028eb0dc9217a70bf6aa9081e4"
+      },
+      {
+        "id": 15366,
+        "sentiment": 0.4,
+        "product": "Witch Hat Atelier",
+        "textHash": "0f6a8aba0a13c75daabe748f3899d6af754ad6a79d1f099c9d3ee07272ecd8cf"
+      },
+      {
+        "id": 15367,
+        "sentiment": 0.4,
+        "product": "Azur Lane",
+        "textHash": "4512517efd4701d7a6826d367f2d772d11774e1c54bfd61f54b49397f24636c7"
+      },
+      {
+        "id": 15368,
+        "sentiment": 0.4,
+        "product": "Rising Impact",
+        "textHash": "429c8365984ae0df9d6b8dffad6d9537f01dfd78179e8790dff51d4629d5961a"
+      },
+      {
+        "id": 15369,
+        "sentiment": 0.4,
+        "product": "Oshi no Ko",
+        "textHash": "16774f905a1faae05acadbd3a6d515e492724437be6f0c1a72d420bc90c7d8a0"
+      },
+      {
+        "id": 15370,
+        "sentiment": 0.4,
+        "product": "Demon Slayer",
+        "textHash": "e14be0c1095b03be63fca672c9cca8427e0500362d4af5ecda661b2f381ae608"
+      },
+      {
+        "id": 15371,
+        "sentiment": 0.4,
+        "product": "Dr. Stone",
+        "textHash": "16def47599bde39799ec850d03431d0a38da39dce56ac2ce291bfa7643ea5db6"
+      },
+      {
+        "id": 15372,
+        "sentiment": 0.4,
+        "product": "Bungo Stray Dogs",
+        "textHash": "4cc26dbf18553f495c736693c33465e0fd213653ce72093ad803db8ac3cd1e50"
+      },
+      {
+        "id": 15373,
+        "sentiment": 0.4,
+        "product": "Haikyuu!!",
+        "textHash": "122479f277797961252ec7a27dd935f072ad82800f678bcad3e171370586df4e"
+      },
+      {
+        "id": 15374,
+        "sentiment": 0.4,
+        "product": "KONOSUBA -God's blessing on this wonderful world!",
+        "textHash": "a08adef4873cf70f9ac5083bf85c7ed11fe25f53fa66c2eeb6ec5693ee12943b"
+      },
+      {
+        "id": 15375,
+        "sentiment": 0.4,
+        "product": "One-Punch Man",
+        "textHash": "122b5c7e03f744a2f2dbd1b546ec45aefba51be6e3621eef41da2f67fb80d9ea"
+      },
+      {
+        "id": 15376,
+        "sentiment": 0.4,
+        "product": "Miss Kobayashi's Dragon Maid",
+        "textHash": "9c992cff2ef4e19df17d73d4de391221fcd270b849d7c547da9caa39271e79ac"
+      },
+      {
+        "id": 15377,
+        "sentiment": 0.4,
+        "product": "My Teen Romantic Comedy SNAFU",
+        "textHash": "a33cdfa07000bda421228703000e7ec1c294fc46a69307f9535c662c72414ad0"
+      },
+      {
+        "id": 15378,
+        "sentiment": 0.4,
+        "product": "My Teen Romantic Comedy SNAFU",
+        "textHash": "bf58232529bf3edb0cc0b585705994dca5c7e7f9a2f6d122ccecae6acbe57a61"
+      },
+      {
+        "id": 15379,
+        "sentiment": 0.4,
+        "product": "Hana-Kimi",
+        "textHash": "17b065e2d4b44f27a16959e96664b4d04bc8ce58ee86d24ef56904e144cfd2c6"
+      },
+      {
+        "id": 15380,
+        "sentiment": 0.4,
+        "product": "Jack-of-All-Trades, Party of None",
+        "textHash": "992e73edb772a82936392e0bc1056733aa1010b2a7466c5d8b4ec9ac14d6b073"
+      },
+      {
+        "id": 15381,
+        "sentiment": 0.4,
+        "product": "No Doubt in Us",
+        "textHash": "1af293f91b88458be887fc6038c5cb5be98b207defd4ef545b95785bcfff2231"
+      },
+      {
+        "id": 15382,
+        "sentiment": 0.4,
+        "product": "Throne of Seal",
+        "textHash": "0afa798a8b076730d9ad8eb2f631ec5b8b179744139a055855b3a7d72488619f"
+      },
+      {
+        "id": 15383,
+        "sentiment": 0.4,
+        "product": "Fog Hill of Five Elements",
+        "textHash": "f68b2284f886c3abda3048b02c0a675196c8b55f90b6121458d7b99eef993eb2"
+      },
+      {
+        "id": 15384,
+        "sentiment": 0.4,
+        "product": "Evangelion",
+        "textHash": "85144f3b57d1c4eb9011ecd07e99a80655a9a1d621b0b44713edab7a661d5cb5"
+      },
+      {
+        "id": 15385,
+        "sentiment": 0.4,
+        "product": "Evangelion",
+        "textHash": "a3a4de97cebc361caeedcbc39381f622cb4f1f020937e4c855662ae3561edbf3"
+      },
+      {
+        "id": 15386,
+        "sentiment": 0.4,
+        "product": "That Time I Got Reincarnated as a Slime",
+        "textHash": "c03863439f98c4b38b1249f7dd73ba7722cb8f2aafa8a36626521ebc26d5bbc5"
+      },
+      {
+        "id": 15387,
+        "sentiment": 0.4,
+        "product": "That Time I Got Reincarnated as a Slime",
+        "textHash": "e0ec8e42283c8bc28491dc6c1fa989da898d91c76caf769f4fc295e86e77e7bf"
+      },
+      {
+        "id": 15388,
+        "sentiment": 0.4,
+        "product": "Re:ZERO -Starting Life in Another World-",
+        "textHash": "d1bf1cee5552416949c3e3b9568e9a6c77319bf2bdabc007f88e52719d6da9d9"
+      },
+      {
+        "id": 15389,
+        "sentiment": 0.4,
+        "product": "Re:ZERO -Starting Life in Another World-",
+        "textHash": "692b650c29929eeaf62ff2c6ac9b685f9b43ff2de671b971f57b6e10bc2250a6"
+      },
+      {
+        "id": 15390,
+        "sentiment": 0.4,
+        "product": "My Hero Academia",
+        "textHash": "507d37817b0fb914413db4864da59f5bd3e4d2100866509108a771f9a1de476b"
+      },
+      {
+        "id": 15391,
+        "sentiment": 0.4,
+        "product": "My Hero Academia",
+        "textHash": "ba497571e7ae87b3b7c2ea7aeda7880b1c54dc7b3048fd287e00228fd3246dc4"
+      },
+      {
+        "id": 15392,
+        "sentiment": 0.4,
+        "product": "My Hero Academia",
+        "textHash": "adb0833ac1fa1564cbb4da3dc416f48cde967f4255c95a3b645de535eb780a0d"
+      },
+      {
+        "id": 15393,
+        "sentiment": 0.4,
+        "product": "Dr. Stone",
+        "textHash": "c4e46974a5945a1455820ded31503ff78d9fe73b651e74b7e84a4187a0149af1"
+      },
+      {
+        "id": 15394,
+        "sentiment": 0.4,
+        "product": "Dr. Stone",
+        "textHash": "02b78d1fdbda61871c760e8f6b297d4a31ee1183d5c4cdf49748c55200ee489c"
+      },
+      {
+        "id": 15395,
+        "sentiment": 0.4,
+        "product": "Bungo Stray Dogs",
+        "textHash": "39d9c56e5deddf71516cb288a131661c5e8fddc3c26aee8b0b3e84630e6a23fd"
+      },
+      {
+        "id": 15396,
+        "sentiment": 0.4,
+        "product": "Bungo Stray Dogs",
+        "textHash": "806d7852b803e45b5626adab3bcd2c470876c2cdb419b0d5b8f0a9d982621bcd"
+      },
+      {
+        "id": 15397,
+        "sentiment": 0.4,
+        "product": "Bungo Stray Dogs",
+        "textHash": "fcb552720483136cdb0b55e7214a61cffe3a0846038da32d4b75bee0ff37ed6f"
+      },
+      {
+        "id": 15616,
+        "sentiment": 0.8,
+        "product": "Imperial Cider",
+        "textHash": "2857b4bcc1a79270d6bd5b28ff47cfd833bd1e7919d18cb2310b17bf614bef60"
+      },
+      {
+        "id": 15617,
+        "sentiment": 0.8,
+        "product": "Cider Barn",
+        "textHash": "8b99039418785b472a138d4910817437e2ba22401e2c3263b5e1bc4bc0c53487"
+      },
+      {
+        "id": 15618,
+        "sentiment": 0.8,
+        "product": "Rum Cask Cider",
+        "textHash": "4833bd6e086b173e0cbb1f9b725b8318f8be9df418868b1507bf3afb98c19d1f"
+      },
+      {
+        "id": 15619,
+        "sentiment": 0.8,
+        "product": "Sip Society",
+        "textHash": "0ad86991074025d8cd487501c0b8f00cd675a5afea62cdadc5cf9bbc55072971"
+      },
+      {
+        "id": 15620,
+        "sentiment": 0.8,
+        "product": "Herefordshire Redstreak",
+        "textHash": "da44f8d7baf61102674e89fc4f519dbbb6d3fda7084da6ffebca493befc028c3"
+      },
+      {
+        "id": 15621,
+        "sentiment": 0.8,
+        "product": "Alfred's Pear, Son!",
+        "textHash": "ce74dc131347e1a03fc258d56c75ba96997a5f414da2ae90c1d4ef7d1016687c"
+      },
+      {
+        "id": 15622,
+        "sentiment": 0.8,
+        "product": "Potato Chips",
+        "textHash": "753b53de9b7e51b02ec797a172ee1316227c446055240d7b1e601b8208b86da7"
+      },
+      {
+        "id": 15623,
+        "sentiment": 0.8,
+        "product": "Kaki no Tane",
+        "textHash": "a5db2947e2fa2152259a06c231a040259aaf192b63a01d138b7d024dbf6adbd2"
+      },
+      {
+        "id": 15624,
+        "sentiment": 0.8,
+        "product": "Jagarico",
+        "textHash": "60231e5f55153102cdaf9da215aafc2576c18acf5edcf9e62733648a1c344d78"
+      },
+      {
+        "id": 15625,
+        "sentiment": 0.8,
+        "product": "Takenoko no Sato",
+        "textHash": "cae75e8dc82c487cbfc2b986e244bb564adcaba771133856a385ed5c6cc23f60"
+      },
+      {
+        "id": 15626,
+        "sentiment": 0.8,
+        "product": "Butter Butler",
+        "textHash": "048df1b20035af0406934f2b0e99115f7e69bd3af252f6f743ee8283c5030cea"
+      },
+      {
+        "id": 15627,
+        "sentiment": 0.65,
+        "product": "Shiroi Koibito",
+        "textHash": "e7dd063a4ba2c058b91eda4fc1236119227551bf46fbfed02385f196394a31ec"
+      },
+      {
+        "id": 15628,
+        "sentiment": 0.8,
+        "product": "Turtle Chips",
+        "textHash": "666f02ad783f73bb7cc0a201e81fa15469804b6d536d2768cd18ecb33b978e84"
+      },
+      {
+        "id": 15629,
+        "sentiment": 0.65,
+        "product": "Saeukkang",
+        "textHash": "940e289d433515ba93b1a97b7a0bcf0f124549cdf7730c62977360a49a793b92"
+      },
+      {
+        "id": 15630,
+        "sentiment": 0.65,
+        "product": "Honey Butter Chip",
+        "textHash": "02478ebc3f199826c6dfb50a65457b9507dad33e7ff4d99c370c8e2da80aeac3"
+      },
+      {
+        "id": 15631,
+        "sentiment": 0.65,
+        "product": "Choco Pie",
+        "textHash": "8b3e3f389a6ab6368f82859d0c43c142027733cf6c707c7643d48915e6617d28"
+      },
+      {
+        "id": 15632,
+        "sentiment": 0.8,
+        "product": "Gaeseong Yakgwa",
+        "textHash": "9780d5dda89903dc98c5c84ea407f5d7876f2c7ba3f124def7001db538fa4718"
+      },
+      {
+        "id": 15762,
+        "sentiment": 0.8,
+        "product": "Heirloom Ice Cider",
+        "textHash": "0cb72518d37fe6c4cfd8d34c8b3759c3474e91d06498f2488f7df2208042799c"
+      },
+      {
+        "id": 15764,
+        "sentiment": 0.5,
+        "product": "Cidre Bouch\u00e9",
+        "textHash": "762e11ddd0f10bba677f4fff5d41b4d1b6cb239e1d47caefdc2e348173952052"
+      },
+      {
+        "id": 15765,
+        "sentiment": 0.8,
+        "product": "Cosecha Propia",
+        "textHash": "4be251ab75a3d7c4f1deffc9b8726d42c5ee9e13aecfa5f351f81160fcfb97d2"
+      },
+      {
+        "id": 15767,
+        "sentiment": 0.5,
+        "product": "Sydre Argelette",
+        "textHash": "7738d6fe417f5c7d30aed18e1bad38b35b2ab68428338fc2551a024db789e453"
+      },
+      {
+        "id": 15769,
+        "sentiment": 0.8,
+        "product": "Kingston Black",
+        "textHash": "7fa7372cf22618d8ec826d7ae00ef1b45906e10be054e892e2feef878947a3c3"
+      },
+      {
+        "id": 15770,
+        "sentiment": 0.8,
+        "product": "Yarlington Mill",
+        "textHash": "7ac12271d1124799611acc90a774497cecffa2e6ff828d5772849cb4ea31fd8c"
+      },
+      {
+        "id": 15772,
+        "sentiment": 0.5,
+        "product": "Sagardo Naturala",
+        "textHash": "e3e09971521c21f7bcd5b69eabdee5dc15d39dc085f95a25db9f4054ab45cd4d"
+      },
+      {
+        "id": 15773,
+        "sentiment": 0.8,
+        "product": "Premier Cru",
+        "textHash": "1298f9d9cea505e90ec901b6b2097df671fd72c46870220de4c46733026714dd"
+      },
+      {
+        "id": 15781,
+        "sentiment": 0.65,
+        "product": "Tokyo Banana",
+        "textHash": "4e0b4b3421a2194fbac251d1b656b60b2c92066e5b5cd6f658b8b29192927718"
+      },
+      {
+        "id": 15782,
+        "sentiment": 0.8,
+        "product": "Galaxy Buds",
+        "textHash": "d1cc03e613067fcf4295f701bbc812514f93ea35c32df63b635cb24ec03f2497"
+      },
+      {
+        "id": 15783,
+        "sentiment": 0.8,
+        "product": "Bose QuietComfort",
+        "textHash": "5014c27747eaf90faa7f14111baa95050559c3cc8bfa48789fab91efba12c88f"
+      },
+      {
+        "id": 15784,
+        "sentiment": 0.8,
+        "product": "Sony Bravia",
+        "textHash": "022f2f4d5554514bf0f3fb5dfb1d9f25e71ea3d847c59f3f4c2ceb3e0d2d6a75"
+      },
+      {
+        "id": 15785,
+        "sentiment": 0.8,
+        "product": "Toniebox",
+        "textHash": "67b2cc581c863a80d40c5e9a302eff82d03207d64fecf60ce43f103eb3497aef"
+      },
+      {
+        "id": 15786,
+        "sentiment": 0.8,
+        "product": "inReach",
+        "textHash": "6e29c9a114a8f7a4b99e5b10d53cf1cc7f38e1936fedcc570fb84695c94e7a16"
+      },
+      {
+        "id": 15787,
+        "sentiment": 0.8,
+        "product": "ProArt",
+        "textHash": "1aacb6d3a03ef0b13be8906a4701f4109ec7ebca03a8c6562aacf2bae0fdd71b"
+      },
+      {
+        "id": 15788,
+        "sentiment": 0.8,
+        "product": "Micro-LED",
+        "textHash": "daee9daa691b16374efc06301c3cbf0bf52a8776d067cf94989d61e6618c44e8"
+      },
+      {
+        "id": 15789,
+        "sentiment": 0.8,
+        "product": "WILLCOOK",
+        "textHash": "3f28163557d8e6065c66d441ba8326f13b94956cca76a4104061e004ca43ce02"
+      },
+      {
+        "id": 15790,
+        "sentiment": 0.8,
+        "product": "GeForce RTX EXPERT",
+        "textHash": "7f2c9e9f16f79836a0adcc9a6b1f4643f000bfbab43cff3985bd9488bbe6f45e"
+      },
+      {
+        "id": 15791,
+        "sentiment": 0.8,
+        "product": "Galaxy Ring",
+        "textHash": "6eb69bf2c1cf88b775e13f6913de0e089b0d384b0eb2c4b5b851ab56d28679c5"
+      },
+      {
+        "id": 15792,
+        "sentiment": 0.8,
+        "product": "Hypershell",
+        "textHash": "b551f87d0e85069707deb3f1bebb2444169a7a79b7e1a157346960b18e700206"
+      },
+      {
+        "id": 15793,
+        "sentiment": 0.8,
+        "product": "snEco",
+        "textHash": "d677518bb5bde385966c6e436b61282cdfc61487c95b710b714ea009d523f4d5"
+      },
+      {
+        "id": 15794,
+        "sentiment": 0.8,
+        "product": "Veggie Burger Mix",
+        "textHash": "bea917fb8ea6ee72cda822f45087f4c7ce53a8abc6ac11aa3b917af86a7b5800"
+      },
+      {
+        "id": 2825,
+        "sentiment": 0.35,
+        "product": "Roadster",
+        "textHash": "2f678115f8ac104f66588a34b0a63a945249a17ddbbcd4b841244555db0fbe7c"
+      },
+      {
+        "id": 4900,
+        "sentiment": 0.3,
+        "product": "",
+        "textHash": "5c976c06da40f393cb18b0b490a8d48044f4920cae544a2712e0fe435536528e"
+      },
+      {
+        "id": 5093,
+        "sentiment": 0.3,
+        "product": "",
+        "textHash": "df638412ce7bdf77fbf37d30aea50ff621f621ef747100b6454aca8e93509974"
+      },
+      {
+        "id": 2004,
+        "sentiment": 0.2,
+        "product": "H3",
+        "textHash": "e719a09481ee958420b1cbf062dcde4c1c11a244dc08de32e36e2ef6eae5ddb2"
+      }
+    ],
+    "unscoredConflicts": [
+      {
+        "id": 15801,
+        "textHash": "22c84ba98e6c"
+      },
+      {
+        "id": 15802,
+        "textHash": "c40878743619"
+      },
+      {
+        "id": 15803,
+        "textHash": "60d33be899eb"
+      }
+    ]
+  },
+  "ads": {
+    "counts": {
+      "PinAd": 63,
+      "HolidayAd": 146,
+      "PinAdTranslation": 945,
+      "HolidayAdTranslation": 2190
+    },
+    "missing": []
+  },
+  "newAdTranslations": {
+    "holiday": 135,
+    "pin": 15
+  },
+  "publicPages": [
+    {
+      "id": 2825,
+      "url": "https://www.chronopin.com/pin/2825/tesla-reveals-next-generation-roadster-with-thruster-demonstration",
+      "status": 200,
+      "seconds": 0.4,
+      "titlePresent": true
+    },
+    {
+      "id": 4576,
+      "url": "https://www.chronopin.com/pin/4576/ccamlr-s-45th-meeting-opens-in-hobart-with-krill-rules-on-the-table",
+      "status": 200,
+      "seconds": 0.41,
+      "titlePresent": true
+    },
+    {
+      "id": 16015,
+      "url": "https://www.chronopin.com/pin/16015/caterpillar-allocates-up-to-10-million-for-north-carolina-workforce-training",
+      "status": 200,
+      "seconds": 0.34,
+      "titlePresent": true
+    },
+    {
+      "id": 16016,
+      "url": "https://www.chronopin.com/pin/16016/anthropic-releases-its-next-claude-fable-model",
+      "status": 200,
+      "seconds": 0.34,
+      "titlePresent": true
+    },
+    {
+      "id": 16017,
+      "url": "https://www.chronopin.com/pin/16017/brent-crude-oil-price-october-2026",
+      "status": 200,
+      "seconds": 0.44,
+      "titlePresent": true
+    },
+    {
+      "id": 16018,
+      "url": "https://www.chronopin.com/pin/16018/anthropic-launches-100-million-claude-frontier-academy-to-train-10-000-engineers",
+      "status": 200,
+      "seconds": 0.42,
+      "titlePresent": true
+    },
+    {
+      "id": 16019,
+      "url": "https://www.chronopin.com/pin/16019/gsk-proposes-up-to-1-217-job-cuts-across-its-belgian-sites",
+      "status": 200,
+      "seconds": 0.24,
+      "titlePresent": true
+    },
+    {
+      "id": 4900,
+      "url": "https://www.chronopin.com/pin/4900/sxsw-2027-takes-over-austin-for-a-week",
+      "status": 200,
+      "titlePresent": true
+    },
+    {
+      "id": 5093,
+      "url": "https://www.chronopin.com/pin/5093/the-2026-sao-paulo-grand-prix-runs-at-interlagos",
+      "status": 200,
+      "titlePresent": true
+    },
+    {
+      "id": 2004,
+      "url": "https://www.chronopin.com/pin/2004/h3-launches-japan-s-martian-moons-exploration-mission",
+      "status": 200,
+      "titlePresent": true
+    },
+    {
+      "id": 4983,
+      "url": "https://www.chronopin.com/pin/4983/singapore-fintech-festival-2026-convenes-regulators-and-banks-at-singapore-expo",
+      "status": 200,
+      "titlePresent": true
+    },
+    {
+      "id": 4986,
+      "url": "https://www.chronopin.com/pin/4986/the-113th-grey-cup-comes-to-calgary-s-mcmahon-stadium",
+      "status": 200,
+      "titlePresent": true
+    },
+    {
+      "id": 5031,
+      "url": "https://www.chronopin.com/pin/5031/the-2026-valencia-marathon-sells-out-36-000-places-for-6-december",
+      "status": 200,
+      "titlePresent": true
+    },
+    {
+      "id": 5763,
+      "url": "https://www.chronopin.com/pin/5763/state-fair-of-texas-runs-25-september-to-18-october-at-fair-park",
+      "status": 200,
+      "titlePresent": true
+    }
+  ],
+  "reviewMarks": [
+    {
+      "id": 97,
+      "pinId": 15801,
+      "reason": "2026-10-16 news run: content collision from scripts/hotels/seedBudgetFriendlyResorts.ts hardcoded ID 15801. Hotel title/description/source/location conflict with original @EnergyDesk company and data-center references. Recover the original energy record from a trusted pre-collision snapshot and create/link the hotel under a fresh ID; verify references, tags, map, media and PinHotel separately. Do not score the hotel copy for the data-center company. Current full row saved in .tmp/news-2026-10-16/anomalous.json.",
+      "markedBy": null,
+      "jobRunId": null,
+      "resolution": null,
+      "utcCreatedDateTime": "2026-10-16T17:38:01.007Z",
+      "utcResolvedDateTime": null
+    },
+    {
+      "id": 98,
+      "pinId": 15802,
+      "reason": "2026-10-16 news run: content collision from scripts/hotels/seedBudgetFriendlyResorts.ts hardcoded ID 15802. Hotel title/description/source/location conflict with original @EnergyDesk company and data-center references. Recover the original energy record from a trusted pre-collision snapshot and create/link the hotel under a fresh ID; verify references, tags, map, media and PinHotel separately. Do not score the hotel copy for the data-center company. Current full row saved in .tmp/news-2026-10-16/anomalous.json.",
+      "markedBy": null,
+      "jobRunId": null,
+      "resolution": null,
+      "utcCreatedDateTime": "2026-10-16T17:38:01.007Z",
+      "utcResolvedDateTime": null
+    },
+    {
+      "id": 99,
+      "pinId": 15803,
+      "reason": "2026-10-16 news run: content collision from scripts/hotels/seedBudgetFriendlyResorts.ts hardcoded ID 15803. Hotel title/description/source/location conflict with original @EnergyDesk company and data-center references. Recover the original energy record from a trusted pre-collision snapshot and create/link the hotel under a fresh ID; verify references, tags, map, media and PinHotel separately. Do not score the hotel copy for the data-center company. Current full row saved in .tmp/news-2026-10-16/anomalous.json.",
+      "markedBy": null,
+      "jobRunId": null,
+      "resolution": null,
+      "utcCreatedDateTime": "2026-10-16T17:38:01.007Z",
+      "utcResolvedDateTime": null
+    },
+    {
+      "id": 100,
+      "pinId": 4672,
+      "reason": "October 16: both cited Tay Rivers URLs render Oops/page does not exist. Recover a current official 2027 opening-ceremony source before adding participants, venue or ticket details. Historical ceremonies do not verify this edition.",
+      "markedBy": null,
+      "jobRunId": null,
+      "resolution": null,
+      "utcCreatedDateTime": "2026-10-16T17:55:26.031Z",
+      "utcResolvedDateTime": null
+    },
+    {
+      "id": 101,
+      "pinId": 5496,
+      "reason": "October16 exact operator homepage now lists Island Pass AUD190/3days, grandstands from380, hospitality from1795; human-entered event row retains 50\u201399. Verify scope of hand prices and reconcile with https://www.motogp.com.au without silently replacing human data.",
+      "markedBy": null,
+      "jobRunId": null,
+      "resolution": null,
+      "utcCreatedDateTime": "2026-10-16T17:57:35.112Z",
+      "utcResolvedDateTime": null
+    },
+    {
+      "id": 102,
+      "pinId": 5518,
+      "reason": "October16 operator Cup Day page offers AUD60 general admission until October17 23:59 and Robbie Williams. Human-entered row retains120 minimum. Review promotion against original hand-entered tiers and retain conditions: https://www.vrc.com.au/race-days-and-events/2026-2027/lexus-melbourne-cup-day/",
+      "markedBy": null,
+      "jobRunId": null,
+      "resolution": null,
+      "utcCreatedDateTime": "2026-10-16T17:57:37.215Z",
+      "utcResolvedDateTime": null
+    }
+  ]
+}

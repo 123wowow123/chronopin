@@ -1,0 +1,148 @@
+'use client';
+
+import Anchor from '@/components/ui/Anchor';
+import { Icon } from '@/components/ui/Icon';
+import { useT } from '@/lib/client/i18n';
+import { dateFormat } from '@/lib/format';
+import { INTL_LOCALES, type Locale } from '@/lib/i18n/config';
+import { CitedText } from './CitedText';
+import { orderEvidence } from '@/lib/citations';
+import type { DateClaim, DateRange } from '@/lib/dateClaims';
+import { type Evidence, HALF_LIFE_DAYS, weighReferences } from '@/lib/referenceConfidence';
+import { formatDay } from './DateRanges';
+import { EditReferencesLink } from './EditReferencesLink';
+import { ExpandableList } from './ExpandableList';
+import { confidenceClass, PinConfidence } from './PinConfidence';
+import { RefineLink } from './RefineLink';
+
+// Beyond this many, the rest of the list folds away.
+const VISIBLE = 5;
+
+// publishedDate is a calendar date, so it reads in UTC; when a link was added
+// or posted is an instant, read in the viewer's time zone.
+const formatDate = (value: string, timeZone: string, locale: Locale) =>
+  dateFormat(INTL_LOCALES[locale], { month: 'short', day: 'numeric', year: 'numeric', timeZone }).format(new Date(value));
+
+function hostname(url: string) {
+  try {
+    return new URL(url).hostname.replace(/^www\./, '');
+  } catch {
+    return url;
+  }
+}
+
+// Everything backing a pin - its source, then its references newest first -
+// with how much each counts toward the pin's overall confidence. Row n has the
+// id ref-n, which the [n] citations in the pin's reasoning link to.
+export function PinReferences({
+  pinId,
+  authorId,
+  evidence,
+  sourceReasoning,
+  dateRanges,
+  timeZone,
+}: {
+  pinId: number;
+  authorId?: number;
+  evidence: Evidence[];
+  // The source's reasoning is the pin's dateConfidenceReasoning.
+  sourceReasoning?: string;
+  dateRanges: { start?: DateRange; end?: DateRange };
+  timeZone: string;
+}) {
+  const t = useT();
+  const { locale } = t;
+  const linked = orderEvidence(evidence);
+  const shares = new Map(weighReferences(linked).map(({ reference, share }) => [reference, share]));
+  const added = linked.filter((e) => !e.isSource).length;
+  const ids = linked.map((_, index) => `ref-${index + 1}`);
+
+  const rows = linked.map((reference, index) => {
+    const share = shares.get(reference);
+    const reasoning = reference.isSource ? sourceReasoning || reference.reasoning : reference.reasoning;
+    // The start and end this row gives, if any; the source's come from the pin.
+    const claimOf = (range?: DateRange) => range?.claims.find((c) => ((reference.isSource && c.isSource) || c.url === reference.url));
+    const dates = [
+      [t('references.starts'), claimOf(dateRanges.start)],
+      [t('references.ends'), claimOf(dateRanges.end)],
+    ].filter(([, claim]) => claim) as [string, DateClaim][];
+    const site = hostname(reference.url);
+    const dated = reference.publishedDate
+      ? t('references.published', { date: formatDate(reference.publishedDate, 'UTC', locale) })
+      : reference.utcCreatedDateTime
+        ? t(reference.isSource ? 'references.posted' : 'references.added', { date: formatDate(reference.utcCreatedDateTime, timeZone, locale) })
+        : null;
+    return (
+      <li key={ids[index]} id={ids[index]} className="-mx-2 flex scroll-mt-24 items-start gap-3 rounded-lg px-2 py-2.5 transition-colors duration-500 data-cited:bg-link/15">
+        <span className="mt-0.5 w-6 shrink-0 text-end text-xs text-subtle tabular-nums">[{index + 1}]</span>
+        <span
+          className={`mt-0.5 w-12 shrink-0 rounded-full py-px text-center text-[11px] font-semibold tabular-nums ring-1 ring-inset ${confidenceClass(reference.confidence)}`}
+          title={
+            reference.confidence == null
+              ? t('references.notScored')
+              : reference.isSource
+                ? t('references.fromSourceRating')
+                : t('references.howStrongly')
+          }
+        >
+          {reference.confidence == null ? '—' : `${reference.confidence}%`}
+        </span>
+        <div className="min-w-0 flex-1">
+          <Anchor href={reference.url} target="_blank" rel="noopener nofollow" className="flex items-center gap-1.5 font-medium">
+            <span className="truncate">{reference.title || reference.url.replace(/^https?:\/\/(www\.)?/i, '').replace(/\/$/, '')}</span>
+            <Icon name="external" className="size-3.5 shrink-0 opacity-70" />
+          </Anchor>
+          <div className="mt-0.5 flex flex-wrap gap-x-2 text-xs text-subtle">
+            <span className="truncate">{site}</span>
+            {dated ? <span>· {dated}</span> : null}
+            {/* Credited when someone other than the pin's author added it. */}
+            {!reference.isSource && reference.addedByUserName ? (
+              <span className="inline-flex items-center gap-1">
+                · {t('references.addedBy')}
+                <RefineLink field="user" value={reference.addedByUserName} className="inline-flex items-center gap-1 text-muted hover:text-ink hover:no-underline">
+                  {reference.addedByUserName}
+                </RefineLink>
+              </span>
+            ) : null}
+            {dates.map(([label, claim]) => (
+              <span key={label} className={claim.used ? 'font-medium text-muted' : undefined} title={claim.used ? t('references.usesDate') : undefined}>
+                · {label} {formatDay(claim.day, locale)}
+                {claim.used ? ' ✓' : ''}
+              </span>
+            ))}
+            {share !== undefined ? (
+              <span className="tabular-nums" title={t('references.shareTitle')}>
+                · {t('references.share', { percent: Math.round(share * 100) })}
+              </span>
+            ) : null}
+          </div>
+          {reasoning ? (
+            <p className="mt-1 text-xs leading-relaxed text-muted italic">
+              <CitedText text={reasoning} evidence={linked} omit={index + 1} />
+            </p>
+          ) : null}
+        </div>
+      </li>
+    );
+  });
+
+  return (
+    <section aria-labelledby="references-heading" className="surface mt-6 px-4 py-3">
+      <h2 id="references-heading" className="flex flex-wrap items-center gap-2 text-base font-semibold">
+        {t('references.heading')} <span className="text-sm font-normal text-subtle tabular-nums">{rows.length}</span>
+        <PinConfidence evidence={linked} />
+        <EditReferencesLink pinId={pinId} authorId={authorId} hasReferences={added > 0} />
+      </h2>
+      {rows.length ? (
+        <>
+          <p className="mt-1 text-xs text-subtle">
+            {t('references.explainer', { days: HALF_LIFE_DAYS })}
+          </p>
+          <ExpandableList items={rows} itemIds={ids} visible={VISIBLE} noun={t('references.noun')} className="mt-1 divide-y divide-line" />
+        </>
+      ) : (
+        <p className="mt-1 pb-1 text-sm text-subtle">{t('references.none')}</p>
+      )}
+    </section>
+  );
+}

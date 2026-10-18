@@ -1,0 +1,29 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "node-terminal",
+            "request": "launch",
+            "name": "Next.js: dev server",
+            "command": "npm run dev"
+        },
+        {
+            "type": "node-terminal",
+            "request": "launch",
+            "name": "Save Data",
+            "command": "npm run backup:data"
+        },
+        {
+            "type": "node-terminal",
+            "request": "launch",
+            "name": "Create DB",
+            "command": "npm run create:db"
+        },
+        {
+            "type": "node-terminal",
+            "request": "launch",
+            "name": "Create Data",
+            "command": "npm run create:data"
+        }
+    ]
+}

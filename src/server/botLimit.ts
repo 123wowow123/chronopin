@@ -1,0 +1,184 @@
+import { monitorEventLoopDelay } from 'node:perf_hooks';
+import os from 'node:os';
+import { AI_BOT_NAMES, type Bot } from '@/lib/bots';
+
+// AI crawlers, the scrapers below and Applebot share a server-wide budget,
+// with a separate budget per name: a crawler spreads over many addresses.
+// Other search engines, link previews, monitors, scripts and people pass through.
+//
+// A token bucket: BURST requests at once, then one every 1 / PER_SECOND
+// seconds. Kept in memory on globalThis (one process on one VM), so a restart
+// only hands every bot a fresh burst.
+export const BURST = 30;
+export const PER_SECOND = 0.5;
+export const SHARED_BURST = 60;
+export const SHARED_PER_SECOND = 1;
+
+// Scrapers: kind 'other' like curl and the uptime monitors, but they crawl
+// the whole site for someone else's index (2026-10-04: Semrush + MJ12 ~4k hits
+// in 30 minutes on the 2-vCPU VM).
+// ShapBot made ~95k requests in a day and exhausted the VM's CPU credits.
+const EXTRA_BOT_NAMES = ['AhrefsBot', 'SemrushBot', 'MJ12bot', 'DotBot', 'DataForSeoBot', 'Screaming Frog', 'ShapBot', 'AionBot', 'Applebot'];
+const EXTRA_BOTS = new Set(EXTRA_BOT_NAMES);
+export const THROTTLED_BOT_NAMES = [...AI_BOT_NAMES, ...EXTRA_BOT_NAMES];
+
+// Load shedding: while the server is struggling, the crawlers above are
+// refused outright (not just rate limited) so that people and Google get the
+// CPU. Google's own crawlers are not turned away but held to GOOGLE_PER_MINUTE
+// requests a minute between them (owner, 2026-10-10). Two signals, since the load
+// average lags a minute behind: event-loop delay (p99) and load per core.
+// Hysteresis keeps it from flapping: it starts above the first pair and ends
+// only below the second.
+const SHED_SAMPLE_MS = 5_000;
+const SHED_ON = { loopMs: 1_000, loadPerCore: 2 };
+const SHED_OFF = { loopMs: 300, loadPerCore: 1.5 };
+export const SHED_RETRY_AFTER = 300;
+// All of Google's crawlers share this while the server is shedding.
+export const GOOGLE_PER_MINUTE = 10;
+
+type Shed = { on: boolean; at: number; hist: ReturnType<typeof monitorEventLoopDelay> | null };
+
+function shedState(): Shed {
+  const g = globalThis as unknown as { __chronopinShed?: Shed };
+  return (g.__chronopinShed ??= { on: false, at: 0, hist: null });
+}
+
+// Whether the server is slow enough to turn crawlers away. Sampled at most
+// every few seconds; `probe` is for tests.
+export function shedding(now = Date.now(), probe?: () => { loopMs: number; loadPerCore: number }): boolean {
+  const state = shedState();
+  if (now - state.at < SHED_SAMPLE_MS) return state.on;
+  state.at = now;
+  let reading;
+  if (probe) {
+    reading = probe();
+  } else {
+    if (!state.hist) {
+      state.hist = monitorEventLoopDelay({ resolution: 20 });
+      state.hist.enable();
+      return state.on;
+    }
+    reading = {
+      loopMs: state.hist.percentile(99) / 1e6,
+      loadPerCore: os.loadavg()[0] / Math.max(1, os.cpus().length),
+    };
+    state.hist.reset();
+  }
+  const limit = state.on ? SHED_OFF : SHED_ON;
+  state.on = reading.loopMs >= limit.loopMs || reading.loadPerCore >= limit.loadPerCore;
+  return state.on;
+}
+
+function isGoogle(bot: Bot): boolean {
+  return /google/i.test(bot.name);
+}
+
+type Bucket = { tokens: number; at: number };
+
+function limits(now: number) {
+  const g = globalThis as unknown as { __chronopinCrawlerLimits?: { bots: Map<string, Bucket>; shared: Bucket; google: Bucket } };
+  return (g.__chronopinCrawlerLimits ??= {
+    bots: new Map(),
+    shared: { tokens: SHARED_BURST, at: now },
+    google: { tokens: GOOGLE_PER_MINUTE, at: now },
+  });
+}
+
+function refill(bucket: Bucket, now: number, burst: number, perSecond: number) {
+  bucket.tokens = Math.min(burst, bucket.tokens + (Math.max(0, now - bucket.at) / 1000) * perSecond);
+  bucket.at = now;
+}
+
+// Null when the request may go ahead, else the seconds until it could (for
+// Retry-After).
+export function botRetryAfter(bot: Bot | null, now = Date.now()): number | null {
+  if (!bot) return null;
+  if (isGoogle(bot)) {
+    // Unrestricted until the server is struggling, then GOOGLE_PER_MINUTE.
+    if (!shedding(now)) return null;
+    const { google } = limits(now);
+    const perSecond = GOOGLE_PER_MINUTE / 60;
+    refill(google, now, GOOGLE_PER_MINUTE, perSecond);
+    if (google.tokens >= 1) {
+      google.tokens -= 1;
+      return null;
+    }
+    return Math.ceil((1 - google.tokens) / perSecond);
+  }
+  if (bot.kind !== 'ai' && !EXTRA_BOTS.has(bot.name)) return null;
+  if (shedding(now)) return SHED_RETRY_AFTER;
+  const { bots, shared } = limits(now);
+  const bucket = bots.get(bot.name) ?? { tokens: BURST, at: now };
+  refill(bucket, now, BURST, PER_SECOND);
+  refill(shared, now, SHARED_BURST, SHARED_PER_SECOND);
+  bots.set(bot.name, bucket);
+  // Rejected requests consume neither budget, so one overactive bot cannot
+  // spend the shared tokens that other crawlers would otherwise use.
+  if (bucket.tokens >= 1 && shared.tokens >= 1) {
+    bucket.tokens -= 1;
+    shared.tokens -= 1;
+    return null;
+  }
+  return Math.ceil(Math.max((1 - bucket.tokens) / PER_SECOND, (1 - shared.tokens) / SHARED_PER_SECOND));
+}
+
+// Everyone who is not a named bot, by address or signed-in user. A scraper
+// that sends a browser user agent is not a Bot above, so every unidentified
+// visitor gets a generous budget: well beyond a person clicking and
+// prefetching, well below a crawler (owner asked 2026-10-17 after Singapore
+// traffic looked like bots). A visitor who runs out is shown the heavy user
+// plan (src/app/[lang]/heavy-use): with it the budget is LIGHT_*, still a limit
+// but ten times looser. Admins and named crawlers have their own rules.
+export const IP_BURST = 50;
+export const IP_PER_SECOND = 2;
+export const LIGHT_BURST = 1_200;
+export const LIGHT_PER_SECOND = 20;
+const IP_MAX_ENTRIES = 20_000;
+
+// A link prefetch (cost PREFETCH_COST) is a page's worth of links loading in
+// the background, not a person asking for pages, so it spends a quarter token.
+// `key` is "ip:<address>" or "u:<user id>". Null when the request may go on,
+// else the seconds to wait.
+export const PREFETCH_COST = 0.25;
+export function ipRetryAfter(key: string, light = false, now = Date.now(), cost = 1): number | null {
+  if (!key || key === 'ip:') return null;
+  const burst = light ? LIGHT_BURST : IP_BURST;
+  const perSecond = light ? LIGHT_PER_SECOND : IP_PER_SECOND;
+  const g = globalThis as unknown as { __chronopinIpLimits?: Map<string, Bucket> };
+  const buckets = (g.__chronopinIpLimits ??= new Map());
+  const bucket = buckets.get(key) ?? { tokens: burst, at: now };
+  refill(bucket, now, burst, perSecond);
+  // Re-insert so the map stays in least-recently-used order.
+  buckets.delete(key);
+  buckets.set(key, bucket);
+  if (buckets.size > IP_MAX_ENTRIES) buckets.delete(buckets.keys().next().value!);
+  if (bucket.tokens >= cost) {
+    bucket.tokens -= cost;
+    return null;
+  }
+  return Math.ceil((cost - bucket.tokens) / perSecond);
+}
+
+// A pin-page budget per client id (the signed cookie the cookie gate issues),
+// on top of the per-address one: a scraper spreads over thousands of addresses
+// but each of its clients still reads pins, and a person opening a few pins
+// from the timeline stays far inside it. A client that discards its cookie
+// starts again, but only by going back through the gate's redirect.
+// Burst 30, then one pin every 4 s (15 a minute).
+export const PIN_BURST = 30;
+export const PIN_PER_SECOND = 0.25;
+export function pinRetryAfter(clientId: string, now = Date.now(), cost = 1): number | null {
+  if (!clientId) return null;
+  const g = globalThis as unknown as { __chronopinPinLimits?: Map<string, Bucket> };
+  const buckets = (g.__chronopinPinLimits ??= new Map());
+  const bucket = buckets.get(clientId) ?? { tokens: PIN_BURST, at: now };
+  refill(bucket, now, PIN_BURST, PIN_PER_SECOND);
+  buckets.delete(clientId);
+  buckets.set(clientId, bucket);
+  if (buckets.size > IP_MAX_ENTRIES) buckets.delete(buckets.keys().next().value!);
+  if (bucket.tokens >= cost) {
+    bucket.tokens -= cost;
+    return null;
+  }
+  return Math.ceil((cost - bucket.tokens) / PIN_PER_SECOND);
+}

@@ -1,0 +1,456 @@
+// Data for server-rendered pages, cached with Cache Components. Every function
+// here returns plain JSON (no model instances), keyed by its arguments. Those
+// that return pins take the page's language, and swap in the pins'
+// translations (services/translations.ts); English, the default, is the pins'
+// own words.
+
+import { cacheLife, cacheTag } from 'next/cache';
+import { getPersonalBag, getSliderTyping, getAdPlacements, getAdsenseSlots, getHideThinPins, getTimelineVideo } from '../model/appSetting';
+import Company from '../model/company';
+import Favorite from '../model/favorite';
+import { eventInfoForPin } from '../model/pinEventInfo';
+import { candidatesForPin } from '../model/pinCandidate';
+import { gameInfoForPin } from '../model/pinGameInfo';
+import { tasteForPin } from '../model/pinTaste';
+import { carPerfForPin } from '../model/pinCarPerf';
+import { gasCarPerfForPin } from '../model/pinGasCarPerf';
+import { diningForPin } from '../model/pinDining';
+import { hotelForPin } from '../model/pinHotel';
+import type { PinTasteJson } from '@/lib/pinTaste';
+import type { PinCarPerfJson } from '@/lib/pinCarPerf';
+import type { PinGasCarPerfJson } from '@/lib/pinGasCarPerf';
+import type { PinDiningJson } from '@/lib/pinDining';
+import type { PinHotelJson } from '@/lib/pinHotel';
+import type { PinCandidateJson } from '@/lib/candidates';
+import type { PinGameInfoJson } from '@/lib/gameInfo';
+import type { PinEventInfoJson } from '@/lib/eventInfo';
+import type { AlternateNameJson } from '@/lib/alternateNames';
+import { alternateNamesForPin } from './alternateNames';
+import Pin from '../model/pin';
+import Pins from '../model/pins';
+import PinUpdate from '../model/pinUpdate';
+import PinView from '../model/pinView';
+import UserWiki from '../model/userWiki';
+import { compareDuplicateRank } from '@/lib/duplicates';
+import type { PinUpdateJson } from '@/lib/pinUpdates';
+import { safeHtml } from '@/lib/sanitize';
+import { toJson, type NewPin, type PinJson, type SearchPage, type TimelinePage, type TrendingPin } from '@/lib/types';
+import type { SliderTypingSetting } from '@/lib/sliderTyping';
+import type { AdPlacementsSetting } from '@/lib/adPlacements';
+import type { AdsenseSlotsSetting } from '@/lib/adsense';
+import type { TimelineVideoSetting } from '@/lib/timelineVideo';
+import { DEFAULT_HIDE_THIN_PINS, type HideThinPinsSetting } from '@/lib/searchQuality';
+import type { UserPreference } from '@/lib/userWiki';
+import { TAGS } from './cache';
+import { restaurantPreviewPin } from './restaurantPreview';
+import { readSearchRequest, searchPinsPage, searchTagCounts, type SearchSort } from './search';
+import type { TagCount } from '@/lib/tags';
+import { getTimeline, timelineMinConfidence } from './timeline';
+import { resolveCreatedSince, type CreatedQuery } from '../util/createdFilter';
+import { dependsOnZone, joinSearchQuery, parseSearchQuery, splitSearchQuery } from '../util/searchQuery';
+import { DEFAULT_LOCALE, type Locale } from '@/lib/i18n/config';
+import { localizePins } from './translations';
+import { loadNewPins } from './newPins';
+
+// The video setting the cards on a page of pins read. Cached (and expired)
+// with those pages rather than read per request: it is one row that changes
+// about never.
+export async function timelineVideo(): Promise<TimelineVideoSetting> {
+  'use cache';
+  cacheLife('minutes');
+  cacheTag(TAGS.timeline);
+  return getTimelineVideo();
+}
+
+// Which ad placements show their ads, cached and expired the same way.
+export async function adPlacements(): Promise<AdPlacementsSetting> {
+  'use cache';
+  cacheLife('minutes');
+  cacheTag(TAGS.timeline);
+  return getAdPlacements();
+}
+
+// The AdSense ad units of the placements that show Google ads, cached and expired the same way.
+export async function adsenseSlots(): Promise<AdsenseSlotsSetting> {
+  'use cache';
+  cacheLife('minutes');
+  cacheTag(TAGS.timeline);
+  return getAdsenseSlots();
+}
+
+// Whether thin pins say noindex (src/lib/searchQuality.ts), read by every pin
+// page's metadata and the sitemap; expired by expireSearchIndex.
+export async function hideThinPins(): Promise<HideThinPinsSetting> {
+  'use cache';
+  cacheLife('minutes');
+  cacheTag(TAGS.searchIndex);
+  return getHideThinPins().catch(() => DEFAULT_HIDE_THIN_PINS);
+}
+
+// Whether the filter sliders offer a typed box, cached and expired the same way.
+export async function sliderTyping(): Promise<SliderTypingSetting> {
+  'use cache';
+  cacheLife('minutes');
+  cacheTag(TAGS.timeline);
+  return getSliderTyping();
+}
+
+// The signed-in viewer's preference wiki, which a crowded day's cards are
+// weighed by; null when signed out, before their first build, or with the
+// admin setting off. Per user, so read per request rather than cached.
+export async function viewerPreference(userId: number | undefined): Promise<UserPreference | null> {
+  if (!userId || !(await getPersonalBag()).enabled) return null;
+  return UserWiki.preference(userId);
+}
+
+// The trending panel's sliding window: views over the last 3 UTC days (today
+// included) against the 3 days before them, both moving on a day each midnight.
+export const TRENDING_DAYS = 3;
+
+// The most viewed pins with views on the rise. Views are recorded without
+// expiring anything, so this simply goes stale for a few minutes at a time.
+// The cache holds the English list and is not keyed by language: keyed by it,
+// every one of the site's languages ran the same query for its own copy.
+async function trendingEnglish(): Promise<TrendingPin[]> {
+  'use cache';
+  cacheLife('minutes');
+  cacheTag(TAGS.timeline);
+  return PinView.trending(TRENDING_DAYS, 12, await timelineMinConfidence());
+}
+
+export async function trendingPins(locale: Locale = DEFAULT_LOCALE): Promise<TrendingPin[]> {
+  return localizePins(structuredClone(await trendingEnglish()), locale);
+}
+
+// The pins added most recently. A new pin expires the timeline tag, so this
+// refreshes as pins are added rather than on a timer alone. Cached in English
+// and translated after, like trendingPins above.
+async function newPinsEnglish(): Promise<NewPin[]> {
+  'use cache';
+  cacheLife('minutes');
+  cacheTag(TAGS.timeline);
+  return loadNewPins();
+}
+
+export async function newPins(locale: Locale = DEFAULT_LOCALE): Promise<NewPin[]> {
+  return localizePins(structuredClone(await newPinsEnglish()), locale);
+}
+
+// around opens the first page on a pin instead of now (the pin page's "To
+// timeline").
+export type TimelineCursor = { fromDateTime?: string | null; lastPinId?: number; around?: { dateTime: string; pinId: number } | null; initialSize?: number };
+
+// hasFavorite and hasLike are the only per-viewer fields a pin carries, and
+// they are the reason a cached page used to be keyed by reader: every signed
+// in person got a private copy of every cursor, to be told about the handful
+// of pins they watch. The cached pages below are built with no viewer and
+// drop the fields rather than answer them as false, so a card knows to ask
+// (src/lib/client/watched.ts) instead of believing a shared page's no.
+const NO_VIEWER = 0;
+
+function withoutViewerState<T extends { pins: PinJson[] }>(page: T): T {
+  page.pins.forEach((pin) => {
+    delete pin.hasFavorite;
+    delete pin.hasLike;
+  });
+  return page;
+}
+
+// A timeline page, plus the cursors for the pages either side of it and the
+// confidence bar it was filtered by (null when the filter is off).
+export async function timelinePage(
+  cursor: TimelineCursor,
+  createdWithin: string | null,
+  locale: Locale = DEFAULT_LOCALE,
+  timeZone = 'UTC',
+): Promise<TimelinePage & { links: { previous?: string; next?: string }; minConfidence: number | null }> {
+  'use cache';
+  cacheLife('minutes');
+  cacheTag(TAGS.timeline);
+
+  const createdSince = createdWithin ? resolveCreatedSince({ created_within: createdWithin }) : null;
+  const [pins, minConfidence] = await Promise.all([
+    getTimeline({
+      userId: NO_VIEWER,
+      fromDateTime: cursor.fromDateTime,
+      around: cursor.around,
+      lastPinId: cursor.lastPinId,
+      initialSize: cursor.initialSize,
+      createdSince,
+      timeZone,
+    }),
+    timelineMinConfidence(),
+  ]);
+  const range = pins.minMaxDateTimePin();
+  const carry = createdSince ? `&created_since=${encodeURIComponent(createdSince.toISOString())}` : '';
+  const links = range
+    ? {
+        previous: `?from_date_time=-${new Date(range.min.utcStartDateTime).toISOString()}&last_pin_id=${range.min.id}${carry}`,
+        next: `?from_date_time=${new Date(range.max.utcStartDateTime).toISOString()}&last_pin_id=${range.max.id}${carry}`,
+      }
+    : {};
+  const page = withoutViewerState({ ...toJson<TimelinePage>(pins), links, minConfidence });
+  await localizePins(page.pins, locale);
+  return page;
+}
+
+// One pin as its page shows it (no per-viewer fields). In English it is the
+// pin as stored, which is also what the edit form must start from.
+export async function pinById(id: number, locale: Locale = DEFAULT_LOCALE): Promise<PinJson | null> {
+  'use cache';
+  cacheLife('hours');
+  cacheTag(TAGS.pin(id));
+  const { pin } = await Pin.queryById(id);
+  if (!pin) return restaurantPreviewPin(id);
+  const [json] = await localizePins([toJson<PinJson>(pin)], locale);
+  return json;
+}
+
+// The website of the company a pin names, the organizer in its event markup.
+// A company's links change about never, so this is kept a day.
+export async function companyWebsite(companyId: number): Promise<string | null> {
+  'use cache';
+  cacheLife('days');
+  return (await Company.getById(companyId))?.websiteUrl ?? null;
+}
+
+// Who performs at an event pin and how to get in, or null when nothing was
+// read. Expired with the pin's page when a reading is stored.
+export async function pinEventInfo(id: number): Promise<PinEventInfoJson | null> {
+  'use cache';
+  cacheLife('hours');
+  cacheTag(TAGS.pin(id));
+  return eventInfoForPin(id);
+}
+
+// The big-four contenders an awards pin lists, empty for any other pin.
+// Tagged with the pin and its works' pins, so saving any of them redraws it.
+export async function pinCandidates(id: number): Promise<PinCandidateJson[]> {
+  'use cache';
+  cacheLife('hours');
+  const candidates = await candidatesForPin(id);
+  // Each row shows its work pin's picture and title, so a change to one of
+  // them redraws this page too.
+  cacheTag(TAGS.pin(id), ...candidates.flatMap((c) => (c.work ? [TAGS.pin(c.work.id)] : [])));
+  return candidates;
+}
+
+// A game's maturity rating and platforms, or null when none were read.
+export async function pinGameInfo(id: number): Promise<PinGameInfoJson | null> {
+  'use cache';
+  cacheLife('hours');
+  cacheTag(TAGS.pin(id));
+  return gameInfoForPin(id);
+}
+
+// A consumable pin's taste profile, or null when it has none.
+export async function pinTaste(id: number): Promise<PinTasteJson | null> {
+  'use cache';
+  cacheLife('hours');
+  cacheTag(TAGS.pin(id));
+  return tasteForPin(id);
+}
+
+// A vehicle pin's car performance rubric, or null when it has none.
+export async function pinCarPerf(id: number): Promise<PinCarPerfJson | null> {
+  'use cache';
+  cacheLife('hours');
+  cacheTag(TAGS.pin(id));
+  return carPerfForPin(id);
+}
+
+// A gasoline car pin's performance rubric, or null when it has none.
+export async function pinGasCarPerf(id: number): Promise<PinGasCarPerfJson | null> {
+  'use cache';
+  cacheLife('hours');
+  cacheTag(TAGS.pin(id));
+  return gasCarPerfForPin(id);
+}
+
+// A restaurant pin's dining rubric, or null when it has none.
+export async function pinDining(id: number): Promise<PinDiningJson | null> {
+  'use cache';
+  cacheLife('hours');
+  cacheTag(TAGS.pin(id));
+  return diningForPin(id);
+}
+
+// A hotel pin's hotel rubric, or null when it has none.
+export async function pinHotel(id: number): Promise<PinHotelJson | null> {
+  'use cache';
+  cacheLife('hours');
+  cacheTag(TAGS.pin(id));
+  return hotelForPin(id);
+}
+
+// All alternate titles, native names, translations and aliases for a pin.
+export async function pinAlternateNames(id: number): Promise<AlternateNameJson[]> {
+  'use cache';
+  cacheLife('hours');
+  cacheTag(TAGS.pin(id));
+  return alternateNamesForPin(id);
+}
+
+// Tagged with every pin in the thread, so a change to any of them - a
+// response posted or moved (its parent's tag is invalidated too) - redraws it.
+export async function threadPins(id: number, locale: Locale = DEFAULT_LOCALE): Promise<PinJson[]> {
+  'use cache';
+  cacheLife('hours');
+  const pins = toJson<PinJson[]>((await Pins.getThreadPins(id)).pins);
+  cacheTag(TAGS.pin(id), ...pins.map((p) => TAGS.pin(p.id)));
+  return localizePins(pins, locale);
+}
+
+// The pins in a pin's confirmed duplicate group, itself included, best ranked
+// first. Every member's tag is invalidated when the group changes.
+export async function duplicateGroupPins(id: number, group: number[], locale: Locale = DEFAULT_LOCALE): Promise<PinJson[]> {
+  'use cache';
+  cacheLife('hours');
+  cacheTag(TAGS.pin(id));
+  const pins = toJson<PinJson[]>((await Pins.queryByIds(group)).pins);
+  return localizePins(pins.sort(compareDuplicateRank), locale);
+}
+
+// What changed on a pin after it was posted, newest first, for its Updates
+// pane. The text a rewrite replaced is sanitized here, as the pin's own is.
+export async function pinUpdates(id: number): Promise<PinUpdateJson[]> {
+  'use cache';
+  cacheLife('hours');
+  cacheTag(TAGS.pin(id));
+  const updates = await PinUpdate.forPin(id);
+  return updates.map((update) => ({
+    ...update,
+    changes: update.changes.map((change) =>
+      change.field === 'description' || change.field === 'longFormSummary' ? { ...change, before: change.before && safeHtml(change.before), after: null } : change,
+    ),
+  }));
+}
+
+// Pins like this one, by what they share with it: tags, then company, then the
+// nearer date (Pins.relatedIds). Plain indexed reads: the semantic search this
+// replaced stalled the page for minutes when its service did.
+export async function relatedPins(id: number, locale: Locale = DEFAULT_LOCALE): Promise<PinJson[]> {
+  'use cache';
+  cacheLife('hours');
+  cacheTag(TAGS.pin(id));
+  const ids = await Pins.relatedIds(id, 12);
+  if (!ids.length) return [];
+  const { pins } = await Pins.queryByIds(ids);
+  // The pins are read in date order; put them back in the order of likeness.
+  const rank = new Map(ids.map((pinId, i) => [pinId, i]));
+  const ordered = pins.slice().sort((a, b) => (rank.get(a.id) ?? 0) - (rank.get(b.id) ?? 0));
+  return localizePins(toJson<PinJson[]>(ordered), locale);
+}
+
+// The sort and filters a search page's URL names: spans as the sliders set them.
+// timeZone: the viewer's, for a query whose days depend on it (date:,
+// posted:), else UTC so every zone shares the cached results.
+export type SearchView = { sort: SearchSort; posted: string | null; past: string | null; future: string | null; predicted?: boolean; timeZone: string };
+
+// The first page of a search, and the links on to later ones.
+export async function searchPage(
+  query: string,
+  userId: number | null,
+  onlyWatched: boolean,
+  view: SearchView,
+  locale: Locale = DEFAULT_LOCALE,
+): Promise<SearchPage & { error?: string; watchVersion?: string }> {
+  view = { ...view, timeZone: zoneFor(query, view.timeZone) };
+  // Watched results are one person's list and must change the moment they
+  // watch or unwatch a pin, so they skip the shared, briefly stale cache.
+  if (!onlyWatched || !userId) return cachedSearch(query, view, locale);
+  // watchVersion keys the results on the page: Next keeps a page left for
+  // another mounted but hidden, so without it coming back to Watched after
+  // watching a pin elsewhere showed the list as it was.
+  const [page, watchVersion] = await Promise.all([runSearch(query, userId, true, view), Favorite.listVersion(userId)]);
+  await localizePins(page.pins, locale);
+  return { ...page, watchVersion };
+}
+
+// Built with no viewer, so one entry serves everyone rather than one per
+// signed-in reader; the cards ask who watches what.
+async function cachedSearch(query: string, view: SearchView, locale: Locale) {
+  'use cache';
+  cacheLife('minutes');
+  cacheTag(TAGS.timeline);
+  const page = withoutViewerState(await runSearch(query, NO_VIEWER, false, view));
+  await localizePins(page.pins, locale);
+  return page;
+}
+
+async function runSearch(query: string, userId: number | null, onlyWatched: boolean, view: SearchView): Promise<SearchPage & { error?: string }> {
+  const params = new URLSearchParams({ q: query, sort: view.sort });
+  if (onlyWatched) params.set('f', 'watch');
+  if (onlyWatched && view.predicted === false) params.set('predicted', '0');
+  params.set('tz', view.timeZone);
+  if (view.posted) params.set('created_within', view.posted);
+  if (view.past) params.set('start_past', view.past);
+  if (view.future) params.set('start_future', view.future);
+  try {
+    const { pins, links } = await searchPinsPage(readSearchRequest(params, userId));
+    return { ...toJson<SearchPage>(pins), links };
+  } catch (err) {
+    return { pins: [], links: {}, error: (err as Error).message };
+  }
+}
+
+// The viewer's zone if the query's days depend on it, else UTC: one cache
+// entry for every zone whenever the zone makes no difference.
+function zoneFor(query: string, timeZone: string): string {
+  return dependsOnZone(parseSearchQuery(query)) ? timeZone : 'UTC';
+}
+
+// The tag cloud: the most used tags on the timeline (under its posted-within
+// span) or in a search's results. Cached for everyone, since the tags carry
+// nothing per viewer; the Watch list is read per request.
+// The panel shows TAG_CLOUD_SIZE; its expanded cloud asks for up to TAG_CLOUD_MAX.
+export const TAG_CLOUD_SIZE = 60;
+export const TAG_CLOUD_MAX = 200;
+
+// The tag cloud's counts. A cold read scores every pin's confidence (~1.3s on
+// production), so they are kept for hours: a pin change still refreshes them
+// behind the scenes (TAGS.timeline, 'max'), and 'minutes' let them expire
+// after an idle hour, which a quiet site mostly is, so most clouds waited.
+export async function timelineTagCounts(created: CreatedQuery, limit = TAG_CLOUD_SIZE): Promise<TagCount[]> {
+  'use cache';
+  // Include reserved predicted filter
+  cacheLife('hours');
+  cacheTag(TAGS.timeline);
+  return Pins.countTimelineTags(resolveCreatedSince(created), await timelineMinConfidence(), limit);
+}
+
+export async function searchPageTagCounts(
+  query: string,
+  userId: number | null,
+  onlyWatched: boolean,
+  created: CreatedQuery,
+  timeZone: string,
+  limit = TAG_CLOUD_SIZE,
+): Promise<TagCount[]> {
+  // The counts leave out the terms the cloud writes (searchTagCounts), so they
+  // are cached without them too: every pick in the cloud then reads the same
+  // counts, rather than a snapshot of its own taken minutes apart, whose
+  // drift would lay the whole cloud out again.
+  const counted = joinSearchQuery(splitSearchQuery(query).filter((part) => part.kind !== 'term' || !CLOUD_FIELDS.has(part.field)));
+  const zone = zoneFor(counted, timeZone);
+  return onlyWatched && userId
+    ? searchTagCounts(counted, limit, { userId, onlyWatched: true, timeZone: zone, createdSince: resolveCreatedSince(created) })
+    : cachedTagCounts(counted, created, zone, limit);
+}
+const CLOUD_FIELDS = new Set(['tag', 'category', 'confidence']);
+
+// Kept for hours, as timelineTagCounts is.
+async function cachedTagCounts(query: string, created: CreatedQuery, timeZone: string, limit: number): Promise<TagCount[]> {
+  'use cache';
+  cacheLife('hours');
+  cacheTag(TAGS.timeline);
+  return searchTagCounts(query, limit, { userId: null, onlyWatched: false, timeZone, createdSince: resolveCreatedSince(created) });
+}
+
+export async function pinComments(id: number) {
+  'use cache';
+  cacheLife('hours');
+  cacheTag(TAGS.pin(id));
+  const { default: Comment } = await import('../model/comment');
+  return toJson<import('@/lib/types').CommentJson[]>(await Comment.getByPinId(id));
+}

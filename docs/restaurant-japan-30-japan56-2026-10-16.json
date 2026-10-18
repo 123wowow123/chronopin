@@ -1,0 +1,1554 @@
+{
+  "checkedAt": "2026-10-16",
+  "scope": "Existing-venue offer/menu replenishment only; no new venue or application deployment",
+  "updates": [
+    {
+      "sourceUrl": "https://osaka.hiltonjapan.co.jp/plans/restaurants/other/myplace-happyhour",
+      "addedMenuLabels": [
+        "November champagne high tea — Bubbles at Night"
+      ],
+      "addedOffers": [
+        {
+          "kind": "other",
+          "title": "November champagne high tea — Bubbles at Night",
+          "sourceUrl": "https://osaka.hiltonjapan.co.jp/plans/restaurants/afternoontea/myplace-champagne-high-tea",
+          "menuLabel": "November champagne high tea — Bubbles at Night",
+          "description": "November seasonal set with 90-minute champagne/drink free flow, ¥9,800 per person including tax and service.",
+          "validFrom": "2026-11-01",
+          "validThrough": "2026-11-30",
+          "limitedTime": true,
+          "discounted": false,
+          "availability": {
+            "windows": [
+              {
+                "days": [
+                  0,
+                  1,
+                  2,
+                  3,
+                  4,
+                  5,
+                  6
+                ],
+                "start": "18:00",
+                "end": "21:00"
+              }
+            ]
+          },
+          "conditions": [
+            "Reserve by the previous day; last admission 21:00.",
+            "Seat limit two hours; drinks 90 minutes, glass/pot exchange.",
+            "This validity covers the published November menu; the high-tea program itself continues beyond November with a changing seasonal menu.",
+            "Golden Week, Obon, Christmas and year-end/New Year may have different prices.",
+            "Promotional photograph shows a two-person set. Live-music cover conditions are separate; confirm with the venue."
+          ]
+        }
+      ],
+      "savedProfile": {
+        "name": "MYPLACE café & bar — Hilton Osaka",
+        "slug": "myplace-hilton",
+        "menus": [
+          {
+            "url": "https://osaka.hiltonjapan.co.jp/plans/restaurants/other/myplace-happyhour",
+            "note": "Published examples from the discounted selection. Overall offer starts at ¥900 including tax and service; the operator does not assign individual item prices.",
+            "items": [
+              {
+                "name": "Highball",
+                "priceLabel": "50% off · item price not published"
+              },
+              {
+                "name": "Gin tonic",
+                "priceLabel": "50% off · item price not published"
+              },
+              {
+                "name": "Moscow mule",
+                "priceLabel": "50% off · item price not published"
+              },
+              {
+                "name": "Cuba libre",
+                "priceLabel": "50% off · item price not published"
+              },
+              {
+                "name": "Tequila sunrise",
+                "priceLabel": "50% off · item price not published"
+              },
+              {
+                "name": "Salty dog",
+                "priceLabel": "50% off · item price not published"
+              },
+              {
+                "name": "Asahi Super Dry",
+                "priceLabel": "50% off · item price not published"
+              },
+              {
+                "name": "Minoh Osaru IPA",
+                "priceLabel": "50% off · item price not published"
+              },
+              {
+                "name": "Coedo Shikkoku",
+                "priceLabel": "50% off · item price not published"
+              },
+              {
+                "name": "Sparkling wine — one selection",
+                "priceLabel": "50% off · item price not published"
+              },
+              {
+                "name": "White wine — three selections",
+                "priceLabel": "50% off · item price not published"
+              },
+              {
+                "name": "Red wine — three selections",
+                "priceLabel": "50% off · item price not published"
+              }
+            ],
+            "label": "Happy-hour drinks",
+            "coverage": "sample",
+            "currency": "JPY"
+          },
+          {
+            "url": "https://osaka.hiltonjapan.co.jp/plans/restaurants/afternoontea/myplace-champagne-high-tea",
+            "note": "Published November examples; food rotates seasonally. Champagne and other drinks are included for 90 minutes; glass/pot exchange applies. No individual item prices.",
+            "items": [
+              {
+                "name": "November champagne high tea — per person",
+                "note": "Tax and service included",
+                "price": 9800
+              },
+              {
+                "name": "Sourdough and smoked-salmon open sandwich",
+                "priceLabel": "Included in buffet / set; no separate price"
+              },
+              {
+                "name": "Pumpkin and cheddar quiche",
+                "priceLabel": "Included in buffet / set; no separate price"
+              },
+              {
+                "name": "Vegetable crudités",
+                "priceLabel": "Included in buffet / set; no separate price"
+              },
+              {
+                "name": "Marinated mixed olives",
+                "priceLabel": "Included in buffet / set; no separate price"
+              },
+              {
+                "name": "Shrimp and broccoli with spicy mayonnaise / Galician-style octopus",
+                "priceLabel": "Included in buffet / set; no separate price"
+              },
+              {
+                "name": "Camembert and potato-salad tart",
+                "priceLabel": "Included in buffet / set; no separate price"
+              },
+              {
+                "name": "Praline chocolate",
+                "priceLabel": "Included in buffet / set; no separate price"
+              },
+              {
+                "name": "Moët & Chandon champagne",
+                "priceLabel": "Included in buffet / set; no separate price"
+              },
+              {
+                "name": "Red wine",
+                "priceLabel": "Included in buffet / set; no separate price"
+              },
+              {
+                "name": "White wine",
+                "priceLabel": "Included in buffet / set; no separate price"
+              },
+              {
+                "name": "Highball",
+                "priceLabel": "Included in buffet / set; no separate price"
+              },
+              {
+                "name": "Beer",
+                "priceLabel": "Included in buffet / set; no separate price"
+              },
+              {
+                "name": "Cappuccino, café latte and drip coffee — ten coffee options",
+                "priceLabel": "Included in buffet / set; no separate price"
+              },
+              {
+                "name": "Dilmah tea — nine selections / iced tea",
+                "priceLabel": "Included in buffet / set; no separate price"
+              }
+            ],
+            "label": "November champagne high tea — Bubbles at Night",
+            "coverage": "published",
+            "currency": "JPY"
+          }
+        ],
+        "photo": {
+          "alt": "Illustrative cocktails from Hilton Osaka’s happy-hour promotion",
+          "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/osaka/researched/myplace-hilton-e706a749366769b9.webp",
+          "credit": "Photo: Hilton Osaka",
+          "checkedAt": "2026-10-09",
+          "sourceUrl": "https://osaka.hiltonjapan.co.jp/plans/restaurants/other/myplace-happyhour",
+          "originalUrl": "https://osaka.hiltonjapan.co.jp/img/plans/up_img/restaurants/20250404151019_img_l.jpg"
+        },
+        "address": "Hilton Osaka 1F, 1-8-8 Umeda, Kita-ku, Osaka 530-0001, Japan",
+        "specials": [
+          {
+            "kind": "other",
+            "title": "Weekday happy hour",
+            "menuLabel": "Happy-hour drinks",
+            "sourceUrl": "https://osaka.hiltonjapan.co.jp/plans/restaurants/other/myplace-happyhour",
+            "conditions": [
+              "Excludes Saturdays, Sundays and Japanese public holidays.",
+              "¥900 cover charge during live music, except hotel guests.",
+              "Tax and service included. Menu and hours may change."
+            ],
+            "discounted": true,
+            "description": "Selected drinks at 50% off; published offer starts at ¥900.",
+            "availability": {
+              "windows": [
+                {
+                  "end": "19:00",
+                  "days": [
+                    1,
+                    2,
+                    3,
+                    4,
+                    5
+                  ],
+                  "start": "17:00"
+                }
+              ],
+              "excludesHolidays": true
+            }
+          },
+          {
+            "kind": "other",
+            "title": "November champagne high tea — Bubbles at Night",
+            "menuLabel": "November champagne high tea — Bubbles at Night",
+            "sourceUrl": "https://osaka.hiltonjapan.co.jp/plans/restaurants/afternoontea/myplace-champagne-high-tea",
+            "validFrom": "2026-11-01",
+            "conditions": [
+              "Reserve by the previous day; last admission 21:00.",
+              "Seat limit two hours; drinks 90 minutes, glass/pot exchange.",
+              "This validity covers the published November menu; the high-tea program itself continues beyond November with a changing seasonal menu.",
+              "Golden Week, Obon, Christmas and year-end/New Year may have different prices.",
+              "Promotional photograph shows a two-person set. Live-music cover conditions are separate; confirm with the venue."
+            ],
+            "discounted": false,
+            "description": "November seasonal set with 90-minute champagne/drink free flow, ¥9,800 per person including tax and service.",
+            "limitedTime": true,
+            "availability": {
+              "windows": [
+                {
+                  "end": "21:00",
+                  "days": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4,
+                    5,
+                    6
+                  ],
+                  "start": "18:00"
+                }
+              ]
+            },
+            "validThrough": "2026-11-30"
+          }
+        ],
+        "checkedAt": "2026-10-16",
+        "websiteUrl": "https://osaka.hiltonjapan.co.jp/plans/restaurants/other/myplace-happyhour",
+        "neighborhood": "Umeda",
+        "pinSourceUrl": "https://osaka.hiltonjapan.co.jp/plans/restaurants/other/myplace-happyhour"
+      },
+      "verification": {
+        "local": {
+          "key": "myplace",
+          "sourceUrl": "https://osaka.hiltonjapan.co.jp/plans/restaurants/other/myplace-happyhour",
+          "pinId": 15610,
+          "authorId": 372,
+          "contentId": 1390,
+          "revision": 2,
+          "addedMenus": 1,
+          "addedMenuItems": 15,
+          "addedOffers": 1,
+          "photo": {
+            "key": "myplace",
+            "index": 11,
+            "originalUrl": "https://osaka.hiltonjapan.co.jp/img/plans/up_img/restaurants/20261009055952_img_l.jpg",
+            "sourcePage": "https://osaka.hiltonjapan.co.jp/plans/restaurants/afternoontea/myplace-champagne-high-tea",
+            "credit": "Hilton Osaka",
+            "note": "Official November 2026 champagne high-tea promotional photo; shown portion is for two people.",
+            "local": ".scrape/restaurant-opening-repairs-2026-10-16/myplace.source",
+            "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-16/batch56-myplace-11-dd8534554aa53a97.webp",
+            "sha256": "dd8534554aa53a9708be8eb36ed40c7408bab6550d35e269cfe0cb260c4ae545",
+            "width": 1000,
+            "height": 450
+          },
+          "originalOffersPreserved": true,
+          "originalMenusPreserved": true,
+          "authorPreserved": true
+        },
+        "production": {
+          "key": "myplace",
+          "sourceUrl": "https://osaka.hiltonjapan.co.jp/plans/restaurants/other/myplace-happyhour",
+          "pinId": 15610,
+          "authorId": 372,
+          "contentId": 1390,
+          "revision": 2,
+          "addedMenus": 1,
+          "addedMenuItems": 15,
+          "addedOffers": 1,
+          "photo": {
+            "key": "myplace",
+            "index": 11,
+            "originalUrl": "https://osaka.hiltonjapan.co.jp/img/plans/up_img/restaurants/20261009055952_img_l.jpg",
+            "sourcePage": "https://osaka.hiltonjapan.co.jp/plans/restaurants/afternoontea/myplace-champagne-high-tea",
+            "credit": "Hilton Osaka",
+            "note": "Official November 2026 champagne high-tea promotional photo; shown portion is for two people.",
+            "local": ".scrape/restaurant-opening-repairs-2026-10-16/myplace.source",
+            "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-16/batch56-myplace-11-dd8534554aa53a97.webp",
+            "sha256": "dd8534554aa53a9708be8eb36ed40c7408bab6550d35e269cfe0cb260c4ae545",
+            "width": 1000,
+            "height": 450
+          },
+          "originalOffersPreserved": true,
+          "originalMenusPreserved": true,
+          "authorPreserved": true
+        }
+      }
+    },
+    {
+      "sourceUrl": "https://kyoto.hiltonjapan.co.jp/restaurants/teori",
+      "addedMenuLabels": [
+        "Chocolate Lover Forest — September 11–October 18",
+        "Halloween Chocolate Lover Forest — October 19–November 3"
+      ],
+      "addedOffers": [
+        {
+          "kind": "other",
+          "title": "Chocolate Lover Forest sweets buffet",
+          "sourceUrl": "https://kyoto.hiltonjapan.co.jp/restaurants/lp/sweetsbuffet-autumn",
+          "menuLabel": "Chocolate Lover Forest — September 11–October 18",
+          "description": "Daily sweets buffet: adults ¥5,800; ages 6–11 ¥2,900; ages 0–5 free; tax/service included.",
+          "validFrom": "2026-09-11",
+          "validThrough": "2026-10-18",
+          "limitedTime": true,
+          "discounted": false,
+          "availability": {
+            "windows": [
+              {
+                "days": [
+                  0,
+                  1,
+                  2,
+                  3,
+                  4,
+                  5,
+                  6
+                ],
+                "start": "15:00",
+                "end": "16:30"
+              }
+            ]
+          },
+          "conditions": [
+            "Reservation required. Adults ¥5,800; ages 6–11 ¥2,900; ages 0–5 free. Tax and service included.",
+            "Daily 15:00–16:30; operator labels 16:30 last order in the Halloween section.",
+            "Menu changes with ingredient availability; some items rotate daily.",
+            "The October 19 Halloween successor is separate from the regular chocolate presentation; ordinary lunch/dinner buffet menus are not transferred to this offer."
+          ]
+        },
+        {
+          "kind": "other",
+          "title": "Halloween Chocolate Lover Forest sweets buffet",
+          "sourceUrl": "https://kyoto.hiltonjapan.co.jp/restaurants/lp/sweetsbuffet-autumn",
+          "menuLabel": "Halloween Chocolate Lover Forest — October 19–November 3",
+          "description": "Daily sweets buffet: adults ¥5,800; ages 6–11 ¥2,900; ages 0–5 free; tax/service included.",
+          "validFrom": "2026-10-19",
+          "validThrough": "2026-11-03",
+          "limitedTime": true,
+          "discounted": false,
+          "availability": {
+            "windows": [
+              {
+                "days": [
+                  0,
+                  1,
+                  2,
+                  3,
+                  4,
+                  5,
+                  6
+                ],
+                "start": "15:00",
+                "end": "16:30"
+              }
+            ]
+          },
+          "conditions": [
+            "Reservation required. Adults ¥5,800; ages 6–11 ¥2,900; ages 0–5 free. Tax and service included.",
+            "Daily 15:00–16:30; operator labels 16:30 last order in the Halloween section.",
+            "Menu changes with ingredient availability; some items rotate daily.",
+            "The October 19 Halloween successor is separate from the regular chocolate presentation; ordinary lunch/dinner buffet menus are not transferred to this offer."
+          ]
+        }
+      ],
+      "savedProfile": {
+        "name": "Teori — Hilton Kyoto",
+        "menus": [
+          {
+            "url": "https://kyoto.hiltonjapan.co.jp/restaurants/lp/teori-lunch-dinner-buffet-autumn",
+            "note": "September 11–November 19. Tax and service included; 120-minute dining limit. Lunch room 11:30–14:30 with buffet closing 14:00; dinner room 17:30–21:30, buffet closes 21:00. Weekend/holiday rates differ. Dishes are published examples, some rotate daily and sourcing may change; no guarantee every item is present daily. Regular a la carte menu is separate; own branch/gallery and linked reservation pages checked.",
+            "items": [
+              {
+                "name": "Weekday lunch — adult",
+                "price": 5800
+              },
+              {
+                "name": "Weekend/holiday lunch — adult",
+                "price": 6200
+              },
+              {
+                "name": "Weekday lunch — age 6–11",
+                "price": 2900
+              },
+              {
+                "name": "Weekend/holiday lunch — age 6–11",
+                "price": 3100
+              },
+              {
+                "name": "Weekday dinner — adult",
+                "price": 6800
+              },
+              {
+                "name": "Weekend/holiday dinner — adult",
+                "price": 7200
+              },
+              {
+                "name": "Weekday dinner — age 6–11",
+                "price": 3400
+              },
+              {
+                "name": "Weekend/holiday dinner — age 6–11",
+                "price": 3600
+              },
+              {
+                "name": "Age 0–5 buffet",
+                "note": "With dining party; child age conditions apply",
+                "price": 0
+              },
+              {
+                "name": "Herb roast beef",
+                "note": "Included in Autumn Favorites buffet; no separate item price published",
+                "priceLabel": "Price not published"
+              },
+              {
+                "name": "Miso-yuzu glazed roast chicken",
+                "note": "Included in Autumn Favorites buffet; no separate item price published",
+                "priceLabel": "Price not published"
+              },
+              {
+                "name": "Mushroom-dashi pork shabu-shabu",
+                "note": "Included in Autumn Favorites buffet; no separate item price published",
+                "priceLabel": "Price not published"
+              },
+              {
+                "name": "Dark chocolate and pumpkin curry",
+                "note": "Included in Autumn Favorites buffet; no separate item price published",
+                "priceLabel": "Price not published"
+              },
+              {
+                "name": "Pork and chestnut red-wine stew",
+                "note": "Included in Autumn Favorites buffet; no separate item price published",
+                "priceLabel": "Price not published"
+              },
+              {
+                "name": "Autumn mushroom fried rice",
+                "note": "Included in Autumn Favorites buffet; no separate item price published",
+                "priceLabel": "Price not published"
+              },
+              {
+                "name": "Autumn root-vegetable miso salad",
+                "note": "Included in Autumn Favorites buffet; no separate item price published",
+                "priceLabel": "Price not published"
+              },
+              {
+                "name": "Persimmon and rocket yuzu salad",
+                "note": "Included in Autumn Favorites buffet; no separate item price published",
+                "priceLabel": "Price not published"
+              },
+              {
+                "name": "Kyoto white-miso ramen",
+                "note": "Included in Autumn Favorites buffet; no separate item price published",
+                "priceLabel": "Price not published"
+              },
+              {
+                "name": "Gyoza",
+                "note": "Included in Autumn Favorites buffet; no separate item price published",
+                "priceLabel": "Price not published"
+              },
+              {
+                "name": "Shumai",
+                "note": "Included in Autumn Favorites buffet; no separate item price published",
+                "priceLabel": "Price not published"
+              },
+              {
+                "name": "Vegan autumn vegetable dim sum",
+                "note": "Included in Autumn Favorites buffet; no separate item price published",
+                "priceLabel": "Price not published"
+              },
+              {
+                "name": "Classic hummus",
+                "note": "Included in Autumn Favorites buffet; no separate item price published",
+                "priceLabel": "Price not published"
+              },
+              {
+                "name": "Baba ganoush",
+                "note": "Included in Autumn Favorites buffet; no separate item price published",
+                "priceLabel": "Price not published"
+              },
+              {
+                "name": "Warabi mochi",
+                "note": "Included in Autumn Favorites buffet; no separate item price published",
+                "priceLabel": "Price not published"
+              },
+              {
+                "name": "Mitarashi dango",
+                "note": "Included in Autumn Favorites buffet; no separate item price published",
+                "priceLabel": "Price not published"
+              },
+              {
+                "name": "Matcha madeleines",
+                "note": "Included in Autumn Favorites buffet; no separate item price published",
+                "priceLabel": "Price not published"
+              },
+              {
+                "name": "Matcha cookies",
+                "note": "Included in Autumn Favorites buffet; no separate item price published",
+                "priceLabel": "Price not published"
+              }
+            ],
+            "label": "Autumn Favorites buffet",
+            "coverage": "sample",
+            "currency": "JPY"
+          },
+          {
+            "url": "https://kyoto.hiltonjapan.co.jp/restaurants/lp/sweetsbuffet-autumn",
+            "note": "Published examples for this dated sweets buffet; dishes included rather than separately priced. Children’s dining rates are distinct from the hotel’s accommodation policy.",
+            "items": [
+              {
+                "name": "Adult sweets buffet",
+                "note": "Tax and service included",
+                "price": 5800
+              },
+              {
+                "name": "Sweets buffet — ages 6–11",
+                "price": 2900
+              },
+              {
+                "name": "Sweets buffet — ages 0–5",
+                "price": 0
+              },
+              {
+                "name": "Six chocolate mousses — live station",
+                "priceLabel": "Included in buffet / set; no separate price"
+              },
+              {
+                "name": "Monaka chocolate ice cream with Shine Muscat and Kyoho grapes",
+                "priceLabel": "Included in buffet / set; no separate price"
+              },
+              {
+                "name": "75% dark-chocolate macaron",
+                "priceLabel": "Included in buffet / set; no separate price"
+              },
+              {
+                "name": "Hazelnut-chocolate panna cotta with pear and vanilla",
+                "priceLabel": "Included in buffet / set; no separate price"
+              },
+              {
+                "name": "40% milk-chocolate mousse with pecan and porcini praline",
+                "priceLabel": "Included in buffet / set; no separate price"
+              },
+              {
+                "name": "64% dark-chocolate cream, caramel and macadamia praline",
+                "priceLabel": "Included in buffet / set; no separate price"
+              },
+              {
+                "name": "Chocolate teddy bear",
+                "priceLabel": "Included in buffet / set; no separate price"
+              },
+              {
+                "name": "Matcha chocolate with sudachi and mandarin sauce",
+                "priceLabel": "Included in buffet / set; no separate price"
+              },
+              {
+                "name": "Milk chocolate, miso, caramel and pumpkin mousse",
+                "priceLabel": "Included in buffet / set; no separate price"
+              },
+              {
+                "name": "Raspberry-chocolate mousse with blueberry",
+                "priceLabel": "Included in buffet / set; no separate price"
+              },
+              {
+                "name": "Fig and raspberry tart with passionfruit-chocolate cream",
+                "priceLabel": "Included in buffet / set; no separate price"
+              },
+              {
+                "name": "Coffee cake with 53% milk chocolate",
+                "priceLabel": "Included in buffet / set; no separate price"
+              },
+              {
+                "name": "White-sesame soufflé cheesecake, green-apple jelly and Caramélia cream",
+                "priceLabel": "Included in buffet / set; no separate price"
+              },
+              {
+                "name": "Yuzu-chocolate charlotte with yuzu and fig jelly",
+                "priceLabel": "Included in buffet / set; no separate price"
+              },
+              {
+                "name": "Dulcey blonde-chocolate and banana-caramel cake",
+                "priceLabel": "Included in buffet / set; no separate price"
+              },
+              {
+                "name": "Chocolate-chip and pear tart",
+                "priceLabel": "Included in buffet / set; no separate price"
+              },
+              {
+                "name": "Dark-chocolate and pumpkin curry",
+                "priceLabel": "Included in buffet / set; no separate price"
+              },
+              {
+                "name": "Pumpkin and pancetta rigatoni with chocolate fondue",
+                "priceLabel": "Included in buffet / set; no separate price"
+              },
+              {
+                "name": "Dark-chocolate and white-miso fondue",
+                "priceLabel": "Included in buffet / set; no separate price"
+              },
+              {
+                "name": "Autumn mushroom, chestnut and herb frittata",
+                "priceLabel": "Included in buffet / set; no separate price"
+              },
+              {
+                "name": "Autumn grain salad",
+                "priceLabel": "Included in buffet / set; no separate price"
+              }
+            ],
+            "label": "Chocolate Lover Forest — September 11–October 18",
+            "coverage": "published",
+            "currency": "JPY"
+          },
+          {
+            "url": "https://kyoto.hiltonjapan.co.jp/restaurants/lp/sweetsbuffet-autumn",
+            "note": "Published examples for this dated sweets buffet; dishes included rather than separately priced. Children’s dining rates are distinct from the hotel’s accommodation policy.",
+            "items": [
+              {
+                "name": "Adult sweets buffet",
+                "note": "Tax and service included",
+                "price": 5800
+              },
+              {
+                "name": "Sweets buffet — ages 6–11",
+                "price": 2900
+              },
+              {
+                "name": "Sweets buffet — ages 0–5",
+                "price": 0
+              },
+              {
+                "name": "Dark-night raspberry-chocolate mousse with blueberry",
+                "priceLabel": "Included in buffet / set; no separate price"
+              },
+              {
+                "name": "Jet-black chocolate teddy bear",
+                "priceLabel": "Included in buffet / set; no separate price"
+              },
+              {
+                "name": "Haunted-forest white-sesame soufflé cheesecake, green-apple jelly and Caramélia cream",
+                "priceLabel": "Included in buffet / set; no separate price"
+              },
+              {
+                "name": "Forbidden mushroom — milk-chocolate mousse, pecan and porcini praline",
+                "priceLabel": "Included in buffet / set; no separate price"
+              },
+              {
+                "name": "Cursed tree-stump coffee cake with 53% milk chocolate",
+                "priceLabel": "Included in buffet / set; no separate price"
+              }
+            ],
+            "label": "Halloween Chocolate Lover Forest — October 19–November 3",
+            "coverage": "published",
+            "currency": "JPY"
+          }
+        ],
+        "photo": {
+          "alt": "Teori — Hilton Kyoto — Official Teori restaurant gallery photograph; no menu availability inferred from image.",
+          "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-15/teori-24-d9ee86559d03006d.webp",
+          "credit": "Hilton Kyoto",
+          "checkedAt": "2026-10-15",
+          "sourceUrl": "https://kyoto.hiltonjapan.co.jp/restaurants/teori",
+          "originalUrl": "https://kyoto.hiltonjapan.co.jp/img/restaurants/up_img/20250529140539_img_l.jpg"
+        },
+        "address": "1F Hilton Kyoto, 416 Shimomaruya-cho, Nakagyo-ku, Kyoto",
+        "specials": [
+          {
+            "kind": "lunch",
+            "title": "Autumn Favorites lunch buffet",
+            "schedule": "Japan local time; see conditions",
+            "menuLabel": "Autumn Favorites buffet",
+            "sourceUrl": "https://kyoto.hiltonjapan.co.jp/restaurants/lp/teori-lunch-dinner-buffet-autumn",
+            "validFrom": "2026-09-11",
+            "conditions": [
+              "120-minute limit; room closes 14:30, buffet closes 14:00.",
+              "Tax and service included; children 6–11 half adult price, age 0–5 free.",
+              "Examples rotate; availability may change."
+            ],
+            "discounted": false,
+            "description": "Dated autumn lunch buffet, adults ¥5,800 weekdays / ¥6,200 weekends and holidays.",
+            "limitedTime": true,
+            "availability": {
+              "windows": [
+                {
+                  "end": "14:00",
+                  "days": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4,
+                    5,
+                    6
+                  ],
+                  "start": "11:30"
+                }
+              ]
+            },
+            "validThrough": "2026-11-19"
+          },
+          {
+            "kind": "other",
+            "title": "Autumn Favorites dinner buffet",
+            "schedule": "Japan local time; see conditions",
+            "menuLabel": "Autumn Favorites buffet",
+            "sourceUrl": "https://kyoto.hiltonjapan.co.jp/restaurants/lp/teori-lunch-dinner-buffet-autumn",
+            "validFrom": "2026-09-11",
+            "conditions": [
+              "120-minute limit; room closes 21:30, buffet closes 21:00.",
+              "Tax and service included; children 6–11 half adult price, age 0–5 free.",
+              "Examples rotate; availability may change."
+            ],
+            "discounted": false,
+            "description": "Dated autumn dinner buffet, adults ¥6,800 weekdays / ¥7,200 weekends and holidays.",
+            "limitedTime": true,
+            "availability": {
+              "windows": [
+                {
+                  "end": "21:00",
+                  "days": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4,
+                    5,
+                    6
+                  ],
+                  "start": "17:30"
+                }
+              ]
+            },
+            "validThrough": "2026-11-19"
+          },
+          {
+            "kind": "other",
+            "title": "Chocolate Lover Forest sweets buffet",
+            "menuLabel": "Chocolate Lover Forest — September 11–October 18",
+            "sourceUrl": "https://kyoto.hiltonjapan.co.jp/restaurants/lp/sweetsbuffet-autumn",
+            "validFrom": "2026-09-11",
+            "conditions": [
+              "Reservation required. Adults ¥5,800; ages 6–11 ¥2,900; ages 0–5 free. Tax and service included.",
+              "Daily 15:00–16:30; operator labels 16:30 last order in the Halloween section.",
+              "Menu changes with ingredient availability; some items rotate daily.",
+              "The October 19 Halloween successor is separate from the regular chocolate presentation; ordinary lunch/dinner buffet menus are not transferred to this offer."
+            ],
+            "discounted": false,
+            "description": "Daily sweets buffet: adults ¥5,800; ages 6–11 ¥2,900; ages 0–5 free; tax/service included.",
+            "limitedTime": true,
+            "availability": {
+              "windows": [
+                {
+                  "end": "16:30",
+                  "days": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4,
+                    5,
+                    6
+                  ],
+                  "start": "15:00"
+                }
+              ]
+            },
+            "validThrough": "2026-10-18"
+          },
+          {
+            "kind": "other",
+            "title": "Halloween Chocolate Lover Forest sweets buffet",
+            "menuLabel": "Halloween Chocolate Lover Forest — October 19–November 3",
+            "sourceUrl": "https://kyoto.hiltonjapan.co.jp/restaurants/lp/sweetsbuffet-autumn",
+            "validFrom": "2026-10-19",
+            "conditions": [
+              "Reservation required. Adults ¥5,800; ages 6–11 ¥2,900; ages 0–5 free. Tax and service included.",
+              "Daily 15:00–16:30; operator labels 16:30 last order in the Halloween section.",
+              "Menu changes with ingredient availability; some items rotate daily.",
+              "The October 19 Halloween successor is separate from the regular chocolate presentation; ordinary lunch/dinner buffet menus are not transferred to this offer."
+            ],
+            "discounted": false,
+            "description": "Daily sweets buffet: adults ¥5,800; ages 6–11 ¥2,900; ages 0–5 free; tax/service included.",
+            "limitedTime": true,
+            "availability": {
+              "windows": [
+                {
+                  "end": "16:30",
+                  "days": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4,
+                    5,
+                    6
+                  ],
+                  "start": "15:00"
+                }
+              ]
+            },
+            "validThrough": "2026-11-03"
+          }
+        ],
+        "checkedAt": "2026-10-16",
+        "websiteUrl": "https://kyoto.hiltonjapan.co.jp/restaurants/teori",
+        "neighborhood": "Kawaramachi Sanjo",
+        "pinSourceUrl": "https://kyoto.hiltonjapan.co.jp/restaurants/teori"
+      },
+      "verification": {
+        "local": {
+          "key": "teori",
+          "sourceUrl": "https://kyoto.hiltonjapan.co.jp/restaurants/teori",
+          "pinId": 15928,
+          "authorId": 372,
+          "contentId": 1440,
+          "revision": 2,
+          "addedMenus": 2,
+          "addedMenuItems": 32,
+          "addedOffers": 2,
+          "photo": {
+            "key": "teori",
+            "index": 32,
+            "originalUrl": "https://kyoto.hiltonjapan.co.jp/img/lp/content_options/6109-6a977f6226475.jpg",
+            "sourcePage": "https://kyoto.hiltonjapan.co.jp/restaurants/lp/sweetsbuffet-autumn",
+            "credit": "Hilton Kyoto",
+            "note": "Official October 19–November 3, 2026 Halloween chocolate buffet promotional photo.",
+            "local": ".scrape/restaurant-opening-repairs-2026-10-16/teori.source",
+            "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-16/batch56-teori-32-44e459040d010e6e.webp",
+            "sha256": "44e459040d010e6ec7aa2c09fe28e696db173a66ede48ebf63026a14e474c470",
+            "width": 750,
+            "height": 490
+          },
+          "originalOffersPreserved": true,
+          "originalMenusPreserved": true,
+          "authorPreserved": true
+        },
+        "production": {
+          "key": "teori",
+          "sourceUrl": "https://kyoto.hiltonjapan.co.jp/restaurants/teori",
+          "pinId": 15928,
+          "authorId": 372,
+          "contentId": 1440,
+          "revision": 2,
+          "addedMenus": 2,
+          "addedMenuItems": 32,
+          "addedOffers": 2,
+          "photo": {
+            "key": "teori",
+            "index": 32,
+            "originalUrl": "https://kyoto.hiltonjapan.co.jp/img/lp/content_options/6109-6a977f6226475.jpg",
+            "sourcePage": "https://kyoto.hiltonjapan.co.jp/restaurants/lp/sweetsbuffet-autumn",
+            "credit": "Hilton Kyoto",
+            "note": "Official October 19–November 3, 2026 Halloween chocolate buffet promotional photo.",
+            "local": ".scrape/restaurant-opening-repairs-2026-10-16/teori.source",
+            "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-16/batch56-teori-32-44e459040d010e6e.webp",
+            "sha256": "44e459040d010e6ec7aa2c09fe28e696db173a66ede48ebf63026a14e474c470",
+            "width": 750,
+            "height": 490
+          },
+          "originalOffersPreserved": true,
+          "originalMenusPreserved": true,
+          "authorPreserved": true
+        }
+      }
+    },
+    {
+      "sourceUrl": "https://nagoya.parco.jp/shop/detail/?cd=009191",
+      "addedMenuLabels": [
+        "WIND BREAKER fifth-anniversary cafe — Nagoya"
+      ],
+      "addedOffers": [
+        {
+          "kind": "other",
+          "title": "WIND BREAKER fifth-anniversary collaboration cafe",
+          "sourceUrl": "https://collabo.sld-inc.com/wb-5th-exhibition",
+          "menuLabel": "WIND BREAKER fifth-anniversary cafe — Nagoya",
+          "description": "Thirteen Nagoya-specific food, sweets and drinks, ¥980–¥2,090 including tax; one random coaster from the chosen group per collaboration item while stocks last.",
+          "validFrom": "2026-10-09",
+          "validThrough": "2026-11-01",
+          "limitedTime": true,
+          "discounted": false,
+          "availability": {
+            "windows": [
+              {
+                "days": [
+                  0,
+                  1,
+                  2,
+                  3,
+                  4,
+                  5,
+                  6
+                ],
+                "start": "11:15",
+                "end": "11:55"
+              },
+              {
+                "days": [
+                  0,
+                  1,
+                  2,
+                  3,
+                  4,
+                  5,
+                  6
+                ],
+                "start": "13:15",
+                "end": "13:55"
+              },
+              {
+                "days": [
+                  0,
+                  1,
+                  2,
+                  3,
+                  4,
+                  5,
+                  6
+                ],
+                "start": "15:15",
+                "end": "15:55"
+              },
+              {
+                "days": [
+                  0,
+                  1,
+                  2,
+                  3,
+                  4,
+                  5,
+                  6
+                ],
+                "start": "17:00",
+                "end": "17:40"
+              },
+              {
+                "days": [
+                  0,
+                  1,
+                  2,
+                  3,
+                  4,
+                  5,
+                  6
+                ],
+                "start": "18:45",
+                "end": "19:25"
+              }
+            ]
+          },
+          "conditions": [
+            "Five 70-minute seatings: 11:15–12:25, 13:15–14:25, 15:15–16:25, 17:00–18:10 and 18:45–19:55; last order 30 minutes before each end.",
+            "Reservation priority, online only; walk-ins only where spaces remain. At least one food, dessert or drink per person.",
+            "The exact event section and operator page accept online reservations until same-day 08:00; generic booking header says prior-day 17:00. Confirm the cutoff with the booking page; no availability is implied.",
+            "No-contact arrival more than 15 minutes late may be cancelled; late entry does not extend the seating or last order.",
+            "Cafe admission is separate from the exhibition ticket; do not transfer exhibition admission fees.",
+            "Menus and novelty gifts are limited in quantity; Tokyo/Osaka-only ended dishes are excluded."
+          ]
+        }
+      ],
+      "savedProfile": {
+        "name": "Collabo_Index — Nagoya PARCO",
+        "menus": [
+          {
+            "url": "https://collabo.sld-inc.com/sakamotodays_2608",
+            "note": "Tax-inclusive operator menu, checked against rendered site and TableCheck branch booking. Nagoya run November 5–23; Tokyo/Osaka ended October 5 and are excluded. Non-alcoholic drinks only despite bar theme. 75-minute seatings with last order 30 minutes before end. Online reservation priority, until 17:00 previous day; walk-ins only if space. One menu item per person; advance reservation fee ¥550 per person, not included in food prices.",
+            "items": [
+              {
+                "name": "うまい。坂本 太郎の極秘タコスプレート",
+                "price": 1890
+              },
+              {
+                "name": "視える未来！朝倉 シンのエスプーマカルボナーラ",
+                "price": 1890
+              },
+              {
+                "name": "大佛の可憐な鋸黒カレーリゾット",
+                "price": 1790
+              },
+              {
+                "name": "南雲のまるでピザなワッフルプレート",
+                "price": 1690
+              },
+              {
+                "name": "硝子を砕く神々廻のモンブラン",
+                "price": 1690
+              },
+              {
+                "name": "坂本 太郎のぷるぷる杏仁みるくソーダ",
+                "price": 1000
+              },
+              {
+                "name": "朝倉 シンのジンジャーアップルティー",
+                "price": 1000
+              },
+              {
+                "name": "南雲の休日サングリア風ソーダ",
+                "price": 1000
+              },
+              {
+                "name": "神々廻のアイリッシュコーヒー風オレ",
+                "price": 1000
+              },
+              {
+                "name": "大佛のクマさんストロベリーラッシー",
+                "price": 1000
+              },
+              {
+                "name": "X（スラー）のトニックホワイトウォーター",
+                "price": 1000
+              },
+              {
+                "name": "楽の塩バニラコーラ",
+                "price": 1000
+              },
+              {
+                "name": "VIPラウンジ SAKAMOTO DAYS SECRET BAR & CAFE セレクションスタンド",
+                "note": "Designed for two people; counts as two orders",
+                "price": 4200
+              },
+              {
+                "name": "Advance reservation fee per person",
+                "note": "Separate from food; prepaid by credit card; cancellation 100%",
+                "price": 550
+              }
+            ],
+            "label": "SAKAMOTO DAYS SECRET BAR & CAFE — Nagoya",
+            "coverage": "sample",
+            "currency": "JPY"
+          },
+          {
+            "url": "https://collabo.sld-inc.com/sakamotodays_2608",
+            "note": "Tax included; Tokyo/Osaka September birthday plate excluded. Promotion illustration is not a host-interior photograph.",
+            "items": [
+              {
+                "name": "坂本 太郎のバースデーサンデーパフェ",
+                "note": "November 17–23 only; Nagoya venue",
+                "price": 1800
+              }
+            ],
+            "label": "Nagoya Sakamoto birthday sundae",
+            "coverage": "sample",
+            "currency": "JPY"
+          },
+          {
+            "url": "https://collabo.sld-inc.com/wb-5th-exhibition",
+            "note": "Verified in the rendered operator page and native menu structured data. Excludes the ended Tokyo/Osaka-only joint-battle plate. No November SAKAMOTO DAYS reservation fee transferred to this event.",
+            "items": [
+              {
+                "name": "屋上サラダプレート",
+                "note": "Tax included; exact Nagoya menu.",
+                "price": 1980,
+                "category": "FOOD"
+              },
+              {
+                "name": "桜と梅宮の勝利のグータッチオムライスプレート",
+                "note": "Tax included; exact Nagoya menu.",
+                "price": 1980,
+                "category": "FOOD"
+              },
+              {
+                "name": "桜と楓川の「いただきます」楓川家のにくじゃが定食",
+                "note": "Tax included; exact Nagoya menu.",
+                "price": 2090,
+                "category": "FOOD"
+              },
+              {
+                "name": "棪堂哉真斗と焚石矢の出会い〜天啓パフェ〜",
+                "note": "Tax included; exact Nagoya menu.",
+                "price": 1780,
+                "category": "SWEETS"
+              },
+              {
+                "name": "街のウィンドブレイカー 〜ボウフウリンの看板ケーキ〜",
+                "note": "Tax included; exact Nagoya menu.",
+                "price": 1780,
+                "category": "SWEETS"
+              },
+              {
+                "name": "国崩大火 開演～ブラウニープレート",
+                "note": "Tax included; exact Nagoya menu.",
+                "price": 1780,
+                "category": "SWEETS"
+              },
+              {
+                "name": "ボウフウリンの粛清レモンジンジャーエール",
+                "note": "Tax included; exact Nagoya menu.",
+                "price": 1090,
+                "category": "DRINK"
+              },
+              {
+                "name": "獅子頭連の力の絶対信仰ドリンク",
+                "note": "Tax included; exact Nagoya menu.",
+                "price": 1090,
+                "category": "DRINK"
+              },
+              {
+                "name": "六方一座の街の番人漆黒フロート",
+                "note": "Tax included; exact Nagoya menu.",
+                "price": 1090,
+                "category": "DRINK"
+              },
+              {
+                "name": "GRAVELの『全員で一人』結束のホワイトウォーター",
+                "note": "Tax included; exact Nagoya menu.",
+                "price": 1090,
+                "category": "DRINK"
+              },
+              {
+                "name": "FRANKの国崩ブレイズドリンク",
+                "note": "Tax included; exact Nagoya menu.",
+                "price": 1090,
+                "category": "DRINK"
+              },
+              {
+                "name": "友情の瓶ラムネ 〜桜と十亀の友情の瓶ラムネ〜",
+                "note": "Tax included; exact Nagoya menu.",
+                "price": 980,
+                "category": "DRINK"
+              },
+              {
+                "name": "WIND BREAKER ランダムカフェラテ",
+                "note": "Tax included; exact Nagoya menu.",
+                "price": 1090,
+                "category": "DRINK"
+              }
+            ],
+            "label": "WIND BREAKER fifth-anniversary cafe — Nagoya",
+            "coverage": "published",
+            "currency": "JPY"
+          }
+        ],
+        "photo": {
+          "alt": "Collabo_Index — Nagoya PARCO — Sakamoto Taro taco plate promotional menu image; announced for the Nagoya collaboration, not a photograph of the host interior.",
+          "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-15/sakamoto-site-0-99af165435e95a14.webp",
+          "credit": "©鈴木祐斗／集英社・SAKAMOTO DAYS製作委員会 / SLD Entertainment",
+          "checkedAt": "2026-10-15",
+          "sourceUrl": "https://collabo.sld-inc.com/sakamotodays_2608",
+          "originalUrl": "https://storage.googleapis.com/studio-design-asset-files/projects/4Ra4N8doOD/s-3543x2480_v-frms_webp_ffd034fc-4045-4d18-9f44-7a99a950aa2a_regular.webp"
+        },
+        "address": "5F South Building, Nagoya PARCO, 3-29-1 Sakae, Naka-ku, Nagoya",
+        "specials": [
+          {
+            "kind": "other",
+            "title": "SAKAMOTO DAYS SECRET BAR & CAFE — Nagoya",
+            "schedule": "Japan local time; see conditions",
+            "menuLabel": "SAKAMOTO DAYS SECRET BAR & CAFE — Nagoya",
+            "sourceUrl": "https://collabo.sld-inc.com/sakamotodays_2608",
+            "validFrom": "2026-11-05",
+            "conditions": [
+              "75-minute seatings 11:15/13:15/15:15/17:00/18:45; ordering ends 30 minutes before each seating ends.",
+              "Final admission 19:00.",
+              "At least one food, dessert or drink per person; all drinks non-alcoholic.",
+              "Online advance booking fee ¥550/person, additional to menu prices; 100% cancellation charge.",
+              "Online bookings until 17:00 previous day; walk-ins subject to empty seats."
+            ],
+            "discounted": false,
+            "description": "Dated character-themed dishes, sweets and non-alcoholic drinks at the existing Nagoya PARCO cafe.",
+            "limitedTime": true,
+            "availability": {
+              "windows": [
+                {
+                  "end": "12:00",
+                  "days": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4,
+                    5,
+                    6
+                  ],
+                  "start": "11:15"
+                },
+                {
+                  "end": "14:00",
+                  "days": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4,
+                    5,
+                    6
+                  ],
+                  "start": "13:15"
+                },
+                {
+                  "end": "16:00",
+                  "days": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4,
+                    5,
+                    6
+                  ],
+                  "start": "15:15"
+                },
+                {
+                  "end": "17:45",
+                  "days": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4,
+                    5,
+                    6
+                  ],
+                  "start": "17:00"
+                },
+                {
+                  "end": "19:30",
+                  "days": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4,
+                    5,
+                    6
+                  ],
+                  "start": "18:45"
+                }
+              ]
+            },
+            "validThrough": "2026-11-23"
+          },
+          {
+            "kind": "other",
+            "title": "Nagoya Sakamoto birthday sundae",
+            "schedule": "Japan local time; see conditions",
+            "menuLabel": "Nagoya Sakamoto birthday sundae",
+            "sourceUrl": "https://collabo.sld-inc.com/sakamotodays_2608",
+            "validFrom": "2026-11-17",
+            "conditions": [
+              "75-minute seatings 11:15/13:15/15:15/17:00/18:45; ordering ends 30 minutes before each seating ends.",
+              "Final admission 19:00.",
+              "At least one food, dessert or drink per person; all drinks non-alcoholic.",
+              "Online advance booking fee ¥550/person, additional to menu prices; 100% cancellation charge.",
+              "Online bookings until 17:00 previous day; walk-ins subject to empty seats."
+            ],
+            "discounted": false,
+            "description": "Nagoya-only birthday sundae, ¥1,800 including tax.",
+            "limitedTime": true,
+            "availability": {
+              "windows": [
+                {
+                  "end": "12:00",
+                  "days": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4,
+                    5,
+                    6
+                  ],
+                  "start": "11:15"
+                },
+                {
+                  "end": "14:00",
+                  "days": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4,
+                    5,
+                    6
+                  ],
+                  "start": "13:15"
+                },
+                {
+                  "end": "16:00",
+                  "days": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4,
+                    5,
+                    6
+                  ],
+                  "start": "15:15"
+                },
+                {
+                  "end": "17:45",
+                  "days": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4,
+                    5,
+                    6
+                  ],
+                  "start": "17:00"
+                },
+                {
+                  "end": "19:30",
+                  "days": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4,
+                    5,
+                    6
+                  ],
+                  "start": "18:45"
+                }
+              ]
+            },
+            "validThrough": "2026-11-23"
+          },
+          {
+            "kind": "other",
+            "title": "WIND BREAKER fifth-anniversary collaboration cafe",
+            "menuLabel": "WIND BREAKER fifth-anniversary cafe — Nagoya",
+            "sourceUrl": "https://collabo.sld-inc.com/wb-5th-exhibition",
+            "validFrom": "2026-10-09",
+            "conditions": [
+              "Five 70-minute seatings: 11:15–12:25, 13:15–14:25, 15:15–16:25, 17:00–18:10 and 18:45–19:55; last order 30 minutes before each end.",
+              "Reservation priority, online only; walk-ins only where spaces remain. At least one food, dessert or drink per person.",
+              "The exact event section and operator page accept online reservations until same-day 08:00; generic booking header says prior-day 17:00. Confirm the cutoff with the booking page; no availability is implied.",
+              "No-contact arrival more than 15 minutes late may be cancelled; late entry does not extend the seating or last order.",
+              "Cafe admission is separate from the exhibition ticket; do not transfer exhibition admission fees.",
+              "Menus and novelty gifts are limited in quantity; Tokyo/Osaka-only ended dishes are excluded."
+            ],
+            "discounted": false,
+            "description": "Thirteen Nagoya-specific food, sweets and drinks, ¥980–¥2,090 including tax; one random coaster from the chosen group per collaboration item while stocks last.",
+            "limitedTime": true,
+            "availability": {
+              "windows": [
+                {
+                  "end": "11:55",
+                  "days": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4,
+                    5,
+                    6
+                  ],
+                  "start": "11:15"
+                },
+                {
+                  "end": "13:55",
+                  "days": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4,
+                    5,
+                    6
+                  ],
+                  "start": "13:15"
+                },
+                {
+                  "end": "15:55",
+                  "days": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4,
+                    5,
+                    6
+                  ],
+                  "start": "15:15"
+                },
+                {
+                  "end": "17:40",
+                  "days": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4,
+                    5,
+                    6
+                  ],
+                  "start": "17:00"
+                },
+                {
+                  "end": "19:25",
+                  "days": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4,
+                    5,
+                    6
+                  ],
+                  "start": "18:45"
+                }
+              ]
+            },
+            "validThrough": "2026-11-01"
+          }
+        ],
+        "checkedAt": "2026-10-16",
+        "websiteUrl": "https://nagoya.parco.jp/shop/detail/?cd=009191",
+        "neighborhood": "Sakae",
+        "pinSourceUrl": "https://nagoya.parco.jp/shop/detail/?cd=009191"
+      },
+      "verification": {
+        "local": {
+          "key": "wind",
+          "sourceUrl": "https://nagoya.parco.jp/shop/detail/?cd=009191",
+          "pinId": 15927,
+          "authorId": 372,
+          "contentId": 1439,
+          "revision": 2,
+          "addedMenus": 1,
+          "addedMenuItems": 13,
+          "addedOffers": 1,
+          "photo": {
+            "key": "wind",
+            "index": 0,
+            "originalUrl": "https://storage.googleapis.com/studio-design-asset-files/projects/4Ra4N8doOD/s-3543x2480_v-frms_webp_891d49fc-3991-4e39-8b4a-70bdb877b4e3_regular.webp",
+            "sourcePage": "https://collabo.sld-inc.com/wb-5th-exhibition",
+            "credit": "SLD Entertainment / にいさとる・講談社",
+            "note": "Operator promotional photo of the Nagoya-only Kaedokawa family nikujaga set; not a photograph of the dining room.",
+            "local": ".scrape/restaurant-opening-repairs-2026-10-16/wind.source",
+            "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-16/batch56-wind-0-7a19471c81ccaf22.webp",
+            "sha256": "7a19471c81ccaf22a03481b5e678d286daa85ebe620f73fa6d30c39f261847b0",
+            "width": 1600,
+            "height": 1120
+          },
+          "originalOffersPreserved": true,
+          "originalMenusPreserved": true,
+          "authorPreserved": true
+        },
+        "production": {
+          "key": "wind",
+          "sourceUrl": "https://nagoya.parco.jp/shop/detail/?cd=009191",
+          "pinId": 15927,
+          "authorId": 372,
+          "contentId": 1439,
+          "revision": 2,
+          "addedMenus": 1,
+          "addedMenuItems": 13,
+          "addedOffers": 1,
+          "photo": {
+            "key": "wind",
+            "index": 0,
+            "originalUrl": "https://storage.googleapis.com/studio-design-asset-files/projects/4Ra4N8doOD/s-3543x2480_v-frms_webp_891d49fc-3991-4e39-8b4a-70bdb877b4e3_regular.webp",
+            "sourcePage": "https://collabo.sld-inc.com/wb-5th-exhibition",
+            "credit": "SLD Entertainment / にいさとる・講談社",
+            "note": "Operator promotional photo of the Nagoya-only Kaedokawa family nikujaga set; not a photograph of the dining room.",
+            "local": ".scrape/restaurant-opening-repairs-2026-10-16/wind.source",
+            "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-16/batch56-wind-0-7a19471c81ccaf22.webp",
+            "sha256": "7a19471c81ccaf22a03481b5e678d286daa85ebe620f73fa6d30c39f261847b0",
+            "width": 1600,
+            "height": 1120
+          },
+          "originalOffersPreserved": true,
+          "originalMenusPreserved": true,
+          "authorPreserved": true
+        }
+      }
+    }
+  ],
+  "publicVerification": {
+    "local": {
+      "verifiedAtUtc": "2026-10-16T20:19:29.314521+00:00",
+      "venues": [
+        {
+          "key": "myplace",
+          "pinId": 15610,
+          "publicPinStatus": 200,
+          "menuItems": 15,
+          "nativeGuideHref": "/pin/15610/myplace-cafe-bar-hilton-osaka-japan-special",
+          "verifiedOffers": 1
+        },
+        {
+          "key": "teori",
+          "pinId": 15928,
+          "publicPinStatus": 200,
+          "menuItems": 32,
+          "nativeGuideHref": "/pin/15928/teori-hilton-kyoto-kyoto-restaurant-guide",
+          "verifiedOffers": 2
+        },
+        {
+          "key": "wind",
+          "pinId": 15927,
+          "publicPinStatus": 200,
+          "menuItems": 13,
+          "nativeGuideHref": "/pin/15927/collabo-index-nagoya-parco-nagoya-restaurant-guide",
+          "verifiedOffers": 1
+        }
+      ]
+    },
+    "production": {
+      "verifiedAtUtc": "2026-10-16T20:19:50.781986+00:00",
+      "venues": [
+        {
+          "key": "myplace",
+          "pinId": 15610,
+          "publicPinStatus": 200,
+          "menuItems": 15,
+          "nativeGuideHref": "/pin/15610/myplace-cafe-bar-hilton-osaka-japan-special",
+          "verifiedOffers": 1
+        },
+        {
+          "key": "teori",
+          "pinId": 15928,
+          "publicPinStatus": 200,
+          "menuItems": 32,
+          "nativeGuideHref": "/pin/15928/teori-hilton-kyoto-kyoto-restaurant-guide",
+          "verifiedOffers": 2
+        },
+        {
+          "key": "wind",
+          "pinId": 15927,
+          "publicPinStatus": 200,
+          "menuItems": 13,
+          "nativeGuideHref": "/pin/15927/collabo-index-nagoya-parco-nagoya-restaurant-guide",
+          "verifiedOffers": 1
+        }
+      ]
+    }
+  }
+}

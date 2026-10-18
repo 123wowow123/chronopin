@@ -1,0 +1,281 @@
+{
+  "checkedAt": "2026-10-14",
+  "country": "Japan",
+  "regions": [
+    "nagoya"
+  ],
+  "entries": [
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Sanrio House Cafe — Nagoya PARCO Opens in Sakae / Yabacho",
+        "description": "The brand’s first cafe booth, with character-themed crepes, soft serve, mini parfaits and a dated Hello Kitty birthday crepe.",
+        "sourceUrl": "https://prtimes.jp/main/html/rd/p/000004440.000018505.html",
+        "address": "B1F West Building, Nagoya PARCO, 3-29-1 Sakae, Naka-ku, Nagoya",
+        "productName": "Sanrio House Cafe — Nagoya PARCO",
+        "utcStartDateTime": "2026-10-29T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "September 24 operator release explicitly confirms October 29, 2026 at 10:00 for Nagoya PARCO, with its first cafe booth. Cafe entry is initially reservation-only. Merchandise retail is not counted as a second restaurant.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Nagoya",
+          "Japan",
+          "Sakae / Yabacho",
+          "Cafe"
+        ],
+        "longFormSummary": "<p>The brand’s first cafe booth, with character-themed crepes, soft serve, mini parfaits and a dated Hello Kitty birthday crepe.<cite data-ref=\"https://prtimes.jp/main/html/rd/p/000004440.000018505.html\"></cite></p><p>September 24 operator release explicitly confirms October 29, 2026 at 10:00 for Nagoya PARCO, with its first cafe booth. Cafe entry is initially reservation-only. Merchandise retail is not counted as a second restaurant.</p>",
+        "references": [
+          {
+            "url": "https://prtimes.jp/main/html/rd/p/000004440.000018505.html",
+            "title": "Sanrio House Cafe — Nagoya PARCO source",
+            "confidence": 90,
+            "reasoning": "September 24 operator release explicitly confirms October 29, 2026 at 10:00 for Nagoya PARCO, with its first cafe booth. Cafe entry is initially reservation-only. Merchandise retail is not counted as a second restaurant."
+          },
+          {
+            "url": "https://nagoya.8agarage.co.jp/sanrio-house-nagoya-parco/",
+            "title": "Sanrio House Cafe — Nagoya PARCO source",
+            "confidence": 90,
+            "reasoning": "September 24 operator release explicitly confirms October 29, 2026 at 10:00 for Nagoya PARCO, with its first cafe booth. Cafe entry is initially reservation-only. Merchandise retail is not counted as a second restaurant."
+          },
+          {
+            "url": "https://www.fashion-press.net/news/151312",
+            "title": "Sanrio House Cafe — Nagoya PARCO source",
+            "confidence": 90,
+            "reasoning": "September 24 operator release explicitly confirms October 29, 2026 at 10:00 for Nagoya PARCO, with its first cafe booth. Cafe entry is initially reservation-only. Merchandise retail is not counted as a second restaurant."
+          },
+          {
+            "url": "https://mashstylelab.jp/sanriohouse/Page/News/Shop/",
+            "title": "Sanrio House Cafe — Nagoya PARCO source",
+            "confidence": 90,
+            "reasoning": "September 24 operator release explicitly confirms October 29, 2026 at 10:00 for Nagoya PARCO, with its first cafe booth. Cafe entry is initially reservation-only. Merchandise retail is not counted as a second restaurant."
+          },
+          {
+            "url": "https://mashstylelab.jp/sanriohouse/Page/News/Web/",
+            "title": "Sanrio House Cafe — Nagoya PARCO source",
+            "confidence": 90,
+            "reasoning": "September 24 operator release explicitly confirms October 29, 2026 at 10:00 for Nagoya PARCO, with its first cafe booth. Cafe entry is initially reservation-only. Merchandise retail is not counted as a second restaurant."
+          },
+          {
+            "url": "https://www.instagram.com/mash_sanriohouse_official/",
+            "title": "Sanrio House Cafe — Nagoya PARCO source",
+            "confidence": 90,
+            "reasoning": "September 24 operator release explicitly confirms October 29, 2026 at 10:00 for Nagoya PARCO, with its first cafe booth. Cafe entry is initially reservation-only. Merchandise retail is not counted as a second restaurant."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://prtimes.jp/main/html/rd/p/000004440.000018505.html",
+          "menu": {
+            "pinSourceUrl": "https://prtimes.jp/main/html/rd/p/000004440.000018505.html",
+            "name": "Sanrio House Cafe — Nagoya PARCO",
+            "checkedAt": "2026-10-14",
+            "menus": [
+              {
+                "label": "Published Nagoya cafe menu",
+                "url": "https://prtimes.jp/main/html/rd/p/000004440.000018505.html",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Character-marshmallow crepe",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Character-marshmallow soft serve",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Character-marshmallow mini parfait",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Coffee",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Tea",
+                    "priceLabel": "Price not published"
+                  }
+                ],
+                "note": "Operator names these actual cafe items without prices or specific flavour names. Hello Kitty, My Melody, Pompompurin and Cinnamoroll themes have different flavours, but flavours are not inferred from merchandise illustrations. Store and cafe use separate reservation systems: initial cafe visits require TableCheck, retail entry uses official LINE. No confirmed cafe-booking URL was found in the checked operator release, brand/shop-news/web-news pages, official social profile or branch-specific reporting. Do not treat retail LINE as a cafe reservation. Nagoya property/menu photos remain unpublished in accessible galleries; release photos depict merchandise and are excluded."
+              },
+              {
+                "label": "Hello Kitty birthday crepe",
+                "url": "https://prtimes.jp/main/html/rd/p/000004440.000018505.html",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Hello Kitty birthday crepe",
+                    "priceLabel": "Price not published"
+                  }
+                ],
+                "note": "Offered from the October 29 cafe opening through November 30, planned; may end earlier when ingredients run out. Price and flavour not published. The November 1 birthday is the theme, not the start date. Cafe reservation required. Retail purchases/gifts are not assumed to be food promotions."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://prtimes.jp/main/html/rd/p/000004440.000018505.html",
+            "name": "Sanrio House Cafe — Nagoya PARCO",
+            "checkedAt": "2026-10-14",
+            "websiteUrl": "https://mashstylelab.jp/sanriohouse/",
+            "phone": null,
+            "openingHours": [
+              {
+                "days": "Planned daily store/cafe hours",
+                "hours": "10:00–20:00; initial cafe entry requires reservation, confirm exact booked slot"
+              }
+            ],
+            "detailsSourceUrl": "https://mashstylelab.jp/sanriohouse/",
+            "additionalSources": [
+              {
+                "label": "Research evidence",
+                "url": "https://prtimes.jp/main/html/rd/p/000004440.000018505.html"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://nagoya.8agarage.co.jp/sanrio-house-nagoya-parco/"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://www.fashion-press.net/news/151312"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://mashstylelab.jp/sanriohouse/Page/News/Shop/"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://mashstylelab.jp/sanriohouse/Page/News/Web/"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://www.instagram.com/mash_sanriohouse_official/"
+              }
+            ]
+          },
+          "tile": {
+            "regionSlug": "nagoya",
+            "kind": "opening",
+            "slug": "sanrio-release",
+            "name": "Sanrio House Cafe — Nagoya PARCO",
+            "neighborhood": "Sakae / Yabacho",
+            "cuisine": "Cafe",
+            "description": "The brand’s first cafe booth, with character-themed crepes, soft serve, mini parfaits and a dated Hello Kitty birthday crepe.",
+            "address": "B1F West Building, Nagoya PARCO, 3-29-1 Sakae, Naka-ku, Nagoya",
+            "websiteUrl": "https://mashstylelab.jp/sanriohouse/",
+            "checkedAt": "2026-10-14",
+            "recognition": "",
+            "priceRange": "",
+            "image": null,
+            "imageCredit": "",
+            "openingConfirmed": true,
+            "day": "2026-10-29"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [],
+      "special": {
+        "regionSlug": "nagoya",
+        "profile": {
+          "pinSourceUrl": "https://prtimes.jp/main/html/rd/p/000004440.000018505.html",
+          "name": "Sanrio House Cafe — Nagoya PARCO",
+          "checkedAt": "2026-10-14",
+          "menus": [
+            {
+              "label": "Published Nagoya cafe menu",
+              "url": "https://prtimes.jp/main/html/rd/p/000004440.000018505.html",
+              "currency": "JPY",
+              "coverage": "sample",
+              "items": [
+                {
+                  "name": "Character-marshmallow crepe",
+                  "priceLabel": "Price not published"
+                },
+                {
+                  "name": "Character-marshmallow soft serve",
+                  "priceLabel": "Price not published"
+                },
+                {
+                  "name": "Character-marshmallow mini parfait",
+                  "priceLabel": "Price not published"
+                },
+                {
+                  "name": "Coffee",
+                  "priceLabel": "Price not published"
+                },
+                {
+                  "name": "Tea",
+                  "priceLabel": "Price not published"
+                }
+              ],
+              "note": "Operator names these actual cafe items without prices or specific flavour names. Hello Kitty, My Melody, Pompompurin and Cinnamoroll themes have different flavours, but flavours are not inferred from merchandise illustrations. Store and cafe use separate reservation systems: initial cafe visits require TableCheck, retail entry uses official LINE. No confirmed cafe-booking URL was found in the checked operator release, brand/shop-news/web-news pages, official social profile or branch-specific reporting. Do not treat retail LINE as a cafe reservation. Nagoya property/menu photos remain unpublished in accessible galleries; release photos depict merchandise and are excluded."
+            },
+            {
+              "label": "Hello Kitty birthday crepe",
+              "url": "https://prtimes.jp/main/html/rd/p/000004440.000018505.html",
+              "currency": "JPY",
+              "coverage": "sample",
+              "items": [
+                {
+                  "name": "Hello Kitty birthday crepe",
+                  "priceLabel": "Price not published"
+                }
+              ],
+              "note": "Offered from the October 29 cafe opening through November 30, planned; may end earlier when ingredients run out. Price and flavour not published. The November 1 birthday is the theme, not the start date. Cafe reservation required. Retail purchases/gifts are not assumed to be food promotions."
+            }
+          ],
+          "specials": [
+            {
+              "title": "Hello Kitty birthday crepe",
+              "kind": "other",
+              "description": "An operator-announced birthday-themed crepe, starting with the cafe opening and planned through November 30.",
+              "sourceUrl": "https://prtimes.jp/main/html/rd/p/000004440.000018505.html",
+              "menuLabel": "Hello Kitty birthday crepe",
+              "discounted": false,
+              "validFrom": "2026-10-29",
+              "validThrough": "2026-11-30",
+              "schedule": "Japan local time; see conditions",
+              "conditions": [
+                "Cafe reservation required; retail LINE entry reservation is separate.",
+                "Price and flavour not published.",
+                "Planned November 30 end; may finish sooner when ingredients sell out."
+              ],
+              "availability": {
+                "windows": [
+                  {
+                    "days": [
+                      0,
+                      1,
+                      2,
+                      3,
+                      4,
+                      5,
+                      6
+                    ],
+                    "start": "10:00",
+                    "end": "20:00"
+                  }
+                ]
+              },
+              "limitedTime": true
+            }
+          ],
+          "address": "B1F West Building, Nagoya PARCO, 3-29-1 Sakae, Naka-ku, Nagoya",
+          "neighborhood": "Sakae / Yabacho",
+          "websiteUrl": "https://mashstylelab.jp/sanriohouse/"
+        },
+        "enabled": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,924 @@
+{
+ "fr-2026-1": {
+  "song": {
+   "peak": 1,
+   "weeksOnChart": null,
+   "weeksAtNumberOne": 17,
+   "chart": "SNEP Top Singles (weekly)",
+   "sourceUrl": "https://en.wikipedia.org/wiki/List_of_number-one_hits_of_2026_(France)",
+   "asOf": "2026-10-17"
+  },
+  "album": null,
+  "notes": "Wikipedia weekly list (opened) shows 17 weeks at #1 (2 Jan-13 Mar, 27 Mar-1 May) through issue of 9 Oct 2026; input value 28 disagrees and is not supported. Weeks on chart and album 'on s'en rappellera pas' stats not found (album absent from Wikipedia list; Melodrama article W/Melodrama_(Disiz_and_Theodora_song) gives SNEP Diamond for the single only)."
+ },
+ "tw-2026-1": {
+  "song": {
+   "peak": null,
+   "weeksOnChart": null,
+   "weeksAtNumberOne": null,
+   "chart": "KKBOX Mandarin Yearly Cumulative Singles Chart",
+   "sourceUrl": "https://en.wikipedia.org/wiki/A-Lin",
+   "asOf": "2026-10-17"
+  },
+  "album": null,
+  "notes": "Wikipedia A-Lin page opened: only a Golden Melody 2026 Song of the Year win for 'Happiness Is Singing'; no chart/peak/cert data. KKBOX page (JS) and soundtrack album stats not found."
+ },
+ "ar-2025-1": {
+  "song": {
+   "peak": 1,
+   "weeksOnChart": null,
+   "weeksAtNumberOne": 12,
+   "chart": "Billboard Argentina Hot 100",
+   "sourceUrl": "https://en.wikipedia.org/wiki/List_of_Billboard_Argentina_Hot_100_number-one_singles_of_2025",
+   "asOf": "2026-10-17"
+  },
+  "album": null,
+  "notes": "12 weeks at #1 confirmed (10 consecutive Jan 11-Mar 15 plus Mar 29 and Apr 5; Apr 5 row inferred as continuation). No song article exists (404); weeks on chart unpublished in sources opened. Single, no album."
+ },
+ "gb-2025-1": {
+  "song": {
+   "peak": 1,
+   "weeksOnChart": null,
+   "weeksAtNumberOne": 13,
+   "chart": "Official Charts UK Singles",
+   "sourceUrl": "https://en.wikipedia.org/wiki/Ordinary_(Alex_Warren_song)",
+   "asOf": "2026-10-17"
+  },
+  "album": {
+   "certifications": [
+    {
+     "body": "RIAA",
+     "level": "Platinum",
+     "region": "US",
+     "date": null
+    },
+    {
+     "body": "Music Canada",
+     "level": "3× Platinum",
+     "region": "Canada",
+     "date": null
+    },
+    {
+     "body": "BVMI",
+     "level": "Gold",
+     "region": "Germany",
+     "date": null
+    },
+    {
+     "body": "FIMI",
+     "level": "Platinum",
+     "region": "Italy",
+     "date": null
+    },
+    {
+     "body": "RMNZ",
+     "level": "3× Platinum",
+     "region": "New Zealand",
+     "date": null
+    },
+    {
+     "body": "Promusicae",
+     "level": "Gold",
+     "region": "Spain",
+     "date": null
+    },
+    {
+     "body": "IFPI Austria",
+     "level": "Platinum",
+     "region": "Austria",
+     "date": null
+    },
+    {
+     "body": "IFPI Danmark",
+     "level": "Gold",
+     "region": "Denmark",
+     "date": null
+    },
+    {
+     "body": "AFP",
+     "level": "Gold",
+     "region": "Portugal",
+     "date": null
+    }
+   ],
+   "units": "Certified units (sales+streaming, per certification alone): RIAA Platinum = 1,000,000; Wikipedia gives no separate sales total",
+   "peak": {
+    "chart": "Billboard 200",
+    "position": 5
+   },
+   "sourceUrl": "https://en.wikipedia.org/wiki/You%27ll_Be_Alright,_Kid"
+  },
+  "notes": "UK weeks on chart not on Wikipedia; Official Charts pages not opened. 13 non-consecutive weeks at #1 per Wikipedia (uncited there), matches input. UK album peak not given for the album (the No. 9 is the 2024 EP). Song certs (not requested): BPI 5× Platinum, RIAA 3× Platinum."
+ },
+ "kr-2025-1": {
+  "song": {
+   "peak": 1,
+   "weeksOnChart": null,
+   "weeksAtNumberOne": null,
+   "chart": "Circle Digital Chart",
+   "sourceUrl": "https://en.wikipedia.org/wiki/Drowning_(Woodz_song)",
+   "asOf": "2026-10-17"
+  },
+  "album": null,
+  "notes": "Wikipedia: first Circle Digital #1 in May 2025, #1 on 2025 year-end Circle chart, record 70 weeks in Melon top 10 (not weeks at #1). A search snippet suggested 1 week at #1 (week ending 10 May 2025) but the full list page was not opened, so left null. Album OO-LI stats/certs not researched; no certifications on the song page."
+ },
+ "us-2024-2": {
+  "song": {
+   "peak": 1,
+   "weeksOnChart": null,
+   "weeksAtNumberOne": 19,
+   "chart": "Billboard Hot 100",
+   "sourceUrl": "https://en.wikipedia.org/wiki/A_Bar_Song_(Tipsy)",
+   "asOf": "2026-10-17"
+  },
+  "album": {
+   "certifications": [
+    {
+     "body": "RIAA",
+     "level": "Platinum",
+     "region": "US",
+     "date": "2025-07-03"
+    },
+    {
+     "body": "RMNZ",
+     "level": "2× Platinum",
+     "region": "New Zealand",
+     "date": null
+    },
+    {
+     "body": "BPI",
+     "level": "Silver",
+     "region": "UK",
+     "date": null
+    }
+   ],
+   "units": "50,000 album-equivalent units first week (Billboard 200 debut, per Wikipedia)",
+   "peak": {
+    "chart": "Billboard 200",
+    "position": 5
+   },
+   "sourceUrl": "https://en.wikipedia.org/wiki/Where_I%27ve_Been,_Isn%27t_Where_I%27m_Going"
+  },
+  "notes": "19 non-consecutive weeks at #1 (ties Old Town Road). Year-end Hot 100: #2 (2024), #3 (2025). Weeks on chart not stated in opened text. Song certs: RIAA 12× Platinum, BPI 4× Platinum, MC 2× Diamond."
+ },
+ "es-2024-1": {
+  "song": {
+   "peak": 1,
+   "weeksOnChart": null,
+   "weeksAtNumberOne": 16,
+   "chart": "PROMUSICAE Top 100 Canciones (weekly)",
+   "sourceUrl": "https://en.wikipedia.org/wiki/Si_Antes_Te_Hubiera_Conocido",
+   "asOf": "2026-10-17"
+  },
+  "album": {
+   "certifications": [
+    {
+     "body": "Promusicae",
+     "level": "2× Platinum",
+     "region": "Spain",
+     "date": null
+    },
+    {
+     "body": "Music Canada",
+     "level": "Gold",
+     "region": "Canada",
+     "date": null
+    },
+    {
+     "body": "FIMI",
+     "level": "Gold",
+     "region": "Italy",
+     "date": null
+    },
+    {
+     "body": "BRMA",
+     "level": "Gold",
+     "region": "Belgium",
+     "date": null
+    },
+    {
+     "body": "CFC",
+     "level": "Platinum (streaming)",
+     "region": "Central America",
+     "date": null
+    }
+   ],
+   "units": "Spain 2× Platinum = 80,000 certified units (sales+streaming)",
+   "peak": {
+    "chart": "PROMUSICAE Spanish Albums",
+    "position": 1
+   },
+   "sourceUrl": "https://en.wikipedia.org/wiki/Tropicoqueta"
+  },
+  "notes": "Song: 10× Platinum Promusicae (600,000 units), 16 weeks at #1, year-end #1 (2024). Album also peaked #3 on Billboard 200. Certification dates and weeks on chart not published in opened pages. The promusicae.es annual list was not opened."
+ },
+ "jp-2024-1": {
+  "song": {
+   "peak": 1,
+   "weeksOnChart": null,
+   "weeksAtNumberOne": 19,
+   "chart": "Billboard Japan Hot 100",
+   "sourceUrl": "https://en.wikipedia.org/wiki/Bling-Bang-Bang-Born",
+   "asOf": "2026-10-17"
+  },
+  "album": {
+   "certifications": [],
+   "units": null,
+   "peak": {
+    "chart": "Billboard Japan Hot Albums",
+    "position": 3
+   },
+   "sourceUrl": "https://en.wikipedia.org/wiki/Legion_(Creepy_Nuts_album)"
+  },
+  "notes": "Song: RIAJ digital Platinum (250,000), streaming Diamond (500M). Album LEGION: Oricon Albums peak 7, Billboard Japan Hot Albums 3; no RIAJ certification or sales listed on Wikipedia. Weeks on chart not stated; Billboard Japan site not opened."
+ },
+ "mx-2023-1": {
+  "song": {
+   "peak": null,
+   "weeksOnChart": null,
+   "weeksAtNumberOne": null,
+   "chart": "Monitor Latino Mexico Top 100 (annual General)",
+   "sourceUrl": "https://en.wikipedia.org/wiki/Flowers_(Miley_Cyrus_song)",
+   "asOf": "2026-10-17"
+  },
+  "album": {
+   "certifications": [
+    {
+     "body": "AMPROFON",
+     "level": "Gold",
+     "region": "Mexico",
+     "date": null
+    },
+    {
+     "body": "RIAA",
+     "level": "Platinum",
+     "region": "US",
+     "date": null
+    },
+    {
+     "body": "BPI",
+     "level": "Gold",
+     "region": "UK",
+     "date": "2024-03-29"
+    },
+    {
+     "body": "Music Canada",
+     "level": "2× Platinum",
+     "region": "Canada",
+     "date": null
+    },
+    {
+     "body": "RMNZ",
+     "level": "Platinum",
+     "region": "New Zealand",
+     "date": null
+    },
+    {
+     "body": "Pro-Música Brasil",
+     "level": "3× Platinum",
+     "region": "Brazil",
+     "date": null
+    }
+   ],
+   "units": "Debut week: 119,000 album-equivalent units (55,000 pure sales), US, Billboard 200 (Wikipedia)",
+   "peak": {
+    "chart": "Billboard 200",
+    "position": 3
+   },
+   "sourceUrl": "https://en.wikipedia.org/wiki/Endless_Summer_Vacation"
+  },
+  "notes": "Wikipedia: Monitor Latino Mexico Airplay 2023 year-end #1; Billboard Mexico peak #2. Weekly Monitor Latino peak/weeks not published in opened pages (charts.monitorlatino.com not opened); song peak left null to avoid mixing charts. Billboard Hot 100: peak 1, 8 weeks at #1, 55 weeks on chart."
+ },
+ "de-2023-1": {
+  "song": {
+   "peak": 1,
+   "weeksOnChart": null,
+   "weeksAtNumberOne": 21,
+   "chart": "GfK Entertainment Top 100 Singles (Germany)",
+   "sourceUrl": "https://en.wikipedia.org/wiki/Komet_(song)",
+   "asOf": "2026-10-17"
+  },
+  "album": null,
+  "notes": "21 non-consecutive weeks at #1, longest-running German #1 ever; BVMI 2× Platinum (1,200,000 units). Weeks on chart not stated. Tribute album 'WE LOVE UDO' stats not researched."
+ },
+ "sg-2023-1": {
+  "song": {
+   "peak": 1,
+   "weeksOnChart": null,
+   "weeksAtNumberOne": null,
+   "chart": "Singapore Top 30 Digital Streaming (RIAS)",
+   "sourceUrl": "https://en.wikipedia.org/wiki/Seven_(Jungkook_song)",
+   "asOf": "2026-10-17"
+  },
+  "album": {
+   "certifications": [
+    {
+     "body": "Music Canada",
+     "level": "Platinum",
+     "region": "Canada",
+     "date": null
+    },
+    {
+     "body": "SNEP",
+     "level": "Gold",
+     "region": "France",
+     "date": null
+    },
+    {
+     "body": "FIMI",
+     "level": "Gold",
+     "region": "Italy",
+     "date": null
+    },
+    {
+     "body": "RMNZ",
+     "level": "Gold",
+     "region": "New Zealand",
+     "date": null
+    },
+    {
+     "body": "RIAJ",
+     "level": "Platinum",
+     "region": "Japan",
+     "date": null
+    },
+    {
+     "body": "KMCA",
+     "level": "2× Million",
+     "region": "South Korea",
+     "date": null
+    },
+    {
+     "body": "BPI",
+     "level": "Gold",
+     "region": "UK",
+     "date": null
+    }
+   ],
+   "units": "US debut 210,200 equivalent units (164,800 pure sales); worldwide 2.7 million units (IFPI, per Wikipedia); 244,000 US copies 2023",
+   "peak": {
+    "chart": "Billboard 200",
+    "position": 2
+   },
+   "sourceUrl": "https://en.wikipedia.org/wiki/Golden_(Jungkook_album)"
+  },
+  "notes": "Peak 1 on RIAS chart confirmed; input weeksAtNumberOne 17 not confirmed (Wikipedia section truncated; list-of-number-one Singapore page not opened). Song certs: RIAA Platinum, BPI Platinum, MC 4× Platinum. Weeks on chart unpublished."
+ },
+ "nz-2023-1": {
+  "song": {
+   "peak": 1,
+   "weeksOnChart": null,
+   "weeksAtNumberOne": 7,
+   "chart": "Recorded Music NZ Official Top 40",
+   "sourceUrl": "https://en.wikipedia.org/wiki/Flowers_(Miley_Cyrus_song)",
+   "asOf": "2026-10-17"
+  },
+  "album": {
+   "certifications": [
+    {
+     "body": "RMNZ",
+     "level": "Platinum",
+     "region": "New Zealand",
+     "date": null
+    },
+    {
+     "body": "RIAA",
+     "level": "Platinum",
+     "region": "US",
+     "date": null
+    },
+    {
+     "body": "BPI",
+     "level": "Gold",
+     "region": "UK",
+     "date": "2024-03-29"
+    }
+   ],
+   "units": "119,000 album-equivalent units US debut week (Wikipedia)",
+   "peak": {
+    "chart": "Billboard 200",
+    "position": 3
+   },
+   "sourceUrl": "https://en.wikipedia.org/wiki/Endless_Summer_Vacation"
+  },
+  "notes": "Wikipedia confirms NZ #1 but not weeks at #1 (7 kept from input, unverified) nor weeks on chart. Song certs: RMNZ 7× Platinum (210,000), matches input's '3× Platinum' only as an older figure; input's 3× is outdated. Hot 100: 8 weeks at #1, 55 weeks."
+ },
+ "co-2022-1": {
+  "song": {
+   "peak": 1,
+   "weeksOnChart": null,
+   "weeksAtNumberOne": null,
+   "chart": "Billboard Colombia / Promúsica / Monitor Latino (all #1 per Wikipedia)",
+   "sourceUrl": "https://en.wikipedia.org/wiki/Provenza_(song)",
+   "asOf": "2026-10-17"
+  },
+  "album": {
+   "certifications": [
+    {
+     "body": "Promusicae",
+     "level": "5× Platinum",
+     "region": "Spain",
+     "date": null
+    },
+    {
+     "body": "RIAA Latin",
+     "level": "28× Platinum (Latin)",
+     "region": "US",
+     "date": null
+    },
+    {
+     "body": "Music Canada",
+     "level": "Platinum",
+     "region": "Canada",
+     "date": null
+    },
+    {
+     "body": "Pro-Música Brasil",
+     "level": "Platinum",
+     "region": "Brazil",
+     "date": null
+    },
+    {
+     "body": "SNEP",
+     "level": "Gold",
+     "region": "France",
+     "date": null
+    },
+    {
+     "body": "FIMI",
+     "level": "Gold",
+     "region": "Italy",
+     "date": null
+    }
+   ],
+   "units": "US 28× Platinum (Latin) = 1,680,000 units; Spain 5× Platinum = 200,000 (Wikipedia, sales+streaming)",
+   "peak": {
+    "chart": "Billboard 200",
+    "position": 1
+   },
+   "sourceUrl": "https://en.wikipedia.org/wiki/Ma%C3%B1ana_Ser%C3%A1_Bonito"
+  },
+  "notes": "Song also Hot 100 #25, Hot Latin Songs #1; certs incl. Spain 9× Platinum, US Latin 36× Platinum. Weeks at #1 and weeks on chart not published in opened pages. Album debuted #1 with 94,000 units; weeks at #1 not stated (Wikipedia page for album 'Mañana Será Bonito' used, not the 'MAÑANA SERÁ BONITO' deluxe)."
+ },
+ "za-2022-1": {
+  "song": {
+   "peak": 1,
+   "weeksOnChart": null,
+   "weeksAtNumberOne": null,
+   "chart": "RiSA chart (South Africa)",
+   "sourceUrl": "https://en.wikipedia.org/wiki/Sete_(song)",
+   "asOf": "2026-10-17"
+  },
+  "album": null,
+  "notes": "RiSA #1; 9 consecutive weeks #1 on Radio Monitor; RiSA 3× Platinum (60,000 units) per Wikipedia (a Briefly headline claims Diamond, unverified). Single; parent album SR3 not asked. Spotify SA Wrapped 2022 rank from input not independently opened."
+ },
+ "au-2022-1": {
+  "song": {
+   "peak": 1,
+   "weeksOnChart": null,
+   "weeksAtNumberOne": 8,
+   "chart": "ARIA Singles Chart",
+   "sourceUrl": "https://en.wikipedia.org/wiki/As_It_Was",
+   "asOf": "2026-10-17"
+  },
+  "album": {
+   "certifications": [
+    {
+     "body": "ARIA",
+     "level": "2× Platinum",
+     "region": "Australia",
+     "date": null
+    },
+    {
+     "body": "RIAA",
+     "level": "2× Platinum",
+     "region": "US",
+     "date": null
+    },
+    {
+     "body": "BPI",
+     "level": "3× Platinum",
+     "region": "UK",
+     "date": null
+    },
+    {
+     "body": "Music Canada",
+     "level": "Platinum",
+     "region": "Canada",
+     "date": null
+    },
+    {
+     "body": "Pro-Música Brasil",
+     "level": "Diamond",
+     "region": "Brazil",
+     "date": null
+    }
+   ],
+   "units": "US debut 521,500 album-equivalent units (330,000 pure); RIAA 2× Platinum = 2,300,000 units (Wikipedia)",
+   "peak": {
+    "chart": "Billboard 200",
+    "position": 1
+   },
+   "sourceUrl": "https://en.wikipedia.org/wiki/Harry%27s_House"
+  },
+  "notes": "Wikipedia does not state ARIA weeks at #1 (8 kept from input, unverified). Song: ARIA 12× Platinum, RIAA 6× Platinum, BPI 6× Platinum; Hot 100 15 wks at #1; UK 10 wks. Album ARIA #1. Weeks on chart unpublished in opened text."
+ },
+ "br-2021-1": {
+  "song": {
+   "peak": null,
+   "weeksOnChart": null,
+   "weeksAtNumberOne": null,
+   "chart": "Spotify Brasil year-end",
+   "sourceUrl": "https://www.uai.com.br/app/noticia/musica/2021/04/21/noticias-musica,271626/musica-de-israel-e-rodolffo-ganha-certificado-de-diamante-pelo-sucesso.shtml",
+   "asOf": "2026-10-17"
+  },
+  "album": null,
+  "notes": "Search results (not full pages) report Pro-Música Brasil Diamond (Apr 2021), later double Diamond (May 2021), and Billboard Global 200 #72 in Apr 2021; Billboard Brasil Hot 100 position not found; Wikipedia has no page for the song. Those certifications are for the single, so album left null."
+ },
+ "gb-2021-2": {
+  "song": {
+   "peak": 1,
+   "weeksOnChart": null,
+   "weeksAtNumberOne": 5,
+   "chart": "Official Charts UK Singles",
+   "sourceUrl": "https://en.wikipedia.org/wiki/Good_4_U",
+   "asOf": "2026-10-17"
+  },
+  "album": {
+   "certifications": [
+    {
+     "body": "RIAA",
+     "level": "4× Platinum",
+     "region": "US",
+     "date": null
+    }
+   ],
+   "units": "Debut 295,000 album-equivalent units (72,000 sales) US; 51,000 units UK (Wikipedia)",
+   "peak": {
+    "chart": "Billboard 200",
+    "position": 1
+   },
+   "sourceUrl": "https://en.wikipedia.org/wiki/Sour_(Olivia_Rodrigo_album)"
+  },
+  "notes": "UK: peak 1, 5 consecutive weeks. Album RIAA 4× Platinum 'June 2023' (day not given; date left as null-ish month - exact day not published in opened text). Album UK Albums #1, five non-consecutive weeks; Billboard 200 five weeks at #1. Other album certs not read (table truncated). Song BPI 5× Platinum, RIAA 7× Platinum."
+ },
+ "kr-2021-2": {
+  "song": {
+   "peak": 1,
+   "weeksOnChart": null,
+   "weeksAtNumberOne": 5,
+   "chart": "Gaon Digital Chart",
+   "sourceUrl": "https://en.wikipedia.org/wiki/Rollin%27_(Brave_Girls_song)",
+   "asOf": "2026-10-17"
+  },
+  "album": null,
+  "notes": "5 non-consecutive weeks at #1 confirmed; no certifications listed. 'Rollin'' is the lead single of an EP; the input album 'Brave Girls Best Album' was not researched."
+ },
+ "us-2020-3": {
+  "song": {
+   "peak": 1,
+   "weeksOnChart": null,
+   "weeksAtNumberOne": 11,
+   "chart": "Billboard Hot 100",
+   "sourceUrl": "https://en.wikipedia.org/wiki/The_Box_(Roddy_Ricch_song)",
+   "asOf": "2026-10-17"
+  },
+  "album": null,
+  "notes": "Song RIAA Diamond (10,000,000 units). Single; Wikipedia shows it sits on Please Excuse Me for Being Antisocial, so input 'Monarch' (single) skipped. Weeks on chart not stated."
+ },
+ "se-2020-1": {
+  "song": {
+   "peak": 1,
+   "weeksOnChart": null,
+   "weeksAtNumberOne": 14,
+   "chart": "Sverigetopplistan Singles",
+   "sourceUrl": "https://en.wikipedia.org/wiki/Svag",
+   "asOf": "2026-10-17"
+  },
+  "album": {
+   "certifications": [],
+   "units": null,
+   "peak": {
+    "chart": "Sverigetopplistan Albums",
+    "position": 1
+   },
+   "sourceUrl": "https://en.wikipedia.org/wiki/F%C3%A5nga_mig_n%C3%A4r_jag_faller"
+  },
+  "notes": "Song GLF 9× Platinum (72,000,000 streaming-only units) on en.wikipedia; input says 7x (older). Album debuted #1, 27 weeks at #1; no album certification listed. Weeks on chart not stated."
+ },
+ "jp-2020-2": {
+  "song": {
+   "peak": 1,
+   "weeksOnChart": null,
+   "weeksAtNumberOne": 7,
+   "chart": "Billboard Japan Hot 100",
+   "sourceUrl": "https://en.wikipedia.org/wiki/Pretender_(Official_Hige_Dandism_song)",
+   "asOf": "2026-10-17"
+  },
+  "album": {
+   "certifications": [
+    {
+     "body": "RIAJ",
+     "level": "2× Platinum",
+     "region": "Japan",
+     "date": null
+    }
+   ],
+   "units": "470,000 units (Wikipedia, RIAJ)",
+   "peak": {
+    "chart": "Oricon Weekly Albums",
+    "position": 1
+   },
+   "sourceUrl": "https://en.wikipedia.org/wiki/Traveler_(Official_Hige_Dandism_album)"
+  },
+  "notes": "Song RIAJ digital Million, streaming Diamond. Album certification date and sales not published in opened page. Weeks on chart not stated."
+ },
+ "us-2019-1": {
+  "song": {
+   "peak": 1,
+   "weeksOnChart": null,
+   "weeksAtNumberOne": 19,
+   "chart": "Billboard Hot 100",
+   "sourceUrl": "https://en.wikipedia.org/wiki/Old_Town_Road",
+   "asOf": "2026-10-17"
+  },
+  "album": {
+   "certifications": [
+    {
+     "body": "RIAA",
+     "level": "2× Platinum",
+     "region": "US",
+     "date": null
+    }
+   ],
+   "units": "2,000,000 certified units (sales+streaming, per certification alone)",
+   "peak": {
+    "chart": "Billboard 200",
+    "position": 2
+   },
+   "sourceUrl": "https://en.wikipedia.org/wiki/7_(Lil_Nas_X_EP)"
+  },
+  "notes": "Song RIAA 17× Platinum in table (text says 16× Sept 2021); 19 consecutive weeks Apr 13-Aug 17 2019; debuted at #83; total weeks not read (page truncated). '7' is an EP, debut 77,000 units. Certification dates not published."
+ },
+ "it-2019-1": {
+  "song": {
+   "peak": 1,
+   "weeksOnChart": null,
+   "weeksAtNumberOne": 8,
+   "chart": "FIMI Top Singles",
+   "sourceUrl": "https://en.wikipedia.org/wiki/Fred_De_Palma_discography",
+   "asOf": "2026-10-17"
+  },
+  "album": null,
+  "notes": "Fred De Palma discography page (opened) lists 'Una volta ancora / Se iluminaba' FIMI peak 1, FIMI 7× Platinum (input's 5x is older Sorrisi figure), Promusicae 5× Platinum. Weeks at #1 (8 from input) and weeks on chart not confirmed. Album 'Uebe' page absent/uninformative."
+ },
+ "kr-2019-1": {
+  "song": {
+   "peak": 2,
+   "weeksOnChart": null,
+   "weeksAtNumberOne": null,
+   "chart": "Circle (Gaon) Digital Chart (weekly)",
+   "sourceUrl": "https://en.wikipedia.org/wiki/2002_(Anne-Marie_song)",
+   "asOf": "2026-10-17"
+  },
+  "album": {
+   "certifications": [
+    {
+     "body": "BPI",
+     "level": "Platinum",
+     "region": "UK",
+     "date": null
+    },
+    {
+     "body": "RIAA",
+     "level": "Platinum",
+     "region": "US",
+     "date": null
+    },
+    {
+     "body": "Music Canada",
+     "level": "2× Platinum",
+     "region": "Canada",
+     "date": null
+    },
+    {
+     "body": "SNEP",
+     "level": "Gold",
+     "region": "France",
+     "date": null
+    },
+    {
+     "body": "RMNZ",
+     "level": "3× Platinum",
+     "region": "New Zealand",
+     "date": null
+    }
+   ],
+   "units": "UK Platinum = 300,000 units; US Platinum = 1,000,000 (Wikipedia, sales+streaming)",
+   "peak": {
+    "chart": "UK Albums Chart",
+    "position": 3
+   },
+   "sourceUrl": "https://en.wikipedia.org/wiki/Speak_Your_Mind_(album)"
+  },
+  "notes": "Korea: weekly peak 2 (9 Jun 2019), monthly June #1, year-end 2019 #1, 145 weeks on Melon (not Circle). No weeks at #1 on weekly Circle chart. UK: peak 3, 47 weeks. Album Billboard 200 peak 31."
+ },
+ "us-2018-3": {
+  "song": {
+   "peak": 2,
+   "weeksOnChart": null,
+   "weeksAtNumberOne": 0,
+   "chart": "Billboard Hot 100",
+   "sourceUrl": "https://en.wikipedia.org/wiki/Meant_to_Be_(Bebe_Rexha_and_Florida_Georgia_Line_song)",
+   "asOf": "2026-10-17"
+  },
+  "album": {
+   "certifications": [
+    {
+     "body": "RIAA",
+     "level": "Platinum",
+     "region": "US",
+     "date": "2020-10-23"
+    },
+    {
+     "body": "Music Canada",
+     "level": "2× Platinum",
+     "region": "Canada",
+     "date": null
+    },
+    {
+     "body": "RMNZ",
+     "level": "Platinum",
+     "region": "New Zealand",
+     "date": null
+    },
+    {
+     "body": "IFPI Norway",
+     "level": "Platinum",
+     "region": "Norway",
+     "date": null
+    },
+    {
+     "body": "NVPI",
+     "level": "Gold",
+     "region": "Netherlands",
+     "date": null
+    }
+   ],
+   "units": "~604,000 US units as of Jan 2019 (37,000 pure); debut 24,000 units (Wikipedia)",
+   "peak": {
+    "chart": "Billboard 200",
+    "position": 13
+   },
+   "sourceUrl": "https://en.wikipedia.org/wiki/Expectations_(Bebe_Rexha_album)"
+  },
+  "notes": "Hot 100 peak 2 (blocked by God's Plan), 0 weeks at #1 consistent; 50 weeks at #1 on Hot Country Songs (record); RIAA 11× Platinum. Weeks on Hot 100 not stated in the truncated text."
+ },
+ "se-2018-1": {
+  "song": {
+   "peak": 1,
+   "weeksOnChart": null,
+   "weeksAtNumberOne": 7,
+   "chart": "Sverigetopplistan Singles",
+   "sourceUrl": "https://en.wikipedia.org/wiki/Without_You_(Avicii_song)",
+   "asOf": "2026-10-17"
+  },
+  "album": {
+   "certifications": [
+    {
+     "body": "SNEP",
+     "level": "Gold",
+     "region": "France",
+     "date": null
+    },
+    {
+     "body": "FIMI",
+     "level": "Gold",
+     "region": "Italy",
+     "date": null
+    },
+    {
+     "body": "BPI",
+     "level": "Gold",
+     "region": "UK",
+     "date": null
+    }
+   ],
+   "units": "SNEP Gold 50,000; FIMI Gold 25,000; BPI Gold 100,000 (Wikipedia)",
+   "peak": {
+    "chart": "Sverigetopplistan Albums",
+    "position": 2
+   },
+   "sourceUrl": "https://en.wikipedia.org/wiki/Avicii_Forever"
+  },
+  "notes": "Wikipedia: song is from the EP Avīci (01); Avicii Forever (input album) is a compilation. Song GLF 7× Platinum (56M streaming units). Weeks at #1 (7) and weeks on chart not on Wikipedia; Sverigetopplistan site not opened. Billboard 200 peak of Avicii Forever 142."
+ },
+ "nz-2018-1": {
+  "song": {
+   "peak": 1,
+   "weeksOnChart": null,
+   "weeksAtNumberOne": 9,
+   "chart": "Recorded Music NZ Official Top 40",
+   "sourceUrl": "https://en.wikipedia.org/wiki/God%27s_Plan_(song)",
+   "asOf": "2026-10-17"
+  },
+  "album": {
+   "certifications": [
+    {
+     "body": "RIAA",
+     "level": "7× Platinum",
+     "region": "US",
+     "date": null
+    },
+    {
+     "body": "BPI",
+     "level": "2× Platinum",
+     "region": "UK",
+     "date": null
+    },
+    {
+     "body": "ARIA",
+     "level": "2× Platinum",
+     "region": "Australia",
+     "date": null
+    },
+    {
+     "body": "Music Canada",
+     "level": "2× Platinum",
+     "region": "Canada",
+     "date": null
+    },
+    {
+     "body": "SNEP",
+     "level": "2× Platinum",
+     "region": "France",
+     "date": null
+    },
+    {
+     "body": "RMNZ",
+     "level": "5× Platinum",
+     "region": "New Zealand",
+     "date": null
+    }
+   ],
+   "units": "RIAA 7× Platinum = 7,000,000 certified units (Wikipedia)",
+   "peak": {
+    "chart": "Billboard 200",
+    "position": 1
+   },
+   "sourceUrl": "https://en.wikipedia.org/wiki/Scorpion_(Drake_album)"
+  },
+  "notes": "NZ #1 and #1 song of 2018 per Wikipedia; NZ weeks at #1 (9) not stated -> kept from input, unverified. NOTE: the 36 weeksOnChart figure is the BILLBOARD HOT 100 weeks, not NZ; treat as Hot 100 (11 weeks at #1 there). RMNZ 7× Platinum (210,000). Album certification dates and Scorpion weeks at #1 not published."
+ },
+ "fr-2017-1": {
+  "song": {
+   "peak": 1,
+   "weeksOnChart": null,
+   "weeksAtNumberOne": null,
+   "chart": "SNEP Top Singles",
+   "sourceUrl": "https://en.wikipedia.org/wiki/Shape_of_You",
+   "asOf": "2026-10-17"
+  },
+  "album": {
+   "certifications": [
+    {
+     "body": "SNEP",
+     "level": "2× Diamond",
+     "region": "France",
+     "date": null
+    },
+    {
+     "body": "BPI",
+     "level": "15× Platinum",
+     "region": "UK",
+     "date": null
+    },
+    {
+     "body": "RIAA",
+     "level": "5× Platinum",
+     "region": "US",
+     "date": null
+    }
+   ],
+   "units": "UK: over 2,128,000 copies in 2017 (Official Charts via Wikipedia); US 2017: 2,764,000 album-equivalent units (1,102,000 pure); France 387,000 sales by end 2017",
+   "peak": {
+    "chart": "Billboard 200",
+    "position": 1
+   },
+   "sourceUrl": "https://en.wikipedia.org/wiki/Divide_(Ed_Sheeran_album)"
+  },
+  "notes": "Input weeksAtNumberOne 15 not confirmed: Wikipedia song page says debuted #1 in France but gives no week count. UK 13-14 weeks at #1, US 12 weeks. Song SNEP Diamond. Album also UK #1 (20 non-consecutive weeks), French peak conflicting (#1 table vs #2 text). Weeks on chart unpublished."
+ },
+ "tw-2017-1": {
+  "song": {
+   "peak": null,
+   "weeksOnChart": null,
+   "weeksAtNumberOne": null,
+   "chart": "KKBOX Mandarin Annual Singles Chart",
+   "sourceUrl": "https://en.wikipedia.org/wiki/Eason_Chan_discography",
+   "asOf": "2026-10-17"
+  },
+  "album": null,
+  "notes": "Wikipedia discography page opened: no chart/cert for the song or album 最佳電影歌曲 Vol.3 (only a 5,771,000-download figure for 'Keep Me By Your Side', title match unconfirmed). KKBOX column not reopened."
+ }
+}

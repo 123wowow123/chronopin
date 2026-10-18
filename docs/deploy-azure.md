@@ -1,0 +1,244 @@
+# Production on Azure
+
+Chronopin runs on one Linux VM on the **Windows Azure MSDN - Visual Studio
+Professional** subscription (id `9cbdc0e0-b85f-4267-b19a-6fd55f4e2af5`), whose
+$50 monthly credit is also its spending cap: going over switches the
+subscription off, site included. The same login also has a **Pay-As-You-Go**
+subscription with no cap, so every `az` command names the subscription.
+
+| Resource | Group `Chronopin-US-West`, region West US 2 | ≈ a month |
+|---|---|---|
+| VM `chronopin-web` | Ubuntu 24.04, Standard_B2s (2 vCPU, 4 GB) + 4 GB swap | $30 |
+| OS disk | 32 GB Standard SSD | $2.40 |
+| Public IP `chronopin-ip` | static, `20.109.175.187` | $3.65 |
+| Storage `chronopin` | container `thumb` (public read): thumbnails and avatars; container `backups` (private): nightly database dumps, deleted after 14 days | cents |
+| NSG `chronopin-web-nsg` | 22 from Ian's IP only, 80/443 from anywhere | - |
+
+On the VM, `Docker/docker-compose.prod.yml` runs the app, PostgreSQL with
+PostGIS, the FAISS search service and Caddy, which serves HTTPS with
+certificates it gets and renews itself (`Docker/Caddyfile`).
+
+## Getting in
+
+```sh
+ssh -i ~/.ssh/chronopin_azure azureuser@20.109.175.187
+```
+
+The key was made for this VM and lives only on Ian's Mac. SSH is open to one
+IP address; from somewhere else, add it first:
+
+```sh
+az network nsg rule update --subscription 9cbdc0e0-b85f-4267-b19a-6fd55f4e2af5 \
+  -g Chronopin-US-West --nsg-name chronopin-web-nsg -n ssh-from-ian \
+  --source-address-prefixes <your-ip>/32
+```
+
+## Configuration
+
+`~/chronopin/Docker/env.prod.list` on the VM holds every secret (mode 600,
+never in git or an image). It was made from `.env.local` plus values of its
+own: a generated `SESSION_SECRET` and database password, the `chronopin`
+storage account's connection string, and `DOMAIN` for the sign-in callbacks.
+Change a value there, then `docker compose ... up -d app` to restart with it.
+
+## Deploying a change
+
+From the repository on the Mac:
+
+```sh
+rsync -az --delete -e "ssh -i ~/.ssh/chronopin_azure" \
+  --exclude node_modules --exclude .next --exclude .git --exclude test-results \
+  --exclude playwright-report --exclude scratchpad --exclude '.env*' \
+  --exclude 'Docker/env.*.list' --exclude '*.tsbuildinfo' \
+  ./ azureuser@20.109.175.187:chronopin/
+ssh -i ~/.ssh/chronopin_azure azureuser@20.109.175.187 \
+  'cd chronopin && docker compose -f Docker/docker-compose.prod.yml up -d --build app'
+```
+
+`--exclude 'Docker/env.*.list'` keeps `--delete` from removing the VM's env
+file. A new schema file needs `npm run create:db` through the tools container
+(below) before or right after the app restarts.
+
+`DEPLOY_ON_VM=1 npm run deploy:vm` (scripts/deploy.sh) does this and never resizes the VM
+(owner, 2026-10-03), so `az login` is not needed. The build needs about 1.3GB
+beyond what a 4GB box (Standard_B2s) has free beside the running site, and on
+that size it swaps for an hour; to give it room, resize by hand first (a restart,
+a minute or two down; mind the $50 cap on the subscription if it stays large):
+`az vm resize --subscription 9cbdc0e0-b85f-4267-b19a-6fd55f4e2af5 -g Chronopin-US-West -n chronopin-web --size Standard_B2ms`,
+and the same with `Standard_B2s` to shrink it back.
+
+### Faster: build on GitHub, pull on the VM
+
+`.github/workflows/build-image.yml` builds the app and tools images on every
+push to master and pushes them to `ghcr.io/123wowow123/chronopin` and
+`chronopin-tools`, tagged with the commit. `npm run deploy` (scripts/
+deploy-image.sh; also `deploy:image`) waits for that build, syncs `Docker/`, pulls the images and
+restarts only the app; Postgres, FAISS and Caddy keep running (their data is in
+named volumes either way). Schema files are applied only when `scripts/db`
+changed since `~/chronopin/.deployed-sha`. Roll back with
+`npm run deploy -- <sha>`. The script writes `Docker/.env` on the VM
+(`APP_IMAGE`, `TOOLS_IMAGE`) so a later `docker compose up` by hand uses the
+same image.
+
+The image deploy prunes unused images before pulling and after restarting
+the app. Images referenced by containers and all data volumes are preserved.
+If a pull fails with `no space left on device`, free space on the VM with
+`docker image prune -af`, check `df -h /`, then retry `npm run deploy`.
+The Compose suggestion to build `app` can accompany a failed pull; disk
+exhaustion must be resolved first.
+
+One-time setup: push, let the first run finish, then in GitHub's package
+settings set both packages to **public** so the VM pulls without a login.
+`npm run deploy:vm` (build on the VM, `DEPLOY_ON_VM=1`) is only a fallback: the
+build swaps the 8GB box and the site 502s for its length (2026-10-10).
+
+Both deploy scripts source scripts/deploy-guard.sh: they refuse a
+non-interactive shell unless `DEPLOY_CONFIRMED=1`, refuse to overlap another
+deploy, and refuse while the VM is already building.
+
+## One-off scripts
+
+The runtime image is only the standalone server. Scripts run in the `tools`
+service, which is the Dockerfile's build stage (source and dev dependencies):
+
+```sh
+cd chronopin
+docker compose -f Docker/docker-compose.prod.yml --profile tools run --rm tools npm run create:db
+docker compose -f Docker/docker-compose.prod.yml --profile tools run --rm tools npm run db:refresh     # schema + seeds, first launch
+docker compose -f Docker/docker-compose.prod.yml --profile tools run --rm tools npm run search:index:db  # FAISS indexes from the live pins
+```
+
+`search:index:db` upserts every pin into both FAISS indexes (English and
+multilingual, see `Docker/faiss/app.py`) without emptying them first, so search
+keeps answering while it runs (a few minutes). Run it after a change to the
+service's models (`DEPLOY_ON_VM=1 npm run deploy:vm -- app faiss`), which leaves a new index empty.
+
+Rebuild it (`--profile tools build tools`) after a code change the script needs.
+
+## Thumbnails
+
+Seeds and dumps carry thumbnail *names*, not the images. After pins made
+locally reach production (a `db:refresh` from seeds, a restore), run
+`npm run thumbs:push` on the Mac: it uploads from Azurite every thumbnail and
+avatar the local database uses that the `thumb` container lacks. Without it a
+card falls back to the source's own image, and sites that refuse to serve
+other domains leave an empty box. The first launch skipped this, so all 5,161
+went up on 2026-09-23.
+
+## Backups
+
+`Docker/backup.sh` runs from cron on the VM every day at 10:15 UTC
+(`crontab -l`, log in `~/backup.log`): a `pg_dump` in custom format, checked
+with `pg_restore --list`, uploaded to the private `backups` container as
+`chronopin-<UTC time>.dump`. A lifecycle rule on the storage account deletes
+copies older than 14 days.
+
+The VM uploads with a SAS token in `~/chronopin/Docker/env.backup.list` that
+may only create and write: it cannot list, read or delete a backup. It expires
+2028-09-23; make a new one the same way:
+
+```sh
+KEY=$(az storage account keys list --subscription 9cbdc0e0-b85f-4267-b19a-6fd55f4e2af5 \
+  -g Chronopin-US-West -n chronopin --query "[0].value" -o tsv)
+SAS=$(az storage container generate-sas --account-name chronopin --account-key "$KEY" \
+  -n backups --permissions cw --expiry 2030-09-23T00:00Z --https-only -o tsv)
+printf 'BACKUP_CONTAINER_URL="https://chronopin.blob.core.windows.net/backups?%s"\n' "$SAS" |
+  ssh -i ~/.ssh/chronopin_azure azureuser@20.109.175.187 'umask 077; cat > chronopin/Docker/env.backup.list'
+```
+
+To restore, download a dump with the account key (`az storage blob list` /
+`az storage blob download --account-name chronopin -c backups ...`), copy it
+to the VM and `pg_restore --no-owner -d chronopin` it into the `postgres`
+container. The first backup was restored into a throwaway database to check it
+(2,744 pins, 28 users, all 71 migrations).
+
+## Pulling production to local
+
+`npm run db:pull-prod` replaces the local development database with
+production's (`scripts/db/pullProd.sh`):
+
+1. a fresh `pg_dump` from the VM over SSH, or with `-- --nightly` the newest
+   blob in `backups` (needs `az login`, works when SSH is closed to your IP),
+   or with `-- --file <dump>` one already on disk;
+2. `pg_restore --list` checks the dump is whole;
+3. after you confirm (`-- --yes` skips it), the local database is replaced - it is
+   **not** dumped first, because there is no disk space for backups;
+4. the dump restores into `chronopin_incoming`, which replaces `chronopin` only
+   once the restore succeeded;
+5. `npm run create:db` applies schema files this branch has and prod does not,
+   `npm run search:refresh:db` reindexes search from the database's pins, and
+   `npm run backup:data` rewrites the seed files (`scripts/backup/*.json`) from
+   them (`-- --no-seeds` to skip), ready to commit.
+
+**No backup database is kept** (disk is full, Ian 2026-10-12): the prod dump
+is written to `~/chronopin-backups` (`BACKUP_DIR` to change it; real accounts, so
+outside the repository) only while the pull runs and is deleted once the swap
+succeeded. A pull cannot be undone; pull again instead. A `-- --file` dump is
+never deleted by the script.
+`LOCAL_DB=chronopin_prod` restores into a side database and leaves `chronopin`
+alone. Add `-- --no-search --no-seeds` too, because the search index and seed
+files are shared with it.
+
+Blobs (avatars, thumbnails) are not copied, so the local Azurite has none of
+production's uploads.
+
+## Social sign-in
+
+The Google, Facebook, Apple and Alibaba Cloud buttons appear only for a provider whose keys
+are set (`signInProviders` in `src/server/oauth.ts`), read per request, so
+adding them needs no rebuild. In each provider's console, register the
+callback `https://www.chronopin.com/auth/<google|facebook|apple|alibaba|alibabacn>/callback`,
+then add to `Docker/env.prod.list` and `docker compose ... up -d app`:
+
+- Google: `GOOGLE_ID`, `GOOGLE_SECRET` - set 2026-09-23. The client "Chronopin web"
+  lives in Google Cloud project `chronopin-web` (Google Auth Platform), owned by
+  flynni2008 with chronopin.official as Editor and as the support/contact email;
+  published to production with only openid/email/profile, so no verification
+  review. Its redirect URIs are the live callback and
+  `http://localhost:3000/auth/google/callback` for development. A new secret
+  can be added under Clients; Google shows it only once.
+- Facebook: `FACEBOOK_ID`, `FACEBOOK_SECRET`
+- Apple: `APPLE_ID` (the Services ID), `APPLE_TEAM_ID`, `APPLE_KEY_ID`,
+  `APPLE_KEY` (the .p8 file's text)
+- Alibaba Cloud: `ALIBABA_ID`, `ALIBABA_SECRET`. In the RAM console
+  (https://ram.console.alibabacloud.com/, International site) go to
+  Integrations > OAuth > Enterprise Applications > Create Application: OAuth 2.0,
+  type Web Application, callback `https://www.chronopin.com/auth/alibaba/callback`
+  (HTTPS only, so no localhost), scopes openid + profile. The client ID is in the
+  application list; the secret is created on its App Secrets tab and shown once.
+  The flow never returns an email, so these accounts start with none (matched by
+  `User.alibabaId`, migration 0176) and add one on the profile page. Other
+  Alibaba accounts must consent before they can sign in. The China site is a
+  separate RAM account and application (https://ram.console.aliyun.com/, same
+  steps, callback `https://www.chronopin.com/auth/alibabacn/callback`), kept in
+  `ALIBABA_CN_ID` / `ALIBABA_CN_SECRET`; its button reads 阿里云 and its ids are
+  stored as `cn:<sub>` in the same column.
+
+## DNS and HTTPS
+
+chronopin.com's DNS is at GoDaddy. `@` and `www` are A records pointing at the
+VM's IP; the bare domain redirects to `https://www.chronopin.com`. After
+changing the records, `docker compose ... restart caddy` makes it ask for the
+certificates at once instead of waiting out its back-off. (The old
+`comment` record went with the Google Cloud project it pointed at.)
+
+Mail (Microsoft 365 MX/SPF at the root, Resend's `send`, `rsend`,
+`resend._domainkey` and `_dmarc` records) is unrelated to the web records.
+
+## Stripe (the $1 a month ad-free plan)
+
+Signed-in users can pay $1 a month to turn every ad off (Profile).
+Checkout and the customer portal are Stripe's own pages; the app keeps one
+`AdFreeSubscription` row per user (0177), written only by the webhook. Needs two
+values in `Docker/env.prod.list` (the button is hidden until the key is set):
+
+- `STRIPE_SECRET_KEY` - a secret (`sk_live_...`) or restricted key allowed to write
+  Checkout Sessions, Customer portal sessions and read Subscriptions.
+- `STRIPE_WEBHOOK_SECRET` - the `whsec_...` of a webhook endpoint at
+  `https://www.chronopin.com/api/billing/webhook` for `checkout.session.completed`,
+  `customer.subscription.created`, `customer.subscription.updated` and
+  `customer.subscription.deleted`.
+
+In the Stripe dashboard also save the Customer portal settings (Settings > Billing >
+Customer portal) so cancelling works. No product is created by hand: the price is
+sent inline with each checkout.

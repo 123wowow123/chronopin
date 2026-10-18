@@ -1,0 +1,56 @@
+import { okfBundle, type OkfPin, type OkfSource } from '@/lib/okf';
+import { PIN_CATEGORIES } from './model/pinTag';
+import { absoluteUrl, pinPath } from '@/lib/seo';
+import type { PinTagJson } from '@/lib/tags';
+import * as db from './db';
+import Source, { PinSource } from './model/source';
+import { SHORT_HASH } from './model/pinSentiment';
+
+// Loads pins and their links' wikis and renders them as an OKF bundle (see
+// src/lib/okf.ts). With pinIds, just those pins and the links they cite;
+// without, every live pin that cites a link.
+export async function loadOkfBundle(pinIds?: number[]): Promise<Map<string, string>> {
+  const pins = await db.query<Omit<OkfPin, 'url' | 'links'>>(
+    `SELECT "Pin"."id", "Pin"."title", "Pin"."description", "Pin"."utcStartDateTime", "Pin"."utcEndDateTime", "Pin"."allDay",
+            ${PIN_CATEGORIES} AS "categories", "Company"."name" AS "company", "Pin"."longFormSummary",
+            CASE WHEN "PinSentiment"."pinId" IS NOT NULL AND "Pin"."companyId" IS NOT NULL THEN json_build_object(
+              'score', "PinSentiment"."sentiment", 'product', "PinSentiment"."product", 'textHash', left("PinSentiment"."textHash", ${SHORT_HASH})) END AS "sentiment"
+     FROM "Pin" LEFT JOIN "Company" ON "Company"."id" = "Pin"."companyId"
+       LEFT JOIN "PinSentiment" ON "PinSentiment"."pinId" = "Pin"."id"
+     WHERE "Pin"."utcDeletedDateTime" IS NULL
+       AND ($1::integer[] IS NULL OR "Pin"."id" = ANY($1::integer[]))
+       AND EXISTS (SELECT 1 FROM "PinSource" WHERE "PinSource"."pinId" = "Pin"."id")
+     ORDER BY "Pin"."id"`,
+    [pinIds ?? null],
+  );
+  const tagRows = pins.length
+    ? await db.query<PinTagJson & { pinId: number }>(
+        `SELECT "pinId", "name"::text AS "name", "kind", "source" FROM "PinTagView"
+         WHERE "pinId" = ANY($1::integer[]) ORDER BY "pinId", "kind" = 'award' DESC, lower("name")`,
+        [pins.map((pin) => pin.id)],
+      )
+    : [];
+  const okfPins: OkfPin[] = [];
+  const sourceIds = new Set<number>();
+  for (const pin of pins) {
+    const links = (await PinSource.forPin(pin.id)).filter((row) => !row.utcRemovedDateTime);
+    links.forEach((row) => sourceIds.add(row.sourceId));
+    const tags = tagRows.filter((row) => row.pinId === pin.id).map(({ name, kind, source }) => ({ name, kind, source }));
+    okfPins.push({ ...pin, url: absoluteUrl(pinPath(pin)), links: links.map(({ sourceId, role }) => ({ sourceId, role })), tags });
+  }
+  const ids = [...sourceIds];
+  const rows = ids.length
+    ? await db.query<Omit<OkfSource, 'wiki'>>(
+        `SELECT "id", "url", "title", to_char("sourceModifiedDate", 'YYYY-MM-DD') AS "sourceModifiedDate", "generatedBy",
+                "utcBuiltDateTime", "utcFetchedDateTime", "wikiVersion"
+         FROM "Source" WHERE "id" = ANY($1::integer[]) ORDER BY "id"`,
+        [ids],
+      )
+    : [];
+  const wikis = await Source.wikis(ids);
+  // Links are only re-read by hand, so none has a date it goes stale.
+  return okfBundle(
+    okfPins,
+    rows.map((row) => ({ ...row, wiki: wikis.get(row.id) ?? null })),
+  );
+}

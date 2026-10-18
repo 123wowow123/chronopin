@@ -1,0 +1,284 @@
+{
+  "checkedAt": "2026-10-14",
+  "auditedPinsWithStoredGuidePhotos": 1506,
+  "repairedPins": [
+    {
+      "pinId": 15609,
+      "title": "Essex — Kyoto Century Hotel — Japan special",
+      "sourceUrl": "https://www.keihanhotels-resorts.co.jp/kyoto-centuryhotel/topics/happyhour-2/",
+      "photo": {
+        "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/kyoto/researched/essex-century-94cd52755a3647fd.webp",
+        "credit": "Photo: Kyoto Century Hotel",
+        "source": "https://www.keihanhotels-resorts.co.jp/kyoto-centuryhotel/topics/happyhour-2/",
+        "note": "Essex bar and drink shown in the hotel’s happy-hour promotion",
+        "kind": "special",
+        "recordId": 1389
+      }
+    },
+    {
+      "pinId": 15610,
+      "title": "MYPLACE café & bar — Hilton Osaka — Japan special",
+      "sourceUrl": "https://osaka.hiltonjapan.co.jp/plans/restaurants/other/myplace-happyhour",
+      "photo": {
+        "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/osaka/researched/myplace-hilton-e706a749366769b9.webp",
+        "credit": "Photo: Hilton Osaka",
+        "source": "https://osaka.hiltonjapan.co.jp/plans/restaurants/other/myplace-happyhour",
+        "note": "Illustrative cocktails from Hilton Osaka’s happy-hour promotion",
+        "kind": "special",
+        "recordId": 1390
+      }
+    }
+  ],
+  "verifiedWrites": [
+    {
+      "path": "/api/admin/db/Medium",
+      "body": {
+        "type": "1",
+        "thumbName": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/kyoto/researched/essex-century-94cd52755a3647fd.webp",
+        "originalUrl": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/kyoto/researched/essex-century-94cd52755a3647fd.webp",
+        "thumbWidth": 1400,
+        "thumbHeight": 768,
+        "originalWidth": 1400,
+        "originalHeight": 768,
+        "authorName": "Photo: Kyoto Century Hotel · Essex bar and drink shown in the hotel’s happy-hour promotion",
+        "authorUrl": "https://www.keihanhotels-resorts.co.jp/kyoto-centuryhotel/topics/happyhour-2/"
+      },
+      "response": {
+        "rows": [
+          {
+            "id": 22384,
+            "thumbName": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/kyoto/researched/essex-century-94cd52755a3647fd.webp",
+            "thumbWidth": 1400,
+            "thumbHeight": 768,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/kyoto/researched/essex-century-94cd52755a3647fd.webp",
+            "originalWidth": 1400,
+            "originalHeight": 768,
+            "type": "1",
+            "authorName": "Photo: Kyoto Century Hotel · Essex bar and drink shown in the hotel’s happy-hour promotion",
+            "authorUrl": "https://www.keihanhotels-resorts.co.jp/kyoto-centuryhotel/topics/happyhour-2/",
+            "html": null
+          }
+        ]
+      }
+    },
+    {
+      "path": "/api/admin/db/PinMedium",
+      "body": {
+        "pinId": 15609,
+        "mediumId": 22384
+      },
+      "response": {
+        "rows": [
+          {
+            "id": 22403,
+            "pinId": 15609,
+            "mediumId": 22384,
+            "utcCreatedDateTime": "2026-10-15T02:16:47.819Z",
+            "utcDeletedDateTime": null,
+            "weight": 1
+          }
+        ]
+      }
+    },
+    {
+      "path": "/api/admin/db/Medium",
+      "body": {
+        "type": "1",
+        "thumbName": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/osaka/researched/myplace-hilton-e706a749366769b9.webp",
+        "originalUrl": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/osaka/researched/myplace-hilton-e706a749366769b9.webp",
+        "thumbWidth": 1000,
+        "thumbHeight": 450,
+        "originalWidth": 1000,
+        "originalHeight": 450,
+        "authorName": "Photo: Hilton Osaka · Illustrative cocktails from Hilton Osaka’s happy-hour promotion",
+        "authorUrl": "https://osaka.hiltonjapan.co.jp/plans/restaurants/other/myplace-happyhour"
+      },
+      "response": {
+        "rows": [
+          {
+            "id": 22385,
+            "thumbName": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/osaka/researched/myplace-hilton-e706a749366769b9.webp",
+            "thumbWidth": 1000,
+            "thumbHeight": 450,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/osaka/researched/myplace-hilton-e706a749366769b9.webp",
+            "originalWidth": 1000,
+            "originalHeight": 450,
+            "type": "1",
+            "authorName": "Photo: Hilton Osaka · Illustrative cocktails from Hilton Osaka’s happy-hour promotion",
+            "authorUrl": "https://osaka.hiltonjapan.co.jp/plans/restaurants/other/myplace-happyhour",
+            "html": null
+          }
+        ]
+      }
+    },
+    {
+      "path": "/api/admin/db/PinMedium",
+      "body": {
+        "pinId": 15610,
+        "mediumId": 22385
+      },
+      "response": {
+        "rows": [
+          {
+            "id": 22404,
+            "pinId": 15610,
+            "mediumId": 22385,
+            "utcCreatedDateTime": "2026-10-15T02:16:49.277Z",
+            "utcDeletedDateTime": null,
+            "weight": 1
+          }
+        ]
+      }
+    }
+  ],
+  "japanPinsWithUnresolvedPhotoResearch": [
+    {
+      "sourceUrl": "https://store-info.skylark.co.jp/syabuyo/map/198491/",
+      "pinId": 15410,
+      "name": "Shabu-Yo — Aeon Mall Fukuoka Ito",
+      "photo": null,
+      "photos": []
+    },
+    {
+      "sourceUrl": "https://prtimes.jp/main/html/rd/p/000000063.000041874.html",
+      "pinId": 15415,
+      "name": "SMAAK Hakata",
+      "photo": null,
+      "photos": []
+    },
+    {
+      "sourceUrl": "https://www.baitoru.com/jobdetail/165076991",
+      "pinId": 15424,
+      "name": "NODE TABLE — Richmond Hotel Fukuoka Tenjin",
+      "photo": null,
+      "photos": []
+    },
+    {
+      "sourceUrl": "https://townwork.net/viewjob/jobid_fe1c93b9812691b3/",
+      "pinId": 15425,
+      "name": "BistroARC — Kego",
+      "photo": null,
+      "photos": []
+    },
+    {
+      "sourceUrl": "https://job.inshokuten.com/kyushu/work/detail/93179",
+      "pinId": 15426,
+      "name": "Daimyo Bistro — Atelier Daimyo",
+      "photo": null,
+      "photos": []
+    },
+    {
+      "sourceUrl": "https://sushi881.com/koki/",
+      "pinId": 15440,
+      "name": "Sushi Koki",
+      "photo": null,
+      "photos": []
+    },
+    {
+      "sourceUrl": "https://sasaya-company.jp/brand/114",
+      "pinId": 15447,
+      "name": "Yakitori to Soba Hiyori — provisional name",
+      "photo": null,
+      "photos": []
+    },
+    {
+      "sourceUrl": "https://sasaya-company.jp/brand/113",
+      "pinId": 15448,
+      "name": "Robata to Kamameshi Sōshi — provisional name",
+      "photo": null,
+      "photos": []
+    },
+    {
+      "sourceUrl": "https://sasaya-company.jp/brand/115",
+      "pinId": 15449,
+      "name": "Sumiyaki to Kamameshi Satō — provisional name",
+      "photo": null,
+      "photos": []
+    },
+    {
+      "sourceUrl": "https://www.instagram.com/ramen_ignorance/",
+      "pinId": 15466,
+      "name": "Ramen Ignoranc",
+      "photo": null,
+      "photos": []
+    },
+    {
+      "sourceUrl": "https://www.instagram.com/rojiiru/",
+      "pinId": 15480,
+      "name": "Nigushi & Wine Roji Iru",
+      "photo": null,
+      "photos": []
+    },
+    {
+      "sourceUrl": "https://prtimes.jp/main/html/rd/p/000004440.000018505.html",
+      "pinId": 15510,
+      "name": "Sanrio House Cafe — Nagoya PARCO",
+      "photo": null,
+      "photos": []
+    },
+    {
+      "sourceUrl": "https://store-info.skylark.co.jp/syabuyo/map/198490/",
+      "pinId": 15539,
+      "name": "Shabu-Yo — Shinjuku West Exit",
+      "photo": null,
+      "photos": []
+    },
+    {
+      "sourceUrl": "https://www.tokyo-solamachi.jp/shop/2438/",
+      "pinId": 15556,
+      "name": "Gong cha — Tokyo Solamachi",
+      "photo": null,
+      "photos": []
+    },
+    {
+      "sourceUrl": "https://prtimes.jp/main/html/rd/p/000000458.000041446.html#eggs-n-things",
+      "pinId": 15557,
+      "name": "Eggs ’n Things — Tokyo Solamachi",
+      "photo": null,
+      "photos": []
+    },
+    {
+      "sourceUrl": "https://maps.olivenooka.jp/jp/detail/6621.html",
+      "pinId": 15568,
+      "name": "Olive no Oka — Sapporo Shinkotoni",
+      "photo": null,
+      "photos": []
+    },
+    {
+      "sourceUrl": "https://www.instagram.com/yogurtworld_coconosusukino/",
+      "pinId": 15569,
+      "name": "Yogurt World — COCONO SUSUKINO",
+      "photo": null,
+      "photos": []
+    },
+    {
+      "sourceUrl": "https://sapporo-list.info/shop/frenchman-coconosusukino/",
+      "pinId": 15570,
+      "name": "Frenchman — COCONO SUSUKINO",
+      "photo": null,
+      "photos": []
+    },
+    {
+      "sourceUrl": "https://sapporo-list.info/shop/hama-sushi-hiraoka/",
+      "pinId": 15571,
+      "name": "Hama Sushi — Sapporo Hiraoka",
+      "photo": null,
+      "photos": []
+    },
+    {
+      "sourceUrl": "https://store-info.skylark.co.jp/syabuyo/map/198489/",
+      "pinId": 15580,
+      "name": "Shabu-Yo — Sapporo Soen",
+      "photo": null,
+      "photos": []
+    },
+    {
+      "sourceUrl": "https://sapporo-list.info/shop/kaitensushi-hunka-sapporo/",
+      "pinId": 15597,
+      "name": "Hakodate Shunka — Sapporo",
+      "photo": null,
+      "photos": []
+    }
+  ],
+  "verification": "Authenticated API read-back confirmed PinMedium links; Azure images downloaded and decoded. Browser visual verification denied."
+}

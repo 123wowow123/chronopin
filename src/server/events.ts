@@ -1,0 +1,252 @@
+// Pin change events. Route handlers emit after a successful write; listeners
+// keep the search index in step, keep summaries built from the pin's links, and feed the live stream
+// (GET /api/pins/stream) that replaced socket.io.
+//
+// The emitter and its listeners live on globalThis: Next.js can load this
+// module more than once (per route bundle, and again on every dev reload),
+// and each copy must share one emitter with the listeners registered once.
+
+import { EventEmitter } from 'node:events';
+import type { Row } from './db';
+import log from './util/log';
+
+// view carries only { id, viewCount }: page views are frequent, and nothing
+// but the count follows them.
+export type PinEvent = 'save' | 'update' | 'remove' | 'favorite' | 'unfavorite' | 'like' | 'unlike' | 'view';
+export const PIN_EVENTS: PinEvent[] = ['save', 'update', 'remove', 'favorite', 'unfavorite', 'like', 'unlike', 'view'];
+
+// noBrowser: the work that follows the save may not launch Chromium (admin API posts).
+// prebuiltWikis: the post carried its links' wikis (services/prebuiltWikis.ts), so
+// the save fetches no page and calls no API to write them.
+//
+// lightweight: an admin edit that changed nothing the listeners derive from
+// (a date, its confidence), made on a machine that has already done the work.
+// Only the search index follows it; the wiki, translation, sentiment and
+// other listeners that spend prod's CPU, network or API credit are skipped.
+export type PinEventOptions = { userId?: number; noBrowser?: boolean; prebuiltWikis?: boolean; lightweight?: boolean };
+type Listener = (pin: Row, options?: PinEventOptions) => void;
+
+const g = globalThis as unknown as { __chronopinPinEvents?: EventEmitter; __chronopinPinListeners?: boolean };
+
+export const pinEvents: EventEmitter = (g.__chronopinPinEvents ??= new EventEmitter().setMaxListeners(0));
+
+export function emitPinEvent(event: PinEvent, pin: Row, options?: PinEventOptions) {
+  pinEvents.emit(event, pin, options);
+}
+
+export function onPinEvent(event: PinEvent, listener: Listener) {
+  pinEvents.on(event, listener);
+  return () => pinEvents.off(event, listener);
+}
+
+// A user's notifications changed (one arrived, was taken back or was read).
+// Carries only the user id: the live feed reads the count back for that user's
+// own connections, so nothing private goes past anyone else.
+const NOTIFICATIONS = 'notifications';
+
+export function emitNotificationsChanged(userId: number) {
+  pinEvents.emit(NOTIFICATIONS, userId);
+}
+
+export function onNotificationsChanged(listener: (userId: number) => void) {
+  pinEvents.on(NOTIFICATIONS, listener);
+  return () => pinEvents.off(NOTIFICATIONS, listener);
+}
+
+// Direct messages (model/message.ts), each addressed to one user's own
+// connections: a message in one of their chats, or the other side having
+// seen theirs. 'messagesChanged' carries only the user id, like
+// 'notifications', and the feed reads their unread chat count back.
+export type DirectMessageEvent = { userId: number; data: Record<string, unknown> };
+
+const DIRECT_MESSAGE = 'dm';
+const MESSAGES_CHANGED = 'messagesChanged';
+
+export function emitDirectMessage(event: DirectMessageEvent) {
+  pinEvents.emit(DIRECT_MESSAGE, event);
+}
+
+export function onDirectMessage(listener: (event: DirectMessageEvent) => void) {
+  pinEvents.on(DIRECT_MESSAGE, listener);
+  return () => pinEvents.off(DIRECT_MESSAGE, listener);
+}
+
+export function emitMessagesChanged(userId: number) {
+  pinEvents.emit(MESSAGES_CHANGED, userId);
+}
+
+export function onMessagesChanged(listener: (userId: number) => void) {
+  pinEvents.on(MESSAGES_CHANGED, listener);
+  return () => pinEvents.off(MESSAGES_CHANGED, listener);
+}
+
+// A watched pin is starting, or about to (services/watchAlerts.ts): the live
+// feed hands it to that user's own open pages, which show it as a browser
+// notification.
+export type WatchAlert = { userId: number; pinId: number; type: 'start' | 'soon' | 'update' | 'thread'; title: string; body: string; url: string; image: string | null; tag: string };
+
+const WATCH_ALERT = 'watchAlert';
+
+export function emitWatchAlert(alert: WatchAlert) {
+  pinEvents.emit(WATCH_ALERT, alert);
+}
+
+export function onWatchAlert(listener: (alert: WatchAlert) => void) {
+  pinEvents.on(WATCH_ALERT, listener);
+  return () => pinEvents.off(WATCH_ALERT, listener);
+}
+
+if (!g.__chronopinPinListeners) {
+  g.__chronopinPinListeners = true;
+
+  // Every 'update' listener but the search index goes through this.
+  const unlessLight =
+    (listener: Listener): Listener =>
+    (pin, options) => {
+      if (!options?.lightweight) listener(pin, options);
+    };
+
+  // Search index: pins added or edited are (re)embedded, deleted ones removed.
+  // A search service that is down must not fail the write that triggered this.
+  const syncSearch = (action: 'upsert' | 'remove') => (pin: Row) => {
+    import('./model/searchPin')
+      .then(({ SearchPin }) => (action === 'upsert' ? new SearchPin(pin).save() : new SearchPin(pin).delete()))
+      .catch((err) => log.warn(`search ${action} failed for pin ${pin.id}:`, (err as Error).message));
+  };
+  pinEvents.on('save', syncSearch('upsert'));
+  pinEvents.on('update', syncSearch('upsert'));
+  pinEvents.on('remove', syncSearch('remove'));
+
+  // Long-form summary, kept up with the pin's links after the request has
+  // been answered: each link gets a wiki, and the summary is rebuilt from
+  // those when a link comes or goes (services/sourceWiki.ts).
+  const refreshWiki = (pin: Row, options?: PinEventOptions) => {
+    if (options?.prebuiltWikis) return;
+    Promise.all([import('./services/sourceWiki'), import('./scrape')])
+      .then(([{ refreshPin }, { noBrowser }]) => noBrowser.run(!!options?.noBrowser, () => refreshPin(Number(pin.id))))
+      .catch((err) => log.warn(`wiki refresh failed for pin ${pin.id}:`, (err as Error).message));
+  };
+  pinEvents.on('save', refreshWiki);
+  pinEvents.on('update', unlessLight(refreshWiki));
+
+  // Duplicate suggestions for the pin's author or an admin to review.
+  const suggestDuplicates = (pin: Row) => {
+    import('./services/duplicatePin')
+      .then(({ suggestDuplicates: suggest }) => suggest(Number(pin.id)))
+      .catch((err) => log.warn(`duplicate suggestions failed for pin ${pin.id}:`, (err as Error).message));
+  };
+  pinEvents.on('save', suggestDuplicates);
+  pinEvents.on('update', unlessLight(suggestDuplicates));
+
+  // New pins only: podcast episodes around the event that back it up are
+  // added as references (services/podcastReferences.ts).
+  const checkPodcasts = (pin: Row) => {
+    import('./services/podcastReferences')
+      .then(({ crossCheckPodcasts }) => crossCheckPodcasts(Number(pin.id)))
+      .catch((err) => log.warn(`podcast cross-check failed for pin ${pin.id}:`, (err as Error).message));
+  };
+  pinEvents.on('save', checkPodcasts);
+
+  // Stock tickers: the company's looked up, a price taken when posted and
+  // at each new start date (services/pinStocks.ts).
+  const syncStocks = (pin: Row) => {
+    import('./services/pinStocks')
+      .then(({ syncPinStocks }) => syncPinStocks(Number(pin.id)))
+      .catch((err) => log.warn(`stock sync failed for pin ${pin.id}:`, (err as Error).message));
+  };
+  pinEvents.on('save', syncStocks);
+  pinEvents.on('update', unlessLight(syncStocks));
+
+  // A film, series, anime or game saved with no place of its own goes on the
+  // map at its studio's headquarters (studioLocation.ts); a pin posted by API
+  // without a scrape gets it here.
+  const placeStudio = (pin: Row) => {
+    import('./studioLocation')
+      .then(({ placeAtStudio }) => placeAtStudio(Number(pin.id)))
+      .then((moved) => (moved ? import('./services/cache').then(({ invalidatePin }) => invalidatePin(Number(pin.id))) : undefined))
+      .catch((err) => log.warn(`studio location failed for pin ${pin.id}:`, (err as Error).message));
+  };
+  pinEvents.on('save', placeStudio);
+  pinEvents.on('update', unlessLight(placeStudio));
+
+  // How the pin reads as news for its company (extract/pinSentiment.ts), for
+  // the company search's graph; again only when its title or summary changed.
+  // On the dev machine only, a product it names that has no picture gets one
+  // looked up (productPicture.ts); prod stores what a local run sends it.
+  const scoreTone = (pin: Row) => {
+    import('./extract/pinSentiment')
+      .then(({ scorePin }) => scorePin(Number(pin.id)))
+      .then(async (scored) => {
+        if (!scored || process.env.NODE_ENV === 'production') return;
+        const { pictureProductOf } = await import('./productPicture');
+        await pictureProductOf(Number(pin.id));
+      })
+      .catch((err) => log.warn(`sentiment scoring failed for pin ${pin.id}:`, (err as Error).message));
+  };
+  pinEvents.on('save', scoreTone);
+  pinEvents.on('update', unlessLight(scoreTone));
+
+  // A film, series or anime's awards, from the award bodies' own pages
+  // (services/pinAwards.ts); a new title can match a different work.
+  const syncAwards = (pin: Row) => {
+    import('./services/pinAwards')
+      .then(({ syncPinAwards }) => syncPinAwards(Number(pin.id)))
+      .then((changed) => (changed ? import('./services/cache').then(({ invalidatePin }) => invalidatePin(Number(pin.id))) : undefined))
+      .catch((err) => log.warn(`awards sync failed for pin ${pin.id}:`, (err as Error).message));
+  };
+  pinEvents.on('save', syncAwards);
+  pinEvents.on('update', unlessLight(syncAwards));
+
+  // The money on the prediction markets the pin links to, stored for its
+  // timeline weight (services/pinMarketVolume.ts). A scraped market pin gets
+  // its figure here, and an edit that adds or drops a market link re-reads it.
+  const syncMarketVolume = (pin: Row) => {
+    import('./services/pinMarketVolume')
+      .then(({ syncPinMarketVolume }) => syncPinMarketVolume(Number(pin.id)))
+      .then((sync) => (sync ? import('./services/cache').then(({ invalidatePin }) => invalidatePin(Number(pin.id))) : undefined))
+      .catch((err) => log.warn(`market volume sync failed for pin ${pin.id}:`, (err as Error).message));
+  };
+  pinEvents.on('save', syncMarketVolume);
+  pinEvents.on('update', unlessLight(syncMarketVolume));
+
+  // A film, show or game's review score from Kalshi's markets on it
+  // (services/pinScoreMarket.ts); a pin posted by API without a scrape gets
+  // it here, and an edit refreshes a forecast.
+  const syncScoreMarket = (pin: Row) => {
+    import('./services/pinScoreMarket')
+      .then(({ syncPinScoreMarket }) => syncPinScoreMarket(Number(pin.id)))
+      .then((sync) => (sync ? import('./services/cache').then(({ invalidatePin }) => invalidatePin(Number(pin.id))) : undefined))
+      .catch((err) => log.warn(`score market sync failed for pin ${pin.id}:`, (err as Error).message));
+  };
+  pinEvents.on('save', syncScoreMarket);
+  pinEvents.on('update', unlessLight(syncScoreMarket));
+
+  // The awards the pin's description and summary name, as tags
+  // (model/pinTag.ts); the award bodies' own tags come with syncAwards.
+  const syncAutoTags = (pin: Row) => {
+    import('./model/pinTag')
+      .then(({ default: PinTag }) => PinTag.syncAutoTags(Number(pin.id)))
+      .then((changed) => (changed ? import('./services/cache').then(({ invalidatePin }) => invalidatePin(Number(pin.id))) : undefined))
+      .catch((err) => log.warn(`tag sync failed for pin ${pin.id}:`, (err as Error).message));
+  };
+  pinEvents.on('save', syncAutoTags);
+  pinEvents.on('update', unlessLight(syncAutoTags));
+
+  // The pin's words in the languages offered (services/translations.ts,
+  // src/lib/multilingual.ts), redone only for a language whose translation
+  // the edit made out of date. None while the site is English only, or while
+  // the admin setting leaves it off (src/lib/autoTranslate.ts, the default).
+  const translate = (pin: Row) => {
+    (async () => {
+      const { getAutoTranslate } = await import('./model/appSetting');
+      if (!(await getAutoTranslate()).enabled) return;
+      const { offeredLocales } = await import('./services/cache');
+      const locales = await offeredLocales();
+      if (!locales.length) return;
+      const { translatePin } = await import('./services/translations');
+      await translatePin(Number(pin.id), { locales });
+    })().catch((err) => log.warn(`translation failed for pin ${pin.id}:`, (err as Error).message));
+  };
+  pinEvents.on('save', translate);
+  pinEvents.on('update', unlessLight(translate));
+}

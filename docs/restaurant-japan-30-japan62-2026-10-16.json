@@ -1,0 +1,836 @@
+{
+  "checkedAt": "2026-10-17",
+  "country": "Japan",
+  "regions": [
+    "fukuoka",
+    "osaka",
+    "nagoya"
+  ],
+  "entries": [
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Rokumei Coffee — Tenjin Underground Mall Opens in Tenjin",
+        "description": "The new Tenjin branch of the Nara coffee roaster serves its local Hakata Blend, croissant sandwiches and pastries.",
+        "sourceUrl": "https://rokumei.coffee/f/shop-tenjinchikagai",
+        "address": "East 1st Avenue, Unit333, Tenjin Underground Mall, 2-12 Tenjin, Chuo-ku, Fukuoka",
+        "productName": "Rokumei Coffee — Tenjin Underground Mall",
+        "utcStartDateTime": "2026-10-01T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "Exact operator branch page and September30,2026 launch announcement confirm this Tenjin Underground Mall branch opens October1,2026. The brand’s1974 founding is not the branch date. Opening-day09:00 service is separate from ordinary08:00 opening.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Fukuoka",
+          "Japan",
+          "Tenjin",
+          "Specialty coffee / cafe"
+        ],
+        "longFormSummary": "<p>The new Tenjin branch of the Nara coffee roaster serves its local Hakata Blend, croissant sandwiches and pastries.<cite data-ref=\"https://rokumei.coffee/f/shop-tenjinchikagai\"></cite></p><p>Exact operator branch page and September30,2026 launch announcement confirm this Tenjin Underground Mall branch opens October1,2026. The brand’s1974 founding is not the branch date. Opening-day09:00 service is separate from ordinary08:00 opening.</p>",
+        "references": [
+          {
+            "url": "https://rokumei.coffee/f/shop-tenjinchikagai",
+            "title": "Rokumei Coffee — Tenjin Underground Mall source",
+            "confidence": 90,
+            "reasoning": "Exact operator branch page and September30,2026 launch announcement confirm this Tenjin Underground Mall branch opens October1,2026. The brand’s1974 founding is not the branch date. Opening-day09:00 service is separate from ordinary08:00 opening."
+          },
+          {
+            "url": "https://prtimes.jp/main/html/rd/p/000000028.000041634.html",
+            "title": "Rokumei Coffee — Tenjin Underground Mall source",
+            "confidence": 90,
+            "reasoning": "Exact operator branch page and September30,2026 launch announcement confirm this Tenjin Underground Mall branch opens October1,2026. The brand’s1974 founding is not the branch date. Opening-day09:00 service is separate from ordinary08:00 opening."
+          },
+          {
+            "url": "https://www.tenchika.com/gourmet/",
+            "title": "Rokumei Coffee — Tenjin Underground Mall source",
+            "confidence": 90,
+            "reasoning": "Exact operator branch page and September30,2026 launch announcement confirm this Tenjin Underground Mall branch opens October1,2026. The brand’s1974 founding is not the branch date. Opening-day09:00 service is separate from ordinary08:00 opening."
+          },
+          {
+            "url": "https://www.tenchika.com/service/",
+            "title": "Rokumei Coffee — Tenjin Underground Mall source",
+            "confidence": 90,
+            "reasoning": "Exact operator branch page and September30,2026 launch announcement confirm this Tenjin Underground Mall branch opens October1,2026. The brand’s1974 founding is not the branch date. Opening-day09:00 service is separate from ordinary08:00 opening."
+          },
+          {
+            "url": "https://www.instagram.com/rokumei_tenjinchikagai/",
+            "title": "Rokumei Coffee — Tenjin Underground Mall source",
+            "confidence": 90,
+            "reasoning": "Exact operator branch page and September30,2026 launch announcement confirm this Tenjin Underground Mall branch opens October1,2026. The brand’s1974 founding is not the branch date. Opening-day09:00 service is separate from ordinary08:00 opening."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://rokumei.coffee/f/shop-tenjinchikagai",
+          "menu": {
+            "pinSourceUrl": "https://rokumei.coffee/f/shop-tenjinchikagai",
+            "name": "Rokumei Coffee — Tenjin Underground Mall",
+            "checkedAt": "2026-10-17",
+            "menus": [
+              {
+                "label": "Tenjin Underground Mall current cafe menu",
+                "url": "https://rokumei.coffee/f/shop-tenjinchikagai",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "Today’s coffee",
+                    "price": 580
+                  },
+                  {
+                    "name": "Rokumei Blend",
+                    "price": 650
+                  },
+                  {
+                    "name": "Sarusawa Blend",
+                    "price": 650
+                  },
+                  {
+                    "name": "Hakata Blend",
+                    "price": 700
+                  },
+                  {
+                    "name": "Ethiopia natural",
+                    "price": 650
+                  },
+                  {
+                    "name": "Ethiopia washed",
+                    "price": 650
+                  },
+                  {
+                    "name": "Indonesia single origin",
+                    "price": 650
+                  },
+                  {
+                    "name": "Costa Rica single origin",
+                    "price": 650
+                  },
+                  {
+                    "name": "Kenya single origin",
+                    "price": 650
+                  },
+                  {
+                    "name": "Decaf filter coffee",
+                    "price": 650
+                  },
+                  {
+                    "name": "Cold brew — blend",
+                    "price": 630
+                  },
+                  {
+                    "name": "Cold brew — Hakata Blend",
+                    "price": 700
+                  },
+                  {
+                    "name": "Coffee float",
+                    "price": 780
+                  },
+                  {
+                    "name": "Single espresso",
+                    "price": 480
+                  },
+                  {
+                    "name": "Double espresso",
+                    "price": 530
+                  },
+                  {
+                    "name": "Americano — hot or iced",
+                    "price": 580
+                  },
+                  {
+                    "name": "Cafe latte — hot or iced",
+                    "price": 680
+                  },
+                  {
+                    "name": "Cappuccino",
+                    "price": 680
+                  },
+                  {
+                    "name": "Flat white",
+                    "price": 630
+                  },
+                  {
+                    "name": "Single macchiato",
+                    "price": 580
+                  },
+                  {
+                    "name": "Double macchiato",
+                    "price": 680
+                  },
+                  {
+                    "name": "Decaf latte",
+                    "price": 680
+                  },
+                  {
+                    "name": "Affogato",
+                    "price": 780
+                  },
+                  {
+                    "name": "Milk — hot or iced",
+                    "price": 580
+                  },
+                  {
+                    "name": "Apple juice",
+                    "price": 580
+                  },
+                  {
+                    "name": "Children’s apple juice",
+                    "price": 350
+                  },
+                  {
+                    "name": "Plain croissant",
+                    "price": 350
+                  },
+                  {
+                    "name": "Mentaiko and chicken-ham croissant sandwich",
+                    "price": 540
+                  },
+                  {
+                    "name": "Chocolate scone",
+                    "price": 450
+                  },
+                  {
+                    "name": "Weekend citron cake",
+                    "price": 490
+                  },
+                  {
+                    "name": "Chocolate pound cake",
+                    "price": 490
+                  },
+                  {
+                    "name": "Morning set — plain croissant",
+                    "price": 850
+                  },
+                  {
+                    "name": "Morning set — mentaiko and chicken-ham croissant sandwich",
+                    "price": 980
+                  },
+                  {
+                    "name": "Brunch set — plain croissant and one sweet",
+                    "price": 1180
+                  },
+                  {
+                    "name": "Brunch set — mentaiko and chicken-ham croissant sandwich and one sweet",
+                    "price": 1350
+                  },
+                  {
+                    "name": "Seasonal blend",
+                    "priceLabel": "From ¥680 (tax included)"
+                  }
+                ],
+                "note": "All prices include tax, from exact branch operator page checked October17,2026JST. Current page expands the September30launch menu; no other branch menu is transferred. Morning/brunch set cutoff times and precise drink-inclusion conditions are not published on this page; confirm with branch. Retail bean/drip-bag packs and limited opening gift sets are not claimed as dining offers. Hakata Blend and mentaiko/chicken sandwich are exact branch products. No rating or special discount invented."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://rokumei.coffee/f/shop-tenjinchikagai",
+            "name": "Rokumei Coffee — Tenjin Underground Mall",
+            "checkedAt": "2026-10-17",
+            "websiteUrl": "https://rokumei.coffee/f/shop-tenjinchikagai",
+            "phone": "092-401-6996",
+            "openingHours": [
+              {
+                "days": "Daily",
+                "hours": "08:00–21:00; last order20:45; landlord closure exceptions apply"
+              }
+            ],
+            "detailsSourceUrl": "https://rokumei.coffee/f/shop-tenjinchikagai",
+            "additionalSources": [
+              {
+                "label": "Research evidence",
+                "url": "https://prtimes.jp/main/html/rd/p/000000028.000041634.html"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://www.tenchika.com/gourmet/"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://www.tenchika.com/service/"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://www.instagram.com/rokumei_tenjinchikagai/"
+              }
+            ]
+          },
+          "tile": {
+            "regionSlug": "fukuoka",
+            "kind": "opening",
+            "slug": "rokumei",
+            "name": "Rokumei Coffee — Tenjin Underground Mall",
+            "neighborhood": "Tenjin",
+            "cuisine": "Specialty coffee / cafe",
+            "description": "The new Tenjin branch of the Nara coffee roaster serves its local Hakata Blend, croissant sandwiches and pastries.",
+            "address": "East 1st Avenue, Unit333, Tenjin Underground Mall, 2-12 Tenjin, Chuo-ku, Fukuoka",
+            "websiteUrl": "https://rokumei.coffee/f/shop-tenjinchikagai",
+            "checkedAt": "2026-10-17",
+            "recognition": "",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-16/batch62-rokumei-4-5d01ce758057ae91.webp",
+            "imageCredit": "ROKUMEI COFFEE / 株式会社路珈珈 — Tenjin Underground Mall branch",
+            "imageSourceUrl": "https://rokumei.coffee/f/shop-tenjinchikagai",
+            "imageNote": "Operator’s planned Tenjin Underground Mall storefront/interior rendering, not a verified completed-room photograph.",
+            "openingConfirmed": true,
+            "day": "2026-10-01"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-16/batch62-rokumei-4-5d01ce758057ae91.webp",
+          "sha256": "5d01ce758057ae91cf053452b008184a08635885f27d43c919bbf9f5438b00c7",
+          "width": 1600,
+          "height": 1067,
+          "credit": "ROKUMEI COFFEE / 株式会社路珈珈 — Tenjin Underground Mall branch",
+          "note": "Operator’s planned Tenjin Underground Mall storefront/interior rendering, not a verified completed-room photograph.",
+          "sourcePage": "https://rokumei.coffee/f/shop-tenjinchikagai"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-16/batch62-rokumei-2-ed8c4549e2c61d06.webp",
+          "sha256": "ed8c4549e2c61d06684bc98324a294eb66629d42688d5281ef24b88921ec0f6b",
+          "width": 1110,
+          "height": 740,
+          "credit": "ROKUMEI COFFEE / 株式会社路珈珈 — Tenjin Underground Mall branch",
+          "note": "Hakata Blend beans, drip bag and served coffee in exact branch operator gallery; retail packs are separate from cafe drink pricing.",
+          "sourcePage": "https://rokumei.coffee/f/shop-tenjinchikagai"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-16/batch62-rokumei-3-908e4b7a9ee8755d.webp",
+          "sha256": "908e4b7a9ee8755d91abdf4fe0e624231d473297c4219a7282e303ddedf8479d",
+          "width": 1600,
+          "height": 1067,
+          "credit": "ROKUMEI COFFEE / 株式会社路珈珈 — Tenjin Underground Mall branch",
+          "note": "Operator-labelled Tenjin-only mentaiko and chicken-ham croissant sandwich.",
+          "sourcePage": "https://rokumei.coffee/f/shop-tenjinchikagai"
+        }
+      ],
+      "batch": 62,
+      "verification": {
+        "local": {
+          "pinId": 16173,
+          "sourceUrl": "https://rokumei.coffee/f/shop-tenjinchikagai",
+          "name": "Rokumei Coffee — Tenjin Underground Mall",
+          "contentId": 1658,
+          "contentRevision": 1,
+          "verifiedGalleryLinks": 3,
+          "publicPinStatus": 200
+        },
+        "production": {
+          "pinId": 16078,
+          "sourceUrl": "https://rokumei.coffee/f/shop-tenjinchikagai",
+          "name": "Rokumei Coffee — Tenjin Underground Mall",
+          "contentId": 1658,
+          "contentRevision": 1,
+          "verifiedGalleryLinks": 3,
+          "publicPinStatus": 200
+        }
+      }
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Sushi Toka — Kitashinchi Opens in Kitashinchi",
+        "description": "An upcoming eight-seat Kitashinchi sushi counter introducing aged-fish techniques and a published omakase course.",
+        "sourceUrl": "https://prtimes.jp/main/html/rd/p/000000001.000192236.html",
+        "address": "3F YAMANA K2 Building, 1-7-4 Sonezakishinchi, Kita-ku, Osaka",
+        "productName": "Sushi Toka — Kitashinchi",
+        "utcStartDateTime": "2026-10-31T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "Kibus exact restaurant launch release dated October13,2026 explicitly confirms October31,2026 opening at YAMANA K2,3F. Generic booking calendar dates before launch do not establish earlier service.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Osaka",
+          "Japan",
+          "Kitashinchi",
+          "Sushi / omakase"
+        ],
+        "longFormSummary": "<p>An upcoming eight-seat Kitashinchi sushi counter introducing aged-fish techniques and a published omakase course.<cite data-ref=\"https://prtimes.jp/main/html/rd/p/000000001.000192236.html\"></cite></p><p>Kibus exact restaurant launch release dated October13,2026 explicitly confirms October31,2026 opening at YAMANA K2,3F. Generic booking calendar dates before launch do not establish earlier service.</p>",
+        "references": [
+          {
+            "url": "https://prtimes.jp/main/html/rd/p/000000001.000192236.html",
+            "title": "Sushi Toka — Kitashinchi source",
+            "confidence": 90,
+            "reasoning": "Kibus exact restaurant launch release dated October13,2026 explicitly confirms October31,2026 opening at YAMANA K2,3F. Generic booking calendar dates before launch do not establish earlier service."
+          },
+          {
+            "url": "https://www.tablecheck.com/ja/sushi-touka",
+            "title": "Sushi Toka — Kitashinchi source",
+            "confidence": 90,
+            "reasoning": "Kibus exact restaurant launch release dated October13,2026 explicitly confirms October31,2026 opening at YAMANA K2,3F. Generic booking calendar dates before launch do not establish earlier service."
+          },
+          {
+            "url": "https://www.tablecheck.com/ja/sushi-touka/reserve/message",
+            "title": "Sushi Toka — Kitashinchi source",
+            "confidence": 90,
+            "reasoning": "Kibus exact restaurant launch release dated October13,2026 explicitly confirms October31,2026 opening at YAMANA K2,3F. Generic booking calendar dates before launch do not establish earlier service."
+          },
+          {
+            "url": "https://www.instagram.com/sushi_toka/",
+            "title": "Sushi Toka — Kitashinchi source",
+            "confidence": 90,
+            "reasoning": "Kibus exact restaurant launch release dated October13,2026 explicitly confirms October31,2026 opening at YAMANA K2,3F. Generic booking calendar dates before launch do not establish earlier service."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://prtimes.jp/main/html/rd/p/000000001.000192236.html",
+          "menu": {
+            "pinSourceUrl": "https://prtimes.jp/main/html/rd/p/000000001.000192236.html",
+            "name": "Sushi Toka — Kitashinchi",
+            "checkedAt": "2026-10-17",
+            "menus": [
+              {
+                "label": "Kitashinchi published omakase course",
+                "url": "https://www.tablecheck.com/ja/sushi-touka",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Omakase course",
+                    "price": 22000,
+                    "note": "Tax included; service charge additional. Public guide does not state the service-charge rate or full payable total."
+                  }
+                ],
+                "note": "Exact TableCheck restaurant guide matches 3F YAMANA K2and06-6342-6788; public menu says¥22,000tax included/service excluded. This supersedes the press release’s generic¥20,000average spend as the course price. Read linked reservation notice and publicly delivered course metadata; no specific nigiri roster or service-charge rate is published. Checked operator release/gallery, exact booking guide, booking notices, Instagram (throttled), and exact-name menu searches. Signature aged-tuna concept is not converted into a guaranteed course sequence. Same course required for children; all diners start together; lateness may omit dishes. No unrelated Sushi Saeki or other Toka branch menu used."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://prtimes.jp/main/html/rd/p/000000001.000192236.html",
+            "name": "Sushi Toka — Kitashinchi",
+            "checkedAt": "2026-10-17",
+            "websiteUrl": "https://prtimes.jp/main/html/rd/p/000000001.000192236.html",
+            "phone": "06-6342-6788",
+            "openingHours": [
+              {
+                "days": "Monday–Friday seatings",
+                "hours": "18:00–20:15 /20:45–23:00"
+              },
+              {
+                "days": "Saturday seatings",
+                "hours": "17:00–19:15 /19:45–22:00"
+              },
+              {
+                "days": "Sunday",
+                "hours": "Closed"
+              }
+            ],
+            "detailsSourceUrl": "https://prtimes.jp/main/html/rd/p/000000001.000192236.html",
+            "additionalSources": [
+              {
+                "label": "Research evidence",
+                "url": "https://www.tablecheck.com/ja/sushi-touka"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://www.tablecheck.com/ja/sushi-touka/reserve/message"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://www.instagram.com/sushi_toka/"
+              }
+            ],
+            "reservationUrl": "https://www.tablecheck.com/ja/sushi-touka/reserve/message",
+            "hoursNote": "Two simultaneous-start seatings. A30-minute uncontactable delay may cancel the booking; broad allergy restrictions can prevent accommodation. Service-charge rate remains unpublished in the checked public guide; confirm before booking."
+          },
+          "tile": {
+            "regionSlug": "osaka",
+            "kind": "opening",
+            "slug": "toka",
+            "name": "Sushi Toka — Kitashinchi",
+            "neighborhood": "Kitashinchi",
+            "cuisine": "Sushi / omakase",
+            "description": "An upcoming eight-seat Kitashinchi sushi counter introducing aged-fish techniques and a published omakase course.",
+            "address": "3F YAMANA K2 Building, 1-7-4 Sonezakishinchi, Kita-ku, Osaka",
+            "websiteUrl": "https://prtimes.jp/main/html/rd/p/000000001.000192236.html",
+            "checkedAt": "2026-10-17",
+            "recognition": "",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-16/batch62-toka-1-58cf55f416c1db66.webp",
+            "imageCredit": "株式会社キブス / 鮨 刻香 — operator launch release",
+            "imageSourceUrl": "https://prtimes.jp/main/html/rd/p/000000001.000192236.html",
+            "imageNote": "Operator launch portrait of the two collaborators with tuna at a counter; no current course roster inferred.",
+            "openingConfirmed": true,
+            "day": "2026-10-31"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-16/batch62-toka-1-58cf55f416c1db66.webp",
+          "sha256": "58cf55f416c1db66d682e5ad9c17e557da627ba922a0da1131693e3985d5643b",
+          "width": 1600,
+          "height": 1067,
+          "credit": "株式会社キブス / 鮨 刻香 — operator launch release",
+          "note": "Operator launch portrait of the two collaborators with tuna at a counter; no current course roster inferred.",
+          "sourcePage": "https://prtimes.jp/main/html/rd/p/000000001.000192236.html"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-16/batch62-toka-2-9b817a0dd04fe359.webp",
+          "sha256": "9b817a0dd04fe359692262d7aaa39ce08e074bbfc200d327a32a933fdc159022",
+          "width": 1600,
+          "height": 1067,
+          "credit": "株式会社キブス / 鮨 刻香 — operator launch release",
+          "note": "Operator launch image illustrating mold-aging of tuna; ingredient/process photograph, not a plated course item.",
+          "sourcePage": "https://prtimes.jp/main/html/rd/p/000000001.000192236.html"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-16/batch62-toka-3-488e7362a35cda5e.webp",
+          "sha256": "488e7362a35cda5e7c89b4de48ec58b4ccd066e21f8bcbd80c944edbc102b4c9",
+          "width": 1600,
+          "height": 1067,
+          "credit": "株式会社キブス / 鮨 刻香 — operator launch release",
+          "note": "Operator launch photograph of preparing aged tuna; not a guaranteed course sequence.",
+          "sourcePage": "https://prtimes.jp/main/html/rd/p/000000001.000192236.html"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-16/batch62-toka-4-f54139b5f4170116.webp",
+          "sha256": "f54139b5f41701164faf19605db860bc96db62e65c60ae420a44f22bf420d8b2",
+          "width": 1600,
+          "height": 1067,
+          "credit": "株式会社キブス / 鮨 刻香 — operator launch release",
+          "note": "Operator launch photograph of sushi preparation; individual fish cut and course sequence not inferred.",
+          "sourcePage": "https://prtimes.jp/main/html/rd/p/000000001.000192236.html"
+        }
+      ],
+      "batch": 62,
+      "verification": {
+        "local": {
+          "pinId": 16174,
+          "sourceUrl": "https://prtimes.jp/main/html/rd/p/000000001.000192236.html",
+          "name": "Sushi Toka — Kitashinchi",
+          "contentId": 1659,
+          "contentRevision": 1,
+          "verifiedGalleryLinks": 4,
+          "publicPinStatus": 200
+        },
+        "production": {
+          "pinId": 16079,
+          "sourceUrl": "https://prtimes.jp/main/html/rd/p/000000001.000192236.html",
+          "name": "Sushi Toka — Kitashinchi",
+          "contentId": 1659,
+          "contentRevision": 1,
+          "verifiedGalleryLinks": 4,
+          "publicPinStatus": 200
+        }
+      }
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Self Cafe — Marunouchi Opens in Marunouchi / Nishiki",
+        "description": "An upcoming unmanned drinks cafe near Marunouchi Station, with Wi-Fi, power and published branch drink prices.",
+        "sourceUrl": "https://selfcafe.jp/shop/aichi/marunouchi/",
+        "address": "3F NH NISHIKI, 2-6-15 Nishiki, Naka-ku, Nagoya",
+        "productName": "Self Cafe — Marunouchi",
+        "utcStartDateTime": "2026-10-24T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "Exact branch postponement notice changes October17toOctober24,2026; latest operator homepage notice corroborates October24. Launch artwork says late October and is promotional imagery, not proof of an earlier opening.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Nagoya",
+          "Japan",
+          "Marunouchi / Nishiki",
+          "Cafe / self-service drinks"
+        ],
+        "longFormSummary": "<p>An upcoming unmanned drinks cafe near Marunouchi Station, with Wi-Fi, power and published branch drink prices.<cite data-ref=\"https://selfcafe.jp/shop/aichi/marunouchi/\"></cite></p><p>Exact branch postponement notice changes October17toOctober24,2026; latest operator homepage notice corroborates October24. Launch artwork says late October and is promotional imagery, not proof of an earlier opening.</p>",
+        "references": [
+          {
+            "url": "https://selfcafe.jp/shop/aichi/marunouchi/",
+            "title": "Self Cafe — Marunouchi source",
+            "confidence": 90,
+            "reasoning": "Exact branch postponement notice changes October17toOctober24,2026; latest operator homepage notice corroborates October24. Launch artwork says late October and is promotional imagery, not proof of an earlier opening."
+          },
+          {
+            "url": "https://selfcafe.jp/",
+            "title": "Self Cafe — Marunouchi source",
+            "confidence": 90,
+            "reasoning": "Exact branch postponement notice changes October17toOctober24,2026; latest operator homepage notice corroborates October24. Launch artwork says late October and is promotional imagery, not proof of an earlier opening."
+          },
+          {
+            "url": "https://selfcafe.jp/usage/",
+            "title": "Self Cafe — Marunouchi source",
+            "confidence": 90,
+            "reasoning": "Exact branch postponement notice changes October17toOctober24,2026; latest operator homepage notice corroborates October24. Launch artwork says late October and is promotional imagery, not proof of an earlier opening."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://selfcafe.jp/shop/aichi/marunouchi/",
+          "menu": {
+            "pinSourceUrl": "https://selfcafe.jp/shop/aichi/marunouchi/",
+            "name": "Self Cafe — Marunouchi",
+            "checkedAt": "2026-10-17",
+            "menus": [
+              {
+                "label": "Marunouchi branch drinks",
+                "url": "https://selfcafe.jp/shop/aichi/marunouchi/",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "Original blend coffee",
+                    "price": 440
+                  },
+                  {
+                    "name": "Cafe latte",
+                    "price": 460
+                  },
+                  {
+                    "name": "Cafe au lait",
+                    "price": 460
+                  },
+                  {
+                    "name": "Black tea",
+                    "price": 440
+                  },
+                  {
+                    "name": "Green tea",
+                    "price": 390
+                  },
+                  {
+                    "name": "Matcha latte",
+                    "price": 460
+                  },
+                  {
+                    "name": "Cocoa",
+                    "price": 440
+                  },
+                  {
+                    "name": "Natchan orange — iced only",
+                    "price": 420
+                  }
+                ],
+                "note": "Exact Marunouchi branch prices; national examples and Honjin are not used as substitutes. Tax inclusion supported by operator usage guide. Hot or iced except orange iced-only. Large-size upgrade+¥100. Cashless only; one drink per person. No membership required for ordinary seating. No separate private-booth or meeting-room tariff inferred from generic service icons."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://selfcafe.jp/shop/aichi/marunouchi/",
+            "name": "Self Cafe — Marunouchi",
+            "checkedAt": "2026-10-17",
+            "websiteUrl": "https://selfcafe.jp/shop/aichi/marunouchi/",
+            "phone": null,
+            "openingHours": [
+              {
+                "days": "Daily",
+                "hours": "06:00–24:00; planned branch hours"
+              }
+            ],
+            "detailsSourceUrl": "https://selfcafe.jp/shop/aichi/marunouchi/",
+            "additionalSources": [
+              {
+                "label": "Research evidence",
+                "url": "https://selfcafe.jp/"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://selfcafe.jp/usage/"
+              }
+            ],
+            "hoursNote": "45seats and no parking per exact branch page; Marunouchi Station exit5,about2minutes. No standalone room or booth availability inferred."
+          },
+          "tile": {
+            "regionSlug": "nagoya",
+            "kind": "opening",
+            "slug": "marunouchi",
+            "name": "Self Cafe — Marunouchi",
+            "neighborhood": "Marunouchi / Nishiki",
+            "cuisine": "Cafe / self-service drinks",
+            "description": "An upcoming unmanned drinks cafe near Marunouchi Station, with Wi-Fi, power and published branch drink prices.",
+            "address": "3F NH NISHIKI, 2-6-15 Nishiki, Naka-ku, Nagoya",
+            "websiteUrl": "https://selfcafe.jp/shop/aichi/marunouchi/",
+            "checkedAt": "2026-10-17",
+            "recognition": "",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-16/batch62-marunouchi-1-a1ce93e121afb515.webp",
+            "imageCredit": "Self Cafe — Marunouchi branch announcement",
+            "imageSourceUrl": "https://selfcafe.jp/shop/aichi/marunouchi/",
+            "imageNote": "Operator Marunouchi launch artwork; background interior is promotional imagery, not independently verified as the completed branch room. Latest branch text postpones opening to October24,2026.",
+            "openingConfirmed": true,
+            "day": "2026-10-24"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-16/batch62-marunouchi-1-a1ce93e121afb515.webp",
+          "sha256": "a1ce93e121afb5153822026b8256d4b394ccd87ec5012ede2835745034534ab8",
+          "width": 1280,
+          "height": 853,
+          "credit": "Self Cafe — Marunouchi branch announcement",
+          "note": "Operator Marunouchi launch artwork; background interior is promotional imagery, not independently verified as the completed branch room. Latest branch text postpones opening to October24,2026.",
+          "sourcePage": "https://selfcafe.jp/shop/aichi/marunouchi/"
+        }
+      ],
+      "batch": 62,
+      "verification": {
+        "local": {
+          "pinId": 16175,
+          "sourceUrl": "https://selfcafe.jp/shop/aichi/marunouchi/",
+          "name": "Self Cafe — Marunouchi",
+          "contentId": 1660,
+          "contentRevision": 1,
+          "verifiedGalleryLinks": 1,
+          "publicPinStatus": 200
+        },
+        "production": {
+          "pinId": 16080,
+          "sourceUrl": "https://selfcafe.jp/shop/aichi/marunouchi/",
+          "name": "Self Cafe — Marunouchi",
+          "contentId": 1660,
+          "contentRevision": 1,
+          "verifiedGalleryLinks": 1,
+          "publicPinStatus": 200
+        }
+      }
+    }
+  ],
+  "verifiedAtUtc": "2026-10-17T04:05:22.209714+00:00",
+  "verification": {
+    "local": [
+      {
+        "pinId": 16173,
+        "sourceUrl": "https://rokumei.coffee/f/shop-tenjinchikagai",
+        "name": "Rokumei Coffee — Tenjin Underground Mall",
+        "contentId": 1658,
+        "contentRevision": 1,
+        "verifiedGalleryLinks": 3,
+        "publicPinStatus": 200
+      },
+      {
+        "pinId": 16174,
+        "sourceUrl": "https://prtimes.jp/main/html/rd/p/000000001.000192236.html",
+        "name": "Sushi Toka — Kitashinchi",
+        "contentId": 1659,
+        "contentRevision": 1,
+        "verifiedGalleryLinks": 4,
+        "publicPinStatus": 200
+      },
+      {
+        "pinId": 16175,
+        "sourceUrl": "https://selfcafe.jp/shop/aichi/marunouchi/",
+        "name": "Self Cafe — Marunouchi",
+        "contentId": 1660,
+        "contentRevision": 1,
+        "verifiedGalleryLinks": 1,
+        "publicPinStatus": 200
+      }
+    ],
+    "production": [
+      {
+        "pinId": 16078,
+        "sourceUrl": "https://rokumei.coffee/f/shop-tenjinchikagai",
+        "name": "Rokumei Coffee — Tenjin Underground Mall",
+        "contentId": 1658,
+        "contentRevision": 1,
+        "verifiedGalleryLinks": 3,
+        "publicPinStatus": 200
+      },
+      {
+        "pinId": 16079,
+        "sourceUrl": "https://prtimes.jp/main/html/rd/p/000000001.000192236.html",
+        "name": "Sushi Toka — Kitashinchi",
+        "contentId": 1659,
+        "contentRevision": 1,
+        "verifiedGalleryLinks": 4,
+        "publicPinStatus": 200
+      },
+      {
+        "pinId": 16080,
+        "sourceUrl": "https://selfcafe.jp/shop/aichi/marunouchi/",
+        "name": "Self Cafe — Marunouchi",
+        "contentId": 1660,
+        "contentRevision": 1,
+        "verifiedGalleryLinks": 1,
+        "publicPinStatus": 200
+      }
+    ],
+    "guideCards": {
+      "local": [
+        {
+          "pinId": 16173,
+          "region": "fukuoka",
+          "view": "new",
+          "nativeTitleAndImageLinks": true,
+          "guideStatus": 200,
+          "offers": []
+        },
+        {
+          "pinId": 16174,
+          "region": "osaka",
+          "view": "upcoming",
+          "nativeTitleAndImageLinks": true,
+          "guideStatus": 200,
+          "offers": []
+        },
+        {
+          "pinId": 16175,
+          "region": "nagoya",
+          "view": "upcoming",
+          "nativeTitleAndImageLinks": true,
+          "guideStatus": 200,
+          "offers": []
+        }
+      ],
+      "production": [
+        {
+          "pinId": 16078,
+          "region": "fukuoka",
+          "view": "new",
+          "nativeTitleAndImageLinks": true,
+          "guideStatus": 200,
+          "offers": []
+        },
+        {
+          "pinId": 16079,
+          "region": "osaka",
+          "view": "upcoming",
+          "nativeTitleAndImageLinks": true,
+          "guideStatus": 200,
+          "offers": []
+        },
+        {
+          "pinId": 16080,
+          "region": "nagoya",
+          "view": "upcoming",
+          "nativeTitleAndImageLinks": true,
+          "guideStatus": 200,
+          "offers": []
+        }
+      ]
+    },
+    "all24CountsAgree": true,
+    "memberships": 411,
+    "shortfall": 314,
+    "newOffers": 0,
+    "applicationDeployed": false
+  }
+}

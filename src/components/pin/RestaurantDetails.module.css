@@ -1,0 +1,21 @@
+.pane { --details-paper:#fffdf7; --details-ink:#293f32; --details-muted:#737467; --details-rule:#e5dfcf; --details-accent:#315940; margin-top:24px; overflow:hidden; border:1px solid var(--details-rule); border-top:4px solid var(--details-accent); border-radius:16px; background:var(--details-paper); color:var(--details-ink); }
+:global([data-theme='dark']) .pane { --details-paper:#1a241d; --details-ink:#eee9db; --details-muted:#b2b4a6; --details-rule:#364238; --details-accent:#b3c69b; }
+.header { padding:24px 28px 20px; border-bottom:1px solid var(--details-rule); }
+.eyebrow { margin-bottom:7px; color:var(--details-accent); font-size:10px; font-weight:700; letter-spacing:1.8px; text-transform:uppercase; }
+.pane .title { margin:0; color:var(--details-ink); font-family:Georgia,'Times New Roman',serif; font-size:32px; font-weight:400; line-height:1.15; letter-spacing:-.7px; }
+.details { padding:4px 28px; }
+.row { display:grid; grid-template-columns:170px minmax(0,1fr); gap:20px; padding:20px 0; }
+.row + .row { border-top:1px solid var(--details-rule); }
+.row dt { font-size:12px; font-weight:600; color:var(--details-accent); }
+.row dd { min-width:0; font-size:14px; line-height:1.6; overflow-wrap:anywhere; }
+.pane a { color:var(--details-accent); font-weight:600; }
+.pane a:hover { text-decoration:underline; text-underline-offset:4px; }
+.pane a:focus-visible { outline:2px solid var(--details-accent); outline-offset:4px; }
+.missing { color:var(--details-muted); }
+.hours { display:grid; gap:8px; }
+.hours li { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:16px; }
+.hours li span:last-child { text-align:end; font-variant-numeric:tabular-nums; }
+.note { margin-top:10px; color:var(--details-muted); font-size:12px; line-height:1.7; }
+.footer { display:flex; flex-wrap:wrap; justify-content:space-between; gap:12px; padding:16px 28px; border-top:1px solid var(--details-rule); font-size:11px; color:var(--details-muted); }
+.sources { display:flex; flex-wrap:wrap; gap:12px; }
+@media(max-width:700px) { .header { padding:20px; } .pane .title { font-size:28px; } .details { padding:0 20px; } .row { grid-template-columns:1fr; gap:8px; padding:18px 0; } .footer { padding:16px 20px; } }

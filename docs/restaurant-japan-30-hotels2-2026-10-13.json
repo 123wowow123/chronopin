@@ -1,0 +1,2206 @@
+{
+  "checkedAt": "2026-10-13",
+  "country": "Japan",
+  "regions": [
+    "fukuoka",
+    "osaka",
+    "nagoya",
+    "sapporo",
+    "tokyo"
+  ],
+  "entries": [
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "SERENA — Hotel Nikko Fukuoka — Fukuoka restaurant guide",
+        "description": "A Hakata buffet restaurant with a verified three-date Halloween lunch and published dishes.",
+        "sourceUrl": "https://www.hotelnikko-fukuoka.com/restaurant/serena/",
+        "address": "2F Hotel Nikko Fukuoka, 2-18-25 Hakata Ekimae, Hakata-ku, Fukuoka",
+        "productName": "SERENA — Hotel Nikko Fukuoka",
+        "utcStartDateTime": "2026-10-13T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "Established restaurant. 2026-10-13 is the guide verification date, not its opening date.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Top Restaurants",
+          "Fukuoka",
+          "Japan",
+          "Hakata Station",
+          "Buffet"
+        ],
+        "longFormSummary": "<p>A Hakata buffet restaurant with a verified three-date Halloween lunch and published dishes.<cite data-ref=\"https://www.hotelnikko-fukuoka.com/restaurant/serena/\"></cite></p><p>Established restaurant. 2026-10-13 is the guide verification date, not its opening date.</p>",
+        "references": [
+          {
+            "url": "https://www.hotelnikko-fukuoka.com/restaurant/serena/",
+            "title": "SERENA — Hotel Nikko Fukuoka source",
+            "confidence": 90,
+            "reasoning": "Established restaurant. 2026-10-13 is the guide verification date, not its opening date."
+          },
+          {
+            "url": "https://www.hotelnikko-fukuoka.com/restaurant/serena/plan/426a9faee4961c3.html",
+            "title": "SERENA — Hotel Nikko Fukuoka source",
+            "confidence": 90,
+            "reasoning": "Established restaurant. 2026-10-13 is the guide verification date, not its opening date."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://www.hotelnikko-fukuoka.com/restaurant/serena/",
+          "menu": {
+            "pinSourceUrl": "https://www.hotelnikko-fukuoka.com/restaurant/serena/",
+            "name": "SERENA — Hotel Nikko Fukuoka",
+            "checkedAt": "2026-10-13",
+            "menus": [
+              {
+                "label": "Halloween dessert lunch buffet",
+                "url": "https://www.hotelnikko-fukuoka.com/restaurant/serena/plan/426a9faee4961c3.html",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Adult buffet",
+                    "price": 5000
+                  },
+                  {
+                    "name": "Primary-school child",
+                    "price": 2000
+                  },
+                  {
+                    "name": "Child ages 4–6",
+                    "price": 1000
+                  },
+                  {
+                    "name": "ビーフステーキ",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Halloween dessert lunch buffet; no separate item price published"
+                  },
+                  {
+                    "name": "カボチャとクリームチーズのグラタン",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Halloween dessert lunch buffet; no separate item price published"
+                  },
+                  {
+                    "name": "パンプキンチャウダースープ",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Halloween dessert lunch buffet; no separate item price published"
+                  },
+                  {
+                    "name": "鴨肉の燻製 トンナートソース",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Halloween dessert lunch buffet; no separate item price published"
+                  },
+                  {
+                    "name": "黒ゴマ×紫芋パンナコッタ",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Halloween dessert lunch buffet; no separate item price published"
+                  }
+                ],
+                "note": "October 24, 25 and 31 only. 120 minutes; last order 14:30. Soft drinks, 10% tax and 10% service included; ages 3 and younger free. Current operator image filename explicitly identifies Halloween 2026."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://www.hotelnikko-fukuoka.com/restaurant/serena/",
+            "name": "SERENA — Hotel Nikko Fukuoka",
+            "checkedAt": "2026-10-13",
+            "websiteUrl": "https://www.hotelnikko-fukuoka.com/restaurant/serena/",
+            "phone": "092-482-1161",
+            "openingHours": [],
+            "detailsSourceUrl": "https://www.hotelnikko-fukuoka.com/restaurant/serena/",
+            "additionalSources": [
+              {
+                "label": "Research evidence",
+                "url": "https://www.hotelnikko-fukuoka.com/restaurant/serena/plan/426a9faee4961c3.html"
+              }
+            ]
+          },
+          "tile": {
+            "regionSlug": "fukuoka",
+            "kind": "top",
+            "slug": "serena",
+            "name": "SERENA — Hotel Nikko Fukuoka",
+            "neighborhood": "Hakata Station",
+            "cuisine": "Buffet",
+            "description": "A Hakata buffet restaurant with a verified three-date Halloween lunch and published dishes.",
+            "address": "2F Hotel Nikko Fukuoka, 2-18-25 Hakata Ekimae, Hakata-ku, Fukuoka",
+            "websiteUrl": "https://www.hotelnikko-fukuoka.com/restaurant/serena/",
+            "checkedAt": "2026-10-13",
+            "recognition": "",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/fukuoka/japan-30-2026-10-13/serena-0-9f9a1c5b6ddd30e3.webp",
+            "imageCredit": "Hotel Nikko Fukuoka",
+            "imageSourceUrl": "https://www.hotelnikko-fukuoka.com/restaurant/serena/",
+            "imageNote": "Official serena branch gallery photograph; dish names and current availability are not inferred"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/fukuoka/japan-30-2026-10-13/serena-0-9f9a1c5b6ddd30e3.webp",
+          "sha256": "9f9a1c5b6ddd30e35dee77e7ff92efbd1931d48e56f789a302960368ad3ef650",
+          "width": 1200,
+          "height": 549,
+          "credit": "Hotel Nikko Fukuoka",
+          "note": "Official serena branch gallery photograph; dish names and current availability are not inferred",
+          "sourcePage": "https://www.hotelnikko-fukuoka.com/restaurant/serena/"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/fukuoka/japan-30-2026-10-13/serena-1-7bffde27b4f1f7c2.webp",
+          "sha256": "7bffde27b4f1f7c27faf0a9c28ee7e208994ddd2e180088b68e0b233384d7f9d",
+          "width": 1200,
+          "height": 549,
+          "credit": "Hotel Nikko Fukuoka",
+          "note": "Official serena branch gallery photograph; dish names and current availability are not inferred",
+          "sourcePage": "https://www.hotelnikko-fukuoka.com/restaurant/serena/"
+        }
+      ],
+      "special": {
+        "regionSlug": "fukuoka",
+        "profile": {
+          "pinSourceUrl": "https://www.hotelnikko-fukuoka.com/restaurant/serena/",
+          "name": "SERENA — Hotel Nikko Fukuoka",
+          "checkedAt": "2026-10-13",
+          "menus": [
+            {
+              "label": "Halloween dessert lunch buffet",
+              "url": "https://www.hotelnikko-fukuoka.com/restaurant/serena/plan/426a9faee4961c3.html",
+              "currency": "JPY",
+              "coverage": "sample",
+              "items": [
+                {
+                  "name": "Adult buffet",
+                  "price": 5000
+                },
+                {
+                  "name": "Primary-school child",
+                  "price": 2000
+                },
+                {
+                  "name": "Child ages 4–6",
+                  "price": 1000
+                },
+                {
+                  "name": "ビーフステーキ",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Halloween dessert lunch buffet; no separate item price published"
+                },
+                {
+                  "name": "カボチャとクリームチーズのグラタン",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Halloween dessert lunch buffet; no separate item price published"
+                },
+                {
+                  "name": "パンプキンチャウダースープ",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Halloween dessert lunch buffet; no separate item price published"
+                },
+                {
+                  "name": "鴨肉の燻製 トンナートソース",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Halloween dessert lunch buffet; no separate item price published"
+                },
+                {
+                  "name": "黒ゴマ×紫芋パンナコッタ",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Halloween dessert lunch buffet; no separate item price published"
+                }
+              ],
+              "note": "October 24, 25 and 31 only. 120 minutes; last order 14:30. Soft drinks, 10% tax and 10% service included; ages 3 and younger free. Current operator image filename explicitly identifies Halloween 2026."
+            }
+          ],
+          "specials": [
+            {
+              "title": "Halloween dessert lunch buffet",
+              "kind": "lunch",
+              "description": "A Hakata buffet restaurant with a verified three-date Halloween lunch and published dishes.",
+              "sourceUrl": "https://www.hotelnikko-fukuoka.com/restaurant/serena/plan/426a9faee4961c3.html",
+              "menuLabel": "Halloween dessert lunch buffet",
+              "discounted": false,
+              "validFrom": "2026-10-24",
+              "validThrough": "2026-10-31",
+              "schedule": "Japan local time; see conditions",
+              "conditions": [
+                "October 24, 25 and 31 only. 120 minutes; last order 14:30. Soft drinks, 10% tax and 10% service included; ages 3 and younger free. Current operator image filename explicitly identifies Halloween 2026."
+              ],
+              "availability": {
+                "windows": [
+                  {
+                    "days": [
+                      0,
+                      6
+                    ],
+                    "start": "11:30",
+                    "end": "15:00"
+                  }
+                ],
+                "excludedDates": [
+                  "2026-10-26",
+                  "2026-10-27",
+                  "2026-10-28",
+                  "2026-10-29",
+                  "2026-10-30"
+                ]
+              },
+              "limitedTime": true
+            }
+          ],
+          "address": "2F Hotel Nikko Fukuoka, 2-18-25 Hakata Ekimae, Hakata-ku, Fukuoka",
+          "neighborhood": "Hakata Station",
+          "websiteUrl": "https://www.hotelnikko-fukuoka.com/restaurant/serena/",
+          "photo": {
+            "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/fukuoka/japan-30-2026-10-13/serena-0-9f9a1c5b6ddd30e3.webp",
+            "alt": "SERENA — Hotel Nikko Fukuoka — Official serena branch gallery photograph; dish names and current availability are not inferred",
+            "credit": "Hotel Nikko Fukuoka",
+            "sourceUrl": "https://www.hotelnikko-fukuoka.com/restaurant/serena/",
+            "originalUrl": "https://www.hotelnikko-fukuoka.com/img/restaurant/img_rest_serena1.jpg",
+            "checkedAt": "2026-10-13"
+          }
+        },
+        "enabled": true
+      }
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Atmos Italian Dining — Osaka restaurant guide",
+        "description": "An Italian buffet restaurant with a dated autumn plan and a choice of named main dishes.",
+        "sourceUrl": "https://conrad-osaka.hiltonjapan.co.jp/restaurants/atmos",
+        "address": "40F Conrad Osaka, 3-2-4 Nakanoshima, Kita-ku, Osaka",
+        "productName": "Atmos Italian Dining",
+        "utcStartDateTime": "2026-10-13T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "Established restaurant. 2026-10-13 is the guide verification date, not its opening date.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Top Restaurants",
+          "Osaka",
+          "Japan",
+          "Nakanoshima",
+          "Italian"
+        ],
+        "longFormSummary": "<p>An Italian buffet restaurant with a dated autumn plan and a choice of named main dishes.<cite data-ref=\"https://conrad-osaka.hiltonjapan.co.jp/restaurants/atmos\"></cite></p><p>Established restaurant. 2026-10-13 is the guide verification date, not its opening date.</p>",
+        "references": [
+          {
+            "url": "https://conrad-osaka.hiltonjapan.co.jp/restaurants/atmos",
+            "title": "Atmos Italian Dining source",
+            "confidence": 90,
+            "reasoning": "Established restaurant. 2026-10-13 is the guide verification date, not its opening date."
+          },
+          {
+            "url": "https://conrad-osaka.hiltonjapan.co.jp/plans/restaurants/lunch-dinner-buffet/atmos-weekday",
+            "title": "Atmos Italian Dining source",
+            "confidence": 90,
+            "reasoning": "Established restaurant. 2026-10-13 is the guide verification date, not its opening date."
+          },
+          {
+            "url": "https://www8.cao.go.jp/chosei/shukujitsu/gaiyou.html",
+            "title": "Atmos Italian Dining source",
+            "confidence": 90,
+            "reasoning": "Established restaurant. 2026-10-13 is the guide verification date, not its opening date."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://conrad-osaka.hiltonjapan.co.jp/restaurants/atmos",
+          "menu": {
+            "pinSourceUrl": "https://conrad-osaka.hiltonjapan.co.jp/restaurants/atmos",
+            "name": "Atmos Italian Dining",
+            "checkedAt": "2026-10-13",
+            "menus": [
+              {
+                "label": "Autumn Italian weekday lunch and dinner",
+                "url": "https://conrad-osaka.hiltonjapan.co.jp/plans/restaurants/lunch-dinner-buffet/atmos-weekday",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Weekday lunch",
+                    "price": 7200
+                  },
+                  {
+                    "name": "Weekday dinner",
+                    "price": 8800
+                  },
+                  {
+                    "name": "真鯛のクリスピーソテー",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Autumn Italian weekday lunch and dinner; no separate item price published"
+                  },
+                  {
+                    "name": "手打ちトレネッテパスタのジェノベーゼソース",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Autumn Italian weekday lunch and dinner; no separate item price published"
+                  },
+                  {
+                    "name": "奈良県ユキファームの茄子 仔牛の詰め物",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Autumn Italian weekday lunch and dinner; no separate item price published"
+                  },
+                  {
+                    "name": "ポルケッタ 皮付き豚のハーブ巻き焼き",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Autumn Italian weekday lunch and dinner; no separate item price published"
+                  }
+                ],
+                "note": "Weekdays excluding national holidays and special events. Choose one main plus buffet; Wagyu tagliata supplement ¥2,000. Tax and service included. Last entry lunch 13:00, dinner 20:00."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://conrad-osaka.hiltonjapan.co.jp/restaurants/atmos",
+            "name": "Atmos Italian Dining",
+            "checkedAt": "2026-10-13",
+            "websiteUrl": "https://conrad-osaka.hiltonjapan.co.jp/restaurants/atmos",
+            "phone": "06-6222-0111",
+            "openingHours": [],
+            "detailsSourceUrl": "https://conrad-osaka.hiltonjapan.co.jp/restaurants/atmos",
+            "additionalSources": [
+              {
+                "label": "Research evidence",
+                "url": "https://conrad-osaka.hiltonjapan.co.jp/plans/restaurants/lunch-dinner-buffet/atmos-weekday"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://www8.cao.go.jp/chosei/shukujitsu/gaiyou.html"
+              }
+            ]
+          },
+          "tile": {
+            "regionSlug": "osaka",
+            "kind": "top",
+            "slug": "atmos",
+            "name": "Atmos Italian Dining",
+            "neighborhood": "Nakanoshima",
+            "cuisine": "Italian",
+            "description": "An Italian buffet restaurant with a dated autumn plan and a choice of named main dishes.",
+            "address": "40F Conrad Osaka, 3-2-4 Nakanoshima, Kita-ku, Osaka",
+            "websiteUrl": "https://conrad-osaka.hiltonjapan.co.jp/restaurants/atmos",
+            "checkedAt": "2026-10-13",
+            "recognition": "",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/osaka/japan-30-2026-10-13/atmos-0-1641fdd7d3e55681.webp",
+            "imageCredit": "Conrad Osaka",
+            "imageSourceUrl": "https://conrad-osaka.hiltonjapan.co.jp/restaurants/atmos",
+            "imageNote": "Official atmos branch gallery photograph; dish names and current availability are not inferred"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/osaka/japan-30-2026-10-13/atmos-0-1641fdd7d3e55681.webp",
+          "sha256": "1641fdd7d3e556813aeeebe9bdff54742e34e15587e2333aea6ddece04674b9d",
+          "width": 1200,
+          "height": 312,
+          "credit": "Conrad Osaka",
+          "note": "Official atmos branch gallery photograph; dish names and current availability are not inferred",
+          "sourcePage": "https://conrad-osaka.hiltonjapan.co.jp/restaurants/atmos"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/osaka/japan-30-2026-10-13/atmos-1-cbe5b2a9e65439e7.webp",
+          "sha256": "cbe5b2a9e65439e7f72b71c72ea815be7f3c96b0b8d556428324483797b6bb8b",
+          "width": 1200,
+          "height": 312,
+          "credit": "Conrad Osaka",
+          "note": "Official atmos branch gallery photograph; dish names and current availability are not inferred",
+          "sourcePage": "https://conrad-osaka.hiltonjapan.co.jp/restaurants/atmos"
+        }
+      ],
+      "special": {
+        "regionSlug": "osaka",
+        "profile": {
+          "pinSourceUrl": "https://conrad-osaka.hiltonjapan.co.jp/restaurants/atmos",
+          "name": "Atmos Italian Dining",
+          "checkedAt": "2026-10-13",
+          "menus": [
+            {
+              "label": "Autumn Italian weekday lunch and dinner",
+              "url": "https://conrad-osaka.hiltonjapan.co.jp/plans/restaurants/lunch-dinner-buffet/atmos-weekday",
+              "currency": "JPY",
+              "coverage": "sample",
+              "items": [
+                {
+                  "name": "Weekday lunch",
+                  "price": 7200
+                },
+                {
+                  "name": "Weekday dinner",
+                  "price": 8800
+                },
+                {
+                  "name": "真鯛のクリスピーソテー",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Autumn Italian weekday lunch and dinner; no separate item price published"
+                },
+                {
+                  "name": "手打ちトレネッテパスタのジェノベーゼソース",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Autumn Italian weekday lunch and dinner; no separate item price published"
+                },
+                {
+                  "name": "奈良県ユキファームの茄子 仔牛の詰め物",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Autumn Italian weekday lunch and dinner; no separate item price published"
+                },
+                {
+                  "name": "ポルケッタ 皮付き豚のハーブ巻き焼き",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Autumn Italian weekday lunch and dinner; no separate item price published"
+                }
+              ],
+              "note": "Weekdays excluding national holidays and special events. Choose one main plus buffet; Wagyu tagliata supplement ¥2,000. Tax and service included. Last entry lunch 13:00, dinner 20:00."
+            }
+          ],
+          "specials": [
+            {
+              "title": "Autumn Italian weekday lunch and dinner",
+              "kind": "lunch",
+              "description": "An Italian buffet restaurant with a dated autumn plan and a choice of named main dishes.",
+              "sourceUrl": "https://conrad-osaka.hiltonjapan.co.jp/plans/restaurants/lunch-dinner-buffet/atmos-weekday",
+              "menuLabel": "Autumn Italian weekday lunch and dinner",
+              "discounted": false,
+              "validFrom": "2026-10-05",
+              "validThrough": "2026-12-11",
+              "schedule": "Japan local time; see conditions",
+              "conditions": [
+                "Weekdays excluding national holidays and special events. Choose one main plus buffet; Wagyu tagliata supplement ¥2,000. Tax and service included. Last entry lunch 13:00, dinner 20:00."
+              ],
+              "availability": {
+                "windows": [
+                  {
+                    "days": [
+                      1,
+                      2,
+                      3,
+                      4,
+                      5
+                    ],
+                    "start": "11:30",
+                    "end": "14:00"
+                  },
+                  {
+                    "days": [
+                      1,
+                      2,
+                      3,
+                      4,
+                      5
+                    ],
+                    "start": "17:30",
+                    "end": "21:00"
+                  }
+                ],
+                "excludedDates": [
+                  "2026-10-12",
+                  "2026-11-03",
+                  "2026-11-23"
+                ]
+              },
+              "limitedTime": true
+            }
+          ],
+          "address": "40F Conrad Osaka, 3-2-4 Nakanoshima, Kita-ku, Osaka",
+          "neighborhood": "Nakanoshima",
+          "websiteUrl": "https://conrad-osaka.hiltonjapan.co.jp/restaurants/atmos",
+          "photo": {
+            "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/osaka/japan-30-2026-10-13/atmos-0-1641fdd7d3e55681.webp",
+            "alt": "Atmos Italian Dining — Official atmos branch gallery photograph; dish names and current availability are not inferred",
+            "credit": "Conrad Osaka",
+            "sourceUrl": "https://conrad-osaka.hiltonjapan.co.jp/restaurants/atmos",
+            "originalUrl": "https://conrad-osaka.hiltonjapan.co.jp/img/restaurants/up_img/20250728221216_img_l.jpg",
+            "checkedAt": "2026-10-13"
+          }
+        },
+        "enabled": true
+      }
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "40 Sky Bar & Lounge — Osaka restaurant guide",
+        "description": "A panoramic Nakanoshima lounge serving a dated Shine Muscat and vanilla tea menu.",
+        "sourceUrl": "https://conrad-osaka.hiltonjapan.co.jp/restaurants/40skybar",
+        "address": "40F Conrad Osaka, 3-2-4 Nakanoshima, Kita-ku, Osaka",
+        "productName": "40 Sky Bar & Lounge",
+        "utcStartDateTime": "2026-10-13T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "Established restaurant. 2026-10-13 is the guide verification date, not its opening date.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Top Restaurants",
+          "Osaka",
+          "Japan",
+          "Nakanoshima",
+          "Afternoon tea"
+        ],
+        "longFormSummary": "<p>A panoramic Nakanoshima lounge serving a dated Shine Muscat and vanilla tea menu.<cite data-ref=\"https://conrad-osaka.hiltonjapan.co.jp/restaurants/40skybar\"></cite></p><p>Established restaurant. 2026-10-13 is the guide verification date, not its opening date.</p>",
+        "references": [
+          {
+            "url": "https://conrad-osaka.hiltonjapan.co.jp/restaurants/40skybar",
+            "title": "40 Sky Bar & Lounge source",
+            "confidence": 90,
+            "reasoning": "Established restaurant. 2026-10-13 is the guide verification date, not its opening date."
+          },
+          {
+            "url": "https://conrad-osaka.hiltonjapan.co.jp/plans/restaurants/afternoontea/40skybar-autumn",
+            "title": "40 Sky Bar & Lounge source",
+            "confidence": 90,
+            "reasoning": "Established restaurant. 2026-10-13 is the guide verification date, not its opening date."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://conrad-osaka.hiltonjapan.co.jp/restaurants/40skybar",
+          "menu": {
+            "pinSourceUrl": "https://conrad-osaka.hiltonjapan.co.jp/restaurants/40skybar",
+            "name": "40 Sky Bar & Lounge",
+            "checkedAt": "2026-10-13",
+            "menus": [
+              {
+                "label": "Shine Muscat and vanilla afternoon tea",
+                "url": "https://conrad-osaka.hiltonjapan.co.jp/plans/restaurants/afternoontea/40skybar-autumn",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Afternoon tea",
+                    "price": 8500
+                  },
+                  {
+                    "name": "With original cocktail",
+                    "price": 11000
+                  },
+                  {
+                    "name": "With Conrad bear",
+                    "price": 10300
+                  },
+                  {
+                    "name": "シャインマスカットバニラヴェリーヌ",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Shine Muscat and vanilla afternoon tea; no separate item price published"
+                  },
+                  {
+                    "name": "シャインマスカットバニラムース",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Shine Muscat and vanilla afternoon tea; no separate item price published"
+                  },
+                  {
+                    "name": "シャインマスカットバニラタルト",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Shine Muscat and vanilla afternoon tea; no separate item price published"
+                  },
+                  {
+                    "name": "シャインマスカットバニラジュレ",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Shine Muscat and vanilla afternoon tea; no separate item price published"
+                  },
+                  {
+                    "name": "シャインマスカットバニラマカロン",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Shine Muscat and vanilla afternoon tea; no separate item price published"
+                  }
+                ],
+                "note": "Two-hour bookings in 30-minute intervals; last order 18:00. Coffee or tea, tax and service included. Published lounge cover conditions should be confirmed for other menu orders."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://conrad-osaka.hiltonjapan.co.jp/restaurants/40skybar",
+            "name": "40 Sky Bar & Lounge",
+            "checkedAt": "2026-10-13",
+            "websiteUrl": "https://conrad-osaka.hiltonjapan.co.jp/restaurants/40skybar",
+            "phone": "06-6222-0111",
+            "openingHours": [],
+            "detailsSourceUrl": "https://conrad-osaka.hiltonjapan.co.jp/restaurants/40skybar",
+            "additionalSources": [
+              {
+                "label": "Research evidence",
+                "url": "https://conrad-osaka.hiltonjapan.co.jp/plans/restaurants/afternoontea/40skybar-autumn"
+              }
+            ]
+          },
+          "tile": {
+            "regionSlug": "osaka",
+            "kind": "top",
+            "slug": "sky40",
+            "name": "40 Sky Bar & Lounge",
+            "neighborhood": "Nakanoshima",
+            "cuisine": "Afternoon tea",
+            "description": "A panoramic Nakanoshima lounge serving a dated Shine Muscat and vanilla tea menu.",
+            "address": "40F Conrad Osaka, 3-2-4 Nakanoshima, Kita-ku, Osaka",
+            "websiteUrl": "https://conrad-osaka.hiltonjapan.co.jp/restaurants/40skybar",
+            "checkedAt": "2026-10-13",
+            "recognition": "",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/osaka/japan-30-2026-10-13/sky40-0-11b8c1414ec451f1.webp",
+            "imageCredit": "Conrad Osaka",
+            "imageSourceUrl": "https://conrad-osaka.hiltonjapan.co.jp/restaurants/40skybar",
+            "imageNote": "Official sky40 branch gallery photograph; dish names and current availability are not inferred"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/osaka/japan-30-2026-10-13/sky40-0-11b8c1414ec451f1.webp",
+          "sha256": "11b8c1414ec451f1b562e1800963801ee6c436d836d2e359b9225ff8aa1e4bdf",
+          "width": 1200,
+          "height": 312,
+          "credit": "Conrad Osaka",
+          "note": "Official sky40 branch gallery photograph; dish names and current availability are not inferred",
+          "sourcePage": "https://conrad-osaka.hiltonjapan.co.jp/restaurants/40skybar"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/osaka/japan-30-2026-10-13/sky40-1-4a1c2c82d0b059e8.webp",
+          "sha256": "4a1c2c82d0b059e857016dc5ee1c01d0f32cebbd7cc0bb336e990e1c5f1242a8",
+          "width": 1200,
+          "height": 312,
+          "credit": "Conrad Osaka",
+          "note": "Official sky40 branch gallery photograph; dish names and current availability are not inferred",
+          "sourcePage": "https://conrad-osaka.hiltonjapan.co.jp/restaurants/40skybar"
+        }
+      ],
+      "special": {
+        "regionSlug": "osaka",
+        "profile": {
+          "pinSourceUrl": "https://conrad-osaka.hiltonjapan.co.jp/restaurants/40skybar",
+          "name": "40 Sky Bar & Lounge",
+          "checkedAt": "2026-10-13",
+          "menus": [
+            {
+              "label": "Shine Muscat and vanilla afternoon tea",
+              "url": "https://conrad-osaka.hiltonjapan.co.jp/plans/restaurants/afternoontea/40skybar-autumn",
+              "currency": "JPY",
+              "coverage": "sample",
+              "items": [
+                {
+                  "name": "Afternoon tea",
+                  "price": 8500
+                },
+                {
+                  "name": "With original cocktail",
+                  "price": 11000
+                },
+                {
+                  "name": "With Conrad bear",
+                  "price": 10300
+                },
+                {
+                  "name": "シャインマスカットバニラヴェリーヌ",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Shine Muscat and vanilla afternoon tea; no separate item price published"
+                },
+                {
+                  "name": "シャインマスカットバニラムース",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Shine Muscat and vanilla afternoon tea; no separate item price published"
+                },
+                {
+                  "name": "シャインマスカットバニラタルト",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Shine Muscat and vanilla afternoon tea; no separate item price published"
+                },
+                {
+                  "name": "シャインマスカットバニラジュレ",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Shine Muscat and vanilla afternoon tea; no separate item price published"
+                },
+                {
+                  "name": "シャインマスカットバニラマカロン",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Shine Muscat and vanilla afternoon tea; no separate item price published"
+                }
+              ],
+              "note": "Two-hour bookings in 30-minute intervals; last order 18:00. Coffee or tea, tax and service included. Published lounge cover conditions should be confirmed for other menu orders."
+            }
+          ],
+          "specials": [
+            {
+              "title": "Shine Muscat and vanilla afternoon tea",
+              "kind": "other",
+              "description": "A panoramic Nakanoshima lounge serving a dated Shine Muscat and vanilla tea menu.",
+              "sourceUrl": "https://conrad-osaka.hiltonjapan.co.jp/plans/restaurants/afternoontea/40skybar-autumn",
+              "menuLabel": "Shine Muscat and vanilla afternoon tea",
+              "discounted": false,
+              "validFrom": "2026-10-07",
+              "validThrough": "2026-11-30",
+              "schedule": "Japan local time; see conditions",
+              "conditions": [
+                "Two-hour bookings in 30-minute intervals; last order 18:00. Coffee or tea, tax and service included. Published lounge cover conditions should be confirmed for other menu orders."
+              ],
+              "availability": {
+                "windows": [
+                  {
+                    "days": [
+                      0,
+                      1,
+                      2,
+                      3,
+                      4,
+                      5,
+                      6
+                    ],
+                    "start": "11:00",
+                    "end": "20:00"
+                  }
+                ]
+              },
+              "limitedTime": true
+            }
+          ],
+          "address": "40F Conrad Osaka, 3-2-4 Nakanoshima, Kita-ku, Osaka",
+          "neighborhood": "Nakanoshima",
+          "websiteUrl": "https://conrad-osaka.hiltonjapan.co.jp/restaurants/40skybar",
+          "photo": {
+            "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/osaka/japan-30-2026-10-13/sky40-0-11b8c1414ec451f1.webp",
+            "alt": "40 Sky Bar & Lounge — Official sky40 branch gallery photograph; dish names and current availability are not inferred",
+            "credit": "Conrad Osaka",
+            "sourceUrl": "https://conrad-osaka.hiltonjapan.co.jp/restaurants/40skybar",
+            "originalUrl": "https://conrad-osaka.hiltonjapan.co.jp/img/restaurants/up_img/20170711160857_img_l.jpg",
+            "checkedAt": "2026-10-13"
+          }
+        },
+        "enabled": true
+      }
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "In Place 3-3 — Nagoya restaurant guide",
+        "description": "A Fushimi hotel dining room with a dated Halloween afternoon tea and named seasonal sweets.",
+        "sourceUrl": "https://nagoya.hiltonjapan.co.jp/restaurants/inplace3-3",
+        "address": "1F Hilton Nagoya, 1-3-3 Sakae, Naka-ku, Nagoya",
+        "productName": "In Place 3-3",
+        "utcStartDateTime": "2026-10-13T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "Established restaurant. 2026-10-13 is the guide verification date, not its opening date.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Top Restaurants",
+          "Nagoya",
+          "Japan",
+          "Fushimi",
+          "Buffet and afternoon tea"
+        ],
+        "longFormSummary": "<p>A Fushimi hotel dining room with a dated Halloween afternoon tea and named seasonal sweets.<cite data-ref=\"https://nagoya.hiltonjapan.co.jp/restaurants/inplace3-3\"></cite></p><p>Established restaurant. 2026-10-13 is the guide verification date, not its opening date.</p>",
+        "references": [
+          {
+            "url": "https://nagoya.hiltonjapan.co.jp/restaurants/inplace3-3",
+            "title": "In Place 3-3 source",
+            "confidence": 90,
+            "reasoning": "Established restaurant. 2026-10-13 is the guide verification date, not its opening date."
+          },
+          {
+            "url": "https://nagoya.hiltonjapan.co.jp/restaurants/lp/inplace3-3-afternoontea-autumn",
+            "title": "In Place 3-3 source",
+            "confidence": 90,
+            "reasoning": "Established restaurant. 2026-10-13 is the guide verification date, not its opening date."
+          },
+          {
+            "url": "https://www8.cao.go.jp/chosei/shukujitsu/gaiyou.html",
+            "title": "In Place 3-3 source",
+            "confidence": 90,
+            "reasoning": "Established restaurant. 2026-10-13 is the guide verification date, not its opening date."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://nagoya.hiltonjapan.co.jp/restaurants/inplace3-3",
+          "menu": {
+            "pinSourceUrl": "https://nagoya.hiltonjapan.co.jp/restaurants/inplace3-3",
+            "name": "In Place 3-3",
+            "checkedAt": "2026-10-13",
+            "menus": [
+              {
+                "label": "Halloween afternoon tea",
+                "url": "https://nagoya.hiltonjapan.co.jp/restaurants/lp/inplace3-3-afternoontea-autumn",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Afternoon tea",
+                    "price": 5500
+                  },
+                  {
+                    "name": "月夜の紫モンブラン",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Halloween afternoon tea; no separate item price published"
+                  },
+                  {
+                    "name": "月夜の洋なしコンポート",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Halloween afternoon tea; no separate item price published"
+                  },
+                  {
+                    "name": "真夜中に咲く深紅のバラ",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Halloween afternoon tea; no separate item price published"
+                  },
+                  {
+                    "name": "紫のノクターン",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Halloween afternoon tea; no separate item price published"
+                  }
+                ],
+                "note": "Monday–Wednesday excluding public holidays and sweets-buffet service dates; last order 16:30. Tax and service included. The afternoon tea is distinct from the sweets buffet."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://nagoya.hiltonjapan.co.jp/restaurants/inplace3-3",
+            "name": "In Place 3-3",
+            "checkedAt": "2026-10-13",
+            "websiteUrl": "https://nagoya.hiltonjapan.co.jp/restaurants/inplace3-3",
+            "phone": "052-212-1151",
+            "openingHours": [],
+            "detailsSourceUrl": "https://nagoya.hiltonjapan.co.jp/restaurants/inplace3-3",
+            "additionalSources": [
+              {
+                "label": "Research evidence",
+                "url": "https://nagoya.hiltonjapan.co.jp/restaurants/lp/inplace3-3-afternoontea-autumn"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://www8.cao.go.jp/chosei/shukujitsu/gaiyou.html"
+              }
+            ]
+          },
+          "tile": {
+            "regionSlug": "nagoya",
+            "kind": "top",
+            "slug": "inplace",
+            "name": "In Place 3-3",
+            "neighborhood": "Fushimi",
+            "cuisine": "Buffet and afternoon tea",
+            "description": "A Fushimi hotel dining room with a dated Halloween afternoon tea and named seasonal sweets.",
+            "address": "1F Hilton Nagoya, 1-3-3 Sakae, Naka-ku, Nagoya",
+            "websiteUrl": "https://nagoya.hiltonjapan.co.jp/restaurants/inplace3-3",
+            "checkedAt": "2026-10-13",
+            "recognition": "",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/nagoya/japan-30-2026-10-13/inplace-0-b2490b5118df14c0.webp",
+            "imageCredit": "Hilton Nagoya",
+            "imageSourceUrl": "https://nagoya.hiltonjapan.co.jp/restaurants/inplace3-3",
+            "imageNote": "Official inplace branch gallery photograph; dish names and current availability are not inferred"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/nagoya/japan-30-2026-10-13/inplace-0-b2490b5118df14c0.webp",
+          "sha256": "b2490b5118df14c08c66f5f29a8e138e627cd6e0ac2b9e7ee905f9b03be8b961",
+          "width": 1000,
+          "height": 450,
+          "credit": "Hilton Nagoya",
+          "note": "Official inplace branch gallery photograph; dish names and current availability are not inferred",
+          "sourcePage": "https://nagoya.hiltonjapan.co.jp/restaurants/inplace3-3"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/nagoya/japan-30-2026-10-13/inplace-1-5eef6d5d60532ad3.webp",
+          "sha256": "5eef6d5d60532ad37c588a0baecdfdf6185eaaf09b8940126a0f5d1809c58892",
+          "width": 1000,
+          "height": 450,
+          "credit": "Hilton Nagoya",
+          "note": "Official inplace branch gallery photograph; dish names and current availability are not inferred",
+          "sourcePage": "https://nagoya.hiltonjapan.co.jp/restaurants/inplace3-3"
+        }
+      ],
+      "special": {
+        "regionSlug": "nagoya",
+        "profile": {
+          "pinSourceUrl": "https://nagoya.hiltonjapan.co.jp/restaurants/inplace3-3",
+          "name": "In Place 3-3",
+          "checkedAt": "2026-10-13",
+          "menus": [
+            {
+              "label": "Halloween afternoon tea",
+              "url": "https://nagoya.hiltonjapan.co.jp/restaurants/lp/inplace3-3-afternoontea-autumn",
+              "currency": "JPY",
+              "coverage": "sample",
+              "items": [
+                {
+                  "name": "Afternoon tea",
+                  "price": 5500
+                },
+                {
+                  "name": "月夜の紫モンブラン",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Halloween afternoon tea; no separate item price published"
+                },
+                {
+                  "name": "月夜の洋なしコンポート",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Halloween afternoon tea; no separate item price published"
+                },
+                {
+                  "name": "真夜中に咲く深紅のバラ",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Halloween afternoon tea; no separate item price published"
+                },
+                {
+                  "name": "紫のノクターン",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Halloween afternoon tea; no separate item price published"
+                }
+              ],
+              "note": "Monday–Wednesday excluding public holidays and sweets-buffet service dates; last order 16:30. Tax and service included. The afternoon tea is distinct from the sweets buffet."
+            }
+          ],
+          "specials": [
+            {
+              "title": "Halloween afternoon tea",
+              "kind": "other",
+              "description": "A Fushimi hotel dining room with a dated Halloween afternoon tea and named seasonal sweets.",
+              "sourceUrl": "https://nagoya.hiltonjapan.co.jp/restaurants/lp/inplace3-3-afternoontea-autumn",
+              "menuLabel": "Halloween afternoon tea",
+              "discounted": false,
+              "validFrom": "2026-10-07",
+              "validThrough": "2026-11-04",
+              "schedule": "Japan local time; see conditions",
+              "conditions": [
+                "Monday–Wednesday excluding public holidays and sweets-buffet service dates; last order 16:30. Tax and service included. The afternoon tea is distinct from the sweets buffet."
+              ],
+              "availability": {
+                "windows": [
+                  {
+                    "days": [
+                      1,
+                      2,
+                      3
+                    ],
+                    "start": "14:30",
+                    "end": "17:00"
+                  }
+                ],
+                "excludedDates": [
+                  "2026-10-12",
+                  "2026-11-03"
+                ]
+              },
+              "limitedTime": true
+            }
+          ],
+          "address": "1F Hilton Nagoya, 1-3-3 Sakae, Naka-ku, Nagoya",
+          "neighborhood": "Fushimi",
+          "websiteUrl": "https://nagoya.hiltonjapan.co.jp/restaurants/inplace3-3",
+          "photo": {
+            "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/nagoya/japan-30-2026-10-13/inplace-0-b2490b5118df14c0.webp",
+            "alt": "In Place 3-3 — Official inplace branch gallery photograph; dish names and current availability are not inferred",
+            "credit": "Hilton Nagoya",
+            "sourceUrl": "https://nagoya.hiltonjapan.co.jp/restaurants/inplace3-3",
+            "originalUrl": "https://nagoya.hiltonjapan.co.jp/img/restaurants/up_img/20190311151835_img_l.jpg",
+            "checkedAt": "2026-10-13"
+          }
+        },
+        "enabled": true
+      }
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Dynasty — Hilton Nagoya — Nagoya restaurant guide",
+        "description": "A Chinese restaurant with a published autumn weekday buffet featuring duck, seafood and Shanghai-crab sauce.",
+        "sourceUrl": "https://nagoya.hiltonjapan.co.jp/restaurants/ouchou",
+        "address": "3F Hilton Nagoya, 1-3-3 Sakae, Naka-ku, Nagoya",
+        "productName": "Dynasty — Hilton Nagoya",
+        "utcStartDateTime": "2026-10-13T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "Established restaurant. 2026-10-13 is the guide verification date, not its opening date.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Top Restaurants",
+          "Nagoya",
+          "Japan",
+          "Fushimi",
+          "Chinese"
+        ],
+        "longFormSummary": "<p>A Chinese restaurant with a published autumn weekday buffet featuring duck, seafood and Shanghai-crab sauce.<cite data-ref=\"https://nagoya.hiltonjapan.co.jp/restaurants/ouchou\"></cite></p><p>Established restaurant. 2026-10-13 is the guide verification date, not its opening date.</p>",
+        "references": [
+          {
+            "url": "https://nagoya.hiltonjapan.co.jp/restaurants/ouchou",
+            "title": "Dynasty — Hilton Nagoya source",
+            "confidence": 90,
+            "reasoning": "Established restaurant. 2026-10-13 is the guide verification date, not its opening date."
+          },
+          {
+            "url": "https://nagoya.hiltonjapan.co.jp/restaurants/lp/dynasty-autumn-buffet",
+            "title": "Dynasty — Hilton Nagoya source",
+            "confidence": 90,
+            "reasoning": "Established restaurant. 2026-10-13 is the guide verification date, not its opening date."
+          },
+          {
+            "url": "https://www8.cao.go.jp/chosei/shukujitsu/gaiyou.html",
+            "title": "Dynasty — Hilton Nagoya source",
+            "confidence": 90,
+            "reasoning": "Established restaurant. 2026-10-13 is the guide verification date, not its opening date."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://nagoya.hiltonjapan.co.jp/restaurants/ouchou",
+          "menu": {
+            "pinSourceUrl": "https://nagoya.hiltonjapan.co.jp/restaurants/ouchou",
+            "name": "Dynasty — Hilton Nagoya",
+            "checkedAt": "2026-10-13",
+            "menus": [
+              {
+                "label": "Autumn Chinese weekday lunch buffet",
+                "url": "https://nagoya.hiltonjapan.co.jp/restaurants/lp/dynasty-autumn-buffet",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Weekday adult lunch",
+                    "price": 6500
+                  },
+                  {
+                    "name": "Weekday child ages 6–12",
+                    "price": 3250
+                  },
+                  {
+                    "name": "北京ダック",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Autumn Chinese weekday lunch buffet; no separate item price published"
+                  },
+                  {
+                    "name": "香港式雲吞麺",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Autumn Chinese weekday lunch buffet; no separate item price published"
+                  },
+                  {
+                    "name": "百合根入り中華フラン 上海蟹のビスクソースで",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Autumn Chinese weekday lunch buffet; no separate item price published"
+                  },
+                  {
+                    "name": "鮟鱇の毛沢東スパイス炒め",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Autumn Chinese weekday lunch buffet; no separate item price published"
+                  },
+                  {
+                    "name": "大海老のフリット シャインマスカットのアクセント",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Autumn Chinese weekday lunch buffet; no separate item price published"
+                  }
+                ],
+                "note": "Weekday lunch only in this offer; public-holiday prices/sessions differ. 90 minutes; last order 14:00. Tax and service included; ages 0–5 free. Separate weekend and Sunday dinner plans are published but are not represented by this weekday schedule."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://nagoya.hiltonjapan.co.jp/restaurants/ouchou",
+            "name": "Dynasty — Hilton Nagoya",
+            "checkedAt": "2026-10-13",
+            "websiteUrl": "https://nagoya.hiltonjapan.co.jp/restaurants/ouchou",
+            "phone": "052-212-1151",
+            "openingHours": [],
+            "detailsSourceUrl": "https://nagoya.hiltonjapan.co.jp/restaurants/ouchou",
+            "additionalSources": [
+              {
+                "label": "Research evidence",
+                "url": "https://nagoya.hiltonjapan.co.jp/restaurants/lp/dynasty-autumn-buffet"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://www8.cao.go.jp/chosei/shukujitsu/gaiyou.html"
+              }
+            ]
+          },
+          "tile": {
+            "regionSlug": "nagoya",
+            "kind": "top",
+            "slug": "dynasty-nagoya",
+            "name": "Dynasty — Hilton Nagoya",
+            "neighborhood": "Fushimi",
+            "cuisine": "Chinese",
+            "description": "A Chinese restaurant with a published autumn weekday buffet featuring duck, seafood and Shanghai-crab sauce.",
+            "address": "3F Hilton Nagoya, 1-3-3 Sakae, Naka-ku, Nagoya",
+            "websiteUrl": "https://nagoya.hiltonjapan.co.jp/restaurants/ouchou",
+            "checkedAt": "2026-10-13",
+            "recognition": "",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/nagoya/japan-30-2026-10-13/dynasty-nagoya-0-db4ca657c25c165e.webp",
+            "imageCredit": "Hilton Nagoya",
+            "imageSourceUrl": "https://nagoya.hiltonjapan.co.jp/restaurants/ouchou",
+            "imageNote": "Official dynasty-nagoya branch gallery photograph; dish names and current availability are not inferred"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/nagoya/japan-30-2026-10-13/dynasty-nagoya-0-db4ca657c25c165e.webp",
+          "sha256": "db4ca657c25c165ea7763166bb524b9f3d7fa6fb6557cc53e1da2118fe3b177f",
+          "width": 1000,
+          "height": 450,
+          "credit": "Hilton Nagoya",
+          "note": "Official dynasty-nagoya branch gallery photograph; dish names and current availability are not inferred",
+          "sourcePage": "https://nagoya.hiltonjapan.co.jp/restaurants/ouchou"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/nagoya/japan-30-2026-10-13/dynasty-nagoya-1-7ad9a66ca97b84a6.webp",
+          "sha256": "7ad9a66ca97b84a6f3ed6a1fad59fda7eb8fe6b93880ca9de5d5d509a5b08de9",
+          "width": 1000,
+          "height": 450,
+          "credit": "Hilton Nagoya",
+          "note": "Official dynasty-nagoya branch gallery photograph; dish names and current availability are not inferred",
+          "sourcePage": "https://nagoya.hiltonjapan.co.jp/restaurants/ouchou"
+        }
+      ],
+      "special": {
+        "regionSlug": "nagoya",
+        "profile": {
+          "pinSourceUrl": "https://nagoya.hiltonjapan.co.jp/restaurants/ouchou",
+          "name": "Dynasty — Hilton Nagoya",
+          "checkedAt": "2026-10-13",
+          "menus": [
+            {
+              "label": "Autumn Chinese weekday lunch buffet",
+              "url": "https://nagoya.hiltonjapan.co.jp/restaurants/lp/dynasty-autumn-buffet",
+              "currency": "JPY",
+              "coverage": "sample",
+              "items": [
+                {
+                  "name": "Weekday adult lunch",
+                  "price": 6500
+                },
+                {
+                  "name": "Weekday child ages 6–12",
+                  "price": 3250
+                },
+                {
+                  "name": "北京ダック",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Autumn Chinese weekday lunch buffet; no separate item price published"
+                },
+                {
+                  "name": "香港式雲吞麺",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Autumn Chinese weekday lunch buffet; no separate item price published"
+                },
+                {
+                  "name": "百合根入り中華フラン 上海蟹のビスクソースで",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Autumn Chinese weekday lunch buffet; no separate item price published"
+                },
+                {
+                  "name": "鮟鱇の毛沢東スパイス炒め",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Autumn Chinese weekday lunch buffet; no separate item price published"
+                },
+                {
+                  "name": "大海老のフリット シャインマスカットのアクセント",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Autumn Chinese weekday lunch buffet; no separate item price published"
+                }
+              ],
+              "note": "Weekday lunch only in this offer; public-holiday prices/sessions differ. 90 minutes; last order 14:00. Tax and service included; ages 0–5 free. Separate weekend and Sunday dinner plans are published but are not represented by this weekday schedule."
+            }
+          ],
+          "specials": [
+            {
+              "title": "Autumn Chinese weekday lunch buffet",
+              "kind": "lunch",
+              "description": "A Chinese restaurant with a published autumn weekday buffet featuring duck, seafood and Shanghai-crab sauce.",
+              "sourceUrl": "https://nagoya.hiltonjapan.co.jp/restaurants/lp/dynasty-autumn-buffet",
+              "menuLabel": "Autumn Chinese weekday lunch buffet",
+              "discounted": false,
+              "validFrom": "2026-10-07",
+              "validThrough": "2026-12-29",
+              "schedule": "Japan local time; see conditions",
+              "conditions": [
+                "Weekday lunch only in this offer; public-holiday prices/sessions differ. 90 minutes; last order 14:00. Tax and service included; ages 0–5 free. Separate weekend and Sunday dinner plans are published but are not represented by this weekday schedule."
+              ],
+              "availability": {
+                "windows": [
+                  {
+                    "days": [
+                      1,
+                      2,
+                      3,
+                      4,
+                      5
+                    ],
+                    "start": "11:30",
+                    "end": "14:30"
+                  }
+                ],
+                "excludedDates": [
+                  "2026-10-12",
+                  "2026-11-03",
+                  "2026-11-23"
+                ]
+              },
+              "limitedTime": true
+            }
+          ],
+          "address": "3F Hilton Nagoya, 1-3-3 Sakae, Naka-ku, Nagoya",
+          "neighborhood": "Fushimi",
+          "websiteUrl": "https://nagoya.hiltonjapan.co.jp/restaurants/ouchou",
+          "photo": {
+            "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/nagoya/japan-30-2026-10-13/dynasty-nagoya-0-db4ca657c25c165e.webp",
+            "alt": "Dynasty — Hilton Nagoya — Official dynasty-nagoya branch gallery photograph; dish names and current availability are not inferred",
+            "credit": "Hilton Nagoya",
+            "sourceUrl": "https://nagoya.hiltonjapan.co.jp/restaurants/ouchou",
+            "originalUrl": "https://nagoya.hiltonjapan.co.jp/img/restaurants/up_img/20260414110519_img_l.jpg",
+            "checkedAt": "2026-10-13"
+          }
+        },
+        "enabled": true
+      }
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Glass Seasons — Sapporo restaurant guide",
+        "description": "A hotel dining room with a dated bird-themed autumn lunch, published savouries and desserts.",
+        "sourceUrl": "https://www.keioplaza-sapporo.co.jp/restaurants/glass/",
+        "address": "1F Keio Plaza Hotel Sapporo, Kita 5-jo Nishi 7-chome 2-1, Chuo-ku, Sapporo",
+        "productName": "Glass Seasons",
+        "utcStartDateTime": "2026-10-13T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "Established restaurant. 2026-10-13 is the guide verification date, not its opening date.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Top Restaurants",
+          "Sapporo",
+          "Japan",
+          "Sapporo Station",
+          "Buffet"
+        ],
+        "longFormSummary": "<p>A hotel dining room with a dated bird-themed autumn lunch, published savouries and desserts.<cite data-ref=\"https://www.keioplaza-sapporo.co.jp/restaurants/glass/\"></cite></p><p>Established restaurant. 2026-10-13 is the guide verification date, not its opening date.</p>",
+        "references": [
+          {
+            "url": "https://www.keioplaza-sapporo.co.jp/restaurants/glass/",
+            "title": "Glass Seasons source",
+            "confidence": 90,
+            "reasoning": "Established restaurant. 2026-10-13 is the guide verification date, not its opening date."
+          },
+          {
+            "url": "https://www.keioplaza-sapporo.co.jp/restaurants/rest/detail_1695.html",
+            "title": "Glass Seasons source",
+            "confidence": 90,
+            "reasoning": "Established restaurant. 2026-10-13 is the guide verification date, not its opening date."
+          },
+          {
+            "url": "https://www8.cao.go.jp/chosei/shukujitsu/gaiyou.html",
+            "title": "Glass Seasons source",
+            "confidence": 90,
+            "reasoning": "Established restaurant. 2026-10-13 is the guide verification date, not its opening date."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://www.keioplaza-sapporo.co.jp/restaurants/glass/",
+          "menu": {
+            "pinSourceUrl": "https://www.keioplaza-sapporo.co.jp/restaurants/glass/",
+            "name": "Glass Seasons",
+            "checkedAt": "2026-10-13",
+            "menus": [
+              {
+                "label": "Shimaenaga autumn lunch",
+                "url": "https://www.keioplaza-sapporo.co.jp/restaurants/rest/detail_1695.html",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Autumn lunch with drink bar",
+                    "price": 5000
+                  },
+                  {
+                    "name": "くしろ茜サーモンの手毬寿司",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Shimaenaga autumn lunch; no separate item price published"
+                  },
+                  {
+                    "name": "秋ナスと合鴨ロースのクロワッサンサンド",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Shimaenaga autumn lunch; no separate item price published"
+                  },
+                  {
+                    "name": "ニョッキを忍ばせたブロッコリーのポタージュスープ",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Shimaenaga autumn lunch; no separate item price published"
+                  },
+                  {
+                    "name": "帆立貝と白身魚のムース 香草パン粉焼き",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Shimaenaga autumn lunch; no separate item price published"
+                  },
+                  {
+                    "name": "シマエナガの生どら焼き",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Shimaenaga autumn lunch; no separate item price published"
+                  }
+                ],
+                "note": "Reserve at least two days ahead. Weekday 20 meals and weekend/holiday 30 meals daily. Last order 14:00. Tax, service and drink bar included; October 10–12 excluded. Allergy accommodation is unavailable for this menu."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://www.keioplaza-sapporo.co.jp/restaurants/glass/",
+            "name": "Glass Seasons",
+            "checkedAt": "2026-10-13",
+            "websiteUrl": "https://www.keioplaza-sapporo.co.jp/restaurants/glass/",
+            "phone": "050-3196-2242",
+            "openingHours": [],
+            "detailsSourceUrl": "https://www.keioplaza-sapporo.co.jp/restaurants/glass/",
+            "additionalSources": [
+              {
+                "label": "Research evidence",
+                "url": "https://www.keioplaza-sapporo.co.jp/restaurants/rest/detail_1695.html"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://www8.cao.go.jp/chosei/shukujitsu/gaiyou.html"
+              }
+            ]
+          },
+          "tile": {
+            "regionSlug": "sapporo",
+            "kind": "top",
+            "slug": "glass",
+            "name": "Glass Seasons",
+            "neighborhood": "Sapporo Station",
+            "cuisine": "Buffet",
+            "description": "A hotel dining room with a dated bird-themed autumn lunch, published savouries and desserts.",
+            "address": "1F Keio Plaza Hotel Sapporo, Kita 5-jo Nishi 7-chome 2-1, Chuo-ku, Sapporo",
+            "websiteUrl": "https://www.keioplaza-sapporo.co.jp/restaurants/glass/",
+            "checkedAt": "2026-10-13",
+            "recognition": "",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/sapporo/japan-30-2026-10-13/glass-0-f74778d6c8631421.webp",
+            "imageCredit": "Keio Plaza Hotel Sapporo",
+            "imageSourceUrl": "https://www.keioplaza-sapporo.co.jp/restaurants/glass/",
+            "imageNote": "Official glass branch gallery photograph; dish names and current availability are not inferred"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/sapporo/japan-30-2026-10-13/glass-0-f74778d6c8631421.webp",
+          "sha256": "f74778d6c863142110e07a80121c97e6f1218f7b66944f7f578a3bbd9638c2b3",
+          "width": 1200,
+          "height": 600,
+          "credit": "Keio Plaza Hotel Sapporo",
+          "note": "Official glass branch gallery photograph; dish names and current availability are not inferred",
+          "sourcePage": "https://www.keioplaza-sapporo.co.jp/restaurants/glass/"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/sapporo/japan-30-2026-10-13/glass-1-4e4148e7cf00de55.webp",
+          "sha256": "4e4148e7cf00de55351f73583ca902dd6d66aea4bb8350ef6a0967284850ca53",
+          "width": 1200,
+          "height": 600,
+          "credit": "Keio Plaza Hotel Sapporo",
+          "note": "Official glass branch gallery photograph; dish names and current availability are not inferred",
+          "sourcePage": "https://www.keioplaza-sapporo.co.jp/restaurants/glass/"
+        }
+      ],
+      "special": {
+        "regionSlug": "sapporo",
+        "profile": {
+          "pinSourceUrl": "https://www.keioplaza-sapporo.co.jp/restaurants/glass/",
+          "name": "Glass Seasons",
+          "checkedAt": "2026-10-13",
+          "menus": [
+            {
+              "label": "Shimaenaga autumn lunch",
+              "url": "https://www.keioplaza-sapporo.co.jp/restaurants/rest/detail_1695.html",
+              "currency": "JPY",
+              "coverage": "sample",
+              "items": [
+                {
+                  "name": "Autumn lunch with drink bar",
+                  "price": 5000
+                },
+                {
+                  "name": "くしろ茜サーモンの手毬寿司",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Shimaenaga autumn lunch; no separate item price published"
+                },
+                {
+                  "name": "秋ナスと合鴨ロースのクロワッサンサンド",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Shimaenaga autumn lunch; no separate item price published"
+                },
+                {
+                  "name": "ニョッキを忍ばせたブロッコリーのポタージュスープ",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Shimaenaga autumn lunch; no separate item price published"
+                },
+                {
+                  "name": "帆立貝と白身魚のムース 香草パン粉焼き",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Shimaenaga autumn lunch; no separate item price published"
+                },
+                {
+                  "name": "シマエナガの生どら焼き",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Shimaenaga autumn lunch; no separate item price published"
+                }
+              ],
+              "note": "Reserve at least two days ahead. Weekday 20 meals and weekend/holiday 30 meals daily. Last order 14:00. Tax, service and drink bar included; October 10–12 excluded. Allergy accommodation is unavailable for this menu."
+            }
+          ],
+          "specials": [
+            {
+              "title": "Shimaenaga autumn lunch",
+              "kind": "lunch",
+              "description": "A hotel dining room with a dated bird-themed autumn lunch, published savouries and desserts.",
+              "sourceUrl": "https://www.keioplaza-sapporo.co.jp/restaurants/rest/detail_1695.html",
+              "menuLabel": "Shimaenaga autumn lunch",
+              "discounted": false,
+              "validFrom": "2026-09-26",
+              "validThrough": "2026-11-30",
+              "schedule": "Japan local time; see conditions",
+              "conditions": [
+                "Reserve at least two days ahead. Weekday 20 meals and weekend/holiday 30 meals daily. Last order 14:00. Tax, service and drink bar included; October 10–12 excluded. Allergy accommodation is unavailable for this menu."
+              ],
+              "availability": {
+                "windows": [
+                  {
+                    "days": [
+                      0,
+                      1,
+                      2,
+                      3,
+                      4,
+                      5,
+                      6
+                    ],
+                    "start": "11:30",
+                    "end": "14:00"
+                  }
+                ],
+                "excludedDates": [
+                  "2026-10-10",
+                  "2026-10-11",
+                  "2026-10-12"
+                ]
+              },
+              "limitedTime": true
+            }
+          ],
+          "address": "1F Keio Plaza Hotel Sapporo, Kita 5-jo Nishi 7-chome 2-1, Chuo-ku, Sapporo",
+          "neighborhood": "Sapporo Station",
+          "websiteUrl": "https://www.keioplaza-sapporo.co.jp/restaurants/glass/",
+          "photo": {
+            "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/sapporo/japan-30-2026-10-13/glass-0-f74778d6c8631421.webp",
+            "alt": "Glass Seasons — Official glass branch gallery photograph; dish names and current availability are not inferred",
+            "credit": "Keio Plaza Hotel Sapporo",
+            "sourceUrl": "https://www.keioplaza-sapporo.co.jp/restaurants/glass/",
+            "originalUrl": "https://www.keioplaza-sapporo.co.jp/restaurants/glass_seasons/images/buffet1.jpg",
+            "checkedAt": "2026-10-13"
+          }
+        },
+        "enabled": true
+      }
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Akizu — Sapporo restaurant guide",
+        "description": "Japanese and Hokkaido dining near Sapporo Station, with published monthly lunch sets.",
+        "sourceUrl": "https://www.keioplaza-sapporo.co.jp/restaurants/akizu/",
+        "address": "Keio Plaza Hotel Sapporo, Kita 5-jo Nishi 7-chome 2-1, Chuo-ku, Sapporo",
+        "productName": "Akizu",
+        "utcStartDateTime": "2026-10-13T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "Established restaurant. 2026-10-13 is the guide verification date, not its opening date.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Top Restaurants",
+          "Sapporo",
+          "Japan",
+          "Sapporo Station",
+          "Japanese"
+        ],
+        "longFormSummary": "<p>Japanese and Hokkaido dining near Sapporo Station, with published monthly lunch sets.<cite data-ref=\"https://www.keioplaza-sapporo.co.jp/restaurants/akizu/\"></cite></p><p>Established restaurant. 2026-10-13 is the guide verification date, not its opening date.</p>",
+        "references": [
+          {
+            "url": "https://www.keioplaza-sapporo.co.jp/restaurants/akizu/",
+            "title": "Akizu source",
+            "confidence": 90,
+            "reasoning": "Established restaurant. 2026-10-13 is the guide verification date, not its opening date."
+          },
+          {
+            "url": "https://www.keioplaza-sapporo.co.jp/restaurants/rest/detail_1010.html",
+            "title": "Akizu source",
+            "confidence": 90,
+            "reasoning": "Established restaurant. 2026-10-13 is the guide verification date, not its opening date."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://www.keioplaza-sapporo.co.jp/restaurants/akizu/",
+          "menu": {
+            "pinSourceUrl": "https://www.keioplaza-sapporo.co.jp/restaurants/akizu/",
+            "name": "Akizu",
+            "checkedAt": "2026-10-13",
+            "menus": [
+              {
+                "label": "October Chinese-style lunch",
+                "url": "https://www.keioplaza-sapporo.co.jp/restaurants/rest/detail_1010.html",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "October lunch set",
+                    "price": 2500
+                  },
+                  {
+                    "name": "北海道産豚バラ肉と魚介の白湯煮込み",
+                    "priceLabel": "Price not published",
+                    "note": "Included in October Chinese-style lunch; no separate item price published"
+                  },
+                  {
+                    "name": "白飯",
+                    "priceLabel": "Price not published",
+                    "note": "Included in October Chinese-style lunch; no separate item price published"
+                  },
+                  {
+                    "name": "スープ",
+                    "priceLabel": "Price not published",
+                    "note": "Included in October Chinese-style lunch; no separate item price published"
+                  },
+                  {
+                    "name": "杏仁豆腐",
+                    "priceLabel": "Price not published",
+                    "note": "Included in October Chinese-style lunch; no separate item price published"
+                  }
+                ],
+                "note": "Last order 14:00. Tax, service, coffee and side-dish buffet included; daily side dishes vary."
+              },
+              {
+                "label": "October–November tempura soba",
+                "url": "https://www.keioplaza-sapporo.co.jp/restaurants/rest/detail_1709.html",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Prawn and conger tempura soba with nameko and mitsuba kakiage",
+                    "price": 2300
+                  }
+                ],
+                "note": "October 1–November 30, 11:30–14:30, last order 14:00. Tax, service and side-dish buffet included."
+              },
+              {
+                "label": "October–November tempura soba",
+                "url": "https://www.keioplaza-sapporo.co.jp/restaurants/rest/detail_1709.html",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Prawn and conger tempura soba with nameko and mitsuba kakiage",
+                    "price": 2300
+                  }
+                ],
+                "note": "October 1–November 30, 11:30–14:30, last order 14:00. Tax, service and side-dish buffet included."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://www.keioplaza-sapporo.co.jp/restaurants/akizu/",
+            "name": "Akizu",
+            "checkedAt": "2026-10-13",
+            "websiteUrl": "https://www.keioplaza-sapporo.co.jp/restaurants/akizu/",
+            "phone": "050-3503-8687",
+            "openingHours": [],
+            "detailsSourceUrl": "https://www.keioplaza-sapporo.co.jp/restaurants/akizu/",
+            "additionalSources": [
+              {
+                "label": "Research evidence",
+                "url": "https://www.keioplaza-sapporo.co.jp/restaurants/rest/detail_1010.html"
+              }
+            ]
+          },
+          "tile": {
+            "regionSlug": "sapporo",
+            "kind": "top",
+            "slug": "akizu",
+            "name": "Akizu",
+            "neighborhood": "Sapporo Station",
+            "cuisine": "Japanese",
+            "description": "Japanese and Hokkaido dining near Sapporo Station, with published monthly lunch sets.",
+            "address": "Keio Plaza Hotel Sapporo, Kita 5-jo Nishi 7-chome 2-1, Chuo-ku, Sapporo",
+            "websiteUrl": "https://www.keioplaza-sapporo.co.jp/restaurants/akizu/",
+            "checkedAt": "2026-10-13",
+            "recognition": "",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/sapporo/japan-30-2026-10-13/akizu-0-e8ae88520c73689a.webp",
+            "imageCredit": "Keio Plaza Hotel Sapporo",
+            "imageSourceUrl": "https://www.keioplaza-sapporo.co.jp/restaurants/akizu/",
+            "imageNote": "Official akizu branch gallery photograph; dish names and current availability are not inferred"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/sapporo/japan-30-2026-10-13/akizu-0-e8ae88520c73689a.webp",
+          "sha256": "e8ae88520c73689a1f5163eeeaed066c899a267c067a1f8d460d8688e8f818dc",
+          "width": 620,
+          "height": 310,
+          "credit": "Keio Plaza Hotel Sapporo",
+          "note": "Official akizu branch gallery photograph; dish names and current availability are not inferred",
+          "sourcePage": "https://www.keioplaza-sapporo.co.jp/restaurants/akizu/"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/sapporo/japan-30-2026-10-13/akizu-1-fc5722ac739953b8.webp",
+          "sha256": "fc5722ac739953b86b97503133f12905c99124cd8969c0be1fd6abc9274b87a3",
+          "width": 620,
+          "height": 310,
+          "credit": "Keio Plaza Hotel Sapporo",
+          "note": "Official akizu branch gallery photograph; dish names and current availability are not inferred",
+          "sourcePage": "https://www.keioplaza-sapporo.co.jp/restaurants/akizu/"
+        }
+      ],
+      "special": {
+        "regionSlug": "sapporo",
+        "profile": {
+          "pinSourceUrl": "https://www.keioplaza-sapporo.co.jp/restaurants/akizu/",
+          "name": "Akizu",
+          "checkedAt": "2026-10-13",
+          "menus": [
+            {
+              "label": "October Chinese-style lunch",
+              "url": "https://www.keioplaza-sapporo.co.jp/restaurants/rest/detail_1010.html",
+              "currency": "JPY",
+              "coverage": "sample",
+              "items": [
+                {
+                  "name": "October lunch set",
+                  "price": 2500
+                },
+                {
+                  "name": "北海道産豚バラ肉と魚介の白湯煮込み",
+                  "priceLabel": "Price not published",
+                  "note": "Included in October Chinese-style lunch; no separate item price published"
+                },
+                {
+                  "name": "白飯",
+                  "priceLabel": "Price not published",
+                  "note": "Included in October Chinese-style lunch; no separate item price published"
+                },
+                {
+                  "name": "スープ",
+                  "priceLabel": "Price not published",
+                  "note": "Included in October Chinese-style lunch; no separate item price published"
+                },
+                {
+                  "name": "杏仁豆腐",
+                  "priceLabel": "Price not published",
+                  "note": "Included in October Chinese-style lunch; no separate item price published"
+                }
+              ],
+              "note": "Last order 14:00. Tax, service, coffee and side-dish buffet included; daily side dishes vary."
+            },
+            {
+              "label": "October–November tempura soba",
+              "url": "https://www.keioplaza-sapporo.co.jp/restaurants/rest/detail_1709.html",
+              "currency": "JPY",
+              "coverage": "sample",
+              "items": [
+                {
+                  "name": "Prawn and conger tempura soba with nameko and mitsuba kakiage",
+                  "price": 2300
+                }
+              ],
+              "note": "October 1–November 30, 11:30–14:30, last order 14:00. Tax, service and side-dish buffet included."
+            },
+            {
+              "label": "October–November tempura soba",
+              "url": "https://www.keioplaza-sapporo.co.jp/restaurants/rest/detail_1709.html",
+              "currency": "JPY",
+              "coverage": "sample",
+              "items": [
+                {
+                  "name": "Prawn and conger tempura soba with nameko and mitsuba kakiage",
+                  "price": 2300
+                }
+              ],
+              "note": "October 1–November 30, 11:30–14:30, last order 14:00. Tax, service and side-dish buffet included."
+            }
+          ],
+          "specials": [
+            {
+              "title": "October Chinese-style lunch",
+              "kind": "lunch",
+              "description": "Japanese and Hokkaido dining near Sapporo Station, with published monthly lunch sets.",
+              "sourceUrl": "https://www.keioplaza-sapporo.co.jp/restaurants/rest/detail_1010.html",
+              "menuLabel": "October Chinese-style lunch",
+              "discounted": false,
+              "validFrom": "2026-10-01",
+              "validThrough": "2026-10-31",
+              "schedule": "Japan local time; see conditions",
+              "conditions": [
+                "Last order 14:00. Tax, service, coffee and side-dish buffet included; daily side dishes vary."
+              ],
+              "availability": {
+                "windows": [
+                  {
+                    "days": [
+                      0,
+                      1,
+                      2,
+                      3,
+                      4,
+                      5,
+                      6
+                    ],
+                    "start": "11:30",
+                    "end": "14:30"
+                  }
+                ]
+              },
+              "limitedTime": true
+            },
+            {
+              "title": "October–November tempura soba",
+              "kind": "lunch",
+              "description": "Published seasonal prawn-and-conger tempura soba lunch, ¥2,300.",
+              "sourceUrl": "https://www.keioplaza-sapporo.co.jp/restaurants/rest/detail_1709.html",
+              "menuLabel": "October–November tempura soba",
+              "discounted": false,
+              "validFrom": "2026-10-01",
+              "validThrough": "2026-11-30",
+              "schedule": "Japan local time; see conditions",
+              "conditions": [
+                "Last order 14:00.",
+                "Tax, service and side-dish buffet included."
+              ],
+              "availability": {
+                "windows": [
+                  {
+                    "days": [
+                      0,
+                      1,
+                      2,
+                      3,
+                      4,
+                      5,
+                      6
+                    ],
+                    "start": "11:30",
+                    "end": "14:30"
+                  }
+                ]
+              },
+              "limitedTime": true
+            }
+          ],
+          "address": "Keio Plaza Hotel Sapporo, Kita 5-jo Nishi 7-chome 2-1, Chuo-ku, Sapporo",
+          "neighborhood": "Sapporo Station",
+          "websiteUrl": "https://www.keioplaza-sapporo.co.jp/restaurants/akizu/",
+          "photo": {
+            "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/sapporo/japan-30-2026-10-13/akizu-0-e8ae88520c73689a.webp",
+            "alt": "Akizu — Official akizu branch gallery photograph; dish names and current availability are not inferred",
+            "credit": "Keio Plaza Hotel Sapporo",
+            "sourceUrl": "https://www.keioplaza-sapporo.co.jp/restaurants/akizu/",
+            "originalUrl": "https://www.keioplaza-sapporo.co.jp/restaurants/akizu/images/contents_bg01.jpg",
+            "checkedAt": "2026-10-13"
+          }
+        },
+        "enabled": true
+      }
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "TwentyEight — Tokyo restaurant guide",
+        "description": "A Shiodome lounge with a dated cassis and chestnut dessert-and-drink set.",
+        "sourceUrl": "https://conrad-tokyo.hiltonjapan.co.jp/restaurants/twentyeight",
+        "address": "28F Conrad Tokyo, 1-9-1 Higashi-Shimbashi, Minato-ku, Tokyo",
+        "productName": "TwentyEight",
+        "utcStartDateTime": "2026-10-13T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "Established restaurant. 2026-10-13 is the guide verification date, not its opening date.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Top Restaurants",
+          "Tokyo",
+          "Japan",
+          "Shiodome",
+          "Lounge"
+        ],
+        "longFormSummary": "<p>A Shiodome lounge with a dated cassis and chestnut dessert-and-drink set.<cite data-ref=\"https://conrad-tokyo.hiltonjapan.co.jp/restaurants/twentyeight\"></cite></p><p>Established restaurant. 2026-10-13 is the guide verification date, not its opening date.</p>",
+        "references": [
+          {
+            "url": "https://conrad-tokyo.hiltonjapan.co.jp/restaurants/twentyeight",
+            "title": "TwentyEight source",
+            "confidence": 90,
+            "reasoning": "Established restaurant. 2026-10-13 is the guide verification date, not its opening date."
+          },
+          {
+            "url": "https://conrad-tokyo.hiltonjapan.co.jp/plans/restaurants/sweets/twentyeight-autumn",
+            "title": "TwentyEight source",
+            "confidence": 90,
+            "reasoning": "Established restaurant. 2026-10-13 is the guide verification date, not its opening date."
+          },
+          {
+            "url": "https://www8.cao.go.jp/chosei/shukujitsu/gaiyou.html",
+            "title": "TwentyEight source",
+            "confidence": 90,
+            "reasoning": "Established restaurant. 2026-10-13 is the guide verification date, not its opening date."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://conrad-tokyo.hiltonjapan.co.jp/restaurants/twentyeight",
+          "menu": {
+            "pinSourceUrl": "https://conrad-tokyo.hiltonjapan.co.jp/restaurants/twentyeight",
+            "name": "TwentyEight",
+            "checkedAt": "2026-10-13",
+            "menus": [
+              {
+                "label": "Cassis Mont Blanc tiramisu bear and drink",
+                "url": "https://conrad-tokyo.hiltonjapan.co.jp/plans/restaurants/sweets/twentyeight-autumn",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Dessert and drink set",
+                    "price": 5800
+                  },
+                  {
+                    "name": "カシスモンブラン・ティラミスベア",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Cassis Mont Blanc tiramisu bear and drink; no separate item price published"
+                  },
+                  {
+                    "name": "Coffee or selected tea",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Cassis Mont Blanc tiramisu bear and drink; no separate item price published"
+                  }
+                ],
+                "note": "Two-hour sittings; fifteen sets daily. Tax and service included. Weekday start 16:00, weekend/public-holiday start 19:00. Cancellation after 20:00 on the previous day: 100%."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://conrad-tokyo.hiltonjapan.co.jp/restaurants/twentyeight",
+            "name": "TwentyEight",
+            "checkedAt": "2026-10-13",
+            "websiteUrl": "https://conrad-tokyo.hiltonjapan.co.jp/restaurants/twentyeight",
+            "phone": "03-6388-8745",
+            "openingHours": [],
+            "detailsSourceUrl": "https://conrad-tokyo.hiltonjapan.co.jp/restaurants/twentyeight",
+            "additionalSources": [
+              {
+                "label": "Research evidence",
+                "url": "https://conrad-tokyo.hiltonjapan.co.jp/plans/restaurants/sweets/twentyeight-autumn"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://www8.cao.go.jp/chosei/shukujitsu/gaiyou.html"
+              }
+            ]
+          },
+          "tile": {
+            "regionSlug": "tokyo",
+            "kind": "top",
+            "slug": "twenty8",
+            "name": "TwentyEight",
+            "neighborhood": "Shiodome",
+            "cuisine": "Lounge",
+            "description": "A Shiodome lounge with a dated cassis and chestnut dessert-and-drink set.",
+            "address": "28F Conrad Tokyo, 1-9-1 Higashi-Shimbashi, Minato-ku, Tokyo",
+            "websiteUrl": "https://conrad-tokyo.hiltonjapan.co.jp/restaurants/twentyeight",
+            "checkedAt": "2026-10-13",
+            "recognition": "",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/tokyo/japan-30-2026-10-13/twenty8-0-5371a1ff15fd1131.webp",
+            "imageCredit": "Conrad Tokyo",
+            "imageSourceUrl": "https://conrad-tokyo.hiltonjapan.co.jp/restaurants/twentyeight",
+            "imageNote": "Official twenty8 branch gallery photograph; dish names and current availability are not inferred"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/tokyo/japan-30-2026-10-13/twenty8-0-5371a1ff15fd1131.webp",
+          "sha256": "5371a1ff15fd1131df25a26b5f13ec4c7f7e252e7b7b555b8af947255576ad7d",
+          "width": 1200,
+          "height": 312,
+          "credit": "Conrad Tokyo",
+          "note": "Official twenty8 branch gallery photograph; dish names and current availability are not inferred",
+          "sourcePage": "https://conrad-tokyo.hiltonjapan.co.jp/restaurants/twentyeight"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/tokyo/japan-30-2026-10-13/twenty8-1-45a84f16871df212.webp",
+          "sha256": "45a84f16871df212cc0374d0c334624494b1bcbc0055bfa76f06e9629ba28e10",
+          "width": 1200,
+          "height": 312,
+          "credit": "Conrad Tokyo",
+          "note": "Official twenty8 branch gallery photograph; dish names and current availability are not inferred",
+          "sourcePage": "https://conrad-tokyo.hiltonjapan.co.jp/restaurants/twentyeight"
+        }
+      ],
+      "special": {
+        "regionSlug": "tokyo",
+        "profile": {
+          "pinSourceUrl": "https://conrad-tokyo.hiltonjapan.co.jp/restaurants/twentyeight",
+          "name": "TwentyEight",
+          "checkedAt": "2026-10-13",
+          "menus": [
+            {
+              "label": "Cassis Mont Blanc tiramisu bear and drink",
+              "url": "https://conrad-tokyo.hiltonjapan.co.jp/plans/restaurants/sweets/twentyeight-autumn",
+              "currency": "JPY",
+              "coverage": "sample",
+              "items": [
+                {
+                  "name": "Dessert and drink set",
+                  "price": 5800
+                },
+                {
+                  "name": "カシスモンブラン・ティラミスベア",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Cassis Mont Blanc tiramisu bear and drink; no separate item price published"
+                },
+                {
+                  "name": "Coffee or selected tea",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Cassis Mont Blanc tiramisu bear and drink; no separate item price published"
+                }
+              ],
+              "note": "Two-hour sittings; fifteen sets daily. Tax and service included. Weekday start 16:00, weekend/public-holiday start 19:00. Cancellation after 20:00 on the previous day: 100%."
+            }
+          ],
+          "specials": [
+            {
+              "title": "Cassis Mont Blanc tiramisu bear and drink",
+              "kind": "other",
+              "description": "A Shiodome lounge with a dated cassis and chestnut dessert-and-drink set.",
+              "sourceUrl": "https://conrad-tokyo.hiltonjapan.co.jp/plans/restaurants/sweets/twentyeight-autumn",
+              "menuLabel": "Cassis Mont Blanc tiramisu bear and drink",
+              "discounted": false,
+              "validFrom": "2026-10-01",
+              "validThrough": "2026-11-30",
+              "schedule": "Japan local time; see conditions",
+              "conditions": [
+                "Two-hour sittings; fifteen sets daily. Tax and service included. Weekday start 16:00, weekend/public-holiday start 19:00. Cancellation after 20:00 on the previous day: 100%."
+              ],
+              "availability": {
+                "windows": [
+                  {
+                    "days": [
+                      1,
+                      2,
+                      3,
+                      4,
+                      5
+                    ],
+                    "start": "16:00",
+                    "end": "22:00"
+                  }
+                ],
+                "excludedDates": [
+                  "2026-10-12",
+                  "2026-11-03",
+                  "2026-11-23"
+                ]
+              },
+              "limitedTime": true
+            },
+            {
+              "title": "Tiramisu bear set — weekend service",
+              "kind": "other",
+              "description": "A Shiodome lounge with a dated cassis and chestnut dessert-and-drink set.",
+              "sourceUrl": "https://conrad-tokyo.hiltonjapan.co.jp/plans/restaurants/sweets/twentyeight-autumn",
+              "menuLabel": "Cassis Mont Blanc tiramisu bear and drink",
+              "discounted": false,
+              "validFrom": "2026-10-01",
+              "validThrough": "2026-11-30",
+              "schedule": "Japan local time; see conditions",
+              "conditions": [
+                "Two-hour sittings; fifteen sets daily. Tax and service included. Weekday start 16:00, weekend/public-holiday start 19:00. Cancellation after 20:00 on the previous day: 100%."
+              ],
+              "availability": {
+                "windows": [
+                  {
+                    "days": [
+                      0,
+                      6
+                    ],
+                    "start": "19:00",
+                    "end": "22:00"
+                  }
+                ]
+              },
+              "limitedTime": true
+            },
+            {
+              "title": "Tiramisu bear set — holiday service",
+              "kind": "other",
+              "description": "A Shiodome lounge with a dated cassis and chestnut dessert-and-drink set.",
+              "sourceUrl": "https://conrad-tokyo.hiltonjapan.co.jp/plans/restaurants/sweets/twentyeight-autumn",
+              "menuLabel": "Cassis Mont Blanc tiramisu bear and drink",
+              "discounted": false,
+              "validFrom": "2026-10-12",
+              "validThrough": "2026-10-12",
+              "schedule": "Japan local time; see conditions",
+              "conditions": [
+                "Two-hour sittings; fifteen sets daily. Tax and service included. Weekday start 16:00, weekend/public-holiday start 19:00. Cancellation after 20:00 on the previous day: 100%."
+              ],
+              "availability": {
+                "windows": [
+                  {
+                    "days": [
+                      0,
+                      1,
+                      2,
+                      3,
+                      4,
+                      5,
+                      6
+                    ],
+                    "start": "19:00",
+                    "end": "22:00"
+                  }
+                ]
+              },
+              "limitedTime": true
+            },
+            {
+              "title": "Tiramisu bear set — holiday service",
+              "kind": "other",
+              "description": "A Shiodome lounge with a dated cassis and chestnut dessert-and-drink set.",
+              "sourceUrl": "https://conrad-tokyo.hiltonjapan.co.jp/plans/restaurants/sweets/twentyeight-autumn",
+              "menuLabel": "Cassis Mont Blanc tiramisu bear and drink",
+              "discounted": false,
+              "validFrom": "2026-11-03",
+              "validThrough": "2026-11-03",
+              "schedule": "Japan local time; see conditions",
+              "conditions": [
+                "Two-hour sittings; fifteen sets daily. Tax and service included. Weekday start 16:00, weekend/public-holiday start 19:00. Cancellation after 20:00 on the previous day: 100%."
+              ],
+              "availability": {
+                "windows": [
+                  {
+                    "days": [
+                      0,
+                      1,
+                      2,
+                      3,
+                      4,
+                      5,
+                      6
+                    ],
+                    "start": "19:00",
+                    "end": "22:00"
+                  }
+                ]
+              },
+              "limitedTime": true
+            },
+            {
+              "title": "Tiramisu bear set — holiday service",
+              "kind": "other",
+              "description": "A Shiodome lounge with a dated cassis and chestnut dessert-and-drink set.",
+              "sourceUrl": "https://conrad-tokyo.hiltonjapan.co.jp/plans/restaurants/sweets/twentyeight-autumn",
+              "menuLabel": "Cassis Mont Blanc tiramisu bear and drink",
+              "discounted": false,
+              "validFrom": "2026-11-23",
+              "validThrough": "2026-11-23",
+              "schedule": "Japan local time; see conditions",
+              "conditions": [
+                "Two-hour sittings; fifteen sets daily. Tax and service included. Weekday start 16:00, weekend/public-holiday start 19:00. Cancellation after 20:00 on the previous day: 100%."
+              ],
+              "availability": {
+                "windows": [
+                  {
+                    "days": [
+                      0,
+                      1,
+                      2,
+                      3,
+                      4,
+                      5,
+                      6
+                    ],
+                    "start": "19:00",
+                    "end": "22:00"
+                  }
+                ]
+              },
+              "limitedTime": true
+            }
+          ],
+          "address": "28F Conrad Tokyo, 1-9-1 Higashi-Shimbashi, Minato-ku, Tokyo",
+          "neighborhood": "Shiodome",
+          "websiteUrl": "https://conrad-tokyo.hiltonjapan.co.jp/restaurants/twentyeight",
+          "photo": {
+            "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/tokyo/japan-30-2026-10-13/twenty8-0-5371a1ff15fd1131.webp",
+            "alt": "TwentyEight — Official twenty8 branch gallery photograph; dish names and current availability are not inferred",
+            "credit": "Conrad Tokyo",
+            "sourceUrl": "https://conrad-tokyo.hiltonjapan.co.jp/restaurants/twentyeight",
+            "originalUrl": "https://conrad-tokyo.hiltonjapan.co.jp/img/restaurants/up_img/20260914153758_img_l.jpg",
+            "checkedAt": "2026-10-13"
+          }
+        },
+        "enabled": true
+      }
+    }
+  ]
+}

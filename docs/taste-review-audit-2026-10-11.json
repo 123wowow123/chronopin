@@ -1,0 +1,1814 @@
+{
+  "checkedOn": "2026-10-11",
+  "scope": "All 65 native PinTaste rows; reviews only, existing scores and pin metadata preserved.",
+  "counts": {
+    "profiles": 65,
+    "existingWithReviews": 37,
+    "reviewsAddedToPins": 18,
+    "reviewGaps": 10,
+    "afterWithReviews": 55
+  },
+  "reviewUpdatesAndResearchGaps": [
+    {
+      "pinId": 3410,
+      "title": "Ferrero Rocher and Raffaello Chocolate Bars Hit UK Shelves",
+      "checkedOn": "2026-10-11",
+      "originalSourceUrl": "https://www.ferrero.com/int/en/news-stories/news/ferrero-rocher-and-raffaello-now-available-in-a-premium-chocolate-bar-format",
+      "reviews": [
+        {
+          "url": "https://www.chocolatier.co.uk/ferrero-rocher-dark-55-hazelnut-chocolate-bar-review/",
+          "title": "David Fiske — Ferrero Rocher Dark 55% bar (Chocolatier)",
+          "quote": "Taste-wise, the hazelnut flavour dominates, accompanied by a prominent sweetness.",
+          "publishedDate": "2023-03-12"
+        }
+      ],
+      "scope": "Dark 55% hazelnut bar only; this review does not cover the milk, white or Raffaello bars in the launch collection.",
+      "status": "review-added",
+      "checkedSources": [
+        "https://www.chocolatier.co.uk/ferrero-rocher-dark-55-hazelnut-chocolate-bar-review/"
+      ]
+    },
+    {
+      "pinId": 5610,
+      "title": "Nestlé's KitKat F1 Collectable Tin Goes on Sale in UK for Christmas",
+      "checkedOn": "2026-10-11",
+      "originalSourceUrl": "https://groceries.morrisons.com/products/kit-kat-f1-tin-132g/116009154",
+      "status": "review-gap",
+      "reviews": [],
+      "gap": "No firsthand tasting review verified for the UK 132 g F1 tin. An Indian 10-car tin review and the 138 g travel-retail assortment have different pack contents and were excluded.",
+      "queries": [
+        "\"KitKat\" \"F1\" \"tin\" review wafer"
+      ],
+      "checkedSources": [
+        "https://groceries.morrisons.com/products/kit-kat-f1-tin-132g/116009154",
+        "https://scottishgrocer.co.uk/2026/09/01/nestle-confectionery-unwraps-christmas-range/",
+        "https://www.confectionerynews.com/Article/2026/09/01/nestle-unveils-biggest-ever-christmas-confectionery-range/",
+        "https://www.nestletravelretail.com/products/kitkat/kitkat-f1-tin-8x138g",
+        "https://www.reddit.com/r/u_framed_passions/comments/1w80gb9/picked_up_the_official_kitkat_x_f1_tin_on_blinkit/"
+      ]
+    },
+    {
+      "pinId": 5611,
+      "title": "Cadbury Dairy Milk Smash Bauble Arrives in UK for Christmas",
+      "checkedOn": "2026-10-11",
+      "originalSourceUrl": "https://groceries.morrisons.com/products/cadbury-dairy-milk-freddo-faces-smash-bauble-90g/116063222",
+      "status": "review-gap",
+      "reviews": [],
+      "gap": "No firsthand tasting review verified for the Freddo Faces Smash Bauble 90 g. Retailers publish descriptions but no usable tasting text.",
+      "queries": [
+        "\"Dairy Milk\" \"Freddo\" \"Smash Bauble\" review",
+        "\"Cadbury\" \"Smash Bauble\" review taste"
+      ],
+      "checkedSources": [
+        "https://groceries.morrisons.com/products/cadbury-dairy-milk-freddo-faces-smash-bauble-90g/116063222",
+        "https://wholesalemanager.co.uk/mondelz-international-unwraps-2026-festive-range-to-drive-seasonal-confectionery-sales/",
+        "https://britbrief.co.uk/business/retail/cadbury-unveils-smash-baubles-for-christmas-2026.html",
+        "https://www.thegrocer.co.uk/news/mondelez-christmas-2026-toblerone-meets-biscoff-in-festive-npd/722048.article"
+      ]
+    },
+    {
+      "pinId": 5612,
+      "title": "Cadbury Biscoff Filled Centres Launch in UK for Christmas",
+      "checkedOn": "2026-10-11",
+      "originalSourceUrl": "https://wholesalemanager.co.uk/mondelz-international-unwraps-2026-festive-range-to-drive-seasonal-confectionery-sales/",
+      "status": "review-gap",
+      "reviews": [],
+      "gap": "No firsthand tasting review text verified for Biscoff Filled Centres. Morrisons shows one aggregate score but zero written customer reviews; launch announcements were excluded.",
+      "queries": [
+        "\"Cadbury\" \"Biscoff\" \"Filled Centres\" review taste"
+      ],
+      "checkedSources": [
+        "https://wholesalemanager.co.uk/mondelz-international-unwraps-2026-festive-range-to-drive-seasonal-confectionery-sales/",
+        "https://www.thegrocer.co.uk/news/mondelez-christmas-2026-toblerone-meets-biscoff-in-festive-npd/722048.article",
+        "https://scottishgrocer.co.uk/2026/08/07/mondelez-unwraps-cadbury-biscoff-christmas-range/",
+        "https://groceries.morrisons.com/products/cadbury-biscoff-filled-centres-3-x-100-5g/116063311"
+      ]
+    },
+    {
+      "pinId": 5613,
+      "title": "Haribo Sour Bats Join UK Halloween Range",
+      "checkedOn": "2026-10-11",
+      "originalSourceUrl": "https://www.asiantrader.biz/haribo-monster-approved-halloween-sweets",
+      "reviews": [
+        {
+          "url": "https://peanutfreereviews.blogspot.com/2024/11/haribo-sour-bats.html",
+          "title": "Katilina — Haribo Sour Bats (Peanut Free Reviews)",
+          "quote": "The apple is more sour, with a good strong green apple flavor.",
+          "publishedDate": "2024-11-04"
+        }
+      ],
+      "scope": "Historical Sour Bats tasting with matching cherry, apple, orange and blackcurrant flavors; the 2026 UK formulation and batch are not independently verified.",
+      "status": "review-added",
+      "checkedSources": [
+        "https://peanutfreereviews.blogspot.com/2024/11/haribo-sour-bats.html"
+      ]
+    },
+    {
+      "pinId": 5614,
+      "title": "Lotte's Koala's March x CUTIE STREET Strawberry Biscuits Launch in Japan",
+      "checkedOn": "2026-10-11",
+      "originalSourceUrl": "https://www.lotte.co.jp/info/news/detail/20260928162003.html",
+      "reviews": [
+        {
+          "url": "https://quirkspace.com/jsfr/?p=278",
+          "title": "Boo — Koala’s March strawberry (historical review)",
+          "quote": "Not only is this flavor bad, but it lingers too.",
+          "publishedDate": "2005-02-13"
+        }
+      ],
+      "scope": "Historical strawberry biscuit review with a negative flavor verdict; not a tasting of the 2026 CUTIE STREET collaboration or its current formulation.",
+      "status": "review-added",
+      "checkedSources": [
+        "https://quirkspace.com/jsfr/?p=278"
+      ]
+    },
+    {
+      "pinId": 5615,
+      "title": "Lotte's Winter-Only Rummy and Bacchus Liqueur Chocolates Return 6 October",
+      "checkedOn": "2026-10-11",
+      "originalSourceUrl": "https://www.lotte.co.jp/info/news/detail/20260925163020.html",
+      "reviews": [
+        {
+          "url": "https://gigazine.net/gsc_news/en/20071101_lotte_rummy_bacchus",
+          "title": "GIGAZINE — Rummy and Bacchus (historical tasting)",
+          "quote": "The compatibility of chocolate and liquor is quite nice",
+          "publishedDate": "2007-11-01"
+        }
+      ],
+      "scope": "Historical Rummy and Bacchus chocolate tasting, not a review of the returning 2026 batch. The linked article also tastes a separate shochu chocolate.",
+      "status": "review-added",
+      "checkedSources": [
+        "https://gigazine.net/gsc_news/en/20071101_lotte_rummy_bacchus"
+      ]
+    },
+    {
+      "pinId": 5617,
+      "title": "Morinaga Launches Crisp Fruit Mix Hi-Chew and Umai-Chew Assortment in Japan",
+      "checkedOn": "2026-10-11",
+      "originalSourceUrl": "https://www.morinaga.co.jp/company/newsrelease/detail.php?no=3195",
+      "reviews": [
+        {
+          "url": "https://shareview.jp/item/detail/64285",
+          "title": "ねこわんウサギ — Crisp Fruit Mix Hi-Chew (ShareView)",
+          "quote": "ふじりんごと幸水梨の甘酸っぱさが2つ一緒に楽しめて美味しい味わいです。",
+          "publishedDate": "2026-09-29"
+        }
+      ],
+      "scope": "Crisp Fruit Mix Hi-Chew only, not the Umai-Chew assortment. The Japanese review describes the combined sweet-tart Fuji apple and Kosui pear flavor.",
+      "status": "review-added",
+      "checkedSources": [
+        "https://shareview.jp/item/detail/64285"
+      ]
+    },
+    {
+      "pinId": 5623,
+      "title": "Koikeya Launches Pure Potato Beef & Cheese Chips in Japan",
+      "checkedOn": "2026-10-11",
+      "originalSourceUrl": "https://koikeya.co.jp/news/detail/1843.html",
+      "reviews": [
+        {
+          "url": "https://www.tomo-diary.com/entry/2026/10/07/193500",
+          "title": "tomomo13 — Pure Potato Beef & Cheese tasting",
+          "quote": "味が濃い、ビールが進む。",
+          "publishedDate": "2026-10-07"
+        }
+      ],
+      "scope": "Exact Beef & Cheese flavor. The Japanese reviewer describes an intense taste and lingering burger-like flavor.",
+      "status": "review-added",
+      "checkedSources": [
+        "https://www.tomo-diary.com/entry/2026/10/07/193500"
+      ]
+    },
+    {
+      "pinId": 5625,
+      "title": "Nongshim's Neoguling Neoguri Onion-Ring Snack Goes on Sale 12 October",
+      "checkedOn": "2026-10-11",
+      "originalSourceUrl": "https://www.nongshim.com/promotion/notice/press_view?groupCode=003&groupId=1012",
+      "status": "review-gap",
+      "reviews": [],
+      "gap": "No firsthand tasting review verified for Neoguling ahead of its announced October 12 release; Neoguri ramen and ordinary onion-ring reviews were excluded.",
+      "queries": [
+        "\"네오굴링\" \"후기\"",
+        "\"Neoguling\" review"
+      ],
+      "checkedSources": [
+        "https://www.nongshim.com/promotion/notice/press_view?groupCode=003&groupId=1012",
+        "https://news.bizwatch.co.kr/article/consumer/2026/09/30/0004",
+        "https://www.consumernews.co.kr/news/articleView.html?idxno=764931",
+        "https://www.newspim.com/news/view/20260930001196",
+        "https://economist.co.kr/article/view/ecn202609300011"
+      ]
+    },
+    {
+      "pinId": 5627,
+      "title": "OREO Pistash-YO Limited Edition Launches in the UAE",
+      "checkedOn": "2026-10-11",
+      "originalSourceUrl": "https://tradearabia.com/News/486344/OREO-taps-into-the-UAE%E2%80%99s-pistachio-moment",
+      "status": "review-gap",
+      "reviews": [],
+      "gap": "No usable firsthand tasting review verified for the UAE Pistash-YO edition. Launch coverage and PR posts were found; other pistachio Oreo variants were excluded.",
+      "queries": [
+        "\"Pistash-YO\" \"tried\"",
+        "\"Pistash-YO\" review taste UAE"
+      ],
+      "checkedSources": [
+        "https://tradearabia.com/News/486344/OREO-taps-into-the-UAE%E2%80%99s-pistachio-moment",
+        "https://gulfnews.com/uae/oreo-goes-nuts-as-its-pistash-yo-lights-up-burj-khalifa-1.500674160",
+        "https://www.gdnonline.com/Details/1406635/OREO-taps-into-the-UAE%E2%80%99s-pistachio-moment"
+      ]
+    },
+    {
+      "pinId": 5629,
+      "title": "Parag Milk Foods Launches Avvatar Popped Protein Chips in India",
+      "checkedOn": "2026-10-11",
+      "originalSourceUrl": "https://nsearchives.nseindia.com/corporate/PARAGMILK_09092026153109_Intimation.pdf",
+      "status": "review-gap",
+      "reviews": [],
+      "gap": "No firsthand tasting review verified for Avvatar Popped Protein Chips. The manufacturer’s review widget exposes no written reviews; protein powder, wafer and other-brand chip reviews were excluded.",
+      "queries": [
+        "\"Avvatar\" \"protein chips\" review taste",
+        "\"Avvatar\" \"popped\" \"chips\" \"taste\""
+      ],
+      "checkedSources": [
+        "https://nsearchives.nseindia.com/corporate/PARAGMILK_09092026153109_Intimation.pdf",
+        "https://www.foodtechbiz.com/product-launches/parag-milk-foods-launches-avvatar-popped-protein-chips",
+        "https://www.mediainfoline.com/brand/parag-milk-foods-takes-its-nutrition-play-into-snacking-with-avvatar-popped-protein-chips",
+        "https://www.businesstoday.in/markets/stocks/story/parag-milk-foods-shares-surge-8-on-foray-into-snacking-category-554485-2026-09-10",
+        "https://www.avvatarindia.com/public/product/protein-chips-pudina-flavour-350g"
+      ]
+    },
+    {
+      "pinId": 5631,
+      "title": "Funday Fruity Pigs Gummies Land at Woolworths in Australia",
+      "checkedOn": "2026-10-11",
+      "originalSourceUrl": "https://www.fundaysweets.com/products/fruity-flavoured-gummy-pigs",
+      "reviews": [
+        {
+          "url": "https://www.fundaysweets.com/products/fruity-flavoured-gummy-pigs",
+          "title": "Ms S. — Fruity Pigs customer review (FUNDAY)",
+          "quote": "the cherry flavour is nicely coming through",
+          "publishedDate": null
+        }
+      ],
+      "scope": "Berry & Cherry Fruity Pigs. Customer review hosted by the manufacturer; not its AI-generated review summary.",
+      "status": "review-added",
+      "checkedSources": [
+        "https://www.fundaysweets.com/products/fruity-flavoured-gummy-pigs"
+      ]
+    },
+    {
+      "pinId": 5633,
+      "title": "Funday x Mr Whippy Foamy Ice Cream Gummies Hit Shelves in Australia",
+      "checkedOn": "2026-10-11",
+      "originalSourceUrl": "https://www.fundaysweets.com/products/mr-whippy-strawberry-vanilla-ice-cream-gummies",
+      "reviews": [
+        {
+          "url": "https://www.fundaysweets.com/products/mr-whippy-strawberry-vanilla-ice-cream-gummies",
+          "title": "Nicole — Mr Whippy customer review (FUNDAY)",
+          "quote": "They are soft, but so subtle in flavour that they’re almost imperceptible.",
+          "publishedDate": null
+        }
+      ],
+      "scope": "Strawberry & Vanilla Mr Whippy gummies. Customer review hosted by the manufacturer; not its AI-generated review summary.",
+      "status": "review-added",
+      "checkedSources": [
+        "https://www.fundaysweets.com/products/mr-whippy-strawberry-vanilla-ice-cream-gummies"
+      ]
+    },
+    {
+      "pinId": 5731,
+      "title": "Haitai's French Pie Mini Peanut Butter Cream with Ligo Launches",
+      "checkedOn": "2026-10-11",
+      "originalSourceUrl": "https://www.ht.co.kr/sweet/news/detail?newsBoardId=93064",
+      "reviews": [
+        {
+          "url": "https://namcandler.tistory.com/entry/haitai-frenchpie-ligo-peanut-butter-review?category=1122240",
+          "title": "nam_candler — French Pie Mini × Ligo tasting",
+          "quote": "한입 베어 물면 겉은 바삭한 파이, 안은 꾸덕한 피넛버터 크림이 같이 씹혀요.",
+          "publishedDate": "2026-09-21"
+        }
+      ],
+      "scope": "Exact peanut-butter cream mini pie. The Korean reviewer describes crisp pastry and thick peanut-butter cream.",
+      "status": "review-added",
+      "checkedSources": [
+        "https://namcandler.tistory.com/entry/haitai-frenchpie-ligo-peanut-butter-review?category=1122240"
+      ]
+    },
+    {
+      "pinId": 5735,
+      "title": "Bauducco and Paçoquita Launch Chocottone Paçoquita for Christmas in Brazil",
+      "checkedOn": "2026-10-11",
+      "originalSourceUrl": "https://supermercado.primato.com.br/loja/produto/m/chocottone-bauducco-450g-maxi-pacoquita-38750",
+      "status": "review-gap",
+      "reviews": [],
+      "gap": "No firsthand tasting review verified for Bauducco Chocottone Paçoquita 2026 after Portuguese-language searches. Retailer descriptions and launch copy were excluded, as were Havanna’s different Paçoquita panettone.",
+      "queries": [
+        "\"Chocottone Paçoquita\" \"provei\"",
+        "\"chocottone\" \"paçoquita\" resenha sabor"
+      ],
+      "checkedSources": [
+        "https://supermercado.primato.com.br/loja/produto/m/chocottone-bauducco-450g-maxi-pacoquita-38750",
+        "https://grandesnomesdapropaganda.com.br/lancamentos-de-mercado/casa-bauducco-anuncia-a-chegada-do-natal/",
+        "https://gkpb.com.br/196645/bauducco-chocottone-pacoquita/",
+        "https://marcapop.com.br/panetones-para-o-natal-2026-confira-os-lancamentos-apresentados-no-salao-do-panetone/"
+      ]
+    },
+    {
+      "pinId": 7012,
+      "title": "Voodoo Ranger Sweet Ride Juicy IPA Launches in United States",
+      "checkedOn": "2026-10-11",
+      "originalSourceUrl": "https://www.prnewswire.com/news-releases/voodoo-ranger-revs-up-to-announce-sweet-ride-juicy-ipa-302653926.html",
+      "reviews": [
+        {
+          "url": "https://www.beeradvocate.com/beer/profile/192/778452/",
+          "title": "Peach63 — Sweet Ride tasting (BeerAdvocate)",
+          "quote": "Taste follows nose: papaya, mango, orange.",
+          "publishedDate": "2026-07-26"
+        }
+      ],
+      "scope": "Exact Sweet Ride IPA; a subjective customer tasting, not a measured seven-axis profile.",
+      "status": "review-added",
+      "checkedSources": [
+        "https://www.beeradvocate.com/beer/profile/192/778452/"
+      ]
+    },
+    {
+      "pinId": 7013,
+      "title": "GREY GOOSE Berry Rouge Launches in United States",
+      "checkedOn": "2026-10-11",
+      "originalSourceUrl": "https://www.prnewswire.com/news-releases/introducing-grey-goose-berry-rouge-a-new-flavored-vodka-and-a-fresh-way-to-enjoy-berries-302670505.html",
+      "reviews": [
+        {
+          "url": "https://www.besttastingspirits.com/review-grey-goose-berry-rouge/",
+          "title": "Jeff Ellingson — Grey Goose Berry Rouge (Best Tasting Spirits)",
+          "quote": "The sweet strawberry and blueberry jam entry has a soft creamy mouth feel.",
+          "publishedDate": "2026-01-26"
+        }
+      ],
+      "scope": "Exact Berry Rouge vodka tasted by the reviewer.",
+      "status": "review-added",
+      "checkedSources": [
+        "https://www.besttastingspirits.com/review-grey-goose-berry-rouge/"
+      ]
+    },
+    {
+      "pinId": 7014,
+      "title": "High Noon Transfusion Vodka Seltzer Launches in United States",
+      "checkedOn": "2026-10-11",
+      "originalSourceUrl": "https://www.prnewswire.com/news-releases/high-noon-tees-up-its-first-limited-flavor-drop-meet-high-noon-transfusion-vodka-seltzer-302756411.html",
+      "reviews": [
+        {
+          "url": "https://www.target.com/p/-/A-95047225",
+          "title": "AF — High Noon Transfusion customer tasting (Target)",
+          "quote": "If you like grape, lime, and a touch of ginger flavor, this is for you.",
+          "publishedDate": "2026-05-21"
+        }
+      ],
+      "scope": "Exact vodka Transfusion flavor; customer review, not Target’s product description.",
+      "status": "review-added",
+      "checkedSources": [
+        "https://www.target.com/p/-/A-95047225"
+      ]
+    },
+    {
+      "pinId": 7015,
+      "title": "Carling Black Label (UK 2026) Launches in United Kingdom",
+      "checkedOn": "2026-10-11",
+      "originalSourceUrl": "https://www.molsoncoors.com/ca/UKandIreland/news/carling-launches-black-label-new-beer-revives-iconic-name-uk-market",
+      "reviews": [
+        {
+          "url": "https://www.andysbeerreviews.com/2026/04/carling-black-label-review-uk-return.html",
+          "title": "Andy — Carling Black Label UK return tasting",
+          "quote": "A slightly fuller body, a noticeable malt presence, and an earthy bitterness that gives it a bit of backbone.",
+          "publishedDate": "2026-04-29"
+        }
+      ],
+      "scope": "UK 2026 4.7% relaunch; not the South African or US product.",
+      "status": "review-added",
+      "checkedSources": [
+        "https://www.andysbeerreviews.com/2026/04/carling-black-label-review-uk-return.html"
+      ]
+    },
+    {
+      "pinId": 7017,
+      "title": "2026 Bourbon County Brand Apple Crisp Stout Releases November 27",
+      "checkedOn": "2026-10-11",
+      "originalSourceUrl": "https://www.gooseisland.com/2026-bourbon-county-brand-apple-crisp-stout",
+      "status": "review-gap",
+      "reviews": [],
+      "gap": "No firsthand tasting review verified for the 2026 Apple Crisp Stout ahead of its November 27 release. Published brewer notes and lineup previews remain the basis of this estimate.",
+      "queries": [
+        "\"2026\" \"Bourbon County\" \"Apple Crisp\" \"tasted\""
+      ],
+      "checkedSources": [
+        "https://www.gooseisland.com/2026-bourbon-county-brand-apple-crisp-stout"
+      ]
+    },
+    {
+      "pinId": 7018,
+      "title": "2026 Bourbon County Brand Triple Oak Barleywine Releases November 27",
+      "checkedOn": "2026-10-11",
+      "originalSourceUrl": "https://www.gooseisland.com/2026-bourbon-county-brand-triple-oak-barleywine",
+      "status": "review-gap",
+      "reviews": [],
+      "gap": "No firsthand tasting review verified for the 2026 Triple Oak Barleywine ahead of its November 27 release. Published brewer notes and lineup previews remain the basis of this estimate.",
+      "queries": [
+        "\"2026\" \"Bourbon County\" \"Triple Oak\" \"tasting\""
+      ],
+      "checkedSources": [
+        "https://www.gooseisland.com/2026-bourbon-county-brand-triple-oak-barleywine"
+      ]
+    },
+    {
+      "pinId": 7626,
+      "title": "Arán Bakery Wins Blas na hÉireann 2026 Supreme Champion Again",
+      "checkedOn": "2026-10-11",
+      "originalSourceUrl": "https://www.irishfoodawards.com/awards-presentation-timings/",
+      "status": "review-gap",
+      "reviews": [],
+      "gap": "No descriptive firsthand tasting review verified for the award-winning 80% spelt sourdough. General bakery reviews and praise of its spelt bread lack flavor detail; other Arán bakeries and other loaves were excluded.",
+      "queries": [
+        "\"Arán\" \"spelt\" bread review taste"
+      ],
+      "checkedSources": [
+        "https://www.irishfoodawards.com/awards-presentation-timings/",
+        "https://www.irishtimes.com/food/2026/10/02/aran-bakery-in-kilkenny-takes-top-blas-na-heireann-award-for-second-time/",
+        "https://www.rte.ie/lifestyle/food/2026/1002/1593685-kilkenny-bakery-makes-history-at-2026-blas-na-heireann-awards/",
+        "https://www.tripadvisor.co.uk/Restaurant_Review-g186616-d17676594-Reviews-Aran_Artisan_Bakery_Bistro-Kilkenny_County_Kilkenny.html"
+      ]
+    },
+    {
+      "pinId": 7638,
+      "title": "Cass Zero Named Top Non-Alcoholic Beer in Korea for a Second Year",
+      "checkedOn": "2026-10-11",
+      "originalSourceUrl": "https://www.koreatimes.co.kr/business/companies/20260903/cass-sweeps-2026-brand-awards-with-triple-win",
+      "reviews": [
+        {
+          "url": "https://soberwave.com/카스-제로-cass-zero-무알콜-맥주-리뷰/",
+          "title": "SoberWave — Cass Zero 0.00% review",
+          "quote": null,
+          "publishedDate": "2026-04-17"
+        }
+      ],
+      "scope": "Cass All Zero 0.00% product reviewed in 2026, not the older Cass 0.0 formulation. Review link verified through indexed publisher content; full text became inaccessible during recheck, so no excerpt is reproduced.",
+      "status": "review-added",
+      "checkedSources": [
+        "https://soberwave.com/카스-제로-cass-zero-무알콜-맥주-리뷰/"
+      ]
+    },
+    {
+      "pinId": 7658,
+      "title": "Nongfu Spring Oriental Leaf Jasmine Green Tea",
+      "checkedOn": "2026-10-11",
+      "originalSourceUrl": "https://www.nongfuspring.com/mobile/goods/detail-all.html?id=1&pid=2",
+      "reviews": [
+        {
+          "url": "https://www.weee.com/en/social/video/379051",
+          "title": "Kaོren📿 — Oriental Leaf jasmine tea tasting (Weee!)",
+          "quote": "a light flavor, a rich tea aroma, and no cloying sweetness",
+          "publishedDate": "2026-06-11"
+        }
+      ],
+      "scope": "Same unsweetened jasmine tea family in a 900 ml bottle, not the listed 500 ml US pack. Weee Ambassador account; perceived sweetness does not imply added sugar.",
+      "status": "review-added",
+      "checkedSources": [
+        "https://www.weee.com/en/social/video/379051"
+      ]
+    },
+    {
+      "pinId": 7659,
+      "title": "CHI FOREST Lychee Fizzy Sparkling Water",
+      "checkedOn": "2026-10-11",
+      "originalSourceUrl": "https://www.chiforest.com/lychee",
+      "reviews": [
+        {
+          "url": "https://helloasia.co.za/products/chi-forest-sugar-free-sparkling-water-lychee-fizzy-330ml",
+          "title": "Michelle — CHI FOREST Lychee Fizzy tasting (HelloAsia!)",
+          "quote": "Doesn't taste of artificial sweeteners at all like some sugar free drinks do. Quite fizzy!",
+          "publishedDate": null
+        }
+      ],
+      "scope": "Lychee Fizzy 330 ml can customer tasting, not the retailer’s response or a different CHI FOREST flavor.",
+      "status": "review-added",
+      "checkedSources": [
+        "https://helloasia.co.za/products/chi-forest-sugar-free-sparkling-water-lychee-fizzy-330ml"
+      ]
+    },
+    {
+      "pinId": 7661,
+      "title": "Jia Duo Bao Canned Herbal Tea",
+      "checkedOn": "2026-10-11",
+      "originalSourceUrl": "https://tching.com/2013/09/heard-of-this-chinese-tisane-beverage/",
+      "reviews": [
+        {
+          "url": "https://tching.com/2013/09/heard-of-this-chinese-tisane-beverage/",
+          "title": "Ifang Hsieh — Jia Duo Bao herbal tea (T Ching)",
+          "quote": "with mesona and Chinese licorice producing the dominant flavors.",
+          "publishedDate": null
+        }
+      ],
+      "scope": "Historical Jia Duo Bao canned herbal tea tasting; not a current-pack laboratory measurement.",
+      "status": "review-added",
+      "checkedSources": [
+        "https://tching.com/2013/09/heard-of-this-chinese-tisane-beverage/"
+      ]
+    },
+    {
+      "pinId": 7662,
+      "title": "Wahaha A&D Milk Drink",
+      "checkedOn": "2026-10-11",
+      "originalSourceUrl": "https://www.sayweee.com/th/social/video/116974",
+      "reviews": [
+        {
+          "url": "https://www.sayweee.com/en/social/video/116974",
+          "title": "小薇 — Wahaha AD milk tasting (Weee!)",
+          "quote": "Sour and sweet, it can also relieve the spiciness when eating spicy hot pot!",
+          "publishedDate": "2024-05-01"
+        }
+      ],
+      "scope": "Wahaha AD calcium milk customer account on Weee!; a Weee Ambassador review. Its spicy-food comment is the reviewer’s subjective experience.",
+      "status": "review-added",
+      "checkedSources": [
+        "https://www.sayweee.com/en/social/video/116974"
+      ]
+    }
+  ],
+  "existingReviewsPreserved": [
+    {
+      "pinId": 3200,
+      "status": "existing-reviews-preserved",
+      "reviews": [
+        {
+          "url": "https://sporked.com/article/reeses-oreo-cups-review/",
+          "quote": "The cookie crumble is a fantastic addition both texturally and flavor-wise to the Reese's Cup.",
+          "title": "We Got an Early Taste of Reese's Oreo Cups (Sporked)",
+          "publishedDate": "2025-08-04"
+        },
+        {
+          "url": "https://www.theimpulsivebuy.com/wordpress/?p=72050",
+          "quote": "The white creme doesn't taste much like an Oreo's center, but it adds extra sweetness to the cup.",
+          "title": "REVIEW: Reese's Oreo Cups (The Impulsive Buy)",
+          "publishedDate": "2025-09-08"
+        }
+      ]
+    },
+    {
+      "pinId": 3397,
+      "status": "existing-reviews-preserved",
+      "reviews": [
+        {
+          "url": "https://www.thedailymeal.com/eat/butterfinger-new-recipe/121318",
+          "quote": "more chocolaty and peanut buttery [staffers' verdict on the new bar versus the original]",
+          "title": "Butterfinger Has A New Recipe, But Still Doesn't Contain Any Real Chocolate (The Daily Meal)",
+          "publishedDate": "2018-12-13"
+        },
+        {
+          "url": "https://www.tastingtable.com/1751556/what-happened-to-butterfinger-old-vs-new-recipe",
+          "quote": "the taste of richer chocolate and roasted peanuts is apparent immediately",
+          "title": "Here's What Happened To Butterfinger's Classic Recipe (Tasting Table)",
+          "publishedDate": "2025-01-05"
+        }
+      ]
+    },
+    {
+      "pinId": 3402,
+      "status": "existing-reviews-preserved",
+      "reviews": [
+        {
+          "url": "https://www.dissapore.com/spesa/nutella-biscuits-vs-baiocchi-prova-dassaggio/",
+          "quote": "il finale (dolce) è ammansito dalla salinità [the sweet finish is tamed by saltiness]",
+          "title": "Nutella Biscuits vs Baiocchi: Prova d'Assaggio (Dissapore)",
+          "publishedDate": "2019-11-04"
+        },
+        {
+          "url": "https://www.scattidigusto.it/2019/11/05/nutella-biscuits-allassaggio-il-cuore-di-nutella-vince-sempre/",
+          "quote": "decisamente dolce [decidedly sweet]; cuore cremoso di Nutella [creamy Nutella heart]",
+          "title": "Nutella Biscuits. All'assaggio il cuore di Nutella vince sempre (Scatti di Gusto)",
+          "publishedDate": "2019-11-05"
+        }
+      ]
+    },
+    {
+      "pinId": 3405,
+      "status": "existing-reviews-preserved",
+      "reviews": [
+        {
+          "url": "https://www.dissapore.com/spesa/gelato-ferrero-rocher-vs-raffaello-prova-dassaggio/",
+          "quote": "La copertura è abbastanza spessa, la granella generosa [the coating is fairly thick, the hazelnut pieces generous]",
+          "title": "Gelato Ferrero Rocher vs Raffaello: Prova d'assaggio (Dissapore)",
+          "publishedDate": "2021-04-25"
+        },
+        {
+          "url": "https://sohoblack.wordpress.com/2025/08/24/ferrero-rocher-classic-ice-cream-review-5-5/",
+          "quote": "the hazelnut ganache softens and you get a huge amount of flavour from it",
+          "title": "Ferrero Rocher Classic Ice Cream Review. 5/5 (Soho Black)",
+          "publishedDate": "2025-08-24"
+        }
+      ]
+    },
+    {
+      "pinId": 3425,
+      "status": "existing-reviews-preserved",
+      "reviews": [
+        {
+          "url": "https://www.dissapore.com/spesa/come-la-nutella-plant-based-recensione/",
+          "quote": "dolcezza sfacciata, grassa e persistente [brazen, rich and lingering sweetness]; una lievissima nota di cece in retrolfazione [a faint chickpea note on the retronasal finish]",
+          "title": "Com'è la Nutella Plant Based: recensione e confronto con la Nutella classica (Dissapore)",
+          "publishedDate": "2024-09-08"
+        },
+        {
+          "url": "https://www.veganfoodandliving.com/?p=114863",
+          "quote": "There's a deeper, nuttier base beneath the rich cocoa flavour, and despite the reduced sugar, it tastes incredibly sweet.",
+          "title": "We tried the new Nutella Plant-Based - Here's how it compares to cheaper spreads (Vegan Food & Living)",
+          "publishedDate": "2025-05-28"
+        }
+      ]
+    },
+    {
+      "pinId": 3430,
+      "status": "existing-reviews-preserved",
+      "reviews": [
+        {
+          "url": "https://www.foodstufffinds.co.uk/2025/04/new-tic-tac-two-raspberry-lemon.html?m=1",
+          "quote": "The flavour was a little more sour than I expected, with the lemon shining through first.",
+          "title": "New Tic Tac Two Raspberry Lemon (Morrisons) By @Cinabar (Foodstuff Finds)",
+          "publishedDate": "2025-04-29"
+        }
+      ]
+    },
+    {
+      "pinId": 3440,
+      "status": "existing-reviews-preserved",
+      "reviews": [
+        {
+          "url": "https://sporked.com/article/dr-pepper-tic-tacs-review/",
+          "quote": "start off sweet... a really authentic, unmistakable Dr Pepper flavor",
+          "title": "Our Honest (and Early) Review of Dr. Pepper Tic Tacs (Sporked)",
+          "publishedDate": "2025-06-04"
+        },
+        {
+          "url": "https://www.theimpulsivebuy.com/wordpress/?p=76517",
+          "quote": "just tastes like a really watered-down Dr Pepper knockoff... bitter medicine",
+          "title": "Dr Pepper Tic Tac Review (The Impulsive Buy)",
+          "publishedDate": "2026-03-30"
+        }
+      ]
+    },
+    {
+      "pinId": 3452,
+      "status": "existing-reviews-preserved",
+      "reviews": [
+        {
+          "url": "https://www.theimpulsivebuy.com/wordpress/2026/05/05/nutella-peanut-spread-review/",
+          "quote": "The initial hit of flavor is sweetness and peanuts... hazelnut... very much an afterthought, or at least after-taste.",
+          "title": "REVIEW: Nutella Peanut Spread (The Impulsive Buy)",
+          "publishedDate": "2026-05-05"
+        },
+        {
+          "url": "https://eatbook.sg/nutella-peanut-cocoa/",
+          "quote": "It is less sweet than regular Nutella, with a nuttier flavour that makes the spread taste more balanced overall.",
+          "title": "We Tried Nutella's New Peanut Cocoa Spread - Is It Worth The $11.95 Price Tag? (Eatbook.sg)",
+          "publishedDate": "2026-08-24"
+        }
+      ]
+    },
+    {
+      "pinId": 4482,
+      "status": "existing-reviews-preserved",
+      "reviews": [
+        {
+          "url": "https://thedailypour.com/?p=131895",
+          "quote": "Rich and velvety, with dark chocolate-covered cherries, vanilla, and a sharp tannin presence",
+          "title": "Goose Island Bourbon County Stout 2025 Lineup, Ranked and Reviewed (2025 Original Stout)",
+          "publishedDate": "2025-11-17"
+        },
+        {
+          "url": "https://www.insidehook.com/beer/we-tasted-and-ranked-every-2025-goose-island-bourbon-county-stout-variant/amp",
+          "quote": "features some really nice notes of cherry and chocolate, with a hint of coffee",
+          "title": "We Tasted and Ranked Every 2025 Goose Island Bourbon County Stout Variant (Original Stout)",
+          "publishedDate": "2025-10-30"
+        }
+      ]
+    },
+    {
+      "pinId": 4484,
+      "status": "existing-reviews-preserved",
+      "reviews": [
+        {
+          "url": "https://thedailypour.com/?p=131895",
+          "quote": "Rich and velvety, with dark chocolate-covered cherries, vanilla, and a sharp tannin presence",
+          "title": "Goose Island Bourbon County Stout 2025 Lineup, Ranked and Reviewed (2025 vintage; 2026 not yet released)",
+          "publishedDate": "2025-11-17"
+        },
+        {
+          "url": "https://www.insidehook.com/beer/we-tasted-and-ranked-every-2025-goose-island-bourbon-county-stout-variant/amp",
+          "quote": "features some really nice notes of cherry and chocolate, with a hint of coffee",
+          "title": "We Tasted and Ranked Every 2025 Goose Island Bourbon County Stout Variant (2025 vintage)",
+          "publishedDate": "2025-10-30"
+        }
+      ]
+    },
+    {
+      "pinId": 4486,
+      "status": "existing-reviews-preserved",
+      "reviews": [
+        {
+          "url": "https://www.pressdemocrat.com/2026/03/20/just-like-christmas-fans-finally-get-a-taste-of-russian-river-brewing-co-s-pliny-the-younger/",
+          "quote": "dry bitterness that can pack a punch on the palate",
+          "title": "'Just like Christmas': Beer fans finally get a taste of Russian River Brewing Co.'s Pliny the Younger (2026)",
+          "publishedDate": "2026-03-20"
+        },
+        {
+          "url": "https://thefullpint.com/beer-reviews/pliny-the-younger-tasting-notes-2013/",
+          "quote": "Huge pine, grapefruit. Dry malt. A little malt sweetness as well. Finishes long and bitter. Lingers.",
+          "title": "Pliny The Younger Tasting Notes (2013 vintage)",
+          "publishedDate": "2013-02-18"
+        }
+      ]
+    },
+    {
+      "pinId": 4488,
+      "status": "existing-reviews-preserved",
+      "reviews": [
+        {
+          "url": "https://www.pressdemocrat.com/2026/03/20/just-like-christmas-fans-finally-get-a-taste-of-russian-river-brewing-co-s-pliny-the-younger/",
+          "quote": "dry bitterness that can pack a punch on the palate",
+          "title": "'Just like Christmas': Beer fans finally get a taste of Russian River Brewing Co.'s Pliny the Younger (2026 vintage)",
+          "publishedDate": "2026-03-20"
+        },
+        {
+          "url": "https://thefullpint.com/beer-reviews/pliny-the-younger-tasting-notes-2013/",
+          "quote": "Huge pine, grapefruit. Dry malt. A little malt sweetness as well. Finishes long and bitter. Lingers.",
+          "title": "Pliny The Younger Tasting Notes (2013 vintage)",
+          "publishedDate": "2013-02-18"
+        }
+      ]
+    },
+    {
+      "pinId": 4496,
+      "status": "existing-reviews-preserved",
+      "reviews": [
+        {
+          "url": "https://www.beerandbrewing.com/review/three-floyds-brewing-co-dark-lord-2022-1658769495",
+          "quote": "Big bittersweet chocolate aroma with light coffee, black cherries, tobacco, leather, plums.",
+          "title": "Review: Dark Lord 2022 | Three Floyds Brewing Co | Craft Beer & Brewing (2022 vintage)",
+          "publishedDate": "2022-07-25"
+        },
+        {
+          "url": "https://kaedrin.com/beerblog/?p=424",
+          "quote": "Taste is super sweet, sugary, some rich caramel, lots of sugar, maybe brown sugar, very sweet",
+          "title": "Dark Lord - Kaedrin Beer Blog (2012 vintage)",
+          "publishedDate": "2014-02-04"
+        }
+      ]
+    },
+    {
+      "pinId": 4503,
+      "status": "existing-reviews-preserved",
+      "reviews": [
+        {
+          "url": "https://whiskeyreviewer.com/2026/09/sneak-peek-elmer-t-lee-40th-anniversary-bourbon-review-092026/",
+          "quote": "I found the nose led with butterscotch and caramel, underscored by a current of clove and oak shavings. It's like liquid cinnamon toast, but with more bite",
+          "title": "Sneak Peek: Elmer T. Lee 40th Anniversary Bourbon Review (rated A-)",
+          "publishedDate": null
+        }
+      ]
+    },
+    {
+      "pinId": 4505,
+      "status": "existing-reviews-preserved",
+      "reviews": [
+        {
+          "url": "https://beerandbrewing.com/review/darkness-2017",
+          "quote": "This is a well-balanced imperial stout on the sweeter side. Hops bitterness is there, but well hidden to just provide balance.",
+          "title": "Review: Darkness (2017) | Surly | Craft Beer & Brewing (2017 vintage)",
+          "publishedDate": "2018-02-20"
+        },
+        {
+          "url": "https://vinepair.com/review/review-surly-brewing-darkness-2017/",
+          "quote": "a flavor that starts out sweet and silky then transforms into chocolate and savory with a clean finish",
+          "title": "Surly Brewing Darkness 2017 Review & Rating | VinePair (2017 vintage)",
+          "publishedDate": "2017-12-13"
+        }
+      ]
+    },
+    {
+      "pinId": 4506,
+      "status": "existing-reviews-preserved",
+      "reviews": [
+        {
+          "url": "https://www.guysdrinkingbeer.com/review-great-lakes-christmas-ale/",
+          "quote": "aromas of ginger, cinnamon, cardamom seed, allspice and honey",
+          "title": "\"12 Beers of Christmas\" Review: Great Lakes Christmas Ale (2010 vintage)",
+          "publishedDate": "2010-12-18"
+        },
+        {
+          "url": "https://thefullpint.com/2008/12/18/review-great-lakes-christmas-ale",
+          "quote": "Lots of cloves, cinnamon, nutmeg, all spice, ginger.",
+          "title": "Review - Great Lakes Christmas Ale (2008 vintage)",
+          "publishedDate": "2008-12-18"
+        },
+        {
+          "url": "https://bevx.com/bow-detail/?id=443",
+          "quote": "Rich and mildly spicy with warming malt notes and just enough hops to add a crisp edge.",
+          "title": "Great Lakes Christmas Ale (USA) - Beverage of the Week, BevX (vintage not stated)",
+          "publishedDate": null
+        }
+      ]
+    },
+    {
+      "pinId": 4612,
+      "status": "existing-reviews-preserved",
+      "reviews": [
+        {
+          "url": "http://bevinfogroup.com/2025/11/21/tasting-2025-beaujolais-nouveau-wine-day-review-franck-duboeuf/",
+          "quote": "fresh black cherries throughout the nose and palate",
+          "title": "Tasting the 2025 Beaujolais Nouveau Wines (2025 vintage)",
+          "publishedDate": "2025-11-21"
+        },
+        {
+          "url": "https://www.gilbertgaillard.com/en/magazine/discovery/beaujolais-2025-a-vintage-focused-on-quality-and-pleasure",
+          "quote": "the vast majority impressed with their brilliance, pure fruit, and aromatic precision",
+          "title": "Beaujolais 2025: a vintage focused on quality and pleasure (Gilbert & Gaillard, 2025 vintage)",
+          "publishedDate": "2025-10-29"
+        }
+      ]
+    },
+    {
+      "pinId": 5609,
+      "status": "existing-reviews-preserved",
+      "reviews": [
+        {
+          "url": "https://www.lemon8-app.com/@costcobuys/7685017627731001886?region=us",
+          "quote": "The addition of honey gives a subtle sweetness that perfectly balances the earthy caramel notes from the Biscoff biscuit.",
+          "title": "Biscoff Toblerone Truffles at Costco: A Delicious Milk Chocolate Treat (Lemon8 @costcobuys)",
+          "publishedDate": null
+        }
+      ]
+    },
+    {
+      "pinId": 5619,
+      "status": "existing-reviews-preserved",
+      "reviews": [
+        {
+          "url": "https://shareview.jp/item/detail/50204",
+          "quote": "ショコラクリームは油脂感が抑えめで食べやすく [chocolate cream is light on fattiness, easy to eat] … クッキー生地はサクホロ食感でココア風味です。なめらかで口当たりが良いです。 [crisp-crumbly cocoa-flavoured cookie; smooth cream]",
+          "title": "みんなのレビュー：「森永製菓 ブラックムーンガレットサンド」の評判・口コミ｜シェアビュー",
+          "publishedDate": "2026-10-10"
+        }
+      ]
+    },
+    {
+      "pinId": 5621,
+      "status": "existing-reviews-preserved",
+      "reviews": [
+        {
+          "url": "https://kstyle.com/article.ksn?articleNo=2284648",
+          "quote": "タレにしっかり漬け込まれた牛肉とジューシーな脂のうま味がじわっと広がり、野菜のやさしい甘みがベースを支えています [marinated beef and juicy fat umami, gentle vegetable sweetness] … 後味をキュッと引き締めるピリッとしたアクセントがあるおかげで、濃いめの味付けなのに全然飽きがきません [peppery accent in the aftertaste keeps the strong seasoning from tiring]",
+          "title": "コンビニで新発売の「じゃがりこ プルコギ味」を実食レビュー！ピリ辛でウマすぎる…韓国ネオン風パッケージが目印 - Kstyle",
+          "publishedDate": "2026-09-30"
+        },
+        {
+          "url": "https://shareview.jp/item/detail/64408",
+          "quote": "プルコギのタレの風味がしっかりと感じられ…後からじわじわと辛みがやってくる感じ…いつもより油脂感が強め [clear bulgogi-sauce flavour, creeping spiciness, oilier than usual]",
+          "title": "みんなのレビュー：「カルビー じゃがりこ プルコギ味」の評判・口コミ｜シェアビュー",
+          "publishedDate": "2026-09-29"
+        }
+      ]
+    },
+    {
+      "pinId": 5635,
+      "status": "existing-reviews-preserved",
+      "reviews": [
+        {
+          "url": "https://sporked.com/?p=78526",
+          "quote": "these are very well balance between the acidic flavors and the sweet … an excellent gummy texture that isn’t too firm, but isn’t too chewy either",
+          "title": "We Tried Skittles' New Crystal Gummies (And They Rival Nerds)",
+          "publishedDate": "2026-09-29"
+        }
+      ]
+    },
+    {
+      "pinId": 5637,
+      "status": "existing-reviews-preserved",
+      "reviews": [
+        {
+          "url": "https://www.theimpulsivebuy.com/wordpress/2026/08/25/hersheys-salted-caramel-creme-and-affogato-bars-review/",
+          "quote": "the vanilla crème mellows the bitter-edged caramel … the entire bar pops with saltiness",
+          "title": "REVIEW: Hershey's Salted Caramel Creme and Affogato Bars",
+          "publishedDate": "2026-08-25"
+        },
+        {
+          "url": "https://www.theomnicosm.com/snackology-review-hersheys-creme-bars/",
+          "quote": "doesn't deliver anywhere near the salty punch",
+          "title": "Review: Hershey's Creme Bars add a touch of luxury to the classic chocolate bar | Snackology",
+          "publishedDate": "2026-09-14"
+        },
+        {
+          "url": "https://www.thetakeout.com/2261999/hersheys-chocolate-bar-flavor-ranking/",
+          "quote": "The caramel has a light touch of espresso flavor and retains a lot of its sugary sweetness.",
+          "title": "13 Hershey's Chocolate Bar Flavors, Ranked From Worst To Best",
+          "publishedDate": "2026-10-08"
+        }
+      ]
+    },
+    {
+      "pinId": 5639,
+      "status": "existing-reviews-preserved",
+      "reviews": [
+        {
+          "url": "https://www.tastingtable.com/2252347/sparkables-girl-scout-cookie-review/",
+          "quote": "Cinnamon is very apparent, and you'll get a small crunch from chocolate chips and sprinkles. Additionally, the cookies aren't too sweet.",
+          "title": "Girl Scouts' New Allergy-Friendly Cookie Packs A Lot Of Flavor",
+          "publishedDate": "2026-09-08"
+        },
+        {
+          "url": "https://sporked.com/article/we-tried-the-new-girl-scouts-sparkables-cookie/",
+          "quote": "spot-on sweetness level … nostalgic hint of cinnamon",
+          "title": "We Tried The New Girl Scouts Sparkables Cookie",
+          "publishedDate": "2026-09-11"
+        },
+        {
+          "url": "https://www.foodnetwork.com/fn-dish/news/partake-allergen-friendly-girl-scout-cookies",
+          "quote": "The sprinkles and semi-sweet chocolate aren't too overwhelming",
+          "title": "The Newest Girl Scout Cookie Is Gluten-Free and Allergy-Friendly",
+          "publishedDate": "2026-09-08"
+        }
+      ]
+    },
+    {
+      "pinId": 5722,
+      "status": "existing-reviews-preserved",
+      "reviews": [
+        {
+          "url": "https://news.qq.com/rain/a/20260916A06W0I00",
+          "quote": "吃着味道太淡了，就有一点点儿椒盐儿味 [tastes too bland, only a faint salt-and-pepper note] … 有一种从小爱吃的甜粽子不小心蘸了盐的感觉 [like a sweet zongzi accidentally dipped in salt]",
+          "title": "KFC炸鸡味的奥利奥？太歹毒了 - 腾讯新闻",
+          "publishedDate": "2026-09-16"
+        }
+      ]
+    },
+    {
+      "pinId": 5727,
+      "status": "existing-reviews-preserved",
+      "reviews": [
+        {
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=whiskey&no=1807419",
+          "quote": "황치즈향만 나는 설탕 범벅 단맛에 기름지고 느끼해서 몇입 먹다 그대로 [only yellow-cheese scent, sugar-heavy sweetness, greasy; quit after a few bites]",
+          "title": "포카칩 황치즈 후기 (DCinside)",
+          "publishedDate": "2026-10-05"
+        },
+        {
+          "url": "https://bbs.ruliweb.com/hobby/board/300117/read/30701602",
+          "quote": "포카칩 황치즈는 치즈향나는 허니버터칩이네요 [the Poca Chip yellow cheese is a Honey Butter Chip with a cheese scent]",
+          "title": "[신제품] 해태 버터링 에쉬레 버터 / 오리온 포카칩 황치즈맛 (Ruliweb)",
+          "publishedDate": "2026-09-13"
+        },
+        {
+          "url": "https://bbs.ruliweb.com/hobby/board/300117/read/30702436",
+          "quote": "달달하니 맛있긴 한데 먹다보면 좀 질리는 느낌 [sweet and tasty but gets cloying]",
+          "title": "[기타] 포카칩 황치즈맛 / 치토스 US오리진 치즈맛 (Ruliweb)",
+          "publishedDate": "2026-10-10"
+        },
+        {
+          "url": "https://gall.dcinside.com/board/view/?id=sweets&no=389978",
+          "quote": "황치즈가 생각보다 진한건 맞음 ... 포카칩기름이랑 황치즈 특유의 기름이랑 만나서 느글거림 [cheese stronger than expected; cloying with the chip oil]",
+          "title": "포카칩 황치즈 (DCinside)",
+          "publishedDate": "2026-09-06"
+        }
+      ]
+    },
+    {
+      "pinId": 5729,
+      "status": "existing-reviews-preserved",
+      "reviews": [
+        {
+          "url": "https://theqoo.net/square/4349115765",
+          "quote": "부드러워... 근데 진한느낌보단 연한느낌 [soft... but a light rather than rich feel]",
+          "title": "에쉬레 버터링 후기 (TheQoo)",
+          "publishedDate": "2026-09-18"
+        },
+        {
+          "url": "https://bbs.ruliweb.com/hobby/board/300117/read/30701602",
+          "quote": "에쉬레가 잘 부숴지더라구요 그만큼 조금 더 부드럽습니다 [the Échiré one crumbles easily, so it is a little softer]",
+          "title": "[신제품] 해태 버터링 에쉬레 버터 / 오리온 포카칩 황치즈맛 (Ruliweb)",
+          "publishedDate": "2026-09-13"
+        }
+      ]
+    },
+    {
+      "pinId": 5736,
+      "status": "existing-reviews-preserved",
+      "reviews": [
+        {
+          "url": "https://au.lifestyle.yahoo.com/allens-launches-chocolate-block-range-in-woolworths-coles-for-first-time-in-eight-years-230839899.html",
+          "quote": "It's like the Smarties block, but you get these tiny bits of sherbet [Block Party; food creator Russell Stuart]",
+          "title": "Allen's launches chocolate block range in Woolworths, Coles for first time in eight years - Yahoo Lifestyle Australia",
+          "publishedDate": "2026-08-30"
+        }
+      ]
+    },
+    {
+      "pinId": 7016,
+      "status": "existing-reviews-preserved",
+      "reviews": [
+        {
+          "url": "https://www.diffordsguide.com/beer-wine-spirits/12027/absolut-tabasco",
+          "quote": "A clean, tame palate quickly explodes with chili pepper flavour and heat.",
+          "title": "Absolut Tabasco (Difford's Guide)",
+          "publishedDate": "2026-02-16"
+        },
+        {
+          "url": "https://www.thetakeout.com/2089477/absolut-new-tabasco-vodka-review-bloody-mary/",
+          "quote": "Both the vinegar tang and the pepper flavor of Tabasco are there in droves.",
+          "title": "Review: Absolut Tabasco Vodka Might Just Be Your New Bloody Mary Go-To",
+          "publishedDate": "2026-01-30"
+        },
+        {
+          "url": "https://thedailypour.com/?p=141242",
+          "quote": "Cayenne pepper dominates alongside a bit of that fermentation zing that Tabasco is known for.",
+          "title": "Review: Absolut Tabasco Vodka Is a Spicy, Meme-Worthy Delight",
+          "publishedDate": "2026-02-18"
+        },
+        {
+          "url": "https://www.tastings.com/Spirits-Review/Absolut-Tabasco-Flavored-Vodka-Sweden-03-01-2026.aspx",
+          "quote": "a peppery, interesting, very long finish conveying notes of sport pepper and habanero",
+          "title": "Absolut Tabasco Flavored Vodka Sweden Spirits Review | Tastings",
+          "publishedDate": null
+        }
+      ]
+    },
+    {
+      "pinId": 7660,
+      "status": "existing-reviews-preserved",
+      "reviews": [
+        {
+          "url": "https://www.yami.com/en/show/article/1740193",
+          "quote": "It has a little tea fragrance but also has the taste of Chinese herbal medicine. The overall taste is a little sweet.",
+          "title": "爱吃的小猪 — Yami community Wanglaoji tasting (product-family review)",
+          "publishedDate": "2022-11-15"
+        },
+        {
+          "url": "https://www.reddit.com/r/tea/comments/1ir3eoi/wang_lao_ji/",
+          "quote": "It was delicious like a slightly herbal lipton iced tea.",
+          "title": "ChimaFanIndiana — Reddit canned Wanglaoji tasting (product-family review)",
+          "publishedDate": null
+        }
+      ]
+    },
+    {
+      "pinId": 7663,
+      "status": "existing-reviews-preserved",
+      "reviews": [
+        {
+          "url": "https://www.weee.com/zht/social/video/60201",
+          "quote": "smells strongly of natural coconut. Great taste and slightly sweet. Tasty and refreshing.",
+          "title": "Trang — Weee community tasting (ambassador post)",
+          "publishedDate": "2023-04-29"
+        },
+        {
+          "url": "https://www.reddit.com/r/Soda/comments/1ro2566/coconut_milk/",
+          "quote": "As for the drink, it tastes like watered down milk with just a splash of coconut",
+          "title": "fractal324 — Coconut Palm canned-version tasting",
+          "publishedDate": null
+        }
+      ]
+    },
+    {
+      "pinId": 7664,
+      "status": "existing-reviews-preserved",
+      "reviews": [
+        {
+          "url": "https://www.brandeating.com/2012/08/review-white-rabbit-milk-candy.html?hl=en",
+          "quote": "White Rabbit Candy is much like sweetened milk with just right balance of sweetness for me and a nice creaminess.",
+          "title": "Q — Brand Eating: White Rabbit original milk candy",
+          "publishedDate": "2012-08-11"
+        }
+      ]
+    },
+    {
+      "pinId": 7665,
+      "status": "existing-reviews-preserved",
+      "reviews": [
+        {
+          "url": "https://helloasia.co.za/products/white-rabbit-creamy-candy-matcha-150g",
+          "quote": "the creamy candy I've come to expect from White Rabbit candies with the added earthiness and green-tea umami from the matcha.",
+          "title": "Hylton Warburton — HelloAsia customer tasting: matcha",
+          "publishedDate": null
+        }
+      ]
+    },
+    {
+      "pinId": 7666,
+      "status": "existing-reviews-preserved",
+      "reviews": [
+        {
+          "url": "https://middleclass.sg/treats/weilong-konjac-snack-review/",
+          "quote": "The only difference was its spice level, slightly up a notch from the mala flavoured one.",
+          "title": "Songyu Goh — MiddleClass: fragrant-spicy konjac (affiliate links)",
+          "publishedDate": "2020-12-04"
+        }
+      ]
+    },
+    {
+      "pinId": 7667,
+      "status": "existing-reviews-preserved",
+      "reviews": [
+        {
+          "url": "https://quirkspace.com/jsfr/?p=1623",
+          "quote": "You can see that they are frosted with sweet which gives a third flavor",
+          "title": "Boo — Japanese Snack Food Review: sugar-frosted Shelly Senbei",
+          "publishedDate": "2011-07-30"
+        }
+      ]
+    },
+    {
+      "pinId": 7668,
+      "status": "existing-reviews-preserved",
+      "reviews": [
+        {
+          "url": "https://seedguysunseeds.blogspot.com/2020/10/review-of-chacha-natural-roasted.html",
+          "quote": "There are delicious notes of smoke, and the shell has a nice roasted flavor as well as earthy undertones.",
+          "title": "Seed Guy — ChaCha natural roasted salted sunflower seeds",
+          "publishedDate": "2020-10-18"
+        }
+      ]
+    },
+    {
+      "pinId": 7669,
+      "status": "existing-reviews-preserved",
+      "reviews": [
+        {
+          "url": "https://heckinhot.com/2025/05/15/huang-fei-hong-spicy-crispy-peanuts/",
+          "quote": "Quick Flavor Notes: Chili flake, peanut, numbing, metallic",
+          "title": "Heckin’ Hot — Huang Fei Hong spicy crispy peanuts",
+          "publishedDate": "2025-05-15"
+        }
+      ]
+    },
+    {
+      "pinId": 7670,
+      "status": "existing-reviews-preserved",
+      "reviews": [
+        {
+          "url": "https://www.bonappetit.com/story/haw-flakes",
+          "quote": "each thin disc packs a wallop of extremely craveable jammy-fruity-chewy-crumbliness.",
+          "title": "MacKenzie Chung Fegan — Bon Appétit: haw flakes (category tasting)",
+          "publishedDate": "2020-04-02"
+        }
+      ]
+    }
+  ],
+  "publicVerification": [
+    {
+      "pinId": 3200,
+      "title": "Reese's Oreo Cup and Oreo Reese's Cookie Go on Sale",
+      "url": "https://www.chronopin.com/pin/3200/reese-s-oreo-cup-and-oreo-reese-s-cookie-go-on-sale",
+      "status": "existing-reviews-preserved",
+      "reviewCount": 2,
+      "publicRadarVerified": true,
+      "publicReviewLinksAndExcerptsVerified": true,
+      "visibleGapVerified": false
+    },
+    {
+      "pinId": 3397,
+      "title": "Ferrara Launches the 'Better Butterfinger' With a New Recipe",
+      "url": "https://www.chronopin.com/pin/3397/ferrara-launches-the-better-butterfinger-with-a-new-recipe",
+      "status": "existing-reviews-preserved",
+      "reviewCount": 2,
+      "publicRadarVerified": true,
+      "publicReviewLinksAndExcerptsVerified": true,
+      "visibleGapVerified": false
+    },
+    {
+      "pinId": 3402,
+      "title": "Nutella Biscuits Go on Sale in Italy",
+      "url": "https://www.chronopin.com/pin/3402/nutella-biscuits-go-on-sale-in-italy",
+      "status": "existing-reviews-preserved",
+      "reviewCount": 2,
+      "publicRadarVerified": true,
+      "publicReviewLinksAndExcerptsVerified": true,
+      "visibleGapVerified": false
+    },
+    {
+      "pinId": 3405,
+      "title": "Ferrero Unveils Its First Ferrero Rocher and Raffaello Ice Creams",
+      "url": "https://www.chronopin.com/pin/3405/ferrero-unveils-its-first-ferrero-rocher-and-raffaello-ice-creams",
+      "status": "existing-reviews-preserved",
+      "reviewCount": 2,
+      "publicRadarVerified": true,
+      "publicReviewLinksAndExcerptsVerified": true,
+      "visibleGapVerified": false
+    },
+    {
+      "pinId": 3410,
+      "title": "Ferrero Rocher and Raffaello Chocolate Bars Hit UK Shelves",
+      "url": "https://www.chronopin.com/pin/3410/ferrero-rocher-and-raffaello-chocolate-bars-hit-uk-shelves",
+      "status": "review-added",
+      "reviewCount": 1,
+      "publicRadarVerified": true,
+      "publicReviewLinksAndExcerptsVerified": true,
+      "visibleGapVerified": false
+    },
+    {
+      "pinId": 3425,
+      "title": "Ferrero Launches Nutella Plant-Based",
+      "url": "https://www.chronopin.com/pin/3425/ferrero-launches-nutella-plant-based",
+      "status": "existing-reviews-preserved",
+      "reviewCount": 2,
+      "publicRadarVerified": true,
+      "publicReviewLinksAndExcerptsVerified": true,
+      "visibleGapVerified": false
+    },
+    {
+      "pinId": 3430,
+      "title": "Tic Tac Two, a Sugar-Free Two-Layer Mint, Launches Globally",
+      "url": "https://www.chronopin.com/pin/3430/tic-tac-two-a-sugar-free-two-layer-mint-launches-globally",
+      "status": "existing-reviews-preserved",
+      "reviewCount": 1,
+      "publicRadarVerified": true,
+      "publicReviewLinksAndExcerptsVerified": true,
+      "visibleGapVerified": false
+    },
+    {
+      "pinId": 3440,
+      "title": "Tic Tac and Dr Pepper Launch Limited-Edition Mints",
+      "url": "https://www.chronopin.com/pin/3440/tic-tac-and-dr-pepper-launch-limited-edition-mints",
+      "status": "existing-reviews-preserved",
+      "reviewCount": 2,
+      "publicRadarVerified": true,
+      "publicReviewLinksAndExcerptsVerified": true,
+      "visibleGapVerified": false
+    },
+    {
+      "pinId": 3452,
+      "title": "Nutella Peanut, the Brand's First New Flavour in 60 Years, Launches in the US",
+      "url": "https://www.chronopin.com/pin/3452/nutella-peanut-the-brand-s-first-new-flavour-in-60-years-launches-in-the-us",
+      "status": "existing-reviews-preserved",
+      "reviewCount": 2,
+      "publicRadarVerified": true,
+      "publicReviewLinksAndExcerptsVerified": true,
+      "visibleGapVerified": false
+    },
+    {
+      "pinId": 4482,
+      "title": "Goose Island's 2025 Bourbon County Stout Lineup Releases on Black Friday",
+      "url": "https://www.chronopin.com/pin/4482/goose-island-s-2025-bourbon-county-stout-lineup-releases-on-black-friday",
+      "status": "existing-reviews-preserved",
+      "reviewCount": 2,
+      "publicRadarVerified": true,
+      "publicReviewLinksAndExcerptsVerified": true,
+      "visibleGapVerified": false
+    },
+    {
+      "pinId": 4484,
+      "title": "Goose Island's 2026 Bourbon County Stout Lineup Releases on Black Friday",
+      "url": "https://www.chronopin.com/pin/4484/goose-island-s-2026-bourbon-county-stout-lineup-releases-on-black-friday",
+      "status": "existing-reviews-preserved",
+      "reviewCount": 2,
+      "publicRadarVerified": true,
+      "publicReviewLinksAndExcerptsVerified": true,
+      "visibleGapVerified": false
+    },
+    {
+      "pinId": 4486,
+      "title": "Pliny the Younger 2026 Goes on Sale at Russian River's Brewpubs",
+      "url": "https://www.chronopin.com/pin/4486/pliny-the-younger-2026-goes-on-sale-at-russian-river-s-brewpubs",
+      "status": "existing-reviews-preserved",
+      "reviewCount": 2,
+      "publicRadarVerified": true,
+      "publicReviewLinksAndExcerptsVerified": true,
+      "visibleGapVerified": false
+    },
+    {
+      "pinId": 4488,
+      "title": "Pliny the Younger 2027 Goes on Sale at Russian River's Brewpubs",
+      "url": "https://www.chronopin.com/pin/4488/pliny-the-younger-2027-goes-on-sale-at-russian-river-s-brewpubs",
+      "status": "existing-reviews-preserved",
+      "reviewCount": 2,
+      "publicRadarVerified": true,
+      "publicReviewLinksAndExcerptsVerified": true,
+      "visibleGapVerified": false
+    },
+    {
+      "pinId": 4496,
+      "title": "Dark Lord Day 2026 Releases 3 Floyds' Dark Lord Stout in Munster",
+      "url": "https://www.chronopin.com/pin/4496/dark-lord-day-2026-releases-3-floyds-dark-lord-stout-in-munster",
+      "status": "existing-reviews-preserved",
+      "reviewCount": 2,
+      "publicRadarVerified": true,
+      "publicReviewLinksAndExcerptsVerified": true,
+      "visibleGapVerified": false
+    },
+    {
+      "pinId": 4503,
+      "title": "Buffalo Trace's First Bottle Draw Winners Collect Uncut Elmer T. Lee 40th Anniversary",
+      "url": "https://www.chronopin.com/pin/4503/buffalo-trace-s-first-bottle-draw-winners-collect-uncut-elmer-t-lee-40th-anniver",
+      "status": "existing-reviews-preserved",
+      "reviewCount": 1,
+      "publicRadarVerified": true,
+      "publicReviewLinksAndExcerptsVerified": true,
+      "visibleGapVerified": false
+    },
+    {
+      "pinId": 4505,
+      "title": "Surly Darkness Day 2026 Releases the 20th-Anniversary Darkness Stout",
+      "url": "https://www.chronopin.com/pin/4505/surly-darkness-day-2026-releases-the-20th-anniversary-darkness-stout",
+      "status": "existing-reviews-preserved",
+      "reviewCount": 2,
+      "publicRadarVerified": true,
+      "publicReviewLinksAndExcerptsVerified": true,
+      "visibleGapVerified": false
+    },
+    {
+      "pinId": 4506,
+      "title": "Great Lakes Christmas Ale First Pour 2026 Taps in Cleveland",
+      "url": "https://www.chronopin.com/pin/4506/great-lakes-christmas-ale-first-pour-2026-taps-in-cleveland",
+      "status": "existing-reviews-preserved",
+      "reviewCount": 3,
+      "publicRadarVerified": true,
+      "publicReviewLinksAndExcerptsVerified": true,
+      "visibleGapVerified": false
+    },
+    {
+      "pinId": 4612,
+      "title": "Beaujolais Nouveau 2026 Is Released on the Third Thursday of November",
+      "url": "https://www.chronopin.com/pin/4612/beaujolais-nouveau-2026-is-released-on-the-third-thursday-of-november",
+      "status": "existing-reviews-preserved",
+      "reviewCount": 2,
+      "publicRadarVerified": true,
+      "publicReviewLinksAndExcerptsVerified": true,
+      "visibleGapVerified": false
+    },
+    {
+      "pinId": 5609,
+      "title": "Toblerone Launches Diamond Truffles with Biscoff Worldwide",
+      "url": "https://www.chronopin.com/pin/5609/toblerone-launches-diamond-truffles-with-biscoff-worldwide",
+      "status": "existing-reviews-preserved",
+      "reviewCount": 1,
+      "publicRadarVerified": true,
+      "publicReviewLinksAndExcerptsVerified": true,
+      "visibleGapVerified": false
+    },
+    {
+      "pinId": 5610,
+      "title": "Nestlé's KitKat F1 Collectable Tin Goes on Sale in UK for Christmas",
+      "url": "https://www.chronopin.com/pin/5610/nestle-s-kitkat-f1-collectable-tin-goes-on-sale-in-uk-for-christmas",
+      "status": "review-gap",
+      "reviewCount": 0,
+      "publicRadarVerified": true,
+      "publicReviewLinksAndExcerptsVerified": false,
+      "visibleGapVerified": true
+    },
+    {
+      "pinId": 5611,
+      "title": "Cadbury Dairy Milk Smash Bauble Arrives in UK for Christmas",
+      "url": "https://www.chronopin.com/pin/5611/cadbury-dairy-milk-smash-bauble-arrives-in-uk-for-christmas",
+      "status": "review-gap",
+      "reviewCount": 0,
+      "publicRadarVerified": true,
+      "publicReviewLinksAndExcerptsVerified": false,
+      "visibleGapVerified": true
+    },
+    {
+      "pinId": 5612,
+      "title": "Cadbury Biscoff Filled Centres Launch in UK for Christmas",
+      "url": "https://www.chronopin.com/pin/5612/cadbury-biscoff-filled-centres-launch-in-uk-for-christmas",
+      "status": "review-gap",
+      "reviewCount": 0,
+      "publicRadarVerified": true,
+      "publicReviewLinksAndExcerptsVerified": false,
+      "visibleGapVerified": true
+    },
+    {
+      "pinId": 5613,
+      "title": "Haribo Sour Bats Join UK Halloween Range",
+      "url": "https://www.chronopin.com/pin/5613/haribo-sour-bats-join-uk-halloween-range",
+      "status": "review-added",
+      "reviewCount": 1,
+      "publicRadarVerified": true,
+      "publicReviewLinksAndExcerptsVerified": true,
+      "visibleGapVerified": false
+    },
+    {
+      "pinId": 5614,
+      "title": "Lotte's Koala's March x CUTIE STREET Strawberry Biscuits Launch in Japan",
+      "url": "https://www.chronopin.com/pin/5614/lotte-s-koala-s-march-x-cutie-street-strawberry-biscuits-launch-in-japan",
+      "status": "review-added",
+      "reviewCount": 1,
+      "publicRadarVerified": true,
+      "publicReviewLinksAndExcerptsVerified": true,
+      "visibleGapVerified": false
+    },
+    {
+      "pinId": 5615,
+      "title": "Lotte's Winter-Only Rummy and Bacchus Liqueur Chocolates Return 6 October",
+      "url": "https://www.chronopin.com/pin/5615/lotte-s-winter-only-rummy-and-bacchus-liqueur-chocolates-return-6-october",
+      "status": "review-added",
+      "reviewCount": 1,
+      "publicRadarVerified": true,
+      "publicReviewLinksAndExcerptsVerified": true,
+      "visibleGapVerified": false
+    },
+    {
+      "pinId": 5617,
+      "title": "Morinaga Launches Crisp Fruit Mix Hi-Chew and Umai-Chew Assortment in Japan",
+      "url": "https://www.chronopin.com/pin/5617/morinaga-launches-crisp-fruit-mix-hi-chew-and-umai-chew-assortment-in-japan",
+      "status": "review-added",
+      "reviewCount": 1,
+      "publicRadarVerified": true,
+      "publicReviewLinksAndExcerptsVerified": true,
+      "visibleGapVerified": false
+    },
+    {
+      "pinId": 5619,
+      "title": "Morinaga's Black Moon Galette Sand Goes on Sale for a Limited Time",
+      "url": "https://www.chronopin.com/pin/5619/morinaga-s-black-moon-galette-sand-goes-on-sale-for-a-limited-time",
+      "status": "existing-reviews-preserved",
+      "reviewCount": 1,
+      "publicRadarVerified": true,
+      "publicReviewLinksAndExcerptsVerified": true,
+      "visibleGapVerified": false
+    },
+    {
+      "pinId": 5621,
+      "title": "Calbee's Fan-Made Jagarico Bulgogi Flavour Goes on Sale in Japan",
+      "url": "https://www.chronopin.com/pin/5621/calbee-s-fan-made-jagarico-bulgogi-flavour-goes-on-sale-in-japan",
+      "status": "existing-reviews-preserved",
+      "reviewCount": 2,
+      "publicRadarVerified": true,
+      "publicReviewLinksAndExcerptsVerified": true,
+      "visibleGapVerified": false
+    },
+    {
+      "pinId": 5623,
+      "title": "Koikeya Launches Pure Potato Beef & Cheese Chips in Japan",
+      "url": "https://www.chronopin.com/pin/5623/koikeya-launches-pure-potato-beef-cheese-chips-in-japan",
+      "status": "review-added",
+      "reviewCount": 1,
+      "publicRadarVerified": true,
+      "publicReviewLinksAndExcerptsVerified": true,
+      "visibleGapVerified": false
+    },
+    {
+      "pinId": 5625,
+      "title": "Nongshim's Neoguling Neoguri Onion-Ring Snack Goes on Sale 12 October",
+      "url": "https://www.chronopin.com/pin/5625/nongshim-s-neoguling-neoguri-onion-ring-snack-goes-on-sale-12-october",
+      "status": "review-gap",
+      "reviewCount": 0,
+      "publicRadarVerified": true,
+      "publicReviewLinksAndExcerptsVerified": false,
+      "visibleGapVerified": true
+    },
+    {
+      "pinId": 5627,
+      "title": "OREO Pistash-YO Limited Edition Launches in the UAE",
+      "url": "https://www.chronopin.com/pin/5627/oreo-pistash-yo-limited-edition-launches-in-the-uae",
+      "status": "review-gap",
+      "reviewCount": 0,
+      "publicRadarVerified": true,
+      "publicReviewLinksAndExcerptsVerified": false,
+      "visibleGapVerified": true
+    },
+    {
+      "pinId": 5629,
+      "title": "Parag Milk Foods Launches Avvatar Popped Protein Chips in India",
+      "url": "https://www.chronopin.com/pin/5629/parag-milk-foods-launches-avvatar-popped-protein-chips-in-india",
+      "status": "review-gap",
+      "reviewCount": 0,
+      "publicRadarVerified": true,
+      "publicReviewLinksAndExcerptsVerified": false,
+      "visibleGapVerified": true
+    },
+    {
+      "pinId": 5631,
+      "title": "Funday Fruity Pigs Gummies Land at Woolworths in Australia",
+      "url": "https://www.chronopin.com/pin/5631/funday-fruity-pigs-gummies-land-at-woolworths-in-australia",
+      "status": "review-added",
+      "reviewCount": 1,
+      "publicRadarVerified": true,
+      "publicReviewLinksAndExcerptsVerified": true,
+      "visibleGapVerified": false
+    },
+    {
+      "pinId": 5633,
+      "title": "Funday x Mr Whippy Foamy Ice Cream Gummies Hit Shelves in Australia",
+      "url": "https://www.chronopin.com/pin/5633/funday-x-mr-whippy-foamy-ice-cream-gummies-hit-shelves-in-australia",
+      "status": "review-added",
+      "reviewCount": 1,
+      "publicRadarVerified": true,
+      "publicReviewLinksAndExcerptsVerified": true,
+      "visibleGapVerified": false
+    },
+    {
+      "pinId": 5635,
+      "title": "Skittles Gummy Crystals Debut on TikTok Shop on 2 November",
+      "url": "https://www.chronopin.com/pin/5635/skittles-gummy-crystals-debut-on-tiktok-shop-on-2-november",
+      "status": "existing-reviews-preserved",
+      "reviewCount": 1,
+      "publicRadarVerified": true,
+      "publicReviewLinksAndExcerptsVerified": true,
+      "visibleGapVerified": false
+    },
+    {
+      "pinId": 5637,
+      "title": "Hershey's Creme Bars with KATSEYE Go on Sale in Two Flavors",
+      "url": "https://www.chronopin.com/pin/5637/hershey-s-creme-bars-with-katseye-go-on-sale-in-two-flavors",
+      "status": "existing-reviews-preserved",
+      "reviewCount": 3,
+      "publicRadarVerified": true,
+      "publicReviewLinksAndExcerptsVerified": true,
+      "visibleGapVerified": false
+    },
+    {
+      "pinId": 5639,
+      "title": "Girl Scout Sparkables, First Allergy-Friendly Cookie, Debut 12 January",
+      "url": "https://www.chronopin.com/pin/5639/girl-scout-sparkables-first-allergy-friendly-cookie-debut-12-january",
+      "status": "existing-reviews-preserved",
+      "reviewCount": 3,
+      "publicRadarVerified": true,
+      "publicReviewLinksAndExcerptsVerified": true,
+      "visibleGapVerified": false
+    },
+    {
+      "pinId": 5722,
+      "title": "Oreo and KFC Launch Fried-Chicken-Flavour Cookie in China",
+      "url": "https://www.chronopin.com/pin/5722/oreo-and-kfc-launch-fried-chicken-flavour-cookie-in-china",
+      "status": "existing-reviews-preserved",
+      "reviewCount": 1,
+      "publicRadarVerified": true,
+      "publicReviewLinksAndExcerptsVerified": true,
+      "visibleGapVerified": false
+    },
+    {
+      "pinId": 5727,
+      "title": "Orion's Poca Chip Hwangchiz Flavour Launches with Double Cheese Coating",
+      "url": "https://www.chronopin.com/pin/5727/orion-s-poca-chip-hwangchiz-flavour-launches-with-double-cheese-coating",
+      "status": "existing-reviews-preserved",
+      "reviewCount": 4,
+      "publicRadarVerified": true,
+      "publicReviewLinksAndExcerptsVerified": true,
+      "visibleGapVerified": false
+    },
+    {
+      "pinId": 5729,
+      "title": "Haitai's Butter Ring with Échiré Butter Premium Edition Launches",
+      "url": "https://www.chronopin.com/pin/5729/haitai-s-butter-ring-with-echire-butter-premium-edition-launches",
+      "status": "existing-reviews-preserved",
+      "reviewCount": 2,
+      "publicRadarVerified": true,
+      "publicReviewLinksAndExcerptsVerified": true,
+      "visibleGapVerified": false
+    },
+    {
+      "pinId": 5731,
+      "title": "Haitai's French Pie Mini Peanut Butter Cream with Ligo Launches",
+      "url": "https://www.chronopin.com/pin/5731/haitai-s-french-pie-mini-peanut-butter-cream-with-ligo-launches",
+      "status": "review-added",
+      "reviewCount": 1,
+      "publicRadarVerified": true,
+      "publicReviewLinksAndExcerptsVerified": true,
+      "visibleGapVerified": false
+    },
+    {
+      "pinId": 5735,
+      "title": "Bauducco and Paçoquita Launch Chocottone Paçoquita for Christmas in Brazil",
+      "url": "https://www.chronopin.com/pin/5735/bauducco-and-pacoquita-launch-chocottone-pacoquita-for-christmas-in-brazil",
+      "status": "review-gap",
+      "reviewCount": 0,
+      "publicRadarVerified": true,
+      "publicReviewLinksAndExcerptsVerified": false,
+      "visibleGapVerified": true
+    },
+    {
+      "pinId": 5736,
+      "title": "Allen's Launches Three Lolly-Inspired Choc Blocks in Australia",
+      "url": "https://www.chronopin.com/pin/5736/allen-s-launches-three-lolly-inspired-choc-blocks-in-australia",
+      "status": "existing-reviews-preserved",
+      "reviewCount": 1,
+      "publicRadarVerified": true,
+      "publicReviewLinksAndExcerptsVerified": true,
+      "visibleGapVerified": false
+    },
+    {
+      "pinId": 7012,
+      "title": "Voodoo Ranger Sweet Ride Juicy IPA Launches in United States",
+      "url": "https://www.chronopin.com/pin/7012/voodoo-ranger-sweet-ride-juicy-ipa-launches-in-united-states",
+      "status": "review-added",
+      "reviewCount": 1,
+      "publicRadarVerified": true,
+      "publicReviewLinksAndExcerptsVerified": true,
+      "visibleGapVerified": false
+    },
+    {
+      "pinId": 7013,
+      "title": "GREY GOOSE Berry Rouge Launches in United States",
+      "url": "https://www.chronopin.com/pin/7013/grey-goose-berry-rouge-launches-in-united-states",
+      "status": "review-added",
+      "reviewCount": 1,
+      "publicRadarVerified": true,
+      "publicReviewLinksAndExcerptsVerified": true,
+      "visibleGapVerified": false
+    },
+    {
+      "pinId": 7014,
+      "title": "High Noon Transfusion Vodka Seltzer Launches in United States",
+      "url": "https://www.chronopin.com/pin/7014/high-noon-transfusion-vodka-seltzer-launches-in-united-states",
+      "status": "review-added",
+      "reviewCount": 1,
+      "publicRadarVerified": true,
+      "publicReviewLinksAndExcerptsVerified": true,
+      "visibleGapVerified": false
+    },
+    {
+      "pinId": 7015,
+      "title": "Carling Black Label (UK 2026) Launches in United Kingdom",
+      "url": "https://www.chronopin.com/pin/7015/carling-black-label-uk-2026-launches-in-united-kingdom",
+      "status": "review-added",
+      "reviewCount": 1,
+      "publicRadarVerified": true,
+      "publicReviewLinksAndExcerptsVerified": true,
+      "visibleGapVerified": false
+    },
+    {
+      "pinId": 7016,
+      "title": "Absolut TABASCO Vodka Launches in United States",
+      "url": "https://www.chronopin.com/pin/7016/absolut-tabasco-vodka-launches-in-united-states",
+      "status": "existing-reviews-preserved",
+      "reviewCount": 4,
+      "publicRadarVerified": true,
+      "publicReviewLinksAndExcerptsVerified": true,
+      "visibleGapVerified": false
+    },
+    {
+      "pinId": 7017,
+      "title": "2026 Bourbon County Brand Apple Crisp Stout Releases November 27",
+      "url": "https://www.chronopin.com/pin/7017/2026-bourbon-county-brand-apple-crisp-stout-releases-november-27",
+      "status": "review-gap",
+      "reviewCount": 0,
+      "publicRadarVerified": true,
+      "publicReviewLinksAndExcerptsVerified": false,
+      "visibleGapVerified": true
+    },
+    {
+      "pinId": 7018,
+      "title": "2026 Bourbon County Brand Triple Oak Barleywine Releases November 27",
+      "url": "https://www.chronopin.com/pin/7018/2026-bourbon-county-brand-triple-oak-barleywine-releases-november-27",
+      "status": "review-gap",
+      "reviewCount": 0,
+      "publicRadarVerified": true,
+      "publicReviewLinksAndExcerptsVerified": false,
+      "visibleGapVerified": true
+    },
+    {
+      "pinId": 7626,
+      "title": "Arán Bakery Wins Blas na hÉireann 2026 Supreme Champion Again",
+      "url": "https://www.chronopin.com/pin/7626/aran-bakery-wins-blas-na-heireann-2026-supreme-champion-again",
+      "status": "review-gap",
+      "reviewCount": 0,
+      "publicRadarVerified": true,
+      "publicReviewLinksAndExcerptsVerified": false,
+      "visibleGapVerified": true
+    },
+    {
+      "pinId": 7638,
+      "title": "Cass Zero Named Top Non-Alcoholic Beer in Korea for a Second Year",
+      "url": "https://www.chronopin.com/pin/7638/cass-zero-named-top-non-alcoholic-beer-in-korea-for-a-second-year",
+      "status": "review-added",
+      "reviewCount": 1,
+      "publicRadarVerified": true,
+      "publicReviewLinksAndExcerptsVerified": true,
+      "visibleGapVerified": false
+    },
+    {
+      "pinId": 7658,
+      "title": "Nongfu Spring Oriental Leaf Jasmine Green Tea",
+      "url": "https://www.chronopin.com/pin/7658/nongfu-spring-oriental-leaf-jasmine-green-tea",
+      "status": "review-added",
+      "reviewCount": 1,
+      "publicRadarVerified": true,
+      "publicReviewLinksAndExcerptsVerified": true,
+      "visibleGapVerified": false
+    },
+    {
+      "pinId": 7659,
+      "title": "CHI FOREST Lychee Fizzy Sparkling Water",
+      "url": "https://www.chronopin.com/pin/7659/chi-forest-lychee-fizzy-sparkling-water",
+      "status": "review-added",
+      "reviewCount": 1,
+      "publicRadarVerified": true,
+      "publicReviewLinksAndExcerptsVerified": true,
+      "visibleGapVerified": false
+    },
+    {
+      "pinId": 7660,
+      "title": "Wanglaoji / Walovi Canned Herbal Tea",
+      "url": "https://www.chronopin.com/pin/7660/wanglaoji-walovi-canned-herbal-tea",
+      "status": "existing-reviews-preserved",
+      "reviewCount": 2,
+      "publicRadarVerified": true,
+      "publicReviewLinksAndExcerptsVerified": true,
+      "visibleGapVerified": false
+    },
+    {
+      "pinId": 7661,
+      "title": "Jia Duo Bao Canned Herbal Tea",
+      "url": "https://www.chronopin.com/pin/7661/jia-duo-bao-canned-herbal-tea",
+      "status": "review-added",
+      "reviewCount": 1,
+      "publicRadarVerified": true,
+      "publicReviewLinksAndExcerptsVerified": true,
+      "visibleGapVerified": false
+    },
+    {
+      "pinId": 7662,
+      "title": "Wahaha A&D Milk Drink",
+      "url": "https://www.chronopin.com/pin/7662/wahaha-a-d-milk-drink",
+      "status": "review-added",
+      "reviewCount": 1,
+      "publicRadarVerified": true,
+      "publicReviewLinksAndExcerptsVerified": true,
+      "visibleGapVerified": false
+    },
+    {
+      "pinId": 7663,
+      "title": "Coconut Palm Coconut Milk Drink",
+      "url": "https://www.chronopin.com/pin/7663/coconut-palm-coconut-milk-drink",
+      "status": "existing-reviews-preserved",
+      "reviewCount": 2,
+      "publicRadarVerified": true,
+      "publicReviewLinksAndExcerptsVerified": true,
+      "visibleGapVerified": false
+    },
+    {
+      "pinId": 7664,
+      "title": "White Rabbit Original Milk Candy",
+      "url": "https://www.chronopin.com/pin/7664/white-rabbit-original-milk-candy",
+      "status": "existing-reviews-preserved",
+      "reviewCount": 1,
+      "publicRadarVerified": true,
+      "publicReviewLinksAndExcerptsVerified": true,
+      "visibleGapVerified": false
+    },
+    {
+      "pinId": 7665,
+      "title": "White Rabbit Matcha Milk Candy",
+      "url": "https://www.chronopin.com/pin/7665/white-rabbit-matcha-milk-candy",
+      "status": "existing-reviews-preserved",
+      "reviewCount": 1,
+      "publicRadarVerified": true,
+      "publicReviewLinksAndExcerptsVerified": true,
+      "visibleGapVerified": false
+    },
+    {
+      "pinId": 7666,
+      "title": "Weilong Fragrant Spicy Konjac Strips",
+      "url": "https://www.chronopin.com/pin/7666/weilong-fragrant-spicy-konjac-strips",
+      "status": "existing-reviews-preserved",
+      "reviewCount": 1,
+      "publicRadarVerified": true,
+      "publicReviewLinksAndExcerptsVerified": true,
+      "visibleGapVerified": false
+    },
+    {
+      "pinId": 7667,
+      "title": "Want Want Sugar-Glazed Rice Crackers",
+      "url": "https://www.chronopin.com/pin/7667/want-want-sugar-glazed-rice-crackers",
+      "status": "existing-reviews-preserved",
+      "reviewCount": 1,
+      "publicRadarVerified": true,
+      "publicReviewLinksAndExcerptsVerified": true,
+      "visibleGapVerified": false
+    },
+    {
+      "pinId": 7668,
+      "title": "ChaCha Roasted and Salted Sunflower Seeds",
+      "url": "https://www.chronopin.com/pin/7668/chacha-roasted-and-salted-sunflower-seeds",
+      "status": "existing-reviews-preserved",
+      "reviewCount": 1,
+      "publicRadarVerified": true,
+      "publicReviewLinksAndExcerptsVerified": true,
+      "visibleGapVerified": false
+    },
+    {
+      "pinId": 7669,
+      "title": "Huang Fei Hong Spicy Peanuts",
+      "url": "https://www.chronopin.com/pin/7669/huang-fei-hong-spicy-peanuts",
+      "status": "existing-reviews-preserved",
+      "reviewCount": 1,
+      "publicRadarVerified": true,
+      "publicReviewLinksAndExcerptsVerified": true,
+      "visibleGapVerified": false
+    },
+    {
+      "pinId": 7670,
+      "title": "Haw Flakes Hawthorn Sweets",
+      "url": "https://www.chronopin.com/pin/7670/haw-flakes-hawthorn-sweets",
+      "status": "existing-reviews-preserved",
+      "reviewCount": 1,
+      "publicRadarVerified": true,
+      "publicReviewLinksAndExcerptsVerified": true,
+      "visibleGapVerified": false
+    }
+  ]
+}

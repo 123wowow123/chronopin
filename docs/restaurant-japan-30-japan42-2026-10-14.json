@@ -1,0 +1,2084 @@
+{
+  "checkedAt": "2026-10-14",
+  "country": "Japan",
+  "regions": [
+    "osaka"
+  ],
+  "entries": [
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Hakata Mentai Yamaya Shokudo — LINKS UMEDA Opens in Umeda",
+        "description": "A new set-meal restaurant with branch-priced fish, chicken and motsunabe dishes, unlimited meal accompaniments and a dated app-stamp opening promotion.",
+        "sourceUrl": "https://restaurant-yamaya.com/brand/mentai-shokudo/restaurant/links_umeda",
+        "address": "8F Yodobashi Umeda Tower, 1-1 Ofukacho, Kita-ku, Osaka",
+        "productName": "Hakata Mentai Yamaya Shokudo — LINKS UMEDA",
+        "utcStartDateTime": "2026-09-28T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "Current operator announcement confirms this exact branch opened September28,2026.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Osaka",
+          "Japan",
+          "Umeda",
+          "Japanese set meals"
+        ],
+        "longFormSummary": "<p>A new set-meal restaurant with branch-priced fish, chicken and motsunabe dishes, unlimited meal accompaniments and a dated app-stamp opening promotion.<cite data-ref=\"https://restaurant-yamaya.com/brand/mentai-shokudo/restaurant/links_umeda\"></cite></p><p>Current operator announcement confirms this exact branch opened September28,2026.</p>",
+        "references": [
+          {
+            "url": "https://restaurant-yamaya.com/brand/mentai-shokudo/restaurant/links_umeda",
+            "title": "Hakata Mentai Yamaya Shokudo — LINKS UMEDA source",
+            "confidence": 90,
+            "reasoning": "Current operator announcement confirms this exact branch opened September28,2026."
+          },
+          {
+            "url": "https://www.yamaya.com/corporate/news/detail/870",
+            "title": "Hakata Mentai Yamaya Shokudo — LINKS UMEDA source",
+            "confidence": 90,
+            "reasoning": "Current operator announcement confirms this exact branch opened September28,2026."
+          },
+          {
+            "url": "https://www.yamaya.com/app/",
+            "title": "Hakata Mentai Yamaya Shokudo — LINKS UMEDA source",
+            "confidence": 90,
+            "reasoning": "Current operator announcement confirms this exact branch opened September28,2026."
+          },
+          {
+            "url": "https://www.yamaya.com/corporate/news/detail/875",
+            "title": "Hakata Mentai Yamaya Shokudo — LINKS UMEDA source",
+            "confidence": 90,
+            "reasoning": "Current operator announcement confirms this exact branch opened September28,2026."
+          },
+          {
+            "url": "https://mrs.living.jp/osaka/town_gourmet/article/6964110",
+            "title": "Hakata Mentai Yamaya Shokudo — LINKS UMEDA source",
+            "confidence": 90,
+            "reasoning": "Current operator announcement confirms this exact branch opened September28,2026."
+          },
+          {
+            "url": "https://links-umeda.jp/restaurant/yamaya/",
+            "title": "Hakata Mentai Yamaya Shokudo — LINKS UMEDA source",
+            "confidence": 90,
+            "reasoning": "Current operator announcement confirms this exact branch opened September28,2026."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://restaurant-yamaya.com/brand/mentai-shokudo/restaurant/links_umeda",
+          "menu": {
+            "pinSourceUrl": "https://restaurant-yamaya.com/brand/mentai-shokudo/restaurant/links_umeda",
+            "name": "Hakata Mentai Yamaya Shokudo — LINKS UMEDA",
+            "checkedAt": "2026-10-14",
+            "menus": [
+              {
+                "label": "LINKS UMEDA opening menu",
+                "url": "https://www.yamaya.com/corporate/news/detail/870",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Salt-grilled mackerel and fried chicken set",
+                    "price": 2068,
+                    "note": "Tax included"
+                  },
+                  {
+                    "name": "Salt-grilled mackerel and chicken nanban set",
+                    "price": 2178,
+                    "note": "Tax included"
+                  },
+                  {
+                    "name": "Hakata sesame mackerel set",
+                    "price": 2178,
+                    "note": "Tax included"
+                  },
+                  {
+                    "name": "Chicken and vegetables in black-vinegar sauce set",
+                    "price": 1958,
+                    "note": "Tax included"
+                  },
+                  {
+                    "name": "Hakata motsunabe set — flying-fish dashi soy sauce",
+                    "price": 2508,
+                    "note": "Tax included"
+                  },
+                  {
+                    "name": "Hakata motsunabe set — light Umadashi broth",
+                    "price": 2508,
+                    "note": "Tax included"
+                  }
+                ],
+                "note": "Exact branch launch menu, not another branch’s prices. Set-meal customers receive unlimited spicy pollock roe, takana, rice and Umadashi; these are standard meal inclusions. Daily/seasonal items vary."
+              },
+              {
+                "label": "Additional branch-page items",
+                "url": "https://restaurant-yamaya.com/brand/mentai-shokudo/restaurant/links_umeda",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Miso-simmered mackerel",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Kombu-cured silver salmon",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Nagasaki horse-mackerel fry",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Chicken nanban",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Salt-grilled mackerel",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Children’s set",
+                    "priceLabel": "Price not published"
+                  }
+                ],
+                "note": "Named on the exact branch page without prices. Operator warns assortment varies. Deep checked operator release, current branch/gallery, brand menu, mall page (curl timeout; cached page readable) and Living Osaka branch reporting. Complete daily roster, drinks and remaining prices not published. Do not borrow Okinawa October15 renewal menu or other branch prices. Branch phone page still carries an interruption notice with October6 planned restoration; actual phone connectivity not verified."
+              },
+              {
+                "label": "Opening triple visit stamps",
+                "url": "https://www.yamaya.com/corporate/news/detail/870",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Three-times visit-stamp accrual",
+                    "priceLabel": "Price not published",
+                    "note": "Eligible purchase/dining transaction and registered Yamaya app required; not an immediate meal-price discount"
+                  }
+                ],
+                "note": "September28–October18,2026 at LINKS UMEDA only. App FAQ: same-store stamp accrual once per day, ten stamps generate a product-exchange ticket with its own expiry; stamps themselves do not expire. Exact exchange item/value and ticket lifetime not published here. Stamp accrual differs from spending points; no points percentage or immediate discount inferred. Checked October7 maintenance notice: it concerns the separate Waiwai Yamaya community site and does not announce cancellation of this app promotion."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://restaurant-yamaya.com/brand/mentai-shokudo/restaurant/links_umeda",
+            "name": "Hakata Mentai Yamaya Shokudo — LINKS UMEDA",
+            "checkedAt": "2026-10-14",
+            "websiteUrl": "https://restaurant-yamaya.com/brand/mentai-shokudo/restaurant/links_umeda",
+            "phone": "06-6655-8018",
+            "openingHours": [
+              {
+                "days": "Daily",
+                "hours": "11:00–23:00; last order22:30"
+              },
+              {
+                "days": "Closed days",
+                "hours": "Follow the facility"
+              },
+              {
+                "days": "Seats",
+                "hours": "42; phone-restoration notice remains on operator page, current connectivity unverified"
+              }
+            ],
+            "detailsSourceUrl": "https://restaurant-yamaya.com/brand/mentai-shokudo/restaurant/links_umeda",
+            "additionalSources": [
+              {
+                "label": "Research evidence",
+                "url": "https://www.yamaya.com/corporate/news/detail/870"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://www.yamaya.com/app/"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://www.yamaya.com/corporate/news/detail/875"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://mrs.living.jp/osaka/town_gourmet/article/6964110"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://links-umeda.jp/restaurant/yamaya/"
+              }
+            ]
+          },
+          "tile": {
+            "regionSlug": "osaka",
+            "kind": "opening",
+            "slug": "japan42-yamaya-links",
+            "name": "Hakata Mentai Yamaya Shokudo — LINKS UMEDA",
+            "neighborhood": "Umeda",
+            "cuisine": "Japanese set meals",
+            "description": "A new set-meal restaurant with branch-priced fish, chicken and motsunabe dishes, unlimited meal accompaniments and a dated app-stamp opening promotion.",
+            "address": "8F Yodobashi Umeda Tower, 1-1 Ofukacho, Kita-ku, Osaka",
+            "websiteUrl": "https://restaurant-yamaya.com/brand/mentai-shokudo/restaurant/links_umeda",
+            "checkedAt": "2026-10-14",
+            "recognition": "",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/osaka/japan-30-2026-10-13/japan42-yamaya-links-22-3544ea1b066cdc16.webp",
+            "imageCredit": "Yamaya Communications",
+            "imageSourceUrl": "https://restaurant-yamaya.com/brand/mentai-shokudo/restaurant/links_umeda",
+            "imageNote": "Actual LINKS UMEDA branch entrance",
+            "openingConfirmed": true,
+            "day": "2026-09-28"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/osaka/japan-30-2026-10-13/japan42-yamaya-links-22-3544ea1b066cdc16.webp",
+          "sha256": "3544ea1b066cdc16f547c6e669e18736f90aa3cef5718b12525afd5065ae2e70",
+          "width": 650,
+          "height": 420,
+          "credit": "Yamaya Communications",
+          "note": "Actual LINKS UMEDA branch entrance",
+          "sourcePage": "https://restaurant-yamaya.com/brand/mentai-shokudo/restaurant/links_umeda"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/osaka/japan-30-2026-10-13/japan42-yamaya-links-24-ba7b06942448995a.webp",
+          "sha256": "ba7b06942448995a1dc160a3d4dacf9d323b8922c37fd93ea5abf5074bc14eaf",
+          "width": 650,
+          "height": 420,
+          "credit": "Yamaya Communications",
+          "note": "Actual LINKS UMEDA branch dining room",
+          "sourcePage": "https://restaurant-yamaya.com/brand/mentai-shokudo/restaurant/links_umeda"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/osaka/japan-30-2026-10-13/japan42-yamaya-links-2-108923c4ca3184c6.webp",
+          "sha256": "108923c4ca3184c6702526feeb72ae695db906281261d3d4ffec1818eef49946",
+          "width": 570,
+          "height": 408,
+          "credit": "Yamaya Communications",
+          "note": "Salt-grilled mackerel and fried chicken set, operator promotional presentation",
+          "sourcePage": "https://www.yamaya.com/corporate/news/detail/870"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/osaka/japan-30-2026-10-13/japan42-yamaya-links-3-1951bc04f72840fb.webp",
+          "sha256": "1951bc04f72840fb1e896b3e0a1190ced272e1577692e78c76db599580f6a805",
+          "width": 570,
+          "height": 408,
+          "credit": "Yamaya Communications",
+          "note": "Hakata sesame mackerel set, operator promotional presentation",
+          "sourcePage": "https://www.yamaya.com/corporate/news/detail/870"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/osaka/japan-30-2026-10-13/japan42-yamaya-links-4-7ab45e37863cdbab.webp",
+          "sha256": "7ab45e37863cdbab9574245d41955eda96ec4bb2bee00c946a203892829504af",
+          "width": 570,
+          "height": 408,
+          "credit": "Yamaya Communications",
+          "note": "Chicken and vegetables in black-vinegar sauce set, operator promotional presentation",
+          "sourcePage": "https://www.yamaya.com/corporate/news/detail/870"
+        }
+      ],
+      "special": {
+        "regionSlug": "osaka",
+        "profile": {
+          "pinSourceUrl": "https://restaurant-yamaya.com/brand/mentai-shokudo/restaurant/links_umeda",
+          "name": "Hakata Mentai Yamaya Shokudo — LINKS UMEDA",
+          "checkedAt": "2026-10-14",
+          "menus": [
+            {
+              "label": "LINKS UMEDA opening menu",
+              "url": "https://www.yamaya.com/corporate/news/detail/870",
+              "currency": "JPY",
+              "coverage": "sample",
+              "items": [
+                {
+                  "name": "Salt-grilled mackerel and fried chicken set",
+                  "price": 2068,
+                  "note": "Tax included"
+                },
+                {
+                  "name": "Salt-grilled mackerel and chicken nanban set",
+                  "price": 2178,
+                  "note": "Tax included"
+                },
+                {
+                  "name": "Hakata sesame mackerel set",
+                  "price": 2178,
+                  "note": "Tax included"
+                },
+                {
+                  "name": "Chicken and vegetables in black-vinegar sauce set",
+                  "price": 1958,
+                  "note": "Tax included"
+                },
+                {
+                  "name": "Hakata motsunabe set — flying-fish dashi soy sauce",
+                  "price": 2508,
+                  "note": "Tax included"
+                },
+                {
+                  "name": "Hakata motsunabe set — light Umadashi broth",
+                  "price": 2508,
+                  "note": "Tax included"
+                }
+              ],
+              "note": "Exact branch launch menu, not another branch’s prices. Set-meal customers receive unlimited spicy pollock roe, takana, rice and Umadashi; these are standard meal inclusions. Daily/seasonal items vary."
+            },
+            {
+              "label": "Additional branch-page items",
+              "url": "https://restaurant-yamaya.com/brand/mentai-shokudo/restaurant/links_umeda",
+              "currency": "JPY",
+              "coverage": "sample",
+              "items": [
+                {
+                  "name": "Miso-simmered mackerel",
+                  "priceLabel": "Price not published"
+                },
+                {
+                  "name": "Kombu-cured silver salmon",
+                  "priceLabel": "Price not published"
+                },
+                {
+                  "name": "Nagasaki horse-mackerel fry",
+                  "priceLabel": "Price not published"
+                },
+                {
+                  "name": "Chicken nanban",
+                  "priceLabel": "Price not published"
+                },
+                {
+                  "name": "Salt-grilled mackerel",
+                  "priceLabel": "Price not published"
+                },
+                {
+                  "name": "Children’s set",
+                  "priceLabel": "Price not published"
+                }
+              ],
+              "note": "Named on the exact branch page without prices. Operator warns assortment varies. Deep checked operator release, current branch/gallery, brand menu, mall page (curl timeout; cached page readable) and Living Osaka branch reporting. Complete daily roster, drinks and remaining prices not published. Do not borrow Okinawa October15 renewal menu or other branch prices. Branch phone page still carries an interruption notice with October6 planned restoration; actual phone connectivity not verified."
+            },
+            {
+              "label": "Opening triple visit stamps",
+              "url": "https://www.yamaya.com/corporate/news/detail/870",
+              "currency": "JPY",
+              "coverage": "sample",
+              "items": [
+                {
+                  "name": "Three-times visit-stamp accrual",
+                  "priceLabel": "Price not published",
+                  "note": "Eligible purchase/dining transaction and registered Yamaya app required; not an immediate meal-price discount"
+                }
+              ],
+              "note": "September28–October18,2026 at LINKS UMEDA only. App FAQ: same-store stamp accrual once per day, ten stamps generate a product-exchange ticket with its own expiry; stamps themselves do not expire. Exact exchange item/value and ticket lifetime not published here. Stamp accrual differs from spending points; no points percentage or immediate discount inferred. Checked October7 maintenance notice: it concerns the separate Waiwai Yamaya community site and does not announce cancellation of this app promotion."
+            }
+          ],
+          "specials": [
+            {
+              "title": "Opening triple visit stamps",
+              "kind": "other",
+              "description": "Earn three times the usual visit stamps on an eligible purchase with the registered Yamaya app.",
+              "sourceUrl": "https://www.yamaya.com/corporate/news/detail/870",
+              "menuLabel": "Opening triple visit stamps",
+              "discounted": false,
+              "validFrom": "2026-09-28",
+              "validThrough": "2026-10-18",
+              "schedule": "Japan local time; see conditions",
+              "conditions": [
+                "Registered Yamaya app and eligible purchase required.",
+                "Same-store stamp accrual once per day, awarded at checkout.",
+                "Ten stamps earn a product-exchange ticket; reward details and ticket expiry subject to app.",
+                "Meal prices are unchanged; this is a loyalty promotion.",
+                "Food last order22:30; posted closing23:00 is the checkout opportunity, not a guarantee of late food orders."
+              ],
+              "availability": {
+                "windows": [
+                  {
+                    "days": [
+                      0,
+                      1,
+                      2,
+                      3,
+                      4,
+                      5,
+                      6
+                    ],
+                    "start": "11:00",
+                    "end": "23:00"
+                  }
+                ]
+              },
+              "limitedTime": true
+            }
+          ],
+          "address": "8F Yodobashi Umeda Tower, 1-1 Ofukacho, Kita-ku, Osaka",
+          "neighborhood": "Umeda",
+          "websiteUrl": "https://restaurant-yamaya.com/brand/mentai-shokudo/restaurant/links_umeda",
+          "photo": {
+            "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/osaka/japan-30-2026-10-13/japan42-yamaya-links-22-3544ea1b066cdc16.webp",
+            "alt": "Hakata Mentai Yamaya Shokudo — LINKS UMEDA — Actual LINKS UMEDA branch entrance",
+            "credit": "Yamaya Communications",
+            "sourceUrl": "https://restaurant-yamaya.com/brand/mentai-shokudo/restaurant/links_umeda",
+            "originalUrl": "https://s3-ap-northeast-1.amazonaws.com/yamaya-prd-bucket/img/shop_image/20261005145029ee2cf67794ed171a32836b2f67eaeef9.jpg",
+            "checkedAt": "2026-10-14"
+          }
+        },
+        "enabled": true
+      }
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Yakiniku to Motsunabe Hakata Yamaya — Shinsaibashisuji Opens in Shinsaibashi",
+        "description": "A recently opened restaurant format pairing wagyu yakiniku with Hakata motsunabe, with separate published lunch, dinner and drink menus.",
+        "sourceUrl": "https://restaurant-yamaya.com/brand/motsu/restaurant/shinsaibashisuji",
+        "address": "3-5-19 Minamisenba, Chuo-ku, Osaka",
+        "productName": "Yakiniku to Motsunabe Hakata Yamaya — Shinsaibashisuji",
+        "utcStartDateTime": "2026-09-16T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "Operator October8 release explicitly confirms this new restaurant format opened September16,2026; exact branch site and current booking page corroborate it.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Osaka",
+          "Japan",
+          "Shinsaibashi",
+          "Yakiniku / motsunabe"
+        ],
+        "longFormSummary": "<p>A recently opened restaurant format pairing wagyu yakiniku with Hakata motsunabe, with separate published lunch, dinner and drink menus.<cite data-ref=\"https://restaurant-yamaya.com/brand/motsu/restaurant/shinsaibashisuji\"></cite></p><p>Operator October8 release explicitly confirms this new restaurant format opened September16,2026; exact branch site and current booking page corroborate it.</p>",
+        "references": [
+          {
+            "url": "https://restaurant-yamaya.com/brand/motsu/restaurant/shinsaibashisuji",
+            "title": "Yakiniku to Motsunabe Hakata Yamaya — Shinsaibashisuji source",
+            "confidence": 90,
+            "reasoning": "Operator October8 release explicitly confirms this new restaurant format opened September16,2026; exact branch site and current booking page corroborate it."
+          },
+          {
+            "url": "https://www.yamaya.com/corporate/news/detail/873",
+            "title": "Yakiniku to Motsunabe Hakata Yamaya — Shinsaibashisuji source",
+            "confidence": 90,
+            "reasoning": "Operator October8 release explicitly confirms this new restaurant format opened September16,2026; exact branch site and current booking page corroborate it."
+          },
+          {
+            "url": "https://nanatsuboshi-shinnsaibashisuji.owst.jp/foods",
+            "title": "Yakiniku to Motsunabe Hakata Yamaya — Shinsaibashisuji source",
+            "confidence": 90,
+            "reasoning": "Operator October8 release explicitly confirms this new restaurant format opened September16,2026; exact branch site and current booking page corroborate it."
+          },
+          {
+            "url": "https://nanatsuboshi-shinnsaibashisuji.owst.jp/drinks",
+            "title": "Yakiniku to Motsunabe Hakata Yamaya — Shinsaibashisuji source",
+            "confidence": 90,
+            "reasoning": "Operator October8 release explicitly confirms this new restaurant format opened September16,2026; exact branch site and current booking page corroborate it."
+          },
+          {
+            "url": "https://nanatsuboshi-shinnsaibashisuji.owst.jp/lunches",
+            "title": "Yakiniku to Motsunabe Hakata Yamaya — Shinsaibashisuji source",
+            "confidence": 90,
+            "reasoning": "Operator October8 release explicitly confirms this new restaurant format opened September16,2026; exact branch site and current booking page corroborate it."
+          },
+          {
+            "url": "https://nanatsuboshi-shinnsaibashisuji.owst.jp/courses",
+            "title": "Yakiniku to Motsunabe Hakata Yamaya — Shinsaibashisuji source",
+            "confidence": 90,
+            "reasoning": "Operator October8 release explicitly confirms this new restaurant format opened September16,2026; exact branch site and current booking page corroborate it."
+          },
+          {
+            "url": "https://nanatsuboshi-shinnsaibashisuji.owst.jp/courses/225379514",
+            "title": "Yakiniku to Motsunabe Hakata Yamaya — Shinsaibashisuji source",
+            "confidence": 90,
+            "reasoning": "Operator October8 release explicitly confirms this new restaurant format opened September16,2026; exact branch site and current booking page corroborate it."
+          },
+          {
+            "url": "https://nanatsuboshi-shinnsaibashisuji.owst.jp/courses/225379515",
+            "title": "Yakiniku to Motsunabe Hakata Yamaya — Shinsaibashisuji source",
+            "confidence": 90,
+            "reasoning": "Operator October8 release explicitly confirms this new restaurant format opened September16,2026; exact branch site and current booking page corroborate it."
+          },
+          {
+            "url": "https://nanatsuboshi-shinnsaibashisuji.owst.jp/courses/225379512",
+            "title": "Yakiniku to Motsunabe Hakata Yamaya — Shinsaibashisuji source",
+            "confidence": 90,
+            "reasoning": "Operator October8 release explicitly confirms this new restaurant format opened September16,2026; exact branch site and current booking page corroborate it."
+          },
+          {
+            "url": "https://nanatsuboshi-shinnsaibashisuji.owst.jp/courses/225379513",
+            "title": "Yakiniku to Motsunabe Hakata Yamaya — Shinsaibashisuji source",
+            "confidence": 90,
+            "reasoning": "Operator October8 release explicitly confirms this new restaurant format opened September16,2026; exact branch site and current booking page corroborate it."
+          },
+          {
+            "url": "https://nanatsuboshi-shinnsaibashisuji.owst.jp/courses/225311578",
+            "title": "Yakiniku to Motsunabe Hakata Yamaya — Shinsaibashisuji source",
+            "confidence": 90,
+            "reasoning": "Operator October8 release explicitly confirms this new restaurant format opened September16,2026; exact branch site and current booking page corroborate it."
+          },
+          {
+            "url": "https://nanatsuboshi-shinnsaibashisuji.owst.jp/courses/225311577",
+            "title": "Yakiniku to Motsunabe Hakata Yamaya — Shinsaibashisuji source",
+            "confidence": 90,
+            "reasoning": "Operator October8 release explicitly confirms this new restaurant format opened September16,2026; exact branch site and current booking page corroborate it."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://restaurant-yamaya.com/brand/motsu/restaurant/shinsaibashisuji",
+          "menu": {
+            "pinSourceUrl": "https://restaurant-yamaya.com/brand/motsu/restaurant/shinsaibashisuji",
+            "name": "Yakiniku to Motsunabe Hakata Yamaya — Shinsaibashisuji",
+            "checkedAt": "2026-10-14",
+            "menus": [
+              {
+                "label": "Shinsaibashisuji launch lunch",
+                "url": "https://www.yamaya.com/corporate/news/detail/873",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Aged fried chicken with mentaiko seasoning set",
+                    "price": 1300,
+                    "note": "Tax included"
+                  },
+                  {
+                    "name": "Aged mentaiko chicken and salt-grilled mackerel set",
+                    "price": 1600,
+                    "note": "Tax included"
+                  },
+                  {
+                    "name": "Aged mentaiko chicken and horse-mackerel fry set",
+                    "price": 1600,
+                    "note": "Tax included"
+                  },
+                  {
+                    "name": "Chicken nanban set",
+                    "price": 1400,
+                    "note": "Tax included"
+                  },
+                  {
+                    "name": "Miso-simmered mackerel set",
+                    "price": 1300,
+                    "note": "Tax included"
+                  },
+                  {
+                    "name": "Motsunabe set —flying-fish soy or rich miso",
+                    "price": 2400,
+                    "note": "Tax included"
+                  },
+                  {
+                    "name": "Horse-mackerel fry set",
+                    "price": 1400,
+                    "note": "Tax included"
+                  },
+                  {
+                    "name": "Daily grilled fish set",
+                    "price": 1300,
+                    "note": "Tax included"
+                  },
+                  {
+                    "name": "Cod cutlet with mentaiko tartare set",
+                    "price": 1400,
+                    "note": "Tax included"
+                  },
+                  {
+                    "name": "Fried chicken set",
+                    "price": 1200,
+                    "note": "Tax included"
+                  },
+                  {
+                    "name": "Ham and minced-meat cutlet set",
+                    "price": 1300,
+                    "note": "Tax included"
+                  },
+                  {
+                    "name": "Wagyu sukiyaki rice bowl set",
+                    "price": 1600,
+                    "note": "Tax included"
+                  },
+                  {
+                    "name": "Wagyu grilled bibimbap bowl set",
+                    "price": 1700,
+                    "note": "Tax included"
+                  }
+                ],
+                "note": "Latest October8 operator release prices for this exact September16 opening. Lunch11–14, last order14. Spicy pollock roe, takana, rice and Umadashi refill inclusions belong to lunch. Booking-site lunch page has a shorter/partly different roster; latest primary opening menu takes precedence. Standard refill inclusions are not an invented Special. Deep checked owner branch/gallery, latest release, exact branch food/drink/lunch booking pages and all six course pages. Booking provider has conflicting118 versus operator125 seats and generic included-drinks language; operator125 seats/five private rooms and detailed paid-drink terms used. Course dessert conflict recorded. Primary page web-reservation buttons are JavaScript placeholders; functional branch booking site retained. No verified current coupon: coupon endpoint404/unreadable; ordinary courses and standard refills are not indexed as Specials. Remaining gaps: resolved dessert, live booking inventory, exact free-drink duration, unpublished rare-cut prices and full current lunch roster. "
+              },
+              {
+                "label": "Dinner food — exact branch booking menu",
+                "url": "https://nanatsuboshi-shinnsaibashisuji.owst.jp/foods",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "カイノミ（レア度 ★★☆☆☆）",
+                    "priceLabel": "Price not published",
+                    "note": "バラの一部で、ヒレ肉の近くに位置する部位。脂が程よく入って、肉本来の旨みが味わえます。"
+                  },
+                  {
+                    "name": "イチボ（レア度 ★★☆☆☆）",
+                    "priceLabel": "Price not published",
+                    "note": "お尻の先の部位で、赤身の旨みと霜降りのバランスが絶妙。適度な歯応えも魅力です。"
+                  },
+                  {
+                    "name": "ヒウチ（レア度 ★★★☆☆）",
+                    "priceLabel": "Price not published",
+                    "note": "モモの内側、牛の後足の付け根の希少部位。味わい深く、柔らかさが特徴です。"
+                  },
+                  {
+                    "name": "サンカク（レア度 ★★★☆☆）",
+                    "priceLabel": "Price not published",
+                    "note": "肩から胸にかかる部位。美しい霜降りで味わい濃厚、口の中でとろける、まさに牛肉の大トロです。"
+                  },
+                  {
+                    "name": "ハネシタ（レア度 ★★★☆☆）",
+                    "priceLabel": "Price not published",
+                    "note": "肩ロースの中心部位。ロースの柔らかさにカルビのジューシーさを兼ね備えた濃厚な味わいです。"
+                  },
+                  {
+                    "name": "シンロース（レア度 ★★★★★）",
+                    "priceLabel": "Price not published",
+                    "note": "リブロースの芯に近い最高級部位。きめ細やかな霜降りと柔らかい肉質で旨みが豊かです。"
+                  },
+                  {
+                    "name": "＜博多の味やまや＞できたてめんたい",
+                    "price": 1050
+                  },
+                  {
+                    "name": "＜博多の味やまや＞博多名物酢もつ",
+                    "price": 480
+                  },
+                  {
+                    "name": "＜博多の味やまや＞名物ごまさば",
+                    "price": 1200
+                  },
+                  {
+                    "name": "＜博多の味やまや＞ほくほくめんたいポテトサラダ",
+                    "price": 950
+                  },
+                  {
+                    "name": "黒毛和牛ユッケ",
+                    "price": 1700,
+                    "note": "提供時間に至り、お客様に混ぜ合わせて頂く商品です"
+                  },
+                  {
+                    "name": "牛白センマイ",
+                    "price": 980
+                  },
+                  {
+                    "name": "ほうれん草ナムル/大根ナムル/ぜんまいナムル/もやしナムル",
+                    "price": 420,
+                    "note": " Published amount is per named choice, not an assortment."
+                  },
+                  {
+                    "name": "ナムル盛り合わせ",
+                    "price": 850
+                  },
+                  {
+                    "name": "オイキムチ/白菜キムチ/カクテキ",
+                    "price": 380,
+                    "note": " Published amount is per named choice, not an assortment."
+                  },
+                  {
+                    "name": "キムチ3種盛り",
+                    "price": 850
+                  },
+                  {
+                    "name": "やみつきキャベツ",
+                    "price": 420
+                  },
+                  {
+                    "name": "塩だれきゅうり",
+                    "price": 320
+                  },
+                  {
+                    "name": "サンチュ",
+                    "price": 550
+                  },
+                  {
+                    "name": "チョレギサラダ",
+                    "price": 850
+                  },
+                  {
+                    "name": "パリパリサラダ",
+                    "price": 600,
+                    "note": "＜おすすめのお召し上がり方＞名物パリパリサラダと黒毛和牛をお召し上がり頂くことにより、お肉を更においしく感じて頂けます。ぜひ、お試しください。"
+                  },
+                  {
+                    "name": "博多もつ鍋 (一人前)",
+                    "price": 2200,
+                    "note": "※二人前からのご注文になります。ぷりぷりの国産もつを使用した博多名物のもつ鍋。自慢のスープを3種類からお選びいただけます。 Choose flying-fish soy, rich miso or light Umadashi broth; minimum two portions."
+                  },
+                  {
+                    "name": "【追加】国産牛もつ1人前",
+                    "price": 1480
+                  },
+                  {
+                    "name": "【追加】野菜盛り合わせ1人前",
+                    "price": 520
+                  },
+                  {
+                    "name": "【追加】キャベツ1人前/にら1人前/ごぼう1人前",
+                    "price": 420,
+                    "note": " Published amount is per named choice, not an assortment."
+                  },
+                  {
+                    "name": "【追加】とうふ1人前",
+                    "price": 320
+                  },
+                  {
+                    "name": "Hotpot finish — champon noodles, one portion",
+                    "price": 480
+                  },
+                  {
+                    "name": "Hotpot finish — rice porridge",
+                    "price": 450
+                  },
+                  {
+                    "name": "神戸牛　おまかせ三種盛",
+                    "price": 6700
+                  },
+                  {
+                    "name": "神戸牛　希少部位",
+                    "price": 2500
+                  },
+                  {
+                    "name": "神戸牛　カルビ",
+                    "price": 2100
+                  },
+                  {
+                    "name": "神戸牛　赤身",
+                    "price": 2200
+                  },
+                  {
+                    "name": "神戸牛　焼きしゃぶ",
+                    "price": 2400
+                  },
+                  {
+                    "name": "黒毛和牛おまかせ七種盛",
+                    "price": 11000
+                  },
+                  {
+                    "name": "黒毛和牛おまかせ五種盛",
+                    "price": 7480
+                  },
+                  {
+                    "name": "黒毛和牛おまかせ三種盛",
+                    "price": 4400
+                  },
+                  {
+                    "name": "黒毛和牛カルビ",
+                    "price": 1320
+                  },
+                  {
+                    "name": "黒毛和牛ロース",
+                    "price": 1320
+                  },
+                  {
+                    "name": "黒毛和牛赤身",
+                    "price": 1320
+                  },
+                  {
+                    "name": "黒毛和牛 サーロインステーキ 200g",
+                    "price": 5500,
+                    "note": "100g 3000円(税込)"
+                  },
+                  {
+                    "name": "黒毛和牛特上角切りステーキ",
+                    "price": 1700
+                  },
+                  {
+                    "name": "黒毛和牛特上ロース",
+                    "price": 1700
+                  },
+                  {
+                    "name": "黒毛和牛特上カルビ",
+                    "price": 1700
+                  },
+                  {
+                    "name": "厚切りタンステーキ (2枚)",
+                    "price": 3410,
+                    "note": "(1枚) 1750円(税込)"
+                  },
+                  {
+                    "name": "ネギ塩牛タン",
+                    "price": 1500
+                  },
+                  {
+                    "name": "牛タン塩",
+                    "price": 1400
+                  },
+                  {
+                    "name": "上ハラミ",
+                    "price": 1300
+                  },
+                  {
+                    "name": "上ミノ",
+                    "price": 850
+                  },
+                  {
+                    "name": "てっちゃん",
+                    "price": 850
+                  },
+                  {
+                    "name": "赤せんまい",
+                    "price": 850
+                  },
+                  {
+                    "name": "レバー",
+                    "price": 850
+                  },
+                  {
+                    "name": "豚カルビ",
+                    "price": 770
+                  },
+                  {
+                    "name": "豚トロ",
+                    "price": 770
+                  },
+                  {
+                    "name": "鶏もも",
+                    "price": 700
+                  },
+                  {
+                    "name": "せせり",
+                    "price": 700
+                  },
+                  {
+                    "name": "焼き野菜盛",
+                    "price": 750
+                  },
+                  {
+                    "name": "ウインナー",
+                    "price": 500
+                  },
+                  {
+                    "name": "海鮮盛",
+                    "price": 1550
+                  },
+                  {
+                    "name": "海老(5尾)",
+                    "price": 800
+                  },
+                  {
+                    "name": "ホタテ",
+                    "price": 770
+                  },
+                  {
+                    "name": "イカ",
+                    "price": 550
+                  },
+                  {
+                    "name": "白ごはん (並)",
+                    "price": 280,
+                    "note": "(大) 420円(税込)"
+                  },
+                  {
+                    "name": "やまやの明太ごはん (並)",
+                    "price": 430,
+                    "note": "(大) 570円(税込)"
+                  },
+                  {
+                    "name": "クッパ",
+                    "price": 980
+                  },
+                  {
+                    "name": "カルビクッパ",
+                    "price": 1200
+                  },
+                  {
+                    "name": "ビビンバ (並)",
+                    "price": 980,
+                    "note": "(小) 650円(税込)"
+                  },
+                  {
+                    "name": "盛岡冷麺 (並)",
+                    "price": 980,
+                    "note": "(小) 650円(税込)"
+                  },
+                  {
+                    "name": "カルビスープ(辛)",
+                    "price": 980
+                  },
+                  {
+                    "name": "Umadashi wakame soup",
+                    "price": 550
+                  },
+                  {
+                    "name": "Umadashi egg soup",
+                    "price": 600
+                  },
+                  {
+                    "name": "うまだしわかたまスープ",
+                    "price": 660
+                  },
+                  {
+                    "name": "スイートコブラ",
+                    "price": 660
+                  },
+                  {
+                    "name": "バニラアイス",
+                    "price": 450
+                  },
+                  {
+                    "name": "季節のシャーベット",
+                    "price": 450
+                  },
+                  {
+                    "name": "白い珈琲プリン",
+                    "price": 450
+                  },
+                  {
+                    "name": "杏仁豆腐",
+                    "price": 450
+                  },
+                  {
+                    "name": "Wagyu sirloin steak —100g",
+                    "price": 3000
+                  },
+                  {
+                    "name": "Thick-cut tongue steak —one piece",
+                    "price": 1750
+                  },
+                  {
+                    "name": "White rice —large",
+                    "price": 420
+                  },
+                  {
+                    "name": "Mentaiko rice —large",
+                    "price": 570
+                  },
+                  {
+                    "name": "Bibimbap —small",
+                    "price": 650
+                  },
+                  {
+                    "name": "Morioka cold noodles —small",
+                    "price": 650
+                  }
+                ],
+                "note": "Tax-inclusive amounts from the restaurant’s current branded booking site, same address and phone despite legacy nanatsuboshi URL. Rare cuts without prices retained as Price not published; availability limited. Soup options are part of the priced hotpot, not separately free purchases. Size/supplement prices preserved. Operator primary menu confirms core named foods; exact daily stock subject to change."
+              },
+              {
+                "label": "Drinks — exact branch booking menu",
+                "url": "https://nanatsuboshi-shinnsaibashisuji.owst.jp/drinks",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "うめにゃん(宮崎県産うめ使用)",
+                    "price": 640,
+                    "note": "ソーダ割り/ロック/水割り/お湯割り Published amount is per named choice, not an assortment."
+                  },
+                  {
+                    "name": "なつにゃん(宮崎県産日向夏)",
+                    "price": 640,
+                    "note": "ソーダ割り/ロック/水割り/お湯割り Published amount is per named choice, not an assortment."
+                  },
+                  {
+                    "name": "ゆずにゃん(宮崎県産ゆず)",
+                    "price": 640,
+                    "note": "ソーダ割り/ロック/水割り/お湯割り Published amount is per named choice, not an assortment."
+                  },
+                  {
+                    "name": "いちごにゃん(福岡県産いちご)",
+                    "price": 640,
+                    "note": "ソーダ割り/ロック/水割り/お湯割り Published amount is per named choice, not an assortment."
+                  },
+                  {
+                    "name": "すいぽてにゃん(宮崎県産紫いも)",
+                    "price": 640,
+                    "note": "ソーダ割り/ロック/水割り/お湯割り Published amount is per named choice, not an assortment."
+                  },
+                  {
+                    "name": "スーパードライ(生)",
+                    "price": 620
+                  },
+                  {
+                    "name": "スーパードライ(瓶)",
+                    "price": 760
+                  },
+                  {
+                    "name": "アサヒノンアルコール",
+                    "price": 530
+                  },
+                  {
+                    "name": "にっこりマッコリ/グラス",
+                    "price": 600
+                  },
+                  {
+                    "name": "にっこりマッコリ/ボトル",
+                    "price": 2200
+                  },
+                  {
+                    "name": "生マッコリ/ボトル",
+                    "price": 2000
+                  },
+                  {
+                    "name": "やまやのゆずジンソーダ",
+                    "price": 580
+                  },
+                  {
+                    "name": "レモンサワー",
+                    "price": 540
+                  },
+                  {
+                    "name": "ハイボール",
+                    "price": 570
+                  },
+                  {
+                    "name": "ゆずジンジャーハイボール",
+                    "price": 680
+                  },
+                  {
+                    "name": "クレイジーハイボール",
+                    "price": 540
+                  },
+                  {
+                    "name": "クラフトジンソーダ正春",
+                    "price": 550
+                  },
+                  {
+                    "name": "やまやの焼酎ハイボール",
+                    "price": 440
+                  },
+                  {
+                    "name": "やまやのゆずジンソーダ",
+                    "price": 580
+                  },
+                  {
+                    "name": "ゆずにゃんサイダー",
+                    "price": 550
+                  },
+                  {
+                    "name": "なつにゃんサイダー",
+                    "price": 550
+                  },
+                  {
+                    "name": "やまやのゆず茶(冷)",
+                    "price": 420
+                  },
+                  {
+                    "name": "やまやのゆずスカッシュ",
+                    "price": 420
+                  },
+                  {
+                    "name": "ウーロン茶",
+                    "price": 390
+                  },
+                  {
+                    "name": "コーラ",
+                    "price": 390
+                  },
+                  {
+                    "name": "ジンジャエール",
+                    "price": 390
+                  },
+                  {
+                    "name": "オレンジジュース",
+                    "price": 390
+                  },
+                  {
+                    "name": "正春白麹(芋)",
+                    "price": 560
+                  },
+                  {
+                    "name": "正春黒麹(芋)",
+                    "price": 560
+                  },
+                  {
+                    "name": "逢初(芋)",
+                    "price": 580
+                  },
+                  {
+                    "name": "逢初(麦)",
+                    "price": 580
+                  },
+                  {
+                    "name": "逢初(Blue)",
+                    "price": 580
+                  },
+                  {
+                    "name": "逢初古酒",
+                    "price": 1030
+                  },
+                  {
+                    "name": "正春白麹(芋)",
+                    "price": 3250
+                  },
+                  {
+                    "name": "正春黒麹(芋)",
+                    "price": 3250
+                  },
+                  {
+                    "name": "逢初(芋)",
+                    "price": 3550
+                  },
+                  {
+                    "name": "逢初(麦)",
+                    "price": 3550
+                  },
+                  {
+                    "name": "逢初(Blue)",
+                    "price": 3550
+                  },
+                  {
+                    "name": "喜多屋熱燗 1合",
+                    "price": 900
+                  },
+                  {
+                    "name": "喜多屋冷 1合",
+                    "price": 900
+                  },
+                  {
+                    "name": "スパークリング",
+                    "price": 3600,
+                    "note": "(泡) タルターニ タシュ オーストラリア産"
+                  },
+                  {
+                    "name": "白ワイン グラス",
+                    "price": 600,
+                    "note": "ボトル 3,600円(税込)/(白) マックス シャルドネ チリ産"
+                  },
+                  {
+                    "name": "赤ワイン グラス",
+                    "price": 600,
+                    "note": "ボトル 3,600円(税込)/(赤) マックス カベルネ・ソーヴィニヨン チリ産"
+                  },
+                  {
+                    "name": "赤ワイン",
+                    "price": 16000,
+                    "note": "(赤) ピノノワール ナポレオンが愛したことでも有名。ラズベリーの果実のアロマと美しい酸味、力強い厚みと深みある味わいが魅力的。"
+                  },
+                  {
+                    "name": "貫仙寿 純米吟醸 吉兆 【奈良】 ボトル 300ml",
+                    "price": 1500,
+                    "note": "丹精込めた心と技で、香味豊かに醸し上げた、辛口の純米吟醸酒。華やかな香りとスッキリとした味わいは、焼肉によく合います。"
+                  },
+                  {
+                    "name": "立山 吟醸 【富山】 ボトル 300ml",
+                    "price": 1700,
+                    "note": "軽快でキレイな味わいを持ち、フルーティでほのかな香りも上品な酒。スッキリとした喉ごしに旨味とコクが調和し、香味のバランスも良い。"
+                  },
+                  {
+                    "name": "酔鯨 純米吟醸 吟麗 【高知】 ボトル 300ml",
+                    "price": 1700
+                  },
+                  {
+                    "name": "上善如水 純米大吟醸 【新潟】 ボトル 300ml",
+                    "price": 2200,
+                    "note": "気品のあふれる香りと、口の中でゆっくり広がる深みのある味わい。フレッシュな味わいをお楽しみ頂けます。"
+                  },
+                  {
+                    "name": "南部美人 特別純米 【岩手】 ボトル 300ml",
+                    "price": 2200,
+                    "note": "辛口で、やや重め、余韻は長い。"
+                  },
+                  {
+                    "name": "Max Chardonnay, Chile —bottle",
+                    "price": 3600
+                  },
+                  {
+                    "name": "Max Cabernet Sauvignon, Chile —bottle",
+                    "price": 3600
+                  }
+                ],
+                "note": "Tax-inclusive prices; glass/bottle sizes preserved. Where a listed choice combines several flavours, the amount is per choice, not a bundle. Exact beverage stock can change."
+              },
+              {
+                "label": "Standard yakiniku course",
+                "url": "https://nanatsuboshi-shinnsaibashisuji.owst.jp/courses/225379514",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Standard yakiniku course",
+                    "price": 4000
+                  },
+                  {
+                    "name": "Optional free-drink addition",
+                    "price": 2000,
+                    "note": "Course purchase required; exact drink-time limit not consistently specified"
+                  },
+                  {
+                    "name": "できたてめんたい",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Standard yakiniku course; no separate item price published"
+                  },
+                  {
+                    "name": "白菜キムチ",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Standard yakiniku course; no separate item price published"
+                  },
+                  {
+                    "name": "パリパリサラダ",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Standard yakiniku course; no separate item price published"
+                  },
+                  {
+                    "name": "ナムル4種盛",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Standard yakiniku course; no separate item price published"
+                  },
+                  {
+                    "name": "黒毛和牛3種盛",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Standard yakiniku course; no separate item price published"
+                  },
+                  {
+                    "name": "和牛たれ焼",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Standard yakiniku course; no separate item price published"
+                  },
+                  {
+                    "name": "ホルモン2種",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Standard yakiniku course; no separate item price published"
+                  },
+                  {
+                    "name": "やまやの明太ごはん",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Standard yakiniku course; no separate item price published"
+                  },
+                  {
+                    "name": "うまだしわかめスープ",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Standard yakiniku course; no separate item price published"
+                  },
+                  {
+                    "name": "デザート",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Standard yakiniku course; no separate item price published"
+                  }
+                ],
+                "note": "Tax-inclusive price, minimum two diners,2-hour seating. Menu can change with supply. Free drinks cost an additional¥2,000; specific course pages override the general booking-site atmosphere blurb claiming drinks are included. Same-day orders accepted subject to capacity; website cutoff is same-day00:00 for yakiniku courses,20:00 for Bimi/Ginmi despite same-day-order text—call for late bookings. Normal Monday/holiday closure overrides generic every-day booking labels. Mentaiko rice can change to refillable white rice. "
+              },
+              {
+                "label": "Premium yakiniku course",
+                "url": "https://nanatsuboshi-shinnsaibashisuji.owst.jp/courses/225379515",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Premium yakiniku course",
+                    "price": 5000
+                  },
+                  {
+                    "name": "Optional free-drink addition",
+                    "price": 2000,
+                    "note": "Course purchase required; exact drink-time limit not consistently specified"
+                  },
+                  {
+                    "name": "できたてめんたい",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Premium yakiniku course; no separate item price published"
+                  },
+                  {
+                    "name": "白菜キムチ",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Premium yakiniku course; no separate item price published"
+                  },
+                  {
+                    "name": "パリパリサラダ",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Premium yakiniku course; no separate item price published"
+                  },
+                  {
+                    "name": "ナムル4種盛",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Premium yakiniku course; no separate item price published"
+                  },
+                  {
+                    "name": "牛タン塩",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Premium yakiniku course; no separate item price published"
+                  },
+                  {
+                    "name": "黒毛和牛5種盛",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Premium yakiniku course; no separate item price published"
+                  },
+                  {
+                    "name": "やまやの明太ごはん",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Premium yakiniku course; no separate item price published"
+                  },
+                  {
+                    "name": "うまだしわかめスープ",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Premium yakiniku course; no separate item price published"
+                  },
+                  {
+                    "name": "デザート",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Premium yakiniku course; no separate item price published"
+                  }
+                ],
+                "note": "Tax-inclusive price, minimum two diners,2-hour seating. Menu can change with supply. Free drinks cost an additional¥2,000; specific course pages override the general booking-site atmosphere blurb claiming drinks are included. Same-day orders accepted subject to capacity; website cutoff is same-day00:00 for yakiniku courses,20:00 for Bimi/Ginmi despite same-day-order text—call for late bookings. Normal Monday/holiday closure overrides generic every-day booking labels. Mentaiko rice can change to refillable white rice. "
+              },
+              {
+                "label": "Standard yakiniku and motsunabe course",
+                "url": "https://nanatsuboshi-shinnsaibashisuji.owst.jp/courses/225379512",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Standard yakiniku and motsunabe course",
+                    "price": 5500
+                  },
+                  {
+                    "name": "Optional free-drink addition",
+                    "price": 2000,
+                    "note": "Course purchase required; exact drink-time limit not consistently specified"
+                  },
+                  {
+                    "name": "できたてめんたい",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Standard yakiniku and motsunabe course; no separate item price published"
+                  },
+                  {
+                    "name": "白菜キムチ",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Standard yakiniku and motsunabe course; no separate item price published"
+                  },
+                  {
+                    "name": "酢もつ",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Standard yakiniku and motsunabe course; no separate item price published"
+                  },
+                  {
+                    "name": "パリパリサラダ",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Standard yakiniku and motsunabe course; no separate item price published"
+                  },
+                  {
+                    "name": "ナムル4種盛",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Standard yakiniku and motsunabe course; no separate item price published"
+                  },
+                  {
+                    "name": "牛タン塩",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Standard yakiniku and motsunabe course; no separate item price published"
+                  },
+                  {
+                    "name": "黒毛和牛3種盛",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Standard yakiniku and motsunabe course; no separate item price published"
+                  },
+                  {
+                    "name": "もつ鍋",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Standard yakiniku and motsunabe course; no separate item price published"
+                  },
+                  {
+                    "name": "もつ鍋の〆 ちゃんぽん or 雑炊",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Standard yakiniku and motsunabe course; no separate item price published"
+                  },
+                  {
+                    "name": "デザート",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Standard yakiniku and motsunabe course; no separate item price published"
+                  }
+                ],
+                "note": "Tax-inclusive price, minimum two diners,2-hour seating. Menu can change with supply. Free drinks cost an additional¥2,000; specific course pages override the general booking-site atmosphere blurb claiming drinks are included. Same-day orders accepted subject to capacity; website cutoff is same-day00:00 for yakiniku courses,20:00 for Bimi/Ginmi despite same-day-order text—call for late bookings. Normal Monday/holiday closure overrides generic every-day booking labels. Motsunabe broth choices: flying-fish soy, rich miso or light Umadashi. "
+              },
+              {
+                "label": "Premium yakiniku and motsunabe course",
+                "url": "https://nanatsuboshi-shinnsaibashisuji.owst.jp/courses/225379513",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Premium yakiniku and motsunabe course",
+                    "price": 7000
+                  },
+                  {
+                    "name": "Optional free-drink addition",
+                    "price": 2000,
+                    "note": "Course purchase required; exact drink-time limit not consistently specified"
+                  },
+                  {
+                    "name": "できたてめんたい",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Premium yakiniku and motsunabe course; no separate item price published"
+                  },
+                  {
+                    "name": "酢もつ",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Premium yakiniku and motsunabe course; no separate item price published"
+                  },
+                  {
+                    "name": "ごまさば",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Premium yakiniku and motsunabe course; no separate item price published"
+                  },
+                  {
+                    "name": "パリパリサラダ",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Premium yakiniku and motsunabe course; no separate item price published"
+                  },
+                  {
+                    "name": "ナムル4種盛",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Premium yakiniku and motsunabe course; no separate item price published"
+                  },
+                  {
+                    "name": "牛タン塩",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Premium yakiniku and motsunabe course; no separate item price published"
+                  },
+                  {
+                    "name": "黒毛和牛5種盛",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Premium yakiniku and motsunabe course; no separate item price published"
+                  },
+                  {
+                    "name": "もつ鍋",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Premium yakiniku and motsunabe course; no separate item price published"
+                  },
+                  {
+                    "name": "もつ鍋の〆 ちゃんぽん or 雑炊",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Premium yakiniku and motsunabe course; no separate item price published"
+                  },
+                  {
+                    "name": "デザート",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Premium yakiniku and motsunabe course; no separate item price published"
+                  }
+                ],
+                "note": "Tax-inclusive price, minimum two diners,2-hour seating. Menu can change with supply. Free drinks cost an additional¥2,000; specific course pages override the general booking-site atmosphere blurb claiming drinks are included. Same-day orders accepted subject to capacity; website cutoff is same-day00:00 for yakiniku courses,20:00 for Bimi/Ginmi despite same-day-order text—call for late bookings. Normal Monday/holiday closure overrides generic every-day booking labels. Motsunabe broth choices: flying-fish soy, rich miso or light Umadashi. "
+              },
+              {
+                "label": "Bimi motsunabe course",
+                "url": "https://nanatsuboshi-shinnsaibashisuji.owst.jp/courses/225311578",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Bimi motsunabe course",
+                    "price": 4000
+                  },
+                  {
+                    "name": "Optional free-drink addition",
+                    "price": 2000,
+                    "note": "Course purchase required; exact drink-time limit not consistently specified"
+                  },
+                  {
+                    "name": "博多前菜　三種盛り合わせ",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Bimi motsunabe course; no separate item price published"
+                  },
+                  {
+                    "name": "博多名物　酢もつ",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Bimi motsunabe course; no separate item price published"
+                  },
+                  {
+                    "name": "彩り野菜のサラダ",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Bimi motsunabe course; no separate item price published"
+                  },
+                  {
+                    "name": "熟成鶏の唐揚げ明太風味",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Bimi motsunabe course; no separate item price published"
+                  },
+                  {
+                    "name": "博多もつ鍋",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Bimi motsunabe course; no separate item price published"
+                  },
+                  {
+                    "name": "〆のちゃんぽん麺または雑炊",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Bimi motsunabe course; no separate item price published"
+                  },
+                  {
+                    "name": "Dessert — operator page says yuzu sorbet; booking menu says Itoshima milk ice cream, confirm current serving",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Bimi motsunabe course; no separate item price published"
+                  }
+                ],
+                "note": "Tax-inclusive price, minimum two diners,2-hour seating. Menu can change with supply. Free drinks cost an additional¥2,000; specific course pages override the general booking-site atmosphere blurb claiming drinks are included. Same-day orders accepted subject to capacity; website cutoff is same-day00:00 for yakiniku courses,20:00 for Bimi/Ginmi despite same-day-order text—call for late bookings. Normal Monday/holiday closure overrides generic every-day booking labels. Motsunabe broth choices: flying-fish soy, rich miso or light Umadashi. "
+              },
+              {
+                "label": "Ginmi motsunabe course",
+                "url": "https://nanatsuboshi-shinnsaibashisuji.owst.jp/courses/225311577",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Ginmi motsunabe course",
+                    "price": 5000
+                  },
+                  {
+                    "name": "Optional free-drink addition",
+                    "price": 2000,
+                    "note": "Course purchase required; exact drink-time limit not consistently specified"
+                  },
+                  {
+                    "name": "博多前菜　三種盛り合わせ",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Ginmi motsunabe course; no separate item price published"
+                  },
+                  {
+                    "name": "博多とんこつ炊き餃子",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Ginmi motsunabe course; no separate item price published"
+                  },
+                  {
+                    "name": "名物　ごまさば",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Ginmi motsunabe course; no separate item price published"
+                  },
+                  {
+                    "name": "彩り野菜のサラダ",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Ginmi motsunabe course; no separate item price published"
+                  },
+                  {
+                    "name": "やまやのとり皮串",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Ginmi motsunabe course; no separate item price published"
+                  },
+                  {
+                    "name": "博多もつ鍋",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Ginmi motsunabe course; no separate item price published"
+                  },
+                  {
+                    "name": "〆のちゃんぽん麺または雑炊",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Ginmi motsunabe course; no separate item price published"
+                  },
+                  {
+                    "name": "Dessert — operator page says yuzu sorbet; booking menu says Itoshima milk ice cream, confirm current serving",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Ginmi motsunabe course; no separate item price published"
+                  }
+                ],
+                "note": "Tax-inclusive price, minimum two diners,2-hour seating. Menu can change with supply. Free drinks cost an additional¥2,000; specific course pages override the general booking-site atmosphere blurb claiming drinks are included. Same-day orders accepted subject to capacity; website cutoff is same-day00:00 for yakiniku courses,20:00 for Bimi/Ginmi despite same-day-order text—call for late bookings. Normal Monday/holiday closure overrides generic every-day booking labels. Motsunabe broth choices: flying-fish soy, rich miso or light Umadashi. "
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://restaurant-yamaya.com/brand/motsu/restaurant/shinsaibashisuji",
+            "name": "Yakiniku to Motsunabe Hakata Yamaya — Shinsaibashisuji",
+            "checkedAt": "2026-10-14",
+            "websiteUrl": "https://restaurant-yamaya.com/brand/motsu/restaurant/shinsaibashisuji",
+            "phone": "06-6241-6788",
+            "openingHours": [
+              {
+                "days": "Lunch",
+                "hours": "11:00–14:00; last order14:00"
+              },
+              {
+                "days": "Dinner",
+                "hours": "17:00–23:00; food last order22:00, drinks22:30 per operator release"
+              },
+              {
+                "days": "Closed",
+                "hours": "Monday; if Monday is a public holiday, open that day and close next weekday"
+              },
+              {
+                "days": "Seats",
+                "hours": "125; five private rooms per operator; booking page118 is inconsistent"
+              }
+            ],
+            "detailsSourceUrl": "https://restaurant-yamaya.com/brand/motsu/restaurant/shinsaibashisuji",
+            "additionalSources": [
+              {
+                "label": "Research evidence",
+                "url": "https://www.yamaya.com/corporate/news/detail/873"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://nanatsuboshi-shinnsaibashisuji.owst.jp/foods"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://nanatsuboshi-shinnsaibashisuji.owst.jp/drinks"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://nanatsuboshi-shinnsaibashisuji.owst.jp/lunches"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://nanatsuboshi-shinnsaibashisuji.owst.jp/courses"
+              }
+            ],
+            "reservationUrl": "https://nanatsuboshi-shinnsaibashisuji.owst.jp/"
+          },
+          "tile": {
+            "regionSlug": "osaka",
+            "kind": "opening",
+            "slug": "japan42-yamaya-shinsai",
+            "name": "Yakiniku to Motsunabe Hakata Yamaya — Shinsaibashisuji",
+            "neighborhood": "Shinsaibashi",
+            "cuisine": "Yakiniku / motsunabe",
+            "description": "A recently opened restaurant format pairing wagyu yakiniku with Hakata motsunabe, with separate published lunch, dinner and drink menus.",
+            "address": "3-5-19 Minamisenba, Chuo-ku, Osaka",
+            "websiteUrl": "https://restaurant-yamaya.com/brand/motsu/restaurant/shinsaibashisuji",
+            "checkedAt": "2026-10-14",
+            "recognition": "",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/osaka/japan-30-2026-10-13/japan42-yamaya-shinsai-30-92ea0db99e1e8759.webp",
+            "imageCredit": "Yamaya Communications",
+            "imageSourceUrl": "https://restaurant-yamaya.com/brand/motsu/restaurant/shinsaibashisuji",
+            "imageNote": "Actual Shinsaibashisuji branch dining room",
+            "openingConfirmed": true,
+            "day": "2026-09-16"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/osaka/japan-30-2026-10-13/japan42-yamaya-shinsai-30-92ea0db99e1e8759.webp",
+          "sha256": "92ea0db99e1e875945684396e12d0258493cd4edcea98f2e2ca4e9fc041c6022",
+          "width": 650,
+          "height": 420,
+          "credit": "Yamaya Communications",
+          "note": "Actual Shinsaibashisuji branch dining room",
+          "sourcePage": "https://restaurant-yamaya.com/brand/motsu/restaurant/shinsaibashisuji"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/osaka/japan-30-2026-10-13/japan42-yamaya-shinsai-31-8b2bf54aa91e99de.webp",
+          "sha256": "8b2bf54aa91e99dedc897c6f0f34c31b449cb1f8df76c3ee9fcef4a79015144e",
+          "width": 650,
+          "height": 420,
+          "credit": "Yamaya Communications",
+          "note": "Actual Shinsaibashisuji private room",
+          "sourcePage": "https://restaurant-yamaya.com/brand/motsu/restaurant/shinsaibashisuji"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/osaka/japan-30-2026-10-13/japan42-yamaya-shinsai-24-cd57fb42faa950cb.webp",
+          "sha256": "cd57fb42faa950cb30706d176582f419c1028e7e6c8ee1d41161e4f4644a833b",
+          "width": 778,
+          "height": 498,
+          "credit": "Yamaya Communications",
+          "note": "Standard yakiniku course, operator photograph shows two portions",
+          "sourcePage": "https://restaurant-yamaya.com/brand/motsu/restaurant/shinsaibashisuji"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/osaka/japan-30-2026-10-13/japan42-yamaya-shinsai-25-5bdd852729911400.webp",
+          "sha256": "5bdd8527299114006ada02816b7b91e7b23440deeed6041c38ae4c80767bc7e6",
+          "width": 778,
+          "height": 498,
+          "credit": "Yamaya Communications",
+          "note": "Premium yakiniku course, operator photograph shows two portions",
+          "sourcePage": "https://restaurant-yamaya.com/brand/motsu/restaurant/shinsaibashisuji"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/osaka/japan-30-2026-10-13/japan42-yamaya-shinsai-26-ebdbbe8f85844cc7.webp",
+          "sha256": "ebdbbe8f85844cc7b55bda4e4a6dc02c4f516fa8890d7ada6403cbf48bd30d66",
+          "width": 778,
+          "height": 498,
+          "credit": "Yamaya Communications",
+          "note": "Standard yakiniku and motsunabe course, operator photograph shows two portions",
+          "sourcePage": "https://restaurant-yamaya.com/brand/motsu/restaurant/shinsaibashisuji"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/osaka/japan-30-2026-10-13/japan42-yamaya-shinsai-27-331d6f3d0434ba2d.webp",
+          "sha256": "331d6f3d0434ba2d81b7c7b1f9f3b3cb6665553259ea543803f9c7ca26738821",
+          "width": 778,
+          "height": 498,
+          "credit": "Yamaya Communications",
+          "note": "Premium yakiniku and motsunabe course, operator photograph shows two portions",
+          "sourcePage": "https://restaurant-yamaya.com/brand/motsu/restaurant/shinsaibashisuji"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/osaka/japan-30-2026-10-13/japan42-yamaya-shinsai-28-abff3282e8d14e82.webp",
+          "sha256": "abff3282e8d14e82b3892b2b4f6933a00ecaf0d4312bcf2de717ccf651670143",
+          "width": 779,
+          "height": 511,
+          "credit": "Yamaya Communications",
+          "note": "Ginmi motsunabe course, operator photograph shows two portions",
+          "sourcePage": "https://restaurant-yamaya.com/brand/motsu/restaurant/shinsaibashisuji"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/osaka/japan-30-2026-10-13/japan42-yamaya-shinsai-29-3649488a52fed46f.webp",
+          "sha256": "3649488a52fed46f64f0f506614c05f97a0c540689f30f5c2fb492539a768243",
+          "width": 779,
+          "height": 511,
+          "credit": "Yamaya Communications",
+          "note": "Bimi motsunabe course, operator photograph shows two portions",
+          "sourcePage": "https://restaurant-yamaya.com/brand/motsu/restaurant/shinsaibashisuji"
+        }
+      ]
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Taco Bell — Dotonbori Opens in Dotonbori",
+        "description": "Taco Bell’s newly opened Dotonbori takeaway and delivery counter, serving tacos, quesadillas, Crunchwrap Supreme and nachos.",
+        "sourceUrl": "https://tacobell.jp/newz/taco-bell-%e9%81%93%e9%a0%93%e5%a0%80%e5%ba%97-2026%e5%b9%b49%e6%9c%8825%e6%97%a5%e9%87%91new-open%ef%bc%81/",
+        "address": "B1F Comrade Doton Building, 1-6-15 Dotonbori, Chuo-ku, Osaka",
+        "productName": "Taco Bell — Dotonbori",
+        "utcStartDateTime": "2026-09-25T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "Operator confirms September25,2026 opening at this exact address; this is the new return to Dotonbori, not the2017 branch that closed in2022.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Osaka",
+          "Japan",
+          "Dotonbori",
+          "Mexican / takeaway"
+        ],
+        "longFormSummary": "<p>Taco Bell’s newly opened Dotonbori takeaway and delivery counter, serving tacos, quesadillas, Crunchwrap Supreme and nachos.<cite data-ref=\"https://tacobell.jp/newz/taco-bell-%e9%81%93%e9%a0%93%e5%a0%80%e5%ba%97-2026%e5%b9%b49%e6%9c%8825%e6%97%a5%e9%87%91new-open%ef%bc%81/\"></cite></p><p>Operator confirms September25,2026 opening at this exact address; this is the new return to Dotonbori, not the2017 branch that closed in2022.</p>",
+        "references": [
+          {
+            "url": "https://tacobell.jp/newz/taco-bell-%e9%81%93%e9%a0%93%e5%a0%80%e5%ba%97-2026%e5%b9%b49%e6%9c%8825%e6%97%a5%e9%87%91new-open%ef%bc%81/",
+            "title": "Taco Bell — Dotonbori source",
+            "confidence": 90,
+            "reasoning": "Operator confirms September25,2026 opening at this exact address; this is the new return to Dotonbori, not the2017 branch that closed in2022."
+          },
+          {
+            "url": "https://tacobell.jp/locations/",
+            "title": "Taco Bell — Dotonbori source",
+            "confidence": 90,
+            "reasoning": "Operator confirms September25,2026 opening at this exact address; this is the new return to Dotonbori, not the2017 branch that closed in2022."
+          },
+          {
+            "url": "https://www.lmaga.jp/news/2026/09/1102979/",
+            "title": "Taco Bell — Dotonbori source",
+            "confidence": 90,
+            "reasoning": "Operator confirms September25,2026 opening at this exact address; this is the new return to Dotonbori, not the2017 branch that closed in2022."
+          },
+          {
+            "url": "https://tacobell.jp/menu-by-store/",
+            "title": "Taco Bell — Dotonbori source",
+            "confidence": 90,
+            "reasoning": "Operator confirms September25,2026 opening at this exact address; this is the new return to Dotonbori, not the2017 branch that closed in2022."
+          },
+          {
+            "url": "https://tacobell.jp/category/tacos",
+            "title": "Taco Bell — Dotonbori source",
+            "confidence": 90,
+            "reasoning": "Operator confirms September25,2026 opening at this exact address; this is the new return to Dotonbori, not the2017 branch that closed in2022."
+          },
+          {
+            "url": "https://tacobell.jp/category/burrito",
+            "title": "Taco Bell — Dotonbori source",
+            "confidence": 90,
+            "reasoning": "Operator confirms September25,2026 opening at this exact address; this is the new return to Dotonbori, not the2017 branch that closed in2022."
+          },
+          {
+            "url": "https://tacobell.jp/category/specialties",
+            "title": "Taco Bell — Dotonbori source",
+            "confidence": 90,
+            "reasoning": "Operator confirms September25,2026 opening at this exact address; this is the new return to Dotonbori, not the2017 branch that closed in2022."
+          },
+          {
+            "url": "https://tacobell.jp/category/party",
+            "title": "Taco Bell — Dotonbori source",
+            "confidence": 90,
+            "reasoning": "Operator confirms September25,2026 opening at this exact address; this is the new return to Dotonbori, not the2017 branch that closed in2022."
+          },
+          {
+            "url": "https://tacobell.jp/category/side",
+            "title": "Taco Bell — Dotonbori source",
+            "confidence": 90,
+            "reasoning": "Operator confirms September25,2026 opening at this exact address; this is the new return to Dotonbori, not the2017 branch that closed in2022."
+          },
+          {
+            "url": "https://tacobell.jp/category/dessert",
+            "title": "Taco Bell — Dotonbori source",
+            "confidence": 90,
+            "reasoning": "Operator confirms September25,2026 opening at this exact address; this is the new return to Dotonbori, not the2017 branch that closed in2022."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://tacobell.jp/newz/taco-bell-%e9%81%93%e9%a0%93%e5%a0%80%e5%ba%97-2026%e5%b9%b49%e6%9c%8825%e6%97%a5%e9%87%91new-open%ef%bc%81/",
+          "menu": {
+            "pinSourceUrl": "https://tacobell.jp/newz/taco-bell-%e9%81%93%e9%a0%93%e5%a0%80%e5%ba%97-2026%e5%b9%b49%e6%9c%8825%e6%97%a5%e9%87%91new-open%ef%bc%81/",
+            "name": "Taco Bell — Dotonbori",
+            "checkedAt": "2026-10-14",
+            "menus": [
+              {
+                "label": "Branch-announced launch dishes",
+                "url": "https://www.lmaga.jp/news/2026/09/1102979/",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Tacos",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Quesadilla",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Crunchwrap Supreme",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Nachos",
+                    "priceLabel": "Price not published"
+                  }
+                ],
+                "note": "Exact-branch opening reporting names these dishes; operator national menu categories corroborate names without prices. Deep checked opening announcement, exact operating-store page/gallery, all six food categories, Menu by Store and mobile ordering. Menu by Store omits this new branch; do not substitute Hankyu Sanbangai or an obsolete pre2022 Dotonbori price list. Mobile ordering button has no active target and home says preparing. Current precise branch prices/complete order roster remain unpublished. Old Uber-scraped third-party prices cannot establish this reopened branch’s current prices. No verified current branch offer or published final day for national collaborations; no invented Special."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://tacobell.jp/newz/taco-bell-%e9%81%93%e9%a0%93%e5%a0%80%e5%ba%97-2026%e5%b9%b49%e6%9c%8825%e6%97%a5%e9%87%91new-open%ef%bc%81/",
+            "name": "Taco Bell — Dotonbori",
+            "checkedAt": "2026-10-14",
+            "websiteUrl": "https://tacobell.jp/",
+            "phone": "06-6226-8489",
+            "openingHours": [
+              {
+                "days": "Daily",
+                "hours": "11:00–22:00; last order not separately stated"
+              },
+              {
+                "days": "Service",
+                "hours": "Takeaway and delivery only; no dine-in seats"
+              }
+            ],
+            "detailsSourceUrl": "https://tacobell.jp/",
+            "additionalSources": [
+              {
+                "label": "Research evidence",
+                "url": "https://tacobell.jp/newz/taco-bell-%e9%81%93%e9%a0%93%e5%a0%80%e5%ba%97-2026%e5%b9%b49%e6%9c%8825%e6%97%a5%e9%87%91new-open%ef%bc%81/"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://tacobell.jp/locations/"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://www.lmaga.jp/news/2026/09/1102979/"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://tacobell.jp/menu-by-store/"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://tacobell.jp/category/tacos"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://tacobell.jp/category/burrito"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://tacobell.jp/category/specialties"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://tacobell.jp/category/party"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://tacobell.jp/category/side"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://tacobell.jp/category/dessert"
+              }
+            ]
+          },
+          "tile": {
+            "regionSlug": "osaka",
+            "kind": "opening",
+            "slug": "japan42-taco-open",
+            "name": "Taco Bell — Dotonbori",
+            "neighborhood": "Dotonbori",
+            "cuisine": "Mexican / takeaway",
+            "description": "Taco Bell’s newly opened Dotonbori takeaway and delivery counter, serving tacos, quesadillas, Crunchwrap Supreme and nachos.",
+            "address": "B1F Comrade Doton Building, 1-6-15 Dotonbori, Chuo-ku, Osaka",
+            "websiteUrl": "https://tacobell.jp/",
+            "checkedAt": "2026-10-14",
+            "recognition": "",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/osaka/japan-30-2026-10-13/japan42-taco-open-0-c6c26f89bd6aab2e.webp",
+            "imageCredit": "Taco Bell Japan / KOZO Holdings",
+            "imageSourceUrl": "https://tacobell.jp/newz/taco-bell-%e9%81%93%e9%a0%93%e5%a0%80%e5%ba%97-2026%e5%b9%b49%e6%9c%8825%e6%97%a5%e9%87%91new-open%ef%bc%81/",
+            "imageNote": "Actual Dotonbori branch exterior, operator opening announcement",
+            "openingConfirmed": true,
+            "day": "2026-09-25"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/osaka/japan-30-2026-10-13/japan42-taco-open-0-c6c26f89bd6aab2e.webp",
+          "sha256": "c6c26f89bd6aab2e96c7c80448718d375b2b6d268228462b74994d6598cc3a6a",
+          "width": 1200,
+          "height": 900,
+          "credit": "Taco Bell Japan / KOZO Holdings",
+          "note": "Actual Dotonbori branch exterior, operator opening announcement",
+          "sourcePage": "https://tacobell.jp/newz/taco-bell-%e9%81%93%e9%a0%93%e5%a0%80%e5%ba%97-2026%e5%b9%b49%e6%9c%8825%e6%97%a5%e9%87%91new-open%ef%bc%81/"
+        }
+      ]
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Gong cha — Whity Umeda Opens in Umeda",
+        "description": "A forthcoming Gong cha counter in Whity Umeda’s Pocket Park, with November6 announced on the actual storefront poster.",
+        "sourceUrl": "https://gongcha-job.net/jobfind-pc/job/All/4275",
+        "address": "Whity Umeda Pocket Park, 4-7 Komatsubaracho Umeda Underground Mall, Kita-ku, Osaka",
+        "productName": "Gong cha — Whity Umeda",
+        "utcStartDateTime": "2026-11-06T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "Official employer recruitment confirms November opening at4-7; actual operator storefront poster photographed September2026 states November6 Friday, matching2026. This confirms the announced date, not completed construction or unchanged future plans.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Osaka",
+          "Japan",
+          "Umeda",
+          "Tea café"
+        ],
+        "longFormSummary": "<p>A forthcoming Gong cha counter in Whity Umeda’s Pocket Park, with November6 announced on the actual storefront poster.<cite data-ref=\"https://takuyou1.hatenablog.com/entry/2026/09/08/204422\"></cite></p><p>Official employer recruitment confirms November opening at4-7; actual operator storefront poster photographed September2026 states November6 Friday, matching2026. This confirms the announced date, not completed construction or unchanged future plans.</p>",
+        "references": [
+          {
+            "url": "https://gongcha-job.net/jobfind-pc/job/All/4275",
+            "title": "Gong cha — Whity Umeda source",
+            "confidence": 90,
+            "reasoning": "Official employer recruitment confirms November opening at4-7; actual operator storefront poster photographed September2026 states November6 Friday, matching2026. This confirms the announced date, not completed construction or unchanged future plans."
+          },
+          {
+            "url": "https://takuyou1.hatenablog.com/entry/2026/09/08/204422",
+            "title": "Gong cha — Whity Umeda source",
+            "confidence": 90,
+            "reasoning": "Official employer recruitment confirms November opening at4-7; actual operator storefront poster photographed September2026 states November6 Friday, matching2026. This confirms the announced date, not completed construction or unchanged future plans."
+          },
+          {
+            "url": "https://whity.osaka-chikagai.jp/floor?area=8",
+            "title": "Gong cha — Whity Umeda source",
+            "confidence": 90,
+            "reasoning": "Official employer recruitment confirms November opening at4-7; actual operator storefront poster photographed September2026 states November6 Friday, matching2026. This confirms the announced date, not completed construction or unchanged future plans."
+          },
+          {
+            "url": "https://www.gongcha.co.jp/menu/",
+            "title": "Gong cha — Whity Umeda source",
+            "confidence": 90,
+            "reasoning": "Official employer recruitment confirms November opening at4-7; actual operator storefront poster photographed September2026 states November6 Friday, matching2026. This confirms the announced date, not completed construction or unchanged future plans."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://gongcha-job.net/jobfind-pc/job/All/4275",
+          "menu": {
+            "pinSourceUrl": "https://gongcha-job.net/jobfind-pc/job/All/4275",
+            "name": "Gong cha — Whity Umeda",
+            "checkedAt": "2026-10-14",
+            "menus": [
+              {
+                "label": "Planned Whity Umeda branch menu",
+                "url": "https://www.gongcha.co.jp/menu/",
+                "currency": "JPY",
+                "coverage": "link",
+                "items": [],
+                "note": "Exact launch drinks, prices and food menu not published. Deep checked current operator menu/store news, official employer recruitment (curl404, cached primary text readable), landlord floor guide and actual storefront poster/gallery in September8 reporting. Employer confirms November opening and address; site poster visibly states November6 Friday. Landlord has not yet added the branch. National menus are research context, not a guaranteed branch launch assortment; existing Ekimarche/SUNAMO prices or U22 participation not borrowed. Exact service hours, closed days, direct phone, seating, final menu and completed venue gallery remain gaps. Recruitment06–23 is a work-shift range, not service hours. Photographs show actual construction frontage, not a finished shop."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://gongcha-job.net/jobfind-pc/job/All/4275",
+            "name": "Gong cha — Whity Umeda",
+            "checkedAt": "2026-10-14",
+            "websiteUrl": "https://www.gongcha.co.jp/",
+            "phone": null,
+            "openingHours": [
+              {
+                "days": "Service hours",
+                "hours": "Not yet published; recruitment shifts are not opening hours"
+              }
+            ],
+            "detailsSourceUrl": "https://www.gongcha.co.jp/",
+            "additionalSources": [
+              {
+                "label": "Research evidence",
+                "url": "https://takuyou1.hatenablog.com/entry/2026/09/08/204422"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://takuyou1.hatenablog.com/entry/2026/09/08/204422"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://whity.osaka-chikagai.jp/floor?area=8"
+              }
+            ]
+          },
+          "tile": {
+            "regionSlug": "osaka",
+            "kind": "opening",
+            "slug": "japan42-gongcha-blog",
+            "name": "Gong cha — Whity Umeda",
+            "neighborhood": "Umeda",
+            "cuisine": "Tea café",
+            "description": "A forthcoming Gong cha counter in Whity Umeda’s Pocket Park, with November6 announced on the actual storefront poster.",
+            "address": "Whity Umeda Pocket Park, 4-7 Komatsubaracho Umeda Underground Mall, Kita-ku, Osaka",
+            "websiteUrl": "https://www.gongcha.co.jp/",
+            "checkedAt": "2026-10-14",
+            "recognition": "",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/osaka/japan-30-2026-10-13/japan42-gongcha-blog-6-fdabaa4a4062d055.webp",
+            "imageCredit": "拓陽 / Takuyou Blog Cafe",
+            "imageSourceUrl": "https://takuyou1.hatenablog.com/entry/2026/09/08/204422",
+            "imageNote": "Actual future Whity Umeda storefront behind construction hoarding, photographed September2026; not a completed shop",
+            "openingConfirmed": true,
+            "day": "2026-11-06"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/osaka/japan-30-2026-10-13/japan42-gongcha-blog-6-fdabaa4a4062d055.webp",
+          "sha256": "fdabaa4a4062d05559bbb5850e59161e21f20385d65211252826bb358ce6be25",
+          "width": 500,
+          "height": 375,
+          "credit": "拓陽 / Takuyou Blog Cafe",
+          "note": "Actual future Whity Umeda storefront behind construction hoarding, photographed September2026; not a completed shop",
+          "sourcePage": "https://takuyou1.hatenablog.com/entry/2026/09/08/204422"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/osaka/japan-30-2026-10-13/japan42-gongcha-blog-1-b7f17a0186d251b0.webp",
+          "sha256": "b7f17a0186d251b004371c93ba9ef3f31f95ac0ade4017cfb6d3abe9ce878167",
+          "width": 400,
+          "height": 580,
+          "credit": "拓陽 / Takuyou Blog Cafe",
+          "note": "Operator storefront poster announces November6 grand opening; photographed September2026",
+          "sourcePage": "https://takuyou1.hatenablog.com/entry/2026/09/08/204422"
+        }
+      ]
+    }
+  ]
+}

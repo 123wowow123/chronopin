@@ -1,0 +1,740 @@
+{
+  "checkedAt": "2026-10-14",
+  "country": "Japan",
+  "regions": [
+    "fukuoka",
+    "osaka"
+  ],
+  "entries": [
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "REC COFFEE — Island City Teriha Opens in Island City / Kashii Teriha",
+        "description": "A planned specialty-coffee cafe with seventy-one indoor/terrace seats and morning-to-evening service.",
+        "sourceUrl": "https://rec-coffee.com/blogs/news/20260904",
+        "address": "Teriha Pavilion, 1-3-11 Kashii Teriha, Higashi-ku, Fukuoka",
+        "productName": "REC COFFEE — Island City Teriha",
+        "utcStartDateTime": "2026-10-31T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "REC COFFEE September 4 operator release explicitly confirms October 31, 2026 opening at Teriha Pavilion. Gallery exterior/interior views are planned renderings, not proof of opening.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Fukuoka",
+          "Japan",
+          "Island City / Kashii Teriha",
+          "Cafe"
+        ],
+        "longFormSummary": "<p>A planned specialty-coffee cafe with seventy-one indoor/terrace seats and morning-to-evening service.<cite data-ref=\"https://rec-coffee.com/blogs/news/20260904\"></cite></p><p>REC COFFEE September 4 operator release explicitly confirms October 31, 2026 opening at Teriha Pavilion. Gallery exterior/interior views are planned renderings, not proof of opening.</p>",
+        "references": [
+          {
+            "url": "https://rec-coffee.com/blogs/news/20260904",
+            "title": "REC COFFEE — Island City Teriha source",
+            "confidence": 90,
+            "reasoning": "REC COFFEE September 4 operator release explicitly confirms October 31, 2026 opening at Teriha Pavilion. Gallery exterior/interior views are planned renderings, not proof of opening."
+          },
+          {
+            "url": "https://prtimes.jp/main/html/rd/p/000000026.000057248.html",
+            "title": "REC COFFEE — Island City Teriha source",
+            "confidence": 90,
+            "reasoning": "REC COFFEE September 4 operator release explicitly confirms October 31, 2026 opening at Teriha Pavilion. Gallery exterior/interior views are planned renderings, not proof of opening."
+          },
+          {
+            "url": "https://rec-coffee.com/blogs/news/20261006",
+            "title": "REC COFFEE — Island City Teriha source",
+            "confidence": 90,
+            "reasoning": "REC COFFEE September 4 operator release explicitly confirms October 31, 2026 opening at Teriha Pavilion. Gallery exterior/interior views are planned renderings, not proof of opening."
+          },
+          {
+            "url": "https://pukutoco.com/rec-coffee-kashii1030open/",
+            "title": "REC COFFEE — Island City Teriha source",
+            "confidence": 90,
+            "reasoning": "REC COFFEE September 4 operator release explicitly confirms October 31, 2026 opening at Teriha Pavilion. Gallery exterior/interior views are planned renderings, not proof of opening."
+          },
+          {
+            "url": "https://www.instagram.com/rec_coffee/",
+            "title": "REC COFFEE — Island City Teriha source",
+            "confidence": 90,
+            "reasoning": "REC COFFEE September 4 operator release explicitly confirms October 31, 2026 opening at Teriha Pavilion. Gallery exterior/interior views are planned renderings, not proof of opening."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://rec-coffee.com/blogs/news/20260904",
+          "menu": {
+            "pinSourceUrl": "https://rec-coffee.com/blogs/news/20260904",
+            "name": "REC COFFEE — Island City Teriha",
+            "checkedAt": "2026-10-14",
+            "menus": [
+              {
+                "label": "Published planned branch drinks",
+                "url": "https://rec-coffee.com/blogs/news/20260904",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Specialty coffee",
+                    "priceLabel": "Price not published"
+                  }
+                ],
+                "note": "Exact branch drink names, prices and food selection remain unpublished in checked operator opening release, press gallery, current news and local reporting. Operator October 6 notice changes drinks and other prices from October 20, before this opening, so older other-branch prices are excluded. Online coffee-bean, gift and coffee-bag retail prices are not cafe cup prices. Operator social fetch returns an empty shell. Recheck the branch launch menu before visiting."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://rec-coffee.com/blogs/news/20260904",
+            "name": "REC COFFEE — Island City Teriha",
+            "checkedAt": "2026-10-14",
+            "websiteUrl": "https://rec-coffee.com/blogs/news/20260904",
+            "phone": null,
+            "openingHours": [
+              {
+                "days": "Planned daily",
+                "hours": "08:00–22:00; operator marks these hours planned"
+              }
+            ],
+            "detailsSourceUrl": "https://rec-coffee.com/blogs/news/20260904",
+            "additionalSources": [
+              {
+                "label": "Research evidence",
+                "url": "https://prtimes.jp/main/html/rd/p/000000026.000057248.html"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://rec-coffee.com/blogs/news/20261006"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://pukutoco.com/rec-coffee-kashii1030open/"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://www.instagram.com/rec_coffee/"
+              }
+            ]
+          },
+          "tile": {
+            "regionSlug": "fukuoka",
+            "kind": "opening",
+            "slug": "rec16-release",
+            "name": "REC COFFEE — Island City Teriha",
+            "neighborhood": "Island City / Kashii Teriha",
+            "cuisine": "Cafe",
+            "description": "A planned specialty-coffee cafe with seventy-one indoor/terrace seats and morning-to-evening service.",
+            "address": "Teriha Pavilion, 1-3-11 Kashii Teriha, Higashi-ku, Fukuoka",
+            "websiteUrl": "https://rec-coffee.com/blogs/news/20260904",
+            "checkedAt": "2026-10-14",
+            "recognition": "",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/fukuoka/japan-30-2026-10-13/rec16-release-1-2501a4ecd9c8758b.webp",
+            "imageCredit": "REC COFFEE / Rec Collective operator release",
+            "imageSourceUrl": "https://rec-coffee.com/blogs/news/20260904",
+            "imageNote": "Planned Island City Teriha exterior/interior rendering; illustrative, not post-opening photography",
+            "openingConfirmed": true,
+            "day": "2026-10-31"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/fukuoka/japan-30-2026-10-13/rec16-release-1-2501a4ecd9c8758b.webp",
+          "sha256": "2501a4ecd9c8758bb5c4e03c543e00bd14b6f96cb6e6f16c81dad65247b29f06",
+          "width": 1024,
+          "height": 572,
+          "credit": "REC COFFEE / Rec Collective operator release",
+          "note": "Planned Island City Teriha exterior/interior rendering; illustrative, not post-opening photography",
+          "sourcePage": "https://rec-coffee.com/blogs/news/20260904"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/fukuoka/japan-30-2026-10-13/rec16-release-2-a7d1d521813568f3.webp",
+          "sha256": "a7d1d521813568f3cde2b5ca66ae70e159555e6b9d2221014d776f399479c39f",
+          "width": 1024,
+          "height": 512,
+          "credit": "REC COFFEE / Rec Collective operator release",
+          "note": "Planned Island City Teriha exterior/interior rendering; illustrative, not post-opening photography",
+          "sourcePage": "https://rec-coffee.com/blogs/news/20260904"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/fukuoka/japan-30-2026-10-13/rec16-release-3-d17d3fd6393d7ed5.webp",
+          "sha256": "d17d3fd6393d7ed51efa5fcd1590721825a6df2f79e8818a4e64e9d211e3852e",
+          "width": 1024,
+          "height": 512,
+          "credit": "REC COFFEE / Rec Collective operator release",
+          "note": "Planned Island City Teriha exterior/interior rendering; illustrative, not post-opening photography",
+          "sourcePage": "https://rec-coffee.com/blogs/news/20260904"
+        }
+      ]
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "AOI NAPOLI OMBRA Opens in Umeda / Umekita Forest",
+        "description": "A planned two-story park restaurant serving wood-fired pizza, Italian dishes and takeaway picnic food.",
+        "sourceUrl": "https://brands.balnibarbi.com/brands/restaurants/aoinapoli_ombra",
+        "address": "North Park Building I, Umekita Park, Grand Green Osaka, 6-17 Ofukacho, Kita-ku, Osaka",
+        "productName": "AOI NAPOLI OMBRA",
+        "utcStartDateTime": "2026-11-20T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "Operator issuer disclosure confirms November 20, 2026; current brand listing and own launch site explicitly state 12:00 opening. Exact address and planned regular hours come from the specific operator branch page, not the Tennoji branch.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Osaka",
+          "Japan",
+          "Umeda / Umekita Forest",
+          "Italian / Pizzeria"
+        ],
+        "longFormSummary": "<p>A planned two-story park restaurant serving wood-fired pizza, Italian dishes and takeaway picnic food.<cite data-ref=\"https://brands.balnibarbi.com/brands/restaurants/aoinapoli_ombra\"></cite></p><p>Operator issuer disclosure confirms November 20, 2026; current brand listing and own launch site explicitly state 12:00 opening. Exact address and planned regular hours come from the specific operator branch page, not the Tennoji branch.</p>",
+        "references": [
+          {
+            "url": "https://brands.balnibarbi.com/brands/restaurants/aoinapoli_ombra",
+            "title": "AOI NAPOLI OMBRA source",
+            "confidence": 90,
+            "reasoning": "Operator issuer disclosure confirms November 20, 2026; current brand listing and own launch site explicitly state 12:00 opening. Exact address and planned regular hours come from the specific operator branch page, not the Tennoji branch."
+          },
+          {
+            "url": "https://www.daiwair.co.jp/td_download.cgi?c=3418&i=3191697",
+            "title": "AOI NAPOLI OMBRA source",
+            "confidence": 90,
+            "reasoning": "Operator issuer disclosure confirms November 20, 2026; current brand listing and own launch site explicitly state 12:00 opening. Exact address and planned regular hours come from the specific operator branch page, not the Tennoji branch."
+          },
+          {
+            "url": "https://brands.balnibarbi.com/brands/restaurants/",
+            "title": "AOI NAPOLI OMBRA source",
+            "confidence": 90,
+            "reasoning": "Operator issuer disclosure confirms November 20, 2026; current brand listing and own launch site explicitly state 12:00 opening. Exact address and planned regular hours come from the specific operator branch page, not the Tennoji branch."
+          },
+          {
+            "url": "https://www.orix-realestate.co.jp/news/pdf/press_20260423.pdf",
+            "title": "AOI NAPOLI OMBRA source",
+            "confidence": 90,
+            "reasoning": "Operator issuer disclosure confirms November 20, 2026; current brand listing and own launch site explicitly state 12:00 opening. Exact address and planned regular hours come from the specific operator branch page, not the Tennoji branch."
+          },
+          {
+            "url": "https://reserve.toretaasia.com/aoinapoli-ombra",
+            "title": "AOI NAPOLI OMBRA source",
+            "confidence": 90,
+            "reasoning": "Operator issuer disclosure confirms November 20, 2026; current brand listing and own launch site explicitly state 12:00 opening. Exact address and planned regular hours come from the specific operator branch page, not the Tennoji branch."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "menu": {
+            "pinSourceUrl": "https://brands.balnibarbi.com/brands/restaurants/aoinapoli_ombra",
+            "name": "AOI NAPOLI OMBRA",
+            "checkedAt": "2026-10-14",
+            "menus": [
+              {
+                "label": "Published planned branch menu",
+                "url": "https://www.daiwair.co.jp/td_download.cgi?c=3418&i=3191697",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Wood-fired pizza",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Pizza fritta",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Soft serve",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Picnic set",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Selected wines",
+                    "priceLabel": "Price not published"
+                  }
+                ],
+                "note": "Balnibarbi April 23 issuer disclosure explicitly names pizza, pizza fritta, soft serve and picnic sets. Current branch page also names selected wines. Exact pizza toppings, picnic contents and prices remain unpublished in checked disclosure, branch gallery and launch website. Tennoji/Koishikawa sister menus are not borrowed. The site advertises an opening benefit but publishes no readable benefit terms; the linked Toreta page returns a JavaScript shell, so no discount is invented. Gallery food images are unlabelled illustrations and do not establish individual menu dishes.",
+                "documentUrl": "https://www.daiwair.co.jp/td_download.cgi?c=3418&i=3191697"
+              }
+            ],
+            "specials": []
+          },
+          "tile": {
+            "kind": "opening",
+            "name": "AOI NAPOLI OMBRA",
+            "slug": "aoinapoli-ombra",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/osaka/researched/aoinapoli-ombra-f7d9f96e902690fd.webp",
+            "address": "Grand Green Osaka Umekita Park North Park Building I, 6-17 Ofukacho, Kita-ku, Osaka 530-0011, Japan",
+            "cuisine": "Italian",
+            "checkedAt": "2026-10-14",
+            "imageNote": "Operator’s architectural rendering of the planned AOI NAPOLI OMBRA; not a photograph",
+            "priceRange": "",
+            "regionSlug": "osaka",
+            "websiteUrl": "https://ombra.aoinapoli.jp/",
+            "description": "A two-storey Italian restaurant and wood-fired pizzeria in Umekita’s new woodland park, scheduled to open November 20 at noon.",
+            "imageCredit": "Rendering: Balnibarbi",
+            "recognition": "",
+            "neighborhood": "Umekita",
+            "imageSourceUrl": "https://www.cdn.balnibarbi.com/brands.balnibarbi.com/restaurants/upload/ombra_1.jpg",
+            "openingConfirmed": true,
+            "day": "2026-11-20"
+          },
+          "details": {
+            "name": "AOI NAPOLI OMBRA",
+            "phone": "+81-70-1241-4413",
+            "checkedAt": "2026-10-14",
+            "hoursNote": "Opening day November 20 starts at noon. Regular hours from operator; lunch last order 15:00, dinner/cafe last order 22:00.",
+            "websiteUrl": "https://ombra.aoinapoli.jp/",
+            "openingHours": [
+              {
+                "days": "Opening day, November 20",
+                "hours": "Opens at 12:00; do not use the regular 11:00 start that day"
+              },
+              {
+                "days": "Planned daily lunch",
+                "hours": "11:00–15:00; last order 15:00"
+              },
+              {
+                "days": "Planned daily dinner",
+                "hours": "17:00–23:00; last order 22:00"
+              },
+              {
+                "days": "Planned daily cafe",
+                "hours": "11:00–23:00; last order 22:00"
+              }
+            ],
+            "pinSourceUrl": "https://brands.balnibarbi.com/brands/restaurants/aoinapoli_ombra",
+            "detailsSourceUrl": "https://ombra.aoinapoli.jp/",
+            "reservationUrl": "https://reserve.toretaasia.com/aoinapoli-ombra",
+            "additionalSources": [
+              {
+                "label": "Research evidence",
+                "url": "https://brands.balnibarbi.com/brands/restaurants/aoinapoli_ombra"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://www.daiwair.co.jp/td_download.cgi?c=3418&i=3191697"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://brands.balnibarbi.com/brands/restaurants/"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://www.orix-realestate.co.jp/news/pdf/press_20260423.pdf"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://reserve.toretaasia.com/aoinapoli-ombra"
+              }
+            ]
+          },
+          "pinSourceUrl": "https://brands.balnibarbi.com/brands/restaurants/aoinapoli_ombra"
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/osaka/japan-30-2026-10-13/aoi16-branch-1-5fdb6c7e55b6ebf4.webp",
+          "sha256": "5fdb6c7e55b6ebf4d09758b9b4d26270b2ae07477a9d804419b54929d580973d",
+          "width": 1200,
+          "height": 800,
+          "credit": "Balnibarbi operator branch gallery",
+          "note": "Planned AOI NAPOLI OMBRA exterior/interior rendering; illustrative, not post-opening photography",
+          "sourcePage": "https://brands.balnibarbi.com/brands/restaurants/aoinapoli_ombra"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/osaka/japan-30-2026-10-13/aoi16-branch-3-47bd421c876f5a97.webp",
+          "sha256": "47bd421c876f5a97e8b53d323bbadab19111e6aa24e8f1dfcac407f4cbf6cd54",
+          "width": 1200,
+          "height": 800,
+          "credit": "Balnibarbi operator branch gallery",
+          "note": "Operator branch-gallery menu illustration; individual dishes and prices not inferred",
+          "sourcePage": "https://brands.balnibarbi.com/brands/restaurants/aoinapoli_ombra"
+        }
+      ]
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "JACK IN THE DONUTS — Tenjin Underground Mall Opens in Tenjin",
+        "description": "A new takeaway-only donut shop with fifteen branch-published prices and a conditional opening-voucher benefit.",
+        "sourceUrl": "https://prtimes.jp/main/html/rd/p/000000064.000152670.html",
+        "address": "East Block 1, Unit 331, Tenjin Underground Mall, Tenjin 2-chome underground 1, Chuo-ku, Fukuoka",
+        "productName": "JACK IN THE DONUTS — Tenjin Underground Mall",
+        "utcStartDateTime": "2026-10-07T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "September 30 Big Create operator release and live landlord branch page confirm October 7, 2026 opening, superseding older October-only job-report estimates. This is the new underground-mall branch, separate from Daimyo.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Fukuoka",
+          "Japan",
+          "Tenjin",
+          "Donuts / Takeaway"
+        ],
+        "longFormSummary": "<p>A new takeaway-only donut shop with fifteen branch-published prices and a conditional opening-voucher benefit.<cite data-ref=\"https://prtimes.jp/main/html/rd/p/000000064.000152670.html\"></cite></p><p>September 30 Big Create operator release and live landlord branch page confirm October 7, 2026 opening, superseding older October-only job-report estimates. This is the new underground-mall branch, separate from Daimyo.</p>",
+        "references": [
+          {
+            "url": "https://prtimes.jp/main/html/rd/p/000000064.000152670.html",
+            "title": "JACK IN THE DONUTS — Tenjin Underground Mall source",
+            "confidence": 90,
+            "reasoning": "September 30 Big Create operator release and live landlord branch page confirm October 7, 2026 opening, superseding older October-only job-report estimates. This is the new underground-mall branch, separate from Daimyo."
+          },
+          {
+            "url": "https://www.tenchika.com/shop/jackinthedonuts/",
+            "title": "JACK IN THE DONUTS — Tenjin Underground Mall source",
+            "confidence": 90,
+            "reasoning": "September 30 Big Create operator release and live landlord branch page confirm October 7, 2026 opening, superseding older October-only job-report estimates. This is the new underground-mall branch, separate from Daimyo."
+          },
+          {
+            "url": "https://www.fukuoka-navi.jp/415425",
+            "title": "JACK IN THE DONUTS — Tenjin Underground Mall source",
+            "confidence": 90,
+            "reasoning": "September 30 Big Create operator release and live landlord branch page confirm October 7, 2026 opening, superseding older October-only job-report estimates. This is the new underground-mall branch, separate from Daimyo."
+          },
+          {
+            "url": "https://pukutoco.com/jack-in-the-donuts-tentika/",
+            "title": "JACK IN THE DONUTS — Tenjin Underground Mall source",
+            "confidence": 90,
+            "reasoning": "September 30 Big Create operator release and live landlord branch page confirm October 7, 2026 opening, superseding older October-only job-report estimates. This is the new underground-mall branch, separate from Daimyo."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://prtimes.jp/main/html/rd/p/000000064.000152670.html",
+          "menu": {
+            "pinSourceUrl": "https://prtimes.jp/main/html/rd/p/000000064.000152670.html",
+            "name": "JACK IN THE DONUTS — Tenjin Underground Mall",
+            "checkedAt": "2026-10-14",
+            "menus": [
+              {
+                "label": "Branch-published donut menu",
+                "url": "https://prtimes.jp/main/html/rd/p/000000064.000152670.html",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Raw malasada custard",
+                    "price": 330
+                  },
+                  {
+                    "name": "Raw malasada condensed milk",
+                    "price": 330
+                  },
+                  {
+                    "name": "Raw malasada crème brûlée",
+                    "price": 264
+                  },
+                  {
+                    "name": "Oliebollen",
+                    "price": 275
+                  },
+                  {
+                    "name": "Raw canelé donut",
+                    "price": 286
+                  },
+                  {
+                    "name": "Croissant glaze",
+                    "price": 275
+                  },
+                  {
+                    "name": "Galaxy donut",
+                    "price": 242
+                  },
+                  {
+                    "name": "Raspberry éclair choux",
+                    "price": 264
+                  },
+                  {
+                    "name": "Milk-tea éclair choux",
+                    "price": 264
+                  },
+                  {
+                    "name": "Coffee old-fashioned",
+                    "price": 220
+                  },
+                  {
+                    "name": "Uji matcha old-fashioned",
+                    "price": 220
+                  },
+                  {
+                    "name": "Chocolate old-fashioned",
+                    "price": 198
+                  },
+                  {
+                    "name": "Rice donut",
+                    "price": 165
+                  },
+                  {
+                    "name": "Tofu donut",
+                    "price": 165
+                  },
+                  {
+                    "name": "Curry donut",
+                    "price": 330
+                  }
+                ],
+                "note": "All fifteen prices are explicitly tax included in the specific September 30 branch operator release. Takeaway only. Custard/condensed-milk/curry donuts at ¥330 exceed the coupon’s ¥300 ceiling; they are not free-coupon choices. Product selection may vary."
+              },
+              {
+                "label": "Opening coupon — one eligible donut free",
+                "url": "https://www.tenchika.com/shop/jackinthedonuts/",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "One donut priced at ¥300 or less",
+                    "price": 0,
+                    "note": "Only with this branch’s opening free-donut voucher and next-visit purchase of at least three donuts"
+                  }
+                ],
+                "note": "Redemption expires December 31, 2026. Voucher is branch-only, one voucher per bill, no other services/events combined. Operator launch announcement distributes vouchers on purchases of at least ¥1,500 including tax, first come until vouchers run out; remaining distribution stock is unconfirmed. This is a conditional redemption benefit, not an unconditional free item or current guarantee of earning a new voucher."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://prtimes.jp/main/html/rd/p/000000064.000152670.html",
+            "name": "JACK IN THE DONUTS — Tenjin Underground Mall",
+            "checkedAt": "2026-10-14",
+            "websiteUrl": "https://www.tenchika.com/shop/jackinthedonuts/",
+            "phone": "092-401-2631",
+            "openingHours": [
+              {
+                "days": "Daily",
+                "hours": "10:00–21:00; closed on facility closure days; takeaway only"
+              }
+            ],
+            "detailsSourceUrl": "https://www.tenchika.com/shop/jackinthedonuts/",
+            "additionalSources": [
+              {
+                "label": "Research evidence",
+                "url": "https://prtimes.jp/main/html/rd/p/000000064.000152670.html"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://www.fukuoka-navi.jp/415425"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://pukutoco.com/jack-in-the-donuts-tentika/"
+              }
+            ]
+          },
+          "tile": {
+            "regionSlug": "fukuoka",
+            "kind": "opening",
+            "slug": "jack16-release",
+            "name": "JACK IN THE DONUTS — Tenjin Underground Mall",
+            "neighborhood": "Tenjin",
+            "cuisine": "Donuts / Takeaway",
+            "description": "A new takeaway-only donut shop with fifteen branch-published prices and a conditional opening-voucher benefit.",
+            "address": "East Block 1, Unit 331, Tenjin Underground Mall, Tenjin 2-chome underground 1, Chuo-ku, Fukuoka",
+            "websiteUrl": "https://www.tenchika.com/shop/jackinthedonuts/",
+            "checkedAt": "2026-10-14",
+            "recognition": "",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/fukuoka/japan-30-2026-10-13/jack16-release-1-12a38560066f912b.webp",
+            "imageCredit": "Big Create / JACK IN THE DONUTS operator release",
+            "imageSourceUrl": "https://prtimes.jp/main/html/rd/p/000000064.000152670.html",
+            "imageNote": "Operator illustrative donut assortment, not a branch room photograph",
+            "openingConfirmed": true,
+            "day": "2026-10-07"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/fukuoka/japan-30-2026-10-13/jack16-release-1-12a38560066f912b.webp",
+          "sha256": "12a38560066f912b87f56fea8cb566f1c129323dede2857ce0be174574488fa3",
+          "width": 1200,
+          "height": 740,
+          "credit": "Big Create / JACK IN THE DONUTS operator release",
+          "note": "Operator illustrative donut assortment, not a branch room photograph",
+          "sourcePage": "https://prtimes.jp/main/html/rd/p/000000064.000152670.html"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/fukuoka/japan-30-2026-10-13/jack16-release-3-79a3ef04a42b9409.webp",
+          "sha256": "79a3ef04a42b94098e863fc2274c52a00a6c222c771556ce721ecffe24f45e49",
+          "width": 1200,
+          "height": 899,
+          "credit": "Big Create / JACK IN THE DONUTS operator release",
+          "note": "Operator-labelled raw malasada custard, illustrative product photograph",
+          "sourcePage": "https://prtimes.jp/main/html/rd/p/000000064.000152670.html"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/fukuoka/japan-30-2026-10-13/jack16-release-4-62a8c51858ce3279.webp",
+          "sha256": "62a8c51858ce327905023908b61fad308afbd8b08ba7ee2cdb20b88985b7c66a",
+          "width": 1200,
+          "height": 899,
+          "credit": "Big Create / JACK IN THE DONUTS operator release",
+          "note": "Operator-labelled raw malasada condensed-milk filling, illustrative product photograph",
+          "sourcePage": "https://prtimes.jp/main/html/rd/p/000000064.000152670.html"
+        }
+      ],
+      "special": {
+        "regionSlug": "fukuoka",
+        "profile": {
+          "pinSourceUrl": "https://prtimes.jp/main/html/rd/p/000000064.000152670.html",
+          "name": "JACK IN THE DONUTS — Tenjin Underground Mall",
+          "checkedAt": "2026-10-14",
+          "menus": [
+            {
+              "label": "Branch-published donut menu",
+              "url": "https://prtimes.jp/main/html/rd/p/000000064.000152670.html",
+              "currency": "JPY",
+              "coverage": "sample",
+              "items": [
+                {
+                  "name": "Raw malasada custard",
+                  "price": 330
+                },
+                {
+                  "name": "Raw malasada condensed milk",
+                  "price": 330
+                },
+                {
+                  "name": "Raw malasada crème brûlée",
+                  "price": 264
+                },
+                {
+                  "name": "Oliebollen",
+                  "price": 275
+                },
+                {
+                  "name": "Raw canelé donut",
+                  "price": 286
+                },
+                {
+                  "name": "Croissant glaze",
+                  "price": 275
+                },
+                {
+                  "name": "Galaxy donut",
+                  "price": 242
+                },
+                {
+                  "name": "Raspberry éclair choux",
+                  "price": 264
+                },
+                {
+                  "name": "Milk-tea éclair choux",
+                  "price": 264
+                },
+                {
+                  "name": "Coffee old-fashioned",
+                  "price": 220
+                },
+                {
+                  "name": "Uji matcha old-fashioned",
+                  "price": 220
+                },
+                {
+                  "name": "Chocolate old-fashioned",
+                  "price": 198
+                },
+                {
+                  "name": "Rice donut",
+                  "price": 165
+                },
+                {
+                  "name": "Tofu donut",
+                  "price": 165
+                },
+                {
+                  "name": "Curry donut",
+                  "price": 330
+                }
+              ],
+              "note": "All fifteen prices are explicitly tax included in the specific September 30 branch operator release. Takeaway only. Custard/condensed-milk/curry donuts at ¥330 exceed the coupon’s ¥300 ceiling; they are not free-coupon choices. Product selection may vary."
+            },
+            {
+              "label": "Opening coupon — one eligible donut free",
+              "url": "https://www.tenchika.com/shop/jackinthedonuts/",
+              "currency": "JPY",
+              "coverage": "sample",
+              "items": [
+                {
+                  "name": "One donut priced at ¥300 or less",
+                  "price": 0,
+                  "note": "Only with this branch’s opening free-donut voucher and next-visit purchase of at least three donuts"
+                }
+              ],
+              "note": "Redemption expires December 31, 2026. Voucher is branch-only, one voucher per bill, no other services/events combined. Operator launch announcement distributes vouchers on purchases of at least ¥1,500 including tax, first come until vouchers run out; remaining distribution stock is unconfirmed. This is a conditional redemption benefit, not an unconditional free item or current guarantee of earning a new voucher."
+            }
+          ],
+          "specials": [
+            {
+              "title": "Opening coupon — one eligible donut free",
+              "kind": "other",
+              "description": "Redeem the branch opening voucher for one donut priced at ¥300 or less, with the required next-visit purchase.",
+              "sourceUrl": "https://www.tenchika.com/shop/jackinthedonuts/",
+              "menuLabel": "Opening coupon — one eligible donut free",
+              "discounted": true,
+              "validFrom": "2026-10-07",
+              "validThrough": "2026-12-31",
+              "schedule": "Japan local time; see conditions",
+              "conditions": [
+                "Must hold the opening free-donut voucher; distribution stock unconfirmed.",
+                "Next visit: buy at least three donuts; one voucher per bill.",
+                "Free item must cost ¥300 including tax or less; ¥330 items excluded.",
+                "Only usable at Tenjin Underground Mall branch.",
+                "No other services/events combined; expires December 31, 2026.",
+                "Closed on facility closure days; confirm before visiting."
+              ],
+              "availability": {
+                "windows": [
+                  {
+                    "days": [
+                      0,
+                      1,
+                      2,
+                      3,
+                      4,
+                      5,
+                      6
+                    ],
+                    "start": "10:00",
+                    "end": "21:00"
+                  }
+                ]
+              }
+            }
+          ],
+          "address": "East Block 1, Unit 331, Tenjin Underground Mall, Tenjin 2-chome underground 1, Chuo-ku, Fukuoka",
+          "neighborhood": "Tenjin",
+          "websiteUrl": "https://www.tenchika.com/shop/jackinthedonuts/",
+          "photo": {
+            "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/fukuoka/japan-30-2026-10-13/jack16-release-1-12a38560066f912b.webp",
+            "alt": "JACK IN THE DONUTS — Tenjin Underground Mall — Operator illustrative donut assortment, not a branch room photograph",
+            "credit": "Big Create / JACK IN THE DONUTS operator release",
+            "sourceUrl": "https://prtimes.jp/main/html/rd/p/000000064.000152670.html",
+            "originalUrl": "https://prcdn.freetls.fastly.net/release_image/152670/64/152670-64-7e8ee29753de7c6d845843333fa024af-1520x937.jpg?width=1950&height=1350&quality=85%2C65&format=jpeg&auto=webp&fit=bounds&bg-color=fff",
+            "checkedAt": "2026-10-14"
+          }
+        },
+        "enabled": true
+      }
+    }
+  ]
+}

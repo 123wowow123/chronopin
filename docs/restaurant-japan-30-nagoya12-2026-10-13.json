@@ -1,0 +1,2405 @@
+{
+  "checkedAt": "2026-10-13",
+  "country": "Japan",
+  "regions": [
+    "nagoya"
+  ],
+  "entries": [
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Garden Court — Grand Court Nagoya — Nagoya restaurant guide",
+        "description": "A hotel buffet with live cooking, published Tokai-ingredient menus and dated Halloween and November mushroom dinners.",
+        "sourceUrl": "https://www.anacrowneplaza-nagoya.jp/pages/restaurant_gardencourt",
+        "address": "2F ANA Crowne Plaza Hotel Grand Court Nagoya, 1-1-1 Kanayamacho, Naka-ku, Nagoya",
+        "productName": "Garden Court — Grand Court Nagoya",
+        "utcStartDateTime": "2026-10-13T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "Established restaurant. 2026-10-13 is the guide verification date, not its opening date.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Top Restaurants",
+          "Nagoya",
+          "Japan",
+          "Kanayama",
+          "Buffet"
+        ],
+        "longFormSummary": "<p>A hotel buffet with live cooking, published Tokai-ingredient menus and dated Halloween and November mushroom dinners.<cite data-ref=\"https://www.anacrowneplaza-nagoya.jp/pages/restaurant_gardencourt\"></cite></p><p>Established restaurant. 2026-10-13 is the guide verification date, not its opening date.</p>",
+        "references": [
+          {
+            "url": "https://www.anacrowneplaza-nagoya.jp/pages/restaurant_gardencourt",
+            "title": "Garden Court — Grand Court Nagoya source",
+            "confidence": 90,
+            "reasoning": "Established restaurant. 2026-10-13 is the guide verification date, not its opening date."
+          },
+          {
+            "url": "https://www.anacrowneplaza-nagoya.jp/products/202608111601",
+            "title": "Garden Court — Grand Court Nagoya source",
+            "confidence": 90,
+            "reasoning": "Established restaurant. 2026-10-13 is the guide verification date, not its opening date."
+          },
+          {
+            "url": "https://www.anacrowneplaza-nagoya.jp/products/202608111644",
+            "title": "Garden Court — Grand Court Nagoya source",
+            "confidence": 90,
+            "reasoning": "Established restaurant. 2026-10-13 is the guide verification date, not its opening date."
+          },
+          {
+            "url": "https://www.anacrowneplaza-nagoya.jp/collections/restaurant_menu/products/202608111715",
+            "title": "Garden Court — Grand Court Nagoya source",
+            "confidence": 90,
+            "reasoning": "Established restaurant. 2026-10-13 is the guide verification date, not its opening date."
+          },
+          {
+            "url": "https://www.anacrowneplaza-nagoya.jp/products/202608251253",
+            "title": "Garden Court — Grand Court Nagoya source",
+            "confidence": 90,
+            "reasoning": "Established restaurant. 2026-10-13 is the guide verification date, not its opening date."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://www.anacrowneplaza-nagoya.jp/pages/restaurant_gardencourt",
+          "menu": {
+            "pinSourceUrl": "https://www.anacrowneplaza-nagoya.jp/pages/restaurant_gardencourt",
+            "name": "Garden Court — Grand Court Nagoya",
+            "checkedAt": "2026-10-13",
+            "menus": [
+              {
+                "label": "October local terroir lunch",
+                "url": "https://www.anacrowneplaza-nagoya.jp/products/202608111601",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Weekday lunch buffet — 120 minutes",
+                    "price": 5300
+                  },
+                  {
+                    "name": "Weekday lunch buffet — age 65+",
+                    "price": 4800
+                  },
+                  {
+                    "name": "Weekend/holiday lunch buffet — 90 minutes",
+                    "price": 5800
+                  },
+                  {
+                    "name": "Roast beef with Hatcho-miso ponzu",
+                    "priceLabel": "Price not published",
+                    "note": "Included in October local terroir lunch; no separate item price published"
+                  },
+                  {
+                    "name": "Mikawa pork and charcuterie pizza",
+                    "priceLabel": "Price not published",
+                    "note": "Included in October local terroir lunch; no separate item price published"
+                  },
+                  {
+                    "name": "Shirasu and mushroom peperoncino finished with Grana Padano",
+                    "priceLabel": "Price not published",
+                    "note": "Included in October local terroir lunch; no separate item price published"
+                  },
+                  {
+                    "name": "Hatcho-miso roll cake",
+                    "priceLabel": "Price not published",
+                    "note": "Included in October local terroir lunch; no separate item price published"
+                  },
+                  {
+                    "name": "Nishio-matcha mini parfait",
+                    "priceLabel": "Price not published",
+                    "note": "Included in October local terroir lunch; no separate item price published"
+                  },
+                  {
+                    "name": "Grape panna cotta",
+                    "priceLabel": "Price not published",
+                    "note": "Included in October local terroir lunch; no separate item price published"
+                  },
+                  {
+                    "name": "Freshly piped chestnut Mont Blanc",
+                    "priceLabel": "Price not published",
+                    "note": "Included in October local terroir lunch; no separate item price published"
+                  },
+                  {
+                    "name": "Ise sea-bream yuzu marinade",
+                    "priceLabel": "Price not published",
+                    "note": "Included in October local terroir lunch; no separate item price published"
+                  },
+                  {
+                    "name": "Mikawa pork Provencal ragout",
+                    "priceLabel": "Price not published",
+                    "note": "Included in October local terroir lunch; no separate item price published"
+                  },
+                  {
+                    "name": "Roast chicken carving",
+                    "priceLabel": "Price not published",
+                    "note": "Included weekends/public holidays only; no separate price"
+                  }
+                ],
+                "note": "October 6–31. Tax/service included. Weekend/holiday sittings 11:00 and 13:00; weekday lunch 11:30–15:00, normally 120 minutes. Last entry one hour before session/service end, food/drink finish thirty minutes before end. Weekday child prices: elementary ¥2,500, age 4–preschool ¥1,500; weekends ¥3,000/¥1,800. Ages 0–3 free."
+              },
+              {
+                "label": "October local terroir dinner",
+                "url": "https://www.anacrowneplaza-nagoya.jp/products/202608111644",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Weekday dinner buffet — 120 minutes",
+                    "price": 6300
+                  },
+                  {
+                    "name": "Weekday dinner buffet — age 65+",
+                    "price": 5800
+                  },
+                  {
+                    "name": "Weekend/holiday dinner buffet — 90 minutes",
+                    "price": 6800
+                  },
+                  {
+                    "name": "Roast beef with Hatcho-miso ponzu",
+                    "priceLabel": "Price not published",
+                    "note": "Included in October local terroir dinner; no separate item price published"
+                  },
+                  {
+                    "name": "Mikawa pork and charcuterie pizza",
+                    "priceLabel": "Price not published",
+                    "note": "Included in October local terroir dinner; no separate item price published"
+                  },
+                  {
+                    "name": "Shirasu and mushroom peperoncino finished with Grana Padano",
+                    "priceLabel": "Price not published",
+                    "note": "Included in October local terroir dinner; no separate item price published"
+                  },
+                  {
+                    "name": "Hatcho-miso roll cake",
+                    "priceLabel": "Price not published",
+                    "note": "Included in October local terroir dinner; no separate item price published"
+                  },
+                  {
+                    "name": "Nishio-matcha mini parfait",
+                    "priceLabel": "Price not published",
+                    "note": "Included in October local terroir dinner; no separate item price published"
+                  },
+                  {
+                    "name": "Grape panna cotta",
+                    "priceLabel": "Price not published",
+                    "note": "Included in October local terroir dinner; no separate item price published"
+                  },
+                  {
+                    "name": "Freshly piped chestnut Mont Blanc",
+                    "priceLabel": "Price not published",
+                    "note": "Included in October local terroir dinner; no separate item price published"
+                  },
+                  {
+                    "name": "Ise sea-bream yuzu marinade",
+                    "priceLabel": "Price not published",
+                    "note": "Included in October local terroir dinner; no separate item price published"
+                  },
+                  {
+                    "name": "Mikawa pork Provencal ragout",
+                    "priceLabel": "Price not published",
+                    "note": "Included in October local terroir dinner; no separate item price published"
+                  },
+                  {
+                    "name": "Red snow crab on ice",
+                    "priceLabel": "Price not published",
+                    "note": "Included weekend/public-holiday dinners only"
+                  }
+                ],
+                "note": "October 6–31, tax/service included. Weekend/holiday sittings 17:00 and 19:00, reservation required. Weekday service 17:30–21:00. Last entry one hour before end, food/drink finish thirty minutes before end. Children elementary ¥3,000 weekdays/¥3,500 weekends, age 4–preschool ¥2,000/¥2,200; ages 0–3 free. October 31 has the separately priced ¥7,000 Halloween dinner; regular dinner offer is excluded that day."
+              },
+              {
+                "label": "October 31 Halloween dinner",
+                "url": "https://www.anacrowneplaza-nagoya.jp/collections/restaurant_menu/products/202608111715",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Halloween dinner buffet — adult",
+                    "price": 7000
+                  },
+                  {
+                    "name": "Elementary-school child",
+                    "price": 3500
+                  },
+                  {
+                    "name": "Age 4–preschool",
+                    "price": 2200
+                  },
+                  {
+                    "name": "Autumn omelette rice with beef Bourguignon sauce",
+                    "priceLabel": "Price not published",
+                    "note": "Included in October 31 Halloween dinner; no separate item price published"
+                  },
+                  {
+                    "name": "Garden Court roast beef",
+                    "priceLabel": "Price not published",
+                    "note": "Included in October 31 Halloween dinner; no separate item price published"
+                  },
+                  {
+                    "name": "Truffle autumn cappuccino soup with chicken and mushrooms",
+                    "priceLabel": "Price not published",
+                    "note": "Included in October 31 Halloween dinner; no separate item price published"
+                  },
+                  {
+                    "name": "Red snow crab on ice",
+                    "priceLabel": "Price not published",
+                    "note": "Included in October 31 Halloween dinner; no separate item price published"
+                  },
+                  {
+                    "name": "Black-olive tapenade with sea-bream marinade",
+                    "priceLabel": "Price not published",
+                    "note": "Included in October 31 Halloween dinner; no separate item price published"
+                  },
+                  {
+                    "name": "Jack-o-lantern pumpkin salad",
+                    "priceLabel": "Price not published",
+                    "note": "Included in October 31 Halloween dinner; no separate item price published"
+                  },
+                  {
+                    "name": "Halloween shrimp cocktail",
+                    "priceLabel": "Price not published",
+                    "note": "Included in October 31 Halloween dinner; no separate item price published"
+                  }
+                ],
+                "note": "October 31 only, reserved 90-minute sittings 17:00 and 19:00. Tax/service included. Last entry 17:30/19:30, food and drinks finish 18:00/20:00. Ages 0–3 free. Only Classy member 10% and Gold member 20% discounts apply; other discounts excluded. Staff trick-or-treat candy event is October 31 only."
+              },
+              {
+                "label": "November holiday matsutake and truffle dinner",
+                "url": "https://www.anacrowneplaza-nagoya.jp/products/202608251253",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Matsutake and truffle dinner buffet — adult",
+                    "price": 6800
+                  },
+                  {
+                    "name": "Truffle and foie-gras royale",
+                    "priceLabel": "Price not published",
+                    "note": "Included in November holiday matsutake and truffle dinner; no separate item price published"
+                  },
+                  {
+                    "name": "Matsutake and conger-pike escabeche",
+                    "priceLabel": "Price not published",
+                    "note": "Included in November holiday matsutake and truffle dinner; no separate item price published"
+                  },
+                  {
+                    "name": "Matsutake Japanese-style peperoncino",
+                    "priceLabel": "Price not published",
+                    "note": "Included in November holiday matsutake and truffle dinner; no separate item price published"
+                  },
+                  {
+                    "name": "Truffle cream pasta",
+                    "priceLabel": "Price not published",
+                    "note": "Included in November holiday matsutake and truffle dinner; no separate item price published"
+                  },
+                  {
+                    "name": "Roast beef and mashed potato with truffle sauce",
+                    "priceLabel": "Price not published",
+                    "note": "Included in November holiday matsutake and truffle dinner; no separate item price published"
+                  },
+                  {
+                    "name": "Truffle Mont Blanc dessert",
+                    "priceLabel": "Price not published",
+                    "note": "Included in November holiday matsutake and truffle dinner; no separate item price published"
+                  },
+                  {
+                    "name": "Non-alcoholic sangria",
+                    "priceLabel": "Price not published",
+                    "note": "Included in November holiday matsutake and truffle dinner; no separate item price published"
+                  },
+                  {
+                    "name": "Matsutake and Japanese beef sukiyaki",
+                    "priceLabel": "Price not published",
+                    "note": "One plate per person, included"
+                  },
+                  {
+                    "name": "Cod gratin with truffle",
+                    "priceLabel": "Price not published",
+                    "note": "One plate per person, included"
+                  }
+                ],
+                "note": "November 21–23 upcoming service; October 10–12 service is expired. Reserved 90-minute sittings 17:00/19:00, last entry one hour before end and food/drink end thirty minutes before end. Tax/service included. Elementary child ¥3,500, age 4–preschool ¥2,200, ages 0–3 free. November regular background buffet is winter-themed; October-only dishes are not presumed to carry over."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://www.anacrowneplaza-nagoya.jp/pages/restaurant_gardencourt",
+            "name": "Garden Court — Grand Court Nagoya",
+            "checkedAt": "2026-10-13",
+            "websiteUrl": "https://www.anacrowneplaza-nagoya.jp/pages/restaurant_gardencourt",
+            "phone": "052-683-4638",
+            "openingHours": [
+              {
+                "days": "Breakfast",
+                "hours": "06:30–10:30, buffet until 10:00; unavailable October 10–27"
+              },
+              {
+                "days": "Weekday lunch",
+                "hours": "11:30–15:00; last entry 14:00"
+              },
+              {
+                "days": "Weekend/holiday lunch",
+                "hours": "11:00–15:00; published buffet sittings apply"
+              },
+              {
+                "days": "Weekday dinner",
+                "hours": "17:30–21:00; last entry 20:00"
+              },
+              {
+                "days": "Weekend/holiday dinner",
+                "hours": "17:00–21:00; published buffet sittings apply"
+              }
+            ],
+            "detailsSourceUrl": "https://www.anacrowneplaza-nagoya.jp/pages/restaurant_gardencourt",
+            "additionalSources": [
+              {
+                "label": "Research evidence",
+                "url": "https://www.anacrowneplaza-nagoya.jp/products/202608111601"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://www.anacrowneplaza-nagoya.jp/products/202608111644"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://www.anacrowneplaza-nagoya.jp/collections/restaurant_menu/products/202608111715"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://www.anacrowneplaza-nagoya.jp/products/202608251253"
+              }
+            ],
+            "reservationUrl": "https://www.tablecheck.com/shops/anacrowneplaza-nagoya-gardencourt/reserve"
+          },
+          "tile": {
+            "regionSlug": "nagoya",
+            "kind": "top",
+            "slug": "gc-garden",
+            "name": "Garden Court — Grand Court Nagoya",
+            "neighborhood": "Kanayama",
+            "cuisine": "Buffet",
+            "description": "A hotel buffet with live cooking, published Tokai-ingredient menus and dated Halloween and November mushroom dinners.",
+            "address": "2F ANA Crowne Plaza Hotel Grand Court Nagoya, 1-1-1 Kanayamacho, Naka-ku, Nagoya",
+            "websiteUrl": "https://www.anacrowneplaza-nagoya.jp/pages/restaurant_gardencourt",
+            "checkedAt": "2026-10-13",
+            "recognition": "",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/nagoya/japan-30-2026-10-13/gc-garden-3-e61080027a4442c4.webp",
+            "imageCredit": "ANA Crowne Plaza Hotel Grand Court Nagoya",
+            "imageSourceUrl": "https://www.anacrowneplaza-nagoya.jp/pages/restaurant_gardencourt",
+            "imageNote": "Official Garden Court live-kitchen view"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/nagoya/japan-30-2026-10-13/gc-garden-3-e61080027a4442c4.webp",
+          "sha256": "e61080027a4442c46f2adb9061ce0cce605cee1deea75c18423a541c52c0bdce",
+          "width": 1200,
+          "height": 693,
+          "credit": "ANA Crowne Plaza Hotel Grand Court Nagoya",
+          "note": "Official Garden Court live-kitchen view",
+          "sourcePage": "https://www.anacrowneplaza-nagoya.jp/pages/restaurant_gardencourt"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/nagoya/japan-30-2026-10-13/gc-garden-1-1a0a0732dce8a2d3.webp",
+          "sha256": "1a0a0732dce8a2d345b41b4e59f6cfa5897e7a2c27aaa8d2c5d5ed6944cee5cb",
+          "width": 1200,
+          "height": 693,
+          "credit": "ANA Crowne Plaza Hotel Grand Court Nagoya",
+          "note": "Operator gallery menu illustration; individual dishes and current availability are not inferred from the photograph",
+          "sourcePage": "https://www.anacrowneplaza-nagoya.jp/pages/restaurant_gardencourt"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/nagoya/japan-30-2026-10-13/gc-garden-2-63b7ab7104468810.webp",
+          "sha256": "63b7ab71044688102ef16086ee7a5e9967f2786f6a23174fd29f08ce2f43b44d",
+          "width": 1200,
+          "height": 693,
+          "credit": "ANA Crowne Plaza Hotel Grand Court Nagoya",
+          "note": "Operator gallery menu illustration; individual dishes and current availability are not inferred from the photograph",
+          "sourcePage": "https://www.anacrowneplaza-nagoya.jp/pages/restaurant_gardencourt"
+        }
+      ],
+      "special": {
+        "regionSlug": "nagoya",
+        "profile": {
+          "pinSourceUrl": "https://www.anacrowneplaza-nagoya.jp/pages/restaurant_gardencourt",
+          "name": "Garden Court — Grand Court Nagoya",
+          "checkedAt": "2026-10-13",
+          "menus": [
+            {
+              "label": "October local terroir lunch",
+              "url": "https://www.anacrowneplaza-nagoya.jp/products/202608111601",
+              "currency": "JPY",
+              "coverage": "sample",
+              "items": [
+                {
+                  "name": "Weekday lunch buffet — 120 minutes",
+                  "price": 5300
+                },
+                {
+                  "name": "Weekday lunch buffet — age 65+",
+                  "price": 4800
+                },
+                {
+                  "name": "Weekend/holiday lunch buffet — 90 minutes",
+                  "price": 5800
+                },
+                {
+                  "name": "Roast beef with Hatcho-miso ponzu",
+                  "priceLabel": "Price not published",
+                  "note": "Included in October local terroir lunch; no separate item price published"
+                },
+                {
+                  "name": "Mikawa pork and charcuterie pizza",
+                  "priceLabel": "Price not published",
+                  "note": "Included in October local terroir lunch; no separate item price published"
+                },
+                {
+                  "name": "Shirasu and mushroom peperoncino finished with Grana Padano",
+                  "priceLabel": "Price not published",
+                  "note": "Included in October local terroir lunch; no separate item price published"
+                },
+                {
+                  "name": "Hatcho-miso roll cake",
+                  "priceLabel": "Price not published",
+                  "note": "Included in October local terroir lunch; no separate item price published"
+                },
+                {
+                  "name": "Nishio-matcha mini parfait",
+                  "priceLabel": "Price not published",
+                  "note": "Included in October local terroir lunch; no separate item price published"
+                },
+                {
+                  "name": "Grape panna cotta",
+                  "priceLabel": "Price not published",
+                  "note": "Included in October local terroir lunch; no separate item price published"
+                },
+                {
+                  "name": "Freshly piped chestnut Mont Blanc",
+                  "priceLabel": "Price not published",
+                  "note": "Included in October local terroir lunch; no separate item price published"
+                },
+                {
+                  "name": "Ise sea-bream yuzu marinade",
+                  "priceLabel": "Price not published",
+                  "note": "Included in October local terroir lunch; no separate item price published"
+                },
+                {
+                  "name": "Mikawa pork Provencal ragout",
+                  "priceLabel": "Price not published",
+                  "note": "Included in October local terroir lunch; no separate item price published"
+                },
+                {
+                  "name": "Roast chicken carving",
+                  "priceLabel": "Price not published",
+                  "note": "Included weekends/public holidays only; no separate price"
+                }
+              ],
+              "note": "October 6–31. Tax/service included. Weekend/holiday sittings 11:00 and 13:00; weekday lunch 11:30–15:00, normally 120 minutes. Last entry one hour before session/service end, food/drink finish thirty minutes before end. Weekday child prices: elementary ¥2,500, age 4–preschool ¥1,500; weekends ¥3,000/¥1,800. Ages 0–3 free."
+            },
+            {
+              "label": "October local terroir dinner",
+              "url": "https://www.anacrowneplaza-nagoya.jp/products/202608111644",
+              "currency": "JPY",
+              "coverage": "sample",
+              "items": [
+                {
+                  "name": "Weekday dinner buffet — 120 minutes",
+                  "price": 6300
+                },
+                {
+                  "name": "Weekday dinner buffet — age 65+",
+                  "price": 5800
+                },
+                {
+                  "name": "Weekend/holiday dinner buffet — 90 minutes",
+                  "price": 6800
+                },
+                {
+                  "name": "Roast beef with Hatcho-miso ponzu",
+                  "priceLabel": "Price not published",
+                  "note": "Included in October local terroir dinner; no separate item price published"
+                },
+                {
+                  "name": "Mikawa pork and charcuterie pizza",
+                  "priceLabel": "Price not published",
+                  "note": "Included in October local terroir dinner; no separate item price published"
+                },
+                {
+                  "name": "Shirasu and mushroom peperoncino finished with Grana Padano",
+                  "priceLabel": "Price not published",
+                  "note": "Included in October local terroir dinner; no separate item price published"
+                },
+                {
+                  "name": "Hatcho-miso roll cake",
+                  "priceLabel": "Price not published",
+                  "note": "Included in October local terroir dinner; no separate item price published"
+                },
+                {
+                  "name": "Nishio-matcha mini parfait",
+                  "priceLabel": "Price not published",
+                  "note": "Included in October local terroir dinner; no separate item price published"
+                },
+                {
+                  "name": "Grape panna cotta",
+                  "priceLabel": "Price not published",
+                  "note": "Included in October local terroir dinner; no separate item price published"
+                },
+                {
+                  "name": "Freshly piped chestnut Mont Blanc",
+                  "priceLabel": "Price not published",
+                  "note": "Included in October local terroir dinner; no separate item price published"
+                },
+                {
+                  "name": "Ise sea-bream yuzu marinade",
+                  "priceLabel": "Price not published",
+                  "note": "Included in October local terroir dinner; no separate item price published"
+                },
+                {
+                  "name": "Mikawa pork Provencal ragout",
+                  "priceLabel": "Price not published",
+                  "note": "Included in October local terroir dinner; no separate item price published"
+                },
+                {
+                  "name": "Red snow crab on ice",
+                  "priceLabel": "Price not published",
+                  "note": "Included weekend/public-holiday dinners only"
+                }
+              ],
+              "note": "October 6–31, tax/service included. Weekend/holiday sittings 17:00 and 19:00, reservation required. Weekday service 17:30–21:00. Last entry one hour before end, food/drink finish thirty minutes before end. Children elementary ¥3,000 weekdays/¥3,500 weekends, age 4–preschool ¥2,000/¥2,200; ages 0–3 free. October 31 has the separately priced ¥7,000 Halloween dinner; regular dinner offer is excluded that day."
+            },
+            {
+              "label": "October 31 Halloween dinner",
+              "url": "https://www.anacrowneplaza-nagoya.jp/collections/restaurant_menu/products/202608111715",
+              "currency": "JPY",
+              "coverage": "sample",
+              "items": [
+                {
+                  "name": "Halloween dinner buffet — adult",
+                  "price": 7000
+                },
+                {
+                  "name": "Elementary-school child",
+                  "price": 3500
+                },
+                {
+                  "name": "Age 4–preschool",
+                  "price": 2200
+                },
+                {
+                  "name": "Autumn omelette rice with beef Bourguignon sauce",
+                  "priceLabel": "Price not published",
+                  "note": "Included in October 31 Halloween dinner; no separate item price published"
+                },
+                {
+                  "name": "Garden Court roast beef",
+                  "priceLabel": "Price not published",
+                  "note": "Included in October 31 Halloween dinner; no separate item price published"
+                },
+                {
+                  "name": "Truffle autumn cappuccino soup with chicken and mushrooms",
+                  "priceLabel": "Price not published",
+                  "note": "Included in October 31 Halloween dinner; no separate item price published"
+                },
+                {
+                  "name": "Red snow crab on ice",
+                  "priceLabel": "Price not published",
+                  "note": "Included in October 31 Halloween dinner; no separate item price published"
+                },
+                {
+                  "name": "Black-olive tapenade with sea-bream marinade",
+                  "priceLabel": "Price not published",
+                  "note": "Included in October 31 Halloween dinner; no separate item price published"
+                },
+                {
+                  "name": "Jack-o-lantern pumpkin salad",
+                  "priceLabel": "Price not published",
+                  "note": "Included in October 31 Halloween dinner; no separate item price published"
+                },
+                {
+                  "name": "Halloween shrimp cocktail",
+                  "priceLabel": "Price not published",
+                  "note": "Included in October 31 Halloween dinner; no separate item price published"
+                }
+              ],
+              "note": "October 31 only, reserved 90-minute sittings 17:00 and 19:00. Tax/service included. Last entry 17:30/19:30, food and drinks finish 18:00/20:00. Ages 0–3 free. Only Classy member 10% and Gold member 20% discounts apply; other discounts excluded. Staff trick-or-treat candy event is October 31 only."
+            },
+            {
+              "label": "November holiday matsutake and truffle dinner",
+              "url": "https://www.anacrowneplaza-nagoya.jp/products/202608251253",
+              "currency": "JPY",
+              "coverage": "sample",
+              "items": [
+                {
+                  "name": "Matsutake and truffle dinner buffet — adult",
+                  "price": 6800
+                },
+                {
+                  "name": "Truffle and foie-gras royale",
+                  "priceLabel": "Price not published",
+                  "note": "Included in November holiday matsutake and truffle dinner; no separate item price published"
+                },
+                {
+                  "name": "Matsutake and conger-pike escabeche",
+                  "priceLabel": "Price not published",
+                  "note": "Included in November holiday matsutake and truffle dinner; no separate item price published"
+                },
+                {
+                  "name": "Matsutake Japanese-style peperoncino",
+                  "priceLabel": "Price not published",
+                  "note": "Included in November holiday matsutake and truffle dinner; no separate item price published"
+                },
+                {
+                  "name": "Truffle cream pasta",
+                  "priceLabel": "Price not published",
+                  "note": "Included in November holiday matsutake and truffle dinner; no separate item price published"
+                },
+                {
+                  "name": "Roast beef and mashed potato with truffle sauce",
+                  "priceLabel": "Price not published",
+                  "note": "Included in November holiday matsutake and truffle dinner; no separate item price published"
+                },
+                {
+                  "name": "Truffle Mont Blanc dessert",
+                  "priceLabel": "Price not published",
+                  "note": "Included in November holiday matsutake and truffle dinner; no separate item price published"
+                },
+                {
+                  "name": "Non-alcoholic sangria",
+                  "priceLabel": "Price not published",
+                  "note": "Included in November holiday matsutake and truffle dinner; no separate item price published"
+                },
+                {
+                  "name": "Matsutake and Japanese beef sukiyaki",
+                  "priceLabel": "Price not published",
+                  "note": "One plate per person, included"
+                },
+                {
+                  "name": "Cod gratin with truffle",
+                  "priceLabel": "Price not published",
+                  "note": "One plate per person, included"
+                }
+              ],
+              "note": "November 21–23 upcoming service; October 10–12 service is expired. Reserved 90-minute sittings 17:00/19:00, last entry one hour before end and food/drink end thirty minutes before end. Tax/service included. Elementary child ¥3,500, age 4–preschool ¥2,200, ages 0–3 free. November regular background buffet is winter-themed; October-only dishes are not presumed to carry over."
+            }
+          ],
+          "specials": [
+            {
+              "title": "October local terroir lunch",
+              "kind": "lunch",
+              "description": "Dated Tokai-ingredient lunch buffet, ¥5,300 weekdays; 120-minute seating.",
+              "sourceUrl": "https://www.anacrowneplaza-nagoya.jp/products/202608111601",
+              "menuLabel": "October local terroir lunch",
+              "discounted": false,
+              "validFrom": "2026-10-06",
+              "validThrough": "2026-10-31",
+              "schedule": "Japan local time; see conditions",
+              "conditions": [
+                "Tax and service included.",
+                "Age 65+ weekday ¥4,800; child prices in menu.",
+                "Last entry 14:00, food/drink finish 14:30."
+              ],
+              "availability": {
+                "windows": [
+                  {
+                    "days": [
+                      1,
+                      2,
+                      3,
+                      4,
+                      5
+                    ],
+                    "start": "11:30",
+                    "end": "15:00"
+                  }
+                ],
+                "excludedDates": [
+                  "2026-10-12"
+                ]
+              },
+              "limitedTime": true
+            },
+            {
+              "title": "October weekend local-terroir lunch",
+              "kind": "lunch",
+              "description": "Dated Tokai-ingredient lunch buffet, ¥5,800, in two ninety-minute sittings.",
+              "sourceUrl": "https://www.anacrowneplaza-nagoya.jp/products/202608111601",
+              "menuLabel": "October local terroir lunch",
+              "discounted": false,
+              "validFrom": "2026-10-06",
+              "validThrough": "2026-10-31",
+              "schedule": "Japan local time; see conditions",
+              "conditions": [
+                "Tax and service included.",
+                "Last entry thirty minutes after sitting start; food/drinks finish thirty minutes before sitting ends."
+              ],
+              "availability": {
+                "windows": [
+                  {
+                    "days": [
+                      0,
+                      6
+                    ],
+                    "start": "11:00",
+                    "end": "12:30"
+                  },
+                  {
+                    "days": [
+                      0,
+                      6
+                    ],
+                    "start": "13:00",
+                    "end": "14:30"
+                  }
+                ]
+              },
+              "limitedTime": true
+            },
+            {
+              "title": "October weekday local-terroir dinner",
+              "kind": "other",
+              "description": "Dated autumn dinner buffet, ¥6,300 weekdays; age 65+ ¥5,800.",
+              "sourceUrl": "https://www.anacrowneplaza-nagoya.jp/products/202608111644",
+              "menuLabel": "October local terroir dinner",
+              "discounted": false,
+              "validFrom": "2026-10-06",
+              "validThrough": "2026-10-31",
+              "schedule": "Japan local time; see conditions",
+              "conditions": [
+                "Tax and service included.",
+                "Maximum 120-minute seating, within venue closing time.",
+                "Last entry 20:00; food/drink finish 20:30."
+              ],
+              "availability": {
+                "windows": [
+                  {
+                    "days": [
+                      1,
+                      2,
+                      3,
+                      4,
+                      5
+                    ],
+                    "start": "17:30",
+                    "end": "21:00"
+                  }
+                ],
+                "excludedDates": [
+                  "2026-10-12",
+                  "2026-10-31"
+                ]
+              },
+              "limitedTime": true
+            },
+            {
+              "title": "October weekend local-terroir dinner",
+              "kind": "other",
+              "description": "Dated autumn buffet with red snow crab, ¥6,800, reserved ninety-minute sittings.",
+              "sourceUrl": "https://www.anacrowneplaza-nagoya.jp/products/202608111644",
+              "menuLabel": "October local terroir dinner",
+              "discounted": false,
+              "validFrom": "2026-10-06",
+              "validThrough": "2026-10-31",
+              "schedule": "Japan local time; see conditions",
+              "conditions": [
+                "Tax and service included.",
+                "Last entry thirty minutes after sitting start; food/drinks finish thirty minutes before end.",
+                "October 31 uses the separately priced Halloween menu."
+              ],
+              "availability": {
+                "windows": [
+                  {
+                    "days": [
+                      0,
+                      6
+                    ],
+                    "start": "17:00",
+                    "end": "18:30"
+                  },
+                  {
+                    "days": [
+                      0,
+                      6
+                    ],
+                    "start": "19:00",
+                    "end": "20:30"
+                  }
+                ],
+                "excludedDates": [
+                  "2026-10-31"
+                ]
+              },
+              "limitedTime": true
+            },
+            {
+              "title": "October 31 Halloween dinner",
+              "kind": "other",
+              "description": "Reserved Halloween dinner buffet ¥7,000, with published dishes and two ninety-minute sittings.",
+              "sourceUrl": "https://www.anacrowneplaza-nagoya.jp/collections/restaurant_menu/products/202608111715",
+              "menuLabel": "October 31 Halloween dinner",
+              "discounted": false,
+              "validFrom": "2026-10-31",
+              "validThrough": "2026-10-31",
+              "schedule": "Japan local time; see conditions",
+              "conditions": [
+                "Tax and service included.",
+                "Last entry 17:30/19:30; food/drinks finish 18:00/20:00.",
+                "Classy 10% or Gold 20% discount only; other discounts excluded."
+              ],
+              "availability": {
+                "windows": [
+                  {
+                    "days": [
+                      6
+                    ],
+                    "start": "17:00",
+                    "end": "18:30"
+                  },
+                  {
+                    "days": [
+                      6
+                    ],
+                    "start": "19:00",
+                    "end": "20:30"
+                  }
+                ]
+              },
+              "limitedTime": true
+            },
+            {
+              "title": "November holiday matsutake and truffle dinner",
+              "kind": "other",
+              "description": "Three-day matsutake/truffle buffet, ¥6,800, including two dishes limited to one plate per person.",
+              "sourceUrl": "https://www.anacrowneplaza-nagoya.jp/products/202608251253",
+              "menuLabel": "November holiday matsutake and truffle dinner",
+              "discounted": false,
+              "validFrom": "2026-11-21",
+              "validThrough": "2026-11-23",
+              "schedule": "Japan local time; see conditions",
+              "conditions": [
+                "Tax and service included.",
+                "Reserved ninety-minute sittings.",
+                "Last entry thirty minutes after sitting start; food/drinks finish thirty minutes before end."
+              ],
+              "availability": {
+                "windows": [
+                  {
+                    "days": [
+                      6,
+                      0,
+                      1
+                    ],
+                    "start": "17:00",
+                    "end": "18:30"
+                  },
+                  {
+                    "days": [
+                      6,
+                      0,
+                      1
+                    ],
+                    "start": "19:00",
+                    "end": "20:30"
+                  }
+                ]
+              },
+              "limitedTime": true
+            }
+          ],
+          "address": "2F ANA Crowne Plaza Hotel Grand Court Nagoya, 1-1-1 Kanayamacho, Naka-ku, Nagoya",
+          "neighborhood": "Kanayama",
+          "websiteUrl": "https://www.anacrowneplaza-nagoya.jp/pages/restaurant_gardencourt",
+          "photo": {
+            "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/nagoya/japan-30-2026-10-13/gc-garden-3-e61080027a4442c4.webp",
+            "alt": "Garden Court — Grand Court Nagoya — Official Garden Court live-kitchen view",
+            "credit": "ANA Crowne Plaza Hotel Grand Court Nagoya",
+            "sourceUrl": "https://www.anacrowneplaza-nagoya.jp/pages/restaurant_gardencourt",
+            "originalUrl": "https://www.anacrowneplaza-nagoya.jp/cdn/shop/files/restaurant-gardencourt-img_slide11.jpg?v=1771921519&width=1200",
+            "checkedAt": "2026-10-13"
+          }
+        },
+        "enabled": true
+      }
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Wing Lounge — Grand Court Nagoya — Nagoya restaurant guide",
+        "description": "A high-floor lounge offering a published seasonal afternoon tea with a city-view seating area.",
+        "sourceUrl": "https://www.anacrowneplaza-nagoya.jp/pages/restaurant_winglounge",
+        "address": "30F ANA Crowne Plaza Hotel Grand Court Nagoya, 1-1-1 Kanayamacho, Naka-ku, Nagoya",
+        "productName": "Wing Lounge — Grand Court Nagoya",
+        "utcStartDateTime": "2026-10-13T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "Established restaurant. 2026-10-13 is the guide verification date, not its opening date.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Top Restaurants",
+          "Nagoya",
+          "Japan",
+          "Kanayama",
+          "Afternoon tea"
+        ],
+        "longFormSummary": "<p>A high-floor lounge offering a published seasonal afternoon tea with a city-view seating area.<cite data-ref=\"https://www.anacrowneplaza-nagoya.jp/pages/restaurant_winglounge\"></cite></p><p>Established restaurant. 2026-10-13 is the guide verification date, not its opening date.</p>",
+        "references": [
+          {
+            "url": "https://www.anacrowneplaza-nagoya.jp/pages/restaurant_winglounge",
+            "title": "Wing Lounge — Grand Court Nagoya source",
+            "confidence": 90,
+            "reasoning": "Established restaurant. 2026-10-13 is the guide verification date, not its opening date."
+          },
+          {
+            "url": "https://www.anacrowneplaza-nagoya.jp/collections/restaurant_winglounge/products/202608101804",
+            "title": "Wing Lounge — Grand Court Nagoya source",
+            "confidence": 90,
+            "reasoning": "Established restaurant. 2026-10-13 is the guide verification date, not its opening date."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://www.anacrowneplaza-nagoya.jp/pages/restaurant_winglounge",
+          "menu": {
+            "pinSourceUrl": "https://www.anacrowneplaza-nagoya.jp/pages/restaurant_winglounge",
+            "name": "Wing Lounge — Grand Court Nagoya",
+            "checkedAt": "2026-10-13",
+            "menus": [
+              {
+                "label": "Trick or Sweet afternoon tea",
+                "url": "https://www.anacrowneplaza-nagoya.jp/collections/restaurant_winglounge/products/202608101804",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Trick or Sweet afternoon tea",
+                    "price": 5800
+                  },
+                  {
+                    "name": "Pear and cassis Mont Blanc parfait",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Trick or Sweet afternoon tea; no separate item price published"
+                  },
+                  {
+                    "name": "Jack-o-lantern Basque cheesecake",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Trick or Sweet afternoon tea; no separate item price published"
+                  },
+                  {
+                    "name": "Japanese-chestnut trifle",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Trick or Sweet afternoon tea; no separate item price published"
+                  },
+                  {
+                    "name": "Brownie chocolate Mont Blanc",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Trick or Sweet afternoon tea; no separate item price published"
+                  },
+                  {
+                    "name": "Purple-sweet-potato bat tart",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Trick or Sweet afternoon tea; no separate item price published"
+                  },
+                  {
+                    "name": "French-chestnut Mont Blanc",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Trick or Sweet afternoon tea; no separate item price published"
+                  },
+                  {
+                    "name": "Chocolate macaron",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Trick or Sweet afternoon tea; no separate item price published"
+                  },
+                  {
+                    "name": "Mini skull canelé Mont Blanc",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Trick or Sweet afternoon tea; no separate item price published"
+                  },
+                  {
+                    "name": "Jack-o-lantern chicken gratin",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Trick or Sweet afternoon tea; no separate item price published"
+                  },
+                  {
+                    "name": "One sparkling-wine toast or non-alcoholic alternative",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Trick or Sweet afternoon tea; no separate item price published"
+                  },
+                  {
+                    "name": "Tea and coffee free-flow",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Trick or Sweet afternoon tea; no separate item price published"
+                  },
+                  {
+                    "name": "Fish grill with American sauce and makrut-lime aroma — supplement",
+                    "price": 2000
+                  },
+                  {
+                    "name": "Beef fillet with Madeira sauce — supplement",
+                    "price": 2500
+                  },
+                  {
+                    "name": "Sirloin with Arima-sansho jus — supplement",
+                    "price": 2500
+                  }
+                ],
+                "note": "September 1–October 31. Tax/service included. Book at least two days ahead; public afternoon tea 12:00–15:30, last entry 14:00. Mondays closed except holidays. All discounts, including Classy, excluded. Extra mains are available only with afternoon-tea booking, order by phone/staff; sharing allowed. Cancellation previous day 50%, same day 100%. Evening lounge access is restricted to high-floor hotel guests; not advertised as general public service."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://www.anacrowneplaza-nagoya.jp/pages/restaurant_winglounge",
+            "name": "Wing Lounge — Grand Court Nagoya",
+            "checkedAt": "2026-10-13",
+            "websiteUrl": "https://www.anacrowneplaza-nagoya.jp/pages/restaurant_winglounge",
+            "phone": "052-683-4638",
+            "openingHours": [
+              {
+                "days": "Public afternoon tea, Tuesday–Sunday",
+                "hours": "12:00–15:30; last entry 14:00"
+              },
+              {
+                "days": "Monday",
+                "hours": "Closed except public holidays, no substitute closure"
+              },
+              {
+                "days": "Evenings",
+                "hours": "17:00–21:00 for eligible high-floor hotel guests only"
+              }
+            ],
+            "detailsSourceUrl": "https://www.anacrowneplaza-nagoya.jp/pages/restaurant_winglounge",
+            "additionalSources": [
+              {
+                "label": "Research evidence",
+                "url": "https://www.anacrowneplaza-nagoya.jp/collections/restaurant_winglounge/products/202608101804"
+              }
+            ]
+          },
+          "tile": {
+            "regionSlug": "nagoya",
+            "kind": "top",
+            "slug": "gc-wing",
+            "name": "Wing Lounge — Grand Court Nagoya",
+            "neighborhood": "Kanayama",
+            "cuisine": "Afternoon tea",
+            "description": "A high-floor lounge offering a published seasonal afternoon tea with a city-view seating area.",
+            "address": "30F ANA Crowne Plaza Hotel Grand Court Nagoya, 1-1-1 Kanayamacho, Naka-ku, Nagoya",
+            "websiteUrl": "https://www.anacrowneplaza-nagoya.jp/pages/restaurant_winglounge",
+            "checkedAt": "2026-10-13",
+            "recognition": "",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/nagoya/japan-30-2026-10-13/gc-wing-3-1efd7b30db3dd4ca.webp",
+            "imageCredit": "ANA Crowne Plaza Hotel Grand Court Nagoya",
+            "imageSourceUrl": "https://www.anacrowneplaza-nagoya.jp/pages/restaurant_winglounge",
+            "imageNote": "Official Wing Lounge seating"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/nagoya/japan-30-2026-10-13/gc-wing-3-1efd7b30db3dd4ca.webp",
+          "sha256": "1efd7b30db3dd4cad846bf934141dfb6b543f767056a6473fb5c02cd7f1536ae",
+          "width": 1200,
+          "height": 693,
+          "credit": "ANA Crowne Plaza Hotel Grand Court Nagoya",
+          "note": "Official Wing Lounge seating",
+          "sourcePage": "https://www.anacrowneplaza-nagoya.jp/pages/restaurant_winglounge"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/nagoya/japan-30-2026-10-13/gc-wing-1-fdd1193ba9aec37c.webp",
+          "sha256": "fdd1193ba9aec37c833efc1f0b50470a0bafc2e6755d3b9ccb24629450ec2119",
+          "width": 1200,
+          "height": 693,
+          "credit": "ANA Crowne Plaza Hotel Grand Court Nagoya",
+          "note": "Operator gallery menu illustration; individual dishes and current availability are not inferred from the photograph",
+          "sourcePage": "https://www.anacrowneplaza-nagoya.jp/pages/restaurant_winglounge"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/nagoya/japan-30-2026-10-13/gc-wing-2-dfdc13b59d27f84e.webp",
+          "sha256": "dfdc13b59d27f84ea1dde742c78c7f9dbe12af412a788fab40d9b4c058e04a83",
+          "width": 1200,
+          "height": 693,
+          "credit": "ANA Crowne Plaza Hotel Grand Court Nagoya",
+          "note": "Operator gallery menu illustration; individual dishes and current availability are not inferred from the photograph",
+          "sourcePage": "https://www.anacrowneplaza-nagoya.jp/pages/restaurant_winglounge"
+        }
+      ],
+      "special": {
+        "regionSlug": "nagoya",
+        "profile": {
+          "pinSourceUrl": "https://www.anacrowneplaza-nagoya.jp/pages/restaurant_winglounge",
+          "name": "Wing Lounge — Grand Court Nagoya",
+          "checkedAt": "2026-10-13",
+          "menus": [
+            {
+              "label": "Trick or Sweet afternoon tea",
+              "url": "https://www.anacrowneplaza-nagoya.jp/collections/restaurant_winglounge/products/202608101804",
+              "currency": "JPY",
+              "coverage": "sample",
+              "items": [
+                {
+                  "name": "Trick or Sweet afternoon tea",
+                  "price": 5800
+                },
+                {
+                  "name": "Pear and cassis Mont Blanc parfait",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Trick or Sweet afternoon tea; no separate item price published"
+                },
+                {
+                  "name": "Jack-o-lantern Basque cheesecake",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Trick or Sweet afternoon tea; no separate item price published"
+                },
+                {
+                  "name": "Japanese-chestnut trifle",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Trick or Sweet afternoon tea; no separate item price published"
+                },
+                {
+                  "name": "Brownie chocolate Mont Blanc",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Trick or Sweet afternoon tea; no separate item price published"
+                },
+                {
+                  "name": "Purple-sweet-potato bat tart",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Trick or Sweet afternoon tea; no separate item price published"
+                },
+                {
+                  "name": "French-chestnut Mont Blanc",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Trick or Sweet afternoon tea; no separate item price published"
+                },
+                {
+                  "name": "Chocolate macaron",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Trick or Sweet afternoon tea; no separate item price published"
+                },
+                {
+                  "name": "Mini skull canelé Mont Blanc",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Trick or Sweet afternoon tea; no separate item price published"
+                },
+                {
+                  "name": "Jack-o-lantern chicken gratin",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Trick or Sweet afternoon tea; no separate item price published"
+                },
+                {
+                  "name": "One sparkling-wine toast or non-alcoholic alternative",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Trick or Sweet afternoon tea; no separate item price published"
+                },
+                {
+                  "name": "Tea and coffee free-flow",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Trick or Sweet afternoon tea; no separate item price published"
+                },
+                {
+                  "name": "Fish grill with American sauce and makrut-lime aroma — supplement",
+                  "price": 2000
+                },
+                {
+                  "name": "Beef fillet with Madeira sauce — supplement",
+                  "price": 2500
+                },
+                {
+                  "name": "Sirloin with Arima-sansho jus — supplement",
+                  "price": 2500
+                }
+              ],
+              "note": "September 1–October 31. Tax/service included. Book at least two days ahead; public afternoon tea 12:00–15:30, last entry 14:00. Mondays closed except holidays. All discounts, including Classy, excluded. Extra mains are available only with afternoon-tea booking, order by phone/staff; sharing allowed. Cancellation previous day 50%, same day 100%. Evening lounge access is restricted to high-floor hotel guests; not advertised as general public service."
+            }
+          ],
+          "specials": [
+            {
+              "title": "Trick or Sweet afternoon tea",
+              "kind": "other",
+              "description": "Dated Halloween afternoon tea, ¥5,800, with one toast and tea free-flow.",
+              "sourceUrl": "https://www.anacrowneplaza-nagoya.jp/collections/restaurant_winglounge/products/202608101804",
+              "menuLabel": "Trick or Sweet afternoon tea",
+              "discounted": false,
+              "validFrom": "2026-09-01",
+              "validThrough": "2026-10-31",
+              "schedule": "Japan local time; see conditions",
+              "conditions": [
+                "Tax and service included.",
+                "Book two days ahead; last entry 14:00.",
+                "All discounts excluded.",
+                "Cancellation previous day 50%, same day 100%."
+              ],
+              "availability": {
+                "windows": [
+                  {
+                    "days": [
+                      0,
+                      2,
+                      3,
+                      4,
+                      5,
+                      6
+                    ],
+                    "start": "12:00",
+                    "end": "15:30"
+                  }
+                ]
+              },
+              "limitedTime": true
+            }
+          ],
+          "address": "30F ANA Crowne Plaza Hotel Grand Court Nagoya, 1-1-1 Kanayamacho, Naka-ku, Nagoya",
+          "neighborhood": "Kanayama",
+          "websiteUrl": "https://www.anacrowneplaza-nagoya.jp/pages/restaurant_winglounge",
+          "photo": {
+            "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/nagoya/japan-30-2026-10-13/gc-wing-3-1efd7b30db3dd4ca.webp",
+            "alt": "Wing Lounge — Grand Court Nagoya — Official Wing Lounge seating",
+            "credit": "ANA Crowne Plaza Hotel Grand Court Nagoya",
+            "sourceUrl": "https://www.anacrowneplaza-nagoya.jp/pages/restaurant_winglounge",
+            "originalUrl": "https://www.anacrowneplaza-nagoya.jp/cdn/shop/files/restaurant-tankuma_winglounge-img_slide01.jpg?v=1741968066&width=1200",
+            "checkedAt": "2026-10-13"
+          }
+        },
+        "enabled": true
+      }
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Stargate Sky Restaurant — Grand Court Nagoya — Nagoya restaurant guide",
+        "description": "A separate high-floor restaurant serving French-based fusion courses, with current seasonal and upcoming holiday menus.",
+        "sourceUrl": "https://www.anacrowneplaza-nagoya.jp/pages/restaurant_stargate",
+        "address": "30F ANA Crowne Plaza Hotel Grand Court Nagoya, 1-1-1 Kanayamacho, Naka-ku, Nagoya",
+        "productName": "Stargate Sky Restaurant — Grand Court Nagoya",
+        "utcStartDateTime": "2026-10-13T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "Established restaurant. 2026-10-13 is the guide verification date, not its opening date.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Top Restaurants",
+          "Nagoya",
+          "Japan",
+          "Kanayama",
+          "French fusion"
+        ],
+        "longFormSummary": "<p>A separate high-floor restaurant serving French-based fusion courses, with current seasonal and upcoming holiday menus.<cite data-ref=\"https://www.anacrowneplaza-nagoya.jp/pages/restaurant_stargate\"></cite></p><p>Established restaurant. 2026-10-13 is the guide verification date, not its opening date.</p>",
+        "references": [
+          {
+            "url": "https://www.anacrowneplaza-nagoya.jp/pages/restaurant_stargate",
+            "title": "Stargate Sky Restaurant — Grand Court Nagoya source",
+            "confidence": 90,
+            "reasoning": "Established restaurant. 2026-10-13 is the guide verification date, not its opening date."
+          },
+          {
+            "url": "https://www.anacrowneplaza-nagoya.jp/products/202608101126",
+            "title": "Stargate Sky Restaurant — Grand Court Nagoya source",
+            "confidence": 90,
+            "reasoning": "Established restaurant. 2026-10-13 is the guide verification date, not its opening date."
+          },
+          {
+            "url": "https://www.anacrowneplaza-nagoya.jp/products/202608101204",
+            "title": "Stargate Sky Restaurant — Grand Court Nagoya source",
+            "confidence": 90,
+            "reasoning": "Established restaurant. 2026-10-13 is the guide verification date, not its opening date."
+          },
+          {
+            "url": "https://www.anacrowneplaza-nagoya.jp/products/202609041506",
+            "title": "Stargate Sky Restaurant — Grand Court Nagoya source",
+            "confidence": 90,
+            "reasoning": "Established restaurant. 2026-10-13 is the guide verification date, not its opening date."
+          },
+          {
+            "url": "https://www.anacrowneplaza-nagoya.jp/products/202609041522",
+            "title": "Stargate Sky Restaurant — Grand Court Nagoya source",
+            "confidence": 90,
+            "reasoning": "Established restaurant. 2026-10-13 is the guide verification date, not its opening date."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://www.anacrowneplaza-nagoya.jp/pages/restaurant_stargate",
+          "menu": {
+            "pinSourceUrl": "https://www.anacrowneplaza-nagoya.jp/pages/restaurant_stargate",
+            "name": "Stargate Sky Restaurant — Grand Court Nagoya",
+            "checkedAt": "2026-10-13",
+            "menus": [
+              {
+                "label": "September–October Tokai lunch",
+                "url": "https://www.anacrowneplaza-nagoya.jp/products/202608101126",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Tokai-ingredient lunch course",
+                    "price": 6500
+                  },
+                  {
+                    "name": "Aichi duck with fig and white-eggplant confit",
+                    "priceLabel": "Price not published",
+                    "note": "Included in September–October Tokai lunch; no separate item price published"
+                  },
+                  {
+                    "name": "Today’s soup",
+                    "priceLabel": "Price not published",
+                    "note": "Included in September–October Tokai lunch; no separate item price published"
+                  },
+                  {
+                    "name": "Aichi Spanish mackerel and prawn with white-wine/truffle sauce — main option",
+                    "priceLabel": "Price not published",
+                    "note": "Included in September–October Tokai lunch; no separate item price published"
+                  },
+                  {
+                    "name": "Chita Hibiki beef loin with hon-tamari jus — main option",
+                    "priceLabel": "Price not published",
+                    "note": "Included in September–October Tokai lunch; no separate item price published"
+                  },
+                  {
+                    "name": "Nishio-matcha madeleine Mont Blanc",
+                    "priceLabel": "Price not published",
+                    "note": "Included in September–October Tokai lunch; no separate item price published"
+                  },
+                  {
+                    "name": "Coffee or tea",
+                    "priceLabel": "Price not published",
+                    "note": "Included in September–October Tokai lunch; no separate item price published"
+                  },
+                  {
+                    "name": "House bread",
+                    "priceLabel": "Price not published",
+                    "note": "Included in September–October Tokai lunch; no separate item price published"
+                  },
+                  {
+                    "name": "Chita Homare beef-fillet upgrade",
+                    "price": 3500
+                  }
+                ],
+                "note": "September 1–October 31. Tax/service included. Choose one fish or meat main. The upgrade note excludes discounts including Classy; no reduction is assumed. Monday closure except public holidays, lunch 11:30 weekdays/11:00 weekends and holidays, until 15:30 (last order 14:30)."
+              },
+              {
+                "label": "L’Automne seasonal course",
+                "url": "https://www.anacrowneplaza-nagoya.jp/products/202608101204",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "L’Automne full course",
+                    "price": 12000
+                  },
+                  {
+                    "name": "Pâté de campagne with autumn fruit",
+                    "priceLabel": "Price not published",
+                    "note": "Included in L’Automne seasonal course; no separate item price published"
+                  },
+                  {
+                    "name": "Mushroom soup with roasted chestnut and vanilla foam",
+                    "priceLabel": "Price not published",
+                    "note": "Included in L’Automne seasonal course; no separate item price published"
+                  },
+                  {
+                    "name": "Sea-bream poêlé with dukkah and American sauce",
+                    "priceLabel": "Price not published",
+                    "note": "Included in L’Automne seasonal course; no separate item price published"
+                  },
+                  {
+                    "name": "Beef fillet with beetroot and Madeira sauce — main option",
+                    "priceLabel": "Price not published",
+                    "note": "Included in L’Automne seasonal course; no separate item price published"
+                  },
+                  {
+                    "name": "Lamb loin with mint pesto — main option",
+                    "priceLabel": "Price not published",
+                    "note": "Included in L’Automne seasonal course; no separate item price published"
+                  },
+                  {
+                    "name": "Apple compote with tea ice cream",
+                    "priceLabel": "Price not published",
+                    "note": "Included in L’Automne seasonal course; no separate item price published"
+                  },
+                  {
+                    "name": "Coffee or tea",
+                    "priceLabel": "Price not published",
+                    "note": "Included in L’Automne seasonal course; no separate item price published"
+                  },
+                  {
+                    "name": "House bread",
+                    "priceLabel": "Price not published",
+                    "note": "Included in L’Automne seasonal course; no separate item price published"
+                  }
+                ],
+                "note": "September 1–November 30. Tax/service included; lunch reservation required. Choose one meat main. Monday closure except holidays; no holiday replacement-day closure. Menu ingredients may change."
+              },
+              {
+                "label": "November Gourmand holiday courses",
+                "url": "https://www.anacrowneplaza-nagoya.jp/products/202609041522",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Gourmand half-course lunch",
+                    "price": 9000
+                  },
+                  {
+                    "name": "Gourmand full-course lunch or dinner",
+                    "price": 13000
+                  },
+                  {
+                    "name": "Abalone with porcini risotto and Burgundy-butter sauce",
+                    "priceLabel": "Price not published",
+                    "note": "Included in November Gourmand holiday courses; no separate item price published"
+                  },
+                  {
+                    "name": "Mushroom soup with roasted chestnut and vanilla foam",
+                    "priceLabel": "Price not published",
+                    "note": "Included in November Gourmand holiday courses; no separate item price published"
+                  },
+                  {
+                    "name": "Beef fillet and foie gras Rossini with Périgueux sauce",
+                    "priceLabel": "Price not published",
+                    "note": "Included in November Gourmand holiday courses; no separate item price published"
+                  },
+                  {
+                    "name": "Two desserts from trolley",
+                    "priceLabel": "Price not published",
+                    "note": "Included in November Gourmand holiday courses; no separate item price published"
+                  },
+                  {
+                    "name": "Coffee or tea",
+                    "priceLabel": "Price not published",
+                    "note": "Included in November Gourmand holiday courses; no separate item price published"
+                  },
+                  {
+                    "name": "House bread",
+                    "priceLabel": "Price not published",
+                    "note": "Included in November Gourmand holiday courses; no separate item price published"
+                  },
+                  {
+                    "name": "Sea-bream poêlé with basil vierge",
+                    "priceLabel": "Price not published",
+                    "note": "Included in full course only; half course has no fish course"
+                  }
+                ],
+                "note": "November 21–23 upcoming service; September/October earlier holiday periods are expired. Reserve the previous day. Tax/service included. Classy member 10% discount only; other discounts excluded. Private rooms or groups of six or more receive a dessert assortment instead of trolley service. Cancellation previous day 50%, same day 100%."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://www.anacrowneplaza-nagoya.jp/pages/restaurant_stargate",
+            "name": "Stargate Sky Restaurant — Grand Court Nagoya",
+            "checkedAt": "2026-10-13",
+            "websiteUrl": "https://www.anacrowneplaza-nagoya.jp/pages/restaurant_stargate",
+            "phone": "052-683-4638",
+            "openingHours": [
+              {
+                "days": "Tuesday–Friday lunch",
+                "hours": "11:30–15:30; last order 14:30"
+              },
+              {
+                "days": "Weekend/holiday lunch",
+                "hours": "11:00–15:30; last order 14:30"
+              },
+              {
+                "days": "Dinner",
+                "hours": "17:00–21:00; last order 20:00"
+              },
+              {
+                "days": "Monday",
+                "hours": "Closed except public holidays, no substitute closure"
+              }
+            ],
+            "detailsSourceUrl": "https://www.anacrowneplaza-nagoya.jp/pages/restaurant_stargate",
+            "additionalSources": [
+              {
+                "label": "Research evidence",
+                "url": "https://www.anacrowneplaza-nagoya.jp/products/202608101126"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://www.anacrowneplaza-nagoya.jp/products/202608101204"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://www.anacrowneplaza-nagoya.jp/products/202609041506"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://www.anacrowneplaza-nagoya.jp/products/202609041522"
+              }
+            ]
+          },
+          "tile": {
+            "regionSlug": "nagoya",
+            "kind": "top",
+            "slug": "gc-star",
+            "name": "Stargate Sky Restaurant — Grand Court Nagoya",
+            "neighborhood": "Kanayama",
+            "cuisine": "French fusion",
+            "description": "A separate high-floor restaurant serving French-based fusion courses, with current seasonal and upcoming holiday menus.",
+            "address": "30F ANA Crowne Plaza Hotel Grand Court Nagoya, 1-1-1 Kanayamacho, Naka-ku, Nagoya",
+            "websiteUrl": "https://www.anacrowneplaza-nagoya.jp/pages/restaurant_stargate",
+            "checkedAt": "2026-10-13",
+            "recognition": "",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/nagoya/japan-30-2026-10-13/gc-star-3-621e8c8585903013.webp",
+            "imageCredit": "ANA Crowne Plaza Hotel Grand Court Nagoya",
+            "imageSourceUrl": "https://www.anacrowneplaza-nagoya.jp/pages/restaurant_stargate",
+            "imageNote": "Official Stargate restaurant dining room"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/nagoya/japan-30-2026-10-13/gc-star-3-621e8c8585903013.webp",
+          "sha256": "621e8c858590301364cb582824b01fecf13e82360db8056cc104c1c9cf48065e",
+          "width": 1200,
+          "height": 693,
+          "credit": "ANA Crowne Plaza Hotel Grand Court Nagoya",
+          "note": "Official Stargate restaurant dining room",
+          "sourcePage": "https://www.anacrowneplaza-nagoya.jp/pages/restaurant_stargate"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/nagoya/japan-30-2026-10-13/gc-star-1-819713d88615aead.webp",
+          "sha256": "819713d88615aeadae683bf03534e8781482c918de1329c36af5fc55878374ae",
+          "width": 1200,
+          "height": 693,
+          "credit": "ANA Crowne Plaza Hotel Grand Court Nagoya",
+          "note": "Operator gallery menu illustration; individual dishes and current availability are not inferred from the photograph",
+          "sourcePage": "https://www.anacrowneplaza-nagoya.jp/pages/restaurant_stargate"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/nagoya/japan-30-2026-10-13/gc-star-2-2bd62a25ac7fbaf2.webp",
+          "sha256": "2bd62a25ac7fbaf2fdcfe101b874a831a45bb431728ba45e0ecb73a002a2a873",
+          "width": 1200,
+          "height": 693,
+          "credit": "ANA Crowne Plaza Hotel Grand Court Nagoya",
+          "note": "Operator gallery menu illustration; individual dishes and current availability are not inferred from the photograph",
+          "sourcePage": "https://www.anacrowneplaza-nagoya.jp/pages/restaurant_stargate"
+        }
+      ],
+      "special": {
+        "regionSlug": "nagoya",
+        "profile": {
+          "pinSourceUrl": "https://www.anacrowneplaza-nagoya.jp/pages/restaurant_stargate",
+          "name": "Stargate Sky Restaurant — Grand Court Nagoya",
+          "checkedAt": "2026-10-13",
+          "menus": [
+            {
+              "label": "September–October Tokai lunch",
+              "url": "https://www.anacrowneplaza-nagoya.jp/products/202608101126",
+              "currency": "JPY",
+              "coverage": "sample",
+              "items": [
+                {
+                  "name": "Tokai-ingredient lunch course",
+                  "price": 6500
+                },
+                {
+                  "name": "Aichi duck with fig and white-eggplant confit",
+                  "priceLabel": "Price not published",
+                  "note": "Included in September–October Tokai lunch; no separate item price published"
+                },
+                {
+                  "name": "Today’s soup",
+                  "priceLabel": "Price not published",
+                  "note": "Included in September–October Tokai lunch; no separate item price published"
+                },
+                {
+                  "name": "Aichi Spanish mackerel and prawn with white-wine/truffle sauce — main option",
+                  "priceLabel": "Price not published",
+                  "note": "Included in September–October Tokai lunch; no separate item price published"
+                },
+                {
+                  "name": "Chita Hibiki beef loin with hon-tamari jus — main option",
+                  "priceLabel": "Price not published",
+                  "note": "Included in September–October Tokai lunch; no separate item price published"
+                },
+                {
+                  "name": "Nishio-matcha madeleine Mont Blanc",
+                  "priceLabel": "Price not published",
+                  "note": "Included in September–October Tokai lunch; no separate item price published"
+                },
+                {
+                  "name": "Coffee or tea",
+                  "priceLabel": "Price not published",
+                  "note": "Included in September–October Tokai lunch; no separate item price published"
+                },
+                {
+                  "name": "House bread",
+                  "priceLabel": "Price not published",
+                  "note": "Included in September–October Tokai lunch; no separate item price published"
+                },
+                {
+                  "name": "Chita Homare beef-fillet upgrade",
+                  "price": 3500
+                }
+              ],
+              "note": "September 1–October 31. Tax/service included. Choose one fish or meat main. The upgrade note excludes discounts including Classy; no reduction is assumed. Monday closure except public holidays, lunch 11:30 weekdays/11:00 weekends and holidays, until 15:30 (last order 14:30)."
+            },
+            {
+              "label": "L’Automne seasonal course",
+              "url": "https://www.anacrowneplaza-nagoya.jp/products/202608101204",
+              "currency": "JPY",
+              "coverage": "sample",
+              "items": [
+                {
+                  "name": "L’Automne full course",
+                  "price": 12000
+                },
+                {
+                  "name": "Pâté de campagne with autumn fruit",
+                  "priceLabel": "Price not published",
+                  "note": "Included in L’Automne seasonal course; no separate item price published"
+                },
+                {
+                  "name": "Mushroom soup with roasted chestnut and vanilla foam",
+                  "priceLabel": "Price not published",
+                  "note": "Included in L’Automne seasonal course; no separate item price published"
+                },
+                {
+                  "name": "Sea-bream poêlé with dukkah and American sauce",
+                  "priceLabel": "Price not published",
+                  "note": "Included in L’Automne seasonal course; no separate item price published"
+                },
+                {
+                  "name": "Beef fillet with beetroot and Madeira sauce — main option",
+                  "priceLabel": "Price not published",
+                  "note": "Included in L’Automne seasonal course; no separate item price published"
+                },
+                {
+                  "name": "Lamb loin with mint pesto — main option",
+                  "priceLabel": "Price not published",
+                  "note": "Included in L’Automne seasonal course; no separate item price published"
+                },
+                {
+                  "name": "Apple compote with tea ice cream",
+                  "priceLabel": "Price not published",
+                  "note": "Included in L’Automne seasonal course; no separate item price published"
+                },
+                {
+                  "name": "Coffee or tea",
+                  "priceLabel": "Price not published",
+                  "note": "Included in L’Automne seasonal course; no separate item price published"
+                },
+                {
+                  "name": "House bread",
+                  "priceLabel": "Price not published",
+                  "note": "Included in L’Automne seasonal course; no separate item price published"
+                }
+              ],
+              "note": "September 1–November 30. Tax/service included; lunch reservation required. Choose one meat main. Monday closure except holidays; no holiday replacement-day closure. Menu ingredients may change."
+            },
+            {
+              "label": "November Gourmand holiday courses",
+              "url": "https://www.anacrowneplaza-nagoya.jp/products/202609041522",
+              "currency": "JPY",
+              "coverage": "sample",
+              "items": [
+                {
+                  "name": "Gourmand half-course lunch",
+                  "price": 9000
+                },
+                {
+                  "name": "Gourmand full-course lunch or dinner",
+                  "price": 13000
+                },
+                {
+                  "name": "Abalone with porcini risotto and Burgundy-butter sauce",
+                  "priceLabel": "Price not published",
+                  "note": "Included in November Gourmand holiday courses; no separate item price published"
+                },
+                {
+                  "name": "Mushroom soup with roasted chestnut and vanilla foam",
+                  "priceLabel": "Price not published",
+                  "note": "Included in November Gourmand holiday courses; no separate item price published"
+                },
+                {
+                  "name": "Beef fillet and foie gras Rossini with Périgueux sauce",
+                  "priceLabel": "Price not published",
+                  "note": "Included in November Gourmand holiday courses; no separate item price published"
+                },
+                {
+                  "name": "Two desserts from trolley",
+                  "priceLabel": "Price not published",
+                  "note": "Included in November Gourmand holiday courses; no separate item price published"
+                },
+                {
+                  "name": "Coffee or tea",
+                  "priceLabel": "Price not published",
+                  "note": "Included in November Gourmand holiday courses; no separate item price published"
+                },
+                {
+                  "name": "House bread",
+                  "priceLabel": "Price not published",
+                  "note": "Included in November Gourmand holiday courses; no separate item price published"
+                },
+                {
+                  "name": "Sea-bream poêlé with basil vierge",
+                  "priceLabel": "Price not published",
+                  "note": "Included in full course only; half course has no fish course"
+                }
+              ],
+              "note": "November 21–23 upcoming service; September/October earlier holiday periods are expired. Reserve the previous day. Tax/service included. Classy member 10% discount only; other discounts excluded. Private rooms or groups of six or more receive a dessert assortment instead of trolley service. Cancellation previous day 50%, same day 100%."
+            }
+          ],
+          "specials": [
+            {
+              "title": "September–October Tokai lunch",
+              "kind": "lunch",
+              "description": "Dated Tokai French lunch, ¥6,500, choose one fish or meat main.",
+              "sourceUrl": "https://www.anacrowneplaza-nagoya.jp/products/202608101126",
+              "menuLabel": "September–October Tokai lunch",
+              "discounted": false,
+              "validFrom": "2026-09-01",
+              "validThrough": "2026-10-31",
+              "schedule": "Japan local time; see conditions",
+              "conditions": [
+                "Tax and service included.",
+                "Last order 14:30."
+              ],
+              "availability": {
+                "windows": [
+                  {
+                    "days": [
+                      2,
+                      3,
+                      4,
+                      5
+                    ],
+                    "start": "11:30",
+                    "end": "15:30"
+                  }
+                ]
+              },
+              "limitedTime": true
+            },
+            {
+              "title": "Weekend Tokai lunch",
+              "kind": "lunch",
+              "description": "Dated Tokai French lunch, ¥6,500, with published main choices.",
+              "sourceUrl": "https://www.anacrowneplaza-nagoya.jp/products/202608101126",
+              "menuLabel": "September–October Tokai lunch",
+              "discounted": false,
+              "validFrom": "2026-09-01",
+              "validThrough": "2026-10-31",
+              "schedule": "Japan local time; see conditions",
+              "conditions": [
+                "Tax and service included.",
+                "Last order 14:30."
+              ],
+              "availability": {
+                "windows": [
+                  {
+                    "days": [
+                      0,
+                      6
+                    ],
+                    "start": "11:00",
+                    "end": "15:30"
+                  }
+                ]
+              },
+              "limitedTime": true
+            },
+            {
+              "title": "L’Automne seasonal course",
+              "kind": "other",
+              "description": "Dated autumn full course, ¥12,000, with published dishes and one selected meat main.",
+              "sourceUrl": "https://www.anacrowneplaza-nagoya.jp/products/202608101204",
+              "menuLabel": "L’Automne seasonal course",
+              "discounted": false,
+              "validFrom": "2026-09-01",
+              "validThrough": "2026-11-30",
+              "schedule": "Japan local time; see conditions",
+              "conditions": [
+                "Tax and service included.",
+                "Last order 20:00."
+              ],
+              "availability": {
+                "windows": [
+                  {
+                    "days": [
+                      0,
+                      2,
+                      3,
+                      4,
+                      5,
+                      6
+                    ],
+                    "start": "17:00",
+                    "end": "21:00"
+                  }
+                ]
+              },
+              "limitedTime": true
+            },
+            {
+              "title": "November Gourmand holiday courses lunch",
+              "kind": "lunch",
+              "description": "Holiday Gourmand lunch: ¥9,000 half course or ¥13,000 full course.",
+              "sourceUrl": "https://www.anacrowneplaza-nagoya.jp/products/202609041522",
+              "menuLabel": "November Gourmand holiday courses",
+              "discounted": false,
+              "validFrom": "2026-11-21",
+              "validThrough": "2026-11-23",
+              "schedule": "Japan local time; see conditions",
+              "conditions": [
+                "Tax and service included.",
+                "Reserve previous day; last order 14:30.",
+                "Classy 10% only; other discounts excluded.",
+                "Dessert assortment replaces trolley in private rooms/groups of six or more."
+              ],
+              "availability": {
+                "windows": [
+                  {
+                    "days": [
+                      6,
+                      0,
+                      1
+                    ],
+                    "start": "11:00",
+                    "end": "15:30"
+                  }
+                ]
+              },
+              "limitedTime": true
+            },
+            {
+              "title": "November Gourmand holiday courses dinner",
+              "kind": "other",
+              "description": "Holiday full Gourmand dinner, ¥13,000, with abalone, foie gras and truffle.",
+              "sourceUrl": "https://www.anacrowneplaza-nagoya.jp/products/202609041522",
+              "menuLabel": "November Gourmand holiday courses",
+              "discounted": false,
+              "validFrom": "2026-11-21",
+              "validThrough": "2026-11-23",
+              "schedule": "Japan local time; see conditions",
+              "conditions": [
+                "Tax and service included.",
+                "Reserve previous day; last order 20:00.",
+                "Classy 10% only; other discounts excluded.",
+                "Cancellation previous day 50%, same day 100%."
+              ],
+              "availability": {
+                "windows": [
+                  {
+                    "days": [
+                      6,
+                      0,
+                      1
+                    ],
+                    "start": "17:00",
+                    "end": "21:00"
+                  }
+                ]
+              },
+              "limitedTime": true
+            }
+          ],
+          "address": "30F ANA Crowne Plaza Hotel Grand Court Nagoya, 1-1-1 Kanayamacho, Naka-ku, Nagoya",
+          "neighborhood": "Kanayama",
+          "websiteUrl": "https://www.anacrowneplaza-nagoya.jp/pages/restaurant_stargate",
+          "photo": {
+            "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/nagoya/japan-30-2026-10-13/gc-star-3-621e8c8585903013.webp",
+            "alt": "Stargate Sky Restaurant — Grand Court Nagoya — Official Stargate restaurant dining room",
+            "credit": "ANA Crowne Plaza Hotel Grand Court Nagoya",
+            "sourceUrl": "https://www.anacrowneplaza-nagoya.jp/pages/restaurant_stargate",
+            "originalUrl": "https://www.anacrowneplaza-nagoya.jp/cdn/shop/files/restaurant-stargate-img_slide03.jpg?v=1779933254&width=1200",
+            "checkedAt": "2026-10-13"
+          }
+        },
+        "enabled": true
+      }
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Karin — Grand Court Nagoya — Nagoya restaurant guide",
+        "description": "A Cantonese restaurant with published Tokai-ingredient courses and an upcoming three-day matsutake/truffle dim-sum lunch.",
+        "sourceUrl": "https://www.anacrowneplaza-nagoya.jp/pages/restaurant_karin",
+        "address": "29F ANA Crowne Plaza Hotel Grand Court Nagoya, 1-1-1 Kanayamacho, Naka-ku, Nagoya",
+        "productName": "Karin — Grand Court Nagoya",
+        "utcStartDateTime": "2026-10-13T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "Established restaurant. 2026-10-13 is the guide verification date, not its opening date.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Top Restaurants",
+          "Nagoya",
+          "Japan",
+          "Kanayama",
+          "Cantonese"
+        ],
+        "longFormSummary": "<p>A Cantonese restaurant with published Tokai-ingredient courses and an upcoming three-day matsutake/truffle dim-sum lunch.<cite data-ref=\"https://www.anacrowneplaza-nagoya.jp/pages/restaurant_karin\"></cite></p><p>Established restaurant. 2026-10-13 is the guide verification date, not its opening date.</p>",
+        "references": [
+          {
+            "url": "https://www.anacrowneplaza-nagoya.jp/pages/restaurant_karin",
+            "title": "Karin — Grand Court Nagoya source",
+            "confidence": 90,
+            "reasoning": "Established restaurant. 2026-10-13 is the guide verification date, not its opening date."
+          },
+          {
+            "url": "https://www.anacrowneplaza-nagoya.jp/products/202608110919",
+            "title": "Karin — Grand Court Nagoya source",
+            "confidence": 90,
+            "reasoning": "Established restaurant. 2026-10-13 is the guide verification date, not its opening date."
+          },
+          {
+            "url": "https://www.anacrowneplaza-nagoya.jp/products/202609041542",
+            "title": "Karin — Grand Court Nagoya source",
+            "confidence": 90,
+            "reasoning": "Established restaurant. 2026-10-13 is the guide verification date, not its opening date."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://www.anacrowneplaza-nagoya.jp/pages/restaurant_karin",
+          "menu": {
+            "pinSourceUrl": "https://www.anacrowneplaza-nagoya.jp/pages/restaurant_karin",
+            "name": "Karin — Grand Court Nagoya",
+            "checkedAt": "2026-10-13",
+            "menus": [
+              {
+                "label": "September–October Tokai Cantonese lunch",
+                "url": "https://www.anacrowneplaza-nagoya.jp/products/202608110919",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Tokai lunch course",
+                    "price": 6500
+                  },
+                  {
+                    "name": "Three appetizers",
+                    "priceLabel": "Price not published",
+                    "note": "Included in September–October Tokai Cantonese lunch; no separate item price published"
+                  },
+                  {
+                    "name": "Toyohashi quail-egg siu mai and xiaolongbao",
+                    "priceLabel": "Price not published",
+                    "note": "Included in September–October Tokai Cantonese lunch; no separate item price published"
+                  },
+                  {
+                    "name": "Chicken and mixed-mushroom soup",
+                    "priceLabel": "Price not published",
+                    "note": "Included in September–October Tokai Cantonese lunch; no separate item price published"
+                  },
+                  {
+                    "name": "Mikawa Bay prawn and ginkgo stir-fry",
+                    "priceLabel": "Price not published",
+                    "note": "Included in September–October Tokai Cantonese lunch; no separate item price published"
+                  },
+                  {
+                    "name": "Owari amber pork belly and pumpkin in black-bean sauce",
+                    "priceLabel": "Price not published",
+                    "note": "Included in September–October Tokai Cantonese lunch; no separate item price published"
+                  },
+                  {
+                    "name": "Taiwan minced-meat and chive fried rice",
+                    "priceLabel": "Price not published",
+                    "note": "Included in September–October Tokai Cantonese lunch; no separate item price published"
+                  },
+                  {
+                    "name": "Today’s dessert",
+                    "priceLabel": "Price not published",
+                    "note": "Included in September–October Tokai Cantonese lunch; no separate item price published"
+                  },
+                  {
+                    "name": "Shark-fin soup upgrade",
+                    "price": 2000,
+                    "note": "Upgrade supplement is excluded from preferential discounts"
+                  }
+                ],
+                "note": "September 2–October 31. Tax/service included. Minimum two diners for all courses. Tuesdays closed except holidays; no substitute closure. Lunch 11:30 weekdays/11:00 weekends and holidays through 15:30, last order 14:30."
+              },
+              {
+                "label": "November matsutake and truffle dim-sum lunch",
+                "url": "https://www.anacrowneplaza-nagoya.jp/products/202609041542",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Matsutake and truffle dim-sum lunch",
+                    "price": 7000
+                  },
+                  {
+                    "name": "Mixed appetizers",
+                    "priceLabel": "Price not published",
+                    "note": "Included in November matsutake and truffle dim-sum lunch; no separate item price published"
+                  },
+                  {
+                    "name": "Shark-fin soup with matsutake",
+                    "priceLabel": "Price not published",
+                    "note": "Included in November matsutake and truffle dim-sum lunch; no separate item price published"
+                  },
+                  {
+                    "name": "Spring roll and chive bun",
+                    "priceLabel": "Price not published",
+                    "note": "Included in November matsutake and truffle dim-sum lunch; no separate item price published"
+                  },
+                  {
+                    "name": "Matsutake and truffle xiaolongbao",
+                    "priceLabel": "Price not published",
+                    "note": "Included in November matsutake and truffle dim-sum lunch; no separate item price published"
+                  },
+                  {
+                    "name": "Three chef-selected steamed dim sum",
+                    "priceLabel": "Price not published",
+                    "note": "Included in November matsutake and truffle dim-sum lunch; no separate item price published"
+                  },
+                  {
+                    "name": "Hong Kong rice crepe with mala sauce",
+                    "priceLabel": "Price not published",
+                    "note": "Included in November matsutake and truffle dim-sum lunch; no separate item price published"
+                  },
+                  {
+                    "name": "Chinese risotto with truffle",
+                    "priceLabel": "Price not published",
+                    "note": "Included in November matsutake and truffle dim-sum lunch; no separate item price published"
+                  },
+                  {
+                    "name": "Today’s dessert",
+                    "priceLabel": "Price not published",
+                    "note": "Included in November matsutake and truffle dim-sum lunch; no separate item price published"
+                  }
+                ],
+                "note": "November 21–23 upcoming service; October 10–12 period is expired. Tax/service included, minimum two diners. Classy 10% discount only; other discounts excluded. Ingredients may vary with supply."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://www.anacrowneplaza-nagoya.jp/pages/restaurant_karin",
+            "name": "Karin — Grand Court Nagoya",
+            "checkedAt": "2026-10-13",
+            "websiteUrl": "https://www.anacrowneplaza-nagoya.jp/pages/restaurant_karin",
+            "phone": "052-683-4638",
+            "openingHours": [
+              {
+                "days": "Monday, Wednesday–Friday lunch",
+                "hours": "11:30–15:30; last order 14:30"
+              },
+              {
+                "days": "Weekend/holiday lunch",
+                "hours": "11:00–15:30; last order 14:30"
+              },
+              {
+                "days": "Dinner",
+                "hours": "17:00–21:00; last order 20:00"
+              },
+              {
+                "days": "Tuesday",
+                "hours": "Closed except public holidays, no substitute closure"
+              }
+            ],
+            "detailsSourceUrl": "https://www.anacrowneplaza-nagoya.jp/pages/restaurant_karin",
+            "additionalSources": [
+              {
+                "label": "Research evidence",
+                "url": "https://www.anacrowneplaza-nagoya.jp/products/202608110919"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://www.anacrowneplaza-nagoya.jp/products/202609041542"
+              }
+            ]
+          },
+          "tile": {
+            "regionSlug": "nagoya",
+            "kind": "top",
+            "slug": "gc-karin",
+            "name": "Karin — Grand Court Nagoya",
+            "neighborhood": "Kanayama",
+            "cuisine": "Cantonese",
+            "description": "A Cantonese restaurant with published Tokai-ingredient courses and an upcoming three-day matsutake/truffle dim-sum lunch.",
+            "address": "29F ANA Crowne Plaza Hotel Grand Court Nagoya, 1-1-1 Kanayamacho, Naka-ku, Nagoya",
+            "websiteUrl": "https://www.anacrowneplaza-nagoya.jp/pages/restaurant_karin",
+            "checkedAt": "2026-10-13",
+            "recognition": "",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/nagoya/japan-30-2026-10-13/gc-karin-3-4750abce8d3d876e.webp",
+            "imageCredit": "ANA Crowne Plaza Hotel Grand Court Nagoya",
+            "imageSourceUrl": "https://www.anacrowneplaza-nagoya.jp/pages/restaurant_karin",
+            "imageNote": "Official Karin dining room"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/nagoya/japan-30-2026-10-13/gc-karin-3-4750abce8d3d876e.webp",
+          "sha256": "4750abce8d3d876ec5039f4b10cf5a18fc1695ae82e238443ce4fdf041d3dcf0",
+          "width": 1200,
+          "height": 693,
+          "credit": "ANA Crowne Plaza Hotel Grand Court Nagoya",
+          "note": "Official Karin dining room",
+          "sourcePage": "https://www.anacrowneplaza-nagoya.jp/pages/restaurant_karin"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/nagoya/japan-30-2026-10-13/gc-karin-1-6e3bcad8e169e53a.webp",
+          "sha256": "6e3bcad8e169e53a7596d634ecf025374a551abd37b5e037955695f7b1c2bcd8",
+          "width": 1200,
+          "height": 693,
+          "credit": "ANA Crowne Plaza Hotel Grand Court Nagoya",
+          "note": "Operator gallery menu illustration; individual dishes and current availability are not inferred from the photograph",
+          "sourcePage": "https://www.anacrowneplaza-nagoya.jp/pages/restaurant_karin"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/nagoya/japan-30-2026-10-13/gc-karin-2-a8788cabbda4f864.webp",
+          "sha256": "a8788cabbda4f864480d0d3a47c1070e88a3cf431744f819f0ae1daf181b661b",
+          "width": 1200,
+          "height": 693,
+          "credit": "ANA Crowne Plaza Hotel Grand Court Nagoya",
+          "note": "Operator gallery menu illustration; individual dishes and current availability are not inferred from the photograph",
+          "sourcePage": "https://www.anacrowneplaza-nagoya.jp/pages/restaurant_karin"
+        }
+      ],
+      "special": {
+        "regionSlug": "nagoya",
+        "profile": {
+          "pinSourceUrl": "https://www.anacrowneplaza-nagoya.jp/pages/restaurant_karin",
+          "name": "Karin — Grand Court Nagoya",
+          "checkedAt": "2026-10-13",
+          "menus": [
+            {
+              "label": "September–October Tokai Cantonese lunch",
+              "url": "https://www.anacrowneplaza-nagoya.jp/products/202608110919",
+              "currency": "JPY",
+              "coverage": "sample",
+              "items": [
+                {
+                  "name": "Tokai lunch course",
+                  "price": 6500
+                },
+                {
+                  "name": "Three appetizers",
+                  "priceLabel": "Price not published",
+                  "note": "Included in September–October Tokai Cantonese lunch; no separate item price published"
+                },
+                {
+                  "name": "Toyohashi quail-egg siu mai and xiaolongbao",
+                  "priceLabel": "Price not published",
+                  "note": "Included in September–October Tokai Cantonese lunch; no separate item price published"
+                },
+                {
+                  "name": "Chicken and mixed-mushroom soup",
+                  "priceLabel": "Price not published",
+                  "note": "Included in September–October Tokai Cantonese lunch; no separate item price published"
+                },
+                {
+                  "name": "Mikawa Bay prawn and ginkgo stir-fry",
+                  "priceLabel": "Price not published",
+                  "note": "Included in September–October Tokai Cantonese lunch; no separate item price published"
+                },
+                {
+                  "name": "Owari amber pork belly and pumpkin in black-bean sauce",
+                  "priceLabel": "Price not published",
+                  "note": "Included in September–October Tokai Cantonese lunch; no separate item price published"
+                },
+                {
+                  "name": "Taiwan minced-meat and chive fried rice",
+                  "priceLabel": "Price not published",
+                  "note": "Included in September–October Tokai Cantonese lunch; no separate item price published"
+                },
+                {
+                  "name": "Today’s dessert",
+                  "priceLabel": "Price not published",
+                  "note": "Included in September–October Tokai Cantonese lunch; no separate item price published"
+                },
+                {
+                  "name": "Shark-fin soup upgrade",
+                  "price": 2000,
+                  "note": "Upgrade supplement is excluded from preferential discounts"
+                }
+              ],
+              "note": "September 2–October 31. Tax/service included. Minimum two diners for all courses. Tuesdays closed except holidays; no substitute closure. Lunch 11:30 weekdays/11:00 weekends and holidays through 15:30, last order 14:30."
+            },
+            {
+              "label": "November matsutake and truffle dim-sum lunch",
+              "url": "https://www.anacrowneplaza-nagoya.jp/products/202609041542",
+              "currency": "JPY",
+              "coverage": "sample",
+              "items": [
+                {
+                  "name": "Matsutake and truffle dim-sum lunch",
+                  "price": 7000
+                },
+                {
+                  "name": "Mixed appetizers",
+                  "priceLabel": "Price not published",
+                  "note": "Included in November matsutake and truffle dim-sum lunch; no separate item price published"
+                },
+                {
+                  "name": "Shark-fin soup with matsutake",
+                  "priceLabel": "Price not published",
+                  "note": "Included in November matsutake and truffle dim-sum lunch; no separate item price published"
+                },
+                {
+                  "name": "Spring roll and chive bun",
+                  "priceLabel": "Price not published",
+                  "note": "Included in November matsutake and truffle dim-sum lunch; no separate item price published"
+                },
+                {
+                  "name": "Matsutake and truffle xiaolongbao",
+                  "priceLabel": "Price not published",
+                  "note": "Included in November matsutake and truffle dim-sum lunch; no separate item price published"
+                },
+                {
+                  "name": "Three chef-selected steamed dim sum",
+                  "priceLabel": "Price not published",
+                  "note": "Included in November matsutake and truffle dim-sum lunch; no separate item price published"
+                },
+                {
+                  "name": "Hong Kong rice crepe with mala sauce",
+                  "priceLabel": "Price not published",
+                  "note": "Included in November matsutake and truffle dim-sum lunch; no separate item price published"
+                },
+                {
+                  "name": "Chinese risotto with truffle",
+                  "priceLabel": "Price not published",
+                  "note": "Included in November matsutake and truffle dim-sum lunch; no separate item price published"
+                },
+                {
+                  "name": "Today’s dessert",
+                  "priceLabel": "Price not published",
+                  "note": "Included in November matsutake and truffle dim-sum lunch; no separate item price published"
+                }
+              ],
+              "note": "November 21–23 upcoming service; October 10–12 period is expired. Tax/service included, minimum two diners. Classy 10% discount only; other discounts excluded. Ingredients may vary with supply."
+            }
+          ],
+          "specials": [
+            {
+              "title": "September–October Tokai Cantonese lunch",
+              "kind": "lunch",
+              "description": "Dated Tokai Cantonese lunch course, ¥6,500, minimum two diners.",
+              "sourceUrl": "https://www.anacrowneplaza-nagoya.jp/products/202608110919",
+              "menuLabel": "September–October Tokai Cantonese lunch",
+              "discounted": false,
+              "validFrom": "2026-09-02",
+              "validThrough": "2026-10-31",
+              "schedule": "Japan local time; see conditions",
+              "conditions": [
+                "Tax and service included.",
+                "Last order 14:30; shark-fin soup upgrade +¥2,000."
+              ],
+              "availability": {
+                "windows": [
+                  {
+                    "days": [
+                      1,
+                      3,
+                      4,
+                      5
+                    ],
+                    "start": "11:30",
+                    "end": "15:30"
+                  }
+                ]
+              },
+              "limitedTime": true
+            },
+            {
+              "title": "Weekend Tokai Cantonese lunch",
+              "kind": "lunch",
+              "description": "Dated Tokai Cantonese lunch, ¥6,500, with published dishes.",
+              "sourceUrl": "https://www.anacrowneplaza-nagoya.jp/products/202608110919",
+              "menuLabel": "September–October Tokai Cantonese lunch",
+              "discounted": false,
+              "validFrom": "2026-09-02",
+              "validThrough": "2026-10-31",
+              "schedule": "Japan local time; see conditions",
+              "conditions": [
+                "Tax and service included.",
+                "Last order 14:30; minimum two diners."
+              ],
+              "availability": {
+                "windows": [
+                  {
+                    "days": [
+                      0,
+                      6
+                    ],
+                    "start": "11:00",
+                    "end": "15:30"
+                  }
+                ]
+              },
+              "limitedTime": true
+            },
+            {
+              "title": "November matsutake and truffle dim-sum lunch",
+              "kind": "lunch",
+              "description": "Three-day mushroom/truffle dim-sum course, ¥7,000, with named dishes.",
+              "sourceUrl": "https://www.anacrowneplaza-nagoya.jp/products/202609041542",
+              "menuLabel": "November matsutake and truffle dim-sum lunch",
+              "discounted": false,
+              "validFrom": "2026-11-21",
+              "validThrough": "2026-11-23",
+              "schedule": "Japan local time; see conditions",
+              "conditions": [
+                "Tax and service included.",
+                "Last order 14:30; minimum two diners.",
+                "Classy 10% only; other discounts excluded."
+              ],
+              "availability": {
+                "windows": [
+                  {
+                    "days": [
+                      6,
+                      0,
+                      1
+                    ],
+                    "start": "11:00",
+                    "end": "15:30"
+                  }
+                ]
+              },
+              "limitedTime": true
+            }
+          ],
+          "address": "29F ANA Crowne Plaza Hotel Grand Court Nagoya, 1-1-1 Kanayamacho, Naka-ku, Nagoya",
+          "neighborhood": "Kanayama",
+          "websiteUrl": "https://www.anacrowneplaza-nagoya.jp/pages/restaurant_karin",
+          "photo": {
+            "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/nagoya/japan-30-2026-10-13/gc-karin-3-4750abce8d3d876e.webp",
+            "alt": "Karin — Grand Court Nagoya — Official Karin dining room",
+            "credit": "ANA Crowne Plaza Hotel Grand Court Nagoya",
+            "sourceUrl": "https://www.anacrowneplaza-nagoya.jp/pages/restaurant_karin",
+            "originalUrl": "https://www.anacrowneplaza-nagoya.jp/cdn/shop/files/restaurant-karin-img_slide02.jpg?v=1741967936&width=1200",
+            "checkedAt": "2026-10-13"
+          }
+        },
+        "enabled": true
+      }
+    }
+  ]
+}

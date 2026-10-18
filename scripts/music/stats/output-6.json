@@ -1,0 +1,653 @@
+{
+ "it-2026-1": {
+  "song": {
+   "peak": 1,
+   "weeksOnChart": null,
+   "weeksAtNumberOne": null,
+   "chart": "FIMI Top Singles (weekly)",
+   "sourceUrl": "https://qds.it/ossessione-di-samurai-jay-in-vetta-alla-classifica-fimi/",
+   "asOf": "2026-10-17"
+  },
+  "album": {
+   "certifications": [
+    {
+     "body": "FIMI",
+     "level": "Gold",
+     "region": "Italy",
+     "date": null
+    }
+   ],
+   "units": null,
+   "peak": {
+    "chart": "FIMI Albums",
+    "position": 3
+   },
+   "sourceUrl": "https://en.wikipedia.org/wiki/Samurai_Jay"
+  },
+  "notes": "Reached #1 on FIMI after Sanremo 2026 (17th place). Reports disagree on weeks at #1 (11, 12, 13, 16 consecutive across articles), so left null. Song reported double platinum (qds.it); album Amatore Gold/#3 per Wikipedia via search summary; Wikipedia pages Amatore/Ossessione not available. Year-end/half-year Rolling Stone IT page not re-read."
+ },
+ "ca-2025-1": {
+  "song": {
+   "peak": 1,
+   "weeksOnChart": null,
+   "weeksAtNumberOne": 25,
+   "chart": "Billboard Canadian Hot 100",
+   "sourceUrl": "https://en.wikipedia.org/wiki/A_Bar_Song_(Tipsy)",
+   "asOf": "2026-10-17"
+  },
+  "album": {
+   "certifications": [
+    {
+     "body": "RIAA",
+     "level": "Platinum",
+     "region": "US",
+     "date": null
+    }
+   ],
+   "units": null,
+   "peak": {
+    "chart": "Billboard Canadian Albums",
+    "position": 3
+   },
+   "sourceUrl": "https://en.wikipedia.org/wiki/Where_I%27ve_Been,_Isn%27t_Where_I%27m_Going"
+  },
+  "notes": "25 non-consecutive weeks at #1 confirmed on Wikipedia song page. Weeks on chart not found. Certification years only (2025), no exact dates; Canada Music Canada album cert not listed; song is 2x Diamond Canada (not album)."
+ },
+ "co-2025-1": {
+  "song": {
+   "peak": null,
+   "weeksOnChart": null,
+   "weeksAtNumberOne": null,
+   "chart": "Monitor Latino Colombia Top 100 (annual)",
+   "sourceUrl": "https://charts.monitorlatino.com/top100/anual/2025/Colombia/General",
+   "asOf": "2026-10-17"
+  },
+  "album": null,
+  "notes": "No weekly peak/weeks/certification found; only annual rank 1 (input). Wikipedia has no page for the song checked. Album Viva La Musik not researched beyond that (no sources found)."
+ },
+ "ng-2025-1": {
+  "song": {
+   "peak": 1,
+   "weeksOnChart": null,
+   "weeksAtNumberOne": 5,
+   "chart": "TurnTable Official Nigeria Top 100",
+   "sourceUrl": "https://en.wikipedia.org/wiki/List_of_number-one_songs_of_2025_(Nigeria)",
+   "asOf": "2026-10-17"
+  },
+  "album": null,
+  "notes": "Five weeks at #1 (3 Jan - 6 Feb 2025 tracking weeks) per Wikipedia list via web search; one artist profile claims six. Weeks on chart unpublished in sources checked. No album certification/sales found for Olayemi."
+ },
+ "tw-2025-1": {
+  "song": {
+   "peak": null,
+   "weeksOnChart": null,
+   "weeksAtNumberOne": null,
+   "chart": "KKBOX Mandarin Yearly Cumulative Singles Chart",
+   "sourceUrl": "https://kma.kkbox.com/charts/yearly/newrelease?terr=tw&lang=tc&cate=297&year=2025",
+   "asOf": "2026-10-17"
+  },
+  "album": null,
+  "notes": "Only yearly rank available; no weekly peak or certifications found. Release is a single (no album stats)."
+ },
+ "ar-2024-1": {
+  "song": {
+   "peak": 1,
+   "weeksOnChart": null,
+   "weeksAtNumberOne": 15,
+   "chart": "Billboard Argentina Hot 100",
+   "sourceUrl": "https://en.wikipedia.org/wiki/Si_Antes_Te_Hubiera_Conocido",
+   "asOf": "2026-10-17"
+  },
+  "album": {
+   "certifications": [
+    {
+     "body": "PROMUSICAE",
+     "level": "2× Platinum (certified 2026)",
+     "region": "Spain",
+     "date": null
+    }
+   ],
+   "units": null,
+   "peak": {
+    "chart": "PROMUSICAE Albums (Spain)",
+    "position": 1
+   },
+   "sourceUrl": "https://en.wikipedia.org/wiki/Tropicoqueta"
+  },
+  "notes": "15 weeks at #1 on Billboard Argentina Hot 100 per Wikipedia prose (matches input). Weeks on chart not found. Tropicoqueta also #3 Billboard 200 and #1 Top Latin Albums; Argentine (CAPIF) album certification not found."
+ },
+ "gb-2024-1": {
+  "song": {
+   "peak": 1,
+   "weeksOnChart": null,
+   "weeksAtNumberOne": 7,
+   "chart": "Official Charts UK Singles",
+   "sourceUrl": "https://en.wikipedia.org/wiki/Stick_Season_(song)",
+   "asOf": "2026-10-17"
+  },
+  "album": {
+   "certifications": [
+    {
+     "body": "BPI",
+     "level": "2× Platinum (2025)",
+     "region": "UK",
+     "date": null
+    },
+    {
+     "body": "RIAA",
+     "level": "5× Platinum (2026)",
+     "region": "US",
+     "date": null
+    },
+    {
+     "body": "Music Canada",
+     "level": "7× Platinum (2026)",
+     "region": "Canada",
+     "date": null
+    }
+   ],
+   "units": null,
+   "peak": {
+    "chart": "UK Albums Chart",
+    "position": 1
+   },
+   "sourceUrl": "https://en.wikipedia.org/wiki/Stick_Season_(We%27ll_All_Be_Here_Forever)"
+  },
+  "notes": "UK #1 confirmed (5 Jan 2024 chart); 7 weeks at #1 kept from input, not independently verified from OCC. Weeks on chart not found. Album also #2 Billboard 200. 1.99M units figure is in input only."
+ },
+ "kr-2024-1": {
+  "song": {
+   "peak": 1,
+   "weeksOnChart": null,
+   "weeksAtNumberOne": 11,
+   "chart": "Circle Digital Chart",
+   "sourceUrl": "https://en.wikipedia.org/wiki/Supernova_(Aespa_song)",
+   "asOf": "2026-10-17"
+  },
+  "album": {
+   "certifications": [
+    {
+     "body": "KMCA",
+     "level": "Million",
+     "region": "South Korea",
+     "date": "2024-07-01"
+    }
+   ],
+   "units": null,
+   "peak": null,
+   "sourceUrl": "https://en.wikipedia.org/wiki/Armageddon_(Aespa_album)"
+  },
+  "notes": "Wikipedia: 11 non-consecutive weeks at #1 on Circle Digital Chart (matches input); song KMCA Platinum (streaming) 2025-03. Weeks on chart and Circle Album Chart peak not extracted. Album cert month-only (July 2024) so day is approximate."
+ },
+ "us-2023-2": {
+  "song": {
+   "peak": 1,
+   "weeksOnChart": null,
+   "weeksAtNumberOne": 8,
+   "chart": "Billboard Hot 100",
+   "sourceUrl": "https://en.wikipedia.org/wiki/Flowers_(Miley_Cyrus_song)",
+   "asOf": "2026-10-17"
+  },
+  "album": {
+   "certifications": [
+    {
+     "body": "RIAA",
+     "level": "Platinum (2025)",
+     "region": "US",
+     "date": null
+    }
+   ],
+   "units": null,
+   "peak": {
+    "chart": "Billboard 200",
+    "position": 3
+   },
+   "sourceUrl": "https://en.wikipedia.org/wiki/Endless_Summer_Vacation"
+  },
+  "notes": "8 non-consecutive weeks at #1 confirmed. Weeks on Hot 100 not found. Album also certified in UK (Gold), Canada (2x Plat), etc.; certification dates are year only."
+ },
+ "es-2023-1": {
+  "song": {
+   "peak": 1,
+   "weeksOnChart": null,
+   "weeksAtNumberOne": 7,
+   "chart": "PROMUSICAE weekly Top 100 canciones",
+   "sourceUrl": "https://en.wikipedia.org/wiki/Bzrp_Music_Sessions,_Vol._53",
+   "asOf": "2026-10-17"
+  },
+  "album": null,
+  "notes": "Wikipedia: topped Promusicae weekly chart plus 6 other weeks (=7, citation-needed tag). Song certified 7x Platinum Spain 2023. Release is a single, no album stats."
+ },
+ "jp-2023-1": {
+  "song": {
+   "peak": 1,
+   "weeksOnChart": null,
+   "weeksAtNumberOne": 22,
+   "chart": "Billboard Japan Hot 100",
+   "sourceUrl": "https://en.wikipedia.org/wiki/Idol_(Yoasobi_song)",
+   "asOf": "2026-10-17"
+  },
+  "album": null,
+  "notes": "22 non-consecutive weeks at #1 (matches input). Song RIAJ Diamond streaming. THE BOOK 3 album stats not found (Wikipedia page checked covers THE BOOK EP only). Weeks on chart not found."
+ },
+ "mx-2022-1": {
+  "song": {
+   "peak": null,
+   "weeksOnChart": null,
+   "weeksAtNumberOne": null,
+   "chart": "Monitor Latino Mexico Top 100 (annual)",
+   "sourceUrl": "https://charts.monitorlatino.com/top100/anual/2022/Mexico/General",
+   "asOf": "2026-10-17"
+  },
+  "album": {
+   "certifications": [
+    {
+     "body": "RIAA",
+     "level": "2× Platinum (2022)",
+     "region": "US",
+     "date": null
+    },
+    {
+     "body": "BPI",
+     "level": "3× Platinum (2025)",
+     "region": "UK",
+     "date": null
+    }
+   ],
+   "units": null,
+   "peak": {
+    "chart": "Billboard 200",
+    "position": 1
+   },
+   "sourceUrl": "https://en.wikipedia.org/wiki/Harry%27s_House"
+  },
+  "notes": "No weekly Monitor Latino peak/weeks found. Song AMPROFON 2x Diamond+Platinum Mexico (single, not album). Mexican album certification not found."
+ },
+ "de-2022-1": {
+  "song": {
+   "peak": 1,
+   "weeksOnChart": null,
+   "weeksAtNumberOne": 9,
+   "chart": "GfK Entertainment Top 100 Singles",
+   "sourceUrl": "https://en.wikipedia.org/wiki/Layla_(DJ_Robin_%26_Sch%C3%BCrze_song)",
+   "asOf": "2026-10-17"
+  },
+  "album": null,
+  "notes": "German #1 confirmed; 9 weeks at #1 kept from input (Wikipedia #1 list not re-read). Song Germany 3x Gold. Album is a compilation; no stats found. Weeks on chart not found."
+ },
+ "cn-2022-1": {
+  "song": {
+   "peak": null,
+   "weeksOnChart": null,
+   "weeksAtNumberOne": null,
+   "chart": "TME Tencent Music Uni Chart annual song 2022",
+   "sourceUrl": "https://yobang.tencentmusic.com/activity/uni-annual-report-2022-end/uni-chart/uni-song-album",
+   "asOf": "2026-10-17"
+  },
+  "album": null,
+  "notes": "No independent published figures found; input weeksAtNumberOne=2 not verified so left null."
+ },
+ "ca-2021-1": {
+  "song": {
+   "peak": 1,
+   "weeksOnChart": null,
+   "weeksAtNumberOne": null,
+   "chart": "Billboard Canadian Hot 100",
+   "sourceUrl": "https://en.wikipedia.org/wiki/Levitating_(Dua_Lipa_song)",
+   "asOf": "2026-10-17"
+  },
+  "album": {
+   "certifications": [
+    {
+     "body": "Music Canada",
+     "level": "6× Platinum (2024)",
+     "region": "Canada",
+     "date": null
+    },
+    {
+     "body": "RIAA",
+     "level": "Platinum (2021)",
+     "region": "US",
+     "date": null
+    },
+    {
+     "body": "BPI",
+     "level": "3× Platinum (2026)",
+     "region": "UK",
+     "date": null
+    },
+    {
+     "body": "ARIA",
+     "level": "2× Platinum (2025)",
+     "region": "Australia",
+     "date": null
+    }
+   ],
+   "units": null,
+   "peak": {
+    "chart": "Billboard Canadian Albums",
+    "position": 2
+   },
+   "sourceUrl": "https://en.wikipedia.org/wiki/Future_Nostalgia"
+  },
+  "notes": "Canada #1 confirmed. Input weeksAtNumberOne=3 could not be tied to the Canadian chart (Wikipedia 3 non-consecutive weeks statement is on another chart), left null. Song spent 77 weeks on US Hot 100 (different chart, not used). Album also #3 Billboard 200."
+ },
+ "fr-2021-1": {
+  "song": {
+   "peak": 1,
+   "weeksOnChart": null,
+   "weeksAtNumberOne": 10,
+   "chart": "SNEP Top Singles",
+   "sourceUrl": "https://en.wikipedia.org/wiki/La_kiffance",
+   "asOf": "2026-10-17"
+  },
+  "album": null,
+  "notes": "10 non-consecutive weeks at #1 (Wikipedia + NRJ, matches input). Song certified 2x Diamond per NRJ/Naps. Album is the M6 Hits summer compilation; no stats found."
+ },
+ "za-2021-1": {
+  "song": {
+   "peak": null,
+   "weeksOnChart": null,
+   "weeksAtNumberOne": null,
+   "chart": "Spotify South Africa Wrapped 2021",
+   "sourceUrl": "https://www.heraldlive.co.za/lifestyle/leisure/2021-12-06-watch-lol-trevor-noah-weighs-in-on-spotifys-wrapped/",
+   "asOf": "2026-10-17"
+  },
+  "album": null,
+  "notes": "Only the Spotify annual rank; no weekly chart/cert data found."
+ },
+ "au-2021-1": {
+  "song": {
+   "peak": 1,
+   "weeksOnChart": null,
+   "weeksAtNumberOne": 7,
+   "chart": "ARIA Singles Chart",
+   "sourceUrl": "https://en.wikipedia.org/wiki/Heat_Waves_(song)",
+   "asOf": "2026-10-17"
+  },
+  "album": {
+   "certifications": [
+    {
+     "body": "ARIA",
+     "level": "Gold (2023)",
+     "region": "Australia",
+     "date": null
+    },
+    {
+     "body": "BPI",
+     "level": "Gold (2025)",
+     "region": "UK",
+     "date": null
+    },
+    {
+     "body": "RIAA",
+     "level": "Gold (2021)",
+     "region": "US",
+     "date": null
+    }
+   ],
+   "units": null,
+   "peak": {
+    "chart": "ARIA Albums",
+    "position": 6
+   },
+   "sourceUrl": "https://en.wikipedia.org/wiki/Dreamland_(Glass_Animals_album)"
+  },
+  "notes": "DISAGREEMENT: Wikipedia says 7 weeks at #1 on ARIA; input says 6. Song ARIA 23x Platinum. Weeks on chart not found."
+ },
+ "br-2020-1": {
+  "song": {
+   "peak": null,
+   "weeksOnChart": null,
+   "weeksAtNumberOne": null,
+   "chart": "Spotify Brasil year-end",
+   "sourceUrl": "https://www.metropoles.com/entretenimento/musica/liberdade-provisoria-de-henrique-e-juliano-e-a-musica-mais-ouvida-do-ano",
+   "asOf": "2026-10-17"
+  },
+  "album": null,
+  "notes": "No album given; no weekly stats found."
+ },
+ "gb-2020-2": {
+  "song": {
+   "peak": 1,
+   "weeksOnChart": null,
+   "weeksAtNumberOne": 11,
+   "chart": "Official Charts UK Singles",
+   "sourceUrl": "https://en.wikipedia.org/wiki/Dance_Monkey",
+   "asOf": "2026-10-17"
+  },
+  "album": null,
+  "notes": "11 weeks at #1 UK confirmed (record for a female artist). Song BPI 7x Platinum. Album Welcome to the Mad House: certification/peak not extracted. Weeks on chart not found."
+ },
+ "kr-2020-2": {
+  "song": {
+   "peak": null,
+   "weeksOnChart": null,
+   "weeksAtNumberOne": null,
+   "chart": "Gaon Digital Chart (year-end)",
+   "sourceUrl": "https://www.soompi.com/article/1447608wpp/gaon-reveals-accumulated-digital-and-album-charts-for-2020",
+   "asOf": "2026-10-17"
+  },
+  "album": null,
+  "notes": "Wikipedia pages for Meteor/Boyhood had no usable peak or certification. Nothing else found."
+ },
+ "us-2019-3": {
+  "song": {
+   "peak": 1,
+   "weeksOnChart": 52,
+   "weeksAtNumberOne": null,
+   "chart": "Billboard Hot 100",
+   "sourceUrl": "https://en.wikipedia.org/wiki/Without_Me_(Halsey_song)",
+   "asOf": "2026-10-17"
+  },
+  "album": {
+   "certifications": [
+    {
+     "body": "RIAA",
+     "level": "2× Platinum (2022)",
+     "region": "US",
+     "date": null
+    }
+   ],
+   "units": null,
+   "peak": null,
+   "sourceUrl": "https://en.wikipedia.org/wiki/Manic_(Halsey_album)"
+  },
+  "notes": "52 weeks on Hot 100 (Wikipedia). Input weeksAtNumberOne=2 not verified in sources opened, left null. Song RIAA 14x Platinum. Billboard 200 peak not extracted."
+ },
+ "se-2019-1": {
+  "song": {
+   "peak": 1,
+   "weeksOnChart": null,
+   "weeksAtNumberOne": null,
+   "chart": "Sverigetopplistan",
+   "sourceUrl": "https://en.wikipedia.org/wiki/SOS_(Avicii_song)",
+   "asOf": "2026-10-17"
+  },
+  "album": null,
+  "notes": "Swedish peak 1 per Wikipedia. Input 5 weeks at #1 unverified. Avicii Forever is not a Wikipedia album page located; no album stats."
+ },
+ "au-2019-1": {
+  "song": {
+   "peak": 1,
+   "weeksOnChart": null,
+   "weeksAtNumberOne": null,
+   "chart": "ARIA Singles Chart",
+   "sourceUrl": "https://en.wikipedia.org/wiki/Old_Town_Road",
+   "asOf": "2026-10-17"
+  },
+  "album": {
+   "certifications": [
+    {
+     "body": "RIAA",
+     "level": "2× Platinum (2022)",
+     "region": "US",
+     "date": null
+    }
+   ],
+   "units": null,
+   "peak": {
+    "chart": "ARIA Albums",
+    "position": 5
+   },
+   "sourceUrl": "https://en.wikipedia.org/wiki/7_(Lil_Nas_X_EP)"
+  },
+  "notes": "Song ARIA 15x Platinum. 13 weeks at #1 in input not verified. Album 7 is an EP."
+ },
+ "br-2018-1": {
+  "song": {
+   "peak": null,
+   "weeksOnChart": null,
+   "weeksAtNumberOne": null,
+   "chart": "Spotify Brasil year-end",
+   "sourceUrl": "https://olhardigital.com.br/2018/12/04/noticias/spotify-divulga-ranking-com-musicas-e-artistas-mais-reproduzidos-de-2018-veja/",
+   "asOf": "2026-10-17"
+  },
+  "album": null,
+  "notes": "No published weekly stats or certifications found."
+ },
+ "sg-2018-1": {
+  "song": {
+   "peak": null,
+   "weeksOnChart": null,
+   "weeksAtNumberOne": null,
+   "chart": "RIAS Singapore Top Streaming",
+   "sourceUrl": "https://en.wikipedia.org/wiki/List_of_number-one_songs_of_2018_(Singapore)",
+   "asOf": "2026-10-17"
+  },
+  "album": {
+   "certifications": [
+    {
+     "body": "RIAS",
+     "level": "2× Platinum (2021)",
+     "region": "Singapore",
+     "date": null
+    },
+    {
+     "body": "RIAA",
+     "level": "2× Platinum (2020)",
+     "region": "US",
+     "date": null
+    },
+    {
+     "body": "BPI",
+     "level": "2× Platinum (2026)",
+     "region": "UK",
+     "date": null
+    }
+   ],
+   "units": null,
+   "peak": {
+    "chart": "Billboard 200",
+    "position": 1
+   },
+   "sourceUrl": "https://en.wikipedia.org/wiki/Thank_U,_Next_(album)"
+  },
+  "notes": "Singapore #1 weeks (input 8) not verified; US Hot 100 #1 (7 weeks) is a different chart and not used."
+ },
+ "mx-2017-1": {
+  "song": {
+   "peak": null,
+   "weeksOnChart": null,
+   "weeksAtNumberOne": null,
+   "chart": "Monitor Latino Mexico Top 100 (annual)",
+   "sourceUrl": "https://charts.monitorlatino.com/top100/anual/2017/Mexico/General",
+   "asOf": "2026-10-17"
+  },
+  "album": {
+   "certifications": [
+    {
+     "body": "RIAA",
+     "level": "22× Platinum (Latin)",
+     "region": "US",
+     "date": null
+    },
+    {
+     "body": "FIMI",
+     "level": "Gold (2022)",
+     "region": "Italy",
+     "date": null
+    }
+   ],
+   "units": null,
+   "peak": {
+    "chart": "Billboard 200",
+    "position": 18
+   },
+   "sourceUrl": "https://en.wikipedia.org/wiki/Vida_(Luis_Fonsi_album)"
+  },
+  "notes": "No weekly Mexico stats found. Song AMPROFON Diamond+Platinum+Gold x5 (single). US cert level label as shown in Wikipedia table (Latin)."
+ },
+ "it-2017-1": {
+  "song": {
+   "peak": 1,
+   "weeksOnChart": null,
+   "weeksAtNumberOne": null,
+   "chart": "FIMI Top Singles",
+   "sourceUrl": "https://en.wikipedia.org/wiki/Despacito",
+   "asOf": "2026-10-17"
+  },
+  "album": {
+   "certifications": [
+    {
+     "body": "FIMI",
+     "level": "Gold (2022)",
+     "region": "Italy",
+     "date": null
+    },
+    {
+     "body": "RIAA",
+     "level": "22× Platinum (Latin)",
+     "region": "US",
+     "date": null
+    }
+   ],
+   "units": null,
+   "peak": {
+    "chart": "Billboard 200",
+    "position": 18
+   },
+   "sourceUrl": "https://en.wikipedia.org/wiki/Vida_(Luis_Fonsi_album)"
+  },
+  "notes": "Italy #1 confirmed; 14 weeks at #1 in input not verified. Song FIMI Diamond (2017). US Hot 100 had 52 weeks (different chart)."
+ },
+ "nz-2017-1": {
+  "song": {
+   "peak": 1,
+   "weeksOnChart": null,
+   "weeksAtNumberOne": null,
+   "chart": "Recorded Music NZ Top 40 Singles",
+   "sourceUrl": "https://en.wikipedia.org/wiki/Shape_of_You",
+   "asOf": "2026-10-17"
+  },
+  "album": {
+   "certifications": [
+    {
+     "body": "RMNZ",
+     "level": "18× Platinum (2024)",
+     "region": "New Zealand",
+     "date": null
+    },
+    {
+     "body": "BPI",
+     "level": "15× Platinum (2026)",
+     "region": "UK",
+     "date": null
+    },
+    {
+     "body": "RIAA",
+     "level": "5× Platinum (2021)",
+     "region": "US",
+     "date": null
+    }
+   ],
+   "units": null,
+   "peak": {
+    "chart": "Recorded Music NZ Albums",
+    "position": 1
+   },
+   "sourceUrl": "https://en.wikipedia.org/wiki/Divide_(ed_sheeran)"
+  },
+  "notes": "NZ #1 confirmed; 13 weeks at #1 in input unverified (UK 14, Canada 16, US 12). Song RMNZ 14x Platinum."
+ }
+}

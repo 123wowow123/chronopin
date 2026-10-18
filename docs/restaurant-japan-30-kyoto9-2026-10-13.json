@@ -1,0 +1,186 @@
+{
+  "checkedAt": "2026-10-13",
+  "country": "Japan",
+  "regions": [
+    "kyoto"
+  ],
+  "entries": [
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "AMBER Kohaku — Kodaiji Opens in Higashiyama / Kodaiji",
+        "description": "A forthcoming coffee cafe with Japanese gardens, antique furniture and contemporary art near Kodaiji.",
+        "sourceUrl": "https://prtimes.jp/main/html/rd/p/000000001.000191282.html",
+        "address": "472 Shimokawaracho, Higashiyama-ku, Kyoto",
+        "productName": "AMBER Kohaku — Kodaiji",
+        "utcStartDateTime": "2026-10-31T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "Kyoto 1banchi October 4 report, based on an October 3 on-site visit, gives October 31, 2026. The September operator release corroborates the branch, location and autumn opening but does not itself publish an exact day.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Kyoto",
+          "Japan",
+          "Higashiyama / Kodaiji",
+          "Cafe"
+        ],
+        "longFormSummary": "<p>A forthcoming coffee cafe with Japanese gardens, antique furniture and contemporary art near Kodaiji.<cite data-ref=\"https://prtimes.jp/main/html/rd/p/000000001.000191282.html\"></cite></p><p>Kyoto 1banchi October 4 report, based on an October 3 on-site visit, gives October 31, 2026. The September operator release corroborates the branch, location and autumn opening but does not itself publish an exact day.</p>",
+        "references": [
+          {
+            "url": "https://prtimes.jp/main/html/rd/p/000000001.000191282.html",
+            "title": "AMBER Kohaku — Kodaiji source",
+            "confidence": 90,
+            "reasoning": "Kyoto 1banchi October 4 report, based on an October 3 on-site visit, gives October 31, 2026. The September operator release corroborates the branch, location and autumn opening but does not itself publish an exact day."
+          },
+          {
+            "url": "https://www.kyoto-1banchi.com/amber-kohaku-kodaiji/",
+            "title": "AMBER Kohaku — Kodaiji source",
+            "confidence": 90,
+            "reasoning": "Kyoto 1banchi October 4 report, based on an October 3 on-site visit, gives October 31, 2026. The September operator release corroborates the branch, location and autumn opening but does not itself publish an exact day."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://prtimes.jp/main/html/rd/p/000000001.000191282.html",
+          "menu": {
+            "pinSourceUrl": "https://prtimes.jp/main/html/rd/p/000000001.000191282.html",
+            "name": "AMBER Kohaku — Kodaiji",
+            "checkedAt": "2026-10-13",
+            "menus": [
+              {
+                "label": "Published opening drinks",
+                "url": "https://prtimes.jp/main/html/rd/p/000000001.000191282.html",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Hand-drip coffee",
+                    "price": 850,
+                    "note": "From; depends on beans"
+                  },
+                  {
+                    "name": "Finca Baide, Geisha, Honey",
+                    "price": 1800
+                  },
+                  {
+                    "name": "Cafe latte — hot or iced",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Americano — hot or iced",
+                    "priceLabel": "Price not published"
+                  }
+                ],
+                "note": "Operator publishes these drinks and prices without explicit tax treatment. No food or sweets are planned according to the October 3 on-site report. Latte and Americano prices depend on the beans and remain unpublished; rare auction-lot prices fluctuate and are not represented as a fixed current quote. Second-floor and tea-room reservation methods/fees are not yet published."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://prtimes.jp/main/html/rd/p/000000001.000191282.html",
+            "name": "AMBER Kohaku — Kodaiji",
+            "checkedAt": "2026-10-13",
+            "websiteUrl": "https://prtimes.jp/main/html/rd/p/000000001.000191282.html",
+            "phone": "075-600-9551",
+            "openingHours": [
+              {
+                "days": "Planned daily hours",
+                "hours": "09:00–18:00; no regular closing day announced"
+              }
+            ],
+            "detailsSourceUrl": "https://prtimes.jp/main/html/rd/p/000000001.000191282.html",
+            "additionalSources": [
+              {
+                "label": "Research evidence",
+                "url": "https://www.kyoto-1banchi.com/amber-kohaku-kodaiji/"
+              }
+            ]
+          },
+          "tile": {
+            "regionSlug": "kyoto",
+            "kind": "opening",
+            "slug": "amber-future",
+            "name": "AMBER Kohaku — Kodaiji",
+            "neighborhood": "Higashiyama / Kodaiji",
+            "cuisine": "Cafe",
+            "description": "A forthcoming coffee cafe with Japanese gardens, antique furniture and contemporary art near Kodaiji.",
+            "address": "472 Shimokawaracho, Higashiyama-ku, Kyoto",
+            "websiteUrl": "https://prtimes.jp/main/html/rd/p/000000001.000191282.html",
+            "checkedAt": "2026-10-13",
+            "recognition": "",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/kyoto/japan-30-2026-10-13/amber-future-6-00ab7f948c790123.webp",
+            "imageCredit": "AMBER Kohaku / PR TIMES",
+            "imageSourceUrl": "https://prtimes.jp/main/html/rd/p/000000001.000191282.html",
+            "imageNote": "Antique furniture and contemporary artwork in the cafe",
+            "openingConfirmed": true,
+            "day": "2026-10-31"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/kyoto/japan-30-2026-10-13/amber-future-6-00ab7f948c790123.webp",
+          "sha256": "00ab7f948c790123ea4393695ba8bd3547193fb40dfcf4b08f19bf7a6af78157",
+          "width": 1200,
+          "height": 900,
+          "credit": "AMBER Kohaku / PR TIMES",
+          "note": "Antique furniture and contemporary artwork in the cafe",
+          "sourcePage": "https://prtimes.jp/main/html/rd/p/000000001.000191282.html"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/kyoto/japan-30-2026-10-13/amber-future-5-4abd356c3c4bb427.webp",
+          "sha256": "4abd356c3c4bb4272002dea3ac3c765cfadd00da88f3782997941138735a5335",
+          "width": 1200,
+          "height": 900,
+          "credit": "AMBER Kohaku / PR TIMES",
+          "note": "Tea room planned for reservation-only matcha experiences",
+          "sourcePage": "https://prtimes.jp/main/html/rd/p/000000001.000191282.html"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/kyoto/japan-30-2026-10-13/amber-future-7-b107fbf42dd580b8.webp",
+          "sha256": "b107fbf42dd580b8db32f2547ea2810692cc037ab6553f834c5c6a5373a81a77",
+          "width": 1200,
+          "height": 900,
+          "credit": "AMBER Kohaku / PR TIMES",
+          "note": "Japanese garden at the Kodaiji branch",
+          "sourcePage": "https://prtimes.jp/main/html/rd/p/000000001.000191282.html"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/kyoto/japan-30-2026-10-13/amber-future-8-1acc5e058d3c7170.webp",
+          "sha256": "1acc5e058d3c717074ef14066602ba07fb7c40da36fdc64e7bbe61879a8094eb",
+          "width": 1200,
+          "height": 800,
+          "credit": "AMBER Kohaku / PR TIMES",
+          "note": "Interior seating at Kodaiji branch",
+          "sourcePage": "https://prtimes.jp/main/html/rd/p/000000001.000191282.html"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/kyoto/japan-30-2026-10-13/amber-future-9-eb9bc56a61058dd8.webp",
+          "sha256": "eb9bc56a61058dd86ab9b041374fc0534032f3a3518666234d1e23f022626bc3",
+          "width": 1200,
+          "height": 900,
+          "credit": "AMBER Kohaku / PR TIMES",
+          "note": "Reservation-only second-floor seating",
+          "sourcePage": "https://prtimes.jp/main/html/rd/p/000000001.000191282.html"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/kyoto/japan-30-2026-10-13/amber-future-10-022c12bc01bc5989.webp",
+          "sha256": "022c12bc01bc5989f4fcdc82146bb59316aa0f2b406c938d9aaba91e04f6a3ed",
+          "width": 1200,
+          "height": 900,
+          "credit": "AMBER Kohaku / PR TIMES",
+          "note": "Interior architecture at Kodaiji branch",
+          "sourcePage": "https://prtimes.jp/main/html/rd/p/000000001.000191282.html"
+        }
+      ]
+    }
+  ]
+}

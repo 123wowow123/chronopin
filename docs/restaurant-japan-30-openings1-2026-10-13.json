@@ -1,0 +1,635 @@
+{
+  "checkedAt": "2026-10-13",
+  "country": "Japan",
+  "regions": [
+    "kyoto"
+  ],
+  "entries": [
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "JBOWL — Ritsumeikan-mae Opens in Hirano",
+        "description": "A made-to-order takeaway stand near Ritsumeikan University, serving acai bowls, Greek yogurt and latte drinks.",
+        "sourceUrl": "https://www.instagram.com/jbowl_ritsumeikan_mae/",
+        "address": "30-4 Hirano Miyashikicho, Kita-ku, Kyoto",
+        "productName": "JBOWL — Ritsumeikan-mae",
+        "utcStartDateTime": "2026-09-17T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "Branch-specific opening report gives September 17, 2026; operator September 21 student-discount post corroborates that the branch is operating.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Kyoto",
+          "Japan",
+          "Hirano",
+          "Acai and Greek yogurt"
+        ],
+        "longFormSummary": "<p>A made-to-order takeaway stand near Ritsumeikan University, serving acai bowls, Greek yogurt and latte drinks.<cite data-ref=\"https://kansai-kaiten.com/jbowl-ritsumeikanmae2609/\"></cite></p><p>Branch-specific opening report gives September 17, 2026; operator September 21 student-discount post corroborates that the branch is operating.</p>",
+        "references": [
+          {
+            "url": "https://www.instagram.com/jbowl_ritsumeikan_mae/",
+            "title": "JBOWL — Ritsumeikan-mae source",
+            "confidence": 90,
+            "reasoning": "Branch-specific opening report gives September 17, 2026; operator September 21 student-discount post corroborates that the branch is operating."
+          },
+          {
+            "url": "https://kansai-kaiten.com/jbowl-ritsumeikanmae2609/",
+            "title": "JBOWL — Ritsumeikan-mae source",
+            "confidence": 90,
+            "reasoning": "Branch-specific opening report gives September 17, 2026; operator September 21 student-discount post corroborates that the branch is operating."
+          },
+          {
+            "url": "https://www.instagram.com/p/DdkmdPJvYE2/",
+            "title": "JBOWL — Ritsumeikan-mae source",
+            "confidence": 90,
+            "reasoning": "Branch-specific opening report gives September 17, 2026; operator September 21 student-discount post corroborates that the branch is operating."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://www.instagram.com/jbowl_ritsumeikan_mae/",
+          "menu": {
+            "pinSourceUrl": "https://www.instagram.com/jbowl_ritsumeikan_mae/",
+            "name": "JBOWL — Ritsumeikan-mae",
+            "checkedAt": "2026-10-13",
+            "menus": [
+              {
+                "label": "Published bowls and drinks",
+                "url": "https://kansai-kaiten.com/jbowl-ritsumeikanmae2609/",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "オリジナルナッツBOWL",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "いちごの恋するアサイーBOWL",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "ご褒美フルーツBOWL",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "チョコミントBOWL",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "キウイ＆パイナポーBOWL",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "きな粉餅BOWL",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "ストロベリーチョコSP BOWL",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "チョコっとバナナBOWL",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Greek yogurt — オリジナル",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Greek yogurt — トロピカルスノー",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Greek yogurt — ダブルチョコ",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Greek yogurt — きな粉餅",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Greek yogurt — コムハニー＆フルーツ",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Iced café latte",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Iced coffee",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Hojicha latte",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Matcha latte",
+                    "priceLabel": "Price not published"
+                  }
+                ],
+                "note": "Branch opening report publishes items without prices. Student ID earns ¥100 off all items; regular prices are not published. Operator student-discount announcement corroborates the promotion. Review-posting incentives are excluded pending fuller terms."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://www.instagram.com/jbowl_ritsumeikan_mae/",
+            "name": "JBOWL — Ritsumeikan-mae",
+            "checkedAt": "2026-10-13",
+            "websiteUrl": "https://www.instagram.com/jbowl_ritsumeikan_mae/",
+            "phone": null,
+            "openingHours": [
+              {
+                "days": "Daily",
+                "hours": "11:00–21:00"
+              }
+            ],
+            "detailsSourceUrl": "https://www.instagram.com/jbowl_ritsumeikan_mae/",
+            "additionalSources": [
+              {
+                "label": "Research evidence",
+                "url": "https://kansai-kaiten.com/jbowl-ritsumeikanmae2609/"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://www.instagram.com/p/DdkmdPJvYE2/"
+              }
+            ]
+          },
+          "tile": {
+            "regionSlug": "kyoto",
+            "kind": "opening",
+            "slug": "jbowl",
+            "name": "JBOWL — Ritsumeikan-mae",
+            "neighborhood": "Hirano",
+            "cuisine": "Acai and Greek yogurt",
+            "description": "A made-to-order takeaway stand near Ritsumeikan University, serving acai bowls, Greek yogurt and latte drinks.",
+            "address": "30-4 Hirano Miyashikicho, Kita-ku, Kyoto",
+            "websiteUrl": "https://www.instagram.com/jbowl_ritsumeikan_mae/",
+            "checkedAt": "2026-10-13",
+            "recognition": "",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/kyoto/japan-30-2026-10-13/jbowl-0-49e0261dadb3f1b4.webp",
+            "imageCredit": "JBOWL Ritsumeikan-mae",
+            "imageSourceUrl": "https://www.instagram.com/p/DdkmdPJvYE2/",
+            "imageNote": "Operator student-discount promotional graphic",
+            "openingConfirmed": true,
+            "day": "2026-09-17"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/kyoto/japan-30-2026-10-13/jbowl-0-49e0261dadb3f1b4.webp",
+          "sha256": "49e0261dadb3f1b452d7cabb517d3cb1f54693c8406d4e6c538dc6572450721e",
+          "width": 640,
+          "height": 640,
+          "credit": "JBOWL Ritsumeikan-mae",
+          "note": "Operator student-discount promotional graphic",
+          "sourcePage": "https://www.instagram.com/p/DdkmdPJvYE2/"
+        }
+      ],
+      "special": {
+        "regionSlug": "kyoto",
+        "profile": {
+          "pinSourceUrl": "https://www.instagram.com/jbowl_ritsumeikan_mae/",
+          "name": "JBOWL — Ritsumeikan-mae",
+          "checkedAt": "2026-10-13",
+          "menus": [
+            {
+              "label": "Published bowls and drinks",
+              "url": "https://kansai-kaiten.com/jbowl-ritsumeikanmae2609/",
+              "currency": "JPY",
+              "coverage": "sample",
+              "items": [
+                {
+                  "name": "オリジナルナッツBOWL",
+                  "priceLabel": "Price not published"
+                },
+                {
+                  "name": "いちごの恋するアサイーBOWL",
+                  "priceLabel": "Price not published"
+                },
+                {
+                  "name": "ご褒美フルーツBOWL",
+                  "priceLabel": "Price not published"
+                },
+                {
+                  "name": "チョコミントBOWL",
+                  "priceLabel": "Price not published"
+                },
+                {
+                  "name": "キウイ＆パイナポーBOWL",
+                  "priceLabel": "Price not published"
+                },
+                {
+                  "name": "きな粉餅BOWL",
+                  "priceLabel": "Price not published"
+                },
+                {
+                  "name": "ストロベリーチョコSP BOWL",
+                  "priceLabel": "Price not published"
+                },
+                {
+                  "name": "チョコっとバナナBOWL",
+                  "priceLabel": "Price not published"
+                },
+                {
+                  "name": "Greek yogurt — オリジナル",
+                  "priceLabel": "Price not published"
+                },
+                {
+                  "name": "Greek yogurt — トロピカルスノー",
+                  "priceLabel": "Price not published"
+                },
+                {
+                  "name": "Greek yogurt — ダブルチョコ",
+                  "priceLabel": "Price not published"
+                },
+                {
+                  "name": "Greek yogurt — きな粉餅",
+                  "priceLabel": "Price not published"
+                },
+                {
+                  "name": "Greek yogurt — コムハニー＆フルーツ",
+                  "priceLabel": "Price not published"
+                },
+                {
+                  "name": "Iced café latte",
+                  "priceLabel": "Price not published"
+                },
+                {
+                  "name": "Iced coffee",
+                  "priceLabel": "Price not published"
+                },
+                {
+                  "name": "Hojicha latte",
+                  "priceLabel": "Price not published"
+                },
+                {
+                  "name": "Matcha latte",
+                  "priceLabel": "Price not published"
+                }
+              ],
+              "note": "Branch opening report publishes items without prices. Student ID earns ¥100 off all items; regular prices are not published. Operator student-discount announcement corroborates the promotion. Review-posting incentives are excluded pending fuller terms."
+            }
+          ],
+          "specials": [
+            {
+              "title": "Student discount",
+              "kind": "other",
+              "description": "Show a student ID for ¥100 off all items, as reported for this branch. Regular prices are not published.",
+              "sourceUrl": "https://www.instagram.com/p/DdkmdPJvYE2/",
+              "menuLabel": "Published bowls and drinks",
+              "discounted": true,
+              "validFrom": "2026-09-21",
+              "schedule": "Japan local time; see conditions",
+              "conditions": [
+                "Student ID must be presented.",
+                "No end date is published; confirm current terms with the branch."
+              ],
+              "availability": {
+                "windows": [
+                  {
+                    "days": [
+                      0,
+                      1,
+                      2,
+                      3,
+                      4,
+                      5,
+                      6
+                    ],
+                    "start": "11:00",
+                    "end": "21:00"
+                  }
+                ]
+              }
+            }
+          ],
+          "address": "30-4 Hirano Miyashikicho, Kita-ku, Kyoto",
+          "neighborhood": "Hirano",
+          "websiteUrl": "https://www.instagram.com/jbowl_ritsumeikan_mae/",
+          "photo": {
+            "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/kyoto/japan-30-2026-10-13/jbowl-0-49e0261dadb3f1b4.webp",
+            "alt": "JBOWL — Ritsumeikan-mae — Operator student-discount promotional graphic",
+            "credit": "JBOWL Ritsumeikan-mae",
+            "sourceUrl": "https://www.instagram.com/p/DdkmdPJvYE2/",
+            "originalUrl": "https://scontent-lax3-2.cdninstagram.com/v/t51.82787-15/814908147_18100385297166507_5126339406215148657_n.jpg?stp=c273.0.819.819a_dst-jpg_e35_s640x640_tt6&_nc_cat=107&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiRkVFRC5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=eyb8YWio8E8Q7kNvwH4mrKr&_nc_oc=AdpQy2ewDcMcHGm6PLcQl6Sxg6Y0h23NJniyqS1kxpYS553Tx4oy02I5EAYhuxXvcqXVCWXv31QOipPqaaKhqU-m&_nc_zt=23&_nc_ht=scontent-lax3-2.cdninstagram.com&_nc_gid=Cnhc9UdlCOKK02r8d80FlA&_nc_ss=7f60f&oh=00_AQMfdz4WyQ4dXf89BNG08KdVaC6QNj4yHXr3U4lnPugM-w&oe=6AD4A14D",
+            "checkedAt": "2026-10-13"
+          }
+        },
+        "enabled": true
+      }
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "3_rd Coffee Opens in Marutamachi",
+        "description": "A newly opened Marutamachi café serving curry lunches, house-baked hotcakes and coffee.",
+        "sourceUrl": "https://www.instagram.com/3_rdcoffee/",
+        "address": "254 Makieyacho, Nakagyo-ku, Kyoto",
+        "productName": "3_rd Coffee",
+        "utcStartDateTime": "2026-09-29T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "Operator opening-video caption explicitly states 2026.9.29 OPEN, corroborating the branch-specific local report.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Kyoto",
+          "Japan",
+          "Marutamachi",
+          "Cafe"
+        ],
+        "longFormSummary": "<p>A newly opened Marutamachi café serving curry lunches, house-baked hotcakes and coffee.<cite data-ref=\"https://kansai-kaiten.com/3rdcoffee-kyotomarutamachi2609/\"></cite></p><p>Operator opening-video caption explicitly states 2026.9.29 OPEN, corroborating the branch-specific local report.</p>",
+        "references": [
+          {
+            "url": "https://www.instagram.com/3_rdcoffee/",
+            "title": "3_rd Coffee source",
+            "confidence": 90,
+            "reasoning": "Operator opening-video caption explicitly states 2026.9.29 OPEN, corroborating the branch-specific local report."
+          },
+          {
+            "url": "https://kansai-kaiten.com/3rdcoffee-kyotomarutamachi2609/",
+            "title": "3_rd Coffee source",
+            "confidence": 90,
+            "reasoning": "Operator opening-video caption explicitly states 2026.9.29 OPEN, corroborating the branch-specific local report."
+          },
+          {
+            "url": "https://www.instagram.com/reel/Dd2h61zh_Lr/",
+            "title": "3_rd Coffee source",
+            "confidence": 90,
+            "reasoning": "Operator opening-video caption explicitly states 2026.9.29 OPEN, corroborating the branch-specific local report."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://www.instagram.com/3_rdcoffee/",
+          "menu": {
+            "pinSourceUrl": "https://www.instagram.com/3_rdcoffee/",
+            "name": "3_rd Coffee",
+            "checkedAt": "2026-10-13",
+            "menus": [
+              {
+                "label": "Published café items",
+                "url": "https://kansai-kaiten.com/3rdcoffee-kyotomarutamachi2609/",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Curry lunch",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Hotcakes",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Coffee",
+                    "priceLabel": "Price not published"
+                  }
+                ],
+                "note": "The branch opening reel and local report name these items but publish no prices. Opening hours are not published; Sundays and public holidays are closed. Cashless payment only."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://www.instagram.com/3_rdcoffee/",
+            "name": "3_rd Coffee",
+            "checkedAt": "2026-10-13",
+            "websiteUrl": "https://www.instagram.com/3_rdcoffee/",
+            "phone": null,
+            "openingHours": [
+              {
+                "days": "Sunday and public holidays",
+                "hours": "Closed; other service hours not published"
+              }
+            ],
+            "detailsSourceUrl": "https://www.instagram.com/3_rdcoffee/",
+            "additionalSources": [
+              {
+                "label": "Research evidence",
+                "url": "https://kansai-kaiten.com/3rdcoffee-kyotomarutamachi2609/"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://www.instagram.com/reel/Dd2h61zh_Lr/"
+              }
+            ]
+          },
+          "tile": {
+            "regionSlug": "kyoto",
+            "kind": "opening",
+            "slug": "3rdcoffee",
+            "name": "3_rd Coffee",
+            "neighborhood": "Marutamachi",
+            "cuisine": "Cafe",
+            "description": "A newly opened Marutamachi café serving curry lunches, house-baked hotcakes and coffee.",
+            "address": "254 Makieyacho, Nakagyo-ku, Kyoto",
+            "websiteUrl": "https://www.instagram.com/3_rdcoffee/",
+            "checkedAt": "2026-10-13",
+            "recognition": "",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/kyoto/japan-30-2026-10-13/3rdcoffee-0-9b99d9601c1d754f.webp",
+            "imageCredit": "3_rd Coffee",
+            "imageSourceUrl": "https://www.instagram.com/reel/Dd2h61zh_Lr/",
+            "imageNote": "Still from the operator opening video showing the Kyoto storefront",
+            "openingConfirmed": true,
+            "day": "2026-09-29"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/kyoto/japan-30-2026-10-13/3rdcoffee-0-9b99d9601c1d754f.webp",
+          "sha256": "9b99d9601c1d754f959ac6c38cb7791015749cd056296e545990dd6388f314c7",
+          "width": 361,
+          "height": 640,
+          "credit": "3_rd Coffee",
+          "note": "Still from the operator opening video showing the Kyoto storefront",
+          "sourcePage": "https://www.instagram.com/reel/Dd2h61zh_Lr/"
+        }
+      ]
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Stelo Café by loste Opens in Karasuma Oike",
+        "description": "A two-floor bakery café near Karasuma Oike with daily pastries and specialty coffee.",
+        "sourceUrl": "https://www.instagram.com/stelocafekyoto/",
+        "address": "133-2 Horinouecho, Nakagyo-ku, Kyoto",
+        "productName": "Stelo Café by loste",
+        "utcStartDateTime": "2026-09-18T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "Operator Kyoto post announces opening Friday September 18, corroborated by two local reports specifying 2026.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Kyoto",
+          "Japan",
+          "Karasuma Oike",
+          "Bakery cafe"
+        ],
+        "longFormSummary": "<p>A two-floor bakery café near Karasuma Oike with daily pastries and specialty coffee.<cite data-ref=\"https://kansainavi.jp/?p=18248\"></cite></p><p>Operator Kyoto post announces opening Friday September 18, corroborated by two local reports specifying 2026.</p>",
+        "references": [
+          {
+            "url": "https://www.instagram.com/stelocafekyoto/",
+            "title": "Stelo Café by loste source",
+            "confidence": 90,
+            "reasoning": "Operator Kyoto post announces opening Friday September 18, corroborated by two local reports specifying 2026."
+          },
+          {
+            "url": "https://kansainavi.jp/?p=18248",
+            "title": "Stelo Café by loste source",
+            "confidence": 90,
+            "reasoning": "Operator Kyoto post announces opening Friday September 18, corroborated by two local reports specifying 2026."
+          },
+          {
+            "url": "https://www.instagram.com/p/DdXh6OOkwV6/",
+            "title": "Stelo Café by loste source",
+            "confidence": 90,
+            "reasoning": "Operator Kyoto post announces opening Friday September 18, corroborated by two local reports specifying 2026."
+          },
+          {
+            "url": "https://kansai-kaiten.com/stelocafe-kyoto2609/",
+            "title": "Stelo Café by loste source",
+            "confidence": 90,
+            "reasoning": "Operator Kyoto post announces opening Friday September 18, corroborated by two local reports specifying 2026."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://www.instagram.com/stelocafekyoto/",
+          "menu": {
+            "pinSourceUrl": "https://www.instagram.com/stelocafekyoto/",
+            "name": "Stelo Café by loste",
+            "checkedAt": "2026-10-13",
+            "menus": [
+              {
+                "label": "Published Kyoto opening menu",
+                "url": "https://kansainavi.jp/?p=18248",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Danish",
+                    "price": 650
+                  },
+                  {
+                    "name": "Cinnamon roll",
+                    "price": 650
+                  },
+                  {
+                    "name": "Focaccia — half size",
+                    "price": 650
+                  },
+                  {
+                    "name": "Café latte",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Specialty coffee",
+                    "priceLabel": "Price not published"
+                  }
+                ],
+                "note": "Kyoto-specific September 20 opening report publishes these pastry prices without stating tax treatment. Drink prices are not published. Pre-opening April pastry photographs are excluded because branch provenance is unclear."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://www.instagram.com/stelocafekyoto/",
+            "name": "Stelo Café by loste",
+            "checkedAt": "2026-10-13",
+            "websiteUrl": "https://www.instagram.com/stelocafekyoto/",
+            "phone": null,
+            "openingHours": [
+              {
+                "days": "Published opening hours",
+                "hours": "08:00–15:00; irregular closing days, confirm before visiting"
+              }
+            ],
+            "detailsSourceUrl": "https://www.instagram.com/stelocafekyoto/",
+            "additionalSources": [
+              {
+                "label": "Research evidence",
+                "url": "https://kansainavi.jp/?p=18248"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://www.instagram.com/p/DdXh6OOkwV6/"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://kansai-kaiten.com/stelocafe-kyoto2609/"
+              }
+            ]
+          },
+          "tile": {
+            "regionSlug": "kyoto",
+            "kind": "opening",
+            "slug": "stelo",
+            "name": "Stelo Café by loste",
+            "neighborhood": "Karasuma Oike",
+            "cuisine": "Bakery cafe",
+            "description": "A two-floor bakery café near Karasuma Oike with daily pastries and specialty coffee.",
+            "address": "133-2 Horinouecho, Nakagyo-ku, Kyoto",
+            "websiteUrl": "https://www.instagram.com/stelocafekyoto/",
+            "checkedAt": "2026-10-13",
+            "recognition": "",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/kyoto/japan-30-2026-10-13/stelo-0-40ba762579c776b3.webp",
+            "imageCredit": "Kansai Navi / Stelo Café by loste",
+            "imageSourceUrl": "https://kansainavi.jp/?p=18248",
+            "imageNote": "Kyoto café interior pictured in the September opening report",
+            "openingConfirmed": true,
+            "day": "2026-09-18"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/kyoto/japan-30-2026-10-13/stelo-0-40ba762579c776b3.webp",
+          "sha256": "40ba762579c776b32825cf694565524277f39f1e70e2ca0323bffd61767e4028",
+          "width": 1200,
+          "height": 750,
+          "credit": "Kansai Navi / Stelo Café by loste",
+          "note": "Kyoto café interior pictured in the September opening report",
+          "sourcePage": "https://kansainavi.jp/?p=18248"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/kyoto/japan-30-2026-10-13/stelo-1-7c36d66ca431654b.webp",
+          "sha256": "7c36d66ca431654b5e4547587a42cb6686d7fb91bbd08063e4f17f04093e2552",
+          "width": 1200,
+          "height": 750,
+          "credit": "Kansai Navi / Stelo Café by loste",
+          "note": "Kyoto café interior pictured in the September opening report",
+          "sourcePage": "https://kansainavi.jp/?p=18248"
+        }
+      ]
+    }
+  ]
+}

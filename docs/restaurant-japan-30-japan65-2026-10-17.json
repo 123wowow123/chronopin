@@ -1,0 +1,3441 @@
+{
+  "checkedAt": "2026-10-17",
+  "status": "published and publicly verified in local and production",
+  "country": "Japan",
+  "regions": [
+    "nagoya",
+    "sapporo"
+  ],
+  "entries": [
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Sakutako — Kurokawa Opens in Kurokawa",
+        "description": "A takeaway branch specialising in small Nagoya-style soy-sauce takoyaki with cabbage, plus a mustard-mayonnaise version.",
+        "sourceUrl": "https://jouhou.nagoya/sakutako-kurokawa/",
+        "address": "2-53 Shiga Minami-dori, Kita-ku, Nagoya",
+        "productName": "Sakutako — Kurokawa",
+        "utcStartDateTime": "2026-10-13T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "October12exact-branch opening report states October13,2026at Kurokawa, with its current storefront and menu photograph. It explicitly distinguishes the2021Hatta and2024Atsuta branches.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Nagoya",
+          "Japan",
+          "Kurokawa",
+          "Takoyaki / takeaway"
+        ],
+        "longFormSummary": "<p>A takeaway branch specialising in small Nagoya-style soy-sauce takoyaki with cabbage, plus a mustard-mayonnaise version.<cite data-ref=\"https://jouhou.nagoya/sakutako-kurokawa/\"></cite></p><p>October12exact-branch opening report states October13,2026at Kurokawa, with its current storefront and menu photograph. It explicitly distinguishes the2021Hatta and2024Atsuta branches.</p>",
+        "references": [
+          {
+            "url": "https://jouhou.nagoya/sakutako-kurokawa/",
+            "title": "Sakutako — Kurokawa source",
+            "confidence": 90,
+            "reasoning": "October12exact-branch opening report states October13,2026at Kurokawa, with its current storefront and menu photograph. It explicitly distinguishes the2021Hatta and2024Atsuta branches."
+          },
+          {
+            "url": "https://www.instagram.com/sakutako_nagoyayaki/",
+            "title": "Sakutako — Kurokawa source",
+            "confidence": 90,
+            "reasoning": "October12exact-branch opening report states October13,2026at Kurokawa, with its current storefront and menu photograph. It explicitly distinguishes the2021Hatta and2024Atsuta branches."
+          },
+          {
+            "url": "https://tabelog.com/aichi/A2301/A230110/23097898/",
+            "title": "Sakutako — Kurokawa source",
+            "confidence": 90,
+            "reasoning": "October12exact-branch opening report states October13,2026at Kurokawa, with its current storefront and menu photograph. It explicitly distinguishes the2021Hatta and2024Atsuta branches."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://jouhou.nagoya/sakutako-kurokawa/",
+          "menu": {
+            "pinSourceUrl": "https://jouhou.nagoya/sakutako-kurokawa/",
+            "name": "Sakutako — Kurokawa",
+            "checkedAt": "2026-10-17",
+            "menus": [
+              {
+                "label": "Kurokawa photographed launch menu",
+                "url": "https://jouhou.nagoya/sakutako-kurokawa/",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "Nagoya soy-sauce takoyaki — 10 pieces",
+                    "price": 600
+                  },
+                  {
+                    "name": "Nagoya soy-sauce takoyaki — 20 pieces",
+                    "price": 1200
+                  },
+                  {
+                    "name": "Nagoya soy-sauce takoyaki — 30 pieces",
+                    "price": 1800
+                  },
+                  {
+                    "name": "Nagoya soy-sauce takoyaki — 40 pieces",
+                    "price": 2400
+                  },
+                  {
+                    "name": "Nagoya soy-sauce takoyaki — 50 pieces",
+                    "price": 3000
+                  },
+                  {
+                    "name": "Nagoya soy-sauce takoyaki — 60 pieces",
+                    "price": 3600
+                  },
+                  {
+                    "name": "Nagoya soy-sauce takoyaki — 70 pieces",
+                    "price": 4200
+                  },
+                  {
+                    "name": "Nagoya soy-sauce takoyaki — 80 pieces",
+                    "price": 4800
+                  },
+                  {
+                    "name": "Nagoya soy-sauce takoyaki — 90 pieces",
+                    "price": 5400
+                  },
+                  {
+                    "name": "Nagoya soy-sauce takoyaki — 100 pieces",
+                    "price": 6000
+                  },
+                  {
+                    "name": "Homemade swimming-mayonnaise takoyaki — 10 pieces",
+                    "price": 700
+                  },
+                  {
+                    "name": "Homemade swimming-mayonnaise takoyaki — 20 pieces",
+                    "price": 1400
+                  },
+                  {
+                    "name": "Homemade swimming-mayonnaise takoyaki — 30 pieces",
+                    "price": 2100
+                  },
+                  {
+                    "name": "Homemade swimming-mayonnaise takoyaki — 40 pieces",
+                    "price": 2800
+                  },
+                  {
+                    "name": "Homemade swimming-mayonnaise takoyaki — 50 pieces",
+                    "price": 3500
+                  },
+                  {
+                    "name": "Homemade swimming-mayonnaise takoyaki — 60 pieces",
+                    "price": 4200
+                  },
+                  {
+                    "name": "Homemade swimming-mayonnaise takoyaki — 70 pieces",
+                    "price": 4900
+                  },
+                  {
+                    "name": "Homemade swimming-mayonnaise takoyaki — 80 pieces",
+                    "price": 5600
+                  },
+                  {
+                    "name": "Homemade swimming-mayonnaise takoyaki — 90 pieces",
+                    "price": 6300
+                  },
+                  {
+                    "name": "Homemade swimming-mayonnaise takoyaki — 100 pieces",
+                    "price": 7000
+                  },
+                  {
+                    "name": "Sapporo Black Label draft beer",
+                    "price": 290
+                  },
+                  {
+                    "name": "Highball",
+                    "price": 190
+                  },
+                  {
+                    "name": "Oolong highball",
+                    "price": 190
+                  },
+                  {
+                    "name": "Black oolong tea",
+                    "price": 90
+                  }
+                ],
+                "note": "Exact October2026Kurokawa menu photograph visually read. Tax included per local branch report. Both flavours sold in10-piece increments through100pieces, not single pieces. Mayonnaise sauce includes mustard. Telephone ordering not yet launched in the report; no unpublished contact number inferred."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://jouhou.nagoya/sakutako-kurokawa/",
+            "name": "Sakutako — Kurokawa",
+            "checkedAt": "2026-10-17",
+            "websiteUrl": "https://www.instagram.com/sakutako_nagoyayaki/",
+            "phone": null,
+            "openingHours": [
+              {
+                "days": "Daily, planned launch hours",
+                "hours": "11:00–22:00; no regular closing day announced"
+              }
+            ],
+            "detailsSourceUrl": "https://www.instagram.com/sakutako_nagoyayaki/",
+            "additionalSources": [
+              {
+                "label": "Research evidence",
+                "url": "https://jouhou.nagoya/sakutako-kurokawa/"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://tabelog.com/aichi/A2301/A230110/23097898/"
+              }
+            ],
+            "hoursNote": "Takeaway only. Adjacent Meitetsu Kyosho parking:¥100parking service with¥1,000purchase,¥200with¥2,000purchase. Phone reservation starts only when ready; no phone number guessed. Official Instagram returned login-oriented material. Older2021/2023food photographs embedded in the report were excluded from the new gallery."
+          },
+          "tile": {
+            "regionSlug": "nagoya",
+            "kind": "opening",
+            "slug": "japan65-sakutako",
+            "name": "Sakutako — Kurokawa",
+            "neighborhood": "Kurokawa",
+            "cuisine": "Takoyaki / takeaway",
+            "description": "A takeaway branch specialising in small Nagoya-style soy-sauce takoyaki with cabbage, plus a mustard-mayonnaise version.",
+            "address": "2-53 Shiga Minami-dori, Kita-ku, Nagoya",
+            "websiteUrl": "https://www.instagram.com/sakutako_nagoyayaki/",
+            "checkedAt": "2026-10-17",
+            "recognition": "",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-17/batch65-sakutako-1-3ced68a28fe69a39.webp",
+            "imageCredit": "Nagoya Jouhou Tsu / 名古屋情報通編集部",
+            "imageSourceUrl": "https://jouhou.nagoya/sakutako-kurokawa/",
+            "imageNote": "Kurokawa branch opening gallery, photographed for the October12local report.",
+            "openingConfirmed": true,
+            "day": "2026-10-13"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-17/batch65-sakutako-1-3ced68a28fe69a39.webp",
+          "sha256": "3ced68a28fe69a39505e4680b89b422ea180c1fda7f02ccb9a67662a7de1dcfe",
+          "width": 750,
+          "height": 500,
+          "credit": "Nagoya Jouhou Tsu / 名古屋情報通編集部",
+          "note": "Kurokawa branch opening gallery, photographed for the October12local report.",
+          "sourcePage": "https://jouhou.nagoya/sakutako-kurokawa/"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-17/batch65-sakutako-2-3cf5a6de96c7fdea.webp",
+          "sha256": "3cf5a6de96c7fdeaa5b1b12ffe6b6e122cdaa72250d1db801bc7c727c9dda3be",
+          "width": 750,
+          "height": 500,
+          "credit": "Nagoya Jouhou Tsu / 名古屋情報通編集部",
+          "note": "Kurokawa branch opening gallery; no other branch room substituted.",
+          "sourcePage": "https://jouhou.nagoya/sakutako-kurokawa/"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-17/batch65-sakutako-3-6931196a0fc4a8f0.webp",
+          "sha256": "6931196a0fc4a8f0cc33220cc1586e287e12bd561b6fc675983177c8500d5084",
+          "width": 750,
+          "height": 499,
+          "credit": "Nagoya Jouhou Tsu / 名古屋情報通編集部",
+          "note": "Current branch report gallery; item identity limited to the published caption.",
+          "sourcePage": "https://jouhou.nagoya/sakutako-kurokawa/"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-17/batch65-sakutako-4-603984720ba1fdf7.webp",
+          "sha256": "603984720ba1fdf7e4fd65a00e484cdd4dca58358b002d94a2f5a8a8d6579f2f",
+          "width": 750,
+          "height": 500,
+          "credit": "Nagoya Jouhou Tsu / 名古屋情報通編集部",
+          "note": "Kurokawa launch menu photographed in October2026; prices include tax.",
+          "sourcePage": "https://jouhou.nagoya/sakutako-kurokawa/"
+        }
+      ],
+      "verification": {
+        "local": {
+          "pinId": 16246,
+          "sourceUrl": "https://jouhou.nagoya/sakutako-kurokawa/",
+          "name": "Sakutako — Kurokawa",
+          "contentId": 1669,
+          "contentRevision": 1,
+          "verifiedGalleryLinks": 4,
+          "publicPinStatus": 200
+        },
+        "production": {
+          "pinId": 16294,
+          "sourceUrl": "https://jouhou.nagoya/sakutako-kurokawa/",
+          "name": "Sakutako — Kurokawa",
+          "contentId": 1669,
+          "contentRevision": 1,
+          "verifiedGalleryLinks": 4,
+          "publicPinStatus": 200
+        }
+      }
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Chihiro Kashiten — Shinsakae Aoi Opens in Shinsakae",
+        "description": "A new workshop bakery selling freshly baked financiers, cream puffs and pastries near Shinsakae-machi Station.",
+        "sourceUrl": "https://jouhou.nagoya/chihiro-kashiten/",
+        "address": "1F est AOI, Aoi1-chome, Higashi-ku, Nagoya",
+        "productName": "Chihiro Kashiten — Shinsakae Aoi",
+        "utcStartDateTime": "2026-10-09T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "Exact-branch local opening preview, October9firsthand opening-day observations and branch listing agree public pre-opening service began October9,2026. October23grand opening is a later phase, not the first service date; brand founding2019is separate.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Nagoya",
+          "Japan",
+          "Shinsakae",
+          "Bakery / sweets"
+        ],
+        "longFormSummary": "<p>A new workshop bakery selling freshly baked financiers, cream puffs and pastries near Shinsakae-machi Station.<cite data-ref=\"https://jouhou.nagoya/chihiro-kashiten/\"></cite></p><p>Exact-branch local opening preview, October9firsthand opening-day observations and branch listing agree public pre-opening service began October9,2026. October23grand opening is a later phase, not the first service date; brand founding2019is separate.</p>",
+        "references": [
+          {
+            "url": "https://jouhou.nagoya/chihiro-kashiten/",
+            "title": "Chihiro Kashiten — Shinsakae Aoi source",
+            "confidence": 90,
+            "reasoning": "Exact-branch local opening preview, October9firsthand opening-day observations and branch listing agree public pre-opening service began October9,2026. October23grand opening is a later phase, not the first service date; brand founding2019is separate."
+          },
+          {
+            "url": "https://chihirosweets.myshopify.com/pages/shop-list",
+            "title": "Chihiro Kashiten — Shinsakae Aoi source",
+            "confidence": 90,
+            "reasoning": "Exact-branch local opening preview, October9firsthand opening-day observations and branch listing agree public pre-opening service began October9,2026. October23grand opening is a later phase, not the first service date; brand founding2019is separate."
+          },
+          {
+            "url": "https://www.instagram.com/chihiro.shinsakaeaoi/",
+            "title": "Chihiro Kashiten — Shinsakae Aoi source",
+            "confidence": 90,
+            "reasoning": "Exact-branch local opening preview, October9firsthand opening-day observations and branch listing agree public pre-opening service began October9,2026. October23grand opening is a later phase, not the first service date; brand founding2019is separate."
+          },
+          {
+            "url": "https://tabelog.com/aichi/A2301/A230104/23097967/",
+            "title": "Chihiro Kashiten — Shinsakae Aoi source",
+            "confidence": 90,
+            "reasoning": "Exact-branch local opening preview, October9firsthand opening-day observations and branch listing agree public pre-opening service began October9,2026. October23grand opening is a later phase, not the first service date; brand founding2019is separate."
+          },
+          {
+            "url": "https://beauty.hotpepper.jp/slnH000166062/blog/bidA127036595.html",
+            "title": "Chihiro Kashiten — Shinsakae Aoi source",
+            "confidence": 90,
+            "reasoning": "Exact-branch local opening preview, October9firsthand opening-day observations and branch listing agree public pre-opening service began October9,2026. October23grand opening is a later phase, not the first service date; brand founding2019is separate."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://jouhou.nagoya/chihiro-kashiten/",
+          "menu": {
+            "pinSourceUrl": "https://jouhou.nagoya/chihiro-kashiten/",
+            "name": "Chihiro Kashiten — Shinsakae Aoi",
+            "checkedAt": "2026-10-17",
+            "menus": [
+              {
+                "label": "Shinsakae Aoi branch opening selection",
+                "url": "https://jouhou.nagoya/chihiro-kashiten/",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Gokujo plain financier",
+                    "price": 330
+                  },
+                  {
+                    "name": "Tanba black-bean financier",
+                    "price": 380
+                  },
+                  {
+                    "name": "Raspberry and almond financier",
+                    "price": 360
+                  },
+                  {
+                    "name": "Chocolate-chip financier",
+                    "price": 380
+                  },
+                  {
+                    "name": "Wasanbon and walnut financier",
+                    "price": 350
+                  },
+                  {
+                    "name": "Naruto Kintoki sweet-potato financier",
+                    "price": 360
+                  },
+                  {
+                    "name": "Rabbit-shaped financier",
+                    "price": 450
+                  },
+                  {
+                    "name": "Maboroshi cream puff",
+                    "price": 350
+                  },
+                  {
+                    "name": "Earl Grey financier",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Pistachio financier",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Gorgonzola financier",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Premium matcha financier",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Croissant",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Apple pie",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Pain au chocolat",
+                    "priceLabel": "Price not published"
+                  }
+                ],
+                "note": "Exact-branch October8/10preview names these items; eight have published tax-inclusive unit prices, seven have no published branch price. Fresh financiers have a reported three-day consumption limit; operator recommends same day. Shelf-stable financiers are distinct. Online gift-box prices and other branches are not substituted. Eat-in start remains unpublished; no drink menu inferred."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://jouhou.nagoya/chihiro-kashiten/",
+            "name": "Chihiro Kashiten — Shinsakae Aoi",
+            "checkedAt": "2026-10-17",
+            "websiteUrl": "https://chihirosweets.myshopify.com/pages/shop-list",
+            "phone": "052-990-4183",
+            "openingHours": [
+              {
+                "days": "Current operator directory",
+                "hours": "10:00–19:00, daily; confirm during pre-opening"
+              },
+              {
+                "days": "Earlier local preview",
+                "hours": "October9–22:11:00–19:00; fromOctober23:10:00–20:00, subject to change"
+              }
+            ],
+            "detailsSourceUrl": "https://chihirosweets.myshopify.com/pages/shop-list",
+            "additionalSources": [
+              {
+                "label": "Research evidence",
+                "url": "https://jouhou.nagoya/chihiro-kashiten/"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://www.instagram.com/chihiro.shinsakaeaoi/"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://tabelog.com/aichi/A2301/A230104/23097967/"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://beauty.hotpepper.jp/slnH000166062/blog/bidA127036595.html"
+              }
+            ],
+            "hoursNote": "Conflicting exact street number: operator directory saysAoi1-17-15, opening report/Tabelog say1-17-16; both identifyestAOI1Fand052-990-4183. Pin address retains verified building/block without choosing an unsupported number. Undated operator directory10:00–19:00conflicts with dated preview hours; confirm before visiting. Five-seat counter exists but eat-in opening date is not confirmed. No parking. Limited retail tote/gift bag is not a timed dining Special."
+          },
+          "tile": {
+            "regionSlug": "nagoya",
+            "kind": "opening",
+            "slug": "japan65-chihiro",
+            "name": "Chihiro Kashiten — Shinsakae Aoi",
+            "neighborhood": "Shinsakae",
+            "cuisine": "Bakery / sweets",
+            "description": "A new workshop bakery selling freshly baked financiers, cream puffs and pastries near Shinsakae-machi Station.",
+            "address": "1F est AOI, Aoi1-chome, Higashi-ku, Nagoya",
+            "websiteUrl": "https://chihirosweets.myshopify.com/pages/shop-list",
+            "checkedAt": "2026-10-17",
+            "recognition": "",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-17/batch65-chihiro-1-20720256183e5240.webp",
+            "imageCredit": "Nagoya Jouhou Tsu / 名古屋情報通編集部",
+            "imageSourceUrl": "https://jouhou.nagoya/chihiro-kashiten/",
+            "imageNote": "Shinsakae Aoi branch opening gallery from the October preview.",
+            "openingConfirmed": true,
+            "day": "2026-10-09"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-17/batch65-chihiro-1-20720256183e5240.webp",
+          "sha256": "20720256183e5240895f8265f796eedfae05fa36ec3f4f2f7cb3ae6b47fca379",
+          "width": 750,
+          "height": 500,
+          "credit": "Nagoya Jouhou Tsu / 名古屋情報通編集部",
+          "note": "Shinsakae Aoi branch opening gallery from the October preview.",
+          "sourcePage": "https://jouhou.nagoya/chihiro-kashiten/"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-17/batch65-chihiro-2-15a024b7a845877b.webp",
+          "sha256": "15a024b7a845877b1f03212bf3b69be16ca8efdd2432e045eef2b677dc9ce212",
+          "width": 750,
+          "height": 500,
+          "credit": "Nagoya Jouhou Tsu / 名古屋情報通編集部",
+          "note": "Shinsakae Aoi branch opening gallery from the October preview.",
+          "sourcePage": "https://jouhou.nagoya/chihiro-kashiten/"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-17/batch65-chihiro-3-0cf391b086ddd0dc.webp",
+          "sha256": "0cf391b086ddd0dc98fff27187e5230644729febebd50439ffa093141415591d",
+          "width": 750,
+          "height": 500,
+          "credit": "Nagoya Jouhou Tsu / 名古屋情報通編集部",
+          "note": "Five-seat counter in the new Shinsakae Aoi shop, photographed for the October preview. Eat-in service start remains unverified; this photo does not establish it is available.",
+          "sourcePage": "https://jouhou.nagoya/chihiro-kashiten/"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-17/batch65-chihiro-4-773cc7cae1824342.webp",
+          "sha256": "773cc7cae1824342e53dd2e94554b42c5bdf2a909a5681385ba20686b8a29591",
+          "width": 750,
+          "height": 500,
+          "credit": "Nagoya Jouhou Tsu / 名古屋情報通編集部",
+          "note": "Shinsakae Aoi branch opening gallery from the October preview.",
+          "sourcePage": "https://jouhou.nagoya/chihiro-kashiten/"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-17/batch65-chihiro-5-183464b15e90a42d.webp",
+          "sha256": "183464b15e90a42ddd44c74d009d35205fe1ba4ef934919256f2543606e5e949",
+          "width": 750,
+          "height": 500,
+          "credit": "Nagoya Jouhou Tsu / 名古屋情報通編集部",
+          "note": "Shinsakae Aoi branch opening gallery from the October preview.",
+          "sourcePage": "https://jouhou.nagoya/chihiro-kashiten/"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-17/batch65-chihiro-6-c0f9d1eb66bc5076.webp",
+          "sha256": "c0f9d1eb66bc50767ac949d1d6cb3cbc31bc780c301042d018b5038584b0eccd",
+          "width": 750,
+          "height": 500,
+          "credit": "Nagoya Jouhou Tsu / 名古屋情報通編集部",
+          "note": "Shinsakae Aoi branch opening gallery from the October preview.",
+          "sourcePage": "https://jouhou.nagoya/chihiro-kashiten/"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-17/batch65-chihiro-7-f73ec42c6b74745b.webp",
+          "sha256": "f73ec42c6b74745bb306163cdfd0402ec2763a14aa2af83a01124655fc94b41b",
+          "width": 750,
+          "height": 500,
+          "credit": "Nagoya Jouhou Tsu / 名古屋情報通編集部",
+          "note": "Shinsakae Aoi branch opening gallery from the October preview.",
+          "sourcePage": "https://jouhou.nagoya/chihiro-kashiten/"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-17/batch65-chihiro-8-4f98f079a390fe1d.webp",
+          "sha256": "4f98f079a390fe1dcb5c5f093e26824092f5a7489b12d3b06d167d88c4b54b93",
+          "width": 750,
+          "height": 500,
+          "credit": "Nagoya Jouhou Tsu / 名古屋情報通編集部",
+          "note": "Shinsakae Aoi branch opening gallery from the October preview.",
+          "sourcePage": "https://jouhou.nagoya/chihiro-kashiten/"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-17/batch65-chihiro-9-e6ffcd8f3ab8254b.webp",
+          "sha256": "e6ffcd8f3ab8254b4fdb66965ffab3dd44ab7cc746d1a618009ce444f3dc4361",
+          "width": 750,
+          "height": 499,
+          "credit": "Nagoya Jouhou Tsu / 名古屋情報通編集部",
+          "note": "Shinsakae Aoi branch opening gallery from the October preview.",
+          "sourcePage": "https://jouhou.nagoya/chihiro-kashiten/"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-17/batch65-chihiro-10-c62150581510b0b3.webp",
+          "sha256": "c62150581510b0b3cac5fa77e4da6836e6a6b5fd0063d18b03e221552b2d03b1",
+          "width": 750,
+          "height": 499,
+          "credit": "Nagoya Jouhou Tsu / 名古屋情報通編集部",
+          "note": "Shinsakae Aoi branch opening gallery from the October preview.",
+          "sourcePage": "https://jouhou.nagoya/chihiro-kashiten/"
+        }
+      ],
+      "verification": {
+        "local": {
+          "pinId": 16247,
+          "sourceUrl": "https://jouhou.nagoya/chihiro-kashiten/",
+          "name": "Chihiro Kashiten — Shinsakae Aoi",
+          "contentId": 1670,
+          "contentRevision": 1,
+          "verifiedGalleryLinks": 10,
+          "publicPinStatus": 200
+        },
+        "production": {
+          "pinId": 16295,
+          "sourceUrl": "https://jouhou.nagoya/chihiro-kashiten/",
+          "name": "Chihiro Kashiten — Shinsakae Aoi",
+          "contentId": 1670,
+          "contentRevision": 1,
+          "verifiedGalleryLinks": 10,
+          "publicPinStatus": 200
+        }
+      }
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Olive no Oka — Sapporo Nishimachi Opens in Nishimachi",
+        "description": "A new Italian family restaurant with branch-linked shared pasta, pizza, side dishes and dessert menus.",
+        "sourceUrl": "https://maps.olivenooka.jp/jp/detail/6620.html",
+        "address": "13-1-7 Nishimachi Kita, Nishi-ku, Sapporo",
+        "productName": "Olive no Oka — Sapporo Nishimachi",
+        "utcStartDateTime": "2026-10-08T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "Official operator news CSV records both the August5advance announcement and October8,2026opening-day item for exact branch6620. Not the separate Shinkotoni branch6621scheduledOctober22.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Sapporo",
+          "Japan",
+          "Nishimachi",
+          "Italian"
+        ],
+        "longFormSummary": "<p>A new Italian family restaurant with branch-linked shared pasta, pizza, side dishes and dessert menus.<cite data-ref=\"https://maps.olivenooka.jp/jp/detail/6620.html\"></cite></p><p>Official operator news CSV records both the August5advance announcement and October8,2026opening-day item for exact branch6620. Not the separate Shinkotoni branch6621scheduledOctober22.</p>",
+        "references": [
+          {
+            "url": "https://maps.olivenooka.jp/jp/detail/6620.html",
+            "title": "Olive no Oka — Sapporo Nishimachi source",
+            "confidence": 90,
+            "reasoning": "Official operator news CSV records both the August5advance announcement and October8,2026opening-day item for exact branch6620. Not the separate Shinkotoni branch6621scheduledOctober22."
+          },
+          {
+            "url": "https://www.olivenooka.jp/",
+            "title": "Olive no Oka — Sapporo Nishimachi source",
+            "confidence": 90,
+            "reasoning": "Official operator news CSV records both the August5advance announcement and October8,2026opening-day item for exact branch6620. Not the separate Shinkotoni branch6621scheduledOctober22."
+          },
+          {
+            "url": "https://www.olivenooka.jp/data/news.csv",
+            "title": "Olive no Oka — Sapporo Nishimachi source",
+            "confidence": 90,
+            "reasoning": "Official operator news CSV records both the August5advance announcement and October8,2026opening-day item for exact branch6620. Not the separate Shinkotoni branch6621scheduledOctober22."
+          },
+          {
+            "url": "https://www.olivenooka.jp/menu/index.html",
+            "title": "Olive no Oka — Sapporo Nishimachi source",
+            "confidence": 90,
+            "reasoning": "Official operator news CSV records both the August5advance announcement and October8,2026opening-day item for exact branch6620. Not the separate Shinkotoni branch6621scheduledOctober22."
+          },
+          {
+            "url": "https://www.olivenooka.jp/menu/season.html",
+            "title": "Olive no Oka — Sapporo Nishimachi source",
+            "confidence": 90,
+            "reasoning": "Official operator news CSV records both the August5advance announcement and October8,2026opening-day item for exact branch6620. Not the separate Shinkotoni branch6621scheduledOctober22."
+          },
+          {
+            "url": "https://www.olivenooka.jp/menu/pasta.html",
+            "title": "Olive no Oka — Sapporo Nishimachi source",
+            "confidence": 90,
+            "reasoning": "Official operator news CSV records both the August5advance announcement and October8,2026opening-day item for exact branch6620. Not the separate Shinkotoni branch6621scheduledOctober22."
+          },
+          {
+            "url": "https://www.olivenooka.jp/menu/pizza.html",
+            "title": "Olive no Oka — Sapporo Nishimachi source",
+            "confidence": 90,
+            "reasoning": "Official operator news CSV records both the August5advance announcement and October8,2026opening-day item for exact branch6620. Not the separate Shinkotoni branch6621scheduledOctober22."
+          },
+          {
+            "url": "https://www.olivenooka.jp/menu/appetizer.html",
+            "title": "Olive no Oka — Sapporo Nishimachi source",
+            "confidence": 90,
+            "reasoning": "Official operator news CSV records both the August5advance announcement and October8,2026opening-day item for exact branch6620. Not the separate Shinkotoni branch6621scheduledOctober22."
+          },
+          {
+            "url": "https://www.olivenooka.jp/menu/soup.html",
+            "title": "Olive no Oka — Sapporo Nishimachi source",
+            "confidence": 90,
+            "reasoning": "Official operator news CSV records both the August5advance announcement and October8,2026opening-day item for exact branch6620. Not the separate Shinkotoni branch6621scheduledOctober22."
+          },
+          {
+            "url": "https://www.olivenooka.jp/menu/salad.html",
+            "title": "Olive no Oka — Sapporo Nishimachi source",
+            "confidence": 90,
+            "reasoning": "Official operator news CSV records both the August5advance announcement and October8,2026opening-day item for exact branch6620. Not the separate Shinkotoni branch6621scheduledOctober22."
+          },
+          {
+            "url": "https://www.olivenooka.jp/menu/rice-dishes.html",
+            "title": "Olive no Oka — Sapporo Nishimachi source",
+            "confidence": 90,
+            "reasoning": "Official operator news CSV records both the August5advance announcement and October8,2026opening-day item for exact branch6620. Not the separate Shinkotoni branch6621scheduledOctober22."
+          },
+          {
+            "url": "https://www.olivenooka.jp/menu/meat-dishes.html",
+            "title": "Olive no Oka — Sapporo Nishimachi source",
+            "confidence": 90,
+            "reasoning": "Official operator news CSV records both the August5advance announcement and October8,2026opening-day item for exact branch6620. Not the separate Shinkotoni branch6621scheduledOctober22."
+          },
+          {
+            "url": "https://www.olivenooka.jp/menu/dessert.html",
+            "title": "Olive no Oka — Sapporo Nishimachi source",
+            "confidence": 90,
+            "reasoning": "Official operator news CSV records both the August5advance announcement and October8,2026opening-day item for exact branch6620. Not the separate Shinkotoni branch6621scheduledOctober22."
+          },
+          {
+            "url": "https://www.olivenooka.jp/menu/alcohol-and-drink.html",
+            "title": "Olive no Oka — Sapporo Nishimachi source",
+            "confidence": 90,
+            "reasoning": "Official operator news CSV records both the August5advance announcement and October8,2026opening-day item for exact branch6620. Not the separate Shinkotoni branch6621scheduledOctober22."
+          },
+          {
+            "url": "https://www.olivenooka.jp/menu/kids-menu.html",
+            "title": "Olive no Oka — Sapporo Nishimachi source",
+            "confidence": 90,
+            "reasoning": "Official operator news CSV records both the August5advance announcement and October8,2026opening-day item for exact branch6620. Not the separate Shinkotoni branch6621scheduledOctober22."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://maps.olivenooka.jp/jp/detail/6620.html",
+          "menu": {
+            "pinSourceUrl": "https://maps.olivenooka.jp/jp/detail/6620.html",
+            "name": "Olive no Oka — Sapporo Nishimachi",
+            "checkedAt": "2026-10-17",
+            "menus": [
+              {
+                "label": "Olive no Oka shared Seasonal dishes",
+                "url": "https://www.olivenooka.jp/menu/season.html",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "北海道産かぼちゃとモッツァレラのクリームスープパスタ",
+                    "price": 869,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  },
+                  {
+                    "name": "岩だことブロッコリーのフリット～手作りオリーブトマトソース付き～",
+                    "price": 539,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  },
+                  {
+                    "name": "北海道産かぼちゃのプリン～イタリア栗のジェラートを添えて～",
+                    "price": 539,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  },
+                  {
+                    "name": "焼きたてアップルパイ",
+                    "price": 649,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  }
+                ],
+                "note": "Currently linked operator shared menu/data, checkedOctober17after October14grand-menu update. Some branches have different prices; prices are advertised tax-inclusive amounts, not a guarantee of this branch’s launch stock or price. Seasonal dishes have no published expiry and are not saved as dated Specials. Weekend/holiday07:00–10:00offers breakfast menu only; these are ordinary daytime menu items.",
+                "documentUrl": "https://www.olivenooka.jp/menu/data/menu_season.csv"
+              },
+              {
+                "label": "Olive no Oka shared Pasta",
+                "url": "https://www.olivenooka.jp/menu/pasta.html",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "アーリオオーリオ・ペペロンチーノ",
+                    "price": 429,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  },
+                  {
+                    "name": "えびとほうれん草のトマトペペロンチーノ",
+                    "price": 649,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ. Takeaway mark is published; takeaway tax/payment total must be confirmed separately."
+                  },
+                  {
+                    "name": "ボンゴレビアンコ",
+                    "price": 649,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ. Takeaway mark is published; takeaway tax/payment total must be confirmed separately."
+                  },
+                  {
+                    "name": "ごろごろチキンと葱の黒胡椒醤油",
+                    "price": 649,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  },
+                  {
+                    "name": "あさりとほうれん草のバター醤油",
+                    "price": 429,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  },
+                  {
+                    "name": "焼き茄子とベーコンの醤油ソース",
+                    "price": 539,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  },
+                  {
+                    "name": "モッツァトマト",
+                    "price": 649,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ. Takeaway mark is published; takeaway tax/payment total must be confirmed separately."
+                  },
+                  {
+                    "name": "アラビアータ",
+                    "price": 539,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  },
+                  {
+                    "name": "ペスカトーレ",
+                    "price": 715,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ. Takeaway mark is published; takeaway tax/payment total must be confirmed separately."
+                  },
+                  {
+                    "name": "彩り野菜とベーコンのトマトソース",
+                    "price": 649,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ. Takeaway mark is published; takeaway tax/payment total must be confirmed separately."
+                  },
+                  {
+                    "name": "焼き茄子とベーコンのトマトソース",
+                    "price": 605,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ. Takeaway mark is published; takeaway tax/payment total must be confirmed separately."
+                  },
+                  {
+                    "name": "ダブルモッツァトマト",
+                    "price": 715,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ. Takeaway mark is published; takeaway tax/payment total must be confirmed separately."
+                  },
+                  {
+                    "name": "ボロネーゼ",
+                    "price": 539,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  },
+                  {
+                    "name": "モッツァレラとベーコンのボロネーゼ",
+                    "price": 649,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ. Takeaway mark is published; takeaway tax/payment total must be confirmed separately."
+                  },
+                  {
+                    "name": "しらすと葱のジンジャーカルボ",
+                    "price": 649,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  },
+                  {
+                    "name": "カルボナーラ",
+                    "price": 605,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  },
+                  {
+                    "name": "海の幸明太子",
+                    "price": 539,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  },
+                  {
+                    "name": "サーモンとほうれん草のクリームソース",
+                    "price": 649,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ. Takeaway mark is published; takeaway tax/payment total must be confirmed separately."
+                  },
+                  {
+                    "name": "明太子クリーム",
+                    "price": 649,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  },
+                  {
+                    "name": "明太子",
+                    "price": 429,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  },
+                  {
+                    "name": "イカ墨（ネーロ）",
+                    "price": 715,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ. Takeaway mark is published; takeaway tax/payment total must be confirmed separately."
+                  },
+                  {
+                    "name": "ジェノベーゼ",
+                    "price": 715,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  },
+                  {
+                    "name": "ペンネ　アラビアータ",
+                    "price": 649,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ. Takeaway mark is published; takeaway tax/payment total must be confirmed separately."
+                  },
+                  {
+                    "name": "ペンネ　ボロネーゼ",
+                    "price": 649,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  },
+                  {
+                    "name": "ペンネ　ゴルゴンゾーラクリーム",
+                    "price": 759,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ. Takeaway mark is published; takeaway tax/payment total must be confirmed separately."
+                  }
+                ],
+                "note": "Currently linked operator shared menu/data, checkedOctober17after October14grand-menu update. Some branches have different prices; prices are advertised tax-inclusive amounts, not a guarantee of this branch’s launch stock or price. Seasonal dishes have no published expiry and are not saved as dated Specials. Weekend/holiday07:00–10:00offers breakfast menu only; these are ordinary daytime menu items.",
+                "documentUrl": "https://www.olivenooka.jp/menu/data/menu_pasta.csv"
+              },
+              {
+                "label": "Olive no Oka shared Pizza",
+                "url": "https://www.olivenooka.jp/menu/pizza.html",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "ピッツァ・マルゲリータ",
+                    "price": 649,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ. Takeaway mark is published; takeaway tax/payment total must be confirmed separately."
+                  },
+                  {
+                    "name": "ピッツァ・ガーリックベーコン",
+                    "price": 649,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ. Takeaway mark is published; takeaway tax/payment total must be confirmed separately."
+                  },
+                  {
+                    "name": "ピッツァ・たっぷりコーンマヨ",
+                    "price": 649,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ. Takeaway mark is published; takeaway tax/payment total must be confirmed separately."
+                  },
+                  {
+                    "name": "ピッツァ・サーモンマヨ",
+                    "price": 759,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ. Takeaway mark is published; takeaway tax/payment total must be confirmed separately."
+                  },
+                  {
+                    "name": "ピッツァ・えびマヨガーリック",
+                    "price": 759,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ. Takeaway mark is published; takeaway tax/payment total must be confirmed separately."
+                  },
+                  {
+                    "name": "ピッツァ・クワトロフォルマッジ",
+                    "price": 759,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ. Takeaway mark is published; takeaway tax/payment total must be confirmed separately."
+                  },
+                  {
+                    "name": "ピッツァ・チキンときのこのバジルクリーム",
+                    "price": 869,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ. Takeaway mark is published; takeaway tax/payment total must be confirmed separately."
+                  },
+                  {
+                    "name": "ピッツァ・チチニエッリポモドーロ",
+                    "price": 869,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  },
+                  {
+                    "name": "ミニピッツァ・マルゲリータ",
+                    "price": 429,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  },
+                  {
+                    "name": "ミニピッツァ・ガーリックベーコン",
+                    "price": 495,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  },
+                  {
+                    "name": "ミニピッツァ・たっぷりコーンマヨ",
+                    "price": 495,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  }
+                ],
+                "note": "Currently linked operator shared menu/data, checkedOctober17after October14grand-menu update. Some branches have different prices; prices are advertised tax-inclusive amounts, not a guarantee of this branch’s launch stock or price. Seasonal dishes have no published expiry and are not saved as dated Specials. Weekend/holiday07:00–10:00offers breakfast menu only; these are ordinary daytime menu items.",
+                "documentUrl": "https://www.olivenooka.jp/menu/data/menu_pizza.csv"
+              },
+              {
+                "label": "Olive no Oka shared Appetizers",
+                "url": "https://www.olivenooka.jp/menu/appetizer.html",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "カクテルえびバジル",
+                    "price": 319,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  },
+                  {
+                    "name": "鴨のマリネ　オレンジ＆バルサミコソース",
+                    "price": 429,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  },
+                  {
+                    "name": "サーモンのカルパッチョ",
+                    "price": 429,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  },
+                  {
+                    "name": "銚子産真いわしのマリネ",
+                    "price": 319,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  },
+                  {
+                    "name": "キャロットラぺ　オレンジ",
+                    "price": 319,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  },
+                  {
+                    "name": "まぐろのブルスケッタ",
+                    "price": 319,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  },
+                  {
+                    "name": "しらすと葱のブルスケッタ",
+                    "price": 319,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  },
+                  {
+                    "name": "レバーパテのブルスケッタ",
+                    "price": 319,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  },
+                  {
+                    "name": "ライスコロッケ（アランチーニ）",
+                    "price": 319,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ. Takeaway mark is published; takeaway tax/payment total must be confirmed separately."
+                  },
+                  {
+                    "name": "チキンフリット",
+                    "price": 319,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ. Takeaway mark is published; takeaway tax/payment total must be confirmed separately."
+                  },
+                  {
+                    "name": "モッツァレラフリット",
+                    "price": 319,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  },
+                  {
+                    "name": "チーズゼッポリーネ",
+                    "price": 319,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ. Takeaway mark is published; takeaway tax/payment total must be confirmed separately."
+                  },
+                  {
+                    "name": "きのこフリット",
+                    "price": 319,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  },
+                  {
+                    "name": "イカフリット（カラマリフリット）",
+                    "price": 429,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  },
+                  {
+                    "name": "フレンチフライ（ケチャップ）",
+                    "price": 429,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ. Takeaway mark is published; takeaway tax/payment total must be confirmed separately."
+                  },
+                  {
+                    "name": "～トリュフ香る～フレンチフライ",
+                    "price": 539,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  },
+                  {
+                    "name": "えびとブロッコリーのアヒージョ(バケット3コ付)",
+                    "price": 539,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  },
+                  {
+                    "name": "チキンときのこのペッパーアヒージョ（バケット3コ付）",
+                    "price": 539,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  },
+                  {
+                    "name": "ボローニャ風ラザニア",
+                    "price": 319,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  },
+                  {
+                    "name": "フリコのオーブン焼き～モッツァレラチーズとマッシュポテト～",
+                    "price": 429,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  },
+                  {
+                    "name": "ソーセージのオーブン焼き",
+                    "price": 429,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  },
+                  {
+                    "name": "ほうれん草のガーリックバターソテー",
+                    "price": 319,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ. Takeaway mark is published; takeaway tax/payment total must be confirmed separately."
+                  },
+                  {
+                    "name": "ブロッコリーのガーリックソテー",
+                    "price": 319,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ. Takeaway mark is published; takeaway tax/payment total must be confirmed separately."
+                  },
+                  {
+                    "name": "あさりの白ワイン蒸し",
+                    "price": 319,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ. Takeaway mark is published; takeaway tax/payment total must be confirmed separately."
+                  },
+                  {
+                    "name": "ムール貝の白ワイン蒸し",
+                    "price": 539,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ. Takeaway mark is published; takeaway tax/payment total must be confirmed separately."
+                  },
+                  {
+                    "name": "ブルスケッタ",
+                    "price": 209,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  },
+                  {
+                    "name": "ガーリックトースト",
+                    "price": 319,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ. Takeaway mark is published; takeaway tax/payment total must be confirmed separately."
+                  }
+                ],
+                "note": "Currently linked operator shared menu/data, checkedOctober17after October14grand-menu update. Some branches have different prices; prices are advertised tax-inclusive amounts, not a guarantee of this branch’s launch stock or price. Seasonal dishes have no published expiry and are not saved as dated Specials. Weekend/holiday07:00–10:00offers breakfast menu only; these are ordinary daytime menu items.",
+                "documentUrl": "https://www.olivenooka.jp/menu/data/menu_appetizer.csv"
+              },
+              {
+                "label": "Olive no Oka shared Soup",
+                "url": "https://www.olivenooka.jp/menu/soup.html",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "コーンポタージュ",
+                    "price": 275,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  },
+                  {
+                    "name": "クラムチャウダー",
+                    "price": 429,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  },
+                  {
+                    "name": "オニオングラタンスープ",
+                    "price": 429,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  }
+                ],
+                "note": "Currently linked operator shared menu/data, checkedOctober17after October14grand-menu update. Some branches have different prices; prices are advertised tax-inclusive amounts, not a guarantee of this branch’s launch stock or price. Seasonal dishes have no published expiry and are not saved as dated Specials. Weekend/holiday07:00–10:00offers breakfast menu only; these are ordinary daytime menu items.",
+                "documentUrl": "https://www.olivenooka.jp/menu/data/menu_soup.csv"
+              },
+              {
+                "label": "Olive no Oka shared Salads",
+                "url": "https://www.olivenooka.jp/menu/salad.html",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "グリーンサラダ",
+                    "price": 319,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  },
+                  {
+                    "name": "シーザーサラダ",
+                    "price": 429,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  },
+                  {
+                    "name": "えびとたまごのアイオリサラダ",
+                    "price": 495,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  },
+                  {
+                    "name": "鴨マリネとキャロットラぺのサラダ",
+                    "price": 649,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  },
+                  {
+                    "name": "【シェアサイズ】シーザーサラダ（大）",
+                    "price": 649,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  },
+                  {
+                    "name": "【シェアサイズ】えびとたまごのアイオリサラダ（大）",
+                    "price": 715,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  },
+                  {
+                    "name": "【シェアサイズ】鴨マリネとキャロットラぺのサラダ（大）",
+                    "price": 869,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  }
+                ],
+                "note": "Currently linked operator shared menu/data, checkedOctober17after October14grand-menu update. Some branches have different prices; prices are advertised tax-inclusive amounts, not a guarantee of this branch’s launch stock or price. Seasonal dishes have no published expiry and are not saved as dated Specials. Weekend/holiday07:00–10:00offers breakfast menu only; these are ordinary daytime menu items.",
+                "documentUrl": "https://www.olivenooka.jp/menu/data/menu_salad.csv"
+              },
+              {
+                "label": "Olive no Oka shared Rice dishes",
+                "url": "https://www.olivenooka.jp/menu/rice-dishes.html",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "リゾットフォルマッジ",
+                    "price": 605,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  },
+                  {
+                    "name": "えびとブロッコリーのビスククリームリゾット",
+                    "price": 715,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  },
+                  {
+                    "name": "ボローニャドリア",
+                    "price": 539,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  },
+                  {
+                    "name": "カルボナーラドリア",
+                    "price": 649,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  },
+                  {
+                    "name": "えびのビスククリームドリア",
+                    "price": 715,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  },
+                  {
+                    "name": "チキンときのこのドリア",
+                    "price": 649,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  },
+                  {
+                    "name": "ライス — regular",
+                    "price": 242
+                  },
+                  {
+                    "name": "ライス — small",
+                    "price": 220
+                  },
+                  {
+                    "name": "ライス — large",
+                    "price": 330
+                  }
+                ],
+                "note": "Currently linked operator shared menu/data, checkedOctober17after October14grand-menu update. Some branches have different prices; prices are advertised tax-inclusive amounts, not a guarantee of this branch’s launch stock or price. Seasonal dishes have no published expiry and are not saved as dated Specials. Weekend/holiday07:00–10:00offers breakfast menu only; these are ordinary daytime menu items.",
+                "documentUrl": "https://www.olivenooka.jp/menu/data/menu_rice.csv"
+              },
+              {
+                "label": "Olive no Oka shared Meat dishes",
+                "url": "https://www.olivenooka.jp/menu/meat-dishes.html",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "デミグラスハンバーグ",
+                    "price": 539,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  },
+                  {
+                    "name": "チーズトマトハンバーグ",
+                    "price": 649,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  },
+                  {
+                    "name": "チキンのオーブン焼き",
+                    "price": 594,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  },
+                  {
+                    "name": "チキンのオーブン焼き～シャキシャキ野菜ソース～",
+                    "price": 715,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  },
+                  {
+                    "name": "ハーブ香る豚のポルケッタ ～チーズトマトソース～",
+                    "price": 869,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  },
+                  {
+                    "name": "ハーブ香る豚のポルケッタ ～ペッパー＆バルサミコソース～",
+                    "price": 869,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ. Takeaway mark is published; takeaway tax/payment total must be confirmed separately."
+                  },
+                  {
+                    "name": "鴨のロティ～ペッパー＆デミグラスソース～",
+                    "price": 979,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  }
+                ],
+                "note": "Currently linked operator shared menu/data, checkedOctober17after October14grand-menu update. Some branches have different prices; prices are advertised tax-inclusive amounts, not a guarantee of this branch’s launch stock or price. Seasonal dishes have no published expiry and are not saved as dated Specials. Weekend/holiday07:00–10:00offers breakfast menu only; these are ordinary daytime menu items.",
+                "documentUrl": "https://www.olivenooka.jp/menu/data/menu_meat.csv"
+              },
+              {
+                "label": "Olive no Oka shared Desserts",
+                "url": "https://www.olivenooka.jp/menu/dessert.html",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "ジェラート　バニラ",
+                    "price": 275,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  },
+                  {
+                    "name": "ジェラート　チョコ",
+                    "price": 275,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  },
+                  {
+                    "name": "ジェラート　いちご",
+                    "price": 275,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  },
+                  {
+                    "name": "2種ジェラート～バニラ＆チョコレート～",
+                    "price": 275,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  },
+                  {
+                    "name": "2種ジェラート～バニラ＆いちご～",
+                    "price": 275,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  },
+                  {
+                    "name": "2種ジェラート～チョコレート＆いちご～",
+                    "price": 275,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  },
+                  {
+                    "name": "オリーブの丘プリン",
+                    "price": 319,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  },
+                  {
+                    "name": "ロイヤルミルクティーグラニータ＆パンナコッタ",
+                    "price": 319,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  },
+                  {
+                    "name": "オリーブの丘ティラミス",
+                    "price": 429,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  },
+                  {
+                    "name": "ショコラケーキ ～カラメルナッツ～",
+                    "price": 429,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  },
+                  {
+                    "name": "バスクチーズケーキ ～オレンジコンフィと苺ソ―ス～",
+                    "price": 539,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  },
+                  {
+                    "name": "窯焼きパン・プディング～バニラジェラートのせ～",
+                    "price": 539,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  },
+                  {
+                    "name": "しぼりたて　オリーブの丘モンブラン",
+                    "price": 605,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  },
+                  {
+                    "name": "自家製オレンジコンフィチュール",
+                    "price": 110,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  },
+                  {
+                    "name": "蜂蜜ナッツ（付け合わせ）",
+                    "price": 110,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  }
+                ],
+                "note": "Currently linked operator shared menu/data, checkedOctober17after October14grand-menu update. Some branches have different prices; prices are advertised tax-inclusive amounts, not a guarantee of this branch’s launch stock or price. Seasonal dishes have no published expiry and are not saved as dated Specials. Weekend/holiday07:00–10:00offers breakfast menu only; these are ordinary daytime menu items.",
+                "documentUrl": "https://www.olivenooka.jp/menu/data/menu_desert.csv"
+              },
+              {
+                "label": "Olive no Oka shared Alcohol and drinks",
+                "url": "https://www.olivenooka.jp/menu/alcohol-and-drink.html",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "生ビール　キリン一番搾り",
+                    "price": 572,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  },
+                  {
+                    "name": "ペローニ　ナストロアズーロ（イタリアンプレミアムビール）330ml",
+                    "price": 605,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  },
+                  {
+                    "name": "ハウスワイン白　110ml",
+                    "price": 209,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  },
+                  {
+                    "name": "ハウスワイン　デキャンタ白　440ml",
+                    "price": 759,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  },
+                  {
+                    "name": "ハウスワイン赤　110ml",
+                    "price": 209,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  },
+                  {
+                    "name": "ハウスワイン　デキャンタ赤　440ml",
+                    "price": 759,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  },
+                  {
+                    "name": "マルティーニ　ブリュット　ハーフ(白)　375ml",
+                    "price": 1089,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  },
+                  {
+                    "name": "カーヨ　グランキュヴェ　エクストラドライ(白)750ml",
+                    "price": 1529,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  },
+                  {
+                    "name": "パスクアランブルスコ　デッレミリア(赤)750ml",
+                    "price": 1089,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  },
+                  {
+                    "name": "パスクアロッソヴェネト（赤）750ml",
+                    "price": 1089,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  },
+                  {
+                    "name": "パスクアビアンコヴェネト（白）750ml",
+                    "price": 1089,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  },
+                  {
+                    "name": "アンジェロ・ネロダヴォラ（赤）750ml",
+                    "price": 1529,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  },
+                  {
+                    "name": "マンナラ・ピノグリージョ(白)750ml",
+                    "price": 1529,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  },
+                  {
+                    "name": "サントリー　角ハイボール",
+                    "price": 429,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  },
+                  {
+                    "name": "グレープフルーツサワー",
+                    "price": 429,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  },
+                  {
+                    "name": "レモンサワー",
+                    "price": 429,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  },
+                  {
+                    "name": "サントリーオールフリー",
+                    "price": 429,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  },
+                  {
+                    "name": "ドリンクバー — standalone",
+                    "price": 396
+                  },
+                  {
+                    "name": "セットドリンクバー",
+                    "price": 286,
+                    "note": "Requires an eligible meal; exact branch conditions must be confirmed."
+                  },
+                  {
+                    "name": "ジュニアドリンクバー",
+                    "price": 132,
+                    "note": "Junior eligibility age not stated in this row; confirm."
+                  },
+                  {
+                    "name": "ドリンクバー — children aged3and under",
+                    "price": 0,
+                    "note": "Only for children aged3and under, per explicit operator menu text."
+                  }
+                ],
+                "note": "Currently linked operator shared menu/data, checkedOctober17after October14grand-menu update. Some branches have different prices; prices are advertised tax-inclusive amounts, not a guarantee of this branch’s launch stock or price. Seasonal dishes have no published expiry and are not saved as dated Specials. Weekend/holiday07:00–10:00offers breakfast menu only; these are ordinary daytime menu items.",
+                "documentUrl": "https://www.olivenooka.jp/menu/data/menu_drink.csv"
+              },
+              {
+                "label": "Olive no Oka shared Children’s dishes",
+                "url": "https://www.olivenooka.jp/menu/kids-menu.html",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "キッズプレート",
+                    "price": 539,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  },
+                  {
+                    "name": "キッズカレー",
+                    "price": 539,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  },
+                  {
+                    "name": "キッズカルボナーラ",
+                    "price": 605,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  },
+                  {
+                    "name": "キッズモッツァトマト",
+                    "price": 649,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  },
+                  {
+                    "name": "キッズボロネーゼ",
+                    "price": 539,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  },
+                  {
+                    "name": "キッズ明太子",
+                    "price": 429,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  }
+                ],
+                "note": "Currently linked operator shared menu/data, checkedOctober17after October14grand-menu update. Some branches have different prices; prices are advertised tax-inclusive amounts, not a guarantee of this branch’s launch stock or price. Seasonal dishes have no published expiry and are not saved as dated Specials. Weekend/holiday07:00–10:00offers breakfast menu only; these are ordinary daytime menu items.",
+                "documentUrl": "https://www.olivenooka.jp/menu/data/menu_kids.csv"
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://maps.olivenooka.jp/jp/detail/6620.html",
+            "name": "Olive no Oka — Sapporo Nishimachi",
+            "checkedAt": "2026-10-17",
+            "websiteUrl": "https://maps.olivenooka.jp/jp/detail/6620.html",
+            "phone": "011-688-5734",
+            "openingHours": [
+              {
+                "days": "Monday–Friday",
+                "hours": "10:00–24:00"
+              },
+              {
+                "days": "Saturday, Sunday and public holidays",
+                "hours": "07:00–24:00;07:00–10:00breakfast menu only"
+              }
+            ],
+            "detailsSourceUrl": "https://maps.olivenooka.jp/jp/detail/6620.html",
+            "additionalSources": [
+              {
+                "label": "Research evidence",
+                "url": "https://www.olivenooka.jp/"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://www.olivenooka.jp/data/news.csv"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://www.olivenooka.jp/menu/index.html"
+              }
+            ],
+            "hoursNote": "No table reservations. Official branch page lists parking, non-smoking premises, baby seat and accessible toilet. Delivery hours/prices differ from dine-in. Operator menu/gallery checked; no verified completed-branch interior image found. Representative gallery is explicitly brand food, not another branch room."
+          },
+          "tile": {
+            "regionSlug": "sapporo",
+            "kind": "opening",
+            "slug": "japan65-olive",
+            "name": "Olive no Oka — Sapporo Nishimachi",
+            "neighborhood": "Nishimachi",
+            "cuisine": "Italian",
+            "description": "A new Italian family restaurant with branch-linked shared pasta, pizza, side dishes and dessert menus.",
+            "address": "13-1-7 Nishimachi Kita, Nishi-ku, Sapporo",
+            "websiteUrl": "https://maps.olivenooka.jp/jp/detail/6620.html",
+            "checkedAt": "2026-10-17",
+            "recognition": "",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-17/batch65-olive-1-381e8cc45ed2204f.webp",
+            "imageCredit": "Olive no Oka / オリーブの丘",
+            "imageSourceUrl": "https://www.olivenooka.jp/menu/pasta.html",
+            "imageNote": "Official shared menu image: アーリオオーリオ・ペペロンチーノ. Food illustration linked from the Sapporo Nishimachi branch page; not a photograph of that branch dining room. Branch prices/stock may differ.",
+            "openingConfirmed": true,
+            "day": "2026-10-08"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-17/batch65-olive-1-381e8cc45ed2204f.webp",
+          "sha256": "381e8cc45ed2204fe6eddfd7cf7ad489e6772bcc5611aebbb3f6966953c8bdd4",
+          "width": 480,
+          "height": 420,
+          "credit": "Olive no Oka / オリーブの丘",
+          "note": "Official shared menu image: アーリオオーリオ・ペペロンチーノ. Food illustration linked from the Sapporo Nishimachi branch page; not a photograph of that branch dining room. Branch prices/stock may differ.",
+          "sourcePage": "https://www.olivenooka.jp/menu/pasta.html"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-17/batch65-olive-2-2c6c0694900492b7.webp",
+          "sha256": "2c6c0694900492b743a7d60cc40f3e77d6a8c5f9719849927e2918e536b3fa9a",
+          "width": 480,
+          "height": 420,
+          "credit": "Olive no Oka / オリーブの丘",
+          "note": "Official shared menu image: ピッツァ・マルゲリータ. Food illustration linked from the Sapporo Nishimachi branch page; not a photograph of that branch dining room. Branch prices/stock may differ.",
+          "sourcePage": "https://www.olivenooka.jp/menu/pizza.html"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-17/batch65-olive-3-5c5ef4d327723c49.webp",
+          "sha256": "5c5ef4d327723c49c4c6eb89c9bdfbd591d0728c4f07f2011506a7050d1eb2cb",
+          "width": 480,
+          "height": 420,
+          "credit": "Olive no Oka / オリーブの丘",
+          "note": "Official shared menu image: カクテルえびバジル. Food illustration linked from the Sapporo Nishimachi branch page; not a photograph of that branch dining room. Branch prices/stock may differ.",
+          "sourcePage": "https://www.olivenooka.jp/menu/appetizer.html"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-17/batch65-olive-4-9a582c1cd52e1e5e.webp",
+          "sha256": "9a582c1cd52e1e5e7008c1a49476346916f609093e843d8b170063d8fc9a24c3",
+          "width": 480,
+          "height": 420,
+          "credit": "Olive no Oka / オリーブの丘",
+          "note": "Official shared menu image: ジェラート　バニラ. Food illustration linked from the Sapporo Nishimachi branch page; not a photograph of that branch dining room. Branch prices/stock may differ.",
+          "sourcePage": "https://www.olivenooka.jp/menu/dessert.html"
+        }
+      ],
+      "verification": {
+        "local": {
+          "pinId": 16248,
+          "sourceUrl": "https://maps.olivenooka.jp/jp/detail/6620.html",
+          "name": "Olive no Oka — Sapporo Nishimachi",
+          "contentId": 1671,
+          "contentRevision": 1,
+          "verifiedGalleryLinks": 4,
+          "publicPinStatus": 200
+        },
+        "production": {
+          "pinId": 16296,
+          "sourceUrl": "https://maps.olivenooka.jp/jp/detail/6620.html",
+          "name": "Olive no Oka — Sapporo Nishimachi",
+          "contentId": 1671,
+          "contentRevision": 1,
+          "verifiedGalleryLinks": 4,
+          "publicPinStatus": 200
+        }
+      }
+    },
+    {
+      "existing": true,
+      "pin": {
+        "id": 15568,
+        "parentId": null,
+        "title": "Olive no Oka — Sapporo Shinkotoni Opens in Shinkotoni",
+        "description": "The operator announces an October 22 opening for its Shinkotoni Italian restaurant, with weekday and weekend breakfast hours.",
+        "sourceUrl": "https://maps.olivenooka.jp/jp/detail/6621.html",
+        "longFormSummary": "<p>The operator announces an October 22 opening for its Shinkotoni Italian restaurant, with weekday and weekend breakfast hours.<cite data-ref=\"https://sapporo-list.info/shop/olivenooka-shinkotoni/\"></cite></p><p>Official branch operator page explicitly announces October 22, 2026 planned grand opening and confirms address. This is a future announced opening, not evidence that service has begun.</p>",
+        "address": "7-1-52 Shinkotoni 2-jo, Kita-ku, Sapporo",
+        "location": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "price": null,
+        "priceCurrency": null,
+        "tip": null,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "Official branch operator page explicitly announces October 22, 2026 planned grand opening and confirms address. This is a future announced opening, not evidence that service has begun.",
+        "utcStartDateTime": "2026-10-22T00:00:00.000Z",
+        "utcEndDateTime": null,
+        "allDay": true,
+        "userId": 372,
+        "utcCreatedDateTime": "2026-10-15T00:10:49.409Z",
+        "utcUpdatedDateTime": null,
+        "utcDeletedDateTime": null,
+        "companyId": null,
+        "sourceStartDateTime": null,
+        "sourceEndDateTime": null,
+        "originalStartDate": null,
+        "delayReasoning": null,
+        "episodeCount": null,
+        "episodeStatus": null,
+        "marketVolume": null,
+        "marketVolumeAt": null,
+        "allDayStated": true,
+        "productName": "Olive no Oka — Sapporo Shinkotoni"
+      },
+      "content": {
+        "profile": {
+          "menu": {
+            "name": "Olive no Oka — Sapporo Shinkotoni",
+            "menus": [
+              {
+                "label": "Olive no Oka shared Seasonal dishes",
+                "url": "https://www.olivenooka.jp/menu/season.html",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "北海道産かぼちゃとモッツァレラのクリームスープパスタ",
+                    "price": 869,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  },
+                  {
+                    "name": "岩だことブロッコリーのフリット～手作りオリーブトマトソース付き～",
+                    "price": 539,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  },
+                  {
+                    "name": "北海道産かぼちゃのプリン～イタリア栗のジェラートを添えて～",
+                    "price": 539,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  },
+                  {
+                    "name": "焼きたてアップルパイ",
+                    "price": 649,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  }
+                ],
+                "note": "Currently linked operator shared menu/data, checkedOctober17after October14grand-menu update. Some branches have different prices; prices are advertised tax-inclusive amounts, not a guarantee of this branch’s launch stock or price. Seasonal dishes have no published expiry and are not saved as dated Specials. Weekend/holiday07:00–10:00offers breakfast menu only; these are ordinary daytime menu items.",
+                "documentUrl": "https://www.olivenooka.jp/menu/data/menu_season.csv"
+              },
+              {
+                "label": "Olive no Oka shared Pasta",
+                "url": "https://www.olivenooka.jp/menu/pasta.html",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "アーリオオーリオ・ペペロンチーノ",
+                    "price": 429,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  },
+                  {
+                    "name": "えびとほうれん草のトマトペペロンチーノ",
+                    "price": 649,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ. Takeaway mark is published; takeaway tax/payment total must be confirmed separately."
+                  },
+                  {
+                    "name": "ボンゴレビアンコ",
+                    "price": 649,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ. Takeaway mark is published; takeaway tax/payment total must be confirmed separately."
+                  },
+                  {
+                    "name": "ごろごろチキンと葱の黒胡椒醤油",
+                    "price": 649,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  },
+                  {
+                    "name": "あさりとほうれん草のバター醤油",
+                    "price": 429,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  },
+                  {
+                    "name": "焼き茄子とベーコンの醤油ソース",
+                    "price": 539,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  },
+                  {
+                    "name": "モッツァトマト",
+                    "price": 649,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ. Takeaway mark is published; takeaway tax/payment total must be confirmed separately."
+                  },
+                  {
+                    "name": "アラビアータ",
+                    "price": 539,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  },
+                  {
+                    "name": "ペスカトーレ",
+                    "price": 715,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ. Takeaway mark is published; takeaway tax/payment total must be confirmed separately."
+                  },
+                  {
+                    "name": "彩り野菜とベーコンのトマトソース",
+                    "price": 649,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ. Takeaway mark is published; takeaway tax/payment total must be confirmed separately."
+                  },
+                  {
+                    "name": "焼き茄子とベーコンのトマトソース",
+                    "price": 605,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ. Takeaway mark is published; takeaway tax/payment total must be confirmed separately."
+                  },
+                  {
+                    "name": "ダブルモッツァトマト",
+                    "price": 715,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ. Takeaway mark is published; takeaway tax/payment total must be confirmed separately."
+                  },
+                  {
+                    "name": "ボロネーゼ",
+                    "price": 539,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  },
+                  {
+                    "name": "モッツァレラとベーコンのボロネーゼ",
+                    "price": 649,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ. Takeaway mark is published; takeaway tax/payment total must be confirmed separately."
+                  },
+                  {
+                    "name": "しらすと葱のジンジャーカルボ",
+                    "price": 649,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  },
+                  {
+                    "name": "カルボナーラ",
+                    "price": 605,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  },
+                  {
+                    "name": "海の幸明太子",
+                    "price": 539,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  },
+                  {
+                    "name": "サーモンとほうれん草のクリームソース",
+                    "price": 649,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ. Takeaway mark is published; takeaway tax/payment total must be confirmed separately."
+                  },
+                  {
+                    "name": "明太子クリーム",
+                    "price": 649,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  },
+                  {
+                    "name": "明太子",
+                    "price": 429,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  },
+                  {
+                    "name": "イカ墨（ネーロ）",
+                    "price": 715,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ. Takeaway mark is published; takeaway tax/payment total must be confirmed separately."
+                  },
+                  {
+                    "name": "ジェノベーゼ",
+                    "price": 715,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  },
+                  {
+                    "name": "ペンネ　アラビアータ",
+                    "price": 649,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ. Takeaway mark is published; takeaway tax/payment total must be confirmed separately."
+                  },
+                  {
+                    "name": "ペンネ　ボロネーゼ",
+                    "price": 649,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  },
+                  {
+                    "name": "ペンネ　ゴルゴンゾーラクリーム",
+                    "price": 759,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ. Takeaway mark is published; takeaway tax/payment total must be confirmed separately."
+                  }
+                ],
+                "note": "Currently linked operator shared menu/data, checkedOctober17after October14grand-menu update. Some branches have different prices; prices are advertised tax-inclusive amounts, not a guarantee of this branch’s launch stock or price. Seasonal dishes have no published expiry and are not saved as dated Specials. Weekend/holiday07:00–10:00offers breakfast menu only; these are ordinary daytime menu items.",
+                "documentUrl": "https://www.olivenooka.jp/menu/data/menu_pasta.csv"
+              },
+              {
+                "label": "Olive no Oka shared Pizza",
+                "url": "https://www.olivenooka.jp/menu/pizza.html",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "ピッツァ・マルゲリータ",
+                    "price": 649,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ. Takeaway mark is published; takeaway tax/payment total must be confirmed separately."
+                  },
+                  {
+                    "name": "ピッツァ・ガーリックベーコン",
+                    "price": 649,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ. Takeaway mark is published; takeaway tax/payment total must be confirmed separately."
+                  },
+                  {
+                    "name": "ピッツァ・たっぷりコーンマヨ",
+                    "price": 649,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ. Takeaway mark is published; takeaway tax/payment total must be confirmed separately."
+                  },
+                  {
+                    "name": "ピッツァ・サーモンマヨ",
+                    "price": 759,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ. Takeaway mark is published; takeaway tax/payment total must be confirmed separately."
+                  },
+                  {
+                    "name": "ピッツァ・えびマヨガーリック",
+                    "price": 759,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ. Takeaway mark is published; takeaway tax/payment total must be confirmed separately."
+                  },
+                  {
+                    "name": "ピッツァ・クワトロフォルマッジ",
+                    "price": 759,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ. Takeaway mark is published; takeaway tax/payment total must be confirmed separately."
+                  },
+                  {
+                    "name": "ピッツァ・チキンときのこのバジルクリーム",
+                    "price": 869,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ. Takeaway mark is published; takeaway tax/payment total must be confirmed separately."
+                  },
+                  {
+                    "name": "ピッツァ・チチニエッリポモドーロ",
+                    "price": 869,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  },
+                  {
+                    "name": "ミニピッツァ・マルゲリータ",
+                    "price": 429,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  },
+                  {
+                    "name": "ミニピッツァ・ガーリックベーコン",
+                    "price": 495,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  },
+                  {
+                    "name": "ミニピッツァ・たっぷりコーンマヨ",
+                    "price": 495,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  }
+                ],
+                "note": "Currently linked operator shared menu/data, checkedOctober17after October14grand-menu update. Some branches have different prices; prices are advertised tax-inclusive amounts, not a guarantee of this branch’s launch stock or price. Seasonal dishes have no published expiry and are not saved as dated Specials. Weekend/holiday07:00–10:00offers breakfast menu only; these are ordinary daytime menu items.",
+                "documentUrl": "https://www.olivenooka.jp/menu/data/menu_pizza.csv"
+              },
+              {
+                "label": "Olive no Oka shared Appetizers",
+                "url": "https://www.olivenooka.jp/menu/appetizer.html",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "カクテルえびバジル",
+                    "price": 319,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  },
+                  {
+                    "name": "鴨のマリネ　オレンジ＆バルサミコソース",
+                    "price": 429,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  },
+                  {
+                    "name": "サーモンのカルパッチョ",
+                    "price": 429,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  },
+                  {
+                    "name": "銚子産真いわしのマリネ",
+                    "price": 319,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  },
+                  {
+                    "name": "キャロットラぺ　オレンジ",
+                    "price": 319,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  },
+                  {
+                    "name": "まぐろのブルスケッタ",
+                    "price": 319,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  },
+                  {
+                    "name": "しらすと葱のブルスケッタ",
+                    "price": 319,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  },
+                  {
+                    "name": "レバーパテのブルスケッタ",
+                    "price": 319,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  },
+                  {
+                    "name": "ライスコロッケ（アランチーニ）",
+                    "price": 319,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ. Takeaway mark is published; takeaway tax/payment total must be confirmed separately."
+                  },
+                  {
+                    "name": "チキンフリット",
+                    "price": 319,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ. Takeaway mark is published; takeaway tax/payment total must be confirmed separately."
+                  },
+                  {
+                    "name": "モッツァレラフリット",
+                    "price": 319,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  },
+                  {
+                    "name": "チーズゼッポリーネ",
+                    "price": 319,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ. Takeaway mark is published; takeaway tax/payment total must be confirmed separately."
+                  },
+                  {
+                    "name": "きのこフリット",
+                    "price": 319,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  },
+                  {
+                    "name": "イカフリット（カラマリフリット）",
+                    "price": 429,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  },
+                  {
+                    "name": "フレンチフライ（ケチャップ）",
+                    "price": 429,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ. Takeaway mark is published; takeaway tax/payment total must be confirmed separately."
+                  },
+                  {
+                    "name": "～トリュフ香る～フレンチフライ",
+                    "price": 539,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  },
+                  {
+                    "name": "えびとブロッコリーのアヒージョ(バケット3コ付)",
+                    "price": 539,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  },
+                  {
+                    "name": "チキンときのこのペッパーアヒージョ（バケット3コ付）",
+                    "price": 539,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  },
+                  {
+                    "name": "ボローニャ風ラザニア",
+                    "price": 319,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  },
+                  {
+                    "name": "フリコのオーブン焼き～モッツァレラチーズとマッシュポテト～",
+                    "price": 429,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  },
+                  {
+                    "name": "ソーセージのオーブン焼き",
+                    "price": 429,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  },
+                  {
+                    "name": "ほうれん草のガーリックバターソテー",
+                    "price": 319,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ. Takeaway mark is published; takeaway tax/payment total must be confirmed separately."
+                  },
+                  {
+                    "name": "ブロッコリーのガーリックソテー",
+                    "price": 319,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ. Takeaway mark is published; takeaway tax/payment total must be confirmed separately."
+                  },
+                  {
+                    "name": "あさりの白ワイン蒸し",
+                    "price": 319,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ. Takeaway mark is published; takeaway tax/payment total must be confirmed separately."
+                  },
+                  {
+                    "name": "ムール貝の白ワイン蒸し",
+                    "price": 539,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ. Takeaway mark is published; takeaway tax/payment total must be confirmed separately."
+                  },
+                  {
+                    "name": "ブルスケッタ",
+                    "price": 209,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  },
+                  {
+                    "name": "ガーリックトースト",
+                    "price": 319,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ. Takeaway mark is published; takeaway tax/payment total must be confirmed separately."
+                  }
+                ],
+                "note": "Currently linked operator shared menu/data, checkedOctober17after October14grand-menu update. Some branches have different prices; prices are advertised tax-inclusive amounts, not a guarantee of this branch’s launch stock or price. Seasonal dishes have no published expiry and are not saved as dated Specials. Weekend/holiday07:00–10:00offers breakfast menu only; these are ordinary daytime menu items.",
+                "documentUrl": "https://www.olivenooka.jp/menu/data/menu_appetizer.csv"
+              },
+              {
+                "label": "Olive no Oka shared Soup",
+                "url": "https://www.olivenooka.jp/menu/soup.html",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "コーンポタージュ",
+                    "price": 275,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  },
+                  {
+                    "name": "クラムチャウダー",
+                    "price": 429,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  },
+                  {
+                    "name": "オニオングラタンスープ",
+                    "price": 429,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  }
+                ],
+                "note": "Currently linked operator shared menu/data, checkedOctober17after October14grand-menu update. Some branches have different prices; prices are advertised tax-inclusive amounts, not a guarantee of this branch’s launch stock or price. Seasonal dishes have no published expiry and are not saved as dated Specials. Weekend/holiday07:00–10:00offers breakfast menu only; these are ordinary daytime menu items.",
+                "documentUrl": "https://www.olivenooka.jp/menu/data/menu_soup.csv"
+              },
+              {
+                "label": "Olive no Oka shared Salads",
+                "url": "https://www.olivenooka.jp/menu/salad.html",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "グリーンサラダ",
+                    "price": 319,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  },
+                  {
+                    "name": "シーザーサラダ",
+                    "price": 429,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  },
+                  {
+                    "name": "えびとたまごのアイオリサラダ",
+                    "price": 495,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  },
+                  {
+                    "name": "鴨マリネとキャロットラぺのサラダ",
+                    "price": 649,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  },
+                  {
+                    "name": "【シェアサイズ】シーザーサラダ（大）",
+                    "price": 649,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  },
+                  {
+                    "name": "【シェアサイズ】えびとたまごのアイオリサラダ（大）",
+                    "price": 715,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  },
+                  {
+                    "name": "【シェアサイズ】鴨マリネとキャロットラぺのサラダ（大）",
+                    "price": 869,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  }
+                ],
+                "note": "Currently linked operator shared menu/data, checkedOctober17after October14grand-menu update. Some branches have different prices; prices are advertised tax-inclusive amounts, not a guarantee of this branch’s launch stock or price. Seasonal dishes have no published expiry and are not saved as dated Specials. Weekend/holiday07:00–10:00offers breakfast menu only; these are ordinary daytime menu items.",
+                "documentUrl": "https://www.olivenooka.jp/menu/data/menu_salad.csv"
+              },
+              {
+                "label": "Olive no Oka shared Rice dishes",
+                "url": "https://www.olivenooka.jp/menu/rice-dishes.html",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "リゾットフォルマッジ",
+                    "price": 605,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  },
+                  {
+                    "name": "えびとブロッコリーのビスククリームリゾット",
+                    "price": 715,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  },
+                  {
+                    "name": "ボローニャドリア",
+                    "price": 539,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  },
+                  {
+                    "name": "カルボナーラドリア",
+                    "price": 649,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  },
+                  {
+                    "name": "えびのビスククリームドリア",
+                    "price": 715,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  },
+                  {
+                    "name": "チキンときのこのドリア",
+                    "price": 649,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  },
+                  {
+                    "name": "ライス — regular",
+                    "price": 242
+                  },
+                  {
+                    "name": "ライス — small",
+                    "price": 220
+                  },
+                  {
+                    "name": "ライス — large",
+                    "price": 330
+                  }
+                ],
+                "note": "Currently linked operator shared menu/data, checkedOctober17after October14grand-menu update. Some branches have different prices; prices are advertised tax-inclusive amounts, not a guarantee of this branch’s launch stock or price. Seasonal dishes have no published expiry and are not saved as dated Specials. Weekend/holiday07:00–10:00offers breakfast menu only; these are ordinary daytime menu items.",
+                "documentUrl": "https://www.olivenooka.jp/menu/data/menu_rice.csv"
+              },
+              {
+                "label": "Olive no Oka shared Meat dishes",
+                "url": "https://www.olivenooka.jp/menu/meat-dishes.html",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "デミグラスハンバーグ",
+                    "price": 539,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  },
+                  {
+                    "name": "チーズトマトハンバーグ",
+                    "price": 649,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  },
+                  {
+                    "name": "チキンのオーブン焼き",
+                    "price": 594,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  },
+                  {
+                    "name": "チキンのオーブン焼き～シャキシャキ野菜ソース～",
+                    "price": 715,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  },
+                  {
+                    "name": "ハーブ香る豚のポルケッタ ～チーズトマトソース～",
+                    "price": 869,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  },
+                  {
+                    "name": "ハーブ香る豚のポルケッタ ～ペッパー＆バルサミコソース～",
+                    "price": 869,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ. Takeaway mark is published; takeaway tax/payment total must be confirmed separately."
+                  },
+                  {
+                    "name": "鴨のロティ～ペッパー＆デミグラスソース～",
+                    "price": 979,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  }
+                ],
+                "note": "Currently linked operator shared menu/data, checkedOctober17after October14grand-menu update. Some branches have different prices; prices are advertised tax-inclusive amounts, not a guarantee of this branch’s launch stock or price. Seasonal dishes have no published expiry and are not saved as dated Specials. Weekend/holiday07:00–10:00offers breakfast menu only; these are ordinary daytime menu items.",
+                "documentUrl": "https://www.olivenooka.jp/menu/data/menu_meat.csv"
+              },
+              {
+                "label": "Olive no Oka shared Desserts",
+                "url": "https://www.olivenooka.jp/menu/dessert.html",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "ジェラート　バニラ",
+                    "price": 275,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  },
+                  {
+                    "name": "ジェラート　チョコ",
+                    "price": 275,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  },
+                  {
+                    "name": "ジェラート　いちご",
+                    "price": 275,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  },
+                  {
+                    "name": "2種ジェラート～バニラ＆チョコレート～",
+                    "price": 275,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  },
+                  {
+                    "name": "2種ジェラート～バニラ＆いちご～",
+                    "price": 275,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  },
+                  {
+                    "name": "2種ジェラート～チョコレート＆いちご～",
+                    "price": 275,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  },
+                  {
+                    "name": "オリーブの丘プリン",
+                    "price": 319,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  },
+                  {
+                    "name": "ロイヤルミルクティーグラニータ＆パンナコッタ",
+                    "price": 319,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  },
+                  {
+                    "name": "オリーブの丘ティラミス",
+                    "price": 429,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  },
+                  {
+                    "name": "ショコラケーキ ～カラメルナッツ～",
+                    "price": 429,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  },
+                  {
+                    "name": "バスクチーズケーキ ～オレンジコンフィと苺ソ―ス～",
+                    "price": 539,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  },
+                  {
+                    "name": "窯焼きパン・プディング～バニラジェラートのせ～",
+                    "price": 539,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  },
+                  {
+                    "name": "しぼりたて　オリーブの丘モンブラン",
+                    "price": 605,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  },
+                  {
+                    "name": "自家製オレンジコンフィチュール",
+                    "price": 110,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  },
+                  {
+                    "name": "蜂蜜ナッツ（付け合わせ）",
+                    "price": 110,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  }
+                ],
+                "note": "Currently linked operator shared menu/data, checkedOctober17after October14grand-menu update. Some branches have different prices; prices are advertised tax-inclusive amounts, not a guarantee of this branch’s launch stock or price. Seasonal dishes have no published expiry and are not saved as dated Specials. Weekend/holiday07:00–10:00offers breakfast menu only; these are ordinary daytime menu items.",
+                "documentUrl": "https://www.olivenooka.jp/menu/data/menu_desert.csv"
+              },
+              {
+                "label": "Olive no Oka shared Alcohol and drinks",
+                "url": "https://www.olivenooka.jp/menu/alcohol-and-drink.html",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "生ビール　キリン一番搾り",
+                    "price": 572,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  },
+                  {
+                    "name": "ペローニ　ナストロアズーロ（イタリアンプレミアムビール）330ml",
+                    "price": 605,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  },
+                  {
+                    "name": "ハウスワイン白　110ml",
+                    "price": 209,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  },
+                  {
+                    "name": "ハウスワイン　デキャンタ白　440ml",
+                    "price": 759,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  },
+                  {
+                    "name": "ハウスワイン赤　110ml",
+                    "price": 209,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  },
+                  {
+                    "name": "ハウスワイン　デキャンタ赤　440ml",
+                    "price": 759,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  },
+                  {
+                    "name": "マルティーニ　ブリュット　ハーフ(白)　375ml",
+                    "price": 1089,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  },
+                  {
+                    "name": "カーヨ　グランキュヴェ　エクストラドライ(白)750ml",
+                    "price": 1529,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  },
+                  {
+                    "name": "パスクアランブルスコ　デッレミリア(赤)750ml",
+                    "price": 1089,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  },
+                  {
+                    "name": "パスクアロッソヴェネト（赤）750ml",
+                    "price": 1089,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  },
+                  {
+                    "name": "パスクアビアンコヴェネト（白）750ml",
+                    "price": 1089,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  },
+                  {
+                    "name": "アンジェロ・ネロダヴォラ（赤）750ml",
+                    "price": 1529,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  },
+                  {
+                    "name": "マンナラ・ピノグリージョ(白)750ml",
+                    "price": 1529,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  },
+                  {
+                    "name": "サントリー　角ハイボール",
+                    "price": 429,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  },
+                  {
+                    "name": "グレープフルーツサワー",
+                    "price": 429,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  },
+                  {
+                    "name": "レモンサワー",
+                    "price": 429,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  },
+                  {
+                    "name": "サントリーオールフリー",
+                    "price": 429,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  },
+                  {
+                    "name": "ドリンクバー — standalone",
+                    "price": 396
+                  },
+                  {
+                    "name": "セットドリンクバー",
+                    "price": 286,
+                    "note": "Requires an eligible meal; exact branch conditions must be confirmed."
+                  },
+                  {
+                    "name": "ジュニアドリンクバー",
+                    "price": 132,
+                    "note": "Junior eligibility age not stated in this row; confirm."
+                  },
+                  {
+                    "name": "ドリンクバー — children aged3and under",
+                    "price": 0,
+                    "note": "Only for children aged3and under, per explicit operator menu text."
+                  }
+                ],
+                "note": "Currently linked operator shared menu/data, checkedOctober17after October14grand-menu update. Some branches have different prices; prices are advertised tax-inclusive amounts, not a guarantee of this branch’s launch stock or price. Seasonal dishes have no published expiry and are not saved as dated Specials. Weekend/holiday07:00–10:00offers breakfast menu only; these are ordinary daytime menu items.",
+                "documentUrl": "https://www.olivenooka.jp/menu/data/menu_drink.csv"
+              },
+              {
+                "label": "Olive no Oka shared Children’s dishes",
+                "url": "https://www.olivenooka.jp/menu/kids-menu.html",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "キッズプレート",
+                    "price": 539,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  },
+                  {
+                    "name": "キッズカレー",
+                    "price": 539,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  },
+                  {
+                    "name": "キッズカルボナーラ",
+                    "price": 605,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  },
+                  {
+                    "name": "キッズモッツァトマト",
+                    "price": 649,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  },
+                  {
+                    "name": "キッズボロネーゼ",
+                    "price": 539,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  },
+                  {
+                    "name": "キッズ明太子",
+                    "price": 429,
+                    "note": "Operator advertised tax-inclusive price; some branch prices and stock may differ."
+                  }
+                ],
+                "note": "Currently linked operator shared menu/data, checkedOctober17after October14grand-menu update. Some branches have different prices; prices are advertised tax-inclusive amounts, not a guarantee of this branch’s launch stock or price. Seasonal dishes have no published expiry and are not saved as dated Specials. Weekend/holiday07:00–10:00offers breakfast menu only; these are ordinary daytime menu items.",
+                "documentUrl": "https://www.olivenooka.jp/menu/data/menu_kids.csv"
+              }
+            ],
+            "specials": [],
+            "checkedAt": "2026-10-17",
+            "pinSourceUrl": "https://maps.olivenooka.jp/jp/detail/6621.html"
+          },
+          "tile": {
+            "day": "2026-10-22",
+            "kind": "opening",
+            "name": "Olive no Oka — Sapporo Shinkotoni",
+            "slug": "olive-future",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan/food-2026-10-14/olive-1-1557c7f154c25768.webp",
+            "address": "7-1-52 Shinkotoni 2-jo, Kita-ku, Sapporo",
+            "cuisine": "Italian",
+            "checkedAt": "2026-10-13",
+            "imageNote": "Official Olive no Oka brand menu photograph: えびとほうれん草のトマトペペロンチーノ. Representative food preview; availability at the forthcoming Sapporo Shinkotoni branch is not yet confirmed.",
+            "priceRange": "",
+            "regionSlug": "sapporo",
+            "websiteUrl": "https://maps.olivenooka.jp/jp/detail/6621.html",
+            "description": "The operator announces an October 22 opening for its Shinkotoni Italian restaurant, with weekday and weekend breakfast hours.",
+            "imageCredit": "Photo: Olive no Oka",
+            "recognition": "",
+            "neighborhood": "Shinkotoni",
+            "imageSourceUrl": "https://www.olivenooka.jp/menu/pasta.html",
+            "openingConfirmed": true
+          },
+          "details": {
+            "name": "Olive no Oka — Sapporo Shinkotoni",
+            "phone": null,
+            "checkedAt": "2026-10-17",
+            "websiteUrl": "https://maps.olivenooka.jp/jp/detail/6621.html",
+            "openingHours": [
+              {
+                "days": "Monday–Friday, planned",
+                "hours": "10:00–24:00"
+              },
+              {
+                "days": "Saturday, Sunday, holidays, planned",
+                "hours": "07:00–24:00; breakfast menu only 07:00–10:00"
+              }
+            ],
+            "pinSourceUrl": "https://maps.olivenooka.jp/jp/detail/6621.html",
+            "detailsSourceUrl": "https://maps.olivenooka.jp/jp/detail/6621.html",
+            "additionalSources": [
+              {
+                "url": "https://sapporo-list.info/shop/olivenooka-shinkotoni/",
+                "label": "Research evidence"
+              },
+              {
+                "url": "https://sapporo-list.info/shop/olivenooka-shinkotoni/",
+                "label": "Research evidence"
+              },
+              {
+                "url": "https://www.olivenooka.jp/menu/data/menu_season.csv",
+                "label": "Research evidence"
+              },
+              {
+                "label": "Current operator menu/news data",
+                "url": "https://www.olivenooka.jp/data/news.csv"
+              },
+              {
+                "label": "Current operator menu/news data",
+                "url": "https://www.olivenooka.jp/menu/data/menu_pasta.csv"
+              },
+              {
+                "label": "Current operator menu/news data",
+                "url": "https://www.olivenooka.jp/menu/data/menu_pizza.csv"
+              },
+              {
+                "label": "Current operator menu/news data",
+                "url": "https://www.olivenooka.jp/menu/data/menu_appetizer.csv"
+              },
+              {
+                "label": "Current operator menu/news data",
+                "url": "https://www.olivenooka.jp/menu/data/menu_soup.csv"
+              },
+              {
+                "label": "Current operator menu/news data",
+                "url": "https://www.olivenooka.jp/menu/data/menu_salad.csv"
+              },
+              {
+                "label": "Current operator menu/news data",
+                "url": "https://www.olivenooka.jp/menu/data/menu_rice.csv"
+              },
+              {
+                "label": "Current operator menu/news data",
+                "url": "https://www.olivenooka.jp/menu/data/menu_meat.csv"
+              },
+              {
+                "label": "Current operator menu/news data",
+                "url": "https://www.olivenooka.jp/menu/data/menu_desert.csv"
+              },
+              {
+                "label": "Current operator menu/news data",
+                "url": "https://www.olivenooka.jp/menu/data/menu_drink.csv"
+              },
+              {
+                "label": "Current operator menu/news data",
+                "url": "https://www.olivenooka.jp/menu/data/menu_kids.csv"
+              }
+            ]
+          },
+          "pinSourceUrl": "https://maps.olivenooka.jp/jp/detail/6621.html"
+        },
+        "enabled": true
+      },
+      "photos": [],
+      "expectedBefore": {
+        "content": {
+          "menu": {
+            "name": "Olive no Oka — Sapporo Shinkotoni",
+            "menus": [
+              {
+                "url": "https://www.olivenooka.jp/menu/index.html",
+                "note": "Current shared menu is explicitly linked from the branch operator page. Some branches have different prices; launch-day item availability and branch-specific prices remain unconfirmed. Do not treat these as a guaranteed opening promotion.",
+                "items": [
+                  {
+                    "name": "北海道産かぼちゃとモッツァレラのクリームスープパスタ",
+                    "note": "Operator advertised tax-inclusive price; some branches charge different prices",
+                    "price": 869
+                  },
+                  {
+                    "name": "岩だことブロッコリーのフリット～手作りオリーブトマトソース付き～",
+                    "note": "Operator advertised tax-inclusive price; some branches charge different prices",
+                    "price": 539
+                  },
+                  {
+                    "name": "北海道産かぼちゃのプリン～イタリア栗のジェラートを添えて～",
+                    "note": "Operator advertised tax-inclusive price; some branches charge different prices",
+                    "price": 539
+                  },
+                  {
+                    "name": "焼きたてアップルパイ",
+                    "note": "Operator advertised tax-inclusive price; some branches charge different prices",
+                    "price": 649
+                  }
+                ],
+                "label": "Operator shared seasonal menu linked by branch",
+                "coverage": "sample",
+                "currency": "JPY"
+              }
+            ],
+            "specials": [],
+            "checkedAt": "2026-10-13",
+            "pinSourceUrl": "https://maps.olivenooka.jp/jp/detail/6621.html"
+          },
+          "tile": {
+            "day": "2026-10-22",
+            "kind": "opening",
+            "name": "Olive no Oka — Sapporo Shinkotoni",
+            "slug": "olive-future",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan/food-2026-10-14/olive-1-1557c7f154c25768.webp",
+            "address": "7-1-52 Shinkotoni 2-jo, Kita-ku, Sapporo",
+            "cuisine": "Italian",
+            "checkedAt": "2026-10-13",
+            "imageNote": "Official Olive no Oka brand menu photograph: えびとほうれん草のトマトペペロンチーノ. Representative food preview; availability at the forthcoming Sapporo Shinkotoni branch is not yet confirmed.",
+            "priceRange": "",
+            "regionSlug": "sapporo",
+            "websiteUrl": "https://maps.olivenooka.jp/jp/detail/6621.html",
+            "description": "The operator announces an October 22 opening for its Shinkotoni Italian restaurant, with weekday and weekend breakfast hours.",
+            "imageCredit": "Photo: Olive no Oka",
+            "recognition": "",
+            "neighborhood": "Shinkotoni",
+            "imageSourceUrl": "https://www.olivenooka.jp/menu/pasta.html",
+            "openingConfirmed": true
+          },
+          "details": {
+            "name": "Olive no Oka — Sapporo Shinkotoni",
+            "phone": null,
+            "checkedAt": "2026-10-13",
+            "websiteUrl": "https://maps.olivenooka.jp/jp/detail/6621.html",
+            "openingHours": [
+              {
+                "days": "Monday–Friday, planned",
+                "hours": "10:00–24:00"
+              },
+              {
+                "days": "Saturday, Sunday, holidays, planned",
+                "hours": "07:00–24:00; breakfast menu only 07:00–10:00"
+              }
+            ],
+            "pinSourceUrl": "https://maps.olivenooka.jp/jp/detail/6621.html",
+            "detailsSourceUrl": "https://maps.olivenooka.jp/jp/detail/6621.html",
+            "additionalSources": [
+              {
+                "url": "https://sapporo-list.info/shop/olivenooka-shinkotoni/",
+                "label": "Research evidence"
+              },
+              {
+                "url": "https://sapporo-list.info/shop/olivenooka-shinkotoni/",
+                "label": "Research evidence"
+              },
+              {
+                "url": "https://www.olivenooka.jp/menu/data/menu_season.csv",
+                "label": "Research evidence"
+              }
+            ]
+          },
+          "pinSourceUrl": "https://maps.olivenooka.jp/jp/detail/6621.html"
+        }
+      },
+      "verification": {
+        "local": {
+          "pinId": 15568,
+          "sourceUrl": "https://maps.olivenooka.jp/jp/detail/6621.html",
+          "name": "Olive no Oka — Sapporo Shinkotoni",
+          "contentId": 1535,
+          "contentRevision": 4,
+          "verifiedGalleryLinks": 0,
+          "publicPinStatus": 200
+        },
+        "production": {
+          "pinId": 15568,
+          "sourceUrl": "https://maps.olivenooka.jp/jp/detail/6621.html",
+          "name": "Olive no Oka — Sapporo Shinkotoni",
+          "contentId": 1535,
+          "contentRevision": 4,
+          "verifiedGalleryLinks": 0,
+          "publicPinStatus": 200
+        }
+      }
+    }
+  ],
+  "verifiedAtUtc": "2026-10-17T14:01:17.159218+00:00",
+  "verification": {
+    "local": [
+      {
+        "pinId": 16246,
+        "sourceUrl": "https://jouhou.nagoya/sakutako-kurokawa/",
+        "name": "Sakutako — Kurokawa",
+        "contentId": 1669,
+        "contentRevision": 1,
+        "verifiedGalleryLinks": 4,
+        "publicPinStatus": 200
+      },
+      {
+        "pinId": 16247,
+        "sourceUrl": "https://jouhou.nagoya/chihiro-kashiten/",
+        "name": "Chihiro Kashiten — Shinsakae Aoi",
+        "contentId": 1670,
+        "contentRevision": 1,
+        "verifiedGalleryLinks": 10,
+        "publicPinStatus": 200
+      },
+      {
+        "pinId": 16248,
+        "sourceUrl": "https://maps.olivenooka.jp/jp/detail/6620.html",
+        "name": "Olive no Oka — Sapporo Nishimachi",
+        "contentId": 1671,
+        "contentRevision": 1,
+        "verifiedGalleryLinks": 4,
+        "publicPinStatus": 200
+      },
+      {
+        "pinId": 15568,
+        "sourceUrl": "https://maps.olivenooka.jp/jp/detail/6621.html",
+        "name": "Olive no Oka — Sapporo Shinkotoni",
+        "contentId": 1535,
+        "contentRevision": 4,
+        "verifiedGalleryLinks": 0,
+        "publicPinStatus": 200
+      }
+    ],
+    "production": [
+      {
+        "pinId": 16294,
+        "sourceUrl": "https://jouhou.nagoya/sakutako-kurokawa/",
+        "name": "Sakutako — Kurokawa",
+        "contentId": 1669,
+        "contentRevision": 1,
+        "verifiedGalleryLinks": 4,
+        "publicPinStatus": 200
+      },
+      {
+        "pinId": 16295,
+        "sourceUrl": "https://jouhou.nagoya/chihiro-kashiten/",
+        "name": "Chihiro Kashiten — Shinsakae Aoi",
+        "contentId": 1670,
+        "contentRevision": 1,
+        "verifiedGalleryLinks": 10,
+        "publicPinStatus": 200
+      },
+      {
+        "pinId": 16296,
+        "sourceUrl": "https://maps.olivenooka.jp/jp/detail/6620.html",
+        "name": "Olive no Oka — Sapporo Nishimachi",
+        "contentId": 1671,
+        "contentRevision": 1,
+        "verifiedGalleryLinks": 4,
+        "publicPinStatus": 200
+      },
+      {
+        "pinId": 15568,
+        "sourceUrl": "https://maps.olivenooka.jp/jp/detail/6621.html",
+        "name": "Olive no Oka — Sapporo Shinkotoni",
+        "contentId": 1535,
+        "contentRevision": 4,
+        "verifiedGalleryLinks": 0,
+        "publicPinStatus": 200
+      }
+    ],
+    "localGuideCards": [
+      {
+        "pinId": 16246,
+        "region": "nagoya",
+        "view": "new",
+        "nativeApiHrefVerified": true,
+        "initialHtmlTitleAndImageLinks": true,
+        "guideStatus": 200,
+        "offers": []
+      },
+      {
+        "pinId": 16247,
+        "region": "nagoya",
+        "view": "new",
+        "nativeApiHrefVerified": true,
+        "initialHtmlTitleAndImageLinks": true,
+        "guideStatus": 200,
+        "offers": []
+      },
+      {
+        "pinId": 16248,
+        "region": "sapporo",
+        "view": "new",
+        "nativeApiHrefVerified": true,
+        "initialHtmlTitleAndImageLinks": true,
+        "guideStatus": 200,
+        "offers": []
+      },
+      {
+        "pinId": 15568,
+        "region": "sapporo",
+        "view": "upcoming",
+        "nativeApiHrefVerified": true,
+        "initialHtmlTitleAndImageLinks": true,
+        "guideStatus": 200,
+        "offers": []
+      }
+    ],
+    "productionGuideCards": [
+      {
+        "pinId": 16294,
+        "region": "nagoya",
+        "view": "new",
+        "nativeApiHrefVerified": true,
+        "initialHtmlTitleAndImageLinks": true,
+        "guideStatus": 200,
+        "offers": []
+      },
+      {
+        "pinId": 16295,
+        "region": "nagoya",
+        "view": "new",
+        "nativeApiHrefVerified": true,
+        "initialHtmlTitleAndImageLinks": true,
+        "guideStatus": 200,
+        "offers": []
+      },
+      {
+        "pinId": 16296,
+        "region": "sapporo",
+        "view": "new",
+        "nativeApiHrefVerified": true,
+        "initialHtmlTitleAndImageLinks": true,
+        "guideStatus": 200,
+        "offers": []
+      },
+      {
+        "pinId": 15568,
+        "region": "sapporo",
+        "view": "upcoming",
+        "nativeApiHrefVerified": true,
+        "initialHtmlTitleAndImageLinks": true,
+        "guideStatus": 200,
+        "offers": []
+      }
+    ],
+    "all24CountsAgree": true,
+    "counts": [
+      {
+        "environment": "production",
+        "city": "fukuoka",
+        "view": "upcoming",
+        "count": 10,
+        "ids": [
+          "15398",
+          "15410",
+          "15411",
+          "15415",
+          "15424",
+          "15425",
+          "15426",
+          "15427",
+          "15914",
+          "15924"
+        ]
+      },
+      {
+        "environment": "production",
+        "city": "fukuoka",
+        "view": "new",
+        "count": 17,
+        "ids": [
+          "15399",
+          "15400",
+          "15401",
+          "15409",
+          "15412",
+          "15414",
+          "15421",
+          "15422",
+          "15423",
+          "15428",
+          "15969",
+          "16026",
+          "16027",
+          "16078",
+          "16290",
+          "16291",
+          "16292"
+        ]
+      },
+      {
+        "environment": "production",
+        "city": "fukuoka",
+        "view": "top",
+        "count": 14,
+        "ids": [
+          "15402",
+          "15403",
+          "15404",
+          "15405",
+          "15406",
+          "15407",
+          "15408",
+          "15413",
+          "15416",
+          "15417",
+          "15418",
+          "15419",
+          "15420",
+          "15429"
+        ]
+      },
+      {
+        "environment": "production",
+        "city": "fukuoka",
+        "view": "discounts",
+        "count": 23,
+        "ids": [
+          "https://and-gallery.com/#hukuoka",
+          "https://fukuokaseahawk.hiltonjapan.co.jp/restaurants/clouds",
+          "https://fukuokaseahawk.hiltonjapan.co.jp/restaurants/seala",
+          "https://prtimes.jp/main/html/rd/p/000000064.000152670.html",
+          "https://pukutoco.com/shi-yanyan-ropponmatu/",
+          "https://pukutoco.com/sumomo-bakery-1007open/",
+          "https://pukutoco.com/sumomobakery-akasaka1019open/",
+          "https://toeihotel-fukuoka.com/restaurant/bistro_atrie/",
+          "https://www.eggsnthingsjapan.com/hakata/",
+          "https://www.f-sunpalace.com/restaurant/lagoon/",
+          "https://www.fuk.hotelokura.co.jp/restaurant/lechampdor/",
+          "https://www.gate-hotel.jp/fukuoka/rb/agfukuoka.html",
+          "https://www.hiramatsurestaurant.jp/hiramatsu-hakata/",
+          "https://www.hotelnikko-fukuoka.com/restaurant/benkei/",
+          "https://www.hotelnikko-fukuoka.com/restaurant/celebrites/",
+          "https://www.hotelnikko-fukuoka.com/restaurant/serena/",
+          "https://www.hotpepper.jp/strJ001276550/",
+          "https://www.kys-newotani.co.jp/hakata/restaurant/castillian-bar/",
+          "https://www.orec.co.jp/greenlab-fukuoka/",
+          "https://www.princehotels.co.jp/momochihama/restaurant/yocaterrace/",
+          "https://www.quil-fait-bon.com/pages/fukuoka",
+          "https://www.recent-hotel.com/restaurant/",
+          "https://www.tenchika.com/shop/h_b_antique/"
+        ]
+      },
+      {
+        "environment": "production",
+        "city": "osaka",
+        "view": "upcoming",
+        "count": 11,
+        "ids": [
+          "15432",
+          "15445",
+          "15447",
+          "15448",
+          "15449",
+          "15458",
+          "15913",
+          "15925",
+          "15975",
+          "16023",
+          "16079"
+        ]
+      },
+      {
+        "environment": "production",
+        "city": "osaka",
+        "view": "new",
+        "count": 14,
+        "ids": [
+          "15431",
+          "15435",
+          "15436",
+          "15437",
+          "15438",
+          "15439",
+          "15446",
+          "15451",
+          "15452",
+          "15453",
+          "15454",
+          "15455",
+          "15456",
+          "15457"
+        ]
+      },
+      {
+        "environment": "production",
+        "city": "osaka",
+        "view": "top",
+        "count": 10,
+        "ids": [
+          "15430",
+          "15433",
+          "15434",
+          "15440",
+          "15441",
+          "15442",
+          "15443",
+          "15444",
+          "15450",
+          "15971"
+        ]
+      },
+      {
+        "environment": "production",
+        "city": "osaka",
+        "view": "discounts",
+        "count": 19,
+        "ids": [
+          "https://and-gallery.com/#nanba",
+          "https://big-step.co.jp/shop/detail/63",
+          "https://conrad-osaka.hiltonjapan.co.jp/restaurants/40skybar",
+          "https://conrad-osaka.hiltonjapan.co.jp/restaurants/atmos",
+          "https://cross-osaka.orixhotelsandresorts.com/#restaurant",
+          "https://csm-cafe.ltr-online.com/lp/csm-cafe-s022",
+          "https://icosaka.com/offer/pierre_autumnmenu/",
+          "https://jblm2024.wixsite.com/fujiyama-tokyo/%E8%A4%87%E8%A3%BD-namba-osaka",
+          "https://osaka.ekimaru.com/shopguide/detail/103",
+          "https://osaka.hiltonjapan.co.jp/plans/restaurants/other/myplace-happyhour",
+          "https://patinahotels.com/osaka/drink-and-dine/p72",
+          "https://prtimes.jp/main/html/rd/p/000000001.000192433.html/",
+          "https://restaurant-yamaya.com/brand/mentai-shokudo/restaurant/links_umeda",
+          "https://www.daimaru.co.jp/shinsaibashi/restaurant/cucina-bella.html",
+          "https://www.gate-hotel.jp/osaka/rb/aosaka.html",
+          "https://www.gate-hotel.jp/osaka/rb/peaks.html",
+          "https://www.hotpepper.jp/strJ004661366/",
+          "https://www.quil-fait-bon.com/pages/grand-front-osaka",
+          "https://www.regine.stregisosaka.com/"
+        ]
+      },
+      {
+        "environment": "production",
+        "city": "kyoto",
+        "view": "upcoming",
+        "count": 9,
+        "ids": [
+          "15483",
+          "15499",
+          "15500",
+          "15909",
+          "15910",
+          "15911",
+          "15912",
+          "15922",
+          "15931"
+        ]
+      },
+      {
+        "environment": "production",
+        "city": "kyoto",
+        "view": "new",
+        "count": 31,
+        "ids": [
+          "15460",
+          "15461",
+          "15462",
+          "15463",
+          "15464",
+          "15465",
+          "15466",
+          "15467",
+          "15468",
+          "15469",
+          "15470",
+          "15471",
+          "15472",
+          "15473",
+          "15474",
+          "15475",
+          "15476",
+          "15477",
+          "15478",
+          "15479",
+          "15480",
+          "15481",
+          "15482",
+          "15489",
+          "15490",
+          "15491",
+          "15492",
+          "15493",
+          "15494",
+          "15495",
+          "15498"
+        ]
+      },
+      {
+        "environment": "production",
+        "city": "kyoto",
+        "view": "top",
+        "count": 10,
+        "ids": [
+          "15459",
+          "15484",
+          "15485",
+          "15486",
+          "15487",
+          "15488",
+          "15496",
+          "15497",
+          "15501",
+          "15973"
+        ]
+      },
+      {
+        "environment": "production",
+        "city": "kyoto",
+        "view": "discounts",
+        "count": 30,
+        "ids": [
+          "https://hotelfauchonkyoto.com/ja/gourmet/fauchon-salon-de-the-kyoto/",
+          "https://kyoto.hiltonjapan.co.jp/restaurants/teori",
+          "https://www.instagram.com/jbowl_ritsumeikan_mae/",
+          "https://www.keihanhotels-resorts.co.jp/kyoto-centuryhotel/topics/happyhour-2/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/011/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/012/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/013/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/014/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/015/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/016/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/017/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/018/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/019/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/020/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/022/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/023/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/026/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/028/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/031/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/033/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/039/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/040/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/042/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/043/",
+          "https://www.princess-kyoto.co.jp/restaurant/ambercourt/",
+          "https://www.princess-kyoto.co.jp/restaurant/darley/",
+          "https://www.princess-kyoto.co.jp/restaurant/hisuien/",
+          "https://www.princess-kyoto.co.jp/restaurant/hoen/",
+          "https://www.princess-kyoto.co.jp/restaurant/sagano/",
+          "https://www.quil-fait-bon.com/pages/kyoto"
+        ]
+      },
+      {
+        "environment": "production",
+        "city": "nagoya",
+        "view": "upcoming",
+        "count": 11,
+        "ids": [
+          "15510",
+          "15512",
+          "15517",
+          "15518",
+          "15521",
+          "15522",
+          "15900",
+          "15901",
+          "15902",
+          "16075",
+          "16080"
+        ]
+      },
+      {
+        "environment": "production",
+        "city": "nagoya",
+        "view": "new",
+        "count": 24,
+        "ids": [
+          "15509",
+          "15511",
+          "15515",
+          "15516",
+          "15519",
+          "15520",
+          "15898",
+          "15899",
+          "15915",
+          "15916",
+          "15917",
+          "15918",
+          "15919",
+          "15920",
+          "15921",
+          "15932",
+          "15964",
+          "15965",
+          "16020",
+          "16021",
+          "16022",
+          "16076",
+          "16294",
+          "16295"
+        ]
+      },
+      {
+        "environment": "production",
+        "city": "nagoya",
+        "view": "top",
+        "count": 12,
+        "ids": [
+          "15502",
+          "15503",
+          "15504",
+          "15505",
+          "15506",
+          "15507",
+          "15508",
+          "15513",
+          "15514",
+          "15523",
+          "15524",
+          "15972"
+        ]
+      },
+      {
+        "environment": "production",
+        "city": "nagoya",
+        "view": "discounts",
+        "count": 17,
+        "ids": [
+          "https://and-gallery.com/#nagoya",
+          "https://csm-cafe.ltr-online.com/lp/csm-cafe-s017",
+          "https://kinzan.nagoya/archives/news/2853/",
+          "https://lebeurrenoisettetokyo.com/nagoya/",
+          "https://nagoya.hiltonjapan.co.jp/restaurants/hideaway3-3",
+          "https://nagoya.hiltonjapan.co.jp/restaurants/inplace3-3",
+          "https://nagoya.hiltonjapan.co.jp/restaurants/ouchou",
+          "https://nagoya.parco.jp/shop/detail/?cd=009191",
+          "https://prtimes.jp/main/html/rd/p/000004440.000018505.html",
+          "https://www.anacrowneplaza-nagoya.jp/pages/restaurant_gardencourt",
+          "https://www.anacrowneplaza-nagoya.jp/pages/restaurant_karin",
+          "https://www.anacrowneplaza-nagoya.jp/pages/restaurant_stargate",
+          "https://www.anacrowneplaza-nagoya.jp/pages/restaurant_winglounge",
+          "https://www.associa.com/nma/restaurant/pergola/",
+          "https://www.centralpark.co.jp/shop/sharecafe/",
+          "https://www.komeda.co.jp/shop/detail.html?id=1215",
+          "https://www.quil-fait-bon.com/pages/nagoya-sakae"
+        ]
+      },
+      {
+        "environment": "production",
+        "city": "tokyo",
+        "view": "upcoming",
+        "count": 11,
+        "ids": [
+          "15526",
+          "15538",
+          "15541",
+          "15544",
+          "15546",
+          "15555",
+          "15556",
+          "15557",
+          "15923",
+          "15929",
+          "15930"
+        ]
+      },
+      {
+        "environment": "production",
+        "city": "tokyo",
+        "view": "new",
+        "count": 12,
+        "ids": [
+          "15527",
+          "15539",
+          "15540",
+          "15551",
+          "15552",
+          "15553",
+          "15554",
+          "15558",
+          "15966",
+          "15967",
+          "15968",
+          "16289"
+        ]
+      },
+      {
+        "environment": "production",
+        "city": "tokyo",
+        "view": "top",
+        "count": 24,
+        "ids": [
+          "15525",
+          "15528",
+          "15529",
+          "15530",
+          "15531",
+          "15532",
+          "15533",
+          "15534",
+          "15535",
+          "15536",
+          "15537",
+          "15542",
+          "15543",
+          "15545",
+          "15547",
+          "15548",
+          "15549",
+          "15550",
+          "15559",
+          "15560",
+          "15561",
+          "15562",
+          "15903",
+          "15974"
+        ]
+      },
+      {
+        "environment": "production",
+        "city": "tokyo",
+        "view": "discounts",
+        "count": 33,
+        "ids": [
+          "https://and-gallery.com/#ikebukuro",
+          "https://and-gallery.com/#yurakucho",
+          "https://cocco.eastone.co.jp/shop/gotanda",
+          "https://cocco.eastone.co.jp/shop/kameido",
+          "https://conrad-tokyo.hiltonjapan.co.jp/restaurants/cerise",
+          "https://conrad-tokyo.hiltonjapan.co.jp/restaurants/chinablue",
+          "https://conrad-tokyo.hiltonjapan.co.jp/restaurants/twentyeight",
+          "https://csm-cafe.ltr-online.com/lp/csm-cafe-s012",
+          "https://miabocca.eastone.co.jp/shop/Ikebukuro",
+          "https://miabocca.eastone.co.jp/shop/Shakujii-park",
+          "https://miabocca.eastone.co.jp/shop/Shinjuku-takasimaya",
+          "https://prtimes.jp/main/html/rd/p/000000048.000152772.html",
+          "https://prtimes.jp/main/html/rd/p/000000356.000048489.html",
+          "https://prtimes.jp/main/html/rd/p/000000592.000071323.html",
+          "https://prtimes.jp/main/html/rd/p/000004178.000003860.html",
+          "https://sarabethsrestaurants.jp/location/omotesando/",
+          "https://sarabethsrestaurants.jp/location/shinagawa/",
+          "https://sarabethsrestaurants.jp/location/shinjuku/",
+          "https://sarabethsrestaurants.jp/location/tokyo/",
+          "https://shop.gyro.holdings/detail/131809/",
+          "https://store-info.skylark.co.jp/syabuyo/map/198490/",
+          "https://tokyo.hiltonjapan.co.jp/restaurants/st_georges_bar",
+          "https://www.andaztokyo.jp/restaurants/jp/thetavern-grill-lounge",
+          "https://www.herofield.com/bbq/tokyoprince/",
+          "https://www.hiramatsurestaurant.jp/jardindessens-tokyo/",
+          "https://www.mesm.jp/en/eat-drink/chefs-theatre.html",
+          "https://www.newotani.co.jp/tokyo/restaurant/gardenlounge/",
+          "https://www.quil-fait-bon.com/pages/aoyama",
+          "https://www.quil-fait-bon.com/pages/grand-maison-ginza",
+          "https://www.quil-fait-bon.com/pages/shinjuku",
+          "https://www.quil-fait-bon.com/pages/tokyo-dome-city",
+          "https://www.quil-fait-bon.com/pages/tokyo-skytree-town-solamachi",
+          "https://www.sunamo.jp/floor/shop_detail.html?UC=1_028"
+        ]
+      },
+      {
+        "environment": "production",
+        "city": "sapporo",
+        "view": "upcoming",
+        "count": 7,
+        "ids": [
+          "15568",
+          "15569",
+          "15570",
+          "15571",
+          "15597",
+          "15926",
+          "15970"
+        ]
+      },
+      {
+        "environment": "production",
+        "city": "sapporo",
+        "view": "new",
+        "count": 12,
+        "ids": [
+          "15580",
+          "15586",
+          "15587",
+          "15588",
+          "15589",
+          "15590",
+          "15591",
+          "15592",
+          "15595",
+          "15596",
+          "16293",
+          "16296"
+        ]
+      },
+      {
+        "environment": "production",
+        "city": "sapporo",
+        "view": "top",
+        "count": 30,
+        "ids": [
+          "15563",
+          "15564",
+          "15565",
+          "15566",
+          "15567",
+          "15572",
+          "15573",
+          "15574",
+          "15575",
+          "15576",
+          "15577",
+          "15578",
+          "15579",
+          "15581",
+          "15582",
+          "15583",
+          "15584",
+          "15585",
+          "15593",
+          "15594",
+          "15598",
+          "15599",
+          "15600",
+          "15601",
+          "15602",
+          "15603",
+          "15604",
+          "15605",
+          "15606",
+          "15607"
+        ]
+      },
+      {
+        "environment": "production",
+        "city": "sapporo",
+        "view": "discounts",
+        "count": 32,
+        "ids": [
+          "https://chocottosushi-kiwami.owst.jp/",
+          "https://cocco.eastone.co.jp/shop/kitahachijo",
+          "https://cocco.eastone.co.jp/shop/kitaichijo",
+          "https://cocco.eastone.co.jp/shop/kotoniekimae",
+          "https://cocco.eastone.co.jp/shop/miyanosawa",
+          "https://cocco.eastone.co.jp/shop/shindohigashi",
+          "https://cocco.eastone.co.jp/shop/souen",
+          "https://gracery.com/sapporo/restaurant/971/",
+          "https://grand1934.com/restaurant/garden-dining-waraku/",
+          "https://grand1934.com/restaurant/kokaku/",
+          "https://grand1934.com/restaurant/lobby-lounge-mizar/",
+          "https://grand1934.com/restaurant/northern-terrace-diner/",
+          "https://grand1934.com/restaurant/old-saloon1934/",
+          "https://miabocca.eastone.co.jp/shop/Kita2jo",
+          "https://miabocca.eastone.co.jp/shop/Kotoni-station",
+          "https://miabocca.eastone.co.jp/shop/Sapporo-station",
+          "https://miabocca.eastone.co.jp/shop/atsubetsuminami",
+          "https://miabocca.eastone.co.jp/shop/sapporoduo",
+          "https://store-info.skylark.co.jp/syabuyo/map/198489/",
+          "https://www.anahisapporosusukino.com/restaurants/verde/",
+          "https://www.hyatt.com/hyatt-centric/ja-JP/ctsct-hyatt-centric-sapporo/dining",
+          "https://www.jrhotels.co.jp/tower/restaurant/skyj/",
+          "https://www.keioplaza-sapporo.co.jp/restaurants/akizu/",
+          "https://www.keioplaza-sapporo.co.jp/restaurants/crossvault/",
+          "https://www.keioplaza-sapporo.co.jp/restaurants/glass/",
+          "https://www.keioplaza-sapporo.co.jp/restaurants/miyama/",
+          "https://www.keioplaza-sapporo.co.jp/restaurants/yamanami/",
+          "https://www.princehotels.co.jp/sapporo/restaurant/alldaydininggrandeur",
+          "https://www.princehotels.co.jp/sapporo/restaurant/fuyojo",
+          "https://www.princehotels.co.jp/sapporo/restaurant/katsura",
+          "https://www.princehotels.co.jp/sapporo/restaurant/top_prince",
+          "https://www.tokyuhotels.co.jp/sapporostream/restaurant/splish/plan/angel_devil/index.html"
+        ]
+      }
+    ],
+    "memberships": 423,
+    "shortfall": 303,
+    "newBranches": 3,
+    "existingVenueUpdates": 1,
+    "publishedMenuEntries": 309,
+    "newVenueMenuEntries": 174,
+    "galleryLinksAdded": 18,
+    "newOffers": 0
+  }
+}

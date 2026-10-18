@@ -1,0 +1,573 @@
+[
+  {
+    "pinId": 7241,
+    "pinUrl": "https://www.chronopin.com/pin/7241",
+    "checkedAt": "2026-10-10",
+    "title": "Equinix HK6 \u2014 Hong Kong \u2014 operational",
+    "status": "Operational",
+    "company": "Equinix",
+    "country": "Hong Kong",
+    "address": "18 Sha Tsui Road, Tsuen Wan, Hong Kong",
+    "sourceUrl": "https://newsroom.equinix.com/2026-06-16-Equinix-Launches-AI-Ready-Data-Center-with-Direct-Connectivity-to-Hong-Kong-Shenzhen-Innovation-and-Technology-Park",
+    "timelineDate": "2026-06-16",
+    "dateConfidence": "confirmed",
+    "dateConfidenceReasoning": "Confirmed dated milestone: Official opening on June 16, 2026.",
+    "sourcesChecked": [
+      "https://newsroom.equinix.com/2026-06-16-Equinix-Launches-AI-Ready-Data-Center-with-Direct-Connectivity-to-Hong-Kong-Shenzhen-Innovation-and-Technology-Park",
+      "https://www.equinix.com/data-centers/asia-pacific-colocation/china-colocation/hong-kong-data-centers/hk6"
+    ],
+    "references": [
+      {
+        "url": "https://www.equinix.com/data-centers/asia-pacific-colocation/china-colocation/hong-kong-data-centers/hk6",
+        "title": "Operator facility page verifies 18 Sha Tsui Road, Tsuen Wan",
+        "confidence": 95,
+        "reasoning": "Operator facility page verifies 18 Sha Tsui Road, Tsuen Wan.",
+        "publishedDate": null,
+        "startDate": null,
+        "endDate": null
+      }
+    ],
+    "geocoding": {
+      "provider": "ArcGIS World Geocoding Service",
+      "query": "18 Sha Tsui Road, Tsuen Wan, Hong Kong",
+      "matchAddress": "18 Sha Tsui Road, Tsuen Wan",
+      "score": 100,
+      "addressType": "PointAddress",
+      "latitude": 22.37406069989,
+      "longitude": 114.107900789989,
+      "precision": "street"
+    },
+    "notes": [
+      "Geocoded from a published street, campus or intersection; coordinates are not a surveyed facility entrance."
+    ]
+  },
+  {
+    "pinId": 7242,
+    "pinUrl": "https://www.chronopin.com/pin/7242",
+    "checkedAt": "2026-10-10",
+    "title": "Equinix MD5 \u2014 Alcobendas, Madrid \u2014 operational",
+    "status": "Operational",
+    "company": "Equinix",
+    "country": "Spain",
+    "address": "Calle La Pedriza 6, Alcobendas, Madrid, Spain",
+    "sourceUrl": "https://newsroom.equinix.com/2026-05-22-Equinix-refuerza-su-oferta-en-colocation-con-la-inauguracion-de-MD5-en-Alcobendas",
+    "timelineDate": "2026-05-22",
+    "dateConfidence": "confirmed",
+    "dateConfidenceReasoning": "Confirmed dated milestone: Official inauguration on May 22, 2026.",
+    "sourcesChecked": [
+      "https://newsroom.equinix.com/2026-05-22-Equinix-refuerza-su-oferta-en-colocation-con-la-inauguracion-de-MD5-en-Alcobendas",
+      "https://www.comunidad.madrid/transparencia/agenda/acto-inauguracion-nuevos-centros-datos-compania-md4-y-md5"
+    ],
+    "references": [
+      {
+        "url": "https://www.comunidad.madrid/transparencia/agenda/acto-inauguracion-nuevos-centros-datos-compania-md4-y-md5",
+        "title": "Regional government lists the May 22 ceremony at Calle La Pedriza 6; other campus sources use number 12, so this is the ceremony address rather than a verified building entrance",
+        "confidence": 95,
+        "reasoning": "Regional government lists the May 22 ceremony at Calle La Pedriza 6; other campus sources use number 12, so this is the ceremony address rather than a verified building entrance.",
+        "publishedDate": null,
+        "startDate": null,
+        "endDate": null
+      }
+    ],
+    "geocoding": {
+      "provider": "ArcGIS World Geocoding Service",
+      "query": "Calle La Pedriza 6, Alcobendas, Madrid, Spain",
+      "matchAddress": "Calle de la Pedriza 6, 28108, Alcobendas, Madrid, Comunidad de Madrid",
+      "score": 100,
+      "addressType": "PointAddress",
+      "latitude": 40.533544873136,
+      "longitude": -3.660993857151,
+      "precision": "campus"
+    },
+    "notes": [
+      "Geocoded from a published street, campus or intersection; coordinates are not a surveyed facility entrance."
+    ]
+  },
+  {
+    "pinId": 7243,
+    "pinUrl": "https://www.chronopin.com/pin/7243",
+    "checkedAt": "2026-10-10",
+    "title": "Equinix SV18 \u2014 San Jose \u2014 operational",
+    "status": "Operational",
+    "company": "Equinix",
+    "country": "United States",
+    "address": "127 Great Oaks Boulevard, San Jose, California, United States",
+    "sourceUrl": "https://community.equinix.com/data-center-strategy-colocation-8/what-s-new-ibx-openings-in-madrid-silicon-valley-1155",
+    "timelineDate": "2026-06-30",
+    "dateConfidence": "estimated",
+    "dateConfidenceReasoning": "Estimated timeline boundary: Equinix reports SV18 opened in Q2 2026. June 30 represents the end of that quarter, not a verified opening day.",
+    "sourcesChecked": [
+      "https://community.equinix.com/data-center-strategy-colocation-8/what-s-new-ibx-openings-in-madrid-silicon-valley-1155",
+      "https://www.equinix.com/data-centers/expansions",
+      "https://ceqanet.lci.ca.gov/2020100431/8"
+    ],
+    "references": [
+      {
+        "url": "https://www.equinix.com/data-centers/expansions",
+        "title": "Operator expansion page records SV18 as opened in Q2 2026",
+        "confidence": 95,
+        "reasoning": "Operator expansion page records SV18 as opened in Q2 2026.",
+        "publishedDate": null,
+        "startDate": null,
+        "endDate": null
+      },
+      {
+        "url": "https://ceqanet.lci.ca.gov/2020100431/8",
+        "title": "California project record places the three buildings at 123, 127 and 131 Great Oaks Boulevard respectively",
+        "confidence": 95,
+        "reasoning": "California project record places the three buildings at 123, 127 and 131 Great Oaks Boulevard respectively.",
+        "publishedDate": null,
+        "startDate": null,
+        "endDate": null
+      }
+    ],
+    "geocoding": {
+      "provider": "ArcGIS World Geocoding Service",
+      "query": "127 Great Oaks Boulevard, San Jose, California, United States",
+      "matchAddress": "127 Great Oaks Blvd, San Jose, California, 95119",
+      "score": 100,
+      "addressType": "PointAddress",
+      "latitude": 37.234298743882,
+      "longitude": -121.783041554402,
+      "precision": "street"
+    },
+    "notes": [
+      "Geocoded from a published street, campus or intersection; coordinates are not a surveyed facility entrance."
+    ]
+  },
+  {
+    "pinId": 7244,
+    "pinUrl": "https://www.chronopin.com/pin/7244",
+    "checkedAt": "2026-10-10",
+    "title": "Google Hamina data centre \u2014 Finland \u2014 operational",
+    "status": "Operational",
+    "company": "Google",
+    "country": "Finland",
+    "address": "Summa, Hamina, Finland",
+    "sourceUrl": "https://www.datacenters.google/locations/hamina-finland/",
+    "timelineDate": "2011-12-31",
+    "dateConfidence": "estimated",
+    "dateConfidenceReasoning": "Estimated timeline boundary: Google dates its first Hamina opening to 2011. December 31 is a year boundary, not a verified exact opening day.",
+    "sourcesChecked": [
+      "https://www.datacenters.google/locations/hamina-finland/"
+    ],
+    "references": [],
+    "geocoding": {
+      "provider": "ArcGIS World Geocoding Service",
+      "query": "Summa, Hamina, Finland",
+      "matchAddress": "Summa, Hamina",
+      "score": 100,
+      "addressType": "Locality",
+      "latitude": 60.565874016,
+      "longitude": 27.109901278,
+      "precision": "area"
+    },
+    "notes": [
+      "An area marker is approximate and does not identify a verified parcel or entrance."
+    ]
+  },
+  {
+    "pinId": 7245,
+    "pinUrl": "https://www.chronopin.com/pin/7245",
+    "checkedAt": "2026-10-10",
+    "title": "Google Saint-Ghislain data centre \u2014 Belgium \u2014 operational",
+    "status": "Operational",
+    "company": "Google",
+    "country": "Belgium",
+    "address": "Saint-Ghislain, Belgium",
+    "sourceUrl": "https://www.datacenters.google/locations/belgium/",
+    "timelineDate": "2010-12-31",
+    "dateConfidence": "estimated",
+    "dateConfidenceReasoning": "Estimated timeline boundary: Google dates the first Belgian data centre opening to 2010. December 31 is a year boundary, not an announced opening day.",
+    "sourcesChecked": [
+      "https://www.datacenters.google/locations/belgium/"
+    ],
+    "references": [],
+    "geocoding": {
+      "provider": "ArcGIS World Geocoding Service",
+      "query": "Saint-Ghislain, Belgium",
+      "matchAddress": "Saint-Ghislain",
+      "score": 100,
+      "addressType": "Locality",
+      "latitude": 50.487265302,
+      "longitude": 3.800941886,
+      "precision": "area"
+    },
+    "notes": [
+      "An area marker is approximate and does not identify a verified parcel or entrance."
+    ]
+  },
+  {
+    "pinId": 7246,
+    "pinUrl": "https://www.chronopin.com/pin/7246",
+    "checkedAt": "2026-10-10",
+    "title": "Meta Sturgeon County data centre \u2014 Alberta \u2014 under construction",
+    "status": "Under construction",
+    "company": "Meta",
+    "country": "Canada",
+    "address": "Sturgeon County, Alberta, Canada",
+    "sourceUrl": "https://about.fb.com/news/2026/07/breaking-ground-on-metas-first-data-center-in-canada/",
+    "timelineDate": "2026-07-08",
+    "dateConfidence": "confirmed",
+    "dateConfidenceReasoning": "Confirmed dated milestone: Groundbreaking announcement dated July 8, 2026; no facility opening date is established by this pin.",
+    "sourcesChecked": [
+      "https://about.fb.com/news/2026/07/breaking-ground-on-metas-first-data-center-in-canada/"
+    ],
+    "references": [],
+    "geocoding": {
+      "provider": "ArcGIS World Geocoding Service",
+      "query": "Sturgeon County, Alberta, Canada",
+      "matchAddress": "Sturgeon County, Alberta",
+      "score": 100,
+      "addressType": "Locality",
+      "latitude": 53.832325669,
+      "longitude": -113.526033104,
+      "precision": "area"
+    },
+    "notes": [
+      "An area marker is approximate and does not identify a verified parcel or entrance."
+    ]
+  },
+  {
+    "pinId": 7247,
+    "pinUrl": "https://www.chronopin.com/pin/7247",
+    "checkedAt": "2026-10-10",
+    "title": "Meta Hyperion data centre \u2014 Richland Parish \u2014 under construction",
+    "status": "Under construction",
+    "company": "Meta",
+    "country": "United States",
+    "address": "Holly Ridge, Richland Parish, Louisiana, United States",
+    "sourceUrl": "https://about.fb.com/news/2026/07/teachers-local-businesses-win-as-meta-expands-louisiana-data-center/",
+    "timelineDate": "2026-07-13",
+    "dateConfidence": "confirmed",
+    "dateConfidenceReasoning": "Confirmed dated milestone: Expansion announcement dated July 13, 2026; the site broke ground in December 2024. This is not a completion date.",
+    "sourcesChecked": [
+      "https://about.fb.com/news/2026/07/teachers-local-businesses-win-as-meta-expands-louisiana-data-center/"
+    ],
+    "references": [],
+    "geocoding": {
+      "provider": "ArcGIS World Geocoding Service",
+      "query": "Holly Ridge, Richland Parish, Louisiana, United States",
+      "matchAddress": "Holly Ridge, Louisiana",
+      "score": 100,
+      "addressType": "Locality",
+      "latitude": 32.4675686,
+      "longitude": -91.6272453,
+      "precision": "area"
+    },
+    "notes": [
+      "An area marker is approximate and does not identify a verified parcel or entrance."
+    ]
+  },
+  {
+    "pinId": 7248,
+    "pinUrl": "https://www.chronopin.com/pin/7248",
+    "checkedAt": "2026-10-10",
+    "title": "Meta El Paso data centre \u2014 Texas \u2014 under construction",
+    "status": "Under construction",
+    "company": "Meta",
+    "country": "United States",
+    "address": "El Paso, Texas, United States",
+    "sourceUrl": "https://about.fb.com/news/2026/07/meta-announces-new-venture-with-blackrock-to-develop-data-center-in-el-paso/",
+    "timelineDate": "2028-12-31",
+    "dateConfidence": "estimated",
+    "dateConfidenceReasoning": "Estimated timeline boundary: Meta and BlackRock expect capacity to begin coming online in 2028. December 31 is a boundary for that year, not an exact commissioning date.",
+    "sourcesChecked": [
+      "https://about.fb.com/news/2026/07/meta-announces-new-venture-with-blackrock-to-develop-data-center-in-el-paso/"
+    ],
+    "references": [],
+    "geocoding": {
+      "provider": "ArcGIS World Geocoding Service",
+      "query": "El Paso, Texas, United States",
+      "matchAddress": "El Paso, Texas",
+      "score": 100,
+      "addressType": "Locality",
+      "latitude": 31.7601062,
+      "longitude": -106.4922918,
+      "precision": "area"
+    },
+    "notes": [
+      "An area marker is approximate and does not identify a verified parcel or entrance."
+    ]
+  },
+  {
+    "pinId": 7249,
+    "pinUrl": "https://www.chronopin.com/pin/7249",
+    "checkedAt": "2026-10-10",
+    "title": "Google Meitner Energy Center data centre \u2014 Texas \u2014 under construction",
+    "status": "Under construction",
+    "company": "Google",
+    "country": "United States",
+    "address": "Gray County, Texas, United States",
+    "sourceUrl": "https://blog.google/innovation-and-ai/infrastructure-and-cloud/global-network/meitner-energy-center/",
+    "timelineDate": "2026-06-04",
+    "dateConfidence": "confirmed",
+    "dateConfidenceReasoning": "Confirmed dated milestone: Construction announcement dated June 4, 2026; the reviewed announcement does not give a data-centre opening day.",
+    "sourcesChecked": [
+      "https://blog.google/innovation-and-ai/infrastructure-and-cloud/global-network/meitner-energy-center/"
+    ],
+    "references": [],
+    "geocoding": {
+      "provider": "ArcGIS World Geocoding Service",
+      "query": "Gray County, Texas, United States",
+      "matchAddress": "Gray County, Texas",
+      "score": 100,
+      "addressType": "Locality",
+      "latitude": 35.401167695161,
+      "longitude": -100.812578825357,
+      "precision": "area"
+    },
+    "notes": [
+      "An area marker is approximate and does not identify a verified parcel or entrance."
+    ]
+  },
+  {
+    "pinId": 7250,
+    "pinUrl": "https://www.chronopin.com/pin/7250",
+    "checkedAt": "2026-10-10",
+    "title": "Equinix SG6 data centre \u2014 Singapore \u2014 under construction",
+    "status": "Under construction",
+    "company": "Equinix",
+    "country": "Singapore",
+    "address": "Jalan Tukang, Singapore",
+    "sourceUrl": "https://newsroom.equinix.com/2024-11-19-Equinix-to-Help-Accelerate-AI-Innovation-in-Singapore-with-US-260-Million-Data-Center-Expansion",
+    "timelineDate": "2027-03-31",
+    "dateConfidence": "estimated",
+    "dateConfidenceReasoning": "Estimated timeline boundary: Equinix lists an expected Q1 2027 opening. March 31 represents the end of that quarter; no exact opening day is confirmed.",
+    "sourcesChecked": [
+      "https://newsroom.equinix.com/2024-11-19-Equinix-to-Help-Accelerate-AI-Innovation-in-Singapore-with-US-260-Million-Data-Center-Expansion",
+      "https://investor.equinix.com/sec-filings/all-sec-filings/content/0001101239-26-000032/eqix-20251231.htm",
+      "https://www.equinix.com/data-centers/expansions",
+      "https://careers.equinix.com/pt/jobs/facility-engineer-entry-level-singapore-central-singapore"
+    ],
+    "references": [
+      {
+        "url": "https://investor.equinix.com/sec-filings/all-sec-filings/content/0001101239-26-000032/eqix-20251231.htm",
+        "title": "2025 annual filing lists SG6 phase 1 as under construction with expected Q1 2027 opening",
+        "confidence": 95,
+        "reasoning": "2025 annual filing lists SG6 phase 1 as under construction with expected Q1 2027 opening.",
+        "publishedDate": null,
+        "startDate": null,
+        "endDate": null
+      },
+      {
+        "url": "https://www.equinix.com/data-centers/expansions",
+        "title": "Current operator expansion timeline retains Q1 2027 for SG6",
+        "confidence": 95,
+        "reasoning": "Current operator expansion timeline retains Q1 2027 for SG6.",
+        "publishedDate": null,
+        "startDate": null,
+        "endDate": null
+      },
+      {
+        "url": "https://careers.equinix.com/pt/jobs/facility-engineer-entry-level-singapore-central-singapore",
+        "title": "Operator recruitment identifies the SG6 site in the Jalan Tukang area",
+        "confidence": 95,
+        "reasoning": "Operator recruitment identifies the SG6 site in the Jalan Tukang area.",
+        "publishedDate": null,
+        "startDate": null,
+        "endDate": null
+      }
+    ],
+    "geocoding": {
+      "provider": "ArcGIS World Geocoding Service",
+      "query": "Jalan Tukang, Singapore",
+      "matchAddress": "Jalan Tukang, Singapore",
+      "score": 100,
+      "addressType": "StreetName",
+      "latitude": 1.326612333405,
+      "longitude": 103.714548005624,
+      "precision": "area"
+    },
+    "notes": [
+      "An area marker is approximate and does not identify a verified parcel or entrance."
+    ]
+  },
+  {
+    "pinId": 7251,
+    "pinUrl": "https://www.chronopin.com/pin/7251",
+    "checkedAt": "2026-10-10",
+    "title": "Equinix LD14 data centre \u2014 Slough \u2014 under construction",
+    "status": "Under construction",
+    "company": "Equinix",
+    "country": "United Kingdom",
+    "address": "11 Banbury Avenue, Slough, SL1 4LH, United Kingdom",
+    "sourceUrl": "https://www.constructionmap.info/site/515401/ld14",
+    "timelineDate": "2027-03-31",
+    "dateConfidence": "estimated",
+    "dateConfidenceReasoning": "Estimated timeline boundary: Equinix lists Q1 2027 for LD14 phase 1. March 31 is the quarter boundary rather than a confirmed opening date.",
+    "sourcesChecked": [
+      "https://www.constructionmap.info/site/515401/ld14",
+      "https://investor.equinix.com/sec-filings/all-sec-filings/content/0001101239-26-000032/eqix-20251231.htm",
+      "https://www.equinix.com/data-centers/expansions"
+    ],
+    "references": [
+      {
+        "url": "https://investor.equinix.com/sec-filings/all-sec-filings/content/0001101239-26-000032/eqix-20251231.htm",
+        "title": "2025 annual filing lists LD14 phase 1 under construction and a Q1 2027 expected opening",
+        "confidence": 95,
+        "reasoning": "2025 annual filing lists LD14 phase 1 under construction and a Q1 2027 expected opening.",
+        "publishedDate": null,
+        "startDate": null,
+        "endDate": null
+      },
+      {
+        "url": "https://www.equinix.com/data-centers/expansions",
+        "title": "Current operator expansion timeline retains Q1 2027 for LD14",
+        "confidence": 95,
+        "reasoning": "Current operator expansion timeline retains Q1 2027 for LD14.",
+        "publishedDate": null,
+        "startDate": null,
+        "endDate": null
+      }
+    ],
+    "geocoding": {
+      "provider": "ArcGIS World Geocoding Service",
+      "query": "11 Banbury Avenue, Slough, SL1 4LH, United Kingdom",
+      "matchAddress": "11 Banbury Avenue, Haymill, Slough, Berkshire, England, SL1 4LH",
+      "score": 100,
+      "addressType": "PointAddress",
+      "latitude": 51.525283018837,
+      "longitude": -0.633066036102,
+      "precision": "street"
+    },
+    "notes": [
+      "Geocoded from a published street, campus or intersection; coordinates are not a surveyed facility entrance."
+    ]
+  },
+  {
+    "pinId": 7252,
+    "pinUrl": "https://www.chronopin.com/pin/7252",
+    "checkedAt": "2026-10-10",
+    "title": "Google Pine Island data centre \u2014 Minnesota \u2014 planned",
+    "status": "Planned",
+    "company": "Google",
+    "country": "United States",
+    "address": "Pine Island, Minnesota, United States",
+    "sourceUrl": "https://blog.google/innovation-and-ai/infrastructure-and-cloud/global-network/data-center-pine-island/",
+    "timelineDate": "2026-02-24",
+    "dateConfidence": "confirmed",
+    "dateConfidenceReasoning": "Confirmed dated milestone: Google announced Pine Island on February 24, 2026. This pin dates the announcement, not construction or opening.",
+    "sourcesChecked": [
+      "https://blog.google/innovation-and-ai/infrastructure-and-cloud/global-network/data-center-pine-island/",
+      "https://pineislandmn.gov/skyway"
+    ],
+    "references": [
+      {
+        "url": "https://pineislandmn.gov/skyway",
+        "title": "City project page states that the developer is pursuing required state permits and discusses pending litigation; it does not establish a construction start",
+        "confidence": 95,
+        "reasoning": "City project page states that the developer is pursuing required state permits and discusses pending litigation; it does not establish a construction start.",
+        "publishedDate": null,
+        "startDate": null,
+        "endDate": null
+      }
+    ],
+    "geocoding": {
+      "provider": "ArcGIS World Geocoding Service",
+      "query": "Pine Island, Minnesota, United States",
+      "matchAddress": "Pine Island, Minnesota",
+      "score": 100,
+      "addressType": "Locality",
+      "latitude": 44.203247,
+      "longitude": -92.64628,
+      "precision": "area"
+    },
+    "notes": [
+      "An area marker is approximate and does not identify a verified parcel or entrance."
+    ]
+  },
+  {
+    "pinId": 7253,
+    "pinUrl": "https://www.chronopin.com/pin/7253",
+    "checkedAt": "2026-10-10",
+    "title": "Google Lea County data centre proposal \u2014 New Mexico \u2014 planned",
+    "status": "Planned",
+    "company": "Google",
+    "country": "United States",
+    "address": "Lea County, New Mexico, United States",
+    "sourceUrl": "https://blog.google/innovation-and-ai/infrastructure-and-cloud/global-network/lea-county-new-mexico/",
+    "timelineDate": "2026-09-14",
+    "dateConfidence": "confirmed",
+    "dateConfidenceReasoning": "Confirmed dated milestone: Google exploration announcement dated September 14, 2026. This is an early proposal, not a committed construction or opening date.",
+    "sourcesChecked": [
+      "https://blog.google/innovation-and-ai/infrastructure-and-cloud/global-network/lea-county-new-mexico/"
+    ],
+    "references": [],
+    "geocoding": {
+      "provider": "ArcGIS World Geocoding Service",
+      "query": "Lea County, New Mexico, United States",
+      "matchAddress": "Lea County, New Mexico",
+      "score": 100,
+      "addressType": "Locality",
+      "latitude": 32.792150403196,
+      "longitude": -103.412472833879,
+      "precision": "area"
+    },
+    "notes": [
+      "An area marker is approximate and does not identify a verified parcel or entrance."
+    ]
+  },
+  {
+    "pinId": 7254,
+    "pinUrl": "https://www.chronopin.com/pin/7254",
+    "checkedAt": "2026-10-10",
+    "title": "Digital Realty Jurong Island data centre \u2014 Singapore \u2014 planned",
+    "status": "Planned",
+    "company": "Digital Realty",
+    "country": "Singapore",
+    "address": "Jurong Island, Singapore",
+    "sourceUrl": "https://digitalrealtytrust.gcs-web.com/news-releases/news-release-details/digital-realty-selected-develop-50-megawatts-new-data-center",
+    "timelineDate": "2026-08-24",
+    "dateConfidence": "confirmed",
+    "dateConfidenceReasoning": "Confirmed dated milestone: Selection announcement dated August 24, 2026. This is not a construction start or opening date.",
+    "sourcesChecked": [
+      "https://digitalrealtytrust.gcs-web.com/news-releases/news-release-details/digital-realty-selected-develop-50-megawatts-new-data-center"
+    ],
+    "references": [],
+    "geocoding": {
+      "provider": "ArcGIS World Geocoding Service",
+      "query": "Jurong Island, Singapore",
+      "matchAddress": "Jurong Island",
+      "score": 100,
+      "addressType": "POI",
+      "latitude": 1.26667,
+      "longitude": 103.69583,
+      "precision": "area"
+    },
+    "notes": [
+      "An area marker is approximate and does not identify a verified parcel or entrance."
+    ]
+  },
+  {
+    "pinId": 7255,
+    "pinUrl": "https://www.chronopin.com/pin/7255",
+    "checkedAt": "2026-10-10",
+    "title": "Digital Realty Astra North data centre campus \u2014 De Soto \u2014 planned",
+    "status": "Planned",
+    "company": "Digital Realty",
+    "country": "United States",
+    "address": "West 103rd Street and Lexington Avenue, De Soto, Kansas, United States",
+    "sourceUrl": "https://www.desotoks.us/498/Digital-Realty-Data-Center",
+    "timelineDate": "2026-09-22",
+    "dateConfidence": "confirmed",
+    "dateConfidenceReasoning": "Confirmed dated milestone: City project page lists a September 22, 2026 planning-commission site-plan item. The pin dates that review milestone, not groundbreaking or completion.",
+    "sourcesChecked": [
+      "https://www.desotoks.us/498/Digital-Realty-Data-Center"
+    ],
+    "references": [],
+    "geocoding": {
+      "provider": "ArcGIS World Geocoding Service",
+      "query": "West 103rd Street and Lexington Avenue, De Soto, Kansas, United States",
+      "matchAddress": "W 103rd St & Lexington Ave, De Soto, Kansas, 66018",
+      "score": 100,
+      "addressType": "StreetInt",
+      "latitude": 38.942197011291,
+      "longitude": -94.998730977531,
+      "precision": "intersection"
+    },
+    "notes": [
+      "Geocoded from a published street, campus or intersection; coordinates are not a surveyed facility entrance."
+    ]
+  }
+]

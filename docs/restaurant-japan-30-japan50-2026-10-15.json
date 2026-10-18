@@ -1,0 +1,2234 @@
+{
+  "checkedAt": "2026-10-15",
+  "country": "Japan",
+  "regions": [
+    "osaka",
+    "kyoto",
+    "nagoya",
+    "sapporo"
+  ],
+  "entries": [
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "GAPAO MONSTER — Fukushima Opens in Fukushima",
+        "description": "A forthcoming gapao specialist with seven protein choices, Thai tea and an evening Thai-food menu.",
+        "sourceUrl": "https://prtimes.jp/main/html/rd/p/000000001.000192433.html/",
+        "address": "2-6-7 Fukushima, Fukushima-ku, Osaka",
+        "productName": "GAPAO MONSTER — Fukushima",
+        "utcStartDateTime": "2026-10-27T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "Operator October 14 launch announcement explicitly confirms October 27, 2026 at 11:00, with exact Fukushima address and own launch menus.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Osaka",
+          "Japan",
+          "Fukushima",
+          "Thai / gapao"
+        ],
+        "longFormSummary": "<p>A forthcoming gapao specialist with seven protein choices, Thai tea and an evening Thai-food menu.<cite data-ref=\"https://prtimes.jp/main/html/rd/p/000000001.000192433.html/\"></cite></p><p>Operator October 14 launch announcement explicitly confirms October 27, 2026 at 11:00, with exact Fukushima address and own launch menus.</p>",
+        "references": [
+          {
+            "url": "https://prtimes.jp/main/html/rd/p/000000001.000192433.html/",
+            "title": "GAPAO MONSTER — Fukushima source",
+            "confidence": 90,
+            "reasoning": "Operator October 14 launch announcement explicitly confirms October 27, 2026 at 11:00, with exact Fukushima address and own launch menus."
+          },
+          {
+            "url": "https://ciel-ciel.jp/",
+            "title": "GAPAO MONSTER — Fukushima source",
+            "confidence": 90,
+            "reasoning": "Operator October 14 launch announcement explicitly confirms October 27, 2026 at 11:00, with exact Fukushima address and own launch menus."
+          },
+          {
+            "url": "https://www.instagram.com/gapao_monster/",
+            "title": "GAPAO MONSTER — Fukushima source",
+            "confidence": 90,
+            "reasoning": "Operator October 14 launch announcement explicitly confirms October 27, 2026 at 11:00, with exact Fukushima address and own launch menus."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://prtimes.jp/main/html/rd/p/000000001.000192433.html/",
+          "menu": {
+            "pinSourceUrl": "https://prtimes.jp/main/html/rd/p/000000001.000192433.html/",
+            "name": "GAPAO MONSTER — Fukushima",
+            "checkedAt": "2026-10-15",
+            "menus": [
+              {
+                "label": "Lunch gapao 11:00–17:00",
+                "url": "https://prtimes.jp/main/html/rd/p/000000001.000192433.html/",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Chicken gapao",
+                    "price": 1200
+                  },
+                  {
+                    "name": "Pork gapao",
+                    "price": 1300
+                  },
+                  {
+                    "name": "Beef gapao",
+                    "price": 1700
+                  },
+                  {
+                    "name": "Duck gapao",
+                    "price": 2000
+                  },
+                  {
+                    "name": "Shrimp gapao",
+                    "price": 1700
+                  },
+                  {
+                    "name": "Squid gapao",
+                    "price": 1800
+                  },
+                  {
+                    "name": "Tofu gapao",
+                    "price": 1000
+                  },
+                  {
+                    "name": "Extra egg",
+                    "price": 150,
+                    "note": "Supplement"
+                  },
+                  {
+                    "name": "Extra chilli",
+                    "price": 150,
+                    "note": "Supplement"
+                  },
+                  {
+                    "name": "Thai tea set drink — iced or hot",
+                    "price": 600,
+                    "note": "With gapao"
+                  },
+                  {
+                    "name": "Coffee set drink — iced or hot",
+                    "price": 500,
+                    "note": "With gapao"
+                  },
+                  {
+                    "name": "Cafe au lait set drink — iced or hot",
+                    "price": 600,
+                    "note": "With gapao"
+                  },
+                  {
+                    "name": "Ginger ale set drink",
+                    "price": 500,
+                    "note": "With gapao"
+                  },
+                  {
+                    "name": "Singha beer set drink",
+                    "price": 700,
+                    "note": "With gapao"
+                  },
+                  {
+                    "name": "Highball set drink",
+                    "price": 700,
+                    "note": "With gapao"
+                  },
+                  {
+                    "name": "Wine set drink",
+                    "price": 800,
+                    "note": "With gapao"
+                  },
+                  {
+                    "name": "Sparkling wine set drink",
+                    "price": 800,
+                    "note": "With gapao"
+                  }
+                ],
+                "note": "Tax-inclusive right-column launch board prices. Launch prose gives general lunch from ¥1,200, but explicitly named tofu bowl is ¥1,000. Set drinks require a gapao order. Exact menu boards in operator release checked; Modern Thai CIEL prices/recognition excluded. Instagram inaccessible to research browser; linked operator site checked."
+              },
+              {
+                "label": "Dinner menu 17:00–21:00",
+                "url": "https://prtimes.jp/main/html/rd/p/000000001.000192433.html/",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Chicken gapao",
+                    "price": 1320
+                  },
+                  {
+                    "name": "Pork gapao",
+                    "price": 1430
+                  },
+                  {
+                    "name": "Beef gapao",
+                    "price": 1870
+                  },
+                  {
+                    "name": "Duck gapao",
+                    "price": 2200
+                  },
+                  {
+                    "name": "Shrimp gapao",
+                    "price": 1870
+                  },
+                  {
+                    "name": "Squid gapao",
+                    "price": 1980
+                  },
+                  {
+                    "name": "Tofu gapao",
+                    "price": 1100
+                  },
+                  {
+                    "name": "Extra egg",
+                    "price": 165,
+                    "note": "Supplement"
+                  },
+                  {
+                    "name": "Extra chilli",
+                    "price": 165,
+                    "note": "Supplement"
+                  },
+                  {
+                    "name": "Yam salad",
+                    "price": 1320
+                  },
+                  {
+                    "name": "Yam woon sen",
+                    "price": 1320
+                  },
+                  {
+                    "name": "Tom yum chicken",
+                    "price": 1100
+                  },
+                  {
+                    "name": "Tom yum potatoes",
+                    "price": 880
+                  },
+                  {
+                    "name": "Tom yum shrimp",
+                    "price": 1320
+                  },
+                  {
+                    "name": "Gai yang",
+                    "price": 1320
+                  },
+                  {
+                    "name": "Fried spring rolls",
+                    "price": 1100
+                  },
+                  {
+                    "name": "Thai-style omelette",
+                    "price": 1100
+                  },
+                  {
+                    "name": "Chicken fried rice",
+                    "price": 1320
+                  },
+                  {
+                    "name": "Gratin",
+                    "price": 1430
+                  },
+                  {
+                    "name": "Tom yum pizza",
+                    "price": 1430
+                  },
+                  {
+                    "name": "Cheese assortment",
+                    "price": 1650
+                  },
+                  {
+                    "name": "Tom yum nuts",
+                    "price": 660
+                  },
+                  {
+                    "name": "Mixed nuts",
+                    "price": 660
+                  },
+                  {
+                    "name": "Chocolate",
+                    "price": 880
+                  }
+                ],
+                "note": "Tax-inclusive menu-board prices. After-17:00 cover is ¥550 including tax (board explicitly says pretax ¥500), superseding ambiguous press prose ¥500. Dining room operates to 22:00, dinner board lists food 17:00–21:00; no invented later food service."
+              },
+              {
+                "label": "Cafe and drinks",
+                "url": "https://prtimes.jp/main/html/rd/p/000000001.000192433.html/",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Thai tea — iced or hot",
+                    "price": 800
+                  },
+                  {
+                    "name": "Coconut-milk ice cream",
+                    "price": 770
+                  },
+                  {
+                    "name": "Thai-tea ice cream",
+                    "price": 770
+                  },
+                  {
+                    "name": "Mango sorbet",
+                    "price": 770
+                  },
+                  {
+                    "name": "Thai-tea cheesecake",
+                    "price": 770
+                  },
+                  {
+                    "name": "Basque cheesecake",
+                    "price": 770
+                  },
+                  {
+                    "name": "Almond tofu",
+                    "price": 770
+                  },
+                  {
+                    "name": "Tapioca milk",
+                    "price": 770
+                  },
+                  {
+                    "name": "Bua loi",
+                    "price": 770
+                  },
+                  {
+                    "name": "Glass sparkling wine",
+                    "price": 990
+                  },
+                  {
+                    "name": "Singha beer",
+                    "price": 880
+                  },
+                  {
+                    "name": "Kirin Ichiban draft beer",
+                    "price": 770
+                  },
+                  {
+                    "name": "Kaku highball",
+                    "price": 880
+                  },
+                  {
+                    "name": "Gin and tonic",
+                    "price": 880
+                  },
+                  {
+                    "name": "Gin rickey",
+                    "price": 880
+                  },
+                  {
+                    "name": "Cassis soda",
+                    "price": 880
+                  },
+                  {
+                    "name": "Cassis orange",
+                    "price": 1210
+                  },
+                  {
+                    "name": "Campari soda",
+                    "price": 880
+                  },
+                  {
+                    "name": "Campari orange",
+                    "price": 1210
+                  },
+                  {
+                    "name": "Plum wine — soda or rocks",
+                    "price": 880
+                  },
+                  {
+                    "name": "Non-alcoholic beer",
+                    "price": 770
+                  },
+                  {
+                    "name": "Perrier bottled soda",
+                    "price": 770
+                  },
+                  {
+                    "name": "Nose cider",
+                    "price": 770
+                  },
+                  {
+                    "name": "Ginger ale",
+                    "price": 770
+                  },
+                  {
+                    "name": "BLEC enzyme drink",
+                    "price": 880
+                  },
+                  {
+                    "name": "Organic coconut water",
+                    "price": 880
+                  },
+                  {
+                    "name": "Azumino apple juice",
+                    "price": 880
+                  },
+                  {
+                    "name": "Wakayama additive-free mandarin juice",
+                    "price": 990
+                  },
+                  {
+                    "name": "Oolong tea",
+                    "price": 660
+                  }
+                ],
+                "note": "Tax-inclusive cafe and regular drinks board; lunch set prices are separate. Premium whisky/chuhai show market price and are not assigned invented fixed prices."
+              },
+              {
+                "label": "Opening-day Thai milk tea benefit",
+                "url": "https://prtimes.jp/main/html/rd/p/000000001.000192433.html/",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Thai milk tea",
+                    "price": 0,
+                    "note": "With a gapao order; first 100 customers on October 27 only"
+                  }
+                ],
+                "note": "Operator announcement values the tea at ¥800. First 100 qualifying customers only, subject to remaining allocation; not a general free-drink policy."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://prtimes.jp/main/html/rd/p/000000001.000192433.html/",
+            "name": "GAPAO MONSTER — Fukushima",
+            "checkedAt": "2026-10-15",
+            "websiteUrl": "https://prtimes.jp/main/html/rd/p/000000001.000192433.html/",
+            "phone": null,
+            "openingHours": [
+              {
+                "days": "Daily service",
+                "hours": "11:00–22:00; lunch board 11:00–17:00, dinner food board 17:00–21:00; closing days unpublished"
+              }
+            ],
+            "detailsSourceUrl": "https://prtimes.jp/main/html/rd/p/000000001.000192433.html/",
+            "additionalSources": [
+              {
+                "label": "Research evidence",
+                "url": "https://ciel-ciel.jp/"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://www.instagram.com/gapao_monster/"
+              }
+            ]
+          },
+          "tile": {
+            "regionSlug": "osaka",
+            "kind": "opening",
+            "slug": "gapao",
+            "name": "GAPAO MONSTER — Fukushima",
+            "neighborhood": "Fukushima",
+            "cuisine": "Thai / gapao",
+            "description": "A forthcoming gapao specialist with seven protein choices, Thai tea and an evening Thai-food menu.",
+            "address": "2-6-7 Fukushima, Fukushima-ku, Osaka",
+            "websiteUrl": "https://prtimes.jp/main/html/rd/p/000000001.000192433.html/",
+            "checkedAt": "2026-10-15",
+            "recognition": "",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-15/gapao-1-123e6b08b12672b9.webp",
+            "imageCredit": "シエルインターナショナル株式会社",
+            "imageSourceUrl": "https://prtimes.jp/main/html/rd/p/000000001.000192433.html/",
+            "imageNote": "Official launch photograph of dine-in gapao; protein not inferred.",
+            "openingConfirmed": true,
+            "day": "2026-10-27"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-15/gapao-1-123e6b08b12672b9.webp",
+          "sha256": "123e6b08b12672b9f356232c1a09f7ef16e9be9c12c74920117504e18571e41b",
+          "width": 600,
+          "height": 400,
+          "credit": "シエルインターナショナル株式会社",
+          "note": "Official launch photograph of dine-in gapao; protein not inferred.",
+          "sourcePage": "https://prtimes.jp/main/html/rd/p/000000001.000192433.html/"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-15/gapao-0-d7c25b2e93eea105.webp",
+          "sha256": "d7c25b2e93eea105a2fb7f3ae0dfe7cefefb7768627d65fea1b6f12a69612f3b",
+          "width": 600,
+          "height": 400,
+          "credit": "シエルインターナショナル株式会社",
+          "note": "Official launch photograph of takeaway gapao; protein not inferred.",
+          "sourcePage": "https://prtimes.jp/main/html/rd/p/000000001.000192433.html/"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-15/gapao-3-ec3161e3fd4628cb.webp",
+          "sha256": "ec3161e3fd4628cb5284713f7684734127420f7854e086f90488c74bddb6d22b",
+          "width": 600,
+          "height": 400,
+          "credit": "シエルインターナショナル株式会社",
+          "note": "Official proposed GAPAO MONSTER facade rendering; not completed-premises photography.",
+          "sourcePage": "https://prtimes.jp/main/html/rd/p/000000001.000192433.html/"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-15/gapao-4-cc54b4a4e3b0e989.webp",
+          "sha256": "cc54b4a4e3b0e989ab181095745661e9993c779694e3e5b794ecb11d0aa0fc01",
+          "width": 600,
+          "height": 400,
+          "credit": "シエルインターナショナル株式会社",
+          "note": "Official proposed GAPAO MONSTER interior rendering; not completed-premises photography.",
+          "sourcePage": "https://prtimes.jp/main/html/rd/p/000000001.000192433.html/"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-15/gapao-5-874a6746a0ea17c9.webp",
+          "sha256": "874a6746a0ea17c9e59136b75b414262cbe2739b3def09da991193abc1dd4168",
+          "width": 600,
+          "height": 400,
+          "credit": "シエルインターナショナル株式会社",
+          "note": "Official proposed GAPAO MONSTER interior rendering; not completed-premises photography.",
+          "sourcePage": "https://prtimes.jp/main/html/rd/p/000000001.000192433.html/"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-15/gapao-7-d4505a4867e840b6.webp",
+          "sha256": "d4505a4867e840b660c68cf60bd883f7b99ae173b49174f8eecba2e27445dc97",
+          "width": 882,
+          "height": 1220,
+          "credit": "シエルインターナショナル株式会社",
+          "note": "Official lunch and cafe menu board: tax-inclusive and pretax prices shown separately.",
+          "sourcePage": "https://prtimes.jp/main/html/rd/p/000000001.000192433.html/"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-15/gapao-8-741fedca76c2274b.webp",
+          "sha256": "741fedca76c2274be751b3f382bb32e0fda5d7367a17a5155f33f368a1b51764",
+          "width": 850,
+          "height": 951,
+          "credit": "シエルインターナショナル株式会社",
+          "note": "Official launch drinks menu board.",
+          "sourcePage": "https://prtimes.jp/main/html/rd/p/000000001.000192433.html/"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-15/gapao-9-8b368b91b483e7e7.webp",
+          "sha256": "8b368b91b483e7e71d868b536627df69b4f038512b4219ed10a95f39ab9a3b41",
+          "width": 898,
+          "height": 876,
+          "credit": "シエルインターナショナル株式会社",
+          "note": "Official dinner menu board: 17:00–21:00, tax-inclusive and pretax prices shown separately.",
+          "sourcePage": "https://prtimes.jp/main/html/rd/p/000000001.000192433.html/"
+        }
+      ],
+      "special": {
+        "regionSlug": "osaka",
+        "profile": {
+          "pinSourceUrl": "https://prtimes.jp/main/html/rd/p/000000001.000192433.html/",
+          "name": "GAPAO MONSTER — Fukushima",
+          "checkedAt": "2026-10-15",
+          "menus": [
+            {
+              "label": "Lunch gapao 11:00–17:00",
+              "url": "https://prtimes.jp/main/html/rd/p/000000001.000192433.html/",
+              "currency": "JPY",
+              "coverage": "sample",
+              "items": [
+                {
+                  "name": "Chicken gapao",
+                  "price": 1200
+                },
+                {
+                  "name": "Pork gapao",
+                  "price": 1300
+                },
+                {
+                  "name": "Beef gapao",
+                  "price": 1700
+                },
+                {
+                  "name": "Duck gapao",
+                  "price": 2000
+                },
+                {
+                  "name": "Shrimp gapao",
+                  "price": 1700
+                },
+                {
+                  "name": "Squid gapao",
+                  "price": 1800
+                },
+                {
+                  "name": "Tofu gapao",
+                  "price": 1000
+                },
+                {
+                  "name": "Extra egg",
+                  "price": 150,
+                  "note": "Supplement"
+                },
+                {
+                  "name": "Extra chilli",
+                  "price": 150,
+                  "note": "Supplement"
+                },
+                {
+                  "name": "Thai tea set drink — iced or hot",
+                  "price": 600,
+                  "note": "With gapao"
+                },
+                {
+                  "name": "Coffee set drink — iced or hot",
+                  "price": 500,
+                  "note": "With gapao"
+                },
+                {
+                  "name": "Cafe au lait set drink — iced or hot",
+                  "price": 600,
+                  "note": "With gapao"
+                },
+                {
+                  "name": "Ginger ale set drink",
+                  "price": 500,
+                  "note": "With gapao"
+                },
+                {
+                  "name": "Singha beer set drink",
+                  "price": 700,
+                  "note": "With gapao"
+                },
+                {
+                  "name": "Highball set drink",
+                  "price": 700,
+                  "note": "With gapao"
+                },
+                {
+                  "name": "Wine set drink",
+                  "price": 800,
+                  "note": "With gapao"
+                },
+                {
+                  "name": "Sparkling wine set drink",
+                  "price": 800,
+                  "note": "With gapao"
+                }
+              ],
+              "note": "Tax-inclusive right-column launch board prices. Launch prose gives general lunch from ¥1,200, but explicitly named tofu bowl is ¥1,000. Set drinks require a gapao order. Exact menu boards in operator release checked; Modern Thai CIEL prices/recognition excluded. Instagram inaccessible to research browser; linked operator site checked."
+            },
+            {
+              "label": "Dinner menu 17:00–21:00",
+              "url": "https://prtimes.jp/main/html/rd/p/000000001.000192433.html/",
+              "currency": "JPY",
+              "coverage": "sample",
+              "items": [
+                {
+                  "name": "Chicken gapao",
+                  "price": 1320
+                },
+                {
+                  "name": "Pork gapao",
+                  "price": 1430
+                },
+                {
+                  "name": "Beef gapao",
+                  "price": 1870
+                },
+                {
+                  "name": "Duck gapao",
+                  "price": 2200
+                },
+                {
+                  "name": "Shrimp gapao",
+                  "price": 1870
+                },
+                {
+                  "name": "Squid gapao",
+                  "price": 1980
+                },
+                {
+                  "name": "Tofu gapao",
+                  "price": 1100
+                },
+                {
+                  "name": "Extra egg",
+                  "price": 165,
+                  "note": "Supplement"
+                },
+                {
+                  "name": "Extra chilli",
+                  "price": 165,
+                  "note": "Supplement"
+                },
+                {
+                  "name": "Yam salad",
+                  "price": 1320
+                },
+                {
+                  "name": "Yam woon sen",
+                  "price": 1320
+                },
+                {
+                  "name": "Tom yum chicken",
+                  "price": 1100
+                },
+                {
+                  "name": "Tom yum potatoes",
+                  "price": 880
+                },
+                {
+                  "name": "Tom yum shrimp",
+                  "price": 1320
+                },
+                {
+                  "name": "Gai yang",
+                  "price": 1320
+                },
+                {
+                  "name": "Fried spring rolls",
+                  "price": 1100
+                },
+                {
+                  "name": "Thai-style omelette",
+                  "price": 1100
+                },
+                {
+                  "name": "Chicken fried rice",
+                  "price": 1320
+                },
+                {
+                  "name": "Gratin",
+                  "price": 1430
+                },
+                {
+                  "name": "Tom yum pizza",
+                  "price": 1430
+                },
+                {
+                  "name": "Cheese assortment",
+                  "price": 1650
+                },
+                {
+                  "name": "Tom yum nuts",
+                  "price": 660
+                },
+                {
+                  "name": "Mixed nuts",
+                  "price": 660
+                },
+                {
+                  "name": "Chocolate",
+                  "price": 880
+                }
+              ],
+              "note": "Tax-inclusive menu-board prices. After-17:00 cover is ¥550 including tax (board explicitly says pretax ¥500), superseding ambiguous press prose ¥500. Dining room operates to 22:00, dinner board lists food 17:00–21:00; no invented later food service."
+            },
+            {
+              "label": "Cafe and drinks",
+              "url": "https://prtimes.jp/main/html/rd/p/000000001.000192433.html/",
+              "currency": "JPY",
+              "coverage": "sample",
+              "items": [
+                {
+                  "name": "Thai tea — iced or hot",
+                  "price": 800
+                },
+                {
+                  "name": "Coconut-milk ice cream",
+                  "price": 770
+                },
+                {
+                  "name": "Thai-tea ice cream",
+                  "price": 770
+                },
+                {
+                  "name": "Mango sorbet",
+                  "price": 770
+                },
+                {
+                  "name": "Thai-tea cheesecake",
+                  "price": 770
+                },
+                {
+                  "name": "Basque cheesecake",
+                  "price": 770
+                },
+                {
+                  "name": "Almond tofu",
+                  "price": 770
+                },
+                {
+                  "name": "Tapioca milk",
+                  "price": 770
+                },
+                {
+                  "name": "Bua loi",
+                  "price": 770
+                },
+                {
+                  "name": "Glass sparkling wine",
+                  "price": 990
+                },
+                {
+                  "name": "Singha beer",
+                  "price": 880
+                },
+                {
+                  "name": "Kirin Ichiban draft beer",
+                  "price": 770
+                },
+                {
+                  "name": "Kaku highball",
+                  "price": 880
+                },
+                {
+                  "name": "Gin and tonic",
+                  "price": 880
+                },
+                {
+                  "name": "Gin rickey",
+                  "price": 880
+                },
+                {
+                  "name": "Cassis soda",
+                  "price": 880
+                },
+                {
+                  "name": "Cassis orange",
+                  "price": 1210
+                },
+                {
+                  "name": "Campari soda",
+                  "price": 880
+                },
+                {
+                  "name": "Campari orange",
+                  "price": 1210
+                },
+                {
+                  "name": "Plum wine — soda or rocks",
+                  "price": 880
+                },
+                {
+                  "name": "Non-alcoholic beer",
+                  "price": 770
+                },
+                {
+                  "name": "Perrier bottled soda",
+                  "price": 770
+                },
+                {
+                  "name": "Nose cider",
+                  "price": 770
+                },
+                {
+                  "name": "Ginger ale",
+                  "price": 770
+                },
+                {
+                  "name": "BLEC enzyme drink",
+                  "price": 880
+                },
+                {
+                  "name": "Organic coconut water",
+                  "price": 880
+                },
+                {
+                  "name": "Azumino apple juice",
+                  "price": 880
+                },
+                {
+                  "name": "Wakayama additive-free mandarin juice",
+                  "price": 990
+                },
+                {
+                  "name": "Oolong tea",
+                  "price": 660
+                }
+              ],
+              "note": "Tax-inclusive cafe and regular drinks board; lunch set prices are separate. Premium whisky/chuhai show market price and are not assigned invented fixed prices."
+            },
+            {
+              "label": "Opening-day Thai milk tea benefit",
+              "url": "https://prtimes.jp/main/html/rd/p/000000001.000192433.html/",
+              "currency": "JPY",
+              "coverage": "sample",
+              "items": [
+                {
+                  "name": "Thai milk tea",
+                  "price": 0,
+                  "note": "With a gapao order; first 100 customers on October 27 only"
+                }
+              ],
+              "note": "Operator announcement values the tea at ¥800. First 100 qualifying customers only, subject to remaining allocation; not a general free-drink policy."
+            }
+          ],
+          "specials": [
+            {
+              "title": "Opening-day Thai milk tea benefit",
+              "kind": "other",
+              "description": "Free Thai milk tea with a gapao order for the first 100 customers on opening day.",
+              "sourceUrl": "https://prtimes.jp/main/html/rd/p/000000001.000192433.html/",
+              "menuLabel": "Opening-day Thai milk tea benefit",
+              "discounted": true,
+              "validFrom": "2026-10-27",
+              "validThrough": "2026-10-27",
+              "schedule": "Japan local time; see conditions",
+              "conditions": [
+                "October 27 only; first 100 qualifying customers, while allocation remains.",
+                "Purchase a gapao; regular lunch/dinner menu prices differ.",
+                "Food-order window from launch boards; room closes 22:00."
+              ],
+              "availability": {
+                "windows": [
+                  {
+                    "days": [
+                      0,
+                      1,
+                      2,
+                      3,
+                      4,
+                      5,
+                      6
+                    ],
+                    "start": "11:00",
+                    "end": "21:00"
+                  }
+                ]
+              }
+            }
+          ],
+          "address": "2-6-7 Fukushima, Fukushima-ku, Osaka",
+          "neighborhood": "Fukushima",
+          "websiteUrl": "https://prtimes.jp/main/html/rd/p/000000001.000192433.html/",
+          "photo": {
+            "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-15/gapao-1-123e6b08b12672b9.webp",
+            "alt": "GAPAO MONSTER — Fukushima — Official launch photograph of dine-in gapao; protein not inferred.",
+            "credit": "シエルインターナショナル株式会社",
+            "sourceUrl": "https://prtimes.jp/main/html/rd/p/000000001.000192433.html/",
+            "originalUrl": "https://prcdn.freetls.fastly.net/release_image/192433/1/192433-1-7f1b46992a1754220be3fbec8181e558-600x400.jpg?width=1950&height=1350&quality=85&format=jpeg&auto=webp&fit=bounds&bg-color=fff",
+            "checkedAt": "2026-10-15"
+          }
+        },
+        "enabled": true
+      }
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Oden-to Sakana SHINOYA — Susukino Opens in Susukino",
+        "description": "An announced Susukino izakaya with a branch-published menu of seafood, Niigata dishes, rice pots and hegi soba.",
+        "sourceUrl": "https://r.gnavi.co.jp/jpzp8kr80000/",
+        "address": "5F ARTBUILDING, 6-8-2 Minami 6-jo Nishi, Chuo-ku, Sapporo",
+        "productName": "Oden-to Sakana SHINOYA — Susukino",
+        "utcStartDateTime": "2026-11-30T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "Employer announcement confirms November 2026 but no firm day. November 30 is an explicitly estimated month-end sorting placeholder, not a confirmed opening. Tabelog November 2 remains to reconcile with operator.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Sapporo",
+          "Japan",
+          "Susukino",
+          "Oden / Niigata cuisine"
+        ],
+        "longFormSummary": "<p>An announced Susukino izakaya with a branch-published menu of seafood, Niigata dishes, rice pots and hegi soba.<cite data-ref=\"https://r.gnavi.co.jp/jpzp8kr80000/\"></cite></p><p>Employer announcement confirms November 2026 but no firm day. November 30 is an explicitly estimated month-end sorting placeholder, not a confirmed opening. Tabelog November 2 remains to reconcile with operator.</p>",
+        "references": [
+          {
+            "url": "https://r.gnavi.co.jp/jpzp8kr80000/",
+            "title": "Oden-to Sakana SHINOYA — Susukino source",
+            "confidence": 90,
+            "reasoning": "Employer announcement confirms November 2026 but no firm day. November 30 is an explicitly estimated month-end sorting placeholder, not a confirmed opening. Tabelog November 2 remains to reconcile with operator."
+          },
+          {
+            "url": "https://townwork.net/viewjob/jobid_d4a16d8e69562a24/",
+            "title": "Oden-to Sakana SHINOYA — Susukino source",
+            "confidence": 90,
+            "reasoning": "Employer announcement confirms November 2026 but no firm day. November 30 is an explicitly estimated month-end sorting placeholder, not a confirmed opening. Tabelog November 2 remains to reconcile with operator."
+          },
+          {
+            "url": "https://tabelog.com/hokkaido/A0101/A010103/1086177/",
+            "title": "Oden-to Sakana SHINOYA — Susukino source",
+            "confidence": 90,
+            "reasoning": "Employer announcement confirms November 2026 but no firm day. November 30 is an explicitly estimated month-end sorting placeholder, not a confirmed opening. Tabelog November 2 remains to reconcile with operator."
+          },
+          {
+            "url": "https://ha8u200.gorp.jp/",
+            "title": "Oden-to Sakana SHINOYA — Susukino source",
+            "confidence": 90,
+            "reasoning": "Employer announcement confirms November 2026 but no firm day. November 30 is an explicitly estimated month-end sorting placeholder, not a confirmed opening. Tabelog November 2 remains to reconcile with operator."
+          },
+          {
+            "url": "https://r.gnavi.co.jp/jpzp8kr80000/menu9/",
+            "title": "Oden-to Sakana SHINOYA — Susukino source",
+            "confidence": 90,
+            "reasoning": "Employer announcement confirms November 2026 but no firm day. November 30 is an explicitly estimated month-end sorting placeholder, not a confirmed opening. Tabelog November 2 remains to reconcile with operator."
+          },
+          {
+            "url": "https://r.gnavi.co.jp/jpzp8kr80000/photo/",
+            "title": "Oden-to Sakana SHINOYA — Susukino source",
+            "confidence": 90,
+            "reasoning": "Employer announcement confirms November 2026 but no firm day. November 30 is an explicitly estimated month-end sorting placeholder, not a confirmed opening. Tabelog November 2 remains to reconcile with operator."
+          },
+          {
+            "url": "https://r.gnavi.co.jp/jpzp8kr80000/menu10/",
+            "title": "Oden-to Sakana SHINOYA — Susukino source",
+            "confidence": 90,
+            "reasoning": "Employer announcement confirms November 2026 but no firm day. November 30 is an explicitly estimated month-end sorting placeholder, not a confirmed opening. Tabelog November 2 remains to reconcile with operator."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://r.gnavi.co.jp/jpzp8kr80000/",
+          "menu": {
+            "pinSourceUrl": "https://r.gnavi.co.jp/jpzp8kr80000/",
+            "name": "Oden-to Sakana SHINOYA — Susukino",
+            "checkedAt": "2026-10-15",
+            "menus": [
+              {
+                "label": "Published Susukino a la carte menu",
+                "url": "https://r.gnavi.co.jp/jpzp8kr80000/menu10/",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "焼き枝豆",
+                    "price": 580
+                  },
+                  {
+                    "name": "長いもの山葵漬け",
+                    "price": 580
+                  },
+                  {
+                    "name": "郷土料理！おでん出しで作ったのっぺ",
+                    "price": 630
+                  },
+                  {
+                    "name": "ヤリイカの醤油こうじ！卵黄のせ",
+                    "price": 880
+                  },
+                  {
+                    "name": "サーモンの醤油こうじ！いくらのせ",
+                    "price": 780
+                  },
+                  {
+                    "name": "あさりチャンジャ",
+                    "price": 630
+                  },
+                  {
+                    "name": "ピリ辛ゴマきゅうり",
+                    "price": 630
+                  },
+                  {
+                    "name": "農家の漬物盛り合わせ",
+                    "price": 680
+                  },
+                  {
+                    "name": "つぶ貝の松前漬け",
+                    "price": 980
+                  },
+                  {
+                    "name": "クリームチーZOO",
+                    "price": 880
+                  },
+                  {
+                    "name": "漁師風海鮮サラダ",
+                    "price": 1480
+                  },
+                  {
+                    "name": "チーズたっぷりシーザーサラダ",
+                    "price": 1280
+                  },
+                  {
+                    "name": "感謝を込めて！ブーケサラダ",
+                    "price": 1880
+                  },
+                  {
+                    "name": "炙りしめ鯖",
+                    "price": 1280
+                  },
+                  {
+                    "name": "本日お刺身3種",
+                    "price": 1580
+                  },
+                  {
+                    "name": "本日のお刺身5種",
+                    "price": 2480
+                  },
+                  {
+                    "name": "新潟名物！タレカツ",
+                    "price": 840
+                  },
+                  {
+                    "name": "新潟名物！する天（スルメイカの天ぷら）",
+                    "price": 980
+                  },
+                  {
+                    "name": "真タコのから揚げ",
+                    "price": 780
+                  },
+                  {
+                    "name": "青のりたっぷり南蛮エビのから揚げ",
+                    "price": 780
+                  },
+                  {
+                    "name": "ほくほく塩ポテト",
+                    "price": 740
+                  },
+                  {
+                    "name": "若どりのから揚げ～紅しょうがタルタル～",
+                    "price": 980
+                  },
+                  {
+                    "name": "サーモンレアかつ～いくらのせ～",
+                    "price": 1580
+                  },
+                  {
+                    "name": "マグロレアかつ～磯辺巻き～",
+                    "price": 1480
+                  },
+                  {
+                    "name": "ふぐの唐揚げ",
+                    "price": 1380
+                  },
+                  {
+                    "name": "鮎の塩焼き",
+                    "price": 980
+                  },
+                  {
+                    "name": "とろ鯖の塩焼き（半身）",
+                    "price": 1280
+                  },
+                  {
+                    "name": "銀鮭の塩焼き",
+                    "price": 1280
+                  },
+                  {
+                    "name": "ホッケの一夜干し（半身）",
+                    "price": 1180
+                  },
+                  {
+                    "name": "炙りエイヒレ",
+                    "price": 840
+                  },
+                  {
+                    "name": "銀鱈の西京焼き",
+                    "price": 1180
+                  },
+                  {
+                    "name": "スルメイカのみそ漬け焼き",
+                    "price": 1280
+                  },
+                  {
+                    "name": "新潟県長岡市名物　栃尾ジャンボ油揚げ",
+                    "price": 780
+                  },
+                  {
+                    "name": "新潟県長岡市名物　栃尾ジャンボ油揚げ（葱味噌はさみ焼）",
+                    "price": 840
+                  },
+                  {
+                    "name": "新潟県長岡市名物　栃尾ジャンボ油揚げ（納豆はさみ焼）",
+                    "price": 840
+                  },
+                  {
+                    "name": "新潟県長岡市名物　栃尾ジャンボ油揚げ（食べるラー油がけ）",
+                    "price": 920
+                  },
+                  {
+                    "name": "のど黒の塩焼き",
+                    "priceLabel": "Market price"
+                  },
+                  {
+                    "name": "白米新之助",
+                    "price": 1080
+                  },
+                  {
+                    "name": "銀鮭と山菜",
+                    "price": 1780
+                  },
+                  {
+                    "name": "越の鶏と山菜",
+                    "price": 1680
+                  },
+                  {
+                    "name": "へぎそば　小　1人前",
+                    "price": 1280
+                  },
+                  {
+                    "name": "へぎそば　中　2～3人前",
+                    "price": 2180
+                  },
+                  {
+                    "name": "へぎそば　大　3～4人前",
+                    "price": 3080
+                  },
+                  {
+                    "name": "抹茶アイスの白玉クリームあんみつ",
+                    "price": 480
+                  },
+                  {
+                    "name": "きな粉たっぷり濃厚バニラアイス",
+                    "price": 680
+                  },
+                  {
+                    "name": "一口串団子",
+                    "price": 480
+                  }
+                ],
+                "note": "Exact Sapporo branch native menu prices, not a menu borrowed from another address. Employer confirms November only; November 2 on Tabelog is unconfirmed. Oden cover conflicts: a la carte page ¥680 versus booking-course text ¥580, so no numeric cover or free-oden claim saved. Seats also conflict (98/108), omitted. Two branch-published dish promotions labelled as promotional, not completed premises. Checked operator Gorp page, full Gnavi gallery/menu/course tabs, exact employer listing and Tabelog; completed branch interior and firm day remain gaps. Under-20s not admitted per branch page; heated-tobacco smoking allowed."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://r.gnavi.co.jp/jpzp8kr80000/",
+            "name": "Oden-to Sakana SHINOYA — Susukino",
+            "checkedAt": "2026-10-15",
+            "websiteUrl": "https://r.gnavi.co.jp/jpzp8kr80000/",
+            "phone": "050-3529-5649",
+            "openingHours": [
+              {
+                "days": "Published regular hours after opening",
+                "hours": "15:00–23:00; food last order 22:00, drinks 22:30; no regular closing day"
+              }
+            ],
+            "detailsSourceUrl": "https://r.gnavi.co.jp/jpzp8kr80000/",
+            "additionalSources": [
+              {
+                "label": "Research evidence",
+                "url": "https://townwork.net/viewjob/jobid_d4a16d8e69562a24/"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://tabelog.com/hokkaido/A0101/A010103/1086177/"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://ha8u200.gorp.jp/"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://r.gnavi.co.jp/jpzp8kr80000/menu9/"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://r.gnavi.co.jp/jpzp8kr80000/photo/"
+              }
+            ]
+          },
+          "tile": {
+            "regionSlug": "sapporo",
+            "kind": "opening",
+            "slug": "shinoya",
+            "name": "Oden-to Sakana SHINOYA — Susukino",
+            "neighborhood": "Susukino",
+            "cuisine": "Oden / Niigata cuisine",
+            "description": "An announced Susukino izakaya with a branch-published menu of seafood, Niigata dishes, rice pots and hegi soba.",
+            "address": "5F ARTBUILDING, 6-8-2 Minami 6-jo Nishi, Chuo-ku, Sapporo",
+            "websiteUrl": "https://r.gnavi.co.jp/jpzp8kr80000/",
+            "checkedAt": "2026-10-15",
+            "recognition": "",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-15/shinoya-2-0bb5cb4c46ba5b16.webp",
+            "imageCredit": "おでんトさかな しのや すすきの店 / 楽天ぐるなび",
+            "imageSourceUrl": "https://r.gnavi.co.jp/jpzp8kr80000/menu9/",
+            "imageNote": "Branch-published promotional dish photograph: 新潟名物！タレカツ. Not a photograph of completed Sapporo premises."
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-15/shinoya-2-0bb5cb4c46ba5b16.webp",
+          "sha256": "0bb5cb4c46ba5b1661aeca941e4b03892c778b77908fe8ee7cc1b9e2d5d5eae0",
+          "width": 240,
+          "height": 240,
+          "credit": "おでんトさかな しのや すすきの店 / 楽天ぐるなび",
+          "note": "Branch-published promotional dish photograph: 新潟名物！タレカツ. Not a photograph of completed Sapporo premises.",
+          "sourcePage": "https://r.gnavi.co.jp/jpzp8kr80000/menu9/"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-15/shinoya-4-0cbd1f143c838733.webp",
+          "sha256": "0cbd1f143c8387331a058fc55e1c1684d63d798573af92d8f1a3ce0f179ac052",
+          "width": 241,
+          "height": 240,
+          "credit": "おでんトさかな しのや すすきの店 / 楽天ぐるなび",
+          "note": "Tochio fried-tofu variations in the branch-published promotional menu image; not a completed Sapporo interior or independently verified on-site photograph.",
+          "sourcePage": "https://r.gnavi.co.jp/jpzp8kr80000/menu9/"
+        }
+      ]
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Collabo_Index — Nagoya PARCO — Nagoya restaurant guide",
+        "description": "An established collaboration cafe hosting a dated SAKAMOTO DAYS menu in November, with character dishes and non-alcoholic drinks.",
+        "sourceUrl": "https://nagoya.parco.jp/shop/detail/?cd=009191",
+        "address": "5F South Building, Nagoya PARCO, 3-29-1 Sakae, Naka-ku, Nagoya",
+        "productName": "Collabo_Index — Nagoya PARCO",
+        "utcStartDateTime": "2026-10-15T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "Established restaurant. 2026-10-15 is the guide verification date, not its opening date.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Nagoya",
+          "Japan",
+          "Sakae",
+          "Collaboration cafe"
+        ],
+        "longFormSummary": "<p>An established collaboration cafe hosting a dated SAKAMOTO DAYS menu in November, with character dishes and non-alcoholic drinks.<cite data-ref=\"https://nagoya.parco.jp/shop/detail/?cd=009191\"></cite></p><p>Established restaurant. 2026-10-15 is the guide verification date, not its opening date.</p>",
+        "references": [
+          {
+            "url": "https://nagoya.parco.jp/shop/detail/?cd=009191",
+            "title": "Collabo_Index — Nagoya PARCO source",
+            "confidence": 90,
+            "reasoning": "Established restaurant. 2026-10-15 is the guide verification date, not its opening date."
+          },
+          {
+            "url": "https://prtimes.jp/main/html/rd/p/000000613.000023331.html",
+            "title": "Collabo_Index — Nagoya PARCO source",
+            "confidence": 90,
+            "reasoning": "Established restaurant. 2026-10-15 is the guide verification date, not its opening date."
+          },
+          {
+            "url": "https://collabo.sld-inc.com/sakamotodays_2608",
+            "title": "Collabo_Index — Nagoya PARCO source",
+            "confidence": 90,
+            "reasoning": "Established restaurant. 2026-10-15 is the guide verification date, not its opening date."
+          },
+          {
+            "url": "https://www.tablecheck.com/shops/kawara-nagoya-collab/reserve?menu_lists=6a60639f773edfdb9868cb26",
+            "title": "Collabo_Index — Nagoya PARCO source",
+            "confidence": 90,
+            "reasoning": "Established restaurant. 2026-10-15 is the guide verification date, not its opening date."
+          },
+          {
+            "url": "https://nagoya.parco.jp/event/detail/?id=38591",
+            "title": "Collabo_Index — Nagoya PARCO source",
+            "confidence": 90,
+            "reasoning": "Established restaurant. 2026-10-15 is the guide verification date, not its opening date."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://nagoya.parco.jp/shop/detail/?cd=009191",
+          "menu": {
+            "pinSourceUrl": "https://nagoya.parco.jp/shop/detail/?cd=009191",
+            "name": "Collabo_Index — Nagoya PARCO",
+            "checkedAt": "2026-10-15",
+            "menus": [
+              {
+                "label": "SAKAMOTO DAYS SECRET BAR & CAFE — Nagoya",
+                "url": "https://collabo.sld-inc.com/sakamotodays_2608",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "うまい。坂本 太郎の極秘タコスプレート",
+                    "price": 1890
+                  },
+                  {
+                    "name": "視える未来！朝倉 シンのエスプーマカルボナーラ",
+                    "price": 1890
+                  },
+                  {
+                    "name": "大佛の可憐な鋸黒カレーリゾット",
+                    "price": 1790
+                  },
+                  {
+                    "name": "南雲のまるでピザなワッフルプレート",
+                    "price": 1690
+                  },
+                  {
+                    "name": "硝子を砕く神々廻のモンブラン",
+                    "price": 1690
+                  },
+                  {
+                    "name": "坂本 太郎のぷるぷる杏仁みるくソーダ",
+                    "price": 1000
+                  },
+                  {
+                    "name": "朝倉 シンのジンジャーアップルティー",
+                    "price": 1000
+                  },
+                  {
+                    "name": "南雲の休日サングリア風ソーダ",
+                    "price": 1000
+                  },
+                  {
+                    "name": "神々廻のアイリッシュコーヒー風オレ",
+                    "price": 1000
+                  },
+                  {
+                    "name": "大佛のクマさんストロベリーラッシー",
+                    "price": 1000
+                  },
+                  {
+                    "name": "X（スラー）のトニックホワイトウォーター",
+                    "price": 1000
+                  },
+                  {
+                    "name": "楽の塩バニラコーラ",
+                    "price": 1000
+                  },
+                  {
+                    "name": "VIPラウンジ SAKAMOTO DAYS SECRET BAR & CAFE セレクションスタンド",
+                    "price": 4200,
+                    "note": "Designed for two people; counts as two orders"
+                  },
+                  {
+                    "name": "Advance reservation fee per person",
+                    "price": 550,
+                    "note": "Separate from food; prepaid by credit card; cancellation 100%"
+                  }
+                ],
+                "note": "Tax-inclusive operator menu, checked against rendered site and TableCheck branch booking. Nagoya run November 5–23; Tokyo/Osaka ended October 5 and are excluded. Non-alcoholic drinks only despite bar theme. 75-minute seatings with last order 30 minutes before end. Online reservation priority, until 17:00 previous day; walk-ins only if space. One menu item per person; advance reservation fee ¥550 per person, not included in food prices."
+              },
+              {
+                "label": "Nagoya Sakamoto birthday sundae",
+                "url": "https://collabo.sld-inc.com/sakamotodays_2608",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "坂本 太郎のバースデーサンデーパフェ",
+                    "price": 1800,
+                    "note": "November 17–23 only; Nagoya venue"
+                  }
+                ],
+                "note": "Tax included; Tokyo/Osaka September birthday plate excluded. Promotion illustration is not a host-interior photograph."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://nagoya.parco.jp/shop/detail/?cd=009191",
+            "name": "Collabo_Index — Nagoya PARCO",
+            "checkedAt": "2026-10-15",
+            "websiteUrl": "https://nagoya.parco.jp/shop/detail/?cd=009191",
+            "phone": "052-684-8777",
+            "openingHours": [
+              {
+                "days": "SAKAMOTO DAYS November 5–23",
+                "hours": "75-minute seatings: 11:15–12:30, 13:15–14:30, 15:15–16:30, 17:00–18:15, 18:45–20:00; last order 30 minutes before end; final admission 19:00"
+              }
+            ],
+            "detailsSourceUrl": "https://nagoya.parco.jp/shop/detail/?cd=009191",
+            "additionalSources": [
+              {
+                "label": "Research evidence",
+                "url": "https://prtimes.jp/main/html/rd/p/000000613.000023331.html"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://collabo.sld-inc.com/sakamotodays_2608"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://www.tablecheck.com/shops/kawara-nagoya-collab/reserve?menu_lists=6a60639f773edfdb9868cb26"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://nagoya.parco.jp/event/detail/?id=38591"
+              }
+            ],
+            "reservationUrl": "https://www.tablecheck.com/shops/kawara-nagoya-collab/reserve?menu_lists=6a60639f773edfdb9868cb26"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-15/sakamoto-site-0-99af165435e95a14.webp",
+          "sha256": "99af165435e95a1476607d07f99ece88a6bf81fc05be23cdfa465226ca46bfa7",
+          "width": 1600,
+          "height": 1120,
+          "credit": "©鈴木祐斗／集英社・SAKAMOTO DAYS製作委員会 / SLD Entertainment",
+          "note": "Sakamoto Taro taco plate promotional menu image; announced for the Nagoya collaboration, not a photograph of the host interior.",
+          "sourcePage": "https://collabo.sld-inc.com/sakamotodays_2608"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-15/sakamoto-site-1-1b2b5e9f77103fd4.webp",
+          "sha256": "1b2b5e9f77103fd43366b2b007ddd80c31dfdbb3fde287d57ebd79bb563cecf2",
+          "width": 1600,
+          "height": 1120,
+          "credit": "©鈴木祐斗／集英社・SAKAMOTO DAYS製作委員会 / SLD Entertainment",
+          "note": "Nagoya-only Sakamoto Taro birthday sundae promotional image, November 17–23, 2026.",
+          "sourcePage": "https://collabo.sld-inc.com/sakamotodays_2608"
+        }
+      ],
+      "special": {
+        "regionSlug": "nagoya",
+        "profile": {
+          "pinSourceUrl": "https://nagoya.parco.jp/shop/detail/?cd=009191",
+          "name": "Collabo_Index — Nagoya PARCO",
+          "checkedAt": "2026-10-15",
+          "menus": [
+            {
+              "label": "SAKAMOTO DAYS SECRET BAR & CAFE — Nagoya",
+              "url": "https://collabo.sld-inc.com/sakamotodays_2608",
+              "currency": "JPY",
+              "coverage": "sample",
+              "items": [
+                {
+                  "name": "うまい。坂本 太郎の極秘タコスプレート",
+                  "price": 1890
+                },
+                {
+                  "name": "視える未来！朝倉 シンのエスプーマカルボナーラ",
+                  "price": 1890
+                },
+                {
+                  "name": "大佛の可憐な鋸黒カレーリゾット",
+                  "price": 1790
+                },
+                {
+                  "name": "南雲のまるでピザなワッフルプレート",
+                  "price": 1690
+                },
+                {
+                  "name": "硝子を砕く神々廻のモンブラン",
+                  "price": 1690
+                },
+                {
+                  "name": "坂本 太郎のぷるぷる杏仁みるくソーダ",
+                  "price": 1000
+                },
+                {
+                  "name": "朝倉 シンのジンジャーアップルティー",
+                  "price": 1000
+                },
+                {
+                  "name": "南雲の休日サングリア風ソーダ",
+                  "price": 1000
+                },
+                {
+                  "name": "神々廻のアイリッシュコーヒー風オレ",
+                  "price": 1000
+                },
+                {
+                  "name": "大佛のクマさんストロベリーラッシー",
+                  "price": 1000
+                },
+                {
+                  "name": "X（スラー）のトニックホワイトウォーター",
+                  "price": 1000
+                },
+                {
+                  "name": "楽の塩バニラコーラ",
+                  "price": 1000
+                },
+                {
+                  "name": "VIPラウンジ SAKAMOTO DAYS SECRET BAR & CAFE セレクションスタンド",
+                  "price": 4200,
+                  "note": "Designed for two people; counts as two orders"
+                },
+                {
+                  "name": "Advance reservation fee per person",
+                  "price": 550,
+                  "note": "Separate from food; prepaid by credit card; cancellation 100%"
+                }
+              ],
+              "note": "Tax-inclusive operator menu, checked against rendered site and TableCheck branch booking. Nagoya run November 5–23; Tokyo/Osaka ended October 5 and are excluded. Non-alcoholic drinks only despite bar theme. 75-minute seatings with last order 30 minutes before end. Online reservation priority, until 17:00 previous day; walk-ins only if space. One menu item per person; advance reservation fee ¥550 per person, not included in food prices."
+            },
+            {
+              "label": "Nagoya Sakamoto birthday sundae",
+              "url": "https://collabo.sld-inc.com/sakamotodays_2608",
+              "currency": "JPY",
+              "coverage": "sample",
+              "items": [
+                {
+                  "name": "坂本 太郎のバースデーサンデーパフェ",
+                  "price": 1800,
+                  "note": "November 17–23 only; Nagoya venue"
+                }
+              ],
+              "note": "Tax included; Tokyo/Osaka September birthday plate excluded. Promotion illustration is not a host-interior photograph."
+            }
+          ],
+          "specials": [
+            {
+              "title": "SAKAMOTO DAYS SECRET BAR & CAFE — Nagoya",
+              "kind": "other",
+              "description": "Dated character-themed dishes, sweets and non-alcoholic drinks at the existing Nagoya PARCO cafe.",
+              "sourceUrl": "https://collabo.sld-inc.com/sakamotodays_2608",
+              "menuLabel": "SAKAMOTO DAYS SECRET BAR & CAFE — Nagoya",
+              "discounted": false,
+              "validFrom": "2026-11-05",
+              "validThrough": "2026-11-23",
+              "schedule": "Japan local time; see conditions",
+              "conditions": [
+                "75-minute seatings 11:15/13:15/15:15/17:00/18:45; ordering ends 30 minutes before each seating ends.",
+                "Final admission 19:00.",
+                "At least one food, dessert or drink per person; all drinks non-alcoholic.",
+                "Online advance booking fee ¥550/person, additional to menu prices; 100% cancellation charge.",
+                "Online bookings until 17:00 previous day; walk-ins subject to empty seats."
+              ],
+              "availability": {
+                "windows": [
+                  {
+                    "days": [
+                      0,
+                      1,
+                      2,
+                      3,
+                      4,
+                      5,
+                      6
+                    ],
+                    "start": "11:15",
+                    "end": "12:00"
+                  },
+                  {
+                    "days": [
+                      0,
+                      1,
+                      2,
+                      3,
+                      4,
+                      5,
+                      6
+                    ],
+                    "start": "13:15",
+                    "end": "14:00"
+                  },
+                  {
+                    "days": [
+                      0,
+                      1,
+                      2,
+                      3,
+                      4,
+                      5,
+                      6
+                    ],
+                    "start": "15:15",
+                    "end": "16:00"
+                  },
+                  {
+                    "days": [
+                      0,
+                      1,
+                      2,
+                      3,
+                      4,
+                      5,
+                      6
+                    ],
+                    "start": "17:00",
+                    "end": "17:45"
+                  },
+                  {
+                    "days": [
+                      0,
+                      1,
+                      2,
+                      3,
+                      4,
+                      5,
+                      6
+                    ],
+                    "start": "18:45",
+                    "end": "19:30"
+                  }
+                ]
+              },
+              "limitedTime": true
+            },
+            {
+              "title": "Nagoya Sakamoto birthday sundae",
+              "kind": "other",
+              "description": "Nagoya-only birthday sundae, ¥1,800 including tax.",
+              "sourceUrl": "https://collabo.sld-inc.com/sakamotodays_2608",
+              "menuLabel": "Nagoya Sakamoto birthday sundae",
+              "discounted": false,
+              "validFrom": "2026-11-17",
+              "validThrough": "2026-11-23",
+              "schedule": "Japan local time; see conditions",
+              "conditions": [
+                "75-minute seatings 11:15/13:15/15:15/17:00/18:45; ordering ends 30 minutes before each seating ends.",
+                "Final admission 19:00.",
+                "At least one food, dessert or drink per person; all drinks non-alcoholic.",
+                "Online advance booking fee ¥550/person, additional to menu prices; 100% cancellation charge.",
+                "Online bookings until 17:00 previous day; walk-ins subject to empty seats."
+              ],
+              "availability": {
+                "windows": [
+                  {
+                    "days": [
+                      0,
+                      1,
+                      2,
+                      3,
+                      4,
+                      5,
+                      6
+                    ],
+                    "start": "11:15",
+                    "end": "12:00"
+                  },
+                  {
+                    "days": [
+                      0,
+                      1,
+                      2,
+                      3,
+                      4,
+                      5,
+                      6
+                    ],
+                    "start": "13:15",
+                    "end": "14:00"
+                  },
+                  {
+                    "days": [
+                      0,
+                      1,
+                      2,
+                      3,
+                      4,
+                      5,
+                      6
+                    ],
+                    "start": "15:15",
+                    "end": "16:00"
+                  },
+                  {
+                    "days": [
+                      0,
+                      1,
+                      2,
+                      3,
+                      4,
+                      5,
+                      6
+                    ],
+                    "start": "17:00",
+                    "end": "17:45"
+                  },
+                  {
+                    "days": [
+                      0,
+                      1,
+                      2,
+                      3,
+                      4,
+                      5,
+                      6
+                    ],
+                    "start": "18:45",
+                    "end": "19:30"
+                  }
+                ]
+              },
+              "limitedTime": true
+            }
+          ],
+          "address": "5F South Building, Nagoya PARCO, 3-29-1 Sakae, Naka-ku, Nagoya",
+          "neighborhood": "Sakae",
+          "websiteUrl": "https://nagoya.parco.jp/shop/detail/?cd=009191",
+          "photo": {
+            "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-15/sakamoto-site-0-99af165435e95a14.webp",
+            "alt": "Collabo_Index — Nagoya PARCO — Sakamoto Taro taco plate promotional menu image; announced for the Nagoya collaboration, not a photograph of the host interior.",
+            "credit": "©鈴木祐斗／集英社・SAKAMOTO DAYS製作委員会 / SLD Entertainment",
+            "sourceUrl": "https://collabo.sld-inc.com/sakamotodays_2608",
+            "originalUrl": "https://storage.googleapis.com/studio-design-asset-files/projects/4Ra4N8doOD/s-3543x2480_v-frms_webp_ffd034fc-4045-4d18-9f44-7a99a950aa2a_regular.webp",
+            "checkedAt": "2026-10-15"
+          }
+        },
+        "enabled": true
+      }
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Teori — Hilton Kyoto — Kyoto restaurant guide",
+        "description": "A Kyoto hotel dining room with a dated autumn buffet, live cooking stations and published adult and child prices.",
+        "sourceUrl": "https://kyoto.hiltonjapan.co.jp/restaurants/teori",
+        "address": "1F Hilton Kyoto, 416 Shimomaruya-cho, Nakagyo-ku, Kyoto",
+        "productName": "Teori — Hilton Kyoto",
+        "utcStartDateTime": "2026-10-15T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "Established restaurant. 2026-10-15 is the guide verification date, not its opening date.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Kyoto",
+          "Japan",
+          "Kawaramachi Sanjo",
+          "International buffet"
+        ],
+        "longFormSummary": "<p>A Kyoto hotel dining room with a dated autumn buffet, live cooking stations and published adult and child prices.<cite data-ref=\"https://kyoto.hiltonjapan.co.jp/restaurants/teori\"></cite></p><p>Established restaurant. 2026-10-15 is the guide verification date, not its opening date.</p>",
+        "references": [
+          {
+            "url": "https://kyoto.hiltonjapan.co.jp/restaurants/teori",
+            "title": "Teori — Hilton Kyoto source",
+            "confidence": 90,
+            "reasoning": "Established restaurant. 2026-10-15 is the guide verification date, not its opening date."
+          },
+          {
+            "url": "https://kyoto.hiltonjapan.co.jp/restaurants/lp/teori-lunch-dinner-buffet-autumn",
+            "title": "Teori — Hilton Kyoto source",
+            "confidence": 90,
+            "reasoning": "Established restaurant. 2026-10-15 is the guide verification date, not its opening date."
+          },
+          {
+            "url": "https://kyoto.hiltonjapan.co.jp/restaurants/teori/menu",
+            "title": "Teori — Hilton Kyoto source",
+            "confidence": 90,
+            "reasoning": "Established restaurant. 2026-10-15 is the guide verification date, not its opening date."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://kyoto.hiltonjapan.co.jp/restaurants/teori",
+          "menu": {
+            "pinSourceUrl": "https://kyoto.hiltonjapan.co.jp/restaurants/teori",
+            "name": "Teori — Hilton Kyoto",
+            "checkedAt": "2026-10-15",
+            "menus": [
+              {
+                "label": "Autumn Favorites buffet",
+                "url": "https://kyoto.hiltonjapan.co.jp/restaurants/lp/teori-lunch-dinner-buffet-autumn",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Weekday lunch — adult",
+                    "price": 5800
+                  },
+                  {
+                    "name": "Weekend/holiday lunch — adult",
+                    "price": 6200
+                  },
+                  {
+                    "name": "Weekday lunch — age 6–11",
+                    "price": 2900
+                  },
+                  {
+                    "name": "Weekend/holiday lunch — age 6–11",
+                    "price": 3100
+                  },
+                  {
+                    "name": "Weekday dinner — adult",
+                    "price": 6800
+                  },
+                  {
+                    "name": "Weekend/holiday dinner — adult",
+                    "price": 7200
+                  },
+                  {
+                    "name": "Weekday dinner — age 6–11",
+                    "price": 3400
+                  },
+                  {
+                    "name": "Weekend/holiday dinner — age 6–11",
+                    "price": 3600
+                  },
+                  {
+                    "name": "Age 0–5 buffet",
+                    "price": 0,
+                    "note": "With dining party; child age conditions apply"
+                  },
+                  {
+                    "name": "Herb roast beef",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Autumn Favorites buffet; no separate item price published"
+                  },
+                  {
+                    "name": "Miso-yuzu glazed roast chicken",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Autumn Favorites buffet; no separate item price published"
+                  },
+                  {
+                    "name": "Mushroom-dashi pork shabu-shabu",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Autumn Favorites buffet; no separate item price published"
+                  },
+                  {
+                    "name": "Dark chocolate and pumpkin curry",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Autumn Favorites buffet; no separate item price published"
+                  },
+                  {
+                    "name": "Pork and chestnut red-wine stew",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Autumn Favorites buffet; no separate item price published"
+                  },
+                  {
+                    "name": "Autumn mushroom fried rice",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Autumn Favorites buffet; no separate item price published"
+                  },
+                  {
+                    "name": "Autumn root-vegetable miso salad",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Autumn Favorites buffet; no separate item price published"
+                  },
+                  {
+                    "name": "Persimmon and rocket yuzu salad",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Autumn Favorites buffet; no separate item price published"
+                  },
+                  {
+                    "name": "Kyoto white-miso ramen",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Autumn Favorites buffet; no separate item price published"
+                  },
+                  {
+                    "name": "Gyoza",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Autumn Favorites buffet; no separate item price published"
+                  },
+                  {
+                    "name": "Shumai",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Autumn Favorites buffet; no separate item price published"
+                  },
+                  {
+                    "name": "Vegan autumn vegetable dim sum",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Autumn Favorites buffet; no separate item price published"
+                  },
+                  {
+                    "name": "Classic hummus",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Autumn Favorites buffet; no separate item price published"
+                  },
+                  {
+                    "name": "Baba ganoush",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Autumn Favorites buffet; no separate item price published"
+                  },
+                  {
+                    "name": "Warabi mochi",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Autumn Favorites buffet; no separate item price published"
+                  },
+                  {
+                    "name": "Mitarashi dango",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Autumn Favorites buffet; no separate item price published"
+                  },
+                  {
+                    "name": "Matcha madeleines",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Autumn Favorites buffet; no separate item price published"
+                  },
+                  {
+                    "name": "Matcha cookies",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Autumn Favorites buffet; no separate item price published"
+                  }
+                ],
+                "note": "September 11–November 19. Tax and service included; 120-minute dining limit. Lunch room 11:30–14:30 with buffet closing 14:00; dinner room 17:30–21:30, buffet closes 21:00. Weekend/holiday rates differ. Dishes are published examples, some rotate daily and sourcing may change; no guarantee every item is present daily. Regular a la carte menu is separate; own branch/gallery and linked reservation pages checked."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://kyoto.hiltonjapan.co.jp/restaurants/teori",
+            "name": "Teori — Hilton Kyoto",
+            "checkedAt": "2026-10-15",
+            "websiteUrl": "https://kyoto.hiltonjapan.co.jp/restaurants/teori",
+            "phone": "075-212-8007",
+            "openingHours": [
+              {
+                "days": "Breakfast",
+                "hours": "07:00–10:00; weekends/holidays to 10:30"
+              },
+              {
+                "days": "Lunch",
+                "hours": "11:30–14:30; buffet closes 14:00"
+              },
+              {
+                "days": "Dinner",
+                "hours": "17:30–21:30; buffet closes 21:00"
+              },
+              {
+                "days": "A la carte",
+                "hours": "11:30–21:30; last order 21:00; no regular closing day"
+              }
+            ],
+            "detailsSourceUrl": "https://kyoto.hiltonjapan.co.jp/restaurants/teori",
+            "additionalSources": [
+              {
+                "label": "Research evidence",
+                "url": "https://kyoto.hiltonjapan.co.jp/restaurants/lp/teori-lunch-dinner-buffet-autumn"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://kyoto.hiltonjapan.co.jp/restaurants/teori/menu"
+              }
+            ],
+            "reservationUrl": "https://www.tablecheck.com/shops/hilton-kyoto-alldaydining/reserve?menu_lists=688b28ee4456220f4a5ce502"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-15/teori-24-d9ee86559d03006d.webp",
+          "sha256": "d9ee86559d03006d917e5d6d8a1939b0db0102ee236f033e4364a0dc283d819d",
+          "width": 1000,
+          "height": 450,
+          "credit": "Hilton Kyoto",
+          "note": "Official Teori restaurant gallery photograph; no menu availability inferred from image.",
+          "sourcePage": "https://kyoto.hiltonjapan.co.jp/restaurants/teori"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-15/teori-25-e879002e4437a9ce.webp",
+          "sha256": "e879002e4437a9ceeb38cd333debd2688ed5f24c5276c781ac255fde65562ff4",
+          "width": 1000,
+          "height": 450,
+          "credit": "Hilton Kyoto",
+          "note": "Official Teori restaurant gallery photograph; no menu availability inferred from image.",
+          "sourcePage": "https://kyoto.hiltonjapan.co.jp/restaurants/teori"
+        }
+      ],
+      "special": {
+        "regionSlug": "kyoto",
+        "profile": {
+          "pinSourceUrl": "https://kyoto.hiltonjapan.co.jp/restaurants/teori",
+          "name": "Teori — Hilton Kyoto",
+          "checkedAt": "2026-10-15",
+          "menus": [
+            {
+              "label": "Autumn Favorites buffet",
+              "url": "https://kyoto.hiltonjapan.co.jp/restaurants/lp/teori-lunch-dinner-buffet-autumn",
+              "currency": "JPY",
+              "coverage": "sample",
+              "items": [
+                {
+                  "name": "Weekday lunch — adult",
+                  "price": 5800
+                },
+                {
+                  "name": "Weekend/holiday lunch — adult",
+                  "price": 6200
+                },
+                {
+                  "name": "Weekday lunch — age 6–11",
+                  "price": 2900
+                },
+                {
+                  "name": "Weekend/holiday lunch — age 6–11",
+                  "price": 3100
+                },
+                {
+                  "name": "Weekday dinner — adult",
+                  "price": 6800
+                },
+                {
+                  "name": "Weekend/holiday dinner — adult",
+                  "price": 7200
+                },
+                {
+                  "name": "Weekday dinner — age 6–11",
+                  "price": 3400
+                },
+                {
+                  "name": "Weekend/holiday dinner — age 6–11",
+                  "price": 3600
+                },
+                {
+                  "name": "Age 0–5 buffet",
+                  "price": 0,
+                  "note": "With dining party; child age conditions apply"
+                },
+                {
+                  "name": "Herb roast beef",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Autumn Favorites buffet; no separate item price published"
+                },
+                {
+                  "name": "Miso-yuzu glazed roast chicken",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Autumn Favorites buffet; no separate item price published"
+                },
+                {
+                  "name": "Mushroom-dashi pork shabu-shabu",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Autumn Favorites buffet; no separate item price published"
+                },
+                {
+                  "name": "Dark chocolate and pumpkin curry",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Autumn Favorites buffet; no separate item price published"
+                },
+                {
+                  "name": "Pork and chestnut red-wine stew",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Autumn Favorites buffet; no separate item price published"
+                },
+                {
+                  "name": "Autumn mushroom fried rice",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Autumn Favorites buffet; no separate item price published"
+                },
+                {
+                  "name": "Autumn root-vegetable miso salad",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Autumn Favorites buffet; no separate item price published"
+                },
+                {
+                  "name": "Persimmon and rocket yuzu salad",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Autumn Favorites buffet; no separate item price published"
+                },
+                {
+                  "name": "Kyoto white-miso ramen",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Autumn Favorites buffet; no separate item price published"
+                },
+                {
+                  "name": "Gyoza",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Autumn Favorites buffet; no separate item price published"
+                },
+                {
+                  "name": "Shumai",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Autumn Favorites buffet; no separate item price published"
+                },
+                {
+                  "name": "Vegan autumn vegetable dim sum",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Autumn Favorites buffet; no separate item price published"
+                },
+                {
+                  "name": "Classic hummus",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Autumn Favorites buffet; no separate item price published"
+                },
+                {
+                  "name": "Baba ganoush",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Autumn Favorites buffet; no separate item price published"
+                },
+                {
+                  "name": "Warabi mochi",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Autumn Favorites buffet; no separate item price published"
+                },
+                {
+                  "name": "Mitarashi dango",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Autumn Favorites buffet; no separate item price published"
+                },
+                {
+                  "name": "Matcha madeleines",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Autumn Favorites buffet; no separate item price published"
+                },
+                {
+                  "name": "Matcha cookies",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Autumn Favorites buffet; no separate item price published"
+                }
+              ],
+              "note": "September 11–November 19. Tax and service included; 120-minute dining limit. Lunch room 11:30–14:30 with buffet closing 14:00; dinner room 17:30–21:30, buffet closes 21:00. Weekend/holiday rates differ. Dishes are published examples, some rotate daily and sourcing may change; no guarantee every item is present daily. Regular a la carte menu is separate; own branch/gallery and linked reservation pages checked."
+            }
+          ],
+          "specials": [
+            {
+              "title": "Autumn Favorites lunch buffet",
+              "kind": "lunch",
+              "description": "Dated autumn lunch buffet, adults ¥5,800 weekdays / ¥6,200 weekends and holidays.",
+              "sourceUrl": "https://kyoto.hiltonjapan.co.jp/restaurants/lp/teori-lunch-dinner-buffet-autumn",
+              "menuLabel": "Autumn Favorites buffet",
+              "discounted": false,
+              "validFrom": "2026-09-11",
+              "validThrough": "2026-11-19",
+              "schedule": "Japan local time; see conditions",
+              "conditions": [
+                "120-minute limit; room closes 14:30, buffet closes 14:00.",
+                "Tax and service included; children 6–11 half adult price, age 0–5 free.",
+                "Examples rotate; availability may change."
+              ],
+              "availability": {
+                "windows": [
+                  {
+                    "days": [
+                      0,
+                      1,
+                      2,
+                      3,
+                      4,
+                      5,
+                      6
+                    ],
+                    "start": "11:30",
+                    "end": "14:00"
+                  }
+                ]
+              },
+              "limitedTime": true
+            },
+            {
+              "title": "Autumn Favorites dinner buffet",
+              "kind": "other",
+              "description": "Dated autumn dinner buffet, adults ¥6,800 weekdays / ¥7,200 weekends and holidays.",
+              "sourceUrl": "https://kyoto.hiltonjapan.co.jp/restaurants/lp/teori-lunch-dinner-buffet-autumn",
+              "menuLabel": "Autumn Favorites buffet",
+              "discounted": false,
+              "validFrom": "2026-09-11",
+              "validThrough": "2026-11-19",
+              "schedule": "Japan local time; see conditions",
+              "conditions": [
+                "120-minute limit; room closes 21:30, buffet closes 21:00.",
+                "Tax and service included; children 6–11 half adult price, age 0–5 free.",
+                "Examples rotate; availability may change."
+              ],
+              "availability": {
+                "windows": [
+                  {
+                    "days": [
+                      0,
+                      1,
+                      2,
+                      3,
+                      4,
+                      5,
+                      6
+                    ],
+                    "start": "17:30",
+                    "end": "21:00"
+                  }
+                ]
+              },
+              "limitedTime": true
+            }
+          ],
+          "address": "1F Hilton Kyoto, 416 Shimomaruya-cho, Nakagyo-ku, Kyoto",
+          "neighborhood": "Kawaramachi Sanjo",
+          "websiteUrl": "https://kyoto.hiltonjapan.co.jp/restaurants/teori",
+          "photo": {
+            "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-15/teori-24-d9ee86559d03006d.webp",
+            "alt": "Teori — Hilton Kyoto — Official Teori restaurant gallery photograph; no menu availability inferred from image.",
+            "credit": "Hilton Kyoto",
+            "sourceUrl": "https://kyoto.hiltonjapan.co.jp/restaurants/teori",
+            "originalUrl": "https://kyoto.hiltonjapan.co.jp/img/restaurants/up_img/20250529140539_img_l.jpg",
+            "checkedAt": "2026-10-15"
+          }
+        },
+        "enabled": true
+      }
+    }
+  ]
+}

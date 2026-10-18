@@ -1,0 +1,779 @@
+{
+  "checkedAt": "2026-10-16",
+  "country": "Japan",
+  "regions": [
+    "nagoya",
+    "kyoto",
+    "tokyo"
+  ],
+  "entries": [
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "CANOVIANO MARUNOUCHI Opens in Marunouchi",
+        "description": "A forthcoming natural Italian restaurant supervised by Takamasa Uetake, with branch-published lunch, dinner and opening courses.",
+        "sourceUrl": "https://canoviano-marunouchi.jp/ristorante",
+        "address": "2F Brick Square Annex, 2-6-1 Marunouchi, Chiyoda-ku, Tokyo",
+        "productName": "CANOVIANO MARUNOUCHI",
+        "utcStartDateTime": "2026-11-09T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "Operator September 17 release and current exact restaurant page both announce November 9, 2026; subject to construction changes.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Tokyo",
+          "Japan",
+          "Marunouchi",
+          "Natural Italian"
+        ],
+        "longFormSummary": "<p>A forthcoming natural Italian restaurant supervised by Takamasa Uetake, with branch-published lunch, dinner and opening courses.<cite data-ref=\"https://canoviano-marunouchi.jp/\"></cite></p><p>Operator September 17 release and current exact restaurant page both announce November 9, 2026; subject to construction changes.</p>",
+        "references": [
+          {
+            "url": "https://canoviano-marunouchi.jp/ristorante",
+            "title": "CANOVIANO MARUNOUCHI source",
+            "confidence": 90,
+            "reasoning": "Operator September 17 release and current exact restaurant page both announce November 9, 2026; subject to construction changes."
+          },
+          {
+            "url": "https://canoviano-marunouchi.jp/",
+            "title": "CANOVIANO MARUNOUCHI source",
+            "confidence": 90,
+            "reasoning": "Operator September 17 release and current exact restaurant page both announce November 9, 2026; subject to construction changes."
+          },
+          {
+            "url": "https://prtimes.jp/main/html/rd/p/000000024.000122803.html",
+            "title": "CANOVIANO MARUNOUCHI source",
+            "confidence": 90,
+            "reasoning": "Operator September 17 release and current exact restaurant page both announce November 9, 2026; subject to construction changes."
+          },
+          {
+            "url": "https://storage.googleapis.com/studio-design-asset-files/projects/6kq9ReGeap/s-1x1_d913a103-d521-4b4c-9afd-8c18a7995c1e.pdf",
+            "title": "CANOVIANO MARUNOUCHI source",
+            "confidence": 90,
+            "reasoning": "Operator September 17 release and current exact restaurant page both announce November 9, 2026; subject to construction changes."
+          },
+          {
+            "url": "https://storage.googleapis.com/studio-design-asset-files/projects/6kq9ReGeap/s-1x1_400f467b-aaab-43a9-b8ac-7eb355783027.pdf",
+            "title": "CANOVIANO MARUNOUCHI source",
+            "confidence": 90,
+            "reasoning": "Operator September 17 release and current exact restaurant page both announce November 9, 2026; subject to construction changes."
+          },
+          {
+            "url": "https://storage.googleapis.com/studio-design-asset-files/projects/6kq9ReGeap/s-1x1_4048923d-8465-4f61-8eed-cbc2835a4435.pdf",
+            "title": "CANOVIANO MARUNOUCHI source",
+            "confidence": 90,
+            "reasoning": "Operator September 17 release and current exact restaurant page both announce November 9, 2026; subject to construction changes."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://canoviano-marunouchi.jp/ristorante",
+          "menu": {
+            "pinSourceUrl": "https://canoviano-marunouchi.jp/ristorante",
+            "name": "CANOVIANO MARUNOUCHI",
+            "checkedAt": "2026-10-16",
+            "menus": [
+              {
+                "label": "Marunouchi lunch",
+                "url": "https://storage.googleapis.com/studio-design-asset-files/projects/6kq9ReGeap/s-1x1_d913a103-d521-4b4c-9afd-8c18a7995c1e.pdf",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Lunch course",
+                    "price": 7700
+                  },
+                  {
+                    "name": "Chilled capellini with Hokkaido shimaebi shrimp, fruit tomato and bottarga",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Lunch course; choose one pasta and one main; no separate item price published"
+                  },
+                  {
+                    "name": "Seared yellowtail carpaccio with seasonal vegetable salad",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Lunch course; choose one pasta and one main; no separate item price published"
+                  },
+                  {
+                    "name": "Duck leg and maitake ragout spaghetti",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Lunch course; choose one pasta and one main; no separate item price published"
+                  },
+                  {
+                    "name": "Seafood bisque ragout spaghetti with Kujo leeks, cabbage and spinach",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Lunch course; choose one pasta and one main; no separate item price published"
+                  },
+                  {
+                    "name": "Herb-crusted cod with cornichons, capers and yellow tomato",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Lunch course; choose one pasta and one main; no separate item price published"
+                  },
+                  {
+                    "name": "Pork loin teppanyaki with mushroom sauce",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Lunch course; choose one pasta and one main; no separate item price published"
+                  },
+                  {
+                    "name": "CANOVIANO dessert and coffee",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Lunch course; choose one pasta and one main; no separate item price published"
+                  },
+                  {
+                    "name": "Langoustine spaghetti upgrade",
+                    "price": 1650,
+                    "note": "Supplement, plus 12% service"
+                  },
+                  {
+                    "name": "Japanese beef ichibo upgrade",
+                    "price": 2200,
+                    "note": "Supplement, plus 12% service"
+                  }
+                ],
+                "note": "Tax included; 12% service additional. Branch-linked Marunouchi PDF, logo and menu visually checked. Ingredients may change with supply. Supplements are additional to course price, not standalone dish prices. No a la carte. Placeholder phone numbers and Fukuoka chef/contact template copy on live website excluded; no expiry for opening special is published, so it is not invented as a dated promotion.",
+                "documentUrl": "https://storage.googleapis.com/studio-design-asset-files/projects/6kq9ReGeap/s-1x1_d913a103-d521-4b4c-9afd-8c18a7995c1e.pdf"
+              },
+              {
+                "label": "Marunouchi dinner",
+                "url": "https://storage.googleapis.com/studio-design-asset-files/projects/6kq9ReGeap/s-1x1_400f467b-aaab-43a9-b8ac-7eb355783027.pdf",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Dinner course",
+                    "price": 13200
+                  },
+                  {
+                    "name": "Chilled capellini with Hokkaido shimaebi shrimp, fruit tomato and bottarga",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Dinner course; choose one pasta and one main; no separate item price published"
+                  },
+                  {
+                    "name": "Buffalo mozzarella, fruit tomato and freshly sliced prosciutto",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Dinner course; choose one pasta and one main; no separate item price published"
+                  },
+                  {
+                    "name": "Seared yellowtail carpaccio",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Dinner course; choose one pasta and one main; no separate item price published"
+                  },
+                  {
+                    "name": "Grilled eel with Kujo leeks and burdock soup",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Dinner course; choose one pasta and one main; no separate item price published"
+                  },
+                  {
+                    "name": "Quail and porcini ragout spaghetti",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Dinner course; choose one pasta and one main; no separate item price published"
+                  },
+                  {
+                    "name": "Semolina-baked hairtail with semi-dried tomato and basil",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Dinner course; choose one pasta and one main; no separate item price published"
+                  },
+                  {
+                    "name": "Hokkaido venison loin with beet sauce and grilled vegetables",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Dinner course; choose one pasta and one main; no separate item price published"
+                  },
+                  {
+                    "name": "CANOVIANO dessert and coffee",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Dinner course; choose one pasta and one main; no separate item price published"
+                  },
+                  {
+                    "name": "Langoustine spaghetti upgrade",
+                    "price": 1650,
+                    "note": "Supplement, plus 12% service"
+                  },
+                  {
+                    "name": "Japanese beef ichibo upgrade",
+                    "price": 2200,
+                    "note": "Supplement, plus 12% service"
+                  }
+                ],
+                "note": "Tax included; 12% service additional. Branch-linked Marunouchi PDF, logo and menu visually checked. Ingredients may change with supply. Supplements are additional to course price, not standalone dish prices. No a la carte. Placeholder phone numbers and Fukuoka chef/contact template copy on live website excluded; no expiry for opening special is published, so it is not invented as a dated promotion. Japanese 太刀魚 identifies hairtail; the PDF English swordfish translation is inconsistent and not repeated.",
+                "documentUrl": "https://storage.googleapis.com/studio-design-asset-files/projects/6kq9ReGeap/s-1x1_400f467b-aaab-43a9-b8ac-7eb355783027.pdf"
+              },
+              {
+                "label": "Marunouchi opening special course",
+                "url": "https://storage.googleapis.com/studio-design-asset-files/projects/6kq9ReGeap/s-1x1_4048923d-8465-4f61-8eed-cbc2835a4435.pdf",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Opening special course",
+                    "price": 16500
+                  },
+                  {
+                    "name": "Chilled capellini with Hokkaido shimaebi shrimp, fruit tomato and bottarga",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Opening special course; no separate item price published"
+                  },
+                  {
+                    "name": "Seared yellowtail carpaccio with seasonal vegetable salad",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Opening special course; no separate item price published"
+                  },
+                  {
+                    "name": "Grilled eel with Kujo leeks and burdock soup",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Opening special course; no separate item price published"
+                  },
+                  {
+                    "name": "Fresh spaghetti with langoustines, Chinese cabbage, turnip and shungiku",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Opening special course; no separate item price published"
+                  },
+                  {
+                    "name": "Crispy-scaled tilefish with semi-dried tomato and basil",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Opening special course; no separate item price published"
+                  },
+                  {
+                    "name": "Japanese beef ichibo roast with morel sauce and grilled vegetables",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Opening special course; no separate item price published"
+                  },
+                  {
+                    "name": "CANOVIANO dessert and coffee",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Opening special course; no separate item price published"
+                  }
+                ],
+                "note": "Tax included; 12% service additional. Branch-linked Marunouchi PDF, logo and menu visually checked. Ingredients may change with supply. Supplements are additional to course price, not standalone dish prices. No a la carte. Placeholder phone numbers and Fukuoka chef/contact template copy on live website excluded; no expiry for opening special is published, so it is not invented as a dated promotion.",
+                "documentUrl": "https://storage.googleapis.com/studio-design-asset-files/projects/6kq9ReGeap/s-1x1_4048923d-8465-4f61-8eed-cbc2835a4435.pdf"
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://canoviano-marunouchi.jp/ristorante",
+            "name": "CANOVIANO MARUNOUCHI",
+            "checkedAt": "2026-10-16",
+            "websiteUrl": "https://canoviano-marunouchi.jp/ristorante",
+            "phone": null,
+            "openingHours": [
+              {
+                "days": "Lunch",
+                "hours": "11:00–15:30; last order 14:00"
+              },
+              {
+                "days": "Dinner",
+                "hours": "17:30–23:00; last order 20:00"
+              },
+              {
+                "days": "Closures",
+                "hours": "January 1 and statutory inspection days"
+              }
+            ],
+            "detailsSourceUrl": "https://canoviano-marunouchi.jp/ristorante",
+            "additionalSources": [
+              {
+                "label": "Research evidence",
+                "url": "https://canoviano-marunouchi.jp/"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://prtimes.jp/main/html/rd/p/000000024.000122803.html"
+              }
+            ],
+            "reservationUrl": "https://www.tablecheck.com/ja/canoviano-marunouchi/reserve/message"
+          },
+          "tile": {
+            "regionSlug": "tokyo",
+            "kind": "opening",
+            "slug": "canoviano",
+            "name": "CANOVIANO MARUNOUCHI",
+            "neighborhood": "Marunouchi",
+            "cuisine": "Natural Italian",
+            "description": "A forthcoming natural Italian restaurant supervised by Takamasa Uetake, with branch-published lunch, dinner and opening courses.",
+            "address": "2F Brick Square Annex, 2-6-1 Marunouchi, Chiyoda-ku, Tokyo",
+            "websiteUrl": "https://canoviano-marunouchi.jp/ristorante",
+            "checkedAt": "2026-10-16",
+            "recognition": "",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-16/canoviano-3-01c4be20487e2c36.webp",
+            "imageCredit": "Dears Brain / CANOVIANO MARUNOUCHI",
+            "imageSourceUrl": "https://canoviano-marunouchi.jp/",
+            "imageNote": "Official Marunouchi launch-page promotional food photograph; dish not identified and current dish availability not inferred.",
+            "openingConfirmed": true,
+            "day": "2026-11-09"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-16/canoviano-3-01c4be20487e2c36.webp",
+          "sha256": "01c4be20487e2c36c50110716953171288fa780e146e54354aa64dbc89ebf772",
+          "width": 600,
+          "height": 400,
+          "credit": "Dears Brain / CANOVIANO MARUNOUCHI",
+          "note": "Official Marunouchi launch-page promotional food photograph; dish not identified and current dish availability not inferred.",
+          "sourcePage": "https://canoviano-marunouchi.jp/"
+        }
+      ]
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Shake Shack — West Shinjuku Opens in West Shinjuku",
+        "description": "Shake Shack’s forthcoming second Shinjuku restaurant is announced for the station-connected Meiji Yasuda Shinjuku Building.",
+        "sourceUrl": "https://prtimes.jp/main/html/rd/p/000001088.000005743.html",
+        "address": "1F Meiji Yasuda Shinjuku Building, 1-9-1 Nishishinjuku, Shinjuku-ku, Tokyo",
+        "productName": "Shake Shack — West Shinjuku",
+        "utcStartDateTime": "2026-11-28T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "Ivy Company operator release specifies November 28, 2026, corroborated by current operator recruitment; 82 planned seats.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Tokyo",
+          "Japan",
+          "West Shinjuku",
+          "Burgers"
+        ],
+        "longFormSummary": "<p>Shake Shack’s forthcoming second Shinjuku restaurant is announced for the station-connected Meiji Yasuda Shinjuku Building.<cite data-ref=\"https://prtimes.jp/main/html/rd/p/000001088.000005743.html\"></cite></p><p>Ivy Company operator release specifies November 28, 2026, corroborated by current operator recruitment; 82 planned seats.</p>",
+        "references": [
+          {
+            "url": "https://prtimes.jp/main/html/rd/p/000001088.000005743.html",
+            "title": "Shake Shack — West Shinjuku source",
+            "confidence": 90,
+            "reasoning": "Ivy Company operator release specifies November 28, 2026, corroborated by current operator recruitment; 82 planned seats."
+          },
+          {
+            "url": "https://hitomgr.jp/csaiyo/yh5g/pc_job/list/SS",
+            "title": "Shake Shack — West Shinjuku source",
+            "confidence": 90,
+            "reasoning": "Ivy Company operator release specifies November 28, 2026, corroborated by current operator recruitment; 82 planned seats."
+          },
+          {
+            "url": "https://gourmetpress.net/1489117/",
+            "title": "Shake Shack — West Shinjuku source",
+            "confidence": 90,
+            "reasoning": "Ivy Company operator release specifies November 28, 2026, corroborated by current operator recruitment; 82 planned seats."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://prtimes.jp/main/html/rd/p/000001088.000005743.html",
+          "menu": {
+            "pinSourceUrl": "https://prtimes.jp/main/html/rd/p/000001088.000005743.html",
+            "name": "Shake Shack — West Shinjuku",
+            "checkedAt": "2026-10-16",
+            "menus": [
+              {
+                "label": "West Shinjuku announced menu",
+                "url": "https://prtimes.jp/main/html/rd/p/000001088.000005743.html",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "ShackBurger — single",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Shroom Burger",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Shack Stack",
+                    "priceLabel": "Price not published"
+                  }
+                ],
+                "note": "Exact operator launch release names these burgers without prices. Official menu, shop news and linked recruitment checked; no West Shinjuku payable prices or customer service hours located. Recruitment 08:00–23:00 is not service hours. Renderings and launch food photographs explicitly illustrative; other stores’ menus/prices not transferred."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://prtimes.jp/main/html/rd/p/000001088.000005743.html",
+            "name": "Shake Shack — West Shinjuku",
+            "checkedAt": "2026-10-16",
+            "websiteUrl": "https://shakeshack.jp/",
+            "phone": null,
+            "openingHours": [],
+            "detailsSourceUrl": "https://shakeshack.jp/",
+            "additionalSources": [
+              {
+                "label": "Research evidence",
+                "url": "https://prtimes.jp/main/html/rd/p/000001088.000005743.html"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://hitomgr.jp/csaiyo/yh5g/pc_job/list/SS"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://gourmetpress.net/1489117/"
+              }
+            ]
+          },
+          "tile": {
+            "regionSlug": "tokyo",
+            "kind": "opening",
+            "slug": "shake-release",
+            "name": "Shake Shack — West Shinjuku",
+            "neighborhood": "West Shinjuku",
+            "cuisine": "Burgers",
+            "description": "Shake Shack’s forthcoming second Shinjuku restaurant is announced for the station-connected Meiji Yasuda Shinjuku Building.",
+            "address": "1F Meiji Yasuda Shinjuku Building, 1-9-1 Nishishinjuku, Shinjuku-ku, Tokyo",
+            "websiteUrl": "https://shakeshack.jp/",
+            "checkedAt": "2026-10-16",
+            "recognition": "",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-16/shake-release-0-0f6105727b5f3c46.webp",
+            "imageCredit": "Ivy Company / Shake Shack Japan",
+            "imageSourceUrl": "https://prtimes.jp/main/html/rd/p/000001088.000005743.html",
+            "imageNote": "Official West Shinjuku launch proposed exterior rendering; not completed premises.",
+            "openingConfirmed": true,
+            "day": "2026-11-28"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-16/shake-release-0-0f6105727b5f3c46.webp",
+          "sha256": "0f6105727b5f3c46e8d86a38c5d892c6eb567bf3dc322867b45f556c500ed212",
+          "width": 1600,
+          "height": 900,
+          "credit": "Ivy Company / Shake Shack Japan",
+          "note": "Official West Shinjuku launch proposed exterior rendering; not completed premises.",
+          "sourcePage": "https://prtimes.jp/main/html/rd/p/000001088.000005743.html"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-16/shake-release-1-7ccedc0c64e980df.webp",
+          "sha256": "7ccedc0c64e980df0d5610c6f6d1c0db6e2a9beda5a9d2a1a84175a76dd3fb82",
+          "width": 1600,
+          "height": 900,
+          "credit": "Ivy Company / Shake Shack Japan",
+          "note": "Official West Shinjuku launch proposed dining-room rendering; not completed premises.",
+          "sourcePage": "https://prtimes.jp/main/html/rd/p/000001088.000005743.html"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-16/shake-release-2-7bd12583c650571f.webp",
+          "sha256": "7bd12583c650571f36ba44f4588d62896d0bf6234a18ccbd03dc20ff221680b8",
+          "width": 1350,
+          "height": 1350,
+          "credit": "Ivy Company / Shake Shack Japan",
+          "note": "Official West Shinjuku launch promotional burger photograph; not a photograph of completed West Shinjuku premises.",
+          "sourcePage": "https://prtimes.jp/main/html/rd/p/000001088.000005743.html"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-16/shake-release-3-222cf53a20f8669c.webp",
+          "sha256": "222cf53a20f8669c97f49e009fd53e4c29db2bc658add755118dcf523ed98341",
+          "width": 550,
+          "height": 440,
+          "credit": "Ivy Company / Shake Shack Japan",
+          "note": "Official West Shinjuku launch promotional burger photograph; not a photograph of completed West Shinjuku premises.",
+          "sourcePage": "https://prtimes.jp/main/html/rd/p/000001088.000005743.html"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-16/shake-release-4-9c87dd2256346981.webp",
+          "sha256": "9c87dd22563469817829614033ed6a7ab9f057eba4bdcd5d730a19876df443b5",
+          "width": 550,
+          "height": 440,
+          "credit": "Ivy Company / Shake Shack Japan",
+          "note": "Official West Shinjuku launch promotional burger photograph; not a photograph of completed West Shinjuku premises.",
+          "sourcePage": "https://prtimes.jp/main/html/rd/p/000001088.000005743.html"
+        }
+      ]
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "UNIQLO COFFEE — Kyoto Opens in Kawaramachi Sanjo",
+        "description": "A new coffee stand inside UNIQLO’s Kyoto flagship, serving a Kyoto-only blend and locally sourced sweets.",
+        "sourceUrl": "https://www.uniqlo.com/jp/ja/special-feature/cp/kyoto#uniqlo-coffee",
+        "address": "Mina Kyoto, 58 Daikoku-cho, Kawaramachi-dori Sanjo-sagaru, Nakagyo-ku, Kyoto",
+        "productName": "UNIQLO COFFEE — Kyoto",
+        "utcStartDateTime": "2026-11-06T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "UNIQLO October 2 release and live Kyoto flagship microsite announce November 6 opening with new UNIQLO COFFEE. Exact cafe service hours and floor not separately published.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Kyoto",
+          "Japan",
+          "Kawaramachi Sanjo",
+          "Coffee / Kyoto sweets"
+        ],
+        "longFormSummary": "<p>A new coffee stand inside UNIQLO’s Kyoto flagship, serving a Kyoto-only blend and locally sourced sweets.<cite data-ref=\"https://www.uniqlo.com/jp/ja/contents/corp/press-release/2026/10/26100211_store.html\"></cite></p><p>UNIQLO October 2 release and live Kyoto flagship microsite announce November 6 opening with new UNIQLO COFFEE. Exact cafe service hours and floor not separately published.</p>",
+        "references": [
+          {
+            "url": "https://www.uniqlo.com/jp/ja/special-feature/cp/kyoto#uniqlo-coffee",
+            "title": "UNIQLO COFFEE — Kyoto source",
+            "confidence": 90,
+            "reasoning": "UNIQLO October 2 release and live Kyoto flagship microsite announce November 6 opening with new UNIQLO COFFEE. Exact cafe service hours and floor not separately published."
+          },
+          {
+            "url": "https://www.uniqlo.com/jp/ja/contents/corp/press-release/2026/10/26100211_store.html",
+            "title": "UNIQLO COFFEE — Kyoto source",
+            "confidence": 90,
+            "reasoning": "UNIQLO October 2 release and live Kyoto flagship microsite announce November 6 opening with new UNIQLO COFFEE. Exact cafe service hours and floor not separately published."
+          },
+          {
+            "url": "https://transit-web-job.net/jobfind-pc/job/Kansai/36102",
+            "title": "UNIQLO COFFEE — Kyoto source",
+            "confidence": 90,
+            "reasoning": "UNIQLO October 2 release and live Kyoto flagship microsite announce November 6 opening with new UNIQLO COFFEE. Exact cafe service hours and floor not separately published."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://www.uniqlo.com/jp/ja/special-feature/cp/kyoto#uniqlo-coffee",
+          "menu": {
+            "pinSourceUrl": "https://www.uniqlo.com/jp/ja/special-feature/cp/kyoto#uniqlo-coffee",
+            "name": "UNIQLO COFFEE — Kyoto",
+            "checkedAt": "2026-10-16",
+            "menus": [
+              {
+                "label": "Kyoto announced cafe menu",
+                "url": "https://www.uniqlo.com/jp/ja/contents/corp/press-release/2026/10/26100211_store.html",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Kyoto original blend coffee",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Seasonal drink",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "London-ya London-yaki",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Shinshindo mini Danish chocolate",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Nakamura Tokichi Maruto Bake — matcha",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "UNIQLO white pudding",
+                    "priceLabel": "Price not published"
+                  }
+                ],
+                "note": "Operator Kyoto release and current flagship microsite explicitly name these items; prices and detailed drink roster are not published. Flagship hours 11:00–21:00, with 10:00 opening November 6–8; cafe-specific last order/hours not stated. Store-wide gifts, clothing purchase benefits and preopening lottery coffee voucher are not a universally available cafe special. Linked Kyoto microsite, press image and exact operator recruitment checked. Promotional products are not a completed cafe gallery."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://www.uniqlo.com/jp/ja/special-feature/cp/kyoto#uniqlo-coffee",
+            "name": "UNIQLO COFFEE — Kyoto",
+            "checkedAt": "2026-10-16",
+            "websiteUrl": "https://www.uniqlo.com/jp/ja/special-feature/cp/kyoto",
+            "phone": null,
+            "openingHours": [],
+            "detailsSourceUrl": "https://www.uniqlo.com/jp/ja/special-feature/cp/kyoto",
+            "additionalSources": [
+              {
+                "label": "Research evidence",
+                "url": "https://www.uniqlo.com/jp/ja/contents/corp/press-release/2026/10/26100211_store.html"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://transit-web-job.net/jobfind-pc/job/Kansai/36102"
+              }
+            ]
+          },
+          "tile": {
+            "regionSlug": "kyoto",
+            "kind": "opening",
+            "slug": "uniqlo",
+            "name": "UNIQLO COFFEE — Kyoto",
+            "neighborhood": "Kawaramachi Sanjo",
+            "cuisine": "Coffee / Kyoto sweets",
+            "description": "A new coffee stand inside UNIQLO’s Kyoto flagship, serving a Kyoto-only blend and locally sourced sweets.",
+            "address": "Mina Kyoto, 58 Daikoku-cho, Kawaramachi-dori Sanjo-sagaru, Nakagyo-ku, Kyoto",
+            "websiteUrl": "https://www.uniqlo.com/jp/ja/special-feature/cp/kyoto",
+            "checkedAt": "2026-10-16",
+            "recognition": "",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-16/uniqlo-7-d7dbe9c2bf735789.webp",
+            "imageCredit": "UNIQLO",
+            "imageSourceUrl": "https://www.uniqlo.com/jp/ja/contents/corp/press-release/2026/10/26100211_store.html",
+            "imageNote": "Official Kyoto launch products: London-yaki, Maruto Bake matcha, mini Danish chocolate and UNIQLO white pudding; promotional product photographs, not cafe premises.",
+            "openingConfirmed": true,
+            "day": "2026-11-06"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-16/uniqlo-7-d7dbe9c2bf735789.webp",
+          "sha256": "d7dbe9c2bf735789be2c458fa4d6bfa34736953a199c76f18f0a627990cdf93a",
+          "width": 483,
+          "height": 435,
+          "credit": "UNIQLO",
+          "note": "Official Kyoto launch products: London-yaki, Maruto Bake matcha, mini Danish chocolate and UNIQLO white pudding; promotional product photographs, not cafe premises.",
+          "sourcePage": "https://www.uniqlo.com/jp/ja/contents/corp/press-release/2026/10/26100211_store.html"
+        }
+      ]
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "BEL BUTTER WAFFLE — Nagoya Sunroad Opens in Meieki",
+        "description": "A newly opened takeaway Liège-waffle counter in Sunroad, with an operator branch listing and published waffle prices.",
+        "sourceUrl": "https://www.belbutterwaffle.com/#nagoya-sunroad",
+        "address": "Nagoya Underground Mall Sunroad, 4-7-25-saki Meieki, Nakamura-ku, Nagoya",
+        "productName": "BEL BUTTER WAFFLE — Nagoya Sunroad",
+        "utcStartDateTime": "2026-09-25T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "Nagoya local September 21 report announces September 25 opening; current operator exact-branch listing corroborates address, hours and phone.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Nagoya",
+          "Japan",
+          "Meieki",
+          "Waffles"
+        ],
+        "longFormSummary": "<p>A newly opened takeaway Liège-waffle counter in Sunroad, with an operator branch listing and published waffle prices.<cite data-ref=\"https://www.belbutterwaffle.com/\"></cite></p><p>Nagoya local September 21 report announces September 25 opening; current operator exact-branch listing corroborates address, hours and phone.</p>",
+        "references": [
+          {
+            "url": "https://www.belbutterwaffle.com/#nagoya-sunroad",
+            "title": "BEL BUTTER WAFFLE — Nagoya Sunroad source",
+            "confidence": 90,
+            "reasoning": "Nagoya local September 21 report announces September 25 opening; current operator exact-branch listing corroborates address, hours and phone."
+          },
+          {
+            "url": "https://www.belbutterwaffle.com/",
+            "title": "BEL BUTTER WAFFLE — Nagoya Sunroad source",
+            "confidence": 90,
+            "reasoning": "Nagoya local September 21 report announces September 25 opening; current operator exact-branch listing corroborates address, hours and phone."
+          },
+          {
+            "url": "https://nagoyadot.jp/new/106713/",
+            "title": "BEL BUTTER WAFFLE — Nagoya Sunroad source",
+            "confidence": 90,
+            "reasoning": "Nagoya local September 21 report announces September 25 opening; current operator exact-branch listing corroborates address, hours and phone."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://www.belbutterwaffle.com/#nagoya-sunroad",
+          "menu": {
+            "pinSourceUrl": "https://www.belbutterwaffle.com/#nagoya-sunroad",
+            "name": "BEL BUTTER WAFFLE — Nagoya Sunroad",
+            "checkedAt": "2026-10-16",
+            "menus": [
+              {
+                "label": "Nagoya Sunroad waffles",
+                "url": "https://www.belbutterwaffle.com/",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Premium butter waffle",
+                    "price": 250
+                  },
+                  {
+                    "name": "Chocolate chip waffle",
+                    "price": 280
+                  },
+                  {
+                    "name": "Maple sugar waffle",
+                    "price": 280
+                  },
+                  {
+                    "name": "Double chocolate waffle",
+                    "price": 320
+                  }
+                ],
+                "note": "Official menu with exact Nagoya branch on same site; each is tax-inclusive per piece. Seasonal and store-only unnamed items are not invented. September 25 opening corroborated by local reporting; operator has Nagoya shop image, hours and phone. Store image is illustrative, not verified completed-premises photography. Linked brand gallery/rebaking instructions and local photo page checked."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://www.belbutterwaffle.com/#nagoya-sunroad",
+            "name": "BEL BUTTER WAFFLE — Nagoya Sunroad",
+            "checkedAt": "2026-10-16",
+            "websiteUrl": "https://www.belbutterwaffle.com/",
+            "phone": "052-462-9690",
+            "openingHours": [
+              {
+                "days": "Daily",
+                "hours": "10:00–20:00"
+              }
+            ],
+            "detailsSourceUrl": "https://www.belbutterwaffle.com/",
+            "additionalSources": [
+              {
+                "label": "Research evidence",
+                "url": "https://nagoyadot.jp/new/106713/"
+              }
+            ]
+          },
+          "tile": {
+            "regionSlug": "nagoya",
+            "kind": "opening",
+            "slug": "bel",
+            "name": "BEL BUTTER WAFFLE — Nagoya Sunroad",
+            "neighborhood": "Meieki",
+            "cuisine": "Waffles",
+            "description": "A newly opened takeaway Liège-waffle counter in Sunroad, with an operator branch listing and published waffle prices.",
+            "address": "Nagoya Underground Mall Sunroad, 4-7-25-saki Meieki, Nakamura-ku, Nagoya",
+            "websiteUrl": "https://www.belbutterwaffle.com/",
+            "checkedAt": "2026-10-16",
+            "recognition": "",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-16/bel-15-995466fb399f3675.webp",
+            "imageCredit": "DAY TO LIFE / BEL BUTTER WAFFLE",
+            "imageSourceUrl": "https://www.belbutterwaffle.com/",
+            "imageNote": "Operator image specifically labelled Nagoya Sunroad shop; proposed shop image rather than verified completed premises.",
+            "openingConfirmed": true,
+            "day": "2026-09-25"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-16/bel-15-995466fb399f3675.webp",
+          "sha256": "995466fb399f3675c81c427c9367ea4fb70f3da5dab2aa32cf3a6c3a515a4bbd",
+          "width": 708,
+          "height": 416,
+          "credit": "DAY TO LIFE / BEL BUTTER WAFFLE",
+          "note": "Operator image specifically labelled Nagoya Sunroad shop; proposed shop image rather than verified completed premises.",
+          "sourcePage": "https://www.belbutterwaffle.com/"
+        }
+      ]
+    }
+  ]
+}

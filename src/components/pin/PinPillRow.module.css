@@ -1,0 +1,36 @@
+.row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-width: 0;
+  width: 100%;
+  white-space: nowrap;
+}
+
+.row > * {
+  flex-shrink: 0;
+}
+
+.row > time,
+.row > :has(time) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.row :global(.pill-compact) {
+  display: inline-flex;
+  align-items: center;
+  min-width: 0;
+  max-width: 100%;
+}
+
+.row :global(.pill-label) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: pre;
+  min-width: 0;
+}
+
+.row :global(.pill-value) {
+  flex-shrink: 0;
+}

@@ -1,0 +1,1587 @@
+{
+  "checkedAt": "2026-10-14",
+  "country": "Japan",
+  "regions": [
+    "nagoya"
+  ],
+  "entries": [
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Yakiniku Saburo — Hara Opens in Hara",
+        "description": "A recently opened yakiniku restaurant with a branch-specific 56-item food menu and 31 drinks, including wagyu bara yakisuki for two.",
+        "sourceUrl": "https://www.hotpepper.jp/strJ004678178/",
+        "address": "1-1401 Hara, Tenpaku-ku, Nagoya",
+        "productName": "Yakiniku Saburo — Hara",
+        "utcStartDateTime": "2026-08-29T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "October 13 operator announcement explicitly confirms 2026-08-29 opening at this exact address; exact branch booking/menu pages corroborate the branch identity.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Nagoya",
+          "Japan",
+          "Hara",
+          "Yakiniku"
+        ],
+        "longFormSummary": "<p>A recently opened yakiniku restaurant with a branch-specific 56-item food menu and 31 drinks, including wagyu bara yakisuki for two.<cite data-ref=\"https://www.hotpepper.jp/strJ004678178/\"></cite></p><p>October 13 operator announcement explicitly confirms 2026-08-29 opening at this exact address; exact branch booking/menu pages corroborate the branch identity.</p>",
+        "references": [
+          {
+            "url": "https://www.hotpepper.jp/strJ004678178/",
+            "title": "Yakiniku Saburo — Hara source",
+            "confidence": 90,
+            "reasoning": "October 13 operator announcement explicitly confirms 2026-08-29 opening at this exact address; exact branch booking/menu pages corroborate the branch identity."
+          },
+          {
+            "url": "https://prtimes.jp/main/html/rd/p/000000033.000033002.html",
+            "title": "Yakiniku Saburo — Hara source",
+            "confidence": 90,
+            "reasoning": "October 13 operator announcement explicitly confirms 2026-08-29 opening at this exact address; exact branch booking/menu pages corroborate the branch identity."
+          },
+          {
+            "url": "https://www.hotpepper.jp/strJ004678178/photo/",
+            "title": "Yakiniku Saburo — Hara source",
+            "confidence": 90,
+            "reasoning": "October 13 operator announcement explicitly confirms 2026-08-29 opening at this exact address; exact branch booking/menu pages corroborate the branch identity."
+          },
+          {
+            "url": "https://tanakaya-foodservice.my.canva.site",
+            "title": "Yakiniku Saburo — Hara source",
+            "confidence": 90,
+            "reasoning": "October 13 operator announcement explicitly confirms 2026-08-29 opening at this exact address; exact branch booking/menu pages corroborate the branch identity."
+          },
+          {
+            "url": "https://www.hotpepper.jp/strJ004678178/food/",
+            "title": "Yakiniku Saburo — Hara source",
+            "confidence": 90,
+            "reasoning": "October 13 operator announcement explicitly confirms 2026-08-29 opening at this exact address; exact branch booking/menu pages corroborate the branch identity."
+          },
+          {
+            "url": "https://www.hotpepper.jp/strJ004678178/drink/",
+            "title": "Yakiniku Saburo — Hara source",
+            "confidence": 90,
+            "reasoning": "October 13 operator announcement explicitly confirms 2026-08-29 opening at this exact address; exact branch booking/menu pages corroborate the branch identity."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://www.hotpepper.jp/strJ004678178/",
+          "menu": {
+            "pinSourceUrl": "https://www.hotpepper.jp/strJ004678178/",
+            "name": "Yakiniku Saburo — Hara",
+            "checkedAt": "2026-10-14",
+            "menus": [
+              {
+                "label": "Published food menu",
+                "url": "https://www.hotpepper.jp/strJ004678178/food/",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "ヒレ厚切り",
+                    "price": 3300
+                  },
+                  {
+                    "name": "和牛バラ焼きすき (2人前)",
+                    "price": 1650
+                  },
+                  {
+                    "name": "上タン",
+                    "price": 1320
+                  },
+                  {
+                    "name": "並タン",
+                    "price": 968
+                  },
+                  {
+                    "name": "ヒレ焼き",
+                    "price": 1540
+                  },
+                  {
+                    "name": "ハラミ",
+                    "price": 1320
+                  },
+                  {
+                    "name": "上ロース",
+                    "price": 1848
+                  },
+                  {
+                    "name": "並ロース",
+                    "price": 968
+                  },
+                  {
+                    "name": "サガリ",
+                    "price": 858
+                  },
+                  {
+                    "name": "上カルビ",
+                    "price": 1188
+                  },
+                  {
+                    "name": "三郎カルビ",
+                    "price": 968
+                  },
+                  {
+                    "name": "ホルモン盛り",
+                    "price": 1650
+                  },
+                  {
+                    "name": "和牛ホルモン",
+                    "price": 748
+                  },
+                  {
+                    "name": "テッチャン",
+                    "price": 748
+                  },
+                  {
+                    "name": "ミノ",
+                    "price": 1078
+                  },
+                  {
+                    "name": "ハツ",
+                    "price": 748
+                  },
+                  {
+                    "name": "レバー",
+                    "price": 748
+                  },
+                  {
+                    "name": "名物みそとんちゃん (2人前)",
+                    "price": 935
+                  },
+                  {
+                    "name": "豚カルビ",
+                    "price": 638
+                  },
+                  {
+                    "name": "ネギシオサムギョプサル (2人前)",
+                    "price": 1320
+                  },
+                  {
+                    "name": "鳥焼肉",
+                    "price": 638
+                  },
+                  {
+                    "name": "ソーセージ",
+                    "price": 748
+                  },
+                  {
+                    "name": "玉ねぎ",
+                    "price": 418
+                  },
+                  {
+                    "name": "白ネギ",
+                    "price": 418
+                  },
+                  {
+                    "name": "シイタケ",
+                    "price": 418
+                  },
+                  {
+                    "name": "ししとう",
+                    "price": 418
+                  },
+                  {
+                    "name": "焼き野菜盛り",
+                    "price": 660
+                  },
+                  {
+                    "name": "センマイ刺し",
+                    "price": 660
+                  },
+                  {
+                    "name": "レバーのオイル焼き",
+                    "price": 990
+                  },
+                  {
+                    "name": "鉄板焼きユッケ",
+                    "price": 1320
+                  },
+                  {
+                    "name": "ハクサイ",
+                    "price": 550
+                  },
+                  {
+                    "name": "キュウリ",
+                    "price": 550
+                  },
+                  {
+                    "name": "カクテキ",
+                    "price": 550
+                  },
+                  {
+                    "name": "少し辛い 豆モヤシ",
+                    "price": 550
+                  },
+                  {
+                    "name": "キムチ盛り",
+                    "price": 858
+                  },
+                  {
+                    "name": "ナムル盛り",
+                    "price": 858
+                  },
+                  {
+                    "name": "韓国サラダ",
+                    "price": 858
+                  },
+                  {
+                    "name": "トマトサラダ",
+                    "price": 968
+                  },
+                  {
+                    "name": "塩キャベツ",
+                    "price": 528
+                  },
+                  {
+                    "name": "サンチュ (包み菜)",
+                    "price": 418
+                  },
+                  {
+                    "name": "三郎冷麺",
+                    "price": 880
+                  },
+                  {
+                    "name": "ビビン麺 (辛口)",
+                    "price": 880
+                  },
+                  {
+                    "name": "名物辛麺 (激辛)",
+                    "price": 990
+                  },
+                  {
+                    "name": "玉子スープ",
+                    "price": 660
+                  },
+                  {
+                    "name": "わかめスープ",
+                    "price": 660
+                  },
+                  {
+                    "name": "ユッケジャンスープ",
+                    "price": 968
+                  },
+                  {
+                    "name": "テールスープ",
+                    "price": 1320
+                  },
+                  {
+                    "name": "白飯 (大盛り無料)",
+                    "price": 330
+                  },
+                  {
+                    "name": "ビビンバ",
+                    "price": 880
+                  },
+                  {
+                    "name": "三郎カレー",
+                    "price": 550
+                  },
+                  {
+                    "name": "三郎の牛丼",
+                    "price": 660
+                  },
+                  {
+                    "name": "玉子クッパ",
+                    "price": 748
+                  },
+                  {
+                    "name": "ユッケジャンクッパ",
+                    "price": 1078
+                  },
+                  {
+                    "name": "杏仁豆腐",
+                    "price": 385
+                  },
+                  {
+                    "name": "プリン",
+                    "price": 550
+                  },
+                  {
+                    "name": "ハーゲンダッツ (バニラ)",
+                    "price": 418
+                  }
+                ],
+                "note": "Tax-inclusive prices transcribed from this exact branch’s published menu; no prices borrowed from another branch. The operator announcement repeats wagyu bara yakisuki at ¥935; this branch menu identifies ¥935 as miso tonchan for two. Wagyu bara yakisuki for two is ¥1,650. Checked operator announcement, company website, exact branch food/drink/course pages and linked galleries. Only seat reservations are listed, with no verified food discount or timed promotion; no Specials invented from normal prices. Sister Yakiniku Jiro recognition is not this branch’s award. Operator announcement lists last order 23:30; current exact branch lists food/drinks last order 23:00, shown conservatively pending confirmation. Linked own owst home/food/gallery could not be downloaded; accessible exact branch Hot Pepper menu/gallery used instead. Operator PR links unrelated Hidamari Shokudo Instagram; it is excluded. Hiroshima yakinikusaburo0104.com is another restaurant and is excluded. Instagram was checked but returned no readable gallery content. Corporate Canva page returned only a JavaScript shell."
+              },
+              {
+                "label": "Published drink menu",
+                "url": "https://www.hotpepper.jp/strJ004678178/drink/",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "生中",
+                    "price": 638
+                  },
+                  {
+                    "name": "生小",
+                    "price": 418
+                  },
+                  {
+                    "name": "瓶ビール",
+                    "price": 638
+                  },
+                  {
+                    "name": "オールフリー",
+                    "price": 550
+                  },
+                  {
+                    "name": "ハイボール",
+                    "price": 550
+                  },
+                  {
+                    "name": "ジンジャーハイボール",
+                    "price": 550
+                  },
+                  {
+                    "name": "コーラハイボール",
+                    "price": 550
+                  },
+                  {
+                    "name": "ウーロンハイ",
+                    "price": 550
+                  },
+                  {
+                    "name": "緑茶ハイ",
+                    "price": 550
+                  },
+                  {
+                    "name": "ジャスミンハイ",
+                    "price": 550
+                  },
+                  {
+                    "name": "焼酎 芋",
+                    "price": 550
+                  },
+                  {
+                    "name": "焼酎 芋 やかん割り",
+                    "price": 2750
+                  },
+                  {
+                    "name": "焼酎 麦",
+                    "price": 550
+                  },
+                  {
+                    "name": "焼酎 麦 やかん割り",
+                    "price": 2750
+                  },
+                  {
+                    "name": "梅酒",
+                    "price": 550
+                  },
+                  {
+                    "name": "レモン酎ハイ",
+                    "price": 550
+                  },
+                  {
+                    "name": "トマト酎ハイ",
+                    "price": 550
+                  },
+                  {
+                    "name": "ジン",
+                    "price": 638
+                  },
+                  {
+                    "name": "ウォッカ",
+                    "price": 638
+                  },
+                  {
+                    "name": "カシス",
+                    "price": 638
+                  },
+                  {
+                    "name": "グラスワイン 赤",
+                    "price": 748
+                  },
+                  {
+                    "name": "グラスワイン 白",
+                    "price": 748
+                  },
+                  {
+                    "name": "グラス",
+                    "price": 638
+                  },
+                  {
+                    "name": "やかんマッコリ",
+                    "price": 2750
+                  },
+                  {
+                    "name": "烏龍茶",
+                    "price": 352
+                  },
+                  {
+                    "name": "緑茶",
+                    "price": 352
+                  },
+                  {
+                    "name": "ジャスミン茶",
+                    "price": 352
+                  },
+                  {
+                    "name": "コーラ",
+                    "price": 352
+                  },
+                  {
+                    "name": "ジンジャーエール",
+                    "price": 352
+                  },
+                  {
+                    "name": "オレンジジュース",
+                    "price": 352
+                  },
+                  {
+                    "name": "りんごジュース",
+                    "price": 352
+                  }
+                ],
+                "note": "Tax-inclusive prices transcribed from this exact branch’s published menu; no prices borrowed from another branch. The operator announcement repeats wagyu bara yakisuki at ¥935; this branch menu identifies ¥935 as miso tonchan for two. Wagyu bara yakisuki for two is ¥1,650. Checked operator announcement, company website, exact branch food/drink/course pages and linked galleries. Only seat reservations are listed, with no verified food discount or timed promotion; no Specials invented from normal prices. Sister Yakiniku Jiro recognition is not this branch’s award. Operator announcement lists last order 23:30; current exact branch lists food/drinks last order 23:00, shown conservatively pending confirmation."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://www.hotpepper.jp/strJ004678178/",
+            "name": "Yakiniku Saburo — Hara",
+            "checkedAt": "2026-10-14",
+            "websiteUrl": "https://www.hotpepper.jp/strJ004678178/",
+            "phone": "052-800-8255",
+            "openingHours": [
+              {
+                "days": "Weekdays",
+                "hours": "17:00–24:00; food/drink last order 23:00"
+              },
+              {
+                "days": "Weekends and public holidays",
+                "hours": "16:00–24:00; food/drink last order 23:00"
+              }
+            ],
+            "detailsSourceUrl": "https://www.hotpepper.jp/strJ004678178/",
+            "additionalSources": [
+              {
+                "label": "Research evidence",
+                "url": "https://prtimes.jp/main/html/rd/p/000000033.000033002.html"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://www.hotpepper.jp/strJ004678178/photo/"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://tanakaya-foodservice.my.canva.site"
+              }
+            ],
+            "reservationUrl": "https://www.hotpepper.jp/strJ004678178/course/"
+          },
+          "tile": {
+            "regionSlug": "nagoya",
+            "kind": "opening",
+            "slug": "saburo23-hp-hara",
+            "name": "Yakiniku Saburo — Hara",
+            "neighborhood": "Hara",
+            "cuisine": "Yakiniku",
+            "description": "A recently opened yakiniku restaurant with a branch-specific 56-item food menu and 31 drinks, including wagyu bara yakisuki for two.",
+            "address": "1-1401 Hara, Tenpaku-ku, Nagoya",
+            "websiteUrl": "https://www.hotpepper.jp/strJ004678178/",
+            "checkedAt": "2026-10-14",
+            "recognition": "",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/nagoya/japan-30-2026-10-13/saburo23-hp-hara-1-9070df26b12877f5.webp",
+            "imageCredit": "Yakiniku Saburo / branch-published Hot Pepper gallery",
+            "imageSourceUrl": "https://www.hotpepper.jp/strJ004678178/photo/",
+            "imageNote": "Branch exterior",
+            "openingConfirmed": true,
+            "day": "2026-08-29"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/nagoya/japan-30-2026-10-13/saburo23-hp-hara-1-9070df26b12877f5.webp",
+          "sha256": "9070df26b12877f5c42bda3f80617771d13d67b7dcdcf17c97efe1007946af4e",
+          "width": 480,
+          "height": 479,
+          "credit": "Yakiniku Saburo / branch-published Hot Pepper gallery",
+          "note": "Branch exterior",
+          "sourcePage": "https://www.hotpepper.jp/strJ004678178/photo/"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/nagoya/japan-30-2026-10-13/saburo23-hp-hara-3-a12683ac0d4cdab7.webp",
+          "sha256": "a12683ac0d4cdab79271fd5c15bad7eda30d6d0425e0d92f4eeba380e2467f32",
+          "width": 478,
+          "height": 480,
+          "credit": "Yakiniku Saburo / branch-published Hot Pepper gallery",
+          "note": "Branch dining room",
+          "sourcePage": "https://www.hotpepper.jp/strJ004678178/photo/"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/nagoya/japan-30-2026-10-13/saburo23-hp-hara-102-bbce45e88125e962.webp",
+          "sha256": "bbce45e88125e9622295e8f2d45611004cb880d4e8910c48ee8aea67b7b00971",
+          "width": 900,
+          "height": 1350,
+          "credit": "Tanakaya FOOD SERVICE / Cosmic Holdings",
+          "note": "Upper tongue — operator shared brand food illustration; not a branch-room photograph",
+          "sourcePage": "https://prtimes.jp/main/html/rd/p/000000033.000033002.html"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/nagoya/japan-30-2026-10-13/saburo23-hp-hara-104-3a62ba0dee56c271.webp",
+          "sha256": "3a62ba0dee56c271e1b8ba50119a3d6de70e553d81cf10e0357a15b7bad74e42",
+          "width": 900,
+          "height": 1350,
+          "credit": "Tanakaya FOOD SERVICE / Cosmic Holdings",
+          "note": "Wagyu bara yakisuki — operator shared brand food illustration; not a branch-room photograph",
+          "sourcePage": "https://prtimes.jp/main/html/rd/p/000000033.000033002.html"
+        }
+      ]
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Yakiniku Saburo — Tsubakicho Opens in Nagoya Station",
+        "description": "A recently opened yakiniku restaurant with a branch-specific 56-item food menu and 31 drinks, including wagyu bara yakisuki for two.",
+        "sourceUrl": "https://www.hotpepper.jp/strJ004698083/",
+        "address": "4F Sun Meieki Tsubaki Building, 10-21 Tsubakicho, Nakamura-ku, Nagoya",
+        "productName": "Yakiniku Saburo — Tsubakicho",
+        "utcStartDateTime": "2026-10-02T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "October 13 operator announcement explicitly confirms 2026-10-02 opening at this exact address; exact branch booking/menu pages corroborate the branch identity.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Nagoya",
+          "Japan",
+          "Nagoya Station",
+          "Yakiniku"
+        ],
+        "longFormSummary": "<p>A recently opened yakiniku restaurant with a branch-specific 56-item food menu and 31 drinks, including wagyu bara yakisuki for two.<cite data-ref=\"https://www.hotpepper.jp/strJ004698083/\"></cite></p><p>October 13 operator announcement explicitly confirms 2026-10-02 opening at this exact address; exact branch booking/menu pages corroborate the branch identity.</p>",
+        "references": [
+          {
+            "url": "https://www.hotpepper.jp/strJ004698083/",
+            "title": "Yakiniku Saburo — Tsubakicho source",
+            "confidence": 90,
+            "reasoning": "October 13 operator announcement explicitly confirms 2026-10-02 opening at this exact address; exact branch booking/menu pages corroborate the branch identity."
+          },
+          {
+            "url": "https://prtimes.jp/main/html/rd/p/000000033.000033002.html",
+            "title": "Yakiniku Saburo — Tsubakicho source",
+            "confidence": 90,
+            "reasoning": "October 13 operator announcement explicitly confirms 2026-10-02 opening at this exact address; exact branch booking/menu pages corroborate the branch identity."
+          },
+          {
+            "url": "https://www.hotpepper.jp/strJ004698083/photo/",
+            "title": "Yakiniku Saburo — Tsubakicho source",
+            "confidence": 90,
+            "reasoning": "October 13 operator announcement explicitly confirms 2026-10-02 opening at this exact address; exact branch booking/menu pages corroborate the branch identity."
+          },
+          {
+            "url": "https://tanakaya-foodservice.my.canva.site",
+            "title": "Yakiniku Saburo — Tsubakicho source",
+            "confidence": 90,
+            "reasoning": "October 13 operator announcement explicitly confirms 2026-10-02 opening at this exact address; exact branch booking/menu pages corroborate the branch identity."
+          },
+          {
+            "url": "https://www.hotpepper.jp/strJ004698083/food/",
+            "title": "Yakiniku Saburo — Tsubakicho source",
+            "confidence": 90,
+            "reasoning": "October 13 operator announcement explicitly confirms 2026-10-02 opening at this exact address; exact branch booking/menu pages corroborate the branch identity."
+          },
+          {
+            "url": "https://www.hotpepper.jp/strJ004698083/drink/",
+            "title": "Yakiniku Saburo — Tsubakicho source",
+            "confidence": 90,
+            "reasoning": "October 13 operator announcement explicitly confirms 2026-10-02 opening at this exact address; exact branch booking/menu pages corroborate the branch identity."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://www.hotpepper.jp/strJ004698083/",
+          "menu": {
+            "pinSourceUrl": "https://www.hotpepper.jp/strJ004698083/",
+            "name": "Yakiniku Saburo — Tsubakicho",
+            "checkedAt": "2026-10-14",
+            "menus": [
+              {
+                "label": "Published food menu",
+                "url": "https://www.hotpepper.jp/strJ004698083/food/",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "ヒレ厚切り",
+                    "price": 3300
+                  },
+                  {
+                    "name": "和牛バラ焼きすき (2人前)",
+                    "price": 1650
+                  },
+                  {
+                    "name": "上タン",
+                    "price": 1320
+                  },
+                  {
+                    "name": "並タン",
+                    "price": 968
+                  },
+                  {
+                    "name": "ヒレ焼き",
+                    "price": 1540
+                  },
+                  {
+                    "name": "ハラミ",
+                    "price": 1320
+                  },
+                  {
+                    "name": "上ロース",
+                    "price": 1848
+                  },
+                  {
+                    "name": "並ロース",
+                    "price": 968
+                  },
+                  {
+                    "name": "サガリ",
+                    "price": 858
+                  },
+                  {
+                    "name": "上カルビ",
+                    "price": 1188
+                  },
+                  {
+                    "name": "三郎カルビ",
+                    "price": 968
+                  },
+                  {
+                    "name": "ホルモン盛り",
+                    "price": 1650
+                  },
+                  {
+                    "name": "和牛ホルモン",
+                    "price": 748
+                  },
+                  {
+                    "name": "テッチャン",
+                    "price": 748
+                  },
+                  {
+                    "name": "ミノ",
+                    "price": 1078
+                  },
+                  {
+                    "name": "ハツ",
+                    "price": 748
+                  },
+                  {
+                    "name": "レバー",
+                    "price": 748
+                  },
+                  {
+                    "name": "名物みそとんちゃん (2人前)",
+                    "price": 935
+                  },
+                  {
+                    "name": "豚カルビ",
+                    "price": 638
+                  },
+                  {
+                    "name": "ネギシオサムギョプサル (2人前)",
+                    "price": 1320
+                  },
+                  {
+                    "name": "鳥焼肉",
+                    "price": 638
+                  },
+                  {
+                    "name": "ソーセージ",
+                    "price": 748
+                  },
+                  {
+                    "name": "玉ねぎ",
+                    "price": 418
+                  },
+                  {
+                    "name": "白ネギ",
+                    "price": 418
+                  },
+                  {
+                    "name": "シイタケ",
+                    "price": 418
+                  },
+                  {
+                    "name": "ししとう",
+                    "price": 418
+                  },
+                  {
+                    "name": "焼き野菜盛り",
+                    "price": 660
+                  },
+                  {
+                    "name": "センマイ刺し",
+                    "price": 660
+                  },
+                  {
+                    "name": "レバーのオイル焼き",
+                    "price": 990
+                  },
+                  {
+                    "name": "鉄板焼きユッケ",
+                    "price": 1320
+                  },
+                  {
+                    "name": "ハクサイ",
+                    "price": 550
+                  },
+                  {
+                    "name": "キュウリ",
+                    "price": 550
+                  },
+                  {
+                    "name": "カクテキ",
+                    "price": 550
+                  },
+                  {
+                    "name": "少し辛い 豆モヤシ",
+                    "price": 550
+                  },
+                  {
+                    "name": "キムチ盛り",
+                    "price": 858
+                  },
+                  {
+                    "name": "ナムル盛り",
+                    "price": 858
+                  },
+                  {
+                    "name": "韓国サラダ",
+                    "price": 858
+                  },
+                  {
+                    "name": "トマトサラダ",
+                    "price": 968
+                  },
+                  {
+                    "name": "塩キャベツ",
+                    "price": 528
+                  },
+                  {
+                    "name": "サンチュ (包み菜)",
+                    "price": 418
+                  },
+                  {
+                    "name": "三郎冷麺",
+                    "price": 880
+                  },
+                  {
+                    "name": "ビビン麺 (辛口)",
+                    "price": 880
+                  },
+                  {
+                    "name": "名物辛麺 (激辛)",
+                    "price": 990
+                  },
+                  {
+                    "name": "玉子スープ",
+                    "price": 660
+                  },
+                  {
+                    "name": "わかめスープ",
+                    "price": 660
+                  },
+                  {
+                    "name": "ユッケジャンスープ",
+                    "price": 968
+                  },
+                  {
+                    "name": "テールスープ",
+                    "price": 1320
+                  },
+                  {
+                    "name": "白飯 (大盛り無料)",
+                    "price": 330
+                  },
+                  {
+                    "name": "ビビンバ",
+                    "price": 880
+                  },
+                  {
+                    "name": "三郎カレー",
+                    "price": 550
+                  },
+                  {
+                    "name": "三郎の牛丼",
+                    "price": 660
+                  },
+                  {
+                    "name": "玉子クッパ",
+                    "price": 748
+                  },
+                  {
+                    "name": "ユッケジャンクッパ",
+                    "price": 1078
+                  },
+                  {
+                    "name": "杏仁豆腐",
+                    "price": 385
+                  },
+                  {
+                    "name": "プリン",
+                    "price": 550
+                  },
+                  {
+                    "name": "ハーゲンダッツ (バニラ)",
+                    "price": 418
+                  }
+                ],
+                "note": "Tax-inclusive prices transcribed from this exact branch’s published menu; no prices borrowed from another branch. The operator announcement repeats wagyu bara yakisuki at ¥935; this branch menu identifies ¥935 as miso tonchan for two. Wagyu bara yakisuki for two is ¥1,650. Checked operator announcement, company website, exact branch food/drink/course pages and linked galleries. Only seat reservations are listed, with no verified food discount or timed promotion; no Specials invented from normal prices. Sister Yakiniku Jiro recognition is not this branch’s award. Operator announcement lists last order 23:30; current exact branch lists food/drinks last order 23:00, shown conservatively pending confirmation. Current Hot Pepper lists 40 seats whereas operator-published Tabelog lists 38; capacity remains unresolved. Both primary operator and current branch title confirm October 2; an older local September 20 report is not used. Operator PR links unrelated Hidamari Shokudo Instagram; it is excluded. Hiroshima yakinikusaburo0104.com is another restaurant and is excluded. Instagram was checked but returned no readable gallery content. Corporate Canva page returned only a JavaScript shell."
+              },
+              {
+                "label": "Published drink menu",
+                "url": "https://www.hotpepper.jp/strJ004698083/drink/",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "生中",
+                    "price": 638
+                  },
+                  {
+                    "name": "生小",
+                    "price": 418
+                  },
+                  {
+                    "name": "瓶ビール",
+                    "price": 638
+                  },
+                  {
+                    "name": "オールフリー",
+                    "price": 550
+                  },
+                  {
+                    "name": "ハイボール",
+                    "price": 550
+                  },
+                  {
+                    "name": "ジンジャーハイボール",
+                    "price": 550
+                  },
+                  {
+                    "name": "コーラハイボール",
+                    "price": 550
+                  },
+                  {
+                    "name": "ウーロンハイ",
+                    "price": 550
+                  },
+                  {
+                    "name": "緑茶ハイ",
+                    "price": 550
+                  },
+                  {
+                    "name": "ジャスミンハイ",
+                    "price": 550
+                  },
+                  {
+                    "name": "焼酎 芋",
+                    "price": 550
+                  },
+                  {
+                    "name": "焼酎 芋 やかん割り",
+                    "price": 2750
+                  },
+                  {
+                    "name": "焼酎 麦",
+                    "price": 550
+                  },
+                  {
+                    "name": "焼酎 麦 やかん割り",
+                    "price": 2750
+                  },
+                  {
+                    "name": "梅酒",
+                    "price": 550
+                  },
+                  {
+                    "name": "レモン酎ハイ",
+                    "price": 550
+                  },
+                  {
+                    "name": "トマト酎ハイ",
+                    "price": 550
+                  },
+                  {
+                    "name": "ジン",
+                    "price": 638
+                  },
+                  {
+                    "name": "ウォッカ",
+                    "price": 638
+                  },
+                  {
+                    "name": "カシス",
+                    "price": 638
+                  },
+                  {
+                    "name": "グラスワイン 赤",
+                    "price": 748
+                  },
+                  {
+                    "name": "グラスワイン 白",
+                    "price": 748
+                  },
+                  {
+                    "name": "グラス",
+                    "price": 638
+                  },
+                  {
+                    "name": "やかんマッコリ",
+                    "price": 2750
+                  },
+                  {
+                    "name": "烏龍茶",
+                    "price": 352
+                  },
+                  {
+                    "name": "緑茶",
+                    "price": 352
+                  },
+                  {
+                    "name": "ジャスミン茶",
+                    "price": 352
+                  },
+                  {
+                    "name": "コーラ",
+                    "price": 352
+                  },
+                  {
+                    "name": "ジンジャーエール",
+                    "price": 352
+                  },
+                  {
+                    "name": "オレンジジュース",
+                    "price": 352
+                  },
+                  {
+                    "name": "りんごジュース",
+                    "price": 352
+                  }
+                ],
+                "note": "Tax-inclusive prices transcribed from this exact branch’s published menu; no prices borrowed from another branch. The operator announcement repeats wagyu bara yakisuki at ¥935; this branch menu identifies ¥935 as miso tonchan for two. Wagyu bara yakisuki for two is ¥1,650. Checked operator announcement, company website, exact branch food/drink/course pages and linked galleries. Only seat reservations are listed, with no verified food discount or timed promotion; no Specials invented from normal prices. Sister Yakiniku Jiro recognition is not this branch’s award. Operator announcement lists last order 23:30; current exact branch lists food/drinks last order 23:00, shown conservatively pending confirmation."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://www.hotpepper.jp/strJ004698083/",
+            "name": "Yakiniku Saburo — Tsubakicho",
+            "checkedAt": "2026-10-14",
+            "websiteUrl": "https://www.hotpepper.jp/strJ004698083/",
+            "phone": "052-459-3929",
+            "openingHours": [
+              {
+                "days": "Daily",
+                "hours": "17:00–24:00; food/drink last order 23:00"
+              }
+            ],
+            "detailsSourceUrl": "https://www.hotpepper.jp/strJ004698083/",
+            "additionalSources": [
+              {
+                "label": "Research evidence",
+                "url": "https://prtimes.jp/main/html/rd/p/000000033.000033002.html"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://www.hotpepper.jp/strJ004698083/photo/"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://tanakaya-foodservice.my.canva.site"
+              }
+            ],
+            "reservationUrl": "https://www.hotpepper.jp/strJ004698083/course/"
+          },
+          "tile": {
+            "regionSlug": "nagoya",
+            "kind": "opening",
+            "slug": "saburo23-hp-tsubaki",
+            "name": "Yakiniku Saburo — Tsubakicho",
+            "neighborhood": "Nagoya Station",
+            "cuisine": "Yakiniku",
+            "description": "A recently opened yakiniku restaurant with a branch-specific 56-item food menu and 31 drinks, including wagyu bara yakisuki for two.",
+            "address": "4F Sun Meieki Tsubaki Building, 10-21 Tsubakicho, Nakamura-ku, Nagoya",
+            "websiteUrl": "https://www.hotpepper.jp/strJ004698083/",
+            "checkedAt": "2026-10-14",
+            "recognition": "",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/nagoya/japan-30-2026-10-13/saburo23-hp-tsubaki-9-4acbc112dda1e81c.webp",
+            "imageCredit": "Yakiniku Saburo / branch-published Hot Pepper gallery",
+            "imageSourceUrl": "https://www.hotpepper.jp/strJ004698083/photo/",
+            "imageNote": "Branch exterior",
+            "openingConfirmed": true,
+            "day": "2026-10-02"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/nagoya/japan-30-2026-10-13/saburo23-hp-tsubaki-9-4acbc112dda1e81c.webp",
+          "sha256": "4acbc112dda1e81c5d8e2e4fa6525f1b02223ea5c7eef2b576c14cf0a6404aad",
+          "width": 480,
+          "height": 480,
+          "credit": "Yakiniku Saburo / branch-published Hot Pepper gallery",
+          "note": "Branch exterior",
+          "sourcePage": "https://www.hotpepper.jp/strJ004698083/photo/"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/nagoya/japan-30-2026-10-13/saburo23-hp-tsubaki-13-b30df92af6092248.webp",
+          "sha256": "b30df92af6092248ebf8ca4ecadfc0d32fa6662bd1a8bf05480ae73dfa864ad1",
+          "width": 480,
+          "height": 479,
+          "credit": "Yakiniku Saburo / branch-published Hot Pepper gallery",
+          "note": "Branch dining room",
+          "sourcePage": "https://www.hotpepper.jp/strJ004698083/photo/"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/nagoya/japan-30-2026-10-13/saburo23-hp-tsubaki-102-bbce45e88125e962.webp",
+          "sha256": "bbce45e88125e9622295e8f2d45611004cb880d4e8910c48ee8aea67b7b00971",
+          "width": 900,
+          "height": 1350,
+          "credit": "Tanakaya FOOD SERVICE / Cosmic Holdings",
+          "note": "Upper tongue — operator shared brand food illustration; not a branch-room photograph",
+          "sourcePage": "https://prtimes.jp/main/html/rd/p/000000033.000033002.html"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/nagoya/japan-30-2026-10-13/saburo23-hp-tsubaki-104-3a62ba0dee56c271.webp",
+          "sha256": "3a62ba0dee56c271e1b8ba50119a3d6de70e553d81cf10e0357a15b7bad74e42",
+          "width": 900,
+          "height": 1350,
+          "credit": "Tanakaya FOOD SERVICE / Cosmic Holdings",
+          "note": "Wagyu bara yakisuki — operator shared brand food illustration; not a branch-room photograph",
+          "sourcePage": "https://prtimes.jp/main/html/rd/p/000000033.000033002.html"
+        }
+      ]
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Yakiniku Saburo — Meieki West Exit Opens in Nagoya Station",
+        "description": "A planned Nagoya Station west-exit yakiniku restaurant with a published 56-item food menu and 30 drinks.",
+        "sourceUrl": "https://www.hotpepper.jp/strJ004698084/",
+        "address": "1-34 Tsubakicho, Nakamura-ku, Nagoya",
+        "productName": "Yakiniku Saburo — Meieki West Exit",
+        "utcStartDateTime": "2026-11-06T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "October 13 operator announcement explicitly confirms planned 2026-11-06 opening at this exact address; exact branch booking/menu pages corroborate the branch identity.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Nagoya",
+          "Japan",
+          "Nagoya Station",
+          "Yakiniku"
+        ],
+        "longFormSummary": "<p>A planned Nagoya Station west-exit yakiniku restaurant with a published 56-item food menu and 30 drinks.<cite data-ref=\"https://www.hotpepper.jp/strJ004698084/\"></cite></p><p>October 13 operator announcement explicitly confirms planned 2026-11-06 opening at this exact address; exact branch booking/menu pages corroborate the branch identity.</p>",
+        "references": [
+          {
+            "url": "https://www.hotpepper.jp/strJ004698084/",
+            "title": "Yakiniku Saburo — Meieki West Exit source",
+            "confidence": 90,
+            "reasoning": "October 13 operator announcement explicitly confirms planned 2026-11-06 opening at this exact address; exact branch booking/menu pages corroborate the branch identity."
+          },
+          {
+            "url": "https://prtimes.jp/main/html/rd/p/000000033.000033002.html",
+            "title": "Yakiniku Saburo — Meieki West Exit source",
+            "confidence": 90,
+            "reasoning": "October 13 operator announcement explicitly confirms planned 2026-11-06 opening at this exact address; exact branch booking/menu pages corroborate the branch identity."
+          },
+          {
+            "url": "https://www.hotpepper.jp/strJ004698084/photo/",
+            "title": "Yakiniku Saburo — Meieki West Exit source",
+            "confidence": 90,
+            "reasoning": "October 13 operator announcement explicitly confirms planned 2026-11-06 opening at this exact address; exact branch booking/menu pages corroborate the branch identity."
+          },
+          {
+            "url": "https://tanakaya-foodservice.my.canva.site",
+            "title": "Yakiniku Saburo — Meieki West Exit source",
+            "confidence": 90,
+            "reasoning": "October 13 operator announcement explicitly confirms planned 2026-11-06 opening at this exact address; exact branch booking/menu pages corroborate the branch identity."
+          },
+          {
+            "url": "https://www.hotpepper.jp/strJ004698084/food/",
+            "title": "Yakiniku Saburo — Meieki West Exit source",
+            "confidence": 90,
+            "reasoning": "October 13 operator announcement explicitly confirms planned 2026-11-06 opening at this exact address; exact branch booking/menu pages corroborate the branch identity."
+          },
+          {
+            "url": "https://www.hotpepper.jp/strJ004698084/drink/",
+            "title": "Yakiniku Saburo — Meieki West Exit source",
+            "confidence": 90,
+            "reasoning": "October 13 operator announcement explicitly confirms planned 2026-11-06 opening at this exact address; exact branch booking/menu pages corroborate the branch identity."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://www.hotpepper.jp/strJ004698084/",
+          "menu": {
+            "pinSourceUrl": "https://www.hotpepper.jp/strJ004698084/",
+            "name": "Yakiniku Saburo — Meieki West Exit",
+            "checkedAt": "2026-10-14",
+            "menus": [
+              {
+                "label": "Published food menu",
+                "url": "https://www.hotpepper.jp/strJ004698084/food/",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "ヒレ厚切り",
+                    "price": 3300
+                  },
+                  {
+                    "name": "和牛バラ焼きすき (2人前)",
+                    "price": 1650
+                  },
+                  {
+                    "name": "上タン",
+                    "price": 1320
+                  },
+                  {
+                    "name": "並タン",
+                    "price": 968
+                  },
+                  {
+                    "name": "ヒレ焼き",
+                    "price": 1540
+                  },
+                  {
+                    "name": "ハラミ",
+                    "price": 1320
+                  },
+                  {
+                    "name": "上ロース",
+                    "price": 1848
+                  },
+                  {
+                    "name": "並ロース",
+                    "price": 968
+                  },
+                  {
+                    "name": "サガリ",
+                    "price": 858
+                  },
+                  {
+                    "name": "上カルビ",
+                    "price": 1188
+                  },
+                  {
+                    "name": "三郎カルビ",
+                    "price": 968
+                  },
+                  {
+                    "name": "ホルモン盛り",
+                    "price": 1650
+                  },
+                  {
+                    "name": "和牛ホルモン",
+                    "price": 748
+                  },
+                  {
+                    "name": "テッチャン",
+                    "price": 748
+                  },
+                  {
+                    "name": "ミノ",
+                    "price": 1078
+                  },
+                  {
+                    "name": "ハツ",
+                    "price": 748
+                  },
+                  {
+                    "name": "レバー",
+                    "price": 748
+                  },
+                  {
+                    "name": "名物みそとんちゃん (2人前)",
+                    "price": 935
+                  },
+                  {
+                    "name": "豚カルビ",
+                    "price": 638
+                  },
+                  {
+                    "name": "ネギシオサムギョプサル (2人前)",
+                    "price": 1320
+                  },
+                  {
+                    "name": "鳥焼肉",
+                    "price": 638
+                  },
+                  {
+                    "name": "ソーセージ",
+                    "price": 748
+                  },
+                  {
+                    "name": "玉ねぎ",
+                    "price": 418
+                  },
+                  {
+                    "name": "白ネギ",
+                    "price": 418
+                  },
+                  {
+                    "name": "シイタケ",
+                    "price": 418
+                  },
+                  {
+                    "name": "ししとう",
+                    "price": 418
+                  },
+                  {
+                    "name": "焼き野菜盛り",
+                    "price": 660
+                  },
+                  {
+                    "name": "センマイ刺し",
+                    "price": 660
+                  },
+                  {
+                    "name": "レバーのオイル焼き",
+                    "price": 990
+                  },
+                  {
+                    "name": "鉄板焼きユッケ",
+                    "price": 1320
+                  },
+                  {
+                    "name": "ハクサイ",
+                    "price": 550
+                  },
+                  {
+                    "name": "キュウリ",
+                    "price": 550
+                  },
+                  {
+                    "name": "カクテキ",
+                    "price": 550
+                  },
+                  {
+                    "name": "少し辛い 豆モヤシ",
+                    "price": 550
+                  },
+                  {
+                    "name": "キムチ盛り",
+                    "price": 858
+                  },
+                  {
+                    "name": "ナムル盛り",
+                    "price": 858
+                  },
+                  {
+                    "name": "韓国サラダ",
+                    "price": 858
+                  },
+                  {
+                    "name": "トマトサラダ",
+                    "price": 968
+                  },
+                  {
+                    "name": "塩キャベツ",
+                    "price": 528
+                  },
+                  {
+                    "name": "サンチュ (包み菜)",
+                    "price": 418
+                  },
+                  {
+                    "name": "三郎冷麺",
+                    "price": 880
+                  },
+                  {
+                    "name": "ビビン麺 (辛口)",
+                    "price": 880
+                  },
+                  {
+                    "name": "名物辛麺 (激辛)",
+                    "price": 990
+                  },
+                  {
+                    "name": "玉子スープ",
+                    "price": 660
+                  },
+                  {
+                    "name": "わかめスープ",
+                    "price": 660
+                  },
+                  {
+                    "name": "ユッケジャンスープ",
+                    "price": 968
+                  },
+                  {
+                    "name": "テールスープ",
+                    "price": 1320
+                  },
+                  {
+                    "name": "白飯 (大盛り無料)",
+                    "price": 330
+                  },
+                  {
+                    "name": "ビビンバ",
+                    "price": 880
+                  },
+                  {
+                    "name": "三郎カレー",
+                    "price": 550
+                  },
+                  {
+                    "name": "三郎の牛丼",
+                    "price": 660
+                  },
+                  {
+                    "name": "玉子クッパ",
+                    "price": 748
+                  },
+                  {
+                    "name": "ユッケジャンクッパ",
+                    "price": 1078
+                  },
+                  {
+                    "name": "杏仁豆腐",
+                    "price": 385
+                  },
+                  {
+                    "name": "プリン",
+                    "price": 550
+                  },
+                  {
+                    "name": "ハーゲンダッツ (バニラ)",
+                    "price": 418
+                  }
+                ],
+                "note": "Tax-inclusive prices transcribed from this exact branch’s published menu; no prices borrowed from another branch. Planned launch menu, subject to change before November 6 opening. The operator announcement repeats wagyu bara yakisuki at ¥935; this branch menu identifies ¥935 as miso tonchan for two. Wagyu bara yakisuki for two is ¥1,650. Checked operator announcement, company website, exact branch food/drink/course pages and linked galleries. Only seat reservations are listed, with no verified food discount or timed promotion; no Specials invented from normal prices. Sister Yakiniku Jiro recognition is not this branch’s award. Gallery reuses Hara exterior and dining-room photographs: these are excluded as west-exit property images. Correct west-exit frontage/interior remains unpublished. Hot Pepper course page calls the same address Meieki, with November 6 planned opening and no online booking yet; no older suspended Tabelog listing is treated as an earlier opening. Weekend opening conflicts: operator October 13 announcement says 17:00, branch page says 16:00; conservative 17:00 shown pending confirmation. Last order conflicts 23:30 vs current branch 23:00; conservative 23:00 shown. Operator PR links unrelated Hidamari Shokudo Instagram; it is excluded. Hiroshima yakinikusaburo0104.com is another restaurant and is excluded. Instagram was checked but returned no readable gallery content. Corporate Canva page returned only a JavaScript shell."
+              },
+              {
+                "label": "Published drink menu",
+                "url": "https://www.hotpepper.jp/strJ004698084/drink/",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "生中",
+                    "price": 638
+                  },
+                  {
+                    "name": "生小",
+                    "price": 418
+                  },
+                  {
+                    "name": "瓶ビール",
+                    "price": 638
+                  },
+                  {
+                    "name": "ハイボール",
+                    "price": 550
+                  },
+                  {
+                    "name": "ジンジャーハイボール",
+                    "price": 550
+                  },
+                  {
+                    "name": "コーラハイボール",
+                    "price": 550
+                  },
+                  {
+                    "name": "ウーロンハイ",
+                    "price": 550
+                  },
+                  {
+                    "name": "緑茶ハイ",
+                    "price": 550
+                  },
+                  {
+                    "name": "ジャスミンハイ",
+                    "price": 550
+                  },
+                  {
+                    "name": "焼酎 芋",
+                    "price": 550
+                  },
+                  {
+                    "name": "焼酎 芋 やかん割り",
+                    "price": 2750
+                  },
+                  {
+                    "name": "焼酎 麦",
+                    "price": 550
+                  },
+                  {
+                    "name": "焼酎 麦 やかん割り",
+                    "price": 2750
+                  },
+                  {
+                    "name": "梅酒",
+                    "price": 550
+                  },
+                  {
+                    "name": "レモン酎ハイ",
+                    "price": 550
+                  },
+                  {
+                    "name": "トマト酎ハイ",
+                    "price": 550
+                  },
+                  {
+                    "name": "ジン",
+                    "price": 638
+                  },
+                  {
+                    "name": "ウォッカ",
+                    "price": 638
+                  },
+                  {
+                    "name": "カシス",
+                    "price": 638
+                  },
+                  {
+                    "name": "グラスワイン 赤",
+                    "price": 748
+                  },
+                  {
+                    "name": "グラスワイン 白",
+                    "price": 748
+                  },
+                  {
+                    "name": "グラス",
+                    "price": 638
+                  },
+                  {
+                    "name": "やかんマッコリ",
+                    "price": 2750
+                  },
+                  {
+                    "name": "烏龍茶",
+                    "price": 352
+                  },
+                  {
+                    "name": "緑茶",
+                    "price": 352
+                  },
+                  {
+                    "name": "ジャスミン茶",
+                    "price": 352
+                  },
+                  {
+                    "name": "コーラ",
+                    "price": 352
+                  },
+                  {
+                    "name": "ジンジャーエール",
+                    "price": 352
+                  },
+                  {
+                    "name": "オレンジジュース",
+                    "price": 352
+                  },
+                  {
+                    "name": "りんごジュース",
+                    "price": 352
+                  }
+                ],
+                "note": "Tax-inclusive prices transcribed from this exact branch’s published menu; no prices borrowed from another branch. Planned launch menu, subject to change before November 6 opening. The operator announcement repeats wagyu bara yakisuki at ¥935; this branch menu identifies ¥935 as miso tonchan for two. Wagyu bara yakisuki for two is ¥1,650. Checked operator announcement, company website, exact branch food/drink/course pages and linked galleries. Only seat reservations are listed, with no verified food discount or timed promotion; no Specials invented from normal prices. Sister Yakiniku Jiro recognition is not this branch’s award. Gallery reuses Hara exterior and dining-room photographs: these are excluded as west-exit property images. Correct west-exit frontage/interior remains unpublished. Hot Pepper course page calls the same address Meieki, with November 6 planned opening and no online booking yet; no older suspended Tabelog listing is treated as an earlier opening. Weekend opening conflicts: operator October 13 announcement says 17:00, branch page says 16:00; conservative 17:00 shown pending confirmation. Last order conflicts 23:30 vs current branch 23:00; conservative 23:00 shown."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://www.hotpepper.jp/strJ004698084/",
+            "name": "Yakiniku Saburo — Meieki West Exit",
+            "checkedAt": "2026-10-14",
+            "websiteUrl": "https://www.hotpepper.jp/strJ004698084/",
+            "phone": "052-485-7297",
+            "openingHours": [
+              {
+                "days": "Planned daily",
+                "hours": "17:00–24:00; food/drink last order 23:00"
+              }
+            ],
+            "detailsSourceUrl": "https://www.hotpepper.jp/strJ004698084/",
+            "additionalSources": [
+              {
+                "label": "Research evidence",
+                "url": "https://prtimes.jp/main/html/rd/p/000000033.000033002.html"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://www.hotpepper.jp/strJ004698084/photo/"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://tanakaya-foodservice.my.canva.site"
+              }
+            ],
+            "reservationUrl": "https://www.hotpepper.jp/strJ004698084/course/"
+          },
+          "tile": {
+            "regionSlug": "nagoya",
+            "kind": "opening",
+            "slug": "saburo23-hp-west",
+            "name": "Yakiniku Saburo — Meieki West Exit",
+            "neighborhood": "Nagoya Station",
+            "cuisine": "Yakiniku",
+            "description": "A planned Nagoya Station west-exit yakiniku restaurant with a published 56-item food menu and 30 drinks.",
+            "address": "1-34 Tsubakicho, Nakamura-ku, Nagoya",
+            "websiteUrl": "https://www.hotpepper.jp/strJ004698084/",
+            "checkedAt": "2026-10-14",
+            "recognition": "",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/nagoya/japan-30-2026-10-13/saburo23-hp-west-102-bbce45e88125e962.webp",
+            "imageCredit": "Tanakaya FOOD SERVICE / Cosmic Holdings",
+            "imageSourceUrl": "https://prtimes.jp/main/html/rd/p/000000033.000033002.html",
+            "imageNote": "Upper tongue — operator shared brand food illustration; not a branch-room photograph",
+            "openingConfirmed": true,
+            "day": "2026-11-06"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/nagoya/japan-30-2026-10-13/saburo23-hp-west-102-bbce45e88125e962.webp",
+          "sha256": "bbce45e88125e9622295e8f2d45611004cb880d4e8910c48ee8aea67b7b00971",
+          "width": 900,
+          "height": 1350,
+          "credit": "Tanakaya FOOD SERVICE / Cosmic Holdings",
+          "note": "Upper tongue — operator shared brand food illustration; not a branch-room photograph",
+          "sourcePage": "https://prtimes.jp/main/html/rd/p/000000033.000033002.html"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/nagoya/japan-30-2026-10-13/saburo23-hp-west-104-3a62ba0dee56c271.webp",
+          "sha256": "3a62ba0dee56c271e1b8ba50119a3d6de70e553d81cf10e0357a15b7bad74e42",
+          "width": 900,
+          "height": 1350,
+          "credit": "Tanakaya FOOD SERVICE / Cosmic Holdings",
+          "note": "Wagyu bara yakisuki — operator shared brand food illustration; not a branch-room photograph",
+          "sourcePage": "https://prtimes.jp/main/html/rd/p/000000033.000033002.html"
+        }
+      ]
+    }
+  ]
+}

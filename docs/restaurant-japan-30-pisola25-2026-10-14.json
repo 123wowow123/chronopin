@@ -1,0 +1,248 @@
+{
+  "checkedAt": "2026-10-14",
+  "country": "Japan",
+  "regions": [
+    "osaka"
+  ],
+  "entries": [
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "PISOLA — Suminoe Opens in Suminoe",
+        "description": "A planned resort-style Italian restaurant with semi-private seating, parking, and published children’s pasta-set pricing.",
+        "sourceUrl": "https://pisola.jp/news/12074.html",
+        "address": "2-7-38 Kitajima, Suminoe-ku, Osaka",
+        "productName": "PISOLA — Suminoe",
+        "utcStartDateTime": "2026-11-30T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "Operator October 14, 2026 exact Suminoe announcement explicitly confirms November 30 opening, full address and planned hours.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Osaka",
+          "Japan",
+          "Suminoe",
+          "Italian"
+        ],
+        "longFormSummary": "<p>A planned resort-style Italian restaurant with semi-private seating, parking, and published children’s pasta-set pricing.<cite data-ref=\"https://pisola.jp/news/12074.html\"></cite></p><p>Operator October 14, 2026 exact Suminoe announcement explicitly confirms November 30 opening, full address and planned hours.</p>",
+        "references": [
+          {
+            "url": "https://pisola.jp/news/12074.html",
+            "title": "PISOLA — Suminoe source",
+            "confidence": 90,
+            "reasoning": "Operator October 14, 2026 exact Suminoe announcement explicitly confirms November 30 opening, full address and planned hours."
+          },
+          {
+            "url": "https://pisola.jp/",
+            "title": "PISOLA — Suminoe source",
+            "confidence": 90,
+            "reasoning": "Operator October 14, 2026 exact Suminoe announcement explicitly confirms November 30 opening, full address and planned hours."
+          },
+          {
+            "url": "https://pisola.jp/menu",
+            "title": "PISOLA — Suminoe source",
+            "confidence": 90,
+            "reasoning": "Operator October 14, 2026 exact Suminoe announcement explicitly confirms November 30 opening, full address and planned hours."
+          },
+          {
+            "url": "https://pisola.jp/west_menu",
+            "title": "PISOLA — Suminoe source",
+            "confidence": 90,
+            "reasoning": "Operator October 14, 2026 exact Suminoe announcement explicitly confirms November 30 opening, full address and planned hours."
+          },
+          {
+            "url": "https://pisola.jp/shop",
+            "title": "PISOLA — Suminoe source",
+            "confidence": 90,
+            "reasoning": "Operator October 14, 2026 exact Suminoe announcement explicitly confirms November 30 opening, full address and planned hours."
+          },
+          {
+            "url": "https://pisola.jp/shop/suminoe",
+            "title": "PISOLA — Suminoe source",
+            "confidence": 90,
+            "reasoning": "Operator October 14, 2026 exact Suminoe announcement explicitly confirms November 30 opening, full address and planned hours."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://pisola.jp/news/12074.html",
+          "menu": {
+            "pinSourceUrl": "https://pisola.jp/news/12074.html",
+            "name": "PISOLA — Suminoe",
+            "checkedAt": "2026-10-14",
+            "menus": [
+              {
+                "label": "Children’s pasta set — opening-announcement prices",
+                "url": "https://pisola.jp/news/12074.html",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "Children’s pasta set — elementary-school child",
+                    "price": 878,
+                    "note": "Pasta, drink bar and ice cream; actual operator announcement tax-inclusive price"
+                  },
+                  {
+                    "name": "Children’s pasta set — preschool child",
+                    "price": 0,
+                    "note": "Child not yet in elementary school; actual operator opening announcement states free"
+                  },
+                  {
+                    "name": "Children’s fries",
+                    "price": 121,
+                    "note": "Tax included; this is charged separately, not included in free set"
+                  }
+                ],
+                "note": "The October 14 Suminoe announcement explicitly publishes these children’s dishes, prices and four pasta choices. Current regional kids image corroborates those exact prices and identifies the four sauce choices below; limit one pasta set, udon set or standalone ice cream per child across these categories. This age-specific regular menu is not indexed as a timed opening promotion. No adult order minimum, invented expiry or stacking conditions added. Planned visit details: semi-private seating, all non-smoking, parking, credit cards accepted; electronic money and QR payment not accepted according to exact launch announcement. Phone explicitly “in preparation”; no guessed number or neighboring branch phone. Three Suminoe exterior/interior images are architectural illustrations, not completed-property photographs. Oiso interior shown later in operator article is labelled as another branch and excluded.",
+                "documentUrl": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/osaka/japan-30-2026-10-13/pisola25-news-100-9c12ac2719e408a5.webp"
+              },
+              {
+                "label": "Published regional children’s pasta choices",
+                "url": "https://pisola.jp/west_menu",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Carbonara",
+                    "priceLabel": "Price not published",
+                    "note": "Included in children’s pasta set; no separate item price published"
+                  },
+                  {
+                    "name": "Bacon and mushroom meat-sauce pasta",
+                    "priceLabel": "Price not published",
+                    "note": "Included in children’s pasta set; no separate item price published"
+                  },
+                  {
+                    "name": "Tarako and mentaiko Japanese-style pasta",
+                    "priceLabel": "Price not published",
+                    "note": "Included in children’s pasta set; no separate item price published"
+                  },
+                  {
+                    "name": "Eggplant and bacon tomato pasta",
+                    "priceLabel": "Price not published",
+                    "note": "Included in children’s pasta set; no separate item price published"
+                  }
+                ],
+                "note": "Regional image explicitly lists these four choices; Suminoe announcement states a choice of four sauces. Components have no separate item price. Exact launch selection remains subject to confirmation. Regional udon and standalone ice cream/drink-bar offers are not separately claimed for Suminoe because the Suminoe announcement only names the pasta set and fries."
+              },
+              {
+                "label": "Adult menu — branch publication pending",
+                "url": "https://pisola.jp/menu",
+                "currency": "JPY",
+                "coverage": "link",
+                "items": [],
+                "note": "Thoroughly checked exact October 14 branch launch announcement and its three branch-labelled renderings, current operator homepage and shop directory, attempted /shop/suminoe (not published/HTTP failure), linked regional grand menu, free-food/drink menu, lunch, sets, drinks and actual kids menu images. Regional page explicitly warns that some stores have different menus/prices and the new branch is not yet in its shop list. No adult item/price borrowed from another branch or assumed from a generic regional image. Owner identifies fresh pasta, kiln-baked pizza and risotto categories but publishes no Suminoe adult dishes/prices. October-only craft menu expires before November 30 and is excluded. Exact adult launch menu, booking route and phone remain specific research gaps."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://pisola.jp/news/12074.html",
+            "name": "PISOLA — Suminoe",
+            "checkedAt": "2026-10-14",
+            "websiteUrl": "https://pisola.jp/news/12074.html",
+            "phone": null,
+            "openingHours": [
+              {
+                "days": "Planned daily",
+                "hours": "11:00–23:00; last order 22:00; no regular closure day"
+              },
+              {
+                "days": "Planned weekday lunch set",
+                "hours": "11:00–16:00; weekends/public holidays excluded"
+              }
+            ],
+            "detailsSourceUrl": "https://pisola.jp/news/12074.html",
+            "additionalSources": [
+              {
+                "label": "Research evidence",
+                "url": "https://pisola.jp/"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://pisola.jp/menu"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://pisola.jp/west_menu"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://pisola.jp/shop"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://pisola.jp/shop/suminoe"
+              }
+            ]
+          },
+          "tile": {
+            "regionSlug": "osaka",
+            "kind": "opening",
+            "slug": "pisola25-news",
+            "name": "PISOLA — Suminoe",
+            "neighborhood": "Suminoe",
+            "cuisine": "Italian",
+            "description": "A planned resort-style Italian restaurant with semi-private seating, parking, and published children’s pasta-set pricing.",
+            "address": "2-7-38 Kitajima, Suminoe-ku, Osaka",
+            "websiteUrl": "https://pisola.jp/news/12074.html",
+            "checkedAt": "2026-10-14",
+            "recognition": "",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/osaka/japan-30-2026-10-13/pisola25-news-0-4c5116470eea232a.webp",
+            "imageCredit": "PISOLA / operator opening announcement",
+            "imageSourceUrl": "https://pisola.jp/news/12074.html",
+            "imageNote": "Planned Suminoe exterior illustration — artist rendering, not a completed-property photograph",
+            "openingConfirmed": true,
+            "day": "2026-11-30"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/osaka/japan-30-2026-10-13/pisola25-news-0-4c5116470eea232a.webp",
+          "sha256": "4c5116470eea232a8a258b7e9cc43d53da4ae61eaca5774f007ac72d91ca6dec",
+          "width": 610,
+          "height": 340,
+          "credit": "PISOLA / operator opening announcement",
+          "note": "Planned Suminoe exterior illustration — artist rendering, not a completed-property photograph",
+          "sourcePage": "https://pisola.jp/news/12074.html"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/osaka/japan-30-2026-10-13/pisola25-news-1-c95593cfbe37f057.webp",
+          "sha256": "c95593cfbe37f057c95f8a287fd0680da2e17c876a0a1d50a16919054b6e09bd",
+          "width": 610,
+          "height": 340,
+          "credit": "PISOLA / operator opening announcement",
+          "note": "Planned Suminoe interior illustration — artist rendering, not a completed-property photograph",
+          "sourcePage": "https://pisola.jp/news/12074.html"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/osaka/japan-30-2026-10-13/pisola25-news-2-1552cdba93fbf0da.webp",
+          "sha256": "1552cdba93fbf0da489368bedd0b918b43c82954a05877ac44e6e5494444cf0a",
+          "width": 610,
+          "height": 340,
+          "credit": "PISOLA / operator opening announcement",
+          "note": "Planned Suminoe interior illustration — artist rendering, not a completed-property photograph",
+          "sourcePage": "https://pisola.jp/news/12074.html"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/osaka/japan-30-2026-10-13/pisola25-news-100-9c12ac2719e408a5.webp",
+          "sha256": "9c12ac2719e408a528f09fbc20031a3309695540b75fdc982774edf19ed1d0ef",
+          "width": 1200,
+          "height": 1700,
+          "credit": "PISOLA / regional kids menu",
+          "note": "Published regional children’s menu corroborating pasta-set and fries prices quoted in Suminoe announcement; not a photograph of the new branch",
+          "sourcePage": "https://pisola.jp/west_menu"
+        }
+      ]
+    }
+  ]
+}

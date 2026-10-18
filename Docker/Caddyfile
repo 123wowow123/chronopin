@@ -1,0 +1,49 @@
+# HTTPS for chronopin.com. Caddy gets and renews the certificates by itself
+# once the domain's A records point at this VM. The site's own URL is www
+# (NEXT_PUBLIC_SITE_URL), so the bare domain redirects there. Until the DNS
+# points here the certificate requests fail and back off; restart Caddy after
+# switching the records to retry at once.
+
+# Deploys (scripts/deploy-image.sh) never leave the site without an upstream:
+# `app` is preferred, and `app-next` (the standby, only running during a
+# deploy) takes over while `app` is recreated. A request that finds neither
+# waits up to 15s for one rather than failing. Passive checks only: a probe of
+# a page would mark a busy but healthy app down.
+(upstreams) {
+	reverse_proxy app:9000 app-next:9000 {
+		lb_policy first
+		lb_try_duration 15s
+		lb_try_interval 250ms
+		fail_duration 3s
+		max_fails 1
+	}
+}
+
+# One JSON line per request (client IP, user agent, path, status) on the
+# container's stdout, for telling bots from people: docker logs docker-caddy-1.
+# Cookies and auth headers are dropped. Added 2026-10-17.
+(accesslog) {
+	log {
+		output stdout
+		format filter {
+			wrap json
+			request>headers>Cookie delete
+			request>headers>Authorization delete
+		}
+	}
+}
+
+www.chronopin.com {
+	encode zstd gzip
+	import accesslog
+	import upstreams
+}
+
+chronopin.com {
+	redir https://www.chronopin.com{uri} permanent
+}
+
+# Before the DNS switch, and for anything asked for by IP: plain HTTP to the app.
+:80 {
+	import upstreams
+}

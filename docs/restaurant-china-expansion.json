@@ -1,0 +1,2593 @@
+{
+  "checkedAt": "2026-10-10",
+  "country": "China",
+  "regions": [
+    "chongqing",
+    "xian",
+    "guangzhou",
+    "shenzhen",
+    "wuhan",
+    "hangzhou"
+  ],
+  "entries": [
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Niccolo Kitchen — Chongqing — Chongqing restaurant guide",
+        "description": "A sky-high open kitchen with a Tuscan menu and a published Explorer Club dining benefit.",
+        "sourceUrl": "https://www.niccolohotels.com/en/niccolo-chongqing/dining/niccolo-kitchen",
+        "address": "62/F, Niccolo Chongqing, Tower 1, Chongqing IFS, 1 Qingyun Road, Chongqing, China",
+        "latitude": 29.5742,
+        "longitude": 106.5724,
+        "productName": "Niccolo Kitchen — Chongqing",
+        "utcStartDateTime": "2017-09-08T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "Niccolo Chongqing (Chongqing IFS Tower 1) officially opened its doors on 8 September 2017, with Niccolo Kitchen listed among its launch dining venues; no restaurant-specific opening announcement was found, so the hotel opening date is used. Estimated: the exact day 2017-09-08 comes from a proxy source (registration, announcement or hotel opening) and is not a confirmed opening day.",
+        "parentId": null,
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Top Restaurants",
+          "Chongqing",
+          "China",
+          "Jiangbeizui",
+          "Italian and international"
+        ],
+        "longFormSummary": "<p>A sky-high open kitchen with a Tuscan menu and a published Explorer Club dining benefit. <cite data-ref=\"https://www.niccolohotels.com/en/niccolo-chongqing/dining/niccolo-kitchen\"></cite></p><p>Map position is approximate, based on published property coordinates or address/area geocoding; verify the entrance with the venue.</p>",
+        "references": [
+          {
+            "url": "https://www.niccolohotels.com/en/niccolo-chongqing/dining/niccolo-kitchen",
+            "title": "Niccolo Kitchen — Chongqing — research source",
+            "confidence": 90,
+            "reasoning": "Niccolo Chongqing (Chongqing IFS Tower 1) officially opened its doors on 8 September 2017, with Niccolo Kitchen listed among its launch dining venues; no restaurant-specific opening announcement was found, so the hotel opening date is used. Estimated: the exact day 2017-09-08 comes from a proxy source (registration, announcement or hotel opening) and is not a confirmed opening day."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://www.niccolohotels.com/en/niccolo-chongqing/dining/niccolo-kitchen",
+          "menu": {
+            "pinSourceUrl": "https://www.niccolohotels.com/en/niccolo-chongqing/dining/niccolo-kitchen",
+            "name": "Niccolo Kitchen — Chongqing",
+            "checkedAt": "2026-10-10",
+            "menus": [
+              {
+                "label": "Tuscan à la carte lunch",
+                "url": "https://www.niccolohotels.com/en/niccolo-chongqing/dining/niccolo-kitchen",
+                "currency": "CNY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Burrata with tomatoes and basil",
+                    "price": 118
+                  },
+                  {
+                    "name": "Tuscan flatbread with whipped ricotta",
+                    "price": 98
+                  },
+                  {
+                    "name": "Panzanella bread salad",
+                    "price": 68
+                  },
+                  {
+                    "name": "Porcini mushroom soup",
+                    "price": 88
+                  },
+                  {
+                    "name": "Roasted whole perch with white bean stew",
+                    "price": 228
+                  },
+                  {
+                    "name": "Grilled New Zealand lamb chops",
+                    "price": 298
+                  },
+                  {
+                    "name": "Tiramisu",
+                    "price": 88
+                  }
+                ],
+                "note": "Currently linked branch PDF, lunch section. Prices are CNY; this menu says service charge and tax included. The hotel FAQ separately says 10% service applies; confirm the charge basis when booking.",
+                "documentUrl": "https://www.niccolohotels.com/getmedia/3d3dd674-c34b-4d8d-97e2-9e2103e54f53/Menu_1.pdf"
+              },
+              {
+                "label": "Explorer Club dining benefit",
+                "url": "https://www.niccolohotels.com/en/niccolo-chongqing/dining/niccolo-kitchen",
+                "currency": "CNY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Eligible dining — 15% member discount",
+                    "priceLabel": "Price not published",
+                    "note": "Membership required. Published terms do not identify individual eligible or excluded dishes; confirm before ordering."
+                  }
+                ],
+                "note": "The restaurant advertises 15% off for Explorer Club members; base menu dishes are not represented as individually guaranteed eligible."
+              }
+            ],
+            "specials": [
+              {
+                "kind": "other",
+                "title": "Explorer Club members — 15% off dining",
+                "description": "The restaurant advertises a 15% dining benefit for Niccolo Explorer Club members.",
+                "schedule": "Daily during lunch 12:00–14:00 and dinner 18:00–22:30",
+                "conditions": [
+                  "Niccolo Explorer Club membership required; confirm membership eligibility and redeem directly with the venue.",
+                  "The operator does not publish item-specific exclusions or a promotion end date. Confirm eligible dishes, charges and combination rules before ordering.",
+                  "À la carte prices below are published base menu prices, not discounted totals."
+                ],
+                "sourceUrl": "https://www.niccolohotels.com/en/niccolo-chongqing/dining/niccolo-kitchen",
+                "discounted": true,
+                "menuLabel": "Explorer Club dining benefit",
+                "availability": {
+                  "windows": [
+                    {
+                      "days": [
+                        0,
+                        1,
+                        2,
+                        3,
+                        4,
+                        5,
+                        6
+                      ],
+                      "start": "12:00",
+                      "end": "14:00"
+                    },
+                    {
+                      "days": [
+                        0,
+                        1,
+                        2,
+                        3,
+                        4,
+                        5,
+                        6
+                      ],
+                      "start": "18:00",
+                      "end": "22:30"
+                    }
+                  ]
+                }
+              }
+            ],
+            "location": {
+              "latitude": 29.5742,
+              "longitude": 106.5724,
+              "sourceUrl": "https://impt.io/hotels/people-s-republic-of-china/chongqing/niccolo-chongqing/",
+              "checkedAt": "2026-10-10"
+            },
+            "photo": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/chongqing/researched/niccolo-kitchen-20-690117a04906fc12.webp",
+              "alt": "Culinary Theatre",
+              "credit": "Niccolo Chongqing / Niccolo Kitchen",
+              "sourceUrl": "https://www.niccolohotels.com/en/niccolo-chongqing/dining/niccolo-kitchen",
+              "originalUrl": "https://www.niccolohotels.com/getmedia/108cf616-2f22-4bd7-bf0c-0a17743e6946/_cgi-bin_mmwebwx-bin_webwxgetmsgimg__-MsgID-2519042720269849151-skey-@crypt_46ccc687_38ee97d3b3a18aa6c64ccdd00b27ea2d-mmweb_appid-wx_webfilehelper",
+              "checkedAt": "2026-10-10"
+            }
+          },
+          "details": {
+            "pinSourceUrl": "https://www.niccolohotels.com/en/niccolo-chongqing/dining/niccolo-kitchen",
+            "name": "Niccolo Kitchen — Chongqing",
+            "websiteUrl": "https://www.niccolohotels.com/en/niccolo-chongqing/dining/niccolo-kitchen",
+            "phone": "+86 23 6508 8888",
+            "openingHours": [
+              {
+                "days": "Daily",
+                "hours": "Lunch 12:00–14:00; dinner 18:00–22:30"
+              }
+            ],
+            "checkedAt": "2026-10-10",
+            "detailsSourceUrl": "https://www.niccolohotels.com/en/niccolo-chongqing/dining/niccolo-kitchen"
+          },
+          "tile": {
+            "regionSlug": "chongqing",
+            "kind": "top",
+            "slug": "niccolo-kitchen",
+            "name": "Niccolo Kitchen — Chongqing",
+            "neighborhood": "Jiangbeizui",
+            "cuisine": "Italian and international",
+            "address": "62/F, Niccolo Chongqing, Tower 1, Chongqing IFS, 1 Qingyun Road, Chongqing, China",
+            "websiteUrl": "https://www.niccolohotels.com/en/niccolo-chongqing/dining/niccolo-kitchen",
+            "description": "A sky-high open kitchen with a Tuscan menu and a published Explorer Club dining benefit.",
+            "checkedAt": "2026-10-10",
+            "recognition": "Chronopin selection",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/chongqing/researched/niccolo-kitchen-20-690117a04906fc12.webp",
+            "imageCredit": "Niccolo Chongqing / Niccolo Kitchen",
+            "imageSourceUrl": "https://www.niccolohotels.com/getmedia/108cf616-2f22-4bd7-bf0c-0a17743e6946/_cgi-bin_mmwebwx-bin_webwxgetmsgimg__-MsgID-2519042720269849151-skey-@crypt_46ccc687_38ee97d3b3a18aa6c64ccdd00b27ea2d-mmweb_appid-wx_webfilehelper",
+            "imageNote": "Culinary Theatre"
+          }
+        },
+        "enabled": true
+      },
+      "special": {
+        "regionSlug": "chongqing",
+        "profile": {
+          "pinSourceUrl": "https://www.niccolohotels.com/en/niccolo-chongqing/dining/niccolo-kitchen",
+          "name": "Niccolo Kitchen — Chongqing",
+          "checkedAt": "2026-10-10",
+          "menus": [
+            {
+              "label": "Tuscan à la carte lunch",
+              "url": "https://www.niccolohotels.com/en/niccolo-chongqing/dining/niccolo-kitchen",
+              "currency": "CNY",
+              "coverage": "sample",
+              "items": [
+                {
+                  "name": "Burrata with tomatoes and basil",
+                  "price": 118
+                },
+                {
+                  "name": "Tuscan flatbread with whipped ricotta",
+                  "price": 98
+                },
+                {
+                  "name": "Panzanella bread salad",
+                  "price": 68
+                },
+                {
+                  "name": "Porcini mushroom soup",
+                  "price": 88
+                },
+                {
+                  "name": "Roasted whole perch with white bean stew",
+                  "price": 228
+                },
+                {
+                  "name": "Grilled New Zealand lamb chops",
+                  "price": 298
+                },
+                {
+                  "name": "Tiramisu",
+                  "price": 88
+                }
+              ],
+              "note": "Currently linked branch PDF, lunch section. Prices are CNY; this menu says service charge and tax included. The hotel FAQ separately says 10% service applies; confirm the charge basis when booking.",
+              "documentUrl": "https://www.niccolohotels.com/getmedia/3d3dd674-c34b-4d8d-97e2-9e2103e54f53/Menu_1.pdf"
+            },
+            {
+              "label": "Explorer Club dining benefit",
+              "url": "https://www.niccolohotels.com/en/niccolo-chongqing/dining/niccolo-kitchen",
+              "currency": "CNY",
+              "coverage": "sample",
+              "items": [
+                {
+                  "name": "Eligible dining — 15% member discount",
+                  "priceLabel": "Price not published",
+                  "note": "Membership required. Published terms do not identify individual eligible or excluded dishes; confirm before ordering."
+                }
+              ],
+              "note": "The restaurant advertises 15% off for Explorer Club members; base menu dishes are not represented as individually guaranteed eligible."
+            }
+          ],
+          "specials": [
+            {
+              "kind": "other",
+              "title": "Explorer Club members — 15% off dining",
+              "description": "The restaurant advertises a 15% dining benefit for Niccolo Explorer Club members.",
+              "schedule": "Daily during lunch 12:00–14:00 and dinner 18:00–22:30",
+              "conditions": [
+                "Niccolo Explorer Club membership required; confirm membership eligibility and redeem directly with the venue.",
+                "The operator does not publish item-specific exclusions or a promotion end date. Confirm eligible dishes, charges and combination rules before ordering.",
+                "À la carte prices below are published base menu prices, not discounted totals."
+              ],
+              "sourceUrl": "https://www.niccolohotels.com/en/niccolo-chongqing/dining/niccolo-kitchen",
+              "discounted": true,
+              "menuLabel": "Explorer Club dining benefit",
+              "availability": {
+                "windows": [
+                  {
+                    "days": [
+                      0,
+                      1,
+                      2,
+                      3,
+                      4,
+                      5,
+                      6
+                    ],
+                    "start": "12:00",
+                    "end": "14:00"
+                  },
+                  {
+                    "days": [
+                      0,
+                      1,
+                      2,
+                      3,
+                      4,
+                      5,
+                      6
+                    ],
+                    "start": "18:00",
+                    "end": "22:30"
+                  }
+                ]
+              }
+            }
+          ],
+          "location": {
+            "latitude": 29.5742,
+            "longitude": 106.5724,
+            "sourceUrl": "https://impt.io/hotels/people-s-republic-of-china/chongqing/niccolo-chongqing/",
+            "checkedAt": "2026-10-10"
+          },
+          "photo": {
+            "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/chongqing/researched/niccolo-kitchen-20-690117a04906fc12.webp",
+            "alt": "Culinary Theatre",
+            "credit": "Niccolo Chongqing / Niccolo Kitchen",
+            "sourceUrl": "https://www.niccolohotels.com/en/niccolo-chongqing/dining/niccolo-kitchen",
+            "originalUrl": "https://www.niccolohotels.com/getmedia/108cf616-2f22-4bd7-bf0c-0a17743e6946/_cgi-bin_mmwebwx-bin_webwxgetmsgimg__-MsgID-2519042720269849151-skey-@crypt_46ccc687_38ee97d3b3a18aa6c64ccdd00b27ea2d-mmweb_appid-wx_webfilehelper",
+            "checkedAt": "2026-10-10"
+          },
+          "neighborhood": "Jiangbeizui",
+          "address": "62/F, Niccolo Chongqing, Tower 1, Chongqing IFS, 1 Qingyun Road, Chongqing, China",
+          "websiteUrl": "https://www.niccolohotels.com/en/niccolo-chongqing/dining/niccolo-kitchen"
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "region": "chongqing",
+          "slug": "niccolo-kitchen-20",
+          "source": "https://www.niccolohotels.com/getmedia/108cf616-2f22-4bd7-bf0c-0a17743e6946/_cgi-bin_mmwebwx-bin_webwxgetmsgimg__-MsgID-2519042720269849151-skey-@crypt_46ccc687_38ee97d3b3a18aa6c64ccdd00b27ea2d-mmweb_appid-wx_webfilehelper",
+          "credit": "Niccolo Chongqing / Niccolo Kitchen",
+          "sourcePage": "https://www.niccolohotels.com/en/niccolo-chongqing/dining/niccolo-kitchen",
+          "note": "Culinary Theatre",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/chongqing/researched/niccolo-kitchen-20-690117a04906fc12.webp",
+          "sha256": "690117a04906fc129a69beae272426456b81b054b080667c0cc1e3b968e49369",
+          "width": 800,
+          "height": 990
+        },
+        {
+          "region": "chongqing",
+          "slug": "niccolo-kitchen-22",
+          "source": "https://www.niccolohotels.com/getmedia/697df35c-367c-41ee-8c31-abdbbe7dd771/Pici-Pasta-Con-Funghi-E-Tartufo_%e6%89%8b%e5%b7%a5%e9%b2%9c%e9%9d%a2%e9%85%8d%e9%87%8e%e8%8f%8c%e9%bb%91%e6%9d%be%e9%9c%b2",
+          "credit": "Niccolo Chongqing / Niccolo Kitchen",
+          "sourcePage": "https://www.niccolohotels.com/en/niccolo-chongqing/dining/niccolo-kitchen",
+          "note": "Signature Dish",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/chongqing/researched/niccolo-kitchen-22-c565a0384989864e.webp",
+          "sha256": "c565a0384989864e4d5ed41d41e1dd9ac0285e03bbaca3d283226235a2f13395",
+          "width": 1333,
+          "height": 2000
+        },
+        {
+          "region": "chongqing",
+          "slug": "niccolo-kitchen-gallery-18",
+          "source": "https://www.niccolohotels.com/getmedia/0181497c-0041-4126-afe4-c35616b871ac/1920-940px-Niccolo-Chongqing-Niccolo-Kitchen%e5%89%af%e6%9c%ac.jpg?width=1920&height=940&ext=.jpg",
+          "credit": "Niccolo Chongqing / Niccolo Kitchen",
+          "sourcePage": "https://www.niccolohotels.com/en/niccolo-chongqing/gallery",
+          "note": "Niccolo Kitchen Gallery — official branch photograph; pictured dishes may vary",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/chongqing/researched/niccolo-kitchen-gallery-18-f6a88c7b196cb870.webp",
+          "sha256": "f6a88c7b196cb870f3ab8ad3aeccd1a9f6279a665ed991218942c963a6d72daa",
+          "width": 1400,
+          "height": 685
+        }
+      ],
+      "geocoding": {
+        "latitude": 29.5742,
+        "longitude": 106.5724,
+        "sourceUrl": "https://impt.io/hotels/people-s-republic-of-china/chongqing/niccolo-chongqing/",
+        "method": "Published property map coordinates",
+        "addressType": "Property",
+        "matchedAddress": "niccolo-kitchen"
+      }
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Factory Hotpot — Meixin No. 2 Foreigner Street opens in Banan · Jieshi",
+        "description": "The industrial tourism park’s hotpot area welcomed diners when its first phase opened on October 1.",
+        "sourceUrl": "https://cq.people.com.cn/n2/2026/1002/c365411-41713395.html",
+        "address": "Meixin No. 2 Foreigner Street, Dongcheng Avenue, Jieshi, Banan District, Chongqing, China",
+        "latitude": 29.400491353776,
+        "longitude": 106.61091384354,
+        "productName": "Factory Hotpot — Meixin No. 2 Foreigner Street",
+        "utcStartDateTime": "2026-10-01T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "People’s Daily’s October 2 report confirms the October 1 park opening and diners eating in the factory hotpot area.",
+        "parentId": null,
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Chongqing",
+          "China",
+          "Banan · Jieshi",
+          "Chongqing hotpot"
+        ],
+        "longFormSummary": "<p>The industrial tourism park’s hotpot area welcomed diners when its first phase opened on October 1. <cite data-ref=\"https://cq.people.com.cn/n2/2026/1002/c365411-41713395.html\"></cite></p><p>Map position is approximate, based on published property coordinates or address/area geocoding; verify the entrance with the venue.</p>",
+        "references": [
+          {
+            "url": "https://cq.people.com.cn/n2/2026/1002/c365411-41713395.html",
+            "title": "Factory Hotpot — Meixin No. 2 Foreigner Street — research source",
+            "confidence": 90,
+            "reasoning": "People’s Daily’s October 2 report confirms the October 1 park opening and diners eating in the factory hotpot area."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://cq.people.com.cn/n2/2026/1002/c365411-41713395.html",
+          "menu": {
+            "pinSourceUrl": "https://cq.people.com.cn/n2/2026/1002/c365411-41713395.html",
+            "name": "Factory Hotpot — Meixin No. 2 Foreigner Street",
+            "checkedAt": "2026-10-10",
+            "menus": [
+              {
+                "label": "Factory hotpot menu",
+                "url": "https://cq.people.com.cn/n2/2026/1002/c365411-41713395.html",
+                "currency": "CNY",
+                "coverage": "link",
+                "items": [],
+                "note": "Checked September 25 pre-opening reporting, October 2 opening report, October 7 China News video, the Meixin project announcement, branch-specific dish/price and ordering searches. No verifiable dish-level menu or prices found. Other Meixin parks’ menus and photos are excluded."
+              }
+            ],
+            "specials": [],
+            "location": {
+              "latitude": 29.400491353776,
+              "longitude": 106.61091384354,
+              "sourceUrl": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?f=json&SingleLine=%E9%87%8D%E5%BA%86%E5%B8%82%E5%B7%B4%E5%8D%97%E5%8C%BA%E7%95%8C%E7%9F%B3%E9%95%87%E4%B8%9C%E5%9F%8E%E5%A4%A7%E9%81%93%E7%BE%8E%E5%BF%83%E6%98%A5%E9%A3%8E%E6%99%BA%E8%83%BD%E9%97%A8&outFields=Match_addr%2CAddr_type&maxLocations=1&sourceCountry=CHN",
+              "checkedAt": "2026-10-10"
+            }
+          },
+          "details": {
+            "pinSourceUrl": "https://cq.people.com.cn/n2/2026/1002/c365411-41713395.html",
+            "name": "Factory Hotpot — Meixin No. 2 Foreigner Street",
+            "websiteUrl": "https://cq.people.com.cn/n2/2026/1002/c365411-41713395.html",
+            "phone": null,
+            "openingHours": [],
+            "checkedAt": "2026-10-10",
+            "detailsSourceUrl": "https://cq.people.com.cn/n2/2026/1002/c365411-41713395.html"
+          },
+          "tile": {
+            "regionSlug": "chongqing",
+            "kind": "opening",
+            "slug": "factory-hotpot",
+            "name": "Factory Hotpot — Meixin No. 2 Foreigner Street",
+            "neighborhood": "Banan · Jieshi",
+            "cuisine": "Chongqing hotpot",
+            "address": "Meixin No. 2 Foreigner Street, Dongcheng Avenue, Jieshi, Banan District, Chongqing, China",
+            "websiteUrl": "https://cq.people.com.cn/n2/2026/1002/c365411-41713395.html",
+            "description": "The industrial tourism park’s hotpot area welcomed diners when its first phase opened on October 1.",
+            "checkedAt": "2026-10-10",
+            "recognition": "",
+            "priceRange": "",
+            "image": null,
+            "imageCredit": "",
+            "day": "2026-10-01",
+            "openingConfirmed": true
+          }
+        },
+        "enabled": true
+      },
+      "photos": [],
+      "geocoding": {
+        "latitude": 29.400491353776,
+        "longitude": 106.61091384354,
+        "score": 86.01,
+        "matchedAddress": "重庆市巴南区东城大道",
+        "addressType": "StreetName",
+        "sourceUrl": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?f=json&SingleLine=%E9%87%8D%E5%BA%86%E5%B8%82%E5%B7%B4%E5%8D%97%E5%8C%BA%E7%95%8C%E7%9F%B3%E9%95%87%E4%B8%9C%E5%9F%8E%E5%A4%A7%E9%81%93%E7%BE%8E%E5%BF%83%E6%98%A5%E9%A3%8E%E6%99%BA%E8%83%BD%E9%97%A8&outFields=Match_addr%2CAddr_type&maxLocations=1&sourceCountry=CHN"
+      }
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Tian Xiang Ge — Xi’an restaurant guide",
+        "description": "Cantonese cooking, regional Shaanxi dishes and Chinese tea culture at Shangri-La Xi’an.",
+        "sourceUrl": "https://www.shangri-la.com/xian/shangrila/dining/restaurants/tian-xiang-ge/",
+        "address": "Level 1, Shangri-La Xi’an, 38B Keji Road, Xi’an, China",
+        "latitude": 34.233298,
+        "longitude": 108.897464,
+        "productName": "Tian Xiang Ge",
+        "utcStartDateTime": "2007-09-30T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "Shangri-La Hotel Xi'an opened to the public in September 2007 (China Daily); Tian Xiang Ge is one of its original Cantonese restaurants but no restaurant-specific opening date was found, so the hotel opening month is used. Estimated: 2007-09 is a best estimate and 2007-09-30 is used only as a period-end sorting date, not a confirmed opening day.",
+        "parentId": null,
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Top Restaurants",
+          "Xi’an",
+          "China",
+          "Gaoxin · Keji Road",
+          "Cantonese and Shaanxi"
+        ],
+        "longFormSummary": "<p>Cantonese cooking, regional Shaanxi dishes and Chinese tea culture at Shangri-La Xi’an. <cite data-ref=\"https://www.shangri-la.com/xian/shangrila/dining/restaurants/tian-xiang-ge/\"></cite></p><p>Map position is approximate, based on published property coordinates or address/area geocoding; verify the entrance with the venue.</p>",
+        "references": [
+          {
+            "url": "https://www.shangri-la.com/xian/shangrila/dining/restaurants/tian-xiang-ge/",
+            "title": "Tian Xiang Ge — research source",
+            "confidence": 90,
+            "reasoning": "Shangri-La Hotel Xi'an opened to the public in September 2007 (China Daily); Tian Xiang Ge is one of its original Cantonese restaurants but no restaurant-specific opening date was found, so the hotel opening month is used. Estimated: 2007-09 is a best estimate and 2007-09-30 is used only as a period-end sorting date, not a confirmed opening day."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://www.shangri-la.com/xian/shangrila/dining/restaurants/tian-xiang-ge/",
+          "menu": {
+            "pinSourceUrl": "https://www.shangri-la.com/xian/shangrila/dining/restaurants/tian-xiang-ge/",
+            "name": "Tian Xiang Ge",
+            "checkedAt": "2026-10-10",
+            "menus": [
+              {
+                "label": "À la carte",
+                "url": "https://www.shangri-la.com/xian/shangrila/dining/restaurants/tian-xiang-ge/",
+                "currency": "CNY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Soy-marinated fish",
+                    "price": 88
+                  },
+                  {
+                    "name": "Beef with tangerine peel",
+                    "price": 98
+                  },
+                  {
+                    "name": "Crispy pigeon — one bird",
+                    "price": 78
+                  },
+                  {
+                    "name": "Braised Jiangnan pork — per person",
+                    "price": 38
+                  },
+                  {
+                    "name": "Duck with sticky rice",
+                    "price": 168
+                  },
+                  {
+                    "name": "Sweet and sour pork with pineapple",
+                    "price": 98
+                  },
+                  {
+                    "name": "Salt and pepper prawns",
+                    "price": 148
+                  }
+                ],
+                "note": "Currently linked branch PDF. Portion size is per dish unless noted. The menu’s English and Chinese abalone counts conflict; those items are excluded. Confirm applicable charges with the venue.",
+                "documentUrl": "https://sitecore-cd.shangri-la.com/-/media/Shangri-La/xian_shangrila/dining/restaurants/tian-xiang-ge/TianxianggeMenu.pdf"
+              }
+            ],
+            "specials": [],
+            "location": {
+              "latitude": 34.233298,
+              "longitude": 108.897464,
+              "sourceUrl": "https://www.shangri-la.com/xian/shangrila/dining/restaurants/tian-xiang-ge/",
+              "checkedAt": "2026-10-10"
+            },
+            "photo": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/xian/researched/tian-xiang-ge-0-2a3a0745dc7b6454.webp",
+              "alt": "Tian Xiang Ge — official branch photograph; pictured dishes may vary",
+              "credit": "Shangri-La Xi’an / Tian Xiang Ge",
+              "sourceUrl": "https://www.shangri-la.com/xian/shangrila/dining/restaurants/tian-xiang-ge/",
+              "originalUrl": "https://sitecore-cd.shangri-la.com/-/media/Shangri-La/xian_shangrila/dining/restaurants/Restaurants-banner/Tianxiangge_banner.jpg",
+              "checkedAt": "2026-10-10"
+            }
+          },
+          "details": {
+            "pinSourceUrl": "https://www.shangri-la.com/xian/shangrila/dining/restaurants/tian-xiang-ge/",
+            "name": "Tian Xiang Ge",
+            "websiteUrl": "https://www.shangri-la.com/xian/shangrila/dining/restaurants/tian-xiang-ge/",
+            "phone": "+86 29 8875 8888",
+            "openingHours": [
+              {
+                "days": "Daily",
+                "hours": "11:30–14:00; 17:30–22:00"
+              }
+            ],
+            "checkedAt": "2026-10-10",
+            "detailsSourceUrl": "https://www.shangri-la.com/xian/shangrila/dining/restaurants/tian-xiang-ge/"
+          },
+          "tile": {
+            "regionSlug": "xian",
+            "kind": "top",
+            "slug": "tian-xiang-ge",
+            "name": "Tian Xiang Ge",
+            "neighborhood": "Gaoxin · Keji Road",
+            "cuisine": "Cantonese and Shaanxi",
+            "address": "Level 1, Shangri-La Xi’an, 38B Keji Road, Xi’an, China",
+            "websiteUrl": "https://www.shangri-la.com/xian/shangrila/dining/restaurants/tian-xiang-ge/",
+            "description": "Cantonese cooking, regional Shaanxi dishes and Chinese tea culture at Shangri-La Xi’an.",
+            "checkedAt": "2026-10-10",
+            "recognition": "Chronopin selection",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/xian/researched/tian-xiang-ge-0-2a3a0745dc7b6454.webp",
+            "imageCredit": "Shangri-La Xi’an / Tian Xiang Ge",
+            "imageSourceUrl": "https://sitecore-cd.shangri-la.com/-/media/Shangri-La/xian_shangrila/dining/restaurants/Restaurants-banner/Tianxiangge_banner.jpg",
+            "imageNote": "Tian Xiang Ge — official branch photograph; pictured dishes may vary"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "region": "xian",
+          "slug": "tian-xiang-ge-0",
+          "source": "https://sitecore-cd.shangri-la.com/-/media/Shangri-La/xian_shangrila/dining/restaurants/Restaurants-banner/Tianxiangge_banner.jpg",
+          "credit": "Shangri-La Xi’an / Tian Xiang Ge",
+          "sourcePage": "https://www.shangri-la.com/xian/shangrila/dining/restaurants/tian-xiang-ge/",
+          "note": "Tian Xiang Ge — official branch photograph; pictured dishes may vary",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/xian/researched/tian-xiang-ge-0-2a3a0745dc7b6454.webp",
+          "sha256": "2a3a0745dc7b64546154c473619260c7a4b5cb615f1c2516f6bbba2f1aca5dc9",
+          "width": 1400,
+          "height": 365
+        },
+        {
+          "region": "xian",
+          "slug": "tian-xiang-ge-1",
+          "source": "https://sitecore-cd.shangri-la.com/-/media/Shangri-La/xian_shangrila/dining/restaurants/tian-xiang-ge/TXG_3.jpg",
+          "credit": "Shangri-La Xi’an / Tian Xiang Ge",
+          "sourcePage": "https://www.shangri-la.com/xian/shangrila/dining/restaurants/tian-xiang-ge/",
+          "note": "Tian Xiang Ge — official branch photograph; pictured dishes may vary",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/xian/researched/tian-xiang-ge-1-b89a6a946da2cde5.webp",
+          "sha256": "b89a6a946da2cde5bbf95a24abe127a715834c5756f34ad3790fde3858c990f9",
+          "width": 600,
+          "height": 340
+        },
+        {
+          "region": "xian",
+          "slug": "tian-xiang-ge-2",
+          "source": "https://sitecore-cd.shangri-la.com/-/media/Shangri-La/xian_shangrila/dining/restaurants/tian-xiang-ge/TXG_4.jpg",
+          "credit": "Shangri-La Xi’an / Tian Xiang Ge",
+          "sourcePage": "https://www.shangri-la.com/xian/shangrila/dining/restaurants/tian-xiang-ge/",
+          "note": "Tian Xiang Ge — official branch photograph; pictured dishes may vary",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/xian/researched/tian-xiang-ge-2-fd15deb612d54ca0.webp",
+          "sha256": "fd15deb612d54ca0a6c45fd4b4b2c3dff3fd6e9ee39999b56eb8610c2038cd0a",
+          "width": 600,
+          "height": 340
+        },
+        {
+          "region": "xian",
+          "slug": "tian-xiang-ge-6",
+          "source": "https://sitecore-cd.shangri-la.com/-/media/Shangri-La/xian_shangrila/dining/restaurants/tian-xiang-ge/TXG05.jpg",
+          "credit": "Shangri-La Xi’an / Tian Xiang Ge",
+          "sourcePage": "https://www.shangri-la.com/xian/shangrila/dining/restaurants/tian-xiang-ge/",
+          "note": "Tian Xiang Ge — official branch photograph; pictured dishes may vary",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/xian/researched/tian-xiang-ge-6-b05a16f59cdc2067.webp",
+          "sha256": "b05a16f59cdc20671cab0f8774d5adb1bc9be88acbcd1158e3f930f64467724c",
+          "width": 630,
+          "height": 364
+        },
+        {
+          "region": "xian",
+          "slug": "tian-xiang-ge-7",
+          "source": "https://sitecore-cd.shangri-la.com/-/media/Shangri-La/xian_shangrila/dining/restaurants/tian-xiang-ge/TianxianggeDishes.jpg",
+          "credit": "Shangri-La Xi’an / Tian Xiang Ge",
+          "sourcePage": "https://www.shangri-la.com/xian/shangrila/dining/restaurants/tian-xiang-ge/",
+          "note": "Tian Xiang Ge — official branch photograph; pictured dishes may vary",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/xian/researched/tian-xiang-ge-7-786e7703443568a5.webp",
+          "sha256": "786e7703443568a5ce2dad5216ab88935d21b63a7e299f92693dc485d9f9c6fc",
+          "width": 630,
+          "height": 364
+        }
+      ],
+      "geocoding": {
+        "latitude": 34.233298,
+        "longitude": 108.897464,
+        "sourceUrl": "https://www.shangri-la.com/xian/shangrila/dining/restaurants/tian-xiang-ge/",
+        "method": "Published property map coordinates",
+        "addressType": "Property",
+        "matchedAddress": "tian-xiang-ge"
+      }
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Banu Hotpot — Chanba MixC opens in Chanba International Port",
+        "description": "Banu’s Chanba MixC branch opened with the new mall on September 12, specialising in tripe hotpot.",
+        "sourceUrl": "https://sx.sina.com.cn/brand/2026-09-11/detail-inirnhrw8927580.shtml",
+        "address": "Chanba MixC, Eurasia Avenue at Gangxing Second Road, Xi’an, China",
+        "latitude": 34.372523569833,
+        "longitude": 109.035361717738,
+        "productName": "Banu Hotpot — Chanba MixC",
+        "utcStartDateTime": "2026-09-12T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "Sina Shaanxi’s September 11 branch announcement states September 12. Post-opening developer reporting lists Banu among the mall’s operating restaurants.",
+        "parentId": null,
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Xi’an",
+          "China",
+          "Chanba International Port",
+          "Hotpot"
+        ],
+        "longFormSummary": "<p>Banu’s Chanba MixC branch opened with the new mall on September 12, specialising in tripe hotpot. <cite data-ref=\"https://sx.sina.com.cn/brand/2026-09-11/detail-inirnhrw8927580.shtml\"></cite></p><p>Map position is approximate, based on published property coordinates or address/area geocoding; verify the entrance with the venue.</p>",
+        "references": [
+          {
+            "url": "https://sx.sina.com.cn/brand/2026-09-11/detail-inirnhrw8927580.shtml",
+            "title": "Banu Hotpot — Chanba MixC — research source",
+            "confidence": 90,
+            "reasoning": "Sina Shaanxi’s September 11 branch announcement states September 12. Post-opening developer reporting lists Banu among the mall’s operating restaurants."
+          },
+          {
+            "url": "https://www.chidutech.com/web/article/detail/sid/NmjiUn4iNaDpUpw",
+            "title": "Chanba MixC opening report — Banu restaurant",
+            "confidence": 90,
+            "reasoning": "Post-opening developer report confirms Banu in the mall restaurant lineup."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://sx.sina.com.cn/brand/2026-09-11/detail-inirnhrw8927580.shtml",
+          "menu": {
+            "pinSourceUrl": "https://sx.sina.com.cn/brand/2026-09-11/detail-inirnhrw8927580.shtml",
+            "name": "Banu Hotpot — Chanba MixC",
+            "checkedAt": "2026-10-10",
+            "menus": [
+              {
+                "label": "Branch opening dishes",
+                "url": "https://sx.sina.com.cn/brand/2026-09-11/detail-inirnhrw8927580.shtml",
+                "currency": "CNY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Hand-torn New Zealand tripe",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Wild mushroom broth",
+                    "priceLabel": "Price not published"
+                  }
+                ],
+                "note": "Branch opening report names these dishes without prices. Operator site and branch-price, ordering and mall searches checked; other Banu branches’ prices are excluded."
+              }
+            ],
+            "specials": [],
+            "location": {
+              "latitude": 34.372523569833,
+              "longitude": 109.035361717738,
+              "sourceUrl": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?f=json&SingleLine=%E8%A5%BF%E5%AE%89%E5%B8%82%E6%AC%A7%E4%BA%9A%E5%A4%A7%E9%81%93%E4%B8%8E%E6%B8%AF%E5%85%B4%E4%BA%8C%E8%B7%AF%E4%BA%A4%E6%B1%87%E5%A4%84&outFields=Match_addr%2CAddr_type&maxLocations=1&sourceCountry=CHN",
+              "checkedAt": "2026-10-10"
+            }
+          },
+          "details": {
+            "pinSourceUrl": "https://sx.sina.com.cn/brand/2026-09-11/detail-inirnhrw8927580.shtml",
+            "name": "Banu Hotpot — Chanba MixC",
+            "websiteUrl": "https://www.banu.cn/",
+            "phone": null,
+            "openingHours": [],
+            "checkedAt": "2026-10-10",
+            "detailsSourceUrl": "https://sx.sina.com.cn/brand/2026-09-11/detail-inirnhrw8927580.shtml"
+          },
+          "tile": {
+            "regionSlug": "xian",
+            "kind": "opening",
+            "slug": "banu-chanba",
+            "name": "Banu Hotpot — Chanba MixC",
+            "neighborhood": "Chanba International Port",
+            "cuisine": "Hotpot",
+            "address": "Chanba MixC, Eurasia Avenue at Gangxing Second Road, Xi’an, China",
+            "websiteUrl": "https://www.banu.cn/",
+            "description": "Banu’s Chanba MixC branch opened with the new mall on September 12, specialising in tripe hotpot.",
+            "checkedAt": "2026-10-10",
+            "recognition": "",
+            "priceRange": "",
+            "image": null,
+            "imageCredit": "",
+            "day": "2026-09-12",
+            "openingConfirmed": true
+          }
+        },
+        "enabled": true
+      },
+      "photos": [],
+      "geocoding": {
+        "latitude": 34.372523569833,
+        "longitude": 109.035361717738,
+        "score": 81.2,
+        "matchedAddress": "陕西省西安市灞桥区港兴二路",
+        "addressType": "StreetName",
+        "sourceUrl": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?f=json&SingleLine=%E8%A5%BF%E5%AE%89%E5%B8%82%E6%AC%A7%E4%BA%9A%E5%A4%A7%E9%81%93%E4%B8%8E%E6%B8%AF%E5%85%B4%E4%BA%8C%E8%B7%AF%E4%BA%A4%E6%B1%87%E5%A4%84&outFields=Match_addr%2CAddr_type&maxLocations=1&sourceCountry=CHN"
+      }
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Catch — Guangzhou restaurant guide",
+        "description": "Contemporary French dining and seafood above the Pearl River on the hotel’s 100th floor.",
+        "sourceUrl": "https://www.fourseasons.com/guangzhou/dining/restaurants/catch/",
+        "address": "100/F, Four Seasons Hotel Guangzhou, 5 Zhujiang West Road, Tianhe, Guangzhou, China",
+        "latitude": 23.1204288188,
+        "longitude": 113.317970201987,
+        "productName": "Catch",
+        "utcStartDateTime": "2012-07-23T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "Four Seasons Hotel Guangzhou (IFC, floors in top third) held its official opening ceremonies on 23 July 2012 and press coverage presents Catch on the 100th floor as part of the launch offering; no separate Catch opening announcement found, so the hotel opening date is used (official fact sheet gives July 2012). Estimated: the exact day 2012-07-23 comes from a proxy source (registration, announcement or hotel opening) and is not a confirmed opening day.",
+        "parentId": null,
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Top Restaurants",
+          "Guangzhou",
+          "China",
+          "Tianhe · Zhujiang New Town",
+          "Contemporary French"
+        ],
+        "longFormSummary": "<p>Contemporary French dining and seafood above the Pearl River on the hotel’s 100th floor. <cite data-ref=\"https://www.fourseasons.com/guangzhou/dining/restaurants/catch/\"></cite></p><p>Map position is approximate, based on published property coordinates or address/area geocoding; verify the entrance with the venue.</p>",
+        "references": [
+          {
+            "url": "https://www.fourseasons.com/guangzhou/dining/restaurants/catch/",
+            "title": "Catch — research source",
+            "confidence": 90,
+            "reasoning": "Four Seasons Hotel Guangzhou (IFC, floors in top third) held its official opening ceremonies on 23 July 2012 and press coverage presents Catch on the 100th floor as part of the launch offering; no separate Catch opening announcement found, so the hotel opening date is used (official fact sheet gives July 2012). Estimated: the exact day 2012-07-23 comes from a proxy source (registration, announcement or hotel opening) and is not a confirmed opening day."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://www.fourseasons.com/guangzhou/dining/restaurants/catch/",
+          "menu": {
+            "pinSourceUrl": "https://www.fourseasons.com/guangzhou/dining/restaurants/catch/",
+            "name": "Catch",
+            "checkedAt": "2026-10-10",
+            "menus": [
+              {
+                "label": "À la carte dinner",
+                "url": "https://www.fourseasons.com/guangzhou/dining/restaurants/catch/dinner/",
+                "currency": "CNY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Green salad",
+                    "price": 188
+                  },
+                  {
+                    "name": "House-smoked salmon",
+                    "price": 308
+                  },
+                  {
+                    "name": "Onion soup",
+                    "price": 188
+                  },
+                  {
+                    "name": "Lobster bisque",
+                    "price": 268
+                  },
+                  {
+                    "name": "Mushroom risotto",
+                    "price": 228
+                  },
+                  {
+                    "name": "Roasted duck breast",
+                    "price": 308
+                  }
+                ],
+                "note": "Published CNY prices; add 10% service charge and value-added tax."
+              },
+              {
+                "label": "Dinner set",
+                "url": "https://www.fourseasons.com/guangzhou/dining/restaurants/catch/set-menu/",
+                "currency": "CNY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Dinner set — per person",
+                    "price": 1288,
+                    "note": "Starting price; wine pairing optional."
+                  },
+                  {
+                    "name": "Cured hamachi",
+                    "priceLabel": "Price not published",
+                    "note": "Included course, not separately priced."
+                  },
+                  {
+                    "name": "Seafood consommé",
+                    "priceLabel": "Price not published",
+                    "note": "Included course, not separately priced."
+                  },
+                  {
+                    "name": "Grilled salmon",
+                    "priceLabel": "Price not published",
+                    "note": "Included course, not separately priced."
+                  }
+                ],
+                "note": "Starting at CNY 1,288/person; add 10% service and VAT. Wellington upgrade costs an additional CNY 588 for two. This regular set is not labelled a discount."
+              }
+            ],
+            "specials": [],
+            "location": {
+              "latitude": 23.1204288188,
+              "longitude": 113.317970201987,
+              "sourceUrl": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?f=json&SingleLine=%E5%B9%BF%E5%B7%9E%E5%B8%82%E5%A4%A9%E6%B2%B3%E5%8C%BA%E7%8F%A0%E6%B1%9F%E8%A5%BF%E8%B7%AF5%E5%8F%B7&outFields=Match_addr%2CAddr_type&maxLocations=1&sourceCountry=CHN",
+              "checkedAt": "2026-10-10"
+            },
+            "photo": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/guangzhou/researched/catch-0-7ef0341c83a118ae.webp",
+              "alt": "Catch — official branch photograph; pictured dishes may vary",
+              "credit": "Four Seasons Hotel Guangzhou / Catch",
+              "sourceUrl": "https://www.fourseasons.com/guangzhou/dining/restaurants/catch/",
+              "originalUrl": "https://www.fourseasons.com/alt/img-opt/~75.701.471,8290-0,0000-1501,5000-2002,0000/publish/content/dam/fourseasons/images/web/GUA/GUA_144_original.jpg",
+              "checkedAt": "2026-10-10"
+            }
+          },
+          "details": {
+            "pinSourceUrl": "https://www.fourseasons.com/guangzhou/dining/restaurants/catch/",
+            "name": "Catch",
+            "websiteUrl": "https://www.fourseasons.com/guangzhou/dining/restaurants/catch/",
+            "phone": "+86 20 8883 3366",
+            "openingHours": [
+              {
+                "days": "Daily",
+                "hours": "18:00–22:00"
+              }
+            ],
+            "checkedAt": "2026-10-10",
+            "detailsSourceUrl": "https://www.fourseasons.com/guangzhou/dining/restaurants/catch/"
+          },
+          "tile": {
+            "regionSlug": "guangzhou",
+            "kind": "top",
+            "slug": "catch",
+            "name": "Catch",
+            "neighborhood": "Tianhe · Zhujiang New Town",
+            "cuisine": "Contemporary French",
+            "address": "100/F, Four Seasons Hotel Guangzhou, 5 Zhujiang West Road, Tianhe, Guangzhou, China",
+            "websiteUrl": "https://www.fourseasons.com/guangzhou/dining/restaurants/catch/",
+            "description": "Contemporary French dining and seafood above the Pearl River on the hotel’s 100th floor.",
+            "checkedAt": "2026-10-10",
+            "recognition": "Chronopin selection",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/guangzhou/researched/catch-0-7ef0341c83a118ae.webp",
+            "imageCredit": "Four Seasons Hotel Guangzhou / Catch",
+            "imageSourceUrl": "https://www.fourseasons.com/alt/img-opt/~75.701.471,8290-0,0000-1501,5000-2002,0000/publish/content/dam/fourseasons/images/web/GUA/GUA_144_original.jpg",
+            "imageNote": "Catch — official branch photograph; pictured dishes may vary"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "region": "guangzhou",
+          "slug": "catch-0",
+          "source": "https://www.fourseasons.com/alt/img-opt/~75.701.471,8290-0,0000-1501,5000-2002,0000/publish/content/dam/fourseasons/images/web/GUA/GUA_144_original.jpg",
+          "credit": "Four Seasons Hotel Guangzhou / Catch",
+          "sourcePage": "https://www.fourseasons.com/guangzhou/dining/restaurants/catch/",
+          "note": "Catch — official branch photograph; pictured dishes may vary",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/guangzhou/researched/catch-0-7ef0341c83a118ae.webp",
+          "sha256": "7ef0341c83a118ae17a4b565f3ef53ced4d36a40367e14bc5d2d228f698faea7",
+          "width": 701,
+          "height": 934
+        },
+        {
+          "region": "guangzhou",
+          "slug": "catch-2",
+          "source": "https://www.fourseasons.com/alt/img-opt/~70.1530.0,0000-156,2500-3000,0000-1687,5000/publish/content/dam/fourseasons/images/web/GUA/GUA_2794_original.jpg",
+          "credit": "Four Seasons Hotel Guangzhou / Catch",
+          "sourcePage": "https://www.fourseasons.com/guangzhou/dining/restaurants/catch/",
+          "note": "Catch — official branch photograph; pictured dishes may vary",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/guangzhou/researched/catch-2-40cd531d2fc7ba47.webp",
+          "sha256": "40cd531d2fc7ba4741fa0c86ad9f347901cdc414692e0722259c0ec9743d2679",
+          "width": 1400,
+          "height": 788
+        }
+      ],
+      "geocoding": {
+        "latitude": 23.1204288188,
+        "longitude": 113.317970201987,
+        "score": 100,
+        "matchedAddress": "广东省广州市天河区猎德街道珠江西路5号",
+        "addressType": "PointAddress",
+        "sourceUrl": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?f=json&SingleLine=%E5%B9%BF%E5%B7%9E%E5%B8%82%E5%A4%A9%E6%B2%B3%E5%8C%BA%E7%8F%A0%E6%B1%9F%E8%A5%BF%E8%B7%AF5%E5%8F%B7&outFields=Match_addr%2CAddr_type&maxLocations=1&sourceCountry=CHN"
+      }
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Yu Yue Heen — reopening opens in Tianhe · Zhujiang New Town",
+        "description": "The Cantonese restaurant reopened after a complete redesign, with a new menu inspired by Lingnan traditions.",
+        "sourceUrl": "https://www.fourseasons.com/guangzhou/dining/restaurants/yu_yue_heen/",
+        "address": "71/F, Four Seasons Hotel Guangzhou, 5 Zhujiang West Road, Tianhe, Guangzhou, China",
+        "latitude": 23.1204288188,
+        "longitude": 113.317970201987,
+        "productName": "Yu Yue Heen — reopening",
+        "utcStartDateTime": "2026-09-29T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "Four Seasons’ September 29, 2026 press release confirms reopening after the redesign; this is a reopening, not the venue’s original launch.",
+        "parentId": null,
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Guangzhou",
+          "China",
+          "Tianhe · Zhujiang New Town",
+          "Contemporary Cantonese"
+        ],
+        "longFormSummary": "<p>The Cantonese restaurant reopened after a complete redesign, with a new menu inspired by Lingnan traditions. <cite data-ref=\"https://press.fourseasons.com/guangzhou/hotel-news/2026/yu-yue-heen-reopens/\"></cite></p><p>Map position is approximate, based on published property coordinates or address/area geocoding; verify the entrance with the venue.</p>",
+        "references": [
+          {
+            "url": "https://press.fourseasons.com/guangzhou/hotel-news/2026/yu-yue-heen-reopens/",
+            "title": "Yu Yue Heen — reopening — research source",
+            "confidence": 90,
+            "reasoning": "Four Seasons’ September 29, 2026 press release confirms reopening after the redesign; this is a reopening, not the venue’s original launch."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://www.fourseasons.com/guangzhou/dining/restaurants/yu_yue_heen/",
+          "menu": {
+            "pinSourceUrl": "https://www.fourseasons.com/guangzhou/dining/restaurants/yu_yue_heen/",
+            "name": "Yu Yue Heen — reopening",
+            "checkedAt": "2026-10-10",
+            "menus": [
+              {
+                "label": "À la carte",
+                "url": "https://www.fourseasons.com/guangzhou/dining/restaurants/yu_yue_heen/a-la-carte/",
+                "currency": "CNY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "White sugar cake with crispy pork slices",
+                    "price": 208
+                  },
+                  {
+                    "name": "Crispy roasted pork belly",
+                    "price": 208
+                  },
+                  {
+                    "name": "Char siu with tangerine peel sauce",
+                    "price": 328
+                  },
+                  {
+                    "name": "Crispy chicken — half",
+                    "price": 368
+                  },
+                  {
+                    "name": "Signature fresh and savoury soup",
+                    "price": 138
+                  },
+                  {
+                    "name": "Char siu and ganba mushroom fried rice",
+                    "price": 268
+                  }
+                ],
+                "note": "Current reopening menu. CNY prices; add 10% service charge and value-added tax."
+              }
+            ],
+            "specials": [],
+            "location": {
+              "latitude": 23.1204288188,
+              "longitude": 113.317970201987,
+              "sourceUrl": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?f=json&SingleLine=%E5%B9%BF%E5%B7%9E%E5%B8%82%E5%A4%A9%E6%B2%B3%E5%8C%BA%E7%8F%A0%E6%B1%9F%E8%A5%BF%E8%B7%AF5%E5%8F%B7&outFields=Match_addr%2CAddr_type&maxLocations=1&sourceCountry=CHN",
+              "checkedAt": "2026-10-10"
+            },
+            "photo": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/guangzhou/researched/yu-yue-heen-0-da6cc70624e1778b.webp",
+              "alt": "Yu Yue Heen — official branch photograph; pictured dishes may vary",
+              "credit": "Four Seasons Hotel Guangzhou / Yu Yue Heen",
+              "sourceUrl": "https://www.fourseasons.com/guangzhou/dining/restaurants/yu_yue_heen/",
+              "originalUrl": "https://www.fourseasons.com/alt/img-opt/~75.701.484,5787-0,0000-2000,0000-1500,0000/publish/content/dam/fourseasons/images/web/GUA/GUA_3195_original.jpg",
+              "checkedAt": "2026-10-10"
+            }
+          },
+          "details": {
+            "pinSourceUrl": "https://www.fourseasons.com/guangzhou/dining/restaurants/yu_yue_heen/",
+            "name": "Yu Yue Heen — reopening",
+            "websiteUrl": "https://www.fourseasons.com/guangzhou/dining/restaurants/yu_yue_heen/",
+            "phone": "+86 20 8883 3366",
+            "openingHours": [
+              {
+                "days": "Daily",
+                "hours": "Lunch 11:30–14:30; dinner 17:30–21:30"
+              }
+            ],
+            "checkedAt": "2026-10-10",
+            "detailsSourceUrl": "https://press.fourseasons.com/guangzhou/hotel-news/2026/yu-yue-heen-reopens/"
+          },
+          "tile": {
+            "regionSlug": "guangzhou",
+            "kind": "opening",
+            "slug": "yu-yue-heen",
+            "name": "Yu Yue Heen — reopening",
+            "neighborhood": "Tianhe · Zhujiang New Town",
+            "cuisine": "Contemporary Cantonese",
+            "address": "71/F, Four Seasons Hotel Guangzhou, 5 Zhujiang West Road, Tianhe, Guangzhou, China",
+            "websiteUrl": "https://www.fourseasons.com/guangzhou/dining/restaurants/yu_yue_heen/",
+            "description": "The Cantonese restaurant reopened after a complete redesign, with a new menu inspired by Lingnan traditions.",
+            "checkedAt": "2026-10-10",
+            "recognition": "",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/guangzhou/researched/yu-yue-heen-0-da6cc70624e1778b.webp",
+            "imageCredit": "Four Seasons Hotel Guangzhou / Yu Yue Heen",
+            "imageSourceUrl": "https://www.fourseasons.com/alt/img-opt/~75.701.484,5787-0,0000-2000,0000-1500,0000/publish/content/dam/fourseasons/images/web/GUA/GUA_3195_original.jpg",
+            "imageNote": "Yu Yue Heen — official branch photograph; pictured dishes may vary",
+            "day": "2026-09-29",
+            "openingConfirmed": true
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "region": "guangzhou",
+          "slug": "yu-yue-heen-0",
+          "source": "https://www.fourseasons.com/alt/img-opt/~75.701.484,5787-0,0000-2000,0000-1500,0000/publish/content/dam/fourseasons/images/web/GUA/GUA_3195_original.jpg",
+          "credit": "Four Seasons Hotel Guangzhou / Yu Yue Heen",
+          "sourcePage": "https://www.fourseasons.com/guangzhou/dining/restaurants/yu_yue_heen/",
+          "note": "Yu Yue Heen — official branch photograph; pictured dishes may vary",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/guangzhou/researched/yu-yue-heen-0-da6cc70624e1778b.webp",
+          "sha256": "da6cc70624e1778b3bbd82e0484235e48b8b75e6107ce763403e10f839a5d8c3",
+          "width": 701,
+          "height": 526
+        },
+        {
+          "region": "guangzhou",
+          "slug": "yu-yue-heen-2",
+          "source": "https://www.fourseasons.com/alt/img-opt/~70.1530.0,0000-313,5081-3000,0000-1687,5000/publish/content/dam/fourseasons/images/web/GUA/GUA_3179_original.jpg",
+          "credit": "Four Seasons Hotel Guangzhou / Yu Yue Heen",
+          "sourcePage": "https://www.fourseasons.com/guangzhou/dining/restaurants/yu_yue_heen/",
+          "note": "Yu Yue Heen — official branch photograph; pictured dishes may vary",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/guangzhou/researched/yu-yue-heen-2-7b866a085c79dff7.webp",
+          "sha256": "7b866a085c79dff79b0f309835506eb99dd38d7180766c30e61a57f62ac09898",
+          "width": 1400,
+          "height": 788
+        },
+        {
+          "region": "guangzhou",
+          "slug": "yu-yue-heen-3",
+          "source": "https://www.fourseasons.com/alt/img-opt/~70.1530.0,0000-368,4100-3000,0000-1687,5000/publish/content/dam/fourseasons/images/web/GUA/GUA_3180_original.jpg",
+          "credit": "Four Seasons Hotel Guangzhou / Yu Yue Heen",
+          "sourcePage": "https://www.fourseasons.com/guangzhou/dining/restaurants/yu_yue_heen/",
+          "note": "Yu Yue Heen — official branch photograph; pictured dishes may vary",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/guangzhou/researched/yu-yue-heen-3-6c52900bf238bf77.webp",
+          "sha256": "6c52900bf238bf779bde6c9dc3c52b46efa1728c65c6ee2ccc5be305293b2bb7",
+          "width": 1400,
+          "height": 788
+        },
+        {
+          "region": "guangzhou",
+          "slug": "yu-yue-heen-4",
+          "source": "https://www.fourseasons.com/alt/img-opt/~70.1530.0,0000-310,7404-3000,0000-1687,5000/publish/content/dam/fourseasons/images/web/GUA/GUA_3181_original.jpg",
+          "credit": "Four Seasons Hotel Guangzhou / Yu Yue Heen",
+          "sourcePage": "https://www.fourseasons.com/guangzhou/dining/restaurants/yu_yue_heen/",
+          "note": "Yu Yue Heen — official branch photograph; pictured dishes may vary",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/guangzhou/researched/yu-yue-heen-4-94523b9a03571791.webp",
+          "sha256": "94523b9a0357179131b8923502b4e8b2242086b780a88b1a1822b8f545457f48",
+          "width": 1400,
+          "height": 788
+        },
+        {
+          "region": "guangzhou",
+          "slug": "yu-yue-heen-5",
+          "source": "https://www.fourseasons.com/alt/img-opt/~70.1530.0,0000-180,8339-3000,0000-1687,5000/publish/content/dam/fourseasons/images/web/GUA/GUA_3182_original.jpg",
+          "credit": "Four Seasons Hotel Guangzhou / Yu Yue Heen",
+          "sourcePage": "https://www.fourseasons.com/guangzhou/dining/restaurants/yu_yue_heen/",
+          "note": "Yu Yue Heen — official branch photograph; pictured dishes may vary",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/guangzhou/researched/yu-yue-heen-5-40242aae70354da1.webp",
+          "sha256": "40242aae70354da10533abd2bff2e0680f6a1f98fe38996bd8fd35a0fe3aa636",
+          "width": 1400,
+          "height": 788
+        },
+        {
+          "region": "guangzhou",
+          "slug": "yu-yue-heen-6",
+          "source": "https://www.fourseasons.com/alt/img-opt/~70.1530.0,0000-281,2500-3000,0000-1687,5000/publish/content/dam/fourseasons/images/web/GUA/GUA_3184_original.jpg",
+          "credit": "Four Seasons Hotel Guangzhou / Yu Yue Heen",
+          "sourcePage": "https://www.fourseasons.com/guangzhou/dining/restaurants/yu_yue_heen/",
+          "note": "Yu Yue Heen — official branch photograph; pictured dishes may vary",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/guangzhou/researched/yu-yue-heen-6-3a58203089c6097c.webp",
+          "sha256": "3a58203089c6097cf525331ded504ed66547592498a6545e1af8edad5102bfe2",
+          "width": 1400,
+          "height": 788
+        },
+        {
+          "region": "guangzhou",
+          "slug": "yu-yue-heen-7",
+          "source": "https://www.fourseasons.com/alt/img-opt/~70.1530.0,0000-389,4514-3000,0000-1687,5000/publish/content/dam/fourseasons/images/web/GUA/GUA_3189_original.jpg",
+          "credit": "Four Seasons Hotel Guangzhou / Yu Yue Heen",
+          "sourcePage": "https://www.fourseasons.com/guangzhou/dining/restaurants/yu_yue_heen/",
+          "note": "Yu Yue Heen — official branch photograph; pictured dishes may vary",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/guangzhou/researched/yu-yue-heen-7-a3fb970f4ff3b97d.webp",
+          "sha256": "a3fb970f4ff3b97d42e9ac48364b50cec18c188d6ee0770de9c8a4aaa8e66eab",
+          "width": 1400,
+          "height": 788
+        },
+        {
+          "region": "guangzhou",
+          "slug": "yu-yue-heen-press-4",
+          "source": "https://press.fourseasons.com/content/dam/fourseasons/images/web/GUA/GUA_3200_aspect16x9.jpg/jcr:content/renditions/cq5dam.web.press.400.keepaspectratio.jpeg",
+          "credit": "Four Seasons Hotel Guangzhou / Yu Yue Heen",
+          "sourcePage": "https://press.fourseasons.com/guangzhou/hotel-news/2026/yu-yue-heen-reopens/",
+          "note": "Yu Yue Heen — official reopening gallery photograph",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/guangzhou/researched/yu-yue-heen-press-4-d8be85c9de1ccc12.webp",
+          "sha256": "d8be85c9de1ccc120fcdae0f6c713c4ceff41471284c4fcd70263eca1a0f7f73",
+          "width": 400,
+          "height": 225
+        },
+        {
+          "region": "guangzhou",
+          "slug": "yu-yue-heen-press-5",
+          "source": "https://press.fourseasons.com/content/dam/fourseasons/images/web/GUA/GUA_3202_aspect16x9.jpg/jcr:content/renditions/cq5dam.web.press.400.keepaspectratio.jpeg",
+          "credit": "Four Seasons Hotel Guangzhou / Yu Yue Heen",
+          "sourcePage": "https://press.fourseasons.com/guangzhou/hotel-news/2026/yu-yue-heen-reopens/",
+          "note": "Yu Yue Heen — official reopening gallery photograph",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/guangzhou/researched/yu-yue-heen-press-5-b8f49ea3bec32181.webp",
+          "sha256": "b8f49ea3bec321814e07d36cfc7150b5d5b99010d7ee23ac2d20b4634d50572f",
+          "width": 400,
+          "height": 225
+        },
+        {
+          "region": "guangzhou",
+          "slug": "yu-yue-heen-press-8",
+          "source": "https://press.fourseasons.com/content/dam/fourseasons/images/web/GUA/GUA_3185_aspect16x9.jpg/jcr:content/renditions/cq5dam.web.press.400.keepaspectratio.jpeg",
+          "credit": "Four Seasons Hotel Guangzhou / Yu Yue Heen",
+          "sourcePage": "https://press.fourseasons.com/guangzhou/hotel-news/2026/yu-yue-heen-reopens/",
+          "note": "Yu Yue Heen — official reopening gallery photograph",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/guangzhou/researched/yu-yue-heen-press-8-91571d3bf559fe0a.webp",
+          "sha256": "91571d3bf559fe0a0fc6c642929fe729ff11a26ad49a8eceb75b0fc8a762b625",
+          "width": 400,
+          "height": 225
+        }
+      ],
+      "geocoding": {
+        "latitude": 23.1204288188,
+        "longitude": 113.317970201987,
+        "score": 100,
+        "matchedAddress": "广东省广州市天河区猎德街道珠江西路5号",
+        "addressType": "PointAddress",
+        "sourceUrl": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?f=json&SingleLine=%E5%B9%BF%E5%B7%9E%E5%B8%82%E5%A4%A9%E6%B2%B3%E5%8C%BA%E7%8F%A0%E6%B1%9F%E8%A5%BF%E8%B7%AF5%E5%8F%B7&outFields=Match_addr%2CAddr_type&maxLocations=1&sourceCountry=CHN"
+      }
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Zhuo Yue Xuan — Shenzhen restaurant guide",
+        "description": "Cantonese cooking and handcrafted dim sum at Four Seasons Hotel Shenzhen.",
+        "sourceUrl": "https://www.fourseasons.com/shenzhen/dining/restaurants/zhuo_yue_xuan/",
+        "address": "Four Seasons Hotel Shenzhen, 138 Fuhua Third Road, Futian District, Shenzhen, China",
+        "latitude": 22.535959297109,
+        "longitude": 114.052845432448,
+        "productName": "Zhuo Yue Xuan",
+        "utcStartDateTime": "2013-09-30T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "Four Seasons Hotel Shenzhen opened in September 2013 (reservations from 1 Sep 2013; opening release dated 27 Sep 2013) and Zhuo Yue Xuan is its signature Cantonese restaurant with Chef Tse Man at launch; no exact restaurant day found. Estimated: 2013-09 is a best estimate and 2013-09-30 is used only as a period-end sorting date, not a confirmed opening day.",
+        "parentId": null,
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Top Restaurants",
+          "Shenzhen",
+          "China",
+          "Futian",
+          "Cantonese"
+        ],
+        "longFormSummary": "<p>Cantonese cooking and handcrafted dim sum at Four Seasons Hotel Shenzhen. <cite data-ref=\"https://www.fourseasons.com/shenzhen/dining/restaurants/zhuo_yue_xuan/\"></cite></p><p>Map position is approximate, based on published property coordinates or address/area geocoding; verify the entrance with the venue.</p>",
+        "references": [
+          {
+            "url": "https://www.fourseasons.com/shenzhen/dining/restaurants/zhuo_yue_xuan/",
+            "title": "Zhuo Yue Xuan — research source",
+            "confidence": 90,
+            "reasoning": "Four Seasons Hotel Shenzhen opened in September 2013 (reservations from 1 Sep 2013; opening release dated 27 Sep 2013) and Zhuo Yue Xuan is its signature Cantonese restaurant with Chef Tse Man at launch; no exact restaurant day found. Estimated: 2013-09 is a best estimate and 2013-09-30 is used only as a period-end sorting date, not a confirmed opening day."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://www.fourseasons.com/shenzhen/dining/restaurants/zhuo_yue_xuan/",
+          "menu": {
+            "pinSourceUrl": "https://www.fourseasons.com/shenzhen/dining/restaurants/zhuo_yue_xuan/",
+            "name": "Zhuo Yue Xuan",
+            "checkedAt": "2026-10-10",
+            "menus": [
+              {
+                "label": "À la carte",
+                "url": "https://www.fourseasons.com/shenzhen/dining/menus/zhuo-yue-xuan-a-la-carte/",
+                "currency": "CNY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Crispy roasted chicken",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Honey barbecued pork",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Crispy pork belly with sea salt",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Sweet and sour pork with walnuts",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Fried rice with dried scallop and egg white",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Chilled mango, sago and pomelo cream",
+                    "priceLabel": "Price not published"
+                  }
+                ],
+                "note": "Operator menu lists dishes without prices. Checked linked single sets, chef’s recommendations, Chinese branch page and menu/PDF searches; prices remain unpublished."
+              }
+            ],
+            "specials": [],
+            "location": {
+              "latitude": 22.535959297109,
+              "longitude": 114.052845432448,
+              "sourceUrl": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?f=json&SingleLine=%E6%B7%B1%E5%9C%B3%E5%B8%82%E7%A6%8F%E7%94%B0%E5%8C%BA%E7%A6%8F%E5%8D%8E%E4%B8%89%E8%B7%AF138%E5%8F%B7&outFields=Match_addr%2CAddr_type&maxLocations=1&sourceCountry=CHN",
+              "checkedAt": "2026-10-10"
+            },
+            "photo": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/shenzhen/researched/zhuo-yue-xuan-2-e04a14fc59cc29b1.webp",
+              "alt": "Server sets large round dining table by corner windows under ceiling covered with hanging lights",
+              "credit": "Four Seasons Hotel Shenzhen / Zhuo Yue Xuan",
+              "sourceUrl": "https://www.fourseasons.com/shenzhen/dining/restaurants/zhuo_yue_xuan/",
+              "originalUrl": "https://www.fourseasons.com/alt/img-opt/~70.1530.0,0000-278,5000-3000,0000-1687,5000/publish/content/dam/fourseasons/images/web/SZH/SZH_221_original.jpg",
+              "checkedAt": "2026-10-10"
+            }
+          },
+          "details": {
+            "pinSourceUrl": "https://www.fourseasons.com/shenzhen/dining/restaurants/zhuo_yue_xuan/",
+            "name": "Zhuo Yue Xuan",
+            "websiteUrl": "https://www.fourseasons.com/shenzhen/dining/restaurants/zhuo_yue_xuan/",
+            "phone": "+86 755 8826 8800",
+            "openingHours": [
+              {
+                "days": "Monday–Friday",
+                "hours": "Lunch 11:30–14:30"
+              },
+              {
+                "days": "Saturday–Sunday",
+                "hours": "Lunch 10:30–14:30"
+              },
+              {
+                "days": "Daily",
+                "hours": "Dinner 17:30–22:30"
+              }
+            ],
+            "checkedAt": "2026-10-10",
+            "detailsSourceUrl": "https://www.fourseasons.com/shenzhen/dining/restaurants/zhuo_yue_xuan/"
+          },
+          "tile": {
+            "regionSlug": "shenzhen",
+            "kind": "top",
+            "slug": "zhuo-yue-xuan",
+            "name": "Zhuo Yue Xuan",
+            "neighborhood": "Futian",
+            "cuisine": "Cantonese",
+            "address": "Four Seasons Hotel Shenzhen, 138 Fuhua Third Road, Futian District, Shenzhen, China",
+            "websiteUrl": "https://www.fourseasons.com/shenzhen/dining/restaurants/zhuo_yue_xuan/",
+            "description": "Cantonese cooking and handcrafted dim sum at Four Seasons Hotel Shenzhen.",
+            "checkedAt": "2026-10-10",
+            "recognition": "Chronopin selection",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/shenzhen/researched/zhuo-yue-xuan-2-e04a14fc59cc29b1.webp",
+            "imageCredit": "Four Seasons Hotel Shenzhen / Zhuo Yue Xuan",
+            "imageSourceUrl": "https://www.fourseasons.com/alt/img-opt/~70.1530.0,0000-278,5000-3000,0000-1687,5000/publish/content/dam/fourseasons/images/web/SZH/SZH_221_original.jpg",
+            "imageNote": "Server sets large round dining table by corner windows under ceiling covered with hanging lights"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "region": "shenzhen",
+          "slug": "zhuo-yue-xuan-2",
+          "source": "https://www.fourseasons.com/alt/img-opt/~70.1530.0,0000-278,5000-3000,0000-1687,5000/publish/content/dam/fourseasons/images/web/SZH/SZH_221_original.jpg",
+          "credit": "Four Seasons Hotel Shenzhen / Zhuo Yue Xuan",
+          "sourcePage": "https://www.fourseasons.com/shenzhen/dining/restaurants/zhuo_yue_xuan/",
+          "note": "Server sets large round dining table by corner windows under ceiling covered with hanging lights",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/shenzhen/researched/zhuo-yue-xuan-2-e04a14fc59cc29b1.webp",
+          "sha256": "e04a14fc59cc29b1fcb7b15d010231f7338568787fc93b85750be589ae617720",
+          "width": 1400,
+          "height": 788
+        },
+        {
+          "region": "shenzhen",
+          "slug": "zhuo-yue-xuan-3",
+          "source": "https://www.fourseasons.com/alt/img-opt/~70.1530.0,0000-305,8112-3000,0000-1687,5000/publish/content/dam/fourseasons/images/web/SZH/SZH_224_original.jpg",
+          "credit": "Four Seasons Hotel Shenzhen / Zhuo Yue Xuan",
+          "sourcePage": "https://www.fourseasons.com/shenzhen/dining/restaurants/zhuo_yue_xuan/",
+          "note": "Zhuo yue xuan restaurant dining tables, chairs past glass windows",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/shenzhen/researched/zhuo-yue-xuan-3-8ef7df14fbf8c3e2.webp",
+          "sha256": "8ef7df14fbf8c3e283749bb432d54c9b992868f853dadcf00d06e126286fcb69",
+          "width": 1400,
+          "height": 788
+        },
+        {
+          "region": "shenzhen",
+          "slug": "zhuo-yue-xuan-4",
+          "source": "https://www.fourseasons.com/alt/img-opt/~70.1530.0,0000-1328,0812-2000,0000-1125,0000/publish/content/dam/fourseasons/images/web/SZH/SZH_1171_original.jpg",
+          "credit": "Four Seasons Hotel Shenzhen / Zhuo Yue Xuan",
+          "sourcePage": "https://www.fourseasons.com/shenzhen/dining/restaurants/zhuo_yue_xuan/",
+          "note": "Zhuo Yue Xuan — official branch photograph; pictured dishes may vary",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/shenzhen/researched/zhuo-yue-xuan-4-bfad093ae6ac393f.webp",
+          "sha256": "bfad093ae6ac393fe221f460809eb16f684742e6d374a4b99899121804af3223",
+          "width": 1400,
+          "height": 788
+        },
+        {
+          "region": "shenzhen",
+          "slug": "zhuo-yue-xuan-5",
+          "source": "https://www.fourseasons.com/alt/img-opt/~70.1530.0,0000-936,9375-2002,0000-1126,1250/publish/content/dam/fourseasons/images/web/SZH/SZH_482_original.jpg",
+          "credit": "Four Seasons Hotel Shenzhen / Zhuo Yue Xuan",
+          "sourcePage": "https://www.fourseasons.com/shenzhen/dining/restaurants/zhuo_yue_xuan/",
+          "note": "Steamed lotus root stacked on plate with sauce, herbs",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/shenzhen/researched/zhuo-yue-xuan-5-d8c815b829e82677.webp",
+          "sha256": "d8c815b829e8267746d080f435efe5bcb38423a5b77ca3c44c89f18cfedb9366",
+          "width": 1400,
+          "height": 788
+        },
+        {
+          "region": "shenzhen",
+          "slug": "zhuo-yue-xuan-6",
+          "source": "https://www.fourseasons.com/alt/img-opt/~70.1530.0,0000-312,5000-3000,0000-1687,5000/publish/content/dam/fourseasons/images/web/SZH/SZH_866_original.jpg",
+          "credit": "Four Seasons Hotel Shenzhen / Zhuo Yue Xuan",
+          "sourcePage": "https://www.fourseasons.com/shenzhen/dining/restaurants/zhuo_yue_xuan/",
+          "note": "Signature fried rice with shrimp, roasted pork and chives",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/shenzhen/researched/zhuo-yue-xuan-6-cb8bd3f3b8ff2ca4.webp",
+          "sha256": "cb8bd3f3b8ff2ca4990a24b0b01080aca979ec1f099e0611fff1ed230db743e9",
+          "width": 1400,
+          "height": 788
+        }
+      ],
+      "geocoding": {
+        "latitude": 22.535959297109,
+        "longitude": 114.052845432448,
+        "score": 100,
+        "matchedAddress": "广东省深圳市福田区福田街道福华三路138号",
+        "addressType": "PointAddress",
+        "sourceUrl": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?f=json&SingleLine=%E6%B7%B1%E5%9C%B3%E5%B8%82%E7%A6%8F%E7%94%B0%E5%8C%BA%E7%A6%8F%E5%8D%8E%E4%B8%89%E8%B7%AF138%E5%8F%B7&outFields=Match_addr%2CAddr_type&maxLocations=1&sourceCountry=CHN"
+      }
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Morton’s Grille — Ping An Finance Center — Shenzhen restaurant guide",
+        "description": "A Futian steakhouse with a branch-specific happy hour pairing drinks with complimentary steak sandwiches.",
+        "sourceUrl": "https://events.nowshenzhen.com/event/sizzling-delights-mortons-grille-happy-hour-with-complimentary-steak-sandwiches",
+        "address": "N701, PA Mall, Ping An Finance Center, 5033 Yitian Road, Futian, Shenzhen, China",
+        "latitude": 22.536642170761,
+        "longitude": 114.050356342481,
+        "productName": "Morton’s Grille — Ping An Finance Center",
+        "utcStartDateTime": "2017-12-31T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "The PAFC Mall opened around Christmas 2017 and a 20 Dec 2017 mall report lists Morton's among five restaurants opening progressively that month; Chinese listings put it on the mall's 9th floor. Exact day not found. The mall itself bounds the date (cannot be earlier than mid-2017 pre-opening announcements). Estimated: 2017-12 is a best estimate and 2017-12-31 is used only as a period-end sorting date, not a confirmed opening day.",
+        "parentId": null,
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Top Restaurants",
+          "Shenzhen",
+          "China",
+          "Futian",
+          "American steakhouse"
+        ],
+        "longFormSummary": "<p>A Futian steakhouse with a branch-specific happy hour pairing drinks with complimentary steak sandwiches. <cite data-ref=\"https://events.nowshenzhen.com/event/sizzling-delights-mortons-grille-happy-hour-with-complimentary-steak-sandwiches\"></cite></p><p>Map position is approximate, based on published property coordinates or address/area geocoding; verify the entrance with the venue.</p>",
+        "references": [
+          {
+            "url": "https://events.nowshenzhen.com/event/sizzling-delights-mortons-grille-happy-hour-with-complimentary-steak-sandwiches",
+            "title": "Morton’s Grille — Ping An Finance Center — research source",
+            "confidence": 90,
+            "reasoning": "The PAFC Mall opened around Christmas 2017 and a 20 Dec 2017 mall report lists Morton's among five restaurants opening progressively that month; Chinese listings put it on the mall's 9th floor. Exact day not found. The mall itself bounds the date (cannot be earlier than mid-2017 pre-opening announcements). Estimated: 2017-12 is a best estimate and 2017-12-31 is used only as a period-end sorting date, not a confirmed opening day."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://events.nowshenzhen.com/event/sizzling-delights-mortons-grille-happy-hour-with-complimentary-steak-sandwiches",
+          "menu": {
+            "pinSourceUrl": "https://events.nowshenzhen.com/event/sizzling-delights-mortons-grille-happy-hour-with-complimentary-steak-sandwiches",
+            "name": "Morton’s Grille — Ping An Finance Center",
+            "checkedAt": "2026-10-10",
+            "menus": [
+              {
+                "label": "Happy-hour drinks and sandwich",
+                "url": "https://events.nowshenzhen.com/event/sizzling-delights-mortons-grille-happy-hour-with-complimentary-steak-sandwiches",
+                "currency": "CNY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Selected cocktail — per glass",
+                    "price": 38
+                  },
+                  {
+                    "name": "Selected wine — per glass",
+                    "price": 38
+                  },
+                  {
+                    "name": "Selected beer — per glass",
+                    "price": 38
+                  },
+                  {
+                    "name": "Steak sandwich",
+                    "price": 0,
+                    "note": "Complimentary with each qualifying drink; not a standalone free item."
+                  }
+                ],
+                "note": "Daily 16:00–19:00; add 10% service charge to drink prices. Current branch listing recurs until December 31, 2026. Named drink labels and current ordinary menu prices remain unpublished after operator and branch-menu searches."
+              }
+            ],
+            "specials": [
+              {
+                "kind": "other",
+                "title": "Happy hour — CNY 38 drinks with a steak sandwich",
+                "description": "A complimentary steak sandwich accompanies each qualifying happy-hour drink.",
+                "schedule": "Daily 16:00–19:00, through December 31, 2026",
+                "conditions": [
+                  "CNY 38 per glass plus 10% service charge.",
+                  "The source identifies cocktails, wine and beer, but does not name specific labels or cocktails. Confirm selection with the venue.",
+                  "One complimentary steak sandwich with each qualifying drink; ordinary food dishes are not included."
+                ],
+                "sourceUrl": "https://events.nowshenzhen.com/event/sizzling-delights-mortons-grille-happy-hour-with-complimentary-steak-sandwiches",
+                "discounted": true,
+                "menuLabel": "Happy-hour drinks and sandwich",
+                "validFrom": "2026-02-23",
+                "validThrough": "2026-12-31",
+                "availability": {
+                  "windows": [
+                    {
+                      "days": [
+                        0,
+                        1,
+                        2,
+                        3,
+                        4,
+                        5,
+                        6
+                      ],
+                      "start": "16:00",
+                      "end": "19:00"
+                    }
+                  ]
+                }
+              }
+            ],
+            "location": {
+              "latitude": 22.536642170761,
+              "longitude": 114.050356342481,
+              "sourceUrl": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?f=json&SingleLine=%E6%B7%B1%E5%9C%B3%E5%B8%82%E7%A6%8F%E7%94%B0%E5%8C%BA%E7%9B%8A%E7%94%B0%E8%B7%AF5033%E5%8F%B7&outFields=Match_addr%2CAddr_type&maxLocations=1&sourceCountry=CHN",
+              "checkedAt": "2026-10-10"
+            }
+          },
+          "details": {
+            "pinSourceUrl": "https://events.nowshenzhen.com/event/sizzling-delights-mortons-grille-happy-hour-with-complimentary-steak-sandwiches",
+            "name": "Morton’s Grille — Ping An Finance Center",
+            "websiteUrl": "https://events.nowshenzhen.com/event/sizzling-delights-mortons-grille-happy-hour-with-complimentary-steak-sandwiches",
+            "phone": "+86 755 8326 8333",
+            "openingHours": [],
+            "checkedAt": "2026-10-10",
+            "detailsSourceUrl": "https://events.nowshenzhen.com/event/sizzling-delights-mortons-grille-happy-hour-with-complimentary-steak-sandwiches"
+          },
+          "tile": {
+            "regionSlug": "shenzhen",
+            "kind": "top",
+            "slug": "mortons-grille",
+            "name": "Morton’s Grille — Ping An Finance Center",
+            "neighborhood": "Futian",
+            "cuisine": "American steakhouse",
+            "address": "N701, PA Mall, Ping An Finance Center, 5033 Yitian Road, Futian, Shenzhen, China",
+            "websiteUrl": "https://events.nowshenzhen.com/event/sizzling-delights-mortons-grille-happy-hour-with-complimentary-steak-sandwiches",
+            "description": "A Futian steakhouse with a branch-specific happy hour pairing drinks with complimentary steak sandwiches.",
+            "checkedAt": "2026-10-10",
+            "recognition": "Chronopin selection",
+            "priceRange": "",
+            "image": null,
+            "imageCredit": ""
+          }
+        },
+        "enabled": true
+      },
+      "special": {
+        "regionSlug": "shenzhen",
+        "profile": {
+          "pinSourceUrl": "https://events.nowshenzhen.com/event/sizzling-delights-mortons-grille-happy-hour-with-complimentary-steak-sandwiches",
+          "name": "Morton’s Grille — Ping An Finance Center",
+          "checkedAt": "2026-10-10",
+          "menus": [
+            {
+              "label": "Happy-hour drinks and sandwich",
+              "url": "https://events.nowshenzhen.com/event/sizzling-delights-mortons-grille-happy-hour-with-complimentary-steak-sandwiches",
+              "currency": "CNY",
+              "coverage": "sample",
+              "items": [
+                {
+                  "name": "Selected cocktail — per glass",
+                  "price": 38
+                },
+                {
+                  "name": "Selected wine — per glass",
+                  "price": 38
+                },
+                {
+                  "name": "Selected beer — per glass",
+                  "price": 38
+                },
+                {
+                  "name": "Steak sandwich",
+                  "price": 0,
+                  "note": "Complimentary with each qualifying drink; not a standalone free item."
+                }
+              ],
+              "note": "Daily 16:00–19:00; add 10% service charge to drink prices. Current branch listing recurs until December 31, 2026. Named drink labels and current ordinary menu prices remain unpublished after operator and branch-menu searches."
+            }
+          ],
+          "specials": [
+            {
+              "kind": "other",
+              "title": "Happy hour — CNY 38 drinks with a steak sandwich",
+              "description": "A complimentary steak sandwich accompanies each qualifying happy-hour drink.",
+              "schedule": "Daily 16:00–19:00, through December 31, 2026",
+              "conditions": [
+                "CNY 38 per glass plus 10% service charge.",
+                "The source identifies cocktails, wine and beer, but does not name specific labels or cocktails. Confirm selection with the venue.",
+                "One complimentary steak sandwich with each qualifying drink; ordinary food dishes are not included."
+              ],
+              "sourceUrl": "https://events.nowshenzhen.com/event/sizzling-delights-mortons-grille-happy-hour-with-complimentary-steak-sandwiches",
+              "discounted": true,
+              "menuLabel": "Happy-hour drinks and sandwich",
+              "validFrom": "2026-02-23",
+              "validThrough": "2026-12-31",
+              "availability": {
+                "windows": [
+                  {
+                    "days": [
+                      0,
+                      1,
+                      2,
+                      3,
+                      4,
+                      5,
+                      6
+                    ],
+                    "start": "16:00",
+                    "end": "19:00"
+                  }
+                ]
+              }
+            }
+          ],
+          "location": {
+            "latitude": 22.536642170761,
+            "longitude": 114.050356342481,
+            "sourceUrl": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?f=json&SingleLine=%E6%B7%B1%E5%9C%B3%E5%B8%82%E7%A6%8F%E7%94%B0%E5%8C%BA%E7%9B%8A%E7%94%B0%E8%B7%AF5033%E5%8F%B7&outFields=Match_addr%2CAddr_type&maxLocations=1&sourceCountry=CHN",
+            "checkedAt": "2026-10-10"
+          },
+          "neighborhood": "Futian",
+          "address": "N701, PA Mall, Ping An Finance Center, 5033 Yitian Road, Futian, Shenzhen, China",
+          "websiteUrl": "https://events.nowshenzhen.com/event/sizzling-delights-mortons-grille-happy-hour-with-complimentary-steak-sandwiches"
+        },
+        "enabled": true
+      },
+      "photos": [],
+      "geocoding": {
+        "latitude": 22.536642170761,
+        "longitude": 114.050356342481,
+        "score": 100,
+        "matchedAddress": "广东省深圳市福田区福田街道益田路5033号",
+        "addressType": "PointAddress",
+        "sourceUrl": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?f=json&SingleLine=%E6%B7%B1%E5%9C%B3%E5%B8%82%E7%A6%8F%E7%94%B0%E5%8C%BA%E7%9B%8A%E7%94%B0%E8%B7%AF5033%E5%8F%B7&outFields=Match_addr%2CAddr_type&maxLocations=1&sourceCountry=CHN"
+      }
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "PEPPER Lounge & Club — reopening opens in Futian · Shopping Park",
+        "description": "The Shopping Park venue returned with a lounge and connected club in October, serving Mediterranean-Asian food.",
+        "sourceUrl": "https://nowshenzhen.com/blog/opening-party-pepper-lounge-club-october-1-18-00-until-late/",
+        "address": "Shop 128, 1/F, Shopping Park, Zhongxin Second Road, Futian, Shenzhen, China",
+        "latitude": 22.5365572,
+        "longitude": 114.047934,
+        "productName": "PEPPER Lounge & Club — reopening",
+        "utcStartDateTime": "2026-10-01T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "Now Shenzhen announces the October 1, 2026 reopening; a current post-opening venue listing confirms its two-room operation.",
+        "parentId": null,
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Shenzhen",
+          "China",
+          "Futian · Shopping Park",
+          "Lounge and Mediterranean-Asian dining"
+        ],
+        "longFormSummary": "<p>The Shopping Park venue returned with a lounge and connected club in October, serving Mediterranean-Asian food. <cite data-ref=\"https://nowshenzhen.com/blog/opening-party-pepper-lounge-club-october-1-18-00-until-late/\"></cite></p><p>Map position is approximate, based on published property coordinates or address/area geocoding; verify the entrance with the venue.</p>",
+        "references": [
+          {
+            "url": "https://nowshenzhen.com/blog/opening-party-pepper-lounge-club-october-1-18-00-until-late/",
+            "title": "PEPPER Lounge & Club — reopening — research source",
+            "confidence": 90,
+            "reasoning": "Now Shenzhen announces the October 1, 2026 reopening; a current post-opening venue listing confirms its two-room operation."
+          },
+          {
+            "url": "https://szmeetups.com/venues/pepper-coco-park",
+            "title": "PEPPER current venue listing",
+            "confidence": 90,
+            "reasoning": "Post-opening listing confirms reopening in October 2026."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://nowshenzhen.com/blog/opening-party-pepper-lounge-club-october-1-18-00-until-late/",
+          "menu": {
+            "pinSourceUrl": "https://nowshenzhen.com/blog/opening-party-pepper-lounge-club-october-1-18-00-until-late/",
+            "name": "PEPPER Lounge & Club — reopening",
+            "checkedAt": "2026-10-10",
+            "menus": [
+              {
+                "label": "Current lounge menu",
+                "url": "https://szmeetups.com/venues/pepper-coco-park",
+                "currency": "CNY",
+                "coverage": "link",
+                "items": [],
+                "note": "Checked the branch opening announcement, current venue listing, linked socials and branch-specific food/menu searches. No current named dishes or prices verified. The October 1 CNY 199 launch buffet has expired and is excluded."
+              }
+            ],
+            "specials": [],
+            "location": {
+              "latitude": 22.5365572,
+              "longitude": 114.047934,
+              "sourceUrl": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?f=json&SingleLine=Shopping+Park%2C+Shenzhen%2C+China&outFields=Match_addr%2CAddr_type&maxLocations=2&sourceCountry=CHN",
+              "checkedAt": "2026-10-10"
+            }
+          },
+          "details": {
+            "pinSourceUrl": "https://nowshenzhen.com/blog/opening-party-pepper-lounge-club-october-1-18-00-until-late/",
+            "name": "PEPPER Lounge & Club — reopening",
+            "websiteUrl": "https://szmeetups.com/venues/pepper-coco-park",
+            "phone": "+86 190 6635 8666",
+            "openingHours": [],
+            "checkedAt": "2026-10-10",
+            "detailsSourceUrl": "https://nowshenzhen.com/blog/opening-party-pepper-lounge-club-october-1-18-00-until-late/"
+          },
+          "tile": {
+            "regionSlug": "shenzhen",
+            "kind": "opening",
+            "slug": "pepper",
+            "name": "PEPPER Lounge & Club — reopening",
+            "neighborhood": "Futian · Shopping Park",
+            "cuisine": "Lounge and Mediterranean-Asian dining",
+            "address": "Shop 128, 1/F, Shopping Park, Zhongxin Second Road, Futian, Shenzhen, China",
+            "websiteUrl": "https://szmeetups.com/venues/pepper-coco-park",
+            "description": "The Shopping Park venue returned with a lounge and connected club in October, serving Mediterranean-Asian food.",
+            "checkedAt": "2026-10-10",
+            "recognition": "",
+            "priceRange": "",
+            "image": null,
+            "imageCredit": "",
+            "day": "2026-10-01",
+            "openingConfirmed": true
+          }
+        },
+        "enabled": true
+      },
+      "photos": [],
+      "geocoding": {
+        "latitude": 22.5365572,
+        "longitude": 114.047934,
+        "score": 100,
+        "matchedAddress": "Shopping Park",
+        "addressType": "POI",
+        "sourceUrl": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?f=json&SingleLine=Shopping+Park%2C+Shenzhen%2C+China&outFields=Match_addr%2CAddr_type&maxLocations=2&sourceCountry=CHN"
+      }
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Shang Palace — Wuhan — Wuhan restaurant guide",
+        "description": "Chinese regional cooking, dim sum and private dining at Shangri-La Wuhan.",
+        "sourceUrl": "https://www.shangri-la.com/wuhan/shangrila/dining/restaurants/shang-palace/",
+        "address": "2/F, Shangri-La Wuhan, 700 Jianshe Avenue, Hankou, Wuhan, China",
+        "latitude": 30.602761,
+        "longitude": 114.283073,
+        "productName": "Shang Palace — Wuhan",
+        "utcStartDateTime": "1999-12-31T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "Shangri-La Hotel Wuhan, Wuhan's first international five-star hotel, is listed as opened in 1999 (Baidu Baike, Trip.com; renovated 2011); Shang Palace is its original Chinese restaurant but no restaurant-specific date was found, so the hotel opening year is used. The adjacent Shangri-La Centre soft opening (6 Nov 2020) is not this restaurant's opening. Estimated: 1999 is a best estimate and 1999-12-31 is used only as a period-end sorting date, not a confirmed opening day.",
+        "parentId": null,
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Top Restaurants",
+          "Wuhan",
+          "China",
+          "Hankou · Jianshe Avenue",
+          "Chinese regional cuisine"
+        ],
+        "longFormSummary": "<p>Chinese regional cooking, dim sum and private dining at Shangri-La Wuhan. <cite data-ref=\"https://www.shangri-la.com/wuhan/shangrila/dining/restaurants/shang-palace/\"></cite></p><p>Map position is approximate, based on published property coordinates or address/area geocoding; verify the entrance with the venue.</p>",
+        "references": [
+          {
+            "url": "https://www.shangri-la.com/wuhan/shangrila/dining/restaurants/shang-palace/",
+            "title": "Shang Palace — Wuhan — research source",
+            "confidence": 90,
+            "reasoning": "Shangri-La Hotel Wuhan, Wuhan's first international five-star hotel, is listed as opened in 1999 (Baidu Baike, Trip.com; renovated 2011); Shang Palace is its original Chinese restaurant but no restaurant-specific date was found, so the hotel opening year is used. The adjacent Shangri-La Centre soft opening (6 Nov 2020) is not this restaurant's opening. Estimated: 1999 is a best estimate and 1999-12-31 is used only as a period-end sorting date, not a confirmed opening day."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://www.shangri-la.com/wuhan/shangrila/dining/restaurants/shang-palace/",
+          "menu": {
+            "pinSourceUrl": "https://www.shangri-la.com/wuhan/shangrila/dining/restaurants/shang-palace/",
+            "name": "Shang Palace — Wuhan",
+            "checkedAt": "2026-10-10",
+            "menus": [
+              {
+                "label": "À la carte",
+                "url": "https://www.shangri-la.com/wuhan/shangrila/dining/restaurants/shang-palace/",
+                "currency": "CNY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Salmon with avocado pastry",
+                    "price": 88
+                  },
+                  {
+                    "name": "Vegetarian enoki mushroom and carrot roll",
+                    "price": 38
+                  },
+                  {
+                    "name": "Spinach with walnut and sesame",
+                    "price": 38
+                  },
+                  {
+                    "name": "Barbecue crispy pigeon",
+                    "price": 68
+                  },
+                  {
+                    "name": "Chicken and fish maw soup with matsutake — per person",
+                    "price": 98
+                  },
+                  {
+                    "name": "Mushroom and spinach soup — per person",
+                    "price": 48
+                  }
+                ],
+                "note": "Currently linked May 2024 branch PDF, visually checked pages 2–3. CNY prices; add 10% service charge and applicable government taxes/VAT. These are the published linked prices, not a claim of a 2026 price revision.",
+                "documentUrl": "https://sitecore-cd.shangri-la.com/-/media/Shangri-La/wuhan_shangrila/dining/restaurants/shang-palace/240510_Shang-Palace-Meun.pdf"
+              }
+            ],
+            "specials": [],
+            "location": {
+              "latitude": 30.602761,
+              "longitude": 114.283073,
+              "sourceUrl": "https://www.shangri-la.com/wuhan/shangrila/dining/restaurants/shang-palace/",
+              "checkedAt": "2026-10-10"
+            },
+            "photo": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/wuhan/researched/shang-palace-wuhan-0-47a990e59f87d419.webp",
+              "alt": "Shang Palace Wuhan — official branch photograph; pictured dishes may vary",
+              "credit": "Shangri-La Wuhan / Shang Palace",
+              "sourceUrl": "https://www.shangri-la.com/wuhan/shangrila/dining/restaurants/shang-palace/",
+              "originalUrl": "https://sitecore-cd.shangri-la.com/-/media/Shangri-La/wuhan_shangrila/settings/dining/240918_ShangPalace_ImageBanner_1920x500.jpg",
+              "checkedAt": "2026-10-10"
+            }
+          },
+          "details": {
+            "pinSourceUrl": "https://www.shangri-la.com/wuhan/shangrila/dining/restaurants/shang-palace/",
+            "name": "Shang Palace — Wuhan",
+            "websiteUrl": "https://www.shangri-la.com/wuhan/shangrila/dining/restaurants/shang-palace/",
+            "phone": "+86 27 8580 6868",
+            "openingHours": [
+              {
+                "days": "Daily",
+                "hours": "11:30–14:00; 17:30–22:00"
+              }
+            ],
+            "checkedAt": "2026-10-10",
+            "detailsSourceUrl": "https://www.shangri-la.com/wuhan/shangrila/dining/restaurants/shang-palace/"
+          },
+          "tile": {
+            "regionSlug": "wuhan",
+            "kind": "top",
+            "slug": "shang-palace-wuhan",
+            "name": "Shang Palace — Wuhan",
+            "neighborhood": "Hankou · Jianshe Avenue",
+            "cuisine": "Chinese regional cuisine",
+            "address": "2/F, Shangri-La Wuhan, 700 Jianshe Avenue, Hankou, Wuhan, China",
+            "websiteUrl": "https://www.shangri-la.com/wuhan/shangrila/dining/restaurants/shang-palace/",
+            "description": "Chinese regional cooking, dim sum and private dining at Shangri-La Wuhan.",
+            "checkedAt": "2026-10-10",
+            "recognition": "Chronopin selection",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/wuhan/researched/shang-palace-wuhan-0-47a990e59f87d419.webp",
+            "imageCredit": "Shangri-La Wuhan / Shang Palace",
+            "imageSourceUrl": "https://sitecore-cd.shangri-la.com/-/media/Shangri-La/wuhan_shangrila/settings/dining/240918_ShangPalace_ImageBanner_1920x500.jpg",
+            "imageNote": "Shang Palace Wuhan — official branch photograph; pictured dishes may vary"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "region": "wuhan",
+          "slug": "shang-palace-wuhan-0",
+          "source": "https://sitecore-cd.shangri-la.com/-/media/Shangri-La/wuhan_shangrila/settings/dining/240918_ShangPalace_ImageBanner_1920x500.jpg",
+          "credit": "Shangri-La Wuhan / Shang Palace",
+          "sourcePage": "https://www.shangri-la.com/wuhan/shangrila/dining/restaurants/shang-palace/",
+          "note": "Shang Palace Wuhan — official branch photograph; pictured dishes may vary",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/wuhan/researched/shang-palace-wuhan-0-47a990e59f87d419.webp",
+          "sha256": "47a990e59f87d419669e63586e4ac888f501b1b5ddb8046132617d808f2d51d9",
+          "width": 1400,
+          "height": 365
+        },
+        {
+          "region": "wuhan",
+          "slug": "shang-palace-wuhan-1",
+          "source": "https://sitecore-cd.shangri-la.com/-/media/Shangri-La/wuhan_shangrila/settings/dining/260508_ShangPalace_Creations2_600x340.jpg",
+          "credit": "Shangri-La Wuhan / Shang Palace",
+          "sourcePage": "https://www.shangri-la.com/wuhan/shangrila/dining/restaurants/shang-palace/",
+          "note": "Shang Palace Wuhan — official branch photograph; pictured dishes may vary",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/wuhan/researched/shang-palace-wuhan-1-20420a7832cf04ca.webp",
+          "sha256": "20420a7832cf04cab2f8178369ef7b90c040ee5a664c81ccd7416848588cc8af",
+          "width": 600,
+          "height": 340
+        },
+        {
+          "region": "wuhan",
+          "slug": "shang-palace-wuhan-2",
+          "source": "https://sitecore-cd.shangri-la.com/-/media/Shangri-La/wuhan_shangrila/settings/dining/260508_ShangPalace_Creations1_600x340.jpg",
+          "credit": "Shangri-La Wuhan / Shang Palace",
+          "sourcePage": "https://www.shangri-la.com/wuhan/shangrila/dining/restaurants/shang-palace/",
+          "note": "Shang Palace Wuhan — official branch photograph; pictured dishes may vary",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/wuhan/researched/shang-palace-wuhan-2-c4195be089624b54.webp",
+          "sha256": "c4195be089624b54deaf41e30d930fd0452fc49b3eb93c58fbabaf4506ae11ac",
+          "width": 600,
+          "height": 340
+        },
+        {
+          "region": "wuhan",
+          "slug": "shang-palace-wuhan-4",
+          "source": "https://sitecore-cd.shangri-la.com/-/media/Shangri-La/wuhan_shangrila/dining/restaurants/shang-palace/SLWU_ShangPalace_restaurantstory_image_630x364.jpg",
+          "credit": "Shangri-La Wuhan / Shang Palace",
+          "sourcePage": "https://www.shangri-la.com/wuhan/shangrila/dining/restaurants/shang-palace/",
+          "note": "Shang Palace Wuhan — official branch photograph; pictured dishes may vary",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/wuhan/researched/shang-palace-wuhan-4-457763b9bfb04235.webp",
+          "sha256": "457763b9bfb04235b2121b261cbfbc5b0e4eb448b02e4fde8909fee227948663",
+          "width": 630,
+          "height": 364
+        }
+      ],
+      "geocoding": {
+        "latitude": 30.602761,
+        "longitude": 114.283073,
+        "sourceUrl": "https://www.shangri-la.com/wuhan/shangrila/dining/restaurants/shang-palace/",
+        "method": "Published property map coordinates",
+        "addressType": "Property",
+        "matchedAddress": "shang-palace-wuhan"
+      }
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Rushi Sushi — Binjiang Paradise Walk opens in Wuchang · Xujiapeng",
+        "description": "The conveyor-belt sushi branch began trial service on July 20 and draws family diners at Binjiang Paradise Walk.",
+        "sourceUrl": "https://news.cjn.cn/whpd/yw_19947/202608/t5328745.htm",
+        "address": "5/F, Binjiang Paradise Walk, 659 Heping Avenue, Wuchang District, Wuhan, China",
+        "latitude": 30.593365901718,
+        "longitude": 114.32847277336,
+        "productName": "Rushi Sushi — Binjiang Paradise Walk",
+        "utcStartDateTime": "2026-07-20T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "Changjiang Daily’s August 12, 2026 visit report quotes the branch manager confirming July 20 trial opening.",
+        "parentId": null,
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Wuhan",
+          "China",
+          "Wuchang · Xujiapeng",
+          "Conveyor-belt sushi"
+        ],
+        "longFormSummary": "<p>The conveyor-belt sushi branch began trial service on July 20 and draws family diners at Binjiang Paradise Walk. <cite data-ref=\"https://news.cjn.cn/whpd/yw_19947/202608/t5328745.htm\"></cite></p><p>Map position is approximate, based on published property coordinates or address/area geocoding; verify the entrance with the venue.</p>",
+        "references": [
+          {
+            "url": "https://news.cjn.cn/whpd/yw_19947/202608/t5328745.htm",
+            "title": "Rushi Sushi — Binjiang Paradise Walk — research source",
+            "confidence": 90,
+            "reasoning": "Changjiang Daily’s August 12, 2026 visit report quotes the branch manager confirming July 20 trial opening."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://news.cjn.cn/whpd/yw_19947/202608/t5328745.htm",
+          "menu": {
+            "pinSourceUrl": "https://news.cjn.cn/whpd/yw_19947/202608/t5328745.htm",
+            "name": "Rushi Sushi — Binjiang Paradise Walk",
+            "checkedAt": "2026-10-10",
+            "menus": [
+              {
+                "label": "Branch dishes",
+                "url": "https://news.cjn.cn/whpd/yw_19947/202608/t5328745.htm",
+                "currency": "CNY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Tamagoyaki — cooked egg sushi",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Fukubukuro — sushi pouch",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Ice cream",
+                    "priceLabel": "Price not published"
+                  }
+                ],
+                "note": "August 12 branch visit report verifies these items without individual prices. Checked July opening report, August visit report, operator and branch-specific ordering/menu searches. Prices from Hangzhou and other branches are excluded."
+              }
+            ],
+            "specials": [],
+            "location": {
+              "latitude": 30.593365901718,
+              "longitude": 114.32847277336,
+              "sourceUrl": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?f=json&SingleLine=%E6%AD%A6%E6%B1%89%E5%B8%82%E6%AD%A6%E6%98%8C%E5%8C%BA%E5%92%8C%E5%B9%B3%E5%A4%A7%E9%81%93659%E5%8F%B7&outFields=Match_addr%2CAddr_type&maxLocations=2&sourceCountry=CHN",
+              "checkedAt": "2026-10-10"
+            }
+          },
+          "details": {
+            "pinSourceUrl": "https://news.cjn.cn/whpd/yw_19947/202608/t5328745.htm",
+            "name": "Rushi Sushi — Binjiang Paradise Walk",
+            "websiteUrl": "https://news.cjn.cn/whpd/yw_19947/202608/t5328745.htm",
+            "phone": null,
+            "openingHours": [],
+            "checkedAt": "2026-10-10",
+            "detailsSourceUrl": "https://news.cjn.cn/whpd/yw_19947/202608/t5328745.htm"
+          },
+          "tile": {
+            "regionSlug": "wuhan",
+            "kind": "opening",
+            "slug": "rushi-binjiang",
+            "name": "Rushi Sushi — Binjiang Paradise Walk",
+            "neighborhood": "Wuchang · Xujiapeng",
+            "cuisine": "Conveyor-belt sushi",
+            "address": "5/F, Binjiang Paradise Walk, 659 Heping Avenue, Wuchang District, Wuhan, China",
+            "websiteUrl": "https://news.cjn.cn/whpd/yw_19947/202608/t5328745.htm",
+            "description": "The conveyor-belt sushi branch began trial service on July 20 and draws family diners at Binjiang Paradise Walk.",
+            "checkedAt": "2026-10-10",
+            "recognition": "",
+            "priceRange": "",
+            "image": null,
+            "imageCredit": "",
+            "day": "2026-07-20",
+            "openingConfirmed": true
+          }
+        },
+        "enabled": true
+      },
+      "photos": [],
+      "geocoding": {
+        "latitude": 30.593365901718,
+        "longitude": 114.32847277336,
+        "score": 90,
+        "matchedAddress": "湖北省武汉市武昌区杨园街道和平大道",
+        "addressType": "StreetName",
+        "sourceUrl": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?f=json&SingleLine=%E6%AD%A6%E6%B1%89%E5%B8%82%E6%AD%A6%E6%98%8C%E5%8C%BA%E5%92%8C%E5%B9%B3%E5%A4%A7%E9%81%93659%E5%8F%B7&outFields=Match_addr%2CAddr_type&maxLocations=2&sourceCountry=CHN"
+      }
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Jin Sha — West Lake — Hangzhou restaurant guide",
+        "description": "Jiangsu-Zhejiang cuisine, seasonal ingredients and traditional architecture in the West Lake gardens.",
+        "sourceUrl": "https://www.fourseasons.com/hangzhou/dining/restaurants/jin_sha/",
+        "address": "Four Seasons Hotel Hangzhou at West Lake, 5 Lingyin Road, Xihu District, Hangzhou, China",
+        "latitude": 30.249419999447,
+        "longitude": 120.117706530969,
+        "productName": "Jin Sha — West Lake",
+        "utcStartDateTime": "2010-10-31T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "Four Seasons Hotel Hangzhou at West Lake opened in October 2010 (official fact sheet; pre-opening material had targeted late summer 2010) and Jin Sha was planned as its signature restaurant from the start; exact day not found. Estimated: 2010-10 is a best estimate and 2010-10-31 is used only as a period-end sorting date, not a confirmed opening day.",
+        "parentId": null,
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Top Restaurants",
+          "Hangzhou",
+          "China",
+          "Xihu · West Lake",
+          "Jiangsu-Zhejiang"
+        ],
+        "longFormSummary": "<p>Jiangsu-Zhejiang cuisine, seasonal ingredients and traditional architecture in the West Lake gardens. <cite data-ref=\"https://www.fourseasons.com/hangzhou/dining/restaurants/jin_sha/\"></cite></p><p>Map position is approximate, based on published property coordinates or address/area geocoding; verify the entrance with the venue.</p>",
+        "references": [
+          {
+            "url": "https://www.fourseasons.com/hangzhou/dining/restaurants/jin_sha/",
+            "title": "Jin Sha — West Lake — research source",
+            "confidence": 90,
+            "reasoning": "Four Seasons Hotel Hangzhou at West Lake opened in October 2010 (official fact sheet; pre-opening material had targeted late summer 2010) and Jin Sha was planned as its signature restaurant from the start; exact day not found. Estimated: 2010-10 is a best estimate and 2010-10-31 is used only as a period-end sorting date, not a confirmed opening day."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://www.fourseasons.com/hangzhou/dining/restaurants/jin_sha/",
+          "menu": {
+            "pinSourceUrl": "https://www.fourseasons.com/hangzhou/dining/restaurants/jin_sha/",
+            "name": "Jin Sha — West Lake",
+            "checkedAt": "2026-10-10",
+            "menus": [
+              {
+                "label": "Main menu",
+                "url": "https://www.fourseasons.com/hangzhou/dining/restaurants/jin_sha/jin_sha_main/",
+                "currency": "CNY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "River prawns with Longjing tea leaves",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Braised pork belly and abalone with dried bamboo",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Crispy chicken with spicy salt",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "River prawn dumplings — four pieces",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Pork, prawn and scallop dumplings — four pieces",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Street-style spring onion pancakes — two pieces",
+                    "priceLabel": "Price not published"
+                  }
+                ],
+                "note": "Current operator menu names actual dishes without prices. Checked linked chef’s recommendations, restaurant/Chinese pages, menu PDF and branch-price searches. Prices remain unpublished; other Four Seasons menus are excluded."
+              }
+            ],
+            "specials": [],
+            "location": {
+              "latitude": 30.249419999447,
+              "longitude": 120.117706530969,
+              "sourceUrl": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?f=json&SingleLine=%E6%9D%AD%E5%B7%9E%E5%B8%82%E8%A5%BF%E6%B9%96%E5%8C%BA%E7%81%B5%E9%9A%90%E8%B7%AF5%E5%8F%B7&outFields=Match_addr%2CAddr_type&maxLocations=1&sourceCountry=CHN",
+              "checkedAt": "2026-10-10"
+            },
+            "photo": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/hangzhou/researched/jinsha-2-0395254824efd010.webp",
+              "alt": "Jinsha — official branch photograph; pictured dishes may vary",
+              "credit": "Four Seasons Hotel Hangzhou at West Lake / Jin Sha",
+              "sourceUrl": "https://www.fourseasons.com/hangzhou/dining/restaurants/jin_sha/",
+              "originalUrl": "https://www.fourseasons.com/alt/img-opt/~70.1530.0,0000-0,0000-3000,0000-1687,5000/publish/content/dam/fourseasons/images/web/HAN/HAN_443_original.jpg",
+              "checkedAt": "2026-10-10"
+            }
+          },
+          "details": {
+            "pinSourceUrl": "https://www.fourseasons.com/hangzhou/dining/restaurants/jin_sha/",
+            "name": "Jin Sha — West Lake",
+            "websiteUrl": "https://www.fourseasons.com/hangzhou/dining/restaurants/jin_sha/",
+            "phone": "+86 571 8113 5188",
+            "openingHours": [
+              {
+                "days": "Daily",
+                "hours": "11:30–14:00; 17:30–21:00"
+              }
+            ],
+            "checkedAt": "2026-10-10",
+            "detailsSourceUrl": "https://www.fourseasons.com/hangzhou/dining/restaurants/jin_sha/"
+          },
+          "tile": {
+            "regionSlug": "hangzhou",
+            "kind": "top",
+            "slug": "jinsha",
+            "name": "Jin Sha — West Lake",
+            "neighborhood": "Xihu · West Lake",
+            "cuisine": "Jiangsu-Zhejiang",
+            "address": "Four Seasons Hotel Hangzhou at West Lake, 5 Lingyin Road, Xihu District, Hangzhou, China",
+            "websiteUrl": "https://www.fourseasons.com/hangzhou/dining/restaurants/jin_sha/",
+            "description": "Jiangsu-Zhejiang cuisine, seasonal ingredients and traditional architecture in the West Lake gardens.",
+            "checkedAt": "2026-10-10",
+            "recognition": "Chronopin selection",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/hangzhou/researched/jinsha-2-0395254824efd010.webp",
+            "imageCredit": "Four Seasons Hotel Hangzhou at West Lake / Jin Sha",
+            "imageSourceUrl": "https://www.fourseasons.com/alt/img-opt/~70.1530.0,0000-0,0000-3000,0000-1687,5000/publish/content/dam/fourseasons/images/web/HAN/HAN_443_original.jpg",
+            "imageNote": "Jinsha — official branch photograph; pictured dishes may vary"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "region": "hangzhou",
+          "slug": "jinsha-2",
+          "source": "https://www.fourseasons.com/alt/img-opt/~70.1530.0,0000-0,0000-3000,0000-1687,5000/publish/content/dam/fourseasons/images/web/HAN/HAN_443_original.jpg",
+          "credit": "Four Seasons Hotel Hangzhou at West Lake / Jin Sha",
+          "sourcePage": "https://www.fourseasons.com/hangzhou/dining/restaurants/jin_sha/",
+          "note": "Jinsha — official branch photograph; pictured dishes may vary",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/hangzhou/researched/jinsha-2-0395254824efd010.webp",
+          "sha256": "0395254824efd0109d850a9b0dddafba0f6a74b9452e2e7ce78be7f04d5c42a5",
+          "width": 1400,
+          "height": 788
+        },
+        {
+          "region": "hangzhou",
+          "slug": "jinsha-3",
+          "source": "https://www.fourseasons.com/alt/img-opt/~70.1530.0,0000-312,5000-3000,0000-1687,5000/publish/content/dam/fourseasons/images/web/HAN/HAN_713_original.jpg",
+          "credit": "Four Seasons Hotel Hangzhou at West Lake / Jin Sha",
+          "sourcePage": "https://www.fourseasons.com/hangzhou/dining/restaurants/jin_sha/",
+          "note": "Server pulls out chair for woman at dining table by sunny window in Jin Sha restaurant",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/hangzhou/researched/jinsha-3-81fa2365c06151e3.webp",
+          "sha256": "81fa2365c06151e3988a1341d97d7f39da2ba6a0dc5b90c272a4bd20e0db7ed8",
+          "width": 1400,
+          "height": 788
+        },
+        {
+          "region": "hangzhou",
+          "slug": "jinsha-5",
+          "source": "https://www.fourseasons.com/alt/img-opt/~70.1530.0,0000-312,5000-3000,0000-1687,5000/publish/content/dam/fourseasons/images/web/HAN/HAN_129_original.jpg",
+          "credit": "Four Seasons Hotel Hangzhou at West Lake / Jin Sha",
+          "sourcePage": "https://www.fourseasons.com/hangzhou/dining/restaurants/jin_sha/",
+          "note": "Large round, black, shiny dining table under lantern chandelier at Jin Sha",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/hangzhou/researched/jinsha-5-26ec149bee279231.webp",
+          "sha256": "26ec149bee2792311a961cbc11898068eeebea284ce3f4f3be2a74f1c0e65d05",
+          "width": 1400,
+          "height": 788
+        },
+        {
+          "region": "hangzhou",
+          "slug": "jinsha-6",
+          "source": "https://www.fourseasons.com/alt/img-opt/~70.1530.0,0000-312,5000-3000,0000-1687,5000/publish/content/dam/fourseasons/images/web/HAN/HAN_716_original.jpg",
+          "credit": "Four Seasons Hotel Hangzhou at West Lake / Jin Sha",
+          "sourcePage": "https://www.fourseasons.com/hangzhou/dining/restaurants/jin_sha/",
+          "note": "Gold velvet cocktail chairs around table in restaurant alcove lined with windows",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/hangzhou/researched/jinsha-6-8410a390ea8eb072.webp",
+          "sha256": "8410a390ea8eb072adc0c6d53c99d4f1db1511fe2ee8b6c0447731b288b5ec16",
+          "width": 1400,
+          "height": 788
+        },
+        {
+          "region": "hangzhou",
+          "slug": "jinsha-7",
+          "source": "https://www.fourseasons.com/alt/img-opt/~70.1530.0,0000-266,8405-3000,0000-1687,5000/publish/content/dam/fourseasons/images/web/HAN/HAN_715_original.jpg",
+          "credit": "Four Seasons Hotel Hangzhou at West Lake / Jin Sha",
+          "sourcePage": "https://www.fourseasons.com/hangzhou/dining/restaurants/jin_sha/",
+          "note": "Dining tables, chairs, red-and-blue patterned rug in Jin Sha dining room",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/hangzhou/researched/jinsha-7-57ebfb0d39ba5c39.webp",
+          "sha256": "57ebfb0d39ba5c392f73e5399fd9945eb25d5486a8bd433ac6334bc683753070",
+          "width": 1400,
+          "height": 788
+        },
+        {
+          "region": "hangzhou",
+          "slug": "jinsha-8",
+          "source": "https://www.fourseasons.com/alt/img-opt/~70.1530.0,0000-562,5000-3000,0000-1687,5000/publish/content/dam/fourseasons/images/web/HAN/HAN_2331_original.jpg",
+          "credit": "Four Seasons Hotel Hangzhou at West Lake / Jin Sha",
+          "sourcePage": "https://www.fourseasons.com/hangzhou/dining/restaurants/jin_sha/",
+          "note": "Jinsha — official branch photograph; pictured dishes may vary",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/hangzhou/researched/jinsha-8-bf666e601418dff3.webp",
+          "sha256": "bf666e601418dff3e30d9136653a3abf5a19953c565bff61d06b523ce8e109ca",
+          "width": 1400,
+          "height": 788
+        },
+        {
+          "region": "hangzhou",
+          "slug": "jinsha-9",
+          "source": "https://www.fourseasons.com/alt/img-opt/~70.1530.0,0000-876,8378-2250,0000-1265,6250/publish/content/dam/fourseasons/images/web/HAN/HAN_2327_original.jpg",
+          "credit": "Four Seasons Hotel Hangzhou at West Lake / Jin Sha",
+          "sourcePage": "https://www.fourseasons.com/hangzhou/dining/restaurants/jin_sha/",
+          "note": "Jinsha — official branch photograph; pictured dishes may vary",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/hangzhou/researched/jinsha-9-93656a254d26270a.webp",
+          "sha256": "93656a254d26270a5d53942519aa4ed157b3b250b4b9195ca074edb465529b6c",
+          "width": 1400,
+          "height": 788
+        },
+        {
+          "region": "hangzhou",
+          "slug": "jinsha-10",
+          "source": "https://www.fourseasons.com/alt/img-opt/~70.1530.0,0000-836,7035-2250,0000-1265,6250/publish/content/dam/fourseasons/images/web/HAN/HAN_2330_original.jpg",
+          "credit": "Four Seasons Hotel Hangzhou at West Lake / Jin Sha",
+          "sourcePage": "https://www.fourseasons.com/hangzhou/dining/restaurants/jin_sha/",
+          "note": "Jinsha — official branch photograph; pictured dishes may vary",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/hangzhou/researched/jinsha-10-98eda33b8c68ed0d.webp",
+          "sha256": "98eda33b8c68ed0d115baa67fe9a5da1f67152e4c3db55149ca562805ebb8e18",
+          "width": 1400,
+          "height": 788
+        },
+        {
+          "region": "hangzhou",
+          "slug": "jinsha-gallery-15",
+          "source": "https://www.fourseasons.com/alt/img-opt/~70.1530.0,0000-215,7500-3000,0000-1687,5000/publish/content/dam/fourseasons/images/web/HAN/HAN_132_original.jpg",
+          "credit": "Four Seasons Hotel Hangzhou at West Lake / Jin Sha",
+          "sourcePage": "https://www.fourseasons.com/hangzhou/photos-and-videos/",
+          "note": "Jin Sha dining room with dark red-and-black decor",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/hangzhou/researched/jinsha-gallery-15-4ac453c0c98951ca.webp",
+          "sha256": "4ac453c0c98951ca1becf8562374f5d6ccaa955e3acd9b1dd5a1f40b033e5a49",
+          "width": 1400,
+          "height": 788
+        }
+      ],
+      "geocoding": {
+        "latitude": 30.249419999447,
+        "longitude": 120.117706530969,
+        "score": 98.9,
+        "matchedAddress": "浙江省杭州市西湖区灵隐街道灵隐路5号",
+        "addressType": "StreetAddressExt",
+        "sourceUrl": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?f=json&SingleLine=%E6%9D%AD%E5%B7%9E%E5%B8%82%E8%A5%BF%E6%B9%96%E5%8C%BA%E7%81%B5%E9%9A%90%E8%B7%AF5%E5%8F%B7&outFields=Match_addr%2CAddr_type&maxLocations=1&sourceCountry=CHN"
+      }
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Green Tea — West Lake Broken Bridge opens in Xihu · Broken Bridge",
+        "description": "Green Tea celebrated its West Lake Broken Bridge branch opening on October 4, with Jiangnan dishes and handmade buns.",
+        "sourceUrl": "https://tidenews.com.cn/news.html?id=3581079",
+        "address": "North shore of West Lake by Broken Bridge, Beishan Street, Hangzhou, China — approximate area; exact entrance not verified",
+        "latitude": 30.260937390971,
+        "longitude": 120.14707024216,
+        "productName": "Green Tea — West Lake Broken Bridge",
+        "utcStartDateTime": "2026-10-04T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "Zhejiang’s Tide News and October 4 financial reporting confirm the October 4, 2026 opening ceremony.",
+        "parentId": null,
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Hangzhou",
+          "China",
+          "Xihu · Broken Bridge",
+          "Zhejiang"
+        ],
+        "longFormSummary": "<p>Green Tea celebrated its West Lake Broken Bridge branch opening on October 4, with Jiangnan dishes and handmade buns. <cite data-ref=\"https://tidenews.com.cn/news.html?id=3581079\"></cite></p><p>Map position is approximate, based on published property coordinates or address/area geocoding; verify the entrance with the venue.</p>",
+        "references": [
+          {
+            "url": "https://tidenews.com.cn/news.html?id=3581079",
+            "title": "Green Tea — West Lake Broken Bridge — research source",
+            "confidence": 90,
+            "reasoning": "Zhejiang’s Tide News and October 4 financial reporting confirm the October 4, 2026 opening ceremony."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://tidenews.com.cn/news.html?id=3581079",
+          "menu": {
+            "pinSourceUrl": "https://tidenews.com.cn/news.html?id=3581079",
+            "name": "Green Tea — West Lake Broken Bridge",
+            "checkedAt": "2026-10-10",
+            "menus": [
+              {
+                "label": "Branch opening dishes",
+                "url": "https://tidenews.com.cn/news.html?id=3581079",
+                "currency": "CNY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Lotus-fragrant hand-torn chicken",
+                    "priceLabel": "Price not published",
+                    "note": "Reporting groups main dishes around CNY 60–70; exact price for this item is not published."
+                  },
+                  {
+                    "name": "Sea bass with preserved mustard greens",
+                    "priceLabel": "Price not published",
+                    "note": "Reporting groups main dishes around CNY 60–70; exact price for this item is not published."
+                  },
+                  {
+                    "name": "Handmade black pork bun",
+                    "priceLabel": "Price not published",
+                    "note": "Published bun range CNY 2–2.5; exact price for this type is not stated."
+                  },
+                  {
+                    "name": "Handmade tofu bun",
+                    "priceLabel": "Price not published",
+                    "note": "Published bun range CNY 2–2.5; exact price for this type is not stated."
+                  }
+                ],
+                "note": "October branch reporting verifies dishes and price ranges, not exact dish-level prices. Operator menu/environment pages, opening reporting and branch-specific menu/ordering searches checked. Generic brand pictures are not presented as this new branch."
+              }
+            ],
+            "specials": [],
+            "location": {
+              "latitude": 30.260937390971,
+              "longitude": 120.14707024216,
+              "sourceUrl": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?f=json&SingleLine=Broken+Bridge%2C+Hangzhou%2C+China&outFields=Match_addr%2CAddr_type&maxLocations=2&sourceCountry=CHN",
+              "checkedAt": "2026-10-10"
+            }
+          },
+          "details": {
+            "pinSourceUrl": "https://tidenews.com.cn/news.html?id=3581079",
+            "name": "Green Tea — West Lake Broken Bridge",
+            "websiteUrl": "https://www.china-greentea.com.cn/",
+            "phone": null,
+            "openingHours": [],
+            "checkedAt": "2026-10-10",
+            "detailsSourceUrl": "https://tidenews.com.cn/news.html?id=3581079"
+          },
+          "tile": {
+            "regionSlug": "hangzhou",
+            "kind": "opening",
+            "slug": "greentea-brokenbridge",
+            "name": "Green Tea — West Lake Broken Bridge",
+            "neighborhood": "Xihu · Broken Bridge",
+            "cuisine": "Zhejiang",
+            "address": "North shore of West Lake by Broken Bridge, Beishan Street, Hangzhou, China — approximate area; exact entrance not verified",
+            "websiteUrl": "https://www.china-greentea.com.cn/",
+            "description": "Green Tea celebrated its West Lake Broken Bridge branch opening on October 4, with Jiangnan dishes and handmade buns.",
+            "checkedAt": "2026-10-10",
+            "recognition": "",
+            "priceRange": "",
+            "image": null,
+            "imageCredit": "",
+            "day": "2026-10-04",
+            "openingConfirmed": true
+          }
+        },
+        "enabled": true
+      },
+      "photos": [],
+      "geocoding": {
+        "latitude": 30.260937390971,
+        "longitude": 120.14707024216,
+        "score": 100,
+        "matchedAddress": "Broken Bridge, Beishan Subdistrict, Xihu District, Hangzhou, Zhejiang Province",
+        "addressType": "StreetName",
+        "sourceUrl": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?f=json&SingleLine=Broken+Bridge%2C+Hangzhou%2C+China&outFields=Match_addr%2CAddr_type&maxLocations=2&sourceCountry=CHN"
+      }
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Din Tai Fung — Hangzhou Kerry Centre plans an opening in Gongshu · Kerry Centre",
+        "description": "Din Tai Fung plans an October return to Hangzhou at Kerry Centre; the exact day and branch menu remain unverified.",
+        "sourceUrl": "https://m.bbtnews.com.cn/content/97/4d/227384.html",
+        "address": "Hangzhou Kerry Centre, 385 Yan’an Road, Hangzhou, China — unit unannounced",
+        "latitude": 30.262200292322,
+        "longitude": 120.158239714875,
+        "productName": "Din Tai Fung — Hangzhou Kerry Centre",
+        "utcStartDateTime": "2026-10-31T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "April 27, 2026 company announcement reported by Beijing Business Daily targets October 2026. October 31 is only a month-end sorting estimate, not a confirmed opening day.",
+        "parentId": null,
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Hangzhou",
+          "China",
+          "Gongshu · Kerry Centre",
+          "Taiwanese dumplings"
+        ],
+        "longFormSummary": "<p>Din Tai Fung plans an October return to Hangzhou at Kerry Centre; the exact day and branch menu remain unverified. <cite data-ref=\"https://m.bbtnews.com.cn/content/97/4d/227384.html\"></cite></p><p>Map position is approximate, based on published property coordinates or address/area geocoding; verify the entrance with the venue.</p>",
+        "references": [
+          {
+            "url": "https://m.bbtnews.com.cn/content/97/4d/227384.html",
+            "title": "Din Tai Fung — Hangzhou Kerry Centre — research source",
+            "confidence": 90,
+            "reasoning": "April 27, 2026 company announcement reported by Beijing Business Daily targets October 2026. October 31 is only a month-end sorting estimate, not a confirmed opening day."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://m.bbtnews.com.cn/content/97/4d/227384.html",
+          "menu": {
+            "pinSourceUrl": "https://m.bbtnews.com.cn/content/97/4d/227384.html",
+            "name": "Din Tai Fung — Hangzhou Kerry Centre",
+            "checkedAt": "2026-10-10",
+            "menus": [
+              {
+                "label": "Forthcoming Kerry Centre menu",
+                "url": "https://www.dintaifung.com.cn/",
+                "currency": "CNY",
+                "coverage": "link",
+                "items": [],
+                "note": "Checked the operator website (inaccessible), April company announcement through Beijing Business Daily, August mainland-store reporting, current branch/opening/menu searches and Kerry Centre address sources. No verified forthcoming-branch dish list, prices or photos found. Closed Hangzhou MixC and other-city menus are excluded."
+              }
+            ],
+            "specials": [],
+            "location": {
+              "latitude": 30.262200292322,
+              "longitude": 120.158239714875,
+              "sourceUrl": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?f=json&SingleLine=%E6%9D%AD%E5%B7%9E%E5%B8%82%E5%BB%B6%E5%AE%89%E8%B7%AF385%E5%8F%B7&outFields=Match_addr%2CAddr_type&maxLocations=1&sourceCountry=CHN",
+              "checkedAt": "2026-10-10"
+            }
+          },
+          "details": {
+            "pinSourceUrl": "https://m.bbtnews.com.cn/content/97/4d/227384.html",
+            "name": "Din Tai Fung — Hangzhou Kerry Centre",
+            "websiteUrl": "https://www.dintaifung.com.cn/",
+            "phone": null,
+            "openingHours": [],
+            "checkedAt": "2026-10-10",
+            "detailsSourceUrl": "https://m.bbtnews.com.cn/content/97/4d/227384.html"
+          },
+          "tile": {
+            "regionSlug": "hangzhou",
+            "kind": "opening",
+            "slug": "dtf-kerry",
+            "name": "Din Tai Fung — Hangzhou Kerry Centre",
+            "neighborhood": "Gongshu · Kerry Centre",
+            "cuisine": "Taiwanese dumplings",
+            "address": "Hangzhou Kerry Centre, 385 Yan’an Road, Hangzhou, China — unit unannounced",
+            "websiteUrl": "https://www.dintaifung.com.cn/",
+            "description": "Din Tai Fung plans an October return to Hangzhou at Kerry Centre; the exact day and branch menu remain unverified.",
+            "checkedAt": "2026-10-10",
+            "recognition": "",
+            "priceRange": "",
+            "image": null,
+            "imageCredit": "",
+            "day": "2026-10-31",
+            "openingConfirmed": false
+          }
+        },
+        "enabled": true
+      },
+      "photos": [],
+      "geocoding": {
+        "latitude": 30.262200292322,
+        "longitude": 120.158239714875,
+        "score": 100,
+        "matchedAddress": "浙江省杭州市拱墅区延安路385号",
+        "addressType": "PointAddress",
+        "sourceUrl": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?f=json&SingleLine=%E6%9D%AD%E5%B7%9E%E5%B8%82%E5%BB%B6%E5%AE%89%E8%B7%AF385%E5%8F%B7&outFields=Match_addr%2CAddr_type&maxLocations=1&sourceCountry=CHN"
+      }
+    }
+  ],
+  "notes": "Reviewed research/import snapshot. Runtime menus, details, cards and promotions are stored in DB through management APIs. Pictures are verified public Azure blobs, with original source URLs and credits. Unverified section coverage and menu/photo gaps are recorded in the guide notes."
+}

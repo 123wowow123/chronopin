@@ -1,0 +1,108 @@
+# Builds the production images on GitHub's runners instead of on the VM
+# (docs/deploy-azure.md): `next build` needs 1.3GB the 4GB VM does not have to
+# spare beside the live site. The VM then only pulls (scripts/deploy-image.sh).
+#
+#   ghcr.io/<owner>/chronopin:<commit>        the standalone server
+#   ghcr.io/<owner>/chronopin-tools:<commit>  the build stage, for migrations
+name: Build image
+
+on:
+  push:
+    branches: [master]
+  workflow_dispatch:
+
+# A newer push makes an older build pointless.
+concurrency:
+  group: build-image
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+  packages: write
+
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    env:
+      # Registry names must be lowercase.
+      REGISTRY: ghcr.io/123wowow123
+    steps:
+      - uses: actions/checkout@v7
+
+      # BuildKit's image comes from AWS ECR Public's mirror: Docker Hub's
+      # registry and auth service time out and rate limit GitHub's runners.
+      # ECR Public throttles shared runner IPs too ("toomanyrequests: Rate
+      # exceeded", 2026-10-11), so pull the image ahead with retries; buildx
+      # then finds it in the local store instead of pulling it itself.
+      # Both throttle shared runner IPs at times ("Data limit exceeded",
+      # 2026-10-16), so fall back to Google's mirror and retag the image
+      # under the name buildx is told to use.
+      - name: Pull BuildKit image (with retries)
+        run: |
+          image=public.ecr.aws/vend/moby/buildkit:buildx-stable-1
+          mirror=mirror.gcr.io/moby/buildkit:buildx-stable-1
+          for attempt in 1 2 3 4 5 6; do
+            docker pull "$image" && exit 0
+            if docker pull "$mirror"; then
+              docker tag "$mirror" "$image" && exit 0
+            fi
+            echo "pull attempt $attempt failed; waiting $((attempt * 20))s"
+            sleep $((attempt * 20))
+          done
+          exit 1
+
+      # The Dockerfile's node base image hits the same throttling inside
+      # buildx, which cannot see the runner's local images. Probe the manifest
+      # (the call that fails) and hand the build whichever registry answers.
+      - name: Pick node base image
+        id: node
+        run: |
+          ecr=public.ecr.aws/docker/library/node:24-alpine
+          mirror=mirror.gcr.io/library/node:24-alpine
+          for attempt in 1 2 3; do
+            docker manifest inspect "$ecr" >/dev/null 2>&1 && { echo "image=$ecr" >> "$GITHUB_OUTPUT"; exit 0; }
+            docker manifest inspect "$mirror" >/dev/null 2>&1 && { echo "image=$mirror" >> "$GITHUB_OUTPUT"; exit 0; }
+            echo "probe attempt $attempt failed; waiting $((attempt * 20))s"
+            sleep $((attempt * 20))
+          done
+          echo "image=$ecr" >> "$GITHUB_OUTPUT"
+
+      - uses: docker/setup-buildx-action@v4
+        with:
+          driver-opts: image=public.ecr.aws/vend/moby/buildkit:buildx-stable-1
+
+      - uses: docker/login-action@v4
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      # The build stage first: the runtime build below reuses its layers, so
+      # `next build` runs once.
+      - name: Build stage (tools)
+        uses: docker/build-push-action@v7
+        with:
+          context: .
+          file: Docker/Dockerfile
+          target: build
+          build-args: NODE_IMAGE=${{ steps.node.outputs.image }}
+          push: true
+          tags: |
+            ${{ env.REGISTRY }}/chronopin-tools:${{ github.sha }}
+            ${{ env.REGISTRY }}/chronopin-tools:latest
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+
+      - name: Runtime image (app)
+        uses: docker/build-push-action@v7
+        with:
+          context: .
+          file: Docker/Dockerfile
+          build-args: NODE_IMAGE=${{ steps.node.outputs.image }}
+          push: true
+          tags: |
+            ${{ env.REGISTRY }}/chronopin:${{ github.sha }}
+            ${{ env.REGISTRY }}/chronopin:latest
+          cache-from: type=gha
+          cache-to: type=gha,mode=max

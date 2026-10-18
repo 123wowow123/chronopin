@@ -1,0 +1,125 @@
+'use client';
+
+import { useLocale, useT } from '@/lib/client/i18n';
+import { localizePath } from '@/lib/i18n/config';
+
+export type SignInProvider = 'google' | 'facebook' | 'apple' | 'alibaba' | 'alibabacn';
+
+// Sign in with Google, Facebook, Apple or Alibaba Cloud - whichever the server has keys for
+// (signInProviders in src/server/oauth.ts), with the divider above them, or
+// nothing at all when none is set up. On the sign-up page the chosen @handle
+// is left in a short-lived cookie for the callback to give a new account; on
+// the login page, the page to go back to afterwards.
+export function OAuthButtons({
+  providers,
+  handle,
+  redirect,
+  validate,
+}: {
+  providers: SignInProvider[];
+  handle?: string;
+  redirect?: string;
+  validate?: () => boolean;
+}) {
+  const locale = useLocale();
+  if (!providers.length) return null;
+  function go(provider: SignInProvider) {
+    if (validate && !validate()) return;
+    // Apple posts its callback back cross-site, and only a SameSite=None
+    // cookie rides along with that. It is https-only, so Secure costs nothing.
+    const sameSite = provider === 'apple' ? 'samesite=none; secure' : 'samesite=lax';
+    document.cookie = handle && handle.length > 1 ? `handle=${encodeURIComponent(handle)}; path=/; max-age=600; ${sameSite}` : 'handle=; path=/; max-age=0';
+    // The callback is outside the languages, so the page to come back to goes in this one.
+    const target = localizePath(redirect || '/', locale);
+    document.cookie = target !== '/' ? `after_login=${encodeURIComponent(target)}; path=/; max-age=600; ${sameSite}` : 'after_login=; path=/; max-age=0';
+    // A full navigation: /auth/* is a route handler that redirects to the
+    // provider. Replacing, because these buttons only ever sit on the login and
+    // sign-up pages: the whole redirect chain, and the page it ends on, stand in
+    // this page's place in the history rather than after it.
+    window.location.replace(`/auth/${provider}`);
+  }
+  const columns = ['', 'sm:grid-cols-1', 'sm:grid-cols-2', 'sm:grid-cols-3', 'sm:grid-cols-2', 'sm:grid-cols-3'][providers.length];
+  return (
+    <>
+      <OrDivider />
+      <div className={`grid gap-2.5 ${columns}`}>
+        {providers.includes('google') ? (
+          <button type="button" onClick={() => go('google')} className="btn bg-white text-neutral-900 ring-1 ring-line ring-inset hover:bg-neutral-200">
+            <GoogleMark />
+            Google
+          </button>
+        ) : null}
+        {providers.includes('facebook') ? (
+          <button type="button" onClick={() => go('facebook')} className="btn bg-[#1466d8] text-white hover:bg-[#1259bd]">
+            <FacebookMark />
+            Facebook
+          </button>
+        ) : null}
+        {providers.includes('apple') ? (
+          <button type="button" onClick={() => go('apple')} className="btn bg-black text-white hover:bg-neutral-800">
+            <AppleMark />
+            Apple
+          </button>
+        ) : null}
+        {providers.includes('alibaba') ? (
+          <button type="button" onClick={() => go('alibaba')} className="btn bg-[#ff6a00] text-white hover:bg-[#e65f00]">
+            <AlibabaMark />
+            Alibaba Cloud
+          </button>
+        ) : null}
+        {providers.includes('alibabacn') ? (
+          <button type="button" onClick={() => go('alibabacn')} className="btn bg-[#ff6a00] text-white hover:bg-[#e65f00]">
+            <AlibabaMark />
+            阿里云
+          </button>
+        ) : null}
+      </div>
+    </>
+  );
+}
+
+function AlibabaMark() {
+  return (
+    <svg viewBox="0 0 24 24" className="size-4" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" aria-hidden>
+      <path d="M3 8h6M3 16h6M15 8h6M15 16h6M9 8l6 8M9 16l6-8" />
+    </svg>
+  );
+}
+
+function GoogleMark() {
+  return (
+    <svg viewBox="0 0 24 24" className="size-4" aria-hidden>
+      <path fill="#4285F4" d="M23.5 12.3c0-.8-.1-1.6-.2-2.3H12v4.4h6.5a5.5 5.5 0 0 1-2.4 3.6v3h3.9c2.2-2.1 3.5-5.1 3.5-8.7z" />
+      <path fill="#34A853" d="M12 24c3.2 0 6-1.1 7.9-2.9l-3.9-3c-1.1.7-2.4 1.2-4 1.2-3.1 0-5.7-2.1-6.7-4.9h-4v3.1A12 12 0 0 0 12 24z" />
+      <path fill="#FBBC05" d="M5.3 14.4a7.2 7.2 0 0 1 0-4.7V6.6h-4a12 12 0 0 0 0 10.8z" />
+      <path fill="#EA4335" d="M12 4.8c1.8 0 3.3.6 4.6 1.8l3.4-3.4A12 12 0 0 0 1.3 6.6l4 3.1C6.3 6.9 8.9 4.8 12 4.8z" />
+    </svg>
+  );
+}
+
+function FacebookMark() {
+  return (
+    <svg viewBox="0 0 24 24" className="size-4" fill="currentColor" aria-hidden>
+      <path d="M24 12a12 12 0 1 0-13.9 11.9v-8.4h-3V12h3V9.4c0-3 1.8-4.7 4.5-4.7 1.3 0 2.7.2 2.7.2v2.9h-1.5c-1.5 0-2 .9-2 1.9V12h3.4l-.5 3.5h-2.9v8.4A12 12 0 0 0 24 12z" />
+    </svg>
+  );
+}
+
+function AppleMark() {
+  return (
+    <svg viewBox="0 0 24 24" className="size-4" fill="currentColor" aria-hidden>
+      <path d="M17.6 12.7c0-2.4 2-3.5 2.1-3.6-1.1-1.7-2.9-1.9-3.5-1.9-1.5-.2-2.9.9-3.7.9s-1.9-.9-3.2-.8c-1.6 0-3.1.9-4 2.4-1.7 3-.4 7.4 1.2 9.8.8 1.2 1.8 2.5 3 2.4 1.2 0 1.7-.8 3.1-.8s1.9.8 3.2.7c1.3 0 2.2-1.2 3-2.4.9-1.4 1.3-2.7 1.3-2.8-.1 0-2.5-1-2.5-3.9zM15.2 5.6c.7-.8 1.1-2 1-3.1-1 0-2.2.7-2.9 1.5-.6.7-1.2 1.9-1 3 1.1.1 2.2-.6 2.9-1.4z" />
+    </svg>
+  );
+}
+
+export function OrDivider({ children }: { children?: React.ReactNode }) {
+  const t = useT();
+  return (
+    <div className="flex items-center gap-3 text-xs tracking-wider text-subtle uppercase">
+      <span className="h-px flex-1 bg-line" />
+      {children ?? t('common.or')}
+      <span className="h-px flex-1 bg-line" />
+    </div>
+  );
+}

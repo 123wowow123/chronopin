@@ -1,0 +1,67 @@
+# Chronopin: Next.js standalone server on Node.js 24 LTS.
+#
+#   docker build -f Docker/Dockerfile -t chronopin .
+#   docker run --rm -p 9000:9000 --env-file Docker/env.prod.list chronopin
+#
+# No database is needed to build: pages that read data render per request.
+#
+# The base image comes from AWS ECR Public's mirror of Docker Hub's official
+# node image: GitHub's shared runners are rate limited by Docker Hub (429).
+
+# The workflow passes NODE_IMAGE: AWS ECR Public normally, Google's Docker Hub
+# mirror when ECR Public answers 429 "Data limit exceeded" (2026-10-17).
+ARG NODE_IMAGE=public.ecr.aws/docker/library/node:24-alpine
+
+# --- Dependencies and build ---------------------------------------------------
+FROM ${NODE_IMAGE} AS build
+WORKDIR /code
+
+# Chromium for the scraper comes from apk in the runtime image.
+ENV PUPPETEER_SKIP_DOWNLOAD=true \
+    NEXT_TELEMETRY_DISABLED=1
+
+# The npm download cache and Turbopack's build cache (.next/cache) are cache
+# mounts: they outlive each build on the VM, so a deploy recompiles only what
+# changed instead of the whole app. Neither ends up in an image.
+COPY package.json package-lock.json ./
+RUN --mount=type=cache,target=/root/.npm npm ci
+
+COPY . .
+RUN --mount=type=cache,target=/code/.next/cache npm run build
+
+# --- Runtime --------------------------------------------------------------------
+FROM ${NODE_IMAGE} AS runtime
+WORKDIR /app
+
+# Chromium and fonts for puppeteer (page scraping); bind-tools for nslookup.
+#
+# poppler-utils and tesseract-ocr are the PDF reader
+# (src/server/scrape/pdfText.ts): pdftotext and pdfinfo for a filing's text
+# layer, pdftoppm and tesseract to OCR one that is a scan. Without them a PDF
+# source fails the whole scrape, because the fetch is the one stage that may.
+# tesseract-ocr-data-eng is the English model; tesseract ships no language data
+# of its own. Measured: they add about 72MB to the image.
+RUN apk add --no-cache chromium nss freetype harfbuzz ca-certificates ttf-freefont bind-tools \
+    poppler-utils tesseract-ocr tesseract-ocr-data-eng
+
+ENV NODE_ENV=production \
+    NEXT_TELEMETRY_DISABLED=1 \
+    PUPPETEER_SKIP_DOWNLOAD=true \
+    PUPPETEER_EXECUTABLE_PATH=/usr/bin/chromium \
+    PORT=9000 \
+    HOSTNAME=0.0.0.0
+
+# The standalone output is the server plus only the node_modules it uses.
+# Owned by the user the server runs as: it rewrites its prerendered pages
+# under .next/server and fills .next/cache as they revalidate, and as root's
+# they failed with EACCES and were rebuilt on every request instead.
+COPY --from=build --chown=node:node /code/.next/standalone ./
+COPY --from=build --chown=node:node /code/.next/static ./.next/static
+COPY --from=build /code/public ./public
+# The OKF docs: the daily pin jobs read their strategy from them at run time
+# (src/server/jobs/prompt.ts).
+COPY --from=build /code/docs/okf ./docs/okf
+
+USER node
+EXPOSE 9000
+CMD ["node", "server.js"]

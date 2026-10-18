@@ -1,0 +1,334 @@
+import { describe, expect, it } from 'vitest';
+import { dependsOnZone, hasFilters, joinSearchQuery, parseSearchQuery, splitSearchQuery, wordStartPattern } from './searchQuery';
+
+describe('splitSearchQuery', () => {
+  it('keeps terms and text in order, with what each was written as', () => {
+    expect(splitSearchQuery('iphone company:"Electronic Arts" @ThePinGang Category:software trailer')).toEqual([
+      { kind: 'text', raw: 'iphone ' },
+      { kind: 'term', field: 'company', value: 'Electronic Arts', raw: 'company:"Electronic Arts"' },
+      { kind: 'text', raw: ' ' },
+      { kind: 'term', field: 'user', value: '@ThePinGang', raw: '@ThePinGang' },
+      { kind: 'text', raw: ' ' },
+      { kind: 'term', field: 'category', value: 'software', raw: 'Category:software' },
+      { kind: 'text', raw: ' trailer' },
+    ]);
+  });
+
+  it('reads whole-term quotes and smart quotes', () => {
+    expect(splitSearchQuery('"tag:Prediction Market" company:“EA”')).toEqual([
+      { kind: 'term', field: 'tag', value: 'Prediction Market', raw: '"tag:Prediction Market"' },
+      { kind: 'text', raw: ' ' },
+      { kind: 'term', field: 'company', value: 'EA', raw: 'company:"EA"' },
+    ]);
+  });
+
+  it('leaves an @ inside a word as text', () => {
+    expect(splitSearchQuery('mail@example.com')).toEqual([{ kind: 'text', raw: 'mail@example.com' }]);
+  });
+
+  it('reads a bare $ticker as a ticker term, uppercased', () => {
+    expect(splitSearchQuery('earnings $nke $BRK.B')).toEqual([
+      { kind: 'text', raw: 'earnings ' },
+      { kind: 'term', field: 'ticker', value: 'NKE', raw: '$nke' },
+      { kind: 'text', raw: ' ' },
+      { kind: 'term', field: 'ticker', value: 'BRK.B', raw: '$BRK.B' },
+    ]);
+  });
+
+  it('leaves a dollar amount, a lone $ and a $ inside a word as text', () => {
+    expect(splitSearchQuery('$5 million $ US$100 $NKE,')).toEqual([{ kind: 'text', raw: '$5 million $ US$100 $NKE,' }]);
+  });
+});
+
+describe('ticker terms', () => {
+  it('collects tickers once each whatever the case, as a filter', () => {
+    const query = parseSearchQuery('$nke $NKE $orcl results');
+    expect(query).toMatchObject({ tickers: ['NKE', 'ORCL'], companies: [], text: 'results' });
+    expect(hasFilters(query)).toBe(true);
+  });
+});
+
+describe('joinSearchQuery', () => {
+  it('writes the query back without a removed term', () => {
+    const parts = splitSearchQuery('iphone  category:Phones company:Apple');
+    expect(joinSearchQuery(parts.filter((part) => !(part.kind === 'term' && part.field === 'category')))).toBe('iphone company:Apple');
+  });
+});
+
+describe('parseSearchQuery', () => {
+  it('reads taste: axes, leaving out names the profile does not have', () => {
+    expect(parseSearchQuery('taste:Bitterness taste:umami taste:bitterness taste:salty').tastes).toEqual(['bitterness', 'umami']);
+    expect(parseSearchQuery('taste:any').tastes).toEqual(['any']);
+  });
+
+  it('reads carperf: axes, leaving out names the rubric does not have', () => {
+    expect(parseSearchQuery('carperf:Range carperf:charging carperf:range carperf:speed').carPerfs).toEqual(['range', 'charging']);
+    expect(parseSearchQuery('carperf:kidsfriendly carperf:kids-friendly carperf:kidsFriendly').carPerfs).toEqual(['kidsFriendly']);
+    expect(parseSearchQuery('carperf:any').carPerfs).toEqual(['any']);
+    expect(parseSearchQuery('carperf:value').tastes).toEqual([]);
+  });
+
+  it('reads rubric: years, leaving out anything that is not a criteria year', () => {
+    expect(parseSearchQuery('rubric:2026 rubric:2027 rubric:2026 "rubric:2028" rubric:\'2029\'').rubricYears).toEqual([2026, 2027, 2028, 2029]);
+    expect(parseSearchQuery('rubric:2019 rubric:2101 rubric:26 rubric:2026.5 rubric:abc rubric:').rubricYears).toEqual([]);
+    expect(parseSearchQuery('rubric:2020 rubric:2100').rubricYears).toEqual([2020, 2100]);
+    expect(hasFilters(parseSearchQuery('rubric:2026'))).toBe(true);
+    expect(hasFilters(parseSearchQuery('rubric:1999'))).toBe(false);
+  });
+
+  it('reads rubric: beside carperf: and free text, each in its own field', () => {
+    expect(parseSearchQuery('carperf:range rubric:2026 electric suv')).toMatchObject({ carPerfs: ['range'], rubricYears: [2026], tastes: [], text: 'electric suv' });
+    expect(parseSearchQuery('rubric:2026 carperf:any')).toMatchObject({ carPerfs: ['any'], rubricYears: [2026], text: '' });
+  });
+
+  it('writes rubric: as a pill term and reads it back', () => {
+    expect(splitSearchQuery('rubric:2026 sedan')).toEqual([
+      { kind: 'term', field: 'rubric', value: '2026', raw: 'rubric:2026' },
+      { kind: 'text', raw: ' sedan' },
+    ]);
+  });
+
+  it('reads person: names and radar-axis bounds', () => {
+    expect(parseSearchQuery('person:"Joe Biden" person:"joe biden"').people).toEqual(['Joe Biden']);
+    expect(parseSearchQuery('misconduct:>3 wealth:2-4 senate').personAxes).toEqual([
+      { axis: 'misconduct', op: '>', value: 3 },
+      { axis: 'wealth', op: '>=', value: 2 },
+      { axis: 'wealth', op: '<=', value: 4 },
+    ]);
+    expect(parseSearchQuery('misconduct:>3 senate').text).toBe('senate');
+    expect(parseSearchQuery('public-standing:>=4 social-good:3').personAxes).toEqual([
+      { axis: 'standing', op: '>=', value: 4 },
+      { axis: 'social', op: '>=', value: 3 },
+    ]);
+    expect(parseSearchQuery('health:high').personAxes).toEqual([]);
+    expect(hasFilters(parseSearchQuery('economic:>2'))).toBe(true);
+  });
+  it('reads the old category: terms as tags, in any case, once each', () => {
+    expect(parseSearchQuery('category:software CATEGORY:Software tag:Software ios')).toEqual({
+      userNames: [],
+      ids: [],
+      companies: [],
+      tickers: [],
+      confidences: [],
+      confidenceBands: [],
+      dates: [],
+      postedDays: [],
+      updatedDays: [],
+      dateBounds: [],
+      postedBounds: [],
+      updatedBounds: [],
+      tags: ['software'],
+      excludeTags: [],
+      places: [],
+      platforms: [],
+      rated: [],
+      tastes: [],
+      carPerfs: [],
+      dinings: [],
+      hotels: [],
+      rubricYears: [],
+      people: [],
+      personAxes: [],
+      ratings: [],
+      delays: [],
+      holidays: [],
+      text: 'ios',
+    });
+  });
+
+  it('reads tags, quoted like any value, once each whatever the case', () => {
+    expect(parseSearchQuery('tag:"Tokyo Anime Award Festival 2024" tag:Artemis TAG:artemis moon')).toMatchObject({
+      tags: ['Tokyo Anime Award Festival 2024', 'Artemis'],
+      text: 'moon',
+    });
+    expect(hasFilters(parseSearchQuery('tag:Artemis'))).toBe(true);
+  });
+
+  it('reads days, BC ones too, and leaves out anything else', () => {
+    expect(parseSearchQuery('date:2026-09-08 date:-2560-01-01 date:2026-09-08 date:tomorrow').dates).toEqual(['2026-09-08', '-2560-01-01']);
+    expect(parseSearchQuery('posted:2026-09-13 date:2026-09-08')).toMatchObject({ dates: ['2026-09-08'], postedDays: ['2026-09-13'] });
+    expect(parseSearchQuery('updated:2026-10-02 posted:2026-09-13')).toMatchObject({ updatedDays: ['2026-10-02'], postedDays: ['2026-09-13'] });
+  });
+
+  it('reads holidays by name, quoted like any value, once each, as a filter that follows the viewer\'s days', () => {
+    const query = parseSearchQuery('holiday:Halloween holiday:"Mid-Autumn Festival" HOLIDAY:halloween candy');
+    expect(query).toMatchObject({ holidays: ['Halloween', 'Mid-Autumn Festival'], text: 'candy' });
+    expect(hasFilters(query)).toBe(true);
+    expect(dependsOnZone(query)).toBe(true);
+  });
+
+  it('reads pin ids, comma-separated, once each and never anything else', () => {
+    expect(parseSearchQuery('pin:1992,1991 pin:1992 pin:none pin:-3').ids).toEqual([1992, 1991]);
+    expect(hasFilters(parseSearchQuery('pin:1992'))).toBe(true);
+  });
+
+  it('reads confidence levels, with UNVERIFIED as the stored unknown', () => {
+    expect(parseSearchQuery('confidence:ESTIMATED confidence:unverified confidence:estimated').confidences).toEqual(['estimated', 'unknown']);
+  });
+
+  it('reads score bands beside the levels, once each, on the same field', () => {
+    expect(parseSearchQuery('confidence:LOW confidence:low confidence:high confidence:estimated')).toMatchObject({
+      confidenceBands: ['low', 'high'],
+      confidences: ['estimated'],
+      text: '',
+    });
+    expect(hasFilters(parseSearchQuery('confidence:medium'))).toBe(true);
+  });
+
+  it('reads places - a city, a state, a postal code - quoted like any value, once each', () => {
+    expect(parseSearchQuery('place:Chicago place:"New York" PLACE:chicago place:60601 fire')).toMatchObject({
+      places: ['Chicago', 'New York', '60601'],
+      text: 'fire',
+    });
+    expect(hasFilters(parseSearchQuery('place:Texas'))).toBe(true);
+  });
+});
+
+describe('rating: bounds', () => {
+  it('reads comparisons, a range and a bare floor, with or without a %', () => {
+    expect(parseSearchQuery('tag:Anime rating:>80').ratings).toEqual([{ op: '>', value: 80 }]);
+    expect(parseSearchQuery('rating:>=75% rating:<90').ratings).toEqual([
+      { op: '>=', value: 75 },
+      { op: '<', value: 90 },
+    ]);
+    expect(parseSearchQuery('rating:90-80').ratings).toEqual([
+      { op: '>=', value: 80 },
+      { op: '<=', value: 90 },
+    ]);
+    expect(parseSearchQuery('rating:85 rating:=>85 rating:=70').ratings).toEqual([
+      { op: '>=', value: 85 },
+      { op: '=', value: 70 },
+    ]);
+    expect(hasFilters(parseSearchQuery('rating:>80'))).toBe(true);
+  });
+
+  it('leaves out anything that is not a bound, and never reads it as text', () => {
+    const q = parseSearchQuery('rating:great rating:> naruto');
+    expect(q.ratings).toEqual([]);
+    expect(q.text).toBe('naruto');
+    expect(splitSearchQuery('rating:>80')).toEqual([{ kind: 'term', field: 'rating', value: '>80', raw: 'rating:>80' }]);
+  });
+});
+
+describe('date:, posted: and updated: comparisons', () => {
+  it('reads a comparison as a day boundary, "after" and "through" as the day after', () => {
+    expect(parseSearchQuery('date:>=2026-09-01').dateBounds).toEqual([{ op: '>=', day: '2026-09-01' }]);
+    expect(parseSearchQuery('date:>2026-09-30 date:<=2026-12-31').dateBounds).toEqual([
+      { op: '>=', day: '2026-10-01' },
+      { op: '<', day: '2027-01-01' },
+    ]);
+    expect(parseSearchQuery('posted:<2026-10-01 posted:=>2026-09-01').postedBounds).toEqual([
+      { op: '<', day: '2026-10-01' },
+      { op: '>=', day: '2026-09-01' },
+    ]);
+    expect(parseSearchQuery('date:>=-2560-01-01').dateBounds).toEqual([{ op: '>=', day: '-2560-01-01' }]);
+    // What a card's UPDATED pill writes.
+    expect(parseSearchQuery('updated:>=2026-10-02').updatedBounds).toEqual([{ op: '>=', day: '2026-10-02' }]);
+  });
+
+  it('reads a range with both ends in, either way round', () => {
+    const range = [
+      { op: '>=', day: '2026-09-01' },
+      { op: '<', day: '2026-10-01' },
+    ];
+    expect(parseSearchQuery('date:2026-09-01..2026-09-30').dateBounds).toEqual(range);
+    expect(parseSearchQuery('posted:2026-09-30..2026-09-01').postedBounds).toEqual(range);
+  });
+
+  it('keeps a bare or = day exact, beside any comparison', () => {
+    expect(parseSearchQuery('date:=2026-09-08 date:2026-09-09 date:>=2026-09-01')).toMatchObject({
+      dates: ['2026-09-08', '2026-09-09'],
+      dateBounds: [{ op: '>=', day: '2026-09-01' }],
+    });
+    expect(hasFilters(parseSearchQuery('posted:<2026-10-01'))).toBe(true);
+    expect(dependsOnZone(parseSearchQuery('date:>=2026-09-01'))).toBe(true);
+    expect(hasFilters(parseSearchQuery('updated:>=2026-10-02'))).toBe(true);
+    expect(dependsOnZone(parseSearchQuery('updated:2026-10-02'))).toBe(true);
+  });
+
+  it('leaves out anything that is not a day, and never reads it as text', () => {
+    const q = parseSearchQuery('date:>=soon posted:2026-09-01..later date:>2026-9-1 naruto');
+    expect(q.dateBounds).toEqual([]);
+    expect(q.postedBounds).toEqual([]);
+    expect(q.text).toBe('naruto');
+  });
+});
+
+describe('delay: bounds', () => {
+  it('reads comparisons over days, weeks, months and years, in days or calendar months', () => {
+    expect(parseSearchQuery('delay:>=2months').delays).toEqual([{ op: '>=', unit: 'months', value: 2 }]);
+    expect(parseSearchQuery('delay:>6weeks delay:<=1year').delays).toEqual([
+      { op: '>', unit: 'days', value: 42 },
+      { op: '<=', unit: 'months', value: 12 },
+    ]);
+    expect(parseSearchQuery('delay:=3mo delay:=>10 delay:<2.5yrs').delays).toEqual([
+      { op: '=', unit: 'months', value: 3 },
+      { op: '>=', unit: 'days', value: 10 },
+      { op: '<', unit: 'months', value: 30 },
+    ]);
+    expect(hasFilters(parseSearchQuery('delay:>1week'))).toBe(true);
+  });
+
+  it('reads a range, both ends in, and a bare span as a floor', () => {
+    expect(parseSearchQuery('delay:6-2months').delays).toEqual([
+      { op: '>=', unit: 'months', value: 2 },
+      { op: '<=', unit: 'months', value: 6 },
+    ]);
+    expect(parseSearchQuery('delay:1week-3weeks').delays).toEqual([
+      { op: '>=', unit: 'days', value: 7 },
+      { op: '<=', unit: 'days', value: 21 },
+    ]);
+    expect(parseSearchQuery('delay:2months').delays).toEqual([{ op: '>=', unit: 'months', value: 2 }]);
+  });
+
+  it('leaves out anything that is not a span, and never reads it as text', () => {
+    const q = parseSearchQuery('delay:late delay:>2fortnights delay:2weeks-3months delay:> naruto');
+    expect(q.delays).toEqual([]);
+    expect(q.text).toBe('naruto');
+    expect(splitSearchQuery('delay:>=2months')).toEqual([{ kind: 'term', field: 'delay', value: '>=2months', raw: 'delay:>=2months' }]);
+  });
+});
+
+describe('wordStartPattern', () => {
+  it('matches the text at the start of any word, taken literally', () => {
+    const matches = (text: string, name: string) => new RegExp(wordStartPattern(text).replace('[:alnum:]', 'a-z0-9'), 'i').test(name);
+    expect(matches('ast', 'Deep Space Astronomy')).toBe(true);
+    expect(matches('pace', 'Deep Space Astronomy')).toBe(false);
+    expect(matches('c++', 'C++ Conference')).toBe(true);
+    expect(wordStartPattern(' a.b ')).toBe('(^|[^[:alnum:]])a\\.b');
+  });
+});
+
+describe('excluded tags (-tag:)', () => {
+  it('reads -tag: and -category: as tags to leave out, in every quoting', () => {
+    const q = parseSearchQuery('anime -tag:Music -tag:"Grammy Awards" "-tag:Sports" -category:Movies tag:Japan');
+    expect(q.excludeTags).toEqual(['Music', 'Grammy Awards', 'Sports', 'Movies']);
+    expect(q.tags).toEqual(['Japan']);
+    expect(q.text).toBe('anime');
+  });
+
+  it('is a filter on its own, so "everything but" searches', () => {
+    expect(hasFilters(parseSearchQuery('-tag:Anime'))).toBe(true);
+  });
+
+  it('leaves out a negated field it does not read, rather than matching it', () => {
+    const q = parseSearchQuery('-company:Apple -user:someone iphone');
+    expect(q.companies).toEqual([]);
+    expect(q.userNames).toEqual([]);
+    expect(q.text).toBe('iphone');
+  });
+
+  it('keeps a hyphenated word as text, and marks the term in the split', () => {
+    expect(parseSearchQuery('t-tag:x').text).toBe('t-tag:x');
+    expect(splitSearchQuery('-tag:Anime')).toEqual([{ kind: 'term', field: 'tag', value: 'Anime', raw: '-tag:Anime', negated: true }]);
+  });
+});
+
+describe('game info terms', () => {
+  it('reads platform: by name or key and rated: as written', () => {
+    const q = parseSearchQuery('platform:"PlayStation 5" platform:xbox-series platform:Atari rated:"ESRB Mature 17+" zombies');
+    expect(q.platforms).toEqual(['ps5', 'xbox-series']);
+    expect(q.rated).toEqual(['ESRB Mature 17+']);
+    expect(q.text).toBe('zombies');
+  });
+});

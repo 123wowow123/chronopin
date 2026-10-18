@@ -1,0 +1,130 @@
+// The AI model a pin's title is about, for threading a model line's releases
+// and updates in order (Claude Opus 4.5 <- 4.6 <- 4.7, GPT-4o update <- next
+// GPT-4o update). Only the big families are known, on purpose: a thread is
+// only worth it for a series of incremental releases of the same product, so
+// a title that names no known model line is never threaded.
+//
+// line: the product line - family plus tier or variant ("claude opus",
+// "gpt mini", "o pro"). version: its number, compared part by part. model:
+// the exact model ("gpt 4o mini"), so updates to one model chain together.
+
+export type ModelRelease = { line: string; version: number[]; model: string };
+
+type Pattern = { re: RegExp; read: (m: RegExpExecArray) => { family: string; version: string; variants?: string[] } };
+
+const VERSION = String.raw`(\d+(?:\.\d+)?)`;
+const GPT_VARIANTS = /(?:[- ](?:mini|nano|pro|instant|thinking|codex|max|sol|turbo))+/;
+// Names of the flagship itself rather than a tier beside it: GPT-5 became
+// GPT-5.2 Thinking, then GPT-5.4 Thinking and GPT-5.6 Sol, so they share
+// GPT-5's line (the model keeps its name).
+const GPT_FLAGSHIP_NAMES = new Set(['thinking', 'sol']);
+
+const PATTERNS: Pattern[] = [
+  // Claude Opus 4.5 / Claude 3.5 Sonnet
+  { re: new RegExp(String.raw`\bclaude[- ](opus|sonnet|haiku|fable|mythos)[- ]${VERSION}\b`), read: (m) => ({ family: `claude ${m[1]}`, version: m[2] }) },
+  { re: new RegExp(String.raw`\bclaude[- ]${VERSION}[- ](opus|sonnet|haiku)\b`), read: (m) => ({ family: `claude ${m[2]}`, version: m[1] }) },
+  // "Claude Fable 5.1 and Mythos 5.1": the second tier drops the "Claude".
+  { re: new RegExp(String.raw`\b(fable|mythos)[- ]${VERSION}\b`), read: (m) => ({ family: `claude ${m[1]}`, version: m[2] }) },
+  // gpt-oss-120b: sizes, not versions.
+  { re: /\bgpt-oss\b/, read: () => ({ family: 'gpt-oss', version: '0' }) },
+  // GPT-4o, GPT 4o-mini, GPT-5.2 Thinking, GPT-5.3-Codex, GPT-5-Codex-Max
+  {
+    re: new RegExp(String.raw`\bgpt[- ]?${VERSION}(o)?(${GPT_VARIANTS.source})?(?![\w.])`),
+    read: (m) => ({ family: 'gpt', version: `${m[1]}${m[2] ?? ''}`, variants: (m[3] ?? '').split(/[- ]/).filter(Boolean) }),
+  },
+  // o1-preview, o3, o3-pro, o4-mini
+  { re: /\bo(\d)(?:[- ](mini|pro|preview))?\b/, read: (m) => ({ family: 'o', version: m[1], variants: m[2] ? [m[2]] : [] }) },
+  {
+    re: new RegExp(String.raw`\bgemini[- ]${VERSION}(?:[- ](pro|flash-lite|flash|ultra|nano))?\b`),
+    read: (m) => ({ family: 'gemini', version: m[1], variants: m[2] ? [m[2]] : [] }),
+  },
+  { re: new RegExp(String.raw`\bllama[- ]?${VERSION}\b`), read: (m) => ({ family: 'llama', version: m[1] }) },
+  { re: new RegExp(String.raw`\bgrok[- ]?${VERSION}\b`), read: (m) => ({ family: 'grok', version: m[1] }) },
+  { re: new RegExp(String.raw`\bdeepseek[- ]?(v|r)${VERSION}\b`), read: (m) => ({ family: `deepseek ${m[1]}`, version: m[2] }) },
+  // Qwen3.8-Max, Qwen3-235B-A22B-Thinking-2507, Qwen2.5-Plus. Max, Plus, VL,
+  // Next and the open-weight sizes are one line: the family has moved by
+  // generation (2.5, 3, 3.5 ... 3.8), so the chain is its generations in the
+  // order they shipped. "QwenWork" and the bare "Qwen-Plus" have no number.
+  { re: new RegExp(String.raw`\bqwen[- ]?${VERSION}\b`), read: (m) => ({ family: 'qwen', version: m[1] }) },
+  // The labs below name a generation the same way, so each is one chain of
+  // generations. A size or vision letter after the number (GLM-4.5V, Kimi K2.6)
+  // is the same generation, hence no \b after the version.
+  // GLM-4.6, GLM-5V-Turbo, GLM-5.3-Flash
+  { re: new RegExp(String.raw`\bglm[- ]?${VERSION}(?![\d.])`), read: (m) => ({ family: 'glm', version: m[1] }) },
+  // Kimi K2-0905, Kimi K2.5, Kimi K3
+  { re: new RegExp(String.raw`\bkimi[- ]?k${VERSION}(?![\d.])`), read: (m) => ({ family: 'kimi', version: m[1] }) },
+  // MiniMax-M1, MiniMax-M2.5
+  { re: new RegExp(String.raw`\bminimax[- ]?m${VERSION}(?![\d.])`), read: (m) => ({ family: 'minimax', version: m[1] }) },
+  // Mistral's tiers are separate products with their own version numbers.
+  { re: new RegExp(String.raw`\bmistral[- ](small|medium|large)[- ]${VERSION}(?![\d.])`), read: (m) => ({ family: `mistral ${m[1]}`, version: m[2] }) },
+  // Gemma 2, Gemma 3
+  { re: new RegExp(String.raw`\bgemma[- ]?${VERSION}(?![\d.])`), read: (m) => ({ family: 'gemma', version: m[1] }) },
+  // MiMo-V2.5-Pro, MiMo-V2.6
+  { re: new RegExp(String.raw`\bmimo[- ]?v${VERSION}(?![\d.])`), read: (m) => ({ family: 'mimo', version: m[1] }) },
+  // Granite 3.3, Granite 4.0, Granite 4.2 8B (IBM): sizes follow the version.
+  { re: new RegExp(String.raw`\bgranite[- ]?${VERSION}(?![\d.])`), read: (m) => ({ family: 'granite', version: m[1] }) },
+  // Phi-3, Phi-3.5-mini, Phi-4-reasoning
+  { re: new RegExp(String.raw`\bphi[- ]?${VERSION}(?![\d.])`), read: (m) => ({ family: 'phi', version: m[1] }) },
+  // Cohere's Command R, Command R+ and Command A are one line: R first, A next.
+  { re: /\bcommand[- ]r(?:[- ]?(?:plus|\+))?(?![\w])/, read: () => ({ family: 'command', version: '1' }) },
+  { re: /\bcommand[- ]a\b/, read: () => ({ family: 'command', version: '2' }) },
+  // Step 3.5 Flash, Step 5 Preview (StepFun)
+  { re: new RegExp(String.raw`\bstep[- ]?${VERSION}(?![\d.])`), read: (m) => ({ family: 'step', version: m[1] }) },
+  // Ministral 8B and 3B (2024) came before Ministral 3: a size is not a version.
+  { re: /\bministral[- ]?\d+b\b/, read: () => ({ family: 'ministral', version: '0' }) },
+  { re: new RegExp(String.raw`\bministral[- ]?${VERSION}(?![\d.]|b\b)`), read: (m) => ({ family: 'ministral', version: m[1] }) },
+  // Arcee Trinity Large Preview / Thinking
+  { re: /\btrinity[- ](large|mini|nano)\b/, read: (m) => ({ family: `trinity ${m[1]}`, version: '0' }) },
+  // Solar Pro 2, Solar Pro 4 (Upstage)
+  { re: new RegExp(String.raw`\bsolar[- ]pro[- ]${VERSION}(?![\d.])`), read: (m) => ({ family: 'solar pro', version: m[1] }) },
+  // GPT-Image-1, GPT-Image-2.5
+  { re: new RegExp(String.raw`\bgpt[- ]image[- ]${VERSION}(?![\d.])`), read: (m) => ({ family: 'gpt-image', version: m[1] }) },
+  // Media models: Veo 3.1, Imagen 4, Lyria 3.5, Sora 2
+  { re: new RegExp(String.raw`\b(veo|imagen|lyria|sora)[- ]?${VERSION}(?![\d.])`), read: (m) => ({ family: m[1], version: m[2] }) },
+  // NVIDIA Nemotron 3, Falcon 3 / Falcon-H1, OLMo 2 / Olmo 3, ERNIE 4.5, Hunyuan, Nova 2
+  { re: new RegExp(String.raw`\bnemotron[- ]?${VERSION}(?![\d.])`), read: (m) => ({ family: 'nemotron', version: m[1] }) },
+  { re: new RegExp(String.raw`\bfalcon[- ]?${VERSION}(?![\d.])`), read: (m) => ({ family: 'falcon', version: m[1] }) },
+  { re: new RegExp(String.raw`\bolmo[- ]?${VERSION}(?![\d.])`), read: (m) => ({ family: 'olmo', version: m[1] }) },
+  { re: new RegExp(String.raw`\bernie[- ]?${VERSION}(?![\d.])`), read: (m) => ({ family: 'ernie', version: m[1] }) },
+  // Muse Spark, Muse Spark 1.3: the unnumbered one is the first.
+  { re: new RegExp(String.raw`\bmuse[- ]spark(?:[- ]${VERSION})?(?![\d.])`), read: (m) => ({ family: 'muse spark', version: m[1] ?? '0' }) },
+];
+
+// Every model of a known line the title names, in order: "OpenAI o3 and
+// o4-mini" is about o3 first, and o4-mini too.
+export function modelReleases(title: string | null | undefined): ModelRelease[] {
+  // Non-breaking hyphens (GPT‑5.3‑Codex) read as hyphens.
+  const text = (title ?? '').toLowerCase().replace(/[‐‑‒–]/g, '-');
+  const found: { at: number; end: number; release: ModelRelease }[] = [];
+  for (const { re, read } of PATTERNS) {
+    for (const m of text.matchAll(new RegExp(re.source, 'g'))) {
+      const { family, version, variants = [] } = read(m as RegExpExecArray);
+      found.push({
+        at: m.index,
+        end: m.index + m[0].length,
+        release: {
+          line: [family, ...variants.filter((v) => !(family === 'gpt' && GPT_FLAGSHIP_NAMES.has(v)))].join(' '),
+          version: version.split('.').map((part) => parseInt(part, 10)),
+          model: [family, version, ...variants].join(' '),
+        },
+      });
+    }
+  }
+  found.sort((a, b) => a.at - b.at || b.end - a.end);
+  // A match inside an earlier one is part of that model's name.
+  return found.filter((f, i) => !found.slice(0, i).some((g) => f.at < g.end)).map((f) => f.release);
+}
+
+// The model a title is about: the first it names, if of a known line.
+export function modelRelease(title: string | null | undefined): ModelRelease | undefined {
+  return modelReleases(title)[0];
+}
+
+// Negative when a is the earlier version, 0 when the same.
+export function compareVersions(a: number[], b: number[]): number {
+  for (let i = 0; i < Math.max(a.length, b.length); i++) {
+    const diff = (a[i] ?? 0) - (b[i] ?? 0);
+    if (diff) return diff;
+  }
+  return 0;
+}

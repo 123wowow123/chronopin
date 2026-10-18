@@ -1,0 +1,1449 @@
+{
+  "verifiedAtUTC": "2026-10-12T22:10:08Z",
+  "fullCompletionTargetProjects": 12,
+  "additionalFirstReactorMilestones": 1,
+  "targetsByYear": {
+    "2027": 6,
+    "2028": 5,
+    "2030": 1
+  },
+  "newPinsCreated": 0,
+  "totalOriginalCollectionPins": 37,
+  "publicMapMatches": true,
+  "wikisVerified": true,
+  "targets": [
+    {
+      "key": "eia-1364",
+      "pinId": 7690,
+      "name": "Mill Creek 5",
+      "country": "United States",
+      "year": 2027,
+      "dateMarker": "2027-12-31",
+      "targetLabel": "2027",
+      "targetSource": "https://lge-ku.com/mc5",
+      "targetEvidence": "The current operator project page identifies construction underway and expected customer supply in 2027.",
+      "scope": "included project/phase completion target",
+      "fullProjectCount": true,
+      "cost": {
+        "key": "eia-1364",
+        "name": "Mill Creek 5",
+        "country": "United States",
+        "capacityMW": 645,
+        "capacityBasis": "Current operator page: 645 MW nameplate",
+        "costValue": 902000000.0,
+        "currency": "USD",
+        "costBasis": "Published project-specific capital/construction estimate",
+        "sourceUrl": "https://lge-ku.com/mc5",
+        "sourceDate": null,
+        "facts": "LG&E/KU’s current Mill Creek 5 page states a 645 MW nameplate rating, $902 million cost, construction underway and estimated completion in 2027. Its 2024 groundbreaking release used 640 MW; the current page is used for the primary output rating. EIA’s separate 740 MW figure is retained as inventory context, not extra generating capacity.",
+        "extra": [
+          [
+            "https://lge-ku.com/newsroom/press-releases/2024/11/13/lge-and-ku-officially-break-ground-mill-creek-5",
+            "November 13, 2024 groundbreaking verifies physical construction."
+          ]
+        ],
+        "costGroup": "eia-1364",
+        "checkedAt": "2026-10-11",
+        "capacitySourceUrl": "https://lge-ku.com/mc5",
+        "physicalSourceUrl": "https://lge-ku.com/newsroom/press-releases/2024/11/13/lge-and-ku-officially-break-ground-mill-creek-5",
+        "costFacts": "Published project-specific cost for Mill Creek 5: USD 9.02e+08. Basis: Published project-specific capital/construction estimate.",
+        "capacityFacts": "Published electric generating project rating for Mill Creek 5: 645 MW. Basis: Current operator page: 645 MW nameplate."
+      },
+      "backingWikis": [
+        {
+          "id": 75843,
+          "url": "https://www.eia.gov/electricity/data/eia860m/xls/august_generator2026.xlsx#EIA-Plant-58987",
+          "version": 4,
+          "wikiPageId": 9772
+        },
+        {
+          "id": 79762,
+          "url": "https://lge-ku.com/newsroom/press-releases/2024/11/13/lge-and-ku-officially-break-ground-mill-creek-5",
+          "version": 1,
+          "wikiPageId": 9661
+        },
+        {
+          "id": 90926,
+          "url": "https://lge-ku.com/mc5",
+          "version": 2,
+          "wikiPageId": 10774
+        }
+      ],
+      "price": 902000000,
+      "priceCurrency": "USD",
+      "priceLowerBound": null,
+      "priceUpperBound": null,
+      "media": [
+        {
+          "key": "eia-1364",
+          "sourceUrl": "https://lge-ku.com/sites/default/files/2024-11/Mill-Creek-5-Rendering.jpg",
+          "sourcePage": "https://lge-ku.com/newsroom/press-releases/2024/11/13/lge-and-ku-officially-break-ground-mill-creek-5",
+          "credit": "LG&E and KU; artist not named on source page",
+          "caption": "Operator rendering of Mill Creek 5. This is an illustration of the planned unit, not a photograph of a completed plant.",
+          "blobUrl": "https://chronopin.blob.core.windows.net/thumb/electric-generation/eia-1364-1d5c92c4787766e14f05.webp",
+          "sha256": "1d5c92c4787766e14f0561e0b47e6966ff2834a0b0d4a76d091cefe2aa4d2039",
+          "bytes": 67610,
+          "pinId": 7690
+        },
+        {
+          "key": "eia-1364",
+          "sourceUrl": "https://lge-ku.com/sites/default/files/2024-11/Mill-Creek-5-Groundbreaking.jpg",
+          "sourcePage": "https://lge-ku.com/newsroom/press-releases/2024/11/13/lge-and-ku-officially-break-ground-mill-creek-5",
+          "credit": "LG&E and KU; photographer not named on source page",
+          "caption": "Mill Creek 5 groundbreaking ceremony, November 13, 2024, as published in the operator release.",
+          "blobUrl": "https://chronopin.blob.core.windows.net/thumb/electric-generation/eia-1364-cfb82f4bf3e482fb2d7d.webp",
+          "sha256": "cfb82f4bf3e482fb2d7dac5fa4fe7d09b967e3d105469c6f0900a5c9600d1633",
+          "bytes": 513532,
+          "pinId": 7690
+        },
+        {
+          "pinId": 7690,
+          "key": "eia-1364-media-1",
+          "name": "Mill Creek 5",
+          "sourcePage": "https://lge-ku.com/mc5",
+          "sourceUrl": "https://lge-ku.com/sites/default/files/styles/image_xl/public/2025-03/Mill-Creek-5-Groundbreaking-Construction-1.jpg?itok=iBOTofLc",
+          "caption": "Mill Creek 5 construction site, from LG&E and KU’s project gallery. Capture date not separately stated.",
+          "credit": "LG&E and KU; photographer not named",
+          "captureDate": null,
+          "verified": true,
+          "candidateIndex": 28,
+          "blobUrl": "https://chronopin.blob.core.windows.net/thumb/electric-generation/eia-1364-media-1-3b6b738cc70f33b5101d.webp",
+          "sha256": "3b6b738cc70f33b5101dd8b98cd4c1c32183acc795d483123e959aff179c73f6",
+          "bytes": 291594
+        },
+        {
+          "pinId": 7690,
+          "key": "eia-1364-media-2",
+          "name": "Mill Creek 5",
+          "sourcePage": "https://lge-ku.com/mc5",
+          "sourceUrl": "https://lge-ku.com/sites/default/files/styles/image_xl/public/2025-03/Mill-Creek-5-Groundbreaking-Construction-2.jpg?itok=29pn4hkb",
+          "caption": "Mill Creek 5 construction site, from LG&E and KU’s project gallery. Capture date not separately stated.",
+          "credit": "LG&E and KU; photographer not named",
+          "captureDate": null,
+          "verified": true,
+          "candidateIndex": 29,
+          "blobUrl": "https://chronopin.blob.core.windows.net/thumb/electric-generation/eia-1364-media-2-ca52b1832a3ce31b2ced.webp",
+          "sha256": "ca52b1832a3ce31b2ced6a74487c6ae82300a8a945ee455a9154a9a2744a43ac",
+          "bytes": 215358
+        }
+      ],
+      "mediaVerification": {
+        "mediaCount": 4,
+        "verifiedMediaCount": 4,
+        "productionPageVerified": true,
+        "sourceWikisReadyAndCurrent": true,
+        "researchNotes": "Dedicated operator project/news pages and any linked photo/gallery pages were checked. Selected images were visually verified; source URLs and available credits are retained. Unpublished capture dates are not inferred from upload paths. Other-plant and generic UI images were excluded. Existing verified media was preserved.",
+        "remainingMediaGap": "Capture dates or individual photographer credits remain unpublished for some imagery; see the per-image captions and research notes."
+      }
+    },
+    {
+      "key": "existing-5511",
+      "pinId": 5511,
+      "name": "Coastal Virginia Offshore Wind commercial project",
+      "country": "United States",
+      "year": 2027,
+      "dateMarker": "2027-12-31",
+      "targetLabel": "2027",
+      "targetSource": "https://coastalvawind.com/about/the-project/timeline",
+      "targetEvidence": "The operator timeline identifies 2026–2027 project construction and commissioning. First power in March 2026 does not mean full completion; the retained target is 2027, without asserting an exact day.",
+      "scope": "included project/phase completion target",
+      "fullProjectCount": true,
+      "cost": {
+        "key": "existing-5511",
+        "name": "Coastal Virginia Offshore Wind commercial project",
+        "country": "United States",
+        "capacityMW": 2600,
+        "capacityBasis": "Operator-reported electric generating capacity; not annual energy production",
+        "costValue": 11700000000.0,
+        "currency": "USD",
+        "costBasis": "Estimated total project cost excluding financing; includes $0.1 billion contingency",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/715957/000119312526327487/d-20260630.htm",
+        "sourceDate": "2026-06-30",
+        "facts": "Dominion’s June 30, 2026 quarterly filing gives approximately $11.7 billion estimated total project cost, excluding financing and including $0.1 billion contingency. It supersedes earlier $10.7 billion/$11.5 billion estimates. The commercial project rating is approximately 2,600 MW, separate from the older 12 MW pilot; first power occurred March 23, 2026 while construction continues.",
+        "extra": [
+          [
+            "https://coastalvawind.com/about/the-project/timeline",
+            "Operator records first power March 23, 2026; full-project completion is expected in 2027."
+          ],
+          [
+            "https://coastalvawind.com/",
+            "The operator identifies approximately 2.6 GW for the commercial project."
+          ]
+        ],
+        "costGroup": "existing-5511",
+        "checkedAt": "2026-10-11",
+        "capacitySourceUrl": "https://coastalvawind.com/",
+        "physicalSourceUrl": "https://coastalvawind.com/about/the-project/timeline",
+        "costFacts": "Published project-specific cost for Coastal Virginia Offshore Wind commercial project: USD 1.17e+10. Basis: Estimated total project cost excluding financing; includes $0.1 billion contingency.",
+        "capacityFacts": "Published electric generating project rating for Coastal Virginia Offshore Wind commercial project: 2600 MW. Basis: Operator-reported electric generating capacity; not annual energy production."
+      },
+      "backingWikis": [
+        {
+          "id": 39456,
+          "url": "https://offshorewind.biz/2026/08/03/largest-us-offshore-wind-farm-81-pct-complete-final-turbine-expected-by-end-of-2027",
+          "version": 1,
+          "wikiPageId": 9771
+        },
+        {
+          "id": 80142,
+          "url": "https://coastalvawind.com/about/the-project/timeline",
+          "version": 2,
+          "wikiPageId": 10775
+        },
+        {
+          "id": 80149,
+          "url": "https://coastalvawind.com/",
+          "version": 1,
+          "wikiPageId": 9691
+        },
+        {
+          "id": 90940,
+          "url": "https://www.sec.gov/Archives/edgar/data/715957/000119312526327487/d-20260630.htm",
+          "version": 1,
+          "wikiPageId": 9728
+        }
+      ],
+      "price": 11700000000,
+      "priceCurrency": "USD",
+      "priceLowerBound": null,
+      "priceUpperBound": null,
+      "media": [
+        {
+          "pinId": 5511,
+          "name": "Coastal Virginia Offshore Wind commercial project",
+          "key": "existing-5511-deep-1",
+          "sourcePage": "https://coastalvawind.com/about/the-project/timeline",
+          "sourceUrl": "https://coastalvawind.com/assets/images/jan26.jpg",
+          "caption": "First commercial wind turbine being installed. From Dominion Energy’s CVOW commercial-project timeline; gallery label January 2026.",
+          "credit": "Dominion Energy / CVOW; photographer not named",
+          "verified": true,
+          "mediaType": 1,
+          "captureDate": null,
+          "blobUrl": "https://chronopin.blob.core.windows.net/thumb/electric-generation/existing-5511-deep-1-ffc3c4e4160f53af4184.webp",
+          "sha256": "ffc3c4e4160f53af41846b74aaa65dad6717e1af7a63e730ade709866c2e67e2",
+          "bytes": 47658
+        },
+        {
+          "pinId": 5511,
+          "name": "Coastal Virginia Offshore Wind commercial project",
+          "key": "existing-5511-deep-2",
+          "sourcePage": "https://coastalvawind.com/about/the-project/timeline",
+          "sourceUrl": "https://coastalvawind.com/assets/images/march26.jpg",
+          "caption": "First electrons being delivered to the grid. From Dominion Energy’s CVOW commercial-project timeline; gallery label March 2026.",
+          "credit": "Dominion Energy / CVOW; photographer not named",
+          "verified": true,
+          "mediaType": 1,
+          "captureDate": null,
+          "blobUrl": "https://chronopin.blob.core.windows.net/thumb/electric-generation/existing-5511-deep-2-2706e84a7be5e214367d.webp",
+          "sha256": "2706e84a7be5e214367dfc2f948e62ffe349ce73aa0496b539831cb0b26b2e2e",
+          "bytes": 58954
+        }
+      ],
+      "mediaVerification": {
+        "mediaCount": 5,
+        "verifiedMediaCount": 2,
+        "productionPageVerified": true,
+        "sourceWikisReadyAndCurrent": true,
+        "researchNotes": "Dedicated operator project/news pages and any linked photo/gallery pages were checked. Selected images were visually verified; source URLs and available credits are retained. Unpublished capture dates are not inferred from upload paths. Other-plant and generic UI images were excluded. Existing verified media was preserved.",
+        "remainingMediaGap": "Capture dates or individual photographer credits remain unpublished for some imagery; see the per-image captions and research notes."
+      }
+    },
+    {
+      "key": "eia-68443",
+      "pinId": 7688,
+      "name": "Empire Wind 1",
+      "country": "United States",
+      "year": 2027,
+      "dateMarker": "2027-12-31",
+      "targetLabel": "2027",
+      "targetSource": "https://www.equinor.com/news/20250102-securing-financial-close-empire-wind-1",
+      "targetEvidence": "Equinor identifies an expected commercial-operation date in 2027 for Empire Wind 1.",
+      "scope": "included project/phase completion target",
+      "fullProjectCount": true,
+      "cost": {
+        "key": "eia-68443",
+        "name": "Empire Wind 1",
+        "country": "United States",
+        "capacityMW": 810,
+        "capacityBasis": "Operator-reported electric generating capacity; not annual energy production",
+        "costValue": 5000000000.0,
+        "currency": "USD",
+        "costBasis": "Total capital investment including terminal-use fees and expected tax credits; tax-credit-adjusted, not gross pre-credit cost",
+        "sourceUrl": "https://www.equinor.com/news/20250102-securing-financial-close-empire-wind-1",
+        "sourceDate": "2025-01-02",
+        "facts": "Equinor describes total Empire Wind capital expenditure estimated at $5 billion after tax credits, covering 54 bottom-fixed turbines and the Brooklyn cable landfall. This is a tax-credit-adjusted estimate, not gross pre-credit cost and not the over-$3 billion financing package. Empire Wind 1 has an 810 MW generation rating and documented offshore construction; full operation is targeted for 2027.",
+        "extra": [
+          [
+            "https://www.equinor.com/news/20250102-securing-financial-close-empire-wind-1",
+            "Official project announcement identifies 810 MW and distinguishes financing from project capital expenditure."
+          ]
+        ],
+        "costGroup": "eia-68443",
+        "checkedAt": "2026-10-11",
+        "capacitySourceUrl": "https://www.equinor.com/news/20250102-securing-financial-close-empire-wind-1",
+        "physicalSourceUrl": "https://www.empirewind.com/offshore-installation/",
+        "costFacts": "Equinor January 2, 2025 publishes approximately USD5 billion expected total capital investment, including South Brooklyn Marine Terminal use fees and the effect of expected future investment tax credits. The financing package above USD3 billion is separate.",
+        "capacityFacts": "Published electric generating project rating for Empire Wind 1: 810 MW. Basis: Operator-reported electric generating capacity; not annual energy production."
+      },
+      "backingWikis": [
+        {
+          "id": 75843,
+          "url": "https://www.eia.gov/electricity/data/eia860m/xls/august_generator2026.xlsx#EIA-Plant-58987",
+          "version": 4,
+          "wikiPageId": 9772
+        },
+        {
+          "id": 80049,
+          "url": "https://www.empirewind.com/offshore-installation/",
+          "version": 1,
+          "wikiPageId": 9682
+        },
+        {
+          "id": 90942,
+          "url": "https://www.equinor.com/news/20250102-securing-financial-close-empire-wind-1",
+          "version": 2,
+          "wikiPageId": 10776
+        }
+      ],
+      "price": 5000000000,
+      "priceCurrency": "USD",
+      "priceLowerBound": null,
+      "priceUpperBound": null,
+      "media": [
+        {
+          "key": "eia-68443",
+          "sourceUrl": "https://www.empirewind.com/wp-content/uploads/2026/03/Empire_Wind_Thialf_large-52-scaled-e1773339179901.jpg",
+          "sourcePage": "https://www.empirewind.com/offshore-installation/",
+          "credit": "Empire Wind / Equinor; photographer not named on source page",
+          "caption": "Offshore installation photograph from Empire Wind’s operator project page.",
+          "blobUrl": "https://chronopin.blob.core.windows.net/thumb/electric-generation/eia-68443-7bc2d23cd26d1e7157ee.webp",
+          "sha256": "7bc2d23cd26d1e7157ee6d6ef1460fe332ea477e05ef1921c0cb94d34f40cd1f",
+          "bytes": 108862,
+          "pinId": 7688
+        },
+        {
+          "key": "eia-68443",
+          "sourceUrl": "https://www.empirewind.com/wp-content/uploads/2026/02/3.-Jacket-Day-1-768x1024.jpeg",
+          "sourcePage": "https://www.empirewind.com/offshore-installation/",
+          "credit": "Empire Wind / Equinor; photographer not named on source page",
+          "caption": "Empire Wind offshore substation installation image published in the operator construction gallery; the page identifies installation in January 2026.",
+          "blobUrl": "https://chronopin.blob.core.windows.net/thumb/electric-generation/eia-68443-ea63a6b45472a11eda10.webp",
+          "sha256": "ea63a6b45472a11eda1074d43b58d98d2434e3db78ef44c45bef7fa08f9dfdf3",
+          "bytes": 188536,
+          "pinId": 7688
+        },
+        {
+          "pinId": 7688,
+          "name": "Empire Wind 1",
+          "key": "eia-68443-deep-1",
+          "sourcePage": "https://www.empirewind.com/offshore-installation/",
+          "sourceUrl": "https://www.empirewind.com/wp-content/uploads/2025/12/Underwater-Rock-Lay-1024x552.jpg",
+          "caption": "Underwater rock layer around an Empire Wind foundation. Capture date not separately stated.",
+          "credit": "Empire Wind / Equinor; photographer not named",
+          "verified": true,
+          "mediaType": 1,
+          "captureDate": null,
+          "blobUrl": "https://chronopin.blob.core.windows.net/thumb/electric-generation/eia-68443-deep-1-268fe4178e2d25fc057c.webp",
+          "sha256": "268fe4178e2d25fc057c1034bfbf2aa206ea7865ae34ca597bcee6324333876d",
+          "bytes": 49376
+        },
+        {
+          "pinId": 7688,
+          "name": "Empire Wind 1",
+          "key": "eia-68443-deep-2",
+          "sourcePage": "https://www.empirewind.com/offshore-installation/",
+          "sourceUrl": "https://www.empirewind.com/wp-content/uploads/2025/12/IAC-in-MP-scaled-e1770655317744-1024x696.jpg",
+          "caption": "Empire Wind inter-array cable work, from the official offshore-installation gallery. Capture date not separately stated.",
+          "credit": "Empire Wind / Equinor; photographer not named",
+          "verified": true,
+          "mediaType": 1,
+          "captureDate": null,
+          "blobUrl": "https://chronopin.blob.core.windows.net/thumb/electric-generation/eia-68443-deep-2-9a4bc35a585de9264322.webp",
+          "sha256": "9a4bc35a585de92643225d2d41008d882c251952e05209d04abc758b8a511c76",
+          "bytes": 165012
+        }
+      ],
+      "mediaVerification": {
+        "mediaCount": 4,
+        "verifiedMediaCount": 4,
+        "productionPageVerified": true,
+        "sourceWikisReadyAndCurrent": true,
+        "researchNotes": "Dedicated operator project/news pages and any linked photo/gallery pages were checked. Selected images were visually verified; source URLs and available credits are retained. Unpublished capture dates are not inferred from upload paths. Other-plant and generic UI images were excluded. Existing verified media was preserved.",
+        "remainingMediaGap": "Capture dates or individual photographer credits remain unpublished for some imagery; see the per-image captions and research notes."
+      }
+    },
+    {
+      "key": "eia-3407",
+      "pinId": 14048,
+      "name": "Kingston combined-cycle replacement plant",
+      "country": "United States",
+      "year": 2027,
+      "dateMarker": "2027-12-31",
+      "targetLabel": "End of 2027",
+      "targetSource": "https://www.sec.gov/Archives/edgar/data/1376986/000137698625000056/tve-20250930.htm",
+      "targetEvidence": "TVA’s FY2025 filing identifies physical construction of the 1,500 MW Kingston combined-cycle replacement plant and expected operation by the end of calendar 2027.",
+      "scope": "included project/phase completion target",
+      "fullProjectCount": true,
+      "cost": {
+        "key": "eia-3407",
+        "name": "Kingston combined-cycle replacement plant",
+        "country": "United States",
+        "capacityMW": 1500,
+        "capacityBasis": "Operator-reported electric generating capacity; not annual energy production",
+        "costValue": 2900000000.0,
+        "currency": "USD",
+        "costBasis": "Sum of disclosed spent and forecast remaining project expenditure; approximately $2.9 billion",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1376986/000137698625000056/tve-20250930.htm",
+        "sourceDate": "2025-09-30",
+        "facts": "TVA FY2025 Form 10-K publishes $1.8 billion spent and $1.1 billion expected additional spending on the 1,500 MW Kingston combined-cycle plant as of September 30, 2025. Their sum is approximately $2.9 billion. This total is arithmetic on disclosed project amounts, not a benchmark estimate. Battery RFPs, proposed expansions and the wider campus rating are not included.",
+        "extra": [],
+        "costGroup": "eia-3407",
+        "checkedAt": "2026-10-11",
+        "costFacts": "TVA FY2025 Form 10-K publishes $1.8 billion spent and $1.1 billion expected additional spending on the 1,500 MW Kingston combined-cycle plant as of September 30, 2025. Their sum is approximately $2.9 billion. This total is arithmetic on disclosed project amounts, not a benchmark estimate. Battery RFPs, proposed expansions and the wider campus rating are not included.",
+        "capacityFacts": "Kingston combined-cycle replacement plant: published generating capacity 1500 MW. Operator-reported electric generating capacity; not annual energy production",
+        "capacitySourceUrl": "https://www.sec.gov/Archives/edgar/data/1376986/000137698625000056/tve-20250930.htm",
+        "physicalSourceUrl": "https://www.sec.gov/Archives/edgar/data/1376986/000137698625000056/tve-20250930.htm",
+        "physicalFacts": "TVA explicitly states it is constructing the 1,500 MW combined-cycle plant, targeting the end of 2027. The capacity is for the combined-cycle plant, not all units at the Kingston site."
+      },
+      "backingWikis": [
+        {
+          "id": 75843,
+          "url": "https://www.eia.gov/electricity/data/eia860m/xls/august_generator2026.xlsx#EIA-Plant-58987",
+          "version": 4,
+          "wikiPageId": 9772
+        },
+        {
+          "id": 90944,
+          "url": "https://www.sec.gov/Archives/edgar/data/1376986/000137698625000056/tve-20250930.htm",
+          "version": 2,
+          "wikiPageId": 10777
+        }
+      ],
+      "price": 2900000000,
+      "priceCurrency": "USD",
+      "priceLowerBound": null,
+      "priceUpperBound": null,
+      "media": [
+        {
+          "pinId": 14048,
+          "name": "Kingston combined-cycle replacement plant",
+          "key": "eia-3407-deep-1",
+          "sourcePage": "https://3bmedianews.com/site-construction-begins-at-new-kingston-energy-complex/",
+          "sourceUrl": "https://3bmedianews.com/wp-content/uploads/2025/03/New-Kingston-TVA-energy-complex.png",
+          "caption": "Kingston Energy Complex site construction, published March 6, 2025 alongside a TVA construction announcement. The image covers the wider energy complex, including the combined-cycle and aeroderivative work; it is not a photograph of a completed replacement plant.",
+          "credit": "Tennessee Valley Authority announcement via 3B Media News; photographer not identified",
+          "verified": true,
+          "mediaType": 1,
+          "captureDate": null,
+          "blobUrl": "https://chronopin.blob.core.windows.net/thumb/electric-generation/eia-3407-deep-1-d1123d30d2242513c34f.webp",
+          "sha256": "d1123d30d2242513c34fbe553eaf01a99fe187a82fd06d6e1720d85522512f42",
+          "bytes": 145566
+        }
+      ],
+      "mediaVerification": {
+        "mediaCount": 1,
+        "verifiedMediaCount": 1,
+        "productionPageVerified": true,
+        "sourceWikisReadyAndCurrent": true,
+        "researchNotes": "TVA’s operator pages and contractor posts were checked. The verified new-complex site photograph is from 3B Media’s March 6, 2025 reproduction of a TVA announcement. Older Kingston coal-plant photographs were excluded from this addition. A dated 2026 construction-progress series remains a gap.",
+        "remainingMediaGap": "Capture dates or individual photographer credits remain unpublished for some imagery; see the per-image captions and research notes."
+      }
+    },
+    {
+      "key": "gem-L100000900883",
+      "pinId": 14063,
+      "name": "Hai Long offshore wind project",
+      "country": "Taiwan",
+      "year": 2027,
+      "dateMarker": "2027-12-31",
+      "targetLabel": "2027",
+      "targetSource": "https://northlandpower.com/northland-power-reports-second-quarter-2026-results-and-construction-progress-updates/",
+      "targetEvidence": "Northland’s Q2 2026 update reports 71 of 73 turbines installed, 59 generating and full commercial operations targeted for 2027.",
+      "scope": "included project/phase completion target",
+      "fullProjectCount": true,
+      "cost": {
+        "key": "gem-L100000900883",
+        "name": "Hai Long offshore wind project",
+        "country": "Taiwan",
+        "capacityMW": 1022,
+        "capacityBasis": "294 + 728 MW contracted output, total 1,022 MW; operator rounded 1 GW",
+        "costValue": 9000000000.0,
+        "currency": "CAD",
+        "costBasis": "Full-project capital cost in Canadian dollars; not project debt",
+        "sourceUrl": "https://northlandpower.com/northland-power-announces-signing-of-credit-agreement-for-5-0-billion-project-financing-at-hai-long-offshore-wind-project/",
+        "sourceDate": "2023-09-22",
+        "facts": "Northland September 22, 2023 publishes approximately C$9 billion total capital cost for Hai Long, separate from its C$5 billion financing. Published project portions are 294 MW and 728 MW, totaling 1,022 MW; the operator rounds the complex to 1 GW. Older inventory 1,044 MW reflects a different turbine/project rating and is not additive.",
+        "extra": [
+          [
+            "https://northlandpower.com/northland-power-reports-second-quarter-2026-results-and-construction-progress-updates/",
+            "Northland Q2 2026 release confirms 71 of 73 turbines installed and 59 generating; full commercial operation remains targeted for 2027. Overall costs are described as aligned with original expectations."
+          ]
+        ],
+        "costGroup": "gem-L100000900883",
+        "checkedAt": "2026-10-11",
+        "costFacts": "Northland September 22, 2023 publishes approximately C$9 billion total capital cost for Hai Long, separate from its C$5 billion financing. Published project portions are 294 MW and 728 MW, totaling 1,022 MW; the operator rounds the complex to 1 GW. Older inventory 1,044 MW reflects a different turbine/project rating and is not additive.",
+        "capacitySourceUrl": "https://northlandpower.com/northland-power-announces-signing-of-credit-agreement-for-5-0-billion-project-financing-at-hai-long-offshore-wind-project/",
+        "capacityFacts": "Hai Long offshore wind project: 1022 MW generating project rating. 294 + 728 MW contracted output, total 1,022 MW; operator rounded 1 GW",
+        "physicalSourceUrl": "https://northlandpower.com/northland-power-reports-second-quarter-2026-results-and-construction-progress-updates/",
+        "physicalFacts": "Northland Q2 2026 release confirms 71 of 73 turbines installed and 59 generating; full commercial operation remains targeted for 2027. Overall costs are described as aligned with original expectations."
+      },
+      "backingWikis": [
+        {
+          "id": 75849,
+          "url": "https://raw.githubusercontent.com/GlobalEnergyMonitor/gipt-dashboard/main/Global%20Integrated%20Power%20August%202026.xlsx#L100000921971",
+          "version": 4,
+          "wikiPageId": 9773
+        },
+        {
+          "id": 90936,
+          "url": "https://northlandpower.com/northland-power-reports-second-quarter-2026-results-and-construction-progress-updates/",
+          "version": 2,
+          "wikiPageId": 10778
+        },
+        {
+          "id": 90968,
+          "url": "https://northlandpower.com/northland-power-announces-signing-of-credit-agreement-for-5-0-billion-project-financing-at-hai-long-offshore-wind-project/",
+          "version": 1,
+          "wikiPageId": 9752
+        }
+      ],
+      "price": 9000000000,
+      "priceCurrency": "CAD",
+      "priceLowerBound": null,
+      "priceUpperBound": null,
+      "media": [
+        {
+          "pinId": 14063,
+          "key": "gem-L100000900883-media-1",
+          "name": "Hai Long offshore wind project",
+          "sourcePage": "https://hailongoffshorewind.com/en/",
+          "sourceUrl": "https://hailongoffshorewind.com/files/20260408112746160.jpeg",
+          "caption": "Hai Long offshore wind turbines, displayed on the project’s official homepage; photograph capture date not published.",
+          "credit": "Hai Long Offshore Wind Project; photographer not named on source page",
+          "captureDate": null,
+          "verified": true,
+          "candidateIndex": 24,
+          "blobUrl": "https://chronopin.blob.core.windows.net/thumb/electric-generation/gem-L100000900883-media-1-e2e95f49db5985b68732.webp",
+          "sha256": "e2e95f49db5985b6873286a73ecc76162af2d6f08a9310d0c123200c289e8b68",
+          "bytes": 374372
+        }
+      ],
+      "mediaVerification": {
+        "mediaCount": 1,
+        "verifiedMediaCount": 1,
+        "productionPageVerified": true,
+        "sourceWikisReadyAndCurrent": true,
+        "researchNotes": "Dedicated operator project/news pages and any linked photo/gallery pages were checked. Selected images were visually verified; source URLs and available credits are retained. Unpublished capture dates are not inferred from upload paths. Other-plant and generic UI images were excluded. Existing verified media was preserved.",
+        "remainingMediaGap": "Capture dates or individual photographer credits remain unpublished for some imagery; see the per-image captions and research notes."
+      }
+    },
+    {
+      "key": "gem-L100000808731",
+      "pinId": 14065,
+      "name": "MTerra Solar and battery complex",
+      "country": "Philippines",
+      "year": 2027,
+      "dateMarker": "2027-12-31",
+      "targetLabel": "Phase 2 in 2027",
+      "targetSource": "https://www.meralcopowergen.com.ph/mterra-solar-becomes-largest-solar-pv-installation-in-ph/",
+      "targetEvidence": "MGEN’s July 8, 2025 project update identifies Phase 1 completion in early 2026 and Phase 2 targeted the following year, 2027. Its September 2026 release separately confirms Phase 1 commercial operation; the whole complex is not described as already fully operating.",
+      "scope": "included project/phase completion target",
+      "fullProjectCount": true,
+      "cost": {
+        "key": "gem-L100000808731",
+        "name": "MTerra Solar and battery complex",
+        "country": "Philippines",
+        "capacityMW": 3500,
+        "capacityBasis": "Full complex design: 3,500 MWp DC solar; Phase 1 contracted firm supply 600 MW AC, not additive",
+        "costValue": 200000000000.0,
+        "currency": "PHP",
+        "costBasis": "Above PHP200 billion full-project capital investment including battery and interconnection",
+        "sourceUrl": "https://www.meralcopowergen.com.ph/mterra-solar-project-breaks-ground-a-monumental-milestone-in-the-philippines-renewable-energy-transition/",
+        "sourceDate": "2024-11",
+        "facts": "MGEN’s November 2024 groundbreaking release identifies investment above PHP200 billion for 3,500 MWp PV with 4,500 MWh battery storage and related interconnection. This is a published approximate lower-bound project investment, not an enterprise valuation. Generation excludes battery MW/MWh.",
+        "extra": [
+          [
+            "https://www.meralcopowergen.com.ph/mterra-solar-phase-1-begins-commercial-operations/",
+            "MGEN September 3, 2026 confirms Phase 1 commercial operation for 600 MWac mid-merit supply under its PPA. The entire built complex is still being completed; full 3,500 MWp must not be called currently commercially operating."
+          ]
+        ],
+        "costGroup": "mterra-full-complex",
+        "checkedAt": "2026-10-11",
+        "costFacts": "MGEN’s November 2024 groundbreaking release identifies investment above PHP200 billion for 3,500 MWp PV with 4,500 MWh battery storage and related interconnection. This is a published approximate lower-bound project investment, not an enterprise valuation. Generation excludes battery MW/MWh.",
+        "capacitySourceUrl": "https://www.meralcopowergen.com.ph/mterra-solar-project-breaks-ground-a-monumental-milestone-in-the-philippines-renewable-energy-transition/",
+        "capacityFacts": "MTerra Solar and battery complex: 3500 MW generating project rating. Full complex design: 3,500 MWp DC solar; Phase 1 contracted firm supply 600 MW AC, not additive",
+        "physicalSourceUrl": "https://www.meralcopowergen.com.ph/mterra-solar-phase-1-begins-commercial-operations/",
+        "physicalFacts": "MGEN September 3, 2026 confirms Phase 1 commercial operation for 600 MWac mid-merit supply under its PPA. The entire built complex is still being completed; full 3,500 MWp must not be called currently commercially operating."
+      },
+      "backingWikis": [
+        {
+          "id": 75849,
+          "url": "https://raw.githubusercontent.com/GlobalEnergyMonitor/gipt-dashboard/main/Global%20Integrated%20Power%20August%202026.xlsx#L100000921971",
+          "version": 4,
+          "wikiPageId": 9773
+        },
+        {
+          "id": 90977,
+          "url": "https://www.meralcopowergen.com.ph/mterra-solar-project-breaks-ground-a-monumental-milestone-in-the-philippines-renewable-energy-transition/",
+          "version": 1,
+          "wikiPageId": 9756
+        },
+        {
+          "id": 90978,
+          "url": "https://www.meralcopowergen.com.ph/mterra-solar-phase-1-begins-commercial-operations/",
+          "version": 1,
+          "wikiPageId": 9757
+        },
+        {
+          "id": 99402,
+          "url": "https://www.meralcopowergen.com.ph/mterra-solar-becomes-largest-solar-pv-installation-in-ph/",
+          "version": 1,
+          "wikiPageId": 10779
+        }
+      ],
+      "price": 200000000000,
+      "priceCurrency": "PHP",
+      "priceLowerBound": 200000000000,
+      "priceUpperBound": null,
+      "media": [
+        {
+          "pinId": 14065,
+          "key": "gem-L100000808731-media-1",
+          "name": "MTerra Solar and battery complex",
+          "sourcePage": "https://www.meralcopowergen.com.ph/mterra-solar-phase-1-begins-commercial-operations/",
+          "sourceUrl": "https://www.meralcopowergen.com.ph/wp-content/uploads/2026/09/MTerra-Solar-scaled.jpg",
+          "caption": "MTerra Solar site image accompanying the operator’s September 2026 Phase 1 operation announcement; the wider complex continues buildout.",
+          "credit": "Meralco PowerGen / MTerra Solar; individual photographer not named",
+          "captureDate": null,
+          "verified": true,
+          "candidateIndex": 15,
+          "blobUrl": "https://chronopin.blob.core.windows.net/thumb/electric-generation/gem-L100000808731-media-1-b6047634b30208dda1c3.webp",
+          "sha256": "b6047634b30208dda1c32e7aee24f8eeeeb120c8571373931d4b8771da37308c",
+          "bytes": 508496
+        },
+        {
+          "pinId": 14065,
+          "key": "gem-L100000808731-media-2",
+          "name": "MTerra Solar and battery complex",
+          "sourcePage": "https://www.meralcopowergen.com.ph/mterra-solar-phase-1-begins-commercial-operations/",
+          "sourceUrl": "https://www.meralcopowergen.com.ph/wp-content/uploads/2026/09/MTerra-Solar-1.jpg",
+          "caption": "MTerra Solar Phase 1 site view supplied by Meralco PowerGen, September 2026.",
+          "credit": "Meralco PowerGen / MTerra Solar; individual photographer not named",
+          "captureDate": null,
+          "verified": true,
+          "candidateIndex": 16,
+          "blobUrl": "https://chronopin.blob.core.windows.net/thumb/electric-generation/gem-L100000808731-media-2-2cf27fb46c350dd22750.webp",
+          "sha256": "2cf27fb46c350dd22750a6251e297de14ae78931fd2d687e616f03b498125507",
+          "bytes": 343450
+        }
+      ],
+      "mediaVerification": {
+        "mediaCount": 2,
+        "verifiedMediaCount": 2,
+        "productionPageVerified": true,
+        "sourceWikisReadyAndCurrent": true,
+        "researchNotes": "Dedicated operator project/news pages and any linked photo/gallery pages were checked. Selected images were visually verified; source URLs and available credits are retained. Unpublished capture dates are not inferred from upload paths. Other-plant and generic UI images were excluded. Existing verified media was preserved.",
+        "remainingMediaGap": "Capture dates or individual photographer credits remain unpublished for some imagery; see the per-image captions and research notes."
+      }
+    },
+    {
+      "key": "eia-69223",
+      "pinId": 7685,
+      "name": "Vicksburg Advanced Power Station",
+      "country": "United States",
+      "year": 2028,
+      "dateMarker": "2028-08-31",
+      "targetLabel": "August 2028",
+      "targetSource": "https://www.entergy.com/news/next-phase-of-superpower-mississippi-builds-highly-efficient-more-cost-effective-power-generation-source-in-vicksburg",
+      "targetEvidence": "Entergy’s October 21, 2025 project release targets completion of Vicksburg Advanced Power Station in August 2028.",
+      "scope": "included project/phase completion target",
+      "fullProjectCount": true,
+      "cost": {
+        "key": "eia-69223",
+        "name": "Vicksburg Advanced Power Station",
+        "country": "United States",
+        "capacityMW": 754,
+        "capacityBasis": "Operator-reported electric generating capacity; not annual energy production",
+        "costValue": 1200000000.0,
+        "currency": "USD",
+        "costBasis": "Published project-specific capital/construction estimate",
+        "sourceUrl": "https://www.entergy.com/news/next-phase-of-superpower-mississippi-builds-highly-efficient-more-cost-effective-power-generation-source-in-vicksburg",
+        "sourceDate": "2025-10-21",
+        "facts": "Entergy’s October 21, 2025 release identifies the 754 MW Vicksburg combined-cycle project and its $1.2 billion investment. August 2026 EIA units report construction; the operator targets completion in August 2028. The rating is the operator project figure, distinct from EIA’s unit nameplate sum.",
+        "extra": [],
+        "costGroup": "eia-69223",
+        "checkedAt": "2026-10-11",
+        "capacitySourceUrl": "https://www.entergy.com/news/next-phase-of-superpower-mississippi-builds-highly-efficient-more-cost-effective-power-generation-source-in-vicksburg",
+        "physicalSourceUrl": "https://www.entergymississippi.com/generation/vicksburg",
+        "costFacts": "Published project-specific cost for Vicksburg Advanced Power Station: USD 1.2e+09. Basis: Published project-specific capital/construction estimate.",
+        "capacityFacts": "Published electric generating project rating for Vicksburg Advanced Power Station: 754 MW. Basis: Operator-reported electric generating capacity; not annual energy production."
+      },
+      "backingWikis": [
+        {
+          "id": 75843,
+          "url": "https://www.eia.gov/electricity/data/eia860m/xls/august_generator2026.xlsx#EIA-Plant-58987",
+          "version": 4,
+          "wikiPageId": 9772
+        },
+        {
+          "id": 79792,
+          "url": "https://www.entergymississippi.com/generation/vicksburg",
+          "version": 1,
+          "wikiPageId": 9664
+        },
+        {
+          "id": 90927,
+          "url": "https://www.entergy.com/news/next-phase-of-superpower-mississippi-builds-highly-efficient-more-cost-effective-power-generation-source-in-vicksburg",
+          "version": 2,
+          "wikiPageId": 10780
+        }
+      ],
+      "price": 1200000000,
+      "priceCurrency": "USD",
+      "priceLowerBound": null,
+      "priceUpperBound": null,
+      "media": [
+        {
+          "pinId": 7685,
+          "key": "eia-69223-media-1",
+          "name": "Vicksburg Advanced Power Station",
+          "sourcePage": "https://www.entergy.com/news/next-phase-of-superpower-mississippi-builds-highly-efficient-more-cost-effective-power-generation-source-in-vicksburg",
+          "sourceUrl": "https://www.entergy.com/wp-content/uploads/2025/10/VAPS_rendering_001.jpg",
+          "caption": "Operator design rendering of Vicksburg Advanced Power Station; not an as-built photograph.",
+          "credit": "Entergy; individual photographer not named",
+          "captureDate": null,
+          "verified": true,
+          "candidateIndex": 0,
+          "blobUrl": "https://chronopin.blob.core.windows.net/thumb/electric-generation/eia-69223-media-1-187ee30141d4a1404749.webp",
+          "sha256": "187ee30141d4a140474926930cd695378bc92f9b3f77d16f1305450c52250cec",
+          "bytes": 258700
+        },
+        {
+          "pinId": 7685,
+          "key": "eia-69223-media-2",
+          "name": "Vicksburg Advanced Power Station",
+          "sourcePage": "https://www.entergy.com/news/next-phase-of-superpower-mississippi-builds-highly-efficient-more-cost-effective-power-generation-source-in-vicksburg",
+          "sourceUrl": "https://www.entergy.com/wp-content/uploads/2025/10/VAPS-Groundbreaking_Speakers.jpg",
+          "caption": "Vicksburg Advanced Power Station groundbreaking speakers, from the operator’s October 2025 announcement.",
+          "credit": "Entergy; individual photographer not named",
+          "captureDate": null,
+          "verified": true,
+          "candidateIndex": 1,
+          "blobUrl": "https://chronopin.blob.core.windows.net/thumb/electric-generation/eia-69223-media-2-49ac0fca2b2713bbb726.webp",
+          "sha256": "49ac0fca2b2713bbb726f68a12a6e0b3ed2a64d7e66e33e85b635b7235bebd42",
+          "bytes": 239024
+        }
+      ],
+      "mediaVerification": {
+        "mediaCount": 2,
+        "verifiedMediaCount": 2,
+        "productionPageVerified": true,
+        "sourceWikisReadyAndCurrent": true,
+        "researchNotes": "Dedicated operator project/news pages and any linked photo/gallery pages were checked. Selected images were visually verified; source URLs and available credits are retained. Unpublished capture dates are not inferred from upload paths. Other-plant and generic UI images were excluded. Existing verified media was preserved.",
+        "remainingMediaGap": "Capture dates or individual photographer credits remain unpublished for some imagery; see the per-image captions and research notes."
+      }
+    },
+    {
+      "key": "eia-67914",
+      "pinId": 14044,
+      "name": "Delta Blues Advanced Power Station",
+      "country": "United States",
+      "year": 2028,
+      "dateMarker": "2028-12-31",
+      "targetLabel": "2028",
+      "targetSource": "https://www.entergy.com/blog/delta-blues-reaches-important-milestone-in-construction",
+      "targetEvidence": "Entergy’s May 19, 2026 update documents HRSG module erection and turbine delivery and retains the Delta Blues opening target in 2028.",
+      "scope": "included project/phase completion target",
+      "fullProjectCount": true,
+      "cost": {
+        "key": "eia-67914",
+        "name": "Delta Blues Advanced Power Station",
+        "country": "United States",
+        "capacityMW": 754,
+        "capacityBasis": "Operator-reported electric generating capacity; not annual energy production",
+        "costValue": 1200000000.0,
+        "currency": "USD",
+        "costBasis": "Published project-specific capital/construction estimate",
+        "sourceUrl": "https://www.entergy.com/blog/delta-blues-reaches-important-milestone-in-construction",
+        "sourceDate": "2026-05-19",
+        "facts": "Entergy’s May 19, 2026 update reports HRSG module erection and turbine delivery at Delta Blues, and states 754 MW and $1.2 billion investment. The operator’s physical-work evidence qualifies the project despite the conflicting preliminary inventory status. Service in 2028 remains a target.",
+        "extra": [],
+        "costGroup": "eia-67914",
+        "checkedAt": "2026-10-11",
+        "capacitySourceUrl": "https://www.entergy.com/blog/delta-blues-reaches-important-milestone-in-construction",
+        "physicalSourceUrl": "https://www.entergy.com/blog/delta-blues-reaches-important-milestone-in-construction",
+        "costFacts": "Published project-specific cost for Delta Blues Advanced Power Station: USD 1.2e+09. Basis: Published project-specific capital/construction estimate.",
+        "capacityFacts": "Published electric generating project rating for Delta Blues Advanced Power Station: 754 MW. Basis: Operator-reported electric generating capacity; not annual energy production."
+      },
+      "backingWikis": [
+        {
+          "id": 75843,
+          "url": "https://www.eia.gov/electricity/data/eia860m/xls/august_generator2026.xlsx#EIA-Plant-58987",
+          "version": 4,
+          "wikiPageId": 9772
+        },
+        {
+          "id": 79771,
+          "url": "https://www.entergy.com/blog/delta-blues-reaches-important-milestone-in-construction",
+          "version": 3,
+          "wikiPageId": 10781
+        }
+      ],
+      "price": 1200000000,
+      "priceCurrency": "USD",
+      "priceLowerBound": null,
+      "priceUpperBound": null,
+      "media": [
+        {
+          "pinId": 14044,
+          "key": "eia-67914-media-1",
+          "name": "Delta Blues Advanced Power Station",
+          "sourcePage": "https://www.entergy.com/blog/delta-blues-reaches-important-milestone-in-construction",
+          "sourceUrl": "https://www.entergy.com/wp-content/uploads/2026/05/1280X720-HRSG-7-1280x630.jpg",
+          "caption": "Delta Blues construction: heat-recovery steam generator milestone, published May 2026.",
+          "credit": "Entergy Mississippi; individual photographer not named",
+          "captureDate": null,
+          "verified": true,
+          "candidateIndex": 2,
+          "blobUrl": "https://chronopin.blob.core.windows.net/thumb/electric-generation/eia-67914-media-1-9c6796e935bd385d492a.webp",
+          "sha256": "9c6796e935bd385d492a41c490ebe0ca3c912477cca83c591b367fd9ff0f936c",
+          "bytes": 237408
+        },
+        {
+          "pinId": 14044,
+          "key": "eia-67914-media-2",
+          "name": "Delta Blues Advanced Power Station",
+          "sourcePage": "https://www.entergy.com/blog/delta-blues-reaches-important-milestone-in-construction",
+          "sourceUrl": "https://www.entergy.com/wp-content/uploads/2026/05/1280X720-HRSG-22-1280x430.jpg",
+          "caption": "Delta Blues construction work from the operator’s May 2026 milestone gallery.",
+          "credit": "Entergy Mississippi; individual photographer not named",
+          "captureDate": null,
+          "verified": true,
+          "candidateIndex": 3,
+          "blobUrl": "https://chronopin.blob.core.windows.net/thumb/electric-generation/eia-67914-media-2-b3129b71cfc0b16210cd.webp",
+          "sha256": "b3129b71cfc0b16210cd7cc547adf5b942dff444328500b90c69313a48c51cb3",
+          "bytes": 67570
+        },
+        {
+          "pinId": 14044,
+          "key": "eia-67914-media-3",
+          "name": "Delta Blues Advanced Power Station",
+          "sourcePage": "https://www.entergy.com/blog/delta-blues-reaches-important-milestone-in-construction",
+          "sourceUrl": "https://www.entergy.com/wp-content/uploads/2026/05/1280X720-TBEK1661-1280x430.jpg",
+          "caption": "Transport of a Delta Blues project component, from Entergy Mississippi’s May 2026 construction gallery.",
+          "credit": "Entergy Mississippi; individual photographer not named",
+          "captureDate": null,
+          "verified": true,
+          "candidateIndex": 4,
+          "blobUrl": "https://chronopin.blob.core.windows.net/thumb/electric-generation/eia-67914-media-3-bc37d18483cd58edede0.webp",
+          "sha256": "bc37d18483cd58edede0de43b0067efc0e5f1759870045b727f8645fc7f8cdaf",
+          "bytes": 127898
+        }
+      ],
+      "mediaVerification": {
+        "mediaCount": 3,
+        "verifiedMediaCount": 3,
+        "productionPageVerified": true,
+        "sourceWikisReadyAndCurrent": true,
+        "researchNotes": "Dedicated operator project/news pages and any linked photo/gallery pages were checked. Selected images were visually verified; source URLs and available credits are retained. Unpublished capture dates are not inferred from upload paths. Other-plant and generic UI images were excluded. Existing verified media was preserved.",
+        "remainingMediaGap": "Capture dates or individual photographer credits remain unpublished for some imagery; see the per-image captions and research notes."
+      }
+    },
+    {
+      "key": "eia-68053",
+      "pinId": 8483,
+      "name": "Legend Power Station",
+      "country": "United States",
+      "year": 2028,
+      "dateMarker": "2028-12-31",
+      "targetLabel": "2028",
+      "targetSource": "https://www.entergy.com/news/entergy-texas-breaks-ground-legend-and-lone-star",
+      "targetEvidence": "Entergy’s April 2026 groundbreaking release identifies Legend and Lone Star as physically progressing projects expected to begin serving customers in 2028.",
+      "scope": "included project/phase completion target",
+      "fullProjectCount": true,
+      "cost": {
+        "key": "eia-68053",
+        "name": "Legend Power Station",
+        "country": "United States",
+        "capacityMW": 754,
+        "capacityBasis": "Operator-reported electric generating capacity; not annual energy production",
+        "costValue": 1600000000.0,
+        "currency": "USD",
+        "costBasis": "Published project-specific capital/construction estimate",
+        "sourceUrl": "https://www.entergy.com/news/entergy-texas-receives-puct-approval-for-two-power-plants-to-support-southeast-texas-growth",
+        "sourceDate": "2025-09-11",
+        "facts": "Entergy’s September 11, 2025 approval release gives a $1.6 billion investment for Legend, updating the earlier $1.46 billion proposal. The operator’s design rating is 754 MW and physical groundbreaking occurred April 9, 2026. Economic-impact and customer-benefit figures are not the construction budget.",
+        "extra": [
+          [
+            "https://www.entergy.com/news/entergy-texas-proposes-new-power-plants-support-rapid-growth-in-southeast-texas",
+            "The operator identifies Legend as a 754 MW combined-cycle plant."
+          ],
+          [
+            "https://www.entergy.com/news/entergy-texas-breaks-ground-legend-and-lone-star",
+            "April 9, 2026 groundbreaking verifies physical construction; target service is 2028."
+          ]
+        ],
+        "costGroup": "eia-68053",
+        "checkedAt": "2026-10-11",
+        "capacitySourceUrl": "https://www.entergy.com/news/entergy-texas-proposes-new-power-plants-support-rapid-growth-in-southeast-texas",
+        "physicalSourceUrl": "https://www.entergy.com/news/entergy-texas-breaks-ground-legend-and-lone-star",
+        "costFacts": "Published project-specific cost for Legend Power Station: USD 1.6e+09. Basis: Published project-specific capital/construction estimate.",
+        "capacityFacts": "Published electric generating project rating for Legend Power Station: 754 MW. Basis: Operator-reported electric generating capacity; not annual energy production."
+      },
+      "backingWikis": [
+        {
+          "id": 75843,
+          "url": "https://www.eia.gov/electricity/data/eia860m/xls/august_generator2026.xlsx#EIA-Plant-58987",
+          "version": 4,
+          "wikiPageId": 9772
+        },
+        {
+          "id": 79834,
+          "url": "https://www.entergy.com/news/entergy-texas-breaks-ground-legend-and-lone-star",
+          "version": 2,
+          "wikiPageId": 10782
+        },
+        {
+          "id": 90928,
+          "url": "https://www.entergy.com/news/entergy-texas-receives-puct-approval-for-two-power-plants-to-support-southeast-texas-growth",
+          "version": 1,
+          "wikiPageId": 9718
+        },
+        {
+          "id": 90929,
+          "url": "https://www.entergy.com/news/entergy-texas-proposes-new-power-plants-support-rapid-growth-in-southeast-texas",
+          "version": 1,
+          "wikiPageId": 9719
+        }
+      ],
+      "price": 1600000000,
+      "priceCurrency": "USD",
+      "priceLowerBound": null,
+      "priceUpperBound": null,
+      "media": [
+        {
+          "pinId": 8483,
+          "key": "eia-68053-media-1",
+          "name": "Legend Power Station",
+          "sourcePage": "https://www.entergy.com/news/entergy-texas-breaks-ground-legend-and-lone-star",
+          "sourceUrl": "https://www.entergy.com/wp-content/uploads/2026/04/legend-lone-star-stations-groundbreaking-april-2026.jpg",
+          "caption": "Joint groundbreaking ceremony for Legend and Lone Star power stations in Port Arthur, Texas, April 9, 2026. This is the shared project ceremony, not a photograph of a completed Lone Star plant or its Cleveland-area construction site.",
+          "credit": "Office of the Texas Governor, via Entergy Texas",
+          "captureDate": null,
+          "verified": true,
+          "candidateIndex": 32,
+          "blobUrl": "https://chronopin.blob.core.windows.net/thumb/electric-generation/eia-68053-media-1-66cc784ea3b8525a4fa1.webp",
+          "sha256": "66cc784ea3b8525a4fa12a90c15cae2f32cd2c5f600f5fec4c8771c5e3b41013",
+          "bytes": 204338
+        },
+        {
+          "pinId": 8483,
+          "name": "Legend Power Station",
+          "key": "eia-68053-deep-rendering",
+          "sourcePage": "https://www.tx.cpa/docs/librariesprovider5/presentation-materials/2025-26/eti-ed-presentation_txcpa_2-2-26.pdf?sfvrsn=2495d8b0_1",
+          "sourceUrl": "https://www.tx.cpa/docs/librariesprovider5/presentation-materials/2025-26/eti-ed-presentation_txcpa_2-2-26.pdf?sfvrsn=2495d8b0_1#page=10",
+          "credit": "Entergy Texas, Jessica Hill presentation hosted by TXCPA",
+          "caption": "Legend Power Station design rendering from the upper panel of Entergy Texas’s February 4, 2026 presentation, PDF page 10. This is the Legend panel, not the Lone Star design below it, and is not an as-built photograph.",
+          "mediaType": 1,
+          "verified": true,
+          "blobUrl": "https://chronopin.blob.core.windows.net/thumb/electric-generation/eia-68053-deep-rendering-47fe83a187015968b91b.webp",
+          "sha256": "47fe83a187015968b91b9411ed08fcb412511706f1d46b7d82d616de5bed81e9",
+          "bytes": 59006
+        }
+      ],
+      "mediaVerification": {
+        "mediaCount": 2,
+        "verifiedMediaCount": 2,
+        "productionPageVerified": true,
+        "sourceWikisReadyAndCurrent": true,
+        "researchNotes": "Dedicated operator project/news pages and any linked photo/gallery pages were checked. Selected images were visually verified; source URLs and available credits are retained. Unpublished capture dates are not inferred from upload paths. Other-plant and generic UI images were excluded. Existing verified media was preserved.",
+        "remainingMediaGap": "Capture dates or individual photographer credits remain unpublished for some imagery; see the per-image captions and research notes."
+      }
+    },
+    {
+      "key": "eia-69077",
+      "pinId": 8615,
+      "name": "Lone Star Power Station",
+      "country": "United States",
+      "year": 2028,
+      "dateMarker": "2028-12-31",
+      "targetLabel": "2028",
+      "targetSource": "https://www.entergy.com/news/entergy-texas-breaks-ground-legend-and-lone-star",
+      "targetEvidence": "Entergy’s April 2026 groundbreaking release identifies Legend and Lone Star as physically progressing projects expected to begin serving customers in 2028.",
+      "scope": "included project/phase completion target",
+      "fullProjectCount": true,
+      "cost": {
+        "key": "eia-69077",
+        "name": "Lone Star Power Station",
+        "country": "United States",
+        "capacityMW": 453,
+        "capacityBasis": "Operator-reported electric generating capacity; not annual energy production",
+        "costValue": 799000000.0,
+        "currency": "USD",
+        "costBasis": "Published project-specific capital/construction estimate",
+        "sourceUrl": "https://www.entergy.com/news/entergy-texas-receives-puct-approval-for-two-power-plants-to-support-southeast-texas-growth",
+        "sourceDate": "2025-09-11",
+        "facts": "Entergy’s September 11, 2025 approval release gives a $799 million investment for Lone Star, updating the earlier $735 million proposal. The operator describes a 453 MW combustion-turbine project; April 9, 2026 groundbreaking establishes physical construction. EIA reports a different nameplate rating; neither figure is extra capacity.",
+        "extra": [
+          [
+            "https://www.entergy.com/news/entergy-texas-proposes-new-power-plants-support-rapid-growth-in-southeast-texas",
+            "The operator identifies Lone Star as a 453 MW combustion-turbine plant."
+          ],
+          [
+            "https://www.entergy.com/news/entergy-texas-breaks-ground-legend-and-lone-star",
+            "April 9, 2026 groundbreaking verifies physical construction; target service is 2028."
+          ]
+        ],
+        "costGroup": "eia-69077",
+        "checkedAt": "2026-10-11",
+        "capacitySourceUrl": "https://www.entergy.com/news/entergy-texas-proposes-new-power-plants-support-rapid-growth-in-southeast-texas",
+        "physicalSourceUrl": "https://www.entergy.com/news/entergy-texas-breaks-ground-legend-and-lone-star",
+        "costFacts": "Published project-specific cost for Lone Star Power Station: USD 7.99e+08. Basis: Published project-specific capital/construction estimate.",
+        "capacityFacts": "Published electric generating project rating for Lone Star Power Station: 453 MW. Basis: Operator-reported electric generating capacity; not annual energy production."
+      },
+      "backingWikis": [
+        {
+          "id": 75843,
+          "url": "https://www.eia.gov/electricity/data/eia860m/xls/august_generator2026.xlsx#EIA-Plant-58987",
+          "version": 4,
+          "wikiPageId": 9772
+        },
+        {
+          "id": 79834,
+          "url": "https://www.entergy.com/news/entergy-texas-breaks-ground-legend-and-lone-star",
+          "version": 2,
+          "wikiPageId": 10782
+        },
+        {
+          "id": 90928,
+          "url": "https://www.entergy.com/news/entergy-texas-receives-puct-approval-for-two-power-plants-to-support-southeast-texas-growth",
+          "version": 1,
+          "wikiPageId": 9718
+        },
+        {
+          "id": 90929,
+          "url": "https://www.entergy.com/news/entergy-texas-proposes-new-power-plants-support-rapid-growth-in-southeast-texas",
+          "version": 1,
+          "wikiPageId": 9719
+        }
+      ],
+      "price": 799000000,
+      "priceCurrency": "USD",
+      "priceLowerBound": null,
+      "priceUpperBound": null,
+      "media": [
+        {
+          "key": "eia-69077",
+          "sourceUrl": "https://www.entergy.com/wp-content/uploads/2026/04/legend-lone-star-stations-groundbreaking-april-2026.jpg",
+          "sourcePage": "https://www.entergy.com/news/entergy-texas-breaks-ground-legend-and-lone-star",
+          "credit": "Office of the Texas Governor, via Entergy Texas",
+          "caption": "Joint groundbreaking ceremony for Legend and Lone Star power stations in Port Arthur, Texas, April 9, 2026. This is the shared project ceremony, not a photograph of a completed Lone Star plant or its Cleveland-area construction site.",
+          "type": "photograph",
+          "blobUrl": "https://chronopin.blob.core.windows.net/thumb/electric-generation/eia-69077-66cc784ea3b8525a4fa1.webp",
+          "sha256": "66cc784ea3b8525a4fa12a90c15cae2f32cd2c5f600f5fec4c8771c5e3b41013",
+          "bytes": 204338,
+          "pinId": 8615
+        },
+        {
+          "key": "eia-69077-map",
+          "sourceUrl": "https://www.entergy.com/wp-content/uploads/2026/04/LoneStar_Legend_map-FINAL-small-600x338.png",
+          "sourcePage": "https://www.entergy.com/news/entergy-texas-breaks-ground-legend-and-lone-star",
+          "credit": "Entergy Texas",
+          "caption": "Operator location diagram for Lone Star near Cleveland and Legend near Port Arthur. The 453 MW Lone Star figure is design generating capacity; this diagram is not a photograph or evidence of operating output.",
+          "type": "operator location diagram",
+          "blobUrl": "https://chronopin.blob.core.windows.net/thumb/electric-generation/eia-69077-map-95e231446de226b908f8.webp",
+          "sha256": "95e231446de226b908f83055c662dfcfdd5f6b671c270b5a2e2d6b85d7be0839",
+          "bytes": 21414,
+          "pinId": 8615
+        },
+        {
+          "key": "eia-69077-site-3",
+          "sourceUrl": "https://www.tceq.texas.gov/downloads/permitting/wastewater/title-iv/tlap/wq0005513000-entergytexasinc-lonestarpowerstation-sanjacinto-tlap-adminpackage.pdf#page=61",
+          "sourcePage": "https://www.tceq.texas.gov/downloads/permitting/wastewater/title-iv/tlap/wq0005513000-entergytexasinc-lonestarpowerstation-sanjacinto-tlap-adminpackage.pdf",
+          "credit": "Entergy Texas Inc., wastewater permit application published by TCEQ; photographer not identified",
+          "caption": "View west toward the planned wastewater sump, photographed from its east side, showing equipment and site works. Photograph 3 filed in Entergy Texas’s Lone Star San Jacinto wastewater application, PDF page 61. Capture date is not published; the image alone does not establish today’s construction progress.",
+          "type": "filed site photograph",
+          "captureDate": null,
+          "sourcePdfPage": 61,
+          "blobUrl": "https://chronopin.blob.core.windows.net/thumb/electric-generation/eia-69077-site-3-304c46c14f19e26e94b4.webp",
+          "sha256": "304c46c14f19e26e94b4107c8d476bb78cc2213a4399fa038cde8e3a41a0a978",
+          "bytes": 59688,
+          "pinId": 8615
+        },
+        {
+          "key": "eia-69077-rendering",
+          "sourceUrl": "https://www.tx.cpa/docs/librariesprovider5/presentation-materials/2025-26/eti-ed-presentation_txcpa_2-2-26.pdf?sfvrsn=2495d8b0_1#page=10",
+          "sourcePage": "https://www.tx.cpa/docs/librariesprovider5/presentation-materials/2025-26/eti-ed-presentation_txcpa_2-2-26.pdf?sfvrsn=2495d8b0_1",
+          "credit": "Entergy Texas, presentation by Jessica Hill hosted by TXCPA",
+          "caption": "Lone Star Power Station design rendering extracted from the panel labelled Lone Star on page 10 of Entergy Texas’s presentation dated February 4, 2026. It depicts the planned facility near Cleveland and is not a photograph of completed construction. The slide’s 453 MW is operator design capacity.",
+          "type": "operator design rendering",
+          "sourcePdfPage": 10,
+          "blobUrl": "https://chronopin.blob.core.windows.net/thumb/electric-generation/eia-69077-rendering-2f560decdb648f1ff470.webp",
+          "sha256": "2f560decdb648f1ff47082e89b1ec0cdba9d3c596d3fc996be107210f9342fa0",
+          "bytes": 66112,
+          "pinId": 8615
+        },
+        {
+          "key": "eia-69077-site-1",
+          "sourceUrl": "https://www.tceq.texas.gov/downloads/permitting/wastewater/title-iv/tlap/wq0005513000-entergytexasinc-lonestarpowerstation-sanjacinto-tlap-adminpackage.pdf#page=60",
+          "sourcePage": "https://www.tceq.texas.gov/downloads/permitting/wastewater/title-iv/tlap/wq0005513000-entergytexasinc-lonestarpowerstation-sanjacinto-tlap-adminpackage.pdf",
+          "credit": "Entergy Texas Inc., wastewater permit application published by TCEQ; photographer not identified",
+          "caption": "View toward the planned spray-irrigation field, looking south from below the planned stormwater pond. Photograph 1 filed in Entergy Texas’s Lone Star San Jacinto wastewater application, PDF page 60. Capture date is not published; this is a filed site view, not a current progress update.",
+          "type": "filed site photograph",
+          "captureDate": null,
+          "sourcePdfPage": 60,
+          "blobUrl": "https://chronopin.blob.core.windows.net/thumb/electric-generation/eia-69077-site-1-9524ddf1c862bef95589.webp",
+          "sha256": "9524ddf1c862bef955896baa8e1a2f52a5792fd0b7864c297c58582d24bd6ccd",
+          "bytes": 57094,
+          "pinId": 8615
+        },
+        {
+          "key": "eia-69077-site-2",
+          "sourceUrl": "https://www.tceq.texas.gov/downloads/permitting/wastewater/title-iv/tlap/wq0005513000-entergytexasinc-lonestarpowerstation-sanjacinto-tlap-adminpackage.pdf#page=60",
+          "sourcePage": "https://www.tceq.texas.gov/downloads/permitting/wastewater/title-iv/tlap/wq0005513000-entergytexasinc-lonestarpowerstation-sanjacinto-tlap-adminpackage.pdf",
+          "credit": "Entergy Texas Inc., wastewater permit application published by TCEQ; photographer not identified",
+          "caption": "View east toward planned wastewater-storage tank positions, from south of the plant area. Photograph 2 filed in Entergy Texas’s Lone Star San Jacinto wastewater application, PDF page 60. Capture date is not published; this is a filed site view, not a current progress update.",
+          "type": "filed site photograph",
+          "captureDate": null,
+          "sourcePdfPage": 60,
+          "blobUrl": "https://chronopin.blob.core.windows.net/thumb/electric-generation/eia-69077-site-2-73f2c7415230ed47599b.webp",
+          "sha256": "73f2c7415230ed47599bae73de697073f0a61beaa4ecd0b8651e40fc192755df",
+          "bytes": 104872,
+          "pinId": 8615
+        }
+      ],
+      "mediaVerification": {
+        "mediaCount": 6,
+        "verifiedMediaCount": 6,
+        "productionPageVerified": true,
+        "sourceWikisReadyAndCurrent": true,
+        "researchNotes": "Previously completed deep media research retained: TCEQ site-photo pages 59–62, operator presentation page 10, official project pages and government ceremony/gallery links checked. Three filed site photos, own design rendering, shared ceremony and shared location map are clearly distinguished. Capture dates of filed photos remain unpublished.",
+        "remainingMediaGap": "Capture dates or individual photographer credits remain unpublished for some imagery; see the per-image captions and research notes."
+      }
+    },
+    {
+      "key": "gem-L100000603040",
+      "pinId": 14064,
+      "name": "Mohmand multipurpose dam and hydropower project",
+      "country": "Pakistan",
+      "year": 2028,
+      "dateMarker": "2028-12-31",
+      "targetLabel": "Early 2028 electricity generation",
+      "targetSource": "https://wapda.gov.pk/mohmand-dam-hydropwer-project/",
+      "targetEvidence": "WAPDA’s current Mohmand project page targets electricity generation in early 2028. The whole multipurpose-dam investment includes non-power water infrastructure. The timeline uses a year-level marker; it does not claim a specific early-2028 commissioning day.",
+      "scope": "included project/phase completion target",
+      "fullProjectCount": true,
+      "cost": {
+        "key": "gem-L100000603040",
+        "name": "Mohmand multipurpose dam and hydropower project",
+        "country": "Pakistan",
+        "capacityMW": 800,
+        "capacityBasis": "Operator-reported electric generating capacity; not annual energy production",
+        "costValue": 2249600000.0,
+        "currency": "USD",
+        "costBasis": "Financier-published full multipurpose-project cost; includes non-power water infrastructure",
+        "sourceUrl": "https://opecfund.org/where-we-work/list/mohmand-dam-multipurpose-project",
+        "sourceDate": null,
+        "facts": "The OPEC Fund’s project record publishes total project cost US$2,249.60 million. It covers the multipurpose dam programme, including water supply, irrigation and flood-control works, not just the power station. The Fund’s loan is not used as project cost.",
+        "extra": [
+          [
+            "https://wapda.gov.pk/category/media/news/page/4/",
+            "WAPDA January 19, 2026 reports construction continuing on ten key sites."
+          ],
+          [
+            "https://wapda.gov.pk/mohmand-dam-hydropwer-project/",
+            "WAPDA’s current project page identifies 800 MW installed design capacity, ongoing construction, river diversion November 2024, dam impounding targeted late 2026 and electricity generation early 2028. Targets are not completion claims."
+          ]
+        ],
+        "costGroup": "gem-L100000603040",
+        "checkedAt": "2026-10-11",
+        "costFacts": "The OPEC Fund’s project record publishes total project cost US$2,249.60 million. It covers the multipurpose dam programme, including water supply, irrigation and flood-control works, not just the power station. The Fund’s loan is not used as project cost.",
+        "capacitySourceUrl": "https://opecfund.org/where-we-work/list/mohmand-dam-multipurpose-project",
+        "capacityFacts": "Mohmand multipurpose dam and hydropower project: 800 MW generating project rating. Operator-reported electric generating capacity; not annual energy production",
+        "physicalSourceUrl": "https://wapda.gov.pk/mohmand-dam-hydropwer-project/",
+        "physicalFacts": "WAPDA’s current project page identifies 800 MW installed design capacity, ongoing construction, river diversion November 2024, dam impounding targeted late 2026 and electricity generation early 2028. Targets are not completion claims."
+      },
+      "backingWikis": [
+        {
+          "id": 75849,
+          "url": "https://raw.githubusercontent.com/GlobalEnergyMonitor/gipt-dashboard/main/Global%20Integrated%20Power%20August%202026.xlsx#L100000921971",
+          "version": 4,
+          "wikiPageId": 9773
+        },
+        {
+          "id": 90970,
+          "url": "https://opecfund.org/where-we-work/list/mohmand-dam-multipurpose-project",
+          "version": 1,
+          "wikiPageId": 9753
+        },
+        {
+          "id": 90973,
+          "url": "https://wapda.gov.pk/mohmand-dam-hydropwer-project/",
+          "version": 2,
+          "wikiPageId": 10783
+        },
+        {
+          "id": 90975,
+          "url": "https://wapda.gov.pk/category/media/news/page/4/",
+          "version": 1,
+          "wikiPageId": 9755
+        }
+      ],
+      "price": 2249600000,
+      "priceCurrency": "USD",
+      "priceLowerBound": null,
+      "priceUpperBound": null,
+      "media": [
+        {
+          "pinId": 14064,
+          "key": "gem-L100000603040-media-1",
+          "name": "Mohmand multipurpose dam and hydropower project",
+          "sourcePage": "https://wapda.gov.pk/mohmand-dam-hydropwer-project/",
+          "sourceUrl": "https://wapda.gov.pk/wp-content/uploads/2026/02/1-3.jpeg",
+          "caption": "Mohmand powerhouse structure, identified in WAPDA’s project gallery; photograph capture date not published.",
+          "credit": "WAPDA; individual photographer not named",
+          "captureDate": null,
+          "verified": true,
+          "candidateIndex": 13,
+          "blobUrl": "https://chronopin.blob.core.windows.net/thumb/electric-generation/gem-L100000603040-media-1-90fd96558d7e9b055cfc.webp",
+          "sha256": "90fd96558d7e9b055cfc2d29e604c881594c654351f5a0a78d56249195b9903c",
+          "bytes": 267268
+        },
+        {
+          "pinId": 14064,
+          "key": "gem-L100000603040-media-2",
+          "name": "Mohmand multipurpose dam and hydropower project",
+          "sourcePage": "https://wapda.gov.pk/mohmand-dam-hydropwer-project/",
+          "sourceUrl": "https://wapda.gov.pk/wp-content/uploads/2026/02/WhatsApp-Image-2026-02-22-at-2.31.26-PM.jpeg",
+          "caption": "Mohmand spillway structure and main dam site, identified in WAPDA’s project gallery; photograph capture date not published.",
+          "credit": "WAPDA; individual photographer not named",
+          "captureDate": null,
+          "verified": true,
+          "candidateIndex": 14,
+          "blobUrl": "https://chronopin.blob.core.windows.net/thumb/electric-generation/gem-L100000603040-media-2-75f7e338c3f3b4f06ccd.webp",
+          "sha256": "75f7e338c3f3b4f06ccd23f38d6db79b10e643655684a1931b7c6fe07c542ac1",
+          "bytes": 307504
+        }
+      ],
+      "mediaVerification": {
+        "mediaCount": 2,
+        "verifiedMediaCount": 2,
+        "productionPageVerified": true,
+        "sourceWikisReadyAndCurrent": true,
+        "researchNotes": "Dedicated operator project/news pages and any linked photo/gallery pages were checked. Selected images were visually verified; source URLs and available credits are retained. Unpublished capture dates are not inferred from upload paths. Other-plant and generic UI images were excluded. Existing verified media was preserved.",
+        "remainingMediaGap": "Capture dates or individual photographer credits remain unpublished for some imagery; see the per-image captions and research notes."
+      }
+    },
+    {
+      "key": "existing-5488",
+      "pinId": 5488,
+      "name": "Darlington New Nuclear Project — Unit 1",
+      "country": "Canada",
+      "year": 2030,
+      "dateMarker": "2030-12-31",
+      "targetLabel": "Grid connection by end of 2030",
+      "targetSource": "https://www.opg.com/projects-services/projects/nuclear/smr/darlington-smr/",
+      "targetEvidence": "OPG’s planning goal is completion of the first SMR by the end of this decade and grid connection by the end of 2030. Only Unit 1 is included; three future reactors require further approvals.",
+      "scope": "included project/phase completion target",
+      "fullProjectCount": true,
+      "cost": {
+        "key": "existing-5488",
+        "name": "Darlington New Nuclear Project — Unit 1",
+        "country": "Canada",
+        "capacityMW": 300,
+        "capacityBasis": "Operator-reported electric generating capacity; not annual energy production",
+        "costValue": 7700000000.0,
+        "currency": "CAD",
+        "costBasis": "Unit 1 plus shared infrastructure; includes interest, escalation and contingency",
+        "sourceUrl": "https://www.opg.com/wp-content/uploads/2026/03/2025-Q4-OPG-PR-MDA-FS-FINAL.pdf",
+        "sourceDate": "2026-03",
+        "facts": "OPG publishes a C$7.7 billion release-quality budget for the first SMR and shared site infrastructure: C$6.1 billion Unit 1 plus C$1.6 billion common systems/services. The budget includes interest, escalation and contingency. Included output is the first 300 MWe reactor under physical construction; the three additional proposed units and their combined C$20.9 billion fleet budget are excluded.",
+        "extra": [
+          [
+            "https://www.opg.com/projects-services/projects/nuclear/smr/darlington-smr/",
+            "Operator confirms 300 MWe per unit and summer-2026 reactor-building construction after basemat installation."
+          ]
+        ],
+        "costGroup": "existing-5488",
+        "checkedAt": "2026-10-11",
+        "capacitySourceUrl": "https://www.opg.com/projects-services/projects/nuclear/smr/darlington-smr/",
+        "physicalSourceUrl": "https://www.opg.com/projects-services/projects/nuclear/smr/darlington-smr/",
+        "costFacts": "Published project-specific cost for Darlington New Nuclear Project — Unit 1: CAD 7.7e+09. Basis: Unit 1 plus shared infrastructure; includes interest, escalation and contingency.",
+        "capacityFacts": "Published electric generating project rating for Darlington New Nuclear Project — Unit 1: 300 MW. Basis: Operator-reported electric generating capacity; not annual energy production."
+      },
+      "backingWikis": [
+        {
+          "id": 39353,
+          "url": "https://www.powermag.com/ontario-authorizes-opg-to-start-construction-of-first-commercial-nuclear-smr",
+          "version": 1,
+          "wikiPageId": 9770
+        },
+        {
+          "id": 90932,
+          "url": "https://www.opg.com/wp-content/uploads/2026/03/2025-Q4-OPG-PR-MDA-FS-FINAL.pdf",
+          "version": 1,
+          "wikiPageId": 9722
+        },
+        {
+          "id": 90933,
+          "url": "https://www.opg.com/projects-services/projects/nuclear/smr/darlington-smr/",
+          "version": 2,
+          "wikiPageId": 10784
+        }
+      ],
+      "price": 7700000000,
+      "priceCurrency": "CAD",
+      "priceLowerBound": null,
+      "priceUpperBound": null,
+      "media": [
+        {
+          "pinId": 5488,
+          "name": "Darlington New Nuclear Project — Unit 1",
+          "key": "existing-5488-deep-1",
+          "sourcePage": "https://www.canada.ca/en/privy-council/major-projects-office/projects/national/darlington.html",
+          "sourceUrl": "https://www.canada.ca/content/dam/pco-bcp/mpo-bgp/projects/indiv/darlington/MPO_DarlingtonNewNuclearProject_Extra2.png",
+          "caption": "Darlington New Nuclear Project aerial site view published by Canada’s Major Projects Office. Photo capture date is not stated on the page; the wider site should not be read as proof that all four reactors are under construction.",
+          "credit": "Government of Canada / Major Projects Office; photographer not identified",
+          "verified": true,
+          "mediaType": 1,
+          "captureDate": null,
+          "blobUrl": "https://chronopin.blob.core.windows.net/thumb/electric-generation/existing-5488-deep-1-31f01bcec2bcab88b5b5.webp",
+          "sha256": "31f01bcec2bcab88b5b5ef13e00f04cc9183a196174c158bc83f791a49ba2e4a",
+          "bytes": 267942
+        }
+      ],
+      "mediaVerification": {
+        "mediaCount": 4,
+        "verifiedMediaCount": 1,
+        "productionPageVerified": true,
+        "sourceWikisReadyAndCurrent": true,
+        "researchNotes": "Dedicated operator project/news pages and any linked photo/gallery pages were checked. Selected images were visually verified; source URLs and available credits are retained. Unpublished capture dates are not inferred from upload paths. Other-plant and generic UI images were excluded. Existing verified media was preserved.",
+        "remainingMediaGap": "Capture dates or individual photographer credits remain unpublished for some imagery; see the per-image captions and research notes."
+      }
+    },
+    {
+      "key": "existing-221",
+      "pinId": 221,
+      "name": "Hinkley Point C",
+      "country": "United Kingdom",
+      "year": 2030,
+      "dateMarker": "2030-12-31",
+      "targetLabel": "Unit 1 in 2030; Unit 2 later",
+      "targetSource": "https://www.edf.fr/sites/groupe/files/2026-02/annual-results-edf-2025-presentation-2026-02-20.pdf",
+      "targetEvidence": "EDF’s February 20, 2026 presentation organises Hinkley Unit 1 for operation in 2030 and Unit 2 twelve months later. The 3.3 GW capacity and GBP35 billion estimate in 2015 sterling cover both reactors; neither is represented as wholly delivered by 2030.",
+      "scope": "first-reactor milestone only",
+      "fullProjectCount": false,
+      "cost": {
+        "key": "existing-221",
+        "name": "Hinkley Point C",
+        "country": "United Kingdom",
+        "capacityMW": 3300,
+        "capacityBasis": "EDF presentation rounded electric project rating: 3.3 GW",
+        "costValue": 35000000000.0,
+        "currency": "GBP",
+        "costBasis": "Completion estimate in constant 2015 GBP; not nominal 2026 GBP",
+        "sourceUrl": "https://www.edf.fr/sites/groupe/files/2026-02/annual-results-edf-2025-presentation-2026-02-20.pdf",
+        "sourceDate": "2026-02-20",
+        "facts": "EDF’s February 20, 2026 results presentation labels Hinkley Point C as a 3.3 GW EPR project and estimates completion cost at £35 billion in 2015 sterling. A 12-month delay could add around £1 billion in the same price basis. Both reactors have documented construction progress; Unit 1 is organized for 2030, with Unit 2 twelve months later. This is actual construction, not an announcement-only proposal.",
+        "extra": [],
+        "costGroup": "existing-221",
+        "checkedAt": "2026-10-11",
+        "capacitySourceUrl": "https://www.edf.fr/sites/groupe/files/2026-02/annual-results-edf-2025-presentation-2026-02-20.pdf",
+        "physicalSourceUrl": "https://www.edf.fr/sites/groupe/files/2026-02/annual-results-edf-2025-presentation-2026-02-20.pdf",
+        "costFacts": "Published project-specific cost for Hinkley Point C: GBP 3.5e+10. Basis: Completion estimate in constant 2015 GBP; not nominal 2026 GBP.",
+        "capacityFacts": "Published electric generating project rating for Hinkley Point C: 3300 MW. Basis: EDF presentation rounded electric project rating: 3.3 GW."
+      },
+      "backingWikis": [
+        {
+          "id": 1363,
+          "url": "https://en.wikipedia.org/wiki/Hinkley_Point_C_nuclear_power_station",
+          "version": 1,
+          "wikiPageId": 831
+        },
+        {
+          "id": 90934,
+          "url": "https://www.edf.fr/sites/groupe/files/2026-02/annual-results-edf-2025-presentation-2026-02-20.pdf",
+          "version": 2,
+          "wikiPageId": 10785
+        }
+      ],
+      "price": 35000000000,
+      "priceCurrency": "GBP",
+      "priceLowerBound": null,
+      "priceUpperBound": null,
+      "media": [
+        {
+          "pinId": 221,
+          "key": "existing-221-media-1",
+          "name": "Hinkley Point C",
+          "sourcePage": "https://www.edfenergy.com/energy/nuclear-new-build-projects/hinkley-point-c/latest-updates",
+          "sourceUrl": "https://www.edfenergy.com/sites/default/files/2026-07/Unit%202%20RPV%20Install%20-%20Day%20One%20-%2028th%20May%202026%20-%20127.jpg",
+          "caption": "The reactor makes its way into the second reactor building.",
+          "credit": "EDF / Hinkley Point C media team",
+          "captureDate": null,
+          "verified": true,
+          "candidateIndex": 22,
+          "blobUrl": "https://chronopin.blob.core.windows.net/thumb/electric-generation/existing-221-media-1-51037dd0db3b9ef57a97.webp",
+          "sha256": "51037dd0db3b9ef57a977752e3fddb02df399d56930b27f5835bd71c1741c7a0",
+          "bytes": 186402
+        },
+        {
+          "pinId": 221,
+          "key": "existing-221-media-2",
+          "name": "Hinkley Point C",
+          "sourcePage": "https://www.edfenergy.com/energy/nuclear-new-build-projects/hinkley-point-c/latest-updates",
+          "sourceUrl": "https://www.edfenergy.com/sites/default/files/2025-07/104595_0.JPG",
+          "caption": "The world’s largest crane, “Big Carl” has lifted the dome onto the second reactor building.",
+          "credit": "EDF / Hinkley Point C media team",
+          "captureDate": null,
+          "verified": true,
+          "candidateIndex": 23,
+          "blobUrl": "https://chronopin.blob.core.windows.net/thumb/electric-generation/existing-221-media-2-f6ff30e6866810b44bbd.webp",
+          "sha256": "f6ff30e6866810b44bbd87246f0582dcf848bfd2b6593279993a343116ef9486",
+          "bytes": 624752
+        }
+      ],
+      "mediaVerification": {
+        "mediaCount": 3,
+        "verifiedMediaCount": 2,
+        "productionPageVerified": true,
+        "sourceWikisReadyAndCurrent": true,
+        "researchNotes": "Dedicated operator project/news pages and any linked photo/gallery pages were checked. Selected images were visually verified; source URLs and available credits are retained. Unpublished capture dates are not inferred from upload paths. Other-plant and generic UI images were excluded. Existing verified media was preserved.",
+        "remainingMediaGap": "Capture dates or individual photographer credits remain unpublished for some imagery; see the per-image captions and research notes."
+      }
+    }
+  ],
+  "costFieldVerification": {
+    "verifiedAtUTC": "2026-10-12T22:18:41Z",
+    "pinCostFieldsSaved": 37,
+    "buildoutPinsIncluded": 13,
+    "publicPinAndMapCostFieldsVerified": true,
+    "costCurrencyScopeDatesAndMediaPreserved": true
+  },
+  "loneStarGalleryResearch": {
+    "operatorNewsPage": "Official joint groundbreaking photo and shared location diagram checked",
+    "operatorProjectPage": "STEP Ahead dispatchable-power page checked; no additional verified progress gallery",
+    "governmentNewsAndPhotoPage": "Official April 9, 2026 event page and linked public Dropbox gallery checked",
+    "linkedDropboxGallery": "Direct HTML accessible but supplies no photograph listing; web research could not access gallery media. No photographs inferred.",
+    "permitApplication": "TCEQ WQ0005513000 administrative package: complete relevant photo pages 59–62 visually inspected; three embedded originals extracted. Receipt March 16, 2026; capture dates unpublished.",
+    "operatorPresentation": "Entergy Texas presentation dated February 4, 2026 hosted by TXCPA: page 10 visually inspected, lower Lone Star rendering extracted, upper Legend rendering excluded.",
+    "localAndOtherSources": "Bluebonnet June 4, 2024 operator announcement and linked images checked; RTO Insider rendering corroboration, operator LinkedIn announcements, construction reporting, contractor-related results and video searches reviewed. No verified standalone current drone or progress video located. Getty/Bloomberg event image was not copied.",
+    "remainingGap": "Filed site photographs now found. No verified capture dates, current progress photo series, or Lone Star-specific drone video found; filed views must not be described as current construction progress."
+  },
+  "mediaResearchAudit": {
+    "verifiedAtUTC": "2026-10-12T22:50:01Z",
+    "scope": "The 37 cost/output-qualified generation pins previously published in this collection. Excluded broad-import proposals remain excluded.",
+    "pinsAudited": 37,
+    "pinsWithVerifiedMedia": 37,
+    "previouslyEmptyPins": 25,
+    "remainingEmptyPins": 0,
+    "newMediaItems": 50,
+    "totalMediaItems": 77,
+    "totalImages": 72,
+    "totalVideos": 5,
+    "allPublicPagesVerified": true,
+    "allNewImagesInVerifiedAzureStorage": true,
+    "allSourceWikisReadyAndCurrent": true,
+    "costDatesLocationsAndTagsPreserved": true
+  }
+}

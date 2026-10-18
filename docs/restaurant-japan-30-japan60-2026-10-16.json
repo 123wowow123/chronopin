@@ -1,0 +1,685 @@
+{
+  "checkedAt": "2026-10-17",
+  "verifiedAtUtc": "2026-10-17T01:35:43.711305+00:00",
+  "scope": "Existing Kyoto Isetan branch menu and gallery enrichment; no new restaurant, opening repair or Special membership",
+  "entries": [],
+  "existingVenueUpdates": [
+    {
+      "batch": 60,
+      "type": "ordinary-content-and-gallery",
+      "sourceUrl": "https://www.kyoto-station-building.co.jp/restaurant_cafe/022/",
+      "addedMenus": [
+        {
+          "label": "Kyoto Isetan published regular menu — Weekday lunch",
+          "url": "http://www.tsukijisushisay.co.jp/store/i_kyoto.html",
+          "currency": "JPY",
+          "coverage": "published",
+          "note": "Tax included. Exact Kyoto Isetan 11F operator menu, checked October 17, 2026 JST. Undated page; seasonal and procurement changes may apply. These regular-menu items are not assigned to the autumn festival offer. Weekdays only; no lunch last-order time is published.",
+          "items": [
+            {
+              "name": "ランチA",
+              "price": 1650,
+              "category": "Weekday lunch"
+            },
+            {
+              "name": "ランチB",
+              "price": 1650,
+              "category": "Weekday lunch"
+            },
+            {
+              "name": "ランチちらし",
+              "price": 1650,
+              "category": "Weekday lunch"
+            }
+          ]
+        },
+        {
+          "label": "Kyoto Isetan published regular menu — Sushi sets",
+          "url": "http://www.tsukijisushisay.co.jp/store/i_kyoto.html",
+          "currency": "JPY",
+          "coverage": "published",
+          "note": "Tax included. Exact Kyoto Isetan 11F operator menu, checked October 17, 2026 JST. Undated page; seasonal and procurement changes may apply. These regular-menu items are not assigned to the autumn festival offer.",
+          "items": [
+            {
+              "name": "盛り合わせ",
+              "price": 1760,
+              "category": "Sushi sets"
+            },
+            {
+              "name": "お楽しみ",
+              "price": 1870,
+              "category": "Sushi sets"
+            },
+            {
+              "name": "おすすめ",
+              "price": 2530,
+              "category": "Sushi sets"
+            },
+            {
+              "name": "特選にぎり",
+              "price": 2860,
+              "category": "Sushi sets"
+            },
+            {
+              "name": "おまかせ",
+              "price": 3740,
+              "category": "Sushi sets"
+            },
+            {
+              "name": "極",
+              "price": 4510,
+              "category": "Sushi sets"
+            }
+          ]
+        },
+        {
+          "label": "Kyoto Isetan published regular menu — Sashimi",
+          "url": "http://www.tsukijisushisay.co.jp/store/i_kyoto.html",
+          "currency": "JPY",
+          "coverage": "published",
+          "note": "Tax included. Exact Kyoto Isetan 11F operator menu, checked October 17, 2026 JST. Undated page; seasonal and procurement changes may apply. These regular-menu items are not assigned to the autumn festival offer.",
+          "items": [
+            {
+              "name": "光物盛り合わせ",
+              "price": 2200,
+              "category": "Sashimi"
+            },
+            {
+              "name": "白身盛り合わせ",
+              "price": 2420,
+              "category": "Sashimi"
+            },
+            {
+              "name": "まぐろ盛り合わせ",
+              "price": 2530,
+              "category": "Sashimi"
+            },
+            {
+              "name": "刺身盛り合わせ（1人〜2人前）",
+              "price": 3025,
+              "category": "Sashimi"
+            },
+            {
+              "name": "5点盛り合わせ",
+              "price": 6050,
+              "category": "Sashimi"
+            }
+          ]
+        },
+        {
+          "label": "Kyoto Isetan published regular menu — À la carte",
+          "url": "http://www.tsukijisushisay.co.jp/store/i_kyoto.html",
+          "currency": "JPY",
+          "coverage": "published",
+          "note": "Tax included. Exact Kyoto Isetan 11F operator menu, checked October 17, 2026 JST. Undated page; seasonal and procurement changes may apply. These regular-menu items are not assigned to the autumn festival offer.",
+          "items": [
+            {
+              "name": "ねぎ鮪串焼（1本）",
+              "price": 880,
+              "category": "À la carte"
+            },
+            {
+              "name": "げそ塩焼",
+              "price": 770,
+              "category": "À la carte"
+            },
+            {
+              "name": "鯵のたたき",
+              "price": 1100,
+              "category": "À la carte"
+            },
+            {
+              "name": "焼穴子",
+              "price": 1760,
+              "category": "À la carte"
+            },
+            {
+              "name": "お椀（各種）",
+              "price": 495,
+              "category": "À la carte"
+            },
+            {
+              "name": "茶碗蒸し",
+              "price": 550,
+              "category": "À la carte"
+            },
+            {
+              "name": "かま焼（各種）",
+              "category": "À la carte",
+              "priceLabel": "From ¥880 (tax included)"
+            }
+          ]
+        },
+        {
+          "label": "Kyoto Isetan published regular menu — Drinks",
+          "url": "http://www.tsukijisushisay.co.jp/store/i_kyoto.html",
+          "currency": "JPY",
+          "coverage": "published",
+          "note": "Tax included. Exact Kyoto Isetan 11F operator menu, checked October 17, 2026 JST. Undated page; seasonal and procurement changes may apply. These regular-menu items are not assigned to the autumn festival offer.",
+          "items": [
+            {
+              "name": "アサヒスーパードライ（中瓶）",
+              "price": 880,
+              "category": "Drinks"
+            },
+            {
+              "name": "キリン一番搾り（中瓶）",
+              "price": 880,
+              "category": "Drinks"
+            },
+            {
+              "name": "サッポロ（生ビール）",
+              "price": 770,
+              "category": "Drinks"
+            },
+            {
+              "name": "アサヒゼロ（ノンアルコール）",
+              "price": 605,
+              "category": "Drinks"
+            },
+            {
+              "name": "麦焼酎（各種）",
+              "category": "Drinks",
+              "priceLabel": "From ¥704 (tax included)"
+            },
+            {
+              "name": "芋焼酎（各種）",
+              "category": "Drinks",
+              "priceLabel": "From ¥704 (tax included)"
+            },
+            {
+              "name": "梅酒",
+              "price": 693,
+              "category": "Drinks"
+            },
+            {
+              "name": "玉乃光（京都）",
+              "price": 990,
+              "category": "Drinks"
+            },
+            {
+              "name": "半田郷 純米吟醸酵母1801（愛知）",
+              "price": 990,
+              "category": "Drinks"
+            },
+            {
+              "name": "八海山（新潟）",
+              "price": 990,
+              "category": "Drinks"
+            },
+            {
+              "name": "日本盛粋（燗酒）",
+              "price": 748,
+              "category": "Drinks"
+            },
+            {
+              "name": "ハイボール",
+              "price": 704,
+              "category": "Drinks"
+            },
+            {
+              "name": "レモンサワー",
+              "price": 704,
+              "category": "Drinks"
+            },
+            {
+              "name": "グレープフルーツサワー",
+              "price": 704,
+              "category": "Drinks"
+            },
+            {
+              "name": "緑茶サワー",
+              "price": 704,
+              "category": "Drinks"
+            },
+            {
+              "name": "烏龍茶",
+              "price": 330,
+              "category": "Drinks"
+            },
+            {
+              "name": "オレンジジュース",
+              "price": 330,
+              "category": "Drinks"
+            },
+            {
+              "name": "コカ・コーラ",
+              "price": 330,
+              "category": "Drinks"
+            }
+          ]
+        },
+        {
+          "label": "Kyoto Isetan published regular menu — Takeaway",
+          "url": "http://www.tsukijisushisay.co.jp/store/i_kyoto.html",
+          "currency": "JPY",
+          "coverage": "published",
+          "note": "Tax included. Exact Kyoto Isetan 11F operator menu, checked October 17, 2026 JST. Undated page; seasonal and procurement changes may apply. These regular-menu items are not assigned to the autumn festival offer. Takeaway only. Telephone orders accepted; contents may change with season/supply, and takeaway may be suspended due to temperature.",
+          "items": [
+            {
+              "name": "彩（いろどり）〈4〜5人前〉",
+              "price": 9180,
+              "category": "Takeaway"
+            },
+            {
+              "name": "司（つかさ）〈3〜4人前〉",
+              "price": 6750,
+              "category": "Takeaway"
+            },
+            {
+              "name": "八寸",
+              "price": 2160,
+              "category": "Takeaway"
+            },
+            {
+              "name": "九寸",
+              "price": 3240,
+              "category": "Takeaway"
+            }
+          ]
+        }
+      ],
+      "addedMenuEntries": 43,
+      "addedGalleryLinks": 4,
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-16/menu60-sushisei-11-15e4c4a136c915dd.webp",
+          "sha256": "15e4c4a136c915dd79f62f6e2d576b8769fcfbfcb2a7420eff626a92f975c768",
+          "width": 1024,
+          "height": 681,
+          "credit": "Tsukiji Sushisei / Kyoto Isetan branch operator gallery",
+          "note": "Exact Kyoto Isetan 11F sushi counter; operator page describes 13 counter seats.",
+          "sourcePage": "http://www.tsukijisushisay.co.jp/store/i_kyoto.html",
+          "originalUrl": "http://www.tsukijisushisay.co.jp/store/images/i_kyoto/photo/i_kyoto11.jpg"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-16/menu60-sushisei-12-965a7e43a5856a30.webp",
+          "sha256": "965a7e43a5856a30662e48aecdddfd667d8ec023b75da0e697f3c0961bd4eafb",
+          "width": 1024,
+          "height": 681,
+          "credit": "Tsukiji Sushisei / Kyoto Isetan branch operator gallery",
+          "note": "Exact Kyoto Isetan 11F table seating; operator page describes 30 table seats.",
+          "sourcePage": "http://www.tsukijisushisay.co.jp/store/i_kyoto.html",
+          "originalUrl": "http://www.tsukijisushisay.co.jp/store/images/i_kyoto/photo/i_kyoto12.jpg"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-16/menu60-sushisei-13-08232bc54d8b23b9.webp",
+          "sha256": "08232bc54d8b23b9e633e67820e4e9349f2376a92ef0729fec54d27294c8a76f",
+          "width": 1024,
+          "height": 681,
+          "credit": "Tsukiji Sushisei / Kyoto Isetan branch operator gallery",
+          "note": "Exact Kyoto Isetan 11F table and partition detail.",
+          "sourcePage": "http://www.tsukijisushisay.co.jp/store/i_kyoto.html",
+          "originalUrl": "http://www.tsukijisushisay.co.jp/store/images/i_kyoto/photo/i_kyoto13.jpg"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-16/menu60-sushisei-14-c46afce5d88cf14e.webp",
+          "sha256": "c46afce5d88cf14e7dc20dfb890ddd96abaee20bcbc24778547507743eccdf2f",
+          "width": 1024,
+          "height": 681,
+          "credit": "Tsukiji Sushisei / Kyoto Isetan branch operator gallery",
+          "note": "Operator-labelled traditional anago simmered eel preparation; illustrative branch gallery photograph, no seasonal-offer participation inferred.",
+          "sourcePage": "http://www.tsukijisushisay.co.jp/store/i_kyoto.html",
+          "originalUrl": "http://www.tsukijisushisay.co.jp/store/images/i_kyoto/photo/i_kyoto14.jpg"
+        }
+      ],
+      "savedContentProfile": {
+        "menu": {
+          "name": "Tsukiji Sushisei — Kyoto Isetan",
+          "menus": [
+            {
+              "url": "https://www.mistore.jp/store/kyoto/shops/restaurant/restaurantnews/shopnews_list/2026_fall_foodfestival.html",
+              "note": "Tax included. Exact Kyoto Isetan branch only. Includes seared chutoro and salmon, crab-flake and salmon-roe gunkan, and seasonal silver-skinned fish. Ordering windows end at published last order, not room closure. Department-store festival announcement, floor gallery and restaurant listings checked. Main announcement and image downloads time out/fail TLS with plain curl despite readable indexed primary text; no unverified remote image reference or other-branch photo used. Exact Kyoto Station Building branch page and gallery also checked. Ordinary operator menu added separately after a direct HTTP source check on October 17, 2026 JST; the operator HTTPS certificate fails hostname verification.",
+              "items": [
+                {
+                  "name": "Autumn festival sushi assortment",
+                  "note": "Includes seared chutoro and salmon, crab-flake and salmon-roe gunkan, and seasonal silver-skinned fish.",
+                  "price": 2970
+                }
+              ],
+              "label": "Kyoto Isetan autumn menu — Autumn festival sushi assortment",
+              "coverage": "sample",
+              "currency": "JPY"
+            },
+            {
+              "url": "http://www.tsukijisushisay.co.jp/store/i_kyoto.html",
+              "note": "Tax included. Exact Kyoto Isetan 11F operator menu, checked October 17, 2026 JST. Undated page; seasonal and procurement changes may apply. These regular-menu items are not assigned to the autumn festival offer. Weekdays only; no lunch last-order time is published.",
+              "items": [
+                {
+                  "name": "ランチA",
+                  "price": 1650,
+                  "category": "Weekday lunch"
+                },
+                {
+                  "name": "ランチB",
+                  "price": 1650,
+                  "category": "Weekday lunch"
+                },
+                {
+                  "name": "ランチちらし",
+                  "price": 1650,
+                  "category": "Weekday lunch"
+                }
+              ],
+              "label": "Kyoto Isetan published regular menu — Weekday lunch",
+              "coverage": "published",
+              "currency": "JPY"
+            },
+            {
+              "url": "http://www.tsukijisushisay.co.jp/store/i_kyoto.html",
+              "note": "Tax included. Exact Kyoto Isetan 11F operator menu, checked October 17, 2026 JST. Undated page; seasonal and procurement changes may apply. These regular-menu items are not assigned to the autumn festival offer.",
+              "items": [
+                {
+                  "name": "盛り合わせ",
+                  "price": 1760,
+                  "category": "Sushi sets"
+                },
+                {
+                  "name": "お楽しみ",
+                  "price": 1870,
+                  "category": "Sushi sets"
+                },
+                {
+                  "name": "おすすめ",
+                  "price": 2530,
+                  "category": "Sushi sets"
+                },
+                {
+                  "name": "特選にぎり",
+                  "price": 2860,
+                  "category": "Sushi sets"
+                },
+                {
+                  "name": "おまかせ",
+                  "price": 3740,
+                  "category": "Sushi sets"
+                },
+                {
+                  "name": "極",
+                  "price": 4510,
+                  "category": "Sushi sets"
+                }
+              ],
+              "label": "Kyoto Isetan published regular menu — Sushi sets",
+              "coverage": "published",
+              "currency": "JPY"
+            },
+            {
+              "url": "http://www.tsukijisushisay.co.jp/store/i_kyoto.html",
+              "note": "Tax included. Exact Kyoto Isetan 11F operator menu, checked October 17, 2026 JST. Undated page; seasonal and procurement changes may apply. These regular-menu items are not assigned to the autumn festival offer.",
+              "items": [
+                {
+                  "name": "光物盛り合わせ",
+                  "price": 2200,
+                  "category": "Sashimi"
+                },
+                {
+                  "name": "白身盛り合わせ",
+                  "price": 2420,
+                  "category": "Sashimi"
+                },
+                {
+                  "name": "まぐろ盛り合わせ",
+                  "price": 2530,
+                  "category": "Sashimi"
+                },
+                {
+                  "name": "刺身盛り合わせ（1人〜2人前）",
+                  "price": 3025,
+                  "category": "Sashimi"
+                },
+                {
+                  "name": "5点盛り合わせ",
+                  "price": 6050,
+                  "category": "Sashimi"
+                }
+              ],
+              "label": "Kyoto Isetan published regular menu — Sashimi",
+              "coverage": "published",
+              "currency": "JPY"
+            },
+            {
+              "url": "http://www.tsukijisushisay.co.jp/store/i_kyoto.html",
+              "note": "Tax included. Exact Kyoto Isetan 11F operator menu, checked October 17, 2026 JST. Undated page; seasonal and procurement changes may apply. These regular-menu items are not assigned to the autumn festival offer.",
+              "items": [
+                {
+                  "name": "ねぎ鮪串焼（1本）",
+                  "price": 880,
+                  "category": "À la carte"
+                },
+                {
+                  "name": "げそ塩焼",
+                  "price": 770,
+                  "category": "À la carte"
+                },
+                {
+                  "name": "鯵のたたき",
+                  "price": 1100,
+                  "category": "À la carte"
+                },
+                {
+                  "name": "焼穴子",
+                  "price": 1760,
+                  "category": "À la carte"
+                },
+                {
+                  "name": "お椀（各種）",
+                  "price": 495,
+                  "category": "À la carte"
+                },
+                {
+                  "name": "茶碗蒸し",
+                  "price": 550,
+                  "category": "À la carte"
+                },
+                {
+                  "name": "かま焼（各種）",
+                  "category": "À la carte",
+                  "priceLabel": "From ¥880 (tax included)"
+                }
+              ],
+              "label": "Kyoto Isetan published regular menu — À la carte",
+              "coverage": "published",
+              "currency": "JPY"
+            },
+            {
+              "url": "http://www.tsukijisushisay.co.jp/store/i_kyoto.html",
+              "note": "Tax included. Exact Kyoto Isetan 11F operator menu, checked October 17, 2026 JST. Undated page; seasonal and procurement changes may apply. These regular-menu items are not assigned to the autumn festival offer.",
+              "items": [
+                {
+                  "name": "アサヒスーパードライ（中瓶）",
+                  "price": 880,
+                  "category": "Drinks"
+                },
+                {
+                  "name": "キリン一番搾り（中瓶）",
+                  "price": 880,
+                  "category": "Drinks"
+                },
+                {
+                  "name": "サッポロ（生ビール）",
+                  "price": 770,
+                  "category": "Drinks"
+                },
+                {
+                  "name": "アサヒゼロ（ノンアルコール）",
+                  "price": 605,
+                  "category": "Drinks"
+                },
+                {
+                  "name": "麦焼酎（各種）",
+                  "category": "Drinks",
+                  "priceLabel": "From ¥704 (tax included)"
+                },
+                {
+                  "name": "芋焼酎（各種）",
+                  "category": "Drinks",
+                  "priceLabel": "From ¥704 (tax included)"
+                },
+                {
+                  "name": "梅酒",
+                  "price": 693,
+                  "category": "Drinks"
+                },
+                {
+                  "name": "玉乃光（京都）",
+                  "price": 990,
+                  "category": "Drinks"
+                },
+                {
+                  "name": "半田郷 純米吟醸酵母1801（愛知）",
+                  "price": 990,
+                  "category": "Drinks"
+                },
+                {
+                  "name": "八海山（新潟）",
+                  "price": 990,
+                  "category": "Drinks"
+                },
+                {
+                  "name": "日本盛粋（燗酒）",
+                  "price": 748,
+                  "category": "Drinks"
+                },
+                {
+                  "name": "ハイボール",
+                  "price": 704,
+                  "category": "Drinks"
+                },
+                {
+                  "name": "レモンサワー",
+                  "price": 704,
+                  "category": "Drinks"
+                },
+                {
+                  "name": "グレープフルーツサワー",
+                  "price": 704,
+                  "category": "Drinks"
+                },
+                {
+                  "name": "緑茶サワー",
+                  "price": 704,
+                  "category": "Drinks"
+                },
+                {
+                  "name": "烏龍茶",
+                  "price": 330,
+                  "category": "Drinks"
+                },
+                {
+                  "name": "オレンジジュース",
+                  "price": 330,
+                  "category": "Drinks"
+                },
+                {
+                  "name": "コカ・コーラ",
+                  "price": 330,
+                  "category": "Drinks"
+                }
+              ],
+              "label": "Kyoto Isetan published regular menu — Drinks",
+              "coverage": "published",
+              "currency": "JPY"
+            },
+            {
+              "url": "http://www.tsukijisushisay.co.jp/store/i_kyoto.html",
+              "note": "Tax included. Exact Kyoto Isetan 11F operator menu, checked October 17, 2026 JST. Undated page; seasonal and procurement changes may apply. These regular-menu items are not assigned to the autumn festival offer. Takeaway only. Telephone orders accepted; contents may change with season/supply, and takeaway may be suspended due to temperature.",
+              "items": [
+                {
+                  "name": "彩（いろどり）〈4〜5人前〉",
+                  "price": 9180,
+                  "category": "Takeaway"
+                },
+                {
+                  "name": "司（つかさ）〈3〜4人前〉",
+                  "price": 6750,
+                  "category": "Takeaway"
+                },
+                {
+                  "name": "八寸",
+                  "price": 2160,
+                  "category": "Takeaway"
+                },
+                {
+                  "name": "九寸",
+                  "price": 3240,
+                  "category": "Takeaway"
+                }
+              ],
+              "label": "Kyoto Isetan published regular menu — Takeaway",
+              "coverage": "published",
+              "currency": "JPY"
+            }
+          ],
+          "specials": [],
+          "checkedAt": "2026-10-17",
+          "pinSourceUrl": "https://www.kyoto-station-building.co.jp/restaurant_cafe/022/"
+        },
+        "details": {
+          "name": "Tsukiji Sushisei — Kyoto Isetan",
+          "phone": "075-352-6223",
+          "checkedAt": "2026-10-17",
+          "hoursNote": "Closed when Kyoto Isetan is closed. Telephone reservations: tables throughout service; counter on weekdays from 16:00. Weekday lunch only; lunch last order is not published.",
+          "websiteUrl": "https://www.kyoto-station-building.co.jp/restaurant_cafe/022/",
+          "openingHours": [
+            {
+              "days": "Daily",
+              "hours": "11:00–22:00; last order 21:15"
+            }
+          ],
+          "pinSourceUrl": "https://www.kyoto-station-building.co.jp/restaurant_cafe/022/",
+          "detailsSourceUrl": "https://www.mistore.jp/store/kyoto/shops/restaurant/restaurantnews/shopnews_list/2026_fall_foodfestival.html",
+          "additionalSources": [
+            {
+              "url": "https://www.mistore.jp/store/kyoto/shops/floor11.html",
+              "label": "Research evidence"
+            },
+            {
+              "url": "https://www.kyoto-station-building.co.jp/restaurant_cafe/022/",
+              "label": "Exact branch and gallery"
+            },
+            {
+              "url": "http://www.tsukijisushisay.co.jp/store/i_kyoto.html",
+              "label": "Exact branch operator menu, hours and reservation conditions"
+            }
+          ]
+        },
+        "pinSourceUrl": "https://www.kyoto-station-building.co.jp/restaurant_cafe/022/"
+      },
+      "verification": {
+        "local": {
+          "pinId": 15947,
+          "contentId": 1614,
+          "revision": 2,
+          "addedMenus": 6,
+          "addedMenuEntries": 43,
+          "addedGalleryLinks": 4,
+          "authorAndPinDatePreserved": true,
+          "specialsPreserved": true,
+          "verifiedAtUtc": "2026-10-17T01:34:07.793Z",
+          "publicPinMenusVerified": 43,
+          "creditedGalleryLinksVerified": 4,
+          "nativeGuideHrefAndPhotoVerified": true,
+          "publicPinStatus": 200
+        },
+        "production": {
+          "pinId": 15947,
+          "contentId": 1614,
+          "revision": 2,
+          "addedMenus": 6,
+          "addedMenuEntries": 43,
+          "addedGalleryLinks": 4,
+          "authorAndPinDatePreserved": true,
+          "specialsPreserved": true,
+          "verifiedAtUtc": "2026-10-17T01:34:44.504Z",
+          "publicPinMenusVerified": 43,
+          "creditedGalleryLinksVerified": 4,
+          "nativeGuideHrefAndPhotoVerified": true,
+          "publicPinStatus": 200
+        }
+      },
+      "openingDateEvidenceStillUnresolved": true,
+      "specialsPreserved": true
+    }
+  ]
+}

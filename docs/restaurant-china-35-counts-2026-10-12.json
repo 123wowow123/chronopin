@@ -1,0 +1,229 @@
+{
+  "checkedAt": "2026-10-12T21:58:08.050754+00:00",
+  "targetPerSection": 35,
+  "specialsCountMethod": "Distinct branch source keys across active and upcoming offers, with per-offer suffixes removed",
+  "totals": {
+    "upcoming": 6,
+    "new": 28,
+    "top": 962,
+    "discounts": 160
+  },
+  "cities": [
+    {
+      "slug": "kunming",
+      "city": "Kunming",
+      "upcoming": 0,
+      "new": 1,
+      "top": 35,
+      "discounts": 1
+    },
+    {
+      "slug": "chengdu",
+      "city": "Chengdu",
+      "upcoming": 0,
+      "new": 1,
+      "top": 36,
+      "discounts": 2
+    },
+    {
+      "slug": "chongqing",
+      "city": "Chongqing",
+      "upcoming": 0,
+      "new": 1,
+      "top": 35,
+      "discounts": 1
+    },
+    {
+      "slug": "xian",
+      "city": "Xi’an",
+      "upcoming": 0,
+      "new": 1,
+      "top": 35,
+      "discounts": 1
+    },
+    {
+      "slug": "sanya",
+      "city": "Sanya",
+      "upcoming": 0,
+      "new": 1,
+      "top": 35,
+      "discounts": 1
+    },
+    {
+      "slug": "haikou",
+      "city": "Haikou",
+      "upcoming": 0,
+      "new": 0,
+      "top": 35,
+      "discounts": 0
+    },
+    {
+      "slug": "changsha",
+      "city": "Changsha",
+      "upcoming": 0,
+      "new": 1,
+      "top": 35,
+      "discounts": 1
+    },
+    {
+      "slug": "foshan",
+      "city": "Foshan",
+      "upcoming": 0,
+      "new": 1,
+      "top": 35,
+      "discounts": 0
+    },
+    {
+      "slug": "guangzhou",
+      "city": "Guangzhou",
+      "upcoming": 0,
+      "new": 1,
+      "top": 35,
+      "discounts": 11
+    },
+    {
+      "slug": "zhengzhou",
+      "city": "Zhengzhou",
+      "upcoming": 0,
+      "new": 1,
+      "top": 35,
+      "discounts": 0
+    },
+    {
+      "slug": "dongguan",
+      "city": "Dongguan",
+      "upcoming": 0,
+      "new": 1,
+      "top": 35,
+      "discounts": 1
+    },
+    {
+      "slug": "shenzhen",
+      "city": "Shenzhen",
+      "upcoming": 0,
+      "new": 6,
+      "top": 35,
+      "discounts": 15
+    },
+    {
+      "slug": "wuhan",
+      "city": "Wuhan",
+      "upcoming": 0,
+      "new": 1,
+      "top": 36,
+      "discounts": 3
+    },
+    {
+      "slug": "beijing",
+      "city": "Beijing",
+      "upcoming": 0,
+      "new": 1,
+      "top": 36,
+      "discounts": 35
+    },
+    {
+      "slug": "jinan",
+      "city": "Jinan",
+      "upcoming": 0,
+      "new": 1,
+      "top": 35,
+      "discounts": 3
+    },
+    {
+      "slug": "hefei",
+      "city": "Hefei",
+      "upcoming": 1,
+      "new": 2,
+      "top": 35,
+      "discounts": 1
+    },
+    {
+      "slug": "tianjin",
+      "city": "Tianjin",
+      "upcoming": 0,
+      "new": 0,
+      "top": 35,
+      "discounts": 3
+    },
+    {
+      "slug": "xiamen",
+      "city": "Xiamen",
+      "upcoming": 0,
+      "new": 0,
+      "top": 35,
+      "discounts": 1
+    },
+    {
+      "slug": "nanjing",
+      "city": "Nanjing",
+      "upcoming": 0,
+      "new": 1,
+      "top": 35,
+      "discounts": 3
+    },
+    {
+      "slug": "hangzhou",
+      "city": "Hangzhou",
+      "upcoming": 1,
+      "new": 1,
+      "top": 35,
+      "discounts": 22
+    },
+    {
+      "slug": "qingdao",
+      "city": "Qingdao",
+      "upcoming": 0,
+      "new": 1,
+      "top": 36,
+      "discounts": 2
+    },
+    {
+      "slug": "suzhou",
+      "city": "Suzhou",
+      "upcoming": 0,
+      "new": 1,
+      "top": 35,
+      "discounts": 8
+    },
+    {
+      "slug": "shanghai",
+      "city": "Shanghai",
+      "upcoming": 3,
+      "new": 3,
+      "top": 44,
+      "discounts": 36
+    },
+    {
+      "slug": "ningbo",
+      "city": "Ningbo",
+      "upcoming": 1,
+      "new": 0,
+      "top": 36,
+      "discounts": 2
+    },
+    {
+      "slug": "dalian",
+      "city": "Dalian",
+      "upcoming": 0,
+      "new": 0,
+      "top": 35,
+      "discounts": 2
+    },
+    {
+      "slug": "shenyang",
+      "city": "Shenyang",
+      "upcoming": 0,
+      "new": 0,
+      "top": 36,
+      "discounts": 2
+    },
+    {
+      "slug": "harbin",
+      "city": "Harbin",
+      "upcoming": 0,
+      "new": 0,
+      "top": 37,
+      "discounts": 3
+    }
+  ]
+}

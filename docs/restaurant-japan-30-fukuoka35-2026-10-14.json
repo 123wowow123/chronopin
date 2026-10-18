@@ -1,0 +1,563 @@
+{
+  "checkedAt": "2026-10-14",
+  "country": "Japan",
+  "regions": [
+    "fukuoka"
+  ],
+  "entries": [
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "SUMOMO BAKERY — Akasaka Keyaki-dori Opens in Akasaka",
+        "description": "A scratch bakery with a branch-specific opening menu of sweet and savoury breads and complimentary hot coffee for bread shoppers.",
+        "sourceUrl": "https://pukutoco.com/sumomobakery-akasaka1019open/",
+        "address": "1F f-style KEYAKI, 1-2-7 Akasaka, Chuo-ku, Fukuoka",
+        "productName": "SUMOMO BAKERY — Akasaka Keyaki-dori",
+        "utcStartDateTime": "2026-10-19T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "The branch-specific operator flyer and the photographed on-site opening sign confirm 2026-10-19; Pan Navi provides the year and independent branch reporting corroborates the address.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Fukuoka",
+          "Japan",
+          "Akasaka",
+          "Bakery"
+        ],
+        "longFormSummary": "<p>A scratch bakery with a branch-specific opening menu of sweet and savoury breads and complimentary hot coffee for bread shoppers.<cite data-ref=\"https://pukutoco.com/sumomobakery-akasaka1019open/\"></cite></p><p>The branch-specific operator flyer and the photographed on-site opening sign confirm 2026-10-19; Pan Navi provides the year and independent branch reporting corroborates the address.</p>",
+        "references": [
+          {
+            "url": "https://pukutoco.com/sumomobakery-akasaka1019open/",
+            "title": "SUMOMO BAKERY — Akasaka Keyaki-dori source",
+            "confidence": 90,
+            "reasoning": "The branch-specific operator flyer and the photographed on-site opening sign confirm 2026-10-19; Pan Navi provides the year and independent branch reporting corroborates the address."
+          },
+          {
+            "url": "https://panyasan-navi.net/?p=14013",
+            "title": "SUMOMO BAKERY — Akasaka Keyaki-dori source",
+            "confidence": 90,
+            "reasoning": "The branch-specific operator flyer and the photographed on-site opening sign confirm 2026-10-19; Pan Navi provides the year and independent branch reporting corroborates the address."
+          },
+          {
+            "url": "https://www.instagram.com/sumomo424_hatoya/",
+            "title": "SUMOMO BAKERY — Akasaka Keyaki-dori source",
+            "confidence": 90,
+            "reasoning": "The branch-specific operator flyer and the photographed on-site opening sign confirm 2026-10-19; Pan Navi provides the year and independent branch reporting corroborates the address."
+          },
+          {
+            "url": "https://hatoya-saiyou.jp/job/-/info/list?area=7",
+            "title": "SUMOMO BAKERY — Akasaka Keyaki-dori source",
+            "confidence": 90,
+            "reasoning": "The branch-specific operator flyer and the photographed on-site opening sign confirm 2026-10-19; Pan Navi provides the year and independent branch reporting corroborates the address."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://pukutoco.com/sumomobakery-akasaka1019open/",
+          "menu": {
+            "pinSourceUrl": "https://pukutoco.com/sumomobakery-akasaka1019open/",
+            "name": "SUMOMO BAKERY — Akasaka Keyaki-dori",
+            "checkedAt": "2026-10-14",
+            "menus": [
+              {
+                "label": "Branch opening menu",
+                "url": "https://panyasan-navi.net/?p=14013",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "黄金のきな粉もちもちパン — golden kinako chewy bread",
+                    "price": 194,
+                    "note": "Homemade sweet-potato filling"
+                  },
+                  {
+                    "name": "黒豚甘口カレーパン — mild black-pork curry bread",
+                    "price": 248
+                  },
+                  {
+                    "name": "はちみつフレンチトースト — honey French toast",
+                    "price": 237
+                  },
+                  {
+                    "name": "新食感生ドーナツ — soft-texture doughnut",
+                    "price": 216
+                  }
+                ],
+                "note": "Branch-specific operator opening flyer mirrored by Pan Navi, visually transcribed; tax-inclusive prices. Kinako bread contains homemade sweet-potato filling. Photographs are promotional examples, not a guarantee of daily availability. Four published items are a sample of the advertised approximately 100 breads. This branch’s curry bread and French-toast prices differ from the other new Fukuoka branch. Official Hatoya home/shop gallery returned timeout/502; checked linked operator Instagram and recruitment pages, local on-site opening-sign photographs and both branch flyers. No other-branch menu or food photograph borrowed. Exact closed days, complete menu and direct branch telephone remain unpublished; flyer phone 099-293-1226 is employer recruitment contact, not a verified shop number.",
+                "documentUrl": "https://panyasan-navi.net/wp-content/uploads/2026/10/836918184_18392623582200509_8897318626094444612_n.jpg"
+              },
+              {
+                "label": "Complimentary hot coffee",
+                "url": "https://panyasan-navi.net/?p=14013",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Hot coffee",
+                    "price": 0,
+                    "note": "Complimentary service for bread shoppers; bread purchase is paid separately"
+                  }
+                ],
+                "note": "The branch opening flyer advertises free hot coffee. Pan Navi explicitly describes bread-purchase eligibility for Nagaoka and coffee with shopping for Akasaka. No published end date, quantity limit or refill policy; confirm any unlisted conditions with the shop."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://pukutoco.com/sumomobakery-akasaka1019open/",
+            "name": "SUMOMO BAKERY — Akasaka Keyaki-dori",
+            "checkedAt": "2026-10-14",
+            "websiteUrl": "https://www.hatoya.co/",
+            "phone": null,
+            "openingHours": [
+              {
+                "days": "Published shop hours",
+                "hours": "08:00–19:00; closed days not published"
+              }
+            ],
+            "detailsSourceUrl": "https://www.hatoya.co/",
+            "additionalSources": [
+              {
+                "label": "Research evidence",
+                "url": "https://pukutoco.com/sumomobakery-akasaka1019open/"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://panyasan-navi.net/?p=14013"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://www.instagram.com/sumomo424_hatoya/"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://hatoya-saiyou.jp/job/-/info/list?area=7"
+              }
+            ]
+          },
+          "tile": {
+            "regionSlug": "fukuoka",
+            "kind": "opening",
+            "slug": "fukuoka35-sumomo-local",
+            "name": "SUMOMO BAKERY — Akasaka Keyaki-dori",
+            "neighborhood": "Akasaka",
+            "cuisine": "Bakery",
+            "description": "A scratch bakery with a branch-specific opening menu of sweet and savoury breads and complimentary hot coffee for bread shoppers.",
+            "address": "1F f-style KEYAKI, 1-2-7 Akasaka, Chuo-ku, Fukuoka",
+            "websiteUrl": "https://www.hatoya.co/",
+            "checkedAt": "2026-10-14",
+            "recognition": "",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/fukuoka/japan-30-2026-10-13/fukuoka35-sumomo-local-0-45cbfafa233e5e16.webp",
+            "imageCredit": "Pukutoco",
+            "imageSourceUrl": "https://pukutoco.com/sumomobakery-akasaka1019open/",
+            "imageNote": "Exterior of this SUMOMO BAKERY branch before opening, with its dated opening sign.",
+            "openingConfirmed": true,
+            "day": "2026-10-19"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/fukuoka/japan-30-2026-10-13/fukuoka35-sumomo-local-0-45cbfafa233e5e16.webp",
+          "sha256": "45cbfafa233e5e160718e2834804837a07cca86655170db2905db9aa45d25a6d",
+          "width": 1200,
+          "height": 673,
+          "credit": "Pukutoco",
+          "note": "Exterior of this SUMOMO BAKERY branch before opening, with its dated opening sign.",
+          "sourcePage": "https://pukutoco.com/sumomobakery-akasaka1019open/"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/fukuoka/japan-30-2026-10-13/fukuoka35-sumomo-local-3-cf6e2833880e4655.webp",
+          "sha256": "cf6e2833880e46555d319826c924692366302f96a5bdd518b924eed492ce001e",
+          "width": 1200,
+          "height": 1600,
+          "credit": "SUMOMO BAKERY / Hatoya, via Pan Navi",
+          "note": "Branch-specific operator opening flyer with named breads and tax-inclusive prices; food photographs are promotional examples.",
+          "sourcePage": "https://panyasan-navi.net/?p=14013"
+        }
+      ],
+      "special": {
+        "regionSlug": "fukuoka",
+        "profile": {
+          "pinSourceUrl": "https://pukutoco.com/sumomobakery-akasaka1019open/",
+          "name": "SUMOMO BAKERY — Akasaka Keyaki-dori",
+          "checkedAt": "2026-10-14",
+          "menus": [
+            {
+              "label": "Branch opening menu",
+              "url": "https://panyasan-navi.net/?p=14013",
+              "currency": "JPY",
+              "coverage": "sample",
+              "items": [
+                {
+                  "name": "黄金のきな粉もちもちパン — golden kinako chewy bread",
+                  "price": 194,
+                  "note": "Homemade sweet-potato filling"
+                },
+                {
+                  "name": "黒豚甘口カレーパン — mild black-pork curry bread",
+                  "price": 248
+                },
+                {
+                  "name": "はちみつフレンチトースト — honey French toast",
+                  "price": 237
+                },
+                {
+                  "name": "新食感生ドーナツ — soft-texture doughnut",
+                  "price": 216
+                }
+              ],
+              "note": "Branch-specific operator opening flyer mirrored by Pan Navi, visually transcribed; tax-inclusive prices. Kinako bread contains homemade sweet-potato filling. Photographs are promotional examples, not a guarantee of daily availability. Four published items are a sample of the advertised approximately 100 breads. This branch’s curry bread and French-toast prices differ from the other new Fukuoka branch. Official Hatoya home/shop gallery returned timeout/502; checked linked operator Instagram and recruitment pages, local on-site opening-sign photographs and both branch flyers. No other-branch menu or food photograph borrowed. Exact closed days, complete menu and direct branch telephone remain unpublished; flyer phone 099-293-1226 is employer recruitment contact, not a verified shop number.",
+              "documentUrl": "https://panyasan-navi.net/wp-content/uploads/2026/10/836918184_18392623582200509_8897318626094444612_n.jpg"
+            },
+            {
+              "label": "Complimentary hot coffee",
+              "url": "https://panyasan-navi.net/?p=14013",
+              "currency": "JPY",
+              "coverage": "sample",
+              "items": [
+                {
+                  "name": "Hot coffee",
+                  "price": 0,
+                  "note": "Complimentary service for bread shoppers; bread purchase is paid separately"
+                }
+              ],
+              "note": "The branch opening flyer advertises free hot coffee. Pan Navi explicitly describes bread-purchase eligibility for Nagaoka and coffee with shopping for Akasaka. No published end date, quantity limit or refill policy; confirm any unlisted conditions with the shop."
+            }
+          ],
+          "specials": [
+            {
+              "title": "Complimentary hot coffee with bread shopping",
+              "kind": "other",
+              "description": "A complimentary hot coffee when shopping for bread. Bread is charged at its published price.",
+              "sourceUrl": "https://panyasan-navi.net/?p=14013",
+              "menuLabel": "Complimentary hot coffee",
+              "discounted": true,
+              "validFrom": "2026-10-19",
+              "schedule": "Japan local time; see conditions",
+              "conditions": [
+                "Bread purchase required; coffee alone is not advertised as free.",
+                "Published shop hours 08:00–19:00; closed days are not published, so confirm before travelling.",
+                "No end date, quantity limit or refill terms published."
+              ],
+              "availability": {
+                "windows": [
+                  {
+                    "days": [
+                      0,
+                      1,
+                      2,
+                      3,
+                      4,
+                      5,
+                      6
+                    ],
+                    "start": "08:00",
+                    "end": "19:00"
+                  }
+                ]
+              }
+            }
+          ],
+          "address": "1F f-style KEYAKI, 1-2-7 Akasaka, Chuo-ku, Fukuoka",
+          "neighborhood": "Akasaka",
+          "websiteUrl": "https://www.hatoya.co/",
+          "photo": {
+            "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/fukuoka/japan-30-2026-10-13/fukuoka35-sumomo-local-0-45cbfafa233e5e16.webp",
+            "alt": "SUMOMO BAKERY — Akasaka Keyaki-dori — Exterior of this SUMOMO BAKERY branch before opening, with its dated opening sign.",
+            "credit": "Pukutoco",
+            "sourceUrl": "https://pukutoco.com/sumomobakery-akasaka1019open/",
+            "originalUrl": "https://pukutoco.com/wp-content/uploads/2026/10/IMG_4048_edited.jpg",
+            "checkedAt": "2026-10-14"
+          }
+        },
+        "enabled": true
+      }
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "SUMOMO BAKERY — Fukuoka Nagaoka Opens in Nagaoka",
+        "description": "A scratch bakery with a branch-specific opening menu of sweet and savoury breads and complimentary hot coffee for bread shoppers.",
+        "sourceUrl": "https://pukutoco.com/sumomo-bakery-1007open/",
+        "address": "3-10-8 Nagaoka, Minami-ku, Fukuoka",
+        "productName": "SUMOMO BAKERY — Fukuoka Nagaoka",
+        "utcStartDateTime": "2026-10-07T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "The branch-specific operator flyer and the photographed on-site opening sign confirm 2026-10-07; Pan Navi provides the year and independent branch reporting corroborates the address.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Fukuoka",
+          "Japan",
+          "Nagaoka",
+          "Bakery"
+        ],
+        "longFormSummary": "<p>A scratch bakery with a branch-specific opening menu of sweet and savoury breads and complimentary hot coffee for bread shoppers.<cite data-ref=\"https://pukutoco.com/sumomo-bakery-1007open/\"></cite></p><p>The branch-specific operator flyer and the photographed on-site opening sign confirm 2026-10-07; Pan Navi provides the year and independent branch reporting corroborates the address.</p>",
+        "references": [
+          {
+            "url": "https://pukutoco.com/sumomo-bakery-1007open/",
+            "title": "SUMOMO BAKERY — Fukuoka Nagaoka source",
+            "confidence": 90,
+            "reasoning": "The branch-specific operator flyer and the photographed on-site opening sign confirm 2026-10-07; Pan Navi provides the year and independent branch reporting corroborates the address."
+          },
+          {
+            "url": "https://panyasan-navi.net/?p=14009",
+            "title": "SUMOMO BAKERY — Fukuoka Nagaoka source",
+            "confidence": 90,
+            "reasoning": "The branch-specific operator flyer and the photographed on-site opening sign confirm 2026-10-07; Pan Navi provides the year and independent branch reporting corroborates the address."
+          },
+          {
+            "url": "https://www.instagram.com/sumomo424_hatoya/",
+            "title": "SUMOMO BAKERY — Fukuoka Nagaoka source",
+            "confidence": 90,
+            "reasoning": "The branch-specific operator flyer and the photographed on-site opening sign confirm 2026-10-07; Pan Navi provides the year and independent branch reporting corroborates the address."
+          },
+          {
+            "url": "https://hatoya-saiyou.jp/job/-/info/list?area=7",
+            "title": "SUMOMO BAKERY — Fukuoka Nagaoka source",
+            "confidence": 90,
+            "reasoning": "The branch-specific operator flyer and the photographed on-site opening sign confirm 2026-10-07; Pan Navi provides the year and independent branch reporting corroborates the address."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://pukutoco.com/sumomo-bakery-1007open/",
+          "menu": {
+            "pinSourceUrl": "https://pukutoco.com/sumomo-bakery-1007open/",
+            "name": "SUMOMO BAKERY — Fukuoka Nagaoka",
+            "checkedAt": "2026-10-14",
+            "menus": [
+              {
+                "label": "Branch opening menu",
+                "url": "https://panyasan-navi.net/?p=14009",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "黄金のきな粉もちもちパン — golden kinako chewy bread",
+                    "price": 194,
+                    "note": "Homemade sweet-potato filling"
+                  },
+                  {
+                    "name": "黒豚甘口カレーパン — mild black-pork curry bread",
+                    "price": 270
+                  },
+                  {
+                    "name": "はちみつフレンチトースト — honey French toast",
+                    "price": 259
+                  },
+                  {
+                    "name": "新食感生ドーナツ — soft-texture doughnut",
+                    "price": 216
+                  }
+                ],
+                "note": "Branch-specific operator opening flyer mirrored by Pan Navi, visually transcribed; tax-inclusive prices. Kinako bread contains homemade sweet-potato filling. Photographs are promotional examples, not a guarantee of daily availability. Four published items are a sample of the advertised approximately 100 breads. This branch’s curry bread and French-toast prices differ from the other new Fukuoka branch. Official Hatoya home/shop gallery returned timeout/502; checked linked operator Instagram and recruitment pages, local on-site opening-sign photographs and both branch flyers. No other-branch menu or food photograph borrowed. Exact closed days, complete menu and direct branch telephone remain unpublished; flyer phone 099-293-1226 is employer recruitment contact, not a verified shop number.",
+                "documentUrl": "https://panyasan-navi.net/wp-content/uploads/2026/10/796324079_18387551032200509_2094811247711476197_n.jpg"
+              },
+              {
+                "label": "Complimentary hot coffee",
+                "url": "https://panyasan-navi.net/?p=14009",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Hot coffee",
+                    "price": 0,
+                    "note": "Complimentary service for bread shoppers; bread purchase is paid separately"
+                  }
+                ],
+                "note": "The branch opening flyer advertises free hot coffee. Pan Navi explicitly describes bread-purchase eligibility for Nagaoka and coffee with shopping for Akasaka. No published end date, quantity limit or refill policy; confirm any unlisted conditions with the shop."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://pukutoco.com/sumomo-bakery-1007open/",
+            "name": "SUMOMO BAKERY — Fukuoka Nagaoka",
+            "checkedAt": "2026-10-14",
+            "websiteUrl": "https://www.hatoya.co/",
+            "phone": null,
+            "openingHours": [
+              {
+                "days": "Published shop hours",
+                "hours": "08:00–19:00; closed days not published"
+              }
+            ],
+            "detailsSourceUrl": "https://www.hatoya.co/",
+            "additionalSources": [
+              {
+                "label": "Research evidence",
+                "url": "https://pukutoco.com/sumomo-bakery-1007open/"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://panyasan-navi.net/?p=14009"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://www.instagram.com/sumomo424_hatoya/"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://hatoya-saiyou.jp/job/-/info/list?area=7"
+              }
+            ]
+          },
+          "tile": {
+            "regionSlug": "fukuoka",
+            "kind": "opening",
+            "slug": "fukuoka35-sumomo-nagaoka",
+            "name": "SUMOMO BAKERY — Fukuoka Nagaoka",
+            "neighborhood": "Nagaoka",
+            "cuisine": "Bakery",
+            "description": "A scratch bakery with a branch-specific opening menu of sweet and savoury breads and complimentary hot coffee for bread shoppers.",
+            "address": "3-10-8 Nagaoka, Minami-ku, Fukuoka",
+            "websiteUrl": "https://www.hatoya.co/",
+            "checkedAt": "2026-10-14",
+            "recognition": "",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/fukuoka/japan-30-2026-10-13/fukuoka35-sumomo-nagaoka-0-4134dd1a9ced6e4d.webp",
+            "imageCredit": "Pukutoco",
+            "imageSourceUrl": "https://pukutoco.com/sumomo-bakery-1007open/",
+            "imageNote": "Exterior of this SUMOMO BAKERY branch before opening, with its dated opening sign.",
+            "openingConfirmed": true,
+            "day": "2026-10-07"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/fukuoka/japan-30-2026-10-13/fukuoka35-sumomo-nagaoka-0-4134dd1a9ced6e4d.webp",
+          "sha256": "4134dd1a9ced6e4d39a88901d94a5815512027eed83fd0fe7babda20579dc7cb",
+          "width": 1200,
+          "height": 673,
+          "credit": "Pukutoco",
+          "note": "Exterior of this SUMOMO BAKERY branch before opening, with its dated opening sign.",
+          "sourcePage": "https://pukutoco.com/sumomo-bakery-1007open/"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/fukuoka/japan-30-2026-10-13/fukuoka35-sumomo-nagaoka-3-b6f6f79266b2757b.webp",
+          "sha256": "b6f6f79266b2757b3a1b0ca16e201b6f1112e2d7c20453a364233e9a1f0cc84a",
+          "width": 1200,
+          "height": 1599,
+          "credit": "SUMOMO BAKERY / Hatoya, via Pan Navi",
+          "note": "Branch-specific operator opening flyer with named breads and tax-inclusive prices; food photographs are promotional examples.",
+          "sourcePage": "https://panyasan-navi.net/?p=14009"
+        }
+      ],
+      "special": {
+        "regionSlug": "fukuoka",
+        "profile": {
+          "pinSourceUrl": "https://pukutoco.com/sumomo-bakery-1007open/",
+          "name": "SUMOMO BAKERY — Fukuoka Nagaoka",
+          "checkedAt": "2026-10-14",
+          "menus": [
+            {
+              "label": "Branch opening menu",
+              "url": "https://panyasan-navi.net/?p=14009",
+              "currency": "JPY",
+              "coverage": "sample",
+              "items": [
+                {
+                  "name": "黄金のきな粉もちもちパン — golden kinako chewy bread",
+                  "price": 194,
+                  "note": "Homemade sweet-potato filling"
+                },
+                {
+                  "name": "黒豚甘口カレーパン — mild black-pork curry bread",
+                  "price": 270
+                },
+                {
+                  "name": "はちみつフレンチトースト — honey French toast",
+                  "price": 259
+                },
+                {
+                  "name": "新食感生ドーナツ — soft-texture doughnut",
+                  "price": 216
+                }
+              ],
+              "note": "Branch-specific operator opening flyer mirrored by Pan Navi, visually transcribed; tax-inclusive prices. Kinako bread contains homemade sweet-potato filling. Photographs are promotional examples, not a guarantee of daily availability. Four published items are a sample of the advertised approximately 100 breads. This branch’s curry bread and French-toast prices differ from the other new Fukuoka branch. Official Hatoya home/shop gallery returned timeout/502; checked linked operator Instagram and recruitment pages, local on-site opening-sign photographs and both branch flyers. No other-branch menu or food photograph borrowed. Exact closed days, complete menu and direct branch telephone remain unpublished; flyer phone 099-293-1226 is employer recruitment contact, not a verified shop number.",
+              "documentUrl": "https://panyasan-navi.net/wp-content/uploads/2026/10/796324079_18387551032200509_2094811247711476197_n.jpg"
+            },
+            {
+              "label": "Complimentary hot coffee",
+              "url": "https://panyasan-navi.net/?p=14009",
+              "currency": "JPY",
+              "coverage": "sample",
+              "items": [
+                {
+                  "name": "Hot coffee",
+                  "price": 0,
+                  "note": "Complimentary service for bread shoppers; bread purchase is paid separately"
+                }
+              ],
+              "note": "The branch opening flyer advertises free hot coffee. Pan Navi explicitly describes bread-purchase eligibility for Nagaoka and coffee with shopping for Akasaka. No published end date, quantity limit or refill policy; confirm any unlisted conditions with the shop."
+            }
+          ],
+          "specials": [
+            {
+              "title": "Complimentary hot coffee with bread shopping",
+              "kind": "other",
+              "description": "A complimentary hot coffee when shopping for bread. Bread is charged at its published price.",
+              "sourceUrl": "https://panyasan-navi.net/?p=14009",
+              "menuLabel": "Complimentary hot coffee",
+              "discounted": true,
+              "validFrom": "2026-10-07",
+              "schedule": "Japan local time; see conditions",
+              "conditions": [
+                "Bread purchase required; coffee alone is not advertised as free.",
+                "Published shop hours 08:00–19:00; closed days are not published, so confirm before travelling.",
+                "No end date, quantity limit or refill terms published."
+              ],
+              "availability": {
+                "windows": [
+                  {
+                    "days": [
+                      0,
+                      1,
+                      2,
+                      3,
+                      4,
+                      5,
+                      6
+                    ],
+                    "start": "08:00",
+                    "end": "19:00"
+                  }
+                ]
+              }
+            }
+          ],
+          "address": "3-10-8 Nagaoka, Minami-ku, Fukuoka",
+          "neighborhood": "Nagaoka",
+          "websiteUrl": "https://www.hatoya.co/",
+          "photo": {
+            "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/fukuoka/japan-30-2026-10-13/fukuoka35-sumomo-nagaoka-0-4134dd1a9ced6e4d.webp",
+            "alt": "SUMOMO BAKERY — Fukuoka Nagaoka — Exterior of this SUMOMO BAKERY branch before opening, with its dated opening sign.",
+            "credit": "Pukutoco",
+            "sourceUrl": "https://pukutoco.com/sumomo-bakery-1007open/",
+            "originalUrl": "https://pukutoco.com/wp-content/uploads/2026/09/IMG_1825_edited.jpg",
+            "checkedAt": "2026-10-14"
+          }
+        },
+        "enabled": true
+      }
+    }
+  ]
+}

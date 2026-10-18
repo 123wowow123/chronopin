@@ -1,0 +1,306 @@
+{
+  "checkedAt": "2026-10-15",
+  "country": "Japan",
+  "regions": [
+    "fukuoka",
+    "osaka"
+  ],
+  "entries": [
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "RABBIT BAGELS — Daimaru Shinsaibashi Opens in Shinsaibashi",
+        "description": "A forthcoming takeaway bagel counter in Daimaru Shinsaibashi, scheduled to open October 29, 2026. No eat-in seating.",
+        "sourceUrl": "https://prtimes.jp/main/html/rd/p/000000005.000172916.html",
+        "address": "B1F Daimaru Shinsaibashi, 1-7-1 Shinsaibashisuji, Chuo-ku, Osaka",
+        "productName": "RABBIT BAGELS — Daimaru Shinsaibashi",
+        "utcStartDateTime": "2026-10-29T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "Operator October 5 release explicitly announces October 29, 2026 for the Daimaru Shinsaibashi B1F counter, distinct from the established Minamisenba branch.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Osaka",
+          "Japan",
+          "Shinsaibashi",
+          "Bagels / takeaway bakery"
+        ],
+        "longFormSummary": "<p>A forthcoming takeaway bagel counter in Daimaru Shinsaibashi, scheduled to open October 29, 2026. No eat-in seating.<cite data-ref=\"https://prtimes.jp/main/html/rd/p/000000005.000172916.html\"></cite></p><p>Operator October 5 release explicitly announces October 29, 2026 for the Daimaru Shinsaibashi B1F counter, distinct from the established Minamisenba branch.</p>",
+        "references": [
+          {
+            "url": "https://prtimes.jp/main/html/rd/p/000000005.000172916.html",
+            "title": "RABBIT BAGELS — Daimaru Shinsaibashi source",
+            "confidence": 90,
+            "reasoning": "Operator October 5 release explicitly announces October 29, 2026 for the Daimaru Shinsaibashi B1F counter, distinct from the established Minamisenba branch."
+          },
+          {
+            "url": "https://rabbitbagels.jp/menu.php",
+            "title": "RABBIT BAGELS — Daimaru Shinsaibashi source",
+            "confidence": 90,
+            "reasoning": "Operator October 5 release explicitly announces October 29, 2026 for the Daimaru Shinsaibashi B1F counter, distinct from the established Minamisenba branch."
+          },
+          {
+            "url": "https://www.daimaru.co.jp/shinsaibashi/",
+            "title": "RABBIT BAGELS — Daimaru Shinsaibashi source",
+            "confidence": 90,
+            "reasoning": "Operator October 5 release explicitly announces October 29, 2026 for the Daimaru Shinsaibashi B1F counter, distinct from the established Minamisenba branch."
+          },
+          {
+            "url": "https://panyasan-navi.net/?p=13983",
+            "title": "RABBIT BAGELS — Daimaru Shinsaibashi source",
+            "confidence": 90,
+            "reasoning": "Operator October 5 release explicitly announces October 29, 2026 for the Daimaru Shinsaibashi B1F counter, distinct from the established Minamisenba branch."
+          },
+          {
+            "url": "https://lalalapo-osaka.com/2026/10/05/osaka-shinsaibashi-rabbit-bagels/",
+            "title": "RABBIT BAGELS — Daimaru Shinsaibashi source",
+            "confidence": 90,
+            "reasoning": "Operator October 5 release explicitly announces October 29, 2026 for the Daimaru Shinsaibashi B1F counter, distinct from the established Minamisenba branch."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://prtimes.jp/main/html/rd/p/000000005.000172916.html",
+          "menu": {
+            "pinSourceUrl": "https://prtimes.jp/main/html/rd/p/000000005.000172916.html",
+            "name": "RABBIT BAGELS — Daimaru Shinsaibashi",
+            "checkedAt": "2026-10-15",
+            "menus": [
+              {
+                "label": "Announced launch offerings",
+                "url": "https://prtimes.jp/main/html/rd/p/000000005.000172916.html",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Sugar butter bagel",
+                    "priceLabel": "Price not published",
+                    "note": "Fermented butter and coarse sugar; named in operator launch release, exact branch price not published"
+                  },
+                  {
+                    "name": "Seasonal bagel sandwiches",
+                    "priceLabel": "Price not published",
+                    "note": "Launch release describes the category without naming this branch’s fillings or prices"
+                  }
+                ],
+                "note": "Operator October 5 launch release announces this exact Daimaru branch. Deep checked official site/shop list, linked menu.php and Instagram, Daimaru site, local opening reports and branch-specific price searches. Operator menu is brand-wide with store-dependent availability; local Pan Navi and Kansai Navi prices are explicitly reference prices and do not establish this counter’s payable launch prices. Only launch-release named offerings are shown, with prices unpublished; full branch assortment, prices and completed gallery remain gaps. Rendering is exact future counter, explicitly labelled. Existing Minamisenba Shinsaibashi shop has a different address, phone and hours and is not substituted."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://prtimes.jp/main/html/rd/p/000000005.000172916.html",
+            "name": "RABBIT BAGELS — Daimaru Shinsaibashi",
+            "checkedAt": "2026-10-15",
+            "websiteUrl": "https://rabbitbagels.jp/",
+            "phone": "06-6484-7650",
+            "openingHours": [
+              {
+                "days": "Planned daily",
+                "hours": "10:00–20:00; takeaway only"
+              }
+            ],
+            "detailsSourceUrl": "https://rabbitbagels.jp/",
+            "additionalSources": [
+              {
+                "label": "Research evidence",
+                "url": "https://prtimes.jp/main/html/rd/p/000000005.000172916.html"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://rabbitbagels.jp/menu.php"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://www.daimaru.co.jp/shinsaibashi/"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://panyasan-navi.net/?p=13983"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://lalalapo-osaka.com/2026/10/05/osaka-shinsaibashi-rabbit-bagels/"
+              }
+            ]
+          },
+          "tile": {
+            "regionSlug": "osaka",
+            "kind": "opening",
+            "slug": "rabbit-release",
+            "name": "RABBIT BAGELS — Daimaru Shinsaibashi",
+            "neighborhood": "Shinsaibashi",
+            "cuisine": "Bagels / takeaway bakery",
+            "description": "A forthcoming takeaway bagel counter in Daimaru Shinsaibashi, scheduled to open October 29, 2026. No eat-in seating.",
+            "address": "B1F Daimaru Shinsaibashi, 1-7-1 Shinsaibashisuji, Chuo-ku, Osaka",
+            "websiteUrl": "https://rabbitbagels.jp/",
+            "checkedAt": "2026-10-15",
+            "recognition": "",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-15/rabbit-plan-0-a2f3b093bde4a6be.webp",
+            "imageCredit": "RABBIT BAGELS / 株式会社ピープルズ",
+            "imageSourceUrl": "https://prtimes.jp/main/html/rd/p/000000005.000172916.html",
+            "imageNote": "Operator rendering of the planned Daimaru Shinsaibashi B1F counter; not a photograph of completed premises.",
+            "openingConfirmed": true,
+            "day": "2026-10-29"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-15/rabbit-plan-0-a2f3b093bde4a6be.webp",
+          "sha256": "a2f3b093bde4a6be036718d8617118a0d728b2efc49990a408b7a2036bbb5e6a",
+          "width": 1600,
+          "height": 900,
+          "credit": "RABBIT BAGELS / 株式会社ピープルズ",
+          "note": "Operator rendering of the planned Daimaru Shinsaibashi B1F counter; not a photograph of completed premises.",
+          "sourcePage": "https://prtimes.jp/main/html/rd/p/000000005.000172916.html"
+        }
+      ]
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Yakiniku Reimen Gensuke — Fukuoka Opens in Yakuin",
+        "description": "Gensuke’s first Fukuoka branch is planned for November 2026 near Yakuin Station, serving grade-5 wagyu and cold noodles. Exact opening day is not announced.",
+        "sourceUrl": "https://job.inshokuten.com/kyushu/work/detail/93587",
+        "address": "3F Yakuin Royal Building, 1-21-15 Shirogane, Chuo-ku, Fukuoka",
+        "productName": "Yakiniku Reimen Gensuke — Fukuoka",
+        "utcStartDateTime": "2026-11-30T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "Employer-operated recruitment explicitly states November 2026, corroborated by local reporting. November 30 is a month-end sorting placeholder, not a confirmed opening day.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Fukuoka",
+          "Japan",
+          "Yakuin",
+          "Yakiniku / cold noodles"
+        ],
+        "longFormSummary": "<p>Gensuke’s first Fukuoka branch is planned for November 2026 near Yakuin Station, serving grade-5 wagyu and cold noodles. Exact opening day is not announced.<cite data-ref=\"https://job.inshokuten.com/kyushu/work/detail/93587\"></cite></p><p>Employer-operated recruitment explicitly states November 2026, corroborated by local reporting. November 30 is a month-end sorting placeholder, not a confirmed opening day.</p>",
+        "references": [
+          {
+            "url": "https://job.inshokuten.com/kyushu/work/detail/93587",
+            "title": "Yakiniku Reimen Gensuke — Fukuoka source",
+            "confidence": 90,
+            "reasoning": "Employer-operated recruitment explicitly states November 2026, corroborated by local reporting. November 30 is a month-end sorting placeholder, not a confirmed opening day."
+          },
+          {
+            "url": "https://pukutoco.com/yakinikureimengensuke-11open/",
+            "title": "Yakiniku Reimen Gensuke — Fukuoka source",
+            "confidence": 90,
+            "reasoning": "Employer-operated recruitment explicitly states November 2026, corroborated by local reporting. November 30 is a month-end sorting placeholder, not a confirmed opening day."
+          },
+          {
+            "url": "https://www.y-chikurin.com/",
+            "title": "Yakiniku Reimen Gensuke — Fukuoka source",
+            "confidence": 90,
+            "reasoning": "Employer-operated recruitment explicitly states November 2026, corroborated by local reporting. November 30 is a month-end sorting placeholder, not a confirmed opening day."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://job.inshokuten.com/kyushu/work/detail/93587",
+          "menu": {
+            "pinSourceUrl": "https://job.inshokuten.com/kyushu/work/detail/93587",
+            "name": "Yakiniku Reimen Gensuke — Fukuoka",
+            "checkedAt": "2026-10-15",
+            "menus": [
+              {
+                "label": "Announced Fukuoka offering",
+                "url": "https://job.inshokuten.com/kyushu/work/detail/93587",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Grade-5 wagyu yakiniku",
+                    "priceLabel": "Price not published",
+                    "note": "Specific cuts, portions and prices not yet published"
+                  },
+                  {
+                    "name": "Cold noodles",
+                    "priceLabel": "Price not published",
+                    "note": "Exact varieties and price not yet published"
+                  }
+                ],
+                "note": "Exact-branch employer listing by 株式会社プラス1 confirms November 2026 and Yakuin Royal Building 3F; local October 5 report corroborates. Exact day remains unpublished. Deep checked employer listing and linked operator y-chikurin.com brand pages/recruitment, exact Fukuoka menu/gallery searches and local report. Only A5 wagyu and authentic cold noodles are confirmed for this branch; cuts, portions, prices, courses and public service hours remain unpublished. Recruitment 12:00–23:00 shift range is not dining hours; employee discounts are not public Specials. Nagasaki Google rating 4.7/803, yukhoe and tongue menu, menus/photos from Nagasaki, and former Kuramoto venue are excluded. Source building approach is explicitly labelled with predecessor signage; no finished Gensuke branch gallery found."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://job.inshokuten.com/kyushu/work/detail/93587",
+            "name": "Yakiniku Reimen Gensuke — Fukuoka",
+            "checkedAt": "2026-10-15",
+            "websiteUrl": "https://www.y-chikurin.com/",
+            "phone": null,
+            "openingHours": [
+              {
+                "days": "Public service hours",
+                "hours": "Not yet published"
+              },
+              {
+                "days": "Closures",
+                "hours": "Year-end/New Year and summer closures announced; dates not yet published"
+              }
+            ],
+            "detailsSourceUrl": "https://www.y-chikurin.com/",
+            "additionalSources": [
+              {
+                "label": "Research evidence",
+                "url": "https://job.inshokuten.com/kyushu/work/detail/93587"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://pukutoco.com/yakinikureimengensuke-11open/"
+              }
+            ]
+          },
+          "tile": {
+            "regionSlug": "fukuoka",
+            "kind": "opening",
+            "slug": "gensuke-job",
+            "name": "Yakiniku Reimen Gensuke — Fukuoka",
+            "neighborhood": "Yakuin",
+            "cuisine": "Yakiniku / cold noodles",
+            "description": "Gensuke’s first Fukuoka branch is planned for November 2026 near Yakuin Station, serving grade-5 wagyu and cold noodles. Exact opening day is not announced.",
+            "address": "3F Yakuin Royal Building, 1-21-15 Shirogane, Chuo-ku, Fukuoka",
+            "websiteUrl": "https://www.y-chikurin.com/",
+            "checkedAt": "2026-10-15",
+            "recognition": "",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-15/gensuke-building-0-18ef6bd24bc8aeea.webp",
+            "imageCredit": "ぷくとこ / pukutoco.com",
+            "imageSourceUrl": "https://pukutoco.com/yakinikureimengensuke-11open/",
+            "imageNote": "Yakuin Royal Building approach photographed in the branch opening report. Old Kuramoto signage remains visible; this is the host building, not a completed Gensuke interior."
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-15/gensuke-building-0-18ef6bd24bc8aeea.webp",
+          "sha256": "18ef6bd24bc8aeeafa652bb633162b7c83e018da083231db6c682f90904d3b71",
+          "width": 1210,
+          "height": 679,
+          "credit": "ぷくとこ / pukutoco.com",
+          "note": "Yakuin Royal Building approach photographed in the branch opening report. Old Kuramoto signage remains visible; this is the host building, not a completed Gensuke interior.",
+          "sourcePage": "https://pukutoco.com/yakinikureimengensuke-11open/"
+        }
+      ]
+    }
+  ]
+}

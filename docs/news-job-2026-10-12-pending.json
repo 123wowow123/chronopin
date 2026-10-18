@@ -1,0 +1,883 @@
+{
+  "date": "2026-10-12",
+  "job": "news",
+  "runId": 7,
+  "reason": "The author desks are outside the job curator allowlist; proposed readings require authorized review.",
+  "eventReadings": [
+    {
+      "pinId": 13924,
+      "sourceUrl": "https://grycan.pl/oferta/nowosci/"
+    },
+    {
+      "pinId": 7616,
+      "availability": "InStock",
+      "sourceUrl": "https://mundomezcal.mx/"
+    },
+    {
+      "pinId": 7650,
+      "lowPrice": 0,
+      "highPrice": 0,
+      "priceCurrency": "KRW",
+      "availability": "InStock",
+      "sourceUrl": "https://www.mcst.go.kr/site/s_culture/festival/festivalView.jsp?pSeq=11970"
+    },
+    {
+      "pinId": 7635,
+      "lowPrice": 5,
+      "highPrice": 5,
+      "priceCurrency": "GBP",
+      "availability": "InStock",
+      "ticketUrl": "https://cocoarunners.com/event/craft-chocolate-fair-entry-time-slots/",
+      "performers": [
+        {
+          "name": "James Hoffmann",
+          "type": "Person"
+        },
+        {
+          "name": "Maxwell Dashwood",
+          "type": "Person"
+        },
+        {
+          "name": "Peter McCombie",
+          "type": "Person"
+        },
+        {
+          "name": "Spencer Hyman",
+          "type": "Person"
+        }
+      ],
+      "sourceUrl": "https://cocoarunners.com/fair"
+    },
+    {
+      "pinId": 14240,
+      "sourceUrl": "https://english.beijing.gov.cn/whatson/events/forum/202609/t20260930_4886674.html"
+    },
+    {
+      "pinId": 7649,
+      "sourceUrl": "https://pannofes.jp/event/makuhari2026/",
+      "lowPrice": 0,
+      "highPrice": 0,
+      "priceCurrency": "JPY",
+      "availability": "InStock"
+    },
+    {
+      "pinId": 7592,
+      "sourceUrl": "https://www.worldchocolatemasters.com/final-2026"
+    },
+    {
+      "pinId": 7630,
+      "sourceUrl": "https://www.salon-du-chocolat.com/en/paris",
+      "availability": "InStock",
+      "ticketUrl": "https://www.salon-du-chocolat.com/en/paris/practical-info/buy-my-ticket",
+      "performers": [
+        {
+          "name": "Jordan Talbot",
+          "type": "Person"
+        },
+        {
+          "name": "Maxence Barbot",
+          "type": "Person"
+        },
+        {
+          "name": "Johan Giacchetti",
+          "type": "Person"
+        },
+        {
+          "name": "Matthieu Carlin",
+          "type": "Person"
+        }
+      ]
+    },
+    {
+      "pinId": 7648,
+      "sourceUrl": "https://number.bunshun.jp/ud/pressrelease/6a5889271262179c88000001",
+      "lowPrice": 0,
+      "highPrice": 0,
+      "priceCurrency": "JPY",
+      "availability": "InStock"
+    },
+    {
+      "pinId": 7652,
+      "sourceUrl": "https://pannofes.jp/event/minamioosawa2026/",
+      "lowPrice": 0,
+      "highPrice": 0,
+      "priceCurrency": "JPY",
+      "availability": "InStock"
+    },
+    {
+      "pinId": 7623,
+      "sourceUrl": "https://newshub.medianet.com.au/2026/08/hong-kong-wine-dine-festival-returns-this-autumn/166941/"
+    },
+    {
+      "pinId": 7608,
+      "sourceUrl": "https://prtimes.jp/main/html/rd/p/000000328.000119996.html",
+      "lowPrice": 3500,
+      "highPrice": 5000,
+      "priceCurrency": "JPY",
+      "tiers": [
+        {
+          "label": "Premium Night",
+          "price": 3500,
+          "note": "Tax included"
+        },
+        {
+          "label": "Part 1",
+          "price": 5000,
+          "note": "Tax included"
+        },
+        {
+          "label": "Part 2",
+          "price": 5000,
+          "note": "Tax included"
+        }
+      ]
+    },
+    {
+      "pinId": 7609,
+      "sourceUrl": "https://www.foodandrum.com/events/",
+      "availability": "InStock",
+      "lowPrice": 200,
+      "highPrice": 500,
+      "priceCurrency": "BBD",
+      "ticketUrl": "https://www.foodandrum.com/events/",
+      "tiers": [
+        {
+          "label": "Rum Route",
+          "price": 200
+        },
+        {
+          "label": "Rise & Rum",
+          "price": 250
+        },
+        {
+          "label": "Liquid Gold",
+          "price": 350
+        },
+        {
+          "label": "Rise & Rum + Liquid Gold combo",
+          "price": 500
+        }
+      ]
+    },
+    {
+      "pinId": 7627,
+      "sourceUrl": "https://gff.co.uk/for-producers/world-cheese-awards/",
+      "ticketUrl": "https://internationalcheesefestival.com/tickets-2/?lang=en"
+    },
+    {
+      "pinId": 7631,
+      "sourceUrl": "https://www.eurochocolate.com/perugia2026/",
+      "lowPrice": 0,
+      "highPrice": 0,
+      "priceCurrency": "EUR",
+      "availability": "InStock"
+    },
+    {
+      "pinId": 13975,
+      "sourceUrl": "https://www.infobae.com/inhouse/2026/08/31/dia-nacional-del-helado-artesanal-las-claves-de-un-sector-que-busca-crecer-y-aumentar-el-consumo-de-cara-al-proximo-verano/"
+    },
+    {
+      "pinId": 13925,
+      "sourceUrl": "https://sherbeth.it/"
+    },
+    {
+      "pinId": 7625,
+      "sourceUrl": "https://sakematsuri.sg/",
+      "availability": "InStock",
+      "ticketUrl": "https://sakematsuri.sg/pages/tickets-sake-matsuri-2026",
+      "lowPrice": 50,
+      "highPrice": 128,
+      "priceCurrency": "SGD",
+      "tiers": [
+        {
+          "label": "Early Bird",
+          "price": 50,
+          "note": "Until October 31; GST included"
+        },
+        {
+          "label": "Regular",
+          "price": 60,
+          "note": "GST included"
+        },
+        {
+          "label": "VIP",
+          "price": 128,
+          "note": "GST included"
+        }
+      ]
+    },
+    {
+      "pinId": 7643,
+      "sourceUrl": "https://swg3.tv/events/2027/january/scottish-national-whisky-festival-2027/",
+      "ticketUrl": "https://www.ticketmaster.co.uk/scottish-national-whisky-festival-tickets/artist/5417900"
+    },
+    {
+      "pinId": 7651,
+      "sourceUrl": "https://pannofes.jp/event/umekitakouen2026/",
+      "lowPrice": 0,
+      "highPrice": 0,
+      "priceCurrency": "JPY",
+      "availability": "InStock",
+      "tiers": [
+        {
+          "label": "General admission",
+          "price": 0,
+          "note": "Some bakery-area time slots will be paid; price not published."
+        }
+      ]
+    },
+    {
+      "pinId": 14233,
+      "sourceUrl": "https://cnevpost.com/2026/06/08/2026-shenzhen-auto-show-closes-next-edition-jun-5-2027/"
+    },
+    {
+      "pinId": 3690,
+      "sourceUrl": "https://chineseparade.com/faq/"
+    },
+    {
+      "pinId": 14168,
+      "sourceUrl": "https://cnevpost.com/2026/09/24/next-beijing-auto-show-mar-27-apr-5-2027/"
+    }
+  ],
+  "sentimentReadings": [
+    {
+      "id": 221,
+      "sentiment": 0.1,
+      "product": "Hinkley Point C",
+      "textHash": "02f667268896",
+      "author": "@ThePinGang",
+      "hash": "02f66726889637eb9c8966475ace64ec8744f9f1de80cdff025e5449853f6e01",
+      "matched": false
+    },
+    {
+      "id": 4095,
+      "sentiment": 0,
+      "product": "",
+      "textHash": "09430fcc91bb",
+      "author": "@LuxuryDesk",
+      "hash": "09430fcc91bbe08c010744876f615a3326dce4c39c90552a6b1e1ac212826c4e",
+      "matched": false
+    },
+    {
+      "id": 7585,
+      "sentiment": 0.1,
+      "product": "",
+      "textHash": "5144156429f6",
+      "author": "@DrinksDesk",
+      "hash": "5144156429f6d483b72cb08f5f94a7aab34e749c2af616a0e169b771175b9744",
+      "matched": false
+    },
+    {
+      "id": 7586,
+      "sentiment": 0.1,
+      "product": "",
+      "textHash": "99b7a6af9819",
+      "author": "@DrinksDesk",
+      "hash": "99b7a6af9819a05dace230df5e819a910c286414be434df67b863835daf858d4",
+      "matched": false
+    },
+    {
+      "id": 7587,
+      "sentiment": 0.1,
+      "product": "",
+      "textHash": "5f95e1bc807f",
+      "author": "@DrinksDesk",
+      "hash": "5f95e1bc807f8071662e0c765625ff84d12d47786b98c39cf1eb7b64843ca107",
+      "matched": false
+    },
+    {
+      "id": 7588,
+      "sentiment": 0.1,
+      "product": "",
+      "textHash": "ee1af9b2fa68",
+      "author": "@DrinksDesk",
+      "hash": "ee1af9b2fa6885a723cedf17611961aa8a161ab201f3e832796a655cb6730f74",
+      "matched": false
+    },
+    {
+      "id": 7589,
+      "sentiment": 0.1,
+      "product": "",
+      "textHash": "209117e9c4e0",
+      "author": "@DrinksDesk",
+      "hash": "209117e9c4e0099772440d92cd1d7027028b6db7d6f22a6896fed0f8968c096c",
+      "matched": false
+    },
+    {
+      "id": 7590,
+      "sentiment": 0.1,
+      "product": "",
+      "textHash": "9235563a9ce1",
+      "author": "@DrinksDesk",
+      "hash": "9235563a9ce1621d0a3f85845d9f51efbde21d3fd215228bfd6f10198bb0a895",
+      "matched": false
+    },
+    {
+      "id": 7591,
+      "sentiment": 0.1,
+      "product": "",
+      "textHash": "622e4e19be47",
+      "author": "@DrinksDesk",
+      "hash": "622e4e19be479abe88c50ed8abbdd31fbf92c963fcddd7fe23fee11439035eed",
+      "matched": false
+    },
+    {
+      "id": 7592,
+      "sentiment": 0.1,
+      "product": "",
+      "textHash": "dd57f3994527",
+      "author": "@SnackDesk",
+      "hash": "dd57f399452775d2387f988c58b7beed0666808572e57d76522a488431c573e2",
+      "matched": false
+    },
+    {
+      "id": 7593,
+      "sentiment": 0.1,
+      "product": "",
+      "textHash": "27fa22a95de7",
+      "author": "@SnackDesk",
+      "hash": "27fa22a95de7d132043c1bc3bd68bf19ea1bb1508e21d355a7f2718173cd1694",
+      "matched": false
+    },
+    {
+      "id": 7594,
+      "sentiment": 0.25,
+      "product": "",
+      "textHash": "32b0c13ec11b",
+      "author": "@SnackDesk",
+      "hash": "32b0c13ec11b954533a834e14ab9b42120a825f72a295cbe3de7aacb466d9c66",
+      "matched": false
+    },
+    {
+      "id": 7595,
+      "sentiment": 0.1,
+      "product": "",
+      "textHash": "c1b146415e10",
+      "author": "@SnackDesk",
+      "hash": "c1b146415e10a92b24f921122461252e0500598eae526f1b8cb9d0f1f1e84242",
+      "matched": false
+    },
+    {
+      "id": 7596,
+      "sentiment": 0.15,
+      "product": "",
+      "textHash": "cbc49c5dd918",
+      "author": "@SnackDesk",
+      "hash": "cbc49c5dd918d2c65c9dc5e9258b903d1f8377978ec8d46ec8855fbc9676911a",
+      "matched": false
+    },
+    {
+      "id": 7597,
+      "sentiment": 0.2,
+      "product": "",
+      "textHash": "98e7577669f3",
+      "author": "@SnackDesk",
+      "hash": "98e7577669f36dc3020c0e003e895191b0896163b646599ec6149f492b70ff60",
+      "matched": false
+    },
+    {
+      "id": 7598,
+      "sentiment": 0.1,
+      "product": "",
+      "textHash": "d2b7558b2233",
+      "author": "@SnackDesk",
+      "hash": "d2b7558b223369c6306fba0ae4c4937030d37df0f6ba43c17f3787c85dc7c67d",
+      "matched": false
+    },
+    {
+      "id": 7599,
+      "sentiment": 0.1,
+      "product": "",
+      "textHash": "96f7fdcdb47c",
+      "author": "@SnackDesk",
+      "hash": "96f7fdcdb47ce64a58f3dcb30f8aa9b44af232e35cb5f98c84ebc87e0294d1d2",
+      "matched": false
+    },
+    {
+      "id": 7600,
+      "sentiment": 0.1,
+      "product": "",
+      "textHash": "870404bec16f",
+      "author": "@DrinksDesk",
+      "hash": "870404bec16f6a5ae669affbf3bb96817808c485d036c67c3a4bec2085035fdd",
+      "matched": false
+    },
+    {
+      "id": 7601,
+      "sentiment": 0.1,
+      "product": "",
+      "textHash": "8e9249292856",
+      "author": "@DrinksDesk",
+      "hash": "8e92492928564d600d4f675dee7decab7c318f30959367370575af5ea8427bbf",
+      "matched": false
+    },
+    {
+      "id": 7602,
+      "sentiment": 0.1,
+      "product": "",
+      "textHash": "836fe7afb603",
+      "author": "@DrinksDesk",
+      "hash": "836fe7afb603fbcb57495adeff9d89fed50877341d07913997b52ac91c137cbb",
+      "matched": false
+    },
+    {
+      "id": 7603,
+      "sentiment": 0.1,
+      "product": "",
+      "textHash": "657bf08d9286",
+      "author": "@DrinksDesk",
+      "hash": "657bf08d928621a1f9fbf8e30e4392415ec32c6d42a5e39d9852b45efa0acea6",
+      "matched": false
+    },
+    {
+      "id": 7604,
+      "sentiment": 0.1,
+      "product": "",
+      "textHash": "1d19bf32368b",
+      "author": "@DrinksDesk",
+      "hash": "1d19bf32368bc834dbc1e1a03f4f517025838754ec06440328bc7538bdaa5131",
+      "matched": false
+    },
+    {
+      "id": 7605,
+      "sentiment": 0.2,
+      "product": "",
+      "textHash": "31fade1d699b",
+      "author": "@DrinksDesk",
+      "hash": "31fade1d699b25060789b56166ea2ac70f4629dec50f0d0af0bb55904a3070c9",
+      "matched": false
+    },
+    {
+      "id": 7606,
+      "sentiment": 0.1,
+      "product": "",
+      "textHash": "a32da04ab586",
+      "author": "@DrinksDesk",
+      "hash": "a32da04ab5863de0d2442dc4ba0b81fbcd0b4d20513befe860d6d6ad9e1d41e1",
+      "matched": false
+    },
+    {
+      "id": 7607,
+      "sentiment": 0.1,
+      "product": "",
+      "textHash": "3ef1cfe7d13e",
+      "author": "@DrinksDesk",
+      "hash": "3ef1cfe7d13ee14beae35fee36c34ef32014539b2554048ecb45d78ee5cae542",
+      "matched": false
+    },
+    {
+      "id": 7608,
+      "sentiment": 0.1,
+      "product": "",
+      "textHash": "5b1b7180d5ac",
+      "author": "@DrinksDesk",
+      "hash": "5b1b7180d5ac8c2c1548ee322f532c065939dfb4119d2d81fa55f2086ec644ce",
+      "matched": false
+    },
+    {
+      "id": 7609,
+      "sentiment": 0.1,
+      "product": "",
+      "textHash": "23b1ecdda062",
+      "author": "@DrinksDesk",
+      "hash": "23b1ecdda0620181e8ad501538e08ae6985a69e973c5c47710fb42f220af8553",
+      "matched": false
+    },
+    {
+      "id": 7610,
+      "sentiment": 0.15,
+      "product": "",
+      "textHash": "0458242166e2",
+      "author": "@DrinksDesk",
+      "hash": "0458242166e2a41622a1dc17190e6c0fada8743af28b543b37aec56fbb886d33",
+      "matched": false
+    },
+    {
+      "id": 7611,
+      "sentiment": 0.1,
+      "product": "",
+      "textHash": "3067d052a1bf",
+      "author": "@DrinksDesk",
+      "hash": "3067d052a1bf6a59811a6e337aa1f94c0d48997031de9ae1f7508f6e8b5d98dd",
+      "matched": false
+    },
+    {
+      "id": 7612,
+      "sentiment": 0.1,
+      "product": "",
+      "textHash": "ec86d6e72706",
+      "author": "@DrinksDesk",
+      "hash": "ec86d6e7270691d23e740316b4467eb8e1c966148952cad208a11aea336218f2",
+      "matched": false
+    },
+    {
+      "id": 7613,
+      "sentiment": 0.1,
+      "product": "",
+      "textHash": "b66fcdd5b644",
+      "author": "@DrinksDesk",
+      "hash": "b66fcdd5b64432d6fb0af637a2b29053e3b5ec33900f9ac0968c82fc60396299",
+      "matched": false
+    },
+    {
+      "id": 7614,
+      "sentiment": 0.1,
+      "product": "",
+      "textHash": "e2dcca67e4bb",
+      "author": "@DrinksDesk",
+      "hash": "e2dcca67e4bb103d9ae4f5f513bd27c6d20ecaa660b8a5d05fc3e7f4e4bfb762",
+      "matched": false
+    },
+    {
+      "id": 7615,
+      "sentiment": 0.1,
+      "product": "",
+      "textHash": "4649568990a5",
+      "author": "@DrinksDesk",
+      "hash": "4649568990a58e01256baf216d2d9c0a1c191a39594018541efcaa9d20a7b89f",
+      "matched": false
+    },
+    {
+      "id": 7616,
+      "sentiment": 0.1,
+      "product": "",
+      "textHash": "25a3510c6a73",
+      "author": "@DrinksDesk",
+      "hash": "25a3510c6a734c683a9a26cb060565d54ab479b0a2331716e71a62de54a2c2df",
+      "matched": false
+    },
+    {
+      "id": 7617,
+      "sentiment": 0.1,
+      "product": "",
+      "textHash": "422272aff1f1",
+      "author": "@DrinksDesk",
+      "hash": "422272aff1f137bac1722a8ac4687a9b864a2f42eb5676c18c986856c013d12c",
+      "matched": false
+    },
+    {
+      "id": 7618,
+      "sentiment": 0.1,
+      "product": "",
+      "textHash": "5b047530232e",
+      "author": "@DrinksDesk",
+      "hash": "5b047530232ee6dab4490934156a0b77968aa5386f461793b6610bb3c5b6c245",
+      "matched": false
+    },
+    {
+      "id": 7619,
+      "sentiment": 0.1,
+      "product": "",
+      "textHash": "ee74d2e623fe",
+      "author": "@DrinksDesk",
+      "hash": "ee74d2e623fec5316fc749f6c3fa5909a048625257fcd0d068a11577cbe78048",
+      "matched": false
+    },
+    {
+      "id": 7620,
+      "sentiment": 0.1,
+      "product": "",
+      "textHash": "36c3ceee226d",
+      "author": "@DrinksDesk",
+      "hash": "36c3ceee226d958c021fb4b0e5d805e89fc8b38411c5bb46c742402240d47564",
+      "matched": false
+    },
+    {
+      "id": 7621,
+      "sentiment": 0.1,
+      "product": "",
+      "textHash": "5c1130d2f800",
+      "author": "@DrinksDesk",
+      "hash": "5c1130d2f8008cdd236a005e10e23448a8700e67e189f6927ba8b816667d0d95",
+      "matched": false
+    },
+    {
+      "id": 7622,
+      "sentiment": 0.1,
+      "product": "",
+      "textHash": "6d14e34c658a",
+      "author": "@DrinksDesk",
+      "hash": "6d14e34c658aa2fa2a090321ba59954db1f0250db9c45979dde01a1eb606bb0f",
+      "matched": false
+    },
+    {
+      "id": 7623,
+      "sentiment": 0.1,
+      "product": "",
+      "textHash": "87b49fa3fda1",
+      "author": "@DrinksDesk",
+      "hash": "87b49fa3fda147d83b51cd7f6cdfdea3a2f0c3be1202d9c556cbee0a7ed52ffc",
+      "matched": false
+    },
+    {
+      "id": 7624,
+      "sentiment": 0.1,
+      "product": "",
+      "textHash": "75ace820643d",
+      "author": "@DrinksDesk",
+      "hash": "75ace820643d34057cdf4444c90e01aaf9f852cca34943e9e70601795751c33c",
+      "matched": false
+    },
+    {
+      "id": 7625,
+      "sentiment": 0.1,
+      "product": "",
+      "textHash": "c188864e84d1",
+      "author": "@DrinksDesk",
+      "hash": "c188864e84d1b13df94304a52872fc91a0eca179833e737a1e8d263763846b23",
+      "matched": false
+    },
+    {
+      "id": 7626,
+      "sentiment": 0.2,
+      "product": "",
+      "textHash": "00e0f90e9457",
+      "author": "@SnackDesk",
+      "hash": "00e0f90e9457b32ed70f5e5b3d1243f324b78b90a5b07c6a1f9125ec0e79a77a",
+      "matched": false
+    },
+    {
+      "id": 7627,
+      "sentiment": 0.1,
+      "product": "",
+      "textHash": "dcb1730fb6d4",
+      "author": "@SnackDesk",
+      "hash": "dcb1730fb6d45ea47558180a033bbf542b7b54913f248647f4c6439d839375f7",
+      "matched": false
+    },
+    {
+      "id": 7628,
+      "sentiment": 0.1,
+      "product": "",
+      "textHash": "a4d5f4a5283b",
+      "author": "@DrinksDesk",
+      "hash": "a4d5f4a5283b05636708e135b8479c0dc5d1310a9b5675e19d6e0796de51b431",
+      "matched": false
+    },
+    {
+      "id": 7629,
+      "sentiment": 0.15,
+      "product": "",
+      "textHash": "15f107b781c9",
+      "author": "@DrinksDesk",
+      "hash": "15f107b781c91b8ae1a3a5714c14b514192d637901aecaaeedaa99cefe55f45e",
+      "matched": false
+    },
+    {
+      "id": 7630,
+      "sentiment": 0.1,
+      "product": "",
+      "textHash": "e39a8af7d69f",
+      "author": "@SnackDesk",
+      "hash": "e39a8af7d69f16f0f9397b9b89c50366594b6013aa9b33c64bc238dda4871892",
+      "matched": false
+    },
+    {
+      "id": 7631,
+      "sentiment": 0.1,
+      "product": "",
+      "textHash": "bebbffbabc8d",
+      "author": "@SnackDesk",
+      "hash": "bebbffbabc8ddac88e659bdbf67dd8c57c7cb33516cfbe4581195af523b1b710",
+      "matched": false
+    },
+    {
+      "id": 7632,
+      "sentiment": 0.1,
+      "product": "",
+      "textHash": "382b3222a235",
+      "author": "@SnackDesk",
+      "hash": "382b3222a235be970944bebb4bf11b9959aceea7e3cd21f15d3ac0746f00b2f2",
+      "matched": false
+    },
+    {
+      "id": 7633,
+      "sentiment": 0.4,
+      "product": "Good Beer Guide",
+      "textHash": "52dc81e675b7",
+      "author": "@DrinksDesk",
+      "hash": "52dc81e675b72304a0ee9487c4ab647aa0c1c25215f60f7aeeab007cb60ddee9",
+      "matched": false
+    },
+    {
+      "id": 7634,
+      "sentiment": 0.1,
+      "product": "",
+      "textHash": "15b36302fd0f",
+      "author": "@SnackDesk",
+      "hash": "15b36302fd0fb3d08ca4310c6d17bfddae8d1151252b5b269051c74a75f31f9b",
+      "matched": false
+    },
+    {
+      "id": 7635,
+      "sentiment": 0.1,
+      "product": "",
+      "textHash": "f656c34cf8ef",
+      "author": "@SnackDesk",
+      "hash": "f656c34cf8ef5daecb9d20a48bcdfcd2beef8d4d71695329a3db7abd6deee7ab",
+      "matched": false
+    },
+    {
+      "id": 7636,
+      "sentiment": 0.2,
+      "product": "",
+      "textHash": "3ff333cda8b3",
+      "author": "@DrinksDesk",
+      "hash": "3ff333cda8b3c779325932d81f37057455bf168d712e6bd28497ee6eec48e6b0",
+      "matched": false
+    },
+    {
+      "id": 7637,
+      "sentiment": 0.1,
+      "product": "",
+      "textHash": "9d5e6f1675c0",
+      "author": "@DrinksDesk",
+      "hash": "9d5e6f1675c0f3b3d25cc39220f8da40ba9b5e9b1caa1c807cc7e6ffd59791c7",
+      "matched": false
+    },
+    {
+      "id": 7638,
+      "sentiment": 0.9,
+      "product": "Cass",
+      "textHash": "7de1677d1b49",
+      "author": "@DrinksDesk",
+      "hash": "7de1677d1b49d15ad9d8c37a2ba3c3bec913bde61f7cf2c2f14285a430e6f7de",
+      "matched": false
+    },
+    {
+      "id": 7639,
+      "sentiment": 0.1,
+      "product": "",
+      "textHash": "b2c2378aa6f4",
+      "author": "@DrinksDesk",
+      "hash": "b2c2378aa6f49bf3a950cf62e126ddb4f245c44699232a01bb29ff5dcb82a5f3",
+      "matched": false
+    },
+    {
+      "id": 7640,
+      "sentiment": 0.2,
+      "product": "",
+      "textHash": "c1db051c7dd5",
+      "author": "@DrinksDesk",
+      "hash": "c1db051c7dd5979afff507a90c666988af19561b3658b1a0739672af73da7396",
+      "matched": false
+    },
+    {
+      "id": 7641,
+      "sentiment": 0.1,
+      "product": "",
+      "textHash": "89226fc00b08",
+      "author": "@DrinksDesk",
+      "hash": "89226fc00b0825c8015724240c016ec7e8e49b730dbba0e335d25d22cb445d3f",
+      "matched": false
+    },
+    {
+      "id": 7642,
+      "sentiment": 0.1,
+      "product": "",
+      "textHash": "b0f4608b18de",
+      "author": "@DrinksDesk",
+      "hash": "b0f4608b18de0ed7660d919043992b83a88f2a4e9ae89a2480d845609195e918",
+      "matched": false
+    },
+    {
+      "id": 7643,
+      "sentiment": 0.1,
+      "product": "",
+      "textHash": "d11f19af1ea0",
+      "author": "@DrinksDesk",
+      "hash": "d11f19af1ea0093716dfdd37baef360497349dc6c7098ba85139524c5f5af5f5",
+      "matched": false
+    },
+    {
+      "id": 7644,
+      "sentiment": 0.1,
+      "product": "",
+      "textHash": "e59fef4a3e8d",
+      "author": "@DrinksDesk",
+      "hash": "e59fef4a3e8ddfe0fb5a8f9bfa33f988815c099d73d250c48f960fe83f9f61fb",
+      "matched": false
+    },
+    {
+      "id": 7645,
+      "sentiment": 0.1,
+      "product": "",
+      "textHash": "208ed823b84b",
+      "author": "@DrinksDesk",
+      "hash": "208ed823b84b58ff7b13fb465f4e9b4cb8c5b103332c727df796df1ab2d0065d",
+      "matched": false
+    },
+    {
+      "id": 7646,
+      "sentiment": 0.1,
+      "product": "",
+      "textHash": "8786a9accb96",
+      "author": "@DrinksDesk",
+      "hash": "8786a9accb962660197a65c670b656d24ef7bd287be8c668b15de43279495838",
+      "matched": false
+    },
+    {
+      "id": 7647,
+      "sentiment": 0.2,
+      "product": "",
+      "textHash": "5c159b21b4bb",
+      "author": "@SnackDesk",
+      "hash": "5c159b21b4bb6122e4d12ee03da5c9efdeded2878248f02440d2437ed86bbc11",
+      "matched": false
+    },
+    {
+      "id": 7648,
+      "sentiment": 0.1,
+      "product": "",
+      "textHash": "d81561cd0ba2",
+      "author": "@SnackDesk",
+      "hash": "d81561cd0ba2a113e557deb7f01e39a8ff653090eaae65b4e071b367f50ecbca",
+      "matched": false
+    },
+    {
+      "id": 7649,
+      "sentiment": 0.1,
+      "product": "",
+      "textHash": "8e7f417a1181",
+      "author": "@SnackDesk",
+      "hash": "8e7f417a1181d13e5b535923daa2b92b449f15cc8a913b23b1f540640097d2fa",
+      "matched": false
+    },
+    {
+      "id": 7650,
+      "sentiment": 0.1,
+      "product": "",
+      "textHash": "f0f548cf908c",
+      "author": "@SnackDesk",
+      "hash": "f0f548cf908cb761ce8460ab6990d0e4da37eddfae16df7152cb64ecd1c9cbc3",
+      "matched": false
+    },
+    {
+      "id": 7651,
+      "sentiment": 0.3,
+      "product": "",
+      "textHash": "2d7a03676bf8",
+      "author": "@SnackDesk",
+      "hash": "2d7a03676bf80a20beeaa04734a6e49b9f2d01c013f594d58713077019a7a94e",
+      "matched": false
+    },
+    {
+      "id": 7652,
+      "sentiment": 0.1,
+      "product": "",
+      "textHash": "8c31436efd46",
+      "author": "@SnackDesk",
+      "hash": "8c31436efd463a1f837684fdcf304a09b65232825651ec70798816ee43404e2f",
+      "matched": false
+    },
+    {
+      "id": 7655,
+      "sentiment": 0.4,
+      "product": "POP LAYERS",
+      "textHash": "e7df2f367ca4",
+      "author": "@SnackDesk",
+      "hash": "e7df2f367ca406907651ec35db63411c577b01aab32933afabd8c23ee982cfa4",
+      "matched": false
+    }
+  ]
+}

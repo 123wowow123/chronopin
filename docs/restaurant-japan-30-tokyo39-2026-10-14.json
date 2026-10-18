@@ -1,0 +1,699 @@
+{
+  "checkedAt": "2026-10-14",
+  "country": "Japan",
+  "regions": [
+    "tokyo"
+  ],
+  "entries": [
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Randy’s Donuts — Tokyo Solamachi Opens in Oshiage",
+        "description": "A forthcoming takeaway-only doughnut counter opening October 29,with a branch-limited strawberry-matcha doughnut and a three-day opening giveaway.",
+        "sourceUrl": "https://prtimes.jp/main/html/rd/p/000000048.000152772.html",
+        "address": "2F Tower Yard,Tokyo Skytree Town Solamachi,1-1-2 Oshiage,Sumida-ku,Tokyo",
+        "productName": "Randy’s Donuts — Tokyo Solamachi",
+        "utcStartDateTime": "2026-10-29T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "Grit International and landlord announcements both confirm October 29,2026 opening of the specific Solamachi counter.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Tokyo",
+          "Japan",
+          "Oshiage",
+          "Doughnuts / takeaway"
+        ],
+        "longFormSummary": "<p>A forthcoming takeaway-only doughnut counter opening October 29,with a branch-limited strawberry-matcha doughnut and a three-day opening giveaway.</p><p>Grit International and landlord announcements both confirm October 29,2026 opening of the specific Solamachi counter.</p>",
+        "references": [
+          {
+            "url": "https://prtimes.jp/main/html/rd/p/000000048.000152772.html",
+            "title": "Randy’s Donuts — Tokyo Solamachi source",
+            "confidence": 90,
+            "reasoning": "Grit International and landlord announcements both confirm October29,2026 opening of the specificSolamachi counter."
+          },
+          {
+            "url": "https://prtimes.jp/main/html/rd/p/000000458.000041446.html",
+            "title": "Randy’s Donuts — Tokyo Solamachi source",
+            "confidence": 90,
+            "reasoning": "Grit International and landlord announcements both confirm October29,2026 opening of the specificSolamachi counter."
+          },
+          {
+            "url": "https://randysdonuts.jp/",
+            "title": "Randy’s Donuts — Tokyo Solamachi source",
+            "confidence": 90,
+            "reasoning": "Grit International and landlord announcements both confirm October29,2026 opening of the specificSolamachi counter."
+          },
+          {
+            "url": "https://randysdonuts.jp/menu",
+            "title": "Randy’s Donuts — Tokyo Solamachi source",
+            "confidence": 90,
+            "reasoning": "Grit International and landlord announcements both confirm October29,2026 opening of the specificSolamachi counter."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://prtimes.jp/main/html/rd/p/000000048.000152772.html",
+          "menu": {
+            "pinSourceUrl": "https://prtimes.jp/main/html/rd/p/000000048.000152772.html",
+            "name": "Randy’s Donuts — Tokyo Solamachi",
+            "checkedAt": "2026-10-14",
+            "menus": [
+              {
+                "label": "Announced Solamachi doughnuts",
+                "url": "https://prtimes.jp/main/html/rd/p/000000048.000152772.html",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Glazed Raised",
+                    "price": 380
+                  },
+                  {
+                    "name": "Pink Sprinkles Iced Cake",
+                    "price": 410
+                  },
+                  {
+                    "name": "Cinnamon Sugar Twist",
+                    "price": 470
+                  },
+                  {
+                    "name": "Pink Raised with Sprinkles",
+                    "price": 470
+                  },
+                  {
+                    "name": "Matcha Tea Raised",
+                    "price": 510
+                  },
+                  {
+                    "name": "Coconut Raised",
+                    "price": 510
+                  },
+                  {
+                    "name": "S’mores Raised",
+                    "price": 580
+                  },
+                  {
+                    "name": "Chocolate Candy Raised",
+                    "price": 580
+                  },
+                  {
+                    "name": "Bacon Maple Long John",
+                    "price": 580
+                  },
+                  {
+                    "name": "Bear Claw",
+                    "price": 610
+                  }
+                ],
+                "note": "Tax included. Named/price examples from the October 8 operator release specifically announcing Solamachi. Assortment rotates; a claim of 40+ doughnuts does not guarantee every item at all times. Linked general menu PDF is dated May 2025 and has older¥350/¥440/¥480 starting prices: excluded in favour of current October 2026 release and HTML prices. Drinks are only supplied at Daikanyama/Yurakucho per current menu; none assigned to this takeaway branch."
+              },
+              {
+                "label": "Solamachi opening limited doughnut",
+                "url": "https://prtimes.jp/main/html/rd/p/000000048.000152772.html",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Strawberry Matcha Raised",
+                    "price": 610,
+                    "note": "Matcha chocolate,freeze-dried strawberry and star sprinkles"
+                  }
+                ],
+                "note": "October 29–November 19,2026 planned; tax included. Actual branch limited item, not the former first-Japan-store product. Subject to stock."
+              },
+              {
+                "label": "Opening giveaway — daily first 100",
+                "url": "https://prtimes.jp/main/html/rd/p/000000048.000152772.html",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Glazed Raised — opening giveaway",
+                    "price": 0,
+                    "note": "One doughnut for each of the first 100 visitors each day,October 29–31"
+                  }
+                ],
+                "note": "October 29–31 only,100 per day. Operator does not state a separate purchase condition for this doughnut giveaway; do not infer one from the separate¥5,000 merchandise gift campaign. Allocation may finish soon after opening; opening-hour schedule does not guarantee remaining stock."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://prtimes.jp/main/html/rd/p/000000048.000152772.html",
+            "name": "Randy’s Donuts — Tokyo Solamachi",
+            "checkedAt": "2026-10-14",
+            "websiteUrl": "https://randysdonuts.jp/",
+            "phone": null,
+            "openingHours": [
+              {
+                "days": "Daily",
+                "hours": "10:00–21:00;closed days follow Tokyo Solamachi"
+              },
+              {
+                "days": "Seating",
+                "hours": "None;takeaway only"
+              },
+              {
+                "days": "Gallery",
+                "hours": "Two planned-counter renderings and namedoperator productphotos;completedbranchphotos not yet published"
+              }
+            ],
+            "detailsSourceUrl": "https://randysdonuts.jp/",
+            "additionalSources": [
+              {
+                "label": "Research evidence",
+                "url": "https://prtimes.jp/main/html/rd/p/000000048.000152772.html"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://prtimes.jp/main/html/rd/p/000000458.000041446.html"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://randysdonuts.jp/menu"
+              }
+            ]
+          },
+          "tile": {
+            "regionSlug": "tokyo",
+            "kind": "opening",
+            "slug": "tokyo39-randy-pr",
+            "name": "Randy’s Donuts — Tokyo Solamachi",
+            "neighborhood": "Oshiage",
+            "cuisine": "Doughnuts / takeaway",
+            "description": "A forthcoming takeaway-only doughnut counter opening October 29,with a branch-limited strawberry-matcha doughnut and a three-day opening giveaway.",
+            "address": "2F Tower Yard,Tokyo Skytree Town Solamachi,1-1-2 Oshiage,Sumida-ku,Tokyo",
+            "websiteUrl": "https://randysdonuts.jp/",
+            "checkedAt": "2026-10-14",
+            "recognition": "",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/tokyo/japan-30-2026-10-13/tokyo39-randy-pr-0-d328eb673ebed6d7.webp",
+            "imageCredit": "Randy’s Donuts Japan / Grit International",
+            "imageSourceUrl": "https://prtimes.jp/main/html/rd/p/000000048.000152772.html",
+            "imageNote": "Solamachi takeaway counter: operator architectural rendering, not a completed venue photograph.",
+            "openingConfirmed": true,
+            "day": "2026-10-29"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/tokyo/japan-30-2026-10-13/tokyo39-randy-pr-0-d328eb673ebed6d7.webp",
+          "sha256": "d328eb673ebed6d71395d272326b1a6e7ec480fdecb86a62839ad06bca611c19",
+          "width": 1200,
+          "height": 675,
+          "credit": "Randy’s Donuts Japan / Grit International",
+          "note": "Solamachi takeaway counter: operator architectural rendering, not a completed venue photograph.",
+          "sourcePage": "https://prtimes.jp/main/html/rd/p/000000048.000152772.html"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/tokyo/japan-30-2026-10-13/tokyo39-randy-pr-1-57fb653835d2e152.webp",
+          "sha256": "57fb653835d2e1529039cd3a70af931f5029af8f419aa8e3785987469626cfe1",
+          "width": 1200,
+          "height": 675,
+          "credit": "Randy’s Donuts Japan / Grit International",
+          "note": "Solamachi counter from another angle: operator architectural rendering.",
+          "sourcePage": "https://prtimes.jp/main/html/rd/p/000000048.000152772.html"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/tokyo/japan-30-2026-10-13/tokyo39-randy-pr-3-1624f154d34bc94f.webp",
+          "sha256": "1624f154d34bc94fa2e4a526cd1c5698b7735b6167a66a114a6e0d3777649e55",
+          "width": 1200,
+          "height": 900,
+          "credit": "Randy’s Donuts Japan / Grit International",
+          "note": "Strawberry Matcha Raised, the named Solamachi limited doughnut, October 29–November 19,2026 planned.",
+          "sourcePage": "https://prtimes.jp/main/html/rd/p/000000048.000152772.html"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/tokyo/japan-30-2026-10-13/tokyo39-randy-pr-6-4cb18094a7f0b9c6.webp",
+          "sha256": "4cb18094a7f0b9c6225e96d05b4f91f572934778c17d908d2e2e9ebe8220fb6c",
+          "width": 1200,
+          "height": 900,
+          "credit": "Randy’s Donuts Japan / Grit International",
+          "note": "Glazed Raised, the named regular doughnut and October 29–31 daily first 100 opening giveaway.",
+          "sourcePage": "https://prtimes.jp/main/html/rd/p/000000048.000152772.html"
+        }
+      ],
+      "special": {
+        "regionSlug": "tokyo",
+        "profile": {
+          "pinSourceUrl": "https://prtimes.jp/main/html/rd/p/000000048.000152772.html",
+          "name": "Randy’s Donuts — Tokyo Solamachi",
+          "checkedAt": "2026-10-14",
+          "menus": [
+            {
+              "label": "Announced Solamachi doughnuts",
+              "url": "https://prtimes.jp/main/html/rd/p/000000048.000152772.html",
+              "currency": "JPY",
+              "coverage": "sample",
+              "items": [
+                {
+                  "name": "Glazed Raised",
+                  "price": 380
+                },
+                {
+                  "name": "Pink Sprinkles Iced Cake",
+                  "price": 410
+                },
+                {
+                  "name": "Cinnamon Sugar Twist",
+                  "price": 470
+                },
+                {
+                  "name": "Pink Raised with Sprinkles",
+                  "price": 470
+                },
+                {
+                  "name": "Matcha Tea Raised",
+                  "price": 510
+                },
+                {
+                  "name": "Coconut Raised",
+                  "price": 510
+                },
+                {
+                  "name": "S’mores Raised",
+                  "price": 580
+                },
+                {
+                  "name": "Chocolate Candy Raised",
+                  "price": 580
+                },
+                {
+                  "name": "Bacon Maple Long John",
+                  "price": 580
+                },
+                {
+                  "name": "Bear Claw",
+                  "price": 610
+                }
+              ],
+              "note": "Tax included. Named/price examples from the October 8 operator release specifically announcing Solamachi. Assortment rotates; a claim of 40+ doughnuts does not guarantee every item at all times. Linked general menu PDF is dated May 2025 and has older¥350/¥440/¥480 starting prices: excluded in favour of current October 2026 release and HTML prices. Drinks are only supplied at Daikanyama/Yurakucho per current menu; none assigned to this takeaway branch."
+            },
+            {
+              "label": "Solamachi opening limited doughnut",
+              "url": "https://prtimes.jp/main/html/rd/p/000000048.000152772.html",
+              "currency": "JPY",
+              "coverage": "sample",
+              "items": [
+                {
+                  "name": "Strawberry Matcha Raised",
+                  "price": 610,
+                  "note": "Matcha chocolate,freeze-dried strawberry and star sprinkles"
+                }
+              ],
+              "note": "October 29–November 19,2026 planned; tax included. Actual branch limited item, not the former first-Japan-store product. Subject to stock."
+            },
+            {
+              "label": "Opening giveaway — daily first 100",
+              "url": "https://prtimes.jp/main/html/rd/p/000000048.000152772.html",
+              "currency": "JPY",
+              "coverage": "sample",
+              "items": [
+                {
+                  "name": "Glazed Raised — opening giveaway",
+                  "price": 0,
+                  "note": "One doughnut for each of the first 100 visitors each day,October 29–31"
+                }
+              ],
+              "note": "October 29–31 only,100 per day. Operator does not state a separate purchase condition for this doughnut giveaway; do not infer one from the separate¥5,000 merchandise gift campaign. Allocation may finish soon after opening; opening-hour schedule does not guarantee remaining stock."
+            }
+          ],
+          "specials": [
+            {
+              "title": "Solamachi limited Strawberry Matcha Raised",
+              "kind": "other",
+              "description": "The branch-limited strawberry-matcha doughnut,¥610 including tax, planned through November 19.",
+              "sourceUrl": "https://prtimes.jp/main/html/rd/p/000000048.000152772.html",
+              "menuLabel": "Solamachi opening limited doughnut",
+              "discounted": false,
+              "validFrom": "2026-10-29",
+              "validThrough": "2026-11-19",
+              "schedule": "Japan local time; see conditions",
+              "conditions": [
+                "Subject to stock and announced schedule changes."
+              ],
+              "availability": {
+                "windows": [
+                  {
+                    "days": [
+                      0,
+                      1,
+                      2,
+                      3,
+                      4,
+                      5,
+                      6
+                    ],
+                    "start": "10:00",
+                    "end": "21:00"
+                  }
+                ]
+              },
+              "limitedTime": true
+            },
+            {
+              "title": "Opening giveaway — first 100 each day",
+              "kind": "other",
+              "description": "One complimentary Glazed Raised for each of the first 100 visitors daily during the three-day opening giveaway.",
+              "sourceUrl": "https://prtimes.jp/main/html/rd/p/000000048.000152772.html",
+              "menuLabel": "Opening giveaway — daily first 100",
+              "discounted": true,
+              "validFrom": "2026-10-29",
+              "validThrough": "2026-10-31",
+              "schedule": "Japan local time; see conditions",
+              "conditions": [
+                "100 per day; stock may finish shortly after opening.",
+                "One doughnut per eligible visitor; no separate purchase requirement stated for this giveaway."
+              ],
+              "availability": {
+                "windows": [
+                  {
+                    "days": [
+                      0,
+                      1,
+                      2,
+                      3,
+                      4,
+                      5,
+                      6
+                    ],
+                    "start": "10:00",
+                    "end": "21:00"
+                  }
+                ]
+              }
+            }
+          ],
+          "address": "2F Tower Yard,Tokyo Skytree Town Solamachi,1-1-2 Oshiage,Sumida-ku,Tokyo",
+          "neighborhood": "Oshiage",
+          "websiteUrl": "https://randysdonuts.jp/",
+          "photo": {
+            "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/tokyo/japan-30-2026-10-13/tokyo39-randy-pr-0-d328eb673ebed6d7.webp",
+            "alt": "Randy’s Donuts — Tokyo Solamachi — Solamachi takeaway counter: operator architectural rendering, not a completed venue photograph.",
+            "credit": "Randy’s Donuts Japan / Grit International",
+            "sourceUrl": "https://prtimes.jp/main/html/rd/p/000000048.000152772.html",
+            "originalUrl": "https://prcdn.freetls.fastly.net/release_image/152772/48/152772-48-8d782e6298227894a0461b2a1e6cd21b-1280x720.png?width=1950&height=1350&quality=85%2C75&format=jpeg&auto=webp&fit=bounds&bg-color=fff",
+            "checkedAt": "2026-10-14"
+          }
+        },
+        "enabled": true
+      }
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Gong cha — Tokyo Solamachi Opens in Oshiage",
+        "description": "A forthcoming Gong cha tea café in Solamachi’s Food Marche,confirmed to open October 29,2026.",
+        "sourceUrl": "https://www.tokyo-solamachi.jp/shop/2438/",
+        "address": "2F Tower Yard,6th zone,Tokyo Solamachi,1-1-2 Oshiage,Sumida-ku,Tokyo",
+        "productName": "Gong cha — Tokyo Solamachi",
+        "utcStartDateTime": "2026-10-29T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "Landlord October 1,2026 operator announcement and cached specific shop 2438 page confirm October 29 opening.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Tokyo",
+          "Japan",
+          "Oshiage",
+          "Tea café"
+        ],
+        "longFormSummary": "<p>A forthcoming Gong cha tea café in Solamachi’s Food Marche,confirmed to open October 29,2026.</p><p>Landlord October 1,2026 operator announcement and cached specific shop 2438 page confirm October 29 opening.</p>",
+        "references": [
+          {
+            "url": "https://www.tokyo-solamachi.jp/shop/2438/",
+            "title": "Gong cha — Tokyo Solamachi source",
+            "confidence": 90,
+            "reasoning": "Landlord October1,2026 operatorannouncement and cached specificshop2438page confirmOctober29 opening."
+          },
+          {
+            "url": "https://prtimes.jp/main/html/rd/p/000000458.000041446.html",
+            "title": "Gong cha — Tokyo Solamachi source",
+            "confidence": 90,
+            "reasoning": "Landlord October1,2026 operatorannouncement and cached specificshop2438page confirmOctober29 opening."
+          },
+          {
+            "url": "https://pro.tokyo-solamachi.jp/shop/2438/",
+            "title": "Gong cha — Tokyo Solamachi source",
+            "confidence": 90,
+            "reasoning": "Landlord October1,2026 operatorannouncement and cached specificshop2438page confirmOctober29 opening."
+          },
+          {
+            "url": "https://www.gongcha.co.jp/storeinfo/",
+            "title": "Gong cha — Tokyo Solamachi source",
+            "confidence": 90,
+            "reasoning": "Landlord October1,2026 operatorannouncement and cached specificshop2438page confirmOctober29 opening."
+          },
+          {
+            "url": "https://www.gongcha.co.jp/menu/",
+            "title": "Gong cha — Tokyo Solamachi source",
+            "confidence": 90,
+            "reasoning": "Landlord October1,2026 operatorannouncement and cached specificshop2438page confirmOctober29 opening."
+          },
+          {
+            "url": "https://www.gongcha.co.jp/autumn-roast-hojicha-2026/",
+            "title": "Gong cha — Tokyo Solamachi source",
+            "confidence": 90,
+            "reasoning": "Landlord October1,2026 operatorannouncement and cached specificshop2438page confirmOctober29 opening."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://www.tokyo-solamachi.jp/shop/2438/",
+          "menu": {
+            "pinSourceUrl": "https://www.tokyo-solamachi.jp/shop/2438/",
+            "name": "Gong cha — Tokyo Solamachi",
+            "checkedAt": "2026-10-14",
+            "menus": [
+              {
+                "label": "Solamachi launch menu — publication pending",
+                "url": "https://www.tokyo-solamachi.jp/shop/2438/",
+                "currency": "JPY",
+                "coverage": "link",
+                "items": [],
+                "note": "Deep checked landlord October 1 release and cached exact branch page 2438, Gongcha official home/new store news, store finder, general menu categories and October 14 autumn-hojicha announcement, exact branch searches and official social/gallery links. Canonical landlord website currently serves a server-provider outage notice; pro subdomain connection refused via curl although cached officialbranch text is readable. No exact branch launchmenu, direct phone, seating, pricedfood/drink roster or actualvenue gallery has been published. Generalchain seasonal drinks have per-store stock end dates and no Solamachi eligibility confirmation; not indexed as launch Special. Other-branch menus/photos not borrowed. Remaining gaps are precise launch assortment/prices, direct contact and completed venue gallery."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://www.tokyo-solamachi.jp/shop/2438/",
+            "name": "Gong cha — Tokyo Solamachi",
+            "checkedAt": "2026-10-14",
+            "websiteUrl": "https://www.gongcha.co.jp/",
+            "phone": null,
+            "openingHours": [
+              {
+                "days": "Daily",
+                "hours": "10:00–21:00;direct branch phone andseating not published"
+              }
+            ],
+            "detailsSourceUrl": "https://www.gongcha.co.jp/",
+            "additionalSources": [
+              {
+                "label": "Research evidence",
+                "url": "https://www.tokyo-solamachi.jp/shop/2438/"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://prtimes.jp/main/html/rd/p/000000458.000041446.html"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://pro.tokyo-solamachi.jp/shop/2438/"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://www.gongcha.co.jp/storeinfo/"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://www.gongcha.co.jp/menu/"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://www.gongcha.co.jp/autumn-roast-hojicha-2026/"
+              }
+            ]
+          },
+          "tile": {
+            "regionSlug": "tokyo",
+            "kind": "opening",
+            "slug": "tokyo39-gongcha-landlord",
+            "name": "Gong cha — Tokyo Solamachi",
+            "neighborhood": "Oshiage",
+            "cuisine": "Tea café",
+            "description": "A forthcoming Gong cha tea café in Solamachi’s Food Marche,confirmed to open October 29,2026.",
+            "address": "2F Tower Yard,6th zone,Tokyo Solamachi,1-1-2 Oshiage,Sumida-ku,Tokyo",
+            "websiteUrl": "https://www.gongcha.co.jp/",
+            "checkedAt": "2026-10-14",
+            "recognition": "",
+            "priceRange": "",
+            "image": null,
+            "imageCredit": "",
+            "openingConfirmed": true,
+            "day": "2026-10-29"
+          }
+        },
+        "enabled": true
+      },
+      "photos": []
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Eggs ’n Things — Tokyo Solamachi Opens in Oshiage",
+        "description": "An announced Hawaiian all-day breakfast restaurant at Solamachi’s East Yard,planned for winter 2026; exact opening month and day have not been announced.",
+        "sourceUrl": "https://prtimes.jp/main/html/rd/p/000000458.000041446.html#eggs-n-things",
+        "address": "1F East Yard,Tokyo Solamachi,1-1-2 Oshiage,Sumida-ku,Tokyo",
+        "productName": "Eggs ’n Things — Tokyo Solamachi",
+        "utcStartDateTime": "2026-12-31T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "Late 2026 target: landlord announces winter 2026 with no exact month/day. December 31 is sorting only,not an announcedopening date.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Tokyo",
+          "Japan",
+          "Oshiage",
+          "Hawaiian breakfast café"
+        ],
+        "longFormSummary": "<p>An announced Hawaiian all-day breakfast restaurant at Solamachi’s East Yard,planned for winter 2026; exact opening month and day have not been announced.</p><p>Late 2026 target: landlord announces winter 2026 with no exact month/day. December 31 is sorting only,not an announcedopening date.</p>",
+        "references": [
+          {
+            "url": "https://prtimes.jp/main/html/rd/p/000000458.000041446.html#eggs-n-things",
+            "title": "Eggs ’n Things — Tokyo Solamachi source",
+            "confidence": 90,
+            "reasoning": "Late2026 target: landlord announces winter2026 with no exactmonth/day. December31 is sorting only,not an announcedopening date."
+          },
+          {
+            "url": "https://prtimes.jp/main/html/rd/p/000000458.000041446.html",
+            "title": "Eggs ’n Things — Tokyo Solamachi source",
+            "confidence": 90,
+            "reasoning": "Late2026 target: landlord announces winter2026 with no exactmonth/day. December31 is sorting only,not an announcedopening date."
+          },
+          {
+            "url": "https://www.eggsnthingsjapan.com/",
+            "title": "Eggs ’n Things — Tokyo Solamachi source",
+            "confidence": 90,
+            "reasoning": "Late2026 target: landlord announces winter2026 with no exactmonth/day. December31 is sorting only,not an announcedopening date."
+          },
+          {
+            "url": "https://www.eggsnthingsjapan.com/store/",
+            "title": "Eggs ’n Things — Tokyo Solamachi source",
+            "confidence": 90,
+            "reasoning": "Late2026 target: landlord announces winter2026 with no exactmonth/day. December31 is sorting only,not an announcedopening date."
+          },
+          {
+            "url": "https://www.eggsnthingsjapan.com/menu/",
+            "title": "Eggs ’n Things — Tokyo Solamachi source",
+            "confidence": 90,
+            "reasoning": "Late2026 target: landlord announces winter2026 with no exactmonth/day. December31 is sorting only,not an announcedopening date."
+          },
+          {
+            "url": "https://sumida.keizai.biz/headline/1998/",
+            "title": "Eggs ’n Things — Tokyo Solamachi source",
+            "confidence": 90,
+            "reasoning": "Late2026 target: landlord announces winter2026 with no exactmonth/day. December31 is sorting only,not an announcedopening date."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://prtimes.jp/main/html/rd/p/000000458.000041446.html#eggs-n-things",
+          "menu": {
+            "pinSourceUrl": "https://prtimes.jp/main/html/rd/p/000000458.000041446.html#eggs-n-things",
+            "name": "Eggs ’n Things — Tokyo Solamachi",
+            "checkedAt": "2026-10-14",
+            "menus": [
+              {
+                "label": "Solamachi opening menu — publication pending",
+                "url": "https://prtimes.jp/main/html/rd/p/000000458.000041446.html#eggs-n-things",
+                "currency": "JPY",
+                "coverage": "link",
+                "items": [],
+                "note": "Landlord announces 2026 winter,without exactday/month; December 31 is a late 2026 sorting placeholder only. Deep checked landlord primaryrelease and current local reporting, operator home/news,store list, food/pancake/drink/setmenu links, exact Solamachi searches and gallery links. Operatorstore list doesnotyetinclude Solamachi; no new branch pricedmenu, direct phone, seating, bookingpage or completed venue gallery found. Otherbranch/chain seasonal October dishes end before winter launch and are not copied as opening items. Landlordgeneric Eggs’n Things photograph not verified as this branch: excluded. Remaining gaps: exactday/month, full branch menu/prices, direct contact, actual gallery and reservations. No qualifyingbranch Special verified."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://prtimes.jp/main/html/rd/p/000000458.000041446.html#eggs-n-things",
+            "name": "Eggs ’n Things — Tokyo Solamachi",
+            "checkedAt": "2026-10-14",
+            "websiteUrl": "https://www.eggsnthingsjapan.com/",
+            "phone": null,
+            "openingHours": [
+              {
+                "days": "Planned hours",
+                "hours": "09:00–22:00;exact opening day andclosed days not published"
+              }
+            ],
+            "detailsSourceUrl": "https://www.eggsnthingsjapan.com/",
+            "additionalSources": [
+              {
+                "label": "Research evidence",
+                "url": "https://prtimes.jp/main/html/rd/p/000000458.000041446.html#eggs-n-things"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://prtimes.jp/main/html/rd/p/000000458.000041446.html"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://www.eggsnthingsjapan.com/store/"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://www.eggsnthingsjapan.com/menu/"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://sumida.keizai.biz/headline/1998/"
+              }
+            ]
+          },
+          "tile": {
+            "regionSlug": "tokyo",
+            "kind": "opening",
+            "slug": "tokyo39-eggs-announcement",
+            "name": "Eggs ’n Things — Tokyo Solamachi",
+            "neighborhood": "Oshiage",
+            "cuisine": "Hawaiian breakfast café",
+            "description": "An announced Hawaiian all-day breakfast restaurant at Solamachi’s East Yard,planned for winter 2026; exact opening month and day have not been announced.",
+            "address": "1F East Yard,Tokyo Solamachi,1-1-2 Oshiage,Sumida-ku,Tokyo",
+            "websiteUrl": "https://www.eggsnthingsjapan.com/",
+            "checkedAt": "2026-10-14",
+            "recognition": "",
+            "priceRange": "",
+            "image": null,
+            "imageCredit": "",
+            "openingConfirmed": false
+          }
+        },
+        "enabled": true
+      },
+      "photos": []
+    }
+  ]
+}

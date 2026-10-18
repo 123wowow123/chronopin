@@ -1,0 +1,597 @@
+import { describe, expect, it } from 'vitest';
+import {
+  adAllowed,
+  adCategory,
+  adTag,
+  expandAvoid,
+  ageOn,
+  type AdCandidate,
+  type AdContext,
+  parseAmazonTags,
+  parseUrgency,
+  qualityWeight,
+  performanceWeight,
+  personalWeight,
+  pickAds,
+  regionFromAcceptLanguage,
+  relatedness,
+  rewardWeight,
+  servingStore,
+  storeForLocale,
+  tagForStore,
+  taggedAdUrl,
+  pickSponsoredAds,
+  validateAmazonTags,
+  watchBrand,
+  sneakerAd,
+  legoAd,
+  huntingAd,
+  businessAd,
+} from './ads';
+import { CATEGORIES } from './categories';
+
+const ad = (over: Partial<AdCandidate>): AdCandidate => ({
+  key: 'ad:1',
+  kind: 'special',
+  program: 'prime',
+  url: 'https://www.amazon.com/amazonprime',
+  store: 'US',
+  categories: [],
+  company: null,
+  weight: 1,
+  rewardUsd: null,
+  minAge: 18,
+  targetAgeFrom: null,
+  targetAgeTo: null,
+  pinId: null,
+  forPinId: null,
+  title: null,
+  price: null,
+  thumbName: null,
+  originalUrl: null,
+  ...over,
+});
+const none: AdContext = { preference: null, age: null, pin: null };
+
+// A fixed sequence, so a weighted pick is repeatable.
+function seeded(seed = 1) {
+  let x = seed;
+  return () => {
+    x = (x * 16807) % 2147483647;
+    return x / 2147483647;
+  };
+}
+
+describe('ageOn', () => {
+  it('counts whole years to the birthday', () => {
+    const now = new Date('2026-10-01T12:00:00Z');
+    expect(ageOn('2008-10-01', now)).toBe(18);
+    expect(ageOn('2008-10-02', now)).toBe(17);
+    expect(ageOn(null, now)).toBeNull();
+    expect(ageOn('nonsense', now)).toBeNull();
+  });
+});
+
+describe('adAllowed', () => {
+  it('keeps sign-up programs from under-18s, everything from under-13s', () => {
+    const product = ad({ key: 'm:1', kind: 'product', program: null, minAge: 0 });
+    expect(adAllowed(ad({}), { ...none, age: 16 })).toBe(false);
+    expect(adAllowed(product, { ...none, age: 16 })).toBe(true);
+    expect(adAllowed(product, { ...none, age: 12 })).toBe(false);
+    expect(adAllowed(ad({}), none)).toBe(true);
+  });
+
+  it("leaves out the pin's own product on its page", () => {
+    const pin = { id: 7, categories: [], tags: [], company: null };
+    expect(adAllowed(ad({ kind: 'product', pinId: 7 }), { ...none, pin })).toBe(false);
+  });
+});
+
+describe('weights', () => {
+  it('weighs categories the viewer leans to, and ages in range', () => {
+    const preference = { clicked: [], categories: [{ name: 'Movie', share: 0.5 }], companies: [], signals: 4 };
+    const video = ad({ categories: ['Movie'], targetAgeFrom: 18, targetAgeTo: 44 });
+    expect(personalWeight(video, { ...none, preference })).toBe(2);
+    expect(personalWeight(video, { ...none, age: 30 })).toBe(2);
+    expect(personalWeight(video, { ...none, age: 60 })).toBe(1);
+  });
+
+  it('scores shared categories, tags and the same company', () => {
+    const pin = { id: 1, categories: ['Gaming'], tags: ['Nintendo'], company: 'Nintendo' };
+    expect(relatedness(ad({ categories: ['gaming'] }), pin)).toBe(3);
+    expect(relatedness(ad({ kind: 'product', categories: ['Gaming'], company: 'Nintendo' }), pin)).toBe(7);
+    expect(relatedness(ad({ categories: ['Food'] }), pin)).toBe(0);
+  });
+
+  it('nudges weight up for a richer bounty, clamped either side', () => {
+    expect(rewardWeight({ rewardUsd: null })).toBe(1);
+    expect(rewardWeight({ rewardUsd: 10 })).toBe(1);
+    expect(rewardWeight({ rewardUsd: 40 })).toBe(1.5);
+    expect(rewardWeight({ rewardUsd: 1 })).toBe(0.75);
+  });
+
+  it('shrinks a slot\'s click-through rate toward its own average', () => {
+    expect(performanceWeight(undefined, 0)).toBe(1);
+    // No data yet for this ad in a slot that does convert: shrunk to 1 (the
+    // average), not punished for having no history.
+    expect(performanceWeight(undefined, 0.02)).toBeCloseTo(1, 5);
+    // A huge sample that clearly outperforms the slot's average pulls hard
+    // toward the clamp; a tiny sample barely moves off 1.
+    expect(performanceWeight({ impressions: 100000, clicks: 6000 }, 0.02)).toBe(2);
+    expect(performanceWeight({ impressions: 5, clicks: 0 }, 0.02)).toBeCloseTo(1, 1);
+  });
+});
+
+describe('pickAds', () => {
+  const programs = [1, 2, 3].map((i) => ad({ key: `ad:${i}`, program: `p${i}` }));
+  const products = Array.from({ length: 100 }, (_, i) => ad({ key: `m:${i}`, kind: 'product', program: null, minAge: 0, categories: i === 5 ? ['Gaming'] : [] }));
+
+  it('never repeats and returns at most n', () => {
+    const picked = pickAds([...programs, ...products], none, 4, new Set(), seeded());
+    expect(picked).toHaveLength(4);
+    expect(new Set(picked.map((a) => a.key)).size).toBe(4);
+  });
+
+  it('returns none when none are asked for', () => {
+    expect(pickAds([...programs, ...products], none, 0, new Set(), seeded())).toEqual([]);
+  });
+
+  it('gives a pool its share however many ads it holds', () => {
+    const random = seeded(7);
+    let programPicks = 0;
+    for (let i = 0; i < 400; i++) if (pickAds([...programs, ...products], none, 1, new Set(), random)[0].kind !== 'product') programPicks++;
+    // special 4 against product 2: about two thirds, not 3 in 103.
+    expect(programPicks / 400).toBeGreaterThan(0.55);
+    expect(programPicks / 400).toBeLessThan(0.78);
+  });
+
+  it('puts related ads first on a pin page', () => {
+    const pin = { id: 999, categories: ['Gaming'], tags: [], company: null };
+    const picked = pickAds([...programs, ...products], { ...none, pin }, 2, new Set(), seeded(3));
+    expect(picked[0].key).toBe('m:5');
+  });
+
+  it('puts footwear ahead of broad matches on a sneaker pin, including other brands', () => {
+    const pin = { id: 4436, categories: ['Fashion'], tags: ['Sneakers', 'Air Force 1', 'Nike'], company: 'Nike' };
+    const shoes = [
+      ad({ key: 'ad:90', kind: 'sneaker', program: 'sneaker_af1', title: 'Nike Air Force 1', company: 'Nike', categories: ['Sneakers', 'Air Force 1', 'Nike'] }),
+      ad({ key: 's:91', kind: 'product', categories: ['Footwear'], company: 'adidas' }),
+    ];
+    const clothing = ad({ key: 's:92', kind: 'product', company: 'Nike', categories: ['Fashion', 'Nike'] });
+    for (let seed = 1; seed <= 20; seed++) {
+      const picked = pickAds([...programs, clothing, ...shoes], { ...none, pin }, 2, new Set(), seeded(seed));
+      expect(['ad:90', 's:91']).toContain(picked[0].key);
+      expect(adCategory(picked[1])).not.toBe('shoes');
+    }
+    // Other slots keep their usual weights rather than privileging footwear.
+    expect(pickAds([clothing, ...shoes], none, 1, new Set(), () => 0)[0]).toBe(clothing);
+  });
+
+  it('keeps chosen ads, page deduplication and age checks when prioritizing shoes', () => {
+    const pin = { id: 4436, categories: ['Fashion'], tags: ['shoes'], company: 'Nike' };
+    const shoe = ad({ key: 'ad:90', kind: 'sneaker', program: 'sneaker_af1', minAge: 13, categories: ['Sneakers'] });
+    const chosen = ad({ key: 'p:91', kind: 'product', forPinId: 4436, pinId: 4436 });
+    expect(pickAds([shoe, chosen], { ...none, pin }, 1, new Set(), seeded())[0]).toBe(chosen);
+    expect(pickAds([shoe, ...programs], { ...none, pin }, 1, new Set([shoe.key]), seeded())[0].key).not.toBe(shoe.key);
+    expect(adAllowed(shoe, { ...none, age: 13 })).toBe(true);
+    expect(adAllowed(shoe, { ...none, age: 12 })).toBe(false);
+    expect(sneakerAd('sneaker_af1')).toEqual({ title: 'Nike Air Force 1', brand: 'Nike' });
+    expect(sneakerAd('prime')).toBeNull();
+  });
+
+  it('uses ads already on the page only when the rest run out', () => {
+    const avoid = new Set(['ad:1', 'ad:2']);
+    expect(pickAds(programs, none, 1, avoid, seeded())[0].key).toBe('ad:3');
+    expect(pickAds(programs, none, 3, avoid, seeded())).toHaveLength(3);
+  });
+
+  it('shows the ad that converts better in this slot more often', () => {
+    const two = [ad({ key: 'ad:1', program: 'p1' }), ad({ key: 'ad:2', program: 'p2' })];
+    const performance = {
+      baselineCtr: 0.02,
+      byKey: new Map([['ad:1', { impressions: 50000, clicks: 3000 }]]),
+    };
+    const random = seeded(11);
+    let firstWins = 0;
+    for (let i = 0; i < 400; i++) if (pickAds(two, { ...none, performance }, 1, new Set(), random)[0].key === 'ad:1') firstWins++;
+    expect(firstWins / 400).toBeGreaterThan(0.6);
+  });
+
+  it('gives a richer bounty slightly more of its pool\'s share', () => {
+    const two = [ad({ key: 'ad:1', program: 'p1', rewardUsd: 40 }), ad({ key: 'ad:2', program: 'p2', rewardUsd: 10 })];
+    const random = seeded(13);
+    let firstWins = 0;
+    for (let i = 0; i < 400; i++) if (pickAds(two, none, 1, new Set(), random)[0].key === 'ad:1') firstWins++;
+    // 1.5x against 1x - a clear lean, not a landslide.
+    expect(firstWins / 400).toBeGreaterThan(0.52);
+    expect(firstWins / 400).toBeLessThan(0.75);
+  });
+});
+
+describe('equal weights without rewards', () => {
+  it('shows every program ad as often as another when none has a reward', () => {
+    const jp = [
+      ad({ key: 'ad:1', kind: 'special', program: 'prime', rewardUsd: null }),
+      ad({ key: 'ad:2', kind: 'special', program: 'audible', rewardUsd: null }),
+      ad({ key: 'ad:3', kind: 'bonus', program: 'fresh', rewardUsd: null }),
+      ad({ key: 'ad:4', kind: 'tradein', program: 'tradein', rewardUsd: null }),
+    ];
+    const seen = new Map<string, number>();
+    let seed = 1;
+    const random = () => ((seed = (seed * 16807) % 2147483647) / 2147483647);
+    for (let i = 0; i < 4000; i++) {
+      const [picked] = pickAds(jp, { preference: null, age: null, pin: null }, 1, new Set(), random);
+      seen.set(picked.key, (seen.get(picked.key) ?? 0) + 1);
+    }
+    for (const count of seen.values()) expect(count / 4000).toBeGreaterThan(0.2);
+    for (const count of seen.values()) expect(count / 4000).toBeLessThan(0.3);
+  });
+
+  it('keeps the kind shares once any program has a reward', () => {
+    const us = [
+      ad({ key: 'ad:1', kind: 'special', program: 'prime', rewardUsd: 40 }),
+      ad({ key: 'ad:2', kind: 'bonus', program: 'fresh', rewardUsd: 1 }),
+    ];
+    let seed = 7;
+    const random = () => ((seed = (seed * 16807) % 2147483647) / 2147483647);
+    let special = 0;
+    for (let i = 0; i < 3000; i++) if (pickAds(us, { preference: null, age: null, pin: null }, 1, new Set(), random)[0].key === 'ad:1') special++;
+    expect(special / 3000).toBeGreaterThan(0.6);
+  });
+});
+
+describe('stores', () => {
+  it("serves a country's own store only with an id and ads for it", () => {
+    // Global Earning stores use the US id; others (Japan) need their own.
+    expect(servingStore('GB', {}, new Set(['US', 'GB']))).toBe('GB');
+    expect(servingStore('GB', {}, new Set(['US']))).toBe('US');
+    expect(servingStore('AT', {}, new Set(['US', 'DE']))).toBe('DE');
+    expect(servingStore('JP', {}, new Set(['US', 'JP']))).toBe('US');
+    expect(servingStore('JP', { JP: 'x-22' }, new Set(['US']))).toBe('US');
+    expect(servingStore('JP', { JP: 'x-22' }, new Set(['US', 'JP']))).toBe('JP');
+    expect(servingStore(null, {}, new Set(['US']))).toBe('US');
+  });
+
+  it('gives each store its own id, the US one under Global Earning', () => {
+    expect(tagForStore('US', {})).toBe('chronopin04-20');
+    expect(tagForStore('DE', {})).toBe('chronopin04-20');
+    expect(tagForStore('DE', { DE: 'own-21' })).toBe('own-21');
+    expect(tagForStore('JP', {})).toBeNull();
+    expect(tagForStore('JP', { JP: 'x-22' })).toBe('x-22');
+    expect(taggedAdUrl('https://www.amazon.de/prime', 'DE', {})).toBe('https://www.amazon.de/prime?tag=chronopin04-20');
+  });
+
+  it('guesses a store from the page language only where one store fits', () => {
+    expect(storeForLocale('ja')).toBe('JP');
+    expect(storeForLocale('pt')).toBe('BR');
+    expect(storeForLocale('ar')).toBeNull();
+    expect(storeForLocale('en')).toBeNull();
+    expect(servingStore(storeForLocale('ja'), { JP: 'x-22' }, new Set(['US', 'JP']))).toBe('JP');
+    expect(servingStore(storeForLocale('de'), {}, new Set(['US', 'DE']))).toBe('DE');
+  });
+
+  it('validates submitted store ids', () => {
+    expect(validateAmazonTags({ gb: ' cp-21 ', DE: '', JP: 'chronopinawza-22' })).toEqual({ tags: { GB: 'cp-21', JP: 'chronopinawza-22' } });
+    for (const bad of [null, [], { US: 'x-20' }, { XX: 'abc-21' }, { GB: 5 }, { GB: 'no spaces' }, { GB: 'ab' }]) {
+      expect(validateAmazonTags(bad)).toHaveProperty('problem');
+    }
+  });
+
+  it('tags Amazon links for their store and leaves others alone', () => {
+    expect(taggedAdUrl('https://www.amazon.com/haul?tag=other', 'US', {})).toBe('https://www.amazon.com/haul?tag=chronopin04-20');
+    expect(taggedAdUrl('https://www.amazon.co.uk/x', 'GB', { GB: 'cp-21' })).toBe('https://www.amazon.co.uk/x?tag=cp-21');
+    expect(taggedAdUrl('https://example.com/x', 'US', {})).toBe('https://example.com/x');
+  });
+
+  it('reads the region of the language and the stored ids', () => {
+    expect(regionFromAcceptLanguage('en-GB,en;q=0.9')).toBe('GB');
+    expect(regionFromAcceptLanguage('fr;q=0.9, de-AT')).toBe('AT');
+    expect(regionFromAcceptLanguage('en')).toBeNull();
+    expect(parseAmazonTags({ gb: 'cp-21', XX: 'nope', DE: 5 })).toEqual({ GB: 'cp-21' });
+  });
+});
+
+describe('ads chosen for a pin', () => {
+  const pin = { id: 5157, categories: ['Sports'], tags: ['Tamiya'], company: 'Tamiya' };
+  const chosen = (over: Partial<AdCandidate> = {}) =>
+    ad({ key: 'p:1', kind: 'product', program: null, pinId: 5157, forPinId: 5157, company: 'TAMIYA', minAge: 0, ...over });
+
+  it('shows on its own pin, where a pin\'s own listing is hidden', () => {
+    expect(adAllowed(chosen(), { ...none, pin })).toBe(true);
+    expect(adAllowed(chosen({ forPinId: null }), { ...none, pin })).toBe(false);
+  });
+
+  it('ranks a brand match for the pin\'s company above one that only suits the pin', () => {
+    const match = chosen({ key: 'p:1' });
+    const other = chosen({ key: 'p:2', company: 'Bandai' });
+    expect(relatedness(match, pin)).toBeGreaterThan(relatedness(other, pin));
+    expect(relatedness(other, pin)).toBeGreaterThan(0);
+  });
+
+  it('puts the pin\'s own ads first in its slots', () => {
+    const picked = pickAds([ad({ key: 'ad:1', categories: ['Sports'] }), chosen()], { ...none, pin }, 1, new Set(), seeded());
+    expect(picked.map((ad) => ad.key)).toEqual(['p:1']);
+  });
+});
+
+describe('no duplicate ads', () => {
+  const listing = (key: string, asin: string) => ad({ key, kind: 'product', program: null, minAge: 0, url: `https://www.amazon.com/dp/${asin}` });
+
+  it('shows a product once however many keys it has', () => {
+    const picked = pickAds([listing('m:1', 'B000000001'), listing('p:1', 'B000000001'), { ...listing('m:2', 'B000000002'), categories: ['Home'] }], none, 3, new Set(), seeded());
+    expect(picked).toHaveLength(2);
+    expect(new Set(picked.map((a) => a.url)).size).toBe(2);
+  });
+
+  it('avoids a product already on the page under another key', () => {
+    const all = [listing('m:1', 'B000000001'), listing('p:1', 'B000000001'), listing('m:2', 'B000000002')];
+    expect([...expandAvoid(all, new Set(['m:1']))].sort()).toEqual(['m:1', 'p:1']);
+    expect(pickAds(all, none, 1, expandAvoid(all, new Set(['m:1'])), seeded()).map((a) => a.key)).toEqual(['m:2']);
+  });
+});
+
+describe('ad category variety', () => {
+  const watches = Array.from({ length: 12 }, (_, i) => ad({
+    key: `p:${i}`, kind: 'product', program: null, title: `${i} Men's Watch`,
+    categories: ['Fashion', 'Watches'], company: `Brand ${i}`, url: `https://example.com/watch/${i}`,
+  }));
+  const other = [
+    ad({ key: 'ad:haul', program: 'haul', categories: ['Fashion', 'Home'] }),
+    ad({ key: 'ad:audible', program: 'audible', categories: ['Books'] }),
+    ad({ key: 'ad:video', program: 'primevideo', categories: ['Movie'] }),
+    ad({ key: 's:audio', kind: 'product', program: null, title: 'Headphones', categories: ['Audio'] }),
+    ad({ key: 's:home', kind: 'product', program: null, title: 'Lamp', categories: ['Home'] }),
+    ad({ key: 'ad:shoes', kind: 'sneaker', program: 'sneaker_af1', title: 'Nike Air Force 1', categories: ['Sneakers'] }),
+  ];
+
+  it('mixes categories in all multi-ad blocks even with a large related watch inventory', () => {
+    const pin = { id: 999, categories: ['Fashion'], tags: ['Watches'], company: null };
+    for (const n of [2, 5, 7]) for (let seed = 1; seed <= 20; seed++) {
+      for (const ctx of [none, { ...none, pin }]) {
+        const picked = pickAds([...watches, ...other], ctx, n, new Set(), seeded(seed));
+        const categories = picked.map(adCategory);
+        expect(picked).toHaveLength(n);
+        expect(new Set(categories).size).toBeGreaterThanOrEqual(Math.ceil(n / 2));
+        expect(categories.filter((category) => category === 'watches').length).toBeLessThanOrEqual(n === 2 ? 1 : 2);
+      }
+    }
+  });
+
+  it('groups watches and shoes across brands, listing types and broad tags', () => {
+    expect(adCategory(watches[0])).toBe('watches');
+    expect(adCategory(ad({ kind: 'watch', program: 'watch_rolex' }))).toBe('watches');
+    expect(adCategory(ad({ kind: 'product', categories: ['Electronics'], title: 'Garmin Smartwatch' }))).toBe('watches');
+    expect(adCategory(ad({ kind: 'product', categories: ['Fashion'], title: 'adidas Running Shoes' }))).toBe('shoes');
+    expect(adCategory(other[5])).toBe('shoes');
+    expect(adCategory(ad({ kind: 'product', categories: ['Red Dot Design Award 2017', 'Electronics'], title: 'Wireless speaker' }))).toBe('electronics');
+  });
+
+  it('fills the requested count even when eligible inventory offers only one category', () => {
+    expect(pickAds(watches, none, 7, new Set(), seeded())).toHaveLength(7);
+    const adult = ad({ key: 'ad:adult', categories: ['Books'], minAge: 18 });
+    expect(pickAds([...watches, adult], { ...none, age: 14 }, 7, new Set(), seeded())).toHaveLength(7);
+  });
+
+  it('fills sparse category pools without reducing variety or repeating products', () => {
+    const picked = pickAds([...watches, other[1]], none, 7, new Set(), seeded());
+    expect(picked).toHaveLength(7);
+    expect(picked.filter((ad) => adCategory(ad) === 'literature')).toHaveLength(1);
+    expect(new Set(picked.map((ad) => ad.key)).size).toBe(7);
+    const initial = watches[0];
+    const rest = pickAds(watches, none, 6, new Set(), seeded(), [initial]);
+    expect(rest).toHaveLength(6);
+    expect(rest.map((ad) => ad.key)).not.toContain(initial.key);
+  });
+
+  it('counts seasonal tiles toward variety in the complete block', () => {
+    const seasonal = ad({ key: 'h:1', kind: 'product', holiday: 'halloween', title: 'Costume' });
+    const picked = pickAds([...watches, ...other], none, 1, new Set(), seeded(), [seasonal]);
+    expect(picked).toHaveLength(1);
+    expect(adCategory(picked[0])).not.toBe(adCategory(seasonal));
+  });
+
+  it('keeps variation when most alternatives have already appeared elsewhere on the page', () => {
+    const avoid = new Set(other.map((ad) => ad.key));
+    const picked = pickAds([...watches, ...other], none, 7, avoid, seeded());
+    expect(picked).toHaveLength(7);
+    expect(picked.filter((ad) => adCategory(ad) === 'watches')).toHaveLength(2);
+    expect(new Set(picked.map(adCategory)).size).toBeGreaterThan(1);
+  });
+});
+
+describe('relevance across pin topics', () => {
+  it.each(CATEGORIES)('prefers diverse related ads for %s pins before unrelated fillers', (category) => {
+    const pin = { id: 999, categories: [category], tags: ['Specific Topic'], company: 'Relevant Brand' };
+    const related = [
+      ad({ key: 'p:topic1', kind: 'product', program: null, categories: [category, 'Specific Topic'], title: 'Related one' }),
+      ad({ key: 'p:topic2', kind: 'product', program: null, categories: [category, 'Specific Topic'], title: 'Related two' }),
+      ad({ key: 'p:brand', kind: 'product', program: null, categories: ['Brand gear'], company: 'Relevant Brand' }),
+    ];
+    const fillers = [1, 2, 3, 4].map((i) => ad({ key: `ad:other${i}`, program: `other${i}`, categories: [`Other ${i}`], weight: 1000 }));
+    for (let seed = 1; seed <= 5; seed++) {
+      const picked = pickAds([...fillers, ...related], { ...none, pin }, 5, new Set(), seeded(seed));
+      expect(new Set(picked.slice(0, 3).map((ad) => ad.key))).toEqual(new Set(related.map((ad) => ad.key)));
+      expect(new Set(picked.map(adCategory)).size).toBeGreaterThan(1);
+    }
+  });
+
+  it('ranks specific topics ahead of broad categories for every type of pin', () => {
+    for (const topic of ['Watches', 'Robotics kits', 'Telescopes', 'Sneakers', 'LEGO', 'Audio']) {
+      const pin = { id: 999, categories: ['Electronics'], tags: [topic], company: null };
+      const specific = ad({ key: 'p:topic', kind: 'product', program: null, categories: [topic], weight: 0.01 });
+      const broad = ad({ key: 'ad:generic', categories: ['Electronics'], weight: 1000 });
+      expect(pickAds([broad, specific], { ...none, pin }, 1, new Set(), seeded())[0]).toBe(specific);
+    }
+  });
+
+  it('matches synonymous topic names but ignores generic release tags', () => {
+    const pin = { id: 999, categories: ['Literature'], tags: ['Release'], company: null };
+    expect(relatedness(ad({ categories: ['Books'] }), pin)).toBeGreaterThan(0);
+    expect(relatedness(ad({ categories: ['Release', 'Gaming'] }), pin)).toBe(0);
+    const shoePin = { ...pin, categories: ['Fashion'], tags: ['Footwear'] };
+    expect(relatedness(ad({ kind: 'sneaker', categories: [] }), shoePin)).toBeGreaterThan(0);
+  });
+
+});
+
+describe('parseUrgency', () => {
+  it('reads stock left and lowest-price spans, and nothing else', () => {
+    expect(parseUrgency('left:12')).toEqual({ kind: 'left', count: 12 });
+    expect(parseUrgency('low:90')).toEqual({ kind: 'low', days: 90 });
+    expect(parseUrgency('left:0')).toBeNull();
+    expect(parseUrgency('sale:5')).toBeNull();
+    expect(parseUrgency(null)).toBeNull();
+  });
+});
+
+describe('qualityWeight', () => {
+  it('is neutral without stars and at 4.3 stars from 1,000 reviews', () => {
+    expect(qualityWeight({})).toBe(1);
+    expect(qualityWeight({ rating: 4.3, reviewCount: 990 })).toBeCloseTo(1, 5);
+  });
+  it('favours high stars and many reviews, within bounds', () => {
+    const good = qualityWeight({ rating: 4.8, reviewCount: 20000 });
+    const middling = qualityWeight({ rating: 4.3, reviewCount: 1000 });
+    const thin = qualityWeight({ rating: 4.0, reviewCount: 40 });
+    expect(good).toBeGreaterThan(middling);
+    expect(middling).toBeGreaterThan(thin);
+    expect(qualityWeight({ rating: 5, reviewCount: 1e9 })).toBeLessThanOrEqual(2 * 1.6);
+    expect(qualityWeight({ rating: 1, reviewCount: 0 })).toBeGreaterThanOrEqual(0.25);
+  });
+  it('weighs a better reviewed product up in pickAds', () => {
+    const base: Omit<AdCandidate, 'key'> = { kind: 'product', program: null, url: '', store: 'US', categories: [], company: null, weight: 1, rewardUsd: null, minAge: 0, targetAgeFrom: null, targetAgeTo: null, pinId: null, forPinId: null, title: 't', price: 1, thumbName: null, originalUrl: null };
+    const ads: AdCandidate[] = [
+      { ...base, key: 'p:good', url: 'https://www.amazon.com/dp/B000000001', rating: 4.8, reviewCount: 20000 },
+      { ...base, key: 'p:thin', url: 'https://www.amazon.com/dp/B000000002', rating: 4.0, reviewCount: 40 },
+    ];
+    const ctx: AdContext = { preference: null, age: null, pin: null };
+    let good = 0;
+    for (let i = 0; i < 400; i++) if (pickAds(ads, ctx, 1)[0].key === 'p:good') good++;
+    expect(good).toBeGreaterThan(280);
+  });
+});
+
+describe('watch ads', () => {
+  const rolex = ad({ key: 'ad:90', kind: 'watch', program: 'watch_rolex', url: 'https://www.ebay.com/sch/31387/i.html?_nkw=rolex&LH_BIN=1', categories: ['Watches', 'Luxury'], title: 'Rolex' });
+
+  it('carry the eBay campaign, not the Amazon tag', () => {
+    const url = new URL(taggedAdUrl(rolex.url, 'US', {}));
+    expect(url.hostname).toBe('www.ebay.com');
+    expect(url.searchParams.get('campid')).toBe('5338380156');
+    expect(url.searchParams.get('_nkw')).toBe('rolex');
+    expect(url.searchParams.has('tag')).toBe(false);
+    expect(adTag(rolex, {})).toBe('5338380156');
+    expect(adTag(ad({}), {})).toBe('chronopin04-20');
+  });
+
+  it('name their brand', () => {
+    expect(watchBrand('watch_ap')).toBe('Audemars Piguet');
+    expect(watchBrand('prime')).toBeNull();
+  });
+
+  it('lead a Watches pin and stay a minority elsewhere', () => {
+    const others = Array.from({ length: 6 }, (_, i) => ad({ key: `ad:${i}`, program: `p${i}` }));
+    const pin = { id: 1, categories: ['Fashion'], tags: ['Watches', 'Rolex'], company: 'Rolex' };
+    expect(pickAds([...others, rolex], { ...none, pin }, 1)[0].key).toBe('ad:90');
+    let shown = 0;
+    for (let i = 0; i < 600; i++) if (pickAds([...others, rolex], none, 1).some((a) => a.key === 'ad:90')) shown++;
+    expect(shown).toBeLessThan(200);
+  });
+
+  it('are for adults', () => {
+    expect(adAllowed({ ...rolex, minAge: 18 }, { ...none, age: 16 })).toBe(false);
+    expect(adAllowed({ ...rolex, minAge: 18 }, { ...none, age: 30 })).toBe(true);
+  });
+});
+
+describe('brkox LEGO ads', () => {
+  const lego = ad({ key: 'ad:200', kind: 'lego', program: 'lego_lights', url: 'https://brkox.com/collections/lego-light-kits', title: 'LED light kits for LEGO® sets', company: 'BRKOX', minAge: 13, categories: ['LEGO'] });
+
+  it('names a collection and its brand', () => {
+    expect(legoAd('lego_lights')?.brand).toBe('BRKOX');
+    expect(legoAd('prime')).toBeNull();
+  });
+
+  it('is sent through Awin and credited to our publisher id', () => {
+    expect(taggedAdUrl(lego.url, 'US', {})).toContain('awin1.com/cread.php');
+    expect(adTag(lego, {})).toBe('3115479');
+  });
+
+  it('is its own category', () => {
+    expect(adCategory(lego)).toBe('lego');
+  });
+});
+
+describe('TideWe hunting ads', () => {
+  const hunting = ad({ key: 'ad:300', kind: 'hunting', program: 'hunting_blinds', url: 'https://tidewe.com/collections/hunting-blind', title: 'Hunting blinds', company: 'TideWe', minAge: 18, categories: ['Hunting'] });
+
+  it('names a collection and its brand', () => {
+    expect(huntingAd('hunting_blinds')?.brand).toBe('TideWe');
+    expect(huntingAd('lego_lights')).toBeNull();
+  });
+
+  it('is sent through Awin and credited to our publisher id', () => {
+    expect(taggedAdUrl(hunting.url, 'US', {})).toContain('awinmid=78182');
+    expect(adTag(hunting, {})).toBe('3115479');
+  });
+
+  it('is its own category and 18+', () => {
+    expect(adCategory(hunting)).toBe('hunting');
+    expect(adAllowed(hunting, { preference: null, age: 16, performance: undefined } as never)).toBe(false);
+  });
+});
+
+describe('World Businesses for Sale ads', () => {
+  const business = ad({ key: 'ad:310', kind: 'business', program: 'business_franchises', url: 'https://worldbusinessesforsale.com/collections/franchises', title: 'Franchises for sale', company: 'World Businesses for Sale', minAge: 18, categories: ['Business'] });
+
+  it('names a collection and its brand', () => {
+    expect(businessAd('business_franchises')?.brand).toBe('World Businesses for Sale');
+    expect(businessAd('hunting_blinds')).toBeNull();
+  });
+
+  it('is sent through Awin and credited to our publisher id', () => {
+    expect(taggedAdUrl(business.url, 'US', {})).toContain('awinmid=116725');
+    expect(adTag(business, {})).toBe('3115479');
+  });
+
+  it('is its own category and 18+', () => {
+    expect(adCategory(business)).toBe('business');
+    expect(adAllowed(business, { preference: null, age: 16, performance: undefined } as never)).toBe(false);
+  });
+});
+
+describe('an ad that links to a page of this site', () => {
+  it('keeps its relative address', () => {
+    expect(taggedAdUrl('/profile/ads', 'US', { GB: 'x-21' })).toBe('/profile/ads');
+  });
+});
+
+describe('pickSponsoredAds', () => {
+  const sponsored = (id: number, remaining: number) => ({ key: `u:${id}`, kind: 'sponsored', remaining }) as unknown as AdCandidate;
+  const ads = [sponsored(1, 1000), sponsored(2, 5000), sponsored(3, 200)];
+
+  it('shows ads this person has not seen before the ones they have', () => {
+    const picked = pickSponsoredAds(ads, new Set(['u:1']), 2, new Set(), () => 0.5);
+    expect(picked.map((a) => a.key).sort()).toEqual(['u:2', 'u:3']);
+  });
+
+  it('repeats a seen ad only in up to half the slots', () => {
+    const picked = pickSponsoredAds(ads, new Set(['u:1', 'u:2', 'u:3']), 4, new Set(), () => 0.5);
+    expect(picked).toHaveLength(2);
+  });
+
+  it('leaves out what the page already shows', () => {
+    const picked = pickSponsoredAds(ads, new Set(), 3, new Set(['u:2']), () => 0.5);
+    expect(picked.map((a) => a.key).sort()).toEqual(['u:1', 'u:3']);
+  });
+
+  it('favours the order that is owed the most', () => {
+    let wins = 0;
+    for (let i = 0; i < 400; i++) wins += pickSponsoredAds([sponsored(3, 200), sponsored(2, 5000)], new Set(), 1)[0].key === 'u:2' ? 1 : 0;
+    expect(wins).toBeGreaterThan(280);
+  });
+
+  it('gives nothing for no room', () => {
+    expect(pickSponsoredAds(ads, new Set(), 0)).toEqual([]);
+  });
+});

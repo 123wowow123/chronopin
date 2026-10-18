@@ -1,0 +1,791 @@
+{
+ "ca-2026-1": {
+  "song": {
+   "peak": 1,
+   "weeksOnChart": null,
+   "weeksAtNumberOne": 22,
+   "chart": "Billboard Canadian Hot 100",
+   "sourceUrl": "https://en.wikipedia.org/wiki/List_of_Canadian_Hot_100_number-one_singles_of_2026",
+   "asOf": "2026-10-17"
+  },
+  "album": {
+   "certifications": [
+    {
+     "body": "RIAA",
+     "level": "2× Platinum",
+     "region": "US",
+     "date": "2026-10-05"
+    },
+    {
+     "body": "Music Canada",
+     "level": "Gold",
+     "region": "Canada",
+     "date": null
+    },
+    {
+     "body": "RMNZ",
+     "level": "Gold",
+     "region": "New Zealand",
+     "date": null
+    },
+    {
+     "body": "BPI",
+     "level": "Silver",
+     "region": "UK",
+     "date": null
+    }
+   ],
+   "units": "1,381,729+ album-equivalent units (US, per Wikipedia)",
+   "peak": {
+    "chart": "Billboard 200",
+    "position": 1
+   },
+   "sourceUrl": "https://en.wikipedia.org/wiki/Dandelion_(Ella_Langley_album)"
+  },
+  "notes": "Weeks at #1 = 22 (runs: 3+3+15+1 through Oct 17 2026 chart) matches input. Canadian weeks-on-chart not published on pages read. Song certs (not album): RIAA 7x Plat, MC 7x Plat. Album cert dates other than RIAA not listed. Sources: Wikipedia only."
+ },
+ "ng-2026-1": {
+  "song": {
+   "peak": 1,
+   "weeksOnChart": null,
+   "weeksAtNumberOne": 9,
+   "chart": "TurnTable Official Nigeria Top 100",
+   "sourceUrl": "https://en.wikipedia.org/wiki/Jogodo",
+   "asOf": "2026-10-17"
+  },
+  "album": null,
+  "notes": "Peak 1, 9 consecutive weeks at #1 as of chart dated 24 Mar 2026 (Wikipedia); matches input. Weeks on chart and certifications not published. Album is a DJ mix; no album stats sought/found."
+ },
+ "us-2025-1": {
+  "song": {
+   "peak": 1,
+   "weeksOnChart": 60,
+   "weeksAtNumberOne": 5,
+   "chart": "Billboard Hot 100",
+   "sourceUrl": "https://en.wikipedia.org/wiki/Die_with_a_Smile",
+   "asOf": "2026-10-17"
+  },
+  "album": {
+   "certifications": [
+    {
+     "body": "RIAA",
+     "level": "Platinum",
+     "region": "US",
+     "date": "2025-06-30"
+    }
+   ],
+   "units": "966,000 album-equivalent units (US, Jan 3-Jul 3 2025 tracking period, per Wikipedia); debut 219,000 units",
+   "peak": {
+    "chart": "Billboard 200",
+    "position": 1
+   },
+   "sourceUrl": "https://en.wikipedia.org/wiki/Mayhem_(Lady_Gaga_album)"
+  },
+  "notes": "Input chart is Billboard Year-End Hot 100; song stats are from the weekly Hot 100 (peak 1 on 11 Jan 2025, 60 weeks, 5 non-consecutive weeks at #1; matches input). Song certs (not album) include Canada 8x Plat, Australia 8x Plat, UK 3x Plat. Album certs table was truncated; other platinum certs (Belgium, Brazil, Canada, France, Italy, NZ, Poland, Switzerland) mentioned without levels/dates."
+ },
+ "it-2025-1": {
+  "song": {
+   "peak": 1,
+   "weeksOnChart": null,
+   "weeksAtNumberOne": 9,
+   "chart": "FIMI Italian Singles chart",
+   "sourceUrl": "https://en.wikipedia.org/wiki/List_of_number-one_hits_of_2025_(Italy)",
+   "asOf": "2026-10-17"
+  },
+  "album": {
+   "certifications": [
+    {
+     "body": "FIMI",
+     "level": "9× Platinum",
+     "region": "Italy",
+     "date": null
+    }
+   ],
+   "units": "450,000 certified units (FIMI, sales+streaming, per Wikipedia table; article lead text says 8x - conflicting)",
+   "peak": {
+    "chart": "FIMI Italian Albums",
+    "position": 1
+   },
+   "sourceUrl": "https://en.wikipedia.org/wiki/Tutta_vita"
+  },
+  "notes": "Peak 1; year-end #1 2025 on FIMI. FIMI cert 4x Plat (800,000 units, no date), Switzerland Gold. Weeks at #1 (input 9) and weeks on chart not found in source; weeksAtNumberOne left null rather than unverified. Album Tutta vita (sempre): en.wikipedia page 404, no album stats found. | UPDATE: 9 weeks at #1 per Wikipedia list of 2025 Italian number-ones (table cites FIMI weekly charts; rowspan 9) and Il Giorno (lost #1 after nine weeks to Santana money gang); matches input. Weeks on chart not published in sources opened (FIMI site not fetched). | UPDATE: Album data is for original Tutta vita (25 Oct 2024); the reissue Tutta vita (sempre) (26 Sep 2025) has no chart/cert data on Wikipedia. Cert date not given."
+ },
+ "cn-2025-1": {
+  "song": {
+   "peak": 1,
+   "weeksOnChart": null,
+   "weeksAtNumberOne": 29,
+   "chart": "Tencent Music Uni Chart (由你榜)",
+   "sourceUrl": "https://zh.wikipedia.org/wiki/小美滿",
+   "asOf": "2026-10-17"
+  },
+  "album": null,
+  "notes": "zh.wikipedia: released 2024-02-06; topped TME 由你榜 cumulative 29 weeks; 3rd on 浪潮榜; double-platinum single certification (body not named). Input says 51 weeks on chart and 2 weeks at #1 (not verified). Peak/weeks on chart not confirmed in source; null. Album is a single - no album stats. | UPDATE: zh.wikipedia: 累計奪下共29週的榜單冠軍 (29 weeks at #1 cumulative) - disagrees with input value 2 (input likely 2025 year-end rank/other). Search snippet of a Sina report (ent.sina.cn 2026-07-10, page not openable) says 100 weeks on chart on 2026-01-07 and 126 weeks in 2026 issue 26: not opened so weeksOnChart left null. Searched bjnews, 163, TME. Double-platinum single certification (body unnamed). Single - no album."
+ },
+ "ca-2024-1": {
+  "song": {
+   "peak": 1,
+   "weeksOnChart": null,
+   "weeksAtNumberOne": 25,
+   "chart": "Billboard Canadian Hot 100",
+   "sourceUrl": "https://en.wikipedia.org/wiki/A_Bar_Song_(Tipsy)",
+   "asOf": "2026-10-17"
+  },
+  "album": {
+   "certifications": [
+    {
+     "body": "RIAA",
+     "level": "Platinum",
+     "region": "US",
+     "date": "2025-07-03"
+    },
+    {
+     "body": "RMNZ",
+     "level": "2× Platinum",
+     "region": "New Zealand",
+     "date": null
+    },
+    {
+     "body": "BPI",
+     "level": "Silver",
+     "region": "UK",
+     "date": null
+    }
+   ],
+   "units": null,
+   "peak": {
+    "chart": "Billboard 200",
+    "position": 5
+   },
+   "sourceUrl": "https://en.wikipedia.org/wiki/Where_I%27ve_Been,_Isn%27t_Where_I%27m_Going"
+  },
+  "notes": "25 non-consecutive weeks at #1 in Canada matches input; Hot 100: 19 weeks at #1. Weeks on chart not published. Song certs: MC 2x Diamond, RIAA 12x Plat, BPI 4x Plat, ARIA 2x Plat (no dates). Canadian Albums peak 3."
+ },
+ "fr-2024-1": {
+  "song": {
+   "peak": 1,
+   "weeksOnChart": null,
+   "weeksAtNumberOne": 7,
+   "chart": "SNEP Top Singles",
+   "sourceUrl": "https://en.wikipedia.org/wiki/List_of_number-one_hits_of_2024_(France)",
+   "asOf": "2026-10-17"
+  },
+  "album": {
+   "certifications": [
+    {
+     "body": "SNEP",
+     "level": "Diamond",
+     "region": "France",
+     "date": null
+    }
+   ],
+   "units": "500,000 certified units (SNEP, per Wikipedia table; lead text says triple platinum - conflict); article says EP sold over 300,000 copies",
+   "peak": {
+    "chart": "SNEP French Albums",
+    "position": 1
+   },
+   "sourceUrl": "https://en.wikipedia.org/wiki/Le_Nord_se_souvient"
+  },
+  "notes": "Wikipedia shows #1 on SNEP and 2025 year-end position 12; weeks at #1 (input 7), weeks on chart and certifications not found. Album page not found (404). | UPDATE: 7 weeks at #1 from week 26 (28 Jun 2024) per Wikipedia list citing snepmusique.com; matches input. Certifications and weeks on chart not found. | UPDATE: Spider is track 4 of Le Nord se souvient (EP) per Wikipedia."
+ },
+ "za-2024-1": {
+  "song": {
+   "peak": 1,
+   "weeksOnChart": null,
+   "weeksAtNumberOne": null,
+   "chart": "The Official South African Charts (TOSAC)",
+   "sourceUrl": "https://en.wikipedia.org/wiki/Imithandazo",
+   "asOf": "2026-10-17"
+  },
+  "album": {
+   "certifications": [],
+   "units": null,
+   "peak": null,
+   "sourceUrl": "https://en.wikipedia.org/wiki/Isimo"
+  },
+  "notes": "Wikipedia: reached #1 on Official South African Charts and Billboard South Africa Songs in Jan 2024; from album Isimo (released 27 Oct 2023). Weeks at #1, weeks on chart, RiSA certs, stream counts not published on page. Album stats not found. | UPDATE: Isimo (27 Oct 2023): won Best Produced Album (Metro FM), Album of the Year (SAMA 30). No chart peak, RiSA certification or stream totals found on Wikipedia or in news searches."
+ },
+ "au-2024-1": {
+  "song": {
+   "peak": 1,
+   "weeksOnChart": null,
+   "weeksAtNumberOne": 6,
+   "chart": "ARIA Singles Chart",
+   "sourceUrl": "https://en.wikipedia.org/wiki/List_of_number-one_singles_of_2024_(Australia)",
+   "asOf": "2026-10-17"
+  },
+  "album": {
+   "certifications": [
+    {
+     "body": "RIAA",
+     "level": "2× Platinum",
+     "region": "US",
+     "date": null
+    },
+    {
+     "body": "Music Canada",
+     "level": "4× Platinum",
+     "region": "Canada",
+     "date": null
+    },
+    {
+     "body": "BPI",
+     "level": "Platinum",
+     "region": "UK",
+     "date": null
+    },
+    {
+     "body": "RMNZ",
+     "level": "3× Platinum",
+     "region": "New Zealand",
+     "date": null
+    }
+   ],
+   "units": null,
+   "peak": {
+    "chart": "Billboard 200",
+    "position": 6
+   },
+   "sourceUrl": "https://en.wikipedia.org/wiki/Fireworks_%26_Rollerblades"
+  },
+  "notes": "ARIA peak 1; weeks at #1 (input 6) and weeks on chart not read (page truncated). Hot 100 peak 2. Song certs: ARIA 12x Plat, RIAA Diamond, BPI 5x Plat. ARIA albums peak 17. No certification dates. | UPDATE: 6 consecutive weeks at #1 per Wikipedia 2024 ARIA list; matches input; Billboard (Apr 2024) said 5 at that time. ARIA's own year-end: #1 single of 2024. Weeks on chart not found."
+ },
+ "br-2023-1": {
+  "song": {
+   "peak": 1,
+   "weeksOnChart": null,
+   "weeksAtNumberOne": null,
+   "chart": "Billboard Brasil Brazil Songs",
+   "sourceUrl": "https://pt.wikipedia.org/wiki/Nosso_Quadro",
+   "asOf": "2026-10-17"
+  },
+  "album": {
+   "certifications": [],
+   "units": null,
+   "peak": {
+    "chart": "AFP Portugal albums",
+    "position": 54
+   },
+   "sourceUrl": "https://pt.wikipedia.org/wiki/Boiadeira_Internacional"
+  },
+  "notes": "pt.wikipedia Nosso Quadro: Billboard Brazil Songs peak 1, Billboard Global 200 peak 95, Global Excl. US 35, Crowley Top 100 Brasil airplay peak 22, Pro-Musica Brasil Top 50 Streaming monthly (Mar 2023) #1. Spotify Wrapped Brasil 2023 #1 most-streamed song (search results from Diario de Pernambuco / NSC Total, pages not opened). Weeks at #1/on chart and Pro-Musica Brasil certification for the song not found (several searches, PMB database not accessible). Song is on AgroPlay Verao Vol. 1 (en.wikipedia Ana Castela) and the Boiadeira Internacional (Ao Vivo) version; album Boiadeira Internacional only has Portugal peak 54 on pt.wikipedia, won Latin Grammy for Best Sertanejo Album; no album certification found."
+ },
+ "gb-2023-2": {
+  "song": {
+   "peak": 1,
+   "weeksOnChart": 41,
+   "weeksAtNumberOne": 10,
+   "chart": "Official Singles Chart (UK)",
+   "sourceUrl": "https://www.officialcharts.com/songs/dave-central-cee-sprinter/",
+   "asOf": "2026-10-17"
+  },
+  "album": null,
+  "notes": "10 weeks at #1 matches input; longest-running UK rap #1. Certs: BPI 3x Plat, RIAA Plat, MC 4x Plat, ARIA 3x Plat (no dates). Weeks on chart not stated. Not on an album (single). | UPDATE: Official Charts page: peak 1, 41 weeks on chart (29 wks 15 Jun-28 Dec 2023 + 12 wks 11 Jan-28 Mar 2024), 10 weeks at #1."
+ },
+ "kr-2023-2": {
+  "song": {
+   "peak": 2,
+   "weeksOnChart": null,
+   "weeksAtNumberOne": null,
+   "chart": "Circle Digital Chart",
+   "sourceUrl": "https://en.wikipedia.org/wiki/Hype_Boy",
+   "asOf": "2026-10-17"
+  },
+  "album": {
+   "certifications": [
+    {
+     "body": "KMCA",
+     "level": "Million",
+     "region": "South Korea",
+     "date": null
+    },
+    {
+     "body": "KMCA",
+     "level": "2× Platinum (Weverse Albums version)",
+     "region": "South Korea",
+     "date": null
+    }
+   ],
+   "units": "1,243,690 (standard edition) + 544,743 (Weverse Albums version) certified units (KMCA, per Wikipedia)",
+   "peak": {
+    "chart": "Circle Album Chart (weekly)",
+    "position": 1
+   },
+   "sourceUrl": "https://en.wikipedia.org/wiki/New_Jeans_(EP)"
+  },
+  "notes": "Weekly Circle Digital peak 2; year-end #18 (2022), #2 (2023). Billboard Global 200: 42 weeks, peak 52 (different chart; not used for weeks). KMCA cert conflicting on page (3x Plat vs 2x Plat text), RIAJ conflicting, RMNZ Gold. EP page title not found (404) so no album stats. | UPDATE: Conflict resolved: Hype Boy KMCA streaming = 3x Platinum (300M streams), Soompi 2026-08-18; RIAJ streaming = Double Platinum, SBS Star 2025-11-27 (Wikipedia's 'platinum' is stale; its table 2x/200M also inconsistent). Circle year-end 2022 #18, 2023 #2. Album = NewJeans 1st EP 'New Jeans'."
+ },
+ "us-2022-3": {
+  "song": {
+   "peak": 1,
+   "weeksOnChart": null,
+   "weeksAtNumberOne": 7,
+   "chart": "Billboard Hot 100",
+   "sourceUrl": "https://en.wikipedia.org/wiki/Stay_(The_Kid_Laroi_and_Justin_Bieber_song)",
+   "asOf": "2026-10-17"
+  },
+  "album": {
+   "certifications": [
+    {
+     "body": "RIAA",
+     "level": "3× Platinum",
+     "region": "US",
+     "date": null
+    }
+   ],
+   "units": null,
+   "peak": {
+    "chart": "Billboard 200",
+    "position": 1
+   },
+   "sourceUrl": "https://en.wikipedia.org/wiki/F*ck_Love_3:_Over_You"
+  },
+  "notes": "7 weeks at #1 matches input. Song: RIAA Diamond 2023-06-23 (11x Plat listed), 40 consecutive weeks in top 10; total weeks on chart not stated. Album cert row is for F*CK LOVE mixtape (3x Plat) as listed on the page; 3+: Over You certs: Denmark Plat, France Gold, Netherlands Plat, NZ 4x Plat, Poland Plat. No cert dates."
+ },
+ "se-2022-1": {
+  "song": {
+   "peak": 1,
+   "weeksOnChart": null,
+   "weeksAtNumberOne": 4,
+   "chart": "Sverigetopplistan singles",
+   "sourceUrl": "https://en.wikipedia.org/wiki/List_of_number-one_singles_and_albums_in_Sweden",
+   "asOf": "2026-10-17"
+  },
+  "album": null,
+  "notes": "sv.wikipedia: topped Sverigetopplistan, 4x Platinum, single released 29 Dec 2021; no peak table, weeks at #1 (input 4) or weeks on chart found. No album. | UPDATE: 4 weeks at #1 (weeks 26-29, 1-22 Jul 2022) per Wikipedia list of Swedish #1s; matches input. Inferred from table layout (blank cells in weeks 27-29). Weeks on chart not found; sverigetopplistan.se search page returned no data."
+ },
+ "kr-2022-1": {
+  "song": {
+   "peak": 1,
+   "weeksOnChart": null,
+   "weeksAtNumberOne": null,
+   "chart": "Circle Digital Chart (Gaon)",
+   "sourceUrl": "https://en.wikipedia.org/wiki/Love_Dive_(song)",
+   "asOf": "2026-10-17"
+  },
+  "album": {
+   "certifications": [
+    {
+     "body": "RIAJ",
+     "level": "Gold",
+     "region": "Japan",
+     "date": null
+    }
+   ],
+   "units": null,
+   "peak": {
+    "chart": "Oricon Albums",
+    "position": 1
+   },
+   "sourceUrl": "https://en.wikipedia.org/wiki/Wave_(Ive_EP)"
+  },
+  "notes": "Weekly #1 (June 12-18 2022 issue); 4 weeks at #1 on Gaon per page (matches input); year-end #1 2022. KMCA Platinum (100M streams), RMNZ Gold. EP WAVE page 404; no album stats. | UPDATE: Album 'WAVE' is IVE's Japanese EP (31 May 2023, includes Japanese Love Dive); #1 Oricon and Billboard Japan Hot Albums, RIAJ Gold (100,000 shipments) May 2023 (day not stated). Korean parent release of Love Dive is the single album 'Love Dive', not researched."
+ },
+ "us-2021-2": {
+  "song": {
+   "peak": 1,
+   "weeksOnChart": null,
+   "weeksAtNumberOne": 2,
+   "chart": "Billboard Hot 100",
+   "sourceUrl": "https://en.wikipedia.org/wiki/Save_Your_Tears",
+   "asOf": "2026-10-17"
+  },
+  "album": {
+   "certifications": [
+    {
+     "body": "RIAA",
+     "level": "3× Platinum",
+     "region": "US",
+     "date": "2022-12-06"
+    }
+   ],
+   "units": "3,000,000 certified units (RIAA, sales+streaming)",
+   "peak": {
+    "chart": "Billboard 200",
+    "position": 1
+   },
+   "sourceUrl": "https://en.wikipedia.org/wiki/After_Hours_(The_Weeknd_album)"
+  },
+  "notes": "Remix with Ariana Grande peaked #1 for 2 weeks (matches input); solo version peaked 4. Song certs: solo RIAA 3x Plat 2021-06-17; remix table Diamond. Weeks on chart not stated (27 weeks in top ten). Album certs: Canada 5x Plat, France Diamond, UK Plat (439,014), etc., no dates besides RIAA."
+ },
+ "es-2021-1": {
+  "song": {
+   "peak": 1,
+   "weeksOnChart": null,
+   "weeksAtNumberOne": 9,
+   "chart": "PROMUSICAE Top 100 Canciones (weekly)",
+   "sourceUrl": "https://en.wikipedia.org/wiki/Todo_de_Ti",
+   "asOf": "2026-10-17"
+  },
+  "album": null,
+  "notes": "Weekly PROMUSICAE #1 for 9 consecutive weeks from 30 May 2021. Hot 100 peak 32, Hot Latin Songs peak 2. PROMUSICAE cert 12x Plat (720,000) per table, text says 11x (660,000); no dates. Weeks on chart not stated. Album is compilation Los Nº 1 de 40 (2021): no info. | UPDATE: Todo de Ti PROMUSICAE conflict (11x text vs 12x table) NOT resolved: PROMUSICAE database not accessible; searches returned only unreliable '9x Platinum' bios. Keep as 11x-12x Platinum unconfirmed."
+ },
+ "jp-2021-1": {
+  "song": {
+   "peak": 2,
+   "weeksOnChart": null,
+   "weeksAtNumberOne": null,
+   "chart": "Billboard Japan Hot 100",
+   "sourceUrl": null,
+   "asOf": "2026-10-17"
+  },
+  "album": null,
+  "notes": "ja.wikipedia: weekly peak 2 (6 weeks at #2); 15 weeks at #1 on Billboard Japan Streaming Songs (different chart). RIAJ download 2x Platinum (527,000), streaming Double Diamond (1B plays); no dates. Weeks on chart not found; Hot 100 weeks at #1 = none per page. Album 壱 stats not found."
+ },
+ "mx-2020-1": {
+  "song": {
+   "peak": 1,
+   "weeksOnChart": null,
+   "weeksAtNumberOne": 8,
+   "chart": "Monitor Latino Mexico Anglo (weekly Top 20, audience)",
+   "sourceUrl": "https://en.wikipedia.org/wiki/List_of_number-one_songs_of_2020_(Mexico)",
+   "asOf": "2026-10-17"
+  },
+  "album": {
+   "certifications": [
+    {
+     "body": "RIAA",
+     "level": "3× Platinum",
+     "region": "US",
+     "date": "2022-12-06"
+    }
+   ],
+   "units": "3,000,000 certified units (RIAA, sales+streaming)",
+   "peak": {
+    "chart": "Billboard 200",
+    "position": 1
+   },
+   "sourceUrl": "https://en.wikipedia.org/wiki/After_Hours_(The_Weeknd_album)"
+  },
+  "notes": "No Monitor Latino weekly data found, so Mexico song stats null. For context only (different chart): Hot 100 90 weeks, 4 weeks at #1; RIAA Diamond 2022-04-05. | UPDATE: Wikipedia 2020 Mexico list: Blinding Lights is NOT a weekly General #1 in the table; it is #1 on the Anglo chart: 23 Feb, 8 Mar-5 Apr (5 weeks), 3-10 May = 8 weeks in the audience column (spins column shows 3 weeks Mar 22-Apr 5 + 2 weeks May; table layout ambiguous). The input annual General rank (996.24M audience) is from Monitor Latino, not reread. Weekly General peak and weeks on chart not found. Billboard Hot 100 context unchanged."
+ },
+ "de-2020-1": {
+  "song": {
+   "peak": 1,
+   "weeksOnChart": null,
+   "weeksAtNumberOne": 10,
+   "chart": "GfK Entertainment German Singles Chart",
+   "sourceUrl": "https://en.wikipedia.org/wiki/List_of_number-one_hits_of_2020_(Germany)",
+   "asOf": "2026-10-17"
+  },
+  "album": {
+   "certifications": [
+    {
+     "body": "RIAA",
+     "level": "3× Platinum",
+     "region": "US",
+     "date": "2022-12-06"
+    },
+    {
+     "body": "BVMI",
+     "level": "Platinum",
+     "region": "Germany",
+     "date": null
+    }
+   ],
+   "units": "3,000,000 certified units (US RIAA)",
+   "peak": {
+    "chart": "Billboard 200",
+    "position": 1
+   },
+   "sourceUrl": "https://en.wikipedia.org/wiki/After_Hours_(The_Weeknd_album)"
+  },
+  "notes": "German peak 1; weeks at #1 (input 10) and weeks on chart not stated on page read. Song RIAA Diamond 2022-04-05. German BVMI album cert from table listing (Germany Platinum 200,000). | UPDATE: 10 weeks at #1 (2+4+2+2 rowspans in the 2020 list; table cites offiziellecharts.de); matches input. Weeks on chart not found."
+ },
+ "sg-2020-1": {
+  "song": {
+   "peak": 1,
+   "weeksOnChart": null,
+   "weeksAtNumberOne": 8,
+   "chart": "Singapore Top 30 Digital Streaming (RIAS)",
+   "sourceUrl": "https://en.wikipedia.org/wiki/How_You_Like_That",
+   "asOf": "2026-10-17"
+  },
+  "album": {
+   "certifications": [
+    {
+     "body": "KMCA",
+     "level": "Million",
+     "region": "South Korea",
+     "date": "2020-12-10"
+    },
+    {
+     "body": "BPI",
+     "level": "Gold",
+     "region": "UK",
+     "date": null
+    },
+    {
+     "body": "SNEP",
+     "level": "Gold",
+     "region": "France",
+     "date": null
+    },
+    {
+     "body": "Music Canada",
+     "level": "Gold",
+     "region": "Canada",
+     "date": null
+    },
+    {
+     "body": "ZPAV",
+     "level": "Platinum",
+     "region": "Poland",
+     "date": null
+    },
+    {
+     "body": "RMNZ",
+     "level": "Gold",
+     "region": "New Zealand",
+     "date": null
+    }
+   ],
+   "units": "1,809,795 copies (South Korea, Gaon); 1.51 million (IFPI summary, 2020 worldwide)",
+   "peak": {
+    "chart": "Billboard 200",
+    "position": 2
+   },
+   "sourceUrl": "https://en.wikipedia.org/wiki/The_Album_(Blackpink_album)"
+  },
+  "notes": "Singapore 8 weeks at #1 matches input. Hot 100 peak 33; Gaon 3 weeks at #1. Weeks on chart not stated."
+ },
+ "nz-2020-1": {
+  "song": {
+   "peak": 1,
+   "weeksOnChart": null,
+   "weeksAtNumberOne": 3,
+   "chart": "Recorded Music NZ Official Aotearoa Top 40",
+   "sourceUrl": "https://en.wikipedia.org/wiki/List_of_number-one_singles_from_the_2020s_(New_Zealand)",
+   "asOf": "2026-10-17"
+  },
+  "album": {
+   "certifications": [
+    {
+     "body": "RMNZ",
+     "level": "5× Platinum",
+     "region": "New Zealand",
+     "date": null
+    }
+   ],
+   "units": "75,000 certified units (RMNZ, sales+streaming)",
+   "peak": {
+    "chart": "NZ Albums chart",
+    "position": 5
+   },
+   "sourceUrl": "https://en.wikipedia.org/wiki/L.A.B_III"
+  },
+  "notes": "Song peak 1 (March 2020); RMNZ 16x Plat (480,000), no date. Weeks at #1 (input 3) and weeks on chart not found; year-end #1 2020. Album cert date not given. | UPDATE: 3 weeks at #1 in 2020 per Wikipedia 2020s NZ #1 list (reached top 9 Mar 2020); matches input. A second table of NZ-artist #1s shows several overlapping runs (7/6/4/3 weeks) and looks unreliable, so 3 kept. Weeks on chart not found (RMNZ site not fetched)."
+ },
+ "co-2019-1": {
+  "song": {
+   "peak": 1,
+   "weeksOnChart": null,
+   "weeksAtNumberOne": null,
+   "chart": "Monitor Latino Colombia",
+   "sourceUrl": "https://en.wikipedia.org/wiki/Calma_(Pedro_Cap%C3%B3_song)",
+   "asOf": "2026-10-17"
+  },
+  "album": {
+   "certifications": [
+    {
+     "body": "RIAA",
+     "level": "6× Platinum (Latin)",
+     "region": "US",
+     "date": null
+    },
+    {
+     "body": "ZPAV",
+     "level": "Gold",
+     "region": "Poland",
+     "date": null
+    }
+   ],
+   "units": "360,000 certified units (RIAA Latin)",
+   "peak": {
+    "chart": "Billboard Top Latin Albums",
+    "position": 2
+   },
+   "sourceUrl": "https://en.wikipedia.org/wiki/Gangalee"
+  },
+  "notes": "Colombia #1 on Monitor Latino (remix); Hot 100 peak 71, Hot Latin Songs 3. RIAA Latin: original 2x Plat, remix 25x Plat Latin; no dates. Weeks at #1 not stated. Album Gangalee not researched. | UPDATE: Gangalee is Farruko's 6th album (26 Apr 2019): Billboard 200 peak 80, SNEP 96. Cert dates not given."
+ },
+ "sg-2019-1": {
+  "song": {
+   "peak": 1,
+   "weeksOnChart": null,
+   "weeksAtNumberOne": 13,
+   "chart": "Singapore Top 30 Digital Streaming (RIAS)",
+   "sourceUrl": "https://en.wikipedia.org/wiki/List_of_number-one_songs_of_2019_(Singapore)",
+   "asOf": "2026-10-17"
+  },
+  "album": {
+   "certifications": [
+    {
+     "body": "RIAA",
+     "level": "Platinum",
+     "region": "US",
+     "date": null
+    },
+    {
+     "body": "Music Canada",
+     "level": "2× Platinum",
+     "region": "Canada",
+     "date": null
+    },
+    {
+     "body": "BPI",
+     "level": "Gold",
+     "region": "UK",
+     "date": null
+    },
+    {
+     "body": "RMNZ",
+     "level": "2× Platinum",
+     "region": "New Zealand",
+     "date": null
+    }
+   ],
+   "units": null,
+   "peak": {
+    "chart": "Billboard 200",
+    "position": 3
+   },
+   "sourceUrl": "https://en.wikipedia.org/wiki/Romance_(Camila_Cabello_album)"
+  },
+  "notes": "Singapore peak 1 (date unlisted); weeks at #1 (input 13) and weeks on Singapore chart not verified. Hot 100 (other chart): peak 1 on 31 Aug 2019, 37 weeks. RIAA song 5x Plat 2023-08-03. Album RIAA Platinum stated only as May 2020 (day unknown; date null). | UPDATE: 13 weeks at #1 per Wikipedia list footer and table (RIAS); matches input."
+ },
+ "mx-2018-1": {
+  "song": {
+   "peak": 1,
+   "weeksOnChart": null,
+   "weeksAtNumberOne": 2,
+   "chart": "Monitor Latino Mexico Popular (weekly Top 20)",
+   "sourceUrl": "https://en.wikipedia.org/wiki/List_of_number-one_songs_of_2018_(Mexico)",
+   "asOf": "2026-10-17"
+  },
+  "album": null,
+  "notes": "Wikipedia 2018 Mexico list (citing charts.monitorlatino.com): 'Tu postura' was #1 on the weekly Popular chart for 2 weeks (issues 22 and 29 April 2018, audience column); it does not appear as a weekly General #1 but was #1 on Monitor Latino's annual General chart (best-performing song of the year by audience and spins; matches input annual ranking). Weeks on chart not found. Billboard Regional Mexican Airplay peak 2 (search result, other chart). No AMPROFON/RIAA certification found in searches. Album La Mejor Version de Mi: en.wikipedia page 404, no stats found."
+ },
+ "de-2018-1": {
+  "song": {
+   "peak": 1,
+   "weeksOnChart": null,
+   "weeksAtNumberOne": 11,
+   "chart": "GfK Entertainment German Singles Chart",
+   "sourceUrl": "https://en.wikipedia.org/wiki/List_of_number-one_hits_of_2018_(Germany)",
+   "asOf": "2026-10-17"
+  },
+  "album": null,
+  "notes": "German peak 1; BVMI page lists 7x Gold (1,400,000 units, no date). Weeks at #1 (input 11) and weeks on chart not stated. Single (no album). | UPDATE: 11 weeks at #1 (3+5+2+1 rowspans; cites offiziellecharts.de); matches input. Weeks on chart not found."
+ },
+ "kr-2018-1": {
+  "song": {
+   "peak": 1,
+   "weeksOnChart": null,
+   "weeksAtNumberOne": 6,
+   "chart": "Gaon Digital Chart",
+   "sourceUrl": "https://en.wikipedia.org/wiki/Love_Scenario",
+   "asOf": "2026-10-17"
+  },
+  "album": {
+   "certifications": [],
+   "units": null,
+   "peak": {
+    "chart": "Gaon Album Chart",
+    "position": 2
+   },
+   "sourceUrl": "https://en.wikipedia.org/wiki/Return_(iKon_album)"
+  },
+  "notes": "6 consecutive weeks at #1 (longest Gaon run), matches input. KMCA Platinum then 2x Platinum streaming; RIAJ Gold streaming; no dates. Weeks on chart not stated. Return album stats not found. | UPDATE: Return: debuted #2 on Gaon Album chart, 2018 Gaon year-end album #45; no certifications on page."
+ },
+ "us-2017-3": {
+  "song": {
+   "peak": 1,
+   "weeksOnChart": 52,
+   "weeksAtNumberOne": 1,
+   "chart": "Billboard Hot 100",
+   "sourceUrl": "https://en.wikipedia.org/wiki/That%27s_What_I_Like_(Bruno_Mars_song)",
+   "asOf": "2026-10-17"
+  },
+  "album": {
+   "certifications": [
+    {
+     "body": "RIAA",
+     "level": "3× Platinum",
+     "region": "US",
+     "date": null
+    },
+    {
+     "body": "BPI",
+     "level": "2× Platinum",
+     "region": "UK",
+     "date": null
+    },
+    {
+     "body": "Music Canada",
+     "level": "5× Platinum",
+     "region": "Canada",
+     "date": null
+    },
+    {
+     "body": "RMNZ",
+     "level": "7× Platinum",
+     "region": "New Zealand",
+     "date": null
+    }
+   ],
+   "units": "5 million worldwide (Oct 2019, Wikipedia); US 1,626,000 equivalent units in 2017",
+   "peak": {
+    "chart": "Billboard 200",
+    "position": 2
+   },
+   "sourceUrl": "https://en.wikipedia.org/wiki/24K_Magic_(album)"
+  },
+  "notes": "Input chart is year-end; stats from weekly Hot 100: peak 1 in 15th week, 1 week at #1 (matches), 52 weeks on chart. Song certs: RIAA Diamond, MC Diamond; no dates. Album debuted at 2 with 231,000 units."
+ },
+ "gb-2017-1": {
+  "song": {
+   "peak": 1,
+   "weeksOnChart": 98,
+   "weeksAtNumberOne": 14,
+   "chart": "Official Singles Chart (UK)",
+   "sourceUrl": "https://www.officialcharts.com/songs/ed-sheeran-shape-of-you/",
+   "asOf": "2026-10-17"
+  },
+  "album": {
+   "certifications": [
+    {
+     "body": "BPI",
+     "level": "15× Platinum",
+     "region": "UK",
+     "date": null
+    },
+    {
+     "body": "RIAA",
+     "level": "5× Platinum",
+     "region": "US",
+     "date": null
+    },
+    {
+     "body": "ARIA",
+     "level": "11× Platinum",
+     "region": "Australia",
+     "date": null
+    },
+    {
+     "body": "Music Canada",
+     "level": "Diamond",
+     "region": "Canada",
+     "date": null
+    }
+   ],
+   "units": "UK: 672,000 first week; 2,128,000+ in 2017 (UK's best seller of the year); 6.1 million worldwide in 2017 (IFPI)",
+   "peak": {
+    "chart": "UK Albums Chart",
+    "position": 1
+   },
+   "sourceUrl": "https://en.wikipedia.org/wiki/Divide_(Ed_Sheeran_album)"
+  },
+  "notes": "14 weeks at #1 matches input. UK song sales 787,000 in 2017; 5.09 million units as of July 2021 (Official Charts). Text says BPI 8x Plat Sept 2020 but table lists 11x (6,637,792) - conflicting. Weeks on chart not stated. Album 20 non-consecutive weeks at #1 UK; Billboard 200 peak 1. No cert dates. | UPDATE: Official Charts page: Official Singles Chart peak 1, 98 weeks on chart, 14 weeks at #1 (also 18 on Streaming chart). BPI conflict resolved: BPI-certified 8x Plat Sept 2020 (older) and 11x Platinum (6.6M units) June 2025 per Wikipedia 'List of Platinum singles in the UK awarded since 2000' (first 21st-century single at 11x); no 12x. Table's 6,637,792 units = combined figure. Album Divide (Official Charts): #1, 20 weeks at #1, 502 weeks on chart."
+ }
+}

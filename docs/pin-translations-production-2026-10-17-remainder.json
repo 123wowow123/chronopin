@@ -1,0 +1,4251 @@
+{
+  "completedAt": "2026-10-18T03:57:58.999Z",
+  "environment": "production",
+  "operation": "translations only",
+  "initialBacklog": {
+    "pins": 690,
+    "translationRows": 10350,
+    "outdatedRows": 420,
+    "missingRows": 9930
+  },
+  "additionalPinsDiscoveredDuringRun": 151,
+  "pinsUpdated": 841,
+  "locales": [
+    "es",
+    "fr",
+    "de",
+    "ja",
+    "zh",
+    "ko",
+    "hi",
+    "ar",
+    "th",
+    "it",
+    "ru",
+    "pt",
+    "ms",
+    "vi",
+    "id"
+  ],
+  "saved": 12615,
+  "skipped": [],
+  "verification": {
+    "exactDatabaseFieldHashesMatched": 12615,
+    "verificationErrors": [],
+    "unchangedOriginalPinRecords": 841,
+    "originalPinRecordsUnchanged": true,
+    "liveLocalizedApiSamples": 30,
+    "liveApiLocales": 15,
+    "remainingPins": 0,
+    "remainingTranslationRows": 0
+  },
+  "contentChecks": "HTML tags and citation URLs preserved. Numeric and quantity checks applied to each translated text segment, with targeted corrections for omitted figures, date formatting, technical quantities, chart distinctions and names.",
+  "pins": [
+    {
+      "id": 16054,
+      "title": "Gims & Dystinct — \"Spider\" (SNEP Top Singles (year-end) #1 2024)",
+      "sourceHash": "c988b7036ae39fe14809793a9c1b4c4e7861bf8d"
+    },
+    {
+      "id": 16055,
+      "title": "Oimara — \"Wackelkontakt\" (GfK Top 100 Singles #1 2025)",
+      "sourceHash": "7e4b2d47e23fe33b7cb18ce17907f0fb7beffe73"
+    },
+    {
+      "id": 16056,
+      "title": "Artemas — \"I Like the Way You Kiss Me\" (GfK Top 100 Singles #1 2024)",
+      "sourceHash": "515f274e38e7b9fb53cb57d36c85a4873aeef494"
+    },
+    {
+      "id": 16057,
+      "title": "Olly — \"Balorda nostalgia\" (FIMI Top of the Music #1 2025)",
+      "sourceHash": "e8c04ac54b7fa83d01af8cee26ae202f762d9cc8"
+    },
+    {
+      "id": 16058,
+      "title": "KAJ — \"Bara bada bastu\" (Sverigetopplistan Årslista Singlar #1 2025)",
+      "sourceHash": "27811fdef6e71910515c1849ed8dd83231877ecd"
+    },
+    {
+      "id": 16059,
+      "title": "Fido — \"Joy Is Coming\" (TurnTable Official Nigeria Top 100 #1 2025)",
+      "sourceHash": "94675370c87a2ac9874930c5d7c8c68081f5eae8"
+    },
+    {
+      "id": 16060,
+      "title": "Kizz Daniel & Davido — \"Twe Twe\" (TurnTable Official Nigeria Top 100 #1 2024)",
+      "sourceHash": "596d74ba61da86f5b2a94e95376f724291cb73ee"
+    },
+    {
+      "id": 16061,
+      "title": "DJ Maphorisa, Xduppy & Kabza De Small ft. Thatohatsi, Young Stunna & Nkosazana Daughter — \"Abantwana Bakho\" (The Official South African Charts (TOSAC) - most-streamed song of the year #1 2025)",
+      "sourceHash": "3309d5740e5a5bca55620e2984b6ceb4f8e2014d"
+    },
+    {
+      "id": 16062,
+      "title": "Mthunzi & Kabza De Small ft. Young Stunna, DJ Maphorisa, Sizwe Alakine & Umthakathi Kush — \"Imithandazo\" (The Official South African Charts (TOSAC) - 2024 streams ranking #1 2024)",
+      "sourceHash": "b05342a38db7802353d6cd1bf26cf49dd9352542"
+    },
+    {
+      "id": 16063,
+      "title": "Charlie Zhou Shen (周深) — \"Xiao Mei Man (小美满)\" (TME Tencent Music Uni Chart (由你榜) annual song 2025 #1 2025)",
+      "sourceHash": "67168c860a495c73287a64a9371612f30cbaedb7"
+    },
+    {
+      "id": 16064,
+      "title": "Charlie Zhou Shen (周深) — \"Xiao Mei Man (小美满)\" (TME Tencent Music Uni Chart (由你榜) annual song 2024 #1 2024)",
+      "sourceHash": "7f9193a2ae73af567e3309a1f2fbd6526426c3ff"
+    },
+    {
+      "id": 16067,
+      "title": "WOODZ — \"Drowning\" (Circle Digital Chart (year-end) #1 2025)",
+      "sourceHash": "82dd15f26ac0a2dc7d08e78ff45c92fadf8730ef"
+    },
+    {
+      "id": 16068,
+      "title": "aespa — \"Supernova\" (Circle Digital Chart (year-end) #1 2024)",
+      "sourceHash": "05acb970c3f20d55c084dbbe1d6f93e2c2e8a035"
+    },
+    {
+      "id": 16070,
+      "title": "Mrs. GREEN APPLE — \"Lilac (ライラック)\" (Billboard Japan Hot 100 Year-End #1 2025)",
+      "sourceHash": "c45a792a103fe9c82457a85cd7417dd137942fad"
+    },
+    {
+      "id": 16071,
+      "title": "Creepy Nuts — \"Bling-Bang-Bang-Born\" (Billboard Japan Hot 100 Year-End #1 2024)",
+      "sourceHash": "f59206b4530f24ac186c7708b5ce0065905428f4"
+    },
+    {
+      "id": 16072,
+      "title": "Alex Warren — \"Ordinary\" (ARIA Top 100 Singles (year-end 2025) #1 2025)",
+      "sourceHash": "165afda58ad145e30e03ad0e8d46994c7fbaeb2f"
+    },
+    {
+      "id": 16073,
+      "title": "Benson Boone — \"Beautiful Things\" (ARIA Top 100 Singles (year-end 2024) #1 2024)",
+      "sourceHash": "139c39fe312a0762388c61f29e69b6b9664627f1"
+    },
+    {
+      "id": 16074,
+      "title": "Alex Warren — \"Ordinary\" (Recorded Music NZ Official Top 40 (Year-End Top 50 Singles) #1 2025)",
+      "sourceHash": "5fcb10b2038c4f0df76f50c413496c8ce3d3c581"
+    },
+    {
+      "id": 16092,
+      "title": "Sam Fender & Olivia Dean — \"Rein Me In\" (Official Charts UK Singles #2 2026)",
+      "sourceHash": "b859340d02ebb4050ba43b1ab24820433b147f8c"
+    },
+    {
+      "id": 16100,
+      "title": "Alex Warren — \"Ordinary\" (Billboard Canadian Hot 100 #2 2025)",
+      "sourceHash": "41e548abd3310e3aea8a5f14e81e802424eb8668"
+    },
+    {
+      "id": 16101,
+      "title": "Kendrick Lamar & SZA — \"Luther\" (Billboard Year-End Hot 100 #2 2025)",
+      "sourceHash": "734ae974048c5b2594360252c976b3a396a45b26"
+    },
+    {
+      "id": 16102,
+      "title": "Shaboozey — \"A Bar Song (Tipsy)\" (Billboard Year-End Hot 100 #3 2025)",
+      "sourceHash": "fc2fc452532f6cddc0718973cc6713bda87f7d29"
+    },
+    {
+      "id": 16103,
+      "title": "Lola Young — \"Messy\" (Official Charts UK Singles #2 2025)",
+      "sourceHash": "82806e7db36812f2cc6df221bd2c0e03606fd0c5"
+    },
+    {
+      "id": 16105,
+      "title": "aespa — \"Whiplash\" (Circle Digital Chart (year-end) #2 2025)",
+      "sourceHash": "7e3e11490dc89839e8f51ed5c068577933c33c94"
+    },
+    {
+      "id": 16106,
+      "title": "Shaboozey — \"A Bar Song (Tipsy)\" (Billboard Year-End Hot 100 #2 2024)",
+      "sourceHash": "e35d38d4b4cdabab0ae3019060dee2bba5d5214d"
+    },
+    {
+      "id": 16107,
+      "title": "Benson Boone — \"Beautiful Things\" (Billboard Year-End Hot 100 #3 2024)",
+      "sourceHash": "33ab37bf0925ce055e6789634d7c13413ec47094"
+    },
+    {
+      "id": 16110,
+      "title": "Benson Boone — \"Beautiful Things\" (Official Charts UK Singles #2 2024)",
+      "sourceHash": "09fed609882c0b3b68d96bac45b23450cbb8d5e5"
+    },
+    {
+      "id": 16112,
+      "title": "TWS — \"plot twist\" (Circle Digital Chart (year-end) #2 2024)",
+      "sourceHash": "d950b5bc0e8b2eca8a429e54cc6e092b91b2a924"
+    },
+    {
+      "id": 16225,
+      "title": "Avicii ft. Aloe Blacc — \"SOS\" (Sverigetopplistan Årslistor #1 2019)",
+      "sourceHash": "586d07f0f57c2e18708c5b755b56d9712cd66a9d"
+    },
+    {
+      "id": 16226,
+      "title": "Lewis Capaldi — \"Someone You Loved\" (Official Charts UK Singles #1 2019)",
+      "sourceHash": "11ce32ed3a06db7d56996323534b243d52b054c4"
+    },
+    {
+      "id": 16228,
+      "title": "Jay Chou (周杰伦) feat. Ashin of Mayday (五月天阿信) — \"Won't Cry (說好不哭)\" (TME Tencent Music Uni Chart (由你音乐榜) annual single 2019 #1 2019)",
+      "sourceHash": "4da13a80b5b32d64de535a35dd1cff9ec39bec57"
+    },
+    {
+      "id": 16229,
+      "title": "Kenshi Yonezu (米津玄師) — \"Lemon\" (Billboard Japan Hot 100 Year-End #1 2019)",
+      "sourceHash": "68d7b634cb46638bd840b1de89aaa986b85a2e3a"
+    },
+    {
+      "id": 16230,
+      "title": "周興哲 (Eric Chou) — \"怎麼了\" (KKBOX Mandarin Yearly Cumulative Singles Chart #1 2019)",
+      "sourceHash": "95dd72cd97028c1f82aaff91992c1f0b6ff5cc43"
+    },
+    {
+      "id": 16231,
+      "title": "Drake — \"God's Plan\" (Billboard Year-End Hot 100 #1 2018)",
+      "sourceHash": "002b5a463a25d3e172aba660835d731bb7988474"
+    },
+    {
+      "id": 16232,
+      "title": "Ed Sheeran — \"Perfect\" (Billboard Year-End Hot 100 #2 2018)",
+      "sourceHash": "9093aff152526ce7255d17cd65e3cfe9ecd8f5c8"
+    },
+    {
+      "id": 16233,
+      "title": "Bebe Rexha & Florida Georgia Line — \"Meant to Be\" (Billboard Year-End Hot 100 #3 2018)",
+      "sourceHash": "1ef496d210309f4e4f98af62bf98a7c886338f80"
+    },
+    {
+      "id": 16234,
+      "title": "Jorge & Mateus — \"Propaganda (Ao Vivo)\" (Spotify Brasil year-end most-streamed songs #1 2018)",
+      "sourceHash": "57ddf65185b111e216e06529176712ecbff75f6a"
+    },
+    {
+      "id": 16235,
+      "title": "Nicky Jam & J Balvin — \"X (EQUIS)\" (Monitor Latino Colombia Top 100 (annual, by audience impressions) #1 2018)",
+      "sourceHash": "5a8576a1733366c365ea3757a9482192abaa8fb7"
+    },
+    {
+      "id": 16236,
+      "title": "Takagi & Ketra ft. Giusy Ferreri & Sean Kingston — \"Amore e capoeira\" (FIMI Top of the Music #1 2018)",
+      "sourceHash": "ef87d5d5aad0d4123d58b5b9412ca3e2b2671c5c"
+    },
+    {
+      "id": 16237,
+      "title": "Calvin Harris & Dua Lipa — \"One Kiss\" (Official Charts UK Singles #1 2018)",
+      "sourceHash": "e6b52003f239c3f8d054be2106921c6ca63d5b32"
+    },
+    {
+      "id": 16240,
+      "title": "Lay Zhang (张艺兴) — \"Meng Bu Luo Yu Lin (梦不落雨林) / NAMANANA\" (TME Tencent Music Uni Chart (由你音乐榜), Sep-Dec 2018 (launched Sept 2018; most weeks at #1) #1 2018)",
+      "sourceHash": "68949d25d6bf13960953d45f419c493a5f4a5e3c"
+    },
+    {
+      "id": 16241,
+      "title": "Kenshi Yonezu (米津玄師) — \"Lemon\" (Billboard Japan Hot 100 Year-End #1 2018)",
+      "sourceHash": "f3c8555f96231a320ca898369c66beda52e12ae6"
+    },
+    {
+      "id": 16242,
+      "title": "iKON — \"Love Scenario (사랑을 했다)\" (Gaon Digital Chart (year-end) #1 2018)",
+      "sourceHash": "aaa10506a0593bc55b6912ae0bf8c7e7764ae1ac"
+    },
+    {
+      "id": 16243,
+      "title": "于文文 (Kelly Yu) — \"體面\" (KKBOX Mandarin Yearly Cumulative Singles Chart #1 2018)",
+      "sourceHash": "87b9e8a0b1c4836637584ef8a2a27792e1d2ef21"
+    },
+    {
+      "id": 16244,
+      "title": "5 Seconds of Summer — \"Youngblood\" (ARIA Top 100 Singles (year-end 2018) #1 2018)",
+      "sourceHash": "634f953ba5a428a03eeb841405424e99aabb8e95"
+    },
+    {
+      "id": 16245,
+      "title": "Drake — \"God's Plan\" (Recorded Music NZ Official Top 40 (Year-End Top 50 Singles) #1 2018)",
+      "sourceHash": "67f750c63db55ba13dd6b71b8ee18f78921a0c93"
+    },
+    {
+      "id": 16246,
+      "title": "Ed Sheeran — \"Shape of You\" (Billboard Canadian Hot 100 #1 2017)",
+      "sourceHash": "ea820cc048881b2e3538d8cb59f0e11c23d0a76b"
+    },
+    {
+      "id": 16247,
+      "title": "Ed Sheeran — \"Shape of You\" (Billboard Year-End Hot 100 #1 2017)",
+      "sourceHash": "25dfb891f7f89e7b07a72b2858c3f344bb48f6e2"
+    },
+    {
+      "id": 16248,
+      "title": "Luis Fonsi & Daddy Yankee ft. Justin Bieber — \"Despacito\" (Billboard Year-End Hot 100 #2 2017)",
+      "sourceHash": "6c7c987193d7b569c7653f6f2181636aa9991afd"
+    },
+    {
+      "id": 16249,
+      "title": "Bruno Mars — \"That's What I Like\" (Billboard Year-End Hot 100 #3 2017)",
+      "sourceHash": "840ab93b483667282fcc2557cddb5b47ba3789ea"
+    },
+    {
+      "id": 16251,
+      "title": "Ed Sheeran — \"Shape of You\" (Spotify Brasil year-end most-streamed songs #1 2017)",
+      "sourceHash": "19a07bdabf31992cd7594ea51e197b7864f72140"
+    },
+    {
+      "id": 16252,
+      "title": "Luis Fonsi ft. Daddy Yankee — \"Despacito\" (Monitor Latino Colombia Top 100 (annual, by audience impressions) #1 2017)",
+      "sourceHash": "821ed5661e916f943c583e7dc06f94adc6f4ae94"
+    },
+    {
+      "id": 16253,
+      "title": "Ed Sheeran — \"Shape of You\" (SNEP Top Singles (year-end) #1 2017)",
+      "sourceHash": "b70c8e14a5636af7567e754dac1eb8d007d85a26"
+    },
+    {
+      "id": 16254,
+      "title": "Ed Sheeran — \"Shape of You\" (GfK Top 100 Singles #1 2017)",
+      "sourceHash": "0da0e6618a665ec9c8e1235a1ee77a141e07dae3"
+    },
+    {
+      "id": 16255,
+      "title": "Luis Fonsi ft. Daddy Yankee — \"Despacito\" (FIMI Top of the Music #1 2017)",
+      "sourceHash": "774284523c923475b2044256ea1b75af5f610058"
+    },
+    {
+      "id": 16256,
+      "title": "Luis Fonsi & Daddy Yankee — \"Despacito\" (PROMUSICAE Top 100 Canciones (annual, year-end) #1 2017)",
+      "sourceHash": "5607761ee8d4948695f66d55da8e6bf818302d61"
+    },
+    {
+      "id": 16257,
+      "title": "Ed Sheeran — \"Shape of You\" (Sverigetopplistan Årslista Singlar #1 2017)",
+      "sourceHash": "1faee79172ecfe3bcfab588084d1a7306d849bbb"
+    },
+    {
+      "id": 16258,
+      "title": "Ed Sheeran — \"Shape of You\" (Official Charts UK Singles #1 2017)",
+      "sourceHash": "b619604641da9fffa3293c689a0340dfa0010ab2"
+    },
+    {
+      "id": 16262,
+      "title": "Gen Hoshino (星野源) — \"Koi (恋)\" (Billboard Japan Hot 100 Year-End #1 2017)",
+      "sourceHash": "81539ffd0433dcad054a094b12a7edf24cdef8ef"
+    },
+    {
+      "id": 16263,
+      "title": "Ailee — \"I Will Go to You Like the First Snow (첫눈처럼 너에게 가겠다)\" (Gaon Digital Chart (year-end) #1 2017)",
+      "sourceHash": "50ca5cbd9e30171682740a3e2249da783c370af2"
+    },
+    {
+      "id": 16264,
+      "title": "陳奕迅 (Eason Chan) — \"讓我留在你身邊\" (KKBOX Mandarin Annual Singles Chart #1 2017)",
+      "sourceHash": "1eeecd267a7e23d01a72f931426600bb375de3b0"
+    },
+    {
+      "id": 16265,
+      "title": "Ed Sheeran — \"Shape of You\" (ARIA Top 100 Singles (year-end 2017) #1 2017)",
+      "sourceHash": "df5f1766a3f19ab03300a1cc1842e92cef88ef88"
+    },
+    {
+      "id": 16266,
+      "title": "Ed Sheeran — \"Shape of You\" (Recorded Music NZ Official Top 40 (Year-End Top 50 Singles) #1 2017)",
+      "sourceHash": "5205c747b6044490f1d76a707ba758ab05a9788a"
+    },
+    {
+      "id": 16267,
+      "title": "Black Coffee & David Guetta ft. Delilah Montagu — \"Drive\" (Spotify South Africa 2019 - most streamed South African tracks #1 2019)",
+      "sourceHash": "e82c25c7473b0289e764041d7a9cfd45120739e8"
+    },
+    {
+      "id": 16268,
+      "title": "Anne-Marie — \"2002\" (Gaon Digital Chart (year-end) #1 2019)",
+      "sourceHash": "c3c91e7b556d46302a5e40ebe65d6e42745e617f"
+    },
+    {
+      "id": 16269,
+      "title": "Lil Nas X — \"Old Town Road\" (ARIA Top 100 Singles (year-end 2019) #1 2019)",
+      "sourceHash": "8140e7194045e4efebd0ff316433e1edd607723e"
+    },
+    {
+      "id": 16270,
+      "title": "Lil Nas X — \"Old Town Road\" (Recorded Music NZ Official Top 40 (Year-End Top 50 Singles) #1 2019)",
+      "sourceHash": "59ad21135807f8b38b63c59be8b362de081213de"
+    },
+    {
+      "id": 16271,
+      "title": "Banda MS de Sergio Lizárraga — \"Tu Postura\" (Monitor Latino Mexico Top 100 (annual General) #1 2018)",
+      "sourceHash": "070b29dac1fd07190e3bffc2704b7f446ab39eb0"
+    },
+    {
+      "id": 16272,
+      "title": "DJ Snake featuring Selena Gomez, Ozuna and Cardi B — \"Taki Taki\" (Billboard Argentina Hot 100 #1 2018)",
+      "sourceHash": "4a2c9cb809e27b8cd82e05fd92111529feafcd52"
+    },
+    {
+      "id": 16273,
+      "title": "Lartiste feat. Caroliina — \"Mafiosa\" (SNEP Top Singles (year-end) #1 2018)",
+      "sourceHash": "933ea242c77a9dbdf8330bdf5a6513e26051fe3e"
+    },
+    {
+      "id": 16274,
+      "title": "Dynoro & Gigi D'Agostino — \"In My Mind\" (GfK Top 100 Singles #1 2018)",
+      "sourceHash": "a08ceadf91ef5d7c9185b5672199182012580e0b"
+    },
+    {
+      "id": 16275,
+      "title": "Aitana & Ana Guerra — \"Lo malo\" (PROMUSICAE Top 100 Canciones (annual, year-end) #1 2018)",
+      "sourceHash": "244650ea582c9c232531b712a98cc00fca6b3760"
+    },
+    {
+      "id": 16276,
+      "title": "Avicii ft. Sandro Cavazza — \"Without You\" (Sverigetopplistan Årslista Singlar #1 2018)",
+      "sourceHash": "15ac1026c485067199e6d6dc1a732cfcc2bd049c"
+    },
+    {
+      "id": 16277,
+      "title": "Ariana Grande — \"Hate That I Made You Love Me\" (The Official Singapore Chart (RIAS) #1 2026)",
+      "sourceHash": "03efb408be271758cd4b8136c169cebb67a6567b"
+    },
+    {
+      "id": 16278,
+      "title": "HUNTR/X (EJAE, Audrey Nuna & Rei Ami) — \"Golden\" (The Official Singapore Chart (RIAS) #1 2025)",
+      "sourceHash": "0ea99ed4156a09bee4303a28299afda6c99deb53"
+    },
+    {
+      "id": 16279,
+      "title": "ROSÉ & Bruno Mars — \"APT.\" (Singapore Top 30 Digital Streaming (RIAS) #1 2024)",
+      "sourceHash": "7a8e94de7918ec339c27bf300c0e9b1046580502"
+    },
+    {
+      "id": 16280,
+      "title": "Jung Kook & Latto — \"Seven\" (Singapore Top 30 Digital Streaming (RIAS) #1 2023)",
+      "sourceHash": "74e907e19b1592494d676a224ee412c44e34c08c"
+    },
+    {
+      "id": 16281,
+      "title": "Justin Bieber — \"Ghost\" (Singapore Top 30 Digital Streaming (RIAS) #1 2022)",
+      "sourceHash": "4ac7885cd97000d67e1b1a1651b676a9a1a98a3d"
+    },
+    {
+      "id": 16282,
+      "title": "The Kid LAROI & Justin Bieber — \"Stay\" (Singapore Top 30 Digital Streaming (RIAS) #1 2021)",
+      "sourceHash": "9bf9e9b4641453350a9bd094ee63801d426af7b0"
+    },
+    {
+      "id": 16283,
+      "title": "BLACKPINK — \"How You Like That\" (Singapore Top 30 Digital Streaming (RIAS) #1 2020)",
+      "sourceHash": "cb69b46a42cf6ea7308523452824c74bc14e7274"
+    },
+    {
+      "id": 16284,
+      "title": "Shawn Mendes & Camila Cabello — \"Señorita\" (Singapore Top 30 Digital Streaming (RIAS) #1 2019)",
+      "sourceHash": "5e9dda8b9297a7722328f8663635d43e32bc9ece"
+    },
+    {
+      "id": 16285,
+      "title": "Ariana Grande — \"thank u, next\" (Singapore Top 30 Digital Streaming (RIAS) #1 2018)",
+      "sourceHash": "6d88bba294a065add1e93a8c453f48448ab666d6"
+    },
+    {
+      "id": 16297,
+      "title": "Camila Cabello featuring Young Thug — \"Havana\" (Billboard Canadian Hot 100 #1 2018)",
+      "sourceHash": "8f4a3a4231d9b958d3666f8ba6d6e2537fc8dcf7"
+    },
+    {
+      "id": 16298,
+      "title": "Luis Fonsi & Daddy Yankee — \"Despacito\" (Monitor Latino Mexico Top 100 (annual General) #1 2017)",
+      "sourceHash": "ecebe5984d405066afdc1688eca01410b69123b3"
+    },
+    {
+      "id": 16299,
+      "title": "DTE Trenton Channel Energy Center: 460M USD, 220 MW / 880 MWh Battery at Retired Coal Plant in Wayne County, Michigan",
+      "sourceHash": "08e7c0d2dd5d2005139afa2f67b49d9c25348b0c"
+    },
+    {
+      "id": 16300,
+      "title": "SB Energy Lyra Battery Energy Storage System: 500 MW Facility in Borden County, Texas",
+      "sourceHash": "07a4b11b90c0e9e10abeafc37d72e321783f5719"
+    },
+    {
+      "id": 16301,
+      "title": "Ameresco CyrusOne NAS Lemoore AI Data Center & Microgrid: 1B USD, 100 MW at Naval Air Station Lemoore, California",
+      "sourceHash": "5b176e86402d3d3e5710fb5fba18b4637479b976"
+    },
+    {
+      "id": 16302,
+      "title": "Applied Digital Adair Data Center: 1.5B USD, 200 MW AI Campus in Adair County, Iowa, Targeted for 2027",
+      "sourceHash": "394dbe612696a5d34680497b926f63aadfc9d351"
+    },
+    {
+      "id": 16303,
+      "title": "Applied Digital Polaris Forge 1: 400 MW AI Campus in Ellendale, North Dakota, Anchored by CoreWeave",
+      "sourceHash": "2511229f60bbe7f8ebdfb1ca21e6fb209e9a7832"
+    },
+    {
+      "id": 16304,
+      "title": "AVAIO Digital Taurus Data Center Campus: 6B USD, 116 MW Facility in Brandon, Mississippi",
+      "sourceHash": "7addc801cc0a9b3dfa91a8bea0b449a57c01a7c3"
+    },
+    {
+      "id": 16305,
+      "title": "Cloverleaf Project Bluestem: 600-1,200 MW Data Center Campus in Leavenworth County, Kansas, Planned for 2028",
+      "sourceHash": "49d0bc0558354e1840f013556b8e2a06223973f1"
+    },
+    {
+      "id": 16306,
+      "title": "Crane PDX01 Data Center Campus: 275M USD, 100 MW Campus in Forest Grove, Oregon",
+      "sourceHash": "28b43c1b528cb0689b973d4307e16610d12cf8c9"
+    },
+    {
+      "id": 16307,
+      "title": "Metrobloks Southfield Data Center: 500M USD, 100 MW Facility in Southfield, Michigan",
+      "sourceHash": "e54e64606edc1a9451947c661f8787f5e16d9771"
+    },
+    {
+      "id": 16308,
+      "title": "Microsoft Alviso-Milpitas San Jose Data Center: 73.2M USD Land, 99 MW Facility in San Jose, California",
+      "sourceHash": "406cdb1aea18ce0da3a688b1240efea0af80ade2"
+    },
+    {
+      "id": 16309,
+      "title": "QTS Cedar Rapids Data Center: 10B USD, 1,100 MW Hyperscale Campus in Linn County, Iowa, Planned for 2027",
+      "sourceHash": "dfbffd4a65dea3e32d160559da48b06ee6ccd1dd"
+    },
+    {
+      "id": 16310,
+      "title": "Related Digital Cheyenne Data Center: 1.2B USD, 302-420 MW Campus in Laramie County, Wyoming, Under Construction",
+      "sourceHash": "6345f419a7581c3f2a64b60dac509c35bced53cf"
+    },
+    {
+      "id": 16311,
+      "title": "Vantage Stargate Lighthouse Data Center: 15B USD, 902-1,172 MW AI Campus in Port Washington, Wisconsin, Planned for 2027",
+      "sourceHash": "1821d0e9b45524ca8e4c5504b3aba8a4a82dcb88"
+    },
+    {
+      "id": 16312,
+      "title": "TeraWulf Justified Data Campus: 4.5B USD, 482 MW Brownfield AI Campus in Hawesville, Kentucky, Planned for 2027",
+      "sourceHash": "1350a1cdb81ebb3ad9a62c7aa6f75aeb5dd0d600"
+    },
+    {
+      "id": 16313,
+      "title": "Thor Equities Augusta Data Center Campus: 1B USD, 100 MW Campus in Augusta Township, Michigan",
+      "sourceHash": "0b371d24e555fcbd16b116437ce6047952d112fa"
+    },
+    {
+      "id": 16314,
+      "title": "Ameren Missouri Reform Renewable Energy Center: 250 MW Solar in Callaway County, Missouri",
+      "sourceHash": "75ed67ce3ed429b05175032c1f80d36f0de0c315"
+    },
+    {
+      "id": 16315,
+      "title": "Clearway Royal Slope Energy Center: 260 MW Solar and 260 MW Battery in Grant County, Washington, Under 20-Year PUD Contract",
+      "sourceHash": "e1acb5231c4ce8ce61c167fcdc49b043ff6ab7d7"
+    },
+    {
+      "id": 16316,
+      "title": "Clēnera CO Bar Solar and Storage Complex: 3.05B USD, 1,211 MW Solar and 4,000 MWh Storage in Coconino County, Arizona",
+      "sourceHash": "876d594630d046bc9eb67609fc7cf73069c1713d"
+    },
+    {
+      "id": 16317,
+      "title": "Doral Renewables Mammoth Solar: 1.5B USD, 900 MWac Phases in Pulaski County, Indiana, Commercial in October 2026",
+      "sourceHash": "3a78afd65104e880b69aa1a554deb9f14b154c64"
+    },
+    {
+      "id": 16318,
+      "title": "Invenergy Koshkonong Solar Energy Center: 649M USD, 300 MW Solar and 165 MW Battery in Dane County, Wisconsin",
+      "sourceHash": "43f2a78fd0cf01076cc9078d10ec5bb39d43d069"
+    },
+    {
+      "id": 16319,
+      "title": "Invenergy Tip Top Solar & Storage Project: 200M USD, 220 MW in Lea County, New Mexico",
+      "sourceHash": "32b2dda0c10a0d0a1d1be09aada6ce35da5fcfbc"
+    },
+    {
+      "id": 16320,
+      "title": "NextEra Excelsior Energy Center: 345M USD, 280 MW Solar and 20 MW Battery in Genesee County, New York",
+      "sourceHash": "e28ceb0feba3a0a15675e6198d032346ea9e5015"
+    },
+    {
+      "id": 16321,
+      "title": "NextEra Sedgwick Solar Project: 202 MW Facility in Sedgwick County, Kansas",
+      "sourceHash": "bbdb513210a804c24b5174bfffab0492681eb6c4"
+    },
+    {
+      "id": 16322,
+      "title": "NextEra Singer Solar Project: 145M USD, 300 MW Facility in Beauregard Parish, Louisiana",
+      "sourceHash": "3e005665df031585f8ef6e28ee9a55399a6ab270"
+    },
+    {
+      "id": 16323,
+      "title": "roan — Kyoto Marutamachi Opens November14,2026",
+      "sourceHash": "afb454fc2d7f6d7547f36bb48cc877a58f06709f"
+    },
+    {
+      "id": 16324,
+      "title": "Sanmi333 — Tenjin Daimyo Main Store Opens November1,2015",
+      "sourceHash": "58d5b021bde45d19f635b6f05b2fe082d2781229"
+    },
+    {
+      "id": 16325,
+      "title": "L’ATELIER L’ARCHESTE — Ginza Opens October19,2026",
+      "sourceHash": "7167f05c6a83aa6d28837c34d4e079d0b4065324"
+    },
+    {
+      "id": 16326,
+      "title": "SMOKE DOOR Haruyoshi Saryo Opens September 20, 2026",
+      "sourceHash": "03fff3aaa9cfeafc3cad68789d00c005c78011e0"
+    },
+    {
+      "id": 16327,
+      "title": "Yasaimaki Kushiya Tsubame — Nishijin Opens August 4, 2023",
+      "sourceHash": "c6e6dd900fcb2efcdaae75d5e10d4ca7955f8c27"
+    },
+    {
+      "id": 16328,
+      "title": "Aligned Project Phoenix PIT-01 Data Center: 10B USD, 264 MW AI Campus in Shippingport, Pennsylvania",
+      "sourceHash": "b33082d18c8d1307f811b3b8c80ebe889adec70c"
+    },
+    {
+      "id": 16329,
+      "title": "CloudHQ ORD Campus: 2.5B USD, 252 MW Hyperscale Data Center Campus in Mount Prospect, Illinois",
+      "sourceHash": "5f0f81ba4a4de2815c6a08e95c5d97be6ee1cc7e"
+    },
+    {
+      "id": 16330,
+      "title": "Google Project Cannoli Data Center: 2B USD, 231 MW Campus in Van Buren Township, Michigan",
+      "sourceHash": "bc680fedd1ca2ce17347c49926a843eaeea228f8"
+    },
+    {
+      "id": 16331,
+      "title": "Prime Phoenix Avondale Data Center: 1B USD, 240 MW Hyperscale Campus in Avondale, Arizona",
+      "sourceHash": "3ef9394c1c1256fa43b14d464429cdf5a467b3a3"
+    },
+    {
+      "id": 16332,
+      "title": "TeraWulf Muskie Data Center: 1.5B USD, 250 MW HPC Campus in Catlettsburg, Kentucky",
+      "sourceHash": "2eecac45f4af12d65d36dfd1e8d17832cc6b4ea7"
+    },
+    {
+      "id": 16333,
+      "title": "Vantage CO21 Trident Data Center: 1.5B USD, 250 MW Campus in Aurora, Colorado",
+      "sourceHash": "35bc06c55112125f06c6f5dbb7c684aca02503fe"
+    },
+    {
+      "id": 16334,
+      "title": "Clearway Mosey Solar Project: 1.25B USD, 544 MW Solar & 850 MW BESS in Clark & Nye Counties, Nevada",
+      "sourceHash": "84cb878dc73178d95ca9ca459ce621f82ba7186b"
+    },
+    {
+      "id": 16335,
+      "title": "Dominion Randolph Solar Center: 1.2B USD, 800 MW Solar Project in Charlotte County, Virginia",
+      "sourceHash": "4a72577adb42b2f0436d7d4422a40fe914bdee5c"
+    },
+    {
+      "id": 16336,
+      "title": "EDF Macadamia Solar Farm: 550M USD, 484 MW Solar Facility in Washington County, North Carolina",
+      "sourceHash": "255ddb7cad8449cc3e73d5cac121f0dad61693a6"
+    },
+    {
+      "id": 16337,
+      "title": "Invenergy High Noon Solar Center: 650M USD, 300 MW Solar & 165 MW BESS in Columbia County, Wisconsin",
+      "sourceHash": "ec02bb91c54eb4fa9926de2367fa189c1fc5c405"
+    },
+    {
+      "id": 16338,
+      "title": "Sunstone Solar & Storage Project: 1.8B USD, 1,200 MW Solar & 1,200 MW BESS in Morrow County, Oregon",
+      "sourceHash": "f63fb2e055010104c078b94c3dea1065fc7bb8e0"
+    },
+    {
+      "id": 16339,
+      "title": "Revolve Bouse Solar & Storage Project: 1.5B USD, 1,010 MW Solar & 1,011 MW BESS in La Paz County, Arizona",
+      "sourceHash": "27791b20b5b0e9d8c7358eb8a64a533749b2ef8a"
+    },
+    {
+      "id": 16340,
+      "title": "RWE Fourth Quarter BESS: 400M USD, 300 MW Battery Storage Facility in Montgomery County, Maryland",
+      "sourceHash": "03119d7db57cb0508132c8512b9374a19d94836c"
+    },
+    {
+      "id": 16341,
+      "title": "AVAIO Digital Project Hercules Campus: 3B USD, 300 MW Data Center in Appomattox County, Virginia",
+      "sourceHash": "97ea481248dfd0c9f27eae961ec983181d671b38"
+    },
+    {
+      "id": 16342,
+      "title": "Digital Realty Moores Chapel Campus: 2.5B USD, 276 MW Hyperscale Data Center in Charlotte, North Carolina",
+      "sourceHash": "e8e72591aae14fbea6c399142a62e1e348f1b23e"
+    },
+    {
+      "id": 16343,
+      "title": "Google Project Spade Campus: 15B USD, 600-1,200 MW Data Center in New Florence, Missouri",
+      "sourceHash": "2e00c198118353cbb9a33e2aefb01f23ff8334d7"
+    },
+    {
+      "id": 16344,
+      "title": "Google Project Tembo Campus: 17B USD, 464-2,700 MW Data Center in Cheyenne, Wyoming",
+      "sourceHash": "fd6cbe05766e8905c847cc250cc8e7530d304d77"
+    },
+    {
+      "id": 16345,
+      "title": "Prometheus Atlas Data Center: 2B USD, 250 MW Microgrid AI Campus in Evanston, Wyoming",
+      "sourceHash": "035f18911ac9e70ca5712b58e3e5f200112c842b"
+    },
+    {
+      "id": 16346,
+      "title": "Cypress Creek Steel River Energy Center: 4.5B USD, 500 MW Solar & 2.9 GWh BESS in Mississippi County, Arkansas",
+      "sourceHash": "54d7918f88bd56d84d174b912d89ba5e4c9e6d2a"
+    },
+    {
+      "id": 16347,
+      "title": "Doral Tennyson Creek Solar Center: 450M USD, 300 MW Solar & Storage in Bourbon County, Kansas",
+      "sourceHash": "c6002ad86ff4a41e25e4b8cf0305071b0bdc506e"
+    },
+    {
+      "id": 16348,
+      "title": "Doral Vista Sands Solar Center: 1.5B USD, 1,315 MW Solar & 300 MW BESS in Portage County, Wisconsin",
+      "sourceHash": "a1db7825f708aa1633a102c471c2c063e1a9e840"
+    },
+    {
+      "id": 16349,
+      "title": "Invenergy Burt Solar Project: 700M USD, 500 MW Solar & Storage in Burt County, Nebraska",
+      "sourceHash": "cab9acb3036521325e1f602f8f3f0c53472f90bd"
+    },
+    {
+      "id": 16350,
+      "title": "NextEra West Gardner Solar Center: 500M USD, 320 MW Solar & 128 MW BESS in Johnson County, Kansas",
+      "sourceHash": "79e983b0567ac948ba3e14a522452b28bfd94248"
+    },
+    {
+      "id": 16351,
+      "title": "NextEra High Spring Solar Center: 550M USD, 400 MW Solar Project in Muskogee County, Oklahoma",
+      "sourceHash": "549afd09901ae59e6a27cb560e06a548d0fd9e7b"
+    },
+    {
+      "id": 16352,
+      "title": "Katie Zacharia Leaves the White House Press Secretary Role",
+      "sourceHash": "616e63a5e3958573d6d120baef1f528c6bcd6824"
+    },
+    {
+      "id": 16353,
+      "title": "Trump Is Expected to Name a New Permanent Press Secretary",
+      "sourceHash": "9a66cee17a97fdb752ad809e34cd3ab456b7bb67"
+    },
+    {
+      "id": 16354,
+      "title": "Lockheed Martin Announces $300 Million Grand Prairie Expansion",
+      "sourceHash": "168267b35d002cd298e7bd252b9d2a8a01e204a1"
+    },
+    {
+      "id": 16355,
+      "title": "Mosaic Schedules 199 Job Cuts at South Fort Meade",
+      "sourceHash": "21949308cf1e213facf87e3f9d1b559048983dee"
+    },
+    {
+      "id": 16356,
+      "title": "Calpine Zion Energy Center Aurora BESS: 850M USD, 1,206 MW Battery Storage in Lake County, Illinois",
+      "sourceHash": "df55913bab99ba7ec79c0ca7d11fc8b06ece2f80"
+    },
+    {
+      "id": 16357,
+      "title": "Cielo Chisago Data Center Campus: 2.0B USD, 300 MW Hyperscale Project in Chisago County, Minnesota",
+      "sourceHash": "d458e0dbe62118078fca56a51dd46738a9f62e47"
+    },
+    {
+      "id": 16358,
+      "title": "Cielo Haines City Data Center Campus: 1.8B USD, 300 MW Hyperscale Facility in Polk County, Florida",
+      "sourceHash": "ac1b5389a274d934ab4b51f13e69ccadff9fc33a"
+    },
+    {
+      "id": 16359,
+      "title": "Cielo New Lenox Data Center Campus: 2.1B USD, 300 MW Facility in Will County, Illinois",
+      "sourceHash": "c22c17b9561406afb57d96b2242fdf474f2c574f"
+    },
+    {
+      "id": 16360,
+      "title": "Cloverleaf Project Bluestem Clean Campus: 1.5B USD, 240 MW Data Center in Leavenworth County, Kansas",
+      "sourceHash": "440842aeca5d0e1cfa49c09eb4f86b469ba64a1b"
+    },
+    {
+      "id": 16361,
+      "title": "SDC Capital Partners VA-04 Campus: 2.5B USD, 300 MW Hyperscale Data Center in Prince William County, Virginia",
+      "sourceHash": "67ee32646ae68eed33e2c622900af9794331784b"
+    },
+    {
+      "id": 16362,
+      "title": "Townsite Boulder City Data Center Campus: 1.2B USD, 170 MW Solar-Co-Located Facility in Clark County, Nevada",
+      "sourceHash": "fba9bc46dcdc9e30eeb61d429b814de29fda080f"
+    },
+    {
+      "id": 16363,
+      "title": "Ashton Energy Center: 2.0B USD, 1,027 MWac Solar & 1,022 MW Storage in Nye County, Nevada",
+      "sourceHash": "025da6e936bec671ef3b8fe2de6a84376ad6ad5b"
+    },
+    {
+      "id": 16364,
+      "title": "Intersect Power Aurelius Solar Project: 1.3B USD, 1,124 MWac Facility in Deaf Smith County, Texas",
+      "sourceHash": "18eaa834dafec7bea5a8c31617f5317a3d9f3c6b"
+    },
+    {
+      "id": 16365,
+      "title": "Plum Solar Project: 1.2B USD, 1,040 MWac Solar Energy Facility in Kings County, California",
+      "sourceHash": "8b82df4df7e77b6e17299a43edae222678349638"
+    },
+    {
+      "id": 16366,
+      "title": "Spectra Solar Facility: 1.4B USD, 1,200 MWac Solar Generation Center in Scurry County, Texas",
+      "sourceHash": "1dfbc980f8ebcf1fe9926fd9ae689e6bcf098788"
+    },
+    {
+      "id": 16367,
+      "title": "Wingtip Solar 1 & Storage Project: 2.2B USD, 1,176 MWac Hybrid Facility in Merced County, California",
+      "sourceHash": "6d4c0b07d1bbebff63d73f666fa3a8ba87db4144"
+    },
+    {
+      "id": 16368,
+      "title": "Quark Energy Storage Project: 800M USD, 1,175 MW Battery System in Fresno County, California",
+      "sourceHash": "d319a5d5d5c813c67852352630f3b04d43b41368"
+    },
+    {
+      "id": 16369,
+      "title": "Alcove Osawatomie Data Center Campus: 1.1B USD, 150 MW Facility in Miami County, Kansas",
+      "sourceHash": "dc99c92f906c68cd4318aa14c61c9e9d03a9bb98"
+    },
+    {
+      "id": 16370,
+      "title": "Archer Minneapolis Faribault Campus: 950M USD, 120 MW Data Center in Rice County, Minnesota",
+      "sourceHash": "b24d8d85e726041e0a055020091fcedcb1200eb0"
+    },
+    {
+      "id": 16371,
+      "title": "Google Lincoln Data Center Campus: 1.2B USD, 156 MW Hyperscale Facility in Lancaster County, Nebraska",
+      "sourceHash": "6eee46de9290c3ab9305239374279991baddaec0"
+    },
+    {
+      "id": 16372,
+      "title": "Google Storey County Data Center Campus: 1.2B USD, 174 MW Facility in Storey County, Nevada",
+      "sourceHash": "ea24ce81d0401138f9096ba317dd212b8b93ba48"
+    },
+    {
+      "id": 16373,
+      "title": "Scannell Monticello Data Center Campus: 1.3B USD, 150 MW Facility in Wright County, Minnesota",
+      "sourceHash": "e1c61f7fd83b79559aecd3e62fd4a57ac8d8cf90"
+    },
+    {
+      "id": 16374,
+      "title": "Switch Citadel Campus Expansion: 1.0B USD, 118 MW Facility in Storey County, Nevada",
+      "sourceHash": "5e320c9d718415f09c9c2c8b586de1aa118b69fa"
+    },
+    {
+      "id": 16375,
+      "title": "Angeleno Solar Farm & Storage Project: 2.1B USD, 1,150 MWac Facility in Los Angeles County, California",
+      "sourceHash": "7a9daf5aa42055bba29c6dc1d0a82faea861b160"
+    },
+    {
+      "id": 16376,
+      "title": "Boson Solar & Storage Project: 2.1B USD, 1,173 MWac Hybrid Center in Kern County, California",
+      "sourceHash": "710c5b1a20678c854e88ad9b825dd2357c40d379"
+    },
+    {
+      "id": 16377,
+      "title": "Intersect Power Ross Solar Project: 1.2B USD, 1,026 MWac Facility in Refugio County, Texas",
+      "sourceHash": "70abea45f88cbd04e0bcfdc1cd111ac359499279"
+    },
+    {
+      "id": 16378,
+      "title": "Permian I Solar Facility: 1.3B USD, 1,126 MWac Solar Project in Pecos County, Texas",
+      "sourceHash": "f75a0a4fd530b39755003dbae829336e8ecdab91"
+    },
+    {
+      "id": 16379,
+      "title": "Muon Solar & Storage Project: 2.0B USD, 1,170 MWac Hybrid Center in Fresno County, California",
+      "sourceHash": "5c3c948991fe574dc212c1a4098e8784738fde54"
+    },
+    {
+      "id": 16380,
+      "title": "Zeus Armstrong Energy Storage: 950M USD, 1,043 MW Battery Project in Armstrong County, Texas",
+      "sourceHash": "fa45617b3cca974719e0bb48abb336521f71a8e1"
+    },
+    {
+      "id": 16381,
+      "title": "Zeus Mitchell Energy Storage: 950M USD, 1,043 MW Battery Project in Mitchell County, Texas",
+      "sourceHash": "b52e628fb150e959fc619e697e7ae24ee86d7f2b"
+    },
+    {
+      "id": 16382,
+      "title": "Chirisa PNJ Data Center Campus: 750M USD, 90 MW Facility in Middlesex County, New Jersey",
+      "sourceHash": "3f3b658b57a462c87f0e857c8ea2ec787b456c9a"
+    },
+    {
+      "id": 16383,
+      "title": "Google Omaha Data Center Expansion: 900M USD, 87 MW Facility in Douglas County, Nebraska",
+      "sourceHash": "a87a9d701ee5e6a2d87eb889f43fab7cab708594"
+    },
+    {
+      "id": 16384,
+      "title": "Meta Aiken Data Center Campus: 1.2B USD, 91 MW Facility in Aiken County, South Carolina",
+      "sourceHash": "3883abfb384da9d53a2467247f067cb2f04db7c3"
+    },
+    {
+      "id": 16385,
+      "title": "Meta Los Lunas Campus Expansion: 1.0B USD, 99 MW Facility in Valencia County, New Mexico",
+      "sourceHash": "3ab88ecfd49acc1dc6f2bd0e830a6a20c9aeb74a"
+    },
+    {
+      "id": 16386,
+      "title": "Meta Montgomery Data Center Campus: 1.5B USD, 106 MW Facility in Montgomery County, Alabama",
+      "sourceHash": "b05013c29c9639f79309b475ad3bfe1ef3bb3745"
+    },
+    {
+      "id": 16387,
+      "title": "Terra Santa Clara Data Center: 850M USD, 99 MW Facility in Santa Clara, California",
+      "sourceHash": "50ef6853b1f838e7a9535896f7691f9dbfdbb0fe"
+    },
+    {
+      "id": 16388,
+      "title": "Bluewater Solar & Storage Project: 1.8B USD, 1,016 MWac Facility in La Paz County, Arizona",
+      "sourceHash": "6577864e08f458d4f863b79a6c576bb1332f60a8"
+    },
+    {
+      "id": 16389,
+      "title": "Gravitas I Solar Project: 1.3B USD, 1,125 MWac Solar Facility in Pecos County, Texas",
+      "sourceHash": "b5a5fa1bae19bfe10c40714bd158af999113ba4e"
+    },
+    {
+      "id": 16390,
+      "title": "Stanley Solar & Storage Complex: 1.9B USD, 1,039 MWac Facility in Maricopa County, Arizona",
+      "sourceHash": "66794820f006f0b6f81439ffb4995f4a15642775"
+    },
+    {
+      "id": 16391,
+      "title": "Umbriel Solar & Storage Project: 2.1B USD, 1,150 MWac Facility in Imperial County, California",
+      "sourceHash": "b701205c8ea5854228ccdb0ecf6b19629cc1b462"
+    },
+    {
+      "id": 16392,
+      "title": "Hillside Energy Storage Project: 800M USD, 1,065 MW / 4,260 MWh BESS in Los Angeles County, California",
+      "sourceHash": "64a682a53915864c9f76f2b1592c8f7a5c9874b3"
+    },
+    {
+      "id": 16393,
+      "title": "Prairie Point Energy Storage Complex: 800M USD, 1,000 MW / 4,000 MWh BESS in Wise County, Texas",
+      "sourceHash": "e6698e1af06afbefaa9f09bc8d3c5715456e7c5a"
+    },
+    {
+      "id": 16394,
+      "title": "Zeus Scurry Energy Storage Project: 800M USD, 1,043 MW / 4,172 MWh BESS in Scurry County, Texas",
+      "sourceHash": "7574ddd5adf8b90159aeb5765a844934050596cc"
+    },
+    {
+      "id": 16395,
+      "title": "AWS Ridgeland Data Center Campus: 2.0B USD, 148 MW Hyperscale Facility in Madison County, Mississippi",
+      "sourceHash": "3c72d5ca8fd82e8adf050770fe099266502bdb25"
+    },
+    {
+      "id": 16396,
+      "title": "Cielo Cherokee County Data Center Campus: 1.5B USD, 300 MW Facility in Cherokee County, South Carolina",
+      "sourceHash": "a7e1f7f9d1e3348b1340628f15f99b37047a7455"
+    },
+    {
+      "id": 16397,
+      "title": "NE Edge Millstone Nuclear Data Center: 1.6B USD, 300 MW Facility in New London County, Connecticut",
+      "sourceHash": "817980fcb7ee2301889f81653951658203e054eb"
+    },
+    {
+      "id": 16398,
+      "title": "QTS Denver Adams County Campus: 1.2B USD, 148 MW Facility in Adams County, Colorado",
+      "sourceHash": "8c032aef7c9129d8f398f5430d0ddbf337aa6eb3"
+    },
+    {
+      "id": 16399,
+      "title": "Rowan Bauxite II Data Center Campus: 1.1B USD, 132 MW Facility in Frederick County, Maryland",
+      "sourceHash": "8d6b1615b10e399a42ba7994cb88d079804ba445"
+    },
+    {
+      "id": 16400,
+      "title": "Super DC Riverview Technology Campus: 2.1B USD, 300 MW Facility in Erie County, New York",
+      "sourceHash": "c2065350c9806df8a39da651e7665b569a05f05d"
+    },
+    {
+      "id": 16401,
+      "title": "Key City Solar Project: 1.1B USD, 989 MWac Utility Facility in Taylor County, Texas",
+      "sourceHash": "63beb277bdc6081a22eaf5e659ec33632b442680"
+    },
+    {
+      "id": 16402,
+      "title": "Pion Solar & Storage Project: 2.1B USD, 1,168 MWac Facility in Fresno County, California",
+      "sourceHash": "e58cdc8aa6b19880f926e1b32e43b36a02f96409"
+    },
+    {
+      "id": 16403,
+      "title": "Ripple Solar & Storage Project: 1.8B USD, 946 MWac Facility in Kings & Fresno Counties, California",
+      "sourceHash": "685f409a55dca3d28ee347bc8bb0ecd6dbd002c1"
+    },
+    {
+      "id": 16404,
+      "title": "Kickstart Energy Storage Project: 800M USD, 1,026 MW / 4,104 MWh BESS in Ellis County, Texas",
+      "sourceHash": "a52c9cda43a5d15a74b2171e230c67939d3d78a1"
+    },
+    {
+      "id": 16405,
+      "title": "Nabla Energy Storage Project: 600M USD, 750 MW / 3,000 MWh BESS in Parker County, Texas",
+      "sourceHash": "5171ff73a4b5371d26deb4e93f3c9efd3476433f"
+    },
+    {
+      "id": 16406,
+      "title": "Nelson-Electric Junction Storage Project: 900M USD, 1,200 MW / 4,800 MWh BESS in Lee County, Illinois",
+      "sourceHash": "f8f8d12bf60590a68bf82f8a9e27e49f340225c3"
+    },
+    {
+      "id": 16407,
+      "title": "AWS Canton Mega Site Data Center Campus: 2.0B USD, 200 MW Facility in Madison County, Mississippi",
+      "sourceHash": "5d730ae2211feaa60301706552cdf3e4832c55c0"
+    },
+    {
+      "id": 16408,
+      "title": "CloudHQ MSP Chaska Data Center Campus: 1.0B USD, 200 MW Facility in Carver County, Minnesota",
+      "sourceHash": "89d48934439786bf5f6aec01aacb9cc6aec10220"
+    },
+    {
+      "id": 16409,
+      "title": "Google Kansas City Data Center Campus: 1.0B USD, 217 MW Hyperscale Facility in Clay County, Missouri",
+      "sourceHash": "6c3d58ebe72f6497a640e05618e31ef020bf5eb2"
+    },
+    {
+      "id": 16410,
+      "title": "Google Widows Creek Data Center Campus: 1.0B USD, 150 MW Facility in Jackson County, Alabama",
+      "sourceHash": "72dcb27daee6d2eb4733f521d97de4e5fa0e2f7a"
+    },
+    {
+      "id": 16411,
+      "title": "Nebius Vineland AI Data Center: 1.2B USD, 200 MW Facility in Cumberland County, New Jersey",
+      "sourceHash": "4f22df534a1f3d740790e8ea2e41ecf8c24d639b"
+    },
+    {
+      "id": 16412,
+      "title": "Prime Data Centers Phoenix Campus: 1.8B USD, 240 MW Hyperscale Facility in Maricopa County, Arizona",
+      "sourceHash": "ff388e74283b981d9995aecdd7d27bd5cd2133ab"
+    },
+    {
+      "id": 16413,
+      "title": "Cedar Island Solar Project: 950M USD, 800 MWac Facility in Sherman County, Oregon",
+      "sourceHash": "df826ad5c08edd58a7f58008beff21b7078fddf6"
+    },
+    {
+      "id": 16414,
+      "title": "Chance Solar Project: 1.0B USD, 896 MWac Clean Energy Facility in Nye County, Nevada",
+      "sourceHash": "00e11da5bc5db964f2348fea8ddc26d05131e047"
+    },
+    {
+      "id": 16415,
+      "title": "Shadow Ranch Solar Project: 900M USD, 808 MWac Utility Facility in Upton County, Texas",
+      "sourceHash": "9c5cefefd672069205dbfb01c6696fc715dbdadb"
+    },
+    {
+      "id": 16416,
+      "title": "Ipava-Maple Ridge Storage Project: 700M USD, 821 MW / 3,284 MWh BESS in Fulton County, Illinois",
+      "sourceHash": "f92099bbbe87b565ad1ecdb04975279954b95040"
+    },
+    {
+      "id": 16417,
+      "title": "AVAIO Digital Appomattox Campus Phase 2: 1.0B USD, 150 MW Facility in Appomattox County, Virginia",
+      "sourceHash": "df4f4a08405019972d9cc9d602f0e23ce1436eca"
+    },
+    {
+      "id": 16418,
+      "title": "Compass MCI-A Topeka Data Center Campus: 1.1B USD, 153 MW Facility in Shawnee County, Kansas",
+      "sourceHash": "bab1ee9c9a8f8fde158077adc5ab00c88c4ecd00"
+    },
+    {
+      "id": 16419,
+      "title": "Deep Atomic INL SMR Nuclear Data Center: 800M USD, 60 MW Facility in Bonneville County, Idaho",
+      "sourceHash": "5958ef8d29bfa758c30a7b0de70fc55b32499cf1"
+    },
+    {
+      "id": 16420,
+      "title": "Digi Columbiana Data Center: 450M USD, 55 MW Hyperscale Facility in Shelby County, Alabama",
+      "sourceHash": "51a7ebaa70b7bd0a9b2a6215bb6bb1948e03e92e"
+    },
+    {
+      "id": 16421,
+      "title": "Menlo Digital Phoenix Data Center Campus: 1.8B USD, 257 MW Facility in Maricopa County, Arizona",
+      "sourceHash": "050bbfe6a1e98a758d1fdea129882e6b56c9ea58"
+    },
+    {
+      "id": 16422,
+      "title": "Rowan Quantum Frederick Data Center Campus: 1.2B USD, 150 MW Facility in Frederick County, Maryland",
+      "sourceHash": "8e4558fca979a7a63fa3751a760f91b94fedf40c"
+    },
+    {
+      "id": 16423,
+      "title": "Big Plain Solar & Storage Project: 1.2B USD, 600 MWac Facility in Madison County, Ohio",
+      "sourceHash": "09e05574099a0b0443c9341ddc1094f917ca8528"
+    },
+    {
+      "id": 16424,
+      "title": "Dequine-Eugene Clean Energy Project: 1.3B USD, 700 MWac Facility in Fountain County, Indiana",
+      "sourceHash": "3c7097490f596903e2e936a78ad96713567f6677"
+    },
+    {
+      "id": 16425,
+      "title": "Icarus Solar & Storage Project: 1.4B USD, 718 MWac Facility in Mohave County, Arizona",
+      "sourceHash": "7be0d54c10afdff79d983ba7e7c9a81264f9a54b"
+    },
+    {
+      "id": 16426,
+      "title": "Indigo Solar 3 Project: 900M USD, 800 MWac Utility Facility in Fisher County, Texas",
+      "sourceHash": "1bfd5e4d11ac796d77988a95402d18247696686f"
+    },
+    {
+      "id": 16427,
+      "title": "Jefferson-Greentown Clean Energy Project: 1.6B USD, 835 MWac Facility in Rush County, Indiana",
+      "sourceHash": "770d7d2bba4d9bcd6b01be96a5b28806520f8cbc"
+    },
+    {
+      "id": 16428,
+      "title": "Atlas Clean Energy Storage Complex: 1.4B USD, 2,171 MW BESS in La Paz County, Arizona",
+      "sourceHash": "9a379158cb10d71784e712b125b76850ee2caf42"
+    },
+    {
+      "id": 16429,
+      "title": "Pioneer Clean Energy Storage Center: 240M USD, 300 MW BESS in Yuma County, Arizona",
+      "sourceHash": "c7ce93f9895276011858a1351967bd4650ac18af"
+    },
+    {
+      "id": 16430,
+      "title": "Sebastian Clean Energy Storage Center: 180M USD, 200 MW BESS in Sebastian County, Arkansas",
+      "sourceHash": "105905b4609e57a8c249a2dff94c6b453c25e839"
+    },
+    {
+      "id": 16431,
+      "title": "Steel River Clean Energy Storage Complex: 220M USD, 250 MW BESS in Mississippi County, Arkansas",
+      "sourceHash": "a089a1e2512b02beebc03f1ab6877308914b8159"
+    },
+    {
+      "id": 16432,
+      "title": "Aligned Data Centers Phoenix PHX-08 Campus: 1.5B USD, 202 MW Critical IT Facility in Maricopa County, Arizona",
+      "sourceHash": "857ac0080be023c35e515ca123277e38e9952a6e"
+    },
+    {
+      "id": 16433,
+      "title": "Applied Digital Polaris Forge Campus: 1.8B USD, 210 MW HPC Data Center in Dickey County, North Dakota",
+      "sourceHash": "2cf6e129da5577234a1601ca9378ede290e485a4"
+    },
+    {
+      "id": 16434,
+      "title": "Avaio Digital Leo Data Center: 1.2B USD, 150 MW Hyperscale Campus in Pulaski County, Arkansas",
+      "sourceHash": "854b9e5ef9fe4fd30cffbb8df2a62aee76bfc114"
+    },
+    {
+      "id": 16435,
+      "title": "PowerHouse Charlotte Data Center Campus: 2.2B USD, 300 MW Hyperscale Complex in Mecklenburg County, North Carolina",
+      "sourceHash": "39d909ae4915628b4aaffabb3862d7abc7ce9b5e"
+    },
+    {
+      "id": 16436,
+      "title": "Sentinel East Whiteland Data Center: 2.0B USD, 300 MW Hyperscale Campus in Chester County, Pennsylvania",
+      "sourceHash": "7dd8f0abbe34b2721c61de66597b2339b8e5d941"
+    },
+    {
+      "id": 16437,
+      "title": "Domestic Chicken Solar Energy Center: 620M USD, 559 MWac Facility in Maricopa County, Arizona",
+      "sourceHash": "7157d22d784378beb7952d9f6942e47b715ceb32"
+    },
+    {
+      "id": 16438,
+      "title": "Hillsboro Solar Clean Energy Facility: 220M USD, 200 MWac Center in Lawrence County, Alabama",
+      "sourceHash": "1fdc039558f6370b7765f4660177140ebd22c41a"
+    },
+    {
+      "id": 16439,
+      "title": "Libra Clean Energy Center: 1.2B USD, 700 MWac Solar and 2,800 MWh Storage in Lyon County, Nevada",
+      "sourceHash": "a953dfc393a46cd013d41672b5ca93707d6c6153"
+    },
+    {
+      "id": 16440,
+      "title": "Darden Energy Storage Center: 1.1B USD, 1,150 MW BESS in Fresno County, California",
+      "sourceHash": "c255fcd82e73c2a0c816278f1868c966e5f5e8c2"
+    },
+    {
+      "id": 16441,
+      "title": "Zeus Mitchell Energy Storage Complex II: 850M USD, 1,043 MW BESS in Mitchell County, Texas",
+      "sourceHash": "2f645850dad24648228946c0468191dda2d38667"
+    },
+    {
+      "id": 16442,
+      "title": "Dickerson Energy & Digital Campus: 2.2B USD, 300 MW Hyperscale Complex in Montgomery County, Maryland",
+      "sourceHash": "650cf8a7e83f8d1385f3c6838aefad9d36fe3ad3"
+    },
+    {
+      "id": 16443,
+      "title": "AWS Wallula Gap Hyperscale Campus: 2.5B USD, 300 MW Complex in Walla Walla County, Washington",
+      "sourceHash": "750ff6256356ccdbace4452a6a57b21c3ac1c816"
+    },
+    {
+      "id": 16444,
+      "title": "Coal Creek Station Clean Computing Campus: 1.8B USD, 300 MW Data Center in McLean County, North Dakota",
+      "sourceHash": "2ad7d57966b47ac81b70949853532e42e978bcd8"
+    },
+    {
+      "id": 16445,
+      "title": "Microsoft Fairwater Hyperscale Campus: 1.0B USD, 115 MW Data Center in Racine County, Wisconsin",
+      "sourceHash": "5e34b0c7808c7ebf72e5098582342c6e79d34ff8"
+    },
+    {
+      "id": 16446,
+      "title": "Ranalli Lysander Data & Technology Campus: 2.0B USD, 300 MW Facility in Onondaga County, New York",
+      "sourceHash": "c0d8cfb58dc9673194847dba82cbcd28c583e485"
+    },
+    {
+      "id": 16447,
+      "title": "Pepper Hammock Clean Solar Energy Center: 1.3B USD, 1,200 MWac Facility in Wayne County, Georgia",
+      "sourceHash": "7732b3e01624c5618d30367809226b80a058ce60"
+    },
+    {
+      "id": 16448,
+      "title": "Sanborn Clean Solar Hybrid Facility: 1.8B USD, 1,420 MWac Center in Kern County, California",
+      "sourceHash": "515654745b2f41bba6d1b46a55fbdd48ea946775"
+    },
+    {
+      "id": 16449,
+      "title": "Steward Creek Solar Project: 1.4B USD, 1,200 MWac Facility in Lee County, Illinois",
+      "sourceHash": "4c1b75e9c0e364e493b23aa7192e8b4a303bdfa4"
+    },
+    {
+      "id": 16450,
+      "title": "Alisa Clean Energy Storage Complex 2: 420M USD, 500 MW BESS in Yuma County, Arizona",
+      "sourceHash": "10b5564aea947c258d2999d0806a8b9a0dcd552d"
+    },
+    {
+      "id": 16451,
+      "title": "Pinecone Clean Energy Storage Facility: 430M USD, 515 MW BESS in Yuma County, Arizona",
+      "sourceHash": "afd64c14b593e98e1dc22bd667e0fa5557402a22"
+    },
+    {
+      "id": 16452,
+      "title": "Brookside Forest Energy Storage Center: 280M USD, 300 MW BESS in Lewis County, New York",
+      "sourceHash": "3f9572e51874cdbd9def06c2f6bdb0863d68903a"
+    },
+    {
+      "id": 16453,
+      "title": "Pinopolis Clean Energy Storage Facility: 260M USD, 300 MW BESS in Berkeley County, South Carolina",
+      "sourceHash": "d98913c8f18fa5eecfb5e4c27b35f5e469e16403"
+    },
+    {
+      "id": 16454,
+      "title": "Garner Clean Energy Storage Facility: 360M USD, 425 MW BESS in Johnson County, Kansas",
+      "sourceHash": "ed62f1a26916ec6679ead69d4e915a6ad9ce52f1"
+    },
+    {
+      "id": 16455,
+      "title": "Shallow Seam Clean Storage Center: 340M USD, 400 MW BESS in Clearfield County, Pennsylvania",
+      "sourceHash": "c01af1c81d4f57401b646767d3a92081aab31531"
+    },
+    {
+      "id": 16456,
+      "title": "AWS Boardman Airport Data Center: 800M USD, 75 MW Campus in Morrow County, Oregon",
+      "sourceHash": "316383a17e5bac2d486c6f93cbc0e3234bc1864c"
+    },
+    {
+      "id": 16457,
+      "title": "Google Papillion Data Center Campus: 600M USD, 57 MW Expansion in Sarpy County, Nebraska",
+      "sourceHash": "d28ddb1b105e881e09319af3443cf17b440f279c"
+    },
+    {
+      "id": 16458,
+      "title": "Microsoft Columbia Data Center Campus: 650M USD, 57 MW Complex in Douglas County, Washington",
+      "sourceHash": "6a09ab66ac7aac97d9bb5b836c695ee03f75837b"
+    },
+    {
+      "id": 16459,
+      "title": "Microsoft Malaga Technology Park: 650M USD, 57 MW Data Center in Chelan County, Washington",
+      "sourceHash": "a73f2a4e6a9b85d258e2633fc87072f3fa8c007f"
+    },
+    {
+      "id": 16460,
+      "title": "Galion South Clean Solar Project: 450M USD, 400 MWac Facility in Crawford County, Ohio",
+      "sourceHash": "23d50a24f000873fdb6b1ff96d92b22b267f0d2b"
+    },
+    {
+      "id": 16461,
+      "title": "Goos Ferry Solar & Storage Center: 350M USD, 325 MWac Facility in Calcasieu Parish, Louisiana",
+      "sourceHash": "aed3674c2b3e9811d521e96aa531b5f9ee4e6c51"
+    },
+    {
+      "id": 16462,
+      "title": "Hineston Clean Solar Project: 380M USD, 350 MWac Facility in Rapides Parish, Louisiana",
+      "sourceHash": "15887c17d9138aad7d70db0cf0ab3d958f25c851"
+    },
+    {
+      "id": 16463,
+      "title": "Rocky Run Clean Solar Energy Project: 440M USD, 399 MWac Facility in Portage County, Wisconsin",
+      "sourceHash": "53ee55f85f005960c910ac4acd5912fce3c36f92"
+    },
+    {
+      "id": 16464,
+      "title": "Rocky Run Clean Solar Energy Project: 440M USD, 399 MWac Facility in Portage County, Wisconsin",
+      "sourceHash": "8d78288271bb8053908165923c44daabcd29055c"
+    },
+    {
+      "id": 16465,
+      "title": "Conastone Clean Energy Storage Facility: 420M USD, 500 MW BESS in Harford County, Maryland",
+      "sourceHash": "aad74ca9638924942eb92d90c69a3240ad0427cd"
+    },
+    {
+      "id": 16466,
+      "title": "Marysville-Flatlick Clean Energy Storage Center: 680M USD, 800 MW BESS in Madison County, Ohio",
+      "sourceHash": "6abcfb26178ad32b0786be0de1a9ad7b540cfbe9"
+    },
+    {
+      "id": 16467,
+      "title": "Midas Clean Energy Storage Center: 440M USD, 518 MW BESS in Clark County, Nevada",
+      "sourceHash": "44cc541e0633cb3c1c6bc085eacb7404cef38f38"
+    },
+    {
+      "id": 16468,
+      "title": "Sherburne County Clean Energy Storage Center: 430M USD, 500 MW BESS in Meeker County, Minnesota",
+      "sourceHash": "8e1e41045c6cbc23042c88f897c5b23868641113"
+    },
+    {
+      "id": 16469,
+      "title": "Ameresco NAS Lemoore Defense Compute Facility: 100 MW – 750M USD in Kings County, California",
+      "sourceHash": "052f003f6e522356c27e04c6dcab3e35ba55be68"
+    },
+    {
+      "id": 16470,
+      "title": "Jay Androscoggin Mill Clean Computing Campus: 82 MW – 650M USD in Franklin County, Maine",
+      "sourceHash": "3e1d9548f5e9de5ccffdd01fa7a84a97cf4e3ad5"
+    },
+    {
+      "id": 16471,
+      "title": "PNJ Middlesex Hyperscale Data Center: 90 MW – 750M USD in Middlesex County, New Jersey",
+      "sourceHash": "088dee8bb5cfba30d369bbe186bd7fbdf0906d7e"
+    },
+    {
+      "id": 16472,
+      "title": "Prologis Zanker Road Data Center Building 4: 99 MW – 800M USD in Santa Clara County, California",
+      "sourceHash": "f84147373476a0a5ff8fb494c8fb03b37b6c1726"
+    },
+    {
+      "id": 16473,
+      "title": "Clover-Rawlings Clean Solar Facility: 840M USD, 700 MWac in Charlotte County, Virginia",
+      "sourceHash": "afa471384f4aef36503adeb20862d12c62d153f2"
+    },
+    {
+      "id": 16474,
+      "title": "Monte Cristo Clean Solar Project Phase 1: 630M USD, 523 MWac in Esmeralda County, Nevada",
+      "sourceHash": "6c6be394d2ff7d9257e8eb165f7ad0ce48935faa"
+    },
+    {
+      "id": 16475,
+      "title": "Sandy Bayou Clean Solar Center: 600M USD, 500 MWac in Mississippi County, Arkansas",
+      "sourceHash": "f3591ce0585bd80e0f2addaa6ebaa1f4224fb750"
+    },
+    {
+      "id": 16476,
+      "title": "Smalling Clean Solar Center: 720M USD, 600 MWac in Richland Parish, Louisiana",
+      "sourceHash": "cc04c94c7566191e60ec23b153a58f008781f75e"
+    },
+    {
+      "id": 16477,
+      "title": "Clinton Clean Energy Storage Center: 350M USD, 400 MW BESS in Clinton County, Missouri",
+      "sourceHash": "a4120d76e0efaa8445610b0e2df981fe9828c1bc"
+    },
+    {
+      "id": 16478,
+      "title": "Heritage-Wake Energy Storage Facility: 425M USD, 500 MW BESS in Brunswick County, Virginia",
+      "sourceHash": "3c34a8b982fc6200c0ef41fc5a32135768aa680d"
+    },
+    {
+      "id": 16479,
+      "title": "Jupiter Middlesex Battery Storage Center: 450M USD, 508 MW BESS in Middlesex County, Massachusetts",
+      "sourceHash": "6e5b4b7b9a73e4dd9bd9f6d7ce6bb54cbdc04675"
+    },
+    {
+      "id": 16480,
+      "title": "Reed Meadow Energy Storage Project: 480M USD, 566 MW BESS in Clark County, Nevada",
+      "sourceHash": "4902ae0e94bc2832439900166fd61aaf29dda9b5"
+    },
+    {
+      "id": 16481,
+      "title": "DC BLOX Nashville Grassmere Park: 280M USD, 50 MW Data Center in Davidson County, Tennessee",
+      "sourceHash": "c02abe5a93b158e36f40b42b0e66b4a7c3df6f77"
+    },
+    {
+      "id": 16482,
+      "title": "PointOne Lee County Hyperscale Campus: 650M USD, 131 MW Data Center in Sanford, North Carolina",
+      "sourceHash": "e433f67a6ccd70e8592a2b4c326b9da6f0475c1f"
+    },
+    {
+      "id": 16483,
+      "title": "Sabey Butte Data Center Campus: 300M USD, 50 MW Facility in Butte-Silver Bow, Montana",
+      "sourceHash": "f7e978a2de725f8c882bb56f9d458e494bf11990"
+    },
+    {
+      "id": 16484,
+      "title": "Teton Digital Project Trinity: 450M USD, 100 MW Data Center in Williston, North Dakota",
+      "sourceHash": "65c82ae594749f6dfe860cc0384f5f61d85e085c"
+    },
+    {
+      "id": 16485,
+      "title": "Cargas Clean Energy Center: 480M USD, 500 MW Solar Project in Ouachita Parish, Louisiana",
+      "sourceHash": "9b8f7cc9bec04ffe62778e12cf7846d2d726f35b"
+    },
+    {
+      "id": 16486,
+      "title": "Hecate Coffey Solar Project: 500M USD, 500 MW Solar Center in Coffey County, Kansas",
+      "sourceHash": "e0574cfc1fecf8ddead7e662a1bdbe367b34f5c4"
+    },
+    {
+      "id": 16487,
+      "title": "Hoodini Solar Energy Center: 440M USD, 460 MW Solar Facility in Yuma County, Arizona",
+      "sourceHash": "ad4dd7f01df697c50f288d72e0b94dbd2df6d568"
+    },
+    {
+      "id": 16488,
+      "title": "Aquila Solar Center: 475M USD, 500 MW Solar Facility in Milam County, Texas",
+      "sourceHash": "1c261377a5dfe66c98ae87ae6fd6d1bbe2ab6253"
+    },
+    {
+      "id": 16489,
+      "title": "Cordova Clean Energy Storage Center: 295M USD, 335 MW BESS in Rock Island County, Illinois",
+      "sourceHash": "83e090968c478aace10163be11159e61acf18d01"
+    },
+    {
+      "id": 16490,
+      "title": "Archer Faribault Computing Campus: 850M USD, 120 MW Data Center in Rice County, Minnesota",
+      "sourceHash": "c4847993700a694841de0ed8708129aee30230a8"
+    },
+    {
+      "id": 16491,
+      "title": "CloudHQ MSP Campus Building 2: 700M USD, 100 MW Data Center in Chaska, Minnesota",
+      "sourceHash": "8a831e5dbffcc8e113930bfaa59cb6cec1ec7d66"
+    },
+    {
+      "id": 16492,
+      "title": "Rowan Percheron Hyperscale Campus: 700M USD, 84 MW Facility in Boardman, Oregon",
+      "sourceHash": "6bb2ec4c342bf150b692631dc5562062e568dded"
+    },
+    {
+      "id": 16493,
+      "title": "Alexandria-Bison Clean Solar Facility: 420M USD, 430 MW Solar Center in Clay County, Minnesota",
+      "sourceHash": "154bde7128c1cc847515a0a7b06e7d005284d900"
+    },
+    {
+      "id": 16494,
+      "title": "Jasper Clean Solar Center: 480M USD, 500 MW Solar Generation Plant in Jasper County, Indiana",
+      "sourceHash": "fd13a3ff06b0350085b8e4aac8480e573806f86d"
+    },
+    {
+      "id": 16495,
+      "title": "NextEra Johnson Solar Project: 500M USD, 500 MW Solar Center in Johnson County, Kansas",
+      "sourceHash": "f0b8a025c929c4c3dca60ab6a38180399737b2c7"
+    },
+    {
+      "id": 16496,
+      "title": "Mineral Basin Solar Power Project: 400M USD, 402 MW Facility in Clearfield County, Pennsylvania",
+      "sourceHash": "4cf8ef5596a2bdc6a32201ebab32cabec3cad871"
+    },
+    {
+      "id": 16497,
+      "title": "Barnstable Clean Energy Storage Center: 450M USD, 500 MW BESS in Barnstable County, Massachusetts",
+      "sourceHash": "d6748c373390e91c651aafad7d3dafa09b469d35"
+    },
+    {
+      "id": 16498,
+      "title": "Morocco Energy Storage Facility: 320M USD, 360 MW BESS in Monroe County, Michigan",
+      "sourceHash": "3a9e59032c0ca62473669f7dbf59bb73c21485e0"
+    },
+    {
+      "id": 16499,
+      "title": "PointOne Sanford South Campus: 600M USD, 100 MW Data Center in Lee County, North Carolina",
+      "sourceHash": "1092052cf193e11c7d81cf6d8f601b1a4710d091"
+    },
+    {
+      "id": 16500,
+      "title": "Olive-Reynolds Energy Storage Project: 300M USD, 338 MW BESS in Pulaski County, Indiana",
+      "sourceHash": "7c9257c69c7d41e9513324f6f0bc636344b3564f"
+    },
+    {
+      "id": 16501,
+      "title": "Ella Langley — \"Choosin' Texas\" (Luminate Midyear 2026 Top Songs (U.S. on-demand streams) #1 2026)",
+      "sourceHash": "246c1d8c859b7ce366f7b45190f50b49386ce55e"
+    },
+    {
+      "id": 16502,
+      "title": "Kenshi Yonezu (米津玄師) — \"IRIS OUT\" (Billboard Japan Hot 100 Year-End #1 2026)",
+      "sourceHash": "430497e0f4582e29a0a1ecc148a7a481061f3d49"
+    },
+    {
+      "id": 16503,
+      "title": "HANRORO (한로로) — \"Landing in Love (사랑하게 될 거야)\" (Circle Digital Chart (midyear, 1st half of 2026) #1 2026)",
+      "sourceHash": "6e0d98709f5587d538a5608dd8692efddc007320"
+    },
+    {
+      "id": 16504,
+      "title": "Chappell Roan — \"Pink Pony Club\" (Official Charts UK Singles #3 2025)",
+      "sourceHash": "06fcba81713f5b5d0e06867990dbfefa61d56de0"
+    },
+    {
+      "id": 16505,
+      "title": "HUNTR/X (Huntrix) — \"Golden\" (Circle Digital Chart (year-end) #3 2025)",
+      "sourceHash": "88bed9ce8423d502e58a7a835b85fd7c9100f80d"
+    },
+    {
+      "id": 16506,
+      "title": "Sabrina Carpenter — \"Espresso\" (Official Charts UK Singles #3 2024)",
+      "sourceHash": "35db53fc50ba9bc29d3defd6289df318515535a1"
+    },
+    {
+      "id": 16507,
+      "title": "RAYE ft. 070 Shake — \"Escapism.\" (Official Charts UK Singles #3 2023)",
+      "sourceHash": "8a2962c57f4120c4ea5043869fcb8d17d2ee8669"
+    },
+    {
+      "id": 16508,
+      "title": "Ed Sheeran — \"Bad Habits\" (Official Charts UK Singles #2 2022)",
+      "sourceHash": "dc99fa966c820909dee3e492dabb5ab3d41d3f50"
+    },
+    {
+      "id": 16509,
+      "title": "Olivia Rodrigo — \"drivers license\" (Official Charts UK Singles #3 2021)",
+      "sourceHash": "37028c3c4fe6a5405a27114639f189e8c57a5e0b"
+    },
+    {
+      "id": 16510,
+      "title": "SAINT JHN — \"Roses (Imanbek Remix)\" (Official Charts UK Singles #3 2020)",
+      "sourceHash": "8b7d85ff6d3af7b82dce98748f7f562e444de256"
+    },
+    {
+      "id": 16511,
+      "title": "Lil Nas X — \"Old Town Road\" (Official Charts UK Singles #2 2019)",
+      "sourceHash": "f17e7bb949699b5f05c1ce77e2eea6a5cfc7dc35"
+    },
+    {
+      "id": 16512,
+      "title": "Drake — \"God's Plan\" (Official Charts UK Singles #2 2018)",
+      "sourceHash": "857c983bdfcbdcc1cb1641b5c6d5b75bcec1ea92"
+    },
+    {
+      "id": 16513,
+      "title": "Starboy ft. Wizkid, Terri, Spotless & Ceeza Milli — \"Soco\" (Guardian Nigeria Most Streamed Nigerian Songs of 2018 #1 2018)",
+      "sourceHash": "5052e6fe0b8ed5c1fd102a1763a7a797c6a013b5"
+    },
+    {
+      "id": 16514,
+      "title": "Drake — \"God's Plan\" (Deezer South Africa Most Streamed Songs Overall 2018 #1 2018)",
+      "sourceHash": "ca9f405d9056e1fac267f2281580b81fd142d24f"
+    },
+    {
+      "id": 16515,
+      "title": "Luis Fonsi, Daddy Yankee & Justin Bieber — \"Despacito (Remix)\" (Official Charts UK Singles #2 2017)",
+      "sourceHash": "8f00f9688dd77f06789f64b223c2d2645307250d"
+    },
+    {
+      "id": 16516,
+      "title": "Jackson Yee (易烊千玺) — \"Li Sao (离骚)\" (Billboard Radio China Mandarin Top 10 of 2017 #1 2017)",
+      "sourceHash": "4ccb7aecfff38a249284bb4369856ec17514abf9"
+    },
+    {
+      "id": 16517,
+      "title": "Ed Sheeran — \"Shape of You\" (Spotify Singapore Most Streamed Tracks 2017 #1 2017)",
+      "sourceHash": "d35421284beecb55be9409c65765c3b6652ee987"
+    },
+    {
+      "id": 16518,
+      "title": "Luis Fonsi & Daddy Yankee — \"Despacito\" (CAPIF Argentina Digital Songs (best-selling single of 2017) #1 2017)",
+      "sourceHash": "78a443c8ea1e9afb5e94d98172ff8dc9f55d2b3a"
+    },
+    {
+      "id": 16519,
+      "title": "Olivia Dean — \"Man I Need\" (Luminate Midyear 2026 Top Songs (U.S. on-demand streams) #2 2026)",
+      "sourceHash": "6cab24931fdeb50ca29a57c1bcb00e8984536b66"
+    },
+    {
+      "id": 16520,
+      "title": "Alex Warren — \"Ordinary\" (Official Charts UK Singles #3 2026)",
+      "sourceHash": "3cc98501a7376134dc6c3d4c4e91f7c0cb81cbc6"
+    },
+    {
+      "id": 16521,
+      "title": "M!LK — \"Suki Sugite Metsu (好きすぎて滅!)\" (Billboard Japan Hot 100 Year-End #2 2026)",
+      "sourceHash": "d501d6a6347106453b08a072f8b1c0c8a832f72a"
+    },
+    {
+      "id": 16522,
+      "title": "Mrs. GREEN APPLE — \"lulu.\" (Billboard Japan Hot 100 Year-End #3 2026)",
+      "sourceHash": "1272d2e912f65df88fa95534943b5f595cc5acdf"
+    },
+    {
+      "id": 16523,
+      "title": "HANRORO (한로로) — \"0+0\" (Circle Digital Chart (midyear, 1st half of 2026) #2 2026)",
+      "sourceHash": "cd8f1f1fb77dda544850e1df16ccbeddcd68d2c8"
+    },
+    {
+      "id": 16524,
+      "title": "Hwasa (화사) — \"Good Goodbye (굿 굿바이)\" (Circle Digital Chart (midyear, 1st half of 2026) #3 2026)",
+      "sourceHash": "8d6843b8ccb9b698c9c7bc0650b38b5fb59c6817"
+    },
+    {
+      "id": 16525,
+      "title": "ROSÉ & Bruno Mars — \"APT.\" (Billboard Japan Hot 100 Year-End #3 2025)",
+      "sourceHash": "a547010a5f5e950c1e52803056ac93db0005b894"
+    },
+    {
+      "id": 16526,
+      "title": "Omoinotake — \"Ikuoku Kounen (幾億光年)\" (Billboard Japan Hot 100 Year-End #3 2024)",
+      "sourceHash": "9ab01e537f9bf8f87dd2a41eea7f7d2b2ddc87b2"
+    },
+    {
+      "id": 16527,
+      "title": "DAY6 (데이식스) — \"Time of Our Life\" (Circle Digital Chart (year-end) #3 2024)",
+      "sourceHash": "dbb076e93ac1073e45fd3c8c036776a48a550ca0"
+    },
+    {
+      "id": 16528,
+      "title": "Vaundy — \"Kaijuu no Hanauta (怪獣の花唄)\" (Billboard Japan Hot 100 Year-End #3 2023)",
+      "sourceHash": "7ea30d3f537cfec7623f5b6f5400841e7cf893e7"
+    },
+    {
+      "id": 16529,
+      "title": "IVE (아이브) — \"I AM\" (Circle Digital Chart (year-end) #3 2023)",
+      "sourceHash": "0f6fc4e5b8c3d0aab845ddba9e8f575b5ba13c9f"
+    },
+    {
+      "id": 16530,
+      "title": "Fireboy DML & Ed Sheeran — \"Peru\" (Official Charts UK Singles #3 2022)",
+      "sourceHash": "dd5b2629b34f3fdd2b9f162bdad38702bc4a7eba"
+    },
+    {
+      "id": 16531,
+      "title": "Yuuri (優里) — \"Betelgeuse (ベテルギウス)\" (Billboard Japan Hot 100 Year-End #3 2022)",
+      "sourceHash": "cbb90d9b32cea717bded94a534818e49cac66fde"
+    },
+    {
+      "id": 16532,
+      "title": "Kim Min-seok (김민석) — \"Drunken Confession (취중고백)\" (Circle Digital Chart (year-end) #3 2022)",
+      "sourceHash": "219d445192c6a5b7f8005cd33dcf31472a0f9c2d"
+    },
+    {
+      "id": 16533,
+      "title": "YOASOBI — \"Yoru ni Kakeru (夜に駆ける)\" (Billboard Japan Hot 100 Year-End #3 2021)",
+      "sourceHash": "72b32e78b424cce36bcad2d57aac6f89bd7cfb04"
+    },
+    {
+      "id": 16534,
+      "title": "BTS (방탄소년단) — \"Dynamite\" (Gaon Digital Chart (year-end) #3 2021)",
+      "sourceHash": "f667e8f9a9f5f7def310c317e983d79d473fd77b"
+    },
+    {
+      "id": 16535,
+      "title": "LiSA — \"Gurenge (紅蓮華)\" (Billboard Japan Hot 100 Year-End #3 2020)",
+      "sourceHash": "9b316a80d171b81765afcd00868e4b0ab104e2e0"
+    },
+    {
+      "id": 16536,
+      "title": "Jo Jung-suk (조정석) — \"Aloha (아로하)\" (Gaon Digital Chart (year-end) #3 2020)",
+      "sourceHash": "8291e35cd78e207137cf1188534f6e0d2758561d"
+    },
+    {
+      "id": 16537,
+      "title": "Ed Sheeran & Justin Bieber — \"I Don't Care\" (Official Charts UK Singles #3 2019)",
+      "sourceHash": "1d2c930cc1d260f1e60030ce1f34760a1e745c7b"
+    },
+    {
+      "id": 16538,
+      "title": "Aimyon (あいみょん) — \"Marigold (マリーゴールド)\" (Billboard Japan Hot 100 Year-End #2 2019)",
+      "sourceHash": "9741b0123643ac3678f20fadcc76bbbd8edf9d70"
+    },
+    {
+      "id": 16539,
+      "title": "Official HIGE DANdism — \"Pretender\" (Billboard Japan Hot 100 Year-End #3 2019)",
+      "sourceHash": "770d12fccf1507f278e7f15d965bfe514d8fee9e"
+    },
+    {
+      "id": 16540,
+      "title": "Lim Jae-hyun (임재현) — \"If There Was Practice in Love (사랑에 연습이 있었다면)\" (Gaon Digital Chart (year-end) #2 2019)",
+      "sourceHash": "5c792cbf05bfbe7a9d057b4f72cc9fac9dce7bb0"
+    },
+    {
+      "id": 16541,
+      "title": "Paul Kim (폴킴) — \"Every Day, Every Moment (모든 날, 모든 순간)\" (Gaon Digital Chart (year-end) #3 2019)",
+      "sourceHash": "2b070e8d4b83ca074fccd7fe0d0189f9e090da43"
+    },
+    {
+      "id": 16542,
+      "title": "George Ezra — \"Shotgun\" (Official Charts UK Singles #3 2018)",
+      "sourceHash": "91cf7d2ece897c5c529fab034f9f4f560c636afa"
+    },
+    {
+      "id": 16543,
+      "title": "DA PUMP — \"U.S.A.\" (Billboard Japan Hot 100 Year-End #2 2018)",
+      "sourceHash": "0be7622c43510c920d240e89c00bf81dea31f81f"
+    },
+    {
+      "id": 16544,
+      "title": "Keyakizaka46 (欅坂46) — \"Garasu wo Ware! (ガラスを割れ!)\" (Billboard Japan Hot 100 Year-End #3 2018)",
+      "sourceHash": "e3217d146cecdef38d034119930ad4cc1bc7c822"
+    },
+    {
+      "id": 16545,
+      "title": "Jang Deok Cheol (장덕철) — \"Good Old Days (그날처럼)\" (Gaon Digital Chart (year-end) #2 2018)",
+      "sourceHash": "ba3465371b80d24714734b777b13cfb84d1e3170"
+    },
+    {
+      "id": 16546,
+      "title": "Paul Kim (폴킴) — \"Every Day, Every Moment (모든 날, 모든 순간)\" (Gaon Digital Chart (year-end) #3 2018)",
+      "sourceHash": "c1d01874e2dc1da0db7f16b50a3e98e2f11a9b44"
+    },
+    {
+      "id": 16547,
+      "title": "Ed Sheeran — \"Castle on the Hill\" (Official Charts UK Singles #3 2017)",
+      "sourceHash": "42e6fa96a81319db5b810f1750ad65faeeedc806"
+    },
+    {
+      "id": 16548,
+      "title": "Ed Sheeran — \"Shape of You (シェイプ・オブ・ユー)\" (Billboard Japan Hot 100 Year-End #2 2017)",
+      "sourceHash": "cd0788b675f1b1567227c017789a0f391cba536c"
+    },
+    {
+      "id": 16549,
+      "title": "DAOKO × Kenshi Yonezu (米津玄師) — \"Uchiagehanabi (打上花火)\" (Billboard Japan Hot 100 Year-End #3 2017)",
+      "sourceHash": "d7ccc2dc876cd2c743ac8b7c2c1612a0bd2f69e7"
+    },
+    {
+      "id": 16550,
+      "title": "IU — \"Through the Night (밤편지)\" (Gaon Digital Chart (year-end) #2 2017)",
+      "sourceHash": "d4d9029c7819069e3ffd9a301e0cefa1743b8593"
+    },
+    {
+      "id": 16551,
+      "title": "Yoon Jong-shin (윤종신) — \"Like It (좋니)\" (Gaon Digital Chart (year-end) #3 2017)",
+      "sourceHash": "bae8ed4dc695790aa893716f0131bfe9e0cb460a"
+    },
+    {
+      "id": 16552,
+      "title": "Aurora Clean Energy Storage Center: 1.05B USD, 1,206 MW BESS in Lake County, Illinois",
+      "sourceHash": "b9ffd11e82fcfe64063a0abefbacae24737fbdf6"
+    },
+    {
+      "id": 16553,
+      "title": "Muon Clean Storage Facility: 1.0B USD, 1,170 MW BESS in Fresno County, California",
+      "sourceHash": "ef82bc8987f8501146b1b301569ac5007724c653"
+    },
+    {
+      "id": 16554,
+      "title": "Cielo Chisago Data Center Campus: 1.6B USD, 300 MW Facility in Chisago County, Minnesota",
+      "sourceHash": "19474970ecde91e222346cb120c590116222d209"
+    },
+    {
+      "id": 16555,
+      "title": "Cielo Haines City Hyperscale Campus: 1.5B USD, 300 MW Data Center in Polk County, Florida",
+      "sourceHash": "b5004803a756ace030364c8bbb79bbb0989a4c22"
+    },
+    {
+      "id": 16556,
+      "title": "Cielo New Lenox Computing Center: 1.8B USD, 300 MW Data Center in Will County, Illinois",
+      "sourceHash": "dde926b3f0a195436819f14a5eecd6ea525dbfcb"
+    },
+    {
+      "id": 16557,
+      "title": "Crusoe Warrenton Campus Building 1: 2.0B USD, 300 MW Data Center in Warren County, Missouri",
+      "sourceHash": "6d6a3fca689d89ac3662bd2490758aa41209f931"
+    },
+    {
+      "id": 16558,
+      "title": "Boson Energy Storage Project: 1.0B USD, 1,173 MW BESS in Kern County, California",
+      "sourceHash": "ad33c2b7d2dd1e6eaf996d32034f56ddcb6139a4"
+    },
+    {
+      "id": 16559,
+      "title": "Sunstone Clean Solar Project: 1.15B USD, 1,200 MW Solar Center in Morrow County, Oregon",
+      "sourceHash": "05cdeec2aa8a5e8ea18d26e02cd46ab5ac3018c7"
+    },
+    {
+      "id": 16560,
+      "title": "Labette Energy Storage Facility: 270M USD, 300 MW BESS in Labette County, Kansas",
+      "sourceHash": "06f816b6c78d0dbf5c36548b7144ef4aea747768"
+    },
+    {
+      "id": 16561,
+      "title": "Maddox Creek Clean Energy Storage Center: 360M USD, 400 MW BESS in Van Wert County, Ohio",
+      "sourceHash": "d4c3f24d4a2b1fcd46f844eaaafe065a5e43d8c2"
+    },
+    {
+      "id": 16562,
+      "title": "Baxter Wilson Solar Project: 300M USD, 300 MW Solar Center in Morehouse Parish, Louisiana",
+      "sourceHash": "f98d27d99d0ab78f15a6f463061c03e48dad231b"
+    },
+    {
+      "id": 16563,
+      "title": "Nottingham Clean Solar Center: 380M USD, 400 MW Solar Plant in Harrison County, Ohio",
+      "sourceHash": "133e2e1ffb405209afbf57d3568b7e465d9bd251"
+    },
+    {
+      "id": 16564,
+      "title": "Bloomington Brokaw Energy Storage Center: 300M USD, 300 MW BESS in Peoria County, Illinois",
+      "sourceHash": "38994c372e1995ec7f849cb0dc4b802178fb70a5"
+    },
+    {
+      "id": 16565,
+      "title": "Oxford Clean Energy Storage Center: 270M USD, 300 MW BESS in Sumner County, Kansas",
+      "sourceHash": "3b32da5f175f60dd37de39d90ff23bce89626b0f"
+    },
+    {
+      "id": 16566,
+      "title": "Top Crop Clean Energy Storage Project: 380M USD, 400 MW BESS in LaSalle County, Illinois",
+      "sourceHash": "e7a74d69d546ac3a5eae8572c13725647a1be4ee"
+    },
+    {
+      "id": 16567,
+      "title": "Wells Clean Power Storage Project: 300M USD, 300 MW BESS in St. Landry Parish, Louisiana",
+      "sourceHash": "a9c6e269249f85480d052cfeb31bc8685f18838f"
+    },
+    {
+      "id": 16568,
+      "title": "Chirisa PNJ-01 Data Center Campus: 650M USD, 90 MW Facility in Middlesex County, New Jersey",
+      "sourceHash": "5f02b3cb0fa790dc58807c9659fa3d27e9b6a8af"
+    },
+    {
+      "id": 16569,
+      "title": "Meta Kuna Hyperscale Campus Building 3: 400M USD, 40 MW Facility in Ada County, Idaho",
+      "sourceHash": "401f9d5cdc53f089f1751e8c60d86f30a766836a"
+    },
+    {
+      "id": 16570,
+      "title": "Prologis Silver Creek Valley Computing Center: 850M USD, 99 MW Data Center in Santa Clara County, California",
+      "sourceHash": "ac77c87e7e2d2e020d0681eaeff9028924442f90"
+    },
+    {
+      "id": 16571,
+      "title": "Vantage CO21 Data Center Campus Building 1: 1.5B USD, 250 MW Facility in Adams County, Colorado",
+      "sourceHash": "573fb3faa77f4be49f1c20820d552128255bce80"
+    },
+    {
+      "id": 16572,
+      "title": "Firefly Clean Solar Center: 420M USD, 402 MW Solar Plant in Lawrence County, Pennsylvania",
+      "sourceHash": "2bc0dccf61c64bf88fb3df7163e3c5effcbe1ef7"
+    },
+    {
+      "id": 16573,
+      "title": "Mirasol Clean Energy Solar Plant: 400M USD, 400 MW Facility in Pueblo County, Colorado",
+      "sourceHash": "84e610f1c3d4f97a8f7ca46920f2af0fd967ea96"
+    },
+    {
+      "id": 16574,
+      "title": "Oak Run Solar Project: 1.0B USD, 800 MW Solar Center in Madison County, Ohio",
+      "sourceHash": "0ca9b2420695df40642c4f36f525cab5cb6427b5"
+    },
+    {
+      "id": 16575,
+      "title": "Sunfish Clean Solar Center 2: 360M USD, 360 MW Solar Farm in Calhoun County, Michigan",
+      "sourceHash": "44ceefb30da23616aec73a1578230b455b9bd413"
+    },
+    {
+      "id": 16576,
+      "title": "Balko Battery Storage Facility: 260M USD, 263 MW BESS in Beaver County, Oklahoma",
+      "sourceHash": "b23fb607503837a4de5be9e2be3fca413c74c751"
+    },
+    {
+      "id": 16577,
+      "title": "Cass Clean Energy Storage Project: 280M USD, 280 MW BESS in Cass County, Missouri",
+      "sourceHash": "cedc2c980ea2dbf0d66ad0e667d1e7f710d77d64"
+    },
+    {
+      "id": 16578,
+      "title": "Elevate Middletown Clean Energy Storage: 275M USD, 275 MW BESS in Middlesex County, Connecticut",
+      "sourceHash": "bc7a82f42681564b373a91dfa7dc0067b0cf92f7"
+    },
+    {
+      "id": 16579,
+      "title": "Project Apollo Data Center: 120M USD, 15 MW Facility in Lakeland, Florida",
+      "sourceHash": "665e9416026f2723bd5a2977e67dc054e53c6f21"
+    },
+    {
+      "id": 16580,
+      "title": "Centra MSP1 Data Center: 95M USD, 12 MW Facility in Dakota County, Minnesota",
+      "sourceHash": "613942c5c0e7708b9d2658b437e3c40d6aaab79b"
+    },
+    {
+      "id": 16581,
+      "title": "CoreSite DE3 Data Center: 175M USD, 18 MW Facility in Denver, Colorado",
+      "sourceHash": "f245a3478d4f2a1f70e5886820a3f9fe0be1632b"
+    },
+    {
+      "id": 16582,
+      "title": "Radius Nashville I Data Center: 110M USD, 12 MW Facility in Davidson County, Tennessee",
+      "sourceHash": "244a54c48fe6dba91cc04e9d7b65aed63a4ae1e5"
+    },
+    {
+      "id": 16583,
+      "title": "Hampton 345 kV Clean Energy Storage: 300M USD, 300 MW BESS in Dakota County, Minnesota",
+      "sourceHash": "b4e9609e158c6157cb1ab4173f176c18b306946e"
+    },
+    {
+      "id": 16584,
+      "title": "Goss Slate Solar Energy Center: 330M USD, 300 MW Solar Farm in Saginaw County, Michigan",
+      "sourceHash": "7072d2dc7dcc9f3d18909c87df2329d852287e0c"
+    },
+    {
+      "id": 16585,
+      "title": "Hodgeman Ford Solar Energy Center: 400M USD, 400 MW Solar Array in Kansas",
+      "sourceHash": "f01543e4aeed2ca0b7680fe21894e11a6e62ba98"
+    },
+    {
+      "id": 16586,
+      "title": "Johnston Solar Energy Center: 350M USD, 350 MW Solar Facility in Johnston County, Oklahoma",
+      "sourceHash": "a30f522bb0a31b58c4097d6e462e053cbc4c05fa"
+    },
+    {
+      "id": 16587,
+      "title": "Keystone Ludington Solar Project: 360M USD, 300 MW Clean Energy Facility in Wexford County, Michigan",
+      "sourceHash": "e369aef0512ff7e28cb3550b6b91710864583c51"
+    },
+    {
+      "id": 16588,
+      "title": "Centralia Battery Energy Storage System: 250M USD, 200 MW BESS in Thurston County, Washington",
+      "sourceHash": "78a12d684a72c1a492c917972d70ce9235365365"
+    },
+    {
+      "id": 16589,
+      "title": "Concord Clean Storage Center: 280M USD, 200 MW BESS in Middlesex County, Massachusetts",
+      "sourceHash": "1289f430a1cfb785fa78541a3aa7cc55161fd37a"
+    },
+    {
+      "id": 16590,
+      "title": "Ipava Clean Energy Storage Facility: 340M USD, 300 MW BESS in Fulton County, Illinois",
+      "sourceHash": "ee3918905f952092302c8fb8fe0cc8708fc1e4e3"
+    },
+    {
+      "id": 16591,
+      "title": "Solano Wind & Storage Hub: 360M USD, 300 MW BESS in Solano County, California",
+      "sourceHash": "3a111e76820289a6ad0d13782fe6df5b719769e5"
+    },
+    {
+      "id": 16592,
+      "title": "DataBank DEN2 Denver Tech Expansion: 110M USD, 15 MW Data Center in Arapahoe County, Colorado",
+      "sourceHash": "ee8d773ae2e3758901c2303e44fb3da9a06afecd"
+    },
+    {
+      "id": 16593,
+      "title": "DataBank MSP3 West Expansion: 140M USD, 28 MW Data Center in Hennepin County, Minnesota",
+      "sourceHash": "175cb2284ccc33c23d50fd0fa8b4acd76faa7161"
+    },
+    {
+      "id": 16594,
+      "title": "DC BLOX Birmingham Flagship Expansion: 120M USD, 25 MW Data Center in Jefferson County, Alabama",
+      "sourceHash": "932d928e1af2814f16a7ad17b1aed153b07fd8bb"
+    },
+    {
+      "id": 16595,
+      "title": "QTS Hillsboro Data Center Campus Expansion: 160M USD, 24 MW Facility in Washington County, Oregon",
+      "sourceHash": "4815c44507bb13d52b1f8db2670c82f875d1934c"
+    },
+    {
+      "id": 16596,
+      "title": "Johnston County Clean Solar Farm: 240M USD, 200 MW Solar Project in Johnston County, Oklahoma",
+      "sourceHash": "18f56444b45156ec2b12ec70a5eea96fcce3e812"
+    },
+    {
+      "id": 16597,
+      "title": "Gibson Solar Energy Center: 390M USD, 280 MW Solar Farm in Gibson County, Indiana",
+      "sourceHash": "783193aca751bbe4657a98ff6c5ccea4e6fadca6"
+    },
+    {
+      "id": 16598,
+      "title": "Mammoth Central Energy Center: 450M USD, 300 MW Solar Farm in Pulaski County, Indiana",
+      "sourceHash": "e4ad26114ecb5b0b163eeb91c80dc31ba3e3b9e2"
+    },
+    {
+      "id": 16599,
+      "title": "St. Lawrence River Clean Solar Project: 320M USD, 240 MW Solar Facility in St. Lawrence County, New York",
+      "sourceHash": "9c1abb2b0d01c747ab727b45b6d30a464e5f1afe"
+    },
+    {
+      "id": 16600,
+      "title": "Bouse Battery Energy Storage Facility: 600M USD, 500 MW BESS in La Paz County, Arizona",
+      "sourceHash": "99c9eec98c08b0b61284c17253521e22836b5188"
+    },
+    {
+      "id": 16601,
+      "title": "Dega Battery Energy Storage System: 240M USD, 200 MW BESS in Talladega County, Alabama",
+      "sourceHash": "c1a3e28cfe019719881755112d3ac969471da51f"
+    },
+    {
+      "id": 16602,
+      "title": "Sebastian Battery Energy Storage System: 250M USD, 200 MW BESS in Sebastian County, Arkansas",
+      "sourceHash": "127ce6f4f82c17c81f6dcacf0c90e6f58eb4654d"
+    },
+    {
+      "id": 16603,
+      "title": "White Tank Battery Energy Storage Facility: 150M USD, 100 MW BESS in Maricopa County, Arizona",
+      "sourceHash": "da3019995c6bac632d2d2488b1a8d3220ebca46b"
+    },
+    {
+      "id": 16604,
+      "title": "5C Data Centers PHX01 Hyperscale Facility: 608M USD, 20 MW Campus in Maricopa County, Arizona",
+      "sourceHash": "ec20cfef73e1cebd6f67497be496c3b544b9d6b1"
+    },
+    {
+      "id": 16605,
+      "title": "Edwards Air Force Base Resilient Mission Data Center: 450M USD, 100 MW Campus in Kern County, California",
+      "sourceHash": "caf775c065958a34aff408fc70efb6c93fd56607"
+    },
+    {
+      "id": 16606,
+      "title": "HostDime Tier IV Corporate Headquarters Data Center: 65M USD, 20 MW Facility in Orange County, Florida",
+      "sourceHash": "0bfdd7fe4e41f87709d1e9d0c93ea840e110b855"
+    },
+    {
+      "id": 16607,
+      "title": "QTS Denver DC2 Data Center Campus: 350M USD, 74 MW Hyperscale Facility in Adams County, Colorado",
+      "sourceHash": "9a79c9b4c632792ff6435cf178de520f43d5e6d1"
+    },
+    {
+      "id": 16608,
+      "title": "Hillsboro 3 Solar Center: 220M USD, 200 MW Utility-Scale PV in Lawrence County, Alabama",
+      "sourceHash": "2e6903c5c913bc08f8fc91b492b4a3d03e9c9712"
+    },
+    {
+      "id": 16609,
+      "title": "Lawrence County Solar Facility: 210M USD, 193 MW Photovoltaic Installation in Lawrence County, Alabama",
+      "sourceHash": "9061b3b89e08230877f2aefa72844ed0397435fb"
+    },
+    {
+      "id": 16610,
+      "title": "Old Hayneville Solar Center: 100M USD, 80 MW Solar PV Plant in Montgomery County, Alabama",
+      "sourceHash": "d546ff903f0235aa02b360f8fd80376bae3c783a"
+    },
+    {
+      "id": 16611,
+      "title": "Spring Valley 2 Solar Center: 230M USD, 200 MW Solar Array in Colbert County, Alabama",
+      "sourceHash": "c2ee13430745e1146e7eceaf20ef775b56614954"
+    },
+    {
+      "id": 16612,
+      "title": "Restaurant LINK SQUARE — Hakata Station Opens October15,2022",
+      "sourceHash": "7d9186748e3b1185285811df67228f5632a8ae7a"
+    },
+    {
+      "id": 16613,
+      "title": "Alcazar 2 Clean Energy Storage Facility: 140M USD, 100 MW BESS in Ulster County, New York",
+      "sourceHash": "9cb5487c344a36569bfa90c106e2060dbb1109cc"
+    },
+    {
+      "id": 16614,
+      "title": "Alta Casa Energy Storage Facility: 260M USD, 200 MW BESS in San Joaquin County, California",
+      "sourceHash": "bdab91f4c9c588819923207b4c79c512bdb2757d"
+    },
+    {
+      "id": 16615,
+      "title": "Arida Battery Energy Storage Complex: 350M USD, 300 MW BESS in Clark County, Nevada",
+      "sourceHash": "b2e0678061289019f9afd5a720004a34490bb639"
+    },
+    {
+      "id": 16616,
+      "title": "Austin Bayou Storage Center I: 200M USD, 200 MW BESS in Brazoria County, Texas",
+      "sourceHash": "51404b42b1162d1077c1a95e994abf71acd16b1e"
+    },
+    {
+      "id": 16617,
+      "title": "Olivia Dean — \"So Easy (To Fall in Love)\" (Billboard Canadian Hot 100 (year-to-date points, Acharts.co) #2 2026)",
+      "sourceHash": "812dc413457d8638ba2fadb391ba4b8c296aeeb7"
+    },
+    {
+      "id": 16618,
+      "title": "Bruno Mars — \"I Just Might\" (Billboard Canadian Hot 100 (year-to-date points, Acharts.co) #3 2026)",
+      "sourceHash": "cdb4641816a2058c6e3ca37a40679288abac0de0"
+    },
+    {
+      "id": 16619,
+      "title": "Alex Warren — \"Ordinary\" (Luminate Midyear 2026 Top Songs (U.S. on-demand streams) #3 2026)",
+      "sourceHash": "69e4ab4e38680df4f953b0a680f8554b1138bc0c"
+    },
+    {
+      "id": 16620,
+      "title": "Pedro Sampaio, Mc Meno K & Melody — \"Jetski\" (Pro-Música most-played songs in Brazil, first half of 2026 (to date) #2 2026)",
+      "sourceHash": "40514588e3956b119fe1b03e235a32fada5741a8"
+    },
+    {
+      "id": 16621,
+      "title": "CoreSite NYM2 50 Madison Road Data Center: 120M USD, 20 MW Facility in Morris County, New Jersey",
+      "sourceHash": "4a7bc3894eecbd5e1aba8aeee34f9244bf843479"
+    },
+    {
+      "id": 16622,
+      "title": "DJ Japa NK, Mc Meno K, Mc Ryan SP & Mc Jacaré — \"Posso Até Não Te Dar Flores\" (Pro-Música most-played songs in Brazil, first half of 2026 (to date) #3 2026)",
+      "sourceHash": "29c7aeaacd85a86dec5b0c629ee94bc7feeff89d"
+    },
+    {
+      "id": 16623,
+      "title": "RnBoi — \"Mon bébé\" (SNEP Top Singles (H1 2026, year to date) #2 2026)",
+      "sourceHash": "a80c3f7f3513d2fb365f69eb16635d43cb50df49"
+    },
+    {
+      "id": 16624,
+      "title": "Nono La Grinta — \"Love you\" (SNEP Top Singles (H1 2026, year to date) #3 2026)",
+      "sourceHash": "133e165d21bdb60bf7f0c4546012885c46a667b7"
+    },
+    {
+      "id": 16625,
+      "title": "Zara Larsson — \"Lush Life\" (GfK Top 100 Singles (H1 2026, year to date) #2 2026)",
+      "sourceHash": "fd2228f3bebbb7993898f4e5103f335766516336"
+    },
+    {
+      "id": 16626,
+      "title": "AEP Ohio Groveport CMH-II Data Center Campus: 320M USD, 60 MW Facility in Franklin County, Ohio",
+      "sourceHash": "d67514e3b63ff52272b3b07316d6786f98de47c5"
+    },
+    {
+      "id": 16627,
+      "title": "RAYE — \"Where Is My Husband!\" (GfK Top 100 Singles (H1 2026, year to date) #3 2026)",
+      "sourceHash": "eb1c60ad48f8f6f5b225c046c59c7b2a88157a33"
+    },
+    {
+      "id": 16628,
+      "title": "Sayf — \"Tu mi piaci tanto\" (FIMI Top of the Music #2 2026)",
+      "sourceHash": "7370c5e0ada836fb5d5905d9867a1d343ca55f1f"
+    },
+    {
+      "id": 16629,
+      "title": "Sal Da Vinci — \"Per sempre sì\" (FIMI Top of the Music #3 2026)",
+      "sourceHash": "46b0b9fc3d193acdf1fd9381d13153d7875a50d6"
+    },
+    {
+      "id": 16630,
+      "title": "Aligned Data Centers ATL-01 Hyperscale Facility: 420M USD, 72 MW Campus in Fulton County, Georgia",
+      "sourceHash": "8c64fadfb4ed98f5ce47e1ce74ac6b4292e5edba"
+    },
+    {
+      "id": 16631,
+      "title": "BTS — \"Swim\" (The Official Singapore Chart (RIAS) #2 2026)",
+      "sourceHash": "f13e8f6429bdb8a0a2894d7c002f2186e1c3d90c"
+    },
+    {
+      "id": 16632,
+      "title": "Taylor Swift — \"The Fate of Ophelia\" (The Official Singapore Chart (RIAS) #3 2026)",
+      "sourceHash": "4a21c7609d976871c05dfa4739268f6e8a37e69c"
+    },
+    {
+      "id": 16633,
+      "title": "Aligned Data Centers SLC-01 Hyperscale Facility: 450M USD, 80 MW Campus in Salt Lake County, Utah",
+      "sourceHash": "d8d32ff8f4a3bb70d25cdac71600cea9d45b2f8b"
+    },
+    {
+      "id": 16634,
+      "title": "洪佩瑜 (Hung Pei-yu) — \"再見的時候 (When We Meet Again)\" (KKBOX Mandarin Yearly Cumulative Singles Chart #2 2026)",
+      "sourceHash": "d4951383f02428a38fd8f049c77fca52431100b2"
+    },
+    {
+      "id": 16635,
+      "title": "李佳薇 (Jess Lee) — \"甲乙丙丁Strangers (你我怎麼兩清)\" (KKBOX Mandarin Yearly Cumulative Singles Chart #3 2026)",
+      "sourceHash": "88b1155d3dbed02703f79e3b6f12fd2282f41e38"
+    },
+    {
+      "id": 16636,
+      "title": "Abeja Solar Farm: 260M USD, 250 MW Photovoltaic Installation in Bee County, Texas",
+      "sourceHash": "7917b1d3effe3984703d54c85640b2f731b2e179"
+    },
+    {
+      "id": 16637,
+      "title": "Olivia Dean — \"Man I Need\" (ARIA Singles Chart (2026 year to date, most weeks at No. 1) #2 2026)",
+      "sourceHash": "2f3cb68914acf01ba1e385f8ab0b9d6f03fad19b"
+    },
+    {
+      "id": 16638,
+      "title": "Sam Fender & Olivia Dean — \"Rein Me In\" (ARIA Singles Chart (2026 year to date, most weeks at No. 1) #3 2026)",
+      "sourceHash": "164a58e320a07080afc42ef64219bdcc584f6fa5"
+    },
+    {
+      "id": 16639,
+      "title": "Olivia Dean — \"Man I Need\" (Recorded Music NZ Official Top 40 (2026 year to date, most weeks at No. 1) #1 2026)",
+      "sourceHash": "c2728ff0338f16bd9c8f8595f4481341191b9607"
+    },
+    {
+      "id": 16640,
+      "title": "AC Ranch II Solar Facility: 220M USD, 200 MW Photovoltaic Installation in Lea County, New Mexico",
+      "sourceHash": "c993e38b12c7e1246e948cb1d8f72f11c3cb238e"
+    },
+    {
+      "id": 16641,
+      "title": "Ella Langley — \"Choosin' Texas\" (Recorded Music NZ Official Top 40 (2026 year to date, most weeks at No. 1) #2 2026)",
+      "sourceHash": "bd959f3322fd9f3dcd4d7df2ef36a6907e627ec0"
+    },
+    {
+      "id": 16642,
+      "title": "ROSÉ & Bruno Mars — \"APT.\" (Billboard Canadian Hot 100 #3 2025)",
+      "sourceHash": "b51994d748a6e47e138d9dd02de37a79f3eb7dfb"
+    },
+    {
+      "id": 16643,
+      "title": "Allen Acres Solar Center: 230M USD, 200 MW Solar Array in LaSalle County, Illinois",
+      "sourceHash": "9e6c694cc5909ddea8ed8ef53af4e6e51fc81bbf"
+    },
+    {
+      "id": 16644,
+      "title": "Lola Young — \"Messy\" (Monitor Latino Mexico Top 100 (annual General) #2 2025)",
+      "sourceHash": "a2fc0b7888f33e00c4e89407cfd04e1b57d75ff0"
+    },
+    {
+      "id": 16645,
+      "title": "ROSÉ & Bruno Mars — \"APT.\" (Monitor Latino Mexico Top 100 (annual General) #3 2025)",
+      "sourceHash": "77b4fdaf82c63a0f9254ae8ceed694716005f2d5"
+    },
+    {
+      "id": 16646,
+      "title": "Aratina Solar Center Phase 1: 280M USD, 250 MW Solar PV Plant in San Bernardino County, California",
+      "sourceHash": "ef41a1874d88021117d830afb81b399b00eb5f2b"
+    },
+    {
+      "id": 16647,
+      "title": "Grupo Menos É Mais & Simone Mendes — \"P do Pecado (Ao Vivo)\" (Spotify Brasil year-end most-streamed songs #2 2025)",
+      "sourceHash": "9116f530682fce80ec0d6d6aa649e18addeab5b4"
+    },
+    {
+      "id": 16648,
+      "title": "Grupo Menos É Mais — \"Coração Partido (Corazón Partío) (Ao Vivo)\" (Spotify Brasil year-end most-streamed songs #3 2025)",
+      "sourceHash": "4c4b55d0877970c18316e1f5012742c78135b1a5"
+    },
+    {
+      "id": 16649,
+      "title": "Gims — \"Ninao\" (SNEP streaming year-end ranking (reported by Purecharts) #2 2025)",
+      "sourceHash": "b0496054f7d88f934c1d4164b98be2d5fa87dcaa"
+    },
+    {
+      "id": 16650,
+      "title": "Gims & La Mano 1.9 — \"Parisienne\" (SNEP streaming year-end ranking (reported by Purecharts) #3 2025)",
+      "sourceHash": "3ece42faff6a8d42ff1013772dcbab04c5fd8648"
+    },
+    {
+      "id": 16651,
+      "title": "Restaurant SEN (千) — Osaka Castle Opens May1,2024",
+      "sourceHash": "b4c0419fbda676b2a7ed1e63de37da0e9850c5ba"
+    },
+    {
+      "id": 16652,
+      "title": "Rosé / Bruno Mars — \"APT.\" (GfK Top 100 Singles #2 2025)",
+      "sourceHash": "807ceec86681aae307562f3dc572738215e6e65c"
+    },
+    {
+      "id": 16653,
+      "title": "Aligned Data Centers ORD-01 Hyperscale Facility: 1.36B USD, 50.4 MW Campus in Cook County, Illinois",
+      "sourceHash": "ab95a7ba01f9919693149c717485a446049a537f"
+    },
+    {
+      "id": 16654,
+      "title": "Zartmann — \"Tau mich auf\" (GfK Top 100 Singles #3 2025)",
+      "sourceHash": "d52d498d4425249d37dd6f0e54b2a5cfcc4a584d"
+    },
+    {
+      "id": 16655,
+      "title": "Lounge & Bar SEN (舟) — Osaka Castle Opens May1,2024",
+      "sourceHash": "0539b2d7c5be1e73e8eb4c76891860e06e89c627"
+    },
+    {
+      "id": 16656,
+      "title": "Giorgia — \"La cura per me\" (FIMI Top of the Music #2 2025)",
+      "sourceHash": "b4330ffa425263acda04b8753636803201dc28f5"
+    },
+    {
+      "id": 16657,
+      "title": "Aligned Data Centers DFW-01 Campus: 779M USD, 28.7 MW Hyperscale Facility in Collin County, Texas",
+      "sourceHash": "489f70e0a13685ed8df7e1cc9f80bfefe5cbd0f9"
+    },
+    {
+      "id": 16658,
+      "title": "Achille Lauro — \"Incoscienti giovani\" (FIMI Top of the Music #3 2025)",
+      "sourceHash": "6c12a4ff06fc61acff2afdf1810d3036d5e4a4ed"
+    },
+    {
+      "id": 16659,
+      "title": "Yorghaki & Alleh — \"Capaz (Merengueton)\" (PROMUSICAE Top 100 Canciones (annual, year-end) #2 2025)",
+      "sourceHash": "9af19959e40e6257fe63639d0acf54be6d0ce328"
+    },
+    {
+      "id": 16660,
+      "title": "Aligned Data Centers PDX-01 Hyperscale Campus: 2.73B USD, 100.8 MW Facility in Washington County, Oregon",
+      "sourceHash": "c2e474db01c9c986fdab8fc99781054361c12b88"
+    },
+    {
+      "id": 16661,
+      "title": "Bad Bunny — \"Baile Inolvidable\" (PROMUSICAE Top 100 Canciones (annual, year-end) #3 2025)",
+      "sourceHash": "2ffa8615af91553eec4461afcad01d020d43de8e"
+    },
+    {
+      "id": 16662,
+      "title": "Humlan Djojj & Josefine Götestam — \"Djurens vaggvisa\" (Sverigetopplistan Årslista Singlar #2 2025)",
+      "sourceHash": "96de7b6258ca3b649f7334602e727127e5246949"
+    },
+    {
+      "id": 16663,
+      "title": "Aligned Data Centers IAD-04 Hyperscale Campus: 2.73B USD, 82.8 MW Center in Frederick County, Maryland",
+      "sourceHash": "3d4bb19d71a6a239dc665bd69835cd9fa46f6143"
+    },
+    {
+      "id": 16664,
+      "title": "Alex Warren — \"Ordinary\" (Sverigetopplistan Årslista Singlar #3 2025)",
+      "sourceHash": "0485a9066f155e4d943c5659d586463cf8099394"
+    },
+    {
+      "id": 16665,
+      "title": "Davido ft. Omah Lay — \"With You\" (TurnTable Official Nigeria Top 100 #2 2025)",
+      "sourceHash": "dfa85fd166265df6c51a81566f342443e3f962f6"
+    },
+    {
+      "id": 16666,
+      "title": "Aratina Solar Center Phase 2: 190M USD, 150 MW Solar PV Installation in Kern County, California",
+      "sourceHash": "b406f1c516b720c73da763f517f458cf6dc33a15"
+    },
+    {
+      "id": 16667,
+      "title": "Shallipopi & Burna Boy — \"Laho II\" (TurnTable Official Nigeria Top 100 #3 2025)",
+      "sourceHash": "338eed28980cae161a6ec07065739eabc16eb0d8"
+    },
+    {
+      "id": 16668,
+      "title": "Alamo City Energy Storage Center: 260M USD, 200 MW BESS in Bexar County, Texas",
+      "sourceHash": "5fe0886aae0ce89f140155c955d1eca51d50336f"
+    },
+    {
+      "id": 16669,
+      "title": "Ciza, Jazzworx & Thukuthela — \"Isaka (6am)\" (The Official South African Charts (TOSAC) - most-streamed song of the year #2 2025)",
+      "sourceHash": "e26e9e80caa8b57845e4180dcac566ee32406f7f"
+    },
+    {
+      "id": 16670,
+      "title": "Sky Dining TENKU — Nagoya Opens October2,2017",
+      "sourceHash": "8fe95c6fd48759a993420a15b9989ce314f31ccf"
+    },
+    {
+      "id": 16671,
+      "title": "MaWhoo, GL_Ceejay & Thukuthela ft. Jazzworx — \"Bengicela\" (The Official South African Charts (TOSAC) - most-streamed song of the year #3 2025)",
+      "sourceHash": "db88a8779c0abff309995f46b1d613c19cd2ec27"
+    },
+    {
+      "id": 16672,
+      "title": "Albatross Battery Energy Storage Facility: 75M USD, 50.4 MW BESS in McLennan County, Texas",
+      "sourceHash": "0c8e83be6c2483a174e5efdea1249f8c2c8b79c0"
+    },
+    {
+      "id": 16673,
+      "title": "Ma Jiantao (马健涛) — \"Chan Fu (搀扶)\" (TME Tencent Music Uni Chart (由你榜) annual song 2025 #2 2025)",
+      "sourceHash": "b1fb3d3556d7d121e9a2efe299b5d84e263ada83"
+    },
+    {
+      "id": 16674,
+      "title": "The Living Room with SKY BAR — Nagoya Opens September16,2016",
+      "sourceHash": "89b4feb2784a46bbb5231f3f5bef32d8bec068be"
+    },
+    {
+      "id": 16675,
+      "title": "Alina Energy Storage Center: 250M USD, 200 MW BESS in Wilson County, Texas",
+      "sourceHash": "3928942ab59d41ff86c43af4d139a9d9ca4b19bb"
+    },
+    {
+      "id": 16676,
+      "title": "Charlie Zhou Shen (周深) — \"Lai A (来啊)\" (TME Tencent Music Uni Chart (由你榜) annual song 2025 #3 2025)",
+      "sourceHash": "92bc752afa4cd2c1f6b6d6874e650c67812d7b67"
+    },
+    {
+      "id": 16677,
+      "title": "LBI — \"Jumping Machine (跳楼机)\" (The Official Singapore Chart (RIAS) #2 2025)",
+      "sourceHash": "2e64855d9dece2aded44e818d1780ed04bf4d158"
+    },
+    {
+      "id": 16678,
+      "title": "Avant Prairie Energy Storage Complex: 240M USD, 200 MW BESS in Freestone County, Texas",
+      "sourceHash": "190ad6caec476160014d3aabacd9d1a55f696872"
+    },
+    {
+      "id": 16679,
+      "title": "Jin — \"Don't Say You Love Me\" (The Official Singapore Chart (RIAS) #3 2025)",
+      "sourceHash": "c91192da74b7cec5df583849b93a9eea637f9bc7"
+    },
+    {
+      "id": 16680,
+      "title": "五月天 (Mayday) — \"任性 (Wilful)\" (KKBOX Mandarin Yearly Cumulative Singles Chart #2 2025)",
+      "sourceHash": "f76165c359454d0a1848cd1703197e7ce778cc55"
+    },
+    {
+      "id": 16681,
+      "title": "Adams Creek Solar Project: 260M USD, 240 MW Photovoltaic Center in Wilbarger County, Texas",
+      "sourceHash": "a3822bc95c6dcb49d0c12df3692e25048882441f"
+    },
+    {
+      "id": 16682,
+      "title": "汪蘇瀧 (Silence Wang) — \"像晴天像雨天\" (KKBOX Mandarin Yearly Cumulative Singles Chart #3 2025)",
+      "sourceHash": "0930c5899dafa66e0df1e5eed0038f5c6fd4ccaa"
+    },
+    {
+      "id": 16683,
+      "title": "Alira Solar Farm: 250M USD, 222.8 MW Clean Energy Plant in Andrews County, Texas",
+      "sourceHash": "de8c45adde5f549682094d7c6efd466ad92e4729"
+    },
+    {
+      "id": 16684,
+      "title": "Amerada Clean Solar Center: 330M USD, 300 MW Solar Array in Freestone County, Texas",
+      "sourceHash": "150d5a01b8ca7f6da456c4136cda7d72b7338f1c"
+    },
+    {
+      "id": 16685,
+      "title": "HUNTR/X (Ejae, Audrey Nuna & Rei Ami) - KPop Demon Hunters — \"Golden\" (ARIA Top 100 Singles (year-end 2025) #2 2025)",
+      "sourceHash": "f7a5383315a77c517e61ad5efc64a5e95477574c"
+    },
+    {
+      "id": 16686,
+      "title": "Rosé & Bruno Mars — \"APT.\" (ARIA Top 100 Singles (year-end 2025) #3 2025)",
+      "sourceHash": "64a4fa6acf43ece9717882549b586ea9535c9e37"
+    },
+    {
+      "id": 16687,
+      "title": "HUNTR/X (Ejae, Audrey Nuna & Rei Ami) - KPop Demon Hunters — \"Golden\" (Recorded Music NZ Official Top 40 (Year-End Top 50 Singles) #2 2025)",
+      "sourceHash": "fe82f5abf54f7c2031a0a7518692cb35d92bb8ff"
+    },
+    {
+      "id": 16688,
+      "title": "Lady Gaga & Bruno Mars — \"Die With A Smile\" (Recorded Music NZ Official Top 40 (Year-End Top 50 Singles) #3 2025)",
+      "sourceHash": "a0ced4ebceb6c1a2f1095f66a05e1cfa9ef4cc7a"
+    },
+    {
+      "id": 16689,
+      "title": "Bad Bunny — \"BAILE INoLVIDABLE\" (Spotify Argentina annual most-streamed songs (Wrapped) #3 2025)",
+      "sourceHash": "f65f6cf808491aba66146b6f5d2fe4230640f92b"
+    },
+    {
+      "id": 16690,
+      "title": "Beéle — \"mi refe\" (Spotify Colombia annual most-streamed songs (Wrapped) #2 2025)",
+      "sourceHash": "3856e5f7a246fb13715a4856df9b3e54669f8ef4"
+    },
+    {
+      "id": 16691,
+      "title": "Aramis I Energy Storage Facility: 140M USD, 100 MW BESS in Alameda County, California",
+      "sourceHash": "718f4f20178c29e0a0172630702a5d200e115ee3"
+    },
+    {
+      "id": 16692,
+      "title": "Nanpa Básico feat. Beéle — \"Hasta Aquí Llegué\" (Spotify Colombia annual most-streamed songs (Wrapped) #3 2025)",
+      "sourceHash": "05025c47bda56676553cf017465db59466b50ea0"
+    },
+    {
+      "id": 16693,
+      "title": "Benson Boone — \"Beautiful Things\" (Billboard Canadian Hot 100 #2 2024)",
+      "sourceHash": "3f52f15ee46233c14bb814e91909c7417abc3b96"
+    },
+    {
+      "id": 16694,
+      "title": "Teddy Swims — \"Lose Control\" (Billboard Canadian Hot 100 #3 2024)",
+      "sourceHash": "17fb587d7d4fca881190ce2992bf88240bde791e"
+    },
+    {
+      "id": 16695,
+      "title": "Arida Clean Energy Storage Complex: 450M USD, 370 MW BESS in Clark County, Nevada",
+      "sourceHash": "f9b69556f427babe6c1795f9042d8588d9d0fda1"
+    },
+    {
+      "id": 16696,
+      "title": "Los Ángeles Azules & Emilia — \"Perdonarte, ¿Para Qué?\" (Monitor Latino Mexico Top 100 (annual General) #2 2024)",
+      "sourceHash": "5814c9c54bd22c444e3e9d4c56ac4d2c3fec4c24"
+    },
+    {
+      "id": 16697,
+      "title": "Belinda — \"Cactus\" (Monitor Latino Mexico Top 100 (annual General) #3 2024)",
+      "sourceHash": "ef0874ae5db87988cd3cad6ed804de96f964e400"
+    },
+    {
+      "id": 16698,
+      "title": "Zé Neto & Cristiano — \"Barulho Do Foguete (Ao Vivo)\" (Spotify Brasil year-end most-streamed songs #2 2024)",
+      "sourceHash": "6f9d32ca64554212d5c7e7da66d6050a8045356e"
+    },
+    {
+      "id": 16699,
+      "title": "Arkansas Cypress Energy Storage Center: 420M USD, 350 MW BESS in Jefferson County, Arkansas",
+      "sourceHash": "39d23b4531e8ea322f8110aac2a7e85d6140da3a"
+    },
+    {
+      "id": 16700,
+      "title": "Felipe e Rodrigo — \"Gosta De Rua (Ao Vivo)\" (Spotify Brasil year-end most-streamed songs #3 2024)",
+      "sourceHash": "b2474464684207ba4da31d51a5b77ca3cf5308ae"
+    },
+    {
+      "id": 16701,
+      "title": "Jungeli — \"Petit génie\" (SNEP Top Singles (year-end) #2 2024)",
+      "sourceHash": "aeb8bf9ba1913c375bed2756b12eb54b1798493e"
+    },
+    {
+      "id": 16702,
+      "title": "Atlas BESS IV Energy Storage Center: 180M USD, 150 MW Facility in La Paz County, Arizona",
+      "sourceHash": "fcd0679d4326b7e44a126c12712a3aa0aad82177"
+    },
+    {
+      "id": 16703,
+      "title": "Carbonne — \"Imagine\" (SNEP Top Singles (year-end) #3 2024)",
+      "sourceHash": "06dae2f07c84276c765963d2ad87b3eeb71d7922"
+    },
+    {
+      "id": 16704,
+      "title": "Ayliva x Apache 207 — \"Wunder\" (GfK Top 100 Singles #2 2024)",
+      "sourceHash": "f5bf489935c2189ccfa49e234ec5c8bebb5c389a"
+    },
+    {
+      "id": 16705,
+      "title": "Benson Boone — \"Beautiful Things\" (GfK Top 100 Singles #3 2024)",
+      "sourceHash": "33495726edbc2ebdf76703f999a901e5e719dd24"
+    },
+    {
+      "id": 16706,
+      "title": "Aligned Data Centers ORD-02 Hyperscale Facility: 1.36B USD, 50.4 MW Facility in Cook County, Illinois",
+      "sourceHash": "7adbf1a18318b097243b42db8f83e5c058b603ca"
+    },
+    {
+      "id": 16707,
+      "title": "Rose Villain ft. Guè — \"Come un tuono\" (FIMI Top of the Music #2 2024)",
+      "sourceHash": "4e8e2633dbef1701486ed3fef81343747421d75e"
+    },
+    {
+      "id": 16708,
+      "title": "Geolier — \"I p' me, tu p' te\" (FIMI Top of the Music #3 2024)",
+      "sourceHash": "3ff98b6d2be657ce201ffc905fd934ad295b2b5f"
+    },
+    {
+      "id": 16709,
+      "title": "Feid & ATL Jacob — \"Luna\" (PROMUSICAE Top 100 Canciones (annual, year-end) #2 2024)",
+      "sourceHash": "17b68f290fe834e891606ec6cd34550525e7c25d"
+    },
+    {
+      "id": 16710,
+      "title": "Gonzy — \"X'CLUSIVO\" (PROMUSICAE Top 100 Canciones (annual, year-end) #3 2024)",
+      "sourceHash": "ef5d7dd32d6d55c8d3b30802884790c6186ee3dd"
+    },
+    {
+      "id": 16711,
+      "title": "Aligned Data Centers DFW-02 Campus Expansion: 1.36B USD, 50.4 MW Facility in Collin County, Texas",
+      "sourceHash": "606f519abd0fb2361dffe45657c61319d4a70fd2"
+    },
+    {
+      "id": 16712,
+      "title": "Benson Boone — \"Beautiful Things\" (Sverigetopplistan Årslista Singlar #2 2024)",
+      "sourceHash": "e880c4ea462f3b84eb29cbdff4c608235bbe9bfe"
+    },
+    {
+      "id": 16713,
+      "title": "Hooja & Miriam Bryant — \"Vem fan e du?\" (Sverigetopplistan Årslista Singlar #3 2024)",
+      "sourceHash": "6fa2d0c25cce7a2f52fdcf82b575fa6814437de3"
+    },
+    {
+      "id": 16714,
+      "title": "Chike & MohBad — \"Egwu\" (TurnTable Official Nigeria Top 100 #2 2024)",
+      "sourceHash": "8f98f1a36c3025635e44c616e2606261d5cd82b7"
+    },
+    {
+      "id": 16715,
+      "title": "Seyi Vibez — \"Different Pattern\" (TurnTable Official Nigeria Top 100 #3 2024)",
+      "sourceHash": "d2ce8a39a8de6e6997036e1b4aa52050df1df56e"
+    },
+    {
+      "id": 16716,
+      "title": "TitoM & Yuppe ft. S.N.E & EeQue — \"Tshwala Bam\" (The Official South African Charts (TOSAC) - 2024 streams ranking #3 2024)",
+      "sourceHash": "d03ddf28bf4b1849c758aef8eb05b5e3abc23fbc"
+    },
+    {
+      "id": 16717,
+      "title": "Wang Yuzhou Leto (王宇宙Leto) & Qiao Junchen (乔浚丞) — \"Ruo Yue Liang Mei Lai (若月亮没来)\" (TME Tencent Music Uni Chart (由你榜) annual song 2024 #2 2024)",
+      "sourceHash": "8f317a933ab0d6fd1341d243c32922533073d9cb"
+    },
+    {
+      "id": 16718,
+      "title": "Aligned Data Centers IAD-01 Hyperscale Facility: 2.92B USD, 107.9 MW Campus in Loudoun County, Virginia",
+      "sourceHash": "2c6b494f93f1213773cbd9c08fd45e2f56666e0f"
+    },
+    {
+      "id": 16719,
+      "title": "Silence Wang (汪苏泷) — \"Wo Xiang Nian (我想念)\" (TME Tencent Music Uni Chart (由你榜) annual song 2024 #3 2024)",
+      "sourceHash": "49cc20d67147a54cb4668f16394ce6fcebcd3da6"
+    },
+    {
+      "id": 16720,
+      "title": "Lady Gaga & Bruno Mars — \"Die with a Smile\" (Singapore Top 30 Digital Streaming (RIAS) #2 2024)",
+      "sourceHash": "9a3ead8a987a5e30c33dc4570e3614c4fc6c7e0b"
+    },
+    {
+      "id": 16721,
+      "title": "Sabrina Carpenter — \"Espresso\" (Singapore Top 30 Digital Streaming (RIAS) #3 2024)",
+      "sourceHash": "1dfa2b6661959b84f7abd201f017a04c3a36d2e2"
+    },
+    {
+      "id": 16722,
+      "title": "Energy — \"星期五晚上\" (KKBOX Mandarin Yearly Cumulative Singles Chart #2 2024)",
+      "sourceHash": "232771f2995806b70e95c2ca9b11cdda6eb9593f"
+    },
+    {
+      "id": 16723,
+      "title": "邱軍 (Kui) — \"愛不愛我\" (KKBOX Mandarin Yearly Cumulative Singles Chart #3 2024)",
+      "sourceHash": "d8f7579cf9e1694ccf8255dc8f8e150c8382a959"
+    },
+    {
+      "id": 16724,
+      "title": "Aligned Data Centers NEO-01 Hyperscale Facility: 2.73B USD, 82.8 MW Campus in Erie County, Ohio",
+      "sourceHash": "5f70e27765d19f7722219a91c33c32ddef8c8d6b"
+    },
+    {
+      "id": 16725,
+      "title": "Shaboozey — \"A Bar Song (Tipsy)\" (ARIA Top 100 Singles (year-end 2024) #2 2024)",
+      "sourceHash": "a36d39adb97f36da62ee360c9400295b88e5d69f"
+    },
+    {
+      "id": 16726,
+      "title": "Sabrina Carpenter — \"Espresso\" (ARIA Top 100 Singles (year-end 2024) #3 2024)",
+      "sourceHash": "783c06ddb170b736b524ab9b7309a17a6cb4a3d8"
+    },
+    {
+      "id": 16727,
+      "title": "Benson Boone — \"Beautiful Things\" (Recorded Music NZ Official Top 40 (Year-End Top 50 Singles) #2 2024)",
+      "sourceHash": "029a0dea5b16a8b94f023bd8be4650af11e0437e"
+    },
+    {
+      "id": 16728,
+      "title": "Tommy Richman — \"Million Dollar Baby\" (Recorded Music NZ Official Top 40 (Year-End Top 50 Singles) #3 2024)",
+      "sourceHash": "aa6244af06045001f994bb482ebce6d9d2e9d6a7"
+    },
+    {
+      "id": 16729,
+      "title": "Tiago PZK — \"Piel\" (Spotify Argentina annual most-streamed songs (Wrapped) #2 2024)",
+      "sourceHash": "54f4dd2f9ccd8ea9923cf41e2598fd0dd82429a9"
+    },
+    {
+      "id": 16730,
+      "title": "Adamstown Solar Center: 270M USD, 250.88 MW Solar Array in Wilbarger County, Texas",
+      "sourceHash": "ea9d3ce1a91785a12207893b39fa0e8074d5cbe2"
+    },
+    {
+      "id": 16731,
+      "title": "Feid — \"LUNA\" (Spotify Argentina annual most-streamed songs (Wrapped) #3 2024)",
+      "sourceHash": "a342e6b7c467b3133d2ad3119f08a2d4ec7e791f"
+    },
+    {
+      "id": 16732,
+      "title": "Blessd & Ovy On The Drums — \"Mírame\" (Spotify Colombia annual most-streamed songs (Wrapped) #2 2024)",
+      "sourceHash": "6eba62343cd735f1b7617c128947b3a9469ba0f2"
+    },
+    {
+      "id": 16733,
+      "title": "Bad Bunny & Feid — \"Perro Negro\" (Spotify Colombia annual most-streamed songs (Wrapped) #3 2024)",
+      "sourceHash": "fce84884f40433617b506def3f02883f403f7f37"
+    },
+    {
+      "id": 16734,
+      "title": "Rema & Selena Gomez — \"Calm Down\" (Billboard Canadian Hot 100 #2 2023)",
+      "sourceHash": "1a65d1dd5c2b086b45642396618b14e3dddf59da"
+    },
+    {
+      "id": 16735,
+      "title": "Morgan Wallen — \"Last Night\" (Billboard Canadian Hot 100 #3 2023)",
+      "sourceHash": "ace92eca2a5857ab516d468f4dc368bf4a469fe6"
+    },
+    {
+      "id": 16736,
+      "title": "AES Waiawa Phase 2 Solar Project: 75M USD, 30 MW Clean Energy Center in Honolulu County, Hawaii",
+      "sourceHash": "6a41db3a13a9d6c76c89e4cd9e731d2c2f7ad884"
+    },
+    {
+      "id": 16737,
+      "title": "Grupo Frontera & Bad Bunny — \"Un x100to\" (Monitor Latino Mexico Top 100 (annual General) #2 2023)",
+      "sourceHash": "c7ed83e7d136fd298f0f6ae459ae3849a9418cbc"
+    },
+    {
+      "id": 16738,
+      "title": "Rema & Selena Gomez — \"Calm Down\" (Monitor Latino Mexico Top 100 (annual General) #3 2023)",
+      "sourceHash": "b4d56ca9867c367c2281936d9f1fcc7167c36861"
+    },
+    {
+      "id": 16739,
+      "title": "Marília Mendonça — \"Leão\" (Spotify Brasil year-end most-streamed songs #2 2023)",
+      "sourceHash": "588a0b643e0b30141a10f141cf51cf9a58b6842a"
+    },
+    {
+      "id": 16740,
+      "title": "Simone Mendes — \"Erro Gostoso (Ao Vivo)\" (Spotify Brasil year-end most-streamed songs #3 2023)",
+      "sourceHash": "96b10500bd1581f93ef3908f07d600e26d368ee7"
+    },
+    {
+      "id": 16741,
+      "title": "SDM — \"Bolide allemand\" (SNEP Top Singles (year-end) #2 2023)",
+      "sourceHash": "a9077feed48b5f60f8f9a34871d68a7b1d5fa884"
+    },
+    {
+      "id": 16742,
+      "title": "Tiakola — \"Meuda\" (SNEP Top Singles (year-end) #3 2023)",
+      "sourceHash": "2ec44a9624b16c56689fa96a2772e47fa56dc068"
+    },
+    {
+      "id": 16743,
+      "title": "Antila Solar Center: 550M USD, 500 MW Clean Energy Complex in Borden County, Texas",
+      "sourceHash": "2b7175bea7d223cddee5ce096be0736688b03668"
+    },
+    {
+      "id": 16744,
+      "title": "Miley Cyrus — \"Flowers\" (GfK Top 100 Singles #2 2023)",
+      "sourceHash": "b3ffc9fc7c124bd6b3223958423bf136a59d20dd"
+    },
+    {
+      "id": 16745,
+      "title": "Ayliva feat. Mero — \"Sie weiß\" (GfK Top 100 Singles #3 2023)",
+      "sourceHash": "edfeffb4602101c05f2db0ea546ed06240a23811"
+    },
+    {
+      "id": 16746,
+      "title": "Marco Mengoni — \"Due vite\" (FIMI Top of the Music #2 2023)",
+      "sourceHash": "e2a429c605f48d82ad910168a17506f3943ef43a"
+    },
+    {
+      "id": 16747,
+      "title": "Athos Clean Power Solar Plant: 500M USD, 450 MW Solar Facility in Riverside County, California",
+      "sourceHash": "8d6a1f497933240e41a1c7cfa7799e34ab2e5d57"
+    },
+    {
+      "id": 16748,
+      "title": "Mr. Rain — \"Supereroi\" (FIMI Top of the Music #3 2023)",
+      "sourceHash": "1a5b1dc8a36b064dca734e203880d47093661ff8"
+    },
+    {
+      "id": 16749,
+      "title": "Marshmello & Manuel Turizo — \"El Merengue\" (PROMUSICAE Top 100 Canciones (annual, year-end) #2 2023)",
+      "sourceHash": "8a13467a5021d4d82de5681006654d132e66da86"
+    },
+    {
+      "id": 16750,
+      "title": "Vicco — \"Nochentera\" (PROMUSICAE Top 100 Canciones (annual, year-end) #3 2023)",
+      "sourceHash": "08382168efaeff431c523d6c53b61f17f09700c0"
+    },
+    {
+      "id": 16751,
+      "title": "Bolaget — \"Kan inte gå\" (Sverigetopplistan Årslista Singlar #2 2023)",
+      "sourceHash": "6325851cbc5b154468ce035ff2ee43cdfd8c489b"
+    },
+    {
+      "id": 16752,
+      "title": "Loreen — \"Tattoo\" (Sverigetopplistan Årslista Singlar #3 2023)",
+      "sourceHash": "e7b9e2135eea4a0bdc59bf78de12adf0e2813323"
+    },
+    {
+      "id": 16753,
+      "title": "Omah Lay — \"soso\" (TurnTable Official Nigeria Top 100 #2 2023)",
+      "sourceHash": "2656cbef1e457e4f4187e1b815df8a78d43c78a8"
+    },
+    {
+      "id": 16754,
+      "title": "BNXN, Kizz Daniel & Seyi Vibez — \"Gwagwalada\" (TurnTable Official Nigeria Top 100 #3 2023)",
+      "sourceHash": "a9e0823225d9eba34acbc014dfbdce47fe1ded45"
+    },
+    {
+      "id": 16755,
+      "title": "Lady Amar ft. JL SA, Cici & Murumba Pitch — \"Hamba Juba\" (Spotify South Africa Wrapped 2023 - most streamed songs #2 2023)",
+      "sourceHash": "1b27c997befe726bb03b0190f7ee037b7cbf4ea6"
+    },
+    {
+      "id": 16756,
+      "title": "Soa Mattrix & Mashudu ft. Happy Jazzman & Emotionz DJ — \"Mina Nawe\" (Spotify South Africa Wrapped 2023 - most streamed songs #3 2023)",
+      "sourceHash": "b7bd910f328e8fbafeb20f504ee4283bb673303d"
+    },
+    {
+      "id": 16757,
+      "title": "Huang Qishan (黄绮珊) & Xilinnayi Gao (希林娜依·高) — \"Shi Ma Ma Shi Nv Er (是妈妈是女儿)\" (TME Tencent Music Uni Chart (由你榜) annual song 2023 #2 2023)",
+      "sourceHash": "7b2b2d04deb812485727c20d274c488321f20834"
+    },
+    {
+      "id": 16758,
+      "title": "Zhang Bichen (张碧晨) — \"Long (笼)\" (TME Tencent Music Uni Chart (由你榜) annual song 2023 #3 2023)",
+      "sourceHash": "762fb09edf89f8817cf43e36c99cb96e90d9dea8"
+    },
+    {
+      "id": 16759,
+      "title": "Fifty Fifty — \"Cupid (Twin Version)\" (Singapore Top 30 Digital Streaming (RIAS) #2 2023)",
+      "sourceHash": "eb4411a9cdb9360211eb56b0b1e15c16c482b092"
+    },
+    {
+      "id": 16760,
+      "title": "NewJeans — \"OMG\" (Singapore Top 30 Digital Streaming (RIAS) #3 2023)",
+      "sourceHash": "935ace81ab820867fb61e0819e909e8d8de197d5"
+    },
+    {
+      "id": 16761,
+      "title": "18-Alpha Energy Storage Center: 300M USD, 307 MW BESS in Cooke County, Texas",
+      "sourceHash": "b1cc17e269cad08279dadfd021a957a904a3d9a0"
+    },
+    {
+      "id": 16762,
+      "title": "CENE STORE & CAFE FUKUOKA Opens 2025-11-12",
+      "sourceHash": "551995aa3e7dd7dee84ff783f7c1f81c8baa7022"
+    },
+    {
+      "id": 16763,
+      "title": "孫盛希 (Shi Shi) — \"眼淚記得你 (Remembered)\" (KKBOX Mandarin Yearly Cumulative Singles Chart #2 2023)",
+      "sourceHash": "bc36de4e14e2127160c0bdb3002e750626f41a40"
+    },
+    {
+      "id": 16764,
+      "title": "18-Bravo Energy Storage Center: 400M USD, 407 MW BESS in Hunt County, Texas",
+      "sourceHash": "2f06eef989d104d1fe526447d5e0f1f58ff436a3"
+    },
+    {
+      "id": 16765,
+      "title": "蔡依林 (Jolin Tsai) — \"親愛的對象\" (KKBOX Mandarin Yearly Cumulative Singles Chart #3 2023)",
+      "sourceHash": "913b0dea2260803ff20d55a04a2504f3f030f237"
+    },
+    {
+      "id": 16766,
+      "title": "Agricola Energy Storage Facility: 200M USD, 205 MW BESS in Austin County, Texas",
+      "sourceHash": "b29ec28c6243509c866c9122dbe5552b645726d7"
+    },
+    {
+      "id": 16767,
+      "title": "BLACK PIG — Sakae Opens 2026-10-16",
+      "sourceHash": "5b1aca232ee6a5ac31bc7384fbf6eba5556150d4"
+    },
+    {
+      "id": 16768,
+      "title": "Morgan Wallen — \"Last Night\" (ARIA Top 100 Singles (year-end 2023) #2 2023)",
+      "sourceHash": "ef4e7779d40eb39ff2bafae10cd7cce3f9d2d387"
+    },
+    {
+      "id": 16769,
+      "title": "SZA — \"Kill Bill\" (ARIA Top 100 Singles (year-end 2023) #3 2023)",
+      "sourceHash": "945eb689f800b29c4da3564804a377b19b3e8027"
+    },
+    {
+      "id": 16770,
+      "title": "Anila Energy Storage Center: 210M USD, 209 MW BESS in Wilson County, Texas",
+      "sourceHash": "43f574e8b781466c800ba16f73f1861b6551e239"
+    },
+    {
+      "id": 16771,
+      "title": "Hamburg Hirokiya — Osu Opens 2026-10-18",
+      "sourceHash": "662efce08d0d84b02442e8f962d79f66ef0fa0d5"
+    },
+    {
+      "id": 16772,
+      "title": "SZA — \"Kill Bill\" (Recorded Music NZ Official Top 40 (Year-End Top 50 Singles) #2 2023)",
+      "sourceHash": "cc431478a6751efebc7d7d350ab0f6e2cdbbeff9"
+    },
+    {
+      "id": 16773,
+      "title": "Libianca — \"People\" (Recorded Music NZ Official Top 40 (Year-End Top 50 Singles) #3 2023)",
+      "sourceHash": "9bd1bc63dff22835111a8cfae9b0a86437b1218c"
+    },
+    {
+      "id": 16774,
+      "title": "Aligned Data Centers IAD-02 Hyperscale Campus: 4.43B USD, 163 MW Facility in Loudoun County, Virginia",
+      "sourceHash": "62ee9cfe7111cdc0d6388df2cff89b85bfa33d7f"
+    },
+    {
+      "id": 16775,
+      "title": "Luck Ra, La K'onga & Ke Personajes — \"Ya No Vuelvas (Versión Cuarteto)\" (Spotify Argentina annual most-streamed songs (Wrapped) #2 2023)",
+      "sourceHash": "f464663c41195bb47e3369b2dc8db036a978d847"
+    },
+    {
+      "id": 16776,
+      "title": "Big One, Emilia & Callejero Fino — \"En La Intimidad | CROSSOVER #1\" (Spotify Argentina annual most-streamed songs (Wrapped) #3 2023)",
+      "sourceHash": "13d361ddd925c599ef4ae577e407227bf30fb429"
+    },
+    {
+      "id": 16777,
+      "title": "Aligned Data Centers IAD-03 Hyperscale Facility: 3.88B USD, 143 MW Campus in Ashburn, Virginia",
+      "sourceHash": "2768bcf88cf6ae7190e22af52dae1c56068dad2b"
+    },
+    {
+      "id": 16778,
+      "title": "Ozuna & Feid — \"Hey Mor\" (Spotify Colombia annual most-streamed songs (Wrapped) #2 2023)",
+      "sourceHash": "6cb41e4bbaa1a20b929b9ca238564e9b451c99f4"
+    },
+    {
+      "id": 16779,
+      "title": "Feid — \"Chorrito Pa' Las Ánimas\" (Spotify Colombia annual most-streamed songs (Wrapped) #3 2023)",
+      "sourceHash": "f6587c050fde88fdd5ccaa9bc777527c3943bb33"
+    },
+    {
+      "id": 16780,
+      "title": "Harry Styles — \"As It Was\" (Billboard Canadian Hot 100 #2 2022)",
+      "sourceHash": "e0b910fa2e771cb1bf12eadeedec721f39ab185b"
+    },
+    {
+      "id": 16781,
+      "title": "Glass Animals — \"Heat Waves\" (Billboard Canadian Hot 100 #3 2022)",
+      "sourceHash": "aef6d519f20688e5842d302a25de37221e5491c4"
+    },
+    {
+      "id": 16782,
+      "title": "GAYLE — \"abcdefu\" (Monitor Latino Mexico Top 100 (annual General) #2 2022)",
+      "sourceHash": "01edc45cf99481bcd83950004bd935450dcb14af"
+    },
+    {
+      "id": 16783,
+      "title": "Aligned Data Centers NEO-03 Hyperscale Campus: 2.74B USD, 83 MW Facility in Erie County, Ohio",
+      "sourceHash": "6bb52e599615813ba5e613535a5afa15be843f04"
+    },
+    {
+      "id": 16784,
+      "title": "Aitana & Zzoilo — \"Mon Amour (Remix)\" (Monitor Latino Mexico Top 100 (annual General) #3 2022)",
+      "sourceHash": "5ba49d49db9e2d2cd840abdfd61312d7c9bfb2bc"
+    },
+    {
+      "id": 16785,
+      "title": "Xamã — \"Malvadão 3\" (Spotify Brasil year-end most-streamed songs #2 2022)",
+      "sourceHash": "e40f46b39b82cd1aa79e60afc0220de93c0924d9"
+    },
+    {
+      "id": 16786,
+      "title": "George Henrique & Rodrigo & Marília Mendonça — \"Vai Lá Em Casa Hoje (Ao Vivo)\" (Spotify Brasil year-end most-streamed songs #3 2022)",
+      "sourceHash": "9cc5260c2b82640080964b63f77097d07a5f5a9f"
+    },
+    {
+      "id": 16787,
+      "title": "Aligned Data Centers Northwest Point Campus Building 2: 3.65B USD, 110 MW Facility in Elk Grove Village, Illinois",
+      "sourceHash": "fef42622977fbf6f9ebbc3fcf94544597e755ff5"
+    },
+    {
+      "id": 16788,
+      "title": "Rema — \"Calm Down\" (SNEP Top Singles (year-end) #2 2022)",
+      "sourceHash": "3f4012db4ee4d7ca07022d720b4ab28926aa2ed5"
+    },
+    {
+      "id": 16789,
+      "title": "Ninho — \"Jefe\" (SNEP Top Singles (year-end) #3 2022)",
+      "sourceHash": "2e9aed4ed3ed87790f149264c2a1ce3432e8deb5"
+    },
+    {
+      "id": 16790,
+      "title": "Glass Animals — \"Heat Waves\" (GfK Top 100 Singles #2 2022)",
+      "sourceHash": "ec6db3545606642d1462492b25fc2f0128726bd6"
+    },
+    {
+      "id": 16791,
+      "title": "Luciano — \"Beautiful Girl\" (GfK Top 100 Singles #3 2022)",
+      "sourceHash": "1d81b46b628f747ba69df016fa65a8b4bbb5b96b"
+    },
+    {
+      "id": 16792,
+      "title": "Rhove — \"Shakerando\" (FIMI Top of the Music #2 2022)",
+      "sourceHash": "b6a83dcff991e50b59871f8609f517356917336d"
+    },
+    {
+      "id": 16793,
+      "title": "Dargen D'Amico — \"Dove si balla\" (FIMI Top of the Music #3 2022)",
+      "sourceHash": "726bd92164ac1df4e50652868e5c22da0682a77d"
+    },
+    {
+      "id": 16794,
+      "title": "Karma Clean Solar Center: 130M USD, 100 MW Solar Farm in Greene County, Iowa",
+      "sourceHash": "5907fd67e8b4b1406f59b85c5805605d9b4680b3"
+    },
+    {
+      "id": 16795,
+      "title": "Manuel Turizo — \"La Bachata\" (PROMUSICAE Top 100 Canciones (annual, year-end) #2 2022)",
+      "sourceHash": "c18d50af0cd983cd73a747fbe05e6969607ecb94"
+    },
+    {
+      "id": 16796,
+      "title": "Rosalía — \"Despechá\" (PROMUSICAE Top 100 Canciones (annual, year-end) #3 2022)",
+      "sourceHash": "7c582d9bfb30d8261561e7c52c1ddb62adf9293c"
+    },
+    {
+      "id": 16797,
+      "title": "Victor Leksell & Einár — \"Din låt\" (Sverigetopplistan Årslista Singlar #2 2022)",
+      "sourceHash": "d545020a9095b8c067c8592166931cf85a782202"
+    },
+    {
+      "id": 16798,
+      "title": "Xenia Clean Solar Center: 160M USD, 125 MW Solar Farm in Clay County, Illinois",
+      "sourceHash": "550e2995bf0aaf01a6638cf05b251db8ef58f900"
+    },
+    {
+      "id": 16799,
+      "title": "Miss Li — \"X\" (Sverigetopplistan Årslista Singlar #3 2022)",
+      "sourceHash": "a8b560fe3b64fca8fbb16b603537d53bea688b5e"
+    },
+    {
+      "id": 16800,
+      "title": "Genkai — Nagoya Hontei Opens 2026-09-24",
+      "sourceHash": "b503a717307ec85e1567ad72c7e7ef96e93d39af"
+    },
+    {
+      "id": 16801,
+      "title": "Fireboy DML & Asake — \"Bandana\" (TurnTable Official Nigeria Top 100 #2 2022)",
+      "sourceHash": "930f77a2917bf9d72678b075b56765282fee5264"
+    },
+    {
+      "id": 16802,
+      "title": "Adams Clean Solar Center: 190M USD, 150 MW Solar Farm in Mower County, Minnesota",
+      "sourceHash": "d15b956beb26bcf17b1595feb0ae2a3bb051dde2"
+    },
+    {
+      "id": 16803,
+      "title": "Mavin, Ayra Starr, Ladipoe, Magixx, Boy Spyce & Crayon — \"Overloading (OVERDOSE)\" (TurnTable Official Nigeria Top 100 #3 2022)",
+      "sourceHash": "68ed0649ab9cd67d3be2507b3a5961684744af89"
+    },
+    {
+      "id": 16804,
+      "title": "Q-Mark & TpZee ft. Afriikan Papi — \"Paris\" (Spotify South Africa Wrapped 2022 - most streamed songs #2 2022)",
+      "sourceHash": "4e89ccb0a132f50b30057aa296798762ee8f90ae"
+    },
+    {
+      "id": 16805,
+      "title": "Glass Animals — \"Heat Waves\" (Spotify South Africa Wrapped 2022 - most streamed songs #3 2022)",
+      "sourceHash": "c9131e4645fc9ab467c011e700cf5cc8d728795e"
+    },
+    {
+      "id": 16806,
+      "title": "Buzzer Butte 2 Solar Farm: 250M USD, 243 MW Solar Plant in Kent County, Texas",
+      "sourceHash": "8e1193013c0412b3779ffd4c661cfec6ad663d45"
+    },
+    {
+      "id": 16807,
+      "title": "Charlie Zhou Shen (周深) — \"Hua Kai Wang You (花开忘忧)\" (TME Tencent Music Uni Chart (由你榜) annual song 2022 #2 2022)",
+      "sourceHash": "7ed99a2e39d7f8b61a36e4ddb7aee14ee99f6b00"
+    },
+    {
+      "id": 16808,
+      "title": "Liu Yuning of Modern Brothers (摩登兄弟刘宇宁) — \"Xun Yi Ge Ni (寻一个你)\" (TME Tencent Music Uni Chart (由你榜) annual song 2022 #3 2022)",
+      "sourceHash": "d0aa0fd594fea8e63fbdaf3df454a395ba547be5"
+    },
+    {
+      "id": 16809,
+      "title": "Joji — \"Glimpse of Us\" (Singapore Top 30 Digital Streaming (RIAS) #2 2022)",
+      "sourceHash": "3a4fbadb4ff99e0da896e6469a8a89ac7f983689"
+    },
+    {
+      "id": 16810,
+      "title": "Harry Styles — \"As It Was\" (Singapore Top 30 Digital Streaming (RIAS) #3 2022)",
+      "sourceHash": "3e01e8667bd965df254b5f43c68005bdcaf72185"
+    },
+    {
+      "id": 16811,
+      "title": "茄子蛋 (EggPlantEgg) — \"閣愛妳一擺\" (KKBOX Mandarin Yearly Cumulative Singles Chart #2 2022)",
+      "sourceHash": "34cf472a4ec5c3824e56dae5b961b9b3b236ddfc"
+    },
+    {
+      "id": 16812,
+      "title": "小阿七 (Xiao A Qi) — \"從前說\" (KKBOX Mandarin Yearly Cumulative Singles Chart #3 2022)",
+      "sourceHash": "baf2a130d98b03a34eccbd86fb425af97c86775c"
+    },
+    {
+      "id": 16813,
+      "title": "Glass Animals — \"Heat Waves\" (ARIA Top 100 Singles (year-end 2022) #2 2022)",
+      "sourceHash": "6734f3cdf19cd15215564a2fc4f73c32d3d98319"
+    },
+    {
+      "id": 16814,
+      "title": "The Kid Laroi & Justin Bieber — \"Stay\" (ARIA Top 100 Singles (year-end 2022) #3 2022)",
+      "sourceHash": "bb0daa4623dbf0cab85f07a0ae668872839ea737"
+    },
+    {
+      "id": 16815,
+      "title": "Harry Styles — \"As It Was\" (Recorded Music NZ Official Top 40 (Year-End Top 50 Singles) #2 2022)",
+      "sourceHash": "0066b10e6604cd153e0e5e6533b4cbd582e90e77"
+    },
+    {
+      "id": 16816,
+      "title": "Glass Animals — \"Heat Waves\" (Recorded Music NZ Official Top 40 (Year-End Top 50 Singles) #3 2022)",
+      "sourceHash": "effa825513616b382d9ffad894dc68f7c7afb448"
+    },
+    {
+      "id": 16817,
+      "title": "Bizarrap & Tiago PZK — \"Bzrp Music Sessions, Vol. 48\" (Spotify Argentina annual most-streamed songs (Wrapped) #3 2022)",
+      "sourceHash": "0d3a81f7019dd9826519e225eef3d13d9671f5e8"
+    },
+    {
+      "id": 16818,
+      "title": "Bad Bunny & Bomba Estéreo — \"Ojitos Lindos\" (Spotify Colombia annual most-streamed songs (Wrapped) #2 2022)",
+      "sourceHash": "7c66357389fde90c248921b26b55ccaacf231ec2"
+    },
+    {
+      "id": 16819,
+      "title": "Ryan Castro & Feid — \"Monastery\" (Spotify Colombia annual most-streamed songs (Wrapped) #3 2022)",
+      "sourceHash": "bb1726285c2d0d245aff67677802b02fcc83f862"
+    },
+    {
+      "id": 16820,
+      "title": "The Weeknd & Ariana Grande — \"Save Your Tears\" (Billboard Canadian Hot 100 #2 2021)",
+      "sourceHash": "751627acad0dd4aa176bbbd919f04204e61d9fba"
+    },
+    {
+      "id": 16821,
+      "title": "24kGoldn featuring iann dior — \"Mood\" (Billboard Canadian Hot 100 #3 2021)",
+      "sourceHash": "5d80e9aedec921b605d209d6c667ea13f49469fc"
+    },
+    {
+      "id": 16822,
+      "title": "The Weeknd — \"Save Your Tears\" (Monitor Latino Mexico Top 100 (annual General) #2 2021)",
+      "sourceHash": "f810a58738307de6dee75e509fdbd1bec8f340e7"
+    },
+    {
+      "id": 16823,
+      "title": "Christian Nodal & Ángela Aguilar — \"Dime Cómo Quieres\" (Monitor Latino Mexico Top 100 (annual General) #3 2021)",
+      "sourceHash": "eda1aa0e7768d93596305ed6dc88fc17afe61eea"
+    },
+    {
+      "id": 16824,
+      "title": "Diego & Victor Hugo — \"Facas (Ao Vivo)\" (Spotify Brasil year-end most-streamed songs #2 2021)",
+      "sourceHash": "1d4973a6cee890311310498a476d1e51484b8b73"
+    },
+    {
+      "id": 16825,
+      "title": "Wesley Safadão & Os Barões da Pisadinha — \"Ele É Ele, Eu Sou Eu\" (Spotify Brasil year-end most-streamed songs #3 2021)",
+      "sourceHash": "7d90425c470d95eea2c31c61199d03451d9198c9"
+    },
+    {
+      "id": 16826,
+      "title": "Soso Maness feat. PLK — \"Petrouchka\" (SNEP Top Singles (year-end) #2 2021)",
+      "sourceHash": "1096a0c1c3c7bfccfbf5f6ecb3a98d8f875c273f"
+    },
+    {
+      "id": 16827,
+      "title": "Oboy — \"TDB\" (SNEP Top Singles (year-end) #3 2021)",
+      "sourceHash": "e167f54802324b99aa5c276bc901a0e6eca76d32"
+    },
+    {
+      "id": 16828,
+      "title": "Ed Sheeran — \"Bad Habits\" (GfK Top 100 Singles #2 2021)",
+      "sourceHash": "cb9b09840ce5402a61bc06c057e37c4985d737ed"
+    },
+    {
+      "id": 16829,
+      "title": "Tiësto — \"The Business\" (GfK Top 100 Singles #3 2021)",
+      "sourceHash": "45baf92ca3f3358ccf3c92905ec94b8bd04682a2"
+    },
+    {
+      "id": 16830,
+      "title": "Blanco & Sfera Ebbasta — \"Mi fai impazzire\" (FIMI Top of the Music #2 2021)",
+      "sourceHash": "28b8e2a8c2e7aa4d82a99ea6d307beaa857ad6d6"
+    },
+    {
+      "id": 16831,
+      "title": "Fedez, Achille Lauro & Orietta Berti — \"Mille\" (FIMI Top of the Music #3 2021)",
+      "sourceHash": "3596a3a4c5902b60c0ea41ef8d4c9926f3b59e78"
+    },
+    {
+      "id": 16832,
+      "title": "Sebastián Yatra & Myke Towers — \"Pareja del Año\" (PROMUSICAE Top 100 Canciones (annual, year-end) #2 2021)",
+      "sourceHash": "be70d0ecf6660fb112e590921ef4645e2528519c"
+    },
+    {
+      "id": 16833,
+      "title": "Marc Seguí, Rauw Alejandro & Pol Granch — \"Tiroteo (Remix)\" (PROMUSICAE Top 100 Canciones (annual, year-end) #3 2021)",
+      "sourceHash": "6d6beda00659b6287ce5335c8da75299019ff454"
+    },
+    {
+      "id": 16834,
+      "title": "A36 — \"Samma gamla vanliga\" (Sverigetopplistan Årslista Singlar #2 2021)",
+      "sourceHash": "f2c8597666edda3d7fc0313de7b7b2ce0e8ebc7b"
+    },
+    {
+      "id": 16835,
+      "title": "Hov1 ft. Einár — \"Gamora\" (Sverigetopplistan Årslista Singlar #3 2021)",
+      "sourceHash": "8f7159608e8abaee889bc1ae7ae9adf5751b6dce"
+    },
+    {
+      "id": 16836,
+      "title": "Ladipoe & Buju — \"Feeling\" (TurnTable Official Nigeria Top 100 #2 2021)",
+      "sourceHash": "2ec5ad5b9ae17abcccf101da4b287039cd802ed0"
+    },
+    {
+      "id": 16837,
+      "title": "Wizkid ft. Tems — \"Essence\" (TurnTable Official Nigeria Top 100 #3 2021)",
+      "sourceHash": "5d73349afb3e528396a7c3da9fda7badd3d9d1fe"
+    },
+    {
+      "id": 16838,
+      "title": "Yan Haoxiang (严浩翔) — \"Wei Hao 6208 (尾号6208)\" (TME Tencent Music Uni Chart #2 2021)",
+      "sourceHash": "1abe113516d9839b8ee2a7f5d6c85ea4b72df6a5"
+    },
+    {
+      "id": 16839,
+      "title": "Huang Xiaoyun (黄霄雲) — \"Xing Chen Da Hai (星辰大海)\" (TME Tencent Music Uni Chart #3 2021)",
+      "sourceHash": "65de8a6ddd5d95469d779aa9ff46d883445c6bc8"
+    },
+    {
+      "id": 16840,
+      "title": "Olivia Rodrigo — \"Drivers License\" (Singapore Top 30 Digital Streaming (RIAS) #2 2021)",
+      "sourceHash": "88e4e8b6334889eac1d5161ef47024475461b532"
+    },
+    {
+      "id": 16841,
+      "title": "BTS — \"Butter\" (Singapore Top 30 Digital Streaming (RIAS) #3 2021)",
+      "sourceHash": "97215461a40f2eaa8c9a3df3c115ccf5f635816f"
+    },
+    {
+      "id": 16842,
+      "title": "告五人 (Accusefive) — \"在這座城市遺失了你\" (KKBOX Mandarin Yearly Cumulative Singles Chart #2 2021)",
+      "sourceHash": "0fd4cfbd18be79b278849dfe4f997f0b2a1eef5d"
+    },
+    {
+      "id": 16843,
+      "title": "動力火車 (Power Station) — \"我很好騙\" (KKBOX Mandarin Yearly Cumulative Singles Chart #3 2021)",
+      "sourceHash": "b5218338c26de0f22be226a4a9ae112de14d1d82"
+    },
+    {
+      "id": 16844,
+      "title": "The Kid Laroi & Justin Bieber — \"Stay\" (ARIA Top 100 Singles (year-end 2021) #2 2021)",
+      "sourceHash": "3d430cba526af01cfc94e5c4ad223a72a2e0f057"
+    },
+    {
+      "id": 16845,
+      "title": "Olivia Rodrigo — \"drivers license\" (ARIA Top 100 Singles (year-end 2021) #3 2021)",
+      "sourceHash": "5b95c45bd3419ee783bf31a18072128a90ede686"
+    },
+    {
+      "id": 16846,
+      "title": "Dua Lipa ft. DaBaby — \"Levitating\" (Recorded Music NZ Official Top 40 (Year-End Top 50 Singles) #2 2021)",
+      "sourceHash": "b476fb509fca358a1102b53f5d25bcbba909a44a"
+    },
+    {
+      "id": 16847,
+      "title": "Olivia Rodrigo — \"drivers license\" (Recorded Music NZ Official Top 40 (Year-End Top 50 Singles) #3 2021)",
+      "sourceHash": "160b2acdcbc063bb57b1d03835276c409192660e"
+    },
+    {
+      "id": 16848,
+      "title": "J Balvin & María Becerra — \"¿Qué Más Pues?\" (Spotify Argentina annual most-streamed songs (Wrapped) #2 2021)",
+      "sourceHash": "fb0c55cddf621ce545cdffb6af5a45b896e4243f"
+    },
+    {
+      "id": 16849,
+      "title": "Myke Towers & Juhn — \"Bandido\" (Spotify Argentina annual most-streamed songs (Wrapped) #3 2021)",
+      "sourceHash": "7062566e0941a474a536ee1e4f2b1688c688012c"
+    },
+    {
+      "id": 16850,
+      "title": "Bad Bunny — \"Yonaguni\" (Spotify Colombia most-streamed songs of 2021 (through 1 December 2021) #2 2021)",
+      "sourceHash": "5b55e5fd4ba07fde8a26286333dc323f86b51eb5"
+    },
+    {
+      "id": 16851,
+      "title": "Rauw Alejandro — \"Todo de Ti\" (Spotify Colombia most-streamed songs of 2021 (through 1 December 2021) #3 2021)",
+      "sourceHash": "395fa7c5fe6d54d836fc795735010c2c15cac8af"
+    },
+    {
+      "id": 16852,
+      "title": "The Weeknd — \"Blinding Lights\" (Billboard Canadian Hot 100 #2 2020)",
+      "sourceHash": "1c79771a2f5388a12ac83bb69dc47d84e44b85a5"
+    },
+    {
+      "id": 16853,
+      "title": "Dua Lipa — \"Don't Start Now\" (Billboard Canadian Hot 100 #3 2020)",
+      "sourceHash": "212895a0b73bd2cc9110494ea61209d7cc9f393f"
+    },
+    {
+      "id": 16854,
+      "title": "Tones and I — \"Dance Monkey\" (Monitor Latino Mexico Top 100 (annual General) #2 2020)",
+      "sourceHash": "3b1cf4b5615a7367fbfa574bdb481376a20f7f20"
+    },
+    {
+      "id": 16855,
+      "title": "Doja Cat — \"Say So\" (Monitor Latino Mexico Top 100 (annual General) #3 2020)",
+      "sourceHash": "786d1f4b7a7d5484dbe249487cb2b5931e8e6484"
+    },
+    {
+      "id": 16856,
+      "title": "Gusttavo Lima — \"A Gente Fez Amor (Ao Vivo)\" (Spotify Brasil year-end most-streamed songs #2 2020)",
+      "sourceHash": "8ccb4000f16eb7598d844c6bece7956ad53b667f"
+    },
+    {
+      "id": 16857,
+      "title": "Marília Mendonça — \"Graveto (Ao Vivo)\" (Spotify Brasil year-end most-streamed songs #3 2020)",
+      "sourceHash": "b2024c28b1e9fcb751a9e33b79ddd2a9dcb3a50e"
+    },
+    {
+      "id": 16858,
+      "title": "The Weeknd — \"Blinding Lights\" (SNEP Top Singles (year-end) #2 2020)",
+      "sourceHash": "75db385dc6b3d2d5d48f1a6ffa341733f5b5a912"
+    },
+    {
+      "id": 16859,
+      "title": "Hatik — \"Angela\" (SNEP Top Singles (year-end) #3 2020)",
+      "sourceHash": "74c5cc4476917c54bf6171dbc80ad894def71807"
+    },
+    {
+      "id": 16860,
+      "title": "Aldrin 138 Energy Storage Center: 210M USD, 207 MW BESS in Brazoria County, Texas",
+      "sourceHash": "9bb3b77fd42d3dfe3d7ab47ce29c253469e5bd29"
+    },
+    {
+      "id": 16861,
+      "title": "Tones and I — \"Dance Monkey\" (GfK Top 100 Singles #2 2020)",
+      "sourceHash": "042710b33c3b50ddb18dc7b8d0d79669caaac7a3"
+    },
+    {
+      "id": 16862,
+      "title": "Apache 207 — \"Roller\" (GfK Top 100 Singles #3 2020)",
+      "sourceHash": "55ccc7e72ac2a821cd2924a0a6bee2676186c969"
+    },
+    {
+      "id": 16863,
+      "title": "Aldrin 345 Energy Storage Complex: 360M USD, 362 MW BESS in Brazoria County, Texas",
+      "sourceHash": "4aeca4f95ac4d32e31aaea821a7e1cf97b0815db"
+    },
+    {
+      "id": 16864,
+      "title": "Rocco Hunt & Ana Mena — \"A un passo dalla Luna\" (FIMI Top of the Music #2 2020)",
+      "sourceHash": "2349148b43f997b2c3579a4454420bcacd1ba60c"
+    },
+    {
+      "id": 16865,
+      "title": "Irama — \"Mediterranea\" (FIMI Top of the Music #3 2020)",
+      "sourceHash": "0fffb3af8120035735d942d8d6b1e494d0a9158b"
+    },
+    {
+      "id": 16866,
+      "title": "Fred De Palma & Ana Mena — \"Se iluminaba\" (PROMUSICAE Top 100 Canciones (annual, year-end) #2 2020)",
+      "sourceHash": "a4f6f1c8b16d87d56e3b580417ef9d3f38a4658b"
+    },
+    {
+      "id": 16867,
+      "title": "Allthorn Energy Storage Center: 200M USD, 205 MW BESS in Duval County, Texas",
+      "sourceHash": "950e3afdb9554a26a0d6b5fe1cfe0dfb17271dd1"
+    },
+    {
+      "id": 16868,
+      "title": "The Weeknd — \"Blinding Lights\" (PROMUSICAE Top 100 Canciones (annual, year-end) #3 2020)",
+      "sourceHash": "64b0eaff8b46e6537f1bade9fd4ba8e22215e283"
+    },
+    {
+      "id": 16869,
+      "title": "The Weeknd — \"Blinding Lights\" (Sverigetopplistan Årslista Singlar #2 2020)",
+      "sourceHash": "76ae59d66963d85a10ce939a98b51d657ff87c00"
+    },
+    {
+      "id": 16870,
+      "title": "Miss Li — \"Komplicerad\" (Sverigetopplistan Årslista Singlar #3 2020)",
+      "sourceHash": "352a3ae20bacda65defc7794f33240f7bfaf23d4"
+    },
+    {
+      "id": 16871,
+      "title": "Anatole Clean Energy Storage Facility: 210M USD, 208 MW BESS in Henderson County, Texas",
+      "sourceHash": "84a8c11c510931665360a4bf62a6ea7a5d874555"
+    },
+    {
+      "id": 16872,
+      "title": "Davido — \"Fem\" (TurnTable Official Nigeria Top 100 #2 2020)",
+      "sourceHash": "524743527a4852ffa8dd2964432b0e8e4d8e5894"
+    },
+    {
+      "id": 16873,
+      "title": "Patoranking — \"Abule\" (TurnTable Official Nigeria Top 100 #3 2020)",
+      "sourceHash": "84946004310097d457a6852cfa70bafb3dc1a820"
+    },
+    {
+      "id": 16874,
+      "title": "Kabza De Small & DJ Maphorisa ft. Aymos, Samthing Soweto, Mas Musiq & Myztro — \"eMcimbini (Live)\" (Spotify South Africa 2020 - most streamed South African tracks #2 2020)",
+      "sourceHash": "74c408ac62ddc8ee3d4328b4ed4b355774104163"
+    },
+    {
+      "id": 16875,
+      "title": "Sha Sha ft. DJ Maphorisa & Kabza De Small — \"Tender Love\" (Spotify South Africa 2020 - most streamed South African tracks #3 2020)",
+      "sourceHash": "6bd64d2b37a0fad4ef4b96a20325d6abd950b76b"
+    },
+    {
+      "id": 16876,
+      "title": "Aligned Data Centers NEO-04 Hyperscale Campus: 3.65B USD, 110 MW Facility in Sandusky, Ohio",
+      "sourceHash": "0bdf0cf8b966748b7098bd59dc194c555935184a"
+    },
+    {
+      "id": 16877,
+      "title": "Xiao Zhan (肖战) — \"Guang Dian (光点)\" (TME Tencent Music Uni Chart (由你榜) annual song 2020 #2 2020)",
+      "sourceHash": "9616f5d8a297da673772e0c6439d635321ad8864"
+    },
+    {
+      "id": 16878,
+      "title": "Cai Xukun (蔡徐坤) — \"Qing Ren (情人)\" (TME Tencent Music Uni Chart (由你榜) annual song 2020 #3 2020)",
+      "sourceHash": "b4907f9f0d2192c69010a59d201eeebc82a04845"
+    },
+    {
+      "id": 16879,
+      "title": "Tones and I — \"Dance Monkey\" (Singapore Top 30 Digital Streaming (RIAS) #2 2020)",
+      "sourceHash": "8087fdef733331afca77cbe192c7147abc0fc351"
+    },
+    {
+      "id": 16880,
+      "title": "BTS — \"Dynamite\" (Singapore Top 30 Digital Streaming (RIAS) #3 2020)",
+      "sourceHash": "0eea87d1a0e38a815b1f9dbf7dff8eaeabf89d00"
+    },
+    {
+      "id": 16881,
+      "title": "Aligned Data Centers PHX-03 Hyperscale Facility: 1.28B USD, 47 MW Data Center in Phoenix, Arizona",
+      "sourceHash": "2f43d634fbd5239e2c1980f0aef6b41956c028fb"
+    },
+    {
+      "id": 16882,
+      "title": "鄧紫棋 (G.E.M.) — \"句號\" (KKBOX Mandarin Yearly Cumulative Singles Chart #2 2020)",
+      "sourceHash": "a37dc58bca928efdd065663172b8cebe0a632bfb"
+    },
+    {
+      "id": 16883,
+      "title": "阿冗 (Ah Rong) — \"與我無關\" (KKBOX Mandarin Yearly Cumulative Singles Chart #3 2020)",
+      "sourceHash": "63d0f597ec94c65107b708770082a514dec6fa83"
+    },
+    {
+      "id": 16884,
+      "title": "SAINt JHN — \"Roses (Imanbek Remix)\" (ARIA Top 100 Singles (year-end 2020) #2 2020)",
+      "sourceHash": "9bc9bc9d1fe89f01f82f851f0edd8bbc52c5941d"
+    },
+    {
+      "id": 16885,
+      "title": "Dua Lipa — \"Don't Start Now\" (ARIA Top 100 Singles (year-end 2020) #3 2020)",
+      "sourceHash": "916361bc85577bb1d85253945bfd20a1da08989c"
+    },
+    {
+      "id": 16886,
+      "title": "Aligned Data Centers PHX-07 Hyperscale Facility: 3.04B USD, 92 MW Data Center in Phoenix, Arizona",
+      "sourceHash": "28f88408e886b5ae7e432879920f28afacceaf8d"
+    },
+    {
+      "id": 16887,
+      "title": "The Weeknd — \"Blinding Lights\" (Recorded Music NZ Official Top 40 (Year-End Top 50 Singles) #2 2020)",
+      "sourceHash": "06772d1de2d476950c284801b45b9a5fec2179cb"
+    },
+    {
+      "id": 16888,
+      "title": "SAINt JHN — \"Roses (Imanbek Remix)\" (Recorded Music NZ Official Top 40 (Year-End Top 50 Singles) #3 2020)",
+      "sourceHash": "ec39453da6437cd0eb1bdf87971477a9fc195575"
+    },
+    {
+      "id": 16889,
+      "title": "Maluma — \"Hawái\" (Spotify Argentina annual most-streamed songs (Wrapped) #2 2020)",
+      "sourceHash": "1d3b8924bfd734bf297f8e6c57bb5b6520541664"
+    },
+    {
+      "id": 16890,
+      "title": "Dalex, Lenny Tavárez, Chencho Corleone & Juhn — \"Hola (Remix)\" (Spotify Argentina annual most-streamed songs (Wrapped) #3 2020)",
+      "sourceHash": "0b411d60ad8c45d3df9b7f5cd75a0713f3b4380e"
+    },
+    {
+      "id": 16891,
+      "title": "Karol G & Nicki Minaj — \"Tusa\" (Spotify Colombia annual most-streamed songs (Wrapped) #2 2020)",
+      "sourceHash": "8a71d28df3de514b6cc1be50ee588077ec0d7bd0"
+    },
+    {
+      "id": 16892,
+      "title": "Aligned Data Centers Project Caprock LBB-01 Campus: 3.42B USD, 108 MW Facility in Hale County, Texas",
+      "sourceHash": "417db2888cf7b75378e33c9f68594666ce91c88e"
+    },
+    {
+      "id": 16893,
+      "title": "Maluma — \"Hawái\" (Spotify Colombia annual most-streamed songs (Wrapped) #3 2020)",
+      "sourceHash": "64ade288392a8e826bfd18020f68e8fad4a0fd68"
+    },
+    {
+      "id": 16894,
+      "title": "Post Malone & Swae Lee — \"Sunflower (Spider-Man: Into the Spider-Verse)\" (Billboard Canadian Hot 100 #2 2019)",
+      "sourceHash": "9ded70c13da974c1fdb15c68a5069e45895afc18"
+    },
+    {
+      "id": 16895,
+      "title": "Allium Clean Solar Plant: 150M USD, 112 MW Solar Facility in San Benito County, California",
+      "sourceHash": "3aec6196ccd2b5a1496d994642496b0612a77263"
+    },
+    {
+      "id": 16896,
+      "title": "Billie Eilish — \"Bad Guy\" (Billboard Canadian Hot 100 #3 2019)",
+      "sourceHash": "a4c352b158c0ba5916a19427c055cc0469e43455"
+    },
+    {
+      "id": 16897,
+      "title": "Allthorn Clean Solar Project: 240M USD, 232 MW Solar Farm in Duval County, Texas",
+      "sourceHash": "3534ff453a7678bd9b628b4b7305cb745b00d1b2"
+    },
+    {
+      "id": 16898,
+      "title": "Sam Smith & Normani — \"Dancing with a Stranger\" (Monitor Latino Mexico Top 100 (annual General) #2 2019)",
+      "sourceHash": "82f22def39d2573fff017c611be9ff77a2cc84d3"
+    },
+    {
+      "id": 16899,
+      "title": "Daddy Yankee featuring Snow — \"Con Calma\" (Monitor Latino Mexico Top 100 (annual General) #3 2019)",
+      "sourceHash": "1cca86168b5dff2b1b1e4389a5c1f91ae256afea"
+    },
+    {
+      "id": 16900,
+      "title": "Marília Mendonça — \"Bebi Liguei (Ao Vivo)\" (Spotify Brasil year-end most-streamed songs #2 2019)",
+      "sourceHash": "e4c2ec85a0c8328cc98480a5d5cced4953037785"
+    },
+    {
+      "id": 16901,
+      "title": "Amphion Solar Farm Phase 2: 220M USD, 206 MW Solar Plant in Atascosa County, Texas",
+      "sourceHash": "2d91cb9ec629f825bb524e48f77a949c5a6bc96c"
+    },
+    {
+      "id": 16902,
+      "title": "Felipe Araújo & Ferrugem — \"Atrasadinha (Ao Vivo)\" (Spotify Brasil year-end most-streamed songs #3 2019)",
+      "sourceHash": "f6e54260b6c1bd18514f810ec76d8accd95d5bec"
+    },
+    {
+      "id": 16903,
+      "title": "Amphion Solar Farm Phase 3: 130M USD, 115 MW Solar Plant in Atascosa County, Texas",
+      "sourceHash": "80ada3e7de57cce33061c2d5843b18f3e442d57b"
+    },
+    {
+      "id": 16904,
+      "title": "PNL — \"Au DD\" (SNEP Top Singles (year-end) #2 2019)",
+      "sourceHash": "8a915f74553e19318169b09a85e26ac0d5bed224"
+    },
+    {
+      "id": 16905,
+      "title": "Angèle — \"Balance ton quoi\" (SNEP Top Singles (year-end) #3 2019)",
+      "sourceHash": "0fd39a281c13aa9e1e9ff265373b5ae9276adb1c"
+    },
+    {
+      "id": 16906,
+      "title": "Tones and I — \"Dance Monkey\" (GfK Top 100 Singles #2 2019)",
+      "sourceHash": "98c5d158db7637489d73fa6e6c16ec53296d0c94"
+    },
+    {
+      "id": 16907,
+      "title": "Apache 207 — \"Roller\" (GfK Top 100 Singles #3 2019)",
+      "sourceHash": "58106bf8de8e24a51db4f429431df416f52e52d6"
+    },
+    {
+      "id": 16908,
+      "title": "Coez — \"È sempre bello\" (FIMI Top of the Music #2 2019)",
+      "sourceHash": "fa8879b52158597bb7a7cb017b6bc46e844dc7d6"
+    },
+    {
+      "id": 16909,
+      "title": "Pedro Capó ft. Farruko — \"Calma (Remix)\" (FIMI Top of the Music #3 2019)",
+      "sourceHash": "6c456c6096fadef21cfc05a8adfa2085873d3563"
+    },
+    {
+      "id": 16910,
+      "title": "Daddy Yankee & Snow — \"Con Calma\" (PROMUSICAE Top 100 Canciones (annual, year-end) #2 2019)",
+      "sourceHash": "bfebc1bc4614379bfda64fb5c77316cbb65bda2e"
+    },
+    {
+      "id": 16911,
+      "title": "Pedro Capó & Farruko — \"Calma (Remix)\" (PROMUSICAE Top 100 Canciones (annual, year-end) #3 2019)",
+      "sourceHash": "7bfd47c3d4a0cbd98629f8ac79d932719e0e10b6"
+    },
+    {
+      "id": 16912,
+      "title": "Tones and I — \"Dance Monkey\" (Sverigetopplistan Årslista Singlar #2 2019)",
+      "sourceHash": "5a7f4bf42d96efdbb2115a0bd3fb314899e1579b"
+    },
+    {
+      "id": 16913,
+      "title": "Lady Gaga & Bradley Cooper — \"Shallow\" (Sverigetopplistan Årslista Singlar #3 2019)",
+      "sourceHash": "2ad5a44f5abad38415615157437382197e1f1112"
+    },
+    {
+      "id": 16914,
+      "title": "Prince Kaybee ft. Msaki — \"Fetch Your Life (Edit)\" (Spotify South Africa 2019 - most streamed South African tracks #2 2019)",
+      "sourceHash": "7713139b2aead38dc228c19c1bf978c7d7be2d9a"
+    },
+    {
+      "id": 16915,
+      "title": "Biggy — \"Dames\" (Spotify South Africa 2019 - most streamed South African tracks #3 2019)",
+      "sourceHash": "74485bd1075e3b29b8490a0ad739e5749f04feed"
+    },
+    {
+      "id": 16916,
+      "title": "Amerada Clean Energy Storage Center: 160M USD, 151 MW BESS in Terry County, Texas",
+      "sourceHash": "1ed5da0e8893c49d5df093e6147200967a8e7fec"
+    },
+    {
+      "id": 16917,
+      "title": "Maroon 5 — \"Memories\" (Singapore Top 30 Digital Streaming (RIAS) #2 2019)",
+      "sourceHash": "4f7f1ca0944e867aa9c4c404e1325cfcb23f1f21"
+    },
+    {
+      "id": 16918,
+      "title": "Ariana Grande — \"7 Rings\" (Singapore Top 30 Digital Streaming (RIAS) #3 2019)",
+      "sourceHash": "0d62fed2492910a30533df9fed697caed4478a6f"
+    },
+    {
+      "id": 16919,
+      "title": "高爾宣 OSN — \"Without You\" (KKBOX Mandarin Yearly Cumulative Singles Chart #2 2019)",
+      "sourceHash": "3f0fdbada1ff4bb94419d19d2cbe0dedc305f7b2"
+    },
+    {
+      "id": 16920,
+      "title": "蔡依林 (Jolin Tsai) — \"怪美的 (Ugly Beauty)\" (KKBOX Mandarin Yearly Cumulative Singles Chart #3 2019)",
+      "sourceHash": "f70c28e6b83407f12bd78662de19f199af5510a6"
+    },
+    {
+      "id": 16921,
+      "title": "Anglin Battery Energy Storage Complex: 210M USD, 206 MW BESS in Runnels County, Texas",
+      "sourceHash": "b2b2b16b21b4c9f57f99f9320f3858e565bcc3d4"
+    },
+    {
+      "id": 16922,
+      "title": "Tones and I — \"Dance Monkey\" (ARIA Top 100 Singles (year-end 2019) #2 2019)",
+      "sourceHash": "a0df1eb9153531f7e16b6aba6db9e2cd8b254d17"
+    },
+    {
+      "id": 16923,
+      "title": "Billie Eilish — \"Bad Guy\" (ARIA Top 100 Singles (year-end 2019) #3 2019)",
+      "sourceHash": "0223941544a96af1e91bfdad4b937acafaba5e59"
+    },
+    {
+      "id": 16924,
+      "title": "Post Malone & Swae Lee — \"Sunflower\" (Recorded Music NZ Official Top 40 (Year-End Top 50 Singles) #2 2019)",
+      "sourceHash": "a445d378008ac18d5fc42656037ca35443b16de9"
+    },
+    {
+      "id": 16925,
+      "title": "Billie Eilish — \"Bad Guy\" (Recorded Music NZ Official Top 40 (Year-End Top 50 Singles) #3 2019)",
+      "sourceHash": "2d5986bf93b49c7a924a2de500abe591810d1ce6"
+    },
+    {
+      "id": 16926,
+      "title": "Daddy Yankee & Snow — \"Con Calma\" (Argentina most-listened songs of the year (Diario de Cuyo, source unstated) #2 2019)",
+      "sourceHash": "4c189ca94ff8d80c750aa2370be2f6a4d2087979"
+    },
+    {
+      "id": 16927,
+      "title": "Avalon Energy Storage Facility: 520M USD, 522 MW BESS in Mitchell County, Texas",
+      "sourceHash": "9cf74f4f6b42229d790f5b98e576cfee2fdb5b47"
+    },
+    {
+      "id": 16928,
+      "title": "Paulo Londra — \"Adán y Eva\" (Argentina most-listened songs of the year (Diario de Cuyo, source unstated) #3 2019)",
+      "sourceHash": "25b2ad22e698f9b42b845e970feb3e84fde781c3"
+    },
+    {
+      "id": 16929,
+      "title": "Ed Sheeran — \"Perfect\" (Billboard Canadian Hot 100 #2 2018)",
+      "sourceHash": "21b2931dfb48d5805b84dda4436f1f7c45946efd"
+    },
+    {
+      "id": 16930,
+      "title": "Drake — \"God's Plan\" (Billboard Canadian Hot 100 #3 2018)",
+      "sourceHash": "e7f3c362de032bb0a2fef170d390141db04d2ca0"
+    },
+    {
+      "id": 16931,
+      "title": "Reik featuring Ozuna & Wisin — \"Me Niego\" (Monitor Latino Mexico Top 100 (annual General) #2 2018)",
+      "sourceHash": "6d831497742982f2d361b1708775e1bc5acce615"
+    },
+    {
+      "id": 16932,
+      "title": "Dumont-Greentown Energy Storage Center: 580M USD, 600 MW BESS in Marshall County, Indiana",
+      "sourceHash": "0c75c35e4f53eebcb2c62a2e4440a247f46a911d"
+    },
+    {
+      "id": 16933,
+      "title": "Alfredo Olivas — \"Antecedentes de Culpa\" (Monitor Latino Mexico Top 100 (annual General) #3 2018)",
+      "sourceHash": "62ddcce8a14333a03f4e9ff7738428c0b825b131"
+    },
+    {
+      "id": 16934,
+      "title": "Anitta, Mc Zaac, Maejor, Tropkillaz & DJ Yuri Martins — \"Vai Malandra\" (Spotify Brasil year-end most-streamed songs #2 2018)",
+      "sourceHash": "f697ba53bac7d4ef06cb973f5e38f42c74487fc1"
+    },
+    {
+      "id": 16935,
+      "title": "Matheus & Kauan & Anitta — \"Ao Vivo e a Cores\" (Spotify Brasil year-end most-streamed songs #3 2018)",
+      "sourceHash": "09ee8c6909468fa9aab720ef8ea49d32a0311f45"
+    },
+    {
+      "id": 16936,
+      "title": "Aligned Data Centers PHX-05 Hyperscale Facility: 1.15B USD, 39 MW Data Center in Phoenix, Arizona",
+      "sourceHash": "a54639adfb6ab2f0aa35e31d705a7716c7be6376"
+    },
+    {
+      "id": 16937,
+      "title": "Maître Gims & Vianney — \"La même\" (SNEP Top Singles (year-end) #2 2018)",
+      "sourceHash": "277eb051c7daee01d8fc1b2568bcfc0f2fc43b22"
+    },
+    {
+      "id": 16938,
+      "title": "Vald — \"Désaccordé\" (SNEP Top Singles (year-end) #3 2018)",
+      "sourceHash": "826b91a5378603b302f4f5540ddf7366d3c4a64f"
+    },
+    {
+      "id": 16939,
+      "title": "Aligned Data Centers Project Caprock LBB-02 Campus: 3.42B USD, 108 MW Facility in Lubbock, Texas",
+      "sourceHash": "20f21bfa7f6dad0c4d16dc5f3a65e5400675f57f"
+    },
+    {
+      "id": 16940,
+      "title": "Ed Sheeran — \"Perfect\" (GfK Top 100 Singles #2 2018)",
+      "sourceHash": "88573f3e593bb7decfe320bb7b45191a94ed3864"
+    },
+    {
+      "id": 16941,
+      "title": "Bausa — \"Was du Liebe nennst\" (GfK Top 100 Singles #3 2018)",
+      "sourceHash": "cccf1352c9930a76308ce06e9d7e02c12c086bc9"
+    },
+    {
+      "id": 16942,
+      "title": "Ed Sheeran — \"Perfect\" (FIMI Top of the Music #2 2018)",
+      "sourceHash": "3910448906421e6c4b5621e6635b5c9b181f527c"
+    },
+    {
+      "id": 16943,
+      "title": "Sfera Ebbasta ft. Quavo — \"Cupido\" (FIMI Top of the Music #3 2018)",
+      "sourceHash": "0c5555f1054eea5e4d8a9b89485dba942d2ba229"
+    },
+    {
+      "id": 16944,
+      "title": "Daddy Yankee — \"Dura\" (PROMUSICAE Top 100 Canciones (annual, year-end) #2 2018)",
+      "sourceHash": "ef58295460cf7327f5ccc5d1dd4023920c177061"
+    },
+    {
+      "id": 16945,
+      "title": "Aligned Data Centers Project Caprock LBB-03 Campus: 3.42B USD, 108 MW Facility in Lubbock, Texas",
+      "sourceHash": "0e2f467854ec04cfcbc5002920ec15fa09ea5921"
+    },
+    {
+      "id": 16946,
+      "title": "Becky G & Natti Natasha — \"Sin Pijama\" (PROMUSICAE Top 100 Canciones (annual, year-end) #3 2018)",
+      "sourceHash": "836b786e84444354703c76c4ce90709d5e27d526"
+    },
+    {
+      "id": 16947,
+      "title": "Rudimental ft. Jess Glynne, Macklemore & Dan Caplen — \"These Days\" (Sverigetopplistan Årslista Singlar #2 2018)",
+      "sourceHash": "298f108107d8385d981bf71842ddba25f6ea0587"
+    },
+    {
+      "id": 16948,
+      "title": "Ed Sheeran & Beyoncé — \"Perfect Duet\" (Sverigetopplistan Årslista Singlar #3 2018)",
+      "sourceHash": "71ea67055ad44051dd1acd86d39d6c96b97cba31"
+    },
+    {
+      "id": 16949,
+      "title": "Davido — \"Assurance\" (Guardian Nigeria Most Streamed Nigerian Songs of 2018 #2 2018)",
+      "sourceHash": "c15e68bad1ff30b2de07084f6e4944de84f7c878"
+    },
+    {
+      "id": 16950,
+      "title": "Wizkid — \"Fever\" (Guardian Nigeria Most Streamed Nigerian Songs of 2018 #3 2018)",
+      "sourceHash": "a890d6d07e03c408944d7e05c6e3a55eb1846bfc"
+    },
+    {
+      "id": 16951,
+      "title": "Aligned Data Centers Project Caprock LBB-04 Campus: 3.42B USD, 108 MW Facility in Lubbock, Texas",
+      "sourceHash": "29d48087e420367e9da1e2145f251c817e8ed5e0"
+    },
+    {
+      "id": 16952,
+      "title": "Camila Cabello ft. Young Thug — \"Havana\" (Deezer South Africa Most Streamed Songs Overall 2018 #2 2018)",
+      "sourceHash": "ab384316b0bdcbc303f3d1eb0573bacb07030728"
+    },
+    {
+      "id": 16953,
+      "title": "Ed Sheeran — \"Shape of You\" (Deezer South Africa Most Streamed Songs Overall 2018 #3 2018)",
+      "sourceHash": "a7521016f01f766540811706f9d7f9cbbf60acd0"
+    },
+    {
+      "id": 16954,
+      "title": "G.E.M. (邓紫棋) — \"Dao Shu (倒数)\" (TME Tencent Music Uni Chart (由你音乐榜), Sep-Dec 2018 (launched Sept 2018; most weeks at #1) #2 2018)",
+      "sourceHash": "283e7e49775828a4950c90a2d0a33d586431fc8c"
+    },
+    {
+      "id": 16955,
+      "title": "Kendrick Lamar & SZA — \"All the Stars\" (Singapore Top 30 Digital Streaming (RIAS) #2 2018)",
+      "sourceHash": "d1ffde8f910de59b03b1a688700cf5e5669200cf"
+    },
+    {
+      "id": 16956,
+      "title": "Alisa Clean Solar Energy Complex 2: 550M USD, 500 MW Solar Center in Yuma County, Arizona",
+      "sourceHash": "c394428acd1ffbdcafd85aef62d6856590541840"
+    },
+    {
+      "id": 16957,
+      "title": "Drake — \"In My Feelings\" (Singapore Top 30 Digital Streaming (RIAS) #3 2018)",
+      "sourceHash": "62eca3263c978d48fdeb26ebfeb51f148e0ea0fb"
+    },
+    {
+      "id": 16958,
+      "title": "張惠妹 (aMEI) — \"連名帶姓\" (KKBOX Mandarin Yearly Cumulative Singles Chart #2 2018)",
+      "sourceHash": "fb02e1f6c6bc9eebc0b081a3a89d5eb40e4e366d"
+    },
+    {
+      "id": 16959,
+      "title": "周杰倫 (Jay Chou) feat. 楊瑞代 (Gary Yang) — \"等你下課 (Waiting for You)\" (KKBOX Mandarin Yearly Cumulative Singles Chart #3 2018)",
+      "sourceHash": "82f24b5b9c4751a900c9717d6e84b0d85433eca7"
+    },
+    {
+      "id": 16960,
+      "title": "Angie to Adams Creek Clean Solar Project: 240M USD, 200 MW Solar Center in Washington Parish, Louisiana",
+      "sourceHash": "59d61cfa37526c83b41c17b16c93600600ad35ba"
+    },
+    {
+      "id": 16961,
+      "title": "Drake — \"God's Plan\" (ARIA Top 100 Singles (year-end 2018) #2 2018)",
+      "sourceHash": "68d0d6e8613a5ed81bde39c514be9f60d85bd161"
+    },
+    {
+      "id": 16962,
+      "title": "Ed Sheeran — \"Perfect\" (ARIA Top 100 Singles (year-end 2018) #3 2018)",
+      "sourceHash": "4bec1801e458368be23bee6ee79280dd6f9b31a5"
+    },
+    {
+      "id": 16963,
+      "title": "Ed Sheeran — \"Perfect\" (Recorded Music NZ Official Top 40 (Year-End Top 50 Singles) #2 2018)",
+      "sourceHash": "f1b22433017848869a82bc79ac4bb8f37c5edac1"
+    },
+    {
+      "id": 16964,
+      "title": "Anila Clean Solar Center: 230M USD, 201 MW Solar Farm in Hidalgo County, Texas",
+      "sourceHash": "fc784bc6143bbd1a6ad3620c82f3eefbd738b024"
+    },
+    {
+      "id": 16965,
+      "title": "5 Seconds of Summer — \"Youngblood\" (Recorded Music NZ Official Top 40 (Year-End Top 50 Singles) #3 2018)",
+      "sourceHash": "00b21f7bf50483a2a80259496d7dc2dd5dd759c0"
+    },
+    {
+      "id": 16966,
+      "title": "Nicky Jam & J Balvin — \"X (EQUIS)\" (Argentina most-listened songs of the year (Diario de Cuyo, source unstated) #2 2018)",
+      "sourceHash": "5e3067d1353c624fca9d7151484040e73b6b2c74"
+    },
+    {
+      "id": 16967,
+      "title": "Casper Mágico, Nio García, Darell, Nicky Jam, Bad Bunny & Ozuna — \"Te Boté (Remix)\" (Argentina most-listened songs of the year (Diario de Cuyo, source unstated) #3 2018)",
+      "sourceHash": "5a0fdf205fc17c3bd7ea0e822dfd6424ca665c80"
+    },
+    {
+      "id": 16968,
+      "title": "Apricot Sun Clean Solar Farm: 230M USD, 201 MW Solar Center in Crane County, Texas",
+      "sourceHash": "6a6c070812cb228141e77fbc636bd66eea19943d"
+    },
+    {
+      "id": 16969,
+      "title": "Zion & Lennox feat. J Balvin — \"No Es Justo\" (Spotify Colombia annual most-streamed songs (Wrapped) #2 2018)",
+      "sourceHash": "a7dd4f0059b7ccdedba91695d636f000ab110200"
+    },
+    {
+      "id": 16970,
+      "title": "Piso 21 feat. Manuel Turizo — \"Déjala Que Vuelva\" (Spotify Colombia annual most-streamed songs (Wrapped) #3 2018)",
+      "sourceHash": "5dd0562173afdc8ac36c9b98e2a87f8667b5112b"
+    },
+    {
+      "id": 16971,
+      "title": "Luis Fonsi & Daddy Yankee featuring Justin Bieber — \"Despacito\" (Billboard Canadian Hot 100 #2 2017)",
+      "sourceHash": "ce377a6106cef39c5d919cb1db89401fc2e33d7f"
+    },
+    {
+      "id": 16972,
+      "title": "The Chainsmokers featuring Halsey — \"Closer\" (Billboard Canadian Hot 100 #3 2017)",
+      "sourceHash": "c12922e61c6697e4c9f709ba89ee8e48ed76db1c"
+    },
+    {
+      "id": 16973,
+      "title": "Christian Nodal — \"Adiós Amor\" (Monitor Latino Mexico Top 100 (annual General) #2 2017)",
+      "sourceHash": "8faacbd1d701d63bd2096012e8ac45b7306b56b0"
+    },
+    {
+      "id": 16974,
+      "title": "La Adictiva Banda San José de Mesillas — \"Durmiendo en el Lugar Equivocado\" (Monitor Latino Mexico Top 100 (annual General) #3 2017)",
+      "sourceHash": "78e91f194aae287075b5bfaa8603471b6b6d6322"
+    },
+    {
+      "id": 16975,
+      "title": "Alok, Bruno Martini & Zeeba — \"Hear Me Now\" (Spotify Brasil year-end most-streamed songs #2 2017)",
+      "sourceHash": "26204c1736b15e929f534b622a2e117d9ad4a57c"
+    },
+    {
+      "id": 16976,
+      "title": "Henrique & Juliano — \"Vidinha de Balada (Ao Vivo)\" (Spotify Brasil year-end most-streamed songs #3 2017)",
+      "sourceHash": "ef6b6a17aa24c9e145349091cb9cdd5c7e4d37ad"
+    },
+    {
+      "id": 16977,
+      "title": "Maricopa Clean Energy Storage Complex: 540M USD, 550 MW BESS in Maricopa County, Arizona",
+      "sourceHash": "3346cc379e5b78e54ffdcc22fddd9b7bc7ffb853"
+    },
+    {
+      "id": 16978,
+      "title": "Luis Fonsi feat. Daddy Yankee — \"Despacito\" (SNEP Top Singles (year-end) #2 2017)",
+      "sourceHash": "490522e43472e49f34460221d11ff4cb96ad2141"
+    },
+    {
+      "id": 16979,
+      "title": "Midas Clean Energy Storage Project: 520M USD, 518 MW BESS in Clark County, Nevada",
+      "sourceHash": "e9769554e5745e6c58f0e26451ff593642ad1817"
+    },
+    {
+      "id": 16980,
+      "title": "Niska — \"Réseaux\" (SNEP Top Singles (year-end) #3 2017)",
+      "sourceHash": "c3a87f243698add600b0984f55b7011fa5316f82"
+    },
+    {
+      "id": 16981,
+      "title": "Luis Fonsi feat. Daddy Yankee — \"Despacito\" (GfK Top 100 Singles #2 2017)",
+      "sourceHash": "c89ef3637e2c0d6caad63587ed3e5da512c27c70"
+    },
+    {
+      "id": 16982,
+      "title": "Nelson Junction Energy Storage Center: 580M USD, 600 MW BESS in Lee County, Illinois",
+      "sourceHash": "41749d847505e7512d92384e23c7cf49e481eee0"
+    },
+    {
+      "id": 16983,
+      "title": "The Chainsmokers & Coldplay — \"Something Just Like This\" (GfK Top 100 Singles #3 2017)",
+      "sourceHash": "b1704f11c62fcbf8f427b32436ee88f5326e2196"
+    },
+    {
+      "id": 16984,
+      "title": "Ed Sheeran — \"Shape of You\" (FIMI Top of the Music #2 2017)",
+      "sourceHash": "b4a66b84c77695902c8fe93accf9743ea600ccd7"
+    },
+    {
+      "id": 16985,
+      "title": "Silver Lake Energy Storage Center: 580M USD, 600 MW BESS in McHenry County, Illinois",
+      "sourceHash": "0e0940185c3644407df58e5d2947fed99c286963"
+    },
+    {
+      "id": 16986,
+      "title": "J-Ax & Fedez ft. T-Pain — \"Senza pagare\" (FIMI Top of the Music #3 2017)",
+      "sourceHash": "b8a470ff39fe0b7b557fcd68a6f3983d08c77400"
+    },
+    {
+      "id": 16987,
+      "title": "Ed Sheeran — \"Shape of You\" (PROMUSICAE Top 100 Canciones (annual, year-end) #2 2017)",
+      "sourceHash": "15435c5e104694fe6f1d9daec8249c69184562d4"
+    },
+    {
+      "id": 16988,
+      "title": "Danny Ocean — \"Me Rehúso\" (PROMUSICAE Top 100 Canciones (annual, year-end) #3 2017)",
+      "sourceHash": "5d90e1bd9a68b8a68bd09f41a383cf85e0c02b56"
+    },
+    {
+      "id": 16989,
+      "title": "Luis Fonsi & Daddy Yankee ft. Justin Bieber — \"Despacito (Remix)\" (Sverigetopplistan Årslista Singlar #2 2017)",
+      "sourceHash": "822f5ced40dbde40b6792f31a4bd9d3c80765a80"
+    },
+    {
+      "id": 16990,
+      "title": "The Chainsmokers & Coldplay — \"Something Just Like This\" (Sverigetopplistan Årslista Singlar #3 2017)",
+      "sourceHash": "cd9cf11a3fe92d9b4ccd8e1c65bb57173e1dc8b0"
+    },
+    {
+      "id": 16991,
+      "title": "Applied Digital Ellendale Hyperscale Facility: 1.2B USD, 180 MW Campus in Dickey County, North Dakota",
+      "sourceHash": "2783b8829be8a6625f7f4287858fc0d521617c53"
+    },
+    {
+      "id": 16992,
+      "title": "Lay Zhang (张艺兴) — \"SHEEP (羊)\" (Billboard Radio China Mandarin Top 10 of 2017 #2 2017)",
+      "sourceHash": "b1de9d66437446843790dc8818aafc7e2c70f893"
+    },
+    {
+      "id": 16993,
+      "title": "TFBOYS — \"Wo Men De Shi Guang (我们的时光)\" (Billboard Radio China Mandarin Top 10 of 2017 #3 2017)",
+      "sourceHash": "83e2a58180f28b8cfc0cacfad6ee39c45a0edd2d"
+    },
+    {
+      "id": 16994,
+      "title": "The Chainsmokers & Coldplay — \"Something Just Like This\" (Spotify Singapore Most Streamed Tracks 2017 #2 2017)",
+      "sourceHash": "e386a2096a57c850d876cf1ed050962ad7225043"
+    },
+    {
+      "id": 16995,
+      "title": "Luis Fonsi & Daddy Yankee ft. Justin Bieber — \"Despacito (Remix)\" (Spotify Singapore Most Streamed Tracks 2017 #3 2017)",
+      "sourceHash": "8a83c0aa92d39103aed4739768d61305f715679e"
+    },
+    {
+      "id": 16996,
+      "title": "Crusoe Warrenton Campus Building 2: 2.0B USD, 300 MW Facility in Warren County, Missouri",
+      "sourceHash": "034eaa00f792513f97791ce28cd65f8e9a078151"
+    },
+    {
+      "id": 16997,
+      "title": "鄧紫棋 (G.E.M.) — \"光年之外 (Light Years Away)\" (KKBOX Mandarin Annual Singles Chart #2 2017)",
+      "sourceHash": "63fbd5ff044b10961b63c8ac6e4de6c775dc4dab"
+    },
+    {
+      "id": 16998,
+      "title": "家家 (JiaJia) — \"家家酒 (Playhouse)\" (KKBOX Mandarin Annual Singles Chart #3 2017)",
+      "sourceHash": "1a9f9b8173a72389774b927eaf68703261684005"
+    },
+    {
+      "id": 16999,
+      "title": "Luis Fonsi & Daddy Yankee ft. Justin Bieber — \"Despacito\" (ARIA Top 100 Singles (year-end 2017) #2 2017)",
+      "sourceHash": "b534d8fafcc6adb28baaa05b4e6c02afa2f71d6b"
+    },
+    {
+      "id": 17000,
+      "title": "Ed Sheeran — \"Castle on the Hill\" (ARIA Top 100 Singles (year-end 2017) #3 2017)",
+      "sourceHash": "77224546907dd7fa1027fcd7db725979b334b8d5"
+    },
+    {
+      "id": 17001,
+      "title": "DataBank SLC5 Granite Point Campus Expansion: 120M USD, 20 MW Facility in Salt Lake County, Utah",
+      "sourceHash": "d655a8fe273cca5aa19c660e108ee2c145d14243"
+    },
+    {
+      "id": 17002,
+      "title": "Luis Fonsi & Daddy Yankee ft. Justin Bieber — \"Despacito (Remix)\" (Recorded Music NZ Official Top 40 (Year-End Top 50 Singles) #2 2017)",
+      "sourceHash": "d163b7addbcc3d8673120565f90094bbb3110cf8"
+    },
+    {
+      "id": 17003,
+      "title": "Kendrick Lamar — \"HUMBLE.\" (Recorded Music NZ Official Top 40 (Year-End Top 50 Singles) #3 2017)",
+      "sourceHash": "62d44dd0b46a81f11dc1c8b00ae08fdd094b2289"
+    },
+    {
+      "id": 17004,
+      "title": "Ed Sheeran — \"Shape of You\" (Spotify Colombia annual most-streamed songs (Wrapped) #2 2017)",
+      "sourceHash": "487952df818137dcf24c2a7952c79d9b361b8732"
+    },
+    {
+      "id": 17005,
+      "title": "QTS Hillsboro Campus Building 3: 240M USD, 36 MW Facility in Washington County, Oregon",
+      "sourceHash": "f36afe59e477f24e0037276a0b9f5f870ae34526"
+    },
+    {
+      "id": 17006,
+      "title": "Sandy Bayou Clean Solar Energy Center: 550M USD, 500 MW Solar Farm in Mississippi County, Arkansas",
+      "sourceHash": "f4863335f68690686f830f1179da1e4b38543f3d"
+    },
+    {
+      "id": 17007,
+      "title": "Inovio's INO-3107 Faces FDA Decision for Rare Airway Disease",
+      "sourceHash": "9ebe5a349e495059c6844f72871010ce7b97cb44"
+    },
+    {
+      "id": 17008,
+      "title": "Steel River Clean Solar Center Phase 1: 550M USD, 500 MW Solar Plant in Mississippi County, Arkansas",
+      "sourceHash": "3c036f52bf126dbc35f7689b3fa0a88a0969a20e"
+    },
+    {
+      "id": 17009,
+      "title": "FDA Extends Review of Novo Nordisk's Hemophilia A Drug Denecimig",
+      "sourceHash": "1ed5164d4c6790573149f1703111fe9f4491ff98"
+    },
+    {
+      "id": 17010,
+      "title": "Steel River Clean Solar Center Phase 2: 550M USD, 500 MW Solar Plant in Mississippi County, Arkansas",
+      "sourceHash": "b8deed1f5a9590b86496a28ff27276305d3aa69f"
+    },
+    {
+      "id": 17011,
+      "title": "BIO-Europe 2026 Brings Biopharma Dealmakers to Cologne",
+      "sourceHash": "49203fcd45c9815306b468aed0d727a6149c7c59"
+    },
+    {
+      "id": 17012,
+      "title": "Steel River Clean Solar Center Phase 3: 550M USD, 500 MW Solar Plant in Mississippi County, Arkansas",
+      "sourceHash": "358be7ec12ea4de73c35e3c482e525184e38485f"
+    },
+    {
+      "id": 17013,
+      "title": "ASH 2026 Annual Meeting Opens in New Orleans",
+      "sourceHash": "83935335a628843f418da6428c64dfd5f03c67bd"
+    },
+    {
+      "id": 17014,
+      "title": "Mosey Clean Energy Storage Facility: 530M USD, 537 MW BESS in Clark County, Nevada",
+      "sourceHash": "709c9df664dd8dc8811cec53901674225a42bb3a"
+    },
+    {
+      "id": 17015,
+      "title": "Pinecone Clean Energy Storage Center: 510M USD, 515 MW BESS in Yuma County, Arizona",
+      "sourceHash": "7e072b875c45147b58a56241ff4fb4b97dc3480b"
+    },
+    {
+      "id": 17016,
+      "title": "Reed Meadow Energy Storage Complex: 560M USD, 566 MW BESS in Clark County, Nevada",
+      "sourceHash": "f515462e99ab70f53bbb27e0122b8ed3676d4c2e"
+    },
+    {
+      "id": 17017,
+      "title": "Silver Star Energy Storage Center: 510M USD, 517 MW BESS in Nye County, Nevada",
+      "sourceHash": "9b2909615333f93ee03ffa4c49bdaba014d7d92e"
+    },
+    {
+      "id": 17018,
+      "title": "Crusoe Warrenton Campus Building 1: 2.0B USD, 300 MW Facility in Warren County, Missouri",
+      "sourceHash": "fc783914aeea8260c5dcd6d390e0a7f0723309a2"
+    },
+    {
+      "id": 17019,
+      "title": "DataBank SLC6 Granite Point Campus Expansion: 120M USD, 20 MW Facility in Salt Lake County, Utah",
+      "sourceHash": "b268d7245bd8bbdeffb7b3b66dd03c83fee72da2"
+    },
+    {
+      "id": 17020,
+      "title": "Flexential Hillsboro 4 Hyperscale Campus: 250M USD, 36 MW Facility in Washington County, Oregon",
+      "sourceHash": "20edbab1546dd4dffc1a36f3143d13bf1fb9c2d1"
+    },
+    {
+      "id": 17021,
+      "title": "Switch Citadel TAHOE RENO Campus Building 3: 850M USD, 120 MW Facility in Storey County, Nevada",
+      "sourceHash": "1aea6d43a09dbd355974b636da4564e14a0f2fac"
+    },
+    {
+      "id": 17022,
+      "title": "Coffey Clean Solar Energy Center: 550M USD, 500 MW Solar Facility in Coffey County, Kansas",
+      "sourceHash": "04ad22487906a3a94e15685e82ea2c6184445f9b"
+    },
+    {
+      "id": 17023,
+      "title": "Jasper Clean Energy Solar Center: 550M USD, 500 MW Solar Farm in Jasper County, Indiana",
+      "sourceHash": "6303a3c46169503658eab84e839e053e5629ee32"
+    },
+    {
+      "id": 17024,
+      "title": "Johnson Clean Solar Center: 550M USD, 500 MW Solar Plant in Johnson County, Kansas",
+      "sourceHash": "77ed63321b12629a2f24e8e68548432fe3b5fbd7"
+    },
+    {
+      "id": 17025,
+      "title": "West Memphis Keo Clean Solar Project: 550M USD, 500 MW Solar Center in St. Francis County, Arkansas",
+      "sourceHash": "58b48203d65de1a3f831de629f291cf6cd757afa"
+    },
+    {
+      "id": 17026,
+      "title": "SITC 2026 Annual Meeting Gathers Cancer Immunotherapy Leaders in Phoenix",
+      "sourceHash": "145c71282a50a5eea99d0cde4fe1b92ed138f5f9"
+    },
+    {
+      "id": 17027,
+      "title": "Broadford Clean Energy Storage Center: 260M USD, 250 MW BESS in Smyth County, Virginia",
+      "sourceHash": "592f7dca0c925e09a0a976116842030e0ec1e9a8"
+    },
+    {
+      "id": 17028,
+      "title": "AASLD's Liver Meeting 2026 Opens in Denver",
+      "sourceHash": "94490af34588aabff5d641e9ccb6ad943c3818a1"
+    },
+    {
+      "id": 17029,
+      "title": "Delamar Clean Energy Storage Facility: 270M USD, 256 MW BESS in Clark County, Nevada",
+      "sourceHash": "efb202bd086edc34a45f39955774dc9eb08339b0"
+    },
+    {
+      "id": 17030,
+      "title": "Merck KGaA Agrees to Buy Life Sciences Tools Maker Bio-Techne for US$11.3 Billion",
+      "sourceHash": "40d66a4da694f599b2931f54887de774108848ff"
+    },
+    {
+      "id": 17031,
+      "title": "Lancaster Clean Energy Storage Center: 250M USD, 250 MW BESS in Lancaster County, Nebraska",
+      "sourceHash": "49a76d48bd4f6c2877f29ab818cd32b499ee8aec"
+    },
+    {
+      "id": 17032,
+      "title": "FDA Pushes Capricor's Deramiocel Decision to 22 November After Major Amendment",
+      "sourceHash": "e00da23d89181fdb0c8c124da1b48001d2d6ff6a"
+    },
+    {
+      "id": 17033,
+      "title": "Jersey Woods Landing Energy Storage Center: 250M USD, 250 MW BESS in Atlantic County, New Jersey",
+      "sourceHash": "84d348a45fc009bb90bd250e3aabca481c2f2c9f"
+    },
+    {
+      "id": 17034,
+      "title": "BioXcel Files Chapter 11 With Teva as US$57.5 Million Stalking-Horse Bidder",
+      "sourceHash": "a2882c03d637321e2caebcab4cf214c204e431c0"
+    },
+    {
+      "id": 17035,
+      "title": "Aligned Project Phoenix PIT-02 Campus: 1.6B USD, 250 MW Facility in Beaver County, Pennsylvania",
+      "sourceHash": "d5e843e4cc34e4cc839fa28e988935c3b13983b0"
+    },
+    {
+      "id": 17036,
+      "title": "CoreWeave Kenilworth AI Campus: 350M USD, 52 MW Facility in Union County, New Jersey",
+      "sourceHash": "413ecee590192843f9956fdbc5f2f5003e4783fc"
+    },
+    {
+      "id": 17037,
+      "title": "Google Springboard Campus Building 1: 600M USD, 118 MW Facility in Muskogee County, Oklahoma",
+      "sourceHash": "3c64ad06be145278a6ca5158f73b52cef6c030d1"
+    },
+    {
+      "id": 17038,
+      "title": "Caddo Solar Energy Center: 320M USD, 300 MW Clean Energy Array in Caddo County, Oklahoma",
+      "sourceHash": "186aae82b3eeabc425f290503bc82f509c18d6b5"
+    },
+    {
+      "id": 17039,
+      "title": "Patoka Clean Solar Farm: 275M USD, 250 MW Clean Energy Center in Posey County, Indiana",
+      "sourceHash": "9778d83bf13a468bd7b4cafd4738aea772467c85"
+    },
+    {
+      "id": 17040,
+      "title": "Show Me State Solar Energy Center: 280M USD, 250 MW Solar Farm in Callaway County, Missouri",
+      "sourceHash": "9e34a13205edf3da843d7cc8e7623e2d9d295d4d"
+    },
+    {
+      "id": 17041,
+      "title": "Woodward Clean Solar Project: 310M USD, 288 MW Solar Center in Woodward County, Oklahoma",
+      "sourceHash": "4c8d6b49850f6ded6e980638ed8cd00852792989"
+    },
+    {
+      "id": 17042,
+      "title": "Digital Realty West Charlotte Moores Chapel Building 2: 1.8B USD, 276 MW Facility in Mecklenburg County, North Carolina",
+      "sourceHash": "7ae1f4e8e95314474db542113d1d720b7e5a7edf"
+    },
+    {
+      "id": 16088,
+      "title": "Taylor Swift — \"The Fate of Ophelia\" (GfK Top 100 Singles (H1 2026, year to date) #1 2026)",
+      "sourceHash": "29f5ac6c72357240602f93feb037de180ae47acf"
+    },
+    {
+      "id": 17043,
+      "title": "Norfolk Clean Energy Storage Center: 310M USD, 300 MW BESS in Norfolk County, Massachusetts",
+      "sourceHash": "283ec08c78b3fbf4e8390638d930a0b3bb4b5313"
+    },
+    {
+      "id": 17044,
+      "title": "Lite Brite Clean Energy Storage Facility: 320M USD, 300 MW BESS in Suffolk County, Massachusetts",
+      "sourceHash": "25d9b92b8223dd29455f02b1b0db7e93fc525c34"
+    },
+    {
+      "id": 17045,
+      "title": "Moler-Colfel Energy Storage Center: 300M USD, 300 MW BESS in East Feliciana Parish, Louisiana",
+      "sourceHash": "b71a2b23bf1072066e241d33e64f538af06a5e0a"
+    },
+    {
+      "id": 17046,
+      "title": "Thetford Clean Energy Storage Complex: 300M USD, 300 MW BESS in Tuscola County, Michigan",
+      "sourceHash": "745c5f75b27fac9dfe9c837d1aa87ba395a086f7"
+    },
+    {
+      "id": 17047,
+      "title": "CloudHQ ORD Campus Building 2: 1.5B USD, 252 MW Facility in Cook County, Illinois",
+      "sourceHash": "32ecc2190c7754cfa46fb74a5ae455ab22ccbdcc"
+    },
+    {
+      "id": 17048,
+      "title": "Goldfinch Clean Solar Center: 275M USD, 250 MW Solar Plant in Mason County, Kentucky",
+      "sourceHash": "77baa8f8b57afcd9931deab1adcf6eba203519e1"
+    },
+    {
+      "id": 17049,
+      "title": "Hawkeye Clean Solar Farm: 270M USD, 250 MW Clean Energy Center in Clinton County, Iowa",
+      "sourceHash": "efa8e3a1c916b455143853320790f6a471e53bc1"
+    },
+    {
+      "id": 17050,
+      "title": "Hintonville Clean Solar Project: 260M USD, 250 MW Solar Farm in Perry County, Mississippi",
+      "sourceHash": "97911f911cabb8d3361b1d579b250c04fd32a0c2"
+    },
+    {
+      "id": 17051,
+      "title": "Milford Clean Solar Center Phase II: 330M USD, 310 MW Solar Array in Beaver County, Utah",
+      "sourceHash": "8944b9e1be09f610052d625799c4e2c2b3e8976f"
+    },
+    {
+      "id": 17052,
+      "title": "Applied Digital Polaris Forge 2 Building 1: 900M USD, 140 MW Facility in Cass County, North Dakota",
+      "sourceHash": "ac8811867a13b7591b4b9ccd264e1ea80b407866"
+    },
+    {
+      "id": 17053,
+      "title": "Google Springboard Campus Building 2: 600M USD, 118 MW Facility in Muskogee County, Oklahoma",
+      "sourceHash": "e3cc0422fc2d68e531bd72e9e4b238c7cf685bf4"
+    },
+    {
+      "id": 17054,
+      "title": "QTS York County DC2 Data Center: 450M USD, 67 MW Campus in York County, South Carolina",
+      "sourceHash": "dbe31d046badd13ff8d15efc80bcae649bb37b5f"
+    }
+  ],
+  "deployment": false
+}

@@ -1,0 +1,2255 @@
+{
+  "checkedAt": "2026-10-16",
+  "country": "Japan",
+  "regions": [
+    "fukuoka",
+    "nagoya",
+    "tokyo",
+    "sapporo"
+  ],
+  "entries": [
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Nagoya Meshi Shokudo Maruhachi — Fushimi Bettei Opens in Fushimi",
+        "description": "A new shared dining room brings Yabaton, Yaba Misen, Sekai no Yamachan and Bincho dishes to the same table.",
+        "sourceUrl": "https://nagoyamaruhachi.jproject-shop.jp/fushimi-bettei/",
+        "address": "1F Nagoya Kanko Hotel, 1-19-30 Nishiki, Naka-ku, Nagoya",
+        "productName": "Nagoya Meshi Shokudo Maruhachi — Fushimi Bettei",
+        "utcStartDateTime": "2026-09-17T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "Operator exact branch home page confirms September 17, 2026. One restaurant with four supplying brands, not four distinct restaurants.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Nagoya",
+          "Japan",
+          "Fushimi",
+          "Nagoya regional cuisine"
+        ],
+        "longFormSummary": "<p>A new shared dining room brings Yabaton, Yaba Misen, Sekai no Yamachan and Bincho dishes to the same table.<cite data-ref=\"https://nagoyamaruhachi.jproject-shop.jp/fushimi-bettei/\"></cite></p><p>Operator exact branch home page confirms September 17, 2026. One restaurant with four supplying brands, not four distinct restaurants.</p>",
+        "references": [
+          {
+            "url": "https://nagoyamaruhachi.jproject-shop.jp/fushimi-bettei/",
+            "title": "Nagoya Meshi Shokudo Maruhachi — Fushimi Bettei source",
+            "confidence": 90,
+            "reasoning": "Operator exact branch home page confirms September 17, 2026. One restaurant with four supplying brands, not four distinct restaurants."
+          },
+          {
+            "url": "https://nagoyamaruhachi.jproject-shop.jp/fushimi-bettei/space/",
+            "title": "Nagoya Meshi Shokudo Maruhachi — Fushimi Bettei source",
+            "confidence": 90,
+            "reasoning": "Operator exact branch home page confirms September 17, 2026. One restaurant with four supplying brands, not four distinct restaurants."
+          },
+          {
+            "url": "https://nagoyamaruhachi.jproject-shop.jp/fushimi-bettei/takeout/",
+            "title": "Nagoya Meshi Shokudo Maruhachi — Fushimi Bettei source",
+            "confidence": 90,
+            "reasoning": "Operator exact branch home page confirms September 17, 2026. One restaurant with four supplying brands, not four distinct restaurants."
+          },
+          {
+            "url": "https://jouhou.nagoya/maruhachi-shokudou-fushimi/",
+            "title": "Nagoya Meshi Shokudo Maruhachi — Fushimi Bettei source",
+            "confidence": 90,
+            "reasoning": "Operator exact branch home page confirms September 17, 2026. One restaurant with four supplying brands, not four distinct restaurants."
+          },
+          {
+            "url": "https://nagoyamaruhachi.jproject-shop.jp/fushimi-bettei/menu/",
+            "title": "Nagoya Meshi Shokudo Maruhachi — Fushimi Bettei source",
+            "confidence": 90,
+            "reasoning": "Operator exact branch home page confirms September 17, 2026. One restaurant with four supplying brands, not four distinct restaurants."
+          },
+          {
+            "url": "https://nagoyamaruhachi.jproject-shop.jp/fushimi-bettei/drink/",
+            "title": "Nagoya Meshi Shokudo Maruhachi — Fushimi Bettei source",
+            "confidence": 90,
+            "reasoning": "Operator exact branch home page confirms September 17, 2026. One restaurant with four supplying brands, not four distinct restaurants."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://nagoyamaruhachi.jproject-shop.jp/fushimi-bettei/",
+          "menu": {
+            "pinSourceUrl": "https://nagoyamaruhachi.jproject-shop.jp/fushimi-bettei/",
+            "name": "Nagoya Meshi Shokudo Maruhachi — Fushimi Bettei",
+            "checkedAt": "2026-10-16",
+            "menus": [
+              {
+                "label": "Fushimi Bettei food",
+                "url": "https://nagoyamaruhachi.jproject-shop.jp/fushimi-bettei/menu/",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "《鹿児島産》黒豚わらじとんかつ定食 — 定食",
+                    "price": 3280,
+                    "note": "Tax included; exact Fushimi Bettei branch. "
+                  },
+                  {
+                    "name": "《鹿児島産》黒豚わらじとんかつ定食 — 単品",
+                    "price": 2520,
+                    "note": "Tax included; exact Fushimi Bettei branch. "
+                  },
+                  {
+                    "name": "《鹿児島産》黒豚ひれとんかつ定食 — 定食",
+                    "price": 3280,
+                    "note": "Tax included; exact Fushimi Bettei branch. "
+                  },
+                  {
+                    "name": "《鹿児島産》黒豚ひれとんかつ定食 — 単品",
+                    "price": 2520,
+                    "note": "Tax included; exact Fushimi Bettei branch. "
+                  },
+                  {
+                    "name": "《鹿児島産》黒豚ロースとんかつ定食 — 定食",
+                    "price": 2950,
+                    "note": "Tax included; exact Fushimi Bettei branch. "
+                  },
+                  {
+                    "name": "《鹿児島産》黒豚ロースとんかつ定食 — 単品",
+                    "price": 2190,
+                    "note": "Tax included; exact Fushimi Bettei branch. "
+                  },
+                  {
+                    "name": "《鹿児島産》黒豚鉄板とんかつ定食 — 定食",
+                    "price": 3050,
+                    "note": "Tax included; exact Fushimi Bettei branch. "
+                  },
+                  {
+                    "name": "《鹿児島産》黒豚鉄板とんかつ定食 — 単品",
+                    "price": 2290,
+                    "note": "Tax included; exact Fushimi Bettei branch. "
+                  },
+                  {
+                    "name": "わらじとんかつ定食（みそ or 半々） — 定食",
+                    "price": 2300,
+                    "note": "Tax included; exact Fushimi Bettei branch. "
+                  },
+                  {
+                    "name": "わらじとんかつ定食（みそ or 半々） — 単品",
+                    "price": 1640,
+                    "note": "Tax included; exact Fushimi Bettei branch. "
+                  },
+                  {
+                    "name": "極上リブとんかつ定食 — 定食",
+                    "price": 2300,
+                    "note": "Tax included; exact Fushimi Bettei branch. "
+                  },
+                  {
+                    "name": "極上リブとんかつ定食 — 単品",
+                    "price": 1640,
+                    "note": "Tax included; exact Fushimi Bettei branch. "
+                  },
+                  {
+                    "name": "鉄板極上リブとんかつ定食 — 定食",
+                    "price": 2410,
+                    "note": "Tax included; exact Fushimi Bettei branch. "
+                  },
+                  {
+                    "name": "鉄板極上リブとんかつ定食 — 単品",
+                    "price": 1750,
+                    "note": "Tax included; exact Fushimi Bettei branch. "
+                  },
+                  {
+                    "name": "ロースとひれの食べ比べ定食",
+                    "price": 2180,
+                    "note": "Tax included; exact Fushimi Bettei branch. "
+                  },
+                  {
+                    "name": "ロースとんかつ定食 — 定食",
+                    "price": 1680,
+                    "note": "Tax included; exact Fushimi Bettei branch. "
+                  },
+                  {
+                    "name": "ロースとんかつ定食 — 単品",
+                    "price": 980,
+                    "note": "Tax included; exact Fushimi Bettei branch. "
+                  },
+                  {
+                    "name": "ひれとんかつ定食 — 定食",
+                    "price": 2300,
+                    "note": "Tax included; exact Fushimi Bettei branch. "
+                  },
+                  {
+                    "name": "ひれとんかつ定食 — 単品",
+                    "price": 1640,
+                    "note": "Tax included; exact Fushimi Bettei branch. "
+                  },
+                  {
+                    "name": "ひれとんかつ定食（大） — 定食",
+                    "price": 2630,
+                    "note": "Tax included; exact Fushimi Bettei branch. "
+                  },
+                  {
+                    "name": "ひれとんかつ定食（大） — 単品",
+                    "price": 1970,
+                    "note": "Tax included; exact Fushimi Bettei branch. "
+                  },
+                  {
+                    "name": "ひれとんかつ定食（特大） — 定食",
+                    "price": 2960,
+                    "note": "Tax included; exact Fushimi Bettei branch. "
+                  },
+                  {
+                    "name": "ひれとんかつ定食（特大） — 単品",
+                    "price": 2300,
+                    "note": "Tax included; exact Fushimi Bettei branch. "
+                  },
+                  {
+                    "name": "鉄板ひれとんかつ定食 — 定食",
+                    "price": 2410,
+                    "note": "Tax included; exact Fushimi Bettei branch. "
+                  },
+                  {
+                    "name": "鉄板ひれとんかつ定食 — 単品",
+                    "price": 1750,
+                    "note": "Tax included; exact Fushimi Bettei branch. "
+                  },
+                  {
+                    "name": "みそかつ丼 定食",
+                    "price": 1680,
+                    "note": "Tax included; exact Fushimi Bettei branch. "
+                  },
+                  {
+                    "name": "ねぎのせみそ丼 定食",
+                    "price": 1740,
+                    "note": "Tax included; exact Fushimi Bettei branch. "
+                  },
+                  {
+                    "name": "ねぎのせマヨみそ丼 定食",
+                    "price": 1800,
+                    "note": "Tax included; exact Fushimi Bettei branch. "
+                  },
+                  {
+                    "name": "ひれかつ丼 定食",
+                    "price": 1860,
+                    "note": "Tax included; exact Fushimi Bettei branch. "
+                  },
+                  {
+                    "name": "ねぎのせひれかつ丼 定食",
+                    "price": 1920,
+                    "note": "Tax included; exact Fushimi Bettei branch. "
+                  },
+                  {
+                    "name": "ねぎのせマヨひれかつ丼 定食",
+                    "price": 1980,
+                    "note": "Tax included; exact Fushimi Bettei branch. "
+                  },
+                  {
+                    "name": "海老フライ 1本",
+                    "price": 770,
+                    "note": "Tax included; exact Fushimi Bettei branch. "
+                  },
+                  {
+                    "name": "ひれ串かつ 3本",
+                    "price": 660,
+                    "note": "Tax included; exact Fushimi Bettei branch. "
+                  },
+                  {
+                    "name": "ひれ串かつ 5本",
+                    "price": 990,
+                    "note": "Tax included; exact Fushimi Bettei branch. "
+                  },
+                  {
+                    "name": "もつ串",
+                    "price": 660,
+                    "note": "Tax included; exact Fushimi Bettei branch. "
+                  },
+                  {
+                    "name": "みそ大根",
+                    "price": 220,
+                    "note": "Tax included; exact Fushimi Bettei branch. "
+                  },
+                  {
+                    "name": "焼豚",
+                    "price": 660,
+                    "note": "Tax included; exact Fushimi Bettei branch. "
+                  },
+                  {
+                    "name": "《トッピング》ねぎ",
+                    "price": 60,
+                    "note": "Tax included; exact Fushimi Bettei branch. "
+                  },
+                  {
+                    "name": "《トッピング》マヨネーズ",
+                    "price": 60,
+                    "note": "Tax included; exact Fushimi Bettei branch. "
+                  },
+                  {
+                    "name": "ひつまぶし (0.75尾)",
+                    "price": 3980,
+                    "note": "Tax included; exact Fushimi Bettei branch. "
+                  },
+                  {
+                    "name": "上ひつまぶし (1尾)",
+                    "price": 4920,
+                    "note": "Tax included; exact Fushimi Bettei branch. "
+                  },
+                  {
+                    "name": "特上ひつまぶし (1.5尾)",
+                    "price": 6570,
+                    "note": "Tax included; exact Fushimi Bettei branch. "
+                  },
+                  {
+                    "name": "極上ひつまぶし (2尾)",
+                    "price": 8670,
+                    "note": "Tax included; exact Fushimi Bettei branch. "
+                  },
+                  {
+                    "name": "究極ひつまぶし (2.5尾)",
+                    "price": 10870,
+                    "note": "Tax included; exact Fushimi Bettei branch. "
+                  },
+                  {
+                    "name": "ちょいひつまぶし",
+                    "price": 1980,
+                    "note": "Tax included; exact Fushimi Bettei branch. "
+                  },
+                  {
+                    "name": "うな重 (6切)",
+                    "price": 4150,
+                    "note": "Tax included; exact Fushimi Bettei branch. "
+                  },
+                  {
+                    "name": "特上うな重 (12切)",
+                    "price": 7670,
+                    "note": "Tax included; exact Fushimi Bettei branch. "
+                  },
+                  {
+                    "name": "長焼き (5切)",
+                    "price": 3450,
+                    "note": "Tax included; exact Fushimi Bettei branch. "
+                  },
+                  {
+                    "name": "白焼き (5切)",
+                    "price": 3450,
+                    "note": "Tax included; exact Fushimi Bettei branch. "
+                  },
+                  {
+                    "name": "キモ焼き",
+                    "price": 1100,
+                    "note": "Tax included; exact Fushimi Bettei branch. "
+                  },
+                  {
+                    "name": "うざく",
+                    "price": 1200,
+                    "note": "Tax included; exact Fushimi Bettei branch. "
+                  },
+                  {
+                    "name": "骨せんべい",
+                    "price": 750,
+                    "note": "Tax included; exact Fushimi Bettei branch. "
+                  },
+                  {
+                    "name": "お吸い物",
+                    "price": 250,
+                    "note": "Tax included; exact Fushimi Bettei branch. "
+                  },
+                  {
+                    "name": "ご飯（漬物付）",
+                    "price": 250,
+                    "note": "Tax included; exact Fushimi Bettei branch. "
+                  },
+                  {
+                    "name": "幻の手羽先 (5本)",
+                    "price": 935,
+                    "note": "Tax included; exact Fushimi Bettei branch. "
+                  },
+                  {
+                    "name": "名古屋コーチン玉子の鉄板玉せん",
+                    "price": 1408,
+                    "note": "Tax included; exact Fushimi Bettei branch. "
+                  },
+                  {
+                    "name": "和牛すき焼き陶板(名古屋コーチン玉子付き)",
+                    "price": 2728,
+                    "note": "Tax included; exact Fushimi Bettei branch. "
+                  },
+                  {
+                    "name": "名古屋コーチン玉子のだし巻き",
+                    "price": 1320,
+                    "note": "Tax included; exact Fushimi Bettei branch. "
+                  },
+                  {
+                    "name": "牛すじどて煮",
+                    "price": 1078,
+                    "note": "Tax included; exact Fushimi Bettei branch. "
+                  },
+                  {
+                    "name": "鶏もも唐揚げ（幻のコショウ付き）",
+                    "price": 902,
+                    "note": "Tax included; exact Fushimi Bettei branch. "
+                  },
+                  {
+                    "name": "フライドポテト（黒トリュフ塩）",
+                    "price": 858,
+                    "note": "Tax included; exact Fushimi Bettei branch. "
+                  },
+                  {
+                    "name": "縞ほっけ (1尾)",
+                    "price": 2178,
+                    "note": "Tax included; exact Fushimi Bettei branch. "
+                  },
+                  {
+                    "name": "イカ一夜干し",
+                    "price": 968,
+                    "note": "Tax included; exact Fushimi Bettei branch. "
+                  },
+                  {
+                    "name": "ししゃも",
+                    "price": 550,
+                    "note": "Tax included; exact Fushimi Bettei branch. "
+                  },
+                  {
+                    "name": "味噌マヨキュー",
+                    "price": 627,
+                    "note": "Tax included; exact Fushimi Bettei branch. "
+                  },
+                  {
+                    "name": "ちくキュー",
+                    "price": 605,
+                    "note": "Tax included; exact Fushimi Bettei branch. "
+                  },
+                  {
+                    "name": "山キャベちゃん",
+                    "price": 550,
+                    "note": "Tax included; exact Fushimi Bettei branch. "
+                  },
+                  {
+                    "name": "鉄板ナポリタン（名古屋コーチン玉子使用）",
+                    "price": 1518,
+                    "note": "Tax included; exact Fushimi Bettei branch. "
+                  },
+                  {
+                    "name": "台湾焼きそば",
+                    "price": 1408,
+                    "note": "Tax included; exact Fushimi Bettei branch. "
+                  },
+                  {
+                    "name": "大久手山本屋幻の味噌煮込みうどん（名古屋コーチン玉子使用）",
+                    "price": 1980,
+                    "note": "Tax included; exact Fushimi Bettei branch. "
+                  },
+                  {
+                    "name": "大久手山本屋豚肉入り味噌煮込みうどん（名古屋コーチン玉子使用）",
+                    "price": 1650,
+                    "note": "Tax included; exact Fushimi Bettei branch. "
+                  },
+                  {
+                    "name": "大久手山本屋味噌煮込みうどん（名古屋コーチン玉子使用）",
+                    "price": 1320,
+                    "note": "Tax included; exact Fushimi Bettei branch. "
+                  },
+                  {
+                    "name": "こだわりの親子丼（名古屋コーチン玉子使用）",
+                    "price": 1628,
+                    "note": "Tax included; exact Fushimi Bettei branch. "
+                  },
+                  {
+                    "name": "海老天飯",
+                    "price": 1188,
+                    "note": "Tax included; exact Fushimi Bettei branch. "
+                  },
+                  {
+                    "name": "ごはんセット（ごはん・赤だし・漬物）",
+                    "price": 605,
+                    "note": "Tax included; exact Fushimi Bettei branch. "
+                  },
+                  {
+                    "name": "名古屋コーチンアイス",
+                    "price": 770,
+                    "note": "Tax included; exact Fushimi Bettei branch. "
+                  },
+                  {
+                    "name": "台湾ラーメン",
+                    "price": 950,
+                    "note": "Tax included; exact Fushimi Bettei branch. "
+                  },
+                  {
+                    "name": "青菜炒め",
+                    "price": 950,
+                    "note": "Tax included; exact Fushimi Bettei branch. "
+                  },
+                  {
+                    "name": "アサリ炒め",
+                    "price": 1100,
+                    "note": "Tax included; exact Fushimi Bettei branch. "
+                  },
+                  {
+                    "name": "酢豚",
+                    "price": 1300,
+                    "note": "Tax included; exact Fushimi Bettei branch. "
+                  },
+                  {
+                    "name": "子袋",
+                    "price": 1050,
+                    "note": "Tax included; exact Fushimi Bettei branch. "
+                  },
+                  {
+                    "name": "餃子",
+                    "price": 700,
+                    "note": "Tax included; exact Fushimi Bettei branch. "
+                  },
+                  {
+                    "name": "イカ団子(5個)",
+                    "price": 1800,
+                    "note": "Tax included; exact Fushimi Bettei branch. "
+                  },
+                  {
+                    "name": "トマ玉炒め",
+                    "price": 1300,
+                    "note": "Tax included; exact Fushimi Bettei branch. "
+                  },
+                  {
+                    "name": "かに玉",
+                    "price": 1300,
+                    "note": "Tax included; exact Fushimi Bettei branch. "
+                  },
+                  {
+                    "name": "ニラ玉",
+                    "price": 1200,
+                    "note": "Tax included; exact Fushimi Bettei branch. "
+                  },
+                  {
+                    "name": "ニンニク唐揚げ",
+                    "price": 990,
+                    "note": "Tax included; exact Fushimi Bettei branch. "
+                  },
+                  {
+                    "name": "台湾ちまき(1個)",
+                    "price": 900,
+                    "note": "Tax included; exact Fushimi Bettei branch. "
+                  },
+                  {
+                    "name": "春巻き(2本)",
+                    "price": 850,
+                    "note": "Tax included; exact Fushimi Bettei branch. "
+                  },
+                  {
+                    "name": "エビマヨ",
+                    "price": 2100,
+                    "note": "Tax included; exact Fushimi Bettei branch. "
+                  },
+                  {
+                    "name": "麻婆茄子",
+                    "price": 1100,
+                    "note": "Tax included; exact Fushimi Bettei branch. "
+                  },
+                  {
+                    "name": "麻婆豆腐",
+                    "price": 1000,
+                    "note": "Tax included; exact Fushimi Bettei branch. "
+                  },
+                  {
+                    "name": "ホルモンラーメン",
+                    "price": 1300,
+                    "note": "Tax included; exact Fushimi Bettei branch. "
+                  },
+                  {
+                    "name": "アサリ麺",
+                    "price": 1450,
+                    "note": "Tax included; exact Fushimi Bettei branch. "
+                  },
+                  {
+                    "name": "ナス麺",
+                    "price": 1450,
+                    "note": "Tax included; exact Fushimi Bettei branch. "
+                  },
+                  {
+                    "name": "チャーハン",
+                    "price": 990,
+                    "note": "Tax included; exact Fushimi Bettei branch. "
+                  },
+                  {
+                    "name": "ニンニクチャーハン",
+                    "price": 1100,
+                    "note": "Tax included; exact Fushimi Bettei branch. "
+                  },
+                  {
+                    "name": "天津飯",
+                    "price": 1200,
+                    "note": "Tax included; exact Fushimi Bettei branch. "
+                  },
+                  {
+                    "name": "麻婆飯",
+                    "price": 1200,
+                    "note": "Tax included; exact Fushimi Bettei branch. "
+                  },
+                  {
+                    "name": "杏仁ソフト",
+                    "price": 550,
+                    "note": "Tax included; exact Fushimi Bettei branch. "
+                  },
+                  {
+                    "name": "モチモチ杏仁豆腐",
+                    "price": 650,
+                    "note": "Tax included; exact Fushimi Bettei branch. "
+                  },
+                  {
+                    "name": "胡麻団子(3個)",
+                    "price": 600,
+                    "note": "Tax included; exact Fushimi Bettei branch. "
+                  }
+                ],
+                "note": "Tax included. Exact Fushimi Bettei operator menu, not other Maruhachi branches. Set and standalone prices retained separately. No cover charge. Shareholder-voucher weekday/evening restrictions are a payment condition, not a general customer discount. Four supplying brands share one restaurant; counted once."
+              },
+              {
+                "label": "Fushimi Bettei drinks",
+                "url": "https://nagoyamaruhachi.jproject-shop.jp/fushimi-bettei/drink/",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "ハイボール",
+                    "price": 660,
+                    "note": "Tax included; exact Fushimi Bettei branch. "
+                  },
+                  {
+                    "name": "コーラハイボール",
+                    "price": 690,
+                    "note": "Tax included; exact Fushimi Bettei branch. "
+                  },
+                  {
+                    "name": "ジンジャーハイボール",
+                    "price": 690,
+                    "note": "Tax included; exact Fushimi Bettei branch. "
+                  },
+                  {
+                    "name": "こだわりレモンサワー",
+                    "price": 605,
+                    "note": "Tax included; exact Fushimi Bettei branch. "
+                  },
+                  {
+                    "name": "グレープフルーツ酎ハイ",
+                    "price": 605,
+                    "note": "Tax included; exact Fushimi Bettei branch. "
+                  },
+                  {
+                    "name": "ウーロンハイ",
+                    "price": 550,
+                    "note": "Tax included; exact Fushimi Bettei branch. "
+                  },
+                  {
+                    "name": "山ちゃんサワー",
+                    "price": 726,
+                    "note": "Tax included; exact Fushimi Bettei branch. "
+                  },
+                  {
+                    "name": "味仙のレモン酎ハイ",
+                    "price": 770,
+                    "note": "Tax included; exact Fushimi Bettei branch. "
+                  },
+                  {
+                    "name": "緑茶ハイ",
+                    "price": 550,
+                    "note": "Tax included; exact Fushimi Bettei branch. "
+                  },
+                  {
+                    "name": "《芋》富乃宝山",
+                    "price": 605,
+                    "note": "Tax included; exact Fushimi Bettei branch. "
+                  },
+                  {
+                    "name": "《麦》二階堂",
+                    "price": 605,
+                    "note": "Tax included; exact Fushimi Bettei branch. "
+                  },
+                  {
+                    "name": "知多",
+                    "price": 1100,
+                    "note": "Tax included; exact Fushimi Bettei branch. "
+                  },
+                  {
+                    "name": "山崎",
+                    "price": 1364,
+                    "note": "Tax included; exact Fushimi Bettei branch. "
+                  },
+                  {
+                    "name": "山崎12年",
+                    "price": 2000,
+                    "note": "Tax included; exact Fushimi Bettei branch. "
+                  },
+                  {
+                    "name": "白州",
+                    "price": 1364,
+                    "note": "Tax included; exact Fushimi Bettei branch. "
+                  },
+                  {
+                    "name": "白州12年",
+                    "price": 2000,
+                    "note": "Tax included; exact Fushimi Bettei branch. "
+                  },
+                  {
+                    "name": "響 ジャパニーズハーモニー",
+                    "price": 1300,
+                    "note": "Tax included; exact Fushimi Bettei branch. "
+                  },
+                  {
+                    "name": "響 21年",
+                    "price": 5455,
+                    "note": "Tax included; exact Fushimi Bettei branch. "
+                  },
+                  {
+                    "name": "蓬莱泉/和 — グラス",
+                    "price": 900,
+                    "note": "Tax included; exact Fushimi Bettei branch. "
+                  },
+                  {
+                    "name": "蓬莱泉/和 — 2合",
+                    "price": 1800,
+                    "note": "Tax included; exact Fushimi Bettei branch. "
+                  },
+                  {
+                    "name": "盛田 ねのひ 尾張男山 — グラス",
+                    "price": 600,
+                    "note": "Tax included; exact Fushimi Bettei branch. "
+                  },
+                  {
+                    "name": "盛田 ねのひ 尾張男山 — 2合",
+                    "price": 1200,
+                    "note": "Tax included; exact Fushimi Bettei branch. "
+                  },
+                  {
+                    "name": "サントリー生（中瓶）",
+                    "price": 880,
+                    "note": "Tax included; exact Fushimi Bettei branch. "
+                  },
+                  {
+                    "name": "サントリー生（ジョッキ）",
+                    "price": 770,
+                    "note": "Tax included; exact Fushimi Bettei branch. "
+                  },
+                  {
+                    "name": "金しゃちビール 赤味噌ラガー",
+                    "price": 1200,
+                    "note": "Tax included; exact Fushimi Bettei branch. "
+                  },
+                  {
+                    "name": "金しゃちビール IPA",
+                    "price": 1300,
+                    "note": "Tax included; exact Fushimi Bettei branch. "
+                  },
+                  {
+                    "name": "ノンアルコールビール",
+                    "price": 600,
+                    "note": "Tax included; exact Fushimi Bettei branch. "
+                  },
+                  {
+                    "name": "おばあちゃん梅酒",
+                    "price": 550,
+                    "note": "Tax included; exact Fushimi Bettei branch. "
+                  },
+                  {
+                    "name": "ゆず梅酒",
+                    "price": 550,
+                    "note": "Tax included; exact Fushimi Bettei branch. "
+                  },
+                  {
+                    "name": "イチゴ梅酒",
+                    "price": 550,
+                    "note": "Tax included; exact Fushimi Bettei branch. "
+                  },
+                  {
+                    "name": "なっちゃんオレンジジュース",
+                    "price": 390,
+                    "note": "Tax included; exact Fushimi Bettei branch. "
+                  },
+                  {
+                    "name": "なっちゃんリンゴジュース",
+                    "price": 390,
+                    "note": "Tax included; exact Fushimi Bettei branch. "
+                  },
+                  {
+                    "name": "ジンジャーエール",
+                    "price": 440,
+                    "note": "Tax included; exact Fushimi Bettei branch. "
+                  },
+                  {
+                    "name": "コーラ",
+                    "price": 440,
+                    "note": "Tax included; exact Fushimi Bettei branch. "
+                  },
+                  {
+                    "name": "ウーロン茶",
+                    "price": 440,
+                    "note": "Tax included; exact Fushimi Bettei branch. "
+                  },
+                  {
+                    "name": "緑茶",
+                    "price": 440,
+                    "note": "Tax included; exact Fushimi Bettei branch. "
+                  }
+                ],
+                "note": "Tax included. Exact Fushimi Bettei operator menu, not other Maruhachi branches. Set and standalone prices retained separately. No cover charge. Shareholder-voucher weekday/evening restrictions are a payment condition, not a general customer discount. Four supplying brands share one restaurant; counted once."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://nagoyamaruhachi.jproject-shop.jp/fushimi-bettei/",
+            "name": "Nagoya Meshi Shokudo Maruhachi — Fushimi Bettei",
+            "checkedAt": "2026-10-16",
+            "websiteUrl": "https://nagoyamaruhachi.jproject-shop.jp/fushimi-bettei/",
+            "phone": "052-228-7700",
+            "openingHours": [
+              {
+                "days": "Daily",
+                "hours": "11:00–22:00; last order 21:30; no regular closing day"
+              }
+            ],
+            "detailsSourceUrl": "https://nagoyamaruhachi.jproject-shop.jp/fushimi-bettei/",
+            "additionalSources": [
+              {
+                "label": "Research evidence",
+                "url": "https://nagoyamaruhachi.jproject-shop.jp/fushimi-bettei/space/"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://nagoyamaruhachi.jproject-shop.jp/fushimi-bettei/takeout/"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://jouhou.nagoya/maruhachi-shokudou-fushimi/"
+              }
+            ]
+          },
+          "tile": {
+            "regionSlug": "nagoya",
+            "kind": "opening",
+            "slug": "maruhachi",
+            "name": "Nagoya Meshi Shokudo Maruhachi — Fushimi Bettei",
+            "neighborhood": "Fushimi",
+            "cuisine": "Nagoya regional cuisine",
+            "description": "A new shared dining room brings Yabaton, Yaba Misen, Sekai no Yamachan and Bincho dishes to the same table.",
+            "address": "1F Nagoya Kanko Hotel, 1-19-30 Nishiki, Naka-ku, Nagoya",
+            "websiteUrl": "https://nagoyamaruhachi.jproject-shop.jp/fushimi-bettei/",
+            "checkedAt": "2026-10-16",
+            "recognition": "",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-16/maruhachi-14-70895e4eb4cb6c91.webp",
+            "imageCredit": "株式会社ジェイグループ / 名古屋めし食堂 丸八 伏見別邸",
+            "imageSourceUrl": "https://nagoyamaruhachi.jproject-shop.jp/fushimi-bettei/space/",
+            "imageNote": "Official exact Fushimi Bettei dining-room gallery photograph; no Meieki or Toyota branch image used.",
+            "openingConfirmed": true,
+            "day": "2026-09-17"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-16/maruhachi-14-70895e4eb4cb6c91.webp",
+          "sha256": "70895e4eb4cb6c910c4c6d73b8dbcdc52a885bc66fcf31470fc85f86fb57c4dc",
+          "width": 1600,
+          "height": 2398,
+          "credit": "株式会社ジェイグループ / 名古屋めし食堂 丸八 伏見別邸",
+          "note": "Official exact Fushimi Bettei dining-room gallery photograph; no Meieki or Toyota branch image used.",
+          "sourcePage": "https://nagoyamaruhachi.jproject-shop.jp/fushimi-bettei/space/"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-16/maruhachi-26-131a7181e97f40fa.webp",
+          "sha256": "131a7181e97f40fa61886cda28fd08a8582775fa986bdbde4b485b665ad7eb10",
+          "width": 1600,
+          "height": 1068,
+          "credit": "株式会社ジェイグループ / 名古屋めし食堂 丸八 伏見別邸",
+          "note": "Official exact Fushimi Bettei dining-room gallery photograph; no Meieki or Toyota branch image used.",
+          "sourcePage": "https://nagoyamaruhachi.jproject-shop.jp/fushimi-bettei/space/"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-16/maruhachi-34-774c079dd236f2a1.webp",
+          "sha256": "774c079dd236f2a13dd026b882688470da779fd8fe09171f0e6436860a5a85f5",
+          "width": 1600,
+          "height": 1068,
+          "credit": "株式会社ジェイグループ / 名古屋めし食堂 丸八 伏見別邸",
+          "note": "Official exact Fushimi Bettei dining-room gallery photograph; no Meieki or Toyota branch image used.",
+          "sourcePage": "https://nagoyamaruhachi.jproject-shop.jp/fushimi-bettei/space/"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-16/maruhachi-33-c546d60030d2fd28.webp",
+          "sha256": "c546d60030d2fd28014af96c3829590a011973427cd5b674919a6c69e1faabf3",
+          "width": 1600,
+          "height": 1068,
+          "credit": "株式会社ジェイグループ / 名古屋めし食堂 丸八 伏見別邸",
+          "note": "Official exact Fushimi Bettei dining-room gallery photograph; no Meieki or Toyota branch image used.",
+          "sourcePage": "https://nagoyamaruhachi.jproject-shop.jp/fushimi-bettei/space/"
+        }
+      ]
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Nakagawa Machinaka Shokudo by GB FOOD Opens in Yoshizu",
+        "description": "A new community lunch diner where local senior cooks prepare rice balls and vegetable-filled pork soup.",
+        "sourceUrl": "https://note.com/gbaaa/n/nc183dadc5cc1",
+        "address": "1-1601 Yoshizu, Nakagawa-ku, Nagoya",
+        "productName": "Nakagawa Machinaka Shokudo by GB FOOD",
+        "utcStartDateTime": "2026-10-10T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "GB FOOD operator announces October 10, 2026 in its October 1 exact-branch release; current local reporting corroborates.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Nagoya",
+          "Japan",
+          "Yoshizu",
+          "Onigiri / Japanese set meals"
+        ],
+        "longFormSummary": "<p>A new community lunch diner where local senior cooks prepare rice balls and vegetable-filled pork soup.<cite data-ref=\"https://note.com/gbaaa/n/nc183dadc5cc1\"></cite></p><p>GB FOOD operator announces October 10, 2026 in its October 1 exact-branch release; current local reporting corroborates.</p>",
+        "references": [
+          {
+            "url": "https://note.com/gbaaa/n/nc183dadc5cc1",
+            "title": "Nakagawa Machinaka Shokudo by GB FOOD source",
+            "confidence": 90,
+            "reasoning": "GB FOOD operator announces October 10, 2026 in its October 1 exact-branch release; current local reporting corroborates."
+          },
+          {
+            "url": "https://news.livedoor.com/article/detail/32545454/",
+            "title": "Nakagawa Machinaka Shokudo by GB FOOD source",
+            "confidence": 90,
+            "reasoning": "GB FOOD operator announces October 10, 2026 in its October 1 exact-branch release; current local reporting corroborates."
+          },
+          {
+            "url": "https://camp-fire.jp/projects/980659/view",
+            "title": "Nakagawa Machinaka Shokudo by GB FOOD source",
+            "confidence": 90,
+            "reasoning": "GB FOOD operator announces October 10, 2026 in its October 1 exact-branch release; current local reporting corroborates."
+          },
+          {
+            "url": "https://www.instagram.com/gbfood_nakagawa/",
+            "title": "Nakagawa Machinaka Shokudo by GB FOOD source",
+            "confidence": 90,
+            "reasoning": "GB FOOD operator announces October 10, 2026 in its October 1 exact-branch release; current local reporting corroborates."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://note.com/gbaaa/n/nc183dadc5cc1",
+          "menu": {
+            "pinSourceUrl": "https://note.com/gbaaa/n/nc183dadc5cc1",
+            "name": "Nakagawa Machinaka Shokudo by GB FOOD",
+            "checkedAt": "2026-10-16",
+            "menus": [
+              {
+                "label": "Nakagawa onigiri lunch",
+                "url": "https://news.livedoor.com/article/detail/32545454/",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "One rice-ball set",
+                    "price": 550
+                  },
+                  {
+                    "name": "Two rice-ball set",
+                    "price": 880
+                  },
+                  {
+                    "name": "Single rice ball",
+                    "price": 220,
+                    "note": "From"
+                  },
+                  {
+                    "name": "Vegetable-filled pork soup",
+                    "priceLabel": "Price not published",
+                    "note": "Included with published set meals; no separate price published"
+                  }
+                ],
+                "note": "Exact Nagoya report gives set/single prices. Operator October 1 opening announcement and linked branch crowdfunding checked; no specific rice-ball filling roster or phone published. Tomiya branch hours/closures/menu and volunteer food photographs excluded. Current report last order 13:30; operator confirms irregular closing days. Crowdfunding contributions are not menu prices."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://note.com/gbaaa/n/nc183dadc5cc1",
+            "name": "Nakagawa Machinaka Shokudo by GB FOOD",
+            "checkedAt": "2026-10-16",
+            "websiteUrl": "https://gbfood.gbaaa.jp/",
+            "phone": null,
+            "openingHours": [
+              {
+                "days": "Lunch",
+                "hours": "11:00–14:00; local report last order 13:30; irregular closures"
+              }
+            ],
+            "detailsSourceUrl": "https://gbfood.gbaaa.jp/",
+            "additionalSources": [
+              {
+                "label": "Research evidence",
+                "url": "https://note.com/gbaaa/n/nc183dadc5cc1"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://news.livedoor.com/article/detail/32545454/"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://camp-fire.jp/projects/980659/view"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://www.instagram.com/gbfood_nakagawa/"
+              }
+            ]
+          },
+          "tile": {
+            "regionSlug": "nagoya",
+            "kind": "opening",
+            "slug": "omusubi-news",
+            "name": "Nakagawa Machinaka Shokudo by GB FOOD",
+            "neighborhood": "Yoshizu",
+            "cuisine": "Onigiri / Japanese set meals",
+            "description": "A new community lunch diner where local senior cooks prepare rice balls and vegetable-filled pork soup.",
+            "address": "1-1601 Yoshizu, Nakagawa-ku, Nagoya",
+            "websiteUrl": "https://gbfood.gbaaa.jp/",
+            "checkedAt": "2026-10-16",
+            "recognition": "",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-16/omusubi-news-3-5bda40899bc701b8.webp",
+            "imageCredit": "株式会社ジーバー / アイデアルケア",
+            "imageSourceUrl": "https://note.com/gbaaa/n/nc183dadc5cc1",
+            "imageNote": "Operator photograph explicitly captioned the senior team of Nakagawa Machinaka Shokudo; not a photo of the Sendai/Tomiya branch.",
+            "openingConfirmed": true,
+            "day": "2026-10-10"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-16/omusubi-news-3-5bda40899bc701b8.webp",
+          "sha256": "5bda40899bc701b81ebc6049c70d8f1132e87034f2d364147866795a34953626",
+          "width": 1200,
+          "height": 800,
+          "credit": "株式会社ジーバー / アイデアルケア",
+          "note": "Operator photograph explicitly captioned the senior team of Nakagawa Machinaka Shokudo; not a photo of the Sendai/Tomiya branch.",
+          "sourcePage": "https://note.com/gbaaa/n/nc183dadc5cc1"
+        }
+      ]
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "THE RESTAURANT — Tokyo National Museum Opens in Ueno",
+        "description": "A newly opened museum restaurant serving Japanese set meals and yoshoku, with current branch menu and admission conditions.",
+        "sourceUrl": "https://the-restaurant-tokyo.jp/",
+        "address": "1F Toyokan annex, Tokyo National Museum, 13-9 Ueno Park, Taito-ku, Tokyo",
+        "productName": "THE RESTAURANT — Tokyo National Museum",
+        "utcStartDateTime": "2026-08-28T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "Museum official tenant guide and operator release confirm August 28, 2026 opening.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Tokyo",
+          "Japan",
+          "Ueno",
+          "Japanese / yoshoku"
+        ],
+        "longFormSummary": "<p>A newly opened museum restaurant serving Japanese set meals and yoshoku, with current branch menu and admission conditions.<cite data-ref=\"https://the-restaurant-tokyo.jp/\"></cite></p><p>Museum official tenant guide and operator release confirm August 28, 2026 opening.</p>",
+        "references": [
+          {
+            "url": "https://the-restaurant-tokyo.jp/",
+            "title": "THE RESTAURANT — Tokyo National Museum source",
+            "confidence": 90,
+            "reasoning": "Museum official tenant guide and operator release confirm August 28, 2026 opening."
+          },
+          {
+            "url": "https://www.tnm.jp/modules/r_free_page/index.php?id=124",
+            "title": "THE RESTAURANT — Tokyo National Museum source",
+            "confidence": 90,
+            "reasoning": "Museum official tenant guide and operator release confirm August 28, 2026 opening."
+          },
+          {
+            "url": "https://prtimes.jp/main/html/rd/p/000000005.000189124.html",
+            "title": "THE RESTAURANT — Tokyo National Museum source",
+            "confidence": 90,
+            "reasoning": "Museum official tenant guide and operator release confirm August 28, 2026 opening."
+          },
+          {
+            "url": "https://tnm-restaurant.jp/",
+            "title": "THE RESTAURANT — Tokyo National Museum source",
+            "confidence": 90,
+            "reasoning": "Museum official tenant guide and operator release confirm August 28, 2026 opening."
+          },
+          {
+            "url": "https://the-restaurant-tokyo.jp/assets/pdf/restaurant_menu.pdf",
+            "title": "THE RESTAURANT — Tokyo National Museum source",
+            "confidence": 90,
+            "reasoning": "Museum official tenant guide and operator release confirm August 28, 2026 opening."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://the-restaurant-tokyo.jp/",
+          "menu": {
+            "pinSourceUrl": "https://the-restaurant-tokyo.jp/",
+            "name": "THE RESTAURANT — Tokyo National Museum",
+            "checkedAt": "2026-10-16",
+            "menus": [
+              {
+                "label": "THE RESTAURANT branch menu",
+                "url": "https://the-restaurant-tokyo.jp/assets/pdf/restaurant_menu.pdf",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Tohaku Gozen",
+                    "price": 3800
+                  },
+                  {
+                    "name": "Premium pork fillet katsu set",
+                    "price": 2400
+                  },
+                  {
+                    "name": "Tohaku katsu sandwich",
+                    "price": 1500
+                  },
+                  {
+                    "name": "Bite-size curry sauce add-on",
+                    "price": 300,
+                    "note": "With katsu sandwich"
+                  },
+                  {
+                    "name": "Hot tempura udon",
+                    "price": 2100
+                  },
+                  {
+                    "name": "Keiran udon",
+                    "price": 1800
+                  },
+                  {
+                    "name": "Porcini mushroom cream fresh pasta",
+                    "price": 2300
+                  },
+                  {
+                    "name": "Mentaiko fresh pasta",
+                    "price": 1600
+                  },
+                  {
+                    "name": "Pork katsu curry",
+                    "price": 2200
+                  },
+                  {
+                    "name": "Beef curry",
+                    "price": 1700
+                  },
+                  {
+                    "name": "Children’s lunch box",
+                    "price": 1200
+                  },
+                  {
+                    "name": "Children’s mini udon and curry set",
+                    "price": 1000
+                  },
+                  {
+                    "name": "Set drink",
+                    "price": 400,
+                    "note": "With a meal; published selected soft drinks"
+                  }
+                ],
+                "note": "Current scanned operator PDF rendered and read visually. All prices tax included; sample ordinary menu, not claimed exhaustive. Closed on Tokyo National Museum closure days; museum admission required, with published age/member exemptions. Do not use stale placeholder FAQs. Museum official page confirms October 18 early close at 15:00, food last order 14:00/drinks 14:30. Restaurant and umbrella sites currently pause advance seating reservations, use same-day entrance queue.",
+                "documentUrl": "https://the-restaurant-tokyo.jp/assets/pdf/restaurant_menu.pdf"
+              },
+              {
+                "label": "Hiroshige exhibition limited dish",
+                "url": "https://the-restaurant-tokyo.jp/",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Unagi-musubi — grilled eel rice ball",
+                    "price": 800
+                  }
+                ],
+                "note": "Website states September 29–December 20, while current linked PDF says September 29–December 26. Keep the shorter website period pending operator clarification; no later expiry or continuous Special invented. Image is a promotional exhibition/menu image, not an interior."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://the-restaurant-tokyo.jp/",
+            "name": "THE RESTAURANT — Tokyo National Museum",
+            "checkedAt": "2026-10-16",
+            "websiteUrl": "https://the-restaurant-tokyo.jp/",
+            "phone": "03-5832-9622",
+            "openingHours": [
+              {
+                "days": "Ordinary museum open days",
+                "hours": "10:30–17:00; food last order 16:00 / drinks 16:30"
+              },
+              {
+                "days": "Friday/Saturday night openings",
+                "hours": "10:30–20:00; food last order 19:00 / drinks 19:30"
+              },
+              {
+                "days": "October 18, 2026 exception",
+                "hours": "Closes 15:00; food last order 14:00 / drinks 14:30"
+              }
+            ],
+            "detailsSourceUrl": "https://the-restaurant-tokyo.jp/",
+            "additionalSources": [
+              {
+                "label": "Research evidence",
+                "url": "https://www.tnm.jp/modules/r_free_page/index.php?id=124"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://prtimes.jp/main/html/rd/p/000000005.000189124.html"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://tnm-restaurant.jp/"
+              }
+            ]
+          },
+          "tile": {
+            "regionSlug": "tokyo",
+            "kind": "opening",
+            "slug": "museum-restaurant",
+            "name": "THE RESTAURANT — Tokyo National Museum",
+            "neighborhood": "Ueno",
+            "cuisine": "Japanese / yoshoku",
+            "description": "A newly opened museum restaurant serving Japanese set meals and yoshoku, with current branch menu and admission conditions.",
+            "address": "1F Toyokan annex, Tokyo National Museum, 13-9 Ueno Park, Taito-ku, Tokyo",
+            "websiteUrl": "https://the-restaurant-tokyo.jp/",
+            "checkedAt": "2026-10-16",
+            "recognition": "",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-16/museum-restaurant-1-4bfe49d3b2a6839e.webp",
+            "imageCredit": "オークス株式会社 / Tokyo National Museum restaurants",
+            "imageSourceUrl": "https://the-restaurant-tokyo.jp/",
+            "imageNote": "Official THE RESTAURANT menu photograph; Tohaku Gozen.",
+            "openingConfirmed": true,
+            "day": "2026-08-28"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-16/museum-restaurant-1-4bfe49d3b2a6839e.webp",
+          "sha256": "4bfe49d3b2a6839e0b3af774dfd8338a2b334d6ddc068855c4f111494107a451",
+          "width": 1502,
+          "height": 2862,
+          "credit": "オークス株式会社 / Tokyo National Museum restaurants",
+          "note": "Official THE RESTAURANT menu photograph; Tohaku Gozen.",
+          "sourcePage": "https://the-restaurant-tokyo.jp/"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-16/museum-restaurant-9-28b02086dad105c4.webp",
+          "sha256": "28b02086dad105c46a6a342dc1b7ff147b3f16fa1625763e7deb446ca51e1e44",
+          "width": 750,
+          "height": 960,
+          "credit": "オークス株式会社 / Tokyo National Museum restaurants",
+          "note": "Official THE RESTAURANT menu photograph; Hiroshige exhibition eel rice-ball promotion; date conflict between website and PDF retained in menu notes.",
+          "sourcePage": "https://the-restaurant-tokyo.jp/"
+        }
+      ]
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Garden Cafe — Tokyo National Museum Opens in Ueno",
+        "description": "The museum’s new cafe stand offers pork-cutlet sandwiches, soft serve and drinks beside the terrace.",
+        "sourceUrl": "https://garden-cafe.jp/",
+        "address": "Outside Toyokan annex 1F, Tokyo National Museum, 13-9 Ueno Park, Taito-ku, Tokyo",
+        "productName": "Garden Cafe — Tokyo National Museum",
+        "utcStartDateTime": "2026-08-28T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "Museum official tenant guide and operator release confirm August 28, 2026 opening.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Tokyo",
+          "Japan",
+          "Ueno",
+          "Cafe / sandwiches"
+        ],
+        "longFormSummary": "<p>The museum’s new cafe stand offers pork-cutlet sandwiches, soft serve and drinks beside the terrace.<cite data-ref=\"https://garden-cafe.jp/\"></cite></p><p>Museum official tenant guide and operator release confirm August 28, 2026 opening.</p>",
+        "references": [
+          {
+            "url": "https://garden-cafe.jp/",
+            "title": "Garden Cafe — Tokyo National Museum source",
+            "confidence": 90,
+            "reasoning": "Museum official tenant guide and operator release confirm August 28, 2026 opening."
+          },
+          {
+            "url": "https://www.tnm.jp/modules/r_free_page/index.php?id=124",
+            "title": "Garden Cafe — Tokyo National Museum source",
+            "confidence": 90,
+            "reasoning": "Museum official tenant guide and operator release confirm August 28, 2026 opening."
+          },
+          {
+            "url": "https://prtimes.jp/main/html/rd/p/000000005.000189124.html",
+            "title": "Garden Cafe — Tokyo National Museum source",
+            "confidence": 90,
+            "reasoning": "Museum official tenant guide and operator release confirm August 28, 2026 opening."
+          },
+          {
+            "url": "https://garden-cafe.jp/assets/pdf/gardencafe_menu.pdf",
+            "title": "Garden Cafe — Tokyo National Museum source",
+            "confidence": 90,
+            "reasoning": "Museum official tenant guide and operator release confirm August 28, 2026 opening."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://garden-cafe.jp/",
+          "menu": {
+            "pinSourceUrl": "https://garden-cafe.jp/",
+            "name": "Garden Cafe — Tokyo National Museum",
+            "checkedAt": "2026-10-16",
+            "menus": [
+              {
+                "label": "Garden Cafe branch menu",
+                "url": "https://garden-cafe.jp/assets/pdf/gardencafe_menu.pdf",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Tohaku katsu sandwich",
+                    "price": 1500
+                  },
+                  {
+                    "name": "Pure White Felina soft serve",
+                    "price": 600
+                  },
+                  {
+                    "name": "Uji matcha soft serve",
+                    "price": 650
+                  },
+                  {
+                    "name": "Truffle-flavoured fries",
+                    "price": 700
+                  },
+                  {
+                    "name": "Seasonal caprese",
+                    "price": 900,
+                    "note": "Terrace only"
+                  },
+                  {
+                    "name": "Sparkling wine",
+                    "price": 1200,
+                    "note": "Terrace only"
+                  },
+                  {
+                    "name": "Asahi Super Dry draft beer",
+                    "price": 700,
+                    "note": "Terrace only"
+                  },
+                  {
+                    "name": "Kaku highball",
+                    "price": 700,
+                    "note": "Terrace only"
+                  },
+                  {
+                    "name": "Freshly squeezed whole-fruit juice",
+                    "price": 800,
+                    "note": "Fruit changes daily"
+                  },
+                  {
+                    "name": "Hot Tohaku blend coffee",
+                    "price": 580
+                  },
+                  {
+                    "name": "Iced coffee",
+                    "price": 580
+                  },
+                  {
+                    "name": "Iced tea",
+                    "price": 580
+                  },
+                  {
+                    "name": "Matcha latte",
+                    "price": 700
+                  }
+                ],
+                "note": "Exact cafe PDF visually inspected. All prices tax included. Food from 10:30, drinks from 09:30. Terrace-only food/alcohol and takeaway flags retained; no all-items takeaway claim. Closed on Tokyo National Museum closure days; museum admission required, with published age/member exemptions. Do not use stale placeholder FAQs. ",
+                "documentUrl": "https://garden-cafe.jp/assets/pdf/gardencafe_menu.pdf"
+              },
+              {
+                "label": "Hiroshige exhibition cafe set",
+                "url": "https://garden-cafe.jp/",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Unagi-musubi and keiran udon",
+                    "price": 2800
+                  }
+                ],
+                "note": "Website exhibition period September 29–December 20. Restaurant PDF elsewhere says December 26; later date not applied here. Cafe-specific seasonal set, not restaurant standalone eel price."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://garden-cafe.jp/",
+            "name": "Garden Cafe — Tokyo National Museum",
+            "checkedAt": "2026-10-16",
+            "websiteUrl": "https://garden-cafe.jp/",
+            "phone": null,
+            "openingHours": [
+              {
+                "days": "Museum open days",
+                "hours": "09:30–17:00; food begins 10:30"
+              },
+              {
+                "days": "Friday/Saturday night openings",
+                "hours": "09:30–20:00; check museum calendar"
+              }
+            ],
+            "detailsSourceUrl": "https://garden-cafe.jp/",
+            "additionalSources": [
+              {
+                "label": "Research evidence",
+                "url": "https://www.tnm.jp/modules/r_free_page/index.php?id=124"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://prtimes.jp/main/html/rd/p/000000005.000189124.html"
+              }
+            ]
+          },
+          "tile": {
+            "regionSlug": "tokyo",
+            "kind": "opening",
+            "slug": "museum-garden",
+            "name": "Garden Cafe — Tokyo National Museum",
+            "neighborhood": "Ueno",
+            "cuisine": "Cafe / sandwiches",
+            "description": "The museum’s new cafe stand offers pork-cutlet sandwiches, soft serve and drinks beside the terrace.",
+            "address": "Outside Toyokan annex 1F, Tokyo National Museum, 13-9 Ueno Park, Taito-ku, Tokyo",
+            "websiteUrl": "https://garden-cafe.jp/",
+            "checkedAt": "2026-10-16",
+            "recognition": "",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-16/museum-garden-0-fe1b994bd7de3495.webp",
+            "imageCredit": "オークス株式会社 / Tokyo National Museum restaurants",
+            "imageSourceUrl": "https://garden-cafe.jp/",
+            "imageNote": "Official Garden Cafe Tohaku pork-cutlet sandwich photograph.",
+            "openingConfirmed": true,
+            "day": "2026-08-28"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-16/museum-garden-0-fe1b994bd7de3495.webp",
+          "sha256": "fe1b994bd7de3495fbf1ff19c344709b56c5e5926e6dc584aac84c47806bf8e1",
+          "width": 1600,
+          "height": 888,
+          "credit": "オークス株式会社 / Tokyo National Museum restaurants",
+          "note": "Official Garden Cafe Tohaku pork-cutlet sandwich photograph.",
+          "sourcePage": "https://garden-cafe.jp/"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-16/museum-garden-6-40d8db2dfcca4bf5.webp",
+          "sha256": "40d8db2dfcca4bf5fbc2e46cf0d4ae4b8725342b28a216d877e6d3ff8e622580",
+          "width": 1500,
+          "height": 1920,
+          "credit": "オークス株式会社 / Tokyo National Museum restaurants",
+          "note": "Official Garden Cafe Hiroshige exhibition eel rice ball and keiran udon promotional image; date conflict retained in notes.",
+          "sourcePage": "https://garden-cafe.jp/"
+        }
+      ]
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Sushi Kaiseki Okuno — Tokyo National Museum Opens in Ueno",
+        "description": "New sushi kaiseki inside the Gallery of Horyuji Treasures, with separate lunch and reservation-only dinner service.",
+        "sourceUrl": "https://sushikaiseki-okuno.jp/",
+        "address": "1F Gallery of Horyuji Treasures, Tokyo National Museum, 13-9 Ueno Park, Taito-ku, Tokyo",
+        "productName": "Sushi Kaiseki Okuno — Tokyo National Museum",
+        "utcStartDateTime": "2026-09-30T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "Current exact Okuno page says September 30 OPEN, corroborated by museum official restaurant guide.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Tokyo",
+          "Japan",
+          "Ueno",
+          "Sushi kaiseki"
+        ],
+        "longFormSummary": "<p>New sushi kaiseki inside the Gallery of Horyuji Treasures, with separate lunch and reservation-only dinner service.<cite data-ref=\"https://sushikaiseki-okuno.jp/\"></cite></p><p>Current exact Okuno page says September 30 OPEN, corroborated by museum official restaurant guide.</p>",
+        "references": [
+          {
+            "url": "https://sushikaiseki-okuno.jp/",
+            "title": "Sushi Kaiseki Okuno — Tokyo National Museum source",
+            "confidence": 90,
+            "reasoning": "Current exact Okuno page says September 30 OPEN, corroborated by museum official restaurant guide."
+          },
+          {
+            "url": "https://www.tnm.jp/modules/r_free_page/index.php?id=124",
+            "title": "Sushi Kaiseki Okuno — Tokyo National Museum source",
+            "confidence": 90,
+            "reasoning": "Current exact Okuno page says September 30 OPEN, corroborated by museum official restaurant guide."
+          },
+          {
+            "url": "https://prtimes.jp/main/html/rd/p/000000005.000189124.html",
+            "title": "Sushi Kaiseki Okuno — Tokyo National Museum source",
+            "confidence": 90,
+            "reasoning": "Current exact Okuno page says September 30 OPEN, corroborated by museum official restaurant guide."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://sushikaiseki-okuno.jp/",
+          "menu": {
+            "pinSourceUrl": "https://sushikaiseki-okuno.jp/",
+            "name": "Sushi Kaiseki Okuno — Tokyo National Museum",
+            "checkedAt": "2026-10-16",
+            "menus": [
+              {
+                "label": "Okuno opening menus",
+                "url": "https://sushikaiseki-okuno.jp/",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Opening chirashi treasure-box lunch",
+                    "price": 3800
+                  },
+                  {
+                    "name": "Foie-gras chawanmushi",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Opening lunch; no separate item price published"
+                  },
+                  {
+                    "name": "Taro, octopus and pumpkin",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Opening lunch; no separate item price published"
+                  },
+                  {
+                    "name": "Chrysanthemum greens and mushrooms",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Opening lunch; no separate item price published"
+                  },
+                  {
+                    "name": "White-fish fritters with ginkgo",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Opening lunch; no separate item price published"
+                  },
+                  {
+                    "name": "Steamed chicken and green beans with sesame vinegar",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Opening lunch; no separate item price published"
+                  },
+                  {
+                    "name": "Fresh-tuna seafood chirashi",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Opening lunch; no separate item price published"
+                  },
+                  {
+                    "name": "Fresh-nori miso soup",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Opening lunch; no separate item price published"
+                  },
+                  {
+                    "name": "Coffee mizu-yokan",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Opening lunch; no separate item price published"
+                  },
+                  {
+                    "name": "Opening sushi kaiseki dinner",
+                    "price": 25000
+                  },
+                  {
+                    "name": "Hairy crab and caviar with chrysanthemum sauce",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Opening dinner; no separate item price published"
+                  },
+                  {
+                    "name": "Six-hour-steamed black abalone with liver sauce",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Opening dinner; no separate item price published"
+                  },
+                  {
+                    "name": "Fatty bluefin tuna nigiri",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Opening dinner; no separate item price published"
+                  },
+                  {
+                    "name": "Kelp-broth-cured grouper nigiri",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Opening dinner; no separate item price published"
+                  },
+                  {
+                    "name": "White tilefish and matsutake soup",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Opening dinner; no separate item price published"
+                  },
+                  {
+                    "name": "Filefish sashimi wrapped around liver",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Opening dinner; no separate item price published"
+                  },
+                  {
+                    "name": "Skin-grilled Spanish mackerel pressed sushi",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Opening dinner; no separate item price published"
+                  },
+                  {
+                    "name": "Chateaubriand jibuni stew",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Opening dinner; no separate item price published"
+                  },
+                  {
+                    "name": "Straw-grilled returning bonito",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Opening dinner; no separate item price published"
+                  },
+                  {
+                    "name": "Sauce-grilled eel hand roll",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Opening dinner; no separate item price published"
+                  },
+                  {
+                    "name": "Fresh-nori red miso soup",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Opening dinner; no separate item price published"
+                  },
+                  {
+                    "name": "Walnut mochi with caramelized syrup",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Opening dinner; no separate item price published"
+                  }
+                ],
+                "note": "Official Japanese/English menu sheets enlarged and transcribed. Tax and service included. Opening menu only until regular menu replaces it; no end date published. Dinner champagne included; groups of at least four receive a bottle. Dinner starts 17:30, reservation by 070-2252-1116 required; lunch walk-ins need museum admission. Current exact Okuno page supersedes umbrella reservation-pause boilerplate for dinner. No invented course expiry or borrowed THE RESTAURANT dishes."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://sushikaiseki-okuno.jp/",
+            "name": "Sushi Kaiseki Okuno — Tokyo National Museum",
+            "checkedAt": "2026-10-16",
+            "websiteUrl": "https://sushikaiseki-okuno.jp/",
+            "phone": "070-2252-1116",
+            "openingHours": [
+              {
+                "days": "Lunch",
+                "hours": "11:00–14:00; food last order 13:00 / drinks 13:30"
+              },
+              {
+                "days": "Dinner",
+                "hours": "17:30–22:00; advance phone reservation required"
+              },
+              {
+                "days": "Closures",
+                "hours": "Tokyo National Museum closure days"
+              }
+            ],
+            "detailsSourceUrl": "https://sushikaiseki-okuno.jp/",
+            "additionalSources": [
+              {
+                "label": "Research evidence",
+                "url": "https://www.tnm.jp/modules/r_free_page/index.php?id=124"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://prtimes.jp/main/html/rd/p/000000005.000189124.html"
+              }
+            ]
+          },
+          "tile": {
+            "regionSlug": "tokyo",
+            "kind": "opening",
+            "slug": "museum-okuno",
+            "name": "Sushi Kaiseki Okuno — Tokyo National Museum",
+            "neighborhood": "Ueno",
+            "cuisine": "Sushi kaiseki",
+            "description": "New sushi kaiseki inside the Gallery of Horyuji Treasures, with separate lunch and reservation-only dinner service.",
+            "address": "1F Gallery of Horyuji Treasures, Tokyo National Museum, 13-9 Ueno Park, Taito-ku, Tokyo",
+            "websiteUrl": "https://sushikaiseki-okuno.jp/",
+            "checkedAt": "2026-10-16",
+            "recognition": "",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-16/museum-okuno-1-2c5e33d80eb883ab.webp",
+            "imageCredit": "オークス株式会社 / Tokyo National Museum restaurants",
+            "imageSourceUrl": "https://sushikaiseki-okuno.jp/",
+            "imageNote": "Official Okuno dinner opening menu sheet, visually transcribed; not dining-room photography.",
+            "openingConfirmed": true,
+            "day": "2026-09-30"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-16/museum-okuno-1-2c5e33d80eb883ab.webp",
+          "sha256": "2c5e33d80eb883abe49a8b70fc25a4eaef20dc071853ec7f1f03221c786ed067",
+          "width": 1600,
+          "height": 1079,
+          "credit": "オークス株式会社 / Tokyo National Museum restaurants",
+          "note": "Official Okuno dinner opening menu sheet, visually transcribed; not dining-room photography.",
+          "sourcePage": "https://sushikaiseki-okuno.jp/"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-16/museum-okuno-2-2b86c0d678abcf3c.webp",
+          "sha256": "2b86c0d678abcf3c97fbb7ee52f1330d63897fee1289ccdffe17c5b388f4b401",
+          "width": 1600,
+          "height": 1004,
+          "credit": "オークス株式会社 / Tokyo National Museum restaurants",
+          "note": "Official Okuno lunch opening menu sheet, visually transcribed; not dining-room photography.",
+          "sourcePage": "https://sushikaiseki-okuno.jp/"
+        }
+      ]
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "LOYSTAR — Nakasu Opens in Nakasu / Haruyoshi",
+        "description": "A relaunched reservation-only teppanyaki experience combines a nine-part dinner with table-side presentation and Nakasu views.",
+        "sourceUrl": "https://www.hotpepper.jp/strJ001276550/",
+        "address": "501 Heisuke Fude Fukkodo Building, 3-3-9 Haruyoshi, Chuo-ku, Fukuoka",
+        "productName": "LOYSTAR — Nakasu",
+        "utcStartDateTime": "2026-10-01T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "JIN Construction operator release confirms October 1, 2026 reservation-only relaunch; current exact branch courses explicitly start October 1. A relaunch, not a newly founded restaurant.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Fukuoka",
+          "Japan",
+          "Nakasu / Haruyoshi",
+          "Teppanyaki"
+        ],
+        "longFormSummary": "<p>A relaunched reservation-only teppanyaki experience combines a nine-part dinner with table-side presentation and Nakasu views.<cite data-ref=\"https://www.zaikei.co.jp/releases/3627340/\"></cite></p><p>JIN Construction operator release confirms October 1, 2026 reservation-only relaunch; current exact branch courses explicitly start October 1. A relaunch, not a newly founded restaurant.</p>",
+        "references": [
+          {
+            "url": "https://www.hotpepper.jp/strJ001276550/",
+            "title": "LOYSTAR — Nakasu source",
+            "confidence": 90,
+            "reasoning": "JIN Construction operator release confirms October 1, 2026 reservation-only relaunch; current exact branch courses explicitly start October 1. A relaunch, not a newly founded restaurant."
+          },
+          {
+            "url": "https://www.zaikei.co.jp/releases/3627340/",
+            "title": "LOYSTAR — Nakasu source",
+            "confidence": 90,
+            "reasoning": "JIN Construction operator release confirms October 1, 2026 reservation-only relaunch; current exact branch courses explicitly start October 1. A relaunch, not a newly founded restaurant."
+          },
+          {
+            "url": "https://www.hotpepper.jp/strJ001276550/food/",
+            "title": "LOYSTAR — Nakasu source",
+            "confidence": 90,
+            "reasoning": "JIN Construction operator release confirms October 1, 2026 reservation-only relaunch; current exact branch courses explicitly start October 1. A relaunch, not a newly founded restaurant."
+          },
+          {
+            "url": "https://www.hotpepper.jp/strJ001276550/course_cnod07/",
+            "title": "LOYSTAR — Nakasu source",
+            "confidence": 90,
+            "reasoning": "JIN Construction operator release confirms October 1, 2026 reservation-only relaunch; current exact branch courses explicitly start October 1. A relaunch, not a newly founded restaurant."
+          },
+          {
+            "url": "https://www.hotpepper.jp/strJ001276550/course_cnod08/",
+            "title": "LOYSTAR — Nakasu source",
+            "confidence": 90,
+            "reasoning": "JIN Construction operator release confirms October 1, 2026 reservation-only relaunch; current exact branch courses explicitly start October 1. A relaunch, not a newly founded restaurant."
+          },
+          {
+            "url": "https://www.hotpepper.jp/strJ001276550/course_cnod13/",
+            "title": "LOYSTAR — Nakasu source",
+            "confidence": 90,
+            "reasoning": "JIN Construction operator release confirms October 1, 2026 reservation-only relaunch; current exact branch courses explicitly start October 1. A relaunch, not a newly founded restaurant."
+          },
+          {
+            "url": "https://www.hotpepper.jp/strJ001276550/appearance/",
+            "title": "LOYSTAR — Nakasu source",
+            "confidence": 90,
+            "reasoning": "JIN Construction operator release confirms October 1, 2026 reservation-only relaunch; current exact branch courses explicitly start October 1. A relaunch, not a newly founded restaurant."
+          },
+          {
+            "url": "https://www.hotpepper.jp/strJ001276550/map/",
+            "title": "LOYSTAR — Nakasu source",
+            "confidence": 90,
+            "reasoning": "JIN Construction operator release confirms October 1, 2026 reservation-only relaunch; current exact branch courses explicitly start October 1. A relaunch, not a newly founded restaurant."
+          },
+          {
+            "url": "https://www.hotpepper.jp/strJ001276550/course/",
+            "title": "LOYSTAR — Nakasu source",
+            "confidence": 90,
+            "reasoning": "JIN Construction operator release confirms October 1, 2026 reservation-only relaunch; current exact branch courses explicitly start October 1. A relaunch, not a newly founded restaurant."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://www.hotpepper.jp/strJ001276550/",
+          "menu": {
+            "pinSourceUrl": "https://www.hotpepper.jp/strJ001276550/",
+            "name": "LOYSTAR — Nakasu",
+            "checkedAt": "2026-10-16",
+            "menus": [
+              {
+                "label": "LOYSTAR opening reservation courses",
+                "url": "https://www.hotpepper.jp/strJ001276550/course/",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "ETERNAL",
+                    "price": 15000,
+                    "note": "Tax included; 10% service additional (¥16,500 total); two guests minimum; 19:00 fixed start; about 150 minutes"
+                  },
+                  {
+                    "name": "JOURNEY — wine pairing",
+                    "price": 15000,
+                    "note": "Tax included; 10% service additional (¥16,500 total); two guests minimum; 19:00 fixed start; about 150 minutes"
+                  },
+                  {
+                    "name": "MOMENT — nonalcoholic pairing",
+                    "price": 15000,
+                    "note": "Tax included; 10% service additional (¥16,500 total); two guests minimum; 19:00 fixed start; about 150 minutes"
+                  },
+                  {
+                    "name": "Welcome drink",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Published nine-part opening course; supplier-dependent; no separate item price published"
+                  },
+                  {
+                    "name": "Flower salad",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Published nine-part opening course; supplier-dependent; no separate item price published"
+                  },
+                  {
+                    "name": "Potato potage",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Published nine-part opening course; supplier-dependent; no separate item price published"
+                  },
+                  {
+                    "name": "Two freshly baked breads — refills available",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Published nine-part opening course; supplier-dependent; no separate item price published"
+                  },
+                  {
+                    "name": "Sauteed sea bream",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Published nine-part opening course; supplier-dependent; no separate item price published"
+                  },
+                  {
+                    "name": "Wagyu fillet steak",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Published nine-part opening course; supplier-dependent; no separate item price published"
+                  },
+                  {
+                    "name": "Scallop and truffle risotto",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Published nine-part opening course; supplier-dependent; no separate item price published"
+                  },
+                  {
+                    "name": "Citrus sorbet and jelly",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Published nine-part opening course; supplier-dependent; no separate item price published"
+                  },
+                  {
+                    "name": "Kotonoha closing presentation",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Published nine-part opening course; supplier-dependent; no separate item price published"
+                  }
+                ],
+                "note": "Current branch booking courses updated October 2: ¥15,000 tax included plus 10% service. September release instead expresses ¥15,000 before tax / ¥16,500 including tax; same total, different basis, so use current booking basis. Coupon explicitly valid October 1, 2026–August 31, 2027, present when reserving; must remain published when used. Reservation normally due previous day 21:00, two guests minimum; fixed 19:00 start, about 150 minutes. Other generic opening hours do not authorize late course entry. No general 25% discount on a la carte. Supplier changes possible."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://www.hotpepper.jp/strJ001276550/",
+            "name": "LOYSTAR — Nakasu",
+            "checkedAt": "2026-10-16",
+            "websiteUrl": "https://www.hotpepper.jp/strJ001276550/",
+            "phone": "092-781-4380",
+            "openingHours": [
+              {
+                "days": "Course dinner, Monday/Tuesday/Thursday–Sunday",
+                "hours": "Fixed 19:00 start; about 150 minutes; booking required"
+              },
+              {
+                "days": "Closures",
+                "hours": "Wednesday; December 31–January 4"
+              }
+            ],
+            "detailsSourceUrl": "https://www.hotpepper.jp/strJ001276550/",
+            "additionalSources": [
+              {
+                "label": "Research evidence",
+                "url": "https://www.zaikei.co.jp/releases/3627340/"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://www.zaikei.co.jp/releases/3627340/"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://www.hotpepper.jp/strJ001276550/food/"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://www.hotpepper.jp/strJ001276550/course_cnod07/"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://www.hotpepper.jp/strJ001276550/course_cnod08/"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://www.hotpepper.jp/strJ001276550/course_cnod13/"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://www.hotpepper.jp/strJ001276550/appearance/"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://www.hotpepper.jp/strJ001276550/map/"
+              }
+            ]
+          },
+          "tile": {
+            "regionSlug": "fukuoka",
+            "kind": "opening",
+            "slug": "royster",
+            "name": "LOYSTAR — Nakasu",
+            "neighborhood": "Nakasu / Haruyoshi",
+            "cuisine": "Teppanyaki",
+            "description": "A relaunched reservation-only teppanyaki experience combines a nine-part dinner with table-side presentation and Nakasu views.",
+            "address": "501 Heisuke Fude Fukkodo Building, 3-3-9 Haruyoshi, Chuo-ku, Fukuoka",
+            "websiteUrl": "https://www.hotpepper.jp/strJ001276550/",
+            "checkedAt": "2026-10-16",
+            "recognition": "",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-16/royster-1-5ab129ec66834379.webp",
+            "imageCredit": "株式会社JIN建設 / LOYSTAR 中洲店",
+            "imageSourceUrl": "https://www.zaikei.co.jp/releases/3627340/",
+            "imageNote": "Operator exact Nakasu relaunch photograph; dishes not inferred from an unlabelled image.",
+            "openingConfirmed": true,
+            "day": "2026-10-01"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-16/royster-1-5ab129ec66834379.webp",
+          "sha256": "5ab129ec6683437908593184fcb5734ff7b6a70b1e5d10860be974dc202c317a",
+          "width": 840,
+          "height": 840,
+          "credit": "株式会社JIN建設 / LOYSTAR 中洲店",
+          "note": "Operator exact Nakasu relaunch photograph; dishes not inferred from an unlabelled image.",
+          "sourcePage": "https://www.zaikei.co.jp/releases/3627340/"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-16/royster-2-93ce571c761924b3.webp",
+          "sha256": "93ce571c761924b365b0b11c0e01d91ccd5b638b4465da3f877f4fbfafac7669",
+          "width": 840,
+          "height": 840,
+          "credit": "株式会社JIN建設 / LOYSTAR 中洲店",
+          "note": "Operator exact Nakasu relaunch photograph; dishes not inferred from an unlabelled image.",
+          "sourcePage": "https://www.zaikei.co.jp/releases/3627340/"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-16/royster-5-82742637c2f6789f.webp",
+          "sha256": "82742637c2f6789f6d7d4bf34e882fb52de3641ba88d5609bd0a04b679114364",
+          "width": 840,
+          "height": 840,
+          "credit": "株式会社JIN建設 / LOYSTAR 中洲店",
+          "note": "Operator exact Nakasu relaunch photograph; dishes not inferred from an unlabelled image.",
+          "sourcePage": "https://www.zaikei.co.jp/releases/3627340/"
+        }
+      ],
+      "special": {
+        "regionSlug": "fukuoka",
+        "profile": {
+          "pinSourceUrl": "https://www.hotpepper.jp/strJ001276550/",
+          "name": "LOYSTAR — Nakasu",
+          "checkedAt": "2026-10-16",
+          "menus": [
+            {
+              "label": "LOYSTAR opening reservation courses",
+              "url": "https://www.hotpepper.jp/strJ001276550/course/",
+              "currency": "JPY",
+              "coverage": "sample",
+              "items": [
+                {
+                  "name": "ETERNAL",
+                  "price": 15000,
+                  "note": "Tax included; 10% service additional (¥16,500 total); two guests minimum; 19:00 fixed start; about 150 minutes"
+                },
+                {
+                  "name": "JOURNEY — wine pairing",
+                  "price": 15000,
+                  "note": "Tax included; 10% service additional (¥16,500 total); two guests minimum; 19:00 fixed start; about 150 minutes"
+                },
+                {
+                  "name": "MOMENT — nonalcoholic pairing",
+                  "price": 15000,
+                  "note": "Tax included; 10% service additional (¥16,500 total); two guests minimum; 19:00 fixed start; about 150 minutes"
+                },
+                {
+                  "name": "Welcome drink",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Published nine-part opening course; supplier-dependent; no separate item price published"
+                },
+                {
+                  "name": "Flower salad",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Published nine-part opening course; supplier-dependent; no separate item price published"
+                },
+                {
+                  "name": "Potato potage",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Published nine-part opening course; supplier-dependent; no separate item price published"
+                },
+                {
+                  "name": "Two freshly baked breads — refills available",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Published nine-part opening course; supplier-dependent; no separate item price published"
+                },
+                {
+                  "name": "Sauteed sea bream",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Published nine-part opening course; supplier-dependent; no separate item price published"
+                },
+                {
+                  "name": "Wagyu fillet steak",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Published nine-part opening course; supplier-dependent; no separate item price published"
+                },
+                {
+                  "name": "Scallop and truffle risotto",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Published nine-part opening course; supplier-dependent; no separate item price published"
+                },
+                {
+                  "name": "Citrus sorbet and jelly",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Published nine-part opening course; supplier-dependent; no separate item price published"
+                },
+                {
+                  "name": "Kotonoha closing presentation",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Published nine-part opening course; supplier-dependent; no separate item price published"
+                }
+              ],
+              "note": "Current branch booking courses updated October 2: ¥15,000 tax included plus 10% service. September release instead expresses ¥15,000 before tax / ¥16,500 including tax; same total, different basis, so use current booking basis. Coupon explicitly valid October 1, 2026–August 31, 2027, present when reserving; must remain published when used. Reservation normally due previous day 21:00, two guests minimum; fixed 19:00 start, about 150 minutes. Other generic opening hours do not authorize late course entry. No general 25% discount on a la carte. Supplier changes possible."
+            }
+          ],
+          "specials": [
+            {
+              "title": "Opening-course advance reservation discount",
+              "kind": "other",
+              "description": "Advance-reservation course coupon: ¥20,000 → ¥15,000 tax included, plus 10% service (¥16,500 total).",
+              "sourceUrl": "https://www.hotpepper.jp/strJ001276550/map/",
+              "menuLabel": "LOYSTAR opening reservation courses",
+              "discounted": true,
+              "validFrom": "2026-10-01",
+              "validThrough": "2027-08-31",
+              "schedule": "Japan local time; see conditions",
+              "conditions": [
+                "Present/request the coupon when reserving; must remain published when used.",
+                "Two diners minimum; reserve normally by previous day 21:00.",
+                "Fixed 19:00 arrival; about 150 minutes dining, no walk-in or later start implied.",
+                "Closed Wednesdays and December 31–January 4."
+              ],
+              "availability": {
+                "windows": [
+                  {
+                    "days": [
+                      0,
+                      1,
+                      2,
+                      4,
+                      5,
+                      6
+                    ],
+                    "start": "19:00",
+                    "end": "19:01"
+                  }
+                ],
+                "excludedDates": [
+                  "2026-12-31",
+                  "2027-01-01",
+                  "2027-01-02",
+                  "2027-01-03",
+                  "2027-01-04"
+                ]
+              }
+            }
+          ],
+          "address": "501 Heisuke Fude Fukkodo Building, 3-3-9 Haruyoshi, Chuo-ku, Fukuoka",
+          "neighborhood": "Nakasu / Haruyoshi",
+          "websiteUrl": "https://www.hotpepper.jp/strJ001276550/",
+          "photo": {
+            "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-16/royster-1-5ab129ec66834379.webp",
+            "alt": "LOYSTAR — Nakasu — Operator exact Nakasu relaunch photograph; dishes not inferred from an unlabelled image.",
+            "credit": "株式会社JIN建設 / LOYSTAR 中洲店",
+            "sourceUrl": "https://www.zaikei.co.jp/releases/3627340/",
+            "originalUrl": "https://www.atpress.ne.jp/releases/633412/LL_img_633412_1.jpg",
+            "checkedAt": "2026-10-16"
+          }
+        },
+        "enabled": true
+      }
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "McDonald’s — Asahigaoka Opens in Asahigaoka",
+        "description": "A forthcoming drive-through McDonald’s at the exact Asahigaoka site, announced by the operator recruitment page.",
+        "sourceUrl": "https://crewrecruiting.mcdonalds.co.jp/map/01658",
+        "address": "1-1 Minami 10-jo Nishi 22-chome, Chuo-ku, Sapporo",
+        "productName": "McDonald’s — Asahigaoka",
+        "utcStartDateTime": "2026-11-27T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "Exact McDonald’s official recruitment entry states November 27, 2026 grand opening, corroborated by local branch reporting; no stale 2024 store reused.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Sapporo",
+          "Japan",
+          "Asahigaoka",
+          "Burgers / fast food"
+        ],
+        "longFormSummary": "<p>A forthcoming drive-through McDonald’s at the exact Asahigaoka site, announced by the operator recruitment page.<cite data-ref=\"https://crewrecruiting.mcdonalds.co.jp/map/01658\"></cite></p><p>Exact McDonald’s official recruitment entry states November 27, 2026 grand opening, corroborated by local branch reporting; no stale 2024 store reused.</p>",
+        "references": [
+          {
+            "url": "https://crewrecruiting.mcdonalds.co.jp/map/01658",
+            "title": "McDonald’s — Asahigaoka source",
+            "confidence": 90,
+            "reasoning": "Exact McDonald’s official recruitment entry states November 27, 2026 grand opening, corroborated by local branch reporting; no stale 2024 store reused."
+          },
+          {
+            "url": "https://map.mcdonalds.co.jp/map/01658",
+            "title": "McDonald’s — Asahigaoka source",
+            "confidence": 90,
+            "reasoning": "Exact McDonald’s official recruitment entry states November 27, 2026 grand opening, corroborated by local branch reporting; no stale 2024 store reused."
+          },
+          {
+            "url": "https://www.mcdonalds.co.jp/menu/",
+            "title": "McDonald’s — Asahigaoka source",
+            "confidence": 90,
+            "reasoning": "Exact McDonald’s official recruitment entry states November 27, 2026 grand opening, corroborated by local branch reporting; no stale 2024 store reused."
+          },
+          {
+            "url": "https://sapporo-list.info/open/november-open/",
+            "title": "McDonald’s — Asahigaoka source",
+            "confidence": 90,
+            "reasoning": "Exact McDonald’s official recruitment entry states November 27, 2026 grand opening, corroborated by local branch reporting; no stale 2024 store reused."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://crewrecruiting.mcdonalds.co.jp/map/01658",
+          "menu": {
+            "pinSourceUrl": "https://crewrecruiting.mcdonalds.co.jp/map/01658",
+            "name": "McDonald’s — Asahigaoka",
+            "checkedAt": "2026-10-16",
+            "menus": [
+              {
+                "label": "Asahigaoka customer menu — awaiting publication",
+                "url": "https://crewrecruiting.mcdonalds.co.jp/map/01658",
+                "currency": "JPY",
+                "coverage": "link",
+                "items": [],
+                "note": "Deep checked exact operator branch recruitment, public shop 01658, national menu and local November roundup. Recruitment confirms date/address and public store-hours field but provides no branch-specific customer roster or prices; generic hamburger/fries job tasks are not a launch menu. Future-store locator has no usable branch menu. National/store-variable prices, staff discounts and generic recruitment photos not transferred. Completed branch gallery and exact priced menu remain unpublished."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://crewrecruiting.mcdonalds.co.jp/map/01658",
+            "name": "McDonald’s — Asahigaoka",
+            "checkedAt": "2026-10-16",
+            "websiteUrl": "https://map.mcdonalds.co.jp/map/01658",
+            "phone": null,
+            "openingHours": [
+              {
+                "days": "Published planned store hours",
+                "hours": "07:00–23:00; operator says days may vary; confirm after opening"
+              }
+            ],
+            "detailsSourceUrl": "https://map.mcdonalds.co.jp/map/01658",
+            "additionalSources": [
+              {
+                "label": "Research evidence",
+                "url": "https://crewrecruiting.mcdonalds.co.jp/map/01658"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://www.mcdonalds.co.jp/menu/"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://sapporo-list.info/open/november-open/"
+              }
+            ]
+          },
+          "tile": {
+            "regionSlug": "sapporo",
+            "kind": "opening",
+            "slug": "mcd",
+            "name": "McDonald’s — Asahigaoka",
+            "neighborhood": "Asahigaoka",
+            "cuisine": "Burgers / fast food",
+            "description": "A forthcoming drive-through McDonald’s at the exact Asahigaoka site, announced by the operator recruitment page.",
+            "address": "1-1 Minami 10-jo Nishi 22-chome, Chuo-ku, Sapporo",
+            "websiteUrl": "https://map.mcdonalds.co.jp/map/01658",
+            "checkedAt": "2026-10-16",
+            "recognition": "",
+            "priceRange": "",
+            "image": null,
+            "imageCredit": "",
+            "openingConfirmed": true,
+            "day": "2026-11-27"
+          }
+        },
+        "enabled": true
+      },
+      "photos": []
+    }
+  ]
+}

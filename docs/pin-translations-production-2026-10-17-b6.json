@@ -1,0 +1,218 @@
+{
+  "completedAt": "2026-10-17T14:56:03.667Z",
+  "environment": "production",
+  "operation": "translations only",
+  "scope": {
+    "restaurantPins": 0,
+    "musicPins": 15
+  },
+  "pins": [
+    {
+      "id": 16114,
+      "title": "Teddy Swims — \"Lose Control\" (Recorded Music NZ Official Top 40 (Year-End Top 50 Singles) #1 2024)",
+      "sourceHash": "076f4394b0ca2d1d6310866c5455eff7e4652b0d"
+    },
+    {
+      "id": 16115,
+      "title": "Miley Cyrus — \"Flowers\" (Billboard Canadian Hot 100 #1 2023)",
+      "sourceHash": "78273bfad9685bb683c44ab3d79bfcfb287a2b7f"
+    },
+    {
+      "id": 16116,
+      "title": "Miley Cyrus — \"Flowers\" (Monitor Latino Mexico Top 100 (annual General) #1 2023)",
+      "sourceHash": "55cdfa1f13a68a44517b20dbad4738e3e4b1d469"
+    },
+    {
+      "id": 16117,
+      "title": "Miley Cyrus — \"Flowers\" (Billboard Year-End Hot 100 #2 2023)",
+      "sourceHash": "5bdfe1a0e1692c73269096e440aca5a28d439c4e"
+    },
+    {
+      "id": 16118,
+      "title": "SZA — \"Kill Bill\" (Billboard Year-End Hot 100 #3 2023)",
+      "sourceHash": "73e0f4a90a9291183766e8757ea6653f03aee267"
+    },
+    {
+      "id": 16119,
+      "title": "Luck Ra and BM — \"La Morocha\" (Billboard Argentina Hot 100 #1 2023)",
+      "sourceHash": "9fe6b2dba295fe20686b4d37fab992e5758cf2f2"
+    },
+    {
+      "id": 16120,
+      "title": "Ana Castela — \"Nosso Quadro\" (Spotify Brasil year-end most-streamed songs #1 2023)",
+      "sourceHash": "f69e5f83c6dda8b7ba6057374399e5d3dd5ec846"
+    },
+    {
+      "id": 16121,
+      "title": "Yandel, Feid & Daddy Yankee — \"Yankee 150\" (Monitor Latino Colombia Top 100 (annual, by audience impressions) #1 2023)",
+      "sourceHash": "b9e3ad6d9577a4ad81c551b3cef5062b8f877c1d"
+    },
+    {
+      "id": 16122,
+      "title": "Miley Cyrus — \"Flowers\" (SNEP Top Singles (year-end) #1 2023)",
+      "sourceHash": "71e1ecf2411286023cf5d081061eff72b81716cc"
+    },
+    {
+      "id": 16123,
+      "title": "Udo Lindenberg & Apache 207 — \"Komet\" (GfK Top 100 Singles #1 2023)",
+      "sourceHash": "79d24f6db971ee7b2752be576a2a31c57c9b6b12"
+    },
+    {
+      "id": 16124,
+      "title": "Lazza — \"Cenere\" (FIMI Top of the Music #1 2023)",
+      "sourceHash": "fda54fecadb2b203d564c24e495df92c3c60aace"
+    },
+    {
+      "id": 16125,
+      "title": "Bizarrap & Shakira — \"Shakira: Bzrp Music Sessions, Vol. 53\" (PROMUSICAE Top 100 Canciones (annual, year-end) #1 2023)",
+      "sourceHash": "1e7941fed7a79fa9f8c9087aa43386c169462ddf"
+    },
+    {
+      "id": 16126,
+      "title": "Bolaget — \"Ikväll igen\" (Sverigetopplistan Årslista Singlar #1 2023)",
+      "sourceHash": "72194ca844c3d03ff89e3045f6972fa3c1b1f8a5"
+    },
+    {
+      "id": 16127,
+      "title": "Dave & Central Cee — \"Sprinter\" (Official Charts UK Singles #2 2023)",
+      "sourceHash": "61ba7264c5cd9fc6f5f0a86f9b9898bde2484fc3"
+    },
+    {
+      "id": 16128,
+      "title": "Asake — \"Lonely at the Top\" (TurnTable Official Nigeria Top 100 #1 2023)",
+      "sourceHash": "45fece5296f0bc8de20b4c05dbd320152dfa99b9"
+    }
+  ],
+  "locales": [
+    "es",
+    "fr",
+    "de",
+    "ja",
+    "zh",
+    "ko",
+    "hi",
+    "ar",
+    "th",
+    "it",
+    "ru",
+    "pt",
+    "ms",
+    "vi",
+    "id"
+  ],
+  "saved": 225,
+  "skipped": [],
+  "verification": {
+    "liveLocalizedApiFieldsMatched": 225,
+    "unchangedEnglishOriginals": 15,
+    "publicPages": [
+      {
+        "pinId": 16114,
+        "locale": "ja",
+        "url": "https://www.chronopin.com/ja/pin/16114/teddy-swims-lose-control-recorded-music-nz-official-top-40-year-end-top-50-singl",
+        "status": 200,
+        "translatedTitleAndSummaryRendered": true
+      },
+      {
+        "pinId": 16115,
+        "locale": "zh",
+        "url": "https://www.chronopin.com/zh/pin/16115/miley-cyrus-flowers-billboard-canadian-hot-100-1-2023",
+        "status": 200,
+        "translatedTitleAndSummaryRendered": true
+      },
+      {
+        "pinId": 16116,
+        "locale": "fr",
+        "url": "https://www.chronopin.com/fr/pin/16116/miley-cyrus-flowers-monitor-latino-mexico-top-100-annual-general-1-2023",
+        "status": 200,
+        "translatedTitleAndSummaryRendered": true
+      },
+      {
+        "pinId": 16117,
+        "locale": "de",
+        "url": "https://www.chronopin.com/de/pin/16117/miley-cyrus-flowers-billboard-year-end-hot-100-2-2023",
+        "status": 200,
+        "translatedTitleAndSummaryRendered": true
+      },
+      {
+        "pinId": 16118,
+        "locale": "es",
+        "url": "https://www.chronopin.com/es/pin/16118/sza-kill-bill-billboard-year-end-hot-100-3-2023",
+        "status": 200,
+        "translatedTitleAndSummaryRendered": true
+      },
+      {
+        "pinId": 16119,
+        "locale": "ar",
+        "url": "https://www.chronopin.com/ar/pin/16119/luck-ra-and-bm-la-morocha-billboard-argentina-hot-100-1-2023",
+        "status": 200,
+        "translatedTitleAndSummaryRendered": true
+      },
+      {
+        "pinId": 16120,
+        "locale": "ko",
+        "url": "https://www.chronopin.com/ko/pin/16120/ana-castela-nosso-quadro-spotify-brasil-year-end-most-streamed-songs-1-2023",
+        "status": 200,
+        "translatedTitleAndSummaryRendered": true
+      },
+      {
+        "pinId": 16121,
+        "locale": "hi",
+        "url": "https://www.chronopin.com/hi/pin/16121/yandel-feid-daddy-yankee-yankee-150-monitor-latino-colombia-top-100-annual-by-au",
+        "status": 200,
+        "translatedTitleAndSummaryRendered": true
+      },
+      {
+        "pinId": 16122,
+        "locale": "th",
+        "url": "https://www.chronopin.com/th/pin/16122/miley-cyrus-flowers-snep-top-singles-year-end-1-2023",
+        "status": 200,
+        "translatedTitleAndSummaryRendered": true
+      },
+      {
+        "pinId": 16123,
+        "locale": "vi",
+        "url": "https://www.chronopin.com/vi/pin/16123/udo-lindenberg-apache-207-komet-gfk-top-100-singles-1-2023",
+        "status": 200,
+        "translatedTitleAndSummaryRendered": true
+      },
+      {
+        "pinId": 16124,
+        "locale": "it",
+        "url": "https://www.chronopin.com/it/pin/16124/lazza-cenere-fimi-top-of-the-music-1-2023",
+        "status": 200,
+        "translatedTitleAndSummaryRendered": true
+      },
+      {
+        "pinId": 16125,
+        "locale": "ru",
+        "url": "https://www.chronopin.com/ru/pin/16125/bizarrap-shakira-shakira-bzrp-music-sessions-vol-53-promusicae-top-100-canciones",
+        "status": 200,
+        "translatedTitleAndSummaryRendered": true
+      },
+      {
+        "pinId": 16126,
+        "locale": "pt",
+        "url": "https://www.chronopin.com/pt/pin/16126/bolaget-ikvall-igen-sverigetopplistan-arslista-singlar-1-2023",
+        "status": 200,
+        "translatedTitleAndSummaryRendered": true
+      },
+      {
+        "pinId": 16127,
+        "locale": "ms",
+        "url": "https://www.chronopin.com/ms/pin/16127/dave-central-cee-sprinter-official-charts-uk-singles-2-2023",
+        "status": 200,
+        "translatedTitleAndSummaryRendered": true
+      },
+      {
+        "pinId": 16128,
+        "locale": "id",
+        "url": "https://www.chronopin.com/id/pin/16128/asake-lonely-at-the-top-turntable-official-nigeria-top-100-1-2023",
+        "status": 200,
+        "translatedTitleAndSummaryRendered": true
+      }
+    ]
+  },
+  "sourceUpdates": "Fresh source hashes matched before writing. Annual rankings, weekly peaks, non-consecutive weeks, radio-audience measures and source certification notation are preserved.",
+  "deployment": false
+}

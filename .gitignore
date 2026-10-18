@@ -1,0 +1,50 @@
+node_modules
+
+# next.js
+/.next/
+/out/
+next-env.d.ts
+*.tsbuildinfo
+
+# env files hold secrets (DATABASE_URL, ANTHROPIC_API_KEY, ...)
+.env*
+!.env.example
+
+# playwright
+/test-results/
+/playwright-report/
+
+.tmp
+.scrape
+# Pin media belongs in Azure Blob Storage; these are temporary upload caches.
+/public/restaurant-images/
+/public/pin-images/
+/public/uploads/
+/scratchpad/
+.idea
+npm-debug.log
+coverage
+.DS_Store
+
+.terraform
+
+chronopin_docker
+chronopin_docker\.pub
+
+env.*.list
+
+kube/config-map-prod
+kube/pod-preset-prod.yaml
+
+scripts/backup/seedUsers.json
+scripts/backup/seedMessages.json
+scripts/backup/seedListings.json
+# Every table as it stands (npm run backup:tables): hashes, chats, push keys.
+scripts/backup/tables/
+
+# npm run okf:export
+/okf-bundle/
+/okf-users/
+
+# Claude Code per-machine permissions
+.claude/settings.local.json

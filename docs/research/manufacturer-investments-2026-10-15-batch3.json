@@ -1,0 +1,706 @@
+{
+  "researchedDate": "2026-10-15",
+  "scope": "Further manufacturer investments: medicines, electrical equipment, engines, aerospace and automotive manufacturing.",
+  "tags": [
+    "Strategic investment",
+    "Manufacturing investment"
+  ],
+  "threads": [
+    {
+      "company": "AstraZeneca",
+      "rootId": 15730,
+      "pinIds": [
+        15730,
+        15731,
+        15732
+      ]
+    },
+    {
+      "company": "Sanofi",
+      "rootId": 15733,
+      "pinIds": [
+        15733,
+        15735
+      ]
+    },
+    {
+      "company": "Siemens Energy",
+      "rootId": 15736,
+      "pinIds": [
+        15736
+      ]
+    },
+    {
+      "company": "Eaton",
+      "rootId": 15737,
+      "pinIds": [
+        15737,
+        15738
+      ]
+    },
+    {
+      "company": "Rolls-Royce",
+      "rootId": 15740,
+      "pinIds": [
+        15740,
+        15741
+      ]
+    },
+    {
+      "company": "GE Vernova",
+      "rootId": 15742,
+      "pinIds": [
+        15742,
+        15744
+      ]
+    },
+    {
+      "company": "BMW",
+      "rootId": 15745,
+      "pinIds": [
+        15745
+      ]
+    },
+    {
+      "company": "Siemens",
+      "rootId": 15639,
+      "pinIds": [
+        15747
+      ]
+    },
+    {
+      "company": "Texas Instruments",
+      "rootId": 5886,
+      "pinIds": [
+        5886,
+        2179
+      ]
+    }
+  ],
+  "notes": [
+    "14 new strategic investment pins posted; two existing Texas Instruments pins tagged and linked without duplication, preserving their authors and text.",
+    "Every pin uses Strategic investment and Manufacturing investment. Company threads and native saved content verified.",
+    "Announced programs, included project allocations and completed historical spending are distinguished. No sums combine overlapping programs.",
+    "Rolls-Royce Holdings is kept separate from Rolls-Royce Motor Cars, and Siemens Energy separate from Siemens AG.",
+    "Official releases, embedded galleries and related photo pages checked. Seven source images downloaded, visually inspected, credited and verified publicly in Azure.",
+    "AstraZeneca official gallery photo returned 403. Sanofi releases supplied generic branding. Eaton Nebraska image returned a reset or timeout; Arkansas release supplied no project photograph. These photo gaps remain recorded without delaying sourced text pins.",
+    "Texas Instruments pins have different authors. The existing thread reader shows both from child 2179; root 5886 omits descendants by other authors. Saved parent and original authors are preserved; no application change made.",
+    "No application code changes or deployment."
+  ],
+  "reusedPins": [
+    {
+      "id": 5886,
+      "title": "TI Pledges More Than US$60 Billion for Seven US Chip Fabs",
+      "parentId": null,
+      "userId": 276,
+      "sourceUrl": "https://www.ti.com/about-ti/newsroom/news-releases/2025/texas-instruments-plans-to-invest-more-than--60-billion-to-manufacture-billions-of-foundational-semiconductors-in-the-us.html",
+      "before": {
+        "id": 5886,
+        "title": "TI Pledges More Than US$60 Billion for Seven US Chip Fabs",
+        "userId": 276,
+        "parentId": null,
+        "tags": [
+          {
+            "name": "300mm",
+            "kind": "topic",
+            "source": "user"
+          },
+          {
+            "name": "CHIPS",
+            "kind": "topic",
+            "source": "user"
+          },
+          {
+            "name": "Fabs",
+            "kind": "topic",
+            "source": "user"
+          },
+          {
+            "name": "Investment",
+            "kind": "topic",
+            "source": "user"
+          },
+          {
+            "name": "Reshoring",
+            "kind": "topic",
+            "source": "user"
+          },
+          {
+            "name": "Sherman",
+            "kind": "topic",
+            "source": "user"
+          },
+          {
+            "name": "Texas Instruments",
+            "kind": "topic",
+            "source": "user"
+          },
+          {
+            "name": "Utah",
+            "kind": "topic",
+            "source": "user"
+          }
+        ]
+      }
+    },
+    {
+      "id": 2179,
+      "title": "Texas Instruments Starts Production at Its Sherman SM1 Fab",
+      "parentId": 5886,
+      "userId": 76,
+      "sourceUrl": "https://www.ti.com/about-ti/newsroom/news-releases/2025/texas-instruments-begins-production-at-its-newest-300mm-semiconductor-manufacturing-facility-in-sherman-texas.html",
+      "before": {
+        "id": 2179,
+        "title": "Texas Instruments Starts Production at Its Sherman SM1 Fab",
+        "userId": 76,
+        "parentId": null,
+        "tags": [
+          {
+            "name": "semiconductor fabs",
+            "kind": "topic",
+            "source": "user"
+          },
+          {
+            "name": "Sherman, Texas",
+            "kind": "topic",
+            "source": "user"
+          }
+        ]
+      }
+    }
+  ],
+  "pins": [
+    {
+      "key": "az-2024",
+      "company": "AstraZeneca",
+      "wiki": "AstraZeneca",
+      "desk": "@HealthDesk",
+      "date": "2024-11-12",
+      "amount": 3500000000,
+      "currency": "USD",
+      "period": "By the end of 2026",
+      "title": "AstraZeneca Announces US$3.5 Billion U.S. R&D and Manufacturing Capital Program",
+      "description": "AstraZeneca announced US$3.5 billion of U.S. capital investment through the end of 2026, including US$2 billion of new investment. The program spans research, biologics manufacturing, cell therapy and specialty manufacturing.",
+      "points": [
+        "The US$2 billion new-investment component is included within the US$3.5 billion capital total.",
+        "The operator identified Cambridge, Massachusetts R&D, Maryland biologics, East and West Coast cell therapy, and Texas specialty manufacturing.",
+        "This pin records the November 2024 commitment and its announced timeframe, rather than confirming completion of all projects."
+      ],
+      "categories": [
+        "Health",
+        "Business",
+        "Science"
+      ],
+      "sourceUrl": "https://www.astrazeneca.com/media-centre/press-releases/2024/astrazeneca-invests-3bn-500mn-in-us.html",
+      "pinId": 15730,
+      "parentId": null,
+      "pinUrl": "https://www.chronopin.com/pin/15730",
+      "tags": [
+        "Strategic investment",
+        "Manufacturing investment"
+      ],
+      "references": [],
+      "media": [],
+      "photoResearch": "Official release and photo links checked; no suitable accessible project-specific photo saved. AstraZeneca official gallery assets returned 403; Sanofi releases supplied generic branding; Eaton Nebraska original image failed download and Arkansas release supplied no project photograph. Image gap retained."
+    },
+    {
+      "key": "az-2025",
+      "company": "AstraZeneca",
+      "wiki": "AstraZeneca",
+      "desk": "@HealthDesk",
+      "date": "2025-07-21",
+      "amount": 50000000000,
+      "currency": "USD",
+      "period": "Through 2030",
+      "title": "AstraZeneca Plans US$50 Billion in U.S. Manufacturing and R&D Through 2030",
+      "description": "AstraZeneca announced a US$50 billion U.S. manufacturing and R&D program through 2030, anchored by a proposed multibillion-dollar Virginia drug-substance facility and expansion of research and manufacturing across several states.",
+      "points": [
+        "The US$50 billion headline spans both manufacturing and research infrastructure.",
+        "The Virginia facility’s capital investment is described as additional to the US$3.5 billion capital program announced in November 2024.",
+        "The release does not assign the full US$50 billion to the Virginia plant; it also covers R&D, cell therapy and other manufacturing projects."
+      ],
+      "categories": [
+        "Health",
+        "Business",
+        "Infrastructure"
+      ],
+      "sourceUrl": "https://www.astrazeneca.com/media-centre/press-releases/2025/astrazeneca-plans-to-invest-50bn-dollars-in-the-us.html",
+      "pinId": 15731,
+      "parentId": 15730,
+      "pinUrl": "https://www.chronopin.com/pin/15731",
+      "tags": [
+        "Strategic investment",
+        "Manufacturing investment"
+      ],
+      "references": [],
+      "media": [],
+      "photoResearch": "Official release and photo links checked; no suitable accessible project-specific photo saved. AstraZeneca official gallery assets returned 403; Sanofi releases supplied generic branding; Eaton Nebraska original image failed download and Arkansas release supplied no project photograph. Image gap retained."
+    },
+    {
+      "key": "az-maryland",
+      "company": "AstraZeneca",
+      "wiki": "AstraZeneca",
+      "desk": "@HealthDesk",
+      "date": "2025-11-21",
+      "amount": 2000000000,
+      "currency": "USD",
+      "period": "Facilities expected operational in 2029",
+      "title": "AstraZeneca Allocates US$2 Billion to Frederick and Gaithersburg Manufacturing",
+      "description": "AstraZeneca announced US$2 billion for a Frederick biologics expansion and a new Gaithersburg clinical-manufacturing facility in Maryland. The projects are part of its US$50 billion U.S. program and were expected to operate in 2029.",
+      "points": [
+        "The Maryland commitment includes both the Frederick expansion and the new Gaithersburg facility.",
+        "The operator expects 300 new highly skilled roles; its broader 2,600-job figure also includes retained roles and construction activity.",
+        "This project allocation is included in the US$50 billion program and is not an additional company-wide total."
+      ],
+      "categories": [
+        "Health",
+        "Business",
+        "Infrastructure"
+      ],
+      "sourceUrl": "https://www.astrazeneca-us.com/media/press-releases/2025/AstraZeneca-plans-2-billion-manufacturing-investment-in-Maryland-supporting-2600-jobs-and-catalyzing-economic-growth.html",
+      "refKeys": [
+        "az-2025"
+      ],
+      "pinId": 15732,
+      "parentId": 15731,
+      "pinUrl": "https://www.chronopin.com/pin/15732",
+      "tags": [
+        "Strategic investment",
+        "Manufacturing investment"
+      ],
+      "references": [
+        {
+          "id": 37158,
+          "url": "https://www.astrazeneca.com/media-centre/press-releases/2025/astrazeneca-plans-to-invest-50bn-dollars-in-the-us.html",
+          "title": "AstraZeneca Plans US$50 Billion in U.S. Manufacturing and R&D Through 2030",
+          "confidence": 100,
+          "publishedDate": "2025-07-21",
+          "reasoning": "Official announcement corroborates the investment total and its relationship to the project or prior commitment.",
+          "utcCreatedDateTime": "2026-10-15T15:36:58.695001+00:00",
+          "pinId": 15732
+        }
+      ],
+      "media": [],
+      "photoResearch": "Official release and photo links checked; no suitable accessible project-specific photo saved. AstraZeneca official gallery assets returned 403; Sanofi releases supplied generic branding; Eaton Nebraska original image failed download and Arkansas release supplied no project photograph. Image gap retained."
+    },
+    {
+      "key": "sanofi-france",
+      "company": "Sanofi",
+      "wiki": "Sanofi",
+      "desk": "@HealthDesk",
+      "date": "2024-05-13",
+      "amount": 1000000000,
+      "currency": "EUR",
+      "period": "New French biomanufacturing commitments announced May 2024",
+      "title": "Sanofi Adds More Than €1 Billion in French Biomanufacturing Investment",
+      "description": "Sanofi announced more than €1 billion of additional bioproduction investment at Vitry-sur-Seine, Le Trait and Lyon Gerland. The new plan builds on €2.5 billion previously committed to major French projects.",
+      "points": [
+        "Vitry-sur-Seine’s planned €1 billion facility would double the site’s monoclonal-antibody production capacity.",
+        "The announcement also allocates €100 million to Le Trait and €10 million to Lyon Gerland.",
+        "The plan was expected to create more than 500 jobs; the new commitments are distinct from the earlier €2.5 billion program."
+      ],
+      "categories": [
+        "Health",
+        "Business",
+        "Infrastructure"
+      ],
+      "sourceUrl": "https://www.sanofi.com/en/media-room/press-releases/2024/2024-05-13-05-00-00-2880074",
+      "pinId": 15733,
+      "parentId": null,
+      "pinUrl": "https://www.chronopin.com/pin/15733",
+      "tags": [
+        "Strategic investment",
+        "Manufacturing investment"
+      ],
+      "references": [],
+      "media": [],
+      "photoResearch": "Official release and photo links checked; no suitable accessible project-specific photo saved. AstraZeneca official gallery assets returned 403; Sanofi releases supplied generic branding; Eaton Nebraska original image failed download and Arkansas release supplied no project photograph. Image gap retained."
+    },
+    {
+      "key": "sanofi-us",
+      "company": "Sanofi",
+      "wiki": "Sanofi",
+      "desk": "@HealthDesk",
+      "date": "2025-05-14",
+      "amount": 20000000000,
+      "currency": "USD",
+      "period": "Through 2030",
+      "title": "Sanofi Plans at Least US$20 Billion in U.S. R&D and Manufacturing Through 2030",
+      "description": "Sanofi announced its intention to invest at least US$20 billion in the United States through 2030. The commitment includes increased R&D spending and billions of dollars for domestic manufacturing.",
+      "points": [
+        "The US$20 billion-plus program includes both research expenditure and manufacturing investment, rather than solely factory construction.",
+        "Sanofi said the investment would support its medicine and vaccine pipeline and expand its U.S. industrial footprint.",
+        "The figure is an announced forward program, not reported completed spending."
+      ],
+      "categories": [
+        "Health",
+        "Business",
+        "Science"
+      ],
+      "sourceUrl": "https://www.news.sanofi.us/2025-05-14-Sanofi-to-invest-at-least-20-billion-in-the-US-through-2030%2C-growing-investments-in-science-and-expanding-domestic-manufacturing",
+      "pinId": 15735,
+      "parentId": 15733,
+      "pinUrl": "https://www.chronopin.com/pin/15735",
+      "tags": [
+        "Strategic investment",
+        "Manufacturing investment"
+      ],
+      "references": [],
+      "media": [],
+      "photoResearch": "Official release and photo links checked; no suitable accessible project-specific photo saved. AstraZeneca official gallery assets returned 403; Sanofi releases supplied generic branding; Eaton Nebraska original image failed download and Arkansas release supplied no project photograph. Image gap retained."
+    },
+    {
+      "key": "se-us",
+      "company": "Siemens Energy",
+      "wiki": "Siemens_Energy",
+      "desk": "@EnergyDesk",
+      "date": "2026-02-03",
+      "amount": 1000000000,
+      "currency": "USD",
+      "period": "U.S. capacity-expansion program finalized February 2026",
+      "title": "Siemens Energy Finalizes US$1 Billion U.S. Manufacturing Expansion",
+      "description": "Siemens Energy finalized a US$1 billion program to expand U.S. manufacturing, including transformer capacity, gas-turbine production and a new Mississippi switchgear plant. The company expects more than 1,500 skilled roles.",
+      "points": [
+        "The program includes existing-site expansions and one new switchgear facility.",
+        "Project locations span North Carolina, Alabama, New York, Texas, Florida and Mississippi.",
+        "This is a Siemens Energy investment program, separate from Siemens AG’s manufacturing commitments."
+      ],
+      "categories": [
+        "Energy",
+        "Business",
+        "Infrastructure"
+      ],
+      "sourceUrl": "https://www.siemens-energy.com/global/en/home/press-releases/siemens-energy-is-investing--1-billion-and-creating-highly-skill.html",
+      "pinId": 15736,
+      "parentId": null,
+      "pinUrl": "https://www.chronopin.com/pin/15736",
+      "tags": [
+        "Strategic investment",
+        "Manufacturing investment"
+      ],
+      "references": [],
+      "media": [
+        {
+          "originalUrl": "https://assets.siemens-energy.com/dam/a340686b-b86e-4bb1-a16c-b3e6009ba591/Siemens-Energy-US-investments-png_Rendition1280.png?apr_optimization=false",
+          "blobUrl": "https://chronopin.blob.core.windows.net/thumb/185fc1dc-edbc-4995-90a4-6a5ba8cc56ad.png",
+          "credit": "Siemens Energy",
+          "sourceUrl": "https://www.siemens-energy.com/global/en/home/press-releases/siemens-energy-is-investing--1-billion-and-creating-highly-skill.html",
+          "caption": "Siemens Energy’s U.S. investment locations graphic"
+        }
+      ],
+      "photoResearch": "Official release/gallery image downloaded with plain curl, visually inspected and verified public in Azure."
+    },
+    {
+      "key": "eaton-nebraska",
+      "company": "Eaton",
+      "wiki": "Eaton_Corporation",
+      "desk": "@BuildDesk",
+      "date": "2026-04-08",
+      "amount": 30000000,
+      "currency": "USD",
+      "period": "Production expected in 2027",
+      "title": "Eaton Invests More Than US$30 Million in Nebraska Switchgear Manufacturing",
+      "description": "Eaton announced more than US$30 million for a new 370,000-square-foot manufacturing facility near Omaha in Bellevue, Nebraska. The facility is intended to expand medium-voltage switchgear capacity, with production expected in 2027.",
+      "points": [
+        "The operator expects more than 200 engineering, manufacturing and production jobs.",
+        "The site supports equipment used to protect and control electrical infrastructure for data centers, utilities and industry.",
+        "The announced production date is a target; the pin does not present the new facility as already operating."
+      ],
+      "categories": [
+        "Business",
+        "Energy",
+        "Infrastructure"
+      ],
+      "sourceUrl": "https://www.eaton.com/us/en-us/company/news-insights/news-releases/2026/eaton-expands-operations-in-nebraska-with-new-manufacturing-facility.html",
+      "pinId": 15737,
+      "parentId": null,
+      "pinUrl": "https://www.chronopin.com/pin/15737",
+      "tags": [
+        "Strategic investment",
+        "Manufacturing investment"
+      ],
+      "references": [],
+      "media": [],
+      "photoResearch": "Official release and photo links checked; no suitable accessible project-specific photo saved. AstraZeneca official gallery assets returned 403; Sanofi releases supplied generic branding; Eaton Nebraska original image failed download and Arkansas release supplied no project photograph. Image gap retained."
+    },
+    {
+      "key": "eaton-arkansas",
+      "company": "Eaton",
+      "wiki": "Eaton_Corporation",
+      "desk": "@BuildDesk",
+      "date": "2026-09-02",
+      "amount": 242000000,
+      "currency": "USD",
+      "period": "New-facility investment announced September 2026",
+      "title": "Eaton Commits More Than US$242 Million to Arkansas Electrical-Enclosure Manufacturing",
+      "description": "Eaton announced more than US$242 million for a new North Little Rock, Arkansas facility producing customized electrical enclosures. The one-million-square-foot project is expected to add more than 1,200 manufacturing, electrical and operations jobs.",
+      "points": [
+        "The project is intended to double U.S. enclosure-manufacturing capacity in Eaton’s Fibrebond business.",
+        "The investment follows Eaton’s acquisition of Fibrebond in April 2025 and supports long-term capacity planning.",
+        "More than US$242 million is the announced project commitment, rather than completed expenditure."
+      ],
+      "categories": [
+        "Business",
+        "Energy",
+        "Infrastructure"
+      ],
+      "sourceUrl": "https://www.eaton.com/us/en-us/company/news-insights/news-releases/2026/eaton-expands-manufacturing-for-modular-electrical-enclosures.html",
+      "pinId": 15738,
+      "parentId": 15737,
+      "pinUrl": "https://www.chronopin.com/pin/15738",
+      "tags": [
+        "Strategic investment",
+        "Manufacturing investment"
+      ],
+      "references": [],
+      "media": [],
+      "photoResearch": "Official release and photo links checked; no suitable accessible project-specific photo saved. AstraZeneca official gallery assets returned 403; Sanofi releases supplied generic branding; Eaton Nebraska original image failed download and Arkansas release supplied no project photograph. Image gap retained."
+    },
+    {
+      "key": "rr-aiken",
+      "company": "Rolls-Royce",
+      "wiki": "Rolls-Royce_Holdings",
+      "desk": "@BuildDesk",
+      "date": "2025-07-15",
+      "amount": 75000000,
+      "currency": "USD",
+      "period": "Aiken production expansion announced July 2025",
+      "title": "Rolls-Royce Invests US$75 Million in Aiken Engine Manufacturing",
+      "description": "Rolls-Royce announced US$75 million to expand its Aiken, South Carolina plant, supporting mtu Series 4000 engines used in power generation. The expansion adds around 37,000 square feet and is expected to create 60 jobs.",
+      "points": [
+        "The investment adds U.S. machining and production capability for mtu engines, including data-center power applications.",
+        "The release separately references a US$24 million Mankato expansion announced earlier in 2025.",
+        "Aiken’s US$75 million allocation and Mankato’s investment are components of a roughly US$100 million U.S. Power Systems expansion, not three additive budgets."
+      ],
+      "categories": [
+        "Business",
+        "Energy",
+        "Infrastructure"
+      ],
+      "sourceUrl": "https://www.mtu-solutions.com/eecis/en/pressreleases/2025/rolls-royce-increases-us-manufacturing-capabilities-in-south-carolina.html",
+      "pinId": 15740,
+      "parentId": null,
+      "pinUrl": "https://www.chronopin.com/pin/15740",
+      "tags": [
+        "Strategic investment",
+        "Manufacturing investment"
+      ],
+      "references": [],
+      "media": [
+        {
+          "originalUrl": "https://www.mtu-solutions.com/content/dam/mtu/pressassets-uploaded/2025/rolls-royce-increases-u-s--manufacturing-capabilities-in-south-carolina/RR%20Aiken%20engine%20plant.jpg",
+          "blobUrl": "https://chronopin.blob.core.windows.net/thumb/be4c80ba-5060-4b2e-b3a6-40caaaa03722.jpeg",
+          "credit": "Rolls-Royce",
+          "sourceUrl": "https://www.mtu-solutions.com/eecis/en/pressreleases/2025/rolls-royce-increases-us-manufacturing-capabilities-in-south-carolina.html",
+          "caption": "Rolls-Royce engine plant in Aiken, South Carolina"
+        }
+      ],
+      "photoResearch": "Official release/gallery image downloaded with plain curl, visually inspected and verified public in Azure."
+    },
+    {
+      "key": "rr-indiana",
+      "company": "Rolls-Royce",
+      "wiki": "Rolls-Royce_Holdings",
+      "desk": "@BuildDesk",
+      "date": "2026-08-27",
+      "amount": 1000000000,
+      "currency": "USD",
+      "period": "Completed decade-long investment reported August 2026",
+      "title": "Rolls-Royce Reports Completion of US$1 Billion Indiana Manufacturing and Test Investment",
+      "description": "Rolls-Royce marked completion of a decade-long US$1 billion investment in Indiana manufacturing, assembly and testing facilities. The upgraded Indianapolis campus supports advanced propulsion and defense programs.",
+      "points": [
+        "The US$1 billion figure describes investment over a decade, not a new one-day capital commitment.",
+        "The operator describes upgraded engine manufacturing, assembly and testing capabilities.",
+        "This industrial engine and aerospace business is Rolls-Royce Holdings, distinct from Rolls-Royce Motor Cars."
+      ],
+      "categories": [
+        "Aerospace",
+        "Defense",
+        "Business"
+      ],
+      "sourceUrl": "https://www.rolls-royce.com/media/press-releases/2026/27-08-2026-rr-completes-dollars-1-billion-investment-in-indiana.aspx",
+      "pinId": 15741,
+      "parentId": 15740,
+      "pinUrl": "https://www.chronopin.com/pin/15741",
+      "tags": [
+        "Strategic investment",
+        "Manufacturing investment"
+      ],
+      "references": [],
+      "media": [
+        {
+          "originalUrl": "https://www.rolls-royce.com/~/media/Images/R/Rolls-Royce/content-images/rr-completes-dollars-1-billion-investment-in-indiana-ct-img-03.jpg?h=430&iar=0&w=764",
+          "blobUrl": "https://chronopin.blob.core.windows.net/thumb/619fe75f-374f-43c9-8ec7-1077e37fcf17.jpeg",
+          "credit": "Rolls-Royce",
+          "sourceUrl": "https://www.rolls-royce.com/media/press-releases/2026/27-08-2026-rr-completes-dollars-1-billion-investment-in-indiana.aspx",
+          "caption": "Indiana investment milestone image supplied by Rolls-Royce"
+        }
+      ],
+      "photoResearch": "Official release/gallery image downloaded with plain curl, visually inspected and verified public in Azure."
+    },
+    {
+      "key": "gev-us",
+      "company": "GE Vernova",
+      "wiki": "GE_Vernova",
+      "desk": "@EnergyDesk",
+      "date": "2025-01-29",
+      "amount": 600000000,
+      "currency": "USD",
+      "period": "Two years from January 2025",
+      "title": "GE Vernova Plans Nearly US$600 Million in U.S. Factories and Facilities",
+      "description": "GE Vernova announced plans to invest nearly US$600 million in U.S. factories and facilities over two years, with more than 1,500 expected jobs. The plan supports power-generation equipment, grid technology and research.",
+      "points": [
+        "Nearly US$300 million was earmarked for Gas Power capacity, including heavy-duty gas turbines.",
+        "Other allocations include Schenectady production, the Niskayuna research center and manufacturing across additional states.",
+        "The spending was described as an initial part of a broader global capital and R&D program; individual allocations should not be added again to the U.S. headline."
+      ],
+      "categories": [
+        "Energy",
+        "Business",
+        "Infrastructure"
+      ],
+      "sourceUrl": "https://www.gevernova.com/news/press-releases/ge-vernova-invest-almost-600-million-us-factories-facilities-over-next-two-years",
+      "pinId": 15742,
+      "parentId": null,
+      "pinUrl": "https://www.chronopin.com/pin/15742",
+      "tags": [
+        "Strategic investment",
+        "Manufacturing investment"
+      ],
+      "references": [],
+      "media": [
+        {
+          "originalUrl": "https://www.gevernova.com/news/sites/default/files/2025-01/ge_vernova_us_investments_infographic_jan2025.jpg",
+          "blobUrl": "https://chronopin.blob.core.windows.net/thumb/faf64cc5-b361-4afe-8ad8-ba56037d4e1f.jpeg",
+          "credit": "GE Vernova",
+          "sourceUrl": "https://www.gevernova.com/news/press-releases/ge-vernova-invest-almost-600-million-us-factories-facilities-over-next-two-years",
+          "caption": "GE Vernova’s January 2025 U.S. investment infographic"
+        }
+      ],
+      "photoResearch": "Official release/gallery image downloaded with plain curl, visually inspected and verified public in Azure."
+    },
+    {
+      "key": "gev-italy",
+      "company": "GE Vernova",
+      "wiki": "GE_Vernova",
+      "desk": "@EnergyDesk",
+      "date": "2026-03-03",
+      "amount": 30000000,
+      "currency": "USD",
+      "period": "Italy expansion announced March 2026",
+      "title": "GE Vernova Plans Approximately US$30 Million Italy Electrification-Factory Expansion",
+      "description": "GE Vernova announced approximately US$30 million to expand its Sesto San Giovanni, Italy electrification facility. The investment increases capacity for transformer bushings and is expected to add about 50 manufacturing jobs in Lombardy.",
+      "points": [
+        "Bushings are components used in power and generator transformers for electricity transmission and distribution.",
+        "The operator published the investment in U.S. dollars; no unsourced euro conversion is substituted.",
+        "The commitment covers an expansion of the existing Italian engineering and manufacturing site."
+      ],
+      "categories": [
+        "Energy",
+        "Business",
+        "Infrastructure"
+      ],
+      "sourceUrl": "https://www.gevernova.com/news/press-releases/ge-vernova-expands-manufacturing-capacity-italy",
+      "pinId": 15744,
+      "parentId": 15742,
+      "pinUrl": "https://www.chronopin.com/pin/15744",
+      "tags": [
+        "Strategic investment",
+        "Manufacturing investment"
+      ],
+      "references": [],
+      "media": [
+        {
+          "originalUrl": "https://www.gevernova.com/news/sites/default/files/2026-03/gessg_img_3.png",
+          "blobUrl": "https://chronopin.blob.core.windows.net/thumb/c95745e3-ea0f-443b-abae-02b3b3335e3c.png",
+          "credit": "GE Vernova",
+          "sourceUrl": "https://www.gevernova.com/news/press-releases/ge-vernova-expands-manufacturing-capacity-italy",
+          "caption": "Sesto San Giovanni facility image supplied with the expansion announcement"
+        }
+      ],
+      "photoResearch": "Official release/gallery image downloaded with plain curl, visually inspected and verified public in Azure."
+    },
+    {
+      "key": "bmw-munich",
+      "company": "BMW",
+      "wiki": "BMW",
+      "desk": "@MotorDesk",
+      "date": "2024-01-10",
+      "amount": 650000000,
+      "currency": "EUR",
+      "period": "Munich conversion program; all-electric production targeted from end-2027",
+      "title": "BMW Commits €650 Million to Munich Plant’s Electric-Vehicle Conversion",
+      "description": "BMW announced €650 million for conversion of its Munich plant, including a new assembly line, logistics areas and body shop. The January 2024 plan targeted Neue Klasse production from 2026 and an all-electric product mix from the end of 2027.",
+      "points": [
+        "The €650 million investment comprises four new buildings within the existing plant.",
+        "Conversion work was planned alongside ongoing vehicle production.",
+        "The dates are targets stated in the historical investment announcement, not independent confirmation that every milestone has been completed."
+      ],
+      "categories": [
+        "Automotive",
+        "Business",
+        "Infrastructure"
+      ],
+      "sourceUrl": "https://www.press.bmwgroup.com/global/article/detail/T0439003EN/",
+      "pinId": 15745,
+      "parentId": null,
+      "pinUrl": "https://www.chronopin.com/pin/15745",
+      "tags": [
+        "Strategic investment",
+        "Manufacturing investment"
+      ],
+      "references": [],
+      "media": [
+        {
+          "originalUrl": "https://mediapool.bmwgroup.com/cache/P9/202312/P90535177/P90535177-insights-into-future-production-at-the-bmw-group-plant-munich-01-2024-391px.jpg",
+          "blobUrl": "https://chronopin.blob.core.windows.net/thumb/03667f05-2a4e-485f-8098-0f88ac40ef05.jpeg",
+          "credit": "BMW Group",
+          "sourceUrl": "https://www.press.bmwgroup.com/global/article/detail/T0439003EN/",
+          "caption": "BMW illustration of future production at the Munich plant, January 2024"
+        }
+      ],
+      "photoResearch": "Official release/gallery image downloaded with plain curl, visually inspected and verified public in Azure."
+    },
+    {
+      "key": "siemens-200",
+      "company": "Siemens",
+      "wiki": "Siemens",
+      "desk": "@BuildDesk",
+      "date": "2026-08-07",
+      "amount": 200000000,
+      "currency": "USD",
+      "period": "Hiring starts 2026 in Texas and 2027 in Georgia",
+      "title": "Siemens Announces More Than US$200 Million for Georgia and Texas Electrical Manufacturing",
+      "description": "Siemens announced more than US$200 million for new Pendergrass, Georgia and Grand Prairie, Texas manufacturing facilities. The release allocates more than US$185 million to Georgia and US$19 million to Texas, with over 1,500 combined jobs expected.",
+      "points": [
+        "The Pendergrass facility is planned as a U.S. hub for low-voltage electrical products and distribution equipment.",
+        "Hiring was expected to begin in Grand Prairie in 2026 and Pendergrass in 2027.",
+        "The new commitments build on Siemens’ earlier US$1 billion cumulative U.S. manufacturing milestone."
+      ],
+      "categories": [
+        "Business",
+        "Energy",
+        "Infrastructure"
+      ],
+      "sourceUrl": "https://news.siemens.com/en-us/siemens-us-manufacturing-investment-electrical-infrastructure/",
+      "parentId": 15640,
+      "pinId": 15747,
+      "pinUrl": "https://www.chronopin.com/pin/15747",
+      "tags": [
+        "Strategic investment",
+        "Manufacturing investment"
+      ],
+      "references": [],
+      "media": [
+        {
+          "originalUrl": "https://assets.new.siemens.com/dam-asset/08530e32-deb5-4591-ad0b-1fc28f29ceba/us-press-image-us-manufacturing-electrical-products.jpeg?auto=format%2Ccompress&w=1280&h=720&fit=crop&crop=faces%2Cedges&q=60",
+          "blobUrl": "https://chronopin.blob.core.windows.net/thumb/c94221e6-6ca7-4063-a88d-cf75a84dc5f5.jpeg",
+          "credit": "Siemens",
+          "sourceUrl": "https://news.siemens.com/en-us/siemens-us-manufacturing-investment-electrical-infrastructure/",
+          "caption": "Electrical products image supplied with the U.S. manufacturing announcement"
+        }
+      ],
+      "photoResearch": "Official release/gallery image downloaded with plain curl, visually inspected and verified public in Azure."
+    }
+  ]
+}

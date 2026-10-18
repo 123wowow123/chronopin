@@ -1,0 +1,2115 @@
+{
+  "checkedAt": "2026-10-16",
+  "country": "Japan",
+  "regions": [
+    "osaka",
+    "kyoto",
+    "nagoya",
+    "tokyo"
+  ],
+  "entries": [
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "La Cime — Osaka restaurant guide",
+        "description": "Yusuke Takada’s contemporary French restaurant balances guest, cuisine and space in a compact dining room.",
+        "sourceUrl": "https://www.la-cime.com/",
+        "address": "1F Kawaramachi Usami Building, 3-2-15 Kawaramachi, Chuo-ku, Osaka",
+        "productName": "La Cime",
+        "utcStartDateTime": "2010-03-01T00:00:00.000Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "Cuisine Kingdom’s interview with chef Yusuke Takada explicitly dates La Cime’s opening at the current Osaka Honmachi location to March 2010. March 1 is a month-only timeline anchor, not a verified opening day. The operator’s February 2016 refurbishment is separate. October 16, 2026 was the research date, not this branch opening.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Top Restaurants",
+          "Osaka",
+          "Japan",
+          "Hommachi",
+          "Contemporary French"
+        ],
+        "longFormSummary": "<p>Yusuke Takada’s contemporary French restaurant balances guest, cuisine and space in a compact dining room.<cite data-ref=\"https://www.la-cime.com/\"></cite></p><p>Opening history: Cuisine Kingdom’s interview with chef Yusuke Takada explicitly dates La Cime’s opening at the current Osaka Honmachi location to March 2010. March 1 is a month-only timeline anchor, not a verified opening day. The operator’s February 2016 refurbishment is separate. October 16, 2026 was the research date, not this branch opening.<cite data-ref=\"https://cuisine-kingdom.com/yusuke-takada\"></cite><cite data-ref=\"https://www.la-cime.com/\"></cite></p>",
+        "references": [
+          {
+            "url": "https://www.la-cime.com/",
+            "title": "La Cime source",
+            "confidence": 90,
+            "reasoning": "Supports restaurant/menu content; branch opening history is documented separately."
+          },
+          {
+            "url": "https://guide.michelin.com/en/osaka-region/osaka/restaurant/la-cime",
+            "title": "La Cime source",
+            "confidence": 90,
+            "reasoning": "Supports restaurant/menu content; branch opening history is documented separately."
+          },
+          {
+            "url": "https://cuisine-kingdom.com/yusuke-takada",
+            "title": "見慣れた食材の形を変え、驚きを与えたい「ラ シーム」高田裕介さん",
+            "confidence": 85,
+            "reasoning": "Cuisine Kingdom’s interview with chef Yusuke Takada explicitly dates La Cime’s opening at the current Osaka Honmachi location to March 2010. March 1 is a month-only timeline anchor, not a verified opening day. The operator’s February 2016 refurbishment is separate. October 16, 2026 was the research date, not this branch opening."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://www.la-cime.com/",
+          "menu": {
+            "pinSourceUrl": "https://www.la-cime.com/",
+            "name": "La Cime",
+            "checkedAt": "2026-10-16",
+            "menus": [
+              {
+                "label": "Current La Cime tasting courses",
+                "url": "https://www.la-cime.com/",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Lunch tasting course — approximately 13 components",
+                    "price": 35200
+                  },
+                  {
+                    "name": "Dinner tasting course — approximately 13 components",
+                    "price": 35200
+                  }
+                ],
+                "note": "Tax and service included in published course price; private room adds 15%. Live homepage says five amuse-bouches, four hors-d’oeuvres, two mains, pre-dessert, dessert, petits fours and tea, with count subject to ingredients. No specific current dish roster published after current homepage, linked reservation section, official guide and menu-page searches. Obsolete ?page_id=2 lunch ¥5,300/dinner ¥8,100 and 5% service not used. Japanese booking text says two months, English one month: confirm availability directly. Maximum six guests; five or more use the chargeable private room."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://www.la-cime.com/",
+            "name": "La Cime",
+            "checkedAt": "2026-10-16",
+            "websiteUrl": "https://www.la-cime.com/",
+            "phone": "06-6222-2010",
+            "openingHours": [
+              {
+                "days": "Lunch",
+                "hours": "12:00–15:00"
+              },
+              {
+                "days": "Dinner",
+                "hours": "18:00–22:00"
+              },
+              {
+                "days": "Closures",
+                "hours": "Sunday, one additional day monthly, year-end and summer holidays"
+              }
+            ],
+            "detailsSourceUrl": "https://www.la-cime.com/",
+            "additionalSources": [
+              {
+                "label": "Research evidence",
+                "url": "https://guide.michelin.com/en/osaka-region/osaka/restaurant/la-cime"
+              }
+            ]
+          },
+          "tile": {
+            "regionSlug": "osaka",
+            "kind": "top",
+            "slug": "lacime",
+            "name": "La Cime",
+            "neighborhood": "Hommachi",
+            "cuisine": "Contemporary French",
+            "description": "Yusuke Takada’s contemporary French restaurant balances guest, cuisine and space in a compact dining room.",
+            "address": "1F Kawaramachi Usami Building, 3-2-15 Kawaramachi, Chuo-ku, Osaka",
+            "websiteUrl": "https://www.la-cime.com/",
+            "checkedAt": "2026-10-16",
+            "recognition": "Selected in the current MICHELIN Guide Osaka.",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-16/lacime-6-4a15def308b033a5.webp",
+            "imageCredit": "MICHELIN Guide (source; photographer not stated)",
+            "imageSourceUrl": "https://guide.michelin.com/en/osaka-region/osaka/restaurant/la-cime",
+            "imageNote": "Exact restaurant interior labelled by MICHELIN Guide; no other venue recommendations used."
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-16/lacime-6-4a15def308b033a5.webp",
+          "sha256": "4a15def308b033a5f1a160659d34bf3adbc85b1e3b925fb52b8aa730b2b2c5a0",
+          "width": 1600,
+          "height": 1600,
+          "credit": "MICHELIN Guide (source; photographer not stated)",
+          "note": "Exact restaurant interior labelled by MICHELIN Guide; no other venue recommendations used.",
+          "sourcePage": "https://guide.michelin.com/en/osaka-region/osaka/restaurant/la-cime"
+        }
+      ],
+      "openingDateCorrection": {
+        "sourceUrl": "https://www.la-cime.com/",
+        "day": "2010-03-01",
+        "confidence": "estimated",
+        "precision": "month",
+        "reason": "Cuisine Kingdom’s interview with chef Yusuke Takada explicitly dates La Cime’s opening at the current Osaka Honmachi location to March 2010. March 1 is a month-only timeline anchor, not a verified opening day. The operator’s February 2016 refurbishment is separate. October 16, 2026 was the research date, not this branch opening.",
+        "sources": [
+          [
+            "https://cuisine-kingdom.com/yusuke-takada",
+            "見慣れた食材の形を変え、驚きを与えたい「ラ シーム」高田裕介さん"
+          ],
+          [
+            "https://www.la-cime.com/",
+            "La Cime — current location and refurbishment history"
+          ]
+        ],
+        "verified": {
+          "local": {
+            "pinId": 15971,
+            "sourceUrl": "https://www.la-cime.com/",
+            "date": "2010-03-01",
+            "dateConfidence": "estimated",
+            "authorId": 372,
+            "publicPinStatus": 200,
+            "authorPreserved": true
+          },
+          "production": {
+            "pinId": 15971,
+            "sourceUrl": "https://www.la-cime.com/",
+            "date": "2010-03-01",
+            "dateConfidence": "estimated",
+            "authorId": 372,
+            "publicPinStatus": 200,
+            "authorPreserved": true
+          }
+        }
+      }
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Reminiscence — Nagoya restaurant guide",
+        "description": "Masaki Kuzuhara’s French tasting-menu restaurant develops its experience around lingering impressions and memories.",
+        "sourceUrl": "https://reminiscence0723.com/",
+        "address": "South entrance, 3-18-3 Tsutsui, Higashi-ku, Nagoya",
+        "productName": "Reminiscence",
+        "utcStartDateTime": "2023-07-23T00:00:00.000Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "Contemporaneous on-site reporting dates the move to the current Kurumamichi/Tsutsui restaurant to July 23, 2023, followed by a July 30 report from the completed new restaurant. July 23, 2015 was the original Sakae location’s founding, not this branch opening. October 16, 2026 was the research date, not this branch opening.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Top Restaurants",
+          "Nagoya",
+          "Japan",
+          "Kurumamichi",
+          "Contemporary French"
+        ],
+        "longFormSummary": "<p>Masaki Kuzuhara’s French tasting-menu restaurant develops its experience around lingering impressions and memories.<cite data-ref=\"https://reminiscence0723.com/\"></cite></p><p>Opening history: Contemporaneous on-site reporting dates the move to the current Kurumamichi/Tsutsui restaurant to July 23, 2023, followed by a July 30 report from the completed new restaurant. July 23, 2015 was the original Sakae location’s founding, not this branch opening. October 16, 2026 was the research date, not this branch opening.<cite data-ref=\"https://lade.jp/diary/tabelog/french/89404/\"></cite><cite data-ref=\"https://lade.jp/diary/tabelog/french/89990/\"></cite></p>",
+        "references": [
+          {
+            "url": "https://reminiscence0723.com/",
+            "title": "Reminiscence source",
+            "confidence": 90,
+            "reasoning": "Supports restaurant/menu content; branch opening history is documented separately."
+          },
+          {
+            "url": "https://www.nagoya-info.jp/feature/detail/148/",
+            "title": "Reminiscence source",
+            "confidence": 90,
+            "reasoning": "Supports restaurant/menu content; branch opening history is documented separately."
+          },
+          {
+            "url": "https://guide.michelin.com/tw/en/article/news-and-views/michelin-guide-aichi-gifu-mie-2019-selection",
+            "title": "Reminiscence source",
+            "confidence": 90,
+            "reasoning": "Supports restaurant/menu content; branch opening history is documented separately."
+          },
+          {
+            "url": "https://tabelog.com/aichi/A2301/A230106/23085308/party/276904982/",
+            "title": "Reminiscence source",
+            "confidence": 90,
+            "reasoning": "Supports restaurant/menu content; branch opening history is documented separately."
+          },
+          {
+            "url": "https://lade.jp/diary/tabelog/french/89404/",
+            "title": "名古屋フレンチ「レミニセンス・葛原将季が挑む次なるステージへ」新店舗進捗状況見学",
+            "confidence": 100,
+            "reasoning": "Contemporaneous on-site reporting dates the move to the current Kurumamichi/Tsutsui restaurant to July 23, 2023, followed by a July 30 report from the completed new restaurant. July 23, 2015 was the original Sakae location’s founding, not this branch opening. October 16, 2026 was the research date, not this branch opening."
+          },
+          {
+            "url": "https://lade.jp/diary/tabelog/french/89990/",
+            "title": "名古屋・フレンチ「レミニセンス」グランメゾンを目指し移転リニューアル〜新店舗編〜",
+            "confidence": 100,
+            "reasoning": "Contemporaneous on-site reporting dates the move to the current Kurumamichi/Tsutsui restaurant to July 23, 2023, followed by a July 30 report from the completed new restaurant. July 23, 2015 was the original Sakae location’s founding, not this branch opening. October 16, 2026 was the research date, not this branch opening."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://reminiscence0723.com/",
+          "menu": {
+            "pinSourceUrl": "https://reminiscence0723.com/",
+            "name": "Reminiscence",
+            "checkedAt": "2026-10-16",
+            "menus": [
+              {
+                "label": "Menu Reminiscence",
+                "url": "https://reminiscence0723.com/",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Lunch Menu Reminiscence",
+                    "price": 21780
+                  },
+                  {
+                    "name": "Dinner Menu Reminiscence",
+                    "price": 24200
+                  }
+                ],
+                "note": "Tax included; 12% service additional. Approximately 14 food/dessert plates plus after-meal drink. Lunch 12:00 start; dinner last arrival 18:00–18:30. Operator gives 3-18-3 south entrance; other guide street-number variants not silently adopted. Current operator menu, linked 2023 wine PDF, Nagoya city feature and branch menu search checked. Exact seasonal dish roster and current wine prices not published on ordinary menu; old wine PDF not treated as current. Pigeon/duck/lamb/beef are seasonal chef choices in branch booking copy, not promised all together. Wine Bar K is a separate adjacent venue, not a second restaurant counted here."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://reminiscence0723.com/",
+            "name": "Reminiscence",
+            "checkedAt": "2026-10-16",
+            "websiteUrl": "https://reminiscence0723.com/",
+            "phone": "052-228-8337",
+            "openingHours": [
+              {
+                "days": "Lunch",
+                "hours": "12:00 start"
+              },
+              {
+                "days": "Dinner arrival",
+                "hours": "18:00–18:30; closing time not published"
+              },
+              {
+                "days": "Closures",
+                "hours": "Check booking calendar; old 2023 news not a current closure calendar"
+              }
+            ],
+            "detailsSourceUrl": "https://reminiscence0723.com/",
+            "additionalSources": [
+              {
+                "label": "Research evidence",
+                "url": "https://www.nagoya-info.jp/feature/detail/148/"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://guide.michelin.com/tw/en/article/news-and-views/michelin-guide-aichi-gifu-mie-2019-selection"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://tabelog.com/aichi/A2301/A230106/23085308/party/276904982/"
+              }
+            ]
+          },
+          "tile": {
+            "regionSlug": "nagoya",
+            "kind": "top",
+            "slug": "remini",
+            "name": "Reminiscence",
+            "neighborhood": "Kurumamichi",
+            "cuisine": "Contemporary French",
+            "description": "Masaki Kuzuhara’s French tasting-menu restaurant develops its experience around lingering impressions and memories.",
+            "address": "South entrance, 3-18-3 Tsutsui, Higashi-ku, Nagoya",
+            "websiteUrl": "https://reminiscence0723.com/",
+            "checkedAt": "2026-10-16",
+            "recognition": "Recommended in Nagoya city tourism’s luxury dining feature; two MICHELIN stars in the 2019 regional selection (historical, not a 2026 award claim).",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-16/remini-1-1fa4fe39f72c0f5e.webp",
+            "imageCredit": "Restaurant Reminiscence",
+            "imageSourceUrl": "https://reminiscence0723.com/",
+            "imageNote": "Official current Nagoya restaurant gallery; dish identity and current availability not inferred."
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-16/remini-1-1fa4fe39f72c0f5e.webp",
+          "sha256": "1fa4fe39f72c0f5eb84c3bc86e0494a7d298620800c001211c09cfafd1e9e553",
+          "width": 1600,
+          "height": 1078,
+          "credit": "Restaurant Reminiscence",
+          "note": "Official current Nagoya restaurant gallery; dish identity and current availability not inferred.",
+          "sourcePage": "https://reminiscence0723.com/"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-16/remini-2-a32f7db06a2dfdfb.webp",
+          "sha256": "a32f7db06a2dfdfb234c0f6899d8a9c6a116729240382d2d7be19785cf8b4085",
+          "width": 1600,
+          "height": 1078,
+          "credit": "Restaurant Reminiscence",
+          "note": "Official current Nagoya restaurant gallery; dish identity and current availability not inferred.",
+          "sourcePage": "https://reminiscence0723.com/"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-16/remini-3-cc582e0d7b7e5bfe.webp",
+          "sha256": "cc582e0d7b7e5bfeb069d1165fcfe6a278bb26320f8d1803bfd1b04746d308d1",
+          "width": 1600,
+          "height": 1078,
+          "credit": "Restaurant Reminiscence",
+          "note": "Official current Nagoya restaurant gallery; dish identity and current availability not inferred.",
+          "sourcePage": "https://reminiscence0723.com/"
+        }
+      ],
+      "openingDateCorrection": {
+        "sourceUrl": "https://reminiscence0723.com/",
+        "day": "2023-07-23",
+        "confidence": "confirmed",
+        "precision": "day",
+        "reason": "Contemporaneous on-site reporting dates the move to the current Kurumamichi/Tsutsui restaurant to July 23, 2023, followed by a July 30 report from the completed new restaurant. July 23, 2015 was the original Sakae location’s founding, not this branch opening. October 16, 2026 was the research date, not this branch opening.",
+        "sources": [
+          [
+            "https://lade.jp/diary/tabelog/french/89404/",
+            "名古屋フレンチ「レミニセンス・葛原将季が挑む次なるステージへ」新店舗進捗状況見学"
+          ],
+          [
+            "https://lade.jp/diary/tabelog/french/89990/",
+            "名古屋・フレンチ「レミニセンス」グランメゾンを目指し移転リニューアル〜新店舗編〜"
+          ]
+        ],
+        "verified": {
+          "local": {
+            "pinId": 15972,
+            "sourceUrl": "https://reminiscence0723.com/",
+            "date": "2023-07-23",
+            "dateConfidence": "confirmed",
+            "authorId": 372,
+            "publicPinStatus": 200,
+            "authorPreserved": true
+          },
+          "production": {
+            "pinId": 15972,
+            "sourceUrl": "https://reminiscence0723.com/",
+            "date": "2023-07-23",
+            "dateConfidence": "confirmed",
+            "authorId": 372,
+            "publicPinStatus": 200,
+            "authorPreserved": true
+          }
+        }
+      }
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Gion Sasaki — Kyoto restaurant guide",
+        "description": "Gion Sasaki’s counter-centred Kyoto restaurant combines Japanese seasonal cooking with an open-kitchen dining experience.",
+        "sourceUrl": "https://gionsasaki.com/",
+        "address": "566-27 Komatsu-cho, Yasaka-dori, Higashiyama-ku, Kyoto",
+        "productName": "Gion Sasaki",
+        "utcStartDateTime": "2006-01-01T00:00:00.000Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "The operator’s chef biography explicitly dates the move to the current Yasaka-dori restaurant to 2006. January 1 is a year-only timeline anchor, not a confirmed month or day. The earlier 1997 founding, 2002 move and August 2023 renovation are separate events. October 16, 2026 was the research date, not this branch opening.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Top Restaurants",
+          "Kyoto",
+          "Japan",
+          "Gion / Yasaka",
+          "Japanese kaiseki"
+        ],
+        "longFormSummary": "<p>Gion Sasaki’s counter-centred Kyoto restaurant combines Japanese seasonal cooking with an open-kitchen dining experience.<cite data-ref=\"https://gionsasaki.com/\"></cite></p><p>Opening history: The operator’s chef biography explicitly dates the move to the current Yasaka-dori restaurant to 2006. January 1 is a year-only timeline anchor, not a confirmed month or day. The earlier 1997 founding, 2002 move and August 2023 renovation are separate events. October 16, 2026 was the research date, not this branch opening.<cite data-ref=\"https://gionsasaki.com/old/about.html\"></cite><cite data-ref=\"https://www.sunnyfoods.co.jp/business/brand/sasaki.html\"></cite></p>",
+        "references": [
+          {
+            "url": "https://gionsasaki.com/",
+            "title": "Gion Sasaki source",
+            "confidence": 90,
+            "reasoning": "Supports restaurant/menu content; branch opening history is documented separately."
+          },
+          {
+            "url": "https://guide.michelin.com/en/kyoto-region/kyoto/restaurant/gion-sasaki",
+            "title": "Gion Sasaki source",
+            "confidence": 90,
+            "reasoning": "Supports restaurant/menu content; branch opening history is documented separately."
+          },
+          {
+            "url": "https://gionsasaki.com/old/about.html",
+            "title": "ABOUT of 祇園 さゝ木 / GION SASAKI",
+            "confidence": 85,
+            "reasoning": "The operator’s chef biography explicitly dates the move to the current Yasaka-dori restaurant to 2006. January 1 is a year-only timeline anchor, not a confirmed month or day. The earlier 1997 founding, 2002 move and August 2023 renovation are separate events. October 16, 2026 was the research date, not this branch opening."
+          },
+          {
+            "url": "https://www.sunnyfoods.co.jp/business/brand/sasaki.html",
+            "title": "株式会社サニーフーズ — 祇園さゝ木 biography and 2023 renovation",
+            "confidence": 85,
+            "reasoning": "The operator’s chef biography explicitly dates the move to the current Yasaka-dori restaurant to 2006. January 1 is a year-only timeline anchor, not a confirmed month or day. The earlier 1997 founding, 2002 move and August 2023 renovation are separate events. October 16, 2026 was the research date, not this branch opening."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://gionsasaki.com/",
+          "menu": {
+            "pinSourceUrl": "https://gionsasaki.com/",
+            "name": "Gion Sasaki",
+            "checkedAt": "2026-10-16",
+            "menus": [
+              {
+                "label": "Gion Sasaki courses",
+                "url": "https://gionsasaki.com/",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Lunch course",
+                    "price": 22000,
+                    "note": "Tax and service included"
+                  },
+                  {
+                    "name": "Dinner course",
+                    "price": 44000,
+                    "note": "Tax and service included; may vary with sourcing"
+                  }
+                ],
+                "note": "Exact operator currently lists Thursday–Saturday lunch, 12:00 simultaneous start; dinner 18:30 simultaneous start. Current individual dishes and drinks not published after operator content site, linked Instagram/webshop and MICHELIN gallery checks; webshop gifts and sister restaurants’ menus excluded. Phone reservation releases from first operating day of month for end of month two months ahead. Afternoon phone hours conflict within homepage (14:00 vs 16:30 start); confirm by phone, no silent choice saved. Published 10:00–12:00 morning window agrees."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://gionsasaki.com/",
+            "name": "Gion Sasaki",
+            "checkedAt": "2026-10-16",
+            "websiteUrl": "https://gionsasaki.com/",
+            "phone": "075-551-5000",
+            "openingHours": [
+              {
+                "days": "Lunch, Thursday–Saturday",
+                "hours": "12:00 simultaneous start"
+              },
+              {
+                "days": "Dinner",
+                "hours": "18:30 simultaneous start; closed Sunday/Monday and irregular days"
+              }
+            ],
+            "detailsSourceUrl": "https://gionsasaki.com/",
+            "additionalSources": [
+              {
+                "label": "Research evidence",
+                "url": "https://guide.michelin.com/en/kyoto-region/kyoto/restaurant/gion-sasaki"
+              }
+            ]
+          },
+          "tile": {
+            "regionSlug": "kyoto",
+            "kind": "top",
+            "slug": "sasaki",
+            "name": "Gion Sasaki",
+            "neighborhood": "Gion / Yasaka",
+            "cuisine": "Japanese kaiseki",
+            "description": "Gion Sasaki’s counter-centred Kyoto restaurant combines Japanese seasonal cooking with an open-kitchen dining experience.",
+            "address": "566-27 Komatsu-cho, Yasaka-dori, Higashiyama-ku, Kyoto",
+            "websiteUrl": "https://gionsasaki.com/",
+            "checkedAt": "2026-10-16",
+            "recognition": "Selected in the current MICHELIN Guide Kyoto.",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-16/sasaki-6-7560ffd411e47515.webp",
+            "imageCredit": "MICHELIN Guide (source; photographer not stated)",
+            "imageSourceUrl": "https://guide.michelin.com/en/kyoto-region/kyoto/restaurant/gion-sasaki",
+            "imageNote": "Exact restaurant interior labelled by MICHELIN Guide; no other venue recommendations used."
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-16/sasaki-6-7560ffd411e47515.webp",
+          "sha256": "7560ffd411e475155122069de7952a14e8dfc39afe13f1cc8349c79be2c76502",
+          "width": 1600,
+          "height": 1600,
+          "credit": "MICHELIN Guide (source; photographer not stated)",
+          "note": "Exact restaurant interior labelled by MICHELIN Guide; no other venue recommendations used.",
+          "sourcePage": "https://guide.michelin.com/en/kyoto-region/kyoto/restaurant/gion-sasaki"
+        }
+      ],
+      "openingDateCorrection": {
+        "sourceUrl": "https://gionsasaki.com/",
+        "day": "2006-01-01",
+        "confidence": "estimated",
+        "precision": "year",
+        "reason": "The operator’s chef biography explicitly dates the move to the current Yasaka-dori restaurant to 2006. January 1 is a year-only timeline anchor, not a confirmed month or day. The earlier 1997 founding, 2002 move and August 2023 renovation are separate events. October 16, 2026 was the research date, not this branch opening.",
+        "sources": [
+          [
+            "https://gionsasaki.com/old/about.html",
+            "ABOUT of 祇園 さゝ木 / GION SASAKI"
+          ],
+          [
+            "https://www.sunnyfoods.co.jp/business/brand/sasaki.html",
+            "株式会社サニーフーズ — 祇園さゝ木 biography and 2023 renovation"
+          ]
+        ],
+        "verified": {
+          "local": {
+            "pinId": 15973,
+            "sourceUrl": "https://gionsasaki.com/",
+            "date": "2006-01-01",
+            "dateConfidence": "estimated",
+            "authorId": 372,
+            "publicPinStatus": 200,
+            "authorPreserved": true
+          },
+          "production": {
+            "pinId": 15973,
+            "sourceUrl": "https://gionsasaki.com/",
+            "date": "2006-01-01",
+            "dateConfidence": "estimated",
+            "authorId": 372,
+            "publicPinStatus": 200,
+            "authorPreserved": true
+          }
+        }
+      }
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Florilège — Azabudai Hills — Tokyo restaurant guide",
+        "description": "Hiroyasu Kawate’s French restaurant serves a plant-forward tasting menu around a shared thirteen-metre table.",
+        "sourceUrl": "https://www.aoyama-florilege.jp/",
+        "address": "2F Garden Plaza D, Azabudai Hills, 5-10-7 Toranomon, Minato-ku, Tokyo",
+        "productName": "Florilège — Azabudai Hills",
+        "utcStartDateTime": "2023-11-24T00:00:00.000Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "Mori Building’s branch-specific Hills Life interview explicitly announces November 24, 2023 as the new Azabudai Hills restaurant’s opening, while identifying the earlier service as a pre-opening. The operator biography and Time Out separately document September 2023 pre-opening service. This pin uses the verified grand opening, with September pre-opening retained in the history; it does not reuse the 2009 South Aoyama founding or 2015 Jingumae move. October 16, 2026 was the research date, not this branch opening.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Top Restaurants",
+          "Tokyo",
+          "Japan",
+          "Azabudai Hills",
+          "Plant-forward French"
+        ],
+        "longFormSummary": "<p>Hiroyasu Kawate’s French restaurant serves a plant-forward tasting menu around a shared thirteen-metre table.<cite data-ref=\"https://www.aoyama-florilege.jp/\"></cite></p><p>Opening history: Mori Building’s branch-specific Hills Life interview explicitly announces November 24, 2023 as the new Azabudai Hills restaurant’s opening, while identifying the earlier service as a pre-opening. The operator biography and Time Out separately document September 2023 pre-opening service. This pin uses the verified grand opening, with September pre-opening retained in the history; it does not reuse the 2009 South Aoyama founding or 2015 Jingumae move. October 16, 2026 was the research date, not this branch opening.<cite data-ref=\"https://hillslife.jp/food/2023/10/30/a-masters-hand-has-a-new-home/\"></cite><cite data-ref=\"https://www.aoyama-florilege.jp/?site=%5C%22\"></cite><cite data-ref=\"https://www.timeout.jp/tokyo/ja/news/florilege-renewal-122823\"></cite></p>",
+        "references": [
+          {
+            "url": "https://www.aoyama-florilege.jp/",
+            "title": "Florilège — Azabudai Hills source",
+            "confidence": 90,
+            "reasoning": "Supports restaurant/menu content; branch opening history is documented separately."
+          },
+          {
+            "url": "https://guide.michelin.com/gb/en/tokyo-region/tokyo/restaurant/florilege",
+            "title": "Florilège — Azabudai Hills source",
+            "confidence": 90,
+            "reasoning": "Supports restaurant/menu content; branch opening history is documented separately."
+          },
+          {
+            "url": "https://www.aoyama-florilege.jp/reservations.html",
+            "title": "Florilège — Azabudai Hills source",
+            "confidence": 90,
+            "reasoning": "Supports restaurant/menu content; branch opening history is documented separately."
+          },
+          {
+            "url": "https://hillslife.jp/food/2023/10/30/a-masters-hand-has-a-new-home/",
+            "title": "常に進化を続ける〈フロリレージュ〉川手シェフの次なる挑戦とは？",
+            "confidence": 100,
+            "reasoning": "Mori Building’s branch-specific Hills Life interview explicitly announces November 24, 2023 as the new Azabudai Hills restaurant’s opening, while identifying the earlier service as a pre-opening. The operator biography and Time Out separately document September 2023 pre-opening service. This pin uses the verified grand opening, with September pre-opening retained in the history; it does not reuse the 2009 South Aoyama founding or 2015 Jingumae move. October 16, 2026 was the research date, not this branch opening."
+          },
+          {
+            "url": "https://www.aoyama-florilege.jp/?site=%5C%22",
+            "title": "Restaurant Florilège — operator biography",
+            "confidence": 100,
+            "reasoning": "Mori Building’s branch-specific Hills Life interview explicitly announces November 24, 2023 as the new Azabudai Hills restaurant’s opening, while identifying the earlier service as a pre-opening. The operator biography and Time Out separately document September 2023 pre-opening service. This pin uses the verified grand opening, with September pre-opening retained in the history; it does not reuse the 2009 South Aoyama founding or 2015 Jingumae move. October 16, 2026 was the research date, not this branch opening."
+          },
+          {
+            "url": "https://www.timeout.jp/tokyo/ja/news/florilege-renewal-122823",
+            "title": "日本の野菜こそ世界で価値がある、麻布台ヒルズに移転したフロリレージュの進化とは",
+            "confidence": 100,
+            "reasoning": "Mori Building’s branch-specific Hills Life interview explicitly announces November 24, 2023 as the new Azabudai Hills restaurant’s opening, while identifying the earlier service as a pre-opening. The operator biography and Time Out separately document September 2023 pre-opening service. This pin uses the verified grand opening, with September pre-opening retained in the history; it does not reuse the 2009 South Aoyama founding or 2015 Jingumae move. October 16, 2026 was the research date, not this branch opening."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://www.aoyama-florilege.jp/",
+          "menu": {
+            "pinSourceUrl": "https://www.aoyama-florilege.jp/",
+            "name": "Florilège — Azabudai Hills",
+            "checkedAt": "2026-10-16",
+            "menus": [
+              {
+                "label": "Azabudai Hills courses and pairings",
+                "url": "https://www.aoyama-florilege.jp/reservations.html",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Lunch course",
+                    "price": 12000
+                  },
+                  {
+                    "name": "Lunch alcohol pairing",
+                    "price": 7700
+                  },
+                  {
+                    "name": "Lunch selected alcohol pairing",
+                    "price": 12000,
+                    "note": "From; supplement"
+                  },
+                  {
+                    "name": "Lunch nonalcoholic pairing",
+                    "price": 6600
+                  },
+                  {
+                    "name": "Dinner course",
+                    "price": 24000
+                  },
+                  {
+                    "name": "Dinner alcohol pairing",
+                    "price": 14000
+                  },
+                  {
+                    "name": "Dinner selected alcohol pairing",
+                    "price": 20000,
+                    "note": "From; supplement"
+                  },
+                  {
+                    "name": "Dinner nonalcoholic pairing",
+                    "price": 10000
+                  },
+                  {
+                    "name": "Beet flower celebration dessert",
+                    "price": 1600,
+                    "note": "Advance order only; no same-day order"
+                  }
+                ],
+                "note": "Tax included, 10% service additional. Lunch around 150 minutes; dinner around 180 minutes. Dinner course also available at lunch. Choose meat or vegetable main per diner in advance; vegetable main does not make the whole course vegetarian or vegan. Severe dietary restrictions listed by operator; disclose before booking. Main named dishes rotate and are not published in current reservation roster; unlabeled gallery dishes not named. Maximum four per booking, children middle-school age or older, no private room. Online booking one month ahead at 00:00 Japan time; listed October/November closures checked. Same-day cancellation charged in full."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://www.aoyama-florilege.jp/",
+            "name": "Florilège — Azabudai Hills",
+            "checkedAt": "2026-10-16",
+            "websiteUrl": "https://www.aoyama-florilege.jp/",
+            "phone": "03-6435-8018",
+            "openingHours": [
+              {
+                "days": "Lunch arrival",
+                "hours": "12:00–12:30"
+              },
+              {
+                "days": "Dinner arrival",
+                "hours": "18:00–18:30"
+              },
+              {
+                "days": "Regular closures",
+                "hours": "Sunday dinner, Monday all day, Tuesday lunch; additional published date closures"
+              }
+            ],
+            "detailsSourceUrl": "https://www.aoyama-florilege.jp/",
+            "additionalSources": [
+              {
+                "label": "Research evidence",
+                "url": "https://guide.michelin.com/gb/en/tokyo-region/tokyo/restaurant/florilege"
+              }
+            ],
+            "reservationUrl": "https://www.tablecheck.com/shops/florilege/reserve"
+          },
+          "tile": {
+            "regionSlug": "tokyo",
+            "kind": "top",
+            "slug": "florilege",
+            "name": "Florilège — Azabudai Hills",
+            "neighborhood": "Azabudai Hills",
+            "cuisine": "Plant-forward French",
+            "description": "Hiroyasu Kawate’s French restaurant serves a plant-forward tasting menu around a shared thirteen-metre table.",
+            "address": "2F Garden Plaza D, Azabudai Hills, 5-10-7 Toranomon, Minato-ku, Tokyo",
+            "websiteUrl": "https://www.aoyama-florilege.jp/",
+            "checkedAt": "2026-10-16",
+            "recognition": "MICHELIN Guide Tokyo 2026 selection; current operator lists two stars.",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-16/florilege-20-e20d5cbc7069e99e.webp",
+            "imageCredit": "Florilège",
+            "imageSourceUrl": "https://www.aoyama-florilege.jp/",
+            "imageNote": "Official Azabudai Hills restaurant gallery; no menu availability inferred."
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-16/florilege-20-e20d5cbc7069e99e.webp",
+          "sha256": "e20d5cbc7069e99e61e76d2f6b12e96a11f64fa93b0d6cfd71441de2d0af38ed",
+          "width": 720,
+          "height": 720,
+          "credit": "Florilège",
+          "note": "Official Azabudai Hills restaurant gallery; no menu availability inferred.",
+          "sourcePage": "https://www.aoyama-florilege.jp/"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-16/florilege-15-8206c5868da02b4b.webp",
+          "sha256": "8206c5868da02b4b30c9de5164698da72c2383abc0fc4b2826a9f3e5534b4f9d",
+          "width": 720,
+          "height": 720,
+          "credit": "Florilège",
+          "note": "Official Azabudai Hills restaurant gallery; no menu availability inferred.",
+          "sourcePage": "https://www.aoyama-florilege.jp/"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-16/florilege-16-c8e90affde0881d7.webp",
+          "sha256": "c8e90affde0881d7a65640c54613512060f20e8730465d19b347b96d62c3911d",
+          "width": 720,
+          "height": 720,
+          "credit": "Florilège",
+          "note": "Official Azabudai Hills restaurant gallery; no menu availability inferred.",
+          "sourcePage": "https://www.aoyama-florilege.jp/"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-16/florilege-21-9ceb2ea2779d2190.webp",
+          "sha256": "9ceb2ea2779d2190878da931c511881a656c408058eb412385b4c7f19a6cf6e5",
+          "width": 720,
+          "height": 720,
+          "credit": "Florilège",
+          "note": "Official Azabudai Hills restaurant gallery; no menu availability inferred.",
+          "sourcePage": "https://www.aoyama-florilege.jp/"
+        }
+      ],
+      "openingDateCorrection": {
+        "sourceUrl": "https://www.aoyama-florilege.jp/",
+        "day": "2023-11-24",
+        "confidence": "confirmed",
+        "precision": "day",
+        "reason": "Mori Building’s branch-specific Hills Life interview explicitly announces November 24, 2023 as the new Azabudai Hills restaurant’s opening, while identifying the earlier service as a pre-opening. The operator biography and Time Out separately document September 2023 pre-opening service. This pin uses the verified grand opening, with September pre-opening retained in the history; it does not reuse the 2009 South Aoyama founding or 2015 Jingumae move. October 16, 2026 was the research date, not this branch opening.",
+        "sources": [
+          [
+            "https://hillslife.jp/food/2023/10/30/a-masters-hand-has-a-new-home/",
+            "常に進化を続ける〈フロリレージュ〉川手シェフの次なる挑戦とは？"
+          ],
+          [
+            "https://www.aoyama-florilege.jp/?site=%5C%22",
+            "Restaurant Florilège — operator biography"
+          ],
+          [
+            "https://www.timeout.jp/tokyo/ja/news/florilege-renewal-122823",
+            "日本の野菜こそ世界で価値がある、麻布台ヒルズに移転したフロリレージュの進化とは"
+          ]
+        ],
+        "verified": {
+          "local": {
+            "pinId": 15974,
+            "sourceUrl": "https://www.aoyama-florilege.jp/",
+            "date": "2023-11-24",
+            "dateConfidence": "confirmed",
+            "authorId": 372,
+            "publicPinStatus": 200,
+            "authorPreserved": true
+          },
+          "production": {
+            "pinId": 15974,
+            "sourceUrl": "https://www.aoyama-florilege.jp/",
+            "date": "2023-11-24",
+            "dateConfidence": "confirmed",
+            "authorId": 372,
+            "publicPinStatus": 200,
+            "authorPreserved": true
+          }
+        }
+      }
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Torikage Isseki Sancho — Osaka Opens in Fukushima",
+        "description": "A forthcoming yakitori restaurant from Human Qreate brings two jidori-focused courses to Fukushima.",
+        "sourceUrl": "https://www.prdesse.com/posts/view/22526",
+        "address": "2F N3 Fukushima, 3-5-19 Fukushima, Fukushima-ku, Osaka",
+        "productName": "Torikage Isseki Sancho — Osaka",
+        "utcStartDateTime": "2026-10-22T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "October 14 operator release explicitly announces October 22, 2026 public opening; October 21 is media only. This current release supersedes older recruitment month estimates.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Osaka",
+          "Japan",
+          "Fukushima",
+          "Yakitori"
+        ],
+        "longFormSummary": "<p>A forthcoming yakitori restaurant from Human Qreate brings two jidori-focused courses to Fukushima.<cite data-ref=\"https://www.prdesse.com/posts/view/22526\"></cite></p><p>October 14 operator release explicitly announces October 22, 2026 public opening; October 21 is media only. This current release supersedes older recruitment month estimates.</p>",
+        "references": [
+          {
+            "url": "https://www.prdesse.com/posts/view/22526",
+            "title": "Torikage Isseki Sancho — Osaka source",
+            "confidence": 90,
+            "reasoning": "October 14 operator release explicitly announces October 22, 2026 public opening; October 21 is media only. This current release supersedes older recruitment month estimates."
+          },
+          {
+            "url": "https://osaka.style/news/pressrelease/77672/",
+            "title": "Torikage Isseki Sancho — Osaka source",
+            "confidence": 90,
+            "reasoning": "October 14 operator release explicitly announces October 22, 2026 public opening; October 21 is media only. This current release supersedes older recruitment month estimates."
+          },
+          {
+            "url": "https://job.inshokuten.com/kansai/work/detail/93468",
+            "title": "Torikage Isseki Sancho — Osaka source",
+            "confidence": 90,
+            "reasoning": "October 14 operator release explicitly announces October 22, 2026 public opening; October 21 is media only. This current release supersedes older recruitment month estimates."
+          },
+          {
+            "url": "https://humanqreate.com/",
+            "title": "Torikage Isseki Sancho — Osaka source",
+            "confidence": 90,
+            "reasoning": "October 14 operator release explicitly announces October 22, 2026 public opening; October 21 is media only. This current release supersedes older recruitment month estimates."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://www.prdesse.com/posts/view/22526",
+          "menu": {
+            "pinSourceUrl": "https://www.prdesse.com/posts/view/22526",
+            "name": "Torikage Isseki Sancho — Osaka",
+            "checkedAt": "2026-10-16",
+            "menus": [
+              {
+                "label": "Torikage Osaka launch courses",
+                "url": "https://www.prdesse.com/posts/view/22526",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Omakase course",
+                    "price": 8800
+                  },
+                  {
+                    "name": "Appetizer",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Omakase course; no separate item price published"
+                  },
+                  {
+                    "name": "Tsukimi tsukune",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Omakase course; no separate item price published"
+                  },
+                  {
+                    "name": "Jidori chicken skewers",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Omakase course; no separate item price published"
+                  },
+                  {
+                    "name": "Grilled vegetables",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Omakase course; no separate item price published"
+                  },
+                  {
+                    "name": "Dessert",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Omakase course; no separate item price published"
+                  },
+                  {
+                    "name": "VIP course",
+                    "price": 12800
+                  },
+                  {
+                    "name": "Appetizer",
+                    "priceLabel": "Price not published",
+                    "note": "Included in VIP course; no separate item price published"
+                  },
+                  {
+                    "name": "Tsukimi tsukune",
+                    "priceLabel": "Price not published",
+                    "note": "Included in VIP course; no separate item price published"
+                  },
+                  {
+                    "name": "Jidori chicken skewers",
+                    "priceLabel": "Price not published",
+                    "note": "Included in VIP course; no separate item price published"
+                  },
+                  {
+                    "name": "Grilled vegetables",
+                    "priceLabel": "Price not published",
+                    "note": "Included in VIP course; no separate item price published"
+                  },
+                  {
+                    "name": "Fried specialty",
+                    "priceLabel": "Price not published",
+                    "note": "Included in VIP course; no separate item price published"
+                  },
+                  {
+                    "name": "Dessert",
+                    "priceLabel": "Price not published",
+                    "note": "Included in VIP course; no separate item price published"
+                  }
+                ],
+                "note": "Tax included. Exact Osaka launch release, operator site, current exact employer/branch listings and release photo gallery checked. Drinks are selected seasonal sake; labels and prices not published. No Shibuya dish/pricing or upstairs Wagyu/Sushi Yutaka menu borrowed. October 21 media tasting is not public opening. Regular Thursday closure conflicts with opening Thursday October 22: retain the explicit launch as an exception and confirm later Thursday service. Phone scheduled to activate October 16; not dial-verified. Completed own dining-room gallery not published; food images are exact launch promotions."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://www.prdesse.com/posts/view/22526",
+            "name": "Torikage Isseki Sancho — Osaka",
+            "checkedAt": "2026-10-16",
+            "websiteUrl": "https://humanqreate.com/",
+            "phone": "080-4678-3367",
+            "openingHours": [
+              {
+                "days": "Announced dinner",
+                "hours": "17:00–23:00; Thursday regular closure, October 22 launch exception announced"
+              }
+            ],
+            "detailsSourceUrl": "https://humanqreate.com/",
+            "additionalSources": [
+              {
+                "label": "Research evidence",
+                "url": "https://www.prdesse.com/posts/view/22526"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://osaka.style/news/pressrelease/77672/"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://job.inshokuten.com/kansai/work/detail/93468"
+              }
+            ]
+          },
+          "tile": {
+            "regionSlug": "osaka",
+            "kind": "opening",
+            "slug": "torikage-pr",
+            "name": "Torikage Isseki Sancho — Osaka",
+            "neighborhood": "Fukushima",
+            "cuisine": "Yakitori",
+            "description": "A forthcoming yakitori restaurant from Human Qreate brings two jidori-focused courses to Fukushima.",
+            "address": "2F N3 Fukushima, 3-5-19 Fukushima, Fukushima-ku, Osaka",
+            "websiteUrl": "https://humanqreate.com/",
+            "checkedAt": "2026-10-16",
+            "recognition": "",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-16/torikage-pr-8-84061d9a80123360.webp",
+            "imageCredit": "Human Qreate / 一石三鳥グループ",
+            "imageSourceUrl": "https://www.prdesse.com/posts/view/22526",
+            "imageNote": "Operator exact Osaka launch promotional yakitori photograph; not a completed-venue photograph and cuts not inferred.",
+            "openingConfirmed": true,
+            "day": "2026-10-22"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-16/torikage-pr-8-84061d9a80123360.webp",
+          "sha256": "84061d9a8012336089fefd1288f1a00951bba29ddd18eee9e3836a954814dc0b",
+          "width": 600,
+          "height": 400,
+          "credit": "Human Qreate / 一石三鳥グループ",
+          "note": "Operator exact Osaka launch promotional yakitori photograph; not a completed-venue photograph and cuts not inferred.",
+          "sourcePage": "https://www.prdesse.com/posts/view/22526"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-16/torikage-pr-9-bee6915e0a5f79ea.webp",
+          "sha256": "bee6915e0a5f79ea51b53badbbaf0268e772cd578145c3fa29d0dc9749f16139",
+          "width": 180,
+          "height": 119,
+          "credit": "Human Qreate / 一石三鳥グループ",
+          "note": "Operator exact Osaka launch promotional yakitori photograph; not a completed-venue photograph and cuts not inferred.",
+          "sourcePage": "https://www.prdesse.com/posts/view/22526"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-16/torikage-pr-10-4d8520c274f24006.webp",
+          "sha256": "4d8520c274f240068bbe8f7719fca1eb05a758e2ae37139baff69b2c756642c6",
+          "width": 180,
+          "height": 119,
+          "credit": "Human Qreate / 一石三鳥グループ",
+          "note": "Operator exact Osaka launch promotional yakitori photograph; not a completed-venue photograph and cuts not inferred.",
+          "sourcePage": "https://www.prdesse.com/posts/view/22526"
+        }
+      ]
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Kyoto Obuya — Kyoto Station — Kyoto restaurant guide",
+        "description": "An established Kyoto Isetan venue with a verified seasonal menu: Kyoto beef and Kujo-leek chazuke.",
+        "sourceUrl": "https://www.kyoto-station-building.co.jp/restaurant_cafe/040/",
+        "address": "JR west gate restaurant zone, JR Kyoto Isetan, 901 Higashishiokoji-cho, Shimogyo-ku, Kyoto",
+        "productName": "Kyoto Obuya — Kyoto Station",
+        "utcStartDateTime": "2022-08-31T00:00:00.000Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "The operator’s August 23, 2022 announcement explicitly dates Kyoto Obuya Kyoto Station’s opening to August 31, 2022 after relocation from Nishiki. The former Nishiki venue opened in 2020; this pin represents the Kyoto Station branch.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Special",
+          "Kyoto",
+          "Japan",
+          "Dashi chazuke"
+        ],
+        "longFormSummary": "<p>An established Kyoto Isetan venue with a verified seasonal menu: Kyoto beef and Kujo-leek chazuke.<cite data-ref=\"https://www.kyoto-station-building.co.jp/restaurant_cafe/040/\"></cite></p><p>Opening history: The operator’s August 23, 2022 announcement explicitly dates Kyoto Obuya Kyoto Station’s opening to August 31, 2022 after relocation from Nishiki. The former Nishiki venue opened in 2020; this pin represents the Kyoto Station branch.<cite data-ref=\"https://www.kyoto-obuya.jp/posts/36907385?categoryIds=4078140\"></cite></p>",
+        "references": [
+          {
+            "url": "https://www.kyoto-station-building.co.jp/restaurant_cafe/040/",
+            "title": "Kyoto Obuya — Kyoto Station source",
+            "confidence": 90,
+            "reasoning": "Supports the restaurant/menu content; opening history is documented separately."
+          },
+          {
+            "url": "https://www.mistore.jp/store/kyoto/shops/restaurant/restaurantnews/shopnews_list/2026_fall_kyoto.html",
+            "title": "Kyoto Obuya — Kyoto Station source",
+            "confidence": 90,
+            "reasoning": "Supports the restaurant/menu content; opening history is documented separately."
+          },
+          {
+            "url": "https://www.kyoto-obuya.jp/posts/36907385?categoryIds=4078140",
+            "title": "8月31日、京都おぶや 京都駅店 OPEN!",
+            "confidence": 100,
+            "reasoning": "The operator’s August 23, 2022 announcement explicitly dates Kyoto Obuya Kyoto Station’s opening to August 31, 2022 after relocation from Nishiki. The former Nishiki venue opened in 2020; this pin represents the Kyoto Station branch."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://www.kyoto-station-building.co.jp/restaurant_cafe/040/",
+          "menu": {
+            "pinSourceUrl": "https://www.kyoto-station-building.co.jp/restaurant_cafe/040/",
+            "name": "Kyoto Obuya — Kyoto Station",
+            "checkedAt": "2026-10-16",
+            "menus": [
+              {
+                "label": "Kyoto Isetan autumn — Kyoto beef and Kujo-leek chazuke",
+                "url": "https://www.mistore.jp/store/kyoto/shops/restaurant/restaurantnews/shopnews_list/2026_fall_kyoto.html",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Kyoto beef and Kujo-leek chazuke",
+                    "price": 1800
+                  }
+                ],
+                "note": "Tax included. October 1–31, 2026. Sweet-savoury Kameoka beef and Kujo leeks; exact Kyoto Station branch. Exact dated landlord menu and current station operator branch/gallery checked. Separate ordinary food roster remains a research gap; no regular dishes assigned to this offer. Department-store original image downloads failed; verified exact-branch station-directory image used with clear archived-image caption."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://www.kyoto-station-building.co.jp/restaurant_cafe/040/",
+            "name": "Kyoto Obuya — Kyoto Station",
+            "checkedAt": "2026-10-16",
+            "websiteUrl": "https://www.kyoto-station-building.co.jp/restaurant_cafe/040/",
+            "phone": "075-708-5889",
+            "openingHours": [],
+            "detailsSourceUrl": "https://www.kyoto-station-building.co.jp/restaurant_cafe/040/",
+            "additionalSources": [
+              {
+                "label": "Research evidence",
+                "url": "https://www.mistore.jp/store/kyoto/shops/restaurant/restaurantnews/shopnews_list/2026_fall_kyoto.html"
+              }
+            ]
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-16/obuya-87-ed6d24c539a9c82b.webp",
+          "sha256": "ed6d24c539a9c82b31d2b83fdb11a051a80f374aa8ef130f883f5b7c4041f4a8",
+          "width": 1378,
+          "height": 919,
+          "credit": "Kyoto Station Building",
+          "note": "Exact Kyoto Isetan branch directory promotional food image; archived image, not evidence of current autumn dish availability.",
+          "sourcePage": "https://www.kyoto-station-building.co.jp/restaurant_cafe/"
+        }
+      ],
+      "special": {
+        "regionSlug": "kyoto",
+        "profile": {
+          "pinSourceUrl": "https://www.kyoto-station-building.co.jp/restaurant_cafe/040/",
+          "name": "Kyoto Obuya — Kyoto Station",
+          "checkedAt": "2026-10-16",
+          "menus": [
+            {
+              "label": "Kyoto Isetan autumn — Kyoto beef and Kujo-leek chazuke",
+              "url": "https://www.mistore.jp/store/kyoto/shops/restaurant/restaurantnews/shopnews_list/2026_fall_kyoto.html",
+              "currency": "JPY",
+              "coverage": "sample",
+              "items": [
+                {
+                  "name": "Kyoto beef and Kujo-leek chazuke",
+                  "price": 1800
+                }
+              ],
+              "note": "Tax included. October 1–31, 2026. Sweet-savoury Kameoka beef and Kujo leeks; exact Kyoto Station branch. Exact dated landlord menu and current station operator branch/gallery checked. Separate ordinary food roster remains a research gap; no regular dishes assigned to this offer. Department-store original image downloads failed; verified exact-branch station-directory image used with clear archived-image caption."
+            }
+          ],
+          "specials": [
+            {
+              "title": "Kyoto beef and Kujo-leek chazuke",
+              "kind": "other",
+              "description": "Kyoto beef and Kujo-leek chazuke — ¥1,800 including tax.",
+              "sourceUrl": "https://www.mistore.jp/store/kyoto/shops/restaurant/restaurantnews/shopnews_list/2026_fall_kyoto.html",
+              "menuLabel": "Kyoto Isetan autumn — Kyoto beef and Kujo-leek chazuke",
+              "discounted": false,
+              "validFrom": "2026-10-01",
+              "validThrough": "2026-10-31",
+              "schedule": "Japan local time; see conditions",
+              "conditions": [
+                "Sweet-savoury Kameoka beef and Kujo leeks; exact Kyoto Station branch.",
+                "Subject to sellout and ingredient changes."
+              ],
+              "availability": {
+                "windows": [
+                  {
+                    "days": [
+                      0,
+                      1,
+                      2,
+                      3,
+                      4,
+                      5,
+                      6
+                    ],
+                    "start": "11:00",
+                    "end": "21:15"
+                  }
+                ]
+              },
+              "limitedTime": true
+            }
+          ],
+          "address": "JR west gate restaurant zone, JR Kyoto Isetan, 901 Higashishiokoji-cho, Shimogyo-ku, Kyoto",
+          "neighborhood": "Kyoto Station",
+          "websiteUrl": "https://www.kyoto-station-building.co.jp/restaurant_cafe/040/",
+          "photo": {
+            "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-16/obuya-87-ed6d24c539a9c82b.webp",
+            "alt": "Kyoto Obuya — Kyoto Station — Exact Kyoto Isetan branch directory promotional food image; archived image, not evidence of current autumn dish availability.",
+            "credit": "Kyoto Station Building",
+            "sourceUrl": "https://www.kyoto-station-building.co.jp/restaurant_cafe/",
+            "originalUrl": "https://www.kyoto-station-building.co.jp/app/uploads/2025/02/img_obuya-2.jpg",
+            "checkedAt": "2026-10-16"
+          }
+        },
+        "enabled": true
+      },
+      "openingDateCorrection": {
+        "sourceUrl": "https://www.kyoto-station-building.co.jp/restaurant_cafe/040/",
+        "day": "2022-08-31",
+        "confidence": "confirmed",
+        "reason": "The operator’s August 23, 2022 announcement explicitly dates Kyoto Obuya Kyoto Station’s opening to August 31, 2022 after relocation from Nishiki. The former Nishiki venue opened in 2020; this pin represents the Kyoto Station branch.",
+        "sources": [
+          [
+            "https://www.kyoto-obuya.jp/posts/36907385?categoryIds=4078140",
+            "8月31日、京都おぶや 京都駅店 OPEN!"
+          ]
+        ],
+        "verified": {
+          "local": {
+            "pinId": 17081,
+            "sourceUrl": "https://www.kyoto-station-building.co.jp/restaurant_cafe/040/",
+            "date": "2022-08-31",
+            "dateConfidence": "confirmed",
+            "authorPreserved": true
+          },
+          "production": {
+            "pinId": 15976,
+            "sourceUrl": "https://www.kyoto-station-building.co.jp/restaurant_cafe/040/",
+            "date": "2022-08-31",
+            "dateConfidence": "confirmed",
+            "authorPreserved": true
+          }
+        }
+      }
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Ichiba Koji — Kyoto Isetan — Kyoto restaurant guide",
+        "description": "An established Kyoto Isetan venue with a verified seasonal menu: Kyoto duck sukiyaki.",
+        "sourceUrl": "https://www.kyoto-station-building.co.jp/restaurant_cafe/028/",
+        "address": "9F JR Kyoto Isetan, 901 Higashishiokoji-cho, Shimogyo-ku, Kyoto",
+        "productName": "Ichiba Koji — Kyoto Isetan",
+        "utcStartDateTime": "1997-09-11T00:00:00.000Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "Star Shokudo’s operator history explicitly lists Ichiba Koji JR Kyoto Isetan’s opening on September 11, 1997, in the ninth-floor open-view restaurant space.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Special",
+          "Kyoto",
+          "Japan",
+          "Japanese / beer restaurant"
+        ],
+        "longFormSummary": "<p>An established Kyoto Isetan venue with a verified seasonal menu: Kyoto duck sukiyaki.<cite data-ref=\"https://www.kyoto-station-building.co.jp/restaurant_cafe/028/\"></cite></p><p>Opening history: Star Shokudo’s operator history explicitly lists Ichiba Koji JR Kyoto Isetan’s opening on September 11, 1997, in the ninth-floor open-view restaurant space.<cite data-ref=\"https://www.star-kyoto.co.jp/about/history/\"></cite></p>",
+        "references": [
+          {
+            "url": "https://www.kyoto-station-building.co.jp/restaurant_cafe/028/",
+            "title": "Ichiba Koji — Kyoto Isetan source",
+            "confidence": 90,
+            "reasoning": "Supports the restaurant/menu content; opening history is documented separately."
+          },
+          {
+            "url": "https://www.mistore.jp/store/kyoto/shops/restaurant/restaurantnews/shopnews_list/2026_fall_kyoto.html",
+            "title": "Ichiba Koji — Kyoto Isetan source",
+            "confidence": 90,
+            "reasoning": "Supports the restaurant/menu content; opening history is documented separately."
+          },
+          {
+            "url": "https://www.star-kyoto.co.jp/about/history/",
+            "title": "スター食堂の歴史",
+            "confidence": 100,
+            "reasoning": "Star Shokudo’s operator history explicitly lists Ichiba Koji JR Kyoto Isetan’s opening on September 11, 1997, in the ninth-floor open-view restaurant space."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://www.kyoto-station-building.co.jp/restaurant_cafe/028/",
+          "menu": {
+            "pinSourceUrl": "https://www.kyoto-station-building.co.jp/restaurant_cafe/028/",
+            "name": "Ichiba Koji — Kyoto Isetan",
+            "checkedAt": "2026-10-16",
+            "menus": [
+              {
+                "label": "Kyoto Isetan autumn — Kyoto duck sukiyaki",
+                "url": "https://www.mistore.jp/store/kyoto/shops/restaurant/restaurantnews/shopnews_list/2026_fall_kyoto.html",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Kyoto duck sukiyaki",
+                    "price": 2860
+                  }
+                ],
+                "note": "Tax included. October 1–31, 2026. Price per diner; minimum order for two diners. Kyoto duck and local egg. Weekday starts 17:00; weekends/holidays 15:00; ordering stops 22:00. Exact dated landlord menu and current station operator branch/gallery checked. Separate ordinary food roster remains a research gap; no regular dishes assigned to this offer. Department-store original image downloads failed; verified exact-branch station-directory image used with clear archived-image caption."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://www.kyoto-station-building.co.jp/restaurant_cafe/028/",
+            "name": "Ichiba Koji — Kyoto Isetan",
+            "checkedAt": "2026-10-16",
+            "websiteUrl": "https://www.kyoto-station-building.co.jp/restaurant_cafe/028/",
+            "phone": "075-365-3388",
+            "openingHours": [],
+            "detailsSourceUrl": "https://www.kyoto-station-building.co.jp/restaurant_cafe/028/",
+            "additionalSources": [
+              {
+                "label": "Research evidence",
+                "url": "https://www.mistore.jp/store/kyoto/shops/restaurant/restaurantnews/shopnews_list/2026_fall_kyoto.html"
+              }
+            ]
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-16/ichiba-103-45880112300e217b.webp",
+          "sha256": "45880112300e217b0c1b6e06dd59bee797f2ee8ae5b1406d7602df5f168a79f6",
+          "width": 1378,
+          "height": 919,
+          "credit": "Kyoto Station Building",
+          "note": "Exact Kyoto Isetan branch directory promotional food image; archived image, not evidence of current autumn dish availability.",
+          "sourcePage": "https://www.kyoto-station-building.co.jp/restaurant_cafe/"
+        }
+      ],
+      "special": {
+        "regionSlug": "kyoto",
+        "profile": {
+          "pinSourceUrl": "https://www.kyoto-station-building.co.jp/restaurant_cafe/028/",
+          "name": "Ichiba Koji — Kyoto Isetan",
+          "checkedAt": "2026-10-16",
+          "menus": [
+            {
+              "label": "Kyoto Isetan autumn — Kyoto duck sukiyaki",
+              "url": "https://www.mistore.jp/store/kyoto/shops/restaurant/restaurantnews/shopnews_list/2026_fall_kyoto.html",
+              "currency": "JPY",
+              "coverage": "sample",
+              "items": [
+                {
+                  "name": "Kyoto duck sukiyaki",
+                  "price": 2860
+                }
+              ],
+              "note": "Tax included. October 1–31, 2026. Price per diner; minimum order for two diners. Kyoto duck and local egg. Weekday starts 17:00; weekends/holidays 15:00; ordering stops 22:00. Exact dated landlord menu and current station operator branch/gallery checked. Separate ordinary food roster remains a research gap; no regular dishes assigned to this offer. Department-store original image downloads failed; verified exact-branch station-directory image used with clear archived-image caption."
+            }
+          ],
+          "specials": [
+            {
+              "title": "Kyoto duck sukiyaki",
+              "kind": "other",
+              "description": "Kyoto duck sukiyaki — ¥2,860 including tax.",
+              "sourceUrl": "https://www.mistore.jp/store/kyoto/shops/restaurant/restaurantnews/shopnews_list/2026_fall_kyoto.html",
+              "menuLabel": "Kyoto Isetan autumn — Kyoto duck sukiyaki",
+              "discounted": false,
+              "validFrom": "2026-10-01",
+              "validThrough": "2026-10-31",
+              "schedule": "Japan local time; see conditions",
+              "conditions": [
+                "Price per diner; minimum order for two diners. Kyoto duck and local egg. Weekday starts 17:00; weekends/holidays 15:00; ordering stops 22:00.",
+                "Subject to sellout and ingredient changes.",
+                "October 12 holiday uses 15:00 service; excluded from recurring weekday schedule. No remaining Japan national holidays before October 31."
+              ],
+              "availability": {
+                "windows": [
+                  {
+                    "days": [
+                      1,
+                      2,
+                      3,
+                      4,
+                      5
+                    ],
+                    "start": "17:00",
+                    "end": "22:00"
+                  },
+                  {
+                    "days": [
+                      0,
+                      6
+                    ],
+                    "start": "15:00",
+                    "end": "22:00"
+                  }
+                ],
+                "excludedDates": [
+                  "2026-10-12"
+                ]
+              },
+              "limitedTime": true
+            }
+          ],
+          "address": "9F JR Kyoto Isetan, 901 Higashishiokoji-cho, Shimogyo-ku, Kyoto",
+          "neighborhood": "Kyoto Station",
+          "websiteUrl": "https://www.kyoto-station-building.co.jp/restaurant_cafe/028/",
+          "photo": {
+            "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-16/ichiba-103-45880112300e217b.webp",
+            "alt": "Ichiba Koji — Kyoto Isetan — Exact Kyoto Isetan branch directory promotional food image; archived image, not evidence of current autumn dish availability.",
+            "credit": "Kyoto Station Building",
+            "sourceUrl": "https://www.kyoto-station-building.co.jp/restaurant_cafe/",
+            "originalUrl": "https://www.kyoto-station-building.co.jp/app/uploads/2025/02/img_ichibakoji-1.jpg",
+            "checkedAt": "2026-10-16"
+          }
+        },
+        "enabled": true
+      },
+      "openingDateCorrection": {
+        "sourceUrl": "https://www.kyoto-station-building.co.jp/restaurant_cafe/028/",
+        "day": "1997-09-11",
+        "confidence": "confirmed",
+        "reason": "Star Shokudo’s operator history explicitly lists Ichiba Koji JR Kyoto Isetan’s opening on September 11, 1997, in the ninth-floor open-view restaurant space.",
+        "sources": [
+          [
+            "https://www.star-kyoto.co.jp/about/history/",
+            "スター食堂の歴史"
+          ]
+        ],
+        "verified": {
+          "local": {
+            "pinId": 17082,
+            "sourceUrl": "https://www.kyoto-station-building.co.jp/restaurant_cafe/028/",
+            "date": "1997-09-11",
+            "dateConfidence": "confirmed",
+            "authorPreserved": true
+          },
+          "production": {
+            "pinId": 15977,
+            "sourceUrl": "https://www.kyoto-station-building.co.jp/restaurant_cafe/028/",
+            "date": "1997-09-11",
+            "dateConfidence": "confirmed",
+            "authorPreserved": true
+          }
+        }
+      }
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Salon de Thé Fauchon — Fauchon Hotel Kyoto — Kyoto restaurant guide",
+        "description": "The hotel’s dedicated tea salon offers an October Halloween afternoon tea followed by a separately announced November anniversary menu.",
+        "sourceUrl": "https://hotelfauchonkyoto.com/ja/gourmet/fauchon-salon-de-the-kyoto/",
+        "address": "Fauchon Hotel Kyoto, 406 Namba-cho, Shimogyo-ku, Kyoto",
+        "productName": "Salon de Thé Fauchon — Fauchon Hotel Kyoto",
+        "utcStartDateTime": "2021-03-16T00:00:00.000Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "The operator’s March 16, 2021 grand-opening release describes the hotel’s newly opened second-floor Salon de Thé Fauchon, including its room, hours and afternoon tea. October and November 2026 are offer dates, not this restaurant’s opening date.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Special",
+          "Kyoto",
+          "Japan",
+          "Afternoon Tea"
+        ],
+        "longFormSummary": "<p>The hotel’s dedicated tea salon offers an October Halloween afternoon tea followed by a separately announced November anniversary menu.<cite data-ref=\"https://hotelfauchonkyoto.com/ja/gourmet/fauchon-salon-de-the-kyoto/\"></cite></p><p>Opening history: The operator’s March 16, 2021 grand-opening release describes the hotel’s newly opened second-floor Salon de Thé Fauchon, including its room, hours and afternoon tea. October and November 2026 are offer dates, not this restaurant’s opening date.<cite data-ref=\"https://prtimes.jp/main/html/rd/p/000000004.000069488.html\"></cite></p>",
+        "references": [
+          {
+            "url": "https://hotelfauchonkyoto.com/ja/gourmet/fauchon-salon-de-the-kyoto/",
+            "title": "Salon de Thé Fauchon — Fauchon Hotel Kyoto source",
+            "confidence": 90,
+            "reasoning": "Supports the restaurant/menu content; opening history is documented separately."
+          },
+          {
+            "url": "https://hotelfauchonkyoto.com/post-4589/",
+            "title": "Salon de Thé Fauchon — Fauchon Hotel Kyoto source",
+            "confidence": 90,
+            "reasoning": "Supports the restaurant/menu content; opening history is documented separately."
+          },
+          {
+            "url": "https://prtimes.jp/main/html/rd/p/000000098.000069488.html",
+            "title": "Salon de Thé Fauchon — Fauchon Hotel Kyoto source",
+            "confidence": 90,
+            "reasoning": "Supports the restaurant/menu content; opening history is documented separately."
+          },
+          {
+            "url": "https://prtimes.jp/main/html/rd/p/000000004.000069488.html",
+            "title": "フォションホテル京都 — March 16, 2021 grand opening",
+            "confidence": 100,
+            "reasoning": "The operator’s March 16, 2021 grand-opening release describes the hotel’s newly opened second-floor Salon de Thé Fauchon, including its room, hours and afternoon tea. October and November 2026 are offer dates, not this restaurant’s opening date."
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://hotelfauchonkyoto.com/ja/gourmet/fauchon-salon-de-the-kyoto/",
+          "menu": {
+            "pinSourceUrl": "https://hotelfauchonkyoto.com/ja/gourmet/fauchon-salon-de-the-kyoto/",
+            "name": "Salon de Thé Fauchon — Fauchon Hotel Kyoto",
+            "checkedAt": "2026-10-16",
+            "menus": [
+              {
+                "label": "Gothic Lovely Halloween afternoon tea",
+                "url": "https://hotelfauchonkyoto.com/post-4589/",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Weekday afternoon tea",
+                    "price": 7000
+                  },
+                  {
+                    "name": "Weekend/holiday afternoon tea",
+                    "price": 7500
+                  },
+                  {
+                    "name": "Special welcome tea brewed with Sennensui",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Gothic Lovely Halloween afternoon tea; no separate item price published"
+                  },
+                  {
+                    "name": "Halloween macaron",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Gothic Lovely Halloween afternoon tea; no separate item price published"
+                  },
+                  {
+                    "name": "Pumpkin canele",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Gothic Lovely Halloween afternoon tea; no separate item price published"
+                  },
+                  {
+                    "name": "Pear-jam and vanilla ghost guimauve",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Gothic Lovely Halloween afternoon tea; no separate item price published"
+                  },
+                  {
+                    "name": "Cassis-cherry roll with chestnut cream",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Gothic Lovely Halloween afternoon tea; no separate item price published"
+                  },
+                  {
+                    "name": "Vanilla mousse with red wine and fig",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Gothic Lovely Halloween afternoon tea; no separate item price published"
+                  },
+                  {
+                    "name": "Kyoho grape jelly",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Gothic Lovely Halloween afternoon tea; no separate item price published"
+                  },
+                  {
+                    "name": "Brownie and raspberry parfait with Fauchon tea ice cream",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Gothic Lovely Halloween afternoon tea; no separate item price published"
+                  },
+                  {
+                    "name": "Mushroom tartlet",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Gothic Lovely Halloween afternoon tea; no separate item price published"
+                  },
+                  {
+                    "name": "Pumpkin savoury cake",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Gothic Lovely Halloween afternoon tea; no separate item price published"
+                  },
+                  {
+                    "name": "Smoked-salmon and quail blini",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Gothic Lovely Halloween afternoon tea; no separate item price published"
+                  },
+                  {
+                    "name": "Beet potage",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Gothic Lovely Halloween afternoon tea; no separate item price published"
+                  },
+                  {
+                    "name": "Roast-beef and purple-cabbage open sandwich",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Gothic Lovely Halloween afternoon tea; no separate item price published"
+                  },
+                  {
+                    "name": "Plain scone",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Gothic Lovely Halloween afternoon tea; no separate item price published"
+                  },
+                  {
+                    "name": "Sweet-potato scone",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Gothic Lovely Halloween afternoon tea; no separate item price published"
+                  },
+                  {
+                    "name": "Free-flow Fauchon tea, fruit juice and coffee",
+                    "priceLabel": "Price not published",
+                    "note": "Included in Gothic Lovely Halloween afternoon tea; no separate item price published"
+                  }
+                ],
+                "note": "Exact Salon de Thé Fauchon Kyoto menu. Tax and service included. Two-hour reserved visit; advance booking required. Weekday ¥7,000 / weekend-holiday ¥7,500. Three announced sessions at 11:00, 14:00 and 17:00; last arrival 17:00. Hotel in-room accommodation package and Grand Café menu are separate; no hotel-wide rating transferred."
+              },
+              {
+                "label": "140 Years Afternoon Tea",
+                "url": "https://prtimes.jp/main/html/rd/p/000000098.000069488.html",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Weekday afternoon tea",
+                    "price": 7000
+                  },
+                  {
+                    "name": "Weekend/holiday afternoon tea",
+                    "price": 7500
+                  },
+                  {
+                    "name": "Special welcome tea brewed with Sennensui",
+                    "priceLabel": "Price not published",
+                    "note": "Included in 140 Years Afternoon Tea; no separate item price published"
+                  },
+                  {
+                    "name": "Saint-Marc",
+                    "priceLabel": "Price not published",
+                    "note": "Included in 140 Years Afternoon Tea; no separate item price published"
+                  },
+                  {
+                    "name": "Cherry Bisou Bisou",
+                    "priceLabel": "Price not published",
+                    "note": "Included in 140 Years Afternoon Tea; no separate item price published"
+                  },
+                  {
+                    "name": "Earl Grey canele",
+                    "priceLabel": "Price not published",
+                    "note": "Included in 140 Years Afternoon Tea; no separate item price published"
+                  },
+                  {
+                    "name": "Apple-tea jelly crumble",
+                    "priceLabel": "Price not published",
+                    "note": "Included in 140 Years Afternoon Tea; no separate item price published"
+                  },
+                  {
+                    "name": "Rose-raspberry sweet",
+                    "priceLabel": "Price not published",
+                    "note": "Included in 140 Years Afternoon Tea; no separate item price published"
+                  },
+                  {
+                    "name": "Gianduja tart",
+                    "priceLabel": "Price not published",
+                    "note": "Included in 140 Years Afternoon Tea; no separate item price published"
+                  },
+                  {
+                    "name": "Mont Blanc",
+                    "priceLabel": "Price not published",
+                    "note": "Included in 140 Years Afternoon Tea; no separate item price published"
+                  },
+                  {
+                    "name": "Cep and chestnut tartlet",
+                    "priceLabel": "Price not published",
+                    "note": "Included in 140 Years Afternoon Tea; no separate item price published"
+                  },
+                  {
+                    "name": "Prosciutto rillette",
+                    "priceLabel": "Price not published",
+                    "note": "Included in 140 Years Afternoon Tea; no separate item price published"
+                  },
+                  {
+                    "name": "Fauchon-style oeuf mayonnaise",
+                    "priceLabel": "Price not published",
+                    "note": "Included in 140 Years Afternoon Tea; no separate item price published"
+                  },
+                  {
+                    "name": "Lobster and celeriac puree",
+                    "priceLabel": "Price not published",
+                    "note": "Included in 140 Years Afternoon Tea; no separate item price published"
+                  },
+                  {
+                    "name": "Brie de Meaux sandwich",
+                    "priceLabel": "Price not published",
+                    "note": "Included in 140 Years Afternoon Tea; no separate item price published"
+                  },
+                  {
+                    "name": "Plain scone",
+                    "priceLabel": "Price not published",
+                    "note": "Included in 140 Years Afternoon Tea; no separate item price published"
+                  },
+                  {
+                    "name": "Sweet-potato scone",
+                    "priceLabel": "Price not published",
+                    "note": "Included in 140 Years Afternoon Tea; no separate item price published"
+                  },
+                  {
+                    "name": "Free-flow Fauchon tea, fruit juice and coffee",
+                    "priceLabel": "Price not published",
+                    "note": "Included in 140 Years Afternoon Tea; no separate item price published"
+                  }
+                ],
+                "note": "Exact Salon de Thé Fauchon Kyoto menu. Tax and service included. Two-hour reserved visit; advance booking required. Weekday ¥7,000 / weekend-holiday ¥7,500. November release lists evening room hours 17:00–22:00, last admission 19:00; ordering/arrival window conservatively ends at 19:00, not room closure. Generic salon homepage still gives 19:00 close; use dated plan booking details. Hotel in-room accommodation package and Grand Café menu are separate; no hotel-wide rating transferred."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://hotelfauchonkyoto.com/ja/gourmet/fauchon-salon-de-the-kyoto/",
+            "name": "Salon de Thé Fauchon — Fauchon Hotel Kyoto",
+            "checkedAt": "2026-10-16",
+            "websiteUrl": "https://hotelfauchonkyoto.com/ja/gourmet/fauchon-salon-de-the-kyoto/",
+            "phone": "075-751-7711",
+            "openingHours": [],
+            "detailsSourceUrl": "https://hotelfauchonkyoto.com/ja/gourmet/fauchon-salon-de-the-kyoto/",
+            "additionalSources": [
+              {
+                "label": "Research evidence",
+                "url": "https://hotelfauchonkyoto.com/post-4589/"
+              },
+              {
+                "label": "Research evidence",
+                "url": "https://prtimes.jp/main/html/rd/p/000000098.000069488.html"
+              }
+            ],
+            "reservationUrl": "https://res-reserve.com/ja/restaurants/fauchon-salon-de-the-kyoto"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-16/fauchon-4-62244bf88d593ab2.webp",
+          "sha256": "62244bf88d593ab28d1c321b3f146dbcf600f03ed1289a632d7fe52d23f3a22e",
+          "width": 1600,
+          "height": 1067,
+          "credit": "Fauchon Hotel Kyoto",
+          "note": "Official Salon de Thé Fauchon interior photograph, not Grand Café or hotel guest room.",
+          "sourcePage": "https://hotelfauchonkyoto.com/ja/gourmet/fauchon-salon-de-the-kyoto/"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-16/fauchon-18-ba19150f524f5ec4.webp",
+          "sha256": "ba19150f524f5ec42231603b61ef47c2ac4ec46c5fe1dd031d9017e24a15157f",
+          "width": 1600,
+          "height": 1067,
+          "credit": "Fauchon Hotel Kyoto",
+          "note": "October 2026 Gothic Lovely Halloween afternoon tea promotional image; exact dated menu, not another season.",
+          "sourcePage": "https://hotelfauchonkyoto.com/post-4589/"
+        }
+      ],
+      "special": {
+        "regionSlug": "kyoto",
+        "profile": {
+          "pinSourceUrl": "https://hotelfauchonkyoto.com/ja/gourmet/fauchon-salon-de-the-kyoto/",
+          "name": "Salon de Thé Fauchon — Fauchon Hotel Kyoto",
+          "checkedAt": "2026-10-16",
+          "menus": [
+            {
+              "label": "Gothic Lovely Halloween afternoon tea",
+              "url": "https://hotelfauchonkyoto.com/post-4589/",
+              "currency": "JPY",
+              "coverage": "sample",
+              "items": [
+                {
+                  "name": "Weekday afternoon tea",
+                  "price": 7000
+                },
+                {
+                  "name": "Weekend/holiday afternoon tea",
+                  "price": 7500
+                },
+                {
+                  "name": "Special welcome tea brewed with Sennensui",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Gothic Lovely Halloween afternoon tea; no separate item price published"
+                },
+                {
+                  "name": "Halloween macaron",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Gothic Lovely Halloween afternoon tea; no separate item price published"
+                },
+                {
+                  "name": "Pumpkin canele",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Gothic Lovely Halloween afternoon tea; no separate item price published"
+                },
+                {
+                  "name": "Pear-jam and vanilla ghost guimauve",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Gothic Lovely Halloween afternoon tea; no separate item price published"
+                },
+                {
+                  "name": "Cassis-cherry roll with chestnut cream",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Gothic Lovely Halloween afternoon tea; no separate item price published"
+                },
+                {
+                  "name": "Vanilla mousse with red wine and fig",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Gothic Lovely Halloween afternoon tea; no separate item price published"
+                },
+                {
+                  "name": "Kyoho grape jelly",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Gothic Lovely Halloween afternoon tea; no separate item price published"
+                },
+                {
+                  "name": "Brownie and raspberry parfait with Fauchon tea ice cream",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Gothic Lovely Halloween afternoon tea; no separate item price published"
+                },
+                {
+                  "name": "Mushroom tartlet",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Gothic Lovely Halloween afternoon tea; no separate item price published"
+                },
+                {
+                  "name": "Pumpkin savoury cake",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Gothic Lovely Halloween afternoon tea; no separate item price published"
+                },
+                {
+                  "name": "Smoked-salmon and quail blini",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Gothic Lovely Halloween afternoon tea; no separate item price published"
+                },
+                {
+                  "name": "Beet potage",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Gothic Lovely Halloween afternoon tea; no separate item price published"
+                },
+                {
+                  "name": "Roast-beef and purple-cabbage open sandwich",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Gothic Lovely Halloween afternoon tea; no separate item price published"
+                },
+                {
+                  "name": "Plain scone",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Gothic Lovely Halloween afternoon tea; no separate item price published"
+                },
+                {
+                  "name": "Sweet-potato scone",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Gothic Lovely Halloween afternoon tea; no separate item price published"
+                },
+                {
+                  "name": "Free-flow Fauchon tea, fruit juice and coffee",
+                  "priceLabel": "Price not published",
+                  "note": "Included in Gothic Lovely Halloween afternoon tea; no separate item price published"
+                }
+              ],
+              "note": "Exact Salon de Thé Fauchon Kyoto menu. Tax and service included. Two-hour reserved visit; advance booking required. Weekday ¥7,000 / weekend-holiday ¥7,500. Three announced sessions at 11:00, 14:00 and 17:00; last arrival 17:00. Hotel in-room accommodation package and Grand Café menu are separate; no hotel-wide rating transferred."
+            },
+            {
+              "label": "140 Years Afternoon Tea",
+              "url": "https://prtimes.jp/main/html/rd/p/000000098.000069488.html",
+              "currency": "JPY",
+              "coverage": "sample",
+              "items": [
+                {
+                  "name": "Weekday afternoon tea",
+                  "price": 7000
+                },
+                {
+                  "name": "Weekend/holiday afternoon tea",
+                  "price": 7500
+                },
+                {
+                  "name": "Special welcome tea brewed with Sennensui",
+                  "priceLabel": "Price not published",
+                  "note": "Included in 140 Years Afternoon Tea; no separate item price published"
+                },
+                {
+                  "name": "Saint-Marc",
+                  "priceLabel": "Price not published",
+                  "note": "Included in 140 Years Afternoon Tea; no separate item price published"
+                },
+                {
+                  "name": "Cherry Bisou Bisou",
+                  "priceLabel": "Price not published",
+                  "note": "Included in 140 Years Afternoon Tea; no separate item price published"
+                },
+                {
+                  "name": "Earl Grey canele",
+                  "priceLabel": "Price not published",
+                  "note": "Included in 140 Years Afternoon Tea; no separate item price published"
+                },
+                {
+                  "name": "Apple-tea jelly crumble",
+                  "priceLabel": "Price not published",
+                  "note": "Included in 140 Years Afternoon Tea; no separate item price published"
+                },
+                {
+                  "name": "Rose-raspberry sweet",
+                  "priceLabel": "Price not published",
+                  "note": "Included in 140 Years Afternoon Tea; no separate item price published"
+                },
+                {
+                  "name": "Gianduja tart",
+                  "priceLabel": "Price not published",
+                  "note": "Included in 140 Years Afternoon Tea; no separate item price published"
+                },
+                {
+                  "name": "Mont Blanc",
+                  "priceLabel": "Price not published",
+                  "note": "Included in 140 Years Afternoon Tea; no separate item price published"
+                },
+                {
+                  "name": "Cep and chestnut tartlet",
+                  "priceLabel": "Price not published",
+                  "note": "Included in 140 Years Afternoon Tea; no separate item price published"
+                },
+                {
+                  "name": "Prosciutto rillette",
+                  "priceLabel": "Price not published",
+                  "note": "Included in 140 Years Afternoon Tea; no separate item price published"
+                },
+                {
+                  "name": "Fauchon-style oeuf mayonnaise",
+                  "priceLabel": "Price not published",
+                  "note": "Included in 140 Years Afternoon Tea; no separate item price published"
+                },
+                {
+                  "name": "Lobster and celeriac puree",
+                  "priceLabel": "Price not published",
+                  "note": "Included in 140 Years Afternoon Tea; no separate item price published"
+                },
+                {
+                  "name": "Brie de Meaux sandwich",
+                  "priceLabel": "Price not published",
+                  "note": "Included in 140 Years Afternoon Tea; no separate item price published"
+                },
+                {
+                  "name": "Plain scone",
+                  "priceLabel": "Price not published",
+                  "note": "Included in 140 Years Afternoon Tea; no separate item price published"
+                },
+                {
+                  "name": "Sweet-potato scone",
+                  "priceLabel": "Price not published",
+                  "note": "Included in 140 Years Afternoon Tea; no separate item price published"
+                },
+                {
+                  "name": "Free-flow Fauchon tea, fruit juice and coffee",
+                  "priceLabel": "Price not published",
+                  "note": "Included in 140 Years Afternoon Tea; no separate item price published"
+                }
+              ],
+              "note": "Exact Salon de Thé Fauchon Kyoto menu. Tax and service included. Two-hour reserved visit; advance booking required. Weekday ¥7,000 / weekend-holiday ¥7,500. November release lists evening room hours 17:00–22:00, last admission 19:00; ordering/arrival window conservatively ends at 19:00, not room closure. Generic salon homepage still gives 19:00 close; use dated plan booking details. Hotel in-room accommodation package and Grand Café menu are separate; no hotel-wide rating transferred."
+            }
+          ],
+          "specials": [
+            {
+              "title": "Gothic Lovely Halloween afternoon tea",
+              "kind": "other",
+              "description": "Gothic Lovely Halloween afternoon tea — ¥7,000 weekdays / ¥7,500 weekends-holidays, tax and service included.",
+              "sourceUrl": "https://hotelfauchonkyoto.com/post-4589/",
+              "menuLabel": "Gothic Lovely Halloween afternoon tea",
+              "discounted": false,
+              "validFrom": "2026-10-01",
+              "validThrough": "2026-10-31",
+              "schedule": "Japan local time; see conditions",
+              "conditions": [
+                "Two-hour reserved visit; advance booking required.",
+                "Listed dishes are seasonal plan components, no separate dish prices.",
+                "November evening last admission 19:00; verify exact reserved start."
+              ],
+              "availability": {
+                "windows": [
+                  {
+                    "days": [
+                      0,
+                      1,
+                      2,
+                      3,
+                      4,
+                      5,
+                      6
+                    ],
+                    "start": "11:00",
+                    "end": "13:00"
+                  },
+                  {
+                    "days": [
+                      0,
+                      1,
+                      2,
+                      3,
+                      4,
+                      5,
+                      6
+                    ],
+                    "start": "14:00",
+                    "end": "16:00"
+                  },
+                  {
+                    "days": [
+                      0,
+                      1,
+                      2,
+                      3,
+                      4,
+                      5,
+                      6
+                    ],
+                    "start": "17:00",
+                    "end": "19:00"
+                  }
+                ]
+              },
+              "limitedTime": true
+            },
+            {
+              "title": "140 Years Afternoon Tea",
+              "kind": "other",
+              "description": "140 Years Afternoon Tea — ¥7,000 weekdays / ¥7,500 weekends-holidays, tax and service included.",
+              "sourceUrl": "https://prtimes.jp/main/html/rd/p/000000098.000069488.html",
+              "menuLabel": "140 Years Afternoon Tea",
+              "discounted": false,
+              "validFrom": "2026-11-01",
+              "validThrough": "2026-11-20",
+              "schedule": "Japan local time; see conditions",
+              "conditions": [
+                "Two-hour reserved visit; advance booking required.",
+                "Listed dishes are seasonal plan components, no separate dish prices.",
+                "November evening last admission 19:00; verify exact reserved start."
+              ],
+              "availability": {
+                "windows": [
+                  {
+                    "days": [
+                      0,
+                      1,
+                      2,
+                      3,
+                      4,
+                      5,
+                      6
+                    ],
+                    "start": "11:00",
+                    "end": "13:00"
+                  },
+                  {
+                    "days": [
+                      0,
+                      1,
+                      2,
+                      3,
+                      4,
+                      5,
+                      6
+                    ],
+                    "start": "14:00",
+                    "end": "16:00"
+                  },
+                  {
+                    "days": [
+                      0,
+                      1,
+                      2,
+                      3,
+                      4,
+                      5,
+                      6
+                    ],
+                    "start": "17:00",
+                    "end": "19:00"
+                  }
+                ]
+              },
+              "limitedTime": true
+            }
+          ],
+          "address": "Fauchon Hotel Kyoto, 406 Namba-cho, Shimogyo-ku, Kyoto",
+          "neighborhood": "Kawaramachi Gojo",
+          "websiteUrl": "https://hotelfauchonkyoto.com/ja/gourmet/fauchon-salon-de-the-kyoto/",
+          "photo": {
+            "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-16/fauchon-4-62244bf88d593ab2.webp",
+            "alt": "Salon de Thé Fauchon — Fauchon Hotel Kyoto — Official Salon de Thé Fauchon interior photograph, not Grand Café or hotel guest room.",
+            "credit": "Fauchon Hotel Kyoto",
+            "sourceUrl": "https://hotelfauchonkyoto.com/ja/gourmet/fauchon-salon-de-the-kyoto/",
+            "originalUrl": "https://hotelfauchonkyoto.com/wp/wp-content/uploads/2021/05/MG_3785.jpg",
+            "checkedAt": "2026-10-16"
+          }
+        },
+        "enabled": true
+      },
+      "openingDateCorrection": {
+        "sourceUrl": "https://hotelfauchonkyoto.com/ja/gourmet/fauchon-salon-de-the-kyoto/",
+        "day": "2021-03-16",
+        "confidence": "confirmed",
+        "reason": "The operator’s March 16, 2021 grand-opening release describes the hotel’s newly opened second-floor Salon de Thé Fauchon, including its room, hours and afternoon tea. October and November 2026 are offer dates, not this restaurant’s opening date.",
+        "sources": [
+          [
+            "https://prtimes.jp/main/html/rd/p/000000004.000069488.html",
+            "フォションホテル京都 — March 16, 2021 grand opening"
+          ]
+        ],
+        "verified": {
+          "local": {
+            "pinId": 17083,
+            "sourceUrl": "https://hotelfauchonkyoto.com/ja/gourmet/fauchon-salon-de-the-kyoto/",
+            "date": "2021-03-16",
+            "dateConfidence": "confirmed",
+            "authorPreserved": true
+          },
+          "production": {
+            "pinId": 15978,
+            "sourceUrl": "https://hotelfauchonkyoto.com/ja/gourmet/fauchon-salon-de-the-kyoto/",
+            "date": "2021-03-16",
+            "dateConfidence": "confirmed",
+            "authorPreserved": true
+          }
+        }
+      }
+    }
+  ]
+}

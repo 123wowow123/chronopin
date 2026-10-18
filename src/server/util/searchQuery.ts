@@ -1,0 +1,632 @@
+// Splits a search box query into the structured terms a pin card's labels add
+// and whatever free text is left over:
+//
+//   user:ThePinGang company:"Electronic Arts" tag:Software iphone
+//
+// tag: takes one of a pin's tags, as the tag cloud and the pin page write it
+// (tag:"Tokyo Anime Award Festival 2024"): what it was tagged with, the
+// awards its text names, or an award body's year its work was up for. A
+// pin's categories are tags too (0043), so tag:Anime finds the anime; the old
+// category:Anime still works and means the same.
+//
+// confidence: takes a pin's date confidence level, as its badge shows it
+// (confidence:estimated); UNVERIFIED is the badge for the stored "unknown", so
+// either word works. It also takes how well the pin is evidenced overall, as
+// a band of its score: confidence:low (under 50%, what the pin page flags
+// "Low confidence"), confidence:medium or confidence:high. Every score badge
+// on a pin or a card links to its own band; a pin with no score at all is in
+// no band.
+//
+// date: takes a day as the timeline writes it (date:2026-09-08, or
+// date:-2560-01-01 for 2561 BC): the pins starting that day as the timeline
+// places them - an all-day pin on its own date, a timed one on its date in
+// the viewer's time zone. A day's "View all" popup and a card's start date
+// link to one. posted: takes a day the same way, for the pins posted that day
+// in the viewer's time zone; a card's posted date and its NEW pill link to one.
+// updated: takes a day the same way, for the pins with an update (PinUpdate,
+// 0081: an edit, a newer reference or duplicate, an article rewrite) that day;
+// a card's UPDATED pill links to updated:>= the day 24 hours back.
+//
+// Both also take the comparisons rating: and delay: do, on days: date:>=2026-09-01
+// (that day or later), date:>2026-09-01 (after it), date:<2026-10-01 (before),
+// date:<=2026-10-01 (that day or earlier) and a range with both ends in,
+// date:2026-09-01..2026-09-30 (".." since a day's own dashes, and a BC year's
+// leading one, leave "-" no room). posted:>=2026-09-01 and updated:>=2026-09-01
+// read the same. A day
+// with "=" (date:=2026-09-08) is a bare day. Exact days widen each other as
+// before; the comparisons narrow, so date:>=2026-09-01 date:<2026-10-01 is a
+// month, and a day or two alongside narrows to the ones inside it. A bound
+// reads days as an exact one does: all-day pins by UTC date, timed ones by the
+// viewer's.
+//
+// holiday: takes a holiday or special day by name (holiday:Halloween,
+// holiday:"Mid-Autumn Festival", holiday:"National Peanut Day"): the pins
+// starting on any of its days, the way date: reads them, in every year the
+// site works holidays out for (src/server/holidays.ts, the cultural holidays
+// of the timeline's date tags, its specialty days, and the solstices, equinoxes,
+// aphelion and perihelion - holiday:"Winter Solstice" - whose day is the
+// viewer's, as the timeline places them). The search box
+// suggests them as you type. A name nobody keeps matches nothing.
+//
+// place: takes anywhere a pin's address names - a city, a state, a postal
+// code, a country (place:Chicago, place:60601, place:Texas, place:"New
+// York"). The address is one label written by whoever placed the pin
+// ("Brooklyn Bridge, New York, NY, USA"), so a value matches when it stands
+// as its own word or words anywhere in that line; US states match under
+// either their name or their two-letter code, whichever the address used.
+// A card's place label and the pin page's write one.
+//
+// platform: and rated: narrow game pins (PinGameInfo): platform:"PlayStation 5"
+// or platform:xbox-series for a game on any of the platforms given, and
+// rated:"ESRB Mature 17+" for a game with any of the maturity ratings given.
+// The game info's platform pills and rating block write them.
+// taste: takes a taste axis (taste:bitterness, taste:umami; aroma, bitterness,
+// sweetness, astringency, umami, pungent, coolness): the products whose taste
+// profile (PinTaste) scores it TASTE_STRONG or more, every axis given;
+// taste:any is every product that has a taste profile. The taste profile's
+// heading and axis labels write them.
+// carperf: is the same for a car's performance rubric (PinCarPerf): carperf:range,
+// charging, acceleration, assistance, space, value or kidsFriendly finds the cars scoring that
+// axis CAR_PERF_STRONG or more (an axis with no published spec never matches),
+// every axis given; carperf:any is every car that has a rubric. The rubric's
+// heading and axis labels write them.
+// dining: is the same for a restaurant's dining rubric (PinDining): dining:food,
+// service, ambience, value or acclaim finds the venues scoring that axis
+// DINING_STRONG or more (an axis with no published figure never matches),
+// every axis given; dining:any is every venue that has a rubric. The rubric's
+// heading and axis labels write them.
+// hotel: is the same for a hotel's rubric (PinHotel): hotel:rooms, service,
+// location, cleanliness, value or acclaim finds the properties scoring that
+// axis HOTEL_STRONG or more (an axis with no published figure never matches),
+// every axis given; hotel:any is every property that has a rubric.
+// rubric: takes the year of the criteria an engineering performance rubric was
+// scored against (rubric:2026, the "2026 criteria" pill on a car's rubric): the
+// pins whose rubric carries that year (PinCarPerf.rubricYear today; any later
+// ship, aircraft or battery rubric joins in src/server/util/rubricSearch.ts).
+// A whole year from 2020 to 2100 (isRubricYear); anything else is left out
+// rather than matching nothing. Several years widen each other, and it narrows
+// with the rest: beside carperf: the year is that car rubric's own
+// (carperf:range rubric:2026).
+// person: takes a person's name as the People pages write it (person:"Joe
+// Biden"): the pins linked to them (PinPerson). A person's radar axes
+// (education, wealth, position, standing, health, misconduct, social,
+// economic: scored 0-5, src/lib/people.ts; public-standing, social-good and
+// economic-good are the chart's labels for the last three) take the bounds rating: does -
+// misconduct:>3, wealth:>=4, social:2-4, or a bare wealth:4 for "4 or more" -
+// and match the pins linked to anyone whose best score on that axis, across
+// their life phases, meets every bound given. The search box suggests the
+// people themselves as you type.
+// rating: takes a bound on a pin's rating as a percentage - the headline
+// number its card shows: the average of its review scores, each rescaled to
+// a percentage of its own maximum (MyAnimeList's 8.2/10 is 82), or its one
+// source's where it has one (format.ts averageRating). rating:>80,
+// rating:>=80, rating:<60, rating:=90, a range rating:80-90 (both ends in),
+// and a bare rating:80 for "80 or more"; a % may follow any number. A
+// prediction market's forecast is not a review, so it counts for nothing,
+// and a pin without ratings matches no rating: term. Unlike the other fields
+// several rating: terms narrow each other, so rating:>=70 rating:<90 is a
+// band; anything that is not a bound is left out rather than matching nothing.
+//
+// delay: takes a bound on how far a pin's start has slipped from the day first
+// promised, the span its "2 MONTHS LATE" badge shows. It reads the same
+// operators as rating: - delay:>=2months, delay:>6weeks, delay:<1year,
+// delay:=3months, a range delay:2-6months (both ends in), and a bare
+// delay:2months for "that late or more" - over a number and a unit: days,
+// weeks, months or years (d, w, m/mo, y/yr, or spelled out; no unit is
+// days; years may be fractional, delay:>2.5years). Days and weeks count
+// days. Months and years count calendar months, as the badge does, so a
+// pin the badge calls 2 months late is 2 months late here whatever the
+// months' lengths. A pin that has not slipped (no original date, or a start
+// no later than it) matches no delay: term. Several narrow each other.
+//
+// user: takes a name with or without its "@" (user:@ThePinGang), and a bare
+// @ThePinGang still works on its own, as it did before user: existed.
+//
+// A bare $ and a stock symbol ($NKE, $brk.b) is a company ticker: the pins
+// whose company is listed under it, or which carry it as their company's
+// stock. Several companies can share one (Sony's divisions all trade as
+// SONY), so it widens to all of them, as a second company: term would.
+// Only a letter may follow the $, so "$5 million" stays free text.
+//
+// pin: takes pin ids, comma-separated (pin:1992,1991,1987): exactly those
+// pins and no others. Nothing in the site writes one by hand - it is how a
+// batch of notifications links to the pins it stands for, which no day or
+// author term can name exactly. The search box shows it as "3 pins".
+//
+// A value with spaces is quoted, as the labels write it. Several values for
+// one field widen the search (either company), while different fields narrow
+// it (this company and this tag), so each click on a label is additive.
+//
+// Quoting is forgiving, since people type these too:
+//   company:"Electronic Arts"    the form the labels write
+//   company:'Electronic Arts'    single quotes work the same way
+//   "company:Electronic Arts"    the whole term quoted, with either kind
+//   company:“Electronic Arts”    smart quotes, which Mac and iOS keyboards
+//                                substitute as you type
+//   company:"Electronic Arts     unclosed - the value runs to the end, so a
+//                                query mid-edit still means what it says
+//
+// No name contains a double quote, so one always delimits. A single quote is
+// also an apostrophe (McDonald's), so it only closes a value when a space or
+// the end of the query follows it: company:'McDonald's' is one company.
+
+import { compareDayKeys, nextDayKey } from '@/lib/format';
+import { OCTAGON_AXES, type OctagonAxis } from '@/lib/people';
+import { isPlatformKey, platformFromName } from '@/lib/gameInfo';
+import { TASTE_KEYS, type TasteAxis } from '@/lib/pinTaste';
+import { CAR_PERF_KEYS, type CarPerfAxis } from '@/lib/pinCarPerf';
+import { DINING_KEYS, type DiningAxis } from '@/lib/pinDining';
+import { HOTEL_KEYS, type HotelAxis } from '@/lib/pinHotel';
+import { isRubricYear } from '@/lib/rubricYear';
+import { type ConfidenceBand, isConfidenceBand } from '@/lib/referenceConfidence';
+
+// One side of a rating: term, compared with the pin's rounded percentage.
+export type RatingBound = { op: '>' | '>=' | '<' | '<=' | '='; value: number };
+
+// One side of a delay: term. Weeks are already days and years months, so a
+// bound counts either days or calendar months.
+export type DelayBound = { op: RatingBound['op']; unit: 'days' | 'months'; value: number };
+
+// One side of a date:, posted: or updated: comparison, as a day boundary: from the start
+// of that day on (">="), or before the start of it ("<"). "after D" and "on or
+// before D" are written as the day after.
+export type DayBound = { op: '>=' | '<'; day: string };
+
+// One side of an axis term (misconduct:>3): a bound on a person's best score
+// on a radar axis, 0 to 5.
+export type PersonAxisBound = RatingBound & { axis: OctagonAxis };
+
+// A taste axis, or 'any' for a product with any taste profile (taste:any).
+export type TasteTerm = TasteAxis | 'any';
+
+// A car performance axis, or 'any' for a car with any rubric (carperf:any).
+export type CarPerfTerm = CarPerfAxis | 'any';
+// A dining axis, or 'any' for a venue with any rubric (dining:any).
+export type DiningTerm = DiningAxis | 'any';
+// A hotel axis, or 'any' for a property with any rubric (hotel:any).
+export type HotelTerm = HotelAxis | 'any';
+
+export type SearchQuery = {
+  userNames: string[];
+  // Pin ids, matching exactly those pins.
+  ids: number[];
+  companies: string[];
+  // Stock symbols, uppercase, any of them.
+  tickers: string[];
+  confidences: string[];
+  // Bands of a pin's overall score ("low", "medium", "high"), which widen the
+  // same confidence: field the levels do.
+  confidenceBands: ConfidenceBand[];
+  // Day keys ("2026-09-08"), any of them: when pins start, when they were
+  // posted, and when they were updated.
+  dates: string[];
+  postedDays: string[];
+  updatedDays: string[];
+  // Comparisons on those days, every one of them (a pin's start, a pin's
+  // posting, any of a pin's updates).
+  dateBounds: DayBound[];
+  postedBounds: DayBound[];
+  updatedBounds: DayBound[];
+  tags: string[];
+  excludeTags: string[];
+  // Places an address must name: cities, states, postal codes, countries.
+  places: string[];
+  // A game's platforms (platform:ps5, platform:"Xbox Series X|S"), as the
+  // keys of src/lib/gameInfo.ts; a pin on any of them matches.
+  platforms: string[];
+  // A game's maturity rating, board first (rated:"ESRB Mature 17+"); any.
+  rated: string[];
+  // Taste axes (taste:umami) a product's taste profile must score strongly on; all.
+  tastes: TasteTerm[];
+  // Car performance axes (carperf:range) a car's rubric must score strongly on; all.
+  carPerfs: CarPerfTerm[];
+  // Dining axes (dining:food) a restaurant's dining rubric must score strongly on; all.
+  dinings: DiningTerm[];
+  // Hotel axes (hotel:rooms) a property's hotel rubric must score strongly on; all.
+  hotels: HotelTerm[];
+  // Years of an engineering rubric's criteria (rubric:2026); any of them.
+  rubricYears: number[];
+  // People by name (person:"Joe Biden"), any of them; the pins linked to them.
+  people: string[];
+  // Radar-axis bounds (misconduct:>3) a linked person's best score must meet,
+  // every one of them.
+  personAxes: PersonAxisBound[];
+  // Bounds a pin's rating must meet, every one of them.
+  ratings: RatingBound[];
+  // Bounds a pin's delay must meet, every one of them.
+  delays: DelayBound[];
+  // Holidays and special days by name, any of them (holiday:Halloween); the
+  // server turns each into the days it falls on.
+  holidays: string[];
+  text: string;
+};
+
+const SMART_DOUBLE_QUOTES = /[“”„‟″]/g;
+const SMART_SINGLE_QUOTES = /[‘’‚‛′]/g;
+
+// The chart's own labels for the three axes whose field is shorter:
+// public-standing:>3 is standing:>3.
+const AXIS_ALIASES: Record<string, OctagonAxis> = { 'public-standing': 'standing', 'social-good': 'social', 'economic-good': 'economic' };
+
+// A leading "-" leaves out what the term would match (-tag:Anime); only tags
+// read it so far, and any other field written that way is left out.
+const FIELD = '(-?(?:company|category|user|confidence|date|posted|updated|tag|pin|place|rating|delay|platform|rated|holiday|taste|carperf|dining|hotel|rubric|person|' + [...OCTAGON_AXES, ...Object.keys(AXIS_ALIASES)].join('|') + '))';
+const DOUBLE_QUOTED = '([^"]*)"?';
+const SINGLE_QUOTED = "((?:[^']|'(?!\\s|$))*)'?";
+
+const FIELD_TERM = new RegExp(
+  '(^|\\s)(?:' +
+    [
+      `"${FIELD}:${DOUBLE_QUOTED}`, // "company:Electronic Arts"
+      `'${FIELD}:${SINGLE_QUOTED}`, // 'company:Electronic Arts'
+      `${FIELD}:"${DOUBLE_QUOTED}`, // company:"Electronic Arts"
+      `${FIELD}:'${SINGLE_QUOTED}`, // company:'Electronic Arts'
+      `${FIELD}:([^\\s"']\\S*)`, // company:Apple, company:McDonald's
+    ].join('|') +
+    ')',
+  'gi',
+);
+
+// A bare @name, or a bare $ticker standing as a word of its own.
+const BARE_TERM = /(^|\s)(@\S+|\$[A-Za-z][A-Za-z0-9.-]{0,11}(?=\s|$))/g;
+
+export type TermField = 'user' | 'ticker' | 'company' | 'category' | 'confidence' | 'date' | 'posted' | 'updated' | 'tag' | 'pin' | 'place' | 'rating' | 'delay' | 'platform' | 'rated' | 'holiday' | 'taste' | 'carperf' | 'dining' | 'hotel' | 'rubric' | 'person' | OctagonAxis;
+
+export type QueryPart =
+  | { kind: 'term'; field: TermField; value: string; raw: string; negated?: boolean }
+  | { kind: 'text'; raw: string };
+
+// The query in order: its label terms and the free text around them, each
+// with the text it was written as. parseSearchQuery reads these, and the
+// search box shows the terms as pills, so the two always agree.
+export function splitSearchQuery(searchText: string | null | undefined): QueryPart[] {
+  const normalized = String(searchText || '')
+    .replace(SMART_DOUBLE_QUOTES, '"')
+    .replace(SMART_SINGLE_QUOTES, "'");
+  const parts: QueryPart[] = [];
+
+  // A bare @name or $ticker is only a term in the text the field terms
+  // leave, as a user:@name value is theirs.
+  const addText = (text: string) => {
+    let from = 0;
+    for (const match of text.matchAll(BARE_TERM)) {
+      const start = match.index + match[1].length;
+      if (start > from) parts.push({ kind: 'text', raw: text.slice(from, start) });
+      const ticker = match[2].startsWith('$');
+      parts.push({ kind: 'term', field: ticker ? 'ticker' : 'user', value: ticker ? match[2].slice(1).toUpperCase() : match[2], raw: match[2] });
+      from = start + match[2].length;
+    }
+    if (from < text.length) parts.push({ kind: 'text', raw: text.slice(from) });
+  };
+
+  let from = 0;
+  for (const match of normalized.matchAll(FIELD_TERM)) {
+    const start = match.index + match[1].length;
+    addText(normalized.slice(from, start));
+    // Each alternative captures a (field, value) pair; exactly one matched.
+    const groups = match.slice(2);
+    const at = groups.findIndex((group, index) => index % 2 === 0 && group !== undefined);
+    const written = groups[at]!.toLowerCase();
+    const negated = written.startsWith('-');
+    const unsigned = written.replace(/^-/, '');
+    const field = (AXIS_ALIASES[unsigned] ?? unsigned) as TermField;
+    parts.push({ kind: 'term', field, value: groups[at + 1]!.trim(), raw: match[0].slice(match[1].length), ...(negated ? { negated } : {}) });
+    from = match.index + match[0].length;
+  }
+  addText(normalized.slice(from));
+  return parts;
+}
+
+// The query written back from its parts, less any left out.
+export function joinSearchQuery(parts: QueryPart[]): string {
+  return parts
+    .map((part) => part.raw)
+    .join(' ')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
+export function parseSearchQuery(searchText: string | null | undefined): SearchQuery {
+  const query: SearchQuery = {
+    userNames: [],
+    ids: [],
+    companies: [],
+    tickers: [],
+    confidences: [],
+    confidenceBands: [],
+    dates: [],
+    postedDays: [],
+    updatedDays: [],
+    dateBounds: [],
+    postedBounds: [],
+    updatedBounds: [],
+    tags: [],
+    excludeTags: [],
+    places: [],
+    platforms: [],
+    rated: [],
+    tastes: [],
+    carPerfs: [],
+    dinings: [],
+    hotels: [],
+    rubricYears: [],
+    people: [],
+    personAxes: [],
+    ratings: [],
+    delays: [],
+    holidays: [],
+    text: '',
+  };
+
+  const text: string[] = [];
+  for (const part of splitSearchQuery(searchText)) {
+    if (part.kind === 'text') {
+      text.push(part.raw);
+    } else if (part.negated) {
+      // category: is the old name for a category's tag.
+      if ((part.field === 'tag' || part.field === 'category') && part.value) addUnique(query.excludeTags, part.value);
+    } else if (part.field === 'user') {
+      addUserName(query, part.value);
+    } else if (part.field === 'ticker') {
+      addUnique(query.tickers, part.value);
+    } else if (part.field === 'confidence') {
+      addConfidence(query, part.value);
+    } else if (part.field === 'pin') {
+      // Anything that is not a pin id is left out rather than matching nothing.
+      for (const id of part.value.split(',')) {
+        const n = Number(id.trim());
+        if (Number.isInteger(n) && n > 0 && !query.ids.includes(n)) query.ids.push(n);
+      }
+    } else if (part.field === 'date' || part.field === 'posted' || part.field === 'updated') {
+      // Anything but a day or a comparison on one is left out rather than
+      // matching nothing.
+      const { days, bounds } = dayBounds(part.value);
+      const [exact, compared] =
+        part.field === 'date' ? [query.dates, query.dateBounds] : part.field === 'posted' ? [query.postedDays, query.postedBounds] : [query.updatedDays, query.updatedBounds];
+      for (const day of days) addUnique(exact, day);
+      for (const bound of bounds) {
+        if (!compared.some((b) => b.op === bound.op && b.day === bound.day)) compared.push(bound);
+      }
+    } else if (part.field === 'place') {
+      addUnique(query.places, part.value);
+    } else if (part.field === 'platform') {
+      // A name nobody ships on is left out rather than matching nothing.
+      const key = platformFromName(part.value) ?? (isPlatformKey(part.value.toLowerCase()) ? part.value.toLowerCase() : undefined);
+      if (key) addUnique(query.platforms, key);
+    } else if (part.field === 'holiday') {
+      if (part.value) addUnique(query.holidays, part.value);
+    } else if (part.field === 'taste') {
+      // An axis the profile doesn't have is left out rather than matching nothing.
+      const value = part.value.trim().toLowerCase();
+      const axis: TasteTerm | undefined = value === 'any' ? 'any' : TASTE_KEYS.find((key) => key === value);
+      if (axis) addUnique(query.tastes, axis);
+    } else if (part.field === 'carperf') {
+      const value = part.value.trim().toLowerCase();
+      const axis: CarPerfTerm | undefined =
+        value === 'any'
+          ? 'any'
+          : CAR_PERF_KEYS.find((key) => key.toLowerCase() === value || (key === 'kidsFriendly' && (value === 'kidsfriendly' || value === 'kids-friendly' || value === 'kids')));
+      if (axis) addUnique(query.carPerfs, axis);
+    } else if (part.field === 'dining') {
+      const value = part.value.trim().toLowerCase();
+      const axis: DiningTerm | undefined = value === 'any' ? 'any' : DINING_KEYS.find((key) => key === value);
+      if (axis) addUnique(query.dinings, axis);
+    } else if (part.field === 'hotel') {
+      const value = part.value.trim().toLowerCase();
+      const axis: HotelTerm | undefined = value === 'any' ? 'any' : HOTEL_KEYS.find((key) => key === value);
+      if (axis) addUnique(query.hotels, axis);
+    } else if (part.field === 'rubric') {
+      // A year the criteria never had is left out rather than matching nothing.
+      const value = part.value.trim();
+      const year = /^\d{4}$/.test(value) ? Number(value) : NaN;
+      if (isRubricYear(year) && !query.rubricYears.includes(year)) query.rubricYears.push(year);
+    } else if (part.field === 'person') {
+      if (part.value) addUnique(query.people, part.value);
+    } else if ((OCTAGON_AXES as readonly string[]).includes(part.field)) {
+      // A value that is not a bound is left out rather than matching nothing.
+      for (const bound of ratingBounds(part.value)) {
+        const axis = part.field as OctagonAxis;
+        if (!query.personAxes.some((b) => b.axis === axis && b.op === bound.op && b.value === bound.value)) query.personAxes.push({ axis, ...bound });
+      }
+    } else if (part.field === 'rated') {
+      if (part.value) addUnique(query.rated, part.value);
+    } else if (part.field === 'rating') {
+      for (const bound of ratingBounds(part.value)) {
+        if (!query.ratings.some((b) => b.op === bound.op && b.value === bound.value)) query.ratings.push(bound);
+      }
+    } else if (part.field === 'delay') {
+      for (const bound of delayBounds(part.value)) {
+        if (!query.delays.some((b) => b.op === bound.op && b.unit === bound.unit && b.value === bound.value)) query.delays.push(bound);
+      }
+    } else if (part.value) {
+      // category: is the old name for a category's tag.
+      addUnique(part.field === 'company' ? query.companies : query.tags, part.value);
+    }
+  }
+
+  query.text = text.join(' ').replace(/\s+/g, ' ').trim();
+  return query;
+}
+
+export function hasFilters(query: SearchQuery): boolean {
+  return !!(
+    query.userNames.length ||
+    query.ids.length ||
+    query.companies.length ||
+    query.tickers.length ||
+    query.confidences.length ||
+    query.confidenceBands.length ||
+    query.dates.length ||
+    query.postedDays.length ||
+    query.updatedDays.length ||
+    query.dateBounds.length ||
+    query.postedBounds.length ||
+    query.updatedBounds.length ||
+    query.tags.length ||
+    query.excludeTags.length ||
+    query.places.length ||
+    query.platforms.length ||
+    query.rated.length ||
+    query.tastes.length ||
+    query.carPerfs.length ||
+    query.dinings.length ||
+    query.hotels.length ||
+    query.rubricYears.length ||
+    query.people.length ||
+    query.personAxes.length ||
+    query.ratings.length ||
+    query.delays.length ||
+    query.holidays.length
+  );
+}
+
+// Whether the viewer's time zone changes what the query matches: its days are
+// the viewer's own. Everything else answers the same everywhere, so it can be
+// cached once for all zones.
+export function dependsOnZone(query: SearchQuery): boolean {
+  return !!(
+    query.dates.length ||
+    query.postedDays.length ||
+    query.updatedDays.length ||
+    query.dateBounds.length ||
+    query.postedBounds.length ||
+    query.updatedBounds.length ||
+    query.holidays.length
+  );
+}
+
+const DAY = '(-?\\d{4,6}-\\d{2}-\\d{2})';
+const DAY_COMPARISON = new RegExp(`^(>=|<=|=>|=<|>|<|=)?${DAY}$`);
+const DAY_RANGE = new RegExp(`^${DAY}\\.\\.${DAY}$`);
+
+// What a date:, posted: or updated: value sets: a bare day or "=" one is an exact day, a
+// comparison or range is boundaries, and anything else sets nothing.
+export function dayBounds(value: string): { days: string[]; bounds: DayBound[] } {
+  const text = value.trim();
+  const range = DAY_RANGE.exec(text);
+  if (range) {
+    const [low, high] = [range[1], range[2]].sort(compareDayKeys);
+    return {
+      days: [],
+      bounds: [
+        { op: '>=', day: low },
+        { op: '<', day: nextDayKey(high) },
+      ],
+    };
+  }
+  const bound = DAY_COMPARISON.exec(text);
+  if (!bound) {
+    return { days: [], bounds: [] };
+  }
+  const op = ({ '=>': '>=', '=<': '<=' } as Record<string, string>)[bound[1] ?? ''] ?? bound[1] ?? '=';
+  const day = bound[2];
+  if (op === '=') return { days: [day], bounds: [] };
+  if (op === '>=') return { days: [], bounds: [{ op: '>=', day }] };
+  if (op === '>') return { days: [], bounds: [{ op: '>=', day: nextDayKey(day) }] };
+  if (op === '<') return { days: [], bounds: [{ op: '<', day }] };
+  return { days: [], bounds: [{ op: '<', day: nextDayKey(day) }] };
+}
+
+const PERCENT = '(\\d+(?:\\.\\d+)?)\\s*%?';
+const RATING_BOUND = new RegExp(`^(>=|<=|=>|=<|>|<|=)?\\s*${PERCENT}$`);
+const RATING_RANGE = new RegExp(`^${PERCENT}\\s*-\\s*${PERCENT}$`);
+
+// The bounds a rating: value sets: one, two for a range, none for anything
+// else. A bare number is a floor, which is what someone asking for "80" wants.
+export function ratingBounds(value: string): RatingBound[] {
+  const text = value.trim();
+  const range = RATING_RANGE.exec(text);
+  if (range) {
+    const [low, high] = [Number(range[1]), Number(range[2])].sort((a, b) => a - b);
+    return [
+      { op: '>=', value: low },
+      { op: '<=', value: high },
+    ];
+  }
+  const bound = RATING_BOUND.exec(text);
+  if (!bound) {
+    return [];
+  }
+  const op = ({ '=>': '>=', '=<': '<=' } as Record<string, RatingBound['op']>)[bound[1] ?? ''] ?? ((bound[1] || '>=') as RatingBound['op']);
+  return [{ op, value: Number(bound[2]) }];
+}
+
+const SPAN = '(\\d+(?:\\.\\d+)?)\\s*([a-z]*)';
+const DELAY_BOUND = new RegExp(`^(>=|<=|=>|=<|>|<|=)?\\s*${SPAN}$`, 'i');
+const DELAY_RANGE = new RegExp(`^${SPAN}\\s*-\\s*${SPAN}$`, 'i');
+
+// Each unit's spelling and what it comes to: days (a week is seven) or
+// calendar months (a year is twelve).
+const DELAY_UNITS: { names: RegExp; unit: DelayBound['unit']; per: number }[] = [
+  { names: /^(d|days?)?$/, unit: 'days', per: 1 },
+  { names: /^(w|wks?|weeks?)$/, unit: 'days', per: 7 },
+  { names: /^(m|mos?|months?)$/, unit: 'months', per: 1 },
+  { names: /^(y|yrs?|years?)$/, unit: 'months', per: 12 },
+];
+
+function delaySpan(amount: string, name: string): Pick<DelayBound, 'unit' | 'value'> | null {
+  const unit = DELAY_UNITS.find((u) => u.names.test(name.toLowerCase()));
+  return unit ? { unit: unit.unit, value: Number(amount) * unit.per } : null;
+}
+
+// The bounds a delay: value sets: one, two for a range, none for anything
+// else - a span with no number or an unknown unit is left out, not matched.
+// A range's unit may be given once, at its end (2-6months), or on both ends
+// (2months-1year); one that mixes days and months is left out.
+export function delayBounds(value: string): DelayBound[] {
+  const text = value.trim();
+  const range = DELAY_RANGE.exec(text);
+  if (range) {
+    const first = delaySpan(range[1], range[2] || range[4]);
+    const last = delaySpan(range[3], range[4]);
+    if (!first || !last || first.unit !== last.unit) {
+      return [];
+    }
+    const [low, high] = [first.value, last.value].sort((a, b) => a - b);
+    return [
+      { op: '>=', unit: first.unit, value: low },
+      { op: '<=', unit: first.unit, value: high },
+    ];
+  }
+  const bound = DELAY_BOUND.exec(text);
+  const span = bound && delaySpan(bound[2], bound[3]);
+  if (!bound || !span) {
+    return [];
+  }
+  const op = ({ '=>': '>=', '=<': '<=' } as Record<string, DelayBound['op']>)[bound[1] ?? ''] ?? ((bound[1] || '>=') as DelayBound['op']);
+  return [{ op, ...span }];
+}
+
+// User names are stored with their "@", so that is the form matched on.
+function addUserName(query: SearchQuery, value: string) {
+  const name = value.replace(/^@+/, '').trim();
+  if (name) {
+    addUnique(query.userNames, `@${name}`);
+  }
+}
+
+// A score band, or else a level. Levels are stored lowercase; UNVERIFIED is
+// how the badge shows "unknown".
+function addConfidence(query: SearchQuery, value: string) {
+  const level = value.trim().toLowerCase();
+  if (!level) {
+    return;
+  }
+  if (isConfidenceBand(level)) {
+    if (!query.confidenceBands.includes(level)) query.confidenceBands.push(level);
+  } else {
+    addUnique(query.confidences, level === 'unverified' ? 'unknown' : level);
+  }
+}
+
+function addUnique(list: string[], value: string) {
+  const lower = value.toLowerCase();
+  if (!list.some((existing) => existing.toLowerCase() === lower)) {
+    list.push(value);
+  }
+}
+
+// A Postgres regex (~*) matching text at the start of any word, the text taken literally.
+export function wordStartPattern(text: string): string {
+  return `(^|[^[:alnum:]])${text.trim().replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}`;
+}

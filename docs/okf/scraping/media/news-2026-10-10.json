@@ -1,0 +1,50 @@
+[
+  {
+    "region": "vancouver-election",
+    "sourcePage": "https://vancouver.citynews.ca/2026/09/13/eight-candidates-for-vancouver-mayor/",
+    "credit": "CityNews; Vancouver City Hall, contextual photograph",
+    "url": "https://chronopin.blob.core.windows.net/thumb/news-images/vancouver-election/city-hall-71a0d7d607563db8.webp",
+    "sha256": "71a0d7d607563db840940ad230a85055222ad40d3de7d53475a39a1f2edf0f7b",
+    "width": 1024,
+    "height": 768,
+    "pinId": 7453,
+    "sourceUrl": "https://vancouver.citynews.ca/wp-content/blogs.dir/sites/9/2026/07/29/Vancouver-City-Hall-1024x768.jpg",
+    "name": "city-hall"
+  },
+  {
+    "region": "vancouver-election",
+    "sourcePage": "https://boardoftrade.com/news/article/five-vancouver-mayoral-candidates-make-their-case-to-gvbot-business-community",
+    "credit": "Greater Vancouver Board of Trade; October 2026 mayoral candidate forum",
+    "url": "https://chronopin.blob.core.windows.net/thumb/news-images/vancouver-election/mayoral-forum-249766797499ec89.webp",
+    "sha256": "249766797499ec89d4eb3db876221f55c780f0a2eaa909773f9f23c185ceeb2a",
+    "width": 1100,
+    "height": 600,
+    "pinId": 7453,
+    "sourceUrl": "https://boardoftrade.com/files/news/thumbnails/2366.jpg",
+    "name": "mayoral-forum"
+  },
+  {
+    "region": "russian-diesel-licence",
+    "sourcePage": "https://www.okaynews.com/us-russian-diesel-imports-licence-october-9-2026/",
+    "credit": "US Department of the Treasury via Okay News; Treasury Building file photograph, October 20 2009",
+    "url": "https://chronopin.blob.core.windows.net/thumb/news-images/russian-diesel-licence/treasury-5c5d33fe69860139.webp",
+    "sha256": "5c5d33fe69860139ee5695f8f7cfac421b77cdb4b449e8e77502529923fc2cef",
+    "width": 1200,
+    "height": 675,
+    "pinId": 7454,
+    "sourceUrl": "https://www.okaynews.com/wp-content/uploads/okaynews-media/2026/10/us-russian-diesel-imports-licence-october-9-2026-featured-ea2b97e323.webp",
+    "name": "treasury"
+  },
+  {
+    "region": "starlink",
+    "sourcePage": "https://spacelaunchnow.app/launch/falcon-9-block-5-starlink-group-15-25/",
+    "credit": "SpaceX via The Space Devs / Space Launch Now; Starlink-branded fairing file photo, not the Group 15-25 liftoff",
+    "url": "https://chronopin.blob.core.windows.net/thumb/news-images/starlink/falcon9-2fa0581137756fe5.webp",
+    "sha256": "2fa0581137756fe5b5d759468ba4926438dd4034fdda29f0f676e2b4d533be45",
+    "width": 1249,
+    "height": 722,
+    "pinId": 1946,
+    "sourceUrl": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/falcon2520925_image_20221009234147.png",
+    "name": "falcon9"
+  }
+]

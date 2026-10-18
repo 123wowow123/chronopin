@@ -1,0 +1,216 @@
+{
+  "completedAt": "2026-10-18T04:45:06.406114+00:00",
+  "environment": "production",
+  "operation": "translations only",
+  "pinsUpdated": 36,
+  "saved": 540,
+  "locales": [
+    "es",
+    "fr",
+    "de",
+    "ja",
+    "zh",
+    "ko",
+    "hi",
+    "ar",
+    "th",
+    "it",
+    "ru",
+    "pt",
+    "ms",
+    "vi",
+    "id"
+  ],
+  "pins": [
+    {
+      "id": 17067,
+      "title": "Jefferson-Greentown Clean Energy Storage Center: 700M USD, 715 MW BESS in Decatur County, Indiana",
+      "sourceHash": "1471ada459ab9abedddf5984139ca8714649a8c4"
+    },
+    {
+      "id": 17068,
+      "title": "South Platte Clean Energy Storage Center: 260M USD, 250 MW BESS in Morgan County, Colorado",
+      "sourceHash": "0bda305afcd003d80c5bdb95e4ea981da85548c5"
+    },
+    {
+      "id": 17069,
+      "title": "Steel River Energy Storage Complex Phase 2: 250M USD, 250 MW BESS in Mississippi County, Arkansas",
+      "sourceHash": "2b6c1a8c5392283f85b039d085ea9b04ea766a28"
+    },
+    {
+      "id": 17070,
+      "title": "Steel River Energy Storage Complex Phase 3: 250M USD, 250 MW BESS in Mississippi County, Arkansas",
+      "sourceHash": "ae82a7f6dd344b6f2241c0fcfd0e26a824de372b"
+    },
+    {
+      "id": 17071,
+      "title": "Google Jackson County Hyperscale Campus Building 4: 1.0B USD, 150 MW in Jackson County, Alabama",
+      "sourceHash": "6e490b412e82ccc3693e721a2ec90d4ebbf0e8a6"
+    },
+    {
+      "id": 17072,
+      "title": "Google West Memphis Hyperscale Data Center Building 3: 750M USD, 118 MW Computing Facility in Crittenden County, Arkansas",
+      "sourceHash": "a38313293bab7aa6e8bef85f9c83fe0d8334ce76"
+    },
+    {
+      "id": 17073,
+      "title": "Google West Memphis Hyperscale Campus Building 5: 750M USD, 118 MW in Crittenden County, Arkansas",
+      "sourceHash": "2f1ecaaf607f2a492752fe441536d4908c97f46e"
+    },
+    {
+      "id": 17074,
+      "title": "Meta Montgomery Hyperscale Campus Building 6: 350M USD, 40 MW in Montgomery County, Alabama",
+      "sourceHash": "d9f730d559a864e68ce12b7a4ef52f7789553330"
+    },
+    {
+      "id": 17075,
+      "title": "Galion - South Berwick Clean Solar Project: 420M USD, 400 MWac in Crawford County, Ohio",
+      "sourceHash": "eb388581e68444121111b49289ce558aae4739b1"
+    },
+    {
+      "id": 17076,
+      "title": "Independence-ISES Clean Solar Project: 650M USD, 625 MWac in Jackson County, Arkansas",
+      "sourceHash": "97f84304d16670ec28fed6b5a1be10ba35b2c7ab"
+    },
+    {
+      "id": 17077,
+      "title": "Split Rock - White Clean Solar Center: 520M USD, 490 MWac in Brookings County, South Dakota",
+      "sourceHash": "efceb490573c44e20b38a75e464e79cff9acd5e3"
+    },
+    {
+      "id": 17078,
+      "title": "Stone Lake - Gardner Park Clean Solar Center: 440M USD, 417 MWac in Rusk County, Wisconsin",
+      "sourceHash": "6369b694c66da4ed22241d861522e7356dc3a089"
+    },
+    {
+      "id": 17079,
+      "title": "Energy Water Rock Clean Storage Center: 510M USD, 517 MW BESS in Nye County, Nevada",
+      "sourceHash": "95c17a4495341a02b84dd032355ac15d9a14ff14"
+    },
+    {
+      "id": 17080,
+      "title": "Kickstart Energy Storage Complex Phase V: 920M USD, 999 MW BESS in Ellis County, Texas",
+      "sourceHash": "d3d9ad61a677a7e49583b7c6f56c70fa40cc1e1e"
+    },
+    {
+      "id": 17081,
+      "title": "Prairie Point Energy Storage Center Phase II: 950M USD, 1,000 MW BESS in Wise County, Texas",
+      "sourceHash": "b912d0e9add640cb6aa2fce28856aad54365ecf0"
+    },
+    {
+      "id": 17082,
+      "title": "Stein-Rapson Clean Energy Storage Center: 500M USD, 500 MW BESS in Huron County, Michigan",
+      "sourceHash": "c07c75341218d967062f386e2c934aa445868274"
+    },
+    {
+      "id": 17083,
+      "title": "Google Jackson County Hyperscale Data Center Building 3: 600M USD, 150 MW Computing Facility in Jackson County, Alabama",
+      "sourceHash": "c0becf6c11db2d0ecf5a1810a972b8f96c7154f8"
+    },
+    {
+      "id": 17084,
+      "title": "Meta Montgomery Hyperscale Campus Building 3: 800M USD, 106 MW Facility in Montgomery County, Alabama",
+      "sourceHash": "c00eb2474b3147ccedd28eca76d9e91c30d38803"
+    },
+    {
+      "id": 17085,
+      "title": "Vantage Stargate Lighthouse Campus Building 1: 1.8B USD, 293 MW Facility in Ozaukee County, Wisconsin",
+      "sourceHash": "60bf051789d988cdb526d0047df1f3676227f9ec"
+    },
+    {
+      "id": 17086,
+      "title": "Vantage Stargate Lighthouse Campus Building 4: 1.8B USD, 293 MW Facility in Ozaukee County, Wisconsin",
+      "sourceHash": "baf73f55f1355cac2e8d9af3997e0fff8c14be96"
+    },
+    {
+      "id": 17087,
+      "title": "Energy Water Rock Clean Solar Center 2: 540M USD, 517 MWac Solar Farm in Nye County, Nevada",
+      "sourceHash": "fdeed307f90f5ca42dfcd8c23b8ee3ad48188e6c"
+    },
+    {
+      "id": 17088,
+      "title": "Reynolds - Burr Oak Clean Solar Project: 720M USD, 700 MWac Solar Plant in Pulaski County, Indiana",
+      "sourceHash": "f447c42825790722929329d3740c820f4ea185e4"
+    },
+    {
+      "id": 17089,
+      "title": "Weeds Lake - Hiple Clean Solar Project: 560M USD, 539 MWac Solar Center in Cass County, Michigan",
+      "sourceHash": "34a8374fb06bab0f10db287ac200c29f57a0a9e5"
+    },
+    {
+      "id": 17090,
+      "title": "Zeus Mitchell Solar Complex: 850M USD, 805 MWac Solar Energy Center in Mitchell County, Texas",
+      "sourceHash": "820f3a987beb4052640986cba323252d410a26da"
+    },
+    {
+      "id": 17091,
+      "title": "Aurora Energy Storage Center: 1.2B USD, 1,206 MW BESS in Lake County, Illinois",
+      "sourceHash": "3a411829a6b9fbcea0029ebf09b2bf188aa6332c"
+    },
+    {
+      "id": 17092,
+      "title": "Bellefield Clean Energy Storage Farm Phase 2: 500M USD, 500 MW BESS in Kern County, California",
+      "sourceHash": "c54ed0a1fc40e5875f2be684783f69a649084f43"
+    },
+    {
+      "id": 17093,
+      "title": "Zeus Armstrong Energy Storage Facility: 950M USD, 1,043 MW BESS in Armstrong County, Texas",
+      "sourceHash": "b29f8caba70f50b2bfc2e4a1f7e2aa8812b27353"
+    },
+    {
+      "id": 17094,
+      "title": "Zeus Scurry Energy Storage Complex: 950M USD, 1,043 MW BESS in Scurry County, Texas",
+      "sourceHash": "3da727ab3261695f2bc480e6e3313caa0d0bc08d"
+    },
+    {
+      "id": 17095,
+      "title": "AWS Wallula Gap Hyperscale Campus Phase 2: 2.5B USD, 300 MW Facility in Walla Walla County, Washington",
+      "sourceHash": "7918f0b6c527d0afdb349a9c5d730fa18f81af91"
+    },
+    {
+      "id": 17096,
+      "title": "AWS Wallula Gap Hyperscale Campus Phase 3: 2.5B USD, 300 MW Facility in Walla Walla County, Washington",
+      "sourceHash": "7ce232a0f8cea5a1130e6fdfa56b753ce8cc4c75"
+    },
+    {
+      "id": 17097,
+      "title": "AWS Wallula Gap Hyperscale Campus Phase 4: 2.5B USD, 300 MW Facility in Walla Walla County, Washington",
+      "sourceHash": "f3b34586112d4c1ce75ca03b8f070411c7edfb4b"
+    },
+    {
+      "id": 17098,
+      "title": "Cedar Island Clean Solar Energy Center: 820M USD, 800 MWac Solar Project in Lake County, Oregon",
+      "sourceHash": "72fd9f1c9b18a6d61746d6f4faefa883da0f550a"
+    },
+    {
+      "id": 17099,
+      "title": "Indigo Solar Energy Center Phase 3: 800M USD, 800 MWac Solar Project in Pecos County, Texas",
+      "sourceHash": "a39bad200625a56bbf7a003b3003fdcf13298993"
+    },
+    {
+      "id": 17100,
+      "title": "Key City Clean Solar Facility: 950M USD, 989 MWac Solar Plant in Taylor County, Texas",
+      "sourceHash": "7268c087ae4379c63063b09bd54e6f0f0edc2674"
+    },
+    {
+      "id": 17101,
+      "title": "Smalling Clean Solar Farm: 620M USD, 600 MWac Photovoltaic Center in Richland Parish, Louisiana",
+      "sourceHash": "b8bf80896cce2901e87ece1ed54fed0cf114f3b2"
+    },
+    {
+      "id": 17102,
+      "title": "Raeden Project Taurus Data Center Campus: 400M USD, 53 MW Computing Facility in El Paso County, Colorado",
+      "sourceHash": "bb92767490683d8b2ee565bb57389931963fc3ef"
+    }
+  ],
+  "verification": {
+    "cumulativeExactTranslationRowsMatched": 13335,
+    "errors": [],
+    "originalPinRecordsUnchanged": true,
+    "liveApiSamplesMatched": 30,
+    "backlogCheckedAt": "2026-10-18T04:44:58.249490+00:00",
+    "remainingPins": 0,
+    "remainingTranslationRows": 0
+  },
+  "deployment": false
+}
