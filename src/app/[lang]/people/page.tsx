@@ -44,6 +44,12 @@ async function People() {
     name: p.name,
     photoUrl: p.photoUrl,
     radar: p.radar,
+    // What the second row of filters groups by.
+    role: p.role,
+    inOffice: isPolitical(p.role) ? !isFormer(p) : undefined,
+    party: p.party,
+    trades: p.trades,
+    living: p.deathDate == null,
     line: [useOffice ? p.office : null, p.party, useOffice ? null : p.jurisdiction].filter(Boolean).join(' \u00b7 '),
   });
   // The Presidents and Vice President tabs: whoever holds the office and the
@@ -77,12 +83,12 @@ async function People() {
       heading: roleName(role),
       people: PERSON_ROLES.filter((r) => tabOf.get(r) === role).flatMap((r) =>
         current(r).map((p) => {
-          const c = card(p, r === 'president' || r === 'vice-president');
+          const c = { ...card(p, r === 'president' || r === 'vice-president'), roleLabel: roleName(r) };
           return r === role ? c : { ...c, line: [roleName(r), c.line].filter(Boolean).join(' \u00b7 ') };
         }),
       ),
     })),
-    { key: 'former', heading: t('person.former'), people: former.map((p) => card(p, true)) },
+    { key: 'former', heading: t('person.former'), people: former.map((p) => ({ ...card(p, true), roleLabel: roleName(p.role) })) },
   ].filter((g) => g.people.length);
   // The All tab leads the row and lists everyone once, by name; the
   // Presidents tab (when there is one) is still the one that opens.

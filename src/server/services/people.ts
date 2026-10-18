@@ -20,15 +20,15 @@ import { localizePins } from './translations';
 const PINS = 24;
 
 // radar: the person's life phases as eight scores each, for the card's mini radar.
-export type PersonEntry = PersonSummary & { pins: number; radar?: (number | null)[][] };
+export type PersonEntry = PersonSummary & { pins: number; trades: number; radar?: (number | null)[][] };
 
 // Everyone with a page, the executive first, then by office and name.
 export async function personIndex(): Promise<PersonEntry[]> {
   'use cache';
   cacheLife('hours');
   cacheTag(TAGS.people, TAGS.sitemap);
-  const [people, counts, radars] = await Promise.all([Person.list(), Person.pinCounts(), Person.radars()]);
-  return people.map((p) => ({ ...p, pins: counts.get(p.id) ?? 0, ...(radars.has(p.id) ? { radar: radars.get(p.id) } : {}) }));
+  const [people, counts, radars, trades] = await Promise.all([Person.list(), Person.pinCounts(), Person.radars(), PersonTrade.counts()]);
+  return people.map((p) => ({ ...p, pins: counts.get(p.id) ?? 0, trades: trades.get(p.id) ?? 0, ...(radars.has(p.id) ? { radar: radars.get(p.id) } : {}) }));
 }
 
 // The page renders the wiki compiled from the sourced facts (0151), not the

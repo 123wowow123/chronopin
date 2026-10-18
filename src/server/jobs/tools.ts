@@ -42,7 +42,7 @@ import { hasEventInfo } from '@/lib/eventInfo';
 import { CURATORS } from './curators';
 import { checkPinHealth, pinsToCheck } from './health';
 import log from '../util/log';
-import { importTrades, recentFilings } from '../services/personTradesImport';
+import { importTrades, prodPeopleByName, recentFilings } from '../services/personTradesImport';
 import { importCampaigns } from '../services/personCampaignsImport';
 import PersonCampaign from '../model/personCampaign';
 import { getCampaignRefreshDeadline, setCampaignRefreshDeadline } from '../model/appSetting';
@@ -570,7 +570,18 @@ export const TOOLS: JobTool[] = [
       let prod: { added: number; missing: string[] } | null = null;
       if (process.env.JOBS_PROD_BASE?.trim()) {
         prod = { added: 0, missing: [] };
-        const filings = await recentFilings(21);
+        // A person with no bioguide id is sent by id, and ids differ between here and production: look them up by name there.
+        const prodIds = await prodPeopleByName(process.env.JOBS_PROD_BASE!.trim());
+        const filings = (await recentFilings(21)).flatMap((f: Record<string, any>) => {
+          const { personName, ...rest } = f;
+          if (!rest.personId) return [rest];
+          const id = prodIds.get(personName);
+          if (!id) {
+            prod!.missing.push(personName);
+            return [];
+          }
+          return [{ ...rest, personId: id }];
+        });
         for (let i = 0; i < filings.length; i += 20) {
           const r = await personTradesRequest(filings.slice(i, i + 20));
           prod.added += r.added;

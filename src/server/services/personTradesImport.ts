@@ -96,7 +96,8 @@ async function fetchOgeFilings(people: Candidate[], log: (line: string) => void,
       const url = /href='([^']+)'/.exec(e.type)?.[1];
       if (!url || !isOge278TFile(url)) continue;
       const [l, f = ''] = e.name.split(',').map((x) => x.trim());
-      const hits = people.filter((p) => fold(p.name).endsWith(fold(l)) && firstFits(fold(p.name).split(' ')[0], fold(f).split(' ')[0]));
+      const given = fold(f).split(' ').filter(Boolean); // "Eric Scott": any of the given names may be the one the page uses
+      const hits = people.filter((p) => fold(p.name).endsWith(fold(l)) && given.some((g) => firstFits(fold(p.name).split(' ')[0], g)));
       const pick = hits.length === 1 ? hits[0] : hits.filter((p) => fold(p.name)[0] === fold(f)[0]).length === 1 ? hits.filter((p) => fold(p.name)[0] === fold(f)[0])[0] : null;
       const id = ogeReportId(url);
       if (!pick || !id) {
@@ -211,7 +212,7 @@ export async function importTrades({
 // (a person is named by bioguide id, since local ids match prod's only after a pull).
 export async function recentFilings(days: number) {
   const rows = await db.query<Record<string, any>>(
-    `SELECT p."id" AS "personId", p."bioguideId", t."chamber", t."filingId", t."filedDate"::text AS "filedDate", t."sourceUrl", t."owner", t."asset", t."ticker", t."assetType", t."txType",
+    `SELECT p."id" AS "personId", p."name", p."bioguideId", t."chamber", t."filingId", t."filedDate"::text AS "filedDate", t."sourceUrl", t."owner", t."asset", t."ticker", t."assetType", t."txType",
             t."txDate"::text AS "txDate", t."notifiedDate"::text AS "notifiedDate", t."amountLow"::float8 AS "amountLow", t."amountHigh"::float8 AS "amountHigh"
      FROM "PersonTrade" t JOIN "Person" p ON p."id" = t."personId"
      WHERE t."filedDate" >= now()::date - $1::int
@@ -221,9 +222,20 @@ export async function recentFilings(days: number) {
   const byFiling = new Map<string, any>();
   for (const r of rows) {
     const key = `${r.chamber}:${r.filingId}`;
-    const f = byFiling.get(key) ?? { ...(r.bioguideId ? { bioguideId: r.bioguideId } : { personId: r.personId }), chamber: r.chamber, filingId: r.filingId, filedDate: r.filedDate, sourceUrl: r.sourceUrl, trades: [] };
+    const f = byFiling.get(key) ?? { ...(r.bioguideId ? { bioguideId: r.bioguideId } : { personId: r.personId, personName: r.name as string }), chamber: r.chamber, filingId: r.filingId, filedDate: r.filedDate, sourceUrl: r.sourceUrl, trades: [] };
     f.trades.push({ owner: r.owner, asset: r.asset, ticker: r.ticker, assetType: r.assetType, txType: r.txType, txDate: r.txDate, notifiedDate: r.notifiedDate, amountLow: r.amountLow, amountHigh: r.amountHigh });
     byFiling.set(key, f);
   }
   return [...byFiling.values()];
+}
+
+// Production's people by exact name, for those it has once. A person with no bioguide
+// id is sent to production by id, and local and production ids drift apart as soon as
+// either side adds a person, so the id is looked up by name there.
+export async function prodPeopleByName(base: string): Promise<Map<string, number>> {
+  const res = await fetch(`${base}/api/people`, { headers: { 'User-Agent': UA } });
+  if (!res.ok) throw new Error(`${base}/api/people answered ${res.status}`);
+  const seen = new Map<string, number | null>();
+  for (const p of (await res.json()) as { id: number; name: string }[]) seen.set(p.name, seen.has(p.name) ? null : p.id);
+  return new Map([...seen].filter((e): e is [string, number] => e[1] != null));
 }

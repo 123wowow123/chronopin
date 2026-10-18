@@ -1,5 +1,8 @@
 # Update Log
 
+## 2026-10-18
+* **Creation**: Added the activities landing page (`/activities`, `/activities/<city>`) with a Today tab, seasonal tabs, the `activities:seed` catalog seeder and its vertical recipe in [Vertical recipes](/scraping/verticals.md).
+
 ## 2026-10-17
 
 * **Update:** Audited the music-ranking catalog (251 entries, 21 country lanes) against chart sources and strict iTunes matches. 71 confirmed, 159 corrected (wrong song, wrong rank or wrong media), 21 unverifiable; invented stream/week figures were removed, and 200 source wikis were written to `scripts/music/musicWikis.json`. All 251 production pins were re-pointed (scripts/music/repointProdPins.ts: title, text, source, date, tags, artwork; shared chart pages get a `#<id>` anchor on the source URL because prod rejects duplicate source URLs), 2 missing pins created (ca-2018-1 -> 16297, mx-2017-1 -> 16298), and 197 source wikis attached without server-side fetching (scripts/music/attachWikisProd.ts). Unverifiable entries are titled `(unverified)`. Translations of the changed pins are outdated; local pins were not touched. Entries with no strict iTunes match have no artwork or preview.
@@ -196,6 +199,3 @@
 
 ## 2026-09-18
 * **Creation**: Link wikis (0026) and the OKF export were added. The Claude calls had not run yet, because the app's API key had no credit.
-
-## 2026-10-18
-* **Creation**: Added the activities landing page (`/activities`, `/activities/<city>`) with a Today tab, seasonal tabs, the `activities:seed` catalog seeder and its vertical recipe in [Vertical recipes](/scraping/verticals.md).

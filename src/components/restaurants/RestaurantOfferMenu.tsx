@@ -3,7 +3,7 @@
 import { useId, useState } from 'react';
 import Image from 'next/image';
 import Anchor from '@/components/ui/Anchor';
-import { restaurantMenuAmount, type RestaurantMenu } from '@/lib/restaurantMenus';
+import { restaurantMenuAmount, restaurantMenuCategories, type RestaurantMenu } from '@/lib/restaurantMenus';
 import styles from './RestaurantGuide.module.css';
 
 export function RestaurantOfferMenu({ menu, restaurant, specials = true }: { menu?: RestaurantMenu; restaurant: string; specials?: boolean }) {
@@ -11,7 +11,7 @@ export function RestaurantOfferMenu({ menu, restaurant, specials = true }: { men
   const [selected, setSelected] = useState<string | null>(null);
   const [expanded, setExpanded] = useState(false);
   if (!menu) return null;
-  const categories = [...new Set(menu.items.map((item) => item.category || 'Menu'))];
+  const categories = restaurantMenuCategories(menu.items);
   const category = categories.find((category) => category === selected) ?? categories[0];
   const items = menu.items.filter((item) => (item.category || 'Menu') === category);
   const shown = expanded ? items : items.slice(0, 6);

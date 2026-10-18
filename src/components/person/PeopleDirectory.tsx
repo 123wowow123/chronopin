@@ -15,6 +15,13 @@ export type DirectoryPerson = {
   line: string;
   // Each life phase as the eight axis scores (null: no evidence), for the mini radar.
   radar?: (number | null)[][];
+  // What the second row of filters groups by.
+  roleLabel?: string;
+  // true: holds the office now; false: has left it or died; absent: not a political role.
+  inOffice?: boolean;
+  party?: string | null;
+  trades?: number;
+  living?: boolean;
 };
 
 export type DirectoryGroup = { key: string; heading: string; people: DirectoryPerson[] };
@@ -119,6 +126,42 @@ function axisBest(p: DirectoryPerson, axis: number): number {
   return best;
 }
 
+// GovTrack writes "Democrat" where Wikidata writes "Democratic": one party, one chip.
+const partyOf = (p: DirectoryPerson) => (p.party === 'Democrat' ? 'Democratic' : p.party);
+
+// One chip of the second row: a way to narrow the open tab.
+type Facet = { key: string; label: string; count: number; test: (p: DirectoryPerson) => boolean };
+
+// The filters worth offering for one tab's people, from what they have in common:
+// in office or former, the role when the tab mixes several, the party, who has
+// disclosed trades, and living or not for the people outside politics. A filter
+// that every person passes, or none does, is left out.
+function facetsFor(people: DirectoryPerson[], t: ReturnType<typeof useT>): Facet[] {
+  const out: Facet[] = [];
+  const add = (key: string, label: string, test: (p: DirectoryPerson) => boolean) => {
+    const count = people.filter(test).length;
+    if (count > 0 && count < people.length) out.push({ key, label, count, test });
+  };
+  const tally = (pick: (p: DirectoryPerson) => string | null | undefined) => {
+    const counts = new Map<string, number>();
+    for (const p of people) {
+      const v = pick(p);
+      if (v) counts.set(v, (counts.get(v) ?? 0) + 1);
+    }
+    return [...counts].sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]));
+  };
+  add('status:in', t('person.facet.inOffice'), (p) => p.inOffice === true);
+  add('status:former', t('person.facet.former'), (p) => p.inOffice === false);
+  for (const [role] of tally((p) => p.roleLabel).slice(0, 8)) add(`role:${role}`, role, (p) => p.roleLabel === role);
+  for (const [party] of tally(partyOf).slice(0, 6)) add(`party:${party}`, party, (p) => partyOf(p) === party);
+  add('trades', t('person.facet.trades'), (p) => (p.trades ?? 0) > 0);
+  if (!people.some((p) => p.inOffice != null)) {
+    add('living', t('person.facet.living'), (p) => p.living === true);
+    add('deceased', t('person.facet.deceased'), (p) => p.living === false);
+  }
+  return out;
+}
+
 // 'name' or an axis name: what the cards are ordered by.
 type SortKey = 'name' | OctagonAxis;
 
@@ -142,6 +185,8 @@ export function PeopleDirectory({
   const [query, setQuery] = useState('');
   const [shown, setShown] = useState(PAGE);
   const [sort, setSort] = useState<SortKey>('name');
+  // The second row's chip (a Facet key); none: everyone in the tab.
+  const [facet, setFacet] = useState<string | null>(null);
   // Every sort opens descending (Z to A, highest first); the toggle flips it.
   const [descending, setDescending] = useState(true);
 
@@ -156,6 +201,8 @@ export function PeopleDirectory({
   }, [groups]);
 
   const group = groups.find((g) => g.key === active) ?? groups.find((g) => g.key === defaultKey) ?? groups[0];
+  const facets = useMemo(() => facetsFor(group?.people ?? [], t), [group, t]);
+  const activeFacet = facets.find((f) => f.key === facet) ?? null;
   const needle = fold(query.trim());
   const searching = needle.length > 0;
   // Searching ignores the tabs: everyone in every group whose name or line
@@ -175,7 +222,7 @@ export function PeopleDirectory({
     // Name order is A to Z; "descending" is Z to A.
     const named = (a: DirectoryPerson, b: DirectoryPerson) => (sort === 'name' && descending ? byName(b, a) : byName(a, b));
     if (!searching) {
-      const people = group?.people ?? [];
+      const people = activeFacet ? (group?.people ?? []).filter(activeFacet.test) : (group?.people ?? []);
       if (sort !== 'name') return [...people].sort((a, b) => order(a, b) || byName(a, b));
       return descending ? [...people].reverse() : people;
     }
@@ -185,11 +232,12 @@ export function PeopleDirectory({
       .flatMap((g) => g.people)
       .filter((p) => !seen.has(p.id) && seen.add(p.id) && (fold(p.name).includes(needle) || fold(p.line).includes(needle)))
       .sort((a, b) => order(a, b) || starts(b) - starts(a) || named(a, b));
-  }, [groups, group, needle, searching, sort, descending]);
+  }, [groups, group, activeFacet, needle, searching, sort, descending]);
   if (!group) return null;
 
   const pick = (key: string) => {
     setActive(key);
+    setFacet(null);
     setShown(PAGE);
     window.history.replaceState(null, '', `#${encodeURIComponent(key)}`);
   };
@@ -283,6 +331,32 @@ export function PeopleDirectory({
           );
         })}
       </div>
+      )}
+
+      {searching || !facets.length ? null : (
+        // The second row slides sideways like the first: narrowings of the open tab.
+        <div role="group" aria-label={t('person.facet.label')} className="no-scrollbar -mx-4 mt-3 flex gap-2 overflow-x-auto px-4 pb-1 sm:-mx-6 sm:px-6">
+          {[{ key: '', label: t('person.all'), count: group.people.length }, ...facets].map((f) => {
+            const selected = (facet ?? '') === f.key || (!activeFacet && f.key === '');
+            return (
+              <button
+                key={f.key || 'all'}
+                type="button"
+                aria-pressed={selected}
+                onClick={() => {
+                  setFacet(f.key || null);
+                  setShown(PAGE);
+                }}
+                className={`inline-flex shrink-0 items-center gap-1.5 rounded-full px-3 py-1 text-xs font-medium ring-1 ring-inset transition-colors ${
+                  selected ? 'bg-raised text-ink ring-accent' : 'bg-field text-muted ring-line hover:bg-raised hover:text-ink'
+                }`}
+              >
+                {f.label}
+                <span className="tabular-nums text-subtle">{f.count}</span>
+              </button>
+            );
+          })}
+        </div>
       )}
 
       <div

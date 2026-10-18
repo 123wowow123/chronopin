@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { restaurantMenuAmount, restaurantMenuFor, restaurantMenuRescrapeCandidates, restaurantMenuState, type RestaurantMenuProfile } from './restaurantMenus';
+import { restaurantMenuAmount, restaurantMenuCategories, restaurantMenuFor, restaurantMenuRescrapeCandidates, restaurantMenuState, type RestaurantMenuProfile } from './restaurantMenus';
 import topPins from '@/server/data/sanDiegoTopRestaurants.preview.json';
 import regionalCatalog from '@/server/data/regionalRestaurants.json';
 import { RESTAURANT_REGIONS } from './restaurants';
@@ -142,5 +142,17 @@ describe('branch-specific restaurant menus and specials', () => {
     };
     expect(restaurantMenuState(profile, '2026-10-06').specials.map((special) => special.title)).toEqual(['Ending today']);
     expect(restaurantMenuState(profile, '2026-10-07').specials.map((special) => special.title)).toEqual(['Future']);
+  });
+});
+
+describe('restaurantMenuCategories', () => {
+  it('puts Food first, so it is the tab that opens, and keeps the rest in menu order', () => {
+    expect(restaurantMenuCategories([{ category: 'Drinks' }, { category: 'Food' }, { category: 'Dessert' }])).toEqual(['Food', 'Drinks', 'Dessert']);
+    expect(restaurantMenuCategories([{ category: 'Cocktails' }, { category: 'Beer' }, { category: 'Food menu' }])).toEqual(['Food menu', 'Cocktails', 'Beer']);
+  });
+  it('leaves a menu with no Food category, or with Food already first, as it was', () => {
+    expect(restaurantMenuCategories([{ category: 'Drinks' }, { category: 'Wine' }])).toEqual(['Drinks', 'Wine']);
+    expect(restaurantMenuCategories([{ category: 'Food' }, { category: 'Drinks' }])).toEqual(['Food', 'Drinks']);
+    expect(restaurantMenuCategories([{}, { category: 'Drinks' }])).toEqual(['Menu', 'Drinks']);
   });
 });

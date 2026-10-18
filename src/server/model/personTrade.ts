@@ -39,6 +39,12 @@ export default class PersonTrade {
     return added;
   }
 
+  // How many trades each person has, for the people index's "Disclosed trades" filter.
+  static async counts(): Promise<Map<number, number>> {
+    const rows = await db.query<{ personId: number; n: number }>(`SELECT "personId", count(*)::int AS "n" FROM "PersonTrade" GROUP BY 1`);
+    return new Map(rows.map((r) => [r.personId, r.n]));
+  }
+
   // The totals over every stored trade (the page lists only the newest ones):
   // counts, the summed range ends, the most-traded tickers and the period.
   static async summary(personId: number): Promise<TradeSummary> {

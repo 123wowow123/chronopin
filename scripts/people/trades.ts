@@ -22,7 +22,7 @@
 import '../env';
 import { readFileSync } from 'node:fs';
 import { parseArgs } from 'node:util';
-import { importTrades } from '@/server/services/personTradesImport';
+import { importTrades, prodPeopleByName } from '@/server/services/personTradesImport';
 
 const { values: flags } = parseArgs({
   options: {
@@ -41,6 +41,7 @@ const { values: flags } = parseArgs({
 });
 
 const sent: Record<string, unknown>[] = [];
+let prodIds: Map<string, number> | null = null;
 
 async function main() {
   if (!flags.house && !flags.senate && !flags.executive) {
@@ -59,7 +60,16 @@ async function main() {
     save: async (personId, filing, person) => {
       if (flags['dry-run']) return filing.trades.length;
       if (flags.prod) {
-        sent.push({ ...filing, ...(person.bioguideId ? { bioguideId: person.bioguideId } : { personId }), ...(flags.replace ? { replace: true } : {}) });
+        if (!person.bioguideId) {
+          // No bioguide id: production finds the person by its own id, found here by name.
+          prodIds ??= await prodPeopleByName(flags.base!);
+          const id = prodIds.get(person.name);
+          if (!id) {
+            console.log(`${person.name}: not on production (or two of that name) - filing ${filing.filingId} skipped`);
+            return 0;
+          }
+          sent.push({ ...filing, personId: id, ...(flags.replace ? { replace: true } : {}) });
+        } else sent.push({ ...filing, bioguideId: person.bioguideId, ...(flags.replace ? { replace: true } : {}) });
         return filing.trades.length;
       }
       if (flags.replace) return (await import('@/server/model/personTrade')).default.replaceFiling(personId, filing);
