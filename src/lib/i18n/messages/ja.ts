@@ -2002,7 +2002,6 @@ const ja: Messages = {
       owners: { self: '本人', spouse: '配偶者', joint: '共同', dependent: '扶養する子' },
       types: { purchase: '購入', sale: '売却', partial: '一部売却', exchange: '交換' },
       showMore: '全{count}件を表示',
-      latest: '最新{shown}件を表示（全{total}件）',
       watch: '取引を通知する',
       watching: '取引を通知中',
       unwatch: '通知を解除',

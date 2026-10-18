@@ -1999,7 +1999,6 @@ const pt: Messages = {
       owners: { self: 'Próprio', spouse: 'Cônjuge', joint: 'Conjunto', dependent: 'Filho dependente' },
       types: { purchase: 'Compra', sale: 'Venda', partial: 'Venda parcial', exchange: 'Troca' },
       showMore: 'Mostrar as {count} operações',
-      latest: 'Mostrando as {shown} mais recentes de {total} operações',
       watch: 'Avisar-me das operações',
       watching: 'A acompanhar operações',
       unwatch: 'Deixar de acompanhar',

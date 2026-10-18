@@ -2019,7 +2019,6 @@ const hi: Messages = {
       owners: { self: 'स्वयं', spouse: 'जीवनसाथी', joint: 'संयुक्त', dependent: 'आश्रित बच्चा' },
       types: { purchase: 'खरीद', sale: 'बिक्री', partial: 'आंशिक बिक्री', exchange: 'अदला-बदली' },
       showMore: 'सभी {count} लेन-देन दिखाएँ',
-      latest: '{total} में से नवीनतम {shown} लेन-देन दिखाए गए',
       watch: 'लेन-देन की सूचना पाएँ',
       watching: 'लेन-देन देख रहे हैं',
       unwatch: 'देखना बंद करें',

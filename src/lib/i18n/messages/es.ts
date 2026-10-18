@@ -2008,7 +2008,6 @@ const es: Messages = {
       owners: { self: 'Propio', spouse: 'Cónyuge', joint: 'Conjunto', dependent: 'Hijo dependiente' },
       types: { purchase: 'Compra', sale: 'Venta', partial: 'Venta parcial', exchange: 'Canje' },
       showMore: 'Mostrar las {count} operaciones',
-      latest: 'Mostrando las {shown} más recientes de {total} operaciones',
       watch: 'Avisarme de operaciones',
       watching: 'Siguiendo operaciones',
       unwatch: 'Dejar de seguir',

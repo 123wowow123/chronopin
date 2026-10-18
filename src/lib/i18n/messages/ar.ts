@@ -2380,7 +2380,6 @@ const ar: Messages = {
       owners: { self: 'الشخص نفسه', spouse: 'الزوج/الزوجة', joint: 'مشترك', dependent: 'ابن/ابنة معالة' },
       types: { purchase: 'شراء', sale: 'بيع', partial: 'بيع جزئي', exchange: 'مبادلة' },
       showMore: 'عرض كل الصفقات ({count})',
-      latest: 'عرض أحدث {shown} من أصل {total} صفقة',
       watch: 'أبلغني بالصفقات',
       watching: 'تتابع الصفقات',
       unwatch: 'إيقاف المتابعة',

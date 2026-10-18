@@ -17,8 +17,13 @@ const COLUMNS = `"id", "chamber", "filingId", "owner", "asset", "ticker", "asset
 // Stock trades a person disclosed (0188), and who watches for new ones.
 export default class PersonTrade {
   // Newest transaction first.
-  static list(personId: number, limit = 500) {
-    return db.query<TradeRow>(`SELECT ${COLUMNS} FROM "PersonTrade" WHERE "personId" = $1 ORDER BY "txDate" DESC, "id" DESC LIMIT $2`, [personId, limit]);
+  static list(personId: number, limit = 500, offset = 0) {
+    return db.query<TradeRow>(`SELECT ${COLUMNS} FROM "PersonTrade" WHERE "personId" = $1 ORDER BY "txDate" DESC, "id" DESC LIMIT $2 OFFSET $3`, [personId, limit, offset]);
+  }
+
+  static async count(personId: number): Promise<number> {
+    const [row] = await db.query<{ n: number }>(`SELECT count(*)::int AS "n" FROM "PersonTrade" WHERE "personId" = $1`, [personId]);
+    return row.n;
   }
 
   // Stores one filing's trades. A line already stored is skipped, so a

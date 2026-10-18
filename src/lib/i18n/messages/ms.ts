@@ -2012,7 +2012,6 @@ const ms: Messages = {
       owners: { self: 'Sendiri', spouse: 'Pasangan', joint: 'Bersama', dependent: 'Anak tanggungan' },
       types: { purchase: 'Pembelian', sale: 'Jualan', partial: 'Jualan separa', exchange: 'Pertukaran' },
       showMore: 'Tunjuk semua {count} dagangan',
-      latest: 'Menunjukkan {shown} transaksi terkini daripada {total}',
       watch: 'Maklumkan saya tentang dagangan',
       watching: 'Memantau dagangan',
       unwatch: 'Henti pantau',

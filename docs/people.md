@@ -657,9 +657,11 @@ from. Filings can arrive up to 45 days after a trade; the section says it is not
   2026, Waltz's annual 2025) and the index lists no 278-T for JD Vance. Officials without a person page
   are listed under `unmatched` (Bryan Bedford, Philip Jefferson, Eric Scott Turner, Barbara Barrett,
   Wendy Sherman). Governors file on state forms and are not covered.
-- **Large histories:** the page lists a person's newest 1,000 trades; the tiles and count come from
-  `PersonTrade.summary` over every stored trade, and the table says "Showing the latest N of M trades"
-  (`person.trades.latest`) when it is cut.
+- **Large histories:** the page carries only the newest 25 trades (`TRADES_SHOWN` in
+  `services/people.ts`); the tiles and count come from `PersonTrade.summary` over every stored trade.
+  The table (`TradesTable`, a client component) loads 100 more per click on "More · N" from
+  `GET /api/people/:id/trades?limit=100&offset=N` (limit 1-200; with neither parameter the newest 500;
+  the answer carries `total`). Donald Trump's page went from 2.7 MB to under 0.7 MB.
 
 ## Campaign finance and opponents (0189)
 
