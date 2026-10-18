@@ -60,6 +60,8 @@ export type PinSearchFilters = {
   ratings: RatingBound[];
   delays: DelayBound[];
   holidays: string[];
+  // AND: a pin must meet every one of these as well.
+  all?: PinSearchFilters[];
 };
 
 // Everything a search narrows pins to. hits are a free-text search's matches
@@ -1207,6 +1209,8 @@ export function searchClauses(filter: SearchFilter) {
       ];
       where.push(`EXISTS (SELECT 1 FROM "PinUpdate" AS "u" WHERE "u"."pinId" = "Pin"."id" AND ${on.join(' AND ')})`);
     }
+    // AND: each side on its own, so two tags there are both required.
+    for (const side of filter.all ?? []) where.push(...labelWhere(side));
     return where;
   };
   const groups = (filter.alternatives?.length ?? 0) > 1 ? filter.alternatives!.map(labelWhere) : null;

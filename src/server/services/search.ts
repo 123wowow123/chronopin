@@ -206,7 +206,8 @@ export async function searchTagCounts(
   // the cloud with no way back.
   const parsed = parseSearchQuery(searchText);
   const unpicked = { tags: [], excludeTags: [], confidences: [], confidenceBands: [] };
-  const query = { ...parsed, ...unpicked, alternatives: parsed.alternatives?.map((group) => ({ ...group, ...unpicked })) };
+  const clear = (group: SearchQuery): SearchQuery => ({ ...group, ...unpicked, alternatives: group.alternatives?.map(clear), all: group.all?.map(clear) });
+  const query = clear(parsed);
   return Pins.countSearchTags({ ...(await searchFilter(query, options)), createdSince: options.createdSince }, limit);
 }
 
@@ -221,7 +222,8 @@ function asksForNothing(query: SearchQuery, options: SearchOptions) {
 // translated title names it (searchClauses).
 async function searchFilter(query: SearchQuery, options: SearchOptions): Promise<SearchFilter> {
   const excludeTags = options.excludePredicted ? uniqueTags([...query.excludeTags, PREDICTED_TAG]) : query.excludeTags;
-  const alternatives = query.alternatives?.map((group) => (options.excludePredicted ? { ...group, excludeTags: uniqueTags([...group.excludeTags, PREDICTED_TAG]) } : group));
+  const withoutPredicted = (group: SearchQuery): SearchQuery => ({ ...group, excludeTags: uniqueTags([...group.excludeTags, PREDICTED_TAG]) });
+  const alternatives = options.excludePredicted ? query.alternatives?.map(withoutPredicted) : query.alternatives;
   return {
     ...query,
     alternatives,

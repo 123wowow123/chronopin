@@ -3966,15 +3966,100 @@
           "menu": {
             "pinSourceUrl": "https://visitgangnam.net/en/places/samwon-garden",
             "name": "Samwon Garden",
-            "checkedAt": "2026-10-17",
+            "checkedAt": "2026-10-18",
             "menus": [
               {
-                "label": "Menu (link only)",
-                "url": "https://www.tastekoreanfood.com/eatout/samwon-garden-seoul-premium-hanwoo-galbi",
+                "label": "Restaurant menu (Polle listing, selection of 96 items)",
+                "url": "https://polle.com/place/4GnsjH/%EC%82%BC%EC%9B%90%EA%B0%80%EB%93%A0",
                 "currency": "KRW",
-                "coverage": "link",
-                "items": [],
-                "note": "Dishes named (yangnyeom galbi, saeng galbi, bulgogi, galbitang, naengmyeon, doenjang jjigae, beef tartare); itemised prices appear only in menu photos, article quotes ~40,000-50,000+ KRW per person for hanwoo."
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Hanwoo bulgogi set meal",
+                    "price": 55000
+                  },
+                  {
+                    "name": "Ganjang gejang set meal",
+                    "price": 55000
+                  },
+                  {
+                    "name": "Boribap gulbi (barley and dried croaker) set meal",
+                    "price": 55000
+                  },
+                  {
+                    "name": "Samwon traditional marinated galbi",
+                    "price": 65000
+                  },
+                  {
+                    "name": "Hanwoo raw galbi",
+                    "price": 130000
+                  },
+                  {
+                    "name": "Hanwoo marinated galbi",
+                    "price": 120000
+                  },
+                  {
+                    "name": "Hanwoo raw sirloin",
+                    "price": 85000
+                  },
+                  {
+                    "name": "Hanwoo flower sirloin",
+                    "price": 95000
+                  },
+                  {
+                    "name": "Hanwoo tenderloin",
+                    "price": 85000
+                  },
+                  {
+                    "name": "Hanwoo anchangsal (inside skirt)",
+                    "price": 98000
+                  },
+                  {
+                    "name": "Hanwoo assorted special cuts",
+                    "price": 178000
+                  },
+                  {
+                    "name": "Hanwoo yukhoe",
+                    "price": 50000
+                  },
+                  {
+                    "name": "Galbijjim",
+                    "price": 88000
+                  },
+                  {
+                    "name": "Haemul pajeon",
+                    "price": 45000
+                  },
+                  {
+                    "name": "Ganjang gejang (1 crab)",
+                    "price": 50000
+                  },
+                  {
+                    "name": "Samwon galbitang",
+                    "price": 22000
+                  },
+                  {
+                    "name": "Samwon naengmyeon (mul, bibim or warm)",
+                    "price": 20000
+                  },
+                  {
+                    "name": "Dolsot bibimbap",
+                    "price": 22000
+                  },
+                  {
+                    "name": "Yukhoe bibimbap",
+                    "price": 28000
+                  },
+                  {
+                    "name": "Jeonbok juk (abalone porridge)",
+                    "price": 35000
+                  },
+                  {
+                    "name": "Sinseollo bingsu",
+                    "price": 60000
+                  }
+                ],
+                "note": "User-maintained Polle listing (not the operator); course names and the date of the prices are not published there, and prices drift. A selection of the food items; the listing also has drinks and sides. A 2022 review reported marinated galbi at 55,000 versus 65,000 now. Address matches 835 Eonju-ro."
               }
             ],
             "specials": [],
@@ -4099,15 +4184,40 @@
           "menu": {
             "pinSourceUrl": "https://www.hanilkwan.co.kr/",
             "name": "Hanilkwan (Apgujeong)",
-            "checkedAt": "2026-10-17",
+            "checkedAt": "2026-10-18",
             "menus": [
               {
-                "label": "Menu (link only)",
-                "url": "https://visitgangnam.net/en/places/hanilkwan",
+                "label": "Apgujeong branch menu (Polle listing)",
+                "url": "https://polle.com/place/5hkfQ5/%ED%95%9C%EC%9D%BC%EA%B4%80",
                 "currency": "KRW",
-                "coverage": "link",
-                "items": [],
-                "note": "Dishes named by Wikipedia/Visit Gangnam: bulgogi, galbi, galbitang, yukgaejang, naengmyeon, bibimbap, tangpyeongchae; a bulgogi lunch set served until 14:30. The operator site lists only take-home packs, and no dine-in KRW prices were found."
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Jeontong galbitang (traditional short-rib soup)",
+                    "price": 20000
+                  },
+                  {
+                    "name": "Goldongban (mixed rice bowl)",
+                    "price": 18000
+                  },
+                  {
+                    "name": "Seoul naengmyeon (cold, bibim or warm)",
+                    "price": 14000
+                  },
+                  {
+                    "name": "Nokdu bindaetteok (mung-bean pancake)",
+                    "price": 24000
+                  },
+                  {
+                    "name": "Lunch table setting (sirloin bulgogi)",
+                    "price": 39000
+                  },
+                  {
+                    "name": "Lunch table setting (grilled galbi)",
+                    "price": 49000
+                  }
+                ],
+                "note": "User-maintained Polle listing (not the operator); course names and the date of the prices are not published there, and prices drift. Apgujeong branch only (14 Apgujeong-ro 38-gil); other Hanilkwan branches list different prices."
               }
             ],
             "specials": [],
@@ -4230,15 +4340,41 @@
           "menu": {
             "pinSourceUrl": "https://guide.michelin.com/en/seoul-capital-area/kr-seoul/restaurant/mingles",
             "name": "Mingles",
-            "checkedAt": "2026-10-17",
+            "checkedAt": "2026-10-18",
             "menus": [
               {
-                "label": "Menu (link only)",
-                "url": "https://restaurant-mingles.com/",
+                "label": "Lunch and dinner courses (Polle listing)",
+                "url": "https://polle.com/place/4sA4kB/%EB%B0%8D%EA%B8%80%EC%8A%A4",
                 "currency": "KRW",
-                "coverage": "link",
-                "items": [],
-                "note": "Tasting-menu prices not found in a verifiable operator/press source (searches for current KRW course prices returned nothing usable; web-search budget exhausted). Checked: MICHELIN Guide page (no menu), Wikipedia."
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Lunch tasting course, per person",
+                    "price": 320000,
+                    "category": "Course"
+                  },
+                  {
+                    "name": "Dinner tasting course, per person",
+                    "price": 420000,
+                    "category": "Course"
+                  },
+                  {
+                    "name": "Traditional-liquor pairing",
+                    "priceLabel": "Price not published",
+                    "category": "Pairing"
+                  },
+                  {
+                    "name": "Signature pairing",
+                    "priceLabel": "Price not published",
+                    "category": "Pairing"
+                  },
+                  {
+                    "name": "Selected pairing",
+                    "priceLabel": "Price not published",
+                    "category": "Pairing"
+                  }
+                ],
+                "note": "User-maintained Polle listing (not the operator); course names and the date of the prices are not published there, and prices drift. Separate 2026 guides report 420,000 KRW dinner / 320,000 lunch after a March 2026 increase, matching this listing; another guide gives 300,000-380,000. Individual dishes are not published. Tax/service not stated."
               }
             ],
             "specials": [],
@@ -4369,15 +4505,279 @@
           "menu": {
             "pinSourceUrl": "https://guide.michelin.com/en/seoul-capital-area/kr-seoul/restaurant/jungsik511965",
             "name": "Jungsik",
-            "checkedAt": "2026-10-17",
+            "checkedAt": "2026-10-18",
             "menus": [
               {
-                "label": "Menu (link only)",
-                "url": "https://guide.michelin.com/en/seoul-capital-area/kr-seoul/restaurant/jungsik511965",
+                "label": "Dinner course (operator menu)",
+                "url": "https://www.jungsik.kr/eat/",
                 "currency": "KRW",
-                "coverage": "link",
-                "items": [],
-                "note": "Tasting-menu prices not found in a verifiable operator/press source (searches for current KRW course prices returned nothing usable; web-search budget exhausted). Checked: MICHELIN Guide page (no menu), Wikipedia."
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "Dinner course, per person (one course per person is required)",
+                    "price": 330000,
+                    "category": "Course"
+                  },
+                  {
+                    "name": "Banchan",
+                    "priceLabel": "Price not published",
+                    "category": "Course"
+                  },
+                  {
+                    "name": "Octopus (add caviar +50,000)",
+                    "priceLabel": "Included in course",
+                    "category": "Course"
+                  },
+                  {
+                    "name": "Abalone",
+                    "priceLabel": "Included in course",
+                    "category": "Course"
+                  },
+                  {
+                    "name": "Striped jack gimbap, or All-in-one gimbap (+60,000)",
+                    "priceLabel": "Included in course",
+                    "category": "Course"
+                  },
+                  {
+                    "name": "Black cod",
+                    "priceLabel": "Included in course",
+                    "category": "Course"
+                  },
+                  {
+                    "name": "Duck, or Hanwoo galbi (+30,000)",
+                    "priceLabel": "Included in course",
+                    "category": "Course"
+                  },
+                  {
+                    "name": "Gamtae guksu (add sea urchin +40,000)",
+                    "priceLabel": "Included in course",
+                    "category": "Course"
+                  },
+                  {
+                    "name": "Neungeum",
+                    "priceLabel": "Included in course",
+                    "category": "Course"
+                  },
+                  {
+                    "name": "Dolhareubang, or Ulleungdo maple",
+                    "priceLabel": "Included in course",
+                    "category": "Course"
+                  },
+                  {
+                    "name": "Sweet potato",
+                    "priceLabel": "Included in course",
+                    "category": "Course"
+                  },
+                  {
+                    "name": "Wine pairing, 5 glasses",
+                    "price": 210000,
+                    "category": "Pairing"
+                  },
+                  {
+                    "name": "Wine pairing, 8 glasses",
+                    "price": 290000,
+                    "category": "Pairing"
+                  },
+                  {
+                    "name": "Premium wine pairing, 5 glasses",
+                    "price": 700000,
+                    "category": "Pairing"
+                  },
+                  {
+                    "name": "Supplement: All in one gimbap",
+                    "price": 200000,
+                    "category": "Supplement"
+                  },
+                  {
+                    "name": "Supplement: Sea urchin gujeolpan",
+                    "price": 200000,
+                    "category": "Supplement"
+                  },
+                  {
+                    "name": "Supplement: Sea urchin bibimbap",
+                    "price": 89000,
+                    "category": "Supplement"
+                  },
+                  {
+                    "name": "Supplement: Gimbap",
+                    "price": 28000,
+                    "category": "Supplement"
+                  },
+                  {
+                    "name": "Supplement: Han Yak Bang",
+                    "price": 30000,
+                    "category": "Supplement"
+                  }
+                ],
+                "note": "Transcribed from jungsik.kr/eat (Dinner tab) on 2026-10-18. The page does not say whether tax or service charge is included."
+              },
+              {
+                "label": "Lunch course (operator menu)",
+                "url": "https://www.jungsik.kr/eat/",
+                "currency": "KRW",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "Lunch course, per person (one course per person is required)",
+                    "price": 230000,
+                    "category": "Course"
+                  },
+                  {
+                    "name": "Banchan",
+                    "priceLabel": "Price not published",
+                    "category": "Course"
+                  },
+                  {
+                    "name": "Octopus (add caviar +50,000)",
+                    "priceLabel": "Included in course",
+                    "category": "Course"
+                  },
+                  {
+                    "name": "Abalone",
+                    "priceLabel": "Included in course",
+                    "category": "Course"
+                  },
+                  {
+                    "name": "Black cod",
+                    "priceLabel": "Included in course",
+                    "category": "Course"
+                  },
+                  {
+                    "name": "Duck, or Hanwoo galbi (+30,000)",
+                    "priceLabel": "Included in course",
+                    "category": "Course"
+                  },
+                  {
+                    "name": "Gamtae guksu (add sea urchin +40,000)",
+                    "priceLabel": "Included in course",
+                    "category": "Course"
+                  },
+                  {
+                    "name": "Neungeum",
+                    "priceLabel": "Included in course",
+                    "category": "Course"
+                  },
+                  {
+                    "name": "Dolhareubang, or Han Yak Bang",
+                    "priceLabel": "Included in course",
+                    "category": "Course"
+                  },
+                  {
+                    "name": "Sweet potato",
+                    "priceLabel": "Included in course",
+                    "category": "Course"
+                  },
+                  {
+                    "name": "Wine pairing, 4 glasses",
+                    "price": 160000,
+                    "category": "Pairing"
+                  },
+                  {
+                    "name": "Wine pairing, 7 glasses",
+                    "price": 290000,
+                    "category": "Pairing"
+                  },
+                  {
+                    "name": "Premium wine pairing, 5 glasses",
+                    "price": 700000,
+                    "category": "Pairing"
+                  },
+                  {
+                    "name": "Supplement: All in one gimbap",
+                    "price": 200000,
+                    "category": "Supplement"
+                  },
+                  {
+                    "name": "Supplement: Sea urchin gujeolpan",
+                    "price": 200000,
+                    "category": "Supplement"
+                  },
+                  {
+                    "name": "Supplement: Sea urchin bibimbap",
+                    "price": 89000,
+                    "category": "Supplement"
+                  },
+                  {
+                    "name": "Supplement: Striped jack gimbap",
+                    "price": 35000,
+                    "category": "Supplement"
+                  },
+                  {
+                    "name": "Supplement: Gimbap",
+                    "price": 28000,
+                    "category": "Supplement"
+                  },
+                  {
+                    "name": "Supplement: Ulleungdo maple",
+                    "price": 30000,
+                    "category": "Supplement"
+                  }
+                ],
+                "note": "Transcribed from jungsik.kr/eat (Lunch tab) on 2026-10-18. Tax/service not stated."
+              },
+              {
+                "label": "Vegetarian course (pre-order only)",
+                "url": "https://www.jungsik.kr/eat/",
+                "currency": "KRW",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "Vegetarian lunch course, per person",
+                    "price": 230000,
+                    "category": "Course"
+                  },
+                  {
+                    "name": "Vegetarian dinner course, per person",
+                    "price": 330000,
+                    "category": "Course"
+                  },
+                  {
+                    "name": "Cauliflower",
+                    "priceLabel": "Included in course",
+                    "category": "Course"
+                  },
+                  {
+                    "name": "Root vegetable jeon",
+                    "priceLabel": "Included in course",
+                    "category": "Course"
+                  },
+                  {
+                    "name": "Namul gimbab (dinner only)",
+                    "priceLabel": "Included in course",
+                    "category": "Course"
+                  },
+                  {
+                    "name": "Neung-i mushroom mandoo",
+                    "priceLabel": "Included in course",
+                    "category": "Course"
+                  },
+                  {
+                    "name": "Mushroom galbi",
+                    "priceLabel": "Included in course",
+                    "category": "Course"
+                  },
+                  {
+                    "name": "Gamtae guksu",
+                    "priceLabel": "Included in course",
+                    "category": "Course"
+                  },
+                  {
+                    "name": "Neungeum",
+                    "priceLabel": "Included in course",
+                    "category": "Course"
+                  },
+                  {
+                    "name": "Nurungji",
+                    "priceLabel": "Included in course",
+                    "category": "Course"
+                  },
+                  {
+                    "name": "Hojicha waffle",
+                    "priceLabel": "Included in course",
+                    "category": "Course"
+                  }
+                ],
+                "note": "The vegetarian menu must be pre-ordered when booking (jungsik.kr/eat)."
               }
             ],
             "specials": [],
@@ -4507,15 +4907,42 @@
           "menu": {
             "pinSourceUrl": "https://guide.michelin.com/en/seoul-capital-area/kr-seoul/restaurant/la-yeon",
             "name": "La Yeon",
-            "checkedAt": "2026-10-17",
+            "checkedAt": "2026-10-18",
             "menus": [
               {
-                "label": "Menu (link only)",
-                "url": "https://guide.michelin.com/en/seoul-capital-area/kr-seoul/restaurant/la-yeon",
+                "label": "Courses (Polle listing) and booking deposit (operator)",
+                "url": "https://polle.com/place/5iLwZ6/%EB%9D%BC%EC%97%B0",
                 "currency": "KRW",
-                "coverage": "link",
-                "items": [],
-                "note": "Tasting-menu prices not found in a verifiable operator/press source (searches for current KRW course prices returned nothing usable; web-search budget exhausted). Checked: MICHELIN Guide page (no menu), Wikipedia."
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Layeon course (lunch), per person",
+                    "price": 250000,
+                    "category": "Course"
+                  },
+                  {
+                    "name": "Shilla course (dinner), per person",
+                    "price": 380000,
+                    "category": "Course"
+                  },
+                  {
+                    "name": "Gujeolpan",
+                    "price": 55000,
+                    "category": "A la carte"
+                  },
+                  {
+                    "name": "Sinseollo",
+                    "price": 110000,
+                    "category": "A la carte"
+                  },
+                  {
+                    "name": "Reservation deposit, standard seating, per person (collected at booking)",
+                    "price": 50000,
+                    "note": "The Shilla official page; private room deposit 100,000 per person plus a 100,000 room fee",
+                    "category": "Condition"
+                  }
+                ],
+                "note": "User-maintained Polle listing (not the operator); course names and the date of the prices are not published there, and prices drift. The Shilla Seoul official page (shillahotels.com, 2026-10-18) confirms hours (lunch 12:00-14:30, dinner 17:30-21:30), 40 seats and the booking deposit, but its menu guide was not readable. Another guide reports 260,000-350,000."
               }
             ],
             "specials": [],
@@ -4581,6 +5008,42 @@
           "sha256": "8342b0ecb32fa51c449eb77261906ad9db20d3f1c724e8c65140c468ab22f25d",
           "width": 800,
           "height": 800
+        },
+        {
+          "region": "south-korea",
+          "slug": "la-yeon-x2",
+          "source": "https://www.shillahotels.com/hbcimages/260529/20260529163135_3df5bffc-7ef4-45a8-ab7f-696525e204cd.jpg",
+          "credit": "The Shilla Seoul (official La Yeon page)",
+          "sourcePage": "https://www.shillahotels.com/en/theshilla/seoul/dining/restaurant/layeon.do",
+          "note": "La Yeon entrance and wine wall",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/south-korea/researched/la-yeon-x2-2ce1aaf4df3c2eef.webp",
+          "sha256": "2ce1aaf4df3c2eef44e0fe5b473143688da9e65610acef089cfeaee9a2493511",
+          "width": 800,
+          "height": 400
+        },
+        {
+          "region": "south-korea",
+          "slug": "la-yeon-x3",
+          "source": "https://www.shillahotels.com/hbcimages/260529/20260529163136_0152e5db-d339-4ed8-8faf-3d506f956331.jpg",
+          "credit": "The Shilla Seoul (official La Yeon page)",
+          "sourcePage": "https://www.shillahotels.com/en/theshilla/seoul/dining/restaurant/layeon.do",
+          "note": "La Yeon dining room",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/south-korea/researched/la-yeon-x3-062e4e084b5f94af.webp",
+          "sha256": "062e4e084b5f94af0d192076807110f6c0d391265db81dbd278cf8674d66c085",
+          "width": 800,
+          "height": 400
+        },
+        {
+          "region": "south-korea",
+          "slug": "la-yeon-x4",
+          "source": "https://www.shillahotels.com/hbcimages/260529/20260529163137_e2fde35a-7642-4084-9199-65f604a236f9.jpg",
+          "credit": "The Shilla Seoul (official La Yeon page)",
+          "sourcePage": "https://www.shillahotels.com/en/theshilla/seoul/dining/restaurant/layeon.do",
+          "note": "La Yeon private-room table with Namsan view",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/south-korea/researched/la-yeon-x4-698b8f91d1c1af91.webp",
+          "sha256": "698b8f91d1c1af918b02b7bab974370852f8062019bbb30224b87b3fb43fe397",
+          "width": 800,
+          "height": 400
         }
       ]
     },
@@ -4632,15 +5095,46 @@
           "menu": {
             "pinSourceUrl": "https://guide.michelin.com/en/seoul-capital-area/kr-seoul/restaurant/onjium",
             "name": "Onjium",
-            "checkedAt": "2026-10-17",
+            "checkedAt": "2026-10-18",
             "menus": [
               {
-                "label": "Menu (link only)",
-                "url": "https://guide.michelin.com/en/seoul-capital-area/kr-seoul/restaurant/onjium",
+                "label": "Lunch and dinner courses (Polle listing)",
+                "url": "https://polle.com/place/34RT0I/%EC%98%A8%EC%A7%80%EC%9D%8C%20%EB%A0%88%EC%8A%A4%ED%86%A0%EB%9E%91",
                 "currency": "KRW",
-                "coverage": "link",
-                "items": [],
-                "note": "Tasting-menu prices not found in a verifiable operator/press source (searches for current KRW course prices returned nothing usable; web-search budget exhausted). Checked: MICHELIN Guide page (no menu), Wikipedia."
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Lunch tasting course, per person",
+                    "price": 200000,
+                    "category": "Course"
+                  },
+                  {
+                    "name": "Dinner tasting course, per person",
+                    "price": 300000,
+                    "category": "Course"
+                  },
+                  {
+                    "name": "Wine pairing, lunch",
+                    "price": 120000,
+                    "category": "Pairing"
+                  },
+                  {
+                    "name": "Wine pairing, dinner",
+                    "price": 180000,
+                    "category": "Pairing"
+                  },
+                  {
+                    "name": "Traditional-liquor pairing, lunch",
+                    "price": 80000,
+                    "category": "Pairing"
+                  },
+                  {
+                    "name": "Traditional-liquor pairing, dinner",
+                    "price": 120000,
+                    "category": "Pairing"
+                  }
+                ],
+                "note": "User-maintained Polle listing (not the operator); course names and the date of the prices are not published there, and prices drift. A Seoul tourism guide lists a 150,000 KRW tasting lunch, so the figures conflict; the menu changes every two months (press). Tax/service not stated."
               }
             ],
             "specials": [],
@@ -4752,15 +5246,26 @@
           "menu": {
             "pinSourceUrl": "https://guide.michelin.com/en/seoul-capital-area/kr-seoul/restaurant/kwonsooksoo",
             "name": "Kwonsooksoo",
-            "checkedAt": "2026-10-17",
+            "checkedAt": "2026-10-18",
             "menus": [
               {
-                "label": "Menu (link only)",
-                "url": "https://guide.michelin.com/en/seoul-capital-area/kr-seoul/restaurant/kwonsooksoo",
+                "label": "Lunch and dinner courses (Polle listing)",
+                "url": "https://polle.com/place/30ihbe/%EA%B6%8C%EC%88%99%EC%88%98",
                 "currency": "KRW",
-                "coverage": "link",
-                "items": [],
-                "note": "Tasting-menu prices not found in a verifiable operator/press source (searches for current KRW course prices returned nothing usable; web-search budget exhausted). Checked: MICHELIN Guide page (no menu), Wikipedia."
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Lunch tasting course, per person",
+                    "price": 240000,
+                    "category": "Course"
+                  },
+                  {
+                    "name": "Dinner tasting course, per person",
+                    "price": 380000,
+                    "category": "Course"
+                  }
+                ],
+                "note": "User-maintained Polle listing (not the operator); course names and the date of the prices are not published there, and prices drift. Reviewers mention a 6-glass pairing add-on without a price. Tax/service not stated."
               }
             ],
             "specials": [],
@@ -4885,15 +5390,26 @@
           "menu": {
             "pinSourceUrl": "https://guide.michelin.com/en/seoul-capital-area/kr-seoul/restaurant/soigne",
             "name": "Soigné",
-            "checkedAt": "2026-10-17",
+            "checkedAt": "2026-10-18",
             "menus": [
               {
-                "label": "Menu (link only)",
-                "url": "https://guide.michelin.com/en/seoul-capital-area/kr-seoul/restaurant/soigne",
+                "label": "Lunch and dinner courses (Polle listing)",
+                "url": "https://polle.com/place/2OeiZo/%EC%8A%A4%EC%99%80%EB%8B%88%EC%98%88",
                 "currency": "KRW",
-                "coverage": "link",
-                "items": [],
-                "note": "Tasting-menu prices not found in a verifiable operator/press source (searches for current KRW course prices returned nothing usable; web-search budget exhausted). Checked: MICHELIN Guide page (no menu), Wikipedia."
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Lunch tasting course, per person",
+                    "price": 240000,
+                    "category": "Course"
+                  },
+                  {
+                    "name": "Dinner tasting course, per person",
+                    "price": 380000,
+                    "category": "Course"
+                  }
+                ],
+                "note": "User-maintained Polle listing (not the operator); course names and the date of the prices are not published there, and prices drift. Listed under the Korean name for the same Sinsa-dong building (Gangnam-daero 652); Polle shows the floor as B1 while MICHELIN shows 2F. Asia's 50 Best describes a 14-course tasting menu. Tax/service not stated."
               }
             ],
             "specials": [],
@@ -5010,15 +5526,26 @@
           "menu": {
             "pinSourceUrl": "https://guide.michelin.com/en/seoul-capital-area/kr-seoul/restaurant/alla-prima",
             "name": "alla prima",
-            "checkedAt": "2026-10-17",
+            "checkedAt": "2026-10-18",
             "menus": [
               {
-                "label": "Menu (link only)",
-                "url": "https://guide.michelin.com/en/seoul-capital-area/kr-seoul/restaurant/alla-prima",
+                "label": "Lunch and dinner courses (Polle listing)",
+                "url": "https://polle.com/place/3Fvalo/%EC%95%8C%EB%9D%BC%20%ED%94%84%EB%A6%AC%EB%A7%88",
                 "currency": "KRW",
-                "coverage": "link",
-                "items": [],
-                "note": "Tasting-menu prices not found in a verifiable operator/press source (searches for current KRW course prices returned nothing usable; web-search budget exhausted). Checked: MICHELIN Guide page (no menu), Wikipedia."
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Lunch course (variable price), per person",
+                    "price": 230000,
+                    "category": "Course"
+                  },
+                  {
+                    "name": "Dinner course (variable price), per person",
+                    "price": 370000,
+                    "category": "Course"
+                  }
+                ],
+                "note": "User-maintained Polle listing (not the operator); course names and the date of the prices are not published there, and prices drift. Polle marks both prices as variable (changing); one blog also gave 230,000 for lunch. Tax/service not stated."
               }
             ],
             "specials": [],
@@ -5147,15 +5674,26 @@
           "menu": {
             "pinSourceUrl": "https://guide.michelin.com/en/seoul-capital-area/kr-seoul/restaurant/restaurant-allen",
             "name": "Restaurant Allen",
-            "checkedAt": "2026-10-17",
+            "checkedAt": "2026-10-18",
             "menus": [
               {
-                "label": "Menu (link only)",
-                "url": "https://guide.michelin.com/en/seoul-capital-area/kr-seoul/restaurant/restaurant-allen",
+                "label": "Lunch and dinner tasting courses (Polle listing)",
+                "url": "https://polle.com/place/5D2h8f/%EC%95%8C%EB%A0%8C",
                 "currency": "KRW",
-                "coverage": "link",
-                "items": [],
-                "note": "Tasting-menu prices not found in a verifiable operator/press source (searches for current KRW course prices returned nothing usable; web-search budget exhausted). Checked: MICHELIN Guide page (no menu), Wikipedia."
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Lunch tasting course, per person",
+                    "price": 250000,
+                    "category": "Course"
+                  },
+                  {
+                    "name": "Dinner tasting course, per person",
+                    "price": 370000,
+                    "category": "Course"
+                  }
+                ],
+                "note": "User-maintained Polle listing (not the operator); course names and the date of the prices are not published there, and prices drift. Another Polle snippet gave 300,000 for dinner, so the price has moved. Tax/service not stated."
               }
             ],
             "specials": [],
@@ -5290,15 +5828,26 @@
           "menu": {
             "pinSourceUrl": "https://guide.michelin.com/en/seoul-capital-area/kr-seoul/restaurant/evett",
             "name": "Evett",
-            "checkedAt": "2026-10-17",
+            "checkedAt": "2026-10-18",
             "menus": [
               {
-                "label": "Menu (link only)",
-                "url": "https://guide.michelin.com/en/seoul-capital-area/kr-seoul/restaurant/evett",
+                "label": "Lunch and dinner courses (Polle listing)",
+                "url": "https://polle.com/place/5uNBqw/%EC%97%90%EB%B9%97",
                 "currency": "KRW",
-                "coverage": "link",
-                "items": [],
-                "note": "Tasting-menu prices not found in a verifiable operator/press source (searches for current KRW course prices returned nothing usable; web-search budget exhausted). Checked: MICHELIN Guide page (no menu), Wikipedia."
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Lunch course menu, per person",
+                    "price": 190000,
+                    "category": "Course"
+                  },
+                  {
+                    "name": "Dinner course menu, per person",
+                    "price": 330000,
+                    "category": "Course"
+                  }
+                ],
+                "note": "User-maintained Polle listing (not the operator); course names and the date of the prices are not published there, and prices drift. Reviewers describe a roughly 16-dish dinner with an ant-based signature; no dishes are published. Tax/service not stated."
               }
             ],
             "specials": [],
@@ -5433,15 +5982,36 @@
           "menu": {
             "pinSourceUrl": "https://guide.michelin.com/en/seoul-capital-area/kr-seoul/restaurant/l-amant-secret",
             "name": "L'Amant Secret",
-            "checkedAt": "2026-10-17",
+            "checkedAt": "2026-10-18",
             "menus": [
               {
-                "label": "Menu (link only)",
-                "url": "https://guide.michelin.com/en/seoul-capital-area/kr-seoul/restaurant/l-amant-secret",
+                "label": "Chef's tasting (Polle listing)",
+                "url": "https://polle.com/place/23MZy3/%EB%9D%BC%EB%A7%9D%20%EC%8B%9C%ED%81%AC%EB%A0%88",
                 "currency": "KRW",
-                "coverage": "link",
-                "items": [],
-                "note": "Tasting-menu prices not found in a verifiable operator/press source (searches for current KRW course prices returned nothing usable; web-search budget exhausted). Checked: MICHELIN Guide page (no menu), Wikipedia."
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Lunch Chef's tasting, per person",
+                    "price": 190000,
+                    "category": "Course"
+                  },
+                  {
+                    "name": "Dinner Chef's tasting, per person",
+                    "price": 290000,
+                    "category": "Course"
+                  },
+                  {
+                    "name": "Lunch wine pairing",
+                    "price": 170000,
+                    "category": "Pairing"
+                  },
+                  {
+                    "name": "Dinner wine pairing",
+                    "price": 270000,
+                    "category": "Pairing"
+                  }
+                ],
+                "note": "User-maintained Polle listing (not the operator); course names and the date of the prices are not published there, and prices drift. Tax/service not stated."
               }
             ],
             "specials": [],
@@ -6214,6 +6784,19 @@
                   }
                 ],
                 "note": "Tax/service not stated. Reserve at least 24 hours ahead."
+              },
+              {
+                "label": "Maru Lounge (TableCheck reservation listing)",
+                "url": "https://www.tablecheck.com/en/shops/four-seasons-hotel-seoul-maru/reserve",
+                "currency": "KRW",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "Strawberry Bingsu (dessert by Pierre-Jean Quinonero; Vacherin Fraise and Korean bingsu), tax included",
+                    "price": 98000
+                  }
+                ],
+                "note": "Listed as a bookable item on the Maru reservation page; seasonal availability not stated."
               }
             ],
             "specials": [
@@ -6255,6 +6838,14 @@
               "longitude": 126.975398225233,
               "sourceUrl": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?f=json&SingleLine=Four+Seasons+Hotel+Seoul%2C+97+Saemunan-ro%2C+Jongno-gu%2C+Seoul&outFields=Match_addr%2CAddr_type&maxLocations=1&sourceCountry=KOR",
               "checkedAt": "2026-10-18"
+            },
+            "photo": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/south-korea/researched/maru-1-30c4bcba147f8839.webp",
+              "alt": "Maru strawberry bingsu dessert",
+              "credit": "TableCheck reservation listing (Four Seasons Hotel Seoul)",
+              "sourceUrl": "https://www.tablecheck.com/en/shops/four-seasons-hotel-seoul-maru/reserve",
+              "originalUrl": "https://cdn2.tablecheck.com/menu_items/65adf53b4a299400dc42b436/images/xl/0118b051.jpg",
+              "checkedAt": "2026-10-18"
             }
           },
           "details": {
@@ -6284,13 +6875,28 @@
             "checkedAt": "2026-10-18",
             "recognition": "Chronopin selection",
             "priceRange": "",
-            "image": null,
-            "imageCredit": ""
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/south-korea/researched/maru-1-30c4bcba147f8839.webp",
+            "imageCredit": "TableCheck reservation listing (Four Seasons Hotel Seoul)",
+            "imageSourceUrl": "https://cdn2.tablecheck.com/menu_items/65adf53b4a299400dc42b436/images/xl/0118b051.jpg",
+            "imageNote": "Maru strawberry bingsu dessert"
           }
         },
         "enabled": true
       },
-      "photos": [],
+      "photos": [
+        {
+          "region": "south-korea",
+          "slug": "maru-1",
+          "source": "https://cdn2.tablecheck.com/menu_items/65adf53b4a299400dc42b436/images/xl/0118b051.jpg",
+          "credit": "TableCheck reservation listing (Four Seasons Hotel Seoul)",
+          "sourcePage": "https://www.tablecheck.com/en/shops/four-seasons-hotel-seoul-maru/reserve",
+          "note": "Maru strawberry bingsu dessert",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/south-korea/researched/maru-1-30c4bcba147f8839.webp",
+          "sha256": "30c4bcba147f883970bcbcb33c5ae473b54ba600990678c5e1947b09857d23de",
+          "width": 800,
+          "height": 668
+        }
+      ],
       "special": {
         "regionSlug": "seoul",
         "profile": {
@@ -6322,6 +6928,19 @@
                 }
               ],
               "note": "Tax/service not stated. Reserve at least 24 hours ahead."
+            },
+            {
+              "label": "Maru Lounge (TableCheck reservation listing)",
+              "url": "https://www.tablecheck.com/en/shops/four-seasons-hotel-seoul-maru/reserve",
+              "currency": "KRW",
+              "coverage": "published",
+              "items": [
+                {
+                  "name": "Strawberry Bingsu (dessert by Pierre-Jean Quinonero; Vacherin Fraise and Korean bingsu), tax included",
+                  "price": 98000
+                }
+              ],
+              "note": "Listed as a bookable item on the Maru reservation page; seasonal availability not stated."
             }
           ],
           "specials": [
@@ -6366,7 +6985,15 @@
           },
           "neighborhood": "Gwanghwamun, Jongno",
           "address": "Four Seasons Hotel Seoul, 97 Saemunan-ro, Jongno-gu, Seoul",
-          "websiteUrl": "https://www.fourseasons.com/seoul/"
+          "websiteUrl": "https://www.fourseasons.com/seoul/",
+          "photo": {
+            "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/south-korea/researched/maru-1-30c4bcba147f8839.webp",
+            "alt": "Maru strawberry bingsu dessert",
+            "credit": "TableCheck reservation listing (Four Seasons Hotel Seoul)",
+            "sourceUrl": "https://www.tablecheck.com/en/shops/four-seasons-hotel-seoul-maru/reserve",
+            "originalUrl": "https://cdn2.tablecheck.com/menu_items/65adf53b4a299400dc42b436/images/xl/0118b051.jpg",
+            "checkedAt": "2026-10-18"
+          }
         },
         "enabled": true
       }
@@ -6457,6 +7084,23 @@
                   }
                 ],
                 "note": "Prices as reported at the July 2025 opening; the current autumn course is listed separately. Advance reservation required."
+              },
+              {
+                "label": "H. Bar (TableCheck reservation listing)",
+                "url": "https://www.tablecheck.com/en/shops/four-seasons-hotel-seoul-h-bar/reserve",
+                "currency": "KRW",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "Single signature cocktail, from (a la carte, 18:00-21:00 and 23:30-01:30)",
+                    "price": 29000
+                  },
+                  {
+                    "name": "H. Bar Cocktail Tasting Course, per person (9:30-11:00 PM session)",
+                    "price": 170000
+                  }
+                ],
+                "note": "Valid-date window shown as Feb 12 to Dec 23 and Dec 26 to Dec 30. The a la carte starting price is below the 38,000 reported by Forbes at the 2025 opening."
               }
             ],
             "specials": [
@@ -6498,6 +7142,14 @@
               "longitude": 126.975398225233,
               "sourceUrl": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?f=json&SingleLine=Four+Seasons+Hotel+Seoul%2C+97+Saemunan-ro%2C+Jongno-gu%2C+Seoul+%28B1%2C+inside+Charles+H.%29&outFields=Match_addr%2CAddr_type&maxLocations=1&sourceCountry=KOR",
               "checkedAt": "2026-10-18"
+            },
+            "photo": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/south-korea/researched/h-bar-1-72d343511fe62ec1.webp",
+              "alt": "H. Bar cocktail tasting course spread",
+              "credit": "TableCheck reservation listing (Four Seasons Hotel Seoul)",
+              "sourceUrl": "https://www.tablecheck.com/en/shops/four-seasons-hotel-seoul-h-bar/reserve",
+              "originalUrl": "https://cdn1.tablecheck.com/menu_items/6abb3a77fe5ade3a79a77f49/images/xl/2ce7d1c1.jpg",
+              "checkedAt": "2026-10-18"
             }
           },
           "details": {
@@ -6527,13 +7179,40 @@
             "checkedAt": "2026-10-18",
             "recognition": "Chronopin selection",
             "priceRange": "",
-            "image": null,
-            "imageCredit": ""
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/south-korea/researched/h-bar-1-72d343511fe62ec1.webp",
+            "imageCredit": "TableCheck reservation listing (Four Seasons Hotel Seoul)",
+            "imageSourceUrl": "https://cdn1.tablecheck.com/menu_items/6abb3a77fe5ade3a79a77f49/images/xl/2ce7d1c1.jpg",
+            "imageNote": "H. Bar cocktail tasting course spread"
           }
         },
         "enabled": true
       },
-      "photos": [],
+      "photos": [
+        {
+          "region": "south-korea",
+          "slug": "h-bar-1",
+          "source": "https://cdn1.tablecheck.com/menu_items/6abb3a77fe5ade3a79a77f49/images/xl/2ce7d1c1.jpg",
+          "credit": "TableCheck reservation listing (Four Seasons Hotel Seoul)",
+          "sourcePage": "https://www.tablecheck.com/en/shops/four-seasons-hotel-seoul-h-bar/reserve",
+          "note": "H. Bar cocktail tasting course spread",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/south-korea/researched/h-bar-1-72d343511fe62ec1.webp",
+          "sha256": "72d343511fe62ec14f361de286d27ac620fe3e11df575b4d5949693346b9809d",
+          "width": 800,
+          "height": 534
+        },
+        {
+          "region": "south-korea",
+          "slug": "h-bar-2",
+          "source": "https://cdn1.tablecheck.com/menu_items/6abb3a6ecdf30e97d7a76e84/images/xl/48737873.jpg",
+          "credit": "TableCheck reservation listing (Four Seasons Hotel Seoul)",
+          "sourcePage": "https://www.tablecheck.com/en/shops/four-seasons-hotel-seoul-h-bar/reserve",
+          "note": "H. Bar signature cocktail with herb garnish",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/south-korea/researched/h-bar-2-87e6783af0c6593e.webp",
+          "sha256": "87e6783af0c6593e93c20cba2aa9cbe4d7f0f75c0b7aea6ead06877ea0aa79b7",
+          "width": 768,
+          "height": 960
+        }
+      ],
       "special": {
         "regionSlug": "seoul",
         "profile": {
@@ -6582,6 +7261,23 @@
                 }
               ],
               "note": "Prices as reported at the July 2025 opening; the current autumn course is listed separately. Advance reservation required."
+            },
+            {
+              "label": "H. Bar (TableCheck reservation listing)",
+              "url": "https://www.tablecheck.com/en/shops/four-seasons-hotel-seoul-h-bar/reserve",
+              "currency": "KRW",
+              "coverage": "published",
+              "items": [
+                {
+                  "name": "Single signature cocktail, from (a la carte, 18:00-21:00 and 23:30-01:30)",
+                  "price": 29000
+                },
+                {
+                  "name": "H. Bar Cocktail Tasting Course, per person (9:30-11:00 PM session)",
+                  "price": 170000
+                }
+              ],
+              "note": "Valid-date window shown as Feb 12 to Dec 23 and Dec 26 to Dec 30. The a la carte starting price is below the 38,000 reported by Forbes at the 2025 opening."
             }
           ],
           "specials": [
@@ -6626,7 +7322,15 @@
           },
           "neighborhood": "Gwanghwamun, Jongno",
           "address": "Four Seasons Hotel Seoul, 97 Saemunan-ro, Jongno-gu, Seoul (B1, inside Charles H.)",
-          "websiteUrl": "https://www.fourseasons.com/seoul/"
+          "websiteUrl": "https://www.fourseasons.com/seoul/",
+          "photo": {
+            "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/south-korea/researched/h-bar-1-72d343511fe62ec1.webp",
+            "alt": "H. Bar cocktail tasting course spread",
+            "credit": "TableCheck reservation listing (Four Seasons Hotel Seoul)",
+            "sourceUrl": "https://www.tablecheck.com/en/shops/four-seasons-hotel-seoul-h-bar/reserve",
+            "originalUrl": "https://cdn1.tablecheck.com/menu_items/6abb3a77fe5ade3a79a77f49/images/xl/2ce7d1c1.jpg",
+            "checkedAt": "2026-10-18"
+          }
         },
         "enabled": true
       }
@@ -6992,6 +7696,100 @@
             "checkedAt": "2026-10-18",
             "menus": [
               {
+                "label": "Buffet prices (official, Oct-Nov and December)",
+                "url": "https://www.shillahotels.com/en/theshilla/seoul/dining/restaurant/theParkview.do",
+                "currency": "KRW",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "Breakfast buffet, adult (daily 06:00-10:00)",
+                    "price": 90000,
+                    "category": "October-November"
+                  },
+                  {
+                    "name": "Breakfast buffet, child",
+                    "price": 45000,
+                    "category": "October-November"
+                  },
+                  {
+                    "name": "Lunch buffet, adult (weekdays 12:00-14:30)",
+                    "price": 178000,
+                    "category": "October-November"
+                  },
+                  {
+                    "name": "Lunch buffet, child (weekdays)",
+                    "price": 90000,
+                    "category": "October-November"
+                  },
+                  {
+                    "name": "Lunch buffet, adult (Sat/Sun/public holidays, sessions 11:00-13:00 and 14:00-16:00)",
+                    "price": 204000,
+                    "category": "October-November"
+                  },
+                  {
+                    "name": "Lunch buffet, child (Sat/Sun/public holidays)",
+                    "price": 100000,
+                    "category": "October-November"
+                  },
+                  {
+                    "name": "Dinner buffet, adult (Mon-Thu 18:00-21:30)",
+                    "price": 198000,
+                    "category": "October-November"
+                  },
+                  {
+                    "name": "Dinner buffet, child (Mon-Thu)",
+                    "price": 99000,
+                    "category": "October-November"
+                  },
+                  {
+                    "name": "Dinner buffet, adult (Fri/Sat/Sun/public holidays, sessions 17:00-19:00 and 19:30-21:30)",
+                    "price": 208000,
+                    "category": "October-November"
+                  },
+                  {
+                    "name": "Dinner buffet, child (Fri/Sat/Sun/public holidays)",
+                    "price": 100000,
+                    "category": "October-November"
+                  },
+                  {
+                    "name": "Lunch buffet, adult, Dec 1-17 (daily)",
+                    "price": 185000,
+                    "category": "December"
+                  },
+                  {
+                    "name": "Lunch buffet, adult, Dec 1-17 (Sat/Sun/public holidays)",
+                    "price": 210000,
+                    "category": "December"
+                  },
+                  {
+                    "name": "Lunch buffet, adult, Dec 18-31 (daily)",
+                    "price": 205000,
+                    "category": "December"
+                  },
+                  {
+                    "name": "Lunch buffet, adult, Dec 18-31 (Sat/Sun/public holidays and Dec 24-25)",
+                    "price": 225000,
+                    "category": "December"
+                  },
+                  {
+                    "name": "Dinner buffet, adult, Dec 1-17 (Mon-Thu)",
+                    "price": 205000,
+                    "category": "December"
+                  },
+                  {
+                    "name": "Dinner buffet, adult, Dec 1-17 (Fri/Sat/Sun/public holidays)",
+                    "price": 215000,
+                    "category": "December"
+                  },
+                  {
+                    "name": "Dinner buffet, adult, Dec 18-31",
+                    "price": 235000,
+                    "category": "December"
+                  }
+                ],
+                "note": "Transcribed from The Shilla Seoul official page (shillahotels.com, 2026-10-18). Children are ages 37 months to 12 years (child December prices run 95,000-115,000). Tax/service not stated. Reservation deposit 30,000 KRW per person."
+              },
+              {
                 "label": "Year-end New York buffet",
                 "url": "https://www.segye.com/newsView/20261018503645",
                 "currency": "KRW",
@@ -7035,12 +7833,20 @@
               "longitude": 127.002118645143,
               "sourceUrl": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?f=json&SingleLine=The+Shilla+Seoul%2C+Dongho-ro%2C+Jung-gu%2C+Seoul&outFields=Match_addr%2CAddr_type&maxLocations=1&sourceCountry=KOR",
               "checkedAt": "2026-10-18"
+            },
+            "photo": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/south-korea/researched/park-view-1-f2f3e0eb2fb2d6f8.webp",
+              "alt": "The Parkview entrance and dining room",
+              "credit": "The Shilla Seoul (official restaurant page)",
+              "sourceUrl": "https://www.shillahotels.com/en/theshilla/seoul/dining/restaurant/theParkview.do",
+              "originalUrl": "https://www.shillahotels.com/hbcimages/260529/20260529163915_2493850a-28b7-4676-8cf0-aafcdb833b9d.jpg",
+              "checkedAt": "2026-10-18"
             }
           },
           "details": {
             "pinSourceUrl": "https://www.segye.com/newsView/20261018503645#shilla-parkview",
             "name": "The Park View (The Shilla Seoul)",
-            "websiteUrl": null,
+            "websiteUrl": "https://www.shillahotels.com/en/theshilla/seoul/dining/restaurant/theParkview.do",
             "phone": null,
             "openingHours": [],
             "checkedAt": "2026-10-18",
@@ -7054,18 +7860,69 @@
             "neighborhood": "Jangchung-dong, Jung-gu",
             "cuisine": "International buffet",
             "address": "The Shilla Seoul, Dongho-ro, Jung-gu, Seoul",
-            "websiteUrl": "https://www.segye.com/newsView/20261018503645#shilla-parkview",
+            "websiteUrl": "https://www.shillahotels.com/en/theshilla/seoul/dining/restaurant/theParkview.do",
             "description": "December 2026 year-end 'New York' buffet: unlimited sommelier red wine at dinner in mid season (Dec 1-17), white wine and a Polaroid added in high season (Dec 18-31).",
             "checkedAt": "2026-10-18",
             "recognition": "Chronopin selection",
             "priceRange": "",
-            "image": null,
-            "imageCredit": ""
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/south-korea/researched/park-view-1-f2f3e0eb2fb2d6f8.webp",
+            "imageCredit": "The Shilla Seoul (official restaurant page)",
+            "imageSourceUrl": "https://www.shillahotels.com/hbcimages/260529/20260529163915_2493850a-28b7-4676-8cf0-aafcdb833b9d.jpg",
+            "imageNote": "The Parkview entrance and dining room"
           }
         },
         "enabled": true
       },
-      "photos": [],
+      "photos": [
+        {
+          "region": "south-korea",
+          "slug": "park-view-1",
+          "source": "https://www.shillahotels.com/hbcimages/260529/20260529163915_2493850a-28b7-4676-8cf0-aafcdb833b9d.jpg",
+          "credit": "The Shilla Seoul (official restaurant page)",
+          "sourcePage": "https://www.shillahotels.com/en/theshilla/seoul/dining/restaurant/theParkview.do",
+          "note": "The Parkview entrance and dining room",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/south-korea/researched/park-view-1-f2f3e0eb2fb2d6f8.webp",
+          "sha256": "f2f3e0eb2fb2d6f82765e232dd366941f37ccc8ee7c26d0512aea25329a3ee3b",
+          "width": 800,
+          "height": 400
+        },
+        {
+          "region": "south-korea",
+          "slug": "park-view-2",
+          "source": "https://www.shillahotels.com/hbcimages/260529/20260529163916_81bcdaea-8fea-4747-a57e-aa6e72c87b6c.jpg",
+          "credit": "The Shilla Seoul (official restaurant page)",
+          "sourcePage": "https://www.shillahotels.com/en/theshilla/seoul/dining/restaurant/theParkview.do",
+          "note": "The Parkview window tables facing Namsan greenery",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/south-korea/researched/park-view-2-192867dedb26111d.webp",
+          "sha256": "192867dedb26111d92c06d8159451553a5402677e120c98d23f27512e1f84a8b",
+          "width": 800,
+          "height": 400
+        },
+        {
+          "region": "south-korea",
+          "slug": "park-view-3",
+          "source": "https://www.shillahotels.com/hbcimages/260529/20260529163917_7297bba6-a4b6-4a7a-b281-4cf9513d938b.jpg",
+          "credit": "The Shilla Seoul (official restaurant page)",
+          "sourcePage": "https://www.shillahotels.com/en/theshilla/seoul/dining/restaurant/theParkview.do",
+          "note": "The Parkview buffet hall",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/south-korea/researched/park-view-3-2fedbaa2571055d6.webp",
+          "sha256": "2fedbaa2571055d65a1c87163d5b488c556f705e94f5471f45375bb65e9674cf",
+          "width": 800,
+          "height": 400
+        },
+        {
+          "region": "south-korea",
+          "slug": "park-view-4",
+          "source": "https://www.shillahotels.com/hbcimages/260529/20260529163918_06e3af3e-0390-4e72-9de6-665522225f53.jpg",
+          "credit": "The Shilla Seoul (official restaurant page)",
+          "sourcePage": "https://www.shillahotels.com/en/theshilla/seoul/dining/restaurant/theParkview.do",
+          "note": "Chef carving at the live kitchen",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/south-korea/researched/park-view-4-47682e092bf4217d.webp",
+          "sha256": "47682e092bf4217dd16d3b59a70d7eccf1d12ff917bc538671ec3d3f4272b707",
+          "width": 800,
+          "height": 400
+        }
+      ],
       "special": {
         "regionSlug": "seoul",
         "profile": {
@@ -7073,6 +7930,100 @@
           "name": "The Park View (The Shilla Seoul)",
           "checkedAt": "2026-10-18",
           "menus": [
+            {
+              "label": "Buffet prices (official, Oct-Nov and December)",
+              "url": "https://www.shillahotels.com/en/theshilla/seoul/dining/restaurant/theParkview.do",
+              "currency": "KRW",
+              "coverage": "published",
+              "items": [
+                {
+                  "name": "Breakfast buffet, adult (daily 06:00-10:00)",
+                  "price": 90000,
+                  "category": "October-November"
+                },
+                {
+                  "name": "Breakfast buffet, child",
+                  "price": 45000,
+                  "category": "October-November"
+                },
+                {
+                  "name": "Lunch buffet, adult (weekdays 12:00-14:30)",
+                  "price": 178000,
+                  "category": "October-November"
+                },
+                {
+                  "name": "Lunch buffet, child (weekdays)",
+                  "price": 90000,
+                  "category": "October-November"
+                },
+                {
+                  "name": "Lunch buffet, adult (Sat/Sun/public holidays, sessions 11:00-13:00 and 14:00-16:00)",
+                  "price": 204000,
+                  "category": "October-November"
+                },
+                {
+                  "name": "Lunch buffet, child (Sat/Sun/public holidays)",
+                  "price": 100000,
+                  "category": "October-November"
+                },
+                {
+                  "name": "Dinner buffet, adult (Mon-Thu 18:00-21:30)",
+                  "price": 198000,
+                  "category": "October-November"
+                },
+                {
+                  "name": "Dinner buffet, child (Mon-Thu)",
+                  "price": 99000,
+                  "category": "October-November"
+                },
+                {
+                  "name": "Dinner buffet, adult (Fri/Sat/Sun/public holidays, sessions 17:00-19:00 and 19:30-21:30)",
+                  "price": 208000,
+                  "category": "October-November"
+                },
+                {
+                  "name": "Dinner buffet, child (Fri/Sat/Sun/public holidays)",
+                  "price": 100000,
+                  "category": "October-November"
+                },
+                {
+                  "name": "Lunch buffet, adult, Dec 1-17 (daily)",
+                  "price": 185000,
+                  "category": "December"
+                },
+                {
+                  "name": "Lunch buffet, adult, Dec 1-17 (Sat/Sun/public holidays)",
+                  "price": 210000,
+                  "category": "December"
+                },
+                {
+                  "name": "Lunch buffet, adult, Dec 18-31 (daily)",
+                  "price": 205000,
+                  "category": "December"
+                },
+                {
+                  "name": "Lunch buffet, adult, Dec 18-31 (Sat/Sun/public holidays and Dec 24-25)",
+                  "price": 225000,
+                  "category": "December"
+                },
+                {
+                  "name": "Dinner buffet, adult, Dec 1-17 (Mon-Thu)",
+                  "price": 205000,
+                  "category": "December"
+                },
+                {
+                  "name": "Dinner buffet, adult, Dec 1-17 (Fri/Sat/Sun/public holidays)",
+                  "price": 215000,
+                  "category": "December"
+                },
+                {
+                  "name": "Dinner buffet, adult, Dec 18-31",
+                  "price": 235000,
+                  "category": "December"
+                }
+              ],
+              "note": "Transcribed from The Shilla Seoul official page (shillahotels.com, 2026-10-18). Children are ages 37 months to 12 years (child December prices run 95,000-115,000). Tax/service not stated. Reservation deposit 30,000 KRW per person."
+            },
             {
               "label": "Year-end New York buffet",
               "url": "https://www.segye.com/newsView/20261018503645",
@@ -7120,7 +8071,15 @@
           },
           "neighborhood": "Jangchung-dong, Jung-gu",
           "address": "The Shilla Seoul, Dongho-ro, Jung-gu, Seoul",
-          "websiteUrl": "https://www.segye.com/newsView/20261018503645#shilla-parkview"
+          "websiteUrl": "https://www.shillahotels.com/en/theshilla/seoul/dining/restaurant/theParkview.do",
+          "photo": {
+            "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/south-korea/researched/park-view-1-f2f3e0eb2fb2d6f8.webp",
+            "alt": "The Parkview entrance and dining room",
+            "credit": "The Shilla Seoul (official restaurant page)",
+            "sourceUrl": "https://www.shillahotels.com/en/theshilla/seoul/dining/restaurant/theParkview.do",
+            "originalUrl": "https://www.shillahotels.com/hbcimages/260529/20260529163915_2493850a-28b7-4676-8cf0-aafcdb833b9d.jpg",
+            "checkedAt": "2026-10-18"
+          }
         },
         "enabled": true
       }
@@ -7220,12 +8179,20 @@
               "longitude": 127.002118645143,
               "sourceUrl": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?f=json&SingleLine=The+Shilla+Seoul%2C+Dongho-ro%2C+Jung-gu%2C+Seoul+%281F%29&outFields=Match_addr%2CAddr_type&maxLocations=1&sourceCountry=KOR",
               "checkedAt": "2026-10-18"
+            },
+            "photo": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/south-korea/researched/library-shilla-1-5869429dc2517bf9.webp",
+              "alt": "The Library lounge and bar",
+              "credit": "The Shilla Seoul (official restaurant page)",
+              "sourceUrl": "https://www.shillahotels.com/en/theshilla/seoul/dining/loungeBar/theLibrary.do",
+              "originalUrl": "https://www.shillahotels.com/hbcimages/260529/20260529222315_437e3053-75eb-4d14-b940-44275c025d1d.jpg",
+              "checkedAt": "2026-10-18"
             }
           },
           "details": {
             "pinSourceUrl": "https://www.segye.com/newsView/20261016506491#shilla-library",
             "name": "The Library (The Shilla Seoul)",
-            "websiteUrl": null,
+            "websiteUrl": "https://www.shillahotels.com/en/theshilla/seoul/dining/loungeBar/theLibrary.do",
             "phone": null,
             "openingHours": [],
             "checkedAt": "2026-10-18",
@@ -7239,18 +8206,69 @@
             "neighborhood": "Jangchung-dong, Jung-gu",
             "cuisine": "Lounge, afternoon tea",
             "address": "The Shilla Seoul, Dongho-ro, Jung-gu, Seoul (1F)",
-            "websiteUrl": "https://www.segye.com/newsView/20261016506491#shilla-library",
+            "websiteUrl": "https://www.shillahotels.com/en/theshilla/seoul/dining/loungeBar/theLibrary.do",
             "description": "Golden Autumn Royal Tea with a children's table-manner class ('Little Ladies & Gentlemen' package) through Nov 29, 2026.",
             "checkedAt": "2026-10-18",
             "recognition": "Chronopin selection",
             "priceRange": "",
-            "image": null,
-            "imageCredit": ""
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/south-korea/researched/library-shilla-1-5869429dc2517bf9.webp",
+            "imageCredit": "The Shilla Seoul (official restaurant page)",
+            "imageSourceUrl": "https://www.shillahotels.com/hbcimages/260529/20260529222315_437e3053-75eb-4d14-b940-44275c025d1d.jpg",
+            "imageNote": "The Library lounge and bar"
           }
         },
         "enabled": true
       },
-      "photos": [],
+      "photos": [
+        {
+          "region": "south-korea",
+          "slug": "library-shilla-1",
+          "source": "https://www.shillahotels.com/hbcimages/260529/20260529222315_437e3053-75eb-4d14-b940-44275c025d1d.jpg",
+          "credit": "The Shilla Seoul (official restaurant page)",
+          "sourcePage": "https://www.shillahotels.com/en/theshilla/seoul/dining/loungeBar/theLibrary.do",
+          "note": "The Library lounge and bar",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/south-korea/researched/library-shilla-1-5869429dc2517bf9.webp",
+          "sha256": "5869429dc2517bf95f16cae88c39dcb736b516904b65b12c668e0029e7b520c6",
+          "width": 800,
+          "height": 400
+        },
+        {
+          "region": "south-korea",
+          "slug": "library-shilla-2",
+          "source": "https://www.shillahotels.com/hbcimages/260529/20260529222316_c6ba394e-22ce-426d-8a41-fd831e8400ce.jpg",
+          "credit": "The Shilla Seoul (official restaurant page)",
+          "sourcePage": "https://www.shillahotels.com/en/theshilla/seoul/dining/loungeBar/theLibrary.do",
+          "note": "Live music at The Library",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/south-korea/researched/library-shilla-2-57e6940caf6a69f0.webp",
+          "sha256": "57e6940caf6a69f0ac0be03722528550f37c78cb3c609d12fb475a0bd4fab123",
+          "width": 800,
+          "height": 400
+        },
+        {
+          "region": "south-korea",
+          "slug": "library-shilla-3",
+          "source": "https://www.shillahotels.com/hbcimages/260619/20260619185347_42222c9a-5433-43c5-8817-169aed8d7b5c.jpg",
+          "credit": "The Shilla Seoul (official restaurant page)",
+          "sourcePage": "https://www.shillahotels.com/en/theshilla/seoul/dining/loungeBar/theLibrary.do",
+          "note": "Head bartender at The Library bar",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/south-korea/researched/library-shilla-3-1279805c7ea05778.webp",
+          "sha256": "1279805c7ea057783b1216b6aebcd128af8a69e0b082e472af368391215a3f46",
+          "width": 800,
+          "height": 400
+        },
+        {
+          "region": "south-korea",
+          "slug": "library-shilla-4",
+          "source": "https://www.shillahotels.com/hbcimages/260529/20260529222318_632135af-9666-43c2-ba20-d08db01ee687.jpg",
+          "credit": "The Shilla Seoul (official restaurant page)",
+          "sourcePage": "https://www.shillahotels.com/en/theshilla/seoul/dining/loungeBar/theLibrary.do",
+          "note": "The Library lounge with fireplace",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/south-korea/researched/library-shilla-4-2602c666c51ec66a.webp",
+          "sha256": "2602c666c51ec66acb0e23f4c3488b675ac88fb45860301f6bb233b77822b4c8",
+          "width": 800,
+          "height": 400
+        }
+      ],
       "special": {
         "regionSlug": "seoul",
         "profile": {
@@ -7311,7 +8329,15 @@
           },
           "neighborhood": "Jangchung-dong, Jung-gu",
           "address": "The Shilla Seoul, Dongho-ro, Jung-gu, Seoul (1F)",
-          "websiteUrl": "https://www.segye.com/newsView/20261016506491#shilla-library"
+          "websiteUrl": "https://www.shillahotels.com/en/theshilla/seoul/dining/loungeBar/theLibrary.do",
+          "photo": {
+            "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/south-korea/researched/library-shilla-1-5869429dc2517bf9.webp",
+            "alt": "The Library lounge and bar",
+            "credit": "The Shilla Seoul (official restaurant page)",
+            "sourceUrl": "https://www.shillahotels.com/en/theshilla/seoul/dining/loungeBar/theLibrary.do",
+            "originalUrl": "https://www.shillahotels.com/hbcimages/260529/20260529222315_437e3053-75eb-4d14-b940-44275c025d1d.jpg",
+            "checkedAt": "2026-10-18"
+          }
         },
         "enabled": true
       }
@@ -7506,12 +8532,23 @@
             "checkedAt": "2026-10-18",
             "menus": [
               {
-                "label": "Menu (link only)",
-                "url": "https://guide.michelin.com/en/seoul-capital-area/kr-seoul/restaurant/bicena",
+                "label": "Lunch and dinner courses (Polle listing)",
+                "url": "https://polle.com/place/3bnXZU/%EB%B9%84%EC%B1%84%EB%82%98",
                 "currency": "KRW",
-                "coverage": "link",
-                "items": [],
-                "note": "Seasonal tasting menu; KRW prices not found in a verifiable source. Checked: MICHELIN Guide page, Wikipedia, Hankyung 2025 star report."
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Lunch Sancheon course (weekday, weekend, holiday), per person",
+                    "price": 170000,
+                    "category": "Course"
+                  },
+                  {
+                    "name": "Dinner Guhak course, per person",
+                    "price": 280000,
+                    "category": "Course"
+                  }
+                ],
+                "note": "User-maintained Polle listing (not the operator); course names and the date of the prices are not published there, and prices drift. Listing places the restaurant on the 81st floor of Lotte World Tower. Tax/service not stated."
               }
             ],
             "specials": [],
@@ -7888,13 +8925,951 @@
           "height": 533
         }
       ]
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "SAN — Seoul restaurant guide",
+        "description": "Chef Jo Seung-hyun's underground tasting-menu restaurant, opened in 2024 with CJ CheilJedang; a 13-course seasonal degustation with a pork-rice-soup (dwaeji gukbap) signature.",
+        "sourceUrl": "https://guide.michelin.com/en/seoul-capital-area/kr-seoul/restaurant/san",
+        "address": "B1, 6 Eonju-ro 168-gil, Gangnam-gu",
+        "latitude": 37.52631,
+        "longitude": 127.03391,
+        "productName": "SAN",
+        "utcStartDateTime": "2024-06-30T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "Estimated: Asia's 50 Best (2026 One To Watch story) says SAN 'opened in mid-2024', and Korea JoongAng Daily (30 Mar 2026) says it opened less than two years earlier; no exact day was found, so 2024-06-30 is a mid-year placeholder.",
+        "parentId": null,
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Top Restaurants",
+          "Seoul",
+          "Gangnam-gu (Sinsa-dong)",
+          "Innovative Korean"
+        ],
+        "longFormSummary": "<p>Chef Jo Seung-hyun's underground tasting-menu restaurant, opened in 2024 with CJ CheilJedang; a 13-course seasonal degustation with a pork-rice-soup (dwaeji gukbap) signature. <cite data-ref=\"https://www.the50.com/stories/News/san-one-to-watch-asias-50-best-restaurants-2026.html\"></cite></p>",
+        "references": [
+          {
+            "url": "https://www.the50.com/stories/News/san-one-to-watch-asias-50-best-restaurants-2026.html",
+            "title": "Asia's 50 Best 2026: SAN One To Watch",
+            "reasoning": "Opened in mid-2024; 13-course menu",
+            "confidence": 90
+          },
+          {
+            "url": "https://www.koreajoongangdaily.com/lifestyle/restaurant-sans-unique-take-on-korean-flavors-earns-global-attention-with-asias-50-best-extended-list-michelin-star/12715798",
+            "title": "Korea JoongAng Daily 30 Mar 2026: Restaurant SAN",
+            "reasoning": "Opened less than two years earlier; course 350,000 KRW",
+            "confidence": 90
+          },
+          {
+            "url": "https://guide.michelin.com/en/seoul-capital-area/kr-seoul/restaurant/san",
+            "title": "MICHELIN Guide: SAN",
+            "reasoning": "Address, phone and 2026 One Star",
+            "confidence": 90
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://guide.michelin.com/en/seoul-capital-area/kr-seoul/restaurant/san",
+          "menu": {
+            "pinSourceUrl": "https://guide.michelin.com/en/seoul-capital-area/kr-seoul/restaurant/san",
+            "name": "SAN",
+            "checkedAt": "2026-10-18",
+            "menus": [
+              {
+                "label": "Course menu (press and Asia's 50 Best)",
+                "url": "https://www.koreajoongangdaily.com/lifestyle/restaurant-sans-unique-take-on-korean-flavors-earns-global-attention-with-asias-50-best-extended-list-michelin-star/12715798",
+                "currency": "KRW",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Course menu, per person (13-course seasonal degustation)",
+                    "price": 350000,
+                    "category": "Course"
+                  },
+                  {
+                    "name": "Winter snow crab, crystal caviar, chicken bouillon and egg yolk pudding (opening course; varies by season)",
+                    "priceLabel": "Price not published",
+                    "category": "Dish"
+                  },
+                  {
+                    "name": "Beef steak with celery, deodeok, chilli bearnaise, radish and black truffle",
+                    "priceLabel": "Price not published",
+                    "category": "Dish"
+                  },
+                  {
+                    "name": "Butter-poached fish with chrysanthemum, dried daikon, lemon and sancho",
+                    "priceLabel": "Price not published",
+                    "category": "Dish"
+                  },
+                  {
+                    "name": "Toasted-rice ice cream with ripe persimmon, gamtae seaweed and Madeira",
+                    "priceLabel": "Price not published",
+                    "category": "Dish"
+                  },
+                  {
+                    "name": "Dwaeji gukbap with caviar (signature)",
+                    "priceLabel": "Price not published",
+                    "category": "Dish"
+                  },
+                  {
+                    "name": "Squid sookhoe",
+                    "priceLabel": "Price not published",
+                    "category": "Dish"
+                  }
+                ],
+                "note": "Price from Korea JoongAng Daily (2026-03-30); dishes from Asia's 50 Best (menu is seasonal and these may rotate). Tax/service not stated."
+              }
+            ],
+            "specials": [],
+            "location": {
+              "latitude": 37.52631,
+              "longitude": 127.03391,
+              "sourceUrl": "https://guide.michelin.com/en/seoul-capital-area/kr-seoul/restaurant/san",
+              "checkedAt": "2026-10-18"
+            },
+            "photo": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/south-korea/researched/san-1-ea5fba1083d2df33.webp",
+              "alt": "Venue photo from its MICHELIN Guide listing",
+              "credit": "MICHELIN Guide (restaurant page image)",
+              "sourceUrl": "https://guide.michelin.com/en/seoul-capital-area/kr-seoul/restaurant/san",
+              "originalUrl": "https://prod-pics.guide.michelin.com/api/public/content/71453e26b4344e80ae150533e1672ec9.jpg?format=jpeg&w=1000&h=1000",
+              "checkedAt": "2026-10-18"
+            }
+          },
+          "details": {
+            "pinSourceUrl": "https://guide.michelin.com/en/seoul-capital-area/kr-seoul/restaurant/san",
+            "name": "SAN",
+            "websiteUrl": null,
+            "phone": "+82 2-540-1729",
+            "openingHours": [],
+            "checkedAt": "2026-10-18",
+            "detailsSourceUrl": "https://guide.michelin.com/en/seoul-capital-area/kr-seoul/restaurant/san"
+          },
+          "tile": {
+            "regionSlug": "seoul",
+            "kind": "top",
+            "slug": "san",
+            "name": "SAN",
+            "neighborhood": "Gangnam-gu (Sinsa-dong)",
+            "cuisine": "Innovative Korean",
+            "address": "B1, 6 Eonju-ro 168-gil, Gangnam-gu",
+            "websiteUrl": "https://guide.michelin.com/en/seoul-capital-area/kr-seoul/restaurant/san",
+            "description": "Chef Jo Seung-hyun's underground tasting-menu restaurant, opened in 2024 with CJ CheilJedang; a 13-course seasonal degustation with a pork-rice-soup (dwaeji gukbap) signature.",
+            "checkedAt": "2026-10-18",
+            "recognition": "One MICHELIN Star (new in 2026); Asia's 50 Best Restaurants 2026 One To Watch / extended list No. 54",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/south-korea/researched/san-1-ea5fba1083d2df33.webp",
+            "imageCredit": "MICHELIN Guide (restaurant page image)",
+            "imageSourceUrl": "https://prod-pics.guide.michelin.com/api/public/content/71453e26b4344e80ae150533e1672ec9.jpg?format=jpeg&w=1000&h=1000",
+            "imageNote": "Venue photo from its MICHELIN Guide listing"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "region": "south-korea",
+          "slug": "san-1",
+          "source": "https://prod-pics.guide.michelin.com/api/public/content/71453e26b4344e80ae150533e1672ec9.jpg?format=jpeg&w=1000&h=1000",
+          "credit": "MICHELIN Guide (restaurant page image)",
+          "sourcePage": "https://guide.michelin.com/en/seoul-capital-area/kr-seoul/restaurant/san",
+          "note": "Venue photo from its MICHELIN Guide listing",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/south-korea/researched/san-1-ea5fba1083d2df33.webp",
+          "sha256": "ea5fba1083d2df33aaf85b1fb981ad1539bbaa52c4a4815f45b2b4cd36557dfe",
+          "width": 800,
+          "height": 800
+        }
+      ]
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Chaconne — Seoul restaurant guide",
+        "description": "French omakase by chef Shim Jung-taek (formerly head chef of Mosu Hong Kong), using seasonal Korean ingredients and fruit for acidity; a new MICHELIN Guide selection in 2026.",
+        "sourceUrl": "https://guide.michelin.com/en/seoul-capital-area/kr-seoul/restaurant/chaconne",
+        "address": "1F, Building 102, Yeoksam Hills, 23 Nonhyeon-ro 97-gil, Gangnam-gu",
+        "latitude": 37.50274,
+        "longitude": 127.03376,
+        "productName": "Chaconne",
+        "utcStartDateTime": "2024-08-22T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "Estimated: the Gangnam-gu business-permit record (general restaurant, French food, 'Chaconne', Yeoksam Hills, from Ministry of the Interior open data via duli.co.kr) shows the permit approved 2024-08-22; the first service date is not published, and a March 2025 Threads review already describes it as operating. The permit date is the only dated anchor found.",
+        "parentId": null,
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Top Restaurants",
+          "Seoul",
+          "Gangnam-gu (Yeoksam-dong)",
+          "French Contemporary"
+        ],
+        "longFormSummary": "<p>French omakase by chef Shim Jung-taek (formerly head chef of Mosu Hong Kong), using seasonal Korean ingredients and fruit for acidity; a new MICHELIN Guide selection in 2026. <cite data-ref=\"http://duli.co.kr/web/splus/kmap/view.php?sigun=6110000&gugun=3220000&keyno=109&keyname=%EC%83%A4%EC%BD%98%EB%8A%90(chaconne)&keylink=3220000-101-2024-01035\"></cite></p>",
+        "references": [
+          {
+            "url": "http://duli.co.kr/web/splus/kmap/view.php?sigun=6110000&gugun=3220000&keyno=109&keyname=%EC%83%A4%EC%BD%98%EB%8A%90(chaconne)&keylink=3220000-101-2024-01035",
+            "title": "Gangnam-gu business registry: Chaconne (permit 2024-08-22)",
+            "reasoning": "Permit date 2024-08-22, status operating",
+            "confidence": 90
+          },
+          {
+            "url": "https://www.esquirekorea.co.kr/article/1896401",
+            "title": "Esquire Korea: MICHELIN 2026 new Seoul selections",
+            "reasoning": "Chef Shim Jung-taek, French omakase, address",
+            "confidence": 90
+          },
+          {
+            "url": "https://guide.michelin.com/en/seoul-capital-area/kr-seoul/restaurant/chaconne",
+            "title": "MICHELIN Guide: Chaconne",
+            "reasoning": "New 2026 selection, address and phone",
+            "confidence": 90
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://guide.michelin.com/en/seoul-capital-area/kr-seoul/restaurant/chaconne",
+          "menu": {
+            "pinSourceUrl": "https://guide.michelin.com/en/seoul-capital-area/kr-seoul/restaurant/chaconne",
+            "name": "Chaconne",
+            "checkedAt": "2026-10-18",
+            "menus": [
+              {
+                "label": "Menu (link only)",
+                "url": "https://guide.michelin.com/en/seoul-capital-area/kr-seoul/restaurant/chaconne",
+                "currency": "KRW",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Single omakase course (French, seasonal Korean ingredients), per person",
+                    "priceLabel": "Price not published",
+                    "category": "Course"
+                  }
+                ],
+                "note": "One fixed omakase course; no price or dish list was found on the MICHELIN page, Esquire Korea or search results (Catchtable pages were not readable)."
+              }
+            ],
+            "specials": [],
+            "location": {
+              "latitude": 37.50274,
+              "longitude": 127.03376,
+              "sourceUrl": "https://guide.michelin.com/en/seoul-capital-area/kr-seoul/restaurant/chaconne",
+              "checkedAt": "2026-10-18"
+            },
+            "photo": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/south-korea/researched/chaconne-1-4740abec9ef9340c.webp",
+              "alt": "Venue photo from its MICHELIN Guide listing",
+              "credit": "MICHELIN Guide (restaurant page image)",
+              "sourceUrl": "https://guide.michelin.com/en/seoul-capital-area/kr-seoul/restaurant/chaconne",
+              "originalUrl": "https://prod-pics.guide.michelin.com/api/public/content/8307835be0254a1dbe50327751676ebc.jpeg?format=jpeg&w=1000&h=1000",
+              "checkedAt": "2026-10-18"
+            }
+          },
+          "details": {
+            "pinSourceUrl": "https://guide.michelin.com/en/seoul-capital-area/kr-seoul/restaurant/chaconne",
+            "name": "Chaconne",
+            "websiteUrl": null,
+            "phone": "+82 10-2693-6392",
+            "openingHours": [],
+            "checkedAt": "2026-10-18",
+            "detailsSourceUrl": "https://guide.michelin.com/en/seoul-capital-area/kr-seoul/restaurant/chaconne"
+          },
+          "tile": {
+            "regionSlug": "seoul",
+            "kind": "top",
+            "slug": "chaconne",
+            "name": "Chaconne",
+            "neighborhood": "Gangnam-gu (Yeoksam-dong)",
+            "cuisine": "French Contemporary",
+            "address": "1F, Building 102, Yeoksam Hills, 23 Nonhyeon-ro 97-gil, Gangnam-gu",
+            "websiteUrl": "https://guide.michelin.com/en/seoul-capital-area/kr-seoul/restaurant/chaconne",
+            "description": "French omakase by chef Shim Jung-taek (formerly head chef of Mosu Hong Kong), using seasonal Korean ingredients and fruit for acidity; a new MICHELIN Guide selection in 2026.",
+            "checkedAt": "2026-10-18",
+            "recognition": "MICHELIN Guide Seoul & Busan 2026 (new selection)",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/south-korea/researched/chaconne-1-4740abec9ef9340c.webp",
+            "imageCredit": "MICHELIN Guide (restaurant page image)",
+            "imageSourceUrl": "https://prod-pics.guide.michelin.com/api/public/content/8307835be0254a1dbe50327751676ebc.jpeg?format=jpeg&w=1000&h=1000",
+            "imageNote": "Venue photo from its MICHELIN Guide listing"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "region": "south-korea",
+          "slug": "chaconne-1",
+          "source": "https://prod-pics.guide.michelin.com/api/public/content/8307835be0254a1dbe50327751676ebc.jpeg?format=jpeg&w=1000&h=1000",
+          "credit": "MICHELIN Guide (restaurant page image)",
+          "sourcePage": "https://guide.michelin.com/en/seoul-capital-area/kr-seoul/restaurant/chaconne",
+          "note": "Venue photo from its MICHELIN Guide listing",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/south-korea/researched/chaconne-1-4740abec9ef9340c.webp",
+          "sha256": "4740abec9ef9340c23b3fcd5d81668a6639c9ace8d1404f65c41c96862677d1a",
+          "width": 800,
+          "height": 800
+        }
+      ]
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Mukjung — Seoul restaurant guide",
+        "description": "Chef Austin Kang's Korean fermented-dining restaurant (house-made jang and kimchi, food-as-medicine concept), a new MICHELIN Guide selection in 2026.",
+        "sourceUrl": "https://guide.michelin.com/en/seoul-capital-area/kr-seoul/restaurant/mukjung",
+        "address": "17 Toegye-ro 48-gil, Jung-gu",
+        "latitude": 37.56181,
+        "longitude": 127.00053,
+        "productName": "Mukjung",
+        "utcStartDateTime": "2024-11-30T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "Estimated: Maison Korea (11 Mar 2025) quotes the chef saying the restaurant opened in Mukjeong-dong in November of the previous year, about three months earlier, so November 2024; no day found, so month-end is a placeholder.",
+        "parentId": null,
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Top Restaurants",
+          "Seoul",
+          "Jung-gu (Mukjeong-dong)",
+          "Korean fermented dining"
+        ],
+        "longFormSummary": "<p>Chef Austin Kang's Korean fermented-dining restaurant (house-made jang and kimchi, food-as-medicine concept), a new MICHELIN Guide selection in 2026. <cite data-ref=\"https://www.maisonkorea.com/food/2025/03/one-of-a-kind-2/\"></cite></p>",
+        "references": [
+          {
+            "url": "https://www.maisonkorea.com/food/2025/03/one-of-a-kind-2/",
+            "title": "Maison Korea 11 Mar 2025: One of a Kind",
+            "reasoning": "Opened in November 2024, about three months before the interview",
+            "confidence": 90
+          },
+          {
+            "url": "https://www.mukjung.com/",
+            "title": "Mukjung official site",
+            "reasoning": "Concept, chef, menu PDF",
+            "confidence": 90
+          },
+          {
+            "url": "https://guide.michelin.com/en/seoul-capital-area/kr-seoul/restaurant/mukjung",
+            "title": "MICHELIN Guide: Mukjung",
+            "reasoning": "New 2026 selection, address",
+            "confidence": 90
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://guide.michelin.com/en/seoul-capital-area/kr-seoul/restaurant/mukjung",
+          "menu": {
+            "pinSourceUrl": "https://guide.michelin.com/en/seoul-capital-area/kr-seoul/restaurant/mukjung",
+            "name": "Mukjung",
+            "checkedAt": "2026-10-18",
+            "menus": [
+              {
+                "label": "Menu (operator PDF)",
+                "url": "https://www.mukjung.com/assets/mukjung-menu.pdf",
+                "currency": "KRW",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "Mukjung house salad (mini romaine, yuzu vinaigrette, goat cheese sauce)",
+                    "price": 17000,
+                    "category": "Share"
+                  },
+                  {
+                    "name": "Tofu hummus with seaweed chips",
+                    "price": 24000,
+                    "category": "Share"
+                  },
+                  {
+                    "name": "Seasonal sashimi",
+                    "priceLabel": "Market price",
+                    "category": "Share"
+                  },
+                  {
+                    "name": "Shiitake/shrimp jeon (grilled shiitake stuffed with minced shrimp, soy fish aioli)",
+                    "price": 26000,
+                    "category": "Share"
+                  },
+                  {
+                    "name": "Sotteok sotteok (Hanwoo/pork patty, grilled green onion, rice cake)",
+                    "price": 27000,
+                    "category": "Share"
+                  },
+                  {
+                    "name": "Steamed sea bass (soy-based green peppercorn sauce)",
+                    "price": 38000,
+                    "category": "Share"
+                  },
+                  {
+                    "name": "Horned conch escargot (3 horn conchs; +10,000 for one more)",
+                    "price": 28000,
+                    "category": "Share"
+                  },
+                  {
+                    "name": "Squid soondae (pork/tofu stuffing, Thai-style red pepper sauce)",
+                    "price": 28000,
+                    "category": "Share"
+                  },
+                  {
+                    "name": "Stir-fried mini octopus (fermented, aged seasoning)",
+                    "price": 35000,
+                    "category": "Share"
+                  },
+                  {
+                    "name": "Roast chicken (brined 24 hours, dry-aged 3 days, glutinous rice, 3-hour low-temperature roast)",
+                    "price": 49000,
+                    "category": "Main"
+                  },
+                  {
+                    "name": "5-layered pork belly, 400 g (2-3 people), smoked in oakwood, 4 hours",
+                    "price": 78000,
+                    "category": "Main"
+                  },
+                  {
+                    "name": "5-layered pork belly, 800 g (4-6 people)",
+                    "price": 151000,
+                    "category": "Main"
+                  },
+                  {
+                    "name": "Hanwoo beef rib, 400 g (2-3 people), gochujang-marinated, smoked 4 hours",
+                    "price": 143000,
+                    "category": "Main"
+                  },
+                  {
+                    "name": "Stone-grilled abalone rice (abalone intestine sauce, thistle-mushroom rice)",
+                    "price": 26000,
+                    "category": "Meal"
+                  },
+                  {
+                    "name": "Gondre mushroom rice",
+                    "price": 13000,
+                    "category": "Meal"
+                  },
+                  {
+                    "name": "Dried pollock soup (anchovy stock)",
+                    "price": 13000,
+                    "category": "Meal"
+                  },
+                  {
+                    "name": "Shaved ice (organic black sugar red bean bingsu)",
+                    "price": 16000,
+                    "category": "Dessert"
+                  },
+                  {
+                    "name": "Chocolate fondant (cold-pressed perilla seed, ice cream)",
+                    "price": 17000,
+                    "category": "Dessert"
+                  }
+                ],
+                "note": "Transcribed from the undated menu PDF linked from mukjung.com (checked 2026-10-18). Mains include 10 side dishes; 5-year-aged ribs +5,000. Tax/service not stated."
+              }
+            ],
+            "specials": [],
+            "location": {
+              "latitude": 37.56181,
+              "longitude": 127.00053,
+              "sourceUrl": "https://guide.michelin.com/en/seoul-capital-area/kr-seoul/restaurant/mukjung",
+              "checkedAt": "2026-10-18"
+            },
+            "photo": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/south-korea/researched/mukjung-1-68f866ca8c7558f1.webp",
+              "alt": "Venue photo from its MICHELIN Guide listing",
+              "credit": "MICHELIN Guide (restaurant page image)",
+              "sourceUrl": "https://guide.michelin.com/en/seoul-capital-area/kr-seoul/restaurant/mukjung",
+              "originalUrl": "https://prod-pics.guide.michelin.com/api/public/content/266f8b6789194066b02ef8a975e5a72b.jpeg?format=jpeg&w=1000&h=1000",
+              "checkedAt": "2026-10-18"
+            }
+          },
+          "details": {
+            "pinSourceUrl": "https://guide.michelin.com/en/seoul-capital-area/kr-seoul/restaurant/mukjung",
+            "name": "Mukjung",
+            "websiteUrl": "https://www.mukjung.com/",
+            "phone": "+82 10-7559-4817",
+            "openingHours": [],
+            "checkedAt": "2026-10-18",
+            "detailsSourceUrl": "https://guide.michelin.com/en/seoul-capital-area/kr-seoul/restaurant/mukjung"
+          },
+          "tile": {
+            "regionSlug": "seoul",
+            "kind": "top",
+            "slug": "mukjung",
+            "name": "Mukjung",
+            "neighborhood": "Jung-gu (Mukjeong-dong)",
+            "cuisine": "Korean fermented dining",
+            "address": "17 Toegye-ro 48-gil, Jung-gu",
+            "websiteUrl": "https://www.mukjung.com/",
+            "description": "Chef Austin Kang's Korean fermented-dining restaurant (house-made jang and kimchi, food-as-medicine concept), a new MICHELIN Guide selection in 2026.",
+            "checkedAt": "2026-10-18",
+            "recognition": "MICHELIN Guide Seoul & Busan 2026 (new selection)",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/south-korea/researched/mukjung-1-68f866ca8c7558f1.webp",
+            "imageCredit": "MICHELIN Guide (restaurant page image)",
+            "imageSourceUrl": "https://prod-pics.guide.michelin.com/api/public/content/266f8b6789194066b02ef8a975e5a72b.jpeg?format=jpeg&w=1000&h=1000",
+            "imageNote": "Venue photo from its MICHELIN Guide listing"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "region": "south-korea",
+          "slug": "mukjung-1",
+          "source": "https://prod-pics.guide.michelin.com/api/public/content/266f8b6789194066b02ef8a975e5a72b.jpeg?format=jpeg&w=1000&h=1000",
+          "credit": "MICHELIN Guide (restaurant page image)",
+          "sourcePage": "https://guide.michelin.com/en/seoul-capital-area/kr-seoul/restaurant/mukjung",
+          "note": "Venue photo from its MICHELIN Guide listing",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/south-korea/researched/mukjung-1-68f866ca8c7558f1.webp",
+          "sha256": "68f866ca8c7558f1a35286ced7da81d9a28ac0ffc3a09d0cad2f0b330dfd5780",
+          "width": 800,
+          "height": 800
+        }
+      ]
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Oilje — Seoul restaurant guide",
+        "description": "Single-dish Samgakji shop built on perilla-seed seaweed soup (Hanwoo bone broth, young Geumgodo seaweed) with cast-iron-pot rice, a new 2026 MICHELIN Guide selection.",
+        "sourceUrl": "https://guide.michelin.com/en/seoul-capital-area/kr-seoul/restaurant/oilje",
+        "address": "29 Hangang-daero 62da-gil, Yongsan-gu",
+        "latitude": 37.53254,
+        "longitude": 126.97473,
+        "productName": "Oilje",
+        "utcStartDateTime": "2023-12-31T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "Estimated: a Chosun Ilbo article carried by Daum (3 Oct 2025) says chef Shin Dong-hun 'opened Oilje in 2023' after about 20 years of Western cooking; no month or day was published, so year-end is a placeholder.",
+        "parentId": null,
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Top Restaurants",
+          "Seoul",
+          "Yongsan-gu (Samgakji)",
+          "Perilla-seed miyeok-guk (seaweed soup)"
+        ],
+        "longFormSummary": "<p>Single-dish Samgakji shop built on perilla-seed seaweed soup (Hanwoo bone broth, young Geumgodo seaweed) with cast-iron-pot rice, a new 2026 MICHELIN Guide selection. <cite data-ref=\"https://v.daum.net/v/20251003005251447\"></cite></p>",
+        "references": [
+          {
+            "url": "https://v.daum.net/v/20251003005251447",
+            "title": "Chosun via Daum 3 Oct 2025: Japanese diners and Korean miyeok-guk",
+            "reasoning": "Chef Shin Dong-hun opened Oilje in 2023",
+            "confidence": 90
+          },
+          {
+            "url": "https://www.diningcode.com/profile.php?rid=moM60eY603vP",
+            "title": "DiningCode: Oilje",
+            "reasoning": "Price 15,000 KRW and weekday-lunch hours",
+            "confidence": 90
+          },
+          {
+            "url": "https://www.koreajoongangdaily.com/lifestyle/michelin-releases-2026-bib-gourmand-adds-8-new-korean-restaurants/12491521",
+            "title": "Korea JoongAng Daily: 2026 Bib Gourmand additions",
+            "reasoning": "Oilje listed among new Bib Gourmand selections",
+            "confidence": 90
+          },
+          {
+            "url": "https://guide.michelin.com/en/seoul-capital-area/kr-seoul/restaurant/oilje",
+            "title": "MICHELIN Guide: Oilje",
+            "reasoning": "Address and phone",
+            "confidence": 90
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://guide.michelin.com/en/seoul-capital-area/kr-seoul/restaurant/oilje",
+          "menu": {
+            "pinSourceUrl": "https://guide.michelin.com/en/seoul-capital-area/kr-seoul/restaurant/oilje",
+            "name": "Oilje",
+            "checkedAt": "2026-10-18",
+            "menus": [
+              {
+                "label": "Menu (DiningCode listing)",
+                "url": "https://www.diningcode.com/profile.php?rid=moM60eY603vP",
+                "currency": "KRW",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Deulkkae miyeok-guk (perilla-seed seaweed soup) with cast-iron-pot rice",
+                    "price": 15000,
+                    "category": "Set"
+                  }
+                ],
+                "note": "Single-item menu; weekday lunch only per DiningCode, with an evening reserved birthday-table course mentioned by Polle and a blog (no price). Tax/service not stated."
+              }
+            ],
+            "specials": [],
+            "location": {
+              "latitude": 37.53254,
+              "longitude": 126.97473,
+              "sourceUrl": "https://guide.michelin.com/en/seoul-capital-area/kr-seoul/restaurant/oilje",
+              "checkedAt": "2026-10-18"
+            },
+            "photo": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/south-korea/researched/oilje-1-7e5512479a65106a.webp",
+              "alt": "Venue photo from its MICHELIN Guide listing",
+              "credit": "MICHELIN Guide (restaurant page image)",
+              "sourceUrl": "https://guide.michelin.com/en/seoul-capital-area/kr-seoul/restaurant/oilje",
+              "originalUrl": "https://prod-pics.guide.michelin.com/api/public/content/9b6f08055a864528a3ce092ccbb85d88.jpeg?format=jpeg&w=1000&h=1000",
+              "checkedAt": "2026-10-18"
+            }
+          },
+          "details": {
+            "pinSourceUrl": "https://guide.michelin.com/en/seoul-capital-area/kr-seoul/restaurant/oilje",
+            "name": "Oilje",
+            "websiteUrl": null,
+            "phone": "+82 70-8831-5534",
+            "openingHours": [
+              {
+                "days": "Monday-Friday",
+                "hours": "09:30-15:00 (last order 13:30)"
+              },
+              {
+                "days": "Saturday-Sunday",
+                "hours": "Closed"
+              }
+            ],
+            "checkedAt": "2026-10-18",
+            "detailsSourceUrl": "https://guide.michelin.com/en/seoul-capital-area/kr-seoul/restaurant/oilje"
+          },
+          "tile": {
+            "regionSlug": "seoul",
+            "kind": "top",
+            "slug": "oilje",
+            "name": "Oilje",
+            "neighborhood": "Yongsan-gu (Samgakji)",
+            "cuisine": "Perilla-seed miyeok-guk (seaweed soup)",
+            "address": "29 Hangang-daero 62da-gil, Yongsan-gu",
+            "websiteUrl": "https://guide.michelin.com/en/seoul-capital-area/kr-seoul/restaurant/oilje",
+            "description": "Single-dish Samgakji shop built on perilla-seed seaweed soup (Hanwoo bone broth, young Geumgodo seaweed) with cast-iron-pot rice, a new 2026 MICHELIN Guide selection.",
+            "checkedAt": "2026-10-18",
+            "recognition": "MICHELIN Guide Seoul & Busan 2026 (new selection; Bib Gourmand per Korea JoongAng Daily)",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/south-korea/researched/oilje-1-7e5512479a65106a.webp",
+            "imageCredit": "MICHELIN Guide (restaurant page image)",
+            "imageSourceUrl": "https://prod-pics.guide.michelin.com/api/public/content/9b6f08055a864528a3ce092ccbb85d88.jpeg?format=jpeg&w=1000&h=1000",
+            "imageNote": "Venue photo from its MICHELIN Guide listing"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "region": "south-korea",
+          "slug": "oilje-1",
+          "source": "https://prod-pics.guide.michelin.com/api/public/content/9b6f08055a864528a3ce092ccbb85d88.jpeg?format=jpeg&w=1000&h=1000",
+          "credit": "MICHELIN Guide (restaurant page image)",
+          "sourcePage": "https://guide.michelin.com/en/seoul-capital-area/kr-seoul/restaurant/oilje",
+          "note": "Venue photo from its MICHELIN Guide listing",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/south-korea/researched/oilje-1-7e5512479a65106a.webp",
+          "sha256": "7e5512479a65106ab5c0c6b0761e8cfa4cd42db04e56d5c58d3ccdbd982a1be8",
+          "width": 800,
+          "height": 800
+        }
+      ]
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Hakusi — Seoul restaurant guide",
+        "description": "Chef Choi Sung-hoon's Japanese kaiseki-style counter, grilled-dish focused, after moves from Sinsa to Hannam and now an Eonju-ro 157-gil site; a new One MICHELIN Star in 2026.",
+        "sourceUrl": "https://guide.michelin.com/en/seoul-capital-area/kr-seoul/restaurant/hakusi",
+        "address": "2F, 8-4 Eonju-ro 157-gil, Gangnam-gu",
+        "latitude": 37.52414,
+        "longitude": 127.03227,
+        "productName": "Hakusi",
+        "utcStartDateTime": "2018-12-31T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "Estimated: Maison Korea (July 2026) says Hakusi began in Sinsa-dong in 2018, then moved through Hannam-dong to its current Apgujeong-area site; the dates of the moves and of the current premises were not found, so 2018 (year-end placeholder) is the restaurant's start, not this address's.",
+        "parentId": null,
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Top Restaurants",
+          "Seoul",
+          "Gangnam-gu (Sinsa-dong)",
+          "Japanese kaiseki"
+        ],
+        "longFormSummary": "<p>Chef Choi Sung-hoon's Japanese kaiseki-style counter, grilled-dish focused, after moves from Sinsa to Hannam and now an Eonju-ro 157-gil site; a new One MICHELIN Star in 2026. <cite data-ref=\"https://www.maisonkorea.com/food/2026/07/on-blank-page/\"></cite></p>",
+        "references": [
+          {
+            "url": "https://www.maisonkorea.com/food/2026/07/on-blank-page/",
+            "title": "Maison Korea July 2026: On Blank Page",
+            "reasoning": "Started in Sinsa-dong in 2018, later Hannam then current site",
+            "confidence": 90
+          },
+          {
+            "url": "https://www.diningcode.com/profile.php?rid=ylxhQJs3fv2r",
+            "title": "DiningCode: Hakusi",
+            "reasoning": "Courses, hours, address",
+            "confidence": 90
+          },
+          {
+            "url": "https://guide.michelin.com/en/seoul-capital-area/kr-seoul/restaurant/hakusi",
+            "title": "MICHELIN Guide: Hakusi",
+            "reasoning": "New One Star 2026, address",
+            "confidence": 90
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://guide.michelin.com/en/seoul-capital-area/kr-seoul/restaurant/hakusi",
+          "menu": {
+            "pinSourceUrl": "https://guide.michelin.com/en/seoul-capital-area/kr-seoul/restaurant/hakusi",
+            "name": "Hakusi",
+            "checkedAt": "2026-10-18",
+            "menus": [
+              {
+                "label": "Courses (DiningCode listing)",
+                "url": "https://www.diningcode.com/profile.php?rid=ylxhQJs3fv2r",
+                "currency": "KRW",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Hoshi course, per person",
+                    "price": 220000,
+                    "category": "Course"
+                  },
+                  {
+                    "name": "Tsuki course, per person",
+                    "price": 300000,
+                    "category": "Course"
+                  },
+                  {
+                    "name": "Pairing",
+                    "priceLabel": "Price not published",
+                    "category": "Pairing"
+                  }
+                ],
+                "note": "A blog on the same page says only the Tsuki course has been offered since August 11 (unconfirmed); dishes are not listed. A la carte dishes are available after 21:00 (MICHELIN). Tax/service not stated."
+              }
+            ],
+            "specials": [],
+            "location": {
+              "latitude": 37.52414,
+              "longitude": 127.03227,
+              "sourceUrl": "https://guide.michelin.com/en/seoul-capital-area/kr-seoul/restaurant/hakusi",
+              "checkedAt": "2026-10-18"
+            },
+            "photo": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/south-korea/researched/hakusi-1-93ae2f6d70beb1b8.webp",
+              "alt": "Venue photo from its MICHELIN Guide listing",
+              "credit": "MICHELIN Guide (restaurant page image)",
+              "sourceUrl": "https://guide.michelin.com/en/seoul-capital-area/kr-seoul/restaurant/hakusi",
+              "originalUrl": "https://prod-pics.guide.michelin.com/api/public/content/d93b5de257704c199443ae7931f46162.jpeg?format=jpeg&w=1000&h=1000",
+              "checkedAt": "2026-10-18"
+            }
+          },
+          "details": {
+            "pinSourceUrl": "https://guide.michelin.com/en/seoul-capital-area/kr-seoul/restaurant/hakusi",
+            "name": "Hakusi",
+            "websiteUrl": "https://hakusi.kr/",
+            "phone": "+82 10-7316-6212",
+            "openingHours": [
+              {
+                "days": "Tuesday-Saturday",
+                "hours": "18:00-24:00 (last order 22:30, DiningCode)"
+              },
+              {
+                "days": "Sunday-Monday",
+                "hours": "Closed"
+              }
+            ],
+            "checkedAt": "2026-10-18",
+            "detailsSourceUrl": "https://guide.michelin.com/en/seoul-capital-area/kr-seoul/restaurant/hakusi"
+          },
+          "tile": {
+            "regionSlug": "seoul",
+            "kind": "top",
+            "slug": "hakusi",
+            "name": "Hakusi",
+            "neighborhood": "Gangnam-gu (Sinsa-dong)",
+            "cuisine": "Japanese kaiseki",
+            "address": "2F, 8-4 Eonju-ro 157-gil, Gangnam-gu",
+            "websiteUrl": "https://hakusi.kr/",
+            "description": "Chef Choi Sung-hoon's Japanese kaiseki-style counter, grilled-dish focused, after moves from Sinsa to Hannam and now an Eonju-ro 157-gil site; a new One MICHELIN Star in 2026.",
+            "checkedAt": "2026-10-18",
+            "recognition": "One MICHELIN Star (new in 2026)",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/south-korea/researched/hakusi-1-93ae2f6d70beb1b8.webp",
+            "imageCredit": "MICHELIN Guide (restaurant page image)",
+            "imageSourceUrl": "https://prod-pics.guide.michelin.com/api/public/content/d93b5de257704c199443ae7931f46162.jpeg?format=jpeg&w=1000&h=1000",
+            "imageNote": "Venue photo from its MICHELIN Guide listing"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "region": "south-korea",
+          "slug": "hakusi-1",
+          "source": "https://prod-pics.guide.michelin.com/api/public/content/d93b5de257704c199443ae7931f46162.jpeg?format=jpeg&w=1000&h=1000",
+          "credit": "MICHELIN Guide (restaurant page image)",
+          "sourcePage": "https://guide.michelin.com/en/seoul-capital-area/kr-seoul/restaurant/hakusi",
+          "note": "Venue photo from its MICHELIN Guide listing",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/south-korea/researched/hakusi-1-93ae2f6d70beb1b8.webp",
+          "sha256": "93ae2f6d70beb1b8be8182f27cb8382ffd8429c4a4352c01c6b3c784d5d98439",
+          "width": 800,
+          "height": 800
+        }
+      ]
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Goryori Ken — Seoul restaurant guide",
+        "description": "Eight-seat Japanese-contemporary counter by chef Kim Gun in Apgujeong, a One MICHELIN Star restaurant.",
+        "sourceUrl": "https://guide.michelin.com/en/seoul-capital-area/kr-seoul/restaurant/goryori-ken",
+        "address": "2F, 15-3 Eonju-ro 152-gil, Gangnam-gu",
+        "latitude": 37.52298,
+        "longitude": 127.03478,
+        "productName": "Goryori Ken",
+        "utcStartDateTime": "2016-12-31T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "Estimated: Wikipedia says Goryori Ken 'opened in 2016' and, per reports, was closed for a time and reopened in 2019; no month or day, and the current Eonju-ro 152-gil address is listed without a move date, so 2016 (year-end placeholder) is the earliest anchor.",
+        "parentId": null,
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Top Restaurants",
+          "Seoul",
+          "Gangnam-gu (Apgujeong)",
+          "Japanese contemporary"
+        ],
+        "longFormSummary": "<p>Eight-seat Japanese-contemporary counter by chef Kim Gun in Apgujeong, a One MICHELIN Star restaurant. <cite data-ref=\"https://en.wikipedia.org/wiki/Goryori_Ken\"></cite></p>",
+        "references": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Goryori_Ken",
+            "title": "Goryori Ken - Wikipedia",
+            "reasoning": "Opened 2016; reopened 2019",
+            "confidence": 90
+          },
+          {
+            "url": "https://guide.michelin.com/en/seoul-capital-area/kr-seoul/restaurant/goryori-ken",
+            "title": "MICHELIN Guide: Goryori Ken",
+            "reasoning": "One Star, address, phone, hours",
+            "confidence": 90
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://guide.michelin.com/en/seoul-capital-area/kr-seoul/restaurant/goryori-ken",
+          "menu": {
+            "pinSourceUrl": "https://guide.michelin.com/en/seoul-capital-area/kr-seoul/restaurant/goryori-ken",
+            "name": "Goryori Ken",
+            "checkedAt": "2026-10-18",
+            "menus": [
+              {
+                "label": "Menu (link only)",
+                "url": "https://guide.michelin.com/en/seoul-capital-area/kr-seoul/restaurant/goryori-ken",
+                "currency": "KRW",
+                "coverage": "link",
+                "items": [],
+                "note": "The restaurant takes its own bookings; no menu or prices were found on MICHELIN, Wikipedia or search results (Catchtable not readable)."
+              }
+            ],
+            "specials": [],
+            "location": {
+              "latitude": 37.52298,
+              "longitude": 127.03478,
+              "sourceUrl": "https://guide.michelin.com/en/seoul-capital-area/kr-seoul/restaurant/goryori-ken",
+              "checkedAt": "2026-10-18"
+            },
+            "photo": {
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/south-korea/researched/goryori-ken-1-e927e203f4ac7647.webp",
+              "alt": "Venue photo from its MICHELIN Guide listing",
+              "credit": "MICHELIN Guide (restaurant page image)",
+              "sourceUrl": "https://guide.michelin.com/en/seoul-capital-area/kr-seoul/restaurant/goryori-ken",
+              "originalUrl": "https://prod-pics.guide.michelin.com/api/public/content/3a98ede352474d6c9f84c5f29cbfa276.jpeg?format=jpeg&w=1000&h=1000",
+              "checkedAt": "2026-10-18"
+            }
+          },
+          "details": {
+            "pinSourceUrl": "https://guide.michelin.com/en/seoul-capital-area/kr-seoul/restaurant/goryori-ken",
+            "name": "Goryori Ken",
+            "websiteUrl": null,
+            "phone": "+82 2-511-7809",
+            "openingHours": [
+              {
+                "days": "Tuesday-Saturday",
+                "hours": "18:00-23:00"
+              },
+              {
+                "days": "Sunday-Monday",
+                "hours": "Closed"
+              }
+            ],
+            "checkedAt": "2026-10-18",
+            "detailsSourceUrl": "https://guide.michelin.com/en/seoul-capital-area/kr-seoul/restaurant/goryori-ken"
+          },
+          "tile": {
+            "regionSlug": "seoul",
+            "kind": "top",
+            "slug": "goryori-ken",
+            "name": "Goryori Ken",
+            "neighborhood": "Gangnam-gu (Apgujeong)",
+            "cuisine": "Japanese contemporary",
+            "address": "2F, 15-3 Eonju-ro 152-gil, Gangnam-gu",
+            "websiteUrl": "https://guide.michelin.com/en/seoul-capital-area/kr-seoul/restaurant/goryori-ken",
+            "description": "Eight-seat Japanese-contemporary counter by chef Kim Gun in Apgujeong, a One MICHELIN Star restaurant.",
+            "checkedAt": "2026-10-18",
+            "recognition": "One MICHELIN Star (MICHELIN Guide Seoul & Busan 2026)",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/south-korea/researched/goryori-ken-1-e927e203f4ac7647.webp",
+            "imageCredit": "MICHELIN Guide (restaurant page image)",
+            "imageSourceUrl": "https://prod-pics.guide.michelin.com/api/public/content/3a98ede352474d6c9f84c5f29cbfa276.jpeg?format=jpeg&w=1000&h=1000",
+            "imageNote": "Venue photo from its MICHELIN Guide listing"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "region": "south-korea",
+          "slug": "goryori-ken-1",
+          "source": "https://prod-pics.guide.michelin.com/api/public/content/3a98ede352474d6c9f84c5f29cbfa276.jpeg?format=jpeg&w=1000&h=1000",
+          "credit": "MICHELIN Guide (restaurant page image)",
+          "sourcePage": "https://guide.michelin.com/en/seoul-capital-area/kr-seoul/restaurant/goryori-ken",
+          "note": "Venue photo from its MICHELIN Guide listing",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/south-korea/researched/goryori-ken-1-e927e203f4ac7647.webp",
+          "sha256": "e927e203f4ac76475f8c3964c0b5be4588dfd3bc080cf7044c20cff6b71f6c3e",
+          "width": 800,
+          "height": 800
+        }
+      ]
     }
   ],
   "notes": "Review/import snapshot only. See docs/restaurant-south-korea-guides.md (Seoul section) for sources, shortages and gaps. Photos are verified public Azure blobs.",
   "tabCounts": {
     "coming": 4,
     "opened": 15,
-    "top": 25,
+    "top": 31,
     "specials": 6
   },
   "dropped": []

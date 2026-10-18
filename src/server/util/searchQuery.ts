@@ -192,6 +192,10 @@ export type SearchQuery = {
   // own filters, any of which may match. The fields below then hold every
   // group's terms merged, for the callers that only read what was asked for.
   alternatives?: SearchQuery[];
+  // Set when AND joins terms of one group ("tag:Anime AND tag:Predicted"): a
+  // pin must meet every one of these, so two tags there are both required
+  // where bare ones are either.
+  all?: SearchQuery[];
   userNames: string[];
   // Pin ids, matching exactly those pins.
   ids: number[];
@@ -331,30 +335,47 @@ export function joinSearchQuery(parts: QueryPart[]): string {
     .trim();
 }
 
-// A standalone OR between two groups of terms, as a word of its own.
+// A standalone OR or AND between two groups of terms, as a word of its own.
+// AND binds tighter than OR: "a AND b OR c" is (a AND b) OR c.
 const OR_WORD = /(?<=^|\s)OR(?=\s|$)/;
+const AND_WORD = /(?<=^|\s)AND(?=\s|$)/;
 
 export function parseSearchQuery(searchText: string | null | undefined): SearchQuery {
-  // The parts split at every OR into groups; the merged query reads them all.
-  const groups: QueryPart[][] = [[]];
+  // Groups split at every OR, each into segments split at every AND; the
+  // merged query reads every part.
+  const groups: QueryPart[][][] = [[[]]];
   const all: QueryPart[] = [];
+  const text = (raw: string) => {
+    groups.at(-1)!.at(-1)!.push({ kind: 'text', raw });
+    all.push({ kind: 'text', raw });
+  };
   for (const part of splitSearchQuery(searchText)) {
     if (part.kind === 'term') {
-      groups[groups.length - 1].push(part);
+      groups.at(-1)!.at(-1)!.push(part);
       all.push(part);
       continue;
     }
     part.raw.split(OR_WORD).forEach((piece, index) => {
-      if (index > 0) groups.push([]);
-      groups[groups.length - 1].push({ kind: 'text', raw: piece });
-      all.push({ kind: 'text', raw: piece });
+      if (index > 0) groups.push([[]]);
+      piece.split(AND_WORD).forEach((bit, at) => {
+        if (at > 0) groups.at(-1)!.push([]);
+        text(bit);
+      });
     });
   }
+  // A group's own query, with its AND segments when there are two or more.
+  const readGroup = (segments: QueryPart[][]): SearchQuery => {
+    const group = readParts(segments.flat());
+    const each = segments.map(readParts).filter(hasFilters);
+    if (each.length > 1) group.all = each;
+    return group;
+  };
   const merged = readParts(all);
-  if (groups.length > 1) {
-    const alternatives = groups.map(readParts).filter(hasFilters);
-    if (alternatives.length > 1) merged.alternatives = alternatives;
-  }
+  const read = groups.map(readGroup);
+  const alternatives = read.filter(hasFilters);
+  if (alternatives.length > 1) merged.alternatives = alternatives;
+  else if (read.length === 1 && read[0].all) merged.all = read[0].all;
+  else if (alternatives.length === 1 && alternatives[0].all) merged.all = alternatives[0].all;
   return merged;
 }
 
