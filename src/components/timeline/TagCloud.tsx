@@ -367,7 +367,7 @@ function SavedQueries({ current, onOpen, className = '' }: { current: string; on
       window.removeEventListener('pointermove', move);
       window.removeEventListener('pointerup', end);
       window.removeEventListener('pointercancel', end);
-      if (live && e.type === 'pointerup' && hit(e.clientX, e.clientY)) setPinned((now) => (now.includes(q) ? now : togglePinnedQuery(q)));
+      if (live && e.type === 'pointerup' && hit(e.clientX, e.clientY)) togglePin(q);
       setDrag(null);
       setOver(false);
       // The click that follows a drag is not a search.
@@ -399,14 +399,14 @@ function SavedQueries({ current, onOpen, className = '' }: { current: string; on
       <span aria-hidden className="inline-flex items-center gap-1 text-xs font-semibold tracking-wide text-faint uppercase">
         <Icon name="search" className="size-3.5" />
         {label}
-        {/* Drop a pill here to pin it (the pin button on a pill does the same). */}
+        {/* Drop a pill here to pin it, or a pinned pill to unpin it (the pin button on a pill does the same). */}
         <span
           ref={zone}
           aria-hidden
-          title={t('tagCloud.pinQuery')}
+          title={t(drag && pinned.includes(drag.q) ? 'tagCloud.unpinQuery' : 'tagCloud.pinQuery')}
           className={`ms-1 grid size-6 place-items-center rounded-full border transition-colors ${over ? 'border-amber-500 bg-amber-500/25 text-amber-500' : dragging ? 'border-dashed border-amber-500/70 text-amber-500' : 'border-line text-faint'}`}
         >
-          <Icon name="thumbtack" className="size-3.5" />
+          <Icon name={drag && pinned.includes(drag.q) ? 'thumbtackOff' : 'thumbtack'} className="size-3.5" />
         </span>
       </span>
       <div ref={row} className="-mx-1 flex items-center gap-2 overflow-x-auto px-1 py-1 [scrollbar-width:thin]">
