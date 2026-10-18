@@ -1,13 +1,13 @@
 # Japan restaurant target audit — October 16, 2026
 
-Target: **30 distinct eligible restaurants in every tab of every city**. **464 verified memberships; 262 still missing**. This target remains incomplete; surplus in another tab does not offset a shortage.
+Target: **30 distinct eligible restaurants in every tab of every city**. **468 verified memberships; 260 still missing**. This target remains incomplete; surplus in another tab does not offset a shortage.
 
-All 24 local and production public guide counts agree after batch 78 at **464 memberships / 262 missing**, refreshed 2026-10-18T21:32:43.201504+00:00 (October 19, 06:32 JST / October 18, 14:32 PDT). Three new branches add Osaka Just opened2, Sapporo Just opened1and Sapporo Specials1: Osaka Just opened **21/30**, Sapporo Just opened **15/30**, Sapporo Specials **32/30**. Five hundred ninety-two menu/component entries, eighteen credited Azure gallery images, complete profiles, all seven offer schedules and four native title/image links verified in both environments. Thirty-four schedule boundaries and seven next starts passed. Expired opening discounts were not extended. Earlier checkpoints below are historical.
+All 24 local and production public guide counts agree after batch 80 at **468 memberships / 260 missing**, refreshed 2026-10-18T21:59:34.838552+00:00 (October 19, 06:59 JST / October 18, 14:59 PDT). Fuen Yakuin and BONTEMPS Minamihorie add two new branches, 75 menu entries, 17 credited Azure photos and one dated Instagram-follow offer. Fukuoka Just opened reaches **20/30**, Osaka Just opened **22/30**, Fukuoka Specials **32/30**. Full profiles, menus, gallery credits, three native guide title/image links, twelve schedule boundaries and the next local offer start verified in both environments. Earlier checkpoints below are historical.
 
 | City (west to east) | Coming soon | Just opened | Top restaurants | Specials |
 | --- | ---: | ---: | ---: | ---: |
-| Fukuoka | 9/30 | 19/30 | 14/30 | 30/30 |
-| Osaka | 12/30 | 21/30 | 10/30 | 21/30 |
+| Fukuoka | 9/30 | 20/30 | 14/30 | 32/30 |
+| Osaka | 12/30 | 22/30 | 10/30 | 21/30 |
 | Kyoto | 11/30 | 31/30 | 10/30 | 30/30 |
 | Nagoya | 11/30 | 30/30 | 12/30 | 21/30 |
 | Tokyo | 13/30 | 17/30 | 24/30 | 33/30 |
@@ -18,11 +18,11 @@ All 24 local and production public guide counts agree after batch 78 at **464 me
 | City | Tab | Local | Production | Target | Shortfall |
 | --- | --- | ---: | ---: | ---: | ---: |
 | Fukuoka | Coming soon | 9 | 9 | 30 | 21 |
-| Fukuoka | Just opened | 19 | 19 | 30 | 11 |
+| Fukuoka | Just opened | 20 | 20 | 30 | 10 |
 | Fukuoka | Top restaurants | 14 | 14 | 30 | 16 |
-| Fukuoka | Specials | 30 | 30 | 30 | 0 |
+| Fukuoka | Specials | 32 | 32 | 30 | 0 |
 | Osaka | Coming soon | 12 | 12 | 30 | 18 |
-| Osaka | Just opened | 21 | 21 | 30 | 9 |
+| Osaka | Just opened | 22 | 22 | 30 | 8 |
 | Osaka | Top restaurants | 10 | 10 | 30 | 20 |
 | Osaka | Specials | 21 | 21 | 30 | 9 |
 | Kyoto | Coming soon | 11 | 11 | 30 | 19 |
@@ -121,3 +121,13 @@ Morning Park Cafe adds one Tokyo Coming soon venue, five named unpriced launch-m
 ## Batch 78 completed
 
 Samjo Osaka, Sakagami Fish Center Osaka and Uotto Sapporo Station North Exit: three new branches,592menu/component entries,18gallery links and two verified drink promotions represented by seven schedule records. Four distinct memberships; all24counts agree **464 / 262**, October 19, 06:32 JST / October 18, 14:32 PDT. Full menus, sources, original authors, public pin/guide title/image links,34boundaries and seven next starts verified. [Evidence](restaurant-japan-30-japan78-2026-10-18.json). Coming soon remains under target in all six cities; new leads and exact holds recorded. No deployment.
+
+
+## Batch 79 completed
+
+**Batch 79 published and publicly verified (October 19, 06:46 JST / October 18, 14:46 PDT):** enriched existing **Comenocoto — Tenjin Building** with the exact-branch October16 report’s **18 priced menu entries** (11 additional ordinary choices; broth **¥120** and fried chicken **¥290** now priced) and **one complimentary broth with two paid rice balls**. One new Specials venue takes Fukuoka Specials to **31/30**; **465 memberships / 262 missing** across matching local/production guides. Original October2opening, author and all three credited Azure gallery records preserved. Nine schedule checks cover service boundaries, Sundays, public/substitute holidays and calendar renewal; both native pin/card links and next local start **October19at11:00JST** verified. No published offer expiry was invented. [Batch evidence](restaurant-japan-30-japan79-2026-10-18.json). No application deployment.
+
+
+## Batch 80 completed
+
+**Batch 80 published and publicly verified (October 19, 06:59 JST / October 18, 14:59 PDT):** two new branch pins, **Fuen Malatang — Yakuin** and **BONTEMPS — Minamihorie**, with **75 menu entries and 17 credited Azure gallery links**. Fuen’s photographed board provides **52 weighed ingredient choices at ¥4.8/g**, three soups and nine priced sides/drinks/toppings; its **¥100 Instagram-follow offer ends November 10**. October 8 invitation-only media preview remains separate from October 10 public opening. BONTEMPS retains October 7 opening, eight unpriced launch staples and two **¥720 tax-inclusive** Halloween drinks; no Korean won prices or invented seasonal end date imported. Fukuoka Just opened **20/30**, Osaka Just opened **22/30**, Fukuoka Specials **32/30**. All 24 counts agree at **468 memberships / 260 missing**. Twelve schedule checks and all native pin/menu/card links, gallery credits and next start verified in both environments. Also restored four cross-contaminated content/date fields on **13 local restaurant pins** from source-backed production, preserving authors and other fields; added source/name guards to both Cleanview helper write paths and rejected all 13 stale mappings in isolated checks. [Batch evidence](restaurant-japan-30-japan80-2026-10-18.json). No application deployment.

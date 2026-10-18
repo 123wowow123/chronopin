@@ -1,5 +1,15 @@
 [
  {
+  "key": "atlanta/amicalola-falls-state-park",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/atlanta/amicalola-falls-state-park-9cf0989c73658a20.webp",
+  "width": 1200,
+  "height": 630,
+  "credit": "New Georgia Encyclopedia",
+  "sourceUrl": "https://www.georgiaencyclopedia.org/articles/arts-culture/amicalola-falls/",
+  "imageSourceUrl": "https://georgiaencyclopedia.org/wp-content/uploads/2021/02/amicalola-falls_002-1200x630.jpg",
+  "sha256": "9cf0989c73658a2033a65bd3389a745c17a6b01741102071bc93cbc2d46ae99f"
+ },
+ {
   "key": "atlanta/atlanta-dogwood-festival",
   "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/atlanta/atlanta-dogwood-festival-bcb766ed279db349.webp",
   "width": 1600,
@@ -8,6 +18,16 @@
   "sourceUrl": "https://commons.wikimedia.org/wiki/File:2006_Dogwood_Festival_from_Meadow_in_Piedmont_Park_looking_toward_Midtown_Atlanta_skyline.JPG",
   "imageSourceUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/2006_Dogwood_Festival_from_Meadow_in_Piedmont_Park_looking_toward_Midtown_Atlanta_skyline.JPG/1920px-2006_Dogwood_Festival_from_Meadow_in_Piedmont_Park_looking_toward_Midtown_Atlanta_skyline.JPG",
   "sha256": "bcb766ed279db3490771477c8293f930fa74a0b5076ef9b55c0bc06110e2f1cc"
+ },
+ {
+  "key": "atlanta/atlanta-dream-gateway-center-arena",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/atlanta/atlanta-dream-gateway-center-arena-315f2898f81a30eb.webp",
+  "width": 1280,
+  "height": 853,
+  "credit": "Giccsalescoordinator / Wikimedia Commons (CC BY-SA 4.0)",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Gateway_Center_Arena,_at_night.jpg",
+  "imageSourceUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Gateway_Center_Arena%2C_at_night.jpg/1280px-Gateway_Center_Arena%2C_at_night.jpg",
+  "sha256": "315f2898f81a30eb03bb90334dec0bc8922309fd9e8d144ce2ef43a6e28d92a1"
  },
  {
   "key": "atlanta/atlanta-film-festival",
@@ -60,6 +80,26 @@
   "sha256": "94d1e11968ea9242728fe92216a2a109e02232943c45a5f016e3ac1a608af61e"
  },
  {
+  "key": "atlanta/atlanta-streets-alive",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/atlanta/atlanta-streets-alive-3b498e8a6b2b4811.webp",
+  "width": 960,
+  "height": 720,
+  "credit": "Jacob Nguyen / Rough Draft Atlanta",
+  "sourceUrl": "https://roughdraftatlanta.com/2019/04/07/photos-atlanta-streets-alive-on-peachtree-3/",
+  "imageSourceUrl": "https://i0.wp.com/roughdraftatlanta.com/wp-content/uploads/2019/04/56877184_10157060494941163_2951616063999049728_n.jpg?fit=960%2C720&ssl=1",
+  "sha256": "3b498e8a6b2b4811f9f0106a7ba9a6683630117a75a3e3a6fc087e6ef95d9b34"
+ },
+ {
+  "key": "atlanta/atlanta-united-mercedes-benz-stadium",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/atlanta/atlanta-united-mercedes-benz-stadium-2e50738e18538b28.webp",
+  "width": 1200,
+  "height": 899,
+  "credit": "Soccer Stadium Digest",
+  "sourceUrl": "https://soccerstadiumdigest.com/2017/09/atlanta-united-fc-wins-in-mercedes-benz-stadium-opener/",
+  "imageSourceUrl": "https://soccerstadiumdigest.com/wp-content/uploads/2017/03/MBSdebut.jpg",
+  "sha256": "2e50738e18538b28c61d841a0e68592c50353da5e9bedd85f9edd2bedfa5aa74"
+ },
+ {
   "key": "atlanta/beltline-lantern-parade",
   "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/atlanta/beltline-lantern-parade-163431bccd627065.webp",
   "width": 1200,
@@ -80,6 +120,16 @@
   "sha256": "b48aa4570dcee1d976305cdf1fc2800d612cd88377ce28383ca31a319bd18f36"
  },
  {
+  "key": "atlanta/chattahoochee-river-national-recreation-area",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/atlanta/chattahoochee-river-national-recreation-area-b7bf6d6e56e8a9f7.webp",
+  "width": 1280,
+  "height": 960,
+  "credit": "Keizers / Wikimedia Commons (CC BY-SA 3.0)",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:East_Palisades.JPG",
+  "imageSourceUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/East_Palisades.JPG/1280px-East_Palisades.JPG",
+  "sha256": "b7bf6d6e56e8a9f76fe601bfa23ec1810c95d35a9c8441aedfb379aaef24c547"
+ },
+ {
   "key": "atlanta/decatur-book-festival",
   "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/atlanta/decatur-book-festival-03effe1c9484c109.webp",
   "width": 1600,
@@ -88,6 +138,16 @@
   "sourceUrl": "https://decaturbookfestival.com/",
   "imageSourceUrl": "https://static.wixstatic.com/media/515771_7ef15d672a96432e9cf857a00d3a30a7%7Emv2.jpg/v1/fit/w_2500,h_1330,al_c/515771_7ef15d672a96432e9cf857a00d3a30a7%7Emv2.jpg",
   "sha256": "03effe1c9484c109c38f2e6a519bcb1e27b36b302eb431d132a2d11daf97ac6b"
+ },
+ {
+  "key": "atlanta/fernbank-museum-of-natural-history",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/atlanta/fernbank-museum-of-natural-history-9c2b25c0e24208ee.webp",
+  "width": 1280,
+  "height": 960,
+  "credit": "Wikimedia Commons contributor (file shown on the Fernbank Museum Wikipedia page)",
+  "sourceUrl": "https://en.wikipedia.org/wiki/Fernbank_Museum_of_Natural_History",
+  "imageSourceUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/%E4%BA%9A%E7%89%B9%E5%85%B0%E5%A4%A7%E8%B4%B9%E5%B0%94%E7%8F%AD%E5%85%8B%E6%96%AF%E5%8D%9A%E7%89%A9%E9%A6%86.jpg/1280px-%E4%BA%9A%E7%89%B9%E5%85%B0%E5%A4%A7%E8%B4%B9%E5%B0%94%E7%8F%AD%E5%85%8B%E6%96%AF%E5%8D%9A%E7%89%A9%E9%A6%86.jpg",
+  "sha256": "9c2b25c0e24208ee668d04797f63e4788e52e552441eedda817db5440cf619f7"
  },
  {
   "key": "atlanta/garden-lights-holiday-nights",
@@ -108,6 +168,16 @@
   "sourceUrl": "https://www.georgiaaquarium.org/",
   "imageSourceUrl": "https://www.georgiaaquarium.org/wp-content/uploads/2019/05/GAQ-Digital-Marketing-201-1-1024x683.jpg",
   "sha256": "4f234edc6a4fb6ae648e38a546c75c3e259a0acda517bd19e5eda147cf51f68c"
+ },
+ {
+  "key": "atlanta/georgia-bulldogs-football-sanford-stadium",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/atlanta/georgia-bulldogs-football-sanford-stadium-d2bfb60caf50976b.webp",
+  "width": 1280,
+  "height": 960,
+  "credit": "TarheelBornBred / Wikimedia Commons (CC0)",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:UGA_vs._Marshall_2025_(corner).jpg",
+  "imageSourceUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/UGA_vs._Marshall_2025_%28corner%29.jpg/1280px-UGA_vs._Marshall_2025_%28corner%29.jpg",
+  "sha256": "d2bfb60caf50976b7d65737f0999f8061506a023425d96e024c90e992ffd1c0b"
  },
  {
   "key": "atlanta/georgia-renaissance-festival-fall-fling",
@@ -148,6 +218,16 @@
   "sourceUrl": "https://festival.inmanpark.org/",
   "imageSourceUrl": "https://festival.inmanpark.org/wp-content/uploads/2026/03/festival_art_2026-scaled.webp",
   "sha256": "6986477ca031ca06544778617d5c583dd45d15993c39231ae764ba5a73bd81cd"
+ },
+ {
+  "key": "atlanta/kennesaw-mountain-national-battlefield",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/atlanta/kennesaw-mountain-national-battlefield-b6a3e965eb41f4bb.webp",
+  "width": 1280,
+  "height": 853,
+  "credit": "Bubba73 / Wikimedia Commons (CC BY-SA 3.0)",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Kennesaw_Mountain_National_Battlefield_Park,_Cobb_County,_GA,_US_(24).jpg",
+  "imageSourceUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Kennesaw_Mountain_National_Battlefield_Park%2C_Cobb_County%2C_GA%2C_US_%2824%29.jpg/1280px-Kennesaw_Mountain_National_Battlefield_Park%2C_Cobb_County%2C_GA%2C_US_%2824%29.jpg",
+  "sha256": "b6a3e965eb41f4bb34db606734d9d10b850118de35bac7b2f8c71aa910b9a1cd"
  },
  {
   "key": "atlanta/montaluce-winery-dahlonega",
@@ -230,6 +310,16 @@
   "sha256": "7c75af8407419f0d29fe8c4195ecb0cea5c8a8d4b1b62487956ae62bfc8184d2"
  },
  {
+  "key": "atlanta/sweetwater-creek-state-park",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/atlanta/sweetwater-creek-state-park-56ecfca76e700b0e.webp",
+  "width": 1280,
+  "height": 853,
+  "credit": "Thomson200 / Wikimedia Commons (CC0)",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Sweetwater_Creek_(Chattahoochee_River)_2013.JPG",
+  "imageSourceUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Sweetwater_Creek_%28Chattahoochee_River%29_2013.JPG/1280px-Sweetwater_Creek_%28Chattahoochee_River%29_2013.JPG",
+  "sha256": "56ecfca76e700b0e482f7975f3735d8dcfc843d5f2e84b32669aab1fd1685304"
+ },
+ {
   "key": "atlanta/tallulah-gorge-state-park",
   "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/atlanta/tallulah-gorge-state-park-ec4051baa910ae71.webp",
   "width": 1600,
@@ -300,6 +390,46 @@
   "sha256": "9e42abed4db708de05b72ef50b1999d0ee7f9c78c594ab00047185491b0274be"
  },
  {
+  "key": "austin/becker-vineyards-stonewall",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/austin/becker-vineyards-stonewall-277be87d6c4eca26.webp",
+  "width": 1600,
+  "height": 500,
+  "credit": "Becker Vineyards",
+  "sourceUrl": "https://www.beckervineyards.com",
+  "imageSourceUrl": "https://www.beckervineyards.com/wp-content/uploads/2026/08/EstateWinery1_copy.webp",
+  "sha256": "277be87d6c4eca266ed2583a346c80659b6912e37c27c5d4bda99ec5eb94861c"
+ },
+ {
+  "key": "austin/blanco-state-park",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/austin/blanco-state-park-5a45df4e2fffff90.webp",
+  "width": 1600,
+  "height": 1200,
+  "credit": "Charles Willgren / Wikimedia Commons, CC BY 2.0",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Blanco_State_Park_12.jpg",
+  "imageSourceUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6c/Blanco_State_Park_12.jpg",
+  "sha256": "5a45df4e2fffff904087c24612ee15418e189b70f4fa7f727c81cb44252e7838"
+ },
+ {
+  "key": "austin/colorado-bend-gorman-falls",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/austin/colorado-bend-gorman-falls-58272c52deda0e46.webp",
+  "width": 1600,
+  "height": 1063,
+  "credit": "Wing-Chi Poon / Wikimedia Commons, CC BY-SA 2.5",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Base_of_Gorman_Fall_like_Raining.jpg",
+  "imageSourceUrl": "https://upload.wikimedia.org/wikipedia/commons/b/bc/Base_of_Gorman_Fall_like_Raining.jpg",
+  "sha256": "58272c52deda0e46017114c10d41daecbd2c6030ca94f04c5c1698eba9fb7cc6"
+ },
+ {
+  "key": "austin/enchanted-rock-state-natural-area",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/austin/enchanted-rock-state-natural-area-d529ab5fe529a606.webp",
+  "width": 1600,
+  "height": 1200,
+  "credit": "Jmbuytaert / Wikimedia Commons, CC BY-SA 4.0",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Aerial_View_of_Enchanted_Rock.jpg",
+  "imageSourceUrl": "https://upload.wikimedia.org/wikipedia/commons/4/48/Aerial_View_of_Enchanted_Rock.jpg",
+  "sha256": "d529ab5fe529a606c43408ac85e3e8f94cf4dc449d5da0528d1ecd455c20df29"
+ },
+ {
   "key": "austin/fredericksburg-oktoberfest",
   "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/austin/fredericksburg-oktoberfest-ceef428d4b0ddbd8.webp",
   "width": 1600,
@@ -308,6 +438,56 @@
   "sourceUrl": "https://www.oktoberfestinfbg.com",
   "imageSourceUrl": "https://static.wixstatic.com/media/e626ec_67e7ac6fb5b34a35a2cf5ef0baf96d2f~mv2.jpg/v1/fit/w_2500,h_1330,al_c/e626ec_67e7ac6fb5b34a35a2cf5ef0baf96d2f~mv2.jpg",
   "sha256": "ceef428d4b0ddbd8041842059edf9ed52610c444eac273d22c5f81a36e043edf"
+ },
+ {
+  "key": "austin/gruene-hall-live-music",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/austin/gruene-hall-live-music-c69971f49319ca14.webp",
+  "width": 1000,
+  "height": 548,
+  "credit": "Jim Flynn / Gruene Hall",
+  "sourceUrl": "https://www.gruenehall.com",
+  "imageSourceUrl": "https://gruenehall.com/wp-content/uploads/2021/10/GH_JimFlynn-1.jpg",
+  "sha256": "c69971f49319ca14c29763973c1db9ba7e773c6b8bda8e4ca2a2efffa05413f1"
+ },
+ {
+  "key": "austin/hamilton-pool-preserve",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/austin/hamilton-pool-preserve-4de9edfef9fad2dd.webp",
+  "width": 1600,
+  "height": 785,
+  "credit": "jcutrer / Wikimedia Commons, CC BY-SA 4.0",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Hamilton_Pool_Preserve_Waterfall.jpg",
+  "imageSourceUrl": "https://upload.wikimedia.org/wikipedia/commons/d/db/Hamilton_Pool_Preserve_Waterfall.jpg",
+  "sha256": "4de9edfef9fad2dd3d00ac9f385f6ab20f57811362a74138396ec42efc6995db"
+ },
+ {
+  "key": "austin/hill-country-lavender-blanco",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/austin/hill-country-lavender-blanco-c49184d4c82ff7c8.webp",
+  "width": 1600,
+  "height": 2133,
+  "credit": "Hill Country Lavender",
+  "sourceUrl": "https://www.hillcountrylavender.com",
+  "imageSourceUrl": "https://images.squarespace-cdn.com/content/v1/537f871be4b081bbb40ec523/603b880e-7f76-4bf3-9a7e-afa2142ad6a0/IMG_7529.jpeg",
+  "sha256": "c49184d4c82ff7c85d28bdb1835648c174bab4cad63a9cff94f98ca74c8653a8"
+ },
+ {
+  "key": "austin/inks-lake-state-park",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/austin/inks-lake-state-park-b33c25b7a925cc6f.webp",
+  "width": 1600,
+  "height": 900,
+  "credit": "Larry D. Moore / Wikimedia Commons, CC BY 4.0",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Overlook_of_Inks_Lake_State_Park_Texas_2023.jpg",
+  "imageSourceUrl": "https://upload.wikimedia.org/wikipedia/commons/7/73/Overlook_of_Inks_Lake_State_Park_Texas_2023.jpg",
+  "sha256": "b33c25b7a925cc6f3b1f6f425d6f4547c806f906660df66ae406649e00bd84df"
+ },
+ {
+  "key": "austin/inner-space-cavern-georgetown",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/austin/inner-space-cavern-georgetown-aea26166b8ca1abe.webp",
+  "width": 1600,
+  "height": 1200,
+  "credit": "Rvassar / Wikimedia Commons, CC BY-SA 3.0",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Innerspace_cavern0700.jpg",
+  "imageSourceUrl": "https://upload.wikimedia.org/wikipedia/commons/7/71/Innerspace_cavern0700.jpg",
+  "sha256": "aea26166b8ca1abe97868137a47f841b3d6f16a73417a71bdb32094e7dfaeeca"
  },
  {
   "key": "austin/kreuz-market-lockhart-bbq",
@@ -320,6 +500,26 @@
   "sha256": "00fd84685dffd6f25cea5d319c63227e5363d84223d00bf7ef53aa21957507d8"
  },
  {
+  "key": "austin/lockhart-state-park",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/austin/lockhart-state-park-1c80b877e37ef6e3.webp",
+  "width": 1600,
+  "height": 1066,
+  "credit": "Larry D. Moore / Wikimedia Commons, CC BY 4.0",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Lockhart_state_park_combination_building.jpg",
+  "imageSourceUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f3/Lockhart_state_park_combination_building.jpg",
+  "sha256": "1c80b877e37ef6e37ebb7a92e39de9c4166aeb54111e7a515e5c76df55e2b5da"
+ },
+ {
+  "key": "austin/longhorn-cavern-state-park",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/austin/longhorn-cavern-state-park-841ce901aa2c9a92.webp",
+  "width": 1600,
+  "height": 1119,
+  "credit": "Larry D. Moore / Wikimedia Commons, CC BY 4.0",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Longhorn_cavern_entrance.jpg",
+  "imageSourceUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c4/Longhorn_cavern_entrance.jpg",
+  "sha256": "841ce901aa2c9a92d5f0e43f5116c7afeb05fccb83fd43d8012ccd54f7e1f855"
+ },
+ {
   "key": "austin/longhorns-football",
   "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/austin/longhorns-football-c8b0b9f3bdf59e23.webp",
   "width": 1600,
@@ -330,6 +530,16 @@
   "sha256": "c8b0b9f3bdf59e231ba0edb1f285d47ac73264cacca589caa5fdc3679624ba77"
  },
  {
+  "key": "austin/mckinney-falls-state-park",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/austin/mckinney-falls-state-park-261c247c26650d7b.webp",
+  "width": 1600,
+  "height": 1200,
+  "credit": "Larry D. Moore / Wikimedia Commons, CC BY 4.0",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Mckinney_lower_falls.jpg",
+  "imageSourceUrl": "https://upload.wikimedia.org/wikipedia/commons/8/8a/Mckinney_lower_falls.jpg",
+  "sha256": "261c247c26650d7b04c3e6066fb5613d78739fd1b39f0cfa03aa0964dd1bbbcb"
+ },
+ {
   "key": "austin/natural-bridge-caverns",
   "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/austin/natural-bridge-caverns-f6ef1834c4b6d277.webp",
   "width": 1024,
@@ -338,6 +548,16 @@
   "sourceUrl": "https://www.naturalbridgecaverns.com",
   "imageSourceUrl": "https://www.naturalbridgecaverns.com/wp-content/uploads/2024/03/DT_Castle-of-White-Giants_0323_MKnight-11-scaled-3-1024x768.jpg",
   "sha256": "f6ef1834c4b6d277e06ca74f56af00bb3d468480df6ed86a44681d6b71f8264e"
+ },
+ {
+  "key": "austin/pedernales-falls-state-park",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/austin/pedernales-falls-state-park-5c31a0e2ccb7acab.webp",
+  "width": 1600,
+  "height": 1067,
+  "credit": "Larry D. Moore / Wikimedia Commons, CC BY 4.0",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Pedernales_Falls_State_Park_Twin_Falls_Area.jpg",
+  "imageSourceUrl": "https://upload.wikimedia.org/wikipedia/commons/9/99/Pedernales_Falls_State_Park_Twin_Falls_Area.jpg",
+  "sha256": "5c31a0e2ccb7acab61015e1a8bef40adc302d6e98ac00243d4b928703b34a4d3"
  },
  {
   "key": "austin/rodeo-austin",
@@ -388,6 +608,16 @@
   "sourceUrl": "https://texasbookfestival.org/",
   "imageSourceUrl": "https://texasbookfestival.b-cdn.net/app/uploads/2024/09/Get-Involved-1-scaled.jpg",
   "sha256": "a0cfdc22d605e286f1479956c6b53384cf9ea5f1120d4291364c623fb3b93b8a"
+ },
+ {
+  "key": "austin/texas-state-bobcats-football",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/austin/texas-state-bobcats-football-0094e218419ee5f6.webp",
+  "width": 1600,
+  "height": 1200,
+  "credit": "Greenstrat / Wikimedia Commons, CC BY-SA 4.0",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Texas_State_Bobcat_Stadium_Main_Facade.JPG",
+  "imageSourceUrl": "https://upload.wikimedia.org/wikipedia/commons/8/88/Texas_State_Bobcat_Stadium_Main_Facade.JPG",
+  "sha256": "0094e218419ee5f6cc41050bc13cb1daa05f3273d6b0f73703a178046d53a7b2"
  },
  {
   "key": "austin/us-grand-prix-cota",
@@ -530,6 +760,26 @@
   "sha256": "80f55ee8da53deb39ed82f652119f3422bf47356d5285b3af9e4823380a30ed6"
  },
  {
+  "key": "boston/cape-cod-baseball-league",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/boston/cape-cod-baseball-league-b19070e553e59045.webp",
+  "width": 1280,
+  "height": 651,
+  "credit": "JonP125 (CC BY-SA 4.0) / Wikimedia Commons",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:B_F_C_Whitehouse_Field.jpg",
+  "imageSourceUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/B_F_C_Whitehouse_Field.jpg/1280px-B_F_C_Whitehouse_Field.jpg",
+  "sha256": "b19070e553e59045e5c585306fef66bb27d46015a20c87036522008adf0b956d"
+ },
+ {
+  "key": "boston/cape-cod-national-seashore",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/boston/cape-cod-national-seashore-17d7309c5c1df74e.webp",
+  "width": 1280,
+  "height": 853,
+  "credit": "John Phelan (CC BY 3.0) / Wikimedia Commons",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Salt_Pond_Visitor_Center%2C_Cape_Cod_National_Seashore%2C_Eastham_MA.jpg",
+  "imageSourceUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Salt_Pond_Visitor_Center%2C_Cape_Cod_National_Seashore%2C_Eastham_MA.jpg/1280px-Salt_Pond_Visitor_Center%2C_Cape_Cod_National_Seashore%2C_Eastham_MA.jpg",
+  "sha256": "17d7309c5c1df74e8350405dde9640150e633e1d9d7e0bbe015b4499bc0701cb"
+ },
+ {
   "key": "boston/castle-hill-crane-estate",
   "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/boston/castle-hill-crane-estate-6f621a7e1c9b5108.webp",
   "width": 864,
@@ -580,6 +830,16 @@
   "sha256": "11505521915bf893c1594ae6f823f7e2cb7ac28d4aa4c6ea76c748abdd056406"
  },
  {
+  "key": "boston/hampton-beach-nh",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/boston/hampton-beach-nh-e9de44c3174458ab.webp",
+  "width": 1280,
+  "height": 853,
+  "credit": "Quintin Soloviev (CC BY 4.0) / Wikimedia Commons",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Hampton_Beach%2C_New_Hampshire.jpg",
+  "imageSourceUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Hampton_Beach%2C_New_Hampshire.jpg/1280px-Hampton_Beach%2C_New_Hampshire.jpg",
+  "sha256": "e9de44c3174458ab12ff38806dd7f62f57f004e7e616d89a42516a13c0aca70c"
+ },
+ {
   "key": "boston/head-of-the-charles",
   "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/boston/head-of-the-charles-1e6ffcd5b1d9b8db.webp",
   "width": 1600,
@@ -610,6 +870,46 @@
   "sha256": "a01061d808d05ecbc4617f2ace330ef5badb577c86502e04455a767ec5edacf5"
  },
  {
+  "key": "boston/lowell-national-historical-park",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/boston/lowell-national-historical-park-03d7e0fccf44e142.webp",
+  "width": 1280,
+  "height": 853,
+  "credit": "National Park Service (CC BY 2.0) / Wikimedia Commons",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Lowell_National_Historical_Park_%2835186671414%29.jpg",
+  "imageSourceUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Lowell_National_Historical_Park_%2835186671414%29.jpg/1280px-Lowell_National_Historical_Park_%2835186671414%29.jpg",
+  "sha256": "03d7e0fccf44e142288579af9aa8634de23bc1acb3577580058bade4fd8f529c"
+ },
+ {
+  "key": "boston/minute-man-national-park",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/boston/minute-man-national-park-98ea6f1d0bad63c6.webp",
+  "width": 1280,
+  "height": 853,
+  "credit": "National Park Service Digital Image Archives (public domain) / Wikimedia Commons",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Minute_Man_National_Historical_Park_MIMA2586.jpg",
+  "imageSourceUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Minute_Man_National_Historical_Park_MIMA2586.jpg/1280px-Minute_Man_National_Historical_Park_MIMA2586.jpg",
+  "sha256": "98ea6f1d0bad63c6da28ad1025af88affd8c5d323fca53746a8b6731ddc30604"
+ },
+ {
+  "key": "boston/mount-monadnock-hike",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/boston/mount-monadnock-hike-998eec1dc46769d0.webp",
+  "width": 1280,
+  "height": 850,
+  "credit": "Jonwmcinenrey (CC BY-SA 4.0) / Wikimedia Commons",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Mount_Monadnock_as_seen_from_Bald_Rock.jpg",
+  "imageSourceUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Mount_Monadnock_as_seen_from_Bald_Rock.jpg/1280px-Mount_Monadnock_as_seen_from_Bald_Rock.jpg",
+  "sha256": "998eec1dc46769d0c8187f5a21d43b38744e22ba1d1ebd1f273adb4b4d71e425"
+ },
+ {
+  "key": "boston/museum-of-fine-arts-boston",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/boston/museum-of-fine-arts-boston-ad5fa464c9181e07.webp",
+  "width": 1280,
+  "height": 888,
+  "credit": "Beyond My Ken (CC BY-SA 4.0) / Wikimedia Commons",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:2018_Museum_of_Fine_Arts_Boston_Huntington_Avenue_Facade_from_north.jpg",
+  "imageSourceUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/2018_Museum_of_Fine_Arts_Boston_Huntington_Avenue_Facade_from_north.jpg/1280px-2018_Museum_of_Fine_Arts_Boston_Huntington_Avenue_Facade_from_north.jpg",
+  "sha256": "ad5fa464c9181e072c1f52e6a31fa7cb0f260c30ba6a2a32fc143cb1a8434119"
+ },
+ {
   "key": "boston/plimoth-patuxet-museums",
   "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/boston/plimoth-patuxet-museums-17028b2bf7824965.webp",
   "width": 1200,
@@ -620,6 +920,46 @@
   "sha256": "17028b2bf7824965dd52973095717683ace9b221fc6f51882c05f30dfbf3590b"
  },
  {
+  "key": "boston/providence-bruins-hockey",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/boston/providence-bruins-hockey-4f8ce7fc439d0415.webp",
+  "width": 1280,
+  "height": 857,
+  "credit": "Sarah Connors (CC BY 2.0) / Wikimedia Commons",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Providence_Bruins_goal_celebration.jpg",
+  "imageSourceUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Providence_Bruins_goal_celebration.jpg/1280px-Providence_Bruins_goal_celebration.jpg",
+  "sha256": "4f8ce7fc439d0415698643af3bde44ba93dd8d067e21405f8a740cc1e3b3b5d3"
+ },
+ {
+  "key": "boston/salem-haunted-happenings",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/boston/salem-haunted-happenings-8d660bcec3d47262.webp",
+  "width": 1280,
+  "height": 960,
+  "credit": "Michelle Callahan (CC BY 2.0) / Wikimedia Commons",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Halloween_in_Salem_-_Three_Witches.jpg",
+  "imageSourceUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Halloween_in_Salem_-_Three_Witches.jpg/1280px-Halloween_in_Salem_-_Three_Witches.jpg",
+  "sha256": "8d660bcec3d47262497a363d99876a5f3699517a13228d93a67380e1634a261e"
+ },
+ {
+  "key": "boston/salem-witch-museum",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/boston/salem-witch-museum-69398bcdacdc0730.webp",
+  "width": 1280,
+  "height": 960,
+  "credit": "Fletcher (CC BY 4.0) / Wikimedia Commons",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Salem_Witch_Museum%2C_January_2021.jpg",
+  "imageSourceUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Salem_Witch_Museum%2C_January_2021.jpg/1280px-Salem_Witch_Museum%2C_January_2021.jpg",
+  "sha256": "69398bcdacdc073093d9b9d6665d5ee80690343f0d5442dcb5e770c9158b8eb1"
+ },
+ {
+  "key": "boston/saugus-iron-works",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/boston/saugus-iron-works-9c97d2b0aa960149.webp",
+  "width": 1280,
+  "height": 857,
+  "credit": "Nlynch (CC BY-SA 3.0) / Wikimedia Commons",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Saugus_Iron_Works_National_Historic_Site.JPG",
+  "imageSourceUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Saugus_Iron_Works_National_Historic_Site.JPG/1280px-Saugus_Iron_Works_National_Historic_Site.JPG",
+  "sha256": "9c97d2b0aa9601496a71bc55ccfd8ff221a9bc23e7f18dc4a718a7b4ea19685a"
+ },
+ {
   "key": "boston/swan-boats",
   "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/boston/swan-boats-50dd2514f3cee6d4.webp",
   "width": 1600,
@@ -628,6 +968,36 @@
   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Swan_Boats_in_Boston_Public_Garden_(53828341647).jpg",
   "imageSourceUrl": "https://upload.wikimedia.org/wikipedia/commons/4/49/Swan_Boats_in_Boston_Public_Garden_%2853828341647%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
   "sha256": "50dd2514f3cee6d408b06e843b5c8a85b99494df5499dd317e5d3df8a6bd0e6b"
+ },
+ {
+  "key": "boston/topsfield-fair",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/boston/topsfield-fair-7c6e1dc6567b452b.webp",
+  "width": 1280,
+  "height": 960,
+  "credit": "John Phelan (CC BY 4.0) / Wikimedia Commons",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:2022_Topsfield_Fair%2C_Topsfield_MA.jpg",
+  "imageSourceUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/2022_Topsfield_Fair%2C_Topsfield_MA.jpg/1280px-2022_Topsfield_Fair%2C_Topsfield_MA.jpg",
+  "sha256": "7c6e1dc6567b452bd9d698999b50771e3d6af88d75a5e851075cb4dbad144dac"
+ },
+ {
+  "key": "boston/wachusett-mountain-skiing",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/boston/wachusett-mountain-skiing-9411c979bfd4cb02.webp",
+  "width": 1280,
+  "height": 960,
+  "credit": "EgorovaSvetlana (CC BY-SA 4.0) / Wikimedia Commons",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Wachusett_Mountain_Ski_Area.jpg",
+  "imageSourceUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Wachusett_Mountain_Ski_Area.jpg/1280px-Wachusett_Mountain_Ski_Area.jpg",
+  "sha256": "9411c979bfd4cb02d90f78547fab96a3c487aca9439bb1905cb433e0da3be51c"
+ },
+ {
+  "key": "boston/waterfire-providence",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/boston/waterfire-providence-487241a2f0d27ce8.webp",
+  "width": 1280,
+  "height": 853,
+  "credit": "Kenneth C. Zirkel (CC BY-SA 4.0) / Wikimedia Commons",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Providence_Waterfire_at_Waterplace_Bridge.jpg",
+  "imageSourceUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Providence_Waterfire_at_Waterplace_Bridge.jpg/1280px-Providence_Waterfire_at_Waterplace_Bridge.jpg",
+  "sha256": "487241a2f0d27ce8c941bac06bf29766f39be6c5439eb0c856d4d9ca5609c289"
  },
  {
   "key": "boston/worcester-red-sox-polar-park",
@@ -668,6 +1038,26 @@
   "sourceUrl": "https://www.architecture.org",
   "imageSourceUrl": "https://www.architecture.org/social.jpg",
   "sha256": "36a8f350b7ff270509c91ceea9816763eec4379c08c338a637f3776a8bf25b6a"
+ },
+ {
+  "key": "chicago/chicago-auto-show-mccormick-place",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/chicago/chicago-auto-show-mccormick-place-95759b1d70094d98.webp",
+  "width": 960,
+  "height": 720,
+  "credit": "Kidfly182 / Wikimedia Commons (CC BY 4.0)",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:2026_Chicago_Auto_Show_040.jpg",
+  "imageSourceUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1f/2026_Chicago_Auto_Show_040.jpg/960px-2026_Chicago_Auto_Show_040.jpg",
+  "sha256": "95759b1d70094d983a3db6de0175120c94d85d4c645da383b5e81727554818ff"
+ },
+ {
+  "key": "chicago/chicago-bears-soldier-field",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/chicago/chicago-bears-soldier-field-8469997771d65092.webp",
+  "width": 1600,
+  "height": 1000,
+  "credit": "Ryan Dickey from Evanston, IL / Chicago, United States / Wikimedia Commons (CC BY 2.0)",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Soldier_Field_(51762250554).jpg",
+  "imageSourceUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d2/Soldier_Field_%2851762250554%29.jpg/1920px-Soldier_Field_%2851762250554%29.jpg",
+  "sha256": "8469997771d650924246cc6030fd26c09025399f14c84cae44e0c4b0dfedf07e"
  },
  {
   "key": "chicago/chicago-blackhawks-united-center",
@@ -820,6 +1210,16 @@
   "sha256": "847636d185fbac6d9eabf4fdacd3474482570aea4d546ac6b0ee26b3dc06a5a9"
  },
  {
+  "key": "chicago/chicago-shakespeare-theater-navy-pier",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/chicago/chicago-shakespeare-theater-navy-pier-6bdff0420a183787.webp",
+  "width": 1600,
+  "height": 2400,
+  "credit": "Jason Zhang / Wikimedia Commons (CC BY-SA 3.0)",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Chicago_Shakespeare_Theater_building_exterior,_March_2017.jpg",
+  "imageSourceUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/61/Chicago_Shakespeare_Theater_building_exterior%2C_March_2017.jpg/1920px-Chicago_Shakespeare_Theater_building_exterior%2C_March_2017.jpg",
+  "sha256": "6bdff0420a183787b187eeddaaf8341cdd1f451e8b6c092988216295888abed7"
+ },
+ {
   "key": "chicago/chicago-taste-of-chicago",
   "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/chicago/chicago-taste-of-chicago-343e51fdd94218fb.webp",
   "width": 1600,
@@ -850,6 +1250,36 @@
   "sha256": "625256daa109596495600b98274fc1070de19b9d0b7f62961582819a119d57ba"
  },
  {
+  "key": "chicago/field-museum-chicago",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/chicago/field-museum-chicago-61a7d9674c410949.webp",
+  "width": 1600,
+  "height": 1067,
+  "credit": "Joe Ravi / Wikimedia Commons (CC BY-SA 3.0)",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Field_Museum_of_Natural_History.jpg",
+  "imageSourceUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/89/Field_Museum_of_Natural_History.jpg/1920px-Field_Museum_of_Natural_History.jpg",
+  "sha256": "61a7d9674c410949f3dd5d0322bea91d12ff237358273dcf7fbf0bed832b19ee"
+ },
+ {
+  "key": "chicago/illinois-railway-museum-union",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/chicago/illinois-railway-museum-union-ff9e1ad4f3f26515.webp",
+  "width": 1600,
+  "height": 1043,
+  "credit": "joannapoe / Wikimedia Commons (CC BY-SA 2.0)",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:2023-05-27_Illinois_Railway_Museum_BFIX_520.jpg",
+  "imageSourceUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/45/2023-05-27_Illinois_Railway_Museum_BFIX_520.jpg/1920px-2023-05-27_Illinois_Railway_Museum_BFIX_520.jpg",
+  "sha256": "ff9e1ad4f3f26515889bb70f2cc351bef0dc9871de0e29a40293c449b061a4b3"
+ },
+ {
+  "key": "chicago/indiana-dunes-national-park",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/chicago/indiana-dunes-national-park-f6d91172bce1aefb.webp",
+  "width": 1600,
+  "height": 1061,
+  "credit": "TripOfALifestyle.com / Wikimedia Commons (CC BY 4.0)",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Lake_Michigan_from_Indiana_Dunes_National_Park.jpg",
+  "imageSourceUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6d/Lake_Michigan_from_Indiana_Dunes_National_Park.jpg/1920px-Lake_Michigan_from_Indiana_Dunes_National_Park.jpg",
+  "sha256": "f6d91172bce1aefbd45692fabeddad654ba9a0ce083f533d0af811cee2765818"
+ },
+ {
   "key": "chicago/lake-geneva-cruise-line",
   "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/chicago/lake-geneva-cruise-line-fba47462608a568d.webp",
   "width": 1080,
@@ -868,6 +1298,56 @@
   "sourceUrl": "https://www.lollapalooza.com",
   "imageSourceUrl": "https://cdn.prod.website-files.com/67c1632e86f99390b0516ac5/69a72058b2fcf74831ebedf8_LOL26_Open.Graph.png",
   "sha256": "d8402e21872441536cbc916a7c9446b4b0e0433649702aa1d5a1d867049ec83b"
+ },
+ {
+  "key": "chicago/ravinia-festival-highland-park",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/chicago/ravinia-festival-highland-park-e7617c105d12ac29.webp",
+  "width": 1600,
+  "height": 1200,
+  "credit": "YourJudge / Wikimedia Commons (CC BY-SA 4.0)",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ravinia_Festival_Pavilion.jpg",
+  "imageSourceUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8f/Ravinia_Festival_Pavilion.jpg/1920px-Ravinia_Festival_Pavilion.jpg",
+  "sha256": "e7617c105d12ac29c9903de0cbcd45b08bd775adaf17e6507e86006dcef1d62a"
+ },
+ {
+  "key": "chicago/shedd-aquarium-chicago",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/chicago/shedd-aquarium-chicago-b7774181701d88ba.webp",
+  "width": 1600,
+  "height": 863,
+  "credit": "Diego Delso / Wikimedia Commons (CC BY-SA 3.0)",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Acuario_Shedd,_Chicago,_Illinois,_Estados_Unidos,_2012-10-21,_DD_01.jpg",
+  "imageSourceUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/39/Acuario_Shedd%2C_Chicago%2C_Illinois%2C_Estados_Unidos%2C_2012-10-21%2C_DD_01.jpg/1920px-Acuario_Shedd%2C_Chicago%2C_Illinois%2C_Estados_Unidos%2C_2012-10-21%2C_DD_01.jpg",
+  "sha256": "b7774181701d88ba90a69c676cc0d727a09e949c13afce03b8735e8fe76ed5e8"
+ },
+ {
+  "key": "chicago/starved-rock-winter-eagles-ice-falls",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/chicago/starved-rock-winter-eagles-ice-falls-40018978de3442f2.webp",
+  "width": 1280,
+  "height": 853,
+  "credit": "French Canyon waterfall, Starved Rock State Park / Wikimedia Commons (public domain)",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:FrenchCynWaterfall_StarvedRockSP_IL.jpg",
+  "imageSourceUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/29/FrenchCynWaterfall_StarvedRockSP_IL.jpg/1280px-FrenchCynWaterfall_StarvedRockSP_IL.jpg",
+  "sha256": "40018978de3442f2431921d7b92e1971d65df34b479450f281033e88dbb4bde9"
+ },
+ {
+  "key": "chicago/summerfest-milwaukee",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/chicago/summerfest-milwaukee-0a41098eecde44de.webp",
+  "width": 1600,
+  "height": 1200,
+  "credit": "David Wilson from Oak Park, Illinois, USA / Wikimedia Commons (CC BY 2.0)",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:20230820_05_Milwaukee_Summerfest_(53426308267).jpg",
+  "imageSourceUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f7/20230820_05_Milwaukee_Summerfest_%2853426308267%29.jpg/1920px-20230820_05_Milwaukee_Summerfest_%2853426308267%29.jpg",
+  "sha256": "0a41098eecde44de9c572498734fadb11b5c7d31bd8da22cf7a5e9f304f1e9e2"
+ },
+ {
+  "key": "chicago/volo-auto-museum",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/chicago/volo-auto-museum-c9a1a1b50339d980.webp",
+  "width": 1600,
+  "height": 1200,
+  "credit": "sporst / Wikimedia Commons (CC BY 2.0)",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Herbie_car_-_Volo_Auto_Museum,_Volo,_Il_(36697454730).jpg",
+  "imageSourceUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fc/Herbie_car_-_Volo_Auto_Museum%2C_Volo%2C_Il_%2836697454730%29.jpg/1920px-Herbie_car_-_Volo_Auto_Museum%2C_Volo%2C_Il_%2836697454730%29.jpg",
+  "sha256": "c9a1a1b50339d98052093acabe26573321112774ee87b2b34b53ccd0908a6ffe"
  },
  {
   "key": "dallas/arboretum-12-days-of-christmas",
@@ -890,6 +1370,16 @@
   "sha256": "0f9e65bdce067d2e991648ff345ce68f75391a6698965577b08ef2d3dd9c8c11"
  },
  {
+  "key": "dallas/baylor-bears-football-home-games",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/dallas/baylor-bears-football-home-games-ea2c67fdf25807c9.webp",
+  "width": 1280,
+  "height": 960,
+  "credit": "Wikimedia Commons contributors (see file page for photographer and license)",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:McLane_Stadium_facingsouth7.16.14.jpg",
+  "imageSourceUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/McLane_Stadium_facingsouth7.16.14.jpg/1280px-McLane_Stadium_facingsouth7.16.14.jpg",
+  "sha256": "ea2c67fdf25807c9617747d6f53746cdb8aed22a2d839e444af3ca4768c36cac"
+ },
+ {
   "key": "dallas/bmw-dallas-marathon",
   "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/dallas/bmw-dallas-marathon-bae7e7066d91aae6.webp",
   "width": 1600,
@@ -898,6 +1388,26 @@
   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Runners_BMW_Dallas.jpg",
   "imageSourceUrl": "https://upload.wikimedia.org/wikipedia/commons/f/fe/Runners_BMW_Dallas.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
   "sha256": "bae7e7066d91aae681f483ef1f09900d8a4ac4ec25ea09bbd46771074b55d73f"
+ },
+ {
+  "key": "dallas/cameron-park-zoo-waco",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/dallas/cameron-park-zoo-waco-9d5ac9f865f27ae3.webp",
+  "width": 1083,
+  "height": 730,
+  "credit": "Wikimedia Commons contributors (see file page for photographer and license)",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Cameron_park_zoo_entrance.jpg",
+  "imageSourceUrl": "https://upload.wikimedia.org/wikipedia/commons/2/24/Cameron_park_zoo_entrance.jpg",
+  "sha256": "9d5ac9f865f27ae3384960342f16a766330afb35ffff886f81991f732e4001c8"
+ },
+ {
+  "key": "dallas/cedar-hill-state-park",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/dallas/cedar-hill-state-park-31912673a9a54d3e.webp",
+  "width": 1280,
+  "height": 853,
+  "credit": "Wikimedia Commons contributors (see file page for photographer and license)",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Cedar_hill_state_park_perch_pond.jpg",
+  "imageSourceUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Cedar_hill_state_park_perch_pond.jpg/1280px-Cedar_hill_state_park_perch_pond.jpg",
+  "sha256": "31912673a9a54d3e82d44831d29bccc4bf72736a0fa7bd4cf3da8fb186d22cc7"
  },
  {
   "key": "dallas/cottonwood-art-festival",
@@ -950,6 +1460,16 @@
   "sha256": "7067c5ab48a8221c3cba566fc1e61a184c6abf4210765b4ad045a40a9e1f72a8"
  },
  {
+  "key": "dallas/dallas-museum-of-art",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/dallas/dallas-museum-of-art-e92fcbca591a6803.webp",
+  "width": 1280,
+  "height": 853,
+  "credit": "Wikimedia Commons contributors (see file page for photographer and license)",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Dallas_Museum_of_Art_July_2015_01.jpg",
+  "imageSourceUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Dallas_Museum_of_Art_July_2015_01.jpg/1280px-Dallas_Museum_of_Art_July_2015_01.jpg",
+  "sha256": "e92fcbca591a68030f38d6ad920490ebfd45f89179b8e3c62eefaf7d1be6ece4"
+ },
+ {
   "key": "dallas/dallas-stars-home-games",
   "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/dallas/dallas-stars-home-games-294e74aca6f9c048.webp",
   "width": 1280,
@@ -958,6 +1478,16 @@
   "sourceUrl": "https://www.nhl.com/stars/",
   "imageSourceUrl": "https://media.d3.nhle.com/image/private/t_ratio16_9-size50/v1699031944/prd/assets/stars/assets/URLShare_10_LessTexture.png",
   "sha256": "294e74aca6f9c04892bcff0a247d79f1b3458a9fb35e139432fe8051ffcabb13"
+ },
+ {
+  "key": "dallas/dallas-wings-home-games",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/dallas/dallas-wings-home-games-2a4aebac4357d5f0.webp",
+  "width": 1280,
+  "height": 853,
+  "credit": "Wikimedia Commons contributors (see file page for photographer and license)",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:University_of_Texas_at_Arlington_March_2021_008_(College_Park_Center).jpg",
+  "imageSourceUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/University_of_Texas_at_Arlington_March_2021_008_%28College_Park_Center%29.jpg/1280px-University_of_Texas_at_Arlington_March_2021_008_%28College_Park_Center%29.jpg",
+  "sha256": "2a4aebac4357d5f0f184cab57f179613f5f78f57dce3666ffff40d4430286f9b"
  },
  {
   "key": "dallas/dallas-zoo-zoolights",
@@ -980,6 +1510,26 @@
   "sha256": "ca8506ff7fbb3348503035c7cf8f423eef7d916b864f7721f28c3af81e369b3b"
  },
  {
+  "key": "dallas/dinosaur-valley-state-park",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/dallas/dinosaur-valley-state-park-1df4b21587583b0f.webp",
+  "width": 1280,
+  "height": 1707,
+  "credit": "Wikimedia Commons contributors (see file page for photographer and license)",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:River_with_dinosaur_footprints.png",
+  "imageSourceUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/River_with_dinosaur_footprints.png/1280px-River_with_dinosaur_footprints.png",
+  "sha256": "1df4b21587583b0f5900460a1d289156cc0f03403858096b22217f8b6c1901d7"
+ },
+ {
+  "key": "dallas/eisenhower-state-park-lake-texoma",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/dallas/eisenhower-state-park-lake-texoma-180b62c340c6fcc0.webp",
+  "width": 1280,
+  "height": 848,
+  "credit": "Wikimedia Commons contributors (see file page for photographer and license)",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Lake_Texoma,_Eisenhower_State_Park.jpg",
+  "imageSourceUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Lake_Texoma%2C_Eisenhower_State_Park.jpg/1280px-Lake_Texoma%2C_Eisenhower_State_Park.jpg",
+  "sha256": "180b62c340c6fcc0fb3f6da46c494f53e9e3f84e81e575fe132b1a9e02c7e4c4"
+ },
+ {
   "key": "dallas/fc-dallas-home-matches",
   "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/dallas/fc-dallas-home-matches-f9e947304347a0ea.webp",
   "width": 939,
@@ -1000,6 +1550,26 @@
   "sha256": "bda60395e949c490423e416b4a0347d9ccd343b3e85b042709de62a413cd81bf"
  },
  {
+  "key": "dallas/fort-worth-stock-show-rodeo",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/dallas/fort-worth-stock-show-rodeo-07707bb5cc3301bf.webp",
+  "width": 1280,
+  "height": 853,
+  "credit": "Wikimedia Commons contributors (see file page for photographer and license)",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Will_Rogers_Memorial_Center_June_2016_05_(Cattle_1).jpg",
+  "imageSourceUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Will_Rogers_Memorial_Center_June_2016_05_%28Cattle_1%29.jpg/1280px-Will_Rogers_Memorial_Center_June_2016_05_%28Cattle_1%29.jpg",
+  "sha256": "07707bb5cc3301bfede4a2bfbbf78da633bf80b99e1a6e8848484d8a596677a4"
+ },
+ {
+  "key": "dallas/fort-worth-zoo-boo-at-the-zoo",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/dallas/fort-worth-zoo-boo-at-the-zoo-a75d02d3ce26ca20.webp",
+  "width": 1280,
+  "height": 960,
+  "credit": "Wikimedia Commons contributors (see file page for photographer and license)",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Museum_of_Living_Art_Fort_Worth_Zoo,_March_2026.jpg",
+  "imageSourceUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Museum_of_Living_Art_Fort_Worth_Zoo%2C_March_2026.jpg/1280px-Museum_of_Living_Art_Fort_Worth_Zoo%2C_March_2026.jpg",
+  "sha256": "a75d02d3ce26ca2001fe878c807568b71b216a9ce804531a42b9646108b0aaa6"
+ },
+ {
   "key": "dallas/klyde-warren-park-programs",
   "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/dallas/klyde-warren-park-programs-988d7fe33af8719f.webp",
   "width": 802,
@@ -1010,6 +1580,16 @@
   "sha256": "988d7fe33af8719f07d46d3a21542c40be48c2c479dc85c60b183de289b4910f"
  },
  {
+  "key": "dallas/magnolia-silos-waco",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/dallas/magnolia-silos-waco-4b7361cdd37767f9.webp",
+  "width": 1280,
+  "height": 853,
+  "credit": "Wikimedia Commons contributors (see file page for photographer and license)",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Magnolia_Market_Waco_Texas_2024.jpg",
+  "imageSourceUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Magnolia_Market_Waco_Texas_2024.jpg/1280px-Magnolia_Market_Waco_Texas_2024.jpg",
+  "sha256": "4b7361cdd37767f965d0734895ad8d1e055d7d445047194c2e633bb0c792798a"
+ },
+ {
   "key": "dallas/mesquite-championship-rodeo",
   "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/dallas/mesquite-championship-rodeo-1773ab2421978acd.webp",
   "width": 1600,
@@ -1018,6 +1598,26 @@
   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Championship_Rodeo_%2716.jpg",
   "imageSourceUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Championship_Rodeo_%2716.jpg/1920px-Championship_Rodeo_%2716.jpg",
   "sha256": "1773ab2421978acdce383e9e76d3c4d22fa1642254edbacf0906a0cae26a7293"
+ },
+ {
+  "key": "dallas/perot-museum-of-nature-and-science",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/dallas/perot-museum-of-nature-and-science-457df66bdc13ee95.webp",
+  "width": 1280,
+  "height": 960,
+  "credit": "Wikimedia Commons contributors (see file page for photographer and license)",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:20230312_ScheWo_Perot_Museum_in_Dallas,_Texas,_exterior_view_from_southeast.jpg",
+  "imageSourceUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/20230312_ScheWo_Perot_Museum_in_Dallas%2C_Texas%2C_exterior_view_from_southeast.jpg/1280px-20230312_ScheWo_Perot_Museum_in_Dallas%2C_Texas%2C_exterior_view_from_southeast.jpg",
+  "sha256": "457df66bdc13ee95b8e2029ca40bfb900482bd002431b4af8b68fdabb3f0b405"
+ },
+ {
+  "key": "dallas/scarborough-renaissance-festival",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/dallas/scarborough-renaissance-festival-f2e221dd84cd1d01.webp",
+  "width": 1280,
+  "height": 851,
+  "credit": "Wikimedia Commons contributors (see file page for photographer and license)",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Scarborough-Faire-TX-2772.jpg",
+  "imageSourceUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Scarborough-Faire-TX-2772.jpg/1280px-Scarborough-Faire-TX-2772.jpg",
+  "sha256": "f2e221dd84cd1d01876dd53c5ffdaefebaaf8cb324de339b200ee7112afacb01"
  },
  {
   "key": "dallas/shakespeare-dallas",
@@ -1050,6 +1650,26 @@
   "sha256": "970e7e89d43a7fed14ad5343ac655e4d2034e403c205449b0e926eb3c13f34e9"
  },
  {
+  "key": "dallas/stockyards-championship-rodeo",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/dallas/stockyards-championship-rodeo-e03017229b785cb6.webp",
+  "width": 1280,
+  "height": 853,
+  "credit": "Wikimedia Commons contributors (see file page for photographer and license)",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Fort_Worth_Stockyards_June_2016_49_(Cowtown_Coliseum).jpg",
+  "imageSourceUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Fort_Worth_Stockyards_June_2016_49_%28Cowtown_Coliseum%29.jpg/1280px-Fort_Worth_Stockyards_June_2016_49_%28Cowtown_Coliseum%29.jpg",
+  "sha256": "e03017229b785cb68860996c1fe3d758e6e8b5b0c8a2563dc39822fd37d8e7f8"
+ },
+ {
+  "key": "dallas/texas-motor-speedway-wurth-400",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/dallas/texas-motor-speedway-wurth-400-e5d462318c26a665.webp",
+  "width": 1280,
+  "height": 853,
+  "credit": "Wikimedia Commons contributors (see file page for photographer and license)",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:2017_Rainguard_Water_Sealers_600_02.jpg",
+  "imageSourceUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/2017_Rainguard_Water_Sealers_600_02.jpg/1280px-2017_Rainguard_Water_Sealers_600_02.jpg",
+  "sha256": "e5d462318c26a665ccb47ee11fbd529dddf0bfb7862a37864810dabb771e2456"
+ },
+ {
   "key": "dallas/texas-rangers-home-games",
   "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/dallas/texas-rangers-home-games-2fdbf4edfda6171e.webp",
   "width": 1600,
@@ -1068,6 +1688,16 @@
   "sourceUrl": "https://www.arapahoebasin.com/",
   "imageSourceUrl": "https://www.arapahoebasin.com/uploaded/ogimage/website-thumbnail-blue-logo-right.jpg",
   "sha256": "eb8ac403fd0ea6cb8626a4ce8e2174bbdc3597882419c7aa313b5813556f5e74"
+ },
+ {
+  "key": "denver/boulder-creek-festival",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/denver/boulder-creek-festival-13836bf2cb35d2ea.webp",
+  "width": 1024,
+  "height": 683,
+  "credit": "Boulder Creek Festival (2023 festival photo) via Colorado Expression",
+  "sourceUrl": "https://www.coloradoexpression.com/?p=30269",
+  "imageSourceUrl": "https://www.coloradoexpression.com/content/uploads/2026/04/a/l/2023-boulder-creek-fest-7-1-1024x683.jpg",
+  "sha256": "13836bf2cb35d2eaabecc5215e55fb87a357ba236b42a9ecc214b980a77e897b"
  },
  {
   "key": "denver/cheyenne-mountain-zoo",
@@ -1090,6 +1720,16 @@
   "sha256": "31b3ad06bf230402b47c7aa2260f73f571f6a00359f7203e521fc4c19f2f8f6d"
  },
  {
+  "key": "denver/colorado-rapids-dsg-park",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/denver/colorado-rapids-dsg-park-3cc68b381f46397c.webp",
+  "width": 1280,
+  "height": 605,
+  "credit": "Wikimedia Commons contributor",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Dicks_Sporting_Good_Park.jpg",
+  "imageSourceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Dicks_Sporting_Good_Park.jpg?width=1280",
+  "sha256": "3cc68b381f46397cf83adc147438435ff7ebddaf77646923d92f43fd172eb077"
+ },
+ {
   "key": "denver/colorado-renaissance-festival",
   "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/denver/colorado-renaissance-festival-bd8cd74aac27ed9f.webp",
   "width": 1200,
@@ -1108,6 +1748,16 @@
   "sourceUrl": "https://coloradosymphony.org/",
   "imageSourceUrl": "https://coloradosymphony.org/app/uploads/2025/03/Colorado-Symphony-Logo-SUMMER.png",
   "sha256": "aeeb77a4f72af746aef037bc10cfee98e473f4cf564251efb89a7bf4e1676f0a"
+ },
+ {
+  "key": "denver/denver-art-museum",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/denver/denver-art-museum-757b3a212e1caccd.webp",
+  "width": 1280,
+  "height": 960,
+  "credit": "Wikimedia Commons contributor",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Denver_Art_Museum.jpg",
+  "imageSourceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Denver_Art_Museum.jpg?width=1280",
+  "sha256": "757b3a212e1caccd1bd083e0e32d28586fedaa392d9f7e5d3e6edb071b021d71"
  },
  {
   "key": "denver/denver-blossoms-of-light",
@@ -1210,6 +1860,16 @@
   "sha256": "26c2668bbda12cd7e91b9a4b4bc7eda68ce6f4097751943160b85a2df117a362"
  },
  {
+  "key": "denver/denver-nuggets-ball-arena",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/denver/denver-nuggets-ball-arena-59e7d65623daef1d.webp",
+  "width": 1280,
+  "height": 1707,
+  "credit": "Wikimedia Commons contributor",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Knicks_@_Nuggets,_Ball_Arena,_2026.jpg",
+  "imageSourceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Knicks_@_Nuggets,_Ball_Arena,_2026.jpg?width=1280",
+  "sha256": "59e7d65623daef1d4c06b6d2261970121396dc24fc296289543a666af5071c31"
+ },
+ {
   "key": "denver/denver-red-rocks-concert-season",
   "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/denver/denver-red-rocks-concert-season-b5b4941b63417cf1.webp",
   "width": 1600,
@@ -1258,6 +1918,56 @@
   "sourceUrl": "https://www.eldora.com/",
   "imageSourceUrl": "https://www.eldora.com/_bluedrop/images/sites/default/files/2024-02/NewHero_2.2.23.jpg?u=aHR0cHM6Ly9jbXMuZWxkb3JhLmNvbS9zaXRlcy9kZWZhdWx0L2ZpbGVzLzIwMjQtMDIvTmV3SGVyb18yLjIuMjMuanBn&d=89224d41ec5601ca938615707abcedcd&q=75&w=1526&h=859",
   "sha256": "45f923a937c9c5d5559c3c9fa857e60dabd93afaf6609d84d79d28231b927c7b"
+ },
+ {
+  "key": "denver/garden-of-the-gods-visit",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/denver/garden-of-the-gods-visit-319da2e81459bea3.webp",
+  "width": 1280,
+  "height": 822,
+  "credit": "Dicklyon / Wikimedia Commons (CC BY-SA 4.0)",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Garden_of_the_Gods_central_gardens_from_the_north.jpg",
+  "imageSourceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Garden_of_the_Gods_central_gardens_from_the_north.jpg?width=1280",
+  "sha256": "319da2e81459bea3edffe760dd68761d400d025c22a95c8536b765da72cb83f7"
+ },
+ {
+  "key": "denver/georgetown-loop-railroad",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/denver/georgetown-loop-railroad-1d81572a09b3e814.webp",
+  "width": 1280,
+  "height": 960,
+  "credit": "Wikimedia Commons contributor (CC BY-SA 4.0)",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Georgetown_Loop_Railroad_in_autumn.jpg",
+  "imageSourceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Georgetown_Loop_Railroad_in_autumn.jpg?width=1280",
+  "sha256": "1d81572a09b3e814d002b2b8f834434a3124bbefffba29f3aac6d527f3c3f393"
+ },
+ {
+  "key": "denver/great-american-beer-festival",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/denver/great-american-beer-festival-11cb72350fbbcfed.webp",
+  "width": 1200,
+  "height": 801,
+  "credit": "Visit Denver / Great American Beer Festival",
+  "sourceUrl": "https://visitdenver.com/things-to-do/festivals-events/great-american-beer-festival/",
+  "imageSourceUrl": "https://assets.simpleviewinc.com/simpleview/image/upload/c_limit,h_1200,q_75,w_1200/v1/clients/denver/GABFmedia_14_609021fe-c74a-4ec5-8c21-76c77ccef1dc.jpg",
+  "sha256": "11cb72350fbbcfedc03826dbf90cac1caf96357cdc708505e98810616d319cf6"
+ },
+ {
+  "key": "denver/indian-hot-springs-idaho-springs",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/denver/indian-hot-springs-idaho-springs-c8e77fcc4f2b9b85.webp",
+  "width": 1024,
+  "height": 682,
+  "credit": "The Denver Gazette",
+  "sourceUrl": "https://www.denvergazette.com/?p=105562",
+  "imageSourceUrl": "https://www.denvergazette.com/wp-content/uploads/2018/06/646455349d69a.image_-1.jpg?w=1024",
+  "sha256": "c8e77fcc4f2b9b854cebbb0157bc9f969572d59289e3be1544f8ebd8609a6be2"
+ },
+ {
+  "key": "denver/keystone-resort-ski",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/denver/keystone-resort-ski-9d36eb8fa65d87f7.webp",
+  "width": 1280,
+  "height": 854,
+  "credit": "Wikimedia Commons contributor (River Run Village, Keystone)",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:River_Run_Village_Fireworks,_Keystone,_CO.jpg",
+  "imageSourceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/River_Run_Village_Fireworks,_Keystone,_CO.jpg?width=1280",
+  "sha256": "9d36eb8fa65d87f7d453d5580c0c7af33bd488a8fc83d0c144ed9a5bea741020"
  },
  {
   "key": "denver/meow-wolf-convergence-station",
@@ -1330,6 +2040,26 @@
   "sha256": "53ebdaf05e564783df5795f9f806f769d58d58f801fa38d6dc278d8732aada87"
  },
  {
+  "key": "houston/blue-bell-creameries-brenham",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/houston/blue-bell-creameries-brenham-757b676050e4e748.webp",
+  "width": 1280,
+  "height": 922,
+  "credit": "Larry D. Moore / Wikimedia Commons",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Modern_Blue_Bell_Creameries_factory_located_in_Brenham,_Texas.jpg",
+  "imageSourceUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Modern_Blue_Bell_Creameries_factory_located_in_Brenham%2C_Texas.jpg/1280px-Modern_Blue_Bell_Creameries_factory_located_in_Brenham%2C_Texas.jpg",
+  "sha256": "757b676050e4e748ee95a4e3232f547c96541df151cb3f6daff37c1a2647e9a2"
+ },
+ {
+  "key": "houston/brazos-bend-state-park",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/houston/brazos-bend-state-park-d9691fe01c936961.webp",
+  "width": 1280,
+  "height": 720,
+  "credit": "Larry D. Moore / Wikimedia Commons",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Alligator_3_Brazos_Bend_State_Park_Texas.jpg",
+  "imageSourceUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Alligator_3_Brazos_Bend_State_Park_Texas.jpg/1280px-Alligator_3_Brazos_Bend_State_Park_Texas.jpg",
+  "sha256": "d9691fe01c93696147473597e0cff3aae0dcc0d5aea7923fd8bc0d3c5a4e436c"
+ },
+ {
   "key": "houston/chevron-houston-marathon",
   "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/houston/chevron-houston-marathon-f13aa0b48ffcf349.webp",
   "width": 1600,
@@ -1350,6 +2080,16 @@
   "sha256": "825b01bd75edd1b716ceb4589602214898c562f293808518e0422a8c04eb354f"
  },
  {
+  "key": "houston/galveston-island-state-park",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/houston/galveston-island-state-park-cc21b48cbe4b1ce4.webp",
+  "width": 1280,
+  "height": 835,
+  "credit": "Yinan Chen / Wikimedia Commons",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Gfp-texas-galveston-island-state-park-across-the-lake.jpg",
+  "imageSourceUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Gfp-texas-galveston-island-state-park-across-the-lake.jpg/1280px-Gfp-texas-galveston-island-state-park-across-the-lake.jpg",
+  "sha256": "cc21b48cbe4b1ce445c9bfa3234afff50028b1560f068428104e5ed56b53f203"
+ },
+ {
   "key": "houston/galveston-mardi-gras",
   "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/houston/galveston-mardi-gras-7ebfe7cfddf62b1d.webp",
   "width": 1024,
@@ -1358,6 +2098,16 @@
   "sourceUrl": "https://www.mardigrasgalveston.com",
   "imageSourceUrl": "https://www.mardigrasgalveston.com/wp-content/uploads/2020/01/Mardi-gras-102-1024x683.jpg",
   "sha256": "7ebfe7cfddf62b1dd9072f2cae133caa01e59ce37ac93ebddc27aedf4d39e646"
+ },
+ {
+  "key": "houston/galveston-pleasure-pier",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/houston/galveston-pleasure-pier-ee72e93bb985c61d.webp",
+  "width": 1280,
+  "height": 914,
+  "credit": "Matthew T Rader / Wikimedia Commons",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Pleasure_Pier_entrance_in_Galveston,_Texas.jpg",
+  "imageSourceUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Pleasure_Pier_entrance_in_Galveston%2C_Texas.jpg/1280px-Pleasure_Pier_entrance_in_Galveston%2C_Texas.jpg",
+  "sha256": "ee72e93bb985c61dffcbd03c3e0da2416dff5014aac134e4fbd6fa28c6c7c485"
  },
  {
   "key": "houston/houston-art-car-parade",
@@ -1378,6 +2128,26 @@
   "sourceUrl": "https://www.hbg.org",
   "imageSourceUrl": "https://hbg.org/wp-content/uploads/2023/08/20200222_101618.jpg__1440x880_q85_crop_subsampling-2_upscale-1024x626.jpg",
   "sha256": "2c93ea971cb93aaea13dbece186c14e481a45ef25821d9e6e6ed218b2b60591c"
+ },
+ {
+  "key": "houston/houston-dash-home-games",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/houston/houston-dash-home-games-3633cff625753155.webp",
+  "width": 1280,
+  "height": 853,
+  "credit": "HDFC PR / Wikimedia Commons (Shell Energy Stadium, home of the Dash)",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Shell_Energy_Stadium_North_Facade_along_Texas_Avenue.jpg",
+  "imageSourceUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Shell_Energy_Stadium_North_Facade_along_Texas_Avenue.jpg/1280px-Shell_Energy_Stadium_North_Facade_along_Texas_Avenue.jpg",
+  "sha256": "3633cff6257531554a61bfe2c933779c2feb8ff1b13f9befa63a3f0403bf298b"
+ },
+ {
+  "key": "houston/houston-dynamo-home-games",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/houston/houston-dynamo-home-games-078185c80f4656de.webp",
+  "width": 1280,
+  "height": 853,
+  "credit": "HDFC PR / Wikimedia Commons",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Houston_Dynamo_FC_fans_at_Shell_Energy_Stadium_in_2024.jpg",
+  "imageSourceUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Houston_Dynamo_FC_fans_at_Shell_Energy_Stadium_in_2024.jpg/1280px-Houston_Dynamo_FC_fans_at_Shell_Energy_Stadium_in_2024.jpg",
+  "sha256": "078185c80f4656def2181e30340465bec683eb471a5583939e13d42db27d744c"
  },
  {
   "key": "houston/houston-grand-opera-season",
@@ -1430,6 +2200,26 @@
   "sha256": "19b26839bc93a959e2790eedcabecf4c2880bf29692f65f84efbbe5e4e886d15"
  },
  {
+  "key": "houston/huntsville-state-park",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/houston/huntsville-state-park-ff6529a454cf4394.webp",
+  "width": 1280,
+  "height": 720,
+  "credit": "Larry D. Moore / Wikimedia Commons",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Huntsville_State_Park_Nature_Center_Texas_2025.jpg",
+  "imageSourceUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Huntsville_State_Park_Nature_Center_Texas_2025.jpg/1280px-Huntsville_State_Park_Nature_Center_Texas_2025.jpg",
+  "sha256": "ff6529a454cf4394cbbbc11bebd483ca7b7447a23d806e5f9d76d110f648d048"
+ },
+ {
+  "key": "houston/katy-rice-harvest-festival",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/houston/katy-rice-harvest-festival-4a5737690c5059f7.webp",
+  "width": 1600,
+  "height": 1068,
+  "credit": "Katy Rice Harvest Festival (official site gallery)",
+  "sourceUrl": "https://www.katyriceharvestfestival.com/",
+  "imageSourceUrl": "https://static.wixstatic.com/media/a1e844_d5ff6747fad5405fa34409ce3328acb6~mv2.jpg",
+  "sha256": "4a5737690c5059f7d670dd42c84fc5ed804c14ee869c5640b8bafe78bbf25cb6"
+ },
+ {
   "key": "houston/kemah-boardwalk-summer",
   "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/houston/kemah-boardwalk-summer-3235c0eb789d49f3.webp",
   "width": 1600,
@@ -1438,6 +2228,16 @@
   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Kemah_Boardwalk_in_Kemah,_Texas_(47557130751).jpg",
   "imageSourceUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Kemah_Boardwalk_in_Kemah%2C_Texas_%2847557130751%29.jpg/1920px-Kemah_Boardwalk_in_Kemah%2C_Texas_%2847557130751%29.jpg",
   "sha256": "3235c0eb789d49f3589022b4f1f1b8ed6fa4098c79e22b765ef9818bef4e1428"
+ },
+ {
+  "key": "houston/messina-hof-bryan",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/houston/messina-hof-bryan-fc889923389a19b6.webp",
+  "width": 1280,
+  "height": 1600,
+  "credit": "Ejoi / Wikimedia Commons (The Villa at Messina Hof)",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Messina_hof_villa.jpg",
+  "imageSourceUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Messina_hof_villa.jpg/1280px-Messina_hof_villa.jpg",
+  "sha256": "fc889923389a19b607a2ce2bd46cde7ae76ae5ee3e6a55e0eda353c0d4094210"
  },
  {
   "key": "houston/miller-outdoor-theatre",
@@ -1520,6 +2320,26 @@
   "sha256": "380f82a70365c06d5141956d6e8b84088dd062bb6aaa37edcfae5d4258df2040"
  },
  {
+  "key": "houston/texas-renaissance-festival",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/houston/texas-renaissance-festival-0ff7dfe56e8d044a.webp",
+  "width": 1280,
+  "height": 853,
+  "credit": "Ed Schipul / Wikimedia Commons (falconer at the Texas Renaissance Festival)",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:TRF_falconer.jpg",
+  "imageSourceUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/TRF_falconer.jpg/1280px-TRF_falconer.jpg",
+  "sha256": "0ff7dfe56e8d044a4d00abfc32aed48f8163390809b150b31ede9a99d0b0c338"
+ },
+ {
+  "key": "houston/washington-on-the-brazos",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/houston/washington-on-the-brazos-9b433ddae2d5e7c0.webp",
+  "width": 1280,
+  "height": 666,
+  "credit": "Noconatom / Wikimedia Commons",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Independence_Hall,_Washington_on_the_Brazos,_Texas.jpg",
+  "imageSourceUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Independence_Hall%2C_Washington_on_the_Brazos%2C_Texas.jpg/1280px-Independence_Hall%2C_Washington_on_the_Brazos%2C_Texas.jpg",
+  "sha256": "9b433ddae2d5e7c0d68d8eec196710b2723eedb3ee3c104990c6bb04cb29d9c0"
+ },
+ {
   "key": "las-vegas/boulder-city-weekend-train-rides",
   "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/las-vegas/boulder-city-weekend-train-rides-cfc90b499494daed.webp",
   "width": 800,
@@ -1528,6 +2348,16 @@
   "sourceUrl": "https://www.boulderrailroadmuseum.org/",
   "imageSourceUrl": "https://www.boulderrailroadmuseum.org/wp-content/uploads/sites/4/2023/02/15864073074_5a4e8df1b7_o.jpg",
   "sha256": "cfc90b499494daed8e5d298d2762616f7181a8651d9c461010151706da893e3b"
+ },
+ {
+  "key": "las-vegas/death-valley-winter-hiking",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/las-vegas/death-valley-winter-hiking-6c08db8c80c33574.webp",
+  "width": 1280,
+  "height": 848,
+  "credit": "Zabriskie Point, Death Valley (CC BY-SA 3.0) / Wikimedia Commons",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Zabriskie_Point_Death_Valley_December_2013_002.jpg",
+  "imageSourceUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Zabriskie_Point_Death_Valley_December_2013_002.jpg/1280px-Zabriskie_Point_Death_Valley_December_2013_002.jpg",
+  "sha256": "6c08db8c80c33574dee12323a36078aa1c8632e8d4421e02b6855c76dd3bfc01"
  },
  {
   "key": "las-vegas/halloween-express-boulder-city",
@@ -1578,6 +2408,16 @@
   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Fremont_Street_Experience_canopy_of_lights.jpg",
   "imageSourceUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Fremont_Street_Experience_canopy_of_lights.jpg/1920px-Fremont_Street_Experience_canopy_of_lights.jpg",
   "sha256": "ea4e8f298c19081d73f4ae94325d20cc0a6fd8eade69ebe6ea1f7a58173c8ded"
+ },
+ {
+  "key": "las-vegas/las-vegas-grand-prix-weekend",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/las-vegas/las-vegas-grand-prix-weekend-8d3d5414183c5815.webp",
+  "width": 1280,
+  "height": 853,
+  "credit": "Las Vegas Grand Prix (public domain) / Wikimedia Commons",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Las_Vegas_Grand_Prix_(54941205802).jpg",
+  "imageSourceUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Las_Vegas_Grand_Prix_%2854941205802%29.jpg/1280px-Las_Vegas_Grand_Prix_%2854941205802%29.jpg",
+  "sha256": "8d3d5414183c5815422586e3db9a4cffdd5434c34c9bec4e5b245768bb5206a6"
  },
  {
   "key": "las-vegas/las-vegas-halloveen-magical-forest",
@@ -1650,6 +2490,16 @@
   "sha256": "5e0614f50204d9a071bca97c90522cc38de936d2118ca9e359f503cabce57f0a"
  },
  {
+  "key": "las-vegas/las-vegas-raiders-home-games",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/las-vegas/las-vegas-raiders-home-games-fddc4f895255fbb3.webp",
+  "width": 1280,
+  "height": 523,
+  "credit": "Allegiant Stadium (CC BY-SA 2.0) / Wikimedia Commons",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Allegiant_Stadium.jpg",
+  "imageSourceUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Allegiant_Stadium.jpg/1280px-Allegiant_Stadium.jpg",
+  "sha256": "fddc4f895255fbb3d885ad3252ca34b57fc4918d393287adebdb422e3942bed6"
+ },
+ {
   "key": "las-vegas/las-vegas-red-rock-canyon-scenic-drive",
   "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/las-vegas/las-vegas-red-rock-canyon-scenic-drive-e8a316bf018da711.webp",
   "width": 1440,
@@ -1700,6 +2550,36 @@
   "sha256": "5b00346b527f0d8da24d97b991dd7cecf4f058011274cb752ac99463b188018a"
  },
  {
+  "key": "las-vegas/nascar-pennzoil-400-weekend",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/las-vegas/nascar-pennzoil-400-weekend-9acfa3f1305a27c6.webp",
+  "width": 1280,
+  "height": 848,
+  "credit": "Flickr user (CC BY-SA 2.0) / Wikimedia Commons",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Las_Vegas_Motor_Speedway_(6252768038).jpg",
+  "imageSourceUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Las_Vegas_Motor_Speedway_%286252768038%29.jpg/1280px-Las_Vegas_Motor_Speedway_%286252768038%29.jpg",
+  "sha256": "9acfa3f1305a27c6891edcfcb9e3f9ff25ed37135bb8343c653d7d00741698f1"
+ },
+ {
+  "key": "las-vegas/neon-museum-evening-visit",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/las-vegas/neon-museum-evening-visit-734fba492c7295a0.webp",
+  "width": 1280,
+  "height": 861,
+  "credit": "iamkory (CC BY 2.0) / Wikimedia Commons",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Neon_Boneyard_—_Las_Vegas_-_Flickr_-_iamkory.jpg",
+  "imageSourceUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Neon_Boneyard_%E2%80%94_Las_Vegas_-_Flickr_-_iamkory.jpg/1280px-Neon_Boneyard_%E2%80%94_Las_Vegas_-_Flickr_-_iamkory.jpg",
+  "sha256": "734fba492c7295a0978e53f4d0e78792e120d0e7956d341165a0e87dc62f637f"
+ },
+ {
+  "key": "las-vegas/nhra-las-vegas-nationals",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/las-vegas/nhra-las-vegas-nationals-2ef3d5e12bdcb3a1.webp",
+  "width": 1280,
+  "height": 850,
+  "credit": "US Air Force (public domain) / Wikimedia Commons",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:The_NHRA_Las_Vegas_Nationals_091031-F-3431H-133.jpg",
+  "imageSourceUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/The_NHRA_Las_Vegas_Nationals_091031-F-3431H-133.jpg/1280px-The_NHRA_Las_Vegas_Nationals_091031-F-3431H-133.jpg",
+  "sha256": "2ef3d5e12bdcb3a1541a38501f2421bc6026c9c9ce152ec1647a250946c63468"
+ },
+ {
   "key": "las-vegas/north-pole-express-boulder-city",
   "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/las-vegas/north-pole-express-boulder-city-f1b180bf9ac239e7.webp",
   "width": 1600,
@@ -1708,6 +2588,66 @@
   "sourceUrl": "https://www.boulderrailroadmuseum.org/north-pole-express",
   "imageSourceUrl": "https://www.boulderrailroadmuseum.org/wp-content/uploads/sites/4/2026/10/NDTCA-260086-007-North-Pole-Express_1920x1005.png",
   "sha256": "f1b180bf9ac239e71c166c6853b9def939a2e9fdfd372529bfef0e8382013595"
+ },
+ {
+  "key": "las-vegas/santa-train-boulder-city",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/las-vegas/santa-train-boulder-city-95fcb9a3926f2f19.webp",
+  "width": 1536,
+  "height": 1024,
+  "credit": "Nevada State Railroad Museum Boulder City / Friends of the Nevada Southern Railway",
+  "sourceUrl": "https://www.boulderrailroadmuseum.org/?p=494",
+  "imageSourceUrl": "https://www.boulderrailroadmuseum.org/wp-content/uploads/sites/4/2025/10/1C2A6447-1-1536x1024.jpg",
+  "sha256": "95fcb9a3926f2f192973e182d8edf954a482e856a20be1bc2b5ca8933be97faf"
+ },
+ {
+  "key": "las-vegas/seven-magic-mountains",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/las-vegas/seven-magic-mountains-38a0a2f40ff18d4f.webp",
+  "width": 1280,
+  "height": 960,
+  "credit": "planeta (CC BY-SA 2.0) / Wikimedia Commons",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:2020-02-12_Seven_Magic_Mountains_12.jpg",
+  "imageSourceUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/2020-02-12_Seven_Magic_Mountains_12.jpg/1280px-2020-02-12_Seven_Magic_Mountains_12.jpg",
+  "sha256": "38a0a2f40ff18d4f63a13ccb5b621c86da35ffbf9c6c9c5e8e1d9ef00a0d376c"
+ },
+ {
+  "key": "las-vegas/spring-mountain-ranch-state-park",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/las-vegas/spring-mountain-ranch-state-park-2f82ac400c22785b.webp",
+  "width": 1280,
+  "height": 960,
+  "credit": "Spring Mountain Ranch State Park (CC BY-SA 4.0) / Wikimedia Commons",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Spring_Mountain_Ranch_State_Park.jpg",
+  "imageSourceUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Spring_Mountain_Ranch_State_Park.jpg/1280px-Spring_Mountain_Ranch_State_Park.jpg",
+  "sha256": "2f82ac400c22785b2323ed5cba3cf1c42b34244eb8d2fcfacec82b947a0ede8a"
+ },
+ {
+  "key": "las-vegas/tule-springs-fossil-beds-hiking",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/las-vegas/tule-springs-fossil-beds-hiking-22d962e1d11ec826.webp",
+  "width": 1600,
+  "height": 466,
+  "credit": "National Park Service, Tule Springs Fossil Beds National Monument",
+  "sourceUrl": "https://www.nps.gov/tusk/index.htm",
+  "imageSourceUrl": "https://www.nps.gov/common/uploads/banner_image/pwr/homepage/16CA5FB1-D153-8A00-1D5F2D6C93B99A52.jpg",
+  "sha256": "22d962e1d11ec826fe843d87286ff608ee98a9ec3e99406196be8f5a13ea61ee"
+ },
+ {
+  "key": "las-vegas/unlv-rebels-football",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/las-vegas/unlv-rebels-football-cefddfb80b28bca0.webp",
+  "width": 1280,
+  "height": 960,
+  "credit": "Allegiant Stadium North Entry (CC BY-SA 2.0) / Wikimedia Commons",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Allegiant_Stadium,_Las_Vegas,_Nevada_(52259481401).jpg",
+  "imageSourceUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Allegiant_Stadium%2C_Las_Vegas%2C_Nevada_%2852259481401%29.jpg/1280px-Allegiant_Stadium%2C_Las_Vegas%2C_Nevada_%2852259481401%29.jpg",
+  "sha256": "cefddfb80b28bca010f7227cb76ed8f9764678aa35c41611387b929ea777f67f"
+ },
+ {
+  "key": "las-vegas/valley-of-fire-hiking",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/las-vegas/valley-of-fire-hiking-e22e725b4ca21c80.webp",
+  "width": 1280,
+  "height": 853,
+  "credit": "Valley of Fire State Park, Nevada 01 (CC BY-SA 2.0) / Wikimedia Commons",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Valley_of_Fire_State_Park,_Nevada_01.jpg",
+  "imageSourceUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Valley_of_Fire_State_Park%2C_Nevada_01.jpg/1280px-Valley_of_Fire_State_Park%2C_Nevada_01.jpg",
+  "sha256": "e22e725b4ca21c80ee04cf02117da3bac825cd0b3de563fcbecc3dbeeb0e90b8"
  },
  {
   "key": "las-vegas/vegas-golden-knights-home-games",
@@ -1728,6 +2668,26 @@
   "sourceUrl": "https://www.nhl.com/ducks/",
   "imageSourceUrl": "https://media.d3.nhle.com/image/private/t_ratio16_9-size50/v1719419743/prd/assets/ducks/assets/AnaheimDucks_ShareImage.jpg",
   "sha256": "1d4227efb816512a60432d7fc7881a20194d8e18d93da9471a44e17097da537d"
+ },
+ {
+  "key": "los-angeles/catalina-island-avalon",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/los-angeles/catalina-island-avalon-83ad24da99c7b451.webp",
+  "width": 1600,
+  "height": 1191,
+  "credit": "Don Ramey Logan / Wikimedia Commons",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Avalon_Catalina_Island_California_by_Don_Ramey_Logan.jpg",
+  "imageSourceUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Avalon_Catalina_Island_California_by_Don_Ramey_Logan.jpg",
+  "sha256": "83ad24da99c7b451b929edce46f6b0eb7d84ac9ee9883b6b6dec5a4720fbbb0d"
+ },
+ {
+  "key": "los-angeles/channel-islands-national-park",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/los-angeles/channel-islands-national-park-be6c09e04feec8c8.webp",
+  "width": 1600,
+  "height": 900,
+  "credit": "Wikimedia Commons (Santa Cruz Island, Channel Islands NP; see file page for author and license)",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ferry_docked_at_Santa_Cruz_Island.jpg",
+  "imageSourceUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a4/Ferry_docked_at_Santa_Cruz_Island.jpg",
+  "sha256": "be6c09e04feec8c8997077323aef19378a391f3d65f3fffeaa555bb2b494a5b4"
  },
  {
   "key": "los-angeles/cinespia-hollywood-forever",
@@ -1768,6 +2728,16 @@
   "sourceUrl": "https://www.enchantchristmas.com/santa-anita-park",
   "imageSourceUrl": "https://www.enchantchristmas.com/wp-content/uploads/2026/06/Screenshot-2026-06-09-at-9.32.06-PM.png",
   "sha256": "eb04f72f1d010cf36d6d6e0e1eed7399e2102769ade448f17ea39a79046a4289"
+ },
+ {
+  "key": "los-angeles/festival-of-arts-pageant-of-the-masters",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/los-angeles/festival-of-arts-pageant-of-the-masters-06cf9ca07dca5397.webp",
+  "width": 1600,
+  "height": 1296,
+  "credit": "Los Angeles Magazine (Pageant of the Masters tableau)",
+  "sourceUrl": "https://lamag.com/things-to-do/pageant-of-the-masters-returns-to-the-irvine-bowl/",
+  "imageSourceUrl": "https://lamag.com/wp-content/uploads/2026/07/Luncheon-of-the-Boating-Party-05-14-26-1-scaled.jpg",
+  "sha256": "06cf9ca07dca539726095e7abb787a7be665d5a3a0950c58b8e989ec67f67a32"
  },
  {
   "key": "los-angeles/getty-center",
@@ -1850,6 +2820,16 @@
   "sha256": "b5befa02661f705259de08f6ea38ebb34a210339720ce4567bc685f6379349f9"
  },
  {
+  "key": "los-angeles/la-opera-season",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/los-angeles/la-opera-season-032eaa207f99b88e.webp",
+  "width": 1600,
+  "height": 940,
+  "credit": "jjron / Wikimedia Commons",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Dorothy_Chandler_Pavilion,_LA,_CA,_jjron_22.03.2012.jpg",
+  "imageSourceUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4c/Dorothy_Chandler_Pavilion,_LA,_CA,_jjron_22.03.2012.jpg",
+  "sha256": "032eaa207f99b88e5579d4d42f9489e282527ea654da25f3918aa75a70bb8895"
+ },
+ {
   "key": "los-angeles/la-zoo-lights",
   "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/los-angeles/la-zoo-lights-28d36254caee8971.webp",
   "width": 1024,
@@ -1858,6 +2838,16 @@
   "sourceUrl": "https://www.lazoo.org/events/zoolights/",
   "imageSourceUrl": "https://lazoo.org/wp-content/uploads/2023/04/Front-Entrance-Billboard-and-Banners-crop-JEP_4883-1024x664.jpg",
   "sha256": "28d36254caee89710020a6071549d64fcd4e033b18de8f3ac02a1470e60f6083"
+ },
+ {
+  "key": "los-angeles/lafc-bmo-stadium",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/los-angeles/lafc-bmo-stadium-951e082c4ad2cc34.webp",
+  "width": 1600,
+  "height": 1143,
+  "credit": "Wikimedia Commons (BMO Stadium; see file page for author and license)",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:BMO_Stadium_(Los_Angeles).jpg",
+  "imageSourceUrl": "https://upload.wikimedia.org/wikipedia/commons/2/24/BMO_Stadium_(Los_Angeles).jpg",
+  "sha256": "951e082c4ad2cc34030ed8406fdbd4d62f3898253a72f20917549d2a8df4dc14"
  },
  {
   "key": "los-angeles/latimes-festival-of-books",
@@ -1910,6 +2900,26 @@
   "sha256": "67dca75e40a6350d613bccf66d100867c36c4687d2b0cdd590a10a58bdf58a48"
  },
  {
+  "key": "los-angeles/old-spanish-days-fiesta-santa-barbara",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/los-angeles/old-spanish-days-fiesta-santa-barbara-1b334684073df265.webp",
+  "width": 1200,
+  "height": 800,
+  "credit": "Santa Barbara Historical Museum / Santa Barbara Independent (float from the first Fiesta parade, 1924)",
+  "sourceUrl": "https://www.independent.com/2024/07/23/project-fiesta-celebrates-100-years-of-santa-barbaras-old-spanish-days-fiesta/",
+  "imageSourceUrl": "https://www.independent.com/wp-content/uploads/2024/07/Fiesta-Float-First-Parade-1924-credit-SB-Historical-Musuem.jpeg",
+  "sha256": "1b334684073df265dc6f7b11a7b2472d2cc5b7e7beda2117de3bed31a796621c"
+ },
+ {
+  "key": "los-angeles/pacific-park-santa-monica-pier",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/los-angeles/pacific-park-santa-monica-pier-2fea570c9d8de836.webp",
+  "width": 1600,
+  "height": 1200,
+  "credit": "Wikimedia Commons (Pacific Park entrance; see file page for author and license)",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Pacific_Park_Enterance.JPG",
+  "imageSourceUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4f/Pacific_Park_Enterance.JPG",
+  "sha256": "2fea570c9d8de836899b0642fa81c4a85303fc2088e6ceeaf8f46ef2455604d5"
+ },
+ {
   "key": "los-angeles/palm-springs-aerial-tramway",
   "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/los-angeles/palm-springs-aerial-tramway-73eff15b5dd2e795.webp",
   "width": 1600,
@@ -1928,6 +2938,26 @@
   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tournament_of_Roses_Parade_2010_Float.jpg",
   "imageSourceUrl": "https://upload.wikimedia.org/wikipedia/commons/4/48/Tournament_of_Roses_Parade_2010_Float.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
   "sha256": "d5ae3576232ddf02fcfedf53693b8294508758833fcd0c872252bf86ac74028b"
+ },
+ {
+  "key": "los-angeles/santa-barbara-zoo",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/los-angeles/santa-barbara-zoo-1b1b7f771d3e9294.webp",
+  "width": 1600,
+  "height": 1067,
+  "credit": "Wikimedia Commons (Santa Barbara Zoo; see file page for author and license)",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Gemina_(giraffe)_at_Santa_Barbara_Zoo.jpg",
+  "imageSourceUrl": "https://upload.wikimedia.org/wikipedia/commons/2/2e/Gemina_(giraffe)_at_Santa_Barbara_Zoo.jpg",
+  "sha256": "1b1b7f771d3e929488daba73d43fc9455c806688b10f63824070b2984aa2f887"
+ },
+ {
+  "key": "los-angeles/sbiff-santa-barbara-film-festival",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/los-angeles/sbiff-santa-barbara-film-festival-b9411555ea518441.webp",
+  "width": 1600,
+  "height": 1067,
+  "credit": "Wikimedia Commons (Arlington Theatre, Santa Barbara; see file page for author and license)",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Arlington-front.jpg",
+  "imageSourceUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b8/Arlington-front.jpg",
+  "sha256": "b9411555ea51844176d770d144047b6ef66723efc9c992c4993738f9509b71f3"
  },
  {
   "key": "los-angeles/solvang-julefest",
@@ -1968,6 +2998,16 @@
   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Art_Basel_Miami_Beach_2021_03.jpg",
   "imageSourceUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Art_Basel_Miami_Beach_2021_03.jpg/1920px-Art_Basel_Miami_Beach_2021_03.jpg",
   "sha256": "a73e6a7e5edf70cab82ce2a9bd653bdfbd7c2671667e7701db7cdaa03c152ce8"
+ },
+ {
+  "key": "miami/biscayne-national-park-boating",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/miami/biscayne-national-park-boating-d5d449fa209dccd4.webp",
+  "width": 1200,
+  "height": 800,
+  "credit": "National Park Service, Biscayne National Park (Boca Chita Key)",
+  "sourceUrl": "https://www.nps.gov/bisc/index.htm",
+  "imageSourceUrl": "https://www.nps.gov/common/uploads/structured_data/3C870533-1DD8-B71B-0B70CFF5EF6538F1.jpg?width=1200",
+  "sha256": "d5d449fa209dccd497c7221665a482403db7a02ee24b33f88f2e3cb365558b23"
  },
  {
   "key": "miami/calle-ocho-music-festival",
@@ -2030,6 +3070,16 @@
   "sha256": "4f3bf5c1acd948a879924e5d087b6975adeef5953476ea651a45d61a15652f4a"
  },
  {
+  "key": "miami/fantasy-fest-key-west",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/miami/fantasy-fest-key-west-c18ce855271a3204.webp",
+  "width": 1600,
+  "height": 1067,
+  "credit": "Fantasy Fest official site",
+  "sourceUrl": "https://fantasyfest.com/",
+  "imageSourceUrl": "https://fantasyfest.com/img/2025/slides/slide-1.jpg",
+  "sha256": "c18ce855271a320471e074a65e5ca462ff5036b21922fd6f02678b3f776797fb"
+ },
+ {
   "key": "miami/florida-panthers-home-games",
   "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/miami/florida-panthers-home-games-f2d74d5e6c41675b.webp",
   "width": 1280,
@@ -2038,6 +3088,16 @@
   "sourceUrl": "https://www.nhl.com/panthers/",
   "imageSourceUrl": "https://media.d3.nhle.com/image/private/t_ratio16_9-size50/v1726583322/prd/assets/panthers/assets/Save_Image_16x9_zb5kvc.jpg",
   "sha256": "f2d74d5e6c41675b8ea6fe97a388a36c02724cfaebb6954cb49cf48d5a9a1eca"
+ },
+ {
+  "key": "miami/fort-lauderdale-boat-show",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/miami/fort-lauderdale-boat-show-4ee6e73aab53f526.webp",
+  "width": 1200,
+  "height": 799,
+  "credit": "Fort Lauderdale International Boat Show (flibs.com)",
+  "sourceUrl": "https://www.flibs.com/",
+  "imageSourceUrl": "https://knect365.imgix.net/uploads/flibs25-boats-0936-900x600-61c5ea4f81fc6dae331b7481b3288be9.webp?w=1200",
+  "sha256": "4ee6e73aab53f52670e254b26e5f993bb0ab9aa7e2605eee9e4a16691d44ace3"
  },
  {
   "key": "miami/hemingway-home-key-west",
@@ -2078,6 +3138,16 @@
   "sourceUrl": "https://www.keywestlobsterfest.com/",
   "imageSourceUrl": "https://img1.wsimg.com/isteam/ip/b9890e52-7da4-4150-85b8-fbea920e46b4/grilled%20lobster.jpg",
   "sha256": "f214d37aef940bb07616608b4c782e19b64960d9d834edc815a0747f6f10e510"
+ },
+ {
+  "key": "miami/lion-country-safari",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/miami/lion-country-safari-5fe806c1b23695b8.webp",
+  "width": 1600,
+  "height": 900,
+  "credit": "Wikimedia Commons (Lion Country Safari, impalas; photo (c) Wilfred Hdez)",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Lion_Country_Safari_(15558269899).jpg",
+  "imageSourceUrl": "https://upload.wikimedia.org/wikipedia/commons/0/0e/Lion_Country_Safari_%2815558269899%29.jpg",
+  "sha256": "5fe806c1b23695b8fb5ea9b223e2896d2e0b892a5615b0962067d6c2430d8520"
  },
  {
   "key": "miami/miami-beach-polo-world-cup",
@@ -2200,6 +3270,16 @@
   "sha256": "91aca0dccfe324364d33add1c88c13911d7a806a7431195dd75a0bef0e9bd334"
  },
  {
+  "key": "miami/shark-valley-tram-tour",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/miami/shark-valley-tram-tour-1b140026d87a6f88.webp",
+  "width": 1600,
+  "height": 1200,
+  "credit": "R. Cammauf / National Park Service via Wikimedia Commons",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Shark_Valley_Tram,_NPSPhoto,_R._Cammauf_(9099705063).jpg",
+  "imageSourceUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b5/Shark_Valley_Tram%2C_NPSPhoto%2C_R._Cammauf_%289099705063%29.jpg",
+  "sha256": "1b140026d87a6f88ba84bc618df04272507a55ce2ecfb3aaee91073484a1a334"
+ },
+ {
   "key": "miami/stone-crab-season-joes",
   "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/miami/stone-crab-season-joes-82d50c67eb155a35.webp",
   "width": 1200,
@@ -2218,6 +3298,36 @@
   "sourceUrl": "https://ultramusicfestival.com/",
   "imageSourceUrl": "https://mjb7fzbh9yu24bzq.public.blob.vercel-storage.com/-Photo-Rudgr.com-Ultra-Music-Festival-1-1920x1280.jpg",
   "sha256": "0796ab8294c20116158bda92783e2d8cde33da6fb588433abe2cb8d519f3ea6d"
+ },
+ {
+  "key": "miami/winterfest-boat-parade",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/miami/winterfest-boat-parade-9a205f03a78c5934.webp",
+  "width": 1600,
+  "height": 1066,
+  "credit": "Time Out Fort Lauderdale",
+  "sourceUrl": "https://www.timeout.com/fort-lauderdale/things-to-do/the-seminole-hard-rock-winterfest-boat-parade",
+  "imageSourceUrl": "https://media.timeout.com/images/102984684/image.jpg",
+  "sha256": "9a205f03a78c5934ce9eb375142a70a7c52f0791bc4bcdf84ab3fd1571882afe"
+ },
+ {
+  "key": "miami/zoo-miami-zoo-lights",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/miami/zoo-miami-zoo-lights-d48762895a8046cb.webp",
+  "width": 1000,
+  "height": 668,
+  "credit": "Zoo Miami",
+  "sourceUrl": "https://www.zoomiami.org/zoo-lights",
+  "imageSourceUrl": "https://www.zoomiami.org/assets/2891/dsc_3365.jpg",
+  "sha256": "d48762895a8046cba9b74e5afc59631a0dd64e327c928ff22a131de10aeaded4"
+ },
+ {
+  "key": "minneapolis/minneapolis-afton-alps-skiing",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/minneapolis/minneapolis-afton-alps-skiing-7978027fd5850e4f.webp",
+  "width": 1280,
+  "height": 960,
+  "credit": "Collin Knopp-Schwyn / Wikimedia Commons (CC BY 4.0)",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Afton_Alps,_January_2014,_Sally's_Valley.jpg",
+  "imageSourceUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e3/Afton_Alps%2C_January_2014%2C_Sally%27s_Valley.jpg/1280px-Afton_Alps%2C_January_2014%2C_Sally%27s_Valley.jpg",
+  "sha256": "7978027fd5850e4fa69f51b9f23696dcfafa4f6fcbf1eae6cfa4534b048d8c49"
  },
  {
   "key": "minneapolis/minneapolis-aquatennial",
@@ -2280,6 +3390,16 @@
   "sha256": "ba7da45e97cb30d51de6f0f8d25e4f6cbe297db681fa669292b26e7798bd8971"
  },
  {
+  "key": "minneapolis/minneapolis-defeat-of-jesse-james-days",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/minneapolis/minneapolis-defeat-of-jesse-james-days-1313f641573316b4.webp",
+  "width": 1280,
+  "height": 602,
+  "credit": "Tony Webster / Wikimedia Commons (CC)",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Bridge_Square_-_Historic_Downtown_Northfield,_Minnesota_(40652347681)_(cropped).jpg",
+  "imageSourceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Bridge_Square_-_Historic_Downtown_Northfield,_Minnesota_(40652347681)_(cropped).jpg?width=1280",
+  "sha256": "1313f641573316b4de949b67cbcd4ae595dae778a5d0006b748801a760fbf99c"
+ },
+ {
   "key": "minneapolis/minneapolis-eloise-butler-wildflower-garden",
   "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/minneapolis/minneapolis-eloise-butler-wildflower-garden-3368e785a939e50f.webp",
   "width": 1600,
@@ -2288,6 +3408,26 @@
   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Eloise_Butler_Wildflower_Garden_9_14_23_(53202153875).jpg",
   "imageSourceUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Eloise_Butler_Wildflower_Garden_9_14_23_(53202153875).jpg/1920px-Eloise_Butler_Wildflower_Garden_9_14_23_(53202153875).jpg",
   "sha256": "3368e785a939e50f9602796e1572b68301c5ce101f8aace93b12f9705f2c1123"
+ },
+ {
+  "key": "minneapolis/minneapolis-frontenac-state-park-birding",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/minneapolis/minneapolis-frontenac-state-park-birding-407cbb8b88e06d8e.webp",
+  "width": 1200,
+  "height": 800,
+  "credit": "Heather Abrahamson / Parks & Trails Council of Minnesota",
+  "sourceUrl": "https://parksandtrails.org/state-parks/frontenac",
+  "imageSourceUrl": "https://i0.wp.com/parksandtrails.org/wp-content/uploads/2023/12/Frontenac-Header-HeatherAbrahamson-picnic-smaller.webp?fit=1200%2C800&ssl=1",
+  "sha256": "407cbb8b88e06d8e030be9242bc796aa5faca2dc74731a681b17d885595bf86a"
+ },
+ {
+  "key": "minneapolis/minneapolis-interstate-state-park-potholes",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/minneapolis/minneapolis-interstate-state-park-potholes-638a9ba2be7f78ec.webp",
+  "width": 1280,
+  "height": 966,
+  "credit": "123dieinafire / Wikimedia Commons (CC)",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Dalles_Of_St_Croix.jpg",
+  "imageSourceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Dalles_Of_St_Croix.jpg?width=1280",
+  "sha256": "638a9ba2be7f78ec78e25a2d47010236ca69062340860d0eb80f0d74613b9d44"
  },
  {
   "key": "minneapolis/minneapolis-lake-harriet-sailing",
@@ -2340,6 +3480,36 @@
   "sha256": "34388587534219800073fe2114ff50fdfde1afd9d1ad543564e43c7bcdaaeae3"
  },
  {
+  "key": "minneapolis/minneapolis-minnesota-fringe-festival",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/minneapolis/minneapolis-minnesota-fringe-festival-b5e4ced265c2a65d.webp",
+  "width": 1200,
+  "height": 630,
+  "credit": "Dan Norman (Red Carpet Burlesque, Fringe 2015) / Meet Minneapolis",
+  "sourceUrl": "https://www.minneapolis.org/calendar/festivals/spring-summer/fringe-festival/",
+  "imageSourceUrl": "https://www.minneapolis.org/imager/cmsimages/meta-images/791959/Meta-Image-Fringe-Fest-2015-SummthinsGonnaHappen-By-Red-Carpet-Burlesque.-Photo-Dan-Norman-mtime20180802110233_2021-11-01-114946_hiin_91852798b59be8b28fc00edfe4aec23a.jpg",
+  "sha256": "b5e4ced265c2a65dacd40ff3df8066077094db657fb8d0e52c45903410f15009"
+ },
+ {
+  "key": "minneapolis/minneapolis-minnesota-renaissance-festival",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/minneapolis/minneapolis-minnesota-renaissance-festival-f9d7562d98ea523b.webp",
+  "width": 960,
+  "height": 1453,
+  "credit": "Frank Kovalchek / Wikimedia Commons (CC BY 2.0)",
+  "sourceUrl": "https://en.wikipedia.org/wiki/Minnesota_Renaissance_Festival",
+  "imageSourceUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/58/The_master_of_naughty_and_witty_verse_%288008101391%29.jpg/960px-The_master_of_naughty_and_witty_verse_%288008101391%29.jpg",
+  "sha256": "f9d7562d98ea523bf86bc8543c6c9422a739ad50bfa2a880d390facc4e7a695b"
+ },
+ {
+  "key": "minneapolis/minneapolis-minnesota-state-fair",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/minneapolis/minneapolis-minnesota-state-fair-153e0b98c9857d96.webp",
+  "width": 1280,
+  "height": 960,
+  "credit": "Northfielder (Flickr smoses) / Wikimedia Commons (CC BY 2.0)",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Cheese_Curd_Stand_at_MN_State_Fair.jpg",
+  "imageSourceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Cheese_Curd_Stand_at_MN_State_Fair.jpg?width=1280",
+  "sha256": "153e0b98c9857d96098b508474fd730282b32423be6a43334a3a6ccb8b775096"
+ },
+ {
   "key": "minneapolis/minneapolis-minnesota-wild-hockey",
   "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/minneapolis/minneapolis-minnesota-wild-hockey-4e9eca208583e45b.webp",
   "width": 1280,
@@ -2348,6 +3518,16 @@
   "sourceUrl": "https://www.nhl.com/wild/",
   "imageSourceUrl": "https://media.d3.nhle.com/image/private/t_ratio16_9-size50/prd/dl98cmfsm1brpcpvcwny.jpg",
   "sha256": "4e9eca208583e45b686f84afb5e097bc9f37fbf7299e33601a6ae5a217f8d5a3"
+ },
+ {
+  "key": "minneapolis/minneapolis-minnesota-zoo-jack-o-lantern-spectacular",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/minneapolis/minneapolis-minnesota-zoo-jack-o-lantern-spectacular-c26aa8a69377da36.webp",
+  "width": 1200,
+  "height": 750,
+  "credit": "Caitlin Abrams / MSP Magazine",
+  "sourceUrl": "https://mspmag.com/arts-and-culture/minnesota-zoo-jack-o-lantern-spectacular-is-back",
+  "imageSourceUrl": "https://mspmag.com/downloads/68080/download/Abrams_MNZooPumpkinTrail-9136.jpg?cb=5f5325d9c14f93ae5e07eb4817cb1d3b&w=1200",
+  "sha256": "c26aa8a69377da36730d66e4e8ebf15af229faea7a41afee07c383f5eab11b0b"
  },
  {
   "key": "minneapolis/minneapolis-music-and-movies-in-the-parks",
@@ -2380,6 +3560,16 @@
   "sha256": "30869373ca6e2aa7c3e34ca1dc3d094500fe104862f39926db20fa8dcc4e6492"
  },
  {
+  "key": "minneapolis/minneapolis-pine-tree-apple-orchard",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/minneapolis/minneapolis-pine-tree-apple-orchard-a4099535d594ffa0.webp",
+  "width": 1200,
+  "height": 675,
+  "credit": "Caitlin Abrams / MSP Magazine",
+  "sourceUrl": "https://mspmag.com/eat-and-drink/4-apple-orchards-mn/",
+  "imageSourceUrl": "https://mspmag.com/downloads/46212/download/Abrams_PineTree-9710-1280.jpg?cb=1514342166546072548eaace47c10c95&w=1200",
+  "sha256": "a4099535d594ffa0081d55dae5f08dbca6484be72f6bcaacdf615cc087aaaa9e"
+ },
+ {
   "key": "minneapolis/minneapolis-st-paul-saints-chs-field",
   "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/minneapolis/minneapolis-st-paul-saints-chs-field-eeecf82e135ec649.webp",
   "width": 1200,
@@ -2388,6 +3578,26 @@
   "sourceUrl": "https://www.mlb.com/milb/st-paul",
   "imageSourceUrl": "https://www.mlbstatic.com/team-logos/share/1960.jpg",
   "sha256": "eeecf82e135ec649905b75561e51059af1b2aa4f3c8853e77dc038854082b97d"
+ },
+ {
+  "key": "minneapolis/minneapolis-st-paul-winter-carnival",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/minneapolis/minneapolis-st-paul-winter-carnival-6f1e392233377f67.webp",
+  "width": 1024,
+  "height": 768,
+  "credit": "Wheresmysocks / Wikimedia Commons (CC BY-SA 2.5)",
+  "sourceUrl": "https://en.wikipedia.org/wiki/Saint_Paul_Winter_Carnival",
+  "imageSourceUrl": "https://upload.wikimedia.org/wikipedia/commons/d/dd/2004_Winter_Carnival_Ice_Castle_%28night%29.jpg",
+  "sha256": "6f1e392233377f67fe32468e831d7a5911730e01b64f838f408a6ba0732e5685"
+ },
+ {
+  "key": "minneapolis/minneapolis-stillwater-lumberjack-days",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/minneapolis/minneapolis-stillwater-lumberjack-days-0952aa3601000f07.webp",
+  "width": 1280,
+  "height": 640,
+  "credit": "August Schwerdfeger / Wikimedia Commons (CC BY 4.0)",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Downtown_Stillwater_2020-06-27.jpg",
+  "imageSourceUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d7/Downtown_Stillwater_2020-06-27.jpg/1280px-Downtown_Stillwater_2020-06-27.jpg",
+  "sha256": "0952aa3601000f074e6124539ac6b878129dd14ab34fb3911a19bb1431822d61"
  },
  {
   "key": "minneapolis/minneapolis-twin-cities-marathon",
@@ -2420,6 +3630,26 @@
   "sha256": "46ca3be8f1b7701321af7e74eab61cc67b67f09b5b556e61040594d952af8ffe"
  },
  {
+  "key": "minneapolis/minneapolis-welch-village-skiing",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/minneapolis/minneapolis-welch-village-skiing-3a9ca83d77509009.webp",
+  "width": 1280,
+  "height": 971,
+  "credit": "Darth Stabro / Wikimedia Commons (CC)",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Welch_Village_NYE_2020.jpg",
+  "imageSourceUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/87/Welch_Village_NYE_2020.jpg/1280px-Welch_Village_NYE_2020.jpg",
+  "sha256": "3a9ca83d77509009dc59ec17b891906deff681a23030d60aefbbee5d8dd475ee"
+ },
+ {
+  "key": "minneapolis/minneapolis-wild-mountain-winter-tubing",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/minneapolis/minneapolis-wild-mountain-winter-tubing-0328215e90b3607a.webp",
+  "width": 1280,
+  "height": 983,
+  "credit": "MNSkier / Wikimedia Commons (CC)",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Wild_Mountain_From_Above.jpg",
+  "imageSourceUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/73/Wild_Mountain_From_Above.jpg/1280px-Wild_Mountain_From_Above.jpg",
+  "sha256": "0328215e90b3607aeca9016e6b4eb0653027f8edf75c809763660d19c1e41792"
+ },
+ {
   "key": "minneapolis/minneapolis-wirth-park-fat-bike-trails",
   "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/minneapolis/minneapolis-wirth-park-fat-bike-trails-488dbeece8c24c66.webp",
   "width": 1024,
@@ -2428,6 +3658,26 @@
   "sourceUrl": "https://loppet.org/Experiences/fat-tire-biking/",
   "imageSourceUrl": "http://loppet.org/wp-content/uploads/2025/07/Untitled-design-97-1024x576.png",
   "sha256": "488dbeece8c24c660119867a75c8529339d5fd93b11c6ec4d185957f5ea69343"
+ },
+ {
+  "key": "nashville/arrington-vineyards",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/nashville/arrington-vineyards-4d4b5d5d5f2432e9.webp",
+  "width": 1280,
+  "height": 964,
+  "credit": "P. Hughes (CC BY-SA 4.0) / Wikimedia Commons",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tennessee_-_Arrington_Vineyards.jpg",
+  "imageSourceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Tennessee_-_Arrington_Vineyards.jpg?width=1280",
+  "sha256": "4d4b5d5d5f2432e9f4b6cdcd285791371fb46869163619d01b4d71b07c92514e"
+ },
+ {
+  "key": "nashville/battle-of-franklin-trust-carnton",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/nashville/battle-of-franklin-trust-carnton-00c1bc49bbcb6f17.webp",
+  "width": 1280,
+  "height": 789,
+  "credit": "Euthman (CC BY 4.0) / Wikimedia Commons",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Carnton_Plantation_house,_Franklin,_Tennessee,_USA,_1995.jpg",
+  "imageSourceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Carnton_Plantation_house,_Franklin,_Tennessee,_USA,_1995.jpg?width=1280",
+  "sha256": "00c1bc49bbcb6f178250cec35691d6d9a96fb38b92c35644194b91a15d674c92"
  },
  {
   "key": "nashville/bonnaroo-music-festival",
@@ -2448,6 +3698,26 @@
   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Flamingos_At_Nashville_Zoo_(217376097).jpeg",
   "imageSourceUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Flamingos_At_Nashville_Zoo_(217376097).jpeg/1920px-Flamingos_At_Nashville_Zoo_(217376097).jpeg",
   "sha256": "edff3abe75d68f8c38d94253fc8553c7ce0bed2a148122048963f5bdc8df0b95"
+ },
+ {
+  "key": "nashville/burgess-falls-state-park",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/nashville/burgess-falls-state-park-1c69523ea08aac20.webp",
+  "width": 1280,
+  "height": 850,
+  "credit": "Brian Stansberry (CC BY 3.0) / Wikimedia Commons",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Burgess-falls-big-falls-tn2.jpg",
+  "imageSourceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Burgess-falls-big-falls-tn2.jpg?width=1280",
+  "sha256": "1c69523ea08aac20c07fd8d7afd6618ea1380a7d34fe8771ff11e234dbf55a78"
+ },
+ {
+  "key": "nashville/cedars-of-lebanon-wildflowers",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/nashville/cedars-of-lebanon-wildflowers-394dc92284c098f3.webp",
+  "width": 1280,
+  "height": 959,
+  "credit": "Brian Stansberry (CC BY 3.0) / Wikimedia Commons",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Cedar-glade-col-tn1.jpg",
+  "imageSourceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Cedar-glade-col-tn1.jpg?width=1280",
+  "sha256": "394dc92284c098f304c13d6c90b7fec0fcb16d4efc5f650920f906ad63f255f4"
  },
  {
   "key": "nashville/cheekwood-harvest",
@@ -2480,6 +3750,36 @@
   "sha256": "fbaf21e0192e8f269792b666d6fc164cf0f82ff896e96eac216279b7e88f9f61"
  },
  {
+  "key": "nashville/cummins-falls-state-park",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/nashville/cummins-falls-state-park-b7301b7e2ef6007b.webp",
+  "width": 1280,
+  "height": 960,
+  "credit": "Ingogermany (CC BY-SA 4.0) / Wikimedia Commons",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Cummins_Falls_State_Park.jpg",
+  "imageSourceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Cummins_Falls_State_Park.jpg?width=1280",
+  "sha256": "b7301b7e2ef6007b8fe81d5d4cca9ebc3c737941096cffbe8cf7b14836b0f2d1"
+ },
+ {
+  "key": "nashville/dunbar-cave-state-park",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/nashville/dunbar-cave-state-park-1968a85830e48a30.webp",
+  "width": 1280,
+  "height": 851,
+  "credit": "Joe Mojohovits (public domain) / Wikimedia Commons",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Dunbar_Cave.jpg",
+  "imageSourceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Dunbar_Cave.jpg?width=1280",
+  "sha256": "1968a85830e48a30b334b80f1ffa16c4027e5ccb6f7cf917f524ad9046dc3402"
+ },
+ {
+  "key": "nashville/franklin-farmers-market",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/nashville/franklin-farmers-market-64f3694c0c24de14.webp",
+  "width": 932,
+  "height": 743,
+  "credit": "Williamson Herald",
+  "sourceUrl": "https://www.williamsonherald.com/news/local_news/franklin-farmers-market-finalizes-plans-for-end-of-year-relocation/article_cb626c7a-daa3-4613-92d8-6015e6d985e7.html",
+  "imageSourceUrl": "https://bloximages.newyork1.vip.townnews.com/williamsonherald.com/content/tncms/assets/v3/editorial/c/12/c12a1645-545f-46e6-bb28-2e80c06c56fa/6814f001a9a88.image.jpg",
+  "sha256": "64f3694c0c24de14fb0d56ff818b5c137e26a1500ade187fdb4c3d4e09f17b72"
+ },
+ {
   "key": "nashville/gaylord-opryland-ice",
   "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/nashville/gaylord-opryland-ice-0e71961f4a701da6.webp",
   "width": 1200,
@@ -2488,6 +3788,16 @@
   "sourceUrl": "https://www.wsmv.com/2026/07/23/gaylord-opryland-announces-new-theme-43rd-annual-country-christmas/",
   "imageSourceUrl": "https://gray-wsmv-prod.gtv-cdn.com/resizer/v2/525G5ZC4TBBTBJMY5GTCT4I47Y.png?auth=b4a410f0df31dc1a2b34b9d95838ca56f8bc555b996f731f46c19e349e45f868&width=1200&height=600&smart=true",
   "sha256": "0e71961f4a701da60cdd816d0f5c4160a4eb0014f7fd27b90438f9366b9a3c60"
+ },
+ {
+  "key": "nashville/hermitage-andrew-jackson",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/nashville/hermitage-andrew-jackson-7d2d655b1f15cd36.webp",
+  "width": 1280,
+  "height": 960,
+  "credit": "Jim Bowen (CC BY 2.0) / Wikimedia Commons",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:The_Hermitage_by_Jim_Bowen.jpg",
+  "imageSourceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/The_Hermitage_by_Jim_Bowen.jpg?width=1280",
+  "sha256": "7d2d655b1f15cd366d233a8af82c762ee3da77aa2e0684929bc5c7ff4d1eae8e"
  },
  {
   "key": "nashville/iroquois-steeplechase",
@@ -2500,6 +3810,16 @@
   "sha256": "2c3ce8eac9ee01f9824b820273e4ae8c72013c8e719a04d3db0fddfcc1985fb5"
  },
  {
+  "key": "nashville/jack-daniels-distillery-tour",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/nashville/jack-daniels-distillery-tour-216d8a34009dd195.webp",
+  "width": 1280,
+  "height": 960,
+  "credit": "Ben Jacobson (CC BY 2.5) / Wikimedia Commons",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Jack_Daniel_Distillery_Lynchburg_TN_001.JPG",
+  "imageSourceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Jack_Daniel_Distillery_Lynchburg_TN_001.JPG?width=1280",
+  "sha256": "216d8a34009dd195447876aa834086d46b50733aae9cb62ed9b3a1d11c82824f"
+ },
+ {
   "key": "nashville/lane-motor-museum",
   "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/nashville/lane-motor-museum-74f10b920be39dc8.webp",
   "width": 1600,
@@ -2510,6 +3830,26 @@
   "sha256": "74f10b920be39dc81aa2ae149eb19234c2477438e498b1e15500900ade1fafd4"
  },
  {
+  "key": "nashville/mammoth-cave-national-park",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/nashville/mammoth-cave-national-park-1eb8d386c52e7684.webp",
+  "width": 1280,
+  "height": 720,
+  "credit": "Jason \"Textfiles\" Scott (CC BY 2.0) / Wikimedia Commons",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Mammoth_Cave_National_Park_-_938837374.jpg",
+  "imageSourceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Mammoth_Cave_National_Park_-_938837374.jpg?width=1280",
+  "sha256": "1eb8d386c52e768417af4c9909ec84dfcc65f2d0a09880c28250685b15aedc7a"
+ },
+ {
+  "key": "nashville/montgomery-bell-state-park",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/nashville/montgomery-bell-state-park-87ad9c71e342a436.webp",
+  "width": 1440,
+  "height": 818,
+  "credit": "Tennessee Department of Tourist Development (TNvacation press site)",
+  "sourceUrl": "https://press-new.tnvacation.com/local/burns-montgomery-bell-state-park",
+  "imageSourceUrl": "https://press-new.tnvacation.com/sites/default/files/styles/hero/public/parks_hero_images/mbsp_slice2.jpg",
+  "sha256": "87ad9c71e342a43699255bbff97bd80a95e62d797e24f81a52c82ef297f3bf59"
+ },
+ {
   "key": "nashville/music-city-hot-chicken-festival",
   "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/nashville/music-city-hot-chicken-festival-bf6c912f510f1bee.webp",
   "width": 1200,
@@ -2518,6 +3858,16 @@
   "sourceUrl": "https://nashvilleguru.com/135197/annual-music-city-hot-chicken-festival",
   "imageSourceUrl": "https://nashvilleguru.com/officialwebsite/wp-content/uploads/2022/05/hotchickenfestival10-1200x630.jpg",
   "sha256": "bf6c912f510f1bee012d257e8b814ab1cacc50387c1b40709da73cc1e70cc6c8"
+ },
+ {
+  "key": "nashville/nashville-farmers-market",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/nashville/nashville-farmers-market-27cb638565ea8701.webp",
+  "width": 1200,
+  "height": 800,
+  "credit": "Old Town Trolley Tours Nashville",
+  "sourceUrl": "https://www.trolleytours.com/nashville/farmers-market",
+  "imageSourceUrl": "https://www.trolleytours.com/wp-content/uploads/2016/06/nashville-farmers-market-aerial.jpg",
+  "sha256": "27cb638565ea870101d73619b24f2d8ee0c4982ce5fa7b9a37d3d2b54e1a55ac"
  },
  {
   "key": "nashville/nashville-parthenon",
@@ -2550,6 +3900,16 @@
   "sha256": "3f93da312ae4d95e993d595df30a503117e53099debc4859a5719e24fd3dd110"
  },
  {
+  "key": "nashville/nashville-symphony-season",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/nashville/nashville-symphony-season-41efca73fb8bf874.webp",
+  "width": 1280,
+  "height": 960,
+  "credit": "Michael Rivera (CC BY-SA 4.0) / Wikimedia Commons",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Schermerhorn_Symphony_Center_(Northwest_face).JPG",
+  "imageSourceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Schermerhorn_Symphony_Center_(Northwest_face).JPG?width=1280",
+  "sha256": "41efca73fb8bf874b21bb169821237cc106719608c95b063751704493f75a88c"
+ },
+ {
   "key": "nashville/nashville-zoo-glow-wild",
   "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/nashville/nashville-zoo-glow-wild-c95971cc4b6505a3.webp",
   "width": 1400,
@@ -2558,6 +3918,16 @@
   "sourceUrl": "https://www.nashvillezoo.org/glow-wild",
   "imageSourceUrl": "https://assets.speakcdn.com/assets/2147/zoolumination_desktop_banner_1400x720_-_north_pole.jpg",
   "sha256": "c95971cc4b6505a3fed12e94db0b52f24c8a99db6737714814f0678a2fd90341"
+ },
+ {
+  "key": "nashville/old-stone-fort-state-park",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/nashville/old-stone-fort-state-park-76205c301b0c2b25.webp",
+  "width": 1280,
+  "height": 720,
+  "credit": "Vcgould (CC BY-SA 4.0) / Wikimedia Commons",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ruins_of_Old_Stone_Fort_Walls_2.jpg",
+  "imageSourceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Ruins_of_Old_Stone_Fort_Walls_2.jpg?width=1280",
+  "sha256": "76205c301b0c2b253fc91dde61355e89e356798e2eede67a520380019db2f99e"
  },
  {
   "key": "nashville/predators-home-games",
@@ -2570,6 +3940,16 @@
   "sha256": "8830801e78909e9cc2be0a36acb4bf8496a16145fbfe1325a1fdf66e231bea6e"
  },
  {
+  "key": "nashville/radnor-lake-state-natural-area",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/nashville/radnor-lake-state-natural-area-76a6e2ec64613692.webp",
+  "width": 1280,
+  "height": 960,
+  "credit": "Jonathan James (CC BY 2.0) / Wikimedia Commons",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:RadnorLakeTrailhead.jpg",
+  "imageSourceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/RadnorLakeTrailhead.jpg?width=1280",
+  "sha256": "76a6e2ec64613692cb42d9529a1675b6fe89a5eed497d5600466e4c5fdd5b1ea"
+ },
+ {
   "key": "nashville/rock-n-roll-nashville-marathon",
   "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/nashville/rock-n-roll-nashville-marathon-cbd3718fb00e3cfa.webp",
   "width": 1200,
@@ -2578,6 +3958,16 @@
   "sourceUrl": "https://www.runrocknroll.com/nashville",
   "imageSourceUrl": "https://www.runrocknroll.com/sites/default/files/styles/og/public/2026-05/RnR_Nashville_Card.png?h=827069f2&itok=nhsuf2jr",
   "sha256": "cbd3718fb00e3cfa97d1a172e4d5df101e2533177ba05264794e37b05487c92b"
+ },
+ {
+  "key": "nashville/stones-river-national-battlefield",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/nashville/stones-river-national-battlefield-f54b34705723a4e1.webp",
+  "width": 1280,
+  "height": 960,
+  "credit": "Jacob bloodaxe (CC BY-SA 4.0) / Wikimedia Commons",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Stones_River_National_Battlefield_in_Spring.jpg",
+  "imageSourceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Stones_River_National_Battlefield_in_Spring.jpg?width=1280",
+  "sha256": "f54b34705723a4e1c143c8ee6f6d4475038d654abc68348b5bc339849bad556f"
  },
  {
   "key": "nashville/tennessee-craft-fair-fall",
@@ -2660,6 +4050,16 @@
   "sha256": "e80a04980be7f78e29e7b5b16bfdadf6084135972cb15218c5f420f92ea874aa"
  },
  {
+  "key": "new-york/bear-mountain-state-park",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/new-york/bear-mountain-state-park-7c6c9aae3b21619c.webp",
+  "width": 1280,
+  "height": 960,
+  "credit": "Wikimedia Commons contributor",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Bear_Mountain_State_Park_as_seen_from_Anthony%E2%80%99s_Nose.jpg",
+  "imageSourceUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Bear_Mountain_State_Park_as_seen_from_Anthony%E2%80%99s_Nose.jpg/1280px-Bear_Mountain_State_Park_as_seen_from_Anthony%E2%80%99s_Nose.jpg",
+  "sha256": "7c6c9aae3b21619ccc2c39fcb0a6ea3e06a1e987a9e7560bc25dfde1ad52149b"
+ },
+ {
   "key": "new-york/belmont-park-racing",
   "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/new-york/belmont-park-racing-59e87508f3728443.webp",
   "width": 1600,
@@ -2700,6 +4100,26 @@
   "sha256": "b9f56402c1d54877ac825769432b035eec454aab9061f7c395d42fa1f7bfa3c0"
  },
  {
+  "key": "new-york/fire-island-lighthouse",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/new-york/fire-island-lighthouse-1a0185ee83c66330.webp",
+  "width": 1600,
+  "height": 1200,
+  "credit": "Wikimedia Commons contributor",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Fire_Island_Light_Station_1.jpg",
+  "imageSourceUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a7/Fire_Island_Light_Station_1.jpg",
+  "sha256": "1a0185ee83c66330197b5e1a273c9b9889dacbc535eac2a4a0d9794ce97e2814"
+ },
+ {
+  "key": "new-york/fishkill-farms-pick-your-own",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/new-york/fishkill-farms-pick-your-own-752c7f763efd0bae.webp",
+  "width": 1280,
+  "height": 960,
+  "credit": "Wikimedia Commons contributor",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Apple_trees_at_Fishkill_Farms.jpg",
+  "imageSourceUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Apple_trees_at_Fishkill_Farms.jpg/1280px-Apple_trees_at_Fishkill_Farms.jpg",
+  "sha256": "752c7f763efd0bae1d87c18e90417ad3d3fa7f8dc75f52b6fcf8195bdca9e449"
+ },
+ {
   "key": "new-york/governors-island",
   "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/new-york/governors-island-458caef4a90c8659.webp",
   "width": 1600,
@@ -2708,6 +4128,56 @@
   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Governors_Island_New_York_September_2016_002.jpg",
   "imageSourceUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Governors_Island_New_York_September_2016_002.jpg/1920px-Governors_Island_New_York_September_2016_002.jpg",
   "sha256": "458caef4a90c8659194bbb637a16609136229e2dbc274b77df8d5ed2fdc37770"
+ },
+ {
+  "key": "new-york/jones-beach-state-park",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/new-york/jones-beach-state-park-18b0cf5f370aff04.webp",
+  "width": 1600,
+  "height": 2268,
+  "credit": "Wikimedia Commons contributor",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:NY_Long_Island_with_East_Bay_and_Jones_Beach_State_Park_IMG_1956.JPG",
+  "imageSourceUrl": "https://upload.wikimedia.org/wikipedia/commons/1/10/NY_Long_Island_with_East_Bay_and_Jones_Beach_State_Park_IMG_1956.JPG",
+  "sha256": "18b0cf5f370aff04d03efcc40767b15d783a46419a04e8d679de2cccf3c6e193"
+ },
+ {
+  "key": "new-york/luna-park-coney-island",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/new-york/luna-park-coney-island-53bb7b430c0850aa.webp",
+  "width": 1600,
+  "height": 1063,
+  "credit": "Wikimedia Commons contributor",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Luna_Park_Coney_Island.jpg",
+  "imageSourceUrl": "https://upload.wikimedia.org/wikipedia/commons/e/ef/Luna_Park_Coney_Island.jpg",
+  "sha256": "53bb7b430c0850aad930ad6090c4e8543f8c3da2dc1167bd9f8b6a84d8ac591d"
+ },
+ {
+  "key": "new-york/minnewaska-state-park",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/new-york/minnewaska-state-park-d1d9826e1ab6d153.webp",
+  "width": 1280,
+  "height": 853,
+  "credit": "Wikimedia Commons contributor",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Lake_Minnewaska_from_cliffs.jpg",
+  "imageSourceUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Lake_Minnewaska_from_cliffs.jpg/1280px-Lake_Minnewaska_from_cliffs.jpg",
+  "sha256": "d1d9826e1ab6d1532f47203dba08cbe5d36f6c61d8af23421214b56c508848be"
+ },
+ {
+  "key": "new-york/mohonk-preserve-hiking",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/new-york/mohonk-preserve-hiking-e324c868c8d102bf.webp",
+  "width": 1280,
+  "height": 960,
+  "credit": "Wikimedia Commons contributor",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Trapps.jpg",
+  "imageSourceUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Trapps.jpg/1280px-Trapps.jpg",
+  "sha256": "e324c868c8d102bf6469c9440ee18b98bcc7fa5c62373f6260fe688d5cdc7403"
+ },
+ {
+  "key": "new-york/mountain-creek-skiing",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/new-york/mountain-creek-skiing-16692a533b043c73.webp",
+  "width": 1062,
+  "height": 739,
+  "credit": "Wikimedia Commons contributor",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Mountain_Creek_from_Kittatinny_Mountain.jpg",
+  "imageSourceUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d4/Mountain_Creek_from_Kittatinny_Mountain.jpg",
+  "sha256": "16692a533b043c7307bc73042110ffb7d40065dff3b9fd7227e163fb8b7f42b3"
  },
  {
   "key": "new-york/movies-with-a-view",
@@ -2770,6 +4240,16 @@
   "sha256": "dafb25af3faf8f9cf1ed647e20455d20640e62699f7b252b9b1df03a37eee1c1"
  },
  {
+  "key": "new-york/sagamore-hill-national-historic-site",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/new-york/sagamore-hill-national-historic-site-70735793084e2d88.webp",
+  "width": 919,
+  "height": 705,
+  "credit": "Wikimedia Commons contributor",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Sagamore_Hill.jpg",
+  "imageSourceUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c0/Sagamore_Hill.jpg",
+  "sha256": "70735793084e2d88c40159a49da022cc58fbd0ca5fdd43a0864dd0b5b4c1965e"
+ },
+ {
   "key": "new-york/shakespeare-in-the-park",
   "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/new-york/shakespeare-in-the-park-2ba3d829d90390a7.webp",
   "width": 1004,
@@ -2778,6 +4258,16 @@
   "sourceUrl": "https://centralpark.org/shakespeare-in-the-park",
   "imageSourceUrl": "https://centralpark.org/wp-content/uploads/2014/05/hero-image_SITP2.jpg",
   "sha256": "2ba3d829d90390a7c4e01b1b19727269aab713cec817dc9cbcde4bdcadfcdb6a"
+ },
+ {
+  "key": "new-york/smorgasburg-williamsburg",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/new-york/smorgasburg-williamsburg-8d07fa41e236b4d1.webp",
+  "width": 1280,
+  "height": 853,
+  "credit": "Wikimedia Commons contributor",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Cooking_Channel_at_Smorgasburg_34_%287509703888%29.jpg",
+  "imageSourceUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Cooking_Channel_at_Smorgasburg_34_%287509703888%29.jpg/1280px-Cooking_Channel_at_Smorgasburg_34_%287509703888%29.jpg",
+  "sha256": "8d07fa41e236b4d18d96190547653f2abdd96f0b92671229d4f00641f3b87782"
  },
  {
   "key": "new-york/times-square-new-years-eve",
@@ -2800,6 +4290,26 @@
   "sha256": "d160aa83c2ca7e3d6f48a7c9c3c77b8882339aeb1ac217d99849f3874ae8f2a4"
  },
  {
+  "key": "new-york/us-open-tennis",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/new-york/us-open-tennis-b24f560c07790285.webp",
+  "width": 1280,
+  "height": 960,
+  "credit": "Wikimedia Commons contributor",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Arthur_Ashe_Stadium_Retractable_Roof_Open_US_Open_Tennis.jpg",
+  "imageSourceUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Arthur_Ashe_Stadium_Retractable_Roof_Open_US_Open_Tennis.jpg/1280px-Arthur_Ashe_Stadium_Retractable_Roof_Open_US_Open_Tennis.jpg",
+  "sha256": "b24f560c0779028551af6d70d5f4a0097fed374f010357f6c72bcb3fe07df046"
+ },
+ {
+  "key": "new-york/village-halloween-parade",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/new-york/village-halloween-parade-9b975537b88fab14.webp",
+  "width": 1600,
+  "height": 1063,
+  "credit": "Flickr user via Wikimedia Commons (CC)",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Greenwich_Village_Halloween_Parade_(6451249051).jpg",
+  "imageSourceUrl": "https://upload.wikimedia.org/wikipedia/commons/4/44/Greenwich_Village_Halloween_Parade_%286451249051%29.jpg",
+  "sha256": "9b975537b88fab14f26f7f1aabc7badd5b4ce8f70e972ab35dfb20f2074abf81"
+ },
+ {
   "key": "new-york/walkway-over-the-hudson",
   "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/new-york/walkway-over-the-hudson-4a983aadc3f8ca65.webp",
   "width": 1093,
@@ -2818,6 +4328,36 @@
   "sourceUrl": "https://www.wavehill.org/",
   "imageSourceUrl": "https://www.wavehill.org/uploads/general/_1200x630_crop_center-center_none/wavehill-social-share.png",
   "sha256": "ca4c91bee2d879d32b1a862359ab711802fda035c72b28abf9969af1bcbff132"
+ },
+ {
+  "key": "philadelphia/brandywine-river-museum-wyeth",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/philadelphia/brandywine-river-museum-wyeth-40c69c5121b893d7.webp",
+  "width": 1280,
+  "height": 913,
+  "credit": "Wikimedia Commons contributor (CC BY-SA 4.0)",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Brandywine_River_Museum_of_Art_along_the_river.jpg",
+  "imageSourceUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Brandywine_River_Museum_of_Art_along_the_river.jpg/1280px-Brandywine_River_Museum_of_Art_along_the_river.jpg",
+  "sha256": "40c69c5121b893d77b64bae26ad6ecb9776f34d5b47cd14cb9b7436c0eb78daf"
+ },
+ {
+  "key": "philadelphia/camelback-poconos-resort",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/philadelphia/camelback-poconos-resort-d8b0c43992b8521d.webp",
+  "width": 1280,
+  "height": 960,
+  "credit": "Almondpiano / Wikimedia Commons (CC BY-SA 4.0)",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Camelback_Resort_in_Winter.jpg",
+  "imageSourceUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Camelback_Resort_in_Winter.jpg/1280px-Camelback_Resort_in_Winter.jpg",
+  "sha256": "d8b0c43992b8521d1394d10287e795ec9c34c53e96467dc0629ff7983082a3de"
+ },
+ {
+  "key": "philadelphia/cape-may-lighthouse-climb",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/philadelphia/cape-may-lighthouse-climb-ea0e9c388b4a06ca.webp",
+  "width": 1280,
+  "height": 853,
+  "credit": "King of Hearts / Wikimedia Commons (CC BY-SA 4.0)",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Cape_May_Lighthouse_September_2020_002.jpg",
+  "imageSourceUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Cape_May_Lighthouse_September_2020_002.jpg/1280px-Cape_May_Lighthouse_September_2020_002.jpg",
+  "sha256": "ea0e9c388b4a06ca8f814eb45b26a3eac42fe41f892468124cc125b851088ea1"
  },
  {
   "key": "philadelphia/christmas-village-philadelphia",
@@ -2870,6 +4410,36 @@
   "sha256": "f2719a296e55d0847b75717fc9fe8fd98bf95b92f17a3ea53232d12880cc9a83"
  },
  {
+  "key": "philadelphia/hersheypark-day-trip",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/philadelphia/hersheypark-day-trip-92e5f53422c078b4.webp",
+  "width": 1280,
+  "height": 960,
+  "credit": "Gusc554 / Wikimedia Commons (CC BY-SA 4.0)",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Hersheypark_in_2021.jpg",
+  "imageSourceUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Hersheypark_in_2021.jpg/1280px-Hersheypark_in_2021.jpg",
+  "sha256": "92e5f53422c078b4ea5270a5ec6f7ee2edb2664699b7ef7be2804144e24e7952"
+ },
+ {
+  "key": "philadelphia/historic-germantown-cliveden",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/philadelphia/historic-germantown-cliveden-8a29f61c66005eb9.webp",
+  "width": 1280,
+  "height": 960,
+  "credit": "P. Hughes / Wikimedia Commons (CC BY-SA 4.0)",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Cliveden-Germantown.jpg",
+  "imageSourceUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Cliveden-Germantown.jpg/1280px-Cliveden-Germantown.jpg",
+  "sha256": "8a29f61c66005eb9700f8c5eda343080e07a47c1407b6a6380d22d9d91d4e625"
+ },
+ {
+  "key": "philadelphia/lancaster-central-market",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/philadelphia/lancaster-central-market-9dcaad99987e69ce.webp",
+  "width": 1280,
+  "height": 960,
+  "credit": "Jared Kofsky/PlaceNJ.com / Wikimedia Commons (CC BY-SA 3.0)",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Lancaster_Central_Market.JPG",
+  "imageSourceUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Lancaster_Central_Market.JPG/1280px-Lancaster_Central_Market.JPG",
+  "sha256": "9dcaad99987e69ce6bd24c8f1fa302c9f6f1b16cf8417ed75517033b5cf8f82c"
+ },
+ {
   "key": "philadelphia/longwood-christmas",
   "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/philadelphia/longwood-christmas-6ab00a2331b90fd6.webp",
   "width": 1200,
@@ -2878,6 +4448,16 @@
   "sourceUrl": "https://www.longwoodgardens.org/christmas",
   "imageSourceUrl": "https://longwoodgardens.org/sites/default/files/styles/social_share_cropped/public/2025-09/617280_Longwood%20Gardens%20Christmas%20_Davis_%20Harold%20_Hank_%20_Longwood%20Volunteer%20Photographer_header.jpg?h=f0fb51a5&itok=c-e-KRox",
   "sha256": "6ab00a2331b90fd6e48657c08b1fd5c02e37533fc4dcd53576c012de8d8c938e"
+ },
+ {
+  "key": "philadelphia/morey-piers-wildwood",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/philadelphia/morey-piers-wildwood-885f3a4a68a32cad.webp",
+  "width": 1280,
+  "height": 960,
+  "credit": "Dplcrnj / Wikimedia Commons (CC BY-SA 3.0)",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Giant_Ferris_Wheel_%28Morey%27s_Piers%29_Wildwood_NJ_Night_2012.JPG",
+  "imageSourceUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Giant_Ferris_Wheel_%28Morey%27s_Piers%29_Wildwood_NJ_Night_2012.JPG/1280px-Giant_Ferris_Wheel_%28Morey%27s_Piers%29_Wildwood_NJ_Night_2012.JPG",
+  "sha256": "885f3a4a68a32cad501bccd59b003967068088ad15048a4b21fe95d480438df8"
  },
  {
   "key": "philadelphia/morris-arboretum-gardens",
@@ -2950,6 +4530,26 @@
   "sha256": "966d483867d29972bded601085d17f8ce9dfcca4639374e9bdc2bc97afa4937c"
  },
  {
+  "key": "philadelphia/philadelphia-orchestra-season",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/philadelphia/philadelphia-orchestra-season-588848855cb6bbf5.webp",
+  "width": 1280,
+  "height": 960,
+  "credit": "Smallbones / Wikimedia Commons (CC0)",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Kimmel_Center_Verizon_Hall.JPG",
+  "imageSourceUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Kimmel_Center_Verizon_Hall.JPG/1280px-Kimmel_Center_Verizon_Hall.JPG",
+  "sha256": "588848855cb6bbf5f3f3307458fc788e581d66377b693c26414bce3c99e10a05"
+ },
+ {
+  "key": "philadelphia/philadelphia-union-subaru-park",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/philadelphia/philadelphia-union-subaru-park-88ecb13f75feeead.webp",
+  "width": 1280,
+  "height": 720,
+  "credit": "Cornflower123 / Wikimedia Commons (CC0)",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Subaru_Park.jpg",
+  "imageSourceUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Subaru_Park.jpg/1280px-Subaru_Park.jpg",
+  "sha256": "88ecb13f75feeead7df00ee6b33a29fabb10eb4f103d5a2aa638d3ed90d5b75e"
+ },
+ {
   "key": "philadelphia/phillies-citizens-bank-park",
   "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/philadelphia/phillies-citizens-bank-park-f749619c4e080879.webp",
   "width": 1600,
@@ -2958,6 +4558,16 @@
   "sourceUrl": "https://www.nbcsportsphiladelphia.com/mlb/philadelphia-phillies/phillies-2027-schedule-opens-in-d-c-brings-holiday-heavy-slate-to-cbp/742691/",
   "imageSourceUrl": "https://media.nbcsportsphiladelphia.com/2023/05/Harper_B_USATSI_18168647.jpg?quality=85&#038;strip=all&#038;resize=1200%2C675",
   "sha256": "f749619c4e080879a4e8e520eb74d85b42d9a340b80b23dd1c98cbf5d120548e"
+ },
+ {
+  "key": "philadelphia/reading-terminal-market-grazing",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/philadelphia/reading-terminal-market-grazing-3a8d55bd8b3f32c3.webp",
+  "width": 1280,
+  "height": 848,
+  "credit": "Mrmanager411 / Wikimedia Commons (CC BY 4.0)",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:ReadingTerminalMarket2025.jpg",
+  "imageSourceUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/ReadingTerminalMarket2025.jpg/1280px-ReadingTerminalMarket2025.jpg",
+  "sha256": "3a8d55bd8b3f32c31b7b6aae5281f2ef507b409c6a9cc836fc78b3f6d130e4b0"
  },
  {
   "key": "philadelphia/riverrink-winterfest",
@@ -2990,6 +4600,26 @@
   "sha256": "e2396d1d595109cffd76b526117af1e0aaff4c7b6c800a4d6b78adf774e5cc83"
  },
  {
+  "key": "philadelphia/strasburg-rail-road-lancaster",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/philadelphia/strasburg-rail-road-lancaster-fdd8271dc8cfdf86.webp",
+  "width": 1280,
+  "height": 1045,
+  "credit": "jpmueller99 / Wikimedia Commons (CC BY 2.0)",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Strasburg_RR.jpeg",
+  "imageSourceUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Strasburg_RR.jpeg/1280px-Strasburg_RR.jpeg",
+  "sha256": "fdd8271dc8cfdf86204db91168f3af9bbd00d24ff63671fb2bd608e547812bb8"
+ },
+ {
+  "key": "philadelphia/valley-forge-national-park",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/philadelphia/valley-forge-national-park-e05f107946ade702.webp",
+  "width": 1280,
+  "height": 853,
+  "credit": "National Park Service Digital Image Archives (public domain)",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Valley_Forge_National_Historical_Park_VAFO3966.jpg",
+  "imageSourceUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Valley_Forge_National_Historical_Park_VAFO3966.jpg/1280px-Valley_Forge_National_Historical_Park_VAFO3966.jpg",
+  "sha256": "e05f107946ade702cd11ced1588d7794cff7ce8bc46dbda1a9583f9954abb730"
+ },
+ {
   "key": "philadelphia/wawa-welcome-america",
   "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/philadelphia/wawa-welcome-america-b9a007353f04dbaf.webp",
   "width": 1600,
@@ -2998,6 +4628,36 @@
   "sourceUrl": "https://www.july4thphilly.com/",
   "imageSourceUrl": "https://july4thphilly.com/wp-content/uploads/2025/04/Matt-Stanley_2506_drwc_summerfest_1310-scaled.jpg",
   "sha256": "b9a007353f04dbafacaa10373be8ee7b05493a18b2cc41c721847291e9f2c0d9"
+ },
+ {
+  "key": "philadelphia/wheatonarts-millville-glass",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/philadelphia/wheatonarts-millville-glass-d5f301976bb680c5.webp",
+  "width": 1280,
+  "height": 853,
+  "credit": "Daniel D'Auria / Wikimedia Commons (CC BY 3.0)",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Glassblower.jpg",
+  "imageSourceUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Glassblower.jpg/1280px-Glassblower.jpg",
+  "sha256": "d5f301976bb680c5591b79fb641b153b294bcbf59c42d1d6fe659026c2816b59"
+ },
+ {
+  "key": "philadelphia/wildwoods-boardwalk-beach",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/philadelphia/wildwoods-boardwalk-beach-616bb93112346779.webp",
+  "width": 1280,
+  "height": 960,
+  "credit": "Dough4872 / Wikimedia Commons (public domain)",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Wildwood_boardwalk_Family_Fun_Night_parade_at_Wildwood_Avenue.JPG",
+  "imageSourceUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Wildwood_boardwalk_Family_Fun_Night_parade_at_Wildwood_Avenue.JPG/1280px-Wildwood_boardwalk_Family_Fun_Night_parade_at_Wildwood_Avenue.JPG",
+  "sha256": "616bb93112346779ff196918e3a9f2b0aea92f9b1a31e668763619c07ce339ee"
+ },
+ {
+  "key": "philadelphia/winterthur-museum-garden",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/philadelphia/winterthur-museum-garden-b9bb9d0fba965179.webp",
+  "width": 1280,
+  "height": 843,
+  "credit": "Derek Ramsey (Ram-Man) / Wikimedia Commons (CC BY-SA 2.5)",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Winterthur_Museum_Building_Wide_Angle_2969px.jpg",
+  "imageSourceUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Winterthur_Museum_Building_Wide_Angle_2969px.jpg/1280px-Winterthur_Museum_Building_Wide_Angle_2969px.jpg",
+  "sha256": "b9bb9d0fba96517988650115a456e95bc6285109c09a59c10b6a58d41cdae7f6"
  },
  {
   "key": "phoenix/phoenix-arizona-renaissance-festival",
@@ -3030,6 +4690,26 @@
   "sha256": "319538b91dc4f91e045479e7cad62610dc674675e05c1e1a5c65d0e722c2452a"
  },
  {
+  "key": "phoenix/phoenix-arizona-wildcats-football",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/phoenix/phoenix-arizona-wildcats-football-99e99d31300c3af8.webp",
+  "width": 1280,
+  "height": 719,
+  "credit": "Wcarlisle4 / Wikimedia Commons (CC BY-SA 3.0)",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Arizona_Stadium_Wide_Angle.jpg",
+  "imageSourceUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Arizona_Stadium_Wide_Angle.jpg/1280px-Arizona_Stadium_Wide_Angle.jpg",
+  "sha256": "99e99d31300c3af8cb11fd384288102e9bec307d30a80e2bcb22f5ac52c69948"
+ },
+ {
+  "key": "phoenix/phoenix-barrett-jackson-scottsdale",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/phoenix/phoenix-barrett-jackson-scottsdale-b0b9afe23bbe6d82.webp",
+  "width": 1000,
+  "height": 563,
+  "credit": "Barrett-Jackson press release image via The Shop Magazine",
+  "sourceUrl": "https://theshopmag.com/?p=203114",
+  "imageSourceUrl": "https://theshopmag.com/wp-content/uploads/2026/10/SD27-Expansion-Press-Release-Lead-Image.jpg",
+  "sha256": "b0b9afe23bbe6d82d1e02e02ad55288e534a23a78e932b936a829a58fb87db5a"
+ },
+ {
   "key": "phoenix/phoenix-boyce-thompson-fall-plant-sale",
   "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/phoenix/phoenix-boyce-thompson-fall-plant-sale-53ddeef7320f782e.webp",
   "width": 1600,
@@ -3060,6 +4740,16 @@
   "sha256": "1bd3df63274c6ba3786d389a81204e03754fabe579ce362da323d6cef62e33e1"
  },
  {
+  "key": "phoenix/phoenix-casa-grande-ruins",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/phoenix/phoenix-casa-grande-ruins-835ded198e92b633.webp",
+  "width": 1280,
+  "height": 853,
+  "credit": "Goldmoney10 / Wikimedia Commons (CC0)",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Casa_Grand_Ruins_14.jpg",
+  "imageSourceUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Casa_Grand_Ruins_14.jpg/1280px-Casa_Grand_Ruins_14.jpg",
+  "sha256": "835ded198e92b6337c88160276b3ddd31919c022e04c5738398d6cccc1fa946f"
+ },
+ {
   "key": "phoenix/phoenix-diamondbacks-chase-field",
   "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/phoenix/phoenix-diamondbacks-chase-field-c5ebe4c774e561db.webp",
   "width": 1200,
@@ -3068,6 +4758,16 @@
   "sourceUrl": "https://www.azfamily.com/2026/03/30/batter-up-what-know-about-d-backs-2026-home-opener-chase-field/",
   "imageSourceUrl": "https://gray-kpho-prod.gtv-cdn.com/resizer/v2/KZ3DUJ4VKBGLZNYRTT6CDH4SHY.png?auth=8b8adb2a26828a50d79b57674f8d2295ff3ff4493fb4a5a7eea8558c97ea46df&width=1200&height=600&smart=true",
   "sha256": "c5ebe4c774e561dbab990b768b8ef5e974a617754e6787fb7371ae5d64f8440d"
+ },
+ {
+  "key": "phoenix/phoenix-fiesta-bowl-game",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/phoenix/phoenix-fiesta-bowl-game-2132159e11306686.webp",
+  "width": 1280,
+  "height": 960,
+  "credit": "Blervis / Wikimedia Commons (CC BY-SA 4.0)",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Fiesta_Bowl_2019_Stadium.jpg",
+  "imageSourceUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Fiesta_Bowl_2019_Stadium.jpg/1280px-Fiesta_Bowl_2019_Stadium.jpg",
+  "sha256": "2132159e113066866dcb0c662e77366ce990fbbda6e9db2b26587dbbaeb5791e"
  },
  {
   "key": "phoenix/phoenix-indian-fair-and-market",
@@ -3090,6 +4790,16 @@
   "sha256": "1325f939dea04062112c9c000b999c59a050ef934204eb6a3f21f82f2d255524"
  },
  {
+  "key": "phoenix/phoenix-lost-dutchman-superstition-hikes",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/phoenix/phoenix-lost-dutchman-superstition-hikes-539abf7a0d5d4522.webp",
+  "width": 1280,
+  "height": 853,
+  "credit": "dconvertini / Wikimedia Commons (CC BY-SA 2.0)",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Lost_Dutchman_State_Park%2C_Arizona%2C_USA_5-2024_10.jpg",
+  "imageSourceUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Lost_Dutchman_State_Park%2C_Arizona%2C_USA_5-2024_10.jpg/1280px-Lost_Dutchman_State_Park%2C_Arizona%2C_USA_5-2024_10.jpg",
+  "sha256": "539abf7a0d5d4522af54bb60e3766819cbe48b4ce876778f041b58c048ad7620"
+ },
+ {
   "key": "phoenix/phoenix-mesa-arts-center",
   "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/phoenix/phoenix-mesa-arts-center-9524e3283a09b6c6.webp",
   "width": 1366,
@@ -3098,6 +4808,26 @@
   "sourceUrl": "https://www.mesaartscenter.com",
   "imageSourceUrl": "https://storage.artdynamix.net/storage/slider_galleries/mesaartscenter/bc143516b16b330ca19bca4f6d3c24dab8d08d04.webp",
   "sha256": "9524e3283a09b6c6c9edc5af097f23e7490ea52472c26c80f915d0faee4731ac"
+ },
+ {
+  "key": "phoenix/phoenix-mim-musical-instrument-museum",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/phoenix/phoenix-mim-musical-instrument-museum-35e9be4823e19f5d.webp",
+  "width": 1280,
+  "height": 960,
+  "credit": "PamMcP / Wikimedia Commons (CC BY-SA 4.0)",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Musical_Instrument_Museum%2C_Phoenix_AZ.JPG",
+  "imageSourceUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Musical_Instrument_Museum%2C_Phoenix_AZ.JPG/1280px-Musical_Instrument_Museum%2C_Phoenix_AZ.JPG",
+  "sha256": "35e9be4823e19f5dbfe6510a5ff8e532216653b8049972deb43cba2098773f81"
+ },
+ {
+  "key": "phoenix/phoenix-montezuma-castle",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/phoenix/phoenix-montezuma-castle-ad0ba01855a5e46b.webp",
+  "width": 1280,
+  "height": 755,
+  "credit": "Roman Tokman / Wikimedia Commons (CC BY-SA 4.0)",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Montezuma_Castle_National_Monument_Wide.jpg",
+  "imageSourceUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Montezuma_Castle_National_Monument_Wide.jpg/1280px-Montezuma_Castle_National_Monument_Wide.jpg",
+  "sha256": "ad0ba01855a5e46b1f826750d8183f36012ba9abbb5dceefa5e6ec3244a68979"
  },
  {
   "key": "phoenix/phoenix-phoenix-art-museum",
@@ -3120,6 +4850,16 @@
   "sha256": "5369ab289d63bd9338fc7835efc62414f4396c303cdd351d4fc0dd7e2d55792f"
  },
  {
+  "key": "phoenix/phoenix-saguaro-national-park-east",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/phoenix/phoenix-saguaro-national-park-east-0815f03fcb0ac08f.webp",
+  "width": 1280,
+  "height": 853,
+  "credit": "dconvertini / Wikimedia Commons (CC BY-SA 2.0)",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Saguaro_National_Park_East%2C_Arizona%2C_USA_2024_14.jpg",
+  "imageSourceUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Saguaro_National_Park_East%2C_Arizona%2C_USA_2024_14.jpg/1280px-Saguaro_National_Park_East%2C_Arizona%2C_USA_2024_14.jpg",
+  "sha256": "0815f03fcb0ac08f7f4eab4ebc7f283e958b5aeb7996c8a358ff7d333d65c880"
+ },
+ {
   "key": "phoenix/phoenix-salt-river-tubing",
   "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/phoenix/phoenix-salt-river-tubing-1b1dff5cf47e890d.webp",
   "width": 1200,
@@ -3128,6 +4868,16 @@
   "sourceUrl": "https://www.abc15.com/entertainment/events/salt-river-tubing-announces-opening-date-for-2026-with-booking-now-open",
   "imageSourceUrl": "https://ewscripps.brightspotcdn.com/dims4/default/951870f/2147483647/strip/true/crop/3036x1594+0+55/resize/1200x630!/quality/90/?url=http%3A%2F%2Fewscripps-brightspot.s3.amazonaws.com%2F3c%2F82%2Fcb00cd5449a4a3de280bf9d1342e%2Fsrtiba.jpg",
   "sha256": "1b1dff5cf47e890dfcf98c66753926bee6407d1ccb7edbb4a17b1a521f2a8c3a"
+ },
+ {
+  "key": "phoenix/phoenix-slide-rock-swimming",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/phoenix/phoenix-slide-rock-swimming-afd1059c6a59dc19.webp",
+  "width": 1280,
+  "height": 991,
+  "credit": "AliHanlon / Wikimedia Commons (CC BY 2.0)",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Slide_Rock_State_Park2.jpg",
+  "imageSourceUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Slide_Rock_State_Park2.jpg/1280px-Slide_Rock_State_Park2.jpg",
+  "sha256": "afd1059c6a59dc1966442c3593a9f82811cf891175cdad10cc37dc99b0276581"
  },
  {
   "key": "phoenix/phoenix-spooky-safari",
@@ -3150,6 +4900,16 @@
   "sha256": "cbfd0b29546b7fb38cb3034d3291f5510db7f644e3c9e784e035d38f957b7cae"
  },
  {
+  "key": "phoenix/phoenix-sun-devil-football",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/phoenix/phoenix-sun-devil-football-f137c0e525f31f0a.webp",
+  "width": 1280,
+  "height": 875,
+  "credit": "Beyond My Ken / Wikimedia Commons (CC BY-SA 4.0)",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:2021_Sun_Devil_Stadium_2.jpg",
+  "imageSourceUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/2021_Sun_Devil_Stadium_2.jpg/1280px-2021_Sun_Devil_Stadium_2.jpg",
+  "sha256": "f137c0e525f31f0a8a7b3cd23cdece40871882a9f018b84b9b34d2c9dd176e74"
+ },
+ {
   "key": "phoenix/phoenix-taliesin-west-tours",
   "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/phoenix/phoenix-taliesin-west-tours-185816a8058342ab.webp",
   "width": 1440,
@@ -3168,6 +4928,36 @@
   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tempe_Festival_of_the_Arts.jpg",
   "imageSourceUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Tempe_Festival_of_the_Arts.jpg/1920px-Tempe_Festival_of_the_Arts.jpg",
   "sha256": "a764eb452730ecb5065f145d40ae6447c9929238b3886d60881e700912f66209"
+ },
+ {
+  "key": "phoenix/phoenix-tonto-national-monument",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/phoenix/phoenix-tonto-national-monument-3d60dd244a1f587f.webp",
+  "width": 1280,
+  "height": 960,
+  "credit": "Erinimagines / Wikimedia Commons (CC BY-SA 4.0)",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tonto_National_Monument%2C_Lower_Cliff_Dwelling_Trail_with_view_of_Roosevelt_Lake_in_the_Tonto_National_Forest.jpg",
+  "imageSourceUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Tonto_National_Monument%2C_Lower_Cliff_Dwelling_Trail_with_view_of_Roosevelt_Lake_in_the_Tonto_National_Forest.jpg/1280px-Tonto_National_Monument%2C_Lower_Cliff_Dwelling_Trail_with_view_of_Roosevelt_Lake_in_the_Tonto_National_Forest.jpg",
+  "sha256": "3d60dd244a1f587f366ab67daf2aebf3f9ce8bae88b75d0c1aed7fde1ac83f70"
+ },
+ {
+  "key": "phoenix/phoenix-tonto-natural-bridge",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/phoenix/phoenix-tonto-natural-bridge-62d9b2f7c81ee58e.webp",
+  "width": 1280,
+  "height": 853,
+  "credit": "Rednelson / Wikimedia Commons (CC BY-SA 3.0)",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tonto_Natural_Bridge.JPG",
+  "imageSourceUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Tonto_Natural_Bridge.JPG/1280px-Tonto_Natural_Bridge.JPG",
+  "sha256": "62d9b2f7c81ee58e0d3e00a3831acd5df2c2936f22a0a6d909f7f620b45392df"
+ },
+ {
+  "key": "phoenix/phoenix-tuzigoot-national-monument",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/phoenix/phoenix-tuzigoot-national-monument-6913d55bdf8088c7.webp",
+  "width": 1280,
+  "height": 960,
+  "credit": "Burley Packwood / Wikimedia Commons (CC BY-SA 4.0)",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tuzigoot_National_Monument_7.jpg",
+  "imageSourceUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Tuzigoot_National_Monument_7.jpg/1280px-Tuzigoot_National_Monument_7.jpg",
+  "sha256": "6913d55bdf8088c78a0ed73367000bb7319875a5e2d26dcf85159df371b50178"
  },
  {
   "key": "phoenix/phoenix-wildlife-world-zoo",
@@ -3218,6 +5008,16 @@
   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Bracken_Cave_Bats.jpg",
   "imageSourceUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e9/Bracken_Cave_Bats.jpg",
   "sha256": "c44e268b83b7878d3b6eed45b11693da988fed96a04fe2e8ab8e0e9264576891"
+ },
+ {
+  "key": "san-antonio/christmas-at-the-caverns",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/san-antonio/christmas-at-the-caverns-f0b43de0162e06cf.webp",
+  "width": 1600,
+  "height": 1200,
+  "credit": "M. Knight / Natural Bridge Caverns",
+  "sourceUrl": "https://naturalbridgecaverns.com/christmas-at-the-caverns/",
+  "imageSourceUrl": "https://naturalbridgecaverns.com/wp-content/uploads/2024/03/DT_Castle-of-White-Giants_0323_MKnight-11-scaled-3.jpg",
+  "sha256": "f0b43de0162e06cfc7e6350544f39968f9a93871f3f22f81322cf4793092eedc"
  },
  {
   "key": "san-antonio/fiesta-noche-del-rio",
@@ -3290,6 +5090,16 @@
   "sha256": "4b2a2257dcadf36d85db927ea459b78242f0c8ada11549597328ac4adff6d05a"
  },
  {
+  "key": "san-antonio/garner-state-park-frio-river",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/san-antonio/garner-state-park-frio-river-a9ea134141235dea.webp",
+  "width": 1600,
+  "height": 2449,
+  "credit": "DatraxMada (CC BY-SA 4.0) / USGS",
+  "sourceUrl": "https://www.usgs.gov/media/images/recreation-frio-river-overlook-concan-texas",
+  "imageSourceUrl": "https://d9-wret.s3.us-west-2.amazonaws.com/assets/palladium/production/s3fs-public/media/images/Garner_state_park_overlook.jpg",
+  "sha256": "a9ea134141235dea3b5863c4ca32c50351446e5c8408d82cef34676ec39e635c"
+ },
+ {
   "key": "san-antonio/gillespie-county-fair",
   "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/san-antonio/gillespie-county-fair-f70116e0394b59bc.webp",
   "width": 1200,
@@ -3330,6 +5140,16 @@
   "sha256": "6c81a0fa5fdbfffc4a114a300bfb0a5b36095a1c97045770312820b9f248419a"
  },
  {
+  "key": "san-antonio/lost-maples-fall-foliage",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/san-antonio/lost-maples-fall-foliage-01cd016a7076a75f.webp",
+  "width": 1600,
+  "height": 1200,
+  "credit": "MySA / San Antonio Express-News",
+  "sourceUrl": "https://www.mysanantonio.com/lifestyle/article/Lost-Maples-State-Park-best-park-fall-foliage-16603193.php",
+  "imageSourceUrl": "https://s.hdnux.com/photos/01/22/57/40/21690407/4/rawImage.jpg",
+  "sha256": "01cd016a7076a75f575ae3eef15c97c86e18eac2ce27682c26f63e70cd6fa2f0"
+ },
+ {
   "key": "san-antonio/luckenbach-texas-dance-hall",
   "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/san-antonio/luckenbach-texas-dance-hall-ec4c7f92a241841a.webp",
   "width": 1414,
@@ -3350,6 +5170,16 @@
   "sha256": "5a5b9f84585a728d74da22b2865a6198d72b7f5ba93caa175274943f7663face"
  },
  {
+  "key": "san-antonio/mcnay-second-thursday",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/san-antonio/mcnay-second-thursday-499408fe0d22db02.webp",
+  "width": 853,
+  "height": 1280,
+  "credit": "McNay Art Museum",
+  "sourceUrl": "https://www.mcnayart.org/",
+  "imageSourceUrl": "https://www.mcnayart.org/wp-content/uploads/2021/01/About-Us.jpg",
+  "sha256": "499408fe0d22db0253d4626c1a0962ce27c6a9c26ef6f8af6701a2538d012a27"
+ },
+ {
   "key": "san-antonio/muertos-fest",
   "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/san-antonio/muertos-fest-843b3a78ec3d11e2.webp",
   "width": 1200,
@@ -3368,6 +5198,16 @@
   "sourceUrl": "https://www.pacificwarmuseum.org/",
   "imageSourceUrl": "https://cdn.craft.cloud/01a05e05-1ccc-701b-80c4-6b07aae5e031/assets/uploads/images/default-meta-image.jpg?fit=cover&height=630&width=1200&s=4K_P0AxrRSGstS7P21ojLXitYe9p2CgVdP64H7ax07U",
   "sha256": "270f104b77dd2764cd7a4b5476f89beb3aef709e4851ab49f327b6257f5439d6"
+ },
+ {
+  "key": "san-antonio/natural-bridge-caverns-above-ground",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/san-antonio/natural-bridge-caverns-above-ground-27611e106b2fa00e.webp",
+  "width": 1600,
+  "height": 1018,
+  "credit": "Natural Bridge Caverns",
+  "sourceUrl": "https://naturalbridgecaverns.com/things-to-do/fun-above-ground/",
+  "imageSourceUrl": "https://naturalbridgecaverns.com/wp-content/uploads/2022/12/on-the-surface_0005_MJ-20210608-ed-34.jpg",
+  "sha256": "27611e106b2fa00eeb32e867bcfebf3ab19cd3b9cd2cef05f4565d2004fc1ab4"
  },
  {
   "key": "san-antonio/pearl-farmers-market",
@@ -3400,6 +5240,16 @@
   "sha256": "a4234c6a6f2e7ce1c291b1f0b7bce909baea6cd34016ff30411b8f7df54bf482"
  },
  {
+  "key": "san-antonio/san-antonio-missions-national-park",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/san-antonio/san-antonio-missions-national-park-315e02dc9066d930.webp",
+  "width": 1600,
+  "height": 466,
+  "credit": "National Park Service",
+  "sourceUrl": "https://www.nps.gov/saan/index.htm",
+  "imageSourceUrl": "https://www.nps.gov/common/uploads/banner_image/imr/homepage/2CFDA8E7-E8C1-CAFB-8A91C32F7D3F20AE.jpg",
+  "sha256": "315e02dc9066d930c7738c359c2bcf91ae9102f45dcc889a055e5ffad81bdbb7"
+ },
+ {
   "key": "san-antonio/san-antonio-stock-show-rodeo",
   "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/san-antonio/san-antonio-stock-show-rodeo-ab0db9238c65785c.webp",
   "width": 1200,
@@ -3430,6 +5280,16 @@
   "sha256": "6a5baec8193ed4e439d5bca5469cdab4c6388e009cf4457f3de51b07ab5ffa8e"
  },
  {
+  "key": "san-antonio/wurstfest-new-braunfels",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/san-antonio/wurstfest-new-braunfels-6f5b934e41b58690.webp",
+  "width": 1024,
+  "height": 683,
+  "credit": "Wurstfest official 2024 gallery",
+  "sourceUrl": "https://www.wurstfest.com/",
+  "imageSourceUrl": "https://wurstfest.com/wp-content/uploads/2025/04/wurstfest-2024-014.jpg",
+  "sha256": "6f5b934e41b586909cc2e353a67daacddcb9d744c2465adb3884a1b7bd297390"
+ },
+ {
   "key": "san-diego/bay-parade-of-lights",
   "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/san-diego/bay-parade-of-lights-a3d85260d7f7066d.webp",
   "width": 1200,
@@ -3438,6 +5298,16 @@
   "sourceUrl": "https://www.kpbs.org/events/ongoing/parade-of-lights-cruises",
   "imageSourceUrl": "https://cdn.kpbs.org/dims4/default/147d12c/2147483647/strip/true/crop/1500x788+0+0/resize/1200x630!/quality/90/?url=http%3A%2F%2Fkpbs-brightspot.s3.us-west-2.amazonaws.com%2Fda%2Fa7%2Ffb72cfb3406f9ed3af3a66780dfd%2Fparade.jpg",
   "sha256": "a3d85260d7f7066d797fb017aeee30763a8d20e8a18f91411afc76617b7ed843"
+ },
+ {
+  "key": "san-diego/belmont-park-mission-beach",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/san-diego/belmont-park-mission-beach-c38b0792bbcd82d3.webp",
+  "width": 1056,
+  "height": 920,
+  "credit": "Belmont Park",
+  "sourceUrl": "https://www.belmontpark.com/",
+  "imageSourceUrl": "https://symphony.cdn.tambourine.com/belmont-park/media/belmontpark-venues-belmontpark-64c430696f3c7.jpg",
+  "sha256": "c38b0792bbcd82d3e0f4ca217597b493668de383a06d085602abe980be621e87"
  },
  {
   "key": "san-diego/birch-aquarium-halloween-aglow",
@@ -3500,6 +5370,16 @@
   "sha256": "df2afe03bbd6ef7df2ef0d5c078c665c15814d8ad0d4f684a6b31c1912c3c6fd"
  },
  {
+  "key": "san-diego/flagship-whale-watching-cruise",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/san-diego/flagship-whale-watching-cruise-1753da81d0c38df7.webp",
+  "width": 1500,
+  "height": 1000,
+  "credit": "Flagship Cruises & Events",
+  "sourceUrl": "https://flagshipsd.com/whale-watching",
+  "imageSourceUrl": "https://flagshipsd.com/sites/default/files/styles/1500x1000/public/cruises/group_of_whales.jpg",
+  "sha256": "1753da81d0c38df76f255c8ec6015c2a9bb58d6790393d78f408d94f983b9a89"
+ },
+ {
   "key": "san-diego/gray-whale-watching-cabrillo",
   "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/san-diego/gray-whale-watching-cabrillo-2e50bd6c04b5d374.webp",
   "width": 1600,
@@ -3540,6 +5420,16 @@
   "sha256": "475ff10f362b6f5e61f386cafacbadbaf5143dfcd8187230c5e254e4a3f06f66"
  },
  {
+  "key": "san-diego/lakeside-rodeo",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/san-diego/lakeside-rodeo-1faf80464d305e23.webp",
+  "width": 1280,
+  "height": 853,
+  "credit": "Wikimedia Commons (Lakeside Rodeo Arena)",
+  "sourceUrl": "https://en.wikipedia.org/wiki/Lakeside,_California",
+  "imageSourceUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b5/Lakeside_Rodeo_Arena_-_Lakeside%2C_San_Diego_County%2C_California.jpg/1280px-Lakeside_Rodeo_Arena_-_Lakeside%2C_San_Diego_County%2C_California.jpg",
+  "sha256": "1faf80464d305e23045f0e5fc850e8adde9cfc09eff98855f839d44cd55ec173"
+ },
+ {
   "key": "san-diego/legoland-california-resort",
   "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/san-diego/legoland-california-resort-ecce8b402e2a7c55.webp",
   "width": 1600,
@@ -3550,6 +5440,16 @@
   "sha256": "ecce8b402e2a7c5558d66ad19314a73f327ea1e8048b2e0bed72834e7f3a1d52"
  },
  {
+  "key": "san-diego/lightscape-san-diego-botanic-garden",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/san-diego/lightscape-san-diego-botanic-garden-819eb5497597572f.webp",
+  "width": 1600,
+  "height": 1038,
+  "credit": "San Diego Botanic Garden",
+  "sourceUrl": "https://www.sdbgarden.org/lightscape",
+  "imageSourceUrl": "https://sdbg.org/wp-content/uploads/2023/07/Floraison-2-scaled.jpg",
+  "sha256": "819eb5497597572fbe35951fc515810f28e5bfa195c7017cbc1c83dae54d93d7"
+ },
+ {
   "key": "san-diego/maritime-museum-of-san-diego",
   "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/san-diego/maritime-museum-of-san-diego-56f84437cdf38cf4.webp",
   "width": 1600,
@@ -3558,6 +5458,36 @@
   "sourceUrl": "https://www.maritimemuseum.org/",
   "imageSourceUrl": "https://static.wixstatic.com/media/8cb8cb_1b341f8a11d3446d8967792e6888e04a%7Emv2.jpg/v1/fit/w_2500,h_1330,al_c/8cb8cb_1b341f8a11d3446d8967792e6888e04a%7Emv2.jpg",
   "sha256": "56f84437cdf38cf43a010b7491d4e31a47dce2c763b3702180b761a31f029ba7"
+ },
+ {
+  "key": "san-diego/mission-basilica-san-diego-de-alcala",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/san-diego/mission-basilica-san-diego-de-alcala-5e624cea4795245d.webp",
+  "width": 1280,
+  "height": 874,
+  "credit": "Wikimedia Commons (Mission San Diego de Alcala church)",
+  "sourceUrl": "https://en.wikipedia.org/wiki/Mission_San_Diego_de_Alcal%C3%A1",
+  "imageSourceUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a0/Mission_San_Diego_de_Alcal%C3%A1_-_church.jpg/1280px-Mission_San_Diego_de_Alcal%C3%A1_-_church.jpg",
+  "sha256": "5e624cea4795245d66482a743135d3b7cb60aba23b7bc998438b600acc99eaae"
+ },
+ {
+  "key": "san-diego/mission-trails-regional-park",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/san-diego/mission-trails-regional-park-b4362955c2fa8933.webp",
+  "width": 1280,
+  "height": 960,
+  "credit": "Wikimedia Commons (Mission Trails Regional Park)",
+  "sourceUrl": "https://en.wikipedia.org/wiki/Mission_Trails_Regional_Park",
+  "imageSourceUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6e/Mission-trails-regional-park.JPG/1280px-Mission-trails-regional-park.JPG",
+  "sha256": "b4362955c2fa89336a3ab0983a918240977117d431c268e75e8291f469389882"
+ },
+ {
+  "key": "san-diego/natural-history-museum-balboa",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/san-diego/natural-history-museum-balboa-716636e678762ff9.webp",
+  "width": 1280,
+  "height": 1099,
+  "credit": "Wikimedia Commons (San Diego Natural History Museum exterior)",
+  "sourceUrl": "https://en.wikipedia.org/wiki/San_Diego_Natural_History_Museum",
+  "imageSourceUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/07/San_Diego_Natural_History_Museum_exterior.jpg/1280px-San_Diego_Natural_History_Museum_exterior.jpg",
+  "sha256": "716636e678762ff9333bb9879ea9309c20234488f52304ca831a3e4adb4a41af"
  },
  {
   "key": "san-diego/padres-baseball-petco-park",
@@ -3600,6 +5530,16 @@
   "sha256": "309ca6be2c918bc7f2cbcfc6169446d5cf7a29218762ee1bbc0ac8232c411229"
  },
  {
+  "key": "san-diego/san-diego-air-and-space-museum",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/san-diego/san-diego-air-and-space-museum-92f2f8ebbb0e2eb4.webp",
+  "width": 1280,
+  "height": 853,
+  "credit": "Wikimedia Commons (Aerospace Museum, Ford Building)",
+  "sourceUrl": "https://en.wikipedia.org/wiki/Ford_Building_(San_Diego)",
+  "imageSourceUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/98/AerospaceMuseum.jpg/1280px-AerospaceMuseum.jpg",
+  "sha256": "92f2f8ebbb0e2eb4a6956c6df80389e50468edb7b6d19154a3583d856b3774f9"
+ },
+ {
   "key": "san-diego/san-diego-county-fair",
   "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/san-diego/san-diego-county-fair-88223fa4f1f75b62.webp",
   "width": 1600,
@@ -3620,6 +5560,26 @@
   "sha256": "64fe4a256b7d7177404bbed981715cf226d9952403460166411b610a0d431167"
  },
  {
+  "key": "san-diego/san-diego-restaurant-week",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/san-diego/san-diego-restaurant-week-2606e4eac87417c0.webp",
+  "width": 1600,
+  "height": 1067,
+  "credit": "a7 Creative Group / Times of San Diego (San Diego Restaurant Week)",
+  "sourceUrl": "https://timesofsandiego.com/arts/2024/12/12/san-diego-restaurant-week-returns-to-celebrate-100-restaurants-from-oceanside-to-chula-vista/",
+  "imageSourceUrl": "https://i0.wp.com/timesofsandiego.com/wp-content/uploads/2024/12/a7dCreativeGroup-Tom-Ham4-scaled.jpg?fit=1600%2C1067&ssl=1",
+  "sha256": "2606e4eac87417c0f76dcbb001018e758c735441408cd00f3627a54a7c45f2bf"
+ },
+ {
+  "key": "san-diego/sdsu-aztecs-football",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/san-diego/sdsu-aztecs-football-88f194bce691ad64.webp",
+  "width": 1280,
+  "height": 569,
+  "credit": "Wikimedia Commons (Snapdragon Stadium interior night panorama)",
+  "sourceUrl": "https://en.wikipedia.org/wiki/Snapdragon_Stadium",
+  "imageSourceUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/Snapdragon_Stadium_interior-Night_panorama_view_2.jpg/1280px-Snapdragon_Stadium_interior-Night_panorama_view_2.jpg",
+  "sha256": "88f194bce691ad648428b977de0c38d1ee9d120966c5856d0c5bbebd4aa15cd9"
+ },
+ {
   "key": "san-diego/skating-by-the-sea-hotel-del",
   "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/san-diego/skating-by-the-sea-hotel-del-61e250da3702371c.webp",
   "width": 1600,
@@ -3630,6 +5590,16 @@
   "sha256": "61e250da3702371c81ddb61b3f77b949424eb66bca09ba9dd200349209bc1769"
  },
  {
+  "key": "san-diego/us-open-sandcastle-imperial-beach",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/san-diego/us-open-sandcastle-imperial-beach-b2c988b99c4f5e13.webp",
+  "width": 1024,
+  "height": 683,
+  "credit": "Coronado Times (Imperial Beach Sun & Sea Festival)",
+  "sourceUrl": "https://coronadotimes.com/event/imperial-beachs-sun-sea-festival/",
+  "imageSourceUrl": "https://coronadotimes.com/wp-content/uploads/2021/08/DSCF8618.jpg",
+  "sha256": "b2c988b99c4f5e13a75922dfd053faef108b75472cada3879ccd301a8129bd87"
+ },
+ {
   "key": "san-diego/uss-midway-museum",
   "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/san-diego/uss-midway-museum-85cfb1e077353513.webp",
   "width": 1600,
@@ -3638,6 +5608,36 @@
   "sourceUrl": "https://www.midway.org/",
   "imageSourceUrl": "https://images.prismic.io/midway/f92f8e20-1e2a-4d1b-8406-cbdf87ecbcee_USS-Midway_Homepage_Heroes_2880x1800-04.jpg?auto=format,compress",
   "sha256": "85cfb1e0773535136632dec33a88f945de0a539313c863618fe44ab41e9514ec"
+ },
+ {
+  "key": "san-francisco/alcatraz-island-tour",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/san-francisco/alcatraz-island-tour-4870c68c5ecaf57f.webp",
+  "width": 1280,
+  "height": 800,
+  "credit": "Frank Schulenburg / Wikimedia Commons",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Alcatraz_Island_as_seen_from_the_East.jpg",
+  "imageSourceUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Alcatraz_Island_as_seen_from_the_East.jpg/1280px-Alcatraz_Island_as_seen_from_the_East.jpg",
+  "sha256": "4870c68c5ecaf57f818d3d22819d0212efc297faff6a72b8cbf2e80a7aacfb58"
+ },
+ {
+  "key": "san-francisco/angel-island-state-park",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/san-francisco/angel-island-state-park-01cb4fe7acd78f9f.webp",
+  "width": 1280,
+  "height": 719,
+  "credit": "Wikimedia Commons (Angel Island (California).jpg)",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Angel_Island_%28California%29.jpg",
+  "imageSourceUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Angel_Island_%28California%29.jpg/1280px-Angel_Island_%28California%29.jpg",
+  "sha256": "01cb4fe7acd78f9f6fcee0e4d052362a28f26b12300325a1ae8ff2745bda7664"
+ },
+ {
+  "key": "san-francisco/ano-nuevo-elephant-seals",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/san-francisco/ano-nuevo-elephant-seals-a39d1cf483c4de01.webp",
+  "width": 1280,
+  "height": 853,
+  "credit": "Changku88 / Wikimedia Commons",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Elephant_Seals_at_A%C3%B1o_Nuevo_State_Park_%28California%29.jpg",
+  "imageSourceUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Elephant_Seals_at_A%C3%B1o_Nuevo_State_Park_%28California%29.jpg/1280px-Elephant_Seals_at_A%C3%B1o_Nuevo_State_Park_%28California%29.jpg",
+  "sha256": "a39d1cf483c4de01a53b81cfb36f875677c85c25c13c5f9fb02bce10d1b48089"
  },
  {
   "key": "san-francisco/bay-to-breakers",
@@ -3658,6 +5658,16 @@
   "sourceUrl": "https://www.sfmta.com/getting-around/muni/cable-cars",
   "imageSourceUrl": "https://www.sfmta.com/files/teaser-images/2017/09/130410_118_cable_car-2.jpg",
   "sha256": "60be21def74fe64aa15c306aea0c1dfacfafa84d86b5c327a510a1fe8a6fffa5"
+ },
+ {
+  "key": "san-francisco/cal-bears-football",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/san-francisco/cal-bears-football-d8c9a255455931fb.webp",
+  "width": 1280,
+  "height": 901,
+  "credit": "Quintin Soloviev / Wikimedia Commons",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:California_Memorial_Stadium_in_2024.jpg",
+  "imageSourceUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/California_Memorial_Stadium_in_2024.jpg/1280px-California_Memorial_Stadium_in_2024.jpg",
+  "sha256": "d8c9a255455931fba956f72dfed1dd317dbde4c133eb6e7202366fab0a083697"
  },
  {
   "key": "san-francisco/calacademy-nightlife",
@@ -3740,6 +5750,16 @@
   "sha256": "551ce434ed2e989385b2904cb2d503fc843a45e823fb0bbf0006b55b9178d4a2"
  },
  {
+  "key": "san-francisco/eyvind-earle-exhibition-disney-museum",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/san-francisco/eyvind-earle-exhibition-disney-museum-b911201544bb2990.webp",
+  "width": 1600,
+  "height": 524,
+  "credit": "The Walt Disney Family Museum",
+  "sourceUrl": "https://www.waltdisney.org/eyvind-earle",
+  "imageSourceUrl": "https://www.waltdisney.org/sites/default/files/styles/header_image/public/2026-08/WDFM_EyvindEarle_WebAssets_v1_1680x550_Header.png?itok=uIoZUsNW",
+  "sha256": "b911201544bb2990cb82f4b2cbab12dfd648eb7772d166136a2ca22155d5418e"
+ },
+ {
   "key": "san-francisco/filoli-nightfall",
   "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/san-francisco/filoli-nightfall-fc3344b374e94228.webp",
   "width": 1600,
@@ -3800,6 +5820,16 @@
   "sha256": "490978cc3d4bdbe8f82ca9263eba87ac5e458dff93935b25cf8290c8168b2cc6"
  },
  {
+  "key": "san-francisco/kabuki-springs-spa",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/san-francisco/kabuki-springs-spa-584dc3bf8d52db34.webp",
+  "width": 1600,
+  "height": 1067,
+  "credit": "Kabuki Springs & Spa",
+  "sourceUrl": "https://kabukisprings.com/",
+  "imageSourceUrl": "https://kabukisprings.com/wp-content/uploads/2025/04/Kabuki_25_Day_Two_0768.webp",
+  "sha256": "584dc3bf8d52db347c444e1b87878f5881d24ca8d124b17bf8f137527c8f9186"
+ },
+ {
   "key": "san-francisco/lightscape-sf-botanical-garden",
   "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/san-francisco/lightscape-sf-botanical-garden-1c2a39f2f0cb1e2c.webp",
   "width": 1600,
@@ -3808,6 +5838,26 @@
   "sourceUrl": "https://www.sfbg.org/lightscape",
   "imageSourceUrl": "https://gggp.org/wp-content/uploads/2025/09/Kew-12-20-939-A4-RH-scaled.jpg",
   "sha256": "1c2a39f2f0cb1e2c3a524b5a00d87999d8e8bc3cc2ad950d02f3e38b60e9c5c0"
+ },
+ {
+  "key": "san-francisco/mount-diablo-state-park",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/san-francisco/mount-diablo-state-park-1482aede28f86891.webp",
+  "width": 1280,
+  "height": 853,
+  "credit": "formulanone / Wikimedia Commons",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Mount_Diablo_State_Park.jpg",
+  "imageSourceUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Mount_Diablo_State_Park.jpg/1280px-Mount_Diablo_State_Park.jpg",
+  "sha256": "1482aede28f868914b48a9fb3feb35cbd83c68f04439a35216b878c4095d368e"
+ },
+ {
+  "key": "san-francisco/mount-tamalpais-state-park",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/san-francisco/mount-tamalpais-state-park-e33cc1206f03d465.webp",
+  "width": 1280,
+  "height": 960,
+  "credit": "Sarah Stierch (Missvain) / Wikimedia Commons",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Mount_Tamalpais_-_August_2025_-_Sarah_Stierch.jpg",
+  "imageSourceUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Mount_Tamalpais_-_August_2025_-_Sarah_Stierch.jpg/1280px-Mount_Tamalpais_-_August_2025_-_Sarah_Stierch.jpg",
+  "sha256": "e33cc1206f03d465a806fc4b60e1802997c85ea0755f2d449313dd18b38bb0fc"
  },
  {
   "key": "san-francisco/outside-lands",
@@ -3860,6 +5910,16 @@
   "sha256": "6dbc985657a13822ff74e1053fb0735e615661f53c0ff17ff4bc366e72299571"
  },
  {
+  "key": "san-francisco/warriors-chase-center",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/san-francisco/warriors-chase-center-beb8ab35f0ff1177.webp",
+  "width": 1280,
+  "height": 669,
+  "credit": "Gregory Varnum / Wikimedia Commons",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Chase_Center_-_February_2019_%281943%29.jpg",
+  "imageSourceUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Chase_Center_-_February_2019_%281943%29.jpg/1280px-Chase_Center_-_February_2019_%281943%29.jpg",
+  "sha256": "beb8ab35f0ff1177588c40e18150c86d121ea7e50bf50ef1f0311cd75275750a"
+ },
+ {
   "key": "san-francisco/winchester-mystery-house",
   "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/san-francisco/winchester-mystery-house-82f8f38fb372904e.webp",
   "width": 1024,
@@ -3868,6 +5928,16 @@
   "sourceUrl": "https://www.winchestermysteryhouse.com",
   "imageSourceUrl": "https://winchestermysteryhouse.com/wp-content/uploads/2022/08/DJI_0136-scaled-1-1024x559.jpg",
   "sha256": "82f8f38fb372904e58cf072c37c81989cb6bd6928be41a9b05829209fa6f905e"
+ },
+ {
+  "key": "seattle/5th-avenue-theatre",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/seattle/5th-avenue-theatre-34e5f9c876b98833.webp",
+  "width": 1280,
+  "height": 1792,
+  "credit": "Caitlyn.stark / Wikimedia Commons",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:5th_Avenue_Theatre_Marquee%2C_Holiday_2016.jpg",
+  "imageSourceUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/5th_Avenue_Theatre_Marquee%2C_Holiday_2016.jpg/1280px-5th_Avenue_Theatre_Marquee%2C_Holiday_2016.jpg",
+  "sha256": "34e5f9c876b988336243db3f6cd7d4843a7a4cc2a26fdd190091faad1482b0b0"
  },
  {
   "key": "seattle/argosy-christmas-ship-festival",
@@ -3928,6 +5998,16 @@
   "sourceUrl": "https://www.chihulygardenandglass.com/",
   "imageSourceUrl": "https://www.chihulygardenandglass.com/img/_1200x630_crop_center-center_82_none/Pacific-Sun-and-Glasshouse-Sculpture_High-res-JPEG-_not-resized.jpg?mtime=1696541270",
   "sha256": "8017a2052b3e5a8ce05d67b94ff5a5cef6aee20dd116716a15e6985796b8c295"
+ },
+ {
+  "key": "seattle/hurricane-ridge-olympic-np",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/seattle/hurricane-ridge-olympic-np-ad78de426f50acdc.webp",
+  "width": 1280,
+  "height": 853,
+  "credit": "TravelingOtter / Wikimedia Commons",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Hurricane_Ridge_-_Olympic_National_Park%2C_Washington.jpg",
+  "imageSourceUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Hurricane_Ridge_-_Olympic_National_Park%2C_Washington.jpg/1280px-Hurricane_Ridge_-_Olympic_National_Park%2C_Washington.jpg",
+  "sha256": "ad78de426f50acdc34bd34e3ff5bee98632d5e7d8f40a3e6495e32a4254a6e20"
  },
  {
   "key": "seattle/kubota-garden-fall-color-tours",
@@ -4010,6 +6090,26 @@
   "sha256": "79f5f71d031076aa3e0c5b3b2f9c181665ba217087f1e84f7081495d2b9466b2"
  },
  {
+  "key": "seattle/poulsbo-viking-fest",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/seattle/poulsbo-viking-fest-67e79d74f77f8adb.webp",
+  "width": 1280,
+  "height": 853,
+  "credit": "Steven Pavlov / Wikimedia Commons (Viking Fest Parade 2009)",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Viking_Fest_Parade_2009_in_Poulsbo%2C_WA_%E2%80%94_IMG_0453.jpg",
+  "imageSourceUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Viking_Fest_Parade_2009_in_Poulsbo%2C_WA_%E2%80%94_IMG_0453.jpg/1280px-Viking_Fest_Parade_2009_in_Poulsbo%2C_WA_%E2%80%94_IMG_0453.jpg",
+  "sha256": "67e79d74f77f8adbc47a8f4075e64842b69086357b8728b4ae4c872fc1c75030"
+ },
+ {
+  "key": "seattle/san-juan-island-national-historical-park",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/seattle/san-juan-island-national-historical-park-66ac9e399cb49b94.webp",
+  "width": 1280,
+  "height": 961,
+  "credit": "Buidhe / Wikimedia Commons (American Camp)",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:American_Camp%2C_San_Juan_Island_%2812812%29.jpg",
+  "imageSourceUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/American_Camp%2C_San_Juan_Island_%2812812%29.jpg/1280px-American_Camp%2C_San_Juan_Island_%2812812%29.jpg",
+  "sha256": "66ac9e399cb49b94714feb4228dced8efeb5ca58179e15368e8c137b8dc62b22"
+ },
+ {
   "key": "seattle/seafair-weekend-festival",
   "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/seattle/seafair-weekend-festival-180c54cce554261d.webp",
   "width": 1600,
@@ -4018,6 +6118,16 @@
   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Blue_Eagles_at_Seafair,_August_2019.jpg",
   "imageSourceUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9f/Blue_Eagles_at_Seafair%2C_August_2019.jpg/1920px-Blue_Eagles_at_Seafair%2C_August_2019.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
   "sha256": "180c54cce554261d409ab8850400e695f313998027071573fbb42884841e1eb2"
+ },
+ {
+  "key": "seattle/seattle-art-fair",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/seattle/seattle-art-fair-b56d66575e82a7c5.webp",
+  "width": 1280,
+  "height": 850,
+  "credit": "Joe Mabel / Wikimedia Commons (Seattle Art Fair 2017)",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Seattle_Art_Fair_2017_-_Gaussian_blur_applied.jpg",
+  "imageSourceUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Seattle_Art_Fair_2017_-_Gaussian_blur_applied.jpg/1280px-Seattle_Art_Fair_2017_-_Gaussian_blur_applied.jpg",
+  "sha256": "b56d66575e82a7c577775446a435c93fd4588bf8aafae0c04c4069154e1cd1fc"
  },
  {
   "key": "seattle/seattle-christmas-market",
@@ -4030,6 +6140,16 @@
   "sha256": "48ad42e056a769f80b4e10b27cc2ecb622b2dc798cd6ca86a2277aef34d6a698"
  },
  {
+  "key": "seattle/seattle-great-wheel",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/seattle/seattle-great-wheel-3670a1059acc5e32.webp",
+  "width": 1280,
+  "height": 960,
+  "credit": "Burley Packwood / Wikimedia Commons",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Seattle_Great_Wheel_Washington1.jpg",
+  "imageSourceUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Seattle_Great_Wheel_Washington1.jpg/1280px-Seattle_Great_Wheel_Washington1.jpg",
+  "sha256": "3670a1059acc5e328aba313f1465f71c25a93e32d95d04bae2738450799e8e08"
+ },
+ {
   "key": "seattle/seattle-kraken-climate-pledge",
   "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/seattle/seattle-kraken-climate-pledge-2bcc982ccf68c76b.webp",
   "width": 1600,
@@ -4038,6 +6158,36 @@
   "sourceUrl": "https://thehockeynews.com/nhl/seattle-kraken/latest-news/seattle-kraken-announce-home-opener-for-2026-27-season",
   "imageSourceUrl": "https://deweb-519a7.b-cdn.net/post-images/69ed8abe-fb59-4ade-bb41-1d8a9bd623d9.jpeg",
   "sha256": "2bcc982ccf68c76babf5380c4872c3b059cd60d7225376a90a37b25d8dbb4200"
+ },
+ {
+  "key": "seattle/seattle-pride-parade",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/seattle/seattle-pride-parade-3f84c8b00fcdb154.webp",
+  "width": 1280,
+  "height": 854,
+  "credit": "Mount Rainier NPS / Wikimedia Commons (2023 Seattle Pride Parade)",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:2023-06-25_Seattle_Pride_Parade_%2853016802453%29.jpg",
+  "imageSourceUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/2023-06-25_Seattle_Pride_Parade_%2853016802453%29.jpg/1280px-2023-06-25_Seattle_Pride_Parade_%2853016802453%29.jpg",
+  "sha256": "3f84c8b00fcdb154e7859830ac946028f8d4bbf970f2efdeaef3850b724db511"
+ },
+ {
+  "key": "seattle/seattle-seahawks-lumen-field",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/seattle/seattle-seahawks-lumen-field-964f02d0bae3bd91.webp",
+  "width": 1280,
+  "height": 867,
+  "credit": "Seaman Sarah Wilson, U.S. Coast Guard / Wikimedia Commons",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Port_Angeles-based_Coast_Guardsmen_fly_over_Seattle_Seahawks_game_151228-G-LS785-003.jpg",
+  "imageSourceUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Port_Angeles-based_Coast_Guardsmen_fly_over_Seattle_Seahawks_game_151228-G-LS785-003.jpg/1280px-Port_Angeles-based_Coast_Guardsmen_fly_over_Seattle_Seahawks_game_151228-G-LS785-003.jpg",
+  "sha256": "964f02d0bae3bd91e6a4476039bdea236b4808eb8cfdfd7d141fe662700a8089"
+ },
+ {
+  "key": "seattle/seattle-sounders-fc",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/seattle/seattle-sounders-fc-fdedc86367a2ce1f.webp",
+  "width": 1280,
+  "height": 838,
+  "credit": "SounderBruce / Wikimedia Commons",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Seattle_Sounders_FC_vs._Real_Salt_Lake_-_2021_MLS_Cup_Playoffs_at_Lumen_Field.jpg",
+  "imageSourceUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Seattle_Sounders_FC_vs._Real_Salt_Lake_-_2021_MLS_Cup_Playoffs_at_Lumen_Field.jpg/1280px-Seattle_Sounders_FC_vs._Real_Salt_Lake_-_2021_MLS_Cup_Playoffs_at_Lumen_Field.jpg",
+  "sha256": "fdedc86367a2ce1fb792500b3f124ba3d9ce871ca88cead57a07532a7df52e7a"
  },
  {
   "key": "seattle/seattle-storm-wnba",
@@ -4050,6 +6200,16 @@
   "sha256": "e76dbd0dea49582b225f376c1835599fca6ebed4e5c627d5255ad7a49e80b68c"
  },
  {
+  "key": "seattle/seattle-symphony-benaroya",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/seattle/seattle-symphony-benaroya-8c4e7bfed0caa9f4.webp",
+  "width": 1280,
+  "height": 696,
+  "credit": "Dcoetzee / Wikimedia Commons",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Seattle_Symphony_Orchestra_on_stage_in_Benaroya_Hall_%28cropped%29.jpg",
+  "imageSourceUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Seattle_Symphony_Orchestra_on_stage_in_Benaroya_Hall_%28cropped%29.jpg/1280px-Seattle_Symphony_Orchestra_on_stage_in_Benaroya_Hall_%28cropped%29.jpg",
+  "sha256": "8c4e7bfed0caa9f480c654fc71f2b0ad52638bb10a0c1cf8d100c1afdf7f90f0"
+ },
+ {
   "key": "seattle/siff-cinema-film-center",
   "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/seattle/siff-cinema-film-center-a8580df777b3e9c5.webp",
   "width": 1600,
@@ -4058,6 +6218,16 @@
   "sourceUrl": "https://www.siff.net/",
   "imageSourceUrl": "https://www.siff.net/images/FESTIVAL/2026/FEST26_MainPass_1600x900.png",
   "sha256": "a8580df777b3e9c53b29d45e9c3079abc81cf46b087f395723c321ba2ed266fe"
+ },
+ {
+  "key": "seattle/skagit-eagle-festival",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/seattle/skagit-eagle-festival-2bcc59baa622fe6f.webp",
+  "width": 1280,
+  "height": 853,
+  "credit": "Joe Mabel / Wikimedia Commons (eagles, Skagit County)",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Eagles_in_tree%2C_Skagit_County%2C_Washington.jpg",
+  "imageSourceUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Eagles_in_tree%2C_Skagit_County%2C_Washington.jpg/1280px-Eagles_in_tree%2C_Skagit_County%2C_Washington.jpg",
+  "sha256": "2bcc59baa622fe6fdc9b86fb483e5cf5c2154753f007bfca1f2a18dbef648340"
  },
  {
   "key": "seattle/skagit-tulip-festival",
@@ -4080,6 +6250,26 @@
   "sha256": "b0d454e67a96a4f76cf38fa5162267e59e1369299d90fcf671efb5631db18305"
  },
  {
+  "key": "seattle/uw-huskies-football-husky-stadium",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/seattle/uw-huskies-football-husky-stadium-2e8378ded9eaded6.webp",
+  "width": 1280,
+  "height": 467,
+  "credit": "Bobak Ha'Eri / Wikimedia Commons",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:2009-0919-HuskyStadium.jpg",
+  "imageSourceUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/2009-0919-HuskyStadium.jpg/1280px-2009-0919-HuskyStadium.jpg",
+  "sha256": "2e8378ded9eaded6b7c5bfb3e162f5a609533bc7a74f150b17d694de81559caa"
+ },
+ {
+  "key": "seattle/washington-park-arboretum",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/seattle/washington-park-arboretum-9b165fd4e6ba17a4.webp",
+  "width": 1280,
+  "height": 960,
+  "credit": "Another Believer / Wikimedia Commons",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Washington_Park_Arboretum%2C_Seattle%2C_August_2024.jpg",
+  "imageSourceUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Washington_Park_Arboretum%2C_Seattle%2C_August_2024.jpg/1280px-Washington_Park_Arboretum%2C_Seattle%2C_August_2024.jpg",
+  "sha256": "9b165fd4e6ba17a48aebf513721cc9982d5b45e239ce87c59a649029450327ff"
+ },
+ {
   "key": "seattle/woodland-park-zoo-wildlanterns",
   "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/seattle/woodland-park-zoo-wildlanterns-05737313bbd31770.webp",
   "width": 1600,
@@ -4090,6 +6280,16 @@
   "sha256": "05737313bbd31770298bf47d797935ee35c43eac7b4493d5ddbc7bb07f161232"
  },
  {
+  "key": "washington-dc/a-capitol-fourth",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/washington-dc/a-capitol-fourth-c25d3fce27a75e66.webp",
+  "width": 1280,
+  "height": 853,
+  "credit": "Reese Brown / Wikimedia Commons (Public domain)",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Dress_Rehearsal_for_%22A_Capitol_Fourth%22_Concert_and_Celebration_170703-D-TQ271-005.jpg",
+  "imageSourceUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/aa/Dress_Rehearsal_for_%22A_Capitol_Fourth%22_Concert_and_Celebration_170703-D-TQ271-005.jpg/1280px-Dress_Rehearsal_for_%22A_Capitol_Fourth%22_Concert_and_Celebration_170703-D-TQ271-005.jpg",
+  "sha256": "c25d3fce27a75e6694da89d6536fe1c2d87d52f898eb837d71a76b4c72a82b83"
+ },
+ {
   "key": "washington-dc/annapolis-sailboat-show",
   "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/washington-dc/annapolis-sailboat-show-16896bcbdf3039e3.webp",
   "width": 1600,
@@ -4098,6 +6298,16 @@
   "sourceUrl": "https://annapolisboatshows.com/",
   "imageSourceUrl": "https://abs-website-prod.s3.amazonaws.com/wp-content/uploads/2023/02/23181630/header-home-bg.jpg.webp",
   "sha256": "16896bcbdf3039e3ba0bcd276f5311cc8b8c6df6a98dde9c35f61862413e4542"
+ },
+ {
+  "key": "washington-dc/calvert-cliffs-fossil-beach",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/washington-dc/calvert-cliffs-fossil-beach-f9bb9e1797d68a2d.webp",
+  "width": 1280,
+  "height": 853,
+  "credit": "crudmucosa / Wikimedia Commons (CC BY 2.0)",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:The_Cliffs_and_the_Beach.jpg",
+  "imageSourceUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/75/The_Cliffs_and_the_Beach.jpg/1280px-The_Cliffs_and_the_Beach.jpg",
+  "sha256": "f9bb9e1797d68a2d0d02d2f860d9ac3e5395ef0c285cd4f776755bf5bc5652a3"
  },
  {
   "key": "washington-dc/capital-pride",
@@ -4120,6 +6330,16 @@
   "sha256": "bd192211ba7175828fb6cb6c11ea3ba7ea3ac238963792f15828f17dfc9186be"
  },
  {
+  "key": "washington-dc/catoctin-mountain-park-fall",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/washington-dc/catoctin-mountain-park-fall-6454578def999297.webp",
+  "width": 1280,
+  "height": 855,
+  "credit": "Acroterion / Wikimedia Commons (CC BY-SA 4.0)",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Catoctin_Mountain_Park_VC_MD1.jpg",
+  "imageSourceUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/28/Catoctin_Mountain_Park_VC_MD1.jpg/1280px-Catoctin_Mountain_Park_VC_MD1.jpg",
+  "sha256": "6454578def999297bdc22d32504cae8672bc8823dac3dc4a1e7d8436cf5c40b5"
+ },
+ {
   "key": "washington-dc/cherry-blossom-run",
   "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/washington-dc/cherry-blossom-run-624bf2b1580fdd80.webp",
   "width": 1024,
@@ -4128,6 +6348,26 @@
   "sourceUrl": "https://www.runwashington.com/2022/04/03/credit-union-cherry-blossom-ten-mile-photos/",
   "imageSourceUrl": "https://s26562.pcdn.co/wp-content/uploads/2022/04/DSC_0270-XL.jpg",
   "sha256": "624bf2b1580fdd8051051c955e704c87f30bb374f80aeff4fef5c4cbaf9d825c"
+ },
+ {
+  "key": "washington-dc/co-canal-towpath",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/washington-dc/co-canal-towpath-d29fd1b443c9dd0d.webp",
+  "width": 1280,
+  "height": 960,
+  "credit": "Loneshieling / Wikimedia Commons (CC BY-SA 4.0)",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:C%26O_canal_towpath2.jpg",
+  "imageSourceUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/ca/C%26O_canal_towpath2.jpg/1280px-C%26O_canal_towpath2.jpg",
+  "sha256": "d29fd1b443c9dd0d62105159efb2323b43b13c457c5e7b083565b3cceec5b54c"
+ },
+ {
+  "key": "washington-dc/commanders-at-northwest-stadium",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/washington-dc/commanders-at-northwest-stadium-3c2f6c4f9162b06c.webp",
+  "width": 1280,
+  "height": 853,
+  "credit": "Duane Lempke / Wikimedia Commons (CC0)",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Clark_Construction_-_FEDEX_Field_(Jack_Kent_Cooke_Stadium)_Looking_NW.jpg",
+  "imageSourceUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c1/Clark_Construction_-_FEDEX_Field_%28Jack_Kent_Cooke_Stadium%29_Looking_NW.jpg/1280px-Clark_Construction_-_FEDEX_Field_%28Jack_Kent_Cooke_Stadium%29_Looking_NW.jpg",
+  "sha256": "3c2f6c4f9162b06c9a55b624e3ecb731ee7d86229f5bd944b3f18060dfa68d10"
  },
  {
   "key": "washington-dc/dancing-on-the-waterfront",
@@ -4140,6 +6380,26 @@
   "sha256": "6a32286f11ab91eaec38b9aa8336bd4efdb0c5dc0c30460aa16c602ae1667f96"
  },
  {
+  "key": "washington-dc/dc-united-audi-field",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/washington-dc/dc-united-audi-field-7e28a2c6771675c5.webp",
+  "width": 1280,
+  "height": 848,
+  "credit": "David / Wikimedia Commons (CC BY 2.0)",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Audi_Field_DC_United.jpg",
+  "imageSourceUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/24/Audi_Field_DC_United.jpg/1280px-Audi_Field_DC_United.jpg",
+  "sha256": "7e28a2c6771675c548e77990d1dd9e113de2ffd524f1f31f925773d63536d804"
+ },
+ {
+  "key": "washington-dc/eastern-market-weekend",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/washington-dc/eastern-market-weekend-a859d961f3595d8d.webp",
+  "width": 1280,
+  "height": 719,
+  "credit": "AgnosticPreachersKid / Wikimedia Commons (CC BY-SA 3.0)",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Eastern_Market_-_facade.JPG",
+  "imageSourceUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/40/Eastern_Market_-_facade.JPG/1280px-Eastern_Market_-_facade.JPG",
+  "sha256": "a859d961f3595d8d64746948566497f4b1541b46e6b3346f955516fc7a58c77e"
+ },
+ {
   "key": "washington-dc/georgetown-fall-market",
   "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/washington-dc/georgetown-fall-market-9a6736592b61a15e.webp",
   "width": 1600,
@@ -4150,6 +6410,46 @@
   "sha256": "9a6736592b61a15eb32f313207eff57bd5bfe2af170d5645d8e3e8d21dfdf75a"
  },
  {
+  "key": "washington-dc/great-country-farms-bluemont",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/washington-dc/great-country-farms-bluemont-26d871746be05590.webp",
+  "width": 1300,
+  "height": 975,
+  "credit": "Great Country Farms",
+  "sourceUrl": "https://greatcountryfarms.com/",
+  "imageSourceUrl": "https://greatcountryfarms.com/wp-content/uploads/2018/08/cornmazerace.jpg",
+  "sha256": "26d871746be055907f27224a2ef6b220aa88a5f1e93431d8b69690b0dcddd969"
+ },
+ {
+  "key": "washington-dc/great-falls-park-va",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/washington-dc/great-falls-park-va-2e7e3141710186d5.webp",
+  "width": 1280,
+  "height": 960,
+  "credit": "Doug Kerr from Albany, NY, United States / Wikimedia Commons (CC BY-SA 2.0)",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Great_Falls_Park_-_Virginia_(6261931827).jpg",
+  "imageSourceUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7e/Great_Falls_Park_-_Virginia_%286261931827%29.jpg/1280px-Great_Falls_Park_-_Virginia_%286261931827%29.jpg",
+  "sha256": "2e7e3141710186d5ae1c8cbce33167c6d13c97211125df2f3c1209354cb0421e"
+ },
+ {
+  "key": "washington-dc/harpers-ferry-national-park",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/washington-dc/harpers-ferry-national-park-81cb89d627c8232a.webp",
+  "width": 1280,
+  "height": 867,
+  "credit": "Acroterion / Wikimedia Commons (CC BY-SA 4.0)",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Lower_High_St_Harpers_Ferry_WV1.jpg",
+  "imageSourceUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/24/Lower_High_St_Harpers_Ferry_WV1.jpg/1280px-Lower_High_St_Harpers_Ferry_WV1.jpg",
+  "sha256": "81cb89d627c8232ae8bc24d7b7f5292c3b92c84ec2a2712f8f3b904860cf40ea"
+ },
+ {
+  "key": "washington-dc/liberty-mountain-resort-skiing",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/washington-dc/liberty-mountain-resort-skiing-99f792d6feb18a5f.webp",
+  "width": 1280,
+  "height": 853,
+  "credit": "LibertyMtn / Wikimedia Commons (CC BY-SA 3.0)",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:LibertyMountainResort_skiing.jpg",
+  "imageSourceUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/22/LibertyMountainResort_skiing.jpg/1280px-LibertyMountainResort_skiing.jpg",
+  "sha256": "99f792d6feb18a5f5996aa15b49eb6a5a78ecb7e798bc10f5e8c9dd9815aa0af"
+ },
+ {
   "key": "washington-dc/luray-caverns",
   "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/washington-dc/luray-caverns-b67e5c223de37934.webp",
   "width": 1200,
@@ -4158,6 +6458,16 @@
   "sourceUrl": "https://www.luraycaverns.com/",
   "imageSourceUrl": "https://luraycaverns.com/wp-content/uploads/2023/11/Luray_OG_image.webp",
   "sha256": "b67e5c223de379342cd519a23a36bc056df1a9774773e85c8ac1854ba48da7cc"
+ },
+ {
+  "key": "washington-dc/manassas-battlefield-park",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/washington-dc/manassas-battlefield-park-6276601fb0918cdf.webp",
+  "width": 1280,
+  "height": 851,
+  "credit": "Sj2z / Wikimedia Commons (CC BY-SA 3.0)",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Bull_Run_at_Manassas_National_Battlefield_Park_09.JPG",
+  "imageSourceUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/32/Bull_Run_at_Manassas_National_Battlefield_Park_09.JPG/1280px-Bull_Run_at_Manassas_National_Battlefield_Park_09.JPG",
+  "sha256": "6276601fb0918cdf9b3dfe6e543f9633a916985094d5b9c37bf711eec94c54d9"
  },
  {
   "key": "washington-dc/marine-corps-marathon",
@@ -4178,6 +6488,16 @@
   "sourceUrl": "https://www.rennfest.com/",
   "imageSourceUrl": "https://rennfest.com/wp-content/uploads/2025/03/capjean.jpg",
   "sha256": "fd8ba776b2ede7cf54696d191d85e6eca1235f57b7f3b8b1a51155f7eb190b38"
+ },
+ {
+  "key": "washington-dc/maryland-sheep-and-wool-festival",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/washington-dc/maryland-sheep-and-wool-festival-4785b1ecef28f411.webp",
+  "width": 1280,
+  "height": 960,
+  "credit": "The original uploader was Richard Arthur Norton (1958- ) at English Wikipedia. / Wikimedia Commons (CC BY 3.0)",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Maryland_Sheep_and_Wool_Festival_2005.jpg",
+  "imageSourceUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c2/Maryland_Sheep_and_Wool_Festival_2005.jpg/1280px-Maryland_Sheep_and_Wool_Festival_2005.jpg",
+  "sha256": "4785b1ecef28f4113a1266fb7c3ff96b8dee8a5fd64018c665833c64c61f2d7c"
  },
  {
   "key": "washington-dc/mubadala-citi-dc-open",
@@ -4230,6 +6550,16 @@
   "sha256": "ff5a76cf3943895334e1a4368ad677a347cccf2d98b75d79678501cc2a1b63ae"
  },
  {
+  "key": "washington-dc/preakness-stakes",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/washington-dc/preakness-stakes-0b2fc6f4c6044773.webp",
+  "width": 1280,
+  "height": 854,
+  "credit": "Maryland GovPics / Wikimedia Commons (CC BY 2.0)",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:147th_Preakness_Stakes_(52094131900).jpg",
+  "imageSourceUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/45/147th_Preakness_Stakes_%2852094131900%29.jpg/1280px-147th_Preakness_Stakes_%2852094131900%29.jpg",
+  "sha256": "0b2fc6f4c6044773c76a73fffc0456199c56e2c184ba567858e11e457671394a"
+ },
+ {
   "key": "washington-dc/rock-creek-park-fall",
   "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/washington-dc/rock-creek-park-fall-171c85912a11a6e2.webp",
   "width": 1465,
@@ -4238,6 +6568,26 @@
   "sourceUrl": "https://www.nps.gov/rocr/index.htm",
   "imageSourceUrl": "https://www.nps.gov/common/uploads/structured_data/5578822B-0F57-D3E7-A49D70F3D88C1509.jpg",
   "sha256": "171c85912a11a6e251b6c82871074fd897fb5a0b6dd68e52ce09f71310a5725a"
+ },
+ {
+  "key": "washington-dc/sandy-point-state-park",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/washington-dc/sandy-point-state-park-2f6c662d1f36f9be.webp",
+  "width": 1280,
+  "height": 864,
+  "credit": "U.S. National Archives (Documerica) / Wikimedia Commons (public domain)",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:ON_THE_BEACH_AT_SANDY_POINT_STATE_PARK_-_NARA_-_546794.jpg",
+  "imageSourceUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/ON_THE_BEACH_AT_SANDY_POINT_STATE_PARK_-_NARA_-_546794.jpg/1280px-ON_THE_BEACH_AT_SANDY_POINT_STATE_PARK_-_NARA_-_546794.jpg",
+  "sha256": "2f6c662d1f36f9be399ddbc37c6eab752d950b4c12a952732c67ee9fb890f27c"
+ },
+ {
+  "key": "washington-dc/skyline-drive-fall-foliage",
+  "image": "https://chronopin.blob.core.windows.net/thumb/activity-images/washington-dc/skyline-drive-fall-foliage-1fecd7fdceffb3ca.webp",
+  "width": 1280,
+  "height": 960,
+  "credit": "Famartin / Wikimedia Commons (CC BY-SA 4.0)",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:2016-10-24_12_01_08_View_south_along_Shenandoah_National_Park%27s_Skyline_Drive_just_south_of_the_Dundo_Overlook_in_Rockingham_County,_Virginia.jpg",
+  "imageSourceUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/00/2016-10-24_12_01_08_View_south_along_Shenandoah_National_Park%27s_Skyline_Drive_just_south_of_the_Dundo_Overlook_in_Rockingham_County%2C_Virginia.jpg/1280px-2016-10-24_12_01_08_View_south_along_Shenandoah_National_Park%27s_Skyline_Drive_just_south_of_the_Dundo_Overlook_in_Rockingham_County%2C_Virginia.jpg",
+  "sha256": "1fecd7fdceffb3caa8644f0e21c54dd62c29b3ff62616dcbb51a185b703c09a1"
  },
  {
   "key": "washington-dc/usbg-seasons-greenings",

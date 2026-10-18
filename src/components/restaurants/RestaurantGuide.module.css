@@ -116,13 +116,18 @@
 .statusFilters::-webkit-scrollbar-track { background:transparent; }
 .statusFilters::-webkit-scrollbar-thumb { background:var(--rule); border-radius:4px; }
 .statusFilters a, .statusFilters button { flex-shrink:0; white-space:nowrap; }
+.statusFilters button { font:inherit; background:transparent; border:0; }
 .mobileViewLabel { display:none; }
 .viewCount { margin-left:6px; }
 .viewCount>span { margin-right:6px; }
 .statusFilters a { font-size:11px; font-weight:600; border-radius:4px; padding:9px 13px; cursor:pointer; color:var(--soft); }
+.statusFilters button { font-size:11px; font-weight:600; border-radius:4px; padding:9px 13px; cursor:pointer; color:var(--soft); }
 .statusFilters a[aria-current='location'] { background:var(--text); color:var(--paper); }
+.statusFilters button[aria-current='location'] { background:var(--text); color:var(--paper); }
 .statusFilters a:hover { background:var(--rule); color:var(--text); }
+.statusFilters button:hover { background:var(--rule); color:var(--text); }
 .statusFilters a[aria-current='location']:hover { background:var(--green); color:var(--paper); }
+.statusFilters button[aria-current='location']:hover { background:var(--green); color:var(--paper); }
 .filterFields { display:flex; gap:12px; align-items:center; flex-shrink:0; }
 .neighborhoodField { position:relative; }
 .selectChevron { position:absolute; inset-inline-end:12px; top:50%; transform:translateY(-50%); width:14px; height:14px; color:var(--soft); pointer-events:none; }
@@ -188,8 +193,11 @@
   .statusFilters { position:relative; display:flex; flex-wrap:nowrap; gap:8px; overflow-x:auto; scrollbar-width:none; border-bottom:1px solid var(--rule); }
   .statusFilters::-webkit-scrollbar { display:none; }
   .statusFilters a { display:flex; flex:1 0 auto; align-items:center; justify-content:center; min-height:44px; padding:7px 12px 13px; border-radius:0; border-bottom:2px solid transparent; background:transparent; color:var(--soft); font-size:16px; line-height:1.4; white-space:nowrap; }
+  .statusFilters button { display:flex; flex:1 0 auto; align-items:center; justify-content:center; min-height:44px; padding:7px 12px 13px; border-radius:0; border-bottom:2px solid transparent; background:transparent; color:var(--soft); font-size:16px; line-height:1.4; white-space:nowrap; }
   .statusFilters a[aria-current='location'],.statusFilters a[aria-current='location']:hover { background:transparent; color:var(--green); border-bottom-color:var(--green); }
+  .statusFilters button[aria-current='location'],.statusFilters button[aria-current='location']:hover { background:transparent; color:var(--green); border-bottom-color:var(--green); }
   .statusFilters a:hover { background:transparent; color:var(--text); }
+  .statusFilters button:hover { background:transparent; color:var(--text); }
   .viewLabel { display:none; }
   .mobileViewLabel { display:inline; }
   .statusFilters a:focus-visible { outline-offset:-3px; }

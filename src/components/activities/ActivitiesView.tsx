@@ -5,6 +5,9 @@ import { JsonLd } from '@/components/JsonLd';
 import Link from '@/components/ui/Link';
 import { LandingMark } from '@/components/ui/LandingMark';
 import { CardImage } from '@/components/pin/CardImage';
+import { useRouter } from '@/lib/client/navigation';
+import { viewerPlace } from '@/lib/client/viewerPlace';
+import { distanceKm } from '@/lib/distance';
 import { pinTextDir } from '@/lib/i18n/config';
 import {
   ACTIVITY_CATEGORIES,
@@ -13,6 +16,7 @@ import {
   SEASONS,
   SEASON_LABELS,
   activityCity,
+  nearestActivityCity,
   formatWindow,
   isActiveOn,
   localDay,
@@ -28,6 +32,10 @@ import styles from '@/components/restaurants/RestaurantGuide.module.css';
 
 type Tab = 'today' | Season;
 
+// Within this distance of a guide city the viewer is "in" it.
+const LOCAL_KM = 100;
+const STAY_KEY = 'activities-stay-all-cities';
+
 function picture(media: ActivityPin['media']) {
   const medium = media?.find((m) => String(m.type) === '1' && m.thumbName) ?? media?.find((m) => m.thumbName) ?? media?.[0];
   return { thumbName: medium?.thumbName, originalUrl: medium?.originalUrl ?? undefined };
@@ -35,6 +43,10 @@ function picture(media: ActivityPin['media']) {
 
 function longDate(iso: string) {
   return new Date(`${iso}T00:00:00Z`).toLocaleDateString('en-US', { month: 'short', day: 'numeric', timeZone: 'UTC' });
+}
+
+function stayOnAllCities() {
+  try { sessionStorage.setItem(STAY_KEY, '1'); } catch { /* storage blocked */ }
 }
 
 export function ActivitiesView({
@@ -58,6 +70,30 @@ export function ActivitiesView({
     const id = setTimeout(() => setNow(new Date()), 0);
     return () => clearTimeout(id);
   }, []);
+
+  const router = useRouter();
+  const cityTabSlugs = useMemo(() => new Set(pins.map((p) => p.activity.citySlug)), [pins]);
+  // Landing on the all-cities page opens the viewer's own city when there is a
+  // guide for it, every visit. Choosing "All cities" in the nav sets STAY_KEY,
+  // which skips the redirect for that one visit.
+  useEffect(() => {
+    if (cityFilter) return;
+    try {
+      if (sessionStorage.getItem(STAY_KEY)) {
+        sessionStorage.removeItem(STAY_KEY);
+        return;
+      }
+    } catch {
+      return;
+    }
+    let active = true;
+    viewerPlace().then((place) => {
+      if (!active || !place) return;
+      const near = nearestActivityCity(place);
+      if (cityTabSlugs.has(near.slug) && distanceKm(place, near) <= LOCAL_KM) router.replace(`/activities/${near.slug}`);
+    }).catch(() => {});
+    return () => { active = false; };
+  }, [cityFilter, cityTabSlugs, router]);
 
   const city = cityFilter ? activityCity(cityFilter) : undefined;
   const scoped = useMemo(() => (city ? pins.filter((p) => p.activity.citySlug === city.slug) : pins), [pins, city]);
@@ -125,43 +161,39 @@ export function ActivitiesView({
           <Link href="/activities" className={styles.wordmark}>
             <span aria-hidden="true">✳</span> The activities guide
           </Link>
-          <nav className={styles.countryNav} aria-label="Cities">
-            <Link href="/activities" aria-current={city ? undefined : 'page'} className="shrink-0 rounded px-2.5 py-1.5 font-semibold whitespace-nowrap aria-[current=page]:bg-[var(--text)] aria-[current=page]:text-[var(--paper)]">
-              All cities
-            </Link>
-            {cityTabs.map((c) => (
-              <Link
-                key={c.slug}
-                href={`/activities/${c.slug}`}
-                aria-current={city?.slug === c.slug ? 'page' : undefined}
-                className="shrink-0 rounded px-2.5 py-1.5 whitespace-nowrap text-[var(--soft)] aria-[current=page]:bg-[var(--text)] aria-[current=page]:text-[var(--paper)]"
-              >
-                {c.name}
-              </Link>
-            ))}
+          <nav className={styles.countryNav} aria-label="Activities guide">
+            <Link href="/activities" aria-current="location">United States</Link>
           </nav>
         </div>
 
-        <header className="py-10">
-          <p className={styles.eyebrow}>WHAT TO DO. WHEN TO DO IT.</p>
-          <h1 className="font-serif text-4xl font-normal leading-tight text-[var(--text)]">
-            {city ? <>Seasonal things to do in <em>{city.name}.</em></> : <>The season&rsquo;s best things to do, <em>city by city.</em></>}
-          </h1>
-          <p className={`${styles.lead} mt-4`}>{description}</p>
+        <nav className={styles.cityNav} aria-label="Activities guide cities">
+          <Link href="/activities" aria-current={city ? undefined : 'page'} onClick={city ? stayOnAllCities : undefined}>All cities</Link>
+          {cityTabs.map((c) => (
+            <Link key={c.slug} href={`/activities/${c.slug}`} aria-current={city?.slug === c.slug ? 'page' : undefined}>
+              {c.name}
+            </Link>
+          ))}
+        </nav>
+
+        <header className={styles.hero}>
+          <div className={styles.heroCopy}>
+            <p className={styles.eyebrow}>WHAT TO DO. WHEN TO DO IT.</p>
+            <h1>
+              {city ? <>Seasonal things to do in <em>{city.name}.</em></> : <>The season&rsquo;s best things to do, <em>city by city.</em></>}
+            </h1>
+            <p className={styles.lead}>{description}</p>
+          </div>
         </header>
 
         <section id="activities" aria-label="Browse activities">
           <div className={styles.filters}>
-            <nav className={`${styles.statusFilters} flex items-center gap-1.5`} aria-label="Seasons">
+            <nav className={styles.statusFilters} aria-label="Seasons">
               {tabs.map((t) => (
                 <button
                   key={t.id}
                   type="button"
                   onClick={() => setRequested(t.id)}
                   aria-current={tab === t.id ? 'location' : undefined}
-                  className={`shrink-0 rounded px-3 py-2 text-xs font-semibold whitespace-nowrap transition-colors ${
-                    tab === t.id ? 'bg-[var(--text)] text-[var(--paper)]' : 'text-[var(--soft)] hover:bg-[var(--rule)]'
-                  }`}
                 >
                   {t.label} <span>· {String(t.count).padStart(2, '0')}</span>
                 </button>

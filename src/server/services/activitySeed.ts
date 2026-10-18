@@ -18,6 +18,12 @@ export function activityPinTitle(item: ActivityCatalogItem): string {
   return `${item.name} — ${activityCity(item.citySlug)!.name} seasonal activity`;
 }
 
+function activitySummary(item: ActivityCatalogItem): string {
+  const city = activityCity(item.citySlug)!;
+  return `<p>${escapeHtml(item.description)}<cite data-ref="${escapeHtml(item.sourceUrl)}"></cite></p>`
+    + `<p>${escapeHtml(item.venue)}, ${escapeHtml(item.neighborhood)}, ${escapeHtml(city.name)}.${item.costNote ? ` ${escapeHtml(item.costNote)}.` : ''}</p>`;
+}
+
 const CATEGORY_TAGS: Record<string, string> = { festival: 'Festival', sports: 'Sports', arts: 'Art', food: 'Food' };
 
 export type ActivityPhoto = { key: string; image: string; width: number; height: number; credit: string; sourceUrl: string; imageSourceUrl: string };
@@ -50,8 +56,7 @@ export async function seedActivities(options: { cities?: string[]; dryRun?: bool
       const today = localDay(now, city.timeZone);
       const start = windowStart(item, today);
       const end = windowEnd(item, start);
-      const summary = `<p>${escapeHtml(item.description)}<cite data-ref="${escapeHtml(item.sourceUrl)}"></cite></p>`
-        + `<p>${escapeHtml(item.venue)}, ${escapeHtml(item.neighborhood)}, ${escapeHtml(city.name)}.${item.costNote ? ` ${escapeHtml(item.costNote)}.` : ''}</p>`;
+      const summary = activitySummary(item);
       const [company] = await query<{ id: number }>(`INSERT INTO "Company" ("name") VALUES ($1) ON CONFLICT ("name") DO UPDATE SET "name" = "Company"."name" RETURNING "id"`, [item.venue]);
       const [pin] = await query<{ id: number }>(
         `INSERT INTO "Pin" ("title", "description", "sourceUrl", "longFormSummary", "address", "location", "companyId", "productName", "dateConfidence", "dateConfidenceReasoning", "utcStartDateTime", "utcEndDateTime", "allDay", "userId")
@@ -95,4 +100,27 @@ export async function indexActivityPins(): Promise<{ indexed: number; failed: nu
     try { await new SearchPin(row).save(); } catch { failed.push(row.id); }
   }
   return { indexed: rows.length - failed.length, failed };
+}
+
+// Push corrected catalog fields (place, dates, cost, source) onto pins already seeded. `previousUrls` maps
+// "city/slug" to the pin sourceUrl the pin was seeded with, when it differs from the current one.
+export async function syncActivityPins(keys: string[], previousUrls: Map<string, string>, now = new Date()): Promise<number> {
+  const urls = activitySourceUrls(activityCatalog);
+  let updated = 0;
+  for (const key of keys) {
+    const item = activityCatalog.find((i) => `${i.citySlug}/${i.slug}` === key);
+    if (!item) continue;
+    const city = activityCity(item.citySlug)!;
+    const start = windowStart(item, localDay(now, city.timeZone));
+    const end = windowEnd(item, start);
+    const rows = await db.query<{ id: number }>(
+      `UPDATE "Pin" SET "description" = $1, "sourceUrl" = $2, "longFormSummary" = $3, "address" = $4, "location" = ST_SetSRID(ST_MakePoint($6, $5), 4326)::geography,
+         "dateConfidence" = $7, "dateConfidenceReasoning" = $8, "utcStartDateTime" = $9, "utcEndDateTime" = $10
+       WHERE "sourceUrl" = $11 AND "utcDeletedDateTime" IS NULL RETURNING "id"`,
+      [item.description, urls.get(key)!, activitySummary(item), item.address, item.latitude, item.longitude, item.dateConfidence, item.dateReasoning,
+        `${start}T00:00:00Z`, end > start ? `${end}T00:00:00Z` : null, previousUrls.get(key) ?? urls.get(key)!],
+    );
+    updated += rows.length;
+  }
+  return updated;
 }

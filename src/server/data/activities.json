@@ -6559,8 +6559,8 @@
   "venue": "Helen Festhalle",
   "neighborhood": "Helen, 75 mi north",
   "address": "1074 Edelweiss Strasse, Helen, GA 30545",
-  "latitude": 34.7019,
-  "longitude": -83.7338,
+  "latitude": 34.7024,
+  "longitude": -83.7271,
   "seasons": [
    "fall"
   ],
@@ -6583,8 +6583,8 @@
   "venue": "Georgia Renaissance Festival",
   "neighborhood": "Fairburn, 25 mi southwest",
   "address": "6905 Virlyn B. Smith Road, Fairburn, GA 30213",
-  "latitude": 33.5409,
-  "longitude": -84.656,
+  "latitude": 33.5665,
+  "longitude": -84.6009,
   "seasons": [
    "fall",
    "winter"
@@ -6596,7 +6596,7 @@
   "category": "festival",
   "description": "A costumed village with jousting, artisans, and period entertainment returns for a fall run of Saturdays plus Black Friday.",
   "sourceUrl": "https://garenfest.com/",
-  "costNote": "Paid - ticket prices not listed on the home page",
+  "costNote": "Paid - Fall Fling 2026 tickets (fees included): adults 13+ $34.88, ages 6-12 $17.28, 5 and under free; VIP parking $26.65; tickets online only, Oct 31 sold out",
   "dateConfidence": "confirmed",
   "dateReasoning": "Page opened 2026-10-18 (HTTP 200); home page lists Fall Fling Saturdays Oct 31-Dec 5 plus Black Friday; spring season in April-May; prices on a separate page not read.",
   "checkedAt": "2026-10-18"
@@ -6622,7 +6622,7 @@
   "sourceUrl": "https://decaturbookfestival.com/",
   "costNote": null,
   "dateConfidence": "estimated",
-  "dateReasoning": "Page opened 2026-10-18 (HTTP 200); 2026 edition listed as Oct 2-3 (already past); next dates not posted, so a typical early fall window is used. Admission not confirmed.",
+  "dateReasoning": "The 2026 festival ran October 2-3, 2026 per https://decaturbookfestival.com/ (already past); 2027 dates are not yet posted, so the window stays estimated at September-October.",
   "checkedAt": "2026-10-18"
  },
  {
@@ -6672,7 +6672,7 @@
   "sourceUrl": "https://www.atlantastreetsalive.org/",
   "costNote": "Free",
   "dateConfidence": "estimated",
-  "dateReasoning": "Page opened 2026-10-18 (HTTP 200); 2026 season Mar 22-Nov 8 with seven Sundays (remaining: Nov 8 Howell Mill Rd), free. Next-year dates not posted so null dates used; coordinates are downtown centroid.",
+  "dateReasoning": "Official 2026 schedule (https://www.atlantastreetsalive.org/): Mar 22, Apr 19, May 31, Jun 14, Sep 27, Oct 18 (West End to Grant Park) and Nov 8 (Howell Mill Rd), Sundays 2-6 PM; no 2027 dates posted. Recurring series, so no single start/end date.",
   "checkedAt": "2026-10-18"
  },
  {
@@ -6721,7 +6721,7 @@
   "category": "outdoor",
   "description": "Georgia's tallest cascading waterfall with a boardwalk and stairs viewing area, and the approach trail to the Appalachian Trail; spring flow and fall color are best.",
   "sourceUrl": "https://gastateparks.org/AmicalolaFalls",
-  "costNote": "Paid - state park parking fee; amount not read",
+  "costNote": "Paid - $10 per vehicle daily Georgia ParkPass ($70 annual) per gastateparks.org/ParkPass",
   "dateConfidence": "estimated",
   "dateReasoning": "Page opened 2026-10-18 (HTTP 200); year-round state park; peak spring and fall months assumed.",
   "checkedAt": "2026-10-18"
@@ -6747,7 +6747,7 @@
   "category": "outdoor",
   "description": "A two-mile-deep gorge with rim trails, a suspension bridge over the river and scheduled dam-release whitewater weekends.",
   "sourceUrl": "https://gastateparks.org/TallulahGorge",
-  "costNote": "Paid - parking fee; permits needed for gorge floor; amounts not read",
+  "costNote": "Paid - parking fee required (statewide ParkPass is $10 per vehicle; Tallulah's own amount is not listed); gorge floor permits free, 100 per day at the Interpretive Center",
   "dateConfidence": "estimated",
   "dateReasoning": "Page opened 2026-10-18 (HTTP 200); year-round park; dam-release dates not read.",
   "checkedAt": "2026-10-18"
@@ -6774,7 +6774,7 @@
   "category": "outdoor",
   "description": "Wooded trails along a rocky creek lead to the ruins of a Civil War era textile mill, with lake paddling nearby.",
   "sourceUrl": "https://gastateparks.org/SweetwaterCreek",
-  "costNote": "Paid - parking fee; amount not read",
+  "costNote": "Paid - $10 per vehicle daily Georgia ParkPass ($70 annual) per gastateparks.org/ParkPass",
   "dateConfidence": "estimated",
   "dateReasoning": "Page opened 2026-10-18 (HTTP 200); year-round park; peak months assumed.",
   "checkedAt": "2026-10-18"
@@ -6801,7 +6801,7 @@
   "category": "outdoor",
   "description": "Hike to the summit for skyline views and walk Civil War earthworks through hardwood forest, especially lovely in fall.",
   "sourceUrl": "https://www.nps.gov/kemo/",
-  "costNote": "Free",
+  "costNote": "Paid - $5 daily pass per private vehicle (annual $40); walk-ins and bikes 16+ $5 each; card only; fees apply at all 10 parking lots",
   "dateConfidence": "estimated",
   "dateReasoning": "Page opened 2026-10-18 (HTTP 200); national park site, free entry assumed from NPS; seasons chosen as peak hiking months.",
   "checkedAt": "2026-10-18"
@@ -6847,7 +6847,7 @@
    "fall"
   ],
   "startMonth": 2,
-  "endMonth": 10,
+  "endMonth": 11,
   "startDate": null,
   "endDate": null,
   "category": "sports",
@@ -6865,8 +6865,8 @@
   "venue": "Gateway Center Arena",
   "neighborhood": "College Park, 10 mi south",
   "address": "2330 Convention Center Concourse, College Park, GA 30337",
-  "latitude": 33.642,
-  "longitude": -84.448,
+  "latitude": 33.6468,
+  "longitude": -84.4597,
   "seasons": [
    "spring",
    "summer",
@@ -6917,9 +6917,9 @@
   "name": "Montaluce Winery and Restaurant",
   "venue": "Montaluce Winery",
   "neighborhood": "Dahlonega, 65 mi north",
-  "address": "501 Hwy 52 E, Dahlonega, GA 30533",
-  "latitude": 34.5236,
-  "longitude": -83.9222,
+  "address": "501 Hightower Church Road, Dahlonega, GA 30533",
+  "latitude": 34.5629,
+  "longitude": -84.0682,
   "seasons": [
    "spring",
    "summer",
@@ -7033,7 +7033,7 @@
   "category": "outdoor",
   "description": "Riverside trails, paddling and summer tubing within suburban Atlanta.",
   "sourceUrl": "https://www.nps.gov/chat/",
-  "costNote": "Free entry; some units charge parking; amounts not read",
+  "costNote": "Paid - $5 standard daily pass per vehicle (annual $40), also required for parking; under-16s on foot or bike free; no cash accepted; Georgia ParkPass not valid here",
   "dateConfidence": "estimated",
   "dateReasoning": "Page opened 2026-10-18 (HTTP 200); unit coordinates are Island Ford; tubing/paddling season typically warm months.",
   "checkedAt": "2026-10-18"
@@ -7071,9 +7071,9 @@
   "name": "Yonah Mountain Vineyards",
   "venue": "Yonah Mountain Vineyards",
   "neighborhood": "Cleveland, 80 mi north",
-  "address": "1717 Hwy 255 N, Cleveland, GA 30528",
-  "latitude": 34.6139,
-  "longitude": -83.7706,
+  "address": "1717 Hwy 255 S, Cleveland, GA 30528",
+  "latitude": 34.6161,
+  "longitude": -83.7036,
   "seasons": [
    "spring",
    "summer",
@@ -7098,8 +7098,8 @@
   "venue": "Pedernales Falls State Park",
   "neighborhood": "Johnson City, 40 mi west",
   "address": "2585 Park Road 6026, Johnson City, TX 78636",
-  "latitude": 30.307,
-  "longitude": -98.257,
+  "latitude": 30.3074,
+  "longitude": -98.2427,
   "seasons": [
    "spring",
    "summer",
@@ -7125,8 +7125,8 @@
   "venue": "Enchanted Rock State Natural Area",
   "neighborhood": "Fredericksburg, 90 mi west",
   "address": "16710 Ranch Road 965, Fredericksburg, TX 78624",
-  "latitude": 30.5058,
-  "longitude": -98.8189,
+  "latitude": 30.5046,
+  "longitude": -98.8232,
   "seasons": [
    "fall",
    "winter",
@@ -7151,15 +7151,15 @@
   "venue": "Hamilton Pool Preserve",
   "neighborhood": "Dripping Springs, 30 mi west",
   "address": "24300 Hamilton Pool Road, Dripping Springs, TX 78620",
-  "latitude": 30.3425,
-  "longitude": -98.1273,
+  "latitude": 30.3429,
+  "longitude": -98.1325,
   "seasons": [
    "spring",
    "summer",
    "fall"
   ],
-  "startMonth": 4,
-  "endMonth": 10,
+  "startMonth": 1,
+  "endMonth": 12,
   "startDate": null,
   "endDate": null,
   "category": "outdoor",
@@ -7204,8 +7204,8 @@
   "venue": "Inks Lake State Park",
   "neighborhood": "Burnet, 70 mi northwest",
   "address": "3630 Park Road 4 West, Burnet, TX 78611",
-  "latitude": 30.734,
-  "longitude": -98.364,
+  "latitude": 30.7376,
+  "longitude": -98.3688,
   "seasons": [
    "spring",
    "summer",
@@ -7230,8 +7230,8 @@
   "venue": "Longhorn Cavern State Park",
   "neighborhood": "Burnet, 70 mi northwest",
   "address": "6211 Park Road 4 South, Burnet, TX 78611",
-  "latitude": 30.69,
-  "longitude": -98.35,
+  "latitude": 30.686,
+  "longitude": -98.3521,
   "seasons": [
    "winter",
    "spring",
@@ -7257,8 +7257,8 @@
   "venue": "Colorado Bend State Park",
   "neighborhood": "Bend, 100 mi northwest",
   "address": "2236 County Road 255, Bend, TX 76824",
-  "latitude": 31.0453,
-  "longitude": -98.4797,
+  "latitude": 31.0395,
+  "longitude": -98.4853,
   "seasons": [
    "fall",
    "winter",
@@ -7283,8 +7283,8 @@
   "venue": "Blanco State Park",
   "neighborhood": "Blanco, 50 mi west",
   "address": "101 Park Road 23, Blanco, TX 78606",
-  "latitude": 30.0959,
-  "longitude": -98.4147,
+  "latitude": 30.0941,
+  "longitude": -98.421,
   "seasons": [
    "spring",
    "summer",
@@ -7309,8 +7309,8 @@
   "venue": "Lockhart State Park",
   "neighborhood": "Lockhart, 30 mi south",
   "address": "2012 State Park Road, Lockhart, TX 78644",
-  "latitude": 29.876,
-  "longitude": -97.687,
+  "latitude": 29.8518,
+  "longitude": -97.6983,
   "seasons": [
    "spring",
    "summer",
@@ -7336,8 +7336,8 @@
   "venue": "Kreuz Market",
   "neighborhood": "Lockhart, 30 mi south",
   "address": "619 N Colorado St, Lockhart, TX 78644",
-  "latitude": 29.886,
-  "longitude": -97.672,
+  "latitude": 29.8899,
+  "longitude": -97.6719,
   "seasons": [
    "winter",
    "spring",
@@ -7371,14 +7371,14 @@
   ],
   "startMonth": 4,
   "endMonth": 11,
-  "startDate": null,
-  "endDate": null,
+  "startDate": "2026-04-16",
+  "endDate": "2026-11-28",
   "category": "outdoor",
   "description": "A working lavender farm with free entry and a shop; bloom peaks around June.",
   "sourceUrl": "https://www.hillcountrylavender.com",
   "costNote": "Free - farm entry",
-  "dateConfidence": "estimated",
-  "dateReasoning": "Page read: open April 16 to November 28, 2026, Thursday to Saturday 10am-4pm (Saturdays only in August); entry free. Coordinates approximate to the farm area.",
+  "dateConfidence": "confirmed",
+  "dateReasoning": "Operator site hillcountrylavender.com states the farm is open April 16 through November 28, 2026, Thursday to Saturday 10 AM-4 PM (Saturdays only in August; closed July 4 and Thanksgiving).",
   "checkedAt": "2026-10-18"
  },
  {
@@ -7388,8 +7388,8 @@
   "venue": "Marktplatz, Main Street",
   "neighborhood": "Fredericksburg, 78 mi west",
   "address": "126 W Main St, Fredericksburg, TX 78624",
-  "latitude": 30.2733,
-  "longitude": -98.8718,
+  "latitude": 30.2763,
+  "longitude": -98.8726,
   "seasons": [
    "fall"
   ],
@@ -7412,8 +7412,8 @@
   "venue": "Natural Bridge Caverns",
   "neighborhood": "Natural Bridge Caverns, 75 mi southwest",
   "address": "26495 Natural Bridge Caverns Road, San Antonio, TX 78266",
-  "latitude": 29.692,
-  "longitude": -98.344,
+  "latitude": 29.6953,
+  "longitude": -98.3444,
   "seasons": [
    "winter",
    "spring",
@@ -7439,8 +7439,8 @@
   "venue": "Inner Space Cavern",
   "neighborhood": "Georgetown, 28 mi north",
   "address": "4200 S IH-35, Georgetown, TX 78626",
-  "latitude": 30.605,
-  "longitude": -97.716,
+  "latitude": 30.6079,
+  "longitude": -97.6881,
   "seasons": [
    "winter",
    "spring",
@@ -7466,8 +7466,8 @@
   "venue": "Dell Diamond",
   "neighborhood": "Round Rock, 18 mi north",
   "address": "3400 E Palm Valley Blvd, Round Rock, TX 78665",
-  "latitude": 30.5273,
-  "longitude": -97.634,
+  "latitude": 30.5277,
+  "longitude": -97.6308,
   "seasons": [
    "spring",
    "summer",
@@ -7489,11 +7489,11 @@
   "citySlug": "austin",
   "slug": "texas-state-bobcats-football",
   "name": "Texas State Bobcats football",
-  "venue": "Bobcat Stadium",
+  "venue": "UFCU Stadium",
   "neighborhood": "San Marcos, 30 mi south",
-  "address": "Bobcat Stadium, 1 Bobcat Trail, San Marcos, TX 78666",
-  "latitude": 29.8883,
-  "longitude": -97.932,
+  "address": "1100 Aquarena Springs Dr, San Marcos, TX 78666",
+  "latitude": 29.8911,
+  "longitude": -97.9256,
   "seasons": [
    "fall"
   ],
@@ -7542,7 +7542,7 @@
   "name": "Original Round Top Antiques Fair",
   "venue": "Original Round Top Antiques Fair",
   "neighborhood": "Round Top, 90 mi east",
-  "address": "Round Top, TX 78954",
+  "address": "475 Texas Highway 237 South, Carmine, TX 78932",
   "latitude": 30.065,
   "longitude": -96.696,
   "seasons": [
@@ -7550,16 +7550,16 @@
    "winter",
    "spring"
   ],
-  "startMonth": 1,
-  "endMonth": 12,
-  "startDate": null,
-  "endDate": null,
+  "startMonth": 10,
+  "endMonth": 10,
+  "startDate": "2026-10-25",
+  "endDate": "2026-10-31",
   "category": "festival",
   "description": "A large antiques show of barns and tents in a tiny Texas town, held in multiple shows a year.",
   "sourceUrl": "https://www.roundtoptexasantiques.com",
   "costNote": "Paid - show tickets; see site",
-  "dateConfidence": "estimated",
-  "dateReasoning": "Page read: Fall Show October 25-31, 2026 and a Winter Show January 21-23. Address approximate (town center).",
+  "dateConfidence": "confirmed",
+  "dateReasoning": "Official site roundtoptexasantiques.com lists the Fall Show Oct 25-31, 2026 (Designer Day Oct 25, opening day Oct 26 through Oct 31; Blue Hills Oct 17-31); next shows Winter Jan 21-23 and Spring in 2027.",
   "checkedAt": "2026-10-18"
  },
  {
@@ -7569,15 +7569,15 @@
   "venue": "Becker Vineyards",
   "neighborhood": "Fredericksburg area, 70 mi west",
   "address": "464 Becker Farms Road, Stonewall, TX 78671",
-  "latitude": 30.233,
-  "longitude": -98.629,
+  "latitude": 30.204,
+  "longitude": -98.7101,
   "seasons": [
    "spring",
    "summer",
    "fall"
   ],
-  "startMonth": 3,
-  "endMonth": 11,
+  "startMonth": 1,
+  "endMonth": 12,
   "startDate": null,
   "endDate": null,
   "category": "food",
@@ -7595,8 +7595,8 @@
   "venue": "Schlitterbahn Waterpark New Braunfels",
   "neighborhood": "New Braunfels, 50 mi south",
   "address": "400 N Liberty Ave, New Braunfels, TX 78130",
-  "latitude": 29.705,
-  "longitude": -98.123,
+  "latitude": 29.7123,
+  "longitude": -98.1263,
   "seasons": [
    "summer"
   ],
@@ -7606,7 +7606,7 @@
   "endDate": null,
   "category": "family",
   "description": "A river-fed waterpark with tube chutes and slides, a classic Texas summer day trip.",
-  "sourceUrl": "https://www.schlitterbahn.com/new-braunfels",
+  "sourceUrl": "https://www.sixflags.com/schlitterbahnnewbraunfels",
   "costNote": "Paid - daily tickets and season passes",
   "dateConfidence": "estimated",
   "dateReasoning": "Page loaded; summer window is typical, calendar not read.",
@@ -7670,8 +7670,8 @@
   "venue": "Topsfield Fairgrounds",
   "neighborhood": "Topsfield, 25 mi north",
   "address": "207 Boston St, Topsfield, MA 01983",
-  "latitude": 42.6376,
-  "longitude": -70.9487,
+  "latitude": 42.6287,
+  "longitude": -70.943,
   "seasons": [
    "fall"
   ],
@@ -7694,8 +7694,8 @@
   "venue": "Waterplace Park and downtown rivers",
   "neighborhood": "Providence RI, 50 mi south",
   "address": "Waterplace Park, Providence, RI 02903",
-  "latitude": 41.824,
-  "longitude": -71.4128,
+  "latitude": 41.8269,
+  "longitude": -71.4139,
   "seasons": [
    "spring",
    "summer",
@@ -7720,8 +7720,8 @@
   "venue": "Wachusett Mountain",
   "neighborhood": "Princeton, 50 mi west",
   "address": "41 Mountain Rd, Princeton, MA 01541",
-  "latitude": 42.4875,
-  "longitude": -71.8861,
+  "latitude": 42.4994,
+  "longitude": -71.8864,
   "seasons": [
    "winter"
   ],
@@ -7744,8 +7744,8 @@
   "venue": "Plimoth Patuxet Museums",
   "neighborhood": "Plymouth, 40 mi south",
   "address": "137 Warren Ave, Plymouth, MA 02360",
-  "latitude": 41.9366,
-  "longitude": -70.6549,
+  "latitude": 41.9394,
+  "longitude": -70.6258,
   "seasons": [
    "spring",
    "summer",
@@ -7770,8 +7770,8 @@
   "venue": "Cape ballparks (e.g. Eldredge Park, Orleans)",
   "neighborhood": "Cape Cod, 85 mi southeast",
   "address": "Eldredge Park, Orleans, MA 02653",
-  "latitude": 41.7889,
-  "longitude": -69.9897,
+  "latitude": 41.782,
+  "longitude": -69.9885,
   "seasons": [
    "summer"
   ],
@@ -7820,8 +7820,8 @@
   "venue": "Polar Park",
   "neighborhood": "Worcester, 40 mi west",
   "address": "100 Madison St, Worcester, MA 01608",
-  "latitude": 42.2428,
-  "longitude": -71.7956,
+  "latitude": 42.2573,
+  "longitude": -71.8,
   "seasons": [
    "spring",
    "summer",
@@ -7846,8 +7846,8 @@
   "venue": "Amica Mutual Pavilion",
   "neighborhood": "Providence RI, 50 mi south",
   "address": "1 LaSalle Sq, Providence, RI 02903",
-  "latitude": 41.8247,
-  "longitude": -71.4157,
+  "latitude": 41.8236,
+  "longitude": -71.4181,
   "seasons": [
    "fall",
    "winter",
@@ -7872,8 +7872,8 @@
   "venue": "Monadnock State Park",
   "neighborhood": "Jaffrey NH, 65 mi northwest",
   "address": "169 Poole Rd, Jaffrey, NH 03452",
-  "latitude": 42.8606,
-  "longitude": -72.1081,
+  "latitude": 42.8607,
+  "longitude": -72.0662,
   "seasons": [
    "spring",
    "summer",
@@ -7898,8 +7898,8 @@
   "venue": "Minute Man NHP",
   "neighborhood": "Lexington and Concord, 15 mi northwest",
   "address": "250 N Great Rd, Lincoln, MA 01773",
-  "latitude": 42.4573,
-  "longitude": -71.303,
+  "latitude": 42.4496,
+  "longitude": -71.272,
   "seasons": [
    "winter",
    "spring",
@@ -7938,7 +7938,7 @@
   "endDate": null,
   "category": "family",
   "description": "Reconstructed 1600s ironworks with a working waterwheel and museum on the site of the first integrated ironworks in North America.",
-  "sourceUrl": "https://www.nps.gov/sama/index.htm",
+  "sourceUrl": "https://www.nps.gov/sair/index.htm",
   "costNote": "Free",
   "dateConfidence": "estimated",
   "dateReasoning": "NPS page opened 2026-10-18; seasonal hours not read, so May-October is estimated.",
@@ -7951,8 +7951,8 @@
   "venue": "Lowell mills and canals",
   "neighborhood": "Lowell, 28 mi northwest",
   "address": "67 Kirk St, Lowell, MA 01852",
-  "latitude": 42.6437,
-  "longitude": -71.3115,
+  "latitude": 42.6472,
+  "longitude": -71.3095,
   "seasons": [
    "winter",
    "spring",
@@ -7978,8 +7978,8 @@
   "venue": "Salt Pond Visitor Center",
   "neighborhood": "Eastham, 85 mi southeast",
   "address": "50 Nauset Rd, Eastham, MA 02642",
-  "latitude": 41.8317,
-  "longitude": -69.9753,
+  "latitude": 41.8382,
+  "longitude": -69.9723,
   "seasons": [
    "spring",
    "summer",
@@ -8030,8 +8030,8 @@
   "venue": "Castle Hill (The Trustees)",
   "neighborhood": "Ipswich, 30 mi north",
   "address": "290 Argilla Rd, Ipswich, MA 01938",
-  "latitude": 42.6853,
-  "longitude": -70.7733,
+  "latitude": 42.6854,
+  "longitude": -70.7791,
   "seasons": [
    "winter",
    "spring",
@@ -8057,8 +8057,8 @@
   "venue": "Long Hill (The Trustees)",
   "neighborhood": "Beverly, 20 mi north",
   "address": "572 Essex St, Beverly, MA 01915",
-  "latitude": 42.5842,
-  "longitude": -70.8527,
+  "latitude": 42.5841,
+  "longitude": -70.8421,
   "seasons": [
    "spring",
    "summer",
@@ -8208,8 +8208,8 @@
   "venue": "Ravinia Park",
   "neighborhood": "Highland Park, 25 mi north",
   "address": "418 Sheridan Rd, Highland Park, IL 60035",
-  "latitude": 42.158,
-  "longitude": -87.7846,
+  "latitude": 42.1581,
+  "longitude": -87.7771,
   "seasons": [
    "summer"
   ],
@@ -8245,8 +8245,8 @@
   "description": "Seventeen days of prix-fixe lunch and dinner menus at restaurants across the city.",
   "sourceUrl": "https://www.choosechicago.com/chicago-restaurant-week/",
   "costNote": "Paid - prix-fixe menus; prices set by each restaurant",
-  "dateConfidence": "confirmed",
-  "dateReasoning": "Choose Chicago page read 2026-10-18: Chicago Restaurant Week 2027 listed as Jan. 22 - Feb. 7, 2027.",
+  "dateConfidence": "estimated",
+  "dateReasoning": "Choose Chicago's page headline shows Jan. 22 - Feb. 7, 2027, but its own FAQ says Chicago Restaurant Week 2027 dates will be announced later in 2026, so the dates are provisional (2026 edition ran Jan 23 - Feb 8).",
   "checkedAt": "2026-10-18"
  },
  {
@@ -8256,8 +8256,8 @@
   "venue": "Illinois Railway Museum",
   "neighborhood": "Union, IL, 60 mi northwest",
   "address": "7000 Olson Rd, Union, IL 60180",
-  "latitude": 42.2386,
-  "longitude": -88.5373,
+  "latitude": 42.2267,
+  "longitude": -88.5268,
   "seasons": [
    "spring",
    "summer",
@@ -8446,14 +8446,14 @@
   ],
   "startMonth": 2,
   "endMonth": 2,
-  "startDate": null,
-  "endDate": null,
+  "startDate": "2027-02-13",
+  "endDate": "2027-02-21",
   "category": "family",
   "description": "North America's largest auto show fills McCormick Place with new cars, test tracks and family exhibits each February.",
   "sourceUrl": "https://www.chicagoautoshow.com",
   "costNote": "Paid - admission",
-  "dateConfidence": "estimated",
-  "dateReasoning": "Site returned 403 to automated fetch so 2027 dates could not be read; a February window is estimated.",
+  "dateConfidence": "confirmed",
+  "dateReasoning": "The 2027 Chicago Auto Show runs February 13-21, 2027 at McCormick Place.",
   "checkedAt": "2026-10-18"
  },
  {
@@ -8470,14 +8470,14 @@
   ],
   "startMonth": 6,
   "endMonth": 7,
-  "startDate": null,
-  "endDate": null,
+  "startDate": "2027-06-24",
+  "endDate": "2027-07-10",
   "category": "festival",
   "description": "A multi-day lakefront music festival with hundreds of acts on a dozen stages.",
   "sourceUrl": "https://www.summerfest.com",
   "costNote": "Paid - ticketed",
-  "dateConfidence": "estimated",
-  "dateReasoning": "Site returned 403 to automated fetch so 2027 dates could not be read; typical late June-July window estimated.",
+  "dateConfidence": "confirmed",
+  "dateReasoning": "Summerfest 2027 runs three Thursday-Saturday weekends: June 24-26, July 1-3 and July 8-10, 2027, announced July 2026.",
   "checkedAt": "2026-10-18"
  },
  {
@@ -8513,8 +8513,8 @@
   "venue": "Volo Auto Museum",
   "neighborhood": "Volo, IL, 50 mi northwest",
   "address": "27582 Volo Village Rd, Volo, IL 60073",
-  "latitude": 42.3787,
-  "longitude": -88.1975,
+  "latitude": 42.3269,
+  "longitude": -88.1714,
   "seasons": [
    "winter",
    "spring",
@@ -8699,14 +8699,14 @@
   ],
   "startMonth": 1,
   "endMonth": 2,
-  "startDate": null,
-  "endDate": null,
+  "startDate": "2027-01-15",
+  "endDate": "2027-02-06",
   "category": "festival",
   "description": "One of the largest livestock shows in the country, pairing cattle and horse competitions with a nightly rodeo and a carnival midway.",
   "sourceUrl": "https://www.fwssr.com/",
   "costNote": "Paid - rodeo and grounds tickets",
-  "dateConfidence": "estimated",
-  "dateReasoning": "Homepage was opened but 2027 dates were not on it (schedule lives at fwssr.com/events); window is the usual late-January to early-February run.",
+  "dateConfidence": "confirmed",
+  "dateReasoning": "Dickies Arena event page and FWSSR list the 2027 Fort Worth Stock Show & Rodeo as January 15 to February 6, 2027.",
   "checkedAt": "2026-10-18"
  },
  {
@@ -8899,8 +8899,8 @@
   "venue": "Cameron Park Zoo",
   "neighborhood": "Waco, 95 mi south",
   "address": "1701 N 4th St, Waco, TX 76707",
-  "latitude": 31.5706,
-  "longitude": -97.133,
+  "latitude": 31.5715,
+  "longitude": -97.1465,
   "seasons": [
    "winter",
    "spring",
@@ -8926,8 +8926,8 @@
   "venue": "Eisenhower State Park",
   "neighborhood": "Denison, 75 mi north",
   "address": "50 Park Rd 20, Denison, TX 75020",
-  "latitude": 33.814,
-  "longitude": -96.637,
+  "latitude": 33.8103,
+  "longitude": -96.6,
   "seasons": [
    "winter",
    "spring",
@@ -9162,8 +9162,8 @@
   "venue": "Colorado Renaissance Festival",
   "neighborhood": "Larkspur, 40 mi south",
   "address": "650 W Perry Park Ave, Larkspur, CO 80118",
-  "latitude": 39.2433,
-  "longitude": -104.9789,
+  "latitude": 39.2292,
+  "longitude": -104.901,
   "seasons": [
    "summer"
   ],
@@ -9200,7 +9200,7 @@
   "sourceUrl": "https://www.greatamericanbeerfestival.com/",
   "costNote": "Paid - tickets required",
   "dateConfidence": "estimated",
-  "dateReasoning": "Official site opened 2026-10-18: the 2026 festival was Oct 10-11, 2026 and has finished; 2027 dates were not read, so an October window is used.",
+  "dateReasoning": "The 2026 festival ran Oct 10-11, 2026 at Levitt Pavilion (Ruby Hill, Denver; first move from the Colorado Convention Center, per Westword and greatamericanbeerfestival.com). 2027 dates and venue are not yet announced; month is an estimate from the usual early-October slot.",
   "checkedAt": "2026-10-18"
  },
  {
@@ -9282,7 +9282,7 @@
   "citySlug": "denver",
   "slug": "pikes-peak-cog-railway",
   "name": "Pikes Peak Cog Railway",
-  "venue": "Broadmoor Pikes Peak Cog Railway",
+  "venue": "The Broadmoor Manitou and Pikes Peak Cog Railway",
   "neighborhood": "Manitou Springs, 70 mi south",
   "address": "515 Ruxton Ave, Manitou Springs, CO 80829",
   "latitude": 38.8588,
@@ -9339,8 +9339,8 @@
   "venue": "Indian Hot Springs",
   "neighborhood": "Idaho Springs, 30 mi west",
   "address": "302 Soda Creek Rd, Idaho Springs, CO 80452",
-  "latitude": 39.7335,
-  "longitude": -105.5155,
+  "latitude": 39.7391,
+  "longitude": -105.5127,
   "seasons": [
    "winter",
    "spring",
@@ -9366,8 +9366,8 @@
   "venue": "Cheyenne Mountain Zoo",
   "neighborhood": "Colorado Springs, 70 mi south",
   "address": "4250 Cheyenne Mountain Zoo Rd, Colorado Springs, CO 80906",
-  "latitude": 38.7455,
-  "longitude": -104.85,
+  "latitude": 38.7714,
+  "longitude": -104.8554,
   "seasons": [
    "winter",
    "spring",
@@ -9418,8 +9418,8 @@
   "venue": "Keystone Resort",
   "neighborhood": "Keystone, 75 mi west",
   "address": "21996 US-6, Keystone, CO 80435",
-  "latitude": 39.6084,
-  "longitude": -105.9437,
+  "latitude": 39.6046,
+  "longitude": -105.9538,
   "seasons": [
    "winter",
    "spring"
@@ -9605,16 +9605,16 @@
   "seasons": [
    "fall"
   ],
-  "startMonth": 11,
+  "startMonth": 10,
   "endMonth": 11,
-  "startDate": null,
-  "endDate": null,
+  "startDate": "2026-10-22",
+  "endDate": "2026-11-01",
   "category": "arts",
   "description": "Annual November festival of new features, documentaries and shorts with filmmaker guests, run by Denver Film.",
   "sourceUrl": "https://www.denverfilm.org/",
   "costNote": "Paid - passes and tickets",
-  "dateConfidence": "estimated",
-  "dateReasoning": "Organizer site opened 2026-10-18 (HTTP 200); festival dates not read on the page, so a November window is used.",
+  "dateConfidence": "confirmed",
+  "dateReasoning": "Denver Film's site (denverfilm.org) lists the Denver Film Festival as October 22 - November 1, 2026.",
   "checkedAt": "2026-10-18"
  },
  {
@@ -9674,8 +9674,8 @@
   "venue": "The Strand Historic District",
   "neighborhood": "Galveston, 50 mi southeast",
   "address": "2002 Strand, Galveston, TX 77550",
-  "latitude": 29.3066,
-  "longitude": -94.7878,
+  "latitude": 29.3081,
+  "longitude": -94.7913,
   "seasons": [
    "winter"
   ],
@@ -9731,14 +9731,14 @@
   ],
   "startMonth": 11,
   "endMonth": 1,
-  "startDate": null,
-  "endDate": null,
+  "startDate": "2026-11-19",
+  "endDate": "2027-01-03",
   "category": "holiday",
   "description": "Millions of LEDs transform the zoo after dark with animated animal sculptures, a lit trail and seasonal treats.",
   "sourceUrl": "https://www.houstonzoo.org/zoolights",
   "costNote": "Paid - timed tickets; prices not published on the page read",
-  "dateConfidence": "estimated",
-  "dateReasoning": "Zoo News post says Zoo Lights starts Nov. 19 and tickets went on sale Oct. 15; end date not shown, so the typical window is used.",
+  "dateConfidence": "confirmed",
+  "dateReasoning": "Houston Zoo's Zoo Lights page lists the 2026 run as Nov 19, 2026 through Jan 3, 2027 (closed Dec 9 and Christmas Eve; 5:30-10:30 pm).",
   "checkedAt": "2026-10-18"
  },
  {
@@ -9748,8 +9748,8 @@
   "venue": "Texas Renaissance Festival grounds",
   "neighborhood": "Todd Mission, 55 mi northwest",
   "address": "21778 FM 1774, Todd Mission, TX 77363",
-  "latitude": 30.1297,
-  "longitude": -95.8219,
+  "latitude": 30.2542,
+  "longitude": -95.8409,
   "seasons": [
    "fall"
   ],
@@ -9772,8 +9772,8 @@
   "venue": "Houston Botanic Garden",
   "neighborhood": "Second Ward",
   "address": "1 Botanic Ln, Houston, TX 77017",
-  "latitude": 29.7123,
-  "longitude": -95.3231,
+  "latitude": 29.6843,
+  "longitude": -95.265,
   "seasons": [
    "spring",
    "summer",
@@ -9850,8 +9850,8 @@
   "venue": "Pleasure Pier",
   "neighborhood": "Galveston, 50 mi southeast",
   "address": "2501 Seawall Blvd, Galveston, TX 77550",
-  "latitude": 29.2857,
-  "longitude": -94.7886,
+  "latitude": 29.2866,
+  "longitude": -94.7899,
   "seasons": [
    "spring",
    "summer",
@@ -9876,8 +9876,8 @@
   "venue": "Blue Bell Creameries",
   "neighborhood": "Brenham, 70 mi northwest",
   "address": "1101 S Blue Bell Rd, Brenham, TX 77833",
-  "latitude": 30.1473,
-  "longitude": -96.3927,
+  "latitude": 30.1635,
+  "longitude": -96.3778,
   "seasons": [
    "spring",
    "summer",
@@ -9891,7 +9891,7 @@
   "category": "food",
   "description": "A self-guided visit with an observation deck over the production floor and a scoop shop for ice cream made on site.",
   "sourceUrl": "https://www.bluebell.com/visit-blue-bell/brenham",
-  "costNote": "Paid - tour/scoop pricing not published on the page",
+  "costNote": "Self-guided visitor center (no guided tours); admission price not published on the page read; open Mon-Fri 8am-5pm CT, observation deck closed Oct 19-30, 2026 for maintenance",
   "dateConfidence": "estimated",
   "dateReasoning": "Page lists Mon-Fri hours, Saturdays only in June-August, and notes the deck is closed Oct. 19-30, 2026 for maintenance; prices not shown.",
   "checkedAt": "2026-10-18"
@@ -9903,8 +9903,8 @@
   "venue": "Brazos Bend State Park",
   "neighborhood": "Needville, 45 mi southwest",
   "address": "21901 FM 762, Needville, TX 77461",
-  "latitude": 29.3792,
-  "longitude": -95.5918,
+  "latitude": 29.3787,
+  "longitude": -95.6037,
   "seasons": [
    "spring",
    "summer",
@@ -9930,8 +9930,8 @@
   "venue": "Washington-on-the-Brazos State Historic Site",
   "neighborhood": "Washington, 75 mi northwest",
   "address": "23200 Park Rd 12, Washington, TX 77880",
-  "latitude": 30.3256,
-  "longitude": -96.154,
+  "latitude": 30.3277,
+  "longitude": -96.1565,
   "seasons": [
    "spring",
    "summer",
@@ -9957,8 +9957,8 @@
   "venue": "Galveston Island State Park",
   "neighborhood": "Galveston, 55 mi southeast",
   "address": "14901 FM 3005, Galveston, TX 77554",
-  "latitude": 29.2063,
-  "longitude": -94.956,
+  "latitude": 29.2019,
+  "longitude": -94.9676,
   "seasons": [
    "spring",
    "summer",
@@ -9983,8 +9983,8 @@
   "venue": "Huntsville State Park",
   "neighborhood": "Huntsville, 70 mi north",
   "address": "565 Park Rd 40 W, Huntsville, TX 77340",
-  "latitude": 30.6256,
-  "longitude": -95.5309,
+  "latitude": 30.6212,
+  "longitude": -95.5301,
   "seasons": [
    "spring",
    "summer",
@@ -10018,7 +10018,7 @@
    "fall"
   ],
   "startMonth": 2,
-  "endMonth": 10,
+  "endMonth": 11,
   "startDate": null,
   "endDate": null,
   "category": "sports",
@@ -10165,8 +10165,8 @@
   "venue": "Messina Hof Winery",
   "neighborhood": "Bryan, 100 mi northwest",
   "address": "4545 Old Reliance Rd, Bryan, TX 77808",
-  "latitude": 30.683,
-  "longitude": -96.305,
+  "latitude": 30.7028,
+  "longitude": -96.3233,
   "seasons": [
    "spring",
    "summer",
@@ -10191,9 +10191,9 @@
   "name": "Orange Show Monument",
   "venue": "Orange Show Center for Visionary Art",
   "neighborhood": "East End",
-  "address": "2402 Munger St, Houston, TX 77023",
-  "latitude": 29.7167,
-  "longitude": -95.3314,
+  "address": "2401 Munger St, Houston, TX 77023",
+  "latitude": 29.7178,
+  "longitude": -95.3243,
   "seasons": [
    "spring",
    "fall",
@@ -10206,9 +10206,9 @@
   "category": "arts",
   "description": "A folk-art maze of tile, wrought iron and found objects built by one man, with seasonal tours and events nearby.",
   "sourceUrl": "https://orangeshow.org",
-  "costNote": "Paid - admission not read",
+  "costNote": "Monument closed for restoration until early 2027; the grounds can be viewed from outside at 2441 Munger St, free, daily dawn to dusk",
   "dateConfidence": "estimated",
-  "dateReasoning": "Official site returned 200 via curl; open dates not read, cooler-season window estimated.",
+  "dateReasoning": "Official site says the monument is closed for restoration until early 2027; no reopening date is published, so the season window is an estimate.",
   "checkedAt": "2026-10-18"
  },
  {
@@ -10219,20 +10219,20 @@
   "neighborhood": "Boulder City, 25 mi southeast",
   "address": "1000 Boulder City Pkwy, Boulder City, NV 89005",
   "latitude": 35.9788,
-  "longitude": -114.833,
+  "longitude": -114.8451,
   "seasons": [
    "winter"
   ],
   "startMonth": 11,
   "endMonth": 12,
   "startDate": "2026-11-28",
-  "endDate": "2026-12-22",
+  "endDate": "2026-12-20",
   "category": "holiday",
   "description": "A 45-minute vintage-train ride to Henderson and back with carols, candy canes and photos with Santa, run on weekends before Christmas.",
   "sourceUrl": "https://www.boulderrailroadmuseum.org/holiday-trains",
   "costNote": "Paid - $12 per person, $6 for members",
   "dateConfidence": "confirmed",
-  "dateReasoning": "Holiday Trains page read 2026-10-18: Santa Train Saturdays and Sundays Nov 28 - Dec 22, five departures daily, $12 ($6 members); tickets on sale Nov 1. Search snippets elsewhere showed a different end date, so the page figure is used.",
+  "dateReasoning": "Museum page lists Santa Train Saturdays and Sundays from Nov 28; its text says through Dec 22 (a Tuesday), and the sister North Pole Express page states 2026 weekends Nov 28-Dec 20, so the last weekend is Dec 20. Tickets on sale Nov 1.",
   "checkedAt": "2026-10-18"
  },
  {
@@ -10243,7 +10243,7 @@
   "neighborhood": "Boulder City, 25 mi southeast",
   "address": "1000 Boulder City Pkwy, Boulder City, NV 89005",
   "latitude": 35.9788,
-  "longitude": -114.833,
+  "longitude": -114.8451,
   "seasons": [
    "winter"
   ],
@@ -10267,7 +10267,7 @@
   "neighborhood": "Boulder City, 25 mi southeast",
   "address": "1000 Boulder City Pkwy, Boulder City, NV 89005",
   "latitude": 35.9788,
-  "longitude": -114.833,
+  "longitude": -114.8451,
   "seasons": [
    "fall"
   ],
@@ -10291,7 +10291,7 @@
   "neighborhood": "Boulder City, 25 mi southeast",
   "address": "1000 Boulder City Pkwy, Boulder City, NV 89005",
   "latitude": 35.9788,
-  "longitude": -114.833,
+  "longitude": -114.8451,
   "seasons": [
    "fall",
    "winter",
@@ -10315,9 +10315,9 @@
   "name": "Valley of Fire State Park Hiking and Scenery",
   "venue": "Valley of Fire State Park",
   "neighborhood": "Overton, 55 mi northeast",
-  "address": "29450 Valley of Fire Hwy, Overton, NV 89040",
-  "latitude": 36.435,
-  "longitude": -114.519,
+  "address": "29450 Valley of Fire Rd, Overton, NV 89040",
+  "latitude": 36.43,
+  "longitude": -114.5138,
   "seasons": [
    "fall",
    "winter",
@@ -10330,7 +10330,7 @@
   "category": "outdoor",
   "description": "Nevada's oldest state park offers red sandstone formations, petroglyphs and short trails that are comfortable in the cooler half of the year.",
   "sourceUrl": "https://parks.nv.gov/parks/valley-of-fire",
-  "costNote": "Paid - day-use entrance fee; current figure on the park's fees page",
+  "costNote": "Paid - $10 per vehicle, $15 for non-Nevada vehicles; park closed Dec 1-14 for annual maintenance",
   "dateConfidence": "estimated",
   "dateReasoning": "Park page opened 2026-10-18 and exists; no dated cycle, so a typical cool-season window is used. Fee amount not read.",
   "checkedAt": "2026-10-18"
@@ -10349,8 +10349,8 @@
    "winter",
    "spring"
   ],
-  "startMonth": 10,
-  "endMonth": 4,
+  "startMonth": 11,
+  "endMonth": 3,
   "startDate": null,
   "endDate": null,
   "category": "outdoor",
@@ -10367,9 +10367,9 @@
   "name": "Spring Mountain Ranch State Park",
   "venue": "Spring Mountain Ranch State Park",
   "neighborhood": "Blue Diamond, 15 mi west",
-  "address": "6375 Nevada 159, Blue Diamond, NV 89004",
-  "latitude": 36.1366,
-  "longitude": -115.4341,
+  "address": "6375 Hwy 159, Blue Diamond, NV 89004",
+  "latitude": 36.0696,
+  "longitude": -115.4576,
   "seasons": [
    "winter",
    "spring",
@@ -10383,7 +10383,7 @@
   "category": "outdoor",
   "description": "A historic ranch below the Wilson Cliffs with picnic lawns, short trails and a ranch house, a quiet alternative to the busier Red Rock loop.",
   "sourceUrl": "https://parks.nv.gov/parks/spring-mountain-ranch",
-  "costNote": "Paid - day-use fee; see park fees page",
+  "costNote": "Paid - $10 per vehicle, $15 for non-Nevada vehicles, $2 per bike",
   "dateConfidence": "estimated",
   "dateReasoning": "State park page opened 2026-10-18 and exists; year-round open, no specific dated programme read.",
   "checkedAt": "2026-10-18"
@@ -10523,8 +10523,8 @@
   "venue": "Las Vegas Ballpark",
   "neighborhood": "Summerlin",
   "address": "1650 S Pavilion Center Dr, Las Vegas, NV 89135",
-  "latitude": 36.1668,
-  "longitude": -115.3303,
+  "latitude": 36.1527,
+  "longitude": -115.3295,
   "seasons": [
    "spring",
    "summer",
@@ -10600,8 +10600,8 @@
   "venue": "Michelob ULTRA Arena",
   "neighborhood": "Las Vegas Strip",
   "address": "3950 S Las Vegas Blvd, Las Vegas, NV 89119",
-  "latitude": 36.0925,
-  "longitude": -115.1763,
+  "latitude": 36.0906,
+  "longitude": -115.179,
   "seasons": [
    "spring",
    "summer",
@@ -10657,14 +10657,14 @@
   ],
   "startMonth": 11,
   "endMonth": 11,
-  "startDate": null,
-  "endDate": null,
+  "startDate": "2026-11-19",
+  "endDate": "2026-11-21",
   "category": "sports",
   "description": "A night street race on a circuit running past the Sphere and Bellagio, held as a November weekend.",
-  "sourceUrl": "https://f1lasvegas.com",
+  "sourceUrl": "https://www.f1lasvegasgp.com",
   "costNote": "Paid - ticketed",
-  "dateConfidence": "estimated",
-  "dateReasoning": "Official site returned 200 but no readable text; the Nov 19-21, 2026 weekend appears only in third-party search results, so dates are left null and confidence estimated.",
+  "dateConfidence": "confirmed",
+  "dateReasoning": "2026 Las Vegas Grand Prix weekend is Nov 19-21 (practice Thu, qualifying Fri, race Sat Nov 21 8pm local) per web search results from news3lv and 8newsnow; f1lasvegasgp.com named as ticket site",
   "checkedAt": "2026-10-18"
  },
  {
@@ -10755,14 +10755,14 @@
   ],
   "startMonth": 6,
   "endMonth": 6,
-  "startDate": null,
-  "endDate": null,
+  "startDate": "2027-06-10",
+  "endDate": "2027-06-13",
   "category": "arts",
   "description": "A long-running contemporary-music festival in an open-air bowl in the Ojai Valley, with a different music director each year.",
   "sourceUrl": "https://ojaifestival.org/",
   "costNote": "Paid - ticketed; prices on site",
-  "dateConfidence": "estimated",
-  "dateReasoning": "ojaifestival.org is Cloudflare-protected and could not be read by automated fetch; the festival is customarily held in June.",
+  "dateConfidence": "confirmed",
+  "dateReasoning": "81st Ojai Music Festival announced for June 10-13, 2027 (Teddy Abrams / Ojai Music Festival announcement, 2026-05-28).",
   "checkedAt": "2026-10-18"
  },
  {
@@ -10772,8 +10772,8 @@
   "venue": "Palm Springs Aerial Tramway",
   "neighborhood": "Palm Springs, 107 mi east",
   "address": "1 Tram Way, Palm Springs, CA 92262",
-  "latitude": 33.8379,
-  "longitude": -116.6283,
+  "latitude": 33.8373,
+  "longitude": -116.6142,
   "seasons": [
    "winter",
    "spring",
@@ -10830,14 +10830,14 @@
   ],
   "startMonth": 9,
   "endMonth": 10,
-  "startDate": null,
-  "endDate": null,
+  "startDate": "2026-09-17",
+  "endDate": "2026-10-31",
   "category": "holiday",
   "description": "Halloween haunt with mazes, scare zones and shows run at the Orange County theme park on select nights.",
   "sourceUrl": "https://www.sixflags.com/knotts",
   "costNote": "Paid - separate ticket; price on site",
-  "dateConfidence": "estimated",
-  "dateReasoning": "knotts.com redirects to sixflags.com/knotts, which opened on 2026-10-18 but exposed no Scary Farm dates in fetched text; event runs early September through October.",
+  "dateConfidence": "confirmed",
+  "dateReasoning": "Knott's Scary Farm 2026 runs select nights Sept 17 through Oct 31, 2026 (FOX LA).",
   "checkedAt": "2026-10-18"
  },
  {
@@ -10847,8 +10847,8 @@
   "venue": "Mt. Baldy Resort",
   "neighborhood": "Mt. Baldy, 45 mi east",
   "address": "6527 Mt Baldy Rd, Mt Baldy, CA 91759",
-  "latitude": 34.2353,
-  "longitude": -117.6585,
+  "latitude": 34.2693,
+  "longitude": -117.6235,
   "seasons": [
    "winter",
    "spring"
@@ -10878,7 +10878,7 @@
    "summer"
   ],
   "startMonth": 7,
-  "endMonth": 8,
+  "endMonth": 9,
   "startDate": null,
   "endDate": null,
   "category": "arts",
@@ -10984,15 +10984,15 @@
    "winter"
   ],
   "startMonth": 11,
-  "endMonth": 12,
-  "startDate": null,
-  "endDate": null,
+  "endMonth": 1,
+  "startDate": "2026-11-27",
+  "endDate": "2027-01-03",
   "category": "holiday",
   "description": "Danish-style village decorates for the holidays with lights, markets and Santa's arrival.",
   "sourceUrl": "https://solvangusa.com/",
   "costNote": "Free to visit; some events paid",
-  "dateConfidence": "estimated",
-  "dateReasoning": "Opened solvangusa.com on 2026-10-18 (official visitor guide); dates not read. Julefest typically runs November through December. Slightly beyond the 100-mile radius.",
+  "dateConfidence": "confirmed",
+  "dateReasoning": "Solvang Julefest 2026 runs Nov 27, 2026 through Jan 3, 2027 (Santa Barbara Independent listing); the Christmas tree burn is Jan 8, 2027.",
   "checkedAt": "2026-10-18"
  },
  {
@@ -11191,16 +11191,16 @@
    "winter",
    "spring"
   ],
-  "startMonth": 9,
+  "startMonth": 10,
   "endMonth": 6,
-  "startDate": null,
-  "endDate": null,
+  "startDate": "2026-10-17",
+  "endDate": "2027-06-20",
   "category": "arts",
   "description": "Grand opera productions at the Music Center pavilion.",
   "sourceUrl": "https://www.laopera.org/",
   "costNote": "Paid - tickets",
-  "dateConfidence": "estimated",
-  "dateReasoning": "Opened laopera.org on 2026-10-18; season dates not read, typically September to June.",
+  "dateConfidence": "confirmed",
+  "dateReasoning": "LA Opera 2026-27 mainstage season opens Oct 17, 2026 (Carmen) and closes June 20, 2027 (Marriage of Figaro) at the Dorothy Chandler Pavilion.",
   "checkedAt": "2026-10-18"
  },
  {
@@ -11333,8 +11333,8 @@
   "venue": "Morikami Museum",
   "neighborhood": "Delray Beach, 50 mi north",
   "address": "4000 Morikami Park Rd, Delray Beach, FL 33446",
-  "latitude": 26.4545,
-  "longitude": -80.1612,
+  "latitude": 26.4278,
+  "longitude": -80.1558,
   "seasons": [
    "winter",
    "spring",
@@ -11446,15 +11446,15 @@
    "winter"
   ],
   "startMonth": 11,
-  "endMonth": 1,
-  "startDate": null,
-  "endDate": null,
+  "endMonth": 12,
+  "startDate": "2026-11-27",
+  "endDate": "2026-12-30",
   "category": "holiday",
   "description": "A holiday-season evening event at the zoo with lights on select nights.",
   "sourceUrl": "https://www.zoomiami.org/",
   "costNote": "Paid - price not listed on the home page",
-  "dateConfidence": "estimated",
-  "dateReasoning": "Home page opened 2026-10-18: Zoo Lights on select nights beginning Nov 27, 2026; end date not stated, so Nov-Jan is an estimate.",
+  "dateConfidence": "confirmed",
+  "dateReasoning": "Zoo Miami's Zoo Lights page lists select nights Nov 27-28, Dec 4-5, 11-12, 18-23 and 26-30, 2026, 6:30-10pm; opening night Nov 27 with 7pm tree lighting.",
   "checkedAt": "2026-10-18"
  },
  {
@@ -11753,8 +11753,8 @@
    "summer",
    "fall"
   ],
-  "startMonth": 5,
-  "endMonth": 10,
+  "startMonth": 1,
+  "endMonth": 12,
   "startDate": null,
   "endDate": null,
   "category": "arts",
@@ -11762,7 +11762,7 @@
   "sourceUrl": "https://walkerart.org/visit/garden/",
   "costNote": "Free",
   "dateConfidence": "estimated",
-  "dateReasoning": "Walker garden page opens; the garden is typically open through the warm months, exact opening dates not read.",
+  "dateReasoning": "Walker page: the Minneapolis Sculpture Garden is free and open daily 6 am to midnight, all year.",
   "checkedAt": "2026-10-18"
  },
  {
@@ -11806,14 +11806,14 @@
   ],
   "startMonth": 9,
   "endMonth": 11,
-  "startDate": null,
-  "endDate": null,
+  "startDate": "2026-09-25",
+  "endDate": "2026-11-01",
   "category": "family",
   "description": "An autumn trail of thousands of lit, carved pumpkins at the zoo, alongside seasonal animal-themed activities.",
   "sourceUrl": "https://www.mnzoo.org/",
   "costNote": "Paid - online ticket required, price not published on the home page",
-  "dateConfidence": "estimated",
-  "dateReasoning": "Page read: 2026 run is Sept 25 to Nov 1 with 5,000 glowing pumpkins; 2027 dates not announced, so the typical fall window is used.",
+  "dateConfidence": "confirmed",
+  "dateReasoning": "Minnesota Zoo home page: Jack-O-Lantern Spectacular runs September 25 - November 1 (2026), 5,000 glowing pumpkins.",
   "checkedAt": "2026-10-18"
  },
  {
@@ -11823,8 +11823,8 @@
   "venue": "Pine Tree Apple Orchard",
   "neighborhood": "White Bear Lake, 15 mi northeast",
   "address": "450 Apple Orchard Rd, White Bear Lake, MN 55110",
-  "latitude": 45.0866,
-  "longitude": -93.0125,
+  "latitude": 45.1065,
+  "longitude": -92.9552,
   "seasons": [
    "summer",
    "fall"
@@ -11872,8 +11872,8 @@
   "venue": "Wild Mountain",
   "neighborhood": "Taylors Falls, 50 mi north",
   "address": "37200 Wild Mountain Rd, Taylors Falls, MN 55084",
-  "latitude": 45.4533,
-  "longitude": -92.693,
+  "latitude": 45.4889,
+  "longitude": -92.7056,
   "seasons": [
    "winter"
   ],
@@ -11969,22 +11969,22 @@
   "venue": "Renaissance Festival Grounds",
   "neighborhood": "Shakopee, 30 mi southwest",
   "address": "12364 Chestnut Blvd, Shakopee, MN 55379",
-  "latitude": 44.727,
-  "longitude": -93.525,
+  "latitude": 44.7464,
+  "longitude": -93.5989,
   "seasons": [
    "summer",
    "fall"
   ],
   "startMonth": 8,
   "endMonth": 10,
-  "startDate": "2027-08-21",
-  "endDate": "2027-10-03",
+  "startDate": null,
+  "endDate": null,
   "category": "festival",
   "description": "A themed marketplace village with jousting, costumed performers, crafts and food each weekend of the late-summer season.",
   "sourceUrl": "https://www.renaissancefest.com/",
   "costNote": "Paid - ticket price on separate page, not read",
-  "dateConfidence": "confirmed",
-  "dateReasoning": "Page read 2026-10-18: 2027 weekends Aug 21 to Oct 3 plus Labor Day Sept 6 and Festival Friday Oct 1, 9am-7pm.",
+  "dateConfidence": "estimated",
+  "dateReasoning": "2027 dates not found on any source I could open (renaissancefest.com returns 403 to scripted fetches). The 2026 season ran Aug 22 - Oct 4 on weekends plus Labor Day, so the 2027 season is expected to be roughly late August to early October.",
   "checkedAt": "2026-10-18"
  },
  {
@@ -12001,14 +12001,14 @@
   ],
   "startMonth": 1,
   "endMonth": 2,
-  "startDate": null,
-  "endDate": null,
+  "startDate": "2027-01-28",
+  "endDate": "2027-02-07",
   "category": "festival",
   "description": "Long-running winter festival with ice and snow sculpture, parades, royalty and downtown events.",
   "sourceUrl": "https://www.wintercarnival.com/",
   "costNote": "Paid - some events ticketed, pricing not read",
-  "dateConfidence": "estimated",
-  "dateReasoning": "Page opened but 2027 dates are on a separate Future Dates page not read; typically late January to early February.",
+  "dateConfidence": "confirmed",
+  "dateReasoning": "Official Winter Carnival FAQ: the 2027 Winter Carnival runs January 28 - February 7, 2027.",
   "checkedAt": "2026-10-18"
  },
  {
@@ -12094,8 +12094,8 @@
   "venue": "Lowell Park and downtown Stillwater",
   "neighborhood": "Stillwater, 20 mi east",
   "address": "Lowell Park, Stillwater, MN 55082",
-  "latitude": 44.9418,
-  "longitude": -92.8031,
+  "latitude": 45.0555,
+  "longitude": -92.8039,
   "seasons": [
    "summer"
   ],
@@ -12181,7 +12181,7 @@
   "category": "outdoor",
   "description": "A 90-minute vintage-car diesel train ride along the St. Croix bluffs in peak color.",
   "sourceUrl": "https://trainride.org/",
-  "costNote": "Paid - tickets, price not read",
+  "costNote": "Paid - Fall Colors Train adults $42.80, seniors/military $39.59, children 6-15 $26.75, toddlers 3-5 $17.12, family of 4 $133.75",
   "dateConfidence": "estimated",
   "dateReasoning": "Site opens; search results list 2026 weekend departures Sept 12-Oct 25, but 2027 dates are not posted so a typical window is used.",
   "checkedAt": "2026-10-18"
@@ -12246,7 +12246,7 @@
   "venue": "Stones River National Battlefield",
   "neighborhood": "Murfreesboro, 30 mi southeast",
   "address": "3501 Old Nashville Hwy, Murfreesboro, TN 37129",
-  "latitude": 35.8727,
+  "latitude": 35.8819,
   "longitude": -86.4348,
   "seasons": [
    "winter",
@@ -12300,8 +12300,8 @@
   "venue": "Lane Motor Museum",
   "neighborhood": "Nashville, east of downtown",
   "address": "702 Murfreesboro Pike, Nashville, TN 37210",
-  "latitude": 36.1306,
-  "longitude": -86.7313,
+  "latitude": 36.1403,
+  "longitude": -86.7346,
   "seasons": [
    "winter",
    "spring",
@@ -12327,8 +12327,8 @@
   "venue": "Nashville Farmers' Market",
   "neighborhood": "Germantown",
   "address": "900 Rosa L Parks Blvd, Nashville, TN 37208",
-  "latitude": 36.174,
-  "longitude": -86.788,
+  "latitude": 36.1702,
+  "longitude": -86.7887,
   "seasons": [
    "winter",
    "spring",
@@ -12373,30 +12373,6 @@
  },
  {
   "citySlug": "nashville",
-  "slug": "bonnaroo-music-festival",
-  "name": "Bonnaroo Music & Arts Festival",
-  "venue": "The Farm",
-  "neighborhood": "Manchester, 60 mi southeast",
-  "address": "1560 New Bell Buckle Rd, Manchester, TN 37355",
-  "latitude": 35.4776,
-  "longitude": -86.068,
-  "seasons": [
-   "summer"
-  ],
-  "startMonth": 6,
-  "endMonth": 6,
-  "startDate": null,
-  "endDate": null,
-  "category": "festival",
-  "description": "Four days of camping and music on a Coffee County farm, with a mid-June schedule historically.",
-  "sourceUrl": "https://www.bonnaroo.com",
-  "costNote": "Paid - festival passes",
-  "dateConfidence": "estimated",
-  "dateReasoning": "Official site opened; it shows the 2026 festival (June 11-14, 2026) is over and no 2027 dates were found, so mid-June is estimated.",
-  "checkedAt": "2026-10-18"
- },
- {
-  "citySlug": "nashville",
   "slug": "wilson-county-fair",
   "name": "Wilson County Fair (Tennessee State Fair)",
   "venue": "Wilson County Fairgrounds",
@@ -12413,7 +12389,7 @@
   "endDate": null,
   "category": "festival",
   "description": "A ten-day county fair with midway rides, livestock shows, fair food and Fiddlers Grove entertainment each August.",
-  "sourceUrl": "https://www.wilsoncountyfair.net",
+  "sourceUrl": "https://www.wilsoncountytnstatefair.com/",
   "costNote": "Paid - admission; see fair site",
   "dateConfidence": "estimated",
   "dateReasoning": "Official page opened and the attraction confirmed; no dated cycle stated, so the typical open-season month window is used.",
@@ -12453,8 +12429,8 @@
   "venue": "Old Stone Fort State Archaeological Park",
   "neighborhood": "Manchester, 65 mi southeast",
   "address": "732 Stone Fort Dr, Manchester, TN 37355",
-  "latitude": 35.4846,
-  "longitude": -86.0982,
+  "latitude": 35.4838,
+  "longitude": -86.1046,
   "seasons": [
    "winter",
    "spring",
@@ -12507,8 +12483,8 @@
   "venue": "Burgess Falls State Park",
   "neighborhood": "Sparta area, 85 mi east",
   "address": "4000 Burgess Falls Dr, Sparta, TN 38583",
-  "latitude": 36.0395,
-  "longitude": -85.5846,
+  "latitude": 36.0442,
+  "longitude": -85.5942,
   "seasons": [
    "spring",
    "fall",
@@ -12533,8 +12509,8 @@
   "venue": "Cedars of Lebanon State Park",
   "neighborhood": "Lebanon, 30 mi east",
   "address": "328 Cedar Forest Rd, Lebanon, TN 37090",
-  "latitude": 36.0545,
-  "longitude": -86.332,
+  "latitude": 36.0737,
+  "longitude": -86.3115,
   "seasons": [
    "spring",
    "fall"
@@ -12558,8 +12534,8 @@
   "venue": "Dunbar Cave State Park",
   "neighborhood": "Clarksville, 50 mi northwest",
   "address": "401 Old Dunbar Cave Rd, Clarksville, TN 37043",
-  "latitude": 36.5733,
-  "longitude": -87.3198,
+  "latitude": 36.5559,
+  "longitude": -87.3046,
   "seasons": [
    "winter",
    "spring",
@@ -12585,8 +12561,8 @@
   "venue": "Franklin First United Methodist Church",
   "neighborhood": "Franklin, 20 mi south",
   "address": "120 Aldersgate Way, Franklin, TN 37067",
-  "latitude": 35.9231,
-  "longitude": -86.8687,
+  "latitude": 35.9457,
+  "longitude": -86.857,
   "seasons": [
    "winter",
    "spring",
@@ -12612,8 +12588,8 @@
   "venue": "Carnton Plantation",
   "neighborhood": "Franklin, 20 mi south",
   "address": "1345 Eastern Flank Cir, Franklin, TN 37064",
-  "latitude": 35.8911,
-  "longitude": -86.8453,
+  "latitude": 35.9031,
+  "longitude": -86.8583,
   "seasons": [
    "fall",
    "spring",
@@ -12626,7 +12602,7 @@
   "endDate": null,
   "category": "arts",
   "description": "Tour a Civil War mansion that served as a field hospital and the surrounding Franklin battlefield; anniversary programs run each late November.",
-  "sourceUrl": "https://www.carnton.org",
+  "sourceUrl": "https://www.boft.org/",
   "costNote": "Paid - tickets; see operator page",
   "dateConfidence": "estimated",
   "dateReasoning": "Official page opened and the attraction confirmed; no dated cycle stated, so the typical open-season month window is used.",
@@ -12639,8 +12615,8 @@
   "venue": "The Hermitage",
   "neighborhood": "Hermitage, 12 mi east",
   "address": "4580 Rachel's Ln, Hermitage, TN 37076",
-  "latitude": 36.2189,
-  "longitude": -86.6125,
+  "latitude": 36.2126,
+  "longitude": -86.6088,
   "seasons": [
    "winter",
    "spring",
@@ -12666,8 +12642,8 @@
   "venue": "Arrington Vineyards",
   "neighborhood": "Arrington, 25 mi southeast",
   "address": "6211 Patton Rd, Arrington, TN 37014",
-  "latitude": 35.9423,
-  "longitude": -86.6426,
+  "latitude": 35.8403,
+  "longitude": -86.6963,
   "seasons": [
    "winter",
    "spring",
@@ -12923,8 +12899,8 @@
   "venue": "Fishkill Farms",
   "neighborhood": "Hopewell Junction, Hudson Valley, 68 mi north",
   "address": "9 Fishkill Farm Rd, Hopewell Junction, NY 12533",
-  "latitude": 41.5459,
-  "longitude": -73.8333,
+  "latitude": 41.5178,
+  "longitude": -73.8237,
   "seasons": [
    "fall",
    "summer"
@@ -13048,7 +13024,7 @@
   "citySlug": "new-york",
   "slug": "smorgasburg-williamsburg",
   "name": "Smorgasburg",
-  "venue": "East River State Park",
+  "venue": "Marsha P. Johnson State Park",
   "neighborhood": "Williamsburg, Brooklyn",
   "address": "90 Kent Ave, Brooklyn, NY 11249",
   "latitude": 40.7218,
@@ -13189,16 +13165,16 @@
    "summer",
    "fall"
   ],
-  "startMonth": 5,
-  "endMonth": 10,
-  "startDate": null,
-  "endDate": null,
+  "startMonth": 9,
+  "endMonth": 12,
+  "startDate": "2026-09-18",
+  "endDate": "2026-12-06",
   "category": "sports",
   "description": "Historic racetrack and home of the Belmont Stakes, with a grandstand and family-friendly infield days. The venue reopened after renovation.",
   "sourceUrl": "https://www.nyra.com/belmont/",
   "costNote": "Paid - general admission and reserved seating",
   "dateConfidence": "estimated",
-  "dateReasoning": "Page opened on 2026-10-18 and confirms the activity; NYRA page opened and says the park is newly reopened; the 2027 racing calendar was not read.",
+  "dateReasoning": "NYRA's 2026 schedule announcement lists the reopened Belmont Park fall meet as tentatively Sept 18 to Dec 6, 2026 (46 race days), pending NY Gaming Commission approval; the spring/summer meet is at Aqueduct and the Belmont Stakes at Saratoga.",
   "checkedAt": "2026-10-18"
  },
  {
@@ -13295,8 +13271,8 @@
    "summer",
    "fall"
   ],
-  "startMonth": 4,
-  "endMonth": 10,
+  "startMonth": 1,
+  "endMonth": 12,
   "startDate": null,
   "endDate": null,
   "category": "outdoor",
@@ -13304,7 +13280,7 @@
   "sourceUrl": "https://morrisarboretum.org/",
   "costNote": "Paid - admission; see site",
   "dateConfidence": "estimated",
-  "dateReasoning": "Opened the page 2026-10-18 (HTTP 200) and confirmed the venue/program operates; no dated cycle published on the page read, so a typical-season window is used.",
+  "dateReasoning": "The Morris Arboretum is open year-round: daily 10-4 November-March, weekdays 10-5 and weekends 9-5 April-October; closed only on a few holidays.",
   "checkedAt": "2026-10-18"
  },
  {
@@ -13341,8 +13317,8 @@
   "venue": "Peddler's Village",
   "neighborhood": "Lahaska, Bucks County, 35 mi north",
   "address": "3 Peddler's Village Rd, Lahaska, PA 18931",
-  "latitude": 40.3506,
-  "longitude": -75.0408,
+  "latitude": 40.3477,
+  "longitude": -75.0327,
   "seasons": [
    "spring",
    "summer",
@@ -13395,8 +13371,8 @@
   "venue": "Strasburg Rail Road",
   "neighborhood": "Strasburg, Lancaster County, 65 mi west",
   "address": "301 Gap Rd, Ronks, PA 17572",
-  "latitude": 39.9846,
-  "longitude": -76.183,
+  "latitude": 39.983,
+  "longitude": -76.1607,
   "seasons": [
    "spring",
    "summer",
@@ -13422,8 +13398,8 @@
   "venue": "Cape May Lighthouse",
   "neighborhood": "Cape May, NJ, 85 mi south",
   "address": "215 Lighthouse Ave, Cape May, NJ 08204",
-  "latitude": 38.9231,
-  "longitude": -74.9606,
+  "latitude": 38.933,
+  "longitude": -74.9604,
   "seasons": [
    "spring",
    "summer",
@@ -13448,8 +13424,8 @@
   "venue": "Morey's Piers",
   "neighborhood": "Wildwood, NJ, 75 mi southeast",
   "address": "3501 Boardwalk, Wildwood, NJ 08260",
-  "latitude": 38.9712,
-  "longitude": -74.821,
+  "latitude": 38.9856,
+  "longitude": -74.8093,
   "seasons": [
    "summer"
   ],
@@ -13472,8 +13448,8 @@
   "venue": "Valley Forge National Historical Park",
   "neighborhood": "King of Prussia, 20 mi northwest",
   "address": "1400 N Outer Line Dr, King of Prussia, PA 19406",
-  "latitude": 40.0985,
-  "longitude": -75.4349,
+  "latitude": 40.1013,
+  "longitude": -75.4235,
   "seasons": [
    "spring",
    "summer",
@@ -13524,15 +13500,15 @@
   "venue": "Winterthur",
   "neighborhood": "Winterthur, DE, 35 mi southwest",
   "address": "5105 Kennett Pike, Winterthur, DE 19735",
-  "latitude": 39.8697,
-  "longitude": -75.605,
+  "latitude": 39.8078,
+  "longitude": -75.6006,
   "seasons": [
    "spring",
    "summer",
    "fall"
   ],
-  "startMonth": 3,
-  "endMonth": 11,
+  "startMonth": 1,
+  "endMonth": 12,
   "startDate": null,
   "endDate": null,
   "category": "outdoor",
@@ -13540,7 +13516,7 @@
   "sourceUrl": "https://www.winterthur.org/",
   "costNote": "Paid - admission; see site",
   "dateConfidence": "estimated",
-  "dateReasoning": "Opened the page 2026-10-18 (HTTP 200) and confirmed the venue/program operates; no dated cycle published on the page read, so a typical-season window is used.",
+  "dateReasoning": "Winterthur is open Tuesday-Sunday 10-5 in spring, summer and fall plus a Yuletide schedule, with no seasonal closure listed, so it runs year-round.",
   "checkedAt": "2026-10-18"
  },
  {
@@ -13583,7 +13559,7 @@
    "fall"
   ],
   "startMonth": 3,
-  "endMonth": 10,
+  "endMonth": 11,
   "startDate": null,
   "endDate": null,
   "category": "sports",
@@ -13591,7 +13567,7 @@
   "sourceUrl": "https://www.philadelphiaunion.com/",
   "costNote": "Paid - ticket prices vary by match",
   "dateConfidence": "estimated",
-  "dateReasoning": "Opened the page 2026-10-18 (HTTP 200) and confirmed the venue/program operates; no dated cycle published on the page read, so a typical-season window is used.",
+  "dateReasoning": "The 2026 MLS regular season ends on Decision Day, Saturday 7 November 2026, at home against Toronto FC, so home matches run into November.",
   "checkedAt": "2026-10-18"
  },
  {
@@ -13705,8 +13681,8 @@
   "venue": "WheatonArts and Cultural Center",
   "neighborhood": "Millville, NJ, 45 mi southeast",
   "address": "1501 Glasstown Rd, Millville, NJ 08332",
-  "latitude": 39.3995,
-  "longitude": -75.0318,
+  "latitude": 39.4107,
+  "longitude": -75.0206,
   "seasons": [
    "spring",
    "summer",
@@ -13731,8 +13707,8 @@
   "venue": "Historic Germantown",
   "neighborhood": "Germantown",
   "address": "6401 Germantown Ave, Philadelphia, PA 19144",
-  "latitude": 40.0561,
-  "longitude": -75.1927,
+  "latitude": 40.0481,
+  "longitude": -75.1813,
   "seasons": [
    "spring",
    "summer",
@@ -13771,7 +13747,7 @@
   "category": "outdoor",
   "description": "Slip down natural red-rock water slides in Oak Creek and picnic under the canyon walls; the swim area is the main draw in warm months.",
   "sourceUrl": "https://azstateparks.com/slide-rock",
-  "costNote": null,
+  "costNote": "Paid - $20 per vehicle (1-4 people) from Aug 22, 2026 to Apr 2027; $30 per vehicle May 1-Aug 21; additional people $5; under 6 free",
   "dateConfidence": "estimated",
   "dateReasoning": "Park page opened; lists hours (Jan 31 - Nov 20 8am-6pm, swim area closes earlier) but swim season and fee not read, so the month window is typical.",
   "checkedAt": "2026-10-18"
@@ -14030,8 +14006,8 @@
    "spring",
    "fall"
   ],
-  "startMonth": 10,
-  "endMonth": 4,
+  "startMonth": 1,
+  "endMonth": 12,
   "startDate": null,
   "endDate": null,
   "category": "family",
@@ -14183,14 +14159,14 @@
   ],
   "startMonth": 1,
   "endMonth": 1,
-  "startDate": null,
-  "endDate": null,
+  "startDate": "2027-01-23",
+  "endDate": "2027-01-31",
   "category": "festival",
   "description": "A week-long collector-car auction and festival drawing hundreds of vehicles, vendors and live entertainment each January.",
   "sourceUrl": "https://www.barrett-jackson.com/Events/Event/Details/Scottsdale-2027",
   "costNote": "Paid - admission varies",
-  "dateConfidence": "estimated",
-  "dateReasoning": "Event URL returned 200 but its text could not be read (the fetcher was refused), so the January window and WestWorld venue rest on the event's long-standing pattern; dates unconfirmed.",
+  "dateConfidence": "confirmed",
+  "dateReasoning": "Barrett-Jackson's 2027 Scottsdale Auction runs nine live auction days Sat Jan 23 - Sun Jan 31, 2027 at WestWorld of Scottsdale (Rock The Block concert Jan 21, invitation-only gala Jan 22).",
   "checkedAt": "2026-10-18"
  },
  {
@@ -14213,8 +14189,8 @@
   "description": "A College Football Playoff-era New Year's bowl game at State Farm Stadium, with a parade and fan events beforehand.",
   "sourceUrl": "https://www.fiestasportsfoundation.org/",
   "costNote": "Paid - ticket prices vary",
-  "dateConfidence": "estimated",
-  "dateReasoning": "Official site opened; its ticket link contained a 2026-12-30 5:30 pm date, but the page text did not state the date or venue, so the date is only an inference and kept estimated.",
+  "dateConfidence": "confirmed",
+  "dateReasoning": "2026 Vrbo Fiesta Bowl (CFP quarterfinal) is Wednesday Dec 30, 2026, 5:30 p.m. MST kickoff at State Farm Stadium, per KOLD report 2026-08-24.",
   "checkedAt": "2026-10-18"
  },
  {
@@ -14261,7 +14237,7 @@
   "category": "festival",
   "description": "Ten days of German food, polka bands, beer and carnival rides on the Comal River in Landa Park.",
   "sourceUrl": "https://www.wurstfest.com/",
-  "costNote": null,
+  "costNote": "Paid - Mon-Thu free; Fri/Sun $15 online ($20 gate); Sat $25 online ($30 gate); kids 12 and under free",
   "dateConfidence": "confirmed",
   "dateReasoning": "Official site read 2026-10-18: 'Wurstfest 2026 - November 6-15', 65th annual, held in Landa Park. Ticket prices not read. Coordinates approximate to park; address is the office address listed on the site.",
   "checkedAt": "2026-10-18"
@@ -14270,9 +14246,9 @@
   "citySlug": "san-antonio",
   "slug": "fredericksburg-food-wine-festival",
   "name": "Fredericksburg Food & Wine Festival",
-  "venue": "Fredericksburg downtown and Hill Country wineries",
+  "venue": "Marktplatz (Festival Weekend) and downtown Fredericksburg",
   "neighborhood": "Fredericksburg, 70 mi northwest",
-  "address": "Main Street, Fredericksburg, TX 78624",
+  "address": "126 W Main St, Fredericksburg, TX 78624",
   "latitude": 30.2752,
   "longitude": -98.8722,
   "seasons": [
@@ -14297,8 +14273,8 @@
   "venue": "Marktplatz",
   "neighborhood": "Fredericksburg, 70 mi northwest",
   "address": "126 W Main St, Fredericksburg, TX 78624",
-  "latitude": 30.2752,
-  "longitude": -98.8722,
+  "latitude": 30.2763,
+  "longitude": -98.8726,
   "seasons": [
    "winter"
   ],
@@ -14321,8 +14297,8 @@
   "venue": "Marktplatz",
   "neighborhood": "Fredericksburg, 70 mi northwest",
   "address": "126 W Main St, Fredericksburg, TX 78624",
-  "latitude": 30.2752,
-  "longitude": -98.8722,
+  "latitude": 30.2763,
+  "longitude": -98.8726,
   "seasons": [
    "fall"
   ],
@@ -14333,7 +14309,7 @@
   "category": "festival",
   "description": "Three-day German beer, music and food festival held in the center of Fredericksburg.",
   "sourceUrl": "https://www.visitfredericksburgtx.com/events/major-events-festivals/oktoberfest-2/",
-  "costNote": "Paid - ticketed; prices not read",
+  "costNote": "Paid - 2026: adults $15 one day, $20 two days, $25 three days; children 7-12 $1-$3; 6 and under free",
   "dateConfidence": "estimated",
   "dateReasoning": "Page read 2026-10-18: 2026 edition was October 2-4 (already past); 2027 dates not published, so typical early-October window used.",
   "checkedAt": "2026-10-18"
@@ -14369,8 +14345,8 @@
   "venue": "Natural Bridge Caverns",
   "neighborhood": "Natural Bridge Caverns, 20 mi north",
   "address": "26495 Natural Bridge Caverns Rd, San Antonio, TX 78266",
-  "latitude": 29.6923,
-  "longitude": -98.3419,
+  "latitude": 29.6953,
+  "longitude": -98.3444,
   "seasons": [
    "winter"
   ],
@@ -14393,8 +14369,8 @@
   "venue": "Natural Bridge Caverns",
   "neighborhood": "Natural Bridge Caverns, 20 mi north",
   "address": "26495 Natural Bridge Caverns Rd, San Antonio, TX 78266",
-  "latitude": 29.6923,
-  "longitude": -98.3419,
+  "latitude": 29.6953,
+  "longitude": -98.3444,
   "seasons": [
    "winter",
    "spring",
@@ -14444,8 +14420,8 @@
   "venue": "Garner State Park",
   "neighborhood": "Concan, 85 mi west",
   "address": "234 RR 1050, Concan, TX 78838",
-  "latitude": 29.5936,
-  "longitude": -99.7403,
+  "latitude": 29.5883,
+  "longitude": -99.7373,
   "seasons": [
    "summer"
   ],
@@ -14495,8 +14471,8 @@
   "venue": "Luckenbach general store and dance hall",
   "neighborhood": "Luckenbach, 75 mi northwest",
   "address": "412 Luckenbach Town Loop, Fredericksburg, TX 78624",
-  "latitude": 30.2,
-  "longitude": -98.76,
+  "latitude": 30.1788,
+  "longitude": -98.7561,
   "seasons": [
    "winter",
    "spring",
@@ -14549,8 +14525,8 @@
   "venue": "Cibolo Nature Center and Farm",
   "neighborhood": "Boerne, 30 mi northwest",
   "address": "33 Herff Rd, Boerne, TX 78006",
-  "latitude": 29.7985,
-  "longitude": -98.7195,
+  "latitude": 29.7868,
+  "longitude": -98.7177,
   "seasons": [
    "winter",
    "spring",
@@ -14683,8 +14659,8 @@
   "venue": "Kerrville-Schreiner Park",
   "neighborhood": "Kerrville, 65 mi northwest",
   "address": "2385 Bandera Hwy, Kerrville, TX 78028",
-  "latitude": 30.017,
-  "longitude": -99.165,
+  "latitude": 30.0029,
+  "longitude": -99.1318,
   "seasons": [
    "fall"
   ],
@@ -14695,7 +14671,7 @@
   "category": "sports",
   "description": "Sixth annual weekend of mountain biking on Hill Country trails at Kerrville-Schreiner Park.",
   "sourceUrl": "https://www.kerrvilletx.gov/CivicAlerts.aspx?AID=3667",
-  "costNote": "Paid - fees not read",
+  "costNote": "Spectating free; race registration fees at kerrvillemountainbikefestival.com",
   "dateConfidence": "confirmed",
   "dateReasoning": "City of Kerrville homepage read 2026-10-18 via fetch: Sat Oct 24 and Sun Oct 25 at 2385 Bandera Highway; the linked news item itself was not opened. Coordinates approximate.",
   "checkedAt": "2026-10-18"
@@ -14707,8 +14683,8 @@
   "venue": "Kerrville Sports Complex",
   "neighborhood": "Kerrville, 65 mi northwest",
   "address": "111 Home Run Dr, Kerrville, TX 78028",
-  "latitude": 30.042,
-  "longitude": -99.123,
+  "latitude": 30.0743,
+  "longitude": -99.1447,
   "seasons": [
    "fall"
   ],
@@ -14719,7 +14695,7 @@
   "category": "family",
   "description": "Morning classic-car show at the Kerrville Sports Complex.",
   "sourceUrl": "https://www.kerrvilletx.gov/CivicAlerts.aspx?AID=3668",
-  "costNote": null,
+  "costNote": "Free - free spectator admission; no entry fee for cars and motorcycles",
   "dateConfidence": "confirmed",
   "dateReasoning": "City homepage read 2026-10-18: Sat Nov 7, 10am-1pm, baseball/softball side, 111 Home Run Drive; news item not opened. Coordinates approximate.",
   "checkedAt": "2026-10-18"
@@ -14845,10 +14821,10 @@
   "endDate": null,
   "category": "festival",
   "description": "Teams carve elaborate sand sculptures on the beach beside the pier, with a festival of vendors and kids' building.",
-  "sourceUrl": "https://www.usopensandcastle.com/",
-  "costNote": "Free - sculpture viewing; confirm",
+  "sourceUrl": "https://sdmts.com/rider-info/events/sun-sea-festival-sandcastle-competition",
+  "costNote": "Free - viewing the sandcastles is a free community event (SDMTS listing)",
   "dateConfidence": "estimated",
-  "dateReasoning": "Official site opened (HTTP 200) but dates were not read; July is the typical timing and is not confirmed.",
+  "dateReasoning": "The event is now the Imperial Beach Sun & Sea Festival sandcastle competition at Portwood Pier Plaza (Wikipedia: the 'U.S. Open' name ended after 2011/2013); 2026 edition was July 17-18; 2027 dates not announced, so July is an estimate from past editions.",
   "checkedAt": "2026-10-18"
  },
  {
@@ -14890,14 +14866,14 @@
   ],
   "startMonth": 10,
   "endMonth": 10,
-  "startDate": null,
-  "endDate": null,
+  "startDate": "2026-10-23",
+  "endDate": "2026-10-24",
   "category": "family",
   "description": "The Scripps Oceanography aquarium runs evening Halloween programming alongside its sea-life exhibits.",
   "sourceUrl": "https://aquarium.ucsd.edu/",
-  "costNote": "Paid - price not read",
-  "dateConfidence": "estimated",
-  "dateReasoning": "Official page opened and lists Halloween Aglow under upcoming events; specific dates not read.",
+  "costNote": "Paid - separate ticket: $59.95 adults, $49.95 children 3-12, members 20% off (sandiego.org, 2026 edition)",
+  "dateConfidence": "confirmed",
+  "dateReasoning": "Halloween Aglow runs Oct 23-24, 2026, 6-8:30 pm, per the sandiego.org listing (https://www.sandiego.org/events-festivals/halloween-aglow/efe1594eae7b11f1a7f2); the aquarium newsroom post read covered the 2025 edition.",
   "checkedAt": "2026-10-18"
  },
  {
@@ -14915,14 +14891,14 @@
   ],
   "startMonth": 11,
   "endMonth": 1,
-  "startDate": null,
-  "endDate": null,
+  "startDate": "2026-11-20",
+  "endDate": "2027-01-03",
   "category": "holiday",
   "description": "An illuminated evening walk through the botanic garden with light installations for the holidays.",
   "sourceUrl": "https://www.sdbgarden.org/",
-  "costNote": "Paid - tickets on sale; price not read",
-  "dateConfidence": "estimated",
-  "dateReasoning": "Official page read: 'Lightscape Returns November 20', tickets on sale; end date not read, so an end of January is an estimate.",
+  "costNote": "Paid - $18 to $36 (adults from $28, children from $18, under 3 free) per KPBS listing",
+  "dateConfidence": "confirmed",
+  "dateReasoning": "Lightscape 2026 runs daily from Nov 20, 2026 to Jan 3, 2027 from 5 pm per the KPBS event listing (https://www.kpbs.org/events/ongoing/lightscape-at-san-diego-botanic-garden-2026); organizer says dates may change.",
   "checkedAt": "2026-10-18"
  },
  {
@@ -15063,8 +15039,8 @@
   "venue": "Lakeside Rodeo Grounds",
   "neighborhood": "Lakeside, 20 mi east",
   "address": "12584 Mapleview St, Lakeside, CA 92040",
-  "latitude": 32.859,
-  "longitude": -116.919,
+  "latitude": 32.864,
+  "longitude": -116.9199,
   "seasons": [
    "spring"
   ],
@@ -15087,8 +15063,8 @@
   "venue": "Mission Trails Regional Park",
   "neighborhood": "Mission Trails, 10 mi northeast",
   "address": "1 Father Junipero Serra Trail, San Diego, CA 92119",
-  "latitude": 32.811,
-  "longitude": -117.0551,
+  "latitude": 32.8202,
+  "longitude": -117.0569,
   "seasons": [
    "fall",
    "winter",
@@ -15231,8 +15207,8 @@
   "endDate": "2027-01-03",
   "category": "holiday",
   "description": "A one-mile evening trail of illuminated installations winds through the botanical garden for the holiday season.",
-  "sourceUrl": "https://www.sfbg.org/lightscape",
-  "costNote": "Paid - timed tickets",
+  "sourceUrl": "https://gggp.org/lightscape",
+  "costNote": "Paid - timed tickets from $32 adult, $20 youth (5-17); under 5 free",
   "dateConfidence": "confirmed",
   "dateReasoning": "Page opened 2026-10-18 and states Lightscape runs November 20, 2026 to January 3, 2027.",
   "checkedAt": "2026-10-18"
@@ -15257,7 +15233,7 @@
   "category": "arts",
   "description": "Pianos are placed across the garden for ten days so visitors can play or listen among the plantings, with evening concerts.",
   "sourceUrl": "https://sfbg.org/flower-piano",
-  "costNote": "Free -  (2024 listing; check current ticket tiers)",
+  "costNote": "Free with regular Garden admission (Garden admission is free for SF residents with ID); Lounge tickets extra",
   "dateConfidence": "estimated",
   "dateReasoning": "Site home states the 2026 edition ran September 10-20, 2026 (11th year); next-year dates are not yet posted, so a September window is estimated.",
   "checkedAt": "2026-10-18"
@@ -15323,8 +15299,8 @@
   "venue": "Filoli Historic House and Garden",
   "neighborhood": "Woodside, 25 mi south",
   "address": "86 Canada Rd, Woodside, CA 94062",
-  "latitude": 37.4713,
-  "longitude": -122.3045,
+  "latitude": 37.4702,
+  "longitude": -122.311,
   "seasons": [
    "fall"
   ],
@@ -15374,8 +15350,8 @@
   "venue": "Hakone Estate and Gardens",
   "neighborhood": "Saratoga, 45 mi south",
   "address": "21000 Big Basin Way, Saratoga, CA 95070",
-  "latitude": 37.2563,
-  "longitude": -122.0541,
+  "latitude": 37.2521,
+  "longitude": -122.0421,
   "seasons": [
    "winter",
    "spring",
@@ -15401,8 +15377,8 @@
   "venue": "Kabuki Springs and Spa",
   "neighborhood": "Japantown",
   "address": "1750 Geary Blvd, San Francisco, CA 94115",
-  "latitude": 37.7846,
-  "longitude": -122.43,
+  "latitude": 37.7847,
+  "longitude": -122.4326,
   "seasons": [
    "winter",
    "spring",
@@ -15454,8 +15430,8 @@
   "venue": "Ano Nuevo State Park",
   "neighborhood": "Pescadero, 55 mi south",
   "address": "1 New Years Creek Rd, Pescadero, CA 94060",
-  "latitude": 37.1089,
-  "longitude": -122.3374,
+  "latitude": 37.1194,
+  "longitude": -122.3069,
   "seasons": [
    "winter",
    "spring"
@@ -15467,7 +15443,7 @@
   "category": "outdoor",
   "description": "Walk to see thousands of northern elephant seals breeding and pupping on the beach; winter access is usually by guided walk.",
   "sourceUrl": "https://www.parks.ca.gov/?page_id=523",
-  "costNote": "Paid - $10 vehicle day use (guided-walk fees extra)",
+  "costNote": "Paid - $10 vehicle day use ($9 seniors); Dec-Mar guided walks required, booked on ReserveCalifornia (fees extra)",
   "dateConfidence": "estimated",
   "dateReasoning": "Page opened 2026-10-18 and states vehicle day use $10 and seal viewing areas 8:30am-3:30pm; breeding season of Dec-Mar is typical, tour dates not read.",
   "checkedAt": "2026-10-18"
@@ -15478,9 +15454,9 @@
   "name": "Angel Island State Park",
   "venue": "Angel Island State Park",
   "neighborhood": "Angel Island, 6 mi north by ferry",
-  "address": "Angel Island, Tiburon, CA 94920",
-  "latitude": 37.8606,
-  "longitude": -122.4326,
+  "address": "Ayala Cove, Angel Island, Tiburon, CA 94920",
+  "latitude": 37.868,
+  "longitude": -122.4366,
   "seasons": [
    "winter",
    "spring",
@@ -15494,7 +15470,7 @@
   "category": "outdoor",
   "description": "Take a ferry to an island park with a loop trail, Civil War-era Camp Reynolds and views of the skyline.",
   "sourceUrl": "https://www.parks.ca.gov/?page_id=468",
-  "costNote": "Paid - $3 adult entry fee plus ferry",
+  "costNote": "Paid - $3 adult / $2 youth entry fee plus ferry",
   "dateConfidence": "estimated",
   "dateReasoning": "Page opened 2026-10-18 and lists adult entry $3, youth $2, under 5 free; year-round window is estimated.",
   "checkedAt": "2026-10-18"
@@ -15507,7 +15483,7 @@
   "neighborhood": "Marin, 15 mi north",
   "address": "3801 Panoramic Hwy, Mill Valley, CA 94941",
   "latitude": 37.9037,
-  "longitude": -122.5981,
+  "longitude": -122.6037,
   "seasons": [
    "winter",
    "spring",
@@ -15521,7 +15497,7 @@
   "category": "outdoor",
   "description": "Redwood canyons, ridge trails and Bay views a short drive over the Golden Gate Bridge.",
   "sourceUrl": "https://www.parks.ca.gov/?page_id=471",
-  "costNote": "Free",
+  "costNote": "Free entry; parking fees at East Peak, Pantoll and Bootjack lots",
   "dateConfidence": "estimated",
   "dateReasoning": "Page opened 2026-10-18 and states park hours daily 7am to sunset year round; no fee read on the page, so cost is listed as free by estimate for hiking access.",
   "checkedAt": "2026-10-18"
@@ -15532,7 +15508,7 @@
   "name": "Mount Diablo State Park",
   "venue": "Mount Diablo State Park",
   "neighborhood": "Diablo, 35 mi east",
-  "address": "96 Mitchell Canyon Rd, Clayton, CA 94517",
+  "address": "Summit Visitor Center, Summit Rd, Mount Diablo State Park, CA",
   "latitude": 37.8816,
   "longitude": -121.9142,
   "seasons": [
@@ -16253,8 +16229,8 @@
   "venue": "Shenandoah National Park",
   "neighborhood": "Front Royal, VA, 70 mi west",
   "address": "Dickey Ridge Visitor Center, Front Royal, VA 22630",
-  "latitude": 38.8434,
-  "longitude": -78.2027,
+  "latitude": 38.8717,
+  "longitude": -78.2047,
   "seasons": [
    "fall"
   ],
@@ -16310,14 +16286,14 @@
   ],
   "startMonth": 10,
   "endMonth": 10,
-  "startDate": null,
-  "endDate": null,
+  "startDate": "2026-10-15",
+  "endDate": "2026-10-18",
   "category": "festival",
   "description": "The long-running in-water sailboat show fills Annapolis harbor each October with boats, gear and seminars.",
   "sourceUrl": "https://annapolisboatshows.com/",
   "costNote": "Paid - tickets required (see show site)",
-  "dateConfidence": "estimated",
-  "dateReasoning": "Homepage listed October 15-18, 2026 for the fall show; the 2027 fall dates were not shown, so a typical-October window is used.",
+  "dateConfidence": "confirmed",
+  "dateReasoning": "annapolisboatshows.com lists the Annapolis Sailboat Show for October 15-18, 2026 at City Dock (final day is 2026-10-18); the 2027 sailboat dates were not yet published.",
   "checkedAt": "2026-10-18"
  },
  {
@@ -16404,8 +16380,8 @@
   "venue": "Great Country Farms",
   "neighborhood": "Bluemont, VA, 55 mi west",
   "address": "18780 Foggy Bottom Rd, Bluemont, VA 20135",
-  "latitude": 39.107,
-  "longitude": -77.83,
+  "latitude": 39.0957,
+  "longitude": -77.8207,
   "seasons": [
    "spring",
    "summer",
@@ -16430,21 +16406,21 @@
   "venue": "Revel Grove",
   "neighborhood": "Crownsville, MD, 28 mi east",
   "address": "1821 Crownsville Rd, Annapolis, MD 21401",
-  "latitude": 38.9908,
-  "longitude": -76.6,
+  "latitude": 39.0018,
+  "longitude": -76.5838,
   "seasons": [
    "fall"
   ],
   "startMonth": 8,
   "endMonth": 10,
-  "startDate": null,
-  "endDate": null,
+  "startDate": "2026-08-29",
+  "endDate": "2026-10-25",
   "category": "festival",
   "description": "A costumed 16th-century village with jousting, artisans, food and stage shows on weekends through the autumn.",
   "sourceUrl": "https://www.rennfest.com/",
   "costNote": "Paid - admission (see festival site)",
-  "dateConfidence": "estimated",
-  "dateReasoning": "2026 weekends read on the homepage: Aug 29 through Oct 25, 2026; next season dates not published, so typical late-Aug to October window used.",
+  "dateConfidence": "confirmed",
+  "dateReasoning": "rennfest.com lists the 2026 season as August 29 to October 25, 2026 (weekends, 10am-7pm).",
   "checkedAt": "2026-10-18"
  },
  {
@@ -16454,21 +16430,21 @@
   "venue": "Howard County Fairgrounds",
   "neighborhood": "West Friendship, MD, 35 mi northeast",
   "address": "2210 Fairgrounds Rd, West Friendship, MD 21794",
-  "latitude": 39.32,
-  "longitude": -76.94,
+  "latitude": 39.3118,
+  "longitude": -76.968,
   "seasons": [
    "spring"
   ],
   "startMonth": 5,
   "endMonth": 5,
-  "startDate": null,
-  "endDate": null,
+  "startDate": "2027-05-01",
+  "endDate": "2027-05-02",
   "category": "festival",
   "description": "Fiber-arts festival with sheepdog trials, fleece sales, shearing demonstrations and lamb dishes, held in early May.",
   "sourceUrl": "https://www.sheepandwool.org/",
   "costNote": "Paid - admission (see festival site)",
-  "dateConfidence": "estimated",
-  "dateReasoning": "Site opened; it references the 2026 festival and 2027 virtual classes but no 2027 festival dates were read, so the typical early-May window is estimated.",
+  "dateConfidence": "confirmed",
+  "dateReasoning": "The official Visiting the Festival page announces the 54th Annual Maryland Sheep & Wool Festival for May 1 and 2, 2027 at the Howard County Fairgrounds.",
   "checkedAt": "2026-10-18"
  },
  {
@@ -16478,21 +16454,21 @@
   "venue": "Pimlico Race Course",
   "neighborhood": "Baltimore, MD, 40 mi northeast",
   "address": "5201 Park Heights Ave, Baltimore, MD 21215",
-  "latitude": 39.3611,
-  "longitude": -76.6735,
+  "latitude": 39.3535,
+  "longitude": -76.673,
   "seasons": [
    "spring"
   ],
   "startMonth": 5,
   "endMonth": 5,
-  "startDate": null,
-  "endDate": null,
+  "startDate": "2027-05-23",
+  "endDate": "2027-05-23",
   "category": "sports",
   "description": "The middle jewel of the Triple Crown runs at historic Pimlico in mid-May, with infield and grandstand festivities.",
   "sourceUrl": "https://www.preakness.com/",
   "costNote": "Paid - tickets required",
-  "dateConfidence": "estimated",
-  "dateReasoning": "Site opened; no 2027 date was read there, so the typical mid-May window is estimated.",
+  "dateConfidence": "confirmed",
+  "dateReasoning": "preakness.com lists the 152nd Preakness Stakes for Sunday, May 23, 2027 at Pimlico Race Course.",
   "checkedAt": "2026-10-18"
  },
  {
@@ -16525,11 +16501,11 @@
   "citySlug": "washington-dc",
   "slug": "harpers-ferry-national-park",
   "name": "Harpers Ferry National Historical Park",
-  "venue": "Harpers Ferry NHP",
+  "venue": "Harpers Ferry NHP Visitor Center",
   "neighborhood": "Harpers Ferry, WV, 65 mi northwest",
   "address": "171 Shoreline Dr, Harpers Ferry, WV 25425",
-  "latitude": 39.3255,
-  "longitude": -77.73,
+  "latitude": 39.3167,
+  "longitude": -77.7564,
   "seasons": [
    "spring",
    "summer",
@@ -16631,8 +16607,8 @@
   "venue": "Liberty Mountain Resort",
   "neighborhood": "Carroll Valley, PA, 75 mi north",
   "address": "78 Ski Pkwy, Carroll Valley, PA 17320",
-  "latitude": 39.7595,
-  "longitude": -77.3764,
+  "latitude": 39.7606,
+  "longitude": -77.3685,
   "seasons": [
    "winter"
   ],
@@ -16679,11 +16655,11 @@
   "citySlug": "washington-dc",
   "slug": "catoctin-mountain-park-fall",
   "name": "Catoctin Mountain Park",
-  "venue": "Catoctin Mountain Park",
+  "venue": "Catoctin Mountain Park Visitor Center",
   "neighborhood": "Thurmont, MD, 65 mi northwest",
-  "address": "14707 Park Central Rd, Thurmont, MD 21788",
-  "latitude": 39.65,
-  "longitude": -77.45,
+  "address": "6602 Foxville Rd, Thurmont, MD 21788",
+  "latitude": 39.6342,
+  "longitude": -77.4498,
   "seasons": [
    "spring",
    "summer",

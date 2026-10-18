@@ -725,10 +725,9 @@ export function getMusicRankingByTitleOrPin(id: number, title?: string, productN
   }
 
   if (title) {
-    const tLower = title.toLowerCase();
-    const byTitle = SEED_MUSIC_RANKINGS.find(
-      (r) => tLower.includes(r.title.toLowerCase()) || r.title.toLowerCase().includes(tLower),
-    );
+    // Exact title only: substring matching let one-letter songs ("X") hijack unrelated pins.
+    const tLower = title.toLowerCase().trim();
+    const byTitle = SEED_MUSIC_RANKINGS.find((r) => r.title.toLowerCase().trim() === tLower);
     if (byTitle) return byTitle;
   }
 

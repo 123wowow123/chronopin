@@ -1,0 +1,1977 @@
+{
+  "checkedAt": "2026-10-18",
+  "country": "Japan",
+  "regions": [
+    "fukuoka"
+  ],
+  "status": "published and publicly verified in local and production",
+  "entries": [
+    {
+      "existing": true,
+      "pin": {
+        "id": 15401,
+        "parentId": null,
+        "title": "Comenocoto — Tenjin Building Opens in Tenjin",
+        "description": "A new takeaway rice-ball counter using Hagama-cooked Saga Koshihikari and Ariake nori.",
+        "sourceUrl": "https://prtimes.jp/main/html/rd/p/000000170.000101757.html",
+        "longFormSummary": "<p>A new takeaway rice-ball counter using Hagama-cooked Saga Koshihikari and Ariake nori.<cite data-ref=\"https://prtimes.jp/main/html/rd/p/000000170.000101757.html\"></cite></p><p>September 15 Sawarise operator branch release explicitly confirms October 2, 2026 opening and branch address/hours. Branch-specific local coverage corroborates; older future-tense reposts are not used to invent another opening date.</p>",
+        "address": "B1F Tenjin Building, 2-12-1 Tenjin, Chuo-ku, Fukuoka",
+        "location": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "price": null,
+        "priceCurrency": null,
+        "tip": null,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "September 15 Sawarise operator branch release explicitly confirms October 2, 2026 opening and branch address/hours. Branch-specific local coverage corroborates; older future-tense reposts are not used to invent another opening date.",
+        "utcStartDateTime": "2026-10-02T00:00:00.000Z",
+        "utcEndDateTime": null,
+        "allDay": true,
+        "userId": 372,
+        "utcCreatedDateTime": "2026-10-14T23:53:54.752Z",
+        "utcUpdatedDateTime": null,
+        "utcDeletedDateTime": null,
+        "companyId": null,
+        "sourceStartDateTime": null,
+        "sourceEndDateTime": null,
+        "originalStartDate": null,
+        "delayReasoning": null,
+        "episodeCount": null,
+        "episodeStatus": null,
+        "marketVolume": null,
+        "marketVolumeAt": null,
+        "allDayStated": true,
+        "productName": "Comenocoto — Tenjin Building"
+      },
+      "content": {
+        "profile": {
+          "menu": {
+            "name": "Comenocoto — Tenjin Building",
+            "menus": [
+              {
+                "url": "https://prtimes.jp/main/html/rd/p/000000170.000101757.html",
+                "note": "Original five tax-inclusive launch rice-ball prices retained from the operator release. Broth and fried-chicken prices now verified in the October16exact-branch ARNE visit. Takeaway only, Monday–Saturday11:00–15:00; Sunday/public holiday closed. Official Instagram remains inaccessible; operator release gallery checked and existing three credited Azure photos preserved. No other-branch menu or unlabelled filling inferred.",
+                "items": [
+                  {
+                    "name": "Kishu Nanko plum rice ball",
+                    "price": 340
+                  },
+                  {
+                    "name": "Garlic meat-miso and egg-yolk rice ball",
+                    "price": 390
+                  },
+                  {
+                    "name": "Chicken rice ball",
+                    "note": "Supervised by same-group ITARU; this is the Comenocoto published item, not an imported ITARU menu",
+                    "price": 290
+                  },
+                  {
+                    "name": "Spicy cod-roe rice ball",
+                    "price": 340
+                  },
+                  {
+                    "name": "Shrimp-tempura rice ball",
+                    "note": "Two shrimp",
+                    "price": 390
+                  },
+                  {
+                    "name": "Dashi broth",
+                    "price": 120,
+                    "note": "Price verified by October16ARNE exact-branch visit: https://arne.media/gourmet/702350/"
+                  },
+                  {
+                    "name": "Fried chicken",
+                    "price": 290,
+                    "note": "Price verified by October16ARNE exact-branch visit: https://arne.media/gourmet/702350/"
+                  }
+                ],
+                "label": "Published branch rice-ball menu",
+                "coverage": "sample",
+                "currency": "JPY"
+              },
+              {
+                "label": "October16 branch visit — priced rice balls and sides",
+                "url": "https://arne.media/gourmet/702350/",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "紀州南高梅",
+                    "price": 340
+                  },
+                  {
+                    "name": "こんぶ",
+                    "price": 290
+                  },
+                  {
+                    "name": "紫蘇わかめ",
+                    "price": 290
+                  },
+                  {
+                    "name": "おかか",
+                    "price": 290
+                  },
+                  {
+                    "name": "生海苔",
+                    "price": 290
+                  },
+                  {
+                    "name": "辛子明太子",
+                    "price": 340
+                  },
+                  {
+                    "name": "ツナマヨ",
+                    "price": 340
+                  },
+                  {
+                    "name": "鮭",
+                    "price": 340
+                  },
+                  {
+                    "name": "高菜",
+                    "price": 290
+                  },
+                  {
+                    "name": "焼きおにぎり味噌わさび添え",
+                    "price": 290
+                  },
+                  {
+                    "name": "ゆかりチーズ",
+                    "price": 290
+                  },
+                  {
+                    "name": "じゃこ山椒",
+                    "price": 390
+                  },
+                  {
+                    "name": "にんにく肉味噌卵黄",
+                    "price": 390
+                  },
+                  {
+                    "name": "鶏めし",
+                    "price": 290
+                  },
+                  {
+                    "name": "海老天むす",
+                    "price": 390
+                  },
+                  {
+                    "name": "唐揚げマヨ",
+                    "price": 390
+                  },
+                  {
+                    "name": "国産鶏の唐揚げ",
+                    "price": 290
+                  },
+                  {
+                    "name": "お出汁",
+                    "price": 120,
+                    "note": "Ordinary¥120; one broth free with two rice balls. Rice balls paid separately; takeaway only."
+                  }
+                ],
+                "note": "Complete18-entry roster transcribed from ARNE/Hakata Aya’s October16exact-branch report; tax included. Sixteen rice-ball choices, fried chicken and broth. Stock changes; report describes approximately15choices present at a time. Original operator launch menu retained separately."
+              },
+              {
+                "label": "Two rice balls — complimentary broth",
+                "url": "https://arne.media/gourmet/702350/",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "One complimentary dashi broth with two rice balls",
+                    "price": 0,
+                    "note": "Conditional broth only; two rice balls purchased separately. Normal broth¥120."
+                  }
+                ],
+                "note": "Actual source explicitly promises one free broth with two rice balls, not unlimited broth. No offer end date published."
+              }
+            ],
+            "specials": [
+              {
+                "kind": "lunch",
+                "title": "Free dashi broth with two rice balls",
+                "description": "One dashi broth (normally¥120) is complimentary when purchasing two rice balls; the rice balls are paid for separately.",
+                "sourceUrl": "https://arne.media/gourmet/702350/",
+                "discounted": true,
+                "limitedTime": false,
+                "menuLabel": "Two rice balls — complimentary broth",
+                "schedule": "Monday–Saturday11:00–15:00Japan time; closed Sundays/public holidays.",
+                "conditions": [
+                  "Takeaway only. Purchase two rice balls to receive one broth; do not claim the whole meal is free.",
+                  "Report observed October16,2026; launch/end date and additional stacking/stock terms are not published. Confirm at the counter.",
+                  "Ordinary published rice balls cost¥290–¥390each; two start from¥580subject to actual selection/stock.",
+                  "Public holidays excluded using Cabinet Office2026/2027calendar; calendar coverage is not a promotion expiry."
+                ],
+                "availability": {
+                  "windows": [
+                    {
+                      "days": [
+                        1,
+                        2,
+                        3,
+                        4,
+                        5,
+                        6
+                      ],
+                      "start": "11:00",
+                      "end": "15:00"
+                    }
+                  ],
+                  "excludesHolidays": true,
+                  "holidayCalendarThrough": "2027-12-31",
+                  "excludedDates": [
+                    "2026-01-01",
+                    "2026-01-12",
+                    "2026-02-11",
+                    "2026-02-23",
+                    "2026-03-20",
+                    "2026-04-29",
+                    "2026-05-03",
+                    "2026-05-04",
+                    "2026-05-05",
+                    "2026-05-06",
+                    "2026-07-20",
+                    "2026-08-11",
+                    "2026-09-21",
+                    "2026-09-22",
+                    "2026-09-23",
+                    "2026-10-12",
+                    "2026-11-03",
+                    "2026-11-23",
+                    "2027-01-01",
+                    "2027-01-11",
+                    "2027-02-11",
+                    "2027-02-23",
+                    "2027-03-21",
+                    "2027-03-22",
+                    "2027-04-29",
+                    "2027-05-03",
+                    "2027-05-04",
+                    "2027-05-05",
+                    "2027-07-19",
+                    "2027-08-11",
+                    "2027-09-20",
+                    "2027-09-23",
+                    "2027-10-11",
+                    "2027-11-03",
+                    "2027-11-23"
+                  ]
+                }
+              }
+            ],
+            "checkedAt": "2026-10-18",
+            "pinSourceUrl": "https://prtimes.jp/main/html/rd/p/000000170.000101757.html"
+          },
+          "tile": {
+            "day": "2026-10-02",
+            "kind": "opening",
+            "name": "Comenocoto — Tenjin Building",
+            "slug": "fukuoka17-kome-release",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/fukuoka/japan-30-2026-10-13/fukuoka17-kome-release-0-6341f872659bee5e.webp",
+            "address": "B1F Tenjin Building, 2-12-1 Tenjin, Chuo-ku, Fukuoka",
+            "cuisine": "Rice balls / Takeaway",
+            "checkedAt": "2026-10-18",
+            "imageNote": "Operator illustrative rice-ball assortment; individual unlabelled fillings not inferred",
+            "priceRange": "",
+            "regionSlug": "fukuoka",
+            "websiteUrl": "https://www.instagram.com/comenocoto/",
+            "description": "A new takeaway rice-ball counter using Hagama-cooked Saga Koshihikari and Ariake nori.",
+            "imageCredit": "Sawarise / Comenocoto operator release",
+            "recognition": "",
+            "neighborhood": "Tenjin",
+            "imageSourceUrl": "https://prtimes.jp/main/html/rd/p/000000170.000101757.html",
+            "openingConfirmed": true
+          },
+          "details": {
+            "name": "Comenocoto — Tenjin Building",
+            "phone": "070-8819-1059",
+            "checkedAt": "2026-10-18",
+            "websiteUrl": "https://www.instagram.com/comenocoto/",
+            "openingHours": [
+              {
+                "days": "Monday–Saturday",
+                "hours": "11:00–15:00; takeaway only"
+              },
+              {
+                "days": "Sunday and public holidays",
+                "hours": "Closed"
+              }
+            ],
+            "pinSourceUrl": "https://prtimes.jp/main/html/rd/p/000000170.000101757.html",
+            "detailsSourceUrl": "https://www.instagram.com/comenocoto/",
+            "additionalSources": [
+              {
+                "url": "https://prtimes.jp/main/html/rd/p/000000170.000101757.html",
+                "label": "Research evidence"
+              },
+              {
+                "url": "https://fanfun.jp/331094/",
+                "label": "Research evidence"
+              },
+              {
+                "label": "Exact-branch October16menu and complimentary broth report",
+                "url": "https://arne.media/gourmet/702350/"
+              },
+              {
+                "label": "Official2026/2027public holiday calendar",
+                "url": "https://www8.cao.go.jp/chosei/shukujitsu/gaiyou.html"
+              }
+            ],
+            "hoursNote": "Takeaway only. Exact-branch October16visit corroborates October2opening, full18-entry menu, tax-inclusive prices and complimentary broth with two rice balls. Operator Instagram inaccessible; release gallery checked, existing credited illustration photos retained. A current operator storefront gallery remains a gap. Offer start/end and stacking terms unpublished; confirm at counter."
+          },
+          "pinSourceUrl": "https://prtimes.jp/main/html/rd/p/000000170.000101757.html"
+        },
+        "enabled": true
+      },
+      "special": {
+        "regionSlug": "fukuoka",
+        "profile": {
+          "pinSourceUrl": "https://prtimes.jp/main/html/rd/p/000000170.000101757.html",
+          "name": "Comenocoto — Tenjin Building",
+          "checkedAt": "2026-10-18",
+          "menus": [
+            {
+              "url": "https://prtimes.jp/main/html/rd/p/000000170.000101757.html",
+              "note": "Original five tax-inclusive launch rice-ball prices retained from the operator release. Broth and fried-chicken prices now verified in the October16exact-branch ARNE visit. Takeaway only, Monday–Saturday11:00–15:00; Sunday/public holiday closed. Official Instagram remains inaccessible; operator release gallery checked and existing three credited Azure photos preserved. No other-branch menu or unlabelled filling inferred.",
+              "items": [
+                {
+                  "name": "Kishu Nanko plum rice ball",
+                  "price": 340
+                },
+                {
+                  "name": "Garlic meat-miso and egg-yolk rice ball",
+                  "price": 390
+                },
+                {
+                  "name": "Chicken rice ball",
+                  "note": "Supervised by same-group ITARU; this is the Comenocoto published item, not an imported ITARU menu",
+                  "price": 290
+                },
+                {
+                  "name": "Spicy cod-roe rice ball",
+                  "price": 340
+                },
+                {
+                  "name": "Shrimp-tempura rice ball",
+                  "note": "Two shrimp",
+                  "price": 390
+                },
+                {
+                  "name": "Dashi broth",
+                  "price": 120,
+                  "note": "Price verified by October16ARNE exact-branch visit: https://arne.media/gourmet/702350/"
+                },
+                {
+                  "name": "Fried chicken",
+                  "price": 290,
+                  "note": "Price verified by October16ARNE exact-branch visit: https://arne.media/gourmet/702350/"
+                }
+              ],
+              "label": "Published branch rice-ball menu",
+              "coverage": "sample",
+              "currency": "JPY"
+            },
+            {
+              "label": "October16 branch visit — priced rice balls and sides",
+              "url": "https://arne.media/gourmet/702350/",
+              "currency": "JPY",
+              "coverage": "published",
+              "items": [
+                {
+                  "name": "紀州南高梅",
+                  "price": 340
+                },
+                {
+                  "name": "こんぶ",
+                  "price": 290
+                },
+                {
+                  "name": "紫蘇わかめ",
+                  "price": 290
+                },
+                {
+                  "name": "おかか",
+                  "price": 290
+                },
+                {
+                  "name": "生海苔",
+                  "price": 290
+                },
+                {
+                  "name": "辛子明太子",
+                  "price": 340
+                },
+                {
+                  "name": "ツナマヨ",
+                  "price": 340
+                },
+                {
+                  "name": "鮭",
+                  "price": 340
+                },
+                {
+                  "name": "高菜",
+                  "price": 290
+                },
+                {
+                  "name": "焼きおにぎり味噌わさび添え",
+                  "price": 290
+                },
+                {
+                  "name": "ゆかりチーズ",
+                  "price": 290
+                },
+                {
+                  "name": "じゃこ山椒",
+                  "price": 390
+                },
+                {
+                  "name": "にんにく肉味噌卵黄",
+                  "price": 390
+                },
+                {
+                  "name": "鶏めし",
+                  "price": 290
+                },
+                {
+                  "name": "海老天むす",
+                  "price": 390
+                },
+                {
+                  "name": "唐揚げマヨ",
+                  "price": 390
+                },
+                {
+                  "name": "国産鶏の唐揚げ",
+                  "price": 290
+                },
+                {
+                  "name": "お出汁",
+                  "price": 120,
+                  "note": "Ordinary¥120; one broth free with two rice balls. Rice balls paid separately; takeaway only."
+                }
+              ],
+              "note": "Complete18-entry roster transcribed from ARNE/Hakata Aya’s October16exact-branch report; tax included. Sixteen rice-ball choices, fried chicken and broth. Stock changes; report describes approximately15choices present at a time. Original operator launch menu retained separately."
+            },
+            {
+              "label": "Two rice balls — complimentary broth",
+              "url": "https://arne.media/gourmet/702350/",
+              "currency": "JPY",
+              "coverage": "published",
+              "items": [
+                {
+                  "name": "One complimentary dashi broth with two rice balls",
+                  "price": 0,
+                  "note": "Conditional broth only; two rice balls purchased separately. Normal broth¥120."
+                }
+              ],
+              "note": "Actual source explicitly promises one free broth with two rice balls, not unlimited broth. No offer end date published."
+            }
+          ],
+          "specials": [
+            {
+              "kind": "lunch",
+              "title": "Free dashi broth with two rice balls",
+              "description": "One dashi broth (normally¥120) is complimentary when purchasing two rice balls; the rice balls are paid for separately.",
+              "sourceUrl": "https://arne.media/gourmet/702350/",
+              "discounted": true,
+              "limitedTime": false,
+              "menuLabel": "Two rice balls — complimentary broth",
+              "schedule": "Monday–Saturday11:00–15:00Japan time; closed Sundays/public holidays.",
+              "conditions": [
+                "Takeaway only. Purchase two rice balls to receive one broth; do not claim the whole meal is free.",
+                "Report observed October16,2026; launch/end date and additional stacking/stock terms are not published. Confirm at the counter.",
+                "Ordinary published rice balls cost¥290–¥390each; two start from¥580subject to actual selection/stock.",
+                "Public holidays excluded using Cabinet Office2026/2027calendar; calendar coverage is not a promotion expiry."
+              ],
+              "availability": {
+                "windows": [
+                  {
+                    "days": [
+                      1,
+                      2,
+                      3,
+                      4,
+                      5,
+                      6
+                    ],
+                    "start": "11:00",
+                    "end": "15:00"
+                  }
+                ],
+                "excludesHolidays": true,
+                "holidayCalendarThrough": "2027-12-31",
+                "excludedDates": [
+                  "2026-01-01",
+                  "2026-01-12",
+                  "2026-02-11",
+                  "2026-02-23",
+                  "2026-03-20",
+                  "2026-04-29",
+                  "2026-05-03",
+                  "2026-05-04",
+                  "2026-05-05",
+                  "2026-05-06",
+                  "2026-07-20",
+                  "2026-08-11",
+                  "2026-09-21",
+                  "2026-09-22",
+                  "2026-09-23",
+                  "2026-10-12",
+                  "2026-11-03",
+                  "2026-11-23",
+                  "2027-01-01",
+                  "2027-01-11",
+                  "2027-02-11",
+                  "2027-02-23",
+                  "2027-03-21",
+                  "2027-03-22",
+                  "2027-04-29",
+                  "2027-05-03",
+                  "2027-05-04",
+                  "2027-05-05",
+                  "2027-07-19",
+                  "2027-08-11",
+                  "2027-09-20",
+                  "2027-09-23",
+                  "2027-10-11",
+                  "2027-11-03",
+                  "2027-11-23"
+                ]
+              }
+            }
+          ],
+          "address": "B1F Tenjin Building, 2-12-1 Tenjin, Chuo-ku, Fukuoka",
+          "neighborhood": "Tenjin",
+          "websiteUrl": "https://www.instagram.com/comenocoto/",
+          "photo": {
+            "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/fukuoka/japan-30-2026-10-13/fukuoka17-kome-release-0-6341f872659bee5e.webp",
+            "alt": "Comenocoto — Tenjin Building — Operator illustrative rice-ball assortment; individual unlabelled fillings not inferred",
+            "credit": "Sawarise / Comenocoto operator release",
+            "sourceUrl": "https://prtimes.jp/main/html/rd/p/000000170.000101757.html",
+            "originalUrl": "https://prcdn.freetls.fastly.net/release_image/101757/170/101757-170-7447669ec10af8a6cc251bbd3eca696b-3900x2925.jpg",
+            "checkedAt": "2026-10-18"
+          }
+        },
+        "enabled": true
+      },
+      "expectedBefore": {
+        "content": {
+          "menu": {
+            "name": "Comenocoto — Tenjin Building",
+            "menus": [
+              {
+                "url": "https://prtimes.jp/main/html/rd/p/000000170.000101757.html",
+                "note": "Five rice-ball prices are explicitly tax included in the operator branch release. Broth and fried chicken are also explicitly announced without prices, so missing prices remain visible. Takeaway only, Monday–Saturday lunch hours; Sunday/public holiday closed. Operator Instagram fetch is an empty shell; no invented current offer, extra filling or new price. Accessible official release gallery supplies illustrative food photographs and an opening graphic, but no current storefront photograph.",
+                "items": [
+                  {
+                    "name": "Kishu Nanko plum rice ball",
+                    "price": 340
+                  },
+                  {
+                    "name": "Garlic meat-miso and egg-yolk rice ball",
+                    "price": 390
+                  },
+                  {
+                    "name": "Chicken rice ball",
+                    "note": "Supervised by same-group ITARU; this is the Comenocoto published item, not an imported ITARU menu",
+                    "price": 290
+                  },
+                  {
+                    "name": "Spicy cod-roe rice ball",
+                    "price": 340
+                  },
+                  {
+                    "name": "Shrimp-tempura rice ball",
+                    "note": "Two shrimp",
+                    "price": 390
+                  },
+                  {
+                    "name": "Dashi broth",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Fried chicken",
+                    "priceLabel": "Price not published"
+                  }
+                ],
+                "label": "Published branch rice-ball menu",
+                "coverage": "sample",
+                "currency": "JPY"
+              }
+            ],
+            "specials": [],
+            "checkedAt": "2026-10-14",
+            "pinSourceUrl": "https://prtimes.jp/main/html/rd/p/000000170.000101757.html"
+          },
+          "tile": {
+            "day": "2026-10-02",
+            "kind": "opening",
+            "name": "Comenocoto — Tenjin Building",
+            "slug": "fukuoka17-kome-release",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/fukuoka/japan-30-2026-10-13/fukuoka17-kome-release-0-6341f872659bee5e.webp",
+            "address": "B1F Tenjin Building, 2-12-1 Tenjin, Chuo-ku, Fukuoka",
+            "cuisine": "Rice balls / Takeaway",
+            "checkedAt": "2026-10-14",
+            "imageNote": "Operator illustrative rice-ball assortment; individual unlabelled fillings not inferred",
+            "priceRange": "",
+            "regionSlug": "fukuoka",
+            "websiteUrl": "https://www.instagram.com/comenocoto/",
+            "description": "A new takeaway rice-ball counter using Hagama-cooked Saga Koshihikari and Ariake nori.",
+            "imageCredit": "Sawarise / Comenocoto operator release",
+            "recognition": "",
+            "neighborhood": "Tenjin",
+            "imageSourceUrl": "https://prtimes.jp/main/html/rd/p/000000170.000101757.html",
+            "openingConfirmed": true
+          },
+          "details": {
+            "name": "Comenocoto — Tenjin Building",
+            "phone": "070-8819-1059",
+            "checkedAt": "2026-10-14",
+            "websiteUrl": "https://www.instagram.com/comenocoto/",
+            "openingHours": [
+              {
+                "days": "Monday–Saturday",
+                "hours": "11:00–15:00; takeaway only"
+              },
+              {
+                "days": "Sunday and public holidays",
+                "hours": "Closed"
+              }
+            ],
+            "pinSourceUrl": "https://prtimes.jp/main/html/rd/p/000000170.000101757.html",
+            "detailsSourceUrl": "https://www.instagram.com/comenocoto/",
+            "additionalSources": [
+              {
+                "url": "https://prtimes.jp/main/html/rd/p/000000170.000101757.html",
+                "label": "Research evidence"
+              },
+              {
+                "url": "https://fanfun.jp/331094/",
+                "label": "Research evidence"
+              }
+            ]
+          },
+          "pinSourceUrl": "https://prtimes.jp/main/html/rd/p/000000170.000101757.html"
+        },
+        "special": null
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/fukuoka/japan-30-2026-10-13/fukuoka17-kome-release-0-6341f872659bee5e.webp",
+          "sha256": "6341f872659bee5ea2670137ffa46df48e3f400892544552b5d730b11f46ca9f",
+          "width": 1200,
+          "height": 900,
+          "credit": "Sawarise / Comenocoto operator release",
+          "note": "Operator illustrative rice-ball assortment; individual unlabelled fillings not inferred",
+          "sourcePage": "https://prtimes.jp/main/html/rd/p/000000170.000101757.html"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/fukuoka/japan-30-2026-10-13/fukuoka17-kome-release-6-8c054e028545d718.webp",
+          "sha256": "8c054e028545d718c98264638fb44c0afc8333330e180ecf54e16420519200a1",
+          "width": 1200,
+          "height": 900,
+          "credit": "Sawarise / Comenocoto operator release",
+          "note": "Operator-labelled spicy-cod-roe rice ball",
+          "sourcePage": "https://prtimes.jp/main/html/rd/p/000000170.000101757.html"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/fukuoka/japan-30-2026-10-13/fukuoka17-kome-release-7-66a3352299081fd7.webp",
+          "sha256": "66a3352299081fd7330e47a004d41d39f2b8cf08b643bd892384c0217eb96300",
+          "width": 1200,
+          "height": 900,
+          "credit": "Sawarise / Comenocoto operator release",
+          "note": "Operator-labelled shrimp-tempura rice ball",
+          "sourcePage": "https://prtimes.jp/main/html/rd/p/000000170.000101757.html"
+        }
+      ],
+      "verification": {
+        "local": {
+          "pinId": 15401,
+          "sourceUrl": "https://prtimes.jp/main/html/rd/p/000000170.000101757.html",
+          "name": "Comenocoto — Tenjin Building",
+          "contentId": 1377,
+          "contentRevision": 2,
+          "verifiedGalleryLinks": 3,
+          "publicPinStatus": 200
+        },
+        "production": {
+          "pinId": 15401,
+          "sourceUrl": "https://prtimes.jp/main/html/rd/p/000000170.000101757.html",
+          "name": "Comenocoto — Tenjin Building",
+          "contentId": 1377,
+          "contentRevision": 2,
+          "verifiedGalleryLinks": 3,
+          "publicPinStatus": 200
+        }
+      }
+    }
+  ],
+  "researchNotes": [
+    "Kokko current six Sapporo profiles already correctly record October26; no write needed.",
+    "QuilfaitbonShinjuku,Hitonitachi and Comenocoto already exist; use exact source identity to prevent duplicates.",
+    "Kofuku held: employerOctober20,regionalOctober12and indexedOctober21conflict; no settled public opening evidence.",
+    "NipponRamenRin,WellBowl,RootS and MAGOKORODAN remain held pending launch menus/operator gallery/date identity.",
+    "Official Comenocoto release gallery checked; existing three credited operator Azure images retained. Operator Instagram inaccessible. No ARNE editorial photos copied."
+  ],
+  "verifiedAtUtc": "2026-10-18T21:46:20.898536+00:00",
+  "verification": {
+    "local": [
+      {
+        "pinId": 15401,
+        "sourceUrl": "https://prtimes.jp/main/html/rd/p/000000170.000101757.html",
+        "name": "Comenocoto — Tenjin Building",
+        "contentId": 1377,
+        "contentRevision": 2,
+        "verifiedGalleryLinks": 3,
+        "publicPinStatus": 200
+      }
+    ],
+    "production": [
+      {
+        "pinId": 15401,
+        "sourceUrl": "https://prtimes.jp/main/html/rd/p/000000170.000101757.html",
+        "name": "Comenocoto — Tenjin Building",
+        "contentId": 1377,
+        "contentRevision": 2,
+        "verifiedGalleryLinks": 3,
+        "publicPinStatus": 200
+      }
+    ],
+    "localGuideCards": [
+      {
+        "pinId": 15401,
+        "region": "fukuoka",
+        "view": "new",
+        "page": 1,
+        "nativeTitleAndImage": true,
+        "hrefs": [
+          "/pin/15401/comenocoto-tenjin-building-opens-in-tenjin"
+        ],
+        "guideStatus": 200,
+        "openingDate": "2026-10-02",
+        "offers": []
+      },
+      {
+        "pinId": 15401,
+        "region": "fukuoka",
+        "view": "discounts",
+        "page": 1,
+        "nativeTitleAndImage": true,
+        "hrefs": [
+          "/pin/15401/comenocoto-tenjin-building-opens-in-tenjin"
+        ],
+        "guideStatus": 200,
+        "openingDate": "2026-10-02",
+        "offers": [
+          {
+            "id": "https://prtimes.jp/main/html/rd/p/000000170.000101757.html#0",
+            "name": "Comenocoto — Tenjin Building",
+            "neighborhood": "Tenjin",
+            "address": "B1F Tenjin Building, 2-12-1 Tenjin, Chuo-ku, Fukuoka",
+            "restaurantHref": "/pin/15401/comenocoto-tenjin-building-opens-in-tenjin",
+            "checkedAt": "2026-10-18",
+            "special": {
+              "kind": "lunch",
+              "title": "Free dashi broth with two rice balls",
+              "schedule": "Monday–Saturday11:00–15:00Japan time; closed Sundays/public holidays.",
+              "menuLabel": "Two rice balls — complimentary broth",
+              "sourceUrl": "https://arne.media/gourmet/702350/",
+              "conditions": [
+                "Takeaway only. Purchase two rice balls to receive one broth; do not claim the whole meal is free.",
+                "Report observed October16,2026; launch/end date and additional stacking/stock terms are not published. Confirm at the counter.",
+                "Ordinary published rice balls cost¥290–¥390each; two start from¥580subject to actual selection/stock.",
+                "Public holidays excluded using Cabinet Office2026/2027calendar; calendar coverage is not a promotion expiry."
+              ],
+              "discounted": true,
+              "description": "One dashi broth (normally¥120) is complimentary when purchasing two rice balls; the rice balls are paid for separately.",
+              "limitedTime": false,
+              "availability": {
+                "windows": [
+                  {
+                    "end": "15:00",
+                    "days": [
+                      1,
+                      2,
+                      3,
+                      4,
+                      5,
+                      6
+                    ],
+                    "start": "11:00"
+                  }
+                ],
+                "excludedDates": [
+                  "2026-01-01",
+                  "2026-01-12",
+                  "2026-02-11",
+                  "2026-02-23",
+                  "2026-03-20",
+                  "2026-04-29",
+                  "2026-05-03",
+                  "2026-05-04",
+                  "2026-05-05",
+                  "2026-05-06",
+                  "2026-07-20",
+                  "2026-08-11",
+                  "2026-09-21",
+                  "2026-09-22",
+                  "2026-09-23",
+                  "2026-10-12",
+                  "2026-11-03",
+                  "2026-11-23",
+                  "2027-01-01",
+                  "2027-01-11",
+                  "2027-02-11",
+                  "2027-02-23",
+                  "2027-03-21",
+                  "2027-03-22",
+                  "2027-04-29",
+                  "2027-05-03",
+                  "2027-05-04",
+                  "2027-05-05",
+                  "2027-07-19",
+                  "2027-08-11",
+                  "2027-09-20",
+                  "2027-09-23",
+                  "2027-10-11",
+                  "2027-11-03",
+                  "2027-11-23"
+                ],
+                "excludesHolidays": true,
+                "holidayCalendarThrough": "2027-12-31"
+              }
+            },
+            "venueKey": "prtimes.jp/main/html/rd/p/000000170.000101757.html",
+            "photo": {
+              "alt": "Comenocoto — Tenjin Building — Operator illustrative rice-ball assortment; individual unlabelled fillings not inferred",
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/fukuoka/japan-30-2026-10-13/fukuoka17-kome-release-0-6341f872659bee5e.webp",
+              "credit": "Sawarise / Comenocoto operator release",
+              "checkedAt": "2026-10-18",
+              "sourceUrl": "https://prtimes.jp/main/html/rd/p/000000170.000101757.html",
+              "originalUrl": "https://prcdn.freetls.fastly.net/release_image/101757/170/101757-170-7447669ec10af8a6cc251bbd3eca696b-3900x2925.jpg"
+            },
+            "menu": {
+              "url": "https://arne.media/gourmet/702350/",
+              "note": "Actual source explicitly promises one free broth with two rice balls, not unlimited broth. No offer end date published.",
+              "items": [
+                {
+                  "name": "One complimentary dashi broth with two rice balls",
+                  "note": "Conditional broth only; two rice balls purchased separately. Normal broth¥120.",
+                  "price": 0
+                }
+              ],
+              "label": "Two rice balls — complimentary broth",
+              "coverage": "published",
+              "currency": "JPY"
+            },
+            "startsAt": "2026-10-19T02:00:00.000Z",
+            "end": "15:00",
+            "offers": [
+              {
+                "id": "https://prtimes.jp/main/html/rd/p/000000170.000101757.html#0",
+                "name": "Comenocoto — Tenjin Building",
+                "neighborhood": "Tenjin",
+                "address": "B1F Tenjin Building, 2-12-1 Tenjin, Chuo-ku, Fukuoka",
+                "restaurantHref": "/pin/15401/comenocoto-tenjin-building-opens-in-tenjin",
+                "checkedAt": "2026-10-18",
+                "special": {
+                  "kind": "lunch",
+                  "title": "Free dashi broth with two rice balls",
+                  "schedule": "Monday–Saturday11:00–15:00Japan time; closed Sundays/public holidays.",
+                  "menuLabel": "Two rice balls — complimentary broth",
+                  "sourceUrl": "https://arne.media/gourmet/702350/",
+                  "conditions": [
+                    "Takeaway only. Purchase two rice balls to receive one broth; do not claim the whole meal is free.",
+                    "Report observed October16,2026; launch/end date and additional stacking/stock terms are not published. Confirm at the counter.",
+                    "Ordinary published rice balls cost¥290–¥390each; two start from¥580subject to actual selection/stock.",
+                    "Public holidays excluded using Cabinet Office2026/2027calendar; calendar coverage is not a promotion expiry."
+                  ],
+                  "discounted": true,
+                  "description": "One dashi broth (normally¥120) is complimentary when purchasing two rice balls; the rice balls are paid for separately.",
+                  "limitedTime": false,
+                  "availability": {
+                    "windows": [
+                      {
+                        "end": "15:00",
+                        "days": [
+                          1,
+                          2,
+                          3,
+                          4,
+                          5,
+                          6
+                        ],
+                        "start": "11:00"
+                      }
+                    ],
+                    "excludedDates": [
+                      "2026-01-01",
+                      "2026-01-12",
+                      "2026-02-11",
+                      "2026-02-23",
+                      "2026-03-20",
+                      "2026-04-29",
+                      "2026-05-03",
+                      "2026-05-04",
+                      "2026-05-05",
+                      "2026-05-06",
+                      "2026-07-20",
+                      "2026-08-11",
+                      "2026-09-21",
+                      "2026-09-22",
+                      "2026-09-23",
+                      "2026-10-12",
+                      "2026-11-03",
+                      "2026-11-23",
+                      "2027-01-01",
+                      "2027-01-11",
+                      "2027-02-11",
+                      "2027-02-23",
+                      "2027-03-21",
+                      "2027-03-22",
+                      "2027-04-29",
+                      "2027-05-03",
+                      "2027-05-04",
+                      "2027-05-05",
+                      "2027-07-19",
+                      "2027-08-11",
+                      "2027-09-20",
+                      "2027-09-23",
+                      "2027-10-11",
+                      "2027-11-03",
+                      "2027-11-23"
+                    ],
+                    "excludesHolidays": true,
+                    "holidayCalendarThrough": "2027-12-31"
+                  }
+                },
+                "venueKey": "prtimes.jp/main/html/rd/p/000000170.000101757.html",
+                "photo": {
+                  "alt": "Comenocoto — Tenjin Building — Operator illustrative rice-ball assortment; individual unlabelled fillings not inferred",
+                  "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/fukuoka/japan-30-2026-10-13/fukuoka17-kome-release-0-6341f872659bee5e.webp",
+                  "credit": "Sawarise / Comenocoto operator release",
+                  "checkedAt": "2026-10-18",
+                  "sourceUrl": "https://prtimes.jp/main/html/rd/p/000000170.000101757.html",
+                  "originalUrl": "https://prcdn.freetls.fastly.net/release_image/101757/170/101757-170-7447669ec10af8a6cc251bbd3eca696b-3900x2925.jpg"
+                },
+                "menu": {
+                  "url": "https://arne.media/gourmet/702350/",
+                  "note": "Actual source explicitly promises one free broth with two rice balls, not unlimited broth. No offer end date published.",
+                  "items": [
+                    {
+                      "name": "One complimentary dashi broth with two rice balls",
+                      "note": "Conditional broth only; two rice balls purchased separately. Normal broth¥120.",
+                      "price": 0
+                    }
+                  ],
+                  "label": "Two rice balls — complimentary broth",
+                  "coverage": "published",
+                  "currency": "JPY"
+                },
+                "startsAt": "2026-10-19T02:00:00.000Z",
+                "end": "15:00"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "productionGuideCards": [
+      {
+        "pinId": 15401,
+        "region": "fukuoka",
+        "view": "new",
+        "page": 1,
+        "nativeTitleAndImage": true,
+        "hrefs": [
+          "/pin/15401/comenocoto-tenjin-building-opens-in-tenjin"
+        ],
+        "guideStatus": 200,
+        "openingDate": "2026-10-02",
+        "offers": []
+      },
+      {
+        "pinId": 15401,
+        "region": "fukuoka",
+        "view": "discounts",
+        "page": 1,
+        "nativeTitleAndImage": true,
+        "hrefs": [
+          "/pin/15401/comenocoto-tenjin-building-opens-in-tenjin"
+        ],
+        "guideStatus": 200,
+        "openingDate": "2026-10-02",
+        "offers": [
+          {
+            "id": "https://prtimes.jp/main/html/rd/p/000000170.000101757.html#0",
+            "name": "Comenocoto — Tenjin Building",
+            "neighborhood": "Tenjin",
+            "address": "B1F Tenjin Building, 2-12-1 Tenjin, Chuo-ku, Fukuoka",
+            "restaurantHref": "/pin/15401/comenocoto-tenjin-building-opens-in-tenjin",
+            "checkedAt": "2026-10-18",
+            "special": {
+              "kind": "lunch",
+              "title": "Free dashi broth with two rice balls",
+              "schedule": "Monday–Saturday11:00–15:00Japan time; closed Sundays/public holidays.",
+              "menuLabel": "Two rice balls — complimentary broth",
+              "sourceUrl": "https://arne.media/gourmet/702350/",
+              "conditions": [
+                "Takeaway only. Purchase two rice balls to receive one broth; do not claim the whole meal is free.",
+                "Report observed October16,2026; launch/end date and additional stacking/stock terms are not published. Confirm at the counter.",
+                "Ordinary published rice balls cost¥290–¥390each; two start from¥580subject to actual selection/stock.",
+                "Public holidays excluded using Cabinet Office2026/2027calendar; calendar coverage is not a promotion expiry."
+              ],
+              "discounted": true,
+              "description": "One dashi broth (normally¥120) is complimentary when purchasing two rice balls; the rice balls are paid for separately.",
+              "limitedTime": false,
+              "availability": {
+                "windows": [
+                  {
+                    "end": "15:00",
+                    "days": [
+                      1,
+                      2,
+                      3,
+                      4,
+                      5,
+                      6
+                    ],
+                    "start": "11:00"
+                  }
+                ],
+                "excludedDates": [
+                  "2026-01-01",
+                  "2026-01-12",
+                  "2026-02-11",
+                  "2026-02-23",
+                  "2026-03-20",
+                  "2026-04-29",
+                  "2026-05-03",
+                  "2026-05-04",
+                  "2026-05-05",
+                  "2026-05-06",
+                  "2026-07-20",
+                  "2026-08-11",
+                  "2026-09-21",
+                  "2026-09-22",
+                  "2026-09-23",
+                  "2026-10-12",
+                  "2026-11-03",
+                  "2026-11-23",
+                  "2027-01-01",
+                  "2027-01-11",
+                  "2027-02-11",
+                  "2027-02-23",
+                  "2027-03-21",
+                  "2027-03-22",
+                  "2027-04-29",
+                  "2027-05-03",
+                  "2027-05-04",
+                  "2027-05-05",
+                  "2027-07-19",
+                  "2027-08-11",
+                  "2027-09-20",
+                  "2027-09-23",
+                  "2027-10-11",
+                  "2027-11-03",
+                  "2027-11-23"
+                ],
+                "excludesHolidays": true,
+                "holidayCalendarThrough": "2027-12-31"
+              }
+            },
+            "venueKey": "prtimes.jp/main/html/rd/p/000000170.000101757.html",
+            "photo": {
+              "alt": "Comenocoto — Tenjin Building — Operator illustrative rice-ball assortment; individual unlabelled fillings not inferred",
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/fukuoka/japan-30-2026-10-13/fukuoka17-kome-release-0-6341f872659bee5e.webp",
+              "credit": "Sawarise / Comenocoto operator release",
+              "checkedAt": "2026-10-18",
+              "sourceUrl": "https://prtimes.jp/main/html/rd/p/000000170.000101757.html",
+              "originalUrl": "https://prcdn.freetls.fastly.net/release_image/101757/170/101757-170-7447669ec10af8a6cc251bbd3eca696b-3900x2925.jpg"
+            },
+            "menu": {
+              "url": "https://arne.media/gourmet/702350/",
+              "note": "Actual source explicitly promises one free broth with two rice balls, not unlimited broth. No offer end date published.",
+              "items": [
+                {
+                  "name": "One complimentary dashi broth with two rice balls",
+                  "note": "Conditional broth only; two rice balls purchased separately. Normal broth¥120.",
+                  "price": 0
+                }
+              ],
+              "label": "Two rice balls — complimentary broth",
+              "coverage": "published",
+              "currency": "JPY"
+            },
+            "startsAt": "2026-10-19T02:00:00.000Z",
+            "end": "15:00",
+            "offers": [
+              {
+                "id": "https://prtimes.jp/main/html/rd/p/000000170.000101757.html#0",
+                "name": "Comenocoto — Tenjin Building",
+                "neighborhood": "Tenjin",
+                "address": "B1F Tenjin Building, 2-12-1 Tenjin, Chuo-ku, Fukuoka",
+                "restaurantHref": "/pin/15401/comenocoto-tenjin-building-opens-in-tenjin",
+                "checkedAt": "2026-10-18",
+                "special": {
+                  "kind": "lunch",
+                  "title": "Free dashi broth with two rice balls",
+                  "schedule": "Monday–Saturday11:00–15:00Japan time; closed Sundays/public holidays.",
+                  "menuLabel": "Two rice balls — complimentary broth",
+                  "sourceUrl": "https://arne.media/gourmet/702350/",
+                  "conditions": [
+                    "Takeaway only. Purchase two rice balls to receive one broth; do not claim the whole meal is free.",
+                    "Report observed October16,2026; launch/end date and additional stacking/stock terms are not published. Confirm at the counter.",
+                    "Ordinary published rice balls cost¥290–¥390each; two start from¥580subject to actual selection/stock.",
+                    "Public holidays excluded using Cabinet Office2026/2027calendar; calendar coverage is not a promotion expiry."
+                  ],
+                  "discounted": true,
+                  "description": "One dashi broth (normally¥120) is complimentary when purchasing two rice balls; the rice balls are paid for separately.",
+                  "limitedTime": false,
+                  "availability": {
+                    "windows": [
+                      {
+                        "end": "15:00",
+                        "days": [
+                          1,
+                          2,
+                          3,
+                          4,
+                          5,
+                          6
+                        ],
+                        "start": "11:00"
+                      }
+                    ],
+                    "excludedDates": [
+                      "2026-01-01",
+                      "2026-01-12",
+                      "2026-02-11",
+                      "2026-02-23",
+                      "2026-03-20",
+                      "2026-04-29",
+                      "2026-05-03",
+                      "2026-05-04",
+                      "2026-05-05",
+                      "2026-05-06",
+                      "2026-07-20",
+                      "2026-08-11",
+                      "2026-09-21",
+                      "2026-09-22",
+                      "2026-09-23",
+                      "2026-10-12",
+                      "2026-11-03",
+                      "2026-11-23",
+                      "2027-01-01",
+                      "2027-01-11",
+                      "2027-02-11",
+                      "2027-02-23",
+                      "2027-03-21",
+                      "2027-03-22",
+                      "2027-04-29",
+                      "2027-05-03",
+                      "2027-05-04",
+                      "2027-05-05",
+                      "2027-07-19",
+                      "2027-08-11",
+                      "2027-09-20",
+                      "2027-09-23",
+                      "2027-10-11",
+                      "2027-11-03",
+                      "2027-11-23"
+                    ],
+                    "excludesHolidays": true,
+                    "holidayCalendarThrough": "2027-12-31"
+                  }
+                },
+                "venueKey": "prtimes.jp/main/html/rd/p/000000170.000101757.html",
+                "photo": {
+                  "alt": "Comenocoto — Tenjin Building — Operator illustrative rice-ball assortment; individual unlabelled fillings not inferred",
+                  "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/fukuoka/japan-30-2026-10-13/fukuoka17-kome-release-0-6341f872659bee5e.webp",
+                  "credit": "Sawarise / Comenocoto operator release",
+                  "checkedAt": "2026-10-18",
+                  "sourceUrl": "https://prtimes.jp/main/html/rd/p/000000170.000101757.html",
+                  "originalUrl": "https://prcdn.freetls.fastly.net/release_image/101757/170/101757-170-7447669ec10af8a6cc251bbd3eca696b-3900x2925.jpg"
+                },
+                "menu": {
+                  "url": "https://arne.media/gourmet/702350/",
+                  "note": "Actual source explicitly promises one free broth with two rice balls, not unlimited broth. No offer end date published.",
+                  "items": [
+                    {
+                      "name": "One complimentary dashi broth with two rice balls",
+                      "note": "Conditional broth only; two rice balls purchased separately. Normal broth¥120.",
+                      "price": 0
+                    }
+                  ],
+                  "label": "Two rice balls — complimentary broth",
+                  "coverage": "published",
+                  "currency": "JPY"
+                },
+                "startsAt": "2026-10-19T02:00:00.000Z",
+                "end": "15:00"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "all24CountsAgree": true,
+    "counts": [
+      {
+        "environment": "production",
+        "city": "fukuoka",
+        "view": "upcoming",
+        "count": 9,
+        "ids": [
+          "15398",
+          "15410",
+          "15411",
+          "15415",
+          "15424",
+          "15425",
+          "15426",
+          "15914",
+          "15924"
+        ]
+      },
+      {
+        "environment": "production",
+        "city": "fukuoka",
+        "view": "new",
+        "count": 19,
+        "ids": [
+          "15399",
+          "15400",
+          "15401",
+          "15409",
+          "15412",
+          "15414",
+          "15421",
+          "15422",
+          "15423",
+          "15427",
+          "15428",
+          "15969",
+          "16026",
+          "16027",
+          "16078",
+          "16290",
+          "16291",
+          "16292",
+          "16326"
+        ]
+      },
+      {
+        "environment": "production",
+        "city": "fukuoka",
+        "view": "top",
+        "count": 14,
+        "ids": [
+          "15402",
+          "15403",
+          "15404",
+          "15405",
+          "15406",
+          "15407",
+          "15408",
+          "15413",
+          "15416",
+          "15417",
+          "15418",
+          "15419",
+          "15420",
+          "15429"
+        ]
+      },
+      {
+        "environment": "production",
+        "city": "fukuoka",
+        "view": "discounts",
+        "count": 31,
+        "ids": [
+          "https://333sanmitomatoramen.com/store/%e5%a4%a9%e7%a5%9e%e5%a4%a7%e5%90%8d%e6%9c%ac%e5%ba%97/",
+          "https://and-gallery.com/#hukuoka",
+          "https://cene.tokyo/collections/fukuoka-open",
+          "https://fukuoka-orientalhotel.com/restaurant/linksquare/",
+          "https://fukuokaseahawk.hiltonjapan.co.jp/restaurants/clouds",
+          "https://fukuokaseahawk.hiltonjapan.co.jp/restaurants/seala",
+          "https://kusiyatubame.owst.jp/",
+          "https://le-bistro-aki.com/",
+          "https://onefukuoka-building.jp/shop/55",
+          "https://prtimes.jp/main/html/rd/p/000000064.000152670.html",
+          "https://prtimes.jp/main/html/rd/p/000000170.000101757.html",
+          "https://pukutoco.com/shi-yanyan-ropponmatu/",
+          "https://pukutoco.com/sumomo-bakery-1007open/",
+          "https://pukutoco.com/sumomobakery-akasaka1019open/",
+          "https://toeihotel-fukuoka.com/restaurant/bistro_atrie/",
+          "https://www.eggsnthingsjapan.com/hakata/",
+          "https://www.f-sunpalace.com/restaurant/lagoon/",
+          "https://www.fuk.hotelokura.co.jp/restaurant/lechampdor/",
+          "https://www.gate-hotel.jp/fukuoka/rb/agfukuoka.html",
+          "https://www.ginzalion.jp/shop/brand/yebisubar/onefukuokabldg.html",
+          "https://www.hiramatsurestaurant.jp/hiramatsu-hakata/",
+          "https://www.hotelnikko-fukuoka.com/restaurant/celebrites/",
+          "https://www.hotelnikko-fukuoka.com/restaurant/serena/",
+          "https://www.hotpepper.jp/strJ001276550/",
+          "https://www.kys-newotani.co.jp/hakata/restaurant/castillian-bar/",
+          "https://www.orec.co.jp/greenlab-fukuoka/",
+          "https://www.pochi-ito.com/",
+          "https://www.princehotels.co.jp/momochihama/restaurant/yocaterrace/",
+          "https://www.quil-fait-bon.com/pages/fukuoka",
+          "https://www.recent-hotel.com/restaurant/",
+          "https://www.tenchika.com/shop/h_b_antique/"
+        ]
+      },
+      {
+        "environment": "production",
+        "city": "osaka",
+        "view": "upcoming",
+        "count": 12,
+        "ids": [
+          "15432",
+          "15445",
+          "15447",
+          "15448",
+          "15449",
+          "15458",
+          "15913",
+          "15925",
+          "15975",
+          "16023",
+          "16079",
+          "17168"
+        ]
+      },
+      {
+        "environment": "production",
+        "city": "osaka",
+        "view": "new",
+        "count": 21,
+        "ids": [
+          "15431",
+          "15435",
+          "15436",
+          "15437",
+          "15438",
+          "15439",
+          "15446",
+          "15451",
+          "15452",
+          "15453",
+          "15454",
+          "15455",
+          "15456",
+          "15457",
+          "17108",
+          "17109",
+          "17110",
+          "17111",
+          "17112",
+          "17622",
+          "17623"
+        ]
+      },
+      {
+        "environment": "production",
+        "city": "osaka",
+        "view": "top",
+        "count": 10,
+        "ids": [
+          "15430",
+          "15433",
+          "15434",
+          "15440",
+          "15441",
+          "15442",
+          "15443",
+          "15444",
+          "15450",
+          "15971"
+        ]
+      },
+      {
+        "environment": "production",
+        "city": "osaka",
+        "view": "discounts",
+        "count": 21,
+        "ids": [
+          "https://and-gallery.com/#nanba",
+          "https://big-step.co.jp/shop/detail/63",
+          "https://conrad-osaka.hiltonjapan.co.jp/restaurants/40skybar",
+          "https://conrad-osaka.hiltonjapan.co.jp/restaurants/atmos",
+          "https://cross-osaka.orixhotelsandresorts.com/#restaurant",
+          "https://csm-cafe.ltr-online.com/lp/csm-cafe-s022",
+          "https://doubletree-osaka-castle.hiltonjapan.co.jp/restaurants/lounge-bar-sen",
+          "https://doubletree-osaka-castle.hiltonjapan.co.jp/restaurants/restaurant-sen",
+          "https://gabuchiki.com/news/view/308",
+          "https://icosaka.com/offer/pierre_autumnmenu/",
+          "https://jblm2024.wixsite.com/fujiyama-tokyo/%E8%A4%87%E8%A3%BD-namba-osaka",
+          "https://osaka.ekimaru.com/shopguide/detail/103",
+          "https://osaka.hiltonjapan.co.jp/plans/restaurants/other/myplace-happyhour",
+          "https://patinahotels.com/osaka/drink-and-dine/p72",
+          "https://prtimes.jp/main/html/rd/p/000000001.000192433.html/",
+          "https://www.daimaru.co.jp/shinsaibashi/restaurant/cucina-bella.html",
+          "https://www.gate-hotel.jp/osaka/rb/aosaka.html",
+          "https://www.gate-hotel.jp/osaka/rb/peaks.html",
+          "https://www.hotpepper.jp/strJ004661366/",
+          "https://www.quil-fait-bon.com/pages/grand-front-osaka",
+          "https://www.regine.stregisosaka.com/"
+        ]
+      },
+      {
+        "environment": "production",
+        "city": "kyoto",
+        "view": "upcoming",
+        "count": 11,
+        "ids": [
+          "15483",
+          "15499",
+          "15500",
+          "15909",
+          "15910",
+          "15911",
+          "15912",
+          "15922",
+          "15931",
+          "16323",
+          "17169"
+        ]
+      },
+      {
+        "environment": "production",
+        "city": "kyoto",
+        "view": "new",
+        "count": 31,
+        "ids": [
+          "15460",
+          "15461",
+          "15462",
+          "15463",
+          "15464",
+          "15465",
+          "15466",
+          "15467",
+          "15468",
+          "15469",
+          "15470",
+          "15471",
+          "15472",
+          "15473",
+          "15474",
+          "15475",
+          "15476",
+          "15477",
+          "15478",
+          "15479",
+          "15480",
+          "15481",
+          "15482",
+          "15489",
+          "15490",
+          "15491",
+          "15492",
+          "15493",
+          "15494",
+          "15495",
+          "15498"
+        ]
+      },
+      {
+        "environment": "production",
+        "city": "kyoto",
+        "view": "top",
+        "count": 10,
+        "ids": [
+          "15459",
+          "15484",
+          "15485",
+          "15486",
+          "15487",
+          "15488",
+          "15496",
+          "15497",
+          "15501",
+          "15973"
+        ]
+      },
+      {
+        "environment": "production",
+        "city": "kyoto",
+        "view": "discounts",
+        "count": 30,
+        "ids": [
+          "https://hotelfauchonkyoto.com/ja/gourmet/fauchon-salon-de-the-kyoto/",
+          "https://kyoto.hiltonjapan.co.jp/restaurants/teori",
+          "https://www.instagram.com/jbowl_ritsumeikan_mae/",
+          "https://www.keihanhotels-resorts.co.jp/kyoto-centuryhotel/topics/happyhour-2/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/011/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/012/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/013/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/014/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/015/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/016/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/017/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/018/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/019/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/020/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/022/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/023/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/026/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/028/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/031/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/033/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/039/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/040/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/042/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/043/",
+          "https://www.princess-kyoto.co.jp/restaurant/ambercourt/",
+          "https://www.princess-kyoto.co.jp/restaurant/darley/",
+          "https://www.princess-kyoto.co.jp/restaurant/hisuien/",
+          "https://www.princess-kyoto.co.jp/restaurant/hoen/",
+          "https://www.princess-kyoto.co.jp/restaurant/sagano/",
+          "https://www.quil-fait-bon.com/pages/kyoto"
+        ]
+      },
+      {
+        "environment": "production",
+        "city": "nagoya",
+        "view": "upcoming",
+        "count": 11,
+        "ids": [
+          "15510",
+          "15512",
+          "15517",
+          "15518",
+          "15521",
+          "15522",
+          "15900",
+          "15901",
+          "15902",
+          "16075",
+          "16080"
+        ]
+      },
+      {
+        "environment": "production",
+        "city": "nagoya",
+        "view": "new",
+        "count": 30,
+        "ids": [
+          "15509",
+          "15511",
+          "15515",
+          "15516",
+          "15519",
+          "15520",
+          "15898",
+          "15899",
+          "15915",
+          "15916",
+          "15917",
+          "15918",
+          "15919",
+          "15920",
+          "15921",
+          "15932",
+          "15964",
+          "15965",
+          "16020",
+          "16021",
+          "16022",
+          "16076",
+          "16294",
+          "16295",
+          "16767",
+          "16771",
+          "16800",
+          "17107",
+          "17166",
+          "17167"
+        ]
+      },
+      {
+        "environment": "production",
+        "city": "nagoya",
+        "view": "top",
+        "count": 12,
+        "ids": [
+          "15502",
+          "15503",
+          "15504",
+          "15505",
+          "15506",
+          "15507",
+          "15508",
+          "15513",
+          "15514",
+          "15523",
+          "15524",
+          "15972"
+        ]
+      },
+      {
+        "environment": "production",
+        "city": "nagoya",
+        "view": "discounts",
+        "count": 21,
+        "ids": [
+          "https://and-gallery.com/#nagoya",
+          "https://csm-cafe.ltr-online.com/lp/csm-cafe-s017",
+          "https://kinzan.nagoya/archives/news/2853/",
+          "https://lebeurrenoisettetokyo.com/nagoya/",
+          "https://nagoya.hiltonjapan.co.jp/restaurants/hideaway3-3",
+          "https://nagoya.hiltonjapan.co.jp/restaurants/inplace3-3",
+          "https://nagoya.hiltonjapan.co.jp/restaurants/ouchou",
+          "https://nagoya.parco.jp/shop/detail/?cd=009191",
+          "https://prtimes.jp/main/html/rd/p/000004440.000018505.html",
+          "https://www.anacrowneplaza-nagoya.jp/pages/restaurant_gardencourt",
+          "https://www.anacrowneplaza-nagoya.jp/pages/restaurant_karin",
+          "https://www.anacrowneplaza-nagoya.jp/pages/restaurant_stargate",
+          "https://www.anacrowneplaza-nagoya.jp/pages/restaurant_winglounge",
+          "https://www.associa.com/nma/restaurant/pergola/",
+          "https://www.centralpark.co.jp/shop/sharecafe/",
+          "https://www.hotpepper.jp/strJ004698778/",
+          "https://www.hotpepper.jp/strJ004699003/",
+          "https://www.komeda.co.jp/shop/detail.html?id=1215",
+          "https://www.livingroom-skybar.com/",
+          "https://www.princehotels.co.jp/nagoya/restaurant/skydining/",
+          "https://www.quil-fait-bon.com/pages/nagoya-sakae"
+        ]
+      },
+      {
+        "environment": "production",
+        "city": "tokyo",
+        "view": "upcoming",
+        "count": 13,
+        "ids": [
+          "15526",
+          "15538",
+          "15541",
+          "15544",
+          "15546",
+          "15555",
+          "15556",
+          "15557",
+          "15923",
+          "15929",
+          "15930",
+          "17106",
+          "17621"
+        ]
+      },
+      {
+        "environment": "production",
+        "city": "tokyo",
+        "view": "new",
+        "count": 17,
+        "ids": [
+          "15527",
+          "15539",
+          "15540",
+          "15551",
+          "15552",
+          "15553",
+          "15554",
+          "15558",
+          "15966",
+          "15967",
+          "15968",
+          "16289",
+          "16325",
+          "17170",
+          "17171",
+          "17172",
+          "17173"
+        ]
+      },
+      {
+        "environment": "production",
+        "city": "tokyo",
+        "view": "top",
+        "count": 24,
+        "ids": [
+          "15525",
+          "15528",
+          "15529",
+          "15530",
+          "15531",
+          "15532",
+          "15533",
+          "15534",
+          "15535",
+          "15536",
+          "15537",
+          "15542",
+          "15543",
+          "15545",
+          "15547",
+          "15548",
+          "15549",
+          "15550",
+          "15559",
+          "15560",
+          "15561",
+          "15562",
+          "15903",
+          "15974"
+        ]
+      },
+      {
+        "environment": "production",
+        "city": "tokyo",
+        "view": "discounts",
+        "count": 33,
+        "ids": [
+          "https://and-gallery.com/#ikebukuro",
+          "https://and-gallery.com/#yurakucho",
+          "https://cocco.eastone.co.jp/shop/gotanda",
+          "https://cocco.eastone.co.jp/shop/kameido",
+          "https://conrad-tokyo.hiltonjapan.co.jp/restaurants/cerise",
+          "https://conrad-tokyo.hiltonjapan.co.jp/restaurants/chinablue",
+          "https://conrad-tokyo.hiltonjapan.co.jp/restaurants/twentyeight",
+          "https://csm-cafe.ltr-online.com/lp/csm-cafe-s012",
+          "https://miabocca.eastone.co.jp/shop/Ikebukuro",
+          "https://miabocca.eastone.co.jp/shop/Shakujii-park",
+          "https://miabocca.eastone.co.jp/shop/Shinjuku-takasimaya",
+          "https://prtimes.jp/main/html/rd/p/000000009.000161200.html",
+          "https://prtimes.jp/main/html/rd/p/000000048.000152772.html",
+          "https://prtimes.jp/main/html/rd/p/000000356.000048489.html",
+          "https://prtimes.jp/main/html/rd/p/000000592.000071323.html",
+          "https://prtimes.jp/main/html/rd/p/000004178.000003860.html",
+          "https://sarabethsrestaurants.jp/location/omotesando/",
+          "https://sarabethsrestaurants.jp/location/shinagawa/",
+          "https://sarabethsrestaurants.jp/location/shinjuku/",
+          "https://sarabethsrestaurants.jp/location/tokyo/",
+          "https://store-info.skylark.co.jp/syabuyo/map/198490/",
+          "https://tokyo.hiltonjapan.co.jp/restaurants/st_georges_bar",
+          "https://www.andaztokyo.jp/restaurants/jp/thetavern-grill-lounge",
+          "https://www.herofield.com/bbq/tokyoprince/",
+          "https://www.hiramatsurestaurant.jp/jardindessens-tokyo/",
+          "https://www.mesm.jp/en/eat-drink/chefs-theatre.html",
+          "https://www.newotani.co.jp/tokyo/restaurant/gardenlounge/",
+          "https://www.quil-fait-bon.com/pages/aoyama",
+          "https://www.quil-fait-bon.com/pages/grand-maison-ginza",
+          "https://www.quil-fait-bon.com/pages/shinjuku",
+          "https://www.quil-fait-bon.com/pages/tokyo-dome-city",
+          "https://www.quil-fait-bon.com/pages/tokyo-skytree-town-solamachi",
+          "https://www.sunamo.jp/floor/shop_detail.html?UC=1_028"
+        ]
+      },
+      {
+        "environment": "production",
+        "city": "sapporo",
+        "view": "upcoming",
+        "count": 8,
+        "ids": [
+          "15568",
+          "15569",
+          "15570",
+          "15571",
+          "15597",
+          "15926",
+          "15970",
+          "17103"
+        ]
+      },
+      {
+        "environment": "production",
+        "city": "sapporo",
+        "view": "new",
+        "count": 15,
+        "ids": [
+          "15580",
+          "15586",
+          "15587",
+          "15588",
+          "15589",
+          "15590",
+          "15591",
+          "15592",
+          "15595",
+          "15596",
+          "16293",
+          "16296",
+          "17104",
+          "17105",
+          "17624"
+        ]
+      },
+      {
+        "environment": "production",
+        "city": "sapporo",
+        "view": "top",
+        "count": 30,
+        "ids": [
+          "15563",
+          "15564",
+          "15565",
+          "15566",
+          "15567",
+          "15572",
+          "15573",
+          "15574",
+          "15575",
+          "15576",
+          "15577",
+          "15578",
+          "15579",
+          "15581",
+          "15582",
+          "15583",
+          "15584",
+          "15585",
+          "15593",
+          "15594",
+          "15598",
+          "15599",
+          "15600",
+          "15601",
+          "15602",
+          "15603",
+          "15604",
+          "15605",
+          "15606",
+          "15607"
+        ]
+      },
+      {
+        "environment": "production",
+        "city": "sapporo",
+        "view": "discounts",
+        "count": 32,
+        "ids": [
+          "https://chocottosushi-kiwami.owst.jp/",
+          "https://cocco.eastone.co.jp/shop/kitahachijo",
+          "https://cocco.eastone.co.jp/shop/kitaichijo",
+          "https://cocco.eastone.co.jp/shop/kotoniekimae",
+          "https://cocco.eastone.co.jp/shop/miyanosawa",
+          "https://cocco.eastone.co.jp/shop/shindohigashi",
+          "https://cocco.eastone.co.jp/shop/souen",
+          "https://grand1934.com/restaurant/garden-dining-waraku/",
+          "https://grand1934.com/restaurant/kokaku/",
+          "https://grand1934.com/restaurant/lobby-lounge-mizar/",
+          "https://grand1934.com/restaurant/northern-terrace-diner/",
+          "https://grand1934.com/restaurant/old-saloon1934/",
+          "https://miabocca.eastone.co.jp/shop/Kita2jo",
+          "https://miabocca.eastone.co.jp/shop/Kotoni-station",
+          "https://miabocca.eastone.co.jp/shop/Sapporo-station",
+          "https://miabocca.eastone.co.jp/shop/atsubetsuminami",
+          "https://miabocca.eastone.co.jp/shop/sapporoduo",
+          "https://prtimes.jp/main/html/rd/p/000000010.000134951.html",
+          "https://store-info.skylark.co.jp/syabuyo/map/198489/",
+          "https://www.anahisapporosusukino.com/restaurants/verde/",
+          "https://www.hyatt.com/hyatt-centric/ja-JP/ctsct-hyatt-centric-sapporo/dining",
+          "https://www.jrhotels.co.jp/tower/restaurant/skyj/",
+          "https://www.keioplaza-sapporo.co.jp/restaurants/akizu/",
+          "https://www.keioplaza-sapporo.co.jp/restaurants/crossvault/",
+          "https://www.keioplaza-sapporo.co.jp/restaurants/glass/",
+          "https://www.keioplaza-sapporo.co.jp/restaurants/miyama/",
+          "https://www.keioplaza-sapporo.co.jp/restaurants/yamanami/",
+          "https://www.princehotels.co.jp/sapporo/restaurant/alldaydininggrandeur",
+          "https://www.princehotels.co.jp/sapporo/restaurant/fuyojo",
+          "https://www.princehotels.co.jp/sapporo/restaurant/katsura",
+          "https://www.princehotels.co.jp/sapporo/restaurant/top_prince",
+          "https://www.tokyuhotels.co.jp/sapporostream/restaurant/splish/plan/angel_devil/index.html"
+        ]
+      }
+    ],
+    "memberships": 465,
+    "shortfall": 262,
+    "newBranches": 0,
+    "existingProfilesUpdated": 1,
+    "reportMenuEntries": 18,
+    "additionalDistinctOrdinaryItems": 11,
+    "previouslyUnpricedItemsResolved": 2,
+    "preservedAzureGalleryLinks": 3,
+    "newSpecialVenues": 1,
+    "offerRecordsAdded": 1,
+    "guideMembershipsAdded": 1,
+    "originalRecords": [
+      {
+        "environment": "local",
+        "pinId": 15401,
+        "fullOriginalPinPreserved": true,
+        "authorPreserved": true,
+        "allThreeGalleryRecordsPreserved": true
+      },
+      {
+        "environment": "production",
+        "pinId": 15401,
+        "fullOriginalPinPreserved": true,
+        "authorPreserved": true,
+        "allThreeGalleryRecordsPreserved": true
+      }
+    ],
+    "scheduleChecks": [
+      {
+        "at": "2026-10-19T01:59:59Z",
+        "active": false,
+        "next": "2026-10-19T02:00:00.000Z"
+      },
+      {
+        "at": "2026-10-19T02:00:00Z",
+        "active": true,
+        "next": "2026-10-20T02:00:00.000Z"
+      },
+      {
+        "at": "2026-10-19T05:59:59Z",
+        "active": true,
+        "next": "2026-10-20T02:00:00.000Z"
+      },
+      {
+        "at": "2026-10-19T06:00:00Z",
+        "active": false,
+        "next": "2026-10-20T02:00:00.000Z"
+      },
+      {
+        "at": "2026-10-25T03:00:00Z",
+        "active": false,
+        "next": "2026-10-26T02:00:00.000Z"
+      },
+      {
+        "at": "2026-11-03T03:00:00Z",
+        "active": false,
+        "next": "2026-11-04T02:00:00.000Z"
+      },
+      {
+        "at": "2026-11-23T03:00:00Z",
+        "active": false,
+        "next": "2026-11-24T02:00:00.000Z"
+      },
+      {
+        "at": "2027-03-22T03:00:00Z",
+        "active": false,
+        "next": "2027-03-23T02:00:00.000Z"
+      },
+      {
+        "at": "2028-01-03T03:00:00Z",
+        "active": false,
+        "next": null
+      }
+    ],
+    "sourceChecks": [
+      {
+        "url": "https://arne.media/gourmet/702350/",
+        "status": "Opened and captured; October16exact-branch report provides18tax-inclusive entries and two-rice-ball/one-free-broth condition."
+      },
+      {
+        "url": "https://prtimes.jp/main/html/rd/p/000000170.000101757.html",
+        "status": "Opened and captured; exact October2opening and official gallery checked; existing three Azure photos preserved."
+      },
+      {
+        "url": "https://www.instagram.com/comenocoto/",
+        "status": "Inaccessible; operator storefront gallery remains a gap."
+      },
+      {
+        "url": "https://www8.cao.go.jp/chosei/shukujitsu/gaiyou.html",
+        "status": "Opened; 2026/2027national and substitute holidays transcribed."
+      },
+      {
+        "url": "https://prtimes.jp/main/html/rd/p/000000215.000078678.html",
+        "status": "Opened and captured; October26drawing date already correct in all six Sapporo profiles; no mutation."
+      }
+    ],
+    "deployment": false
+  }
+}
