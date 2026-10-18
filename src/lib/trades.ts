@@ -35,8 +35,17 @@ export function parseAmount(text: string): { low: number | null; high: number | 
   return { low: dollars(m[1]), high: m[2] ? dollars(m[2]) : null };
 }
 
+// A transaction cannot come after its own notification, so a later date is a
+// year typo on the form (Steve Cohen's 12/26/2026, notified 01/21/2026): read it
+// as the previous year when that fits, else keep it as filed.
+export function fixYearTypo(tx: string, notified: string): string {
+  if (tx <= notified) return tx;
+  const prev = `${Number(tx.slice(0, 4)) - 1}${tx.slice(4)}`;
+  return prev <= notified ? prev : tx;
+}
+
 // A line holding the type, both dates and (the start of) the amount.
-const ROW = /^(.*?)\s{2,}(P|S \(partial\)|S|E)\s+(\d\d\/\d\d\/\d{4})\s+(\d\d\/\d\d\/\d{4})\s+(\$[\d,]+(?:\s*-\s*(?:\$[\d,]+)?)?|Over\s+\$[\d,]+)/;
+const ROW = /^(.*?)\s+(P|S \(partial\)|S|E)\s+(\d\d\/\d\d\/\d{4})\s+(\d\d\/\d\d\/\d{4})\s+(\$[\d,]+(?:\s*-\s*(?:\$[\d,]+)?)?|Over\s+\$[\d,]+)/;
 // The filing-status / subholding / description lines that follow each row.
 const META = /^\s*(F\s+S\s*:|S\s+O\s*:|D\s+:|L\s*:|C\s*:|ID\s+Owner\s+Asset|Type\s+Date|\*|Filing ID #|Clerk of the House|T\s*$|Cap\.)/;
 
@@ -58,7 +67,8 @@ export function parsePtrText(text: string): ParsedTrade[] {
       let amountText = m[5];
       // An amount can wrap: "$15,001 -" then "$50,000" on the next line.
       if (/-\s*$/.test(amountText)) {
-        const next = /^\s*(\$[\d,]+)/.exec(lines[i + 1] ?? '');
+        // ...on the next line, alone or after the asset's "[OL]" type tag.
+        const next = /^\s*(\$[\d,]+)/.exec(lines[i + 1] ?? '') ?? /\s{2,}(\$[\d,]+)\s*$/.exec(lines[i + 1] ?? '');
         if (next) amountText += ` ${next[1]}`;
       }
       const { low, high } = parseAmount(amountText);
@@ -68,7 +78,7 @@ export function parsePtrText(text: string): ParsedTrade[] {
         ticker: null,
         assetType: null,
         txType: TYPES[m[2]],
-        txDate: isoDate(m[3]),
+        txDate: fixYearTypo(isoDate(m[3]), isoDate(m[4])),
         notifiedDate: isoDate(m[4]),
         amountLow: low,
         amountHigh: high,
@@ -85,7 +95,7 @@ export function parsePtrText(text: string): ParsedTrade[] {
       continue;
     }
     if (/^\s*\$[\d,]+\s*$/.test(line)) continue; // the wrapped amount
-    current.asset = `${current.asset} ${line.trim()}`;
+    current.asset = `${current.asset} ${line.replace(/\s{2,}\$[\d,]+\s*$/, '').trim()}`; // minus a wrapped amount
   }
   return rows.map(({ done: _done, ...t }) => {
     const ticker = /\(([A-Z][A-Z0-9.\-]{0,9})\)/.exec(t.asset) ?? /(?:NYSEARCA|NASDAQ|NYSE|BATS|NYSEAMERICAN):\s*([A-Z][A-Z0-9.\-]{0,9})\s*$/.exec(t.asset);

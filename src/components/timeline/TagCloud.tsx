@@ -292,11 +292,12 @@ function ReservedFilters({
     .filter((filter) => !needle || filter.label.toLowerCase().includes(needle) || filter.name.toLowerCase().includes(needle));
   if (!shown.length) return null;
   return (
-    <div role="group" aria-label={t('tagCloud.reserved')} className={`flex flex-wrap items-center ${large ? 'gap-2' : 'gap-1.5'} ${className}`}>
-      <span aria-hidden className={`me-0.5 inline-flex items-center gap-1 font-semibold tracking-wide text-faint uppercase ${large ? 'text-xs' : 'text-[11px]'}`}>
+    <div role="group" aria-label={t('tagCloud.reserved')} className={`flex flex-col ${large ? 'gap-2' : 'gap-1.5'} ${className}`}>
+      <span aria-hidden className={`inline-flex items-center gap-1 font-semibold tracking-wide text-faint uppercase ${large ? 'text-xs' : 'text-[11px]'}`}>
         <Icon name="lock" className={large ? 'size-3.5' : 'size-3'} />
         {t('tagCloud.reserved')}
       </span>
+      <div className={`flex items-center overflow-x-auto pb-1 [scrollbar-width:thin] ${large ? 'gap-2' : 'gap-1.5'}`}>
       {shown.map((filter) => (
         <button
           key={filter.name}
@@ -304,7 +305,7 @@ function ReservedFilters({
           aria-pressed={on(filter.name)}
           onClick={() => onToggle(filter.name)}
           title={`${t('tagCloud.reservedTitle', { name: filter.label })}\n${t('tagCloud.pins', { count: filter.count })}`}
-          className={`inline-flex items-center rounded-full border border-dashed transition-colors ${large ? 'gap-1.5 px-3 py-1 text-sm' : 'gap-1 px-1.5 py-0.5 text-[11px]'} ${
+          className={`inline-flex shrink-0 items-center whitespace-nowrap rounded-full border border-dashed transition-colors ${large ? 'gap-1.5 px-3 py-1 text-sm' : 'gap-1 px-1.5 py-0.5 text-[11px]'} ${
             on(filter.name) ? 'border-accent/60 bg-accent/15 text-link' : 'border-line text-muted hover:border-tint/40 hover:text-ink'
           }`}
         >
@@ -316,6 +317,7 @@ function ReservedFilters({
           </span>
         </button>
       ))}
+      </div>
     </div>
   );
 }
@@ -328,24 +330,27 @@ function SavedQueries({ current, onOpen, className = '' }: { current: string; on
     sharedQueries().then(setList);
   }, [current]);
   if (!list.length) return null;
+  const now = current.trim().replace(/\s+/g, ' ');
   return (
-    <div role="group" aria-label={t('tagCloud.savedQueries')} className={`flex flex-wrap items-center gap-2 ${className}`}>
-      <span aria-hidden className="me-0.5 inline-flex items-center gap-1 text-xs font-semibold tracking-wide text-faint uppercase">
+    <div role="group" aria-label={t('tagCloud.savedQueries')} className={`flex flex-col gap-2 ${className}`}>
+      <span aria-hidden className="inline-flex items-center gap-1 text-xs font-semibold tracking-wide text-faint uppercase">
         <Icon name="search" className="size-3.5" />
         {t('tagCloud.savedQueries')}
       </span>
-      {list.map((q) => (
-        <button
-          key={q}
-          type="button"
-          aria-pressed={q === current.trim().replace(/\s+/g, ' ')}
-          onClick={() => onOpen(q)}
-          title={q}
-          className={`max-w-full rounded-full border px-3 py-1 text-start text-sm break-words transition-colors ${q === current.trim().replace(/\s+/g, ' ') ? 'border-accent/60 bg-accent/15 text-link' : 'border-line text-muted hover:border-tint/40 hover:text-ink'}`}
-        >
-          {q}
-        </button>
-      ))}
+      <div className="flex items-center gap-2 overflow-x-auto pb-1 [scrollbar-width:thin]">
+        {list.map((q) => (
+          <button
+            key={q}
+            type="button"
+            aria-pressed={q === now}
+            onClick={() => onOpen(q)}
+            title={q}
+            className={`shrink-0 rounded-full border px-3 py-1 text-sm whitespace-nowrap transition-colors ${q === now ? 'border-accent/60 bg-accent/15 text-link' : 'border-line text-muted hover:border-tint/40 hover:text-ink'}`}
+          >
+            {q}
+          </button>
+        ))}
+      </div>
     </div>
   );
 }

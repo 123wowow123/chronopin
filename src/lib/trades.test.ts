@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { formatAmountRange, parseAmount, parsePtrText, summarizeTrades, type TradeRow } from './trades';
+import { fixYearTypo, formatAmountRange, parseAmount, parsePtrText, summarizeTrades, type TradeRow } from './trades';
 
 const PTR = `
 ID        Owner Asset                                          Transaction Date              Notification Amount                  Cap.
@@ -48,5 +48,25 @@ describe('page breaks', () => {
 ID        Owner Asset                                          Transaction Date              Notification Amount                  Cap.
                                                                Type                          Date                                 Gains >`;
     expect(parsePtrText(text)[0].asset).toBe('Tesla, Inc. - Common Stock (TSLA)');
+  });
+});
+
+describe('rows whose asset name ends one space before the type', () => {
+  it('reads the row and the amount that wraps beside the [OL] tag', () => {
+    const text = [
+      '                       America First Natural Resources LLC P                        04/23/2024 04/23/2024             $50,001 -',
+      '                       [OL]                                                                                           $100,000',
+      '                       F      S         : New',
+    ].join('\n');
+    const [t] = parsePtrText(text);
+    expect(t).toMatchObject({ asset: 'America First Natural Resources LLC', assetType: 'OL', txType: 'purchase', amountLow: 50001, amountHigh: 100000 });
+  });
+});
+
+describe('year typos', () => {
+  it('reads a transaction dated after its notification as the previous year', () => {
+    expect(fixYearTypo('2026-12-26', '2026-01-21')).toBe('2025-12-26');
+    expect(fixYearTypo('2026-01-05', '2026-01-21')).toBe('2026-01-05');
+    expect(fixYearTypo('2026-12-26', '2024-01-01')).toBe('2026-12-26');
   });
 });

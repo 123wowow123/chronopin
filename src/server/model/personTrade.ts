@@ -39,6 +39,39 @@ export default class PersonTrade {
     return added;
   }
 
+  // Re-reads of a filing whose earlier parse was wrong (a wrapped amount, a
+  // missed row): swaps the stored lines for the new ones as a unit, because
+  // the unique line key includes the asset text and low amount. Silent - no
+  // watcher is told - and refused when the new parse has fewer lines than
+  // are stored (a worse read must not erase trades). Answers with how many
+  // lines changed. A filing with nothing stored is simply added.
+  static async replaceFiling(personId: number, filing: TradeFiling): Promise<number> {
+    const old = await db.query<{ n: number }>(`SELECT count(*)::int AS n FROM "PersonTrade" WHERE "chamber" = $1 AND "filingId" = $2 AND "personId" = $3`, [filing.chamber, filing.filingId, personId]);
+    if (!old[0]?.n) return PersonTrade.addFiling(personId, filing); // never stored (it parsed to nothing before)
+    if (filing.trades.length < old[0].n) return 0;
+    const key = (t: { owner: string; asset: string; txType: string; txDate: string; amountLow: number | null; amountHigh: number | null; ticker: string | null; assetType: string | null }) =>
+      [t.owner, t.asset, t.txType, t.txDate, t.amountLow, t.amountHigh, t.ticker, t.assetType].join('|');
+    const stored = await db.query<any>(`SELECT "owner", "asset", "txType", "txDate"::text AS "txDate", "amountLow"::float8 AS "amountLow", "amountHigh"::float8 AS "amountHigh", "ticker", "assetType" FROM "PersonTrade" WHERE "chamber" = $1 AND "filingId" = $2 AND "personId" = $3`, [filing.chamber, filing.filingId, personId]);
+    const before = new Set(stored.map(key));
+    const after = new Set(filing.trades.map((t) => key({ ...t, asset: t.asset.slice(0, 300) })));
+    if (before.size === after.size && [...before].every((k) => after.has(k))) return 0;
+    return db.transaction(async (q) => {
+      await q(`DELETE FROM "PersonTrade" WHERE "chamber" = $1 AND "filingId" = $2 AND "personId" = $3`, [filing.chamber, filing.filingId, personId]);
+      let n = 0;
+      for (const t of filing.trades) {
+        n += (
+          await q(
+            `INSERT INTO "PersonTrade" ("personId", "chamber", "filingId", "owner", "asset", "ticker", "assetType", "txType", "txDate", "notifiedDate", "filedDate", "amountLow", "amountHigh", "sourceUrl")
+             VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14)
+             ON CONFLICT ON CONSTRAINT "UC_PersonTrade_line" DO NOTHING RETURNING "id"`,
+            [personId, filing.chamber, filing.filingId, t.owner, t.asset.slice(0, 300), t.ticker, t.assetType, t.txType, t.txDate, t.notifiedDate, filing.filedDate, t.amountLow, t.amountHigh, filing.sourceUrl],
+          )
+        ).length;
+      }
+      return n;
+    });
+  }
+
   static async has(chamber: string, filingId: string): Promise<boolean> {
     const rows = await db.query(`SELECT 1 FROM "PersonTrade" WHERE "chamber" = $1 AND "filingId" = $2 LIMIT 1`, [chamber, filingId]);
     return rows.length > 0;

@@ -2,6 +2,7 @@ import type { NextRequest } from 'next/server';
 import { requireRole } from '@/server/auth';
 import { HttpError, json, readJson, route } from '@/server/http';
 import Person from '@/server/model/person';
+import PersonTrade from '@/server/model/personTrade';
 import { readFilings } from '@/server/tradeInput';
 import { storeFiling } from '@/server/services/personTrades';
 
@@ -26,7 +27,8 @@ export const POST = route(async (request: NextRequest) => {
       missing.push(f.bioguideId ?? String(f.personId));
       continue;
     }
-    added += await storeFiling(id, f);
+    // `replace` swaps a mis-parsed filing's lines in place and tells nobody.
+    added += f.replace ? await PersonTrade.replaceFiling(id, f) : await storeFiling(id, f);
   }
   return json({ added, missing });
 });

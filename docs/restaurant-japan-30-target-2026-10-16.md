@@ -1,12 +1,12 @@
 # Japan restaurant target audit — October 16, 2026
 
-Target: **30 distinct eligible restaurants in every tab of every city**. **455 verified memberships; 270 still missing**. This target remains incomplete; surplus in another tab does not offset a shortage.
+Target: **30 distinct eligible restaurants in every tab of every city**. **459 verified memberships; 266 still missing**. This target remains incomplete; surplus in another tab does not offset a shortage.
 
-All 24 local and production public guide counts agree after batch 75 at **455 memberships / 270 missing**, refreshed 2026-10-18T15:19:45.519332+00:00 (October 19, 00:19 JST / October 18, 08:19 PDT). Five new branches add six memberships: one Kyoto Coming soon, four Tokyo Just opened and one Tokyo Specials. Branch opening dates, photographed tax-inclusive prices, coupon conditions, gallery credits and native title/image links verified in both environments. Existing profiles and offer dates were preserved. The current counts include natural date-window changes; raw ID changes are retained in the batch evidence. Surplus does not reduce another tab’s shortage. Earlier checkpoints below are historical.
+All 24 local and production public guide counts agree after batch 76 at **459 memberships / 266 missing**, refreshed 2026-10-18T15:51:31.147320+00:00 (October 19, 00:51 JST / October 18, 08:51 PDT). Four new established Fukuoka restaurant pins add four Specials memberships, bringing Fukuoka Specials to **30/30**. All retain their April 24, 2025 branch openings. Current exact-branch menus, four Munakata fair dishes through November 1, two separately timed recurring AKi offers, gallery credits and native title/image links verified in both environments. Existing records preserved; surplus does not offset another tab shortage. Earlier checkpoints below are historical.
 
 | City (west to east) | Coming soon | Just opened | Top restaurants | Specials |
 | --- | ---: | ---: | ---: | ---: |
-| Fukuoka | 9/30 | 19/30 | 14/30 | 26/30 |
+| Fukuoka | 9/30 | 19/30 | 14/30 | 30/30 |
 | Osaka | 12/30 | 19/30 | 10/30 | 21/30 |
 | Kyoto | 11/30 | 31/30 | 10/30 | 30/30 |
 | Nagoya | 11/30 | 30/30 | 12/30 | 21/30 |
@@ -20,7 +20,7 @@ All 24 local and production public guide counts agree after batch 75 at **455 me
 | Fukuoka | Coming soon | 9 | 9 | 30 | 21 |
 | Fukuoka | Just opened | 19 | 19 | 30 | 11 |
 | Fukuoka | Top restaurants | 14 | 14 | 30 | 16 |
-| Fukuoka | Specials | 26 | 26 | 30 | 4 |
+| Fukuoka | Specials | 30 | 30 | 30 | 0 |
 | Osaka | Coming soon | 12 | 12 | 30 | 18 |
 | Osaka | Just opened | 19 | 19 | 30 | 11 |
 | Osaka | Top restaurants | 10 | 10 | 30 | 20 |
@@ -106,3 +106,8 @@ Three new branches, 55 menu/component entries and 14 credited Azure gallery link
 ## Batch 75 completed
 
 Five new branches, 207 menu/component entries, 27 credited Azure gallery links and one October weekday Specials coupon published and publicly verified in both environments at October 19, 00:19 JST / October 18, 08:19 PDT. Kyoto Coming soon **11/30**, Tokyo Just opened **17/30**, Tokyo Specials **33/30**. All 24 counts agree at **455 memberships / 270 missing**. Six native guide memberships verified, including next coupon start October 19 at 15:00 JST. Sixteen schedule boundaries plus holiday/next-start/expiry assertions passed. [Batch evidence](restaurant-japan-30-japan75-2026-10-18.json). No deployment.
+
+
+## Batch 76 completed
+
+Four established Fukuoka branches, 399 menu/variant entries, 12 credited Azure gallery links and six offers at four Specials venues published and publicly verified in both environments at October 19, 00:51 JST / October 18, 08:51 PDT. Fukuoka Specials **30/30**. All 24 counts agree at **459 memberships / 266 missing**. Four native guide memberships, six offer records, 42 schedule boundaries, next-start and expiry checks verified. [Batch evidence](restaurant-japan-30-japan76-2026-10-18.json). November 1 fair expiry requires renewal; remaining under-target tabs continue. No deployment.

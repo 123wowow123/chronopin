@@ -5,6 +5,9 @@
 //       the House Clerk's index + each report's PDF (pdftotext must be installed)
 //   npm run people:trades -- --senate [--days 365]
 //       the Senate's eFD search (the "I agree" step is done with a cookie jar)
+//   --replace
+//       re-read stored filings and swap in the lines where the parse now differs
+//       (silent, no alerts); use after a parser fix. With --prod it sends replace:true
 //   --prod --token-file <admin token file>
 //       POST to www.chronopin.com/api/admin/person-trades instead of the local
 //       database (watchers on prod are told about new trades)
@@ -27,6 +30,7 @@ const { values: flags } = parseArgs({
     days: { type: 'string', default: '365' },
     limit: { type: 'string' },
     'dry-run': { type: 'boolean', default: false },
+    replace: { type: 'boolean', default: false },
     prod: { type: 'boolean', default: false },
     base: { type: 'string', default: 'https://www.chronopin.com' },
     'token-file': { type: 'string' },
@@ -46,14 +50,15 @@ async function main() {
     year: flags.year ? Number(flags.year) : undefined,
     days: Number(flags.days),
     limit: flags.limit ? Number(flags.limit) : undefined,
-    skipStored: !flags.prod && !flags['dry-run'],
+    skipStored: !flags.prod && !flags['dry-run'] && !flags.replace,
     log: console.log,
     save: async (personId, filing, person) => {
       if (flags['dry-run']) return filing.trades.length;
       if (flags.prod) {
-        sent.push(person.bioguideId ? { ...filing, bioguideId: person.bioguideId } : { ...filing, personId });
+        sent.push({ ...filing, ...(person.bioguideId ? { bioguideId: person.bioguideId } : { personId }), ...(flags.replace ? { replace: true } : {}) });
         return filing.trades.length;
       }
+      if (flags.replace) return (await import('@/server/model/personTrade')).default.replaceFiling(personId, filing);
       const { storeFiling } = await import('@/server/services/personTrades');
       return storeFiling(personId, filing);
     },

@@ -5,7 +5,7 @@ import { safeUrl } from '@/lib/people';
 import type { ParsedTrade, TradeOwner, TradeType } from '@/lib/trades';
 import type { TradeFiling } from './model/personTrade';
 
-export type FilingInput = TradeFiling & { personId?: number; bioguideId?: string };
+export type FilingInput = TradeFiling & { personId?: number; bioguideId?: string; replace?: boolean };
 
 const OWNERS: TradeOwner[] = ['self', 'spouse', 'joint', 'dependent'];
 const TYPES: TradeType[] = ['purchase', 'sale', 'partial', 'exchange'];
@@ -50,6 +50,7 @@ export function readFilings(raw: unknown): FilingInput[] {
       trades,
       personId: typeof e.personId === 'number' ? e.personId : undefined,
       bioguideId: typeof e.bioguideId === 'string' ? e.bioguideId.slice(0, 12) : undefined,
+      replace: e.replace === true ? true : undefined,
     };
   });
 }
