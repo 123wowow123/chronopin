@@ -159,7 +159,15 @@ export function culturalDaysOn(dayKey: string, locale: Locale): CulturalDay[] {
 
 // Every date of a year that has one ({ "2026-09-25": [...] }), for a timeline
 // that tags each of its days: a year at a time, ~15KB.
+const daysCache = new Map<string, Record<string, CulturalDay[]>>();
 export function culturalDaysInYear(year: number, locale: Locale): Record<string, CulturalDay[]> {
+  const key = `${year}:${locale}`;
+  let days = daysCache.get(key);
+  if (!days) daysCache.set(key, (days = computeCulturalDaysInYear(year, locale)));
+  return days;
+}
+
+function computeCulturalDaysInYear(year: number, locale: Locale): Record<string, CulturalDay[]> {
   const days: Record<string, CulturalDay[]> = {};
   for (const o of [...occurrencesIn(year - 1), ...occurrencesIn(year)].sort(americanFirst)) {
     for (let i = 0; i < (o.def.span ?? 1); i++) {
