@@ -347,3 +347,12 @@ describe('OR groups', () => {
     expect(parseSearchQuery('tag:A OR').alternatives).toBeUndefined();
   });
 });
+
+describe('relative days in posted: and updated:', () => {
+  it('keeps today and yesterday to be resolved when the search runs', () => {
+    const q = parseSearchQuery('posted:today updated:>=yesterday');
+    expect(q.postedDays).toEqual(['today']);
+    expect(q.updatedBounds).toEqual([{ op: '>=', day: 'yesterday' }]);
+    expect(parseSearchQuery('posted:>today').postedBounds).toEqual([]);
+  });
+});

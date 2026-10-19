@@ -35,12 +35,12 @@ import { WeatherIcon } from './WeatherIcon';
 import { useT } from '@/lib/client/i18n';
 import { pinTextDir } from '@/lib/i18n/config';
 import { categoryLabel } from '@/lib/i18n/labels';
-import { isPredictedPin, PREDICTED_TAG } from '@/lib/tags';
+import { isPredictedPin, PREDICTED_TAG, UPDATED_WITHIN_MS } from '@/lib/tags';
 
 const CARD_SIZES = '(max-width: 640px) 100vw, 448px';
 
 // How recent a pin's newest update must be for its card to say UPDATED.
-const UPDATED_WITHIN_MS = 24 * 60 * 60 * 1000;
+
 
 // The NEW and UPDATED pills beside the title; each tap target grows past the
 // small pill (DelayBadge does the same).
@@ -206,13 +206,13 @@ export function PinCard({
             </RefineLink>
           ) : null}
           {postedToday ? (
-            <RefineLink field="posted" value={today} className={`${STATUS_PILL} bg-link/15 text-link hover:bg-link/25`} title={t('card.newTitle')}>
+            <RefineLink field="posted" value="today" className={`${STATUS_PILL} bg-link/15 text-link hover:bg-link/25`} title={t('card.newTitle')}>
               {t('card.new')}
             </RefineLink>
           ) : updatedRecently ? (
             <RefineLink
               field="updated"
-              value={`>=${dayKeyIn(now - UPDATED_WITHIN_MS, timeZone)}`}
+              value=">=yesterday"
               className={`${STATUS_PILL} bg-success/15 text-success hover:bg-success/25`}
               title={t('card.updatedTitle')}
             >

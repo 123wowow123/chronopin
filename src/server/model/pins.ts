@@ -1054,7 +1054,12 @@ export function searchClauses(filter: SearchFilter) {
   // an all-day pin on its UTC date, a timed one on its date in the zone.
   const zone = filter.timeZone || 'UTC';
   const between = (column: string, from: number, to: number) => `(${column} >= ${add(new Date(from))} AND ${column} < ${add(new Date(to))})`;
-  const localDay = (column: string, day: string) => between(column, dayStartIn(day, zone), dayStartIn(nextDayKey(day), zone));
+  // today and yesterday (posted:today, updated:>=yesterday) are read when the search runs, in the viewer's zone; yesterday is the day 24 hours back, as the UPDATED pill reads it.
+  const resolveDay = (day: string) => (day === 'today' ? dayKeyIn(Date.now(), zone) : day === 'yesterday' ? dayKeyIn(Date.now() - UPDATED_WITHIN_MS, zone) : day);
+  const localDay = (column: string, rawDay: string) => {
+    const day = resolveDay(rawDay);
+    return between(column, dayStartIn(day, zone), dayStartIn(nextDayKey(day), zone));
+  };
   // Every label field a query can hold, as conditions a pin must all meet.
   const labelWhere = (filter: PinSearchFilters): string[] => {
     const where: string[] = [];
@@ -1233,7 +1238,7 @@ export function searchClauses(filter: SearchFilter) {
       where.push(`(("Pin"."allDay" AND ${utc}) OR (NOT "Pin"."allDay" AND ${local}))`);
     }
     for (const { op, day } of filter.postedBounds) {
-      where.push(`"Pin"."utcCreatedDateTime" ${op} ${add(new Date(dayStartIn(day, zone)))}`);
+      where.push(`"Pin"."utcCreatedDateTime" ${op} ${add(new Date(dayStartIn(resolveDay(day), zone)))}`);
     }
     // updated: matches a pin with any update (PinUpdate) on one of the days and
     // within every bound - one update has to meet them all, as the card's
@@ -1241,7 +1246,7 @@ export function searchClauses(filter: SearchFilter) {
     if (filter.updatedDays.length || filter.updatedBounds.length) {
       const on = [
         ...(filter.updatedDays.length ? [`(${filter.updatedDays.map((day) => localDay('"u"."utcCreatedDateTime"', day)).join(' OR ')})`] : []),
-        ...filter.updatedBounds.map(({ op, day }) => `"u"."utcCreatedDateTime" ${op} ${add(new Date(dayStartIn(day, zone)))}`),
+        ...filter.updatedBounds.map(({ op, day }) => `"u"."utcCreatedDateTime" ${op} ${add(new Date(dayStartIn(resolveDay(day), zone)))}`),
       ];
       where.push(`EXISTS (SELECT 1 FROM "PinUpdate" AS "u" WHERE "u"."pinId" = "Pin"."id" AND ${on.join(' AND ')})`);
     }

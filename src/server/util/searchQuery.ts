@@ -528,7 +528,9 @@ export function dependsOnZone(query: SearchQuery): boolean {
 }
 
 const DAY = '(-?\\d{4,6}-\\d{2}-\\d{2})';
-const DAY_COMPARISON = new RegExp(`^(>=|<=|=>|=<|>|<|=)?${DAY}$`);
+// today and yesterday stand for the viewer's days at the time the search runs (resolveRelativeDay), so posted:today is a standing query and not one for the day it was written.
+export const RELATIVE_DAYS = ['today', 'yesterday'];
+const DAY_COMPARISON = new RegExp(`^(>=|<=|=>|=<|>|<|=)?(-?\\d{4,6}-\\d{2}-\\d{2}|today|yesterday)$`, 'i');
 const DAY_RANGE = new RegExp(`^${DAY}\\.\\.${DAY}$`);
 
 // What a date:, posted: or updated: value sets: a bare day or "=" one is an exact day, a
@@ -551,7 +553,9 @@ export function dayBounds(value: string): { days: string[]; bounds: DayBound[] }
     return { days: [], bounds: [] };
   }
   const op = ({ '=>': '>=', '=<': '<=' } as Record<string, string>)[bound[1] ?? ''] ?? bound[1] ?? '=';
-  const day = bound[2];
+  const day = bound[2].toLowerCase();
+  // A relative day is only known when the search runs, so the comparisons that need the day after it have no form here.
+  if (RELATIVE_DAYS.includes(day) && (op === '>' || op === '<=')) return { days: [], bounds: [] };
   if (op === '=') return { days: [day], bounds: [] };
   if (op === '>=') return { days: [], bounds: [{ op: '>=', day }] };
   if (op === '>') return { days: [], bounds: [{ op: '>=', day: nextDayKey(day) }] };

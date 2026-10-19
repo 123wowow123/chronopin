@@ -1,7 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import {
   THREAD_TAG,
-  reservedTermValue,
   autoTags,
   awardTag,
   awardTagsInText,
@@ -319,16 +318,14 @@ describe('tag groups', () => {
 });
 
 describe('New and Updated reserved filters', () => {
-  const dayKey = (at: number) => new Date(at).toISOString().slice(0, 10);
-  const now = Date.parse('2026-10-19T12:00:00Z');
-  it('write the viewer\'s today and the day 24 hours back', () => {
-    expect(reservedTermValue(reservedTag('New')!, now, dayKey)).toBe('2026-10-19');
-    expect(reservedTermValue(reservedTag('Updated')!, now, dayKey)).toBe('>=2026-10-18');
+  it('write relative days, resolved when the search runs', () => {
+    expect(reservedTag('New')).toMatchObject({ field: 'posted', value: 'today' });
+    expect(reservedTag('Updated')).toMatchObject({ field: 'updated', value: '>=yesterday' });
   });
   it('read as picked whatever day their term was written', () => {
     const base = { tags: [], confidences: [], confidenceBands: [] };
-    expect(reservedPicked({ ...base, postedDays: ['2026-01-01'] })).toEqual(['New']);
-    expect(reservedPicked({ ...base, updatedBounds: [{ op: '>=', day: '2026-01-01' }] })).toEqual(['Updated']);
+    expect(reservedPicked({ ...base, postedDays: ['today'] })).toEqual(['New']);
+    expect(reservedPicked({ ...base, updatedBounds: [{ op: '>=', day: 'yesterday' }] })).toEqual(['Updated']);
     expect(reservedPicked(base)).toEqual([]);
   });
 });

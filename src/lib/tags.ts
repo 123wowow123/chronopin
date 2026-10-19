@@ -212,9 +212,8 @@ export type ReservedTag = {
   // The English name, which is what the cloud counts and suggests under.
   name: string;
   // The term a pick writes.
-  // posted and updated are time-relative (the viewer's today): their term's
-  // value is written at the pick, by reservedTermValue, and `value` is only
-  // the name of the window.
+  // posted and updated are time-relative: their value is a relative day
+  // (today, >=yesterday) the search resolves in the viewer's zone when it runs.
   field: 'tag' | 'confidence' | 'posted' | 'updated';
   value: string;
   icon: 'thread' | 'shield' | 'sparkle' | 'clock';
@@ -234,7 +233,7 @@ export const RESERVED_TAGS: ReservedTag[] = [
   { key: 'thread', name: THREAD_TAG, field: 'tag', value: THREAD_TAG, icon: 'thread' },
   { key: 'predicted', name: PREDICTED_TAG, field: 'tag', value: PREDICTED_TAG, icon: 'sparkle' },
   { key: 'new', name: NEW_TAG, field: 'posted', value: 'today', icon: 'clock' },
-  { key: 'updated', name: UPDATED_TAG, field: 'updated', value: 'last-24h', icon: 'clock' },
+  { key: 'updated', name: UPDATED_TAG, field: 'updated', value: '>=yesterday', icon: 'clock' },
   ...CONFIDENCE_LEVELS.map((level): ReservedTag => ({ key: level, name: capitalize(level), field: 'confidence', value: level, icon: 'shield' })),
   ...[...CONFIDENCE_BANDS].reverse().map(({ band }): ReservedTag => ({ key: band, name: `${capitalize(band)} confidence`, field: 'confidence', value: band, icon: 'shield' })),
 ];
@@ -274,15 +273,6 @@ export function reservedPicked(query: {
           ? query.tags.some((tag) => tag.toLowerCase() === r.value.toLowerCase())
           : query.confidences.includes(STORED_LEVEL[r.value] ?? r.value) || query.confidenceBands.includes(r.value);
   return RESERVED_TAGS.filter(has).map((r) => r.name);
-}
-
-// The term value a pick writes: the filter's own, except for the time-relative
-// ones, which are the viewer's today (NEW) or the day 24 hours back (UPDATED).
-// `dayKey` is dayKeyIn bound to the viewer's zone.
-export function reservedTermValue(reserved: ReservedTag, now: number, dayKey: (instant: number) => string): string {
-  if (reserved.field === 'posted') return dayKey(now);
-  if (reserved.field === 'updated') return `>=${dayKey(now - UPDATED_WITHIN_MS)}`;
-  return reserved.value;
 }
 
 // Every spelling of a reserved filter's term value, for taking it back out of
