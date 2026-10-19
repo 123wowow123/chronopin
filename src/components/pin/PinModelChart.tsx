@@ -1,5 +1,6 @@
 'use client';
 
+import { addEscape, removeEscape } from '@/lib/client/escapeStack';
 import Anchor from '@/components/ui/Anchor';
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { Icon } from '@/components/ui/Icon';
@@ -89,11 +90,11 @@ function Chart({ data, pinId, className }: { data: ModelChartData; pinId: number
     const onKey = (event: KeyboardEvent) => {
       if (event.key === 'Escape') setExpanded(false);
     };
-    document.addEventListener('keydown', onKey);
+    addEscape(onKey);
     const overflow = document.body.style.overflow;
     document.body.style.overflow = 'hidden';
     return () => {
-      document.removeEventListener('keydown', onKey);
+      removeEscape(onKey);
       document.body.style.overflow = overflow;
     };
   }, [expanded]);

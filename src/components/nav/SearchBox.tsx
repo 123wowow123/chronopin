@@ -13,6 +13,9 @@ import { useTimeZone } from '@/lib/client/timeZone';
 import { formatDayKey, formatStart } from '@/lib/format';
 import { OCTAGON_AXES } from '@/lib/people';
 import { hasTerm, term } from '@/lib/searchTerms';
+import { addEscape, removeEscape } from '@/lib/client/escapeStack';
+import { CLOUD_QUERY_EVENT, HELD_QUERY_EVENT, isTagCloudOpen, TAG_CLOUD_EVENT } from '@/lib/client/tagCloudOpen';
+import { ADD_TERM_EVENT, DRAG_TERM_EVENT } from '@/components/timeline/WordCloud';
 import { reservedName, reservedTag, type ReservedTag, type TagCount } from '@/lib/tags';
 import type { PinJson } from '@/lib/types';
 import { joinSearchQuery, splitSearchQuery, type QueryPart } from '@/server/util/searchQuery';
@@ -215,6 +218,8 @@ export function SearchBox() {
   const [range, setRange] = useState<{ anchor: Spot; focus: Spot } | null>(null);
   const sel = range && ordered(range.anchor, range.focus);
   const requestId = useRef(0);
+  // A search asked for while the tag cloud is open, run when it closes.
+  const held = useRef<{ q: string; filter: string; widen: boolean } | null>(null);
   const suggestTimer = useRef<ReturnType<typeof setTimeout> | undefined>(undefined);
   const boxRef = useRef<HTMLFormElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
@@ -240,6 +245,7 @@ export function SearchBox() {
   const [lastUrl, setLastUrl] = useState(`${urlQuery}|${urlChoice}`);
   if (lastUrl !== `${urlQuery}|${urlChoice}`) {
     setLastUrl(`${urlQuery}|${urlChoice}`);
+    held.current = null;
     const next = toItems(urlQuery);
     setItems(next);
     setEditAt(next.length);
@@ -368,6 +374,74 @@ export function SearchBox() {
     return () => row.removeEventListener('wheel', onWheel);
   }, []);
 
+  useEffect(() => {
+    const closed = (event: Event) => {
+      if ((event as CustomEvent).detail || !held.current) return;
+      const { q, filter, widen } = held.current;
+      submit(q, filter, widen);
+    };
+    // The cloud's own picks while it is open: taken, not searched.
+    const fromCloud = (event: Event) => hold(String((event as CustomEvent).detail?.q ?? ''), held.current?.filter ?? choice, (event as CustomEvent).detail?.widen);
+    window.addEventListener(TAG_CLOUD_EVENT, closed);
+    window.addEventListener(CLOUD_QUERY_EVENT, fromCloud);
+    return () => {
+      window.removeEventListener(TAG_CLOUD_EVENT, closed);
+      window.removeEventListener(CLOUD_QUERY_EVENT, fromCloud);
+    };
+  });
+  // A word dragged out of the tag cloud and dropped on the box (WordCloud).
+  const addTerm = useRef((_: string, __?: number) => {});
+  // Where a dragged term would land for a pointer at x: the index among the
+  // items, and the screen x of the gap it would open.
+  const landing = (x: number) => {
+    const all = committed();
+    const spot = spotAt(x);
+    const at = spot ? Math.min(spot.at + (spot.char > 0 ? 1 : 0), all.length) : all.length;
+    const nodes = [...(rowRef.current?.querySelectorAll<HTMLElement>('[data-at]') ?? [])];
+    const before = nodes.find((n) => Number(n.dataset.at) === at - 1);
+    const after = nodes.find((n) => Number(n.dataset.at) === at);
+    const left = before ? before.getBoundingClientRect().right : after ? after.getBoundingClientRect().left : rowRef.current?.getBoundingClientRect().left;
+    return { all, at, left };
+  };
+  // The marker for it while a term is dragged over the box.
+  const [dropMark, setDropMark] = useState<{ left: number; top: number; height: number } | null>(null);
+  const markDrop = (x: number | null, y = 0) => {
+    const rect = rowRef.current?.getBoundingClientRect();
+    if (x == null || !rect || y < rect.top - 12 || y > rect.bottom + 12) return setDropMark(null);
+    const { left } = landing(x);
+    setDropMark(left == null ? null : { left, top: rect.top + 3, height: rect.height - 6 });
+  };
+  // Put in the place the pointer let go at: between the two items it fell between (the box's own spots), or at an end.
+  const insertTerm = (dropped: string, x: number) => {
+    setDropMark(null);
+    const { all, at } = landing(x);
+    if (all.some((part) => part.raw === dropped)) return submit(joinSearchQuery(all));
+    submit(joinSearchQuery([...all.slice(0, at), ...toItems(dropped), ...all.slice(at)]));
+  };
+  addTerm.current = (dropped, x = Infinity) => insertTerm(dropped, x);
+  useEffect(() => {
+    const on = (event: Event) => { const { term: dropped, x } = (event as CustomEvent).detail || {}; if (dropped) addTerm.current(String(dropped), x); };
+    const over = (event: Event) => {
+      const d = (event as CustomEvent).detail;
+      markDrop(d ? d.x : null, d?.y);
+    };
+    window.addEventListener(ADD_TERM_EVENT, on);
+    window.addEventListener(DRAG_TERM_EVENT, over);
+    return () => {
+      window.removeEventListener(ADD_TERM_EVENT, on);
+      window.removeEventListener(DRAG_TERM_EVENT, over);
+    };
+  }, []);
+
+  // The open suggestions are the newest layer, so the first Escape closes them
+  // and the next one the tag cloud or panel under them (escapeStack).
+  useEffect(() => {
+    if (!open) return;
+    const layer = () => setOpen(false);
+    addEscape(layer);
+    return () => removeEscape(layer);
+  }, [open]);
+
   // A pause waiting to be asked about does not outlive the box, nor does a
   // drag still following the mouse.
   useEffect(() => () => clearTimeout(suggestTimer.current), []);
@@ -396,8 +470,26 @@ export function SearchBox() {
   // widen: a filter was taken off, so the timeline or search stays on the
   // same date rather than opening on today. Otherwise the search opens its
   // dates on the day nearest the one the reader was at.
+  function hold(q: string, filter = choice, widen = false) {
+    const next = toItems(q);
+    held.current = { q, filter, widen };
+    setItems(next);
+    setEditAt(next.length);
+    setDraft('');
+    setEditing(false);
+    setRange(null);
+    window.dispatchEvent(new CustomEvent(HELD_QUERY_EVENT, { detail: { q } }));
+  }
+
   function submit(q: string, filter = choice, widen = false) {
     closeSuggestions();
+    // With the tag cloud open the box only takes the change; the search runs
+    // when the cloud closes (held).
+    if (isTagCloudOpen()) {
+      hold(q, filter, widen);
+      return;
+    }
+    held.current = null;
     const href = searchHref(onMap, q, filter);
     router.push(widen ? hrefKeepingDate(href) : hrefNearDay(href));
   }
@@ -812,7 +904,10 @@ export function SearchBox() {
           setActive((i) => Math.max(i - 1, -1));
         } else if (event.key === 'Escape') {
           // Only the suggestions close; a search field would also clear its text.
+          // The press stops here, so the tag cloud, panels and menus listening
+          // on the document stay open until the next one.
           event.preventDefault();
+          event.stopPropagation();
           setOpen(false);
         }
       }}
@@ -837,12 +932,28 @@ export function SearchBox() {
       ref={boxRef}
       role="search"
       className="relative flex w-full min-w-0 items-stretch gap-1.5"
+      onDragOver={(event) => {
+        if (event.dataTransfer.types.includes('application/x-chronopin-term')) {
+          event.preventDefault();
+          event.dataTransfer.dropEffect = 'copy';
+          markDrop(event.clientX, event.clientY);
+        }
+      }}
+      onDragLeave={() => setDropMark(null)}
+      onDrop={(event) => {
+        // A site-filter pill from the tag cloud: its term joins the query.
+        const dropped = event.dataTransfer.getData('application/x-chronopin-term').trim();
+        if (!dropped) return;
+        event.preventDefault();
+        addTerm.current(dropped, event.clientX);
+      }}
       onSubmit={(event) => {
         event.preventDefault();
         if (active >= 0) pick(suggestions[active]);
         else submit(query());
       }}
     >
+      {dropMark ? <span aria-hidden className="pointer-events-none fixed z-[1000] w-0.5 rounded-full bg-accent" style={dropMark} /> : null}
       <label htmlFor="site-search" className="sr-only">
         {t('search.placeholder')}
       </label>

@@ -1,5 +1,6 @@
 'use client';
 
+import { addEscape, removeEscape } from '@/lib/client/escapeStack';
 import { Suspense, useEffect, useRef, useState } from 'react';
 import { BackToMenu } from '@/components/nav/BackToMenu';
 import Link from '@/components/ui/Link';
@@ -85,10 +86,10 @@ export function MessengerButton({ className = '' }: { className?: string }) {
       if (event.key === 'Escape') setOpen(false);
     };
     document.addEventListener('mousedown', close);
-    document.addEventListener('keydown', escape);
+    addEscape(escape);
     return () => {
       document.removeEventListener('mousedown', close);
-      document.removeEventListener('keydown', escape);
+      removeEscape(escape);
     };
   }, []);
 

@@ -1,5 +1,6 @@
 'use client';
 
+import { addEscape, removeEscape } from '@/lib/client/escapeStack';
 import { createContext, useContext, useEffect, useId, useRef, useState, useSyncExternalStore } from 'react';
 import { createPortal } from 'react-dom';
 import { Icon, type IconName } from '@/components/ui/Icon';
@@ -159,10 +160,10 @@ export function FloatingControls({
     const close = (event: MouseEvent) => !rootRef.current?.contains(event.target as Node) && shut();
     const escape = (event: KeyboardEvent) => event.key === 'Escape' && shut();
     document.addEventListener('mousedown', close);
-    document.addEventListener('keydown', escape);
+    addEscape(escape);
     return () => {
       document.removeEventListener('mousedown', close);
-      document.removeEventListener('keydown', escape);
+      removeEscape(escape);
     };
   }, [open]);
 

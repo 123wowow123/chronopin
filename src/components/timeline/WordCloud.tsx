@@ -115,6 +115,11 @@ function isDark() {
 // part around it, the one under it comes forward while the rest fade back,
 // and the whole cloud drifts against it. Laid out again whenever its box
 // changes size. Tab reaches every word; Enter or Space picks it.
+// Fired on window with { term, x } in `detail` when a word is dropped on the search box.
+export const ADD_TERM_EVENT = 'chronopin:add-term';
+// Fired while a word is dragged ({ x, y }), and with null when it ends.
+export const DRAG_TERM_EVENT = 'chronopin:drag-term';
+
 export function WordCloud({
   tags,
   selected,
@@ -350,6 +355,7 @@ export function WordCloud({
   // has carried the drawing for that moment.
   // The word drawn under it first; in a gap, the resting box it is in.
   const click = (event: React.MouseEvent) => {
+    if (dragged.current) return;
     const drawn = (event.target as Element).closest?.('[data-flow]')?.getAttribute('data-flow');
     const key = drawn ?? wordAt(event).over?.key;
     const tag = key && byKey.get(key);
@@ -357,6 +363,44 @@ export function WordCloud({
     // Only a pointer that hovers: a tap leaves nothing lit on the next page.
     carried = pointer.current ? { key, at: pointer.current, drift: { ...drift.current }, until: Date.now() + 3000 } : null;
     onToggle(tag.name);
+  };
+  // A word dragged out of the cloud and let go over the search box adds its
+  // tag: term there (SearchBox listens for ADD_TERM_EVENT). Done with pointer
+  // events, as an SVG word cannot be a native drag source everywhere; a drag
+  // that moved is not a click.
+  const dragged = useRef(false);
+  const startDrag = (event: React.PointerEvent) => {
+    if (event.button !== 0 || event.pointerType === 'touch') return;
+    const key = (event.target as Element).closest?.('[data-flow]')?.getAttribute('data-flow') ?? wordAt(event).over?.key;
+    const tag = key && byKey.get(key);
+    if (!tag) return;
+    const from = { x: event.clientX, y: event.clientY };
+    let ghost: HTMLElement | null = null;
+    const move = (e: PointerEvent) => {
+      if (!ghost && Math.hypot(e.clientX - from.x, e.clientY - from.y) < 6) return;
+      if (!ghost) {
+        dragged.current = true;
+        ghost = document.createElement('div');
+        ghost.textContent = tag.name;
+        ghost.className = 'pointer-events-none fixed z-[1000] rounded-full border border-accent/60 bg-accent/15 px-2.5 py-0.5 text-sm text-link backdrop-blur';
+        document.body.appendChild(ghost);
+      }
+      ghost.style.left = `${e.clientX + 10}px`;
+      ghost.style.top = `${e.clientY + 10}px`;
+      window.dispatchEvent(new CustomEvent(DRAG_TERM_EVENT, { detail: { x: e.clientX, y: e.clientY } }));
+    };
+    const up = (e: PointerEvent) => {
+      window.removeEventListener('pointermove', move);
+      window.removeEventListener('pointerup', up);
+      ghost?.remove();
+      window.dispatchEvent(new CustomEvent(DRAG_TERM_EVENT, { detail: null }));
+      if (ghost && document.elementFromPoint(e.clientX, e.clientY)?.closest('form[role="search"]')) {
+        window.dispatchEvent(new CustomEvent(ADD_TERM_EVENT, { detail: { term: `tag:${/\s/.test(tag.name) ? `"${tag.name}"` : tag.name}`, x: e.clientX } }));
+      }
+      setTimeout(() => (dragged.current = false), 0);
+    };
+    window.addEventListener('pointermove', move);
+    window.addEventListener('pointerup', up);
   };
   const leave = () => {
     carried = null;
@@ -375,7 +419,7 @@ export function WordCloud({
   const hotPlaced = hot ? layout?.placed.find((p) => p.key === hot) : undefined;
 
   return (
-    <div ref={boxRef} className="absolute inset-0" onPointerMove={movePointer} onPointerLeave={leave} onClick={click}>
+    <div ref={boxRef} className="absolute inset-0" onPointerMove={movePointer} onPointerDown={startDrag} onPointerLeave={leave} onClick={click}>
       <svg
         ref={svgRef}
         width={layout?.width ?? 0}

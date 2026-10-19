@@ -1,6 +1,8 @@
 'use client';
 
+import { addEscape, removeEscape } from '@/lib/client/escapeStack';
 import { useRouter } from '@/lib/client/navigation';
+import { CLOUD_QUERY_EVENT, HELD_QUERY_EVENT, setTagCloudOpen } from '@/lib/client/tagCloudOpen';
 import { splitLocale, type Locale } from '@/lib/i18n/config';
 import { Fragment, useCallback, useEffect, useId, useMemo, useOptimistic, useRef, useState, useTransition } from 'react';
 import { createPortal } from 'react-dom';
@@ -8,7 +10,7 @@ import { Icon } from '@/components/ui/Icon';
 import { api } from '@/lib/client/api';
 import { hrefKeepingDate, hrefNearDay } from '@/lib/client/returnSpot';
 import { useScrollLock } from '@/lib/client/scrollLock';
-import { refineQuery, removeFields, removeTerm } from '@/lib/searchTerms';
+import { refineQuery, removeFields, removeTerm, term } from '@/lib/searchTerms';
 import { pinnedQueries, recentQueries, recordQuery, recordRecentQuery, sharedQueries, togglePinnedQuery } from '@/lib/savedQueries';
 import { cloudTags, groupSelection, groupTags, isReserved, reservedPicked, reservedTag, reservedValues, RESERVED_TAGS, type TagCount, type TagGroup } from '@/lib/tags';
 import { parseSearchQuery } from '@/server/util/searchQuery';
@@ -108,6 +110,7 @@ export function TagCloud({
   const [expanded, setExpandedState] = useState(() => rememberedExpanded);
   const setExpanded = (next: boolean) => {
     rememberedExpanded = next;
+    setTagCloudOpen(next);
     setExpandedState(next);
   };
   const [wrapped, setWrappedState] = useState(() => rememberedWrapped);
@@ -116,7 +119,16 @@ export function TagCloud({
     setWrappedState(next);
   };
   const [searching, startSearch] = useTransition();
-  const parsed = useMemo(() => parseSearchQuery(query), [query]);
+  // What the cloud has picked while it is open but not yet searched: the search
+  // runs when it closes (SearchBox holds it), and the picks read from here meanwhile.
+  const [pending, setPending] = useState<string | null>(null);
+  useEffect(() => setPending(null), [query, expanded]);
+  useEffect(() => {
+    const held = (event: Event) => setPending(String((event as CustomEvent).detail?.q ?? ''));
+    window.addEventListener(HELD_QUERY_EVENT, held);
+    return () => window.removeEventListener(HELD_QUERY_EVENT, held);
+  }, []);
+  const parsed = useMemo(() => parseSearchQuery(pending ?? query), [pending, query]);
   // What is picked, the tags and the site's own filters apart: only the tags
   // are sized, grouped and counted against the cloud's limit, and a site
   // filter writes a term of its own (confidence:) rather than a tag: term.
@@ -153,6 +165,13 @@ export function TagCloud({
   const summary = tagSummary([...reserved, ...selected, ...excluded.map((name) => `−${name}`)], t.locale);
 
   function go(edit: (q: string) => string, next: string[], nextReserved: string[] = reserved, nextExcluded: string[] = excluded) {
+    if (expanded) {
+      const q = edit(pending ?? query ?? '');
+      const widened = next.length + nextReserved.length + nextExcluded.length < selected.length + reserved.length + excluded.length;
+      setPending(q);
+      window.dispatchEvent(new CustomEvent(CLOUD_QUERY_EVENT, { detail: { q, widen: widened } }));
+      return;
+    }
     if (onQuery) {
       startSearch(() => {
         setSelected(next);
@@ -273,6 +292,7 @@ function ReservedFilters({
   counts,
   selected,
   needle = '',
+  showAll = false,
   onToggle,
   large = false,
   className = '',
@@ -281,6 +301,8 @@ function ReservedFilters({
   selected: string[];
   // The find box narrows these too, by the name as it is read here.
   needle?: string;
+  // Under an OR query the counts are of the first group alone, so none is hidden for having none.
+  showAll?: boolean;
   onToggle: (name: string) => void;
   // Bigger in the big cloud, where there is room; small in the panel.
   large?: boolean;
@@ -293,7 +315,7 @@ function ReservedFilters({
     label: tagLabel(t, { name: filter.name, kind: 'reserved' }),
     count: counts.find((c) => c.name.toLowerCase() === filter.name.toLowerCase())?.count ?? 0,
   }))
-    .filter((filter) => filter.count > 0 || on(filter.name))
+    .filter((filter) => showAll || filter.count > 0 || on(filter.name))
     .filter((filter) => !needle || filter.label.toLowerCase().includes(needle) || filter.name.toLowerCase().includes(needle));
   if (!shown.length) return null;
   return (
@@ -309,6 +331,14 @@ function ReservedFilters({
           type="button"
           aria-pressed={on(filter.name)}
           onClick={() => onToggle(filter.name)}
+          // Dragged to the search box, a pill adds its term to the query (SearchBox's drop).
+          draggable
+          onDragStart={(event) => {
+            const text = term(filter.field, filter.value);
+            event.dataTransfer.setData('application/x-chronopin-term', text);
+            event.dataTransfer.setData('text/plain', text);
+            event.dataTransfer.effectAllowed = 'copy';
+          }}
           title={`${t('tagCloud.reservedTitle', { name: filter.label })}\n${t('tagCloud.pins', { count: filter.count })}`}
           className={`inline-flex shrink-0 items-center whitespace-nowrap rounded-full border border-dashed transition-colors ${large ? 'gap-1.5 px-3 py-1 text-sm' : 'gap-1 px-1.5 py-0.5 text-[11px]'} ${
             on(filter.name) ? 'border-accent/60 bg-accent/15 text-link' : 'border-line text-muted hover:border-tint/40 hover:text-ink'
@@ -615,11 +645,14 @@ function TagCloudView({
     };
   }, [url]);
 
+  // One layer for as long as the cloud is open, whatever onClose is by then, so it keeps its place under layers opened after it.
+  const closing = useRef(onClose);
+  closing.current = onClose;
   useEffect(() => {
-    const escape = (event: KeyboardEvent) => event.key === 'Escape' && onClose();
-    document.addEventListener('keydown', escape);
-    return () => document.removeEventListener('keydown', escape);
-  }, [onClose]);
+    const escape = () => closing.current();
+    addEscape(escape);
+    return () => removeEscape(escape);
+  }, []);
 
   const needle = filter.trim().toLowerCase();
   // The site's own filters keep their strip, and the words in the cloud are
@@ -661,7 +694,7 @@ function TagCloudView({
             </button>
           </span>
         </div>
-        <ReservedFilters counts={counts ?? []} selected={reserved} needle={needle} onToggle={onToggleReserved} large className="border-b border-line px-5 py-2.5 max-sm:px-3" />
+        <ReservedFilters counts={counts ?? []} selected={reserved} needle={needle} showAll={(parseSearchQuery(currentQuery).alternatives?.length ?? 0) > 1} onToggle={onToggleReserved} large className="border-b border-line px-5 py-2.5 max-sm:px-3" />
         <SavedQueries current={currentQuery} onOpen={onOpenQuery} className="border-b border-line px-5 py-2.5 max-sm:px-3" />
         <div aria-busy={busy || undefined} className="relative min-h-60 flex-1 overflow-hidden">
           {failed ? (

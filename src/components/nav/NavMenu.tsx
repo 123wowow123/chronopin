@@ -1,5 +1,6 @@
 'use client';
 
+import { addEscape, removeEscape } from '@/lib/client/escapeStack';
 import Link from '@/components/ui/Link';
 import { usePathname, useRouter, useSearchParams } from '@/lib/client/navigation';
 import { useEffect, useRef, useState } from 'react';
@@ -203,10 +204,10 @@ export function NavMenu() {
       if (event.key === 'Escape') setAccountOpen(false);
     };
     document.addEventListener('mousedown', close);
-    document.addEventListener('keydown', escape);
+    addEscape(escape);
     return () => {
       document.removeEventListener('mousedown', close);
-      document.removeEventListener('keydown', escape);
+      removeEscape(escape);
     };
   }, []);
 

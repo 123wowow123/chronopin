@@ -1,5 +1,6 @@
 'use client';
 
+import { addEscape, removeEscape } from '@/lib/client/escapeStack';
 import Anchor from '@/components/ui/Anchor';
 import Link from '@/components/ui/Link';
 import { usePathname } from '@/lib/client/navigation';
@@ -145,10 +146,10 @@ export function MobileDrawer({ ads = false }: { ads?: boolean }) {
     const widened = () => {
       if (wide.matches) setOpen(false);
     };
-    document.addEventListener('keydown', escape);
+    addEscape(escape);
     wide.addEventListener('change', widened);
     return () => {
-      document.removeEventListener('keydown', escape);
+      removeEscape(escape);
       wide.removeEventListener('change', widened);
       for (const el of behind) el.inert = false;
       trigger?.focus({ preventScroll: true });

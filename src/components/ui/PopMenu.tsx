@@ -1,5 +1,6 @@
 'use client';
 
+import { addEscape, removeEscape } from '@/lib/client/escapeStack';
 import { useCallback, useEffect, useId, useRef, useState, type ReactNode } from 'react';
 import { createPortal } from 'react-dom';
 import { Icon, type IconName } from '@/components/ui/Icon';
@@ -160,13 +161,13 @@ export function PopMenu({
       });
     };
     document.addEventListener('mousedown', outside);
-    document.addEventListener('keydown', key);
+    addEscape(key);
     window.addEventListener('scroll', follow, true);
     window.addEventListener('resize', follow);
     return () => {
       cancelAnimationFrame(frame);
       document.removeEventListener('mousedown', outside);
-      document.removeEventListener('keydown', key);
+      removeEscape(key);
       window.removeEventListener('scroll', follow, true);
       window.removeEventListener('resize', follow);
     };
