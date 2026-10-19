@@ -1,0 +1,2644 @@
+{
+  "batch": 97,
+  "checkedAt": "2026-10-19",
+  "counts": {
+    "venues": 4,
+    "newPins": 4,
+    "menuEntries": 324,
+    "galleryLinks": 16,
+    "newGuideMemberships": 4,
+    "newSpecialVenues": 0
+  },
+  "entries": [
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Sumiyaki Unafuji — Honten Opens 1995-07-21",
+        "description": "The original Shirokane charcoal-eel restaurant, with hitsumabushi, liver-topped bowls and its own concise dine-in and takeaway menus.",
+        "sourceUrl": "https://sumiyaki-unafuji.com/shops/honten/",
+        "address": "1F Pleasant Shirokane,1-1-4 Shirokane,Showa-ku,Nagoya",
+        "productName": "Sumiyaki Unafuji — Honten",
+        "utcStartDateTime": "1995-07-21T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "Operator’s30th-anniversary branch history explicitly dates the original Showa-ku restaurant to July21,1995. Its August3,2026resumption was a same-day equipment repair, not a new opening; the adjacent Yukari anniversary venue is not counted as another branch.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Nagoya",
+          "Japan",
+          "Shirokane / Tsurumai",
+          "Japanese / Eel"
+        ],
+        "longFormSummary": "<p>The original Shirokane charcoal-eel restaurant, with hitsumabushi, liver-topped bowls and its own concise dine-in and takeaway menus.<cite data-ref=\"https://sumiyaki-unafuji.com/shops/honten/\"></cite></p><p>Operator’s30th-anniversary branch history explicitly dates the original Showa-ku restaurant to July21,1995. Its August3,2026resumption was a same-day equipment repair, not a new opening; the adjacent Yukari anniversary venue is not counted as another branch.</p>",
+        "references": [
+          {
+            "url": "https://sumiyaki-unafuji.com/shops/honten/",
+            "title": "Sumiyaki Unafuji — Honten — operator",
+            "confidence": 90,
+            "reasoning": "Sumiyaki Unafuji — Honten — operator"
+          },
+          {
+            "url": "https://sumiyaki-unafuji.com/column/250730_30th/",
+            "title": "Operator original-branch anniversary history",
+            "confidence": 90,
+            "reasoning": "Operator original-branch anniversary history"
+          },
+          {
+            "url": "https://tabelog.com/aichi/A2301/A230105/23000105/",
+            "title": "Exact-branch recognition/current listing",
+            "confidence": 90,
+            "reasoning": "Exact-branch recognition/current listing"
+          },
+          {
+            "url": "https://sumiyaki-unafuji.com/information/%e7%82%ad%e7%84%bc-%e3%81%86%e3%81%aa%e5%af%8c%e5%a3%ab%e6%9c%ac%e5%ba%97%e3%81%ae%e5%96%b6%e6%a5%ad%e5%86%8d%e9%96%8b%e3%81%ab%e3%81%a4%e3%81%84%e3%81%a6/",
+            "title": "Operator same-day equipment repair/resumption",
+            "confidence": 90,
+            "reasoning": "Operator same-day equipment repair/resumption"
+          },
+          {
+            "url": "https://sumiyaki-unafuji.com/wp-content/uploads/2025/09/251008_web_unafuji.pdf",
+            "title": "Exact original-branch Japanese menu",
+            "confidence": 90,
+            "reasoning": "Exact original-branch Japanese menu"
+          },
+          {
+            "url": "https://sumiyaki-unafuji.com/information/2026_autumn/",
+            "title": "Operator autumn courses: Honten excluded",
+            "confidence": 90,
+            "reasoning": "Operator autumn courses: Honten excluded"
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://sumiyaki-unafuji.com/shops/honten/",
+          "menu": {
+            "pinSourceUrl": "https://sumiyaki-unafuji.com/shops/honten/",
+            "name": "Sumiyaki Unafuji — Honten",
+            "checkedAt": "2026-10-19",
+            "menus": [
+              {
+                "label": "Unafuji Honten — eel bowls and hitsumabushi (PDF page1)",
+                "url": "https://sumiyaki-unafuji.com/wp-content/uploads/2025/09/251008_web_unafuji.pdf",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "うなぎ丼",
+                    "price": 4910,
+                    "note": "Tax included. Liver versions limited; April2025price revision in currently linked original-branch PDF."
+                  },
+                  {
+                    "name": "上うなぎ丼",
+                    "price": 5640,
+                    "note": "Tax included. Liver versions limited; April2025price revision in currently linked original-branch PDF."
+                  },
+                  {
+                    "name": "肝入うなぎ丼",
+                    "price": 7390,
+                    "note": "Tax included. Liver versions limited; April2025price revision in currently linked original-branch PDF."
+                  },
+                  {
+                    "name": "上ひつまぶし",
+                    "price": 5640,
+                    "note": "Tax included. Liver versions limited; April2025price revision in currently linked original-branch PDF."
+                  },
+                  {
+                    "name": "肝入上ひつまぶし",
+                    "price": 7390,
+                    "note": "Tax included. Liver versions limited; April2025price revision in currently linked original-branch PDF."
+                  },
+                  {
+                    "name": "特上ひつまぶし",
+                    "price": 7840,
+                    "note": "Tax included. Liver versions limited; April2025price revision in currently linked original-branch PDF."
+                  },
+                  {
+                    "name": "肝入特上ひつまぶし",
+                    "price": 9590,
+                    "note": "Tax included. Liver versions limited; April2025price revision in currently linked original-branch PDF."
+                  },
+                  {
+                    "name": "長焼膳",
+                    "price": 5840,
+                    "note": "Tax included. Liver versions limited; April2025price revision in currently linked original-branch PDF."
+                  },
+                  {
+                    "name": "白焼膳",
+                    "price": 5840,
+                    "note": "Tax included. Liver versions limited; April2025price revision in currently linked original-branch PDF."
+                  }
+                ],
+                "note": "The ¥9,500マルトクうなぎ is marked arrival date undecided and is not presented as currently available."
+              },
+              {
+                "label": "Unafuji Honten — a la carte (PDF page2)",
+                "url": "https://sumiyaki-unafuji.com/wp-content/uploads/2025/09/251008_web_unafuji.pdf",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "長焼",
+                    "price": 4400,
+                    "note": "Tax included; liver limited. Exact original-branch page2, not another branch’s broader menu."
+                  },
+                  {
+                    "name": "白焼",
+                    "price": 4400,
+                    "note": "Tax included; liver limited. Exact original-branch page2, not another branch’s broader menu."
+                  },
+                  {
+                    "name": "うまき",
+                    "price": 1680,
+                    "note": "Tax included; liver limited. Exact original-branch page2, not another branch’s broader menu."
+                  },
+                  {
+                    "name": "肝焼き",
+                    "price": 1750,
+                    "note": "Tax included; liver limited. Exact original-branch page2, not another branch’s broader menu."
+                  },
+                  {
+                    "name": "うざく",
+                    "price": 1680,
+                    "note": "Tax included; liver limited. Exact original-branch page2, not another branch’s broader menu."
+                  },
+                  {
+                    "name": "うな粕",
+                    "price": 1680,
+                    "note": "Tax included; liver limited. Exact original-branch page2, not another branch’s broader menu."
+                  }
+                ],
+                "note": ""
+              },
+              {
+                "label": "Unafuji Honten — drinks (PDF page2)",
+                "url": "https://sumiyaki-unafuji.com/wp-content/uploads/2025/09/251008_web_unafuji.pdf",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "生ビール",
+                    "price": 780,
+                    "note": "Tax included; confirm availability when booking."
+                  },
+                  {
+                    "name": "瓶ビール",
+                    "price": 830,
+                    "note": "Tax included; confirm availability when booking."
+                  },
+                  {
+                    "name": "ハイボール",
+                    "price": 750,
+                    "note": "Tax included; confirm availability when booking."
+                  },
+                  {
+                    "name": "ノンアルコールビール",
+                    "price": 680,
+                    "note": "Tax included; confirm availability when booking."
+                  },
+                  {
+                    "name": "ウーロンハイ",
+                    "price": 650,
+                    "note": "Tax included; confirm availability when booking."
+                  },
+                  {
+                    "name": "レモンハイ",
+                    "price": 700,
+                    "note": "Tax included; confirm availability when booking."
+                  },
+                  {
+                    "name": "冷酒",
+                    "price": 740,
+                    "note": "Tax included; confirm availability when booking."
+                  },
+                  {
+                    "name": "酒1合",
+                    "price": 650,
+                    "note": "Tax included; confirm availability when booking."
+                  },
+                  {
+                    "name": "酒2合",
+                    "price": 1250,
+                    "note": "Tax included; confirm availability when booking."
+                  },
+                  {
+                    "name": "焼酎（麦）",
+                    "price": 650,
+                    "note": "Tax included; confirm availability when booking."
+                  },
+                  {
+                    "name": "焼酎（芋）",
+                    "price": 650,
+                    "note": "Tax included; confirm availability when booking."
+                  },
+                  {
+                    "name": "コーラ",
+                    "price": 530,
+                    "note": "Tax included; confirm availability when booking."
+                  },
+                  {
+                    "name": "オレンジジュース",
+                    "price": 530,
+                    "note": "Tax included; confirm availability when booking."
+                  },
+                  {
+                    "name": "ウーロン茶",
+                    "price": 480,
+                    "note": "Tax included; confirm availability when booking."
+                  }
+                ],
+                "note": ""
+              },
+              {
+                "label": "Unafuji Honten — takeaway (PDF page2)",
+                "url": "https://sumiyaki-unafuji.com/wp-content/uploads/2025/09/251008_web_unafuji.pdf",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "持ち帰り うなぎ丼（梅・4/6尾）",
+                    "price": 3270,
+                    "note": "Tax included; takeaway only, sauce supplied separately."
+                  },
+                  {
+                    "name": "持ち帰り うなぎ丼（竹・5/6尾）",
+                    "price": 3960,
+                    "note": "Tax included; takeaway only, sauce supplied separately."
+                  },
+                  {
+                    "name": "持ち帰り うなぎ丼（松・1尾）",
+                    "price": 4650,
+                    "note": "Tax included; takeaway only, sauce supplied separately."
+                  },
+                  {
+                    "name": "持ち帰り 上ひつまぶし",
+                    "price": 5000,
+                    "note": "Tax included; takeaway only, sauce supplied separately."
+                  }
+                ],
+                "note": ""
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://sumiyaki-unafuji.com/shops/honten/",
+            "name": "Sumiyaki Unafuji — Honten",
+            "checkedAt": "2026-10-19",
+            "websiteUrl": "https://sumiyaki-unafuji.com/shops/honten/",
+            "phone": "052-881-0067",
+            "openingHours": [
+              {
+                "days": "Daily lunch, except irregular closures",
+                "hours": "11:00–14:30; last order14:00"
+              },
+              {
+                "days": "Daily dinner, except irregular closures",
+                "hours": "17:00–20:30; last order20:00"
+              }
+            ],
+            "detailsSourceUrl": "https://sumiyaki-unafuji.com/shops/honten/",
+            "additionalSources": [
+              {
+                "label": "Operator original-branch anniversary history",
+                "url": "https://sumiyaki-unafuji.com/column/250730_30th/"
+              },
+              {
+                "label": "Exact-branch recognition/current listing",
+                "url": "https://tabelog.com/aichi/A2301/A230105/23000105/"
+              },
+              {
+                "label": "Operator same-day equipment repair/resumption",
+                "url": "https://sumiyaki-unafuji.com/information/%e7%82%ad%e7%84%bc-%e3%81%86%e3%81%aa%e5%af%8c%e5%a3%ab%e6%9c%ac%e5%ba%97%e3%81%ae%e5%96%b6%e6%a5%ad%e5%86%8d%e9%96%8b%e3%81%ab%e3%81%a4%e3%81%84%e3%81%a6/"
+              },
+              {
+                "label": "Exact original-branch Japanese menu",
+                "url": "https://sumiyaki-unafuji.com/wp-content/uploads/2025/09/251008_web_unafuji.pdf"
+              },
+              {
+                "label": "Operator autumn courses: Honten excluded",
+                "url": "https://sumiyaki-unafuji.com/information/2026_autumn/"
+              }
+            ],
+            "hoursNote": "Operator lists parking, step-free access, cards/e-money/QRpayments and takeaway/delivery. Same-day food cancellation100%. Operator says private hire is possible, while managed listing says no hire/private room: call before arranging a group. Do not borrow the three sister branches’ autumn courses; operator explicitly excludes Honten. Oversized ¥9,500eel arrival date is undetermined.",
+            "reservationUrl": "https://booking.resty.jp/webrsv/plan_search/s014035601/30647?isfixshop=true"
+          },
+          "tile": {
+            "regionSlug": "nagoya",
+            "kind": "top",
+            "slug": "japan97-honten",
+            "name": "Sumiyaki Unafuji — Honten",
+            "neighborhood": "Shirokane / Tsurumai",
+            "cuisine": "Japanese / Eel",
+            "description": "The original Shirokane charcoal-eel restaurant, with hitsumabushi, liver-topped bowls and its own concise dine-in and takeaway menus.",
+            "address": "1F Pleasant Shirokane,1-1-4 Shirokane,Showa-ku,Nagoya",
+            "websiteUrl": "https://sumiyaki-unafuji.com/shops/honten/",
+            "checkedAt": "2026-10-19",
+            "recognition": "Tabelog Unagi Hyakumeiten2026 selection (original branch only)",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-19/batch97-honten-1-56bc94acd782e1da.webp",
+            "imageCredit": "Sumiyaki Unafuji / Kaburaya Group",
+            "imageSourceUrl": "https://sumiyaki-unafuji.com/shops/honten/",
+            "imageNote": "Original Shirokane branch entrance, from the branch operator gallery.",
+            "openingConfirmed": true,
+            "day": "1995-07-21"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "originalUrl": "https://sumiyaki-unafuji.com/wp-content/uploads/2025/09/main.jpg",
+          "sourcePage": "https://sumiyaki-unafuji.com/shops/honten/",
+          "credit": "Sumiyaki Unafuji / Kaburaya Group",
+          "note": "Original Shirokane branch entrance, from the branch operator gallery.",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-19/batch97-honten-1-56bc94acd782e1da.webp",
+          "sha256": "56bc94acd782e1da3cb88c73e3909331f46836f8538f72085a3478396536dbab",
+          "width": 1200,
+          "height": 800
+        },
+        {
+          "originalUrl": "https://sumiyaki-unafuji.com/wp-content/uploads/2025/09/01-1024x683.jpg",
+          "sourcePage": "https://sumiyaki-unafuji.com/shops/honten/",
+          "credit": "Sumiyaki Unafuji / Kaburaya Group",
+          "note": "Shirokane dining-room booths.",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-19/batch97-honten-2-6fa2a689c00856f2.webp",
+          "sha256": "6fa2a689c00856f237d8289e115c88fbdfe342a0ad7abb234174867c8759c33d",
+          "width": 1024,
+          "height": 683
+        },
+        {
+          "originalUrl": "https://sumiyaki-unafuji.com/wp-content/uploads/2025/09/02-1024x683.jpg",
+          "sourcePage": "https://sumiyaki-unafuji.com/shops/honten/",
+          "credit": "Sumiyaki Unafuji / Kaburaya Group",
+          "note": "Window-side table at the original branch.",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-19/batch97-honten-3-b61abf3e1391a434.webp",
+          "sha256": "b61abf3e1391a4342544ebaec875555c4c2cdffe55b9fe589932f68b6ca6b8cb",
+          "width": 1024,
+          "height": 683
+        },
+        {
+          "originalUrl": "https://sumiyaki-unafuji.com/wp-content/uploads/2025/09/03-1024x683.jpg",
+          "sourcePage": "https://sumiyaki-unafuji.com/shops/honten/",
+          "credit": "Sumiyaki Unafuji / Kaburaya Group",
+          "note": "Original-branch dining room.",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-19/batch97-honten-4-f82e4dc887e99385.webp",
+          "sha256": "f82e4dc887e9938552afb09235c2b9c93e91dadc0e3910b26be942fdf025e9c6",
+          "width": 1024,
+          "height": 683
+        }
+      ]
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Sumiyaki Unafuji — Shirakabe Bettei Opens 2021-07-24",
+        "description": "A garden-facing timber dining room in Shirakabe, serving charcoal eel, sashimi and individually priced drinks.",
+        "sourceUrl": "https://sumiyaki-unafuji.com/shops/shirakabe/",
+        "address": "1-10-21 Yoshino,Higashi-ku,Nagoya",
+        "productName": "Sumiyaki Unafuji — Shirakabe Bettei",
+        "utcStartDateTime": "2021-07-24T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "Exact managed branch opening field and contemporary Nagoya Jouhou branch feature independently agree on 2021-07-24. Original Shirokane1995date and host building age are not substituted.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Nagoya",
+          "Japan",
+          "Shirakabe / Yoshino",
+          "Japanese / Eel"
+        ],
+        "longFormSummary": "<p>A garden-facing timber dining room in Shirakabe, serving charcoal eel, sashimi and individually priced drinks.<cite data-ref=\"https://sumiyaki-unafuji.com/shops/shirakabe/\"></cite></p><p>Exact managed branch opening field and contemporary Nagoya Jouhou branch feature independently agree on 2021-07-24. Original Shirokane1995date and host building age are not substituted.</p>",
+        "references": [
+          {
+            "url": "https://sumiyaki-unafuji.com/shops/shirakabe/",
+            "title": "Sumiyaki Unafuji — Shirakabe Bettei — operator",
+            "confidence": 90,
+            "reasoning": "Sumiyaki Unafuji — Shirakabe Bettei — operator"
+          },
+          {
+            "url": "https://jouhou.nagoya/unafuji-shirakabe/",
+            "title": "Contemporary branch opening and firsthand dining feature",
+            "confidence": 90,
+            "reasoning": "Contemporary branch opening and firsthand dining feature"
+          },
+          {
+            "url": "https://tabelog.com/aichi/A2301/A230104/23077970/",
+            "title": "Exact managed branch opening/current conditions",
+            "confidence": 90,
+            "reasoning": "Exact managed branch opening/current conditions"
+          },
+          {
+            "url": "https://sumiyaki-unafuji.com/wp-content/uploads/2025/09/menu_jp-4.pdf",
+            "title": "Exact branch Japanese menu",
+            "confidence": 90,
+            "reasoning": "Exact branch Japanese menu"
+          },
+          {
+            "url": "https://sumiyaki-unafuji.com/information/2026_autumn/",
+            "title": "Current operator autumn courses and eligibility",
+            "confidence": 90,
+            "reasoning": "Current operator autumn courses and eligibility"
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://sumiyaki-unafuji.com/shops/shirakabe/",
+          "menu": {
+            "pinSourceUrl": "https://sumiyaki-unafuji.com/shops/shirakabe/",
+            "name": "Sumiyaki Unafuji — Shirakabe Bettei",
+            "checkedAt": "2026-10-19",
+            "menus": [
+              {
+                "label": "Unafuji Shirakabe Bettei — 御膳 (PDF page1)",
+                "url": "https://sumiyaki-unafuji.com/wp-content/uploads/2025/09/menu_jp-4.pdf",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "小うなぎ膳",
+                    "price": 5750,
+                    "note": "Includes seasonal3appetizers,sashimi3and chawanmushi with the specified eel/rice and accompaniments; seasonal contents may change."
+                  },
+                  {
+                    "name": "上膳（上うなぎ丼または上ひつまぶし）",
+                    "price": 7950,
+                    "note": "Includes seasonal3appetizers,sashimi3and chawanmushi with the specified eel/rice and accompaniments; seasonal contents may change."
+                  },
+                  {
+                    "name": "長焼き膳",
+                    "price": 7950,
+                    "note": "Includes seasonal3appetizers,sashimi3and chawanmushi with the specified eel/rice and accompaniments; seasonal contents may change."
+                  }
+                ],
+                "note": "Current branch-linked PDF; all prices tax included. Prices revised April2025; current link checked October19,2026."
+              },
+              {
+                "label": "Unafuji Shirakabe Bettei — うなぎ丼 (PDF page2)",
+                "url": "https://sumiyaki-unafuji.com/wp-content/uploads/2025/09/menu_jp-4.pdf",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "小うなぎ丼",
+                    "price": 3440,
+                    "note": "Tax included; usual rice300g, small rice ¥50less. Bowls include uzaku,soup and pickles; liver version limited."
+                  },
+                  {
+                    "name": "うなぎ丼",
+                    "price": 4910,
+                    "note": "Tax included; usual rice300g, small rice ¥50less. Bowls include uzaku,soup and pickles; liver version limited."
+                  },
+                  {
+                    "name": "上うなぎ丼",
+                    "price": 5640,
+                    "note": "Tax included; usual rice300g, small rice ¥50less. Bowls include uzaku,soup and pickles; liver version limited."
+                  },
+                  {
+                    "name": "肝入り上うなぎ丼",
+                    "price": 7390,
+                    "note": "Tax included; usual rice300g, small rice ¥50less. Bowls include uzaku,soup and pickles; liver version limited."
+                  },
+                  {
+                    "name": "追加きざみわさび",
+                    "price": 120,
+                    "note": "Tax included; usual rice300g, small rice ¥50less. Bowls include uzaku,soup and pickles; liver version limited."
+                  },
+                  {
+                    "name": "ご飯大盛への変更",
+                    "price": 150,
+                    "note": "Tax included; usual rice300g, small rice ¥50less. Bowls include uzaku,soup and pickles; liver version limited."
+                  }
+                ],
+                "note": "Current branch-linked PDF; all prices tax included. Prices revised April2025; current link checked October19,2026."
+              },
+              {
+                "label": "Unafuji Shirakabe Bettei — うな重 (PDF page3)",
+                "url": "https://sumiyaki-unafuji.com/wp-content/uploads/2025/09/menu_jp-4.pdf",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "上うな重",
+                    "price": 5640,
+                    "note": "Tax included; liver versions limited; includes uzaku,soup,pickles. Rice normally300g; large+¥150/small−¥50."
+                  },
+                  {
+                    "name": "肝入り上うな重",
+                    "price": 7390,
+                    "note": "Tax included; liver versions limited; includes uzaku,soup,pickles. Rice normally300g; large+¥150/small−¥50."
+                  },
+                  {
+                    "name": "特上うな重",
+                    "price": 7840,
+                    "note": "Tax included; liver versions limited; includes uzaku,soup,pickles. Rice normally300g; large+¥150/small−¥50."
+                  },
+                  {
+                    "name": "肝入り特上うな重",
+                    "price": 9590,
+                    "note": "Tax included; liver versions limited; includes uzaku,soup,pickles. Rice normally300g; large+¥150/small−¥50."
+                  }
+                ],
+                "note": "Current branch-linked PDF; all prices tax included. Prices revised April2025; current link checked October19,2026."
+              },
+              {
+                "label": "Unafuji Shirakabe Bettei — ひつまぶし (PDF page4)",
+                "url": "https://sumiyaki-unafuji.com/wp-content/uploads/2025/09/menu_jp-4.pdf",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "上ひつまぶし",
+                    "price": 5640,
+                    "note": "Tax included; liver versions limited. Additional set includes soup,broth,condiments,pickles and tea. Rice normally300g; large+¥150/small−¥50."
+                  },
+                  {
+                    "name": "肝入り上ひつまぶし",
+                    "price": 7390,
+                    "note": "Tax included; liver versions limited. Additional set includes soup,broth,condiments,pickles and tea. Rice normally300g; large+¥150/small−¥50."
+                  },
+                  {
+                    "name": "特上ひつまぶし",
+                    "price": 7840,
+                    "note": "Tax included; liver versions limited. Additional set includes soup,broth,condiments,pickles and tea. Rice normally300g; large+¥150/small−¥50."
+                  },
+                  {
+                    "name": "肝入り特上ひつまぶし",
+                    "price": 9590,
+                    "note": "Tax included; liver versions limited. Additional set includes soup,broth,condiments,pickles and tea. Rice normally300g; large+¥150/small−¥50."
+                  },
+                  {
+                    "name": "特大ひつまぶし（3〜4人前）",
+                    "price": 16500,
+                    "note": "Tax included; liver versions limited. Additional set includes soup,broth,condiments,pickles and tea. Rice normally300g; large+¥150/small−¥50."
+                  },
+                  {
+                    "name": "追加まぶしセット",
+                    "price": 600,
+                    "note": "Tax included; liver versions limited. Additional set includes soup,broth,condiments,pickles and tea. Rice normally300g; large+¥150/small−¥50."
+                  }
+                ],
+                "note": "Current branch-linked PDF; all prices tax included. Prices revised April2025; current link checked October19,2026."
+              },
+              {
+                "label": "Unafuji Shirakabe Bettei — 定食と追加 (PDF page5)",
+                "url": "https://sumiyaki-unafuji.com/wp-content/uploads/2025/09/menu_jp-4.pdf",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "長焼き定食",
+                    "price": 5840,
+                    "note": "Tax included. Sets include chawanmushi,uzaku,pickles,soup and rice; rice refill free. Wild eel priced at market, not a fabricated fixed amount."
+                  },
+                  {
+                    "name": "白焼き定食",
+                    "price": 5840,
+                    "note": "Tax included. Sets include chawanmushi,uzaku,pickles,soup and rice; rice refill free. Wild eel priced at market, not a fabricated fixed amount."
+                  },
+                  {
+                    "name": "天の青うなぎ（うなぎのみ・限定）",
+                    "price": 16000,
+                    "note": "Tax included. Sets include chawanmushi,uzaku,pickles,soup and rice; rice refill free. Wild eel priced at market, not a fabricated fixed amount."
+                  },
+                  {
+                    "name": "天然うなぎ（1尾・限定）",
+                    "priceLabel": "Market price (時価)",
+                    "note": "Tax included. Sets include chawanmushi,uzaku,pickles,soup and rice; rice refill free. Wild eel priced at market, not a fabricated fixed amount."
+                  },
+                  {
+                    "name": "ご飯セット（ご飯180g・吸物・漬物）",
+                    "price": 800,
+                    "note": "Tax included. Sets include chawanmushi,uzaku,pickles,soup and rice; rice refill free. Wild eel priced at market, not a fabricated fixed amount."
+                  },
+                  {
+                    "name": "ご飯",
+                    "price": 300,
+                    "note": "Tax included. Sets include chawanmushi,uzaku,pickles,soup and rice; rice refill free. Wild eel priced at market, not a fabricated fixed amount."
+                  },
+                  {
+                    "name": "蛤のお吸い物",
+                    "price": 400,
+                    "note": "Tax included. Sets include chawanmushi,uzaku,pickles,soup and rice; rice refill free. Wild eel priced at market, not a fabricated fixed amount."
+                  }
+                ],
+                "note": "Current branch-linked PDF; all prices tax included. Prices revised April2025; current link checked October19,2026."
+              },
+              {
+                "label": "Unafuji Shirakabe Bettei — 一品料理・刺身・甘味 (PDF page6)",
+                "url": "https://sumiyaki-unafuji.com/wp-content/uploads/2025/09/menu_jp-4.pdf",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "長焼き",
+                    "price": 4400,
+                    "note": "Tax included. Liver limited. Seasonal photographs illustrate the named item; actual garnish/fish can change."
+                  },
+                  {
+                    "name": "白焼き",
+                    "price": 4400,
+                    "note": "Tax included. Liver limited. Seasonal photographs illustrate the named item; actual garnish/fish can change."
+                  },
+                  {
+                    "name": "肝焼き",
+                    "price": 1750,
+                    "note": "Tax included. Liver limited. Seasonal photographs illustrate the named item; actual garnish/fish can change."
+                  },
+                  {
+                    "name": "うまき",
+                    "price": 1680,
+                    "note": "Tax included. Liver limited. Seasonal photographs illustrate the named item; actual garnish/fish can change."
+                  },
+                  {
+                    "name": "うざく",
+                    "price": 1680,
+                    "note": "Tax included. Liver limited. Seasonal photographs illustrate the named item; actual garnish/fish can change."
+                  },
+                  {
+                    "name": "うなぎの燻製",
+                    "price": 1740,
+                    "note": "Tax included. Liver limited. Seasonal photographs illustrate the named item; actual garnish/fish can change."
+                  },
+                  {
+                    "name": "うなぎの枕",
+                    "price": 1480,
+                    "note": "Tax included. Liver limited. Seasonal photographs illustrate the named item; actual garnish/fish can change."
+                  },
+                  {
+                    "name": "うなぎの茶碗蒸し",
+                    "price": 1350,
+                    "note": "Tax included. Liver limited. Seasonal photographs illustrate the named item; actual garnish/fish can change."
+                  },
+                  {
+                    "name": "うなぎの骨せんべい",
+                    "price": 880,
+                    "note": "Tax included. Liver limited. Seasonal photographs illustrate the named item; actual garnish/fish can change."
+                  },
+                  {
+                    "name": "うな富士盛り（三種）",
+                    "price": 2280,
+                    "note": "Tax included. Liver limited. Seasonal photographs illustrate the named item; actual garnish/fish can change."
+                  },
+                  {
+                    "name": "うな富士盛り（五種）",
+                    "price": 3500,
+                    "note": "Tax included. Liver limited. Seasonal photographs illustrate the named item; actual garnish/fish can change."
+                  },
+                  {
+                    "name": "アイス 抹茶",
+                    "price": 480,
+                    "note": "Tax included. Liver limited. Seasonal photographs illustrate the named item; actual garnish/fish can change."
+                  },
+                  {
+                    "name": "アイス ほうじ茶",
+                    "price": 480,
+                    "note": "Tax included. Liver limited. Seasonal photographs illustrate the named item; actual garnish/fish can change."
+                  },
+                  {
+                    "name": "アイス バニラ",
+                    "price": 480,
+                    "note": "Tax included. Liver limited. Seasonal photographs illustrate the named item; actual garnish/fish can change."
+                  }
+                ],
+                "note": "Current branch-linked PDF; all prices tax included. Prices revised April2025; current link checked October19,2026."
+              },
+              {
+                "label": "Unafuji Shirakabe Bettei — 持ち帰り (PDF page7)",
+                "url": "https://sumiyaki-unafuji.com/wp-content/uploads/2025/09/menu_jp-4.pdf",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "持ち帰り うなぎ丼 梅",
+                    "price": 3270,
+                    "note": "Tax included; takeaway only, not dine-in prices."
+                  },
+                  {
+                    "name": "持ち帰り うなぎ丼 竹",
+                    "price": 3960,
+                    "note": "Tax included; takeaway only, not dine-in prices."
+                  },
+                  {
+                    "name": "持ち帰り うなぎ丼 松",
+                    "price": 4650,
+                    "note": "Tax included; takeaway only, not dine-in prices."
+                  },
+                  {
+                    "name": "持ち帰り 上ひつまぶし",
+                    "price": 5000,
+                    "note": "Tax included; takeaway only, not dine-in prices."
+                  },
+                  {
+                    "name": "持ち帰り 特上ひつまぶし",
+                    "price": 7070,
+                    "note": "Tax included; takeaway only, not dine-in prices."
+                  },
+                  {
+                    "name": "持ち帰り 長焼き",
+                    "price": 4400,
+                    "note": "Tax included; takeaway only, not dine-in prices."
+                  },
+                  {
+                    "name": "持ち帰り 白焼き",
+                    "price": 4400,
+                    "note": "Tax included; takeaway only, not dine-in prices."
+                  },
+                  {
+                    "name": "持ち帰り うまき",
+                    "price": 1680,
+                    "note": "Tax included; takeaway only, not dine-in prices."
+                  },
+                  {
+                    "name": "持ち帰り うなぎの枕（蒲焼き・白焼き）",
+                    "price": 2950,
+                    "note": "Tax included; takeaway only, not dine-in prices."
+                  },
+                  {
+                    "name": "持ち帰り うなぎの骨",
+                    "price": 1250,
+                    "note": "Tax included; takeaway only, not dine-in prices."
+                  },
+                  {
+                    "name": "持ち帰り お吸い物",
+                    "price": 400,
+                    "note": "Tax included; takeaway only, not dine-in prices."
+                  }
+                ],
+                "note": "Current branch-linked PDF; all prices tax included. Prices revised April2025; current link checked October19,2026."
+              },
+              {
+                "label": "Unafuji Shirakabe Bettei — drinks (PDF pages8–9)",
+                "url": "https://sumiyaki-unafuji.com/wp-content/uploads/2025/09/menu_jp-4.pdf",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "アサヒスーパードライ（生）",
+                    "price": 780,
+                    "note": "Tax included; bottle and glass quantities distinguished. Shochu bottles are finish-on-visit, not a bottle-keeping service."
+                  },
+                  {
+                    "name": "アサヒスーパードライ（中瓶）",
+                    "price": 830,
+                    "note": "Tax included; bottle and glass quantities distinguished. Shochu bottles are finish-on-visit, not a bottle-keeping service."
+                  },
+                  {
+                    "name": "キリンクラシックラガー（中瓶）",
+                    "price": 830,
+                    "note": "Tax included; bottle and glass quantities distinguished. Shochu bottles are finish-on-visit, not a bottle-keeping service."
+                  },
+                  {
+                    "name": "サッポロ黒ラベル（中瓶）",
+                    "price": 830,
+                    "note": "Tax included; bottle and glass quantities distinguished. Shochu bottles are finish-on-visit, not a bottle-keeping service."
+                  },
+                  {
+                    "name": "サントリープレミアムモルツ（中瓶）",
+                    "price": 830,
+                    "note": "Tax included; bottle and glass quantities distinguished. Shochu bottles are finish-on-visit, not a bottle-keeping service."
+                  },
+                  {
+                    "name": "アサヒドライゼロ（小瓶）",
+                    "price": 680,
+                    "note": "Tax included; bottle and glass quantities distinguished. Shochu bottles are finish-on-visit, not a bottle-keeping service."
+                  },
+                  {
+                    "name": "ブラックニッカハイボール",
+                    "price": 780,
+                    "note": "Tax included; bottle and glass quantities distinguished. Shochu bottles are finish-on-visit, not a bottle-keeping service."
+                  },
+                  {
+                    "name": "プレミアム知多ハイボール",
+                    "price": 1100,
+                    "note": "Tax included; bottle and glass quantities distinguished. Shochu bottles are finish-on-visit, not a bottle-keeping service."
+                  },
+                  {
+                    "name": "瀬戸内レモンハイ",
+                    "price": 700,
+                    "note": "Tax included; bottle and glass quantities distinguished. Shochu bottles are finish-on-visit, not a bottle-keeping service."
+                  },
+                  {
+                    "name": "ウーロンハイ",
+                    "price": 650,
+                    "note": "Tax included; bottle and glass quantities distinguished. Shochu bottles are finish-on-visit, not a bottle-keeping service."
+                  },
+                  {
+                    "name": "緑茶ハイ",
+                    "price": 650,
+                    "note": "Tax included; bottle and glass quantities distinguished. Shochu bottles are finish-on-visit, not a bottle-keeping service."
+                  },
+                  {
+                    "name": "梅暦5年貯蔵",
+                    "price": 700,
+                    "note": "Tax included; bottle and glass quantities distinguished. Shochu bottles are finish-on-visit, not a bottle-keeping service."
+                  },
+                  {
+                    "name": "スパークリングワイン（グラス）",
+                    "price": 850,
+                    "note": "Tax included; bottle and glass quantities distinguished. Shochu bottles are finish-on-visit, not a bottle-keeping service."
+                  },
+                  {
+                    "name": "ハウスワイン赤（グラス）",
+                    "price": 850,
+                    "note": "Tax included; bottle and glass quantities distinguished. Shochu bottles are finish-on-visit, not a bottle-keeping service."
+                  },
+                  {
+                    "name": "ハウスワイン白（グラス）",
+                    "price": 850,
+                    "note": "Tax included; bottle and glass quantities distinguished. Shochu bottles are finish-on-visit, not a bottle-keeping service."
+                  },
+                  {
+                    "name": "デュク・ドゥ・モンターニュ・ロゼ（ノンアルコール・グラス）",
+                    "price": 900,
+                    "note": "Tax included; bottle and glass quantities distinguished. Shochu bottles are finish-on-visit, not a bottle-keeping service."
+                  },
+                  {
+                    "name": "久寿玉原酒 超辛口本醸造（燗）",
+                    "price": 950,
+                    "note": "Tax included; bottle and glass quantities distinguished. Shochu bottles are finish-on-visit, not a bottle-keeping service."
+                  },
+                  {
+                    "name": "久寿玉原酒 超辛口本醸造（冷）",
+                    "price": 950,
+                    "note": "Tax included; bottle and glass quantities distinguished. Shochu bottles are finish-on-visit, not a bottle-keeping service."
+                  },
+                  {
+                    "name": "中屋 純米辛口",
+                    "price": 950,
+                    "note": "Tax included; bottle and glass quantities distinguished. Shochu bottles are finish-on-visit, not a bottle-keeping service."
+                  },
+                  {
+                    "name": "加賀鳶 極寒辛口純米",
+                    "price": 950,
+                    "note": "Tax included; bottle and glass quantities distinguished. Shochu bottles are finish-on-visit, not a bottle-keeping service."
+                  },
+                  {
+                    "name": "三千盛 純米",
+                    "price": 1100,
+                    "note": "Tax included; bottle and glass quantities distinguished. Shochu bottles are finish-on-visit, not a bottle-keeping service."
+                  },
+                  {
+                    "name": "赤武 純米吟醸",
+                    "price": 1100,
+                    "note": "Tax included; bottle and glass quantities distinguished. Shochu bottles are finish-on-visit, not a bottle-keeping service."
+                  },
+                  {
+                    "name": "恵那山 純米大吟醸",
+                    "price": 1250,
+                    "note": "Tax included; bottle and glass quantities distinguished. Shochu bottles are finish-on-visit, not a bottle-keeping service."
+                  },
+                  {
+                    "name": "つくし黒（グラス）",
+                    "price": 650,
+                    "note": "Tax included; bottle and glass quantities distinguished. Shochu bottles are finish-on-visit, not a bottle-keeping service."
+                  },
+                  {
+                    "name": "つくし黒（ボトル）",
+                    "price": 6500,
+                    "note": "Tax included; bottle and glass quantities distinguished. Shochu bottles are finish-on-visit, not a bottle-keeping service."
+                  },
+                  {
+                    "name": "中々（グラス）",
+                    "price": 750,
+                    "note": "Tax included; bottle and glass quantities distinguished. Shochu bottles are finish-on-visit, not a bottle-keeping service."
+                  },
+                  {
+                    "name": "中々（ボトル）",
+                    "price": 7600,
+                    "note": "Tax included; bottle and glass quantities distinguished. Shochu bottles are finish-on-visit, not a bottle-keeping service."
+                  },
+                  {
+                    "name": "黒霧島（グラス）",
+                    "price": 750,
+                    "note": "Tax included; bottle and glass quantities distinguished. Shochu bottles are finish-on-visit, not a bottle-keeping service."
+                  },
+                  {
+                    "name": "黒霧島（ボトル）",
+                    "price": 7500,
+                    "note": "Tax included; bottle and glass quantities distinguished. Shochu bottles are finish-on-visit, not a bottle-keeping service."
+                  },
+                  {
+                    "name": "富乃宝山（グラス）",
+                    "price": 800,
+                    "note": "Tax included; bottle and glass quantities distinguished. Shochu bottles are finish-on-visit, not a bottle-keeping service."
+                  },
+                  {
+                    "name": "富乃宝山（ボトル）",
+                    "price": 8000,
+                    "note": "Tax included; bottle and glass quantities distinguished. Shochu bottles are finish-on-visit, not a bottle-keeping service."
+                  },
+                  {
+                    "name": "レミー・パニエ・ブーケ・ドール・ブラン（ボトル）",
+                    "price": 4000,
+                    "note": "Tax included; bottle and glass quantities distinguished. Shochu bottles are finish-on-visit, not a bottle-keeping service."
+                  },
+                  {
+                    "name": "ヴーヴ・クリコ・イエローラベル・ブリュット（ボトル）",
+                    "price": 13000,
+                    "note": "Tax included; bottle and glass quantities distinguished. Shochu bottles are finish-on-visit, not a bottle-keeping service."
+                  },
+                  {
+                    "name": "ベント・シャルドネ・カリフォルニア（ボトル）",
+                    "price": 4200,
+                    "note": "Tax included; bottle and glass quantities distinguished. Shochu bottles are finish-on-visit, not a bottle-keeping service."
+                  },
+                  {
+                    "name": "レ・タンヌ オクシタン ソーヴィニヨン・ブラン（ボトル）",
+                    "price": 5000,
+                    "note": "Tax included; bottle and glass quantities distinguished. Shochu bottles are finish-on-visit, not a bottle-keeping service."
+                  },
+                  {
+                    "name": "ルイ・ラトゥール ブルゴーニュ シャルドネ（ボトル）",
+                    "price": 7000,
+                    "note": "Tax included; bottle and glass quantities distinguished. Shochu bottles are finish-on-visit, not a bottle-keeping service."
+                  },
+                  {
+                    "name": "エル・コト・クリアンサ（ボトル）",
+                    "price": 5000,
+                    "note": "Tax included; bottle and glass quantities distinguished. Shochu bottles are finish-on-visit, not a bottle-keeping service."
+                  },
+                  {
+                    "name": "ルイ・ラトゥール ブルゴーニュ ピノノワール（ボトル）",
+                    "price": 7000,
+                    "note": "Tax included; bottle and glass quantities distinguished. Shochu bottles are finish-on-visit, not a bottle-keeping service."
+                  },
+                  {
+                    "name": "レミー・パニエ・ロゼ・ダンジュ（ボトル）",
+                    "price": 5000,
+                    "note": "Tax included; bottle and glass quantities distinguished. Shochu bottles are finish-on-visit, not a bottle-keeping service."
+                  },
+                  {
+                    "name": "デュク・ドゥ・モンターニュ・ロゼ（ノンアルコール・ボトル）",
+                    "price": 4000,
+                    "note": "Tax included; bottle and glass quantities distinguished. Shochu bottles are finish-on-visit, not a bottle-keeping service."
+                  },
+                  {
+                    "name": "ウーロン茶",
+                    "price": 480,
+                    "note": "Tax included; bottle and glass quantities distinguished. Shochu bottles are finish-on-visit, not a bottle-keeping service."
+                  },
+                  {
+                    "name": "緑茶",
+                    "price": 480,
+                    "note": "Tax included; bottle and glass quantities distinguished. Shochu bottles are finish-on-visit, not a bottle-keeping service."
+                  },
+                  {
+                    "name": "ジンジャーエール",
+                    "price": 530,
+                    "note": "Tax included; bottle and glass quantities distinguished. Shochu bottles are finish-on-visit, not a bottle-keeping service."
+                  },
+                  {
+                    "name": "コカ・コーラ",
+                    "price": 530,
+                    "note": "Tax included; bottle and glass quantities distinguished. Shochu bottles are finish-on-visit, not a bottle-keeping service."
+                  },
+                  {
+                    "name": "オレンジジュース",
+                    "price": 530,
+                    "note": "Tax included; bottle and glass quantities distinguished. Shochu bottles are finish-on-visit, not a bottle-keeping service."
+                  },
+                  {
+                    "name": "りんごジュース",
+                    "price": 530,
+                    "note": "Tax included; bottle and glass quantities distinguished. Shochu bottles are finish-on-visit, not a bottle-keeping service."
+                  }
+                ],
+                "note": "Independent branch document checked; no cross-branch drinks tariff copied. Meieki and Tenpaku refer to a separate bottle-wine list which is not linked; no names/prices inferred."
+              },
+              {
+                "label": "Unafuji Shirakabe Bettei — autumn2026 evening courses",
+                "url": "https://sumiyaki-unafuji.com/information/2026_autumn/",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "秋のコース",
+                    "price": 8800,
+                    "note": "Evening from September26,2026: seasonal five-appetizer plate,sashimi3,shirayaki,autumn chawanmushi,venison loin cutlet,small eel bowl or hitsumabushi,LaFrance sorbet; ingredients may change."
+                  },
+                  {
+                    "name": "秋のコース 鍋付き",
+                    "price": 11000,
+                    "note": "Autumn course plus Nagoya Cochin mizutaki; evening, advance booking; ingredient-dependent ending, no fixed end date published."
+                  },
+                  {
+                    "name": "秋のプレミアムコース",
+                    "price": 15000,
+                    "note": "Shirakabe-specific: seasonal appetizers,sashimi3,Hida-beef shabu-shabu,shirayaki,hamo/ikura chawanmushi,matsutake dobinmushi,mackerel with autumn mushrooms,small eel rice,and fruit. Private room/party restrictions apply."
+                  }
+                ],
+                "note": "Tax included. Published September18,start September26,2026,until ingredients run out or next course begins; no fixed final date. Reserve by previous day. Operator minimum3for Meieki/Tenpaku; Tenpaku managed listings say2general/4private, so confirm party size. Shirakabe general minimum2,private3. Room fees/time limits extra as applicable. No dated Specials membership is invented."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://sumiyaki-unafuji.com/shops/shirakabe/",
+            "name": "Sumiyaki Unafuji — Shirakabe Bettei",
+            "checkedAt": "2026-10-19",
+            "websiteUrl": "https://sumiyaki-unafuji.com/shops/shirakabe/",
+            "phone": "052-325-4788",
+            "openingHours": [
+              {
+                "days": "Daily lunch, except irregular closures",
+                "hours": "10:45–14:30; last order14:00"
+              },
+              {
+                "days": "Daily dinner, except irregular closures",
+                "hours": "17:00–21:00; last order20:30"
+              }
+            ],
+            "detailsSourceUrl": "https://sumiyaki-unafuji.com/shops/shirakabe/",
+            "additionalSources": [
+              {
+                "label": "Contemporary branch opening and firsthand dining feature",
+                "url": "https://jouhou.nagoya/unafuji-shirakabe/"
+              },
+              {
+                "label": "Exact managed branch opening/current conditions",
+                "url": "https://tabelog.com/aichi/A2301/A230104/23077970/"
+              },
+              {
+                "label": "Exact branch Japanese menu",
+                "url": "https://sumiyaki-unafuji.com/wp-content/uploads/2025/09/menu_jp-4.pdf"
+              },
+              {
+                "label": "Current operator autumn courses and eligibility",
+                "url": "https://sumiyaki-unafuji.com/information/2026_autumn/"
+              }
+            ],
+            "hoursNote": "Lunch private room90minutes¥1,500; dinner120minutes¥3,000. Parking33spaces per operator; private-room guests use the rear dedicated entrance per managed listing. Cards,e-money,QRpayment and takeaway/delivery listed. Private room cancellation3days through previous day50%of room fee; same day food/room100%. Do not transfer Honten’s2026Hyakumeiten recognition to this branch. Autumn minimum-party discrepancy and seasonal ending require direct confirmation; courses saved as menu evidence, without a fabricated expiry or discount.",
+            "reservationUrl": "https://booking.resebook.jp/webrsv/plan_search/s014035601/24965?isfixshop=true"
+          },
+          "tile": {
+            "regionSlug": "nagoya",
+            "kind": "top",
+            "slug": "japan97-shirakabe",
+            "name": "Sumiyaki Unafuji — Shirakabe Bettei",
+            "neighborhood": "Shirakabe / Yoshino",
+            "cuisine": "Japanese / Eel",
+            "description": "A garden-facing timber dining room in Shirakabe, serving charcoal eel, sashimi and individually priced drinks.",
+            "address": "1-10-21 Yoshino,Higashi-ku,Nagoya",
+            "websiteUrl": "https://sumiyaki-unafuji.com/shops/shirakabe/",
+            "checkedAt": "2026-10-19",
+            "recognition": "Nagoya Jouhou branch-specific dining recommendation",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-19/batch97-shirakabe-1-505e00622ee94053.webp",
+            "imageCredit": "Sumiyaki Unafuji / Kaburaya Group",
+            "imageSourceUrl": "https://sumiyaki-unafuji.com/shops/shirakabe/",
+            "imageNote": "Shirakabe Bettei entrance at night.",
+            "openingConfirmed": true,
+            "day": "2021-07-24"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "originalUrl": "https://sumiyaki-unafuji.com/wp-content/uploads/2025/09/main-4.jpg",
+          "sourcePage": "https://sumiyaki-unafuji.com/shops/shirakabe/",
+          "credit": "Sumiyaki Unafuji / Kaburaya Group",
+          "note": "Shirakabe Bettei entrance at night.",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-19/batch97-shirakabe-1-505e00622ee94053.webp",
+          "sha256": "505e00622ee94053ee22a2f964585995413a8c7b71edb1cdbcd7d662422fa6f8",
+          "width": 1200,
+          "height": 800
+        },
+        {
+          "originalUrl": "https://sumiyaki-unafuji.com/wp-content/uploads/2025/09/01-4-1024x683.jpg",
+          "sourcePage": "https://sumiyaki-unafuji.com/shops/shirakabe/",
+          "credit": "Sumiyaki Unafuji / Kaburaya Group",
+          "note": "Garden-facing private dining room at Shirakabe.",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-19/batch97-shirakabe-2-d2c9387909e573f2.webp",
+          "sha256": "d2c9387909e573f2b90a320b352bd17b7cb7c6add9372dd632dd8c5b0df3a99e",
+          "width": 1024,
+          "height": 683
+        },
+        {
+          "originalUrl": "https://sumiyaki-unafuji.com/wp-content/uploads/2025/09/02-4-1024x683.jpg",
+          "sourcePage": "https://sumiyaki-unafuji.com/shops/shirakabe/",
+          "credit": "Sumiyaki Unafuji / Kaburaya Group",
+          "note": "Shirakabe garden-view dining table.",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-19/batch97-shirakabe-3-ac16a8027a0e4428.webp",
+          "sha256": "ac16a8027a0e44289c32174bdb5c157f2b9716e82aa150a024c72da7a00a24b8",
+          "width": 1024,
+          "height": 683
+        },
+        {
+          "originalUrl": "https://sumiyaki-unafuji.com/wp-content/uploads/2025/09/03-4-1024x683.jpg",
+          "sourcePage": "https://sumiyaki-unafuji.com/shops/shirakabe/",
+          "credit": "Sumiyaki Unafuji / Kaburaya Group",
+          "note": "Shirakabe timber dining room.",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-19/batch97-shirakabe-4-143f74b276cd9ab5.webp",
+          "sha256": "143f74b276cd9ab569307f62bac27ad0e1eab81430012313b91588386d14693e",
+          "width": 1024,
+          "height": 683
+        }
+      ]
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Sumiyaki Unafuji — Meieki Opens 2022-06-19",
+        "description": "The Nagoya Station branch of Unafuji, with an underground timber dining room, counter seats, eel bowls and a distinct drinks tariff.",
+        "sourceUrl": "https://sumiyaki-unafuji.com/shops/nagoya-ekimae/",
+        "address": "B1 Nagoya Mitsui Building North,4-8-18 Meieki,Nakamura-ku,Nagoya",
+        "productName": "Sumiyaki Unafuji — Meieki",
+        "utcStartDateTime": "2022-06-19T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "Exact managed branch opening field and contemporary Nagoya Jouhou branch feature independently agree on 2022-06-19. Original Shirokane1995date and host building age are not substituted.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Nagoya",
+          "Japan",
+          "Meieki / Nagoya Mitsui Building North",
+          "Japanese / Eel"
+        ],
+        "longFormSummary": "<p>The Nagoya Station branch of Unafuji, with an underground timber dining room, counter seats, eel bowls and a distinct drinks tariff.<cite data-ref=\"https://sumiyaki-unafuji.com/shops/nagoya-ekimae/\"></cite></p><p>Exact managed branch opening field and contemporary Nagoya Jouhou branch feature independently agree on 2022-06-19. Original Shirokane1995date and host building age are not substituted.</p>",
+        "references": [
+          {
+            "url": "https://sumiyaki-unafuji.com/shops/nagoya-ekimae/",
+            "title": "Sumiyaki Unafuji — Meieki — operator",
+            "confidence": 90,
+            "reasoning": "Sumiyaki Unafuji — Meieki — operator"
+          },
+          {
+            "url": "https://jouhou.nagoya/unafuji-meieki/",
+            "title": "Contemporary branch opening and firsthand dining feature",
+            "confidence": 90,
+            "reasoning": "Contemporary branch opening and firsthand dining feature"
+          },
+          {
+            "url": "https://tabelog.com/aichi/A2301/A230101/23081097/",
+            "title": "Exact managed branch opening/current conditions",
+            "confidence": 90,
+            "reasoning": "Exact managed branch opening/current conditions"
+          },
+          {
+            "url": "https://sumiyaki-unafuji.com/wp-content/uploads/2025/09/menu_jp-5.pdf",
+            "title": "Exact branch Japanese menu",
+            "confidence": 90,
+            "reasoning": "Exact branch Japanese menu"
+          },
+          {
+            "url": "https://sumiyaki-unafuji.com/information/2026_autumn/",
+            "title": "Current operator autumn courses and eligibility",
+            "confidence": 90,
+            "reasoning": "Current operator autumn courses and eligibility"
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://sumiyaki-unafuji.com/shops/nagoya-ekimae/",
+          "menu": {
+            "pinSourceUrl": "https://sumiyaki-unafuji.com/shops/nagoya-ekimae/",
+            "name": "Sumiyaki Unafuji — Meieki",
+            "checkedAt": "2026-10-19",
+            "menus": [
+              {
+                "label": "Unafuji Meieki — 御膳 (PDF page1)",
+                "url": "https://sumiyaki-unafuji.com/wp-content/uploads/2025/09/menu_jp-5.pdf",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "小うなぎ膳",
+                    "price": 5750,
+                    "note": "Includes seasonal3appetizers,sashimi3and chawanmushi with the specified eel/rice and accompaniments; seasonal contents may change."
+                  },
+                  {
+                    "name": "上膳（上うなぎ丼または上ひつまぶし）",
+                    "price": 7950,
+                    "note": "Includes seasonal3appetizers,sashimi3and chawanmushi with the specified eel/rice and accompaniments; seasonal contents may change."
+                  },
+                  {
+                    "name": "長焼き膳",
+                    "price": 7950,
+                    "note": "Includes seasonal3appetizers,sashimi3and chawanmushi with the specified eel/rice and accompaniments; seasonal contents may change."
+                  }
+                ],
+                "note": "Current branch-linked PDF; all prices tax included. Prices revised April2025; current link checked October19,2026."
+              },
+              {
+                "label": "Unafuji Meieki — うなぎ丼 (PDF page2)",
+                "url": "https://sumiyaki-unafuji.com/wp-content/uploads/2025/09/menu_jp-5.pdf",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "小うなぎ丼",
+                    "price": 3440,
+                    "note": "Tax included; usual rice300g, small rice ¥50less. Bowls include uzaku,soup and pickles; liver version limited."
+                  },
+                  {
+                    "name": "うなぎ丼",
+                    "price": 4910,
+                    "note": "Tax included; usual rice300g, small rice ¥50less. Bowls include uzaku,soup and pickles; liver version limited."
+                  },
+                  {
+                    "name": "上うなぎ丼",
+                    "price": 5640,
+                    "note": "Tax included; usual rice300g, small rice ¥50less. Bowls include uzaku,soup and pickles; liver version limited."
+                  },
+                  {
+                    "name": "肝入り上うなぎ丼",
+                    "price": 7390,
+                    "note": "Tax included; usual rice300g, small rice ¥50less. Bowls include uzaku,soup and pickles; liver version limited."
+                  },
+                  {
+                    "name": "追加きざみわさび",
+                    "price": 120,
+                    "note": "Tax included; usual rice300g, small rice ¥50less. Bowls include uzaku,soup and pickles; liver version limited."
+                  },
+                  {
+                    "name": "ご飯大盛への変更",
+                    "price": 150,
+                    "note": "Tax included; usual rice300g, small rice ¥50less. Bowls include uzaku,soup and pickles; liver version limited."
+                  }
+                ],
+                "note": "Current branch-linked PDF; all prices tax included. Prices revised April2025; current link checked October19,2026."
+              },
+              {
+                "label": "Unafuji Meieki — うな重 (PDF page3)",
+                "url": "https://sumiyaki-unafuji.com/wp-content/uploads/2025/09/menu_jp-5.pdf",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "上うな重",
+                    "price": 5640,
+                    "note": "Tax included; liver versions limited; includes uzaku,soup,pickles. Rice normally300g; large+¥150/small−¥50."
+                  },
+                  {
+                    "name": "肝入り上うな重",
+                    "price": 7390,
+                    "note": "Tax included; liver versions limited; includes uzaku,soup,pickles. Rice normally300g; large+¥150/small−¥50."
+                  },
+                  {
+                    "name": "特上うな重",
+                    "price": 7840,
+                    "note": "Tax included; liver versions limited; includes uzaku,soup,pickles. Rice normally300g; large+¥150/small−¥50."
+                  },
+                  {
+                    "name": "肝入り特上うな重",
+                    "price": 9590,
+                    "note": "Tax included; liver versions limited; includes uzaku,soup,pickles. Rice normally300g; large+¥150/small−¥50."
+                  }
+                ],
+                "note": "Current branch-linked PDF; all prices tax included. Prices revised April2025; current link checked October19,2026."
+              },
+              {
+                "label": "Unafuji Meieki — ひつまぶし (PDF page4)",
+                "url": "https://sumiyaki-unafuji.com/wp-content/uploads/2025/09/menu_jp-5.pdf",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "上ひつまぶし",
+                    "price": 5640,
+                    "note": "Tax included; liver versions limited. Additional set includes soup,broth,condiments,pickles and tea. Rice normally300g; large+¥150/small−¥50."
+                  },
+                  {
+                    "name": "肝入り上ひつまぶし",
+                    "price": 7390,
+                    "note": "Tax included; liver versions limited. Additional set includes soup,broth,condiments,pickles and tea. Rice normally300g; large+¥150/small−¥50."
+                  },
+                  {
+                    "name": "特上ひつまぶし",
+                    "price": 7840,
+                    "note": "Tax included; liver versions limited. Additional set includes soup,broth,condiments,pickles and tea. Rice normally300g; large+¥150/small−¥50."
+                  },
+                  {
+                    "name": "肝入り特上ひつまぶし",
+                    "price": 9590,
+                    "note": "Tax included; liver versions limited. Additional set includes soup,broth,condiments,pickles and tea. Rice normally300g; large+¥150/small−¥50."
+                  },
+                  {
+                    "name": "特大ひつまぶし（3〜4人前）",
+                    "price": 16500,
+                    "note": "Tax included; liver versions limited. Additional set includes soup,broth,condiments,pickles and tea. Rice normally300g; large+¥150/small−¥50."
+                  },
+                  {
+                    "name": "追加まぶしセット",
+                    "price": 600,
+                    "note": "Tax included; liver versions limited. Additional set includes soup,broth,condiments,pickles and tea. Rice normally300g; large+¥150/small−¥50."
+                  }
+                ],
+                "note": "Current branch-linked PDF; all prices tax included. Prices revised April2025; current link checked October19,2026."
+              },
+              {
+                "label": "Unafuji Meieki — 定食と追加 (PDF page5)",
+                "url": "https://sumiyaki-unafuji.com/wp-content/uploads/2025/09/menu_jp-5.pdf",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "長焼き定食",
+                    "price": 5840,
+                    "note": "Tax included. Sets include chawanmushi,uzaku,pickles,soup and rice; rice refill free. Wild eel priced at market, not a fabricated fixed amount."
+                  },
+                  {
+                    "name": "白焼き定食",
+                    "price": 5840,
+                    "note": "Tax included. Sets include chawanmushi,uzaku,pickles,soup and rice; rice refill free. Wild eel priced at market, not a fabricated fixed amount."
+                  },
+                  {
+                    "name": "天の青うなぎ（うなぎのみ・限定）",
+                    "price": 16000,
+                    "note": "Tax included. Sets include chawanmushi,uzaku,pickles,soup and rice; rice refill free. Wild eel priced at market, not a fabricated fixed amount."
+                  },
+                  {
+                    "name": "天然うなぎ（1尾・限定）",
+                    "priceLabel": "Market price (時価)",
+                    "note": "Tax included. Sets include chawanmushi,uzaku,pickles,soup and rice; rice refill free. Wild eel priced at market, not a fabricated fixed amount."
+                  },
+                  {
+                    "name": "ご飯セット（ご飯180g・吸物・漬物）",
+                    "price": 800,
+                    "note": "Tax included. Sets include chawanmushi,uzaku,pickles,soup and rice; rice refill free. Wild eel priced at market, not a fabricated fixed amount."
+                  },
+                  {
+                    "name": "ご飯",
+                    "price": 300,
+                    "note": "Tax included. Sets include chawanmushi,uzaku,pickles,soup and rice; rice refill free. Wild eel priced at market, not a fabricated fixed amount."
+                  },
+                  {
+                    "name": "蛤のお吸い物",
+                    "price": 400,
+                    "note": "Tax included. Sets include chawanmushi,uzaku,pickles,soup and rice; rice refill free. Wild eel priced at market, not a fabricated fixed amount."
+                  }
+                ],
+                "note": "Current branch-linked PDF; all prices tax included. Prices revised April2025; current link checked October19,2026."
+              },
+              {
+                "label": "Unafuji Meieki — 一品料理・刺身・甘味 (PDF page6)",
+                "url": "https://sumiyaki-unafuji.com/wp-content/uploads/2025/09/menu_jp-5.pdf",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "長焼き",
+                    "price": 4400,
+                    "note": "Tax included. Liver limited. Seasonal photographs illustrate the named item; actual garnish/fish can change."
+                  },
+                  {
+                    "name": "白焼き",
+                    "price": 4400,
+                    "note": "Tax included. Liver limited. Seasonal photographs illustrate the named item; actual garnish/fish can change."
+                  },
+                  {
+                    "name": "肝焼き",
+                    "price": 1750,
+                    "note": "Tax included. Liver limited. Seasonal photographs illustrate the named item; actual garnish/fish can change."
+                  },
+                  {
+                    "name": "うまき",
+                    "price": 1680,
+                    "note": "Tax included. Liver limited. Seasonal photographs illustrate the named item; actual garnish/fish can change."
+                  },
+                  {
+                    "name": "うざく",
+                    "price": 1680,
+                    "note": "Tax included. Liver limited. Seasonal photographs illustrate the named item; actual garnish/fish can change."
+                  },
+                  {
+                    "name": "うなぎの燻製",
+                    "price": 1740,
+                    "note": "Tax included. Liver limited. Seasonal photographs illustrate the named item; actual garnish/fish can change."
+                  },
+                  {
+                    "name": "うなぎの枕",
+                    "price": 1480,
+                    "note": "Tax included. Liver limited. Seasonal photographs illustrate the named item; actual garnish/fish can change."
+                  },
+                  {
+                    "name": "うなぎの茶碗蒸し",
+                    "price": 1350,
+                    "note": "Tax included. Liver limited. Seasonal photographs illustrate the named item; actual garnish/fish can change."
+                  },
+                  {
+                    "name": "うなぎの骨せんべい",
+                    "price": 880,
+                    "note": "Tax included. Liver limited. Seasonal photographs illustrate the named item; actual garnish/fish can change."
+                  },
+                  {
+                    "name": "うな富士盛り（三種）",
+                    "price": 2280,
+                    "note": "Tax included. Liver limited. Seasonal photographs illustrate the named item; actual garnish/fish can change."
+                  },
+                  {
+                    "name": "うな富士盛り（五種）",
+                    "price": 3500,
+                    "note": "Tax included. Liver limited. Seasonal photographs illustrate the named item; actual garnish/fish can change."
+                  },
+                  {
+                    "name": "アイス 抹茶",
+                    "price": 480,
+                    "note": "Tax included. Liver limited. Seasonal photographs illustrate the named item; actual garnish/fish can change."
+                  },
+                  {
+                    "name": "アイス ほうじ茶",
+                    "price": 480,
+                    "note": "Tax included. Liver limited. Seasonal photographs illustrate the named item; actual garnish/fish can change."
+                  },
+                  {
+                    "name": "アイス バニラ",
+                    "price": 480,
+                    "note": "Tax included. Liver limited. Seasonal photographs illustrate the named item; actual garnish/fish can change."
+                  }
+                ],
+                "note": "Current branch-linked PDF; all prices tax included. Prices revised April2025; current link checked October19,2026."
+              },
+              {
+                "label": "Unafuji Meieki — 持ち帰り (PDF page7)",
+                "url": "https://sumiyaki-unafuji.com/wp-content/uploads/2025/09/menu_jp-5.pdf",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "持ち帰り うなぎ丼 梅",
+                    "price": 3270,
+                    "note": "Tax included; takeaway only, not dine-in prices."
+                  },
+                  {
+                    "name": "持ち帰り うなぎ丼 竹",
+                    "price": 3960,
+                    "note": "Tax included; takeaway only, not dine-in prices."
+                  },
+                  {
+                    "name": "持ち帰り うなぎ丼 松",
+                    "price": 4650,
+                    "note": "Tax included; takeaway only, not dine-in prices."
+                  },
+                  {
+                    "name": "持ち帰り 上ひつまぶし",
+                    "price": 5000,
+                    "note": "Tax included; takeaway only, not dine-in prices."
+                  },
+                  {
+                    "name": "持ち帰り 特上ひつまぶし",
+                    "price": 7070,
+                    "note": "Tax included; takeaway only, not dine-in prices."
+                  },
+                  {
+                    "name": "持ち帰り 長焼き",
+                    "price": 4400,
+                    "note": "Tax included; takeaway only, not dine-in prices."
+                  },
+                  {
+                    "name": "持ち帰り 白焼き",
+                    "price": 4400,
+                    "note": "Tax included; takeaway only, not dine-in prices."
+                  },
+                  {
+                    "name": "持ち帰り うまき",
+                    "price": 1680,
+                    "note": "Tax included; takeaway only, not dine-in prices."
+                  },
+                  {
+                    "name": "持ち帰り うなぎの枕（蒲焼き・白焼き）",
+                    "price": 2950,
+                    "note": "Tax included; takeaway only, not dine-in prices."
+                  },
+                  {
+                    "name": "持ち帰り うなぎの骨",
+                    "price": 1250,
+                    "note": "Tax included; takeaway only, not dine-in prices."
+                  },
+                  {
+                    "name": "持ち帰り お吸い物",
+                    "price": 400,
+                    "note": "Tax included; takeaway only, not dine-in prices."
+                  }
+                ],
+                "note": "Current branch-linked PDF; all prices tax included. Prices revised April2025; current link checked October19,2026."
+              },
+              {
+                "label": "Unafuji Meieki — drinks (PDF pages8–9)",
+                "url": "https://sumiyaki-unafuji.com/wp-content/uploads/2025/09/menu_jp-5.pdf",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "アサヒスーパードライ（生）",
+                    "price": 880,
+                    "note": "Tax included; bottle and glass quantities distinguished. Shochu bottles are finish-on-visit, not a bottle-keeping service."
+                  },
+                  {
+                    "name": "アサヒスーパードライ（中瓶）",
+                    "price": 880,
+                    "note": "Tax included; bottle and glass quantities distinguished. Shochu bottles are finish-on-visit, not a bottle-keeping service."
+                  },
+                  {
+                    "name": "キリンクラシックラガー（中瓶）",
+                    "price": 880,
+                    "note": "Tax included; bottle and glass quantities distinguished. Shochu bottles are finish-on-visit, not a bottle-keeping service."
+                  },
+                  {
+                    "name": "サッポロ黒ラベル（中瓶）",
+                    "price": 880,
+                    "note": "Tax included; bottle and glass quantities distinguished. Shochu bottles are finish-on-visit, not a bottle-keeping service."
+                  },
+                  {
+                    "name": "サントリープレミアムモルツ（中瓶）",
+                    "price": 880,
+                    "note": "Tax included; bottle and glass quantities distinguished. Shochu bottles are finish-on-visit, not a bottle-keeping service."
+                  },
+                  {
+                    "name": "アサヒドライゼロ（小瓶）",
+                    "price": 700,
+                    "note": "Tax included; bottle and glass quantities distinguished. Shochu bottles are finish-on-visit, not a bottle-keeping service."
+                  },
+                  {
+                    "name": "ブラックニッカハイボール",
+                    "price": 780,
+                    "note": "Tax included; bottle and glass quantities distinguished. Shochu bottles are finish-on-visit, not a bottle-keeping service."
+                  },
+                  {
+                    "name": "ジョニーウォーカーブラックラベル12年",
+                    "price": 1100,
+                    "note": "Tax included; bottle and glass quantities distinguished. Shochu bottles are finish-on-visit, not a bottle-keeping service."
+                  },
+                  {
+                    "name": "知多",
+                    "price": 1200,
+                    "note": "Tax included; bottle and glass quantities distinguished. Shochu bottles are finish-on-visit, not a bottle-keeping service."
+                  },
+                  {
+                    "name": "久寿玉 超辛口（燗）",
+                    "price": 1000,
+                    "note": "Tax included; bottle and glass quantities distinguished. Shochu bottles are finish-on-visit, not a bottle-keeping service."
+                  },
+                  {
+                    "name": "ほしいずみ 純米",
+                    "price": 1000,
+                    "note": "Tax included; bottle and glass quantities distinguished. Shochu bottles are finish-on-visit, not a bottle-keeping service."
+                  },
+                  {
+                    "name": "恵那山 純米吟醸",
+                    "price": 1250,
+                    "note": "Tax included; bottle and glass quantities distinguished. Shochu bottles are finish-on-visit, not a bottle-keeping service."
+                  },
+                  {
+                    "name": "久寿玉 超辛口（冷）",
+                    "price": 1000,
+                    "note": "Tax included; bottle and glass quantities distinguished. Shochu bottles are finish-on-visit, not a bottle-keeping service."
+                  },
+                  {
+                    "name": "百十郎 赤面 GOLD純米",
+                    "price": 1250,
+                    "note": "Tax included; bottle and glass quantities distinguished. Shochu bottles are finish-on-visit, not a bottle-keeping service."
+                  },
+                  {
+                    "name": "百十郎 黒面 純米大吟醸",
+                    "price": 1200,
+                    "note": "Tax included; bottle and glass quantities distinguished. Shochu bottles are finish-on-visit, not a bottle-keeping service."
+                  },
+                  {
+                    "name": "蓬莱泉 純米吟醸",
+                    "price": 950,
+                    "note": "Tax included; bottle and glass quantities distinguished. Shochu bottles are finish-on-visit, not a bottle-keeping service."
+                  },
+                  {
+                    "name": "酔鯨 吟麗 純米吟醸",
+                    "price": 1150,
+                    "note": "Tax included; bottle and glass quantities distinguished. Shochu bottles are finish-on-visit, not a bottle-keeping service."
+                  },
+                  {
+                    "name": "レモンハイ",
+                    "price": 750,
+                    "note": "Tax included; bottle and glass quantities distinguished. Shochu bottles are finish-on-visit, not a bottle-keeping service."
+                  },
+                  {
+                    "name": "ウーロンハイ",
+                    "price": 700,
+                    "note": "Tax included; bottle and glass quantities distinguished. Shochu bottles are finish-on-visit, not a bottle-keeping service."
+                  },
+                  {
+                    "name": "緑茶ハイ",
+                    "price": 700,
+                    "note": "Tax included; bottle and glass quantities distinguished. Shochu bottles are finish-on-visit, not a bottle-keeping service."
+                  },
+                  {
+                    "name": "梅暦5年貯蔵",
+                    "price": 750,
+                    "note": "Tax included; bottle and glass quantities distinguished. Shochu bottles are finish-on-visit, not a bottle-keeping service."
+                  },
+                  {
+                    "name": "スパークリングワイン（グラス）",
+                    "price": 900,
+                    "note": "Tax included; bottle and glass quantities distinguished. Shochu bottles are finish-on-visit, not a bottle-keeping service."
+                  },
+                  {
+                    "name": "ハウスワイン赤（グラス）",
+                    "price": 900,
+                    "note": "Tax included; bottle and glass quantities distinguished. Shochu bottles are finish-on-visit, not a bottle-keeping service."
+                  },
+                  {
+                    "name": "ハウスワイン白（グラス）",
+                    "price": 900,
+                    "note": "Tax included; bottle and glass quantities distinguished. Shochu bottles are finish-on-visit, not a bottle-keeping service."
+                  },
+                  {
+                    "name": "白水（グラス）",
+                    "price": 650,
+                    "note": "Tax included; bottle and glass quantities distinguished. Shochu bottles are finish-on-visit, not a bottle-keeping service."
+                  },
+                  {
+                    "name": "白水（ボトル）",
+                    "price": 6500,
+                    "note": "Tax included; bottle and glass quantities distinguished. Shochu bottles are finish-on-visit, not a bottle-keeping service."
+                  },
+                  {
+                    "name": "つくし黒（グラス）",
+                    "price": 700,
+                    "note": "Tax included; bottle and glass quantities distinguished. Shochu bottles are finish-on-visit, not a bottle-keeping service."
+                  },
+                  {
+                    "name": "つくし黒（ボトル）",
+                    "price": 7000,
+                    "note": "Tax included; bottle and glass quantities distinguished. Shochu bottles are finish-on-visit, not a bottle-keeping service."
+                  },
+                  {
+                    "name": "一粒の麦（グラス）",
+                    "price": 800,
+                    "note": "Tax included; bottle and glass quantities distinguished. Shochu bottles are finish-on-visit, not a bottle-keeping service."
+                  },
+                  {
+                    "name": "一粒の麦（ボトル）",
+                    "price": 8000,
+                    "note": "Tax included; bottle and glass quantities distinguished. Shochu bottles are finish-on-visit, not a bottle-keeping service."
+                  },
+                  {
+                    "name": "黒霧島（グラス）",
+                    "price": 750,
+                    "note": "Tax included; bottle and glass quantities distinguished. Shochu bottles are finish-on-visit, not a bottle-keeping service."
+                  },
+                  {
+                    "name": "黒霧島（ボトル）",
+                    "price": 7500,
+                    "note": "Tax included; bottle and glass quantities distinguished. Shochu bottles are finish-on-visit, not a bottle-keeping service."
+                  },
+                  {
+                    "name": "富乃宝山（グラス）",
+                    "price": 900,
+                    "note": "Tax included; bottle and glass quantities distinguished. Shochu bottles are finish-on-visit, not a bottle-keeping service."
+                  },
+                  {
+                    "name": "富乃宝山（ボトル）",
+                    "price": 9000,
+                    "note": "Tax included; bottle and glass quantities distinguished. Shochu bottles are finish-on-visit, not a bottle-keeping service."
+                  },
+                  {
+                    "name": "赤兎馬（グラス）",
+                    "price": 1000,
+                    "note": "Tax included; bottle and glass quantities distinguished. Shochu bottles are finish-on-visit, not a bottle-keeping service."
+                  },
+                  {
+                    "name": "赤兎馬（ボトル）",
+                    "price": 10000,
+                    "note": "Tax included; bottle and glass quantities distinguished. Shochu bottles are finish-on-visit, not a bottle-keeping service."
+                  },
+                  {
+                    "name": "ウーロン茶",
+                    "price": 500,
+                    "note": "Tax included; bottle and glass quantities distinguished. Shochu bottles are finish-on-visit, not a bottle-keeping service."
+                  },
+                  {
+                    "name": "緑茶",
+                    "price": 500,
+                    "note": "Tax included; bottle and glass quantities distinguished. Shochu bottles are finish-on-visit, not a bottle-keeping service."
+                  },
+                  {
+                    "name": "ジンジャーエール",
+                    "price": 550,
+                    "note": "Tax included; bottle and glass quantities distinguished. Shochu bottles are finish-on-visit, not a bottle-keeping service."
+                  },
+                  {
+                    "name": "コカ・コーラ",
+                    "price": 550,
+                    "note": "Tax included; bottle and glass quantities distinguished. Shochu bottles are finish-on-visit, not a bottle-keeping service."
+                  },
+                  {
+                    "name": "オレンジジュース",
+                    "price": 550,
+                    "note": "Tax included; bottle and glass quantities distinguished. Shochu bottles are finish-on-visit, not a bottle-keeping service."
+                  },
+                  {
+                    "name": "りんごジュース",
+                    "price": 550,
+                    "note": "Tax included; bottle and glass quantities distinguished. Shochu bottles are finish-on-visit, not a bottle-keeping service."
+                  }
+                ],
+                "note": "Independent branch document checked; no cross-branch drinks tariff copied. Meieki and Tenpaku refer to a separate bottle-wine list which is not linked; no names/prices inferred."
+              },
+              {
+                "label": "Unafuji Meieki — autumn2026 evening courses",
+                "url": "https://sumiyaki-unafuji.com/information/2026_autumn/",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "秋のコース",
+                    "price": 8800,
+                    "note": "Evening from September26,2026: seasonal five-appetizer plate,sashimi3,shirayaki,autumn chawanmushi,venison loin cutlet,small eel bowl or hitsumabushi,LaFrance sorbet; ingredients may change."
+                  },
+                  {
+                    "name": "秋のコース 鍋付き",
+                    "price": 11000,
+                    "note": "Autumn course plus Nagoya Cochin mizutaki; evening, advance booking; ingredient-dependent ending, no fixed end date published."
+                  }
+                ],
+                "note": "Tax included. Published September18,start September26,2026,until ingredients run out or next course begins; no fixed final date. Reserve by previous day. Operator minimum3for Meieki/Tenpaku; Tenpaku managed listings say2general/4private, so confirm party size. Shirakabe general minimum2,private3. Room fees/time limits extra as applicable. No dated Specials membership is invented."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://sumiyaki-unafuji.com/shops/nagoya-ekimae/",
+            "name": "Sumiyaki Unafuji — Meieki",
+            "checkedAt": "2026-10-19",
+            "websiteUrl": "https://sumiyaki-unafuji.com/shops/nagoya-ekimae/",
+            "phone": "052-589-4888",
+            "openingHours": [
+              {
+                "days": "Daily, except irregular closures",
+                "hours": "11:00–21:00; last order20:30"
+              }
+            ],
+            "detailsSourceUrl": "https://sumiyaki-unafuji.com/shops/nagoya-ekimae/",
+            "additionalSources": [
+              {
+                "label": "Contemporary branch opening and firsthand dining feature",
+                "url": "https://jouhou.nagoya/unafuji-meieki/"
+              },
+              {
+                "label": "Exact managed branch opening/current conditions",
+                "url": "https://tabelog.com/aichi/A2301/A230101/23081097/"
+              },
+              {
+                "label": "Exact branch Japanese menu",
+                "url": "https://sumiyaki-unafuji.com/wp-content/uploads/2025/09/menu_jp-5.pdf"
+              },
+              {
+                "label": "Current operator autumn courses and eligibility",
+                "url": "https://sumiyaki-unafuji.com/information/2026_autumn/"
+              }
+            ],
+            "hoursNote": "Continuous11:00–21:00service; last order20:30. Lunch private room90minutes¥1,500; dinner120minutes¥3,000. Step-free access listed; no dedicated parking per managed listing. Cards,e-money,QRpayment and takeaway/delivery listed. Private room cancellation3days through previous day50%of room fee; same day food/room100%. Do not transfer Honten’s2026Hyakumeiten recognition to this branch. Autumn minimum-party discrepancy and seasonal ending require direct confirmation; courses saved as menu evidence, without a fabricated expiry or discount.",
+            "reservationUrl": "https://booking.resebook.jp/webrsv/plan_search/s014035601/24111?isfixshop=true"
+          },
+          "tile": {
+            "regionSlug": "nagoya",
+            "kind": "top",
+            "slug": "japan97-meieki",
+            "name": "Sumiyaki Unafuji — Meieki",
+            "neighborhood": "Meieki / Nagoya Mitsui Building North",
+            "cuisine": "Japanese / Eel",
+            "description": "The Nagoya Station branch of Unafuji, with an underground timber dining room, counter seats, eel bowls and a distinct drinks tariff.",
+            "address": "B1 Nagoya Mitsui Building North,4-8-18 Meieki,Nakamura-ku,Nagoya",
+            "websiteUrl": "https://sumiyaki-unafuji.com/shops/nagoya-ekimae/",
+            "checkedAt": "2026-10-19",
+            "recognition": "Nagoya Jouhou branch-specific dining recommendation",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-19/batch97-meieki-1-b04cc8d49999c387.webp",
+            "imageCredit": "Sumiyaki Unafuji / Kaburaya Group",
+            "imageSourceUrl": "https://sumiyaki-unafuji.com/shops/nagoya-ekimae/",
+            "imageNote": "Meieki branch entrance in Nagoya Mitsui Building North B1.",
+            "openingConfirmed": true,
+            "day": "2022-06-19"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "originalUrl": "https://sumiyaki-unafuji.com/wp-content/uploads/2025/09/main-5.jpg",
+          "sourcePage": "https://sumiyaki-unafuji.com/shops/nagoya-ekimae/",
+          "credit": "Sumiyaki Unafuji / Kaburaya Group",
+          "note": "Meieki branch entrance in Nagoya Mitsui Building North B1.",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-19/batch97-meieki-1-b04cc8d49999c387.webp",
+          "sha256": "b04cc8d49999c387846f0c29fd1cff9625b3783d55dc70a6e255bf6013d10099",
+          "width": 1200,
+          "height": 800
+        },
+        {
+          "originalUrl": "https://sumiyaki-unafuji.com/wp-content/uploads/2025/09/01-5-1024x683.jpg",
+          "sourcePage": "https://sumiyaki-unafuji.com/shops/nagoya-ekimae/",
+          "credit": "Sumiyaki Unafuji / Kaburaya Group",
+          "note": "Meieki private dining room.",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-19/batch97-meieki-2-44a9667b1f7f71be.webp",
+          "sha256": "44a9667b1f7f71bee0d6ba8befe1908176eaae67e2a5dd1e430ba06f6edf6123",
+          "width": 1024,
+          "height": 683
+        },
+        {
+          "originalUrl": "https://sumiyaki-unafuji.com/wp-content/uploads/2025/09/02-5-1024x683.jpg",
+          "sourcePage": "https://sumiyaki-unafuji.com/shops/nagoya-ekimae/",
+          "credit": "Sumiyaki Unafuji / Kaburaya Group",
+          "note": "Meieki communal wooden table.",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-19/batch97-meieki-3-8ae2ff2dddeb089e.webp",
+          "sha256": "8ae2ff2dddeb089efe213b1a47524566344c5a93be867962820a4b7f1791141c",
+          "width": 1024,
+          "height": 683
+        },
+        {
+          "originalUrl": "https://sumiyaki-unafuji.com/wp-content/uploads/2025/09/03-5-1024x683.jpg",
+          "sourcePage": "https://sumiyaki-unafuji.com/shops/nagoya-ekimae/",
+          "credit": "Sumiyaki Unafuji / Kaburaya Group",
+          "note": "Meieki counter seating.",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-19/batch97-meieki-4-44b3162bac3f1557.webp",
+          "sha256": "44b3162bac3f15578444c9715dd93a94e2a58d41b254d4c8023719822329b6c5",
+          "width": 1024,
+          "height": 683
+        }
+      ]
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Sumiyaki Unafuji — Tenpaku Bettei Opens 2021-03-31",
+        "description": "Charcoal eel in a restored Taisho-era house and garden in Tenpaku, with substantial eel dishes and a branch-only children’s set.",
+        "sourceUrl": "https://sumiyaki-unafuji.com/shops/tenpaku/",
+        "address": "2-614 Sugata,Tenpaku-ku,Nagoya",
+        "productName": "Sumiyaki Unafuji — Tenpaku Bettei",
+        "utcStartDateTime": "2021-03-31T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "Exact managed branch opening field and contemporary Nagoya Jouhou branch feature independently agree on 2021-03-31. Original Shirokane1995date and host building age are not substituted.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Nagoya",
+          "Japan",
+          "Tenpaku / Sugata",
+          "Japanese / Eel"
+        ],
+        "longFormSummary": "<p>Charcoal eel in a restored Taisho-era house and garden in Tenpaku, with substantial eel dishes and a branch-only children’s set.<cite data-ref=\"https://sumiyaki-unafuji.com/shops/tenpaku/\"></cite></p><p>Exact managed branch opening field and contemporary Nagoya Jouhou branch feature independently agree on 2021-03-31. Original Shirokane1995date and host building age are not substituted.</p>",
+        "references": [
+          {
+            "url": "https://sumiyaki-unafuji.com/shops/tenpaku/",
+            "title": "Sumiyaki Unafuji — Tenpaku Bettei — operator",
+            "confidence": 90,
+            "reasoning": "Sumiyaki Unafuji — Tenpaku Bettei — operator"
+          },
+          {
+            "url": "https://jouhou.nagoya/unafuji-tenpaku/",
+            "title": "Contemporary branch opening and firsthand dining feature",
+            "confidence": 90,
+            "reasoning": "Contemporary branch opening and firsthand dining feature"
+          },
+          {
+            "url": "https://tabelog.com/aichi/A2301/A230111/23076915/",
+            "title": "Exact managed branch opening/current conditions",
+            "confidence": 90,
+            "reasoning": "Exact managed branch opening/current conditions"
+          },
+          {
+            "url": "https://sumiyaki-unafuji.com/wp-content/uploads/2025/09/menu_jp-3.pdf",
+            "title": "Exact branch Japanese menu",
+            "confidence": 90,
+            "reasoning": "Exact branch Japanese menu"
+          },
+          {
+            "url": "https://sumiyaki-unafuji.com/information/2026_autumn/",
+            "title": "Current operator autumn courses and eligibility",
+            "confidence": 90,
+            "reasoning": "Current operator autumn courses and eligibility"
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://sumiyaki-unafuji.com/shops/tenpaku/",
+          "menu": {
+            "pinSourceUrl": "https://sumiyaki-unafuji.com/shops/tenpaku/",
+            "name": "Sumiyaki Unafuji — Tenpaku Bettei",
+            "checkedAt": "2026-10-19",
+            "menus": [
+              {
+                "label": "Unafuji Tenpaku Bettei — 御膳 (PDF page1)",
+                "url": "https://sumiyaki-unafuji.com/wp-content/uploads/2025/09/menu_jp-3.pdf",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "小うなぎ膳",
+                    "price": 5750,
+                    "note": "Includes seasonal3appetizers,sashimi3and chawanmushi with the specified eel/rice and accompaniments; seasonal contents may change."
+                  },
+                  {
+                    "name": "上膳（上うなぎ丼または上ひつまぶし）",
+                    "price": 7950,
+                    "note": "Includes seasonal3appetizers,sashimi3and chawanmushi with the specified eel/rice and accompaniments; seasonal contents may change."
+                  },
+                  {
+                    "name": "長焼き膳",
+                    "price": 7950,
+                    "note": "Includes seasonal3appetizers,sashimi3and chawanmushi with the specified eel/rice and accompaniments; seasonal contents may change."
+                  }
+                ],
+                "note": "Current branch-linked PDF; all prices tax included. Prices revised April2025; current link checked October19,2026."
+              },
+              {
+                "label": "Unafuji Tenpaku Bettei — うなぎ丼 (PDF page2)",
+                "url": "https://sumiyaki-unafuji.com/wp-content/uploads/2025/09/menu_jp-3.pdf",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "小うなぎ丼",
+                    "price": 3440,
+                    "note": "Tax included; usual rice300g, small rice ¥50less. Bowls include uzaku,soup and pickles; liver version limited."
+                  },
+                  {
+                    "name": "うなぎ丼",
+                    "price": 4910,
+                    "note": "Tax included; usual rice300g, small rice ¥50less. Bowls include uzaku,soup and pickles; liver version limited."
+                  },
+                  {
+                    "name": "上うなぎ丼",
+                    "price": 5640,
+                    "note": "Tax included; usual rice300g, small rice ¥50less. Bowls include uzaku,soup and pickles; liver version limited."
+                  },
+                  {
+                    "name": "肝入り上うなぎ丼",
+                    "price": 7390,
+                    "note": "Tax included; usual rice300g, small rice ¥50less. Bowls include uzaku,soup and pickles; liver version limited."
+                  },
+                  {
+                    "name": "追加きざみわさび",
+                    "price": 120,
+                    "note": "Tax included; usual rice300g, small rice ¥50less. Bowls include uzaku,soup and pickles; liver version limited."
+                  },
+                  {
+                    "name": "ご飯大盛への変更",
+                    "price": 150,
+                    "note": "Tax included; usual rice300g, small rice ¥50less. Bowls include uzaku,soup and pickles; liver version limited."
+                  }
+                ],
+                "note": "Current branch-linked PDF; all prices tax included. Prices revised April2025; current link checked October19,2026."
+              },
+              {
+                "label": "Unafuji Tenpaku Bettei — うな重 (PDF page3)",
+                "url": "https://sumiyaki-unafuji.com/wp-content/uploads/2025/09/menu_jp-3.pdf",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "上うな重",
+                    "price": 5640,
+                    "note": "Tax included; liver versions limited; includes uzaku,soup,pickles. Rice normally300g; large+¥150/small−¥50."
+                  },
+                  {
+                    "name": "肝入り上うな重",
+                    "price": 7390,
+                    "note": "Tax included; liver versions limited; includes uzaku,soup,pickles. Rice normally300g; large+¥150/small−¥50."
+                  },
+                  {
+                    "name": "特上うな重",
+                    "price": 7840,
+                    "note": "Tax included; liver versions limited; includes uzaku,soup,pickles. Rice normally300g; large+¥150/small−¥50."
+                  },
+                  {
+                    "name": "肝入り特上うな重",
+                    "price": 9590,
+                    "note": "Tax included; liver versions limited; includes uzaku,soup,pickles. Rice normally300g; large+¥150/small−¥50."
+                  }
+                ],
+                "note": "Current branch-linked PDF; all prices tax included. Prices revised April2025; current link checked October19,2026."
+              },
+              {
+                "label": "Unafuji Tenpaku Bettei — ひつまぶし (PDF page4)",
+                "url": "https://sumiyaki-unafuji.com/wp-content/uploads/2025/09/menu_jp-3.pdf",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "上ひつまぶし",
+                    "price": 5640,
+                    "note": "Tax included; liver versions limited. Additional set includes soup,broth,condiments,pickles and tea. Rice normally300g; large+¥150/small−¥50."
+                  },
+                  {
+                    "name": "肝入り上ひつまぶし",
+                    "price": 7390,
+                    "note": "Tax included; liver versions limited. Additional set includes soup,broth,condiments,pickles and tea. Rice normally300g; large+¥150/small−¥50."
+                  },
+                  {
+                    "name": "特上ひつまぶし",
+                    "price": 7840,
+                    "note": "Tax included; liver versions limited. Additional set includes soup,broth,condiments,pickles and tea. Rice normally300g; large+¥150/small−¥50."
+                  },
+                  {
+                    "name": "肝入り特上ひつまぶし",
+                    "price": 9590,
+                    "note": "Tax included; liver versions limited. Additional set includes soup,broth,condiments,pickles and tea. Rice normally300g; large+¥150/small−¥50."
+                  },
+                  {
+                    "name": "特大ひつまぶし（3〜4人前）",
+                    "price": 16500,
+                    "note": "Tax included; liver versions limited. Additional set includes soup,broth,condiments,pickles and tea. Rice normally300g; large+¥150/small−¥50."
+                  },
+                  {
+                    "name": "追加まぶしセット",
+                    "price": 600,
+                    "note": "Tax included; liver versions limited. Additional set includes soup,broth,condiments,pickles and tea. Rice normally300g; large+¥150/small−¥50."
+                  }
+                ],
+                "note": "Current branch-linked PDF; all prices tax included. Prices revised April2025; current link checked October19,2026."
+              },
+              {
+                "label": "Unafuji Tenpaku Bettei — 定食と追加 (PDF page5)",
+                "url": "https://sumiyaki-unafuji.com/wp-content/uploads/2025/09/menu_jp-3.pdf",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "長焼き定食",
+                    "price": 5840,
+                    "note": "Tax included. Sets include chawanmushi,uzaku,pickles,soup and rice; rice refill free. Wild eel priced at market, not a fabricated fixed amount."
+                  },
+                  {
+                    "name": "白焼き定食",
+                    "price": 5840,
+                    "note": "Tax included. Sets include chawanmushi,uzaku,pickles,soup and rice; rice refill free. Wild eel priced at market, not a fabricated fixed amount."
+                  },
+                  {
+                    "name": "天の青うなぎ（うなぎのみ・限定）",
+                    "price": 16000,
+                    "note": "Tax included. Sets include chawanmushi,uzaku,pickles,soup and rice; rice refill free. Wild eel priced at market, not a fabricated fixed amount."
+                  },
+                  {
+                    "name": "天然うなぎ（1尾・限定）",
+                    "priceLabel": "Market price (時価)",
+                    "note": "Tax included. Sets include chawanmushi,uzaku,pickles,soup and rice; rice refill free. Wild eel priced at market, not a fabricated fixed amount."
+                  },
+                  {
+                    "name": "ご飯セット（ご飯180g・吸物・漬物）",
+                    "price": 800,
+                    "note": "Tax included. Sets include chawanmushi,uzaku,pickles,soup and rice; rice refill free. Wild eel priced at market, not a fabricated fixed amount."
+                  },
+                  {
+                    "name": "ご飯",
+                    "price": 300,
+                    "note": "Tax included. Sets include chawanmushi,uzaku,pickles,soup and rice; rice refill free. Wild eel priced at market, not a fabricated fixed amount."
+                  },
+                  {
+                    "name": "蛤のお吸い物",
+                    "price": 400,
+                    "note": "Tax included. Sets include chawanmushi,uzaku,pickles,soup and rice; rice refill free. Wild eel priced at market, not a fabricated fixed amount."
+                  }
+                ],
+                "note": "Current branch-linked PDF; all prices tax included. Prices revised April2025; current link checked October19,2026."
+              },
+              {
+                "label": "Unafuji Tenpaku Bettei — 一品料理・刺身・甘味 (PDF page6)",
+                "url": "https://sumiyaki-unafuji.com/wp-content/uploads/2025/09/menu_jp-3.pdf",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "長焼き",
+                    "price": 4400,
+                    "note": "Tax included. Liver limited. Seasonal photographs illustrate the named item; actual garnish/fish can change."
+                  },
+                  {
+                    "name": "白焼き",
+                    "price": 4400,
+                    "note": "Tax included. Liver limited. Seasonal photographs illustrate the named item; actual garnish/fish can change."
+                  },
+                  {
+                    "name": "肝焼き",
+                    "price": 1750,
+                    "note": "Tax included. Liver limited. Seasonal photographs illustrate the named item; actual garnish/fish can change."
+                  },
+                  {
+                    "name": "うまき",
+                    "price": 1680,
+                    "note": "Tax included. Liver limited. Seasonal photographs illustrate the named item; actual garnish/fish can change."
+                  },
+                  {
+                    "name": "うざく",
+                    "price": 1680,
+                    "note": "Tax included. Liver limited. Seasonal photographs illustrate the named item; actual garnish/fish can change."
+                  },
+                  {
+                    "name": "うなぎの燻製",
+                    "price": 1740,
+                    "note": "Tax included. Liver limited. Seasonal photographs illustrate the named item; actual garnish/fish can change."
+                  },
+                  {
+                    "name": "うなぎの枕",
+                    "price": 1480,
+                    "note": "Tax included. Liver limited. Seasonal photographs illustrate the named item; actual garnish/fish can change."
+                  },
+                  {
+                    "name": "うなぎの茶碗蒸し",
+                    "price": 1350,
+                    "note": "Tax included. Liver limited. Seasonal photographs illustrate the named item; actual garnish/fish can change."
+                  },
+                  {
+                    "name": "うなぎの骨せんべい",
+                    "price": 880,
+                    "note": "Tax included. Liver limited. Seasonal photographs illustrate the named item; actual garnish/fish can change."
+                  },
+                  {
+                    "name": "うな富士盛り（三種）",
+                    "price": 2280,
+                    "note": "Tax included. Liver limited. Seasonal photographs illustrate the named item; actual garnish/fish can change."
+                  },
+                  {
+                    "name": "うな富士盛り（五種）",
+                    "price": 3500,
+                    "note": "Tax included. Liver limited. Seasonal photographs illustrate the named item; actual garnish/fish can change."
+                  },
+                  {
+                    "name": "アイス 抹茶",
+                    "price": 480,
+                    "note": "Tax included. Liver limited. Seasonal photographs illustrate the named item; actual garnish/fish can change."
+                  },
+                  {
+                    "name": "アイス ほうじ茶",
+                    "price": 480,
+                    "note": "Tax included. Liver limited. Seasonal photographs illustrate the named item; actual garnish/fish can change."
+                  },
+                  {
+                    "name": "アイス バニラ",
+                    "price": 480,
+                    "note": "Tax included. Liver limited. Seasonal photographs illustrate the named item; actual garnish/fish can change."
+                  }
+                ],
+                "note": "Current branch-linked PDF; all prices tax included. Prices revised April2025; current link checked October19,2026."
+              },
+              {
+                "label": "Unafuji Tenpaku Bettei — 持ち帰り (PDF page7)",
+                "url": "https://sumiyaki-unafuji.com/wp-content/uploads/2025/09/menu_jp-3.pdf",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "持ち帰り うなぎ丼 梅",
+                    "price": 3270,
+                    "note": "Tax included; takeaway only, not dine-in prices."
+                  },
+                  {
+                    "name": "持ち帰り うなぎ丼 竹",
+                    "price": 3960,
+                    "note": "Tax included; takeaway only, not dine-in prices."
+                  },
+                  {
+                    "name": "持ち帰り うなぎ丼 松",
+                    "price": 4650,
+                    "note": "Tax included; takeaway only, not dine-in prices."
+                  },
+                  {
+                    "name": "持ち帰り 上ひつまぶし",
+                    "price": 5000,
+                    "note": "Tax included; takeaway only, not dine-in prices."
+                  },
+                  {
+                    "name": "持ち帰り 特上ひつまぶし",
+                    "price": 7070,
+                    "note": "Tax included; takeaway only, not dine-in prices."
+                  },
+                  {
+                    "name": "持ち帰り 長焼き",
+                    "price": 4400,
+                    "note": "Tax included; takeaway only, not dine-in prices."
+                  },
+                  {
+                    "name": "持ち帰り 白焼き",
+                    "price": 4400,
+                    "note": "Tax included; takeaway only, not dine-in prices."
+                  },
+                  {
+                    "name": "持ち帰り うまき",
+                    "price": 1680,
+                    "note": "Tax included; takeaway only, not dine-in prices."
+                  },
+                  {
+                    "name": "持ち帰り うなぎの枕（蒲焼き・白焼き）",
+                    "price": 2950,
+                    "note": "Tax included; takeaway only, not dine-in prices."
+                  },
+                  {
+                    "name": "持ち帰り うなぎの骨",
+                    "price": 1250,
+                    "note": "Tax included; takeaway only, not dine-in prices."
+                  },
+                  {
+                    "name": "持ち帰り お吸い物",
+                    "price": 400,
+                    "note": "Tax included; takeaway only, not dine-in prices."
+                  }
+                ],
+                "note": "Current branch-linked PDF; all prices tax included. Prices revised April2025; current link checked October19,2026."
+              },
+              {
+                "label": "Unafuji Tenpaku Bettei — drinks (PDF pages8–9)",
+                "url": "https://sumiyaki-unafuji.com/wp-content/uploads/2025/09/menu_jp-3.pdf",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "アサヒスーパードライ（生）",
+                    "price": 780,
+                    "note": "Tax included; bottle and glass quantities distinguished. Shochu bottles are finish-on-visit, not a bottle-keeping service."
+                  },
+                  {
+                    "name": "アサヒスーパードライ（中瓶）",
+                    "price": 830,
+                    "note": "Tax included; bottle and glass quantities distinguished. Shochu bottles are finish-on-visit, not a bottle-keeping service."
+                  },
+                  {
+                    "name": "キリンクラシックラガー（中瓶）",
+                    "price": 830,
+                    "note": "Tax included; bottle and glass quantities distinguished. Shochu bottles are finish-on-visit, not a bottle-keeping service."
+                  },
+                  {
+                    "name": "サッポロ黒ラベル（中瓶）",
+                    "price": 830,
+                    "note": "Tax included; bottle and glass quantities distinguished. Shochu bottles are finish-on-visit, not a bottle-keeping service."
+                  },
+                  {
+                    "name": "サントリープレミアムモルツ（中瓶）",
+                    "price": 830,
+                    "note": "Tax included; bottle and glass quantities distinguished. Shochu bottles are finish-on-visit, not a bottle-keeping service."
+                  },
+                  {
+                    "name": "アサヒドライゼロ（小瓶）",
+                    "price": 680,
+                    "note": "Tax included; bottle and glass quantities distinguished. Shochu bottles are finish-on-visit, not a bottle-keeping service."
+                  },
+                  {
+                    "name": "ブラックニッカハイボール",
+                    "price": 750,
+                    "note": "Tax included; bottle and glass quantities distinguished. Shochu bottles are finish-on-visit, not a bottle-keeping service."
+                  },
+                  {
+                    "name": "ジョニーウォーカーブラックラベル12年",
+                    "price": 1100,
+                    "note": "Tax included; bottle and glass quantities distinguished. Shochu bottles are finish-on-visit, not a bottle-keeping service."
+                  },
+                  {
+                    "name": "知多",
+                    "price": 1200,
+                    "note": "Tax included; bottle and glass quantities distinguished. Shochu bottles are finish-on-visit, not a bottle-keeping service."
+                  },
+                  {
+                    "name": "久寿玉 超辛口（燗）",
+                    "price": 950,
+                    "note": "Tax included; bottle and glass quantities distinguished. Shochu bottles are finish-on-visit, not a bottle-keeping service."
+                  },
+                  {
+                    "name": "ほしいずみ 純米",
+                    "price": 950,
+                    "note": "Tax included; bottle and glass quantities distinguished. Shochu bottles are finish-on-visit, not a bottle-keeping service."
+                  },
+                  {
+                    "name": "恵那山 純米吟醸",
+                    "price": 1200,
+                    "note": "Tax included; bottle and glass quantities distinguished. Shochu bottles are finish-on-visit, not a bottle-keeping service."
+                  },
+                  {
+                    "name": "久寿玉 超辛口（冷）",
+                    "price": 950,
+                    "note": "Tax included; bottle and glass quantities distinguished. Shochu bottles are finish-on-visit, not a bottle-keeping service."
+                  },
+                  {
+                    "name": "百十郎 赤面 GOLD純米",
+                    "price": 900,
+                    "note": "Tax included; bottle and glass quantities distinguished. Shochu bottles are finish-on-visit, not a bottle-keeping service."
+                  },
+                  {
+                    "name": "百十郎 黒面 純米大吟醸",
+                    "price": 1200,
+                    "note": "Tax included; bottle and glass quantities distinguished. Shochu bottles are finish-on-visit, not a bottle-keeping service."
+                  },
+                  {
+                    "name": "蓬莱泉 純米吟醸",
+                    "price": 900,
+                    "note": "Tax included; bottle and glass quantities distinguished. Shochu bottles are finish-on-visit, not a bottle-keeping service."
+                  },
+                  {
+                    "name": "酔鯨 吟麗 純米吟醸",
+                    "price": 1100,
+                    "note": "Tax included; bottle and glass quantities distinguished. Shochu bottles are finish-on-visit, not a bottle-keeping service."
+                  },
+                  {
+                    "name": "レモンハイ",
+                    "price": 700,
+                    "note": "Tax included; bottle and glass quantities distinguished. Shochu bottles are finish-on-visit, not a bottle-keeping service."
+                  },
+                  {
+                    "name": "ウーロンハイ",
+                    "price": 650,
+                    "note": "Tax included; bottle and glass quantities distinguished. Shochu bottles are finish-on-visit, not a bottle-keeping service."
+                  },
+                  {
+                    "name": "緑茶ハイ",
+                    "price": 650,
+                    "note": "Tax included; bottle and glass quantities distinguished. Shochu bottles are finish-on-visit, not a bottle-keeping service."
+                  },
+                  {
+                    "name": "梅暦5年貯蔵",
+                    "price": 700,
+                    "note": "Tax included; bottle and glass quantities distinguished. Shochu bottles are finish-on-visit, not a bottle-keeping service."
+                  },
+                  {
+                    "name": "スパークリングワイン（グラス）",
+                    "price": 850,
+                    "note": "Tax included; bottle and glass quantities distinguished. Shochu bottles are finish-on-visit, not a bottle-keeping service."
+                  },
+                  {
+                    "name": "ハウスワイン赤（グラス）",
+                    "price": 850,
+                    "note": "Tax included; bottle and glass quantities distinguished. Shochu bottles are finish-on-visit, not a bottle-keeping service."
+                  },
+                  {
+                    "name": "ハウスワイン白（グラス）",
+                    "price": 850,
+                    "note": "Tax included; bottle and glass quantities distinguished. Shochu bottles are finish-on-visit, not a bottle-keeping service."
+                  },
+                  {
+                    "name": "白水（グラス）",
+                    "price": 600,
+                    "note": "Tax included; bottle and glass quantities distinguished. Shochu bottles are finish-on-visit, not a bottle-keeping service."
+                  },
+                  {
+                    "name": "白水（ボトル）",
+                    "price": 6000,
+                    "note": "Tax included; bottle and glass quantities distinguished. Shochu bottles are finish-on-visit, not a bottle-keeping service."
+                  },
+                  {
+                    "name": "つくし黒（グラス）",
+                    "price": 650,
+                    "note": "Tax included; bottle and glass quantities distinguished. Shochu bottles are finish-on-visit, not a bottle-keeping service."
+                  },
+                  {
+                    "name": "つくし黒（ボトル）",
+                    "price": 6500,
+                    "note": "Tax included; bottle and glass quantities distinguished. Shochu bottles are finish-on-visit, not a bottle-keeping service."
+                  },
+                  {
+                    "name": "一粒の麦（グラス）",
+                    "price": 750,
+                    "note": "Tax included; bottle and glass quantities distinguished. Shochu bottles are finish-on-visit, not a bottle-keeping service."
+                  },
+                  {
+                    "name": "一粒の麦（ボトル）",
+                    "price": 7500,
+                    "note": "Tax included; bottle and glass quantities distinguished. Shochu bottles are finish-on-visit, not a bottle-keeping service."
+                  },
+                  {
+                    "name": "黒霧島（グラス）",
+                    "price": 750,
+                    "note": "Tax included; bottle and glass quantities distinguished. Shochu bottles are finish-on-visit, not a bottle-keeping service."
+                  },
+                  {
+                    "name": "黒霧島（ボトル）",
+                    "price": 7500,
+                    "note": "Tax included; bottle and glass quantities distinguished. Shochu bottles are finish-on-visit, not a bottle-keeping service."
+                  },
+                  {
+                    "name": "富乃宝山（グラス）",
+                    "price": 800,
+                    "note": "Tax included; bottle and glass quantities distinguished. Shochu bottles are finish-on-visit, not a bottle-keeping service."
+                  },
+                  {
+                    "name": "富乃宝山（ボトル）",
+                    "price": 8000,
+                    "note": "Tax included; bottle and glass quantities distinguished. Shochu bottles are finish-on-visit, not a bottle-keeping service."
+                  },
+                  {
+                    "name": "赤兎馬（グラス）",
+                    "price": 900,
+                    "note": "Tax included; bottle and glass quantities distinguished. Shochu bottles are finish-on-visit, not a bottle-keeping service."
+                  },
+                  {
+                    "name": "赤兎馬（ボトル）",
+                    "price": 9000,
+                    "note": "Tax included; bottle and glass quantities distinguished. Shochu bottles are finish-on-visit, not a bottle-keeping service."
+                  },
+                  {
+                    "name": "ウーロン茶",
+                    "price": 480,
+                    "note": "Tax included; bottle and glass quantities distinguished. Shochu bottles are finish-on-visit, not a bottle-keeping service."
+                  },
+                  {
+                    "name": "緑茶",
+                    "price": 480,
+                    "note": "Tax included; bottle and glass quantities distinguished. Shochu bottles are finish-on-visit, not a bottle-keeping service."
+                  },
+                  {
+                    "name": "ジンジャーエール",
+                    "price": 530,
+                    "note": "Tax included; bottle and glass quantities distinguished. Shochu bottles are finish-on-visit, not a bottle-keeping service."
+                  },
+                  {
+                    "name": "コカ・コーラ",
+                    "price": 530,
+                    "note": "Tax included; bottle and glass quantities distinguished. Shochu bottles are finish-on-visit, not a bottle-keeping service."
+                  },
+                  {
+                    "name": "オレンジジュース",
+                    "price": 530,
+                    "note": "Tax included; bottle and glass quantities distinguished. Shochu bottles are finish-on-visit, not a bottle-keeping service."
+                  },
+                  {
+                    "name": "りんごジュース",
+                    "price": 530,
+                    "note": "Tax included; bottle and glass quantities distinguished. Shochu bottles are finish-on-visit, not a bottle-keeping service."
+                  }
+                ],
+                "note": "Independent branch document checked; no cross-branch drinks tariff copied. Meieki and Tenpaku refer to a separate bottle-wine list which is not linked; no names/prices inferred."
+              },
+              {
+                "label": "Unafuji Tenpaku Bettei — autumn2026 evening courses",
+                "url": "https://sumiyaki-unafuji.com/information/2026_autumn/",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "秋のコース",
+                    "price": 8800,
+                    "note": "Evening from September26,2026: seasonal five-appetizer plate,sashimi3,shirayaki,autumn chawanmushi,venison loin cutlet,small eel bowl or hitsumabushi,LaFrance sorbet; ingredients may change."
+                  },
+                  {
+                    "name": "秋のコース 鍋付き",
+                    "price": 11000,
+                    "note": "Autumn course plus Nagoya Cochin mizutaki; evening, advance booking; ingredient-dependent ending, no fixed end date published."
+                  }
+                ],
+                "note": "Tax included. Published September18,start September26,2026,until ingredients run out or next course begins; no fixed final date. Reserve by previous day. Operator minimum3for Meieki/Tenpaku; Tenpaku managed listings say2general/4private, so confirm party size. Shirakabe general minimum2,private3. Room fees/time limits extra as applicable. No dated Specials membership is invented."
+              },
+              {
+                "label": "Unafuji Tenpaku — branch-only children’s set",
+                "url": "https://tabelog.com/aichi/A2301/A230111/23076915/",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "天白別邸限定 お子様御膳",
+                    "priceLabel": "Price not published",
+                    "note": "Elementary-school children or younger. Mini eel bowl,chawanmushi,soup,fried prawn,potato salad,fries,jelly,orange or apple juice."
+                  }
+                ],
+                "note": "Current managed branch page publishes components but no price; absent from the older PDF, retained as Price not published."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://sumiyaki-unafuji.com/shops/tenpaku/",
+            "name": "Sumiyaki Unafuji — Tenpaku Bettei",
+            "checkedAt": "2026-10-19",
+            "websiteUrl": "https://sumiyaki-unafuji.com/shops/tenpaku/",
+            "phone": "052-746-0588",
+            "openingHours": [
+              {
+                "days": "Daily lunch, except irregular closures",
+                "hours": "10:45–14:30; last order14:00"
+              },
+              {
+                "days": "Daily dinner, except irregular closures",
+                "hours": "17:00–21:00; last order20:30"
+              }
+            ],
+            "detailsSourceUrl": "https://sumiyaki-unafuji.com/shops/tenpaku/",
+            "additionalSources": [
+              {
+                "label": "Contemporary branch opening and firsthand dining feature",
+                "url": "https://jouhou.nagoya/unafuji-tenpaku/"
+              },
+              {
+                "label": "Exact managed branch opening/current conditions",
+                "url": "https://tabelog.com/aichi/A2301/A230111/23076915/"
+              },
+              {
+                "label": "Exact branch Japanese menu",
+                "url": "https://sumiyaki-unafuji.com/wp-content/uploads/2025/09/menu_jp-3.pdf"
+              },
+              {
+                "label": "Current operator autumn courses and eligibility",
+                "url": "https://sumiyaki-unafuji.com/information/2026_autumn/"
+              }
+            ],
+            "hoursNote": "Parking26spaces; private room lunch90minutes/dinner120minutes,¥1,000per room. Managed listing says room booking by phone for3or more; call to arrange. Cards,e-money,QRpayment and takeaway/delivery listed. Private room cancellation3days through previous day50%of room fee; same day food/room100%. Do not transfer Honten’s2026Hyakumeiten recognition to this branch. Autumn minimum-party discrepancy and seasonal ending require direct confirmation; courses saved as menu evidence, without a fabricated expiry or discount.",
+            "reservationUrl": "https://booking.resebook.jp/webrsv/plan_search/s014035601/24260?isfixshop=true"
+          },
+          "tile": {
+            "regionSlug": "nagoya",
+            "kind": "top",
+            "slug": "japan97-tenpaku",
+            "name": "Sumiyaki Unafuji — Tenpaku Bettei",
+            "neighborhood": "Tenpaku / Sugata",
+            "cuisine": "Japanese / Eel",
+            "description": "Charcoal eel in a restored Taisho-era house and garden in Tenpaku, with substantial eel dishes and a branch-only children’s set.",
+            "address": "2-614 Sugata,Tenpaku-ku,Nagoya",
+            "websiteUrl": "https://sumiyaki-unafuji.com/shops/tenpaku/",
+            "checkedAt": "2026-10-19",
+            "recognition": "Nagoya Jouhou branch-specific dining recommendation",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-19/batch97-tenpaku-1-87a982d460cd4da1.webp",
+            "imageCredit": "Sumiyaki Unafuji / Kaburaya Group",
+            "imageSourceUrl": "https://sumiyaki-unafuji.com/shops/tenpaku/",
+            "imageNote": "Tenpaku Bettei frontage and courtyard entrance.",
+            "openingConfirmed": true,
+            "day": "2021-03-31"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "originalUrl": "https://sumiyaki-unafuji.com/wp-content/uploads/2025/09/main-3.jpg",
+          "sourcePage": "https://sumiyaki-unafuji.com/shops/tenpaku/",
+          "credit": "Sumiyaki Unafuji / Kaburaya Group",
+          "note": "Tenpaku Bettei frontage and courtyard entrance.",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-19/batch97-tenpaku-1-87a982d460cd4da1.webp",
+          "sha256": "87a982d460cd4da10469e0285587e1461cd23c35e2418c988dfa1c7c8991b1da",
+          "width": 1200,
+          "height": 800
+        },
+        {
+          "originalUrl": "https://sumiyaki-unafuji.com/wp-content/uploads/2025/09/01-3-1024x683.jpg",
+          "sourcePage": "https://sumiyaki-unafuji.com/shops/tenpaku/",
+          "credit": "Sumiyaki Unafuji / Kaburaya Group",
+          "note": "Tenpaku timber dining room.",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-19/batch97-tenpaku-2-7f5fb8735a3a0ed3.webp",
+          "sha256": "7f5fb8735a3a0ed3fe7aac657065a7955c6ed92147c87fff1c7b16cfe64ac5ec",
+          "width": 1024,
+          "height": 683
+        },
+        {
+          "originalUrl": "https://sumiyaki-unafuji.com/wp-content/uploads/2025/09/02-3-1024x683.jpg",
+          "sourcePage": "https://sumiyaki-unafuji.com/shops/tenpaku/",
+          "credit": "Sumiyaki Unafuji / Kaburaya Group",
+          "note": "Tenpaku window-side table.",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-19/batch97-tenpaku-3-74da49d0188b4498.webp",
+          "sha256": "74da49d0188b4498c4559cdb2446ce4a181a1de1ddfb76b4891bb8d2b8a3d053",
+          "width": 1024,
+          "height": 683
+        },
+        {
+          "originalUrl": "https://sumiyaki-unafuji.com/wp-content/uploads/2025/09/03-3-1024x683.jpg",
+          "sourcePage": "https://sumiyaki-unafuji.com/shops/tenpaku/",
+          "credit": "Sumiyaki Unafuji / Kaburaya Group",
+          "note": "Tenpaku main dining room.",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-19/batch97-tenpaku-4-92bebc6c5f2bf505.webp",
+          "sha256": "92bebc6c5f2bf50545ff19b4d6b1f2bd357a6c5ad4a05aeef81a478bef4bdb75",
+          "width": 1024,
+          "height": 683
+        }
+      ]
+    }
+  ],
+  "publicationStatus": {
+    "local": "pending",
+    "production": "pending"
+  },
+  "deployment": "No deployment, build, restart or production configuration change.",
+  "researchGaps": [
+    "All Coming soon tabs remain below30; Nagoya Top reaches30if saved/public verification passes. Continue OsakaTop and other under-target sections.",
+    "Autumn2026courses: operator has no fixed final day, ending with ingredients or next seasonal menu. Meieki/Tenpaku minimum3on operator announcement versus Tenpaku managed2general/4private. Current course menus retained; fixed-expiry Specials held until eligibility/end conditions can be scheduled accurately. No arbitrary expiry invented.",
+    "Honten oversized¥9,500マルトクeel arrival date undetermined; no current-stock claim. Operator private-hire field conflicts with managed listing, so direct confirmation needed. Honten explicitly excluded from autumn courses.",
+    "Tenpaku children’s set has published components but no verified current price; includes Price not published. Meieki/Tenpaku separate bottle-wine list not linked after checking branch Japanese/globalPDF,operator menu,managed menus and booking sources. No Shirakabe bottle list borrowed.",
+    "Source dates/prices: current branch PDFs linked in2026still print April2025revision. Contemporary2021/2022reporting supports branch dates/independent selection, not current historical menu prices or hours. Only Honten gets its own2026Hyakumeiten recognition."
+  ],
+  "held": [
+    {
+      "name": "Unafuji autumn-course Specials (three branches)",
+      "sourceUrl": "https://sumiyaki-unafuji.com/information/2026_autumn/",
+      "reason": "No fixed end date and conflicting Tenpaku party minimums; menus/prices retained in ordinary runtime content without claiming a discount or fabricating schedule expiry."
+    }
+  ],
+  "photoReview": {
+    "downloadedCandidates": 16,
+    "selectedPhotos": 16,
+    "method": "Sixteen exact-branch gallery photographs downloaded by plain curl, decoded and visually reviewed; captions distinguish Honten,Shirakabe,Meieki and Tenpaku. Four branch-linked PDFs rendered with Poppler. Pages1–7of three sister-branch documents verified pixel-identical by SHA256; all food/takeaway and each distinct drinks page visually read. Original branch has a different two-page menu. Sixteen immutable Azure blobs publicly fetched and SHA256/decode verified before use."
+  }
+}

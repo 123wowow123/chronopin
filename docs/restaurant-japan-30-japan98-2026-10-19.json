@@ -1,0 +1,945 @@
+{
+  "batch": 98,
+  "checkedAt": "2026-10-19",
+  "counts": {
+    "venues": 2,
+    "newPins": 2,
+    "menuEntries": 59,
+    "offerMenuEntries": 4,
+    "galleryLinks": 10,
+    "newGuideMemberships": 3,
+    "newSpecialVenues": 1
+  },
+  "entries": [
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "La Bécasse — Hiranomachi Opens 2014-10-04",
+        "description": "Yoshinori Shibuya’s intimate Hiranomachi French dining room, with changing market-driven omakase and an October36th-anniversary course.",
+        "sourceUrl": "https://www.labecasse1990.com/",
+        "address": "1F Yuki Building,3-3-9 Hiranomachi,Chuo-ku,Osaka",
+        "productName": "La Bécasse — Hiranomachi",
+        "utcStartDateTime": "2014-10-04T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "Restaurant’s own architect JA laboratory explicitly dates this12-seat relocated Hiranomachi venue to October4,2014. Operator history and CuisineKingdom corroborate2014relocation. The1990Yotsubashi founding and2005Koraibashi move are separate.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Osaka",
+          "Japan",
+          "Yodoyabashi / Hiranomachi",
+          "French"
+        ],
+        "longFormSummary": "<p>Yoshinori Shibuya’s intimate Hiranomachi French dining room, with changing market-driven omakase and an October36th-anniversary course.<cite data-ref=\"https://www.labecasse1990.com/\"></cite></p><p>Restaurant’s own architect JA laboratory explicitly dates this12-seat relocated Hiranomachi venue to October4,2014. Operator history and CuisineKingdom corroborate2014relocation. The1990Yotsubashi founding and2005Koraibashi move are separate.</p>",
+        "references": [
+          {
+            "url": "https://www.labecasse1990.com/",
+            "title": "La Bécasse — Hiranomachi — operator",
+            "confidence": 90,
+            "reasoning": "La Bécasse — Hiranomachi — operator"
+          },
+          {
+            "url": "https://www.ja-labo.jp/works/la-becasse/",
+            "title": "Exact relocated branch opening: architect",
+            "confidence": 90,
+            "reasoning": "Exact relocated branch opening: architect"
+          },
+          {
+            "url": "https://labecasse1990.seesaa.net/article/521243849.html",
+            "title": "Operator current course changes effective October1",
+            "confidence": 90,
+            "reasoning": "Operator current course changes effective October1"
+          },
+          {
+            "url": "https://www.labecasse1990.com/menu/",
+            "title": "Operator current menu and specialty examples",
+            "confidence": 90,
+            "reasoning": "Operator current menu and specialty examples"
+          },
+          {
+            "url": "https://www.labecasse1990.com/access/",
+            "title": "Current branch hours",
+            "confidence": 90,
+            "reasoning": "Current branch hours"
+          },
+          {
+            "url": "https://labecasse1990.seesaa.net/article/521417964.html",
+            "title": "October36th-anniversary dated course",
+            "confidence": 90,
+            "reasoning": "October36th-anniversary dated course"
+          },
+          {
+            "url": "https://tabelog.com/osaka/A2701/A270106/27001358/",
+            "title": "Tabelog exact branch independent selection",
+            "confidence": 90,
+            "reasoning": "Tabelog exact branch independent selection"
+          },
+          {
+            "url": "https://tabelog.com/osaka/A2701/A270106/27001358/party/",
+            "title": "Current managed booking courses",
+            "confidence": 90,
+            "reasoning": "Current managed booking courses"
+          },
+          {
+            "url": "https://cuisine-kingdom.com/yoshinorishibuya/",
+            "title": "CuisineKingdom independent chef feature",
+            "confidence": 90,
+            "reasoning": "CuisineKingdom independent chef feature"
+          },
+          {
+            "url": "https://www.labecasse1990.com/recipe/",
+            "title": "Archival2019October examples",
+            "confidence": 90,
+            "reasoning": "Archival2019October examples"
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://www.labecasse1990.com/",
+          "menu": {
+            "pinSourceUrl": "https://www.labecasse1990.com/",
+            "name": "La Bécasse — Hiranomachi",
+            "checkedAt": "2026-10-19",
+            "menus": [
+              {
+                "label": "La Bécasse — current chef’s courses",
+                "url": "https://labecasse1990.seesaa.net/article/521243849.html",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "シェフおまかせランチ・ベーシック",
+                    "price": 20000,
+                    "note": "Before consumption tax and10%service. Current from October1,2026; former¥10,000lunch ended."
+                  },
+                  {
+                    "name": "シェフおまかせランチ・グレードアップ",
+                    "price": 30000,
+                    "note": "Before tax and10%service. Same number of courses, more premium ingredients."
+                  },
+                  {
+                    "name": "シェフおまかせディナー",
+                    "price": 30000,
+                    "note": "From¥30,000before tax and10%service. Former¥20,000dinner ended October1,2026; bespoke budgets by arrangement."
+                  },
+                  {
+                    "name": "バースデイケーキ",
+                    "price": 3500,
+                    "note": "From¥3,500before tax/service per main operator menu; request on reservation."
+                  }
+                ],
+                "note": "Current operator July30announcement and menu agree on new October1baseline; no old2010HotPepperprices used."
+              },
+              {
+                "label": "La Bécasse — published signature examples",
+                "url": "https://www.labecasse1990.com/menu/",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "鮎のリエット",
+                    "priceLabel": "Price not published",
+                    "note": "Operator-published specialty example, not guaranteed in today’s omakase; request ahead. No standalone price published."
+                  },
+                  {
+                    "name": "オマールエビのサラダ",
+                    "priceLabel": "Price not published",
+                    "note": "Operator-published specialty example, not guaranteed in today’s omakase; request ahead. No standalone price published."
+                  },
+                  {
+                    "name": "仔羊のピカタ",
+                    "priceLabel": "Price not published",
+                    "note": "Operator-published specialty example, not guaranteed in today’s omakase; request ahead. No standalone price published."
+                  },
+                  {
+                    "name": "ベカス（ヤマシギ）",
+                    "priceLabel": "Price not published",
+                    "note": "Operator-published specialty example, not guaranteed in today’s omakase; request ahead. No standalone price published."
+                  }
+                ],
+                "note": "Chef prepares changing omakase and says the former fixed a la carte has ended. These named specialties have Price not published; no current game availability or anniversary-course membership inferred."
+              },
+              {
+                "label": "La Bécasse — archival October sample dishes",
+                "url": "https://www.labecasse1990.com/recipe/",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "アジのエスカベッシュ いくらソース",
+                    "priceLabel": "Price not published",
+                    "note": "Archival October2019monthly example from the operator; not a current October2026menu or anniversary-course promise."
+                  },
+                  {
+                    "name": "ブリとアーティチョーク、毛ガニのマリネ ブリのリエット添え",
+                    "priceLabel": "Price not published",
+                    "note": "Archival October2019monthly example from the operator; not a current October2026menu or anniversary-course promise."
+                  },
+                  {
+                    "name": "カキとクスクス",
+                    "priceLabel": "Price not published",
+                    "note": "Archival October2019monthly example from the operator; not a current October2026menu or anniversary-course promise."
+                  },
+                  {
+                    "name": "毛ガニのリゾット",
+                    "priceLabel": "Price not published",
+                    "note": "Archival October2019monthly example from the operator; not a current October2026menu or anniversary-course promise."
+                  },
+                  {
+                    "name": "野生のヤマウズラのショーフロワ カシューナッツソース",
+                    "priceLabel": "Price not published",
+                    "note": "Archival October2019monthly example from the operator; not a current October2026menu or anniversary-course promise."
+                  },
+                  {
+                    "name": "サワラのソテー 舞茸",
+                    "priceLabel": "Price not published",
+                    "note": "Archival October2019monthly example from the operator; not a current October2026menu or anniversary-course promise."
+                  },
+                  {
+                    "name": "アジとフェンネル、ムール貝のクリームソース",
+                    "priceLabel": "Price not published",
+                    "note": "Archival October2019monthly example from the operator; not a current October2026menu or anniversary-course promise."
+                  },
+                  {
+                    "name": "鶏とワタリガニのクネル グラタン焼き",
+                    "priceLabel": "Price not published",
+                    "note": "Archival October2019monthly example from the operator; not a current October2026menu or anniversary-course promise."
+                  },
+                  {
+                    "name": "栗のスープ、蜂蜜アイス、マロングラッセ",
+                    "priceLabel": "Price not published",
+                    "note": "Archival October2019monthly example from the operator; not a current October2026menu or anniversary-course promise."
+                  }
+                ],
+                "note": "Source archive is explicitly dated2019and retained only as sample evidence; current course changes with market supply."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://www.labecasse1990.com/",
+            "name": "La Bécasse — Hiranomachi",
+            "checkedAt": "2026-10-19",
+            "websiteUrl": "https://www.labecasse1990.com/",
+            "phone": "06-4707-0070",
+            "openingHours": [
+              {
+                "days": "Monday,Tuesday,Thursday,Friday,Saturday lunch",
+                "hours": "12:00–15:00; last order13:00"
+              },
+              {
+                "days": "Monday,Tuesday,Thursday,Friday,Saturday dinner",
+                "hours": "18:00–22:00; last order20:00"
+              },
+              {
+                "days": "Closures",
+                "hours": "Sunday and Wednesday; exceptional dated services only when separately announced"
+              }
+            ],
+            "detailsSourceUrl": "https://www.labecasse1990.com/",
+            "additionalSources": [
+              {
+                "label": "Exact relocated branch opening: architect",
+                "url": "https://www.ja-labo.jp/works/la-becasse/"
+              },
+              {
+                "label": "Operator current course changes effective October1",
+                "url": "https://labecasse1990.seesaa.net/article/521243849.html"
+              },
+              {
+                "label": "Operator current menu and specialty examples",
+                "url": "https://www.labecasse1990.com/menu/"
+              },
+              {
+                "label": "Current branch hours",
+                "url": "https://www.labecasse1990.com/access/"
+              },
+              {
+                "label": "October36th-anniversary dated course",
+                "url": "https://labecasse1990.seesaa.net/article/521417964.html"
+              },
+              {
+                "label": "Tabelog exact branch independent selection",
+                "url": "https://tabelog.com/osaka/A2701/A270106/27001358/"
+              },
+              {
+                "label": "Current managed booking courses",
+                "url": "https://tabelog.com/osaka/A2701/A270106/27001358/party/"
+              },
+              {
+                "label": "CuisineKingdom independent chef feature",
+                "url": "https://cuisine-kingdom.com/yoshinorishibuya/"
+              },
+              {
+                "label": "Archival2019October examples",
+                "url": "https://www.labecasse1990.com/recipe/"
+              }
+            ],
+            "hoursNote": "Current main access/menu and managed listing say Sunday/Wednesday closed; blog sidebar has an older Sunday/occasionalMondaycalendar. Confirm unusual dates. Operator announced October2026table rearrangement; gallery photos show the same Hiranomachi architecture but not a guaranteed current table layout. Current fixed wines/prices not published. October4specialSundaydinner is historical and fully booked, not repeated as regularSundayservice.",
+            "reservationUrl": "https://www.tablecheck.com/shops/labecasse/reserve"
+          },
+          "tile": {
+            "regionSlug": "osaka",
+            "kind": "top",
+            "slug": "japan98-becasse",
+            "name": "La Bécasse — Hiranomachi",
+            "neighborhood": "Yodoyabashi / Hiranomachi",
+            "cuisine": "French",
+            "description": "Yoshinori Shibuya’s intimate Hiranomachi French dining room, with changing market-driven omakase and an October36th-anniversary course.",
+            "address": "1F Yuki Building,3-3-9 Hiranomachi,Chuo-ku,Osaka",
+            "websiteUrl": "https://www.labecasse1990.com/",
+            "checkedAt": "2026-10-19",
+            "recognition": "Tabelog French WEST Hyakumeiten2025 selection",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-19/batch98-becasse-2-07adc55d0539d150.webp",
+            "imageCredit": "La Bécasse / Yoshinori Shibuya",
+            "imageSourceUrl": "https://www.labecasse1990.com/",
+            "imageNote": "Hiranomachi dining room in the operator gallery; table placement was revised October2026, so this is an architectural view.",
+            "openingConfirmed": true,
+            "day": "2014-10-04"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "originalUrl": "https://www.labecasse1990.com/wp-content/themes/labecasse/images/home_slide_02.jpg",
+          "sourcePage": "https://www.labecasse1990.com/",
+          "credit": "La Bécasse / Yoshinori Shibuya",
+          "note": "Hiranomachi dining room in the operator gallery; table placement was revised October2026, so this is an architectural view.",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-19/batch98-becasse-2-07adc55d0539d150.webp",
+          "sha256": "07adc55d0539d1500a324b385b8a1c4142fe38252dc7466ef9facc0c8ae72e86",
+          "width": 960,
+          "height": 480
+        },
+        {
+          "originalUrl": "https://www.labecasse1990.com/wp-content/themes/labecasse/images/home_slide_03.jpg",
+          "sourcePage": "https://www.labecasse1990.com/",
+          "credit": "La Bécasse / Yoshinori Shibuya",
+          "note": "Operator-plated food photograph, unlabelled; no dish identity or current availability inferred.",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-19/batch98-becasse-3-d45db834b0b964fb.webp",
+          "sha256": "d45db834b0b964fb8510e1025ce27547d13ad5be8508e47927850e84ba6d4cb7",
+          "width": 960,
+          "height": 480
+        },
+        {
+          "originalUrl": "https://www.labecasse1990.com/wp-content/themes/labecasse/images/home_slide_04.jpg",
+          "sourcePage": "https://www.labecasse1990.com/",
+          "credit": "La Bécasse / Yoshinori Shibuya",
+          "note": "Octagonal Hiranomachi dining room; operator announced a later October2026table arrangement.",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-19/batch98-becasse-4-874808d490858d61.webp",
+          "sha256": "874808d490858d61b5bd5f2dcea5ed340648f8b7a223b19052aefadd997dac51",
+          "width": 960,
+          "height": 480
+        },
+        {
+          "originalUrl": "https://www.labecasse1990.com/wp-content/themes/labecasse/images/home_slide_05.jpg",
+          "sourcePage": "https://www.labecasse1990.com/",
+          "credit": "La Bécasse / Yoshinori Shibuya",
+          "note": "Table setting from the restaurant’s own gallery.",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-19/batch98-becasse-5-2baa1620bc1c22f0.webp",
+          "sha256": "2baa1620bc1c22f0aebe0379cde97c5b43753c5765b4ab64168519441a4a219d",
+          "width": 960,
+          "height": 480
+        },
+        {
+          "originalUrl": "https://www.labecasse1990.com/wp-content/themes/labecasse/images/home_slide_06.jpg",
+          "sourcePage": "https://www.labecasse1990.com/",
+          "credit": "La Bécasse / Yoshinori Shibuya",
+          "note": "Hiranomachi dining-room table and leather seating.",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-19/batch98-becasse-6-c3801b2d084751af.webp",
+          "sha256": "c3801b2d084751af41b47aa40b50da4c7c48598f6b0a3977522c480a8e9e5737",
+          "width": 960,
+          "height": 480
+        },
+        {
+          "originalUrl": "https://www.labecasse1990.com/wp-content/themes/labecasse/images/home_slide_07.jpg",
+          "sourcePage": "https://www.labecasse1990.com/",
+          "credit": "La Bécasse / Yoshinori Shibuya",
+          "note": "Octagonal entrance sign at the current Hiranomachi location.",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-19/batch98-becasse-7-f38b92b23e43a619.webp",
+          "sha256": "f38b92b23e43a619cc6938a0563a5f73f56eda6a18f50f898c8fa67e08435559",
+          "width": 960,
+          "height": 480
+        }
+      ],
+      "special": {
+        "regionSlug": "osaka",
+        "enabled": true,
+        "profile": {
+          "pinSourceUrl": "https://www.labecasse1990.com/",
+          "name": "La Bécasse — Hiranomachi",
+          "checkedAt": "2026-10-19",
+          "address": "1F Yuki Building,3-3-9 Hiranomachi,Chuo-ku,Osaka",
+          "neighborhood": "Yodoyabashi / Hiranomachi",
+          "websiteUrl": "https://www.labecasse1990.com/",
+          "menus": [
+            {
+              "label": "La Bécasse — October2026 anniversary menu",
+              "url": "https://labecasse1990.seesaa.net/article/521417964.html",
+              "currency": "JPY",
+              "coverage": "published",
+              "items": [
+                {
+                  "name": "3人の巨匠のスペシャリテを味わう36周年記念コース",
+                  "price": 35000,
+                  "note": "Per guest before consumption tax and10%service. Operator says¥35,000tax/service extra; managed listing¥38,500tax included. No additional dish prices published."
+                },
+                {
+                  "name": "アラン・シャペル氏のスペシャリテ",
+                  "priceLabel": "Price not published",
+                  "note": "Included in anniversary course; changes by date, exact dish not announced."
+                },
+                {
+                  "name": "ポール・ボキューズ氏のスペシャリテ",
+                  "priceLabel": "Price not published",
+                  "note": "Included; exact dish not announced."
+                },
+                {
+                  "name": "ジョエル・ロブション氏のスペシャリテ",
+                  "priceLabel": "Price not published",
+                  "note": "Included; exact dish not announced."
+                }
+              ],
+              "note": "October1–31,2026only. Book by previous day; solo diners accepted; game main by advance enquiry. Named regular/archival examples are not assigned to this course."
+            }
+          ],
+          "specials": [
+            {
+              "kind": "other",
+              "title": "La Bécasse36th-anniversary masters course",
+              "description": "October-only chef’s menu interpreting specialties of AlainChapel,PaulBocuse and JoëlRobuchon. ¥35,000per guest before tax and service; exact plates change with date.",
+              "sourceUrl": "https://labecasse1990.seesaa.net/article/521417964.html",
+              "menuLabel": "La Bécasse — October2026 anniversary menu",
+              "limitedTime": true,
+              "discounted": false,
+              "validFrom": "2026-10-01",
+              "validThrough": "2026-10-31",
+              "schedule": "Monday,Tuesday,Thursday,Friday,Saturday12:00–13:00last ordering;18:00–20:00last ordering (JST). Reserve by previous day.",
+              "conditions": [
+                "Prior-day reservation required; solo diners accepted.",
+                "Consumption tax and10%service added; no discount claimed.",
+                "Game main request must be discussed in advance; specific dishes not guaranteed.",
+                "Sunday and Wednesday ordinarily closed. October4specialSundaydinner was fully booked and is historical; it is not repeated in this recurring window."
+              ],
+              "availability": {
+                "windows": [
+                  {
+                    "days": [
+                      1,
+                      2,
+                      4,
+                      5,
+                      6
+                    ],
+                    "start": "12:00",
+                    "end": "13:00"
+                  },
+                  {
+                    "days": [
+                      1,
+                      2,
+                      4,
+                      5,
+                      6
+                    ],
+                    "start": "18:00",
+                    "end": "20:00"
+                  }
+                ]
+              }
+            }
+          ],
+          "photo": {
+            "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-19/batch98-becasse-2-07adc55d0539d150.webp",
+            "alt": "Hiranomachi dining room in the operator gallery; table placement was revised October2026, so this is an architectural view.",
+            "credit": "La Bécasse / Yoshinori Shibuya",
+            "sourceUrl": "https://www.labecasse1990.com/",
+            "originalUrl": "https://www.labecasse1990.com/wp-content/themes/labecasse/images/home_slide_02.jpg",
+            "checkedAt": "2026-10-19"
+          }
+        }
+      }
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "PRESQU’ÎLE — Yodoyabashi Opens 2015-10-20",
+        "description": "Yasuji Sasaki’s classical French dining room at Yodoyabashi odona, combining Lyon-inspired sauces with seasonal Japanese produce and Maruki-wine pairings.",
+        "sourceUrl": "https://presquile.jp/",
+        "address": "2F Yodoyabashi odona,4-1-1 Imabashi,Chuo-ku,Osaka",
+        "productName": "PRESQU’ÎLE — Yodoyabashi",
+        "utcStartDateTime": "2015-10-20T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "Operator’s September16,2015opening release explicitly gives October20,2015at Yodoyabashi odona; managed current listing and an opening-day firsthand report corroborate. Earlier recruitment’s October15planned date is superseded by the later operator announcement.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Osaka",
+          "Japan",
+          "Yodoyabashi / Imabashi",
+          "French"
+        ],
+        "longFormSummary": "<p>Yasuji Sasaki’s classical French dining room at Yodoyabashi odona, combining Lyon-inspired sauces with seasonal Japanese produce and Maruki-wine pairings.<cite data-ref=\"https://presquile.jp/\"></cite></p><p>Operator’s September16,2015opening release explicitly gives October20,2015at Yodoyabashi odona; managed current listing and an opening-day firsthand report corroborate. Earlier recruitment’s October15planned date is superseded by the later operator announcement.</p>",
+        "references": [
+          {
+            "url": "https://presquile.jp/",
+            "title": "PRESQU’ÎLE — Yodoyabashi — operator",
+            "confidence": 90,
+            "reasoning": "PRESQU’ÎLE — Yodoyabashi — operator"
+          },
+          {
+            "url": "https://www.prdesse.com/posts/view/14446",
+            "title": "Operator opening release",
+            "confidence": 90,
+            "reasoning": "Operator opening release"
+          },
+          {
+            "url": "https://tabelog.com/osaka/A2701/A270102/27088075/",
+            "title": "Exact managed branch opening/independent selection",
+            "confidence": 90,
+            "reasoning": "Exact managed branch opening/independent selection"
+          },
+          {
+            "url": "https://presquile.jp/#menu",
+            "title": "Operator current Japanese food menu",
+            "confidence": 90,
+            "reasoning": "Operator current Japanese food menu"
+          },
+          {
+            "url": "https://presquile.jp/#aboutus-access",
+            "title": "Operator current hours and age policy",
+            "confidence": 90,
+            "reasoning": "Operator current hours and age policy"
+          },
+          {
+            "url": "https://tabelog.com/osaka/A2701/A270102/27088075/dtlrvwlst/B126156146/",
+            "title": "Firsthand opening-day report",
+            "confidence": 90,
+            "reasoning": "Firsthand opening-day report"
+          },
+          {
+            "url": "https://job.inshokuten.com/kansai/work/detail/17233/parttime/server-floor-staff",
+            "title": "Earlier recruitment date superseded",
+            "confidence": 90,
+            "reasoning": "Earlier recruitment date superseded"
+          },
+          {
+            "url": "https://presquile.jp/wp-content/uploads/2026/06/English.pdf",
+            "title": "Obsolete linked EnglishPDF,not current authority",
+            "confidence": 90,
+            "reasoning": "Obsolete linked EnglishPDF,not current authority"
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://presquile.jp/",
+          "menu": {
+            "pinSourceUrl": "https://presquile.jp/",
+            "name": "PRESQU’ÎLE — Yodoyabashi",
+            "checkedAt": "2026-10-19",
+            "menus": [
+              {
+                "label": "PRESQU’ÎLE — Le Rhône — lunch",
+                "url": "https://presquile.jp/",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "Le Rhône — lunch course",
+                    "price": 12100,
+                    "note": "Tax and10%service included. Lunch only;4-wine addition¥6,776."
+                  },
+                  {
+                    "name": "タラバガニのベニエ 茄子",
+                    "priceLabel": "Price not published",
+                    "note": "Included in the published Le Rhône — lunch course; no separate dish price. Menu changes with supply."
+                  },
+                  {
+                    "name": "タスマニアサーモンのミ・キュイ ゆずソース",
+                    "priceLabel": "Price not published",
+                    "note": "Included in the published Le Rhône — lunch course; no separate dish price. Menu changes with supply."
+                  },
+                  {
+                    "name": "きのこのブルーテ ブーレット セップ茸のソテー",
+                    "priceLabel": "Price not published",
+                    "note": "Included in the published Le Rhône — lunch course; no separate dish price. Menu changes with supply."
+                  },
+                  {
+                    "name": "キントキダイのポワレ 井尻農園トマト「花咲姫」とほうれん草",
+                    "priceLabel": "Price not published",
+                    "note": "Included in the published Le Rhône — lunch course; no separate dish price. Menu changes with supply."
+                  },
+                  {
+                    "name": "うずら胸肉のポワレ モモ肉のコンフィ 野菜の軽い煮込み",
+                    "priceLabel": "Price not published",
+                    "note": "Included in the published Le Rhône — lunch course; no separate dish price. Menu changes with supply."
+                  },
+                  {
+                    "name": "メリロ風味のマドレーヌ",
+                    "priceLabel": "Price not published",
+                    "note": "Included in the published Le Rhône — lunch course; no separate dish price. Menu changes with supply."
+                  },
+                  {
+                    "name": "栗のヴァシュラン風 パッションのソルベ 二種のソース",
+                    "priceLabel": "Price not published",
+                    "note": "Included in the published Le Rhône — lunch course; no separate dish price. Menu changes with supply."
+                  },
+                  {
+                    "name": "宝石箱の小菓子",
+                    "priceLabel": "Price not published",
+                    "note": "Included in the published Le Rhône — lunch course; no separate dish price. Menu changes with supply."
+                  },
+                  {
+                    "name": "コーヒーまたは紅茶、アンフュジョン",
+                    "priceLabel": "Price not published",
+                    "note": "Included in the published Le Rhône — lunch course; no separate dish price. Menu changes with supply."
+                  }
+                ],
+                "note": "Japanese operator menu checked October19,2026. Crepe flambé may replace standard dessert for+¥1,210; wagyu main substitution+¥3,025. Published dishes retained rather than inferred from photos."
+              },
+              {
+                "label": "PRESQU’ÎLE — La Feuille",
+                "url": "https://presquile.jp/",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "La Feuille course",
+                    "price": 21780,
+                    "note": "Tax and10%service included. Six-wine pairing addition¥12,100."
+                  },
+                  {
+                    "name": "オマール海老とオシェトラキャビアのシュー",
+                    "priceLabel": "Price not published",
+                    "note": "Included in the published La Feuille course; no separate dish price. Menu changes with supply."
+                  },
+                  {
+                    "name": "金目鯛と蕪のマリネ レフォール香るカラマンシーソース",
+                    "priceLabel": "Price not published",
+                    "note": "Included in the published La Feuille course; no separate dish price. Menu changes with supply."
+                  },
+                  {
+                    "name": "鮑のパルマンティエ風",
+                    "priceLabel": "Price not published",
+                    "note": "Included in the published La Feuille course; no separate dish price. Menu changes with supply."
+                  },
+                  {
+                    "name": "キジハタのポワレ セップ茸",
+                    "priceLabel": "Price not published",
+                    "note": "Included in the published La Feuille course; no separate dish price. Menu changes with supply."
+                  },
+                  {
+                    "name": "鳥取県産猪フィレ肉のポワレ グロゼイユソース",
+                    "priceLabel": "Price not published",
+                    "note": "Included in the published La Feuille course; no separate dish price. Menu changes with supply."
+                  },
+                  {
+                    "name": "メリロ風味のマドレーヌ",
+                    "priceLabel": "Price not published",
+                    "note": "Included in the published La Feuille course; no separate dish price. Menu changes with supply."
+                  },
+                  {
+                    "name": "栗のヴァシュラン風 パッションのソルベ 二種のソース",
+                    "priceLabel": "Price not published",
+                    "note": "Included in the published La Feuille course; no separate dish price. Menu changes with supply."
+                  },
+                  {
+                    "name": "宝石箱の小菓子",
+                    "priceLabel": "Price not published",
+                    "note": "Included in the published La Feuille course; no separate dish price. Menu changes with supply."
+                  },
+                  {
+                    "name": "コーヒーまたは紅茶、アンフュジョン",
+                    "priceLabel": "Price not published",
+                    "note": "Included in the published La Feuille course; no separate dish price. Menu changes with supply."
+                  }
+                ],
+                "note": "Japanese operator menu checked October19,2026. Crepe flambé may replace standard dessert for+¥1,210; wagyu main substitution+¥3,025. Published dishes retained rather than inferred from photos."
+              },
+              {
+                "label": "PRESQU’ÎLE — Raison",
+                "url": "https://presquile.jp/",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "Raison course",
+                    "price": 26620,
+                    "note": "Tax and10%service included. Eight-wine pairing addition¥15,730."
+                  },
+                  {
+                    "name": "オマール海老とオシェトラキャビアのシュー",
+                    "priceLabel": "Price not published",
+                    "note": "Included in the published Raison course; no separate dish price. Menu changes with supply."
+                  },
+                  {
+                    "name": "金目鯛と蕪のマリネ レフォール香るカラマンシーソース",
+                    "priceLabel": "Price not published",
+                    "note": "Included in the published Raison course; no separate dish price. Menu changes with supply."
+                  },
+                  {
+                    "name": "鮑のパルマンティエ風",
+                    "priceLabel": "Price not published",
+                    "note": "Included in the published Raison course; no separate dish price. Menu changes with supply."
+                  },
+                  {
+                    "name": "キジハタのポワレ セップ茸",
+                    "priceLabel": "Price not published",
+                    "note": "Included in the published Raison course; no separate dish price. Menu changes with supply."
+                  },
+                  {
+                    "name": "タラバガニとトマト、ほうれん草のショーソン アボカドソース",
+                    "priceLabel": "Price not published",
+                    "note": "Included in the published Raison course; no separate dish price. Menu changes with supply."
+                  },
+                  {
+                    "name": "鳥取県産猪フィレ肉のポワレ グロゼイユソース",
+                    "priceLabel": "Price not published",
+                    "note": "Included in the published Raison course; no separate dish price. Menu changes with supply."
+                  },
+                  {
+                    "name": "ナチュラルチーズ",
+                    "priceLabel": "Price not published",
+                    "note": "Included in the published Raison course; no separate dish price. Menu changes with supply."
+                  },
+                  {
+                    "name": "メリロ風味のマドレーヌ",
+                    "priceLabel": "Price not published",
+                    "note": "Included in the published Raison course; no separate dish price. Menu changes with supply."
+                  },
+                  {
+                    "name": "栗のヴァシュラン風 パッションのソルベ 二種のソース",
+                    "priceLabel": "Price not published",
+                    "note": "Included in the published Raison course; no separate dish price. Menu changes with supply."
+                  },
+                  {
+                    "name": "宝石箱の小菓子",
+                    "priceLabel": "Price not published",
+                    "note": "Included in the published Raison course; no separate dish price. Menu changes with supply."
+                  },
+                  {
+                    "name": "コーヒーまたは紅茶、アンフュジョン",
+                    "priceLabel": "Price not published",
+                    "note": "Included in the published Raison course; no separate dish price. Menu changes with supply."
+                  }
+                ],
+                "note": "Japanese operator menu checked October19,2026. Crepe flambé may replace standard dessert for+¥1,210; wagyu main substitution+¥3,025. Published dishes retained rather than inferred from photos."
+              },
+              {
+                "label": "PRESQU’ÎLE — bespoke course, specialties and supplements",
+                "url": "https://presquile.jp/",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "Inspiration",
+                    "price": 35090,
+                    "note": "Tax/service included; bespoke course, book5days ahead."
+                  },
+                  {
+                    "name": "季節の魚とトマトコンフィのパイ包み",
+                    "price": 6050,
+                    "note": "Tax/service included."
+                  },
+                  {
+                    "name": "鴨とフォアグラのトゥルト ルアネーズソース",
+                    "price": 9680,
+                    "note": "Tax/service included; reserve5days ahead."
+                  },
+                  {
+                    "name": "トリュフをピケした若鶏のベッシー包み",
+                    "price": 27830,
+                    "note": "Tax/service included; whole bird carved tableside; reserve5days ahead."
+                  },
+                  {
+                    "name": "旬のフルーツのクレープフランベへの変更",
+                    "price": 1210,
+                    "note": "Supplement to applicable course dessert."
+                  },
+                  {
+                    "name": "黒毛和牛メインへの変更",
+                    "price": 3025,
+                    "note": "Supplement to applicable course main."
+                  },
+                  {
+                    "name": "Le Rhôneワイン4種追加",
+                    "price": 6776,
+                    "note": "Additional to lunch course."
+                  },
+                  {
+                    "name": "La Feuilleワイン6種追加",
+                    "price": 12100,
+                    "note": "Additional to course; combined published price¥33,880."
+                  },
+                  {
+                    "name": "Raisonワイン8種追加",
+                    "price": 15730,
+                    "note": "Additional to course."
+                  },
+                  {
+                    "name": "La Feuilleペアリング6種付きコース",
+                    "price": 33880,
+                    "note": "Published combined course and six-wine package; tax/service included."
+                  }
+                ],
+                "note": "No named bottle-price catalogue published. The linked June2026English PDF contains obsolete8%tax,oldcourse names,prices andage limits; do not merge those into current Japanese menu."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://presquile.jp/",
+            "name": "PRESQU’ÎLE — Yodoyabashi",
+            "checkedAt": "2026-10-19",
+            "websiteUrl": "https://presquile.jp/",
+            "phone": "06-7506-9147",
+            "openingHours": [
+              {
+                "days": "Tuesday–Sunday, except shifted holiday closure",
+                "hours": "Lunch11:30–15:00,last order14:00; dinner17:30–22:30,last order20:00"
+              },
+              {
+                "days": "Closures",
+                "hours": "Monday; Tuesday instead when Monday is a public holiday. December31and January1closed."
+              }
+            ],
+            "detailsSourceUrl": "https://presquile.jp/",
+            "additionalSources": [
+              {
+                "label": "Operator opening release",
+                "url": "https://www.prdesse.com/posts/view/14446"
+              },
+              {
+                "label": "Exact managed branch opening/independent selection",
+                "url": "https://tabelog.com/osaka/A2701/A270102/27088075/"
+              },
+              {
+                "label": "Operator current Japanese food menu",
+                "url": "https://presquile.jp/#menu"
+              },
+              {
+                "label": "Operator current hours and age policy",
+                "url": "https://presquile.jp/#aboutus-access"
+              },
+              {
+                "label": "Firsthand opening-day report",
+                "url": "https://tabelog.com/osaka/A2701/A270102/27088075/dtlrvwlst/B126156146/"
+              },
+              {
+                "label": "Earlier recruitment date superseded",
+                "url": "https://job.inshokuten.com/kansai/work/detail/17233/parttime/server-floor-staff"
+              },
+              {
+                "label": "Obsolete linked EnglishPDF,not current authority",
+                "url": "https://presquile.jp/wp-content/uploads/2026/06/English.pdf"
+              }
+            ],
+            "hoursNote": "Current Japanese operator page takes precedence over obsolete linked English PDF: main room junior-high-age and older; younger guests permitted in private room. Male guests should avoid T-shirts,shorts and sandals. Private room4–12; fewer than4adults incur¥10,000lunch/¥20,000dinner room fee before tax. No named wine stock/prices inferred; four,six,eight wine supplements published. No current dated promotion invented from ordinary courses.",
+            "reservationUrl": "https://pocket-concierge.jp/ja/restaurants/244336?extlink=pa-jp-ICS-PC_244336_HP_ja"
+          },
+          "tile": {
+            "regionSlug": "osaka",
+            "kind": "top",
+            "slug": "japan98-presquile",
+            "name": "PRESQU’ÎLE — Yodoyabashi",
+            "neighborhood": "Yodoyabashi / Imabashi",
+            "cuisine": "French",
+            "description": "Yasuji Sasaki’s classical French dining room at Yodoyabashi odona, combining Lyon-inspired sauces with seasonal Japanese produce and Maruki-wine pairings.",
+            "address": "2F Yodoyabashi odona,4-1-1 Imabashi,Chuo-ku,Osaka",
+            "websiteUrl": "https://presquile.jp/",
+            "checkedAt": "2026-10-19",
+            "recognition": "Tabelog French WEST Hyakumeiten2025 selection",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-19/batch98-presquile-3-76abf40d54cb8659.webp",
+            "imageCredit": "PRESQU’ÎLE / Maruki Winery",
+            "imageSourceUrl": "https://presquile.jp/",
+            "imageNote": "Main dining room at the Yodoyabashi odona restaurant.",
+            "openingConfirmed": true,
+            "day": "2015-10-20"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "originalUrl": "https://presquile.jp/wp-content/uploads/2026/06/TAK2371-%E5%BE%B3%E6%B0%B8%E3%81%95%E3%82%93%E5%8A%A0%E5%B7%A5%E6%B8%88%E3%81%BF-1024x711.jpg",
+          "sourcePage": "https://presquile.jp/",
+          "credit": "PRESQU’ÎLE / Maruki Winery",
+          "note": "Main dining room at the Yodoyabashi odona restaurant.",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-19/batch98-presquile-3-76abf40d54cb8659.webp",
+          "sha256": "76abf40d54cb8659584cf55f8dc74c80f56e34c9999887ad80707cbaec7a5004",
+          "width": 1024,
+          "height": 711
+        },
+        {
+          "originalUrl": "https://presquile.jp/wp-content/uploads/2026/06/180_2.jpg",
+          "sourcePage": "https://presquile.jp/",
+          "credit": "PRESQU’ÎLE / Maruki Winery",
+          "note": "Service at PRESQU’ÎLE from the restaurant’s own gallery.",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-19/batch98-presquile-1-b9ddcbd6bf72ccb4.webp",
+          "sha256": "b9ddcbd6bf72ccb4ef053d4ce9c1c6bf341cd4e0c41f8977939e8f16a6c997c0",
+          "width": 900,
+          "height": 1000
+        },
+        {
+          "originalUrl": "https://presquile.jp/wp-content/uploads/2026/06/%E3%82%B3%E3%83%B3%E3%82%BB%E3%83%97%E3%83%8803%EF%BC%880521%EF%BC%89.jpg",
+          "sourcePage": "https://presquile.jp/",
+          "credit": "PRESQU’ÎLE / Maruki Winery",
+          "note": "Unlabelled operator food photograph; no dish identity or current menu availability inferred.",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-19/batch98-presquile-2-c5c4dadc7b0c61e7.webp",
+          "sha256": "c5c4dadc7b0c61e74940cebabe3fb180bbdf0685bb3863051025475d9df0e42e",
+          "width": 900,
+          "height": 1000
+        },
+        {
+          "originalUrl": "https://presquile.jp/wp-content/uploads/2026/06/TAK2558_small-1024x683.jpg",
+          "sourcePage": "https://presquile.jp/",
+          "credit": "PRESQU’ÎLE / Maruki Winery",
+          "note": "PRESQU’ÎLE wine display and dining-room entrance.",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-19/batch98-presquile-4-eb96c70cc79f87da.webp",
+          "sha256": "eb96c70cc79f87daebb7c03ff82e519689173c60b72de355945f90dcc1232a41",
+          "width": 1024,
+          "height": 683
+        }
+      ]
+    }
+  ],
+  "publicationStatus": {
+    "local": "pending",
+    "production": "pending"
+  },
+  "deployment": "No deployment, build, restart or production configuration change.",
+  "researchGaps": [
+    "OsakaTop and Specials remain below30. NagoyaTop reached30in batch97; all ComingSoon shortages remain.",
+    "La Bécasse current exact anniversary dishes change by date; operator names chefs but no fixed current dish list. Main-menu specialty and2019archiveexamples clearly distinguished, not assigned to anniversary. Current named wines and prices absent after operator menu/blog,reservation links and managed courses checked. TableCheck inaccessible to web tool and Tabelogplaincurl403; operator dated blog supplies eligibility/price and website supplies service hours.",
+    "La Bécasse current table layout changed October2026; gallery is an architectural/operator illustration,not a claim about present table placement. Main accesspage and managed listing Sunday/Wednesdayclosure take precedence over old blog sidebar.",
+    "PRESQU’ÎLE current Japanese menu/hours/age policy conflicts with obsolete EnglishPDF (still8%tax,formerprices,age10rather than juniorhigh). Japanese operator and managed current course prices agree; named bottle-wine prices not published. October20opening comes from later operator release,not earlier October15recruitment plan.",
+    "ComingSoon searches: SMAAKHakata alreadypublished. SHOGUNBURGERFukuoka primary recruitment still lacks exactaddress/branchmenu/gallery. PADDLERS address appeared in secondarylisting but primarybranch corroboration/menu/gallery unresolved. SaburoNovember6westexit needs current exactbranchmenu/gallery verification; no siblingbranchprices borrowed. Closed FukushimaLIAISON excluded. AdHocoperator502; deep source/food-gallery verification continues.",
+    "LaCime preciseMarch19,2010opening newly located in contemporaneous April7,2010Tsuji-school alumnus listing; date correction pending fresh completePin/content read and preservation."
+  ],
+  "held": [
+    {
+      "name": "La Cime exact opening-date correction",
+      "sourceUrl": "https://compitum.net/sns/shop/detail?id=1230",
+      "reason": "Contemporaneous school listing gives March19,2010and exactaddress. Fresh Pin/content needed before revising estimatedMarch1anchor; no new membership."
+    }
+  ],
+  "photoReview": {
+    "downloadedCandidates": 11,
+    "selectedPhotos": 10,
+    "method": "Eleven operator-gallery candidates downloaded by plain curl and decoded; logo-only slide rejected. Six LaBécasseHiranomachi photos and four PRESQU’ÎLEYodoyabashi photos visually reviewed. Food photos left unlabelled; October2026LaBécasse table rearrangement disclosed. All selected Azure blobs publicly fetched and SHA256/decode verified."
+  }
+}

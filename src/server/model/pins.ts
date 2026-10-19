@@ -60,6 +60,8 @@ export type PinSearchFilters = {
   personAxes: PersonAxisBound[];
   ratings: RatingBound[];
   delays: DelayBound[];
+  mws: RatingBound[];
+  costs: RatingBound[];
   holidays: string[];
 };
 
@@ -547,7 +549,7 @@ async function countReserved(from: string, where: string[], params: unknown[], c
   const now = Date.now();
   const postedSince = new Date(dayStartIn(dayKeyIn(now, zone), zone));
   const updatedSince = new Date(dayStartIn(dayKeyIn(now - UPDATED_WITHIN_MS, zone), zone));
-  const rows = await db.query<{ field: 'tag' | 'confidence' | 'band'; value: string; count: number }>(
+  const rows = await db.query<{ field: 'tag' | 'confidence' | 'band' | 'mw' | 'cost'; value: string; count: number }>(
     `
       ${withCtes(
         ...ctes,
@@ -576,6 +578,16 @@ async function countReserved(from: string, where: string[], params: unknown[], c
       UNION ALL
       SELECT 'tag', '${UPDATED_TAG}', COUNT(*)::integer FROM "hits"
       WHERE EXISTS (SELECT 1 FROM "PinUpdate" AS "u" WHERE "u"."pinId" = "hits"."id" AND "u"."utcCreatedDateTime" >= $${params.length + 3}::timestamptz)
+      UNION ALL
+      SELECT 'mw', "floor"."value", COUNT(*)::integer
+      FROM "hits" INNER JOIN "PinPower" AS "pw" ON "pw"."pinId" = "hits"."id"
+        INNER JOIN (VALUES ('>=100', 100), ('>=500', 500), ('>=1gw', 1000)) AS "floor" ("value", "min") ON "pw"."megawatts" >= "floor"."min"
+      GROUP BY "floor"."value"
+      UNION ALL
+      SELECT 'cost', "floor"."value", COUNT(*)::integer
+      FROM "hits" INNER JOIN "Pin" AS "cp" ON "cp"."id" = "hits"."id" AND "cp"."priceCurrency" = 'USD' AND "cp"."price" > 0
+        INNER JOIN (VALUES ('>=1b', 1000000000), ('>=10b', 10000000000)) AS "floor" ("value", "min") ON "cp"."price" >= "floor"."min"
+      GROUP BY "floor"."value"
       UNION ALL
       SELECT 'confidence', "level", COUNT(*)::integer FROM "hits" WHERE "level" IS NOT NULL GROUP BY "level"
       UNION ALL
@@ -1185,6 +1197,17 @@ export function searchClauses(filter: SearchFilter) {
               WHERE "r"."pinId" = "Pin"."id" AND "r"."scoreMax" > 0 AND "r"."source" !~* '\\yforecast$'
             ) AS "rated"
             WHERE ${bounds.join(' AND ')})`);
+    }
+    // Every mw: bound, on the capacity PinPower records, and every cost: bound,
+    // on the price when it is in US dollars (no exchange rates exist, so a pin
+    // priced in another currency meets none). A pin without either meets none.
+    if (filter.mws.length) {
+      const bounds = filter.mws.map(({ op, value }) => `"pw"."megawatts" ${RATING_OPS[op]} ${add(value)}::numeric`);
+      where.push(`EXISTS (SELECT 1 FROM "PinPower" AS "pw" WHERE "pw"."pinId" = "Pin"."id" AND ${bounds.join(' AND ')})`);
+    }
+    if (filter.costs.length) {
+      const bounds = filter.costs.map(({ op, value }) => `"Pin"."price" ${RATING_OPS[op]} ${add(value)}::numeric`);
+      where.push(`("Pin"."priceCurrency" = 'USD' AND "Pin"."price" > 0 AND ${bounds.join(' AND ')})`);
     }
     // Every delay: bound, on how far the start has slipped from the day first
     // promised. A pin whose start is no later than that day has not slipped and

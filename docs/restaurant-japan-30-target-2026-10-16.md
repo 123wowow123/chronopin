@@ -1,17 +1,17 @@
 # Japan restaurant target audit — October 16, 2026
 
-Target: **30 distinct eligible restaurants in every tab of every city**. **559 verified memberships; 183 still missing**. This target remains incomplete; surplus in another tab does not offset a shortage.
+Target: **30 distinct eligible restaurants in every tab of every city**. **576 verified memberships; 167 still missing**. This target remains incomplete; surplus in another tab does not offset a shortage.
 
-**Batch 91 published and publicly verified (October 19, 2026):** added **Reine des prés (Kyoto) and LA VAGABONDE (Nagoya)** with **18 menu entries and seven credited Azure gallery photos**. Exact original opening dates retained; Kyoto Top reaches **23/30**, Nagoya Top **18/30**. Full profiles, every rendered menu entry, gallery credits and native title/image links verified locally and through public production HTTPS. All 24 counts agree at **559 memberships / 183 missing**. One Fukuoka Special expired since batch90; its tab remains above target at 33. Also completed public HTTPS verification for all **27 venues and 36 guide memberships in batches 88–90**. No deployment. [Batch evidence](restaurant-japan-30-japan91-2026-10-19.json).
+**Batch 96 published and publicly verified (October 19, 2026):** Added **Bincho Dai Nagoya Building and Kinshachi Yokocho**, with **68 branch-specific menu entries and eight credited Azure photographs**. Both original branch dates confirmed; all seven full-resolution food-menu images visually read. Different rice portions and branch-only dishes retained. **Nagoya Top reaches 26/30; Kyoto Top remains 30/30**. Exact saved profiles, every rendered menu entry, gallery credits and native title/image links verified in local and public production. All 24 counts match at **576 memberships / 167 missing**. No deployment. [Batch evidence](restaurant-japan-30-japan96-2026-10-19.json).
 
-All 24 local and public production guide counts agree. Batches 88–91 now have complete public HTTPS verification; earlier timeout checkpoints below are historical.
+All 24 local and public production guide counts agree. Batches 88–96 now have complete public HTTPS verification; earlier timeout checkpoints below are historical.
 
 | City (west to east) | Coming soon | Just opened | Top restaurants | Specials |
 | --- | ---: | ---: | ---: | ---: |
 | Fukuoka | 9/30 | 20/30 | 22/30 | 33/30 |
 | Osaka | 12/30 | 22/30 | 19/30 | 25/30 |
-| Kyoto | 11/30 | 33/30 | 23/30 | 34/30 |
-| Nagoya | 11/30 | 31/30 | 18/30 | 29/30 |
+| Kyoto | 11/30 | 33/30 | 30/30 | 34/30 |
+| Nagoya | 11/30 | 31/30 | 26/30 | 31/30 |
 | Tokyo | 14/30 | 23/30 | 30/30 | 37/30 |
 | Sapporo | 11/30 | 28/30 | 30/30 | 34/30 |
 
@@ -29,12 +29,12 @@ All 24 local and public production guide counts agree. Batches 88–91 now have 
 | Osaka | Specials | 25 | 25 | 30 | 5 |
 | Kyoto | Coming soon | 11 | 11 | 30 | 19 |
 | Kyoto | Just opened | 33 | 33 | 30 | 0 |
-| Kyoto | Top restaurants | 23 | 23 | 30 | 7 |
+| Kyoto | Top restaurants | 30 | 30 | 30 | 0 |
 | Kyoto | Specials | 34 | 34 | 30 | 0 |
 | Nagoya | Coming soon | 11 | 11 | 30 | 19 |
 | Nagoya | Just opened | 31 | 31 | 30 | 0 |
-| Nagoya | Top restaurants | 18 | 18 | 30 | 12 |
-| Nagoya | Specials | 29 | 29 | 30 | 1 |
+| Nagoya | Top restaurants | 26 | 26 | 30 | 4 |
+| Nagoya | Specials | 31 | 31 | 30 | 0 |
 | Tokyo | Coming soon | 14 | 14 | 30 | 16 |
 | Tokyo | Just opened | 23 | 23 | 30 | 7 |
 | Tokyo | Top restaurants | 30 | 30 | 30 | 0 |

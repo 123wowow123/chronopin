@@ -240,6 +240,10 @@ export type SearchQuery = {
   ratings: RatingBound[];
   // Bounds a pin's delay must meet, every one of them.
   delays: DelayBound[];
+  // Bounds a pin's capacity in megawatts (mw:>=500) and its cost in US dollars
+  // (cost:>=1B) must meet, every one of them.
+  mws: RatingBound[];
+  costs: RatingBound[];
   // Holidays and special days by name, any of them (holiday:Halloween); the
   // server turns each into the days it falls on.
   holidays: string[];
@@ -255,7 +259,7 @@ const AXIS_ALIASES: Record<string, OctagonAxis> = { 'public-standing': 'standing
 
 // A leading "-" leaves out what the term would match (-tag:Anime); only tags
 // read it so far, and any other field written that way is left out.
-const FIELD = '(-?(?:company|category|user|confidence|date|posted|updated|tag|pin|place|rating|delay|platform|rated|holiday|taste|carperf|dining|hotel|rubric|person|' + [...OCTAGON_AXES, ...Object.keys(AXIS_ALIASES)].join('|') + '))';
+const FIELD = '(-?(?:company|category|user|confidence|date|posted|updated|tag|pin|place|rating|delay|mw|cost|platform|rated|holiday|taste|carperf|dining|hotel|rubric|person|' + [...OCTAGON_AXES, ...Object.keys(AXIS_ALIASES)].join('|') + '))';
 const DOUBLE_QUOTED = '([^"]*)"?';
 const SINGLE_QUOTED = "((?:[^']|'(?!\\s|$))*)'?";
 
@@ -275,7 +279,7 @@ const FIELD_TERM = new RegExp(
 // A bare @name, or a bare $ticker standing as a word of its own.
 const BARE_TERM = /(^|\s)(@\S+|\$[A-Za-z][A-Za-z0-9.-]{0,11}(?=\s|$))/g;
 
-export type TermField = 'user' | 'ticker' | 'company' | 'category' | 'confidence' | 'date' | 'posted' | 'updated' | 'tag' | 'pin' | 'place' | 'rating' | 'delay' | 'platform' | 'rated' | 'holiday' | 'taste' | 'carperf' | 'dining' | 'hotel' | 'rubric' | 'person' | OctagonAxis;
+export type TermField = 'user' | 'ticker' | 'company' | 'category' | 'confidence' | 'date' | 'posted' | 'updated' | 'tag' | 'pin' | 'place' | 'rating' | 'delay' | 'mw' | 'cost' | 'platform' | 'rated' | 'holiday' | 'taste' | 'carperf' | 'dining' | 'hotel' | 'rubric' | 'person' | OctagonAxis;
 
 export type QueryPart =
   | { kind: 'term'; field: TermField; value: string; raw: string; negated?: boolean }
@@ -386,6 +390,8 @@ function readParts(parts: QueryPart[]): SearchQuery {
     personAxes: [],
     ratings: [],
     delays: [],
+    mws: [],
+    costs: [],
     holidays: [],
     text: '',
   };
@@ -466,6 +472,11 @@ function readParts(parts: QueryPart[]): SearchQuery {
       for (const bound of ratingBounds(part.value)) {
         if (!query.ratings.some((b) => b.op === bound.op && b.value === bound.value)) query.ratings.push(bound);
       }
+    } else if (part.field === 'mw' || part.field === 'cost') {
+      const [bounds, held] = part.field === 'mw' ? [megawattBounds(part.value), query.mws] : [costBounds(part.value), query.costs];
+      for (const bound of bounds) {
+        if (!held.some((b) => b.op === bound.op && b.value === bound.value)) held.push(bound);
+      }
     } else if (part.field === 'delay') {
       for (const bound of delayBounds(part.value)) {
         if (!query.delays.some((b) => b.op === bound.op && b.unit === bound.unit && b.value === bound.value)) query.delays.push(bound);
@@ -508,6 +519,8 @@ export function hasFilters(query: SearchQuery): boolean {
     query.personAxes.length ||
     query.ratings.length ||
     query.delays.length ||
+    query.mws.length ||
+    query.costs.length ||
     query.holidays.length
   );
 }
@@ -585,6 +598,47 @@ export function ratingBounds(value: string): RatingBound[] {
   }
   const op = ({ '=>': '>=', '=<': '<=' } as Record<string, RatingBound['op']>)[bound[1] ?? ''] ?? ((bound[1] || '>=') as RatingBound['op']);
   return [{ op, value: Number(bound[2]) }];
+}
+
+// An amount with a unit after it (500mw, 1.5gw, $2.5b), as a number of the
+// unit's base: megawatts for mw:, dollars for cost:. A bare number is the base.
+const SIZED = '\\$?(\\d+(?:\\.\\d+)?)\\s*([a-z]*)';
+const SIZED_BOUND = new RegExp(`^(>=|<=|=>|=<|>|<|=)?\\s*${SIZED}$`, 'i');
+const SIZED_RANGE = new RegExp(`^${SIZED}\\s*-\\s*${SIZED}$`, 'i');
+const MEGAWATT_UNITS: Record<string, number> = { '': 1, mw: 1, gw: 1000, tw: 1_000_000 };
+const COST_UNITS: Record<string, number> = { '': 1, k: 1e3, m: 1e6, mn: 1e6, b: 1e9, bn: 1e9, t: 1e12, tn: 1e12 };
+
+function sizedBounds(value: string, units: Record<string, number>): RatingBound[] {
+  const text = value.trim();
+  const amount = (n: string, unit: string) => (unit.toLowerCase() in units ? Number(n) * units[unit.toLowerCase()] : NaN);
+  const range = SIZED_RANGE.exec(text);
+  if (range) {
+    // The first end may leave its unit to the last (100-1000mw, 1-5b).
+    const low = amount(range[1], range[2] || range[4]);
+    const high = amount(range[3], range[4]);
+    if (Number.isNaN(low) || Number.isNaN(high)) return [];
+    const [a, b] = [low, high].sort((x, y) => x - y);
+    return [
+      { op: '>=', value: a },
+      { op: '<=', value: b },
+    ];
+  }
+  const bound = SIZED_BOUND.exec(text);
+  const size = bound ? amount(bound[2], bound[3]) : NaN;
+  if (!bound || Number.isNaN(size)) return [];
+  const op = ({ '=>': '>=', '=<': '<=' } as Record<string, RatingBound['op']>)[bound[1] ?? ''] ?? ((bound[1] || '>=') as RatingBound['op']);
+  return [{ op, value: size }];
+}
+
+// The bounds a mw: value sets, in megawatts (mw:>=500, mw:1gw, mw:100-1000);
+// a bare number is a floor, as for rating:. Anything else is left out.
+export function megawattBounds(value: string): RatingBound[] {
+  return sizedBounds(value, MEGAWATT_UNITS);
+}
+
+// The bounds a cost: value sets, in US dollars (cost:>=1B, cost:>500m, cost:1b-10b).
+export function costBounds(value: string): RatingBound[] {
+  return sizedBounds(value, COST_UNITS);
 }
 
 const SPAN = '(\\d+(?:\\.\\d+)?)\\s*([a-z]*)';

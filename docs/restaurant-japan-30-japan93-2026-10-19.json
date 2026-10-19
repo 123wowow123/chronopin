@@ -1,0 +1,3750 @@
+{
+  "batch": 93,
+  "checkedAt": "2026-10-19",
+  "counts": {
+    "venues": 6,
+    "menuEntries": 128,
+    "galleryLinks": 19,
+    "specialVenues": 0,
+    "scheduleRecords": 0
+  },
+  "entries": [
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Le Cadeau — Jingu-Marutamachi Opens 2019-11-01",
+        "description": "Modern French courses beside the Kamo River, with published lunch, dinner and late-night dessert menus.",
+        "sourceUrl": "https://www.le-cadeau2019.com/lecadeau",
+        "address": "1F MicMac Building, 541-25 Suemarucho, Nakagyo-ku, Kyoto",
+        "productName": "Le Cadeau — Jingu-Marutamachi",
+        "utcStartDateTime": "2019-11-01T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "Exact-branch managed Tabelog states November1,2019; operator biography independently confirms November2019.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Kyoto",
+          "Japan",
+          "Jingu-Marutamachi",
+          "French"
+        ],
+        "longFormSummary": "<p>Modern French courses beside the Kamo River, with published lunch, dinner and late-night dessert menus.<cite data-ref=\"https://www.le-cadeau2019.com/lecadeau\"></cite></p><p>Exact-branch managed Tabelog states November1,2019; operator biography independently confirms November2019.</p>",
+        "references": [
+          {
+            "url": "https://www.le-cadeau2019.com/lecadeau",
+            "title": "Le Cadeau — Jingu-Marutamachi — operator",
+            "confidence": 90,
+            "reasoning": "Le Cadeau — Jingu-Marutamachi — operator"
+          },
+          {
+            "url": "https://tabelog.com/kyoto/A2601/A260302/26033161/",
+            "title": "Exact opening date",
+            "confidence": 90,
+            "reasoning": "Exact opening date"
+          },
+          {
+            "url": "https://guide.michelin.com/jp/ja/kyoto-region/kyoto/restaurant/le-cadeau",
+            "title": "Current MICHELIN selection",
+            "confidence": 90,
+            "reasoning": "Current MICHELIN selection"
+          },
+          {
+            "url": "https://www.le-cadeau2019.com/lunch",
+            "title": "Operator lunch",
+            "confidence": 90,
+            "reasoning": "Operator lunch"
+          },
+          {
+            "url": "https://www.le-cadeau2019.com/dinner",
+            "title": "Operator dinner",
+            "confidence": 90,
+            "reasoning": "Operator dinner"
+          },
+          {
+            "url": "https://www.le-cadeau2019.com/desert",
+            "title": "Operator dessert",
+            "confidence": 90,
+            "reasoning": "Operator dessert"
+          },
+          {
+            "url": "https://www.le-cadeau2019.com/lecadeau_concept",
+            "title": "Operator concept/gallery",
+            "confidence": 90,
+            "reasoning": "Operator concept/gallery"
+          },
+          {
+            "url": "https://www.tablecheck.com/ja/le-cadeau",
+            "title": "Branch-linked booking menu",
+            "confidence": 90,
+            "reasoning": "Branch-linked booking menu"
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://www.le-cadeau2019.com/lecadeau",
+          "menu": {
+            "pinSourceUrl": "https://www.le-cadeau2019.com/lecadeau",
+            "name": "Le Cadeau — Jingu-Marutamachi",
+            "checkedAt": "2026-10-19",
+            "menus": [
+              {
+                "label": "Le Cadeau — lunch",
+                "url": "https://www.le-cadeau2019.com/lunch",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "Lunch omakase",
+                    "price": 7500
+                  },
+                  {
+                    "name": "Lunch chef-selected premium course",
+                    "price": 12100
+                  }
+                ],
+                "note": "Tax included; add10%service. Daily ingredients change."
+              },
+              {
+                "label": "Le Cadeau — dinner",
+                "url": "https://www.le-cadeau2019.com/dinner",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "Dinner omakase",
+                    "price": 12100
+                  },
+                  {
+                    "name": "ちょっぴり贅沢フレンチコース",
+                    "price": 8800
+                  },
+                  {
+                    "name": "Anniversary surprise plate",
+                    "price": 1100
+                  }
+                ],
+                "note": "Add10%service. Plate is optional, not a free promotion."
+              },
+              {
+                "label": "Le Cadeau — late-night dessert",
+                "url": "https://www.le-cadeau2019.com/desert",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "Late-night dessert course",
+                    "price": 5500
+                  }
+                ],
+                "note": "Add10%service; confirm exact late-night date and start time directly. Ordinary published dessert menu, no dated Special inferred."
+              },
+              {
+                "label": "Le Cadeau — published course structure",
+                "url": "https://www.tablecheck.com/ja/le-cadeau",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "はじめのスナック",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "アミューズ6種",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "前菜①",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "パンと自家製バター",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "前菜②",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "魚料理",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "肉料理",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "デザート",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "食後のお飲み物",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "お茶菓子",
+                    "priceLabel": "Price not published"
+                  }
+                ],
+                "note": "Structure of¥12,100chef-selection course; no individual prices or fixed seasonal recipes published."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://www.le-cadeau2019.com/lecadeau",
+            "name": "Le Cadeau — Jingu-Marutamachi",
+            "checkedAt": "2026-10-19",
+            "websiteUrl": "https://www.le-cadeau2019.com/lecadeau",
+            "phone": "075-354-5330",
+            "openingHours": [
+              {
+                "days": "Lunch except Thursday",
+                "hours": "12:00–15:00; last order13:00"
+              },
+              {
+                "days": "Dinner except Thursday",
+                "hours": "18:00–22:00; last order20:00"
+              },
+              {
+                "days": "Thursday",
+                "hours": "Closed"
+              }
+            ],
+            "detailsSourceUrl": "https://www.le-cadeau2019.com/lecadeau",
+            "additionalSources": [
+              {
+                "label": "Exact opening date",
+                "url": "https://tabelog.com/kyoto/A2601/A260302/26033161/"
+              },
+              {
+                "label": "Current MICHELIN selection",
+                "url": "https://guide.michelin.com/jp/ja/kyoto-region/kyoto/restaurant/le-cadeau"
+              },
+              {
+                "label": "Operator lunch",
+                "url": "https://www.le-cadeau2019.com/lunch"
+              },
+              {
+                "label": "Operator dinner",
+                "url": "https://www.le-cadeau2019.com/dinner"
+              },
+              {
+                "label": "Operator dessert",
+                "url": "https://www.le-cadeau2019.com/desert"
+              },
+              {
+                "label": "Operator concept/gallery",
+                "url": "https://www.le-cadeau2019.com/lecadeau_concept"
+              },
+              {
+                "label": "Branch-linked booking menu",
+                "url": "https://www.tablecheck.com/ja/le-cadeau"
+              }
+            ],
+            "hoursNote": "Twelve seats, no private room or parking. Operator lists cash payment; guide card-payment information differs, so confirm. Disclose allergies in advance. Sister venue Au point de rendez-vous has separate hours, menu and images. Late-night dessert timing must be confirmed.",
+            "reservationUrl": "https://www.tablecheck.com/ja/shops/le-cadeau/reserve"
+          },
+          "tile": {
+            "regionSlug": "kyoto",
+            "kind": "top",
+            "slug": "japan93-cadeau",
+            "name": "Le Cadeau — Jingu-Marutamachi",
+            "neighborhood": "Jingu-Marutamachi",
+            "cuisine": "French",
+            "description": "Modern French courses beside the Kamo River, with published lunch, dinner and late-night dessert menus.",
+            "address": "1F MicMac Building, 541-25 Suemarucho, Nakagyo-ku, Kyoto",
+            "websiteUrl": "https://www.le-cadeau2019.com/lecadeau",
+            "checkedAt": "2026-10-19",
+            "recognition": "MICHELIN Guide Selected Restaurant; current guide page verified",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-19/batch93-cadeau-1-5e4ac079b1f02e92.webp",
+            "imageCredit": "Le Cadeau — operator photo",
+            "imageSourceUrl": "https://www.le-cadeau2019.com/lecadeau",
+            "imageNote": "Exact-venue gallery photograph. Dining room, entrance or table setting; current appearance may vary.",
+            "openingConfirmed": true,
+            "day": "2019-11-01"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "originalUrl": "https://www.le-cadeau2019.com/wp-content/uploads/lecadeau_img001.jpg",
+          "sourcePage": "https://www.le-cadeau2019.com/lecadeau",
+          "credit": "Le Cadeau — operator photo",
+          "note": "Exact-venue gallery photograph. Dining room, entrance or table setting; current appearance may vary.",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-19/batch93-cadeau-1-5e4ac079b1f02e92.webp",
+          "sha256": "5e4ac079b1f02e92c16bce8bd9e8202ca01359dddddcc5470d1e67706a9c240f",
+          "width": 1000,
+          "height": 500
+        },
+        {
+          "originalUrl": "https://www.le-cadeau2019.com/wp-content/uploads/lecadeau_concept_img001.jpg",
+          "sourcePage": "https://www.le-cadeau2019.com/lecadeau_concept",
+          "credit": "Le Cadeau — operator photo",
+          "note": "Exact-venue gallery photograph. Food presentation; dish name and current course inclusion not inferred.",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-19/batch93-cadeau-2-6cc52558fdee3b56.webp",
+          "sha256": "6cc52558fdee3b562ee186ea86ffb5e28cdb473c3ce7789750bb433006cc41a1",
+          "width": 1000,
+          "height": 750
+        },
+        {
+          "originalUrl": "https://www.le-cadeau2019.com/wp-content/uploads/lecadeau_concept_img002.jpg",
+          "sourcePage": "https://www.le-cadeau2019.com/lecadeau_concept",
+          "credit": "Le Cadeau — operator photo",
+          "note": "Exact-venue gallery photograph. Dining room, entrance or table setting; current appearance may vary.",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-19/batch93-cadeau-3-a97780568853f920.webp",
+          "sha256": "a97780568853f920f8fc3ecf8ba9d9c00c7c3448ee5585ec2ed9ffcd5cf98622",
+          "width": 1000,
+          "height": 750
+        },
+        {
+          "originalUrl": "https://www.le-cadeau2019.com/wp-content/uploads/dinner_img001.jpg",
+          "sourcePage": "https://www.le-cadeau2019.com/dinner",
+          "credit": "Le Cadeau — operator photo",
+          "note": "Exact-venue gallery photograph. Food presentation; dish name and current course inclusion not inferred.",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-19/batch93-cadeau-7-a95b78ed2e4fed2c.webp",
+          "sha256": "a95b78ed2e4fed2c342a9f820427a8a7ac78d330c32940923b667027ea3ab5f8",
+          "width": 1000,
+          "height": 500
+        }
+      ]
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "L’aparté — Nishiwakamatsucho Opens 2022-07-10",
+        "description": "French counter dining in a Kyoto townhouse, with bouillabaisse-led Heritage and seasonal Aparté courses.",
+        "sourceUrl": "https://laparte.net/",
+        "address": "247-3 Nishiwakamatsucho, Shimogyo-ku, Kyoto",
+        "productName": "L’aparté — Nishiwakamatsucho",
+        "utcStartDateTime": "2022-07-10T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "Fitout contractor Kotostyle owner interview gives July10,2022as this premises’ opening date; contemporary food-critic opening report corroborates.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Kyoto",
+          "Japan",
+          "Gojo / Nishiwakamatsucho",
+          "French"
+        ],
+        "longFormSummary": "<p>French counter dining in a Kyoto townhouse, with bouillabaisse-led Heritage and seasonal Aparté courses.<cite data-ref=\"https://laparte.net/\"></cite></p><p>Fitout contractor Kotostyle owner interview gives July10,2022as this premises’ opening date; contemporary food-critic opening report corroborates.</p>",
+        "references": [
+          {
+            "url": "https://laparte.net/",
+            "title": "L’aparté — Nishiwakamatsucho — operator",
+            "confidence": 90,
+            "reasoning": "L’aparté — Nishiwakamatsucho — operator"
+          },
+          {
+            "url": "https://www.kotostyle.co.jp/contents/archives/33812/",
+            "title": "Owner interview opening date",
+            "confidence": 90,
+            "reasoning": "Owner interview opening date"
+          },
+          {
+            "url": "https://www.erisekiya.com/2022/07/59349",
+            "title": "Contemporary opening report",
+            "confidence": 90,
+            "reasoning": "Contemporary opening report"
+          },
+          {
+            "url": "https://guide.michelin.com/jp/ja/kyoto-region/kyoto/restaurant/l-aparte-1205444",
+            "title": "Current MICHELIN selection",
+            "confidence": 90,
+            "reasoning": "Current MICHELIN selection"
+          },
+          {
+            "url": "https://laparte.net/menu/",
+            "title": "Operator menu",
+            "confidence": 90,
+            "reasoning": "Operator menu"
+          },
+          {
+            "url": "https://laparte.net/winelist/",
+            "title": "Operator wine catalogue",
+            "confidence": 90,
+            "reasoning": "Operator wine catalogue"
+          },
+          {
+            "url": "https://laparte.net/about/",
+            "title": "Operator atmosphere photos",
+            "confidence": 90,
+            "reasoning": "Operator atmosphere photos"
+          },
+          {
+            "url": "https://laparte.net/gallery/",
+            "title": "Operator linked video gallery",
+            "confidence": 90,
+            "reasoning": "Operator linked video gallery"
+          },
+          {
+            "url": "https://www.tablecheck.com/ja/shops/laparte/reserve",
+            "title": "Current booking menu",
+            "confidence": 90,
+            "reasoning": "Current booking menu"
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://laparte.net/",
+          "menu": {
+            "pinSourceUrl": "https://laparte.net/",
+            "name": "L’aparté — Nishiwakamatsucho",
+            "checkedAt": "2026-10-19",
+            "menus": [
+              {
+                "label": "L’aparté — current courses",
+                "url": "https://www.tablecheck.com/ja/shops/laparte/reserve",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "Heritage — three starters, bouillabaisse, dessert, coffee or tea",
+                    "price": 8000
+                  },
+                  {
+                    "name": "Aparté — amuse, two starters, fish, meat, main, two desserts",
+                    "price": 15000
+                  },
+                  {
+                    "name": "Optional cheese plate",
+                    "price": 1500
+                  },
+                  {
+                    "name": "Anniversary chocolate message plate",
+                    "price": 0,
+                    "note": "Request with dessert; included amenity, not a dated Special."
+                  },
+                  {
+                    "name": "Wine pairing",
+                    "priceLabel": "Price not published"
+                  }
+                ],
+                "note": "Tax included; booking system says service extra but does not publish a percentage. Heritage main is fish bouillabaisse. Expired¥13,000MenuAparte ended October31,2024and is excluded."
+              },
+              {
+                "label": "L’aparté — published glass-wine catalogue",
+                "url": "https://laparte.net/winelist/",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Today’s Champagne — glass",
+                    "price": 2600,
+                    "note": "Operator-linked November2023image catalogue; confirm current vintage, stock and tax/service before ordering."
+                  },
+                  {
+                    "name": "2022 Grüner Silvaner — Wagner Stempel — glass",
+                    "price": 1400,
+                    "note": "Operator-linked November2023image catalogue; confirm current vintage, stock and tax/service before ordering."
+                  },
+                  {
+                    "name": "2020 Chardonnay Tradition — Philippe Vandelle — glass",
+                    "price": 1600,
+                    "note": "Operator-linked November2023image catalogue; confirm current vintage, stock and tax/service before ordering."
+                  },
+                  {
+                    "name": "Sean Minor Chardonnay 19’ — glass",
+                    "price": 1600,
+                    "note": "Operator-linked November2023image catalogue; confirm current vintage, stock and tax/service before ordering."
+                  },
+                  {
+                    "name": "Julien Pilon Mon grand pere etait limonadier 2021 — glass",
+                    "price": 1800,
+                    "note": "Operator-linked November2023image catalogue; confirm current vintage, stock and tax/service before ordering."
+                  },
+                  {
+                    "name": "Domaine Louvot-Ploix Muscadet Sèvre et Maine Terre de Pierre 2020 — glass",
+                    "price": 1800,
+                    "note": "Operator-linked November2023image catalogue; confirm current vintage, stock and tax/service before ordering."
+                  },
+                  {
+                    "name": "2021 Nussbaumer Gewürztraminer — Tramin — glass",
+                    "price": 2500,
+                    "note": "Operator-linked November2023image catalogue; confirm current vintage, stock and tax/service before ordering."
+                  },
+                  {
+                    "name": "Domaine Adrien Berlioz Chignin Bergeron Grand Zeph 2019 — glass",
+                    "price": 2600,
+                    "note": "Operator-linked November2023image catalogue; confirm current vintage, stock and tax/service before ordering."
+                  },
+                  {
+                    "name": "Château de Plaisance Coteaux du Layon 1er Cru Chaume 2020 — glass",
+                    "price": 2600,
+                    "note": "Operator-linked November2023image catalogue; confirm current vintage, stock and tax/service before ordering."
+                  },
+                  {
+                    "name": "Domaine Olivier Pithon Côtes Catalanes cuvée Laïs blanc mise tardive 2018 — glass",
+                    "price": 2700,
+                    "note": "Operator-linked November2023image catalogue; confirm current vintage, stock and tax/service before ordering."
+                  },
+                  {
+                    "name": "Amélie & Charles Sparr 2020 Riesling G.C. Brand Légende — glass",
+                    "price": 3300,
+                    "note": "Operator-linked November2023image catalogue; confirm current vintage, stock and tax/service before ordering."
+                  },
+                  {
+                    "name": "Château la Font du Loup Châteauneuf-du-Pape blanc 2022 — glass",
+                    "price": 3300,
+                    "note": "Operator-linked November2023image catalogue; confirm current vintage, stock and tax/service before ordering."
+                  },
+                  {
+                    "name": "Franco Terpin Sialis Bianco Sivi 2017 — glass",
+                    "price": 2400,
+                    "note": "Operator-linked November2023image catalogue; confirm current vintage, stock and tax/service before ordering."
+                  },
+                  {
+                    "name": "Domaine Burgaud Brouilly 2020 — glass",
+                    "price": 1400,
+                    "note": "Operator-linked November2023image catalogue; confirm current vintage, stock and tax/service before ordering."
+                  },
+                  {
+                    "name": "2020 Saint Joseph Rouge Ribaudes Lionel Faury — glass",
+                    "price": 1900,
+                    "note": "Operator-linked November2023image catalogue; confirm current vintage, stock and tax/service before ordering."
+                  },
+                  {
+                    "name": "Domaine d’Aigues-Belles le grand classic — glass",
+                    "price": 2000,
+                    "note": "Operator-linked November2023image catalogue; confirm current vintage, stock and tax/service before ordering."
+                  },
+                  {
+                    "name": "Domaine Pignier Trousseau 2020 — glass",
+                    "price": 2400,
+                    "note": "Operator-linked November2023image catalogue; confirm current vintage, stock and tax/service before ordering."
+                  },
+                  {
+                    "name": "Mathieu Dumarcher & Pierre Graffeuille Odyssée 2019 — glass",
+                    "price": 3000,
+                    "note": "Operator-linked November2023image catalogue; confirm current vintage, stock and tax/service before ordering."
+                  },
+                  {
+                    "name": "Maxime Graillot Domaine des Lises Cornas 2019 — glass",
+                    "price": 3400,
+                    "note": "Operator-linked November2023image catalogue; confirm current vintage, stock and tax/service before ordering."
+                  }
+                ],
+                "note": "Named glass wines transcribed from first page of linked operator wine images. These are published catalogue examples, not verified October stock. Remaining bottle-list images checked; no assertion that every vintage remains available."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://laparte.net/",
+            "name": "L’aparté — Nishiwakamatsucho",
+            "checkedAt": "2026-10-19",
+            "websiteUrl": "https://laparte.net/",
+            "phone": "050-3183-7676",
+            "openingHours": [
+              {
+                "days": "Tuesday–Saturday lunch",
+                "hours": "12:00–15:00; final entry13:00"
+              },
+              {
+                "days": "Tuesday–Saturday dinner",
+                "hours": "18:00–22:00; final entry19:00"
+              },
+              {
+                "days": "Sunday–Monday",
+                "hours": "Closed; operator notes Sunday opens before a Monday public holiday"
+              }
+            ],
+            "detailsSourceUrl": "https://laparte.net/",
+            "additionalSources": [
+              {
+                "label": "Owner interview opening date",
+                "url": "https://www.kotostyle.co.jp/contents/archives/33812/"
+              },
+              {
+                "label": "Contemporary opening report",
+                "url": "https://www.erisekiya.com/2022/07/59349"
+              },
+              {
+                "label": "Current MICHELIN selection",
+                "url": "https://guide.michelin.com/jp/ja/kyoto-region/kyoto/restaurant/l-aparte-1205444"
+              },
+              {
+                "label": "Operator menu",
+                "url": "https://laparte.net/menu/"
+              },
+              {
+                "label": "Operator wine catalogue",
+                "url": "https://laparte.net/winelist/"
+              },
+              {
+                "label": "Operator atmosphere photos",
+                "url": "https://laparte.net/about/"
+              },
+              {
+                "label": "Operator linked video gallery",
+                "url": "https://laparte.net/gallery/"
+              },
+              {
+                "label": "Current booking menu",
+                "url": "https://www.tablecheck.com/ja/shops/laparte/reserve"
+              }
+            ],
+            "hoursNote": "Course-only; one course per guest. Contact first for children10and under. Dairy allergy, vegan, vegetarian and no-fish requests cannot be accommodated. No-meat guests must select Heritage. Service percentage not published; booking lists service extra. October6,2026winemaker dinner is expired and excluded.",
+            "reservationUrl": "https://www.tablecheck.com/ja/shops/laparte/reserve"
+          },
+          "tile": {
+            "regionSlug": "kyoto",
+            "kind": "top",
+            "slug": "japan93-laparte",
+            "name": "L’aparté — Nishiwakamatsucho",
+            "neighborhood": "Gojo / Nishiwakamatsucho",
+            "cuisine": "French",
+            "description": "French counter dining in a Kyoto townhouse, with bouillabaisse-led Heritage and seasonal Aparté courses.",
+            "address": "247-3 Nishiwakamatsucho, Shimogyo-ku, Kyoto",
+            "websiteUrl": "https://laparte.net/",
+            "checkedAt": "2026-10-19",
+            "recognition": "MICHELIN Guide Selected Restaurant; current branch verified",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-19/batch93-laparte-1-6d36ef84c378f71b.webp",
+            "imageCredit": "L’aparté — operator photo",
+            "imageSourceUrl": "https://laparte.net/about/",
+            "imageNote": "Exact-venue gallery photograph. Dining room, entrance or table setting; current appearance may vary.",
+            "openingConfirmed": true,
+            "day": "2022-07-10"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "originalUrl": "https://laparte.net/wp-content/uploads/2022/08/atmosphere01.jpg",
+          "sourcePage": "https://laparte.net/about/",
+          "credit": "L’aparté — operator photo",
+          "note": "Exact-venue gallery photograph. Dining room, entrance or table setting; current appearance may vary.",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-19/batch93-laparte-1-6d36ef84c378f71b.webp",
+          "sha256": "6d36ef84c378f71b55ca3dd227e1adabf37e48b5ea97f2d286f81bb562e1d2fe",
+          "width": 850,
+          "height": 567
+        },
+        {
+          "originalUrl": "https://laparte.net/wp-content/uploads/2022/08/atmosphere02.jpg",
+          "sourcePage": "https://laparte.net/about/",
+          "credit": "L’aparté — operator photo",
+          "note": "Exact-venue gallery photograph. Dining room, entrance or table setting; current appearance may vary.",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-19/batch93-laparte-2-dd2789674c7c0c65.webp",
+          "sha256": "dd2789674c7c0c65f2eefa5a675038145b873ce633904d1573b96b7af70dfa1c",
+          "width": 850,
+          "height": 567
+        },
+        {
+          "originalUrl": "https://laparte.net/wp-content/uploads/2024/01/IMG_9388_72.jpg",
+          "sourcePage": "https://laparte.net/",
+          "credit": "L’aparté — operator photo",
+          "note": "Exact-venue gallery photograph. Food presentation; dish name and current course inclusion not inferred.",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-19/batch93-laparte-3-3e48ef61e4215373.webp",
+          "sha256": "3e48ef61e42153734129e59a85648c7341086ec270d0bf6dbb59f9e2f1204833",
+          "width": 1134,
+          "height": 756
+        },
+        {
+          "originalUrl": "https://laparte.net/wp-content/uploads/2024/01/IMG_9306_72.jpg",
+          "sourcePage": "https://laparte.net/",
+          "credit": "L’aparté — operator photo",
+          "note": "Exact-venue gallery photograph. Food presentation; dish name and current course inclusion not inferred.",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-19/batch93-laparte-4-89869d438d4841d6.webp",
+          "sha256": "89869d438d4841d6b7bb0435180fe1401b08b778166cbedfa692d4c2ad89cd22",
+          "width": 1134,
+          "height": 756
+        }
+      ]
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Luca — Takamiyacho Opens 2022-03-14",
+        "description": "Seasonal French tasting courses by Takuya Kuwahara, with published black-Wagyu upgrades and advance-booked wine pairings.",
+        "sourceUrl": "https://luca-kyoto.com/",
+        "address": "2F Wakaba Building, 585 Takamiyacho, Nakagyo-ku, Kyoto",
+        "productName": "Luca — Takamiyacho",
+        "utcStartDateTime": "2022-03-14T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "Operator chef biography explicitly records Luca opening locally on March14,2022.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Kyoto",
+          "Japan",
+          "Kawaramachi / Takamiyacho",
+          "French"
+        ],
+        "longFormSummary": "<p>Seasonal French tasting courses by Takuya Kuwahara, with published black-Wagyu upgrades and advance-booked wine pairings.<cite data-ref=\"https://luca-kyoto.com/\"></cite></p><p>Operator chef biography explicitly records Luca opening locally on March14,2022.</p>",
+        "references": [
+          {
+            "url": "https://luca-kyoto.com/",
+            "title": "Luca — Takamiyacho — operator",
+            "confidence": 90,
+            "reasoning": "Luca — Takamiyacho — operator"
+          },
+          {
+            "url": "https://guide.michelin.com/jp/ja/kyoto-region/kyoto/restaurant/luca-1205417",
+            "title": "Current MICHELIN selection",
+            "confidence": 90,
+            "reasoning": "Current MICHELIN selection"
+          },
+          {
+            "url": "https://www.tablecheck.com/ja/shops/luca/reserve",
+            "title": "Operator-linked current booking prices and conditions",
+            "confidence": 90,
+            "reasoning": "Operator-linked current booking prices and conditions"
+          },
+          {
+            "url": "https://www.instagram.com/luca_kyoto_restaurant/",
+            "title": "Operator Instagram",
+            "confidence": 90,
+            "reasoning": "Operator Instagram"
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://luca-kyoto.com/",
+          "menu": {
+            "pinSourceUrl": "https://luca-kyoto.com/",
+            "name": "Luca — Takamiyacho",
+            "checkedAt": "2026-10-19",
+            "menus": [
+              {
+                "label": "Luca — current booking courses and pairings",
+                "url": "https://www.tablecheck.com/ja/shops/luca/reserve",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "Lunch basic course",
+                    "price": 7700,
+                    "note": "Tax included; add8%course service. Normally two-plus guests; weekday solo basic lunch available through November30. Pairing packages must be booked in advance, no same-day switch."
+                  },
+                  {
+                    "name": "Lunch black Wagyu course",
+                    "price": 9700,
+                    "note": "Tax included; add8%course service. Normally two-plus guests; weekday solo basic lunch available through November30. Pairing packages must be booked in advance, no same-day switch."
+                  },
+                  {
+                    "name": "Lunch basic plus Champagne and two wines",
+                    "price": 12700,
+                    "note": "Tax included; add8%course service. Normally two-plus guests; weekday solo basic lunch available through November30. Pairing packages must be booked in advance, no same-day switch."
+                  },
+                  {
+                    "name": "Lunch black Wagyu plus Champagne and two wines",
+                    "price": 14700,
+                    "note": "Tax included; add8%course service. Normally two-plus guests; weekday solo basic lunch available through November30. Pairing packages must be booked in advance, no same-day switch."
+                  },
+                  {
+                    "name": "Dinner basic course",
+                    "price": 14000,
+                    "note": "Tax included; add8%course service. Normally two-plus guests; weekday solo basic lunch available through November30. Pairing packages must be booked in advance, no same-day switch."
+                  },
+                  {
+                    "name": "Dinner black Wagyu course",
+                    "price": 16000,
+                    "note": "Tax included; add8%course service. Normally two-plus guests; weekday solo basic lunch available through November30. Pairing packages must be booked in advance, no same-day switch."
+                  },
+                  {
+                    "name": "Dinner basic plus Champagne and three wines",
+                    "price": 20000,
+                    "note": "Tax included; add8%course service. Normally two-plus guests; weekday solo basic lunch available through November30. Pairing packages must be booked in advance, no same-day switch."
+                  },
+                  {
+                    "name": "Dinner black Wagyu plus Champagne and three wines",
+                    "price": 22000,
+                    "note": "Tax included; add8%course service. Normally two-plus guests; weekday solo basic lunch available through November30. Pairing packages must be booked in advance, no same-day switch."
+                  }
+                ],
+                "note": "Expired Champagne lunch ended October14; solo dinner ended September30; anniversary and restaurant-week packages with passed dates are excluded."
+              },
+              {
+                "label": "Luca — lunch course structure",
+                "url": "https://luca-kyoto.com/",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "アミューズ",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "季節の1皿",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "前菜",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "魚料理",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "肉料理（黒毛和牛コースは黒毛和牛）",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "デザート",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "小菓子",
+                    "priceLabel": "Price not published"
+                  }
+                ],
+                "note": "Seven-part seasonal structure; ingredients change about every three months. No standalone prices published."
+              },
+              {
+                "label": "Luca — dinner structure",
+                "url": "https://luca-kyoto.com/",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "アミューズ",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "前菜1〜3皿",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "魚料理",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "肉料理（黒毛和牛コースは黒毛和牛）",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "デザート1〜2皿",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "小菓子",
+                    "priceLabel": "Price not published"
+                  }
+                ],
+                "note": "Operator site publishes variable starter/dessert counts; booking additionally lists本日の一皿. No fixed seasonal recipes inferred."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://luca-kyoto.com/",
+            "name": "Luca — Takamiyacho",
+            "checkedAt": "2026-10-19",
+            "websiteUrl": "https://luca-kyoto.com/",
+            "phone": "075-744-0981",
+            "openingHours": [
+              {
+                "days": "Lunch, operating days",
+                "hours": "12:00 simultaneous start; final entry12:30; closes15:00"
+              },
+              {
+                "days": "Dinner, operating days",
+                "hours": "Reservations18:00or18:30; final entry19:00; closes22:00"
+              },
+              {
+                "days": "Closures",
+                "hours": "Irregular; check booking calendar"
+              }
+            ],
+            "detailsSourceUrl": "https://luca-kyoto.com/",
+            "additionalSources": [
+              {
+                "label": "Current MICHELIN selection",
+                "url": "https://guide.michelin.com/jp/ja/kyoto-region/kyoto/restaurant/luca-1205417"
+              },
+              {
+                "label": "Operator-linked current booking prices and conditions",
+                "url": "https://www.tablecheck.com/ja/shops/luca/reserve"
+              },
+              {
+                "label": "Operator Instagram",
+                "url": "https://www.instagram.com/luca_kyoto_restaurant/"
+              }
+            ],
+            "hoursNote": "Reserve by preceding day; lunch2.5hours/dinner3–3.5hours with no quick exit. Stairs only to2F. Ages13+; one drink minimum; same course for whole table. Major allergy/dietary restrictions may not be accommodated. Current8%service supersedes older5%site text.",
+            "reservationUrl": "https://www.tablecheck.com/ja/shops/luca/reserve"
+          },
+          "tile": {
+            "regionSlug": "kyoto",
+            "kind": "top",
+            "slug": "japan93-luca",
+            "name": "Luca — Takamiyacho",
+            "neighborhood": "Kawaramachi / Takamiyacho",
+            "cuisine": "French",
+            "description": "Seasonal French tasting courses by Takuya Kuwahara, with published black-Wagyu upgrades and advance-booked wine pairings.",
+            "address": "2F Wakaba Building, 585 Takamiyacho, Nakagyo-ku, Kyoto",
+            "websiteUrl": "https://luca-kyoto.com/",
+            "checkedAt": "2026-10-19",
+            "recognition": "MICHELIN Guide Selected Restaurant; current branch verified",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-19/batch93-luca-1-e06aff686a9301dc.webp",
+            "imageCredit": "Luca — operator photo",
+            "imageSourceUrl": "https://luca-kyoto.com/",
+            "imageNote": "Exact-venue gallery photograph. Dining room, entrance or table setting; current appearance may vary.",
+            "openingConfirmed": true,
+            "day": "2022-03-14"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "originalUrl": "https://luca-kyoto.com/img/main.jpg",
+          "sourcePage": "https://luca-kyoto.com/",
+          "credit": "Luca — operator photo",
+          "note": "Exact-venue gallery photograph. Dining room, entrance or table setting; current appearance may vary.",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-19/batch93-luca-1-e06aff686a9301dc.webp",
+          "sha256": "e06aff686a9301dcb1c7c39d12d6141623c964ac6d6e7168b022c520dea5d883",
+          "width": 1600,
+          "height": 1067
+        },
+        {
+          "originalUrl": "https://luca-kyoto.com/img/drink.jpg",
+          "sourcePage": "https://luca-kyoto.com/",
+          "credit": "Luca — operator photo",
+          "note": "Exact-venue gallery photograph. Dining room, entrance or table setting; current appearance may vary.",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-19/batch93-luca-2-5ba3d25f729aa323.webp",
+          "sha256": "5ba3d25f729aa323de9c5772d6dc0d38b297baedc76f4b152f4ad876ca5e0d01",
+          "width": 1600,
+          "height": 1066
+        }
+      ]
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Vena — Kagamiyacho Opens 2016-12-20",
+        "description": "Seasonal Italian courses and sommelier-selected mature wines at an intimate Marutamachi counter.",
+        "sourceUrl": "https://tabelog.com/kyoto/A2601/A260202/26028480/",
+        "address": "46-3 Kagamiyacho, Nakagyo-ku, Kyoto",
+        "productName": "Vena — Kagamiyacho",
+        "utcStartDateTime": "2016-12-20T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "Hanako exact-branch listing explicitly gives December20,2016; current booking/address match the same premises.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Kyoto",
+          "Japan",
+          "Marutamachi / Kagamiyacho",
+          "Italian"
+        ],
+        "longFormSummary": "<p>Seasonal Italian courses and sommelier-selected mature wines at an intimate Marutamachi counter.<cite data-ref=\"https://tabelog.com/kyoto/A2601/A260202/26028480/\"></cite></p><p>Hanako exact-branch listing explicitly gives December20,2016; current booking/address match the same premises.</p>",
+        "references": [
+          {
+            "url": "https://tabelog.com/kyoto/A2601/A260202/26028480/",
+            "title": "Vena — Kagamiyacho — operator",
+            "confidence": 90,
+            "reasoning": "Vena — Kagamiyacho — operator"
+          },
+          {
+            "url": "https://hanako.tokyo/shop/17656/",
+            "title": "Original opening date — Hanako",
+            "confidence": 90,
+            "reasoning": "Original opening date — Hanako"
+          },
+          {
+            "url": "https://guide.michelin.com/jp/ja/kyoto-region/kyoto/restaurant/vena",
+            "title": "Current MICHELIN selection and venue gallery",
+            "confidence": 90,
+            "reasoning": "Current MICHELIN selection and venue gallery"
+          },
+          {
+            "url": "https://www.tablecheck.com/ja/shops/vena/reserve",
+            "title": "Current operator-linked booking menu",
+            "confidence": 90,
+            "reasoning": "Current operator-linked booking menu"
+          },
+          {
+            "url": "https://www.leafkyoto.net/store/240520-kyoto-vena/",
+            "title": "Independent local editorial",
+            "confidence": 90,
+            "reasoning": "Independent local editorial"
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://tabelog.com/kyoto/A2601/A260202/26028480/",
+          "menu": {
+            "pinSourceUrl": "https://tabelog.com/kyoto/A2601/A260202/26028480/",
+            "name": "Vena — Kagamiyacho",
+            "checkedAt": "2026-10-19",
+            "menus": [
+              {
+                "label": "Vena — lunch and dinner",
+                "url": "https://www.tablecheck.com/ja/shops/vena/reserve",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "Lunch omakase — six courses",
+                    "price": 12000
+                  },
+                  {
+                    "name": "Dinner omakase — eight courses",
+                    "price": 24000
+                  },
+                  {
+                    "name": "Lunch omakase plus wine pairing",
+                    "price": 18000
+                  },
+                  {
+                    "name": "Dinner omakase plus wine pairing",
+                    "price": 36000
+                  }
+                ],
+                "note": "All published amounts include tax and service. No a la carte prices published."
+              },
+              {
+                "label": "Vena — published lunch structure",
+                "url": "https://www.tablecheck.com/ja/shops/vena/reserve",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "スープ",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "前菜5品盛り合わせ",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "パスタ",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "リゾット",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "肉料理",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "デザート",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "食後の飲み物",
+                    "priceLabel": "Price not published"
+                  }
+                ],
+                "note": "Booking calls this six courses plus after-meal drink; exact seasonal dishes change."
+              },
+              {
+                "label": "Vena — published dinner structure",
+                "url": "https://www.tablecheck.com/ja/shops/vena/reserve",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "前菜1〜4皿",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "パスタ2皿",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "肉料理",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "デザート",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "食後の飲み物",
+                    "priceLabel": "Price not published"
+                  }
+                ],
+                "note": "Eight courses plus after-meal drink. Guide describes seasonal fish/crab pasta, but October ingredients are not guaranteed."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://tabelog.com/kyoto/A2601/A260202/26028480/",
+            "name": "Vena — Kagamiyacho",
+            "checkedAt": "2026-10-19",
+            "websiteUrl": "https://tabelog.com/kyoto/A2601/A260202/26028480/",
+            "phone": "075-255-8757",
+            "openingHours": [
+              {
+                "days": "Monday, Tuesday, Saturday, Sunday and operating holidays",
+                "hours": "Lunch12:00–13:00 final entry"
+              },
+              {
+                "days": "Operating evenings except Wednesday",
+                "hours": "Dinner17:30–21:00 final entry"
+              },
+              {
+                "days": "Wednesday",
+                "hours": "Closed; Thursday/Friday dinner only"
+              }
+            ],
+            "detailsSourceUrl": "https://tabelog.com/kyoto/A2601/A260202/26028480/",
+            "additionalSources": [
+              {
+                "label": "Original opening date — Hanako",
+                "url": "https://hanako.tokyo/shop/17656/"
+              },
+              {
+                "label": "Current MICHELIN selection and venue gallery",
+                "url": "https://guide.michelin.com/jp/ja/kyoto-region/kyoto/restaurant/vena"
+              },
+              {
+                "label": "Current operator-linked booking menu",
+                "url": "https://www.tablecheck.com/ja/shops/vena/reserve"
+              },
+              {
+                "label": "Independent local editorial",
+                "url": "https://www.leafkyoto.net/store/240520-kyoto-vena/"
+              }
+            ],
+            "hoursNote": "Contact for children, parties9+, or counter bookings5+. No vegan/vegetarian accommodation. Notify allergies in advance. Managed branch listing controls hours; older guide/editorial lunch pricing is superseded by current TableCheck. Operator Facebook/gallery accessibility and exact daily dishes remain gaps.",
+            "reservationUrl": "https://www.tablecheck.com/ja/shops/vena/reserve"
+          },
+          "tile": {
+            "regionSlug": "kyoto",
+            "kind": "top",
+            "slug": "japan93-vena",
+            "name": "Vena — Kagamiyacho",
+            "neighborhood": "Marutamachi / Kagamiyacho",
+            "cuisine": "Italian",
+            "description": "Seasonal Italian courses and sommelier-selected mature wines at an intimate Marutamachi counter.",
+            "address": "46-3 Kagamiyacho, Nakagyo-ku, Kyoto",
+            "websiteUrl": "https://tabelog.com/kyoto/A2601/A260202/26028480/",
+            "checkedAt": "2026-10-19",
+            "recognition": "MICHELIN Guide Selected Restaurant; no unsupported star claim",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-19/batch93-vena-1-634da2ac8ae9a644.webp",
+            "imageCredit": "Vena / MICHELIN Guide",
+            "imageSourceUrl": "https://guide.michelin.com/jp/ja/kyoto-region/kyoto/restaurant/vena",
+            "imageNote": "Exact-venue gallery photograph. Dining room, entrance or table setting; current appearance may vary.",
+            "openingConfirmed": true,
+            "day": "2016-12-20"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "originalUrl": "https://prod-pics.guide.michelin.com/api/public/content/eab19927ee1142e28284d630990d9960.jpeg?format=jpeg&amp;w=1000&amp;h=1000",
+          "sourcePage": "https://guide.michelin.com/jp/ja/kyoto-region/kyoto/restaurant/vena",
+          "credit": "Vena / MICHELIN Guide",
+          "note": "Exact-venue gallery photograph. Dining room, entrance or table setting; current appearance may vary.",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-19/batch93-vena-1-634da2ac8ae9a644.webp",
+          "sha256": "634da2ac8ae9a64459d45b2cf290eff852a9a017f69a78957d2ecb39a9e85c23",
+          "width": 1000,
+          "height": 1000
+        },
+        {
+          "originalUrl": "https://prod-pics.guide.michelin.com/api/public/content/c2502fc1bd59470a8b9c7d342b3033db.jpeg?format=webp",
+          "sourcePage": "https://guide.michelin.com/jp/ja/kyoto-region/kyoto/restaurant/vena",
+          "credit": "Vena / MICHELIN Guide",
+          "note": "Exact-venue gallery photograph. Food presentation; dish name and current course inclusion not inferred.",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-19/batch93-vena-4-25a6e1b49eed3d6e.webp",
+          "sha256": "25a6e1b49eed3d6e07841e2dd7ef413cadefd05886a7d59bdd2dd31513adb478",
+          "width": 1000,
+          "height": 1000
+        }
+      ]
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "RADICE — Kagamiyacho Opens 2013-12-21",
+        "description": "Italian omakase at a renovated Kyoto counter, with a published panzerotti-led course structure and five- or eight-wine pairings.",
+        "sourceUrl": "https://radice-kyoto.com/",
+        "address": "50 Kagamiyacho, Nakagyo-ku, Kyoto",
+        "productName": "RADICE — Kagamiyacho",
+        "utcStartDateTime": "2013-12-21T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "Operator January1,2026anniversary article states the12thanniversary fell on December21,2025, supporting original opening December21,2013. November6,2021was renovation and renaming at the same premises, not original opening.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Kyoto",
+          "Japan",
+          "Marutamachi / Kagamiyacho",
+          "Italian"
+        ],
+        "longFormSummary": "<p>Italian omakase at a renovated Kyoto counter, with a published panzerotti-led course structure and five- or eight-wine pairings.<cite data-ref=\"https://radice-kyoto.com/\"></cite></p><p>Operator January1,2026anniversary article states the12thanniversary fell on December21,2025, supporting original opening December21,2013. November6,2021was renovation and renaming at the same premises, not original opening.</p>",
+        "references": [
+          {
+            "url": "https://radice-kyoto.com/",
+            "title": "RADICE — Kagamiyacho — operator",
+            "confidence": 90,
+            "reasoning": "RADICE — Kagamiyacho — operator"
+          },
+          {
+            "url": "https://radice-kyoto.com/12th/",
+            "title": "Operator exact anniversary evidence",
+            "confidence": 90,
+            "reasoning": "Operator exact anniversary evidence"
+          },
+          {
+            "url": "https://www.erisekiya.com/2021/11/54581",
+            "title": "Independent2021renovation report",
+            "confidence": 90,
+            "reasoning": "Independent2021renovation report"
+          },
+          {
+            "url": "https://guide.michelin.com/jp/ja/kyoto-region/kyoto/restaurant/radice",
+            "title": "Current MICHELIN branch",
+            "confidence": 90,
+            "reasoning": "Current MICHELIN branch"
+          },
+          {
+            "url": "https://radice-kyoto.com/wp-content/uploads/2026/06/menu-1.png",
+            "title": "Current menu image",
+            "confidence": 90,
+            "reasoning": "Current menu image"
+          },
+          {
+            "url": "https://www.tablecheck.com/ja/radice-kyoto",
+            "title": "Current booking course prices",
+            "confidence": 90,
+            "reasoning": "Current booking course prices"
+          },
+          {
+            "url": "https://www.tablecheck.com/ja/shops/radice-kyoto/reserve",
+            "title": "Booking arrival and age conditions",
+            "confidence": 90,
+            "reasoning": "Booking arrival and age conditions"
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://radice-kyoto.com/",
+          "menu": {
+            "pinSourceUrl": "https://radice-kyoto.com/",
+            "name": "RADICE — Kagamiyacho",
+            "checkedAt": "2026-10-19",
+            "menus": [
+              {
+                "label": "RADICE — current omakase and pairings",
+                "url": "https://radice-kyoto.com/menu/",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "Idee e Sapori — lunch or dinner",
+                    "price": 19800,
+                    "note": "Tax included; add10%service. Same course at lunch and dinner, currentJune2026menu image."
+                  },
+                  {
+                    "name": "Omakase plus five-wine half pairing",
+                    "price": 26400,
+                    "note": "Tax included; add10%service. Current operator-linked TableCheck product."
+                  },
+                  {
+                    "name": "Omakase plus eight-wine full pairing",
+                    "price": 29700,
+                    "note": "Tax included; add10%service. Current operator-linked TableCheck product."
+                  }
+                ],
+                "note": "Current menu image and booking agree on¥19,800; stale meta-description¥16,500is excluded. Ordinary pairing courses are not dated Specials."
+              },
+              {
+                "label": "RADICE — published course structure",
+                "url": "https://radice-kyoto.com/wp-content/uploads/2026/06/menu-1.png",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "アミューズ",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "生ハム",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "パンツェロッティ",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "サラダ",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "パスタ（前半）",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "魚料理",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "肉料理",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "お口直し",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "パスタ（後半）",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "デザート",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "お茶菓子",
+                    "priceLabel": "Price not published"
+                  }
+                ],
+                "note": "Image menu visually read. TableCheck additionally lists two house breads and café, with pasta-or-risotto variation; no current ingredient names inferred."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://radice-kyoto.com/",
+            "name": "RADICE — Kagamiyacho",
+            "checkedAt": "2026-10-19",
+            "websiteUrl": "https://radice-kyoto.com/",
+            "phone": "050-1720-7379",
+            "openingHours": [
+              {
+                "days": "Friday–Sunday and operating public holidays",
+                "hours": "Lunch12:00 simultaneous start"
+              },
+              {
+                "days": "Thursday–Monday",
+                "hours": "Dinner18:30 simultaneous start"
+              },
+              {
+                "days": "Tuesday–Wednesday",
+                "hours": "Closed"
+              }
+            ],
+            "detailsSourceUrl": "https://radice-kyoto.com/",
+            "additionalSources": [
+              {
+                "label": "Operator exact anniversary evidence",
+                "url": "https://radice-kyoto.com/12th/"
+              },
+              {
+                "label": "Independent2021renovation report",
+                "url": "https://www.erisekiya.com/2021/11/54581"
+              },
+              {
+                "label": "Current MICHELIN branch",
+                "url": "https://guide.michelin.com/jp/ja/kyoto-region/kyoto/restaurant/radice"
+              },
+              {
+                "label": "Current menu image",
+                "url": "https://radice-kyoto.com/wp-content/uploads/2026/06/menu-1.png"
+              },
+              {
+                "label": "Current booking course prices",
+                "url": "https://www.tablecheck.com/ja/radice-kyoto"
+              },
+              {
+                "label": "Booking arrival and age conditions",
+                "url": "https://www.tablecheck.com/ja/shops/radice-kyoto/reserve"
+              }
+            ],
+            "hoursNote": "Online reservations only. About2.5hours; arrive no earlier than10minutes before. Ages12+and full course required; broad restrictions may prevent booking. Operator holiday-lunch statement differs from booking introduction, so confirm holiday inventory. September24–October5event is expired; takeaway osechi/roast beef is not an onsite Special.",
+            "reservationUrl": "https://www.tablecheck.com/ja/shops/radice-kyoto/reserve"
+          },
+          "tile": {
+            "regionSlug": "kyoto",
+            "kind": "top",
+            "slug": "japan93-radice",
+            "name": "RADICE — Kagamiyacho",
+            "neighborhood": "Marutamachi / Kagamiyacho",
+            "cuisine": "Italian",
+            "description": "Italian omakase at a renovated Kyoto counter, with a published panzerotti-led course structure and five- or eight-wine pairings.",
+            "address": "50 Kagamiyacho, Nakagyo-ku, Kyoto",
+            "websiteUrl": "https://radice-kyoto.com/",
+            "checkedAt": "2026-10-19",
+            "recognition": "MICHELIN Guide Selected Restaurant; operator reports Tabelog Award2026Bronze",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-19/batch93-radice-1-c85685e641a11c02.webp",
+            "imageCredit": "RADICE — operator photo",
+            "imageSourceUrl": "https://radice-kyoto.com/",
+            "imageNote": "Exact-venue gallery photograph. Dining room, entrance or table setting; current appearance may vary.",
+            "openingConfirmed": true,
+            "day": "2013-12-21"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "originalUrl": "https://radice-kyoto.com/wp-content/uploads/2024/10/IMG-29-scaled.jpg",
+          "sourcePage": "https://radice-kyoto.com/",
+          "credit": "RADICE — operator photo",
+          "note": "Exact-venue gallery photograph. Dining room, entrance or table setting; current appearance may vary.",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-19/batch93-radice-1-c85685e641a11c02.webp",
+          "sha256": "c85685e641a11c029956be66817d28785d53e842705df1ac92ff3ee5bef35a72",
+          "width": 1600,
+          "height": 1068
+        },
+        {
+          "originalUrl": "https://radice-kyoto.com/wp-content/uploads/2024/10/IMG-230-2-scaled.jpg",
+          "sourcePage": "https://radice-kyoto.com/",
+          "credit": "RADICE — operator photo",
+          "note": "Exact-venue gallery photograph. Dining room, entrance or table setting; current appearance may vary.",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-19/batch93-radice-3-f96fe5e225d0aafa.webp",
+          "sha256": "f96fe5e225d0aafaeaf5a1d4696b8aead03df82afb3634ce98c5fca03027ae33",
+          "width": 1600,
+          "height": 1067
+        },
+        {
+          "originalUrl": "https://radice-kyoto.com/wp-content/uploads/2024/10/IMG-195-scaled.jpg",
+          "sourcePage": "https://radice-kyoto.com/",
+          "credit": "RADICE — operator photo",
+          "note": "Exact-venue gallery photograph. Food presentation; dish name and current course inclusion not inferred.",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-19/batch93-radice-5-acc54b0884e6dd73.webp",
+          "sha256": "acc54b0884e6dd731af94a742db7222fcfa30169b6b98522c392e41c96523e79",
+          "width": 1600,
+          "height": 1068
+        }
+      ]
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Bistro Chez Bun — Osu Opens 2008-02-25",
+        "description": "An Osu counter bistro serving shareable French dishes, quenelle and Madame’s desserts, with a changing blackboard menu.",
+        "sourceUrl": "https://chezbun.com/",
+        "address": "1F La Fontaine Osu, 2-9-35 Osu, Naka-ku, Nagoya",
+        "productName": "Bistro Chez Bun — Osu",
+        "utcStartDateTime": "2008-02-25T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "Contemporary TV Aichi interview datedSeptember25,2008explicitly lists branch opening February25,2008at this exact address; operator biography corroborates2008.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Nagoya",
+          "Japan",
+          "Osu Kannon",
+          "French"
+        ],
+        "longFormSummary": "<p>An Osu counter bistro serving shareable French dishes, quenelle and Madame’s desserts, with a changing blackboard menu.<cite data-ref=\"https://chezbun.com/\"></cite></p><p>Contemporary TV Aichi interview datedSeptember25,2008explicitly lists branch opening February25,2008at this exact address; operator biography corroborates2008.</p>",
+        "references": [
+          {
+            "url": "https://chezbun.com/",
+            "title": "Bistro Chez Bun — Osu — operator",
+            "confidence": 90,
+            "reasoning": "Bistro Chez Bun — Osu — operator"
+          },
+          {
+            "url": "https://tv-aichi.co.jp/osu-tankentai/genre/italianfrench/post_180.html",
+            "title": "Contemporary opening interview",
+            "confidence": 90,
+            "reasoning": "Contemporary opening interview"
+          },
+          {
+            "url": "https://tabelog.com/aichi/A2301/A230105/23007926/dtlmap/",
+            "title": "Managed branch current hours",
+            "confidence": 90,
+            "reasoning": "Managed branch current hours"
+          },
+          {
+            "url": "https://tabelog.com/aichi/A2301/A230105/23007926/dtlmenu/",
+            "title": "Managed food menu2025",
+            "confidence": 90,
+            "reasoning": "Managed food menu2025"
+          },
+          {
+            "url": "https://tabelog.com/aichi/A2301/A230105/23007926/dtlmenu/drink/",
+            "title": "Older drink catalogue — not current",
+            "confidence": 90,
+            "reasoning": "Older drink catalogue — not current"
+          },
+          {
+            "url": "https://www.instagram.com/bistrochezbun/",
+            "title": "Operator Instagram",
+            "confidence": 90,
+            "reasoning": "Operator Instagram"
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://chezbun.com/",
+          "menu": {
+            "pinSourceUrl": "https://chezbun.com/",
+            "name": "Bistro Chez Bun — Osu",
+            "checkedAt": "2026-10-19",
+            "menus": [
+              {
+                "label": "Bistro Chez Bun — managed branch food menu",
+                "url": "https://tabelog.com/aichi/A2301/A230105/23007926/dtlmenu/",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "人参マリネ",
+                    "price": 800,
+                    "note": "Managed menu updatedNovember5,2025; page labels prices tax-exclusive. Daily blackboard/seasonal availability varies; confirm final tax-inclusive bill."
+                  },
+                  {
+                    "name": "赤社海老のスパイス揚げ",
+                    "price": 800,
+                    "note": "Managed menu updatedNovember5,2025; page labels prices tax-exclusive. Daily blackboard/seasonal availability varies; confirm final tax-inclusive bill."
+                  },
+                  {
+                    "name": "北海タコと胡瓜のパジルマリネ",
+                    "price": 800,
+                    "note": "Managed menu updatedNovember5,2025; page labels prices tax-exclusive. Daily blackboard/seasonal availability varies; confirm final tax-inclusive bill."
+                  },
+                  {
+                    "name": "パテドカンパーニュ",
+                    "price": 980,
+                    "note": "Managed menu updatedNovember5,2025; page labels prices tax-exclusive. Daily blackboard/seasonal availability varies; confirm final tax-inclusive bill."
+                  },
+                  {
+                    "name": "朝引き三河赤鶏レバームース",
+                    "price": 1080,
+                    "note": "Managed menu updatedNovember5,2025; page labels prices tax-exclusive. Daily blackboard/seasonal availability varies; confirm final tax-inclusive bill."
+                  },
+                  {
+                    "name": "砂肝のチリコンフィー",
+                    "price": 1080,
+                    "note": "Managed menu updatedNovember5,2025; page labels prices tax-exclusive. Daily blackboard/seasonal availability varies; confirm final tax-inclusive bill."
+                  },
+                  {
+                    "name": "マグロとアボカドのタルタル",
+                    "price": 980,
+                    "note": "Managed menu updatedNovember5,2025; page labels prices tax-exclusive. Daily blackboard/seasonal availability varies; confirm final tax-inclusive bill."
+                  },
+                  {
+                    "name": "鮪の炙りと焼き茄子とタプナードソース",
+                    "price": 2308,
+                    "note": "Managed menu updatedNovember5,2025; page labels prices tax-exclusive. Daily blackboard/seasonal availability varies; confirm final tax-inclusive bill."
+                  },
+                  {
+                    "name": "鰯のコンフィと小イカのサラダ 梅肉ドライトマトドレッシング",
+                    "price": 2300,
+                    "note": "Managed menu updatedNovember5,2025; page labels prices tax-exclusive. Daily blackboard/seasonal availability varies; confirm final tax-inclusive bill."
+                  },
+                  {
+                    "name": "幸えびとベーコンのシーザーサラダ",
+                    "price": 2300,
+                    "note": "Managed menu updatedNovember5,2025; page labels prices tax-exclusive. Daily blackboard/seasonal availability varies; confirm final tax-inclusive bill."
+                  },
+                  {
+                    "name": "鴨とパルミジャーノのサラダ レモンドレッシング",
+                    "price": 2300,
+                    "note": "Managed menu updatedNovember5,2025; page labels prices tax-exclusive. Daily blackboard/seasonal availability varies; confirm final tax-inclusive bill."
+                  },
+                  {
+                    "name": "もりもりお肉屋さんサラダ",
+                    "price": 2300,
+                    "note": "Managed menu updatedNovember5,2025; page labels prices tax-exclusive. Daily blackboard/seasonal availability varies; confirm final tax-inclusive bill."
+                  },
+                  {
+                    "name": "シェブンのスペシャリテ クネル",
+                    "price": 2700,
+                    "note": "Managed menu updatedNovember5,2025; page labels prices tax-exclusive. Daily blackboard/seasonal availability varies; confirm final tax-inclusive bill."
+                  },
+                  {
+                    "name": "鮮魚のポワレ ライムとトマトのソース",
+                    "price": 2900,
+                    "note": "Managed menu updatedNovember5,2025; page labels prices tax-exclusive. Daily blackboard/seasonal availability varies; confirm final tax-inclusive bill."
+                  },
+                  {
+                    "name": "真鱈白子のムニエル 焦がしバターソース",
+                    "price": 2900,
+                    "note": "Managed menu updatedNovember5,2025; page labels prices tax-exclusive. Daily blackboard/seasonal availability varies; confirm final tax-inclusive bill."
+                  },
+                  {
+                    "name": "モンサンミッシェル産ムール貝 軽いクリームスープ仕立て",
+                    "price": 3680,
+                    "note": "Managed menu updatedNovember5,2025; page labels prices tax-exclusive. Daily blackboard/seasonal availability varies; confirm final tax-inclusive bill."
+                  },
+                  {
+                    "name": "浦村産牡蠣のブルゴーニュバター焼き",
+                    "price": 2400,
+                    "note": "Managed menu updatedNovember5,2025; page labels prices tax-exclusive. Daily blackboard/seasonal availability varies; confirm final tax-inclusive bill."
+                  },
+                  {
+                    "name": "シェブンのスペアリブ",
+                    "price": 3500,
+                    "note": "Managed menu updatedNovember5,2025; page labels prices tax-exclusive. Daily blackboard/seasonal availability varies; confirm final tax-inclusive bill."
+                  },
+                  {
+                    "name": "仔羊のグリエ 燻製バターソース",
+                    "price": 4200,
+                    "note": "Managed menu updatedNovember5,2025; page labels prices tax-exclusive. Daily blackboard/seasonal availability varies; confirm final tax-inclusive bill."
+                  },
+                  {
+                    "name": "三河赤鶏もも肉のコンフィー スープ仕立て",
+                    "price": 4200,
+                    "note": "Managed menu updatedNovember5,2025; page labels prices tax-exclusive. Daily blackboard/seasonal availability varies; confirm final tax-inclusive bill."
+                  },
+                  {
+                    "name": "もち豚トマホークステーキ マデラソース",
+                    "price": 3900,
+                    "note": "Managed menu updatedNovember5,2025; page labels prices tax-exclusive. Daily blackboard/seasonal availability varies; confirm final tax-inclusive bill."
+                  },
+                  {
+                    "name": "マグレカナールのグリエ ブルーベリーソース",
+                    "price": 4600,
+                    "note": "Managed menu updatedNovember5,2025; page labels prices tax-exclusive. Daily blackboard/seasonal availability varies; confirm final tax-inclusive bill."
+                  },
+                  {
+                    "name": "宮崎県産和牛 牛カツ シャリアピンソースとトリュフ塩",
+                    "price": 5500,
+                    "note": "Managed menu updatedNovember5,2025; page labels prices tax-exclusive. Daily blackboard/seasonal availability varies; confirm final tax-inclusive bill."
+                  },
+                  {
+                    "name": "シェブンのマカロン",
+                    "price": 700,
+                    "note": "Managed menu updatedNovember5,2025; page labels prices tax-exclusive. Daily blackboard/seasonal availability varies; confirm final tax-inclusive bill."
+                  },
+                  {
+                    "name": "クレープシュゼット",
+                    "price": 850,
+                    "note": "Managed menu updatedNovember5,2025; page labels prices tax-exclusive. Daily blackboard/seasonal availability varies; confirm final tax-inclusive bill."
+                  },
+                  {
+                    "name": "シェブンのモンブラン",
+                    "price": 850,
+                    "note": "Managed menu updatedNovember5,2025; page labels prices tax-exclusive. Daily blackboard/seasonal availability varies; confirm final tax-inclusive bill."
+                  },
+                  {
+                    "name": "フォンダンショコラ",
+                    "price": 900,
+                    "note": "Managed menu updatedNovember5,2025; page labels prices tax-exclusive. Daily blackboard/seasonal availability varies; confirm final tax-inclusive bill."
+                  },
+                  {
+                    "name": "シェブンのブイヤベース",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "季節のチーズ — アルパージュより",
+                    "priceLabel": "Price not published"
+                  }
+                ],
+                "note": "Amounts differ from undated operator website. Follow newer managed menu with its explicit tax-exclusive label; do not convert or call a discount. Summer-only pork/corn farce and peach/mango desserts excluded from current selection. Printed¥2,308tuna amount retained as published, confirm possible typo."
+              },
+              {
+                "label": "Bistro Chez Bun — operator published drinks",
+                "url": "https://chezbun.com/",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "コーヒー",
+                    "price": 495,
+                    "note": "Undated operator website, tax-inclusive sample amount; confirm current price."
+                  },
+                  {
+                    "name": "シェブンこだわりの紅茶",
+                    "price": 715,
+                    "note": "Undated operator website, tax-inclusive sample amount; confirm current price."
+                  },
+                  {
+                    "name": "ソフトドリンク — from",
+                    "price": 440,
+                    "note": "Undated operator website, tax-inclusive sample amount; confirm current price."
+                  },
+                  {
+                    "name": "自家製サングリア",
+                    "price": 715,
+                    "note": "Undated operator website, tax-inclusive sample amount; confirm current price."
+                  },
+                  {
+                    "name": "グラスワイン — from",
+                    "price": 770,
+                    "note": "Undated operator website, tax-inclusive sample amount; confirm current price."
+                  },
+                  {
+                    "name": "フランス産スパークリングワイン bottle — from",
+                    "price": 4290,
+                    "note": "Undated operator website, tax-inclusive sample amount; confirm current price."
+                  },
+                  {
+                    "name": "フランス産ロゼ・白・赤ワイン bottle — from",
+                    "price": 3630,
+                    "note": "Undated operator website, tax-inclusive sample amount; confirm current price."
+                  },
+                  {
+                    "name": "カフェオレ",
+                    "priceLabel": "Price not published",
+                    "note": "Website repeats conflicting¥550/¥715amounts; price withheld pending confirmation."
+                  }
+                ],
+                "note": "The linked managed drink catalogue is datedJuly26,2018and is not treated as current inventory. Website drink prices are indicative published examples; named current bottles are not verified."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://chezbun.com/",
+            "name": "Bistro Chez Bun — Osu",
+            "checkedAt": "2026-10-19",
+            "websiteUrl": "https://chezbun.com/",
+            "phone": "052-231-4823",
+            "openingHours": [
+              {
+                "days": "Wednesday–Sunday",
+                "hours": "18:00–22:00 per managed branch listing"
+              },
+              {
+                "days": "Monday–Tuesday",
+                "hours": "Closed including public holidays"
+              }
+            ],
+            "detailsSourceUrl": "https://chezbun.com/",
+            "additionalSources": [
+              {
+                "label": "Contemporary opening interview",
+                "url": "https://tv-aichi.co.jp/osu-tankentai/genre/italianfrench/post_180.html"
+              },
+              {
+                "label": "Managed branch current hours",
+                "url": "https://tabelog.com/aichi/A2301/A230105/23007926/dtlmap/"
+              },
+              {
+                "label": "Managed food menu2025",
+                "url": "https://tabelog.com/aichi/A2301/A230105/23007926/dtlmenu/"
+              },
+              {
+                "label": "Older drink catalogue — not current",
+                "url": "https://tabelog.com/aichi/A2301/A230105/23007926/dtlmenu/drink/"
+              },
+              {
+                "label": "Operator Instagram",
+                "url": "https://www.instagram.com/bistrochezbun/"
+              }
+            ],
+            "hoursNote": "Fourteen counter seats; phone reservations, no parking/private room. Dishes sized for two or three sharing; daily blackboard varies. Operator website and managed menu differ on price/tax; newer2025food list used with explicit tax-exclusive label. Older lunch hours and2018wine stock excluded.",
+            "reservationUrl": "https://tabelog.com/aichi/A2301/A230105/23007926/"
+          },
+          "tile": {
+            "regionSlug": "nagoya",
+            "kind": "top",
+            "slug": "japan93-bun",
+            "name": "Bistro Chez Bun — Osu",
+            "neighborhood": "Osu Kannon",
+            "cuisine": "French",
+            "description": "An Osu counter bistro serving shareable French dishes, quenelle and Madame’s desserts, with a changing blackboard menu.",
+            "address": "1F La Fontaine Osu, 2-9-35 Osu, Naka-ku, Nagoya",
+            "websiteUrl": "https://chezbun.com/",
+            "checkedAt": "2026-10-19",
+            "recognition": "TV Aichi Osu editorial selection; no invented current award or numeric rating",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-19/batch93-bun-1-2095d272a763b927.webp",
+            "imageCredit": "Bistro Chez Bun — operator photo",
+            "imageSourceUrl": "https://chezbun.com/",
+            "imageNote": "Exact-venue gallery photograph. Food presentation; dish name and current course inclusion not inferred.",
+            "openingConfirmed": true,
+            "day": "2008-02-25"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "originalUrl": "https://chezbun.com/images/bistro/slide/slide1_PC.jpg",
+          "sourcePage": "https://chezbun.com/",
+          "credit": "Bistro Chez Bun — operator photo",
+          "note": "Exact-venue gallery photograph. Food presentation; dish name and current course inclusion not inferred.",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-19/batch93-bun-1-2095d272a763b927.webp",
+          "sha256": "2095d272a763b9279cd61924329f9bbbd94c22900b790079e5dcd5cb92f15620",
+          "width": 1600,
+          "height": 1067
+        },
+        {
+          "originalUrl": "https://chezbun.com/images/bistro/menu-1.jpg",
+          "sourcePage": "https://chezbun.com/",
+          "credit": "Bistro Chez Bun — operator photo",
+          "note": "Exact-venue gallery photograph. Food presentation; dish name and current course inclusion not inferred.",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-19/batch93-bun-3-66b42152bab3bc1c.webp",
+          "sha256": "66b42152bab3bc1cce8afadb1be5014448d1cb625d9d504f67f29e88d144951f",
+          "width": 1568,
+          "height": 1044
+        },
+        {
+          "originalUrl": "https://chezbun.com/images/bistro/menu-5.jpg",
+          "sourcePage": "https://chezbun.com/",
+          "credit": "Bistro Chez Bun — operator photo",
+          "note": "Exact-venue gallery photograph. Food presentation; dish name and current course inclusion not inferred.",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-19/batch93-bun-4-cfa0115f04c30a42.webp",
+          "sha256": "cfa0115f04c30a4259087c4e4c1e77983b846cd5518b4c9e1fdae02880262706",
+          "width": 1200,
+          "height": 800
+        },
+        {
+          "originalUrl": "https://chezbun.com/images/bistro/menu-6.jpg",
+          "sourcePage": "https://chezbun.com/",
+          "credit": "Bistro Chez Bun — operator photo",
+          "note": "Exact-venue gallery photograph. Food presentation; dish name and current course inclusion not inferred.",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-19/batch93-bun-5-f1b9811bf3c6a49b.webp",
+          "sha256": "f1b9811bf3c6a49bc26d7d48b530e5f6fc24f3e9ff60cbaf147ed976b38dcdf2",
+          "width": 1570,
+          "height": 1043
+        }
+      ]
+    }
+  ],
+  "publicationStatus": {
+    "local": "saved and publicly verified",
+    "production": "saved and publicly verified",
+    "publicHttpsVerified": true
+  },
+  "deployment": "No deployment, build, restart or production configuration change.",
+  "held": [],
+  "researchGaps": [
+    "Kyoto Coming soon remains11/30: checked operator and food-critic announcements; expired events and2021renovations are not future restaurant openings.",
+    "Le Cadeau: exact current late-night dessert slots, dated offers, named rotating recipes/drinks and cash/card conflict. Sister branch menus/photos excluded.",
+    "L’aparté: current wine vintages/stock, service percentage and dated upcoming onsite offers. Operator gallery video pages and all11wine-list image links checked; first glass-wine page transcribed as catalogue examples. October6winemaker dinner expired.",
+    "Luca: current named seasonal recipes and future promotions. Expired booking variants endingOctober14,September30,July31,May4and2023excluded; current8%service used.",
+    "Vena: operator Facebook/gallery accessibility, Thursday/Friday/holiday lunch inventory, named daily dishes and current wine labels. Guide photos credited toVena.",
+    "RADICE: holiday lunch availability and next onsite event. CurrentJune2026menu image controls¥19,800+10%; stale¥16,500metadata and expiredSeptember24–October5event excluded. Takeaway orders are not restaurant Specials.",
+    "Bistro Chez Bun: current blackboard, website versus managed-menu price/tax conflict, apparent¥2,308tuna typo, café-au-lait¥550/¥715conflict and current wine roster.2018drink list not current."
+  ],
+  "photoReview": {
+    "downloadedCandidates": 30,
+    "selectedPhotos": 19,
+    "method": "Plain curl, full decode and visually reviewed contact sheet. Operator exact-branch galleries;Vena operator-credited MICHELINgallery. Duplicate Vena image sizes excluded. No dish names inferred from photos.",
+    "menuImage": "RADICEJune2026menu visually read:¥19,800tax included,10%service,lunch/dinnercommoncourse. L’aparté glass-wine catalogue visually transcribed, stock qualified."
+  },
+  "verification": {
+    "local": {
+      "profiles": [
+        {
+          "pinId": 18207,
+          "sourceUrl": "https://www.le-cadeau2019.com/lecadeau",
+          "name": "Le Cadeau — Jingu-Marutamachi",
+          "contentId": 1899,
+          "contentRevision": 1,
+          "verifiedGalleryLinks": 4,
+          "publicPinStatus": 200,
+          "apiBase": "http://localhost:3000",
+          "publicBase": "http://localhost:3000"
+        },
+        {
+          "pinId": 18208,
+          "sourceUrl": "https://laparte.net/",
+          "name": "L’aparté — Nishiwakamatsucho",
+          "contentId": 1900,
+          "contentRevision": 1,
+          "verifiedGalleryLinks": 4,
+          "publicPinStatus": 200,
+          "apiBase": "http://localhost:3000",
+          "publicBase": "http://localhost:3000"
+        },
+        {
+          "pinId": 18209,
+          "sourceUrl": "https://luca-kyoto.com/",
+          "name": "Luca — Takamiyacho",
+          "contentId": 1901,
+          "contentRevision": 1,
+          "verifiedGalleryLinks": 2,
+          "publicPinStatus": 200,
+          "apiBase": "http://localhost:3000",
+          "publicBase": "http://localhost:3000"
+        },
+        {
+          "pinId": 18210,
+          "sourceUrl": "https://tabelog.com/kyoto/A2601/A260202/26028480/",
+          "name": "Vena — Kagamiyacho",
+          "contentId": 1902,
+          "contentRevision": 1,
+          "verifiedGalleryLinks": 2,
+          "publicPinStatus": 200,
+          "apiBase": "http://localhost:3000",
+          "publicBase": "http://localhost:3000"
+        },
+        {
+          "pinId": 18211,
+          "sourceUrl": "https://radice-kyoto.com/",
+          "name": "RADICE — Kagamiyacho",
+          "contentId": 1903,
+          "contentRevision": 1,
+          "verifiedGalleryLinks": 3,
+          "publicPinStatus": 200,
+          "apiBase": "http://localhost:3000",
+          "publicBase": "http://localhost:3000"
+        },
+        {
+          "pinId": 18212,
+          "sourceUrl": "https://chezbun.com/",
+          "name": "Bistro Chez Bun — Osu",
+          "contentId": 1904,
+          "contentRevision": 1,
+          "verifiedGalleryLinks": 4,
+          "publicPinStatus": 200,
+          "apiBase": "http://localhost:3000",
+          "publicBase": "http://localhost:3000"
+        }
+      ],
+      "guides": [
+        {
+          "pinId": 18207,
+          "region": "kyoto",
+          "view": "top",
+          "neighborhood": "Jingu-Marutamachi",
+          "nativeTitleAndImage": true,
+          "hrefs": [
+            "/pin/18207/le-cadeau-jingu-marutamachi-opens-2019-11-01"
+          ],
+          "browserFiltered": false,
+          "publicBase": "http://localhost:3000",
+          "guideStatus": 200,
+          "offers": []
+        },
+        {
+          "pinId": 18208,
+          "region": "kyoto",
+          "view": "top",
+          "neighborhood": "Gojo / Nishiwakamatsucho",
+          "nativeTitleAndImage": true,
+          "hrefs": [
+            "/pin/18208/l-aparte-nishiwakamatsucho-opens-2022-07-10"
+          ],
+          "browserFiltered": false,
+          "publicBase": "http://localhost:3000",
+          "guideStatus": 200,
+          "offers": []
+        },
+        {
+          "pinId": 18209,
+          "region": "kyoto",
+          "view": "top",
+          "neighborhood": "Kawaramachi / Takamiyacho",
+          "nativeTitleAndImage": true,
+          "hrefs": [
+            "/pin/18209/luca-takamiyacho-opens-2022-03-14"
+          ],
+          "browserFiltered": false,
+          "publicBase": "http://localhost:3000",
+          "guideStatus": 200,
+          "offers": []
+        },
+        {
+          "pinId": 18210,
+          "region": "kyoto",
+          "view": "top",
+          "neighborhood": "Marutamachi / Kagamiyacho",
+          "nativeTitleAndImage": true,
+          "hrefs": [
+            "/pin/18210/vena-kagamiyacho-opens-2016-12-20"
+          ],
+          "browserFiltered": false,
+          "publicBase": "http://localhost:3000",
+          "guideStatus": 200,
+          "offers": []
+        },
+        {
+          "pinId": 18211,
+          "region": "kyoto",
+          "view": "top",
+          "neighborhood": "Marutamachi / Kagamiyacho",
+          "nativeTitleAndImage": true,
+          "hrefs": [
+            "/pin/18211/radice-kagamiyacho-opens-2013-12-21"
+          ],
+          "browserFiltered": false,
+          "publicBase": "http://localhost:3000",
+          "guideStatus": 200,
+          "offers": []
+        },
+        {
+          "pinId": 18212,
+          "region": "nagoya",
+          "view": "top",
+          "neighborhood": "Osu Kannon",
+          "nativeTitleAndImage": true,
+          "hrefs": [
+            "/pin/18212/bistro-chez-bun-osu-opens-2008-02-25"
+          ],
+          "browserFiltered": false,
+          "publicBase": "http://localhost:3000",
+          "guideStatus": 200,
+          "offers": []
+        }
+      ]
+    },
+    "production": {
+      "profiles": [
+        {
+          "pinId": 18209,
+          "sourceUrl": "https://www.le-cadeau2019.com/lecadeau",
+          "name": "Le Cadeau — Jingu-Marutamachi",
+          "contentId": 1899,
+          "contentRevision": 1,
+          "verifiedGalleryLinks": 4,
+          "publicPinStatus": 200,
+          "apiBase": "https://www.chronopin.com",
+          "publicBase": "https://www.chronopin.com"
+        },
+        {
+          "pinId": 18210,
+          "sourceUrl": "https://laparte.net/",
+          "name": "L’aparté — Nishiwakamatsucho",
+          "contentId": 1900,
+          "contentRevision": 1,
+          "verifiedGalleryLinks": 4,
+          "publicPinStatus": 200,
+          "apiBase": "https://www.chronopin.com",
+          "publicBase": "https://www.chronopin.com"
+        },
+        {
+          "pinId": 18211,
+          "sourceUrl": "https://luca-kyoto.com/",
+          "name": "Luca — Takamiyacho",
+          "contentId": 1901,
+          "contentRevision": 1,
+          "verifiedGalleryLinks": 2,
+          "publicPinStatus": 200,
+          "apiBase": "https://www.chronopin.com",
+          "publicBase": "https://www.chronopin.com"
+        },
+        {
+          "pinId": 18212,
+          "sourceUrl": "https://tabelog.com/kyoto/A2601/A260202/26028480/",
+          "name": "Vena — Kagamiyacho",
+          "contentId": 1902,
+          "contentRevision": 1,
+          "verifiedGalleryLinks": 2,
+          "publicPinStatus": 200,
+          "apiBase": "https://www.chronopin.com",
+          "publicBase": "https://www.chronopin.com"
+        },
+        {
+          "pinId": 18213,
+          "sourceUrl": "https://radice-kyoto.com/",
+          "name": "RADICE — Kagamiyacho",
+          "contentId": 1903,
+          "contentRevision": 1,
+          "verifiedGalleryLinks": 3,
+          "publicPinStatus": 200,
+          "apiBase": "https://www.chronopin.com",
+          "publicBase": "https://www.chronopin.com"
+        },
+        {
+          "pinId": 18214,
+          "sourceUrl": "https://chezbun.com/",
+          "name": "Bistro Chez Bun — Osu",
+          "contentId": 1904,
+          "contentRevision": 1,
+          "verifiedGalleryLinks": 4,
+          "publicPinStatus": 200,
+          "apiBase": "https://www.chronopin.com",
+          "publicBase": "https://www.chronopin.com"
+        }
+      ],
+      "guides": [
+        {
+          "pinId": 18209,
+          "region": "kyoto",
+          "view": "top",
+          "neighborhood": "Jingu-Marutamachi",
+          "nativeTitleAndImage": true,
+          "hrefs": [
+            "/pin/18209/le-cadeau-jingu-marutamachi-opens-2019-11-01"
+          ],
+          "browserFiltered": false,
+          "publicBase": "https://www.chronopin.com",
+          "guideStatus": 200,
+          "offers": []
+        },
+        {
+          "pinId": 18210,
+          "region": "kyoto",
+          "view": "top",
+          "neighborhood": "Gojo / Nishiwakamatsucho",
+          "nativeTitleAndImage": true,
+          "hrefs": [
+            "/pin/18210/l-aparte-nishiwakamatsucho-opens-2022-07-10"
+          ],
+          "browserFiltered": false,
+          "publicBase": "https://www.chronopin.com",
+          "guideStatus": 200,
+          "offers": []
+        },
+        {
+          "pinId": 18211,
+          "region": "kyoto",
+          "view": "top",
+          "neighborhood": "Kawaramachi / Takamiyacho",
+          "nativeTitleAndImage": true,
+          "hrefs": [
+            "/pin/18211/luca-takamiyacho-opens-2022-03-14"
+          ],
+          "browserFiltered": false,
+          "publicBase": "https://www.chronopin.com",
+          "guideStatus": 200,
+          "offers": []
+        },
+        {
+          "pinId": 18212,
+          "region": "kyoto",
+          "view": "top",
+          "neighborhood": "Marutamachi / Kagamiyacho",
+          "nativeTitleAndImage": true,
+          "hrefs": [
+            "/pin/18212/vena-kagamiyacho-opens-2016-12-20"
+          ],
+          "browserFiltered": false,
+          "publicBase": "https://www.chronopin.com",
+          "guideStatus": 200,
+          "offers": []
+        },
+        {
+          "pinId": 18213,
+          "region": "kyoto",
+          "view": "top",
+          "neighborhood": "Marutamachi / Kagamiyacho",
+          "nativeTitleAndImage": true,
+          "hrefs": [
+            "/pin/18213/radice-kagamiyacho-opens-2013-12-21"
+          ],
+          "browserFiltered": false,
+          "publicBase": "https://www.chronopin.com",
+          "guideStatus": 200,
+          "offers": []
+        },
+        {
+          "pinId": 18214,
+          "region": "nagoya",
+          "view": "top",
+          "neighborhood": "Osu Kannon",
+          "nativeTitleAndImage": true,
+          "hrefs": [
+            "/pin/18214/bistro-chez-bun-osu-opens-2008-02-25"
+          ],
+          "browserFiltered": false,
+          "publicBase": "https://www.chronopin.com",
+          "guideStatus": 200,
+          "offers": []
+        }
+      ]
+    }
+  },
+  "verifiedGuideCounts": {
+    "local": [
+      {
+        "environment": "local",
+        "city": "fukuoka",
+        "view": "upcoming",
+        "verificationBase": "http://localhost:3000",
+        "count": 9,
+        "ids": [
+          "15398",
+          "15410",
+          "15411",
+          "15415",
+          "15424",
+          "15425",
+          "15426",
+          "15914",
+          "15924"
+        ]
+      },
+      {
+        "environment": "local",
+        "city": "fukuoka",
+        "view": "new",
+        "verificationBase": "http://localhost:3000",
+        "count": 20,
+        "ids": [
+          "15399",
+          "15400",
+          "15401",
+          "15409",
+          "15412",
+          "15414",
+          "15421",
+          "15422",
+          "15423",
+          "15427",
+          "15428",
+          "15969",
+          "16026",
+          "16027",
+          "16078",
+          "16290",
+          "16291",
+          "16292",
+          "16326",
+          "17625"
+        ]
+      },
+      {
+        "environment": "local",
+        "city": "fukuoka",
+        "view": "top",
+        "verificationBase": "http://localhost:3000",
+        "count": 22,
+        "ids": [
+          "15402",
+          "15403",
+          "15404",
+          "15405",
+          "15406",
+          "15407",
+          "15408",
+          "15413",
+          "15416",
+          "15417",
+          "15418",
+          "15419",
+          "15420",
+          "15429",
+          "18132",
+          "18133",
+          "18134",
+          "18147",
+          "18148",
+          "18149",
+          "18150",
+          "18176"
+        ]
+      },
+      {
+        "environment": "local",
+        "city": "fukuoka",
+        "view": "discounts",
+        "verificationBase": "http://localhost:3000",
+        "count": 33,
+        "ids": [
+          "https://010bld.com/gohgan/",
+          "https://333sanmitomatoramen.com/store/%e5%a4%a9%e7%a5%9e%e5%a4%a7%e5%90%8d%e6%9c%ac%e5%ba%97/",
+          "https://and-gallery.com/#hukuoka",
+          "https://cene.tokyo/collections/fukuoka-open",
+          "https://fukuoka-orientalhotel.com/restaurant/linksquare/",
+          "https://fukuokaseahawk.hiltonjapan.co.jp/restaurants/clouds",
+          "https://fukuokaseahawk.hiltonjapan.co.jp/restaurants/seala",
+          "https://kusiyatubame.owst.jp/",
+          "https://le-bistro-aki.com/",
+          "https://onefukuoka-building.jp/shop/55",
+          "https://prtimes.jp/main/html/rd/p/000000060.000179076.html",
+          "https://prtimes.jp/main/html/rd/p/000000064.000152670.html",
+          "https://prtimes.jp/main/html/rd/p/000000170.000101757.html",
+          "https://pukutoco.com/sumomo-bakery-1007open/",
+          "https://pukutoco.com/sumomobakery-akasaka1019open/",
+          "https://toeihotel-fukuoka.com/restaurant/bistro_atrie/",
+          "https://www.eggsnthingsjapan.com/hakata/",
+          "https://www.f-sunpalace.com/restaurant/lagoon/",
+          "https://www.fuk.hotelokura.co.jp/restaurant/lechampdor/",
+          "https://www.gate-hotel.jp/fukuoka/rb/agfukuoka.html",
+          "https://www.ginzalion.jp/shop/brand/yebisubar/onefukuokabldg.html",
+          "https://www.hiramatsurestaurant.jp/hiramatsu-hakata/",
+          "https://www.hiramatsurestaurant.jp/kubotsu/",
+          "https://www.hotelnikko-fukuoka.com/restaurant/celebrites/",
+          "https://www.hotelnikko-fukuoka.com/restaurant/serena/",
+          "https://www.hotpepper.jp/strJ001276550/",
+          "https://www.kys-newotani.co.jp/hakata/restaurant/castillian-bar/",
+          "https://www.orec.co.jp/greenlab-fukuoka/",
+          "https://www.pochi-ito.com/",
+          "https://www.princehotels.co.jp/momochihama/restaurant/yocaterrace/",
+          "https://www.quil-fait-bon.com/pages/fukuoka",
+          "https://www.recent-hotel.com/restaurant/",
+          "https://www.tenchika.com/shop/h_b_antique/"
+        ]
+      },
+      {
+        "environment": "local",
+        "city": "osaka",
+        "view": "upcoming",
+        "verificationBase": "http://localhost:3000",
+        "count": 12,
+        "ids": [
+          "15432",
+          "15445",
+          "15447",
+          "15448",
+          "15449",
+          "15458",
+          "15913",
+          "15925",
+          "15975",
+          "16023",
+          "16079",
+          "17168"
+        ]
+      },
+      {
+        "environment": "local",
+        "city": "osaka",
+        "view": "new",
+        "verificationBase": "http://localhost:3000",
+        "count": 22,
+        "ids": [
+          "15431",
+          "15435",
+          "15436",
+          "15437",
+          "15438",
+          "15439",
+          "15446",
+          "15451",
+          "15452",
+          "15453",
+          "15454",
+          "15455",
+          "15456",
+          "15457",
+          "17108",
+          "17109",
+          "17110",
+          "17111",
+          "17112",
+          "17622",
+          "17623",
+          "17626"
+        ]
+      },
+      {
+        "environment": "local",
+        "city": "osaka",
+        "view": "top",
+        "verificationBase": "http://localhost:3000",
+        "count": 19,
+        "ids": [
+          "15430",
+          "15433",
+          "15434",
+          "15440",
+          "15441",
+          "15442",
+          "15443",
+          "15444",
+          "15450",
+          "15971",
+          "18135",
+          "18136",
+          "18137",
+          "18151",
+          "18152",
+          "18153",
+          "18154",
+          "18166",
+          "18168"
+        ]
+      },
+      {
+        "environment": "local",
+        "city": "osaka",
+        "view": "discounts",
+        "verificationBase": "http://localhost:3000",
+        "count": 25,
+        "ids": [
+          "https://and-gallery.com/#nanba",
+          "https://big-step.co.jp/shop/detail/63",
+          "https://conrad-osaka.hiltonjapan.co.jp/restaurants/40skybar",
+          "https://conrad-osaka.hiltonjapan.co.jp/restaurants/atmos",
+          "https://cross-osaka.orixhotelsandresorts.com/#restaurant",
+          "https://csm-cafe.ltr-online.com/lp/csm-cafe-s022",
+          "https://doubletree-osaka-castle.hiltonjapan.co.jp/restaurants/lounge-bar-sen",
+          "https://doubletree-osaka-castle.hiltonjapan.co.jp/restaurants/restaurant-sen",
+          "https://gabuchiki.com/news/view/308",
+          "https://icosaka.com/offer/pierre_autumnmenu/",
+          "https://jblm2024.wixsite.com/fujiyama-tokyo/%E8%A4%87%E8%A3%BD-namba-osaka",
+          "https://labaie.ritzcarltonosaka.com/",
+          "https://osaka.ekimaru.com/shopguide/detail/103",
+          "https://osaka.hiltonjapan.co.jp/plans/restaurants/other/myplace-happyhour",
+          "https://patinahotels.com/osaka/drink-and-dine/p72",
+          "https://prtimes.jp/main/html/rd/p/000000001.000192433.html/",
+          "https://splendido.ritzcarltonosaka.com/",
+          "https://www.daimaru.co.jp/shinsaibashi/restaurant/cucina-bella.html",
+          "https://www.gate-hotel.jp/osaka/rb/aosaka.html",
+          "https://www.gate-hotel.jp/osaka/rb/peaks.html",
+          "https://www.hiramatsurestaurant.jp/hiramatsu-lafete/",
+          "https://www.hiramatsurestaurant.jp/hiramatsu-lemidi/",
+          "https://www.hotpepper.jp/strJ004661366/",
+          "https://www.quil-fait-bon.com/pages/grand-front-osaka",
+          "https://www.regine.stregisosaka.com/"
+        ]
+      },
+      {
+        "environment": "local",
+        "city": "kyoto",
+        "view": "upcoming",
+        "verificationBase": "http://localhost:3000",
+        "count": 11,
+        "ids": [
+          "15483",
+          "15499",
+          "15500",
+          "15909",
+          "15910",
+          "15911",
+          "15912",
+          "15922",
+          "15931",
+          "16323",
+          "17169"
+        ]
+      },
+      {
+        "environment": "local",
+        "city": "kyoto",
+        "view": "new",
+        "verificationBase": "http://localhost:3000",
+        "count": 33,
+        "ids": [
+          "15460",
+          "15461",
+          "15462",
+          "15463",
+          "15464",
+          "15465",
+          "15466",
+          "15467",
+          "15468",
+          "15469",
+          "15470",
+          "15471",
+          "15472",
+          "15473",
+          "15474",
+          "15475",
+          "15476",
+          "15477",
+          "15478",
+          "15479",
+          "15480",
+          "15481",
+          "15482",
+          "15489",
+          "15490",
+          "15491",
+          "15492",
+          "15493",
+          "15494",
+          "15495",
+          "15498",
+          "18025",
+          "18026"
+        ]
+      },
+      {
+        "environment": "local",
+        "city": "kyoto",
+        "view": "top",
+        "verificationBase": "http://localhost:3000",
+        "count": 30,
+        "ids": [
+          "15459",
+          "15484",
+          "15485",
+          "15486",
+          "15487",
+          "15488",
+          "15496",
+          "15497",
+          "15501",
+          "15973",
+          "18052",
+          "18060",
+          "18061",
+          "18098",
+          "18099",
+          "18117",
+          "18119",
+          "18155",
+          "18156",
+          "18170",
+          "18171",
+          "18173",
+          "18189",
+          "18191",
+          "18192",
+          "18207",
+          "18208",
+          "18209",
+          "18210",
+          "18211"
+        ]
+      },
+      {
+        "environment": "local",
+        "city": "kyoto",
+        "view": "discounts",
+        "verificationBase": "http://localhost:3000",
+        "count": 34,
+        "ids": [
+          "https://cenci-kyoto.com/",
+          "https://droit-kyoto.jp/",
+          "https://hotelfauchonkyoto.com/ja/gourmet/fauchon-salon-de-the-kyoto/",
+          "https://kyoto.hiltonjapan.co.jp/restaurants/teori",
+          "https://www.hiramatsurestaurant.jp/hiramatsu-kodaiji/",
+          "https://www.hiramatsurestaurant.jp/la-luce/",
+          "https://www.instagram.com/jbowl_ritsumeikan_mae/",
+          "https://www.keihanhotels-resorts.co.jp/kyoto-centuryhotel/topics/happyhour-2/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/011/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/012/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/013/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/014/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/015/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/016/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/017/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/018/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/019/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/020/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/022/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/023/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/026/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/028/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/031/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/033/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/039/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/040/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/042/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/043/",
+          "https://www.princess-kyoto.co.jp/restaurant/ambercourt/",
+          "https://www.princess-kyoto.co.jp/restaurant/darley/",
+          "https://www.princess-kyoto.co.jp/restaurant/hisuien/",
+          "https://www.princess-kyoto.co.jp/restaurant/hoen/",
+          "https://www.princess-kyoto.co.jp/restaurant/sagano/",
+          "https://www.quil-fait-bon.com/pages/kyoto"
+        ]
+      },
+      {
+        "environment": "local",
+        "city": "nagoya",
+        "view": "upcoming",
+        "verificationBase": "http://localhost:3000",
+        "count": 11,
+        "ids": [
+          "15510",
+          "15512",
+          "15517",
+          "15518",
+          "15521",
+          "15522",
+          "15900",
+          "15901",
+          "15902",
+          "16075",
+          "16080"
+        ]
+      },
+      {
+        "environment": "local",
+        "city": "nagoya",
+        "view": "new",
+        "verificationBase": "http://localhost:3000",
+        "count": 31,
+        "ids": [
+          "15509",
+          "15511",
+          "15515",
+          "15516",
+          "15519",
+          "15520",
+          "15898",
+          "15899",
+          "15915",
+          "15916",
+          "15917",
+          "15918",
+          "15919",
+          "15920",
+          "15921",
+          "15932",
+          "15964",
+          "15965",
+          "16020",
+          "16021",
+          "16022",
+          "16076",
+          "16294",
+          "16295",
+          "16767",
+          "16771",
+          "16800",
+          "17107",
+          "17166",
+          "17167",
+          "18045"
+        ]
+      },
+      {
+        "environment": "local",
+        "city": "nagoya",
+        "view": "top",
+        "verificationBase": "http://localhost:3000",
+        "count": 21,
+        "ids": [
+          "15502",
+          "15503",
+          "15504",
+          "15505",
+          "15506",
+          "15507",
+          "15508",
+          "15513",
+          "15514",
+          "15523",
+          "15524",
+          "15972",
+          "18044",
+          "18100",
+          "18101",
+          "18121",
+          "18138",
+          "18190",
+          "18193",
+          "18194",
+          "18212"
+        ]
+      },
+      {
+        "environment": "local",
+        "city": "nagoya",
+        "view": "discounts",
+        "verificationBase": "http://localhost:3000",
+        "count": 31,
+        "ids": [
+          "https://and-gallery.com/#nagoya",
+          "https://csm-cafe.ltr-online.com/lp/csm-cafe-s017",
+          "https://french-kitamura.jp/",
+          "https://kinzan.nagoya/archives/news/2853/",
+          "https://kobekangroup.com/shop/obanzai_kabtoya/",
+          "https://lebeurrenoisettetokyo.com/nagoya/",
+          "https://nagoya.hiltonjapan.co.jp/restaurants/hideaway3-3",
+          "https://nagoya.hiltonjapan.co.jp/restaurants/inplace3-3",
+          "https://nagoya.hiltonjapan.co.jp/restaurants/ouchou",
+          "https://nagoya.parco.jp/shop/detail/?cd=009191",
+          "https://prtimes.jp/main/html/rd/p/000000004.000116722.html",
+          "https://prtimes.jp/main/html/rd/p/000004440.000018505.html",
+          "https://reconnaissance-nagoya.com/",
+          "https://thetowerhotel.jp/restaurant/",
+          "https://www.anacrowneplaza-nagoya.jp/pages/restaurant_gardencourt",
+          "https://www.anacrowneplaza-nagoya.jp/pages/restaurant_karin",
+          "https://www.anacrowneplaza-nagoya.jp/pages/restaurant_stargate",
+          "https://www.anacrowneplaza-nagoya.jp/pages/restaurant_winglounge",
+          "https://www.associa.com/nma/restaurant/pergola/",
+          "https://www.centralpark.co.jp/shop/sharecafe/",
+          "https://www.espacionagoya.com/restaurant-bar/the-bar-castle/",
+          "https://www.hiramatsurestaurant.jp/aubergedelill-nagoya/",
+          "https://www.hotpepper.jp/strJ004698778/",
+          "https://www.hotpepper.jp/strJ004699003/",
+          "https://www.kochuten.jp/",
+          "https://www.komeda.co.jp/shop/detail.html?id=1215",
+          "https://www.lafloraison-t.jp/",
+          "https://www.livingroom-skybar.com/",
+          "https://www.princehotels.co.jp/nagoya/restaurant/skydining/",
+          "https://www.quil-fait-bon.com/pages/nagoya-sakae",
+          "https://www.thekawabunnagoya.com/thekawabunnagoya/restaurant/"
+        ]
+      },
+      {
+        "environment": "local",
+        "city": "tokyo",
+        "view": "upcoming",
+        "verificationBase": "http://localhost:3000",
+        "count": 14,
+        "ids": [
+          "15526",
+          "15538",
+          "15541",
+          "15544",
+          "15546",
+          "15555",
+          "15556",
+          "15557",
+          "15923",
+          "15929",
+          "15930",
+          "17106",
+          "17621",
+          "18027"
+        ]
+      },
+      {
+        "environment": "local",
+        "city": "tokyo",
+        "view": "new",
+        "verificationBase": "http://localhost:3000",
+        "count": 23,
+        "ids": [
+          "15527",
+          "15539",
+          "15540",
+          "15551",
+          "15552",
+          "15553",
+          "15554",
+          "15558",
+          "15966",
+          "15967",
+          "15968",
+          "16289",
+          "16325",
+          "17170",
+          "17171",
+          "17172",
+          "17173",
+          "17628",
+          "18043",
+          "18051",
+          "18058",
+          "18102",
+          "18103"
+        ]
+      },
+      {
+        "environment": "local",
+        "city": "tokyo",
+        "view": "top",
+        "verificationBase": "http://localhost:3000",
+        "count": 30,
+        "ids": [
+          "15525",
+          "15528",
+          "15529",
+          "15530",
+          "15531",
+          "15532",
+          "15533",
+          "15534",
+          "15535",
+          "15536",
+          "15537",
+          "15542",
+          "15543",
+          "15545",
+          "15547",
+          "15548",
+          "15549",
+          "15550",
+          "15559",
+          "15560",
+          "15561",
+          "15562",
+          "15903",
+          "15974",
+          "18122",
+          "18123",
+          "18140",
+          "18141",
+          "18157",
+          "18158"
+        ]
+      },
+      {
+        "environment": "local",
+        "city": "tokyo",
+        "view": "discounts",
+        "verificationBase": "http://localhost:3000",
+        "count": 37,
+        "ids": [
+          "https://and-gallery.com/#ikebukuro",
+          "https://and-gallery.com/#yurakucho",
+          "https://cocco.eastone.co.jp/shop/gotanda",
+          "https://cocco.eastone.co.jp/shop/kameido",
+          "https://conrad-tokyo.hiltonjapan.co.jp/restaurants/cerise",
+          "https://conrad-tokyo.hiltonjapan.co.jp/restaurants/chinablue",
+          "https://conrad-tokyo.hiltonjapan.co.jp/restaurants/twentyeight",
+          "https://csm-cafe.ltr-online.com/lp/csm-cafe-s012",
+          "https://gourmetpress.net/1488798/",
+          "https://miabocca.eastone.co.jp/shop/Ikebukuro",
+          "https://miabocca.eastone.co.jp/shop/Shakujii-park",
+          "https://miabocca.eastone.co.jp/shop/Shinjuku-takasimaya",
+          "https://prtimes.jp/main/html/rd/p/000000009.000161200.html",
+          "https://prtimes.jp/main/html/rd/p/000000048.000152772.html",
+          "https://prtimes.jp/main/html/rd/p/000000196.000049183.html",
+          "https://prtimes.jp/main/html/rd/p/000000356.000048489.html",
+          "https://prtimes.jp/main/html/rd/p/000000592.000071323.html",
+          "https://prtimes.jp/main/html/rd/p/000004178.000003860.html",
+          "https://sarabethsrestaurants.jp/location/omotesando/",
+          "https://sarabethsrestaurants.jp/location/shinagawa/",
+          "https://sarabethsrestaurants.jp/location/shinjuku/",
+          "https://sarabethsrestaurants.jp/location/tokyo/",
+          "https://shibakoen.bar-shinkai.com/",
+          "https://store-info.skylark.co.jp/syabuyo/map/198490/",
+          "https://tabelog.com/en/tokyo/A1303/A130301/13198692/",
+          "https://tokyo.hiltonjapan.co.jp/restaurants/st_georges_bar",
+          "https://www.andaztokyo.jp/restaurants/jp/thetavern-grill-lounge",
+          "https://www.herofield.com/bbq/tokyoprince/",
+          "https://www.hiramatsurestaurant.jp/jardindessens-tokyo/",
+          "https://www.mesm.jp/en/eat-drink/chefs-theatre.html",
+          "https://www.newotani.co.jp/tokyo/restaurant/gardenlounge/",
+          "https://www.quil-fait-bon.com/pages/aoyama",
+          "https://www.quil-fait-bon.com/pages/grand-maison-ginza",
+          "https://www.quil-fait-bon.com/pages/shinjuku",
+          "https://www.quil-fait-bon.com/pages/tokyo-dome-city",
+          "https://www.quil-fait-bon.com/pages/tokyo-skytree-town-solamachi",
+          "https://www.sunamo.jp/floor/shop_detail.html?UC=1_028"
+        ]
+      },
+      {
+        "environment": "local",
+        "city": "sapporo",
+        "view": "upcoming",
+        "verificationBase": "http://localhost:3000",
+        "count": 11,
+        "ids": [
+          "15568",
+          "15569",
+          "15570",
+          "15571",
+          "15597",
+          "15926",
+          "15970",
+          "17103",
+          "18047",
+          "18048",
+          "18054"
+        ]
+      },
+      {
+        "environment": "local",
+        "city": "sapporo",
+        "view": "new",
+        "verificationBase": "http://localhost:3000",
+        "count": 28,
+        "ids": [
+          "15580",
+          "15586",
+          "15587",
+          "15588",
+          "15589",
+          "15590",
+          "15591",
+          "15592",
+          "15595",
+          "15596",
+          "16293",
+          "16296",
+          "17104",
+          "17105",
+          "17624",
+          "17627",
+          "18028",
+          "18029",
+          "18030",
+          "18031",
+          "18049",
+          "18055",
+          "18056",
+          "18057",
+          "18104",
+          "18105",
+          "18124",
+          "18125"
+        ]
+      },
+      {
+        "environment": "local",
+        "city": "sapporo",
+        "view": "top",
+        "verificationBase": "http://localhost:3000",
+        "count": 30,
+        "ids": [
+          "15563",
+          "15564",
+          "15565",
+          "15566",
+          "15567",
+          "15572",
+          "15573",
+          "15574",
+          "15575",
+          "15576",
+          "15577",
+          "15578",
+          "15579",
+          "15581",
+          "15582",
+          "15583",
+          "15584",
+          "15585",
+          "15593",
+          "15594",
+          "15598",
+          "15599",
+          "15600",
+          "15601",
+          "15602",
+          "15603",
+          "15604",
+          "15605",
+          "15606",
+          "15607"
+        ]
+      },
+      {
+        "environment": "local",
+        "city": "sapporo",
+        "view": "discounts",
+        "verificationBase": "http://localhost:3000",
+        "count": 34,
+        "ids": [
+          "https://anan.fuji-tatsu.co.jp/shop/sapporo-sinoro/",
+          "https://chocottosushi-kiwami.owst.jp/",
+          "https://cocco.eastone.co.jp/shop/kitahachijo",
+          "https://cocco.eastone.co.jp/shop/kitaichijo",
+          "https://cocco.eastone.co.jp/shop/kotoniekimae",
+          "https://cocco.eastone.co.jp/shop/miyanosawa",
+          "https://cocco.eastone.co.jp/shop/shindohigashi",
+          "https://cocco.eastone.co.jp/shop/souen",
+          "https://grand1934.com/restaurant/garden-dining-waraku/",
+          "https://grand1934.com/restaurant/kokaku/",
+          "https://grand1934.com/restaurant/lobby-lounge-mizar/",
+          "https://grand1934.com/restaurant/northern-terrace-diner/",
+          "https://grand1934.com/restaurant/old-saloon1934/",
+          "https://miabocca.eastone.co.jp/shop/Kita2jo",
+          "https://miabocca.eastone.co.jp/shop/Kotoni-station",
+          "https://miabocca.eastone.co.jp/shop/Sapporo-station",
+          "https://miabocca.eastone.co.jp/shop/atsubetsuminami",
+          "https://miabocca.eastone.co.jp/shop/sapporoduo",
+          "https://michiru.dkdining.com/sapporo/",
+          "https://prtimes.jp/main/html/rd/p/000000010.000134951.html",
+          "https://store-info.skylark.co.jp/syabuyo/map/198489/",
+          "https://www.anahisapporosusukino.com/restaurants/verde/",
+          "https://www.hyatt.com/hyatt-centric/ja-JP/ctsct-hyatt-centric-sapporo/dining",
+          "https://www.jrhotels.co.jp/tower/restaurant/skyj/",
+          "https://www.keioplaza-sapporo.co.jp/restaurants/akizu/",
+          "https://www.keioplaza-sapporo.co.jp/restaurants/crossvault/",
+          "https://www.keioplaza-sapporo.co.jp/restaurants/glass/",
+          "https://www.keioplaza-sapporo.co.jp/restaurants/miyama/",
+          "https://www.keioplaza-sapporo.co.jp/restaurants/yamanami/",
+          "https://www.princehotels.co.jp/sapporo/restaurant/alldaydininggrandeur",
+          "https://www.princehotels.co.jp/sapporo/restaurant/fuyojo",
+          "https://www.princehotels.co.jp/sapporo/restaurant/katsura",
+          "https://www.princehotels.co.jp/sapporo/restaurant/top_prince",
+          "https://www.tokyuhotels.co.jp/sapporostream/restaurant/splish/plan/angel_devil/index.html"
+        ]
+      }
+    ],
+    "production": [
+      {
+        "environment": "production",
+        "city": "fukuoka",
+        "view": "upcoming",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 9,
+        "ids": [
+          "15398",
+          "15410",
+          "15411",
+          "15415",
+          "15424",
+          "15425",
+          "15426",
+          "15914",
+          "15924"
+        ]
+      },
+      {
+        "environment": "production",
+        "city": "fukuoka",
+        "view": "new",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 20,
+        "ids": [
+          "15399",
+          "15400",
+          "15401",
+          "15409",
+          "15412",
+          "15414",
+          "15421",
+          "15422",
+          "15423",
+          "15427",
+          "15428",
+          "15969",
+          "16026",
+          "16027",
+          "16078",
+          "16290",
+          "16291",
+          "16292",
+          "16326",
+          "17625"
+        ]
+      },
+      {
+        "environment": "production",
+        "city": "fukuoka",
+        "view": "top",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 22,
+        "ids": [
+          "15402",
+          "15403",
+          "15404",
+          "15405",
+          "15406",
+          "15407",
+          "15408",
+          "15413",
+          "15416",
+          "15417",
+          "15418",
+          "15419",
+          "15420",
+          "15429",
+          "18132",
+          "18133",
+          "18134",
+          "18147",
+          "18148",
+          "18149",
+          "18150",
+          "18176"
+        ]
+      },
+      {
+        "environment": "production",
+        "city": "fukuoka",
+        "view": "discounts",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 33,
+        "ids": [
+          "https://010bld.com/gohgan/",
+          "https://333sanmitomatoramen.com/store/%e5%a4%a9%e7%a5%9e%e5%a4%a7%e5%90%8d%e6%9c%ac%e5%ba%97/",
+          "https://and-gallery.com/#hukuoka",
+          "https://cene.tokyo/collections/fukuoka-open",
+          "https://fukuoka-orientalhotel.com/restaurant/linksquare/",
+          "https://fukuokaseahawk.hiltonjapan.co.jp/restaurants/clouds",
+          "https://fukuokaseahawk.hiltonjapan.co.jp/restaurants/seala",
+          "https://kusiyatubame.owst.jp/",
+          "https://le-bistro-aki.com/",
+          "https://onefukuoka-building.jp/shop/55",
+          "https://prtimes.jp/main/html/rd/p/000000060.000179076.html",
+          "https://prtimes.jp/main/html/rd/p/000000064.000152670.html",
+          "https://prtimes.jp/main/html/rd/p/000000170.000101757.html",
+          "https://pukutoco.com/sumomo-bakery-1007open/",
+          "https://pukutoco.com/sumomobakery-akasaka1019open/",
+          "https://toeihotel-fukuoka.com/restaurant/bistro_atrie/",
+          "https://www.eggsnthingsjapan.com/hakata/",
+          "https://www.f-sunpalace.com/restaurant/lagoon/",
+          "https://www.fuk.hotelokura.co.jp/restaurant/lechampdor/",
+          "https://www.gate-hotel.jp/fukuoka/rb/agfukuoka.html",
+          "https://www.ginzalion.jp/shop/brand/yebisubar/onefukuokabldg.html",
+          "https://www.hiramatsurestaurant.jp/hiramatsu-hakata/",
+          "https://www.hiramatsurestaurant.jp/kubotsu/",
+          "https://www.hotelnikko-fukuoka.com/restaurant/celebrites/",
+          "https://www.hotelnikko-fukuoka.com/restaurant/serena/",
+          "https://www.hotpepper.jp/strJ001276550/",
+          "https://www.kys-newotani.co.jp/hakata/restaurant/castillian-bar/",
+          "https://www.orec.co.jp/greenlab-fukuoka/",
+          "https://www.pochi-ito.com/",
+          "https://www.princehotels.co.jp/momochihama/restaurant/yocaterrace/",
+          "https://www.quil-fait-bon.com/pages/fukuoka",
+          "https://www.recent-hotel.com/restaurant/",
+          "https://www.tenchika.com/shop/h_b_antique/"
+        ]
+      },
+      {
+        "environment": "production",
+        "city": "osaka",
+        "view": "upcoming",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 12,
+        "ids": [
+          "15432",
+          "15445",
+          "15447",
+          "15448",
+          "15449",
+          "15458",
+          "15913",
+          "15925",
+          "15975",
+          "16023",
+          "16079",
+          "17168"
+        ]
+      },
+      {
+        "environment": "production",
+        "city": "osaka",
+        "view": "new",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 22,
+        "ids": [
+          "15431",
+          "15435",
+          "15436",
+          "15437",
+          "15438",
+          "15439",
+          "15446",
+          "15451",
+          "15452",
+          "15453",
+          "15454",
+          "15455",
+          "15456",
+          "15457",
+          "17108",
+          "17109",
+          "17110",
+          "17111",
+          "17112",
+          "17622",
+          "17623",
+          "17626"
+        ]
+      },
+      {
+        "environment": "production",
+        "city": "osaka",
+        "view": "top",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 19,
+        "ids": [
+          "15430",
+          "15433",
+          "15434",
+          "15440",
+          "15441",
+          "15442",
+          "15443",
+          "15444",
+          "15450",
+          "15971",
+          "18135",
+          "18136",
+          "18137",
+          "18151",
+          "18152",
+          "18153",
+          "18154",
+          "18166",
+          "18168"
+        ]
+      },
+      {
+        "environment": "production",
+        "city": "osaka",
+        "view": "discounts",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 25,
+        "ids": [
+          "https://and-gallery.com/#nanba",
+          "https://big-step.co.jp/shop/detail/63",
+          "https://conrad-osaka.hiltonjapan.co.jp/restaurants/40skybar",
+          "https://conrad-osaka.hiltonjapan.co.jp/restaurants/atmos",
+          "https://cross-osaka.orixhotelsandresorts.com/#restaurant",
+          "https://csm-cafe.ltr-online.com/lp/csm-cafe-s022",
+          "https://doubletree-osaka-castle.hiltonjapan.co.jp/restaurants/lounge-bar-sen",
+          "https://doubletree-osaka-castle.hiltonjapan.co.jp/restaurants/restaurant-sen",
+          "https://gabuchiki.com/news/view/308",
+          "https://icosaka.com/offer/pierre_autumnmenu/",
+          "https://jblm2024.wixsite.com/fujiyama-tokyo/%E8%A4%87%E8%A3%BD-namba-osaka",
+          "https://labaie.ritzcarltonosaka.com/",
+          "https://osaka.ekimaru.com/shopguide/detail/103",
+          "https://osaka.hiltonjapan.co.jp/plans/restaurants/other/myplace-happyhour",
+          "https://patinahotels.com/osaka/drink-and-dine/p72",
+          "https://prtimes.jp/main/html/rd/p/000000001.000192433.html/",
+          "https://splendido.ritzcarltonosaka.com/",
+          "https://www.daimaru.co.jp/shinsaibashi/restaurant/cucina-bella.html",
+          "https://www.gate-hotel.jp/osaka/rb/aosaka.html",
+          "https://www.gate-hotel.jp/osaka/rb/peaks.html",
+          "https://www.hiramatsurestaurant.jp/hiramatsu-lafete/",
+          "https://www.hiramatsurestaurant.jp/hiramatsu-lemidi/",
+          "https://www.hotpepper.jp/strJ004661366/",
+          "https://www.quil-fait-bon.com/pages/grand-front-osaka",
+          "https://www.regine.stregisosaka.com/"
+        ]
+      },
+      {
+        "environment": "production",
+        "city": "kyoto",
+        "view": "upcoming",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 11,
+        "ids": [
+          "15483",
+          "15499",
+          "15500",
+          "15909",
+          "15910",
+          "15911",
+          "15912",
+          "15922",
+          "15931",
+          "16323",
+          "17169"
+        ]
+      },
+      {
+        "environment": "production",
+        "city": "kyoto",
+        "view": "new",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 33,
+        "ids": [
+          "15460",
+          "15461",
+          "15462",
+          "15463",
+          "15464",
+          "15465",
+          "15466",
+          "15467",
+          "15468",
+          "15469",
+          "15470",
+          "15471",
+          "15472",
+          "15473",
+          "15474",
+          "15475",
+          "15476",
+          "15477",
+          "15478",
+          "15479",
+          "15480",
+          "15481",
+          "15482",
+          "15489",
+          "15490",
+          "15491",
+          "15492",
+          "15493",
+          "15494",
+          "15495",
+          "15498",
+          "18025",
+          "18026"
+        ]
+      },
+      {
+        "environment": "production",
+        "city": "kyoto",
+        "view": "top",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 30,
+        "ids": [
+          "15459",
+          "15484",
+          "15485",
+          "15486",
+          "15487",
+          "15488",
+          "15496",
+          "15497",
+          "15501",
+          "15973",
+          "18052",
+          "18060",
+          "18061",
+          "18098",
+          "18099",
+          "18117",
+          "18119",
+          "18155",
+          "18156",
+          "18170",
+          "18171",
+          "18173",
+          "18191",
+          "18193",
+          "18194",
+          "18209",
+          "18210",
+          "18211",
+          "18212",
+          "18213"
+        ]
+      },
+      {
+        "environment": "production",
+        "city": "kyoto",
+        "view": "discounts",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 34,
+        "ids": [
+          "https://cenci-kyoto.com/",
+          "https://droit-kyoto.jp/",
+          "https://hotelfauchonkyoto.com/ja/gourmet/fauchon-salon-de-the-kyoto/",
+          "https://kyoto.hiltonjapan.co.jp/restaurants/teori",
+          "https://www.hiramatsurestaurant.jp/hiramatsu-kodaiji/",
+          "https://www.hiramatsurestaurant.jp/la-luce/",
+          "https://www.instagram.com/jbowl_ritsumeikan_mae/",
+          "https://www.keihanhotels-resorts.co.jp/kyoto-centuryhotel/topics/happyhour-2/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/011/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/012/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/013/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/014/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/015/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/016/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/017/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/018/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/019/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/020/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/022/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/023/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/026/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/028/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/031/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/033/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/039/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/040/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/042/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/043/",
+          "https://www.princess-kyoto.co.jp/restaurant/ambercourt/",
+          "https://www.princess-kyoto.co.jp/restaurant/darley/",
+          "https://www.princess-kyoto.co.jp/restaurant/hisuien/",
+          "https://www.princess-kyoto.co.jp/restaurant/hoen/",
+          "https://www.princess-kyoto.co.jp/restaurant/sagano/",
+          "https://www.quil-fait-bon.com/pages/kyoto"
+        ]
+      },
+      {
+        "environment": "production",
+        "city": "nagoya",
+        "view": "upcoming",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 11,
+        "ids": [
+          "15510",
+          "15512",
+          "15517",
+          "15518",
+          "15521",
+          "15522",
+          "15900",
+          "15901",
+          "15902",
+          "16075",
+          "16080"
+        ]
+      },
+      {
+        "environment": "production",
+        "city": "nagoya",
+        "view": "new",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 31,
+        "ids": [
+          "15509",
+          "15511",
+          "15515",
+          "15516",
+          "15519",
+          "15520",
+          "15898",
+          "15899",
+          "15915",
+          "15916",
+          "15917",
+          "15918",
+          "15919",
+          "15920",
+          "15921",
+          "15932",
+          "15964",
+          "15965",
+          "16020",
+          "16021",
+          "16022",
+          "16076",
+          "16294",
+          "16295",
+          "16767",
+          "16771",
+          "16800",
+          "17107",
+          "17166",
+          "17167",
+          "18045"
+        ]
+      },
+      {
+        "environment": "production",
+        "city": "nagoya",
+        "view": "top",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 21,
+        "ids": [
+          "15502",
+          "15503",
+          "15504",
+          "15505",
+          "15506",
+          "15507",
+          "15508",
+          "15513",
+          "15514",
+          "15523",
+          "15524",
+          "15972",
+          "18044",
+          "18100",
+          "18101",
+          "18121",
+          "18138",
+          "18192",
+          "18195",
+          "18196",
+          "18214"
+        ]
+      },
+      {
+        "environment": "production",
+        "city": "nagoya",
+        "view": "discounts",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 31,
+        "ids": [
+          "https://and-gallery.com/#nagoya",
+          "https://csm-cafe.ltr-online.com/lp/csm-cafe-s017",
+          "https://french-kitamura.jp/",
+          "https://kinzan.nagoya/archives/news/2853/",
+          "https://kobekangroup.com/shop/obanzai_kabtoya/",
+          "https://lebeurrenoisettetokyo.com/nagoya/",
+          "https://nagoya.hiltonjapan.co.jp/restaurants/hideaway3-3",
+          "https://nagoya.hiltonjapan.co.jp/restaurants/inplace3-3",
+          "https://nagoya.hiltonjapan.co.jp/restaurants/ouchou",
+          "https://nagoya.parco.jp/shop/detail/?cd=009191",
+          "https://prtimes.jp/main/html/rd/p/000000004.000116722.html",
+          "https://prtimes.jp/main/html/rd/p/000004440.000018505.html",
+          "https://reconnaissance-nagoya.com/",
+          "https://thetowerhotel.jp/restaurant/",
+          "https://www.anacrowneplaza-nagoya.jp/pages/restaurant_gardencourt",
+          "https://www.anacrowneplaza-nagoya.jp/pages/restaurant_karin",
+          "https://www.anacrowneplaza-nagoya.jp/pages/restaurant_stargate",
+          "https://www.anacrowneplaza-nagoya.jp/pages/restaurant_winglounge",
+          "https://www.associa.com/nma/restaurant/pergola/",
+          "https://www.centralpark.co.jp/shop/sharecafe/",
+          "https://www.espacionagoya.com/restaurant-bar/the-bar-castle/",
+          "https://www.hiramatsurestaurant.jp/aubergedelill-nagoya/",
+          "https://www.hotpepper.jp/strJ004698778/",
+          "https://www.hotpepper.jp/strJ004699003/",
+          "https://www.kochuten.jp/",
+          "https://www.komeda.co.jp/shop/detail.html?id=1215",
+          "https://www.lafloraison-t.jp/",
+          "https://www.livingroom-skybar.com/",
+          "https://www.princehotels.co.jp/nagoya/restaurant/skydining/",
+          "https://www.quil-fait-bon.com/pages/nagoya-sakae",
+          "https://www.thekawabunnagoya.com/thekawabunnagoya/restaurant/"
+        ]
+      },
+      {
+        "environment": "production",
+        "city": "tokyo",
+        "view": "upcoming",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 14,
+        "ids": [
+          "15526",
+          "15538",
+          "15541",
+          "15544",
+          "15546",
+          "15555",
+          "15556",
+          "15557",
+          "15923",
+          "15929",
+          "15930",
+          "17106",
+          "17621",
+          "18027"
+        ]
+      },
+      {
+        "environment": "production",
+        "city": "tokyo",
+        "view": "new",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 23,
+        "ids": [
+          "15527",
+          "15539",
+          "15540",
+          "15551",
+          "15552",
+          "15553",
+          "15554",
+          "15558",
+          "15966",
+          "15967",
+          "15968",
+          "16289",
+          "16325",
+          "17170",
+          "17171",
+          "17172",
+          "17173",
+          "17628",
+          "18043",
+          "18051",
+          "18058",
+          "18102",
+          "18103"
+        ]
+      },
+      {
+        "environment": "production",
+        "city": "tokyo",
+        "view": "top",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 30,
+        "ids": [
+          "15525",
+          "15528",
+          "15529",
+          "15530",
+          "15531",
+          "15532",
+          "15533",
+          "15534",
+          "15535",
+          "15536",
+          "15537",
+          "15542",
+          "15543",
+          "15545",
+          "15547",
+          "15548",
+          "15549",
+          "15550",
+          "15559",
+          "15560",
+          "15561",
+          "15562",
+          "15903",
+          "15974",
+          "18122",
+          "18123",
+          "18140",
+          "18141",
+          "18157",
+          "18158"
+        ]
+      },
+      {
+        "environment": "production",
+        "city": "tokyo",
+        "view": "discounts",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 37,
+        "ids": [
+          "https://and-gallery.com/#ikebukuro",
+          "https://and-gallery.com/#yurakucho",
+          "https://cocco.eastone.co.jp/shop/gotanda",
+          "https://cocco.eastone.co.jp/shop/kameido",
+          "https://conrad-tokyo.hiltonjapan.co.jp/restaurants/cerise",
+          "https://conrad-tokyo.hiltonjapan.co.jp/restaurants/chinablue",
+          "https://conrad-tokyo.hiltonjapan.co.jp/restaurants/twentyeight",
+          "https://csm-cafe.ltr-online.com/lp/csm-cafe-s012",
+          "https://gourmetpress.net/1488798/",
+          "https://miabocca.eastone.co.jp/shop/Ikebukuro",
+          "https://miabocca.eastone.co.jp/shop/Shakujii-park",
+          "https://miabocca.eastone.co.jp/shop/Shinjuku-takasimaya",
+          "https://prtimes.jp/main/html/rd/p/000000009.000161200.html",
+          "https://prtimes.jp/main/html/rd/p/000000048.000152772.html",
+          "https://prtimes.jp/main/html/rd/p/000000196.000049183.html",
+          "https://prtimes.jp/main/html/rd/p/000000356.000048489.html",
+          "https://prtimes.jp/main/html/rd/p/000000592.000071323.html",
+          "https://prtimes.jp/main/html/rd/p/000004178.000003860.html",
+          "https://sarabethsrestaurants.jp/location/omotesando/",
+          "https://sarabethsrestaurants.jp/location/shinagawa/",
+          "https://sarabethsrestaurants.jp/location/shinjuku/",
+          "https://sarabethsrestaurants.jp/location/tokyo/",
+          "https://shibakoen.bar-shinkai.com/",
+          "https://store-info.skylark.co.jp/syabuyo/map/198490/",
+          "https://tabelog.com/en/tokyo/A1303/A130301/13198692/",
+          "https://tokyo.hiltonjapan.co.jp/restaurants/st_georges_bar",
+          "https://www.andaztokyo.jp/restaurants/jp/thetavern-grill-lounge",
+          "https://www.herofield.com/bbq/tokyoprince/",
+          "https://www.hiramatsurestaurant.jp/jardindessens-tokyo/",
+          "https://www.mesm.jp/en/eat-drink/chefs-theatre.html",
+          "https://www.newotani.co.jp/tokyo/restaurant/gardenlounge/",
+          "https://www.quil-fait-bon.com/pages/aoyama",
+          "https://www.quil-fait-bon.com/pages/grand-maison-ginza",
+          "https://www.quil-fait-bon.com/pages/shinjuku",
+          "https://www.quil-fait-bon.com/pages/tokyo-dome-city",
+          "https://www.quil-fait-bon.com/pages/tokyo-skytree-town-solamachi",
+          "https://www.sunamo.jp/floor/shop_detail.html?UC=1_028"
+        ]
+      },
+      {
+        "environment": "production",
+        "city": "sapporo",
+        "view": "upcoming",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 11,
+        "ids": [
+          "15568",
+          "15569",
+          "15570",
+          "15571",
+          "15597",
+          "15926",
+          "15970",
+          "17103",
+          "18047",
+          "18048",
+          "18054"
+        ]
+      },
+      {
+        "environment": "production",
+        "city": "sapporo",
+        "view": "new",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 28,
+        "ids": [
+          "15580",
+          "15586",
+          "15587",
+          "15588",
+          "15589",
+          "15590",
+          "15591",
+          "15592",
+          "15595",
+          "15596",
+          "16293",
+          "16296",
+          "17104",
+          "17105",
+          "17624",
+          "17627",
+          "18028",
+          "18029",
+          "18030",
+          "18031",
+          "18049",
+          "18055",
+          "18056",
+          "18057",
+          "18104",
+          "18105",
+          "18124",
+          "18125"
+        ]
+      },
+      {
+        "environment": "production",
+        "city": "sapporo",
+        "view": "top",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 30,
+        "ids": [
+          "15563",
+          "15564",
+          "15565",
+          "15566",
+          "15567",
+          "15572",
+          "15573",
+          "15574",
+          "15575",
+          "15576",
+          "15577",
+          "15578",
+          "15579",
+          "15581",
+          "15582",
+          "15583",
+          "15584",
+          "15585",
+          "15593",
+          "15594",
+          "15598",
+          "15599",
+          "15600",
+          "15601",
+          "15602",
+          "15603",
+          "15604",
+          "15605",
+          "15606",
+          "15607"
+        ]
+      },
+      {
+        "environment": "production",
+        "city": "sapporo",
+        "view": "discounts",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 34,
+        "ids": [
+          "https://anan.fuji-tatsu.co.jp/shop/sapporo-sinoro/",
+          "https://chocottosushi-kiwami.owst.jp/",
+          "https://cocco.eastone.co.jp/shop/kitahachijo",
+          "https://cocco.eastone.co.jp/shop/kitaichijo",
+          "https://cocco.eastone.co.jp/shop/kotoniekimae",
+          "https://cocco.eastone.co.jp/shop/miyanosawa",
+          "https://cocco.eastone.co.jp/shop/shindohigashi",
+          "https://cocco.eastone.co.jp/shop/souen",
+          "https://grand1934.com/restaurant/garden-dining-waraku/",
+          "https://grand1934.com/restaurant/kokaku/",
+          "https://grand1934.com/restaurant/lobby-lounge-mizar/",
+          "https://grand1934.com/restaurant/northern-terrace-diner/",
+          "https://grand1934.com/restaurant/old-saloon1934/",
+          "https://miabocca.eastone.co.jp/shop/Kita2jo",
+          "https://miabocca.eastone.co.jp/shop/Kotoni-station",
+          "https://miabocca.eastone.co.jp/shop/Sapporo-station",
+          "https://miabocca.eastone.co.jp/shop/atsubetsuminami",
+          "https://miabocca.eastone.co.jp/shop/sapporoduo",
+          "https://michiru.dkdining.com/sapporo/",
+          "https://prtimes.jp/main/html/rd/p/000000010.000134951.html",
+          "https://store-info.skylark.co.jp/syabuyo/map/198489/",
+          "https://www.anahisapporosusukino.com/restaurants/verde/",
+          "https://www.hyatt.com/hyatt-centric/ja-JP/ctsct-hyatt-centric-sapporo/dining",
+          "https://www.jrhotels.co.jp/tower/restaurant/skyj/",
+          "https://www.keioplaza-sapporo.co.jp/restaurants/akizu/",
+          "https://www.keioplaza-sapporo.co.jp/restaurants/crossvault/",
+          "https://www.keioplaza-sapporo.co.jp/restaurants/glass/",
+          "https://www.keioplaza-sapporo.co.jp/restaurants/miyama/",
+          "https://www.keioplaza-sapporo.co.jp/restaurants/yamanami/",
+          "https://www.princehotels.co.jp/sapporo/restaurant/alldaydininggrandeur",
+          "https://www.princehotels.co.jp/sapporo/restaurant/fuyojo",
+          "https://www.princehotels.co.jp/sapporo/restaurant/katsura",
+          "https://www.princehotels.co.jp/sapporo/restaurant/top_prince",
+          "https://www.tokyuhotels.co.jp/sapporostream/restaurant/splish/plan/angel_devil/index.html"
+        ]
+      }
+    ]
+  },
+  "verifiedAtUtc": "2026-10-19T21:02:50.772197+00:00"
+}

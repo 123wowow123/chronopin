@@ -1,0 +1,3176 @@
+{
+  "batch": 94,
+  "checkedAt": "2026-10-19",
+  "counts": {
+    "venues": 2,
+    "newPins": 1,
+    "reusedPins": 1,
+    "menuEntries": 102,
+    "newMenuEntries": 68,
+    "galleryLinks": 14,
+    "newAzurePhotos": 6,
+    "reusedPhotos": 8,
+    "newGuideMemberships": 2,
+    "newSpecialVenues": 0
+  },
+  "entries": [
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "LE PIGNON — Tokugawacho Opens 2008-10-30",
+        "description": "Seasonal French omakase beside a century-old black pine, with a published wine catalogue and named booking-menu examples.",
+        "sourceUrl": "https://le-pignon-tokugawa.com/",
+        "address": "2406-1 Tokugawacho, Higashi-ku, Nagoya",
+        "productName": "LE PIGNON — Tokugawacho",
+        "utcStartDateTime": "2008-10-30T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "Managed exact-branch Tabelog opening field states October30,2008at Tokugawacho2406; operator access specifies2406-1for the same venue.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Nagoya",
+          "Japan",
+          "Tokugawacho / Ozone",
+          "French"
+        ],
+        "longFormSummary": "<p>Seasonal French omakase beside a century-old black pine, with a published wine catalogue and named booking-menu examples.<cite data-ref=\"https://le-pignon-tokugawa.com/\"></cite></p><p>Managed exact-branch Tabelog opening field states October30,2008at Tokugawacho2406; operator access specifies2406-1for the same venue.</p>",
+        "references": [
+          {
+            "url": "https://le-pignon-tokugawa.com/",
+            "title": "LE PIGNON — Tokugawacho — operator",
+            "confidence": 90,
+            "reasoning": "LE PIGNON — Tokugawacho — operator"
+          },
+          {
+            "url": "https://tabelog.com/aichi/A2301/A230110/23008902/",
+            "title": "Exact opening date and2025selection",
+            "confidence": 90,
+            "reasoning": "Exact opening date and2025selection"
+          },
+          {
+            "url": "https://le-pignon-tokugawa.com/menu.html",
+            "title": "Operator menu",
+            "confidence": 90,
+            "reasoning": "Operator menu"
+          },
+          {
+            "url": "https://le-pignon-tokugawa.com/wine.html",
+            "title": "Operator wine list",
+            "confidence": 90,
+            "reasoning": "Operator wine list"
+          },
+          {
+            "url": "https://le-pignon-tokugawa.com/access.html",
+            "title": "Operator access",
+            "confidence": 90,
+            "reasoning": "Operator access"
+          },
+          {
+            "url": "https://le-pignon-tokugawa.com/concept.html",
+            "title": "Operator concept/gallery",
+            "confidence": 90,
+            "reasoning": "Operator concept/gallery"
+          },
+          {
+            "url": "https://res-reserve.com/ja/restaurants/lepignon/plans/3abd5686-70dc-4eb7-b0f7-efbba6e45212",
+            "title": "Current lunch inclusive total and examples",
+            "confidence": 90,
+            "reasoning": "Current lunch inclusive total and examples"
+          },
+          {
+            "url": "https://res-reserve.com/ja/restaurants/lepignon/plans/597f4816-5759-4a8a-901c-9c3c4d39f8ba",
+            "title": "Current dinner inclusive total and examples",
+            "confidence": 90,
+            "reasoning": "Current dinner inclusive total and examples"
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://le-pignon-tokugawa.com/",
+          "menu": {
+            "pinSourceUrl": "https://le-pignon-tokugawa.com/",
+            "name": "LE PIGNON — Tokugawacho",
+            "checkedAt": "2026-10-19",
+            "menus": [
+              {
+                "label": "LE PIGNON — current omakase",
+                "url": "https://le-pignon-tokugawa.com/menu.html",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "Menu Saison — lunch",
+                    "price": 8800,
+                    "note": "Tax included; add10%service, JPY9,680total. Booking platform displays inclusive total."
+                  },
+                  {
+                    "name": "Menu Hospitalité — dinner",
+                    "price": 16500,
+                    "note": "Tax included; add10%service, JPY18,150total. Booking platform displays inclusive total."
+                  },
+                  {
+                    "name": "Anniversary message plate and candle",
+                    "price": 0,
+                    "note": "Request when reserving; included amenity, no dated Special."
+                  }
+                ],
+                "note": "One omakase menu per service. Lunch school-age+; dinner10+per operator, ask directly for younger children. Linked reservation page has a more permissive school-age dinner notice; operator age policy takes priority."
+              },
+              {
+                "label": "LE PIGNON — published lunch examples",
+                "url": "https://res-reserve.com/ja/restaurants/lepignon/plans/3abd5686-70dc-4eb7-b0f7-efbba6e45212",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "カリフラワーのムースとコンソメのジュレ",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "ヤイトガツオと三つ葉のタルタル ドライトマト添え",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "白子のムニエル ケッパーソース",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "マトダイのポワレ ビスクソース",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "黒毛和牛ランプ肉ロティ",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "カカオのクレープ ほうじ茶アイス",
+                    "priceLabel": "Price not published"
+                  }
+                ],
+                "note": "Operator-linked booking labels these one-day examples. No date or individual prices published; exact October menu not guaranteed."
+              },
+              {
+                "label": "LE PIGNON — published dinner examples",
+                "url": "https://res-reserve.com/ja/restaurants/lepignon/plans/597f4816-5759-4a8a-901c-9c3c4d39f8ba",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "山独活のムースと菜花のスープ 水引海老のポシェ",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "白魚のフリット 蕗の薹のピュレ 新玉葱と赤水菜",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "筍のソテー ブイヨンバターソース ホタルイカ",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "ホワイトアスパラのコンポート 春トリュフ",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "メバルのポワレ 葉にんにくと分葱、うるいのスープ仕立て",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "和牛フィレ肉のロティ 赤島らっきょうと花わさび",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "チーズ盛り合わせ",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "タロッコオレンジのマリネ ジャスミンのムース ナッツのクランブル",
+                    "priceLabel": "Price not published"
+                  }
+                ],
+                "note": "Booking-page seasonal sample contains spring ingredients; retained explicitly as examples, not October dishes. Dessert presentation may be one of two plates; no invented separate price."
+              },
+              {
+                "label": "LE PIGNON — published bottle-wine catalogue",
+                "url": "https://le-pignon-tokugawa.com/wine.html",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "コント・ラモット・ブリュット",
+                    "price": 6800,
+                    "note": "Operator bottle catalogue; confirm current stock and tax/service treatment. Vintages not inferred."
+                  },
+                  {
+                    "name": "アンリオ・ブリュット・スーヴェラン",
+                    "price": 8000,
+                    "note": "Operator bottle catalogue; confirm current stock and tax/service treatment. Vintages not inferred."
+                  },
+                  {
+                    "name": "ガティノワ・アイ・トラディシオン・ブリュット",
+                    "price": 10500,
+                    "note": "Operator bottle catalogue; confirm current stock and tax/service treatment. Vintages not inferred."
+                  },
+                  {
+                    "name": "ジャクソン・キュヴェ #737",
+                    "price": 12000,
+                    "note": "Operator bottle catalogue; confirm current stock and tax/service treatment. Vintages not inferred."
+                  },
+                  {
+                    "name": "ボランジェ・スペシャル・キュヴェ",
+                    "price": 13000,
+                    "note": "Operator bottle catalogue; confirm current stock and tax/service treatment. Vintages not inferred."
+                  },
+                  {
+                    "name": "ブルゴーニュ・シャルドネ（デュフルール・フレール）",
+                    "price": 5000,
+                    "note": "Operator bottle catalogue; confirm current stock and tax/service treatment. Vintages not inferred."
+                  },
+                  {
+                    "name": "サン・ロマン・ブラン・コンプ・バザン（ビアー）",
+                    "price": 6200,
+                    "note": "Operator bottle catalogue; confirm current stock and tax/service treatment. Vintages not inferred."
+                  },
+                  {
+                    "name": "サヴィニー・レ・ボーヌ（マレシャル）",
+                    "price": 8800,
+                    "note": "Operator bottle catalogue; confirm current stock and tax/service treatment. Vintages not inferred."
+                  },
+                  {
+                    "name": "ブルゴーニュ・シャルドネ（アルノー・アント）",
+                    "price": 9000,
+                    "note": "Operator bottle catalogue; confirm current stock and tax/service treatment. Vintages not inferred."
+                  },
+                  {
+                    "name": "ボーヌ・プレミエ・クリュ・エグロ・ブラン（アルベール・モロ）",
+                    "price": 10600,
+                    "note": "Operator bottle catalogue; confirm current stock and tax/service treatment. Vintages not inferred."
+                  },
+                  {
+                    "name": "シャトー・ペイ・ラ・トゥール",
+                    "price": 5200,
+                    "note": "Operator bottle catalogue; confirm current stock and tax/service treatment. Vintages not inferred."
+                  },
+                  {
+                    "name": "プピーユ",
+                    "price": 7500,
+                    "note": "Operator bottle catalogue; confirm current stock and tax/service treatment. Vintages not inferred."
+                  },
+                  {
+                    "name": "シャトー・プジョー",
+                    "price": 8500,
+                    "note": "Operator bottle catalogue; confirm current stock and tax/service treatment. Vintages not inferred."
+                  },
+                  {
+                    "name": "レ・トゥーレル・ド・ロングヴィーユ",
+                    "price": 9200,
+                    "note": "Operator bottle catalogue; confirm current stock and tax/service treatment. Vintages not inferred."
+                  },
+                  {
+                    "name": "サルジェ・ド・グリュオー・ラローズ",
+                    "price": 11500,
+                    "note": "Operator bottle catalogue; confirm current stock and tax/service treatment. Vintages not inferred."
+                  },
+                  {
+                    "name": "エモーション・ピノ・ノワール（ヴァンサン・ジラルダン）",
+                    "price": 5500,
+                    "note": "Operator bottle catalogue; confirm current stock and tax/service treatment. Vintages not inferred."
+                  },
+                  {
+                    "name": "ボーヌ・デュ・シャトー・プルミエ・クリ（ブシャール）",
+                    "price": 7500,
+                    "note": "Operator bottle catalogue; confirm current stock and tax/service treatment. Vintages not inferred."
+                  },
+                  {
+                    "name": "ペルナン・ヴェルジュレス・プルミエ・クリュ・オン・カラドゥー（フォラン・アルベル）",
+                    "price": 8600,
+                    "note": "Operator bottle catalogue; confirm current stock and tax/service treatment. Vintages not inferred."
+                  },
+                  {
+                    "name": "ボーヌ・プルミエ・クリュ・モントルムノ（ミュシィ）",
+                    "price": 11800,
+                    "note": "Operator bottle catalogue; confirm current stock and tax/service treatment. Vintages not inferred."
+                  },
+                  {
+                    "name": "ニュイ・サン・ジョルジュ・プルミエ・クリュ・レ・ヴィニュロンド（コンフェロン・コトティド）",
+                    "price": 19000,
+                    "note": "Operator bottle catalogue; confirm current stock and tax/service treatment. Vintages not inferred."
+                  },
+                  {
+                    "name": "トゥーレーヌ・ソーヴィニョン・ヴィエイニュ・ヴィーニュ（オーペロン）",
+                    "price": 5000,
+                    "note": "Operator bottle catalogue; confirm current stock and tax/service treatment. Vintages not inferred."
+                  },
+                  {
+                    "name": "プイィ・フュメ・レ・クロクルー（ショボー）",
+                    "price": 6300,
+                    "note": "Operator bottle catalogue; confirm current stock and tax/service treatment. Vintages not inferred."
+                  },
+                  {
+                    "name": "ラストー・レ・プロヴァック（サンタ・デュック）",
+                    "price": 5800,
+                    "note": "Operator bottle catalogue; confirm current stock and tax/service treatment. Vintages not inferred."
+                  },
+                  {
+                    "name": "シャトーヌフ・デュ・パブ（テール・ブランシュ）",
+                    "price": 7800,
+                    "note": "Operator bottle catalogue; confirm current stock and tax/service treatment. Vintages not inferred."
+                  },
+                  {
+                    "name": "ジゴンダス（サンタ・デュック）",
+                    "price": 8000,
+                    "note": "Operator bottle catalogue; confirm current stock and tax/service treatment. Vintages not inferred."
+                  }
+                ],
+                "note": "Image alt text publishes25named bottle selections and amounts. Catalogue is undated and operator warns list changes; confirm before ordering."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://le-pignon-tokugawa.com/",
+            "name": "LE PIGNON — Tokugawacho",
+            "checkedAt": "2026-10-19",
+            "websiteUrl": "https://le-pignon-tokugawa.com/",
+            "phone": "052-710-8877",
+            "openingHours": [
+              {
+                "days": "Operating lunch days",
+                "hours": "12:00–15:00; last order13:00 per access page"
+              },
+              {
+                "days": "Operating dinner days",
+                "hours": "18:00–22:00; last order18:30"
+              },
+              {
+                "days": "Wednesday; second/fourth Thursday; first/third Sunday",
+                "hours": "Closed"
+              }
+            ],
+            "detailsSourceUrl": "https://le-pignon-tokugawa.com/",
+            "additionalSources": [
+              {
+                "label": "Exact opening date and2025selection",
+                "url": "https://tabelog.com/aichi/A2301/A230110/23008902/"
+              },
+              {
+                "label": "Operator menu",
+                "url": "https://le-pignon-tokugawa.com/menu.html"
+              },
+              {
+                "label": "Operator wine list",
+                "url": "https://le-pignon-tokugawa.com/wine.html"
+              },
+              {
+                "label": "Operator access",
+                "url": "https://le-pignon-tokugawa.com/access.html"
+              },
+              {
+                "label": "Operator concept/gallery",
+                "url": "https://le-pignon-tokugawa.com/concept.html"
+              },
+              {
+                "label": "Current lunch inclusive total and examples",
+                "url": "https://res-reserve.com/ja/restaurants/lepignon/plans/3abd5686-70dc-4eb7-b0f7-efbba6e45212"
+              },
+              {
+                "label": "Current dinner inclusive total and examples",
+                "url": "https://res-reserve.com/ja/restaurants/lepignon/plans/597f4816-5759-4a8a-901c-9c3c4d39f8ba"
+              }
+            ],
+            "hoursNote": "Operator access/footer hours take priority over older Tabelog13:30/19:00last orders; menu image says12:30lunch start, so confirm exact reserved arrival. Reservations required; parties5+phone. Parking opposite venue. No private room. Lunch elementary-school age+and dinner10+per operator; disclose allergies at reservation.",
+            "reservationUrl": "https://res-reserve.com/ja/restaurants/lepignon"
+          },
+          "tile": {
+            "regionSlug": "nagoya",
+            "kind": "top",
+            "slug": "japan94-pignon",
+            "name": "LE PIGNON — Tokugawacho",
+            "neighborhood": "Tokugawacho / Ozone",
+            "cuisine": "French",
+            "description": "Seasonal French omakase beside a century-old black pine, with a published wine catalogue and named booking-menu examples.",
+            "address": "2406-1 Tokugawacho, Higashi-ku, Nagoya",
+            "websiteUrl": "https://le-pignon-tokugawa.com/",
+            "checkedAt": "2026-10-19",
+            "recognition": "Tabelog French EAST Hyakumeiten2025 selection; no current Michelin-star claim",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-19/batch94-pignon-2-c6ea944e9e07a3c3.webp",
+            "imageCredit": "LE PIGNON — operator photo",
+            "imageSourceUrl": "https://le-pignon-tokugawa.com/",
+            "imageNote": "Exact Tokugawacho branch operator gallery. Venue dining room, garden or entrance.",
+            "openingConfirmed": true,
+            "day": "2008-10-30"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "originalUrl": "https://le-pignon-tokugawa.com/image/jq02.jpg",
+          "sourcePage": "https://le-pignon-tokugawa.com/",
+          "credit": "LE PIGNON — operator photo",
+          "note": "Exact Tokugawacho branch operator gallery. Venue dining room, garden or entrance.",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-19/batch94-pignon-2-c6ea944e9e07a3c3.webp",
+          "sha256": "c6ea944e9e07a3c35c339715aeb1890b906ae3736ecaae8d9e0a0ae37bacefc7",
+          "width": 950,
+          "height": 450
+        },
+        {
+          "originalUrl": "https://le-pignon-tokugawa.com/image/jq01.jpg",
+          "sourcePage": "https://le-pignon-tokugawa.com/",
+          "credit": "LE PIGNON — operator photo",
+          "note": "Exact Tokugawacho branch operator gallery. Venue dining room, garden or entrance.",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-19/batch94-pignon-1-44a552499b6601b7.webp",
+          "sha256": "44a552499b6601b78711a0400b813b029eede2d16df0982587d04def25834f7c",
+          "width": 951,
+          "height": 451
+        },
+        {
+          "originalUrl": "https://le-pignon-tokugawa.com/image/jq03.jpg",
+          "sourcePage": "https://le-pignon-tokugawa.com/",
+          "credit": "LE PIGNON — operator photo",
+          "note": "Exact Tokugawacho branch operator gallery. Food presentation; dish and current course inclusion not inferred.",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-19/batch94-pignon-3-545962e63aeedede.webp",
+          "sha256": "545962e63aeedede79b1ba948102ca20dc33ce61959058f80a791b1e3d403263",
+          "width": 951,
+          "height": 451
+        },
+        {
+          "originalUrl": "https://le-pignon-tokugawa.com/image/jq04.jpg",
+          "sourcePage": "https://le-pignon-tokugawa.com/",
+          "credit": "LE PIGNON — operator photo",
+          "note": "Exact Tokugawacho branch operator gallery. Food presentation; dish and current course inclusion not inferred.",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-19/batch94-pignon-4-fcd1cccdebe0ba28.webp",
+          "sha256": "fcd1cccdebe0ba28f2ebd40fca32449d9d3b8986ca1e5a7a8a799a42ab4ccdbc",
+          "width": 951,
+          "height": 451
+        },
+        {
+          "originalUrl": "https://le-pignon-tokugawa.com/image/jq05.jpg",
+          "sourcePage": "https://le-pignon-tokugawa.com/",
+          "credit": "LE PIGNON — operator photo",
+          "note": "Exact Tokugawacho branch operator gallery. Venue dining room, garden or entrance.",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-19/batch94-pignon-5-aec0cf3ef0593ed3.webp",
+          "sha256": "aec0cf3ef0593ed3b4932459767c0615ddfd8c38f3a3686c0d5c56e8c0237c30",
+          "width": 951,
+          "height": 451
+        },
+        {
+          "originalUrl": "https://le-pignon-tokugawa.com/image/jq06.jpg",
+          "sourcePage": "https://le-pignon-tokugawa.com/",
+          "credit": "LE PIGNON — operator photo",
+          "note": "Exact Tokugawacho branch operator gallery. Food presentation; dish and current course inclusion not inferred.",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-19/batch94-pignon-6-10d2bb047993ff23.webp",
+          "sha256": "10d2bb047993ff23f15bfc511fb31afd1d03d326649c7655c8900bac53b6e3f9",
+          "width": 951,
+          "height": 450
+        }
+      ]
+    },
+    {
+      "existing": true,
+      "pin": {
+        "id": 16024,
+        "parentId": null,
+        "title": "Le Beurre Noisette NAGOYA — French bistro at Nagoya Station",
+        "description": "A Nagoya Station French bistro serving dated autumn lunch and dinner courses alongside a branch-specific a la carte menu.",
+        "sourceUrl": "https://lebeurrenoisettetokyo.com/nagoya/",
+        "longFormSummary": "<p>A Nagoya Station French bistro serving dated autumn lunch and dinner courses alongside a branch-specific a la carte menu.<cite data-ref=\"https://lebeurrenoisettetokyo.com/nagoya/\"></cite></p><p>JR Central Building landlord release dated June 22, 2022 confirms this Towers Plaza 12F branch opens July 4, 2022 at 11:00. Same-day local opening reporting corroborates it. Employer June estimate is superseded; June 11, 2026 belongs to the separate Sakae sister branch.</p>",
+        "address": "12F JR Central Towers, 1-1-4 Meieki, Nakamura-ku, Nagoya",
+        "location": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "price": null,
+        "priceCurrency": null,
+        "tip": null,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "JR Central Building landlord release dated June 22, 2022 confirms this Towers Plaza 12F branch opens July 4, 2022 at 11:00. Same-day local opening reporting corroborates it. Employer June estimate is superseded; June 11, 2026 belongs to the separate Sakae sister branch.",
+        "utcStartDateTime": "2022-07-04T00:00:00.000Z",
+        "utcEndDateTime": null,
+        "allDay": true,
+        "userId": 372,
+        "utcCreatedDateTime": "2026-10-16T21:15:07.693Z",
+        "utcUpdatedDateTime": null,
+        "utcDeletedDateTime": null,
+        "companyId": null,
+        "sourceStartDateTime": null,
+        "sourceEndDateTime": null,
+        "originalStartDate": null,
+        "delayReasoning": null,
+        "episodeCount": null,
+        "episodeStatus": null,
+        "marketVolume": null,
+        "marketVolumeAt": null,
+        "allDayStated": true,
+        "productName": "Le Beurre Noisette NAGOYA"
+      },
+      "content": {
+        "enabled": true,
+        "profile": {
+          "menu": {
+            "name": "Le Beurre Noisette NAGOYA",
+            "menus": [
+              {
+                "url": "https://lebeurrenoisettetokyo.com/nagoya/lunch.html",
+                "note": "September 10–November 11, 2026. Tax included; dinner-only service charge does not apply to lunch. Book the exact official TableCheck plan. Menu may change with supply; no exact drink brand is promised.",
+                "items": [
+                  {
+                    "name": "Five-course lunch with toast drink",
+                    "note": "Web booking price; published regular ¥7,000",
+                    "price": 5800
+                  },
+                  {
+                    "name": "Sweet-potato espuma with shiso jelly",
+                    "note": "Included in Autumn 2026 five-course lunch; no separate item price published",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Flash-grilled tuna with celeriac remoulade and autumn herbs",
+                    "note": "Included in Autumn 2026 five-course lunch; no separate item price published",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Autumn salmon meuniere with sansho jus and clam foam",
+                    "note": "Included in Autumn 2026 five-course lunch; no separate item price published",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Roast magret duck with orange-carrot puree and five-spice sweet-sour sauce",
+                    "note": "Included in Autumn 2026 five-course lunch; no separate item price published",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Shine Muscat and Kyoho millefeuille",
+                    "note": "Included in Autumn 2026 five-course lunch; no separate item price published",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Coffee or tea",
+                    "note": "Included in Autumn 2026 five-course lunch; no separate item price published",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Toast drink",
+                    "note": "Included in Autumn 2026 five-course lunch; no separate item price published",
+                    "priceLabel": "Price not published"
+                  }
+                ],
+                "label": "Autumn 2026 five-course lunch",
+                "coverage": "sample",
+                "currency": "JPY"
+              },
+              {
+                "url": "https://lebeurrenoisettetokyo.com/nagoya/dinner.html",
+                "note": "September 10–November 11, 2026; official web booking required for the discount and drink benefit. Tax included, 10% service additional. Current exact TableCheck confirms ¥7,700 is not the total payable amount. Optional lobster upgrade is not included in base course. Booking is for Nagoya Station, not Tokyo or the 2026 Sakae sister branch.",
+                "items": [
+                  {
+                    "name": "Seven-course dinner with toast drink",
+                    "note": "Tax included; 10% service additional (¥8,470 total); published regular ¥8,800 before service",
+                    "price": 7700
+                  },
+                  {
+                    "name": "Sweet-potato espuma with shiso jelly",
+                    "note": "Included in Autumn 2026 seven-course dinner; no separate item price published",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Flash-grilled tuna with celeriac remoulade and autumn herbs",
+                    "note": "Included in Autumn 2026 seven-course dinner; no separate item price published",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Mushroom cappuccino potage",
+                    "note": "Included in Autumn 2026 seven-course dinner; no separate item price published",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Autumn salmon meuniere with sansho jus and clam foam",
+                    "note": "Included in Autumn 2026 seven-course dinner; no separate item price published",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Roast magret duck with orange-carrot puree and five-spice sweet-sour sauce",
+                    "note": "Included in Autumn 2026 seven-course dinner; no separate item price published",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Yamagata La France pear sorbet with lime meringue",
+                    "note": "Included in Autumn 2026 seven-course dinner; no separate item price published",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Shine Muscat and Kyoho millefeuille",
+                    "note": "Included in Autumn 2026 seven-course dinner; no separate item price published",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Coffee or tea",
+                    "note": "Included in Autumn 2026 seven-course dinner; no separate item price published",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Toast drink",
+                    "note": "Included in Autumn 2026 seven-course dinner; no separate item price published",
+                    "priceLabel": "Price not published"
+                  }
+                ],
+                "label": "Autumn 2026 seven-course dinner",
+                "coverage": "sample",
+                "currency": "JPY"
+              },
+              {
+                "url": "https://lebeurrenoisettetokyo.com/nagoya/dinner.html",
+                "note": "Tax included, 10% dinner service additional; a la carte also has ¥550 cover per diner according to official TableCheck. Regular dishes are not automatically assigned to discounted courses.",
+                "items": [
+                  {
+                    "name": "Flash-grilled tuna with celeriac remoulade",
+                    "price": 1500
+                  },
+                  {
+                    "name": "Twelve-vegetable terrine with three vinaigrettes",
+                    "price": 1500
+                  },
+                  {
+                    "name": "Mushroom cappuccino potage",
+                    "price": 1400
+                  },
+                  {
+                    "name": "Selected cheese platter",
+                    "price": 1500
+                  },
+                  {
+                    "name": "Autumn salmon meuniere",
+                    "price": 2500
+                  },
+                  {
+                    "name": "Ibaraki Rose pork braise with white beans and chorizo jus",
+                    "price": 2300
+                  },
+                  {
+                    "name": "Roast magret duck with orange-carrot puree",
+                    "price": 2800
+                  },
+                  {
+                    "name": "Japanese beef-cheek red-wine braise",
+                    "price": 2800
+                  },
+                  {
+                    "name": "Hokkaido Saroma black beef steak",
+                    "price": 3500
+                  },
+                  {
+                    "name": "Caramelised fig with sour-yogurt ice cream",
+                    "price": 1500
+                  },
+                  {
+                    "name": "Valrhona chocolate soup with pear and vanilla ice cream",
+                    "price": 1500
+                  },
+                  {
+                    "name": "Shine Muscat and Kyoho millefeuille",
+                    "price": 1700
+                  }
+                ],
+                "label": "September 10–November 11 dinner a la carte",
+                "coverage": "sample",
+                "currency": "JPY"
+              },
+              {
+                "url": "https://lebeurrenoisettetokyo.com/nagoya/drink.html",
+                "note": "Published branch drink prices; dinner service charge is 10% additional. Glass-wine starting prices conflict within the page (¥900 vs ¥880), so no exact wine starting price asserted.",
+                "items": [
+                  {
+                    "name": "Three-glass wine/champagne pairing — 90 ml pours",
+                    "price": 4070
+                  },
+                  {
+                    "name": "Sapporo Black Label draft beer",
+                    "price": 880
+                  },
+                  {
+                    "name": "Nonalcoholic beer",
+                    "price": 770
+                  },
+                  {
+                    "name": "Highball",
+                    "price": 935
+                  }
+                ],
+                "label": "Published drinks",
+                "coverage": "sample",
+                "currency": "JPY"
+              },
+              {
+                "label": "Le Beurre Noisette NAGOYA — ordinary lunch courses",
+                "url": "https://www.lebeurrenoisettetokyo.com/nagoya/lunch.html",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "Anniversary lunch — six dishes with toast drink and message plate",
+                    "price": 6500,
+                    "note": "Tax included; lunch has no dinner-only10%service. Package benefits require the named official booking plan."
+                  },
+                  {
+                    "name": "Weekday special-dessert lunch — four dishes",
+                    "price": 4200,
+                    "note": "Tax included; lunch has no dinner-only10%service. Package benefits require the named official booking plan."
+                  },
+                  {
+                    "name": "Seasonal double-main lunch — five dishes with HP drink benefit",
+                    "price": 5000,
+                    "note": "Tax included; lunch has no dinner-only10%service. Package benefits require the named official booking plan."
+                  },
+                  {
+                    "name": "Dégustation lunch — six dishes",
+                    "price": 5900,
+                    "note": "Tax included; lunch has no dinner-only10%service. Package benefits require the named official booking plan."
+                  },
+                  {
+                    "name": "Spécialité lunch — seven dishes with HP drink benefit",
+                    "price": 9000,
+                    "note": "Tax included; lunch has no dinner-only10%service. Package benefits require the named official booking plan."
+                  },
+                  {
+                    "name": "Private-room family celebration — eight dishes",
+                    "price": 9000,
+                    "note": "Tax included; lunch has no dinner-only10%service. Package benefits require the named official booking plan."
+                  },
+                  {
+                    "name": "Family celebration lunch — seven dishes",
+                    "price": 6500,
+                    "note": "Tax included; lunch has no dinner-only10%service. Package benefits require the named official booking plan."
+                  },
+                  {
+                    "name": "Children’s French course — ages10and under, book3days ahead",
+                    "price": 2500,
+                    "note": "Tax included; lunch has no dinner-only10%service. Package benefits require the named official booking plan."
+                  }
+                ],
+                "note": "Named course recipes vary; child course publishes seasonal potage, demi-glace hamburger with fries, ice cream and bread."
+              },
+              {
+                "label": "Le Beurre Noisette NAGOYA — ordinary dinner courses",
+                "url": "https://www.lebeurrenoisettetokyo.com/nagoya/dinner.html",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "Anniversary dinner — six dishes, toast drink and message plate",
+                    "price": 8500,
+                    "note": "Tax included; add10%service. Confirm exact booking package and private-room fees."
+                  },
+                  {
+                    "name": "Spécialité dinner — seven dishes with HP drink benefit",
+                    "price": 9000,
+                    "note": "Tax included; add10%service. Confirm exact booking package and private-room fees."
+                  },
+                  {
+                    "name": "Seasonal double-main dinner — five dishes with HP drink benefit",
+                    "price": 6000,
+                    "note": "Tax included; add10%service. Confirm exact booking package and private-room fees."
+                  },
+                  {
+                    "name": "Party plan — four dishes and two-hour free drinks",
+                    "price": 6000,
+                    "note": "Tax included; add10%service. Confirm exact booking package and private-room fees."
+                  },
+                  {
+                    "name": "Party plan A — five dishes and two-hour free drinks",
+                    "price": 8000,
+                    "note": "Tax included; add10%service. Confirm exact booking package and private-room fees."
+                  },
+                  {
+                    "name": "Party plan B — five dishes and two-hour free drinks",
+                    "price": 10000,
+                    "note": "Tax included; add10%service. Confirm exact booking package and private-room fees."
+                  },
+                  {
+                    "name": "Party plan C — seven dishes and two-hour free drinks",
+                    "price": 13000,
+                    "note": "Tax included; add10%service. Confirm exact booking package and private-room fees."
+                  },
+                  {
+                    "name": "Private-room longevity celebration — six dishes",
+                    "price": 10000,
+                    "note": "Tax included; add10%service. Confirm exact booking package and private-room fees."
+                  },
+                  {
+                    "name": "Family celebration dinner — seven dishes",
+                    "price": 7500,
+                    "note": "Tax included; add10%service. Confirm exact booking package and private-room fees."
+                  }
+                ],
+                "note": "Existing dated autumn menu and both Specials remain intact. Ordinary recurring packages do not become extra dated Specials."
+              },
+              {
+                "label": "Le Beurre Noisette NAGOYA — operator drinks",
+                "url": "https://www.lebeurrenoisettetokyo.com/nagoya/drink.html",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "Glass wines — from",
+                    "price": 900,
+                    "note": "Published amount; starting prices labelled from. Add dinner-only service as applicable."
+                  },
+                  {
+                    "name": "Three-wine/Champagne pairing,90mlglasses",
+                    "price": 4070,
+                    "note": "Published amount; starting prices labelled from. Add dinner-only service as applicable."
+                  },
+                  {
+                    "name": "Bottle wines — from",
+                    "price": 6050,
+                    "note": "Published amount; starting prices labelled from. Add dinner-only service as applicable."
+                  },
+                  {
+                    "name": "Sapporo Black Label draft beer",
+                    "price": 880,
+                    "note": "Published amount; starting prices labelled from. Add dinner-only service as applicable."
+                  },
+                  {
+                    "name": "Nonalcoholic beer",
+                    "price": 770,
+                    "note": "Published amount; starting prices labelled from. Add dinner-only service as applicable."
+                  },
+                  {
+                    "name": "Seasonal fruit sour",
+                    "price": 935,
+                    "note": "Published amount; starting prices labelled from. Add dinner-only service as applicable."
+                  },
+                  {
+                    "name": "Highball",
+                    "price": 935,
+                    "note": "Published amount; starting prices labelled from. Add dinner-only service as applicable."
+                  },
+                  {
+                    "name": "Soft drinks — from",
+                    "price": 605,
+                    "note": "Published amount; starting prices labelled from. Add dinner-only service as applicable."
+                  },
+                  {
+                    "name": "Glass wines — alternate starting amount",
+                    "price": 880,
+                    "note": "Same operator page also prints¥900from; conflict retained transparently. Confirm selected pour."
+                  }
+                ],
+                "note": "Source prints glass wines from¥900and again from¥880. No brand, vintage or discount inferred from this discrepancy."
+              }
+            ],
+            "specials": [],
+            "checkedAt": "2026-10-19",
+            "pinSourceUrl": "https://lebeurrenoisettetokyo.com/nagoya/"
+          },
+          "details": {
+            "name": "Le Beurre Noisette NAGOYA",
+            "phone": "052-414-7013",
+            "checkedAt": "2026-10-16",
+            "websiteUrl": "https://lebeurrenoisettetokyo.com/nagoya/",
+            "openingHours": [
+              {
+                "days": "Daily lunch",
+                "hours": "11:00–16:00; last order 14:30"
+              },
+              {
+                "days": "Daily dinner",
+                "hours": "17:30–23:00; last order 21:30"
+              },
+              {
+                "days": "Closures",
+                "hours": "Facility closure calendar applies"
+              }
+            ],
+            "pinSourceUrl": "https://lebeurrenoisettetokyo.com/nagoya/",
+            "reservationUrl": "https://www.tablecheck.com/shops/lebeurrenoisettenagoya/reserve",
+            "detailsSourceUrl": "https://lebeurrenoisettetokyo.com/nagoya/",
+            "additionalSources": [
+              {
+                "url": "https://www.towers.jp/strage/news/file62b25c4f04d97587290402.pdf",
+                "label": "Research evidence"
+              },
+              {
+                "url": "https://jouhou.nagoya/le-beurre-noisette/",
+                "label": "Research evidence"
+              },
+              {
+                "url": "https://lebeurrenoisettetokyo.com/nagoya/access.html",
+                "label": "Research evidence"
+              },
+              {
+                "url": "https://www.tablecheck.com/shops/lebeurrenoisettenagoya/reserve?menu_items=6a7ac46c871c14e234473215",
+                "label": "Research evidence"
+              },
+              {
+                "url": "https://www.tablecheck.com/shops/lebeurrenoisettenagoya/reserve?menu_items=6a7ac9afddc418fbe3957861",
+                "label": "Research evidence"
+              }
+            ]
+          },
+          "pinSourceUrl": "https://lebeurrenoisettetokyo.com/nagoya/",
+          "tile": {
+            "regionSlug": "nagoya",
+            "kind": "top",
+            "slug": "japan94-beurre",
+            "name": "Le Beurre Noisette NAGOYA",
+            "neighborhood": "Meieki / JR Central Towers",
+            "cuisine": "French",
+            "description": "French neo-bistro on Towers Plaza12F with a dated autumn menu, published a la carte dishes and family celebration courses.",
+            "address": "12F JR Central Towers, 1-1-4 Meieki, Nakamura-ku, Nagoya",
+            "websiteUrl": "https://lebeurrenoisettetokyo.com/nagoya/",
+            "checkedAt": "2026-10-19",
+            "recognition": "Nagoya Jouhou opening/editorial selection; no Paris award transferred to Nagoya",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-16/batch58-lb-20-2973e26a03ff2430.webp",
+            "imageCredit": "Le Beurre Noisette NAGOYA / Akinai",
+            "imageSourceUrl": "https://lebeurrenoisettetokyo.com/nagoya/",
+            "imageNote": "Nagoya Station branch dining room from its official gallery.",
+            "openingConfirmed": true,
+            "day": "2022-07-04"
+          }
+        }
+      },
+      "photos": [
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-16/batch58-lb-20-2973e26a03ff2430.webp",
+          "sha256": "2973e26a03ff2430a0101cf9b7acdc5d50190d848acadfb025cacce531d70898",
+          "width": 886,
+          "height": 590,
+          "credit": "Le Beurre Noisette NAGOYA / Akinai",
+          "note": "Nagoya Station branch dining room from its official gallery.",
+          "sourcePage": "https://lebeurrenoisettetokyo.com/nagoya/"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-16/batch58-lb-2-2af3fef0f61b7472.webp",
+          "sha256": "2af3fef0f61b7472c378c55776bfe229738923370a5b133dab98ec8f39def25f",
+          "width": 700,
+          "height": 467,
+          "credit": "Le Beurre Noisette NAGOYA / Akinai",
+          "note": "Official Nagoya branch gallery; unlabeled food is illustrative, not a current dish identification.",
+          "sourcePage": "https://lebeurrenoisettetokyo.com/nagoya/"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-16/batch58-lb-4-cddaa8b3dba953b7.webp",
+          "sha256": "cddaa8b3dba953b7d1ae2372f59465c926ce16dce83e27840e36cada1c090ef5",
+          "width": 680,
+          "height": 470,
+          "credit": "Le Beurre Noisette NAGOYA / Akinai",
+          "note": "Official Nagoya branch gallery; unlabeled food is illustrative, not a current dish identification.",
+          "sourcePage": "https://lebeurrenoisettetokyo.com/nagoya/"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-16/batch58-lb-21-1cdfe95bb58a711b.webp",
+          "sha256": "1cdfe95bb58a711bc571aa96e656523d14b6eb17bccd4bfd8b1f8ee39480cfcd",
+          "width": 1286,
+          "height": 857,
+          "credit": "Le Beurre Noisette NAGOYA / Akinai",
+          "note": "Nagoya Station branch dining room from its official gallery.",
+          "sourcePage": "https://lebeurrenoisettetokyo.com/nagoya/"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-16/batch58-lb-22-abb6863993be469c.webp",
+          "sha256": "abb6863993be469c2dd2d90e8cc0a96b6b3957cde040d5dd22821496c7d7c043",
+          "width": 1286,
+          "height": 857,
+          "credit": "Le Beurre Noisette NAGOYA / Akinai",
+          "note": "Nagoya Station branch dining room from its official gallery.",
+          "sourcePage": "https://lebeurrenoisettetokyo.com/nagoya/"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-16/batch58-lb-23-b5ae2d87be5c027b.webp",
+          "sha256": "b5ae2d87be5c027b8ee8a0eead5e6c47e87a1420b8d29ac7bf264fc09ad5c4d7",
+          "width": 786,
+          "height": 524,
+          "credit": "Le Beurre Noisette NAGOYA / Akinai",
+          "note": "Nagoya Station branch dining room from its official gallery.",
+          "sourcePage": "https://lebeurrenoisettetokyo.com/nagoya/"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-16/batch58-lb-24-d7cb9a5eb70fda08.webp",
+          "sha256": "d7cb9a5eb70fda0886cc6e053a0c618b7f40c210437ff8fd29a8c3a5a2837720",
+          "width": 1286,
+          "height": 857,
+          "credit": "Le Beurre Noisette NAGOYA / Akinai",
+          "note": "Nagoya Station branch dining room from its official gallery.",
+          "sourcePage": "https://lebeurrenoisettetokyo.com/nagoya/"
+        },
+        {
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-16/batch58-lb-25-a487534832d605fd.webp",
+          "sha256": "a487534832d605fd15436bbf9e81996ef972104f30ec65a798c7dd693f2e1f9c",
+          "width": 1286,
+          "height": 857,
+          "credit": "Le Beurre Noisette NAGOYA / Akinai",
+          "note": "Nagoya Station branch dining room from its official gallery.",
+          "sourcePage": "https://lebeurrenoisettetokyo.com/nagoya/"
+        }
+      ],
+      "expectedBefore": {
+        "content": {
+          "menu": {
+            "name": "Le Beurre Noisette NAGOYA",
+            "menus": [
+              {
+                "url": "https://lebeurrenoisettetokyo.com/nagoya/lunch.html",
+                "note": "September 10–November 11, 2026. Tax included; dinner-only service charge does not apply to lunch. Book the exact official TableCheck plan. Menu may change with supply; no exact drink brand is promised.",
+                "items": [
+                  {
+                    "name": "Five-course lunch with toast drink",
+                    "note": "Web booking price; published regular ¥7,000",
+                    "price": 5800
+                  },
+                  {
+                    "name": "Sweet-potato espuma with shiso jelly",
+                    "note": "Included in Autumn 2026 five-course lunch; no separate item price published",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Flash-grilled tuna with celeriac remoulade and autumn herbs",
+                    "note": "Included in Autumn 2026 five-course lunch; no separate item price published",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Autumn salmon meuniere with sansho jus and clam foam",
+                    "note": "Included in Autumn 2026 five-course lunch; no separate item price published",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Roast magret duck with orange-carrot puree and five-spice sweet-sour sauce",
+                    "note": "Included in Autumn 2026 five-course lunch; no separate item price published",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Shine Muscat and Kyoho millefeuille",
+                    "note": "Included in Autumn 2026 five-course lunch; no separate item price published",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Coffee or tea",
+                    "note": "Included in Autumn 2026 five-course lunch; no separate item price published",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Toast drink",
+                    "note": "Included in Autumn 2026 five-course lunch; no separate item price published",
+                    "priceLabel": "Price not published"
+                  }
+                ],
+                "label": "Autumn 2026 five-course lunch",
+                "coverage": "sample",
+                "currency": "JPY"
+              },
+              {
+                "url": "https://lebeurrenoisettetokyo.com/nagoya/dinner.html",
+                "note": "September 10–November 11, 2026; official web booking required for the discount and drink benefit. Tax included, 10% service additional. Current exact TableCheck confirms ¥7,700 is not the total payable amount. Optional lobster upgrade is not included in base course. Booking is for Nagoya Station, not Tokyo or the 2026 Sakae sister branch.",
+                "items": [
+                  {
+                    "name": "Seven-course dinner with toast drink",
+                    "note": "Tax included; 10% service additional (¥8,470 total); published regular ¥8,800 before service",
+                    "price": 7700
+                  },
+                  {
+                    "name": "Sweet-potato espuma with shiso jelly",
+                    "note": "Included in Autumn 2026 seven-course dinner; no separate item price published",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Flash-grilled tuna with celeriac remoulade and autumn herbs",
+                    "note": "Included in Autumn 2026 seven-course dinner; no separate item price published",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Mushroom cappuccino potage",
+                    "note": "Included in Autumn 2026 seven-course dinner; no separate item price published",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Autumn salmon meuniere with sansho jus and clam foam",
+                    "note": "Included in Autumn 2026 seven-course dinner; no separate item price published",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Roast magret duck with orange-carrot puree and five-spice sweet-sour sauce",
+                    "note": "Included in Autumn 2026 seven-course dinner; no separate item price published",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Yamagata La France pear sorbet with lime meringue",
+                    "note": "Included in Autumn 2026 seven-course dinner; no separate item price published",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Shine Muscat and Kyoho millefeuille",
+                    "note": "Included in Autumn 2026 seven-course dinner; no separate item price published",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Coffee or tea",
+                    "note": "Included in Autumn 2026 seven-course dinner; no separate item price published",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Toast drink",
+                    "note": "Included in Autumn 2026 seven-course dinner; no separate item price published",
+                    "priceLabel": "Price not published"
+                  }
+                ],
+                "label": "Autumn 2026 seven-course dinner",
+                "coverage": "sample",
+                "currency": "JPY"
+              },
+              {
+                "url": "https://lebeurrenoisettetokyo.com/nagoya/dinner.html",
+                "note": "Tax included, 10% dinner service additional; a la carte also has ¥550 cover per diner according to official TableCheck. Regular dishes are not automatically assigned to discounted courses.",
+                "items": [
+                  {
+                    "name": "Flash-grilled tuna with celeriac remoulade",
+                    "price": 1500
+                  },
+                  {
+                    "name": "Twelve-vegetable terrine with three vinaigrettes",
+                    "price": 1500
+                  },
+                  {
+                    "name": "Mushroom cappuccino potage",
+                    "price": 1400
+                  },
+                  {
+                    "name": "Selected cheese platter",
+                    "price": 1500
+                  },
+                  {
+                    "name": "Autumn salmon meuniere",
+                    "price": 2500
+                  },
+                  {
+                    "name": "Ibaraki Rose pork braise with white beans and chorizo jus",
+                    "price": 2300
+                  },
+                  {
+                    "name": "Roast magret duck with orange-carrot puree",
+                    "price": 2800
+                  },
+                  {
+                    "name": "Japanese beef-cheek red-wine braise",
+                    "price": 2800
+                  },
+                  {
+                    "name": "Hokkaido Saroma black beef steak",
+                    "price": 3500
+                  },
+                  {
+                    "name": "Caramelised fig with sour-yogurt ice cream",
+                    "price": 1500
+                  },
+                  {
+                    "name": "Valrhona chocolate soup with pear and vanilla ice cream",
+                    "price": 1500
+                  },
+                  {
+                    "name": "Shine Muscat and Kyoho millefeuille",
+                    "price": 1700
+                  }
+                ],
+                "label": "September 10–November 11 dinner a la carte",
+                "coverage": "sample",
+                "currency": "JPY"
+              },
+              {
+                "url": "https://lebeurrenoisettetokyo.com/nagoya/drink.html",
+                "note": "Published branch drink prices; dinner service charge is 10% additional. Glass-wine starting prices conflict within the page (¥900 vs ¥880), so no exact wine starting price asserted.",
+                "items": [
+                  {
+                    "name": "Three-glass wine/champagne pairing — 90 ml pours",
+                    "price": 4070
+                  },
+                  {
+                    "name": "Sapporo Black Label draft beer",
+                    "price": 880
+                  },
+                  {
+                    "name": "Nonalcoholic beer",
+                    "price": 770
+                  },
+                  {
+                    "name": "Highball",
+                    "price": 935
+                  }
+                ],
+                "label": "Published drinks",
+                "coverage": "sample",
+                "currency": "JPY"
+              }
+            ],
+            "specials": [],
+            "checkedAt": "2026-10-16",
+            "pinSourceUrl": "https://lebeurrenoisettetokyo.com/nagoya/"
+          },
+          "details": {
+            "name": "Le Beurre Noisette NAGOYA",
+            "phone": "052-414-7013",
+            "checkedAt": "2026-10-16",
+            "websiteUrl": "https://lebeurrenoisettetokyo.com/nagoya/",
+            "openingHours": [
+              {
+                "days": "Daily lunch",
+                "hours": "11:00–16:00; last order 14:30"
+              },
+              {
+                "days": "Daily dinner",
+                "hours": "17:30–23:00; last order 21:30"
+              },
+              {
+                "days": "Closures",
+                "hours": "Facility closure calendar applies"
+              }
+            ],
+            "pinSourceUrl": "https://lebeurrenoisettetokyo.com/nagoya/",
+            "reservationUrl": "https://www.tablecheck.com/shops/lebeurrenoisettenagoya/reserve",
+            "detailsSourceUrl": "https://lebeurrenoisettetokyo.com/nagoya/",
+            "additionalSources": [
+              {
+                "url": "https://www.towers.jp/strage/news/file62b25c4f04d97587290402.pdf",
+                "label": "Research evidence"
+              },
+              {
+                "url": "https://jouhou.nagoya/le-beurre-noisette/",
+                "label": "Research evidence"
+              },
+              {
+                "url": "https://lebeurrenoisettetokyo.com/nagoya/access.html",
+                "label": "Research evidence"
+              },
+              {
+                "url": "https://www.tablecheck.com/shops/lebeurrenoisettenagoya/reserve?menu_items=6a7ac46c871c14e234473215",
+                "label": "Research evidence"
+              },
+              {
+                "url": "https://www.tablecheck.com/shops/lebeurrenoisettenagoya/reserve?menu_items=6a7ac9afddc418fbe3957861",
+                "label": "Research evidence"
+              }
+            ]
+          },
+          "pinSourceUrl": "https://lebeurrenoisettetokyo.com/nagoya/"
+        }
+      },
+      "preservedSpecial": {
+        "name": "Le Beurre Noisette NAGOYA",
+        "menus": [
+          {
+            "url": "https://lebeurrenoisettetokyo.com/nagoya/lunch.html",
+            "note": "September 10–November 11, 2026. Tax included; dinner-only service charge does not apply to lunch. Book the exact official TableCheck plan. Menu may change with supply; no exact drink brand is promised.",
+            "items": [
+              {
+                "name": "Five-course lunch with toast drink",
+                "note": "Web booking price; published regular ¥7,000",
+                "price": 5800
+              },
+              {
+                "name": "Sweet-potato espuma with shiso jelly",
+                "note": "Included in Autumn 2026 five-course lunch; no separate item price published",
+                "priceLabel": "Price not published"
+              },
+              {
+                "name": "Flash-grilled tuna with celeriac remoulade and autumn herbs",
+                "note": "Included in Autumn 2026 five-course lunch; no separate item price published",
+                "priceLabel": "Price not published"
+              },
+              {
+                "name": "Autumn salmon meuniere with sansho jus and clam foam",
+                "note": "Included in Autumn 2026 five-course lunch; no separate item price published",
+                "priceLabel": "Price not published"
+              },
+              {
+                "name": "Roast magret duck with orange-carrot puree and five-spice sweet-sour sauce",
+                "note": "Included in Autumn 2026 five-course lunch; no separate item price published",
+                "priceLabel": "Price not published"
+              },
+              {
+                "name": "Shine Muscat and Kyoho millefeuille",
+                "note": "Included in Autumn 2026 five-course lunch; no separate item price published",
+                "priceLabel": "Price not published"
+              },
+              {
+                "name": "Coffee or tea",
+                "note": "Included in Autumn 2026 five-course lunch; no separate item price published",
+                "priceLabel": "Price not published"
+              },
+              {
+                "name": "Toast drink",
+                "note": "Included in Autumn 2026 five-course lunch; no separate item price published",
+                "priceLabel": "Price not published"
+              }
+            ],
+            "label": "Autumn 2026 five-course lunch",
+            "coverage": "sample",
+            "currency": "JPY"
+          },
+          {
+            "url": "https://lebeurrenoisettetokyo.com/nagoya/dinner.html",
+            "note": "September 10–November 11, 2026; official web booking required for the discount and drink benefit. Tax included, 10% service additional. Current exact TableCheck confirms ¥7,700 is not the total payable amount. Optional lobster upgrade is not included in base course. Booking is for Nagoya Station, not Tokyo or the 2026 Sakae sister branch.",
+            "items": [
+              {
+                "name": "Seven-course dinner with toast drink",
+                "note": "Tax included; 10% service additional (¥8,470 total); published regular ¥8,800 before service",
+                "price": 7700
+              },
+              {
+                "name": "Sweet-potato espuma with shiso jelly",
+                "note": "Included in Autumn 2026 seven-course dinner; no separate item price published",
+                "priceLabel": "Price not published"
+              },
+              {
+                "name": "Flash-grilled tuna with celeriac remoulade and autumn herbs",
+                "note": "Included in Autumn 2026 seven-course dinner; no separate item price published",
+                "priceLabel": "Price not published"
+              },
+              {
+                "name": "Mushroom cappuccino potage",
+                "note": "Included in Autumn 2026 seven-course dinner; no separate item price published",
+                "priceLabel": "Price not published"
+              },
+              {
+                "name": "Autumn salmon meuniere with sansho jus and clam foam",
+                "note": "Included in Autumn 2026 seven-course dinner; no separate item price published",
+                "priceLabel": "Price not published"
+              },
+              {
+                "name": "Roast magret duck with orange-carrot puree and five-spice sweet-sour sauce",
+                "note": "Included in Autumn 2026 seven-course dinner; no separate item price published",
+                "priceLabel": "Price not published"
+              },
+              {
+                "name": "Yamagata La France pear sorbet with lime meringue",
+                "note": "Included in Autumn 2026 seven-course dinner; no separate item price published",
+                "priceLabel": "Price not published"
+              },
+              {
+                "name": "Shine Muscat and Kyoho millefeuille",
+                "note": "Included in Autumn 2026 seven-course dinner; no separate item price published",
+                "priceLabel": "Price not published"
+              },
+              {
+                "name": "Coffee or tea",
+                "note": "Included in Autumn 2026 seven-course dinner; no separate item price published",
+                "priceLabel": "Price not published"
+              },
+              {
+                "name": "Toast drink",
+                "note": "Included in Autumn 2026 seven-course dinner; no separate item price published",
+                "priceLabel": "Price not published"
+              }
+            ],
+            "label": "Autumn 2026 seven-course dinner",
+            "coverage": "sample",
+            "currency": "JPY"
+          }
+        ],
+        "photo": {
+          "alt": "Le Beurre Noisette NAGOYA — Nagoya Station branch dining room from its official gallery.",
+          "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-16/batch58-lb-20-2973e26a03ff2430.webp",
+          "credit": "Le Beurre Noisette NAGOYA / Akinai",
+          "checkedAt": "2026-10-16",
+          "sourceUrl": "https://lebeurrenoisettetokyo.com/nagoya/",
+          "originalUrl": "https://lebeurrenoisettetokyo.com/nagoya/img/photo_1-11-nagoya.png"
+        },
+        "address": "12F JR Central Towers, 1-1-4 Meieki, Nakamura-ku, Nagoya",
+        "specials": [
+          {
+            "kind": "lunch",
+            "title": "Autumn 2026 five-course lunch",
+            "schedule": "Japan local time; see conditions",
+            "menuLabel": "Autumn 2026 five-course lunch",
+            "sourceUrl": "https://lebeurrenoisettetokyo.com/nagoya/lunch.html",
+            "validFrom": "2026-09-10",
+            "conditions": [
+              "Book exact official Nagoya plan; last order 14:30.",
+              "Menu subject to ingredient changes."
+            ],
+            "discounted": true,
+            "description": "Web-booked autumn lunch with toast drink: ¥5,800 instead of ¥7,000, tax included.",
+            "availability": {
+              "windows": [
+                {
+                  "end": "16:00",
+                  "days": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4,
+                    5,
+                    6
+                  ],
+                  "start": "11:00"
+                }
+              ]
+            },
+            "validThrough": "2026-11-11"
+          },
+          {
+            "kind": "other",
+            "title": "Autumn 2026 seven-course dinner",
+            "schedule": "Japan local time; see conditions",
+            "menuLabel": "Autumn 2026 seven-course dinner",
+            "sourceUrl": "https://lebeurrenoisettetokyo.com/nagoya/dinner.html",
+            "validFrom": "2026-09-10",
+            "conditions": [
+              "Book exact official Nagoya plan; last order 21:30.",
+              "Published price includes tax; 10% service additional.",
+              "Menu subject to ingredient changes."
+            ],
+            "discounted": true,
+            "description": "Web-booked autumn dinner with toast drink: ¥7,700 plus 10% service (¥8,470 total), instead of ¥8,800 before service.",
+            "availability": {
+              "windows": [
+                {
+                  "end": "23:00",
+                  "days": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4,
+                    5,
+                    6
+                  ],
+                  "start": "17:30"
+                }
+              ]
+            },
+            "validThrough": "2026-11-11"
+          }
+        ],
+        "checkedAt": "2026-10-16",
+        "websiteUrl": "https://lebeurrenoisettetokyo.com/nagoya/",
+        "neighborhood": "Nagoya Station",
+        "pinSourceUrl": "https://lebeurrenoisettetokyo.com/nagoya/"
+      }
+    }
+  ],
+  "publicationStatus": {
+    "local": "saved and publicly verified",
+    "production": "saved and publicly verified",
+    "publicHttpsVerified": true
+  },
+  "deployment": "No deployment, build, restart or production configuration change.",
+  "researchGaps": [
+    "Nagoya Coming soon remains11/30; official TakashimayaNovember12bakery announcements already covered. Closed LesTrèflesDominiqueBouchet is not added; its2022successorLeBeurreNoisette has its own correct pin.",
+    "LEPIGNON: exact daily recipes, current bottle stock and tax/service on bottles. Access page lunch12:00versus menu-image12:30and older Tabelog last-order times conflict; confirm reservation time. Operator dinner10+versus booking school-age policy conflict is disclosed.",
+    "LeBeurreNoisette: glass-wine starting¥900/¥880conflict, current stock and winter November12menu. Existing dated autumn offers and eight credited photos preserved; no duplicate pin/content/offer.",
+    "ChezKOBE: official site HTTP/HTTPS inaccessible; exact original branch opening day/month and current menu/gallery need further checking.1978is only year precision, pastry-company1982is distinct.",
+    "LaPêche: current branch-managed menu and exact original opening require additional research; older2018–2020prices not promoted as current."
+  ],
+  "photoReview": {
+    "downloadedCandidates": 15,
+    "selectedNewPhotos": 6,
+    "reusedPublicAzurePhotos": 8,
+    "method": "New exact-branch operator gallery downloaded with plain curl, decoded and visually reviewed. ExistingLeBeurreNoisetteAzure gallery credits and source pages preserved; six Pignon photos uploaded after visual review."
+  },
+  "verification": {
+    "local": {
+      "profiles": [
+        {
+          "pinId": 18213,
+          "sourceUrl": "https://le-pignon-tokugawa.com/",
+          "name": "LE PIGNON — Tokugawacho",
+          "contentId": 1905,
+          "contentRevision": 1,
+          "verifiedGalleryLinks": 6,
+          "publicPinStatus": 200,
+          "apiBase": "http://localhost:3000",
+          "publicBase": "http://localhost:3000"
+        },
+        {
+          "pinId": 16024,
+          "sourceUrl": "https://lebeurrenoisettetokyo.com/nagoya/",
+          "name": "Le Beurre Noisette NAGOYA",
+          "contentId": 1650,
+          "contentRevision": 2,
+          "verifiedGalleryLinks": 8,
+          "publicPinStatus": 200,
+          "apiBase": "http://localhost:3000",
+          "publicBase": "http://localhost:3000"
+        }
+      ],
+      "guides": [
+        {
+          "pinId": 18213,
+          "region": "nagoya",
+          "view": "top",
+          "neighborhood": "Tokugawacho / Ozone",
+          "nativeTitleAndImage": true,
+          "hrefs": [
+            "/pin/18213/le-pignon-tokugawacho-opens-2008-10-30"
+          ],
+          "browserFiltered": false,
+          "publicBase": "http://localhost:3000",
+          "guideStatus": 200,
+          "offers": []
+        },
+        {
+          "pinId": 16024,
+          "region": "nagoya",
+          "view": "top",
+          "neighborhood": "Meieki / JR Central Towers",
+          "nativeTitleAndImage": true,
+          "hrefs": [
+            "/pin/16024/le-beurre-noisette-nagoya-french-bistro-at-nagoya-station"
+          ],
+          "browserFiltered": false,
+          "publicBase": "http://localhost:3000",
+          "guideStatus": 200,
+          "offers": []
+        }
+      ],
+      "preservedExistingPinAndTwoOffers": true
+    },
+    "production": {
+      "profiles": [
+        {
+          "pinId": 18215,
+          "sourceUrl": "https://le-pignon-tokugawa.com/",
+          "name": "LE PIGNON — Tokugawacho",
+          "contentId": 1905,
+          "contentRevision": 1,
+          "verifiedGalleryLinks": 6,
+          "publicPinStatus": 200,
+          "apiBase": "https://www.chronopin.com",
+          "publicBase": "https://www.chronopin.com"
+        },
+        {
+          "pinId": 16024,
+          "sourceUrl": "https://lebeurrenoisettetokyo.com/nagoya/",
+          "name": "Le Beurre Noisette NAGOYA",
+          "contentId": 1650,
+          "contentRevision": 2,
+          "verifiedGalleryLinks": 8,
+          "publicPinStatus": 200,
+          "apiBase": "https://www.chronopin.com",
+          "publicBase": "https://www.chronopin.com"
+        }
+      ],
+      "guides": [
+        {
+          "pinId": 18215,
+          "region": "nagoya",
+          "view": "top",
+          "neighborhood": "Tokugawacho / Ozone",
+          "nativeTitleAndImage": true,
+          "hrefs": [
+            "/pin/18215/le-pignon-tokugawacho-opens-2008-10-30"
+          ],
+          "browserFiltered": false,
+          "publicBase": "https://www.chronopin.com",
+          "guideStatus": 200,
+          "offers": []
+        },
+        {
+          "pinId": 16024,
+          "region": "nagoya",
+          "view": "top",
+          "neighborhood": "Meieki / JR Central Towers",
+          "nativeTitleAndImage": true,
+          "hrefs": [
+            "/pin/16024/le-beurre-noisette-nagoya-french-bistro-at-nagoya-station"
+          ],
+          "browserFiltered": false,
+          "publicBase": "https://www.chronopin.com",
+          "guideStatus": 200,
+          "offers": []
+        }
+      ],
+      "preservedExistingPinAndTwoOffers": true
+    }
+  },
+  "verifiedGuideCounts": {
+    "local": [
+      {
+        "environment": "local",
+        "city": "fukuoka",
+        "view": "upcoming",
+        "verificationBase": "http://localhost:3000",
+        "count": 9,
+        "ids": [
+          "15398",
+          "15410",
+          "15411",
+          "15415",
+          "15424",
+          "15425",
+          "15426",
+          "15914",
+          "15924"
+        ]
+      },
+      {
+        "environment": "local",
+        "city": "fukuoka",
+        "view": "new",
+        "verificationBase": "http://localhost:3000",
+        "count": 20,
+        "ids": [
+          "15399",
+          "15400",
+          "15401",
+          "15409",
+          "15412",
+          "15414",
+          "15421",
+          "15422",
+          "15423",
+          "15427",
+          "15428",
+          "15969",
+          "16026",
+          "16027",
+          "16078",
+          "16290",
+          "16291",
+          "16292",
+          "16326",
+          "17625"
+        ]
+      },
+      {
+        "environment": "local",
+        "city": "fukuoka",
+        "view": "top",
+        "verificationBase": "http://localhost:3000",
+        "count": 22,
+        "ids": [
+          "15402",
+          "15403",
+          "15404",
+          "15405",
+          "15406",
+          "15407",
+          "15408",
+          "15413",
+          "15416",
+          "15417",
+          "15418",
+          "15419",
+          "15420",
+          "15429",
+          "18132",
+          "18133",
+          "18134",
+          "18147",
+          "18148",
+          "18149",
+          "18150",
+          "18176"
+        ]
+      },
+      {
+        "environment": "local",
+        "city": "fukuoka",
+        "view": "discounts",
+        "verificationBase": "http://localhost:3000",
+        "count": 33,
+        "ids": [
+          "https://010bld.com/gohgan/",
+          "https://333sanmitomatoramen.com/store/%e5%a4%a9%e7%a5%9e%e5%a4%a7%e5%90%8d%e6%9c%ac%e5%ba%97/",
+          "https://and-gallery.com/#hukuoka",
+          "https://cene.tokyo/collections/fukuoka-open",
+          "https://fukuoka-orientalhotel.com/restaurant/linksquare/",
+          "https://fukuokaseahawk.hiltonjapan.co.jp/restaurants/clouds",
+          "https://fukuokaseahawk.hiltonjapan.co.jp/restaurants/seala",
+          "https://kusiyatubame.owst.jp/",
+          "https://le-bistro-aki.com/",
+          "https://onefukuoka-building.jp/shop/55",
+          "https://prtimes.jp/main/html/rd/p/000000060.000179076.html",
+          "https://prtimes.jp/main/html/rd/p/000000064.000152670.html",
+          "https://prtimes.jp/main/html/rd/p/000000170.000101757.html",
+          "https://pukutoco.com/sumomo-bakery-1007open/",
+          "https://pukutoco.com/sumomobakery-akasaka1019open/",
+          "https://toeihotel-fukuoka.com/restaurant/bistro_atrie/",
+          "https://www.eggsnthingsjapan.com/hakata/",
+          "https://www.f-sunpalace.com/restaurant/lagoon/",
+          "https://www.fuk.hotelokura.co.jp/restaurant/lechampdor/",
+          "https://www.gate-hotel.jp/fukuoka/rb/agfukuoka.html",
+          "https://www.ginzalion.jp/shop/brand/yebisubar/onefukuokabldg.html",
+          "https://www.hiramatsurestaurant.jp/hiramatsu-hakata/",
+          "https://www.hiramatsurestaurant.jp/kubotsu/",
+          "https://www.hotelnikko-fukuoka.com/restaurant/celebrites/",
+          "https://www.hotelnikko-fukuoka.com/restaurant/serena/",
+          "https://www.hotpepper.jp/strJ001276550/",
+          "https://www.kys-newotani.co.jp/hakata/restaurant/castillian-bar/",
+          "https://www.orec.co.jp/greenlab-fukuoka/",
+          "https://www.pochi-ito.com/",
+          "https://www.princehotels.co.jp/momochihama/restaurant/yocaterrace/",
+          "https://www.quil-fait-bon.com/pages/fukuoka",
+          "https://www.recent-hotel.com/restaurant/",
+          "https://www.tenchika.com/shop/h_b_antique/"
+        ]
+      },
+      {
+        "environment": "local",
+        "city": "osaka",
+        "view": "upcoming",
+        "verificationBase": "http://localhost:3000",
+        "count": 12,
+        "ids": [
+          "15432",
+          "15445",
+          "15447",
+          "15448",
+          "15449",
+          "15458",
+          "15913",
+          "15925",
+          "15975",
+          "16023",
+          "16079",
+          "17168"
+        ]
+      },
+      {
+        "environment": "local",
+        "city": "osaka",
+        "view": "new",
+        "verificationBase": "http://localhost:3000",
+        "count": 22,
+        "ids": [
+          "15431",
+          "15435",
+          "15436",
+          "15437",
+          "15438",
+          "15439",
+          "15446",
+          "15451",
+          "15452",
+          "15453",
+          "15454",
+          "15455",
+          "15456",
+          "15457",
+          "17108",
+          "17109",
+          "17110",
+          "17111",
+          "17112",
+          "17622",
+          "17623",
+          "17626"
+        ]
+      },
+      {
+        "environment": "local",
+        "city": "osaka",
+        "view": "top",
+        "verificationBase": "http://localhost:3000",
+        "count": 19,
+        "ids": [
+          "15430",
+          "15433",
+          "15434",
+          "15440",
+          "15441",
+          "15442",
+          "15443",
+          "15444",
+          "15450",
+          "15971",
+          "18135",
+          "18136",
+          "18137",
+          "18151",
+          "18152",
+          "18153",
+          "18154",
+          "18166",
+          "18168"
+        ]
+      },
+      {
+        "environment": "local",
+        "city": "osaka",
+        "view": "discounts",
+        "verificationBase": "http://localhost:3000",
+        "count": 25,
+        "ids": [
+          "https://and-gallery.com/#nanba",
+          "https://big-step.co.jp/shop/detail/63",
+          "https://conrad-osaka.hiltonjapan.co.jp/restaurants/40skybar",
+          "https://conrad-osaka.hiltonjapan.co.jp/restaurants/atmos",
+          "https://cross-osaka.orixhotelsandresorts.com/#restaurant",
+          "https://csm-cafe.ltr-online.com/lp/csm-cafe-s022",
+          "https://doubletree-osaka-castle.hiltonjapan.co.jp/restaurants/lounge-bar-sen",
+          "https://doubletree-osaka-castle.hiltonjapan.co.jp/restaurants/restaurant-sen",
+          "https://gabuchiki.com/news/view/308",
+          "https://icosaka.com/offer/pierre_autumnmenu/",
+          "https://jblm2024.wixsite.com/fujiyama-tokyo/%E8%A4%87%E8%A3%BD-namba-osaka",
+          "https://labaie.ritzcarltonosaka.com/",
+          "https://osaka.ekimaru.com/shopguide/detail/103",
+          "https://osaka.hiltonjapan.co.jp/plans/restaurants/other/myplace-happyhour",
+          "https://patinahotels.com/osaka/drink-and-dine/p72",
+          "https://prtimes.jp/main/html/rd/p/000000001.000192433.html/",
+          "https://splendido.ritzcarltonosaka.com/",
+          "https://www.daimaru.co.jp/shinsaibashi/restaurant/cucina-bella.html",
+          "https://www.gate-hotel.jp/osaka/rb/aosaka.html",
+          "https://www.gate-hotel.jp/osaka/rb/peaks.html",
+          "https://www.hiramatsurestaurant.jp/hiramatsu-lafete/",
+          "https://www.hiramatsurestaurant.jp/hiramatsu-lemidi/",
+          "https://www.hotpepper.jp/strJ004661366/",
+          "https://www.quil-fait-bon.com/pages/grand-front-osaka",
+          "https://www.regine.stregisosaka.com/"
+        ]
+      },
+      {
+        "environment": "local",
+        "city": "kyoto",
+        "view": "upcoming",
+        "verificationBase": "http://localhost:3000",
+        "count": 11,
+        "ids": [
+          "15483",
+          "15499",
+          "15500",
+          "15909",
+          "15910",
+          "15911",
+          "15912",
+          "15922",
+          "15931",
+          "16323",
+          "17169"
+        ]
+      },
+      {
+        "environment": "local",
+        "city": "kyoto",
+        "view": "new",
+        "verificationBase": "http://localhost:3000",
+        "count": 33,
+        "ids": [
+          "15460",
+          "15461",
+          "15462",
+          "15463",
+          "15464",
+          "15465",
+          "15466",
+          "15467",
+          "15468",
+          "15469",
+          "15470",
+          "15471",
+          "15472",
+          "15473",
+          "15474",
+          "15475",
+          "15476",
+          "15477",
+          "15478",
+          "15479",
+          "15480",
+          "15481",
+          "15482",
+          "15489",
+          "15490",
+          "15491",
+          "15492",
+          "15493",
+          "15494",
+          "15495",
+          "15498",
+          "18025",
+          "18026"
+        ]
+      },
+      {
+        "environment": "local",
+        "city": "kyoto",
+        "view": "top",
+        "verificationBase": "http://localhost:3000",
+        "count": 30,
+        "ids": [
+          "15459",
+          "15484",
+          "15485",
+          "15486",
+          "15487",
+          "15488",
+          "15496",
+          "15497",
+          "15501",
+          "15973",
+          "18052",
+          "18060",
+          "18061",
+          "18098",
+          "18099",
+          "18117",
+          "18119",
+          "18155",
+          "18156",
+          "18170",
+          "18171",
+          "18173",
+          "18189",
+          "18191",
+          "18192",
+          "18207",
+          "18208",
+          "18209",
+          "18210",
+          "18211"
+        ]
+      },
+      {
+        "environment": "local",
+        "city": "kyoto",
+        "view": "discounts",
+        "verificationBase": "http://localhost:3000",
+        "count": 34,
+        "ids": [
+          "https://cenci-kyoto.com/",
+          "https://droit-kyoto.jp/",
+          "https://hotelfauchonkyoto.com/ja/gourmet/fauchon-salon-de-the-kyoto/",
+          "https://kyoto.hiltonjapan.co.jp/restaurants/teori",
+          "https://www.hiramatsurestaurant.jp/hiramatsu-kodaiji/",
+          "https://www.hiramatsurestaurant.jp/la-luce/",
+          "https://www.instagram.com/jbowl_ritsumeikan_mae/",
+          "https://www.keihanhotels-resorts.co.jp/kyoto-centuryhotel/topics/happyhour-2/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/011/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/012/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/013/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/014/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/015/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/016/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/017/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/018/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/019/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/020/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/022/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/023/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/026/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/028/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/031/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/033/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/039/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/040/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/042/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/043/",
+          "https://www.princess-kyoto.co.jp/restaurant/ambercourt/",
+          "https://www.princess-kyoto.co.jp/restaurant/darley/",
+          "https://www.princess-kyoto.co.jp/restaurant/hisuien/",
+          "https://www.princess-kyoto.co.jp/restaurant/hoen/",
+          "https://www.princess-kyoto.co.jp/restaurant/sagano/",
+          "https://www.quil-fait-bon.com/pages/kyoto"
+        ]
+      },
+      {
+        "environment": "local",
+        "city": "nagoya",
+        "view": "upcoming",
+        "verificationBase": "http://localhost:3000",
+        "count": 11,
+        "ids": [
+          "15510",
+          "15512",
+          "15517",
+          "15518",
+          "15521",
+          "15522",
+          "15900",
+          "15901",
+          "15902",
+          "16075",
+          "16080"
+        ]
+      },
+      {
+        "environment": "local",
+        "city": "nagoya",
+        "view": "new",
+        "verificationBase": "http://localhost:3000",
+        "count": 31,
+        "ids": [
+          "15509",
+          "15511",
+          "15515",
+          "15516",
+          "15519",
+          "15520",
+          "15898",
+          "15899",
+          "15915",
+          "15916",
+          "15917",
+          "15918",
+          "15919",
+          "15920",
+          "15921",
+          "15932",
+          "15964",
+          "15965",
+          "16020",
+          "16021",
+          "16022",
+          "16076",
+          "16294",
+          "16295",
+          "16767",
+          "16771",
+          "16800",
+          "17107",
+          "17166",
+          "17167",
+          "18045"
+        ]
+      },
+      {
+        "environment": "local",
+        "city": "nagoya",
+        "view": "top",
+        "verificationBase": "http://localhost:3000",
+        "count": 23,
+        "ids": [
+          "15502",
+          "15503",
+          "15504",
+          "15505",
+          "15506",
+          "15507",
+          "15508",
+          "15513",
+          "15514",
+          "15523",
+          "15524",
+          "15972",
+          "16024",
+          "18044",
+          "18100",
+          "18101",
+          "18121",
+          "18138",
+          "18190",
+          "18193",
+          "18194",
+          "18212",
+          "18213"
+        ]
+      },
+      {
+        "environment": "local",
+        "city": "nagoya",
+        "view": "discounts",
+        "verificationBase": "http://localhost:3000",
+        "count": 31,
+        "ids": [
+          "https://and-gallery.com/#nagoya",
+          "https://csm-cafe.ltr-online.com/lp/csm-cafe-s017",
+          "https://french-kitamura.jp/",
+          "https://kinzan.nagoya/archives/news/2853/",
+          "https://kobekangroup.com/shop/obanzai_kabtoya/",
+          "https://lebeurrenoisettetokyo.com/nagoya/",
+          "https://nagoya.hiltonjapan.co.jp/restaurants/hideaway3-3",
+          "https://nagoya.hiltonjapan.co.jp/restaurants/inplace3-3",
+          "https://nagoya.hiltonjapan.co.jp/restaurants/ouchou",
+          "https://nagoya.parco.jp/shop/detail/?cd=009191",
+          "https://prtimes.jp/main/html/rd/p/000000004.000116722.html",
+          "https://prtimes.jp/main/html/rd/p/000004440.000018505.html",
+          "https://reconnaissance-nagoya.com/",
+          "https://thetowerhotel.jp/restaurant/",
+          "https://www.anacrowneplaza-nagoya.jp/pages/restaurant_gardencourt",
+          "https://www.anacrowneplaza-nagoya.jp/pages/restaurant_karin",
+          "https://www.anacrowneplaza-nagoya.jp/pages/restaurant_stargate",
+          "https://www.anacrowneplaza-nagoya.jp/pages/restaurant_winglounge",
+          "https://www.associa.com/nma/restaurant/pergola/",
+          "https://www.centralpark.co.jp/shop/sharecafe/",
+          "https://www.espacionagoya.com/restaurant-bar/the-bar-castle/",
+          "https://www.hiramatsurestaurant.jp/aubergedelill-nagoya/",
+          "https://www.hotpepper.jp/strJ004698778/",
+          "https://www.hotpepper.jp/strJ004699003/",
+          "https://www.kochuten.jp/",
+          "https://www.komeda.co.jp/shop/detail.html?id=1215",
+          "https://www.lafloraison-t.jp/",
+          "https://www.livingroom-skybar.com/",
+          "https://www.princehotels.co.jp/nagoya/restaurant/skydining/",
+          "https://www.quil-fait-bon.com/pages/nagoya-sakae",
+          "https://www.thekawabunnagoya.com/thekawabunnagoya/restaurant/"
+        ]
+      },
+      {
+        "environment": "local",
+        "city": "tokyo",
+        "view": "upcoming",
+        "verificationBase": "http://localhost:3000",
+        "count": 14,
+        "ids": [
+          "15526",
+          "15538",
+          "15541",
+          "15544",
+          "15546",
+          "15555",
+          "15556",
+          "15557",
+          "15923",
+          "15929",
+          "15930",
+          "17106",
+          "17621",
+          "18027"
+        ]
+      },
+      {
+        "environment": "local",
+        "city": "tokyo",
+        "view": "new",
+        "verificationBase": "http://localhost:3000",
+        "count": 23,
+        "ids": [
+          "15527",
+          "15539",
+          "15540",
+          "15551",
+          "15552",
+          "15553",
+          "15554",
+          "15558",
+          "15966",
+          "15967",
+          "15968",
+          "16289",
+          "16325",
+          "17170",
+          "17171",
+          "17172",
+          "17173",
+          "17628",
+          "18043",
+          "18051",
+          "18058",
+          "18102",
+          "18103"
+        ]
+      },
+      {
+        "environment": "local",
+        "city": "tokyo",
+        "view": "top",
+        "verificationBase": "http://localhost:3000",
+        "count": 30,
+        "ids": [
+          "15525",
+          "15528",
+          "15529",
+          "15530",
+          "15531",
+          "15532",
+          "15533",
+          "15534",
+          "15535",
+          "15536",
+          "15537",
+          "15542",
+          "15543",
+          "15545",
+          "15547",
+          "15548",
+          "15549",
+          "15550",
+          "15559",
+          "15560",
+          "15561",
+          "15562",
+          "15903",
+          "15974",
+          "18122",
+          "18123",
+          "18140",
+          "18141",
+          "18157",
+          "18158"
+        ]
+      },
+      {
+        "environment": "local",
+        "city": "tokyo",
+        "view": "discounts",
+        "verificationBase": "http://localhost:3000",
+        "count": 37,
+        "ids": [
+          "https://and-gallery.com/#ikebukuro",
+          "https://and-gallery.com/#yurakucho",
+          "https://cocco.eastone.co.jp/shop/gotanda",
+          "https://cocco.eastone.co.jp/shop/kameido",
+          "https://conrad-tokyo.hiltonjapan.co.jp/restaurants/cerise",
+          "https://conrad-tokyo.hiltonjapan.co.jp/restaurants/chinablue",
+          "https://conrad-tokyo.hiltonjapan.co.jp/restaurants/twentyeight",
+          "https://csm-cafe.ltr-online.com/lp/csm-cafe-s012",
+          "https://gourmetpress.net/1488798/",
+          "https://miabocca.eastone.co.jp/shop/Ikebukuro",
+          "https://miabocca.eastone.co.jp/shop/Shakujii-park",
+          "https://miabocca.eastone.co.jp/shop/Shinjuku-takasimaya",
+          "https://prtimes.jp/main/html/rd/p/000000009.000161200.html",
+          "https://prtimes.jp/main/html/rd/p/000000048.000152772.html",
+          "https://prtimes.jp/main/html/rd/p/000000196.000049183.html",
+          "https://prtimes.jp/main/html/rd/p/000000356.000048489.html",
+          "https://prtimes.jp/main/html/rd/p/000000592.000071323.html",
+          "https://prtimes.jp/main/html/rd/p/000004178.000003860.html",
+          "https://sarabethsrestaurants.jp/location/omotesando/",
+          "https://sarabethsrestaurants.jp/location/shinagawa/",
+          "https://sarabethsrestaurants.jp/location/shinjuku/",
+          "https://sarabethsrestaurants.jp/location/tokyo/",
+          "https://shibakoen.bar-shinkai.com/",
+          "https://store-info.skylark.co.jp/syabuyo/map/198490/",
+          "https://tabelog.com/en/tokyo/A1303/A130301/13198692/",
+          "https://tokyo.hiltonjapan.co.jp/restaurants/st_georges_bar",
+          "https://www.andaztokyo.jp/restaurants/jp/thetavern-grill-lounge",
+          "https://www.herofield.com/bbq/tokyoprince/",
+          "https://www.hiramatsurestaurant.jp/jardindessens-tokyo/",
+          "https://www.mesm.jp/en/eat-drink/chefs-theatre.html",
+          "https://www.newotani.co.jp/tokyo/restaurant/gardenlounge/",
+          "https://www.quil-fait-bon.com/pages/aoyama",
+          "https://www.quil-fait-bon.com/pages/grand-maison-ginza",
+          "https://www.quil-fait-bon.com/pages/shinjuku",
+          "https://www.quil-fait-bon.com/pages/tokyo-dome-city",
+          "https://www.quil-fait-bon.com/pages/tokyo-skytree-town-solamachi",
+          "https://www.sunamo.jp/floor/shop_detail.html?UC=1_028"
+        ]
+      },
+      {
+        "environment": "local",
+        "city": "sapporo",
+        "view": "upcoming",
+        "verificationBase": "http://localhost:3000",
+        "count": 11,
+        "ids": [
+          "15568",
+          "15569",
+          "15570",
+          "15571",
+          "15597",
+          "15926",
+          "15970",
+          "17103",
+          "18047",
+          "18048",
+          "18054"
+        ]
+      },
+      {
+        "environment": "local",
+        "city": "sapporo",
+        "view": "new",
+        "verificationBase": "http://localhost:3000",
+        "count": 28,
+        "ids": [
+          "15580",
+          "15586",
+          "15587",
+          "15588",
+          "15589",
+          "15590",
+          "15591",
+          "15592",
+          "15595",
+          "15596",
+          "16293",
+          "16296",
+          "17104",
+          "17105",
+          "17624",
+          "17627",
+          "18028",
+          "18029",
+          "18030",
+          "18031",
+          "18049",
+          "18055",
+          "18056",
+          "18057",
+          "18104",
+          "18105",
+          "18124",
+          "18125"
+        ]
+      },
+      {
+        "environment": "local",
+        "city": "sapporo",
+        "view": "top",
+        "verificationBase": "http://localhost:3000",
+        "count": 30,
+        "ids": [
+          "15563",
+          "15564",
+          "15565",
+          "15566",
+          "15567",
+          "15572",
+          "15573",
+          "15574",
+          "15575",
+          "15576",
+          "15577",
+          "15578",
+          "15579",
+          "15581",
+          "15582",
+          "15583",
+          "15584",
+          "15585",
+          "15593",
+          "15594",
+          "15598",
+          "15599",
+          "15600",
+          "15601",
+          "15602",
+          "15603",
+          "15604",
+          "15605",
+          "15606",
+          "15607"
+        ]
+      },
+      {
+        "environment": "local",
+        "city": "sapporo",
+        "view": "discounts",
+        "verificationBase": "http://localhost:3000",
+        "count": 34,
+        "ids": [
+          "https://anan.fuji-tatsu.co.jp/shop/sapporo-sinoro/",
+          "https://chocottosushi-kiwami.owst.jp/",
+          "https://cocco.eastone.co.jp/shop/kitahachijo",
+          "https://cocco.eastone.co.jp/shop/kitaichijo",
+          "https://cocco.eastone.co.jp/shop/kotoniekimae",
+          "https://cocco.eastone.co.jp/shop/miyanosawa",
+          "https://cocco.eastone.co.jp/shop/shindohigashi",
+          "https://cocco.eastone.co.jp/shop/souen",
+          "https://grand1934.com/restaurant/garden-dining-waraku/",
+          "https://grand1934.com/restaurant/kokaku/",
+          "https://grand1934.com/restaurant/lobby-lounge-mizar/",
+          "https://grand1934.com/restaurant/northern-terrace-diner/",
+          "https://grand1934.com/restaurant/old-saloon1934/",
+          "https://miabocca.eastone.co.jp/shop/Kita2jo",
+          "https://miabocca.eastone.co.jp/shop/Kotoni-station",
+          "https://miabocca.eastone.co.jp/shop/Sapporo-station",
+          "https://miabocca.eastone.co.jp/shop/atsubetsuminami",
+          "https://miabocca.eastone.co.jp/shop/sapporoduo",
+          "https://michiru.dkdining.com/sapporo/",
+          "https://prtimes.jp/main/html/rd/p/000000010.000134951.html",
+          "https://store-info.skylark.co.jp/syabuyo/map/198489/",
+          "https://www.anahisapporosusukino.com/restaurants/verde/",
+          "https://www.hyatt.com/hyatt-centric/ja-JP/ctsct-hyatt-centric-sapporo/dining",
+          "https://www.jrhotels.co.jp/tower/restaurant/skyj/",
+          "https://www.keioplaza-sapporo.co.jp/restaurants/akizu/",
+          "https://www.keioplaza-sapporo.co.jp/restaurants/crossvault/",
+          "https://www.keioplaza-sapporo.co.jp/restaurants/glass/",
+          "https://www.keioplaza-sapporo.co.jp/restaurants/miyama/",
+          "https://www.keioplaza-sapporo.co.jp/restaurants/yamanami/",
+          "https://www.princehotels.co.jp/sapporo/restaurant/alldaydininggrandeur",
+          "https://www.princehotels.co.jp/sapporo/restaurant/fuyojo",
+          "https://www.princehotels.co.jp/sapporo/restaurant/katsura",
+          "https://www.princehotels.co.jp/sapporo/restaurant/top_prince",
+          "https://www.tokyuhotels.co.jp/sapporostream/restaurant/splish/plan/angel_devil/index.html"
+        ]
+      }
+    ],
+    "production": [
+      {
+        "environment": "production",
+        "city": "fukuoka",
+        "view": "upcoming",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 9,
+        "ids": [
+          "15398",
+          "15410",
+          "15411",
+          "15415",
+          "15424",
+          "15425",
+          "15426",
+          "15914",
+          "15924"
+        ]
+      },
+      {
+        "environment": "production",
+        "city": "fukuoka",
+        "view": "new",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 20,
+        "ids": [
+          "15399",
+          "15400",
+          "15401",
+          "15409",
+          "15412",
+          "15414",
+          "15421",
+          "15422",
+          "15423",
+          "15427",
+          "15428",
+          "15969",
+          "16026",
+          "16027",
+          "16078",
+          "16290",
+          "16291",
+          "16292",
+          "16326",
+          "17625"
+        ]
+      },
+      {
+        "environment": "production",
+        "city": "fukuoka",
+        "view": "top",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 22,
+        "ids": [
+          "15402",
+          "15403",
+          "15404",
+          "15405",
+          "15406",
+          "15407",
+          "15408",
+          "15413",
+          "15416",
+          "15417",
+          "15418",
+          "15419",
+          "15420",
+          "15429",
+          "18132",
+          "18133",
+          "18134",
+          "18147",
+          "18148",
+          "18149",
+          "18150",
+          "18176"
+        ]
+      },
+      {
+        "environment": "production",
+        "city": "fukuoka",
+        "view": "discounts",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 33,
+        "ids": [
+          "https://010bld.com/gohgan/",
+          "https://333sanmitomatoramen.com/store/%e5%a4%a9%e7%a5%9e%e5%a4%a7%e5%90%8d%e6%9c%ac%e5%ba%97/",
+          "https://and-gallery.com/#hukuoka",
+          "https://cene.tokyo/collections/fukuoka-open",
+          "https://fukuoka-orientalhotel.com/restaurant/linksquare/",
+          "https://fukuokaseahawk.hiltonjapan.co.jp/restaurants/clouds",
+          "https://fukuokaseahawk.hiltonjapan.co.jp/restaurants/seala",
+          "https://kusiyatubame.owst.jp/",
+          "https://le-bistro-aki.com/",
+          "https://onefukuoka-building.jp/shop/55",
+          "https://prtimes.jp/main/html/rd/p/000000060.000179076.html",
+          "https://prtimes.jp/main/html/rd/p/000000064.000152670.html",
+          "https://prtimes.jp/main/html/rd/p/000000170.000101757.html",
+          "https://pukutoco.com/sumomo-bakery-1007open/",
+          "https://pukutoco.com/sumomobakery-akasaka1019open/",
+          "https://toeihotel-fukuoka.com/restaurant/bistro_atrie/",
+          "https://www.eggsnthingsjapan.com/hakata/",
+          "https://www.f-sunpalace.com/restaurant/lagoon/",
+          "https://www.fuk.hotelokura.co.jp/restaurant/lechampdor/",
+          "https://www.gate-hotel.jp/fukuoka/rb/agfukuoka.html",
+          "https://www.ginzalion.jp/shop/brand/yebisubar/onefukuokabldg.html",
+          "https://www.hiramatsurestaurant.jp/hiramatsu-hakata/",
+          "https://www.hiramatsurestaurant.jp/kubotsu/",
+          "https://www.hotelnikko-fukuoka.com/restaurant/celebrites/",
+          "https://www.hotelnikko-fukuoka.com/restaurant/serena/",
+          "https://www.hotpepper.jp/strJ001276550/",
+          "https://www.kys-newotani.co.jp/hakata/restaurant/castillian-bar/",
+          "https://www.orec.co.jp/greenlab-fukuoka/",
+          "https://www.pochi-ito.com/",
+          "https://www.princehotels.co.jp/momochihama/restaurant/yocaterrace/",
+          "https://www.quil-fait-bon.com/pages/fukuoka",
+          "https://www.recent-hotel.com/restaurant/",
+          "https://www.tenchika.com/shop/h_b_antique/"
+        ]
+      },
+      {
+        "environment": "production",
+        "city": "osaka",
+        "view": "upcoming",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 12,
+        "ids": [
+          "15432",
+          "15445",
+          "15447",
+          "15448",
+          "15449",
+          "15458",
+          "15913",
+          "15925",
+          "15975",
+          "16023",
+          "16079",
+          "17168"
+        ]
+      },
+      {
+        "environment": "production",
+        "city": "osaka",
+        "view": "new",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 22,
+        "ids": [
+          "15431",
+          "15435",
+          "15436",
+          "15437",
+          "15438",
+          "15439",
+          "15446",
+          "15451",
+          "15452",
+          "15453",
+          "15454",
+          "15455",
+          "15456",
+          "15457",
+          "17108",
+          "17109",
+          "17110",
+          "17111",
+          "17112",
+          "17622",
+          "17623",
+          "17626"
+        ]
+      },
+      {
+        "environment": "production",
+        "city": "osaka",
+        "view": "top",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 19,
+        "ids": [
+          "15430",
+          "15433",
+          "15434",
+          "15440",
+          "15441",
+          "15442",
+          "15443",
+          "15444",
+          "15450",
+          "15971",
+          "18135",
+          "18136",
+          "18137",
+          "18151",
+          "18152",
+          "18153",
+          "18154",
+          "18166",
+          "18168"
+        ]
+      },
+      {
+        "environment": "production",
+        "city": "osaka",
+        "view": "discounts",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 25,
+        "ids": [
+          "https://and-gallery.com/#nanba",
+          "https://big-step.co.jp/shop/detail/63",
+          "https://conrad-osaka.hiltonjapan.co.jp/restaurants/40skybar",
+          "https://conrad-osaka.hiltonjapan.co.jp/restaurants/atmos",
+          "https://cross-osaka.orixhotelsandresorts.com/#restaurant",
+          "https://csm-cafe.ltr-online.com/lp/csm-cafe-s022",
+          "https://doubletree-osaka-castle.hiltonjapan.co.jp/restaurants/lounge-bar-sen",
+          "https://doubletree-osaka-castle.hiltonjapan.co.jp/restaurants/restaurant-sen",
+          "https://gabuchiki.com/news/view/308",
+          "https://icosaka.com/offer/pierre_autumnmenu/",
+          "https://jblm2024.wixsite.com/fujiyama-tokyo/%E8%A4%87%E8%A3%BD-namba-osaka",
+          "https://labaie.ritzcarltonosaka.com/",
+          "https://osaka.ekimaru.com/shopguide/detail/103",
+          "https://osaka.hiltonjapan.co.jp/plans/restaurants/other/myplace-happyhour",
+          "https://patinahotels.com/osaka/drink-and-dine/p72",
+          "https://prtimes.jp/main/html/rd/p/000000001.000192433.html/",
+          "https://splendido.ritzcarltonosaka.com/",
+          "https://www.daimaru.co.jp/shinsaibashi/restaurant/cucina-bella.html",
+          "https://www.gate-hotel.jp/osaka/rb/aosaka.html",
+          "https://www.gate-hotel.jp/osaka/rb/peaks.html",
+          "https://www.hiramatsurestaurant.jp/hiramatsu-lafete/",
+          "https://www.hiramatsurestaurant.jp/hiramatsu-lemidi/",
+          "https://www.hotpepper.jp/strJ004661366/",
+          "https://www.quil-fait-bon.com/pages/grand-front-osaka",
+          "https://www.regine.stregisosaka.com/"
+        ]
+      },
+      {
+        "environment": "production",
+        "city": "kyoto",
+        "view": "upcoming",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 11,
+        "ids": [
+          "15483",
+          "15499",
+          "15500",
+          "15909",
+          "15910",
+          "15911",
+          "15912",
+          "15922",
+          "15931",
+          "16323",
+          "17169"
+        ]
+      },
+      {
+        "environment": "production",
+        "city": "kyoto",
+        "view": "new",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 33,
+        "ids": [
+          "15460",
+          "15461",
+          "15462",
+          "15463",
+          "15464",
+          "15465",
+          "15466",
+          "15467",
+          "15468",
+          "15469",
+          "15470",
+          "15471",
+          "15472",
+          "15473",
+          "15474",
+          "15475",
+          "15476",
+          "15477",
+          "15478",
+          "15479",
+          "15480",
+          "15481",
+          "15482",
+          "15489",
+          "15490",
+          "15491",
+          "15492",
+          "15493",
+          "15494",
+          "15495",
+          "15498",
+          "18025",
+          "18026"
+        ]
+      },
+      {
+        "environment": "production",
+        "city": "kyoto",
+        "view": "top",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 30,
+        "ids": [
+          "15459",
+          "15484",
+          "15485",
+          "15486",
+          "15487",
+          "15488",
+          "15496",
+          "15497",
+          "15501",
+          "15973",
+          "18052",
+          "18060",
+          "18061",
+          "18098",
+          "18099",
+          "18117",
+          "18119",
+          "18155",
+          "18156",
+          "18170",
+          "18171",
+          "18173",
+          "18191",
+          "18193",
+          "18194",
+          "18209",
+          "18210",
+          "18211",
+          "18212",
+          "18213"
+        ]
+      },
+      {
+        "environment": "production",
+        "city": "kyoto",
+        "view": "discounts",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 34,
+        "ids": [
+          "https://cenci-kyoto.com/",
+          "https://droit-kyoto.jp/",
+          "https://hotelfauchonkyoto.com/ja/gourmet/fauchon-salon-de-the-kyoto/",
+          "https://kyoto.hiltonjapan.co.jp/restaurants/teori",
+          "https://www.hiramatsurestaurant.jp/hiramatsu-kodaiji/",
+          "https://www.hiramatsurestaurant.jp/la-luce/",
+          "https://www.instagram.com/jbowl_ritsumeikan_mae/",
+          "https://www.keihanhotels-resorts.co.jp/kyoto-centuryhotel/topics/happyhour-2/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/011/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/012/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/013/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/014/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/015/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/016/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/017/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/018/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/019/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/020/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/022/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/023/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/026/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/028/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/031/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/033/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/039/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/040/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/042/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/043/",
+          "https://www.princess-kyoto.co.jp/restaurant/ambercourt/",
+          "https://www.princess-kyoto.co.jp/restaurant/darley/",
+          "https://www.princess-kyoto.co.jp/restaurant/hisuien/",
+          "https://www.princess-kyoto.co.jp/restaurant/hoen/",
+          "https://www.princess-kyoto.co.jp/restaurant/sagano/",
+          "https://www.quil-fait-bon.com/pages/kyoto"
+        ]
+      },
+      {
+        "environment": "production",
+        "city": "nagoya",
+        "view": "upcoming",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 11,
+        "ids": [
+          "15510",
+          "15512",
+          "15517",
+          "15518",
+          "15521",
+          "15522",
+          "15900",
+          "15901",
+          "15902",
+          "16075",
+          "16080"
+        ]
+      },
+      {
+        "environment": "production",
+        "city": "nagoya",
+        "view": "new",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 31,
+        "ids": [
+          "15509",
+          "15511",
+          "15515",
+          "15516",
+          "15519",
+          "15520",
+          "15898",
+          "15899",
+          "15915",
+          "15916",
+          "15917",
+          "15918",
+          "15919",
+          "15920",
+          "15921",
+          "15932",
+          "15964",
+          "15965",
+          "16020",
+          "16021",
+          "16022",
+          "16076",
+          "16294",
+          "16295",
+          "16767",
+          "16771",
+          "16800",
+          "17107",
+          "17166",
+          "17167",
+          "18045"
+        ]
+      },
+      {
+        "environment": "production",
+        "city": "nagoya",
+        "view": "top",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 23,
+        "ids": [
+          "15502",
+          "15503",
+          "15504",
+          "15505",
+          "15506",
+          "15507",
+          "15508",
+          "15513",
+          "15514",
+          "15523",
+          "15524",
+          "15972",
+          "16024",
+          "18044",
+          "18100",
+          "18101",
+          "18121",
+          "18138",
+          "18192",
+          "18195",
+          "18196",
+          "18214",
+          "18215"
+        ]
+      },
+      {
+        "environment": "production",
+        "city": "nagoya",
+        "view": "discounts",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 31,
+        "ids": [
+          "https://and-gallery.com/#nagoya",
+          "https://csm-cafe.ltr-online.com/lp/csm-cafe-s017",
+          "https://french-kitamura.jp/",
+          "https://kinzan.nagoya/archives/news/2853/",
+          "https://kobekangroup.com/shop/obanzai_kabtoya/",
+          "https://lebeurrenoisettetokyo.com/nagoya/",
+          "https://nagoya.hiltonjapan.co.jp/restaurants/hideaway3-3",
+          "https://nagoya.hiltonjapan.co.jp/restaurants/inplace3-3",
+          "https://nagoya.hiltonjapan.co.jp/restaurants/ouchou",
+          "https://nagoya.parco.jp/shop/detail/?cd=009191",
+          "https://prtimes.jp/main/html/rd/p/000000004.000116722.html",
+          "https://prtimes.jp/main/html/rd/p/000004440.000018505.html",
+          "https://reconnaissance-nagoya.com/",
+          "https://thetowerhotel.jp/restaurant/",
+          "https://www.anacrowneplaza-nagoya.jp/pages/restaurant_gardencourt",
+          "https://www.anacrowneplaza-nagoya.jp/pages/restaurant_karin",
+          "https://www.anacrowneplaza-nagoya.jp/pages/restaurant_stargate",
+          "https://www.anacrowneplaza-nagoya.jp/pages/restaurant_winglounge",
+          "https://www.associa.com/nma/restaurant/pergola/",
+          "https://www.centralpark.co.jp/shop/sharecafe/",
+          "https://www.espacionagoya.com/restaurant-bar/the-bar-castle/",
+          "https://www.hiramatsurestaurant.jp/aubergedelill-nagoya/",
+          "https://www.hotpepper.jp/strJ004698778/",
+          "https://www.hotpepper.jp/strJ004699003/",
+          "https://www.kochuten.jp/",
+          "https://www.komeda.co.jp/shop/detail.html?id=1215",
+          "https://www.lafloraison-t.jp/",
+          "https://www.livingroom-skybar.com/",
+          "https://www.princehotels.co.jp/nagoya/restaurant/skydining/",
+          "https://www.quil-fait-bon.com/pages/nagoya-sakae",
+          "https://www.thekawabunnagoya.com/thekawabunnagoya/restaurant/"
+        ]
+      },
+      {
+        "environment": "production",
+        "city": "tokyo",
+        "view": "upcoming",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 14,
+        "ids": [
+          "15526",
+          "15538",
+          "15541",
+          "15544",
+          "15546",
+          "15555",
+          "15556",
+          "15557",
+          "15923",
+          "15929",
+          "15930",
+          "17106",
+          "17621",
+          "18027"
+        ]
+      },
+      {
+        "environment": "production",
+        "city": "tokyo",
+        "view": "new",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 23,
+        "ids": [
+          "15527",
+          "15539",
+          "15540",
+          "15551",
+          "15552",
+          "15553",
+          "15554",
+          "15558",
+          "15966",
+          "15967",
+          "15968",
+          "16289",
+          "16325",
+          "17170",
+          "17171",
+          "17172",
+          "17173",
+          "17628",
+          "18043",
+          "18051",
+          "18058",
+          "18102",
+          "18103"
+        ]
+      },
+      {
+        "environment": "production",
+        "city": "tokyo",
+        "view": "top",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 30,
+        "ids": [
+          "15525",
+          "15528",
+          "15529",
+          "15530",
+          "15531",
+          "15532",
+          "15533",
+          "15534",
+          "15535",
+          "15536",
+          "15537",
+          "15542",
+          "15543",
+          "15545",
+          "15547",
+          "15548",
+          "15549",
+          "15550",
+          "15559",
+          "15560",
+          "15561",
+          "15562",
+          "15903",
+          "15974",
+          "18122",
+          "18123",
+          "18140",
+          "18141",
+          "18157",
+          "18158"
+        ]
+      },
+      {
+        "environment": "production",
+        "city": "tokyo",
+        "view": "discounts",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 37,
+        "ids": [
+          "https://and-gallery.com/#ikebukuro",
+          "https://and-gallery.com/#yurakucho",
+          "https://cocco.eastone.co.jp/shop/gotanda",
+          "https://cocco.eastone.co.jp/shop/kameido",
+          "https://conrad-tokyo.hiltonjapan.co.jp/restaurants/cerise",
+          "https://conrad-tokyo.hiltonjapan.co.jp/restaurants/chinablue",
+          "https://conrad-tokyo.hiltonjapan.co.jp/restaurants/twentyeight",
+          "https://csm-cafe.ltr-online.com/lp/csm-cafe-s012",
+          "https://gourmetpress.net/1488798/",
+          "https://miabocca.eastone.co.jp/shop/Ikebukuro",
+          "https://miabocca.eastone.co.jp/shop/Shakujii-park",
+          "https://miabocca.eastone.co.jp/shop/Shinjuku-takasimaya",
+          "https://prtimes.jp/main/html/rd/p/000000009.000161200.html",
+          "https://prtimes.jp/main/html/rd/p/000000048.000152772.html",
+          "https://prtimes.jp/main/html/rd/p/000000196.000049183.html",
+          "https://prtimes.jp/main/html/rd/p/000000356.000048489.html",
+          "https://prtimes.jp/main/html/rd/p/000000592.000071323.html",
+          "https://prtimes.jp/main/html/rd/p/000004178.000003860.html",
+          "https://sarabethsrestaurants.jp/location/omotesando/",
+          "https://sarabethsrestaurants.jp/location/shinagawa/",
+          "https://sarabethsrestaurants.jp/location/shinjuku/",
+          "https://sarabethsrestaurants.jp/location/tokyo/",
+          "https://shibakoen.bar-shinkai.com/",
+          "https://store-info.skylark.co.jp/syabuyo/map/198490/",
+          "https://tabelog.com/en/tokyo/A1303/A130301/13198692/",
+          "https://tokyo.hiltonjapan.co.jp/restaurants/st_georges_bar",
+          "https://www.andaztokyo.jp/restaurants/jp/thetavern-grill-lounge",
+          "https://www.herofield.com/bbq/tokyoprince/",
+          "https://www.hiramatsurestaurant.jp/jardindessens-tokyo/",
+          "https://www.mesm.jp/en/eat-drink/chefs-theatre.html",
+          "https://www.newotani.co.jp/tokyo/restaurant/gardenlounge/",
+          "https://www.quil-fait-bon.com/pages/aoyama",
+          "https://www.quil-fait-bon.com/pages/grand-maison-ginza",
+          "https://www.quil-fait-bon.com/pages/shinjuku",
+          "https://www.quil-fait-bon.com/pages/tokyo-dome-city",
+          "https://www.quil-fait-bon.com/pages/tokyo-skytree-town-solamachi",
+          "https://www.sunamo.jp/floor/shop_detail.html?UC=1_028"
+        ]
+      },
+      {
+        "environment": "production",
+        "city": "sapporo",
+        "view": "upcoming",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 11,
+        "ids": [
+          "15568",
+          "15569",
+          "15570",
+          "15571",
+          "15597",
+          "15926",
+          "15970",
+          "17103",
+          "18047",
+          "18048",
+          "18054"
+        ]
+      },
+      {
+        "environment": "production",
+        "city": "sapporo",
+        "view": "new",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 28,
+        "ids": [
+          "15580",
+          "15586",
+          "15587",
+          "15588",
+          "15589",
+          "15590",
+          "15591",
+          "15592",
+          "15595",
+          "15596",
+          "16293",
+          "16296",
+          "17104",
+          "17105",
+          "17624",
+          "17627",
+          "18028",
+          "18029",
+          "18030",
+          "18031",
+          "18049",
+          "18055",
+          "18056",
+          "18057",
+          "18104",
+          "18105",
+          "18124",
+          "18125"
+        ]
+      },
+      {
+        "environment": "production",
+        "city": "sapporo",
+        "view": "top",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 30,
+        "ids": [
+          "15563",
+          "15564",
+          "15565",
+          "15566",
+          "15567",
+          "15572",
+          "15573",
+          "15574",
+          "15575",
+          "15576",
+          "15577",
+          "15578",
+          "15579",
+          "15581",
+          "15582",
+          "15583",
+          "15584",
+          "15585",
+          "15593",
+          "15594",
+          "15598",
+          "15599",
+          "15600",
+          "15601",
+          "15602",
+          "15603",
+          "15604",
+          "15605",
+          "15606",
+          "15607"
+        ]
+      },
+      {
+        "environment": "production",
+        "city": "sapporo",
+        "view": "discounts",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 34,
+        "ids": [
+          "https://anan.fuji-tatsu.co.jp/shop/sapporo-sinoro/",
+          "https://chocottosushi-kiwami.owst.jp/",
+          "https://cocco.eastone.co.jp/shop/kitahachijo",
+          "https://cocco.eastone.co.jp/shop/kitaichijo",
+          "https://cocco.eastone.co.jp/shop/kotoniekimae",
+          "https://cocco.eastone.co.jp/shop/miyanosawa",
+          "https://cocco.eastone.co.jp/shop/shindohigashi",
+          "https://cocco.eastone.co.jp/shop/souen",
+          "https://grand1934.com/restaurant/garden-dining-waraku/",
+          "https://grand1934.com/restaurant/kokaku/",
+          "https://grand1934.com/restaurant/lobby-lounge-mizar/",
+          "https://grand1934.com/restaurant/northern-terrace-diner/",
+          "https://grand1934.com/restaurant/old-saloon1934/",
+          "https://miabocca.eastone.co.jp/shop/Kita2jo",
+          "https://miabocca.eastone.co.jp/shop/Kotoni-station",
+          "https://miabocca.eastone.co.jp/shop/Sapporo-station",
+          "https://miabocca.eastone.co.jp/shop/atsubetsuminami",
+          "https://miabocca.eastone.co.jp/shop/sapporoduo",
+          "https://michiru.dkdining.com/sapporo/",
+          "https://prtimes.jp/main/html/rd/p/000000010.000134951.html",
+          "https://store-info.skylark.co.jp/syabuyo/map/198489/",
+          "https://www.anahisapporosusukino.com/restaurants/verde/",
+          "https://www.hyatt.com/hyatt-centric/ja-JP/ctsct-hyatt-centric-sapporo/dining",
+          "https://www.jrhotels.co.jp/tower/restaurant/skyj/",
+          "https://www.keioplaza-sapporo.co.jp/restaurants/akizu/",
+          "https://www.keioplaza-sapporo.co.jp/restaurants/crossvault/",
+          "https://www.keioplaza-sapporo.co.jp/restaurants/glass/",
+          "https://www.keioplaza-sapporo.co.jp/restaurants/miyama/",
+          "https://www.keioplaza-sapporo.co.jp/restaurants/yamanami/",
+          "https://www.princehotels.co.jp/sapporo/restaurant/alldaydininggrandeur",
+          "https://www.princehotels.co.jp/sapporo/restaurant/fuyojo",
+          "https://www.princehotels.co.jp/sapporo/restaurant/katsura",
+          "https://www.princehotels.co.jp/sapporo/restaurant/top_prince",
+          "https://www.tokyuhotels.co.jp/sapporostream/restaurant/splish/plan/angel_devil/index.html"
+        ]
+      }
+    ]
+  },
+  "verifiedAtUtc": "2026-10-19T21:05:59.120808+00:00"
+}
