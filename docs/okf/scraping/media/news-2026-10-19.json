@@ -1,0 +1,74 @@
+{
+  "date": "2026-10-19",
+  "images": [
+    {
+      "slug": "forge",
+      "region": "2026-10-19",
+      "url": "https://chronopin.blob.core.windows.net/thumb/news-images/2026-10-19/forge-f384d258b11dd921.webp",
+      "source": "https://www.accenture.com/en-us/industries/accenture-federal-services/forge",
+      "credit": "Accenture Federal Services",
+      "caption": "The Forge, Accenture Federal Services’ Washington innovation space; operator imagery, not a photograph of new hires.",
+      "sha256": "f384d258b11dd9218c7c5c0b685ea8d00f1e237d88dad53d91357c53c74f1a7e",
+      "width": 1200,
+      "height": 675
+    },
+    {
+      "slug": "flight15-market",
+      "region": "2026-10-19",
+      "url": "https://chronopin.blob.core.windows.net/thumb/news-images/2026-10-19/flight15-market-1da5faab6854cee8.webp",
+      "source": "https://polymarket.com/event/spacex-starship-flight-test-15",
+      "credit": "Polymarket",
+      "caption": "Flight15 market card, observed October19,2026.",
+      "sha256": "1da5faab6854cee84f96b2d49bbc30043d1ea12f1ebf755589f05dbc275b6f6c",
+      "width": 800,
+      "height": 418
+    },
+    {
+      "slug": "flight14-archive",
+      "region": "2026-10-19",
+      "url": "https://chronopin.blob.core.windows.net/thumb/news-images/2026-10-19/flight14-archive-e4e9addc9b98a707.webp",
+      "source": "https://www.space.com/space-exploration/launches-spacecraft/starship-just-reached-orbit-for-the-1st-time-whats-next-for-the-spacex-megarocket?trk=public_post_comment-text",
+      "credit": "SpaceX via Space.com",
+      "caption": "Starship Flight14 lifts off September28,2026; archive imagery illustrating the test campaign, not Flight15.",
+      "sha256": "e4e9addc9b98a707bd458acedcc83778f5cd187222194b3a20c93e0c2c2aa95c",
+      "width": 1400,
+      "height": 788
+    },
+    {
+      "slug": "forge-glimpse",
+      "region": "2026-10-19",
+      "url": "https://chronopin.blob.core.windows.net/thumb/news-images/2026-10-19/forge-glimpse-dc98ef607b9be403.webp",
+      "source": "https://www.accenture.com/en-us/industries/accenture-federal-services/forge",
+      "credit": "Accenture Federal Services",
+      "caption": "Operator imagery illustrating The Forge innovation space; not a photograph of new hires.",
+      "sha256": "dc98ef607b9be403c6e6326a2d477984607cffc4b4a0ce97428c58a9ea8b8888",
+      "width": 1400,
+      "height": 933
+    },
+    {
+      "slug": "forge-ai-tower",
+      "region": "2026-10-19",
+      "url": "https://chronopin.blob.core.windows.net/thumb/news-images/2026-10-19/forge-ai-tower-9b0e4f93ffcfec1a.webp",
+      "source": "https://www.accenture.com/en-us/industries/accenture-federal-services/forge",
+      "credit": "Accenture Federal Services",
+      "caption": "Operator imagery illustrating The Forge innovation space; not a photograph of new hires.",
+      "sha256": "9b0e4f93ffcfec1a809442218f1f8070075d499c65a1cda2d0b3b07ab998ab16",
+      "width": 1400,
+      "height": 933
+    }
+  ],
+  "videos": [
+    {
+      "pin": "flight15",
+      "url": "https://www.youtube.com/watch?v=o3Z1p6A51_Y",
+      "title": "Starship Flight 14 Goes Orbital! SpaceX Reveals 10-Hour Mission | Starship Update",
+      "credit": "NASASpaceflight",
+      "caption": "Flight14 background, not a recording of the futureFlight15."
+    }
+  ],
+  "rejected": [
+    "Polymarket user avatars, US flag and unrelated token images",
+    "Accenture default social card and logo",
+    "Kovr.ai video linked by The Forge, not Gemini launchpads"
+  ]
+}

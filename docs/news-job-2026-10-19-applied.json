@@ -1,0 +1,1967 @@
+{
+  "date": "2026-10-19",
+  "slot": "06:00 America/Los_Angeles",
+  "execution": "active session; manually started about07:00 local",
+  "localRunId": 13,
+  "productionRunId": 13,
+  "status": "ok",
+  "newPinIds": [
+    18189,
+    18190
+  ],
+  "updatedExistingPinIds": [
+    1950,
+    1953,
+    1964,
+    1968,
+    1989,
+    2890,
+    4292,
+    4301,
+    4450,
+    4490,
+    4863,
+    6596,
+    15103,
+    16016,
+    16017,
+    17383,
+    17387,
+    17420,
+    17479,
+    17517,
+    17561,
+    17600,
+    17632,
+    17712,
+    17929
+  ],
+  "sentiment": {
+    "backlogVerified": 878,
+    "freshVerified": 11,
+    "distinctPins": 889,
+    "held": [
+      {
+        "id": 15801,
+        "reason": "Documented company/content collision"
+      },
+      {
+        "id": 15802,
+        "reason": "Documented company/content collision"
+      },
+      {
+        "id": 15803,
+        "reason": "Documented company/content collision"
+      },
+      {
+        "id": 15985,
+        "reason": "Title and description disagree on project investment; source reconciliation required"
+      },
+      {
+        "id": 16361,
+        "reason": "Title and description disagree on project investment; source reconciliation required"
+      },
+      {
+        "id": 16366,
+        "reason": "Title and description disagree on project investment; source reconciliation required"
+      },
+      {
+        "id": 16367,
+        "reason": "Title and description disagree on project investment; source reconciliation required"
+      },
+      {
+        "id": 16368,
+        "reason": "Title and description disagree on project investment; source reconciliation required"
+      },
+      {
+        "id": 16375,
+        "reason": "Title and description disagree on project investment; source reconciliation required"
+      },
+      {
+        "id": 16408,
+        "reason": "Title and description disagree on project investment; source reconciliation required"
+      }
+    ],
+    "commentsPending": 0
+  },
+  "events": {
+    "read": 40,
+    "verified": 40,
+    "keptHand": 0
+  },
+  "predictionMarkets": {
+    "read": {
+      "kalshiEvents": 3555,
+      "polymarketEvents": 1500
+    },
+    "predictedPinsReviewed": 29,
+    "oil": {
+      "strikes": 30,
+      "modal": [
+        106.99,
+        108.99,
+        0.14499999999999996
+      ],
+      "median": [
+        104.99,
+        0.5
+      ],
+      "estimatedTurnover": 67667,
+      "observation": "2026-10-30T21:00:00Z",
+      "rules": "If the close price of the 1-minute candlestick for brent crude oil on October 30, 2026 at 5:00 PM EDT is above 138.99 USD/Bbl, then the market resolves to Yes."
+    },
+    "newFlight15": 18190
+  },
+  "pinHealth": {
+    "checked": 25,
+    "withProblems": [
+      {
+        "pinId": 158,
+        "title": "Will Humans Achieve a Type 1 Civilization by 2100?",
+        "media": {
+          "pictures": 3,
+          "videos": 0,
+          "posts": 0
+        },
+        "problems": [
+          {
+            "what": "source",
+            "url": "http://hplusmagazine.com/2014/07/29/will-humans-achieve-a-type-1-civilization-by-2100/",
+            "state": "unreachable",
+            "detail": "fetch failed"
+          }
+        ]
+      }
+    ]
+  },
+  "ads": {
+    "pinCheck": {
+      "checked": 63,
+      "ok": 47,
+      "unread": 13,
+      "newlyBroken": [],
+      "productAds": {
+        "checked": 36,
+        "ok": 32,
+        "unread": 3,
+        "broken": [
+          {
+            "id": 24,
+            "problem": "no brand on the listing"
+          }
+        ]
+      },
+      "movieMerchandise": [
+        {
+          "pinId": 3512,
+          "title": "AFI Fest Turns 40 at the TCL Chinese Theatres",
+          "added": []
+        },
+        {
+          "pinId": 866,
+          "title": "Made in Abyss: Awakening Mystery Releases in Japanese Theaters",
+          "added": []
+        },
+        {
+          "pinId": 872,
+          "title": "Rascal Does Not Dream of a Dear Friend Releases in Japanese Theaters",
+          "added": []
+        },
+        {
+          "pinId": 395,
+          "title": "Street Fighter Reboot Set for October Release",
+          "added": []
+        },
+        {
+          "pinId": 5094,
+          "title": "Rome Film Fest Opens Its 21st Edition With a Career Award for Javier Bardem",
+          "added": []
+        },
+        {
+          "pinId": 6446,
+          "title": "Paramount Completes Warner Bros. Discovery Takeover, Forming Skydance",
+          "added": []
+        }
+      ],
+      "needsAds": [
+        {
+          "pinId": 874,
+          "title": "A Returner's Magic Should Be Special Season 2 Premieres",
+          "company": "Arvo Animation",
+          "categories": [
+            "Anime"
+          ],
+          "topics": [
+            "Kikansha no Mahou wa Tokubetsu desu",
+            "Gwihwanjaui Mabeobeun",
+            "Teukbyeolhaeya Hamnida",
+            "A Returner's Magic Should be Special Season 2",
+            "帰還者の魔法は特別です 第2期",
+            "Kikansha no Mahou wa Tokubetsu desu 2nd Season",
+            "귀환자의 마법은 특별해야 합니다"
+          ],
+          "working": 0,
+          "start": "2026-10-08"
+        },
+        {
+          "pinId": 5186,
+          "title": "Tamiya's 1/35 Fukuisaurus Clic Loc Dinosaur Kit Goes on Sale around 10 October",
+          "company": "Tamiya",
+          "categories": [
+            "Art",
+            "Science"
+          ],
+          "topics": [
+            "Tamiya",
+            "Hobby",
+            "Fukuisaurus",
+            "Dinosaurs",
+            "Clic Loc",
+            "Model Kits",
+            "Fukui"
+          ],
+          "working": 0,
+          "start": "2026-10-10"
+        },
+        {
+          "pinId": 2004,
+          "title": "H3 Launches Japan’s Martian Moons eXploration Mission",
+          "company": "Mitsubishi Heavy Industries",
+          "categories": [
+            "Space"
+          ],
+          "topics": [],
+          "working": 0,
+          "start": "2026-10-19"
+        },
+        {
+          "pinId": 6994,
+          "title": "Aoba Omakase Opens in North Quarter",
+          "company": "Aoba Omakase",
+          "categories": [
+            "Food"
+          ],
+          "topics": [
+            "North Quarter",
+            "Japanese",
+            "Restaurant Opening",
+            "Restaurant",
+            "Orlando"
+          ],
+          "working": 0,
+          "start": "2026-10-20"
+        },
+        {
+          "pinId": 4417,
+          "title": "Reebok Angel Reese 1 “Reese's” Releases",
+          "company": "Reebok",
+          "categories": [
+            "Fashion",
+            "Sports"
+          ],
+          "topics": [
+            "Sneakers",
+            "Reebok",
+            "Angel Reese",
+            "Angel Reese 1",
+            "Reese's",
+            "Collab",
+            "Release"
+          ],
+          "working": 0,
+          "start": "2026-10-20"
+        },
+        {
+          "pinId": 3687,
+          "title": "Oracle Releases Its October 2026 Critical Patch Update",
+          "company": "Oracle",
+          "categories": [
+            "Cybersecurity",
+            "Software"
+          ],
+          "topics": [
+            "Oracle",
+            "Critical Patch Update",
+            "Security Patch",
+            "Vulnerabilities"
+          ],
+          "working": 0,
+          "start": "2026-10-20"
+        },
+        {
+          "pinId": 4951,
+          "title": "Tumaini Bundibugyo Ebola Vaccine Trial Starts in Bunia",
+          "company": "University of Antwerp",
+          "categories": [
+            "Health",
+            "Science"
+          ],
+          "topics": [
+            "Ebola",
+            "Bundibugyo",
+            "Vaccine Trial",
+            "Ring Vaccination",
+            "Bunia",
+            "DRC",
+            "Tumaini"
+          ],
+          "working": 0,
+          "start": "2026-10-20"
+        },
+        {
+          "pinId": 16016,
+          "title": "Anthropic Releases Its Next Claude Fable Model",
+          "company": "Anthropic",
+          "categories": [
+            "AI",
+            "Software"
+          ],
+          "topics": [
+            "Claude",
+            "Fable",
+            "AI Models",
+            "Prediction Market",
+            "Polymarket"
+          ],
+          "working": 0,
+          "start": "2026-10-20"
+        },
+        {
+          "pinId": 4490,
+          "title": "Tigers Sniff the Rose (尚公主) Premieres",
+          "company": "Tencent Video",
+          "categories": [
+            "TV"
+          ],
+          "topics": [
+            "Tigers Sniff the Rose",
+            "尚公主",
+            "Shang Gong Zhu",
+            "Meng Ziyi",
+            "Li Yunrui",
+            "Tencent Video",
+            "C-Drama",
+            "Historical",
+            "Romance"
+          ],
+          "working": 0,
+          "start": "2026-10-20"
+        },
+        {
+          "pinId": 3031,
+          "title": "VMware Explore on Tour Tokyo 2026",
+          "company": "Broadcom",
+          "categories": [
+            "Conference",
+            "Software"
+          ],
+          "topics": [
+            "Broadcom",
+            "VMware",
+            "VMware Explore",
+            "Explore on Tour",
+            "Tokyo",
+            "Japan"
+          ],
+          "working": 0,
+          "start": "2026-10-20"
+        },
+        {
+          "pinId": 5436,
+          "title": "The Summer Hikaru Died Manga Ends With Chapter 51 on 20 October",
+          "company": "Kadokawa",
+          "categories": [
+            "Manga",
+            "Comics"
+          ],
+          "topics": [
+            "16th Manga Taisho Awards Nominee",
+            "Final Chapter",
+            "Horror",
+            "Mokumokuren",
+            "Series Finale",
+            "The Summer Hikaru Died",
+            "Yen Press",
+            "Young Ace Up",
+            "Hikaru ga Shinda Natsu",
+            "光が死んだ夏"
+          ],
+          "working": 0,
+          "start": "2026-10-20"
+        },
+        {
+          "pinId": 4005,
+          "title": "Third Circuit Lists Arm's Appeal Against Qualcomm for October 20",
+          "company": "Qualcomm",
+          "categories": [
+            "Law",
+            "Semiconductors"
+          ],
+          "topics": [
+            "Qualcomm",
+            "Arm",
+            "Nuvia",
+            "Appeal",
+            "Third Circuit"
+          ],
+          "working": 0,
+          "start": "2026-10-20"
+        },
+        {
+          "pinId": 6359,
+          "title": "Swiss Watch Export Figures for September Due 20 October",
+          "company": "Federation of the Swiss Watch Industry",
+          "categories": [
+            "Economy",
+            "Business",
+            "Fashion"
+          ],
+          "topics": [
+            "Watches",
+            "Luxury",
+            "Exports",
+            "Switzerland",
+            "Statistics",
+            "Release",
+            "Recovery"
+          ],
+          "working": 0,
+          "start": "2026-10-20"
+        },
+        {
+          "pinId": 4865,
+          "title": "NBAA-BACE 2026 Brings Business Aviation to Las Vegas",
+          "company": "National Business Aviation Association",
+          "categories": [
+            "Aerospace",
+            "Conference"
+          ],
+          "topics": [
+            "Shows",
+            "Business Aviation",
+            "NBAA-BACE",
+            "Las Vegas",
+            "Business Jets",
+            "Aviation Convention",
+            "NBAA"
+          ],
+          "working": 0,
+          "start": "2026-10-20"
+        },
+        {
+          "pinId": 858,
+          "title": "Cyberpunk: Edgerunners 2 Releases on Netflix",
+          "company": "Studio Trigger",
+          "categories": [
+            "Anime"
+          ],
+          "topics": [
+            "Crunchyroll Anime Awards 2023",
+            "Game Adaptation",
+            "Cyberpunk: Edgerunners 2",
+            "Cyberpunk  Edgerunners 2",
+            "Cyberpunk: Edgerunners II",
+            "サイバーパンク: エッジランナーズ2",
+            "サイバーパンク: エッジランナーズ II"
+          ],
+          "working": 0,
+          "start": "2026-10-20"
+        },
+        {
+          "pinId": 384,
+          "title": "Razer x Xbox 25th Anniversary Collection",
+          "company": "Razer",
+          "categories": [
+            "Gaming"
+          ],
+          "topics": [],
+          "working": 0,
+          "start": "2026-10-20"
+        },
+        {
+          "pinId": 2952,
+          "title": "NVIDIA GTC Berlin 2026",
+          "company": "NVIDIA",
+          "categories": [
+            "Conference",
+            "AI",
+            "Computing"
+          ],
+          "topics": [
+            "Nvidia",
+            "GTC",
+            "Berlin",
+            "Jensen Huang",
+            "Tempodrom",
+            "Physical AI",
+            "Agentic AI"
+          ],
+          "working": 0,
+          "start": "2026-10-20"
+        },
+        {
+          "pinId": 6999,
+          "title": "Breakfast Republic Plans an Opening in Downtown",
+          "company": "Breakfast Republic",
+          "categories": [
+            "Food"
+          ],
+          "topics": [
+            "Downtown",
+            "Breakfast",
+            "Restaurant Opening",
+            "Restaurant",
+            "Palm Springs"
+          ],
+          "working": 0,
+          "start": "2026-10-20"
+        },
+        {
+          "pinId": 4988,
+          "title": "The Freudian Universe of Dalí Opens at the Thyssen-Bornemisza in Madrid",
+          "company": "Museo Thyssen-Bornemisza",
+          "categories": [
+            "Art"
+          ],
+          "topics": [
+            "Dalí",
+            "Freud",
+            "Surrealism",
+            "Madrid"
+          ],
+          "working": 0,
+          "start": "2026-10-20"
+        },
+        {
+          "pinId": 4301,
+          "title": "RTX's Next Results: Q3 2026, Expected 20 October",
+          "company": "RTX",
+          "categories": [
+            "Defense",
+            "Business",
+            "Finance",
+            "Aerospace"
+          ],
+          "topics": [
+            "Military",
+            "RTX",
+            "Earnings",
+            "Raytheon",
+            "Pratt & Whitney"
+          ],
+          "working": 0,
+          "start": "2026-10-20"
+        },
+        {
+          "pinId": 6862,
+          "title": "Solis Soho Opens in Soho",
+          "company": "Solis Soho",
+          "categories": [
+            "Food"
+          ],
+          "topics": [
+            "Soho",
+            "South American",
+            "Restaurant Opening",
+            "Restaurant",
+            "London"
+          ],
+          "working": 0,
+          "start": "2026-10-20"
+        },
+        {
+          "pinId": 6596,
+          "title": "China Releases Third-Quarter 2026 GDP Figures on 19 October",
+          "company": "National Bureau of Statistics of China",
+          "categories": [
+            "Economy",
+            "Finance"
+          ],
+          "topics": [
+            "China",
+            "GDP",
+            "Growth Target",
+            "Statistics",
+            "Data Release",
+            "Prediction Market",
+            "Polymarket"
+          ],
+          "working": 0,
+          "start": "2026-10-19"
+        },
+        {
+          "pinId": 2061,
+          "title": "Maigret Season 2 Premieres",
+          "company": "PBS",
+          "categories": [
+            "TV"
+          ],
+          "topics": [
+            "Drama",
+            "Mystery",
+            "PBS"
+          ],
+          "working": 0,
+          "start": "2026-10-19"
+        },
+        {
+          "pinId": 3273,
+          "title": "Sapporo Lays Off 270 at Stone Brewing's Escondido Brewery",
+          "company": "Sapporo Breweries",
+          "categories": [
+            "Labour",
+            "Business"
+          ],
+          "topics": [
+            "San Diego",
+            "Layoffs",
+            "Stone Brewing",
+            "Escondido",
+            "Craft Beer",
+            "Firestone Walker",
+            "WARN Notice"
+          ],
+          "working": 0,
+          "start": "2026-10-19"
+        },
+        {
+          "pinId": 4487,
+          "title": "The Silent Storm (谷雨) Premieres",
+          "company": "Youku",
+          "categories": [
+            "TV"
+          ],
+          "topics": [
+            "The Silent Storm",
+            "谷雨",
+            "Jing Boran",
+            "Zhang Songwen",
+            "Sun Yizhou",
+            "Youku",
+            "CCTV",
+            "C-Drama",
+            "Crime Drama",
+            "Suspense"
+          ],
+          "working": 0,
+          "start": "2026-10-19"
+        },
+        {
+          "pinId": 15427,
+          "title": "SUMOMO BAKERY — Akasaka Keyaki-dori Opens in Akasaka",
+          "company": null,
+          "categories": [
+            "Food"
+          ],
+          "topics": [
+            "Restaurant",
+            "Restaurant Opening",
+            "Fukuoka",
+            "Japan",
+            "Akasaka",
+            "Bakery"
+          ],
+          "working": 0,
+          "start": "2026-10-19"
+        },
+        {
+          "pinId": 4576,
+          "title": "CCAMLR's 45th Meeting Opens in Hobart With Krill Rules on the Table",
+          "company": "Commission for the Conservation of Antarctic Marine Living Resources",
+          "categories": [
+            "Marine",
+            "Geopolitics",
+            "Conference"
+          ],
+          "topics": [
+            "Fishing",
+            "Krill",
+            "Antarctica",
+            "CCAMLR",
+            "Marine Protected Area",
+            "Illegal Fishing"
+          ],
+          "working": 0,
+          "start": "2026-10-19"
+        },
+        {
+          "pinId": 5162,
+          "title": "NSF Graduate Research Fellowship Applications Are Due 19-23 October",
+          "company": "National Science Foundation",
+          "categories": [
+            "Science",
+            "Education"
+          ],
+          "topics": [
+            "Grants",
+            "NSF",
+            "Fellowships"
+          ],
+          "working": 0,
+          "start": "2026-10-19"
+        },
+        {
+          "pinId": 5196,
+          "title": "Minior Debuts in Pokémon GO during the Orionids Meteor Shower from 19 October",
+          "company": "The Pokémon Company",
+          "categories": [
+            "Gaming",
+            "Astronomy"
+          ],
+          "topics": [
+            "Pokemon",
+            "Pokémon GO",
+            "Minior",
+            "Meteor Shower",
+            "Orionids",
+            "Events"
+          ],
+          "working": 0,
+          "start": "2026-10-19"
+        },
+        {
+          "pinId": 14259,
+          "title": "Spago Shanghai @ The St.Regis on the Bund — Restaurant Week Winners 2026 — Shanghai",
+          "company": null,
+          "categories": [
+            "Food"
+          ],
+          "topics": [
+            "Restaurant",
+            "Top Restaurants",
+            "Shanghai",
+            "China",
+            "Huang Pu"
+          ],
+          "working": 0,
+          "start": "2026-10-19"
+        }
+      ]
+    },
+    "holidayCheck": {
+      "checked": 80,
+      "ok": 58,
+      "unread": 21,
+      "newlyBroken": [],
+      "added": [
+        {
+          "holiday": "easter",
+          "tier": "value",
+          "title": "ABenkle Small Basket with Handles, Boho Decorative Rope Woven Dog Cat Toy Storage Bin Shelf Storage Organizer, Easter Christmas Gift Basket, 12\"x8\"x5\", White",
+          "price": 7.98,
+          "rating": 4.5,
+          "reviews": 6695
+        },
+        {
+          "holiday": "easter",
+          "tier": "mid",
+          "title": "AFOROEOA 10PACK Baskets For Gifts Empty, 10x12”Thick Kraft Gift Basket with 10 Bows 10 Bags Empty Gift Baskets for Christmas, Valentine’s Day, Easter, Birthdays, Snacks, Farmers Market",
+          "price": 33.99,
+          "rating": 4.6,
+          "reviews": 340
+        },
+        {
+          "holiday": "us-fathers-day",
+          "tier": "value",
+          "title": "VELENTI Fathers Day Dad Birthday Gift - Engraved Acrylic Block Puzzle Dad Keepsake 3.35 x 2.76 Inch - Cool Father's Day Presents from Daughter, Son, Mom - Heartwarming Men Birthday Gift Idea",
+          "price": 9.99,
+          "rating": 4.8,
+          "reviews": 1882
+        },
+        {
+          "holiday": "us-fathers-day",
+          "tier": "value",
+          "title": "Dad Gifts, 8PCS Fathers Day Gift Includes 20oz Tumbler with Lid Straw Brush Socks Bracelet Key Chain Thanks Card Gift Box, Best Dad Ever Gifts from Daughter Son Kids for Christmas Birthday",
+          "price": 16.89,
+          "rating": 4.8,
+          "reviews": 534
+        },
+        {
+          "holiday": "us-fathers-day",
+          "tier": "mid",
+          "title": "Tietoc Chainsaw 6 Inch Mini Electric Chainsaw Cordless Battery Powered, Hand Held Saw for Wood/Trees Trimming, Tools for Household and Garden, Chain Saw Gift for Men Dad Husband Fathers Gardener 2026",
+          "price": 29.98,
+          "rating": 4.3,
+          "reviews": 8548
+        },
+        {
+          "holiday": "us-fathers-day",
+          "tier": "mid",
+          "title": "ROMANTICIST 26pcs Grilling Gifts for Men, Dad Gifts for Father's Day, Stainless Steel BBQ Grill Accessories Tools Set, Heavy Duty BBQ Utensils Kit with Apron, Thermometer, Mats in Aluminum Case Brown",
+          "price": 29.99,
+          "rating": 4.7,
+          "reviews": 5718
+        }
+      ],
+      "lacking": [
+        {
+          "holiday": "sukkot",
+          "tier": "premium",
+          "why": "no search result in this price range clears the bar"
+        },
+        {
+          "holiday": "nowruz",
+          "tier": "value",
+          "why": "no search result in this price range clears the bar"
+        },
+        {
+          "holiday": "nowruz",
+          "tier": "mid",
+          "why": "no search result in this price range clears the bar"
+        },
+        {
+          "holiday": "nowruz",
+          "tier": "premium",
+          "why": "no search result in this price range clears the bar"
+        },
+        {
+          "holiday": "easter",
+          "tier": "premium",
+          "why": "no search result in this price range clears the bar"
+        },
+        {
+          "holiday": "us-fathers-day",
+          "tier": "premium",
+          "why": "no search result in this price range clears the bar"
+        }
+      ],
+      "problems": [],
+      "coverage": [
+        {
+          "id": "double-ninth",
+          "name": "Double Ninth Festival",
+          "start": "2026-10-18",
+          "daysFromStart": 1,
+          "reason": "window",
+          "tiers": {
+            "value": 2,
+            "mid": 2,
+            "premium": 2
+          },
+          "short": []
+        },
+        {
+          "id": "diwali",
+          "name": "Diwali",
+          "start": "2026-11-08",
+          "daysFromStart": -20,
+          "reason": "window",
+          "tiers": {
+            "value": 3,
+            "mid": 2,
+            "premium": 2
+          },
+          "short": []
+        },
+        {
+          "id": "sukkot",
+          "name": "Sukkot",
+          "start": "2026-09-26",
+          "daysFromStart": 23,
+          "reason": "window",
+          "tiers": {
+            "value": 3,
+            "mid": 2,
+            "premium": 1
+          },
+          "short": [
+            "premium"
+          ]
+        },
+        {
+          "id": "halloween",
+          "name": "Halloween",
+          "start": "2026-10-31",
+          "daysFromStart": -12,
+          "reason": "window",
+          "tiers": {
+            "value": 2,
+            "mid": 3,
+            "premium": 3
+          },
+          "short": []
+        },
+        {
+          "id": "dia-de-muertos",
+          "name": "Day of the Dead",
+          "start": "2026-11-01",
+          "daysFromStart": -13,
+          "reason": "window",
+          "tiers": {
+            "value": 2,
+            "mid": 2,
+            "premium": 3
+          },
+          "short": []
+        },
+        {
+          "id": "thanksgiving",
+          "name": "Thanksgiving",
+          "start": "2026-11-26",
+          "daysFromStart": -38,
+          "reason": "window",
+          "tiers": {
+            "value": 3,
+            "mid": 2,
+            "premium": 2
+          },
+          "short": []
+        },
+        {
+          "id": "india-navratri",
+          "name": "India's Navratri",
+          "start": "2026-10-11",
+          "daysFromStart": 8,
+          "reason": "window",
+          "tiers": {
+            "value": 2,
+            "mid": 3,
+            "premium": 2
+          },
+          "short": []
+        },
+        {
+          "id": "germany-oktoberfest",
+          "name": "Germany's Oktoberfest",
+          "start": "2026-09-19",
+          "daysFromStart": 30,
+          "reason": "window",
+          "tiers": {
+            "value": 2,
+            "mid": 2,
+            "premium": 2
+          },
+          "short": []
+        },
+        {
+          "id": "songkran",
+          "name": "Thailand's Songkran",
+          "start": null,
+          "daysFromStart": null,
+          "reason": "pins",
+          "tiers": {
+            "value": 0,
+            "mid": 2,
+            "premium": 0
+          },
+          "short": [
+            "value",
+            "premium"
+          ]
+        },
+        {
+          "id": "hanukkah",
+          "name": "Hanukkah",
+          "start": null,
+          "daysFromStart": null,
+          "reason": "pins",
+          "tiers": {
+            "value": 1,
+            "mid": 3,
+            "premium": 1
+          },
+          "short": [
+            "value",
+            "premium"
+          ]
+        },
+        {
+          "id": "kwanzaa",
+          "name": "Kwanzaa",
+          "start": null,
+          "daysFromStart": null,
+          "reason": "pins",
+          "tiers": {
+            "value": 2,
+            "mid": 1,
+            "premium": 0
+          },
+          "short": [
+            "mid",
+            "premium"
+          ]
+        },
+        {
+          "id": "lantern-festival",
+          "name": "Lantern Festival",
+          "start": null,
+          "daysFromStart": null,
+          "reason": "pins",
+          "tiers": {
+            "value": 1,
+            "mid": 2,
+            "premium": 0
+          },
+          "short": [
+            "value",
+            "premium"
+          ]
+        },
+        {
+          "id": "nowruz",
+          "name": "Nowruz",
+          "start": null,
+          "daysFromStart": null,
+          "reason": "pins",
+          "tiers": {
+            "value": 1,
+            "mid": 1,
+            "premium": 1
+          },
+          "short": [
+            "value",
+            "mid",
+            "premium"
+          ]
+        },
+        {
+          "id": "passover",
+          "name": "Passover",
+          "start": null,
+          "daysFromStart": null,
+          "reason": "pins",
+          "tiers": {
+            "value": 1,
+            "mid": 3,
+            "premium": 2
+          },
+          "short": [
+            "value"
+          ]
+        },
+        {
+          "id": "ramadan",
+          "name": "Ramadan",
+          "start": null,
+          "daysFromStart": null,
+          "reason": "pins",
+          "tiers": {
+            "value": 2,
+            "mid": 2,
+            "premium": 2
+          },
+          "short": []
+        },
+        {
+          "id": "dongzhi",
+          "name": "Dongzhi Festival",
+          "start": null,
+          "daysFromStart": null,
+          "reason": "pins",
+          "tiers": {
+            "value": 2,
+            "mid": 2,
+            "premium": 0
+          },
+          "short": [
+            "premium"
+          ]
+        },
+        {
+          "id": "mexico-posadas",
+          "name": "Mexico's Las Posadas",
+          "start": null,
+          "daysFromStart": null,
+          "reason": "pins",
+          "tiers": {
+            "value": 0,
+            "mid": 2,
+            "premium": 2
+          },
+          "short": [
+            "value"
+          ]
+        },
+        {
+          "id": "eid-al-adha",
+          "name": "Eid al-Adha",
+          "start": null,
+          "daysFromStart": null,
+          "reason": "pins",
+          "tiers": {
+            "value": 2,
+            "mid": 1,
+            "premium": 2
+          },
+          "short": [
+            "mid"
+          ]
+        },
+        {
+          "id": "chuseok",
+          "name": "Korea's Chuseok",
+          "start": null,
+          "daysFromStart": null,
+          "reason": "pins",
+          "tiers": {
+            "value": 2,
+            "mid": 2,
+            "premium": 2
+          },
+          "short": []
+        },
+        {
+          "id": "dragon-boat",
+          "name": "Dragon Boat Festival",
+          "start": null,
+          "daysFromStart": null,
+          "reason": "pins",
+          "tiers": {
+            "value": 1,
+            "mid": 2,
+            "premium": 1
+          },
+          "short": [
+            "value",
+            "premium"
+          ]
+        },
+        {
+          "id": "mexico-cinco-de-mayo",
+          "name": "Mexico's Cinco de Mayo",
+          "start": null,
+          "daysFromStart": null,
+          "reason": "pins",
+          "tiers": {
+            "value": 2,
+            "mid": 1,
+            "premium": 0
+          },
+          "short": [
+            "mid",
+            "premium"
+          ]
+        },
+        {
+          "id": "mid-autumn",
+          "name": "Mid-Autumn Festival",
+          "start": null,
+          "daysFromStart": null,
+          "reason": "pins",
+          "tiers": {
+            "value": 1,
+            "mid": 2,
+            "premium": 2
+          },
+          "short": [
+            "value"
+          ]
+        },
+        {
+          "id": "india-ganesh-chaturthi",
+          "name": "India's Ganesh Chaturthi",
+          "start": null,
+          "daysFromStart": null,
+          "reason": "pins",
+          "tiers": {
+            "value": 2,
+            "mid": 2,
+            "premium": 2
+          },
+          "short": []
+        },
+        {
+          "id": "us-independence-day",
+          "name": "US Independence Day",
+          "start": null,
+          "daysFromStart": null,
+          "reason": "pins",
+          "tiers": {
+            "value": 2,
+            "mid": 2,
+            "premium": 2
+          },
+          "short": []
+        },
+        {
+          "id": "eid-al-fitr",
+          "name": "Eid al-Fitr",
+          "start": null,
+          "daysFromStart": null,
+          "reason": "pins",
+          "tiers": {
+            "value": 1,
+            "mid": 2,
+            "premium": 2
+          },
+          "short": [
+            "value"
+          ]
+        },
+        {
+          "id": "india-raksha-bandhan",
+          "name": "India's Raksha Bandhan",
+          "start": null,
+          "daysFromStart": null,
+          "reason": "pins",
+          "tiers": {
+            "value": 2,
+            "mid": 2,
+            "premium": 0
+          },
+          "short": [
+            "premium"
+          ]
+        },
+        {
+          "id": "st-patricks-day",
+          "name": "St. Patrick's Day",
+          "start": null,
+          "daysFromStart": null,
+          "reason": "pins",
+          "tiers": {
+            "value": 1,
+            "mid": 2,
+            "premium": 1
+          },
+          "short": [
+            "value",
+            "premium"
+          ]
+        },
+        {
+          "id": "easter",
+          "name": "Easter",
+          "start": null,
+          "daysFromStart": null,
+          "reason": "pins",
+          "tiers": {
+            "value": 2,
+            "mid": 2,
+            "premium": 0
+          },
+          "short": [
+            "premium"
+          ]
+        },
+        {
+          "id": "india-holi",
+          "name": "India's Holi",
+          "start": null,
+          "daysFromStart": null,
+          "reason": "pins",
+          "tiers": {
+            "value": 1,
+            "mid": 2,
+            "premium": 1
+          },
+          "short": [
+            "value",
+            "premium"
+          ]
+        },
+        {
+          "id": "rosh-hashanah",
+          "name": "Rosh Hashanah",
+          "start": null,
+          "daysFromStart": null,
+          "reason": "pins",
+          "tiers": {
+            "value": 2,
+            "mid": 2,
+            "premium": 2
+          },
+          "short": []
+        },
+        {
+          "id": "us-fathers-day",
+          "name": "Father's Day (US)",
+          "start": null,
+          "daysFromStart": null,
+          "reason": "pins",
+          "tiers": {
+            "value": 2,
+            "mid": 2,
+            "premium": 0
+          },
+          "short": [
+            "premium"
+          ]
+        },
+        {
+          "id": "brazil-carnival",
+          "name": "Brazil's Carnival",
+          "start": null,
+          "daysFromStart": null,
+          "reason": "pins",
+          "tiers": {
+            "value": 0,
+            "mid": 0,
+            "premium": 0
+          },
+          "short": [
+            "value",
+            "mid",
+            "premium"
+          ]
+        },
+        {
+          "id": "purim",
+          "name": "Purim",
+          "start": null,
+          "daysFromStart": null,
+          "reason": "pins",
+          "tiers": {
+            "value": 0,
+            "mid": 0,
+            "premium": 0
+          },
+          "short": [
+            "value",
+            "mid",
+            "premium"
+          ]
+        },
+        {
+          "id": "christmas",
+          "name": "Christmas",
+          "start": null,
+          "daysFromStart": null,
+          "reason": "pins",
+          "tiers": {
+            "value": 0,
+            "mid": 0,
+            "premium": 0
+          },
+          "short": [
+            "value",
+            "mid",
+            "premium"
+          ]
+        },
+        {
+          "id": "mardi-gras",
+          "name": "Mardi Gras",
+          "start": null,
+          "daysFromStart": null,
+          "reason": "pins",
+          "tiers": {
+            "value": 0,
+            "mid": 0,
+            "premium": 0
+          },
+          "short": [
+            "value",
+            "mid",
+            "premium"
+          ]
+        },
+        {
+          "id": "lunar-new-year",
+          "name": "Lunar New Year",
+          "start": null,
+          "daysFromStart": null,
+          "reason": "pins",
+          "tiers": {
+            "value": 0,
+            "mid": 0,
+            "premium": 0
+          },
+          "short": [
+            "value",
+            "mid",
+            "premium"
+          ]
+        },
+        {
+          "id": "valentines-day",
+          "name": "Valentine's Day",
+          "start": null,
+          "daysFromStart": null,
+          "reason": "pins",
+          "tiers": {
+            "value": 0,
+            "mid": 0,
+            "premium": 0
+          },
+          "short": [
+            "value",
+            "mid",
+            "premium"
+          ]
+        },
+        {
+          "id": "us-mothers-day",
+          "name": "Mother's Day (US)",
+          "start": null,
+          "daysFromStart": null,
+          "reason": "pins",
+          "tiers": {
+            "value": 0,
+            "mid": 0,
+            "premium": 0
+          },
+          "short": [
+            "value",
+            "mid",
+            "premium"
+          ]
+        }
+      ]
+    },
+    "retainedNewHolidayAds": 3,
+    "rejectedHolidayCandidates": 3,
+    "titleTranslations": {
+      "saved": 45,
+      "verified": true
+    },
+    "missingTranslations": [],
+    "sponsored": {
+      "ads": [],
+      "nextAfter": null
+    }
+  },
+  "personTrades": {
+    "filings": 0,
+    "trades": 0,
+    "unmatched": [],
+    "failed": [
+      "Bryan Bedford BC33926D1346296F85258D86003449A3: all transaction line(s) unreadable (scanned report or unknown layout) - not stored, https://extapps2.oge.gov/201/Presiden.nsf/PAS+Index/BC33926D1346296F85258D86003449A3/$FILE/Bryan-Bedford-11.03.2025-278T.pdf"
+    ],
+    "production": {
+      "added": 0,
+      "missing": []
+    }
+  },
+  "reviews": {
+    "resolved": [
+      4863,
+      3016,
+      1946
+    ],
+    "specificOpen": [
+      15985,
+      16361,
+      16366,
+      16367,
+      16368,
+      16375,
+      16408,
+      3273,
+      1989,
+      17610
+    ]
+  },
+  "publicPageChecks": [
+    {
+      "pinId": 18189,
+      "url": "https://www.chronopin.com/pin/18189/accenture-and-google-launch-federal-gemini-engineering-hubs",
+      "status": 200,
+      "h1": [
+        "Accenture and Google Launch Federal Gemini Engineering Hubs"
+      ],
+      "seconds": 16.72
+    },
+    {
+      "pinId": 18190,
+      "url": "https://www.chronopin.com/pin/18190/starship-flight-15-is-forecast-for-the-second-half-of-november",
+      "status": 200,
+      "h1": [
+        "Starship Flight 15 Is Forecast for the Second Half of November"
+      ],
+      "seconds": 0.71
+    },
+    {
+      "pinId": 4490,
+      "url": "https://www.chronopin.com/pin/4490/tigers-sniff-the-rose-premieres",
+      "status": 200,
+      "h1": [
+        "Tigers Sniff the Rose (尚公主) Premieres"
+      ],
+      "seconds": 0.44
+    },
+    {
+      "pinId": 2890,
+      "url": "https://www.chronopin.com/pin/2890/abbott-q3-2026-earnings-and-conference-call",
+      "status": 200,
+      "h1": [
+        "Abbott Q3 2026 Earnings and Conference Call"
+      ],
+      "seconds": 0.44
+    },
+    {
+      "pinId": 4450,
+      "url": "https://www.chronopin.com/pin/4450/deckers-brands-holds-its-q2-fiscal-2027-earnings-call",
+      "status": 200,
+      "h1": [
+        "Deckers Brands Holds Its Q2 Fiscal 2027 Earnings Call"
+      ],
+      "seconds": 0.46
+    },
+    {
+      "pinId": 4863,
+      "url": "https://www.chronopin.com/pin/4863/the-2026-paris-motor-show-opens-to-the-public-at-porte-de-versailles",
+      "status": 200,
+      "h1": [
+        "The 2026 Paris Motor Show Opens to the Public at Porte de Versailles"
+      ],
+      "seconds": 0.45
+    }
+  ],
+  "mediaManifest": "docs/okf/scraping/media/news-2026-10-19.json",
+  "gaps": [
+    "WTI: no genuine monthly settlement book in the raw KXWTIMONTHLY response. Daily/high-low/touch markets are not substitutes; no fabricated WTI monthly pin.",
+    "Bedford disclosure: two October 22, 2025 total-return swaps are readable, but the importer cannot represent derivative type or distinguish USD5m notional from an asset valuation. No fake purchase or trade value saved.",
+    "Sentiment held: known hotel/energy ID collisions15801–15803 and seven investment amount conflicts15985,16361,16366,16367,16368,16375,16408. Specific conflict reasons retained/queued.",
+    "Brent: contract count times last price is only an estimated dollar amount, not exchange-reported turnover. WTI settlement evidence absent; August/September realized Brent records already current.",
+    "Gemini Pro1989: deadline ladder non-monotonic and every observed deadline below50%; retained October31 only as an explicitly low-confidence legacy marker. No invented majority date.",
+    "Stone/Sapporo3273: December11 WARN rows may be later revisions or phases; not added blindly to existing totals. Apple147 October19 effective layoffs were announced in August, not fresh October19 cuts.",
+    "Seattle Cherry Blossom17610: organizer supplies2026 dates; no authoritative2027 date or admission detail. Estimated pin remains marked.",
+    "HPlus158 remains unreachable with existing review mark. Human ticket conflicts for MotoGP5496, MelbourneCup5518 and SPIEL5200 remain open.",
+    "Holiday ad shortages: Sukkot premium; Nowruz all three tiers; Easter all three after rejecting generic storage/gift baskets; Father’s Day premium. No verified exact-brand Amazon listing for Tamiya starter-kit lead.",
+    "Workforce sources did not provide a verified employment trend graph. Accenture global1000-FDE training commitment is not1000 additional federal hires; no unpublished federal headcount or spending invented.",
+    "Accenture: official Forge gallery supplies three relevant photographs. Linked Forge video covers a separate Kovr.ai collaboration and was excluded; no directly relevant embeddable program video verified.",
+    "Other weekly soft dates remain estimates when operator pages publish only a year/quarter or have no exact date: BreakfastRepublic, CaviarClub, SilentStorm, LiveLongProsper, Instagram; clinical trial4951 remains ESTIMATED and NOT_YET_RECRUITING."
+  ],
+  "deploymentPerformed": false,
+  "postRunDatabasePull": false,
+  "finishedAt": "2026-10-19T14:59:16.496Z",
+  "actions": [
+    {
+      "at": "2026-10-19T14:00:21.440Z",
+      "tool": "predicted_pins",
+      "detail": "29 predicted pin(s) returned (15 unthreaded of 29 total)"
+    },
+    {
+      "at": "2026-10-19T14:00:33.513Z",
+      "tool": "model_scores",
+      "detail": "6 model pin(s) still awaiting an arena score, 1 frontier pin(s) to tag"
+    },
+    {
+      "at": "2026-10-19T14:02:22.060Z",
+      "tool": "person_trades_update",
+      "detail": "0 trades in 0 new filings; prod added 0"
+    },
+    {
+      "at": "2026-10-19T14:06:06.633Z",
+      "tool": "update_pin",
+      "pinId": 4863,
+      "title": "The 2026 Paris Motor Show Opens to the Public at Porte de Versailles",
+      "detail": "Corrected public opening versus press-only preview from organizer timetable; original @ShowDesk author preserved."
+    },
+    {
+      "at": "2026-10-19T14:06:06.783Z",
+      "tool": "resolve_revisit",
+      "pinId": 4863,
+      "detail": "Verified saved public opening and press-day distinction against current official timetable."
+    },
+    {
+      "at": "2026-10-19T14:06:06.841Z",
+      "tool": "resolve_revisit",
+      "pinId": 3016,
+      "detail": "Verified production already records74–25 cloture and77–23 substitute; current Senate Daily Press September24 confirms both."
+    },
+    {
+      "at": "2026-10-19T14:06:06.983Z",
+      "tool": "resolve_revisit",
+      "pinId": 1946,
+      "detail": "Production already records verified October13 00:28:11UTC liftoff from Space Launch Now, replacing the old estimated window; saved source evidence retained."
+    },
+    {
+      "at": "2026-10-19T14:06:08.743Z",
+      "tool": "update_pin",
+      "pinId": 15103,
+      "title": "DeepSeek-R1-0528 Released",
+      "detail": "Fresh overall Arena/OpenRouter model_scores identifies DeepSeek-R1-0528 on its2025 cost/quality frontier; preserved user tags."
+    },
+    {
+      "at": "2026-10-19T14:07:57.455Z",
+      "tool": "create_pin",
+      "pinId": 18189,
+      "title": "Accenture and Google Launch Federal Gemini Engineering Hubs",
+      "detail": "@TechDesk: New federal AI engineering/training delivery program, with global workforce commitment separated from new hiring."
+    },
+    {
+      "at": "2026-10-19T14:08:06.112Z",
+      "tool": "create_pin",
+      "pinId": 18190,
+      "title": "Starship Flight 15 Is Forecast for the Second Half of November",
+      "detail": "@BuildDesk: Unpinned next Starship test forecast, dated from cumulative probability interval and threaded to Flight14."
+    },
+    {
+      "at": "2026-10-19T14:10:16.541Z",
+      "tool": "update_pin",
+      "pinId": 1950,
+      "title": "Americans Vote in the 2028 U.S. Presidential Election",
+      "detail": "Refreshed dated October19 market odds and dollar volume from fresh scan; preserved event timing and authorship."
+    },
+    {
+      "at": "2026-10-19T14:10:22.986Z",
+      "tool": "update_pin",
+      "pinId": 1968,
+      "title": "Brazil Votes in the First Round of Its Presidential Election",
+      "detail": "Refreshed dated October19 market odds and dollar volume from fresh scan; preserved event timing and authorship."
+    },
+    {
+      "at": "2026-10-19T14:10:47.305Z",
+      "tool": "holiday_ads_check",
+      "detail": "easter value: ABenkle Small Basket with Handles, Boho Decorative Rope Woven Dog Cat Toy Storage Bin Shel ($7.98, 4.5 stars / 6695 reviews)"
+    },
+    {
+      "at": "2026-10-19T14:10:47.307Z",
+      "tool": "holiday_ads_check",
+      "detail": "easter mid: AFOROEOA 10PACK Baskets For Gifts Empty, 10x12”Thick Kraft Gift Basket with 10 Bows 10 Bag ($33.99, 4.6 stars / 340 reviews)"
+    },
+    {
+      "at": "2026-10-19T14:10:47.308Z",
+      "tool": "holiday_ads_check",
+      "detail": "us-fathers-day value: VELENTI Fathers Day Dad Birthday Gift - Engraved Acrylic Block Puzzle Dad Keepsake 3.35 x  ($9.99, 4.8 stars / 1882 reviews)"
+    },
+    {
+      "at": "2026-10-19T14:10:47.309Z",
+      "tool": "holiday_ads_check",
+      "detail": "us-fathers-day value: Dad Gifts, 8PCS Fathers Day Gift Includes 20oz Tumbler with Lid Straw Brush Socks Bracelet ($16.89, 4.8 stars / 534 reviews)"
+    },
+    {
+      "at": "2026-10-19T14:10:47.311Z",
+      "tool": "holiday_ads_check",
+      "detail": "us-fathers-day mid: Tietoc Chainsaw 6 Inch Mini Electric Chainsaw Cordless Battery Powered, Hand Held Saw for  ($29.98, 4.3 stars / 8548 reviews)"
+    },
+    {
+      "at": "2026-10-19T14:10:47.312Z",
+      "tool": "holiday_ads_check",
+      "detail": "us-fathers-day mid: ROMANTICIST 26pcs Grilling Gifts for Men, Dad Gifts for Father's Day, Stainless Steel BBQ  ($29.99, 4.7 stars / 5718 reviews)"
+    },
+    {
+      "at": "2026-10-19T14:11:12.476Z",
+      "tool": "update_pin",
+      "pinId": 1953,
+      "title": "The 2026 World Series Opens on 23 October",
+      "detail": "Refreshed dated October19 market odds and dollar volume from fresh scan; preserved event timing and authorship."
+    },
+    {
+      "at": "2026-10-19T14:11:14.636Z",
+      "tool": "update_pin",
+      "pinId": 4292,
+      "title": "Lockheed Martin Reports Q3 2026 Results on 22 October",
+      "detail": "Firmed an estimated earnings date from the current issuer announcement; retained all-day written-release date and separated call time."
+    },
+    {
+      "at": "2026-10-19T14:11:24.041Z",
+      "tool": "update_pin",
+      "pinId": 1964,
+      "title": "The Highest-Grossing Film of 2026 Is Settled on 31 December",
+      "detail": "Refreshed dated October19 market odds and dollar volume from fresh scan; preserved event timing and authorship."
+    },
+    {
+      "at": "2026-10-19T14:12:10.385Z",
+      "tool": "update_pin",
+      "pinId": 16016,
+      "title": "Anthropic Releases Its Next Claude Fable Model",
+      "detail": "Current Fable daily timing book verified through Gamma API; retained October20 estimated modal day and existing parent."
+    },
+    {
+      "at": "2026-10-19T14:12:13.603Z",
+      "tool": "remove_holiday_ad",
+      "detail": "easter B08M8Z45PJ"
+    },
+    {
+      "at": "2026-10-19T14:12:13.609Z",
+      "tool": "remove_holiday_ad",
+      "detail": "easter B0CBB1C4LR"
+    },
+    {
+      "at": "2026-10-19T14:12:13.616Z",
+      "tool": "remove_holiday_ad",
+      "detail": "us-fathers-day B0C1Z9V6N1"
+    },
+    {
+      "at": "2026-10-19T14:12:19.021Z",
+      "tool": "update_pin",
+      "pinId": 4301,
+      "title": "RTX Reports Q3 2026 Results on 20 October",
+      "detail": "Firmed an estimated earnings date from the current issuer announcement; retained all-day written-release date and separated call time."
+    },
+    {
+      "at": "2026-10-19T14:12:36.320Z",
+      "tool": "update_pin",
+      "pinId": 1989,
+      "title": "Google Releases Its Next Gemini Pro Model",
+      "detail": "Replaced stale September lead text with current low odds; no new official date or coherent cumulative interval established."
+    },
+    {
+      "at": "2026-10-19T14:14:31.686Z",
+      "tool": "update_pin",
+      "pinId": 6596,
+      "title": "China Reports 4.5% GDP Growth in Q3 2026",
+      "detail": "Updated today’s completed China GDP release from preview to official outcome; compared4.5% with the preserved pre-release market band."
+    },
+    {
+      "at": "2026-10-19T14:20:21.433Z",
+      "tool": "update_pin",
+      "pinId": 1968,
+      "title": "Brazil Votes in the First Round of Its Presidential Election",
+      "detail": "Clarified market target: Democratic nomination versus presidential winner, and eventual Brazilian president versus first-round vote. Dates preserved."
+    },
+    {
+      "at": "2026-10-19T14:20:42.560Z",
+      "tool": "update_pin",
+      "pinId": 17383,
+      "title": "Boston Book Festival — Boston seasonal activity",
+      "detail": "Corrected broad seasonal placeholder or excluded final day from exact-edition source: Brattle Book Shop’s2026 Boston Book Festival page explicitly lists Saturday October17."
+    },
+    {
+      "at": "2026-10-19T14:21:51.858Z",
+      "tool": "update_pin",
+      "pinId": 17420,
+      "title": "Atlanta Pride Festival — Atlanta seasonal activity",
+      "detail": "Corrected broad seasonal placeholder or excluded final day from exact-edition source: The Atlanta Pride2026 event page explicitly lists October10–11."
+    },
+    {
+      "at": "2026-10-19T14:22:32.021Z",
+      "tool": "update_pin",
+      "pinId": 17929,
+      "title": "Fredericksburg Oktoberfest — San Antonio seasonal activity",
+      "detail": "Corrected broad seasonal placeholder or excluded final day from exact-edition source: Fredericksburg CVB explicitly lists Oktoberfest October2–4,2026."
+    },
+    {
+      "at": "2026-10-19T14:22:44.206Z",
+      "tool": "update_pin",
+      "pinId": 17600,
+      "title": "Hardly Strictly Bluegrass — San Francisco seasonal activity",
+      "detail": "Corrected broad seasonal placeholder or excluded final day from exact-edition source: Bay City News/ABC7 explicitly lists Hardly Strictly Bluegrass October2–4,2026."
+    },
+    {
+      "at": "2026-10-19T14:22:48.916Z",
+      "tool": "mark_revisit",
+      "pinId": 15985,
+      "detail": "October19 news run13: Title and description disagree on project investment; source reconciliation required. Reconcile the exact project investment against the operator/government source before changing the conflicting title or description; score held for this evidence gap."
+    },
+    {
+      "at": "2026-10-19T14:22:48.924Z",
+      "tool": "mark_revisit",
+      "pinId": 16361,
+      "detail": "October19 news run13: Title and description disagree on project investment; source reconciliation required. Reconcile the exact project investment against the operator/government source before changing the conflicting title or description; score held for this evidence gap."
+    },
+    {
+      "at": "2026-10-19T14:22:48.933Z",
+      "tool": "mark_revisit",
+      "pinId": 16366,
+      "detail": "October19 news run13: Title and description disagree on project investment; source reconciliation required. Reconcile the exact project investment against the operator/government source before changing the conflicting title or description; score held for this evidence gap."
+    },
+    {
+      "at": "2026-10-19T14:22:48.938Z",
+      "tool": "mark_revisit",
+      "pinId": 16367,
+      "detail": "October19 news run13: Title and description disagree on project investment; source reconciliation required. Reconcile the exact project investment against the operator/government source before changing the conflicting title or description; score held for this evidence gap."
+    },
+    {
+      "at": "2026-10-19T14:22:48.941Z",
+      "tool": "mark_revisit",
+      "pinId": 16368,
+      "detail": "October19 news run13: Title and description disagree on project investment; source reconciliation required. Reconcile the exact project investment against the operator/government source before changing the conflicting title or description; score held for this evidence gap."
+    },
+    {
+      "at": "2026-10-19T14:22:48.947Z",
+      "tool": "mark_revisit",
+      "pinId": 16375,
+      "detail": "October19 news run13: Title and description disagree on project investment; source reconciliation required. Reconcile the exact project investment against the operator/government source before changing the conflicting title or description; score held for this evidence gap."
+    },
+    {
+      "at": "2026-10-19T14:22:48.950Z",
+      "tool": "mark_revisit",
+      "pinId": 16408,
+      "detail": "October19 news run13: Title and description disagree on project investment; source reconciliation required. Reconcile the exact project investment against the operator/government source before changing the conflicting title or description; score held for this evidence gap."
+    },
+    {
+      "at": "2026-10-19T14:22:48.956Z",
+      "tool": "mark_revisit",
+      "pinId": 3273,
+      "detail": "October19 current California EDD WARN workbook (report throughOctober14), Detailed WARN rows361–362: Sapporo Executive Place1 and Citracado Parkway2 effectiveDecember11, noticesOctober9. Existing270=58October19+212November13 is verified. Determine whether the3 December positions are additional or rescheduled; do not automatically sum273. Source https://edd.ca.gov/siteassets/files/jobs_and_training/warn/warn_report1.xlsx"
+    },
+    {
+      "at": "2026-10-19T14:22:48.961Z",
+      "tool": "mark_revisit",
+      "pinId": 1989,
+      "detail": "October19 Gamma snapshot for next Gemini Pro:7.5% byOctober31,21% byNovember30 and20.5% byDecember31, US$1,651,596 volume. No majority deadline, slight cumulative inversion. Lead text now labelsOctober31 a low-confidence legacy marker; research official publicPro release evidence or a coherent future timing book before replacing the date."
+    },
+    {
+      "at": "2026-10-19T14:22:48.967Z",
+      "tool": "mark_revisit",
+      "pinId": 17610,
+      "detail": "October19 event check: linked Seattle Center festival page describes April10–12,2026, not2027. The pin retains an estimated April2027 seasonal range; find the organizer’s2027 date/admission announcement before firming dates or promoting free2026 admission. Source https://seattlecenter.com/events/event-calendar/seattle-cherry-blossom-and-japanese-cultural-festival-x46962"
+    },
+    {
+      "at": "2026-10-19T14:23:44.447Z",
+      "tool": "update_pin",
+      "pinId": 17479,
+      "title": "Muertos Fest — San Antonio seasonal activity",
+      "detail": "Corrected broad seasonal placeholder or excluded final day from exact-edition source: Texas Public Radio’s exact Muertos Fest section lists October23,24 and25; the end timestamp is exclusive."
+    },
+    {
+      "at": "2026-10-19T14:24:12.577Z",
+      "tool": "update_pin",
+      "pinId": 17561,
+      "title": "Dia de Muertos — Las Vegas seasonal activity",
+      "detail": "Corrected broad seasonal placeholder or excluded final day from exact-edition source: Springs Preserve explicitly lists Día de Muertos November6–8; the end timestamp is exclusive."
+    },
+    {
+      "at": "2026-10-19T14:24:24.923Z",
+      "tool": "update_pin",
+      "pinId": 17517,
+      "title": "City of Lakes Loppet Winter Festival — Minneapolis seasonal activity",
+      "detail": "Corrected broad seasonal placeholder or excluded final day from exact-edition source: The Loppet Foundation lists February6–7,2027; exclusive end includes both days."
+    },
+    {
+      "at": "2026-10-19T14:24:36.537Z",
+      "tool": "update_pin",
+      "pinId": 17632,
+      "title": "Inman Park Festival — Atlanta seasonal activity",
+      "detail": "Corrected broad seasonal placeholder or excluded final day from exact-edition source: The official Inman Park page lists festival April24–25,2027; Tour of Homes is a separate April23–25 activity."
+    },
+    {
+      "at": "2026-10-19T14:25:28.886Z",
+      "tool": "update_pin",
+      "pinId": 17387,
+      "title": "Philadelphia Marathon Weekend — Philadelphia seasonal activity",
+      "detail": "Corrected broad seasonal placeholder or excluded final day from exact-edition source: Philadelphia Marathon’s official page lists November20–22,2026; the exclusive end includes the final Sunday."
+    },
+    {
+      "at": "2026-10-19T14:26:00.703Z",
+      "tool": "update_pin",
+      "pinId": 17712,
+      "title": "Stockyards Championship Rodeo — Dallas seasonal activity",
+      "detail": "Replaced a parked/unrelated source domain with the verified Stockyards Rodeo organizer; no competitor fees promoted as spectator tickets."
+    },
+    {
+      "at": "2026-10-19T14:37:45.880Z",
+      "tool": "update_pin",
+      "pinId": 16017,
+      "title": "Brent Crude Oil Price — October 2026",
+      "detail": "Recovered committed October19 monthly Brent update by independent saved-field readback; original author and September parent17133 retained. Raw30strike terminal book and estimated dollar volume distinguished from exact turnover."
+    },
+    {
+      "at": "2026-10-19T14:40:10.756Z",
+      "tool": "record_event_info",
+      "detail": "Read40 distinct event pins locally; verified 40 merged production readings/checks and retained 0 hand readings. No unrelated ticket amounts, stale editions, generic Organization performer, parking fees or donation amounts saved."
+    },
+    {
+      "at": "2026-10-19T14:41:15.561Z",
+      "tool": "ad_metadata_refresh",
+      "detail": "PinAd: refreshed30 rows; production readback verified63 rows. Unread pages retained prior status."
+    },
+    {
+      "at": "2026-10-19T14:42:00.548Z",
+      "tool": "ad_metadata_refresh",
+      "detail": "ProductAd: refreshed33 rows; production readback verified36 rows. Unread pages retained prior status."
+    },
+    {
+      "at": "2026-10-19T14:42:25.739Z",
+      "tool": "holiday_ads_publish",
+      "detail": "Verified156 production holiday ads; refreshed4 and added3 reviewed relevant goods using generated IDs. Excluded two generic storage/gift baskets and a generic chainsaw before publication; retained three Father’s Day gift listings."
+    },
+    {
+      "at": "2026-10-19T14:42:46.989Z",
+      "tool": "ad_title_translations",
+      "detail": "Saved and read back 45 session title translations across all15 locales with the current EnglishSHA1."
+    },
+    {
+      "at": "2026-10-19T14:53:31.967Z",
+      "tool": "record_sentiment",
+      "detail": "Verified 878 production title/description SHA256 and company checked scores, in serial batches of at most10 using lightweight endpoint. Planned infrastructure .25; routine recurring activity listings neutral0; estimated restaurant opening .15. 10 held for specific identity/investment conflicts or concurrent edits."
+    },
+    {
+      "at": "2026-10-19T14:54:09.622Z",
+      "tool": "update_pin",
+      "pinId": 2890,
+      "title": "Abbott Q3 2026 Earnings and Conference Call",
+      "detail": "Replaced soft estimate with an opened issuer/platform notice; preserved original author and distinguished call/premiere time from publication time."
+    },
+    {
+      "at": "2026-10-19T14:54:20.346Z",
+      "tool": "update_pin",
+      "pinId": 4450,
+      "title": "Deckers Brands Holds Its Q2 Fiscal 2027 Earnings Call",
+      "detail": "Replaced soft estimate with an opened issuer/platform notice; preserved original author and distinguished call/premiere time from publication time."
+    },
+    {
+      "at": "2026-10-19T14:54:37.607Z",
+      "tool": "update_pin",
+      "pinId": 4490,
+      "title": "Tigers Sniff the Rose (尚公主) Premieres",
+      "detail": "Replaced soft estimate with an opened issuer/platform notice; preserved original author and distinguished call/premiere time from publication time."
+    },
+    {
+      "at": "2026-10-19T14:55:32.504Z",
+      "tool": "update_pin",
+      "pinId": 18189,
+      "title": "Accenture and Google Launch Federal Gemini Engineering Hubs",
+      "detail": "Attached two additional inspected official Forge gallery photographs from verified public Azure blobs, with operator source and credits retained in the media manifest and summary."
+    },
+    {
+      "at": "2026-10-19T14:57:19.760Z",
+      "tool": "record_sentiment",
+      "detail": "Verified 11 fresh scores after new/changed news text: scheduled releases and statistical report neutral, announced engineering program moderately positive, uncertain future model/flight mildly positive or neutral. Current SHA256 checked."
+    }
+  ],
+  "learnings": [
+    {
+      "at": "2026-10-19T14:22:13.117Z",
+      "text": "coveredByPin is a lead, not proof that the market has the same target: Democratic nomination odds are not general-election winner odds, and Brazil’s eventual-winner odds are not the first-round result. Label the target explicitly before adding a snapshot.",
+      "topic": "Prediction market targets"
+    },
+    {
+      "at": "2026-10-19T14:22:13.125Z",
+      "text": "Two-second shared queue gaps were insufficient with several publishing clients and active tag-suggestion queries. Paused writes, read back committed rows, resumed one publisher at a time with12-second gaps. Score and event endpoints remain lightweight; no deployment/restart/build was used.",
+      "topic": "Production pacing"
+    },
+    {
+      "at": "2026-10-19T14:22:13.131Z",
+      "text": "October19 EDD workbook, report throughOctober14: Stone50+6+2 onOctober19 and Sapporo200+6+6 onNovember13 support the saved270 planned positions. LaterOctober9 notices list another1+2 effectiveDecember11; verify whether additional or rescheduled before adding totals.",
+      "topic": "WARN phase and revision counts"
+    },
+    {
+      "at": "2026-10-19T14:22:13.134Z",
+      "text": "Bryan Bedford OGE278-T filedNovember3,2025 and certifiedJanuary20,2026 is readable, not a scanned blank. It lists twoOctober22,2025 total-return swaps, each5mUSD notional, with TYPE SeeEndnote and value not readily ascertainable. The importer cannot map these to its ordinary purchase/sale/amount-range schema; do not invent a purchase type or treat notional asasset value.",
+      "topic": "Derivative disclosure schema"
+    },
+    {
+      "at": "2026-10-19T14:22:13.137Z",
+      "text": "New seasonal-activity pins used month-wide placeholders even when linked sources stated exact dates, and several exclusive ends omitted the final advertised day. Corrected exact-edition ranges. stockyards.net had drifted to unrelated travel news; replaced with verifiedfwrodeo.com. Parking, donations, merchandise, past editions and generic Organization schema performers are not ticket evidence.",
+      "topic": "Seasonal ranges and source drift"
+    },
+    {
+      "at": "2026-10-19T14:48:28.166Z",
+      "text": "October19 production news run received HTTP502 during a25-score request after795 verified scores. Stopped publishers; read-only health inspection showed no OOM/restart, then re-read Pin/PinSentiment hashes to determine whether the request committed before retrying only missing rows. Resumed at most10 scores per serial request. Keep checkpoints and do not treat an HTTP failure as proof a write did not commit; no VM restart or deploy is needed for routine content recovery.",
+      "topic": "Interrupted production batches"
+    },
+    {
+      "at": "2026-10-19T14:51:12.370Z",
+      "text": "A later read-only Docker snapshot during October19 score recovery showed docker-app-1 StartedAt14:48:49Z and RestartCount1, whereas the earlier snapshot had RestartCount0/StartedAt14:32:08Z. Thus health can change between checks; distinguish that observed container restart from a restart performed by this session (none). Stop on502, reconcile saved records, and continue through authenticated APIs once healthy, without changing VM services.",
+      "topic": "Changing production health during a run"
+    }
+  ],
+  "localCatchUp": {
+    "scoresSaved": 878,
+    "scoresSkippedForLocalTextOrAbsentPin": 11,
+    "eventsSaved": 40
+  },
+  "finalAudit": {
+    "verifiedScores": 889,
+    "initialUnresolved": [
+      15801,
+      15802,
+      15803,
+      15985,
+      16361,
+      16366,
+      16367,
+      16368,
+      16375,
+      16408
+    ],
+    "otherPending": [],
+    "mediaVerified": true,
+    "translationsVerified": true
+  },
+  "productionRecovery": {
+    "scoreBatchHTTP502": 2,
+    "verifiedBeforeFailures": [
+      795,
+      805
+    ],
+    "appRestartObserved": true,
+    "serverChangesPerformed": false
+  },
+  "productionRunVerified": true
+}
