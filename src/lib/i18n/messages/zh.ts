@@ -1187,6 +1187,8 @@ const zh: Messages = {
   reserved: {
     thread: '串',
     predicted: '预测',
+    new: '新',
+    updated: '已更新',
     confirmed: '已确认',
     scheduled: '已排期',
     estimated: '预估',

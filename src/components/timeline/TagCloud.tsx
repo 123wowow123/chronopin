@@ -8,10 +8,12 @@ import { Icon } from '@/components/ui/Icon';
 import { api } from '@/lib/client/api';
 import { hrefKeepingDate, hrefNearDay } from '@/lib/client/returnSpot';
 import { useScrollLock } from '@/lib/client/scrollLock';
-import { refineQuery, removeTerm } from '@/lib/searchTerms';
+import { refineQuery, removeFields, removeTerm } from '@/lib/searchTerms';
 import { pinnedQueries, recentQueries, recordQuery, recordRecentQuery, sharedQueries, togglePinnedQuery } from '@/lib/savedQueries';
-import { cloudTags, groupSelection, groupTags, isReserved, reservedPicked, reservedTag, reservedValues, RESERVED_TAGS, type TagCount, type TagGroup } from '@/lib/tags';
+import { cloudTags, groupSelection, groupTags, isReserved, reservedPicked, reservedTag, reservedTermValue, reservedValues, RESERVED_TAGS, type TagCount, type TagGroup } from '@/lib/tags';
 import { parseSearchQuery } from '@/server/util/searchQuery';
+import { browserTimeZone } from '@/lib/client/timeZone';
+import { dayKeyIn } from '@/lib/format';
 import { leaveDrawerForCloud, onOpenTagCloud } from '@/lib/client/controlsDrawer';
 import { mergedSection, useInDrawerPanel, useMergedPanel } from './FloatingControls';
 import { iconButton, PanelHeader } from './PanelHeader';
@@ -202,14 +204,16 @@ export function TagCloud({
   // confidence:unknown), so one typed by hand comes out too.
   const withoutReserved = (query: string, name: string) => {
     const site = reservedTag(name);
-    return site ? reservedValues(site).reduce((q, value) => removeTerm(q, site.field, value), query) : query;
+    if (!site) return query;
+    if (site.field === 'posted' || site.field === 'updated') return removeFields(query, [site.field]);
+    return reservedValues(site).reduce((q, value) => removeTerm(q, site.field, value), query);
   };
   const toggleReserved = (name: string) => {
     const site = reservedTag(name);
     if (!site) return;
     const on = reserved.some((r) => r.toLowerCase() === name.toLowerCase());
     go(
-      (q) => (on ? withoutReserved(q, name) : refineQuery(withoutReserved(q, name), site.field, site.value)),
+      (q) => (on ? withoutReserved(q, name) : refineQuery(withoutReserved(q, name), site.field, reservedTermValue(site, Date.now(), (at) => dayKeyIn(at, browserTimeZone())))),
       selected,
       on ? reserved.filter((r) => r.toLowerCase() !== name.toLowerCase()) : [...reserved, name],
     );

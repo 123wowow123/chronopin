@@ -1196,6 +1196,8 @@ const vi: Messages = {
   reserved: {
     thread: 'Chuỗi',
     predicted: 'Dự đoán',
+    new: 'Mới',
+    updated: 'Đã cập nhật',
     confirmed: 'Đã xác nhận',
     scheduled: 'Đã lên lịch',
     estimated: 'Ước tính',

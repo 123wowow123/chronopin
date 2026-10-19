@@ -9,11 +9,11 @@ import { canonicalCategory } from '@/lib/categories';
 import { api } from '@/lib/client/api';
 import { withPageLang } from '@/lib/client/navigation';
 import { hrefKeepingDate, hrefNearDay } from '@/lib/client/returnSpot';
-import { useTimeZone } from '@/lib/client/timeZone';
-import { formatDayKey, formatStart } from '@/lib/format';
+import { browserTimeZone, useTimeZone } from '@/lib/client/timeZone';
+import { dayKeyIn, formatDayKey, formatStart } from '@/lib/format';
 import { OCTAGON_AXES } from '@/lib/people';
 import { hasTerm, term } from '@/lib/searchTerms';
-import { reservedName, reservedTag, type ReservedTag, type TagCount } from '@/lib/tags';
+import { reservedName, reservedTag, reservedTermValue, type ReservedTag, type TagCount } from '@/lib/tags';
 import type { PinJson } from '@/lib/types';
 import { joinSearchQuery, splitSearchQuery, type QueryPart } from '@/server/util/searchQuery';
 import { useT } from '@/lib/client/i18n';
@@ -442,7 +442,7 @@ export function SearchBox() {
     }
     const { field, value } =
       suggestion.kind === 'reserved'
-        ? suggestion.filter
+        ? { field: suggestion.filter.field, value: reservedTermValue(suggestion.filter, Date.now(), (at) => dayKeyIn(at, browserTimeZone())) }
         : {
             field:
               suggestion.kind === 'company'
@@ -1112,7 +1112,7 @@ export function SearchBox() {
                         <span className="rounded-full border border-dashed border-line px-2 py-0.5 text-ink">{tagLabel(t, { name: suggestion.name, kind: 'reserved' })}</span>
                       </span>
                       <span className="shrink-0 text-xs text-subtle">
-                        {suggestion.filter.field}:{suggestion.filter.value}
+                        {suggestion.filter.field}:{reservedTermValue(suggestion.filter, Date.now(), (at) => dayKeyIn(at, browserTimeZone()))}
                       </span>
                     </>
                   ) : (

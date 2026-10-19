@@ -79,6 +79,13 @@ export function removeTerm(query: string, field: AnyField, value: string): strin
   return rest.replace(/\s+/g, ' ').trim();
 }
 
+// The query without any term of these fields, whatever their value: how NEW and
+// UPDATED are taken out, since each was written with the day of its pick.
+export function removeFields(query: string, fields: LabelField[]): string {
+  const pattern = new RegExp(`(^|\\s)["'“”‘’]?(?:${fields.join('|')}):\\S*`, 'gi');
+  return query.replace(pattern, ' ').replace(/\s+/g, ' ').trim();
+}
+
 // The query after a quick filter's toggle: adds the term, or takes it out.
 export function toggleTerm(query: string, field: LabelField, value: string): string {
   return hasTerm(query, field, value) ? removeTerm(query, field, value) : refineQuery(query, field, value);

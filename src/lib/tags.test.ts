@@ -1,6 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import {
   THREAD_TAG,
+  reservedTermValue,
   autoTags,
   awardTag,
   awardTagsInText,
@@ -314,5 +315,20 @@ describe('tag groups', () => {
     const rx = new RegExp(re, 'i');
     expect(rx.test('Crunchyroll Anime Awards 2024 Nominee')).toBe(true);
     expect(rx.test('Crunchyroll Anime Awards Extra')).toBe(false);
+  });
+});
+
+describe('New and Updated reserved filters', () => {
+  const dayKey = (at: number) => new Date(at).toISOString().slice(0, 10);
+  const now = Date.parse('2026-10-19T12:00:00Z');
+  it('write the viewer\'s today and the day 24 hours back', () => {
+    expect(reservedTermValue(reservedTag('New')!, now, dayKey)).toBe('2026-10-19');
+    expect(reservedTermValue(reservedTag('Updated')!, now, dayKey)).toBe('>=2026-10-18');
+  });
+  it('read as picked whatever day their term was written', () => {
+    const base = { tags: [], confidences: [], confidenceBands: [] };
+    expect(reservedPicked({ ...base, postedDays: ['2026-01-01'] })).toEqual(['New']);
+    expect(reservedPicked({ ...base, updatedBounds: [{ op: '>=', day: '2026-01-01' }] })).toEqual(['Updated']);
+    expect(reservedPicked(base)).toEqual([]);
   });
 });

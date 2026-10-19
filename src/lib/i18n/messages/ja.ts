@@ -1187,6 +1187,8 @@ const ja: Messages = {
   reserved: {
     thread: 'スレッド',
     predicted: '予測',
+    new: '新着',
+    updated: '更新',
     confirmed: '確定',
     scheduled: '予定',
     estimated: '推定',

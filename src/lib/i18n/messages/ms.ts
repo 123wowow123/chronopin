@@ -1197,6 +1197,8 @@ const ms: Messages = {
   reserved: {
     thread: 'Utas',
     predicted: 'Diramalkan',
+    new: 'Baharu',
+    updated: 'Dikemas kini',
     confirmed: 'Disahkan',
     scheduled: 'Dijadualkan',
     estimated: 'Dianggarkan',

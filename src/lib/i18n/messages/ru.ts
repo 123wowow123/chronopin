@@ -1250,6 +1250,8 @@ const ru: Messages = {
   reserved: {
     thread: 'Цепочка',
     predicted: 'Прогноз',
+    new: 'Новое',
+    updated: 'Обновлено',
     confirmed: 'Подтверждено',
     scheduled: 'Запланировано',
     estimated: 'Примерно',

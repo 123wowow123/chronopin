@@ -1197,6 +1197,8 @@ const id: Messages = {
   reserved: {
     thread: 'Utas',
     predicted: 'Diprediksi',
+    new: 'Baru',
+    updated: 'Diperbarui',
     confirmed: 'Dikonfirmasi',
     scheduled: 'Dijadwalkan',
     estimated: 'Perkiraan',

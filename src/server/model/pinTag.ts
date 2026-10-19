@@ -111,7 +111,7 @@ export default class PinTag {
       SELECT min("tg"."name"::text) AS "name", min("tg"."kind") AS "kind", COUNT(DISTINCT "Pin"."id")::integer AS "count"
       FROM "PinTagView" AS "tg"
         INNER JOIN "Pin" ON "Pin"."id" = "tg"."pinId" AND "Pin"."utcDeletedDateTime" IS NULL
-      WHERE "tg"."name"::text ~* $1 AND "tg"."kind" <> 'reserved' AND "tg"."name" <> 'Predicted'::citext
+      WHERE "tg"."name"::text ~* $1 AND "tg"."kind" <> 'reserved' AND "tg"."name" NOT IN ('Predicted'::citext, 'New'::citext, 'Updated'::citext)
       GROUP BY "tg"."name"
       ORDER BY 3 DESC, 1
       LIMIT $2`,
@@ -147,7 +147,7 @@ export default class PinTag {
       WITH ${ctes.map((cte) => `${cte},\n      `).join('')}"hits" AS (
         SELECT DISTINCT "tg"."name", "tg"."kind", "Pin"."id" AS "pinId"
         ${from}
-          INNER JOIN "PinTagView" AS "tg" ON "tg"."pinId" = "Pin"."id" AND "tg"."kind" <> 'reserved' AND "tg"."name" <> 'Predicted'::citext
+          INNER JOIN "PinTagView" AS "tg" ON "tg"."pinId" = "Pin"."id" AND "tg"."kind" <> 'reserved' AND "tg"."name" NOT IN ('Predicted'::citext, 'New'::citext, 'Updated'::citext)
         WHERE ${where.join('\n          AND ')}
       ),
       "counts" AS (

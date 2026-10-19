@@ -1193,6 +1193,8 @@ const fr: Messages = {
   reserved: {
     thread: 'Fil',
     predicted: 'Prévu',
+    new: 'Nouveau',
+    updated: 'Mis à jour',
     confirmed: 'Confirmé',
     scheduled: 'Programmé',
     estimated: 'Estimé',

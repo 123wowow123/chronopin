@@ -1197,6 +1197,8 @@ const en = {
   reserved: {
     thread: 'Thread',
     predicted: 'Predicted',
+    new: 'New',
+    updated: 'Updated',
     confirmed: 'Confirmed',
     scheduled: 'Scheduled',
     estimated: 'Estimated',

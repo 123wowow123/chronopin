@@ -1203,6 +1203,8 @@ const hi: Messages = {
   reserved: {
     thread: 'थ्रेड',
     predicted: 'अनुमानित',
+    new: 'नया',
+    updated: 'अपडेट',
     confirmed: 'पुष्ट',
     scheduled: 'निर्धारित',
     estimated: 'अनुमानित',

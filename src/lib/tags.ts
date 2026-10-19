@@ -188,6 +188,10 @@ export function awardTagsInText(text: string | null | undefined): string[] {
 export const THREAD_TAG = 'Thread';
 export const PREDICTION_MARKET_TAG = 'Prediction Market';
 export const PREDICTED_TAG = 'Predicted';
+export const NEW_TAG = 'New';
+export const UPDATED_TAG = 'Updated';
+// How far back UPDATED reaches, as the card's pill reads it.
+export const UPDATED_WITHIN_MS = 24 * 60 * 60 * 1000;
 
 /* Reserved */
 
@@ -208,9 +212,12 @@ export type ReservedTag = {
   // The English name, which is what the cloud counts and suggests under.
   name: string;
   // The term a pick writes.
-  field: 'tag' | 'confidence';
+  // posted and updated are time-relative (the viewer's today): their term's
+  // value is written at the pick, by reservedTermValue, and `value` is only
+  // the name of the window.
+  field: 'tag' | 'confidence' | 'posted' | 'updated';
   value: string;
-  icon: 'thread' | 'shield' | 'sparkle';
+  icon: 'thread' | 'shield' | 'sparkle' | 'clock';
 };
 
 // The date confidence levels, firmest first, as their badge writes them
@@ -226,6 +233,8 @@ const STORED_LEVEL: Record<string, string> = { unverified: 'unknown' };
 export const RESERVED_TAGS: ReservedTag[] = [
   { key: 'thread', name: THREAD_TAG, field: 'tag', value: THREAD_TAG, icon: 'thread' },
   { key: 'predicted', name: PREDICTED_TAG, field: 'tag', value: PREDICTED_TAG, icon: 'sparkle' },
+  { key: 'new', name: NEW_TAG, field: 'posted', value: 'today', icon: 'clock' },
+  { key: 'updated', name: UPDATED_TAG, field: 'updated', value: 'last-24h', icon: 'clock' },
   ...CONFIDENCE_LEVELS.map((level): ReservedTag => ({ key: level, name: capitalize(level), field: 'confidence', value: level, icon: 'shield' })),
   ...[...CONFIDENCE_BANDS].reverse().map(({ band }): ReservedTag => ({ key: band, name: `${capitalize(band)} confidence`, field: 'confidence', value: band, icon: 'shield' })),
 ];
@@ -245,12 +254,35 @@ export const isReserved = (name: string): boolean => !!reservedTag(name);
 // Which reserved filters a query already holds, in the order above: its
 // tag: terms name the thread tag, and its confidence: terms the levels and
 // bands (parseSearchQuery stores a level as the database spells it).
-export function reservedPicked(query: { tags: string[]; confidences: string[]; confidenceBands: string[] }): string[] {
+export function reservedPicked(query: {
+  tags: string[];
+  confidences: string[];
+  confidenceBands: string[];
+  postedDays?: string[];
+  postedBounds?: unknown[];
+  updatedDays?: string[];
+  updatedBounds?: unknown[];
+}): string[] {
+  // New and Updated stand for any posted: / updated: term, so a pick made
+  // yesterday still reads as picked (and can be taken out) today.
   const has = (r: ReservedTag) =>
-    r.field === 'tag'
-      ? query.tags.some((tag) => tag.toLowerCase() === r.value.toLowerCase())
-      : query.confidences.includes(STORED_LEVEL[r.value] ?? r.value) || query.confidenceBands.includes(r.value);
+    r.field === 'posted'
+      ? !!(query.postedDays?.length || query.postedBounds?.length)
+      : r.field === 'updated'
+        ? !!(query.updatedDays?.length || query.updatedBounds?.length)
+        : r.field === 'tag'
+          ? query.tags.some((tag) => tag.toLowerCase() === r.value.toLowerCase())
+          : query.confidences.includes(STORED_LEVEL[r.value] ?? r.value) || query.confidenceBands.includes(r.value);
   return RESERVED_TAGS.filter(has).map((r) => r.name);
+}
+
+// The term value a pick writes: the filter's own, except for the time-relative
+// ones, which are the viewer's today (NEW) or the day 24 hours back (UPDATED).
+// `dayKey` is dayKeyIn bound to the viewer's zone.
+export function reservedTermValue(reserved: ReservedTag, now: number, dayKey: (instant: number) => string): string {
+  if (reserved.field === 'posted') return dayKey(now);
+  if (reserved.field === 'updated') return `>=${dayKey(now - UPDATED_WITHIN_MS)}`;
+  return reserved.value;
 }
 
 // Every spelling of a reserved filter's term value, for taking it back out of

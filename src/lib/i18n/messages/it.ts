@@ -1184,6 +1184,8 @@ const it: Messages = {
   reserved: {
     thread: 'Thread',
     predicted: 'Previsto',
+    new: 'Nuovo',
+    updated: 'Aggiornato',
     confirmed: 'Confermato',
     scheduled: 'Programmato',
     estimated: 'Stimato',

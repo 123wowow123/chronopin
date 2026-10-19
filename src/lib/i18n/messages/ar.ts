@@ -1472,6 +1472,8 @@ const ar: Messages = {
   reserved: {
     thread: 'سلسلة',
     predicted: 'المتوقعة',
+    new: 'جديد',
+    updated: 'محدَّث',
     confirmed: 'مؤكد',
     scheduled: 'مجدول',
     estimated: 'تقديري',

@@ -5,13 +5,13 @@ import BasePins from './basePins';
 import Pin from './pin';
 import PinTag from './pinTag';
 import { THIN_PIN_SQL, TRANSLATABLE_PIN_SQL } from './searchIssues';
-import { dayKeyToMs, dayStartIn, nextDayKey } from '@/lib/format';
+import { dayKeyIn, dayKeyToMs, dayStartIn, nextDayKey } from '@/lib/format';
 import { holidayRanges, loadAstronomy } from '../holidays';
 import { TASTE_KEYS, TASTE_STRONG, type TasteAxis } from '@/lib/pinTaste';
 import { CAR_PERF_KEYS, CAR_PERF_STRONG, type CarPerfAxis } from '@/lib/pinCarPerf';
 import { DINING_KEYS, DINING_STRONG, type DiningAxis } from '@/lib/pinDining';
 import { HOTEL_KEYS, HOTEL_STRONG, type HotelAxis } from '@/lib/pinHotel';
-import { PREDICTED_TAG, reservedName, tagGroupPatterns, type TagCount } from '@/lib/tags';
+import { NEW_TAG, PREDICTED_TAG, reservedName, UPDATED_TAG, UPDATED_WITHIN_MS, tagGroupPatterns, type TagCount } from '@/lib/tags';
 import { CONFIDENCE_BANDS, CONFIDENCE_BARS, type ConfidenceBand } from '@/lib/referenceConfidence';
 import { PLACE_TEXT_SCORE, SEMANTIC_ALONE_SCORE, TITLE_TEXT_SCORE, isCjkText, looksLikePlaceText, placePatterns, typedTextPatterns, typedWordPatterns, wholeWordPattern } from '../util/placeMatch';
 import type { NearFilter } from '../util/nearFilter';
@@ -328,7 +328,7 @@ export default class Pins extends BasePins<Pin> {
   static async countSearchTags(filter: SearchFilter, limit: number) {
     if (filter.holidays.length) await loadAstronomy();
     const { ctes, from, where, params } = searchClauses(filter);
-    return countTags(from, where, params, limit, ctes);
+    return countTags(from, where, params, limit, ctes, filter.timeZone || 'UTC');
   }
 
   // Tags across the whole timeline: the pins its pages walk (live, confident
@@ -528,8 +528,8 @@ const leanReferences = (as: string) => `
 // date confidence is a column and its score is read off its references, and
 // neither is in "PinTagView". They also sit outside the tag `limit`, so the
 // cloud's strip of site filters is the same few every time.
-async function countTags(from: string, where: string[], params: unknown[], limit: number, ctes: string[] = []): Promise<TagCount[]> {
-  const [reserved, tags] = await Promise.all([countReserved(from, where, params, ctes), PinTag.count(from, where, params, limit, ctes)]);
+async function countTags(from: string, where: string[], params: unknown[], limit: number, ctes: string[] = [], zone = 'UTC'): Promise<TagCount[]> {
+  const [reserved, tags] = await Promise.all([countReserved(from, where, params, ctes, zone), PinTag.count(from, where, params, limit, ctes)]);
   return [...reserved, ...tags];
 }
 
@@ -537,8 +537,12 @@ async function countTags(from: string, where: string[], params: unknown[], limit
 // tags ("Thread" and "Predicted"), each date confidence level, and each band of the pin's
 // own score - the same width_bucket the confidence: term filters by, so a
 // count and the search it starts agree. A pin with no score is in no band.
-async function countReserved(from: string, where: string[], params: unknown[], ctes: string[]): Promise<TagCount[]> {
+async function countReserved(from: string, where: string[], params: unknown[], ctes: string[], zone = 'UTC'): Promise<TagCount[]> {
   const bars = `$${params.length + 1}`;
+  // NEW and UPDATED, as the card's pills and their searches read them in the viewer's zone: posted today, and updated since the day 24 hours back.
+  const now = Date.now();
+  const postedSince = new Date(dayStartIn(dayKeyIn(now, zone), zone));
+  const updatedSince = new Date(dayStartIn(dayKeyIn(now - UPDATED_WITHIN_MS, zone), zone));
   const rows = await db.query<{ field: 'tag' | 'confidence' | 'band'; value: string; count: number }>(
     `
       ${withCtes(
@@ -564,10 +568,15 @@ async function countReserved(from: string, where: string[], params: unknown[], c
           AND ("pt"."name" = '${PREDICTED_TAG}'::citext OR ("hits"."level" = 'estimated' AND "pt"."name" = 'Prediction Market'::citext))
       )
       UNION ALL
+      SELECT 'tag', '${NEW_TAG}', COUNT(*)::integer FROM "hits" INNER JOIN "Pin" AS "np" ON "np"."id" = "hits"."id" WHERE "np"."utcCreatedDateTime" >= $${params.length + 2}::timestamptz
+      UNION ALL
+      SELECT 'tag', '${UPDATED_TAG}', COUNT(*)::integer FROM "hits"
+      WHERE EXISTS (SELECT 1 FROM "PinUpdate" AS "u" WHERE "u"."pinId" = "hits"."id" AND "u"."utcCreatedDateTime" >= $${params.length + 3}::timestamptz)
+      UNION ALL
       SELECT 'confidence', "level", COUNT(*)::integer FROM "hits" WHERE "level" IS NOT NULL GROUP BY "level"
       UNION ALL
       SELECT 'band', "band"::text, COUNT(*)::integer FROM "hits" WHERE "band" IS NOT NULL GROUP BY "band"`,
-    [...params, CONFIDENCE_BARS],
+    [...params, CONFIDENCE_BARS, postedSince, updatedSince],
   );
   const counted = new Map<string, number>();
   for (const row of rows) {

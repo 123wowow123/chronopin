@@ -1183,6 +1183,8 @@ const th: Messages = {
   reserved: {
     thread: 'เธรด',
     predicted: 'การคาดการณ์',
+    new: 'ใหม่',
+    updated: 'อัปเดต',
     confirmed: 'ยืนยันแล้ว',
     scheduled: 'กำหนดการ',
     estimated: 'ประมาณการ',
