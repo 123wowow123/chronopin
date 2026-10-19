@@ -249,6 +249,8 @@ export type MapPinJson = Pick<PinJson, 'id' | 'title' | 'address' | 'categories'
   // Curated restaurant specials may have no database pin yet.
   restaurantHref?: string;
   specialLabel?: string;
+  // Megawatts its title states ("500 MW", "1 GW" -> 1000), for the map's totals.
+  megawatts?: number | null;
 };
 
 export type DateTimeJson = {

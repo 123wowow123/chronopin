@@ -9,6 +9,8 @@ import { getPersonalBag, getSliderTyping, getAdPlacements, getAdsenseSlots, getH
 import Company from '../model/company';
 import Favorite from '../model/favorite';
 import { eventInfoForPin } from '../model/pinEventInfo';
+import { powerForPin } from '../model/pinPower';
+import type { PinPowerJson } from '@/lib/power';
 import { candidatesForPin } from '../model/pinCandidate';
 import { gameInfoForPin } from '../model/pinGameInfo';
 import { tasteForPin } from '../model/pinTaste';
@@ -221,6 +223,14 @@ export async function pinEventInfo(id: number): Promise<PinEventInfoJson | null>
   cacheLife('hours');
   cacheTag(TAGS.pin(id));
   return eventInfoForPin(id);
+}
+
+// The pin's capacity in megawatts, or null when none is recorded.
+export async function pinPower(id: number): Promise<PinPowerJson | null> {
+  'use cache';
+  cacheLife('hours');
+  cacheTag(TAGS.pin(id));
+  return powerForPin(id);
 }
 
 // The big-four contenders an awards pin lists, empty for any other pin.

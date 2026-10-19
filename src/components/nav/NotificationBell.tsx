@@ -15,7 +15,7 @@ import { timeAgo } from '@/lib/format';
 import { pinPath } from '@/lib/seo';
 import { ALERT_SOON_MINUTES } from '@/lib/alerts';
 import { term } from '@/lib/searchTerms';
-import { useT } from '@/lib/client/i18n';
+import { useIntlLocale, useT } from '@/lib/client/i18n';
 import type { Translator } from '@/lib/i18n/translate';
 
 type Notification = {
@@ -300,24 +300,39 @@ function sectionsOf(items: Notification[]): { section: Section; items: Notificat
   return sections;
 }
 
-type Entry = { kind: 'row'; n: Notification } | { kind: 'trades'; items: Notification[] };
+type Entry = { kind: 'row'; n: Notification } | { kind: 'trades'; groups: { day: 0 | -1; items: Notification[] }[] };
 
-// Stock-trade rows fold into one group, placed where the newest of them sits.
-function entriesOf(rows: Notification[]): Entry[] {
-  const trades = rows.filter((n) => n.type === 'trade');
-  if (trades.length < 2) return rows.map((n) => ({ kind: 'row', n }));
+// Stock-trade rows fold into one group per day (today, yesterday), placed where
+// the newest of each sits; older filings drop out.
+function entriesOf(allRows: Notification[]): Entry[] {
+  const key = (offset: number) => {
+    const d = new Date();
+    d.setDate(d.getDate() + offset);
+    return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
+  };
+  const days = [[0, key(0)], [-1, key(-1)]] as const;
+  const dayOf = (n: Notification) => days.find(([, k]) => n.tradeFiledDate?.slice(0, 10) === k)?.[0];
+  const rows = allRows.filter((n) => n.type !== 'trade' || dayOf(n) !== undefined);
   const entries: Entry[] = [];
+  let placed = false;
   for (const n of rows) {
     if (n.type !== 'trade') entries.push({ kind: 'row', n });
-    else if (n === trades[0]) entries.push({ kind: 'trades', items: trades });
+    else if (!placed) {
+      placed = true;
+      const groups = days
+        .map(([day]) => ({ day, items: rows.filter((r) => r.type === 'trade' && dayOf(r) === day) }))
+        .filter((g) => g.items.length);
+      entries.push({ kind: 'trades', groups });
+    }
   }
   return entries;
 }
 
 // The watched people's recent trades, collapsed to buy and sell totals with
 // their tickers (every row below counts, so the tiles always add up); opening it lists each filing.
-function TradeGroup({ items, renderRow }: { items: Notification[]; renderRow: (n: Notification) => React.ReactNode }) {
+function TradeDay({ items, day, renderRow }: { items: Notification[]; day: 0 | -1; renderRow: (n: Notification) => React.ReactNode }) {
   const t = useT();
+  const dayLabel = new Intl.RelativeTimeFormat(useIntlLocale(), { numeric: 'auto' }).format(day, 'day');
   const [open, setOpen] = useState(false);
   const listId = useId();
   const sum = (pick: (n: Notification) => number | null) => items.reduce((total, n) => total + (pick(n) ?? 0), 0);
@@ -339,7 +354,7 @@ function TradeGroup({ items, renderRow }: { items: Notification[]; renderRow: (n
     ['tradeSells', sum((n) => n.tradeSells), tickers((n) => n.tradeSellValues), 'text-danger-soft ring-danger/40'],
   ] as const;
   return (
-    <li className="text-sm">
+    <div className="text-sm">
       <button
         type="button"
         aria-expanded={open}
@@ -348,7 +363,7 @@ function TradeGroup({ items, renderRow }: { items: Notification[]; renderRow: (n
         className="flex w-full flex-col gap-1.5 px-4 py-2.5 text-start"
       >
         <span className="flex items-center justify-between gap-2 font-semibold text-ink">
-          {t('notifications.tradesToday')}
+          {dayLabel}
           <Icon name="chevron" className={`size-4 shrink-0 text-subtle transition-transform ${open ? 'rotate-180' : ''}`} />
         </span>
         <span className="grid grid-cols-2 gap-2">
@@ -377,6 +392,32 @@ function TradeGroup({ items, renderRow }: { items: Notification[]; renderRow: (n
         </span>
       </button>
       {open ? <ul id={listId} className="divide-y divide-line border-t border-line">{items.map(renderRow)}</ul> : null}
+    </div>
+  );
+}
+
+// One collapsible block holding today's and yesterday's panes stuck together.
+function TradeGroup({ groups, renderRow }: { groups: { day: 0 | -1; items: Notification[] }[]; renderRow: (n: Notification) => React.ReactNode }) {
+  const t = useT();
+  const [open, setOpen] = useState(true);
+  const bodyId = useId();
+  return (
+    <li className="text-sm">
+      <button
+        type="button"
+        aria-expanded={open}
+        aria-controls={bodyId}
+        onClick={() => setOpen((o) => !o)}
+        className="flex w-full items-center justify-between gap-2 px-4 py-2.5 text-start font-semibold text-ink"
+      >
+        {t('notifications.tradesToday')}
+        <Icon name="chevron" className={`size-4 shrink-0 text-subtle transition-transform ${open ? 'rotate-180' : ''}`} />
+      </button>
+      {open ? (
+        <div id={bodyId} className="divide-y divide-line border-t border-line">
+          {groups.map((g) => <TradeDay key={g.day} items={g.items} day={g.day} renderRow={renderRow} />)}
+        </div>
+      ) : null}
     </li>
   );
 }
@@ -558,7 +599,7 @@ function NotificationItems({
           <ul className="divide-y divide-line">
             {entriesOf(rows).map((entry) =>
               entry.kind === 'trades' ? (
-                <TradeGroup key="trades" items={entry.items} renderRow={renderRow} />
+                <TradeGroup key="trades" groups={entry.groups} renderRow={renderRow} />
               ) : (
                 renderRow(entry.n)
               ),

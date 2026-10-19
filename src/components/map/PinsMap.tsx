@@ -113,6 +113,23 @@ function localStart(pin: MapPinJson) {
 // No picks shows every pin; several show pins in any of them.
 const inCategories = (categories: string[], picks: string[]) => !picks.length || categories.some((c) => picks.includes(c));
 
+type MapStats = { cost: number; megawatts: number };
+
+// The count, USD cost and megawatts of the markers a category pick leaves
+// showing (the focused pin always shows).
+function publishMapStats(entries: MapEntry[], picks: string[], setCount: (n: number) => void, setStats: (stats: MapStats) => void) {
+  const shown = entries.filter((e) => e.focus || inCategories(e.categories, picks));
+  setCount(shown.length);
+  setStats({
+    cost: shown.reduce((sum, { pin }) => sum + (pin.priceCurrency === 'USD' && pin.price ? Number(pin.price) : 0), 0),
+    megawatts: shown.reduce((sum, { pin }) => sum + (Number(pin.megawatts) || 0), 0),
+  });
+}
+
+function megawattLabel(mw: number) {
+  return mw >= 1000 ? `${(Math.round(mw / 10) / 100).toLocaleString('en-US')} GW` : `${Math.round(mw).toLocaleString('en-US')} MW`;
+}
+
 const escapeHtml = (text: string) => text.replace(/[&<>"']/g, (c) => `&#${c.charCodeAt(0)};`);
 
 const POPUP_WIDTH = 200;
@@ -368,6 +385,10 @@ export default function PinsMap({ sliderTyping = false, ads = false }: { sliderT
   const fromLayerRef = useRef<L.LayerGroup | null>(null);
   const [status, setStatus] = useState<'loading' | 'ready' | 'error'>('loading');
   const [count, setCount] = useState(0);
+  // What the plotted, category-visible pins add up to: dollars of cost (only
+  // USD ones - there is no FX anywhere, so currencies never mix) and the
+  // megawatts their titles state.
+  const [stats, setStats] = useState<MapStats>({ cost: 0, megawatts: 0 });
   // What the map plots: the pins, or the marketplace listings that say
   // where they are (?show=market). Only one layer at a time. The tags and
   // posted-within filters carry over from one to the other (a listing by its
@@ -614,6 +635,7 @@ export default function PinsMap({ sliderTyping = false, ads = false }: { sliderT
     markersRef.current = [];
     setStatus('loading');
     setCount(0);
+    setStats({ cost: 0, megawatts: 0 });
 
     const now = new Date();
     const pastBoundary = past ? offsetDate(now, past, -1) : null;
@@ -671,7 +693,7 @@ export default function PinsMap({ sliderTyping = false, ads = false }: { sliderT
         }
       }
       syncCopies(map, layer, markersRef.current, categoriesRef.current);
-      setCount(markersRef.current.filter((e) => e.focus || inCategories(e.categories, categoriesRef.current)).length);
+      publishMapStats(markersRef.current, categoriesRef.current, setCount, setStats);
     };
 
     // Every pin to plot, in one request: the window, the posted-within cutoff
@@ -742,7 +764,7 @@ export default function PinsMap({ sliderTyping = false, ads = false }: { sliderT
     if (!map || !layer) return;
     map.closePopup();
     syncCopies(map, layer, markersRef.current, picks);
-    setCount(markersRef.current.filter((e) => e.focus || inCategories(e.categories, picks)).length);
+    publishMapStats(markersRef.current, picks, setCount, setStats);
   }, [categoryKey]);
 
   // "1,240 km from Los Angeles" clicked on a pin: the line it measured, from
@@ -1017,6 +1039,13 @@ export default function PinsMap({ sliderTyping = false, ads = false }: { sliderT
       <div className="relative z-[1000]">
         <FloatingControls
           merge
+          cards={layer === 'pins' && fetchQuery && status === 'ready' && count > 0 ? (
+            <dl aria-label="Totals for the pins matching the search" className="floating mt-2 flex flex-wrap items-baseline gap-x-3 gap-y-0.5 rounded-lg px-3 py-1.5 text-xs whitespace-nowrap">
+              <div className="flex gap-1"><dt className="text-muted">Pins:</dt><dd className="font-semibold tabular-nums text-link">{count.toLocaleString('en-US')}</dd></div>
+              {stats.cost > 0 ? <div className="flex gap-1"><dt className="text-muted">Cost:</dt><dd className="font-semibold tabular-nums text-success">{money(stats.cost, 'USD')}</dd></div> : null}
+              {stats.megawatts > 0 ? <div className="flex gap-1"><dt className="text-muted">MW:</dt><dd className="font-semibold tabular-nums text-past">{megawattLabel(stats.megawatts)}</dd></div> : null}
+            </dl>
+          ) : undefined}
           drawerTop={<LayerToggle layer={layer} available={available} onChange={(next) => {
             if (next !== layer) setLayer(next);
             closeDrawer();
