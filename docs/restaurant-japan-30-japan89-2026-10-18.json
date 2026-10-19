@@ -10555,10 +10555,10 @@
   },
   "publicationStatus": {
     "local": "saved and verified",
-    "production": "saved and verified through production origin",
-    "publicHttpsVerified": false
+    "production": "saved and publicly verified",
+    "publicHttpsVerified": true
   },
-  "verificationNotes": "Full native menus, photo credits, branch opening dates, complete saved profiles and 13 native title/image guide memberships verified locally and through the running production application via authenticated APIs and an SSH tunnel. 564 menu/serving entries include course components, alternatives and bottles, not 564 unique dishes. Public HTTPS still times out during a separate deployment; ordinary external HTTPS checks remain pending. No build, restart, configuration change or deployment performed.",
+  "verificationNotes": "October 19 public HTTPS recheck passed: complete profiles, public menus, gallery credits and all native title/image memberships. Earlier origin-only verification and timeouts are historical; see originalVerificationNotes. No deployment.",
   "supplementalSources": [
     "https://www8.cao.go.jp/chosei/shukujitsu/gaiyou.html",
     "https://job.inshokuten.com/kansai/work/detail/54903?assistLinkCode=2",
@@ -10570,5 +10570,1039 @@
     "https://prtimes.jp/main/html/rd/p/000000070.000041346.html",
     "https://mantan-web.jp/prtimes/article/20261018prt00m200000047a.html"
   ],
-  "additionalResearchNotes": "Fresh opening searches located Oreno Kappo Umeda Kitashinchi and roan; both already have exact-branch content records (234 and 1672), so no duplicates were created. HananoKi ordinary weekday lunch was excluded from Specials eligibility; only Kubotsu explicitly advertised special-price group plans were retained. Full 2026 Japanese holidays checked; limited calendar coverage remains explicit."
+  "additionalResearchNotes": "Fresh opening searches located Oreno Kappo Umeda Kitashinchi and roan; both already have exact-branch content records (234 and 1672), so no duplicates were created. HananoKi ordinary weekday lunch was excluded from Specials eligibility; only Kubotsu explicitly advertised special-price group plans were retained. Full 2026 Japanese holidays checked; limited calendar coverage remains explicit.",
+  "originalVerificationNotes": "Full native menus, photo credits, branch opening dates, complete saved profiles and 13 native title/image guide memberships verified locally and through the running production application via authenticated APIs and an SSH tunnel. 564 menu/serving entries include course components, alternatives and bottles, not 564 unique dishes. Public HTTPS still times out during a separate deployment; ordinary external HTTPS checks remain pending. No build, restart, configuration change or deployment performed.",
+  "publicHttpsRecheck20261019": {
+    "verifiedAtUtc": "2026-10-19T20:32:37.391524+00:00",
+    "profiles": [
+      {
+        "pinId": 18147,
+        "sourceUrl": "https://www.hiramatsurestaurant.jp/kubotsu/",
+        "name": "Ristorante Kubotsu — Tenjin",
+        "contentId": 1875,
+        "contentRevision": 1,
+        "verifiedGalleryLinks": 4,
+        "publicPinStatus": 200,
+        "apiBase": "https://www.chronopin.com",
+        "publicBase": "https://www.chronopin.com"
+      },
+      {
+        "pinId": 18148,
+        "sourceUrl": "https://gm.9syoku.com/restaurant/",
+        "name": "Restaurant Georges Marceau — Otemon",
+        "contentId": 1876,
+        "contentRevision": 1,
+        "verifiedGalleryLinks": 4,
+        "publicPinStatus": 200,
+        "apiBase": "https://www.chronopin.com",
+        "publicBase": "https://www.chronopin.com"
+      },
+      {
+        "pinId": 18149,
+        "sourceUrl": "https://hananoki-f.jp/",
+        "name": "Restaurant HananoKi — Ohori Boathouse",
+        "contentId": 1877,
+        "contentRevision": 1,
+        "verifiedGalleryLinks": 4,
+        "publicPinStatus": 200,
+        "apiBase": "https://www.chronopin.com",
+        "publicBase": "https://www.chronopin.com"
+      },
+      {
+        "pinId": 18150,
+        "sourceUrl": "https://tabelog.com/en/fukuoka/A4001/A400105/40042997/",
+        "name": "TTOAHISU — Otemon",
+        "contentId": 1878,
+        "contentRevision": 1,
+        "verifiedGalleryLinks": 4,
+        "publicPinStatus": 200,
+        "apiBase": "https://www.chronopin.com",
+        "publicBase": "https://www.chronopin.com"
+      },
+      {
+        "pinId": 18151,
+        "sourceUrl": "https://fujiya1935.com/en/",
+        "name": "Fujiya1935 — Yariyamachi",
+        "contentId": 1879,
+        "contentRevision": 1,
+        "verifiedGalleryLinks": 3,
+        "publicPinStatus": 200,
+        "apiBase": "https://www.chronopin.com",
+        "publicBase": "https://www.chronopin.com"
+      },
+      {
+        "pinId": 18152,
+        "sourceUrl": "https://osaka-taian.com/",
+        "name": "Taian — Shimanouchi",
+        "contentId": 1880,
+        "contentRevision": 1,
+        "verifiedGalleryLinks": 3,
+        "publicPinStatus": 200,
+        "apiBase": "https://www.chronopin.com",
+        "publicBase": "https://www.chronopin.com"
+      },
+      {
+        "pinId": 18153,
+        "sourceUrl": "https://www.yugen-osaka.jp/",
+        "name": "Yugen — Uehommachi",
+        "contentId": 1881,
+        "contentRevision": 1,
+        "verifiedGalleryLinks": 4,
+        "publicPinStatus": 200,
+        "apiBase": "https://www.chronopin.com",
+        "publicBase": "https://www.chronopin.com"
+      },
+      {
+        "pinId": 18154,
+        "sourceUrl": "https://www.koryu.net/",
+        "name": "Koryu — Kitahama / Uchiawajimachi",
+        "contentId": 1882,
+        "contentRevision": 1,
+        "verifiedGalleryLinks": 3,
+        "publicPinStatus": 200,
+        "apiBase": "https://www.chronopin.com",
+        "publicBase": "https://www.chronopin.com"
+      },
+      {
+        "pinId": 18155,
+        "sourceUrl": "https://dodici-kyoto.jp/",
+        "name": "DODICI — Oike / Hakusan Shrine",
+        "contentId": 1883,
+        "contentRevision": 1,
+        "verifiedGalleryLinks": 4,
+        "publicPinStatus": 200,
+        "apiBase": "https://www.chronopin.com",
+        "publicBase": "https://www.chronopin.com"
+      },
+      {
+        "pinId": 18156,
+        "sourceUrl": "https://mizuki.ritzcarltonkyoto.com/",
+        "name": "Mizuki — The Ritz-Carlton Kyoto",
+        "contentId": 1884,
+        "contentRevision": 2,
+        "verifiedGalleryLinks": 5,
+        "publicPinStatus": 200,
+        "apiBase": "https://www.chronopin.com",
+        "publicBase": "https://www.chronopin.com"
+      },
+      {
+        "pinId": 18157,
+        "sourceUrl": "https://losier.shiseido.co.jp/",
+        "name": "L’Osier — Ginza",
+        "contentId": 1885,
+        "contentRevision": 1,
+        "verifiedGalleryLinks": 3,
+        "publicPinStatus": 200,
+        "apiBase": "https://www.chronopin.com",
+        "publicBase": "https://www.chronopin.com"
+      },
+      {
+        "pinId": 18158,
+        "sourceUrl": "https://www.leffervescence.jp/",
+        "name": "L’Effervescence — Nishiazabu",
+        "contentId": 1886,
+        "contentRevision": 1,
+        "verifiedGalleryLinks": 3,
+        "publicPinStatus": 200,
+        "apiBase": "https://www.chronopin.com",
+        "publicBase": "https://www.chronopin.com"
+      }
+    ],
+    "guides": [
+      {
+        "pinId": 18147,
+        "region": "fukuoka",
+        "view": "top",
+        "neighborhood": "Tenjin",
+        "nativeTitleAndImage": true,
+        "hrefs": [
+          "/pin/18147/ristorante-kubotsu-tenjin-opens-2018-01-25"
+        ],
+        "browserFiltered": false,
+        "publicBase": "https://www.chronopin.com",
+        "guideStatus": 200,
+        "offers": []
+      },
+      {
+        "pinId": 18147,
+        "region": "fukuoka",
+        "view": "discounts",
+        "neighborhood": "Tenjin",
+        "nativeTitleAndImage": true,
+        "hrefs": [
+          "/pin/18147/ristorante-kubotsu-tenjin-opens-2018-01-25"
+        ],
+        "browserFiltered": false,
+        "publicBase": "https://www.chronopin.com",
+        "guideStatus": 200,
+        "offers": [
+          {
+            "id": "https://www.hiramatsurestaurant.jp/kubotsu/#5",
+            "name": "Ristorante Kubotsu — Tenjin",
+            "neighborhood": "Tenjin",
+            "address": "4 F RESOLA Tenjin, 2-5-55 Tenjin, Chuo-ku, Fukuoka",
+            "restaurantHref": "/pin/18147/ristorante-kubotsu-tenjin-opens-2018-01-25",
+            "checkedAt": "2026-10-18",
+            "special": {
+              "kind": "other",
+              "title": "Kubotsu weekday group ランチ",
+              "schedule": "Asia/Tokyo local service / arrival windows; advance reservation rules apply.",
+              "menuLabel": "Kubotsu weekday group ランチ",
+              "sourceUrl": "https://www.hiramatsurestaurant.jp/kubotsu/news/",
+              "validFrom": "2026-02-01",
+              "conditions": [
+                "Advance reservation required; availability subject to private events and actual booking inventory.",
+                "Windows represent published arrival/last-order range, not meal duration.",
+                "The operator explicitly advertises a special-price group plan; no discount percentage or comparison price is inferred."
+              ],
+              "discounted": true,
+              "description": "Weekday group plan: 11000 yen total, 3–19 guests, three-glass wine pairing or nonalcoholic alternative. Tuesday closure and public holidays excluded.",
+              "limitedTime": false,
+              "availability": {
+                "windows": [
+                  {
+                    "end": "13:31",
+                    "days": [
+                      1,
+                      3,
+                      4,
+                      5
+                    ],
+                    "start": "11:30"
+                  }
+                ],
+                "excludedDates": [
+                  "2026-01-01",
+                  "2026-01-12",
+                  "2026-02-11",
+                  "2026-02-23",
+                  "2026-03-20",
+                  "2026-04-29",
+                  "2026-05-03",
+                  "2026-05-04",
+                  "2026-05-05",
+                  "2026-05-06",
+                  "2026-07-20",
+                  "2026-08-11",
+                  "2026-09-21",
+                  "2026-09-22",
+                  "2026-09-23",
+                  "2026-10-12",
+                  "2026-11-03",
+                  "2026-11-23"
+                ],
+                "excludesHolidays": true,
+                "holidayCalendarThrough": "2026-12-31"
+              }
+            },
+            "venueKey": "hiramatsurestaurant.jp/kubotsu",
+            "photo": {
+              "alt": "Ristorante Kubotsu — Tenjin — Operator gallery: seasonal food illustration, not a fixed current or Christmas dish promise.",
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-18/batch89-kubotsu-0-8d46e4a1cce83cbf.webp",
+              "credit": "Hiramatsu / Ristorante Kubotsu",
+              "checkedAt": "2026-10-18",
+              "sourceUrl": "https://www.hiramatsurestaurant.jp/kubotsu/about/",
+              "originalUrl": "https://www.hiramatsurestaurant.jp/kubotsu/assets/img/about/imggallery01.jpg"
+            },
+            "menu": {
+              "url": "https://www.hiramatsurestaurant.jp/kubotsu/news/",
+              "note": "Exact published group-plan structure; named daily recipes not promised.",
+              "items": [
+                {
+                  "name": "Weekday group plan with three-glass wine pairing",
+                  "note": "Tax/service included; 3–19 guests. Nonalcoholic replacement available; reserve in advance.",
+                  "price": 11000
+                },
+                {
+                  "name": "Amuse-bouche",
+                  "note": "Published course component/example; included in the named purchased course, no standalone price published. Seasonal substitutions apply.",
+                  "priceLabel": "Price not published"
+                },
+                {
+                  "name": "Starter",
+                  "note": "Published course component/example; included in the named purchased course, no standalone price published. Seasonal substitutions apply.",
+                  "priceLabel": "Price not published"
+                },
+                {
+                  "name": "Pasta",
+                  "note": "Published course component/example; included in the named purchased course, no standalone price published. Seasonal substitutions apply.",
+                  "priceLabel": "Price not published"
+                },
+                {
+                  "name": "Fish",
+                  "note": "Published course component/example; included in the named purchased course, no standalone price published. Seasonal substitutions apply.",
+                  "priceLabel": "Price not published"
+                },
+                {
+                  "name": "Meat",
+                  "note": "Published course component/example; included in the named purchased course, no standalone price published. Seasonal substitutions apply.",
+                  "priceLabel": "Price not published"
+                },
+                {
+                  "name": "Dessert",
+                  "note": "Published course component/example; included in the named purchased course, no standalone price published. Seasonal substitutions apply.",
+                  "priceLabel": "Price not published"
+                },
+                {
+                  "name": "Coffee",
+                  "note": "Published course component/example; included in the named purchased course, no standalone price published. Seasonal substitutions apply.",
+                  "priceLabel": "Price not published"
+                },
+                {
+                  "name": "Petits fours",
+                  "note": "Published course component/example; included in the named purchased course, no standalone price published. Seasonal substitutions apply.",
+                  "priceLabel": "Price not published"
+                },
+                {
+                  "name": "Three-glass wine pairing",
+                  "note": "Published course component/example; included in the named purchased course, no standalone price published. Seasonal substitutions apply.",
+                  "priceLabel": "Price not published"
+                }
+              ],
+              "label": "Kubotsu weekday group ランチ",
+              "coverage": "published",
+              "currency": "JPY"
+            },
+            "startsAt": "2026-10-21T02:30:00.000Z",
+            "end": "13:31"
+          },
+          {
+            "id": "https://www.hiramatsurestaurant.jp/kubotsu/#6",
+            "name": "Ristorante Kubotsu — Tenjin",
+            "neighborhood": "Tenjin",
+            "address": "4 F RESOLA Tenjin, 2-5-55 Tenjin, Chuo-ku, Fukuoka",
+            "restaurantHref": "/pin/18147/ristorante-kubotsu-tenjin-opens-2018-01-25",
+            "checkedAt": "2026-10-18",
+            "special": {
+              "kind": "other",
+              "title": "Kubotsu weekday group ディナー",
+              "schedule": "Asia/Tokyo local service / arrival windows; advance reservation rules apply.",
+              "menuLabel": "Kubotsu weekday group ディナー",
+              "sourceUrl": "https://www.hiramatsurestaurant.jp/kubotsu/news/",
+              "validFrom": "2026-02-01",
+              "conditions": [
+                "Advance reservation required; availability subject to private events and actual booking inventory.",
+                "Windows represent published arrival/last-order range, not meal duration.",
+                "The operator explicitly advertises a special-price group plan; no discount percentage or comparison price is inferred."
+              ],
+              "discounted": true,
+              "description": "Weekday group plan: 16500 yen total, 3–19 guests, three-glass wine pairing or nonalcoholic alternative. Tuesday closure and public holidays excluded.",
+              "limitedTime": false,
+              "availability": {
+                "windows": [
+                  {
+                    "end": "20:01",
+                    "days": [
+                      1,
+                      3,
+                      4,
+                      5
+                    ],
+                    "start": "17:30"
+                  }
+                ],
+                "excludedDates": [
+                  "2026-01-01",
+                  "2026-01-12",
+                  "2026-02-11",
+                  "2026-02-23",
+                  "2026-03-20",
+                  "2026-04-29",
+                  "2026-05-03",
+                  "2026-05-04",
+                  "2026-05-05",
+                  "2026-05-06",
+                  "2026-07-20",
+                  "2026-08-11",
+                  "2026-09-21",
+                  "2026-09-22",
+                  "2026-09-23",
+                  "2026-10-12",
+                  "2026-11-03",
+                  "2026-11-23"
+                ],
+                "excludesHolidays": true,
+                "holidayCalendarThrough": "2026-12-31"
+              }
+            },
+            "venueKey": "hiramatsurestaurant.jp/kubotsu",
+            "photo": {
+              "alt": "Ristorante Kubotsu — Tenjin — Operator gallery: seasonal food illustration, not a fixed current or Christmas dish promise.",
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-18/batch89-kubotsu-0-8d46e4a1cce83cbf.webp",
+              "credit": "Hiramatsu / Ristorante Kubotsu",
+              "checkedAt": "2026-10-18",
+              "sourceUrl": "https://www.hiramatsurestaurant.jp/kubotsu/about/",
+              "originalUrl": "https://www.hiramatsurestaurant.jp/kubotsu/assets/img/about/imggallery01.jpg"
+            },
+            "menu": {
+              "url": "https://www.hiramatsurestaurant.jp/kubotsu/news/",
+              "note": "Exact published group-plan structure; named daily recipes not promised.",
+              "items": [
+                {
+                  "name": "Weekday group plan with three-glass wine pairing",
+                  "note": "Tax/service included; 3–19 guests. Nonalcoholic replacement available; reserve in advance.",
+                  "price": 16500
+                },
+                {
+                  "name": "Amuse-bouche",
+                  "note": "Published course component/example; included in the named purchased course, no standalone price published. Seasonal substitutions apply.",
+                  "priceLabel": "Price not published"
+                },
+                {
+                  "name": "Starter",
+                  "note": "Published course component/example; included in the named purchased course, no standalone price published. Seasonal substitutions apply.",
+                  "priceLabel": "Price not published"
+                },
+                {
+                  "name": "Pasta",
+                  "note": "Published course component/example; included in the named purchased course, no standalone price published. Seasonal substitutions apply.",
+                  "priceLabel": "Price not published"
+                },
+                {
+                  "name": "Fish",
+                  "note": "Published course component/example; included in the named purchased course, no standalone price published. Seasonal substitutions apply.",
+                  "priceLabel": "Price not published"
+                },
+                {
+                  "name": "Meat",
+                  "note": "Published course component/example; included in the named purchased course, no standalone price published. Seasonal substitutions apply.",
+                  "priceLabel": "Price not published"
+                },
+                {
+                  "name": "Dessert",
+                  "note": "Published course component/example; included in the named purchased course, no standalone price published. Seasonal substitutions apply.",
+                  "priceLabel": "Price not published"
+                },
+                {
+                  "name": "Coffee",
+                  "note": "Published course component/example; included in the named purchased course, no standalone price published. Seasonal substitutions apply.",
+                  "priceLabel": "Price not published"
+                },
+                {
+                  "name": "Petits fours",
+                  "note": "Published course component/example; included in the named purchased course, no standalone price published. Seasonal substitutions apply.",
+                  "priceLabel": "Price not published"
+                },
+                {
+                  "name": "Three-glass wine pairing",
+                  "note": "Published course component/example; included in the named purchased course, no standalone price published. Seasonal substitutions apply.",
+                  "priceLabel": "Price not published"
+                }
+              ],
+              "label": "Kubotsu weekday group ディナー",
+              "coverage": "published",
+              "currency": "JPY"
+            },
+            "startsAt": "2026-10-21T08:30:00.000Z",
+            "end": "20:01"
+          },
+          {
+            "id": "https://www.hiramatsurestaurant.jp/kubotsu/#3",
+            "name": "Ristorante Kubotsu — Tenjin",
+            "neighborhood": "Tenjin",
+            "address": "4 F RESOLA Tenjin, 2-5-55 Tenjin, Chuo-ku, Fukuoka",
+            "restaurantHref": "/pin/18147/ristorante-kubotsu-tenjin-opens-2018-01-25",
+            "checkedAt": "2026-10-18",
+            "special": {
+              "kind": "other",
+              "title": "Kubotsu white-truffle dinner — November 11–13",
+              "schedule": "Asia/Tokyo local service / arrival windows; advance reservation rules apply.",
+              "menuLabel": "Kubotsu white-truffle dinner/lunch November 11–13",
+              "sourceUrl": "https://www.hiramatsurestaurant.jp/kubotsu/news/",
+              "validFrom": "2026-11-11",
+              "conditions": [
+                "Advance reservation required; availability subject to private events and actual booking inventory.",
+                "Windows represent published arrival/last-order range, not meal duration."
+              ],
+              "discounted": false,
+              "description": "Italian white truffle seasonal course ¥43, 505 total. Operator 2026 news resolves the booking text’s stale year.",
+              "limitedTime": true,
+              "availability": {
+                "windows": [
+                  {
+                    "end": "20:01",
+                    "days": [
+                      0,
+                      1,
+                      3,
+                      4,
+                      5,
+                      6
+                    ],
+                    "start": "17:30"
+                  }
+                ]
+              },
+              "validThrough": "2026-11-13"
+            },
+            "venueKey": "hiramatsurestaurant.jp/kubotsu",
+            "photo": {
+              "alt": "Ristorante Kubotsu — Tenjin — Operator gallery: seasonal food illustration, not a fixed current or Christmas dish promise.",
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-18/batch89-kubotsu-0-8d46e4a1cce83cbf.webp",
+              "credit": "Hiramatsu / Ristorante Kubotsu",
+              "checkedAt": "2026-10-18",
+              "sourceUrl": "https://www.hiramatsurestaurant.jp/kubotsu/about/",
+              "originalUrl": "https://www.hiramatsurestaurant.jp/kubotsu/assets/img/about/imggallery01.jpg"
+            },
+            "menu": {
+              "url": "https://www.hiramatsurestaurant.jp/kubotsu/news/",
+              "note": "Official 2026 event notice controls year; booking description contains a stale 2025 typo despite Wednesday/Thursday/Friday matching 2026.",
+              "items": [
+                {
+                  "name": "秋の白トリュフ特別コース",
+                  "note": "Total including tax/service. Dinner Nov 11–13; lunch Nov 12–13 only. Named final recipes not published.",
+                  "price": 43505
+                }
+              ],
+              "label": "Kubotsu white-truffle dinner/lunch November 11–13",
+              "coverage": "published",
+              "currency": "JPY"
+            },
+            "startsAt": "2026-11-11T08:30:00.000Z",
+            "end": "20:01"
+          },
+          {
+            "id": "https://www.hiramatsurestaurant.jp/kubotsu/#4",
+            "name": "Ristorante Kubotsu — Tenjin",
+            "neighborhood": "Tenjin",
+            "address": "4 F RESOLA Tenjin, 2-5-55 Tenjin, Chuo-ku, Fukuoka",
+            "restaurantHref": "/pin/18147/ristorante-kubotsu-tenjin-opens-2018-01-25",
+            "checkedAt": "2026-10-18",
+            "special": {
+              "kind": "other",
+              "title": "Kubotsu white-truffle lunch — November 12–13",
+              "schedule": "Asia/Tokyo local service / arrival windows; advance reservation rules apply.",
+              "menuLabel": "Kubotsu white-truffle dinner/lunch November 11–13",
+              "sourceUrl": "https://www.hiramatsurestaurant.jp/kubotsu/news/",
+              "validFrom": "2026-11-12",
+              "conditions": [
+                "Advance reservation required; availability subject to private events and actual booking inventory.",
+                "Windows represent published arrival/last-order range, not meal duration."
+              ],
+              "discounted": false,
+              "description": "Lunch availability only November 12–13; ¥43, 505 tax/service included.",
+              "limitedTime": true,
+              "availability": {
+                "windows": [
+                  {
+                    "end": "13:31",
+                    "days": [
+                      0,
+                      1,
+                      3,
+                      4,
+                      5,
+                      6
+                    ],
+                    "start": "11:30"
+                  }
+                ]
+              },
+              "validThrough": "2026-11-13"
+            },
+            "venueKey": "hiramatsurestaurant.jp/kubotsu",
+            "photo": {
+              "alt": "Ristorante Kubotsu — Tenjin — Operator gallery: seasonal food illustration, not a fixed current or Christmas dish promise.",
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-18/batch89-kubotsu-0-8d46e4a1cce83cbf.webp",
+              "credit": "Hiramatsu / Ristorante Kubotsu",
+              "checkedAt": "2026-10-18",
+              "sourceUrl": "https://www.hiramatsurestaurant.jp/kubotsu/about/",
+              "originalUrl": "https://www.hiramatsurestaurant.jp/kubotsu/assets/img/about/imggallery01.jpg"
+            },
+            "menu": {
+              "url": "https://www.hiramatsurestaurant.jp/kubotsu/news/",
+              "note": "Official 2026 event notice controls year; booking description contains a stale 2025 typo despite Wednesday/Thursday/Friday matching 2026.",
+              "items": [
+                {
+                  "name": "秋の白トリュフ特別コース",
+                  "note": "Total including tax/service. Dinner Nov 11–13; lunch Nov 12–13 only. Named final recipes not published.",
+                  "price": 43505
+                }
+              ],
+              "label": "Kubotsu white-truffle dinner/lunch November 11–13",
+              "coverage": "published",
+              "currency": "JPY"
+            },
+            "startsAt": "2026-11-12T02:30:00.000Z",
+            "end": "13:31"
+          },
+          {
+            "id": "https://www.hiramatsurestaurant.jp/kubotsu/#0",
+            "name": "Ristorante Kubotsu — Tenjin",
+            "neighborhood": "Tenjin",
+            "address": "4 F RESOLA Tenjin, 2-5-55 Tenjin, Chuo-ku, Fukuoka",
+            "restaurantHref": "/pin/18147/ristorante-kubotsu-tenjin-opens-2018-01-25",
+            "checkedAt": "2026-10-18",
+            "special": {
+              "kind": "other",
+              "title": "Kubotsu Christmas lunch — December 1–25",
+              "schedule": "Asia/Tokyo local service / arrival windows; advance reservation rules apply.",
+              "menuLabel": "Kubotsu — ランチコース　Menu Cuore",
+              "sourceUrl": "https://www.hiramatsurestaurant.jp/kubotsu/news/",
+              "validFrom": "2026-12-01",
+              "conditions": [
+                "Advance reservation required; availability subject to private events and actual booking inventory.",
+                "Windows represent published arrival/last-order range, not meal duration."
+              ],
+              "discounted": false,
+              "description": "Three Christmas lunch courses ¥8, 701 / ¥13, 673 / ¥18, 645 including tax/service. Detailed recipes due late November; Tuesday closure still applies.",
+              "limitedTime": true,
+              "availability": {
+                "windows": [
+                  {
+                    "end": "13:31",
+                    "days": [
+                      0,
+                      1,
+                      3,
+                      4,
+                      5,
+                      6
+                    ],
+                    "start": "11:30"
+                  }
+                ]
+              },
+              "validThrough": "2026-12-25"
+            },
+            "venueKey": "hiramatsurestaurant.jp/kubotsu",
+            "photo": {
+              "alt": "Ristorante Kubotsu — Tenjin — Operator gallery: seasonal food illustration, not a fixed current or Christmas dish promise.",
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-18/batch89-kubotsu-0-8d46e4a1cce83cbf.webp",
+              "credit": "Hiramatsu / Ristorante Kubotsu",
+              "checkedAt": "2026-10-18",
+              "sourceUrl": "https://www.hiramatsurestaurant.jp/kubotsu/about/",
+              "originalUrl": "https://www.hiramatsurestaurant.jp/kubotsu/assets/img/about/imggallery01.jpg"
+            },
+            "menu": {
+              "url": "https://www.hiramatsurestaurant.jp/kubotsu/menu/",
+              "note": "【料理構成】 アミューズ・ブーシュ 前菜 パスタ料理 魚料理 メイン料理 クリスマスデザート コーヒー 小菓子 ＊詳しいメニュー内容は11月後半に公開予定でございます。",
+              "items": [
+                {
+                  "name": "ランチコース　Menu Cuore",
+                  "note": "Published total includes 13% service and 10% consumption tax. Course-specific dates/conditions apply.",
+                  "price": 8701
+                },
+                {
+                  "name": "アミューズ・ブーシュ",
+                  "note": "Published course component/example; included in the named purchased course, no standalone price published. Seasonal substitutions apply.",
+                  "priceLabel": "Price not published"
+                },
+                {
+                  "name": "パスタ料理",
+                  "note": "Published course component/example; included in the named purchased course, no standalone price published. Seasonal substitutions apply.",
+                  "priceLabel": "Price not published"
+                },
+                {
+                  "name": "魚料理",
+                  "note": "Published course component/example; included in the named purchased course, no standalone price published. Seasonal substitutions apply.",
+                  "priceLabel": "Price not published"
+                },
+                {
+                  "name": "メイン料理",
+                  "note": "Published course component/example; included in the named purchased course, no standalone price published. Seasonal substitutions apply.",
+                  "priceLabel": "Price not published"
+                },
+                {
+                  "name": "クリスマスデザート",
+                  "note": "Published course component/example; included in the named purchased course, no standalone price published. Seasonal substitutions apply.",
+                  "priceLabel": "Price not published"
+                },
+                {
+                  "name": "コーヒー",
+                  "note": "Published course component/example; included in the named purchased course, no standalone price published. Seasonal substitutions apply.",
+                  "priceLabel": "Price not published"
+                },
+                {
+                  "name": "小菓子",
+                  "note": "Published course component/example; included in the named purchased course, no standalone price published. Seasonal substitutions apply.",
+                  "priceLabel": "Price not published"
+                }
+              ],
+              "label": "Kubotsu — ランチコース　Menu Cuore",
+              "coverage": "sample",
+              "currency": "JPY"
+            },
+            "startsAt": "2026-12-02T02:30:00.000Z",
+            "end": "13:31"
+          },
+          {
+            "id": "https://www.hiramatsurestaurant.jp/kubotsu/#1",
+            "name": "Ristorante Kubotsu — Tenjin",
+            "neighborhood": "Tenjin",
+            "address": "4 F RESOLA Tenjin, 2-5-55 Tenjin, Chuo-ku, Fukuoka",
+            "restaurantHref": "/pin/18147/ristorante-kubotsu-tenjin-opens-2018-01-25",
+            "checkedAt": "2026-10-18",
+            "special": {
+              "kind": "other",
+              "title": "Kubotsu Christmas Regalo dinner — December 1–22",
+              "schedule": "Asia/Tokyo local service / arrival windows; advance reservation rules apply.",
+              "menuLabel": "Kubotsu — ディナーコース　Menu Regalo",
+              "sourceUrl": "https://www.hiramatsurestaurant.jp/kubotsu/news/",
+              "validFrom": "2026-12-01",
+              "conditions": [
+                "Advance reservation required; availability subject to private events and actual booking inventory.",
+                "Windows represent published arrival/last-order range, not meal duration."
+              ],
+              "discounted": false,
+              "description": "Christmas Menu Regalo: ¥17,402 including tax and service. Available through December 22; detailed recipes will be published in late November.",
+              "limitedTime": true,
+              "availability": {
+                "windows": [
+                  {
+                    "end": "20:01",
+                    "days": [
+                      0,
+                      1,
+                      3,
+                      4,
+                      5,
+                      6
+                    ],
+                    "start": "17:30"
+                  }
+                ]
+              },
+              "validThrough": "2026-12-22"
+            },
+            "venueKey": "hiramatsurestaurant.jp/kubotsu",
+            "photo": {
+              "alt": "Ristorante Kubotsu — Tenjin — Operator gallery: seasonal food illustration, not a fixed current or Christmas dish promise.",
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-18/batch89-kubotsu-0-8d46e4a1cce83cbf.webp",
+              "credit": "Hiramatsu / Ristorante Kubotsu",
+              "checkedAt": "2026-10-18",
+              "sourceUrl": "https://www.hiramatsurestaurant.jp/kubotsu/about/",
+              "originalUrl": "https://www.hiramatsurestaurant.jp/kubotsu/assets/img/about/imggallery01.jpg"
+            },
+            "menu": {
+              "url": "https://www.hiramatsurestaurant.jp/kubotsu/menu/",
+              "note": "【料理構成】 アミューズ・ブーシュ 前菜1品目 前菜2品目 パスタ料理 魚料理 メイン料理 クリスマスデザート コーヒー 小菓子 ＊詳しいメニュー内容は11月後半に公開予定でございます ＊ランチタイムでのご用意も可能です（要予約）",
+              "items": [
+                {
+                  "name": "ディナーコース　Menu Regalo",
+                  "note": "Published total includes 13% service and 10% consumption tax. Course-specific dates/conditions apply.",
+                  "price": 17402
+                },
+                {
+                  "name": "アミューズ・ブーシュ",
+                  "note": "Published course component/example; included in the named purchased course, no standalone price published. Seasonal substitutions apply.",
+                  "priceLabel": "Price not published"
+                },
+                {
+                  "name": "前菜1品目",
+                  "note": "Published course component/example; included in the named purchased course, no standalone price published. Seasonal substitutions apply.",
+                  "priceLabel": "Price not published"
+                },
+                {
+                  "name": "前菜2品目",
+                  "note": "Published course component/example; included in the named purchased course, no standalone price published. Seasonal substitutions apply.",
+                  "priceLabel": "Price not published"
+                },
+                {
+                  "name": "パスタ料理",
+                  "note": "Published course component/example; included in the named purchased course, no standalone price published. Seasonal substitutions apply.",
+                  "priceLabel": "Price not published"
+                },
+                {
+                  "name": "魚料理",
+                  "note": "Published course component/example; included in the named purchased course, no standalone price published. Seasonal substitutions apply.",
+                  "priceLabel": "Price not published"
+                },
+                {
+                  "name": "メイン料理",
+                  "note": "Published course component/example; included in the named purchased course, no standalone price published. Seasonal substitutions apply.",
+                  "priceLabel": "Price not published"
+                },
+                {
+                  "name": "クリスマスデザート",
+                  "note": "Published course component/example; included in the named purchased course, no standalone price published. Seasonal substitutions apply.",
+                  "priceLabel": "Price not published"
+                },
+                {
+                  "name": "コーヒー",
+                  "note": "Published course component/example; included in the named purchased course, no standalone price published. Seasonal substitutions apply.",
+                  "priceLabel": "Price not published"
+                },
+                {
+                  "name": "小菓子",
+                  "note": "Published course component/example; included in the named purchased course, no standalone price published. Seasonal substitutions apply.",
+                  "priceLabel": "Price not published"
+                }
+              ],
+              "label": "Kubotsu — ディナーコース　Menu Regalo",
+              "coverage": "sample",
+              "currency": "JPY"
+            },
+            "startsAt": "2026-12-02T08:30:00.000Z",
+            "end": "20:01"
+          },
+          {
+            "id": "https://www.hiramatsurestaurant.jp/kubotsu/#2",
+            "name": "Ristorante Kubotsu — Tenjin",
+            "neighborhood": "Tenjin",
+            "address": "4 F RESOLA Tenjin, 2-5-55 Tenjin, Chuo-ku, Fukuoka",
+            "restaurantHref": "/pin/18147/ristorante-kubotsu-tenjin-opens-2018-01-25",
+            "checkedAt": "2026-10-18",
+            "special": {
+              "kind": "other",
+              "title": "Kubotsu Christmas Cena Speciale dinner — December 1–25",
+              "schedule": "Asia/Tokyo local service / arrival windows; advance reservation rules apply.",
+              "menuLabel": "Kubotsu — ディナーコース　Menu Cena Speciale",
+              "sourceUrl": "https://www.hiramatsurestaurant.jp/kubotsu/news/",
+              "validFrom": "2026-12-01",
+              "conditions": [
+                "Advance reservation required; availability subject to private events and actual booking inventory.",
+                "Windows represent published arrival/last-order range, not meal duration."
+              ],
+              "discounted": false,
+              "description": "Christmas Menu Cena Speciale: ¥22,374 including tax and service. December 24–25 seats last 2.5 hours; confirm arrival and chosen booking inventory. Higher Gastronomia course is separately ¥32,318. Named Christmas recipes remain unpublished.",
+              "limitedTime": true,
+              "availability": {
+                "windows": [
+                  {
+                    "end": "20:01",
+                    "days": [
+                      0,
+                      1,
+                      3,
+                      4,
+                      5,
+                      6
+                    ],
+                    "start": "17:30"
+                  }
+                ]
+              },
+              "validThrough": "2026-12-25"
+            },
+            "venueKey": "hiramatsurestaurant.jp/kubotsu",
+            "photo": {
+              "alt": "Ristorante Kubotsu — Tenjin — Operator gallery: seasonal food illustration, not a fixed current or Christmas dish promise.",
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-18/batch89-kubotsu-0-8d46e4a1cce83cbf.webp",
+              "credit": "Hiramatsu / Ristorante Kubotsu",
+              "checkedAt": "2026-10-18",
+              "sourceUrl": "https://www.hiramatsurestaurant.jp/kubotsu/about/",
+              "originalUrl": "https://www.hiramatsurestaurant.jp/kubotsu/assets/img/about/imggallery01.jpg"
+            },
+            "menu": {
+              "url": "https://www.hiramatsurestaurant.jp/kubotsu/menu/",
+              "note": "【料理構成】 アミューズ・ブーシュ 前菜1品目 前菜2品目 パスタ料理 魚料理 メイン料理（牛肉） クリスマスデザート コーヒー 小菓子 ＊詳しいメニュー内容は11月後半に公開予定でございます ＊ランチタイムでのご用意も可能です（要予約）",
+              "items": [
+                {
+                  "name": "ディナーコース　Menu Cena Speciale",
+                  "note": "Published total includes 13% service and 10% consumption tax. Course-specific dates/conditions apply.",
+                  "price": 22374
+                },
+                {
+                  "name": "アミューズ・ブーシュ",
+                  "note": "Published course component/example; included in the named purchased course, no standalone price published. Seasonal substitutions apply.",
+                  "priceLabel": "Price not published"
+                },
+                {
+                  "name": "前菜1品目",
+                  "note": "Published course component/example; included in the named purchased course, no standalone price published. Seasonal substitutions apply.",
+                  "priceLabel": "Price not published"
+                },
+                {
+                  "name": "前菜2品目",
+                  "note": "Published course component/example; included in the named purchased course, no standalone price published. Seasonal substitutions apply.",
+                  "priceLabel": "Price not published"
+                },
+                {
+                  "name": "パスタ料理",
+                  "note": "Published course component/example; included in the named purchased course, no standalone price published. Seasonal substitutions apply.",
+                  "priceLabel": "Price not published"
+                },
+                {
+                  "name": "魚料理",
+                  "note": "Published course component/example; included in the named purchased course, no standalone price published. Seasonal substitutions apply.",
+                  "priceLabel": "Price not published"
+                },
+                {
+                  "name": "メイン料理（牛肉）",
+                  "note": "Published course component/example; included in the named purchased course, no standalone price published. Seasonal substitutions apply.",
+                  "priceLabel": "Price not published"
+                },
+                {
+                  "name": "クリスマスデザート",
+                  "note": "Published course component/example; included in the named purchased course, no standalone price published. Seasonal substitutions apply.",
+                  "priceLabel": "Price not published"
+                },
+                {
+                  "name": "コーヒー",
+                  "note": "Published course component/example; included in the named purchased course, no standalone price published. Seasonal substitutions apply.",
+                  "priceLabel": "Price not published"
+                },
+                {
+                  "name": "小菓子",
+                  "note": "Published course component/example; included in the named purchased course, no standalone price published. Seasonal substitutions apply.",
+                  "priceLabel": "Price not published"
+                }
+              ],
+              "label": "Kubotsu — ディナーコース　Menu Cena Speciale",
+              "coverage": "sample",
+              "currency": "JPY"
+            },
+            "startsAt": "2026-12-02T08:30:00.000Z",
+            "end": "20:01"
+          }
+        ]
+      },
+      {
+        "pinId": 18148,
+        "region": "fukuoka",
+        "view": "top",
+        "neighborhood": "Akasaka / Otemon",
+        "nativeTitleAndImage": true,
+        "hrefs": [
+          "/pin/18148/restaurant-georges-marceau-otemon-opens-2004-06-01"
+        ],
+        "browserFiltered": false,
+        "publicBase": "https://www.chronopin.com",
+        "guideStatus": 200,
+        "offers": []
+      },
+      {
+        "pinId": 18149,
+        "region": "fukuoka",
+        "view": "top",
+        "neighborhood": "Ohori Park",
+        "nativeTitleAndImage": true,
+        "hrefs": [
+          "/pin/18149/restaurant-hananoki-ohori-boathouse-opens-2015-02-06"
+        ],
+        "browserFiltered": false,
+        "publicBase": "https://www.chronopin.com",
+        "guideStatus": 200,
+        "offers": []
+      },
+      {
+        "pinId": 18150,
+        "region": "fukuoka",
+        "view": "top",
+        "neighborhood": "Ohori Park / Otemon",
+        "nativeTitleAndImage": true,
+        "hrefs": [
+          "/pin/18150/ttoahisu-otemon-opens-2016-05-05"
+        ],
+        "browserFiltered": false,
+        "publicBase": "https://www.chronopin.com",
+        "guideStatus": 200,
+        "offers": []
+      },
+      {
+        "pinId": 18151,
+        "region": "osaka",
+        "view": "top",
+        "neighborhood": "Tanimachi / Yariyamachi",
+        "nativeTitleAndImage": true,
+        "hrefs": [
+          "/pin/18151/fujiya-1935-yariyamachi-opens-2003-07-01"
+        ],
+        "browserFiltered": false,
+        "publicBase": "https://www.chronopin.com",
+        "guideStatus": 200,
+        "offers": []
+      },
+      {
+        "pinId": 18152,
+        "region": "osaka",
+        "view": "top",
+        "neighborhood": "Shinsaibashi / Nagahoribashi",
+        "nativeTitleAndImage": true,
+        "hrefs": [
+          "/pin/18152/taian-shimanouchi-opens-2000-05-20"
+        ],
+        "browserFiltered": false,
+        "publicBase": "https://www.chronopin.com",
+        "guideStatus": 200,
+        "offers": []
+      },
+      {
+        "pinId": 18153,
+        "region": "osaka",
+        "view": "top",
+        "neighborhood": "Uehommachi",
+        "nativeTitleAndImage": true,
+        "hrefs": [
+          "/pin/18153/yugen-uehommachi-opens-2019-06-18"
+        ],
+        "browserFiltered": false,
+        "publicBase": "https://www.chronopin.com",
+        "guideStatus": 200,
+        "offers": []
+      },
+      {
+        "pinId": 18154,
+        "region": "osaka",
+        "view": "top",
+        "neighborhood": "Kitahama",
+        "nativeTitleAndImage": true,
+        "hrefs": [
+          "/pin/18154/koryu-kitahama-uchiawajimachi-opens-2021-11-20"
+        ],
+        "browserFiltered": false,
+        "publicBase": "https://www.chronopin.com",
+        "guideStatus": 200,
+        "offers": []
+      },
+      {
+        "pinId": 18155,
+        "region": "kyoto",
+        "view": "top",
+        "neighborhood": "Oike / Kyoto Shiyakusho-mae",
+        "nativeTitleAndImage": true,
+        "hrefs": [
+          "/pin/18155/dodici-oike-hakusan-shrine-opens-2020-12-12"
+        ],
+        "browserFiltered": false,
+        "publicBase": "https://www.chronopin.com",
+        "guideStatus": 200,
+        "offers": []
+      },
+      {
+        "pinId": 18156,
+        "region": "kyoto",
+        "view": "top",
+        "neighborhood": "Kamogawa / Nijo",
+        "nativeTitleAndImage": true,
+        "hrefs": [
+          "/pin/18156/mizuki-the-ritz-carlton-kyoto-opens-2014-02-07"
+        ],
+        "browserFiltered": false,
+        "publicBase": "https://www.chronopin.com",
+        "guideStatus": 200,
+        "offers": []
+      },
+      {
+        "pinId": 18157,
+        "region": "tokyo",
+        "view": "top",
+        "neighborhood": "Ginza",
+        "nativeTitleAndImage": true,
+        "hrefs": [
+          "/pin/18157/l-osier-ginza-opens-2013-10-25"
+        ],
+        "browserFiltered": false,
+        "publicBase": "https://www.chronopin.com",
+        "guideStatus": 200,
+        "offers": []
+      },
+      {
+        "pinId": 18158,
+        "region": "tokyo",
+        "view": "top",
+        "neighborhood": "Nishiazabu / Omotesando",
+        "nativeTitleAndImage": true,
+        "hrefs": [
+          "/pin/18158/l-effervescence-nishiazabu-opens-2010-09-14"
+        ],
+        "browserFiltered": false,
+        "publicBase": "https://www.chronopin.com",
+        "guideStatus": 200,
+        "offers": []
+      }
+    ],
+    "note": "Read-only recheck through public HTTPS; original save evidence and prior timeouts remain historical."
+  }
 }

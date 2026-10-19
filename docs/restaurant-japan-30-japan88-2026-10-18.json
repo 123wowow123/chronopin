@@ -6730,7 +6730,7 @@
   ],
   "publicationStatus": {
     "local": "saved and verified",
-    "production": "saved and verified through production origin; public HTTPS timed out",
+    "production": "saved and publicly verified",
     "productionPinIds": [
       18132,
       18133,
@@ -6743,7 +6743,7 @@
       18141
     ],
     "transport": "Authenticated production admin APIs through a temporary local SSH tunnel to the running production application standby; no server config, deployment, build or restart performed.",
-    "publicHttpsVerified": false
+    "publicHttpsVerified": true
   },
   "verifiedAtUtc": "2026-10-19T05:17:36.884881+00:00",
   "verifiedGuideCounts": [
@@ -11001,7 +11001,7 @@
     "https://press.fourseasons.com/content/fourseasons_pressroom/printView.html?pageToPrint=%2Fcontent%2Ffourseasons_pressroom%2Fen%2Fnews%2Ftokyo%2F2021%2Fsezanne_restaurant_n1",
     "https://job.inshokuten.com/kanto/work/detail/38436"
   ],
-  "verificationNotes": "All full content and Specials profiles read back, ordinary menu item names verified in native public pin text, exact opening day/confidence verified and photo metadata checked. Thirteen native guide title/image memberships verified through paginated APIs and server HTML, using real browser neighborhood filtering when beyond initial HTML. 395 menu entries include repeated course components/alternatives, not 395 unique dishes. No app build, restart or deployment. Production read-backs, rendered pages, guide APIs and browser card checks used the running production application through an SSH tunnel. Public HTTPS requests timed out for both API and pages, including a 120-second guide probe, during a separately running deployment; external HTTPS verification remains pending.",
+  "verificationNotes": "October 19 public HTTPS recheck passed: complete profiles, public menus, gallery credits and all native title/image memberships. Earlier origin-only verification and timeouts are historical; see originalVerificationNotes. No deployment.",
   "publicHttpsChecks": {
     "status": "timed_out",
     "lastCheckedAtUtc": "2026-10-19T05:18:05.055215+00:00",
@@ -11009,5 +11009,1533 @@
     "longestProbeSeconds": 120,
     "finalProbeSeconds": 15,
     "followUp": "Repeat ordinary public HTTPS pin, menu, guide card and 24-count checks after the independently running deployment/server timeouts clear. Do not recreate saved pins or profiles."
+  },
+  "originalVerificationNotes": "All full content and Specials profiles read back, ordinary menu item names verified in native public pin text, exact opening day/confidence verified and photo metadata checked. Thirteen native guide title/image memberships verified through paginated APIs and server HTML, using real browser neighborhood filtering when beyond initial HTML. 395 menu entries include repeated course components/alternatives, not 395 unique dishes. No app build, restart or deployment. Production read-backs, rendered pages, guide APIs and browser card checks used the running production application through an SSH tunnel. Public HTTPS requests timed out for both API and pages, including a 120-second guide probe, during a separately running deployment; external HTTPS verification remains pending.",
+  "publicHttpsRecheck20261019": {
+    "verifiedAtUtc": "2026-10-19T20:32:37.391524+00:00",
+    "profiles": [
+      {
+        "pinId": 18132,
+        "sourceUrl": "https://010bld.com/goh/",
+        "name": "Goh — 010 BUILDING ground floor",
+        "contentId": 1866,
+        "contentRevision": 1,
+        "verifiedGalleryLinks": 2,
+        "publicPinStatus": 200,
+        "apiBase": "https://www.chronopin.com",
+        "publicBase": "https://www.chronopin.com"
+      },
+      {
+        "pinId": 18133,
+        "sourceUrl": "https://010bld.com/gohgan/",
+        "name": "GohGan — 010 BUILDING",
+        "contentId": 1867,
+        "contentRevision": 1,
+        "verifiedGalleryLinks": 3,
+        "publicPinStatus": 200,
+        "apiBase": "https://www.chronopin.com",
+        "publicBase": "https://www.chronopin.com"
+      },
+      {
+        "pinId": 18134,
+        "sourceUrl": "https://sola-factory.com/",
+        "name": "Restaurant Sola — Bayside Place Hakata",
+        "contentId": 1868,
+        "contentRevision": 1,
+        "verifiedGalleryLinks": 3,
+        "publicPinStatus": 200,
+        "apiBase": "https://www.chronopin.com",
+        "publicBase": "https://www.chronopin.com"
+      },
+      {
+        "pinId": 18135,
+        "sourceUrl": "https://www.hajime-artistes.com/",
+        "name": "HAJIME — Edobori",
+        "contentId": 1869,
+        "contentRevision": 1,
+        "verifiedGalleryLinks": 3,
+        "publicPinStatus": 200,
+        "apiBase": "https://www.chronopin.com",
+        "publicBase": "https://www.chronopin.com"
+      },
+      {
+        "pinId": 18136,
+        "sourceUrl": "https://labaie.ritzcarltonosaka.com/",
+        "name": "La Baie — The Ritz-Carlton Osaka",
+        "contentId": 1870,
+        "contentRevision": 1,
+        "verifiedGalleryLinks": 5,
+        "publicPinStatus": 200,
+        "apiBase": "https://www.chronopin.com",
+        "publicBase": "https://www.chronopin.com"
+      },
+      {
+        "pinId": 18137,
+        "sourceUrl": "https://splendido.ritzcarltonosaka.com/",
+        "name": "Splendido — The Ritz-Carlton Osaka",
+        "contentId": 1871,
+        "contentRevision": 1,
+        "verifiedGalleryLinks": 5,
+        "publicPinStatus": 200,
+        "apiBase": "https://www.chronopin.com",
+        "publicBase": "https://www.chronopin.com"
+      },
+      {
+        "pinId": 18138,
+        "sourceUrl": "https://www.thekawabunnagoya.com/thekawabunnagoya/restaurant/",
+        "name": "THE KAWABUN NAGOYA — Italian dining",
+        "contentId": 1872,
+        "contentRevision": 1,
+        "verifiedGalleryLinks": 4,
+        "publicPinStatus": 200,
+        "apiBase": "https://www.chronopin.com",
+        "publicBase": "https://www.chronopin.com"
+      },
+      {
+        "pinId": 18140,
+        "sourceUrl": "https://www.narisawa-yoshihiro.com/",
+        "name": "NARISAWA — Minami-Aoyama",
+        "contentId": 1873,
+        "contentRevision": 1,
+        "verifiedGalleryLinks": 2,
+        "publicPinStatus": 200,
+        "apiBase": "https://www.chronopin.com",
+        "publicBase": "https://www.chronopin.com"
+      },
+      {
+        "pinId": 18141,
+        "sourceUrl": "https://www.sezanne.tokyo/",
+        "name": "SÉZANNE — Four Seasons Marunouchi",
+        "contentId": 1874,
+        "contentRevision": 1,
+        "verifiedGalleryLinks": 5,
+        "publicPinStatus": 200,
+        "apiBase": "https://www.chronopin.com",
+        "publicBase": "https://www.chronopin.com"
+      }
+    ],
+    "guides": [
+      {
+        "pinId": 18132,
+        "region": "fukuoka",
+        "view": "top",
+        "neighborhood": "Hakata / Sumiyoshi",
+        "nativeTitleAndImage": true,
+        "hrefs": [
+          "/pin/18132/goh-010-building-ground-floor-opens-2025-10-15"
+        ],
+        "browserFiltered": false,
+        "publicBase": "https://www.chronopin.com",
+        "guideStatus": 200,
+        "offers": []
+      },
+      {
+        "pinId": 18133,
+        "region": "fukuoka",
+        "view": "top",
+        "neighborhood": "Hakata / Sumiyoshi",
+        "nativeTitleAndImage": true,
+        "hrefs": [
+          "/pin/18133/gohgan-010-building-opens-2022-12-01"
+        ],
+        "browserFiltered": false,
+        "publicBase": "https://www.chronopin.com",
+        "guideStatus": 200,
+        "offers": []
+      },
+      {
+        "pinId": 18133,
+        "region": "fukuoka",
+        "view": "discounts",
+        "neighborhood": "Hakata / Sumiyoshi",
+        "nativeTitleAndImage": true,
+        "hrefs": [
+          "/pin/18133/gohgan-010-building-opens-2022-12-01"
+        ],
+        "browserFiltered": true,
+        "publicBase": "https://www.chronopin.com",
+        "guideStatus": 200,
+        "offers": [
+          {
+            "id": "https://010bld.com/gohgan/#0",
+            "name": "GohGan — 010 BUILDING",
+            "neighborhood": "Hakata / Sumiyoshi",
+            "address": "1F 010 BUILDING, 1-4-17 Sumiyoshi, Hakata-ku, Fukuoka",
+            "restaurantHref": "/pin/18133/gohgan-010-building-opens-2022-12-01",
+            "checkedAt": "2026-10-18",
+            "special": {
+              "kind": "other",
+              "title": "GohGan × FARO — Goh Journey VOL.9",
+              "schedule": "Asia/Tokyo local service / arrival windows; advance reservation rules apply.",
+              "menuLabel": "GohGan November 1 Goh × FARO collaboration",
+              "sourceUrl": "https://www.tablecheck.com/ja/shops/gohgan/reserve",
+              "validFrom": "2026-11-01",
+              "conditions": [
+                "Prepaid course; optional drinks paid at venue.",
+                "Adult-only; allergies/dislikes cannot be individually accommodated.",
+                "One-minute display slot marks the published onset, not an invented meal duration."
+              ],
+              "discounted": false,
+              "description": "One-night collaboration at GohGan with FARO chefs Mizuki Yamaguchi and Mineko Kato. Course ¥30,800 including tax, plus 5% service; doors 18:15 and dinner starts 18:30.",
+              "limitedTime": true,
+              "availability": {
+                "windows": [
+                  {
+                    "end": "18:31",
+                    "days": [
+                      0,
+                      1,
+                      2,
+                      3,
+                      4,
+                      5,
+                      6
+                    ],
+                    "start": "18:30"
+                  }
+                ]
+              },
+              "validThrough": "2026-11-01"
+            },
+            "venueKey": "010bld.com/gohgan",
+            "photo": {
+              "alt": "GohGan — 010 BUILDING — Operator-uploaded exact-branch gallery view; appearance may change. ",
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-18/batch88-gohgan-1-c7eeb0cfc7bc7582.webp",
+              "credit": "GohGan / operator via Tabelog",
+              "checkedAt": "2026-10-18",
+              "sourceUrl": "https://tabelog.com/en/fukuoka/A4001/A400103/40062762/dtlphotolst/3/smp2/",
+              "originalUrl": "https://tblg.k-img.com/restaurant/images/Rvw/331038/640x640_rect_92d6c06e6aee4e6ade992e131aa7da08.jpg"
+            },
+            "menu": {
+              "url": "https://www.tablecheck.com/ja/shops/gohgan/reserve",
+              "note": "November 1, 2026 only. Doors 18:15, simultaneous start 18:30. Adult-only, no individual allergy/dislike changes. Exact named collaboration dishes not yet published; ordinary dishes are not assigned to it.",
+              "items": [
+                {
+                  "name": "Goh Journey VOL.9 SPECIAL EDITION",
+                  "note": "Tax included as booking total; 5% service additional. Description states base ¥28,000 before tax/service.",
+                  "price": 30800
+                },
+                {
+                  "name": "Optional alcoholic pairing",
+                  "note": "Base supplement excludes consumption tax and 5% service; payable at venue, not in course prepayment.",
+                  "price": 10000
+                }
+              ],
+              "label": "GohGan November 1 Goh × FARO collaboration",
+              "coverage": "published",
+              "currency": "JPY"
+            },
+            "kidsFriendly": true,
+            "startsAt": "2026-11-01T09:30:00.000Z",
+            "end": "18:31"
+          }
+        ]
+      },
+      {
+        "pinId": 18134,
+        "region": "fukuoka",
+        "view": "top",
+        "neighborhood": "Bayside Place / Chikko Honmachi",
+        "nativeTitleAndImage": true,
+        "hrefs": [
+          "/pin/18134/restaurant-sola-bayside-place-hakata-opens-2018-12-15"
+        ],
+        "browserFiltered": false,
+        "publicBase": "https://www.chronopin.com",
+        "guideStatus": 200,
+        "offers": []
+      },
+      {
+        "pinId": 18135,
+        "region": "osaka",
+        "view": "top",
+        "neighborhood": "Higobashi / Edobori",
+        "nativeTitleAndImage": true,
+        "hrefs": [
+          "/pin/18135/hajime-edobori-opens-2008-05-01"
+        ],
+        "browserFiltered": false,
+        "publicBase": "https://www.chronopin.com",
+        "guideStatus": 200,
+        "offers": []
+      },
+      {
+        "pinId": 18136,
+        "region": "osaka",
+        "view": "top",
+        "neighborhood": "Nishi-Umeda",
+        "nativeTitleAndImage": true,
+        "hrefs": [
+          "/pin/18136/la-baie-the-ritz-carlton-osaka-opens-1997-05-01"
+        ],
+        "browserFiltered": false,
+        "publicBase": "https://www.chronopin.com",
+        "guideStatus": 200,
+        "offers": []
+      },
+      {
+        "pinId": 18136,
+        "region": "osaka",
+        "view": "discounts",
+        "neighborhood": "Nishi-Umeda",
+        "nativeTitleAndImage": true,
+        "hrefs": [
+          "/pin/18136/la-baie-the-ritz-carlton-osaka-opens-1997-05-01"
+        ],
+        "browserFiltered": false,
+        "publicBase": "https://www.chronopin.com",
+        "guideStatus": 200,
+        "offers": [
+          {
+            "id": "https://labaie.ritzcarltonosaka.com/#0",
+            "name": "La Baie — The Ritz-Carlton Osaka",
+            "neighborhood": "Nishi-Umeda",
+            "address": "5F The Ritz-Carlton Osaka, 2-5-25 Umeda, Kita-ku, Osaka",
+            "restaurantHref": "/pin/18136/la-baie-the-ritz-carlton-osaka-opens-1997-05-01",
+            "checkedAt": "2026-10-18",
+            "special": {
+              "kind": "other",
+              "title": "La Baie Christmas lunch",
+              "schedule": "Asia/Tokyo local service / arrival windows; advance reservation rules apply.",
+              "menuLabel": "La Baie Christmas and New Year 2026–27",
+              "sourceUrl": "https://www.tablecheck.com/ja/shops/ritzcarltonosaka-labaie/reserve",
+              "validFrom": "2026-12-19",
+              "conditions": [
+                "Prepaid, no other discounts, one to four guests; dishes to be announced."
+              ],
+              "discounted": false,
+              "description": "Festive lunch ¥22,500 or Noël lunch ¥32,000, including tax and service. Book an arrival between 11:30 and 13:00.",
+              "limitedTime": true,
+              "availability": {
+                "windows": [
+                  {
+                    "end": "13:01",
+                    "days": [
+                      0,
+                      1,
+                      2,
+                      3,
+                      4,
+                      5,
+                      6
+                    ],
+                    "start": "11:30"
+                  }
+                ]
+              },
+              "validThrough": "2026-12-27"
+            },
+            "venueKey": "labaie.ritzcarltonosaka.com",
+            "photo": {
+              "alt": "La Baie — The Ritz-Carlton Osaka — Operator-uploaded exact-branch gallery view; appearance may change. ",
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-18/batch88-labaie-0-10fdf2beb04d3ad7.webp",
+              "credit": "The Ritz-Carlton Osaka / La Baie / operator via Tabelog",
+              "checkedAt": "2026-10-18",
+              "sourceUrl": "https://tabelog.com/en/osaka/A2701/A270101/27000702/dtlphotolst/3/smp2/",
+              "originalUrl": "https://tblg.k-img.com/restaurant/images/Rvw/111011/640x640_rect_111011159.jpg"
+            },
+            "menu": {
+              "url": "https://labaie.ritzcarltonosaka.com/our-menus",
+              "note": "Named holiday dish details are explicitly to be announced. Do not assume current October dishes participate. Advance payment and holiday cancellation terms apply.",
+              "items": [
+                {
+                  "name": "Christmas festive La Baie lunch",
+                  "note": "December 19–27, tax/service included.",
+                  "price": 22500
+                },
+                {
+                  "name": "Christmas Noël lunch",
+                  "note": "December 19–27, tax/service included.",
+                  "price": 32000
+                },
+                {
+                  "name": "Christmas Noël dinner",
+                  "note": "December 19–27, tax/service included.",
+                  "price": 50000
+                },
+                {
+                  "name": "Christmas Noël dinner with Oscietra",
+                  "note": "December 19–27, tax/service included.",
+                  "price": 66000
+                },
+                {
+                  "name": "Christmas Noël dinner with Beluga",
+                  "note": "December 19–27, tax/service included.",
+                  "price": 81000
+                },
+                {
+                  "name": "New Year festive La Baie lunch",
+                  "note": "December 28–January 3, tax/service included.",
+                  "price": 22500
+                },
+                {
+                  "name": "New Year festive Signature lunch",
+                  "note": "December 28–January 3, tax/service included.",
+                  "price": 31000
+                },
+                {
+                  "name": "New Year festive Élégant dinner",
+                  "note": "December 28–January 3, tax/service included.",
+                  "price": 36500
+                },
+                {
+                  "name": "New Year festive Prestige dinner",
+                  "note": "December 28–January 3, tax/service included.",
+                  "price": 45000
+                }
+              ],
+              "label": "La Baie Christmas and New Year 2026–27",
+              "coverage": "published",
+              "currency": "JPY"
+            },
+            "startsAt": "2026-12-19T02:30:00.000Z",
+            "end": "13:01"
+          },
+          {
+            "id": "https://labaie.ritzcarltonosaka.com/#1",
+            "name": "La Baie — The Ritz-Carlton Osaka",
+            "neighborhood": "Nishi-Umeda",
+            "address": "5F The Ritz-Carlton Osaka, 2-5-25 Umeda, Kita-ku, Osaka",
+            "restaurantHref": "/pin/18136/la-baie-the-ritz-carlton-osaka-opens-1997-05-01",
+            "checkedAt": "2026-10-18",
+            "special": {
+              "kind": "other",
+              "title": "La Baie Christmas dinner",
+              "schedule": "Asia/Tokyo local service / arrival windows; advance reservation rules apply.",
+              "menuLabel": "La Baie Christmas and New Year 2026–27",
+              "sourceUrl": "https://www.tablecheck.com/ja/shops/ritzcarltonosaka-labaie/reserve",
+              "validFrom": "2026-12-19",
+              "conditions": [
+                "Published Christmas booking arrival range 17:00–21:00 overrides ordinary hours; 2.5-hour seats.",
+                "Prepayment; special cancellation policy; dishes to be announced."
+              ],
+              "discounted": false,
+              "description": "Noël dinner ¥50,000, Oscietra ¥66,000 or Beluga ¥81,000 including tax and service.",
+              "limitedTime": true,
+              "availability": {
+                "windows": [
+                  {
+                    "end": "21:01",
+                    "days": [
+                      0,
+                      1,
+                      2,
+                      3,
+                      4,
+                      5,
+                      6
+                    ],
+                    "start": "17:00"
+                  }
+                ]
+              },
+              "validThrough": "2026-12-27"
+            },
+            "venueKey": "labaie.ritzcarltonosaka.com",
+            "photo": {
+              "alt": "La Baie — The Ritz-Carlton Osaka — Operator-uploaded exact-branch gallery view; appearance may change. ",
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-18/batch88-labaie-0-10fdf2beb04d3ad7.webp",
+              "credit": "The Ritz-Carlton Osaka / La Baie / operator via Tabelog",
+              "checkedAt": "2026-10-18",
+              "sourceUrl": "https://tabelog.com/en/osaka/A2701/A270101/27000702/dtlphotolst/3/smp2/",
+              "originalUrl": "https://tblg.k-img.com/restaurant/images/Rvw/111011/640x640_rect_111011159.jpg"
+            },
+            "menu": {
+              "url": "https://labaie.ritzcarltonosaka.com/our-menus",
+              "note": "Named holiday dish details are explicitly to be announced. Do not assume current October dishes participate. Advance payment and holiday cancellation terms apply.",
+              "items": [
+                {
+                  "name": "Christmas festive La Baie lunch",
+                  "note": "December 19–27, tax/service included.",
+                  "price": 22500
+                },
+                {
+                  "name": "Christmas Noël lunch",
+                  "note": "December 19–27, tax/service included.",
+                  "price": 32000
+                },
+                {
+                  "name": "Christmas Noël dinner",
+                  "note": "December 19–27, tax/service included.",
+                  "price": 50000
+                },
+                {
+                  "name": "Christmas Noël dinner with Oscietra",
+                  "note": "December 19–27, tax/service included.",
+                  "price": 66000
+                },
+                {
+                  "name": "Christmas Noël dinner with Beluga",
+                  "note": "December 19–27, tax/service included.",
+                  "price": 81000
+                },
+                {
+                  "name": "New Year festive La Baie lunch",
+                  "note": "December 28–January 3, tax/service included.",
+                  "price": 22500
+                },
+                {
+                  "name": "New Year festive Signature lunch",
+                  "note": "December 28–January 3, tax/service included.",
+                  "price": 31000
+                },
+                {
+                  "name": "New Year festive Élégant dinner",
+                  "note": "December 28–January 3, tax/service included.",
+                  "price": 36500
+                },
+                {
+                  "name": "New Year festive Prestige dinner",
+                  "note": "December 28–January 3, tax/service included.",
+                  "price": 45000
+                }
+              ],
+              "label": "La Baie Christmas and New Year 2026–27",
+              "coverage": "published",
+              "currency": "JPY"
+            },
+            "startsAt": "2026-12-19T08:00:00.000Z",
+            "end": "21:01"
+          },
+          {
+            "id": "https://labaie.ritzcarltonosaka.com/#2",
+            "name": "La Baie — The Ritz-Carlton Osaka",
+            "neighborhood": "Nishi-Umeda",
+            "address": "5F The Ritz-Carlton Osaka, 2-5-25 Umeda, Kita-ku, Osaka",
+            "restaurantHref": "/pin/18136/la-baie-the-ritz-carlton-osaka-opens-1997-05-01",
+            "checkedAt": "2026-10-18",
+            "special": {
+              "kind": "other",
+              "title": "La Baie festive New Year lunch",
+              "schedule": "Asia/Tokyo local service / arrival windows; advance reservation rules apply.",
+              "menuLabel": "La Baie Christmas and New Year 2026–27",
+              "sourceUrl": "https://www.tablecheck.com/ja/shops/ritzcarltonosaka-labaie/reserve",
+              "validFrom": "2026-12-28",
+              "conditions": [
+                "Holiday booking arrival range; confirm calendar and current dishes."
+              ],
+              "discounted": false,
+              "description": "La Baie lunch ¥22,500 or Signature lunch ¥31,000 including tax and service.",
+              "limitedTime": true,
+              "availability": {
+                "windows": [
+                  {
+                    "end": "13:01",
+                    "days": [
+                      0,
+                      1,
+                      2,
+                      3,
+                      4,
+                      5,
+                      6
+                    ],
+                    "start": "11:30"
+                  }
+                ]
+              },
+              "validThrough": "2027-01-03"
+            },
+            "venueKey": "labaie.ritzcarltonosaka.com",
+            "photo": {
+              "alt": "La Baie — The Ritz-Carlton Osaka — Operator-uploaded exact-branch gallery view; appearance may change. ",
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-18/batch88-labaie-0-10fdf2beb04d3ad7.webp",
+              "credit": "The Ritz-Carlton Osaka / La Baie / operator via Tabelog",
+              "checkedAt": "2026-10-18",
+              "sourceUrl": "https://tabelog.com/en/osaka/A2701/A270101/27000702/dtlphotolst/3/smp2/",
+              "originalUrl": "https://tblg.k-img.com/restaurant/images/Rvw/111011/640x640_rect_111011159.jpg"
+            },
+            "menu": {
+              "url": "https://labaie.ritzcarltonosaka.com/our-menus",
+              "note": "Named holiday dish details are explicitly to be announced. Do not assume current October dishes participate. Advance payment and holiday cancellation terms apply.",
+              "items": [
+                {
+                  "name": "Christmas festive La Baie lunch",
+                  "note": "December 19–27, tax/service included.",
+                  "price": 22500
+                },
+                {
+                  "name": "Christmas Noël lunch",
+                  "note": "December 19–27, tax/service included.",
+                  "price": 32000
+                },
+                {
+                  "name": "Christmas Noël dinner",
+                  "note": "December 19–27, tax/service included.",
+                  "price": 50000
+                },
+                {
+                  "name": "Christmas Noël dinner with Oscietra",
+                  "note": "December 19–27, tax/service included.",
+                  "price": 66000
+                },
+                {
+                  "name": "Christmas Noël dinner with Beluga",
+                  "note": "December 19–27, tax/service included.",
+                  "price": 81000
+                },
+                {
+                  "name": "New Year festive La Baie lunch",
+                  "note": "December 28–January 3, tax/service included.",
+                  "price": 22500
+                },
+                {
+                  "name": "New Year festive Signature lunch",
+                  "note": "December 28–January 3, tax/service included.",
+                  "price": 31000
+                },
+                {
+                  "name": "New Year festive Élégant dinner",
+                  "note": "December 28–January 3, tax/service included.",
+                  "price": 36500
+                },
+                {
+                  "name": "New Year festive Prestige dinner",
+                  "note": "December 28–January 3, tax/service included.",
+                  "price": 45000
+                }
+              ],
+              "label": "La Baie Christmas and New Year 2026–27",
+              "coverage": "published",
+              "currency": "JPY"
+            },
+            "startsAt": "2026-12-28T02:30:00.000Z",
+            "end": "13:01"
+          },
+          {
+            "id": "https://labaie.ritzcarltonosaka.com/#3",
+            "name": "La Baie — The Ritz-Carlton Osaka",
+            "neighborhood": "Nishi-Umeda",
+            "address": "5F The Ritz-Carlton Osaka, 2-5-25 Umeda, Kita-ku, Osaka",
+            "restaurantHref": "/pin/18136/la-baie-the-ritz-carlton-osaka-opens-1997-05-01",
+            "checkedAt": "2026-10-18",
+            "special": {
+              "kind": "other",
+              "title": "La Baie festive New Year dinner",
+              "schedule": "Asia/Tokyo local service / arrival windows; advance reservation rules apply.",
+              "menuLabel": "La Baie Christmas and New Year 2026–27",
+              "sourceUrl": "https://www.tablecheck.com/ja/shops/ritzcarltonosaka-labaie/reserve",
+              "validFrom": "2026-12-28",
+              "conditions": [
+                "Exact holiday booking last-arrival values checked; not the meal duration."
+              ],
+              "discounted": false,
+              "description": "Élégant ¥36,500 or Prestige ¥45,000 including tax and service.",
+              "limitedTime": true,
+              "availability": {
+                "windows": [
+                  {
+                    "end": "19:31",
+                    "days": [
+                      0,
+                      1,
+                      2,
+                      3,
+                      4,
+                      5,
+                      6
+                    ],
+                    "start": "17:30"
+                  }
+                ]
+              },
+              "validThrough": "2027-01-03"
+            },
+            "venueKey": "labaie.ritzcarltonosaka.com",
+            "photo": {
+              "alt": "La Baie — The Ritz-Carlton Osaka — Operator-uploaded exact-branch gallery view; appearance may change. ",
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-18/batch88-labaie-0-10fdf2beb04d3ad7.webp",
+              "credit": "The Ritz-Carlton Osaka / La Baie / operator via Tabelog",
+              "checkedAt": "2026-10-18",
+              "sourceUrl": "https://tabelog.com/en/osaka/A2701/A270101/27000702/dtlphotolst/3/smp2/",
+              "originalUrl": "https://tblg.k-img.com/restaurant/images/Rvw/111011/640x640_rect_111011159.jpg"
+            },
+            "menu": {
+              "url": "https://labaie.ritzcarltonosaka.com/our-menus",
+              "note": "Named holiday dish details are explicitly to be announced. Do not assume current October dishes participate. Advance payment and holiday cancellation terms apply.",
+              "items": [
+                {
+                  "name": "Christmas festive La Baie lunch",
+                  "note": "December 19–27, tax/service included.",
+                  "price": 22500
+                },
+                {
+                  "name": "Christmas Noël lunch",
+                  "note": "December 19–27, tax/service included.",
+                  "price": 32000
+                },
+                {
+                  "name": "Christmas Noël dinner",
+                  "note": "December 19–27, tax/service included.",
+                  "price": 50000
+                },
+                {
+                  "name": "Christmas Noël dinner with Oscietra",
+                  "note": "December 19–27, tax/service included.",
+                  "price": 66000
+                },
+                {
+                  "name": "Christmas Noël dinner with Beluga",
+                  "note": "December 19–27, tax/service included.",
+                  "price": 81000
+                },
+                {
+                  "name": "New Year festive La Baie lunch",
+                  "note": "December 28–January 3, tax/service included.",
+                  "price": 22500
+                },
+                {
+                  "name": "New Year festive Signature lunch",
+                  "note": "December 28–January 3, tax/service included.",
+                  "price": 31000
+                },
+                {
+                  "name": "New Year festive Élégant dinner",
+                  "note": "December 28–January 3, tax/service included.",
+                  "price": 36500
+                },
+                {
+                  "name": "New Year festive Prestige dinner",
+                  "note": "December 28–January 3, tax/service included.",
+                  "price": 45000
+                }
+              ],
+              "label": "La Baie Christmas and New Year 2026–27",
+              "coverage": "published",
+              "currency": "JPY"
+            },
+            "startsAt": "2026-12-28T08:30:00.000Z",
+            "end": "19:31"
+          }
+        ]
+      },
+      {
+        "pinId": 18137,
+        "region": "osaka",
+        "view": "top",
+        "neighborhood": "Nishi-Umeda",
+        "nativeTitleAndImage": true,
+        "hrefs": [
+          "/pin/18137/splendido-the-ritz-carlton-osaka-opens-1997-05-23"
+        ],
+        "browserFiltered": false,
+        "publicBase": "https://www.chronopin.com",
+        "guideStatus": 200,
+        "offers": []
+      },
+      {
+        "pinId": 18137,
+        "region": "osaka",
+        "view": "discounts",
+        "neighborhood": "Nishi-Umeda",
+        "nativeTitleAndImage": true,
+        "hrefs": [
+          "/pin/18137/splendido-the-ritz-carlton-osaka-opens-1997-05-23"
+        ],
+        "browserFiltered": false,
+        "publicBase": "https://www.chronopin.com",
+        "guideStatus": 200,
+        "offers": [
+          {
+            "id": "https://splendido.ritzcarltonosaka.com/#1",
+            "name": "Splendido — The Ritz-Carlton Osaka",
+            "neighborhood": "Nishi-Umeda",
+            "address": "1F The Ritz-Carlton Osaka, 2-5-25 Umeda, Kita-ku, Osaka",
+            "restaurantHref": "/pin/18137/splendido-the-ritz-carlton-osaka-opens-1997-05-23",
+            "checkedAt": "2026-10-18",
+            "special": {
+              "kind": "other",
+              "title": "Splendido weekday 12:30 lunch offer",
+              "schedule": "Asia/Tokyo local service / arrival windows; advance reservation rules apply.",
+              "menuLabel": "Splendido weekday online offers",
+              "sourceUrl": "https://www.tablecheck.com/ja/shops/ritzcarltonosaka-splendido/reserve",
+              "validFrom": "2026-09-01",
+              "conditions": [
+                "Online prepaid booking; exact 12:30 arrival, no combined discounts.",
+                "Weekdays excluding public holidays; one-minute display slot marks arrival only."
+              ],
+              "discounted": true,
+              "description": "Short lunch buffet ¥5,000 including tax/service; coffee and tea only, final departure 14:00.",
+              "limitedTime": true,
+              "availability": {
+                "windows": [
+                  {
+                    "end": "12:31",
+                    "days": [
+                      1,
+                      2,
+                      3,
+                      4,
+                      5
+                    ],
+                    "start": "12:30"
+                  }
+                ],
+                "excludedDates": [
+                  "2026-09-21",
+                  "2026-09-22",
+                  "2026-09-23",
+                  "2026-10-12",
+                  "2026-11-03"
+                ],
+                "excludesHolidays": true,
+                "holidayCalendarThrough": "2026-12-31"
+              },
+              "validThrough": "2026-11-12"
+            },
+            "venueKey": "splendido.ritzcarltonosaka.com",
+            "photo": {
+              "alt": "Splendido — The Ritz-Carlton Osaka — Operator-uploaded exact-branch gallery view; appearance may change. ",
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-18/batch88-splendido-0-9573cde5a0908985.webp",
+              "credit": "The Ritz-Carlton Osaka / Splendido / operator via Tabelog",
+              "checkedAt": "2026-10-18",
+              "sourceUrl": "https://tabelog.com/en/osaka/A2701/A270101/27000700/dtlphotolst/3/smp2/",
+              "originalUrl": "https://tblg.k-img.com/restaurant/images/Rvw/186241/640x640_rect_34f8c68acd58ae6e854df0a2a3d475f7.jpg"
+            },
+            "menu": {
+              "url": "https://www.tablecheck.com/ja/shops/ritzcarltonosaka-splendido/reserve",
+              "note": "Short lunch through November 12; Serata booking through November 30. Exact named lunch buffet full roster remains unpublished; no transfer of afternoon sweets into lunch.",
+              "items": [
+                {
+                  "name": "Time-limited Flavor of Autumn weekday lunch",
+                  "note": "Tax and service included. Web prepaid, 12:30–14:00 seats only; coffee/tea only, no advertised wine free-flow.",
+                  "price": 5000
+                },
+                {
+                  "name": "Flavor of Autumn weekday lunch with coffee/tea only",
+                  "note": "Tax and service included. Prepaid; 120-minute seats, separate from 12:30 short plan.",
+                  "price": 5900
+                },
+                {
+                  "name": "Serata four-course weekday dinner",
+                  "note": "Tax and service included. Online weekday offer; not combinable with discounts.",
+                  "price": 8000
+                },
+                {
+                  "name": "Serata roast-beef main replacement",
+                  "note": "Supplement, tax/service included.",
+                  "price": 1800
+                },
+                {
+                  "name": "Serata assorted starters",
+                  "note": "Included seasonal course component; no standalone price published. Confirm current substitutions.",
+                  "priceLabel": "Price not published"
+                },
+                {
+                  "name": "Serata pasta of the day",
+                  "note": "Included seasonal course component; no standalone price published. Confirm current substitutions.",
+                  "priceLabel": "Price not published"
+                },
+                {
+                  "name": "Serata chicken alla romana",
+                  "note": "Included seasonal course component; no standalone price published. Confirm current substitutions.",
+                  "priceLabel": "Price not published"
+                },
+                {
+                  "name": "Serata dessert",
+                  "note": "Included seasonal course component; no standalone price published. Confirm current substitutions.",
+                  "priceLabel": "Price not published"
+                },
+                {
+                  "name": "Serata coffee or tea",
+                  "note": "Included seasonal course component; no standalone price published. Confirm current substitutions.",
+                  "priceLabel": "Price not published"
+                }
+              ],
+              "label": "Splendido weekday online offers",
+              "coverage": "published",
+              "currency": "JPY"
+            },
+            "startsAt": "2026-10-20T03:30:00.000Z",
+            "end": "12:31"
+          },
+          {
+            "id": "https://splendido.ritzcarltonosaka.com/#0",
+            "name": "Splendido — The Ritz-Carlton Osaka",
+            "neighborhood": "Nishi-Umeda",
+            "address": "1F The Ritz-Carlton Osaka, 2-5-25 Umeda, Kita-ku, Osaka",
+            "restaurantHref": "/pin/18137/splendido-the-ritz-carlton-osaka-opens-1997-05-23",
+            "checkedAt": "2026-10-18",
+            "special": {
+              "kind": "other",
+              "title": "Splendido Stars of Autumn afternoon buffet",
+              "schedule": "Asia/Tokyo local service / arrival windows; advance reservation rules apply.",
+              "menuLabel": "Splendido Stars of Autumn afternoon buffet",
+              "sourceUrl": "https://splendido.ritzcarltonosaka.com/afternoon",
+              "validFrom": "2026-09-01",
+              "conditions": [
+                "Buffet food starts 14:45 after photography time.",
+                "Halloween styling only October 1–November 5; younger than six free, ages 6–12 half price."
+              ],
+              "discounted": false,
+              "description": "Seasonal sweets and savouries, weekday adult ¥7,000 or weekend/holiday ¥7,500, tax/service included. Reserve 14:30–15:30; 90-minute seats.",
+              "limitedTime": true,
+              "availability": {
+                "windows": [
+                  {
+                    "end": "15:31",
+                    "days": [
+                      0,
+                      1,
+                      2,
+                      3,
+                      4,
+                      5,
+                      6
+                    ],
+                    "start": "14:30"
+                  }
+                ]
+              },
+              "validThrough": "2026-11-12"
+            },
+            "venueKey": "splendido.ritzcarltonosaka.com",
+            "photo": {
+              "alt": "Splendido — The Ritz-Carlton Osaka — Operator-uploaded exact-branch gallery view; appearance may change. ",
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-18/batch88-splendido-0-9573cde5a0908985.webp",
+              "credit": "The Ritz-Carlton Osaka / Splendido / operator via Tabelog",
+              "checkedAt": "2026-10-18",
+              "sourceUrl": "https://tabelog.com/en/osaka/A2701/A270101/27000700/dtlphotolst/3/smp2/",
+              "originalUrl": "https://tblg.k-img.com/restaurant/images/Rvw/186241/640x640_rect_34f8c68acd58ae6e854df0a2a3d475f7.jpg"
+            },
+            "menu": {
+              "url": "https://splendido.ritzcarltonosaka.com/afternoon",
+              "note": "September 1–November 12; Halloween presentation October 1–November 5 only. 14:30–17:00, 90-minute seats, final entry 15:30. Photography 14:30–14:45, buffet food starts 14:45. Ten included drink choices advertised, full roster not printed.",
+              "items": [
+                {
+                  "name": "Weekday adult afternoon buffet",
+                  "note": "Tax and service included.",
+                  "price": 7000
+                },
+                {
+                  "name": "Weekend/holiday adult afternoon buffet",
+                  "note": "Tax and service included.",
+                  "price": 7500
+                },
+                {
+                  "name": "Weekday child age 6–12",
+                  "note": "Tax and service included.",
+                  "price": 3500
+                },
+                {
+                  "name": "Weekend/holiday child age 6–12",
+                  "note": "Tax and service included.",
+                  "price": 3750
+                },
+                {
+                  "name": "Cinnamon panna cotta with apple compote",
+                  "note": "Included seasonal course component; no standalone price published. Confirm current substitutions.",
+                  "priceLabel": "Price not published"
+                },
+                {
+                  "name": "Breton sablé tart with muscat grapes and bourbon-vanilla cream",
+                  "note": "Included seasonal course component; no standalone price published. Confirm current substitutions.",
+                  "priceLabel": "Price not published"
+                },
+                {
+                  "name": "Hazelnut sponge, chocolate mousse and pear jelly",
+                  "note": "Included seasonal course component; no standalone price published. Confirm current substitutions.",
+                  "priceLabel": "Price not published"
+                },
+                {
+                  "name": "Tonka blancmange with Kyoho-grape jelly",
+                  "note": "Included seasonal course component; no standalone price published. Confirm current substitutions.",
+                  "priceLabel": "Price not published"
+                },
+                {
+                  "name": "Matcha mousse, kuromitsu jelly and black beans",
+                  "note": "Included seasonal course component; no standalone price published. Confirm current substitutions.",
+                  "priceLabel": "Price not published"
+                },
+                {
+                  "name": "Gâteau nantais with persimmon cream",
+                  "note": "Included seasonal course component; no standalone price published. Confirm current substitutions.",
+                  "priceLabel": "Price not published"
+                },
+                {
+                  "name": "Pecan choux",
+                  "note": "Included seasonal course component; no standalone price published. Confirm current substitutions.",
+                  "priceLabel": "Price not published"
+                },
+                {
+                  "name": "Pumpkin and chestnut sweet",
+                  "note": "Included seasonal course component; no standalone price published. Confirm current substitutions.",
+                  "priceLabel": "Price not published"
+                },
+                {
+                  "name": "Baked cheesecake and fig",
+                  "note": "Included seasonal course component; no standalone price published. Confirm current substitutions.",
+                  "priceLabel": "Price not published"
+                },
+                {
+                  "name": "Double-chocolate torte",
+                  "note": "Included seasonal course component; no standalone price published. Confirm current substitutions.",
+                  "priceLabel": "Price not published"
+                },
+                {
+                  "name": "Caramel flan",
+                  "note": "Included seasonal course component; no standalone price published. Confirm current substitutions.",
+                  "priceLabel": "Price not published"
+                },
+                {
+                  "name": "Candied chestnut and brioche",
+                  "note": "Included seasonal course component; no standalone price published. Confirm current substitutions.",
+                  "priceLabel": "Price not published"
+                },
+                {
+                  "name": "Sweet-potato cream, black pepper and pickled pear",
+                  "note": "Included seasonal course component; no standalone price published. Confirm current substitutions.",
+                  "priceLabel": "Price not published"
+                },
+                {
+                  "name": "Truffle scrambled-egg gratin",
+                  "note": "Included seasonal course component; no standalone price published. Confirm current substitutions.",
+                  "priceLabel": "Price not published"
+                },
+                {
+                  "name": "Smoked-duck and chestnut-mousse tartlet with orange",
+                  "note": "Included seasonal course component; no standalone price published. Confirm current substitutions.",
+                  "priceLabel": "Price not published"
+                },
+                {
+                  "name": "Mushroom pâté and Parmesan bruschetta",
+                  "note": "Included seasonal course component; no standalone price published. Confirm current substitutions.",
+                  "priceLabel": "Price not published"
+                },
+                {
+                  "name": "Rosemary-chestnut pancake with salmon rillette",
+                  "note": "Included seasonal course component; no standalone price published. Confirm current substitutions.",
+                  "priceLabel": "Price not published"
+                },
+                {
+                  "name": "Pumpkin velouté with shrimp and cashew confit",
+                  "note": "Included seasonal course component; no standalone price published. Confirm current substitutions.",
+                  "priceLabel": "Price not published"
+                },
+                {
+                  "name": "Chestnut and mushroom risotto",
+                  "note": "Included seasonal course component; no standalone price published. Confirm current substitutions.",
+                  "priceLabel": "Price not published"
+                },
+                {
+                  "name": "Anchovy-broccoli penne peperoncino",
+                  "note": "Included seasonal course component; no standalone price published. Confirm current substitutions.",
+                  "priceLabel": "Price not published"
+                },
+                {
+                  "name": "Roast pork with gorgonzola-walnut sauce",
+                  "note": "Included seasonal course component; no standalone price published. Confirm current substitutions.",
+                  "priceLabel": "Price not published"
+                },
+                {
+                  "name": "Live Mont Blanc with cassis sauce",
+                  "note": "Included seasonal course component; no standalone price published. Confirm current substitutions.",
+                  "priceLabel": "Price not published"
+                }
+              ],
+              "label": "Splendido Stars of Autumn afternoon buffet",
+              "coverage": "published",
+              "currency": "JPY"
+            },
+            "startsAt": "2026-10-20T05:30:00.000Z",
+            "end": "15:31"
+          },
+          {
+            "id": "https://splendido.ritzcarltonosaka.com/#2",
+            "name": "Splendido — The Ritz-Carlton Osaka",
+            "neighborhood": "Nishi-Umeda",
+            "address": "1F The Ritz-Carlton Osaka, 2-5-25 Umeda, Kita-ku, Osaka",
+            "restaurantHref": "/pin/18137/splendido-the-ritz-carlton-osaka-opens-1997-05-23",
+            "checkedAt": "2026-10-18",
+            "special": {
+              "kind": "other",
+              "title": "Splendido Serata weekday dining offer",
+              "schedule": "Asia/Tokyo local service / arrival windows; advance reservation rules apply.",
+              "menuLabel": "Splendido weekday online offers",
+              "sourceUrl": "https://www.tablecheck.com/ja/shops/ritzcarltonosaka-splendido/reserve",
+              "conditions": [
+                "Weekdays excluding public holidays; no combined discounts.",
+                "Window represents published booking arrivals, not meal finishing times.",
+                "Booking widget permits 20:30 broadly, while operator Sunday–Thursday course cutoff is 20:00; conservative weekday cutoff applied pending confirmation."
+              ],
+              "discounted": true,
+              "description": "Online weekday four-course dinner ¥8,000 including tax/service, with optional roast-beef main upgrade ¥1,800.",
+              "limitedTime": false,
+              "availability": {
+                "windows": [
+                  {
+                    "end": "20:01",
+                    "days": [
+                      1,
+                      2,
+                      3,
+                      4
+                    ],
+                    "start": "17:30"
+                  },
+                  {
+                    "end": "20:31",
+                    "days": [
+                      5
+                    ],
+                    "start": "17:30"
+                  }
+                ],
+                "excludedDates": [
+                  "2026-11-03",
+                  "2026-11-23"
+                ],
+                "excludesHolidays": true,
+                "holidayCalendarThrough": "2026-12-31"
+              },
+              "validThrough": "2026-11-30"
+            },
+            "venueKey": "splendido.ritzcarltonosaka.com",
+            "photo": {
+              "alt": "Splendido — The Ritz-Carlton Osaka — Operator-uploaded exact-branch gallery view; appearance may change. ",
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-18/batch88-splendido-0-9573cde5a0908985.webp",
+              "credit": "The Ritz-Carlton Osaka / Splendido / operator via Tabelog",
+              "checkedAt": "2026-10-18",
+              "sourceUrl": "https://tabelog.com/en/osaka/A2701/A270101/27000700/dtlphotolst/3/smp2/",
+              "originalUrl": "https://tblg.k-img.com/restaurant/images/Rvw/186241/640x640_rect_34f8c68acd58ae6e854df0a2a3d475f7.jpg"
+            },
+            "menu": {
+              "url": "https://www.tablecheck.com/ja/shops/ritzcarltonosaka-splendido/reserve",
+              "note": "Short lunch through November 12; Serata booking through November 30. Exact named lunch buffet full roster remains unpublished; no transfer of afternoon sweets into lunch.",
+              "items": [
+                {
+                  "name": "Time-limited Flavor of Autumn weekday lunch",
+                  "note": "Tax and service included. Web prepaid, 12:30–14:00 seats only; coffee/tea only, no advertised wine free-flow.",
+                  "price": 5000
+                },
+                {
+                  "name": "Flavor of Autumn weekday lunch with coffee/tea only",
+                  "note": "Tax and service included. Prepaid; 120-minute seats, separate from 12:30 short plan.",
+                  "price": 5900
+                },
+                {
+                  "name": "Serata four-course weekday dinner",
+                  "note": "Tax and service included. Online weekday offer; not combinable with discounts.",
+                  "price": 8000
+                },
+                {
+                  "name": "Serata roast-beef main replacement",
+                  "note": "Supplement, tax/service included.",
+                  "price": 1800
+                },
+                {
+                  "name": "Serata assorted starters",
+                  "note": "Included seasonal course component; no standalone price published. Confirm current substitutions.",
+                  "priceLabel": "Price not published"
+                },
+                {
+                  "name": "Serata pasta of the day",
+                  "note": "Included seasonal course component; no standalone price published. Confirm current substitutions.",
+                  "priceLabel": "Price not published"
+                },
+                {
+                  "name": "Serata chicken alla romana",
+                  "note": "Included seasonal course component; no standalone price published. Confirm current substitutions.",
+                  "priceLabel": "Price not published"
+                },
+                {
+                  "name": "Serata dessert",
+                  "note": "Included seasonal course component; no standalone price published. Confirm current substitutions.",
+                  "priceLabel": "Price not published"
+                },
+                {
+                  "name": "Serata coffee or tea",
+                  "note": "Included seasonal course component; no standalone price published. Confirm current substitutions.",
+                  "priceLabel": "Price not published"
+                }
+              ],
+              "label": "Splendido weekday online offers",
+              "coverage": "published",
+              "currency": "JPY"
+            },
+            "startsAt": "2026-10-20T08:30:00.000Z",
+            "end": "20:01"
+          },
+          {
+            "id": "https://splendido.ritzcarltonosaka.com/#3",
+            "name": "Splendido — The Ritz-Carlton Osaka",
+            "neighborhood": "Nishi-Umeda",
+            "address": "1F The Ritz-Carlton Osaka, 2-5-25 Umeda, Kita-ku, Osaka",
+            "restaurantHref": "/pin/18137/splendido-the-ritz-carlton-osaka-opens-1997-05-23",
+            "checkedAt": "2026-10-18",
+            "special": {
+              "kind": "other",
+              "title": "Splendido Christmas dinners",
+              "schedule": "Asia/Tokyo local service / arrival windows; advance reservation rules apply.",
+              "menuLabel": "Splendido Christmas dinners 2026 — Buon Natale",
+              "sourceUrl": "https://www.tablecheck.com/ja/shops/ritzcarltonosaka-splendido/reserve",
+              "validFrom": "2026-12-19",
+              "conditions": [
+                "Book exact arrival in the published 17:30–20:30 range; distinct menu columns retained.",
+                "Conservative common 20:00 arrival cutoff used; exact later festive seatings require confirmation against the normal hours conflict."
+              ],
+              "discounted": false,
+              "description": "Buon Natale ¥23,800 or Una Migliore Notte ¥29,800, including tax/service. Two-hour seats.",
+              "limitedTime": true,
+              "availability": {
+                "windows": [
+                  {
+                    "end": "20:01",
+                    "days": [
+                      0,
+                      1,
+                      2,
+                      3,
+                      4,
+                      5,
+                      6
+                    ],
+                    "start": "17:30"
+                  }
+                ]
+              },
+              "validThrough": "2026-12-25"
+            },
+            "venueKey": "splendido.ritzcarltonosaka.com",
+            "photo": {
+              "alt": "Splendido — The Ritz-Carlton Osaka — Operator-uploaded exact-branch gallery view; appearance may change. ",
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-18/batch88-splendido-0-9573cde5a0908985.webp",
+              "credit": "The Ritz-Carlton Osaka / Splendido / operator via Tabelog",
+              "checkedAt": "2026-10-18",
+              "sourceUrl": "https://tabelog.com/en/osaka/A2701/A270101/27000700/dtlphotolst/3/smp2/",
+              "originalUrl": "https://tblg.k-img.com/restaurant/images/Rvw/186241/640x640_rect_34f8c68acd58ae6e854df0a2a3d475f7.jpg"
+            },
+            "menu": {
+              "url": "https://splendido.ritzcarltonosaka.com/our-menus",
+              "note": "Exact Christmas course PDF, December 19–25 booking window. Two-hour seats.",
+              "items": [
+                {
+                  "name": "Buon Natale",
+                  "note": "Tax and service included.",
+                  "price": 23800
+                },
+                {
+                  "name": "Turbot carpaccio in bianco",
+                  "note": "Included seasonal course component; no standalone price published. Confirm current substitutions.",
+                  "priceLabel": "Price not published"
+                },
+                {
+                  "name": "Guinea-fowl and truffle tagliolini",
+                  "note": "Included seasonal course component; no standalone price published. Confirm current substitutions.",
+                  "priceLabel": "Price not published"
+                },
+                {
+                  "name": "Lobster with chili-broccoli purée and coral sauce",
+                  "note": "Included seasonal course component; no standalone price published. Confirm current substitutions.",
+                  "priceLabel": "Price not published"
+                },
+                {
+                  "name": "Charcoal-grilled Japanese sirloin with rosemary beetroot and pomegranate-red-wine sauce",
+                  "note": "Included seasonal course component; no standalone price published. Confirm current substitutions.",
+                  "priceLabel": "Price not published"
+                },
+                {
+                  "name": "Strawberry mascarpone mousse with yuzu sorbet and aged balsamic",
+                  "note": "Included seasonal course component; no standalone price published. Confirm current substitutions.",
+                  "priceLabel": "Price not published"
+                },
+                {
+                  "name": "Coffee or tea",
+                  "note": "Included seasonal course component; no standalone price published. Confirm current substitutions.",
+                  "priceLabel": "Price not published"
+                }
+              ],
+              "label": "Splendido Christmas dinners 2026 — Buon Natale",
+              "coverage": "sample",
+              "currency": "JPY",
+              "documentUrl": "https://mds-assets.marriott.com/cms-platform-for-marriott/osarz-splendido/site-images/migrated-images/2026-xmas-course-dinner.pdf"
+            },
+            "startsAt": "2026-12-19T08:30:00.000Z",
+            "end": "20:01"
+          }
+        ]
+      },
+      {
+        "pinId": 18138,
+        "region": "nagoya",
+        "view": "top",
+        "neighborhood": "Marunouchi",
+        "nativeTitleAndImage": true,
+        "hrefs": [
+          "/pin/18138/the-kawabun-nagoya-italian-dining-opens-2008-02-08"
+        ],
+        "browserFiltered": false,
+        "publicBase": "https://www.chronopin.com",
+        "guideStatus": 200,
+        "offers": []
+      },
+      {
+        "pinId": 18138,
+        "region": "nagoya",
+        "view": "discounts",
+        "neighborhood": "Marunouchi",
+        "nativeTitleAndImage": true,
+        "hrefs": [
+          "/pin/18138/the-kawabun-nagoya-italian-dining-opens-2008-02-08"
+        ],
+        "browserFiltered": false,
+        "publicBase": "https://www.chronopin.com",
+        "guideStatus": 200,
+        "offers": [
+          {
+            "id": "https://www.thekawabunnagoya.com/thekawabunnagoya/restaurant/#0",
+            "name": "THE KAWABUN NAGOYA — Italian dining",
+            "neighborhood": "Marunouchi",
+            "address": "2-12-30 Marunouchi, Naka-ku, Nagoya",
+            "restaurantHref": "/pin/18138/the-kawabun-nagoya-italian-dining-opens-2008-02-08",
+            "checkedAt": "2026-10-18",
+            "special": {
+              "kind": "other",
+              "title": "KAWABUN early dinner — complimentary toast",
+              "schedule": "Asia/Tokyo local service / arrival windows; advance reservation rules apply.",
+              "menuLabel": "KAWABUN early dinner toast offer",
+              "sourceUrl": "https://www.tablecheck.com/ja/shops/kawabun-nagoya/reserve",
+              "validFrom": "2026-08-17",
+              "conditions": [
+                "Two to six guests; late arrival loses drink benefit.",
+                "Weekdays excluding holidays; drink identity not published.",
+                "One-minute slots mark the exact arrival instants, not meal duration."
+              ],
+              "discounted": true,
+              "description": "Reserve the weekday seven-course dinner at exactly 17:00 or 17:30 for a complimentary toast. ¥8,000 plus 10% service.",
+              "limitedTime": true,
+              "availability": {
+                "windows": [
+                  {
+                    "end": "17:01",
+                    "days": [
+                      1,
+                      2,
+                      3,
+                      4,
+                      5
+                    ],
+                    "start": "17:00"
+                  },
+                  {
+                    "end": "17:31",
+                    "days": [
+                      1,
+                      2,
+                      3,
+                      4,
+                      5
+                    ],
+                    "start": "17:30"
+                  }
+                ],
+                "excludedDates": [
+                  "2026-09-21",
+                  "2026-09-22",
+                  "2026-09-23",
+                  "2026-10-12",
+                  "2026-11-03",
+                  "2026-11-23"
+                ],
+                "excludesHolidays": true,
+                "holidayCalendarThrough": "2026-12-31"
+              },
+              "validThrough": "2026-12-18"
+            },
+            "venueKey": "thekawabunnagoya.com/thekawabunnagoya/restaurant",
+            "photo": {
+              "alt": "THE KAWABUN NAGOYA — Italian dining — Operator-uploaded exact-branch gallery view; appearance may change. ",
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-18/batch88-kawabun-0-8deb62d5fb8c7119.webp",
+              "credit": "THE KAWABUN NAGOYA / operator via Tabelog",
+              "checkedAt": "2026-10-18",
+              "sourceUrl": "https://tabelog.com/en/aichi/A2301/A230102/23007484/dtlphotolst/3/smp2/",
+              "originalUrl": "https://tblg.k-img.com/restaurant/images/Rvw/225710/640x640_rect_71f0cfa9d623febf389be4494f77faf0.jpg"
+            },
+            "menu": {
+              "url": "https://www.tablecheck.com/ja/shops/kawabun-nagoya/reserve",
+              "note": "Same exact weekday course; drink brand/size not specified. Holiday exclusions and dated booking intervals apply. Published seat duration 1 hour 45 minutes conflicts with widget 2 hours; confirm duration, not arrival instant.",
+              "items": [
+                {
+                  "name": "Weekday early KAWABUN dinner with complimentary toast",
+                  "note": "Tax included; 10% service additional. Reserve exactly 17:00 or 17:30, two to six guests. Late arrival loses the drink benefit.",
+                  "price": 8000
+                },
+                {
+                  "name": "Nagano Purple and Shine Muscat grapes with stracciatella",
+                  "note": "Included seasonal course component; no standalone price published. Confirm current substitutions.",
+                  "priceLabel": "Price not published"
+                },
+                {
+                  "name": "Baked Kamo aubergine and scamorza",
+                  "note": "Included seasonal course component; no standalone price published. Confirm current substitutions.",
+                  "priceLabel": "Price not published"
+                },
+                {
+                  "name": "Returning-season bonito with horseradish crema",
+                  "note": "Included seasonal course component; no standalone price published. Confirm current substitutions.",
+                  "priceLabel": "Price not published"
+                },
+                {
+                  "name": "Pomodoro classico pasta",
+                  "note": "Included seasonal course component; no standalone price published. Confirm current substitutions.",
+                  "priceLabel": "Price not published"
+                },
+                {
+                  "name": "Kesennuma conger-eel fritto in broth",
+                  "note": "Included seasonal course component; no standalone price published. Confirm current substitutions.",
+                  "priceLabel": "Price not published"
+                },
+                {
+                  "name": "Charcoal-grilled Atsumi Umami pork",
+                  "note": "Included seasonal course component; no standalone price published. Confirm current substitutions.",
+                  "priceLabel": "Price not published"
+                },
+                {
+                  "name": "Tiramisu",
+                  "note": "Included seasonal course component; no standalone price published. Confirm current substitutions.",
+                  "priceLabel": "Price not published"
+                }
+              ],
+              "label": "KAWABUN early dinner toast offer",
+              "coverage": "published",
+              "currency": "JPY"
+            },
+            "startsAt": "2026-10-20T08:00:00.000Z",
+            "end": "17:01"
+          },
+          {
+            "id": "https://www.thekawabunnagoya.com/thekawabunnagoya/restaurant/#1",
+            "name": "THE KAWABUN NAGOYA — Italian dining",
+            "neighborhood": "Marunouchi",
+            "address": "2-12-30 Marunouchi, Naka-ku, Nagoya",
+            "restaurantHref": "/pin/18138/the-kawabun-nagoya-italian-dining-opens-2008-02-08",
+            "checkedAt": "2026-10-18",
+            "special": {
+              "kind": "other",
+              "title": "KAWABUN Christmas dinner with Champagne",
+              "schedule": "Asia/Tokyo local service / arrival windows; advance reservation rules apply.",
+              "menuLabel": "KAWABUN Christmas seven-course dinner 2026",
+              "sourceUrl": "https://www.tablecheck.com/ja/shops/kawabun-nagoya/reserve",
+              "validFrom": "2026-12-24",
+              "conditions": [
+                "Two-hour dining-room seats, two to six guests.",
+                "Published booking arrival interval 16:00–20:30; bar variants have separate conditions."
+              ],
+              "discounted": false,
+              "description": "Seven-course dining-room Christmas menu with Moët & Chandon Impérial, ¥20,000 plus 10% service.",
+              "limitedTime": true,
+              "availability": {
+                "windows": [
+                  {
+                    "end": "20:31",
+                    "days": [
+                      4,
+                      5,
+                      6
+                    ],
+                    "start": "16:00"
+                  }
+                ]
+              },
+              "validThrough": "2026-12-26"
+            },
+            "venueKey": "thekawabunnagoya.com/thekawabunnagoya/restaurant",
+            "photo": {
+              "alt": "THE KAWABUN NAGOYA — Italian dining — Operator-uploaded exact-branch gallery view; appearance may change. ",
+              "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-18/batch88-kawabun-0-8deb62d5fb8c7119.webp",
+              "credit": "THE KAWABUN NAGOYA / operator via Tabelog",
+              "checkedAt": "2026-10-18",
+              "sourceUrl": "https://tabelog.com/en/aichi/A2301/A230102/23007484/dtlphotolst/3/smp2/",
+              "originalUrl": "https://tblg.k-img.com/restaurant/images/Rvw/225710/640x640_rect_71f0cfa9d623febf389be4494f77faf0.jpg"
+            },
+            "menu": {
+              "url": "https://www.tablecheck.com/ja/shops/kawabun-nagoya/reserve",
+              "note": "Bar-dessert and December 26 bar-seat plans are separate variants with different group limits/durations; not silently merged into the dining-room offer.",
+              "items": [
+                {
+                  "name": "Christmas dining-room course with toast",
+                  "note": "Tax included; 10% service additional. December 24–26, two to six guests, two-hour seats.",
+                  "price": 20000
+                },
+                {
+                  "name": "Moët & Chandon Impérial toast",
+                  "note": "Included seasonal course component; no standalone price published. Confirm current substitutions.",
+                  "priceLabel": "Price not published"
+                },
+                {
+                  "name": "Red-snow-crab farce",
+                  "note": "Included seasonal course component; no standalone price published. Confirm current substitutions.",
+                  "priceLabel": "Price not published"
+                },
+                {
+                  "name": "Fresh bluefin tuna, fruit-tomato zuppa and Edo herbs",
+                  "note": "Included seasonal course component; no standalone price published. Confirm current substitutions.",
+                  "priceLabel": "Price not published"
+                },
+                {
+                  "name": "Cod and shirako cartoccio",
+                  "note": "Included seasonal course component; no standalone price published. Confirm current substitutions.",
+                  "priceLabel": "Price not published"
+                },
+                {
+                  "name": "Beef-shin and porcini ragù pasta",
+                  "note": "Included seasonal course component; no standalone price published. Confirm current substitutions.",
+                  "priceLabel": "Price not published"
+                },
+                {
+                  "name": "Sautéed lobster with vin-blanc sauce",
+                  "note": "Included seasonal course component; no standalone price published. Confirm current substitutions.",
+                  "priceLabel": "Price not published"
+                },
+                {
+                  "name": "Charcoal-grilled Aichi beef fillet",
+                  "note": "Included seasonal course component; no standalone price published. Confirm current substitutions.",
+                  "priceLabel": "Price not published"
+                },
+                {
+                  "name": "Strawberry and pistachio Paris-Brest",
+                  "note": "Included seasonal course component; no standalone price published. Confirm current substitutions.",
+                  "priceLabel": "Price not published"
+                }
+              ],
+              "label": "KAWABUN Christmas seven-course dinner 2026",
+              "coverage": "published",
+              "currency": "JPY"
+            },
+            "startsAt": "2026-12-24T07:00:00.000Z",
+            "end": "20:31"
+          }
+        ]
+      },
+      {
+        "pinId": 18140,
+        "region": "tokyo",
+        "view": "top",
+        "neighborhood": "Aoyama-itchome / Minami-Aoyama",
+        "nativeTitleAndImage": true,
+        "hrefs": [
+          "/pin/18140/narisawa-minami-aoyama-opens-2003-11-01"
+        ],
+        "browserFiltered": false,
+        "publicBase": "https://www.chronopin.com",
+        "guideStatus": 200,
+        "offers": []
+      },
+      {
+        "pinId": 18141,
+        "region": "tokyo",
+        "view": "top",
+        "neighborhood": "Marunouchi / Tokyo Station",
+        "nativeTitleAndImage": true,
+        "hrefs": [
+          "/pin/18141/sezanne-four-seasons-marunouchi-opens-2021-07-01"
+        ],
+        "browserFiltered": false,
+        "publicBase": "https://www.chronopin.com",
+        "guideStatus": 200,
+        "offers": []
+      }
+    ],
+    "note": "Read-only recheck through public HTTPS; original save evidence and prior timeouts remain historical."
   }
 }

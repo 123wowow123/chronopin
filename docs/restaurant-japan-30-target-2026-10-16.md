@@ -1,17 +1,17 @@
 # Japan restaurant target audit — October 16, 2026
 
-Target: **30 distinct eligible restaurants in every tab of every city**. **558 verified memberships; 185 still missing**. This target remains incomplete; surplus in another tab does not offset a shortage.
+Target: **30 distinct eligible restaurants in every tab of every city**. **559 verified memberships; 183 still missing**. This target remains incomplete; surplus in another tab does not offset a shortage.
 
-**Batch 90 published and verified through the production origin (October 19, 15:10 JST / October 18, 23:10 PDT):** **6 new venues, 411 menu/serving entries, 22 credited Azure photos and 10 native guide memberships**. La Fête and Le Midi bring **Osaka Top to 19/30 and Specials to 25/30**; Hiramatsu Kodaiji, La Luce and Kodaiji Jugyuan bring **Kyoto Top to 22/30 and Specials to 34/30**; L’AS Fukuoka brings **Fukuoka Top to 22/30**. All six exact branch opening dates confirmed. Eight offer schedules passed **67 boundary checks and 8 next starts**, including private Christmas closures and Kodaiji’s published gala start. Full saved profiles, rendered native menus, galleries and title/image links verified in both environments. All 24 city/tab counts agree at **558 memberships / 185 missing**, eight fewer missing memberships. Batches 89–90 together add **18 venues, 975 menu/serving entries, 66 photos and 23 guide memberships**; Tokyo Top remains 30/30. Public HTTPS verification remains pending after requests time out; production checks use the running application via temporary authenticated SSH forwarding. No deployment. [Batch evidence](restaurant-japan-30-japan90-2026-10-18.json).
+**Batch 91 published and publicly verified (October 19, 2026):** added **Reine des prés (Kyoto) and LA VAGABONDE (Nagoya)** with **18 menu entries and seven credited Azure gallery photos**. Exact original opening dates retained; Kyoto Top reaches **23/30**, Nagoya Top **18/30**. Full profiles, every rendered menu entry, gallery credits and native title/image links verified locally and through public production HTTPS. All 24 counts agree at **559 memberships / 183 missing**. One Fukuoka Special expired since batch90; its tab remains above target at 33. Also completed public HTTPS verification for all **27 venues and 36 guide memberships in batches 88–90**. No deployment. [Batch evidence](restaurant-japan-30-japan91-2026-10-19.json).
 
-All 24 local and production-origin guide counts agree. Public HTTPS verification remains pending; earlier checkpoints below are historical.
+All 24 local and public production guide counts agree. Batches 88–91 now have complete public HTTPS verification; earlier timeout checkpoints below are historical.
 
 | City (west to east) | Coming soon | Just opened | Top restaurants | Specials |
 | --- | ---: | ---: | ---: | ---: |
-| Fukuoka | 9/30 | 20/30 | 22/30 | 34/30 |
+| Fukuoka | 9/30 | 20/30 | 22/30 | 33/30 |
 | Osaka | 12/30 | 22/30 | 19/30 | 25/30 |
-| Kyoto | 11/30 | 33/30 | 22/30 | 34/30 |
-| Nagoya | 11/30 | 31/30 | 17/30 | 29/30 |
+| Kyoto | 11/30 | 33/30 | 23/30 | 34/30 |
+| Nagoya | 11/30 | 31/30 | 18/30 | 29/30 |
 | Tokyo | 14/30 | 23/30 | 30/30 | 37/30 |
 | Sapporo | 11/30 | 28/30 | 30/30 | 34/30 |
 
@@ -22,18 +22,18 @@ All 24 local and production-origin guide counts agree. Public HTTPS verification
 | Fukuoka | Coming soon | 9 | 9 | 30 | 21 |
 | Fukuoka | Just opened | 20 | 20 | 30 | 10 |
 | Fukuoka | Top restaurants | 22 | 22 | 30 | 8 |
-| Fukuoka | Specials | 34 | 34 | 30 | 0 |
+| Fukuoka | Specials | 33 | 33 | 30 | 0 |
 | Osaka | Coming soon | 12 | 12 | 30 | 18 |
 | Osaka | Just opened | 22 | 22 | 30 | 8 |
 | Osaka | Top restaurants | 19 | 19 | 30 | 11 |
 | Osaka | Specials | 25 | 25 | 30 | 5 |
 | Kyoto | Coming soon | 11 | 11 | 30 | 19 |
 | Kyoto | Just opened | 33 | 33 | 30 | 0 |
-| Kyoto | Top restaurants | 22 | 22 | 30 | 8 |
+| Kyoto | Top restaurants | 23 | 23 | 30 | 7 |
 | Kyoto | Specials | 34 | 34 | 30 | 0 |
 | Nagoya | Coming soon | 11 | 11 | 30 | 19 |
 | Nagoya | Just opened | 31 | 31 | 30 | 0 |
-| Nagoya | Top restaurants | 17 | 17 | 30 | 13 |
+| Nagoya | Top restaurants | 18 | 18 | 30 | 12 |
 | Nagoya | Specials | 29 | 29 | 30 | 1 |
 | Tokyo | Coming soon | 14 | 14 | 30 | 16 |
 | Tokyo | Just opened | 23 | 23 | 30 | 7 |

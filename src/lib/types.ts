@@ -251,6 +251,12 @@ export type MapPinJson = Pick<PinJson, 'id' | 'title' | 'address' | 'categories'
   specialLabel?: string;
   // Megawatts its title states ("500 MW", "1 GW" -> 1000), for the map's totals.
   megawatts?: number | null;
+  // Its dollars traded on prediction markets, episodes, mean rating (0-100)
+  // and cheapest USD ticket, for the map's totals (src/lib/mapStats.ts).
+  marketVolume?: number | null;
+  episodeCount?: number | null;
+  ratingPercent?: number | null;
+  ticketLowUsd?: number | null;
 };
 
 export type DateTimeJson = {

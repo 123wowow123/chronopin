@@ -488,6 +488,9 @@ const MAP_SELECT = `
     ST_X("p"."location"::geometry) AS "longitude",
     "p"."price", "p"."priceCurrency", "p"."sourceUrl",
     (SELECT "pw"."megawatts"::float8 FROM "PinPower" AS "pw" WHERE "pw"."pinId" = "p"."id") AS "megawatts",
+    "p"."marketVolume"::float8 AS "marketVolume", "p"."episodeCount",
+    (SELECT round(avg("r"."score" / NULLIF("r"."scoreMax", 0) * 100))::float8 FROM "PinRating" AS "r" WHERE "r"."pinId" = "p"."id") AS "ratingPercent",
+    (SELECT "e"."lowPrice"::float8 FROM "PinEventInfo" AS "e" WHERE "e"."pinId" = "p"."id" AND "e"."priceCurrency" = 'USD' AND "e"."lowPrice" > 0) AS "ticketLowUsd",
     ${MAP_MEDIA} AS "media"
   FROM "Pin" AS "p"`;
 
