@@ -30,7 +30,8 @@ export type TagSource = 'user' | 'auto' | 'award' | 'thread';
 export type PinTagJson = { name: string; kind: TagKind; source: TagSource };
 // category: the category most of the tag's pins carry (none for a category
 // tag itself), which the cloud's grouped mode files it under.
-export type TagCount = { name: string; kind: TagKind; count: number; category?: string | null };
+// dim: a tag the current search has no pins for, kept in the cloud (sized by the whole timeline's count) so it can still be picked.
+export type TagCount = { name: string; kind: TagKind; count: number; category?: string | null; dim?: boolean };
 // A cloud entry: a lone tag, or a group of them with what it wraps - an
 // award body's years, or a category's tags (which may be groups themselves).
 export type TagGroup = TagCount & { members?: TagGroup[] };

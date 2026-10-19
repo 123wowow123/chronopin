@@ -629,6 +629,22 @@ function TagCloudView({
     };
   }, []);
 
+  // The same cloud with no search behind it.
+  const [baseline, setBaseline] = useState<TagCount[] | null>(null);
+  const baseUrl = useMemo(() => {
+    const params = new URLSearchParams(countsUrl.split('?')[1] ?? '');
+    params.delete('q');
+    params.delete('f');
+    return `/api/pins/tag-counts?${params.toString()}`;
+  }, [countsUrl]);
+  useEffect(() => {
+    let cancelled = false;
+    countsFor(viewUrl(baseUrl)).then((next) => !cancelled && setBaseline(next), () => {});
+    return () => {
+      cancelled = true;
+    };
+  }, [baseUrl]);
+
   useEffect(() => {
     let cancelled = false;
     countsFor(url).then(
@@ -657,7 +673,15 @@ function TagCloudView({
   const needle = filter.trim().toLowerCase();
   // The site's own filters keep their strip, and the words in the cloud are
   // the tags people wrote.
-  const written = useMemo(() => (counts ?? []).filter((t) => t.kind !== 'reserved'), [counts]);
+  // The cloud always has its tags: the whole timeline's, with those the search has no pins for dimmed.
+  const written = useMemo(() => {
+    const here = new Map((counts ?? []).filter((t) => t.kind !== 'reserved').map((t) => [t.name.toLowerCase(), t]));
+    const base = (baseline ?? []).filter((t) => t.kind !== 'reserved');
+    if (!base.length) return [...here.values()];
+    const merged = base.map((t) => here.get(t.name.toLowerCase()) ?? { ...t, dim: true });
+    const known = new Set(base.map((t) => t.name.toLowerCase()));
+    return [...merged, ...[...here.values()].filter((t) => !known.has(t.name.toLowerCase()))];
+  }, [counts, baseline]);
   const tags = useMemo<TagGroup[]>(() => {
     const flat = needle || !wrapped;
     const groups = flat ? [] : groupTags(written);
@@ -680,7 +704,7 @@ function TagCloudView({
           <h2 id={titleId} className="shrink-0 text-base font-semibold text-ink">
             {t('tagCloud.title')}
           </h2>
-          {counts ? <span className="shrink-0 text-sm text-subtle">{t('tagCloud.tags', { count: written.length })}</span> : null}
+          {counts || baseline ? <span className="shrink-0 text-sm text-subtle">{t('tagCloud.tags', { count: written.length })}</span> : null}
           <FindTag value={filter} onChange={setFilter} className="min-w-0 flex-1 max-sm:order-last max-sm:basis-full" />
           <span className="flex shrink-0 items-center gap-3 max-sm:ms-auto">
             <GroupedToggle wrapped={wrapped} onChange={onWrappedChange} />
@@ -697,9 +721,9 @@ function TagCloudView({
         <ReservedFilters counts={counts ?? []} selected={reserved} needle={needle} showAll={(parseSearchQuery(currentQuery).alternatives?.length ?? 0) > 1} onToggle={onToggleReserved} large className="border-b border-line px-5 py-2.5 max-sm:px-3" />
         <SavedQueries current={currentQuery} onOpen={onOpenQuery} className="border-b border-line px-5 py-2.5 max-sm:px-3" />
         <div aria-busy={busy || undefined} className="relative min-h-60 flex-1 overflow-hidden">
-          {failed ? (
+          {failed && !baseline ? (
             <p className="absolute inset-0 flex items-center justify-center text-sm text-subtle">{t('tagCloud.unavailable')}</p>
-          ) : !counts ? (
+          ) : !counts && !baseline ? (
             <p role="status" className="absolute inset-0 flex items-center justify-center text-sm text-subtle">
               {t('tagCloud.loading')}
             </p>
@@ -723,7 +747,7 @@ function TagCloudView({
             {hot ? (
               <>
                 <span className="font-semibold text-ink">{tagLabel(t, hot)}</span>{' '}
-                · {hot.members ? t('tagCloud.tags', { count: hot.members.length }) : t(KIND_LABEL[hot.kind])} · {t('tagCloud.pins', { count: hot.count })} ·{' '}
+                · {hot.members ? t('tagCloud.tags', { count: hot.members.length }) : t(KIND_LABEL[hot.kind])} · {t('tagCloud.pins', { count: hot.dim ? 0 : hot.count })} ·{' '}
                 {selected.some((s) => s.toLowerCase() === hot.name.toLowerCase())
                   ? t('tagCloud.clickToExclude')
                   : excluded.some((s) => s.toLowerCase() === hot.name.toLowerCase())

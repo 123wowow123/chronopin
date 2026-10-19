@@ -471,7 +471,7 @@ export function WordCloud({
                     }
                   }}
                 >
-                  <WordDrawing word={p} box={layout.boxes.get(p.key)!} palette={layout.palette} pressed={picked.has(p.key)} excluded={out.has(p.key)} nomination={tag?.kind === 'nomination'} />
+                  <WordDrawing word={p} box={layout.boxes.get(p.key)!} palette={layout.palette} pressed={picked.has(p.key)} excluded={out.has(p.key)} nomination={tag?.kind === 'nomination'} dim={!!tag?.dim} />
                 </g>
               );
             })}
@@ -516,6 +516,7 @@ function WordDrawing({
   pressed,
   excluded = false,
   nomination,
+  dim = false,
 }: {
   word: PlacedWord;
   box: Box;
@@ -523,6 +524,7 @@ function WordDrawing({
   pressed: boolean;
   excluded?: boolean;
   nomination: boolean;
+  dim?: boolean;
 }) {
   return (
     <>
@@ -542,7 +544,7 @@ function WordDrawing({
         fontSize={p.size}
         fontWeight={fontWeight(p.weight)}
         fill={colorFor(p.key, palette)}
-        fillOpacity={excluded ? 0.55 : nomination && !pressed ? 0.7 : 1}
+        fillOpacity={dim && !pressed && !excluded ? 0.22 : excluded ? 0.55 : nomination && !pressed ? 0.7 : 1}
         textDecoration={pressed ? 'underline' : excluded ? 'line-through' : undefined}
       >
         {p.text}
