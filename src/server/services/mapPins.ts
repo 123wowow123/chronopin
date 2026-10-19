@@ -5,10 +5,10 @@
 // downloading the half of all pins that have no place to plot at all.
 
 import Pins from '../model/pins';
-import { searchPins } from './search';
+import { searchPinIds } from './search';
 import { timelineMinConfidence } from './timeline';
 import { restaurantPriceRange } from '@/server/restaurantPrice';
-import { toJson, type MapPinJson, type PinJson } from '@/lib/types';
+import { type MapPinJson, type PinJson } from '@/lib/types';
 import { parseSearchQuery } from '../util/searchQuery';
 import { restaurantPreviewPins } from './restaurantPreview';
 
@@ -52,26 +52,19 @@ export async function mapPins(query: MapQuery): Promise<MapPinJson[]> {
   // A search already answers with every match at once; it is the window and
   // the missing places that are narrowed here instead of in the browser.
   if (query.q.trim()) {
-    const found = await searchPins(query.q, { userId: query.userId, onlyWatched: query.onlyWatched, timeZone: query.timeZone });
-    let pins = found.pins as unknown as PinJson[];
-    // Search uses lean timeline rows, which omit tags. Load the matched
-    // pins' full records before applying the restaurant tag filter.
-    if (query.restaurantsOnly && pins.some((pin) => !pin.tags?.length)) {
-      pins = toJson<PinJson[]>((await Pins.queryByIds(pins.map((pin) => pin.id))).pins);
-    }
+    const ids = await searchPinIds(query.q, { userId: query.userId, onlyWatched: query.onlyWatched, timeZone: query.timeZone });
+    const rows = await Pins.queryForMapByIds(ids, { from: query.from, to: query.to, createdSince: query.createdSince, restaurantsOnly: query.restaurantsOnly });
+    const pins = withPriceRange(rows);
     // The guide's local snapshot also needs coordinates in the map API.
     // Only supplement explicit ID searches, never broader or watched results.
     if (process.env.NODE_ENV === 'development' && !query.onlyWatched && /^(?:pin:\d+(?:,\d+)*\s*)+$/i.test(query.q.trim())) {
-      const existing = new Set(pins.map((pin) => pin.id));
+      const existing = new Set(ids);
       const missing = parseSearchQuery(query.q).ids.filter((id) => !existing.has(id));
-      pins.push(...await restaurantPreviewPins(missing));
+      pins.push(...(await restaurantPreviewPins(missing))
+        .filter((pin) => !query.createdSince || !pin.utcCreatedDateTime || new Date(pin.utcCreatedDateTime) >= query.createdSince!)
+        .filter((pin) => inWindow(pin.utcStartDateTime, query)).map(toMapPin));
     }
-    return pins
-      .filter((pin) => !query.restaurantsOnly || (pin.categories?.includes('Food') && pin.tags?.some((tag) => /^(Restaurant Opening|Restaurants?)$/i.test(tag.name))))
-      .filter((pin) => pin.latitude != null && pin.longitude != null)
-      .filter((pin) => !query.createdSince || !pin.utcCreatedDateTime || new Date(pin.utcCreatedDateTime) >= query.createdSince!)
-      .filter((pin) => inWindow(pin.utcStartDateTime, query))
-      .map(toMapPin);
+    return pins;
   }
 
   const rows = await Pins.queryForMap({
@@ -86,7 +79,7 @@ export async function mapPins(query: MapQuery): Promise<MapPinJson[]> {
   });
   // The $-$$$$ range is looked up by source URL, which the marker itself
   // does not carry.
-  const pins = rows.map(({ sourceUrl, ...row }) => ({ ...row, restaurantPriceRange: restaurantPriceRange(sourceUrl as string | null) })) as MapPinJson[];
+  const pins = withPriceRange(rows);
   if (query.restaurantsOnly && !query.onlyWatched) {
     const existing = new Set(pins.map((pin) => pin.id));
     const previews = await restaurantPreviewPins();
@@ -97,10 +90,38 @@ export async function mapPins(query: MapQuery): Promise<MapPinJson[]> {
   return pins;
 }
 
+function withPriceRange(rows: Record<string, unknown>[]): MapPinJson[] {
+  return rows.map(({ sourceUrl, ...row }) => ({ ...row, restaurantPriceRange: restaurantPriceRange(sourceUrl as string | null) })) as MapPinJson[];
+}
+
 function inWindow(start: string | undefined, { from, to }: MapQuery) {
   if (!start) {
     return true;
   }
   const at = new Date(start).getTime();
   return (!from || at >= from.getTime()) && (!to || at <= to.getTime());
+}
+
+// Pins plotted a moment ago, shared by the map's own request and its layer
+// counts, and by every viewer of the same window. The browser's boundaries
+// are resolved from its own clock to the millisecond, so the key rounds them
+// to the minute; a watched map is the viewer's alone and never kept.
+const CACHE_MS = 30_000;
+const CACHE_MAX = 200;
+const recent = new Map<string, { at: number; pins: Promise<MapPinJson[]> }>();
+
+export function cachedMapPins(query: MapQuery): Promise<MapPinJson[]> {
+  if (query.onlyWatched) return mapPins(query);
+  const minute = (date: Date | null) => (date ? Math.floor(date.getTime() / 60_000) : null);
+  const key = JSON.stringify([query.q, query.timeZone, query.restaurantsOnly ?? false, minute(query.from), minute(query.to), minute(query.createdSince)]);
+  const now = Date.now();
+  const hit = recent.get(key);
+  if (hit && now - hit.at < CACHE_MS) return hit.pins;
+  for (const [k, v] of recent) if (now - v.at >= CACHE_MS) recent.delete(k);
+  if (recent.size >= CACHE_MAX) recent.delete(recent.keys().next().value!);
+  const pins = mapPins(query);
+  recent.set(key, { at: now, pins });
+  // A failed load is not kept.
+  pins.catch(() => { if (recent.get(key)?.pins === pins) recent.delete(key); });
+  return pins;
 }

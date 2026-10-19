@@ -50,6 +50,15 @@ export type SearchRequest = {
 
 export type SearchLinks = { previous?: string; next?: string };
 
+// Just the ids a search matches, for callers (the map) that load their own
+// narrow rows. No pin hydration, no searched-user lookup.
+export async function searchPinIds(searchText: string, options: SearchOptions = {}): Promise<number[]> {
+  const query = parseSearchQuery(searchText);
+  if (asksForNothing(query, options)) return [];
+  const filter = { ...(await searchFilter(query, options)), hasLocation: true };
+  return (await Pins.rankSearch(filter, { sort: 'date', direction: 'next' }, null)).map((r) => r.id);
+}
+
 // Every pin a search matches - for the map, which plots them all, and for a
 // caller that named no sort. Free text is ranked by relevance: the semantic
 // pool is wide, so ordering it by event date buries the pins that actually

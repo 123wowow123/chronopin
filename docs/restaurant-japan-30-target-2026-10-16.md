@@ -1,17 +1,17 @@
 # Japan restaurant target audit — October 16, 2026
 
-Target: **30 distinct eligible restaurants in every tab of every city**. **502 verified memberships; 236 still missing**. This target remains incomplete; surplus in another tab does not offset a shortage.
+Target: **30 distinct eligible restaurants in every tab of every city**. **522 verified memberships; 217 still missing**. This target remains incomplete; surplus in another tab does not offset a shortage.
 
-All 24 local and production public guide counts agree after batch 84 at **502 memberships / 236 missing**, refreshed 2026-10-18T23:12:57.057910+00:00 (October 19, 08:12 JST / October 18, 16:12 PDT). Eight venues across all four owner-priority cities added 613 menu entries, 46 credited Azure images and eleven memberships. Kyoto gains two sourced Top selections; Sapporo gains one Coming soon and three Just opened; Tokyo gains one Just opened; Nagoya gains one Specials. These eight under-target memberships reduce the shortage; surplus memberships do not offset other tabs. Full native pin/card links and 42 schedule boundaries/nine next starts verified. Earlier checkpoints below are historical.
+All 24 local and production public guide counts agree after batch 87 at **522 memberships / 217 missing**, refreshed 2026-10-19T04:46:11.379233+00:00 (October 19, 13:46 JST / October 18, 21:46 PDT). Eight new venues add 241 menu/serving entries, 28 credited Azure photos and ten guide memberships, nine in under-target sections. Kyoto gains two Top selections; Nagoya gains one Top and two Specials venues; Tokyo gains two Top and one Specials venue; Sapporo gains two Just opened. Full public pins/menus and all ten native guide title/image links verified, including page-two cards and browser-filtered Specials. Eight offer schedules passed 56 boundary cases and eight next starts. Coming soon shortages and specific unresolved gaps remain documented. Earlier checkpoints below are historical.
 
 | City (west to east) | Coming soon | Just opened | Top restaurants | Specials |
 | --- | ---: | ---: | ---: | ---: |
 | Fukuoka | 9/30 | 20/30 | 14/30 | 32/30 |
 | Osaka | 12/30 | 22/30 | 10/30 | 21/30 |
-| Kyoto | 11/30 | 33/30 | 13/30 | 32/30 |
-| Nagoya | 11/30 | 31/30 | 13/30 | 24/30 |
-| Tokyo | 14/30 | 21/30 | 24/30 | 36/30 |
-| Sapporo | 11/30 | 24/30 | 30/30 | 34/30 |
+| Kyoto | 11/30 | 33/30 | 17/30 | 32/30 |
+| Nagoya | 11/30 | 31/30 | 16/30 | 28/30 |
+| Tokyo | 14/30 | 23/30 | 26/30 | 37/30 |
+| Sapporo | 11/30 | 28/30 | 30/30 | 34/30 |
 
 ## Each remaining shortage
 
@@ -27,18 +27,18 @@ All 24 local and production public guide counts agree after batch 84 at **502 me
 | Osaka | Specials | 21 | 21 | 30 | 9 |
 | Kyoto | Coming soon | 11 | 11 | 30 | 19 |
 | Kyoto | Just opened | 33 | 33 | 30 | 0 |
-| Kyoto | Top restaurants | 13 | 13 | 30 | 17 |
+| Kyoto | Top restaurants | 17 | 17 | 30 | 13 |
 | Kyoto | Specials | 32 | 32 | 30 | 0 |
 | Nagoya | Coming soon | 11 | 11 | 30 | 19 |
 | Nagoya | Just opened | 31 | 31 | 30 | 0 |
-| Nagoya | Top restaurants | 13 | 13 | 30 | 17 |
-| Nagoya | Specials | 24 | 24 | 30 | 6 |
+| Nagoya | Top restaurants | 16 | 16 | 30 | 14 |
+| Nagoya | Specials | 28 | 28 | 30 | 2 |
 | Tokyo | Coming soon | 14 | 14 | 30 | 16 |
-| Tokyo | Just opened | 21 | 21 | 30 | 9 |
-| Tokyo | Top restaurants | 24 | 24 | 30 | 6 |
-| Tokyo | Specials | 36 | 36 | 30 | 0 |
+| Tokyo | Just opened | 23 | 23 | 30 | 7 |
+| Tokyo | Top restaurants | 26 | 26 | 30 | 4 |
+| Tokyo | Specials | 37 | 37 | 30 | 0 |
 | Sapporo | Coming soon | 11 | 11 | 30 | 19 |
-| Sapporo | Just opened | 24 | 24 | 30 | 6 |
+| Sapporo | Just opened | 28 | 28 | 30 | 2 |
 | Sapporo | Top restaurants | 30 | 30 | 30 | 0 |
 | Sapporo | Specials | 34 | 34 | 30 | 0 |
 
@@ -52,7 +52,7 @@ Nineteen cumulative branch opening-date repairs were read back in both environme
 
 Checked exact complete saved profiles, original author presence, native public pin pages and all ordinary menu items, Azure image decode/hash/credit metadata, all 37 new venue cards across paginated guide APIs, native pin identifiers/links and upcoming offer start times. All six production guide HTML pages also returned HTTP 200 with native pin title/image links. The existing Eggs ’n Things pin exposes all 11 new menu entries; the successor starts October 21 at 09:00 JST and retains the prior October 20 expiry.
 
-Continue every under-target cell. Coming soon deficits: Fukuoka 21; Osaka 18; Kyoto 19; Nagoya 19; Tokyo 17; Sapporo 22. Nagoya Just opened remains 30/30; continue renewing its 90-day window. Kyoto Specials reaches 30, but dated offers expire and must be replenished. Detailed sources, held leads and October 17–22 expiry watch are in [research notes](restaurant-japan-30-progress-2026-10-16.md). [CSV](restaurant-japan-30-counts-2026-10-16.csv) and [production delta](restaurant-japan-production-2026-10-16.json) cover this session; older snapshots are history, not permission to overwrite current API profiles.
+Continue every under-target cell. Coming soon deficits: Fukuoka 21; Osaka 18; Kyoto 19; Nagoya 19; Tokyo 16; Sapporo 19. Nagoya Just opened is 31/30; continue renewing its 90-day window. Kyoto Specials reaches 30, but dated offers expire and must be replenished. Detailed sources, held leads and October 17–22 expiry watch are in [research notes](restaurant-japan-30-progress-2026-10-16.md). [CSV](restaurant-japan-30-counts-2026-10-16.csv) and [production delta](restaurant-japan-production-2026-10-16.json) cover this session; older snapshots are history, not permission to overwrite current API profiles.
 
 No application code changes, build, restart or deployment. Release `157e1750` remains the previously documented deployed baseline; this content-maintenance session did not change it.
 
@@ -156,3 +156,13 @@ Samjo Osaka, Sakagami Fish Center Osaka and Uotto Sapporo Station North Exit: th
 ## Batch 85 completed — menu-gap maintenance
 
 **Batch 85 menu-gap update saved and publicly verified (October 19, 12:42 JST / October 18, 20:42 PDT):** existing **THE BAR CASTLE — Espacio Nagoya Castle** gains **46 priced menu entries**: 22 classic cocktails, six advance-order cake/size combinations and all 18 premium whisky bottles. Both premium PDF pages visually read; bottle prices, service-inclusive totals and original allocation quantities recovered. Remaining stock is explicitly unconfirmed; the offer ends when stock is exhausted, with no invented calendar expiry, percentage saving or new scheduled offer. All five existing offer schedules, October 1, 2025 branch opening, author and credited Azure photo preserved. Complete profiles, public native menu entries and Nagoya guide title/image links verified in both environments. **502 memberships / 236 missing**; no new venue or membership claimed. [Batch evidence](restaurant-japan-30-japan85-2026-10-18.json). No deployment.
+
+
+## Batch 86 completed
+
+**Batch 86 large batch published and publicly verified (October 19, 13:09 JST / October 18, 21:09 PDT):** **eight new venues across Kyoto, Nagoya, Tokyo and Sapporo**, adding **260 menu/serving entries and 42 credited Azure gallery links**. Kyoto Top reaches **15/30** with LURRA° and VELROSIER; Nagoya Top **15/30** with La Floraison de TAKEUCHI and La Grande Table de KITAMURA. Takeuchi’s separately dated Christmas lunch/dinner plans and Kitamura’s December24–27 Christmas dinners take Nagoya Specials to **26/30**, with four schedule records. Tokyo Just opened reaches **23/30** with Renoir Shinjuku3-chome T&T and O1C; Sapporo Just opened **26/30** with Kissa Yohaku and Kin no Shizuku. VELROSIER’s December2019 opening retains an explicit estimated day; no old-branch dates or awards transferred. O1C’s contradictory giveaway hours and Kitamura’s unstated concert-dinner start remain unscheduled, with published conditions saved in native menus. All eight full profiles, public menus, gallery credits and **ten native guide title/image memberships** verified in both environments; **38 schedule boundaries and four next starts passed**. All24counts agree at **512 memberships / 226 missing**, ten fewer missing memberships. [Batch evidence](restaurant-japan-30-japan86-2026-10-18.json). No deployment.
+
+
+## Batch 87 completed
+
+**Batch 87 large batch published and publicly verified (October 19, 13:46 JST / October 18, 21:46 PDT):** **eight new venues**, **241 menu/serving entries**, **28 credited Azure gallery links** and **ten guide memberships** across Kyoto, Nagoya, Tokyo and Sapporo. MOTOÏ and TAKAYAMA take Kyoto Top to **17/30**. l’Auberge de l’Ill Nagoya takes Nagoya Top to **16/30**; its Christmas/gala plans and glycine’s exact dated Christmas sittings take Nagoya Specials to **28/30**. ESqUISSE and LATURE take Tokyo Top to **26/30**; LATURE’s Christmas/year-end courses also appear in Specials (**37/30**). Ramjiro and My Omelette Shokudo take Sapporo Just opened to **28/30**. Eight offer schedules passed **56 boundary cases and eight next-start checks**. All complete profiles, public menu items, opening dates, photo credits and native title/image links verified locally and in production, including pagination and browser neighborhood filtering. All 24 counts agree at **522 memberships / 217 missing**, nine fewer missing memberships; Tokyo’s additional above-target Special does not offset another shortage. Nagoya’s March 2007 opening retains explicit month precision, glycine uses its 2020 relocated branch date, and My Omelette’s current operator Instagram hours take precedence over a contradictory third-party listing. [Batch evidence](restaurant-japan-30-japan87-2026-10-18.json). No deployment.

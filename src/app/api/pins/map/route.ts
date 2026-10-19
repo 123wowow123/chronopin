@@ -1,7 +1,7 @@
 import type { NextRequest } from 'next/server';
 import { getUser } from '@/server/auth';
 import { HttpError, json, route } from '@/server/http';
-import { mapPins } from '@/server/services/mapPins';
+import { cachedMapPins } from '@/server/services/mapPins';
 import { resolveCreatedSince } from '@/server/util/createdFilter';
 import { requestTimeZone } from '@/server/viewer';
 import { requestLocale } from '@/lib/i18n/request';
@@ -26,7 +26,7 @@ export const GET = route(async (request: NextRequest) => {
   const user = await getUser(request);
   const onlyWatched = params.get('f')?.toLowerCase() === 'watch';
 
-  const pins = await mapPins({
+  const pins = await cachedMapPins({
     from: instant(params.get('from'), 'from'),
     to: instant(params.get('to'), 'to'),
     createdSince: resolveCreatedSince({ created_since: params.get('created_since'), created_within: params.get('created_within') }),

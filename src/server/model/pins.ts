@@ -78,6 +78,8 @@ export type SearchFilter = PinSearchFilters & {
   createdSince?: Date | null;
   startFrom?: Date | null;
   startTo?: Date | null;
+  // Only pins with a place on the map.
+  hasLocation?: boolean;
   // The zone date: and posted: days are read in (UTC when absent).
   timeZone?: string;
 };
@@ -427,25 +429,28 @@ export default class Pins extends BasePins<Pin> {
   }): Promise<Row[]> {
     return db.query(
       `
-      SELECT "p"."id", "p"."title", "p"."address", ${CATEGORIES} AS "categories", "p"."allDay",
-        "p"."utcStartDateTime", "p"."utcEndDateTime", "p"."utcCreatedDateTime",
-        ST_Y("p"."location"::geometry) AS "latitude",
-        ST_X("p"."location"::geometry) AS "longitude",
-        "p"."price", "p"."priceCurrency", "p"."sourceUrl",
-        ${MAP_MEDIA} AS "media"
-      FROM "Pin" AS "p"
-      WHERE "p"."location" IS NOT NULL
-        AND "p"."utcDeletedDateTime" IS NULL
-        AND ($1::timestamptz IS NULL OR "p"."utcStartDateTime" >= $1)
-        AND ($2::timestamptz IS NULL OR "p"."utcStartDateTime" <= $2)
-        AND ($3::timestamptz IS NULL OR "p"."utcCreatedDateTime" >= $3)
-        AND ($4::integer IS NULL OR COALESCE(${pinConfidenceOf('p')}, $4) >= $4)
+      ${MAP_SELECT}
+      WHERE ${MAP_WHERE}
         AND ($5::integer IS NULL OR "p"."id" IN (${watchedPinIdsOf('$5')}))
-        AND (NOT $6::boolean OR (
-          EXISTS (SELECT 1 FROM "PinTag" AS "t" WHERE "t"."pinId" = "p"."id" AND "t"."name" = 'Food' AND "t"."kind" = 'category')
-          AND EXISTS (SELECT 1 FROM "PinTag" AS "t" WHERE "t"."pinId" = "p"."id" AND "t"."name" IN ('Restaurant Opening', 'Restaurant', 'Restaurants'))))
+        AND ($4::integer IS NULL OR COALESCE(${pinConfidenceOf('p')}, $4) >= $4)
       ORDER BY "p"."utcStartDateTime", "p"."id"`,
       [bounds.from, bounds.to, bounds.createdSince, bounds.minConfidence, bounds.favoriteUserId, bounds.restaurantsOnly ?? false],
+    );
+  }
+
+  // The same marker rows for pins a search already picked, narrowed by the
+  // map's window in SQL. Saves hydrating whole timeline pins to read a
+  // tenth of each, and the second load a restaurant-only map needed for tags.
+  static async queryForMapByIds(ids: number[], bounds: { from: Date | null; to: Date | null; createdSince: Date | null; restaurantsOnly?: boolean }): Promise<Row[]> {
+    if (!ids.length) return [];
+    return db.query(
+      `
+      ${MAP_SELECT}
+      WHERE ${MAP_WHERE}
+        AND $4::integer IS NULL AND $5::integer IS NULL
+        AND "p"."id" = ANY($7::integer[])
+      ORDER BY "p"."utcStartDateTime", "p"."id"`,
+      [bounds.from, bounds.to, bounds.createdSince, null, null, bounds.restaurantsOnly ?? false, ids],
     );
   }
 
@@ -472,6 +477,26 @@ const MAP_MEDIA = `
    FROM "PinMedium" AS "pm"
      JOIN "Medium" AS "m" ON "m"."id" = "pm"."mediumId"
    WHERE "pm"."pinId" = "p"."id" AND "pm"."utcDeletedDateTime" IS NULL)`;
+
+// A map marker's columns, and the filters both map queries share ($1 from,
+// $2 to, $3 created since, $6 restaurants only).
+const MAP_SELECT = `
+  SELECT "p"."id", "p"."title", "p"."address", ${CATEGORIES} AS "categories", "p"."allDay",
+    "p"."utcStartDateTime", "p"."utcEndDateTime", "p"."utcCreatedDateTime",
+    ST_Y("p"."location"::geometry) AS "latitude",
+    ST_X("p"."location"::geometry) AS "longitude",
+    "p"."price", "p"."priceCurrency", "p"."sourceUrl",
+    ${MAP_MEDIA} AS "media"
+  FROM "Pin" AS "p"`;
+
+const MAP_WHERE = `"p"."location" IS NOT NULL
+        AND "p"."utcDeletedDateTime" IS NULL
+        AND ($1::timestamptz IS NULL OR "p"."utcStartDateTime" >= $1)
+        AND ($2::timestamptz IS NULL OR "p"."utcStartDateTime" <= $2)
+        AND ($3::timestamptz IS NULL OR "p"."utcCreatedDateTime" >= $3)
+        AND (NOT $6::boolean OR (
+          EXISTS (SELECT 1 FROM "PinTag" AS "t" WHERE "t"."pinId" = "p"."id" AND "t"."name" = 'Food' AND "t"."kind" = 'category')
+          AND EXISTS (SELECT 1 FROM "PinTag" AS "t" WHERE "t"."pinId" = "p"."id" AND "t"."name" IN ('Restaurant Opening', 'Restaurant', 'Restaurants'))))`;
 
 // The reference fields that matter anywhere but a pin's own References
 // panel: what a card's confidence badge and its [n] citations read, and
@@ -1229,6 +1254,9 @@ export function searchClauses(filter: SearchFilter) {
   }
   if (filter.startTo) {
     where.push(`"Pin"."utcStartDateTime" <= ${add(filter.startTo)}`);
+  }
+  if (filter.hasLocation) {
+    where.push(`"Pin"."location" IS NOT NULL`);
   }
 
   return {

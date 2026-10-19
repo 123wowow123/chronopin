@@ -678,6 +678,7 @@ export default function PinsMap({ sliderTyping = false, ads = false }: { sliderT
     // and "has a place at all" are all the server's to apply. The boundaries
     // go over as resolved instants so they are the same ones plot compares
     // against. A search reaches the same endpoint through its q.
+    const abort = new AbortController();
     const load = async () => {
       const searchParams = new URLSearchParams();
       if (fetchQuery) searchParams.set('q', fetchQuery);
@@ -687,7 +688,7 @@ export default function PinsMap({ sliderTyping = false, ads = false }: { sliderT
       if (pastBoundary) searchParams.set('from', pastBoundary.toISOString());
       if (futureBoundary) searchParams.set('to', futureBoundary.toISOString());
       if (postedWithin) searchParams.set('created_within', postedWithin);
-      const res = await fetch(withPageLang(`/api/pins/map?${searchParams.toString()}`));
+      const res = await fetch(withPageLang(`/api/pins/map?${searchParams.toString()}`), { signal: abort.signal });
       if (!res.ok) throw new Error(res.statusText);
       const { pins } = (await res.json()) as { pins: MapPinJson[] };
       if (!cancelled) {
@@ -729,6 +730,7 @@ export default function PinsMap({ sliderTyping = false, ads = false }: { sliderT
 
     return () => {
       cancelled = true;
+      abort.abort();
     };
   }, [past, future, postedWithin, fetchQuery, watched, focusId, fitResults, restaurantLayer, preserveView, specials]);
 
@@ -1124,8 +1126,10 @@ function useLayerAvailability({ layer, fetchQuery, marketQuery, watched, past, f
     const listings = new URLSearchParams();
     if (marketQuery) listings.set('q', marketQuery);
     if (postedWithin) listings.set('created_within', postedWithin);
+    const abort = new AbortController();
+    // The layer on show always stays in the toggle, so it is never asked.
     const ask = (url: string, count: (body: { count: number; listings: unknown[] }) => number, key: MapLayer) =>
-      fetch(withPageLang(url))
+      key === layer ? undefined : fetch(withPageLang(url), { signal: abort.signal })
         .then((res) => (res.ok ? res.json() : null))
         .then((body) => {
           if (body && !cancelled) setEmpty((current) => ({ ...current, [key]: count(body) === 0 }));
@@ -1136,8 +1140,9 @@ function useLayerAvailability({ layer, fetchQuery, marketQuery, watched, past, f
     ask(`/api/listings/map?${listings}`, (body) => body.listings.length, 'market');
     return () => {
       cancelled = true;
+      abort.abort();
     };
-  }, [fetchQuery, marketQuery, watched, past, future, postedWithin]);
+  }, [layer, fetchQuery, marketQuery, watched, past, future, postedWithin]);
   return (option: MapLayer) => option === layer || !empty[option];
 }
 
