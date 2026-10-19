@@ -1040,7 +1040,7 @@ export default function PinsMap({ sliderTyping = false, ads = false }: { sliderT
         <FloatingControls
           merge
           cards={layer === 'pins' && fetchQuery && status === 'ready' && count > 0 ? (
-            <dl aria-label="Totals for the pins matching the search" className="floating mt-2 flex w-max max-w-full flex-nowrap items-baseline gap-x-2.5 overflow-hidden rounded-lg px-3 py-1.5 text-xs whitespace-nowrap">
+            <dl aria-label="Totals for the pins matching the search" className="floating mt-2 flex w-full flex-nowrap items-baseline justify-between gap-x-2.5 overflow-hidden rounded-lg px-3 py-1.5 text-xs whitespace-nowrap">
               <div className="flex gap-1"><dt className="text-muted">Pins:</dt><dd className="font-semibold tabular-nums text-link">{count.toLocaleString('en-US')}</dd></div>
               {stats.cost > 0 ? <div className="flex gap-1"><dt className="text-muted">Cost:</dt><dd className="font-semibold tabular-nums text-success">{money(stats.cost, 'USD')}</dd></div> : null}
               {stats.megawatts > 0 ? <div className="flex gap-1"><dt className="text-muted">MW:</dt><dd className="font-semibold tabular-nums text-past">{megawattLabel(stats.megawatts)}</dd></div> : null}

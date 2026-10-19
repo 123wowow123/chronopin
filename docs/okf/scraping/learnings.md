@@ -15,6 +15,19 @@ Entry format: `## YYYY-MM-DD - <job>`, then `* **Learned**`, `* **Feedback**` (o
 
 
 
+## 2026-10-19 - Data-centre megawatts (PinPower)
+
+* **Done:** Added the `PinPower` table (0196) and the pin-page Power line. Backfilled 367 of 566 data-centre pins from titles that state MW/GW. Five parallel research lanes (pins 2969-7382) found 48 sourced figures, a deeper re-run of the 32 empty pins found 1 more (7313 Beaver Dam, 220 MW), and one press estimate was added on request (7256 The Dalles, 103 MW). `PinPower` holds 831 rows locally; production has neither the table nor the values yet.
+* **Feedback:** Owner: "all datacenter pins should have MW and shown on pin detail", then "there should be MW in database" (so a column/table, not a title parse), then "accept press estimates" (labelled estimates are allowed where no operator figure exists).
+* **Learned:**
+  1. **Operators rarely publish per-site MW.** Google, Meta, Microsoft and Equinix give investment, floor area, cabinets or renewable-supply (PPA) MW, not facility load. About 100 of the 140 researched facility pins have no verifiable figure; leave them empty with a reason rather than fill them from a tracker.
+  2. **Near-miss figures that are not facility capacity:** PPA/renewable contracts (Kuna 645 MW, Henrico 540 MW, Tulsa 1,500 MW, Inzai 15-40 MW), annual energy caps (Canelones 560 GWh), a neighbouring site's number (Lea County's 7 GW is a different project; Elia's 200-300 MW is Farciennes, not Saint-Ghislain), an unnamed developer's filing (Chesterfield 900 MW), a campus-wide figure for one building (De Soto 2,000 MW), and generating capacity for a restart (Crane 835 MW).
+  3. **Working sources:** NSW planning consent via W.Media (Huntingwood 96 MW), local news of utility statements (Moncks Corner 380 MW from Santee Cooper), planning notices (Clonee 3 x 36 MW), state filings reported by local TV (Lincoln 52.65 MW peak), operator pages that state a design target (Meta Lebanon 1 GW).
+  4. **Modelled estimates:** Epoch AI's IT-power model covers many Meta sites; the lane used its projected figure where it exceeded the current one and said so in `note`. Epoch lists Jeffersonville and Rosemount as operational while Meta says forthcoming.
+  5. **Search tooling:** web search rate-limited two lanes (one or two searches per pin), DCD and Michigan Advance returned 403, so some figures rest on search excerpts (7367 1,000 MW, 7371 400 MW). A second pass with the same tooling found almost nothing new, so more passes need a different source (utility dockets, planning files), not more searching.
+  6. **Unlocated press estimate:** Changhua (7257, about 250 MW) comes from a Reporter article (2026-04-20) the agent described but whose URL could not be found; not stored until a link exists.
+* **Changed:** Added [PinPower](../tables/pin-power.md) and its log line. Not yet folded into [Fields](fields.md) or [Vertical recipes](verticals.md); the Cleanview recipe should gain "set `PinPower` via `PUT /api/pins/:id/power` when the title or filing states MW".
+
 ## 2026-10-18 - Cleanview energy and data-center batch (Rounds 1–51, 779 pins) and start-date audit
 
 * **Done:** Published and audited all **779** Cleanview utility-scale solar, battery energy storage (`BESS`), and data-center pins across Rounds 1–51 on both local and production (`@EnergyDesk`, 3 verified USGS orthoimagery/topo/corridor media layers per pin in Azure Blob Storage `thumb`). Audited `utcStartDateTime`, `dateConfidence`, and `dateConfidenceReasoning` across all 51 rounds against `state-leads-all.json` and project filings, and reconciled **211 pins** across `drafts/*.json`, local, and production via `PUT /api/pins/:id?lightweight=1`:
