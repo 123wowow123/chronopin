@@ -11,7 +11,7 @@ describe('mapStats', () => {
   });
   it('says the median when one outlier dominates the sum', () => {
     const stats = mapStats([pin({ price: 1e6, priceCurrency: 'USD' }), pin({ price: 2e6, priceCurrency: 'USD' }), pin({ price: 9e12, priceCurrency: 'USD' })]);
-    expect(stats.find((s) => s.key === 'cost')?.label).toBe('Median cost:');
+    expect(stats.find((s) => s.key === 'cost')?.labelKey).toBe('statMedianCost');
   });
   it('shows episodes and rating only once five pins carry them', () => {
     const few = mapStats(Array.from({ length: 4 }, () => pin({ episodeCount: 12, ratingPercent: 80 })));

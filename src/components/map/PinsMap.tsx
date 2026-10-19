@@ -31,7 +31,7 @@ import type { MapPinJson, PinJson } from '@/lib/types';
 import { joinSearchQuery, splitSearchQuery } from '@/server/util/searchQuery';
 import { refineQuery } from '@/lib/searchTerms';
 import { useT } from '@/lib/client/i18n';
-import { DEFAULT_LOCALE, isRtl, splitLocale } from '@/lib/i18n/config';
+import { DEFAULT_LOCALE, INTL_LOCALES, isRtl, splitLocale } from '@/lib/i18n/config';
 import { categoryLabel } from '@/lib/i18n/labels';
 import type { Translator } from '@/lib/i18n/translate';
 import type { ListingJson } from '@/lib/listings';
@@ -116,10 +116,10 @@ const inCategories = (categories: string[], picks: string[]) => !picks.length ||
 
 // The count and totals of the markers a category pick leaves showing (the
 // focused pin always shows).
-function publishMapStats(entries: MapEntry[], picks: string[], setCount: (n: number) => void, setStats: (stats: MapStat[]) => void) {
+function publishMapStats(entries: MapEntry[], picks: string[], setCount: (n: number) => void, setStats: (stats: MapStat[]) => void, numberLocale: string) {
   const shown = entries.filter((e) => e.focus || inCategories(e.categories, picks)).map((e) => e.pin);
   setCount(shown.length);
-  setStats(mapStats(shown));
+  setStats(mapStats(shown, numberLocale));
 }
 
 const escapeHtml = (text: string) => text.replace(/[&<>"']/g, (c) => `&#${c.charCodeAt(0)};`);
@@ -320,6 +320,7 @@ function loadedAsMap() {
 export default function PinsMap({ sliderTyping = false, ads = false }: { sliderTyping?: boolean; ads?: boolean }) {
   const router = useRouter();
   const t = useT();
+  const numberLocale = INTL_LOCALES[t.locale] ?? 'en-US';
   const rtl = isRtl(t.locale);
   const params = useSearchParams();
   const query = params.get('q') || '';
@@ -685,7 +686,7 @@ export default function PinsMap({ sliderTyping = false, ads = false }: { sliderT
         }
       }
       syncCopies(map, layer, markersRef.current, categoriesRef.current);
-      publishMapStats(markersRef.current, categoriesRef.current, setCount, setStats);
+      publishMapStats(markersRef.current, categoriesRef.current, setCount, setStats, numberLocale);
     };
 
     // Every pin to plot, in one request: the window, the posted-within cutoff
@@ -746,7 +747,7 @@ export default function PinsMap({ sliderTyping = false, ads = false }: { sliderT
       cancelled = true;
       abort.abort();
     };
-  }, [past, future, postedWithin, fetchQuery, watched, focusId, fitResults, restaurantLayer, preserveView, specials]);
+  }, [past, future, postedWithin, fetchQuery, watched, focusId, fitResults, restaurantLayer, preserveView, specials, numberLocale]);
 
   useEffect(() => {
     const map = mapRef.current;
@@ -756,8 +757,8 @@ export default function PinsMap({ sliderTyping = false, ads = false }: { sliderT
     if (!map || !layer) return;
     map.closePopup();
     syncCopies(map, layer, markersRef.current, picks);
-    publishMapStats(markersRef.current, picks, setCount, setStats);
-  }, [categoryKey]);
+    publishMapStats(markersRef.current, picks, setCount, setStats, numberLocale);
+  }, [categoryKey, numberLocale]);
 
   // "1,240 km from Los Angeles" clicked on a pin: the line it measured, from
   // where the viewer's browser puts them to the pin, once that pin is plotted.
@@ -1032,9 +1033,9 @@ export default function PinsMap({ sliderTyping = false, ads = false }: { sliderT
         <FloatingControls
           merge
           cards={layer === 'pins' && fetchQuery && status === 'ready' && count > 0 ? (
-            <dl aria-label="Totals for the pins matching the search" className="floating mt-2 flex w-full flex-nowrap items-baseline justify-between gap-x-2.5 overflow-hidden rounded-lg px-3 py-1.5 text-xs whitespace-nowrap">
+            <dl aria-label={t('map.statsLabel')} className="floating mt-2 flex w-full flex-nowrap items-baseline justify-between gap-x-2.5 overflow-hidden rounded-lg px-3 py-1.5 text-xs whitespace-nowrap">
               {stats.map((stat) => (
-                <div key={stat.key} className="flex gap-1"><dt className="text-muted">{stat.label}</dt><dd className={`font-semibold tabular-nums ${stat.tone}`}>{stat.value}</dd></div>
+                <div key={stat.key} className="flex gap-1"><dt className="text-muted">{t(`map.${stat.labelKey}`)}</dt><dd className={`font-semibold tabular-nums ${stat.tone}`}>{stat.value}</dd></div>
               ))}
             </dl>
           ) : undefined}
