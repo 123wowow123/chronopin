@@ -49,6 +49,22 @@ function stayOnAllCities() {
   try { sessionStorage.setItem(STAY_KEY, '1'); } catch { /* storage blocked */ }
 }
 
+// Prompts for the device's position where permission is still undecided.
+// Prior refusals are left alone.
+async function askDevicePosition(): Promise<{ latitude: number; longitude: number } | null> {
+  try {
+    if (!navigator.geolocation) return null;
+    if ((await navigator.permissions.query({ name: 'geolocation' })).state !== 'prompt') return null;
+    const coords = await new Promise<GeolocationCoordinates>((resolve, reject) =>
+      navigator.geolocation.getCurrentPosition((p) => resolve(p.coords), reject, { maximumAge: 15 * 60 * 1000, timeout: 15000 }),
+    );
+    // Rounded to about a kilometre, as viewerPlace does.
+    return { latitude: Math.round(coords.latitude * 100) / 100, longitude: Math.round(coords.longitude * 100) / 100 };
+  } catch {
+    return null;
+  }
+}
+
 export function ActivitiesView({
   pins,
   cityFilter,
@@ -87,10 +103,20 @@ export function ActivitiesView({
       return;
     }
     let active = true;
-    viewerPlace().then((place) => {
+    const open = (place: { latitude: number; longitude: number } | null) => {
       if (!active || !place) return;
       const near = nearestActivityCity(place);
       if (cityTabSlugs.has(near.slug) && distanceKm(place, near) <= LOCAL_KM) router.replace(`/activities/${near.slug}`);
+    };
+    viewerPlace().then(async (place) => {
+      // With no device position yet, ask for it once: the
+      // browser remembers the answer, and a refusal falls back to the
+      // account or time-zone place as before.
+      if (place?.source !== 'device') {
+        const device = await askDevicePosition();
+        if (device) return open(device);
+      }
+      open(place);
     }).catch(() => {});
     return () => { active = false; };
   }, [cityFilter, cityTabSlugs, router]);

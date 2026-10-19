@@ -1,0 +1,68 @@
+{
+  "completedAt": "2026-10-18T22:21:33.697Z",
+  "environment": "production",
+  "pins": [
+    {
+      "id": 1953,
+      "title": "The 2026 World Series Opens on 23 October",
+      "sourceHash": "b8c3111fe8dc5115e1e68e805ab83811e347e373"
+    },
+    {
+      "id": 1954,
+      "title": "Super Bowl LXI Decides the 2026 NFL Season at SoFi Stadium",
+      "sourceHash": "fa44fc7a910925a69a6bcd528c96d656de7b5d08"
+    },
+    {
+      "id": 1965,
+      "title": "Spotify Wrapped Names the Most-Streamed Artist of 2026",
+      "sourceHash": "f00ecc48016d6d0b8ea0ed014ec5bb53032dac2e"
+    },
+    {
+      "id": 1968,
+      "title": "Brazil Votes in the First Round of Its Presidential Election",
+      "sourceHash": "51bc61e76759ab47aa9002ef5200643d7114a6be"
+    },
+    {
+      "id": 1989,
+      "title": "Google Releases Its Next Gemini Pro Model",
+      "sourceHash": "349c272bdbcdf3fa202c146f2d21913b143007b9"
+    },
+    {
+      "id": 6976,
+      "title": "NAIA Plans an Opening in Las Olas",
+      "sourceHash": "31cfa8f0b693ea848d85bd0ba6025d4171528368"
+    },
+    {
+      "id": 15691,
+      "title": "Arevon Avocet Energy Storage: 200 MW / 800 MWh Battery in Carson, California, Planned for 2027",
+      "sourceHash": "ec8b3ca6b15a0ff4e0adceb52e2530ead8c4ce45"
+    }
+  ],
+  "locales": [
+    "es",
+    "fr",
+    "de",
+    "ja",
+    "zh",
+    "ko",
+    "hi",
+    "ar",
+    "th",
+    "it",
+    "ru",
+    "pt",
+    "ms",
+    "vi",
+    "id"
+  ],
+  "saved": 105,
+  "skipped": [],
+  "verification": {
+    "localizedApiResponses": 105,
+    "unchangedEnglishOriginals": 7,
+    "unchangedAuthors": 7,
+    "selectedPinsRemainingInQueue": 0,
+    "finalWordingFixesVerified": 2
+  },
+  "deployment": false
+}
