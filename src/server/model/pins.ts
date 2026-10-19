@@ -17,6 +17,7 @@ import { PLACE_TEXT_SCORE, SEMANTIC_ALONE_SCORE, TITLE_TEXT_SCORE, isCjkText, lo
 import type { NearFilter } from '../util/nearFilter';
 import { isRubricYear } from '@/lib/rubricYear';
 import { rubricYearClause } from '../util/rubricSearch';
+import { expandTagGroups } from '../util/tagNames';
 import { restaurantTimelineClause } from '../util/restaurantTimeline';
 import type { CarPerfTerm, DayBound, DiningTerm, DelayBound, HotelTerm, PersonAxisBound, RatingBound, TasteTerm } from '../util/searchQuery';
 
@@ -1178,13 +1179,15 @@ export function searchClauses(filter: SearchFilter) {
     if (filter.tags.length) {
       const curated = filter.tags.some((tag) => tag.toLowerCase() === 'curated');
       const predicted = filter.tags.some((tag) => tag.toLowerCase() === 'predicted');
-      where.push(`(EXISTS (SELECT 1 FROM "PinTagView" AS "tagged" WHERE "tagged"."pinId" = "Pin"."id" AND ("tagged"."name" = ANY(${add(filter.tags)}::citext[]) OR "tagged"."name"::text ~* ANY(${add(tagGroupPatterns(filter.tags))}::text[])))${curated ? ` OR ${CURATED}` : ''}${predicted ? ` OR ${predictedPinOf('Pin')}` : ''})`);
+      const expandedTags = expandTagGroups(filter.tags);
+      where.push(`(EXISTS (SELECT 1 FROM "PinTagView" AS "tagged" WHERE "tagged"."pinId" = "Pin"."id" AND ("tagged"."name" = ANY(${add(expandedTags ?? filter.tags)}::citext[])${expandedTags ? '' : ` OR "tagged"."name"::text ~* ANY(${add(tagGroupPatterns(filter.tags))}::text[])`}))${curated ? ` OR ${CURATED}` : ''}${predicted ? ` OR ${predictedPinOf('Pin')}` : ''})`);
     }
     // None of these (-tag:), each read as a tag: term is, so leaving out an
     // award body leaves out every year of it.
     if (filter.excludeTags.length) {
+      const expandedExcluded = expandTagGroups(filter.excludeTags);
       const excludePredicted = filter.excludeTags.some((tag) => tag.toLowerCase() === 'predicted');
-      where.push(`NOT EXISTS (SELECT 1 FROM "PinTagView" AS "untagged" WHERE "untagged"."pinId" = "Pin"."id" AND ("untagged"."name" = ANY(${add(filter.excludeTags)}::citext[]) OR "untagged"."name"::text ~* ANY(${add(tagGroupPatterns(filter.excludeTags))}::text[])))`);
+      where.push(`NOT EXISTS (SELECT 1 FROM "PinTagView" AS "untagged" WHERE "untagged"."pinId" = "Pin"."id" AND ("untagged"."name" = ANY(${add(expandedExcluded ?? filter.excludeTags)}::citext[])${expandedExcluded ? '' : ` OR "untagged"."name"::text ~* ANY(${add(tagGroupPatterns(filter.excludeTags))}::text[])`}))`);
       if (excludePredicted) {
         where.push(`NOT ${predictedPinOf('Pin')}`);
       }
