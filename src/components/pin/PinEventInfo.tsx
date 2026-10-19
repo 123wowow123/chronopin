@@ -11,7 +11,8 @@ const ACTION_KEY = { tickets: 'pin.getTickets', fees: 'pin.seeFees', register: '
 // Who performs at an event pin and how to get in (PinEventInfo, 0082): the
 // same facts its Event markup gives search, shown where a reader can see
 // them. A sale state is a reading that goes stale, so it says when it was
-// read, and is dropped once the event has started.
+// read, and is dropped once the event is over (a season still running keeps
+// its buy button).
 export function PinEventInfo({ info, started, t }: { info: PinEventInfoJson; started: boolean; t: Translator }) {
   const locale = INTL_LOCALES[t.locale] ?? 'en-US';
   const day = (iso: string) =>

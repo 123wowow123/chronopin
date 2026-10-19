@@ -614,7 +614,7 @@ async function PinBody({
         </div>
       </div>
 
-      {eventInfo ? <PinEventInfo info={eventInfo} started={!venue && pinTense(pin, new Date(), dayKeyIn(new Date(), timeZone)) !== 'future'} t={t} /> : null}
+      {eventInfo ? <PinEventInfo info={eventInfo} started={!venue && pinTense(pin, new Date(), dayKeyIn(new Date(), timeZone)) === 'past'} t={t} /> : null}
 
       {/* Where to watch a film, series or anime: a merchant whose link is a
           streaming service (src/lib/streaming.ts), in the service's colours. */}
