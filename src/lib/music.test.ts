@@ -163,9 +163,12 @@ describe('music', () => {
     expect(usEntry?.artist).toBe('Lady Gaga & Bruno Mars');
     expect(usEntry?.youtubeId).toMatch(/^[a-zA-Z0-9_-]{11}$/);
 
-    const byTitle = getMusicRankingByTitleOrPin(99999, 'Lady Gaga & Bruno Mars — Die With a Smile');
+    const byTitle = getMusicRankingByTitleOrPin(99999, 'Die With a Smile');
     expect(byTitle).toBeDefined();
     expect(byTitle?.artist).toBe('Lady Gaga & Bruno Mars');
+
+    // Exact title only: an "artist — title" string must not match.
+    expect(getMusicRankingByTitleOrPin(99999, 'Lady Gaga & Bruno Mars — Die With a Smile')).toBeUndefined();
   });
 
   it('populates backing pinId for all seed music rankings', () => {

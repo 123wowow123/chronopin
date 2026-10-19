@@ -1004,21 +1004,22 @@ export function searchClauses(filter: SearchFilter) {
       // Every word typed in its own title and description, or one of its
       // tags, so a pin that says what was searched for is found however far
       // down the semantic ranking it fell, or past the pool's end.
-      const wordPatterns = typedWordPatterns(typed);
-      const words = wordPatterns.length ? add(wordPatterns) : null;
-      const ownWords = words ? `("p"."title" || ' ' || COALESCE("p"."description", '')) ~* ALL(${words}::text[])` : 'false';
+      // One condition a word, as for the titles: ~* ALL(...) cannot use a
+      // trigram index (0195), a run of plain ~* ANDed together can.
+      const wordPatterns = typedWordPatterns(typed).map((pattern) => add(pattern));
+      const ownWords = wordPatterns.length ? wordPatterns.map((word) => `("p"."title" || ' ' || COALESCE("p"."description", '')) ~* ${word}::text`).join(' AND ') : 'false';
       ctes.push(`"said" AS (
         SELECT "m"."id", bool_or("m"."place") AS "place", bool_or("m"."title") AS "title", bool_or("m"."words") AS "words"
         FROM (
-          SELECT "p"."id", "p"."address" ~* ANY(${place}::text[]) AS "place", false AS "title", ${ownWords} AS "words"
+          SELECT "p"."id", "p"."address" ~* ANY(${place}::text[]) AS "place", false AS "title", (${ownWords}) AS "words"
           FROM "Pin" AS "p"
-          WHERE "p"."address" ~* ANY(${place}::text[]) OR ${ownWords}
+          WHERE "p"."address" ~* ANY(${place}::text[]) OR (${ownWords})
           UNION ALL
           SELECT "tr"."pinId", false, true, false FROM "PinTranslation" AS "tr" WHERE ${title}${
-            words
+            wordPatterns.length
               ? `
           UNION ALL
-          SELECT "wt"."pinId", false, false, true FROM "PinTagView" AS "wt" WHERE "wt"."name"::text ~* ALL(${words}::text[])`
+          SELECT "wt"."pinId", false, false, true FROM "PinTagView" AS "wt" WHERE ${wordPatterns.map((word) => `"wt"."name"::text ~* ${word}::text`).join(' AND ')}`
               : ''
           }
         ) AS "m"

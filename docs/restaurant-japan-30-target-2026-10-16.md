@@ -1,16 +1,16 @@
 # Japan restaurant target audit — October 16, 2026
 
-Target: **30 distinct eligible restaurants in every tab of every city**. **548 verified memberships; 193 still missing**. This target remains incomplete; surplus in another tab does not offset a shortage.
+Target: **30 distinct eligible restaurants in every tab of every city**. **558 verified memberships; 185 still missing**. This target remains incomplete; surplus in another tab does not offset a shortage.
 
-**Batch 89 large batch published and verified on the production application (October 19, 14:37 JST / October 18, 22:37 PDT):** **12 new venues, 564 menu/serving entries, 44 credited Azure photos and 13 native guide memberships**. Fukuoka Top reaches **21/30** with Kubotsu, Georges Marceau, HananoKi and TTOAHISU; Kubotsu adds verified white-truffle/Christmas/group offers. Osaka Top reaches **17/30** with Fujiya1935, Taian, Yugen and relocated Koryu. Kyoto Top reaches **19/30** with DODICI and Mizuki. L’Osier and L’Effervescence bring **Tokyo Top to 30/30**. Seven offer schedules passed **59 boundary checks and seven next starts**. Exact profiles, rendered menus, photo metadata and all native title/image links verified locally and through the production origin; all 24 guide counts agree at **548 memberships / 193 missing**, twelve fewer missing memberships. Fujiya retains an explicitly estimated July 2003 opening day; relocated/rebuilt branch dates and source conflicts are documented. Public HTTPS checks remain pending because requests time out during a separate deployment. No deployment. [Batch evidence](restaurant-japan-30-japan89-2026-10-18.json).
+**Batch 90 published and verified through the production origin (October 19, 15:10 JST / October 18, 23:10 PDT):** **6 new venues, 411 menu/serving entries, 22 credited Azure photos and 10 native guide memberships**. La Fête and Le Midi bring **Osaka Top to 19/30 and Specials to 25/30**; Hiramatsu Kodaiji, La Luce and Kodaiji Jugyuan bring **Kyoto Top to 22/30 and Specials to 34/30**; L’AS Fukuoka brings **Fukuoka Top to 22/30**. All six exact branch opening dates confirmed. Eight offer schedules passed **67 boundary checks and 8 next starts**, including private Christmas closures and Kodaiji’s published gala start. Full saved profiles, rendered native menus, galleries and title/image links verified in both environments. All 24 city/tab counts agree at **558 memberships / 185 missing**, eight fewer missing memberships. Batches 89–90 together add **18 venues, 975 menu/serving entries, 66 photos and 23 guide memberships**; Tokyo Top remains 30/30. Public HTTPS verification remains pending after requests time out; production checks use the running application via temporary authenticated SSH forwarding. No deployment. [Batch evidence](restaurant-japan-30-japan90-2026-10-18.json).
 
 All 24 local and production-origin guide counts agree. Public HTTPS verification remains pending; earlier checkpoints below are historical.
 
 | City (west to east) | Coming soon | Just opened | Top restaurants | Specials |
 | --- | ---: | ---: | ---: | ---: |
-| Fukuoka | 9/30 | 20/30 | 21/30 | 34/30 |
-| Osaka | 12/30 | 22/30 | 17/30 | 23/30 |
-| Kyoto | 11/30 | 33/30 | 19/30 | 32/30 |
+| Fukuoka | 9/30 | 20/30 | 22/30 | 34/30 |
+| Osaka | 12/30 | 22/30 | 19/30 | 25/30 |
+| Kyoto | 11/30 | 33/30 | 22/30 | 34/30 |
 | Nagoya | 11/30 | 31/30 | 17/30 | 29/30 |
 | Tokyo | 14/30 | 23/30 | 30/30 | 37/30 |
 | Sapporo | 11/30 | 28/30 | 30/30 | 34/30 |
@@ -21,16 +21,16 @@ All 24 local and production-origin guide counts agree. Public HTTPS verification
 | --- | --- | ---: | ---: | ---: | ---: |
 | Fukuoka | Coming soon | 9 | 9 | 30 | 21 |
 | Fukuoka | Just opened | 20 | 20 | 30 | 10 |
-| Fukuoka | Top restaurants | 21 | 21 | 30 | 9 |
+| Fukuoka | Top restaurants | 22 | 22 | 30 | 8 |
 | Fukuoka | Specials | 34 | 34 | 30 | 0 |
 | Osaka | Coming soon | 12 | 12 | 30 | 18 |
 | Osaka | Just opened | 22 | 22 | 30 | 8 |
-| Osaka | Top restaurants | 17 | 17 | 30 | 13 |
-| Osaka | Specials | 23 | 23 | 30 | 7 |
+| Osaka | Top restaurants | 19 | 19 | 30 | 11 |
+| Osaka | Specials | 25 | 25 | 30 | 5 |
 | Kyoto | Coming soon | 11 | 11 | 30 | 19 |
 | Kyoto | Just opened | 33 | 33 | 30 | 0 |
-| Kyoto | Top restaurants | 19 | 19 | 30 | 11 |
-| Kyoto | Specials | 32 | 32 | 30 | 0 |
+| Kyoto | Top restaurants | 22 | 22 | 30 | 8 |
+| Kyoto | Specials | 34 | 34 | 30 | 0 |
 | Nagoya | Coming soon | 11 | 11 | 30 | 19 |
 | Nagoya | Just opened | 31 | 31 | 30 | 0 |
 | Nagoya | Top restaurants | 17 | 17 | 30 | 13 |
@@ -178,3 +178,8 @@ Samjo Osaka, Sakagami Fish Center Osaka and Uotto Sapporo Station North Exit: th
 ## Batch 89 completed
 
 **Batch 89 large batch published and verified on the production application (October 19, 14:37 JST / October 18, 22:37 PDT):** **12 new venues, 564 menu/serving entries, 44 credited Azure photos and 13 native guide memberships**. Fukuoka Top reaches **21/30** with Kubotsu, Georges Marceau, HananoKi and TTOAHISU; Kubotsu adds verified white-truffle/Christmas/group offers. Osaka Top reaches **17/30** with Fujiya1935, Taian, Yugen and relocated Koryu. Kyoto Top reaches **19/30** with DODICI and Mizuki. L’Osier and L’Effervescence bring **Tokyo Top to 30/30**. Seven offer schedules passed **59 boundary checks and seven next starts**. Exact profiles, rendered menus, photo metadata and all native title/image links verified locally and through the production origin; all 24 guide counts agree at **548 memberships / 193 missing**, twelve fewer missing memberships. Fujiya retains an explicitly estimated July 2003 opening day; relocated/rebuilt branch dates and source conflicts are documented. Public HTTPS checks remain pending because requests time out during a separate deployment. No deployment. [Batch evidence](restaurant-japan-30-japan89-2026-10-18.json).
+
+
+## Batch 90 completed
+
+**Batch 90 published and verified through the production origin (October 19, 15:10 JST / October 18, 23:10 PDT):** **6 new venues, 411 menu/serving entries, 22 credited Azure photos and 10 native guide memberships**. La Fête and Le Midi bring **Osaka Top to 19/30 and Specials to 25/30**; Hiramatsu Kodaiji, La Luce and Kodaiji Jugyuan bring **Kyoto Top to 22/30 and Specials to 34/30**; L’AS Fukuoka brings **Fukuoka Top to 22/30**. All six exact branch opening dates confirmed. Eight offer schedules passed **67 boundary checks and 8 next starts**, including private Christmas closures and Kodaiji’s published gala start. Full saved profiles, rendered native menus, galleries and title/image links verified in both environments. All 24 city/tab counts agree at **558 memberships / 185 missing**, eight fewer missing memberships. Batches 89–90 together add **18 venues, 975 menu/serving entries, 66 photos and 23 guide memberships**; Tokyo Top remains 30/30. Public HTTPS verification remains pending after requests time out; production checks use the running application via temporary authenticated SSH forwarding. No deployment. [Batch evidence](restaurant-japan-30-japan90-2026-10-18.json).

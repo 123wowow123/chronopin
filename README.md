@@ -423,3 +423,8 @@ political figure in other countries
 
 30s play should fade in last .5sec and new song should start playing during that fade
 
+do 6am job on prod using this session
+
+
+datacenter
+https://www.cnbc.com/2026/10/19/how-data-centers-are-reshaping-americas-aging-grid-pine-island-minnesota-google.html

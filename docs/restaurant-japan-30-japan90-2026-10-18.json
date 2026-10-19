@@ -3,7 +3,7 @@
   "checkedAt": "2026-10-18",
   "counts": {
     "venues": 6,
-    "menuEntries": 396,
+    "menuEntries": 411,
     "galleryLinks": 22,
     "specialVenues": 4,
     "scheduleRecords": 8
@@ -1484,7 +1484,31 @@
           }
         }
       },
-      "researchNotes": "Opened official menu, two course PDFs (10 rendered/visually reviewed pages), about/gallery, news and booking. Christmas2026 headline/numeric dates control stale2025 footer. All weekend December lunches and Dec23–25 lunches private; Dec12 dinner private. Group year-end dates checked but no unverified holiday timing scheduled. Full final Christmas recipes remain unpublished."
+      "researchNotes": "Opened official menu, two course PDFs (10 rendered/visually reviewed pages), about/gallery, news and booking. Christmas2026 headline/numeric dates control stale2025 footer. All weekend December lunches and Dec23–25 lunches private; Dec12 dinner private. Group year-end dates checked but no unverified holiday timing scheduled. Full final Christmas recipes remain unpublished.",
+      "verification": {
+        "local": {
+          "pinId": 18079,
+          "sourceUrl": "https://www.hiramatsurestaurant.jp/hiramatsu-lafete/",
+          "name": "La Fête Hiramatsu — Nakanoshima",
+          "contentId": 1887,
+          "contentRevision": 1,
+          "verifiedGalleryLinks": 4,
+          "publicPinStatus": 200,
+          "apiBase": "http://localhost:3000",
+          "publicBase": "http://localhost:3000"
+        },
+        "production": {
+          "pinId": 18166,
+          "sourceUrl": "https://www.hiramatsurestaurant.jp/hiramatsu-lafete/",
+          "name": "La Fête Hiramatsu — Nakanoshima",
+          "contentId": 1887,
+          "contentRevision": 1,
+          "verifiedGalleryLinks": 4,
+          "publicPinStatus": 200,
+          "apiBase": "http://127.0.0.1:19089",
+          "publicBase": "http://127.0.0.1:19089"
+        }
+      }
     },
     {
       "pin": {
@@ -2047,6 +2071,51 @@
                     "name": "Menu Speciale 特別な記念日、大切な日の為に 最高食材の特別なフルコース",
                     "price": 26620,
                     "note": "Exact branch operator total, including 10% service and 10% consumption tax. Course-specific meal, weekday and reservation restrictions apply."
+                  },
+                  {
+                    "name": "キャビアの冷製カペリーニ",
+                    "priceLabel": "Price not published",
+                    "note": "Included seasonal example in this exact Menu Speciale; no standalone price published. Substitutions apply."
+                  },
+                  {
+                    "name": "松茸とフォアグラのソテー コンソメスープ仕立て",
+                    "priceLabel": "Price not published",
+                    "note": "Included seasonal example in this exact Menu Speciale; no standalone price published. Substitutions apply."
+                  },
+                  {
+                    "name": "自家製リコッタチーズとオリーブリーフのカッペレッティ 名残鱧のフリット",
+                    "priceLabel": "Price not published",
+                    "note": "Included seasonal example in this exact Menu Speciale; no standalone price published. Substitutions apply."
+                  },
+                  {
+                    "name": "河内鴨と九条一遍ねぎのタリオリーニ すだちの香り添え",
+                    "priceLabel": "Price not published",
+                    "note": "Included seasonal example in this exact Menu Speciale; no standalone price published. Substitutions apply."
+                  },
+                  {
+                    "name": "かますの炙りと大あさりのヴァポーレ 旬の魚介類のブロード",
+                    "priceLabel": "Price not published",
+                    "note": "Included seasonal example in this exact Menu Speciale; no standalone price published. Substitutions apply."
+                  },
+                  {
+                    "name": "お口直しの葡萄と日本酒のグラニテ",
+                    "priceLabel": "Price not published",
+                    "note": "Included seasonal example in this exact Menu Speciale; no standalone price published. Substitutions apply."
+                  },
+                  {
+                    "name": "阿波牛ヒレ肉の紀州備長炭焼 刻み本わさびと酒粕のコンディメント 赤ワインソース",
+                    "priceLabel": "Price not published",
+                    "note": "Included seasonal example in this exact Menu Speciale; no standalone price published. Substitutions apply."
+                  },
+                  {
+                    "name": "青木農園の無花果とチョコレートムース 無花果のお茶の泡 トンカ豆ジェラート",
+                    "priceLabel": "Price not published",
+                    "note": "Included seasonal example in this exact Menu Speciale; no standalone price published. Substitutions apply."
+                  },
+                  {
+                    "name": "コーヒーと小菓子",
+                    "priceLabel": "Price not published",
+                    "note": "Included seasonal example in this exact Menu Speciale; no standalone price published. Substitutions apply."
                   }
                 ],
                 "note": "Named recipes are operator examples; substitutions and alternatives apply. キャビアのカペリーニ／松茸とフォアグラのスープ／パスタ／パスタ／魚料理／お口直しのグラニテ／黒毛和牛ヒレ肉／ ドルチェ／小菓子／コーヒー キャビアの冷製カペリーニ 松茸とフォアグラのソテー コンソメスープ仕立て 自家製リコッタチーズとオリーブリーフのカッペレッティ 名残鱧のフリット 河内鴨と九条一遍ねぎのタリオリーニ すだちの香り添え かますの炙りと大あさりのヴァポーレ 旬の魚介類のブロード お口直しの葡萄と日本酒のグラニテ 阿波牛ヒレ肉の紀州備長炭焼 刻み本わさびと酒粕のコンディメント　赤ワインソース 青木農園の無花果とチョコレートムース 無花果のお茶の泡　トンカ豆ジェラート コーヒーと小菓子 オンライン予約はこちら ※各種優待割引対象です。ご予約時にお申し付けくださいませ。"
@@ -2985,6 +3054,51 @@
                   "name": "Menu Speciale 特別な記念日、大切な日の為に 最高食材の特別なフルコース",
                   "price": 26620,
                   "note": "Exact branch operator total, including 10% service and 10% consumption tax. Course-specific meal, weekday and reservation restrictions apply."
+                },
+                {
+                  "name": "キャビアの冷製カペリーニ",
+                  "priceLabel": "Price not published",
+                  "note": "Included seasonal example in this exact Menu Speciale; no standalone price published. Substitutions apply."
+                },
+                {
+                  "name": "松茸とフォアグラのソテー コンソメスープ仕立て",
+                  "priceLabel": "Price not published",
+                  "note": "Included seasonal example in this exact Menu Speciale; no standalone price published. Substitutions apply."
+                },
+                {
+                  "name": "自家製リコッタチーズとオリーブリーフのカッペレッティ 名残鱧のフリット",
+                  "priceLabel": "Price not published",
+                  "note": "Included seasonal example in this exact Menu Speciale; no standalone price published. Substitutions apply."
+                },
+                {
+                  "name": "河内鴨と九条一遍ねぎのタリオリーニ すだちの香り添え",
+                  "priceLabel": "Price not published",
+                  "note": "Included seasonal example in this exact Menu Speciale; no standalone price published. Substitutions apply."
+                },
+                {
+                  "name": "かますの炙りと大あさりのヴァポーレ 旬の魚介類のブロード",
+                  "priceLabel": "Price not published",
+                  "note": "Included seasonal example in this exact Menu Speciale; no standalone price published. Substitutions apply."
+                },
+                {
+                  "name": "お口直しの葡萄と日本酒のグラニテ",
+                  "priceLabel": "Price not published",
+                  "note": "Included seasonal example in this exact Menu Speciale; no standalone price published. Substitutions apply."
+                },
+                {
+                  "name": "阿波牛ヒレ肉の紀州備長炭焼 刻み本わさびと酒粕のコンディメント 赤ワインソース",
+                  "priceLabel": "Price not published",
+                  "note": "Included seasonal example in this exact Menu Speciale; no standalone price published. Substitutions apply."
+                },
+                {
+                  "name": "青木農園の無花果とチョコレートムース 無花果のお茶の泡 トンカ豆ジェラート",
+                  "priceLabel": "Price not published",
+                  "note": "Included seasonal example in this exact Menu Speciale; no standalone price published. Substitutions apply."
+                },
+                {
+                  "name": "コーヒーと小菓子",
+                  "priceLabel": "Price not published",
+                  "note": "Included seasonal example in this exact Menu Speciale; no standalone price published. Substitutions apply."
                 }
               ],
               "note": "Named recipes are operator examples; substitutions and alternatives apply. キャビアのカペリーニ／松茸とフォアグラのスープ／パスタ／パスタ／魚料理／お口直しのグラニテ／黒毛和牛ヒレ肉／ ドルチェ／小菓子／コーヒー キャビアの冷製カペリーニ 松茸とフォアグラのソテー コンソメスープ仕立て 自家製リコッタチーズとオリーブリーフのカッペレッティ 名残鱧のフリット 河内鴨と九条一遍ねぎのタリオリーニ すだちの香り添え かますの炙りと大あさりのヴァポーレ 旬の魚介類のブロード お口直しの葡萄と日本酒のグラニテ 阿波牛ヒレ肉の紀州備長炭焼 刻み本わさびと酒粕のコンディメント　赤ワインソース 青木農園の無花果とチョコレートムース 無花果のお茶の泡　トンカ豆ジェラート コーヒーと小菓子 オンライン予約はこちら ※各種優待割引対象です。ご予約時にお申し付けくださいませ。"
@@ -3402,7 +3516,31 @@
           }
         }
       },
-      "researchNotes": "Operator full menu/news/gallery/booking and shared corkage PDF opened; PDF rendered and exact branch row visually reviewed. June15,2026 new prices retained. Natale A lunch menu-specific restriction Dec19–20,23–25 controls broad news description; published weekday typo noted. Continuous Christmas lunch offer uses Natale B. Group New Year closure dates unresolved, so no inferred day-level Special."
+      "researchNotes": "Operator full menu/news/gallery/booking and shared corkage PDF opened; PDF rendered and exact branch row visually reviewed. June15,2026 new prices retained. Natale A lunch menu-specific restriction Dec19–20,23–25 controls broad news description; published weekday typo noted. Continuous Christmas lunch offer uses Natale B. Group New Year closure dates unresolved, so no inferred day-level Special. Menu Speciale’s nine named course components transcribed explicitly after the generic anniversary filter initially omitted them.",
+      "verification": {
+        "local": {
+          "pinId": 18080,
+          "sourceUrl": "https://www.hiramatsurestaurant.jp/hiramatsu-lemidi/",
+          "name": "Ristorante Le Midi Hiramatsu — Umeda",
+          "contentId": 1888,
+          "contentRevision": 2,
+          "verifiedGalleryLinks": 4,
+          "publicPinStatus": 200,
+          "apiBase": "http://localhost:3000",
+          "publicBase": "http://localhost:3000"
+        },
+        "production": {
+          "pinId": 18168,
+          "sourceUrl": "https://www.hiramatsurestaurant.jp/hiramatsu-lemidi/",
+          "name": "Ristorante Le Midi Hiramatsu — Umeda",
+          "contentId": 1888,
+          "contentRevision": 2,
+          "verifiedGalleryLinks": 4,
+          "publicPinStatus": 200,
+          "apiBase": "http://127.0.0.1:19089",
+          "publicBase": "http://127.0.0.1:19089"
+        }
+      }
     },
     {
       "pin": {
@@ -4786,7 +4924,31 @@
           }
         }
       },
-      "researchNotes": "Opened full operator menu/news/about/gallery/booking. July1,2026 shorter hours override earlier seat times. Course-specific Christmas begins Dec2 despite general Dec1 news. Later seating roster Dec18–20 lunch12/12:30/13,dinner18/18:30/19; Dec23–25 first11:30/12,second16/16:30,third19/19:30,all2h; numeric dates used because weekday labels stale. Only early Christmas windows and precisely timed gala scheduled. Later Christmas arrival ranges not inferred."
+      "researchNotes": "Opened full operator menu/news/about/gallery/booking. July1,2026 shorter hours override earlier seat times. Course-specific Christmas begins Dec2 despite general Dec1 news. Later seating roster Dec18–20 lunch12/12:30/13,dinner18/18:30/19; Dec23–25 first11:30/12,second16/16:30,third19/19:30,all2h; numeric dates used because weekday labels stale. Only early Christmas windows and precisely timed gala scheduled. Later Christmas arrival ranges not inferred.",
+      "verification": {
+        "local": {
+          "pinId": 18081,
+          "sourceUrl": "https://www.hiramatsurestaurant.jp/hiramatsu-kodaiji/",
+          "name": "Restaurant Hiramatsu Kodaiji",
+          "contentId": 1889,
+          "contentRevision": 1,
+          "verifiedGalleryLinks": 3,
+          "publicPinStatus": 200,
+          "apiBase": "http://localhost:3000",
+          "publicBase": "http://localhost:3000"
+        },
+        "production": {
+          "pinId": 18170,
+          "sourceUrl": "https://www.hiramatsurestaurant.jp/hiramatsu-kodaiji/",
+          "name": "Restaurant Hiramatsu Kodaiji",
+          "contentId": 1889,
+          "contentRevision": 1,
+          "verifiedGalleryLinks": 3,
+          "publicPinStatus": 200,
+          "apiBase": "http://127.0.0.1:19089",
+          "publicBase": "http://127.0.0.1:19089"
+        }
+      }
     },
     {
       "pin": {
@@ -5620,7 +5782,31 @@
           }
         }
       },
-      "researchNotes": "All operator food/news/about/gallery/booking opened. Preserved published rounded lunch totals5800/8220 rather than recomputing tax. Transcribed19 à la carte servings including separate100g beef variants. Autumn alternatives are choices, not cumulative courses. Christmas final recipes unpublished; no invented menu."
+      "researchNotes": "All operator food/news/about/gallery/booking opened. Preserved published rounded lunch totals5800/8220 rather than recomputing tax. Transcribed19 à la carte servings including separate100g beef variants. Autumn alternatives are choices, not cumulative courses. Christmas final recipes unpublished; no invented menu.",
+      "verification": {
+        "local": {
+          "pinId": 18082,
+          "sourceUrl": "https://www.hiramatsurestaurant.jp/la-luce/",
+          "name": "Ristorante La Luce — THE HIRAMATSU Kyoto",
+          "contentId": 1890,
+          "contentRevision": 1,
+          "verifiedGalleryLinks": 3,
+          "publicPinStatus": 200,
+          "apiBase": "http://localhost:3000",
+          "publicBase": "http://localhost:3000"
+        },
+        "production": {
+          "pinId": 18171,
+          "sourceUrl": "https://www.hiramatsurestaurant.jp/la-luce/",
+          "name": "Ristorante La Luce — THE HIRAMATSU Kyoto",
+          "contentId": 1890,
+          "contentRevision": 1,
+          "verifiedGalleryLinks": 3,
+          "publicPinStatus": 200,
+          "apiBase": "http://127.0.0.1:19089",
+          "publicBase": "http://127.0.0.1:19089"
+        }
+      }
     },
     {
       "pin": {
@@ -6134,7 +6320,31 @@
           "originalUrl": "https://jugyuan.jp/assets/img/photogallery/list/img_li_04.jpg"
         }
       ],
-      "researchNotes": "Opened current primary menu/about/gallery/reservation and rendered menu. Legacy Hiramatsu path404; canonical jugyuan.jp works. Published course structures retained; exact daily recipes not published. Crab through mid-March has no precise ending date and is not scheduled. Bento explicitly suspended. Gallery garden/views labelled as property imagery, not current dishes. No verified active dated offer found."
+      "researchNotes": "Opened current primary menu/about/gallery/reservation and rendered menu. Legacy Hiramatsu path404; canonical jugyuan.jp works. Published course structures retained; exact daily recipes not published. Crab through mid-March has no precise ending date and is not scheduled. Bento explicitly suspended. Gallery garden/views labelled as property imagery, not current dishes. No verified active dated offer found.",
+      "verification": {
+        "local": {
+          "pinId": 18083,
+          "sourceUrl": "https://jugyuan.jp/",
+          "name": "Kodaiji Jugyuan",
+          "contentId": 1891,
+          "contentRevision": 1,
+          "verifiedGalleryLinks": 4,
+          "publicPinStatus": 200,
+          "apiBase": "http://localhost:3000",
+          "publicBase": "http://localhost:3000"
+        },
+        "production": {
+          "pinId": 18173,
+          "sourceUrl": "https://jugyuan.jp/",
+          "name": "Kodaiji Jugyuan",
+          "contentId": 1891,
+          "contentRevision": 1,
+          "verifiedGalleryLinks": 4,
+          "publicPinStatus": 200,
+          "apiBase": "http://127.0.0.1:19089",
+          "publicBase": "http://127.0.0.1:19089"
+        }
+      }
     },
     {
       "pin": {
@@ -6295,6 +6505,46 @@
                   }
                 ],
                 "note": "Pairing prices unpublished on current operator menu. Examples of nonalcoholic drinks include herb sparkling, tea and fruit cocktails; no guaranteed exact recipe."
+              },
+              {
+                "label": "L’AS Fukuoka published drinks and pairing examples",
+                "url": "https://las-restaurant.com/menu_fukuoka.html",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Herb sparkling drink",
+                    "priceLabel": "Price not published",
+                    "note": "Operator nonalcoholic pairing example; exact blend not published."
+                  },
+                  {
+                    "name": "Tea",
+                    "priceLabel": "Price not published",
+                    "note": "Operator nonalcoholic pairing example; selection varies."
+                  },
+                  {
+                    "name": "Fruit cocktail",
+                    "priceLabel": "Price not published",
+                    "note": "Operator nonalcoholic pairing example; selection varies."
+                  },
+                  {
+                    "name": "Glass Champagne",
+                    "priceLabel": "Price not published",
+                    "note": "Branch-managed drinks listing last updated August4,2025; confirm current selection."
+                  },
+                  {
+                    "name": "Glass wine — red/white",
+                    "priceLabel": "Price not published",
+                    "note": "Branch-managed drinks listing last updated August4,2025; confirm current selection."
+                  },
+                  {
+                    "name": "Draft beer",
+                    "priceLabel": "Price not published",
+                    "note": "Branch-managed drinks listing last updated August4,2025; confirm current availability."
+                  }
+                ],
+                "note": "First three formats are current operator pairing examples. Last three are from the exact Fukuoka managed drinks listing, with its historical update date preserved; no current price inferred.",
+                "documentUrl": "https://tabelog.com/en/fukuoka/A4001/A400103/40071133/dtlmenu/drink/"
               }
             ],
             "specials": []
@@ -6422,7 +6672,31 @@
           "originalUrl": "https://las-restaurant.com/images/fukuoka_2025-01.jpg"
         }
       ],
-      "researchNotes": "Opened both Fukuoka operator menu languages, branch-specific homepage/gallery, announcement, managed food/drink listings and booking. Exact Japanese cake3850 conflicts with English2200; current Japanese amount retained with explicit confirmation note. Pairing prices and full named daily recipes unpublished. Photos exclusively from homepage’s Fukuoka section, excluding Tokyo room and brand-wide press dishes. No verified dated offer found."
+      "researchNotes": "Opened both Fukuoka operator menu languages, branch-specific homepage/gallery, announcement, managed food/drink listings and booking. Exact Japanese cake3850 conflicts with English2200; current Japanese amount retained with explicit confirmation note. Pairing prices and full named daily recipes unpublished. Photos exclusively from homepage’s Fukuoka section, excluding Tokyo room and brand-wide press dishes. No verified dated offer found.",
+      "verification": {
+        "local": {
+          "pinId": 18084,
+          "sourceUrl": "https://las-restaurant.com/menu_fukuoka.html",
+          "name": "L’AS Fukuoka — Watanabedori",
+          "contentId": 1892,
+          "contentRevision": 2,
+          "verifiedGalleryLinks": 4,
+          "publicPinStatus": 200,
+          "apiBase": "http://localhost:3000",
+          "publicBase": "http://localhost:3000"
+        },
+        "production": {
+          "pinId": 18176,
+          "sourceUrl": "https://las-restaurant.com/menu_fukuoka.html",
+          "name": "L’AS Fukuoka — Watanabedori",
+          "contentId": 1892,
+          "contentRevision": 2,
+          "verifiedGalleryLinks": 4,
+          "publicPinStatus": 200,
+          "apiBase": "http://127.0.0.1:19089",
+          "publicBase": "http://127.0.0.1:19089"
+        }
+      }
     }
   ],
   "held": [
@@ -6435,5 +6709,2767 @@
       "reason": "Roan Kyoto Nov14 and Oreno Kappo Osaka Sep7 already exist; no duplicates added. Prior batch88 held opening/gallery gaps remain unresolved."
     }
   ],
-  "deployment": "No deployment"
+  "deployment": "No deployment",
+  "verifiedAtUtc": "2026-10-19T06:10:35.855667+00:00",
+  "verifiedGuideCounts": [
+    {
+      "environment": "production",
+      "city": "fukuoka",
+      "view": "upcoming",
+      "verificationBase": "http://127.0.0.1:19089",
+      "count": 9,
+      "ids": [
+        "15398",
+        "15410",
+        "15411",
+        "15415",
+        "15424",
+        "15425",
+        "15426",
+        "15914",
+        "15924"
+      ]
+    },
+    {
+      "environment": "production",
+      "city": "fukuoka",
+      "view": "new",
+      "verificationBase": "http://127.0.0.1:19089",
+      "count": 20,
+      "ids": [
+        "15399",
+        "15400",
+        "15401",
+        "15409",
+        "15412",
+        "15414",
+        "15421",
+        "15422",
+        "15423",
+        "15427",
+        "15428",
+        "15969",
+        "16026",
+        "16027",
+        "16078",
+        "16290",
+        "16291",
+        "16292",
+        "16326",
+        "17625"
+      ]
+    },
+    {
+      "environment": "production",
+      "city": "fukuoka",
+      "view": "top",
+      "verificationBase": "http://127.0.0.1:19089",
+      "count": 22,
+      "ids": [
+        "15402",
+        "15403",
+        "15404",
+        "15405",
+        "15406",
+        "15407",
+        "15408",
+        "15413",
+        "15416",
+        "15417",
+        "15418",
+        "15419",
+        "15420",
+        "15429",
+        "18132",
+        "18133",
+        "18134",
+        "18147",
+        "18148",
+        "18149",
+        "18150",
+        "18176"
+      ]
+    },
+    {
+      "environment": "production",
+      "city": "fukuoka",
+      "view": "discounts",
+      "verificationBase": "http://127.0.0.1:19089",
+      "count": 34,
+      "ids": [
+        "https://010bld.com/gohgan/",
+        "https://333sanmitomatoramen.com/store/%e5%a4%a9%e7%a5%9e%e5%a4%a7%e5%90%8d%e6%9c%ac%e5%ba%97/",
+        "https://and-gallery.com/#hukuoka",
+        "https://cene.tokyo/collections/fukuoka-open",
+        "https://fukuoka-orientalhotel.com/restaurant/linksquare/",
+        "https://fukuokaseahawk.hiltonjapan.co.jp/restaurants/clouds",
+        "https://fukuokaseahawk.hiltonjapan.co.jp/restaurants/seala",
+        "https://kusiyatubame.owst.jp/",
+        "https://le-bistro-aki.com/",
+        "https://onefukuoka-building.jp/shop/55",
+        "https://prtimes.jp/main/html/rd/p/000000060.000179076.html",
+        "https://prtimes.jp/main/html/rd/p/000000064.000152670.html",
+        "https://prtimes.jp/main/html/rd/p/000000170.000101757.html",
+        "https://pukutoco.com/shi-yanyan-ropponmatu/",
+        "https://pukutoco.com/sumomo-bakery-1007open/",
+        "https://pukutoco.com/sumomobakery-akasaka1019open/",
+        "https://toeihotel-fukuoka.com/restaurant/bistro_atrie/",
+        "https://www.eggsnthingsjapan.com/hakata/",
+        "https://www.f-sunpalace.com/restaurant/lagoon/",
+        "https://www.fuk.hotelokura.co.jp/restaurant/lechampdor/",
+        "https://www.gate-hotel.jp/fukuoka/rb/agfukuoka.html",
+        "https://www.ginzalion.jp/shop/brand/yebisubar/onefukuokabldg.html",
+        "https://www.hiramatsurestaurant.jp/hiramatsu-hakata/",
+        "https://www.hiramatsurestaurant.jp/kubotsu/",
+        "https://www.hotelnikko-fukuoka.com/restaurant/celebrites/",
+        "https://www.hotelnikko-fukuoka.com/restaurant/serena/",
+        "https://www.hotpepper.jp/strJ001276550/",
+        "https://www.kys-newotani.co.jp/hakata/restaurant/castillian-bar/",
+        "https://www.orec.co.jp/greenlab-fukuoka/",
+        "https://www.pochi-ito.com/",
+        "https://www.princehotels.co.jp/momochihama/restaurant/yocaterrace/",
+        "https://www.quil-fait-bon.com/pages/fukuoka",
+        "https://www.recent-hotel.com/restaurant/",
+        "https://www.tenchika.com/shop/h_b_antique/"
+      ]
+    },
+    {
+      "environment": "production",
+      "city": "osaka",
+      "view": "upcoming",
+      "verificationBase": "http://127.0.0.1:19089",
+      "count": 12,
+      "ids": [
+        "15432",
+        "15445",
+        "15447",
+        "15448",
+        "15449",
+        "15458",
+        "15913",
+        "15925",
+        "15975",
+        "16023",
+        "16079",
+        "17168"
+      ]
+    },
+    {
+      "environment": "production",
+      "city": "osaka",
+      "view": "new",
+      "verificationBase": "http://127.0.0.1:19089",
+      "count": 22,
+      "ids": [
+        "15431",
+        "15435",
+        "15436",
+        "15437",
+        "15438",
+        "15439",
+        "15446",
+        "15451",
+        "15452",
+        "15453",
+        "15454",
+        "15455",
+        "15456",
+        "15457",
+        "17108",
+        "17109",
+        "17110",
+        "17111",
+        "17112",
+        "17622",
+        "17623",
+        "17626"
+      ]
+    },
+    {
+      "environment": "production",
+      "city": "osaka",
+      "view": "top",
+      "verificationBase": "http://127.0.0.1:19089",
+      "count": 19,
+      "ids": [
+        "15430",
+        "15433",
+        "15434",
+        "15440",
+        "15441",
+        "15442",
+        "15443",
+        "15444",
+        "15450",
+        "15971",
+        "18135",
+        "18136",
+        "18137",
+        "18151",
+        "18152",
+        "18153",
+        "18154",
+        "18166",
+        "18168"
+      ]
+    },
+    {
+      "environment": "production",
+      "city": "osaka",
+      "view": "discounts",
+      "verificationBase": "http://127.0.0.1:19089",
+      "count": 25,
+      "ids": [
+        "https://and-gallery.com/#nanba",
+        "https://big-step.co.jp/shop/detail/63",
+        "https://conrad-osaka.hiltonjapan.co.jp/restaurants/40skybar",
+        "https://conrad-osaka.hiltonjapan.co.jp/restaurants/atmos",
+        "https://cross-osaka.orixhotelsandresorts.com/#restaurant",
+        "https://csm-cafe.ltr-online.com/lp/csm-cafe-s022",
+        "https://doubletree-osaka-castle.hiltonjapan.co.jp/restaurants/lounge-bar-sen",
+        "https://doubletree-osaka-castle.hiltonjapan.co.jp/restaurants/restaurant-sen",
+        "https://gabuchiki.com/news/view/308",
+        "https://icosaka.com/offer/pierre_autumnmenu/",
+        "https://jblm2024.wixsite.com/fujiyama-tokyo/%E8%A4%87%E8%A3%BD-namba-osaka",
+        "https://labaie.ritzcarltonosaka.com/",
+        "https://osaka.ekimaru.com/shopguide/detail/103",
+        "https://osaka.hiltonjapan.co.jp/plans/restaurants/other/myplace-happyhour",
+        "https://patinahotels.com/osaka/drink-and-dine/p72",
+        "https://prtimes.jp/main/html/rd/p/000000001.000192433.html/",
+        "https://splendido.ritzcarltonosaka.com/",
+        "https://www.daimaru.co.jp/shinsaibashi/restaurant/cucina-bella.html",
+        "https://www.gate-hotel.jp/osaka/rb/aosaka.html",
+        "https://www.gate-hotel.jp/osaka/rb/peaks.html",
+        "https://www.hiramatsurestaurant.jp/hiramatsu-lafete/",
+        "https://www.hiramatsurestaurant.jp/hiramatsu-lemidi/",
+        "https://www.hotpepper.jp/strJ004661366/",
+        "https://www.quil-fait-bon.com/pages/grand-front-osaka",
+        "https://www.regine.stregisosaka.com/"
+      ]
+    },
+    {
+      "environment": "production",
+      "city": "kyoto",
+      "view": "upcoming",
+      "verificationBase": "http://127.0.0.1:19089",
+      "count": 11,
+      "ids": [
+        "15483",
+        "15499",
+        "15500",
+        "15909",
+        "15910",
+        "15911",
+        "15912",
+        "15922",
+        "15931",
+        "16323",
+        "17169"
+      ]
+    },
+    {
+      "environment": "production",
+      "city": "kyoto",
+      "view": "new",
+      "verificationBase": "http://127.0.0.1:19089",
+      "count": 33,
+      "ids": [
+        "15460",
+        "15461",
+        "15462",
+        "15463",
+        "15464",
+        "15465",
+        "15466",
+        "15467",
+        "15468",
+        "15469",
+        "15470",
+        "15471",
+        "15472",
+        "15473",
+        "15474",
+        "15475",
+        "15476",
+        "15477",
+        "15478",
+        "15479",
+        "15480",
+        "15481",
+        "15482",
+        "15489",
+        "15490",
+        "15491",
+        "15492",
+        "15493",
+        "15494",
+        "15495",
+        "15498",
+        "18025",
+        "18026"
+      ]
+    },
+    {
+      "environment": "production",
+      "city": "kyoto",
+      "view": "top",
+      "verificationBase": "http://127.0.0.1:19089",
+      "count": 22,
+      "ids": [
+        "15459",
+        "15484",
+        "15485",
+        "15486",
+        "15487",
+        "15488",
+        "15496",
+        "15497",
+        "15501",
+        "15973",
+        "18052",
+        "18060",
+        "18061",
+        "18098",
+        "18099",
+        "18117",
+        "18119",
+        "18155",
+        "18156",
+        "18170",
+        "18171",
+        "18173"
+      ]
+    },
+    {
+      "environment": "production",
+      "city": "kyoto",
+      "view": "discounts",
+      "verificationBase": "http://127.0.0.1:19089",
+      "count": 34,
+      "ids": [
+        "https://cenci-kyoto.com/",
+        "https://droit-kyoto.jp/",
+        "https://hotelfauchonkyoto.com/ja/gourmet/fauchon-salon-de-the-kyoto/",
+        "https://kyoto.hiltonjapan.co.jp/restaurants/teori",
+        "https://www.hiramatsurestaurant.jp/hiramatsu-kodaiji/",
+        "https://www.hiramatsurestaurant.jp/la-luce/",
+        "https://www.instagram.com/jbowl_ritsumeikan_mae/",
+        "https://www.keihanhotels-resorts.co.jp/kyoto-centuryhotel/topics/happyhour-2/",
+        "https://www.kyoto-station-building.co.jp/restaurant_cafe/011/",
+        "https://www.kyoto-station-building.co.jp/restaurant_cafe/012/",
+        "https://www.kyoto-station-building.co.jp/restaurant_cafe/013/",
+        "https://www.kyoto-station-building.co.jp/restaurant_cafe/014/",
+        "https://www.kyoto-station-building.co.jp/restaurant_cafe/015/",
+        "https://www.kyoto-station-building.co.jp/restaurant_cafe/016/",
+        "https://www.kyoto-station-building.co.jp/restaurant_cafe/017/",
+        "https://www.kyoto-station-building.co.jp/restaurant_cafe/018/",
+        "https://www.kyoto-station-building.co.jp/restaurant_cafe/019/",
+        "https://www.kyoto-station-building.co.jp/restaurant_cafe/020/",
+        "https://www.kyoto-station-building.co.jp/restaurant_cafe/022/",
+        "https://www.kyoto-station-building.co.jp/restaurant_cafe/023/",
+        "https://www.kyoto-station-building.co.jp/restaurant_cafe/026/",
+        "https://www.kyoto-station-building.co.jp/restaurant_cafe/028/",
+        "https://www.kyoto-station-building.co.jp/restaurant_cafe/031/",
+        "https://www.kyoto-station-building.co.jp/restaurant_cafe/033/",
+        "https://www.kyoto-station-building.co.jp/restaurant_cafe/039/",
+        "https://www.kyoto-station-building.co.jp/restaurant_cafe/040/",
+        "https://www.kyoto-station-building.co.jp/restaurant_cafe/042/",
+        "https://www.kyoto-station-building.co.jp/restaurant_cafe/043/",
+        "https://www.princess-kyoto.co.jp/restaurant/ambercourt/",
+        "https://www.princess-kyoto.co.jp/restaurant/darley/",
+        "https://www.princess-kyoto.co.jp/restaurant/hisuien/",
+        "https://www.princess-kyoto.co.jp/restaurant/hoen/",
+        "https://www.princess-kyoto.co.jp/restaurant/sagano/",
+        "https://www.quil-fait-bon.com/pages/kyoto"
+      ]
+    },
+    {
+      "environment": "production",
+      "city": "nagoya",
+      "view": "upcoming",
+      "verificationBase": "http://127.0.0.1:19089",
+      "count": 11,
+      "ids": [
+        "15510",
+        "15512",
+        "15517",
+        "15518",
+        "15521",
+        "15522",
+        "15900",
+        "15901",
+        "15902",
+        "16075",
+        "16080"
+      ]
+    },
+    {
+      "environment": "production",
+      "city": "nagoya",
+      "view": "new",
+      "verificationBase": "http://127.0.0.1:19089",
+      "count": 31,
+      "ids": [
+        "15509",
+        "15511",
+        "15515",
+        "15516",
+        "15519",
+        "15520",
+        "15898",
+        "15899",
+        "15915",
+        "15916",
+        "15917",
+        "15918",
+        "15919",
+        "15920",
+        "15921",
+        "15932",
+        "15964",
+        "15965",
+        "16020",
+        "16021",
+        "16022",
+        "16076",
+        "16294",
+        "16295",
+        "16767",
+        "16771",
+        "16800",
+        "17107",
+        "17166",
+        "17167",
+        "18045"
+      ]
+    },
+    {
+      "environment": "production",
+      "city": "nagoya",
+      "view": "top",
+      "verificationBase": "http://127.0.0.1:19089",
+      "count": 17,
+      "ids": [
+        "15502",
+        "15503",
+        "15504",
+        "15505",
+        "15506",
+        "15507",
+        "15508",
+        "15513",
+        "15514",
+        "15523",
+        "15524",
+        "15972",
+        "18044",
+        "18100",
+        "18101",
+        "18121",
+        "18138"
+      ]
+    },
+    {
+      "environment": "production",
+      "city": "nagoya",
+      "view": "discounts",
+      "verificationBase": "http://127.0.0.1:19089",
+      "count": 29,
+      "ids": [
+        "https://and-gallery.com/#nagoya",
+        "https://csm-cafe.ltr-online.com/lp/csm-cafe-s017",
+        "https://french-kitamura.jp/",
+        "https://kinzan.nagoya/archives/news/2853/",
+        "https://kobekangroup.com/shop/obanzai_kabtoya/",
+        "https://lebeurrenoisettetokyo.com/nagoya/",
+        "https://nagoya.hiltonjapan.co.jp/restaurants/hideaway3-3",
+        "https://nagoya.hiltonjapan.co.jp/restaurants/inplace3-3",
+        "https://nagoya.hiltonjapan.co.jp/restaurants/ouchou",
+        "https://nagoya.parco.jp/shop/detail/?cd=009191",
+        "https://prtimes.jp/main/html/rd/p/000000004.000116722.html",
+        "https://prtimes.jp/main/html/rd/p/000004440.000018505.html",
+        "https://thetowerhotel.jp/restaurant/",
+        "https://www.anacrowneplaza-nagoya.jp/pages/restaurant_gardencourt",
+        "https://www.anacrowneplaza-nagoya.jp/pages/restaurant_karin",
+        "https://www.anacrowneplaza-nagoya.jp/pages/restaurant_stargate",
+        "https://www.anacrowneplaza-nagoya.jp/pages/restaurant_winglounge",
+        "https://www.associa.com/nma/restaurant/pergola/",
+        "https://www.centralpark.co.jp/shop/sharecafe/",
+        "https://www.espacionagoya.com/restaurant-bar/the-bar-castle/",
+        "https://www.hiramatsurestaurant.jp/aubergedelill-nagoya/",
+        "https://www.hotpepper.jp/strJ004698778/",
+        "https://www.hotpepper.jp/strJ004699003/",
+        "https://www.komeda.co.jp/shop/detail.html?id=1215",
+        "https://www.lafloraison-t.jp/",
+        "https://www.livingroom-skybar.com/",
+        "https://www.princehotels.co.jp/nagoya/restaurant/skydining/",
+        "https://www.quil-fait-bon.com/pages/nagoya-sakae",
+        "https://www.thekawabunnagoya.com/thekawabunnagoya/restaurant/"
+      ]
+    },
+    {
+      "environment": "production",
+      "city": "tokyo",
+      "view": "upcoming",
+      "verificationBase": "http://127.0.0.1:19089",
+      "count": 14,
+      "ids": [
+        "15526",
+        "15538",
+        "15541",
+        "15544",
+        "15546",
+        "15555",
+        "15556",
+        "15557",
+        "15923",
+        "15929",
+        "15930",
+        "17106",
+        "17621",
+        "18027"
+      ]
+    },
+    {
+      "environment": "production",
+      "city": "tokyo",
+      "view": "new",
+      "verificationBase": "http://127.0.0.1:19089",
+      "count": 23,
+      "ids": [
+        "15527",
+        "15539",
+        "15540",
+        "15551",
+        "15552",
+        "15553",
+        "15554",
+        "15558",
+        "15966",
+        "15967",
+        "15968",
+        "16289",
+        "16325",
+        "17170",
+        "17171",
+        "17172",
+        "17173",
+        "17628",
+        "18043",
+        "18051",
+        "18058",
+        "18102",
+        "18103"
+      ]
+    },
+    {
+      "environment": "production",
+      "city": "tokyo",
+      "view": "top",
+      "verificationBase": "http://127.0.0.1:19089",
+      "count": 30,
+      "ids": [
+        "15525",
+        "15528",
+        "15529",
+        "15530",
+        "15531",
+        "15532",
+        "15533",
+        "15534",
+        "15535",
+        "15536",
+        "15537",
+        "15542",
+        "15543",
+        "15545",
+        "15547",
+        "15548",
+        "15549",
+        "15550",
+        "15559",
+        "15560",
+        "15561",
+        "15562",
+        "15903",
+        "15974",
+        "18122",
+        "18123",
+        "18140",
+        "18141",
+        "18157",
+        "18158"
+      ]
+    },
+    {
+      "environment": "production",
+      "city": "tokyo",
+      "view": "discounts",
+      "verificationBase": "http://127.0.0.1:19089",
+      "count": 37,
+      "ids": [
+        "https://and-gallery.com/#ikebukuro",
+        "https://and-gallery.com/#yurakucho",
+        "https://cocco.eastone.co.jp/shop/gotanda",
+        "https://cocco.eastone.co.jp/shop/kameido",
+        "https://conrad-tokyo.hiltonjapan.co.jp/restaurants/cerise",
+        "https://conrad-tokyo.hiltonjapan.co.jp/restaurants/chinablue",
+        "https://conrad-tokyo.hiltonjapan.co.jp/restaurants/twentyeight",
+        "https://csm-cafe.ltr-online.com/lp/csm-cafe-s012",
+        "https://gourmetpress.net/1488798/",
+        "https://miabocca.eastone.co.jp/shop/Ikebukuro",
+        "https://miabocca.eastone.co.jp/shop/Shakujii-park",
+        "https://miabocca.eastone.co.jp/shop/Shinjuku-takasimaya",
+        "https://prtimes.jp/main/html/rd/p/000000009.000161200.html",
+        "https://prtimes.jp/main/html/rd/p/000000048.000152772.html",
+        "https://prtimes.jp/main/html/rd/p/000000196.000049183.html",
+        "https://prtimes.jp/main/html/rd/p/000000356.000048489.html",
+        "https://prtimes.jp/main/html/rd/p/000000592.000071323.html",
+        "https://prtimes.jp/main/html/rd/p/000004178.000003860.html",
+        "https://sarabethsrestaurants.jp/location/omotesando/",
+        "https://sarabethsrestaurants.jp/location/shinagawa/",
+        "https://sarabethsrestaurants.jp/location/shinjuku/",
+        "https://sarabethsrestaurants.jp/location/tokyo/",
+        "https://shibakoen.bar-shinkai.com/",
+        "https://store-info.skylark.co.jp/syabuyo/map/198490/",
+        "https://tabelog.com/en/tokyo/A1303/A130301/13198692/",
+        "https://tokyo.hiltonjapan.co.jp/restaurants/st_georges_bar",
+        "https://www.andaztokyo.jp/restaurants/jp/thetavern-grill-lounge",
+        "https://www.herofield.com/bbq/tokyoprince/",
+        "https://www.hiramatsurestaurant.jp/jardindessens-tokyo/",
+        "https://www.mesm.jp/en/eat-drink/chefs-theatre.html",
+        "https://www.newotani.co.jp/tokyo/restaurant/gardenlounge/",
+        "https://www.quil-fait-bon.com/pages/aoyama",
+        "https://www.quil-fait-bon.com/pages/grand-maison-ginza",
+        "https://www.quil-fait-bon.com/pages/shinjuku",
+        "https://www.quil-fait-bon.com/pages/tokyo-dome-city",
+        "https://www.quil-fait-bon.com/pages/tokyo-skytree-town-solamachi",
+        "https://www.sunamo.jp/floor/shop_detail.html?UC=1_028"
+      ]
+    },
+    {
+      "environment": "production",
+      "city": "sapporo",
+      "view": "upcoming",
+      "verificationBase": "http://127.0.0.1:19089",
+      "count": 11,
+      "ids": [
+        "15568",
+        "15569",
+        "15570",
+        "15571",
+        "15597",
+        "15926",
+        "15970",
+        "17103",
+        "18047",
+        "18048",
+        "18054"
+      ]
+    },
+    {
+      "environment": "production",
+      "city": "sapporo",
+      "view": "new",
+      "verificationBase": "http://127.0.0.1:19089",
+      "count": 28,
+      "ids": [
+        "15580",
+        "15586",
+        "15587",
+        "15588",
+        "15589",
+        "15590",
+        "15591",
+        "15592",
+        "15595",
+        "15596",
+        "16293",
+        "16296",
+        "17104",
+        "17105",
+        "17624",
+        "17627",
+        "18028",
+        "18029",
+        "18030",
+        "18031",
+        "18049",
+        "18055",
+        "18056",
+        "18057",
+        "18104",
+        "18105",
+        "18124",
+        "18125"
+      ]
+    },
+    {
+      "environment": "production",
+      "city": "sapporo",
+      "view": "top",
+      "verificationBase": "http://127.0.0.1:19089",
+      "count": 30,
+      "ids": [
+        "15563",
+        "15564",
+        "15565",
+        "15566",
+        "15567",
+        "15572",
+        "15573",
+        "15574",
+        "15575",
+        "15576",
+        "15577",
+        "15578",
+        "15579",
+        "15581",
+        "15582",
+        "15583",
+        "15584",
+        "15585",
+        "15593",
+        "15594",
+        "15598",
+        "15599",
+        "15600",
+        "15601",
+        "15602",
+        "15603",
+        "15604",
+        "15605",
+        "15606",
+        "15607"
+      ]
+    },
+    {
+      "environment": "production",
+      "city": "sapporo",
+      "view": "discounts",
+      "verificationBase": "http://127.0.0.1:19089",
+      "count": 34,
+      "ids": [
+        "https://anan.fuji-tatsu.co.jp/shop/sapporo-sinoro/",
+        "https://chocottosushi-kiwami.owst.jp/",
+        "https://cocco.eastone.co.jp/shop/kitahachijo",
+        "https://cocco.eastone.co.jp/shop/kitaichijo",
+        "https://cocco.eastone.co.jp/shop/kotoniekimae",
+        "https://cocco.eastone.co.jp/shop/miyanosawa",
+        "https://cocco.eastone.co.jp/shop/shindohigashi",
+        "https://cocco.eastone.co.jp/shop/souen",
+        "https://grand1934.com/restaurant/garden-dining-waraku/",
+        "https://grand1934.com/restaurant/kokaku/",
+        "https://grand1934.com/restaurant/lobby-lounge-mizar/",
+        "https://grand1934.com/restaurant/northern-terrace-diner/",
+        "https://grand1934.com/restaurant/old-saloon1934/",
+        "https://miabocca.eastone.co.jp/shop/Kita2jo",
+        "https://miabocca.eastone.co.jp/shop/Kotoni-station",
+        "https://miabocca.eastone.co.jp/shop/Sapporo-station",
+        "https://miabocca.eastone.co.jp/shop/atsubetsuminami",
+        "https://miabocca.eastone.co.jp/shop/sapporoduo",
+        "https://michiru.dkdining.com/sapporo/",
+        "https://prtimes.jp/main/html/rd/p/000000010.000134951.html",
+        "https://store-info.skylark.co.jp/syabuyo/map/198489/",
+        "https://www.anahisapporosusukino.com/restaurants/verde/",
+        "https://www.hyatt.com/hyatt-centric/ja-JP/ctsct-hyatt-centric-sapporo/dining",
+        "https://www.jrhotels.co.jp/tower/restaurant/skyj/",
+        "https://www.keioplaza-sapporo.co.jp/restaurants/akizu/",
+        "https://www.keioplaza-sapporo.co.jp/restaurants/crossvault/",
+        "https://www.keioplaza-sapporo.co.jp/restaurants/glass/",
+        "https://www.keioplaza-sapporo.co.jp/restaurants/miyama/",
+        "https://www.keioplaza-sapporo.co.jp/restaurants/yamanami/",
+        "https://www.princehotels.co.jp/sapporo/restaurant/alldaydininggrandeur",
+        "https://www.princehotels.co.jp/sapporo/restaurant/fuyojo",
+        "https://www.princehotels.co.jp/sapporo/restaurant/katsura",
+        "https://www.princehotels.co.jp/sapporo/restaurant/top_prince",
+        "https://www.tokyuhotels.co.jp/sapporostream/restaurant/splish/plan/angel_devil/index.html"
+      ]
+    }
+  ],
+  "verification": {
+    "profiles": {
+      "local": [
+        {
+          "pinId": 18079,
+          "sourceUrl": "https://www.hiramatsurestaurant.jp/hiramatsu-lafete/",
+          "name": "La Fête Hiramatsu — Nakanoshima",
+          "contentId": 1887,
+          "contentRevision": 1,
+          "verifiedGalleryLinks": 4,
+          "publicPinStatus": 200,
+          "apiBase": "http://localhost:3000",
+          "publicBase": "http://localhost:3000"
+        },
+        {
+          "pinId": 18080,
+          "sourceUrl": "https://www.hiramatsurestaurant.jp/hiramatsu-lemidi/",
+          "name": "Ristorante Le Midi Hiramatsu — Umeda",
+          "contentId": 1888,
+          "contentRevision": 2,
+          "verifiedGalleryLinks": 4,
+          "publicPinStatus": 200,
+          "apiBase": "http://localhost:3000",
+          "publicBase": "http://localhost:3000"
+        },
+        {
+          "pinId": 18081,
+          "sourceUrl": "https://www.hiramatsurestaurant.jp/hiramatsu-kodaiji/",
+          "name": "Restaurant Hiramatsu Kodaiji",
+          "contentId": 1889,
+          "contentRevision": 1,
+          "verifiedGalleryLinks": 3,
+          "publicPinStatus": 200,
+          "apiBase": "http://localhost:3000",
+          "publicBase": "http://localhost:3000"
+        },
+        {
+          "pinId": 18082,
+          "sourceUrl": "https://www.hiramatsurestaurant.jp/la-luce/",
+          "name": "Ristorante La Luce — THE HIRAMATSU Kyoto",
+          "contentId": 1890,
+          "contentRevision": 1,
+          "verifiedGalleryLinks": 3,
+          "publicPinStatus": 200,
+          "apiBase": "http://localhost:3000",
+          "publicBase": "http://localhost:3000"
+        },
+        {
+          "pinId": 18083,
+          "sourceUrl": "https://jugyuan.jp/",
+          "name": "Kodaiji Jugyuan",
+          "contentId": 1891,
+          "contentRevision": 1,
+          "verifiedGalleryLinks": 4,
+          "publicPinStatus": 200,
+          "apiBase": "http://localhost:3000",
+          "publicBase": "http://localhost:3000"
+        },
+        {
+          "pinId": 18084,
+          "sourceUrl": "https://las-restaurant.com/menu_fukuoka.html",
+          "name": "L’AS Fukuoka — Watanabedori",
+          "contentId": 1892,
+          "contentRevision": 2,
+          "verifiedGalleryLinks": 4,
+          "publicPinStatus": 200,
+          "apiBase": "http://localhost:3000",
+          "publicBase": "http://localhost:3000"
+        }
+      ],
+      "production": [
+        {
+          "pinId": 18166,
+          "sourceUrl": "https://www.hiramatsurestaurant.jp/hiramatsu-lafete/",
+          "name": "La Fête Hiramatsu — Nakanoshima",
+          "contentId": 1887,
+          "contentRevision": 1,
+          "verifiedGalleryLinks": 4,
+          "publicPinStatus": 200,
+          "apiBase": "http://127.0.0.1:19089",
+          "publicBase": "http://127.0.0.1:19089"
+        },
+        {
+          "pinId": 18168,
+          "sourceUrl": "https://www.hiramatsurestaurant.jp/hiramatsu-lemidi/",
+          "name": "Ristorante Le Midi Hiramatsu — Umeda",
+          "contentId": 1888,
+          "contentRevision": 2,
+          "verifiedGalleryLinks": 4,
+          "publicPinStatus": 200,
+          "apiBase": "http://127.0.0.1:19089",
+          "publicBase": "http://127.0.0.1:19089"
+        },
+        {
+          "pinId": 18170,
+          "sourceUrl": "https://www.hiramatsurestaurant.jp/hiramatsu-kodaiji/",
+          "name": "Restaurant Hiramatsu Kodaiji",
+          "contentId": 1889,
+          "contentRevision": 1,
+          "verifiedGalleryLinks": 3,
+          "publicPinStatus": 200,
+          "apiBase": "http://127.0.0.1:19089",
+          "publicBase": "http://127.0.0.1:19089"
+        },
+        {
+          "pinId": 18171,
+          "sourceUrl": "https://www.hiramatsurestaurant.jp/la-luce/",
+          "name": "Ristorante La Luce — THE HIRAMATSU Kyoto",
+          "contentId": 1890,
+          "contentRevision": 1,
+          "verifiedGalleryLinks": 3,
+          "publicPinStatus": 200,
+          "apiBase": "http://127.0.0.1:19089",
+          "publicBase": "http://127.0.0.1:19089"
+        },
+        {
+          "pinId": 18173,
+          "sourceUrl": "https://jugyuan.jp/",
+          "name": "Kodaiji Jugyuan",
+          "contentId": 1891,
+          "contentRevision": 1,
+          "verifiedGalleryLinks": 4,
+          "publicPinStatus": 200,
+          "apiBase": "http://127.0.0.1:19089",
+          "publicBase": "http://127.0.0.1:19089"
+        },
+        {
+          "pinId": 18176,
+          "sourceUrl": "https://las-restaurant.com/menu_fukuoka.html",
+          "name": "L’AS Fukuoka — Watanabedori",
+          "contentId": 1892,
+          "contentRevision": 2,
+          "verifiedGalleryLinks": 4,
+          "publicPinStatus": 200,
+          "apiBase": "http://127.0.0.1:19089",
+          "publicBase": "http://127.0.0.1:19089"
+        }
+      ]
+    },
+    "guides": {
+      "local": [
+        {
+          "pinId": 18079,
+          "region": "osaka",
+          "view": "top",
+          "neighborhood": "Nakanoshima",
+          "nativeTitleAndImage": true,
+          "hrefs": [
+            "/pin/18079/la-fete-hiramatsu-nakanoshima-opens-2012-12-03"
+          ],
+          "browserFiltered": false,
+          "publicBase": "http://localhost:3000",
+          "guideStatus": 200,
+          "offers": []
+        },
+        {
+          "pinId": 18079,
+          "region": "osaka",
+          "view": "discounts",
+          "neighborhood": "Nakanoshima",
+          "nativeTitleAndImage": true,
+          "hrefs": [
+            "/pin/18079/la-fete-hiramatsu-nakanoshima-opens-2012-12-03"
+          ],
+          "browserFiltered": false,
+          "publicBase": "http://localhost:3000",
+          "guideStatus": 200,
+          "offers": [
+            {
+              "id": "https://www.hiramatsurestaurant.jp/hiramatsu-lafete/#0",
+              "name": "La Fête Hiramatsu — Nakanoshima",
+              "neighborhood": "Nakanoshima",
+              "address": "37F Festival Tower,2-3-18 Nakanoshima,Kita-ku,Osaka",
+              "restaurantHref": "/pin/18079/la-fete-hiramatsu-nakanoshima-opens-2012-12-03",
+              "checkedAt": "2026-10-18",
+              "special": {
+                "kind": "other",
+                "title": "La Fête Christmas lunch — weekday tables",
+                "schedule": "Asia/Tokyo local service / arrival windows; advance reservation rules apply.",
+                "menuLabel": "La Fête — クリスマス2026【ランチ】",
+                "sourceUrl": "https://www.hiramatsurestaurant.jp/hiramatsu-lafete/news/",
+                "validFrom": "2026-12-01",
+                "conditions": [
+                  "Advance booking; private-event inventory applies. Last-order endpoint included."
+                ],
+                "discounted": false,
+                "description": "Christmas lunch ¥18,150 total; higher ¥36,300 course also available. All December weekend lunches private; December23–25 lunches private.",
+                "limitedTime": true,
+                "availability": {
+                  "windows": [
+                    {
+                      "end": "13:31",
+                      "days": [
+                        1,
+                        2,
+                        3,
+                        4,
+                        5
+                      ],
+                      "start": "11:30"
+                    }
+                  ]
+                },
+                "validThrough": "2026-12-22"
+              },
+              "venueKey": "hiramatsurestaurant.jp/hiramatsu-lafete",
+              "photo": {
+                "alt": "La Fête Hiramatsu — Nakanoshima — Exact-branch operator gallery; seasonal food is illustrative and does not establish a fixed current course inclusion.",
+                "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-18/batch90-lafete-3-b12a012a1a0cc37f.webp",
+                "credit": "Hiramatsu / La Fête Hiramatsu",
+                "checkedAt": "2026-10-18",
+                "sourceUrl": "https://www.hiramatsurestaurant.jp/hiramatsu-lafete/about/",
+                "originalUrl": "https://www.hiramatsurestaurant.jp/hiramatsu-lafete/assets/img/about/imggallery04.jpg"
+              },
+              "menu": {
+                "url": "https://www.hiramatsurestaurant.jp/hiramatsu-lafete/menu/",
+                "note": "Named recipes are operator examples; substitutions and alternatives apply. アミューズ/前菜/魚料理/肉料理/デザート/コーヒー・小菓子 ■クリスマスのご予約に関して■ 《土日ランチのご予約に関して》 クリスマス期間（12/1～12/25）の土日のランチは、全てご婚礼による貸切営業となっておりますので、ディナーのみのご案内となります。 《平日ランチのご予約に関して》 ➀12月23日(水)～25日(金）のランチは、貸切営業となっております。 ➁上記以外の日も、パーティ等の貸切により、ご予約を承れないこともございます。 何卒、ご了承くださいますようお願い申し上げます。 《お子様のご利用について》 12月18日(金)～12月25日(金）の期間は、未就学児のご利用について、 ご案内するエリアを「個室のみ」に指定させていただいております。 既にパーティ等でご案内できない日がございますので、 お電話にて空き状況をご確認いただきまして、ご予約をお願いいたします。 オンライン予約はコチラ",
+                "items": [
+                  {
+                    "name": "クリスマス2026【ランチ】",
+                    "note": "Exact branch operator total, including 10% service and 10% consumption tax. Course-specific meal, weekday and reservation restrictions apply.",
+                    "price": 18150
+                  },
+                  {
+                    "name": "アミューズ/前菜/魚料理/肉料理/デザート/コーヒー・小菓子",
+                    "note": "Included seasonal course component; no standalone price published. Confirm current substitutions.",
+                    "priceLabel": "Price not published"
+                  }
+                ],
+                "label": "La Fête — クリスマス2026【ランチ】",
+                "coverage": "sample",
+                "currency": "JPY"
+              },
+              "startsAt": "2026-12-01T02:30:00.000Z",
+              "end": "13:31"
+            },
+            {
+              "id": "https://www.hiramatsurestaurant.jp/hiramatsu-lafete/#1",
+              "name": "La Fête Hiramatsu — Nakanoshima",
+              "neighborhood": "Nakanoshima",
+              "address": "37F Festival Tower,2-3-18 Nakanoshima,Kita-ku,Osaka",
+              "restaurantHref": "/pin/18079/la-fete-hiramatsu-nakanoshima-opens-2012-12-03",
+              "checkedAt": "2026-10-18",
+              "special": {
+                "kind": "other",
+                "title": "La Fête Christmas dinner",
+                "schedule": "Asia/Tokyo local service / arrival windows; advance reservation rules apply.",
+                "menuLabel": "La Fête — クリスマス2026【ランチ/ディナー】",
+                "sourceUrl": "https://www.hiramatsurestaurant.jp/hiramatsu-lafete/news/",
+                "validFrom": "2026-12-01",
+                "conditions": [
+                  "Advance booking; confirm actual seats."
+                ],
+                "discounted": false,
+                "description": "Christmas dinner ¥36,300 total. December12 is fully private. December24–25 only this course.",
+                "limitedTime": true,
+                "availability": {
+                  "windows": [
+                    {
+                      "end": "20:01",
+                      "days": [
+                        0,
+                        1,
+                        2,
+                        3,
+                        4,
+                        5,
+                        6
+                      ],
+                      "start": "18:00"
+                    }
+                  ],
+                  "excludedDates": [
+                    "2026-12-12"
+                  ],
+                  "excludesHolidays": true,
+                  "holidayCalendarThrough": "2026-12-31"
+                },
+                "validThrough": "2026-12-25"
+              },
+              "venueKey": "hiramatsurestaurant.jp/hiramatsu-lafete",
+              "photo": {
+                "alt": "La Fête Hiramatsu — Nakanoshima — Exact-branch operator gallery; seasonal food is illustrative and does not establish a fixed current course inclusion.",
+                "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-18/batch90-lafete-3-b12a012a1a0cc37f.webp",
+                "credit": "Hiramatsu / La Fête Hiramatsu",
+                "checkedAt": "2026-10-18",
+                "sourceUrl": "https://www.hiramatsurestaurant.jp/hiramatsu-lafete/about/",
+                "originalUrl": "https://www.hiramatsurestaurant.jp/hiramatsu-lafete/assets/img/about/imggallery04.jpg"
+              },
+              "menu": {
+                "url": "https://www.hiramatsurestaurant.jp/hiramatsu-lafete/menu/",
+                "note": "Named recipes are operator examples; substitutions and alternatives apply. アミューズ/1皿目の前菜/2皿目の前菜/魚料理/肉料理/プレデザート/デザート/コーヒー・小菓子 ■クリスマスのご予約に関して■ 《土日ディナーのご予約に関して》 ※土日の「個室」は全てご結婚式で貸切となっておりますので、予めご了承くださいませ。 ①以下3日間のご予約は従来通り、2カ月前の同日からのご予約開始となります。 ・12月5日（土）→ 10月5日よりご予約開始 ・12月6日（日）→ 10月6日よりご予約開始 ・12月13日（日)→ 10月13日よりご予約開始 ※12月12日（土)は、貸切営業です。 ②12月19日(土）、20日（日）のご予約は、10月7日より承ります。 《平日ディナーのご予約に関して》 Party等の貸切により、ご予約を承れないこともございます。 何卒、ご了承くださいますようお願い申し上げます。 《ディナーコースについて》 下記期間は、ご提供のコースが1コースあるいは2コースのみとなります。 ・12月19日(土)、20日(日)、23日(水)… クリスマスディナーコースとGastronomique20,000円（総額24,200円） ・12月24日(木)、25日（金)… クリスマスディナーコース30,000円(総額36,300円）のみ 《お子様のご利用について》 12月18日(金)～12月25日(金）の期間は、未就学児のご利用について、 ご案内するエリアを「個室のみ」に指定させていただいております。 土日は全てご結婚式で貸切となっておりますので、お子様連れの場合は平日でご検討いただきますよう、 よろしくお願いいたします。 また、既にパーティ等でご案内できない日がございますので、 お電話にて空き状況をご確認いただきまして、ご予約をお願いいたします。 オンライン予約はコチラ",
+                "items": [
+                  {
+                    "name": "クリスマス2026【ランチ/ディナー】",
+                    "note": "Exact branch operator total, including 10% service and 10% consumption tax. Course-specific meal, weekday and reservation restrictions apply.",
+                    "price": 36300
+                  },
+                  {
+                    "name": "アミューズ/1皿目の前菜/2皿目の前菜/魚料理/肉料理/プレデザート/デザート/コーヒー・小菓子",
+                    "note": "Included seasonal course component; no standalone price published. Confirm current substitutions.",
+                    "priceLabel": "Price not published"
+                  }
+                ],
+                "label": "La Fête — クリスマス2026【ランチ/ディナー】",
+                "coverage": "sample",
+                "currency": "JPY"
+              },
+              "startsAt": "2026-12-01T09:00:00.000Z",
+              "end": "20:01"
+            }
+          ]
+        },
+        {
+          "pinId": 18080,
+          "region": "osaka",
+          "view": "top",
+          "neighborhood": "Umeda",
+          "nativeTitleAndImage": true,
+          "hrefs": [
+            "/pin/18080/ristorante-le-midi-hiramatsu-umeda-opens-2014-06-04"
+          ],
+          "browserFiltered": false,
+          "publicBase": "http://localhost:3000",
+          "guideStatus": 200,
+          "offers": []
+        },
+        {
+          "pinId": 18080,
+          "region": "osaka",
+          "view": "discounts",
+          "neighborhood": "Umeda",
+          "nativeTitleAndImage": true,
+          "hrefs": [
+            "/pin/18080/ristorante-le-midi-hiramatsu-umeda-opens-2014-06-04"
+          ],
+          "browserFiltered": false,
+          "publicBase": "http://localhost:3000",
+          "guideStatus": 200,
+          "offers": [
+            {
+              "id": "https://www.hiramatsurestaurant.jp/hiramatsu-lemidi/#0",
+              "name": "Ristorante Le Midi Hiramatsu — Umeda",
+              "neighborhood": "Umeda",
+              "address": "1F Herbis PLAZA ENT,2-2-22 Umeda,Kita-ku,Osaka",
+              "restaurantHref": "/pin/18080/ristorante-le-midi-hiramatsu-umeda-opens-2014-06-04",
+              "checkedAt": "2026-10-18",
+              "special": {
+                "kind": "other",
+                "title": "Le Midi Christmas lunch — Natale B",
+                "schedule": "Asia/Tokyo local service / arrival windows; advance reservation rules apply.",
+                "menuLabel": "Le Midi — クリスマス特別ランチ　Pranzo NataleB",
+                "sourceUrl": "https://www.hiramatsurestaurant.jp/hiramatsu-lemidi/news/",
+                "validFrom": "2026-12-01",
+                "conditions": [
+                  "Reserve selected plan; subject to booking inventory."
+                ],
+                "discounted": false,
+                "description": "Christmas lunch Natale B ¥14,520 total. Natale A ¥9,680 is separately restricted to December19–20 and23–25 on the menu page.",
+                "limitedTime": true,
+                "availability": {
+                  "windows": [
+                    {
+                      "end": "13:31",
+                      "days": [
+                        0,
+                        1,
+                        2,
+                        3,
+                        4,
+                        5,
+                        6
+                      ],
+                      "start": "11:30"
+                    }
+                  ]
+                },
+                "validThrough": "2026-12-25"
+              },
+              "venueKey": "hiramatsurestaurant.jp/hiramatsu-lemidi",
+              "photo": {
+                "alt": "Ristorante Le Midi Hiramatsu — Umeda — Exact-branch operator gallery; seasonal food is illustrative and does not establish a fixed current course inclusion.",
+                "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-18/batch90-lemidi-6-df18a2ff0804c495.webp",
+                "credit": "Hiramatsu / Ristorante Le Midi Hiramatsu",
+                "checkedAt": "2026-10-18",
+                "sourceUrl": "https://www.hiramatsurestaurant.jp/hiramatsu-lemidi/about/",
+                "originalUrl": "https://www.hiramatsurestaurant.jp/hiramatsu-lemidi/assets/img/about/imggallery07.jpg"
+              },
+              "menu": {
+                "url": "https://www.hiramatsurestaurant.jp/hiramatsu-lemidi/menu/",
+                "note": "Named recipes are operator examples; substitutions and alternatives apply. 小前菜、前菜、パスタ、魚料理、肉料理、デザート ＜メニューの一例＞ ※食材の入荷状況により、内容が変更する可能性があります事をご了承ください。 オンライン予約はこちら",
+                "items": [
+                  {
+                    "name": "クリスマス特別ランチ　Pranzo NataleB",
+                    "note": "Exact branch operator total, including 10% service and 10% consumption tax. Course-specific meal, weekday and reservation restrictions apply.",
+                    "price": 14520
+                  },
+                  {
+                    "name": "小前菜、前菜、パスタ、魚料理、肉料理、デザート",
+                    "note": "Included seasonal course component; no standalone price published. Confirm current substitutions.",
+                    "priceLabel": "Price not published"
+                  }
+                ],
+                "label": "Le Midi — クリスマス特別ランチ　Pranzo NataleB",
+                "coverage": "sample",
+                "currency": "JPY"
+              },
+              "startsAt": "2026-12-01T02:30:00.000Z",
+              "end": "13:31"
+            },
+            {
+              "id": "https://www.hiramatsurestaurant.jp/hiramatsu-lemidi/#1",
+              "name": "Ristorante Le Midi Hiramatsu — Umeda",
+              "neighborhood": "Umeda",
+              "address": "1F Herbis PLAZA ENT,2-2-22 Umeda,Kita-ku,Osaka",
+              "restaurantHref": "/pin/18080/ristorante-le-midi-hiramatsu-umeda-opens-2014-06-04",
+              "checkedAt": "2026-10-18",
+              "special": {
+                "kind": "other",
+                "title": "Le Midi Christmas dinner",
+                "schedule": "Asia/Tokyo local service / arrival windows; advance reservation rules apply.",
+                "menuLabel": "Le Midi — クリスマス特別ディナー　Cena NataleA",
+                "sourceUrl": "https://www.hiramatsurestaurant.jp/hiramatsu-lemidi/news/",
+                "validFrom": "2026-12-01",
+                "conditions": [
+                  "Advance booking. Do not apply regular-course recipes to Christmas courses."
+                ],
+                "discounted": false,
+                "description": "Natale A ¥21,780 or B ¥27,830 total. December19–25 dinner seats last two hours.",
+                "limitedTime": true,
+                "availability": {
+                  "windows": [
+                    {
+                      "end": "20:01",
+                      "days": [
+                        0,
+                        1,
+                        2,
+                        3,
+                        4,
+                        5,
+                        6
+                      ],
+                      "start": "17:30"
+                    }
+                  ]
+                },
+                "validThrough": "2026-12-25"
+              },
+              "venueKey": "hiramatsurestaurant.jp/hiramatsu-lemidi",
+              "photo": {
+                "alt": "Ristorante Le Midi Hiramatsu — Umeda — Exact-branch operator gallery; seasonal food is illustrative and does not establish a fixed current course inclusion.",
+                "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-18/batch90-lemidi-6-df18a2ff0804c495.webp",
+                "credit": "Hiramatsu / Ristorante Le Midi Hiramatsu",
+                "checkedAt": "2026-10-18",
+                "sourceUrl": "https://www.hiramatsurestaurant.jp/hiramatsu-lemidi/about/",
+                "originalUrl": "https://www.hiramatsurestaurant.jp/hiramatsu-lemidi/assets/img/about/imggallery07.jpg"
+              },
+              "menu": {
+                "url": "https://www.hiramatsurestaurant.jp/hiramatsu-lemidi/menu/",
+                "note": "Named recipes are operator examples; substitutions and alternatives apply. 小前菜、前菜、パスタ、魚料理、肉料理、デザート ＜メニューの一例＞ ※食材の入荷状況により、内容が変更する可能性があります事をご了承ください。 オンライン予約はこちら",
+                "items": [
+                  {
+                    "name": "クリスマス特別ディナー　Cena NataleA",
+                    "note": "Exact branch operator total, including 10% service and 10% consumption tax. Course-specific meal, weekday and reservation restrictions apply.",
+                    "price": 21780
+                  },
+                  {
+                    "name": "小前菜、前菜、パスタ、魚料理、肉料理、デザート",
+                    "note": "Included seasonal course component; no standalone price published. Confirm current substitutions.",
+                    "priceLabel": "Price not published"
+                  }
+                ],
+                "label": "Le Midi — クリスマス特別ディナー　Cena NataleA",
+                "coverage": "sample",
+                "currency": "JPY"
+              },
+              "startsAt": "2026-12-01T08:30:00.000Z",
+              "end": "20:01"
+            }
+          ]
+        },
+        {
+          "pinId": 18081,
+          "region": "kyoto",
+          "view": "top",
+          "neighborhood": "Higashiyama / Kodaiji",
+          "nativeTitleAndImage": true,
+          "hrefs": [
+            "/pin/18081/restaurant-hiramatsu-kodaiji-opens-2017-09-19"
+          ],
+          "browserFiltered": false,
+          "publicBase": "http://localhost:3000",
+          "guideStatus": 200,
+          "offers": []
+        },
+        {
+          "pinId": 18081,
+          "region": "kyoto",
+          "view": "discounts",
+          "neighborhood": "Higashiyama / Kodaiji",
+          "nativeTitleAndImage": true,
+          "hrefs": [
+            "/pin/18081/restaurant-hiramatsu-kodaiji-opens-2017-09-19"
+          ],
+          "browserFiltered": false,
+          "publicBase": "http://localhost:3000",
+          "guideStatus": 200,
+          "offers": [
+            {
+              "id": "https://www.hiramatsurestaurant.jp/hiramatsu-kodaiji/#0",
+              "name": "Restaurant Hiramatsu Kodaiji",
+              "neighborhood": "Higashiyama / Kodaiji",
+              "address": "353 Kodaiji Masuyacho,Higashiyama-ku,Kyoto",
+              "restaurantHref": "/pin/18081/restaurant-hiramatsu-kodaiji-opens-2017-09-19",
+              "checkedAt": "2026-10-18",
+              "special": {
+                "kind": "other",
+                "title": "Hiramatsu Kodaiji Kyotamba producer gala",
+                "schedule": "Asia/Tokyo local service / arrival windows; advance reservation rules apply.",
+                "menuLabel": "Hiramatsu Kodaiji Kyotamba producer gala — November6",
+                "sourceUrl": "https://www.hiramatsurestaurant.jp/hiramatsu-kodaiji/news/",
+                "validFrom": "2026-11-06",
+                "conditions": [
+                  "Advance reservation; seats limited. Published meal end time is unknown."
+                ],
+                "discounted": false,
+                "description": "November6,2026: reception18:00, dinner starts18:30. ¥36,300 includes food, wine pairing, tax and service; nonalcoholic alternative. Window marks start time, not meal duration.",
+                "limitedTime": true,
+                "availability": {
+                  "windows": [
+                    {
+                      "end": "18:31",
+                      "days": [
+                        0,
+                        1,
+                        2,
+                        3,
+                        4,
+                        5,
+                        6
+                      ],
+                      "start": "18:30"
+                    }
+                  ]
+                },
+                "validThrough": "2026-11-06"
+              },
+              "venueKey": "hiramatsurestaurant.jp/hiramatsu-kodaiji",
+              "photo": {
+                "alt": "Restaurant Hiramatsu Kodaiji — Exact-branch operator gallery; seasonal food is illustrative and does not establish a fixed current course inclusion.",
+                "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-18/batch90-kodaiji-0-939b41582ae830b8.webp",
+                "credit": "Hiramatsu / Restaurant Hiramatsu Kodaiji",
+                "checkedAt": "2026-10-18",
+                "sourceUrl": "https://www.hiramatsurestaurant.jp/hiramatsu-kodaiji/about/",
+                "originalUrl": "https://www.hiramatsurestaurant.jp/hiramatsu-kodaiji/assets/img/about/imgMain.jpg"
+              },
+              "menu": {
+                "url": "https://www.hiramatsurestaurant.jp/hiramatsu-kodaiji/news/",
+                "note": "One evening November6,2026. Final named recipes and end time are unpublished.",
+                "items": [
+                  {
+                    "name": "Producer gala course with wine pairing",
+                    "note": "Total includes food, pairing, tax and service. Reception18:00; dinner starts18:30; nonalcoholic pairing available.",
+                    "price": 36300
+                  },
+                  {
+                    "name": "Petits salés",
+                    "note": "Included seasonal course component; no standalone price published. Confirm current substitutions.",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Amuse-bouche",
+                    "note": "Included seasonal course component; no standalone price published. Confirm current substitutions.",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Starter",
+                    "note": "Included seasonal course component; no standalone price published. Confirm current substitutions.",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Fish",
+                    "note": "Included seasonal course component; no standalone price published. Confirm current substitutions.",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Meat",
+                    "note": "Included seasonal course component; no standalone price published. Confirm current substitutions.",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Dessert",
+                    "note": "Included seasonal course component; no standalone price published. Confirm current substitutions.",
+                    "priceLabel": "Price not published"
+                  }
+                ],
+                "label": "Hiramatsu Kodaiji Kyotamba producer gala — November6",
+                "coverage": "published",
+                "currency": "JPY"
+              },
+              "startsAt": "2026-11-06T09:30:00.000Z",
+              "end": "18:31"
+            },
+            {
+              "id": "https://www.hiramatsurestaurant.jp/hiramatsu-kodaiji/#1",
+              "name": "Restaurant Hiramatsu Kodaiji",
+              "neighborhood": "Higashiyama / Kodaiji",
+              "address": "353 Kodaiji Masuyacho,Higashiyama-ku,Kyoto",
+              "restaurantHref": "/pin/18081/restaurant-hiramatsu-kodaiji-opens-2017-09-19",
+              "checkedAt": "2026-10-18",
+              "special": {
+                "kind": "other",
+                "title": "Hiramatsu Kodaiji Christmas lunch — December2–17",
+                "schedule": "Asia/Tokyo local service / arrival windows; advance reservation rules apply.",
+                "menuLabel": "Hiramatsu Kodaiji — クリスマス特別コース～Menu Prestige de Noël～",
+                "sourceUrl": "https://www.hiramatsurestaurant.jp/hiramatsu-kodaiji/menu/",
+                "validFrom": "2026-12-02",
+                "conditions": [
+                  "Monday closed. Reserve exact course/time; later Christmas seating differs."
+                ],
+                "discounted": false,
+                "description": "Noël ¥24,200 or Prestige ¥36,300 total. Course page starts December2; normal hours apply through December17. Later December18–25 timed sittings are described in native menu notes.",
+                "limitedTime": true,
+                "availability": {
+                  "windows": [
+                    {
+                      "end": "13:01",
+                      "days": [
+                        0,
+                        2,
+                        3,
+                        4,
+                        5,
+                        6
+                      ],
+                      "start": "12:00"
+                    }
+                  ]
+                },
+                "validThrough": "2026-12-17"
+              },
+              "venueKey": "hiramatsurestaurant.jp/hiramatsu-kodaiji",
+              "photo": {
+                "alt": "Restaurant Hiramatsu Kodaiji — Exact-branch operator gallery; seasonal food is illustrative and does not establish a fixed current course inclusion.",
+                "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-18/batch90-kodaiji-0-939b41582ae830b8.webp",
+                "credit": "Hiramatsu / Restaurant Hiramatsu Kodaiji",
+                "checkedAt": "2026-10-18",
+                "sourceUrl": "https://www.hiramatsurestaurant.jp/hiramatsu-kodaiji/about/",
+                "originalUrl": "https://www.hiramatsurestaurant.jp/hiramatsu-kodaiji/assets/img/about/imgMain.jpg"
+              },
+              "menu": {
+                "url": "https://www.hiramatsurestaurant.jp/hiramatsu-kodaiji/menu/",
+                "note": "Named recipes are operator examples; substitutions and alternatives apply. 料理長 小林がお贈りする期間限定のクリスマス特別コース。 厳選された京の冬の食材とフランス料理のマリアージュ、ぜひこの機会にお愉しみください。 ◆ご提供期間：12月2日（水）～12月25日(金)まで ◆ランチタイム、ディナータイム共にご予約をお受けしいたします。 【料理】アミューズ ブーシュ,前菜,魚料理,肉料理,季節のデザート,小菓子,コーヒー",
+                "items": [
+                  {
+                    "name": "クリスマス特別コース～Menu Prestige de Noël～",
+                    "note": "Exact branch operator total, including 10% service and 10% consumption tax. Course-specific meal, weekday and reservation restrictions apply.",
+                    "price": 36300
+                  }
+                ],
+                "label": "Hiramatsu Kodaiji — クリスマス特別コース～Menu Prestige de Noël～",
+                "coverage": "published",
+                "currency": "JPY"
+              },
+              "startsAt": "2026-12-02T03:00:00.000Z",
+              "end": "13:01"
+            },
+            {
+              "id": "https://www.hiramatsurestaurant.jp/hiramatsu-kodaiji/#2",
+              "name": "Restaurant Hiramatsu Kodaiji",
+              "neighborhood": "Higashiyama / Kodaiji",
+              "address": "353 Kodaiji Masuyacho,Higashiyama-ku,Kyoto",
+              "restaurantHref": "/pin/18081/restaurant-hiramatsu-kodaiji-opens-2017-09-19",
+              "checkedAt": "2026-10-18",
+              "special": {
+                "kind": "other",
+                "title": "Hiramatsu Kodaiji Christmas dinner — December2–17",
+                "schedule": "Asia/Tokyo local service / arrival windows; advance reservation rules apply.",
+                "menuLabel": "Hiramatsu Kodaiji — クリスマス特別コース～Menu Prestige de Noël～",
+                "sourceUrl": "https://www.hiramatsurestaurant.jp/hiramatsu-kodaiji/menu/",
+                "validFrom": "2026-12-02",
+                "conditions": [
+                  "Monday closed. Reserve exact course/time; later Christmas seating differs."
+                ],
+                "discounted": false,
+                "description": "Noël ¥24,200 or Prestige ¥36,300 total. Course page starts December2; normal hours apply through December17. Later December18–25 timed sittings are described in native menu notes.",
+                "limitedTime": true,
+                "availability": {
+                  "windows": [
+                    {
+                      "end": "19:31",
+                      "days": [
+                        0,
+                        2,
+                        3,
+                        4,
+                        5,
+                        6
+                      ],
+                      "start": "18:00"
+                    }
+                  ]
+                },
+                "validThrough": "2026-12-17"
+              },
+              "venueKey": "hiramatsurestaurant.jp/hiramatsu-kodaiji",
+              "photo": {
+                "alt": "Restaurant Hiramatsu Kodaiji — Exact-branch operator gallery; seasonal food is illustrative and does not establish a fixed current course inclusion.",
+                "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-18/batch90-kodaiji-0-939b41582ae830b8.webp",
+                "credit": "Hiramatsu / Restaurant Hiramatsu Kodaiji",
+                "checkedAt": "2026-10-18",
+                "sourceUrl": "https://www.hiramatsurestaurant.jp/hiramatsu-kodaiji/about/",
+                "originalUrl": "https://www.hiramatsurestaurant.jp/hiramatsu-kodaiji/assets/img/about/imgMain.jpg"
+              },
+              "menu": {
+                "url": "https://www.hiramatsurestaurant.jp/hiramatsu-kodaiji/menu/",
+                "note": "Named recipes are operator examples; substitutions and alternatives apply. 料理長 小林がお贈りする期間限定のクリスマス特別コース。 厳選された京の冬の食材とフランス料理のマリアージュ、ぜひこの機会にお愉しみください。 ◆ご提供期間：12月2日（水）～12月25日(金)まで ◆ランチタイム、ディナータイム共にご予約をお受けしいたします。 【料理】アミューズ ブーシュ,前菜,魚料理,肉料理,季節のデザート,小菓子,コーヒー",
+                "items": [
+                  {
+                    "name": "クリスマス特別コース～Menu Prestige de Noël～",
+                    "note": "Exact branch operator total, including 10% service and 10% consumption tax. Course-specific meal, weekday and reservation restrictions apply.",
+                    "price": 36300
+                  }
+                ],
+                "label": "Hiramatsu Kodaiji — クリスマス特別コース～Menu Prestige de Noël～",
+                "coverage": "published",
+                "currency": "JPY"
+              },
+              "startsAt": "2026-12-02T09:00:00.000Z",
+              "end": "19:31"
+            }
+          ]
+        },
+        {
+          "pinId": 18082,
+          "region": "kyoto",
+          "view": "top",
+          "neighborhood": "Karasuma Oike / Muromachi",
+          "nativeTitleAndImage": true,
+          "hrefs": [
+            "/pin/18082/ristorante-la-luce-the-hiramatsu-kyoto-opens-2020-03-18"
+          ],
+          "browserFiltered": false,
+          "publicBase": "http://localhost:3000",
+          "guideStatus": 200,
+          "offers": []
+        },
+        {
+          "pinId": 18082,
+          "region": "kyoto",
+          "view": "discounts",
+          "neighborhood": "Karasuma Oike / Muromachi",
+          "nativeTitleAndImage": true,
+          "hrefs": [
+            "/pin/18082/ristorante-la-luce-the-hiramatsu-kyoto-opens-2020-03-18"
+          ],
+          "browserFiltered": false,
+          "publicBase": "http://localhost:3000",
+          "guideStatus": 200,
+          "offers": [
+            {
+              "id": "https://www.hiramatsurestaurant.jp/la-luce/#0",
+              "name": "Ristorante La Luce — THE HIRAMATSU Kyoto",
+              "neighborhood": "Karasuma Oike / Muromachi",
+              "address": "THE HIRAMATSU Kyoto,361 Ennogyojacho,Nakagyo-ku,Kyoto",
+              "restaurantHref": "/pin/18082/ristorante-la-luce-the-hiramatsu-kyoto-opens-2020-03-18",
+              "checkedAt": "2026-10-18",
+              "special": {
+                "kind": "other",
+                "title": "La Luce Christmas dinner",
+                "schedule": "Asia/Tokyo local service / arrival windows; advance reservation rules apply.",
+                "menuLabel": "La Luce — クリスマスディナーコース",
+                "sourceUrl": "https://www.hiramatsurestaurant.jp/la-luce/news/",
+                "validFrom": "2026-12-20",
+                "conditions": [
+                  "Advance booking; irregular closures and actual seat inventory apply."
+                ],
+                "discounted": false,
+                "description": "Cena Natale December20–25,2026, ¥36,300 including tax/service. Named final Christmas recipes are not published; regular autumn recipes are separate.",
+                "limitedTime": true,
+                "availability": {
+                  "windows": [
+                    {
+                      "end": "19:01",
+                      "days": [
+                        0,
+                        1,
+                        2,
+                        3,
+                        4,
+                        5,
+                        6
+                      ],
+                      "start": "17:30"
+                    }
+                  ]
+                },
+                "validThrough": "2026-12-25"
+              },
+              "venueKey": "hiramatsurestaurant.jp/la-luce",
+              "photo": {
+                "alt": "Ristorante La Luce — THE HIRAMATSU Kyoto — Exact-branch operator gallery; seasonal food is illustrative and does not establish a fixed current course inclusion.",
+                "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-18/batch90-luce-0-afc291ffbc21d0cb.webp",
+                "credit": "Hiramatsu / La Luce",
+                "checkedAt": "2026-10-18",
+                "sourceUrl": "https://www.hiramatsurestaurant.jp/la-luce/about/",
+                "originalUrl": "https://www.hiramatsurestaurant.jp/la-luce/assets/img/about/imgMain.jpg"
+              },
+              "menu": {
+                "url": "https://www.hiramatsurestaurant.jp/la-luce/menu/",
+                "note": "Named recipes are operator examples; substitutions and alternatives apply. 前菜、前菜、魚料理、肉料理、デザート、デザート、小菓子、コーヒー 【ご予約】 ご予約はこちらから 宿泊付のご予約はこちらから",
+                "items": [
+                  {
+                    "name": "クリスマスディナーコース",
+                    "note": "Exact branch operator total, including 10% service and 10% consumption tax. Course-specific meal, weekday and reservation restrictions apply.",
+                    "price": 36300
+                  },
+                  {
+                    "name": "前菜、前菜、魚料理、肉料理、デザート、デザート、小菓子、コーヒー",
+                    "note": "Included seasonal course component; no standalone price published. Confirm current substitutions.",
+                    "priceLabel": "Price not published"
+                  }
+                ],
+                "label": "La Luce — クリスマスディナーコース",
+                "coverage": "sample",
+                "currency": "JPY"
+              },
+              "startsAt": "2026-12-20T08:30:00.000Z",
+              "end": "19:01"
+            }
+          ]
+        },
+        {
+          "pinId": 18083,
+          "region": "kyoto",
+          "view": "top",
+          "neighborhood": "Higashiyama / Kodaiji",
+          "nativeTitleAndImage": true,
+          "hrefs": [
+            "/pin/18083/kodaiji-jugyuan-opens-2017-09-23"
+          ],
+          "browserFiltered": false,
+          "publicBase": "http://localhost:3000",
+          "guideStatus": 200,
+          "offers": []
+        },
+        {
+          "pinId": 18084,
+          "region": "fukuoka",
+          "view": "top",
+          "neighborhood": "Watanabedori / Minami Tenjin",
+          "nativeTitleAndImage": true,
+          "hrefs": [
+            "/pin/18084/l-as-fukuoka-watanabedori-opens-2025-09-12"
+          ],
+          "browserFiltered": false,
+          "publicBase": "http://localhost:3000",
+          "guideStatus": 200,
+          "offers": []
+        }
+      ],
+      "production": [
+        {
+          "pinId": 18166,
+          "region": "osaka",
+          "view": "top",
+          "neighborhood": "Nakanoshima",
+          "nativeTitleAndImage": true,
+          "hrefs": [
+            "/pin/18166/la-fete-hiramatsu-nakanoshima-opens-2012-12-03"
+          ],
+          "browserFiltered": false,
+          "publicBase": "http://127.0.0.1:19089",
+          "guideStatus": 200,
+          "offers": []
+        },
+        {
+          "pinId": 18166,
+          "region": "osaka",
+          "view": "discounts",
+          "neighborhood": "Nakanoshima",
+          "nativeTitleAndImage": true,
+          "hrefs": [
+            "/pin/18166/la-fete-hiramatsu-nakanoshima-opens-2012-12-03"
+          ],
+          "browserFiltered": false,
+          "publicBase": "http://127.0.0.1:19089",
+          "guideStatus": 200,
+          "offers": [
+            {
+              "id": "https://www.hiramatsurestaurant.jp/hiramatsu-lafete/#0",
+              "name": "La Fête Hiramatsu — Nakanoshima",
+              "neighborhood": "Nakanoshima",
+              "address": "37F Festival Tower,2-3-18 Nakanoshima,Kita-ku,Osaka",
+              "restaurantHref": "/pin/18166/la-fete-hiramatsu-nakanoshima-opens-2012-12-03",
+              "checkedAt": "2026-10-18",
+              "special": {
+                "kind": "other",
+                "title": "La Fête Christmas lunch — weekday tables",
+                "schedule": "Asia/Tokyo local service / arrival windows; advance reservation rules apply.",
+                "menuLabel": "La Fête — クリスマス2026【ランチ】",
+                "sourceUrl": "https://www.hiramatsurestaurant.jp/hiramatsu-lafete/news/",
+                "validFrom": "2026-12-01",
+                "conditions": [
+                  "Advance booking; private-event inventory applies. Last-order endpoint included."
+                ],
+                "discounted": false,
+                "description": "Christmas lunch ¥18,150 total; higher ¥36,300 course also available. All December weekend lunches private; December23–25 lunches private.",
+                "limitedTime": true,
+                "availability": {
+                  "windows": [
+                    {
+                      "end": "13:31",
+                      "days": [
+                        1,
+                        2,
+                        3,
+                        4,
+                        5
+                      ],
+                      "start": "11:30"
+                    }
+                  ]
+                },
+                "validThrough": "2026-12-22"
+              },
+              "venueKey": "hiramatsurestaurant.jp/hiramatsu-lafete",
+              "photo": {
+                "alt": "La Fête Hiramatsu — Nakanoshima — Exact-branch operator gallery; seasonal food is illustrative and does not establish a fixed current course inclusion.",
+                "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-18/batch90-lafete-3-b12a012a1a0cc37f.webp",
+                "credit": "Hiramatsu / La Fête Hiramatsu",
+                "checkedAt": "2026-10-18",
+                "sourceUrl": "https://www.hiramatsurestaurant.jp/hiramatsu-lafete/about/",
+                "originalUrl": "https://www.hiramatsurestaurant.jp/hiramatsu-lafete/assets/img/about/imggallery04.jpg"
+              },
+              "menu": {
+                "url": "https://www.hiramatsurestaurant.jp/hiramatsu-lafete/menu/",
+                "note": "Named recipes are operator examples; substitutions and alternatives apply. アミューズ/前菜/魚料理/肉料理/デザート/コーヒー・小菓子 ■クリスマスのご予約に関して■ 《土日ランチのご予約に関して》 クリスマス期間（12/1～12/25）の土日のランチは、全てご婚礼による貸切営業となっておりますので、ディナーのみのご案内となります。 《平日ランチのご予約に関して》 ➀12月23日(水)～25日(金）のランチは、貸切営業となっております。 ➁上記以外の日も、パーティ等の貸切により、ご予約を承れないこともございます。 何卒、ご了承くださいますようお願い申し上げます。 《お子様のご利用について》 12月18日(金)～12月25日(金）の期間は、未就学児のご利用について、 ご案内するエリアを「個室のみ」に指定させていただいております。 既にパーティ等でご案内できない日がございますので、 お電話にて空き状況をご確認いただきまして、ご予約をお願いいたします。 オンライン予約はコチラ",
+                "items": [
+                  {
+                    "name": "クリスマス2026【ランチ】",
+                    "note": "Exact branch operator total, including 10% service and 10% consumption tax. Course-specific meal, weekday and reservation restrictions apply.",
+                    "price": 18150
+                  },
+                  {
+                    "name": "アミューズ/前菜/魚料理/肉料理/デザート/コーヒー・小菓子",
+                    "note": "Included seasonal course component; no standalone price published. Confirm current substitutions.",
+                    "priceLabel": "Price not published"
+                  }
+                ],
+                "label": "La Fête — クリスマス2026【ランチ】",
+                "coverage": "sample",
+                "currency": "JPY"
+              },
+              "startsAt": "2026-12-01T02:30:00.000Z",
+              "end": "13:31"
+            },
+            {
+              "id": "https://www.hiramatsurestaurant.jp/hiramatsu-lafete/#1",
+              "name": "La Fête Hiramatsu — Nakanoshima",
+              "neighborhood": "Nakanoshima",
+              "address": "37F Festival Tower,2-3-18 Nakanoshima,Kita-ku,Osaka",
+              "restaurantHref": "/pin/18166/la-fete-hiramatsu-nakanoshima-opens-2012-12-03",
+              "checkedAt": "2026-10-18",
+              "special": {
+                "kind": "other",
+                "title": "La Fête Christmas dinner",
+                "schedule": "Asia/Tokyo local service / arrival windows; advance reservation rules apply.",
+                "menuLabel": "La Fête — クリスマス2026【ランチ/ディナー】",
+                "sourceUrl": "https://www.hiramatsurestaurant.jp/hiramatsu-lafete/news/",
+                "validFrom": "2026-12-01",
+                "conditions": [
+                  "Advance booking; confirm actual seats."
+                ],
+                "discounted": false,
+                "description": "Christmas dinner ¥36,300 total. December12 is fully private. December24–25 only this course.",
+                "limitedTime": true,
+                "availability": {
+                  "windows": [
+                    {
+                      "end": "20:01",
+                      "days": [
+                        0,
+                        1,
+                        2,
+                        3,
+                        4,
+                        5,
+                        6
+                      ],
+                      "start": "18:00"
+                    }
+                  ],
+                  "excludedDates": [
+                    "2026-12-12"
+                  ],
+                  "excludesHolidays": true,
+                  "holidayCalendarThrough": "2026-12-31"
+                },
+                "validThrough": "2026-12-25"
+              },
+              "venueKey": "hiramatsurestaurant.jp/hiramatsu-lafete",
+              "photo": {
+                "alt": "La Fête Hiramatsu — Nakanoshima — Exact-branch operator gallery; seasonal food is illustrative and does not establish a fixed current course inclusion.",
+                "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-18/batch90-lafete-3-b12a012a1a0cc37f.webp",
+                "credit": "Hiramatsu / La Fête Hiramatsu",
+                "checkedAt": "2026-10-18",
+                "sourceUrl": "https://www.hiramatsurestaurant.jp/hiramatsu-lafete/about/",
+                "originalUrl": "https://www.hiramatsurestaurant.jp/hiramatsu-lafete/assets/img/about/imggallery04.jpg"
+              },
+              "menu": {
+                "url": "https://www.hiramatsurestaurant.jp/hiramatsu-lafete/menu/",
+                "note": "Named recipes are operator examples; substitutions and alternatives apply. アミューズ/1皿目の前菜/2皿目の前菜/魚料理/肉料理/プレデザート/デザート/コーヒー・小菓子 ■クリスマスのご予約に関して■ 《土日ディナーのご予約に関して》 ※土日の「個室」は全てご結婚式で貸切となっておりますので、予めご了承くださいませ。 ①以下3日間のご予約は従来通り、2カ月前の同日からのご予約開始となります。 ・12月5日（土）→ 10月5日よりご予約開始 ・12月6日（日）→ 10月6日よりご予約開始 ・12月13日（日)→ 10月13日よりご予約開始 ※12月12日（土)は、貸切営業です。 ②12月19日(土）、20日（日）のご予約は、10月7日より承ります。 《平日ディナーのご予約に関して》 Party等の貸切により、ご予約を承れないこともございます。 何卒、ご了承くださいますようお願い申し上げます。 《ディナーコースについて》 下記期間は、ご提供のコースが1コースあるいは2コースのみとなります。 ・12月19日(土)、20日(日)、23日(水)… クリスマスディナーコースとGastronomique20,000円（総額24,200円） ・12月24日(木)、25日（金)… クリスマスディナーコース30,000円(総額36,300円）のみ 《お子様のご利用について》 12月18日(金)～12月25日(金）の期間は、未就学児のご利用について、 ご案内するエリアを「個室のみ」に指定させていただいております。 土日は全てご結婚式で貸切となっておりますので、お子様連れの場合は平日でご検討いただきますよう、 よろしくお願いいたします。 また、既にパーティ等でご案内できない日がございますので、 お電話にて空き状況をご確認いただきまして、ご予約をお願いいたします。 オンライン予約はコチラ",
+                "items": [
+                  {
+                    "name": "クリスマス2026【ランチ/ディナー】",
+                    "note": "Exact branch operator total, including 10% service and 10% consumption tax. Course-specific meal, weekday and reservation restrictions apply.",
+                    "price": 36300
+                  },
+                  {
+                    "name": "アミューズ/1皿目の前菜/2皿目の前菜/魚料理/肉料理/プレデザート/デザート/コーヒー・小菓子",
+                    "note": "Included seasonal course component; no standalone price published. Confirm current substitutions.",
+                    "priceLabel": "Price not published"
+                  }
+                ],
+                "label": "La Fête — クリスマス2026【ランチ/ディナー】",
+                "coverage": "sample",
+                "currency": "JPY"
+              },
+              "startsAt": "2026-12-01T09:00:00.000Z",
+              "end": "20:01"
+            }
+          ]
+        },
+        {
+          "pinId": 18168,
+          "region": "osaka",
+          "view": "top",
+          "neighborhood": "Umeda",
+          "nativeTitleAndImage": true,
+          "hrefs": [
+            "/pin/18168/ristorante-le-midi-hiramatsu-umeda-opens-2014-06-04"
+          ],
+          "browserFiltered": false,
+          "publicBase": "http://127.0.0.1:19089",
+          "guideStatus": 200,
+          "offers": []
+        },
+        {
+          "pinId": 18168,
+          "region": "osaka",
+          "view": "discounts",
+          "neighborhood": "Umeda",
+          "nativeTitleAndImage": true,
+          "hrefs": [
+            "/pin/18168/ristorante-le-midi-hiramatsu-umeda-opens-2014-06-04"
+          ],
+          "browserFiltered": false,
+          "publicBase": "http://127.0.0.1:19089",
+          "guideStatus": 200,
+          "offers": [
+            {
+              "id": "https://www.hiramatsurestaurant.jp/hiramatsu-lemidi/#0",
+              "name": "Ristorante Le Midi Hiramatsu — Umeda",
+              "neighborhood": "Umeda",
+              "address": "1F Herbis PLAZA ENT,2-2-22 Umeda,Kita-ku,Osaka",
+              "restaurantHref": "/pin/18168/ristorante-le-midi-hiramatsu-umeda-opens-2014-06-04",
+              "checkedAt": "2026-10-18",
+              "special": {
+                "kind": "other",
+                "title": "Le Midi Christmas lunch — Natale B",
+                "schedule": "Asia/Tokyo local service / arrival windows; advance reservation rules apply.",
+                "menuLabel": "Le Midi — クリスマス特別ランチ　Pranzo NataleB",
+                "sourceUrl": "https://www.hiramatsurestaurant.jp/hiramatsu-lemidi/news/",
+                "validFrom": "2026-12-01",
+                "conditions": [
+                  "Reserve selected plan; subject to booking inventory."
+                ],
+                "discounted": false,
+                "description": "Christmas lunch Natale B ¥14,520 total. Natale A ¥9,680 is separately restricted to December19–20 and23–25 on the menu page.",
+                "limitedTime": true,
+                "availability": {
+                  "windows": [
+                    {
+                      "end": "13:31",
+                      "days": [
+                        0,
+                        1,
+                        2,
+                        3,
+                        4,
+                        5,
+                        6
+                      ],
+                      "start": "11:30"
+                    }
+                  ]
+                },
+                "validThrough": "2026-12-25"
+              },
+              "venueKey": "hiramatsurestaurant.jp/hiramatsu-lemidi",
+              "photo": {
+                "alt": "Ristorante Le Midi Hiramatsu — Umeda — Exact-branch operator gallery; seasonal food is illustrative and does not establish a fixed current course inclusion.",
+                "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-18/batch90-lemidi-6-df18a2ff0804c495.webp",
+                "credit": "Hiramatsu / Ristorante Le Midi Hiramatsu",
+                "checkedAt": "2026-10-18",
+                "sourceUrl": "https://www.hiramatsurestaurant.jp/hiramatsu-lemidi/about/",
+                "originalUrl": "https://www.hiramatsurestaurant.jp/hiramatsu-lemidi/assets/img/about/imggallery07.jpg"
+              },
+              "menu": {
+                "url": "https://www.hiramatsurestaurant.jp/hiramatsu-lemidi/menu/",
+                "note": "Named recipes are operator examples; substitutions and alternatives apply. 小前菜、前菜、パスタ、魚料理、肉料理、デザート ＜メニューの一例＞ ※食材の入荷状況により、内容が変更する可能性があります事をご了承ください。 オンライン予約はこちら",
+                "items": [
+                  {
+                    "name": "クリスマス特別ランチ　Pranzo NataleB",
+                    "note": "Exact branch operator total, including 10% service and 10% consumption tax. Course-specific meal, weekday and reservation restrictions apply.",
+                    "price": 14520
+                  },
+                  {
+                    "name": "小前菜、前菜、パスタ、魚料理、肉料理、デザート",
+                    "note": "Included seasonal course component; no standalone price published. Confirm current substitutions.",
+                    "priceLabel": "Price not published"
+                  }
+                ],
+                "label": "Le Midi — クリスマス特別ランチ　Pranzo NataleB",
+                "coverage": "sample",
+                "currency": "JPY"
+              },
+              "startsAt": "2026-12-01T02:30:00.000Z",
+              "end": "13:31"
+            },
+            {
+              "id": "https://www.hiramatsurestaurant.jp/hiramatsu-lemidi/#1",
+              "name": "Ristorante Le Midi Hiramatsu — Umeda",
+              "neighborhood": "Umeda",
+              "address": "1F Herbis PLAZA ENT,2-2-22 Umeda,Kita-ku,Osaka",
+              "restaurantHref": "/pin/18168/ristorante-le-midi-hiramatsu-umeda-opens-2014-06-04",
+              "checkedAt": "2026-10-18",
+              "special": {
+                "kind": "other",
+                "title": "Le Midi Christmas dinner",
+                "schedule": "Asia/Tokyo local service / arrival windows; advance reservation rules apply.",
+                "menuLabel": "Le Midi — クリスマス特別ディナー　Cena NataleA",
+                "sourceUrl": "https://www.hiramatsurestaurant.jp/hiramatsu-lemidi/news/",
+                "validFrom": "2026-12-01",
+                "conditions": [
+                  "Advance booking. Do not apply regular-course recipes to Christmas courses."
+                ],
+                "discounted": false,
+                "description": "Natale A ¥21,780 or B ¥27,830 total. December19–25 dinner seats last two hours.",
+                "limitedTime": true,
+                "availability": {
+                  "windows": [
+                    {
+                      "end": "20:01",
+                      "days": [
+                        0,
+                        1,
+                        2,
+                        3,
+                        4,
+                        5,
+                        6
+                      ],
+                      "start": "17:30"
+                    }
+                  ]
+                },
+                "validThrough": "2026-12-25"
+              },
+              "venueKey": "hiramatsurestaurant.jp/hiramatsu-lemidi",
+              "photo": {
+                "alt": "Ristorante Le Midi Hiramatsu — Umeda — Exact-branch operator gallery; seasonal food is illustrative and does not establish a fixed current course inclusion.",
+                "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-18/batch90-lemidi-6-df18a2ff0804c495.webp",
+                "credit": "Hiramatsu / Ristorante Le Midi Hiramatsu",
+                "checkedAt": "2026-10-18",
+                "sourceUrl": "https://www.hiramatsurestaurant.jp/hiramatsu-lemidi/about/",
+                "originalUrl": "https://www.hiramatsurestaurant.jp/hiramatsu-lemidi/assets/img/about/imggallery07.jpg"
+              },
+              "menu": {
+                "url": "https://www.hiramatsurestaurant.jp/hiramatsu-lemidi/menu/",
+                "note": "Named recipes are operator examples; substitutions and alternatives apply. 小前菜、前菜、パスタ、魚料理、肉料理、デザート ＜メニューの一例＞ ※食材の入荷状況により、内容が変更する可能性があります事をご了承ください。 オンライン予約はこちら",
+                "items": [
+                  {
+                    "name": "クリスマス特別ディナー　Cena NataleA",
+                    "note": "Exact branch operator total, including 10% service and 10% consumption tax. Course-specific meal, weekday and reservation restrictions apply.",
+                    "price": 21780
+                  },
+                  {
+                    "name": "小前菜、前菜、パスタ、魚料理、肉料理、デザート",
+                    "note": "Included seasonal course component; no standalone price published. Confirm current substitutions.",
+                    "priceLabel": "Price not published"
+                  }
+                ],
+                "label": "Le Midi — クリスマス特別ディナー　Cena NataleA",
+                "coverage": "sample",
+                "currency": "JPY"
+              },
+              "startsAt": "2026-12-01T08:30:00.000Z",
+              "end": "20:01"
+            }
+          ]
+        },
+        {
+          "pinId": 18170,
+          "region": "kyoto",
+          "view": "top",
+          "neighborhood": "Higashiyama / Kodaiji",
+          "nativeTitleAndImage": true,
+          "hrefs": [
+            "/pin/18170/restaurant-hiramatsu-kodaiji-opens-2017-09-19"
+          ],
+          "browserFiltered": false,
+          "publicBase": "http://127.0.0.1:19089",
+          "guideStatus": 200,
+          "offers": []
+        },
+        {
+          "pinId": 18170,
+          "region": "kyoto",
+          "view": "discounts",
+          "neighborhood": "Higashiyama / Kodaiji",
+          "nativeTitleAndImage": true,
+          "hrefs": [
+            "/pin/18170/restaurant-hiramatsu-kodaiji-opens-2017-09-19"
+          ],
+          "browserFiltered": false,
+          "publicBase": "http://127.0.0.1:19089",
+          "guideStatus": 200,
+          "offers": [
+            {
+              "id": "https://www.hiramatsurestaurant.jp/hiramatsu-kodaiji/#0",
+              "name": "Restaurant Hiramatsu Kodaiji",
+              "neighborhood": "Higashiyama / Kodaiji",
+              "address": "353 Kodaiji Masuyacho,Higashiyama-ku,Kyoto",
+              "restaurantHref": "/pin/18170/restaurant-hiramatsu-kodaiji-opens-2017-09-19",
+              "checkedAt": "2026-10-18",
+              "special": {
+                "kind": "other",
+                "title": "Hiramatsu Kodaiji Kyotamba producer gala",
+                "schedule": "Asia/Tokyo local service / arrival windows; advance reservation rules apply.",
+                "menuLabel": "Hiramatsu Kodaiji Kyotamba producer gala — November6",
+                "sourceUrl": "https://www.hiramatsurestaurant.jp/hiramatsu-kodaiji/news/",
+                "validFrom": "2026-11-06",
+                "conditions": [
+                  "Advance reservation; seats limited. Published meal end time is unknown."
+                ],
+                "discounted": false,
+                "description": "November6,2026: reception18:00, dinner starts18:30. ¥36,300 includes food, wine pairing, tax and service; nonalcoholic alternative. Window marks start time, not meal duration.",
+                "limitedTime": true,
+                "availability": {
+                  "windows": [
+                    {
+                      "end": "18:31",
+                      "days": [
+                        0,
+                        1,
+                        2,
+                        3,
+                        4,
+                        5,
+                        6
+                      ],
+                      "start": "18:30"
+                    }
+                  ]
+                },
+                "validThrough": "2026-11-06"
+              },
+              "venueKey": "hiramatsurestaurant.jp/hiramatsu-kodaiji",
+              "photo": {
+                "alt": "Restaurant Hiramatsu Kodaiji — Exact-branch operator gallery; seasonal food is illustrative and does not establish a fixed current course inclusion.",
+                "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-18/batch90-kodaiji-0-939b41582ae830b8.webp",
+                "credit": "Hiramatsu / Restaurant Hiramatsu Kodaiji",
+                "checkedAt": "2026-10-18",
+                "sourceUrl": "https://www.hiramatsurestaurant.jp/hiramatsu-kodaiji/about/",
+                "originalUrl": "https://www.hiramatsurestaurant.jp/hiramatsu-kodaiji/assets/img/about/imgMain.jpg"
+              },
+              "menu": {
+                "url": "https://www.hiramatsurestaurant.jp/hiramatsu-kodaiji/news/",
+                "note": "One evening November6,2026. Final named recipes and end time are unpublished.",
+                "items": [
+                  {
+                    "name": "Producer gala course with wine pairing",
+                    "note": "Total includes food, pairing, tax and service. Reception18:00; dinner starts18:30; nonalcoholic pairing available.",
+                    "price": 36300
+                  },
+                  {
+                    "name": "Petits salés",
+                    "note": "Included seasonal course component; no standalone price published. Confirm current substitutions.",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Amuse-bouche",
+                    "note": "Included seasonal course component; no standalone price published. Confirm current substitutions.",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Starter",
+                    "note": "Included seasonal course component; no standalone price published. Confirm current substitutions.",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Fish",
+                    "note": "Included seasonal course component; no standalone price published. Confirm current substitutions.",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Meat",
+                    "note": "Included seasonal course component; no standalone price published. Confirm current substitutions.",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Dessert",
+                    "note": "Included seasonal course component; no standalone price published. Confirm current substitutions.",
+                    "priceLabel": "Price not published"
+                  }
+                ],
+                "label": "Hiramatsu Kodaiji Kyotamba producer gala — November6",
+                "coverage": "published",
+                "currency": "JPY"
+              },
+              "startsAt": "2026-11-06T09:30:00.000Z",
+              "end": "18:31"
+            },
+            {
+              "id": "https://www.hiramatsurestaurant.jp/hiramatsu-kodaiji/#1",
+              "name": "Restaurant Hiramatsu Kodaiji",
+              "neighborhood": "Higashiyama / Kodaiji",
+              "address": "353 Kodaiji Masuyacho,Higashiyama-ku,Kyoto",
+              "restaurantHref": "/pin/18170/restaurant-hiramatsu-kodaiji-opens-2017-09-19",
+              "checkedAt": "2026-10-18",
+              "special": {
+                "kind": "other",
+                "title": "Hiramatsu Kodaiji Christmas lunch — December2–17",
+                "schedule": "Asia/Tokyo local service / arrival windows; advance reservation rules apply.",
+                "menuLabel": "Hiramatsu Kodaiji — クリスマス特別コース～Menu Prestige de Noël～",
+                "sourceUrl": "https://www.hiramatsurestaurant.jp/hiramatsu-kodaiji/menu/",
+                "validFrom": "2026-12-02",
+                "conditions": [
+                  "Monday closed. Reserve exact course/time; later Christmas seating differs."
+                ],
+                "discounted": false,
+                "description": "Noël ¥24,200 or Prestige ¥36,300 total. Course page starts December2; normal hours apply through December17. Later December18–25 timed sittings are described in native menu notes.",
+                "limitedTime": true,
+                "availability": {
+                  "windows": [
+                    {
+                      "end": "13:01",
+                      "days": [
+                        0,
+                        2,
+                        3,
+                        4,
+                        5,
+                        6
+                      ],
+                      "start": "12:00"
+                    }
+                  ]
+                },
+                "validThrough": "2026-12-17"
+              },
+              "venueKey": "hiramatsurestaurant.jp/hiramatsu-kodaiji",
+              "photo": {
+                "alt": "Restaurant Hiramatsu Kodaiji — Exact-branch operator gallery; seasonal food is illustrative and does not establish a fixed current course inclusion.",
+                "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-18/batch90-kodaiji-0-939b41582ae830b8.webp",
+                "credit": "Hiramatsu / Restaurant Hiramatsu Kodaiji",
+                "checkedAt": "2026-10-18",
+                "sourceUrl": "https://www.hiramatsurestaurant.jp/hiramatsu-kodaiji/about/",
+                "originalUrl": "https://www.hiramatsurestaurant.jp/hiramatsu-kodaiji/assets/img/about/imgMain.jpg"
+              },
+              "menu": {
+                "url": "https://www.hiramatsurestaurant.jp/hiramatsu-kodaiji/menu/",
+                "note": "Named recipes are operator examples; substitutions and alternatives apply. 料理長 小林がお贈りする期間限定のクリスマス特別コース。 厳選された京の冬の食材とフランス料理のマリアージュ、ぜひこの機会にお愉しみください。 ◆ご提供期間：12月2日（水）～12月25日(金)まで ◆ランチタイム、ディナータイム共にご予約をお受けしいたします。 【料理】アミューズ ブーシュ,前菜,魚料理,肉料理,季節のデザート,小菓子,コーヒー",
+                "items": [
+                  {
+                    "name": "クリスマス特別コース～Menu Prestige de Noël～",
+                    "note": "Exact branch operator total, including 10% service and 10% consumption tax. Course-specific meal, weekday and reservation restrictions apply.",
+                    "price": 36300
+                  }
+                ],
+                "label": "Hiramatsu Kodaiji — クリスマス特別コース～Menu Prestige de Noël～",
+                "coverage": "published",
+                "currency": "JPY"
+              },
+              "startsAt": "2026-12-02T03:00:00.000Z",
+              "end": "13:01"
+            },
+            {
+              "id": "https://www.hiramatsurestaurant.jp/hiramatsu-kodaiji/#2",
+              "name": "Restaurant Hiramatsu Kodaiji",
+              "neighborhood": "Higashiyama / Kodaiji",
+              "address": "353 Kodaiji Masuyacho,Higashiyama-ku,Kyoto",
+              "restaurantHref": "/pin/18170/restaurant-hiramatsu-kodaiji-opens-2017-09-19",
+              "checkedAt": "2026-10-18",
+              "special": {
+                "kind": "other",
+                "title": "Hiramatsu Kodaiji Christmas dinner — December2–17",
+                "schedule": "Asia/Tokyo local service / arrival windows; advance reservation rules apply.",
+                "menuLabel": "Hiramatsu Kodaiji — クリスマス特別コース～Menu Prestige de Noël～",
+                "sourceUrl": "https://www.hiramatsurestaurant.jp/hiramatsu-kodaiji/menu/",
+                "validFrom": "2026-12-02",
+                "conditions": [
+                  "Monday closed. Reserve exact course/time; later Christmas seating differs."
+                ],
+                "discounted": false,
+                "description": "Noël ¥24,200 or Prestige ¥36,300 total. Course page starts December2; normal hours apply through December17. Later December18–25 timed sittings are described in native menu notes.",
+                "limitedTime": true,
+                "availability": {
+                  "windows": [
+                    {
+                      "end": "19:31",
+                      "days": [
+                        0,
+                        2,
+                        3,
+                        4,
+                        5,
+                        6
+                      ],
+                      "start": "18:00"
+                    }
+                  ]
+                },
+                "validThrough": "2026-12-17"
+              },
+              "venueKey": "hiramatsurestaurant.jp/hiramatsu-kodaiji",
+              "photo": {
+                "alt": "Restaurant Hiramatsu Kodaiji — Exact-branch operator gallery; seasonal food is illustrative and does not establish a fixed current course inclusion.",
+                "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-18/batch90-kodaiji-0-939b41582ae830b8.webp",
+                "credit": "Hiramatsu / Restaurant Hiramatsu Kodaiji",
+                "checkedAt": "2026-10-18",
+                "sourceUrl": "https://www.hiramatsurestaurant.jp/hiramatsu-kodaiji/about/",
+                "originalUrl": "https://www.hiramatsurestaurant.jp/hiramatsu-kodaiji/assets/img/about/imgMain.jpg"
+              },
+              "menu": {
+                "url": "https://www.hiramatsurestaurant.jp/hiramatsu-kodaiji/menu/",
+                "note": "Named recipes are operator examples; substitutions and alternatives apply. 料理長 小林がお贈りする期間限定のクリスマス特別コース。 厳選された京の冬の食材とフランス料理のマリアージュ、ぜひこの機会にお愉しみください。 ◆ご提供期間：12月2日（水）～12月25日(金)まで ◆ランチタイム、ディナータイム共にご予約をお受けしいたします。 【料理】アミューズ ブーシュ,前菜,魚料理,肉料理,季節のデザート,小菓子,コーヒー",
+                "items": [
+                  {
+                    "name": "クリスマス特別コース～Menu Prestige de Noël～",
+                    "note": "Exact branch operator total, including 10% service and 10% consumption tax. Course-specific meal, weekday and reservation restrictions apply.",
+                    "price": 36300
+                  }
+                ],
+                "label": "Hiramatsu Kodaiji — クリスマス特別コース～Menu Prestige de Noël～",
+                "coverage": "published",
+                "currency": "JPY"
+              },
+              "startsAt": "2026-12-02T09:00:00.000Z",
+              "end": "19:31"
+            }
+          ]
+        },
+        {
+          "pinId": 18171,
+          "region": "kyoto",
+          "view": "top",
+          "neighborhood": "Karasuma Oike / Muromachi",
+          "nativeTitleAndImage": true,
+          "hrefs": [
+            "/pin/18171/ristorante-la-luce-the-hiramatsu-kyoto-opens-2020-03-18"
+          ],
+          "browserFiltered": false,
+          "publicBase": "http://127.0.0.1:19089",
+          "guideStatus": 200,
+          "offers": []
+        },
+        {
+          "pinId": 18171,
+          "region": "kyoto",
+          "view": "discounts",
+          "neighborhood": "Karasuma Oike / Muromachi",
+          "nativeTitleAndImage": true,
+          "hrefs": [
+            "/pin/18171/ristorante-la-luce-the-hiramatsu-kyoto-opens-2020-03-18"
+          ],
+          "browserFiltered": false,
+          "publicBase": "http://127.0.0.1:19089",
+          "guideStatus": 200,
+          "offers": [
+            {
+              "id": "https://www.hiramatsurestaurant.jp/la-luce/#0",
+              "name": "Ristorante La Luce — THE HIRAMATSU Kyoto",
+              "neighborhood": "Karasuma Oike / Muromachi",
+              "address": "THE HIRAMATSU Kyoto,361 Ennogyojacho,Nakagyo-ku,Kyoto",
+              "restaurantHref": "/pin/18171/ristorante-la-luce-the-hiramatsu-kyoto-opens-2020-03-18",
+              "checkedAt": "2026-10-18",
+              "special": {
+                "kind": "other",
+                "title": "La Luce Christmas dinner",
+                "schedule": "Asia/Tokyo local service / arrival windows; advance reservation rules apply.",
+                "menuLabel": "La Luce — クリスマスディナーコース",
+                "sourceUrl": "https://www.hiramatsurestaurant.jp/la-luce/news/",
+                "validFrom": "2026-12-20",
+                "conditions": [
+                  "Advance booking; irregular closures and actual seat inventory apply."
+                ],
+                "discounted": false,
+                "description": "Cena Natale December20–25,2026, ¥36,300 including tax/service. Named final Christmas recipes are not published; regular autumn recipes are separate.",
+                "limitedTime": true,
+                "availability": {
+                  "windows": [
+                    {
+                      "end": "19:01",
+                      "days": [
+                        0,
+                        1,
+                        2,
+                        3,
+                        4,
+                        5,
+                        6
+                      ],
+                      "start": "17:30"
+                    }
+                  ]
+                },
+                "validThrough": "2026-12-25"
+              },
+              "venueKey": "hiramatsurestaurant.jp/la-luce",
+              "photo": {
+                "alt": "Ristorante La Luce — THE HIRAMATSU Kyoto — Exact-branch operator gallery; seasonal food is illustrative and does not establish a fixed current course inclusion.",
+                "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-18/batch90-luce-0-afc291ffbc21d0cb.webp",
+                "credit": "Hiramatsu / La Luce",
+                "checkedAt": "2026-10-18",
+                "sourceUrl": "https://www.hiramatsurestaurant.jp/la-luce/about/",
+                "originalUrl": "https://www.hiramatsurestaurant.jp/la-luce/assets/img/about/imgMain.jpg"
+              },
+              "menu": {
+                "url": "https://www.hiramatsurestaurant.jp/la-luce/menu/",
+                "note": "Named recipes are operator examples; substitutions and alternatives apply. 前菜、前菜、魚料理、肉料理、デザート、デザート、小菓子、コーヒー 【ご予約】 ご予約はこちらから 宿泊付のご予約はこちらから",
+                "items": [
+                  {
+                    "name": "クリスマスディナーコース",
+                    "note": "Exact branch operator total, including 10% service and 10% consumption tax. Course-specific meal, weekday and reservation restrictions apply.",
+                    "price": 36300
+                  },
+                  {
+                    "name": "前菜、前菜、魚料理、肉料理、デザート、デザート、小菓子、コーヒー",
+                    "note": "Included seasonal course component; no standalone price published. Confirm current substitutions.",
+                    "priceLabel": "Price not published"
+                  }
+                ],
+                "label": "La Luce — クリスマスディナーコース",
+                "coverage": "sample",
+                "currency": "JPY"
+              },
+              "startsAt": "2026-12-20T08:30:00.000Z",
+              "end": "19:01"
+            }
+          ]
+        },
+        {
+          "pinId": 18173,
+          "region": "kyoto",
+          "view": "top",
+          "neighborhood": "Higashiyama / Kodaiji",
+          "nativeTitleAndImage": true,
+          "hrefs": [
+            "/pin/18173/kodaiji-jugyuan-opens-2017-09-23"
+          ],
+          "browserFiltered": false,
+          "publicBase": "http://127.0.0.1:19089",
+          "guideStatus": 200,
+          "offers": []
+        },
+        {
+          "pinId": 18176,
+          "region": "fukuoka",
+          "view": "top",
+          "neighborhood": "Watanabedori / Minami Tenjin",
+          "nativeTitleAndImage": true,
+          "hrefs": [
+            "/pin/18176/l-as-fukuoka-watanabedori-opens-2025-09-12"
+          ],
+          "browserFiltered": false,
+          "publicBase": "http://127.0.0.1:19089",
+          "guideStatus": 200,
+          "offers": []
+        }
+      ]
+    },
+    "schedules": {
+      "boundaries": [
+        {
+          "title": "La Fête Christmas lunch — weekday tables",
+          "at": "2026-11-30T03:00:00.000Z",
+          "active": false
+        },
+        {
+          "title": "La Fête Christmas lunch — weekday tables",
+          "at": "2026-12-01T02:29:00.000Z",
+          "active": false
+        },
+        {
+          "title": "La Fête Christmas lunch — weekday tables",
+          "at": "2026-12-01T02:30:00.000Z",
+          "active": true
+        },
+        {
+          "title": "La Fête Christmas lunch — weekday tables",
+          "at": "2026-12-01T04:30:00.000Z",
+          "active": true
+        },
+        {
+          "title": "La Fête Christmas lunch — weekday tables",
+          "at": "2026-12-01T04:31:00.000Z",
+          "active": false
+        },
+        {
+          "title": "La Fête Christmas lunch — weekday tables",
+          "at": "2026-12-05T03:00:00.000Z",
+          "active": false
+        },
+        {
+          "title": "La Fête Christmas lunch — weekday tables",
+          "at": "2026-12-06T03:00:00.000Z",
+          "active": false
+        },
+        {
+          "title": "La Fête Christmas lunch — weekday tables",
+          "at": "2026-12-22T03:00:00.000Z",
+          "active": true
+        },
+        {
+          "title": "La Fête Christmas lunch — weekday tables",
+          "at": "2026-12-23T03:00:00.000Z",
+          "active": false
+        },
+        {
+          "title": "La Fête Christmas lunch — weekday tables",
+          "at": "2026-12-25T03:00:00.000Z",
+          "active": false
+        },
+        {
+          "title": "La Fête Christmas dinner",
+          "at": "2026-11-30T09:00:00.000Z",
+          "active": false
+        },
+        {
+          "title": "La Fête Christmas dinner",
+          "at": "2026-12-01T08:59:00.000Z",
+          "active": false
+        },
+        {
+          "title": "La Fête Christmas dinner",
+          "at": "2026-12-01T09:00:00.000Z",
+          "active": true
+        },
+        {
+          "title": "La Fête Christmas dinner",
+          "at": "2026-12-01T11:00:00.000Z",
+          "active": true
+        },
+        {
+          "title": "La Fête Christmas dinner",
+          "at": "2026-12-01T11:01:00.000Z",
+          "active": false
+        },
+        {
+          "title": "La Fête Christmas dinner",
+          "at": "2026-12-05T09:00:00.000Z",
+          "active": true
+        },
+        {
+          "title": "La Fête Christmas dinner",
+          "at": "2026-12-12T09:00:00.000Z",
+          "active": false
+        },
+        {
+          "title": "La Fête Christmas dinner",
+          "at": "2026-12-13T09:00:00.000Z",
+          "active": true
+        },
+        {
+          "title": "La Fête Christmas dinner",
+          "at": "2026-12-25T09:00:00.000Z",
+          "active": true
+        },
+        {
+          "title": "La Fête Christmas dinner",
+          "at": "2026-12-26T09:00:00.000Z",
+          "active": false
+        },
+        {
+          "title": "Le Midi Christmas lunch — Natale B",
+          "at": "2026-11-30T03:00:00.000Z",
+          "active": false
+        },
+        {
+          "title": "Le Midi Christmas lunch — Natale B",
+          "at": "2026-12-01T02:29:00.000Z",
+          "active": false
+        },
+        {
+          "title": "Le Midi Christmas lunch — Natale B",
+          "at": "2026-12-01T02:30:00.000Z",
+          "active": true
+        },
+        {
+          "title": "Le Midi Christmas lunch — Natale B",
+          "at": "2026-12-01T04:30:00.000Z",
+          "active": true
+        },
+        {
+          "title": "Le Midi Christmas lunch — Natale B",
+          "at": "2026-12-01T04:31:00.000Z",
+          "active": false
+        },
+        {
+          "title": "Le Midi Christmas lunch — Natale B",
+          "at": "2026-12-20T03:00:00.000Z",
+          "active": true
+        },
+        {
+          "title": "Le Midi Christmas lunch — Natale B",
+          "at": "2026-12-25T03:00:00.000Z",
+          "active": true
+        },
+        {
+          "title": "Le Midi Christmas lunch — Natale B",
+          "at": "2026-12-26T03:00:00.000Z",
+          "active": false
+        },
+        {
+          "title": "Le Midi Christmas dinner",
+          "at": "2026-11-30T09:00:00.000Z",
+          "active": false
+        },
+        {
+          "title": "Le Midi Christmas dinner",
+          "at": "2026-12-01T08:29:00.000Z",
+          "active": false
+        },
+        {
+          "title": "Le Midi Christmas dinner",
+          "at": "2026-12-01T08:30:00.000Z",
+          "active": true
+        },
+        {
+          "title": "Le Midi Christmas dinner",
+          "at": "2026-12-01T11:00:00.000Z",
+          "active": true
+        },
+        {
+          "title": "Le Midi Christmas dinner",
+          "at": "2026-12-01T11:01:00.000Z",
+          "active": false
+        },
+        {
+          "title": "Le Midi Christmas dinner",
+          "at": "2026-12-20T09:00:00.000Z",
+          "active": true
+        },
+        {
+          "title": "Le Midi Christmas dinner",
+          "at": "2026-12-25T09:00:00.000Z",
+          "active": true
+        },
+        {
+          "title": "Le Midi Christmas dinner",
+          "at": "2026-12-26T09:00:00.000Z",
+          "active": false
+        },
+        {
+          "title": "Hiramatsu Kodaiji Kyotamba producer gala",
+          "at": "2026-11-05T09:30:00.000Z",
+          "active": false
+        },
+        {
+          "title": "Hiramatsu Kodaiji Kyotamba producer gala",
+          "at": "2026-11-06T09:00:00.000Z",
+          "active": false
+        },
+        {
+          "title": "Hiramatsu Kodaiji Kyotamba producer gala",
+          "at": "2026-11-06T09:29:00.000Z",
+          "active": false
+        },
+        {
+          "title": "Hiramatsu Kodaiji Kyotamba producer gala",
+          "at": "2026-11-06T09:30:00.000Z",
+          "active": true
+        },
+        {
+          "title": "Hiramatsu Kodaiji Kyotamba producer gala",
+          "at": "2026-11-06T09:31:00.000Z",
+          "active": false
+        },
+        {
+          "title": "Hiramatsu Kodaiji Kyotamba producer gala",
+          "at": "2026-11-07T09:30:00.000Z",
+          "active": false
+        },
+        {
+          "title": "Hiramatsu Kodaiji Christmas lunch — December2–17",
+          "at": "2026-12-01T03:00:00.000Z",
+          "active": false
+        },
+        {
+          "title": "Hiramatsu Kodaiji Christmas lunch — December2–17",
+          "at": "2026-12-02T02:59:00.000Z",
+          "active": false
+        },
+        {
+          "title": "Hiramatsu Kodaiji Christmas lunch — December2–17",
+          "at": "2026-12-02T03:00:00.000Z",
+          "active": true
+        },
+        {
+          "title": "Hiramatsu Kodaiji Christmas lunch — December2–17",
+          "at": "2026-12-02T04:00:00.000Z",
+          "active": true
+        },
+        {
+          "title": "Hiramatsu Kodaiji Christmas lunch — December2–17",
+          "at": "2026-12-02T04:01:00.000Z",
+          "active": false
+        },
+        {
+          "title": "Hiramatsu Kodaiji Christmas lunch — December2–17",
+          "at": "2026-12-07T03:00:00.000Z",
+          "active": false
+        },
+        {
+          "title": "Hiramatsu Kodaiji Christmas lunch — December2–17",
+          "at": "2026-12-08T03:00:00.000Z",
+          "active": true
+        },
+        {
+          "title": "Hiramatsu Kodaiji Christmas lunch — December2–17",
+          "at": "2026-12-17T03:00:00.000Z",
+          "active": true
+        },
+        {
+          "title": "Hiramatsu Kodaiji Christmas lunch — December2–17",
+          "at": "2026-12-18T03:00:00.000Z",
+          "active": false
+        },
+        {
+          "title": "Hiramatsu Kodaiji Christmas dinner — December2–17",
+          "at": "2026-12-01T09:00:00.000Z",
+          "active": false
+        },
+        {
+          "title": "Hiramatsu Kodaiji Christmas dinner — December2–17",
+          "at": "2026-12-02T08:59:00.000Z",
+          "active": false
+        },
+        {
+          "title": "Hiramatsu Kodaiji Christmas dinner — December2–17",
+          "at": "2026-12-02T09:00:00.000Z",
+          "active": true
+        },
+        {
+          "title": "Hiramatsu Kodaiji Christmas dinner — December2–17",
+          "at": "2026-12-02T10:30:00.000Z",
+          "active": true
+        },
+        {
+          "title": "Hiramatsu Kodaiji Christmas dinner — December2–17",
+          "at": "2026-12-02T10:31:00.000Z",
+          "active": false
+        },
+        {
+          "title": "Hiramatsu Kodaiji Christmas dinner — December2–17",
+          "at": "2026-12-07T09:00:00.000Z",
+          "active": false
+        },
+        {
+          "title": "Hiramatsu Kodaiji Christmas dinner — December2–17",
+          "at": "2026-12-08T09:00:00.000Z",
+          "active": true
+        },
+        {
+          "title": "Hiramatsu Kodaiji Christmas dinner — December2–17",
+          "at": "2026-12-17T09:00:00.000Z",
+          "active": true
+        },
+        {
+          "title": "Hiramatsu Kodaiji Christmas dinner — December2–17",
+          "at": "2026-12-18T09:00:00.000Z",
+          "active": false
+        },
+        {
+          "title": "La Luce Christmas dinner",
+          "at": "2026-12-19T09:00:00.000Z",
+          "active": false
+        },
+        {
+          "title": "La Luce Christmas dinner",
+          "at": "2026-12-20T08:29:00.000Z",
+          "active": false
+        },
+        {
+          "title": "La Luce Christmas dinner",
+          "at": "2026-12-20T08:30:00.000Z",
+          "active": true
+        },
+        {
+          "title": "La Luce Christmas dinner",
+          "at": "2026-12-20T10:00:00.000Z",
+          "active": true
+        },
+        {
+          "title": "La Luce Christmas dinner",
+          "at": "2026-12-20T10:01:00.000Z",
+          "active": false
+        },
+        {
+          "title": "La Luce Christmas dinner",
+          "at": "2026-12-25T09:00:00.000Z",
+          "active": true
+        },
+        {
+          "title": "La Luce Christmas dinner",
+          "at": "2026-12-26T09:00:00.000Z",
+          "active": false
+        }
+      ],
+      "nextStarts": [
+        {
+          "title": "La Fête Christmas lunch — weekday tables",
+          "startsAt": "2026-12-01T02:30:00.000Z",
+          "end": "13:31"
+        },
+        {
+          "title": "La Fête Christmas dinner",
+          "startsAt": "2026-12-01T09:00:00.000Z",
+          "end": "20:01"
+        },
+        {
+          "title": "Le Midi Christmas lunch — Natale B",
+          "startsAt": "2026-12-01T02:30:00.000Z",
+          "end": "13:31"
+        },
+        {
+          "title": "Le Midi Christmas dinner",
+          "startsAt": "2026-12-01T08:30:00.000Z",
+          "end": "20:01"
+        },
+        {
+          "title": "Hiramatsu Kodaiji Kyotamba producer gala",
+          "startsAt": "2026-11-06T09:30:00.000Z",
+          "end": "18:31"
+        },
+        {
+          "title": "Hiramatsu Kodaiji Christmas lunch — December2–17",
+          "startsAt": "2026-12-02T03:00:00.000Z",
+          "end": "13:01"
+        },
+        {
+          "title": "Hiramatsu Kodaiji Christmas dinner — December2–17",
+          "startsAt": "2026-12-02T09:00:00.000Z",
+          "end": "19:31"
+        },
+        {
+          "title": "La Luce Christmas dinner",
+          "startsAt": "2026-12-20T08:30:00.000Z",
+          "end": "19:01"
+        }
+      ]
+    }
+  },
+  "publicationStatus": {
+    "local": "saved and verified",
+    "production": "saved and verified through production origin",
+    "publicHttpsVerified": false
+  },
+  "verificationNotes": "Six exact branches,411 menu/serving entries,22 gallery links and10 native title/image guide memberships verified locally and through the running production origin. Entry count includes course components, alternative servings and group drinks, not411 unique dishes. Eight schedules passed67 boundary checks and8 next starts. Public HTTPS requests still time out; external verification remains pending. Temporary authenticated SSH forwarding only; no deploy, build, restart or configuration change.",
+  "sourceConflicts": [
+    "La Fête December2026 headline and numeric closure dates control stale2025 copy; all December weekend lunches and Dec23–25 lunches private; Dec12 dinner private.",
+    "Le Midi Natale A lunch is limited to Dec19–20 and23–25 on course page despite broader news; continuous lunch Special uses Natale B.",
+    "Hiramatsu Kodaiji Christmas course starts Dec2 despite general Dec1 announcement; later dated seating roster has stale weekday names, retained in notes without invented continuous availability.",
+    "La Luce rounded published lunch totals5800/8220 retained rather than recalculating.",
+    "L’AS Fukuoka Japanese cake3850 conflicts with English2200; exact current Japanese amount and confirmation note retained."
+  ],
+  "pdfReview": {
+    "documents": 3,
+    "renderedPages": 11,
+    "notes": "Ten La Fête course pages plus one shared corkage table page rendered and visually reviewed. Exact Le Midi6600 row used; no cross-branch fees. Japanese explicit totals control generic conflicting English PDF footer."
+  }
 }
