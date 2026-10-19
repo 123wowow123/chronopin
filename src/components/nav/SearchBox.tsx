@@ -415,7 +415,12 @@ export function SearchBox() {
   const insertTerm = (dropped: string, x: number) => {
     setDropMark(null);
     const { all, at } = landing(x);
-    if (all.some((part) => part.raw === dropped)) return submit(joinSearchQuery(all));
+    // A term already in the group it lands in (between ORs) adds nothing; in another group it does.
+    let from = at;
+    while (from > 0 && all[from - 1].raw !== 'OR') from--;
+    let to = at;
+    while (to < all.length && all[to].raw !== 'OR') to++;
+    if (all.slice(from, to).some((part) => part.raw === dropped)) return submit(joinSearchQuery(all));
     submit(joinSearchQuery([...all.slice(0, at), ...toItems(dropped), ...all.slice(at)]));
   };
   addTerm.current = (dropped, x = Infinity) => insertTerm(dropped, x);
