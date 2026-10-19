@@ -235,3 +235,26 @@ function isEventItself(name: string, event: Node): boolean {
   const own = plain(name);
   return !!own && [event.name, ...[event.organizer].flat()].some((other) => plain(other) === own);
 }
+
+// What a ticketUrl asks of the visitor, so the pin page's button says "See
+// fees & passes" on a park's fee page and "Register" on a race entry rather
+// than "Buy tickets" on every link. Read off the URL; ticket sellers and
+// anything unrecognised stay tickets.
+export type TicketAction = 'tickets' | 'fees' | 'register' | 'book';
+
+export function ticketAction(url: string | null | undefined): TicketAction {
+  if (!url) return 'tickets';
+  let parsed: URL;
+  try {
+    parsed = new URL(url);
+  } catch {
+    return 'tickets';
+  }
+  const host = parsed.hostname.toLowerCase();
+  const path = `${parsed.pathname}`.toLowerCase();
+  if (/(^|\.)(ticketmaster|axs|etix|eventbrite|seatgeek|peek)\./.test(host) || /ticket|tix/.test(host + path)) return 'tickets';
+  if (/regist|runsignup|raceroster|runrocknroll\.com.*\/register/.test(host + path)) return 'register';
+  if (/\/fees|fees\.htm|passport|parkpass|\/passes|pass\/|entrance/.test(path)) return 'fees';
+  if (/reserv|booker|book|tasting|\/tour|cruise|cave|dayuse/.test(host + path)) return 'book';
+  return 'tickets';
+}

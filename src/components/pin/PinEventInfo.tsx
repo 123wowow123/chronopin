@@ -1,9 +1,12 @@
 import Anchor from '@/components/ui/Anchor';
 import { Icon } from '@/components/ui/Icon';
 import { isTicketWordmark, TicketLogo } from '@/components/pin/TicketLogo';
-import { ticketSeller, type PinEventInfoJson } from '@/lib/eventInfo';
+import { ticketAction, ticketSeller, type PinEventInfoJson } from '@/lib/eventInfo';
 import { INTL_LOCALES } from '@/lib/i18n/config';
 import type { Translator } from '@/lib/i18n/translate';
+
+// The button's words by what its link asks of the visitor (ticketAction).
+const ACTION_KEY = { tickets: 'pin.getTickets', fees: 'pin.seeFees', register: 'pin.registerEntry', book: 'pin.bookNow' } as const;
 
 // Who performs at an event pin and how to get in (PinEventInfo, 0082): the
 // same facts its Event markup gives search, shown where a reader can see
@@ -70,7 +73,7 @@ export function PinEventInfo({ info, started, t }: { info: PinEventInfoJson; sta
           <Icon name="external" className="size-3.5 shrink-0 opacity-70" />
         )}
         {seller && isTicketWordmark(seller.label) ? <span className="sr-only">{seller.label}</span> : null}
-        {t('pin.getTickets')}
+        {t(ACTION_KEY[ticketAction(info.ticketUrl)])}
         {seller ? <Icon name="external" className="size-3 shrink-0 opacity-60" /> : null}
       </Anchor>
     ) : null;

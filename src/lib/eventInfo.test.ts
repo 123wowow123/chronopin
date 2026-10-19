@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { availabilityOf, eventInfoFromMarkup, findEventNode } from './eventInfo';
+import { availabilityOf, eventInfoFromMarkup, findEventNode, ticketAction } from './eventInfo';
 
 describe('availabilityOf', () => {
   it("maps schema.org's values onto Google's three, and drops the rest", () => {
@@ -106,5 +106,20 @@ describe('performers that are the event itself', () => {
     expect(eventInfoFromMarkup({ name: 'Calvin Harris Australia Tour 2027 - Sydney', performer: { '@type': 'MusicGroup', name: 'Calvin Harris' } }).performers).toEqual([
       { name: 'Calvin Harris', type: 'PerformingGroup' },
     ]);
+  });
+});
+
+describe('ticketAction', () => {
+  it('words the button by what the link asks of the visitor', () => {
+    expect(ticketAction('https://www.nps.gov/ever/planyourvisit/fees.htm')).toBe('fees');
+    expect(ticketAction('https://parks.nv.gov/passport/')).toBe('fees');
+    expect(ticketAction('https://www.runrocknroll.com/events/nashville/register')).toBe('register');
+    expect(ticketAction('https://www.themiamimarathon.com/registration/')).toBe('register');
+    expect(ticketAction('https://gastateparks.org/Reservations')).toBe('book');
+    expect(ticketAction('https://arringtonvineyards.com/visit-us/wine-tasting-experiences/')).toBe('book');
+    expect(ticketAction('https://www.ticketmaster.com/event/1')).toBe('tickets');
+    expect(ticketAction('https://www.sdfair.com/p/tickets')).toBe('tickets');
+    expect(ticketAction('https://example.com/')).toBe('tickets');
+    expect(ticketAction(null)).toBe('tickets');
   });
 });
