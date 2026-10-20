@@ -458,3 +458,7 @@ there should be distiction before power generation and popwer usage
 
 ensure the product buy button is working in the country your in or collapse it in ellipsis with country category
 http://localhost:3000/pin/15767/eric-bordelet-sydre-argelette-grand-cru-celebrated-worldwide-as-the-apex-of-fine
+
+
+
+pin Nvidia Vera Rubin

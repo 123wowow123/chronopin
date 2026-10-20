@@ -1,15 +1,15 @@
 # Japan restaurant target audit — October 16, 2026
 
-Target: **30 distinct eligible restaurants in every tab of every city**. **598 verified memberships; 146 still missing**. This target remains incomplete; surplus in another tab does not offset a shortage.
+Target: **30 distinct eligible restaurants in every tab of every city**. **605 verified memberships; 140 still missing**. This target remains incomplete; surplus in another tab does not offset a shortage.
 
-**Batch 101 large round published and publicly verified (October 19, 2026):** Added **seven restaurants, 167 ordinary menu entries, three Christmas offers and 23 credited Azure photographs**. Cugnette, relocated YUNiCO, relocated LE PONT DE CIEL and relocated La Kanro bring **Osaka Top to 29/30**; YUNiCO’s explicitly dated 2026 Christmas dinner takes **Osaka Specials to 29/30**. Raisin d’Or, Shokudo Saison d’Or and La Rochelle Fukuoka bring **Fukuoka Top to 25/30**; two verified Raisin d’Or Christmas courses take **Fukuoka Specials to 34/30**, counting the restaurant once. Six branch dates confirmed; Saison d’Or retains a transparent month-level December 2015 estimate with conflicting late-November evidence queued. La Rochelle’s primary September 6, 2002 opening takes precedence over a conflicting directory date. Full profiles, all 167 rendered ordinary and three offer menu entries, gallery credits and nine native title/image memberships verified in both environments. Three offer schedules passed 30 boundary assertions and three next-start/expiry checks. All 24 counts match at **598 memberships / 146 missing**. No deployment. [Batch evidence](restaurant-japan-30-japan101-2026-10-19.json).
+**Batch 102 published and publicly verified (October 19, 2026):** Added **six restaurants, 197 ordinary menu entries, two dated IMURI offers with 16 menu entries, and 23 credited Azure photos**. RiVi brings Osaka Top restaurants to **30/30**. La Table de Provence, Le Chevalier, L’eau Blanche, Restaurant MORI and IMURI bring Fukuoka Top restaurants to **30/30**; every Japan city now meets the Top target. IMURI’s explicitly dated November 2026 anniversary dinner and January 2027 family service bring Fukuoka Specials to **35/30**, counting the venue once. Five exact branch dates confirmed; MORI retains an explicit year-only 1970 estimate, with finer chronology queued. All six profiles, seven native title/image memberships, menu rendering and credited galleries verified locally and through public production HTTPS. Offer schedules passed 20 boundary checks plus next-start and expiry assertions. All 24 counts match: **605 memberships / 140 missing**. No deployment. [Batch evidence](restaurant-japan-30-japan102-2026-10-19.json).
 
-All 24 local and public production guide counts agree. Batches 88–101 now have complete public HTTPS verification; earlier timeout checkpoints below are historical.
+All 24 local and public production guide counts agree. Batches 88–102 now have complete public HTTPS verification; earlier timeout checkpoints below are historical.
 
 | City (west to east) | Coming soon | Just opened | Top restaurants | Specials |
 | --- | ---: | ---: | ---: | ---: |
-| Fukuoka | 9/30 | 20/30 | 25/30 | 34/30 |
-| Osaka | 12/30 | 22/30 | 29/30 | 29/30 |
+| Fukuoka | 9/30 | 20/30 | 30/30 | 35/30 |
+| Osaka | 12/30 | 22/30 | 30/30 | 29/30 |
 | Kyoto | 11/30 | 33/30 | 30/30 | 34/30 |
 | Nagoya | 11/30 | 31/30 | 30/30 | 31/30 |
 | Tokyo | 14/30 | 23/30 | 30/30 | 37/30 |
@@ -21,11 +21,11 @@ All 24 local and public production guide counts agree. Batches 88–101 now have
 | --- | --- | ---: | ---: | ---: | ---: |
 | Fukuoka | Coming soon | 9 | 9 | 30 | 21 |
 | Fukuoka | Just opened | 20 | 20 | 30 | 10 |
-| Fukuoka | Top restaurants | 25 | 25 | 30 | 5 |
-| Fukuoka | Specials | 34 | 34 | 30 | 0 |
+| Fukuoka | Top restaurants | 30 | 30 | 30 | 0 |
+| Fukuoka | Specials | 35 | 35 | 30 | 0 |
 | Osaka | Coming soon | 12 | 12 | 30 | 18 |
 | Osaka | Just opened | 22 | 22 | 30 | 8 |
-| Osaka | Top restaurants | 29 | 29 | 30 | 1 |
+| Osaka | Top restaurants | 30 | 30 | 30 | 0 |
 | Osaka | Specials | 29 | 29 | 30 | 1 |
 | Kyoto | Coming soon | 11 | 11 | 30 | 19 |
 | Kyoto | Just opened | 33 | 33 | 30 | 0 |

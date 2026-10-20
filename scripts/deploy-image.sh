@@ -80,6 +80,7 @@ df -h / | tail -1
 printf 'APP_IMAGE=%s\nTOOLS_IMAGE=%s\n' '$APP_IMAGE' '$TOOLS_IMAGE' > Docker/.env
 C='$C'
 \$C pull app
+\$C --profile static run --rm --no-deps static-sync
 if [ $migrate = 1 ]; then \$C --profile tools pull tools && \$C --profile tools run --rm tools npm run create:db; fi
 docker exec docker-caddy-1 caddy validate --config /etc/caddy/Caddyfile >/dev/null
 docker exec docker-caddy-1 caddy reload --config /etc/caddy/Caddyfile

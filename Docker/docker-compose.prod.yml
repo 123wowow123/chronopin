@@ -78,6 +78,7 @@ services:
       - ./Caddyfile:/etc/caddy/Caddyfile:ro
       - caddy-data:/data
       - caddy-config:/config
+      - next-static:/srv/assets:ro
     depends_on:
       - app
     restart: unless-stopped
@@ -89,6 +90,18 @@ services:
       options:
         max-size: 50m
         max-file: '40'
+
+  # Copies the image's hashed /_next/static files into the volume Caddy serves
+  # them from (kept across deploys: a page open during one still finds its old
+  # chunks). Run by scripts/deploy-image.sh before the new app takes traffic.
+  static-sync:
+    image: ${APP_IMAGE:-chronopin:latest}
+    user: root
+    entrypoint: ['sh', '-c', 'mkdir -p /out/_next && cp -r /app/.next/static /out/_next/']
+    volumes:
+      - next-static:/out
+    profiles: [static]
+    restart: 'no'
 
   # The build stage, source and dev dependencies included, for the one-off
   # scripts the standalone image leaves out:
@@ -113,3 +126,4 @@ volumes:
   faiss-data:
   caddy-data:
   caddy-config:
+  next-static:
