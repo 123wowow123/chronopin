@@ -1531,6 +1531,8 @@ const ja: Messages = {
     loginTitle: 'ログイン',
     welcomeBack: 'おかえりなさい',
     loginIntro: 'ログインすると、ピンのウォッチ、ユーザーのフォロー、ピンの投稿ができます。',
+    pinLimitNotice: '短時間に多くのピンを開きました。ログインしたユーザーはより高い閲覧上限をご利用いただけます。続けて閲覧するには、ログインするか無料アカウントを作成してください。',
+    higherLimits: 'ログインしたユーザーはより高い閲覧上限をご利用いただけます。続けて閲覧するには、<login>ログイン</login>するか<signup>無料アカウントを作成</signup>してください。',
     enterEmailPassword: 'メールアドレスとパスワードを入力してください。',
     emailNotRegistered: '未登録のメールアドレスです。',
     wrongPassword: 'パスワードが正しくありません。',

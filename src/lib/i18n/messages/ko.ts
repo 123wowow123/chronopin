@@ -1532,6 +1532,8 @@ const ko: Messages = {
     loginTitle: '로그인',
     welcomeBack: '다시 오신 것을 환영합니다',
     loginIntro: '로그인하면 관심 핀을 등록하고, 사람들을 팔로우하고, 직접 핀을 게시할 수 있습니다.',
+    pinLimitNotice: '짧은 시간에 많은 핀을 열었습니다. 로그인한 사용자는 더 높은 탐색 한도를 이용할 수 있습니다. 계속 읽으려면 로그인하거나 무료 계정을 만드세요.',
+    higherLimits: '로그인한 사용자는 더 높은 탐색 한도를 이용할 수 있습니다. 계속 읽으려면 <login>로그인</login>하거나 <signup>무료 계정을 만드세요</signup>.',
     enterEmailPassword: '이메일과 비밀번호를 입력하세요.',
     emailNotRegistered: '등록되지 않은 이메일입니다.',
     wrongPassword: '비밀번호가 올바르지 않습니다.',

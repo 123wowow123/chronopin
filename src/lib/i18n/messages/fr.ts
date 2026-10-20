@@ -1537,6 +1537,8 @@ const fr: Messages = {
     loginTitle: 'Connexion',
     welcomeBack: 'Bon retour',
     loginIntro: 'Connectez-vous pour suivre des épingles et des personnes, et publier les vôtres.',
+    pinLimitNotice: 'Vous avez ouvert beaucoup d\'épingles en peu de temps. Les utilisateurs connectés disposent de limites de navigation plus élevées : connectez-vous ou créez un compte gratuit pour continuer à lire.',
+    higherLimits: 'Les utilisateurs connectés disposent de limites de navigation plus élevées : <login>connectez-vous</login> ou <signup>créez un compte gratuit</signup> pour continuer à lire.',
     enterEmailPassword: 'Veuillez saisir votre e-mail et votre mot de passe.',
     emailNotRegistered: 'Cette adresse e-mail n’est pas enregistrée.',
     wrongPassword: 'Ce mot de passe est incorrect.',

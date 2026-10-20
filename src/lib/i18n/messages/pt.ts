@@ -1528,6 +1528,8 @@ const pt: Messages = {
     loginTitle: 'Entrar',
     welcomeBack: 'Boas-vindas de volta',
     loginIntro: 'Entre para acompanhar pins, seguir pessoas e publicar os seus.',
+    pinLimitNotice: 'Você abriu muitos pins em pouco tempo. Usuários conectados têm limites de navegação mais altos: entre ou crie uma conta gratuita para continuar lendo.',
+    higherLimits: 'Usuários conectados têm limites de navegação mais altos: <login>entre</login> ou <signup>crie uma conta gratuita</signup> para continuar lendo.',
     enterEmailPassword: 'Informe seu e-mail e sua senha.',
     emailNotRegistered: 'Este e-mail não está cadastrado.',
     wrongPassword: 'A senha está incorreta.',

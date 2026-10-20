@@ -1541,6 +1541,8 @@ const en = {
     loginTitle: 'Login',
     welcomeBack: 'Welcome back',
     loginIntro: 'Log in to watch pins, follow people and post your own.',
+    pinLimitNotice: 'You have opened a lot of pins in a short time. Higher browsing limits are available for signed-in users: sign in or create a free account to keep reading.',
+    higherLimits: 'Higher browsing limits are available for signed-in users: <login>sign in</login> or <signup>create a free account</signup> to keep reading.',
     enterEmailPassword: 'Please enter your email and password.',
     emailNotRegistered: 'This email is not registered.',
     wrongPassword: 'This password is not correct.',

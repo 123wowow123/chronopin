@@ -1537,6 +1537,8 @@ const es: Messages = {
     loginTitle: 'Iniciar sesión',
     welcomeBack: 'Hola de nuevo',
     loginIntro: 'Inicia sesión para seguir pines, seguir a personas y publicar los tuyos.',
+    pinLimitNotice: 'Has abierto muchos pines en poco tiempo. Los usuarios con sesión iniciada tienen límites de navegación más altos: inicia sesión o crea una cuenta gratuita para seguir leyendo.',
+    higherLimits: 'Los usuarios con sesión iniciada tienen límites de navegación más altos: <login>inicia sesión</login> o <signup>crea una cuenta gratuita</signup> para seguir leyendo.',
     enterEmailPassword: 'Introduce tu correo y tu contraseña.',
     emailNotRegistered: 'Este correo electrónico no está registrado.',
     wrongPassword: 'La contraseña no es correcta.',

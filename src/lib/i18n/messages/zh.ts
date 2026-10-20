@@ -1531,6 +1531,8 @@ const zh: Messages = {
     loginTitle: '登录',
     welcomeBack: '欢迎回来',
     loginIntro: '登录后即可关注图钉、关注他人并发布自己的图钉。',
+    pinLimitNotice: '你在短时间内打开了很多图钉。登录用户可享受更高的浏览限额：登录或创建免费账户即可继续阅读。',
+    higherLimits: '登录用户可享受更高的浏览限额：<login>登录</login>或<signup>创建免费账户</signup>即可继续阅读。',
     enterEmailPassword: '请输入邮箱和密码。',
     emailNotRegistered: '此邮箱尚未注册。',
     wrongPassword: '密码不正确。',

@@ -55,7 +55,7 @@ export function LoginForm({ providers }: { providers: SignInProvider[] }) {
       </div>
       {params.get('limited') === '1' ? (
         <p role="status" className="rounded-lg bg-accent/10 px-3 py-2 text-sm ring-1 ring-accent/20 ring-inset">
-          You have opened a lot of pins in a short time. Higher browsing limits are available for signed-in users: sign in or create a free account to keep reading.
+          {t('account.pinLimitNotice')}
         </p>
       ) : null}
       {error ? (

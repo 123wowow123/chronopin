@@ -1541,6 +1541,8 @@ const ms: Messages = {
     loginTitle: 'Log masuk',
     welcomeBack: 'Selamat kembali',
     loginIntro: 'Log masuk untuk menonton pin, mengikuti orang dan menyiarkan pin anda sendiri.',
+    pinLimitNotice: 'Anda telah membuka banyak pin dalam masa singkat. Had pelayaran yang lebih tinggi disediakan untuk pengguna yang log masuk: log masuk atau cipta akaun percuma untuk terus membaca.',
+    higherLimits: 'Had pelayaran yang lebih tinggi disediakan untuk pengguna yang log masuk: <login>log masuk</login> atau <signup>cipta akaun percuma</signup> untuk terus membaca.',
     enterEmailPassword: 'Sila masukkan e-mel dan kata laluan anda.',
     emailNotRegistered: 'E-mel ini tidak didaftarkan.',
     wrongPassword: 'Kata laluan ini tidak betul.',

@@ -1,0 +1,2663 @@
+{
+  "batch": 105,
+  "checkedAt": "2026-10-20",
+  "entries": [
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "guu table — mimimi Jiyugaoka Opens 2026-10-09",
+        "description": "A66-seat international deli-buffet and bistro dining room overlooking Jiyugaoka’s greenway, with lunch mains and an advance-booking art dish.",
+        "sourceUrl": "https://mimimi-jiyugaoka.com/#floor1",
+        "address": "2F La Cour Jiyugaoka,2-25-7 Midorigaoka,Meguro-ku,Tokyo",
+        "productName": "guu table — mimimi Jiyugaoka",
+        "utcStartDateTime": "2026-10-09T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "Operator September10announcement specifically identifies this as one of four new restaurant brands opening October9,2026. The October9actual-opening release, official September28notice and branch-managed listing corroborate October9. The gallery’s September19opening and former Sweets Forest’s2003opening are separate events.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Tokyo",
+          "Japan",
+          "Jiyugaoka / Midorigaoka",
+          "Bistro / Buffet"
+        ],
+        "longFormSummary": "<p>A66-seat international deli-buffet and bistro dining room overlooking Jiyugaoka’s greenway, with lunch mains and an advance-booking art dish.<cite data-ref=\"https://mimimi-jiyugaoka.com/#floor1\"></cite></p><p>Operator September10announcement specifically identifies this as one of four new restaurant brands opening October9,2026. The October9actual-opening release, official September28notice and branch-managed listing corroborate October9. The gallery’s September19opening and former Sweets Forest’s2003opening are separate events.</p>",
+        "references": [
+          {
+            "url": "https://mimimi-jiyugaoka.com/#floor1",
+            "title": "guu table — mimimi Jiyugaoka — branch website",
+            "confidence": 90,
+            "reasoning": "guu table — mimimi Jiyugaoka — branch website"
+          },
+          {
+            "url": "https://prtimes.jp/main/html/rd/p/000000008.000189226.html",
+            "title": "Exact operator actual-opening release",
+            "confidence": 90,
+            "reasoning": "Exact operator actual-opening release"
+          },
+          {
+            "url": "https://mimimi-jiyugaoka.com/",
+            "title": "Official restaurant directory",
+            "confidence": 90,
+            "reasoning": "Official restaurant directory"
+          },
+          {
+            "url": "https://prtimes.jp/main/html/rd/p/000000005.000189226.html",
+            "title": "Opening plan, four branches identified",
+            "confidence": 90,
+            "reasoning": "Opening plan, four branches identified"
+          },
+          {
+            "url": "https://www.ryutsuu.biz/report/s100673.html",
+            "title": "On-site press preview",
+            "confidence": 90,
+            "reasoning": "On-site press preview"
+          },
+          {
+            "url": "https://tabelog.com/en/tokyo/A1317/A131703/13327295/",
+            "title": "Current branch hours and booking fees",
+            "confidence": 90,
+            "reasoning": "Current branch hours and booking fees"
+          },
+          {
+            "url": "https://tabelog.com/en/tokyo/A1317/A131703/13327295/party/301576974/",
+            "title": "Art dish, dinner-only booking details",
+            "confidence": 90,
+            "reasoning": "Art dish, dinner-only booking details"
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://mimimi-jiyugaoka.com/#floor1",
+          "menu": {
+            "pinSourceUrl": "https://mimimi-jiyugaoka.com/#floor1",
+            "name": "guu table — mimimi Jiyugaoka",
+            "checkedAt": "2026-10-20",
+            "menus": [
+              {
+                "label": "guu table — ordinary food",
+                "url": "https://tabelog.com/en/tokyo/A1317/A131703/13327295/dtlmenu/",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "Truffle Potato Chips and Bottarga with Cream Cheese Sauce",
+                    "note": "Tax included; ordinary branch-menu price.",
+                    "price": 990
+                  },
+                  {
+                    "name": "Lemon-Marinated Horse Mackerel",
+                    "note": "Tax included; ordinary branch-menu price.",
+                    "price": 1100
+                  },
+                  {
+                    "name": "Cream Cheese and Mascarpone Whip with Fig and Raisins",
+                    "note": "Tax included; ordinary branch-menu price.",
+                    "price": 1078
+                  },
+                  {
+                    "name": "Crunchy Bacon Potato Salad",
+                    "note": "Tax included; ordinary branch-menu price.",
+                    "price": 1078
+                  },
+                  {
+                    "name": "Creamy Soft-Boiled Egg Sandwich",
+                    "note": "Tax included; ordinary branch-menu price.",
+                    "price": 1320
+                  },
+                  {
+                    "name": "Thick-Cut French Toast Open Sandwich - Prosciutto and Potato Salad",
+                    "note": "Tax included; ordinary branch-menu price.",
+                    "price": 1540
+                  },
+                  {
+                    "name": "Today's Deli Assorted Platter - 6 Items",
+                    "note": "Tax included; ordinary branch-menu price.",
+                    "price": 1078
+                  },
+                  {
+                    "name": "Today's Deli Assorted Platter - 8 Items",
+                    "note": "Tax included; ordinary branch-menu price.",
+                    "price": 1430
+                  },
+                  {
+                    "name": "Today's Deli Assorted Platter - 10 Items",
+                    "note": "Tax included; ordinary branch-menu price.",
+                    "price": 1650
+                  },
+                  {
+                    "name": "Chunky Vegetable Clam Chowder",
+                    "note": "Tax included; ordinary branch-menu price.",
+                    "price": 825
+                  },
+                  {
+                    "name": "Chicken Soup with Seasonal Vegetables, Ginger and Barley",
+                    "note": "Tax included; ordinary branch-menu price.",
+                    "price": 825
+                  },
+                  {
+                    "name": "Smoked Swordfish Prosciutto",
+                    "note": "Tax included; ordinary branch-menu price.",
+                    "price": 1100
+                  },
+                  {
+                    "name": "Assorted Prosciutto",
+                    "note": "Tax included; ordinary branch-menu price.",
+                    "price": 1760
+                  },
+                  {
+                    "name": "Prosciutto and Melon with Balsamic and Basil Jelly",
+                    "note": "Tax included; ordinary branch-menu price.",
+                    "price": 1540
+                  },
+                  {
+                    "name": "Thick-Cut Pate de Campagne",
+                    "note": "Tax included; ordinary branch-menu price.",
+                    "price": 1320
+                  },
+                  {
+                    "name": "Prosciutto Caesar Salad",
+                    "note": "Tax included; ordinary branch-menu price.",
+                    "price": 1320
+                  },
+                  {
+                    "name": "Warm Mushroom Salad with Balsamic Dressing",
+                    "note": "Tax included; ordinary branch-menu price.",
+                    "price": 1078
+                  },
+                  {
+                    "name": "Jumbo Shiitake Shumai with Amazon Chili Tomato Sauce",
+                    "note": "Tax included; two pieces.",
+                    "price": 1100
+                  },
+                  {
+                    "name": "Wagyu Heart Carpaccio",
+                    "note": "Tax included; ordinary branch-menu price.",
+                    "price": 1540
+                  },
+                  {
+                    "name": "Fresh Whitebait Bruschetta with Cardamom Accent",
+                    "note": "Tax included; ordinary branch-menu price.",
+                    "price": 1078
+                  },
+                  {
+                    "name": "Oven-Baked Apple with Honey and Gorgonzola Sauce",
+                    "note": "Tax included; ordinary branch-menu price.",
+                    "price": 880
+                  },
+                  {
+                    "name": "Steamed Chicken with Cilantro",
+                    "note": "Tax included; ordinary branch-menu price.",
+                    "price": 1078
+                  },
+                  {
+                    "name": "Assorted Seafood Fritto",
+                    "note": "Tax included; ordinary branch-menu price.",
+                    "price": 1320
+                  },
+                  {
+                    "name": "Prosciutto Gnocco Fritto",
+                    "note": "Tax included; ordinary branch-menu price.",
+                    "price": 1320
+                  },
+                  {
+                    "name": "Savory Spicy Fried Chicken Wings",
+                    "note": "Tax included; two pieces.",
+                    "price": 880
+                  },
+                  {
+                    "name": "Special French Fries with Cheese and Truffle Aroma",
+                    "note": "Tax included; ordinary branch-menu price.",
+                    "price": 1078
+                  },
+                  {
+                    "name": "Keema Curry Cheese Spring Roll",
+                    "note": "Tax included; ordinary branch-menu price.",
+                    "price": 770
+                  },
+                  {
+                    "name": "Seared Wagyu with Egg Mayo",
+                    "note": "Tax included; ordinary branch-menu price.",
+                    "price": 1760
+                  },
+                  {
+                    "name": "Italian-Style Buckwheat Crepe",
+                    "note": "Tax included; ordinary branch-menu price.",
+                    "price": 1650
+                  },
+                  {
+                    "name": "Roast Beef with Genovese and Garlic Sauce",
+                    "note": "Tax included; ordinary branch-menu price.",
+                    "price": 1650
+                  },
+                  {
+                    "name": "Western-style Sweet and Sour Pork with Cilantro",
+                    "note": "Tax included; ordinary branch-menu price.",
+                    "price": 1540
+                  },
+                  {
+                    "name": "Creamy Shrimp Risopilaf",
+                    "note": "Tax included; ordinary branch-menu price.",
+                    "price": 1980
+                  },
+                  {
+                    "name": "Hearty Chunky Seafood Bouillabaisse",
+                    "note": "Tax included; ordinary branch-menu price.",
+                    "price": 2915
+                  },
+                  {
+                    "name": "Mimimimimi Adult Napolitan Udon",
+                    "note": "Tax included; ordinary branch-menu price.",
+                    "price": 1980
+                  },
+                  {
+                    "name": "Two-Layer Chocolate Terrine with Citrus Cream",
+                    "note": "Tax included; ordinary branch-menu price.",
+                    "price": 770
+                  },
+                  {
+                    "name": "Basque Cheesecake Brulee",
+                    "note": "Tax included; ordinary branch-menu price.",
+                    "price": 880
+                  },
+                  {
+                    "name": "Tarte Tatin with Seasonal Ice Cream",
+                    "note": "Tax included; ordinary branch-menu price.",
+                    "price": 770
+                  }
+                ],
+                "note": "Exact-branch managed menu, tax included. Daily selections and supply may change."
+              },
+              {
+                "label": "guu table — lunch and deli buffet",
+                "url": "https://tabelog.com/en/tokyo/A1317/A131703/13327295/dtlmenu/lunch/",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "Mimimimimi Adult Napolitan Udon",
+                    "note": "Tax included. Main dish; optional60-minute deli buffet costs¥1,320additional, per operator opening release.",
+                    "price": 1980
+                  },
+                  {
+                    "name": "Herbal Spice Curry with Colorful Vegetables",
+                    "note": "Tax included. Main dish; optional60-minute deli buffet costs¥1,320additional, per operator opening release.",
+                    "price": 1650
+                  },
+                  {
+                    "name": "Roast Beef and Orange Salad Plate",
+                    "note": "Tax included. Main dish; optional60-minute deli buffet costs¥1,320additional, per operator opening release.",
+                    "price": 1870
+                  },
+                  {
+                    "name": "Salmon Rare Cutlet Galette",
+                    "note": "Tax included. Main dish; optional60-minute deli buffet costs¥1,320additional, per operator opening release.",
+                    "price": 2035
+                  },
+                  {
+                    "name": "Chicken Nanban Rice Bowl",
+                    "note": "Tax included. Main dish; optional60-minute deli buffet costs¥1,320additional, per operator opening release.",
+                    "price": 1540
+                  },
+                  {
+                    "name": "KIDS Deli Buffet",
+                    "note": "Tax included; children ages5–9. Children4and under may share, per branch menu.",
+                    "price": 1078
+                  },
+                  {
+                    "name": "Deli buffet add-on —60minutes",
+                    "price": 1320,
+                    "note": "Tax included; only with a separately ordered main dish. Not an unrestricted¥1,320standalone lunch."
+                  }
+                ],
+                "note": "Tax-inclusive main prices; buffet is a separate¥1,320add-on with60-minute limit. Children’s age conditions preserved."
+              },
+              {
+                "label": "guu table — drinks",
+                "url": "https://tabelog.com/en/tokyo/A1317/A131703/13327295/dtlmenu/drink/",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "AGRIKO Herbal Tea (HOT)",
+                    "note": "Tax included; ordinary branch-menu price.",
+                    "price": 825
+                  },
+                  {
+                    "name": "Blend Coffee",
+                    "note": "Tax included; ordinary branch-menu price.",
+                    "price": 550
+                  },
+                  {
+                    "name": "Cafe Latte",
+                    "note": "Tax included; ordinary branch-menu price.",
+                    "price": 638
+                  },
+                  {
+                    "name": "American Coffee (HOT)",
+                    "note": "Tax included; ordinary branch-menu price.",
+                    "price": 550
+                  },
+                  {
+                    "name": "Black Tea (Earl Grey)",
+                    "note": "Tax included; ordinary branch-menu price.",
+                    "price": 550
+                  },
+                  {
+                    "name": "Oolong Tea (ICE)",
+                    "note": "Tax included; ordinary branch-menu price.",
+                    "price": 550
+                  },
+                  {
+                    "name": "Orange Juice",
+                    "note": "Tax included; ordinary branch-menu price.",
+                    "price": 550
+                  },
+                  {
+                    "name": "Apple Juice",
+                    "note": "Tax included; ordinary branch-menu price.",
+                    "price": 550
+                  },
+                  {
+                    "name": "Peach Juice",
+                    "note": "Tax included; ordinary branch-menu price.",
+                    "price": 660
+                  },
+                  {
+                    "name": "Pineapple Juice",
+                    "note": "Tax included; ordinary branch-menu price.",
+                    "price": 660
+                  },
+                  {
+                    "name": "Mango Juice",
+                    "note": "Tax included; ordinary branch-menu price.",
+                    "price": 660
+                  },
+                  {
+                    "name": "Cranberry Juice",
+                    "note": "Tax included; ordinary branch-menu price.",
+                    "price": 660
+                  },
+                  {
+                    "name": "Blood Orange Juice",
+                    "note": "Tax included; ordinary branch-menu price.",
+                    "price": 660
+                  },
+                  {
+                    "name": "Coca-Cola",
+                    "note": "Tax included; ordinary branch-menu price.",
+                    "price": 550
+                  },
+                  {
+                    "name": "Draft Beer",
+                    "note": "Tax included; ordinary branch-menu price.",
+                    "price": 825
+                  },
+                  {
+                    "name": "Kaku Highball",
+                    "note": "Tax included; ordinary branch-menu price.",
+                    "price": 770
+                  },
+                  {
+                    "name": "Dom Perignon",
+                    "note": "Tax included; ordinary branch-menu price.",
+                    "price": 66000
+                  },
+                  {
+                    "name": "Espresso",
+                    "note": "Tax included; ordinary branch-menu price.",
+                    "price": 715
+                  },
+                  {
+                    "name": "Homemade Lemonade (ICE)",
+                    "note": "Tax included; ordinary branch-menu price.",
+                    "price": 770
+                  },
+                  {
+                    "name": "Homemade Ginger Ale",
+                    "note": "Tax included; ordinary branch-menu price.",
+                    "price": 770
+                  },
+                  {
+                    "name": "AGRIKO Beer (Yuta Okuda Edition)",
+                    "note": "Tax included; ordinary branch-menu price.",
+                    "price": 1650
+                  },
+                  {
+                    "name": "Non-Alcoholic Beer",
+                    "note": "Tax included; ordinary branch-menu price.",
+                    "price": 715
+                  },
+                  {
+                    "name": "mimimi Lemon Sour",
+                    "note": "Tax included; ordinary branch-menu price.",
+                    "price": 825
+                  },
+                  {
+                    "name": "Ginger Highball",
+                    "note": "Tax included; ordinary branch-menu price.",
+                    "price": 770
+                  },
+                  {
+                    "name": "Coke Highball",
+                    "note": "Tax included; ordinary branch-menu price.",
+                    "price": 770
+                  },
+                  {
+                    "name": "Green Tea Highball",
+                    "note": "Tax included; ordinary branch-menu price.",
+                    "price": 715
+                  },
+                  {
+                    "name": "Oolong Highball",
+                    "note": "Tax included; ordinary branch-menu price.",
+                    "price": 715
+                  },
+                  {
+                    "name": "Jasmine Highball",
+                    "note": "Tax included; ordinary branch-menu price.",
+                    "price": 715
+                  },
+                  {
+                    "name": "Refreshing Mojito",
+                    "note": "Tax included; ordinary branch-menu price.",
+                    "price": 880
+                  },
+                  {
+                    "name": "White Mimosa",
+                    "note": "Tax included; ordinary branch-menu price.",
+                    "price": 935
+                  },
+                  {
+                    "name": "American Lemonade",
+                    "note": "Tax included; ordinary branch-menu price.",
+                    "price": 880
+                  },
+                  {
+                    "name": "Glass of Sparkling Wine",
+                    "note": "Tax included; ordinary branch-menu price.",
+                    "price": 990
+                  },
+                  {
+                    "name": "Glass of Natural White Wine",
+                    "note": "Tax included; changing wine selection, confirm label with staff.",
+                    "price": 935
+                  },
+                  {
+                    "name": "Glass of Natural White Wine",
+                    "note": "Tax included; changing wine selection, confirm label with staff.",
+                    "price": 1045
+                  },
+                  {
+                    "name": "Glass of Natural White Wine",
+                    "note": "Tax included; changing wine selection, confirm label with staff.",
+                    "price": 1100
+                  },
+                  {
+                    "name": "Glass of Natural Red Wine",
+                    "note": "Tax included; changing wine selection, confirm label with staff.",
+                    "price": 935
+                  },
+                  {
+                    "name": "Glass of Natural Red Wine",
+                    "note": "Tax included; changing wine selection, confirm label with staff.",
+                    "price": 1045
+                  },
+                  {
+                    "name": "Glass of Natural Red Wine",
+                    "note": "Tax included; changing wine selection, confirm label with staff.",
+                    "price": 1100
+                  },
+                  {
+                    "name": "Natural Wine Bottle",
+                    "note": "Tax included; changing wine selection, confirm label with staff.",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Green Tea (ICE)",
+                    "note": "Tax included; ordinary branch-menu price.",
+                    "price": 550
+                  },
+                  {
+                    "name": "Jasmine Tea (ICE)",
+                    "note": "Tax included; ordinary branch-menu price.",
+                    "price": 550
+                  },
+                  {
+                    "name": "Chamomile Tea (HOT)",
+                    "note": "Tax included; ordinary branch-menu price.",
+                    "price": 825
+                  }
+                ],
+                "note": "Exact branch ordinary drink prices. Repeated menu sections deduplicated by name and price. Unclear translated champagne label withheld; wine tariffs vary by label."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://mimimi-jiyugaoka.com/#floor1",
+            "name": "guu table — mimimi Jiyugaoka",
+            "checkedAt": "2026-10-20",
+            "websiteUrl": "https://mimimi-jiyugaoka.com/#floor1",
+            "phone": "03-5726-8414",
+            "openingHours": [
+              {
+                "days": "Tuesday–Sunday",
+                "hours": "11:00–22:30; last order21:30"
+              },
+              {
+                "days": "Monday",
+                "hours": "Closed; operates normally when Monday is a public holiday"
+              }
+            ],
+            "detailsSourceUrl": "https://mimimi-jiyugaoka.com/#floor1",
+            "additionalSources": [
+              {
+                "label": "Exact operator actual-opening release",
+                "url": "https://prtimes.jp/main/html/rd/p/000000008.000189226.html"
+              },
+              {
+                "label": "Official restaurant directory",
+                "url": "https://mimimi-jiyugaoka.com/"
+              },
+              {
+                "label": "Opening plan, four branches identified",
+                "url": "https://prtimes.jp/main/html/rd/p/000000005.000189226.html"
+              },
+              {
+                "label": "On-site press preview",
+                "url": "https://www.ryutsuu.biz/report/s100673.html"
+              },
+              {
+                "label": "Current branch hours and booking fees",
+                "url": "https://tabelog.com/en/tokyo/A1317/A131703/13327295/"
+              },
+              {
+                "label": "Art dish, dinner-only booking details",
+                "url": "https://tabelog.com/en/tokyo/A1317/A131703/13327295/party/301576974/"
+              }
+            ],
+            "hoursNote": "Current managed listing supersedes the October9release’s23:00closing and Monday café-only plan. Tabelog bookings add¥110per person at lunch or¥220at dinner; operator/official Instagram booking links do not add this charge. Groups of9or more/private bookings should phone.66seats, no private room, no dedicated parking, non-smoking. Deli selections vary;¥1,320buffet requires a separate main.",
+            "reservationUrl": "https://tabelog.com/en/tokyo/A1317/A131703/13327295/"
+          },
+          "tile": {
+            "regionSlug": "tokyo",
+            "kind": "opening",
+            "slug": "japan105-guu",
+            "name": "guu table — mimimi Jiyugaoka",
+            "neighborhood": "Jiyugaoka / Midorigaoka",
+            "cuisine": "Bistro / Buffet",
+            "description": "A66-seat international deli-buffet and bistro dining room overlooking Jiyugaoka’s greenway, with lunch mains and an advance-booking art dish.",
+            "address": "2F La Cour Jiyugaoka,2-25-7 Midorigaoka,Meguro-ku,Tokyo",
+            "websiteUrl": "https://mimimi-jiyugaoka.com/#floor1",
+            "checkedAt": "2026-10-20",
+            "recognition": "Original branch opening confirmed by operator and branch-managed listing",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-20/batch105-guu-0-7959330c4ebf9faf.webp",
+            "imageCredit": "Okada Real Estate / mimimi JIYUGAOKA",
+            "imageSourceUrl": "https://prtimes.jp/main/html/rd/p/000000008.000189226.html",
+            "imageNote": "Operator launch illustration of the guu table dining room.",
+            "openingConfirmed": true,
+            "day": "2026-10-09"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "originalUrl": "https://prcdn.freetls.fastly.net/release_image/189226/8/189226-8-8cd66bb478fe864ec03e8d11a2036978-3000x2000.jpg?width=1950&height=1350&quality=85%2C65&format=jpeg&auto=webp&fit=bounds&bg-color=fff",
+          "sourcePage": "https://prtimes.jp/main/html/rd/p/000000008.000189226.html",
+          "note": "Operator launch illustration of the guu table dining room.",
+          "credit": "Okada Real Estate / mimimi JIYUGAOKA",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-20/batch105-guu-0-7959330c4ebf9faf.webp",
+          "sha256": "7959330c4ebf9faf239405c39dd4085a3a592847456f9ad99966a61e760cd751",
+          "width": 1600,
+          "height": 1067
+        },
+        {
+          "originalUrl": "https://prcdn.freetls.fastly.net/release_image/189226/8/189226-8-e887b178f608d0d49271e41e47b4a39a-3543x2364.jpg?width=1950&height=1350&quality=85%2C65&format=jpeg&auto=webp&fit=bounds&bg-color=fff",
+          "sourcePage": "https://prtimes.jp/main/html/rd/p/000000008.000189226.html",
+          "note": "Operator launch illustration of guu table deli buffet; selections vary.",
+          "credit": "Okada Real Estate / mimimi JIYUGAOKA",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-20/batch105-guu-1-171281f085c0d471.webp",
+          "sha256": "171281f085c0d47174ec01cb13ae74306a90ba6d17cd0ec80522333db602fc62",
+          "width": 1600,
+          "height": 1067
+        },
+        {
+          "originalUrl": "https://prcdn.freetls.fastly.net/release_image/189226/8/189226-8-adc436872bb035441b54cd24eb2e361e-401x268.jpg?width=1950&height=1350&quality=85&format=jpeg&auto=webp&fit=bounds&bg-color=fff",
+          "sourcePage": "https://prtimes.jp/main/html/rd/p/000000008.000189226.html",
+          "note": "Operator launch illustration labelled roast-beef and orange salad.",
+          "credit": "Okada Real Estate / mimimi JIYUGAOKA",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-20/batch105-guu-2-04631b1191ce4f92.webp",
+          "sha256": "04631b1191ce4f921a4ad4bb05fe0a87a32fc6aeda34e4cfad8a4845fb23efb4",
+          "width": 401,
+          "height": 268
+        },
+        {
+          "originalUrl": "https://prcdn.freetls.fastly.net/release_image/189226/8/189226-8-07de7c2e9c5bbfef0c5a9065d5aa65b3-3543x2364.jpg?width=1950&height=1350&quality=85%2C65&format=jpeg&auto=webp&fit=bounds&bg-color=fff",
+          "sourcePage": "https://prtimes.jp/main/html/rd/p/000000008.000189226.html",
+          "note": "Operator launch illustration labelled adult Napolitan udon.",
+          "credit": "Okada Real Estate / mimimi JIYUGAOKA",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-20/batch105-guu-3-c01ac8acd5fbd78c.webp",
+          "sha256": "c01ac8acd5fbd78c22e3f6f772cfea8b21f223c908114da98dac66a04df632c9",
+          "width": 1600,
+          "height": 1067
+        },
+        {
+          "originalUrl": "https://mimimi-jiyugaoka.com/wp/wp-content/uploads/2026/09/arttotable.jpg",
+          "sourcePage": "https://mimimi-jiyugaoka.com/event/event_sample4/",
+          "note": "Official photograph of mimimi bouquet; ingredients vary, dinner by advance reservation through November17.",
+          "credit": "Okada Real Estate / mimimi JIYUGAOKA",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-20/batch105-guu-4-42f8e1ca84af405a.webp",
+          "sha256": "42f8e1ca84af405a1b57ed9dfbbd37ce51e7e5ce0e18a2d83441c88d16412098",
+          "width": 960,
+          "height": 960
+        }
+      ],
+      "special": {
+        "regionSlug": "tokyo",
+        "enabled": true,
+        "profile": {
+          "pinSourceUrl": "https://mimimi-jiyugaoka.com/#floor1",
+          "name": "guu table — mimimi Jiyugaoka",
+          "checkedAt": "2026-10-20",
+          "address": "2F La Cour Jiyugaoka,2-25-7 Midorigaoka,Meguro-ku,Tokyo",
+          "neighborhood": "Jiyugaoka / Midorigaoka",
+          "websiteUrl": "https://mimimi-jiyugaoka.com/#floor1",
+          "menus": [
+            {
+              "label": "guu table — Art to Table mimimi bouquet",
+              "url": "https://tabelog.com/en/tokyo/A1317/A131703/13327295/party/301576974/",
+              "currency": "JPY",
+              "coverage": "published",
+              "items": [
+                {
+                  "name": "mimimi bouquet",
+                  "price": 3850,
+                  "note": "Tax included; limited dinner plate, advance booking; actual ingredients vary. Tabelog booking fee separate."
+                }
+              ],
+              "note": ""
+            }
+          ],
+          "specials": [
+            {
+              "kind": "other",
+              "title": "mimimi bouquet — dinner artwork plate, ¥3,850",
+              "description": "An advance-reservation, limited-quantity art-inspired plate created for Yuta Okuda’s bouquet; ingredients change with supply. Tax included.",
+              "sourceUrl": "https://tabelog.com/en/tokyo/A1317/A131703/13327295/party/301576974/",
+              "menuLabel": "guu table — Art to Table mimimi bouquet",
+              "limitedTime": true,
+              "discounted": false,
+              "validFrom": "2026-10-09",
+              "validThrough": "2026-11-17",
+              "schedule": "Tuesday–Sunday dinner ordering17:00–21:30JST; non-holiday Mondays closed. Through November17.",
+              "conditions": [
+                "Dinner only; advance online reservation and limited quantity.",
+                "¥3,850tax included per person; one dish, not a multi-course meal.",
+                "Tabelog reservation adds¥220per guest at dinner; official direct links have no such charge.",
+                "Published course template says17:00–23:00with two-hour stay; current branch closes22:30and last order21:30, so ordering window ends21:30. Confirm arrival and stay with restaurant.",
+                "Public-holiday Mondays may operate; no remaining Monday holiday occurs before November17."
+              ],
+              "availability": {
+                "windows": [
+                  {
+                    "days": [
+                      0,
+                      2,
+                      3,
+                      4,
+                      5,
+                      6
+                    ],
+                    "start": "17:00",
+                    "end": "21:30"
+                  }
+                ]
+              }
+            }
+          ],
+          "photo": {
+            "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-20/batch105-guu-0-7959330c4ebf9faf.webp",
+            "alt": "Operator launch illustration of the guu table dining room.",
+            "credit": "Okada Real Estate / mimimi JIYUGAOKA",
+            "sourceUrl": "https://prtimes.jp/main/html/rd/p/000000008.000189226.html",
+            "originalUrl": "https://prcdn.freetls.fastly.net/release_image/189226/8/189226-8-8cd66bb478fe864ec03e8d11a2036978-3000x2000.jpg?width=1950&height=1350&quality=85%2C65&format=jpeg&auto=webp&fit=bounds&bg-color=fff",
+            "checkedAt": "2026-10-20"
+          }
+        }
+      }
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "HoaHoa — mimimi Jiyugaoka Opens 2026-10-09",
+        "description": "A26-seat Southeast Asian dining room with ten pho lunch choices, fresh spring rolls and flower-styled dinner hotpot.",
+        "sourceUrl": "https://mimimi-jiyugaoka.com/#floor2",
+        "address": "2F La Cour Jiyugaoka,2-25-7 Midorigaoka,Meguro-ku,Tokyo",
+        "productName": "HoaHoa — mimimi Jiyugaoka",
+        "utcStartDateTime": "2026-10-09T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "Operator September10announcement specifically identifies this as one of four new restaurant brands opening October9,2026. The October9actual-opening release, official September28notice and branch-managed listing corroborate October9. The gallery’s September19opening and former Sweets Forest’s2003opening are separate events.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Tokyo",
+          "Japan",
+          "Jiyugaoka / Midorigaoka",
+          "Asian / Pho / Hotpot"
+        ],
+        "longFormSummary": "<p>A26-seat Southeast Asian dining room with ten pho lunch choices, fresh spring rolls and flower-styled dinner hotpot.<cite data-ref=\"https://mimimi-jiyugaoka.com/#floor2\"></cite></p><p>Operator September10announcement specifically identifies this as one of four new restaurant brands opening October9,2026. The October9actual-opening release, official September28notice and branch-managed listing corroborate October9. The gallery’s September19opening and former Sweets Forest’s2003opening are separate events.</p>",
+        "references": [
+          {
+            "url": "https://mimimi-jiyugaoka.com/#floor2",
+            "title": "HoaHoa — mimimi Jiyugaoka — branch website",
+            "confidence": 90,
+            "reasoning": "HoaHoa — mimimi Jiyugaoka — branch website"
+          },
+          {
+            "url": "https://prtimes.jp/main/html/rd/p/000000008.000189226.html",
+            "title": "Exact operator actual-opening release",
+            "confidence": 90,
+            "reasoning": "Exact operator actual-opening release"
+          },
+          {
+            "url": "https://mimimi-jiyugaoka.com/",
+            "title": "Official restaurant directory",
+            "confidence": 90,
+            "reasoning": "Official restaurant directory"
+          },
+          {
+            "url": "https://prtimes.jp/main/html/rd/p/000000005.000189226.html",
+            "title": "Opening plan, four branches identified",
+            "confidence": 90,
+            "reasoning": "Opening plan, four branches identified"
+          },
+          {
+            "url": "https://www.ryutsuu.biz/report/s100673.html",
+            "title": "On-site press preview",
+            "confidence": 90,
+            "reasoning": "On-site press preview"
+          },
+          {
+            "url": "https://tabelog.com/en/tokyo/A1317/A131703/13327296/",
+            "title": "Current exact-branch hours, prices and conditions",
+            "confidence": 90,
+            "reasoning": "Current exact-branch hours, prices and conditions"
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://mimimi-jiyugaoka.com/#floor2",
+          "menu": {
+            "pinSourceUrl": "https://mimimi-jiyugaoka.com/#floor2",
+            "name": "HoaHoa — mimimi Jiyugaoka",
+            "checkedAt": "2026-10-20",
+            "menus": [
+              {
+                "label": "HoaHoa — ordinary small plates",
+                "url": "https://tabelog.com/en/tokyo/A1317/A131703/13327296/dtlmenu/",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "Shrimp and Avocado Fresh Spring Roll",
+                    "note": "Tax included; ordinary branch-menu price.",
+                    "price": 770
+                  },
+                  {
+                    "name": "Tom Yum Potato Salad with Soft-Boiled Egg",
+                    "note": "Tax included; ordinary branch-menu price.",
+                    "price": 770
+                  },
+                  {
+                    "name": "Green Papaya Salad",
+                    "note": "Tax included; ordinary branch-menu price.",
+                    "price": 880
+                  },
+                  {
+                    "name": "Lamb Meatball Lemongrass Skewer",
+                    "note": "Tax included; ordinary branch-menu price.",
+                    "price": 1089
+                  },
+                  {
+                    "name": "Fried Eggplant and Prosciutto with Herb Sauce",
+                    "note": "Tax included; ordinary branch-menu price.",
+                    "price": 1100
+                  }
+                ],
+                "note": "Exact-branch managed menu, tax included. Daily selections and supply may change."
+              },
+              {
+                "label": "HoaHoa — ten lunch pho soups",
+                "url": "https://tabelog.com/en/tokyo/A1317/A131703/13327296/dtlmenu/lunch/",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "Circulation-Balancing Herbal Tea Pho",
+                    "note": "Tax included; this is a pho noodle soup from the branch lunch list, not a separate tea or a medical claim.",
+                    "price": 1540
+                  },
+                  {
+                    "name": "Chilled Mixed Garden with Japanese Dashi Pho",
+                    "note": "Tax included; this is a pho noodle soup from the branch lunch list, not a separate tea or a medical claim.",
+                    "price": 1650
+                  },
+                  {
+                    "name": "Warming Chicken and Ginger Pho",
+                    "note": "Tax included; this is a pho noodle soup from the branch lunch list, not a separate tea or a medical claim.",
+                    "price": 1540
+                  },
+                  {
+                    "name": "Forest Mushroom Detox Pho",
+                    "note": "Tax included; this is a pho noodle soup from the branch lunch list, not a separate tea or a medical claim.",
+                    "price": 1540
+                  },
+                  {
+                    "name": "Authentic Tom Yum Pho",
+                    "note": "Tax included; this is a pho noodle soup from the branch lunch list, not a separate tea or a medical claim.",
+                    "price": 1650
+                  },
+                  {
+                    "name": "Green Curry Indulgence Pho",
+                    "note": "Tax included; this is a pho noodle soup from the branch lunch list, not a separate tea or a medical claim.",
+                    "price": 1540
+                  },
+                  {
+                    "name": "Spicy Beef Tendon Chige with Garlic Chives Pho",
+                    "note": "Tax included; this is a pho noodle soup from the branch lunch list, not a separate tea or a medical claim.",
+                    "price": 1650
+                  },
+                  {
+                    "name": "Refreshing Tomato Soup with Clams and Lemongrass Pho",
+                    "note": "Tax included; this is a pho noodle soup from the branch lunch list, not a separate tea or a medical claim.",
+                    "price": 1430
+                  },
+                  {
+                    "name": "Creamy Sesame Pork Shabu-Shabu Pho",
+                    "note": "Tax included; this is a pho noodle soup from the branch lunch list, not a separate tea or a medical claim.",
+                    "price": 1430
+                  },
+                  {
+                    "name": "Silky White Broth Collagen Pho",
+                    "note": "Tax included; this is a pho noodle soup from the branch lunch list, not a separate tea or a medical claim.",
+                    "price": 1430
+                  }
+                ],
+                "note": "Exact-branch managed menu, tax included. Daily selections and supply may change."
+              },
+              {
+                "label": "HoaHoa — drinks",
+                "url": "https://tabelog.com/en/tokyo/A1317/A131703/13327296/dtlmenu/drink/",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "Mango Juice",
+                    "note": "Tax included; ordinary branch-menu price.",
+                    "price": 660
+                  },
+                  {
+                    "name": "Guava Juice",
+                    "note": "Tax included; ordinary branch-menu price.",
+                    "price": 660
+                  },
+                  {
+                    "name": "Homemade Ginger Ale",
+                    "note": "Tax included; ordinary branch-menu price.",
+                    "price": 770
+                  },
+                  {
+                    "name": "Pineapple Juice",
+                    "note": "Tax included; ordinary branch-menu price.",
+                    "price": 660
+                  },
+                  {
+                    "name": "Coca-Cola",
+                    "note": "Tax included; ordinary branch-menu price.",
+                    "price": 550
+                  },
+                  {
+                    "name": "Jasmine Tea",
+                    "note": "Tax included; ordinary branch-menu price.",
+                    "price": 550
+                  },
+                  {
+                    "name": "Oolong Tea",
+                    "note": "Tax included; ordinary branch-menu price.",
+                    "price": 550
+                  },
+                  {
+                    "name": "333 Bottle",
+                    "note": "Tax included; ordinary branch-menu price.",
+                    "price": 990
+                  },
+                  {
+                    "name": "Hanoi Bottle",
+                    "note": "Tax included; ordinary branch-menu price.",
+                    "price": 990
+                  },
+                  {
+                    "name": "Saigon Bottle",
+                    "note": "Tax included; ordinary branch-menu price.",
+                    "price": 990
+                  },
+                  {
+                    "name": "Singha Bottle",
+                    "note": "Tax included; ordinary branch-menu price.",
+                    "price": 990
+                  },
+                  {
+                    "name": "Chang Bottle",
+                    "note": "Tax included; ordinary branch-menu price.",
+                    "price": 990
+                  },
+                  {
+                    "name": "Tiger Bottle",
+                    "note": "Tax included; ordinary branch-menu price.",
+                    "price": 990
+                  },
+                  {
+                    "name": "Highball",
+                    "note": "Tax included; ordinary branch-menu price.",
+                    "price": 770
+                  },
+                  {
+                    "name": "Fresh Lemon Sour",
+                    "note": "Tax included; ordinary branch-menu price.",
+                    "price": 770
+                  },
+                  {
+                    "name": "Guava Sour",
+                    "note": "Tax included; ordinary branch-menu price.",
+                    "price": 825
+                  },
+                  {
+                    "name": "Mango Sour",
+                    "note": "Tax included; ordinary branch-menu price.",
+                    "price": 825
+                  },
+                  {
+                    "name": "Lime Sour",
+                    "note": "Tax included; ordinary branch-menu price.",
+                    "price": 770
+                  },
+                  {
+                    "name": "Passion Fruit Sour",
+                    "note": "Tax included; ordinary branch-menu price.",
+                    "price": 825
+                  },
+                  {
+                    "name": "Ginger Highball",
+                    "note": "Tax included; ordinary branch-menu price.",
+                    "price": 770
+                  },
+                  {
+                    "name": "Lemongrass Highball",
+                    "note": "Tax included; ordinary branch-menu price.",
+                    "price": 770
+                  },
+                  {
+                    "name": "Floral Mojito",
+                    "note": "Tax included; ordinary branch-menu price.",
+                    "price": 880
+                  },
+                  {
+                    "name": "Jasmine Highball",
+                    "note": "Tax included; ordinary branch-menu price.",
+                    "price": 715
+                  },
+                  {
+                    "name": "Monshamu (Thai Shochu)",
+                    "note": "Tax included; ordinary branch-menu price.",
+                    "price": 715
+                  },
+                  {
+                    "name": "Paichuu Tonic",
+                    "note": "Tax included; ordinary branch-menu price.",
+                    "price": 825
+                  },
+                  {
+                    "name": "Monshamu Coke",
+                    "note": "Tax included; ordinary branch-menu price.",
+                    "price": 770
+                  },
+                  {
+                    "name": "Mekong Pineapple",
+                    "note": "Tax included; ordinary branch-menu price.",
+                    "price": 825
+                  },
+                  {
+                    "name": "Mekong Tropical",
+                    "note": "Tax included; ordinary branch-menu price.",
+                    "price": 825
+                  },
+                  {
+                    "name": "Ruamoi Passion",
+                    "note": "Tax included; ordinary branch-menu price.",
+                    "price": 880
+                  },
+                  {
+                    "name": "Ruamoi Plum Liqueur",
+                    "note": "Tax included; ordinary branch-menu price.",
+                    "price": 825
+                  },
+                  {
+                    "name": "2-layer Vietnamese Tea Highball",
+                    "note": "Tax included; ordinary branch-menu price.",
+                    "price": 880
+                  }
+                ],
+                "note": "Exact-branch managed menu, tax included. Daily selections and supply may change."
+              },
+              {
+                "label": "HoaHoa — flower hotpot dinner course",
+                "url": "https://prtimes.jp/main/html/rd/p/000000008.000189226.html",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "花鍋ディナーコース",
+                    "price": 5280,
+                    "note": "Tax included starting price. Exact course, soup and add-ons should be selected with the branch; no whole photographed banquet promised at this starting tariff."
+                  }
+                ],
+                "note": "Exact-branch October9operator release. Ordinary dinner course, no invented limited offer or sibling Hiyoshi menu."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://mimimi-jiyugaoka.com/#floor2",
+            "name": "HoaHoa — mimimi Jiyugaoka",
+            "checkedAt": "2026-10-20",
+            "websiteUrl": "https://mimimi-jiyugaoka.com/#floor2",
+            "phone": "03-5726-9125",
+            "openingHours": [
+              {
+                "days": "Monday,Wednesday–Sunday lunch",
+                "hours": "11:00–15:00; last order14:00"
+              },
+              {
+                "days": "Monday,Wednesday–Sunday dinner",
+                "hours": "17:00–22:30; last order21:00"
+              },
+              {
+                "days": "Closed",
+                "hours": "Tuesday"
+              }
+            ],
+            "detailsSourceUrl": "https://mimimi-jiyugaoka.com/#floor2",
+            "additionalSources": [
+              {
+                "label": "Exact operator actual-opening release",
+                "url": "https://prtimes.jp/main/html/rd/p/000000008.000189226.html"
+              },
+              {
+                "label": "Official restaurant directory",
+                "url": "https://mimimi-jiyugaoka.com/"
+              },
+              {
+                "label": "Opening plan, four branches identified",
+                "url": "https://prtimes.jp/main/html/rd/p/000000005.000189226.html"
+              },
+              {
+                "label": "On-site press preview",
+                "url": "https://www.ryutsuu.biz/report/s100673.html"
+              },
+              {
+                "label": "Current exact-branch hours, prices and conditions",
+                "url": "https://tabelog.com/en/tokyo/A1317/A131703/13327296/"
+              }
+            ],
+            "hoursNote": "Current branch-managed hours supersede older operator23:00closing and14:30/22:00last orders.26seats, sofa seating, non-smoking, no dedicated parking. Tabelog reservations add¥110lunch/¥220dinner per person; direct official links do not. Different HoaHoa restaurant at Hiyoshi is unrelated: its PDF menus and promotions are not borrowed. No current dated discount verified.",
+            "reservationUrl": "https://tabelog.com/en/tokyo/A1317/A131703/13327296/"
+          },
+          "tile": {
+            "regionSlug": "tokyo",
+            "kind": "opening",
+            "slug": "japan105-hoa",
+            "name": "HoaHoa — mimimi Jiyugaoka",
+            "neighborhood": "Jiyugaoka / Midorigaoka",
+            "cuisine": "Asian / Pho / Hotpot",
+            "description": "A26-seat Southeast Asian dining room with ten pho lunch choices, fresh spring rolls and flower-styled dinner hotpot.",
+            "address": "2F La Cour Jiyugaoka,2-25-7 Midorigaoka,Meguro-ku,Tokyo",
+            "websiteUrl": "https://mimimi-jiyugaoka.com/#floor2",
+            "checkedAt": "2026-10-20",
+            "recognition": "Operator-confirmed new branch and current exact-branch menus",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-20/batch105-hoa-0-71aad69ba3bce836.webp",
+            "imageCredit": "Okada Real Estate / mimimi JIYUGAOKA",
+            "imageSourceUrl": "https://prtimes.jp/main/html/rd/p/000000008.000189226.html",
+            "imageNote": "Operator launch illustration of the HoaHoa dining room.",
+            "openingConfirmed": true,
+            "day": "2026-10-09"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "originalUrl": "https://prcdn.freetls.fastly.net/release_image/189226/8/189226-8-4023ce0ce8b1d3c58a3f4b55d3bfd29c-3000x2002.jpg?width=1950&height=1350&quality=85%2C65&format=jpeg&auto=webp&fit=bounds&bg-color=fff",
+          "sourcePage": "https://prtimes.jp/main/html/rd/p/000000008.000189226.html",
+          "note": "Operator launch illustration of the HoaHoa dining room.",
+          "credit": "Okada Real Estate / mimimi JIYUGAOKA",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-20/batch105-hoa-0-71aad69ba3bce836.webp",
+          "sha256": "71aad69ba3bce836c6ec986c18138fec664844780ecd8b9809f1e9b38313dbdc",
+          "width": 1600,
+          "height": 1067
+        },
+        {
+          "originalUrl": "https://prcdn.freetls.fastly.net/release_image/189226/8/189226-8-b444dec6fe4746a89b1bf2a234ea832e-401x268.jpg?width=1950&height=1350&quality=85&format=jpeg&auto=webp&fit=bounds&bg-color=fff",
+          "sourcePage": "https://prtimes.jp/main/html/rd/p/000000008.000189226.html",
+          "note": "Operator launch illustration of shrimp-and-avocado fresh spring rolls.",
+          "credit": "Okada Real Estate / mimimi JIYUGAOKA",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-20/batch105-hoa-1-09ada77f6123a07c.webp",
+          "sha256": "09ada77f6123a07c7aab9538f1dc47f4d4f9f14bf3499fa71ffbcf12f03900cc",
+          "width": 401,
+          "height": 268
+        },
+        {
+          "originalUrl": "https://prcdn.freetls.fastly.net/release_image/189226/8/189226-8-6bf83344287090fd919dabc0307ade50-3543x2364.jpg?width=1950&height=1350&quality=85%2C65&format=jpeg&auto=webp&fit=bounds&bg-color=fff",
+          "sourcePage": "https://prtimes.jp/main/html/rd/p/000000008.000189226.html",
+          "note": "Operator launch illustration of the flower hotpot; course and choices depend on booking.",
+          "credit": "Okada Real Estate / mimimi JIYUGAOKA",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-20/batch105-hoa-2-6d1794a4b26d7c12.webp",
+          "sha256": "6d1794a4b26d7c1293de8045282dc8253c57ffe21926d631cecc55033994d729",
+          "width": 1600,
+          "height": 1067
+        },
+        {
+          "originalUrl": "https://prcdn.freetls.fastly.net/release_image/189226/8/189226-8-aaadcb1819e42b46766e3075362d5958-402x268.jpg?width=1950&height=1350&quality=85&format=jpeg&auto=webp&fit=bounds&bg-color=fff",
+          "sourcePage": "https://prtimes.jp/main/html/rd/p/000000008.000189226.html",
+          "note": "Operator launch illustration of pho; exact current topping choices vary.",
+          "credit": "Okada Real Estate / mimimi JIYUGAOKA",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-20/batch105-hoa-3-6bea181a39fac29b.webp",
+          "sha256": "6bea181a39fac29bedfd6faf8300a3f42dfb6a2328fb901a105734b814cedd17",
+          "width": 402,
+          "height": 268
+        }
+      ]
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Yohaku — mimimi Jiyugaoka Opens 2026-10-09",
+        "description": "A12-seat Edomae sushi counter from the Hakkoku and Sushidan team, offering three omakase tiers and a changing selection of small dishes.",
+        "sourceUrl": "https://mimimi-jiyugaoka.com/#floor3",
+        "address": "A2F La Cour Jiyugaoka,2-25-7 Midorigaoka,Meguro-ku,Tokyo",
+        "productName": "Yohaku — mimimi Jiyugaoka",
+        "utcStartDateTime": "2026-10-09T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "Operator September10announcement specifically identifies this as one of four new restaurant brands opening October9,2026. The October9actual-opening release, official September28notice and branch-managed listing corroborate October9. The gallery’s September19opening and former Sweets Forest’s2003opening are separate events.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Tokyo",
+          "Japan",
+          "Jiyugaoka / Midorigaoka",
+          "Sushi"
+        ],
+        "longFormSummary": "<p>A12-seat Edomae sushi counter from the Hakkoku and Sushidan team, offering three omakase tiers and a changing selection of small dishes.<cite data-ref=\"https://mimimi-jiyugaoka.com/#floor3\"></cite></p><p>Operator September10announcement specifically identifies this as one of four new restaurant brands opening October9,2026. The October9actual-opening release, official September28notice and branch-managed listing corroborate October9. The gallery’s September19opening and former Sweets Forest’s2003opening are separate events.</p>",
+        "references": [
+          {
+            "url": "https://mimimi-jiyugaoka.com/#floor3",
+            "title": "Yohaku — mimimi Jiyugaoka — branch website",
+            "confidence": 90,
+            "reasoning": "Yohaku — mimimi Jiyugaoka — branch website"
+          },
+          {
+            "url": "https://prtimes.jp/main/html/rd/p/000000008.000189226.html",
+            "title": "Exact operator actual-opening release",
+            "confidence": 90,
+            "reasoning": "Exact operator actual-opening release"
+          },
+          {
+            "url": "https://mimimi-jiyugaoka.com/",
+            "title": "Official restaurant directory",
+            "confidence": 90,
+            "reasoning": "Official restaurant directory"
+          },
+          {
+            "url": "https://prtimes.jp/main/html/rd/p/000000005.000189226.html",
+            "title": "Opening plan, four branches identified",
+            "confidence": 90,
+            "reasoning": "Opening plan, four branches identified"
+          },
+          {
+            "url": "https://www.ryutsuu.biz/report/s100673.html",
+            "title": "On-site press preview",
+            "confidence": 90,
+            "reasoning": "On-site press preview"
+          },
+          {
+            "url": "https://tabelog.com/en/tokyo/A1317/A131703/13326634/",
+            "title": "Current branch information and courses",
+            "confidence": 90,
+            "reasoning": "Current branch information and courses"
+          },
+          {
+            "url": "https://tabelog.com/en/tokyo/A1317/A131703/13326634/party/300365330/",
+            "title": "Exact branch course 1",
+            "confidence": 90,
+            "reasoning": "Exact branch course 1"
+          },
+          {
+            "url": "https://tabelog.com/en/tokyo/A1317/A131703/13326634/party/300365326/",
+            "title": "Exact branch course 2",
+            "confidence": 90,
+            "reasoning": "Exact branch course 2"
+          },
+          {
+            "url": "https://tabelog.com/en/tokyo/A1317/A131703/13326634/party/300365327/",
+            "title": "Exact branch course 3",
+            "confidence": 90,
+            "reasoning": "Exact branch course 3"
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://mimimi-jiyugaoka.com/#floor3",
+          "menu": {
+            "pinSourceUrl": "https://mimimi-jiyugaoka.com/#floor3",
+            "name": "Yohaku — mimimi Jiyugaoka",
+            "checkedAt": "2026-10-20",
+            "menus": [
+              {
+                "label": "Yohaku — three omakase menus",
+                "url": "https://tabelog.com/en/tokyo/A1317/A131703/13326634/party/",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "白おまかせ",
+                    "price": 5500,
+                    "note": "Tax included per person;1–6guests. Available time; 12:00 PM - 3:00 PM　Sun, Fri, Sat, Public Holiday; Time limit for restaurant stay; 1 hour 30 minutes　Sun, Fri, Sat, Public Holiday. Dishes change daily; no fixed fish roster promised."
+                  },
+                  {
+                    "name": "黒おまかせ",
+                    "price": 7700,
+                    "note": "Tax included per person;1–6guests. Available time; 12:00 PM - 3:00 PM　Sun, Fri, Sat, Public Holiday; Time limit for restaurant stay; 1 hour 30 minutes　Sun, Fri, Sat, Public Holiday. Dishes change daily; no fixed fish roster promised."
+                  },
+                  {
+                    "name": "おまかせコース",
+                    "price": 16500,
+                    "note": "Tax included per person;1–6guests. Available time; 6:00 PM - 10:30 PM　Sun, Mon, Tue, Fri; 6:00 PM - 10:00 PM　Thu, Sat, Public Holiday; Time limit for restaurant stay; 2 hours　Sun, Mon, Tue, Thu, Fri, Sat, Public Holiday. Dishes change daily; no fixed fish roster promised."
+                  }
+                ],
+                "note": "Tax included per person; White and Black are lunch courses, full omakase is dinner. Check each live plan for bookable times."
+              },
+              {
+                "label": "Yohaku — changing cuisine and drinks",
+                "url": "https://tabelog.com/en/tokyo/A1317/A131703/13326634/",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "日替わり江戸前鮨と一品料理",
+                    "priceLabel": "Price not published",
+                    "note": "Actual daily omakase components vary. No stable individual fish roster published."
+                  },
+                  {
+                    "name": "日本酒",
+                    "priceLabel": "Price not published",
+                    "note": "Branch confirms sake; current labels and pour prices not published."
+                  },
+                  {
+                    "name": "焼酎",
+                    "priceLabel": "Price not published",
+                    "note": "Branch confirms shochu; label and price not published."
+                  },
+                  {
+                    "name": "ワイン",
+                    "priceLabel": "Price not published",
+                    "note": "Branch confirms wine; current label and price not published."
+                  }
+                ],
+                "note": "Operator Instagram, facility releases, branch food/drink lists and all three booking plans checked. Structured à la carte and drink prices are absent; sample menu component photos and reviewer visits are not treated as guaranteed current dishes."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://mimimi-jiyugaoka.com/#floor3",
+            "name": "Yohaku — mimimi Jiyugaoka",
+            "checkedAt": "2026-10-20",
+            "websiteUrl": "https://mimimi-jiyugaoka.com/#floor3",
+            "phone": "03-5726-8789",
+            "openingHours": [
+              {
+                "days": "Lunch Friday–Sunday",
+                "hours": "12:00–15:00"
+              },
+              {
+                "days": "Dinner Monday–Tuesday,Thursday–Sunday",
+                "hours": "18:00–22:30"
+              },
+              {
+                "days": "Closed",
+                "hours": "Wednesday"
+              }
+            ],
+            "detailsSourceUrl": "https://mimimi-jiyugaoka.com/#floor3",
+            "additionalSources": [
+              {
+                "label": "Exact operator actual-opening release",
+                "url": "https://prtimes.jp/main/html/rd/p/000000008.000189226.html"
+              },
+              {
+                "label": "Official restaurant directory",
+                "url": "https://mimimi-jiyugaoka.com/"
+              },
+              {
+                "label": "Opening plan, four branches identified",
+                "url": "https://prtimes.jp/main/html/rd/p/000000005.000189226.html"
+              },
+              {
+                "label": "On-site press preview",
+                "url": "https://www.ryutsuu.biz/report/s100673.html"
+              },
+              {
+                "label": "Current branch information and courses",
+                "url": "https://tabelog.com/en/tokyo/A1317/A131703/13326634/"
+              },
+              {
+                "label": "Exact branch course 1",
+                "url": "https://tabelog.com/en/tokyo/A1317/A131703/13326634/party/300365330/"
+              },
+              {
+                "label": "Exact branch course 2",
+                "url": "https://tabelog.com/en/tokyo/A1317/A131703/13326634/party/300365326/"
+              },
+              {
+                "label": "Exact branch course 3",
+                "url": "https://tabelog.com/en/tokyo/A1317/A131703/13326634/party/300365327/"
+              }
+            ],
+            "hoursNote": "Reservations are course-only; advise allergies in advance and check cancellation terms. Children can book when able to eat one complete course. Avoid strong perfume. All12seats are counter seats, non-smoking, no private room or parking. Wine/sake/shochu corkage¥3,300per bottle. Current branch listing says Friday–Sunday lunch; operator release and course templates also mention public holidays, so confirm a holiday lunch separately. Cash/cards accepted; branch-specific payment rules differ from facility-wide QR/e-money list.",
+            "reservationUrl": "https://tabelog.com/en/tokyo/A1317/A131703/13326634/"
+          },
+          "tile": {
+            "regionSlug": "tokyo",
+            "kind": "opening",
+            "slug": "japan105-yohaku",
+            "name": "Yohaku — mimimi Jiyugaoka",
+            "neighborhood": "Jiyugaoka / Midorigaoka",
+            "cuisine": "Sushi",
+            "description": "A12-seat Edomae sushi counter from the Hakkoku and Sushidan team, offering three omakase tiers and a changing selection of small dishes.",
+            "address": "A2F La Cour Jiyugaoka,2-25-7 Midorigaoka,Meguro-ku,Tokyo",
+            "websiteUrl": "https://mimimi-jiyugaoka.com/#floor3",
+            "checkedAt": "2026-10-20",
+            "recognition": "New brand opening confirmed; no sister restaurant award transferred",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-20/batch105-yohaku-0-cb4ad09748a4dc16.webp",
+            "imageCredit": "Okada Real Estate / mimimi JIYUGAOKA",
+            "imageSourceUrl": "https://mimimi-jiyugaoka.com/",
+            "imageNote": "Official promotional image of the Yohaku counter.",
+            "openingConfirmed": true,
+            "day": "2026-10-09"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "originalUrl": "https://mimimi-jiyugaoka.com/wp/wp-content/themes/mimimi/images/floor/yohaku/img_visual.webp?v-1",
+          "sourcePage": "https://mimimi-jiyugaoka.com/",
+          "note": "Official promotional image of the Yohaku counter.",
+          "credit": "Okada Real Estate / mimimi JIYUGAOKA",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-20/batch105-yohaku-0-cb4ad09748a4dc16.webp",
+          "sha256": "cb4ad09748a4dc16887a969709752af7bd09da0b936b081ab03201fa09a7fb4e",
+          "width": 1600,
+          "height": 1045
+        },
+        {
+          "originalUrl": "https://prcdn.freetls.fastly.net/release_image/189226/8/189226-8-0287807fb386e368af1262a69fe6053d-477x268.jpg?width=1950&height=1350&quality=85&format=jpeg&auto=webp&fit=bounds&bg-color=fff",
+          "sourcePage": "https://prtimes.jp/main/html/rd/p/000000008.000189226.html",
+          "note": "Operator launch illustration of Edomae sushi; omakase selection changes daily.",
+          "credit": "Okada Real Estate / mimimi JIYUGAOKA",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-20/batch105-yohaku-1-b9da0c5a871b0118.webp",
+          "sha256": "b9da0c5a871b0118d3d4422f246aa5aed78008ea035a48500149e6c48e2148cc",
+          "width": 477,
+          "height": 268
+        },
+        {
+          "originalUrl": "https://prcdn.freetls.fastly.net/release_image/189226/8/189226-8-b1cbc4694e5c1ea1c34bdf1d17748a2b-3000x2002.jpg?width=1950&height=1350&quality=85%2C65&format=jpeg&auto=webp&fit=bounds&bg-color=fff",
+          "sourcePage": "https://prtimes.jp/main/html/rd/p/000000008.000189226.html",
+          "note": "Operator launch illustration of sushi preparation at Yohaku.",
+          "credit": "Okada Real Estate / mimimi JIYUGAOKA",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-20/batch105-yohaku-2-22002e6a2c29cd0f.webp",
+          "sha256": "22002e6a2c29cd0f6a66117ed2a2b82d5f15ad9a017c529e5f6407ec72d186cc",
+          "width": 1600,
+          "height": 1067
+        },
+        {
+          "originalUrl": "https://prcdn.freetls.fastly.net/release_image/189226/8/189226-8-aa23589478a70420adcec327f5d730dd-3000x2002.jpg?width=1950&height=1350&quality=85%2C65&format=jpeg&auto=webp&fit=bounds&bg-color=fff",
+          "sourcePage": "https://prtimes.jp/main/html/rd/p/000000008.000189226.html",
+          "note": "Operator launch illustration of sushi and sake; drink price not established by photograph.",
+          "credit": "Okada Real Estate / mimimi JIYUGAOKA",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-20/batch105-yohaku-3-c0b5bb5040be9fbf.webp",
+          "sha256": "c0b5bb5040be9fbf5a631412ed886cf9a33127ebf798e15df60e88a1b7c0c19f",
+          "width": 1600,
+          "height": 1067
+        }
+      ]
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "LALA PASTA — mimimi Jiyugaoka Opens 2026-10-09",
+        "description": "A24-seat fresh-pasta kitchen using Hokkaido wheat, with wagyu and venison sauces, bistecca, Italian wines and artwork-inspired cocktails.",
+        "sourceUrl": "https://mimimi-jiyugaoka.com/#floor4",
+        "address": "2F La Cour Jiyugaoka,2-25-7 Midorigaoka,Meguro-ku,Tokyo",
+        "productName": "LALA PASTA — mimimi Jiyugaoka",
+        "utcStartDateTime": "2026-10-09T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "Operator September10announcement specifically identifies this as one of four new restaurant brands opening October9,2026. The October9actual-opening release, official September28notice and branch-managed listing corroborate October9. The gallery’s September19opening and former Sweets Forest’s2003opening are separate events.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Tokyo",
+          "Japan",
+          "Jiyugaoka / Midorigaoka",
+          "Italian / Pasta"
+        ],
+        "longFormSummary": "<p>A24-seat fresh-pasta kitchen using Hokkaido wheat, with wagyu and venison sauces, bistecca, Italian wines and artwork-inspired cocktails.<cite data-ref=\"https://mimimi-jiyugaoka.com/#floor4\"></cite></p><p>Operator September10announcement specifically identifies this as one of four new restaurant brands opening October9,2026. The October9actual-opening release, official September28notice and branch-managed listing corroborate October9. The gallery’s September19opening and former Sweets Forest’s2003opening are separate events.</p>",
+        "references": [
+          {
+            "url": "https://mimimi-jiyugaoka.com/#floor4",
+            "title": "LALA PASTA — mimimi Jiyugaoka — branch website",
+            "confidence": 90,
+            "reasoning": "LALA PASTA — mimimi Jiyugaoka — branch website"
+          },
+          {
+            "url": "https://prtimes.jp/main/html/rd/p/000000008.000189226.html",
+            "title": "Exact operator actual-opening release",
+            "confidence": 90,
+            "reasoning": "Exact operator actual-opening release"
+          },
+          {
+            "url": "https://mimimi-jiyugaoka.com/",
+            "title": "Official restaurant directory",
+            "confidence": 90,
+            "reasoning": "Official restaurant directory"
+          },
+          {
+            "url": "https://prtimes.jp/main/html/rd/p/000000005.000189226.html",
+            "title": "Opening plan, four branches identified",
+            "confidence": 90,
+            "reasoning": "Opening plan, four branches identified"
+          },
+          {
+            "url": "https://www.ryutsuu.biz/report/s100673.html",
+            "title": "On-site press preview",
+            "confidence": 90,
+            "reasoning": "On-site press preview"
+          },
+          {
+            "url": "https://tabelog.com/en/tokyo/A1317/A131703/13327238/",
+            "title": "Current exact-branch food/drink/hours",
+            "confidence": 90,
+            "reasoning": "Current exact-branch food/drink/hours"
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://mimimi-jiyugaoka.com/#floor4",
+          "menu": {
+            "pinSourceUrl": "https://mimimi-jiyugaoka.com/#floor4",
+            "name": "LALA PASTA — mimimi Jiyugaoka",
+            "checkedAt": "2026-10-20",
+            "menus": [
+              {
+                "label": "LALA PASTA — fresh pasta, dishes and desserts",
+                "url": "https://tabelog.com/en/tokyo/A1317/A131703/13327238/dtlmenu/",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "Tokachi Wagyu Bolognese",
+                    "note": "Tax included base pasta price. Choose spaghetti or tagliatelle; operator lists pappardelle/maltagliati +¥200or gnocchi +¥300but upgrade tax treatment is unclear, confirm final amount.",
+                    "price": 2189
+                  },
+                  {
+                    "name": "Ezo Venison with Black Pepper Ragu Sauce",
+                    "note": "Tax included base pasta price. Choose spaghetti or tagliatelle; operator lists pappardelle/maltagliati +¥200or gnocchi +¥300but upgrade tax treatment is unclear, confirm final amount.",
+                    "price": 2420
+                  },
+                  {
+                    "name": "Fresh Tomato and Basil",
+                    "note": "Tax included base pasta price. Choose spaghetti or tagliatelle; operator lists pappardelle/maltagliati +¥200or gnocchi +¥300but upgrade tax treatment is unclear, confirm final amount.",
+                    "price": 1210
+                  },
+                  {
+                    "name": "Pancetta and Onion Amatriciana-style",
+                    "note": "Tax included base pasta price. Choose spaghetti or tagliatelle; operator lists pappardelle/maltagliati +¥200or gnocchi +¥300but upgrade tax treatment is unclear, confirm final amount.",
+                    "price": 1639
+                  },
+                  {
+                    "name": "Vongole Rosso",
+                    "note": "Tax included base pasta price. Choose spaghetti or tagliatelle; operator lists pappardelle/maltagliati +¥200or gnocchi +¥300but upgrade tax treatment is unclear, confirm final amount.",
+                    "price": 1749
+                  },
+                  {
+                    "name": "Furano Pork Sausage",
+                    "note": "Tax included base pasta price. Choose spaghetti or tagliatelle; operator lists pappardelle/maltagliati +¥200or gnocchi +¥300but upgrade tax treatment is unclear, confirm final amount.",
+                    "price": 1859
+                  },
+                  {
+                    "name": "Broccoli and Anchovies",
+                    "note": "Tax included base pasta price. Choose spaghetti or tagliatelle; operator lists pappardelle/maltagliati +¥200or gnocchi +¥300but upgrade tax treatment is unclear, confirm final amount.",
+                    "price": 1749
+                  },
+                  {
+                    "name": "Aglio Olio Peperoncino",
+                    "note": "Tax included base pasta price. Choose spaghetti or tagliatelle; operator lists pappardelle/maltagliati +¥200or gnocchi +¥300but upgrade tax treatment is unclear, confirm final amount.",
+                    "price": 1210
+                  },
+                  {
+                    "name": "Vongole Bianco",
+                    "note": "Tax included base pasta price. Choose spaghetti or tagliatelle; operator lists pappardelle/maltagliati +¥200or gnocchi +¥300but upgrade tax treatment is unclear, confirm final amount.",
+                    "price": 1639
+                  },
+                  {
+                    "name": "Carbonara",
+                    "note": "Tax included base pasta price. Choose spaghetti or tagliatelle; operator lists pappardelle/maltagliati +¥200or gnocchi +¥300but upgrade tax treatment is unclear, confirm final amount.",
+                    "price": 2079
+                  },
+                  {
+                    "name": "Hokkaido Salmon Cream",
+                    "note": "Tax included base pasta price. Choose spaghetti or tagliatelle; operator lists pappardelle/maltagliati +¥200or gnocchi +¥300but upgrade tax treatment is unclear, confirm final amount.",
+                    "price": 2189
+                  },
+                  {
+                    "name": "Gorgonzola",
+                    "note": "Tax included base pasta price. Choose spaghetti or tagliatelle; operator lists pappardelle/maltagliati +¥200or gnocchi +¥300but upgrade tax treatment is unclear, confirm final amount.",
+                    "price": 1859
+                  },
+                  {
+                    "name": "LALA Salad - Choice of Dressings",
+                    "note": "Tax included; ordinary branch-menu price.",
+                    "price": 1650
+                  },
+                  {
+                    "name": "Rich Burrata and Seasonal Fruit Caprese",
+                    "note": "Tax included; ordinary branch-menu price.",
+                    "price": 1749
+                  },
+                  {
+                    "name": "Special Aged Cheese 3-Selection Tasting Plate",
+                    "note": "Tax included; ordinary branch-menu price.",
+                    "price": 1078
+                  },
+                  {
+                    "name": "White Wine Steamed Mussels and Clams",
+                    "note": "Tax included; ordinary branch-menu price.",
+                    "price": 1529
+                  },
+                  {
+                    "name": "Italian Charcuterie, 3 Kinds",
+                    "note": "Tax included; ordinary branch-menu price.",
+                    "price": 1210
+                  },
+                  {
+                    "name": "Nuts",
+                    "note": "Tax included; ordinary branch-menu price.",
+                    "price": 539
+                  },
+                  {
+                    "name": "French fries with truffle salt and Parmigiano",
+                    "note": "Tax included; ordinary branch-menu price.",
+                    "price": 979
+                  },
+                  {
+                    "name": "Horse Meat Carpaccio",
+                    "note": "Tax included; ordinary branch-menu price.",
+                    "price": 1969
+                  },
+                  {
+                    "name": "Anchovy Olives",
+                    "note": "Tax included; ordinary branch-menu price.",
+                    "price": 649
+                  },
+                  {
+                    "name": "Baguette",
+                    "note": "Tax included; ordinary branch-menu price.",
+                    "price": 319
+                  },
+                  {
+                    "name": "Specialty! Bistecca",
+                    "note": "Tax included;500g as published.",
+                    "price": 8030
+                  },
+                  {
+                    "name": "Roasted Ezo Venison",
+                    "note": "Tax included; ordinary branch-menu price.",
+                    "price": 3190
+                  },
+                  {
+                    "name": "Grilled Chicken Thigh - Pizza-Style",
+                    "note": "Tax included; ordinary branch-menu price.",
+                    "price": 2090
+                  },
+                  {
+                    "name": "Grilled Furano Pork Salsiccia",
+                    "note": "Tax included; ordinary branch-menu price.",
+                    "price": 803
+                  },
+                  {
+                    "name": "Silky Smooth LALA Tiramisu",
+                    "note": "Tax included; ordinary branch-menu price.",
+                    "price": 869
+                  },
+                  {
+                    "name": "Hokkaido Milk Ice Cream",
+                    "note": "Tax included; ordinary branch-menu price.",
+                    "price": 638
+                  },
+                  {
+                    "name": "Affogato with Hokkaido Milk Ice Cream",
+                    "note": "Tax included; ordinary branch-menu price.",
+                    "price": 748
+                  }
+                ],
+                "note": "Tax-inclusive exact-branch prices; bistecca500g. Spaghetti/tagliatelle base choices; wider pasta/gnocchi upgrade amounts require tax confirmation."
+              },
+              {
+                "label": "LALA PASTA — drinks and wines",
+                "url": "https://tabelog.com/en/tokyo/A1317/A131703/13327238/dtlmenu/drink/",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "Blend Coffee",
+                    "note": "Tax included; ordinary branch-menu price.",
+                    "price": 649
+                  },
+                  {
+                    "name": "Americano",
+                    "note": "Tax included; ordinary branch-menu price.",
+                    "price": 649
+                  },
+                  {
+                    "name": "Cafe Latte",
+                    "note": "Tax included; ordinary branch-menu price.",
+                    "price": 759
+                  },
+                  {
+                    "name": "Espresso",
+                    "note": "Tax included; ordinary branch-menu price.",
+                    "price": 649
+                  },
+                  {
+                    "name": "Iced Tea",
+                    "note": "Tax included; ordinary branch-menu price.",
+                    "price": 649
+                  },
+                  {
+                    "name": "Black Tea",
+                    "note": "Tax included; ordinary branch-menu price.",
+                    "price": 649
+                  },
+                  {
+                    "name": "Coke",
+                    "note": "Tax included; ordinary branch-menu price.",
+                    "price": 649
+                  },
+                  {
+                    "name": "Ginger Ale",
+                    "note": "Tax included; ordinary branch-menu price.",
+                    "price": 649
+                  },
+                  {
+                    "name": "Carbonated Water",
+                    "note": "Tax included; ordinary branch-menu price.",
+                    "price": 649
+                  },
+                  {
+                    "name": "Orange Juice",
+                    "note": "Tax included; ordinary branch-menu price.",
+                    "price": 649
+                  },
+                  {
+                    "name": "Oolong Tea",
+                    "note": "Tax included; ordinary branch-menu price.",
+                    "price": 649
+                  },
+                  {
+                    "name": "Grapefruit Juice",
+                    "note": "Tax included; ordinary branch-menu price.",
+                    "price": 649
+                  },
+                  {
+                    "name": "Heineken",
+                    "note": "Tax included; ordinary branch-menu price.",
+                    "price": 979
+                  },
+                  {
+                    "name": "Moretti Beer",
+                    "note": "Tax included; ordinary branch-menu price.",
+                    "price": 1210
+                  },
+                  {
+                    "name": "Whisky",
+                    "note": "Tax included; ordinary branch-menu price.",
+                    "price": 869
+                  },
+                  {
+                    "name": "Orange Sangria",
+                    "note": "Tax included; ordinary branch-menu price.",
+                    "price": 979
+                  },
+                  {
+                    "name": "Limoncello Soda",
+                    "note": "Tax included; ordinary branch-menu price.",
+                    "price": 979
+                  },
+                  {
+                    "name": "Amaretto Iced Tea",
+                    "note": "Tax included; ordinary branch-menu price.",
+                    "price": 979
+                  },
+                  {
+                    "name": "LALA Tiramisu Cocktail",
+                    "note": "Tax included; ordinary branch-menu price.",
+                    "price": 1089
+                  },
+                  {
+                    "name": "Sparkling Wine (Glass)",
+                    "note": "Tax included; ordinary branch-menu price.",
+                    "price": 979
+                  },
+                  {
+                    "name": "White Glass — ¥979 tier",
+                    "note": "Tax included; published title embeds pre-tax price, numeric tariff here includes tax. Ask staff for the current label.",
+                    "price": 979
+                  },
+                  {
+                    "name": "White Glass — ¥1199 tier",
+                    "note": "Tax included; published title embeds pre-tax price, numeric tariff here includes tax. Ask staff for the current label.",
+                    "price": 1199
+                  },
+                  {
+                    "name": "White Wine Glass — ¥1419 tier",
+                    "note": "Tax included; published title embeds pre-tax price, numeric tariff here includes tax. Ask staff for the current label.",
+                    "price": 1419
+                  },
+                  {
+                    "name": "Glass of Red Wine — ¥979 tier",
+                    "note": "Tax included; published title embeds pre-tax price, numeric tariff here includes tax. Ask staff for the current label.",
+                    "price": 979
+                  },
+                  {
+                    "name": "Glass of Red Wine — ¥1199 tier",
+                    "note": "Tax included; published title embeds pre-tax price, numeric tariff here includes tax. Ask staff for the current label.",
+                    "price": 1199
+                  },
+                  {
+                    "name": "Glass of Red Wine — ¥1419 tier",
+                    "note": "Tax included; published title embeds pre-tax price, numeric tariff here includes tax. Ask staff for the current label.",
+                    "price": 1419
+                  },
+                  {
+                    "name": "Louis Roederer Cristal",
+                    "note": "Tax included; ordinary branch-menu price.",
+                    "price": 121000
+                  },
+                  {
+                    "name": "Krug",
+                    "note": "Tax included; ordinary branch-menu price.",
+                    "price": 84700
+                  },
+                  {
+                    "name": "Dom Pérignon",
+                    "note": "Tax included; ordinary branch-menu price.",
+                    "price": 72600
+                  },
+                  {
+                    "name": "Perrier-Jouët Blason Rosé",
+                    "note": "Tax included; ordinary branch-menu price.",
+                    "price": 36300
+                  },
+                  {
+                    "name": "Moët & Chandon",
+                    "note": "Tax included; ordinary branch-menu price.",
+                    "price": 19800
+                  },
+                  {
+                    "name": "Franciacorta Alma Assemblage Bellavista",
+                    "note": "Tax included; ordinary branch-menu price.",
+                    "price": 16280
+                  },
+                  {
+                    "name": "Lambrusco Assolo Reggiano (Red)",
+                    "note": "Tax included; ordinary branch-menu price.",
+                    "price": 6490
+                  },
+                  {
+                    "name": "Vermentino di Gallura Sella & Mosca",
+                    "note": "Tax included; ordinary branch-menu price.",
+                    "price": 8470
+                  },
+                  {
+                    "name": "Vernaccia di San Gimignano Torre Terza",
+                    "note": "Tax included; ordinary branch-menu price.",
+                    "price": 7260
+                  },
+                  {
+                    "name": "Est Est Est di Montefiascone",
+                    "note": "Tax included; ordinary branch-menu price.",
+                    "price": 6050
+                  },
+                  {
+                    "name": "Ornellaia",
+                    "note": "Tax included; ordinary branch-menu price.",
+                    "price": 108900
+                  },
+                  {
+                    "name": "Sassicaia",
+                    "note": "Tax included; ordinary branch-menu price.",
+                    "price": 84700
+                  },
+                  {
+                    "name": "Luce",
+                    "note": "Tax included; ordinary branch-menu price.",
+                    "price": 53900
+                  },
+                  {
+                    "name": "Chianti Classico Gran Selezione Il Poggio",
+                    "note": "Tax included; ordinary branch-menu price.",
+                    "price": 48400
+                  },
+                  {
+                    "name": "50'50 Cinquanta e Cinquanta",
+                    "note": "Tax included; ordinary branch-menu price.",
+                    "price": 42900
+                  },
+                  {
+                    "name": "Grattamacco Bolgheri Rosso",
+                    "note": "Tax included; ordinary branch-menu price.",
+                    "price": 38500
+                  },
+                  {
+                    "name": "Barbaresco Prunotto",
+                    "note": "Tax included; ordinary branch-menu price.",
+                    "price": 21890
+                  },
+                  {
+                    "name": "Brunello di Montalcino Fattoria La Lecciaia",
+                    "note": "Tax included; ordinary branch-menu price.",
+                    "price": 18590
+                  },
+                  {
+                    "name": "Barolo Riserva Terre del Barolo",
+                    "note": "Tax included; ordinary branch-menu price.",
+                    "price": 14190
+                  },
+                  {
+                    "name": "Barbaresco Fontanafredda",
+                    "note": "Tax included; ordinary branch-menu price.",
+                    "price": 13090
+                  },
+                  {
+                    "name": "La Monella Barbera",
+                    "note": "Tax included; ordinary branch-menu price.",
+                    "price": 9790
+                  },
+                  {
+                    "name": "Chianti Grati",
+                    "note": "Tax included; ordinary branch-menu price.",
+                    "price": 6050
+                  },
+                  {
+                    "name": "DESIGN COCKTAIL (Order sheet provided after ordering)",
+                    "note": "Tax included; six design choices; alcoholic and non-alcoholic options. Preparation takes time.",
+                    "price": 1650
+                  },
+                  {
+                    "name": "Mimimi Cocktail Bouquet",
+                    "note": "Tax included; launch artwork collaboration cocktail, served from October9while supplies last. End date not published; may take preparation time.",
+                    "price": 2420
+                  }
+                ],
+                "note": "Tax-inclusive numeric prices. Some official English producer names are unclear and are withheld. Wine titles embedding pre-tax numbers are normalized to tax-inclusive tiers. Bouquet cocktail has no confirmed expiry; availability should be checked."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://mimimi-jiyugaoka.com/#floor4",
+            "name": "LALA PASTA — mimimi Jiyugaoka",
+            "checkedAt": "2026-10-20",
+            "websiteUrl": "https://mimimi-jiyugaoka.com/#floor4",
+            "phone": "03-5726-9229",
+            "openingHours": [
+              {
+                "days": "Lunch daily",
+                "hours": "11:00–15:00; last order14:30"
+              },
+              {
+                "days": "Dinner daily",
+                "hours": "17:30–22:30; food last order21:30, drinks22:00"
+              }
+            ],
+            "detailsSourceUrl": "https://mimimi-jiyugaoka.com/#floor4",
+            "additionalSources": [
+              {
+                "label": "Exact operator actual-opening release",
+                "url": "https://prtimes.jp/main/html/rd/p/000000008.000189226.html"
+              },
+              {
+                "label": "Official restaurant directory",
+                "url": "https://mimimi-jiyugaoka.com/"
+              },
+              {
+                "label": "Opening plan, four branches identified",
+                "url": "https://prtimes.jp/main/html/rd/p/000000005.000189226.html"
+              },
+              {
+                "label": "On-site press preview",
+                "url": "https://www.ryutsuu.biz/report/s100673.html"
+              },
+              {
+                "label": "Current exact-branch food/drink/hours",
+                "url": "https://tabelog.com/en/tokyo/A1317/A131703/13327238/"
+              }
+            ],
+            "hoursNote": "Current exact-branch listing supersedes the older launch23:00closing/22:30last order.24seats, non-smoking, no private room or dedicated parking, cards/QUICPay/QRaccepted. Extra pasta-shape charges are printed +¥200/+¥300with ambiguous tax treatment; confirm final upgrade total. The¥2,420bouquet cocktail is offered from opening while supplies last, with no published end date; no expiry is invented.",
+            "reservationUrl": "https://tabelog.com/en/tokyo/A1317/A131703/13327238/"
+          },
+          "tile": {
+            "regionSlug": "tokyo",
+            "kind": "opening",
+            "slug": "japan105-lala",
+            "name": "LALA PASTA — mimimi Jiyugaoka",
+            "neighborhood": "Jiyugaoka / Midorigaoka",
+            "cuisine": "Italian / Pasta",
+            "description": "A24-seat fresh-pasta kitchen using Hokkaido wheat, with wagyu and venison sauces, bistecca, Italian wines and artwork-inspired cocktails.",
+            "address": "2F La Cour Jiyugaoka,2-25-7 Midorigaoka,Meguro-ku,Tokyo",
+            "websiteUrl": "https://mimimi-jiyugaoka.com/#floor4",
+            "checkedAt": "2026-10-20",
+            "recognition": "Exact branch opening verified; chef’s prior workplace recognition not transferred",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-20/batch105-lala-0-3306534281f542ba.webp",
+            "imageCredit": "Okada Real Estate / mimimi JIYUGAOKA",
+            "imageSourceUrl": "https://prtimes.jp/main/html/rd/p/000000008.000189226.html",
+            "imageNote": "Operator launch illustration of the LALA PASTA room.",
+            "openingConfirmed": true,
+            "day": "2026-10-09"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "originalUrl": "https://prcdn.freetls.fastly.net/release_image/189226/8/189226-8-2c23cabd442e83bb271b82471f9e3808-453x268.jpg?width=1950&height=1350&quality=85&format=jpeg&auto=webp&fit=bounds&bg-color=fff",
+          "sourcePage": "https://prtimes.jp/main/html/rd/p/000000008.000189226.html",
+          "note": "Operator launch illustration of the LALA PASTA room.",
+          "credit": "Okada Real Estate / mimimi JIYUGAOKA",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-20/batch105-lala-0-3306534281f542ba.webp",
+          "sha256": "3306534281f542bab92c90a3103b2c9174eaf9450c924d9c8a4142f14aa4860c",
+          "width": 453,
+          "height": 268
+        },
+        {
+          "originalUrl": "https://prcdn.freetls.fastly.net/release_image/189226/8/189226-8-3b65cc8cc4d06436b96149528e14d48d-476x268.jpg?width=1950&height=1350&quality=85&format=jpeg&auto=webp&fit=bounds&bg-color=fff",
+          "sourcePage": "https://prtimes.jp/main/html/rd/p/000000008.000189226.html",
+          "note": "Operator launch illustration of fresh-pasta preparation.",
+          "credit": "Okada Real Estate / mimimi JIYUGAOKA",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-20/batch105-lala-1-8d899dbcd85c987a.webp",
+          "sha256": "8d899dbcd85c987ac1a420d1ac2a4acb39b9fc651829d9063dfd8730d7ca3792",
+          "width": 476,
+          "height": 268
+        },
+        {
+          "originalUrl": "https://prcdn.freetls.fastly.net/release_image/189226/8/189226-8-b2ba2cd8491295ddfd68b936bd4fa53d-459x268.jpg?width=1950&height=1350&quality=85&format=jpeg&auto=webp&fit=bounds&bg-color=fff",
+          "sourcePage": "https://prtimes.jp/main/html/rd/p/000000008.000189226.html",
+          "note": "Operator launch illustration of pasta dishes; no dish identity inferred beyond caption.",
+          "credit": "Okada Real Estate / mimimi JIYUGAOKA",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-20/batch105-lala-2-9584f20eb2c1f60c.webp",
+          "sha256": "9584f20eb2c1f60c21dc7c187b2457afb05988890b5c49821413153ee5cdc21e",
+          "width": 459,
+          "height": 268
+        },
+        {
+          "originalUrl": "https://prcdn.freetls.fastly.net/release_image/189226/8/189226-8-4511c7bfdc252f8a362c211755b28e4a-477x268.jpg?width=1950&height=1350&quality=85&format=jpeg&auto=webp&fit=bounds&bg-color=fff",
+          "sourcePage": "https://prtimes.jp/main/html/rd/p/000000008.000189226.html",
+          "note": "Operator launch illustration labelled bistecca; portions and availability depend on order.",
+          "credit": "Okada Real Estate / mimimi JIYUGAOKA",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-20/batch105-lala-3-2bcac5facff8580e.webp",
+          "sha256": "2bcac5facff8580e954bf5877182eea2429ff557600d12b9d3f5f40ff120c22f",
+          "width": 477,
+          "height": 268
+        }
+      ]
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Tako8 Highball Sakaba — Otesuji Opens 2026-11-25",
+        "description": "A planned takoyaki and highball tavern in Fushimi’s Otesuji shopping street, with named takoyaki variations and a published afternoon drink promotion.",
+        "sourceUrl": "https://www.next-hero-kyoto.com/たこ８店舗情報/",
+        "address": "1F From First Building,749 Higashi-Otecho,Fushimi-ku,Kyoto",
+        "productName": "Tako8 Highball Sakaba — Otesuji",
+        "utcStartDateTime": "2026-11-25T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "Operator homepage explicitly gives Reiwa8(2026)November25Wednesday and opening poster11:30. ALCO’s October10on-site photograph independently corroborates this new branch’s November25opening. Employer’s broader late-November recruitment wording is not used to replace the exact operator date.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Kyoto",
+          "Japan",
+          "Fushimi-Momoyama / Otesuji",
+          "Takoyaki / Izakaya"
+        ],
+        "longFormSummary": "<p>A planned takoyaki and highball tavern in Fushimi’s Otesuji shopping street, with named takoyaki variations and a published afternoon drink promotion.<cite data-ref=\"https://www.next-hero-kyoto.com/たこ８店舗情報/\"></cite></p><p>Operator homepage explicitly gives Reiwa8(2026)November25Wednesday and opening poster11:30. ALCO’s October10on-site photograph independently corroborates this new branch’s November25opening. Employer’s broader late-November recruitment wording is not used to replace the exact operator date.</p>",
+        "references": [
+          {
+            "url": "https://www.next-hero-kyoto.com/たこ８店舗情報/",
+            "title": "Tako8 Highball Sakaba — Otesuji — branch website",
+            "confidence": 90,
+            "reasoning": "Tako8 Highball Sakaba — Otesuji — branch website"
+          },
+          {
+            "url": "https://www.next-hero-kyoto.com/たこ８ハイボール酒場/",
+            "title": "Operator exact opening and promotional menu",
+            "confidence": 90,
+            "reasoning": "Operator exact opening and promotional menu"
+          },
+          {
+            "url": "https://alco-uj.com/kaiten-fushimi20261011/",
+            "title": "October10onsite opening poster",
+            "confidence": 90,
+            "reasoning": "October10onsite opening poster"
+          },
+          {
+            "url": "https://tabelog.com/en/kyoto/A2601/A260601/26045813/",
+            "title": "Exact branch listing",
+            "confidence": 90,
+            "reasoning": "Exact branch listing"
+          },
+          {
+            "url": "https://www.baitoru.com/jobdetail/164194793",
+            "title": "Employer hours lead, inaccessible",
+            "confidence": 90,
+            "reasoning": "Employer hours lead, inaccessible"
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://www.next-hero-kyoto.com/たこ８店舗情報/",
+          "menu": {
+            "pinSourceUrl": "https://www.next-hero-kyoto.com/たこ８店舗情報/",
+            "name": "Tako8 Highball Sakaba — Otesuji",
+            "checkedAt": "2026-10-20",
+            "menus": [
+              {
+                "label": "Tako8 Otesuji — published opening dishes and drinks",
+                "url": "https://www.next-hero-kyoto.com/たこ８ハイボール酒場/",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "名物たこ焼",
+                    "priceLabel": "Price not published",
+                    "note": "Operator names this branch offering; exact current price/tax not verified. Takeout sign and general promotional banner disagree, so conflicting tariffs are withheld."
+                  },
+                  {
+                    "name": "ねぎたこ",
+                    "priceLabel": "Price not published",
+                    "note": "Operator names this branch offering; exact current price/tax not verified. Takeout sign and general promotional banner disagree, so conflicting tariffs are withheld."
+                  },
+                  {
+                    "name": "てりたま",
+                    "priceLabel": "Price not published",
+                    "note": "Operator names this branch offering; exact current price/tax not verified. Takeout sign and general promotional banner disagree, so conflicting tariffs are withheld."
+                  },
+                  {
+                    "name": "明太マヨ",
+                    "priceLabel": "Price not published",
+                    "note": "Operator names this branch offering; exact current price/tax not verified. Takeout sign and general promotional banner disagree, so conflicting tariffs are withheld."
+                  },
+                  {
+                    "name": "とろたく巻き",
+                    "priceLabel": "Price not published",
+                    "note": "Operator names this branch offering; exact current price/tax not verified. Takeout sign and general promotional banner disagree, so conflicting tariffs are withheld."
+                  },
+                  {
+                    "name": "蛸釜めし",
+                    "priceLabel": "Price not published",
+                    "note": "Operator names this branch offering; exact current price/tax not verified. Takeout sign and general promotional banner disagree, so conflicting tariffs are withheld."
+                  },
+                  {
+                    "name": "ハイボール",
+                    "price": 180,
+                    "note": "Posted ordinary price; tax treatment not specified in poster, confirm final bill."
+                  },
+                  {
+                    "name": "無限メガハイボール",
+                    "price": 360,
+                    "note": "Posted ordinary price; tax treatment and glass capacity not specified."
+                  },
+                  {
+                    "name": "オープン5日間 ドリンク1杯全品",
+                    "price": 99,
+                    "note": "Tax included, operator poster November25–29. Confirm daily service hours and overlap with16–18happy-hour¥97non-beer offer; no automatic stacking inferred."
+                  }
+                ],
+                "note": "Exact concept operator page is explicitly linked from the Otesuji opening announcement. Menu/reservation navigation still points to sibling Tebasuke pages; those unrelated menus are excluded. Exact food price/tax and regular hours remain research gaps."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://www.next-hero-kyoto.com/たこ８店舗情報/",
+            "name": "Tako8 Highball Sakaba — Otesuji",
+            "checkedAt": "2026-10-20",
+            "websiteUrl": "https://www.next-hero-kyoto.com/たこ８店舗情報/",
+            "phone": "075-748-8922",
+            "openingHours": [
+              {
+                "days": "Grand opening November25",
+                "hours": "11:30"
+              },
+              {
+                "days": "Published happy hour",
+                "hours": "16:00–18:00"
+              },
+              {
+                "days": "Regular service",
+                "hours": "Complete opening/closing calendar and last orders not verified; confirm with branch"
+              }
+            ],
+            "detailsSourceUrl": "https://www.next-hero-kyoto.com/たこ８店舗情報/",
+            "additionalSources": [
+              {
+                "label": "Operator exact opening and promotional menu",
+                "url": "https://www.next-hero-kyoto.com/たこ８ハイボール酒場/"
+              },
+              {
+                "label": "October10onsite opening poster",
+                "url": "https://alco-uj.com/kaiten-fushimi20261011/"
+              },
+              {
+                "label": "Exact branch listing",
+                "url": "https://tabelog.com/en/kyoto/A2601/A260601/26045813/"
+              },
+              {
+                "label": "Employer hours lead, inaccessible",
+                "url": "https://www.baitoru.com/jobdetail/164194793"
+              }
+            ],
+            "hoursNote": "Operator’s numbered branch information identifies Otesuji even where the promotional poster says honten. No completed-room gallery has been verified. Ordinary highball¥180/mega¥360tax treatment is unspecified. Takeout sign¥580conflicts with generic six-piece banner from¥600; final takeout rates withheld. Five-day all-drink opening sale¥99tax included November25–29is displayed as menu information; full service hours are still needed before publishing an all-service availability schedule. Staff-job snippet11–25hours is inaccessible and conflicts with first-day11:30, so it is not treated as verified regular hours. Exact16–18happy hour is separately scheduled; ask branch which price applies during overlapping promotions.",
+            "reservationUrl": "https://www.next-hero-kyoto.com/たこ８店舗情報/"
+          },
+          "tile": {
+            "regionSlug": "kyoto",
+            "kind": "opening",
+            "slug": "japan105-tako8",
+            "name": "Tako8 Highball Sakaba — Otesuji",
+            "neighborhood": "Fushimi-Momoyama / Otesuji",
+            "cuisine": "Takoyaki / Izakaya",
+            "description": "A planned takoyaki and highball tavern in Fushimi’s Otesuji shopping street, with named takoyaki variations and a published afternoon drink promotion.",
+            "address": "1F From First Building,749 Higashi-Otecho,Fushimi-ku,Kyoto",
+            "websiteUrl": "https://www.next-hero-kyoto.com/たこ８店舗情報/",
+            "checkedAt": "2026-10-20",
+            "recognition": "Exact operator future branch opening and poster verified",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-20/batch105-tako8-0-42aae5c5c9c18852.webp",
+            "imageCredit": "Nexthero / Tako8",
+            "imageSourceUrl": "https://www.next-hero-kyoto.com/%E3%81%9F%E3%81%93%EF%BC%98%E3%83%8F%E3%82%A4%E3%83%9C%E3%83%BC%E3%83%AB%E9%85%92%E5%A0%B4/",
+            "imageNote": "Operator promotional storefront image for the planned Otesuji branch; completed physical appearance not independently verified.",
+            "openingConfirmed": true,
+            "day": "2026-11-25"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "originalUrl": "https://image.jimcdn.com/app/cms/image/transf/none/path/s769e2e5fafdfd00c/image/i572b8c6bfd7ed23b/version/1791406904/image.png",
+          "sourcePage": "https://www.next-hero-kyoto.com/%E3%81%9F%E3%81%93%EF%BC%98%E3%83%8F%E3%82%A4%E3%83%9C%E3%83%BC%E3%83%AB%E9%85%92%E5%A0%B4/",
+          "note": "Operator promotional storefront image for the planned Otesuji branch; completed physical appearance not independently verified.",
+          "credit": "Nexthero / Tako8",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-20/batch105-tako8-0-42aae5c5c9c18852.webp",
+          "sha256": "42aae5c5c9c18852d3394519910f732f8d8e8e0e78ea944a72fd97e5a7c21a7b",
+          "width": 1000,
+          "height": 665
+        },
+        {
+          "originalUrl": "https://image.jimcdn.com/app/cms/image/transf/none/path/s769e2e5fafdfd00c/image/i666de1039fe8d9fe/version/1791327703/image.png",
+          "sourcePage": "https://www.next-hero-kyoto.com/%E3%81%9F%E3%81%93%EF%BC%98%E3%83%8F%E3%82%A4%E3%83%9C%E3%83%BC%E3%83%AB%E9%85%92%E5%A0%B4/",
+          "note": "Operator opening poster: November25at11:30, five-day¥99tax-inclusive drink launch sale.",
+          "credit": "Nexthero / Tako8",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-20/batch105-tako8-1-cec6168890c326a8.webp",
+          "sha256": "cec6168890c326a8c20fafe283863cfbf1d476d1a1f4449e216a5617fdc2f448",
+          "width": 707,
+          "height": 1000
+        },
+        {
+          "originalUrl": "https://image.jimcdn.com/app/cms/image/transf/none/path/s769e2e5fafdfd00c/image/id522649c4cf0d0d9/version/1791406904/image.png",
+          "sourcePage": "https://www.next-hero-kyoto.com/%E3%81%9F%E3%81%93%EF%BC%98%E3%83%8F%E3%82%A4%E3%83%9C%E3%83%BC%E3%83%AB%E9%85%92%E5%A0%B4/",
+          "note": "Operator promotional image naming takoyaki variants.",
+          "credit": "Nexthero / Tako8",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-20/batch105-tako8-2-2a8b97d4c9c4cc18.webp",
+          "sha256": "2a8b97d4c9c4cc181472c054ccf4d87e820b1cb27b4f70514dd7b4d21a2f9aae",
+          "width": 1000,
+          "height": 666
+        },
+        {
+          "originalUrl": "https://image.jimcdn.com/app/cms/image/transf/none/path/s769e2e5fafdfd00c/image/i7e8289df6644c54a/version/1791406904/image.png",
+          "sourcePage": "https://www.next-hero-kyoto.com/%E3%81%9F%E3%81%93%EF%BC%98%E3%83%8F%E3%82%A4%E3%83%9C%E3%83%BC%E3%83%AB%E9%85%92%E5%A0%B4/",
+          "note": "Operator published16:00–18:00happy-hour poster:¥97tax-inclusive drinks, excluding beer.",
+          "credit": "Nexthero / Tako8",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-20/batch105-tako8-3-d1c43e56f899c290.webp",
+          "sha256": "d1c43e56f899c290dab9cbddecab3430063b988d15e9bf846c305c64f288e9e9",
+          "width": 1000,
+          "height": 666
+        },
+        {
+          "originalUrl": "https://image.jimcdn.com/app/cms/image/transf/none/path/s769e2e5fafdfd00c/image/ie5bc53a2e017d1d1/version/1791406906/image.png",
+          "sourcePage": "https://www.next-hero-kyoto.com/%E3%81%9F%E3%81%93%EF%BC%98%E3%83%8F%E3%82%A4%E3%83%9C%E3%83%BC%E3%83%AB%E9%85%92%E5%A0%B4/",
+          "note": "Operator takeout promotional image; small storefront price signs and headline starting price conflict, so final takeout rates are withheld.",
+          "credit": "Nexthero / Tako8",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-20/batch105-tako8-4-21907dae941d66ca.webp",
+          "sha256": "21907dae941d66ca3692543d893811efc6202c2c28a8a41cd7ce75d24915b3b4",
+          "width": 1000,
+          "height": 666
+        }
+      ],
+      "special": {
+        "regionSlug": "kyoto",
+        "enabled": true,
+        "profile": {
+          "pinSourceUrl": "https://www.next-hero-kyoto.com/たこ８店舗情報/",
+          "name": "Tako8 Highball Sakaba — Otesuji",
+          "checkedAt": "2026-10-20",
+          "address": "1F From First Building,749 Higashi-Otecho,Fushimi-ku,Kyoto",
+          "neighborhood": "Fushimi-Momoyama / Otesuji",
+          "websiteUrl": "https://www.next-hero-kyoto.com/たこ８店舗情報/",
+          "menus": [
+            {
+              "label": "Tako8 Otesuji — afternoon happy hour",
+              "url": "https://www.next-hero-kyoto.com/たこ８ハイボール酒場/",
+              "currency": "JPY",
+              "coverage": "published",
+              "items": [
+                {
+                  "name": "ドリンク全品（ビール除く）",
+                  "price": 97,
+                  "note": "Tax included;16:00–18:00. Confirm opening-sale overlap. Individual participating drink names not fully published."
+                }
+              ],
+              "note": ""
+            }
+          ],
+          "specials": [
+            {
+              "kind": "other",
+              "title": "16:00–18:00 drinks ¥97 — beer excluded",
+              "description": "Operator poster advertises drinks at¥88before tax/¥97including tax during the afternoon window; beer excluded.",
+              "sourceUrl": "https://www.next-hero-kyoto.com/たこ８ハイボール酒場/",
+              "menuLabel": "Tako8 Otesuji — afternoon happy hour",
+              "limitedTime": false,
+              "discounted": true,
+              "validFrom": "2026-11-25",
+              "schedule": "Published16:00–18:00JST window from the branch opening; no end date or weekday restriction published.",
+              "conditions": [
+                "Beer explicitly excluded. Exact current drink list should be checked in branch.",
+                "Five-day opening poster separately says all drinks¥99tax included November25–29. Confirm which advertised tariff applies during overlap; no stacking or invented precedence.",
+                "No regular closure calendar published; confirm holiday/temporary closures.",
+                "Only the exact16–18window is represented; unavailable full service hours are not invented."
+              ],
+              "availability": {
+                "windows": [
+                  {
+                    "days": [
+                      0,
+                      1,
+                      2,
+                      3,
+                      4,
+                      5,
+                      6
+                    ],
+                    "start": "16:00",
+                    "end": "18:00"
+                  }
+                ]
+              }
+            }
+          ],
+          "photo": {
+            "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-20/batch105-tako8-0-42aae5c5c9c18852.webp",
+            "alt": "Operator promotional storefront image for the planned Otesuji branch; completed physical appearance not independently verified.",
+            "credit": "Nexthero / Tako8",
+            "sourceUrl": "https://www.next-hero-kyoto.com/%E3%81%9F%E3%81%93%EF%BC%98%E3%83%8F%E3%82%A4%E3%83%9C%E3%83%BC%E3%83%AB%E9%85%92%E5%A0%B4/",
+            "originalUrl": "https://image.jimcdn.com/app/cms/image/transf/none/path/s769e2e5fafdfd00c/image/i572b8c6bfd7ed23b/version/1791406904/image.png",
+            "checkedAt": "2026-10-20"
+          }
+        }
+      }
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Sake to Obanzai Morioka-ke Opens 2026-10-25",
+        "description": "A14-seat upcoming obanzai bar with a changing selection of home-style dishes, sake, shochu, fruit liqueurs and sours.",
+        "sourceUrl": "https://tabelog.com/en/hokkaido/A0101/A010104/1086153/",
+        "address": "11F Cyber City Building,2-2 Minami5-jo Nishi2-chome,Chuo-ku,Sapporo",
+        "productName": "Sake to Obanzai Morioka-ke",
+        "utcStartDateTime": "2026-10-25T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "The exact corporate-managed branch listing records October25,2026opening, corroborated by Sapporo List and a separate Octoberopening notice. Its written street address and access agree on Susukino; an automatically assigned Nishisen6station/distance is inconsistent and excluded.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Sapporo",
+          "Japan",
+          "Susukino / Minami5Nishi2",
+          "Obanzai / Izakaya"
+        ],
+        "longFormSummary": "<p>A14-seat upcoming obanzai bar with a changing selection of home-style dishes, sake, shochu, fruit liqueurs and sours.<cite data-ref=\"https://tabelog.com/en/hokkaido/A0101/A010104/1086153/\"></cite></p><p>The exact corporate-managed branch listing records October25,2026opening, corroborated by Sapporo List and a separate Octoberopening notice. Its written street address and access agree on Susukino; an automatically assigned Nishisen6station/distance is inconsistent and excluded.</p>",
+        "references": [
+          {
+            "url": "https://tabelog.com/en/hokkaido/A0101/A010104/1086153/",
+            "title": "Sake to Obanzai Morioka-ke — branch website",
+            "confidence": 90,
+            "reasoning": "Sake to Obanzai Morioka-ke — branch website"
+          },
+          {
+            "url": "https://www.instagram.com/moriokake_2026/",
+            "title": "Operator Instagram",
+            "confidence": 90,
+            "reasoning": "Operator Instagram"
+          },
+          {
+            "url": "https://sapporo-list.info/shop/moriokake/",
+            "title": "Exact local upcoming opening",
+            "confidence": 90,
+            "reasoning": "Exact local upcoming opening"
+          },
+          {
+            "url": "https://tabelog.com/en/hokkaido/A0101/A010104/1086153/dtlmenu/",
+            "title": "Exact branch menu search",
+            "confidence": 90,
+            "reasoning": "Exact branch menu search"
+          },
+          {
+            "url": "https://tabelog.com/en/hokkaido/A0101/A010104/1086153/dtlphotolst/smp2/",
+            "title": "Exact branch photo gallery",
+            "confidence": 90,
+            "reasoning": "Exact branch photo gallery"
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://tabelog.com/en/hokkaido/A0101/A010104/1086153/",
+          "menu": {
+            "pinSourceUrl": "https://tabelog.com/en/hokkaido/A0101/A010104/1086153/",
+            "name": "Sake to Obanzai Morioka-ke",
+            "checkedAt": "2026-10-20",
+            "menus": [
+              {
+                "label": "Morioka-ke — changing obanzai and drinks",
+                "url": "https://tabelog.com/en/hokkaido/A0101/A010104/1086153/",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "日替わりおばんざい",
+                    "priceLabel": "Price not published",
+                    "note": "Operator explicitly offers changing homemade side dishes; individual daily dish names and prices not published."
+                  },
+                  {
+                    "name": "日本酒",
+                    "priceLabel": "Price not published",
+                    "note": "Operator confirms sake selection; labels and pour prices not published."
+                  },
+                  {
+                    "name": "焼酎",
+                    "priceLabel": "Price not published",
+                    "note": "Operator confirms shochu selection; labels/prices unpublished."
+                  },
+                  {
+                    "name": "果実酒",
+                    "priceLabel": "Price not published",
+                    "note": "Operator confirms fruit liqueurs; labels/prices unpublished."
+                  },
+                  {
+                    "name": "サワー",
+                    "priceLabel": "Price not published",
+                    "note": "Operator confirms sours; recipes/prices unpublished."
+                  }
+                ],
+                "note": "Deep menu search: corporate-managed branch food/drink pages have no structured items; official Instagram contains no readable item roster, and nine gallery images have no dish captions or price board. Do not infer names or availability from photographs. These operator-published categories are retained with Price not published; precise opening menu remains a research gap."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://tabelog.com/en/hokkaido/A0101/A010104/1086153/",
+            "name": "Sake to Obanzai Morioka-ke",
+            "checkedAt": "2026-10-20",
+            "websiteUrl": "https://tabelog.com/en/hokkaido/A0101/A010104/1086153/",
+            "phone": "011-600-6684",
+            "openingHours": [
+              {
+                "days": "Tuesday–Sunday",
+                "hours": "18:00–01:00next day; last order00:30"
+              },
+              {
+                "days": "Closed",
+                "hours": "Monday plus two irregular Sundays each month; dates not published"
+              }
+            ],
+            "detailsSourceUrl": "https://tabelog.com/en/hokkaido/A0101/A010104/1086153/",
+            "additionalSources": [
+              {
+                "label": "Operator Instagram",
+                "url": "https://www.instagram.com/moriokake_2026/"
+              },
+              {
+                "label": "Exact local upcoming opening",
+                "url": "https://sapporo-list.info/shop/moriokake/"
+              },
+              {
+                "label": "Exact branch menu search",
+                "url": "https://tabelog.com/en/hokkaido/A0101/A010104/1086153/dtlmenu/"
+              },
+              {
+                "label": "Exact branch photo gallery",
+                "url": "https://tabelog.com/en/hokkaido/A0101/A010104/1086153/dtlphotolst/smp2/"
+              }
+            ],
+            "hoursNote": "Fourteen seats, counter and sofa seating; non-smoking per managed listing, no on-site parking. Appetizer/table charge exists but amount is unpublished. Managed listing says cash only; confirm before visiting. Published customer phone011-600-6684used instead of booking relay number. Day-to-day dish roster and named drink tariffs remain unpublished after exact food/drink/photo pages, operator Instagram and local searches; unlabelled gallery dishes are not assigned names or promised on opening day.",
+            "reservationUrl": "https://tabelog.com/en/hokkaido/A0101/A010104/1086153/"
+          },
+          "tile": {
+            "regionSlug": "sapporo",
+            "kind": "opening",
+            "slug": "japan105-morioka",
+            "name": "Sake to Obanzai Morioka-ke",
+            "neighborhood": "Susukino / Minami5Nishi2",
+            "cuisine": "Obanzai / Izakaya",
+            "description": "A14-seat upcoming obanzai bar with a changing selection of home-style dishes, sake, shochu, fruit liqueurs and sours.",
+            "address": "11F Cyber City Building,2-2 Minami5-jo Nishi2-chome,Chuo-ku,Sapporo",
+            "websiteUrl": "https://tabelog.com/en/hokkaido/A0101/A010104/1086153/",
+            "checkedAt": "2026-10-20",
+            "recognition": "Exact operator-managed future opening and branch gallery verified",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-20/batch105-morioka-0-587fd28b8bf10304.webp",
+            "imageCredit": "Morioka-ke / official Tabelog gallery",
+            "imageSourceUrl": "https://tabelog.com/en/hokkaido/A0101/A010104/1086153/dtlphotolst/smp2/",
+            "imageNote": "Official branch-gallery photograph of the counter.",
+            "openingConfirmed": true,
+            "day": "2026-10-25"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "originalUrl": "https://tblg.k-img.com/restaurant/images/Rvw/387284/640x640_rect_9bc3c5263a5dd0b1f8470827bdd43334.jpg",
+          "sourcePage": "https://tabelog.com/en/hokkaido/A0101/A010104/1086153/dtlphotolst/smp2/",
+          "note": "Official branch-gallery photograph of the counter.",
+          "credit": "Morioka-ke / official Tabelog gallery",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-20/batch105-morioka-0-587fd28b8bf10304.webp",
+          "sha256": "587fd28b8bf103048ccede169cd7fb0a4385dc0d79500db935e419dbdcd63d54",
+          "width": 480,
+          "height": 640
+        },
+        {
+          "originalUrl": "https://tblg.k-img.com/restaurant/images/Rvw/387284/640x640_rect_4863d1c830f6a3818d961cbc53f9c4cf.jpg",
+          "sourcePage": "https://tabelog.com/en/hokkaido/A0101/A010104/1086153/dtlphotolst/smp2/",
+          "note": "Official branch-gallery photograph of the sofa seating.",
+          "credit": "Morioka-ke / official Tabelog gallery",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-20/batch105-morioka-1-99721a148ce48636.webp",
+          "sha256": "99721a148ce48636521f24889b3fde5575d202f7f6f060c255b3ee9ca562e4d4",
+          "width": 506,
+          "height": 640
+        },
+        {
+          "originalUrl": "https://tblg.k-img.com/restaurant/images/Rvw/387283/640x640_rect_8b210a24d08bc92d475caaab3807e362.jpg",
+          "sourcePage": "https://tabelog.com/en/hokkaido/A0101/A010104/1086153/dtlphotolst/smp2/",
+          "note": "Official branch-gallery example of a changing obanzai dish; exact name and current price not published.",
+          "credit": "Morioka-ke / official Tabelog gallery",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-20/batch105-morioka-2-ba83e551be1dfa7c.webp",
+          "sha256": "ba83e551be1dfa7cf461bc4d4564234166e30ec70566f11e384fe0916454661f",
+          "width": 640,
+          "height": 481
+        },
+        {
+          "originalUrl": "https://tblg.k-img.com/restaurant/images/Rvw/387283/640x640_rect_5ba2f27f933114425d06d4a00c6746c2.jpg",
+          "sourcePage": "https://tabelog.com/en/hokkaido/A0101/A010104/1086153/dtlphotolst/smp2/",
+          "note": "Official branch-gallery example of a changing dish; no ingredient or dish identity inferred from photo.",
+          "credit": "Morioka-ke / official Tabelog gallery",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-20/batch105-morioka-3-32112bf3a01dac82.webp",
+          "sha256": "32112bf3a01dac8284ab19081f6fede971b2f6036c1bb6bf92d071851d817b25",
+          "width": 481,
+          "height": 640
+        },
+        {
+          "originalUrl": "https://tblg.k-img.com/restaurant/images/Rvw/387283/640x640_rect_34749f29edf68ce05478961980071bef.jpg",
+          "sourcePage": "https://tabelog.com/en/hokkaido/A0101/A010104/1086153/dtlphotolst/smp2/",
+          "note": "Official branch-gallery sample dish; current selection changes daily.",
+          "credit": "Morioka-ke / official Tabelog gallery",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-20/batch105-morioka-4-a943b5da349a197d.webp",
+          "sha256": "a943b5da349a197dc5f2cbd9acfab9a951f51fe7c7d8af9c4a6d70fbeaeb641e",
+          "width": 481,
+          "height": 640
+        },
+        {
+          "originalUrl": "https://tblg.k-img.com/restaurant/images/Rvw/387283/640x640_rect_60f18a23eedfd67f9c779d26c871ea7e.jpg",
+          "sourcePage": "https://tabelog.com/en/hokkaido/A0101/A010104/1086153/dtlphotolst/smp2/",
+          "note": "Official branch-gallery sample dessert; name, price and current availability not published.",
+          "credit": "Morioka-ke / official Tabelog gallery",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-20/batch105-morioka-5-7d58921a788876bd.webp",
+          "sha256": "7d58921a788876bdf99e5a9798ea40ae89ac8ebdfed6e8c207d6246a6e6cd1a1",
+          "width": 640,
+          "height": 481
+        },
+        {
+          "originalUrl": "https://tblg.k-img.com/restaurant/images/Rvw/387283/640x640_rect_695a442cd0f5308dcef23ad6f974262d.jpg",
+          "sourcePage": "https://tabelog.com/en/hokkaido/A0101/A010104/1086153/dtlphotolst/smp2/",
+          "note": "Official branch-gallery beverage photograph; individual labels do not establish current menu stock or prices.",
+          "credit": "Morioka-ke / official Tabelog gallery",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-20/batch105-morioka-6-10e3710302694f2c.webp",
+          "sha256": "10e3710302694f2c28b34518b7a6e7ce03f1eb090029a9dd417ae81b34f9e252",
+          "width": 640,
+          "height": 481
+        }
+      ]
+    }
+  ],
+  "researchNotes": [
+    "Six genuinely new restaurant branches: four October9Tokyo openings, November25Tako8 Kyoto and October25Morioka-ke Sapporo. Exact dates are branch-specific and independent of museum/gallery or former tenant dates.",
+    "Four current Tabelog-managed branch menus supersede some older launch hours. Guu Monday closure/22:30closing and booking fees preserved; HoaHoa14:00/21:00last orders and Tuesdayclosure preserved; LALA PASTA closes22:30. Yohaku holidays require confirmation because operator/plan and current listing differ.",
+    "Guu art plate is dinner-only, advance booking, one dish¥3,850tax included, not an all-day buffet or full dinner course. Template17–23/two-hourstay conflicts with current22:30close/21:30last order; scheduled ordering17–21:30TueSun. Underlying firstMondayholidayOct12not modelled retrospectively; no remaining Monday public holiday beforeNov17expiry.",
+    "Guu buffet supplement¥1,320requires a separate main and has60-minute limit. Four-and-under sharing and5–9children’s tariff retained. Duplicate menu sections deduplicated by item name and price.",
+    "LALA PASTA base tax-inclusive prices retained; shape upgrades¥200/¥300have unclear tax basis. Six unclear LALA wine producer translations held, plus guu’s unclear champagne label. Specific bottle size/vintage not invented. Bouquet cocktail¥2,420startsOct9while supplies last; no invented end date or Specials eligibility.",
+    "Tako8 Otesuji operator branch page and ALCO onsiteposter confirmNov25at11:30. Storefront image is promotional, not independently verified completed photography. Actual branded takoyaki, torotaku and octopus pot rice names published, but takeout¥580sign/from¥600banner conflict; uncertain food tariffs withheld. Ordinary¥180/¥360drink tax basis unknown.",
+    "Tako8 opening five-day¥99all-drinks campaign datesNov25–29are known and displayed in ordinary menu; unverified full daily hours prevent an all-service native schedule. Exact16–18happy-hour¥97excludingbeer is scheduled fromopening with no artificial expiry. Price overlap with¥99requires branch clarification, not invented stacking/precedence. Stale navigation points to sibling Tebasuke menu/hours/booking, excluded. Inaccessible employer11–25snippet not treated as verified current hours.",
+    "Morioka-ke source station metadata incorrectly saysNishisen6despiteSusukinoaddress/access; retained written address/branch phone. No named daily dishes/prices published after managed menus, official Instagram, photos and local searches. Unlabelled food photographs not used to infer menu items. Exact operator categories retained unpriced; regular twoSundayclosures need dates."
+  ],
+  "held": [
+    {
+      "name": "Hakodate Shunka Sapporo",
+      "sourceUrl": "https://sapporo-list.info/shop/kaitensushi-hunka-sapporo/",
+      "reason": "November20opening lead, but exact-branch menu, service details and representative gallery remain unpublished; local post uses stock sushi photo and address suffixes differ1-24/1-26. Hakodate branch menu not borrowed."
+    },
+    {
+      "name": "Shokudo Maruta Kyoto",
+      "sourceUrl": "https://osumituki.com/foodie/226736.html",
+      "reason": "November11opening poster identified, but exact future menu and relevant gallery unresolved; former Hong Kong/Shanghai tenants’ menus are not reused."
+    },
+    {
+      "name": "am Nagoya",
+      "sourceUrl": "https://job.inshokuten.com/tokai/work/detail/94814",
+      "reason": "December2026employer lead, inaccessible primary detail, exact branch menu/gallery not verified; no guessed month/day or sibling menu."
+    },
+    {
+      "name": "YUI Sapporo",
+      "sourceUrl": "https://job.inshokuten.com/hokkaido/work/detail/94504",
+      "reason": "Prior header/body October31/November10date conflict persists; no reliable new primary resolution."
+    },
+    {
+      "name": "Tako8 all-service opening-sale schedule",
+      "sourceUrl": "https://www.next-hero-kyoto.com/たこ８ハイボール酒場/",
+      "reason": "Five daysNov25–29and¥99tax-inclusive rate verified, but complete daily closing/lastorder evidence missing. Displayed as menu information; only exact16–18happy hour native schedule published."
+    }
+  ],
+  "counts": {
+    "venues": 6,
+    "newPins": 6,
+    "ordinaryMenuItems": 233,
+    "offers": 2,
+    "offerMenuItems": 2,
+    "photos": 29
+  },
+  "photoReview": {
+    "downloadedCandidates": 55,
+    "selectedPhotos": 29,
+    "method": "Plain curl official operator, exact corporate branch gallery and event-menu downloads; all55candidates visually inspected, selected29reviewed for actual branch and captions. Operator October9press calls images illustrations, retained as such. Unrelated logos, artwork-only gallery, generic stock sushi and duplicate crops excluded. Photographic dish identities, current stock and unnamed recipes not inferred. Azure public hashes and image decode verified."
+  }
+}

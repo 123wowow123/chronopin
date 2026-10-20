@@ -1537,6 +1537,8 @@ const de: Messages = {
     loginTitle: 'Anmelden',
     welcomeBack: 'Willkommen zurück',
     loginIntro: 'Melde dich an, um Pins zu beobachten, Leuten zu folgen und eigene Pins zu posten.',
+    pinLimitNotice: 'Du hast in kurzer Zeit sehr viele Pins geöffnet. Angemeldete Nutzer haben höhere Limits: Melde dich an oder erstelle ein kostenloses Konto, um weiterzulesen.',
+    higherLimits: 'Angemeldete Nutzer haben höhere Limits: <login>Melde dich an</login> oder <signup>erstelle ein kostenloses Konto</signup>, um weiterzulesen.',
     enterEmailPassword: 'Bitte gib deine E-Mail-Adresse und dein Passwort ein.',
     emailNotRegistered: 'Diese E-Mail-Adresse ist nicht registriert.',
     wrongPassword: 'Dieses Passwort ist nicht korrekt.',

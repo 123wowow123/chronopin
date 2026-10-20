@@ -1540,6 +1540,8 @@ const vi: Messages = {
     loginTitle: 'Đăng nhập',
     welcomeBack: 'Chào mừng trở lại',
     loginIntro: 'Đăng nhập để quan sát ghim, theo dõi mọi người và đăng ghim của riêng bạn.',
+    pinLimitNotice: 'Bạn đã mở rất nhiều ghim trong thời gian ngắn. Người dùng đã đăng nhập có giới hạn duyệt cao hơn: hãy đăng nhập hoặc tạo tài khoản miễn phí để tiếp tục đọc.',
+    higherLimits: 'Người dùng đã đăng nhập có giới hạn duyệt cao hơn: hãy <login>đăng nhập</login> hoặc <signup>tạo tài khoản miễn phí</signup> để tiếp tục đọc.',
     enterEmailPassword: 'Vui lòng nhập email và mật khẩu của bạn.',
     emailNotRegistered: 'Email này chưa được đăng ký.',
     wrongPassword: 'Mật khẩu này không đúng.',

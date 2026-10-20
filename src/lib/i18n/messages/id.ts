@@ -1541,6 +1541,8 @@ const id: Messages = {
     loginTitle: 'Masuk',
     welcomeBack: 'Selamat datang kembali',
     loginIntro: 'Masuk untuk memantau pin, mengikuti orang, dan memposting pin Anda sendiri.',
+    pinLimitNotice: 'Anda membuka banyak pin dalam waktu singkat. Batas penjelajahan yang lebih tinggi tersedia untuk pengguna yang sudah masuk: masuk atau buat akun gratis untuk terus membaca.',
+    higherLimits: 'Batas penjelajahan yang lebih tinggi tersedia untuk pengguna yang sudah masuk: <login>masuk</login> atau <signup>buat akun gratis</signup> untuk terus membaca.',
     enterEmailPassword: 'Silakan masukkan email dan kata sandi Anda.',
     emailNotRegistered: 'Email ini belum terdaftar.',
     wrongPassword: 'Kata sandi ini salah.',

@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from '@/components/ui/Link';
+import { getT } from '@/lib/i18n/server';
 import { getUser } from '@/server/auth';
 import HeavyUserPlan from '@/server/model/heavyUserPlan';
 import { stripeConfigured } from '@/server/stripe';
@@ -21,7 +22,7 @@ const PERKS = [
 // limit allows (src/proxy.ts rewrites to it with a 429), and where the
 // "Heavy user" ad tile points. Reachable by anyone, never indexed.
 export default async function HeavyUse({ searchParams }: { searchParams: Promise<{ limited?: string; paid?: string }> }) {
-  const [query, user] = await Promise.all([searchParams, getUser()]);
+  const [query, user, t] = await Promise.all([searchParams, getUser(), getT()]);
   const plan = user ? await HeavyUserPlan.status(user.id) : null;
   const limited = query.limited === '1';
   return (
@@ -38,6 +39,22 @@ export default async function HeavyUse({ searchParams }: { searchParams: Promise
             ? 'You have made a lot of requests in a short time, so we paused them for a moment. Wait a few seconds and try again, or become a heavy user: unlimited reading and no ads.'
             : 'For people who read the timeline, guides and pins all day. Unlimited reading and no ads, from $4 a month.'}
         </p>
+        {limited && !user ? (
+          <p className="relative mx-auto mt-4 max-w-xl rounded-lg bg-accent/10 px-3 py-2 text-sm ring-1 ring-accent/20 ring-inset">
+            {t.rich('account.higherLimits', {
+              login: (chunks) => (
+                <Link href="/login?redirect=%2F" className="underline underline-offset-2">
+                  {chunks}
+                </Link>
+              ),
+              signup: (chunks) => (
+                <Link href="/signup?redirect=%2F" className="underline underline-offset-2">
+                  {chunks}
+                </Link>
+              ),
+            })}
+          </p>
+        ) : null}
         {limited ? (
           <p className="relative mt-6">
             <Link href="/" className="btn btn-secondary">
