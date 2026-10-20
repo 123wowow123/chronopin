@@ -1,0 +1,84 @@
+{
+  "date": "2026-10-20",
+  "verification": "Public Azure bytes downloaded, SHA256 matched, decoded and visually inspected; original source credits retained.",
+  "images": [
+    {
+      "slug": "nab-abc",
+      "source": "https://www.abc.net.au/news/2026-10-20/nab-slashes-jobs-in-massive-restructure/107286316",
+      "originalUrl": "https://live-production.wcms.abc-cdn.net.au/1de8a08be5b63d711648d94d4b779ba2?impolicy=wcms_watermark_news&cropH=2813&cropW=5000&xPos=0&yPos=492&width=862&height=485&imformat=generic",
+      "credit": "ABC News / Stephen Cavenagh",
+      "caption": "NAB signage; background photograph, not a portrait of affected employees.",
+      "region": "2026-10-20",
+      "url": "https://chronopin.blob.core.windows.net/thumb/news-images/2026-10-20/nab-abc-d70389d44fc3e9bd.webp",
+      "sha256": "d70389d44fc3e9bdd561236d79aef7fc6f60e759e03fcaccc1f13df608327e8c",
+      "width": 862,
+      "height": 485
+    },
+    {
+      "slug": "nab-guardian",
+      "source": "https://www.theguardian.com/australia-news/2026/oct/20/nab-bank-restructure-2500-jobs-cuts",
+      "originalUrl": "https://i.guim.co.uk/img/media/e68b86a4c5dec0e7c44daa5425d687259d4d8a05/396_0_5166_4133/master/5166.jpg?width=1200&height=630&quality=85&auto=format&fit=crop&precrop=40:21,offset-x50,offset-y0&overlay-align=bottom%2Cleft&overlay-width=100p&overlay-base64=L2ltZy9zdGF0aWMvb3ZlcmxheXMvdGctZGVmYXVsdC5wbmc&enable=upscale&s=4aaca171fe06e6b5c83ac2271989cbb3",
+      "credit": "Lukas Coch / AAP via The Guardian",
+      "caption": "NAB signage; background photograph, not a portrait of affected employees.",
+      "region": "2026-10-20",
+      "url": "https://chronopin.blob.core.windows.net/thumb/news-images/2026-10-20/nab-guardian-ffe54872ee8ae9bf.webp",
+      "sha256": "ffe54872ee8ae9bf051d26bbc17f7d1b3eeb38089656915ef3022ce0b2cc4f83",
+      "width": 1200,
+      "height": 630
+    },
+    {
+      "slug": "goulds-warehouse",
+      "originalUrl": "https://tnecd.com/wp-content/uploads/2026/10/ITT-Goulds-Pumps.jpg",
+      "source": "https://tnecd.com/news/itt-goulds-pumps-announces-establishment-of-tennessee-manufacturing-distribution-presence-in-shelby-county/",
+      "credit": "Tennessee Department of Economic and Community Development / ITT Goulds Pumps",
+      "caption": "Warehouse image published with the Memphis expansion announcement.",
+      "region": "2026-10-20",
+      "url": "https://chronopin.blob.core.windows.net/thumb/news-images/2026-10-20/goulds-warehouse-a73c16d2aa8e94a1.webp",
+      "sha256": "a73c16d2aa8e94a1d4e5339dc04b0820ce285e2619f874b0634a9f717ea5eb49",
+      "width": 1400,
+      "height": 1050
+    },
+    {
+      "slug": "nab-signage",
+      "originalUrl": "https://www.nab.com.au/content/dam/nab/images/news/article-images/nab-star-red-comet-460x200.jpeg",
+      "source": "https://www.nab.com.au/news/nab-updates/nab-simplifying-operating-model-and-alignment-to-customer-priorities",
+      "credit": "National Australia Bank",
+      "caption": "NAB operator branding accompanying its workforce announcement.",
+      "region": "2026-10-20",
+      "url": "https://chronopin.blob.core.windows.net/thumb/news-images/2026-10-20/nab-signage-87d91710efb45ec3.webp",
+      "sha256": "87d91710efb45ec342da2f61967f3a32ae541116268b531fc596785b4821f1d1",
+      "width": 460,
+      "height": 200
+    },
+    {
+      "slug": "qualcomm-reuters",
+      "originalUrl": "https://img.ksl.com/slc/3206/320611/32061190.JPG?filter=kslv2/responsive_story_lg",
+      "source": "https://www.ksl.com/article/51638582/exclusive-qualcomm-to-cut-jobs-worldwide-in-performance-focused-layoffs-internal-memo-shows",
+      "credit": "Dado Ruvic / Reuters via KSL",
+      "caption": "Qualcomm logo illustration from August 25, 2025; file image, not the October 2026 workforce announcement.",
+      "region": "2026-10-20",
+      "url": "https://chronopin.blob.core.windows.net/thumb/news-images/2026-10-20/qualcomm-reuters-b4ec4444bb407739.webp",
+      "sha256": "b4ec4444bb4077394cdcd0e379c5b4e88f6bc19b43df7f4cc5becec7bb18f29a",
+      "width": 1228,
+      "height": 690
+    },
+    {
+      "slug": "russia-market",
+      "originalUrl": "https://polymarket.com/api/og?eslug=bank-of-russia-decision-in-october-20260724021538830&tid=1792506074844",
+      "source": "https://polymarket.com/event/bank-of-russia-decision-in-october-20260724021538830",
+      "credit": "Polymarket",
+      "caption": "October 20, 2026 snapshot of the October Bank of Russia decision market.",
+      "region": "2026-10-20",
+      "url": "https://chronopin.blob.core.windows.net/thumb/news-images/2026-10-20/russia-market-acf0c2c96dcf968b.webp",
+      "sha256": "acf0c2c96dcf968bce4512f11e6e3c9bbf52f1c0f6f4812e8c3eb4ebb485eea0",
+      "width": 800,
+      "height": 418
+    }
+  ],
+  "gaps": [
+    "NAB: three relevant source photographs verified; no verified employment trend graph or directly relevant embeddable video.",
+    "Goulds: one relevant warehouse photograph; further gallery/video searches did not verify additional media. Photo is background context, not evidence of a completed expansion.",
+    "Qualcomm: one Reuters file illustration dated August 2025, explicitly captioned; no actual affected-worker photograph or headcount invented.",
+    "Bank of Russia: one current market snapshot; no unsupported policy outcome asserted."
+  ]
+}

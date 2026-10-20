@@ -1,0 +1,2400 @@
+{
+  "date": "2026-10-20",
+  "slot": "06:00 America/Los_Angeles",
+  "execution": "active session, manually started 07:18 local",
+  "localRunId": 14,
+  "productionRunId": 14,
+  "status": "ok",
+  "newPinIds": [
+    18456,
+    18457,
+    18458,
+    18460
+  ],
+  "updatedExistingPinIds": [
+    1950,
+    1952,
+    1953,
+    1954,
+    1955,
+    1956,
+    1957,
+    1958,
+    1964,
+    1968,
+    1970,
+    1976,
+    1987,
+    1989,
+    2004,
+    3655,
+    4299,
+    4301,
+    4897,
+    4951,
+    5491,
+    16016,
+    16017,
+    17115,
+    17375,
+    17382,
+    17388,
+    17390,
+    17403,
+    17408,
+    17418,
+    17421,
+    17511,
+    17524,
+    17540,
+    17577,
+    17594,
+    17597,
+    17676,
+    17731,
+    17732,
+    17805,
+    17837,
+    17878,
+    17949,
+    17986,
+    18000,
+    18190
+  ],
+  "contentChanges": [
+    {
+      "id": 1950,
+      "authorId": 277,
+      "changedFields": [
+        "longFormSummary",
+        "references"
+      ]
+    },
+    {
+      "id": 1952,
+      "authorId": 277,
+      "changedFields": [
+        "longFormSummary",
+        "references"
+      ]
+    },
+    {
+      "id": 1953,
+      "authorId": 277,
+      "changedFields": [
+        "longFormSummary",
+        "references"
+      ]
+    },
+    {
+      "id": 1954,
+      "authorId": 277,
+      "changedFields": [
+        "longFormSummary",
+        "references"
+      ]
+    },
+    {
+      "id": 1955,
+      "authorId": 277,
+      "changedFields": [
+        "longFormSummary",
+        "references",
+        "tags"
+      ]
+    },
+    {
+      "id": 1956,
+      "authorId": 277,
+      "changedFields": [
+        "longFormSummary",
+        "references"
+      ]
+    },
+    {
+      "id": 1957,
+      "authorId": 277,
+      "changedFields": [
+        "longFormSummary",
+        "references"
+      ]
+    },
+    {
+      "id": 1958,
+      "authorId": 277,
+      "changedFields": [
+        "longFormSummary",
+        "references"
+      ]
+    },
+    {
+      "id": 1964,
+      "authorId": 277,
+      "changedFields": [
+        "longFormSummary",
+        "references"
+      ]
+    },
+    {
+      "id": 1968,
+      "authorId": 277,
+      "changedFields": [
+        "longFormSummary",
+        "references"
+      ]
+    },
+    {
+      "id": 1970,
+      "authorId": 277,
+      "changedFields": [
+        "longFormSummary",
+        "references"
+      ]
+    },
+    {
+      "id": 1976,
+      "authorId": 277,
+      "changedFields": [
+        "longFormSummary",
+        "references"
+      ]
+    },
+    {
+      "id": 1987,
+      "authorId": 277,
+      "changedFields": [
+        "description",
+        "longFormSummary",
+        "dateConfidenceReasoning",
+        "utcStartDateTime",
+        "references",
+        "stocks"
+      ]
+    },
+    {
+      "id": 1989,
+      "authorId": 277,
+      "changedFields": [
+        "description",
+        "longFormSummary",
+        "dateConfidenceReasoning",
+        "utcStartDateTime",
+        "references",
+        "stocks"
+      ]
+    },
+    {
+      "id": 2004,
+      "authorId": 76,
+      "changedFields": [
+        "title",
+        "description",
+        "longFormSummary",
+        "dateConfidence",
+        "dateConfidenceReasoning",
+        "references"
+      ]
+    },
+    {
+      "id": 3655,
+      "authorId": 412,
+      "changedFields": [
+        "description",
+        "longFormSummary",
+        "dateConfidence",
+        "dateConfidenceReasoning",
+        "references",
+        "tags"
+      ]
+    },
+    {
+      "id": 4299,
+      "authorId": 417,
+      "changedFields": [
+        "title",
+        "description",
+        "longFormSummary",
+        "dateConfidence",
+        "dateConfidenceReasoning",
+        "references"
+      ]
+    },
+    {
+      "id": 4301,
+      "authorId": 417,
+      "changedFields": [
+        "title",
+        "description",
+        "longFormSummary",
+        "dateConfidence",
+        "dateConfidenceReasoning",
+        "references"
+      ]
+    },
+    {
+      "id": 4897,
+      "authorId": 422,
+      "changedFields": [
+        "longFormSummary",
+        "dateConfidence",
+        "dateConfidenceReasoning",
+        "utcEndDateTime",
+        "references"
+      ]
+    },
+    {
+      "id": 4951,
+      "authorId": 1,
+      "changedFields": [
+        "description",
+        "longFormSummary",
+        "dateConfidenceReasoning",
+        "references"
+      ]
+    },
+    {
+      "id": 5491,
+      "authorId": 428,
+      "changedFields": [
+        "title",
+        "description",
+        "longFormSummary",
+        "dateConfidence",
+        "dateConfidenceReasoning",
+        "references"
+      ]
+    },
+    {
+      "id": 16016,
+      "authorId": 276,
+      "changedFields": [
+        "description",
+        "longFormSummary",
+        "dateConfidenceReasoning",
+        "references"
+      ]
+    },
+    {
+      "id": 16017,
+      "authorId": 408,
+      "changedFields": [
+        "description",
+        "longFormSummary",
+        "dateConfidenceReasoning",
+        "references"
+      ]
+    },
+    {
+      "id": 17115,
+      "authorId": 277,
+      "changedFields": [
+        "longFormSummary",
+        "references"
+      ]
+    },
+    {
+      "id": 17375,
+      "authorId": 435,
+      "changedFields": [
+        "dateConfidence",
+        "dateConfidenceReasoning",
+        "utcEndDateTime",
+        "references"
+      ]
+    },
+    {
+      "id": 17382,
+      "authorId": 435,
+      "changedFields": [
+        "dateConfidenceReasoning",
+        "utcEndDateTime",
+        "references"
+      ]
+    },
+    {
+      "id": 17388,
+      "authorId": 435,
+      "changedFields": [
+        "dateConfidenceReasoning",
+        "utcEndDateTime",
+        "references"
+      ]
+    },
+    {
+      "id": 17390,
+      "authorId": 435,
+      "changedFields": [
+        "longFormSummary",
+        "dateConfidence",
+        "dateConfidenceReasoning",
+        "utcEndDateTime",
+        "references"
+      ]
+    },
+    {
+      "id": 17403,
+      "authorId": 435,
+      "changedFields": [
+        "dateConfidenceReasoning",
+        "utcEndDateTime",
+        "references"
+      ]
+    },
+    {
+      "id": 17408,
+      "authorId": 435,
+      "changedFields": [
+        "dateConfidenceReasoning",
+        "utcEndDateTime",
+        "references"
+      ]
+    },
+    {
+      "id": 17418,
+      "authorId": 435,
+      "changedFields": [
+        "dateConfidenceReasoning",
+        "utcEndDateTime",
+        "references"
+      ]
+    },
+    {
+      "id": 17421,
+      "authorId": 435,
+      "changedFields": [
+        "dateConfidenceReasoning",
+        "utcEndDateTime",
+        "references"
+      ]
+    },
+    {
+      "id": 17511,
+      "authorId": 435,
+      "changedFields": [
+        "dateConfidence",
+        "dateConfidenceReasoning",
+        "utcEndDateTime",
+        "references"
+      ]
+    },
+    {
+      "id": 17524,
+      "authorId": 435,
+      "changedFields": [
+        "dateConfidence",
+        "dateConfidenceReasoning",
+        "utcEndDateTime",
+        "references"
+      ]
+    },
+    {
+      "id": 17540,
+      "authorId": 435,
+      "changedFields": [
+        "dateConfidenceReasoning",
+        "utcEndDateTime",
+        "references"
+      ]
+    },
+    {
+      "id": 17577,
+      "authorId": 435,
+      "changedFields": [
+        "dateConfidenceReasoning",
+        "utcEndDateTime",
+        "references"
+      ]
+    },
+    {
+      "id": 17594,
+      "authorId": 435,
+      "changedFields": [
+        "dateConfidenceReasoning",
+        "utcEndDateTime",
+        "references"
+      ]
+    },
+    {
+      "id": 17597,
+      "authorId": 435,
+      "changedFields": [
+        "longFormSummary",
+        "dateConfidence",
+        "dateConfidenceReasoning",
+        "utcStartDateTime",
+        "utcEndDateTime",
+        "references"
+      ]
+    },
+    {
+      "id": 17676,
+      "authorId": 435,
+      "changedFields": [
+        "dateConfidenceReasoning",
+        "utcEndDateTime",
+        "references"
+      ]
+    },
+    {
+      "id": 17731,
+      "authorId": 435,
+      "changedFields": [
+        "dateConfidenceReasoning",
+        "utcEndDateTime",
+        "references"
+      ]
+    },
+    {
+      "id": 17732,
+      "authorId": 435,
+      "changedFields": [
+        "longFormSummary",
+        "dateConfidence",
+        "dateConfidenceReasoning",
+        "utcEndDateTime",
+        "references"
+      ]
+    },
+    {
+      "id": 17805,
+      "authorId": 435,
+      "changedFields": [
+        "dateConfidenceReasoning",
+        "utcEndDateTime",
+        "references"
+      ]
+    },
+    {
+      "id": 17837,
+      "authorId": 435,
+      "changedFields": [
+        "dateConfidenceReasoning",
+        "utcEndDateTime",
+        "references"
+      ]
+    },
+    {
+      "id": 17878,
+      "authorId": 435,
+      "changedFields": [
+        "dateConfidenceReasoning",
+        "utcEndDateTime",
+        "references"
+      ]
+    },
+    {
+      "id": 17949,
+      "authorId": 435,
+      "changedFields": [
+        "dateConfidenceReasoning",
+        "utcEndDateTime",
+        "references"
+      ]
+    },
+    {
+      "id": 17986,
+      "authorId": 435,
+      "changedFields": [
+        "dateConfidenceReasoning",
+        "utcEndDateTime",
+        "references"
+      ]
+    },
+    {
+      "id": 18000,
+      "authorId": 435,
+      "changedFields": [
+        "dateConfidenceReasoning",
+        "utcEndDateTime",
+        "references"
+      ]
+    },
+    {
+      "id": 18190,
+      "authorId": 76,
+      "changedFields": [
+        "description",
+        "longFormSummary",
+        "dateConfidenceReasoning",
+        "utcStartDateTime",
+        "references",
+        "stocks"
+      ]
+    }
+  ],
+  "sentiment": {
+    "verified": 216,
+    "held": [
+      15801,
+      15802,
+      15803,
+      15985,
+      16361,
+      16366,
+      16367,
+      16368,
+      16375,
+      16408
+    ],
+    "finalPending": {
+      "pins": 175,
+      "comments": 0
+    },
+    "note": "Concurrent energy maintenance continued after the scoring cutoff; final backlog includes new and invalidated texts. Scores are company-news tone, not factual verification."
+  },
+  "events": {
+    "checked": 40,
+    "saved": 27,
+    "humanPreserved": 13,
+    "records": [
+      {
+        "pinId": 17597,
+        "verified": {
+          "performers": [],
+          "ticketUrl": "https://www.letsdothis.com/us/o/82706/checkout/ticket?preferred=true&eventId=268210&occurrenceId=21111176959&utm_source=website&utm_medium=organic&utm_campaign=general-ticket-selection&utm_organiser_id=82706&login=skipped",
+          "lowPrice": null,
+          "highPrice": null,
+          "priceCurrency": null,
+          "tiers": [],
+          "itinerary": [],
+          "availability": "InStock",
+          "onSaleDate": null,
+          "source": "session",
+          "sourceUrl": "https://www.baytobreakers.com/",
+          "checkedAt": "2026-10-20T14:31:16.085Z"
+        },
+        "newFields": [
+          "availability",
+          "ticketUrl"
+        ]
+      },
+      {
+        "pinId": 17540,
+        "verified": {
+          "performers": [],
+          "ticketUrl": null,
+          "lowPrice": null,
+          "highPrice": null,
+          "priceCurrency": null,
+          "tiers": [],
+          "itinerary": [],
+          "availability": null,
+          "onSaleDate": null,
+          "source": "session",
+          "sourceUrl": "https://www.denvergazette.com/2025/05/02/36th-annual-cinco-de-mayo-festival-to-take-over-civic-center-park-this-weekend/",
+          "checkedAt": "2026-10-20T14:31:16.287Z"
+        },
+        "newFields": []
+      },
+      {
+        "pinId": 18262,
+        "verified": {
+          "performers": [],
+          "ticketUrl": null,
+          "lowPrice": null,
+          "highPrice": null,
+          "priceCurrency": null,
+          "tiers": [],
+          "itinerary": [],
+          "availability": null,
+          "onSaleDate": null,
+          "source": "session",
+          "sourceUrl": "https://www.eawater.com/press-release/idra-world-congress-2026-rescheduled-to-24-28-january-2027-in-riyadh-saudi-arabia/",
+          "checkedAt": "2026-10-20T14:31:18.779Z"
+        },
+        "newFields": []
+      },
+      {
+        "pinId": 18000,
+        "verified": {
+          "performers": [],
+          "ticketUrl": null,
+          "lowPrice": null,
+          "highPrice": null,
+          "priceCurrency": null,
+          "tiers": [],
+          "itinerary": [],
+          "availability": null,
+          "onSaleDate": null,
+          "source": "session",
+          "sourceUrl": "https://www.vikingfest.org/",
+          "checkedAt": "2026-10-20T14:31:21.331Z"
+        },
+        "newFields": []
+      },
+      {
+        "pinId": 17731,
+        "verified": {
+          "performers": [],
+          "ticketUrl": null,
+          "lowPrice": null,
+          "highPrice": null,
+          "priceCurrency": null,
+          "tiers": [],
+          "itinerary": [],
+          "availability": null,
+          "onSaleDate": null,
+          "source": "session",
+          "sourceUrl": "https://bouldercreekfest.com/",
+          "checkedAt": "2026-10-20T14:31:24.043Z"
+        },
+        "newFields": []
+      },
+      {
+        "pinId": 17986,
+        "verified": {
+          "performers": [],
+          "ticketUrl": null,
+          "lowPrice": null,
+          "highPrice": null,
+          "priceCurrency": null,
+          "tiers": [],
+          "itinerary": [],
+          "availability": null,
+          "onSaleDate": null,
+          "source": "session",
+          "sourceUrl": "https://www.seattlepride.org/",
+          "checkedAt": "2026-10-20T14:31:26.627Z"
+        },
+        "newFields": []
+      },
+      {
+        "pinId": 17388,
+        "verified": {
+          "performers": [],
+          "ticketUrl": null,
+          "lowPrice": null,
+          "highPrice": null,
+          "priceCurrency": null,
+          "tiers": [],
+          "itinerary": [],
+          "availability": null,
+          "onSaleDate": null,
+          "source": "session",
+          "sourceUrl": "https://www.july4thphilly.com/",
+          "checkedAt": "2026-10-20T14:31:29.172Z"
+        },
+        "newFields": []
+      },
+      {
+        "pinId": 17676,
+        "verified": {
+          "performers": [],
+          "ticketUrl": null,
+          "lowPrice": null,
+          "highPrice": null,
+          "priceCurrency": null,
+          "tiers": [],
+          "itinerary": [],
+          "availability": null,
+          "onSaleDate": null,
+          "source": "session",
+          "sourceUrl": "https://www.capecodleague.com/",
+          "checkedAt": "2026-10-20T14:31:31.718Z"
+        },
+        "newFields": []
+      },
+      {
+        "pinId": 17403,
+        "verified": {
+          "performers": [],
+          "ticketUrl": null,
+          "lowPrice": null,
+          "highPrice": null,
+          "priceCurrency": null,
+          "tiers": [],
+          "itinerary": [],
+          "availability": null,
+          "onSaleDate": null,
+          "source": "session",
+          "sourceUrl": "https://www.capitalpride.org/the-capital-pride-alliance-announces-dates-and-registration-for-the-annual-pride-celebration/",
+          "checkedAt": "2026-10-20T14:31:34.303Z"
+        },
+        "newFields": []
+      },
+      {
+        "pinId": 17390,
+        "verified": {
+          "performers": [],
+          "ticketUrl": null,
+          "lowPrice": null,
+          "highPrice": null,
+          "priceCurrency": null,
+          "tiers": [],
+          "itinerary": [],
+          "availability": null,
+          "onSaleDate": null,
+          "source": "session",
+          "sourceUrl": "https://odundefestival.org/",
+          "checkedAt": "2026-10-20T14:31:36.974Z"
+        },
+        "newFields": []
+      },
+      {
+        "pinId": 17382,
+        "verified": {
+          "performers": [],
+          "ticketUrl": null,
+          "lowPrice": null,
+          "highPrice": null,
+          "priceCurrency": null,
+          "tiers": [],
+          "itinerary": [],
+          "availability": null,
+          "onSaleDate": null,
+          "source": "session",
+          "sourceUrl": "https://massachusetts250.org/boston-pops-gearing-up-for-major-july-4th-celebration/",
+          "checkedAt": "2026-10-20T14:31:39.527Z"
+        },
+        "newFields": []
+      },
+      {
+        "pinId": 17418,
+        "verified": {
+          "performers": [],
+          "ticketUrl": null,
+          "lowPrice": null,
+          "highPrice": null,
+          "priceCurrency": null,
+          "tiers": [],
+          "itinerary": [],
+          "availability": null,
+          "onSaleDate": null,
+          "source": "session",
+          "sourceUrl": "https://www.atlantatrackclub.org/peachtree-road-race",
+          "checkedAt": "2026-10-20T14:31:42.116Z"
+        },
+        "newFields": []
+      },
+      {
+        "pinId": 17375,
+        "verified": {
+          "performers": [],
+          "ticketUrl": null,
+          "lowPrice": null,
+          "highPrice": null,
+          "priceCurrency": null,
+          "tiers": [],
+          "itinerary": [],
+          "availability": null,
+          "onSaleDate": null,
+          "source": "session",
+          "sourceUrl": "https://www.bostonharborfest.com/",
+          "checkedAt": "2026-10-20T14:31:44.790Z"
+        },
+        "newFields": []
+      },
+      {
+        "pinId": 17949,
+        "verified": {
+          "performers": [],
+          "ticketUrl": null,
+          "lowPrice": null,
+          "highPrice": null,
+          "priceCurrency": null,
+          "tiers": [],
+          "itinerary": [],
+          "availability": null,
+          "onSaleDate": null,
+          "source": "session",
+          "sourceUrl": "https://sdmts.com/rider-info/events/sun-sea-festival-sandcastle-competition",
+          "checkedAt": "2026-10-20T14:31:47.353Z"
+        },
+        "newFields": []
+      },
+      {
+        "pinId": 17408,
+        "verified": {
+          "performers": [],
+          "ticketUrl": null,
+          "lowPrice": null,
+          "highPrice": null,
+          "priceCurrency": null,
+          "tiers": [],
+          "itinerary": [],
+          "availability": null,
+          "onSaleDate": null,
+          "source": "session",
+          "sourceUrl": "https://washington.org/visit-dc/reasons-to-attend-mubadala-open",
+          "checkedAt": "2026-10-20T14:31:50.052Z"
+        },
+        "newFields": []
+      },
+      {
+        "pinId": 17524,
+        "verified": {
+          "performers": [],
+          "ticketUrl": null,
+          "lowPrice": null,
+          "highPrice": null,
+          "priceCurrency": null,
+          "tiers": [],
+          "itinerary": [],
+          "availability": null,
+          "onSaleDate": null,
+          "source": "session",
+          "sourceUrl": "https://www.minneapolis.org/calendar/festivals/spring-summer/minneapolis-aquatennial/",
+          "checkedAt": "2026-10-20T14:31:52.604Z"
+        },
+        "newFields": []
+      },
+      {
+        "pinId": 17577,
+        "verified": {
+          "performers": [],
+          "ticketUrl": null,
+          "lowPrice": null,
+          "highPrice": null,
+          "priceCurrency": null,
+          "tiers": [],
+          "itinerary": [],
+          "availability": null,
+          "onSaleDate": null,
+          "source": "session",
+          "sourceUrl": "https://jaccc.org/events/84th-annual-nisei-week-jaccc/",
+          "checkedAt": "2026-10-20T14:31:55.217Z"
+        },
+        "newFields": []
+      },
+      {
+        "pinId": 17805,
+        "verified": {
+          "performers": [],
+          "ticketUrl": null,
+          "lowPrice": null,
+          "highPrice": null,
+          "priceCurrency": null,
+          "tiers": [],
+          "itinerary": [],
+          "availability": null,
+          "onSaleDate": null,
+          "source": "session",
+          "sourceUrl": "https://www.usopenofsurfing.com/",
+          "checkedAt": "2026-10-20T14:31:57.840Z"
+        },
+        "newFields": []
+      },
+      {
+        "pinId": 17878,
+        "verified": {
+          "performers": [],
+          "ticketUrl": null,
+          "lowPrice": null,
+          "highPrice": null,
+          "priceCurrency": null,
+          "tiers": [],
+          "itinerary": [],
+          "availability": null,
+          "onSaleDate": null,
+          "source": "session",
+          "sourceUrl": "https://www.usopen.org/",
+          "checkedAt": "2026-10-20T14:32:00.460Z"
+        },
+        "newFields": []
+      },
+      {
+        "pinId": 17594,
+        "verified": {
+          "performers": [],
+          "ticketUrl": null,
+          "lowPrice": null,
+          "highPrice": null,
+          "priceCurrency": null,
+          "tiers": [],
+          "itinerary": [],
+          "availability": null,
+          "onSaleDate": null,
+          "source": "session",
+          "sourceUrl": "https://www.visitjulian.com/#julian-dark-sky-festival",
+          "checkedAt": "2026-10-20T14:32:03.079Z"
+        },
+        "newFields": []
+      },
+      {
+        "pinId": 17421,
+        "verified": {
+          "performers": [],
+          "ticketUrl": null,
+          "lowPrice": null,
+          "highPrice": null,
+          "priceCurrency": null,
+          "tiers": [],
+          "itinerary": [],
+          "availability": null,
+          "onSaleDate": null,
+          "source": "session",
+          "sourceUrl": "https://beltline.org/art/lantern-parade/",
+          "checkedAt": "2026-10-20T14:32:05.700Z"
+        },
+        "newFields": []
+      },
+      {
+        "pinId": 17511,
+        "verified": {
+          "performers": [],
+          "ticketUrl": null,
+          "lowPrice": null,
+          "highPrice": null,
+          "priceCurrency": null,
+          "tiers": [],
+          "itinerary": [],
+          "availability": null,
+          "onSaleDate": null,
+          "source": "session",
+          "sourceUrl": "https://www.choosechicago.com/events-and-shows/arts-and-entertainment/chicago-air-and-water-show/",
+          "checkedAt": "2026-10-20T14:32:08.328Z"
+        },
+        "newFields": []
+      },
+      {
+        "pinId": 17732,
+        "verified": {
+          "performers": [],
+          "ticketUrl": null,
+          "lowPrice": null,
+          "highPrice": null,
+          "priceCurrency": null,
+          "tiers": [],
+          "itinerary": [],
+          "availability": null,
+          "onSaleDate": null,
+          "source": "session",
+          "sourceUrl": "https://www.pikespeakmarathon.org/",
+          "checkedAt": "2026-10-20T14:32:11.383Z"
+        },
+        "newFields": []
+      },
+      {
+        "pinId": 17837,
+        "verified": {
+          "performers": [],
+          "ticketUrl": null,
+          "lowPrice": null,
+          "highPrice": null,
+          "priceCurrency": null,
+          "tiers": [],
+          "itinerary": [],
+          "availability": null,
+          "onSaleDate": null,
+          "source": "session",
+          "sourceUrl": "https://djjd.org/",
+          "checkedAt": "2026-10-20T14:32:13.956Z"
+        },
+        "newFields": []
+      },
+      {
+        "pinId": 17514,
+        "verified": {
+          "performers": [],
+          "ticketUrl": "https://www.letsdothis.com/us/checkout/ticket?preferred=true&eventId=268871&occurrenceId=21111178788&ticketSlugs=6a9ee153a0bab3fadbdc1080%2C6a9eec4f1622556b35819e25&utm_source=website&utm_medium=organic&utm_campaign=website-organic-heads-up-banner&utm_organiser_id=179999",
+          "lowPrice": null,
+          "highPrice": null,
+          "priceCurrency": null,
+          "tiers": [],
+          "itinerary": [],
+          "availability": null,
+          "onSaleDate": null,
+          "source": "session",
+          "sourceUrl": "https://www.chicagomarathon.com",
+          "checkedAt": "2026-10-20T14:32:16.415Z"
+        },
+        "newFields": [
+          "ticketUrl"
+        ]
+      },
+      {
+        "pinId": 17525,
+        "verified": {
+          "performers": [],
+          "ticketUrl": "https://www.tcmevents.org/alleventsandraces/medtronictwincitiesmarathonweekend/runningstartreg",
+          "lowPrice": null,
+          "highPrice": null,
+          "priceCurrency": null,
+          "tiers": [],
+          "itinerary": [],
+          "availability": "InStock",
+          "onSaleDate": null,
+          "source": "session",
+          "sourceUrl": "https://www.tcmevents.org/alleventsandraces/medtronictwincitiesmarathonweekend/medtronictwincitiesmarathon",
+          "checkedAt": "2026-10-20T14:32:18.961Z"
+        },
+        "newFields": [
+          "availability",
+          "ticketUrl"
+        ]
+      },
+      {
+        "pinId": 4893,
+        "kept": "hand",
+        "reading": {
+          "performers": [],
+          "ticketUrl": "https://unplugged.paxsite.com/philly/en-us/registration/buy-badges.html",
+          "lowPrice": 45,
+          "highPrice": 101.99,
+          "priceCurrency": "USD",
+          "tiers": [],
+          "itinerary": [],
+          "availability": "InStock",
+          "onSaleDate": null,
+          "source": "hand",
+          "sourceUrl": "https://unplugged.paxsite.com/philly/en-us/registration/buy-badges.html",
+          "checkedAt": "2026-09-30T00:41:06.351Z"
+        }
+      },
+      {
+        "pinId": 4897,
+        "kept": "hand",
+        "reading": {
+          "performers": [],
+          "ticketUrl": "https://gdc.informafestivals.com/2027/registrations/Attendee",
+          "lowPrice": 99,
+          "highPrice": 1149,
+          "priceCurrency": "USD",
+          "tiers": [],
+          "itinerary": [],
+          "availability": "InStock",
+          "onSaleDate": null,
+          "source": "hand",
+          "sourceUrl": "https://gdc.informafestivals.com/2027/registrations/Attendee",
+          "checkedAt": "2026-09-30T00:43:12.714Z"
+        }
+      },
+      {
+        "pinId": 4900,
+        "kept": "hand",
+        "reading": {
+          "performers": [],
+          "ticketUrl": "https://cart.sxsw.com/",
+          "lowPrice": 625,
+          "highPrice": 1495,
+          "priceCurrency": "USD",
+          "tiers": [],
+          "itinerary": [],
+          "availability": "InStock",
+          "onSaleDate": null,
+          "source": "hand",
+          "sourceUrl": "https://cart.sxsw.com/",
+          "checkedAt": "2026-09-30T00:44:51.378Z"
+        }
+      },
+      {
+        "pinId": 4905,
+        "kept": "hand",
+        "reading": {
+          "performers": [],
+          "ticketUrl": "https://www.c2e2.com/en-us/buy/tickets.html",
+          "lowPrice": 50.14,
+          "highPrice": 420.73,
+          "priceCurrency": "USD",
+          "tiers": [],
+          "itinerary": [],
+          "availability": "InStock",
+          "onSaleDate": null,
+          "source": "hand",
+          "sourceUrl": "https://www.c2e2.com/en-us/buy/tickets.html",
+          "checkedAt": "2026-09-30T00:47:36.648Z"
+        }
+      },
+      {
+        "pinId": 4913,
+        "kept": "hand",
+        "reading": {
+          "performers": [],
+          "ticketUrl": null,
+          "lowPrice": null,
+          "highPrice": null,
+          "priceCurrency": null,
+          "tiers": [],
+          "itinerary": [],
+          "availability": "PreOrder",
+          "onSaleDate": null,
+          "source": "hand",
+          "sourceUrl": "https://animenyc.com/",
+          "checkedAt": "2026-09-30T00:51:38.030Z"
+        }
+      },
+      {
+        "pinId": 5202,
+        "kept": "hand",
+        "reading": {
+          "performers": [],
+          "ticketUrl": "https://tabletop.events/conventions/bgg.con-2026",
+          "lowPrice": 175,
+          "highPrice": 450,
+          "priceCurrency": "USD",
+          "tiers": [],
+          "itinerary": [],
+          "availability": "InStock",
+          "onSaleDate": null,
+          "source": "hand",
+          "sourceUrl": "https://tabletop.events/conventions/bgg.con-2026",
+          "checkedAt": "2026-10-02T14:54:48.282Z"
+        }
+      },
+      {
+        "pinId": 5200,
+        "kept": "hand",
+        "reading": {
+          "performers": [],
+          "ticketUrl": "https://www.messe-ticket.de/SWM_SHOP/Spiel2026",
+          "lowPrice": 13,
+          "highPrice": 35,
+          "priceCurrency": "EUR",
+          "tiers": [],
+          "itinerary": [],
+          "availability": "InStock",
+          "onSaleDate": null,
+          "source": "hand",
+          "sourceUrl": "https://www.messe-ticket.de/SWM_SHOP/Spiel2026",
+          "checkedAt": "2026-10-02T14:54:09.132Z"
+        }
+      },
+      {
+        "pinId": 5493,
+        "kept": "hand",
+        "reading": {
+          "performers": [],
+          "ticketUrl": "https://tickets.formula1.com/en/f1-56257-qatar",
+          "lowPrice": 600,
+          "highPrice": 2000,
+          "priceCurrency": "QAR",
+          "tiers": [],
+          "itinerary": [],
+          "availability": "InStock",
+          "onSaleDate": null,
+          "source": "hand",
+          "sourceUrl": "https://www.qatar-tribune.com/article/249936/latest-news/formula-1-qatar-airways-qatar-grand-prix-2026-100-days-to-go-as-key-visual-unveiled",
+          "checkedAt": "2026-10-03T22:15:28.939Z"
+        }
+      },
+      {
+        "pinId": 5439,
+        "kept": "hand",
+        "reading": {
+          "performers": [],
+          "ticketUrl": null,
+          "lowPrice": 0,
+          "highPrice": 0,
+          "priceCurrency": "JPY",
+          "tiers": [],
+          "itinerary": [],
+          "availability": "PreOrder",
+          "onSaleDate": null,
+          "source": "hand",
+          "sourceUrl": "https://www.jumpfesta.com/",
+          "checkedAt": "2026-10-03T01:17:13.972Z"
+        }
+      },
+      {
+        "pinId": 5496,
+        "kept": "hand",
+        "reading": {
+          "performers": [],
+          "ticketUrl": "https://www.motogp.com.au/tickets",
+          "lowPrice": 50,
+          "highPrice": 99,
+          "priceCurrency": "AUD",
+          "tiers": [],
+          "itinerary": [],
+          "availability": "InStock",
+          "onSaleDate": "2026-05-26T02:00:00.000Z",
+          "source": "hand",
+          "sourceUrl": "https://www.justbikes.com.au/news-and-reviews/ticket-guide-motogp-grand-prix-of-australia-2026/1097695",
+          "checkedAt": "2026-10-03T22:15:54.750Z"
+        }
+      },
+      {
+        "pinId": 5518,
+        "kept": "hand",
+        "reading": {
+          "performers": [],
+          "ticketUrl": "https://www.vrc.com.au/products/2026-2027/general-admission/general-admission/?eventId=92743",
+          "lowPrice": 120,
+          "highPrice": 2195,
+          "priceCurrency": "AUD",
+          "tiers": [],
+          "itinerary": [],
+          "availability": "InStock",
+          "onSaleDate": null,
+          "source": "hand",
+          "sourceUrl": "https://www.vrc.com.au/race-days-and-events/2026-2027/lexus-melbourne-cup-day/",
+          "checkedAt": "2026-10-03T22:18:37.655Z"
+        }
+      },
+      {
+        "pinId": 4883,
+        "verified": {
+          "performers": [],
+          "ticketUrl": null,
+          "lowPrice": null,
+          "highPrice": null,
+          "priceCurrency": null,
+          "tiers": [],
+          "itinerary": [],
+          "availability": null,
+          "onSaleDate": null,
+          "source": "session",
+          "sourceUrl": "https://www.marinebusinessnews.com.au/2026/06/informa-to-launch-australian-international-boat-show-in-sydneys-darling-harbour/",
+          "checkedAt": "2026-10-20T14:32:22.111Z"
+        },
+        "newFields": []
+      },
+      {
+        "pinId": 2545,
+        "kept": "hand",
+        "reading": {
+          "performers": [],
+          "ticketUrl": "https://www.lucasmuseum.org/tickets",
+          "lowPrice": 21,
+          "highPrice": 25,
+          "priceCurrency": "USD",
+          "tiers": [
+            {
+              "label": "Adult",
+              "price": 25
+            },
+            {
+              "label": "Senior (65+)",
+              "price": 21
+            },
+            {
+              "label": "Children (17 and under)",
+              "price": 0
+            },
+            {
+              "label": "Members",
+              "price": 0
+            }
+          ],
+          "itinerary": [],
+          "availability": "InStock",
+          "onSaleDate": null,
+          "source": "hand",
+          "sourceUrl": "https://www.lucasmuseum.org/plan-your-visit",
+          "checkedAt": "2026-10-10T21:16:13.547Z"
+        }
+      },
+      {
+        "pinId": 2544,
+        "kept": "hand",
+        "reading": {
+          "performers": [],
+          "ticketUrl": "https://www.lacma.org/tickets",
+          "lowPrice": 15,
+          "highPrice": 30,
+          "priceCurrency": "USD",
+          "tiers": [
+            {
+              "label": "Adults",
+              "price": 30
+            },
+            {
+              "note": "With valid ID",
+              "label": "Adults, L.A. County residents",
+              "price": 25
+            },
+            {
+              "note": "With ID; $21 for L.A. County residents",
+              "label": "Seniors (65+)",
+              "price": 26
+            },
+            {
+              "note": "With ID; $21 for L.A. County residents",
+              "label": "Students (18+)",
+              "price": 26
+            },
+            {
+              "note": "$21 for L.A. County residents",
+              "label": "Visitors with disability",
+              "price": 26
+            },
+            {
+              "note": "Free for L.A. County residents",
+              "label": "Teens (13–17)",
+              "price": 15
+            },
+            {
+              "note": "Free for L.A. County residents",
+              "label": "Youth (3–12)",
+              "price": 15
+            },
+            {
+              "label": "Youth (2 & under)",
+              "price": 0
+            },
+            {
+              "label": "Members",
+              "price": 0
+            }
+          ],
+          "itinerary": [],
+          "availability": "InStock",
+          "onSaleDate": null,
+          "source": "hand",
+          "sourceUrl": "https://www.lacma.org/tickets",
+          "checkedAt": "2026-10-10T21:30:59.006Z"
+        }
+      }
+    ]
+  },
+  "ads": {
+    "checks": {
+      "pin": 63,
+      "product": 36,
+      "holiday": 80
+    },
+    "productionReadback": {
+      "PinAd": {
+        "verified": 64,
+        "refreshed": 58,
+        "added": 1
+      },
+      "ProductAd": {
+        "verified": 36,
+        "refreshed": 36,
+        "added": 0
+      },
+      "HolidayAd": {
+        "verified": 161,
+        "refreshed": 64,
+        "added": 5
+      }
+    },
+    "newPinAds": 1,
+    "newHolidayAds": 5,
+    "titleTranslations": 120,
+    "languages": 15,
+    "missingOrStaleTitleTranslations": [],
+    "pendingSponsoredTranslations": {
+      "ads": [],
+      "nextAfter": null
+    },
+    "holidayRejected": {
+      "B0H74TX93N": "Generic festival glitter is not specific traditional Carnival coverage.",
+      "B0DLFX3G2Q": "Generic craft feathers lack a specific Carnival use in the listing.",
+      "B0H2ZP71CJ": "Halloween lace masquerade listing does not establish Brazilian Carnival coverage.",
+      "B0FM32CNJ6": "Stereotyped rabbi costume is not appropriate traditional Purim merchandise."
+    },
+    "initialHolidayCoverage": [
+      {
+        "id": "double-ninth",
+        "name": "Double Ninth Festival",
+        "start": "2026-10-18",
+        "daysFromStart": 2,
+        "reason": "window",
+        "tiers": {
+          "value": 2,
+          "mid": 2,
+          "premium": 2
+        },
+        "short": []
+      },
+      {
+        "id": "diwali",
+        "name": "Diwali",
+        "start": "2026-11-08",
+        "daysFromStart": -19,
+        "reason": "window",
+        "tiers": {
+          "value": 3,
+          "mid": 3,
+          "premium": 1
+        },
+        "short": [
+          "premium"
+        ]
+      },
+      {
+        "id": "sukkot",
+        "name": "Sukkot",
+        "start": "2026-09-26",
+        "daysFromStart": 24,
+        "reason": "window",
+        "tiers": {
+          "value": 3,
+          "mid": 2,
+          "premium": 2
+        },
+        "short": []
+      },
+      {
+        "id": "halloween",
+        "name": "Halloween",
+        "start": "2026-10-31",
+        "daysFromStart": -11,
+        "reason": "window",
+        "tiers": {
+          "value": 2,
+          "mid": 4,
+          "premium": 2
+        },
+        "short": []
+      },
+      {
+        "id": "dia-de-muertos",
+        "name": "Day of the Dead",
+        "start": "2026-11-01",
+        "daysFromStart": -12,
+        "reason": "window",
+        "tiers": {
+          "value": 2,
+          "mid": 2,
+          "premium": 2
+        },
+        "short": []
+      },
+      {
+        "id": "thanksgiving",
+        "name": "Thanksgiving",
+        "start": "2026-11-26",
+        "daysFromStart": -37,
+        "reason": "window",
+        "tiers": {
+          "value": 3,
+          "mid": 2,
+          "premium": 2
+        },
+        "short": []
+      },
+      {
+        "id": "india-navratri",
+        "name": "India's Navratri",
+        "start": "2026-10-11",
+        "daysFromStart": 9,
+        "reason": "window",
+        "tiers": {
+          "value": 2,
+          "mid": 3,
+          "premium": 2
+        },
+        "short": []
+      },
+      {
+        "id": "germany-oktoberfest",
+        "name": "Germany's Oktoberfest",
+        "start": "2026-09-19",
+        "daysFromStart": 31,
+        "reason": "window",
+        "tiers": {
+          "value": 2,
+          "mid": 2,
+          "premium": 2
+        },
+        "short": []
+      },
+      {
+        "id": "songkran",
+        "name": "Thailand's Songkran",
+        "start": null,
+        "daysFromStart": null,
+        "reason": "pins",
+        "tiers": {
+          "value": 0,
+          "mid": 2,
+          "premium": 0
+        },
+        "short": [
+          "value",
+          "premium"
+        ]
+      },
+      {
+        "id": "hanukkah",
+        "name": "Hanukkah",
+        "start": null,
+        "daysFromStart": null,
+        "reason": "pins",
+        "tiers": {
+          "value": 1,
+          "mid": 3,
+          "premium": 1
+        },
+        "short": [
+          "value",
+          "premium"
+        ]
+      },
+      {
+        "id": "kwanzaa",
+        "name": "Kwanzaa",
+        "start": null,
+        "daysFromStart": null,
+        "reason": "pins",
+        "tiers": {
+          "value": 2,
+          "mid": 1,
+          "premium": 0
+        },
+        "short": [
+          "mid",
+          "premium"
+        ]
+      },
+      {
+        "id": "lantern-festival",
+        "name": "Lantern Festival",
+        "start": null,
+        "daysFromStart": null,
+        "reason": "pins",
+        "tiers": {
+          "value": 1,
+          "mid": 2,
+          "premium": 0
+        },
+        "short": [
+          "value",
+          "premium"
+        ]
+      },
+      {
+        "id": "nowruz",
+        "name": "Nowruz",
+        "start": null,
+        "daysFromStart": null,
+        "reason": "pins",
+        "tiers": {
+          "value": 1,
+          "mid": 1,
+          "premium": 1
+        },
+        "short": [
+          "value",
+          "mid",
+          "premium"
+        ]
+      },
+      {
+        "id": "passover",
+        "name": "Passover",
+        "start": null,
+        "daysFromStart": null,
+        "reason": "pins",
+        "tiers": {
+          "value": 1,
+          "mid": 3,
+          "premium": 2
+        },
+        "short": [
+          "value"
+        ]
+      },
+      {
+        "id": "ramadan",
+        "name": "Ramadan",
+        "start": null,
+        "daysFromStart": null,
+        "reason": "pins",
+        "tiers": {
+          "value": 2,
+          "mid": 2,
+          "premium": 2
+        },
+        "short": []
+      },
+      {
+        "id": "dongzhi",
+        "name": "Dongzhi Festival",
+        "start": null,
+        "daysFromStart": null,
+        "reason": "pins",
+        "tiers": {
+          "value": 2,
+          "mid": 1,
+          "premium": 0
+        },
+        "short": [
+          "mid",
+          "premium"
+        ]
+      },
+      {
+        "id": "mexico-posadas",
+        "name": "Mexico's Las Posadas",
+        "start": null,
+        "daysFromStart": null,
+        "reason": "pins",
+        "tiers": {
+          "value": 0,
+          "mid": 2,
+          "premium": 2
+        },
+        "short": [
+          "value"
+        ]
+      },
+      {
+        "id": "eid-al-adha",
+        "name": "Eid al-Adha",
+        "start": null,
+        "daysFromStart": null,
+        "reason": "pins",
+        "tiers": {
+          "value": 2,
+          "mid": 1,
+          "premium": 2
+        },
+        "short": [
+          "mid"
+        ]
+      },
+      {
+        "id": "chuseok",
+        "name": "Korea's Chuseok",
+        "start": null,
+        "daysFromStart": null,
+        "reason": "pins",
+        "tiers": {
+          "value": 2,
+          "mid": 2,
+          "premium": 2
+        },
+        "short": []
+      },
+      {
+        "id": "dragon-boat",
+        "name": "Dragon Boat Festival",
+        "start": null,
+        "daysFromStart": null,
+        "reason": "pins",
+        "tiers": {
+          "value": 1,
+          "mid": 2,
+          "premium": 1
+        },
+        "short": [
+          "value",
+          "premium"
+        ]
+      },
+      {
+        "id": "mexico-cinco-de-mayo",
+        "name": "Mexico's Cinco de Mayo",
+        "start": null,
+        "daysFromStart": null,
+        "reason": "pins",
+        "tiers": {
+          "value": 2,
+          "mid": 1,
+          "premium": 0
+        },
+        "short": [
+          "mid",
+          "premium"
+        ]
+      },
+      {
+        "id": "mid-autumn",
+        "name": "Mid-Autumn Festival",
+        "start": null,
+        "daysFromStart": null,
+        "reason": "pins",
+        "tiers": {
+          "value": 2,
+          "mid": 2,
+          "premium": 2
+        },
+        "short": []
+      },
+      {
+        "id": "india-ganesh-chaturthi",
+        "name": "India's Ganesh Chaturthi",
+        "start": null,
+        "daysFromStart": null,
+        "reason": "pins",
+        "tiers": {
+          "value": 2,
+          "mid": 2,
+          "premium": 2
+        },
+        "short": []
+      },
+      {
+        "id": "us-independence-day",
+        "name": "US Independence Day",
+        "start": null,
+        "daysFromStart": null,
+        "reason": "pins",
+        "tiers": {
+          "value": 2,
+          "mid": 2,
+          "premium": 2
+        },
+        "short": []
+      },
+      {
+        "id": "eid-al-fitr",
+        "name": "Eid al-Fitr",
+        "start": null,
+        "daysFromStart": null,
+        "reason": "pins",
+        "tiers": {
+          "value": 1,
+          "mid": 2,
+          "premium": 2
+        },
+        "short": [
+          "value"
+        ]
+      },
+      {
+        "id": "india-raksha-bandhan",
+        "name": "India's Raksha Bandhan",
+        "start": null,
+        "daysFromStart": null,
+        "reason": "pins",
+        "tiers": {
+          "value": 2,
+          "mid": 2,
+          "premium": 0
+        },
+        "short": [
+          "premium"
+        ]
+      },
+      {
+        "id": "st-patricks-day",
+        "name": "St. Patrick's Day",
+        "start": null,
+        "daysFromStart": null,
+        "reason": "pins",
+        "tiers": {
+          "value": 1,
+          "mid": 2,
+          "premium": 1
+        },
+        "short": [
+          "value",
+          "premium"
+        ]
+      },
+      {
+        "id": "easter",
+        "name": "Easter",
+        "start": null,
+        "daysFromStart": null,
+        "reason": "pins",
+        "tiers": {
+          "value": 1,
+          "mid": 2,
+          "premium": 0
+        },
+        "short": [
+          "value",
+          "premium"
+        ]
+      },
+      {
+        "id": "rosh-hashanah",
+        "name": "Rosh Hashanah",
+        "start": null,
+        "daysFromStart": null,
+        "reason": "pins",
+        "tiers": {
+          "value": 2,
+          "mid": 2,
+          "premium": 2
+        },
+        "short": []
+      },
+      {
+        "id": "us-fathers-day",
+        "name": "Father's Day (US)",
+        "start": null,
+        "daysFromStart": null,
+        "reason": "pins",
+        "tiers": {
+          "value": 2,
+          "mid": 1,
+          "premium": 0
+        },
+        "short": [
+          "mid",
+          "premium"
+        ]
+      },
+      {
+        "id": "brazil-carnival",
+        "name": "Brazil's Carnival",
+        "start": null,
+        "daysFromStart": null,
+        "reason": "pins",
+        "tiers": {
+          "value": 2,
+          "mid": 2,
+          "premium": 0
+        },
+        "short": [
+          "premium"
+        ]
+      },
+      {
+        "id": "purim",
+        "name": "Purim",
+        "start": null,
+        "daysFromStart": null,
+        "reason": "pins",
+        "tiers": {
+          "value": 1,
+          "mid": 2,
+          "premium": 0
+        },
+        "short": [
+          "value",
+          "premium"
+        ]
+      },
+      {
+        "id": "christmas",
+        "name": "Christmas",
+        "start": null,
+        "daysFromStart": null,
+        "reason": "pins",
+        "tiers": {
+          "value": 0,
+          "mid": 0,
+          "premium": 0
+        },
+        "short": [
+          "value",
+          "mid",
+          "premium"
+        ]
+      },
+      {
+        "id": "mardi-gras",
+        "name": "Mardi Gras",
+        "start": null,
+        "daysFromStart": null,
+        "reason": "pins",
+        "tiers": {
+          "value": 0,
+          "mid": 0,
+          "premium": 0
+        },
+        "short": [
+          "value",
+          "mid",
+          "premium"
+        ]
+      },
+      {
+        "id": "lunar-new-year",
+        "name": "Lunar New Year",
+        "start": null,
+        "daysFromStart": null,
+        "reason": "pins",
+        "tiers": {
+          "value": 0,
+          "mid": 0,
+          "premium": 0
+        },
+        "short": [
+          "value",
+          "mid",
+          "premium"
+        ]
+      },
+      {
+        "id": "india-holi",
+        "name": "India's Holi",
+        "start": null,
+        "daysFromStart": null,
+        "reason": "pins",
+        "tiers": {
+          "value": 1,
+          "mid": 2,
+          "premium": 1
+        },
+        "short": [
+          "value",
+          "premium"
+        ]
+      },
+      {
+        "id": "valentines-day",
+        "name": "Valentine's Day",
+        "start": null,
+        "daysFromStart": null,
+        "reason": "pins",
+        "tiers": {
+          "value": 0,
+          "mid": 0,
+          "premium": 0
+        },
+        "short": [
+          "value",
+          "mid",
+          "premium"
+        ]
+      },
+      {
+        "id": "us-mothers-day",
+        "name": "Mother's Day (US)",
+        "start": null,
+        "daysFromStart": null,
+        "reason": "pins",
+        "tiers": {
+          "value": 0,
+          "mid": 0,
+          "premium": 0
+        },
+        "short": [
+          "value",
+          "mid",
+          "premium"
+        ]
+      }
+    ],
+    "initialHolidayResearchGaps": [
+      {
+        "holiday": "diwali",
+        "tier": "premium",
+        "why": "no search result in this price range clears the bar"
+      },
+      {
+        "holiday": "nowruz",
+        "tier": "value",
+        "why": "no search result in this price range clears the bar"
+      },
+      {
+        "holiday": "nowruz",
+        "tier": "mid",
+        "why": "no search result in this price range clears the bar"
+      },
+      {
+        "holiday": "nowruz",
+        "tier": "premium",
+        "why": "no search result in this price range clears the bar"
+      },
+      {
+        "holiday": "brazil-carnival",
+        "tier": "premium",
+        "why": "The listing page could not be read (no buy-box price (8Pack Halloween Carnival Feather Costume Set, Women Feather Showgirl Outfit)); try again later."
+      },
+      {
+        "holiday": "purim",
+        "tier": "value",
+        "why": "The listing page could not be read (no buy-box price (Purim Baskets)); try again later.; The listing page could not be read (HTTP 500); try again later."
+      },
+      {
+        "holiday": "purim",
+        "tier": "premium",
+        "why": "no search result in this price range clears the bar"
+      }
+    ],
+    "newlyBrokenPinAds": [
+      {
+        "pinId": 6348,
+        "adId": 23,
+        "url": "https://www.amazon.com/dp/B09X1B645K",
+        "title": "Citizen Men's Classic Eco-Drive Watch with 3-Hand Day and Date",
+        "problem": "out of stock or no buy-box price"
+      }
+    ],
+    "newlyBrokenHolidayAds": [
+      {
+        "holiday": "dia-de-muertos",
+        "adId": 32,
+        "url": "https://www.amazon.com/dp/B0F7KTWVH3",
+        "title": "AerWo Dia De Los Muertos Altar, Wooden Marigold Day of the Dead Decorations",
+        "problem": "out of stock or no buy-box price"
+      },
+      {
+        "holiday": "dongzhi",
+        "adId": 93,
+        "url": "https://www.amazon.com/dp/B0727XNCVH",
+        "title": "Terrasoul Superfoods Organic Black Sesame Seeds, 2 Lbs - Raw | Unhulled | Lab-Tested",
+        "problem": "out of stock or no buy-box price"
+      }
+    ]
+  },
+  "personTrades": {
+    "filings": 1,
+    "trades": 2,
+    "unmatched": [],
+    "failed": [
+      "Bryan Bedford BC33926D1346296F85258D86003449A3: all transaction line(s) unreadable (scanned report or unknown layout) - not stored, https://extapps2.oge.gov/201/Presiden.nsf/PAS+Index/BC33926D1346296F85258D86003449A3/$FILE/Bryan-Bedford-11.03.2025-278T.pdf"
+    ],
+    "production": {
+      "added": 2,
+      "missing": []
+    }
+  },
+  "review": {
+    "resolved": [
+      3655,
+      5491,
+      1989
+    ],
+    "marked": [
+      {
+        "id": 115,
+        "pinId": 4893,
+        "reason": "October20 official PAX ticket page lists adult single days USD52.50/55.65 incl fees,3-day112.34 sold out; human row retains45–101.99. Reconcile fee basis/available products before changing human reading. https://unplugged.paxsite.com/philly/en-us/registration/buy-badges.html",
+        "markedBy": null,
+        "jobRunId": 14,
+        "resolution": null,
+        "utcCreatedDateTime": "2026-10-20T15:21:29.583Z",
+        "utcResolvedDateTime": null
+      },
+      {
+        "id": 116,
+        "pinId": 4897,
+        "reason": "October20 official2027 GDC price page lists Business Hall125,Festival Hall175,Festival549,GameChanger1249USD early rate; human row99–1149. Verify current checkout scope before replacing hand entry. https://gdconf.com/passes-pricing/",
+        "markedBy": null,
+        "jobRunId": 14,
+        "resolution": null,
+        "utcCreatedDateTime": "2026-10-20T15:21:32.178Z",
+        "utcResolvedDateTime": null
+      },
+      {
+        "id": 117,
+        "pinId": 4913,
+        "reason": "October20 official2027 AnimeNYC tickets page says single/fourday/ANYC+ tickets coming in2027, no on-sale date or price. Hand entry says PreOrder; a coming-soon notice alone does not support preorder. Reconcile human reading. https://animenyc.com/tickets/",
+        "markedBy": null,
+        "jobRunId": 14,
+        "resolution": null,
+        "utcCreatedDateTime": "2026-10-20T15:21:34.789Z",
+        "utcResolvedDateTime": null
+      },
+      {
+        "id": 118,
+        "pinId": 4951,
+        "reason": "October20 registry still NOT_YET_RECRUITING; start2026-10-20 ESTIMATED. ITM October15 expects coming weeks subject to ethical/regulatory approvals. Pin now clearly retains an estimate; recheck actual initiation before confirming. https://clinicaltrials.gov/study/NCT07842107",
+        "markedBy": null,
+        "jobRunId": 14,
+        "resolution": null,
+        "utcCreatedDateTime": "2026-10-20T15:21:37.410Z",
+        "utcResolvedDateTime": null
+      },
+      {
+        "id": 119,
+        "pinId": 17540,
+        "reason": "October20 source is a2025 DenverGazette article; no exact2027 Cinco deMayo program or admission verified. Month-wide May estimate retained; check NEWSED/official festival announcement before firming. https://cincodemayodenver.com/",
+        "markedBy": null,
+        "jobRunId": 14,
+        "resolution": null,
+        "utcCreatedDateTime": "2026-10-20T15:21:40.030Z",
+        "utcResolvedDateTime": null
+      },
+      {
+        "id": 120,
+        "pinId": 17837,
+        "reason": "October20 DJJD homepage retains September9–13,2026 hero while individual calendar items say September10–12,2027. Do not infer full2027 program from mixed-year page; obtain explicit organizer2027 program before changing whole festival span. https://djjd.org/",
+        "markedBy": null,
+        "jobRunId": 14,
+        "resolution": null,
+        "utcCreatedDateTime": "2026-10-20T15:21:43.593Z",
+        "utcResolvedDateTime": null
+      }
+    ]
+  },
+  "localCatchUp": {
+    "scoresSaved": 155,
+    "scoresSkippedForLocalTextOrAbsentPin": 61,
+    "eventsSaved": 27
+  },
+  "publicChecks": [
+    {
+      "pinId": 18456,
+      "status": 200,
+      "url": "https://www.chronopin.com/pin/18456/nab-announces-up-to-2-500-job-cuts-in-fy2027-restructure",
+      "title": "NAB Announces Up to 2,500 Job Cuts in FY2027 Restructure · Chronopin"
+    },
+    {
+      "pinId": 18457,
+      "status": 200,
+      "url": "https://www.chronopin.com/pin/18457/itt-goulds-pumps-plans-us-31-million-memphis-expansion-and-57-jobs",
+      "title": "ITT Goulds Pumps Plans US$31 Million Memphis Expansion and 57 Jobs · Chronopin"
+    },
+    {
+      "pinId": 18458,
+      "status": 200,
+      "url": "https://www.chronopin.com/pin/18458/qualcomm-tells-staff-of-global-job-cuts-with-notices-starting-in-november",
+      "title": "Qualcomm Tells Staff of Global Job Cuts, With Notices Starting in November · Chronopin"
+    },
+    {
+      "pinId": 18460,
+      "status": 200,
+      "url": "https://www.chronopin.com/pin/18460/bank-of-russia-is-forecast-to-hold-its-key-rate-at-14-on-october-23",
+      "title": "Bank of Russia Is Forecast to Hold Its Key Rate at 14% on October 23 · Chronopin",
+      "predictedVisible": true
+    },
+    {
+      "pinId": 4301,
+      "status": 200,
+      "url": "https://www.chronopin.com/pin/4301/rtx-reports-q3-2026-sales-rise-11-and-full-year-outlook-increases",
+      "title": "RTX Reports Q3 2026: Sales Rise 11% and Full-Year Outlook Increases · Chronopin"
+    },
+    {
+      "pinId": 4299,
+      "status": 200,
+      "url": "https://www.chronopin.com/pin/4299/northrop-grumman-q3-2026-sales-rise-7-and-backlog-reaches-us-110-billion",
+      "title": "Northrop Grumman Q3 2026: Sales Rise 7% and Backlog Reaches US$110 Billion · Chronopin"
+    },
+    {
+      "pinId": 18190,
+      "status": 200,
+      "url": "https://www.chronopin.com/pin/18190/starship-flight-15-is-forecast-for-the-second-half-of-november",
+      "title": "Starship Flight 15 Is Forecast for the Second Half of November · Chronopin"
+    },
+    {
+      "pinId": 1989,
+      "status": 200,
+      "url": "https://www.chronopin.com/pin/1989/google-releases-its-next-gemini-pro-model",
+      "title": "Google Releases Its Next Gemini Pro Model · Chronopin"
+    },
+    {
+      "pinId": 17597,
+      "status": 200,
+      "url": "https://www.chronopin.com/pin/17597/bay-to-breakers-san-francisco-seasonal-activity",
+      "title": "Bay to Breakers — San Francisco seasonal activity · Chronopin"
+    },
+    {
+      "pinId": 4897,
+      "status": 200,
+      "url": "https://www.chronopin.com/pin/4897/gdc-festival-of-gaming-2027-opens-at-moscone-center",
+      "title": "GDC Festival of Gaming 2027 Opens at Moscone Center · Chronopin"
+    },
+    {
+      "pinId": 2004,
+      "status": 200,
+      "url": "https://www.chronopin.com/pin/2004/h3-successfully-launches-japan-s-martian-moons-exploration-mission",
+      "title": "H3 Successfully Launches Japan’s Martian Moons eXploration Mission · Chronopin"
+    },
+    {
+      "pinId": 3655,
+      "status": 200,
+      "url": "https://www.chronopin.com/pin/3655/new-york-comic-con-marks-its-20th-year-at-the-javits-center",
+      "title": "New York Comic Con Marks Its 20th Year at the Javits Center · Chronopin"
+    },
+    {
+      "pinId": 5491,
+      "status": 200,
+      "url": "https://www.chronopin.com/pin/5491/verstappen-wins-the-2026-singapore-grand-prix-ahead-of-leclerc-and-antonelli",
+      "title": "Verstappen Wins the 2026 Singapore Grand Prix Ahead of Leclerc and Antonelli · Chronopin"
+    }
+  ],
+  "mediaCount": 6,
+  "noDeployment": true,
+  "noPostRunPull": true,
+  "evidenceDirectory": ".scrape/news-job-2026-10-20",
+  "scoreIds": [
+    1987,
+    1989,
+    2004,
+    3655,
+    4299,
+    4301,
+    4951,
+    5491,
+    16016,
+    18190,
+    18197,
+    18200,
+    18206,
+    18207,
+    18208,
+    18232,
+    18233,
+    18236,
+    18239,
+    18245,
+    18249,
+    18282,
+    18283,
+    18284,
+    18285,
+    18286,
+    18288,
+    18290,
+    18292,
+    18294,
+    18297,
+    18298,
+    18299,
+    18307,
+    18308,
+    18309,
+    18310,
+    18311,
+    18312,
+    18313,
+    18314,
+    18315,
+    18316,
+    18317,
+    18318,
+    18319,
+    18320,
+    18321,
+    18322,
+    18323,
+    18324,
+    18325,
+    18326,
+    18327,
+    18328,
+    18329,
+    18330,
+    18331,
+    18332,
+    18333,
+    18334,
+    18335,
+    18336,
+    18337,
+    18338,
+    18339,
+    18340,
+    18341,
+    18342,
+    18343,
+    18344,
+    18345,
+    18346,
+    18347,
+    18348,
+    18349,
+    18350,
+    18351,
+    18352,
+    18353,
+    18354,
+    18355,
+    18356,
+    18357,
+    18358,
+    18359,
+    18360,
+    18361,
+    18362,
+    18363,
+    18364,
+    18365,
+    18366,
+    18367,
+    18368,
+    18369,
+    18370,
+    18371,
+    18372,
+    18373,
+    18374,
+    18375,
+    18376,
+    18377,
+    18378,
+    18379,
+    18380,
+    18381,
+    18382,
+    18383,
+    18384,
+    18385,
+    18386,
+    18387,
+    18388,
+    18389,
+    18390,
+    18391,
+    18392,
+    18393,
+    18394,
+    18395,
+    18396,
+    18397,
+    18398,
+    18399,
+    18400,
+    18401,
+    18402,
+    18403,
+    18404,
+    18405,
+    18406,
+    18407,
+    18408,
+    18409,
+    18410,
+    18411,
+    18412,
+    18413,
+    18414,
+    18415,
+    18416,
+    18417,
+    18419,
+    18423,
+    18425,
+    18426,
+    18427,
+    18428,
+    18429,
+    18430,
+    18431,
+    18432,
+    18433,
+    18434,
+    18435,
+    18436,
+    18437,
+    18438,
+    18439,
+    18440,
+    18441,
+    18442,
+    18443,
+    18456,
+    18457,
+    18458,
+    18450,
+    18451,
+    18452,
+    18453,
+    18454,
+    18455,
+    18459,
+    18461,
+    18462,
+    18463,
+    18464,
+    18465,
+    18466,
+    18467,
+    18468,
+    18469,
+    18470,
+    18471,
+    18472,
+    18473,
+    18474,
+    18475,
+    18476,
+    18477,
+    18478,
+    18479,
+    18480,
+    18481,
+    18482,
+    18483,
+    18484,
+    18485,
+    18486,
+    18487,
+    18488,
+    18489,
+    18490,
+    18491,
+    18492,
+    18493,
+    18494,
+    18495,
+    18496,
+    18497,
+    18498,
+    18499,
+    18500,
+    18501
+  ]
+}

@@ -1,18 +1,18 @@
 # Japan restaurant target audit — October 16, 2026
 
-Target: **30 distinct eligible restaurants in every tab of every city**. **628 verified memberships; 121 still missing**. This target remains incomplete; surplus in another tab does not offset a shortage.
+Target: **30 distinct eligible restaurants in every tab of every city**. **630 verified memberships; 120 still missing**. This target remains incomplete; surplus in another tab does not offset a shortage.
 
-**Batch 105 published and publicly verified (October 20, 2026):** Added **six new restaurant pins, 314 ordinary menu entries, two scheduled offers and 28 credited Azure photos**. Four mimimi Jiyugaoka restaurants bring **Tokyo Just opened to 30/30**: guu table, HoaHoa, Yohaku and LALA PASTA. Added upcoming Tako8 Otesuji in Kyoto and newly opened Kitahama Yakitori porc in Osaka. Enriched existing Moriokake with four unpriced drink categories while preserving its original pin, author, native slug, five-item priced obanzai board and gallery. All seven profiles, 319 ordinary entries (314 new, five preserved), two offer-menu entries and nine native title/image memberships verified locally and over public production HTTPS. Two schedules passed 22 boundary assertions plus next-start, Monday-closure and expiry checks. Added eight memberships and reduced shortages by six: **628 memberships / 121 missing**. No deployment. [Batch evidence](restaurant-japan-30-japan105-2026-10-20.json).
+**Batch 106 published and publicly verified (October 20, 2026):** Added **two new restaurant pins, 178 ordinary menu entries and 12 credited Azure photos**: Yakitori Don Osaka Juso (October 15) and Kuroge Wagyu Mabushi Akatsuki Tenjin (October 1). Exact branch dates, menus, gallery credits and native title/image cards verified locally and over public production HTTPS. Don operator-directory and booking-page late hours conflict and are recorded explicitly; Akatsuki’s erroneous English surcharge translation is excluded in favor of its Japanese original. Existing Cheese Plus, Samjo and Torikage pins preserved. Fukuoka Just opened reaches **22/30** and Osaka **28/30**. Crossing midnight into October21JST moved three openings into Just opened, increasing Coming soon shortages by three while improving Just opened coverage. Restored five missing earlier batch105branches locally from their verified payloads. All 24 counts agree: **630 memberships / 120 missing**. No deployment. [Batch evidence](restaurant-japan-30-japan106-2026-10-20.json).
 
-All 24 local and public production guide counts agree. Batches 88–105 now have complete public HTTPS verification; earlier timeout checkpoints below are historical.
+All 24 local and public production guide counts agree. Batches 88–106 now have complete public HTTPS verification; earlier timeout checkpoints below are historical.
 
 | City (west to east) | Coming soon | Just opened | Top restaurants | Specials |
 | --- | ---: | ---: | ---: | ---: |
-| Fukuoka | 10/30 | 21/30 | 30/30 | 35/30 |
-| Osaka | 14/30 | 25/30 | 30/30 | 31/30 |
+| Fukuoka | 10/30 | 22/30 | 30/30 | 35/30 |
+| Osaka | 12/30 | 28/30 | 30/30 | 31/30 |
 | Kyoto | 12/30 | 33/30 | 30/30 | 35/30 |
 | Nagoya | 11/30 | 31/30 | 30/30 | 31/30 |
-| Tokyo | 15/30 | 30/30 | 30/30 | 39/30 |
+| Tokyo | 14/30 | 31/30 | 30/30 | 39/30 |
 | Sapporo | 11/30 | 30/30 | 30/30 | 34/30 |
 
 ## Each remaining shortage
@@ -20,11 +20,11 @@ All 24 local and public production guide counts agree. Batches 88–105 now have
 | City | Tab | Local | Production | Target | Shortfall |
 | --- | --- | ---: | ---: | ---: | ---: |
 | Fukuoka | Coming soon | 10 | 10 | 30 | 20 |
-| Fukuoka | Just opened | 21 | 21 | 30 | 9 |
+| Fukuoka | Just opened | 22 | 22 | 30 | 8 |
 | Fukuoka | Top restaurants | 30 | 30 | 30 | 0 |
 | Fukuoka | Specials | 35 | 35 | 30 | 0 |
-| Osaka | Coming soon | 14 | 14 | 30 | 16 |
-| Osaka | Just opened | 25 | 25 | 30 | 5 |
+| Osaka | Coming soon | 12 | 12 | 30 | 18 |
+| Osaka | Just opened | 28 | 28 | 30 | 2 |
 | Osaka | Top restaurants | 30 | 30 | 30 | 0 |
 | Osaka | Specials | 31 | 31 | 30 | 0 |
 | Kyoto | Coming soon | 12 | 12 | 30 | 18 |
@@ -35,8 +35,8 @@ All 24 local and public production guide counts agree. Batches 88–105 now have
 | Nagoya | Just opened | 31 | 31 | 30 | 0 |
 | Nagoya | Top restaurants | 30 | 30 | 30 | 0 |
 | Nagoya | Specials | 31 | 31 | 30 | 0 |
-| Tokyo | Coming soon | 15 | 15 | 30 | 15 |
-| Tokyo | Just opened | 30 | 30 | 30 | 0 |
+| Tokyo | Coming soon | 14 | 14 | 30 | 16 |
+| Tokyo | Just opened | 31 | 31 | 30 | 0 |
 | Tokyo | Top restaurants | 30 | 30 | 30 | 0 |
 | Tokyo | Specials | 39 | 39 | 30 | 0 |
 | Sapporo | Coming soon | 11 | 11 | 30 | 19 |
