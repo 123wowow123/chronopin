@@ -63,6 +63,7 @@ export type PinSearchFilters = {
   delays: DelayBound[];
   mws: RatingBound[];
   costs: RatingBound[];
+  energies: RatingBound[];
   holidays: string[];
 };
 
@@ -550,7 +551,7 @@ async function countReserved(from: string, where: string[], params: unknown[], c
   const now = Date.now();
   const postedSince = new Date(dayStartIn(dayKeyIn(now, zone), zone));
   const updatedSince = new Date(dayStartIn(dayKeyIn(now - UPDATED_WITHIN_MS, zone), zone));
-  const rows = await db.query<{ field: 'tag' | 'confidence' | 'band' | 'mw' | 'cost'; value: string; count: number }>(
+  const rows = await db.query<{ field: 'tag' | 'confidence' | 'band' | 'mw' | 'cost' | 'energy'; value: string; count: number }>(
     `
       ${withCtes(
         ...ctes,
@@ -583,6 +584,11 @@ async function countReserved(from: string, where: string[], params: unknown[], c
       SELECT 'mw', "floor"."value", COUNT(*)::integer
       FROM "hits" INNER JOIN "PinPower" AS "pw" ON "pw"."pinId" = "hits"."id"
         INNER JOIN (VALUES ('>=100', 100), ('>=500', 500), ('>=1gw', 1000)) AS "floor" ("value", "min") ON "pw"."megawatts" >= "floor"."min"
+      GROUP BY "floor"."value"
+      UNION ALL
+      SELECT 'energy', "floor"."value", COUNT(*)::integer
+      FROM "hits" INNER JOIN "PinEnergy" AS "en" ON "en"."pinId" = "hits"."id"
+        INNER JOIN (VALUES ('>=1twh', 1000), ('>=10twh', 10000)) AS "floor" ("value", "min") ON "en"."gwh" >= "floor"."min"
       GROUP BY "floor"."value"
       UNION ALL
       SELECT 'cost', "floor"."value", COUNT(*)::integer
@@ -1210,6 +1216,11 @@ export function searchClauses(filter: SearchFilter) {
       const usd = usdPriceSql('"Pin"."price"', '"Pin"."priceCurrency"');
       const bounds = filter.costs.map(({ op, value }) => `${usd} ${RATING_OPS[op]} ${add(value)}::numeric`);
       where.push(`("Pin"."price" > 0 AND ${bounds.join(' AND ')})`);
+    }
+    // Every energy: bound, on the annual electricity use PinEnergy records.
+    if (filter.energies.length) {
+      const bounds = filter.energies.map(({ op, value }) => `"pe"."gwh" ${RATING_OPS[op]} ${add(value)}::numeric`);
+      where.push(`EXISTS (SELECT 1 FROM "PinEnergy" AS "pe" WHERE "pe"."pinId" = "Pin"."id" AND ${bounds.join(' AND ')})`);
     }
     // Every delay: bound, on how far the start has slipped from the day first
     // promised. A pin whose start is no later than that day has not slipped and

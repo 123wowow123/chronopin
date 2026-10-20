@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { costBounds, dependsOnZone, hasFilters, joinSearchQuery, megawattBounds, parseSearchQuery, splitSearchQuery, wordStartPattern } from './searchQuery';
+import { costBounds, energyBounds, dependsOnZone, hasFilters, joinSearchQuery, megawattBounds, parseSearchQuery, splitSearchQuery, wordStartPattern } from './searchQuery';
 
 describe('splitSearchQuery', () => {
   it('keeps terms and text in order, with what each was written as', () => {
@@ -133,6 +133,7 @@ describe('parseSearchQuery', () => {
       delays: [],
       mws: [],
       costs: [],
+      energies: [],
       holidays: [],
       text: 'ios',
     });
@@ -391,5 +392,24 @@ describe('mw: and cost: bounds', () => {
     expect(q.costs).toEqual([{ op: '>=', value: 1e9 }]);
     expect(q.text).toBe('solar');
     expect(hasFilters(parseSearchQuery('mw:>=100'))).toBe(true);
+  });
+});
+
+describe('energy: bounds', () => {
+  it('reads annual use in gigawatt-hours, with TWh and MWh', () => {
+    expect(energyBounds('>=1twh')).toEqual([{ op: '>=', value: 1000 }]);
+    expect(energyBounds('500')).toEqual([{ op: '>=', value: 500 }]);
+    expect(energyBounds('<250mwh')).toEqual([{ op: '<', value: 0.25 }]);
+    expect(energyBounds('1-10twh')).toEqual([
+      { op: '>=', value: 1000 },
+      { op: '<=', value: 10000 },
+    ]);
+    expect(energyBounds('lots')).toEqual([]);
+  });
+
+  it('is a term of its own, not free text', () => {
+    const q = parseSearchQuery('smelter energy:>=2twh');
+    expect(q.energies).toEqual([{ op: '>=', value: 2000 }]);
+    expect(q.text).toBe('smelter');
   });
 });

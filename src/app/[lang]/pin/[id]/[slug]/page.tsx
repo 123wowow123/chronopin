@@ -94,9 +94,10 @@ import { thinReasons, translationReady } from '@/lib/searchQuality';
 import { pinTense } from '@/lib/timeline';
 import type { PinEventInfoJson } from '@/lib/eventInfo';
 import { formatMegawatts, type PinPowerJson } from '@/lib/power';
+import { ENERGY_BASIS_WORDS, formatGigawattHours, type PinEnergyJson } from '@/lib/energy';
 import type { PinCandidateJson } from '@/lib/candidates';
 import type { PinJson } from '@/lib/types';
-import { companyWebsite, duplicateGroupPins, pinById, pinCandidates, pinEventInfo, pinPower, pinCarPerf, pinGasCarPerf, pinDining, pinHotel, pinGameInfo, pinTaste, pinComments, pinUpdates, threadPins, timelineVideo, adPlacements, adsenseSlots, hideThinPins, pinAlternateNames } from '@/server/services/pages';
+import { companyWebsite, duplicateGroupPins, pinById, pinCandidates, pinEventInfo, pinPower, pinEnergy, pinCarPerf, pinGasCarPerf, pinDining, pinHotel, pinGameInfo, pinTaste, pinComments, pinUpdates, threadPins, timelineVideo, adPlacements, adsenseSlots, hideThinPins, pinAlternateNames } from '@/server/services/pages';
 import { viewerTimeZone, viewerUser } from '@/server/viewer';
 import { getLocale, getT } from '@/lib/i18n/server';
 import { DEFAULT_LOCALE, pinTextDir } from '@/lib/i18n/config';
@@ -159,7 +160,7 @@ async function PinContent({ params, searchParams }: Pick<Props, 'params' | 'sear
   const event = isAttendableEvent(pin);
   // A museum or park sells admission, not a dated event: same ticket panel.
   const venue = !event && isTicketedVenue(pin);
-  const [updates, timeZone, organizerUrl, eventInfo, power, gameInfo, taste, carPerf, gasCarPerf, dining, hotel, candidates, ads, adsense, viewer, alternateNames] = await Promise.all([
+  const [updates, timeZone, organizerUrl, eventInfo, power, energy, gameInfo, taste, carPerf, gasCarPerf, dining, hotel, candidates, ads, adsense, viewer, alternateNames] = await Promise.all([
     pinUpdates(pin.id),
     viewerTimeZone(),
     (event || venue) && pin.companyId ? companyWebsite(pin.companyId) : null,
@@ -167,6 +168,7 @@ async function PinContent({ params, searchParams }: Pick<Props, 'params' | 'sear
     // the panel does not wait on the category; the Event markup still does.
     pinEventInfo(pin.id),
     pinPower(pin.id),
+    pinEnergy(pin.id),
     pin.categories?.includes('Gaming') ? pinGameInfo(pin.id) : null,
     pinTaste(pin.id),
     pinCarPerf(pin.id),
@@ -207,7 +209,7 @@ async function PinContent({ params, searchParams }: Pick<Props, 'params' | 'sear
           stretches that row, not the gap between article and references. */}
       <div data-pin-grid className="grid grid-cols-[minmax(0,1fr)] gap-8 lg:grid-cols-[minmax(0,7fr)_minmax(0,5fr)] lg:grid-rows-[auto_1fr] lg:gap-10">
         <article className="lg:col-start-1 lg:row-start-1">
-          <PinBody pin={pin} timeZone={timeZone} t={t} eventInfo={eventInfo} power={power} venue={venue} candidates={candidates} isHotel={!!hotel} autoplay={autoplay} />
+          <PinBody pin={pin} timeZone={timeZone} t={t} eventInfo={eventInfo} power={power} energy={energy} venue={venue} candidates={candidates} isHotel={!!hotel} autoplay={autoplay} />
         </article>
 
         <aside className="min-w-0 lg:col-start-2 lg:row-span-2 lg:row-start-1">
@@ -320,6 +322,7 @@ async function PinBody({
   t,
   eventInfo,
   power,
+  energy,
   venue,
   candidates,
   isHotel,
@@ -330,6 +333,7 @@ async function PinBody({
   t: Translator;
   eventInfo?: PinEventInfoJson | null;
   power?: PinPowerJson | null;
+  energy?: PinEnergyJson | null;
   venue?: boolean;
   candidates?: PinCandidateJson[];
   isHotel?: boolean;
@@ -626,6 +630,15 @@ async function PinBody({
           <span className="font-medium tabular-nums">{formatMegawatts(power.megawatts)}</span>
           {power.note ? <span className="text-muted"> · {power.note}</span> : null}
           {power.sourceUrl ? <> · <a href={power.sourceUrl} rel="noopener nofollow" target="_blank" className="text-link">source</a></> : null}
+        </p>
+      ) : null}
+      {energy ? (
+        <p className="mt-1 text-sm text-ink">
+          <span className="me-1 text-xs font-semibold tracking-wider text-subtle uppercase">Energy</span>
+          <span className="font-medium tabular-nums">{formatGigawattHours(energy.gwh)}</span>
+          <span className="text-muted"> {ENERGY_BASIS_WORDS[energy.basis]}</span>
+          {energy.note ? <span className="text-muted"> · {energy.note}</span> : null}
+          {energy.sourceUrl ? <> · <a href={energy.sourceUrl} rel="noopener nofollow" target="_blank" className="text-link">source</a></> : null}
         </p>
       ) : null}
       {eventInfo ? <PinEventInfo info={eventInfo} started={!venue && pinTense(pin, new Date(), dayKeyIn(new Date(), timeZone)) === 'past'} t={t} /> : null}

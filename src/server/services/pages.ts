@@ -10,6 +10,8 @@ import Company from '../model/company';
 import Favorite from '../model/favorite';
 import { eventInfoForPin } from '../model/pinEventInfo';
 import { powerForPin } from '../model/pinPower';
+import { energyForPin } from '../model/pinEnergy';
+import type { PinEnergyJson } from '@/lib/energy';
 import type { PinPowerJson } from '@/lib/power';
 import { candidatesForPin } from '../model/pinCandidate';
 import { gameInfoForPin } from '../model/pinGameInfo';
@@ -231,6 +233,14 @@ export async function pinPower(id: number): Promise<PinPowerJson | null> {
   cacheLife('hours');
   cacheTag(TAGS.pin(id));
   return powerForPin(id);
+}
+
+// The pin's annual electricity use, or null when none is recorded.
+export async function pinEnergy(id: number): Promise<PinEnergyJson | null> {
+  'use cache';
+  cacheLife('hours');
+  cacheTag(TAGS.pin(id));
+  return energyForPin(id);
 }
 
 // The big-four contenders an awards pin lists, empty for any other pin.

@@ -1,6 +1,7 @@
 # Update Log
 
 ## 2026-10-19
+* **Creation**: Added [PinEnergy](/tables/pin-energy.md) (0197), a pin's annual electricity use in GWh with its basis (published, contracted or calculated from MW), source and note, shown on the pin page and filterable with `energy:` and the TWh pills. Also `mw:` and `cost:` search terms with size pills, and fixed-rate currency conversion for prices. Ten big-load pins carry figures.
 * **Creation**: Added [PinPower](/tables/pin-power.md) (0196), a pin's capacity in megawatts with its source, shown on the pin page and totalled on the map. 367 of 566 data-centre pins were backfilled from titles; five research lanes plus a deeper re-run added 49 sourced figures. About 100 facility pins have no published MW and stay empty. See [Learnings](/scraping/learnings.md).
 
 ## 2026-10-18

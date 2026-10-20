@@ -244,6 +244,8 @@ export type SearchQuery = {
   // (cost:>=1B) must meet, every one of them.
   mws: RatingBound[];
   costs: RatingBound[];
+  // Bounds a pin's annual electricity use in gigawatt-hours (energy:>=1twh).
+  energies: RatingBound[];
   // Holidays and special days by name, any of them (holiday:Halloween); the
   // server turns each into the days it falls on.
   holidays: string[];
@@ -259,7 +261,7 @@ const AXIS_ALIASES: Record<string, OctagonAxis> = { 'public-standing': 'standing
 
 // A leading "-" leaves out what the term would match (-tag:Anime); only tags
 // read it so far, and any other field written that way is left out.
-const FIELD = '(-?(?:company|category|user|confidence|date|posted|updated|tag|pin|place|rating|delay|mw|cost|platform|rated|holiday|taste|carperf|dining|hotel|rubric|person|' + [...OCTAGON_AXES, ...Object.keys(AXIS_ALIASES)].join('|') + '))';
+const FIELD = '(-?(?:company|category|user|confidence|date|posted|updated|tag|pin|place|rating|delay|mw|cost|energy|platform|rated|holiday|taste|carperf|dining|hotel|rubric|person|' + [...OCTAGON_AXES, ...Object.keys(AXIS_ALIASES)].join('|') + '))';
 const DOUBLE_QUOTED = '([^"]*)"?';
 const SINGLE_QUOTED = "((?:[^']|'(?!\\s|$))*)'?";
 
@@ -279,7 +281,7 @@ const FIELD_TERM = new RegExp(
 // A bare @name, or a bare $ticker standing as a word of its own.
 const BARE_TERM = /(^|\s)(@\S+|\$[A-Za-z][A-Za-z0-9.-]{0,11}(?=\s|$))/g;
 
-export type TermField = 'user' | 'ticker' | 'company' | 'category' | 'confidence' | 'date' | 'posted' | 'updated' | 'tag' | 'pin' | 'place' | 'rating' | 'delay' | 'mw' | 'cost' | 'platform' | 'rated' | 'holiday' | 'taste' | 'carperf' | 'dining' | 'hotel' | 'rubric' | 'person' | OctagonAxis;
+export type TermField = 'user' | 'ticker' | 'company' | 'category' | 'confidence' | 'date' | 'posted' | 'updated' | 'tag' | 'pin' | 'place' | 'rating' | 'delay' | 'mw' | 'cost' | 'energy' | 'platform' | 'rated' | 'holiday' | 'taste' | 'carperf' | 'dining' | 'hotel' | 'rubric' | 'person' | OctagonAxis;
 
 export type QueryPart =
   | { kind: 'term'; field: TermField; value: string; raw: string; negated?: boolean }
@@ -392,6 +394,7 @@ function readParts(parts: QueryPart[]): SearchQuery {
     delays: [],
     mws: [],
     costs: [],
+    energies: [],
     holidays: [],
     text: '',
   };
@@ -472,8 +475,8 @@ function readParts(parts: QueryPart[]): SearchQuery {
       for (const bound of ratingBounds(part.value)) {
         if (!query.ratings.some((b) => b.op === bound.op && b.value === bound.value)) query.ratings.push(bound);
       }
-    } else if (part.field === 'mw' || part.field === 'cost') {
-      const [bounds, held] = part.field === 'mw' ? [megawattBounds(part.value), query.mws] : [costBounds(part.value), query.costs];
+    } else if (part.field === 'mw' || part.field === 'cost' || part.field === 'energy') {
+      const [bounds, held] = part.field === 'mw' ? [megawattBounds(part.value), query.mws] : part.field === 'cost' ? [costBounds(part.value), query.costs] : [energyBounds(part.value), query.energies];
       for (const bound of bounds) {
         if (!held.some((b) => b.op === bound.op && b.value === bound.value)) held.push(bound);
       }
@@ -521,6 +524,7 @@ export function hasFilters(query: SearchQuery): boolean {
     query.delays.length ||
     query.mws.length ||
     query.costs.length ||
+    query.energies.length ||
     query.holidays.length
   );
 }
@@ -606,6 +610,7 @@ const SIZED = '\\$?(\\d+(?:\\.\\d+)?)\\s*([a-z]*)';
 const SIZED_BOUND = new RegExp(`^(>=|<=|=>|=<|>|<|=)?\\s*${SIZED}$`, 'i');
 const SIZED_RANGE = new RegExp(`^${SIZED}\\s*-\\s*${SIZED}$`, 'i');
 const MEGAWATT_UNITS: Record<string, number> = { '': 1, mw: 1, gw: 1000, tw: 1_000_000 };
+const ENERGY_UNITS: Record<string, number> = { '': 1, mwh: 0.001, gwh: 1, twh: 1000, pwh: 1_000_000 };
 const COST_UNITS: Record<string, number> = { '': 1, k: 1e3, m: 1e6, mn: 1e6, b: 1e9, bn: 1e9, t: 1e12, tn: 1e12 };
 
 function sizedBounds(value: string, units: Record<string, number>): RatingBound[] {
@@ -634,6 +639,12 @@ function sizedBounds(value: string, units: Record<string, number>): RatingBound[
 // a bare number is a floor, as for rating:. Anything else is left out.
 export function megawattBounds(value: string): RatingBound[] {
   return sizedBounds(value, MEGAWATT_UNITS);
+}
+
+// The bounds an energy: value sets, in gigawatt-hours a year (energy:>=1twh,
+// energy:500-2000gwh); a bare number is gigawatt-hours.
+export function energyBounds(value: string): RatingBound[] {
+  return sizedBounds(value, ENERGY_UNITS);
 }
 
 // The bounds a cost: value sets, in US dollars (cost:>=1B, cost:>500m, cost:1b-10b).

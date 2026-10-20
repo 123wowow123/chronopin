@@ -8,4 +8,5 @@
 * [JobRun](job-run.md) - One run of a daily pin job: its slot, driver, writes, learnings and report
 * [PinRevisit](pin-revisit.md) - A pin marked to be looked at again, and how the mark was resolved
 * [PinTag](pin-tag.md) - A pin's tags, from the form, from awards its text names, and (in PinTagView) from the awards its work was up for
+* [PinEnergy](pin-energy.md) - A pin's annual electricity use in GWh with its basis and source, shown on the pin page and filterable with energy:
 * [PinPower](pin-power.md) - A pin's capacity in megawatts, its source and what the figure is, shown on the pin page and totalled on the map
