@@ -47,6 +47,22 @@ www.chronopin.com {
 			try_files {path}
 		}
 	}
+	# Every page load asks who is signed in (src/lib/client/session.ts) and the
+	# app answers null when the request carries no token cookie, no bearer header
+	# and no access_token: the same answer, without waking Node (1,044 of 18,256
+	# requests in 5 minutes, 2026-10-20).
+	@anonMe {
+		method GET
+		path /api/users/me
+		not header_regexp Cookie (^|;\s*)token=
+		not header Authorization *
+		not query access_token=*
+	}
+	handle @anonMe {
+		header Content-Type "application/json; charset=utf-8"
+		header Cache-Control "no-store"
+		respond "null" 200
+	}
 	handle @static {
 		root * /srv/assets
 		header Cache-Control "public, max-age=31536000, immutable"
