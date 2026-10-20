@@ -11,6 +11,7 @@ import { TASTE_KEYS, TASTE_STRONG, type TasteAxis } from '@/lib/pinTaste';
 import { CAR_PERF_KEYS, CAR_PERF_STRONG, type CarPerfAxis } from '@/lib/pinCarPerf';
 import { DINING_KEYS, DINING_STRONG, type DiningAxis } from '@/lib/pinDining';
 import { HOTEL_KEYS, HOTEL_STRONG, type HotelAxis } from '@/lib/pinHotel';
+import { usdPriceSql } from '@/lib/currency';
 import { NEW_TAG, PREDICTED_TAG, reservedName, UPDATED_TAG, UPDATED_WITHIN_MS, tagGroupPatterns, type TagCount } from '@/lib/tags';
 import { CONFIDENCE_BANDS, CONFIDENCE_BARS, type ConfidenceBand } from '@/lib/referenceConfidence';
 import { PLACE_TEXT_SCORE, SEMANTIC_ALONE_SCORE, TITLE_TEXT_SCORE, isCjkText, looksLikePlaceText, placePatterns, typedTextPatterns, typedWordPatterns, wholeWordPattern } from '../util/placeMatch';
@@ -585,8 +586,8 @@ async function countReserved(from: string, where: string[], params: unknown[], c
       GROUP BY "floor"."value"
       UNION ALL
       SELECT 'cost', "floor"."value", COUNT(*)::integer
-      FROM "hits" INNER JOIN "Pin" AS "cp" ON "cp"."id" = "hits"."id" AND "cp"."priceCurrency" = 'USD' AND "cp"."price" > 0
-        INNER JOIN (VALUES ('>=1b', 1000000000), ('>=10b', 10000000000)) AS "floor" ("value", "min") ON "cp"."price" >= "floor"."min"
+      FROM "hits" INNER JOIN "Pin" AS "cp" ON "cp"."id" = "hits"."id" AND "cp"."price" > 0
+        INNER JOIN (VALUES ('>=1b', 1000000000), ('>=10b', 10000000000)) AS "floor" ("value", "min") ON ${usdPriceSql('"cp"."price"', '"cp"."priceCurrency"')} >= "floor"."min"
       GROUP BY "floor"."value"
       UNION ALL
       SELECT 'confidence', "level", COUNT(*)::integer FROM "hits" WHERE "level" IS NOT NULL GROUP BY "level"
@@ -1199,15 +1200,16 @@ export function searchClauses(filter: SearchFilter) {
             WHERE ${bounds.join(' AND ')})`);
     }
     // Every mw: bound, on the capacity PinPower records, and every cost: bound,
-    // on the price when it is in US dollars (no exchange rates exist, so a pin
-    // priced in another currency meets none). A pin without either meets none.
+    // on the price in US dollars (other currencies at the fixed approximate
+    // rates of lib/currency.ts). A pin without either meets none.
     if (filter.mws.length) {
       const bounds = filter.mws.map(({ op, value }) => `"pw"."megawatts" ${RATING_OPS[op]} ${add(value)}::numeric`);
       where.push(`EXISTS (SELECT 1 FROM "PinPower" AS "pw" WHERE "pw"."pinId" = "Pin"."id" AND ${bounds.join(' AND ')})`);
     }
     if (filter.costs.length) {
-      const bounds = filter.costs.map(({ op, value }) => `"Pin"."price" ${RATING_OPS[op]} ${add(value)}::numeric`);
-      where.push(`("Pin"."priceCurrency" = 'USD' AND "Pin"."price" > 0 AND ${bounds.join(' AND ')})`);
+      const usd = usdPriceSql('"Pin"."price"', '"Pin"."priceCurrency"');
+      const bounds = filter.costs.map(({ op, value }) => `${usd} ${RATING_OPS[op]} ${add(value)}::numeric`);
+      where.push(`("Pin"."price" > 0 AND ${bounds.join(' AND ')})`);
     }
     // Every delay: bound, on how far the start has slipped from the day first
     // promised. A pin whose start is no later than that day has not slipped and

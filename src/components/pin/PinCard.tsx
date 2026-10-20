@@ -4,7 +4,8 @@ import Link from '@/components/ui/Link';
 import { useLayoutEffect, useRef, useState } from 'react';
 import { Icon } from '@/components/ui/Icon';
 import { PostedTime, StartDistance, StartTime } from '@/components/ui/LocalTime';
-import { dayKeyIn, money } from '@/lib/format';
+import { dayKeyIn } from '@/lib/format';
+import { localMoney } from '@/lib/currency';
 import { useTimeZone } from '@/lib/client/timeZone';
 import { useNow } from '@/lib/client/now';
 import { useVideoPoster } from '@/lib/client/timelineVideo';
@@ -316,7 +317,7 @@ export function PinCard({
 
       <div className="mx-3 mt-2.5 grid grid-cols-[1fr_auto_1fr] items-center border-t border-line pt-1.5">
         <div className={`text-sm font-medium tabular-nums ${pin.price != null && pin.price < 0 ? 'text-danger' : 'text-success'}`}>
-          {pin.price ? money(pin.price, pin.priceCurrency) : null}
+          {pin.price ? localMoney(pin.price, pin.priceCurrency, t.locale) : null}
           {pin.restaurantPriceRange ? <span className="text-xs text-muted"><RestaurantPriceRange range={pin.restaurantPriceRange} /></span> : null}
         </div>
         <div>

@@ -82,7 +82,8 @@ import { Icon } from '@/components/ui/Icon';
 import { PostedTime, StartTime } from '@/components/ui/LocalTime';
 import { UserAvatar } from '@/components/ui/UserAvatar';
 import { pinDateRanges } from '@/lib/dateClaims';
-import { dayKeyIn, money } from '@/lib/format';
+import { dayKeyIn } from '@/lib/format';
+import { bothMoney } from '@/lib/currency';
 import { RESTAURANT_REGIONS } from '@/lib/restaurants';
 import { pinMarketRefs } from '@/lib/predictionMarkets';
 import { isPredictedPin, PREDICTED_TAG } from '@/lib/tags';
@@ -602,7 +603,8 @@ async function PinBody({
               <span className="text-subtle">
                 {pin.productName ? t('pin.msrp') : (isHotel && pin.price > 10000 ? 'Project cost' : t('pin.cost'))}
               </span>{' '}
-              <span className="font-semibold text-success tabular-nums">{money(pin.price, pin.priceCurrency)}</span>
+              <span className="font-semibold text-success tabular-nums">{bothMoney(pin.price, pin.priceCurrency, t.locale).stated}</span>
+              {bothMoney(pin.price, pin.priceCurrency, t.locale).local ? <span className="text-sm text-muted tabular-nums"> ({bothMoney(pin.price, pin.priceCurrency, t.locale).local})</span> : null}
             </>
           ) : null}
         </div>
