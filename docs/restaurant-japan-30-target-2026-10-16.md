@@ -1,14 +1,14 @@
 # Japan restaurant target audit — October 16, 2026
 
-Target: **30 distinct eligible restaurants in every tab of every city**. **630 verified memberships; 120 still missing**. This target remains incomplete; surplus in another tab does not offset a shortage.
+Target: **30 distinct eligible restaurants in every tab of every city**. **633 verified memberships; 118 still missing**. This target remains incomplete; surplus in another tab does not offset a shortage.
 
-**Batch 106 published and publicly verified (October 20, 2026):** Added **two new restaurant pins, 178 ordinary menu entries and 12 credited Azure photos**: Yakitori Don Osaka Juso (October 15) and Kuroge Wagyu Mabushi Akatsuki Tenjin (October 1). Exact branch dates, menus, gallery credits and native title/image cards verified locally and over public production HTTPS. Don operator-directory and booking-page late hours conflict and are recorded explicitly; Akatsuki’s erroneous English surcharge translation is excluded in favor of its Japanese original. Existing Cheese Plus, Samjo and Torikage pins preserved. Fukuoka Just opened reaches **22/30** and Osaka **28/30**. Crossing midnight into October21JST moved three openings into Just opened, increasing Coming soon shortages by three while improving Just opened coverage. Restored five missing earlier batch105branches locally from their verified payloads. All 24 counts agree: **630 memberships / 120 missing**. No deployment. [Batch evidence](restaurant-japan-30-japan106-2026-10-20.json).
+**Batch 107 published and publicly verified (October 20, 2026):** Added **two new Fukuoka restaurant pins, 64 ordinary menu entries, one dated coupon with four drink choices and 10 credited Azure photos**: Hakata Tonkatsu Tabi to Zen and Tokyo Aburagumi Sohonten Nakasu-Kawabata, both opened September 4. Verified branch-specific opening evidence, menus, saved profiles, photo credits, public pin menus and all three native title/image cards in local and public production HTTPS. Tabi coupon expires October 31; Wednesday closure, last-order cutoffs, next service and expiry boundaries checked. Aburagumi September launch discount is expired and excluded from Specials. Fukuoka Just opened reaches **24/30**, Specials **36/30**; all 24 counts agree at **633 memberships / 118 missing**. No deployment. [Batch evidence](restaurant-japan-30-japan107-2026-10-20.json).
 
-All 24 local and public production guide counts agree. Batches 88–106 now have complete public HTTPS verification; earlier timeout checkpoints below are historical.
+All 24 local and public production guide counts agree. Batches 88–107 now have complete public HTTPS verification; earlier timeout checkpoints below are historical.
 
 | City (west to east) | Coming soon | Just opened | Top restaurants | Specials |
 | --- | ---: | ---: | ---: | ---: |
-| Fukuoka | 10/30 | 22/30 | 30/30 | 35/30 |
+| Fukuoka | 10/30 | 24/30 | 30/30 | 36/30 |
 | Osaka | 12/30 | 28/30 | 30/30 | 31/30 |
 | Kyoto | 12/30 | 33/30 | 30/30 | 35/30 |
 | Nagoya | 11/30 | 31/30 | 30/30 | 31/30 |
@@ -20,9 +20,9 @@ All 24 local and public production guide counts agree. Batches 88–106 now have
 | City | Tab | Local | Production | Target | Shortfall |
 | --- | --- | ---: | ---: | ---: | ---: |
 | Fukuoka | Coming soon | 10 | 10 | 30 | 20 |
-| Fukuoka | Just opened | 22 | 22 | 30 | 8 |
+| Fukuoka | Just opened | 24 | 24 | 30 | 6 |
 | Fukuoka | Top restaurants | 30 | 30 | 30 | 0 |
-| Fukuoka | Specials | 35 | 35 | 30 | 0 |
+| Fukuoka | Specials | 36 | 36 | 30 | 0 |
 | Osaka | Coming soon | 12 | 12 | 30 | 18 |
 | Osaka | Just opened | 28 | 28 | 30 | 2 |
 | Osaka | Top restaurants | 30 | 30 | 30 | 0 |
@@ -54,7 +54,7 @@ Nineteen cumulative branch opening-date repairs were read back in both environme
 
 Checked exact complete saved profiles, original author presence, native public pin pages and all ordinary menu items, Azure image decode/hash/credit metadata, all 37 new venue cards across paginated guide APIs, native pin identifiers/links and upcoming offer start times. All six production guide HTML pages also returned HTTP 200 with native pin title/image links. The existing Eggs ’n Things pin exposes all 11 new menu entries; the successor starts October 21 at 09:00 JST and retains the prior October 20 expiry.
 
-Continue every under-target cell. Coming soon deficits: Fukuoka 21; Osaka 18; Kyoto 19; Nagoya 19; Tokyo 16; Sapporo 19. Nagoya Just opened is 31/30; continue renewing its 90-day window. Kyoto Specials reaches 30, but dated offers expire and must be replenished. Detailed sources, held leads and October 17–22 expiry watch are in [research notes](restaurant-japan-30-progress-2026-10-16.md). [CSV](restaurant-japan-30-counts-2026-10-16.csv) and [production delta](restaurant-japan-production-2026-10-16.json) cover this session; older snapshots are history, not permission to overwrite current API profiles.
+Continue every under-target cell. Coming soon deficits: Fukuoka 20; Osaka 18; Kyoto 18; Nagoya 19; Tokyo 16; Sapporo 19. Nagoya Just opened is 31/30; continue renewing its 90-day window. Kyoto Specials reaches 30, but dated offers expire and must be replenished. Detailed sources, held leads and October 17–22 expiry watch are in [research notes](restaurant-japan-30-progress-2026-10-16.md). [CSV](restaurant-japan-30-counts-2026-10-16.csv) and [production delta](restaurant-japan-production-2026-10-16.json) cover this session; older snapshots are history, not permission to overwrite current API profiles.
 
 No application code changes, build, restart or deployment. Release `157e1750` remains the previously documented deployed baseline; this content-maintenance session did not change it.
 

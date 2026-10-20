@@ -117,7 +117,7 @@ describe('botRetryAfter', () => {
   });
 });
 
-import { ipRetryAfter, isMacSafari, IP_BURST, LIGHT_BURST, PREFETCH_COST, SAFARI_BURST, SAFARI_PIN_BURST } from './botLimit';
+import { ipRetryAfter, IP_BURST, LIGHT_BURST, PREFETCH_COST } from './botLimit';
 describe('ipRetryAfter', () => {
   it('lets a burst through, then asks the address to wait', () => {
     const now = 1_000_000;
@@ -142,11 +142,11 @@ describe('pinRetryAfter', () => {
   beforeEach(() => {
     delete (globalThis as unknown as { __chronopinPinLimits?: unknown }).__chronopinPinLimits;
   });
-  it('lets a client open a burst of pins, then one every 4 seconds', () => {
+  it('lets a client open a burst of pins, then one every 1.3 seconds', () => {
     for (let i = 0; i < PIN_BURST; i++) expect(pinRetryAfter('a', 1_000)).toBeNull();
-    expect(pinRetryAfter('a', 1_000)).toBe(4);
-    expect(pinRetryAfter('a', 5_000)).toBeNull();
-    expect(pinRetryAfter('a', 5_000)).not.toBeNull();
+    expect(pinRetryAfter('a', 1_000)).toBe(2);
+    expect(pinRetryAfter('a', 3_000)).toBeNull();
+    expect(pinRetryAfter('a', 3_000)).not.toBeNull();
   });
   it('keeps clients apart and ignores an empty id', () => {
     for (let i = 0; i < PIN_BURST; i++) pinRetryAfter('a', 1_000);
@@ -156,25 +156,5 @@ describe('pinRetryAfter', () => {
   it('charges a prefetch a quarter', () => {
     for (let i = 0; i < PIN_BURST * 4; i++) expect(pinRetryAfter('p', 1_000, 0.25)).toBeNull();
     expect(pinRetryAfter('p', 1_000, 0.25)).not.toBeNull();
-  });
-});
-
-describe('macOS Safari budgets', () => {
-  it('recognises desktop Safari only', () => {
-    expect(isMacSafari('Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.5 Safari/605.1.15')).toBe(true);
-    expect(isMacSafari('Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36')).toBe(false);
-    expect(isMacSafari(null)).toBe(false);
-  });
-  it('gets a wider per-address burst', () => {
-    const now = 1_000_000;
-    for (let i = 0; i < SAFARI_BURST; i++) expect(ipRetryAfter('ip:192.0.2.5', false, now, 1, true)).toBeNull();
-    expect(ipRetryAfter('ip:192.0.2.5', false, now, 1, true)).toBeGreaterThan(0);
-  });
-  it('gets three times the pin burst', () => {
-    const now = 2_000_000;
-    for (let i = 0; i < PIN_BURST; i++) expect(pinRetryAfter('c1', now)).toBeNull();
-    expect(pinRetryAfter('c1', now)).toBeGreaterThan(0);
-    for (let i = 0; i < SAFARI_PIN_BURST; i++) expect(pinRetryAfter('c2', now, 1, true)).toBeNull();
-    expect(pinRetryAfter('c2', now, 1, true)).toBeGreaterThan(0);
   });
 });

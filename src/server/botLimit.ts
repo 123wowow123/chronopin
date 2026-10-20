@@ -129,33 +129,23 @@ export function botRetryAfter(bot: Bot | null, now = Date.now()): number | null 
 // traffic looked like bots). A visitor who runs out is shown the heavy user
 // plan (src/app/[lang]/heavy-use): with it the budget is LIGHT_*, still a limit
 // but ten times looser. Admins and named crawlers have their own rules.
-export const IP_BURST = 50;
-export const IP_PER_SECOND = 2;
+// Burst 150, refill 6/s: the figures macOS Safari readers were first given (2026-10-20, after
+// their page requests were being refused), now the same for every browser.
+export const IP_BURST = 150;
+export const IP_PER_SECOND = 6;
 export const LIGHT_BURST = 1_200;
 export const LIGHT_PER_SECOND = 20;
-// macOS Safari is relaxed three times over: its readers were being rate limited
-// in numbers (2026-10-20 log, 1,158 page 429s on that user agent). The user
-// agent is only a hint a scraper can copy, so this is a wider free budget, not
-// an exemption.
-export const SAFARI_BURST = 150;
-export const SAFARI_PER_SECOND = 6;
 const IP_MAX_ENTRIES = 20_000;
-
-// Desktop Safari: Macintosh with a Version/ token and no Chrome/Chromium token.
-export function isMacSafari(userAgent: string | null | undefined): boolean {
-  const ua = userAgent ?? '';
-  return /Macintosh;.*Version\/[\d.]+.*Safari\//.test(ua) && !/Chrome|Chromium|CriOS|FxiOS|Edg\//.test(ua);
-}
 
 // A link prefetch (cost PREFETCH_COST) is a page's worth of links loading in
 // the background, not a person asking for pages, so it spends a quarter token.
 // `key` is "ip:<address>" or "u:<user id>". Null when the request may go on,
 // else the seconds to wait.
 export const PREFETCH_COST = 0.25;
-export function ipRetryAfter(key: string, light = false, now = Date.now(), cost = 1, safari = false): number | null {
+export function ipRetryAfter(key: string, light = false, now = Date.now(), cost = 1): number | null {
   if (!key || key === 'ip:') return null;
-  const burst = light ? LIGHT_BURST : safari ? SAFARI_BURST : IP_BURST;
-  const perSecond = light ? LIGHT_PER_SECOND : safari ? SAFARI_PER_SECOND : IP_PER_SECOND;
+  const burst = light ? LIGHT_BURST : IP_BURST;
+  const perSecond = light ? LIGHT_PER_SECOND : IP_PER_SECOND;
   const g = globalThis as unknown as { __chronopinIpLimits?: Map<string, Bucket> };
   const buckets = (g.__chronopinIpLimits ??= new Map());
   const bucket = buckets.get(key) ?? { tokens: burst, at: now };
@@ -176,15 +166,13 @@ export function ipRetryAfter(key: string, light = false, now = Date.now(), cost 
 // but each of its clients still reads pins, and a person opening a few pins
 // from the timeline stays far inside it. A client that discards its cookie
 // starts again, but only by going back through the gate's redirect.
-// Burst 30, then one pin every 4 s (15 a minute); macOS Safari gets three times that.
-export const PIN_BURST = 30;
-export const PIN_PER_SECOND = 0.25;
-export const SAFARI_PIN_BURST = PIN_BURST * 3;
-export const SAFARI_PIN_PER_SECOND = PIN_PER_SECOND * 3;
-export function pinRetryAfter(clientId: string, now = Date.now(), cost = 1, safari = false): number | null {
+// Burst 90, then one pin every 1.3 s (45 a minute); the same for every browser.
+export const PIN_BURST = 90;
+export const PIN_PER_SECOND = 0.75;
+export function pinRetryAfter(clientId: string, now = Date.now(), cost = 1): number | null {
   if (!clientId) return null;
-  const burst = safari ? SAFARI_PIN_BURST : PIN_BURST;
-  const perSecond = safari ? SAFARI_PIN_PER_SECOND : PIN_PER_SECOND;
+  const burst = PIN_BURST;
+  const perSecond = PIN_PER_SECOND;
   const g = globalThis as unknown as { __chronopinPinLimits?: Map<string, Bucket> };
   const buckets = (g.__chronopinPinLimits ??= new Map());
   const bucket = buckets.get(clientId) ?? { tokens: burst, at: now };

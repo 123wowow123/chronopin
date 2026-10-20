@@ -10,7 +10,7 @@ import { sessionOf, TOKEN_COOKIE } from '@/server/auth';
 import { homeCacheKey, homeCopy, validTimeZone, type HomeCopy } from '@/server/homeCache';
 import serverConfig from '@/server/config';
 import { cookieGate, gateId, gateIdOf, GATE_COOKIE, GATE_MAX_AGE, GATE_PARAM } from '@/server/cookieGate';
-import { botRetryAfter, ipRetryAfter, isMacSafari, pinRetryAfter, PREFETCH_COST, SHED_RETRY_AFTER } from '@/server/botLimit';
+import { botRetryAfter, ipRetryAfter, pinRetryAfter, PREFETCH_COST, SHED_RETRY_AFTER } from '@/server/botLimit';
 import HeavyUserPlan from '@/server/model/heavyUserPlan';
 import BotVisit from '@/server/model/botVisit';
 import LandingVisit from '@/server/model/landingVisit';
@@ -201,7 +201,7 @@ export async function proxy(request: NextRequest) {
     // and admins have their own, and named bots theirs.
     if (gateClient && !bot && !session && /^\/pin\/\d+(?:\/|$)/.test(splitLocale(pathname).path)) {
       const prefetching = request.headers.has('next-router-prefetch') || request.headers.get('purpose') === 'prefetch';
-      const wait = pinRetryAfter(gateClient, Date.now(), prefetching ? PREFETCH_COST : 1, isMacSafari(request.headers.get('user-agent')));
+      const wait = pinRetryAfter(gateClient, Date.now(), prefetching ? PREFETCH_COST : 1);
       if (wait != null) return signInForMore(request, wait);
     }
   }
@@ -209,7 +209,7 @@ export async function proxy(request: NextRequest) {
     const key = session ? `u:${session.id}` : `ip:${request.headers.get('x-forwarded-for')?.split(',').pop()?.trim() ?? ''}`;
     const light = session ? await HeavyUserPlan.isActive(session.id).catch(() => false) : false;
     const prefetching = request.headers.has('next-router-prefetch') || request.headers.get('purpose') === 'prefetch';
-    const wait = ipRetryAfter(key, light, Date.now(), prefetching ? PREFETCH_COST : 1, isMacSafari(request.headers.get('user-agent')));
+    const wait = ipRetryAfter(key, light, Date.now(), prefetching ? PREFETCH_COST : 1);
     if (wait != null) return tooManyRequests(request, wait, light);
   }
   if (retryAfter != null) {
