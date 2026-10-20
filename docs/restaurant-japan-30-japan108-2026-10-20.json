@@ -1,0 +1,3254 @@
+{
+  "batch": 108,
+  "checkedAt": "2026-10-20",
+  "entries": [
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Izakaya Sakigake — Osaka Fukushima Honten Opens 2026-10-19",
+        "description": "A 90-seat Fukushima izakaya serving straw-grilled bonito, robata dishes and Kochi specialties, with bottled beer, highballs and a group pork-shabu course.",
+        "sourceUrl": "https://tabelog.com/en/osaka/A2701/A270108/27159245/",
+        "address": "7-6-8 Fukushima, Fukushima-ku, Osaka",
+        "productName": "Izakaya Sakigake — Osaka Fukushima Honten",
+        "utcStartDateTime": "2026-10-19T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "Exact operator-managed Osaka Fukushima Honten listing explicitly records October 19,2026. October 19 local opening report corroborates the same branch, address and grand-opening date. No earlier conflicting first-service date found in the checked branch sources.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Osaka",
+          "Japan",
+          "Fukushima",
+          "Izakaya / Seafood"
+        ],
+        "longFormSummary": "<p>A 90-seat Fukushima izakaya serving straw-grilled bonito, robata dishes and Kochi specialties, with bottled beer, highballs and a group pork-shabu course.<cite data-ref=\"https://tabelog.com/en/osaka/A2701/A270108/27159245/\"></cite></p><p>Exact operator-managed Osaka Fukushima Honten listing explicitly records October 19,2026. October 19 local opening report corroborates the same branch, address and grand-opening date. No earlier conflicting first-service date found in the checked branch sources.</p>",
+        "references": [
+          {
+            "url": "https://tabelog.com/en/osaka/A2701/A270108/27159245/",
+            "title": "Izakaya Sakigake — Osaka Fukushima Honten — branch website",
+            "confidence": 90,
+            "reasoning": "Izakaya Sakigake — Osaka Fukushima Honten — branch website"
+          },
+          {
+            "url": "https://tabelog.com/en/osaka/A2701/A270108/27159245/dtlmenu/",
+            "title": "Exact branch food",
+            "confidence": 90,
+            "reasoning": "Exact branch food"
+          },
+          {
+            "url": "https://tabelog.com/en/osaka/A2701/A270108/27159245/dtlmenu/drink/",
+            "title": "Exact branch drinks",
+            "confidence": 90,
+            "reasoning": "Exact branch drinks"
+          },
+          {
+            "url": "https://tabelog.com/en/osaka/A2701/A270108/27159245/party/301465397/",
+            "title": "Group course and conditions",
+            "confidence": 90,
+            "reasoning": "Group course and conditions"
+          },
+          {
+            "url": "https://kansai-kaiten.com/sakigake-fukushima2610/",
+            "title": "October 19 local opening report",
+            "confidence": 90,
+            "reasoning": "October 19 local opening report"
+          },
+          {
+            "url": "https://www.instagram.com/sakigake_fukushima/",
+            "title": "Operator branch Instagram (public posts inaccessible)",
+            "confidence": 90,
+            "reasoning": "Operator branch Instagram (public posts inaccessible)"
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://tabelog.com/en/osaka/A2701/A270108/27159245/",
+          "menu": {
+            "pinSourceUrl": "https://tabelog.com/en/osaka/A2701/A270108/27159245/",
+            "name": "Izakaya Sakigake — Osaka Fukushima Honten",
+            "checkedAt": "2026-10-20",
+            "menus": [
+              {
+                "label": "Sakigake Fukushima — ordinary food",
+                "url": "https://tabelog.com/en/osaka/A2701/A270108/27159245/dtlmenu/",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "Wara-Grilled Bonito",
+                    "note": "Regular serving¥1580; large¥2480, tax included.",
+                    "price": 1580
+                  },
+                  {
+                    "name": "Assorted Sashimi",
+                    "note": "¥990per serving, tax included. For parties of two or more, at least two servings must be ordered; not¥990for two guests.",
+                    "price": 990
+                  },
+                  {
+                    "name": "Beef Tendon Red Star Dote Yaki",
+                    "note": "Tax included; exact-branch managed menu.",
+                    "price": 800
+                  },
+                  {
+                    "name": "Juicy Duck Shumai",
+                    "note": "Tax included; exact-branch managed menu. 2 pieces",
+                    "price": 480
+                  },
+                  {
+                    "name": "Charcoal-Grilled Chiran Chicken",
+                    "note": "Regular serving¥980; large¥1980, tax included.",
+                    "price": 980
+                  },
+                  {
+                    "name": "Pickled Myoga",
+                    "note": "Tax included; exact-branch managed menu.",
+                    "price": 350
+                  },
+                  {
+                    "name": "Dried Daikon and Ume Namul",
+                    "note": "Tax included; exact-branch managed menu.",
+                    "price": 380
+                  },
+                  {
+                    "name": "Mackerel and Takana Macaroni Salad",
+                    "note": "Tax included; exact-branch managed menu.",
+                    "price": 420
+                  },
+                  {
+                    "name": "Garlic Chives and Eggs Ohitashi",
+                    "note": "Tax included; exact-branch managed menu.",
+                    "price": 500
+                  },
+                  {
+                    "name": "Tosa Soy Sauce with Nameko Mushrooms",
+                    "note": "Tax included; exact-branch managed menu.",
+                    "price": 380
+                  },
+                  {
+                    "name": "Fried Eggplant in Dashi",
+                    "note": "Tax included; exact-branch managed menu.",
+                    "price": 420
+                  },
+                  {
+                    "name": "Tomato Pickled in Tosa Vinegar",
+                    "note": "Tax included; exact-branch managed menu.",
+                    "price": 550
+                  },
+                  {
+                    "name": "Moist Bang Bang Chicken",
+                    "note": "Tax included; exact-branch managed menu.",
+                    "price": 580
+                  },
+                  {
+                    "name": "Chirimen Sansho and Pickles Potato Salad",
+                    "note": "Tax included; exact-branch managed menu.",
+                    "price": 550
+                  },
+                  {
+                    "name": "Kochi Chiku-Q",
+                    "note": "Tax included; exact-branch managed menu.",
+                    "price": 450
+                  },
+                  {
+                    "name": "Fatty Sardine",
+                    "note": "Tax included; exact-branch managed menu.",
+                    "price": 980
+                  },
+                  {
+                    "name": "Grilled Chicken Skin Pickled in Rice Bran",
+                    "note": "Tax included; exact-branch managed menu.",
+                    "price": 650
+                  },
+                  {
+                    "name": "Shimanto Pork Deji Kalbi",
+                    "note": "Tax included; exact-branch managed menu.",
+                    "price": 850
+                  },
+                  {
+                    "name": "Beef Harami Miso Marinade",
+                    "note": "Tax included; exact-branch managed menu.",
+                    "price": 980
+                  },
+                  {
+                    "name": "Lotus Root with Skin",
+                    "note": "Tax included; exact-branch managed menu.",
+                    "price": 380
+                  },
+                  {
+                    "name": "Red Eggplant",
+                    "note": "Tax included; exact-branch managed menu. Ginger Soy Sauce",
+                    "price": 550
+                  },
+                  {
+                    "name": "Manganji Pepper",
+                    "note": "Tax included; exact-branch managed menu. Chirimen Sansho",
+                    "price": 680
+                  },
+                  {
+                    "name": "Tokuyama Shiitake Mushroom",
+                    "note": "Tax included; exact-branch managed menu. Dashi Butter",
+                    "price": 480
+                  },
+                  {
+                    "name": "Konjac with Roe Tossed",
+                    "note": "Tax included; exact-branch managed menu.",
+                    "price": 450
+                  },
+                  {
+                    "name": "Firefly Squid Pickled with Egg Yolk",
+                    "note": "Tax included; exact-branch managed menu.",
+                    "price": 550
+                  },
+                  {
+                    "name": "Wara-Grilled Mentaiko",
+                    "note": "Tax included; exact-branch managed menu.",
+                    "price": 550
+                  },
+                  {
+                    "name": "Scallop Matsumae-zuke",
+                    "note": "Tax included; exact-branch managed menu.",
+                    "price": 490
+                  },
+                  {
+                    "name": "Sweet Potato Kenpi with Honey Mascarpone",
+                    "note": "Tax included; exact-branch managed menu.",
+                    "price": 550
+                  },
+                  {
+                    "name": "Homemade Raisin Butter and Millie Biscuit",
+                    "note": "Tax included; exact-branch managed menu.",
+                    "price": 480
+                  },
+                  {
+                    "name": "Chicken Tatsuta Age",
+                    "note": "Tax included; exact-branch managed menu. Plum and Green Onion Sauce",
+                    "price": 680
+                  },
+                  {
+                    "name": "Gratin Croquette",
+                    "note": "Tax included; exact-branch managed menu. Sakura Shrimp Tartare 2 pieces",
+                    "price": 680
+                  },
+                  {
+                    "name": "Juicy Menchi Katsu",
+                    "note": "Tax included; exact-branch managed menu. Hermes Sauce",
+                    "price": 550
+                  },
+                  {
+                    "name": "Fried Yam",
+                    "note": "Tax included; exact-branch managed menu. Aonori Seaweed Salt",
+                    "price": 480
+                  },
+                  {
+                    "name": "Charcoal-Grilled Lettuce Caesar Salad",
+                    "note": "Tax included; exact-branch managed menu.",
+                    "price": 600
+                  },
+                  {
+                    "name": "Dried Sardine Broth Meat Tofu",
+                    "note": "Tax included; exact-branch managed menu.",
+                    "price": 650
+                  },
+                  {
+                    "name": "Free-Range Chicken Tartare",
+                    "note": "Tax included; exact-branch managed menu. Marukyu Soy Sauce",
+                    "price": 780
+                  },
+                  {
+                    "name": "Sashimi and Avocado with Wasabi Soy Sauce",
+                    "note": "Tax included; exact-branch managed menu.",
+                    "price": 880
+                  },
+                  {
+                    "name": "Seafood Clear Soup",
+                    "note": "Tax included; exact-branch managed menu.",
+                    "price": 420
+                  },
+                  {
+                    "name": "Ikan Dashi Noodle",
+                    "note": "Tax included; exact-branch managed menu.",
+                    "price": 550
+                  },
+                  {
+                    "name": "Kochi Ice Cream",
+                    "note": "Tax included; exact-branch managed menu.",
+                    "price": 380
+                  },
+                  {
+                    "name": "Black Soybean Kinako Ice Cream",
+                    "note": "Tax included; exact-branch managed menu.",
+                    "price": 350
+                  },
+                  {
+                    "name": "Wara-Grilled Bonito — large",
+                    "price": 2480,
+                    "note": "Large serving, tax included."
+                  },
+                  {
+                    "name": "Charcoal-Grilled Chiran Chicken — large",
+                    "price": 1980,
+                    "note": "Large serving, tax included."
+                  },
+                  {
+                    "name": "Saba Bunkaboshi — 1–2 servings",
+                    "price": 980,
+                    "note": "Tax included."
+                  },
+                  {
+                    "name": "Saba Bunkaboshi — 3–4 servings",
+                    "price": 1980,
+                    "note": "Tax included."
+                  },
+                  {
+                    "name": "Grilled Rice Ball — sea urchin soy sauce",
+                    "price": 420,
+                    "note": "Tax included."
+                  },
+                  {
+                    "name": "Grilled Rice Ball — nori with mentaiko",
+                    "price": 380,
+                    "note": "Tax included."
+                  },
+                  {
+                    "name": "Clay Pot Rice — mentaiko and shirasu butter",
+                    "price": 1980,
+                    "note": "Tax included."
+                  },
+                  {
+                    "name": "Clay Pot Rice — fatty mackerel and Kujo green onion",
+                    "price": 2200,
+                    "note": "Tax included."
+                  },
+                  {
+                    "name": "Clay Pot Rice — charcoal-grilled local chicken and yuzu pepper",
+                    "price": 2400,
+                    "note": "Tax included."
+                  }
+                ],
+                "note": "Tax-inclusive exact branch menu. Regular and large portions separated; sashimi per-serving minimum retained. Grill garnishes and side sauces preserved from managed descriptions."
+              },
+              {
+                "label": "Sakigake Fukushima — ordinary drinks",
+                "url": "https://tabelog.com/en/osaka/A2701/A270108/27159245/dtlmenu/drink/",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "Akaboshi Bottle Beer",
+                    "note": "Tax included; exact-branch managed menu.",
+                    "price": 299
+                  },
+                  {
+                    "name": "Non-Alcoholic Beer",
+                    "note": "Tax included; exact-branch managed menu.",
+                    "price": 590
+                  },
+                  {
+                    "name": "Highball",
+                    "note": "Tax included; exact-branch managed menu.",
+                    "price": 299
+                  },
+                  {
+                    "name": "Jumbo Highball",
+                    "note": "Tax included; exact-branch managed menu.",
+                    "price": 599
+                  },
+                  {
+                    "name": "Coke Highball",
+                    "note": "Tax included; exact-branch managed menu.",
+                    "price": 490
+                  },
+                  {
+                    "name": "Ginger Highball",
+                    "note": "Tax included; exact-branch managed menu.",
+                    "price": 490
+                  },
+                  {
+                    "name": "Kaku Highball",
+                    "note": "Tax included; exact-branch managed menu.",
+                    "price": 590
+                  },
+                  {
+                    "name": "【Hakkaisan】Sake Brewery's \"Rice\" Highball",
+                    "note": "Tax included; exact-branch managed menu.",
+                    "price": 590
+                  },
+                  {
+                    "name": "Hoppy Set (White & Black)",
+                    "note": "¥550each, white OR black Hoppy set; not both for one price.",
+                    "price": 550
+                  },
+                  {
+                    "name": "Hoppy — naka refill",
+                    "note": "¥390tax included; spirit refill for Hoppy, not a full new set.",
+                    "price": 390
+                  },
+                  {
+                    "name": "Hoppy — soto refill",
+                    "note": "¥390tax included; mixer refill for Hoppy, not a full new set.",
+                    "price": 390
+                  },
+                  {
+                    "name": "Sasagake Sour",
+                    "note": "Tax included; exact-branch managed menu.",
+                    "price": 299
+                  },
+                  {
+                    "name": "Sasagake Mega Sour",
+                    "note": "Tax included; exact-branch managed menu.",
+                    "price": 599
+                  },
+                  {
+                    "name": "Freshly Squeezed Lemon Sour",
+                    "note": "Tax included; exact-branch managed menu.",
+                    "price": 590
+                  },
+                  {
+                    "name": "Freshly Squeezed Grapefruit Sour",
+                    "note": "Tax included; exact-branch managed menu.",
+                    "price": 590
+                  },
+                  {
+                    "name": "Calpis Sour",
+                    "note": "Tax included; exact-branch managed menu.",
+                    "price": 490
+                  },
+                  {
+                    "name": "Umeboshi Sour",
+                    "note": "Tax included; exact-branch managed menu.",
+                    "price": 490
+                  },
+                  {
+                    "name": "Kyoho Grape Sour",
+                    "note": "Tax included; exact-branch managed menu.",
+                    "price": 490
+                  },
+                  {
+                    "name": "Homemade Myoga Sweet Vinegar Sour",
+                    "note": "Tax included; exact-branch managed menu.",
+                    "price": 590
+                  },
+                  {
+                    "name": "Homemade Adult Ginger Sour",
+                    "note": "Tax included; exact-branch managed menu.",
+                    "price": 590
+                  },
+                  {
+                    "name": "【Bijofu】Yuzu and Sansho Pepper Sour from Sake Brewery",
+                    "note": "Tax included; exact-branch managed menu.",
+                    "price": 590
+                  },
+                  {
+                    "name": "【Houou Bida】Lemon Sour from Sake Brewery",
+                    "note": "Tax included; exact-branch managed menu.",
+                    "price": 590
+                  },
+                  {
+                    "name": "Green Tea Highball",
+                    "note": "Tax included; exact-branch managed menu.",
+                    "price": 550
+                  },
+                  {
+                    "name": "Oolong Tea Highball",
+                    "note": "Tax included; exact-branch managed menu.",
+                    "price": 550
+                  },
+                  {
+                    "name": "Hige Tea Highball",
+                    "note": "Tax included; exact-branch managed menu.",
+                    "price": 550
+                  },
+                  {
+                    "name": "Jasmine Highball",
+                    "note": "Tax included; exact-branch managed menu.",
+                    "price": 550
+                  },
+                  {
+                    "name": "Japanese Black Tea Highball",
+                    "note": "Tax included; exact-branch managed menu.",
+                    "price": 550
+                  },
+                  {
+                    "name": "【Sweet Potato】Kuro Kirishima",
+                    "note": "Tax included; exact-branch managed menu.",
+                    "price": 490
+                  },
+                  {
+                    "name": "【Sweet Potato】GLOW",
+                    "note": "Tax included; exact-branch managed menu.",
+                    "price": 550
+                  },
+                  {
+                    "name": "【Sweet Potato】Daiyame",
+                    "note": "Tax included; exact-branch managed menu.",
+                    "price": 550
+                  },
+                  {
+                    "name": "【Barley】Shitamachi no Napoleon",
+                    "note": "Tax included; exact-branch managed menu.",
+                    "price": 450
+                  },
+                  {
+                    "name": "【Barley】Nikaido",
+                    "note": "Tax included; exact-branch managed menu.",
+                    "price": 490
+                  },
+                  {
+                    "name": "【Chestnut】Dabada Hiburi",
+                    "note": "Tax included; exact-branch managed menu.",
+                    "price": 550
+                  },
+                  {
+                    "name": "Cardamom",
+                    "note": "Tax included; exact-branch managed menu.",
+                    "price": 550
+                  },
+                  {
+                    "name": "Umeshu",
+                    "note": "Tax included; exact-branch managed menu.",
+                    "price": 450
+                  },
+                  {
+                    "name": "Brown Sugar Umeshu",
+                    "note": "Tax included; exact-branch managed menu.",
+                    "price": 550
+                  },
+                  {
+                    "name": "【Hōō Bitten】Peach Liqueur",
+                    "note": "Tax included; exact-branch managed menu.",
+                    "price": 660
+                  },
+                  {
+                    "name": "【Ume no Yado】Yuzu Liqueur",
+                    "note": "Tax included; exact-branch managed menu.",
+                    "price": 660
+                  },
+                  {
+                    "name": "Homemade Adult Ginger Ale",
+                    "note": "Tax included; exact-branch managed menu.",
+                    "price": 590
+                  },
+                  {
+                    "name": "【Bottle】Traditional Cola",
+                    "note": "Tax included; exact-branch managed menu.",
+                    "price": 450
+                  },
+                  {
+                    "name": "【Bottle】Traditional Mitsuya Cider",
+                    "note": "Tax included; exact-branch managed menu.",
+                    "price": 450
+                  },
+                  {
+                    "name": "Green Tea",
+                    "note": "Tax included; exact-branch managed menu.",
+                    "price": 490
+                  },
+                  {
+                    "name": "Stick Hojicha",
+                    "note": "Tax included; exact-branch managed menu.",
+                    "price": 490
+                  },
+                  {
+                    "name": "Champagne Oolong Tea",
+                    "note": "Tax included; exact-branch managed menu.",
+                    "price": 490
+                  },
+                  {
+                    "name": "Beard Tea",
+                    "note": "Tax included; exact-branch managed menu.",
+                    "price": 490
+                  },
+                  {
+                    "name": "Japanese Black Tea",
+                    "note": "Tax included; exact-branch managed menu.",
+                    "price": 490
+                  },
+                  {
+                    "name": "Jasmine Tea",
+                    "note": "Tax included; exact-branch managed menu.",
+                    "price": 490
+                  },
+                  {
+                    "name": "100% Orange Juice",
+                    "note": "Tax included; exact-branch managed menu.",
+                    "price": 390
+                  }
+                ],
+                "note": "Tax-inclusive exact branch prices.¥299beer, highball and house sour are published ordinary rates, with no verified limited-time dates. Hoppy spirit/mixer refills distinguished; no invented glass capacity."
+              },
+              {
+                "label": "Sakigake Fukushima — private-room group course",
+                "url": "https://tabelog.com/en/osaka/A2701/A270108/27159245/party/301465397/",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "Private-room pork-shabu course with self-service drinks",
+                    "price": 5500,
+                    "note": "Per adult, tax included. Minimum6adults; groups9+must inquire. Current title says up to5hours, while stay field says210minutes and booking range17:00–22:00: confirm actual duration before booking."
+                  },
+                  {
+                    "name": "Child course with drinks — advance consultation required",
+                    "price": 4000,
+                    "note": "Children only by prior phone consultation;¥4000includes drinks. Does not waive minimum6adults."
+                  },
+                  {
+                    "name": "Dashi edamame",
+                    "priceLabel": "Price not published",
+                    "note": "Included in¥5500adult course, not individually priced here; final course is one choice, not two included finishes."
+                  },
+                  {
+                    "name": "Anchovy and takana macaroni salad",
+                    "priceLabel": "Price not published",
+                    "note": "Included in¥5500adult course, not individually priced here; final course is one choice, not two included finishes."
+                  },
+                  {
+                    "name": "Kochi chiku-Q",
+                    "priceLabel": "Price not published",
+                    "note": "Included in¥5500adult course, not individually priced here; final course is one choice, not two included finishes."
+                  },
+                  {
+                    "name": "Moist bang bang chicken",
+                    "priceLabel": "Price not published",
+                    "note": "Included in¥5500adult course, not individually priced here; final course is one choice, not two included finishes."
+                  },
+                  {
+                    "name": "Yamato tororo Caesar salad",
+                    "priceLabel": "Price not published",
+                    "note": "Included in¥5500adult course, not individually priced here; final course is one choice, not two included finishes."
+                  },
+                  {
+                    "name": "Assorted sashimi platter",
+                    "priceLabel": "Price not published",
+                    "note": "Included in¥5500adult course, not individually priced here; final course is one choice, not two included finishes."
+                  },
+                  {
+                    "name": "Shimanto pork shabu-shabu",
+                    "priceLabel": "Price not published",
+                    "note": "Included in¥5500adult course, not individually priced here; final course is one choice, not two included finishes."
+                  },
+                  {
+                    "name": "Seared bonito",
+                    "priceLabel": "Price not published",
+                    "note": "Included in¥5500adult course, not individually priced here; final course is one choice, not two included finishes."
+                  },
+                  {
+                    "name": "Tatsuta fried chicken",
+                    "priceLabel": "Price not published",
+                    "note": "Included in¥5500adult course, not individually priced here; final course is one choice, not two included finishes."
+                  },
+                  {
+                    "name": "Finish — udon OR zosui",
+                    "priceLabel": "Price not published",
+                    "note": "Included in¥5500adult course, not individually priced here; final course is one choice, not two included finishes."
+                  },
+                  {
+                    "name": "Course drinks — Sapporo Lager Akaboshi bottled beer",
+                    "priceLabel": "Price not published",
+                    "note": "Included in the adult group course; drink preparation entirely self-service. Sake selection varies; confirm stock. Not an ordinary à-la-carte price."
+                  },
+                  {
+                    "name": "Course drinks — lemon sour",
+                    "priceLabel": "Price not published",
+                    "note": "Included in the adult group course; drink preparation entirely self-service. Sake selection varies; confirm stock. Not an ordinary à-la-carte price."
+                  },
+                  {
+                    "name": "Course drinks — Otoko Ume sour",
+                    "priceLabel": "Price not published",
+                    "note": "Included in the adult group course; drink preparation entirely self-service. Sake selection varies; confirm stock. Not an ordinary à-la-carte price."
+                  },
+                  {
+                    "name": "Course drinks — whiskey",
+                    "priceLabel": "Price not published",
+                    "note": "Included in the adult group course; drink preparation entirely self-service. Sake selection varies; confirm stock. Not an ordinary à-la-carte price."
+                  },
+                  {
+                    "name": "Course drinks — Kuro Kirishima sweet-potato shochu",
+                    "priceLabel": "Price not published",
+                    "note": "Included in the adult group course; drink preparation entirely self-service. Sake selection varies; confirm stock. Not an ordinary à-la-carte price."
+                  },
+                  {
+                    "name": "Course drinks — Shitamachi no Napoleon barley shochu",
+                    "priceLabel": "Price not published",
+                    "note": "Included in the adult group course; drink preparation entirely self-service. Sake selection varies; confirm stock. Not an ordinary à-la-carte price."
+                  },
+                  {
+                    "name": "Course drinks — plum wine",
+                    "priceLabel": "Price not published",
+                    "note": "Included in the adult group course; drink preparation entirely self-service. Sake selection varies; confirm stock. Not an ordinary à-la-carte price."
+                  },
+                  {
+                    "name": "Course drinks — Japanese sake selection",
+                    "priceLabel": "Price not published",
+                    "note": "Included in the adult group course; drink preparation entirely self-service. Sake selection varies; confirm stock. Not an ordinary à-la-carte price."
+                  },
+                  {
+                    "name": "Course drinks — cola",
+                    "priceLabel": "Price not published",
+                    "note": "Included in the adult group course; drink preparation entirely self-service. Sake selection varies; confirm stock. Not an ordinary à-la-carte price."
+                  },
+                  {
+                    "name": "Course drinks — 100%orange juice",
+                    "priceLabel": "Price not published",
+                    "note": "Included in the adult group course; drink preparation entirely self-service. Sake selection varies; confirm stock. Not an ordinary à-la-carte price."
+                  },
+                  {
+                    "name": "Course drinks — oolong tea",
+                    "priceLabel": "Price not published",
+                    "note": "Included in the adult group course; drink preparation entirely self-service. Sake selection varies; confirm stock. Not an ordinary à-la-carte price."
+                  },
+                  {
+                    "name": "Course drinks — Calpis",
+                    "priceLabel": "Price not published",
+                    "note": "Included in the adult group course; drink preparation entirely self-service. Sake selection varies; confirm stock. Not an ordinary à-la-carte price."
+                  },
+                  {
+                    "name": "Course drinks — sparkling water",
+                    "priceLabel": "Price not published",
+                    "note": "Included in the adult group course; drink preparation entirely self-service. Sake selection varies; confirm stock. Not an ordinary à-la-carte price."
+                  }
+                ],
+                "note": "Tax inclusive, minimum6adults, groups9+inquire.¥4000child price requires advance consultation. Self-service drinks. Title advertises up to5hours but stay field210minutes; duration unresolved. Not a dated discount or unlimited-duration promise."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://tabelog.com/en/osaka/A2701/A270108/27159245/",
+            "name": "Izakaya Sakigake — Osaka Fukushima Honten",
+            "checkedAt": "2026-10-20",
+            "websiteUrl": "https://tabelog.com/en/osaka/A2701/A270108/27159245/",
+            "phone": "",
+            "openingHours": [
+              {
+                "days": "Monday–Thursday and day after holiday",
+                "hours": "17:00–24:00; food last order 22:50, drinks 23:20"
+              },
+              {
+                "days": "Friday and holiday eve",
+                "hours": "17:00–01:00 next day; food last order 23:50, drinks 00:20"
+              },
+              {
+                "days": "Saturday",
+                "hours": "16:00–01:00 next day; food last order 23:50, drinks 00:20"
+              },
+              {
+                "days": "Sunday and public holiday",
+                "hours": "16:00–23:00; food last order 21:50, drinks 22:20"
+              }
+            ],
+            "detailsSourceUrl": "https://tabelog.com/en/osaka/A2701/A270108/27159245/",
+            "additionalSources": [
+              {
+                "label": "Exact branch food",
+                "url": "https://tabelog.com/en/osaka/A2701/A270108/27159245/dtlmenu/"
+              },
+              {
+                "label": "Exact branch drinks",
+                "url": "https://tabelog.com/en/osaka/A2701/A270108/27159245/dtlmenu/drink/"
+              },
+              {
+                "label": "Group course and conditions",
+                "url": "https://tabelog.com/en/osaka/A2701/A270108/27159245/party/301465397/"
+              },
+              {
+                "label": "October 19 local opening report",
+                "url": "https://kansai-kaiten.com/sakigake-fukushima2610/"
+              },
+              {
+                "label": "Operator branch Instagram (public posts inaccessible)",
+                "url": "https://www.instagram.com/sakigake_fukushima/"
+              }
+            ],
+            "hoursNote": "90 seats; counter, tatami/sunken seating and private rooms. No on-site parking; heated-tobacco smoking in designated areas. Cards and PayPay accepted; e-money not accepted. ¥440 appetizer charge; charge tax basis not separately stated. Confirm room and holiday hours when booking. Sashimi¥990 is per serving, minimum two servings for parties of two or more. The group course needs at least six adults, prior consultation for nine or more and for children; all guests enter together and same-day headcount changes are unavailable. Its duration fields conflict: title up tofive hours versus 210-minute stay; confirm before booking. Current¥299 beer/highball/sour prices are ordinary menu rates; no dated promotion inferred.",
+            "reservationUrl": "https://tabelog.com/en/osaka/A2701/A270108/27159245/"
+          },
+          "tile": {
+            "regionSlug": "osaka",
+            "kind": "opening",
+            "slug": "japan108-sakigake",
+            "name": "Izakaya Sakigake — Osaka Fukushima Honten",
+            "neighborhood": "Fukushima",
+            "cuisine": "Izakaya / Seafood",
+            "description": "A 90-seat Fukushima izakaya serving straw-grilled bonito, robata dishes and Kochi specialties, with bottled beer, highballs and a group pork-shabu course.",
+            "address": "7-6-8 Fukushima, Fukushima-ku, Osaka",
+            "websiteUrl": "https://tabelog.com/en/osaka/A2701/A270108/27159245/",
+            "checkedAt": "2026-10-20",
+            "recognition": "October 19 exact branch opening corroborated by managed listing and local report",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-20/batch108-sakigake-2-6c77d6b69c747cf3.webp",
+            "imageCredit": "Izakaya Sakigake Osaka Fukushima Honten / Tabelog operator gallery",
+            "imageSourceUrl": "https://tabelog.com/en/osaka/A2701/A270108/27159245/dtlphotolst/smp2/",
+            "imageNote": "Actual Osaka Fukushima Honten storefront and sign; operator branch gallery.",
+            "openingConfirmed": true,
+            "day": "2026-10-19"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "originalUrl": "https://tblg.k-img.com/restaurant/images/Rvw/387321/640x640_rect_1dbe7eff30d0b731fc72d33c6ceb617e.jpg",
+          "sourcePage": "https://tabelog.com/en/osaka/A2701/A270108/27159245/dtlphotolst/smp2/",
+          "credit": "Izakaya Sakigake Osaka Fukushima Honten / Tabelog operator gallery",
+          "note": "Actual Osaka Fukushima Honten storefront and sign; operator branch gallery.",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-20/batch108-sakigake-2-6c77d6b69c747cf3.webp",
+          "sha256": "6c77d6b69c747cf31eca246943973ae42f0b2fc29cbd8b318d1f8d78ec26ba78",
+          "width": 640,
+          "height": 359
+        },
+        {
+          "originalUrl": "https://tblg.k-img.com/restaurant/images/Rvw/387322/640x640_rect_60a7eba17d084ad97cebd103a902ff7e.jpg",
+          "sourcePage": "https://tabelog.com/en/osaka/A2701/A270108/27159245/dtlphotolst/smp2/",
+          "credit": "Izakaya Sakigake Osaka Fukushima Honten / Tabelog operator gallery",
+          "note": "First-floor dining room and counter; operator exact-branch gallery.",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-20/batch108-sakigake-1-6620e140a9b465f8.webp",
+          "sha256": "6620e140a9b465f86361ba7cd00a8a1ca4dfe056bbefa58275c70bc099e7530f",
+          "width": 640,
+          "height": 359
+        },
+        {
+          "originalUrl": "https://tblg.k-img.com/restaurant/images/Rvw/387322/640x640_rect_2d0b5d744aeab7886330ebec5ea1ddf7.jpg",
+          "sourcePage": "https://tabelog.com/en/osaka/A2701/A270108/27159245/dtlphotolst/smp2/",
+          "credit": "Izakaya Sakigake Osaka Fukushima Honten / Tabelog operator gallery",
+          "note": "Operator-labelled katsuo tataki, presentation example; daily availability may vary.",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-20/batch108-sakigake-3-ee3b809337184c1f.webp",
+          "sha256": "ee3b809337184c1fb0a1f2913964a9a039431d26774bf1e6d06beb679fc69d7d",
+          "width": 640,
+          "height": 359
+        },
+        {
+          "originalUrl": "https://tblg.k-img.com/restaurant/images/Rvw/387322/640x640_rect_55dfcd13bbe453942260b22c8a09b478.jpg",
+          "sourcePage": "https://tabelog.com/en/osaka/A2701/A270108/27159245/dtlphotolst/smp2/",
+          "credit": "Izakaya Sakigake Osaka Fukushima Honten / Tabelog operator gallery",
+          "note": "Straw-grilling scene at the branch, credited operator gallery.",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-20/batch108-sakigake-5-c76eb09196a7488f.webp",
+          "sha256": "c76eb09196a7488ff6889a22923764805b7222370e750c1bc0a6e15f55c398e6",
+          "width": 640,
+          "height": 359
+        },
+        {
+          "originalUrl": "https://tblg.k-img.com/restaurant/images/Rvw/387322/640x640_rect_d926cf74778bbebdffd0c197037211e1.jpg",
+          "sourcePage": "https://tabelog.com/en/osaka/A2701/A270108/27159245/dtlphotolst/smp2/",
+          "credit": "Izakaya Sakigake Osaka Fukushima Honten / Tabelog operator gallery",
+          "note": "Second-floor tatami dining area; operator exact-branch gallery.",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-20/batch108-sakigake-6-cf1ec75a85f63692.webp",
+          "sha256": "cf1ec75a85f636928d8b4f92ea4fd8458091403a259fea9325fd4cb1f81159d8",
+          "width": 640,
+          "height": 359
+        },
+        {
+          "originalUrl": "https://tblg.k-img.com/restaurant/images/Rvw/387322/640x640_rect_a30e6027c044a6086623bd58a661ad0c.jpg",
+          "sourcePage": "https://tabelog.com/en/osaka/A2701/A270108/27159245/dtlphotolst/smp2/",
+          "credit": "Izakaya Sakigake Osaka Fukushima Honten / Tabelog operator gallery",
+          "note": "Operator-labelled a la carte dish with Akaboshi bottle; presentation example, not a fixed meal bundle.",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-20/batch108-sakigake-9-2734584f45922543.webp",
+          "sha256": "2734584f45922543352c616e22a3cd4d09daab18e62575ba55df605b3f90575a",
+          "width": 640,
+          "height": 359
+        }
+      ]
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Tonkatsu Hitotsubu Hitotsubu — Fukushima Opens 2026-10-19",
+        "description": "A 12-seat reservation-only tonkatsu counter serving lunch and dinner tasting courses featuring selected regional pork, seasonal vegetables and rice.",
+        "sourceUrl": "https://tabelog.com/en/osaka/A2701/A270108/27158248/",
+        "address": "KIRAVIA A Building, 1-6-29 Fukushima, Fukushima-ku, Osaka",
+        "productName": "Tonkatsu Hitotsubu Hitotsubu — Fukushima",
+        "utcStartDateTime": "2026-10-19T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "Exact operator-managed tonkatsu branch listing explicitly announces October 19,2026 OPEN and records 2026.10.19. Local launch report independently corroborates October 19 and the KIRAVIA branch. The opening of the original Japanese restaurant of the same name is not used for this second, tonkatsu-specific branch.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Osaka",
+          "Japan",
+          "Fukushima",
+          "Tonkatsu / Japanese"
+        ],
+        "longFormSummary": "<p>A 12-seat reservation-only tonkatsu counter serving lunch and dinner tasting courses featuring selected regional pork, seasonal vegetables and rice.<cite data-ref=\"https://tabelog.com/en/osaka/A2701/A270108/27158248/\"></cite></p><p>Exact operator-managed tonkatsu branch listing explicitly announces October 19,2026 OPEN and records 2026.10.19. Local launch report independently corroborates October 19 and the KIRAVIA branch. The opening of the original Japanese restaurant of the same name is not used for this second, tonkatsu-specific branch.</p>",
+        "references": [
+          {
+            "url": "https://tabelog.com/en/osaka/A2701/A270108/27158248/",
+            "title": "Tonkatsu Hitotsubu Hitotsubu — Fukushima — branch website",
+            "confidence": 90,
+            "reasoning": "Tonkatsu Hitotsubu Hitotsubu — Fukushima — branch website"
+          },
+          {
+            "url": "https://tabelog.com/en/osaka/A2701/A270108/27158248/party/299418249/",
+            "title": "Exact branch lunch course",
+            "confidence": 90,
+            "reasoning": "Exact branch lunch course"
+          },
+          {
+            "url": "https://tabelog.com/en/osaka/A2701/A270108/27158248/party/299418253/",
+            "title": "Exact branch dinner course",
+            "confidence": 90,
+            "reasoning": "Exact branch dinner course"
+          },
+          {
+            "url": "https://www.tablecheck.com/en/tonkatsu-hitotsubu",
+            "title": "TableCheck branch courses and direct phone",
+            "confidence": 90,
+            "reasoning": "TableCheck branch courses and direct phone"
+          },
+          {
+            "url": "https://kansai-kaiten.com/tonkatsuhitotsubu-fukushima2610/",
+            "title": "Local October 19 opening report",
+            "confidence": 90,
+            "reasoning": "Local October 19 opening report"
+          },
+          {
+            "url": "https://www.instagram.com/tonkatsu_hitotsubu12/",
+            "title": "Operator Instagram (public posts inaccessible)",
+            "confidence": 90,
+            "reasoning": "Operator Instagram (public posts inaccessible)"
+          },
+          {
+            "url": "https://tabelog.com/en/osaka/A2701/A270108/27158248/dtlmenu/drink/",
+            "title": "Checked exact branch drink tab (no items)",
+            "confidence": 90,
+            "reasoning": "Checked exact branch drink tab (no items)"
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://tabelog.com/en/osaka/A2701/A270108/27158248/",
+          "menu": {
+            "pinSourceUrl": "https://tabelog.com/en/osaka/A2701/A270108/27158248/",
+            "name": "Tonkatsu Hitotsubu Hitotsubu — Fukushima",
+            "checkedAt": "2026-10-20",
+            "menus": [
+              {
+                "label": "Hitotsubu Fukushima — lunch course",
+                "url": "https://tabelog.com/en/osaka/A2701/A270108/27158248/party/299418249/",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "Tonkatsu lunch course",
+                    "price": 5900,
+                    "note": "Per person, tax included; one to ten guests,60-minute listed stay."
+                  },
+                  {
+                    "name": "Seasonal potage",
+                    "priceLabel": "Price not published",
+                    "note": "Included in¥5900lunch course; pork origins/cuts are examples of the day and may change, no separate dish price published."
+                  },
+                  {
+                    "name": "Carrot râpée",
+                    "priceLabel": "Price not published",
+                    "note": "Included in¥5900lunch course; pork origins/cuts are examples of the day and may change, no separate dish price published."
+                  },
+                  {
+                    "name": "Cabbage salad with seasonal dressing",
+                    "priceLabel": "Price not published",
+                    "note": "Included in¥5900lunch course; pork origins/cuts are examples of the day and may change, no separate dish price published."
+                  },
+                  {
+                    "name": "Katsu sandwich with homemade sauce",
+                    "priceLabel": "Price not published",
+                    "note": "Included in¥5900lunch course; pork origins/cuts are examples of the day and may change, no separate dish price published."
+                  },
+                  {
+                    "name": "Selected pork — tenderloin (example: Hirata Farm Berkshire50,Iwate)",
+                    "priceLabel": "Price not published",
+                    "note": "Included in¥5900lunch course; pork origins/cuts are examples of the day and may change, no separate dish price published."
+                  },
+                  {
+                    "name": "Selected pork — rib (example: Yamanishi Farm Sanemon,Ibaraki)",
+                    "priceLabel": "Price not published",
+                    "note": "Included in¥5900lunch course; pork origins/cuts are examples of the day and may change, no separate dish price published."
+                  },
+                  {
+                    "name": "Selected pork — loin (example: Awayuki Pork,Gunma)",
+                    "priceLabel": "Price not published",
+                    "note": "Included in¥5900lunch course; pork origins/cuts are examples of the day and may change, no separate dish price published."
+                  },
+                  {
+                    "name": "Selected pork — thigh (example: Iwanaka Pork,Iwate)",
+                    "priceLabel": "Price not published",
+                    "note": "Included in¥5900lunch course; pork origins/cuts are examples of the day and may change, no separate dish price published."
+                  },
+                  {
+                    "name": "Rice",
+                    "priceLabel": "Price not published",
+                    "note": "Included in¥5900lunch course; pork origins/cuts are examples of the day and may change, no separate dish price published."
+                  },
+                  {
+                    "name": "Pork miso soup",
+                    "priceLabel": "Price not published",
+                    "note": "Included in¥5900lunch course; pork origins/cuts are examples of the day and may change, no separate dish price published."
+                  },
+                  {
+                    "name": "Herbal tea",
+                    "priceLabel": "Price not published",
+                    "note": "Included in¥5900lunch course; pork origins/cuts are examples of the day and may change, no separate dish price published."
+                  },
+                  {
+                    "name": "Lunch add-on — katsu curry",
+                    "priceLabel": "Price not published",
+                    "note": "Optional addition; supplement price not published."
+                  }
+                ],
+                "note": "Tax inclusive. Course dishes included, not separately priced. Named pork origins are examples; not promised daily stock. Add-on curry price not published."
+              },
+              {
+                "label": "Hitotsubu Fukushima — dinner course",
+                "url": "https://tabelog.com/en/osaka/A2701/A270108/27158248/party/299418253/",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "Selected regional pork tonkatsu dinner course",
+                    "price": 8900,
+                    "note": "Per person, tax included; one to ten guests,120-minute listed stay."
+                  },
+                  {
+                    "name": "Seasonal potage",
+                    "priceLabel": "Price not published",
+                    "note": "Included in¥8900dinner course; selected pork varies by region and cut. Finishing meal is one alternative, not both. Duplicate translated Loin row consolidated; no extra cut inferred."
+                  },
+                  {
+                    "name": "Pâté de campagne",
+                    "priceLabel": "Price not published",
+                    "note": "Included in¥8900dinner course; selected pork varies by region and cut. Finishing meal is one alternative, not both. Duplicate translated Loin row consolidated; no extra cut inferred."
+                  },
+                  {
+                    "name": "Potted seasonal vegetables with bagna cauda",
+                    "priceLabel": "Price not published",
+                    "note": "Included in¥8900dinner course; selected pork varies by region and cut. Finishing meal is one alternative, not both. Duplicate translated Loin row consolidated; no extra cut inferred."
+                  },
+                  {
+                    "name": "Carrot râpée",
+                    "priceLabel": "Price not published",
+                    "note": "Included in¥8900dinner course; selected pork varies by region and cut. Finishing meal is one alternative, not both. Duplicate translated Loin row consolidated; no extra cut inferred."
+                  },
+                  {
+                    "name": "Sauerkraut",
+                    "priceLabel": "Price not published",
+                    "note": "Included in¥8900dinner course; selected pork varies by region and cut. Finishing meal is one alternative, not both. Duplicate translated Loin row consolidated; no extra cut inferred."
+                  },
+                  {
+                    "name": "Tenderloin katsu sandwich with homemade sauce",
+                    "priceLabel": "Price not published",
+                    "note": "Included in¥8900dinner course; selected pork varies by region and cut. Finishing meal is one alternative, not both. Duplicate translated Loin row consolidated; no extra cut inferred."
+                  },
+                  {
+                    "name": "Selected pork tasting — example cuts tenderloin,ribeye,loin,thigh",
+                    "priceLabel": "Price not published",
+                    "note": "Included in¥8900dinner course; selected pork varies by region and cut. Finishing meal is one alternative, not both. Duplicate translated Loin row consolidated; no extra cut inferred."
+                  },
+                  {
+                    "name": "Finishing meal — katsu curry OR seasonal clay-pot rice",
+                    "priceLabel": "Price not published",
+                    "note": "Included in¥8900dinner course; selected pork varies by region and cut. Finishing meal is one alternative, not both. Duplicate translated Loin row consolidated; no extra cut inferred."
+                  },
+                  {
+                    "name": "Ice monaka",
+                    "priceLabel": "Price not published",
+                    "note": "Included in¥8900dinner course; selected pork varies by region and cut. Finishing meal is one alternative, not both. Duplicate translated Loin row consolidated; no extra cut inferred."
+                  },
+                  {
+                    "name": "Herbal tea",
+                    "priceLabel": "Price not published",
+                    "note": "Included in¥8900dinner course; selected pork varies by region and cut. Finishing meal is one alternative, not both. Duplicate translated Loin row consolidated; no extra cut inferred."
+                  }
+                ],
+                "note": "Tax inclusive. Seasonal dishes and pork selection vary. Finishing curry OR clay-pot rice, not both. The source repeats translated Loin twice without distinguishing a cut; preserve one tasting description, do not invent a fifth type."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://tabelog.com/en/osaka/A2701/A270108/27158248/",
+            "name": "Tonkatsu Hitotsubu Hitotsubu — Fukushima",
+            "checkedAt": "2026-10-20",
+            "websiteUrl": "https://tabelog.com/en/osaka/A2701/A270108/27158248/",
+            "phone": "080-6946-2092",
+            "openingHours": [
+              {
+                "days": "Daily lunch",
+                "hours": "11:00–15:00"
+              },
+              {
+                "days": "Daily dinner",
+                "hours": "18:30–21:00"
+              }
+            ],
+            "detailsSourceUrl": "https://tabelog.com/en/osaka/A2701/A270108/27158248/",
+            "additionalSources": [
+              {
+                "label": "Exact branch lunch course",
+                "url": "https://tabelog.com/en/osaka/A2701/A270108/27158248/party/299418249/"
+              },
+              {
+                "label": "Exact branch dinner course",
+                "url": "https://tabelog.com/en/osaka/A2701/A270108/27158248/party/299418253/"
+              },
+              {
+                "label": "TableCheck branch courses and direct phone",
+                "url": "https://www.tablecheck.com/en/tonkatsu-hitotsubu"
+              },
+              {
+                "label": "Local October 19 opening report",
+                "url": "https://kansai-kaiten.com/tonkatsuhitotsubu-fukushima2610/"
+              },
+              {
+                "label": "Operator Instagram (public posts inaccessible)",
+                "url": "https://www.instagram.com/tonkatsu_hitotsubu12/"
+              },
+              {
+                "label": "Checked exact branch drink tab (no items)",
+                "url": "https://tabelog.com/en/osaka/A2701/A270108/27158248/dtlmenu/drink/"
+              }
+            ],
+            "hoursNote": "12 seats, no private room or on-site parking; non-smoking. Reservation only. Managed course booking supports 1–10 guests; contact branch for larger groups or private hire. Lunch listed stay 60 minutes, dinner 120 minutes. Cards accepted; e-money/QRpayments not accepted. Consult in advance about children; refrain from strong fragrance. Direct phone corroborated by TableCheck.¥5900 lunch and¥8900 dinner include tax. Pork origins/cuts are examples and change with sourcing; daily availability is not guaranteed. Lunch katsu-curry supplement price unpublished. Dinner finish is curry OR seasonal clay-pot rice. No verified dated launch offer or individual drink prices found.",
+            "reservationUrl": "https://www.tablecheck.com/en/tonkatsu-hitotsubu"
+          },
+          "tile": {
+            "regionSlug": "osaka",
+            "kind": "opening",
+            "slug": "japan108-hitotsubu",
+            "name": "Tonkatsu Hitotsubu Hitotsubu — Fukushima",
+            "neighborhood": "Fukushima",
+            "cuisine": "Tonkatsu / Japanese",
+            "description": "A 12-seat reservation-only tonkatsu counter serving lunch and dinner tasting courses featuring selected regional pork, seasonal vegetables and rice.",
+            "address": "KIRAVIA A Building, 1-6-29 Fukushima, Fukushima-ku, Osaka",
+            "websiteUrl": "https://tabelog.com/en/osaka/A2701/A270108/27158248/",
+            "checkedAt": "2026-10-20",
+            "recognition": "October 19 tonkatsu branch opening verified; distinct from original Japanese restaurant",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-20/batch108-hitotsubu-5-7b9753db7a93a4a4.webp",
+            "imageCredit": "Tonkatsu Hitotsubu Hitotsubu / Tabelog operator gallery",
+            "imageSourceUrl": "https://tabelog.com/en/osaka/A2701/A270108/27158248/dtlphotolst/smp2/",
+            "imageNote": "Panoramic counter dining room at Tonkatsu Hitotsubu Hitotsubu, operator exact-branch gallery.",
+            "openingConfirmed": true,
+            "day": "2026-10-19"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "originalUrl": "https://tblg.k-img.com/restaurant/images/Rvw/386196/640x640_rect_acb2ffba03810ee44439b8b4c4badcd5.jpg",
+          "sourcePage": "https://tabelog.com/en/osaka/A2701/A270108/27158248/dtlphotolst/smp2/",
+          "credit": "Tonkatsu Hitotsubu Hitotsubu / Tabelog operator gallery",
+          "note": "Panoramic counter dining room at Tonkatsu Hitotsubu Hitotsubu, operator exact-branch gallery.",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-20/batch108-hitotsubu-5-7b9753db7a93a4a4.webp",
+          "sha256": "7b9753db7a93a4a41e16f6ed25a75075ab398c264cc83a61f2b6b386ea85a743",
+          "width": 640,
+          "height": 359
+        },
+        {
+          "originalUrl": "https://tblg.k-img.com/restaurant/images/Rvw/386196/640x640_rect_a2292420a5befde9fda2411f8d8590cc.jpg",
+          "sourcePage": "https://tabelog.com/en/osaka/A2701/A270108/27158248/dtlphotolst/smp2/",
+          "credit": "Tonkatsu Hitotsubu Hitotsubu / Tabelog operator gallery",
+          "note": "Actual branch exterior and entrance, operator exact-branch gallery.",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-20/batch108-hitotsubu-6-e4e6bcce4c732fac.webp",
+          "sha256": "e4e6bcce4c732faceb029ad973f547a17878690eecb94471ae360bc52014c0c6",
+          "width": 640,
+          "height": 359
+        },
+        {
+          "originalUrl": "https://tblg.k-img.com/restaurant/images/Rvw/387653/640x640_rect_8e708ba3b22489abbad1a1e4fc329518.jpg",
+          "sourcePage": "https://tabelog.com/en/osaka/A2701/A270108/27158248/dtlphotolst/smp2/",
+          "credit": "Tonkatsu Hitotsubu Hitotsubu / Tabelog operator gallery",
+          "note": "Operator-labelled Ueki Bagna Cauda, dinner-course presentation example; seasonal contents may vary.",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-20/batch108-hitotsubu-0-161c1b35775622c9.webp",
+          "sha256": "161c1b35775622c990659fc018c955dde2dbb0a0593d3f9ecbd4df234b774812",
+          "width": 480,
+          "height": 640
+        },
+        {
+          "originalUrl": "https://tblg.k-img.com/restaurant/images/Rvw/386196/640x640_rect_3862176a2d5c4a1e3fdd8db2b1d8ff18.jpg",
+          "sourcePage": "https://tabelog.com/en/osaka/A2701/A270108/27158248/dtlphotolst/smp2/",
+          "credit": "Tonkatsu Hitotsubu Hitotsubu / Tabelog operator gallery",
+          "note": "Operator-labelled dashi tonkatsu, presentation example; exact pork origin not inferred from photo.",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-20/batch108-hitotsubu-8-6028bfcb8db17ee7.webp",
+          "sha256": "6028bfcb8db17ee77d07a726cdc6ead5b86dac8a36ea3b10526a069e64dce00c",
+          "width": 640,
+          "height": 359
+        },
+        {
+          "originalUrl": "https://tblg.k-img.com/restaurant/images/Rvw/386196/640x640_rect_1fe95eb09330244b733f295159629120.jpg",
+          "sourcePage": "https://tabelog.com/en/osaka/A2701/A270108/27158248/dtlphotolst/smp2/",
+          "credit": "Tonkatsu Hitotsubu Hitotsubu / Tabelog operator gallery",
+          "note": "Freshly cooked clay-pot rice, operator exact-branch gallery; course selection may vary.",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-20/batch108-hitotsubu-9-5152989ef6e364a4.webp",
+          "sha256": "5152989ef6e364a408e44e6cf907497140aedbd4dbd69ad639070c0588868dca",
+          "width": 640,
+          "height": 359
+        },
+        {
+          "originalUrl": "https://tblg.k-img.com/restaurant/images/Rvw/387654/640x640_rect_4102f677db9dc2f2cae5b4b0ca2c2303.jpg",
+          "sourcePage": "https://tabelog.com/en/osaka/A2701/A270108/27158248/dtlphotolst/smp2/",
+          "credit": "Tonkatsu Hitotsubu Hitotsubu / Tabelog operator gallery",
+          "note": "Operator-labelled selected regional pork display; no specific breed inferred from unlabelled cuts.",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-20/batch108-hitotsubu-11-a0aef203d980cc33.webp",
+          "sha256": "a0aef203d980cc33f79d4bf43812c1e2d014ea58d09a640925f0ba6ccda2c8e5",
+          "width": 640,
+          "height": 480
+        }
+      ]
+    }
+  ],
+  "researchNotes": [
+    "Two October19Osaka branches, independently checked by English and Japanese names locally and in production. Exact branch source URLs and full profiles validated before writes; no existing pins updated. Osaka Just opened should reach30while all Coming soon cells and Fukuoka Just opened remain below target.",
+    "Sakigake original branch openingOctober19matches managed listing and local launch report. Daily hours and last orders retained, including holiday/eve alternatives; avoid copying a single generic midnight closing to all days. Appetizer charge¥440tax basis not stated. Customer phone unpublished in managed branch; recruitment telephone is not substituted.",
+    "Sakigake44food rows expanded to50priced portions, preserving ordinary/large bonito and chicken, mackerel1–2/3–4portions, two rice-ball flavors and three clay-pot flavors. Sashimi¥990per serving and minimumtwo for parties2+retained. Hoppy naka/soto refills distinguished.¥299drinks have no verified promotion window and are ordinary menu prices.",
+    "Sakigake group course: minimumsix adults, groupsnine or more need inquiry, children¥4000by consultation, self-service drinks, no same-day headcount change. Current title up tofive hours conflicts with210-minute stay field; no unlimited stay or exact duration promised. Individual sake list is variable; drinks grouped with included course menu, not assumed ordinary menu pricing.",
+    "Hitotsubu is a second, tonkatsu-specific branch; not a reset of the original Japanese restaurant. Exact new branch openingOctober19, phone and¥5900/¥8900courses corroborated. Dishes transcribed from exact course pages; origins are examples. Duplicate translated Loin in dinner list consolidated without inventing anothercut. Actual drink prices and lunch curry supplement remain unpublished after ordinary menu/drink tabs, course pages, TableCheck, operator Instagram and gallery checks.",
+    "Both operatorInstagram accounts linked and fetched, but no public post content exposed. Exact operator-managed Tabelog branch galleries inspected instead; twelve chosen credited photos hosted in Azure. No inferred dish/brand from unlabelled photo, no old original-restaurant gallery used for Hitotsubu.",
+    "AFRO managed branch openingOctober19conflicts with local report of October16–24preopening; latest web article changed from its cached opening snippet. Preserve both findings and hold until operator establishes first service. Exact menu/gallery gathered but noAFROpin created. Stand.AFROandizakayaafroaccounts may concern siblings; do not borrow menus or chronology.",
+    "Waratako Konoha Mall Hashimoto already exists as pin16026under English spellingWaratako; no duplicate or profile overwrite. SHINOYA15926, Hakodate Shunka15597andfourBOOKHOMEvenues15909–15912also already exist. Broad name checks supersede exact source-only checks.",
+    "Coming soon research refreshed across Fukuoka, Osaka, Kyoto, Nagoya and Sapporo; sparse or duplicate announcements remain specific gaps. PADDLERS Fukuoka onlyNovembermonth and no exact branchmenu/gallery found in search; held for further research. No fabricated dates or sibling menu substitution to fill a tab."
+  ],
+  "held": [
+    {
+      "name": "Komekome AFRO",
+      "sourceUrl": "https://tabelog.com/en/osaka/A2701/A270106/27158756/",
+      "reason": "ManagedOctober19date versus localOctober16–24preopening. Need operator original first-service evidence; exact menus/gallery retained in ignored research cache."
+    },
+    {
+      "name": "PADDLERS COFFEE Fukuoka",
+      "sourceUrl": "https://konohen.media/articles/paddlers-coffee-fukuoka-ropponmatsu-open-202611/",
+      "reason": "Novembermonth-level opening; exact branch menu, representative gallery and operator chronology need research. Do not copy Tokyo menu/photos."
+    },
+    {
+      "name": "Minami no Yakiniku Moheji",
+      "sourceUrl": "https://tabelog.com/en/osaka/A2701/A270202/27159933/",
+      "reason": "Prior October29managed opening but empty exact menu/gallery; no new resolving evidence."
+    },
+    {
+      "name": "Nikuya Fukumatsu Tsutenkaku",
+      "sourceUrl": "https://tabelog.com/en/osaka/A2701/A270206/27159474/",
+      "reason": "Prior November1branch page versus October19employeropening conflict unresolved."
+    }
+  ],
+  "counts": {
+    "venues": 2,
+    "newPins": 2,
+    "ordinaryMenuItems": 147,
+    "offers": 0,
+    "offerMenuItems": 0,
+    "photos": 12,
+    "newOrdinaryMenuItems": 147,
+    "preservedOrdinaryMenuItems": 0,
+    "newMemberships": 2,
+    "shortfallReduction": 2
+  },
+  "photoReview": {
+    "downloadedCandidates": 36,
+    "selectedPhotos": 12,
+    "method": "Thirty-six exact-branch gallery candidates downloaded with plaincurl and visually inspected across Sakigake, Hitotsubu and heldAFRO. Twelve operator-posted photos selected for two publishedbranches, with source URLs, labels and credits preserved. Azure publichash and image decode verified. Food photos are presentation examples; variable course origins and exact bundles not inferred."
+  },
+  "verification": {
+    "local": {
+      "profiles": [
+        {
+          "pinId": 18550,
+          "sourceUrl": "https://tabelog.com/en/osaka/A2701/A270108/27159245/",
+          "name": "Izakaya Sakigake — Osaka Fukushima Honten",
+          "contentId": 1954,
+          "contentRevision": 1,
+          "verifiedGalleryLinks": 6,
+          "publicPinStatus": 200,
+          "apiBase": "http://localhost:3000",
+          "publicBase": "http://localhost:3000"
+        },
+        {
+          "pinId": 18551,
+          "sourceUrl": "https://tabelog.com/en/osaka/A2701/A270108/27158248/",
+          "name": "Tonkatsu Hitotsubu Hitotsubu — Fukushima",
+          "contentId": 1955,
+          "contentRevision": 1,
+          "verifiedGalleryLinks": 6,
+          "publicPinStatus": 200,
+          "apiBase": "http://localhost:3000",
+          "publicBase": "http://localhost:3000"
+        }
+      ],
+      "guides": [
+        {
+          "pinId": 18550,
+          "region": "osaka",
+          "view": "new",
+          "neighborhood": "Fukushima",
+          "nativeTitleAndImage": true,
+          "hrefs": [
+            "/pin/18550/izakaya-sakigake-osaka-fukushima-honten-opens-2026-10-19"
+          ],
+          "browserFiltered": false,
+          "publicBase": "http://localhost:3000",
+          "guideStatus": 200,
+          "offers": []
+        },
+        {
+          "pinId": 18551,
+          "region": "osaka",
+          "view": "new",
+          "neighborhood": "Fukushima",
+          "nativeTitleAndImage": true,
+          "hrefs": [
+            "/pin/18551/tonkatsu-hitotsubu-hitotsubu-fukushima-opens-2026-10-19"
+          ],
+          "browserFiltered": false,
+          "publicBase": "http://localhost:3000",
+          "guideStatus": 200,
+          "offers": []
+        }
+      ]
+    },
+    "production": {
+      "profiles": [
+        {
+          "pinId": 18554,
+          "sourceUrl": "https://tabelog.com/en/osaka/A2701/A270108/27159245/",
+          "name": "Izakaya Sakigake — Osaka Fukushima Honten",
+          "contentId": 1954,
+          "contentRevision": 1,
+          "verifiedGalleryLinks": 6,
+          "publicPinStatus": 200,
+          "apiBase": "https://www.chronopin.com",
+          "publicBase": "https://www.chronopin.com"
+        },
+        {
+          "pinId": 18555,
+          "sourceUrl": "https://tabelog.com/en/osaka/A2701/A270108/27158248/",
+          "name": "Tonkatsu Hitotsubu Hitotsubu — Fukushima",
+          "contentId": 1955,
+          "contentRevision": 1,
+          "verifiedGalleryLinks": 6,
+          "publicPinStatus": 200,
+          "apiBase": "https://www.chronopin.com",
+          "publicBase": "https://www.chronopin.com"
+        }
+      ],
+      "guides": [
+        {
+          "pinId": 18554,
+          "region": "osaka",
+          "view": "new",
+          "neighborhood": "Fukushima",
+          "nativeTitleAndImage": true,
+          "hrefs": [
+            "/pin/18554/izakaya-sakigake-osaka-fukushima-honten-opens-2026-10-19"
+          ],
+          "browserFiltered": false,
+          "publicBase": "https://www.chronopin.com",
+          "guideStatus": 200,
+          "offers": []
+        },
+        {
+          "pinId": 18555,
+          "region": "osaka",
+          "view": "new",
+          "neighborhood": "Fukushima",
+          "nativeTitleAndImage": true,
+          "hrefs": [
+            "/pin/18555/tonkatsu-hitotsubu-hitotsubu-fukushima-opens-2026-10-19"
+          ],
+          "browserFiltered": false,
+          "publicBase": "https://www.chronopin.com",
+          "guideStatus": 200,
+          "offers": []
+        }
+      ]
+    }
+  },
+  "publicationStatus": {
+    "local": "saved and publicly verified",
+    "production": "saved and publicly verified",
+    "publicHttpsVerified": true
+  },
+  "verifiedGuideCounts": {
+    "local": [
+      {
+        "environment": "local",
+        "city": "fukuoka",
+        "view": "upcoming",
+        "verificationBase": "http://localhost:3000",
+        "count": 10,
+        "ids": [
+          "15398",
+          "15410",
+          "15411",
+          "15415",
+          "15424",
+          "15425",
+          "15426",
+          "15914",
+          "15924",
+          "18421"
+        ],
+        "verifiedAt": "2026-10-20T16:07:16.317360+00:00"
+      },
+      {
+        "environment": "local",
+        "city": "fukuoka",
+        "view": "new",
+        "verificationBase": "http://localhost:3000",
+        "count": 24,
+        "ids": [
+          "15399",
+          "15400",
+          "15401",
+          "15409",
+          "15412",
+          "15414",
+          "15421",
+          "15422",
+          "15423",
+          "15427",
+          "15428",
+          "15969",
+          "16026",
+          "16027",
+          "16078",
+          "16290",
+          "16291",
+          "16292",
+          "16326",
+          "17625",
+          "18418",
+          "18506",
+          "18536",
+          "18537"
+        ],
+        "verifiedAt": "2026-10-20T16:07:16.532674+00:00"
+      },
+      {
+        "environment": "local",
+        "city": "fukuoka",
+        "view": "top",
+        "verificationBase": "http://localhost:3000",
+        "count": 30,
+        "ids": [
+          "15402",
+          "15403",
+          "15404",
+          "15405",
+          "15406",
+          "15407",
+          "15408",
+          "15413",
+          "15416",
+          "15417",
+          "15418",
+          "15419",
+          "15420",
+          "15429",
+          "18132",
+          "18133",
+          "18134",
+          "18147",
+          "18148",
+          "18149",
+          "18150",
+          "18176",
+          "18279",
+          "18280",
+          "18281",
+          "18289",
+          "18291",
+          "18293",
+          "18295",
+          "18296"
+        ],
+        "verifiedAt": "2026-10-20T16:07:16.634723+00:00"
+      },
+      {
+        "environment": "local",
+        "city": "fukuoka",
+        "view": "discounts",
+        "verificationBase": "http://localhost:3000",
+        "count": 36,
+        "ids": [
+          "http://raisindor.jp/",
+          "https://010bld.com/gohgan/",
+          "https://333sanmitomatoramen.com/store/%e5%a4%a9%e7%a5%9e%e5%a4%a7%e5%90%8d%e6%9c%ac%e5%ba%97/",
+          "https://and-gallery.com/#hukuoka",
+          "https://cene.tokyo/collections/fukuoka-open",
+          "https://fukuoka-orientalhotel.com/restaurant/linksquare/",
+          "https://fukuokaseahawk.hiltonjapan.co.jp/restaurants/clouds",
+          "https://fukuokaseahawk.hiltonjapan.co.jp/restaurants/seala",
+          "https://kanzan.net/imuri/",
+          "https://kusiyatubame.owst.jp/",
+          "https://le-bistro-aki.com/",
+          "https://onefukuoka-building.jp/shop/55",
+          "https://prtimes.jp/main/html/rd/p/000000060.000179076.html",
+          "https://prtimes.jp/main/html/rd/p/000000064.000152670.html",
+          "https://prtimes.jp/main/html/rd/p/000000170.000101757.html",
+          "https://pukutoco.com/sumomo-bakery-1007open/",
+          "https://pukutoco.com/sumomobakery-akasaka1019open/",
+          "https://tabelog.com/en/fukuoka/A4001/A400102/40074846/",
+          "https://toeihotel-fukuoka.com/restaurant/bistro_atrie/",
+          "https://www.eggsnthingsjapan.com/hakata/",
+          "https://www.f-sunpalace.com/restaurant/lagoon/",
+          "https://www.fuk.hotelokura.co.jp/restaurant/lechampdor/",
+          "https://www.gate-hotel.jp/fukuoka/rb/agfukuoka.html",
+          "https://www.ginzalion.jp/shop/brand/yebisubar/onefukuokabldg.html",
+          "https://www.hiramatsurestaurant.jp/hiramatsu-hakata/",
+          "https://www.hiramatsurestaurant.jp/kubotsu/",
+          "https://www.hotelnikko-fukuoka.com/restaurant/celebrites/",
+          "https://www.hotelnikko-fukuoka.com/restaurant/serena/",
+          "https://www.hotpepper.jp/strJ001276550/",
+          "https://www.kys-newotani.co.jp/hakata/restaurant/castillian-bar/",
+          "https://www.orec.co.jp/greenlab-fukuoka/",
+          "https://www.pochi-ito.com/",
+          "https://www.princehotels.co.jp/momochihama/restaurant/yocaterrace/",
+          "https://www.quil-fait-bon.com/pages/fukuoka",
+          "https://www.recent-hotel.com/restaurant/",
+          "https://www.tenchika.com/shop/h_b_antique/"
+        ],
+        "verifiedAt": "2026-10-20T16:07:16.691886+00:00"
+      },
+      {
+        "environment": "local",
+        "city": "osaka",
+        "view": "upcoming",
+        "verificationBase": "http://localhost:3000",
+        "count": 12,
+        "ids": [
+          "15432",
+          "15445",
+          "15447",
+          "15448",
+          "15449",
+          "15458",
+          "15913",
+          "15925",
+          "15975",
+          "16023",
+          "16079",
+          "17168"
+        ],
+        "verifiedAt": "2026-10-20T16:07:17.089682+00:00"
+      },
+      {
+        "environment": "local",
+        "city": "osaka",
+        "view": "new",
+        "verificationBase": "http://localhost:3000",
+        "count": 30,
+        "ids": [
+          "15431",
+          "15435",
+          "15436",
+          "15437",
+          "15438",
+          "15439",
+          "15446",
+          "15451",
+          "15452",
+          "15453",
+          "15454",
+          "15455",
+          "15456",
+          "15457",
+          "17108",
+          "17109",
+          "17110",
+          "17111",
+          "17112",
+          "17622",
+          "17623",
+          "17626",
+          "18303",
+          "18304",
+          "18420",
+          "18424",
+          "18505",
+          "18511",
+          "18550",
+          "18551"
+        ],
+        "verifiedAt": "2026-10-20T16:07:17.098736+00:00"
+      },
+      {
+        "environment": "local",
+        "city": "osaka",
+        "view": "top",
+        "verificationBase": "http://localhost:3000",
+        "count": 30,
+        "ids": [
+          "15430",
+          "15433",
+          "15434",
+          "15440",
+          "15441",
+          "15442",
+          "15443",
+          "15444",
+          "15450",
+          "15971",
+          "18135",
+          "18136",
+          "18137",
+          "18151",
+          "18152",
+          "18153",
+          "18154",
+          "18166",
+          "18168",
+          "18224",
+          "18228",
+          "18271",
+          "18272",
+          "18273",
+          "18274",
+          "18275",
+          "18276",
+          "18277",
+          "18278",
+          "18287"
+        ],
+        "verifiedAt": "2026-10-20T16:07:17.107820+00:00"
+      },
+      {
+        "environment": "local",
+        "city": "osaka",
+        "view": "discounts",
+        "verificationBase": "http://localhost:3000",
+        "count": 31,
+        "ids": [
+          "https://and-gallery.com/#nanba",
+          "https://big-step.co.jp/shop/detail/63",
+          "https://conrad-osaka.hiltonjapan.co.jp/restaurants/40skybar",
+          "https://conrad-osaka.hiltonjapan.co.jp/restaurants/atmos",
+          "https://cross-osaka.orixhotelsandresorts.com/#restaurant",
+          "https://csm-cafe.ltr-online.com/lp/csm-cafe-s022",
+          "https://doubletree-osaka-castle.hiltonjapan.co.jp/restaurants/lounge-bar-sen",
+          "https://doubletree-osaka-castle.hiltonjapan.co.jp/restaurants/restaurant-sen",
+          "https://gabuchiki.com/news/view/308",
+          "https://icosaka.com/offer/pierre_autumnmenu/",
+          "https://jblm2024.wixsite.com/fujiyama-tokyo/%E8%A4%87%E8%A3%BD-namba-osaka",
+          "https://k-coeur.com/restaurant/",
+          "https://labaie.ritzcarltonosaka.com/",
+          "https://osaka.ekimaru.com/shopguide/detail/103",
+          "https://osaka.hiltonjapan.co.jp/plans/restaurants/other/myplace-happyhour",
+          "https://patinahotels.com/osaka/drink-and-dine/p72",
+          "https://prtimes.jp/main/html/rd/p/000000001.000192433.html/",
+          "https://prtimes.jp/main/html/rd/p/000000033.000027700.html",
+          "https://splendido.ritzcarltonosaka.com/",
+          "https://takemon-fukahire.com/",
+          "https://www.agneldor.com/",
+          "https://www.daimaru.co.jp/shinsaibashi/restaurant/cucina-bella.html",
+          "https://www.gate-hotel.jp/osaka/rb/aosaka.html",
+          "https://www.gate-hotel.jp/osaka/rb/peaks.html",
+          "https://www.hiramatsurestaurant.jp/hiramatsu-lafete/",
+          "https://www.hiramatsurestaurant.jp/hiramatsu-lemidi/",
+          "https://www.hotpepper.jp/strJ004661366/",
+          "https://www.labecasse1990.com/",
+          "https://www.quil-fait-bon.com/pages/grand-front-osaka",
+          "https://www.regine.stregisosaka.com/",
+          "https://www.y-unico.jp/"
+        ],
+        "verifiedAt": "2026-10-20T16:07:17.131805+00:00"
+      },
+      {
+        "environment": "local",
+        "city": "kyoto",
+        "view": "upcoming",
+        "verificationBase": "http://localhost:3000",
+        "count": 12,
+        "ids": [
+          "15483",
+          "15499",
+          "15500",
+          "15909",
+          "15910",
+          "15911",
+          "15912",
+          "15922",
+          "15931",
+          "16323",
+          "17169",
+          "18510"
+        ],
+        "verifiedAt": "2026-10-20T16:07:17.449113+00:00"
+      },
+      {
+        "environment": "local",
+        "city": "kyoto",
+        "view": "new",
+        "verificationBase": "http://localhost:3000",
+        "count": 33,
+        "ids": [
+          "15460",
+          "15461",
+          "15462",
+          "15463",
+          "15464",
+          "15465",
+          "15466",
+          "15467",
+          "15468",
+          "15469",
+          "15470",
+          "15471",
+          "15472",
+          "15473",
+          "15474",
+          "15475",
+          "15476",
+          "15477",
+          "15478",
+          "15479",
+          "15480",
+          "15481",
+          "15482",
+          "15489",
+          "15490",
+          "15491",
+          "15492",
+          "15493",
+          "15494",
+          "15495",
+          "15498",
+          "18025",
+          "18026"
+        ],
+        "verifiedAt": "2026-10-20T16:07:17.458871+00:00"
+      },
+      {
+        "environment": "local",
+        "city": "kyoto",
+        "view": "top",
+        "verificationBase": "http://localhost:3000",
+        "count": 30,
+        "ids": [
+          "15459",
+          "15484",
+          "15485",
+          "15486",
+          "15487",
+          "15488",
+          "15496",
+          "15497",
+          "15501",
+          "15973",
+          "18052",
+          "18060",
+          "18061",
+          "18098",
+          "18099",
+          "18117",
+          "18119",
+          "18155",
+          "18156",
+          "18170",
+          "18171",
+          "18173",
+          "18191",
+          "18193",
+          "18194",
+          "18209",
+          "18210",
+          "18211",
+          "18212",
+          "18213"
+        ],
+        "verifiedAt": "2026-10-20T16:07:17.467355+00:00"
+      },
+      {
+        "environment": "local",
+        "city": "kyoto",
+        "view": "discounts",
+        "verificationBase": "http://localhost:3000",
+        "count": 35,
+        "ids": [
+          "https://cenci-kyoto.com/",
+          "https://droit-kyoto.jp/",
+          "https://hotelfauchonkyoto.com/ja/gourmet/fauchon-salon-de-the-kyoto/",
+          "https://kyoto.hiltonjapan.co.jp/restaurants/teori",
+          "https://www.hiramatsurestaurant.jp/hiramatsu-kodaiji/",
+          "https://www.hiramatsurestaurant.jp/la-luce/",
+          "https://www.instagram.com/jbowl_ritsumeikan_mae/",
+          "https://www.keihanhotels-resorts.co.jp/kyoto-centuryhotel/topics/happyhour-2/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/011/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/012/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/013/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/014/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/015/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/016/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/017/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/018/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/019/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/020/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/022/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/023/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/026/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/028/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/031/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/033/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/039/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/040/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/042/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/043/",
+          "https://www.next-hero-kyoto.com/%E3%81%9F%E3%81%93%EF%BC%98%E5%BA%97%E8%88%97%E6%83%85%E5%A0%B1/",
+          "https://www.princess-kyoto.co.jp/restaurant/ambercourt/",
+          "https://www.princess-kyoto.co.jp/restaurant/darley/",
+          "https://www.princess-kyoto.co.jp/restaurant/hisuien/",
+          "https://www.princess-kyoto.co.jp/restaurant/hoen/",
+          "https://www.princess-kyoto.co.jp/restaurant/sagano/",
+          "https://www.quil-fait-bon.com/pages/kyoto"
+        ],
+        "verifiedAt": "2026-10-20T16:07:17.485200+00:00"
+      },
+      {
+        "environment": "local",
+        "city": "nagoya",
+        "view": "upcoming",
+        "verificationBase": "http://localhost:3000",
+        "count": 11,
+        "ids": [
+          "15510",
+          "15512",
+          "15517",
+          "15518",
+          "15521",
+          "15522",
+          "15900",
+          "15901",
+          "15902",
+          "16075",
+          "16080"
+        ],
+        "verifiedAt": "2026-10-20T16:07:17.830408+00:00"
+      },
+      {
+        "environment": "local",
+        "city": "nagoya",
+        "view": "new",
+        "verificationBase": "http://localhost:3000",
+        "count": 31,
+        "ids": [
+          "15509",
+          "15511",
+          "15515",
+          "15516",
+          "15519",
+          "15520",
+          "15898",
+          "15899",
+          "15915",
+          "15916",
+          "15917",
+          "15918",
+          "15919",
+          "15920",
+          "15921",
+          "15932",
+          "15964",
+          "15965",
+          "16020",
+          "16021",
+          "16022",
+          "16076",
+          "16294",
+          "16295",
+          "16767",
+          "16771",
+          "16800",
+          "17107",
+          "17166",
+          "17167",
+          "18045"
+        ],
+        "verifiedAt": "2026-10-20T16:07:17.840398+00:00"
+      },
+      {
+        "environment": "local",
+        "city": "nagoya",
+        "view": "top",
+        "verificationBase": "http://localhost:3000",
+        "count": 30,
+        "ids": [
+          "15502",
+          "15503",
+          "15504",
+          "15505",
+          "15506",
+          "15507",
+          "15508",
+          "15513",
+          "15514",
+          "15523",
+          "15524",
+          "15972",
+          "16024",
+          "18044",
+          "18100",
+          "18101",
+          "18121",
+          "18138",
+          "18192",
+          "18195",
+          "18196",
+          "18214",
+          "18215",
+          "18216",
+          "18217",
+          "18218",
+          "18219",
+          "18220",
+          "18221",
+          "18223"
+        ],
+        "verifiedAt": "2026-10-20T16:07:17.849472+00:00"
+      },
+      {
+        "environment": "local",
+        "city": "nagoya",
+        "view": "discounts",
+        "verificationBase": "http://localhost:3000",
+        "count": 31,
+        "ids": [
+          "https://and-gallery.com/#nagoya",
+          "https://csm-cafe.ltr-online.com/lp/csm-cafe-s017",
+          "https://french-kitamura.jp/",
+          "https://kinzan.nagoya/archives/news/2853/",
+          "https://kobekangroup.com/shop/obanzai_kabtoya/",
+          "https://lebeurrenoisettetokyo.com/nagoya/",
+          "https://nagoya.hiltonjapan.co.jp/restaurants/hideaway3-3",
+          "https://nagoya.hiltonjapan.co.jp/restaurants/inplace3-3",
+          "https://nagoya.hiltonjapan.co.jp/restaurants/ouchou",
+          "https://nagoya.parco.jp/shop/detail/?cd=009191",
+          "https://prtimes.jp/main/html/rd/p/000000004.000116722.html",
+          "https://prtimes.jp/main/html/rd/p/000004440.000018505.html",
+          "https://reconnaissance-nagoya.com/",
+          "https://thetowerhotel.jp/restaurant/",
+          "https://www.anacrowneplaza-nagoya.jp/pages/restaurant_gardencourt",
+          "https://www.anacrowneplaza-nagoya.jp/pages/restaurant_karin",
+          "https://www.anacrowneplaza-nagoya.jp/pages/restaurant_stargate",
+          "https://www.anacrowneplaza-nagoya.jp/pages/restaurant_winglounge",
+          "https://www.associa.com/nma/restaurant/pergola/",
+          "https://www.centralpark.co.jp/shop/sharecafe/",
+          "https://www.espacionagoya.com/restaurant-bar/the-bar-castle/",
+          "https://www.hiramatsurestaurant.jp/aubergedelill-nagoya/",
+          "https://www.hotpepper.jp/strJ004698778/",
+          "https://www.hotpepper.jp/strJ004699003/",
+          "https://www.kochuten.jp/",
+          "https://www.komeda.co.jp/shop/detail.html?id=1215",
+          "https://www.lafloraison-t.jp/",
+          "https://www.livingroom-skybar.com/",
+          "https://www.princehotels.co.jp/nagoya/restaurant/skydining/",
+          "https://www.quil-fait-bon.com/pages/nagoya-sakae",
+          "https://www.thekawabunnagoya.com/thekawabunnagoya/restaurant/"
+        ],
+        "verifiedAt": "2026-10-20T16:07:17.874168+00:00"
+      },
+      {
+        "environment": "local",
+        "city": "tokyo",
+        "view": "upcoming",
+        "verificationBase": "http://localhost:3000",
+        "count": 14,
+        "ids": [
+          "15526",
+          "15538",
+          "15541",
+          "15544",
+          "15546",
+          "15555",
+          "15556",
+          "15557",
+          "15923",
+          "15929",
+          "15930",
+          "17106",
+          "17621",
+          "18422"
+        ],
+        "verifiedAt": "2026-10-20T16:07:18.226539+00:00"
+      },
+      {
+        "environment": "local",
+        "city": "tokyo",
+        "view": "new",
+        "verificationBase": "http://localhost:3000",
+        "count": 31,
+        "ids": [
+          "15527",
+          "15539",
+          "15540",
+          "15551",
+          "15552",
+          "15553",
+          "15554",
+          "15558",
+          "15966",
+          "15967",
+          "15968",
+          "16289",
+          "16325",
+          "17170",
+          "17171",
+          "17172",
+          "17173",
+          "17628",
+          "18027",
+          "18043",
+          "18051",
+          "18058",
+          "18102",
+          "18103",
+          "18300",
+          "18301",
+          "18302",
+          "18444",
+          "18507",
+          "18508",
+          "18509"
+        ],
+        "verifiedAt": "2026-10-20T16:07:18.236022+00:00"
+      },
+      {
+        "environment": "local",
+        "city": "tokyo",
+        "view": "top",
+        "verificationBase": "http://localhost:3000",
+        "count": 30,
+        "ids": [
+          "15525",
+          "15528",
+          "15529",
+          "15530",
+          "15531",
+          "15532",
+          "15533",
+          "15534",
+          "15535",
+          "15536",
+          "15537",
+          "15542",
+          "15543",
+          "15545",
+          "15547",
+          "15548",
+          "15549",
+          "15550",
+          "15559",
+          "15560",
+          "15561",
+          "15562",
+          "15903",
+          "15974",
+          "18122",
+          "18123",
+          "18140",
+          "18141",
+          "18157",
+          "18158"
+        ],
+        "verifiedAt": "2026-10-20T16:07:18.248645+00:00"
+      },
+      {
+        "environment": "local",
+        "city": "tokyo",
+        "view": "discounts",
+        "verificationBase": "http://localhost:3000",
+        "count": 39,
+        "ids": [
+          "https://and-gallery.com/#ikebukuro",
+          "https://and-gallery.com/#yurakucho",
+          "https://cocco.eastone.co.jp/shop/gotanda",
+          "https://cocco.eastone.co.jp/shop/kameido",
+          "https://conrad-tokyo.hiltonjapan.co.jp/restaurants/cerise",
+          "https://conrad-tokyo.hiltonjapan.co.jp/restaurants/chinablue",
+          "https://conrad-tokyo.hiltonjapan.co.jp/restaurants/twentyeight",
+          "https://csm-cafe.ltr-online.com/lp/csm-cafe-s012",
+          "https://gourmetpress.net/1488798/",
+          "https://miabocca.eastone.co.jp/shop/Ikebukuro",
+          "https://miabocca.eastone.co.jp/shop/Shakujii-park",
+          "https://miabocca.eastone.co.jp/shop/Shinjuku-takasimaya",
+          "https://mimimi-jiyugaoka.com/#floor1",
+          "https://onodera-group.com/kaitensushi-ikebukuro/",
+          "https://prtimes.jp/main/html/rd/p/000000009.000161200.html",
+          "https://prtimes.jp/main/html/rd/p/000000048.000152772.html",
+          "https://prtimes.jp/main/html/rd/p/000000196.000049183.html",
+          "https://prtimes.jp/main/html/rd/p/000000356.000048489.html",
+          "https://prtimes.jp/main/html/rd/p/000000592.000071323.html",
+          "https://prtimes.jp/main/html/rd/p/000004178.000003860.html",
+          "https://sarabethsrestaurants.jp/location/omotesando/",
+          "https://sarabethsrestaurants.jp/location/shinagawa/",
+          "https://sarabethsrestaurants.jp/location/shinjuku/",
+          "https://sarabethsrestaurants.jp/location/tokyo/",
+          "https://shibakoen.bar-shinkai.com/",
+          "https://store-info.skylark.co.jp/syabuyo/map/198490/",
+          "https://tabelog.com/en/tokyo/A1303/A130301/13198692/",
+          "https://tokyo.hiltonjapan.co.jp/restaurants/st_georges_bar",
+          "https://www.andaztokyo.jp/restaurants/jp/thetavern-grill-lounge",
+          "https://www.herofield.com/bbq/tokyoprince/",
+          "https://www.hiramatsurestaurant.jp/jardindessens-tokyo/",
+          "https://www.mesm.jp/en/eat-drink/chefs-theatre.html",
+          "https://www.newotani.co.jp/tokyo/restaurant/gardenlounge/",
+          "https://www.quil-fait-bon.com/pages/aoyama",
+          "https://www.quil-fait-bon.com/pages/grand-maison-ginza",
+          "https://www.quil-fait-bon.com/pages/shinjuku",
+          "https://www.quil-fait-bon.com/pages/tokyo-dome-city",
+          "https://www.quil-fait-bon.com/pages/tokyo-skytree-town-solamachi",
+          "https://www.sunamo.jp/floor/shop_detail.html?UC=1_028"
+        ],
+        "verifiedAt": "2026-10-20T16:07:18.271057+00:00"
+      },
+      {
+        "environment": "local",
+        "city": "sapporo",
+        "view": "upcoming",
+        "verificationBase": "http://localhost:3000",
+        "count": 11,
+        "ids": [
+          "15568",
+          "15569",
+          "15570",
+          "15571",
+          "15597",
+          "15926",
+          "15970",
+          "17103",
+          "18047",
+          "18048",
+          "18054"
+        ],
+        "verifiedAt": "2026-10-20T16:07:18.580407+00:00"
+      },
+      {
+        "environment": "local",
+        "city": "sapporo",
+        "view": "new",
+        "verificationBase": "http://localhost:3000",
+        "count": 30,
+        "ids": [
+          "15580",
+          "15586",
+          "15587",
+          "15588",
+          "15589",
+          "15590",
+          "15591",
+          "15592",
+          "15595",
+          "15596",
+          "16293",
+          "16296",
+          "17104",
+          "17105",
+          "17624",
+          "17627",
+          "18028",
+          "18029",
+          "18030",
+          "18031",
+          "18049",
+          "18055",
+          "18056",
+          "18057",
+          "18104",
+          "18105",
+          "18124",
+          "18125",
+          "18305",
+          "18306"
+        ],
+        "verifiedAt": "2026-10-20T16:07:18.590433+00:00"
+      },
+      {
+        "environment": "local",
+        "city": "sapporo",
+        "view": "top",
+        "verificationBase": "http://localhost:3000",
+        "count": 30,
+        "ids": [
+          "15563",
+          "15564",
+          "15565",
+          "15566",
+          "15567",
+          "15572",
+          "15573",
+          "15574",
+          "15575",
+          "15576",
+          "15577",
+          "15578",
+          "15579",
+          "15581",
+          "15582",
+          "15583",
+          "15584",
+          "15585",
+          "15593",
+          "15594",
+          "15598",
+          "15599",
+          "15600",
+          "15601",
+          "15602",
+          "15603",
+          "15604",
+          "15605",
+          "15606",
+          "15607"
+        ],
+        "verifiedAt": "2026-10-20T16:07:18.600783+00:00"
+      },
+      {
+        "environment": "local",
+        "city": "sapporo",
+        "view": "discounts",
+        "verificationBase": "http://localhost:3000",
+        "count": 34,
+        "ids": [
+          "https://anan.fuji-tatsu.co.jp/shop/sapporo-sinoro/",
+          "https://chocottosushi-kiwami.owst.jp/",
+          "https://cocco.eastone.co.jp/shop/kitahachijo",
+          "https://cocco.eastone.co.jp/shop/kitaichijo",
+          "https://cocco.eastone.co.jp/shop/kotoniekimae",
+          "https://cocco.eastone.co.jp/shop/miyanosawa",
+          "https://cocco.eastone.co.jp/shop/shindohigashi",
+          "https://cocco.eastone.co.jp/shop/souen",
+          "https://grand1934.com/restaurant/garden-dining-waraku/",
+          "https://grand1934.com/restaurant/kokaku/",
+          "https://grand1934.com/restaurant/lobby-lounge-mizar/",
+          "https://grand1934.com/restaurant/northern-terrace-diner/",
+          "https://grand1934.com/restaurant/old-saloon1934/",
+          "https://miabocca.eastone.co.jp/shop/Kita2jo",
+          "https://miabocca.eastone.co.jp/shop/Kotoni-station",
+          "https://miabocca.eastone.co.jp/shop/Sapporo-station",
+          "https://miabocca.eastone.co.jp/shop/atsubetsuminami",
+          "https://miabocca.eastone.co.jp/shop/sapporoduo",
+          "https://michiru.dkdining.com/sapporo/",
+          "https://prtimes.jp/main/html/rd/p/000000010.000134951.html",
+          "https://store-info.skylark.co.jp/syabuyo/map/198489/",
+          "https://www.anahisapporosusukino.com/restaurants/verde/",
+          "https://www.hyatt.com/hyatt-centric/ja-JP/ctsct-hyatt-centric-sapporo/dining",
+          "https://www.jrhotels.co.jp/tower/restaurant/skyj/",
+          "https://www.keioplaza-sapporo.co.jp/restaurants/akizu/",
+          "https://www.keioplaza-sapporo.co.jp/restaurants/crossvault/",
+          "https://www.keioplaza-sapporo.co.jp/restaurants/glass/",
+          "https://www.keioplaza-sapporo.co.jp/restaurants/miyama/",
+          "https://www.keioplaza-sapporo.co.jp/restaurants/yamanami/",
+          "https://www.princehotels.co.jp/sapporo/restaurant/alldaydininggrandeur",
+          "https://www.princehotels.co.jp/sapporo/restaurant/fuyojo",
+          "https://www.princehotels.co.jp/sapporo/restaurant/katsura",
+          "https://www.princehotels.co.jp/sapporo/restaurant/top_prince",
+          "https://www.tokyuhotels.co.jp/sapporostream/restaurant/splish/plan/angel_devil/index.html"
+        ],
+        "verifiedAt": "2026-10-20T16:07:18.627069+00:00"
+      }
+    ],
+    "production": [
+      {
+        "environment": "production",
+        "city": "fukuoka",
+        "view": "upcoming",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 10,
+        "ids": [
+          "15398",
+          "15410",
+          "15411",
+          "15415",
+          "15424",
+          "15425",
+          "15426",
+          "15914",
+          "15924",
+          "18421"
+        ],
+        "verifiedAt": "2026-10-20T16:07:38.155596+00:00"
+      },
+      {
+        "environment": "production",
+        "city": "fukuoka",
+        "view": "new",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 24,
+        "ids": [
+          "15399",
+          "15400",
+          "15401",
+          "15409",
+          "15412",
+          "15414",
+          "15421",
+          "15422",
+          "15423",
+          "15427",
+          "15428",
+          "15969",
+          "16026",
+          "16027",
+          "16078",
+          "16290",
+          "16291",
+          "16292",
+          "16326",
+          "17625",
+          "18418",
+          "18506",
+          "18534",
+          "18536"
+        ],
+        "verifiedAt": "2026-10-20T16:07:38.363726+00:00"
+      },
+      {
+        "environment": "production",
+        "city": "fukuoka",
+        "view": "top",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 30,
+        "ids": [
+          "15402",
+          "15403",
+          "15404",
+          "15405",
+          "15406",
+          "15407",
+          "15408",
+          "15413",
+          "15416",
+          "15417",
+          "15418",
+          "15419",
+          "15420",
+          "15429",
+          "18132",
+          "18133",
+          "18134",
+          "18147",
+          "18148",
+          "18149",
+          "18150",
+          "18176",
+          "18279",
+          "18280",
+          "18281",
+          "18289",
+          "18291",
+          "18293",
+          "18295",
+          "18296"
+        ],
+        "verifiedAt": "2026-10-20T16:07:38.576301+00:00"
+      },
+      {
+        "environment": "production",
+        "city": "fukuoka",
+        "view": "discounts",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 36,
+        "ids": [
+          "http://raisindor.jp/",
+          "https://010bld.com/gohgan/",
+          "https://333sanmitomatoramen.com/store/%e5%a4%a9%e7%a5%9e%e5%a4%a7%e5%90%8d%e6%9c%ac%e5%ba%97/",
+          "https://and-gallery.com/#hukuoka",
+          "https://cene.tokyo/collections/fukuoka-open",
+          "https://fukuoka-orientalhotel.com/restaurant/linksquare/",
+          "https://fukuokaseahawk.hiltonjapan.co.jp/restaurants/clouds",
+          "https://fukuokaseahawk.hiltonjapan.co.jp/restaurants/seala",
+          "https://kanzan.net/imuri/",
+          "https://kusiyatubame.owst.jp/",
+          "https://le-bistro-aki.com/",
+          "https://onefukuoka-building.jp/shop/55",
+          "https://prtimes.jp/main/html/rd/p/000000060.000179076.html",
+          "https://prtimes.jp/main/html/rd/p/000000064.000152670.html",
+          "https://prtimes.jp/main/html/rd/p/000000170.000101757.html",
+          "https://pukutoco.com/sumomo-bakery-1007open/",
+          "https://pukutoco.com/sumomobakery-akasaka1019open/",
+          "https://tabelog.com/en/fukuoka/A4001/A400102/40074846/",
+          "https://toeihotel-fukuoka.com/restaurant/bistro_atrie/",
+          "https://www.eggsnthingsjapan.com/hakata/",
+          "https://www.f-sunpalace.com/restaurant/lagoon/",
+          "https://www.fuk.hotelokura.co.jp/restaurant/lechampdor/",
+          "https://www.gate-hotel.jp/fukuoka/rb/agfukuoka.html",
+          "https://www.ginzalion.jp/shop/brand/yebisubar/onefukuokabldg.html",
+          "https://www.hiramatsurestaurant.jp/hiramatsu-hakata/",
+          "https://www.hiramatsurestaurant.jp/kubotsu/",
+          "https://www.hotelnikko-fukuoka.com/restaurant/celebrites/",
+          "https://www.hotelnikko-fukuoka.com/restaurant/serena/",
+          "https://www.hotpepper.jp/strJ001276550/",
+          "https://www.kys-newotani.co.jp/hakata/restaurant/castillian-bar/",
+          "https://www.orec.co.jp/greenlab-fukuoka/",
+          "https://www.pochi-ito.com/",
+          "https://www.princehotels.co.jp/momochihama/restaurant/yocaterrace/",
+          "https://www.quil-fait-bon.com/pages/fukuoka",
+          "https://www.recent-hotel.com/restaurant/",
+          "https://www.tenchika.com/shop/h_b_antique/"
+        ],
+        "verifiedAt": "2026-10-20T16:07:39.071496+00:00"
+      },
+      {
+        "environment": "production",
+        "city": "osaka",
+        "view": "upcoming",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 12,
+        "ids": [
+          "15432",
+          "15445",
+          "15447",
+          "15448",
+          "15449",
+          "15458",
+          "15913",
+          "15925",
+          "15975",
+          "16023",
+          "16079",
+          "17168"
+        ],
+        "verifiedAt": "2026-10-20T16:07:41.973571+00:00"
+      },
+      {
+        "environment": "production",
+        "city": "osaka",
+        "view": "new",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 30,
+        "ids": [
+          "15431",
+          "15435",
+          "15436",
+          "15437",
+          "15438",
+          "15439",
+          "15446",
+          "15451",
+          "15452",
+          "15453",
+          "15454",
+          "15455",
+          "15456",
+          "15457",
+          "17108",
+          "17109",
+          "17110",
+          "17111",
+          "17112",
+          "17622",
+          "17623",
+          "17626",
+          "18303",
+          "18304",
+          "18420",
+          "18424",
+          "18449",
+          "18504",
+          "18554",
+          "18555"
+        ],
+        "verifiedAt": "2026-10-20T16:07:42.186266+00:00"
+      },
+      {
+        "environment": "production",
+        "city": "osaka",
+        "view": "top",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 30,
+        "ids": [
+          "15430",
+          "15433",
+          "15434",
+          "15440",
+          "15441",
+          "15442",
+          "15443",
+          "15444",
+          "15450",
+          "15971",
+          "18135",
+          "18136",
+          "18137",
+          "18151",
+          "18152",
+          "18153",
+          "18154",
+          "18166",
+          "18168",
+          "18224",
+          "18228",
+          "18271",
+          "18272",
+          "18273",
+          "18274",
+          "18275",
+          "18276",
+          "18277",
+          "18278",
+          "18287"
+        ],
+        "verifiedAt": "2026-10-20T16:07:42.461883+00:00"
+      },
+      {
+        "environment": "production",
+        "city": "osaka",
+        "view": "discounts",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 31,
+        "ids": [
+          "https://and-gallery.com/#nanba",
+          "https://big-step.co.jp/shop/detail/63",
+          "https://conrad-osaka.hiltonjapan.co.jp/restaurants/40skybar",
+          "https://conrad-osaka.hiltonjapan.co.jp/restaurants/atmos",
+          "https://cross-osaka.orixhotelsandresorts.com/#restaurant",
+          "https://csm-cafe.ltr-online.com/lp/csm-cafe-s022",
+          "https://doubletree-osaka-castle.hiltonjapan.co.jp/restaurants/lounge-bar-sen",
+          "https://doubletree-osaka-castle.hiltonjapan.co.jp/restaurants/restaurant-sen",
+          "https://gabuchiki.com/news/view/308",
+          "https://icosaka.com/offer/pierre_autumnmenu/",
+          "https://jblm2024.wixsite.com/fujiyama-tokyo/%E8%A4%87%E8%A3%BD-namba-osaka",
+          "https://k-coeur.com/restaurant/",
+          "https://labaie.ritzcarltonosaka.com/",
+          "https://osaka.ekimaru.com/shopguide/detail/103",
+          "https://osaka.hiltonjapan.co.jp/plans/restaurants/other/myplace-happyhour",
+          "https://patinahotels.com/osaka/drink-and-dine/p72",
+          "https://prtimes.jp/main/html/rd/p/000000001.000192433.html/",
+          "https://prtimes.jp/main/html/rd/p/000000033.000027700.html",
+          "https://splendido.ritzcarltonosaka.com/",
+          "https://takemon-fukahire.com/",
+          "https://www.agneldor.com/",
+          "https://www.daimaru.co.jp/shinsaibashi/restaurant/cucina-bella.html",
+          "https://www.gate-hotel.jp/osaka/rb/aosaka.html",
+          "https://www.gate-hotel.jp/osaka/rb/peaks.html",
+          "https://www.hiramatsurestaurant.jp/hiramatsu-lafete/",
+          "https://www.hiramatsurestaurant.jp/hiramatsu-lemidi/",
+          "https://www.hotpepper.jp/strJ004661366/",
+          "https://www.labecasse1990.com/",
+          "https://www.quil-fait-bon.com/pages/grand-front-osaka",
+          "https://www.regine.stregisosaka.com/",
+          "https://www.y-unico.jp/"
+        ],
+        "verifiedAt": "2026-10-20T16:07:42.875044+00:00"
+      },
+      {
+        "environment": "production",
+        "city": "kyoto",
+        "view": "upcoming",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 12,
+        "ids": [
+          "15483",
+          "15499",
+          "15500",
+          "15909",
+          "15910",
+          "15911",
+          "15912",
+          "15922",
+          "15931",
+          "16323",
+          "17169",
+          "18448"
+        ],
+        "verifiedAt": "2026-10-20T16:07:43.785779+00:00"
+      },
+      {
+        "environment": "production",
+        "city": "kyoto",
+        "view": "new",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 33,
+        "ids": [
+          "15460",
+          "15461",
+          "15462",
+          "15463",
+          "15464",
+          "15465",
+          "15466",
+          "15467",
+          "15468",
+          "15469",
+          "15470",
+          "15471",
+          "15472",
+          "15473",
+          "15474",
+          "15475",
+          "15476",
+          "15477",
+          "15478",
+          "15479",
+          "15480",
+          "15481",
+          "15482",
+          "15489",
+          "15490",
+          "15491",
+          "15492",
+          "15493",
+          "15494",
+          "15495",
+          "15498",
+          "18025",
+          "18026"
+        ],
+        "verifiedAt": "2026-10-20T16:07:44.060110+00:00"
+      },
+      {
+        "environment": "production",
+        "city": "kyoto",
+        "view": "top",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 30,
+        "ids": [
+          "15459",
+          "15484",
+          "15485",
+          "15486",
+          "15487",
+          "15488",
+          "15496",
+          "15497",
+          "15501",
+          "15973",
+          "18052",
+          "18060",
+          "18061",
+          "18098",
+          "18099",
+          "18117",
+          "18119",
+          "18155",
+          "18156",
+          "18170",
+          "18171",
+          "18173",
+          "18191",
+          "18193",
+          "18194",
+          "18209",
+          "18210",
+          "18211",
+          "18212",
+          "18213"
+        ],
+        "verifiedAt": "2026-10-20T16:07:44.253570+00:00"
+      },
+      {
+        "environment": "production",
+        "city": "kyoto",
+        "view": "discounts",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 35,
+        "ids": [
+          "https://cenci-kyoto.com/",
+          "https://droit-kyoto.jp/",
+          "https://hotelfauchonkyoto.com/ja/gourmet/fauchon-salon-de-the-kyoto/",
+          "https://kyoto.hiltonjapan.co.jp/restaurants/teori",
+          "https://www.hiramatsurestaurant.jp/hiramatsu-kodaiji/",
+          "https://www.hiramatsurestaurant.jp/la-luce/",
+          "https://www.instagram.com/jbowl_ritsumeikan_mae/",
+          "https://www.keihanhotels-resorts.co.jp/kyoto-centuryhotel/topics/happyhour-2/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/011/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/012/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/013/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/014/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/015/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/016/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/017/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/018/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/019/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/020/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/022/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/023/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/026/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/028/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/031/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/033/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/039/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/040/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/042/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/043/",
+          "https://www.next-hero-kyoto.com/%E3%81%9F%E3%81%93%EF%BC%98%E5%BA%97%E8%88%97%E6%83%85%E5%A0%B1/",
+          "https://www.princess-kyoto.co.jp/restaurant/ambercourt/",
+          "https://www.princess-kyoto.co.jp/restaurant/darley/",
+          "https://www.princess-kyoto.co.jp/restaurant/hisuien/",
+          "https://www.princess-kyoto.co.jp/restaurant/hoen/",
+          "https://www.princess-kyoto.co.jp/restaurant/sagano/",
+          "https://www.quil-fait-bon.com/pages/kyoto"
+        ],
+        "verifiedAt": "2026-10-20T16:07:44.639159+00:00"
+      },
+      {
+        "environment": "production",
+        "city": "nagoya",
+        "view": "upcoming",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 11,
+        "ids": [
+          "15510",
+          "15512",
+          "15517",
+          "15518",
+          "15521",
+          "15522",
+          "15900",
+          "15901",
+          "15902",
+          "16075",
+          "16080"
+        ],
+        "verifiedAt": "2026-10-20T16:07:45.643815+00:00"
+      },
+      {
+        "environment": "production",
+        "city": "nagoya",
+        "view": "new",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 31,
+        "ids": [
+          "15509",
+          "15511",
+          "15515",
+          "15516",
+          "15519",
+          "15520",
+          "15898",
+          "15899",
+          "15915",
+          "15916",
+          "15917",
+          "15918",
+          "15919",
+          "15920",
+          "15921",
+          "15932",
+          "15964",
+          "15965",
+          "16020",
+          "16021",
+          "16022",
+          "16076",
+          "16294",
+          "16295",
+          "16767",
+          "16771",
+          "16800",
+          "17107",
+          "17166",
+          "17167",
+          "18045"
+        ],
+        "verifiedAt": "2026-10-20T16:07:45.837619+00:00"
+      },
+      {
+        "environment": "production",
+        "city": "nagoya",
+        "view": "top",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 30,
+        "ids": [
+          "15502",
+          "15503",
+          "15504",
+          "15505",
+          "15506",
+          "15507",
+          "15508",
+          "15513",
+          "15514",
+          "15523",
+          "15524",
+          "15972",
+          "16024",
+          "18044",
+          "18100",
+          "18101",
+          "18121",
+          "18138",
+          "18192",
+          "18195",
+          "18196",
+          "18214",
+          "18215",
+          "18216",
+          "18217",
+          "18218",
+          "18219",
+          "18220",
+          "18221",
+          "18223"
+        ],
+        "verifiedAt": "2026-10-20T16:07:46.114420+00:00"
+      },
+      {
+        "environment": "production",
+        "city": "nagoya",
+        "view": "discounts",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 31,
+        "ids": [
+          "https://and-gallery.com/#nagoya",
+          "https://csm-cafe.ltr-online.com/lp/csm-cafe-s017",
+          "https://french-kitamura.jp/",
+          "https://kinzan.nagoya/archives/news/2853/",
+          "https://kobekangroup.com/shop/obanzai_kabtoya/",
+          "https://lebeurrenoisettetokyo.com/nagoya/",
+          "https://nagoya.hiltonjapan.co.jp/restaurants/hideaway3-3",
+          "https://nagoya.hiltonjapan.co.jp/restaurants/inplace3-3",
+          "https://nagoya.hiltonjapan.co.jp/restaurants/ouchou",
+          "https://nagoya.parco.jp/shop/detail/?cd=009191",
+          "https://prtimes.jp/main/html/rd/p/000000004.000116722.html",
+          "https://prtimes.jp/main/html/rd/p/000004440.000018505.html",
+          "https://reconnaissance-nagoya.com/",
+          "https://thetowerhotel.jp/restaurant/",
+          "https://www.anacrowneplaza-nagoya.jp/pages/restaurant_gardencourt",
+          "https://www.anacrowneplaza-nagoya.jp/pages/restaurant_karin",
+          "https://www.anacrowneplaza-nagoya.jp/pages/restaurant_stargate",
+          "https://www.anacrowneplaza-nagoya.jp/pages/restaurant_winglounge",
+          "https://www.associa.com/nma/restaurant/pergola/",
+          "https://www.centralpark.co.jp/shop/sharecafe/",
+          "https://www.espacionagoya.com/restaurant-bar/the-bar-castle/",
+          "https://www.hiramatsurestaurant.jp/aubergedelill-nagoya/",
+          "https://www.hotpepper.jp/strJ004698778/",
+          "https://www.hotpepper.jp/strJ004699003/",
+          "https://www.kochuten.jp/",
+          "https://www.komeda.co.jp/shop/detail.html?id=1215",
+          "https://www.lafloraison-t.jp/",
+          "https://www.livingroom-skybar.com/",
+          "https://www.princehotels.co.jp/nagoya/restaurant/skydining/",
+          "https://www.quil-fait-bon.com/pages/nagoya-sakae",
+          "https://www.thekawabunnagoya.com/thekawabunnagoya/restaurant/"
+        ],
+        "verifiedAt": "2026-10-20T16:07:46.544826+00:00"
+      },
+      {
+        "environment": "production",
+        "city": "tokyo",
+        "view": "upcoming",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 14,
+        "ids": [
+          "15526",
+          "15538",
+          "15541",
+          "15544",
+          "15546",
+          "15555",
+          "15556",
+          "15557",
+          "15923",
+          "15929",
+          "15930",
+          "17106",
+          "17621",
+          "18422"
+        ],
+        "verifiedAt": "2026-10-20T16:07:47.479957+00:00"
+      },
+      {
+        "environment": "production",
+        "city": "tokyo",
+        "view": "new",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 31,
+        "ids": [
+          "15527",
+          "15539",
+          "15540",
+          "15551",
+          "15552",
+          "15553",
+          "15554",
+          "15558",
+          "15966",
+          "15967",
+          "15968",
+          "16289",
+          "16325",
+          "17170",
+          "17171",
+          "17172",
+          "17173",
+          "17628",
+          "18027",
+          "18043",
+          "18051",
+          "18058",
+          "18102",
+          "18103",
+          "18300",
+          "18301",
+          "18302",
+          "18444",
+          "18445",
+          "18446",
+          "18447"
+        ],
+        "verifiedAt": "2026-10-20T16:07:47.749235+00:00"
+      },
+      {
+        "environment": "production",
+        "city": "tokyo",
+        "view": "top",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 30,
+        "ids": [
+          "15525",
+          "15528",
+          "15529",
+          "15530",
+          "15531",
+          "15532",
+          "15533",
+          "15534",
+          "15535",
+          "15536",
+          "15537",
+          "15542",
+          "15543",
+          "15545",
+          "15547",
+          "15548",
+          "15549",
+          "15550",
+          "15559",
+          "15560",
+          "15561",
+          "15562",
+          "15903",
+          "15974",
+          "18122",
+          "18123",
+          "18140",
+          "18141",
+          "18157",
+          "18158"
+        ],
+        "verifiedAt": "2026-10-20T16:07:47.941654+00:00"
+      },
+      {
+        "environment": "production",
+        "city": "tokyo",
+        "view": "discounts",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 39,
+        "ids": [
+          "https://and-gallery.com/#ikebukuro",
+          "https://and-gallery.com/#yurakucho",
+          "https://cocco.eastone.co.jp/shop/gotanda",
+          "https://cocco.eastone.co.jp/shop/kameido",
+          "https://conrad-tokyo.hiltonjapan.co.jp/restaurants/cerise",
+          "https://conrad-tokyo.hiltonjapan.co.jp/restaurants/chinablue",
+          "https://conrad-tokyo.hiltonjapan.co.jp/restaurants/twentyeight",
+          "https://csm-cafe.ltr-online.com/lp/csm-cafe-s012",
+          "https://gourmetpress.net/1488798/",
+          "https://miabocca.eastone.co.jp/shop/Ikebukuro",
+          "https://miabocca.eastone.co.jp/shop/Shakujii-park",
+          "https://miabocca.eastone.co.jp/shop/Shinjuku-takasimaya",
+          "https://mimimi-jiyugaoka.com/#floor1",
+          "https://onodera-group.com/kaitensushi-ikebukuro/",
+          "https://prtimes.jp/main/html/rd/p/000000009.000161200.html",
+          "https://prtimes.jp/main/html/rd/p/000000048.000152772.html",
+          "https://prtimes.jp/main/html/rd/p/000000196.000049183.html",
+          "https://prtimes.jp/main/html/rd/p/000000356.000048489.html",
+          "https://prtimes.jp/main/html/rd/p/000000592.000071323.html",
+          "https://prtimes.jp/main/html/rd/p/000004178.000003860.html",
+          "https://sarabethsrestaurants.jp/location/omotesando/",
+          "https://sarabethsrestaurants.jp/location/shinagawa/",
+          "https://sarabethsrestaurants.jp/location/shinjuku/",
+          "https://sarabethsrestaurants.jp/location/tokyo/",
+          "https://shibakoen.bar-shinkai.com/",
+          "https://store-info.skylark.co.jp/syabuyo/map/198490/",
+          "https://tabelog.com/en/tokyo/A1303/A130301/13198692/",
+          "https://tokyo.hiltonjapan.co.jp/restaurants/st_georges_bar",
+          "https://www.andaztokyo.jp/restaurants/jp/thetavern-grill-lounge",
+          "https://www.herofield.com/bbq/tokyoprince/",
+          "https://www.hiramatsurestaurant.jp/jardindessens-tokyo/",
+          "https://www.mesm.jp/en/eat-drink/chefs-theatre.html",
+          "https://www.newotani.co.jp/tokyo/restaurant/gardenlounge/",
+          "https://www.quil-fait-bon.com/pages/aoyama",
+          "https://www.quil-fait-bon.com/pages/grand-maison-ginza",
+          "https://www.quil-fait-bon.com/pages/shinjuku",
+          "https://www.quil-fait-bon.com/pages/tokyo-dome-city",
+          "https://www.quil-fait-bon.com/pages/tokyo-skytree-town-solamachi",
+          "https://www.sunamo.jp/floor/shop_detail.html?UC=1_028"
+        ],
+        "verifiedAt": "2026-10-20T16:07:48.366057+00:00"
+      },
+      {
+        "environment": "production",
+        "city": "sapporo",
+        "view": "upcoming",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 11,
+        "ids": [
+          "15568",
+          "15569",
+          "15570",
+          "15571",
+          "15597",
+          "15926",
+          "15970",
+          "17103",
+          "18047",
+          "18048",
+          "18054"
+        ],
+        "verifiedAt": "2026-10-20T16:07:49.190912+00:00"
+      },
+      {
+        "environment": "production",
+        "city": "sapporo",
+        "view": "new",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 30,
+        "ids": [
+          "15580",
+          "15586",
+          "15587",
+          "15588",
+          "15589",
+          "15590",
+          "15591",
+          "15592",
+          "15595",
+          "15596",
+          "16293",
+          "16296",
+          "17104",
+          "17105",
+          "17624",
+          "17627",
+          "18028",
+          "18029",
+          "18030",
+          "18031",
+          "18049",
+          "18055",
+          "18056",
+          "18057",
+          "18104",
+          "18105",
+          "18124",
+          "18125",
+          "18305",
+          "18306"
+        ],
+        "verifiedAt": "2026-10-20T16:07:49.376663+00:00"
+      },
+      {
+        "environment": "production",
+        "city": "sapporo",
+        "view": "top",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 30,
+        "ids": [
+          "15563",
+          "15564",
+          "15565",
+          "15566",
+          "15567",
+          "15572",
+          "15573",
+          "15574",
+          "15575",
+          "15576",
+          "15577",
+          "15578",
+          "15579",
+          "15581",
+          "15582",
+          "15583",
+          "15584",
+          "15585",
+          "15593",
+          "15594",
+          "15598",
+          "15599",
+          "15600",
+          "15601",
+          "15602",
+          "15603",
+          "15604",
+          "15605",
+          "15606",
+          "15607"
+        ],
+        "verifiedAt": "2026-10-20T16:07:49.564056+00:00"
+      },
+      {
+        "environment": "production",
+        "city": "sapporo",
+        "view": "discounts",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 34,
+        "ids": [
+          "https://anan.fuji-tatsu.co.jp/shop/sapporo-sinoro/",
+          "https://chocottosushi-kiwami.owst.jp/",
+          "https://cocco.eastone.co.jp/shop/kitahachijo",
+          "https://cocco.eastone.co.jp/shop/kitaichijo",
+          "https://cocco.eastone.co.jp/shop/kotoniekimae",
+          "https://cocco.eastone.co.jp/shop/miyanosawa",
+          "https://cocco.eastone.co.jp/shop/shindohigashi",
+          "https://cocco.eastone.co.jp/shop/souen",
+          "https://grand1934.com/restaurant/garden-dining-waraku/",
+          "https://grand1934.com/restaurant/kokaku/",
+          "https://grand1934.com/restaurant/lobby-lounge-mizar/",
+          "https://grand1934.com/restaurant/northern-terrace-diner/",
+          "https://grand1934.com/restaurant/old-saloon1934/",
+          "https://miabocca.eastone.co.jp/shop/Kita2jo",
+          "https://miabocca.eastone.co.jp/shop/Kotoni-station",
+          "https://miabocca.eastone.co.jp/shop/Sapporo-station",
+          "https://miabocca.eastone.co.jp/shop/atsubetsuminami",
+          "https://miabocca.eastone.co.jp/shop/sapporoduo",
+          "https://michiru.dkdining.com/sapporo/",
+          "https://prtimes.jp/main/html/rd/p/000000010.000134951.html",
+          "https://store-info.skylark.co.jp/syabuyo/map/198489/",
+          "https://www.anahisapporosusukino.com/restaurants/verde/",
+          "https://www.hyatt.com/hyatt-centric/ja-JP/ctsct-hyatt-centric-sapporo/dining",
+          "https://www.jrhotels.co.jp/tower/restaurant/skyj/",
+          "https://www.keioplaza-sapporo.co.jp/restaurants/akizu/",
+          "https://www.keioplaza-sapporo.co.jp/restaurants/crossvault/",
+          "https://www.keioplaza-sapporo.co.jp/restaurants/glass/",
+          "https://www.keioplaza-sapporo.co.jp/restaurants/miyama/",
+          "https://www.keioplaza-sapporo.co.jp/restaurants/yamanami/",
+          "https://www.princehotels.co.jp/sapporo/restaurant/alldaydininggrandeur",
+          "https://www.princehotels.co.jp/sapporo/restaurant/fuyojo",
+          "https://www.princehotels.co.jp/sapporo/restaurant/katsura",
+          "https://www.princehotels.co.jp/sapporo/restaurant/top_prince",
+          "https://www.tokyuhotels.co.jp/sapporostream/restaurant/splish/plan/angel_devil/index.html"
+        ],
+        "verifiedAt": "2026-10-20T16:07:50.257614+00:00"
+      }
+    ]
+  },
+  "verifiedAtUtc": "2026-10-20T16:08:05.981708+00:00",
+  "readerEvidence": [
+    {
+      "url": "https://tabelog.com/en/osaka/A2701/A270106/27158756/party/301981271/",
+      "htmlSha256": "0a4d144cfcfce904aa205909a4cbd71fff7c84b31d3306badd2389f197fd2b79"
+    },
+    {
+      "url": "https://tabelog.com/en/osaka/A2701/A270106/27158756/party/301981277/",
+      "htmlSha256": "d4f7ef1395c94604a5cb81a1d42951c7b76a2ba71d63e6154362048193416fd7"
+    },
+    {
+      "url": "https://tabelog.com/en/osaka/A2701/A270106/27158756/party/301641718/",
+      "htmlSha256": "13e8f2187cd16b982615b7588edb8d62bfa07030ab627dafd8348dc0bf478292"
+    },
+    {
+      "url": "https://tabelog.com/en/osaka/A2701/A270106/27158756/dtlmenu/drink/",
+      "htmlSha256": "81361b2904246f7a23d5314d568485ce7714d6e4f6eda6b9d14c3dae16023454"
+    },
+    {
+      "url": "https://tabelog.com/en/osaka/A2701/A270106/27158756/dtlmenu/",
+      "htmlSha256": "b27530b87debd022a6ef1d05d40c2e2d88e947d33253816633acc6a5adf57ec8"
+    },
+    {
+      "url": "https://www.instagram.com/izakayaafro/",
+      "htmlSha256": "f908ff1e3d588faa57709264567389cbe3582de13ffc90fad2173a7ddc2defdd"
+    },
+    {
+      "url": "https://kansai-kaiten.com/komekomeafro-sakaisujihommachi2610/",
+      "htmlSha256": "dcc6cc3b5fe1971226ec6a6aaf4ff2b568a21c95dee4b8f60af736e45486b55e"
+    },
+    {
+      "url": "https://tabelog.com/en/osaka/A2701/A270106/27158756/dtlphotolst/smp2/",
+      "htmlSha256": "33d7c720c2cdf0dcd9ef014880c6e938f3ae2eb22081bf7e2a885b70cb493e4e"
+    },
+    {
+      "url": "https://tabelog.com/en/osaka/A2701/A270106/27158756/",
+      "htmlSha256": "540c05ec2c19bbbde1d029edb58fe7d94c7fa11e96639602664835f8d67b4c34"
+    },
+    {
+      "url": "https://tabelog.com/en/osaka/A2701/A270108/27158248/party/299418253/",
+      "htmlSha256": "65f7692b2387a187e1ab6ea86a1903d2459baaefc70d46d7cd5d0b26c129d113"
+    },
+    {
+      "url": "https://tabelog.com/en/osaka/A2701/A270108/27158248/dtlmenu/drink/",
+      "htmlSha256": "89b2cfdc6530ea66b0696485b0ac46a06e45c43efc86d727d076abc02b70d9b9"
+    },
+    {
+      "url": "https://tabelog.com/en/osaka/A2701/A270108/27158248/dtlmenu/",
+      "htmlSha256": "7d64003e8816ab605c8c5bef4099eb38d3258286df2d0a7939b8406190ba83cf"
+    },
+    {
+      "url": "https://www.instagram.com/tonkatsu_hitotsubu12/",
+      "htmlSha256": "9a45f0855981cc621bb05888313f2ae9f6d9520b224722a93b57ad9c0ad98fd6"
+    },
+    {
+      "url": "https://kansai-kaiten.com/tonkatsuhitotsubu-fukushima2610/",
+      "htmlSha256": "ee4343aaa52f612bdc0b881c13eaf3e94403a0b65a1146000210c323fadd9efd"
+    },
+    {
+      "url": "https://tabelog.com/en/osaka/A2701/A270108/27158248/party/299418249/",
+      "htmlSha256": "11ca7cb72e4ef0572cd5a513f27c836ee1ee923de4907cee33b683a83ebb5264"
+    },
+    {
+      "url": "https://tabelog.com/en/osaka/A2701/A270108/27158248/party/",
+      "htmlSha256": "412943e7e7e2cca7b3aeb61b4c67add73f5c246088656e659b697a3089c2bb59"
+    },
+    {
+      "url": "https://tabelog.com/en/osaka/A2701/A270108/27158248/dtlphotolst/smp2/",
+      "htmlSha256": "17771a1d5303d7abc5f2290f12a85c7c50610dfc38defe831b480f14b961041a"
+    },
+    {
+      "url": "https://www.tablecheck.com/en/tonkatsu-hitotsubu",
+      "htmlSha256": "7a48406aab57480afe136700ee281d634b7f5b459943d8eaa3e7c784506cc49a"
+    },
+    {
+      "url": "https://tabelog.com/en/osaka/A2701/A270108/27158248/",
+      "htmlSha256": "ef8474bf464f83514fa912da9305ae871d0a995c29c91f227a2974b774085093"
+    },
+    {
+      "url": "https://asobi-and-play.jp/kyoto-new-open-2026/",
+      "htmlSha256": "4257e4eca11a140f6cdd0e3b634450a7f385ef70cb4d45345899f54e521397fc"
+    },
+    {
+      "url": "https://tabelog.com/en/osaka/rstLst/cond16-00-00/",
+      "htmlSha256": "6242b9124c00e26d5734d326f82e66d9c1492f4502c02f45f1b27f97ef652e57"
+    },
+    {
+      "url": "https://tabelog.com/en/osaka/A2701/A270108/27159245/party/301465397/",
+      "htmlSha256": "f13a4091b4cdca3e9572d76de6690b3c4ad43521124d74d0a24adf374c40055d"
+    },
+    {
+      "url": "https://tabelog.com/en/osaka/A2701/A270108/27159245/dtlmenu/drink/",
+      "htmlSha256": "5ec627f69fd4a30dabf6b7b5907a79bb9f897910f5092228c0f9526bcffb1323"
+    },
+    {
+      "url": "https://tabelog.com/en/osaka/A2701/A270108/27159245/dtlmenu/",
+      "htmlSha256": "e734089a5a62307d723eaaaf9800f635a153acc984d555065f8d8fb62b0a6791"
+    },
+    {
+      "url": "https://www.instagram.com/sakigake_fukushima/",
+      "htmlSha256": "bfc952312a1f005a6ad5acc78d1d364bc4b01a7a307ab230f7ae428084a88443"
+    },
+    {
+      "url": "https://kansai-kaiten.com/sakigake-fukushima2610/",
+      "htmlSha256": "7d9a4019e32b15e58260bac50f6405c29a93e06258d37c39bb4433fede28ce3e"
+    },
+    {
+      "url": "https://tabelog.com/en/osaka/A2701/A270108/27159245/dtlphotolst/smp2/",
+      "htmlSha256": "f7eff7390587d00439575bdaea0321129cb748f775aa0903c00b74b932784e99"
+    },
+    {
+      "url": "https://tabelog.com/en/osaka/A2701/A270108/27159245/",
+      "htmlSha256": "b2ebf21d490b14b4f8259d39e3b1bb74490e60692883f2bc876110db1e2162a1"
+    },
+    {
+      "url": "https://sapporo-list.info/open/november-open/",
+      "htmlSha256": "1365627b2bf662b2d8c16188ad5b400d055dc6abe9d8e78f8c8b6b55fbfb6023"
+    }
+  ]
+}

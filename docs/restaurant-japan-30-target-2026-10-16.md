@@ -1,15 +1,15 @@
 # Japan restaurant target audit — October 16, 2026
 
-Target: **30 distinct eligible restaurants in every tab of every city**. **633 verified memberships; 118 still missing**. This target remains incomplete; surplus in another tab does not offset a shortage.
+Target: **30 distinct eligible restaurants in every tab of every city**. **635 verified memberships; 116 still missing**. This target remains incomplete; surplus in another tab does not offset a shortage.
 
-**Batch 107 published and publicly verified (October 20, 2026):** Added **two new Fukuoka restaurant pins, 64 ordinary menu entries, one dated coupon with four drink choices and 10 credited Azure photos**: Hakata Tonkatsu Tabi to Zen and Tokyo Aburagumi Sohonten Nakasu-Kawabata, both opened September 4. Verified branch-specific opening evidence, menus, saved profiles, photo credits, public pin menus and all three native title/image cards in local and public production HTTPS. Tabi coupon expires October 31; Wednesday closure, last-order cutoffs, next service and expiry boundaries checked. Aburagumi September launch discount is expired and excluded from Specials. Fukuoka Just opened reaches **24/30**, Specials **36/30**; all 24 counts agree at **633 memberships / 118 missing**. No deployment. [Batch evidence](restaurant-japan-30-japan107-2026-10-20.json).
+**Batch 108 published and publicly verified (October 20, 2026):** Added **two new Osaka restaurant pins, 147 ordinary menu/course entries and 12 credited Azure photos**: Izakaya Sakigake Osaka Fukushima Honten and Tonkatsu Hitotsubu Hitotsubu Fukushima, both opened October 19. Exact branch dates, complete saved profiles, all menu items, gallery credits and native title/image cards verified locally and over public production HTTPS. Sakigake portions, sashimi minimum, appetizer charge, daily last orders and group-course conditions retained; conflicting course duration recorded. Hitotsubu course prices, daily pork examples and optional curry-price gap retained. AFRO original first-service chronology remains held. Osaka Just opened reaches **30/30**; Fukuoka is the only city with a Just opened shortage (**24/30**). All 24 counts agree at **635 memberships / 116 missing**. No deployment. [Batch evidence](restaurant-japan-30-japan108-2026-10-20.json).
 
-All 24 local and public production guide counts agree. Batches 88–107 now have complete public HTTPS verification; earlier timeout checkpoints below are historical.
+All 24 local and public production guide counts agree. Batches 88–108 now have complete public HTTPS verification; earlier timeout checkpoints below are historical.
 
 | City (west to east) | Coming soon | Just opened | Top restaurants | Specials |
 | --- | ---: | ---: | ---: | ---: |
 | Fukuoka | 10/30 | 24/30 | 30/30 | 36/30 |
-| Osaka | 12/30 | 28/30 | 30/30 | 31/30 |
+| Osaka | 12/30 | 30/30 | 30/30 | 31/30 |
 | Kyoto | 12/30 | 33/30 | 30/30 | 35/30 |
 | Nagoya | 11/30 | 31/30 | 30/30 | 31/30 |
 | Tokyo | 14/30 | 31/30 | 30/30 | 39/30 |
@@ -24,7 +24,7 @@ All 24 local and public production guide counts agree. Batches 88–107 now have
 | Fukuoka | Top restaurants | 30 | 30 | 30 | 0 |
 | Fukuoka | Specials | 36 | 36 | 30 | 0 |
 | Osaka | Coming soon | 12 | 12 | 30 | 18 |
-| Osaka | Just opened | 28 | 28 | 30 | 2 |
+| Osaka | Just opened | 30 | 30 | 30 | 0 |
 | Osaka | Top restaurants | 30 | 30 | 30 | 0 |
 | Osaka | Specials | 31 | 31 | 30 | 0 |
 | Kyoto | Coming soon | 12 | 12 | 30 | 18 |
