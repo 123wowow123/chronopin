@@ -695,6 +695,10 @@ const ru: Messages = {
       showAll: 'Показать все рестораны с оценкой',
       reviews: 'Независимые обзоры',
     },
+    perf: {
+      heading: "Производительность",
+      source: "источник",
+    },
     hotel: {
       heading: 'Оценка отеля',
       rooms: 'Номера',

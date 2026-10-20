@@ -4,8 +4,13 @@
 // its source page.
 
 export type PerfBar = { label: string; value: number; highlight?: boolean };
-export type PerfChart = { title: string; unit: string; higherIsBetter?: boolean; note?: string; sourceUrl?: string; bars: PerfBar[] };
-export type PerfTable = { title: string; columns: string[]; rows: string[][]; note?: string; sourceUrl?: string };
+// The English text is the default; i18n holds the same text per locale. A chart's
+// bars keep their labels (product names); a table's translation restates every
+// column and row, so it has the same shape.
+export type PerfChartText = { title: string; unit: string; note?: string };
+export type PerfTableText = { title: string; columns: string[]; rows: string[][]; note?: string };
+export type PerfChart = PerfChartText & { higherIsBetter?: boolean; sourceUrl?: string; bars: PerfBar[]; i18n?: Record<string, PerfChartText> };
+export type PerfTable = PerfTableText & { sourceUrl?: string; i18n?: Record<string, PerfTableText> };
 export type PinPerfJson = { charts: PerfChart[]; tables: PerfTable[]; checkedAt: string };
 
 export const MAX_PERF_CHARTS = 6;
@@ -16,6 +21,41 @@ export const MAX_PERF_ROWS = 40;
 const text = (value: unknown, max: number): string | null => (typeof value === 'string' && value.trim() && value.trim().length <= max ? value.trim() : null);
 const url = (value: unknown): string | null | undefined =>
   value === undefined || value === null || value === '' ? undefined : typeof value === 'string' && /^https?:\/\/\S+$/i.test(value) && value.length <= 4000 ? value : null;
+
+type Loose = Record<string, unknown> | null | undefined;
+
+function chartText(raw: unknown): PerfChartText | string {
+  const v = raw as Loose;
+  const title = text(v?.title, 120);
+  const unit = text(v?.unit, 40);
+  const note = v?.note ? text(v.note, 500) : undefined;
+  if (!title || !unit || (v?.note && !note)) return 'a translation needs title and unit (note optional).';
+  return { title, unit, ...(note ? { note } : {}) };
+}
+
+function tableText(raw: unknown, columns: number, rows: number): PerfTableText | string {
+  const v = raw as { title?: unknown; note?: unknown; columns?: unknown; rows?: unknown } | null | undefined;
+  const title = text(v?.title, 120);
+  const note = v?.note ? text(v.note, 500) : undefined;
+  if (!title || (v?.note && !note)) return 'a translation needs a title.';
+  if (!v || !Array.isArray(v.columns) || v.columns.length !== columns || !Array.isArray(v.rows) || v.rows.length !== rows) return 'a translation needs the same columns and rows.';
+  const cols = v.columns.map((c: unknown) => text(c, 80));
+  const cells = v.rows.map((row: unknown) => (Array.isArray(row) && row.length === columns ? row.map((cell: unknown) => text(cell, 200)) : null));
+  if (cols.includes(null) || cells.some((row: (string | null)[] | null) => !row || row.includes(null))) return 'a translation has an empty or oversize cell.';
+  return { title, columns: cols as string[], rows: cells as string[][], ...(note ? { note } : {}) };
+}
+
+function i18nProblem<T>(raw: unknown, one: (v: unknown) => T | string): Record<string, T> | string {
+  if (!raw || typeof raw !== 'object' || Array.isArray(raw)) return 'i18n must map locales to text.';
+  const out: Record<string, T> = {};
+  for (const [locale, v] of Object.entries(raw)) {
+    if (!/^[a-z]{2}(-[A-Za-z]{2,4})?$/.test(locale)) return `i18n: ${locale} is not a locale.`;
+    const parsed = one(v);
+    if (typeof parsed === 'string') return `i18n ${locale}: ${parsed}`;
+    out[locale] = parsed;
+  }
+  return out;
+}
 
 // The cleaned charts and tables, or a sentence saying what is wrong.
 export function perfProblem(body: Record<string, unknown>): { charts: PerfChart[]; tables: PerfTable[] } | string {
@@ -39,7 +79,9 @@ export function perfProblem(body: Record<string, unknown>): { charts: PerfChart[
     if (sourceUrl === null) return `chart ${i + 1}: sourceUrl is not a web address.`;
     const note = c.note ? text(c.note, 500) : undefined;
     if (c.note && !note) return `chart ${i + 1}: note is at most 500 characters.`;
-    charts.push({ title, unit, ...(c.higherIsBetter === false ? { higherIsBetter: false } : {}), ...(note ? { note } : {}), ...(sourceUrl ? { sourceUrl } : {}), bars });
+    const i18n = c.i18n === undefined ? undefined : i18nProblem(c.i18n, chartText);
+    if (typeof i18n === 'string') return `chart ${i + 1}: ${i18n}`;
+    charts.push({ title, unit, ...(i18n ? { i18n } : {}), ...(c.higherIsBetter === false ? { higherIsBetter: false } : {}), ...(note ? { note } : {}), ...(sourceUrl ? { sourceUrl } : {}), bars });
   }
   const tables: PerfTable[] = [];
   for (const [i, tb] of rawTables.entries()) {
@@ -60,7 +102,9 @@ export function perfProblem(body: Record<string, unknown>): { charts: PerfChart[
     if (sourceUrl === null) return `table ${i + 1}: sourceUrl is not a web address.`;
     const note = tb.note ? text(tb.note, 500) : undefined;
     if (tb.note && !note) return `table ${i + 1}: note is at most 500 characters.`;
-    tables.push({ title, columns: columns as string[], rows, ...(note ? { note } : {}), ...(sourceUrl ? { sourceUrl } : {}) });
+    const i18n = tb.i18n === undefined ? undefined : i18nProblem(tb.i18n, (v) => tableText(v, columns.length, rows.length));
+    if (typeof i18n === 'string') return `table ${i + 1}: ${i18n}`;
+    tables.push({ title, columns: columns as string[], rows, ...(i18n ? { i18n } : {}), ...(note ? { note } : {}), ...(sourceUrl ? { sourceUrl } : {}) });
   }
   if (!charts.length && !tables.length) return 'At least one chart or table.';
   return { charts, tables };

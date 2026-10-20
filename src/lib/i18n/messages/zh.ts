@@ -687,6 +687,10 @@ const zh: Messages = {
       showAll: '显示所有有餐厅评分的餐厅',
       reviews: '独立评测',
     },
+    perf: {
+      heading: "性能",
+      source: "来源",
+    },
     hotel: {
       heading: '酒店评分',
       rooms: '客房',

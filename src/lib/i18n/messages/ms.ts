@@ -691,6 +691,10 @@ const ms: Messages = {
       showAll: 'Papar semua restoran dengan rubrik makan',
       reviews: 'Ulasan bebas',
     },
+    perf: {
+      heading: "Prestasi",
+      source: "sumber",
+    },
     hotel: {
       heading: 'Penilaian hotel',
       rooms: 'Bilik',

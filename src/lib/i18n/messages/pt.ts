@@ -684,6 +684,10 @@ const pt: Messages = {
       showAll: 'Mostrar todos os restaurantes com avaliação gastronómica',
       reviews: 'Avaliações independentes',
     },
+    perf: {
+      heading: "Desempenho",
+      source: "fonte",
+    },
     hotel: {
       heading: 'Avaliação do hotel',
       rooms: 'Quartos',

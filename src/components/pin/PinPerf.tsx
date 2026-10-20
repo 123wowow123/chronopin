@@ -1,3 +1,4 @@
+import type { Translator } from '@/lib/i18n/translate';
 import { formatPerfValue, type PerfChart, type PerfTable, type PinPerfJson } from '@/lib/pinPerf';
 
 // A hardware pin's published performance figures (PinPerf, 0198): one bar chart
@@ -9,28 +10,29 @@ import { formatPerfValue, type PerfChart, type PerfTable, type PinPerfJson } fro
 // pin's own part wears the accent token, both redefined per theme in
 // globals.css. Bars start at zero and scale to the longest, so lengths are
 // honest. Every block names its source page.
-export function PinPerf({ perf, locale, className = '' }: { perf: PinPerfJson; locale: string; className?: string }) {
+export function PinPerf({ perf, t, locale, className = '' }: { perf: PinPerfJson; t: Translator; locale: string; className?: string }) {
   return (
-    <section className={`flex flex-col gap-4 text-sm ${className}`} aria-label="Performance">
+    <section className={`flex flex-col gap-4 text-sm ${className}`} aria-label={t('pin.perf.heading')}>
       {perf.charts.map((chart) => (
-        <Chart key={chart.title} chart={chart} locale={locale} />
+        <Chart key={chart.title} chart={chart} t={t} locale={locale} />
       ))}
       {perf.tables.map((table) => (
-        <Table key={table.title} table={table} />
+        <Table key={table.title} table={table} t={t} locale={locale} />
       ))}
     </section>
   );
 }
 
-function Source({ url }: { url?: string }) {
+function Source({ url, label }: { url?: string; label: string }) {
   return url ? (
     <a href={url} rel="noopener nofollow" target="_blank" className="text-link">
-      source
+      {label}
     </a>
   ) : null;
 }
 
-function Chart({ chart, locale }: { chart: PerfChart; locale: string }) {
+function Chart({ chart: base, t, locale }: { chart: PerfChart; t: Translator; locale: string }) {
+  const chart = { ...base, ...base.i18n?.[locale] };
   const max = Math.max(...chart.bars.map((bar) => bar.value)) || 1;
   return (
     <figure className="surface rounded-lg px-3 py-2">
@@ -55,14 +57,15 @@ function Chart({ chart, locale }: { chart: PerfChart; locale: string }) {
         <p className="mt-2 text-xs text-muted">
           {chart.note}
           {chart.note && chart.sourceUrl ? ' · ' : ''}
-          <Source url={chart.sourceUrl} />
+          <Source url={chart.sourceUrl} label={t('pin.perf.source')} />
         </p>
       ) : null}
     </figure>
   );
 }
 
-function Table({ table }: { table: PerfTable }) {
+function Table({ table: base, t, locale }: { table: PerfTable; t: Translator; locale: string }) {
+  const table = { ...base, ...base.i18n?.[locale] };
   return (
     <div className="surface rounded-lg px-3 py-2">
       <h2 className="mb-1 text-xs font-semibold tracking-wide text-muted uppercase">{table.title}</h2>
@@ -100,7 +103,7 @@ function Table({ table }: { table: PerfTable }) {
         <p className="mt-2 text-xs text-muted">
           {table.note}
           {table.note && table.sourceUrl ? ' · ' : ''}
-          <Source url={table.sourceUrl} />
+          <Source url={table.sourceUrl} label={t('pin.perf.source')} />
         </p>
       ) : null}
     </div>

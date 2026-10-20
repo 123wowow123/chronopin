@@ -686,6 +686,10 @@ const ko: Messages = {
       showAll: '레스토랑 평가가 있는 식당 모두 보기',
       reviews: '독립 매체 리뷰',
     },
+    perf: {
+      heading: "성능",
+      source: "출처",
+    },
     hotel: {
       heading: '호텔 평가',
       rooms: '객실',

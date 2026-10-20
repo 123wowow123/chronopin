@@ -691,6 +691,10 @@ const id: Messages = {
       showAll: 'Tampilkan semua restoran dengan rubrik bersantap',
       reviews: 'Ulasan independen',
     },
+    perf: {
+      heading: "Performa",
+      source: "sumber",
+    },
     hotel: {
       heading: 'Penilaian hotel',
       rooms: 'Kamar',

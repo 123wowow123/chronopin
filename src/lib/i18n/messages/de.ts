@@ -686,6 +686,10 @@ const de: Messages = {
       showAll: 'Alle Restaurants mit Restaurant-Bewertung anzeigen',
       reviews: 'Unabhängige Testberichte',
     },
+    perf: {
+      heading: "Leistung",
+      source: "Quelle",
+    },
     hotel: {
       heading: 'Hotel-Bewertung',
       rooms: 'Zimmer',

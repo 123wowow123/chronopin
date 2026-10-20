@@ -690,6 +690,10 @@ const vi: Messages = {
       showAll: 'Hiện mọi nhà hàng có đánh giá',
       reviews: 'Đánh giá độc lập',
     },
+    perf: {
+      heading: "Hiệu năng",
+      source: "nguồn",
+    },
     hotel: {
       heading: 'Đánh giá khách sạn',
       rooms: 'Phòng',

@@ -8,9 +8,93 @@
         "note": "NVIDIA's rack-level figures, both with sparsity: Vera Rubin NVL72 against GB300 NVL72.",
         "sourceUrl": "https://www.nvidia.com/en-us/data-center/vera-rubin-nvl72/",
         "bars": [
-          { "label": "GB300 NVL72", "value": 1440 },
-          { "label": "Vera Rubin NVL72", "value": 3600, "highlight": true }
-        ]
+          {
+            "label": "GB300 NVL72",
+            "value": 1440
+          },
+          {
+            "label": "Vera Rubin NVL72",
+            "value": 3600,
+            "highlight": true
+          }
+        ],
+        "i18n": {
+          "de": {
+            "title": "Rack-Inferenz, NVFP4",
+            "unit": "PFLOPS (mit Sparsity)",
+            "note": "NVIDIAs Werte auf Rack-Ebene, beide mit Sparsity: Vera Rubin NVL72 gegenüber GB300 NVL72."
+          },
+          "es": {
+            "title": "Inferencia por rack, NVFP4",
+            "unit": "PFLOPS (con sparsity)",
+            "note": "Cifras de NVIDIA a nivel de rack, ambas con sparsity: Vera Rubin NVL72 frente a GB300 NVL72."
+          },
+          "fr": {
+            "title": "Inférence par rack, NVFP4",
+            "unit": "PFLOPS (avec sparsité)",
+            "note": "Chiffres de NVIDIA à l'échelle du rack, tous deux avec sparsité : Vera Rubin NVL72 face au GB300 NVL72."
+          },
+          "it": {
+            "title": "Inferenza per rack, NVFP4",
+            "unit": "PFLOPS (con sparsity)",
+            "note": "Dati NVIDIA a livello di rack, entrambi con sparsity: Vera Rubin NVL72 contro GB300 NVL72."
+          },
+          "pt": {
+            "title": "Inferência por rack, NVFP4",
+            "unit": "PFLOPS (com sparsity)",
+            "note": "Números da NVIDIA no nível do rack, ambos com sparsity: Vera Rubin NVL72 contra GB300 NVL72."
+          },
+          "ru": {
+            "title": "Инференс на стойку, NVFP4",
+            "unit": "PFLOPS (с разреженностью)",
+            "note": "Данные NVIDIA на уровне стойки, обе с разреженностью: Vera Rubin NVL72 против GB300 NVL72."
+          },
+          "ja": {
+            "title": "ラックあたりの推論性能（NVFP4）",
+            "unit": "PFLOPS (スパース)",
+            "note": "NVIDIAが公表したラック単位の数値（いずれもスパース性あり）：Vera Rubin NVL72とGB300 NVL72の比較。"
+          },
+          "zh": {
+            "title": "每机架推理性能，NVFP4",
+            "unit": "PFLOPS (稀疏)",
+            "note": "NVIDIA 公布的机架级数据，均为稀疏：Vera Rubin NVL72 对比 GB300 NVL72。"
+          },
+          "ko": {
+            "title": "랙당 추론 성능, NVFP4",
+            "unit": "PFLOPS (희소)",
+            "note": "NVIDIA가 공개한 랙 단위 수치로, 둘 다 희소성 적용: Vera Rubin NVL72와 GB300 NVL72 비교."
+          },
+          "hi": {
+            "title": "प्रति रैक इन्फ़रेंस, NVFP4",
+            "unit": "PFLOPS (स्पार्स)",
+            "note": "NVIDIA के रैक-स्तर के आँकड़े, दोनों स्पार्सिटी के साथ: Vera Rubin NVL72 बनाम GB300 NVL72।"
+          },
+          "ar": {
+            "title": "الاستدلال لكل رف، NVFP4",
+            "unit": "PFLOPS (متفرق)",
+            "note": "أرقام NVIDIA على مستوى الرف، كلاهما مع التفرّق: Vera Rubin NVL72 مقابل GB300 NVL72."
+          },
+          "th": {
+            "title": "การอนุมานต่อแร็ค, NVFP4",
+            "unit": "PFLOPS (แบบเบาบาง)",
+            "note": "ตัวเลขระดับแร็คของ NVIDIA ทั้งสองแบบใช้ความเบาบาง: Vera Rubin NVL72 เทียบกับ GB300 NVL72"
+          },
+          "vi": {
+            "title": "Suy luận mỗi rack, NVFP4",
+            "unit": "PFLOPS (thưa)",
+            "note": "Số liệu cấp rack của NVIDIA, đều có tính thưa: Vera Rubin NVL72 so với GB300 NVL72."
+          },
+          "id": {
+            "title": "Inferensi per rak, NVFP4",
+            "unit": "PFLOPS (sparse)",
+            "note": "Angka NVIDIA tingkat rak, keduanya dengan sparsity: Vera Rubin NVL72 dibanding GB300 NVL72."
+          },
+          "ms": {
+            "title": "Inferens setiap rak, NVFP4",
+            "unit": "PFLOPS (jarang)",
+            "note": "Angka NVIDIA peringkat rak, kedua-duanya dengan sparsity: Vera Rubin NVL72 berbanding GB300 NVL72."
+          }
+        }
       },
       {
         "title": "Rack training, FP4",
@@ -18,9 +102,93 @@
         "note": "Dense (no sparsity) FP4 tensor throughput per rack.",
         "sourceUrl": "https://www.nvidia.com/en-us/data-center/vera-rubin-nvl72/",
         "bars": [
-          { "label": "GB300 NVL72", "value": 1080 },
-          { "label": "Vera Rubin NVL72", "value": 2520, "highlight": true }
-        ]
+          {
+            "label": "GB300 NVL72",
+            "value": 1080
+          },
+          {
+            "label": "Vera Rubin NVL72",
+            "value": 2520,
+            "highlight": true
+          }
+        ],
+        "i18n": {
+          "de": {
+            "title": "Rack-Training, FP4",
+            "unit": "PFLOPS (ohne Sparsity)",
+            "note": "Dichter FP4-Tensor-Durchsatz (ohne Sparsity) pro Rack."
+          },
+          "es": {
+            "title": "Entrenamiento por rack, FP4",
+            "unit": "PFLOPS (densa)",
+            "note": "Rendimiento tensorial FP4 denso (sin sparsity) por rack."
+          },
+          "fr": {
+            "title": "Entraînement par rack, FP4",
+            "unit": "PFLOPS (dense)",
+            "note": "Débit tensoriel FP4 dense (sans sparsité) par rack."
+          },
+          "it": {
+            "title": "Addestramento per rack, FP4",
+            "unit": "PFLOPS (densa)",
+            "note": "Throughput tensoriale FP4 denso (senza sparsity) per rack."
+          },
+          "pt": {
+            "title": "Treinamento por rack, FP4",
+            "unit": "PFLOPS (densa)",
+            "note": "Taxa de transferência tensorial FP4 densa (sem sparsity) por rack."
+          },
+          "ru": {
+            "title": "Обучение на стойку, FP4",
+            "unit": "PFLOPS (плотная)",
+            "note": "Плотная (без разреженности) тензорная производительность FP4 на стойку."
+          },
+          "ja": {
+            "title": "ラックあたりの学習性能（FP4）",
+            "unit": "PFLOPS (デンス)",
+            "note": "ラックあたりのデンス（スパース性なし）FP4テンソル処理能力。"
+          },
+          "zh": {
+            "title": "每机架训练性能，FP4",
+            "unit": "PFLOPS (稠密)",
+            "note": "每机架稠密（无稀疏）FP4 张量吞吐量。"
+          },
+          "ko": {
+            "title": "랙당 학습 성능, FP4",
+            "unit": "PFLOPS (밀집)",
+            "note": "랙당 밀집(희소성 미적용) FP4 텐서 처리량."
+          },
+          "hi": {
+            "title": "प्रति रैक प्रशिक्षण, FP4",
+            "unit": "PFLOPS (डेंस)",
+            "note": "प्रति रैक डेंस (बिना स्पार्सिटी) FP4 टेंसर थ्रूपुट।"
+          },
+          "ar": {
+            "title": "التدريب لكل رف، FP4",
+            "unit": "PFLOPS (كثيف)",
+            "note": "إنتاجية FP4 للتنسورات الكثيفة (دون تفرّق) لكل رف."
+          },
+          "th": {
+            "title": "การฝึกต่อแร็ค, FP4",
+            "unit": "PFLOPS (แบบหนาแน่น)",
+            "note": "ปริมาณงานเทนเซอร์ FP4 แบบหนาแน่น (ไม่ใช้ความเบาบาง) ต่อแร็ค"
+          },
+          "vi": {
+            "title": "Huấn luyện mỗi rack, FP4",
+            "unit": "PFLOPS (dày đặc)",
+            "note": "Thông lượng tensor FP4 dày đặc (không tính thưa) mỗi rack."
+          },
+          "id": {
+            "title": "Pelatihan per rak, FP4",
+            "unit": "PFLOPS (dense)",
+            "note": "Throughput tensor FP4 dense (tanpa sparsity) per rak."
+          },
+          "ms": {
+            "title": "Latihan setiap rak, FP4",
+            "unit": "PFLOPS (padat)",
+            "note": "Daya pemprosesan tensor FP4 padat (tanpa sparsity) setiap rak."
+          }
+        }
       },
       {
         "title": "Rack GPU memory bandwidth",
@@ -28,42 +196,1861 @@
         "note": "GB300 NVL72 is published as \"up to 576 TB/s\".",
         "sourceUrl": "https://www.nvidia.com/en-us/data-center/gb300-nvl72/",
         "bars": [
-          { "label": "GB300 NVL72", "value": 576 },
-          { "label": "Vera Rubin NVL72", "value": 1400, "highlight": true }
-        ]
+          {
+            "label": "GB300 NVL72",
+            "value": 576
+          },
+          {
+            "label": "Vera Rubin NVL72",
+            "value": 1400,
+            "highlight": true
+          }
+        ],
+        "i18n": {
+          "de": {
+            "title": "GPU-Speicherbandbreite pro Rack",
+            "unit": "TB/s",
+            "note": "Für GB300 NVL72 wird „bis zu 576 TB/s“ angegeben."
+          },
+          "es": {
+            "title": "Ancho de banda de memoria de GPU por rack",
+            "unit": "TB/s",
+            "note": "GB300 NVL72 se publica como «hasta 576 TB/s»."
+          },
+          "fr": {
+            "title": "Bande passante mémoire GPU par rack",
+            "unit": "TB/s",
+            "note": "Le GB300 NVL72 est annoncé « jusqu'à 576 To/s »."
+          },
+          "it": {
+            "title": "Larghezza di banda della memoria GPU per rack",
+            "unit": "TB/s",
+            "note": "GB300 NVL72 è indicato come «fino a 576 TB/s»."
+          },
+          "pt": {
+            "title": "Largura de banda de memória da GPU por rack",
+            "unit": "TB/s",
+            "note": "O GB300 NVL72 é divulgado como “até 576 TB/s”."
+          },
+          "ru": {
+            "title": "Пропускная способность памяти GPU на стойку",
+            "unit": "TB/s",
+            "note": "Для GB300 NVL72 указано «до 576 ТБ/с»."
+          },
+          "ja": {
+            "title": "ラックあたりのGPUメモリ帯域幅",
+            "unit": "TB/s",
+            "note": "GB300 NVL72は「最大576 TB/s」と公表されています。"
+          },
+          "zh": {
+            "title": "每机架 GPU 内存带宽",
+            "unit": "TB/s",
+            "note": "GB300 NVL72 公布为“最高 576 TB/s”。"
+          },
+          "ko": {
+            "title": "랙당 GPU 메모리 대역폭",
+            "unit": "TB/s",
+            "note": "GB300 NVL72는 “최대 576 TB/s”로 공개되었습니다."
+          },
+          "hi": {
+            "title": "प्रति रैक GPU मेमोरी बैंडविड्थ",
+            "unit": "TB/s",
+            "note": "GB300 NVL72 को “अधिकतम 576 TB/s” के रूप में प्रकाशित किया गया है।"
+          },
+          "ar": {
+            "title": "عرض نطاق ذاكرة GPU لكل رف",
+            "unit": "TB/s",
+            "note": "نُشر GB300 NVL72 بقيمة «حتى 576 تيرابايت/ث»."
+          },
+          "th": {
+            "title": "แบนด์วิดท์หน่วยความจำ GPU ต่อแร็ค",
+            "unit": "TB/s",
+            "note": "GB300 NVL72 เผยแพร่ไว้ที่ “สูงสุด 576 TB/s”"
+          },
+          "vi": {
+            "title": "Băng thông bộ nhớ GPU mỗi rack",
+            "unit": "TB/s",
+            "note": "GB300 NVL72 được công bố là “tối đa 576 TB/s”."
+          },
+          "id": {
+            "title": "Bandwidth memori GPU per rak",
+            "unit": "TB/s",
+            "note": "GB300 NVL72 dipublikasikan sebagai “hingga 576 TB/s”."
+          },
+          "ms": {
+            "title": "Lebar jalur memori GPU setiap rak",
+            "unit": "TB/s",
+            "note": "GB300 NVL72 diterbitkan sebagai “sehingga 576 TB/s”."
+          }
+        }
       }
     ],
     "tables": [
       {
         "title": "Rack specifications",
-        "columns": ["Spec", "GB300 NVL72", "Vera Rubin NVL72"],
+        "columns": [
+          "Spec",
+          "GB300 NVL72",
+          "Vera Rubin NVL72"
+        ],
         "rows": [
-          ["GPUs / CPUs", "72 Blackwell Ultra / 36 Grace", "72 Rubin / 36 Vera"],
-          ["FP4 inference (sparse)", "1,440 PFLOPS", "3,600 PFLOPS"],
-          ["FP4 training (dense)", "1,080 PFLOPS", "2,520 PFLOPS"],
-          ["GPU memory", "20 TB", "20.7 TB HBM4"],
-          ["GPU memory bandwidth", "up to 576 TB/s", "1,400 TB/s"],
-          ["NVLink bandwidth", "130 TB/s", "216 TB/s"],
-          ["CPU cores", "2,592 Arm Neoverse V2", "3,168 NVIDIA Olympus"],
-          ["CPU memory", "17 TB LPDDR5X", "up to 54 TB LPDDR5X"]
+          [
+            "GPUs / CPUs",
+            "72 Blackwell Ultra / 36 Grace",
+            "72 Rubin / 36 Vera"
+          ],
+          [
+            "FP4 inference (sparse)",
+            "1,440 PFLOPS",
+            "3,600 PFLOPS"
+          ],
+          [
+            "FP4 training (dense)",
+            "1,080 PFLOPS",
+            "2,520 PFLOPS"
+          ],
+          [
+            "GPU memory",
+            "20 TB",
+            "20.7 TB HBM4"
+          ],
+          [
+            "GPU memory bandwidth",
+            "up to 576 TB/s",
+            "1,400 TB/s"
+          ],
+          [
+            "NVLink bandwidth",
+            "130 TB/s",
+            "216 TB/s"
+          ],
+          [
+            "CPU cores",
+            "2,592 Arm Neoverse V2",
+            "3,168 NVIDIA Olympus"
+          ],
+          [
+            "CPU memory",
+            "17 TB LPDDR5X",
+            "up to 54 TB LPDDR5X"
+          ]
         ],
         "note": "Vendor-published specifications; NVIDIA lists sparse and dense figures under different footnotes on the two pages, so only like-for-like rows are charted.",
-        "sourceUrl": "https://www.nvidia.com/en-us/data-center/vera-rubin-nvl72/"
+        "sourceUrl": "https://www.nvidia.com/en-us/data-center/vera-rubin-nvl72/",
+        "i18n": {
+          "de": {
+            "title": "Rack-Spezifikationen",
+            "columns": [
+              "Spezifikation",
+              "GB300 NVL72",
+              "Vera Rubin NVL72"
+            ],
+            "rows": [
+              [
+                "GPUs / CPUs",
+                "72 Blackwell Ultra / 36 Grace",
+                "72 Rubin / 36 Vera"
+              ],
+              [
+                "FP4-Inferenz (mit Sparsity)",
+                "1,440 PFLOPS",
+                "3,600 PFLOPS"
+              ],
+              [
+                "FP4-Training (ohne Sparsity)",
+                "1,080 PFLOPS",
+                "2,520 PFLOPS"
+              ],
+              [
+                "GPU-Speicher",
+                "20 TB",
+                "20.7 TB HBM4"
+              ],
+              [
+                "GPU-Speicherbandbreite",
+                "bis zu 576 TB/s",
+                "1,400 TB/s"
+              ],
+              [
+                "NVLink-Bandbreite",
+                "130 TB/s",
+                "216 TB/s"
+              ],
+              [
+                "CPU-Kerne",
+                "2,592 Arm Neoverse V2",
+                "3,168 NVIDIA Olympus"
+              ],
+              [
+                "CPU-Speicher",
+                "17 TB LPDDR5X",
+                "bis zu 54 TB LPDDR5X"
+              ]
+            ],
+            "note": "Vom Hersteller veröffentlichte Spezifikationen; NVIDIA nennt Werte mit und ohne Sparsity auf den beiden Seiten unter verschiedenen Fußnoten, daher sind nur vergleichbare Zeilen als Diagramm dargestellt."
+          },
+          "es": {
+            "title": "Especificaciones del rack",
+            "columns": [
+              "Especificación",
+              "GB300 NVL72",
+              "Vera Rubin NVL72"
+            ],
+            "rows": [
+              [
+                "GPU / CPU",
+                "72 Blackwell Ultra / 36 Grace",
+                "72 Rubin / 36 Vera"
+              ],
+              [
+                "Inferencia FP4 (con sparsity)",
+                "1,440 PFLOPS",
+                "3,600 PFLOPS"
+              ],
+              [
+                "Entrenamiento FP4 (densa)",
+                "1,080 PFLOPS",
+                "2,520 PFLOPS"
+              ],
+              [
+                "Memoria de GPU",
+                "20 TB",
+                "20.7 TB HBM4"
+              ],
+              [
+                "Ancho de banda de memoria de GPU",
+                "hasta 576 TB/s",
+                "1,400 TB/s"
+              ],
+              [
+                "Ancho de banda NVLink",
+                "130 TB/s",
+                "216 TB/s"
+              ],
+              [
+                "Núcleos de CPU",
+                "2,592 Arm Neoverse V2",
+                "3,168 NVIDIA Olympus"
+              ],
+              [
+                "Memoria de CPU",
+                "17 TB LPDDR5X",
+                "hasta 54 TB LPDDR5X"
+              ]
+            ],
+            "note": "Especificaciones publicadas por el fabricante; NVIDIA indica cifras con y sin sparsity bajo notas distintas en las dos páginas, por lo que solo se grafican las filas comparables."
+          },
+          "fr": {
+            "title": "Caractéristiques du rack",
+            "columns": [
+              "Caractéristique",
+              "GB300 NVL72",
+              "Vera Rubin NVL72"
+            ],
+            "rows": [
+              [
+                "GPU / CPU",
+                "72 Blackwell Ultra / 36 Grace",
+                "72 Rubin / 36 Vera"
+              ],
+              [
+                "Inférence FP4 (avec sparsité)",
+                "1,440 PFLOPS",
+                "3,600 PFLOPS"
+              ],
+              [
+                "Entraînement FP4 (dense)",
+                "1,080 PFLOPS",
+                "2,520 PFLOPS"
+              ],
+              [
+                "Mémoire GPU",
+                "20 TB",
+                "20.7 TB HBM4"
+              ],
+              [
+                "Bande passante mémoire GPU",
+                "jusqu'à 576 TB/s",
+                "1,400 TB/s"
+              ],
+              [
+                "Bande passante NVLink",
+                "130 TB/s",
+                "216 TB/s"
+              ],
+              [
+                "Cœurs CPU",
+                "2,592 Arm Neoverse V2",
+                "3,168 NVIDIA Olympus"
+              ],
+              [
+                "Mémoire CPU",
+                "17 TB LPDDR5X",
+                "jusqu'à 54 TB LPDDR5X"
+              ]
+            ],
+            "note": "Caractéristiques publiées par le constructeur ; NVIDIA donne des chiffres avec et sans sparsité sous des notes différentes sur les deux pages, seules les lignes comparables sont donc tracées."
+          },
+          "it": {
+            "title": "Specifiche del rack",
+            "columns": [
+              "Specifica",
+              "GB300 NVL72",
+              "Vera Rubin NVL72"
+            ],
+            "rows": [
+              [
+                "GPU / CPU",
+                "72 Blackwell Ultra / 36 Grace",
+                "72 Rubin / 36 Vera"
+              ],
+              [
+                "Inferenza FP4 (con sparsity)",
+                "1,440 PFLOPS",
+                "3,600 PFLOPS"
+              ],
+              [
+                "Addestramento FP4 (densa)",
+                "1,080 PFLOPS",
+                "2,520 PFLOPS"
+              ],
+              [
+                "Memoria GPU",
+                "20 TB",
+                "20.7 TB HBM4"
+              ],
+              [
+                "Larghezza di banda memoria GPU",
+                "fino a 576 TB/s",
+                "1,400 TB/s"
+              ],
+              [
+                "Larghezza di banda NVLink",
+                "130 TB/s",
+                "216 TB/s"
+              ],
+              [
+                "Core CPU",
+                "2,592 Arm Neoverse V2",
+                "3,168 NVIDIA Olympus"
+              ],
+              [
+                "Memoria CPU",
+                "17 TB LPDDR5X",
+                "fino a 54 TB LPDDR5X"
+              ]
+            ],
+            "note": "Specifiche pubblicate dal produttore; NVIDIA riporta valori con e senza sparsity con note diverse nelle due pagine, quindi nei grafici compaiono solo le righe confrontabili."
+          },
+          "pt": {
+            "title": "Especificações do rack",
+            "columns": [
+              "Especificação",
+              "GB300 NVL72",
+              "Vera Rubin NVL72"
+            ],
+            "rows": [
+              [
+                "GPUs / CPUs",
+                "72 Blackwell Ultra / 36 Grace",
+                "72 Rubin / 36 Vera"
+              ],
+              [
+                "Inferência FP4 (com sparsity)",
+                "1,440 PFLOPS",
+                "3,600 PFLOPS"
+              ],
+              [
+                "Treinamento FP4 (densa)",
+                "1,080 PFLOPS",
+                "2,520 PFLOPS"
+              ],
+              [
+                "Memória da GPU",
+                "20 TB",
+                "20.7 TB HBM4"
+              ],
+              [
+                "Largura de banda de memória da GPU",
+                "até 576 TB/s",
+                "1,400 TB/s"
+              ],
+              [
+                "Largura de banda NVLink",
+                "130 TB/s",
+                "216 TB/s"
+              ],
+              [
+                "Núcleos de CPU",
+                "2,592 Arm Neoverse V2",
+                "3,168 NVIDIA Olympus"
+              ],
+              [
+                "Memória da CPU",
+                "17 TB LPDDR5X",
+                "até 54 TB LPDDR5X"
+              ]
+            ],
+            "note": "Especificações publicadas pelo fabricante; a NVIDIA lista valores com e sem sparsity sob notas diferentes nas duas páginas, por isso só as linhas comparáveis são representadas em gráfico."
+          },
+          "ru": {
+            "title": "Характеристики стойки",
+            "columns": [
+              "Параметр",
+              "GB300 NVL72",
+              "Vera Rubin NVL72"
+            ],
+            "rows": [
+              [
+                "GPU / CPU",
+                "72 Blackwell Ultra / 36 Grace",
+                "72 Rubin / 36 Vera"
+              ],
+              [
+                "Инференс FP4 (с разреженностью)",
+                "1,440 PFLOPS",
+                "3,600 PFLOPS"
+              ],
+              [
+                "Обучение FP4 (плотная)",
+                "1,080 PFLOPS",
+                "2,520 PFLOPS"
+              ],
+              [
+                "Память GPU",
+                "20 TB",
+                "20.7 TB HBM4"
+              ],
+              [
+                "Пропускная способность памяти GPU",
+                "до 576 TB/s",
+                "1,400 TB/s"
+              ],
+              [
+                "Пропускная способность NVLink",
+                "130 TB/s",
+                "216 TB/s"
+              ],
+              [
+                "Ядра CPU",
+                "2,592 Arm Neoverse V2",
+                "3,168 NVIDIA Olympus"
+              ],
+              [
+                "Память CPU",
+                "17 TB LPDDR5X",
+                "до 54 TB LPDDR5X"
+              ]
+            ],
+            "note": "Характеристики опубликованы производителем; NVIDIA приводит значения с разреженностью и без неё в разных сносках на двух страницах, поэтому на диаграммах показаны только сопоставимые строки."
+          },
+          "ja": {
+            "title": "ラックの仕様",
+            "columns": [
+              "仕様",
+              "GB300 NVL72",
+              "Vera Rubin NVL72"
+            ],
+            "rows": [
+              [
+                "GPU／CPU",
+                "72 Blackwell Ultra / 36 Grace",
+                "72 Rubin / 36 Vera"
+              ],
+              [
+                "FP4推論 (スパース)",
+                "1,440 PFLOPS",
+                "3,600 PFLOPS"
+              ],
+              [
+                "FP4学習 (デンス)",
+                "1,080 PFLOPS",
+                "2,520 PFLOPS"
+              ],
+              [
+                "GPUメモリ",
+                "20 TB",
+                "20.7 TB HBM4"
+              ],
+              [
+                "GPUメモリ帯域幅",
+                "最大 576 TB/s",
+                "1,400 TB/s"
+              ],
+              [
+                "NVLink帯域幅",
+                "130 TB/s",
+                "216 TB/s"
+              ],
+              [
+                "CPUコア数",
+                "2,592 Arm Neoverse V2",
+                "3,168 NVIDIA Olympus"
+              ],
+              [
+                "CPUメモリ",
+                "17 TB LPDDR5X",
+                "最大 54 TB LPDDR5X"
+              ]
+            ],
+            "note": "メーカー公表の仕様です。NVIDIAは2つのページでスパースとデンスの数値を別々の脚注で示しているため、グラフにするのは同条件の行のみです。"
+          },
+          "zh": {
+            "title": "机架规格",
+            "columns": [
+              "规格",
+              "GB300 NVL72",
+              "Vera Rubin NVL72"
+            ],
+            "rows": [
+              [
+                "GPU / CPU",
+                "72 Blackwell Ultra / 36 Grace",
+                "72 Rubin / 36 Vera"
+              ],
+              [
+                "FP4 推理 (稀疏)",
+                "1,440 PFLOPS",
+                "3,600 PFLOPS"
+              ],
+              [
+                "FP4 训练 (稠密)",
+                "1,080 PFLOPS",
+                "2,520 PFLOPS"
+              ],
+              [
+                "GPU 内存",
+                "20 TB",
+                "20.7 TB HBM4"
+              ],
+              [
+                "GPU 内存带宽",
+                "最高 576 TB/s",
+                "1,400 TB/s"
+              ],
+              [
+                "NVLink 带宽",
+                "130 TB/s",
+                "216 TB/s"
+              ],
+              [
+                "CPU 核心数",
+                "2,592 Arm Neoverse V2",
+                "3,168 NVIDIA Olympus"
+              ],
+              [
+                "CPU 内存",
+                "17 TB LPDDR5X",
+                "最高 54 TB LPDDR5X"
+              ]
+            ],
+            "note": "厂商公布的规格；NVIDIA 在两个页面上以不同脚注分别列出稀疏与稠密数据，因此图表仅呈现可比较的行。"
+          },
+          "ko": {
+            "title": "랙 사양",
+            "columns": [
+              "사양",
+              "GB300 NVL72",
+              "Vera Rubin NVL72"
+            ],
+            "rows": [
+              [
+                "GPU / CPU",
+                "72 Blackwell Ultra / 36 Grace",
+                "72 Rubin / 36 Vera"
+              ],
+              [
+                "FP4 추론 (희소)",
+                "1,440 PFLOPS",
+                "3,600 PFLOPS"
+              ],
+              [
+                "FP4 학습 (밀집)",
+                "1,080 PFLOPS",
+                "2,520 PFLOPS"
+              ],
+              [
+                "GPU 메모리",
+                "20 TB",
+                "20.7 TB HBM4"
+              ],
+              [
+                "GPU 메모리 대역폭",
+                "최대 576 TB/s",
+                "1,400 TB/s"
+              ],
+              [
+                "NVLink 대역폭",
+                "130 TB/s",
+                "216 TB/s"
+              ],
+              [
+                "CPU 코어",
+                "2,592 Arm Neoverse V2",
+                "3,168 NVIDIA Olympus"
+              ],
+              [
+                "CPU 메모리",
+                "17 TB LPDDR5X",
+                "최대 54 TB LPDDR5X"
+              ]
+            ],
+            "note": "제조사가 공개한 사양입니다. NVIDIA는 두 페이지에서 희소 및 밀집 수치를 서로 다른 각주로 표기하므로, 동일 조건의 행만 차트로 표시했습니다."
+          },
+          "hi": {
+            "title": "रैक विनिर्देश",
+            "columns": [
+              "विनिर्देश",
+              "GB300 NVL72",
+              "Vera Rubin NVL72"
+            ],
+            "rows": [
+              [
+                "GPU / CPU",
+                "72 Blackwell Ultra / 36 Grace",
+                "72 Rubin / 36 Vera"
+              ],
+              [
+                "FP4 इन्फ़रेंस (स्पार्स)",
+                "1,440 PFLOPS",
+                "3,600 PFLOPS"
+              ],
+              [
+                "FP4 प्रशिक्षण (डेंस)",
+                "1,080 PFLOPS",
+                "2,520 PFLOPS"
+              ],
+              [
+                "GPU मेमोरी",
+                "20 TB",
+                "20.7 TB HBM4"
+              ],
+              [
+                "GPU मेमोरी बैंडविड्थ",
+                "अधिकतम 576 TB/s",
+                "1,400 TB/s"
+              ],
+              [
+                "NVLink बैंडविड्थ",
+                "130 TB/s",
+                "216 TB/s"
+              ],
+              [
+                "CPU कोर",
+                "2,592 Arm Neoverse V2",
+                "3,168 NVIDIA Olympus"
+              ],
+              [
+                "CPU मेमोरी",
+                "17 TB LPDDR5X",
+                "अधिकतम 54 TB LPDDR5X"
+              ]
+            ],
+            "note": "निर्माता द्वारा प्रकाशित विनिर्देश; NVIDIA दोनों पृष्ठों पर स्पार्स और डेंस आँकड़े अलग-अलग फ़ुटनोट में देती है, इसलिए चार्ट में केवल तुलनीय पंक्तियाँ दिखाई गई हैं।"
+          },
+          "ar": {
+            "title": "مواصفات الرف",
+            "columns": [
+              "المواصفة",
+              "GB300 NVL72",
+              "Vera Rubin NVL72"
+            ],
+            "rows": [
+              [
+                "وحدات GPU / وحدات CPU",
+                "72 Blackwell Ultra / 36 Grace",
+                "72 Rubin / 36 Vera"
+              ],
+              [
+                "استدلال FP4 (متفرق)",
+                "1,440 PFLOPS",
+                "3,600 PFLOPS"
+              ],
+              [
+                "تدريب FP4 (كثيف)",
+                "1,080 PFLOPS",
+                "2,520 PFLOPS"
+              ],
+              [
+                "ذاكرة GPU",
+                "20 TB",
+                "20.7 TB HBM4"
+              ],
+              [
+                "عرض نطاق ذاكرة GPU",
+                "حتى 576 TB/s",
+                "1,400 TB/s"
+              ],
+              [
+                "عرض نطاق NVLink",
+                "130 TB/s",
+                "216 TB/s"
+              ],
+              [
+                "أنوية CPU",
+                "2,592 Arm Neoverse V2",
+                "3,168 NVIDIA Olympus"
+              ],
+              [
+                "ذاكرة CPU",
+                "17 TB LPDDR5X",
+                "حتى 54 TB LPDDR5X"
+              ]
+            ],
+            "note": "مواصفات منشورة من الشركة المصنّعة؛ تورد NVIDIA الأرقام المتفرقة والكثيفة في الصفحتين تحت حواشٍ مختلفة، لذا لا تُرسم إلا الصفوف القابلة للمقارنة."
+          },
+          "th": {
+            "title": "สเปกของแร็ค",
+            "columns": [
+              "สเปก",
+              "GB300 NVL72",
+              "Vera Rubin NVL72"
+            ],
+            "rows": [
+              [
+                "GPU / CPU",
+                "72 Blackwell Ultra / 36 Grace",
+                "72 Rubin / 36 Vera"
+              ],
+              [
+                "การอนุมาน FP4 (แบบเบาบาง)",
+                "1,440 PFLOPS",
+                "3,600 PFLOPS"
+              ],
+              [
+                "การฝึก FP4 (แบบหนาแน่น)",
+                "1,080 PFLOPS",
+                "2,520 PFLOPS"
+              ],
+              [
+                "หน่วยความจำ GPU",
+                "20 TB",
+                "20.7 TB HBM4"
+              ],
+              [
+                "แบนด์วิดท์หน่วยความจำ GPU",
+                "สูงสุด 576 TB/s",
+                "1,400 TB/s"
+              ],
+              [
+                "แบนด์วิดท์ NVLink",
+                "130 TB/s",
+                "216 TB/s"
+              ],
+              [
+                "คอร์ CPU",
+                "2,592 Arm Neoverse V2",
+                "3,168 NVIDIA Olympus"
+              ],
+              [
+                "หน่วยความจำ CPU",
+                "17 TB LPDDR5X",
+                "สูงสุด 54 TB LPDDR5X"
+              ]
+            ],
+            "note": "สเปกที่ผู้ผลิตเผยแพร่ NVIDIA ระบุตัวเลขแบบเบาบางและหนาแน่นไว้ในเชิงอรรถต่างกันในสองหน้า จึงแสดงเป็นกราฟเฉพาะแถวที่เทียบกันได้"
+          },
+          "vi": {
+            "title": "Thông số rack",
+            "columns": [
+              "Thông số",
+              "GB300 NVL72",
+              "Vera Rubin NVL72"
+            ],
+            "rows": [
+              [
+                "GPU / CPU",
+                "72 Blackwell Ultra / 36 Grace",
+                "72 Rubin / 36 Vera"
+              ],
+              [
+                "Suy luận FP4 (thưa)",
+                "1,440 PFLOPS",
+                "3,600 PFLOPS"
+              ],
+              [
+                "Huấn luyện FP4 (dày đặc)",
+                "1,080 PFLOPS",
+                "2,520 PFLOPS"
+              ],
+              [
+                "Bộ nhớ GPU",
+                "20 TB",
+                "20.7 TB HBM4"
+              ],
+              [
+                "Băng thông bộ nhớ GPU",
+                "tối đa 576 TB/s",
+                "1,400 TB/s"
+              ],
+              [
+                "Băng thông NVLink",
+                "130 TB/s",
+                "216 TB/s"
+              ],
+              [
+                "Nhân CPU",
+                "2,592 Arm Neoverse V2",
+                "3,168 NVIDIA Olympus"
+              ],
+              [
+                "Bộ nhớ CPU",
+                "17 TB LPDDR5X",
+                "tối đa 54 TB LPDDR5X"
+              ]
+            ],
+            "note": "Thông số do nhà sản xuất công bố; NVIDIA ghi số liệu thưa và dày đặc ở các chú thích khác nhau trên hai trang, nên biểu đồ chỉ vẽ các dòng so sánh được."
+          },
+          "id": {
+            "title": "Spesifikasi rak",
+            "columns": [
+              "Spesifikasi",
+              "GB300 NVL72",
+              "Vera Rubin NVL72"
+            ],
+            "rows": [
+              [
+                "GPU / CPU",
+                "72 Blackwell Ultra / 36 Grace",
+                "72 Rubin / 36 Vera"
+              ],
+              [
+                "Inferensi FP4 (sparse)",
+                "1,440 PFLOPS",
+                "3,600 PFLOPS"
+              ],
+              [
+                "Pelatihan FP4 (dense)",
+                "1,080 PFLOPS",
+                "2,520 PFLOPS"
+              ],
+              [
+                "Memori GPU",
+                "20 TB",
+                "20.7 TB HBM4"
+              ],
+              [
+                "Bandwidth memori GPU",
+                "hingga 576 TB/s",
+                "1,400 TB/s"
+              ],
+              [
+                "Bandwidth NVLink",
+                "130 TB/s",
+                "216 TB/s"
+              ],
+              [
+                "Inti CPU",
+                "2,592 Arm Neoverse V2",
+                "3,168 NVIDIA Olympus"
+              ],
+              [
+                "Memori CPU",
+                "17 TB LPDDR5X",
+                "hingga 54 TB LPDDR5X"
+              ]
+            ],
+            "note": "Spesifikasi yang dipublikasikan produsen; NVIDIA mencantumkan angka sparse dan dense dengan catatan kaki berbeda di kedua halaman, sehingga hanya baris yang sebanding yang digrafikkan."
+          },
+          "ms": {
+            "title": "Spesifikasi rak",
+            "columns": [
+              "Spesifikasi",
+              "GB300 NVL72",
+              "Vera Rubin NVL72"
+            ],
+            "rows": [
+              [
+                "GPU / CPU",
+                "72 Blackwell Ultra / 36 Grace",
+                "72 Rubin / 36 Vera"
+              ],
+              [
+                "Inferens FP4 (jarang)",
+                "1,440 PFLOPS",
+                "3,600 PFLOPS"
+              ],
+              [
+                "Latihan FP4 (padat)",
+                "1,080 PFLOPS",
+                "2,520 PFLOPS"
+              ],
+              [
+                "Memori GPU",
+                "20 TB",
+                "20.7 TB HBM4"
+              ],
+              [
+                "Lebar jalur memori GPU",
+                "sehingga 576 TB/s",
+                "1,400 TB/s"
+              ],
+              [
+                "Lebar jalur NVLink",
+                "130 TB/s",
+                "216 TB/s"
+              ],
+              [
+                "Teras CPU",
+                "2,592 Arm Neoverse V2",
+                "3,168 NVIDIA Olympus"
+              ],
+              [
+                "Memori CPU",
+                "17 TB LPDDR5X",
+                "sehingga 54 TB LPDDR5X"
+              ]
+            ],
+            "note": "Spesifikasi yang diterbitkan pengilang; NVIDIA menyenaraikan angka jarang dan padat dengan nota kaki berbeza pada kedua-dua halaman, jadi hanya baris yang setanding dicartkan."
+          }
+        }
       },
       {
         "title": "Vera Rubin NVL72 scale",
-        "columns": ["Spec", "Rack", "Superchip", "Rubin GPU"],
-        "rows": [
-          ["FP4 inference (sparse)", "3,600 PFLOPS", "100 PFLOPS", "50 PFLOPS"],
-          ["FP4 training (dense)", "2,520 PFLOPS", "70 PFLOPS", "35 PFLOPS"],
-          ["FP8/FP6 training (dense)", "1,260 PFLOPS", "35 PFLOPS", "17.5 PFLOPS"],
-          ["FP16/BF16 (dense)", "288 PFLOPS", "8 PFLOPS", "4 PFLOPS"],
-          ["FP64", "2,400 TFLOPS", "67 TFLOPS", "33 TFLOPS"],
-          ["HBM4 memory", "20.7 TB", "576 GB", "288 GB"],
-          ["HBM4 bandwidth", "1,400 TB/s", "38.5 TB/s", "19.2 TB/s"],
-          ["NVLink 6 bandwidth", "216 TB/s", "6 TB/s", "3 TB/s"]
+        "columns": [
+          "Spec",
+          "Rack",
+          "Superchip",
+          "Rubin GPU"
         ],
-        "sourceUrl": "https://www.nvidia.com/en-us/data-center/vera-rubin-nvl72/"
+        "rows": [
+          [
+            "FP4 inference (sparse)",
+            "3,600 PFLOPS",
+            "100 PFLOPS",
+            "50 PFLOPS"
+          ],
+          [
+            "FP4 training (dense)",
+            "2,520 PFLOPS",
+            "70 PFLOPS",
+            "35 PFLOPS"
+          ],
+          [
+            "FP8/FP6 training (dense)",
+            "1,260 PFLOPS",
+            "35 PFLOPS",
+            "17.5 PFLOPS"
+          ],
+          [
+            "FP16/BF16 (dense)",
+            "288 PFLOPS",
+            "8 PFLOPS",
+            "4 PFLOPS"
+          ],
+          [
+            "FP64",
+            "2,400 TFLOPS",
+            "67 TFLOPS",
+            "33 TFLOPS"
+          ],
+          [
+            "HBM4 memory",
+            "20.7 TB",
+            "576 GB",
+            "288 GB"
+          ],
+          [
+            "HBM4 bandwidth",
+            "1,400 TB/s",
+            "38.5 TB/s",
+            "19.2 TB/s"
+          ],
+          [
+            "NVLink 6 bandwidth",
+            "216 TB/s",
+            "6 TB/s",
+            "3 TB/s"
+          ]
+        ],
+        "sourceUrl": "https://www.nvidia.com/en-us/data-center/vera-rubin-nvl72/",
+        "i18n": {
+          "de": {
+            "title": "Vera Rubin NVL72 im Maßstab",
+            "columns": [
+              "Spezifikation",
+              "Rack",
+              "Superchip",
+              "Rubin-GPU"
+            ],
+            "rows": [
+              [
+                "FP4-Inferenz (mit Sparsity)",
+                "3,600 PFLOPS",
+                "100 PFLOPS",
+                "50 PFLOPS"
+              ],
+              [
+                "FP4-Training (ohne Sparsity)",
+                "2,520 PFLOPS",
+                "70 PFLOPS",
+                "35 PFLOPS"
+              ],
+              [
+                "FP8/FP6-Training (ohne Sparsity)",
+                "1,260 PFLOPS",
+                "35 PFLOPS",
+                "17.5 PFLOPS"
+              ],
+              [
+                "FP16/BF16 (ohne Sparsity)",
+                "288 PFLOPS",
+                "8 PFLOPS",
+                "4 PFLOPS"
+              ],
+              [
+                "FP64",
+                "2,400 TFLOPS",
+                "67 TFLOPS",
+                "33 TFLOPS"
+              ],
+              [
+                "HBM4-Speicher",
+                "20.7 TB",
+                "576 GB",
+                "288 GB"
+              ],
+              [
+                "HBM4-Bandbreite",
+                "1,400 TB/s",
+                "38.5 TB/s",
+                "19.2 TB/s"
+              ],
+              [
+                "NVLink-6-Bandbreite",
+                "216 TB/s",
+                "6 TB/s",
+                "3 TB/s"
+              ]
+            ]
+          },
+          "es": {
+            "title": "Vera Rubin NVL72 a escala",
+            "columns": [
+              "Especificación",
+              "Rack",
+              "Superchip",
+              "GPU Rubin"
+            ],
+            "rows": [
+              [
+                "Inferencia FP4 (con sparsity)",
+                "3,600 PFLOPS",
+                "100 PFLOPS",
+                "50 PFLOPS"
+              ],
+              [
+                "Entrenamiento FP4 (densa)",
+                "2,520 PFLOPS",
+                "70 PFLOPS",
+                "35 PFLOPS"
+              ],
+              [
+                "Entrenamiento FP8/FP6 (densa)",
+                "1,260 PFLOPS",
+                "35 PFLOPS",
+                "17.5 PFLOPS"
+              ],
+              [
+                "FP16/BF16 (densa)",
+                "288 PFLOPS",
+                "8 PFLOPS",
+                "4 PFLOPS"
+              ],
+              [
+                "FP64",
+                "2,400 TFLOPS",
+                "67 TFLOPS",
+                "33 TFLOPS"
+              ],
+              [
+                "Memoria HBM4",
+                "20.7 TB",
+                "576 GB",
+                "288 GB"
+              ],
+              [
+                "Ancho de banda HBM4",
+                "1,400 TB/s",
+                "38.5 TB/s",
+                "19.2 TB/s"
+              ],
+              [
+                "Ancho de banda NVLink 6",
+                "216 TB/s",
+                "6 TB/s",
+                "3 TB/s"
+              ]
+            ]
+          },
+          "fr": {
+            "title": "Vera Rubin NVL72 à l'échelle",
+            "columns": [
+              "Caractéristique",
+              "Rack",
+              "Superpuce",
+              "GPU Rubin"
+            ],
+            "rows": [
+              [
+                "Inférence FP4 (avec sparsité)",
+                "3,600 PFLOPS",
+                "100 PFLOPS",
+                "50 PFLOPS"
+              ],
+              [
+                "Entraînement FP4 (dense)",
+                "2,520 PFLOPS",
+                "70 PFLOPS",
+                "35 PFLOPS"
+              ],
+              [
+                "Entraînement FP8/FP6 (dense)",
+                "1,260 PFLOPS",
+                "35 PFLOPS",
+                "17.5 PFLOPS"
+              ],
+              [
+                "FP16/BF16 (dense)",
+                "288 PFLOPS",
+                "8 PFLOPS",
+                "4 PFLOPS"
+              ],
+              [
+                "FP64",
+                "2,400 TFLOPS",
+                "67 TFLOPS",
+                "33 TFLOPS"
+              ],
+              [
+                "Mémoire HBM4",
+                "20.7 TB",
+                "576 GB",
+                "288 GB"
+              ],
+              [
+                "Bande passante HBM4",
+                "1,400 TB/s",
+                "38.5 TB/s",
+                "19.2 TB/s"
+              ],
+              [
+                "Bande passante NVLink 6",
+                "216 TB/s",
+                "6 TB/s",
+                "3 TB/s"
+              ]
+            ]
+          },
+          "it": {
+            "title": "Vera Rubin NVL72 in scala",
+            "columns": [
+              "Specifica",
+              "Rack",
+              "Superchip",
+              "GPU Rubin"
+            ],
+            "rows": [
+              [
+                "Inferenza FP4 (con sparsity)",
+                "3,600 PFLOPS",
+                "100 PFLOPS",
+                "50 PFLOPS"
+              ],
+              [
+                "Addestramento FP4 (densa)",
+                "2,520 PFLOPS",
+                "70 PFLOPS",
+                "35 PFLOPS"
+              ],
+              [
+                "Addestramento FP8/FP6 (densa)",
+                "1,260 PFLOPS",
+                "35 PFLOPS",
+                "17.5 PFLOPS"
+              ],
+              [
+                "FP16/BF16 (densa)",
+                "288 PFLOPS",
+                "8 PFLOPS",
+                "4 PFLOPS"
+              ],
+              [
+                "FP64",
+                "2,400 TFLOPS",
+                "67 TFLOPS",
+                "33 TFLOPS"
+              ],
+              [
+                "Memoria HBM4",
+                "20.7 TB",
+                "576 GB",
+                "288 GB"
+              ],
+              [
+                "Larghezza di banda HBM4",
+                "1,400 TB/s",
+                "38.5 TB/s",
+                "19.2 TB/s"
+              ],
+              [
+                "Larghezza di banda NVLink 6",
+                "216 TB/s",
+                "6 TB/s",
+                "3 TB/s"
+              ]
+            ]
+          },
+          "pt": {
+            "title": "Vera Rubin NVL72 em escala",
+            "columns": [
+              "Especificação",
+              "Rack",
+              "Superchip",
+              "GPU Rubin"
+            ],
+            "rows": [
+              [
+                "Inferência FP4 (com sparsity)",
+                "3,600 PFLOPS",
+                "100 PFLOPS",
+                "50 PFLOPS"
+              ],
+              [
+                "Treinamento FP4 (densa)",
+                "2,520 PFLOPS",
+                "70 PFLOPS",
+                "35 PFLOPS"
+              ],
+              [
+                "Treinamento FP8/FP6 (densa)",
+                "1,260 PFLOPS",
+                "35 PFLOPS",
+                "17.5 PFLOPS"
+              ],
+              [
+                "FP16/BF16 (densa)",
+                "288 PFLOPS",
+                "8 PFLOPS",
+                "4 PFLOPS"
+              ],
+              [
+                "FP64",
+                "2,400 TFLOPS",
+                "67 TFLOPS",
+                "33 TFLOPS"
+              ],
+              [
+                "Memória HBM4",
+                "20.7 TB",
+                "576 GB",
+                "288 GB"
+              ],
+              [
+                "Largura de banda HBM4",
+                "1,400 TB/s",
+                "38.5 TB/s",
+                "19.2 TB/s"
+              ],
+              [
+                "Largura de banda NVLink 6",
+                "216 TB/s",
+                "6 TB/s",
+                "3 TB/s"
+              ]
+            ]
+          },
+          "ru": {
+            "title": "Vera Rubin NVL72 в масштабе",
+            "columns": [
+              "Параметр",
+              "Стойка",
+              "Суперчип",
+              "GPU Rubin"
+            ],
+            "rows": [
+              [
+                "Инференс FP4 (с разреженностью)",
+                "3,600 PFLOPS",
+                "100 PFLOPS",
+                "50 PFLOPS"
+              ],
+              [
+                "Обучение FP4 (плотная)",
+                "2,520 PFLOPS",
+                "70 PFLOPS",
+                "35 PFLOPS"
+              ],
+              [
+                "Обучение FP8/FP6 (плотная)",
+                "1,260 PFLOPS",
+                "35 PFLOPS",
+                "17.5 PFLOPS"
+              ],
+              [
+                "FP16/BF16 (плотная)",
+                "288 PFLOPS",
+                "8 PFLOPS",
+                "4 PFLOPS"
+              ],
+              [
+                "FP64",
+                "2,400 TFLOPS",
+                "67 TFLOPS",
+                "33 TFLOPS"
+              ],
+              [
+                "Память HBM4",
+                "20.7 TB",
+                "576 GB",
+                "288 GB"
+              ],
+              [
+                "Пропускная способность HBM4",
+                "1,400 TB/s",
+                "38.5 TB/s",
+                "19.2 TB/s"
+              ],
+              [
+                "Пропускная способность NVLink 6",
+                "216 TB/s",
+                "6 TB/s",
+                "3 TB/s"
+              ]
+            ]
+          },
+          "ja": {
+            "title": "Vera Rubin NVL72の規模別仕様",
+            "columns": [
+              "仕様",
+              "ラック",
+              "スーパーチップ",
+              "Rubin GPU"
+            ],
+            "rows": [
+              [
+                "FP4推論 (スパース)",
+                "3,600 PFLOPS",
+                "100 PFLOPS",
+                "50 PFLOPS"
+              ],
+              [
+                "FP4学習 (デンス)",
+                "2,520 PFLOPS",
+                "70 PFLOPS",
+                "35 PFLOPS"
+              ],
+              [
+                "FP8/FP6学習 (デンス)",
+                "1,260 PFLOPS",
+                "35 PFLOPS",
+                "17.5 PFLOPS"
+              ],
+              [
+                "FP16/BF16 (デンス)",
+                "288 PFLOPS",
+                "8 PFLOPS",
+                "4 PFLOPS"
+              ],
+              [
+                "FP64",
+                "2,400 TFLOPS",
+                "67 TFLOPS",
+                "33 TFLOPS"
+              ],
+              [
+                "HBM4メモリ",
+                "20.7 TB",
+                "576 GB",
+                "288 GB"
+              ],
+              [
+                "HBM4帯域幅",
+                "1,400 TB/s",
+                "38.5 TB/s",
+                "19.2 TB/s"
+              ],
+              [
+                "NVLink 6帯域幅",
+                "216 TB/s",
+                "6 TB/s",
+                "3 TB/s"
+              ]
+            ]
+          },
+          "zh": {
+            "title": "Vera Rubin NVL72 各层级规格",
+            "columns": [
+              "规格",
+              "机架",
+              "超级芯片",
+              "Rubin GPU"
+            ],
+            "rows": [
+              [
+                "FP4 推理 (稀疏)",
+                "3,600 PFLOPS",
+                "100 PFLOPS",
+                "50 PFLOPS"
+              ],
+              [
+                "FP4 训练 (稠密)",
+                "2,520 PFLOPS",
+                "70 PFLOPS",
+                "35 PFLOPS"
+              ],
+              [
+                "FP8/FP6 训练 (稠密)",
+                "1,260 PFLOPS",
+                "35 PFLOPS",
+                "17.5 PFLOPS"
+              ],
+              [
+                "FP16/BF16 (稠密)",
+                "288 PFLOPS",
+                "8 PFLOPS",
+                "4 PFLOPS"
+              ],
+              [
+                "FP64",
+                "2,400 TFLOPS",
+                "67 TFLOPS",
+                "33 TFLOPS"
+              ],
+              [
+                "HBM4 内存",
+                "20.7 TB",
+                "576 GB",
+                "288 GB"
+              ],
+              [
+                "HBM4 带宽",
+                "1,400 TB/s",
+                "38.5 TB/s",
+                "19.2 TB/s"
+              ],
+              [
+                "NVLink 6 带宽",
+                "216 TB/s",
+                "6 TB/s",
+                "3 TB/s"
+              ]
+            ]
+          },
+          "ko": {
+            "title": "Vera Rubin NVL72 규모별 사양",
+            "columns": [
+              "사양",
+              "랙",
+              "슈퍼칩",
+              "Rubin GPU"
+            ],
+            "rows": [
+              [
+                "FP4 추론 (희소)",
+                "3,600 PFLOPS",
+                "100 PFLOPS",
+                "50 PFLOPS"
+              ],
+              [
+                "FP4 학습 (밀집)",
+                "2,520 PFLOPS",
+                "70 PFLOPS",
+                "35 PFLOPS"
+              ],
+              [
+                "FP8/FP6 학습 (밀집)",
+                "1,260 PFLOPS",
+                "35 PFLOPS",
+                "17.5 PFLOPS"
+              ],
+              [
+                "FP16/BF16 (밀집)",
+                "288 PFLOPS",
+                "8 PFLOPS",
+                "4 PFLOPS"
+              ],
+              [
+                "FP64",
+                "2,400 TFLOPS",
+                "67 TFLOPS",
+                "33 TFLOPS"
+              ],
+              [
+                "HBM4 메모리",
+                "20.7 TB",
+                "576 GB",
+                "288 GB"
+              ],
+              [
+                "HBM4 대역폭",
+                "1,400 TB/s",
+                "38.5 TB/s",
+                "19.2 TB/s"
+              ],
+              [
+                "NVLink 6 대역폭",
+                "216 TB/s",
+                "6 TB/s",
+                "3 TB/s"
+              ]
+            ]
+          },
+          "hi": {
+            "title": "Vera Rubin NVL72 पैमाने पर",
+            "columns": [
+              "विनिर्देश",
+              "रैक",
+              "सुपरचिप",
+              "Rubin GPU"
+            ],
+            "rows": [
+              [
+                "FP4 इन्फ़रेंस (स्पार्स)",
+                "3,600 PFLOPS",
+                "100 PFLOPS",
+                "50 PFLOPS"
+              ],
+              [
+                "FP4 प्रशिक्षण (डेंस)",
+                "2,520 PFLOPS",
+                "70 PFLOPS",
+                "35 PFLOPS"
+              ],
+              [
+                "FP8/FP6 प्रशिक्षण (डेंस)",
+                "1,260 PFLOPS",
+                "35 PFLOPS",
+                "17.5 PFLOPS"
+              ],
+              [
+                "FP16/BF16 (डेंस)",
+                "288 PFLOPS",
+                "8 PFLOPS",
+                "4 PFLOPS"
+              ],
+              [
+                "FP64",
+                "2,400 TFLOPS",
+                "67 TFLOPS",
+                "33 TFLOPS"
+              ],
+              [
+                "HBM4 मेमोरी",
+                "20.7 TB",
+                "576 GB",
+                "288 GB"
+              ],
+              [
+                "HBM4 बैंडविड्थ",
+                "1,400 TB/s",
+                "38.5 TB/s",
+                "19.2 TB/s"
+              ],
+              [
+                "NVLink 6 बैंडविड्थ",
+                "216 TB/s",
+                "6 TB/s",
+                "3 TB/s"
+              ]
+            ]
+          },
+          "ar": {
+            "title": "Vera Rubin NVL72 بحسب المستوى",
+            "columns": [
+              "المواصفة",
+              "الرف",
+              "الشريحة الفائقة",
+              "وحدة Rubin GPU"
+            ],
+            "rows": [
+              [
+                "استدلال FP4 (متفرق)",
+                "3,600 PFLOPS",
+                "100 PFLOPS",
+                "50 PFLOPS"
+              ],
+              [
+                "تدريب FP4 (كثيف)",
+                "2,520 PFLOPS",
+                "70 PFLOPS",
+                "35 PFLOPS"
+              ],
+              [
+                "تدريب FP8/FP6 (كثيف)",
+                "1,260 PFLOPS",
+                "35 PFLOPS",
+                "17.5 PFLOPS"
+              ],
+              [
+                "FP16/BF16 (كثيف)",
+                "288 PFLOPS",
+                "8 PFLOPS",
+                "4 PFLOPS"
+              ],
+              [
+                "FP64",
+                "2,400 TFLOPS",
+                "67 TFLOPS",
+                "33 TFLOPS"
+              ],
+              [
+                "ذاكرة HBM4",
+                "20.7 TB",
+                "576 GB",
+                "288 GB"
+              ],
+              [
+                "عرض نطاق HBM4",
+                "1,400 TB/s",
+                "38.5 TB/s",
+                "19.2 TB/s"
+              ],
+              [
+                "عرض نطاق NVLink 6",
+                "216 TB/s",
+                "6 TB/s",
+                "3 TB/s"
+              ]
+            ]
+          },
+          "th": {
+            "title": "Vera Rubin NVL72 ตามระดับ",
+            "columns": [
+              "สเปก",
+              "แร็ค",
+              "ซูเปอร์ชิป",
+              "Rubin GPU"
+            ],
+            "rows": [
+              [
+                "การอนุมาน FP4 (แบบเบาบาง)",
+                "3,600 PFLOPS",
+                "100 PFLOPS",
+                "50 PFLOPS"
+              ],
+              [
+                "การฝึก FP4 (แบบหนาแน่น)",
+                "2,520 PFLOPS",
+                "70 PFLOPS",
+                "35 PFLOPS"
+              ],
+              [
+                "การฝึก FP8/FP6 (แบบหนาแน่น)",
+                "1,260 PFLOPS",
+                "35 PFLOPS",
+                "17.5 PFLOPS"
+              ],
+              [
+                "FP16/BF16 (แบบหนาแน่น)",
+                "288 PFLOPS",
+                "8 PFLOPS",
+                "4 PFLOPS"
+              ],
+              [
+                "FP64",
+                "2,400 TFLOPS",
+                "67 TFLOPS",
+                "33 TFLOPS"
+              ],
+              [
+                "หน่วยความจำ HBM4",
+                "20.7 TB",
+                "576 GB",
+                "288 GB"
+              ],
+              [
+                "แบนด์วิดท์ HBM4",
+                "1,400 TB/s",
+                "38.5 TB/s",
+                "19.2 TB/s"
+              ],
+              [
+                "แบนด์วิดท์ NVLink 6",
+                "216 TB/s",
+                "6 TB/s",
+                "3 TB/s"
+              ]
+            ]
+          },
+          "vi": {
+            "title": "Vera Rubin NVL72 theo quy mô",
+            "columns": [
+              "Thông số",
+              "Rack",
+              "Superchip",
+              "GPU Rubin"
+            ],
+            "rows": [
+              [
+                "Suy luận FP4 (thưa)",
+                "3,600 PFLOPS",
+                "100 PFLOPS",
+                "50 PFLOPS"
+              ],
+              [
+                "Huấn luyện FP4 (dày đặc)",
+                "2,520 PFLOPS",
+                "70 PFLOPS",
+                "35 PFLOPS"
+              ],
+              [
+                "Huấn luyện FP8/FP6 (dày đặc)",
+                "1,260 PFLOPS",
+                "35 PFLOPS",
+                "17.5 PFLOPS"
+              ],
+              [
+                "FP16/BF16 (dày đặc)",
+                "288 PFLOPS",
+                "8 PFLOPS",
+                "4 PFLOPS"
+              ],
+              [
+                "FP64",
+                "2,400 TFLOPS",
+                "67 TFLOPS",
+                "33 TFLOPS"
+              ],
+              [
+                "Bộ nhớ HBM4",
+                "20.7 TB",
+                "576 GB",
+                "288 GB"
+              ],
+              [
+                "Băng thông HBM4",
+                "1,400 TB/s",
+                "38.5 TB/s",
+                "19.2 TB/s"
+              ],
+              [
+                "Băng thông NVLink 6",
+                "216 TB/s",
+                "6 TB/s",
+                "3 TB/s"
+              ]
+            ]
+          },
+          "id": {
+            "title": "Vera Rubin NVL72 menurut skala",
+            "columns": [
+              "Spesifikasi",
+              "Rak",
+              "Superchip",
+              "GPU Rubin"
+            ],
+            "rows": [
+              [
+                "Inferensi FP4 (sparse)",
+                "3,600 PFLOPS",
+                "100 PFLOPS",
+                "50 PFLOPS"
+              ],
+              [
+                "Pelatihan FP4 (dense)",
+                "2,520 PFLOPS",
+                "70 PFLOPS",
+                "35 PFLOPS"
+              ],
+              [
+                "Pelatihan FP8/FP6 (dense)",
+                "1,260 PFLOPS",
+                "35 PFLOPS",
+                "17.5 PFLOPS"
+              ],
+              [
+                "FP16/BF16 (dense)",
+                "288 PFLOPS",
+                "8 PFLOPS",
+                "4 PFLOPS"
+              ],
+              [
+                "FP64",
+                "2,400 TFLOPS",
+                "67 TFLOPS",
+                "33 TFLOPS"
+              ],
+              [
+                "Memori HBM4",
+                "20.7 TB",
+                "576 GB",
+                "288 GB"
+              ],
+              [
+                "Bandwidth HBM4",
+                "1,400 TB/s",
+                "38.5 TB/s",
+                "19.2 TB/s"
+              ],
+              [
+                "Bandwidth NVLink 6",
+                "216 TB/s",
+                "6 TB/s",
+                "3 TB/s"
+              ]
+            ]
+          },
+          "ms": {
+            "title": "Vera Rubin NVL72 mengikut skala",
+            "columns": [
+              "Spesifikasi",
+              "Rak",
+              "Superchip",
+              "GPU Rubin"
+            ],
+            "rows": [
+              [
+                "Inferens FP4 (jarang)",
+                "3,600 PFLOPS",
+                "100 PFLOPS",
+                "50 PFLOPS"
+              ],
+              [
+                "Latihan FP4 (padat)",
+                "2,520 PFLOPS",
+                "70 PFLOPS",
+                "35 PFLOPS"
+              ],
+              [
+                "Latihan FP8/FP6 (padat)",
+                "1,260 PFLOPS",
+                "35 PFLOPS",
+                "17.5 PFLOPS"
+              ],
+              [
+                "FP16/BF16 (padat)",
+                "288 PFLOPS",
+                "8 PFLOPS",
+                "4 PFLOPS"
+              ],
+              [
+                "FP64",
+                "2,400 TFLOPS",
+                "67 TFLOPS",
+                "33 TFLOPS"
+              ],
+              [
+                "Memori HBM4",
+                "20.7 TB",
+                "576 GB",
+                "288 GB"
+              ],
+              [
+                "Lebar jalur HBM4",
+                "1,400 TB/s",
+                "38.5 TB/s",
+                "19.2 TB/s"
+              ],
+              [
+                "Lebar jalur NVLink 6",
+                "216 TB/s",
+                "6 TB/s",
+                "3 TB/s"
+              ]
+            ]
+          }
+        }
       }
     ]
   }

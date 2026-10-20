@@ -252,7 +252,7 @@ async function PinContent({ params, searchParams }: Pick<Props, 'params' | 'sear
 
           {gameInfo ? <PinGameInfo info={gameInfo} t={t} className="mt-4" /> : null}
           {taste ? <PinTaste taste={taste} t={t} locale={t.locale} evidence={pinEvidence(pin)} className="mt-4" /> : null}
-          {perf ? <PinPerf perf={perf} locale={t.locale} className="mt-4" /> : null}
+          {perf ? <PinPerf perf={perf} t={t} locale={t.locale} className="mt-4" /> : null}
           {carPerf ? <PinCarPerf perf={carPerf} t={t} locale={t.locale} evidence={pinEvidence(pin)} className="mt-4" /> : null}
           {gasCarPerf ? <PinGasCarPerf perf={gasCarPerf} t={t} locale={t.locale} evidence={pinEvidence(pin)} className="mt-4" /> : null}
           {dining ? <PinDining dining={dining} t={t} locale={t.locale} evidence={pinEvidence(pin)} className="mt-4" /> : null}

@@ -691,6 +691,10 @@ const en = {
       showAll: 'Show every restaurant with a dining rubric',
       reviews: 'Independent reviews',
     },
+    perf: {
+      heading: "Performance",
+      source: "source",
+    },
     hotel: {
       heading: 'Hotel rubric',
       rooms: 'Rooms',

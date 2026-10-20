@@ -684,6 +684,10 @@ const it: Messages = {
       showAll: 'Mostra tutti i ristoranti con una valutazione',
       reviews: 'Recensioni indipendenti',
     },
+    perf: {
+      heading: "Prestazioni",
+      source: "fonte",
+    },
     hotel: {
       heading: 'Valutazione dell\'hotel',
       rooms: 'Camere',

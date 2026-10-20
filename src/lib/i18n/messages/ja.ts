@@ -686,6 +686,10 @@ const ja: Messages = {
       showAll: 'レストラン評価のある店をすべて表示',
       reviews: '第三者レビュー',
     },
+    perf: {
+      heading: "性能",
+      source: "出典",
+    },
     hotel: {
       heading: 'ホテル評価',
       rooms: '客室',

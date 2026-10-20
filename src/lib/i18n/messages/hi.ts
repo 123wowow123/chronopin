@@ -689,6 +689,10 @@ const hi: Messages = {
       showAll: 'डाइनिंग रूब्रिक वाले सभी रेस्तरां दिखाएँ',
       reviews: 'स्वतंत्र समीक्षाएँ',
     },
+    perf: {
+      heading: "प्रदर्शन",
+      source: "स्रोत",
+    },
     hotel: {
       heading: 'होटल रूब्रिक',
       rooms: 'कमरे',

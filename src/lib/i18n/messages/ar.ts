@@ -760,6 +760,10 @@ const ar: Messages = {
       showAll: 'عرض كل المطاعم التي لها تقييم تجربة الطعام',
       reviews: 'مراجعات مستقلة',
     },
+    perf: {
+      heading: "الأداء",
+      source: "المصدر",
+    },
     hotel: {
       heading: 'تقييم الفندق',
       rooms: 'الغرف',
