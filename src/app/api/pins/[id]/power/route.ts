@@ -21,7 +21,7 @@ export const GET = route(async (_request: NextRequest, ctx: Ctx) => {
   return power ? json(power) : noContent();
 });
 
-// body { megawatts, kind: 'generation' | 'usage', sourceUrl?, note? }: a hand reading, kept over title ones.
+// body { megawatts, kind: 'generation' | 'usage' | 'storage', sourceUrl?, note? }: a hand reading, kept over title ones.
 export const PUT = route(async (request: NextRequest, ctx: Ctx) => {
   const pinId = intParam((await ctx.params).id);
   await authorOrAdmin(request, pinId);
@@ -29,7 +29,7 @@ export const PUT = route(async (request: NextRequest, ctx: Ctx) => {
   const megawatts = Number(body.megawatts);
   if (!(megawatts > 0) || megawatts >= 10_000_000) throw new HttpError(400, 'megawatts must be a positive number (1 GW = 1000).');
   const kind = body.kind as PowerKind;
-  if (!POWER_KINDS.includes(kind)) throw new HttpError(400, "kind must be 'generation' (power it makes) or 'usage' (power it draws).");
+  if (!POWER_KINDS.includes(kind)) throw new HttpError(400, "kind must be 'generation' (power it makes) 'usage' (power it draws) or 'storage' (batteries).");
   const sourceUrl = typeof body.sourceUrl === 'string' && body.sourceUrl.trim() ? body.sourceUrl.trim() : null;
   if (sourceUrl && !/^https?:\/\/\S+$/i.test(sourceUrl)) throw new HttpError(400, 'sourceUrl is not a web address.');
   const note = typeof body.note === 'string' && body.note.trim() ? body.note.trim().slice(0, 500) : null;

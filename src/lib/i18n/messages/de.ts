@@ -1294,6 +1294,7 @@ const de: Messages = {
     statMW: 'MW:',
     statMWGen: 'MW erzeugt:',
     statMWUse: 'MW verbraucht:',
+    statMWStore: 'MW gespeichert:',
     statMedianCost: 'Mediankosten:',
     statMarket: 'Markt:',
     statEpisodes: 'Folgen:',

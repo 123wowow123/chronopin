@@ -1288,6 +1288,7 @@ const ja: Messages = {
     statMW: 'MW：',
     statMWGen: '発電 MW：',
     statMWUse: '消費 MW：',
+    statMWStore: '蓄電 MW：',
     statMedianCost: '費用（中央値）：',
     statMarket: '予測市場：',
     statEpisodes: '話数：',

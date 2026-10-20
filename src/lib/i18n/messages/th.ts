@@ -1284,6 +1284,7 @@ const th: Messages = {
     statMW: 'MW:',
     statMWGen: 'MW ผลิต:',
     statMWUse: 'MW ใช้:',
+    statMWStore: 'MW เก็บ:',
     statMedianCost: 'ต้นทุนมัธยฐาน:',
     statMarket: 'ตลาดทำนาย:',
     statEpisodes: 'ตอน:',

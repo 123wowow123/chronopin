@@ -1,0 +1,2715 @@
+{
+  "batch": 112,
+  "checkedAt": "2026-10-20",
+  "entries": [
+    {
+      "existing": true,
+      "pin": {
+        "id": 15590,
+        "parentId": null,
+        "title": "NorthContinent — Akaren ga Opens in Odori / Red Brick district",
+        "description": "A new Hokkaido hamburger-steak restaurant with branch-specific curry and stew lunches, dip-style dinners and a meat breakfast plate.",
+        "sourceUrl": "https://www.instagram.com/p/DcnB6wvuNzz/",
+        "longFormSummary": "<p>A new Hokkaido hamburger-steak restaurant with branch-specific curry and stew lunches, dip-style dinners and a meat breakfast plate.<cite data-ref=\"http://www.north-continent.co.jp/\"></cite></p><p>Complete operator opening caption embedded in own homepage confirms September 1, 2026 soft opening (lunch/dinner); October 3 is grand opening and breakfast start. Two separate later captions independently confirm first service, not only recruitment estimates.</p>",
+        "address": "North B1F, Urban Net Sapporo Link Tower, 1-4 Kita 1-jo Nishi 5-chome, Chuo-ku, Sapporo",
+        "location": "SRID=4326;POINT(141.3409902 43.0552782)",
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "price": null,
+        "priceCurrency": null,
+        "tip": null,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "Complete operator opening caption embedded in own homepage confirms September 1, 2026 soft opening (lunch/dinner); October 3 is grand opening and breakfast start. Two separate later captions independently confirm first service, not only recruitment estimates.",
+        "utcStartDateTime": "2026-09-01T00:00:00.000Z",
+        "utcEndDateTime": null,
+        "allDay": true,
+        "userId": 372,
+        "utcCreatedDateTime": "2026-10-15T00:12:32.834Z",
+        "utcUpdatedDateTime": null,
+        "utcDeletedDateTime": null,
+        "companyId": null,
+        "sourceStartDateTime": null,
+        "sourceEndDateTime": null,
+        "originalStartDate": null,
+        "delayReasoning": null,
+        "episodeCount": null,
+        "episodeStatus": null,
+        "marketVolume": null,
+        "marketVolumeAt": null,
+        "allDayStated": true,
+        "productName": "NorthContinent — Akaren ga",
+        "userName": "FoodDesk"
+      },
+      "content": {
+        "enabled": true,
+        "profile": {
+          "menu": {
+            "name": "NorthContinent — Akaren ga",
+            "menus": [
+              {
+                "url": "http://www.north-continent.co.jp/",
+                "note": "Complete own-homepage embedded operator captions explicitly identify this branch: tomato curry or Saroma pumpkin stew lunch, 150g rice standard or 300g option; beef/pork/chicken blend in lunch steak. Dinner meat choices and four sauces: Hatcho miso/prune demi-glace, grandmother’s sansho-zuke teriyaki, ume/irizake, assorted cheese. Prices are not published in those captions; seven topping names remain unpublished. Do not borrow other branch prices. October20follow-up: exact branch menu photos now verify dinner set prices; see separate transcribed menus below. Lunch prices and unnamed topping list remain unpublished in checked operator captions.",
+                "items": [
+                  {
+                    "name": "赤れんがバーグカレー",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "赤れんがバーグシチュー",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "ディップスタイルハンバーグ",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "チョイ飲みセット",
+                    "price": 2310,
+                    "note": "Tax included. Exact branch printed menu: meat plate plus one eligible drink. See two-drink option and six verified choices below. Ordinary dinner menu; no limited-time discount or public coupon inferred."
+                  },
+                  {
+                    "name": "道産牛ハンバーグ",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "知床サチク麦王豚ハンバーグ",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "蝦夷鹿ハンバーグ",
+                    "priceLabel": "Price not published"
+                  }
+                ],
+                "label": "Akaren ga lunch and dinner dishes",
+                "coverage": "sample",
+                "currency": "JPY"
+              },
+              {
+                "url": "http://www.north-continent.co.jp/",
+                "note": "From October 3, breakfast 07:30–09:30, last order 09:00. Rice option described gluten-free by operator; bread contains gluten. Price not published. Direct Instagram and Tabelog review fetch fail; own gallery feed says API updates delayed. Triangular Burg Newspaper coupon is mentioned for curry/stew, but discount amount, full eligibility and current validity are unpublished, so no Specials claim.",
+                "items": [
+                  {
+                    "name": "Hokkaido meat breakfast plate",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Potato sausage",
+                    "note": "Included in Hokkaido meat breakfast plate; no separate item price published",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Sachiku Mugiou pork ham",
+                    "note": "Included in Hokkaido meat breakfast plate; no separate item price published",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Chicken meatball hamburger",
+                    "note": "Included in Hokkaido meat breakfast plate; no separate item price published",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Sautéed mushrooms",
+                    "note": "Included in Hokkaido meat breakfast plate; no separate item price published",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Beans in tomato sauce",
+                    "note": "Included in Hokkaido meat breakfast plate; no separate item price published",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Choice of boiled, scrambled or fried egg",
+                    "note": "Included in Hokkaido meat breakfast plate; no separate item price published",
+                    "priceLabel": "Price not published"
+                  }
+                ],
+                "label": "Akaren ga breakfast plate",
+                "coverage": "sample",
+                "currency": "JPY"
+              },
+              {
+                "label": "Akaren ga — priced standard dinner variants",
+                "url": "https://tabelog.com/en/hokkaido/A0101/A010102/1085902/dtlmenu/photo/",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "道産牛 — 八丁味噌とプルーンのデミグラス",
+                    "price": 1914,
+                    "note": "Exact Akaren ga printed menu, contributor photographs posted October14,2026; manually read inclusive prices in parentheses. Historical observation; confirm current stock/prices. No sibling branch prices used. Dinner set includes grilled vegetables, salad, rice, pickles and Hokkaido fried potatoes. The cheese page crosses out Tokachi Wakaushi; unavailable option excluded. Bread substitution ¥150before tax appears on cheese page only, not generalized."
+                  },
+                  {
+                    "name": "知床サチク麦王豚 — 八丁味噌とプルーンのデミグラス",
+                    "price": 1936,
+                    "note": "Exact Akaren ga printed menu, contributor photographs posted October14,2026; manually read inclusive prices in parentheses. Historical observation; confirm current stock/prices. No sibling branch prices used. Dinner set includes grilled vegetables, salad, rice, pickles and Hokkaido fried potatoes. The cheese page crosses out Tokachi Wakaushi; unavailable option excluded. Bread substitution ¥150before tax appears on cheese page only, not generalized."
+                  },
+                  {
+                    "name": "蝦夷鹿 — 八丁味噌とプルーンのデミグラス",
+                    "price": 2090,
+                    "note": "Exact Akaren ga printed menu, contributor photographs posted October14,2026; manually read inclusive prices in parentheses. Historical observation; confirm current stock/prices. No sibling branch prices used. Dinner set includes grilled vegetables, salad, rice, pickles and Hokkaido fried potatoes. The cheese page crosses out Tokachi Wakaushi; unavailable option excluded. Bread substitution ¥150before tax appears on cheese page only, not generalized."
+                  },
+                  {
+                    "name": "道産牛 — うちの婆ちゃんの三升漬けを使った照り焼きソース",
+                    "price": 1914,
+                    "note": "Exact Akaren ga printed menu, contributor photographs posted October14,2026; manually read inclusive prices in parentheses. Historical observation; confirm current stock/prices. No sibling branch prices used. Dinner set includes grilled vegetables, salad, rice, pickles and Hokkaido fried potatoes. The cheese page crosses out Tokachi Wakaushi; unavailable option excluded. Bread substitution ¥150before tax appears on cheese page only, not generalized."
+                  },
+                  {
+                    "name": "知床サチク麦王豚 — うちの婆ちゃんの三升漬けを使った照り焼きソース",
+                    "price": 1936,
+                    "note": "Exact Akaren ga printed menu, contributor photographs posted October14,2026; manually read inclusive prices in parentheses. Historical observation; confirm current stock/prices. No sibling branch prices used. Dinner set includes grilled vegetables, salad, rice, pickles and Hokkaido fried potatoes. The cheese page crosses out Tokachi Wakaushi; unavailable option excluded. Bread substitution ¥150before tax appears on cheese page only, not generalized."
+                  },
+                  {
+                    "name": "蝦夷鹿 — うちの婆ちゃんの三升漬けを使った照り焼きソース",
+                    "price": 2090,
+                    "note": "Exact Akaren ga printed menu, contributor photographs posted October14,2026; manually read inclusive prices in parentheses. Historical observation; confirm current stock/prices. No sibling branch prices used. Dinner set includes grilled vegetables, salad, rice, pickles and Hokkaido fried potatoes. The cheese page crosses out Tokachi Wakaushi; unavailable option excluded. Bread substitution ¥150before tax appears on cheese page only, not generalized."
+                  },
+                  {
+                    "name": "道産牛 — 梅の「煎り酒」和風ソース",
+                    "price": 1914,
+                    "note": "Exact Akaren ga printed menu, contributor photographs posted October14,2026; manually read inclusive prices in parentheses. Historical observation; confirm current stock/prices. No sibling branch prices used. Dinner set includes grilled vegetables, salad, rice, pickles and Hokkaido fried potatoes. The cheese page crosses out Tokachi Wakaushi; unavailable option excluded. Bread substitution ¥150before tax appears on cheese page only, not generalized."
+                  },
+                  {
+                    "name": "知床サチク麦王豚 — 梅の「煎り酒」和風ソース",
+                    "price": 1936,
+                    "note": "Exact Akaren ga printed menu, contributor photographs posted October14,2026; manually read inclusive prices in parentheses. Historical observation; confirm current stock/prices. No sibling branch prices used. Dinner set includes grilled vegetables, salad, rice, pickles and Hokkaido fried potatoes. The cheese page crosses out Tokachi Wakaushi; unavailable option excluded. Bread substitution ¥150before tax appears on cheese page only, not generalized."
+                  },
+                  {
+                    "name": "蝦夷鹿 — 梅の「煎り酒」和風ソース",
+                    "price": 2090,
+                    "note": "Exact Akaren ga printed menu, contributor photographs posted October14,2026; manually read inclusive prices in parentheses. Historical observation; confirm current stock/prices. No sibling branch prices used. Dinner set includes grilled vegetables, salad, rice, pickles and Hokkaido fried potatoes. The cheese page crosses out Tokachi Wakaushi; unavailable option excluded. Bread substitution ¥150before tax appears on cheese page only, not generalized."
+                  },
+                  {
+                    "name": "道産牛 — 色々チーズの「濃厚」ハンバーグ",
+                    "price": 1969,
+                    "note": "Exact Akaren ga printed menu, contributor photographs posted October14,2026; manually read inclusive prices in parentheses. Historical observation; confirm current stock/prices. No sibling branch prices used. Dinner set includes grilled vegetables, salad, rice, pickles and Hokkaido fried potatoes. The cheese page crosses out Tokachi Wakaushi; unavailable option excluded. Bread substitution ¥150before tax appears on cheese page only, not generalized."
+                  },
+                  {
+                    "name": "知床サチク麦王豚 — 色々チーズの「濃厚」ハンバーグ",
+                    "price": 1991,
+                    "note": "Exact Akaren ga printed menu, contributor photographs posted October14,2026; manually read inclusive prices in parentheses. Historical observation; confirm current stock/prices. No sibling branch prices used. Dinner set includes grilled vegetables, salad, rice, pickles and Hokkaido fried potatoes. The cheese page crosses out Tokachi Wakaushi; unavailable option excluded. Bread substitution ¥150before tax appears on cheese page only, not generalized."
+                  },
+                  {
+                    "name": "蝦夷鹿 — 色々チーズの「濃厚」ハンバーグ",
+                    "price": 2134,
+                    "note": "Exact Akaren ga printed menu, contributor photographs posted October14,2026; manually read inclusive prices in parentheses. Historical observation; confirm current stock/prices. No sibling branch prices used. Dinner set includes grilled vegetables, salad, rice, pickles and Hokkaido fried potatoes. The cheese page crosses out Tokachi Wakaushi; unavailable option excluded. Bread substitution ¥150before tax appears on cheese page only, not generalized."
+                  }
+                ],
+                "note": "Exact Akaren ga printed menu, contributor photographs posted October14,2026; manually read inclusive prices in parentheses. Historical observation; confirm current stock/prices. No sibling branch prices used. Four sauces × three published meats. No price assigned to crossed-out beef option."
+              },
+              {
+                "label": "Akaren ga — priced dip-style dinner variants",
+                "url": "https://tabelog.com/en/hokkaido/A0101/A010102/1085902/dtlmenu/photo/",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "道産牛 — フレッシュな香味のラヴィゴットソース ディップスタイル",
+                    "price": 2365,
+                    "note": "Exact Akaren ga printed menu, contributor photographs posted October14,2026; manually read inclusive prices in parentheses. Historical observation; confirm current stock/prices. No sibling branch prices used. Dinner dip set includes grilled vegetables, salad, rice, pickles and Hokkaido fried potatoes. Operator describes three dip styles and three meats for this exact branch; do not infer unspecified toppings."
+                  },
+                  {
+                    "name": "知床サチク麦王豚 — フレッシュな香味のラヴィゴットソース ディップスタイル",
+                    "price": 2684,
+                    "note": "Exact Akaren ga printed menu, contributor photographs posted October14,2026; manually read inclusive prices in parentheses. Historical observation; confirm current stock/prices. No sibling branch prices used. Dinner dip set includes grilled vegetables, salad, rice, pickles and Hokkaido fried potatoes. Operator describes three dip styles and three meats for this exact branch; do not infer unspecified toppings."
+                  },
+                  {
+                    "name": "蝦夷鹿 — フレッシュな香味のラヴィゴットソース ディップスタイル",
+                    "price": 2816,
+                    "note": "Exact Akaren ga printed menu, contributor photographs posted October14,2026; manually read inclusive prices in parentheses. Historical observation; confirm current stock/prices. No sibling branch prices used. Dinner dip set includes grilled vegetables, salad, rice, pickles and Hokkaido fried potatoes. Operator describes three dip styles and three meats for this exact branch; do not infer unspecified toppings."
+                  },
+                  {
+                    "name": "道産牛 — 小豆とじゃが芋のマッシュ スコルダリア ディップスタイル",
+                    "price": 2365,
+                    "note": "Exact Akaren ga printed menu, contributor photographs posted October14,2026; manually read inclusive prices in parentheses. Historical observation; confirm current stock/prices. No sibling branch prices used. Dinner dip set includes grilled vegetables, salad, rice, pickles and Hokkaido fried potatoes. Operator describes three dip styles and three meats for this exact branch; do not infer unspecified toppings."
+                  },
+                  {
+                    "name": "知床サチク麦王豚 — 小豆とじゃが芋のマッシュ スコルダリア ディップスタイル",
+                    "price": 2684,
+                    "note": "Exact Akaren ga printed menu, contributor photographs posted October14,2026; manually read inclusive prices in parentheses. Historical observation; confirm current stock/prices. No sibling branch prices used. Dinner dip set includes grilled vegetables, salad, rice, pickles and Hokkaido fried potatoes. Operator describes three dip styles and three meats for this exact branch; do not infer unspecified toppings."
+                  },
+                  {
+                    "name": "蝦夷鹿 — 小豆とじゃが芋のマッシュ スコルダリア ディップスタイル",
+                    "price": 2816,
+                    "note": "Exact Akaren ga printed menu, contributor photographs posted October14,2026; manually read inclusive prices in parentheses. Historical observation; confirm current stock/prices. No sibling branch prices used. Dinner dip set includes grilled vegetables, salad, rice, pickles and Hokkaido fried potatoes. Operator describes three dip styles and three meats for this exact branch; do not infer unspecified toppings."
+                  },
+                  {
+                    "name": "道産牛 — 新鮮野菜と自家製ピクルスのタルタル ディップスタイル",
+                    "price": 2420,
+                    "note": "Exact Akaren ga printed menu, contributor photographs posted October14,2026; manually read inclusive prices in parentheses. Historical observation; confirm current stock/prices. No sibling branch prices used. Dinner dip set includes grilled vegetables, salad, rice, pickles and Hokkaido fried potatoes. Operator describes three dip styles and three meats for this exact branch; do not infer unspecified toppings."
+                  },
+                  {
+                    "name": "知床サチク麦王豚 — 新鮮野菜と自家製ピクルスのタルタル ディップスタイル",
+                    "price": 2739,
+                    "note": "Exact Akaren ga printed menu, contributor photographs posted October14,2026; manually read inclusive prices in parentheses. Historical observation; confirm current stock/prices. No sibling branch prices used. Dinner dip set includes grilled vegetables, salad, rice, pickles and Hokkaido fried potatoes. Operator describes three dip styles and three meats for this exact branch; do not infer unspecified toppings."
+                  },
+                  {
+                    "name": "蝦夷鹿 — 新鮮野菜と自家製ピクルスのタルタル ディップスタイル",
+                    "price": 2871,
+                    "note": "Exact Akaren ga printed menu, contributor photographs posted October14,2026; manually read inclusive prices in parentheses. Historical observation; confirm current stock/prices. No sibling branch prices used. Dinner dip set includes grilled vegetables, salad, rice, pickles and Hokkaido fried potatoes. Operator describes three dip styles and three meats for this exact branch; do not infer unspecified toppings."
+                  }
+                ],
+                "note": "Exact Akaren ga printed menu, contributor photographs posted October14,2026; manually read inclusive prices in parentheses. Historical observation; confirm current stock/prices. No sibling branch prices used. Three dip sauces × three published meats."
+              },
+              {
+                "label": "Akaren ga — ordinary two-drink dinner set",
+                "url": "https://tabelog.com/en/hokkaido/A0101/A010102/1085902/dtlmenu/photo/",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "チョイチョイ飲みハンバーグセット",
+                    "price": 2640,
+                    "note": "Exact Akaren ga printed menu, contributor photographs posted October14,2026; manually read inclusive prices in parentheses. Historical observation; confirm current stock/prices. No sibling branch prices used. Meat plate with two eligible drinks; single-drink set is¥2310inclusive. Operator names chicken hamburger, bacon, pork ham and potato sausage as plate components. Ordinary menu, no limited-time offer inferred."
+                  }
+                ],
+                "note": "Exact Akaren ga printed menu, contributor photographs posted October14,2026; manually read inclusive prices in parentheses. Historical observation; confirm current stock/prices. No sibling branch prices used."
+              },
+              {
+                "label": "Akaren ga — eligible Choi-Nomi drink choices",
+                "url": "http://www.north-continent.co.jp/",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "生ビール",
+                    "priceLabel": "Price not published",
+                    "note": "Included choice for one-drink¥2310or two-drink¥2640ordinary meat-plate sets, not separately priced here. Verified exact operator dinner caption and photographed menu; no guessed brand/pour size."
+                  },
+                  {
+                    "name": "グラスワイン 赤",
+                    "priceLabel": "Price not published",
+                    "note": "Included choice for one-drink¥2310or two-drink¥2640ordinary meat-plate sets, not separately priced here. Verified exact operator dinner caption and photographed menu; no guessed brand/pour size."
+                  },
+                  {
+                    "name": "グラスワイン 白",
+                    "priceLabel": "Price not published",
+                    "note": "Included choice for one-drink¥2310or two-drink¥2640ordinary meat-plate sets, not separately priced here. Verified exact operator dinner caption and photographed menu; no guessed brand/pour size."
+                  },
+                  {
+                    "name": "GINベース レモンサワー",
+                    "priceLabel": "Price not published",
+                    "note": "Included choice for one-drink¥2310or two-drink¥2640ordinary meat-plate sets, not separately priced here. Verified exact operator dinner caption and photographed menu; no guessed brand/pour size."
+                  },
+                  {
+                    "name": "GINベース レモネードサワー",
+                    "priceLabel": "Price not published",
+                    "note": "Included choice for one-drink¥2310or two-drink¥2640ordinary meat-plate sets, not separately priced here. Verified exact operator dinner caption and photographed menu; no guessed brand/pour size."
+                  },
+                  {
+                    "name": "ニッカ ハイボール",
+                    "priceLabel": "Price not published",
+                    "note": "Included choice for one-drink¥2310or two-drink¥2640ordinary meat-plate sets, not separately priced here. Verified exact operator dinner caption and photographed menu; no guessed brand/pour size."
+                  }
+                ],
+                "note": "Operator names six choices; standalone prices not published."
+              },
+              {
+                "label": "Akaren ga — published optional customizations",
+                "url": "http://www.north-continent.co.jp/",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "ダブルハンバーグ",
+                    "priceLabel": "Price not published",
+                    "note": "Exact operator caption allows double hamburger; surcharge unpublished."
+                  },
+                  {
+                    "name": "ごはん 2レンガ（300g）",
+                    "priceLabel": "Price not published",
+                    "note": "Operator lunch caption gives150gstandard or300goption; incremental price unpublished."
+                  }
+                ],
+                "note": "No invented prices for double steak, rice changes or seven unnamed toppings."
+              }
+            ],
+            "specials": [],
+            "checkedAt": "2026-10-20",
+            "pinSourceUrl": "https://www.instagram.com/p/DcnB6wvuNzz/"
+          },
+          "tile": {
+            "day": "2026-09-01",
+            "kind": "opening",
+            "name": "NorthContinent — Akaren ga",
+            "slug": "sapporo20-north",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-20/batch112-north-0-9f8389288daaba1c.webp",
+            "address": "North B1F, Urban Net Sapporo Link Tower, 1-4 Kita 1-jo Nishi 5-chome, Chuo-ku, Sapporo",
+            "cuisine": "Hokkaido Hamburger Steak",
+            "checkedAt": "2026-10-20",
+            "imageNote": "Counter seating and red-brick interior at the Akaren ga branch.",
+            "priceRange": "",
+            "regionSlug": "sapporo",
+            "websiteUrl": "http://www.north-continent.co.jp/",
+            "description": "A new Hokkaido hamburger-steak restaurant with branch-specific curry and stew lunches, dip-style dinners and a meat breakfast plate.",
+            "imageCredit": "グルメハンター・酔いどれ天使 / Tabelog",
+            "recognition": "",
+            "neighborhood": "Odori / Red Brick district",
+            "imageSourceUrl": "https://tabelog.com/en/hokkaido/A0101/A010102/1085902/dtlphotolst/3/smp2/",
+            "openingConfirmed": true
+          },
+          "details": {
+            "name": "NorthContinent — Akaren ga",
+            "phone": "011-596-8820",
+            "checkedAt": "2026-10-20",
+            "websiteUrl": "http://www.north-continent.co.jp/",
+            "openingHours": [
+              {
+                "days": "Breakfast",
+                "hours": "07:30–09:30; last order 09:00"
+              },
+              {
+                "days": "Lunch",
+                "hours": "11:30–15:00; last order 14:30"
+              },
+              {
+                "days": "Dinner",
+                "hours": "17:30–22:00; last order21:00 (exact branch photographed dinner board)"
+              },
+              {
+                "days": "Closures",
+                "hours": "Landlord lists none; confirm any temporary closures"
+              }
+            ],
+            "pinSourceUrl": "https://www.instagram.com/p/DcnB6wvuNzz/",
+            "detailsSourceUrl": "http://www.north-continent.co.jp/",
+            "additionalSources": [
+              {
+                "url": "https://www.nttud.co.jp/sapporo_linktower/shop/",
+                "label": "Research evidence"
+              },
+              {
+                "url": "https://sapporolinktower-open.com",
+                "label": "Research evidence"
+              },
+              {
+                "url": "http://www.north-continent.co.jp/news/588/",
+                "label": "Research evidence"
+              },
+              {
+                "url": "https://www.instagram.com/p/DdBNLNcGWf9/",
+                "label": "Research evidence"
+              },
+              {
+                "url": "https://www.instagram.com/p/DcQUx7lEY97/",
+                "label": "Research evidence"
+              },
+              {
+                "url": "https://www.instagram.com/p/Db7sSlER4rm/",
+                "label": "Research evidence"
+              },
+              {
+                "label": "Exact branch printed menu photos, postedOctober14",
+                "url": "https://tabelog.com/en/hokkaido/A0101/A010102/1085902/dtlmenu/photo/"
+              },
+              {
+                "label": "Exact branch listing and September1opening corroboration",
+                "url": "https://tabelog.com/en/hokkaido/A0101/A010102/1085902/"
+              },
+              {
+                "label": "Exact branch interior photo credits",
+                "url": "https://tabelog.com/en/hokkaido/A0101/A010102/1085902/dtlphotolst/3/smp2/"
+              }
+            ],
+            "hoursNote": "September1,2026was the public soft opening for lunch/dinner. October3grand opening added breakfast; Pin retains actual first-service date. Exact branch menu photos establish dinner last order21:00. Breakfast07:30–09:30LO09:00; lunch11:30–15:00LO14:30. Existing landlord-sourced phone retained. No published coupon amount/current expiry or named topping list established; confirm before using a Burg Newspaper ticket. No sister-branch closure/calendar applied."
+          },
+          "pinSourceUrl": "https://www.instagram.com/p/DcnB6wvuNzz/"
+        }
+      },
+      "expectedBefore": {
+        "content": {
+          "menu": {
+            "name": "NorthContinent — Akaren ga",
+            "menus": [
+              {
+                "url": "http://www.north-continent.co.jp/",
+                "note": "Complete own-homepage embedded operator captions explicitly identify this branch: tomato curry or Saroma pumpkin stew lunch, 150g rice standard or 300g option; beef/pork/chicken blend in lunch steak. Dinner meat choices and four sauces: Hatcho miso/prune demi-glace, grandmother’s sansho-zuke teriyaki, ume/irizake, assorted cheese. Prices are not published in those captions; seven topping names remain unpublished. Do not borrow other branch prices.",
+                "items": [
+                  {
+                    "name": "赤れんがバーグカレー",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "赤れんがバーグシチュー",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "ディップスタイルハンバーグ",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "チョイ飲みセット",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "道産牛ハンバーグ",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "知床サチク麦王豚ハンバーグ",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "蝦夷鹿ハンバーグ",
+                    "priceLabel": "Price not published"
+                  }
+                ],
+                "label": "Akaren ga lunch and dinner dishes",
+                "coverage": "sample",
+                "currency": "JPY"
+              },
+              {
+                "url": "http://www.north-continent.co.jp/",
+                "note": "From October 3, breakfast 07:30–09:30, last order 09:00. Rice option described gluten-free by operator; bread contains gluten. Price not published. Direct Instagram and Tabelog review fetch fail; own gallery feed says API updates delayed. Triangular Burg Newspaper coupon is mentioned for curry/stew, but discount amount, full eligibility and current validity are unpublished, so no Specials claim.",
+                "items": [
+                  {
+                    "name": "Hokkaido meat breakfast plate",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Potato sausage",
+                    "note": "Included in Hokkaido meat breakfast plate; no separate item price published",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Sachiku Mugiou pork ham",
+                    "note": "Included in Hokkaido meat breakfast plate; no separate item price published",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Chicken meatball hamburger",
+                    "note": "Included in Hokkaido meat breakfast plate; no separate item price published",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Sautéed mushrooms",
+                    "note": "Included in Hokkaido meat breakfast plate; no separate item price published",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Beans in tomato sauce",
+                    "note": "Included in Hokkaido meat breakfast plate; no separate item price published",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Choice of boiled, scrambled or fried egg",
+                    "note": "Included in Hokkaido meat breakfast plate; no separate item price published",
+                    "priceLabel": "Price not published"
+                  }
+                ],
+                "label": "Akaren ga breakfast plate",
+                "coverage": "sample",
+                "currency": "JPY"
+              }
+            ],
+            "specials": [],
+            "checkedAt": "2026-10-14",
+            "pinSourceUrl": "https://www.instagram.com/p/DcnB6wvuNzz/"
+          },
+          "tile": {
+            "day": "2026-09-01",
+            "kind": "opening",
+            "name": "NorthContinent — Akaren ga",
+            "slug": "sapporo20-north",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/sapporo/japan-30-2026-10-13/sapporo20-north-6-5012096132e5983d.webp",
+            "address": "North B1F, Urban Net Sapporo Link Tower, 1-4 Kita 1-jo Nishi 5-chome, Chuo-ku, Sapporo",
+            "cuisine": "Hokkaido Hamburger Steak",
+            "checkedAt": "2026-10-14",
+            "imageNote": "Operator food illustration supplied for this Link Tower tenant; not a photograph of the branch interior.",
+            "priceRange": "",
+            "regionSlug": "sapporo",
+            "websiteUrl": "http://www.north-continent.co.jp/",
+            "description": "A new Hokkaido hamburger-steak restaurant with branch-specific curry and stew lunches, dip-style dinners and a meat breakfast plate.",
+            "imageCredit": "NTT Urban Development / official tenant gallery",
+            "recognition": "",
+            "neighborhood": "Odori / Red Brick district",
+            "imageSourceUrl": "https://www.nttud.co.jp/sapporo_linktower/shop/",
+            "openingConfirmed": true
+          },
+          "details": {
+            "name": "NorthContinent — Akaren ga",
+            "phone": "011-596-8820",
+            "checkedAt": "2026-10-14",
+            "websiteUrl": "http://www.north-continent.co.jp/",
+            "openingHours": [
+              {
+                "days": "Breakfast",
+                "hours": "07:30–09:30; last order 09:00"
+              },
+              {
+                "days": "Lunch",
+                "hours": "11:30–15:00; last order 14:30"
+              },
+              {
+                "days": "Dinner",
+                "hours": "17:30–22:00; last order not published for this branch"
+              },
+              {
+                "days": "Closures",
+                "hours": "Landlord lists none; confirm any temporary closures"
+              }
+            ],
+            "pinSourceUrl": "https://www.instagram.com/p/DcnB6wvuNzz/",
+            "detailsSourceUrl": "http://www.north-continent.co.jp/",
+            "additionalSources": [
+              {
+                "url": "https://www.nttud.co.jp/sapporo_linktower/shop/",
+                "label": "Research evidence"
+              },
+              {
+                "url": "https://sapporolinktower-open.com",
+                "label": "Research evidence"
+              },
+              {
+                "url": "http://www.north-continent.co.jp/news/588/",
+                "label": "Research evidence"
+              },
+              {
+                "url": "https://www.instagram.com/p/DdBNLNcGWf9/",
+                "label": "Research evidence"
+              },
+              {
+                "url": "https://www.instagram.com/p/DcQUx7lEY97/",
+                "label": "Research evidence"
+              },
+              {
+                "url": "https://www.instagram.com/p/Db7sSlER4rm/",
+                "label": "Research evidence"
+              }
+            ]
+          },
+          "pinSourceUrl": "https://www.instagram.com/p/DcnB6wvuNzz/"
+        }
+      },
+      "photos": [
+        {
+          "originalUrl": "https://tblg.k-img.com/restaurant/images/Rvw/385560/640x640_rect_6f59697e0529219850a131384899b1e4.jpg",
+          "sourcePage": "https://tabelog.com/en/hokkaido/A0101/A010102/1085902/dtlphotolst/3/smp2/",
+          "credit": "グルメハンター・酔いどれ天使 / Tabelog",
+          "note": "Counter seating and red-brick interior at the Akaren ga branch.",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-20/batch112-north-0-9f8389288daaba1c.webp",
+          "sha256": "9f8389288daaba1c729568b918eae267eb70a3a3742ef77b6bc3319f6c7e30e5",
+          "width": 480,
+          "height": 640
+        },
+        {
+          "originalUrl": "https://tblg.k-img.com/restaurant/images/Rvw/385560/640x640_rect_315bd5c38c7b061950f9d4dee52ac4c7.jpg",
+          "sourcePage": "https://tabelog.com/en/hokkaido/A0101/A010102/1085902/dtlphotolst/4/smp2/",
+          "credit": "グルメハンター・酔いどれ天使 / Tabelog",
+          "note": "Illuminated North Continent Akaren ga branch sign.",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-20/batch112-north-1-156c65267fbef66c.webp",
+          "sha256": "156c65267fbef66c73d6f7272fc2cc6eee17ae058b61737081b31642efdb1c27",
+          "width": 480,
+          "height": 640
+        },
+        {
+          "originalUrl": "https://tblg.k-img.com/restaurant/images/Rvw/385587/640x640_rect_35bb856b4de754903349175be22b761d.jpg",
+          "sourcePage": "https://tabelog.com/en/hokkaido/A0101/A010102/1085902/dtlphotolst/",
+          "credit": "Tabelog exact-branch contributor (individual name not exposed in fetched photo page)",
+          "note": "Exact-branch diner photograph of a meat-plate presentation; ingredients are described only where separately verified in operator menu evidence.",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-20/batch112-north-2-06acc4bdff1226eb.webp",
+          "sha256": "06acc4bdff1226ebc7e566a11d6cbcba85da479e5b0d8c04732ab97fe40fb691",
+          "width": 640,
+          "height": 480
+        },
+        {
+          "originalUrl": "https://tblg.k-img.com/restaurant/images/Rvw/387151/640x640_rect_6307dec2258f264bd40b9d307585ed6d.jpg",
+          "sourcePage": "https://tabelog.com/en/hokkaido/A0101/A010102/1085902/dtlmenu/photo/",
+          "credit": "Tabelog exact-branch contributor (individual name not exposed in fetched photo page)",
+          "note": "Exact-branch menu photograph: Choi-Nomi and Choi-Choi-Nomi meat-plate/drink sets with published prices.",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-20/batch112-north-3-bf1a3b6a2f45441e.webp",
+          "sha256": "bf1a3b6a2f45441e7b19c4b622b131d14cd128c9dfc28ac4835d51fd4acac825",
+          "width": 480,
+          "height": 640
+        }
+      ]
+    }
+  ],
+  "counts": {
+    "venues": 1,
+    "newPins": 0,
+    "newOrdinaryMenuItems": 30,
+    "preservedOrdinaryMenuItems": 14,
+    "ordinaryMenuItems": 44,
+    "offers": 0,
+    "offerMenuItems": 0,
+    "photos": 4,
+    "newMemberships": 0,
+    "shortfallReduction": 0
+  },
+  "researchNotes": [
+    "Other-cities-first round: enriched existing Sapporo NorthContinent15590rather than duplicate EnglishspellingNorthContinent/Akaren ga. Originalauthor, actualSeptember1date, sourceURL andPintext preserved; currentAPIprofile readfresh and revisionchecked.",
+    "Exact operator embedded captions resolve September1publicsoftopening andOctober3breakfaststart. TabelogalsoSeptember1; employeegrandopeningOctober3notusedasfirstservice.",
+    "21pricedmeat/saucevariants plusone2-drinksetadded; existingone-drinksetupdated¥2310inclusive. Sixverifiedincludeddrinkchoicesandtwooperatorcustomizations retainedwithoutinventingstandaloneprices. Menu photospostedOctober14; taxinclusiveparentheticalvaluesused; crossed-outTokachiWakaushiexcluded.",
+    "Original14menuentriespreserved, including unpricedbreakfastcomponents andlunch. Existingmenupriceunpublishedcaptionqualifiedafternewpriceevidence. Coupontriangleticket lacksamount/currentexpiry andfullconditions; noSpecialsvenuecreated. OrdinaryChoi-Nomisetnotautomaticallytreatedaspromotion.",
+    "Operator gallery checked. OperatorHTTPS failedcertificatevalidation; publicHTTPsitefetchedwithoutdisablingTLSvalidation. Full embeddedInstagramcaptions readable there; directInstagramwebreaderthrottledandall5CDNimagecurlrequests403. No operatorplaceholderimageused. ExactTabelogEnglishgallery/menuimagesdownloadedplaincurl andvisuallychecked.",
+    "FourcreditedAzurephotosadded: exactbranchcounter,sign,meatplateandprintedmenu. Prioroperatorillustration/mediaretained; tileupgradedtoactualinterior. Interior/signphotographerverifiedinpageattribution; othergallerypagesdidnotexposeindividualnames andcreditthatlimitation.",
+    "LACHIC publicmobilemenuconfigurationexistsbutcustomerbranchselectoromitsit. ConfigurationActive/Holidaydoesnotestablishopenservice orpricedmenu; nopublishedmenuclaim.",
+    "Ore noSora latestOctober22releaseconfirmed; brandpageexplicitlylabelsitsmenuChibaMakuhari. Do notborrowthatmenu/anotherbranchphotos forSapporo.",
+    "CHAENMotoyama primaryreleaseandcrowdfundingchecked; timelinevarieslateOctoberopeningversusNovemberearlygrandopening. Exactaddress/customerhoursandactualretailmenu/pricesunresolved; crowdfundingpledgesarenotregularmenuprices.",
+    "DoutorSapporostationnorthnewaddressJ1buildingisdistinctfromformerJRstationbranchclosed2020. LocalreportusesoldCafe deCriephotoandgenericillustration; currentlinkedemployerjobanonymizesbrandandexactaddress. Month-onlyNovemberleadretainedwithoutinventedexactdayorchainmenuapplication.",
+    "MorningPark17621alreadyexists; no duplicate. KyotoRipassoopeningconflictandWanonplaceholdergalleryremainheld. NoOsaka/Fukuokacontentwrites."
+  ],
+  "held": [
+    {
+      "name": "LACHIC exact branch menu",
+      "sourceUrl": "https://foodmenu.cb.monoedge.ai/v1/cb/",
+      "reason": "Not selectable in customer-facing branch picker; backend configuration not verified customer menu."
+    },
+    {
+      "name": "Ore no Sora Sapporo",
+      "sourceUrl": "https://misoya.net/news/open-orenosoras-sapporo/",
+      "reason": "Own menu/gallery unresolved; brand menu explicitlyChibaMakuhari."
+    },
+    {
+      "name": "CHAEN Motoyama",
+      "sourceUrl": "https://camp-fire.jp/projects/965253/view",
+      "reason": "Opening chronology, precise address/customerhours and regularmenu/prices unresolved; campaignpledgesnotmenu."
+    },
+    {
+      "name": "Doutor Sapporo station north",
+      "sourceUrl": "https://sapporokitaku.goguynet.jp/2026/10/16/crie/",
+      "reason": "Month-onlylead; linkedemploymentpagecurrentlyanonymous; reportphotoformerCafe deCrie/generic. Ownmenu/galleryapplicationnotverified."
+    }
+  ],
+  "photoReview": {
+    "downloadedCandidates": 29,
+    "selectedPhotos": 4,
+    "method": "Five operatorCDNimagesfailedplaincurl;24Tabelogmenu/gallery/roomphotosdownloaded, contact sheet reviewed; selected exactbranch room/sign,meatplate,pricepage. No sibling or placeholder image. FourAzureuploads publiclyhash/decodeverified."
+  },
+  "verification": {
+    "local": {
+      "profiles": [
+        {
+          "pinId": 15590,
+          "sourceUrl": "https://www.instagram.com/p/DcnB6wvuNzz/",
+          "name": "NorthContinent — Akaren ga",
+          "contentId": 1557,
+          "contentRevision": 2,
+          "verifiedGalleryLinks": 4,
+          "publicPinStatus": 200,
+          "apiBase": "http://localhost:3000",
+          "publicBase": "http://localhost:3000"
+        }
+      ],
+      "guides": [
+        {
+          "pinId": 15590,
+          "region": "sapporo",
+          "view": "new",
+          "neighborhood": "Odori / Red Brick district",
+          "nativeTitleAndImage": true,
+          "hrefs": [
+            "/pin/15590/northcontinent-akaren-ga-opens-in-odori-red-brick-district"
+          ],
+          "browserFiltered": false,
+          "publicBase": "http://localhost:3000",
+          "guideStatus": 200,
+          "offers": []
+        }
+      ]
+    },
+    "production": {
+      "profiles": [
+        {
+          "pinId": 15590,
+          "sourceUrl": "https://www.instagram.com/p/DcnB6wvuNzz/",
+          "name": "NorthContinent — Akaren ga",
+          "contentId": 1557,
+          "contentRevision": 2,
+          "verifiedGalleryLinks": 4,
+          "publicPinStatus": 200,
+          "apiBase": "https://www.chronopin.com",
+          "publicBase": "https://www.chronopin.com"
+        }
+      ],
+      "guides": [
+        {
+          "pinId": 15590,
+          "region": "sapporo",
+          "view": "new",
+          "neighborhood": "Odori / Red Brick district",
+          "nativeTitleAndImage": true,
+          "hrefs": [
+            "/pin/15590/northcontinent-akaren-ga-opens-in-odori-red-brick-district"
+          ],
+          "browserFiltered": false,
+          "publicBase": "https://www.chronopin.com",
+          "guideStatus": 200,
+          "offers": []
+        }
+      ]
+    }
+  },
+  "publicationStatus": {
+    "local": "saved and publicly verified",
+    "production": "saved and publicly verified",
+    "publicHttpsVerified": true
+  },
+  "verifiedGuideCounts": {
+    "local": [
+      {
+        "environment": "local",
+        "city": "fukuoka",
+        "view": "upcoming",
+        "verificationBase": "http://localhost:3000",
+        "count": 10,
+        "ids": [
+          "15398",
+          "15410",
+          "15411",
+          "15415",
+          "15424",
+          "15425",
+          "15426",
+          "15914",
+          "15924",
+          "18421"
+        ],
+        "verifiedAt": "2026-10-20T23:43:37.505604+00:00"
+      },
+      {
+        "environment": "local",
+        "city": "fukuoka",
+        "view": "new",
+        "verificationBase": "http://localhost:3000",
+        "count": 24,
+        "ids": [
+          "15399",
+          "15400",
+          "15401",
+          "15409",
+          "15412",
+          "15414",
+          "15421",
+          "15422",
+          "15423",
+          "15427",
+          "15428",
+          "15969",
+          "16026",
+          "16027",
+          "16078",
+          "16290",
+          "16291",
+          "16292",
+          "16326",
+          "17625",
+          "18418",
+          "18506",
+          "18536",
+          "18537"
+        ],
+        "verifiedAt": "2026-10-20T23:43:37.515800+00:00"
+      },
+      {
+        "environment": "local",
+        "city": "fukuoka",
+        "view": "top",
+        "verificationBase": "http://localhost:3000",
+        "count": 30,
+        "ids": [
+          "15402",
+          "15403",
+          "15404",
+          "15405",
+          "15406",
+          "15407",
+          "15408",
+          "15413",
+          "15416",
+          "15417",
+          "15418",
+          "15419",
+          "15420",
+          "15429",
+          "18132",
+          "18133",
+          "18134",
+          "18147",
+          "18148",
+          "18149",
+          "18150",
+          "18176",
+          "18279",
+          "18280",
+          "18281",
+          "18289",
+          "18291",
+          "18293",
+          "18295",
+          "18296"
+        ],
+        "verifiedAt": "2026-10-20T23:43:37.524216+00:00"
+      },
+      {
+        "environment": "local",
+        "city": "fukuoka",
+        "view": "discounts",
+        "verificationBase": "http://localhost:3000",
+        "count": 36,
+        "ids": [
+          "http://raisindor.jp/",
+          "https://010bld.com/gohgan/",
+          "https://333sanmitomatoramen.com/store/%e5%a4%a9%e7%a5%9e%e5%a4%a7%e5%90%8d%e6%9c%ac%e5%ba%97/",
+          "https://and-gallery.com/#hukuoka",
+          "https://cene.tokyo/collections/fukuoka-open",
+          "https://fukuoka-orientalhotel.com/restaurant/linksquare/",
+          "https://fukuokaseahawk.hiltonjapan.co.jp/restaurants/clouds",
+          "https://fukuokaseahawk.hiltonjapan.co.jp/restaurants/seala",
+          "https://kanzan.net/imuri/",
+          "https://kusiyatubame.owst.jp/",
+          "https://le-bistro-aki.com/",
+          "https://onefukuoka-building.jp/shop/55",
+          "https://prtimes.jp/main/html/rd/p/000000060.000179076.html",
+          "https://prtimes.jp/main/html/rd/p/000000064.000152670.html",
+          "https://prtimes.jp/main/html/rd/p/000000170.000101757.html",
+          "https://pukutoco.com/sumomo-bakery-1007open/",
+          "https://pukutoco.com/sumomobakery-akasaka1019open/",
+          "https://tabelog.com/en/fukuoka/A4001/A400102/40074846/",
+          "https://toeihotel-fukuoka.com/restaurant/bistro_atrie/",
+          "https://www.eggsnthingsjapan.com/hakata/",
+          "https://www.f-sunpalace.com/restaurant/lagoon/",
+          "https://www.fuk.hotelokura.co.jp/restaurant/lechampdor/",
+          "https://www.gate-hotel.jp/fukuoka/rb/agfukuoka.html",
+          "https://www.ginzalion.jp/shop/brand/yebisubar/onefukuokabldg.html",
+          "https://www.hiramatsurestaurant.jp/hiramatsu-hakata/",
+          "https://www.hiramatsurestaurant.jp/kubotsu/",
+          "https://www.hotelnikko-fukuoka.com/restaurant/celebrites/",
+          "https://www.hotelnikko-fukuoka.com/restaurant/serena/",
+          "https://www.hotpepper.jp/strJ001276550/",
+          "https://www.kys-newotani.co.jp/hakata/restaurant/castillian-bar/",
+          "https://www.orec.co.jp/greenlab-fukuoka/",
+          "https://www.pochi-ito.com/",
+          "https://www.princehotels.co.jp/momochihama/restaurant/yocaterrace/",
+          "https://www.quil-fait-bon.com/pages/fukuoka",
+          "https://www.recent-hotel.com/restaurant/",
+          "https://www.tenchika.com/shop/h_b_antique/"
+        ],
+        "verifiedAt": "2026-10-20T23:43:37.544512+00:00"
+      },
+      {
+        "environment": "local",
+        "city": "osaka",
+        "view": "upcoming",
+        "verificationBase": "http://localhost:3000",
+        "count": 12,
+        "ids": [
+          "15432",
+          "15445",
+          "15447",
+          "15448",
+          "15449",
+          "15458",
+          "15913",
+          "15925",
+          "15975",
+          "16023",
+          "16079",
+          "17168"
+        ],
+        "verifiedAt": "2026-10-20T23:43:37.881495+00:00"
+      },
+      {
+        "environment": "local",
+        "city": "osaka",
+        "view": "new",
+        "verificationBase": "http://localhost:3000",
+        "count": 30,
+        "ids": [
+          "15431",
+          "15435",
+          "15436",
+          "15437",
+          "15438",
+          "15439",
+          "15446",
+          "15451",
+          "15452",
+          "15453",
+          "15454",
+          "15455",
+          "15456",
+          "15457",
+          "17108",
+          "17109",
+          "17110",
+          "17111",
+          "17112",
+          "17622",
+          "17623",
+          "17626",
+          "18303",
+          "18304",
+          "18420",
+          "18424",
+          "18505",
+          "18511",
+          "18550",
+          "18551"
+        ],
+        "verifiedAt": "2026-10-20T23:43:37.889508+00:00"
+      },
+      {
+        "environment": "local",
+        "city": "osaka",
+        "view": "top",
+        "verificationBase": "http://localhost:3000",
+        "count": 30,
+        "ids": [
+          "15430",
+          "15433",
+          "15434",
+          "15440",
+          "15441",
+          "15442",
+          "15443",
+          "15444",
+          "15450",
+          "15971",
+          "18135",
+          "18136",
+          "18137",
+          "18151",
+          "18152",
+          "18153",
+          "18154",
+          "18166",
+          "18168",
+          "18224",
+          "18228",
+          "18271",
+          "18272",
+          "18273",
+          "18274",
+          "18275",
+          "18276",
+          "18277",
+          "18278",
+          "18287"
+        ],
+        "verifiedAt": "2026-10-20T23:43:37.897055+00:00"
+      },
+      {
+        "environment": "local",
+        "city": "osaka",
+        "view": "discounts",
+        "verificationBase": "http://localhost:3000",
+        "count": 31,
+        "ids": [
+          "https://and-gallery.com/#nanba",
+          "https://big-step.co.jp/shop/detail/63",
+          "https://conrad-osaka.hiltonjapan.co.jp/restaurants/40skybar",
+          "https://conrad-osaka.hiltonjapan.co.jp/restaurants/atmos",
+          "https://cross-osaka.orixhotelsandresorts.com/#restaurant",
+          "https://csm-cafe.ltr-online.com/lp/csm-cafe-s022",
+          "https://doubletree-osaka-castle.hiltonjapan.co.jp/restaurants/lounge-bar-sen",
+          "https://doubletree-osaka-castle.hiltonjapan.co.jp/restaurants/restaurant-sen",
+          "https://gabuchiki.com/news/view/308",
+          "https://icosaka.com/offer/pierre_autumnmenu/",
+          "https://jblm2024.wixsite.com/fujiyama-tokyo/%E8%A4%87%E8%A3%BD-namba-osaka",
+          "https://k-coeur.com/restaurant/",
+          "https://labaie.ritzcarltonosaka.com/",
+          "https://osaka.ekimaru.com/shopguide/detail/103",
+          "https://osaka.hiltonjapan.co.jp/plans/restaurants/other/myplace-happyhour",
+          "https://patinahotels.com/osaka/drink-and-dine/p72",
+          "https://prtimes.jp/main/html/rd/p/000000001.000192433.html/",
+          "https://prtimes.jp/main/html/rd/p/000000033.000027700.html",
+          "https://splendido.ritzcarltonosaka.com/",
+          "https://takemon-fukahire.com/",
+          "https://www.agneldor.com/",
+          "https://www.daimaru.co.jp/shinsaibashi/restaurant/cucina-bella.html",
+          "https://www.gate-hotel.jp/osaka/rb/aosaka.html",
+          "https://www.gate-hotel.jp/osaka/rb/peaks.html",
+          "https://www.hiramatsurestaurant.jp/hiramatsu-lafete/",
+          "https://www.hiramatsurestaurant.jp/hiramatsu-lemidi/",
+          "https://www.hotpepper.jp/strJ004661366/",
+          "https://www.labecasse1990.com/",
+          "https://www.quil-fait-bon.com/pages/grand-front-osaka",
+          "https://www.regine.stregisosaka.com/",
+          "https://www.y-unico.jp/"
+        ],
+        "verifiedAt": "2026-10-20T23:43:37.914237+00:00"
+      },
+      {
+        "environment": "local",
+        "city": "kyoto",
+        "view": "upcoming",
+        "verificationBase": "http://localhost:3000",
+        "count": 12,
+        "ids": [
+          "15483",
+          "15499",
+          "15500",
+          "15909",
+          "15910",
+          "15911",
+          "15912",
+          "15922",
+          "15931",
+          "16323",
+          "17169",
+          "18510"
+        ],
+        "verifiedAt": "2026-10-20T23:43:38.235557+00:00"
+      },
+      {
+        "environment": "local",
+        "city": "kyoto",
+        "view": "new",
+        "verificationBase": "http://localhost:3000",
+        "count": 33,
+        "ids": [
+          "15460",
+          "15461",
+          "15462",
+          "15463",
+          "15464",
+          "15465",
+          "15466",
+          "15467",
+          "15468",
+          "15469",
+          "15470",
+          "15471",
+          "15472",
+          "15473",
+          "15474",
+          "15475",
+          "15476",
+          "15477",
+          "15478",
+          "15479",
+          "15480",
+          "15481",
+          "15482",
+          "15489",
+          "15490",
+          "15491",
+          "15492",
+          "15493",
+          "15494",
+          "15495",
+          "15498",
+          "18025",
+          "18026"
+        ],
+        "verifiedAt": "2026-10-20T23:43:38.243079+00:00"
+      },
+      {
+        "environment": "local",
+        "city": "kyoto",
+        "view": "top",
+        "verificationBase": "http://localhost:3000",
+        "count": 30,
+        "ids": [
+          "15459",
+          "15484",
+          "15485",
+          "15486",
+          "15487",
+          "15488",
+          "15496",
+          "15497",
+          "15501",
+          "15973",
+          "18052",
+          "18060",
+          "18061",
+          "18098",
+          "18099",
+          "18117",
+          "18119",
+          "18155",
+          "18156",
+          "18170",
+          "18171",
+          "18173",
+          "18191",
+          "18193",
+          "18194",
+          "18209",
+          "18210",
+          "18211",
+          "18212",
+          "18213"
+        ],
+        "verifiedAt": "2026-10-20T23:43:38.251116+00:00"
+      },
+      {
+        "environment": "local",
+        "city": "kyoto",
+        "view": "discounts",
+        "verificationBase": "http://localhost:3000",
+        "count": 35,
+        "ids": [
+          "https://cenci-kyoto.com/",
+          "https://droit-kyoto.jp/",
+          "https://hotelfauchonkyoto.com/ja/gourmet/fauchon-salon-de-the-kyoto/",
+          "https://kyoto.hiltonjapan.co.jp/restaurants/teori",
+          "https://www.hiramatsurestaurant.jp/hiramatsu-kodaiji/",
+          "https://www.hiramatsurestaurant.jp/la-luce/",
+          "https://www.instagram.com/jbowl_ritsumeikan_mae/",
+          "https://www.keihanhotels-resorts.co.jp/kyoto-centuryhotel/topics/happyhour-2/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/011/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/012/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/013/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/014/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/015/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/016/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/017/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/018/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/019/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/020/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/022/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/023/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/026/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/028/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/031/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/033/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/039/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/040/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/042/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/043/",
+          "https://www.next-hero-kyoto.com/%E3%81%9F%E3%81%93%EF%BC%98%E5%BA%97%E8%88%97%E6%83%85%E5%A0%B1/",
+          "https://www.princess-kyoto.co.jp/restaurant/ambercourt/",
+          "https://www.princess-kyoto.co.jp/restaurant/darley/",
+          "https://www.princess-kyoto.co.jp/restaurant/hisuien/",
+          "https://www.princess-kyoto.co.jp/restaurant/hoen/",
+          "https://www.princess-kyoto.co.jp/restaurant/sagano/",
+          "https://www.quil-fait-bon.com/pages/kyoto"
+        ],
+        "verifiedAt": "2026-10-20T23:43:38.265814+00:00"
+      },
+      {
+        "environment": "local",
+        "city": "nagoya",
+        "view": "upcoming",
+        "verificationBase": "http://localhost:3000",
+        "count": 11,
+        "ids": [
+          "15510",
+          "15512",
+          "15517",
+          "15518",
+          "15521",
+          "15522",
+          "15900",
+          "15901",
+          "15902",
+          "16075",
+          "16080"
+        ],
+        "verifiedAt": "2026-10-20T23:43:38.579087+00:00"
+      },
+      {
+        "environment": "local",
+        "city": "nagoya",
+        "view": "new",
+        "verificationBase": "http://localhost:3000",
+        "count": 31,
+        "ids": [
+          "15509",
+          "15511",
+          "15515",
+          "15516",
+          "15519",
+          "15520",
+          "15898",
+          "15899",
+          "15915",
+          "15916",
+          "15917",
+          "15918",
+          "15919",
+          "15920",
+          "15921",
+          "15932",
+          "15964",
+          "15965",
+          "16020",
+          "16021",
+          "16022",
+          "16076",
+          "16294",
+          "16295",
+          "16767",
+          "16771",
+          "16800",
+          "17107",
+          "17166",
+          "17167",
+          "18045"
+        ],
+        "verifiedAt": "2026-10-20T23:43:38.587374+00:00"
+      },
+      {
+        "environment": "local",
+        "city": "nagoya",
+        "view": "top",
+        "verificationBase": "http://localhost:3000",
+        "count": 30,
+        "ids": [
+          "15502",
+          "15503",
+          "15504",
+          "15505",
+          "15506",
+          "15507",
+          "15508",
+          "15513",
+          "15514",
+          "15523",
+          "15524",
+          "15972",
+          "16024",
+          "18044",
+          "18100",
+          "18101",
+          "18121",
+          "18138",
+          "18192",
+          "18195",
+          "18196",
+          "18214",
+          "18215",
+          "18216",
+          "18217",
+          "18218",
+          "18219",
+          "18220",
+          "18221",
+          "18223"
+        ],
+        "verifiedAt": "2026-10-20T23:43:38.595795+00:00"
+      },
+      {
+        "environment": "local",
+        "city": "nagoya",
+        "view": "discounts",
+        "verificationBase": "http://localhost:3000",
+        "count": 32,
+        "ids": [
+          "https://and-gallery.com/#nagoya",
+          "https://csm-cafe.ltr-online.com/lp/csm-cafe-s017",
+          "https://french-kitamura.jp/",
+          "https://kinzan.nagoya/archives/news/2853/",
+          "https://kobekangroup.com/shop/obanzai_kabtoya/",
+          "https://lebeurrenoisettetokyo.com/nagoya/",
+          "https://nagoya.hiltonjapan.co.jp/restaurants/hideaway3-3",
+          "https://nagoya.hiltonjapan.co.jp/restaurants/inplace3-3",
+          "https://nagoya.hiltonjapan.co.jp/restaurants/ouchou",
+          "https://nagoya.parco.jp/shop/detail/?cd=009191",
+          "https://prtimes.jp/main/html/rd/p/000000004.000116722.html",
+          "https://prtimes.jp/main/html/rd/p/000004440.000018505.html",
+          "https://reconnaissance-nagoya.com/",
+          "https://tabelog.com/en/aichi/A2301/A230110/23089382/",
+          "https://thetowerhotel.jp/restaurant/",
+          "https://www.anacrowneplaza-nagoya.jp/pages/restaurant_gardencourt",
+          "https://www.anacrowneplaza-nagoya.jp/pages/restaurant_karin",
+          "https://www.anacrowneplaza-nagoya.jp/pages/restaurant_stargate",
+          "https://www.anacrowneplaza-nagoya.jp/pages/restaurant_winglounge",
+          "https://www.associa.com/nma/restaurant/pergola/",
+          "https://www.centralpark.co.jp/shop/sharecafe/",
+          "https://www.espacionagoya.com/restaurant-bar/the-bar-castle/",
+          "https://www.hiramatsurestaurant.jp/aubergedelill-nagoya/",
+          "https://www.hotpepper.jp/strJ004698778/",
+          "https://www.hotpepper.jp/strJ004699003/",
+          "https://www.kochuten.jp/",
+          "https://www.komeda.co.jp/shop/detail.html?id=1215",
+          "https://www.lafloraison-t.jp/",
+          "https://www.livingroom-skybar.com/",
+          "https://www.princehotels.co.jp/nagoya/restaurant/skydining/",
+          "https://www.quil-fait-bon.com/pages/nagoya-sakae",
+          "https://www.thekawabunnagoya.com/thekawabunnagoya/restaurant/"
+        ],
+        "verifiedAt": "2026-10-20T23:43:38.622939+00:00"
+      },
+      {
+        "environment": "local",
+        "city": "tokyo",
+        "view": "upcoming",
+        "verificationBase": "http://localhost:3000",
+        "count": 15,
+        "ids": [
+          "15526",
+          "15538",
+          "15541",
+          "15544",
+          "15546",
+          "15555",
+          "15556",
+          "15557",
+          "15923",
+          "15929",
+          "15930",
+          "17106",
+          "17621",
+          "18422",
+          "18720"
+        ],
+        "verifiedAt": "2026-10-20T23:43:38.943498+00:00"
+      },
+      {
+        "environment": "local",
+        "city": "tokyo",
+        "view": "new",
+        "verificationBase": "http://localhost:3000",
+        "count": 31,
+        "ids": [
+          "15527",
+          "15539",
+          "15540",
+          "15551",
+          "15552",
+          "15553",
+          "15554",
+          "15558",
+          "15966",
+          "15967",
+          "15968",
+          "16289",
+          "16325",
+          "17170",
+          "17171",
+          "17172",
+          "17173",
+          "17628",
+          "18027",
+          "18043",
+          "18051",
+          "18058",
+          "18102",
+          "18103",
+          "18300",
+          "18301",
+          "18302",
+          "18444",
+          "18507",
+          "18508",
+          "18509"
+        ],
+        "verifiedAt": "2026-10-20T23:43:38.951790+00:00"
+      },
+      {
+        "environment": "local",
+        "city": "tokyo",
+        "view": "top",
+        "verificationBase": "http://localhost:3000",
+        "count": 30,
+        "ids": [
+          "15525",
+          "15528",
+          "15529",
+          "15530",
+          "15531",
+          "15532",
+          "15533",
+          "15534",
+          "15535",
+          "15536",
+          "15537",
+          "15542",
+          "15543",
+          "15545",
+          "15547",
+          "15548",
+          "15549",
+          "15550",
+          "15559",
+          "15560",
+          "15561",
+          "15562",
+          "15903",
+          "15974",
+          "18122",
+          "18123",
+          "18140",
+          "18141",
+          "18157",
+          "18158"
+        ],
+        "verifiedAt": "2026-10-20T23:43:38.959930+00:00"
+      },
+      {
+        "environment": "local",
+        "city": "tokyo",
+        "view": "discounts",
+        "verificationBase": "http://localhost:3000",
+        "count": 40,
+        "ids": [
+          "https://and-gallery.com/#ikebukuro",
+          "https://and-gallery.com/#yurakucho",
+          "https://cocco.eastone.co.jp/shop/gotanda",
+          "https://cocco.eastone.co.jp/shop/kameido",
+          "https://conrad-tokyo.hiltonjapan.co.jp/restaurants/cerise",
+          "https://conrad-tokyo.hiltonjapan.co.jp/restaurants/chinablue",
+          "https://conrad-tokyo.hiltonjapan.co.jp/restaurants/twentyeight",
+          "https://csm-cafe.ltr-online.com/lp/csm-cafe-s012",
+          "https://gourmetpress.net/1488798/",
+          "https://miabocca.eastone.co.jp/shop/Ikebukuro",
+          "https://miabocca.eastone.co.jp/shop/Shakujii-park",
+          "https://miabocca.eastone.co.jp/shop/Shinjuku-takasimaya",
+          "https://mimimi-jiyugaoka.com/#floor1",
+          "https://onodera-group.com/kaitensushi-ikebukuro/",
+          "https://prtimes.jp/main/html/rd/p/000000009.000161200.html",
+          "https://prtimes.jp/main/html/rd/p/000000048.000152772.html",
+          "https://prtimes.jp/main/html/rd/p/000000196.000049183.html",
+          "https://prtimes.jp/main/html/rd/p/000000356.000048489.html",
+          "https://prtimes.jp/main/html/rd/p/000000592.000071323.html",
+          "https://prtimes.jp/main/html/rd/p/000004178.000003860.html",
+          "https://salvatore.jp/restaurant/asagaya/",
+          "https://sarabethsrestaurants.jp/location/omotesando/",
+          "https://sarabethsrestaurants.jp/location/shinagawa/",
+          "https://sarabethsrestaurants.jp/location/shinjuku/",
+          "https://sarabethsrestaurants.jp/location/tokyo/",
+          "https://shibakoen.bar-shinkai.com/",
+          "https://store-info.skylark.co.jp/syabuyo/map/198490/",
+          "https://tabelog.com/en/tokyo/A1303/A130301/13198692/",
+          "https://tokyo.hiltonjapan.co.jp/restaurants/st_georges_bar",
+          "https://www.andaztokyo.jp/restaurants/jp/thetavern-grill-lounge",
+          "https://www.herofield.com/bbq/tokyoprince/",
+          "https://www.hiramatsurestaurant.jp/jardindessens-tokyo/",
+          "https://www.mesm.jp/en/eat-drink/chefs-theatre.html",
+          "https://www.newotani.co.jp/tokyo/restaurant/gardenlounge/",
+          "https://www.quil-fait-bon.com/pages/aoyama",
+          "https://www.quil-fait-bon.com/pages/grand-maison-ginza",
+          "https://www.quil-fait-bon.com/pages/shinjuku",
+          "https://www.quil-fait-bon.com/pages/tokyo-dome-city",
+          "https://www.quil-fait-bon.com/pages/tokyo-skytree-town-solamachi",
+          "https://www.sunamo.jp/floor/shop_detail.html?UC=1_028"
+        ],
+        "verifiedAt": "2026-10-20T23:43:38.980046+00:00"
+      },
+      {
+        "environment": "local",
+        "city": "sapporo",
+        "view": "upcoming",
+        "verificationBase": "http://localhost:3000",
+        "count": 12,
+        "ids": [
+          "15568",
+          "15569",
+          "15570",
+          "15571",
+          "15597",
+          "15926",
+          "15970",
+          "17103",
+          "18047",
+          "18048",
+          "18054",
+          "18806"
+        ],
+        "verifiedAt": "2026-10-20T23:43:39.334766+00:00"
+      },
+      {
+        "environment": "local",
+        "city": "sapporo",
+        "view": "new",
+        "verificationBase": "http://localhost:3000",
+        "count": 30,
+        "ids": [
+          "15580",
+          "15586",
+          "15587",
+          "15588",
+          "15589",
+          "15590",
+          "15591",
+          "15592",
+          "15595",
+          "15596",
+          "16293",
+          "16296",
+          "17104",
+          "17105",
+          "17624",
+          "17627",
+          "18028",
+          "18029",
+          "18030",
+          "18031",
+          "18049",
+          "18055",
+          "18056",
+          "18057",
+          "18104",
+          "18105",
+          "18124",
+          "18125",
+          "18305",
+          "18306"
+        ],
+        "verifiedAt": "2026-10-20T23:43:39.344323+00:00"
+      },
+      {
+        "environment": "local",
+        "city": "sapporo",
+        "view": "top",
+        "verificationBase": "http://localhost:3000",
+        "count": 30,
+        "ids": [
+          "15563",
+          "15564",
+          "15565",
+          "15566",
+          "15567",
+          "15572",
+          "15573",
+          "15574",
+          "15575",
+          "15576",
+          "15577",
+          "15578",
+          "15579",
+          "15581",
+          "15582",
+          "15583",
+          "15584",
+          "15585",
+          "15593",
+          "15594",
+          "15598",
+          "15599",
+          "15600",
+          "15601",
+          "15602",
+          "15603",
+          "15604",
+          "15605",
+          "15606",
+          "15607"
+        ],
+        "verifiedAt": "2026-10-20T23:43:39.353666+00:00"
+      },
+      {
+        "environment": "local",
+        "city": "sapporo",
+        "view": "discounts",
+        "verificationBase": "http://localhost:3000",
+        "count": 34,
+        "ids": [
+          "https://anan.fuji-tatsu.co.jp/shop/sapporo-sinoro/",
+          "https://chocottosushi-kiwami.owst.jp/",
+          "https://cocco.eastone.co.jp/shop/kitahachijo",
+          "https://cocco.eastone.co.jp/shop/kitaichijo",
+          "https://cocco.eastone.co.jp/shop/kotoniekimae",
+          "https://cocco.eastone.co.jp/shop/miyanosawa",
+          "https://cocco.eastone.co.jp/shop/shindohigashi",
+          "https://cocco.eastone.co.jp/shop/souen",
+          "https://grand1934.com/restaurant/garden-dining-waraku/",
+          "https://grand1934.com/restaurant/kokaku/",
+          "https://grand1934.com/restaurant/lobby-lounge-mizar/",
+          "https://grand1934.com/restaurant/northern-terrace-diner/",
+          "https://grand1934.com/restaurant/old-saloon1934/",
+          "https://miabocca.eastone.co.jp/shop/Kita2jo",
+          "https://miabocca.eastone.co.jp/shop/Kotoni-station",
+          "https://miabocca.eastone.co.jp/shop/Sapporo-station",
+          "https://miabocca.eastone.co.jp/shop/atsubetsuminami",
+          "https://miabocca.eastone.co.jp/shop/sapporoduo",
+          "https://michiru.dkdining.com/sapporo/",
+          "https://prtimes.jp/main/html/rd/p/000000010.000134951.html",
+          "https://store-info.skylark.co.jp/syabuyo/map/198489/",
+          "https://www.anahisapporosusukino.com/restaurants/verde/",
+          "https://www.hyatt.com/hyatt-centric/ja-JP/ctsct-hyatt-centric-sapporo/dining",
+          "https://www.jrhotels.co.jp/tower/restaurant/skyj/",
+          "https://www.keioplaza-sapporo.co.jp/restaurants/akizu/",
+          "https://www.keioplaza-sapporo.co.jp/restaurants/crossvault/",
+          "https://www.keioplaza-sapporo.co.jp/restaurants/glass/",
+          "https://www.keioplaza-sapporo.co.jp/restaurants/miyama/",
+          "https://www.keioplaza-sapporo.co.jp/restaurants/yamanami/",
+          "https://www.princehotels.co.jp/sapporo/restaurant/alldaydininggrandeur",
+          "https://www.princehotels.co.jp/sapporo/restaurant/fuyojo",
+          "https://www.princehotels.co.jp/sapporo/restaurant/katsura",
+          "https://www.princehotels.co.jp/sapporo/restaurant/top_prince",
+          "https://www.tokyuhotels.co.jp/sapporostream/restaurant/splish/plan/angel_devil/index.html"
+        ],
+        "verifiedAt": "2026-10-20T23:43:39.376083+00:00"
+      }
+    ],
+    "production": [
+      {
+        "environment": "production",
+        "city": "fukuoka",
+        "view": "upcoming",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 10,
+        "ids": [
+          "15398",
+          "15410",
+          "15411",
+          "15415",
+          "15424",
+          "15425",
+          "15426",
+          "15914",
+          "15924",
+          "18421"
+        ],
+        "verifiedAt": "2026-10-20T23:44:04.404213+00:00"
+      },
+      {
+        "environment": "production",
+        "city": "fukuoka",
+        "view": "new",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 24,
+        "ids": [
+          "15399",
+          "15400",
+          "15401",
+          "15409",
+          "15412",
+          "15414",
+          "15421",
+          "15422",
+          "15423",
+          "15427",
+          "15428",
+          "15969",
+          "16026",
+          "16027",
+          "16078",
+          "16290",
+          "16291",
+          "16292",
+          "16326",
+          "17625",
+          "18418",
+          "18506",
+          "18534",
+          "18536"
+        ],
+        "verifiedAt": "2026-10-20T23:44:04.746645+00:00"
+      },
+      {
+        "environment": "production",
+        "city": "fukuoka",
+        "view": "top",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 30,
+        "ids": [
+          "15402",
+          "15403",
+          "15404",
+          "15405",
+          "15406",
+          "15407",
+          "15408",
+          "15413",
+          "15416",
+          "15417",
+          "15418",
+          "15419",
+          "15420",
+          "15429",
+          "18132",
+          "18133",
+          "18134",
+          "18147",
+          "18148",
+          "18149",
+          "18150",
+          "18176",
+          "18279",
+          "18280",
+          "18281",
+          "18289",
+          "18291",
+          "18293",
+          "18295",
+          "18296"
+        ],
+        "verifiedAt": "2026-10-20T23:44:04.937684+00:00"
+      },
+      {
+        "environment": "production",
+        "city": "fukuoka",
+        "view": "discounts",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 36,
+        "ids": [
+          "http://raisindor.jp/",
+          "https://010bld.com/gohgan/",
+          "https://333sanmitomatoramen.com/store/%e5%a4%a9%e7%a5%9e%e5%a4%a7%e5%90%8d%e6%9c%ac%e5%ba%97/",
+          "https://and-gallery.com/#hukuoka",
+          "https://cene.tokyo/collections/fukuoka-open",
+          "https://fukuoka-orientalhotel.com/restaurant/linksquare/",
+          "https://fukuokaseahawk.hiltonjapan.co.jp/restaurants/clouds",
+          "https://fukuokaseahawk.hiltonjapan.co.jp/restaurants/seala",
+          "https://kanzan.net/imuri/",
+          "https://kusiyatubame.owst.jp/",
+          "https://le-bistro-aki.com/",
+          "https://onefukuoka-building.jp/shop/55",
+          "https://prtimes.jp/main/html/rd/p/000000060.000179076.html",
+          "https://prtimes.jp/main/html/rd/p/000000064.000152670.html",
+          "https://prtimes.jp/main/html/rd/p/000000170.000101757.html",
+          "https://pukutoco.com/sumomo-bakery-1007open/",
+          "https://pukutoco.com/sumomobakery-akasaka1019open/",
+          "https://tabelog.com/en/fukuoka/A4001/A400102/40074846/",
+          "https://toeihotel-fukuoka.com/restaurant/bistro_atrie/",
+          "https://www.eggsnthingsjapan.com/hakata/",
+          "https://www.f-sunpalace.com/restaurant/lagoon/",
+          "https://www.fuk.hotelokura.co.jp/restaurant/lechampdor/",
+          "https://www.gate-hotel.jp/fukuoka/rb/agfukuoka.html",
+          "https://www.ginzalion.jp/shop/brand/yebisubar/onefukuokabldg.html",
+          "https://www.hiramatsurestaurant.jp/hiramatsu-hakata/",
+          "https://www.hiramatsurestaurant.jp/kubotsu/",
+          "https://www.hotelnikko-fukuoka.com/restaurant/celebrites/",
+          "https://www.hotelnikko-fukuoka.com/restaurant/serena/",
+          "https://www.hotpepper.jp/strJ001276550/",
+          "https://www.kys-newotani.co.jp/hakata/restaurant/castillian-bar/",
+          "https://www.orec.co.jp/greenlab-fukuoka/",
+          "https://www.pochi-ito.com/",
+          "https://www.princehotels.co.jp/momochihama/restaurant/yocaterrace/",
+          "https://www.quil-fait-bon.com/pages/fukuoka",
+          "https://www.recent-hotel.com/restaurant/",
+          "https://www.tenchika.com/shop/h_b_antique/"
+        ],
+        "verifiedAt": "2026-10-20T23:44:05.402081+00:00"
+      },
+      {
+        "environment": "production",
+        "city": "osaka",
+        "view": "upcoming",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 12,
+        "ids": [
+          "15432",
+          "15445",
+          "15447",
+          "15448",
+          "15449",
+          "15458",
+          "15913",
+          "15925",
+          "15975",
+          "16023",
+          "16079",
+          "17168"
+        ],
+        "verifiedAt": "2026-10-20T23:44:06.348062+00:00"
+      },
+      {
+        "environment": "production",
+        "city": "osaka",
+        "view": "new",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 30,
+        "ids": [
+          "15431",
+          "15435",
+          "15436",
+          "15437",
+          "15438",
+          "15439",
+          "15446",
+          "15451",
+          "15452",
+          "15453",
+          "15454",
+          "15455",
+          "15456",
+          "15457",
+          "17108",
+          "17109",
+          "17110",
+          "17111",
+          "17112",
+          "17622",
+          "17623",
+          "17626",
+          "18303",
+          "18304",
+          "18420",
+          "18424",
+          "18449",
+          "18504",
+          "18554",
+          "18555"
+        ],
+        "verifiedAt": "2026-10-20T23:44:06.553355+00:00"
+      },
+      {
+        "environment": "production",
+        "city": "osaka",
+        "view": "top",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 30,
+        "ids": [
+          "15430",
+          "15433",
+          "15434",
+          "15440",
+          "15441",
+          "15442",
+          "15443",
+          "15444",
+          "15450",
+          "15971",
+          "18135",
+          "18136",
+          "18137",
+          "18151",
+          "18152",
+          "18153",
+          "18154",
+          "18166",
+          "18168",
+          "18224",
+          "18228",
+          "18271",
+          "18272",
+          "18273",
+          "18274",
+          "18275",
+          "18276",
+          "18277",
+          "18278",
+          "18287"
+        ],
+        "verifiedAt": "2026-10-20T23:44:06.805790+00:00"
+      },
+      {
+        "environment": "production",
+        "city": "osaka",
+        "view": "discounts",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 31,
+        "ids": [
+          "https://and-gallery.com/#nanba",
+          "https://big-step.co.jp/shop/detail/63",
+          "https://conrad-osaka.hiltonjapan.co.jp/restaurants/40skybar",
+          "https://conrad-osaka.hiltonjapan.co.jp/restaurants/atmos",
+          "https://cross-osaka.orixhotelsandresorts.com/#restaurant",
+          "https://csm-cafe.ltr-online.com/lp/csm-cafe-s022",
+          "https://doubletree-osaka-castle.hiltonjapan.co.jp/restaurants/lounge-bar-sen",
+          "https://doubletree-osaka-castle.hiltonjapan.co.jp/restaurants/restaurant-sen",
+          "https://gabuchiki.com/news/view/308",
+          "https://icosaka.com/offer/pierre_autumnmenu/",
+          "https://jblm2024.wixsite.com/fujiyama-tokyo/%E8%A4%87%E8%A3%BD-namba-osaka",
+          "https://k-coeur.com/restaurant/",
+          "https://labaie.ritzcarltonosaka.com/",
+          "https://osaka.ekimaru.com/shopguide/detail/103",
+          "https://osaka.hiltonjapan.co.jp/plans/restaurants/other/myplace-happyhour",
+          "https://patinahotels.com/osaka/drink-and-dine/p72",
+          "https://prtimes.jp/main/html/rd/p/000000001.000192433.html/",
+          "https://prtimes.jp/main/html/rd/p/000000033.000027700.html",
+          "https://splendido.ritzcarltonosaka.com/",
+          "https://takemon-fukahire.com/",
+          "https://www.agneldor.com/",
+          "https://www.daimaru.co.jp/shinsaibashi/restaurant/cucina-bella.html",
+          "https://www.gate-hotel.jp/osaka/rb/aosaka.html",
+          "https://www.gate-hotel.jp/osaka/rb/peaks.html",
+          "https://www.hiramatsurestaurant.jp/hiramatsu-lafete/",
+          "https://www.hiramatsurestaurant.jp/hiramatsu-lemidi/",
+          "https://www.hotpepper.jp/strJ004661366/",
+          "https://www.labecasse1990.com/",
+          "https://www.quil-fait-bon.com/pages/grand-front-osaka",
+          "https://www.regine.stregisosaka.com/",
+          "https://www.y-unico.jp/"
+        ],
+        "verifiedAt": "2026-10-20T23:44:07.159666+00:00"
+      },
+      {
+        "environment": "production",
+        "city": "kyoto",
+        "view": "upcoming",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 12,
+        "ids": [
+          "15483",
+          "15499",
+          "15500",
+          "15909",
+          "15910",
+          "15911",
+          "15912",
+          "15922",
+          "15931",
+          "16323",
+          "17169",
+          "18448"
+        ],
+        "verifiedAt": "2026-10-20T23:44:08.091006+00:00"
+      },
+      {
+        "environment": "production",
+        "city": "kyoto",
+        "view": "new",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 33,
+        "ids": [
+          "15460",
+          "15461",
+          "15462",
+          "15463",
+          "15464",
+          "15465",
+          "15466",
+          "15467",
+          "15468",
+          "15469",
+          "15470",
+          "15471",
+          "15472",
+          "15473",
+          "15474",
+          "15475",
+          "15476",
+          "15477",
+          "15478",
+          "15479",
+          "15480",
+          "15481",
+          "15482",
+          "15489",
+          "15490",
+          "15491",
+          "15492",
+          "15493",
+          "15494",
+          "15495",
+          "15498",
+          "18025",
+          "18026"
+        ],
+        "verifiedAt": "2026-10-20T23:44:08.275872+00:00"
+      },
+      {
+        "environment": "production",
+        "city": "kyoto",
+        "view": "top",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 30,
+        "ids": [
+          "15459",
+          "15484",
+          "15485",
+          "15486",
+          "15487",
+          "15488",
+          "15496",
+          "15497",
+          "15501",
+          "15973",
+          "18052",
+          "18060",
+          "18061",
+          "18098",
+          "18099",
+          "18117",
+          "18119",
+          "18155",
+          "18156",
+          "18170",
+          "18171",
+          "18173",
+          "18191",
+          "18193",
+          "18194",
+          "18209",
+          "18210",
+          "18211",
+          "18212",
+          "18213"
+        ],
+        "verifiedAt": "2026-10-20T23:44:09.271261+00:00"
+      },
+      {
+        "environment": "production",
+        "city": "kyoto",
+        "view": "discounts",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 35,
+        "ids": [
+          "https://cenci-kyoto.com/",
+          "https://droit-kyoto.jp/",
+          "https://hotelfauchonkyoto.com/ja/gourmet/fauchon-salon-de-the-kyoto/",
+          "https://kyoto.hiltonjapan.co.jp/restaurants/teori",
+          "https://www.hiramatsurestaurant.jp/hiramatsu-kodaiji/",
+          "https://www.hiramatsurestaurant.jp/la-luce/",
+          "https://www.instagram.com/jbowl_ritsumeikan_mae/",
+          "https://www.keihanhotels-resorts.co.jp/kyoto-centuryhotel/topics/happyhour-2/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/011/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/012/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/013/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/014/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/015/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/016/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/017/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/018/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/019/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/020/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/022/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/023/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/026/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/028/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/031/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/033/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/039/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/040/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/042/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/043/",
+          "https://www.next-hero-kyoto.com/%E3%81%9F%E3%81%93%EF%BC%98%E5%BA%97%E8%88%97%E6%83%85%E5%A0%B1/",
+          "https://www.princess-kyoto.co.jp/restaurant/ambercourt/",
+          "https://www.princess-kyoto.co.jp/restaurant/darley/",
+          "https://www.princess-kyoto.co.jp/restaurant/hisuien/",
+          "https://www.princess-kyoto.co.jp/restaurant/hoen/",
+          "https://www.princess-kyoto.co.jp/restaurant/sagano/",
+          "https://www.quil-fait-bon.com/pages/kyoto"
+        ],
+        "verifiedAt": "2026-10-20T23:44:10.903578+00:00"
+      },
+      {
+        "environment": "production",
+        "city": "nagoya",
+        "view": "upcoming",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 11,
+        "ids": [
+          "15510",
+          "15512",
+          "15517",
+          "15518",
+          "15521",
+          "15522",
+          "15900",
+          "15901",
+          "15902",
+          "16075",
+          "16080"
+        ],
+        "verifiedAt": "2026-10-20T23:44:12.048632+00:00"
+      },
+      {
+        "environment": "production",
+        "city": "nagoya",
+        "view": "new",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 31,
+        "ids": [
+          "15509",
+          "15511",
+          "15515",
+          "15516",
+          "15519",
+          "15520",
+          "15898",
+          "15899",
+          "15915",
+          "15916",
+          "15917",
+          "15918",
+          "15919",
+          "15920",
+          "15921",
+          "15932",
+          "15964",
+          "15965",
+          "16020",
+          "16021",
+          "16022",
+          "16076",
+          "16294",
+          "16295",
+          "16767",
+          "16771",
+          "16800",
+          "17107",
+          "17166",
+          "17167",
+          "18045"
+        ],
+        "verifiedAt": "2026-10-20T23:44:12.337216+00:00"
+      },
+      {
+        "environment": "production",
+        "city": "nagoya",
+        "view": "top",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 30,
+        "ids": [
+          "15502",
+          "15503",
+          "15504",
+          "15505",
+          "15506",
+          "15507",
+          "15508",
+          "15513",
+          "15514",
+          "15523",
+          "15524",
+          "15972",
+          "16024",
+          "18044",
+          "18100",
+          "18101",
+          "18121",
+          "18138",
+          "18192",
+          "18195",
+          "18196",
+          "18214",
+          "18215",
+          "18216",
+          "18217",
+          "18218",
+          "18219",
+          "18220",
+          "18221",
+          "18223"
+        ],
+        "verifiedAt": "2026-10-20T23:44:12.681382+00:00"
+      },
+      {
+        "environment": "production",
+        "city": "nagoya",
+        "view": "discounts",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 32,
+        "ids": [
+          "https://and-gallery.com/#nagoya",
+          "https://csm-cafe.ltr-online.com/lp/csm-cafe-s017",
+          "https://french-kitamura.jp/",
+          "https://kinzan.nagoya/archives/news/2853/",
+          "https://kobekangroup.com/shop/obanzai_kabtoya/",
+          "https://lebeurrenoisettetokyo.com/nagoya/",
+          "https://nagoya.hiltonjapan.co.jp/restaurants/hideaway3-3",
+          "https://nagoya.hiltonjapan.co.jp/restaurants/inplace3-3",
+          "https://nagoya.hiltonjapan.co.jp/restaurants/ouchou",
+          "https://nagoya.parco.jp/shop/detail/?cd=009191",
+          "https://prtimes.jp/main/html/rd/p/000000004.000116722.html",
+          "https://prtimes.jp/main/html/rd/p/000004440.000018505.html",
+          "https://reconnaissance-nagoya.com/",
+          "https://tabelog.com/en/aichi/A2301/A230110/23089382/",
+          "https://thetowerhotel.jp/restaurant/",
+          "https://www.anacrowneplaza-nagoya.jp/pages/restaurant_gardencourt",
+          "https://www.anacrowneplaza-nagoya.jp/pages/restaurant_karin",
+          "https://www.anacrowneplaza-nagoya.jp/pages/restaurant_stargate",
+          "https://www.anacrowneplaza-nagoya.jp/pages/restaurant_winglounge",
+          "https://www.associa.com/nma/restaurant/pergola/",
+          "https://www.centralpark.co.jp/shop/sharecafe/",
+          "https://www.espacionagoya.com/restaurant-bar/the-bar-castle/",
+          "https://www.hiramatsurestaurant.jp/aubergedelill-nagoya/",
+          "https://www.hotpepper.jp/strJ004698778/",
+          "https://www.hotpepper.jp/strJ004699003/",
+          "https://www.kochuten.jp/",
+          "https://www.komeda.co.jp/shop/detail.html?id=1215",
+          "https://www.lafloraison-t.jp/",
+          "https://www.livingroom-skybar.com/",
+          "https://www.princehotels.co.jp/nagoya/restaurant/skydining/",
+          "https://www.quil-fait-bon.com/pages/nagoya-sakae",
+          "https://www.thekawabunnagoya.com/thekawabunnagoya/restaurant/"
+        ],
+        "verifiedAt": "2026-10-20T23:44:14.237210+00:00"
+      },
+      {
+        "environment": "production",
+        "city": "tokyo",
+        "view": "upcoming",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 15,
+        "ids": [
+          "15526",
+          "15538",
+          "15541",
+          "15544",
+          "15546",
+          "15555",
+          "15556",
+          "15557",
+          "15923",
+          "15929",
+          "15930",
+          "17106",
+          "17621",
+          "18422",
+          "18722"
+        ],
+        "verifiedAt": "2026-10-20T23:44:16.767711+00:00"
+      },
+      {
+        "environment": "production",
+        "city": "tokyo",
+        "view": "new",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 31,
+        "ids": [
+          "15527",
+          "15539",
+          "15540",
+          "15551",
+          "15552",
+          "15553",
+          "15554",
+          "15558",
+          "15966",
+          "15967",
+          "15968",
+          "16289",
+          "16325",
+          "17170",
+          "17171",
+          "17172",
+          "17173",
+          "17628",
+          "18027",
+          "18043",
+          "18051",
+          "18058",
+          "18102",
+          "18103",
+          "18300",
+          "18301",
+          "18302",
+          "18444",
+          "18445",
+          "18446",
+          "18447"
+        ],
+        "verifiedAt": "2026-10-20T23:44:17.001652+00:00"
+      },
+      {
+        "environment": "production",
+        "city": "tokyo",
+        "view": "top",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 30,
+        "ids": [
+          "15525",
+          "15528",
+          "15529",
+          "15530",
+          "15531",
+          "15532",
+          "15533",
+          "15534",
+          "15535",
+          "15536",
+          "15537",
+          "15542",
+          "15543",
+          "15545",
+          "15547",
+          "15548",
+          "15549",
+          "15550",
+          "15559",
+          "15560",
+          "15561",
+          "15562",
+          "15903",
+          "15974",
+          "18122",
+          "18123",
+          "18140",
+          "18141",
+          "18157",
+          "18158"
+        ],
+        "verifiedAt": "2026-10-20T23:44:17.193846+00:00"
+      },
+      {
+        "environment": "production",
+        "city": "tokyo",
+        "view": "discounts",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 40,
+        "ids": [
+          "https://and-gallery.com/#ikebukuro",
+          "https://and-gallery.com/#yurakucho",
+          "https://cocco.eastone.co.jp/shop/gotanda",
+          "https://cocco.eastone.co.jp/shop/kameido",
+          "https://conrad-tokyo.hiltonjapan.co.jp/restaurants/cerise",
+          "https://conrad-tokyo.hiltonjapan.co.jp/restaurants/chinablue",
+          "https://conrad-tokyo.hiltonjapan.co.jp/restaurants/twentyeight",
+          "https://csm-cafe.ltr-online.com/lp/csm-cafe-s012",
+          "https://gourmetpress.net/1488798/",
+          "https://miabocca.eastone.co.jp/shop/Ikebukuro",
+          "https://miabocca.eastone.co.jp/shop/Shakujii-park",
+          "https://miabocca.eastone.co.jp/shop/Shinjuku-takasimaya",
+          "https://mimimi-jiyugaoka.com/#floor1",
+          "https://onodera-group.com/kaitensushi-ikebukuro/",
+          "https://prtimes.jp/main/html/rd/p/000000009.000161200.html",
+          "https://prtimes.jp/main/html/rd/p/000000048.000152772.html",
+          "https://prtimes.jp/main/html/rd/p/000000196.000049183.html",
+          "https://prtimes.jp/main/html/rd/p/000000356.000048489.html",
+          "https://prtimes.jp/main/html/rd/p/000000592.000071323.html",
+          "https://prtimes.jp/main/html/rd/p/000004178.000003860.html",
+          "https://salvatore.jp/restaurant/asagaya/",
+          "https://sarabethsrestaurants.jp/location/omotesando/",
+          "https://sarabethsrestaurants.jp/location/shinagawa/",
+          "https://sarabethsrestaurants.jp/location/shinjuku/",
+          "https://sarabethsrestaurants.jp/location/tokyo/",
+          "https://shibakoen.bar-shinkai.com/",
+          "https://store-info.skylark.co.jp/syabuyo/map/198490/",
+          "https://tabelog.com/en/tokyo/A1303/A130301/13198692/",
+          "https://tokyo.hiltonjapan.co.jp/restaurants/st_georges_bar",
+          "https://www.andaztokyo.jp/restaurants/jp/thetavern-grill-lounge",
+          "https://www.herofield.com/bbq/tokyoprince/",
+          "https://www.hiramatsurestaurant.jp/jardindessens-tokyo/",
+          "https://www.mesm.jp/en/eat-drink/chefs-theatre.html",
+          "https://www.newotani.co.jp/tokyo/restaurant/gardenlounge/",
+          "https://www.quil-fait-bon.com/pages/aoyama",
+          "https://www.quil-fait-bon.com/pages/grand-maison-ginza",
+          "https://www.quil-fait-bon.com/pages/shinjuku",
+          "https://www.quil-fait-bon.com/pages/tokyo-dome-city",
+          "https://www.quil-fait-bon.com/pages/tokyo-skytree-town-solamachi",
+          "https://www.sunamo.jp/floor/shop_detail.html?UC=1_028"
+        ],
+        "verifiedAt": "2026-10-20T23:44:17.815913+00:00"
+      },
+      {
+        "environment": "production",
+        "city": "sapporo",
+        "view": "upcoming",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 12,
+        "ids": [
+          "15568",
+          "15569",
+          "15570",
+          "15571",
+          "15597",
+          "15926",
+          "15970",
+          "17103",
+          "18047",
+          "18048",
+          "18054",
+          "18810"
+        ],
+        "verifiedAt": "2026-10-20T23:44:17.969535+00:00"
+      },
+      {
+        "environment": "production",
+        "city": "sapporo",
+        "view": "new",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 30,
+        "ids": [
+          "15580",
+          "15586",
+          "15587",
+          "15588",
+          "15589",
+          "15590",
+          "15591",
+          "15592",
+          "15595",
+          "15596",
+          "16293",
+          "16296",
+          "17104",
+          "17105",
+          "17624",
+          "17627",
+          "18028",
+          "18029",
+          "18030",
+          "18031",
+          "18049",
+          "18055",
+          "18056",
+          "18057",
+          "18104",
+          "18105",
+          "18124",
+          "18125",
+          "18305",
+          "18306"
+        ],
+        "verifiedAt": "2026-10-20T23:44:18.160371+00:00"
+      },
+      {
+        "environment": "production",
+        "city": "sapporo",
+        "view": "top",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 30,
+        "ids": [
+          "15563",
+          "15564",
+          "15565",
+          "15566",
+          "15567",
+          "15572",
+          "15573",
+          "15574",
+          "15575",
+          "15576",
+          "15577",
+          "15578",
+          "15579",
+          "15581",
+          "15582",
+          "15583",
+          "15584",
+          "15585",
+          "15593",
+          "15594",
+          "15598",
+          "15599",
+          "15600",
+          "15601",
+          "15602",
+          "15603",
+          "15604",
+          "15605",
+          "15606",
+          "15607"
+        ],
+        "verifiedAt": "2026-10-20T23:44:18.436842+00:00"
+      },
+      {
+        "environment": "production",
+        "city": "sapporo",
+        "view": "discounts",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 34,
+        "ids": [
+          "https://anan.fuji-tatsu.co.jp/shop/sapporo-sinoro/",
+          "https://chocottosushi-kiwami.owst.jp/",
+          "https://cocco.eastone.co.jp/shop/kitahachijo",
+          "https://cocco.eastone.co.jp/shop/kitaichijo",
+          "https://cocco.eastone.co.jp/shop/kotoniekimae",
+          "https://cocco.eastone.co.jp/shop/miyanosawa",
+          "https://cocco.eastone.co.jp/shop/shindohigashi",
+          "https://cocco.eastone.co.jp/shop/souen",
+          "https://grand1934.com/restaurant/garden-dining-waraku/",
+          "https://grand1934.com/restaurant/kokaku/",
+          "https://grand1934.com/restaurant/lobby-lounge-mizar/",
+          "https://grand1934.com/restaurant/northern-terrace-diner/",
+          "https://grand1934.com/restaurant/old-saloon1934/",
+          "https://miabocca.eastone.co.jp/shop/Kita2jo",
+          "https://miabocca.eastone.co.jp/shop/Kotoni-station",
+          "https://miabocca.eastone.co.jp/shop/Sapporo-station",
+          "https://miabocca.eastone.co.jp/shop/atsubetsuminami",
+          "https://miabocca.eastone.co.jp/shop/sapporoduo",
+          "https://michiru.dkdining.com/sapporo/",
+          "https://prtimes.jp/main/html/rd/p/000000010.000134951.html",
+          "https://store-info.skylark.co.jp/syabuyo/map/198489/",
+          "https://www.anahisapporosusukino.com/restaurants/verde/",
+          "https://www.hyatt.com/hyatt-centric/ja-JP/ctsct-hyatt-centric-sapporo/dining",
+          "https://www.jrhotels.co.jp/tower/restaurant/skyj/",
+          "https://www.keioplaza-sapporo.co.jp/restaurants/akizu/",
+          "https://www.keioplaza-sapporo.co.jp/restaurants/crossvault/",
+          "https://www.keioplaza-sapporo.co.jp/restaurants/glass/",
+          "https://www.keioplaza-sapporo.co.jp/restaurants/miyama/",
+          "https://www.keioplaza-sapporo.co.jp/restaurants/yamanami/",
+          "https://www.princehotels.co.jp/sapporo/restaurant/alldaydininggrandeur",
+          "https://www.princehotels.co.jp/sapporo/restaurant/fuyojo",
+          "https://www.princehotels.co.jp/sapporo/restaurant/katsura",
+          "https://www.princehotels.co.jp/sapporo/restaurant/top_prince",
+          "https://www.tokyuhotels.co.jp/sapporostream/restaurant/splish/plan/angel_devil/index.html"
+        ],
+        "verifiedAt": "2026-10-20T23:44:18.866405+00:00"
+      }
+    ]
+  },
+  "verifiedAtUtc": "2026-10-20T23:44:33.338268+00:00",
+  "readerEvidence": [
+    {
+      "url": "https://camp-fire.jp/projects/965253/view",
+      "htmlSha256": "f87f654a1634e7e3e139a5c15d04b95cb8eb7a94e049e4b9c93f7e5dfa77058f"
+    },
+    {
+      "url": "https://prtimes.jp/main/html/rd/p/000000012.000063844.html",
+      "htmlSha256": "f368c1dfd0c4ea08f98b6d70859d2ed5f6dac7eb0704dd1b9e78885af3452db2"
+    },
+    {
+      "url": "https://camp-fire.jp/projects/965253/view/activities/897086",
+      "htmlSha256": "b8924a455a792d6a2465f1a7b5bdba8b94a56177519d16061291c8359c160853"
+    },
+    {
+      "url": "https://sapporokitaku.goguynet.jp/archive/2026/",
+      "htmlSha256": "c49a12fef4c530a40f1a3eac48409ae0c9611e9b9135289a01968d75305f3659"
+    },
+    {
+      "url": "https://sapporo-list.info/shop/doutor-sapporoekikitaguti/",
+      "htmlSha256": "473a0b27c9da9c2b4d9212bd68e9b47095e609b6e36317558bc08a70ae839559"
+    },
+    {
+      "url": "https://www.doutor.co.jp/dcs/menu/",
+      "htmlSha256": "8f278fbf7fdfb85301b628434fdcb0745b1d82272a2bae9ecbb51e0f1706be86"
+    },
+    {
+      "url": "https://www.doutor.co.jp/dcs/",
+      "htmlSha256": "d9d7bf4197cd8055ae2a763c776de185aa2778a02348e73dd985272077c64983"
+    },
+    {
+      "url": "https://sapporokitaku.goguynet.jp/2026/10/16/crie/",
+      "htmlSha256": "eb7afa8f80052a458b630fac6eeb58effe22f53396bb66824589048d4763b4f0"
+    },
+    {
+      "url": "https://prtimes.jp/main/html/rd/p/000000002.000191948.html",
+      "htmlSha256": "482f839948f973dfb8ce098b07179050060c3cbd9418aaa03a3114a3e0ca70b2"
+    },
+    {
+      "url": "https://tabelog.com/en/hokkaido/A0101/A010102/1085902/",
+      "htmlSha256": "92c6129e9cdab2d8c9128c8bfc06533feac32182815bc44b349bd34ba30d1977"
+    },
+    {
+      "url": "https://tabelog.com/en/hokkaido/A0101/A010102/1085902/dtlphotolst/4/smp2/",
+      "htmlSha256": "25b16838fba096b40e28b05fadd123c4879aab16e8aa786de7a2320f4cc44d19"
+    },
+    {
+      "url": "https://tabelog.com/en/hokkaido/A0101/A010102/1085902/dtlphotolst/",
+      "htmlSha256": "adf3120821803bb5ef482e6d64f9587df88e59d9a11f338bc1cde7a296f7efc4"
+    },
+    {
+      "url": "https://tabelog.com/en/hokkaido/A0101/A010102/1085902/dtlphotolst/3/smp2/",
+      "htmlSha256": "c5a24a41f0bc5038eff493d71c36913aa2f354b51fd966b4587a5c62cc02508d"
+    },
+    {
+      "url": "https://tabelog.com/en/hokkaido/A0101/A010102/1085902/dtlmenu/photo/",
+      "htmlSha256": "8e2ab4c22112bac7f833f27284a8ecb4f44048b85e018a60c8cf8676aac5f122"
+    },
+    {
+      "url": "http://www.north-continent.co.jp/",
+      "htmlSha256": "6e9cf6f694a7a90117e1bddbaf81a309701f3f20a168f0ed13c4e1de0f62d180"
+    },
+    {
+      "url": "http://www.north-continent.co.jp/news/343/",
+      "htmlSha256": "3895512740866fc5cec6766234c0190d229b64bd968da26ea244b688f4dd4114"
+    },
+    {
+      "url": "https://try-international.co.jp/orenosora-hp-open/",
+      "htmlSha256": "e376e59e29eea001b9cc6f70058a9a15b0f1c71952456875bff79f05f593037f"
+    },
+    {
+      "url": "https://try-international.co.jp/brand/orenosora/",
+      "htmlSha256": "5c1befbf5a3e0218bdce7b930785c3c47128b1520ca5fe6d086ee6982243845c"
+    },
+    {
+      "url": "https://try-international.co.jp/news/grand-opening/10092/",
+      "htmlSha256": "e750dbb11dcb601b8b208617760e486a5a4b7e1ff30c80faa24127b25adcd25f"
+    },
+    {
+      "url": "https://misoya.net/news/open-orenosoras-sapporo/",
+      "htmlSha256": "7349036fa3faa4d308542628f0ebbe991815a38b18b0cd36ea7f1c135cc784a6"
+    }
+  ],
+  "duplicateChecks": {
+    "local": [
+      {
+        "column": "productName.ilike",
+        "term": "%Continent%",
+        "matches": [
+          {
+            "id": 14349,
+            "productName": "Oviedo @ InterContinental Hangzhou Wulin",
+            "address": "26F, InterContinental Hangzhou Wulin, No.333 Tiyuchang Lu",
+            "sourceUrl": "https://www.diningcity.cn/hangzhou/oviedo_inter_continental_hangzhou_wulin"
+          },
+          {
+            "id": 14919,
+            "productName": "Intercontinental Sanya Haitang Bay Resort TianFu Chinese Restaurant",
+            "address": "三亚市海棠北路128号三亚海棠湾洲际度假酒店内",
+            "sourceUrl": "https://www.trip.com/restaurant/china/sanya/detail/intercontinental-sanya-haitang-bay-resort-tianfu-chinese-restaurant-31224718/?curr=CNY"
+          },
+          {
+            "id": 15590,
+            "productName": "NorthContinent — Akaren ga",
+            "address": "North B1F, Urban Net Sapporo Link Tower, 1-4 Kita 1-jo Nishi 5-chome, Chuo-ku, Sapporo",
+            "sourceUrl": "https://www.instagram.com/p/DcnB6wvuNzz/"
+          },
+          {
+            "id": 17174,
+            "productName": "THE CONTINENTAL ROYAL & Goh",
+            "address": "1F ONE FUKUOKA BLDG., 1-11-1 Tenjin, Chuo-ku, Fukuoka",
+            "sourceUrl": "https://onefukuoka-building.jp/shop/55"
+          },
+          {
+            "id": 17218,
+            "productName": "Hinotsuki / Sushi Kanesaka (Grand InterContinental Seoul Parnas)",
+            "address": "Grand InterContinental Seoul Parnas, 521 Teheran-ro, Gangnam-gu, Seoul (1F)",
+            "sourceUrl": "https://seoul.intercontinental.com/ko/promotion/dining/VYwrVxxXThytPKoKDemYngAAAaA3b7nt"
+          }
+        ]
+      },
+      {
+        "column": "productName.ilike",
+        "term": "%コンチネント%",
+        "matches": []
+      },
+      {
+        "column": "sourceUrl",
+        "term": "https://tabelog.com/hokkaido/A0101/A010102/1085902/",
+        "matches": []
+      },
+      {
+        "column": "address.ilike",
+        "term": "%5-1-4%",
+        "matches": []
+      }
+    ],
+    "production": [
+      {
+        "column": "productName.ilike",
+        "term": "%Continent%",
+        "matches": [
+          {
+            "id": 14349,
+            "productName": "Oviedo @ InterContinental Hangzhou Wulin",
+            "address": "26F, InterContinental Hangzhou Wulin, No.333 Tiyuchang Lu",
+            "sourceUrl": "https://www.diningcity.cn/hangzhou/oviedo_inter_continental_hangzhou_wulin"
+          },
+          {
+            "id": 14919,
+            "productName": "Intercontinental Sanya Haitang Bay Resort TianFu Chinese Restaurant",
+            "address": "三亚市海棠北路128号三亚海棠湾洲际度假酒店内",
+            "sourceUrl": "https://www.trip.com/restaurant/china/sanya/detail/intercontinental-sanya-haitang-bay-resort-tianfu-chinese-restaurant-31224718/?curr=CNY"
+          },
+          {
+            "id": 15590,
+            "productName": "NorthContinent — Akaren ga",
+            "address": "North B1F, Urban Net Sapporo Link Tower, 1-4 Kita 1-jo Nishi 5-chome, Chuo-ku, Sapporo",
+            "sourceUrl": "https://www.instagram.com/p/DcnB6wvuNzz/"
+          },
+          {
+            "id": 17174,
+            "productName": "THE CONTINENTAL ROYAL & Goh",
+            "address": "1F ONE FUKUOKA BLDG., 1-11-1 Tenjin, Chuo-ku, Fukuoka",
+            "sourceUrl": "https://onefukuoka-building.jp/shop/55"
+          },
+          {
+            "id": 17218,
+            "productName": "Hinotsuki / Sushi Kanesaka (Grand InterContinental Seoul Parnas)",
+            "address": "Grand InterContinental Seoul Parnas, 521 Teheran-ro, Gangnam-gu, Seoul (1F)",
+            "sourceUrl": "https://seoul.intercontinental.com/ko/promotion/dining/VYwrVxxXThytPKoKDemYngAAAaA3b7nt"
+          }
+        ]
+      },
+      {
+        "column": "productName.ilike",
+        "term": "%コンチネント%",
+        "matches": []
+      },
+      {
+        "column": "sourceUrl",
+        "term": "https://tabelog.com/hokkaido/A0101/A010102/1085902/",
+        "matches": []
+      },
+      {
+        "column": "address.ilike",
+        "term": "%5-1-4%",
+        "matches": []
+      }
+    ]
+  },
+  "preservedPinVerification": {
+    "local": {
+      "existingMediaPreserved": 1,
+      "authorPreserved": true,
+      "openingPreserved": true
+    },
+    "production": {
+      "existingMediaPreserved": 1,
+      "authorPreserved": true,
+      "openingPreserved": true
+    }
+  }
+}

@@ -6,7 +6,7 @@ import { formatMegawatts } from '@/lib/power';
 import { money } from '@/lib/format';
 import type { MapPinJson } from '@/lib/types';
 
-export type MapStat = { key: string; labelKey: 'statPins' | 'statCost' | 'statMedianCost' | 'statMW' | 'statMWGen' | 'statMWUse' | 'statMarket' | 'statEpisodes' | 'statRating' | 'statTicket'; value: string; tone: string; have: number };
+export type MapStat = { key: string; labelKey: 'statPins' | 'statCost' | 'statMedianCost' | 'statMW' | 'statMWGen' | 'statMWUse' | 'statMWStore' | 'statMarket' | 'statEpisodes' | 'statRating' | 'statTicket'; value: string; tone: string; have: number };
 
 // How many pins must carry a number before its stat is worth showing.
 const MIN_PINS = { cost: 1, megawatts: 1, marketVolume: 3, episodes: 5, rating: 5, tickets: 5 } as const;
@@ -28,10 +28,11 @@ const median = (values: number[]) => {
 
 export function mapStats(pins: MapPinJson[], numberLocale = 'en-US'): MapStat[] {
   const usd = pins.flatMap((pin) => (pin.priceCurrency === 'USD' ? [positive(pin.price)] : [])).filter((n): n is number => n != null);
-  const mwOf = (kind: 'generation' | 'usage') =>
+  const mwOf = (kind: 'generation' | 'usage' | 'storage') =>
     pins.filter((pin) => (pin.powerKind ?? 'usage') === kind).map((pin) => positive(pin.megawatts)).filter((n): n is number => n != null);
   const mwGen = mwOf('generation');
   const mwUse = mwOf('usage');
+  const mwStore = mwOf('storage');
   const market = pins.map((pin) => positive(pin.marketVolume)).filter((n): n is number => n != null);
   const episodes = pins.map((pin) => positive(pin.episodeCount)).filter((n): n is number => n != null);
   const rating = pins.map((pin) => positive(pin.ratingPercent)).filter((n): n is number => n != null);
@@ -47,6 +48,7 @@ export function mapStats(pins: MapPinJson[], numberLocale = 'en-US'): MapStat[] 
   // Power made and power drawn are different totals; a sum of both says nothing.
   if (mwGen.length >= MIN_PINS.megawatts) extra.push({ key: 'mwGen', labelKey: 'statMWGen', value: formatMegawatts(sum(mwGen)), tone: 'text-success', have: mwGen.length });
   if (mwUse.length >= MIN_PINS.megawatts) extra.push({ key: 'mwUse', labelKey: 'statMWUse', value: formatMegawatts(sum(mwUse)), tone: 'text-past', have: mwUse.length });
+  if (mwStore.length >= MIN_PINS.megawatts) extra.push({ key: 'mwStore', labelKey: 'statMWStore', value: formatMegawatts(sum(mwStore)), tone: 'text-link', have: mwStore.length });
   if (market.length >= MIN_PINS.marketVolume) extra.push({ key: 'market', labelKey: 'statMarket', value: money(sum(market), 'USD'), tone: 'text-future', have: market.length });
   if (episodes.length >= MIN_PINS.episodes) extra.push({ key: 'episodes', labelKey: 'statEpisodes', value: Math.round(sum(episodes)).toLocaleString(numberLocale), tone: 'text-link', have: episodes.length });
   if (rating.length >= MIN_PINS.rating) extra.push({ key: 'rating', labelKey: 'statRating', value: `${Math.round(mean(rating))}%`, tone: 'text-past', have: rating.length });

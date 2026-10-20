@@ -247,8 +247,8 @@ export type SearchQuery = {
   // Bounds a pin's annual electricity use in gigawatt-hours (energy:>=1twh).
   energies: RatingBound[];
   // Whether a pin's megawatts are power it makes or power it draws
-  // (power:generation, power:usage), any of them.
-  powerKinds: ('generation' | 'usage')[];
+  // or stores (power:generation, power:usage, power:storage), any of them.
+  powerKinds: ('generation' | 'usage' | 'storage')[];
   // Holidays and special days by name, any of them (holiday:Halloween); the
   // server turns each into the days it falls on.
   holidays: string[];
@@ -485,7 +485,7 @@ function readParts(parts: QueryPart[]): SearchQuery {
         if (!held.some((b) => b.op === bound.op && b.value === bound.value)) held.push(bound);
       }
     } else if (part.field === 'power') {
-      const kind = /^(gen(?:erat\w*)?|production|produc\w*|supply)$/i.test(part.value) ? 'generation' : /^(us(?:e|age|ed)|consum\w*|demand|draw\w*|load)$/i.test(part.value) ? 'usage' : null;
+      const kind = /^(gen(?:erat\w*)?|production|produc\w*|supply)$/i.test(part.value) ? 'generation' : /^(us(?:e|age|ed)|consum\w*|demand|draw\w*|load)$/i.test(part.value) ? 'usage' : /^(stor\w*|batter\w*|bess)$/i.test(part.value) ? 'storage' : null;
       if (kind && !query.powerKinds.includes(kind)) query.powerKinds.push(kind);
     } else if (part.field === 'delay') {
       for (const bound of delayBounds(part.value)) {

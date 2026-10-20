@@ -1297,6 +1297,7 @@ const vi: Messages = {
     statMW: 'MW:',
     statMWGen: 'MW phát:',
     statMWUse: 'MW tiêu thụ:',
+    statMWStore: 'MW lưu trữ:',
     statMedianCost: 'Chi phí trung vị:',
     statMarket: 'Thị trường:',
     statEpisodes: 'Tập:',

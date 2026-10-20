@@ -243,6 +243,7 @@ export const RESERVED_TAGS: ReservedTag[] = [
   // Power a pin's facility makes against power it draws.
   { key: 'powerGeneration', name: 'Power generation', field: 'power', value: 'generation', icon: 'bolt' },
   { key: 'powerUsage', name: 'Power usage', field: 'power', value: 'usage', icon: 'bolt' },
+  { key: 'powerStorage', name: 'Power storage', field: 'power', value: 'storage', icon: 'bolt' },
   { key: 'mw100', name: '100+ MW', field: 'mw', value: '>=100', min: 100, icon: 'bolt' },
   { key: 'mw500', name: '500+ MW', field: 'mw', value: '>=500', min: 500, icon: 'bolt' },
   { key: 'gw1', name: '1+ GW', field: 'mw', value: '>=1gw', min: 1000, icon: 'bolt' },

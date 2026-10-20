@@ -1351,6 +1351,7 @@ const ru: Messages = {
     statMW: 'MW:',
     statMWGen: 'МВт выработка:',
     statMWUse: 'МВт потребление:',
+    statMWStore: 'МВт накопление:',
     statMedianCost: 'Медианная стоимость:',
     statMarket: 'Рынок:',
     statEpisodes: 'Эпизоды:',

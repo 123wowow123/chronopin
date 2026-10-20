@@ -86,3 +86,6 @@ See [machine-readable counts, duplicate matches and source hashes](restaurant-ja
 
 
 Continuation: [Batch111](restaurant-japan-30-japan111-2026-10-20.json) publishes Sapporo Hiraoka with 172 qualified menu entries and three credited images. Sapporo Coming soon is now12/30; four-city totals become436memberships/70missing. This audit table remains the pre-publication snapshot. Continue Ore no Sora, LACHIC and Ripasso before Osaka/Fukuoka.
+
+
+Continuation: [Batch112](restaurant-japan-30-japan112-2026-10-20.json) enriches existing NorthContinent15590with30newmenuentries/fourphotos; no additional membership. LACHIC customer branch selector omits the configured branch; Ore no Sora brand menu labelsChibaMakuhariandcannotbeusedforSapporo. CHAEN and Doutor timeline/site/menu gaps are recorded. All-six-city counts remain639/114; other-city priority retained.

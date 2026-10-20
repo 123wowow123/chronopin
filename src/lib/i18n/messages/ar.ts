@@ -1595,6 +1595,7 @@ const ar: Messages = {
     statMW: 'ميغاواط:',
     statMWGen: 'ميغاواط منتجة:',
     statMWUse: 'ميغاواط مستهلكة:',
+    statMWStore: 'ميغاواط مخزنة:',
     statMedianCost: 'وسيط التكلفة:',
     statMarket: 'السوق:',
     statEpisodes: 'الحلقات:',

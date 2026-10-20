@@ -1285,6 +1285,7 @@ const it: Messages = {
     statMW: 'MW:',
     statMWGen: 'MW generati:',
     statMWUse: 'MW consumati:',
+    statMWStore: 'MW accumulati:',
     statMedianCost: 'Costo mediano:',
     statMarket: 'Mercato:',
     statEpisodes: 'Episodi:',

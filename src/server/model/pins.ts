@@ -65,7 +65,7 @@ export type PinSearchFilters = {
   mws: RatingBound[];
   costs: RatingBound[];
   energies: RatingBound[];
-  powerKinds: ('generation' | 'usage')[];
+  powerKinds: ('generation' | 'usage' | 'storage')[];
   holidays: string[];
 };
 

@@ -1288,6 +1288,7 @@ const ko: Messages = {
     statMW: 'MW:',
     statMWGen: '발전 MW:',
     statMWUse: '소비 MW:',
+    statMWStore: '저장 MW:',
     statMedianCost: '비용 중앙값:',
     statMarket: '예측 시장:',
     statEpisodes: '에피소드:',
