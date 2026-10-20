@@ -443,3 +443,18 @@ also add information from these sites and create stats for HUD and pin detail if
 • Epoch AI Data Center Datasets: Provides downloadable, frequently updated CSV datasets tracking AI data centers, timelines, and chip quantities (updated through October 2026).
 • Business Insider Data Center Tracker: Maps data centers with air permits issued through December 2025, detailing estimated electricity use and dedicated power sources like natural gas plants.
 • AI Data Center Legislation Tracker: Tracks active and failed state-level bills and regulatory policies regarding AI data center energy usage and environmental accountability.
+
+
+
+
+pin category should be promoted to tag groups and tag cloud group should reflect this
+- backup data before doing this
+
+need to be able to filter pin by country / state
+
+
+there should be distiction before power generation and popwer usage
+
+
+ensure the product buy button is working in the country your in or collapse it in ellipsis with country category
+http://localhost:3000/pin/15767/eric-bordelet-sydre-argelette-grand-cru-celebrated-worldwide-as-the-apex-of-fine

@@ -1,0 +1,50 @@
+{
+  "completedAt": "2026-10-20T02:19:35.622Z",
+  "environment": "production",
+  "pins": [
+    {
+      "id": 15971,
+      "title": "La Cime — Osaka restaurant guide"
+    },
+    {
+      "id": 18191,
+      "title": "Reine des prés Opens 2012-11-26"
+    },
+    {
+      "id": 18192,
+      "title": "LA VAGABONDE — Tsurumai Opens 2011-04-14"
+    },
+    {
+      "id": 18193,
+      "title": "Restaurant Aoike Opens 2014-02-04"
+    },
+    {
+      "id": 18194,
+      "title": "La Biographie… — Shimodachiuri / Senbon Opens 2021-03-18"
+    }
+  ],
+  "locales": [
+    "es",
+    "fr",
+    "de",
+    "ja",
+    "zh",
+    "ko",
+    "hi",
+    "ar",
+    "th",
+    "it",
+    "ru",
+    "pt",
+    "ms",
+    "vi",
+    "id"
+  ],
+  "saved": 75,
+  "missing": 60,
+  "outdated": 15,
+  "verifiedLocalizedResponses": 75,
+  "unchangedEnglishPins": 5,
+  "unchangedAuthors": 5,
+  "selectedPinsRemaining": 0
+}

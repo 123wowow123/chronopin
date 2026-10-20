@@ -1,15 +1,15 @@
 # Japan restaurant target audit — October 16, 2026
 
-Target: **30 distinct eligible restaurants in every tab of every city**. **589 verified memberships; 154 still missing**. This target remains incomplete; surplus in another tab does not offset a shortage.
+Target: **30 distinct eligible restaurants in every tab of every city**. **598 verified memberships; 146 still missing**. This target remains incomplete; surplus in another tab does not offset a shortage.
 
-**Batch 100 published and publicly verified (October 19, 2026):** Added **Restaurant Difference Utsubohonmachi and Lumière Shinsaibashi Honten**, with **57 ordinary menu entries, three offer-course entries and eight credited official Azure photographs**. Both original branch opening dates confirmed. Lumière’s operator timetable verifies three Christmas/After Christmas dinner offers, excluding its December22 private service. Difference’s conflicting year-end schedule remains held. **Osaka Top reaches25/30 and Specials28/30**. Exact saved profiles, every rendered menu entry, gallery credits and native title/image links verified in local and public production. All 24 counts match at **589 memberships / 154 missing**. No deployment. [Batch evidence](restaurant-japan-30-japan100-2026-10-19.json).
+**Batch 101 large round published and publicly verified (October 19, 2026):** Added **seven restaurants, 167 ordinary menu entries, three Christmas offers and 23 credited Azure photographs**. Cugnette, relocated YUNiCO, relocated LE PONT DE CIEL and relocated La Kanro bring **Osaka Top to 29/30**; YUNiCO’s explicitly dated 2026 Christmas dinner takes **Osaka Specials to 29/30**. Raisin d’Or, Shokudo Saison d’Or and La Rochelle Fukuoka bring **Fukuoka Top to 25/30**; two verified Raisin d’Or Christmas courses take **Fukuoka Specials to 34/30**, counting the restaurant once. Six branch dates confirmed; Saison d’Or retains a transparent month-level December 2015 estimate with conflicting late-November evidence queued. La Rochelle’s primary September 6, 2002 opening takes precedence over a conflicting directory date. Full profiles, all 167 rendered ordinary and three offer menu entries, gallery credits and nine native title/image memberships verified in both environments. Three offer schedules passed 30 boundary assertions and three next-start/expiry checks. All 24 counts match at **598 memberships / 146 missing**. No deployment. [Batch evidence](restaurant-japan-30-japan101-2026-10-19.json).
 
-All 24 local and public production guide counts agree. Batches 88–100 now have complete public HTTPS verification; earlier timeout checkpoints below are historical.
+All 24 local and public production guide counts agree. Batches 88–101 now have complete public HTTPS verification; earlier timeout checkpoints below are historical.
 
 | City (west to east) | Coming soon | Just opened | Top restaurants | Specials |
 | --- | ---: | ---: | ---: | ---: |
-| Fukuoka | 9/30 | 20/30 | 22/30 | 33/30 |
-| Osaka | 12/30 | 22/30 | 25/30 | 28/30 |
+| Fukuoka | 9/30 | 20/30 | 25/30 | 34/30 |
+| Osaka | 12/30 | 22/30 | 29/30 | 29/30 |
 | Kyoto | 11/30 | 33/30 | 30/30 | 34/30 |
 | Nagoya | 11/30 | 31/30 | 30/30 | 31/30 |
 | Tokyo | 14/30 | 23/30 | 30/30 | 37/30 |
@@ -21,12 +21,12 @@ All 24 local and public production guide counts agree. Batches 88–100 now have
 | --- | --- | ---: | ---: | ---: | ---: |
 | Fukuoka | Coming soon | 9 | 9 | 30 | 21 |
 | Fukuoka | Just opened | 20 | 20 | 30 | 10 |
-| Fukuoka | Top restaurants | 22 | 22 | 30 | 8 |
-| Fukuoka | Specials | 33 | 33 | 30 | 0 |
+| Fukuoka | Top restaurants | 25 | 25 | 30 | 5 |
+| Fukuoka | Specials | 34 | 34 | 30 | 0 |
 | Osaka | Coming soon | 12 | 12 | 30 | 18 |
 | Osaka | Just opened | 22 | 22 | 30 | 8 |
-| Osaka | Top restaurants | 25 | 25 | 30 | 5 |
-| Osaka | Specials | 28 | 28 | 30 | 2 |
+| Osaka | Top restaurants | 29 | 29 | 30 | 1 |
+| Osaka | Specials | 29 | 29 | 30 | 1 |
 | Kyoto | Coming soon | 11 | 11 | 30 | 19 |
 | Kyoto | Just opened | 33 | 33 | 30 | 0 |
 | Kyoto | Top restaurants | 30 | 30 | 30 | 0 |
