@@ -1,0 +1,70 @@
+[
+  {
+    "sourceUrl": "https://gcn.com/nvidia-vera-rubin-chips-begin-shipping/20421/",
+    "charts": [
+      {
+        "title": "Rack inference, NVFP4",
+        "unit": "PFLOPS (sparse)",
+        "note": "NVIDIA's rack-level figures, both with sparsity: Vera Rubin NVL72 against GB300 NVL72.",
+        "sourceUrl": "https://www.nvidia.com/en-us/data-center/vera-rubin-nvl72/",
+        "bars": [
+          { "label": "GB300 NVL72", "value": 1440 },
+          { "label": "Vera Rubin NVL72", "value": 3600, "highlight": true }
+        ]
+      },
+      {
+        "title": "Rack training, FP4",
+        "unit": "PFLOPS (dense)",
+        "note": "Dense (no sparsity) FP4 tensor throughput per rack.",
+        "sourceUrl": "https://www.nvidia.com/en-us/data-center/vera-rubin-nvl72/",
+        "bars": [
+          { "label": "GB300 NVL72", "value": 1080 },
+          { "label": "Vera Rubin NVL72", "value": 2520, "highlight": true }
+        ]
+      },
+      {
+        "title": "Rack GPU memory bandwidth",
+        "unit": "TB/s",
+        "note": "GB300 NVL72 is published as \"up to 576 TB/s\".",
+        "sourceUrl": "https://www.nvidia.com/en-us/data-center/gb300-nvl72/",
+        "bars": [
+          { "label": "GB300 NVL72", "value": 576 },
+          { "label": "Vera Rubin NVL72", "value": 1400, "highlight": true }
+        ]
+      }
+    ],
+    "tables": [
+      {
+        "title": "Rack specifications",
+        "columns": ["Spec", "GB300 NVL72", "Vera Rubin NVL72"],
+        "rows": [
+          ["GPUs / CPUs", "72 Blackwell Ultra / 36 Grace", "72 Rubin / 36 Vera"],
+          ["FP4 inference (sparse)", "1,440 PFLOPS", "3,600 PFLOPS"],
+          ["FP4 training (dense)", "1,080 PFLOPS", "2,520 PFLOPS"],
+          ["GPU memory", "20 TB", "20.7 TB HBM4"],
+          ["GPU memory bandwidth", "up to 576 TB/s", "1,400 TB/s"],
+          ["NVLink bandwidth", "130 TB/s", "216 TB/s"],
+          ["CPU cores", "2,592 Arm Neoverse V2", "3,168 NVIDIA Olympus"],
+          ["CPU memory", "17 TB LPDDR5X", "up to 54 TB LPDDR5X"]
+        ],
+        "note": "Vendor-published specifications; NVIDIA lists sparse and dense figures under different footnotes on the two pages, so only like-for-like rows are charted.",
+        "sourceUrl": "https://www.nvidia.com/en-us/data-center/vera-rubin-nvl72/"
+      },
+      {
+        "title": "Vera Rubin NVL72 scale",
+        "columns": ["Spec", "Rack", "Superchip", "Rubin GPU"],
+        "rows": [
+          ["FP4 inference (sparse)", "3,600 PFLOPS", "100 PFLOPS", "50 PFLOPS"],
+          ["FP4 training (dense)", "2,520 PFLOPS", "70 PFLOPS", "35 PFLOPS"],
+          ["FP8/FP6 training (dense)", "1,260 PFLOPS", "35 PFLOPS", "17.5 PFLOPS"],
+          ["FP16/BF16 (dense)", "288 PFLOPS", "8 PFLOPS", "4 PFLOPS"],
+          ["FP64", "2,400 TFLOPS", "67 TFLOPS", "33 TFLOPS"],
+          ["HBM4 memory", "20.7 TB", "576 GB", "288 GB"],
+          ["HBM4 bandwidth", "1,400 TB/s", "38.5 TB/s", "19.2 TB/s"],
+          ["NVLink 6 bandwidth", "216 TB/s", "6 TB/s", "3 TB/s"]
+        ],
+        "sourceUrl": "https://www.nvidia.com/en-us/data-center/vera-rubin-nvl72/"
+      }
+    ]
+  }
+]

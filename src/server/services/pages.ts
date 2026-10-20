@@ -11,6 +11,8 @@ import Favorite from '../model/favorite';
 import { eventInfoForPin } from '../model/pinEventInfo';
 import { powerForPin } from '../model/pinPower';
 import { energyForPin } from '../model/pinEnergy';
+import { perfForPin } from '../model/pinPerf';
+import type { PinPerfJson } from '@/lib/pinPerf';
 import type { PinEnergyJson } from '@/lib/energy';
 import type { PinPowerJson } from '@/lib/power';
 import { candidatesForPin } from '../model/pinCandidate';
@@ -241,6 +243,14 @@ export async function pinEnergy(id: number): Promise<PinEnergyJson | null> {
   cacheLife('hours');
   cacheTag(TAGS.pin(id));
   return energyForPin(id);
+}
+
+// The pin's hardware performance charts and tables, or null when none is recorded.
+export async function pinPerf(id: number): Promise<PinPerfJson | null> {
+  'use cache';
+  cacheLife('hours');
+  cacheTag(TAGS.pin(id));
+  return perfForPin(id);
 }
 
 // The big-four contenders an awards pin lists, empty for any other pin.
