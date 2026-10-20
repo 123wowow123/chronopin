@@ -1,0 +1,3274 @@
+{
+  "batch": 103,
+  "checkedAt": "2026-10-19",
+  "counts": {
+    "venues": 7,
+    "newPins": 7,
+    "menuEntries": 334,
+    "offerMenuEntries": 18,
+    "galleryLinks": 25,
+    "newGuideMemberships": 9,
+    "newSpecialVenues": 2,
+    "offers": 2
+  },
+  "entries": [
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Shichirin Yakiniku Anan — Sapporo Shinoro Opens 2026-10-01",
+        "description": "A44-seat charcoal-grill yakiniku restaurant in Shinoro, with à la carte meats, side dishes and an explicitly dated October opening sale.",
+        "sourceUrl": "https://anan.fuji-tatsu.co.jp/shop/sapporo-sinoro/",
+        "address": "5-5-18 Shinoro2-jo, Kita-ku, Sapporo",
+        "productName": "Shichirin Yakiniku Anan — Sapporo Shinoro",
+        "utcStartDateTime": "2026-10-01T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "Operator datedSeptember24,2026opening announcement and September29corporate release both explicitly give October1,2026at11:00for this Shinoro branch. Truncated026in the operator sentence is resolved by the dated2026release and heading. ChainwideFebruary2026menu-version dates on booking plans are not branch opening dates.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Sapporo",
+          "Japan",
+          "Shinoro",
+          "Yakiniku"
+        ],
+        "longFormSummary": "<p>A44-seat charcoal-grill yakiniku restaurant in Shinoro, with à la carte meats, side dishes and an explicitly dated October opening sale.<cite data-ref=\"https://anan.fuji-tatsu.co.jp/shop/sapporo-sinoro/\"></cite></p><p>Operator datedSeptember24,2026opening announcement and September29corporate release both explicitly give October1,2026at11:00for this Shinoro branch. Truncated026in the operator sentence is resolved by the dated2026release and heading. ChainwideFebruary2026menu-version dates on booking plans are not branch opening dates.</p>",
+        "references": [
+          {
+            "url": "https://anan.fuji-tatsu.co.jp/shop/sapporo-sinoro/",
+            "title": "Shichirin Yakiniku Anan — Sapporo Shinoro — branch website",
+            "confidence": 90,
+            "reasoning": "Shichirin Yakiniku Anan — Sapporo Shinoro — branch website"
+          },
+          {
+            "url": "https://prtimes.jp/main/html/rd/p/000000023.000178899.html",
+            "title": "Exact2026opening and eight discounted items",
+            "confidence": 90,
+            "reasoning": "Exact2026opening and eight discounted items"
+          },
+          {
+            "url": "https://anan.fuji-tatsu.co.jp/topics/5950/",
+            "title": "Operator dated opening sale notice",
+            "confidence": 90,
+            "reasoning": "Operator dated opening sale notice"
+          },
+          {
+            "url": "https://www.hotpepper.jp/strJ004661221/food/",
+            "title": "Exact-branch managed menu",
+            "confidence": 90,
+            "reasoning": "Exact-branch managed menu"
+          },
+          {
+            "url": "https://www.hotpepper.jp/strJ004661221/drink/",
+            "title": "Exact-branch managed drinks",
+            "confidence": 90,
+            "reasoning": "Exact-branch managed drinks"
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://anan.fuji-tatsu.co.jp/shop/sapporo-sinoro/",
+          "menu": {
+            "pinSourceUrl": "https://anan.fuji-tatsu.co.jp/shop/sapporo-sinoro/",
+            "name": "Shichirin Yakiniku Anan — Sapporo Shinoro",
+            "checkedAt": "2026-10-19",
+            "menus": [
+              {
+                "label": "Anan Shinoro — ordinary food",
+                "url": "https://www.hotpepper.jp/strJ004661221/food/",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "安安カルビ",
+                    "price": 429,
+                    "note": "Tax included; base ordinary rate. Opening-sale prices appear separately; orders22:00onwards incur the branch’s10%late charge."
+                  },
+                  {
+                    "name": "ハラミ",
+                    "price": 539,
+                    "note": "Tax included; base ordinary rate. Opening-sale prices appear separately; orders22:00onwards incur the branch’s10%late charge."
+                  },
+                  {
+                    "name": "牛タン塩",
+                    "price": 649,
+                    "note": "Tax included; base ordinary rate. Opening-sale prices appear separately; orders22:00onwards incur the branch’s10%late charge."
+                  },
+                  {
+                    "name": "ネギ塩牛タン",
+                    "price": 759,
+                    "note": "Tax included; base ordinary rate. Opening-sale prices appear separately; orders22:00onwards incur the branch’s10%late charge."
+                  },
+                  {
+                    "name": "ヤングカルビ（牛バラ）",
+                    "price": 385,
+                    "note": "Tax included; base ordinary rate. Opening-sale prices appear separately; orders22:00onwards incur the branch’s10%late charge."
+                  },
+                  {
+                    "name": "安安ロース",
+                    "price": 429,
+                    "note": "Tax included; base ordinary rate. Opening-sale prices appear separately; orders22:00onwards incur the branch’s10%late charge."
+                  },
+                  {
+                    "name": "ブタタン/味噌ブタタン/激辛ブタタン",
+                    "price": 363,
+                    "note": "Tax included; base ordinary rate. Opening-sale prices appear separately; orders22:00onwards incur the branch’s10%late charge."
+                  },
+                  {
+                    "name": "ネギ塩ブタタン",
+                    "price": 495,
+                    "note": "Tax included; base ordinary rate. Opening-sale prices appear separately; orders22:00onwards incur the branch’s10%late charge."
+                  },
+                  {
+                    "name": "トントロ/味噌トントロ/激辛トントロ",
+                    "price": 363,
+                    "note": "Tax included; base ordinary rate. Opening-sale prices appear separately; orders22:00onwards incur the branch’s10%late charge."
+                  },
+                  {
+                    "name": "ブタカルビ/味噌ブタカルビ/激辛ブタカルビ",
+                    "price": 319,
+                    "note": "Tax included; base ordinary rate. Opening-sale prices appear separately; orders22:00onwards incur the branch’s10%late charge."
+                  },
+                  {
+                    "name": "ポークウィンナー/激辛ポークウインナー",
+                    "price": 319,
+                    "note": "Tax included; base ordinary rate. Opening-sale prices appear separately; orders22:00onwards incur the branch’s10%late charge."
+                  },
+                  {
+                    "name": "おくら肉巻き",
+                    "price": 319,
+                    "note": "Tax included; base ordinary rate. Opening-sale prices appear separately; orders22:00onwards incur the branch’s10%late charge."
+                  },
+                  {
+                    "name": "とりもも/味噌とりもも/激辛とりもも",
+                    "price": 319,
+                    "note": "Tax included; base ordinary rate. Opening-sale prices appear separately; orders22:00onwards incur the branch’s10%late charge."
+                  },
+                  {
+                    "name": "ネギ塩とりもも",
+                    "price": 429,
+                    "note": "Tax included; base ordinary rate. Opening-sale prices appear separately; orders22:00onwards incur the branch’s10%late charge."
+                  },
+                  {
+                    "name": "せせり/味噌せせり/激辛せせり",
+                    "price": 363,
+                    "note": "Tax included; base ordinary rate. Opening-sale prices appear separately; orders22:00onwards incur the branch’s10%late charge."
+                  },
+                  {
+                    "name": "ヤゲンナンコツ/味噌ヤゲン/激辛ヤゲン",
+                    "price": 319,
+                    "note": "Tax included; base ordinary rate. Opening-sale prices appear separately; orders22:00onwards incur the branch’s10%late charge."
+                  },
+                  {
+                    "name": "味付ジンギスカン",
+                    "price": 539,
+                    "note": "Tax included; base ordinary rate. Opening-sale prices appear separately; orders22:00onwards incur the branch’s10%late charge."
+                  },
+                  {
+                    "name": "塩ラム",
+                    "price": 539,
+                    "note": "Tax included; base ordinary rate. Opening-sale prices appear separately; orders22:00onwards incur the branch’s10%late charge."
+                  },
+                  {
+                    "name": "シマチョウ/味噌シマチョウ/激辛シマチョウ",
+                    "price": 462,
+                    "note": "Tax included; base ordinary rate. Opening-sale prices appear separately; orders22:00onwards incur the branch’s10%late charge."
+                  },
+                  {
+                    "name": "塩ブタホルモン/味噌ブタホルモン/激辛ブタホルモン",
+                    "price": 429,
+                    "note": "Tax included; base ordinary rate. Opening-sale prices appear separately; orders22:00onwards incur the branch’s10%late charge."
+                  },
+                  {
+                    "name": "塩ガツ/味噌ガツ/激辛ガツ",
+                    "price": 319,
+                    "note": "Tax included; base ordinary rate. Opening-sale prices appear separately; orders22:00onwards incur the branch’s10%late charge."
+                  },
+                  {
+                    "name": "ふわトロ牛レバー",
+                    "price": 429,
+                    "note": "Tax included; base ordinary rate. Opening-sale prices appear separately; orders22:00onwards incur the branch’s10%late charge."
+                  },
+                  {
+                    "name": "ホルモンミックス",
+                    "price": 1089,
+                    "note": "Tax included; base ordinary rate. Opening-sale prices appear separately; orders22:00onwards incur the branch’s10%late charge."
+                  },
+                  {
+                    "name": "オクラ/ししとう/じゃがいも/たまねぎ/ヤングコーン/焼きキャベツ　各種",
+                    "price": 275,
+                    "note": "Tax included; base ordinary rate. Opening-sale prices appear separately; orders22:00onwards incur the branch’s10%late charge."
+                  },
+                  {
+                    "name": "プチ紋甲イカ",
+                    "price": 429,
+                    "note": "Tax included; base ordinary rate. Opening-sale prices appear separately; orders22:00onwards incur the branch’s10%late charge."
+                  },
+                  {
+                    "name": "有頭エビ塩焼き　2尾",
+                    "price": 539,
+                    "note": "Tax included; base ordinary rate. Opening-sale prices appear separately; orders22:00onwards incur the branch’s10%late charge."
+                  },
+                  {
+                    "name": "殻付きホタテ（2枚）",
+                    "price": 539,
+                    "note": "Tax included; base ordinary rate. Opening-sale prices appear separately; orders22:00onwards incur the branch’s10%late charge."
+                  },
+                  {
+                    "name": "イイダコ焼き",
+                    "price": 539,
+                    "note": "Tax included; base ordinary rate. Opening-sale prices appear separately; orders22:00onwards incur the branch’s10%late charge."
+                  },
+                  {
+                    "name": "海鮮にらチヂミ",
+                    "price": 319,
+                    "note": "Tax included; base ordinary rate. Opening-sale prices appear separately; orders22:00onwards incur the branch’s10%late charge."
+                  },
+                  {
+                    "name": "ししゃも",
+                    "price": 319,
+                    "note": "Tax included; base ordinary rate. Opening-sale prices appear separately; orders22:00onwards incur the branch’s10%late charge."
+                  },
+                  {
+                    "name": "安安塩キャベツ",
+                    "price": 319,
+                    "note": "Tax included; base ordinary rate. Opening-sale prices appear separately; orders22:00onwards incur the branch’s10%late charge."
+                  },
+                  {
+                    "name": "味噌マヨキャベツ",
+                    "price": 319,
+                    "note": "Tax included; base ordinary rate. Opening-sale prices appear separately; orders22:00onwards incur the branch’s10%late charge."
+                  },
+                  {
+                    "name": "チョレギサラダ/シーザーサラダ",
+                    "price": 429,
+                    "note": "Tax included; base ordinary rate. Opening-sale prices appear separately; orders22:00onwards incur the branch’s10%late charge."
+                  },
+                  {
+                    "name": "サンチュ",
+                    "price": 319,
+                    "note": "Tax included; base ordinary rate. Opening-sale prices appear separately; orders22:00onwards incur the branch’s10%late charge."
+                  },
+                  {
+                    "name": "じゃが明太マヨバター",
+                    "price": 363,
+                    "note": "Tax included; base ordinary rate. Opening-sale prices appear separately; orders22:00onwards incur the branch’s10%late charge."
+                  },
+                  {
+                    "name": "じゃがバター/エリンギバター/コーンバター",
+                    "price": 319,
+                    "note": "Tax included; base ordinary rate. Opening-sale prices appear separately; orders22:00onwards incur the branch’s10%late charge."
+                  },
+                  {
+                    "name": "枝豆",
+                    "price": 319,
+                    "note": "Tax included; base ordinary rate. Opening-sale prices appear separately; orders22:00onwards incur the branch’s10%late charge."
+                  },
+                  {
+                    "name": "おつまみうずら",
+                    "price": 319,
+                    "note": "Tax included; base ordinary rate. Opening-sale prices appear separately; orders22:00onwards incur the branch’s10%late charge."
+                  },
+                  {
+                    "name": "コーンバター",
+                    "price": 319,
+                    "note": "Tax included; base ordinary rate. Opening-sale prices appear separately; orders22:00onwards incur the branch’s10%late charge."
+                  },
+                  {
+                    "name": "ナゲット（ケチャップ）",
+                    "price": 290,
+                    "note": "Tax included; base ordinary rate. Opening-sale prices appear separately; orders22:00onwards incur the branch’s10%late charge."
+                  },
+                  {
+                    "name": "安安キムチ/カクテキ/ピリ辛きゅうり　※写真は安安キムチ",
+                    "price": 319,
+                    "note": "Tax included; base ordinary rate. Opening-sale prices appear separately; orders22:00onwards incur the branch’s10%late charge."
+                  },
+                  {
+                    "name": "キムチ盛り合わせ",
+                    "price": 539,
+                    "note": "Tax included; base ordinary rate. Opening-sale prices appear separately; orders22:00onwards incur the branch’s10%late charge."
+                  },
+                  {
+                    "name": "もやしナムル/青菜ナムル/きくらげナムル　※写真はもやしナムル",
+                    "price": 319,
+                    "note": "Tax included; base ordinary rate. Opening-sale prices appear separately; orders22:00onwards incur the branch’s10%late charge."
+                  },
+                  {
+                    "name": "ナムル盛り合わせ",
+                    "price": 429,
+                    "note": "Tax included; base ordinary rate. Opening-sale prices appear separately; orders22:00onwards incur the branch’s10%late charge."
+                  },
+                  {
+                    "name": "ライス　大",
+                    "price": 429,
+                    "note": "Tax included; base ordinary rate. Opening-sale prices appear separately; orders22:00onwards incur the branch’s10%late charge."
+                  },
+                  {
+                    "name": "ネギ飯",
+                    "price": 363,
+                    "note": "Tax included; base ordinary rate. Opening-sale prices appear separately; orders22:00onwards incur the branch’s10%late charge."
+                  },
+                  {
+                    "name": "安安ビビンバ",
+                    "price": 539,
+                    "note": "Tax included; base ordinary rate. Opening-sale prices appear separately; orders22:00onwards incur the branch’s10%late charge."
+                  },
+                  {
+                    "name": "安安スープ",
+                    "price": 539,
+                    "note": "Tax included; base ordinary rate. Opening-sale prices appear separately; orders22:00onwards incur the branch’s10%late charge."
+                  },
+                  {
+                    "name": "わかめスープ",
+                    "price": 429,
+                    "note": "Tax included; base ordinary rate. Opening-sale prices appear separately; orders22:00onwards incur the branch’s10%late charge."
+                  },
+                  {
+                    "name": "わか玉スープ",
+                    "price": 495,
+                    "note": "Tax included; base ordinary rate. Opening-sale prices appear separately; orders22:00onwards incur the branch’s10%late charge."
+                  },
+                  {
+                    "name": "安安クッパ",
+                    "price": 594,
+                    "note": "Tax included; base ordinary rate. Opening-sale prices appear separately; orders22:00onwards incur the branch’s10%late charge."
+                  },
+                  {
+                    "name": "冷麺",
+                    "price": 649,
+                    "note": "Tax included; base ordinary rate. Opening-sale prices appear separately; orders22:00onwards incur the branch’s10%late charge."
+                  },
+                  {
+                    "name": "激辛冷麺",
+                    "price": 704,
+                    "note": "Tax included; base ordinary rate. Opening-sale prices appear separately; orders22:00onwards incur the branch’s10%late charge."
+                  },
+                  {
+                    "name": "梅茶漬け/明太茶漬け/わさび茶漬け　※写真は梅茶漬け",
+                    "price": 319,
+                    "note": "Tax included; base ordinary rate. Opening-sale prices appear separately; orders22:00onwards incur the branch’s10%late charge."
+                  },
+                  {
+                    "name": "海苔茶漬け",
+                    "price": 275,
+                    "note": "Tax included; base ordinary rate. Opening-sale prices appear separately; orders22:00onwards incur the branch’s10%late charge."
+                  },
+                  {
+                    "name": "バターフォンデュソース",
+                    "price": 110,
+                    "note": "Tax included; base ordinary rate. Opening-sale prices appear separately; orders22:00onwards incur the branch’s10%late charge."
+                  },
+                  {
+                    "name": "ミジンねぎ/ネギマヨ/ネギポン",
+                    "price": 132,
+                    "note": "Tax included; base ordinary rate. Opening-sale prices appear separately; orders22:00onwards incur the branch’s10%late charge."
+                  },
+                  {
+                    "name": "つぶつぶ明太子/韓国のり/シャキシャキわさび/生卵",
+                    "price": 110,
+                    "note": "Tax included; base ordinary rate. Opening-sale prices appear separately; orders22:00onwards incur the branch’s10%late charge."
+                  },
+                  {
+                    "name": "網交換",
+                    "price": 55,
+                    "note": "Tax included; base ordinary rate. Opening-sale prices appear separately; orders22:00onwards incur the branch’s10%late charge."
+                  },
+                  {
+                    "name": "ポン酢/梅干し",
+                    "price": 55,
+                    "note": "Tax included; base ordinary rate. Opening-sale prices appear separately; orders22:00onwards incur the branch’s10%late charge."
+                  },
+                  {
+                    "name": "シューアイス",
+                    "price": 99,
+                    "note": "Tax included; base ordinary rate. Opening-sale prices appear separately; orders22:00onwards incur the branch’s10%late charge."
+                  },
+                  {
+                    "name": "今川焼ホイップ添え",
+                    "price": 275,
+                    "note": "Tax included; base ordinary rate. Opening-sale prices appear separately; orders22:00onwards incur the branch’s10%late charge."
+                  },
+                  {
+                    "name": "単品ホイップ",
+                    "price": 110,
+                    "note": "Tax included; base ordinary rate. Opening-sale prices appear separately; orders22:00onwards incur the branch’s10%late charge."
+                  },
+                  {
+                    "name": "ニンニクペッパーマヨ",
+                    "price": 363,
+                    "note": "Tax included; exact-branch managed component price."
+                  },
+                  {
+                    "name": "ニンニクバター",
+                    "price": 319,
+                    "note": "Tax included; exact-branch managed component price."
+                  },
+                  {
+                    "name": "ポテトサラダ",
+                    "priceLabel": "Price not published",
+                    "note": "Managed description says¥319but expanded variant says¥209; conflicting price withheld."
+                  },
+                  {
+                    "name": "明太ポテトサラダ",
+                    "priceLabel": "Price not published",
+                    "note": "Managed description says¥363but expanded variant says¥275; conflicting price withheld."
+                  }
+                ],
+                "note": "Exact-branch managed food list; ordinary rates, not opening discounts. Conflicting potato-salad prices withheld. Taxes included; orders22:00onwards add10%late charge."
+              },
+              {
+                "label": "Anan Shinoro — ordinary drinks",
+                "url": "https://www.hotpepper.jp/strJ004661221/drink/",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "アサヒスーパードライ 中生",
+                    "price": 319,
+                    "note": "Tax included; base ordinary rate. Opening-sale prices appear separately; orders22:00onwards incur the branch’s10%late charge."
+                  },
+                  {
+                    "name": "ノンアルコールビール",
+                    "price": 319,
+                    "note": "Tax included; base ordinary rate. Opening-sale prices appear separately; orders22:00onwards incur the branch’s10%late charge."
+                  },
+                  {
+                    "name": "カシスソーダ",
+                    "price": 429,
+                    "note": "Tax included; base ordinary rate. Opening-sale prices appear separately; orders22:00onwards incur the branch’s10%late charge."
+                  },
+                  {
+                    "name": "カシスオレンジ",
+                    "price": 429,
+                    "note": "Tax included; base ordinary rate. Opening-sale prices appear separately; orders22:00onwards incur the branch’s10%late charge."
+                  },
+                  {
+                    "name": "カシスウーロン",
+                    "price": 429,
+                    "note": "Tax included; base ordinary rate. Opening-sale prices appear separately; orders22:00onwards incur the branch’s10%late charge."
+                  },
+                  {
+                    "name": "シャンディガフ",
+                    "price": 429,
+                    "note": "Tax included; base ordinary rate. Opening-sale prices appear separately; orders22:00onwards incur the branch’s10%late charge."
+                  },
+                  {
+                    "name": "コークビール",
+                    "price": 429,
+                    "note": "Tax included; base ordinary rate. Opening-sale prices appear separately; orders22:00onwards incur the branch’s10%late charge."
+                  },
+                  {
+                    "name": "元気ビール",
+                    "price": 429,
+                    "note": "Tax included; base ordinary rate. Opening-sale prices appear separately; orders22:00onwards incur the branch’s10%late charge."
+                  },
+                  {
+                    "name": "ファジーネーブル",
+                    "price": 429,
+                    "note": "Tax included; base ordinary rate. Opening-sale prices appear separately; orders22:00onwards incur the branch’s10%late charge."
+                  },
+                  {
+                    "name": "ピーチコーク",
+                    "price": 429,
+                    "note": "Tax included; base ordinary rate. Opening-sale prices appear separately; orders22:00onwards incur the branch’s10%late charge."
+                  },
+                  {
+                    "name": "ピーチジンジャー",
+                    "price": 429,
+                    "note": "Tax included; base ordinary rate. Opening-sale prices appear separately; orders22:00onwards incur the branch’s10%late charge."
+                  },
+                  {
+                    "name": "ピーチウーロン",
+                    "price": 429,
+                    "note": "Tax included; base ordinary rate. Opening-sale prices appear separately; orders22:00onwards incur the branch’s10%late charge."
+                  },
+                  {
+                    "name": "元気ピーチ",
+                    "price": 429,
+                    "note": "Tax included; base ordinary rate. Opening-sale prices appear separately; orders22:00onwards incur the branch’s10%late charge."
+                  },
+                  {
+                    "name": "ハイボール",
+                    "price": 319,
+                    "note": "Tax included; base ordinary rate. Opening-sale prices appear separately; orders22:00onwards incur the branch’s10%late charge."
+                  },
+                  {
+                    "name": "元気ハイボール (リアルゴールド割)",
+                    "price": 429,
+                    "note": "Tax included; base ordinary rate. Opening-sale prices appear separately; orders22:00onwards incur the branch’s10%late charge."
+                  },
+                  {
+                    "name": "コークハイボール",
+                    "price": 429,
+                    "note": "Tax included; base ordinary rate. Opening-sale prices appear separately; orders22:00onwards incur the branch’s10%late charge."
+                  },
+                  {
+                    "name": "メロンハイボール",
+                    "price": 429,
+                    "note": "Tax included; base ordinary rate. Opening-sale prices appear separately; orders22:00onwards incur the branch’s10%late charge."
+                  },
+                  {
+                    "name": "ジンジャーハイボール",
+                    "price": 429,
+                    "note": "Tax included; base ordinary rate. Opening-sale prices appear separately; orders22:00onwards incur the branch’s10%late charge."
+                  },
+                  {
+                    "name": "レモンハイボール",
+                    "price": 429,
+                    "note": "Tax included; base ordinary rate. Opening-sale prices appear separately; orders22:00onwards incur the branch’s10%late charge."
+                  },
+                  {
+                    "name": "ゆずはちみつハイボール",
+                    "price": 429,
+                    "note": "Tax included; base ordinary rate. Opening-sale prices appear separately; orders22:00onwards incur the branch’s10%late charge."
+                  },
+                  {
+                    "name": "ラムネハイボール",
+                    "price": 429,
+                    "note": "Tax included; base ordinary rate. Opening-sale prices appear separately; orders22:00onwards incur the branch’s10%late charge."
+                  },
+                  {
+                    "name": "巨峰ハイボール",
+                    "price": 429,
+                    "note": "Tax included; base ordinary rate. Opening-sale prices appear separately; orders22:00onwards incur the branch’s10%late charge."
+                  },
+                  {
+                    "name": "男梅ハイボール",
+                    "price": 429,
+                    "note": "Tax included; base ordinary rate. Opening-sale prices appear separately; orders22:00onwards incur the branch’s10%late charge."
+                  },
+                  {
+                    "name": "リボンナポリンハイボール",
+                    "price": 429,
+                    "note": "Tax included; base ordinary rate. Opening-sale prices appear separately; orders22:00onwards incur the branch’s10%late charge."
+                  },
+                  {
+                    "name": "ウイスキー (ロック・水割り)",
+                    "price": 319,
+                    "note": "Tax included; base ordinary rate. Opening-sale prices appear separately; orders22:00onwards incur the branch’s10%late charge."
+                  },
+                  {
+                    "name": "レモンサワー",
+                    "price": 429,
+                    "note": "Tax included; base ordinary rate. Opening-sale prices appear separately; orders22:00onwards incur the branch’s10%late charge."
+                  },
+                  {
+                    "name": "ゆずはちみつサワー",
+                    "price": 429,
+                    "note": "Tax included; base ordinary rate. Opening-sale prices appear separately; orders22:00onwards incur the branch’s10%late charge."
+                  },
+                  {
+                    "name": "リボンナポリンサワー",
+                    "price": 429,
+                    "note": "Tax included; base ordinary rate. Opening-sale prices appear separately; orders22:00onwards incur the branch’s10%late charge."
+                  },
+                  {
+                    "name": "巨峰サワー",
+                    "price": 429,
+                    "note": "Tax included; base ordinary rate. Opening-sale prices appear separately; orders22:00onwards incur the branch’s10%late charge."
+                  },
+                  {
+                    "name": "ラムネサワー",
+                    "price": 429,
+                    "note": "Tax included; base ordinary rate. Opening-sale prices appear separately; orders22:00onwards incur the branch’s10%late charge."
+                  },
+                  {
+                    "name": "元気サワー",
+                    "price": 429,
+                    "note": "Tax included; base ordinary rate. Opening-sale prices appear separately; orders22:00onwards incur the branch’s10%late charge."
+                  },
+                  {
+                    "name": "男梅サワー",
+                    "price": 429,
+                    "note": "Tax included; base ordinary rate. Opening-sale prices appear separately; orders22:00onwards incur the branch’s10%late charge."
+                  },
+                  {
+                    "name": "ウーロン茶割り",
+                    "price": 429,
+                    "note": "Tax included; base ordinary rate. Opening-sale prices appear separately; orders22:00onwards incur the branch’s10%late charge."
+                  },
+                  {
+                    "name": "緑茶割り",
+                    "price": 429,
+                    "note": "Tax included; base ordinary rate. Opening-sale prices appear separately; orders22:00onwards incur the branch’s10%late charge."
+                  },
+                  {
+                    "name": "酎ハイ",
+                    "price": 319,
+                    "note": "Tax included; base ordinary rate. Opening-sale prices appear separately; orders22:00onwards incur the branch’s10%late charge."
+                  },
+                  {
+                    "name": "麦焼酎 (ロック・水割り・お湯割り・ソーダ割り)",
+                    "price": 429,
+                    "note": "Tax included; base ordinary rate. Opening-sale prices appear separately; orders22:00onwards incur the branch’s10%late charge."
+                  },
+                  {
+                    "name": "芋焼酎 (ロック・水割り・お湯割り・ソーダ割り)",
+                    "price": 429,
+                    "note": "Tax included; base ordinary rate. Opening-sale prices appear separately; orders22:00onwards incur the branch’s10%late charge."
+                  },
+                  {
+                    "name": "梅酒 (ロック・水割り・お湯割り・ソーダ割り)",
+                    "price": 429,
+                    "note": "Tax included; base ordinary rate. Opening-sale prices appear separately; orders22:00onwards incur the branch’s10%late charge."
+                  },
+                  {
+                    "name": "ジンジャー梅酒",
+                    "price": 429,
+                    "note": "Tax included; base ordinary rate. Opening-sale prices appear separately; orders22:00onwards incur the branch’s10%late charge."
+                  },
+                  {
+                    "name": "コーク梅酒",
+                    "price": 429,
+                    "note": "Tax included; base ordinary rate. Opening-sale prices appear separately; orders22:00onwards incur the branch’s10%late charge."
+                  },
+                  {
+                    "name": "グラスワイン (赤)",
+                    "price": 429,
+                    "note": "Tax included; base ordinary rate. Opening-sale prices appear separately; orders22:00onwards incur the branch’s10%late charge."
+                  },
+                  {
+                    "name": "かち割りワイン (赤)",
+                    "price": 429,
+                    "note": "Tax included; base ordinary rate. Opening-sale prices appear separately; orders22:00onwards incur the branch’s10%late charge."
+                  },
+                  {
+                    "name": "日本酒",
+                    "price": 429,
+                    "note": "Tax included; base ordinary rate. Opening-sale prices appear separately; orders22:00onwards incur the branch’s10%late charge."
+                  },
+                  {
+                    "name": "ウーロン茶",
+                    "price": 275,
+                    "note": "Tax included; base ordinary rate. Opening-sale prices appear separately; orders22:00onwards incur the branch’s10%late charge."
+                  },
+                  {
+                    "name": "緑茶",
+                    "price": 275,
+                    "note": "Tax included; base ordinary rate. Opening-sale prices appear separately; orders22:00onwards incur the branch’s10%late charge."
+                  },
+                  {
+                    "name": "コカ・コーラ",
+                    "price": 275,
+                    "note": "Tax included; base ordinary rate. Opening-sale prices appear separately; orders22:00onwards incur the branch’s10%late charge."
+                  },
+                  {
+                    "name": "ファンタメロンソーダ",
+                    "price": 275,
+                    "note": "Tax included; base ordinary rate. Opening-sale prices appear separately; orders22:00onwards incur the branch’s10%late charge."
+                  },
+                  {
+                    "name": "リアルゴールド",
+                    "price": 275,
+                    "note": "Tax included; base ordinary rate. Opening-sale prices appear separately; orders22:00onwards incur the branch’s10%late charge."
+                  },
+                  {
+                    "name": "ミニッツメイドオレンジジュース",
+                    "price": 275,
+                    "note": "Tax included; base ordinary rate. Opening-sale prices appear separately; orders22:00onwards incur the branch’s10%late charge."
+                  },
+                  {
+                    "name": "ジンジャーエール",
+                    "price": 275,
+                    "note": "Tax included; base ordinary rate. Opening-sale prices appear separately; orders22:00onwards incur the branch’s10%late charge."
+                  },
+                  {
+                    "name": "お子様サイズ ※小学生未満限定",
+                    "price": 55,
+                    "note": "Tax included; base ordinary rate. Opening-sale prices appear separately; orders22:00onwards incur the branch’s10%late charge."
+                  }
+                ],
+                "note": "Exact-branch managed drinks, ordinary prices; opening-sale drink discounts listed separately. Tax included;10%late charge from22:00."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://anan.fuji-tatsu.co.jp/shop/sapporo-sinoro/",
+            "name": "Shichirin Yakiniku Anan — Sapporo Shinoro",
+            "checkedAt": "2026-10-19",
+            "websiteUrl": "https://anan.fuji-tatsu.co.jp/shop/sapporo-sinoro/",
+            "phone": "011-299-1831",
+            "openingHours": [
+              {
+                "days": "Daily",
+                "hours": "11:00–23:00; last order22:30"
+              },
+              {
+                "days": "Closed",
+                "hours": "No regular closing day"
+              }
+            ],
+            "detailsSourceUrl": "https://anan.fuji-tatsu.co.jp/shop/sapporo-sinoro/",
+            "additionalSources": [
+              {
+                "label": "Exact2026opening and eight discounted items",
+                "url": "https://prtimes.jp/main/html/rd/p/000000023.000178899.html"
+              },
+              {
+                "label": "Operator dated opening sale notice",
+                "url": "https://anan.fuji-tatsu.co.jp/topics/5950/"
+              },
+              {
+                "label": "Exact-branch managed menu",
+                "url": "https://www.hotpepper.jp/strJ004661221/food/"
+              },
+              {
+                "label": "Exact-branch managed drinks",
+                "url": "https://www.hotpepper.jp/strJ004661221/drink/"
+              }
+            ],
+            "hoursNote": "Parking,44seats at11tables, no smoking room, drink bar. Operator publishes a10%late charge for orders from22:00. Cashless methods include cards, IC/e-money and QR. Managed room images expressly show sister branches and were excluded. Selected food photos are clearly identified as menu illustrations used on this branch page, not physical-venue documentation. Current bookable all-you-can-eat plans checked but no ordinary plan advertised as a dated special.",
+            "reservationUrl": "https://www.hotpepper.jp/strJ004661221/"
+          },
+          "tile": {
+            "regionSlug": "sapporo",
+            "kind": "opening",
+            "slug": "japan103-anan",
+            "name": "Shichirin Yakiniku Anan — Sapporo Shinoro",
+            "neighborhood": "Shinoro",
+            "cuisine": "Yakiniku",
+            "description": "A44-seat charcoal-grill yakiniku restaurant in Shinoro, with à la carte meats, side dishes and an explicitly dated October opening sale.",
+            "address": "5-5-18 Shinoro2-jo, Kita-ku, Sapporo",
+            "websiteUrl": "https://anan.fuji-tatsu.co.jp/shop/sapporo-sinoro/",
+            "checkedAt": "2026-10-19",
+            "recognition": "New branch opening verified by operator and branch-specific corporate release",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-19/batch103-anan-5-8beb1befe8a345d2.webp",
+            "imageCredit": "Anan Sapporo Shinoro / operator-managed Hot Pepper gallery",
+            "imageSourceUrl": "https://www.hotpepper.jp/strJ004661221/",
+            "imageNote": "Menu illustration used on the exact Shinoro branch page; no claim that generic food imagery documents its physical interior.",
+            "openingConfirmed": true,
+            "day": "2026-10-01"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "originalUrl": "https://imgfp.hotp.jp/IMGH/92/44/P049289244/P049289244_368.jpg",
+          "sourcePage": "https://www.hotpepper.jp/strJ004661221/",
+          "credit": "Anan Sapporo Shinoro / operator-managed Hot Pepper gallery",
+          "note": "Menu illustration used on the exact Shinoro branch page; no claim that generic food imagery documents its physical interior.",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-19/batch103-anan-5-8beb1befe8a345d2.webp",
+          "sha256": "8beb1befe8a345d2aa668c81014592a55a3e8b3c529596de1603cefb73ac47b8",
+          "width": 368,
+          "height": 368
+        },
+        {
+          "originalUrl": "https://imgfp.hotp.jp/IMGH/92/16/P049289216/P049289216_480.jpg",
+          "sourcePage": "https://www.hotpepper.jp/strJ004661221/",
+          "credit": "Anan Sapporo Shinoro / operator-managed Hot Pepper gallery",
+          "note": "Menu illustration used on the exact Shinoro branch page; no claim that generic food imagery documents its physical interior.",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-19/batch103-anan-1-6c287a721013567e.webp",
+          "sha256": "6c287a721013567eb69afe1a79cb86a43097de7c9ec1bffdd30d719689ad62dd",
+          "width": 480,
+          "height": 480
+        },
+        {
+          "originalUrl": "https://imgfp.hotp.jp/IMGH/50/16/P040725016/P040725016_98.jpg",
+          "sourcePage": "https://www.hotpepper.jp/strJ004661221/",
+          "credit": "Anan Sapporo Shinoro / operator-managed Hot Pepper gallery",
+          "note": "Menu illustration used on the exact Shinoro branch page; no claim that generic food imagery documents its physical interior.",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-19/batch103-anan-4-5d0228c01027b054.webp",
+          "sha256": "5d0228c01027b0547357c79ed710bf6c3edcc31d5c5c0977a649050601f02fab",
+          "width": 98,
+          "height": 98
+        },
+        {
+          "originalUrl": "https://imgfp.hotp.jp/IMGH/01/39/P049370139/P049370139_120.jpg",
+          "sourcePage": "https://www.hotpepper.jp/strJ004661221/",
+          "credit": "Anan Sapporo Shinoro / operator-managed Hot Pepper gallery",
+          "note": "Menu illustration used on the exact Shinoro branch page; no claim that generic food imagery documents its physical interior.",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-19/batch103-anan-8-731e89a7e131bd7a.webp",
+          "sha256": "731e89a7e131bd7ae4c58cc942c950acb08942c341b08e09d813924b47549f9f",
+          "width": 120,
+          "height": 90
+        }
+      ],
+      "special": {
+        "regionSlug": "sapporo",
+        "enabled": true,
+        "profile": {
+          "pinSourceUrl": "https://anan.fuji-tatsu.co.jp/shop/sapporo-sinoro/",
+          "name": "Shichirin Yakiniku Anan — Sapporo Shinoro",
+          "checkedAt": "2026-10-19",
+          "address": "5-5-18 Shinoro2-jo, Kita-ku, Sapporo",
+          "neighborhood": "Shinoro",
+          "websiteUrl": "https://anan.fuji-tatsu.co.jp/shop/sapporo-sinoro/",
+          "menus": [
+            {
+              "label": "Anan Shinoro — October2026 opening sale",
+              "url": "https://prtimes.jp/main/html/rd/p/000000023.000178899.html",
+              "currency": "JPY",
+              "coverage": "published",
+              "items": [
+                {
+                  "name": "ハイボール",
+                  "price": 209,
+                  "note": "Sale rate tax included; ordinary¥319;10%late charge from22:00."
+                },
+                {
+                  "name": "生ビール",
+                  "price": 297,
+                  "note": "Sale rate tax included; ordinary¥319;10%late charge from22:00."
+                },
+                {
+                  "name": "メルティークビーフ サーロインステーキ",
+                  "price": 539,
+                  "note": "Sale rate tax included; ordinary¥649;10%late charge from22:00."
+                },
+                {
+                  "name": "豚さがり",
+                  "price": 297,
+                  "note": "Sale rate tax included; ordinary¥319;10%late charge from22:00."
+                },
+                {
+                  "name": "豚大腸ホルモン",
+                  "price": 297,
+                  "note": "Sale rate tax included; ordinary¥319;10%late charge from22:00."
+                },
+                {
+                  "name": "せせり",
+                  "price": 319,
+                  "note": "Sale rate tax included; ordinary¥363;10%late charge from22:00."
+                },
+                {
+                  "name": "プチ紋甲イカ",
+                  "price": 396,
+                  "note": "Sale rate tax included; ordinary¥429;10%late charge from22:00."
+                },
+                {
+                  "name": "じゃがバター",
+                  "price": 275,
+                  "note": "Sale rate tax included; ordinary¥319;10%late charge from22:00."
+                }
+              ],
+              "note": "Corporate branch-only opening announcement explicitly dates October1–31,2026."
+            }
+          ],
+          "specials": [
+            {
+              "kind": "other",
+              "title": "Anan Shinoro opening sale — through October31",
+              "description": "Branch-only opening prices on eight drinks and dishes, including¥209highballs and¥297draft beer. Tax included;10%late charge from22:00.",
+              "sourceUrl": "https://prtimes.jp/main/html/rd/p/000000023.000178899.html",
+              "menuLabel": "Anan Shinoro — October2026 opening sale",
+              "limitedTime": true,
+              "discounted": true,
+              "validFrom": "2026-10-01",
+              "validThrough": "2026-10-31",
+              "schedule": "Daily October1–31,2026,11:00–22:30JST ordering window; closes23:00.",
+              "conditions": [
+                "Only Sapporo Shinoro branch.",
+                "Tax included; orders22:00onwards add10%late charge.",
+                "Published ordinary prices and sale prices kept separate; no unspecified course participation inferred.",
+                "Stock and table availability should be confirmed with branch."
+              ],
+              "availability": {
+                "windows": [
+                  {
+                    "days": [
+                      0,
+                      1,
+                      2,
+                      3,
+                      4,
+                      5,
+                      6
+                    ],
+                    "start": "11:00",
+                    "end": "22:30"
+                  }
+                ]
+              }
+            }
+          ],
+          "photo": {
+            "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-19/batch103-anan-5-8beb1befe8a345d2.webp",
+            "alt": "Menu illustration used on the exact Shinoro branch page; no claim that generic food imagery documents its physical interior.",
+            "credit": "Anan Sapporo Shinoro / operator-managed Hot Pepper gallery",
+            "sourceUrl": "https://www.hotpepper.jp/strJ004661221/",
+            "originalUrl": "https://imgfp.hotp.jp/IMGH/92/44/P049289244/P049289244_368.jpg",
+            "checkedAt": "2026-10-19"
+          }
+        }
+      }
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "new eight — Gakugei-daigaku Opens 2026-10-01",
+        "description": "A neighborhood counter for clam-broth oden, charcoal-grilled game skewers and house-brewed craft beer, with an expanding winter dining area.",
+        "sourceUrl": "https://prtimes.jp/main/html/rd/p/000000021.000066499.html",
+        "address": "1-13-6 Chuocho, Meguro-ku, Tokyo",
+        "productName": "new eight — Gakugei-daigaku",
+        "utcStartDateTime": "2026-10-01T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "Cyclo operator’s September30,2026exact-branch release explicitly announces October1,2026at this address. It identifies the prior business Shinbachi as a separate former venue; neither that history nor a Fukuoka pop-up date is substituted.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Tokyo",
+          "Japan",
+          "Gakugei-daigaku / Chuocho",
+          "Oden / Izakaya"
+        ],
+        "longFormSummary": "<p>A neighborhood counter for clam-broth oden, charcoal-grilled game skewers and house-brewed craft beer, with an expanding winter dining area.<cite data-ref=\"https://prtimes.jp/main/html/rd/p/000000021.000066499.html\"></cite></p><p>Cyclo operator’s September30,2026exact-branch release explicitly announces October1,2026at this address. It identifies the prior business Shinbachi as a separate former venue; neither that history nor a Fukuoka pop-up date is substituted.</p>",
+        "references": [
+          {
+            "url": "https://prtimes.jp/main/html/rd/p/000000021.000066499.html",
+            "title": "new eight — Gakugei-daigaku — branch website",
+            "confidence": 90,
+            "reasoning": "new eight — Gakugei-daigaku — branch website"
+          },
+          {
+            "url": "https://prtimes.jp/main/html/rd/p/000000021.000066499.html",
+            "title": "Exact opening, dishes, original-source gallery and October service",
+            "confidence": 90,
+            "reasoning": "Exact opening, dishes, original-source gallery and October service"
+          },
+          {
+            "url": "https://camoscollective.com/",
+            "title": "Operator company website",
+            "confidence": 90,
+            "reasoning": "Operator company website"
+          },
+          {
+            "url": "https://www.instagram.com/new_8ight_/",
+            "title": "Exact venue Instagram",
+            "confidence": 90,
+            "reasoning": "Exact venue Instagram"
+          },
+          {
+            "url": "https://job.inshokuten.com/kanto/work/detail/87573",
+            "title": "Operator recruitment corroborates branch",
+            "confidence": 90,
+            "reasoning": "Operator recruitment corroborates branch"
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://prtimes.jp/main/html/rd/p/000000021.000066499.html",
+          "menu": {
+            "pinSourceUrl": "https://prtimes.jp/main/html/rd/p/000000021.000066499.html",
+            "name": "new eight — Gakugei-daigaku",
+            "checkedAt": "2026-10-19",
+            "menus": [
+              {
+                "label": "new eight — published opening food",
+                "url": "https://prtimes.jp/main/html/rd/p/000000021.000066499.html",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "貝出汁おでん・厚さ6cmの大根",
+                    "priceLabel": "Price not published",
+                    "note": "Published exact-branch opening dish; price not published. Seasonal choices vary."
+                  },
+                  {
+                    "name": "はまぐりのおでん",
+                    "priceLabel": "Price not published",
+                    "note": "Published exact-branch opening dish; price not published. Seasonal choices vary."
+                  },
+                  {
+                    "name": "つぶ貝のおでん",
+                    "priceLabel": "Price not published",
+                    "note": "Published exact-branch opening dish; price not published. Seasonal choices vary."
+                  },
+                  {
+                    "name": "タコのおでん",
+                    "priceLabel": "Price not published",
+                    "note": "Published exact-branch opening dish; price not published. Seasonal choices vary."
+                  },
+                  {
+                    "name": "鰯とパクチーの自家製つみれ",
+                    "priceLabel": "Price not published",
+                    "note": "Published exact-branch opening dish; price not published. Seasonal choices vary."
+                  },
+                  {
+                    "name": "炭火焼ジビエ串",
+                    "priceLabel": "Price not published",
+                    "note": "Published exact-branch opening dish; price not published. Seasonal choices vary."
+                  },
+                  {
+                    "name": "スパイスぬか漬け",
+                    "priceLabel": "Price not published",
+                    "note": "Published exact-branch opening dish; price not published. Seasonal choices vary."
+                  },
+                  {
+                    "name": "旬魚と焼き茄子のなめろう",
+                    "priceLabel": "Price not published",
+                    "note": "Published exact-branch opening dish; price not published. Seasonal choices vary."
+                  },
+                  {
+                    "name": "烏賊とアンチョビのポテトサラダ",
+                    "priceLabel": "Price not published",
+                    "note": "Published exact-branch opening dish; price not published. Seasonal choices vary."
+                  }
+                ],
+                "note": "Gibier-skewer choices: salt, spiced salt, balsamic dengaku or red-wine sauce; species not announced. No sibling Fukuoka menu borrowed."
+              },
+              {
+                "label": "new eight — published drinks",
+                "url": "https://prtimes.jp/main/html/rd/p/000000021.000066499.html",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "Derailleur Brew Works店舗限定クラフトビール（中瓶）",
+                    "priceLabel": "Price not published",
+                    "note": "Published branch drink; individual price not published."
+                  },
+                  {
+                    "name": "ワイン",
+                    "priceLabel": "Price not published",
+                    "note": "Published branch drink; individual price not published."
+                  },
+                  {
+                    "name": "日本酒",
+                    "priceLabel": "Price not published",
+                    "note": "Published branch drink; individual price not published."
+                  },
+                  {
+                    "name": "焼酎",
+                    "priceLabel": "Price not published",
+                    "note": "Published branch drink; individual price not published."
+                  },
+                  {
+                    "name": "出汁割り・プレーン",
+                    "priceLabel": "Price not published",
+                    "note": "Published branch drink; individual price not published."
+                  },
+                  {
+                    "name": "出汁割り・トマトとブラックペッパー",
+                    "priceLabel": "Price not published",
+                    "note": "Published branch drink; individual price not published."
+                  }
+                ],
+                "note": "Operator release, linked company site, Instagram and branch recruitment searched; no readable current price card or reservation menu located. Named drinks retained with Price not published."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://prtimes.jp/main/html/rd/p/000000021.000066499.html",
+            "name": "new eight — Gakugei-daigaku",
+            "checkedAt": "2026-10-19",
+            "websiteUrl": "https://prtimes.jp/main/html/rd/p/000000021.000066499.html",
+            "phone": "",
+            "openingHours": [
+              {
+                "days": "October2026regular service",
+                "hours": "Friday–Sunday17:00–23:00"
+              },
+              {
+                "days": "October1opening exception",
+                "hours": "Thursday17:00–23:00"
+              },
+              {
+                "days": "Winter plans",
+                "hours": "Additional days and tatami seating planned; confirm actual launch"
+              }
+            ],
+            "detailsSourceUrl": "https://prtimes.jp/main/html/rd/p/000000021.000066499.html",
+            "additionalSources": [
+              {
+                "label": "Exact opening, dishes, original-source gallery and October service",
+                "url": "https://prtimes.jp/main/html/rd/p/000000021.000066499.html"
+              },
+              {
+                "label": "Operator company website",
+                "url": "https://camoscollective.com/"
+              },
+              {
+                "label": "Exact venue Instagram",
+                "url": "https://www.instagram.com/new_8ight_/"
+              },
+              {
+                "label": "Operator recruitment corroborates branch",
+                "url": "https://job.inshokuten.com/kanto/work/detail/87573"
+              }
+            ],
+            "hoursNote": "Ten counter seats in October; three tatami tables for4–6each planned to open during winter, not promised available now. Reserve by Instagram DM. No phone published. Fukuoka yoca pop-up uses flying-fish broth and remains distinct from this Tokyo clam-broth venue. Price search found dishes but no verified tariffs.",
+            "reservationUrl": "https://www.instagram.com/new_8ight_/"
+          },
+          "tile": {
+            "regionSlug": "tokyo",
+            "kind": "opening",
+            "slug": "japan103-neweight",
+            "name": "new eight — Gakugei-daigaku",
+            "neighborhood": "Gakugei-daigaku / Chuocho",
+            "cuisine": "Oden / Izakaya",
+            "description": "A neighborhood counter for clam-broth oden, charcoal-grilled game skewers and house-brewed craft beer, with an expanding winter dining area.",
+            "address": "1-13-6 Chuocho, Meguro-ku, Tokyo",
+            "websiteUrl": "https://prtimes.jp/main/html/rd/p/000000021.000066499.html",
+            "checkedAt": "2026-10-19",
+            "recognition": "New operator-confirmed branch opening",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-19/batch103-neweight-2-788f1bef65314ea4.webp",
+            "imageCredit": "new eight / Cyclo official opening release",
+            "imageSourceUrl": "https://prtimes.jp/main/html/rd/p/000000021.000066499.html",
+            "imageNote": "学芸大学駅から徒歩 7分。夜になると、通りに店の灯りがこぼれる。",
+            "openingConfirmed": true,
+            "day": "2026-10-01"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "originalUrl": "https://prcdn.freetls.fastly.net/release_image/66499/21/66499-21-3f774f89a67cb6f264e9dec12e0980f0-3900x2600.jpg",
+          "sourcePage": "https://prtimes.jp/main/html/rd/p/000000021.000066499.html",
+          "credit": "new eight / Cyclo official opening release",
+          "note": "学芸大学駅から徒歩 7分。夜になると、通りに店の灯りがこぼれる。",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-19/batch103-neweight-2-788f1bef65314ea4.webp",
+          "sha256": "788f1bef65314ea4bb5089604988836180cfbd2388e043dbbeb9846851bdbc71",
+          "width": 1600,
+          "height": 1067
+        },
+        {
+          "originalUrl": "https://prcdn.freetls.fastly.net/release_image/66499/21/66499-21-a58f9eb7369030affef0a68ef6a1cf0a-3900x2600.jpg",
+          "sourcePage": "https://prtimes.jp/main/html/rd/p/000000021.000066499.html",
+          "credit": "new eight / Cyclo official opening release",
+          "note": "カウンター前の角型おでん鍋。貝出汁で炊いた大根や、鰯とパクチーの自家製つみれ、タコなどが並ぶ。",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-19/batch103-neweight-0-e6efaae968948804.webp",
+          "sha256": "e6efaae96894880415585965e2b6c5a77d4f18ad4fa10053e816e555854b634d",
+          "width": 1600,
+          "height": 1067
+        },
+        {
+          "originalUrl": "https://prcdn.freetls.fastly.net/release_image/66499/21/66499-21-43a953f42a362661a936d9345150f158-3900x2600.jpg",
+          "sourcePage": "https://prtimes.jp/main/html/rd/p/000000021.000066499.html",
+          "credit": "new eight / Cyclo official opening release",
+          "note": "炭火焼ジビエ串。塩、スパイス塩、バルサミコ田楽、赤ワインタレの4種類から味つけを選べます。同じ串でも、選ぶ味によって印象が変わる一品です。",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-19/batch103-neweight-6-3d0de158bc7f25a4.webp",
+          "sha256": "3d0de158bc7f25a4d2fd4e9e8faa09b0ff46e1e558d9b4577856e67df16b5691",
+          "width": 1600,
+          "height": 1067
+        },
+        {
+          "originalUrl": "https://prcdn.freetls.fastly.net/release_image/66499/21/66499-21-c9f7836deba83f01d9126f205060021c-3900x2600.jpg",
+          "sourcePage": "https://prtimes.jp/main/html/rd/p/000000021.000066499.html",
+          "credit": "new eight / Cyclo official opening release",
+          "note": "カウンターで一品と一杯。ひとりでもふらっと立ち寄れる。",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-19/batch103-neweight-8-c57abc9d40694862.webp",
+          "sha256": "c57abc9d40694862cdc67d3fa866e066b38de8c6903af7f32b869b9411f14317",
+          "width": 1600,
+          "height": 1067
+        }
+      ]
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Osaka Gyoza Senmonten Mieko — Kamata Opens 2026-10-01",
+        "description": "A red-counter gyoza tavern serving thin-skinned dumplings, Chinese comfort dishes and late-night drinks near Kamata Station.",
+        "sourceUrl": "https://gyoza-yoshiko.com/tenpo/%e5%a4%a7%e9%98%aa%e9%a4%83%e5%ad%90%e5%b0%82%e9%96%80%e5%ba%97-%e3%81%bf%e3%81%88%e3%81%93/",
+        "address": "1F,7-29-7 Nishikamata, Ota-ku, Tokyo",
+        "productName": "Osaka Gyoza Senmonten Mieko — Kamata",
+        "utcStartDateTime": "2026-10-01T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "Exact operator branch page explicitly records October1,2026opening. The newer October5corporate release distinguishes October1–7pre-opening from October8grand opening; original first customer service October1is retained. An older release’s proposed October6grand opening was superseded.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Tokyo",
+          "Japan",
+          "Kamata / Nishikamata",
+          "Gyoza / Chinese"
+        ],
+        "longFormSummary": "<p>A red-counter gyoza tavern serving thin-skinned dumplings, Chinese comfort dishes and late-night drinks near Kamata Station.<cite data-ref=\"https://gyoza-yoshiko.com/tenpo/%e5%a4%a7%e9%98%aa%e9%a4%83%e5%ad%90%e5%b0%82%e9%96%80%e5%ba%97-%e3%81%bf%e3%81%88%e3%81%93/\"></cite></p><p>Exact operator branch page explicitly records October1,2026opening. The newer October5corporate release distinguishes October1–7pre-opening from October8grand opening; original first customer service October1is retained. An older release’s proposed October6grand opening was superseded.</p>",
+        "references": [
+          {
+            "url": "https://gyoza-yoshiko.com/tenpo/%e5%a4%a7%e9%98%aa%e9%a4%83%e5%ad%90%e5%b0%82%e9%96%80%e5%ba%97-%e3%81%bf%e3%81%88%e3%81%93/",
+            "title": "Osaka Gyoza Senmonten Mieko — Kamata — branch website",
+            "confidence": 90,
+            "reasoning": "Osaka Gyoza Senmonten Mieko — Kamata — branch website"
+          },
+          {
+            "url": "https://gyoza-yoshiko.com/tenpo/%e5%a4%a7%e9%98%aa%e9%a4%83%e5%ad%90%e5%b0%82%e9%96%80%e5%ba%97-%e3%81%bf%e3%81%88%e3%81%93/",
+            "title": "Exact operator original opening and current hours",
+            "confidence": 90,
+            "reasoning": "Exact operator original opening and current hours"
+          },
+          {
+            "url": "https://prtimes.jp/main/html/rd/p/000000249.000019564.html",
+            "title": "October5release distinguishing soft and grand opening",
+            "confidence": 90,
+            "reasoning": "October5release distinguishing soft and grand opening"
+          },
+          {
+            "url": "https://tabelog.com/en/tokyo/A1315/A131503/13325845/dtlmenu/",
+            "title": "Exact-branch food",
+            "confidence": 90,
+            "reasoning": "Exact-branch food"
+          },
+          {
+            "url": "https://tabelog.com/en/tokyo/A1315/A131503/13325845/dtlmenu/drink/",
+            "title": "Exact-branch drinks",
+            "confidence": 90,
+            "reasoning": "Exact-branch drinks"
+          },
+          {
+            "url": "https://gyoza-yoshiko.com/eatinstore/",
+            "title": "Brand branch menus, other-branch PDFs excluded",
+            "confidence": 90,
+            "reasoning": "Brand branch menus, other-branch PDFs excluded"
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://gyoza-yoshiko.com/tenpo/%e5%a4%a7%e9%98%aa%e9%a4%83%e5%ad%90%e5%b0%82%e9%96%80%e5%ba%97-%e3%81%bf%e3%81%88%e3%81%93/",
+          "menu": {
+            "pinSourceUrl": "https://gyoza-yoshiko.com/tenpo/%e5%a4%a7%e9%98%aa%e9%a4%83%e5%ad%90%e5%b0%82%e9%96%80%e5%ba%97-%e3%81%bf%e3%81%88%e3%81%93/",
+            "name": "Osaka Gyoza Senmonten Mieko — Kamata",
+            "checkedAt": "2026-10-19",
+            "menus": [
+              {
+                "label": "Mieko Kamata — exact-branch food",
+                "url": "https://tabelog.com/en/tokyo/A1315/A131503/13325845/dtlmenu/",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "Gyoza",
+                    "price": 418,
+                    "note": "Tax included; exact-branch managed menu. English dish labels retained; automated promotional/tasting descriptions omitted. One serving per guest required."
+                  },
+                  {
+                    "name": "Mizore Gyoza",
+                    "price": 528,
+                    "note": "Tax included; exact-branch managed menu. English dish labels retained; automated promotional/tasting descriptions omitted."
+                  },
+                  {
+                    "name": "Cilantro Gyoza",
+                    "price": 528,
+                    "note": "Tax included; exact-branch managed menu. English dish labels retained; automated promotional/tasting descriptions omitted."
+                  },
+                  {
+                    "name": "Mom's Okonomiyaki Gyoza",
+                    "price": 528,
+                    "note": "Tax included; exact-branch managed menu. English dish labels retained; automated promotional/tasting descriptions omitted."
+                  },
+                  {
+                    "name": "Fried Gyoza",
+                    "price": 418,
+                    "note": "Tax included; exact-branch managed menu. English dish labels retained; automated promotional/tasting descriptions omitted."
+                  },
+                  {
+                    "name": "Medium Plate Gyoza (35 pieces)",
+                    "price": 1980,
+                    "note": "Tax included; exact-branch managed menu. English dish labels retained; automated promotional/tasting descriptions omitted."
+                  },
+                  {
+                    "name": "Large Plate Gyoza (42 pieces)",
+                    "price": 2398,
+                    "note": "Tax included; exact-branch managed menu. English dish labels retained; automated promotional/tasting descriptions omitted."
+                  },
+                  {
+                    "name": "Mother's Light Pickles",
+                    "price": 385,
+                    "note": "Tax included; exact-branch managed menu. English dish labels retained; automated promotional/tasting descriptions omitted."
+                  },
+                  {
+                    "name": "Half-Mashed Kimchi",
+                    "price": 418,
+                    "note": "Tax included; exact-branch managed menu. English dish labels retained; automated promotional/tasting descriptions omitted."
+                  },
+                  {
+                    "name": "Refreshing Moyapon",
+                    "price": 418,
+                    "note": "Tax included; exact-branch managed menu. English dish labels retained; automated promotional/tasting descriptions omitted."
+                  },
+                  {
+                    "name": "Macaroni Salad",
+                    "price": 473,
+                    "note": "Tax included; exact-branch managed menu. English dish labels retained; automated promotional/tasting descriptions omitted."
+                  },
+                  {
+                    "name": "Chiku-kyu",
+                    "price": 418,
+                    "note": "Tax included; exact-branch managed menu. English dish labels retained; automated promotional/tasting descriptions omitted."
+                  },
+                  {
+                    "name": "Meat Miso Tofu",
+                    "price": 418,
+                    "note": "Tax included; exact-branch managed menu. English dish labels retained; automated promotional/tasting descriptions omitted."
+                  },
+                  {
+                    "name": "Chilled Peppers, Cucumbers, Meat Miso, Eat!",
+                    "price": 473,
+                    "note": "Tax included; exact-branch managed menu. English dish labels retained; automated promotional/tasting descriptions omitted."
+                  },
+                  {
+                    "name": "Spicy Menma",
+                    "price": 418,
+                    "note": "Tax included; exact-branch managed menu. English dish labels retained; automated promotional/tasting descriptions omitted."
+                  },
+                  {
+                    "name": "Stir-Fried Beef with Green Peppers",
+                    "price": 748,
+                    "note": "Tax included; exact-branch managed menu. English dish labels retained; automated promotional/tasting descriptions omitted."
+                  },
+                  {
+                    "name": "Spicy Yodare Chicken with Special Sauce",
+                    "price": 748,
+                    "note": "Tax included; exact-branch managed menu. English dish labels retained; automated promotional/tasting descriptions omitted."
+                  },
+                  {
+                    "name": "Stir-Fried Garlic Sprouts",
+                    "price": 473,
+                    "note": "Tax included; exact-branch managed menu. English dish labels retained; automated promotional/tasting descriptions omitted."
+                  },
+                  {
+                    "name": "Yoshiko-yaki (Egg Omelette)",
+                    "price": 528,
+                    "note": "Tax included; exact-branch managed menu. English dish labels retained; automated promotional/tasting descriptions omitted."
+                  },
+                  {
+                    "name": "Ebi Mayo",
+                    "price": 638,
+                    "note": "Tax included; exact-branch managed menu. English dish labels retained; automated promotional/tasting descriptions omitted."
+                  },
+                  {
+                    "name": "Stir-Fried Bean Sprouts",
+                    "price": 638,
+                    "note": "Tax included; exact-branch managed menu. English dish labels retained; automated promotional/tasting descriptions omitted."
+                  },
+                  {
+                    "name": "Char Siu Assorted Platter",
+                    "price": 1650,
+                    "note": "Tax included; exact-branch managed menu. English dish labels retained; automated promotional/tasting descriptions omitted."
+                  },
+                  {
+                    "name": "Stir-Fried Liver and Garlic Chives",
+                    "price": 693,
+                    "note": "Tax included; exact-branch managed menu. English dish labels retained; automated promotional/tasting descriptions omitted."
+                  },
+                  {
+                    "name": "Aomori Prefecture Garlic Fries",
+                    "price": 495,
+                    "note": "Tax included; exact-branch managed menu. English dish labels retained; automated promotional/tasting descriptions omitted."
+                  },
+                  {
+                    "name": "Freshly Fried Spring Rolls",
+                    "price": 583,
+                    "note": "Tax included; exact-branch managed menu. English dish labels retained; automated promotional/tasting descriptions omitted."
+                  },
+                  {
+                    "name": "Osaka Specialty Pork Tempura",
+                    "price": 748,
+                    "note": "Tax included; exact-branch managed menu. English dish labels retained; automated promotional/tasting descriptions omitted."
+                  },
+                  {
+                    "name": "Not for Business Use Aurora Menchi Katsu",
+                    "price": 473,
+                    "note": "Tax included; exact-branch managed menu. English dish labels retained; automated promotional/tasting descriptions omitted."
+                  },
+                  {
+                    "name": "French Fries",
+                    "price": 473,
+                    "note": "Tax included; exact-branch managed menu. English dish labels retained; automated promotional/tasting descriptions omitted."
+                  },
+                  {
+                    "name": "Chicken Kara-age",
+                    "price": 748,
+                    "note": "Tax included; exact-branch managed menu. English dish labels retained; automated promotional/tasting descriptions omitted."
+                  },
+                  {
+                    "name": "This is Isobe Age",
+                    "price": 495,
+                    "note": "Tax included; exact-branch managed menu. English dish labels retained; automated promotional/tasting descriptions omitted."
+                  },
+                  {
+                    "name": "Specialty Limited Quantity Chuka Soba",
+                    "price": 913,
+                    "note": "Tax included; exact-branch managed menu. English dish labels retained; automated promotional/tasting descriptions omitted."
+                  },
+                  {
+                    "name": "Curry Fried Rice",
+                    "price": 858,
+                    "note": "Tax included; exact-branch managed menu. English dish labels retained; automated promotional/tasting descriptions omitted."
+                  },
+                  {
+                    "name": "Decent Fried Rice Made by Toku-san",
+                    "price": 748,
+                    "note": "Tax included; exact-branch managed menu. English dish labels retained; automated promotional/tasting descriptions omitted."
+                  },
+                  {
+                    "name": "You Should Try It!! Yoshiko's Shrimp Tianjin Rice",
+                    "price": 913,
+                    "note": "Tax included; exact-branch managed menu. English dish labels retained; automated promotional/tasting descriptions omitted."
+                  },
+                  {
+                    "name": "White rice — large",
+                    "price": 396,
+                    "note": "Tax included; exact-branch managed menu. English dish labels retained; automated promotional/tasting descriptions omitted. Small¥308; medium¥341; large¥396."
+                  },
+                  {
+                    "name": "Nostalgic Ice Cream - Brulee Style",
+                    "price": 528,
+                    "note": "Tax included; exact-branch managed menu. English dish labels retained; automated promotional/tasting descriptions omitted."
+                  },
+                  {
+                    "name": "Nostalgic Melon Sorbet",
+                    "price": 418,
+                    "note": "Tax included; exact-branch managed menu. English dish labels retained; automated promotional/tasting descriptions omitted."
+                  },
+                  {
+                    "name": "Frozen Raw Gyoza",
+                    "price": 1450,
+                    "note": "Tax included; exact-branch managed menu. English dish labels retained; automated promotional/tasting descriptions omitted."
+                  }
+                ],
+                "note": "Managed exact Kamata branch list, corroborated by operator opening release for the new curry fried rice, beef-pepper stir-fry, fried chicken and char-siu rates. Other Yoshiko branch PDFs not borrowed."
+              },
+              {
+                "label": "Mieko Kamata — exact-branch drinks",
+                "url": "https://tabelog.com/en/tokyo/A1315/A131503/13325845/dtlmenu/drink/",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "Draft Beer Medium",
+                    "price": 605,
+                    "note": "Tax included; exact-branch managed menu. English dish labels retained; automated promotional/tasting descriptions omitted."
+                  },
+                  {
+                    "name": "Draft Beer Small",
+                    "price": 385,
+                    "note": "Tax included; exact-branch managed menu. English dish labels retained; automated promotional/tasting descriptions omitted."
+                  },
+                  {
+                    "name": "Kettle Beer (3.5 Cups)",
+                    "price": 1650,
+                    "note": "Tax included; exact-branch managed menu. English dish labels retained; automated promotional/tasting descriptions omitted."
+                  },
+                  {
+                    "name": "Asahi SUPER DRY Medium Bottle",
+                    "price": 748,
+                    "note": "Tax included; exact-branch managed menu. English dish labels retained; automated promotional/tasting descriptions omitted."
+                  },
+                  {
+                    "name": "Asahi Dry Zero Non-Alcoholic Beer",
+                    "price": 495,
+                    "note": "Tax included; exact-branch managed menu. English dish labels retained; automated promotional/tasting descriptions omitted."
+                  },
+                  {
+                    "name": "Hoppy (White)",
+                    "price": 539,
+                    "note": "Tax included; exact-branch managed menu. English dish labels retained; automated promotional/tasting descriptions omitted."
+                  },
+                  {
+                    "name": "Hoppy (Medium)",
+                    "price": 220,
+                    "note": "Tax included; exact-branch managed menu. English dish labels retained; automated promotional/tasting descriptions omitted."
+                  },
+                  {
+                    "name": "Hoppy (Outside)",
+                    "price": 363,
+                    "note": "Tax included; exact-branch managed menu. English dish labels retained; automated promotional/tasting descriptions omitted."
+                  },
+                  {
+                    "name": "Black Nikka",
+                    "price": 539,
+                    "note": "Tax included; exact-branch managed menu. English dish labels retained; automated promotional/tasting descriptions omitted."
+                  },
+                  {
+                    "name": "Chita",
+                    "price": 803,
+                    "note": "Tax included; exact-branch managed menu. English dish labels retained; automated promotional/tasting descriptions omitted."
+                  },
+                  {
+                    "name": "Yoichi",
+                    "price": 858,
+                    "note": "Tax included; exact-branch managed menu. English dish labels retained; automated promotional/tasting descriptions omitted."
+                  },
+                  {
+                    "name": "Yoshiko's Lemon Sour",
+                    "price": 539,
+                    "note": "Tax included; exact-branch managed menu. English dish labels retained; automated promotional/tasting descriptions omitted."
+                  },
+                  {
+                    "name": "Fresh Ginger Ginger Sour",
+                    "price": 539,
+                    "note": "Tax included; exact-branch managed menu. English dish labels retained; automated promotional/tasting descriptions omitted."
+                  },
+                  {
+                    "name": "Ripe Tomato Sour",
+                    "price": 539,
+                    "note": "Tax included; exact-branch managed menu. English dish labels retained; automated promotional/tasting descriptions omitted."
+                  },
+                  {
+                    "name": "Bice",
+                    "price": 539,
+                    "note": "Tax included; exact-branch managed menu. English dish labels retained; automated promotional/tasting descriptions omitted."
+                  },
+                  {
+                    "name": "Acerola",
+                    "price": 539,
+                    "note": "Tax included; exact-branch managed menu. English dish labels retained; automated promotional/tasting descriptions omitted."
+                  },
+                  {
+                    "name": "Citric Acid",
+                    "price": 539,
+                    "note": "Tax included; exact-branch managed menu. English dish labels retained; automated promotional/tasting descriptions omitted."
+                  },
+                  {
+                    "name": "Lemon",
+                    "price": 539,
+                    "note": "Tax included; exact-branch managed menu. English dish labels retained; automated promotional/tasting descriptions omitted."
+                  },
+                  {
+                    "name": "Green Apple",
+                    "price": 539,
+                    "note": "Tax included; exact-branch managed menu. English dish labels retained; automated promotional/tasting descriptions omitted."
+                  },
+                  {
+                    "name": "Grapefruit",
+                    "price": 539,
+                    "note": "Tax included; exact-branch managed menu. English dish labels retained; automated promotional/tasting descriptions omitted."
+                  },
+                  {
+                    "name": "Kyoho Grape",
+                    "price": 539,
+                    "note": "Tax included; exact-branch managed menu. English dish labels retained; automated promotional/tasting descriptions omitted."
+                  },
+                  {
+                    "name": "Plain Chuhai",
+                    "price": 473,
+                    "note": "Tax included; exact-branch managed menu. English dish labels retained; automated promotional/tasting descriptions omitted."
+                  },
+                  {
+                    "name": "Ramune Chuhai",
+                    "price": 539,
+                    "note": "Tax included; exact-branch managed menu. English dish labels retained; automated promotional/tasting descriptions omitted."
+                  },
+                  {
+                    "name": "Oolong Tea Highball",
+                    "price": 473,
+                    "note": "Tax included; exact-branch managed menu. English dish labels retained; automated promotional/tasting descriptions omitted."
+                  },
+                  {
+                    "name": "Roasted Green Tea Highball",
+                    "price": 473,
+                    "note": "Tax included; exact-branch managed menu. English dish labels retained; automated promotional/tasting descriptions omitted."
+                  },
+                  {
+                    "name": "Jasmine Tea Highball",
+                    "price": 473,
+                    "note": "Tax included; exact-branch managed menu. English dish labels retained; automated promotional/tasting descriptions omitted."
+                  },
+                  {
+                    "name": "Calpis Sour",
+                    "price": 539,
+                    "note": "Tax included; exact-branch managed menu. English dish labels retained; automated promotional/tasting descriptions omitted."
+                  },
+                  {
+                    "name": "Kuro Kirishima (Sweet Potato) Glass",
+                    "price": 539,
+                    "note": "Tax included; exact-branch managed menu. English dish labels retained; automated promotional/tasting descriptions omitted."
+                  },
+                  {
+                    "name": "Kuro Kirishima (Sweet Potato) Bottle",
+                    "price": 3300,
+                    "note": "Tax included; exact-branch managed menu. English dish labels retained; automated promotional/tasting descriptions omitted."
+                  },
+                  {
+                    "name": "Kinmiya (Class A) Bottle",
+                    "price": 3300,
+                    "note": "Tax included; exact-branch managed menu. English dish labels retained; automated promotional/tasting descriptions omitted."
+                  },
+                  {
+                    "name": "Kinmiya (Kourui) Glass",
+                    "price": 539,
+                    "note": "Tax included; exact-branch managed menu. English dish labels retained; automated promotional/tasting descriptions omitted."
+                  },
+                  {
+                    "name": "Miyakizakura Glass",
+                    "price": 605,
+                    "note": "Tax included; exact-branch managed menu. English dish labels retained; automated promotional/tasting descriptions omitted."
+                  },
+                  {
+                    "name": "Miyakizakura Bottle",
+                    "price": 4400,
+                    "note": "Tax included; exact-branch managed menu. English dish labels retained; automated promotional/tasting descriptions omitted."
+                  },
+                  {
+                    "name": "Nikaido (Barley) Glass",
+                    "price": 583,
+                    "note": "Tax included; exact-branch managed menu. English dish labels retained; automated promotional/tasting descriptions omitted."
+                  },
+                  {
+                    "name": "Nikaido (Barley) Bottle",
+                    "price": 4180,
+                    "note": "Tax included; exact-branch managed menu. English dish labels retained; automated promotional/tasting descriptions omitted."
+                  },
+                  {
+                    "name": "Delicious! Honjuku Umeshu Glass",
+                    "price": 418,
+                    "note": "Tax included; exact-branch managed menu. English dish labels retained; automated promotional/tasting descriptions omitted."
+                  },
+                  {
+                    "name": "Shaoxing Wine Glass",
+                    "price": 418,
+                    "note": "Tax included; exact-branch managed menu. English dish labels retained; automated promotional/tasting descriptions omitted."
+                  },
+                  {
+                    "name": "Shaoxing Wine Bottle",
+                    "price": 2200,
+                    "note": "Tax included; exact-branch managed menu. English dish labels retained; automated promotional/tasting descriptions omitted."
+                  },
+                  {
+                    "name": "Water/Ice/Shari-Kin Medium/Lemon Slice Each",
+                    "price": 220,
+                    "note": "Tax included; exact-branch managed menu. English dish labels retained; automated promotional/tasting descriptions omitted."
+                  },
+                  {
+                    "name": "Oolong Tea / Roasted Green Tea / Soda Each",
+                    "price": 385,
+                    "note": "Tax included; exact-branch managed menu. English dish labels retained; automated promotional/tasting descriptions omitted."
+                  },
+                  {
+                    "name": "Japanese Sake Glass",
+                    "price": 539,
+                    "note": "Tax included; exact-branch managed menu. English dish labels retained; automated promotional/tasting descriptions omitted."
+                  },
+                  {
+                    "name": "Japanese Sake One Go",
+                    "price": 759,
+                    "note": "Tax included; exact-branch managed menu. English dish labels retained; automated promotional/tasting descriptions omitted."
+                  },
+                  {
+                    "name": "Red & White Wine Glass",
+                    "price": 539,
+                    "note": "Tax included; exact-branch managed menu. English dish labels retained; automated promotional/tasting descriptions omitted."
+                  },
+                  {
+                    "name": "Red & White Wine Bottle",
+                    "price": 2200,
+                    "note": "Tax included; exact-branch managed menu. English dish labels retained; automated promotional/tasting descriptions omitted."
+                  },
+                  {
+                    "name": "Oolong Tea / Roasted Green Tea / Cider / Ramune / Cola / Orange Juice / Mixed Juice Each",
+                    "price": 385,
+                    "note": "Tax included; exact-branch managed menu. English dish labels retained; automated promotional/tasting descriptions omitted."
+                  }
+                ],
+                "note": "Tax-inclusive branch rates; no fixed bottle volume invented."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://gyoza-yoshiko.com/tenpo/%e5%a4%a7%e9%98%aa%e9%a4%83%e5%ad%90%e5%b0%82%e9%96%80%e5%ba%97-%e3%81%bf%e3%81%88%e3%81%93/",
+            "name": "Osaka Gyoza Senmonten Mieko — Kamata",
+            "checkedAt": "2026-10-19",
+            "websiteUrl": "https://gyoza-yoshiko.com/tenpo/%e5%a4%a7%e9%98%aa%e9%a4%83%e5%ad%90%e5%b0%82%e9%96%80%e5%ba%97-%e3%81%bf%e3%81%88%e3%81%93/",
+            "phone": "03-6424-5925",
+            "openingHours": [
+              {
+                "days": "Monday–Saturday",
+                "hours": "18:00–04:00next day; last order03:30"
+              },
+              {
+                "days": "Sunday/public holidays",
+                "hours": "18:00–24:00; last order23:30"
+              }
+            ],
+            "detailsSourceUrl": "https://gyoza-yoshiko.com/tenpo/%e5%a4%a7%e9%98%aa%e9%a4%83%e5%ad%90%e5%b0%82%e9%96%80%e5%ba%97-%e3%81%bf%e3%81%88%e3%81%93/",
+            "additionalSources": [
+              {
+                "label": "Exact operator original opening and current hours",
+                "url": "https://gyoza-yoshiko.com/tenpo/%e5%a4%a7%e9%98%aa%e9%a4%83%e5%ad%90%e5%b0%82%e9%96%80%e5%ba%97-%e3%81%bf%e3%81%88%e3%81%93/"
+              },
+              {
+                "label": "October5release distinguishing soft and grand opening",
+                "url": "https://prtimes.jp/main/html/rd/p/000000249.000019564.html"
+              },
+              {
+                "label": "Exact-branch food",
+                "url": "https://tabelog.com/en/tokyo/A1315/A131503/13325845/dtlmenu/"
+              },
+              {
+                "label": "Exact-branch drinks",
+                "url": "https://tabelog.com/en/tokyo/A1315/A131503/13325845/dtlmenu/drink/"
+              },
+              {
+                "label": "Brand branch menus, other-branch PDFs excluded",
+                "url": "https://gyoza-yoshiko.com/eatinstore/"
+              }
+            ],
+            "hoursNote": "Thirty-four seats per exact operator page. Current operator03:30last order supersedes corporate release03:00. One gyoza serving per guest required on managed menu. Initial October1–7soft-opening hours18–22are historical and not shown as today’s hours. No current dated discount verified.",
+            "reservationUrl": "https://tabelog.com/en/tokyo/A1315/A131503/13325845/"
+          },
+          "tile": {
+            "regionSlug": "tokyo",
+            "kind": "opening",
+            "slug": "japan103-mieko",
+            "name": "Osaka Gyoza Senmonten Mieko — Kamata",
+            "neighborhood": "Kamata / Nishikamata",
+            "cuisine": "Gyoza / Chinese",
+            "description": "A red-counter gyoza tavern serving thin-skinned dumplings, Chinese comfort dishes and late-night drinks near Kamata Station.",
+            "address": "1F,7-29-7 Nishikamata, Ota-ku, Tokyo",
+            "websiteUrl": "https://gyoza-yoshiko.com/tenpo/%e5%a4%a7%e9%98%aa%e9%a4%83%e5%ad%90%e5%b0%82%e9%96%80%e5%ba%97-%e3%81%bf%e3%81%88%e3%81%93/",
+            "checkedAt": "2026-10-19",
+            "recognition": "First Ofukuro League restaurant; operator confirms original October1opening",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-19/batch103-mieko-0-e4a531c97b955411.webp",
+            "imageCredit": "Mieko / FTG Company official opening release",
+            "imageSourceUrl": "https://prtimes.jp/main/html/rd/p/000000249.000019564.html",
+            "imageNote": "Operator branch-opening photograph; individual dish identity not inferred.",
+            "openingConfirmed": true,
+            "day": "2026-10-01"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "originalUrl": "https://prcdn.freetls.fastly.net/release_image/19564/249/19564-249-8f08b0ca40f1d3c7285b2e56aa29a0a2-1187x889.jpg",
+          "sourcePage": "https://prtimes.jp/main/html/rd/p/000000249.000019564.html",
+          "credit": "Mieko / FTG Company official opening release",
+          "note": "Operator branch-opening photograph; individual dish identity not inferred.",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-19/batch103-mieko-0-e4a531c97b955411.webp",
+          "sha256": "e4a531c97b955411ae0aad0f56bd9db0e1c464c8e2b8911b413046d160f162bf",
+          "width": 1187,
+          "height": 889
+        },
+        {
+          "originalUrl": "https://prcdn.freetls.fastly.net/release_image/19564/249/19564-249-4ec876e4f8ea3c0f6ff5d00f3ec68524-1206x904.jpg",
+          "sourcePage": "https://prtimes.jp/main/html/rd/p/000000249.000019564.html",
+          "credit": "Mieko / FTG Company official opening release",
+          "note": "畳席は3テーブルご用意しております",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-19/batch103-mieko-3-17f68402a736f34e.webp",
+          "sha256": "17f68402a736f34edc7315777e639818c1a1c10f48aa1a821c846e1d3dbe5b33",
+          "width": 1206,
+          "height": 904
+        },
+        {
+          "originalUrl": "https://prcdn.freetls.fastly.net/release_image/19564/249/19564-249-055ca8814f696a54ff084f98add1d179-1206x904.jpg",
+          "sourcePage": "https://prtimes.jp/main/html/rd/p/000000249.000019564.html",
+          "credit": "Mieko / FTG Company official opening release",
+          "note": "レトロ風な赤を基調としたカウンター席",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-19/batch103-mieko-4-5b5ab490ab88e2aa.webp",
+          "sha256": "5b5ab490ab88e2aa33c562ef5350e86eccd52e1a126d075dbe482f6679c1baaa",
+          "width": 1206,
+          "height": 904
+        },
+        {
+          "originalUrl": "https://prcdn.freetls.fastly.net/release_image/19564/249/19564-249-30b7857787479a35741a45f7787c90ba-3900x2600.jpg",
+          "sourcePage": "https://prtimes.jp/main/html/rd/p/000000249.000019564.html",
+          "credit": "Mieko / FTG Company official opening release",
+          "note": "Operator branch-opening photograph; individual dish identity not inferred.",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-19/batch103-mieko-5-0767222039e9930c.webp",
+          "sha256": "0767222039e9930c9d1cee4a259d45f140d7da9fc30f239de44485a7e122ec72",
+          "width": 1600,
+          "height": 1067
+        }
+      ]
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Korean Ryori Hanme — Otsuka Opens 2026-10-07",
+        "description": "A29-seat Korean restaurant for thick-cut pork belly, octopus-offal-shrimp hotpot, pancakes, noodles and Korean drinks.",
+        "sourceUrl": "https://prtimes.jp/main/html/rd/p/000000241.000019564.html",
+        "address": "1F Fifth Ichida Building,2-7-7 Kitaotsuka, Toshima-ku, Tokyo",
+        "productName": "Korean Ryori Hanme — Otsuka",
+        "utcStartDateTime": "2026-10-07T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "FTG Company’s exact Otsuka opening release explicitly states October7,2026for this new Hanme brand. Former Yakiniku Futago at the address is a separate prior concept; the host building’s age is not used.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Tokyo",
+          "Japan",
+          "Otsuka / Kitaotsuka",
+          "Korean"
+        ],
+        "longFormSummary": "<p>A29-seat Korean restaurant for thick-cut pork belly, octopus-offal-shrimp hotpot, pancakes, noodles and Korean drinks.<cite data-ref=\"https://prtimes.jp/main/html/rd/p/000000241.000019564.html\"></cite></p><p>FTG Company’s exact Otsuka opening release explicitly states October7,2026for this new Hanme brand. Former Yakiniku Futago at the address is a separate prior concept; the host building’s age is not used.</p>",
+        "references": [
+          {
+            "url": "https://prtimes.jp/main/html/rd/p/000000241.000019564.html",
+            "title": "Korean Ryori Hanme — Otsuka — branch website",
+            "confidence": 90,
+            "reasoning": "Korean Ryori Hanme — Otsuka — branch website"
+          },
+          {
+            "url": "https://prtimes.jp/main/html/rd/p/000000241.000019564.html",
+            "title": "Exact opening, per-person main prices and hours",
+            "confidence": 90,
+            "reasoning": "Exact opening, per-person main prices and hours"
+          },
+          {
+            "url": "https://tabelog.com/en/tokyo/A1323/A132302/13325846/dtlmenu/",
+            "title": "Exact-branch current food",
+            "confidence": 90,
+            "reasoning": "Exact-branch current food"
+          },
+          {
+            "url": "https://tabelog.com/en/tokyo/A1323/A132302/13325846/dtlmenu/drink/",
+            "title": "Exact-branch current drinks",
+            "confidence": 90,
+            "reasoning": "Exact-branch current drinks"
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://prtimes.jp/main/html/rd/p/000000241.000019564.html",
+          "menu": {
+            "pinSourceUrl": "https://prtimes.jp/main/html/rd/p/000000241.000019564.html",
+            "name": "Korean Ryori Hanme — Otsuka",
+            "checkedAt": "2026-10-19",
+            "menus": [
+              {
+                "label": "Hanme Otsuka — exact-branch food",
+                "url": "https://tabelog.com/en/tokyo/A1323/A132302/13325846/dtlmenu/",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "Napa Cabbage Kimchi",
+                    "price": 429,
+                    "note": "Tax included; exact-branch managed menu. English dish labels retained; automated promotional/tasting descriptions omitted."
+                  },
+                  {
+                    "name": "Cubed Radish Kimchi",
+                    "price": 429,
+                    "note": "Tax included; exact-branch managed menu. English dish labels retained; automated promotional/tasting descriptions omitted."
+                  },
+                  {
+                    "name": "Cucumber Kimchi",
+                    "price": 429,
+                    "note": "Tax included; exact-branch managed menu. English dish labels retained; automated promotional/tasting descriptions omitted."
+                  },
+                  {
+                    "name": "Dried Squid Kimchi",
+                    "price": 539,
+                    "note": "Tax included; exact-branch managed menu. English dish labels retained; automated promotional/tasting descriptions omitted."
+                  },
+                  {
+                    "name": "Squid Kimchi",
+                    "price": 539,
+                    "note": "Tax included; exact-branch managed menu. English dish labels retained; automated promotional/tasting descriptions omitted."
+                  },
+                  {
+                    "name": "Lightly Pickled Kimchi",
+                    "price": 539,
+                    "note": "Tax included; exact-branch managed menu. English dish labels retained; automated promotional/tasting descriptions omitted."
+                  },
+                  {
+                    "name": "Seared Yukhoe",
+                    "price": 1529,
+                    "note": "Tax included; exact-branch managed menu. English dish labels retained; automated promotional/tasting descriptions omitted."
+                  },
+                  {
+                    "name": "Minari Yukhoe",
+                    "price": 1749,
+                    "note": "Tax included; exact-branch managed menu. English dish labels retained; automated promotional/tasting descriptions omitted."
+                  },
+                  {
+                    "name": "Ika-fe",
+                    "price": 869,
+                    "note": "Tax included; exact-branch managed menu. English dish labels retained; automated promotional/tasting descriptions omitted."
+                  },
+                  {
+                    "name": "Omasum Sashimi",
+                    "price": 979,
+                    "note": "Tax included; exact-branch managed menu. English dish labels retained; automated promotional/tasting descriptions omitted."
+                  },
+                  {
+                    "name": "Shrimp and Garlic Chijimi",
+                    "price": 1089,
+                    "note": "Tax included; exact-branch managed menu. English dish labels retained; automated promotional/tasting descriptions omitted."
+                  },
+                  {
+                    "name": "Sweet Corn and Butter Chijimi",
+                    "price": 869,
+                    "note": "Tax included; exact-branch managed menu. English dish labels retained; automated promotional/tasting descriptions omitted."
+                  },
+                  {
+                    "name": "Kimchi Cheese Chijimi",
+                    "price": 979,
+                    "note": "Tax included; exact-branch managed menu. English dish labels retained; automated promotional/tasting descriptions omitted."
+                  },
+                  {
+                    "name": "Steamed Chicken",
+                    "price": 1529,
+                    "note": "Tax included; exact-branch managed menu. English dish labels retained; automated promotional/tasting descriptions omitted."
+                  },
+                  {
+                    "name": "Bossam",
+                    "price": 1639,
+                    "note": "Tax included; exact-branch managed menu. English dish labels retained; automated promotional/tasting descriptions omitted."
+                  },
+                  {
+                    "name": "Samgyeopsal",
+                    "price": 2090,
+                    "note": "Tax included; exact-branch managed menu. English dish labels retained; automated promotional/tasting descriptions omitted. Per person; minimum two portions."
+                  },
+                  {
+                    "name": "Grilled Intestines",
+                    "price": 2090,
+                    "note": "Tax included; exact-branch managed menu. English dish labels retained; automated promotional/tasting descriptions omitted. Per person; minimum two portions."
+                  },
+                  {
+                    "name": "Nakkopse",
+                    "price": 2640,
+                    "note": "Tax included; exact-branch managed menu. English dish labels retained; automated promotional/tasting descriptions omitted. Per person; minimum two portions."
+                  },
+                  {
+                    "name": "Chiritori Nabe",
+                    "price": 2640,
+                    "note": "Tax included; exact-branch managed menu. English dish labels retained; automated promotional/tasting descriptions omitted. Per person; minimum two portions."
+                  },
+                  {
+                    "name": "Kimchi Chige",
+                    "price": 1089,
+                    "note": "Tax included; exact-branch managed menu. English dish labels retained; automated promotional/tasting descriptions omitted."
+                  },
+                  {
+                    "name": "Sundubu Chige",
+                    "price": 1089,
+                    "note": "Tax included; exact-branch managed menu. English dish labels retained; automated promotional/tasting descriptions omitted."
+                  },
+                  {
+                    "name": "Doenjang Chige",
+                    "price": 979,
+                    "note": "Tax included; exact-branch managed menu. English dish labels retained; automated promotional/tasting descriptions omitted."
+                  },
+                  {
+                    "name": "Miyeok (Seaweed Soup)",
+                    "price": 539,
+                    "note": "Tax included; exact-branch managed menu. English dish labels retained; automated promotional/tasting descriptions omitted."
+                  },
+                  {
+                    "name": "Cold Noodles",
+                    "price": 1199,
+                    "note": "Tax included; exact-branch managed menu. English dish labels retained; automated promotional/tasting descriptions omitted."
+                  },
+                  {
+                    "name": "Bibim Noodles",
+                    "price": 1199,
+                    "note": "Tax included; exact-branch managed menu. English dish labels retained; automated promotional/tasting descriptions omitted."
+                  },
+                  {
+                    "name": "Perilla Seed Noodles",
+                    "price": 1309,
+                    "note": "Tax included; exact-branch managed menu. English dish labels retained; automated promotional/tasting descriptions omitted."
+                  },
+                  {
+                    "name": "Shin Ramyeon",
+                    "price": 869,
+                    "note": "Tax included; exact-branch managed menu. English dish labels retained; automated promotional/tasting descriptions omitted."
+                  },
+                  {
+                    "name": "Bibimbap",
+                    "price": 979,
+                    "note": "Tax included; exact-branch managed menu. English dish labels retained; automated promotional/tasting descriptions omitted."
+                  },
+                  {
+                    "name": "Yukhoe Bibimbap",
+                    "price": 1749,
+                    "note": "Tax included; exact-branch managed menu. English dish labels retained; automated promotional/tasting descriptions omitted."
+                  },
+                  {
+                    "name": "Minari Yukhoe Bibimbap",
+                    "price": 1969,
+                    "note": "Tax included; exact-branch managed menu. English dish labels retained; automated promotional/tasting descriptions omitted."
+                  },
+                  {
+                    "name": "Bulgogi Kimbap",
+                    "price": 1309,
+                    "note": "Tax included; exact-branch managed menu. English dish labels retained; automated promotional/tasting descriptions omitted."
+                  },
+                  {
+                    "name": "Chumoppa",
+                    "price": 539,
+                    "note": "Tax included; exact-branch managed menu. English dish labels retained; automated promotional/tasting descriptions omitted."
+                  },
+                  {
+                    "name": "Rice",
+                    "price": 330,
+                    "note": "Tax included; exact-branch managed menu. English dish labels retained; automated promotional/tasting descriptions omitted."
+                  }
+                ],
+                "note": "Tax-inclusive managed branch prices. Samgyeopsal, grilled intestines, nakkopse and chiritori hotpot are per person, minimum two portions. Operator press corroborates key rates; incorrect automated descriptive copy not reproduced."
+              },
+              {
+                "label": "Hanme Otsuka — exact-branch drinks",
+                "url": "https://tabelog.com/en/tokyo/A1323/A132302/13325846/dtlmenu/drink/",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "Draft Beer",
+                    "price": 649,
+                    "note": "Tax included; exact-branch managed menu. English dish labels retained; automated promotional/tasting descriptions omitted."
+                  },
+                  {
+                    "name": "Asahi Bottle Beer",
+                    "price": 759,
+                    "note": "Tax included; exact-branch managed menu. English dish labels retained; automated promotional/tasting descriptions omitted."
+                  },
+                  {
+                    "name": "Kasu Bottle Beer",
+                    "price": 979,
+                    "note": "Tax included; exact-branch managed menu. English dish labels retained; automated promotional/tasting descriptions omitted."
+                  },
+                  {
+                    "name": "Terra Bottle Beer",
+                    "price": 979,
+                    "note": "Tax included; exact-branch managed menu. English dish labels retained; automated promotional/tasting descriptions omitted."
+                  },
+                  {
+                    "name": "Dry Zero",
+                    "price": 649,
+                    "note": "Tax included; exact-branch managed menu. English dish labels retained; automated promotional/tasting descriptions omitted."
+                  },
+                  {
+                    "name": "Black Nikka Highball",
+                    "price": 539,
+                    "note": "Tax included; exact-branch managed menu. English dish labels retained; automated promotional/tasting descriptions omitted."
+                  },
+                  {
+                    "name": "Black Nikka Cola Highball",
+                    "price": 539,
+                    "note": "Tax included; exact-branch managed menu. English dish labels retained; automated promotional/tasting descriptions omitted."
+                  },
+                  {
+                    "name": "Black Nikka Ginger Highball",
+                    "price": 539,
+                    "note": "Tax included; exact-branch managed menu. English dish labels retained; automated promotional/tasting descriptions omitted."
+                  },
+                  {
+                    "name": "Kaku Highball",
+                    "price": 649,
+                    "note": "Tax included; exact-branch managed menu. English dish labels retained; automated promotional/tasting descriptions omitted."
+                  },
+                  {
+                    "name": "Kaku Cola Highball",
+                    "price": 649,
+                    "note": "Tax included; exact-branch managed menu. English dish labels retained; automated promotional/tasting descriptions omitted."
+                  },
+                  {
+                    "name": "Kaku Ginger Highball",
+                    "price": 649,
+                    "note": "Tax included; exact-branch managed menu. English dish labels retained; automated promotional/tasting descriptions omitted."
+                  },
+                  {
+                    "name": "Oolong Tea Highball",
+                    "price": 539,
+                    "note": "Tax included; exact-branch managed menu. English dish labels retained; automated promotional/tasting descriptions omitted."
+                  },
+                  {
+                    "name": "Green Tea Highball",
+                    "price": 539,
+                    "note": "Tax included; exact-branch managed menu. English dish labels retained; automated promotional/tasting descriptions omitted."
+                  },
+                  {
+                    "name": "Corn Tea Highball",
+                    "price": 539,
+                    "note": "Tax included; exact-branch managed menu. English dish labels retained; automated promotional/tasting descriptions omitted."
+                  },
+                  {
+                    "name": "Jasmine Tea Highball",
+                    "price": 539,
+                    "note": "Tax included; exact-branch managed menu. English dish labels retained; automated promotional/tasting descriptions omitted."
+                  },
+                  {
+                    "name": "Lemon Sour",
+                    "price": 539,
+                    "note": "Tax included; exact-branch managed menu. English dish labels retained; automated promotional/tasting descriptions omitted."
+                  },
+                  {
+                    "name": "Sui gin sour",
+                    "price": 539,
+                    "note": "Tax included; exact-branch managed menu. English dish labels retained; automated promotional/tasting descriptions omitted. Translation corrected from actual label 翠."
+                  },
+                  {
+                    "name": "Yuzu Sour",
+                    "price": 539,
+                    "note": "Tax included; exact-branch managed menu. English dish labels retained; automated promotional/tasting descriptions omitted."
+                  },
+                  {
+                    "name": "Micho Muscat Sour",
+                    "price": 539,
+                    "note": "Tax included; exact-branch managed menu. English dish labels retained; automated promotional/tasting descriptions omitted."
+                  },
+                  {
+                    "name": "Micho Pomegranate Sour",
+                    "price": 539,
+                    "note": "Tax included; exact-branch managed menu. English dish labels retained; automated promotional/tasting descriptions omitted."
+                  },
+                  {
+                    "name": "Chamisul Fresh",
+                    "price": 1078,
+                    "note": "Tax included; exact-branch managed menu. English dish labels retained; automated promotional/tasting descriptions omitted."
+                  },
+                  {
+                    "name": "Chamisul Plum",
+                    "price": 1078,
+                    "note": "Tax included; exact-branch managed menu. English dish labels retained; automated promotional/tasting descriptions omitted."
+                  },
+                  {
+                    "name": "Chamisul Grapefruit",
+                    "price": 1078,
+                    "note": "Tax included; exact-branch managed menu. English dish labels retained; automated promotional/tasting descriptions omitted."
+                  },
+                  {
+                    "name": "Chamisul Muscat",
+                    "price": 1078,
+                    "note": "Tax included; exact-branch managed menu. English dish labels retained; automated promotional/tasting descriptions omitted."
+                  },
+                  {
+                    "name": "Jinro is back",
+                    "price": 1199,
+                    "note": "Tax included; exact-branch managed menu. English dish labels retained; automated promotional/tasting descriptions omitted."
+                  },
+                  {
+                    "name": "Chungha Sparkling Wine",
+                    "price": 1199,
+                    "note": "Tax included; exact-branch managed menu. English dish labels retained; automated promotional/tasting descriptions omitted."
+                  },
+                  {
+                    "name": "Makgeolli",
+                    "price": 583,
+                    "note": "Tax included; exact-branch managed menu. English dish labels retained; automated promotional/tasting descriptions omitted."
+                  },
+                  {
+                    "name": "Makgeolli Bottle",
+                    "price": 1650,
+                    "note": "Tax included; exact-branch managed menu. English dish labels retained; automated promotional/tasting descriptions omitted."
+                  },
+                  {
+                    "name": "Fresh Makgeolli Bottle",
+                    "price": 2200,
+                    "note": "Tax included; exact-branch managed menu. English dish labels retained; automated promotional/tasting descriptions omitted."
+                  },
+                  {
+                    "name": "Black Bean Makgeolli",
+                    "price": 583,
+                    "note": "Tax included; exact-branch managed menu. English dish labels retained; automated promotional/tasting descriptions omitted."
+                  },
+                  {
+                    "name": "Black Bean Makgeolli Bottle",
+                    "price": 1650,
+                    "note": "Tax included; exact-branch managed menu. English dish labels retained; automated promotional/tasting descriptions omitted."
+                  },
+                  {
+                    "name": "Additional Com Honey (Honeycomb)",
+                    "price": 440,
+                    "note": "Tax included; exact-branch managed menu. English dish labels retained; automated promotional/tasting descriptions omitted."
+                  },
+                  {
+                    "name": "Peach Oolong",
+                    "price": 583,
+                    "note": "Tax included; exact-branch managed menu. English dish labels retained; automated promotional/tasting descriptions omitted."
+                  },
+                  {
+                    "name": "Peach Soda",
+                    "price": 583,
+                    "note": "Tax included; exact-branch managed menu. English dish labels retained; automated promotional/tasting descriptions omitted."
+                  },
+                  {
+                    "name": "Peach Orange",
+                    "price": 583,
+                    "note": "Tax included; exact-branch managed menu. English dish labels retained; automated promotional/tasting descriptions omitted."
+                  },
+                  {
+                    "name": "Cassis Oolong",
+                    "price": 583,
+                    "note": "Tax included; exact-branch managed menu. English dish labels retained; automated promotional/tasting descriptions omitted."
+                  },
+                  {
+                    "name": "Cassis Soda",
+                    "price": 583,
+                    "note": "Tax included; exact-branch managed menu. English dish labels retained; automated promotional/tasting descriptions omitted."
+                  },
+                  {
+                    "name": "Cassis Orange",
+                    "price": 583,
+                    "note": "Tax included; exact-branch managed menu. English dish labels retained; automated promotional/tasting descriptions omitted."
+                  },
+                  {
+                    "name": "Plum Wine",
+                    "price": 583,
+                    "note": "Tax included; exact-branch managed menu. English dish labels retained; automated promotional/tasting descriptions omitted."
+                  },
+                  {
+                    "name": "Oolong Tea",
+                    "price": 363,
+                    "note": "Tax included; exact-branch managed menu. English dish labels retained; automated promotional/tasting descriptions omitted."
+                  },
+                  {
+                    "name": "Green Tea",
+                    "price": 363,
+                    "note": "Tax included; exact-branch managed menu. English dish labels retained; automated promotional/tasting descriptions omitted."
+                  },
+                  {
+                    "name": "Corn Tea",
+                    "price": 363,
+                    "note": "Tax included; exact-branch managed menu. English dish labels retained; automated promotional/tasting descriptions omitted."
+                  },
+                  {
+                    "name": "Jasmine Tea",
+                    "price": 363,
+                    "note": "Tax included; exact-branch managed menu. English dish labels retained; automated promotional/tasting descriptions omitted."
+                  },
+                  {
+                    "name": "Ginger Ale",
+                    "price": 429,
+                    "note": "Tax included; exact-branch managed menu. English dish labels retained; automated promotional/tasting descriptions omitted."
+                  },
+                  {
+                    "name": "Orange Juice",
+                    "price": 429,
+                    "note": "Tax included; exact-branch managed menu. English dish labels retained; automated promotional/tasting descriptions omitted."
+                  },
+                  {
+                    "name": "Bunch Grapes",
+                    "price": 429,
+                    "note": "Tax included; exact-branch managed menu. English dish labels retained; automated promotional/tasting descriptions omitted."
+                  },
+                  {
+                    "name": "Pomegranate Juice",
+                    "price": 429,
+                    "note": "Tax included; exact-branch managed menu. English dish labels retained; automated promotional/tasting descriptions omitted."
+                  },
+                  {
+                    "name": "Micho Soda Muscat",
+                    "price": 429,
+                    "note": "Tax included; exact-branch managed menu. English dish labels retained; automated promotional/tasting descriptions omitted."
+                  }
+                ],
+                "note": "Tax-inclusive managed branch list. Cola¥428and potato-cheese pancake¥868rounding anomalies held, as is ambiguously translated Zero/제로soju falsely described as non-alcoholic. No alcohol-free claim inferred from product-name translation."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://prtimes.jp/main/html/rd/p/000000241.000019564.html",
+            "name": "Korean Ryori Hanme — Otsuka",
+            "checkedAt": "2026-10-19",
+            "websiteUrl": "https://prtimes.jp/main/html/rd/p/000000241.000019564.html",
+            "phone": "03-6903-4925",
+            "openingHours": [
+              {
+                "days": "Monday–Friday",
+                "hours": "17:00–24:00; last order23:30"
+              },
+              {
+                "days": "Saturday–Sunday/public holidays",
+                "hours": "12:00–24:00; last order23:30"
+              }
+            ],
+            "detailsSourceUrl": "https://prtimes.jp/main/html/rd/p/000000241.000019564.html",
+            "additionalSources": [
+              {
+                "label": "Exact opening, per-person main prices and hours",
+                "url": "https://prtimes.jp/main/html/rd/p/000000241.000019564.html"
+              },
+              {
+                "label": "Exact-branch current food",
+                "url": "https://tabelog.com/en/tokyo/A1323/A132302/13325846/dtlmenu/"
+              },
+              {
+                "label": "Exact-branch current drinks",
+                "url": "https://tabelog.com/en/tokyo/A1323/A132302/13325846/dtlmenu/drink/"
+              }
+            ],
+            "hoursNote": "Twenty-nine seats at nine tables. Major tabletop meats/hotpots require two portions and prices are per person, not for the two-person photo. Independent blog’s claim two portions¥2,090is contradicted by operator; operator per-person¥2,090controls. No verified dated discount after operator and branch menu searches. Drink translation errors excluded.",
+            "reservationUrl": "https://www.instagram.com/hanme_otsuka/"
+          },
+          "tile": {
+            "regionSlug": "tokyo",
+            "kind": "opening",
+            "slug": "japan103-hanme",
+            "name": "Korean Ryori Hanme — Otsuka",
+            "neighborhood": "Otsuka / Kitaotsuka",
+            "cuisine": "Korean",
+            "description": "A29-seat Korean restaurant for thick-cut pork belly, octopus-offal-shrimp hotpot, pancakes, noodles and Korean drinks.",
+            "address": "1F Fifth Ichida Building,2-7-7 Kitaotsuka, Toshima-ku, Tokyo",
+            "websiteUrl": "https://prtimes.jp/main/html/rd/p/000000241.000019564.html",
+            "checkedAt": "2026-10-19",
+            "recognition": "First Hanme restaurant; operator-confirmed opening",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-19/batch103-hanme-0-7055a7df79bb6632.webp",
+            "imageCredit": "Hanme / FTG Company official opening release",
+            "imageSourceUrl": "https://prtimes.jp/main/html/rd/p/000000241.000019564.html",
+            "imageNote": "Operator branch-opening photograph; individual dish identity not inferred.",
+            "openingConfirmed": true,
+            "day": "2026-10-07"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "originalUrl": "https://prcdn.freetls.fastly.net/release_image/19564/241/19564-241-496950b84e096772cfe953c63dc373a3-3900x2600.jpg",
+          "sourcePage": "https://prtimes.jp/main/html/rd/p/000000241.000019564.html",
+          "credit": "Hanme / FTG Company official opening release",
+          "note": "Operator branch-opening photograph; individual dish identity not inferred.",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-19/batch103-hanme-0-7055a7df79bb6632.webp",
+          "sha256": "7055a7df79bb6632ba060b0857a6edcf94b49de6ce42b89aa1d69b06e26cb216",
+          "width": 1600,
+          "height": 1067
+        },
+        {
+          "originalUrl": "https://prcdn.freetls.fastly.net/release_image/19564/241/19564-241-4284729de90c42068a93694ff36300b0-3900x2600.jpg",
+          "sourcePage": "https://prtimes.jp/main/html/rd/p/000000241.000019564.html",
+          "credit": "Hanme / FTG Company official opening release",
+          "note": "パンチャン",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-19/batch103-hanme-2-7378d9bda076b8a6.webp",
+          "sha256": "7378d9bda076b8a65b1fa64d4c759a4b80106273cb823000884938df50008d13",
+          "width": 1600,
+          "height": 1067
+        },
+        {
+          "originalUrl": "https://prcdn.freetls.fastly.net/release_image/19564/241/19564-241-00dfa45ca31f9fcd555a0bf32ea0b65d-3900x2600.jpg",
+          "sourcePage": "https://prtimes.jp/main/html/rd/p/000000241.000019564.html",
+          "credit": "Hanme / FTG Company official opening release",
+          "note": "サムギョプサル(写真は２人前です）",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-19/batch103-hanme-3-97eb9affbfe8f331.webp",
+          "sha256": "97eb9affbfe8f3313569108b43635508d8f8d9a0465899fd88b7d7e7e2209f4b",
+          "width": 1600,
+          "height": 1067
+        }
+      ]
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "SON CAFE by WONDERHUNTER — Daimaru Shinsaibashi Opens 2026-10-21",
+        "description": "A forthcoming food-hall cafe serving Senshu vegetable curries, house pickles, desserts and coffee.",
+        "sourceUrl": "https://shop-idsumi.com/blogs/news/soncafe-new-by-wonderhunter-10-21",
+        "address": "B2 Shinsaibashi Food Hall, Daimaru Shinsaibashi Main Building,1-7-1 Shinsaibashisuji, Chuo-ku, Osaka",
+        "productName": "SON CAFE by WONDERHUNTER — Daimaru Shinsaibashi",
+        "utcStartDateTime": "2026-10-21T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "Wonder Hunter operator announcement and October13,2026corporate release explicitly give October21,2026at11:00for the Daimaru Shinsaibashi branch. Izumisano main-store history and a future Rinku project are separate.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Osaka",
+          "Japan",
+          "Shinsaibashi",
+          "Curry / Cafe"
+        ],
+        "longFormSummary": "<p>A forthcoming food-hall cafe serving Senshu vegetable curries, house pickles, desserts and coffee.<cite data-ref=\"https://shop-idsumi.com/blogs/news/soncafe-new-by-wonderhunter-10-21\"></cite></p><p>Wonder Hunter operator announcement and October13,2026corporate release explicitly give October21,2026at11:00for the Daimaru Shinsaibashi branch. Izumisano main-store history and a future Rinku project are separate.</p>",
+        "references": [
+          {
+            "url": "https://shop-idsumi.com/blogs/news/soncafe-new-by-wonderhunter-10-21",
+            "title": "SON CAFE by WONDERHUNTER — Daimaru Shinsaibashi — branch website",
+            "confidence": 90,
+            "reasoning": "SON CAFE by WONDERHUNTER — Daimaru Shinsaibashi — branch website"
+          },
+          {
+            "url": "https://shop-idsumi.com/blogs/news/soncafe-new-by-wonderhunter-10-21",
+            "title": "Operator branch announcement",
+            "confidence": 90,
+            "reasoning": "Operator branch announcement"
+          },
+          {
+            "url": "https://prtimes.jp/main/html/rd/p/000000016.000045420.html",
+            "title": "Exact opening, food rates and credited images",
+            "confidence": 90,
+            "reasoning": "Exact opening, food rates and credited images"
+          },
+          {
+            "url": "https://www.daimaru.co.jp/shinsaibashi/",
+            "title": "Department-store official website",
+            "confidence": 90,
+            "reasoning": "Department-store official website"
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://shop-idsumi.com/blogs/news/soncafe-new-by-wonderhunter-10-21",
+          "menu": {
+            "pinSourceUrl": "https://shop-idsumi.com/blogs/news/soncafe-new-by-wonderhunter-10-21",
+            "name": "SON CAFE by WONDERHUNTER — Daimaru Shinsaibashi",
+            "checkedAt": "2026-10-19",
+            "menus": [
+              {
+                "label": "SON CAFE Shinsaibashi — opening food",
+                "url": "https://prtimes.jp/main/html/rd/p/000000016.000045420.html",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "季節の泉州野菜カレー",
+                    "price": 1780,
+                    "note": "Tax included; announced exact-branch opening menu."
+                  },
+                  {
+                    "name": "2種あいがけ季節の泉州野菜カレー",
+                    "price": 1960,
+                    "note": "Tax included; announced exact-branch opening menu."
+                  },
+                  {
+                    "name": "2種あいがけフライドチキンスペシャルカレー",
+                    "price": 2550,
+                    "note": "Tax included; announced exact-branch opening menu."
+                  },
+                  {
+                    "name": "2種あいがけ和牛スペシャルカレー",
+                    "price": 3750,
+                    "note": "Tax included; announced exact-branch opening menu."
+                  },
+                  {
+                    "name": "オリジナルカレー",
+                    "price": 1280,
+                    "note": "Tax included; announced exact-branch opening menu."
+                  },
+                  {
+                    "name": "ヴィーガンキーマカレー",
+                    "price": 1980,
+                    "note": "Tax included; announced exact-branch opening menu."
+                  },
+                  {
+                    "name": "2種あいがけカレー（オリジナル＆キーマ）",
+                    "price": 1480,
+                    "note": "Tax included; announced exact-branch opening menu."
+                  },
+                  {
+                    "name": "タコライス",
+                    "price": 1280,
+                    "note": "Tax included; announced exact-branch opening menu."
+                  },
+                  {
+                    "name": "泉州ピクルス3種盛り",
+                    "priceLabel": "Price not published",
+                    "note": "Announced branch item; price not published."
+                  },
+                  {
+                    "name": "焼き泉州野菜",
+                    "priceLabel": "Price not published",
+                    "note": "Announced branch item; price not published."
+                  },
+                  {
+                    "name": "フライドチキン（トッピング）",
+                    "priceLabel": "Price not published",
+                    "note": "Announced branch item; price not published."
+                  },
+                  {
+                    "name": "和牛ステーキ（トッピング）",
+                    "priceLabel": "Price not published",
+                    "note": "Announced branch item; price not published."
+                  }
+                ],
+                "note": "Branch-specific prices and items; main Izumisano branch not substituted."
+              },
+              {
+                "label": "SON CAFE Shinsaibashi — opening desserts and drinks",
+                "url": "https://prtimes.jp/main/html/rd/p/000000016.000045420.html",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "バスクチーズケーキ",
+                    "priceLabel": "Price not published",
+                    "note": "Announced exact-branch item; price not published."
+                  },
+                  {
+                    "name": "ショコラテリーヌ",
+                    "priceLabel": "Price not published",
+                    "note": "Announced exact-branch item; price not published."
+                  },
+                  {
+                    "name": "コーヒー",
+                    "priceLabel": "Price not published",
+                    "note": "Announced exact-branch item; price not published."
+                  },
+                  {
+                    "name": "紅茶",
+                    "priceLabel": "Price not published",
+                    "note": "Announced exact-branch item; price not published."
+                  },
+                  {
+                    "name": "自家製レモネード",
+                    "priceLabel": "Price not published",
+                    "note": "Announced exact-branch item; price not published."
+                  },
+                  {
+                    "name": "自家製クラフトコーラ",
+                    "priceLabel": "Price not published",
+                    "note": "Announced exact-branch item; price not published."
+                  }
+                ],
+                "note": "Operator current article, branch opening release, department-store pages and image searches checked; no separate dessert/drink price list located before opening."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://shop-idsumi.com/blogs/news/soncafe-new-by-wonderhunter-10-21",
+            "name": "SON CAFE by WONDERHUNTER — Daimaru Shinsaibashi",
+            "checkedAt": "2026-10-19",
+            "websiteUrl": "https://shop-idsumi.com/blogs/news/soncafe-new-by-wonderhunter-10-21",
+            "phone": "",
+            "openingHours": [
+              {
+                "days": "Opening day October21",
+                "hours": "11:00opening"
+              },
+              {
+                "days": "Regular hours",
+                "hours": "Full daily closing hours not yet confirmed; follow Daimaru branch updates"
+              }
+            ],
+            "detailsSourceUrl": "https://shop-idsumi.com/blogs/news/soncafe-new-by-wonderhunter-10-21",
+            "additionalSources": [
+              {
+                "label": "Operator branch announcement",
+                "url": "https://shop-idsumi.com/blogs/news/soncafe-new-by-wonderhunter-10-21"
+              },
+              {
+                "label": "Exact opening, food rates and credited images",
+                "url": "https://prtimes.jp/main/html/rd/p/000000016.000045420.html"
+              },
+              {
+                "label": "Department-store official website",
+                "url": "https://www.daimaru.co.jp/shinsaibashi/"
+              }
+            ],
+            "hoursNote": "No branch telephone or daily last-order time published in the checked opening announcement. Operator PR telephone is not substituted as customer contact. Card image is explicitly a planned-branch rendering; food photos are operator menu illustrations. No opening discount or precise closing time invented.",
+            "reservationUrl": "https://shop-idsumi.com/blogs/news/soncafe-new-by-wonderhunter-10-21"
+          },
+          "tile": {
+            "regionSlug": "osaka",
+            "kind": "opening",
+            "slug": "japan103-son",
+            "name": "SON CAFE by WONDERHUNTER — Daimaru Shinsaibashi",
+            "neighborhood": "Shinsaibashi",
+            "cuisine": "Curry / Cafe",
+            "description": "A forthcoming food-hall cafe serving Senshu vegetable curries, house pickles, desserts and coffee.",
+            "address": "B2 Shinsaibashi Food Hall, Daimaru Shinsaibashi Main Building,1-7-1 Shinsaibashisuji, Chuo-ku, Osaka",
+            "websiteUrl": "https://shop-idsumi.com/blogs/news/soncafe-new-by-wonderhunter-10-21",
+            "checkedAt": "2026-10-19",
+            "recognition": "Operator-announced new department-store branch",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-19/batch103-son-1-4e871654d88c4310.webp",
+            "imageCredit": "SON CAFE / Wonder Hunter official opening release",
+            "imageSourceUrl": "https://prtimes.jp/main/html/rd/p/000000016.000045420.html",
+            "imageNote": "Operator rendering of the planned Daimaru Shinsaibashi branch; not a completed interior photograph.",
+            "openingConfirmed": true,
+            "day": "2026-10-21"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "originalUrl": "https://prcdn.freetls.fastly.net/release_image/45420/16/45420-16-05c48831636dc5f1b1dde5e831848c7e-3013x1550.png",
+          "sourcePage": "https://prtimes.jp/main/html/rd/p/000000016.000045420.html",
+          "credit": "SON CAFE / Wonder Hunter official opening release",
+          "note": "Operator rendering of the planned Daimaru Shinsaibashi branch; not a completed interior photograph.",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-19/batch103-son-1-4e871654d88c4310.webp",
+          "sha256": "4e871654d88c43103d5816eac58b710fd1becd653917cb1d1e4a1be6c4bddd4e",
+          "width": 1600,
+          "height": 823
+        },
+        {
+          "originalUrl": "https://prcdn.freetls.fastly.net/release_image/45420/16/45420-16-f126b474a10f7678d7543d745c5432e3-1574x1181.jpg",
+          "sourcePage": "https://prtimes.jp/main/html/rd/p/000000016.000045420.html",
+          "credit": "SON CAFE / Wonder Hunter official opening release",
+          "note": "Operator food illustration for this branch opening; presentation and seasonal ingredients may vary.",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-19/batch103-son-3-9d8c1e316a226bae.webp",
+          "sha256": "9d8c1e316a226baef33701e8f8cf3c20fe5ad65bf8073a0cf987a56202caf158",
+          "width": 1574,
+          "height": 1181
+        },
+        {
+          "originalUrl": "https://prcdn.freetls.fastly.net/release_image/45420/16/45420-16-eebae3089900db902c61ad9513459e3e-1574x1181.jpg",
+          "sourcePage": "https://prtimes.jp/main/html/rd/p/000000016.000045420.html",
+          "credit": "SON CAFE / Wonder Hunter official opening release",
+          "note": "Operator food illustration for this branch opening; presentation and seasonal ingredients may vary.",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-19/batch103-son-4-adbd4eaaa0698eff.webp",
+          "sha256": "adbd4eaaa0698effdc38cb703d899a8dc1f74802cac0eb93fa44ad203507331a",
+          "width": 1574,
+          "height": 1181
+        },
+        {
+          "originalUrl": "https://prcdn.freetls.fastly.net/release_image/45420/16/45420-16-78e934a38b9bc76ec5324aaa50a755f9-1574x1181.jpg",
+          "sourcePage": "https://prtimes.jp/main/html/rd/p/000000016.000045420.html",
+          "credit": "SON CAFE / Wonder Hunter official opening release",
+          "note": "Operator food illustration for this branch opening; presentation and seasonal ingredients may vary.",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-19/batch103-son-5-1d6153e31cff5842.webp",
+          "sha256": "1d6153e31cff58426abae25ceae4f5131efb1f5e74fe7f969a6bca299d485659",
+          "width": 1574,
+          "height": 1181
+        }
+      ]
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "TAKEMON — Tosabori Opens 2026-10-02",
+        "description": "A six-seat Chinese counter exploring shark fin through fried, steamed, grilled and hotpot preparations.",
+        "sourceUrl": "https://takemon-fukahire.com/",
+        "address": "3F Grand Line Nakanoshima,1-1-30 Tosabori, Nishi-ku, Osaka",
+        "productName": "TAKEMON — Tosabori",
+        "utcStartDateTime": "2026-10-02T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "Operator homepage and exact-branch corporate opening release explicitly give October2,2026at this Tosabori address. The corporate formation date and other related restaurants are not used.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Osaka",
+          "Japan",
+          "Tosabori / Higobashi",
+          "Chinese"
+        ],
+        "longFormSummary": "<p>A six-seat Chinese counter exploring shark fin through fried, steamed, grilled and hotpot preparations.<cite data-ref=\"https://takemon-fukahire.com/\"></cite></p><p>Operator homepage and exact-branch corporate opening release explicitly give October2,2026at this Tosabori address. The corporate formation date and other related restaurants are not used.</p>",
+        "references": [
+          {
+            "url": "https://takemon-fukahire.com/",
+            "title": "TAKEMON — Tosabori — branch website",
+            "confidence": 90,
+            "reasoning": "TAKEMON — Tosabori — branch website"
+          },
+          {
+            "url": "https://takemon-fukahire.com/",
+            "title": "Exact opening, ordinary menu and gallery",
+            "confidence": 90,
+            "reasoning": "Exact opening, ordinary menu and gallery"
+          },
+          {
+            "url": "https://prtimes.jp/main/html/rd/p/000000001.000189687.html",
+            "title": "First50LINE opening offer with booking/use deadlines",
+            "confidence": 90,
+            "reasoning": "First50LINE opening offer with booking/use deadlines"
+          },
+          {
+            "url": "https://www.tablecheck.com/ja/shops/takemon/reserve",
+            "title": "Booking arrival and cancellation policy",
+            "confidence": 90,
+            "reasoning": "Booking arrival and cancellation policy"
+          },
+          {
+            "url": "https://takemon-fukahire.com/contact/",
+            "title": "Customer contact form",
+            "confidence": 90,
+            "reasoning": "Customer contact form"
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://takemon-fukahire.com/",
+          "menu": {
+            "pinSourceUrl": "https://takemon-fukahire.com/",
+            "name": "TAKEMON — Tosabori",
+            "checkedAt": "2026-10-19",
+            "menus": [
+              {
+                "label": "TAKEMON — ordinary courses",
+                "url": "https://takemon-fukahire.com/",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "STANDARD〜フカヒレを知る〜",
+                    "price": 18000,
+                    "note": "Tax included; service10%extra; nine dishes."
+                  },
+                  {
+                    "name": "PREMIUM",
+                    "price": 30000,
+                    "note": "Tax included; service extra; reserve by previous day."
+                  },
+                  {
+                    "name": "PREMIUM2名貸切（1名料金）",
+                    "price": 45000,
+                    "note": "Per person for two-person buyout; tax included, service extra; only if no other reservations."
+                  }
+                ],
+                "note": "Ordinary courses separate from first50LINE opening promotion."
+              },
+              {
+                "label": "TAKEMON — STANDARD published example",
+                "url": "https://takemon-fukahire.com/",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "フカヒレ・キャビア添え",
+                    "priceLabel": "Price not published",
+                    "note": "Included STANDARD-course example; no standalone price. Seasonal supply may change."
+                  },
+                  {
+                    "name": "フカヒレと海老の生春巻",
+                    "priceLabel": "Price not published",
+                    "note": "Included STANDARD-course example; no standalone price. Seasonal supply may change."
+                  },
+                  {
+                    "name": "フカヒレの天麩羅",
+                    "priceLabel": "Price not published",
+                    "note": "Included STANDARD-course example; no standalone price. Seasonal supply may change."
+                  },
+                  {
+                    "name": "フカヒレしゃぶしゃぶ",
+                    "priceLabel": "Price not published",
+                    "note": "Included STANDARD-course example; no standalone price. Seasonal supply may change."
+                  },
+                  {
+                    "name": "フカヒレ薬膳蒸し",
+                    "priceLabel": "Price not published",
+                    "note": "Included STANDARD-course example; no standalone price. Seasonal supply may change."
+                  },
+                  {
+                    "name": "フカヒレ鉄板焼",
+                    "priceLabel": "Price not published",
+                    "note": "Included STANDARD-course example; no standalone price. Seasonal supply may change."
+                  },
+                  {
+                    "name": "フカヒレの〆",
+                    "priceLabel": "Price not published",
+                    "note": "Included STANDARD-course example; no standalone price. Seasonal supply may change."
+                  },
+                  {
+                    "name": "フカヒレとフルーツのヴェリーヌ",
+                    "priceLabel": "Price not published",
+                    "note": "Included STANDARD-course example; no standalone price. Seasonal supply may change."
+                  },
+                  {
+                    "name": "食後のお茶",
+                    "priceLabel": "Price not published",
+                    "note": "Included STANDARD-course example; no standalone price. Seasonal supply may change."
+                  }
+                ],
+                "note": "The promotion uses this same STANDARDcourse, as operator explicitly confirms."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://takemon-fukahire.com/",
+            "name": "TAKEMON — Tosabori",
+            "checkedAt": "2026-10-19",
+            "websiteUrl": "https://takemon-fukahire.com/",
+            "phone": "06-4256-8683",
+            "openingHours": [
+              {
+                "days": "Monday–Saturday dinner",
+                "hours": "Simultaneous sittings18:00and20:30; doors five minutes before"
+              },
+              {
+                "days": "Closed",
+                "hours": "Sunday"
+              }
+            ],
+            "detailsSourceUrl": "https://takemon-fukahire.com/",
+            "additionalSources": [
+              {
+                "label": "Exact opening, ordinary menu and gallery",
+                "url": "https://takemon-fukahire.com/"
+              },
+              {
+                "label": "First50LINE opening offer with booking/use deadlines",
+                "url": "https://prtimes.jp/main/html/rd/p/000000001.000189687.html"
+              },
+              {
+                "label": "Booking arrival and cancellation policy",
+                "url": "https://www.tablecheck.com/ja/shops/takemon/reserve"
+              },
+              {
+                "label": "Customer contact form",
+                "url": "https://takemon-fukahire.com/contact/"
+              }
+            ],
+            "hoursNote": "Six counter seats. Arrive before the sitting; call if late. Fifteen minutes late without contact may be cancelled. PREMIUMbook by previous day. Cancellation two days before50%, previous day/same day100%. Opening offer requires LINEdirect booking and written confirmation; remaining quota is not published. Current named drink prices not found after operator menu, TableCheck and release searches.",
+            "reservationUrl": "https://www.tablecheck.com/ja/shops/takemon/reserve"
+          },
+          "tile": {
+            "regionSlug": "osaka",
+            "kind": "opening",
+            "slug": "japan103-takemon",
+            "name": "TAKEMON — Tosabori",
+            "neighborhood": "Tosabori / Higobashi",
+            "cuisine": "Chinese",
+            "description": "A six-seat Chinese counter exploring shark fin through fried, steamed, grilled and hotpot preparations.",
+            "address": "3F Grand Line Nakanoshima,1-1-30 Tosabori, Nishi-ku, Osaka",
+            "websiteUrl": "https://takemon-fukahire.com/",
+            "checkedAt": "2026-10-19",
+            "recognition": "Operator-confirmed new six-seat restaurant",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-19/batch103-takemon-18-1005332315fa51ce.webp",
+            "imageCredit": "TAKEMON / official branch website",
+            "imageSourceUrl": "https://takemon-fukahire.com/",
+            "imageNote": "竹門の六席カウンター",
+            "openingConfirmed": true,
+            "day": "2026-10-02"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "originalUrl": "https://takemon-fukahire.com/wp-content/themes/swell_child/assets/DSC6079.jpg",
+          "sourcePage": "https://takemon-fukahire.com/",
+          "credit": "TAKEMON / official branch website",
+          "note": "竹門の六席カウンター",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-19/batch103-takemon-18-1005332315fa51ce.webp",
+          "sha256": "1005332315fa51ceef2be3b465be9098538fc7c3e793a766f1ffd5850ff70c65",
+          "width": 1200,
+          "height": 801
+        },
+        {
+          "originalUrl": "https://takemon-fukahire.com/wp-content/uploads/2026/09/DSC6081.jpg",
+          "sourcePage": "https://takemon-fukahire.com/",
+          "credit": "TAKEMON / official branch website",
+          "note": "カウンター席から眺める竹門の店内",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-19/batch103-takemon-20-9b55535c8086c71b.webp",
+          "sha256": "9b55535c8086c71b7dd3f9ec408d2107726d9e258968b68972e43cc9ae8bf42c",
+          "width": 1200,
+          "height": 801
+        },
+        {
+          "originalUrl": "https://takemon-fukahire.com/wp-content/uploads/2026/09/DSC6084.jpg",
+          "sourcePage": "https://takemon-fukahire.com/",
+          "credit": "TAKEMON / official branch website",
+          "note": "竹門の六席カウンターと厨房",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-19/batch103-takemon-22-01449420c2ba238a.webp",
+          "sha256": "01449420c2ba238afa9557379a2c0db88bc62965e9d8acf6a4874ea17182836d",
+          "width": 1200,
+          "height": 801
+        },
+        {
+          "originalUrl": "https://takemon-fukahire.com/wp-content/uploads/2026/09/260916_Takemon-076.jpg",
+          "sourcePage": "https://takemon-fukahire.com/",
+          "credit": "TAKEMON / official branch website",
+          "note": "器に盛り付けられた竹門の料理",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-19/batch103-takemon-12-6585a4f38d4ad6bc.webp",
+          "sha256": "6585a4f38d4ad6bc0bd11019b6c9a099c8b3476ba37100532d345fbbdbcbac4c",
+          "width": 1200,
+          "height": 801
+        }
+      ],
+      "special": {
+        "regionSlug": "osaka",
+        "enabled": true,
+        "profile": {
+          "pinSourceUrl": "https://takemon-fukahire.com/",
+          "name": "TAKEMON — Tosabori",
+          "checkedAt": "2026-10-19",
+          "address": "3F Grand Line Nakanoshima,1-1-30 Tosabori, Nishi-ku, Osaka",
+          "neighborhood": "Tosabori / Higobashi",
+          "websiteUrl": "https://takemon-fukahire.com/",
+          "menus": [
+            {
+              "label": "TAKEMON — first50LINE opening offer",
+              "url": "https://prtimes.jp/main/html/rd/p/000000001.000189687.html",
+              "currency": "JPY",
+              "coverage": "sample",
+              "items": [
+                {
+                  "name": "LINE友だち先着50名・STANDARD開業記念コース",
+                  "price": 15000,
+                  "note": "Tax and service included; same STANDARDcourse; first50, booking byOctober31, dining byNovember30."
+                },
+                {
+                  "name": "フカヒレ・キャビア添え",
+                  "priceLabel": "Price not published",
+                  "note": "Included changing STANDARDcourse example; no separate dish price."
+                },
+                {
+                  "name": "フカヒレと海老の生春巻",
+                  "priceLabel": "Price not published",
+                  "note": "Included changing STANDARDcourse example; no separate dish price."
+                },
+                {
+                  "name": "フカヒレの天麩羅",
+                  "priceLabel": "Price not published",
+                  "note": "Included changing STANDARDcourse example; no separate dish price."
+                },
+                {
+                  "name": "フカヒレしゃぶしゃぶ",
+                  "priceLabel": "Price not published",
+                  "note": "Included changing STANDARDcourse example; no separate dish price."
+                },
+                {
+                  "name": "フカヒレ薬膳蒸し",
+                  "priceLabel": "Price not published",
+                  "note": "Included changing STANDARDcourse example; no separate dish price."
+                },
+                {
+                  "name": "フカヒレ鉄板焼",
+                  "priceLabel": "Price not published",
+                  "note": "Included changing STANDARDcourse example; no separate dish price."
+                },
+                {
+                  "name": "フカヒレの〆",
+                  "priceLabel": "Price not published",
+                  "note": "Included changing STANDARDcourse example; no separate dish price."
+                },
+                {
+                  "name": "フカヒレとフルーツのヴェリーヌ",
+                  "priceLabel": "Price not published",
+                  "note": "Included changing STANDARDcourse example; no separate dish price."
+                },
+                {
+                  "name": "食後のお茶",
+                  "priceLabel": "Price not published",
+                  "note": "Included changing STANDARDcourse example; no separate dish price."
+                }
+              ],
+              "note": "Operator explicitly confirms regular STANDARDis discounted intact; no other course dishes borrowed."
+            }
+          ],
+          "specials": [
+            {
+              "kind": "other",
+              "title": "TAKEMON LINE opening offer — STANDARD¥15,000inclusive",
+              "description": "The ordinary STANDARDcourse at¥15,000including tax and service for the first50LINEmembers; usual¥18,000plus10%service. Book by October31; dine by November30, subject to remaining quota.",
+              "sourceUrl": "https://prtimes.jp/main/html/rd/p/000000001.000189687.html",
+              "menuLabel": "TAKEMON — first50LINE opening offer",
+              "limitedTime": true,
+              "discounted": true,
+              "validFrom": "2026-10-02",
+              "validThrough": "2026-11-30",
+              "schedule": "October2–November30,2026,Monday–Saturday; fixed dinner starts18:00and20:30JST. Display windows identify arrival at each sitting, not the full meal duration.",
+              "conditions": [
+                "LINEfriends only; first50guests, may end early. Remaining quota not published; ask before assuming availability.",
+                "Book directly through official LINEby October31,2026at23:59; TableCheckdoes not accept opening-offer reservations.",
+                "Restaurant’s reservation-confirmation reply is required; pay at venue.",
+                "Special¥15,000tax/service inclusive; regular¥18,000tax included plus10%service. Same STANDARDmenu, not a reduced separate course.",
+                "Cancellation two days before50%, previous day/same day100%.",
+                "Sunday closed; arrive before sitting, doors open five minutes ahead."
+              ],
+              "availability": {
+                "windows": [
+                  {
+                    "days": [
+                      1,
+                      2,
+                      3,
+                      4,
+                      5,
+                      6
+                    ],
+                    "start": "18:00",
+                    "end": "18:01"
+                  },
+                  {
+                    "days": [
+                      1,
+                      2,
+                      3,
+                      4,
+                      5,
+                      6
+                    ],
+                    "start": "20:30",
+                    "end": "20:31"
+                  }
+                ]
+              }
+            }
+          ],
+          "photo": {
+            "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-19/batch103-takemon-18-1005332315fa51ce.webp",
+            "alt": "竹門の六席カウンター",
+            "credit": "TAKEMON / official branch website",
+            "sourceUrl": "https://takemon-fukahire.com/",
+            "originalUrl": "https://takemon-fukahire.com/wp-content/themes/swell_child/assets/DSC6079.jpg",
+            "checkedAt": "2026-10-19"
+          }
+        }
+      }
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Ezo no Shizuku to Ate PAIRINGx HOKKAIDO Opens 2026-10-02",
+        "description": "HBC’s Hokkaido wine bar pairing regional wines with local charcuterie, venison and lunch focaccia sandwiches.",
+        "sourceUrl": "https://www.hbc.co.jp/pairingxhokkaido/",
+        "address": "B1 Urban-net Sapporo Link Tower,1-4 Kita1-jo Nishi5-chome, Chuo-ku, Sapporo",
+        "productName": "Ezo no Shizuku to Ate PAIRINGx HOKKAIDO",
+        "utcStartDateTime": "2026-10-02T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "HBC’s own branch website explicitly says2026.10.02FriOPEN, corroborated by its September14corporate release. The landlord’s September1partial retail opening is not the restaurant’s opening.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Sapporo",
+          "Japan",
+          "Odori / Kita1Nishi5",
+          "Wine bar / Regional"
+        ],
+        "longFormSummary": "<p>HBC’s Hokkaido wine bar pairing regional wines with local charcuterie, venison and lunch focaccia sandwiches.<cite data-ref=\"https://www.hbc.co.jp/pairingxhokkaido/\"></cite></p><p>HBC’s own branch website explicitly says2026.10.02FriOPEN, corroborated by its September14corporate release. The landlord’s September1partial retail opening is not the restaurant’s opening.</p>",
+        "references": [
+          {
+            "url": "https://www.hbc.co.jp/pairingxhokkaido/",
+            "title": "Ezo no Shizuku to Ate PAIRINGx HOKKAIDO — branch website",
+            "confidence": 90,
+            "reasoning": "Ezo no Shizuku to Ate PAIRINGx HOKKAIDO — branch website"
+          },
+          {
+            "url": "https://www.hbc.co.jp/pairingxhokkaido/",
+            "title": "Exact branch opening and current practical details",
+            "confidence": 90,
+            "reasoning": "Exact branch opening and current practical details"
+          },
+          {
+            "url": "https://prtimes.jp/main/html/rd/p/000000135.000082555.html",
+            "title": "HBCpublished named dishes and opening",
+            "confidence": 90,
+            "reasoning": "HBCpublished named dishes and opening"
+          },
+          {
+            "url": "https://www.nttud.co.jp/sapporo_linktower/shop/",
+            "title": "Landlord branch identity and seating",
+            "confidence": 90,
+            "reasoning": "Landlord branch identity and seating"
+          },
+          {
+            "url": "https://tabelog.com/en/hokkaido/A0101/A010102/1086172/",
+            "title": "Branch menu search",
+            "confidence": 90,
+            "reasoning": "Branch menu search"
+          },
+          {
+            "url": "https://www.instagram.com/pairingx_hokkaido/",
+            "title": "Official Instagram",
+            "confidence": 90,
+            "reasoning": "Official Instagram"
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://www.hbc.co.jp/pairingxhokkaido/",
+          "menu": {
+            "pinSourceUrl": "https://www.hbc.co.jp/pairingxhokkaido/",
+            "name": "Ezo no Shizuku to Ate PAIRINGx HOKKAIDO",
+            "checkedAt": "2026-10-19",
+            "menus": [
+              {
+                "label": "PAIRINGx HOKKAIDO — published opening dishes",
+                "url": "https://prtimes.jp/main/html/rd/p/000000135.000082555.html",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "北海道産白インゲン豆とツナのスパイスマリネ",
+                    "priceLabel": "Price not published",
+                    "note": "Operator-announced exact-branch item; price not published."
+                  },
+                  {
+                    "name": "北海道産鮭とばの白ワイン蒸し",
+                    "priceLabel": "Price not published",
+                    "note": "Operator-announced exact-branch item; price not published."
+                  },
+                  {
+                    "name": "北海道産シャルキュトリ",
+                    "priceLabel": "Price not published",
+                    "note": "Operator-announced exact-branch item; price not published."
+                  },
+                  {
+                    "name": "美唄蝦夷鹿肉のロースト・瞬間スモーク",
+                    "priceLabel": "Price not published",
+                    "note": "Operator-announced exact-branch item; price not published."
+                  },
+                  {
+                    "name": "ラムボロネーゼのフォカッチャサンド（ランチ）",
+                    "priceLabel": "Price not published",
+                    "note": "Operator-announced exact-branch item; price not published."
+                  },
+                  {
+                    "name": "鶏とキノコのフォカッチャサンド（ランチ）",
+                    "priceLabel": "Price not published",
+                    "note": "Operator-announced exact-branch item; price not published."
+                  }
+                ],
+                "note": "Operator HBCbranch page, corporate release, landlord tenant page, branch Tabelog food/drink pages and Instagram checked. Specific published dishes retained even without prices; no invented menu tariff."
+              },
+              {
+                "label": "PAIRINGx HOKKAIDO — Hokkaido wine by the glass",
+                "url": "https://www.hbc.co.jp/pairingxhokkaido/",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "北海道産ワイン（グラス）",
+                    "priceLabel": "Price not published",
+                    "note": "Operator confirms wine by the glass; changing producers, labels and prices not published in readable sources."
+                  }
+                ],
+                "note": "No wine producer or bottle price inferred from the gallery image."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://www.hbc.co.jp/pairingxhokkaido/",
+            "name": "Ezo no Shizuku to Ate PAIRINGx HOKKAIDO",
+            "checkedAt": "2026-10-19",
+            "websiteUrl": "https://www.hbc.co.jp/pairingxhokkaido/",
+            "phone": "011-590-4070",
+            "openingHours": [
+              {
+                "days": "Lunch",
+                "hours": "11:00–14:00"
+              },
+              {
+                "days": "Dinner",
+                "hours": "16:00–21:30; last order21:00"
+              },
+              {
+                "days": "Closed",
+                "hours": "Year-end/New Year and building closure dates; check official Instagram"
+              }
+            ],
+            "detailsSourceUrl": "https://www.hbc.co.jp/pairingxhokkaido/",
+            "additionalSources": [
+              {
+                "label": "Exact branch opening and current practical details",
+                "url": "https://www.hbc.co.jp/pairingxhokkaido/"
+              },
+              {
+                "label": "HBCpublished named dishes and opening",
+                "url": "https://prtimes.jp/main/html/rd/p/000000135.000082555.html"
+              },
+              {
+                "label": "Landlord branch identity and seating",
+                "url": "https://www.nttud.co.jp/sapporo_linktower/shop/"
+              },
+              {
+                "label": "Branch menu search",
+                "url": "https://tabelog.com/en/hokkaido/A0101/A010102/1086172/"
+              },
+              {
+                "label": "Official Instagram",
+                "url": "https://www.instagram.com/pairingx_hokkaido/"
+              }
+            ],
+            "hoursNote": "Cashless payment only: cards, electronic money and QR. Primarily standing, with seated options per landlord; no table charge. Operator branch telephone011-590-4070used, not HBCmedia-relations number. Prices and individual wine labels remain unpublished after deep menu search; no current dated offer verified.",
+            "reservationUrl": "https://www.instagram.com/pairingx_hokkaido/"
+          },
+          "tile": {
+            "regionSlug": "sapporo",
+            "kind": "opening",
+            "slug": "japan103-pairing",
+            "name": "Ezo no Shizuku to Ate PAIRINGx HOKKAIDO",
+            "neighborhood": "Odori / Kita1Nishi5",
+            "cuisine": "Wine bar / Regional",
+            "description": "HBC’s Hokkaido wine bar pairing regional wines with local charcuterie, venison and lunch focaccia sandwiches.",
+            "address": "B1 Urban-net Sapporo Link Tower,1-4 Kita1-jo Nishi5-chome, Chuo-ku, Sapporo",
+            "websiteUrl": "https://www.hbc.co.jp/pairingxhokkaido/",
+            "checkedAt": "2026-10-19",
+            "recognition": "HBC’s operator-confirmed new Hokkaido food-and-wine venue",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-19/batch103-pairing-1-b37288c9457d5d88.webp",
+            "imageCredit": "PAIRINGx HOKKAIDO / HBC official branch website",
+            "imageSourceUrl": "https://www.hbc.co.jp/pairingxhokkaido/",
+            "imageNote": "Official branch presentation photograph; no wine label, dish identity or availability inferred from image.",
+            "openingConfirmed": true,
+            "day": "2026-10-02"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "originalUrl": "https://www.hbc.co.jp/pairingxhokkaido/image/consept_photo_01.jpg",
+          "sourcePage": "https://www.hbc.co.jp/pairingxhokkaido/",
+          "credit": "PAIRINGx HOKKAIDO / HBC official branch website",
+          "note": "Official branch presentation photograph; no wine label, dish identity or availability inferred from image.",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-19/batch103-pairing-1-b37288c9457d5d88.webp",
+          "sha256": "b37288c9457d5d8826a62e238d1617623022177f0fe5a0318565f276b9f80ec7",
+          "width": 340,
+          "height": 580
+        },
+        {
+          "originalUrl": "https://www.hbc.co.jp/pairingxhokkaido/image/consept_photo_02.jpg?2609",
+          "sourcePage": "https://www.hbc.co.jp/pairingxhokkaido/",
+          "credit": "PAIRINGx HOKKAIDO / HBC official branch website",
+          "note": "Official branch presentation photograph; no wine label, dish identity or availability inferred from image.",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-19/batch103-pairing-2-94fb8fdbefea134d.webp",
+          "sha256": "94fb8fdbefea134dd2cab5fc30bb6ee0b6b9f791e9e462333119a042242d3f6b",
+          "width": 340,
+          "height": 580
+        }
+      ]
+    }
+  ],
+  "publicationStatus": {
+    "local": "pending",
+    "production": "pending"
+  },
+  "deployment": "No deployment, build, restart or production configuration change.",
+  "researchGaps": [
+    "Continue every city’s Coming soon shortages and Fukuoka/Osaka/Tokyo Just opened below30. This batch should bring Sapporo Just opened to30and Osaka Specials to30; all six Top and all six Specials targets then met, contingent on current eligibility and count verification.",
+    "Anan Shinoro current exact-branch operator date Oct1,2026corroborated by corporate opening release. Feb2026menu-version labels are chainwide. Sibling-branch room photos excluded. Food illustrations published on current branch menu are labelled as such. Potato-salad expanded vs main tariffs conflict; names retained, prices withheld.10%late charge from22:00explicit. Quantity/availability enquiries remain necessary.",
+    "new eight actual October Fri–Sun17–23schedule, specialOct1Thursdayexception. Wintertatami seating and service expansion are plans. Current operator release, linked company site, Instagram and recruitment checked; real food/drink names are published but individual prices remain unavailable. Do not import Fukuoka pop-up recipes or prices.",
+    "Mieko exact operator branch page recordsOct1firstopening; October5release explicitly separatesOct1–7softopening fromOct8grandopening. Older plannedOct6date superseded. Current operator lastorder03:30supersedesrelease03:00. Native branch food/drinks used; other Yoshiko branch PDFs excluded. JapaneseTabelogmenu URLs403, Englishbranchrows accessible; automatic generic tasting/prose omitted.",
+    "Hanme per-person minimumtwoportion prices control incorrect independent two-personprice claim. AmbiguousZero/제로drink with erroneousnonalcoholictranslation held. Sui gin sour description controls mistranslatedMidori label. Cola428andcheesepancake868apparentrounding anomalies held. Japanesebranchmenus403; operator rates and accessibleEnglishbranchrows support retainedprices.",
+    "SON CAFE operator exactbranchopeningOct21at11, no publishedregularclosinghour/phone; corporatepresscontact notusedasbranchphone. Renderingexplicitlylabelled. Specificbranchdesserts/drinksunnpricedafteroperator,openingrelease,departmentstoreandimageseaches; noIzumisanomenuorfutureRinkuprojectsubstitution.",
+    "TAKEMON operatorhomepagestillpubliclyadvertisesfirst50LINEoffer; remainingquotaunknownandmayendearly. BookingdeadlineOct31at23:59distinctfromdiningendNov30. Onlyfixed18:00/20:30arrivalwindowsrepresented, nomealdurationinvented. Namedbeveragepricesandcurrentdrinklistnotpublishedafterofficial,TableCheckandreleasesearches. PREMIUMvariesdaily;individualdishesnotinvented.",
+    "PAIRINGx HOKKAIDO HBCbranchOct2openingnotlandlordSept1partialretailopening. Officialbranch,corporaterelease,landlord,emptyTabelogfood/drinklistsandInstagramchecked. Sixnamedopeningdishesandglasswinepublishedwithoutprices; preservePrice not publishedratherthanemptylink-onlymenus. Individualwinebottles/pricesandcurrentholidayclosurecalendarunresolved.",
+    "REC COFFEE IslandCityTeruha hasbranchspecificOct31opening,address71seatsandplanned8–22hours,butannouncementslackactualbranchfood/drinkitems/prices; mainbrandmenusnotassumed.Heldforreadablebranchmenuandrepresentativebranchgallery.Rec-coffee.mommirrorsearchresultsnotusedasprimaryoperator.",
+    "RaspberryNov2,2026reopeningisexplicitlyannouncedwiththreepricedlunchsetsandwelcomeUjitea; original2017branchopeningchronologyandnativeupcomingreopeningrepresentationneedreviewbeforepublication. Do notstore2026reopeningasoriginalrestaurantutcStartDateTime."
+  ],
+  "held": [
+    {
+      "name": "REC COFFEE Island City Teruha",
+      "sourceUrl": "https://prtimes.jp/main/html/rd/p/000000026.000057248.html",
+      "reason": "Opening/address known; actual branch menu and representative gallery unresolved after press, operator branch URL and broader searches."
+    },
+    {
+      "name": "Raspberry reopening",
+      "sourceUrl": "https://www.landmark-osaka.com/topics/31677/",
+      "reason": "Verified2026reopening with actual menus; research original same-branch opening before pin creation and keep reopening date separate."
+    }
+  ],
+  "photoReview": {
+    "downloadedCandidates": 32,
+    "selectedPhotos": 25,
+    "method": "Plain curl downloaded official opening photographs and operator branch photos, all visually reviewed. Hanme logo rejected; Anan sister-branch room photos excluded; food illustrations explicitly labelled. SON CAFE planned interior rendering labelled. Public Azure SHA256anddimensions verified; no dish identity or stock inferred from pictures."
+  }
+}

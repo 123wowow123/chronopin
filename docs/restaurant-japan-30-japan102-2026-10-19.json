@@ -1,0 +1,2564 @@
+{
+  "batch": 102,
+  "checkedAt": "2026-10-19",
+  "counts": {
+    "venues": 6,
+    "newPins": 6,
+    "menuEntries": 197,
+    "offerMenuEntries": 16,
+    "galleryLinks": 23,
+    "newGuideMemberships": 7,
+    "newSpecialVenues": 1,
+    "offers": 2
+  },
+  "entries": [
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "RiVi — Kyomachibori Opens 2017-11-22",
+        "description": "A six-seat counter for seasonal, inventive tasting menus and wine pairings in Kyomachibori.",
+        "sourceUrl": "http://www.rivi1122.com/",
+        "address": "1F W Kyomachibori, 1-16-28 Kyomachibori, Nishi-ku, Osaka",
+        "productName": "RiVi — Kyomachibori",
+        "utcStartDateTime": "2017-11-22T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "Operator-managed exact-branch listing records November22,2017 for the Kyomachibori branch. Earlier Yao restaurant history is not substituted for this relocation.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Osaka",
+          "Japan",
+          "Kyomachibori / Higobashi",
+          "Innovative / French"
+        ],
+        "longFormSummary": "<p>A six-seat counter for seasonal, inventive tasting menus and wine pairings in Kyomachibori.<cite data-ref=\"http://www.rivi1122.com/\"></cite></p><p>Operator-managed exact-branch listing records November22,2017 for the Kyomachibori branch. Earlier Yao restaurant history is not substituted for this relocation.</p>",
+        "references": [
+          {
+            "url": "http://www.rivi1122.com/",
+            "title": "RiVi — Kyomachibori — branch website",
+            "confidence": 90,
+            "reasoning": "RiVi — Kyomachibori — branch website"
+          },
+          {
+            "url": "https://tabelog.com/en/osaka/A2701/A270102/27101945/",
+            "title": "Current branch opening and address",
+            "confidence": 90,
+            "reasoning": "Current branch opening and address"
+          },
+          {
+            "url": "https://www.tablecheck.com/ja/shops/rivi/reserve",
+            "title": "Current booking courses and conditions",
+            "confidence": 90,
+            "reasoning": "Current booking courses and conditions"
+          },
+          {
+            "url": "https://tabelog.com/en/osaka/A2701/A270102/27101945/dtlmenu/",
+            "title": "Published changing dish examples",
+            "confidence": 90,
+            "reasoning": "Published changing dish examples"
+          },
+          {
+            "url": "https://guide.michelin.com/us/en/osaka-region/osaka/restaurant/rivi",
+            "title": "MICHELIN selected listing",
+            "confidence": 90,
+            "reasoning": "MICHELIN selected listing"
+          },
+          {
+            "url": "https://starwinelist.com/wine-place/rivi",
+            "title": "Operator-linked wine venue page",
+            "confidence": 90,
+            "reasoning": "Operator-linked wine venue page"
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "http://www.rivi1122.com/",
+          "menu": {
+            "pinSourceUrl": "http://www.rivi1122.com/",
+            "name": "RiVi — Kyomachibori",
+            "checkedAt": "2026-10-19",
+            "menus": [
+              {
+                "label": "RiVi — current courses and pairing",
+                "url": "http://www.rivi1122.com/",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "ランチコース（9品）",
+                    "price": 10000,
+                    "note": "Tax included; service10% extra; lunch starts12:30."
+                  },
+                  {
+                    "name": "ディナーコース（14品）",
+                    "price": 19000,
+                    "note": "Tax included; service10% extra; dinner starts19:00. Current rate supersedes the booking introduction’s ¥18,000 and expired2024course."
+                  },
+                  {
+                    "name": "ワインペアリング（3杯〜）",
+                    "price": 4000,
+                    "note": "From; operator expressly includes tax AND service in this pairing price."
+                  }
+                ],
+                "note": "Reservations by the previous day. Exact current seasonal dish names and bottle tariffs not published."
+              },
+              {
+                "label": "RiVi — published changing dish examples",
+                "url": "https://tabelog.com/en/osaka/A2701/A270102/27101945/dtlmenu/",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "鯵としば漬け、黒胡麻",
+                    "priceLabel": "Price not published",
+                    "note": "Managed branch menu examples updatedDecember2,2024; illustrative, not a guarantee of today’s course. Individual dish price not published."
+                  },
+                  {
+                    "name": "オマール海老とビーツ",
+                    "priceLabel": "Price not published",
+                    "note": "Managed branch menu examples updatedDecember2,2024; illustrative, not a guarantee of today’s course. Individual dish price not published."
+                  },
+                  {
+                    "name": "牛肉のロースト",
+                    "priceLabel": "Price not published",
+                    "note": "Managed branch menu examples updatedDecember2,2024; illustrative, not a guarantee of today’s course. Individual dish price not published."
+                  },
+                  {
+                    "name": "鰆の蒸し焼き",
+                    "priceLabel": "Price not published",
+                    "note": "Managed branch menu examples updatedDecember2,2024; illustrative, not a guarantee of today’s course. Individual dish price not published."
+                  },
+                  {
+                    "name": "ホワイトチョコレートと柚子のデザート",
+                    "priceLabel": "Price not published",
+                    "note": "Managed branch menu examples updatedDecember2,2024; illustrative, not a guarantee of today’s course. Individual dish price not published."
+                  }
+                ],
+                "note": "Published named examples retained with their historical context; no dish inferred from photographs."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "http://www.rivi1122.com/",
+            "name": "RiVi — Kyomachibori",
+            "checkedAt": "2026-10-19",
+            "websiteUrl": "http://www.rivi1122.com/",
+            "phone": "06-6136-6830",
+            "openingHours": [
+              {
+                "days": "Lunch",
+                "hours": "Simultaneous start12:30; doors12:00"
+              },
+              {
+                "days": "Dinner",
+                "hours": "Simultaneous start19:00; doors18:30"
+              },
+              {
+                "days": "Closed",
+                "hours": "Irregular; check reservation calendar"
+              }
+            ],
+            "detailsSourceUrl": "http://www.rivi1122.com/",
+            "additionalSources": [
+              {
+                "label": "Current branch opening and address",
+                "url": "https://tabelog.com/en/osaka/A2701/A270102/27101945/"
+              },
+              {
+                "label": "Current booking courses and conditions",
+                "url": "https://www.tablecheck.com/ja/shops/rivi/reserve"
+              },
+              {
+                "label": "Published changing dish examples",
+                "url": "https://tabelog.com/en/osaka/A2701/A270102/27101945/dtlmenu/"
+              },
+              {
+                "label": "MICHELIN selected listing",
+                "url": "https://guide.michelin.com/us/en/osaka-region/osaka/restaurant/rivi"
+              },
+              {
+                "label": "Operator-linked wine venue page",
+                "url": "https://starwinelist.com/wine-place/rivi"
+              }
+            ],
+            "hoursNote": "Six counter seats; private buyout for4–6. Book by the previous day, report allergies at least a day ahead. Same-day cancellation100%. Avoid excessively casual clothing. Main operator HTTP site is accessible; HTTPS certificate failed. Christmas2021booking plans are expired and excluded.",
+            "reservationUrl": "https://www.tablecheck.com/ja/shops/rivi/reserve"
+          },
+          "tile": {
+            "regionSlug": "osaka",
+            "kind": "top",
+            "slug": "japan102-rivi",
+            "name": "RiVi — Kyomachibori",
+            "neighborhood": "Kyomachibori / Higobashi",
+            "cuisine": "Innovative / French",
+            "description": "A six-seat counter for seasonal, inventive tasting menus and wine pairings in Kyomachibori.",
+            "address": "1F W Kyomachibori, 1-16-28 Kyomachibori, Nishi-ku, Osaka",
+            "websiteUrl": "http://www.rivi1122.com/",
+            "checkedAt": "2026-10-19",
+            "recognition": "Tabelog Innovative/Creative Hyakumeiten2025; MICHELIN Guide selected restaurant",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-19/batch102-rivi-2-7828c5a29d39b358.webp",
+            "imageCredit": "RiVi / official website",
+            "imageSourceUrl": "http://www.rivi1122.com/",
+            "imageNote": "Exact-branch gallery photograph; no dish name or current availability inferred from the photograph.",
+            "openingConfirmed": true,
+            "day": "2017-11-22"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "originalUrl": "http://www.rivi1122.com/img/showcase-02.jpg",
+          "sourcePage": "http://www.rivi1122.com/",
+          "credit": "RiVi / official website",
+          "note": "Exact-branch gallery photograph; no dish name or current availability inferred from the photograph.",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-19/batch102-rivi-2-7828c5a29d39b358.webp",
+          "sha256": "7828c5a29d39b3588ba5d43ad2647b73ec3328d065c6ee210c9e68c9fed735ee",
+          "width": 945,
+          "height": 630
+        },
+        {
+          "originalUrl": "http://www.rivi1122.com/img/showcase-front.jpg",
+          "sourcePage": "http://www.rivi1122.com/",
+          "credit": "RiVi / official website",
+          "note": "Exact-branch gallery photograph; no dish name or current availability inferred from the photograph.",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-19/batch102-rivi-1-1bfd9bf3e767daac.webp",
+          "sha256": "1bfd9bf3e767daaccdce6e51af6134f08aed7d30274e5bc43e654104da5f97a8",
+          "width": 1567,
+          "height": 1045
+        },
+        {
+          "originalUrl": "http://www.rivi1122.com/img/showcase-03.jpg",
+          "sourcePage": "http://www.rivi1122.com/",
+          "credit": "RiVi / official website",
+          "note": "Exact-branch gallery photograph; no dish name or current availability inferred from the photograph.",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-19/batch102-rivi-3-4d62ffb9b076c9c3.webp",
+          "sha256": "4d62ffb9b076c9c37717151f8f25db6e38a4416601cdce95a79c11b3eb66964b",
+          "width": 945,
+          "height": 630
+        },
+        {
+          "originalUrl": "http://www.rivi1122.com/img/showcase-05.jpg",
+          "sourcePage": "http://www.rivi1122.com/",
+          "credit": "RiVi / official website",
+          "note": "Exact-branch gallery photograph; no dish name or current availability inferred from the photograph.",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-19/batch102-rivi-4-275d351347ffcf81.webp",
+          "sha256": "275d351347ffcf81efbdc474e0c482130bf13cfe6c2d3b761db2f62cb9afada4",
+          "width": 945,
+          "height": 630
+        }
+      ]
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "La Table de Provence — MJR Akasaka Tower Opens 2024-09-18",
+        "description": "Kenji Nomura’s intimate French restaurant, relocated to an open counter at MJR Akasaka Tower, with seasonal courses and French wines.",
+        "sourceUrl": "https://www.provence-fukuoka.com/",
+        "address": "1F MJR Akasaka Tower, 1-13-2 Akasaka, Chuo-ku, Fukuoka",
+        "productName": "La Table de Provence — MJR Akasaka Tower",
+        "utcStartDateTime": "2024-09-18T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "Managed current-branch listing explicitly records September18,2024 and operator confirms the September2024relocation. Original December1998restaurant founding and an inconsistent decorative SINCE1988graphic are not the present branch opening.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Fukuoka",
+          "Japan",
+          "Akasaka",
+          "French"
+        ],
+        "longFormSummary": "<p>Kenji Nomura’s intimate French restaurant, relocated to an open counter at MJR Akasaka Tower, with seasonal courses and French wines.<cite data-ref=\"https://www.provence-fukuoka.com/\"></cite></p><p>Managed current-branch listing explicitly records September18,2024 and operator confirms the September2024relocation. Original December1998restaurant founding and an inconsistent decorative SINCE1988graphic are not the present branch opening.</p>",
+        "references": [
+          {
+            "url": "https://www.provence-fukuoka.com/",
+            "title": "La Table de Provence — MJR Akasaka Tower — branch website",
+            "confidence": 90,
+            "reasoning": "La Table de Provence — MJR Akasaka Tower — branch website"
+          },
+          {
+            "url": "https://tabelog.com/en/fukuoka/A4001/A400104/40068471/",
+            "title": "Exact current relocation opening and hours",
+            "confidence": 90,
+            "reasoning": "Exact current relocation opening and hours"
+          },
+          {
+            "url": "https://tabelog.com/en/fukuoka/A4001/A400104/40068471/party/255499051/",
+            "title": "Published lunch example",
+            "confidence": 90,
+            "reasoning": "Published lunch example"
+          },
+          {
+            "url": "https://tabelog.com/en/fukuoka/A4001/A400104/40068471/party/255499047/",
+            "title": "Published dinner example",
+            "confidence": 90,
+            "reasoning": "Published dinner example"
+          },
+          {
+            "url": "https://tabelog.com/en/fukuoka/A4001/A400104/40068471/dtlmenu/drink/",
+            "title": "Drinks",
+            "confidence": 90,
+            "reasoning": "Drinks"
+          },
+          {
+            "url": "https://tabelog.com/en/fukuoka/A4001/A400104/40068471/party/",
+            "title": "Ordinary anniversary course",
+            "confidence": 90,
+            "reasoning": "Ordinary anniversary course"
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://www.provence-fukuoka.com/",
+          "menu": {
+            "pinSourceUrl": "https://www.provence-fukuoka.com/",
+            "name": "La Table de Provence — MJR Akasaka Tower",
+            "checkedAt": "2026-10-19",
+            "menus": [
+              {
+                "label": "La Table de Provence — current courses",
+                "url": "https://www.provence-fukuoka.com/",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "ランチコース",
+                    "price": 9680,
+                    "note": "Final price including tax and10%service; operator base¥8,000."
+                  },
+                  {
+                    "name": "ディナーコース",
+                    "price": 15730,
+                    "note": "Final price including tax and10%service; operator base¥13,000."
+                  },
+                  {
+                    "name": "シェフおまかせ特別コース",
+                    "price": 15000,
+                    "note": "Base price before tax and service; consult final total."
+                  },
+                  {
+                    "name": "アニバーサリーコース",
+                    "price": 13000,
+                    "note": "Managed branch plan: tax/service included, first drink included; message plate on request. Ordinary occasion plan, no dated discount."
+                  }
+                ],
+                "note": "Current operator rates take precedence over stale old-location prices. Plate counts vary between operator and managed listing."
+              },
+              {
+                "label": "La Table de Provence — published lunch example",
+                "url": "https://tabelog.com/en/fukuoka/A4001/A400104/40068471/party/255499051/",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "本日のアミューズ",
+                    "priceLabel": "Price not published",
+                    "note": "Published changing course example; included in course, no standalone price. Main choices and ingredients vary."
+                  },
+                  {
+                    "name": "鮮魚のカルパッチョサラダ",
+                    "priceLabel": "Price not published",
+                    "note": "Published changing course example; included in course, no standalone price. Main choices and ingredients vary."
+                  },
+                  {
+                    "name": "鮮魚のポワレ、ブイヤベースとサフランクリーム",
+                    "priceLabel": "Price not published",
+                    "note": "Published changing course example; included in course, no standalone price. Main choices and ingredients vary."
+                  },
+                  {
+                    "name": "茸と豚肉の温かいパテ、新玉葱のクリーム",
+                    "priceLabel": "Price not published",
+                    "note": "Published changing course example; included in course, no standalone price. Main choices and ingredients vary."
+                  },
+                  {
+                    "name": "季節野菜のクリームスープ",
+                    "priceLabel": "Price not published",
+                    "note": "Published changing course example; included in course, no standalone price. Main choices and ingredients vary."
+                  },
+                  {
+                    "name": "選べるメインディッシュ",
+                    "priceLabel": "Price not published",
+                    "note": "Published changing course example; included in course, no standalone price. Main choices and ingredients vary."
+                  },
+                  {
+                    "name": "デザート",
+                    "priceLabel": "Price not published",
+                    "note": "Published changing course example; included in course, no standalone price. Main choices and ingredients vary."
+                  },
+                  {
+                    "name": "コーヒー・紅茶・エスプレッソ",
+                    "priceLabel": "Price not published",
+                    "note": "Published changing course example; included in course, no standalone price. Main choices and ingredients vary."
+                  }
+                ],
+                "note": "Managed branch course describes seven courses while operator lunch describes eight plates; confirm selected plan."
+              },
+              {
+                "label": "La Table de Provence — published dinner example",
+                "url": "https://tabelog.com/en/fukuoka/A4001/A400104/40068471/party/255499047/",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "自家製パン",
+                    "priceLabel": "Price not published",
+                    "note": "Managed branch changing example; no separate dish price or guarantee of current seasonal availability."
+                  },
+                  {
+                    "name": "本日のアミューズ",
+                    "priceLabel": "Price not published",
+                    "note": "Managed branch changing example; no separate dish price or guarantee of current seasonal availability."
+                  },
+                  {
+                    "name": "帆立のフリット、アンチョビソース",
+                    "priceLabel": "Price not published",
+                    "note": "Managed branch changing example; no separate dish price or guarantee of current seasonal availability."
+                  },
+                  {
+                    "name": "雲丹と海老のクリームジュレ",
+                    "priceLabel": "Price not published",
+                    "note": "Managed branch changing example; no separate dish price or guarantee of current seasonal availability."
+                  },
+                  {
+                    "name": "焼きたらこ、南仏風",
+                    "priceLabel": "Price not published",
+                    "note": "Managed branch changing example; no separate dish price or guarantee of current seasonal availability."
+                  },
+                  {
+                    "name": "鰆の燻製、蕪のブールブラン",
+                    "priceLabel": "Price not published",
+                    "note": "Managed branch changing example; no separate dish price or guarantee of current seasonal availability."
+                  },
+                  {
+                    "name": "牛頬肉とフォアグラのパイ包み",
+                    "priceLabel": "Price not published",
+                    "note": "Managed branch changing example; no separate dish price or guarantee of current seasonal availability."
+                  },
+                  {
+                    "name": "茸のロワイヤル、ブイヨン",
+                    "priceLabel": "Price not published",
+                    "note": "Managed branch changing example; no separate dish price or guarantee of current seasonal availability."
+                  },
+                  {
+                    "name": "選べるメインディッシュ",
+                    "priceLabel": "Price not published",
+                    "note": "Managed branch changing example; no separate dish price or guarantee of current seasonal availability."
+                  },
+                  {
+                    "name": "メロンのソルベ",
+                    "priceLabel": "Price not published",
+                    "note": "Managed branch changing example; no separate dish price or guarantee of current seasonal availability."
+                  },
+                  {
+                    "name": "フランボワーズ・ピスタチオ・ホワイトチョコレートのムース",
+                    "priceLabel": "Price not published",
+                    "note": "Managed branch changing example; no separate dish price or guarantee of current seasonal availability."
+                  },
+                  {
+                    "name": "食後のお茶",
+                    "priceLabel": "Price not published",
+                    "note": "Managed branch changing example; no separate dish price or guarantee of current seasonal availability."
+                  }
+                ],
+                "note": "Dish count and choices vary. Examples are not assigned to a dated offer."
+              },
+              {
+                "label": "La Table de Provence — published drinks",
+                "url": "https://tabelog.com/en/fukuoka/A4001/A400104/40068471/dtlmenu/drink/",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "グラススパークリング",
+                    "price": 1100,
+                    "note": "Published tax-included rate; service10% extra. "
+                  },
+                  {
+                    "name": "グラスワイン",
+                    "price": 1100,
+                    "note": "Published tax-included rate; service10% extra. From."
+                  },
+                  {
+                    "name": "幸せビール",
+                    "price": 770,
+                    "note": "Published tax-included rate; service10% extra. "
+                  },
+                  {
+                    "name": "ソフトドリンク",
+                    "price": 440,
+                    "note": "Published tax-included rate; service10% extra. From."
+                  },
+                  {
+                    "name": "スパークリングウォーター",
+                    "price": 550,
+                    "note": "Published tax-included rate; service10% extra. From."
+                  },
+                  {
+                    "name": "ボトルワイン",
+                    "price": 7700,
+                    "note": "Published tax-included rate; service10% extra. From."
+                  }
+                ],
+                "note": "Operator-managed drink list updatedOctober9,2024; confirm availability and final bill."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://www.provence-fukuoka.com/",
+            "name": "La Table de Provence — MJR Akasaka Tower",
+            "checkedAt": "2026-10-19",
+            "websiteUrl": "https://www.provence-fukuoka.com/",
+            "phone": "092-732-5277",
+            "openingHours": [
+              {
+                "days": "Wednesday–Sunday lunch",
+                "hours": "12:00–15:00; final entry13:00"
+              },
+              {
+                "days": "Tuesday–Sunday dinner",
+                "hours": "18:00–22:00; final entry20:00"
+              },
+              {
+                "days": "Closed",
+                "hours": "Monday and some Tuesdays; Tuesday lunch closed"
+              }
+            ],
+            "detailsSourceUrl": "https://www.provence-fukuoka.com/",
+            "additionalSources": [
+              {
+                "label": "Exact current relocation opening and hours",
+                "url": "https://tabelog.com/en/fukuoka/A4001/A400104/40068471/"
+              },
+              {
+                "label": "Published lunch example",
+                "url": "https://tabelog.com/en/fukuoka/A4001/A400104/40068471/party/255499051/"
+              },
+              {
+                "label": "Published dinner example",
+                "url": "https://tabelog.com/en/fukuoka/A4001/A400104/40068471/party/255499047/"
+              },
+              {
+                "label": "Drinks",
+                "url": "https://tabelog.com/en/fukuoka/A4001/A400104/40068471/dtlmenu/drink/"
+              },
+              {
+                "label": "Ordinary anniversary course",
+                "url": "https://tabelog.com/en/fukuoka/A4001/A400104/40068471/party/"
+              }
+            ],
+            "hoursNote": "Twelve seats, no private room; private booking may be arranged. Confirm holiday calendar and selected course at reservation. Current branch tariffs and photos used; old branch menus excluded.",
+            "reservationUrl": "https://tabelog.com/en/fukuoka/A4001/A400104/40068471/"
+          },
+          "tile": {
+            "regionSlug": "fukuoka",
+            "kind": "top",
+            "slug": "japan102-provence",
+            "name": "La Table de Provence — MJR Akasaka Tower",
+            "neighborhood": "Akasaka",
+            "cuisine": "French",
+            "description": "Kenji Nomura’s intimate French restaurant, relocated to an open counter at MJR Akasaka Tower, with seasonal courses and French wines.",
+            "address": "1F MJR Akasaka Tower, 1-13-2 Akasaka, Chuo-ku, Fukuoka",
+            "websiteUrl": "https://www.provence-fukuoka.com/",
+            "checkedAt": "2026-10-19",
+            "recognition": "Chef Kenji Nomura awarded French Agricultural Merit in2024 (chef award, not a venue star)",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-19/batch102-provence-1-9c8852d353b46188.webp",
+            "imageCredit": "La Table de Provence / official website",
+            "imageSourceUrl": "https://www.provence-fukuoka.com/",
+            "imageNote": "Exact-branch gallery photograph; no dish name or current availability inferred from the photograph.",
+            "openingConfirmed": true,
+            "day": "2024-09-18"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "originalUrl": "https://static.wixstatic.com/media/c7227d_fb55d4e0afc64925b6cce661213111ea~mv2.jpg",
+          "sourcePage": "https://www.provence-fukuoka.com/",
+          "credit": "La Table de Provence / official website",
+          "note": "Exact-branch gallery photograph; no dish name or current availability inferred from the photograph.",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-19/batch102-provence-1-9c8852d353b46188.webp",
+          "sha256": "9c8852d353b46188e4630008c7337b84d1ffb233cf5d2eb633bf4b5c4926dd17",
+          "width": 1300,
+          "height": 800
+        },
+        {
+          "originalUrl": "https://static.wixstatic.com/media/c7227d_a3e2f87de52742ca81e6137efb8d842d~mv2.jpg",
+          "sourcePage": "https://www.provence-fukuoka.com/",
+          "credit": "La Table de Provence / official website",
+          "note": "Exact-branch gallery photograph; no dish name or current availability inferred from the photograph.",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-19/batch102-provence-2-e64a638129902cf8.webp",
+          "sha256": "e64a638129902cf8c82b6bac742b89073241afcd311459cf333ee0febaa9b77b",
+          "width": 1021,
+          "height": 680
+        },
+        {
+          "originalUrl": "https://static.wixstatic.com/media/c7227d_9375350393fc43a5b9fd00e89f2d03a6~mv2.jpg",
+          "sourcePage": "https://www.provence-fukuoka.com/",
+          "credit": "La Table de Provence / official website",
+          "note": "Exact-branch gallery photograph; no dish name or current availability inferred from the photograph.",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-19/batch102-provence-3-a198ae7b7575eeab.webp",
+          "sha256": "a198ae7b7575eeabf45c121ac100058473af5f551b0eb1c8cbdc05bf37d70d7e",
+          "width": 1300,
+          "height": 800
+        },
+        {
+          "originalUrl": "https://static.wixstatic.com/media/c7227d_78f7fb4f81d04b00bbd0abd691549fdd~mv2.jpg",
+          "sourcePage": "https://www.provence-fukuoka.com/",
+          "credit": "La Table de Provence / official website",
+          "note": "Exact-branch gallery photograph; no dish name or current availability inferred from the photograph.",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-19/batch102-provence-4-1f910d8a1f4307a5.webp",
+          "sha256": "1f910d8a1f4307a5fcee0f2411101f47fbff716bc0eb3f72da5c09a602786c0f",
+          "width": 1300,
+          "height": 800
+        }
+      ]
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Le Chevalier — Sumiyoshi Opens 2026-04-10",
+        "description": "French tasting courses and sommelier-led wines in a seventh-floor Sumiyoshi dining room, including the house sea-urchin soup.",
+        "sourceUrl": "https://lechevalier-fukuoka.com/",
+        "address": "7F Sumiyoshi Medical Building, 4-8-24 Sumiyoshi, Hakata-ku, Fukuoka",
+        "productName": "Le Chevalier — Sumiyoshi",
+        "utcStartDateTime": "2026-04-10T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "Current Sumiyoshi branch listing explicitly dates opening April10,2026, corroborating the operator’s relocation announcement from Daimyo. The former Daimyo branch date is not reused.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Fukuoka",
+          "Japan",
+          "Sumiyoshi",
+          "French"
+        ],
+        "longFormSummary": "<p>French tasting courses and sommelier-led wines in a seventh-floor Sumiyoshi dining room, including the house sea-urchin soup.<cite data-ref=\"https://lechevalier-fukuoka.com/\"></cite></p><p>Current Sumiyoshi branch listing explicitly dates opening April10,2026, corroborating the operator’s relocation announcement from Daimyo. The former Daimyo branch date is not reused.</p>",
+        "references": [
+          {
+            "url": "https://lechevalier-fukuoka.com/",
+            "title": "Le Chevalier — Sumiyoshi — branch website",
+            "confidence": 90,
+            "reasoning": "Le Chevalier — Sumiyoshi — branch website"
+          },
+          {
+            "url": "https://tabelog.com/en/fukuoka/A4001/A400103/40073577/",
+            "title": "Current Sumiyoshi branch and exact opening",
+            "confidence": 90,
+            "reasoning": "Current Sumiyoshi branch and exact opening"
+          },
+          {
+            "url": "https://lechevalier.aes-japon.com/",
+            "title": "Current alternative operator branch website",
+            "confidence": 90,
+            "reasoning": "Current alternative operator branch website"
+          },
+          {
+            "url": "https://lechevalier-fukuoka.com/drink/",
+            "title": "Current drinks",
+            "confidence": 90,
+            "reasoning": "Current drinks"
+          },
+          {
+            "url": "https://www.tablecheck.com/ja/shops/lechevalier-fukuoka/reserve",
+            "title": "Operator-linked reservation and age policies",
+            "confidence": 90,
+            "reasoning": "Operator-linked reservation and age policies"
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://lechevalier-fukuoka.com/",
+          "menu": {
+            "pinSourceUrl": "https://lechevalier-fukuoka.com/",
+            "name": "Le Chevalier — Sumiyoshi",
+            "checkedAt": "2026-10-19",
+            "menus": [
+              {
+                "label": "Le Chevalier — current lunch and dinner courses",
+                "url": "https://lechevalier-fukuoka.com/",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "Aliénor d’Aquitaine（ランチ）",
+                    "price": 4290,
+                    "note": "Tax included; starting rate. Service-charge treatment not explicitly published; confirm final total. Appetizer, mini sea-urchin soup, main, dessert, coffee."
+                  },
+                  {
+                    "name": "Marché de Bordeaux（ランチ）",
+                    "price": 6600,
+                    "note": "Tax included; starting rate. Service-charge treatment not explicitly published; confirm final total. Amuse, appetizer, domestic sea-urchin soup, fish and meat, dessert, coffee."
+                  },
+                  {
+                    "name": "Victoire Chefs（ランチ）",
+                    "price": 11000,
+                    "note": "Tax included; starting rate. Service-charge treatment not explicitly published; confirm final total. Selected fish and wagyu, sea-urchin soup, dessert and coffee."
+                  },
+                  {
+                    "name": "Catherine（ディナー）",
+                    "price": 11000,
+                    "note": "Tax included; starting rate. Service-charge treatment not explicitly published; confirm final total. Full course with fish and meat."
+                  },
+                  {
+                    "name": "Le Chevalier（ディナー）",
+                    "price": 16500,
+                    "note": "Tax included; starting rate. Service-charge treatment not explicitly published; confirm final total. Selected fish and wagyu full course."
+                  },
+                  {
+                    "name": "Epicurien（ディナー）",
+                    "price": 22000,
+                    "note": "Tax included; starting rate. Service-charge treatment not explicitly published; confirm final total. Seasonal chef’s course; exact dishes not announced."
+                  }
+                ],
+                "note": "Current Sumiyoshi operator menu. No unspecified ten-percent service fee inferred from the printed consumption-tax notation."
+              },
+              {
+                "label": "Le Chevalier — published course components",
+                "url": "https://lechevalier-fukuoka.com/",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "アミューズ",
+                    "priceLabel": "Price not published",
+                    "note": "Course components vary by selected plan; not separately priced. Mini sea-urchin soup belongs to the entry lunch."
+                  },
+                  {
+                    "name": "前菜",
+                    "priceLabel": "Price not published",
+                    "note": "Course components vary by selected plan; not separately priced. Mini sea-urchin soup belongs to the entry lunch."
+                  },
+                  {
+                    "name": "生ウニの貴婦人風スープ",
+                    "priceLabel": "Price not published",
+                    "note": "Course components vary by selected plan; not separately priced. Mini sea-urchin soup belongs to the entry lunch."
+                  },
+                  {
+                    "name": "魚料理",
+                    "priceLabel": "Price not published",
+                    "note": "Course components vary by selected plan; not separately priced. Mini sea-urchin soup belongs to the entry lunch."
+                  },
+                  {
+                    "name": "肉料理",
+                    "priceLabel": "Price not published",
+                    "note": "Course components vary by selected plan; not separately priced. Mini sea-urchin soup belongs to the entry lunch."
+                  },
+                  {
+                    "name": "厳選和牛料理",
+                    "priceLabel": "Price not published",
+                    "note": "Course components vary by selected plan; not separately priced. Mini sea-urchin soup belongs to the entry lunch."
+                  },
+                  {
+                    "name": "シェフ特製デザート",
+                    "priceLabel": "Price not published",
+                    "note": "Course components vary by selected plan; not separately priced. Mini sea-urchin soup belongs to the entry lunch."
+                  },
+                  {
+                    "name": "コーヒー",
+                    "priceLabel": "Price not published",
+                    "note": "Course components vary by selected plan; not separately priced. Mini sea-urchin soup belongs to the entry lunch."
+                  }
+                ],
+                "note": "Individual fish/meat species are not published; no photo-based dish identities invented."
+              },
+              {
+                "label": "Le Chevalier — current drinks",
+                "url": "https://lechevalier-fukuoka.com/drink/",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "グラスシャンパーニュ",
+                    "price": 1650,
+                    "note": "Tax included; From. Service treatment should be confirmed."
+                  },
+                  {
+                    "name": "グラススパークリング",
+                    "price": 1100,
+                    "note": "Tax included; From. Service treatment should be confirmed."
+                  },
+                  {
+                    "name": "グラス赤・白ワイン",
+                    "price": 880,
+                    "note": "Tax included; From. Service treatment should be confirmed."
+                  },
+                  {
+                    "name": "スパークリングボトル",
+                    "price": 6600,
+                    "note": "Tax included;  Service treatment should be confirmed."
+                  },
+                  {
+                    "name": "赤・白ワインボトル",
+                    "price": 6050,
+                    "note": "Tax included; From. Service treatment should be confirmed."
+                  },
+                  {
+                    "name": "グラスワイン3杯セット",
+                    "price": 3300,
+                    "note": "Tax included; From; sparkling, white and red. Service treatment should be confirmed."
+                  },
+                  {
+                    "name": "グラスワイン5杯セット",
+                    "price": 4950,
+                    "note": "Tax included; From. Service treatment should be confirmed."
+                  },
+                  {
+                    "name": "ハートランドビール",
+                    "price": 825,
+                    "note": "Tax included;  Service treatment should be confirmed."
+                  },
+                  {
+                    "name": "デザートワイン",
+                    "price": 1100,
+                    "note": "Tax included; From. Service treatment should be confirmed."
+                  },
+                  {
+                    "name": "コニャック",
+                    "price": 1100,
+                    "note": "Tax included; From. Service treatment should be confirmed."
+                  },
+                  {
+                    "name": "アルマニャック",
+                    "price": 1100,
+                    "note": "Tax included; From. Service treatment should be confirmed."
+                  },
+                  {
+                    "name": "カルヴァドス",
+                    "price": 1100,
+                    "note": "Tax included; From. Service treatment should be confirmed."
+                  },
+                  {
+                    "name": "ノンアルコールワイン",
+                    "price": 825,
+                    "note": "Tax included;  Service treatment should be confirmed."
+                  },
+                  {
+                    "name": "ノンアルコールビール",
+                    "price": 550,
+                    "note": "Tax included;  Service treatment should be confirmed."
+                  },
+                  {
+                    "name": "ジンジャーエール",
+                    "price": 550,
+                    "note": "Tax included;  Service treatment should be confirmed."
+                  },
+                  {
+                    "name": "アクアパンナ500ml",
+                    "price": 825,
+                    "note": "Tax included;  Service treatment should be confirmed."
+                  },
+                  {
+                    "name": "サンペレグリノ500ml",
+                    "price": 825,
+                    "note": "Tax included;  Service treatment should be confirmed."
+                  }
+                ],
+                "note": "Champagne bottle tariff apparently misprinted as¥1,100on operator site; excluded until corrected, not advertised at that price."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://lechevalier-fukuoka.com/",
+            "name": "Le Chevalier — Sumiyoshi",
+            "checkedAt": "2026-10-19",
+            "websiteUrl": "https://lechevalier-fukuoka.com/",
+            "phone": "092-600-0133",
+            "openingHours": [
+              {
+                "days": "Tuesday–Sunday lunch",
+                "hours": "11:30–14:00 last order"
+              },
+              {
+                "days": "Tuesday–Sunday dinner",
+                "hours": "17:30–21:30 last order"
+              },
+              {
+                "days": "Closed",
+                "hours": "Monday"
+              }
+            ],
+            "detailsSourceUrl": "https://lechevalier-fukuoka.com/",
+            "additionalSources": [
+              {
+                "label": "Current Sumiyoshi branch and exact opening",
+                "url": "https://tabelog.com/en/fukuoka/A4001/A400103/40073577/"
+              },
+              {
+                "label": "Current alternative operator branch website",
+                "url": "https://lechevalier.aes-japon.com/"
+              },
+              {
+                "label": "Current drinks",
+                "url": "https://lechevalier-fukuoka.com/drink/"
+              },
+              {
+                "label": "Operator-linked reservation and age policies",
+                "url": "https://www.tablecheck.com/ja/shops/lechevalier-fukuoka/reserve"
+              }
+            ],
+            "hoursNote": "Children must take an adult course; no fixed children’s menu published. Groups of nine or more should call. More than30minutes late may be cancelled. Current branch menu checked; undated Christmas fragments excluded. Drink page champagne-bottle typo held for clarification.",
+            "reservationUrl": "https://www.tablecheck.com/ja/shops/lechevalier-fukuoka/reserve"
+          },
+          "tile": {
+            "regionSlug": "fukuoka",
+            "kind": "top",
+            "slug": "japan102-chevalier",
+            "name": "Le Chevalier — Sumiyoshi",
+            "neighborhood": "Sumiyoshi",
+            "cuisine": "French",
+            "description": "French tasting courses and sommelier-led wines in a seventh-floor Sumiyoshi dining room, including the house sea-urchin soup.",
+            "address": "7F Sumiyoshi Medical Building, 4-8-24 Sumiyoshi, Hakata-ku, Fukuoka",
+            "websiteUrl": "https://lechevalier-fukuoka.com/",
+            "checkedAt": "2026-10-19",
+            "recognition": "Established French restaurant with operator sommelier-led selection; relocated branch confirmed",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-19/batch102-chevalier-5-fd1e2fffdb353348.webp",
+            "imageCredit": "Le Chevalier / official website",
+            "imageSourceUrl": "https://lechevalier-fukuoka.com/",
+            "imageNote": "Operator Sumiyoshi branch presentation; photograph date and individual dish identities not supplied.",
+            "openingConfirmed": true,
+            "day": "2026-04-10"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "originalUrl": "https://lechevalier-fukuoka.com/wp-content/uploads/digipress/voyageur/header/TOP-001.png",
+          "sourcePage": "https://lechevalier-fukuoka.com/",
+          "credit": "Le Chevalier / official website",
+          "note": "Operator Sumiyoshi branch presentation; photograph date and individual dish identities not supplied.",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-19/batch102-chevalier-5-fd1e2fffdb353348.webp",
+          "sha256": "fd1e2fffdb35334887b033a8c1885957386cbb75aef29c520683b8b9ed1eea92",
+          "width": 1600,
+          "height": 863
+        },
+        {
+          "originalUrl": "https://lechevalier-fukuoka.com/wp-content/uploads/digipress/voyageur/header/TOP-002.png",
+          "sourcePage": "https://lechevalier-fukuoka.com/",
+          "credit": "Le Chevalier / official website",
+          "note": "Operator Sumiyoshi branch presentation; photograph date and individual dish identities not supplied.",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-19/batch102-chevalier-6-754f08d124f2267d.webp",
+          "sha256": "754f08d124f2267dbaa0b7a2e941e68a394b1c10f10b50491053517d3e670e74",
+          "width": 1600,
+          "height": 863
+        },
+        {
+          "originalUrl": "https://lechevalier-fukuoka.com/wp-content/uploads/digipress/voyageur/header/TOP-003.png",
+          "sourcePage": "https://lechevalier-fukuoka.com/",
+          "credit": "Le Chevalier / official website",
+          "note": "Operator Sumiyoshi branch presentation; photograph date and individual dish identities not supplied.",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-19/batch102-chevalier-7-86b3182b474cb39f.webp",
+          "sha256": "86b3182b474cb39f57093faba14d7bc995de7850c74e06578127c8cc692ff648",
+          "width": 1600,
+          "height": 863
+        },
+        {
+          "originalUrl": "https://lechevalier-fukuoka.com/wp-content/uploads/digipress/voyageur/header/TOP-004.png",
+          "sourcePage": "https://lechevalier-fukuoka.com/",
+          "credit": "Le Chevalier / official website",
+          "note": "Operator Sumiyoshi branch presentation; photograph date and individual dish identities not supplied.",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-19/batch102-chevalier-8-45027e240682ed3c.webp",
+          "sha256": "45027e240682ed3c7826fed88dda565fbb82504c8dcf27bd97e80bc74498233b",
+          "width": 1600,
+          "height": 863
+        }
+      ]
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "L’eau Blanche — Nishinakasu Opens 2016-04-06",
+        "description": "Teppei Shiromizu’s riverside French dining room, pairing seasonal Japanese ingredients with precise French techniques.",
+        "sourceUrl": "https://leaublanche.jp/",
+        "address": "2F RIN FIRST, 4-4 Nishinakasu, Chuo-ku, Fukuoka",
+        "productName": "L’eau Blanche — Nishinakasu",
+        "utcStartDateTime": "2016-04-06T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "Exact-branch managed listing records April6,2016; operator chef biography and alumni feature corroborate2016and April2016respectively. This is the original Nishinakasu branch opening.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Fukuoka",
+          "Japan",
+          "Nishinakasu",
+          "French"
+        ],
+        "longFormSummary": "<p>Teppei Shiromizu’s riverside French dining room, pairing seasonal Japanese ingredients with precise French techniques.<cite data-ref=\"https://leaublanche.jp/\"></cite></p><p>Exact-branch managed listing records April6,2016; operator chef biography and alumni feature corroborate2016and April2016respectively. This is the original Nishinakasu branch opening.</p>",
+        "references": [
+          {
+            "url": "https://leaublanche.jp/",
+            "title": "L’eau Blanche — Nishinakasu — branch website",
+            "confidence": 90,
+            "reasoning": "L’eau Blanche — Nishinakasu — branch website"
+          },
+          {
+            "url": "https://tabelog.com/en/fukuoka/A4001/A400102/40042563/",
+            "title": "Exact opening field",
+            "confidence": 90,
+            "reasoning": "Exact opening field"
+          },
+          {
+            "url": "https://n-plus.nakamura-s.ac.jp/store/specialite/masterid/29/",
+            "title": "Chef’s signature and April2016opening",
+            "confidence": 90,
+            "reasoning": "Chef’s signature and April2016opening"
+          },
+          {
+            "url": "https://www.fukuoka-navi.jp/gibier-fukuoka/leau_blanche-2",
+            "title": "Historical2026gibier dish",
+            "confidence": 90,
+            "reasoning": "Historical2026gibier dish"
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://leaublanche.jp/",
+          "menu": {
+            "pinSourceUrl": "https://leaublanche.jp/",
+            "name": "L’eau Blanche — Nishinakasu",
+            "checkedAt": "2026-10-19",
+            "menus": [
+              {
+                "label": "L’eau Blanche — current courses",
+                "url": "https://leaublanche.jp/",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "白の陽（ランチ）",
+                    "price": 16500,
+                    "note": "Tax included; service10% extra."
+                  },
+                  {
+                    "name": "白の風（ランチ）",
+                    "price": 23100,
+                    "note": "Tax included; service10% extra."
+                  },
+                  {
+                    "name": "白暦（ディナー）",
+                    "price": 16500,
+                    "note": "Tax included; service10% extra."
+                  },
+                  {
+                    "name": "悠白（ディナー）",
+                    "price": 23100,
+                    "note": "Tax included; service10% extra."
+                  },
+                  {
+                    "name": "白詩（ディナー）",
+                    "price": 33000,
+                    "note": "Tax included; service10% extra."
+                  }
+                ],
+                "note": "Current operator site supersedes old directory tariffs. Current named wine, pairing and individual beverage prices not published after operator, booking and branch menu searches."
+              },
+              {
+                "label": "L’eau Blanche — chef’s published signature",
+                "url": "https://n-plus.nakamura-s.ac.jp/store/specialite/masterid/29/",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "ブータン ヴィオレ、ビーツとりんごのピューレ添え",
+                    "priceLabel": "Price not published",
+                    "note": "Chef-described signature based on boudin noir, wrapped in purple sweet potato; published alumni feature, availability depends on the seasonal course."
+                  }
+                ],
+                "note": "Named signature with chef explanation; no separate price or daily availability promised."
+              },
+              {
+                "label": "L’eau Blanche — historical2026gibier example",
+                "url": "https://www.fukuoka-navi.jp/gibier-fukuoka/leau_blanche-2",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "眠り〆猪ロースの藁燻製仕立て",
+                    "priceLabel": "Price not published",
+                    "note": "Historical fair2026course example publishedDecember26,2025. Not a current offer or a separately priced dish; old¥22,000course tariff excluded."
+                  }
+                ],
+                "note": "Operator-participating fair profile provides a real named dish; retained solely as historical cooking coverage, not active promotion."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://leaublanche.jp/",
+            "name": "L’eau Blanche — Nishinakasu",
+            "checkedAt": "2026-10-19",
+            "websiteUrl": "https://leaublanche.jp/",
+            "phone": "092-752-2122",
+            "openingHours": [
+              {
+                "days": "Monday–Thursday dinner",
+                "hours": "18:00–22:30; last order19:30"
+              },
+              {
+                "days": "Friday–Saturday lunch",
+                "hours": "12:00–14:30; last order12:00"
+              },
+              {
+                "days": "Friday–Saturday dinner",
+                "hours": "18:00–22:30; last order19:30"
+              },
+              {
+                "days": "Closed",
+                "hours": "Sunday and two additional irregular closures per month"
+              }
+            ],
+            "detailsSourceUrl": "https://leaublanche.jp/",
+            "additionalSources": [
+              {
+                "label": "Exact opening field",
+                "url": "https://tabelog.com/en/fukuoka/A4001/A400102/40042563/"
+              },
+              {
+                "label": "Chef’s signature and April2016opening",
+                "url": "https://n-plus.nakamura-s.ac.jp/store/specialite/masterid/29/"
+              },
+              {
+                "label": "Historical2026gibier dish",
+                "url": "https://www.fukuoka-navi.jp/gibier-fukuoka/leau_blanche-2"
+              }
+            ],
+            "hoursNote": "Fourteen seats per current operator (older fair profile says12). Reserve by phone or linked form. Service10% extra. Groups should ask about private booking; no fixed children’s tariff published. Historical signature and fair dishes are clearly dated examples, not guaranteed current courses.",
+            "reservationUrl": "https://leaublanche.jp/"
+          },
+          "tile": {
+            "regionSlug": "fukuoka",
+            "kind": "top",
+            "slug": "japan102-blanche",
+            "name": "L’eau Blanche — Nishinakasu",
+            "neighborhood": "Nishinakasu",
+            "cuisine": "French",
+            "description": "Teppei Shiromizu’s riverside French dining room, pairing seasonal Japanese ingredients with precise French techniques.",
+            "address": "2F RIN FIRST, 4-4 Nishinakasu, Chuo-ku, Fukuoka",
+            "websiteUrl": "https://leaublanche.jp/",
+            "checkedAt": "2026-10-19",
+            "recognition": "MICHELIN Fukuoka–Saga–Nagasaki2019one star (historical); Tabelog French WEST Hyakumeiten2025",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-19/batch102-blanche-2-f086ef5be10a1d27.webp",
+            "imageCredit": "L’eau Blanche / official website",
+            "imageSourceUrl": "https://leaublanche.jp/",
+            "imageNote": "Exact-branch gallery photograph; no dish name or current availability inferred from the photograph.",
+            "openingConfirmed": true,
+            "day": "2016-04-06"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "originalUrl": "https://leaublanche.jp/_src/89093967/img20250428183953477762.jpg?v=1784183742606",
+          "sourcePage": "https://leaublanche.jp/",
+          "credit": "L’eau Blanche / official website",
+          "note": "Exact-branch gallery photograph; no dish name or current availability inferred from the photograph.",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-19/batch102-blanche-2-f086ef5be10a1d27.webp",
+          "sha256": "f086ef5be10a1d27afa18a5a1b061d09ff76b1450bf27767afad9bffa9d0be19",
+          "width": 1600,
+          "height": 1051
+        },
+        {
+          "originalUrl": "https://leaublanche.jp/_src/89093968/img20250428184052554892.jpg?v=1784183742606",
+          "sourcePage": "https://leaublanche.jp/",
+          "credit": "L’eau Blanche / official website",
+          "note": "Exact-branch gallery photograph; no dish name or current availability inferred from the photograph.",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-19/batch102-blanche-1-c5e8a26f6b62ca8f.webp",
+          "sha256": "c5e8a26f6b62ca8f4b7f09f50400254e40ce47ce835647d36499e5f146d8d809",
+          "width": 1600,
+          "height": 1051
+        },
+        {
+          "originalUrl": "https://leaublanche.jp/_src/89093963/img20250428183755970326.jpg?v=1784183742606",
+          "sourcePage": "https://leaublanche.jp/",
+          "credit": "L’eau Blanche / official website",
+          "note": "Exact-branch gallery photograph; no dish name or current availability inferred from the photograph.",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-19/batch102-blanche-3-34cc3b2bd28d6cd5.webp",
+          "sha256": "34cc3b2bd28d6cd560aede3fd90fbb38cb5a91bc1a61125480b0cc5075650b1c",
+          "width": 1600,
+          "height": 1051
+        },
+        {
+          "originalUrl": "https://leaublanche.jp/_src/89093964/img20250428183755951643.jpg?v=1784183742606",
+          "sourcePage": "https://leaublanche.jp/",
+          "credit": "L’eau Blanche / official website",
+          "note": "Exact-branch gallery photograph; no dish name or current availability inferred from the photograph.",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-19/batch102-blanche-4-cac84be77beb78ce.webp",
+          "sha256": "cac84be77beb78ce5e1ef7daafb9aed622c1bcc06ba2e108656a548e73b5f7bb",
+          "width": 1600,
+          "height": 1051
+        }
+      ]
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Restaurant MORI — Aburayama Opens 1970-12-31",
+        "description": "A long-established Aburayama hillside French restaurant with city views, seasonal tasting courses and special-occasion dining.",
+        "sourceUrl": "https://www.restaurant-mori.com/",
+        "address": "515-39 Higashiaburayama Kurohara, Jonan-ku, Fukuoka",
+        "productName": "Restaurant MORI — Aburayama",
+        "utcStartDateTime": "1970-12-31T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "Year-only estimate: operator-authored Restaurant MORI recruiting profile explicitly says founded1970, identifies this Aburayama restaurant and current address, and describes the transition from Western cooking to French cuisine. December31is only a year-level storage anchor, not a verified opening day; exact day and any intervening building/branch chronology remain research gaps.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Fukuoka",
+          "Japan",
+          "Aburayama",
+          "French"
+        ],
+        "longFormSummary": "<p>A long-established Aburayama hillside French restaurant with city views, seasonal tasting courses and special-occasion dining.<cite data-ref=\"https://www.restaurant-mori.com/\"></cite></p><p>Year-only estimate: operator-authored Restaurant MORI recruiting profile explicitly says founded1970, identifies this Aburayama restaurant and current address, and describes the transition from Western cooking to French cuisine. December31is only a year-level storage anchor, not a verified opening day; exact day and any intervening building/branch chronology remain research gaps.</p>",
+        "references": [
+          {
+            "url": "https://www.restaurant-mori.com/",
+            "title": "Restaurant MORI — Aburayama — branch website",
+            "confidence": 90,
+            "reasoning": "Restaurant MORI — Aburayama — branch website"
+          },
+          {
+            "url": "https://jmty.jp/fukuoka/rec-eat/article-c2tck",
+            "title": "Primary operator-authored1970founding statement",
+            "confidence": 90,
+            "reasoning": "Primary operator-authored1970founding statement"
+          },
+          {
+            "url": "https://page.line.me/mori1970",
+            "title": "Operator LINE current venue profile",
+            "confidence": 90,
+            "reasoning": "Operator LINE current venue profile"
+          },
+          {
+            "url": "https://tabelog.com/en/fukuoka/A4001/A400202/40000302/party/",
+            "title": "Current branch courses",
+            "confidence": 90,
+            "reasoning": "Current branch courses"
+          },
+          {
+            "url": "https://tabelog.com/en/fukuoka/A4001/A400202/40000302/party/294382452/",
+            "title": "Current lunch",
+            "confidence": 90,
+            "reasoning": "Current lunch"
+          },
+          {
+            "url": "https://tabelog.com/en/fukuoka/A4001/A400202/40000302/party/582790/",
+            "title": "Special dinner sample",
+            "confidence": 90,
+            "reasoning": "Special dinner sample"
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://www.restaurant-mori.com/",
+          "menu": {
+            "pinSourceUrl": "https://www.restaurant-mori.com/",
+            "name": "Restaurant MORI — Aburayama",
+            "checkedAt": "2026-10-19",
+            "menus": [
+              {
+                "label": "Restaurant MORI — current exact-branch courses",
+                "url": "https://tabelog.com/en/fukuoka/A4001/A400202/40000302/party/",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "おまかせランチコース",
+                    "price": 6600,
+                    "note": "Tax and service included."
+                  },
+                  {
+                    "name": "スペシャルランチコース",
+                    "price": 13200,
+                    "note": "Tax and service included."
+                  },
+                  {
+                    "name": "ディナーコースD",
+                    "price": 17600,
+                    "note": "Tax included; service10% extra."
+                  },
+                  {
+                    "name": "スペシャルディナーコース",
+                    "price": 27500,
+                    "note": "Tax included; service10% extra."
+                  },
+                  {
+                    "name": "プロポーズプラン",
+                    "price": 35200,
+                    "note": "Per guest; two guests required; tax included, service10% extra. Ordinary occasion plan, no dated discount."
+                  }
+                ],
+                "note": "Current bookable branch plans used. Static2019food/drink tariffs are stale and excluded."
+              },
+              {
+                "label": "Restaurant MORI — current lunch structure",
+                "url": "https://tabelog.com/en/fukuoka/A4001/A400202/40000302/party/294382452/",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "アミューズ",
+                    "priceLabel": "Price not published",
+                    "note": "Published changing lunch structure; included in course, no standalone price. Ingredients vary."
+                  },
+                  {
+                    "name": "前菜",
+                    "priceLabel": "Price not published",
+                    "note": "Published changing lunch structure; included in course, no standalone price. Ingredients vary."
+                  },
+                  {
+                    "name": "ポタージュ",
+                    "priceLabel": "Price not published",
+                    "note": "Published changing lunch structure; included in course, no standalone price. Ingredients vary."
+                  },
+                  {
+                    "name": "魚料理",
+                    "priceLabel": "Price not published",
+                    "note": "Published changing lunch structure; included in course, no standalone price. Ingredients vary."
+                  },
+                  {
+                    "name": "肉料理",
+                    "priceLabel": "Price not published",
+                    "note": "Published changing lunch structure; included in course, no standalone price. Ingredients vary."
+                  },
+                  {
+                    "name": "デザート",
+                    "priceLabel": "Price not published",
+                    "note": "Published changing lunch structure; included in course, no standalone price. Ingredients vary."
+                  },
+                  {
+                    "name": "パン",
+                    "priceLabel": "Price not published",
+                    "note": "Published changing lunch structure; included in course, no standalone price. Ingredients vary."
+                  },
+                  {
+                    "name": "コーヒー",
+                    "priceLabel": "Price not published",
+                    "note": "Published changing lunch structure; included in course, no standalone price. Ingredients vary."
+                  }
+                ],
+                "note": "Current operator-managed bookable plan; five or more guests should phone."
+              },
+              {
+                "label": "Restaurant MORI — published special dinner example",
+                "url": "https://tabelog.com/en/fukuoka/A4001/A400202/40000302/party/582790/",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "牡丹海老・鮪・帆立・雲丹・キャビアのカクテル",
+                    "priceLabel": "Price not published",
+                    "note": "Published changing special dinner example; not separately priced or guaranteed daily."
+                  },
+                  {
+                    "name": "長崎産活鮑のポシェ、ブールノワゼット",
+                    "priceLabel": "Price not published",
+                    "note": "Published changing special dinner example; not separately priced or guaranteed daily."
+                  },
+                  {
+                    "name": "フランス産フォアグラのソテー、季節のフルーツ",
+                    "priceLabel": "Price not published",
+                    "note": "Published changing special dinner example; not separately priced or guaranteed daily."
+                  },
+                  {
+                    "name": "手長海老と帆立のスープ",
+                    "priceLabel": "Price not published",
+                    "note": "Published changing special dinner example; not separately priced or guaranteed daily."
+                  },
+                  {
+                    "name": "カナダ産活オマール海老のポシェ、ソースアメリケーヌ",
+                    "priceLabel": "Price not published",
+                    "note": "Published changing special dinner example; not separately priced or guaranteed daily."
+                  },
+                  {
+                    "name": "シャンパンのソルベ",
+                    "priceLabel": "Price not published",
+                    "note": "Published changing special dinner example; not separately priced or guaranteed daily."
+                  },
+                  {
+                    "name": "福岡県産和牛ロース、モー産マスタードのソース",
+                    "priceLabel": "Price not published",
+                    "note": "Published changing special dinner example; not separately priced or guaranteed daily."
+                  },
+                  {
+                    "name": "ガトーマジョレル",
+                    "priceLabel": "Price not published",
+                    "note": "Published changing special dinner example; not separately priced or guaranteed daily."
+                  },
+                  {
+                    "name": "小菓子",
+                    "priceLabel": "Price not published",
+                    "note": "Published changing special dinner example; not separately priced or guaranteed daily."
+                  },
+                  {
+                    "name": "パンとコーヒー",
+                    "priceLabel": "Price not published",
+                    "note": "Published changing special dinner example; not separately priced or guaranteed daily."
+                  }
+                ],
+                "note": "Exact branch course page, not old2019ordinary menu. No named current drink prices found after managed menus, current plans, LINE and blocked operator site checks."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://www.restaurant-mori.com/",
+            "name": "Restaurant MORI — Aburayama",
+            "checkedAt": "2026-10-19",
+            "websiteUrl": "https://www.restaurant-mori.com/",
+            "phone": "092-861-4437",
+            "openingHours": [
+              {
+                "days": "Lunch",
+                "hours": "12:00start–15:30"
+              },
+              {
+                "days": "Weekday dinner",
+                "hours": "18:30or19:30start; closes22:30"
+              },
+              {
+                "days": "Weekend/public-holiday dinner",
+                "hours": "18:00or19:00start; closes22:30"
+              },
+              {
+                "days": "Closed",
+                "hours": "Tuesday (next day if Tuesday is a holiday), plus two irregular days per month"
+              }
+            ],
+            "detailsSourceUrl": "https://www.restaurant-mori.com/",
+            "additionalSources": [
+              {
+                "label": "Primary operator-authored1970founding statement",
+                "url": "https://jmty.jp/fukuoka/rec-eat/article-c2tck"
+              },
+              {
+                "label": "Operator LINE current venue profile",
+                "url": "https://page.line.me/mori1970"
+              },
+              {
+                "label": "Current branch courses",
+                "url": "https://tabelog.com/en/fukuoka/A4001/A400202/40000302/party/"
+              },
+              {
+                "label": "Current lunch",
+                "url": "https://tabelog.com/en/fukuoka/A4001/A400202/40000302/party/294382452/"
+              },
+              {
+                "label": "Special dinner sample",
+                "url": "https://tabelog.com/en/fukuoka/A4001/A400202/40000302/party/582790/"
+              }
+            ],
+            "hoursNote": "Current managed branch plans control prices. Lunch children’s meals available on enquiry; prices unpublished. Dinner age wording differs across translations around age10; confirm before booking younger guests. Thirty-five seats, free parking. Operator domain returns403; LINE and current managed plans accessible. Cancel no later than two days before; selected plan terms apply.",
+            "reservationUrl": "https://tabelog.com/en/fukuoka/A4001/A400202/40000302/"
+          },
+          "tile": {
+            "regionSlug": "fukuoka",
+            "kind": "top",
+            "slug": "japan102-mori",
+            "name": "Restaurant MORI — Aburayama",
+            "neighborhood": "Aburayama",
+            "cuisine": "French",
+            "description": "A long-established Aburayama hillside French restaurant with city views, seasonal tasting courses and special-occasion dining.",
+            "address": "515-39 Higashiaburayama Kurohara, Jonan-ku, Fukuoka",
+            "websiteUrl": "https://www.restaurant-mori.com/",
+            "checkedAt": "2026-10-19",
+            "recognition": "Aburayama French dining institution; branch’s operator profile records1970founding",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-19/batch102-mori-5-274ef13648998580.webp",
+            "imageCredit": "Restaurant MORI / Tabelog branch gallery (photographer not identified)",
+            "imageSourceUrl": "https://tabelog.com/fukuoka/A4001/A400202/40000302/",
+            "imageNote": "Operator-labelled Aburayama branch and city-view photograph.",
+            "openingConfirmed": false,
+            "day": "1970-12-31"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "originalUrl": "https://tblg.k-img.com/restaurant/images/Rvw/34058/34058047.jpg",
+          "sourcePage": "https://tabelog.com/fukuoka/A4001/A400202/40000302/",
+          "credit": "Restaurant MORI / Tabelog branch gallery (photographer not identified)",
+          "note": "Operator-labelled Aburayama branch and city-view photograph.",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-19/batch102-mori-5-274ef13648998580.webp",
+          "sha256": "274ef136489985804661404e9828e8f527633d6063c70a3199bfe1fb0e51229b",
+          "width": 851,
+          "height": 567
+        },
+        {
+          "originalUrl": "https://tblg.k-img.com/restaurant/images/Rvw/92503/92503339.jpg",
+          "sourcePage": "https://tabelog.com/fukuoka/A4001/A400202/40000302/",
+          "credit": "Restaurant MORI / Tabelog branch gallery (photographer not identified)",
+          "note": "Exact-branch operator-managed photograph; no dish identity or current menu availability inferred.",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-19/batch102-mori-6-362371964e8d8c71.webp",
+          "sha256": "362371964e8d8c7148730d55c5c7c796669bb98a0309620348730f33efc34925",
+          "width": 660,
+          "height": 370
+        },
+        {
+          "originalUrl": "https://tblg.k-img.com/restaurant/images/Rvw/109196/109196054.jpg",
+          "sourcePage": "https://tabelog.com/fukuoka/A4001/A400202/40000302/",
+          "credit": "Restaurant MORI / Tabelog branch gallery (photographer not identified)",
+          "note": "Exact-branch operator-managed photograph; no dish identity or current menu availability inferred.",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-19/batch102-mori-7-3a6e3cbe6ca0528f.webp",
+          "sha256": "3a6e3cbe6ca0528f53fce95184835f35653fa4f88dd3fbf0c9428248e2d3e4e1",
+          "width": 1600,
+          "height": 1063
+        },
+        {
+          "originalUrl": "https://tblg.k-img.com/restaurant/images/Rvw/109196/109196019.jpg",
+          "sourcePage": "https://tabelog.com/fukuoka/A4001/A400202/40000302/",
+          "credit": "Restaurant MORI / Tabelog branch gallery (photographer not identified)",
+          "note": "Exact-branch gallery photograph; no dish name or current availability inferred from the photograph.",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-19/batch102-mori-2-67ad8e91fbb3d37d.webp",
+          "sha256": "67ad8e91fbb3d37d0b644de24c984c9422d99315b2664eef47b45246f762fe47",
+          "width": 660,
+          "height": 370
+        }
+      ]
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "IMURI — Sakurazaka Opens 1999-11-27",
+        "description": "A hillside Japanese and French dining room overlooking Fukuoka, with seasonal Kyushu seafood, Arita beef, lunch courses and a separate cocktail bar.",
+        "sourceUrl": "https://kanzan.net/imuri/",
+        "address": "1-3-15 Tani, Chuo-ku, Fukuoka",
+        "productName": "IMURI — Sakurazaka",
+        "utcStartDateTime": "1999-11-27T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "Exact branch managed listing gives November27,1999. Operator2026anniversary body states the27thanniversary falls on November27,Reiwa8(2026), independently corroborating the date; stale26th-anniversary page heading is superseded by explicit body.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Fukuoka",
+          "Japan",
+          "Sakurazaka / Tani",
+          "Japanese / French"
+        ],
+        "longFormSummary": "<p>A hillside Japanese and French dining room overlooking Fukuoka, with seasonal Kyushu seafood, Arita beef, lunch courses and a separate cocktail bar.<cite data-ref=\"https://kanzan.net/imuri/\"></cite></p><p>Exact branch managed listing gives November27,1999. Operator2026anniversary body states the27thanniversary falls on November27,Reiwa8(2026), independently corroborating the date; stale26th-anniversary page heading is superseded by explicit body.</p>",
+        "references": [
+          {
+            "url": "https://kanzan.net/imuri/",
+            "title": "IMURI — Sakurazaka — branch website",
+            "confidence": 90,
+            "reasoning": "IMURI — Sakurazaka — branch website"
+          },
+          {
+            "url": "https://tabelog.com/en/fukuoka/A4001/A400105/40000055/",
+            "title": "Exact branch original opening and detailed hours",
+            "confidence": 90,
+            "reasoning": "Exact branch original opening and detailed hours"
+          },
+          {
+            "url": "https://kanzan.net/imuri/menu/",
+            "title": "Current ordinary dinner menus",
+            "confidence": 90,
+            "reasoning": "Current ordinary dinner menus"
+          },
+          {
+            "url": "https://kanzan.net/imuri/lunch/",
+            "title": "Current lunch and beverages",
+            "confidence": 90,
+            "reasoning": "Current lunch and beverages"
+          },
+          {
+            "url": "https://kanzan.net/imuri/bar/",
+            "title": "Bar current menu",
+            "confidence": 90,
+            "reasoning": "Bar current menu"
+          },
+          {
+            "url": "https://kanzan.net/imuri/anniversary/",
+            "title": "Ordinary celebration plans",
+            "confidence": 90,
+            "reasoning": "Ordinary celebration plans"
+          },
+          {
+            "url": "https://kanzan.net/imuri/topics-info/6731",
+            "title": "Explicit2026anniversary course",
+            "confidence": 90,
+            "reasoning": "Explicit2026anniversary course"
+          },
+          {
+            "url": "https://kanzan.net/imuri/20261005-6725/",
+            "title": "2027New Year announcement",
+            "confidence": 90,
+            "reasoning": "2027New Year announcement"
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://kanzan.net/imuri/",
+          "menu": {
+            "pinSourceUrl": "https://kanzan.net/imuri/",
+            "name": "IMURI — Sakurazaka",
+            "checkedAt": "2026-10-19",
+            "menus": [
+              {
+                "label": "IMURI — ordinary dinner and pairing",
+                "url": "https://kanzan.net/imuri/menu/",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "有田牛を味わうコース",
+                    "price": 16500,
+                    "note": "Tax included; dinner table charge¥800per person extra."
+                  },
+                  {
+                    "name": "おまかせコース（平日）",
+                    "price": 6600,
+                    "note": "From; tax included; table charge¥800extra."
+                  },
+                  {
+                    "name": "おまかせコース（土日祝）",
+                    "price": 8800,
+                    "note": "From; upper budgets through¥33,000and above on enquiry; tax included; table charge¥800extra."
+                  }
+                ],
+                "note": "Course ingredients and budget vary; reserve ahead."
+              },
+              {
+                "label": "IMURI — Arita beef course example",
+                "url": "https://kanzan.net/imuri/menu/",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "季節の小鉢2品・有田牛の手毬寿司",
+                    "priceLabel": "Price not published",
+                    "note": "Included course dish or alternative; not separately priced. Main and rice preparations are choices, not all served together."
+                  },
+                  {
+                    "name": "旬のお造り",
+                    "priceLabel": "Price not published",
+                    "note": "Included course dish or alternative; not separately priced. Main and rice preparations are choices, not all served together."
+                  },
+                  {
+                    "name": "有田牛の自家製ローストビーフサラダ",
+                    "priceLabel": "Price not published",
+                    "note": "Included course dish or alternative; not separately priced. Main and rice preparations are choices, not all served together."
+                  },
+                  {
+                    "name": "有田牛のコンビーフとザワークラウト",
+                    "priceLabel": "Price not published",
+                    "note": "Included course dish or alternative; not separately priced. Main and rice preparations are choices, not all served together."
+                  },
+                  {
+                    "name": "有田牛と大葉の串揚げ",
+                    "priceLabel": "Price not published",
+                    "note": "Included course dish or alternative; not separately priced. Main and rice preparations are choices, not all served together."
+                  },
+                  {
+                    "name": "有田牛の炭火焼ステーキ（主菜選択）",
+                    "priceLabel": "Price not published",
+                    "note": "Included course dish or alternative; not separately priced. Main and rice preparations are choices, not all served together."
+                  },
+                  {
+                    "name": "有田牛のすき焼き（主菜選択）",
+                    "priceLabel": "Price not published",
+                    "note": "Included course dish or alternative; not separately priced. Main and rice preparations are choices, not all served together."
+                  },
+                  {
+                    "name": "有田牛のしゃぶしゃぶ（主菜選択）",
+                    "priceLabel": "Price not published",
+                    "note": "Included course dish or alternative; not separately priced. Main and rice preparations are choices, not all served together."
+                  },
+                  {
+                    "name": "有田牛の屋外BBQ（主菜選択）",
+                    "priceLabel": "Price not published",
+                    "note": "Included course dish or alternative; not separately priced. Main and rice preparations are choices, not all served together."
+                  },
+                  {
+                    "name": "有田牛の牛カツ（主菜選択）",
+                    "priceLabel": "Price not published",
+                    "note": "Included course dish or alternative; not separately priced. Main and rice preparations are choices, not all served together."
+                  },
+                  {
+                    "name": "土鍋和風おこげ（食事選択）",
+                    "priceLabel": "Price not published",
+                    "note": "Included course dish or alternative; not separately priced. Main and rice preparations are choices, not all served together."
+                  },
+                  {
+                    "name": "白御飯と味噌汁（食事選択）",
+                    "priceLabel": "Price not published",
+                    "note": "Included course dish or alternative; not separately priced. Main and rice preparations are choices, not all served together."
+                  },
+                  {
+                    "name": "デザート",
+                    "priceLabel": "Price not published",
+                    "note": "Included course dish or alternative; not separately priced. Main and rice preparations are choices, not all served together."
+                  }
+                ],
+                "note": "Exact operator ordinary course, not anniversary-course dishes."
+              },
+              {
+                "label": "IMURI — torafugu course",
+                "url": "https://kanzan.net/imuri/torafugu-course/",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "とらふぐコース",
+                    "price": 22000,
+                    "note": "Per person tax included; table charge¥800extra. Minimum two guests, even-numbered party; odd numbers incur extra cost; reserve two days ahead. Counter dinner only."
+                  },
+                  {
+                    "name": "季節の前菜",
+                    "priceLabel": "Price not published",
+                    "note": "Course component or optional supplement; individual/supplement price not published."
+                  },
+                  {
+                    "name": "とらふぐ刺身",
+                    "priceLabel": "Price not published",
+                    "note": "Course component or optional supplement; individual/supplement price not published."
+                  },
+                  {
+                    "name": "活とらふぐの炙り焼き",
+                    "priceLabel": "Price not published",
+                    "note": "Course component or optional supplement; individual/supplement price not published."
+                  },
+                  {
+                    "name": "とらふぐしゃぶしゃぶ鍋",
+                    "priceLabel": "Price not published",
+                    "note": "Course component or optional supplement; individual/supplement price not published."
+                  },
+                  {
+                    "name": "とらふぐ唐揚げ",
+                    "priceLabel": "Price not published",
+                    "note": "Course component or optional supplement; individual/supplement price not published."
+                  },
+                  {
+                    "name": "雑炊",
+                    "priceLabel": "Price not published",
+                    "note": "Course component or optional supplement; individual/supplement price not published."
+                  },
+                  {
+                    "name": "デザート",
+                    "priceLabel": "Price not published",
+                    "note": "Course component or optional supplement; individual/supplement price not published."
+                  },
+                  {
+                    "name": "薄造り（追加選択）",
+                    "priceLabel": "Price not published",
+                    "note": "Course component or optional supplement; individual/supplement price not published."
+                  },
+                  {
+                    "name": "白子（追加選択）",
+                    "priceLabel": "Price not published",
+                    "note": "Course component or optional supplement; individual/supplement price not published."
+                  },
+                  {
+                    "name": "ひれ酒（追加選択）",
+                    "priceLabel": "Price not published",
+                    "note": "Course component or optional supplement; individual/supplement price not published."
+                  }
+                ],
+                "note": "Cancellation within two days100%; confirm exact terms at booking."
+              },
+              {
+                "label": "IMURI — ordinary celebration plans",
+                "url": "https://kanzan.net/imuri/anniversary/",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "アニバーサリープラン（2名合計）",
+                    "price": 26200,
+                    "note": "Total for two, tax included; reserve by previous day; five couples daily. Dinner table charge extra unless restaurant confirms included."
+                  },
+                  {
+                    "name": "スペシャルアニバーサリープラン（2名合計）",
+                    "price": 38300,
+                    "note": "Total for two, tax included; reserve three days ahead, five couples daily, sparkling toast included; table-charge treatment confirm."
+                  },
+                  {
+                    "name": "季節の前菜",
+                    "priceLabel": "Price not published",
+                    "note": "Published ordinary¥26,200pair-plan example; not the November27th-anniversary course. Individual prices unpublished."
+                  },
+                  {
+                    "name": "お造り",
+                    "priceLabel": "Price not published",
+                    "note": "Published ordinary¥26,200pair-plan example; not the November27th-anniversary course. Individual prices unpublished."
+                  },
+                  {
+                    "name": "茶碗蒸し",
+                    "priceLabel": "Price not published",
+                    "note": "Published ordinary¥26,200pair-plan example; not the November27th-anniversary course. Individual prices unpublished."
+                  },
+                  {
+                    "name": "玄界灘の鯛と手長海老、レモン醤油バター",
+                    "priceLabel": "Price not published",
+                    "note": "Published ordinary¥26,200pair-plan example; not the November27th-anniversary course. Individual prices unpublished."
+                  },
+                  {
+                    "name": "北海道産帆立と野菜、燻製グリーンズと卵黄ソース",
+                    "priceLabel": "Price not published",
+                    "note": "Published ordinary¥26,200pair-plan example; not the November27th-anniversary course. Individual prices unpublished."
+                  },
+                  {
+                    "name": "佐賀和牛サーロイン、木の実と山椒パン粉、山椒ソース",
+                    "priceLabel": "Price not published",
+                    "note": "Published ordinary¥26,200pair-plan example; not the November27th-anniversary course. Individual prices unpublished."
+                  },
+                  {
+                    "name": "土鍋和風おこげ",
+                    "priceLabel": "Price not published",
+                    "note": "Published ordinary¥26,200pair-plan example; not the November27th-anniversary course. Individual prices unpublished."
+                  },
+                  {
+                    "name": "アニバーサリーホールケーキ",
+                    "priceLabel": "Price not published",
+                    "note": "Published ordinary¥26,200pair-plan example; not the November27th-anniversary course. Individual prices unpublished."
+                  },
+                  {
+                    "name": "コーヒー・紅茶",
+                    "priceLabel": "Price not published",
+                    "note": "Published ordinary¥26,200pair-plan example; not the November27th-anniversary course. Individual prices unpublished."
+                  }
+                ],
+                "note": "Ordinary occasion plans stay in menus; no unsupported dated promotion inferred."
+              },
+              {
+                "label": "IMURI — cake add-ons",
+                "url": "https://kanzan.net/imuri/menu/",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "メッセージデザートプレート",
+                    "price": 2200,
+                    "note": "Tax included; course/table charges separate."
+                  },
+                  {
+                    "name": "シャンティ12cm",
+                    "price": 3300,
+                    "note": "Tax included; course/table charges separate."
+                  },
+                  {
+                    "name": "チョコショートケーキ12cm",
+                    "price": 3300,
+                    "note": "Tax included; course/table charges separate."
+                  },
+                  {
+                    "name": "フルーツタルト12cm",
+                    "price": 3200,
+                    "note": "Tax included; course/table charges separate."
+                  },
+                  {
+                    "name": "IMURIチーズ",
+                    "price": 3000,
+                    "note": "Tax included; course/table charges separate."
+                  },
+                  {
+                    "name": "IMURIチョコレート",
+                    "price": 3600,
+                    "note": "Tax included; course/table charges separate."
+                  }
+                ],
+                "note": ""
+              },
+              {
+                "label": "IMURI — current lunch courses",
+                "url": "https://kanzan.net/imuri/lunch/",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "ランチコース",
+                    "price": 3300,
+                    "note": "Tax included. Appetizer, fish, meat, cake and coffee/tea."
+                  },
+                  {
+                    "name": "有田牛炭火焼ステーキランチ",
+                    "price": 4400,
+                    "note": "Tax included. 150gsteak, three appetizers, soup, cake, coffee/tea."
+                  },
+                  {
+                    "name": "牛フィレコース",
+                    "price": 5500,
+                    "note": "Tax included. Minimum two guests; reserve two business days ahead."
+                  },
+                  {
+                    "name": "おまかせランチ",
+                    "price": 8800,
+                    "note": "Tax included. Minimum two; reserve two business days ahead."
+                  },
+                  {
+                    "name": "おまかせランチ（11,000円）",
+                    "price": 11000,
+                    "note": "Tax included. Minimum two; reserve two business days ahead."
+                  },
+                  {
+                    "name": "おまかせランチ（13,200円）",
+                    "price": 13200,
+                    "note": "Tax included. Minimum two; reserve two business days ahead."
+                  },
+                  {
+                    "name": "おまかせランチ（16,500円〜）",
+                    "price": 16500,
+                    "note": "Tax included. From; minimum two; reserve two business days ahead."
+                  },
+                  {
+                    "name": "ランチコースのスープ追加",
+                    "price": 440,
+                    "note": "Tax included. Supplement."
+                  },
+                  {
+                    "name": "ランチコースの前菜3種への変更",
+                    "price": 660,
+                    "note": "Tax included. Supplement."
+                  },
+                  {
+                    "name": "ケーキとコーヒー又は紅茶のセット",
+                    "price": 1100,
+                    "note": "Tax included. "
+                  },
+                  {
+                    "name": "ランチペアリング",
+                    "price": 1750,
+                    "note": "Tax included. From; per operator beef-fillet lunch section."
+                  }
+                ],
+                "note": "Ordinary current lunch. Parfait upgrade has conflicting¥2,000/¥2,200text, so upgrade price withheld."
+              },
+              {
+                "label": "IMURI — published ¥8,800lunch example",
+                "url": "https://kanzan.net/imuri/lunch/",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "季節の前菜6種",
+                    "priceLabel": "Price not published",
+                    "note": "Included in changing lunch example; no standalone dish price. 甘鯛 is tilefish, not ayu."
+                  },
+                  {
+                    "name": "お造り",
+                    "priceLabel": "Price not published",
+                    "note": "Included in changing lunch example; no standalone dish price. 甘鯛 is tilefish, not ayu."
+                  },
+                  {
+                    "name": "おすすめのスープ",
+                    "priceLabel": "Price not published",
+                    "note": "Included in changing lunch example; no standalone dish price. 甘鯛 is tilefish, not ayu."
+                  },
+                  {
+                    "name": "甘鯛のバター醤油",
+                    "priceLabel": "Price not published",
+                    "note": "Included in changing lunch example; no standalone dish price. 甘鯛 is tilefish, not ayu."
+                  },
+                  {
+                    "name": "牛フィレ肉のポワレ",
+                    "priceLabel": "Price not published",
+                    "note": "Included in changing lunch example; no standalone dish price. 甘鯛 is tilefish, not ayu."
+                  },
+                  {
+                    "name": "土鍋和風おこげ",
+                    "priceLabel": "Price not published",
+                    "note": "Included in changing lunch example; no standalone dish price. 甘鯛 is tilefish, not ayu."
+                  },
+                  {
+                    "name": "西洋菓子工房IMURIのケーキ",
+                    "priceLabel": "Price not published",
+                    "note": "Included in changing lunch example; no standalone dish price. 甘鯛 is tilefish, not ayu."
+                  },
+                  {
+                    "name": "コーヒー・紅茶",
+                    "priceLabel": "Price not published",
+                    "note": "Included in changing lunch example; no standalone dish price. 甘鯛 is tilefish, not ayu."
+                  }
+                ],
+                "note": "Operator Japanese text controls conflicting automated translations."
+              },
+              {
+                "label": "IMURI — lunch drinks",
+                "url": "https://kanzan.net/imuri/lunch/",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "ホット・アイスコーヒー",
+                    "price": 500,
+                    "note": "Tax included. "
+                  },
+                  {
+                    "name": "カフェラテ",
+                    "price": 600,
+                    "note": "Tax included. "
+                  },
+                  {
+                    "name": "ストレートティー",
+                    "price": 500,
+                    "note": "Tax included. "
+                  },
+                  {
+                    "name": "オリエンタルバケーション",
+                    "price": 500,
+                    "note": "Tax included. Amshu tea."
+                  },
+                  {
+                    "name": "ローズヒップピーチ",
+                    "price": 500,
+                    "note": "Tax included. Amshu tea."
+                  },
+                  {
+                    "name": "ベリーガーデン",
+                    "price": 500,
+                    "note": "Tax included. Amshu tea."
+                  },
+                  {
+                    "name": "レモンジンジャーモリンガ",
+                    "price": 500,
+                    "note": "Tax included. Amshu tea."
+                  },
+                  {
+                    "name": "ルイボスティー",
+                    "price": 500,
+                    "note": "Tax included. "
+                  },
+                  {
+                    "name": "ロイヤルミルクティー",
+                    "price": 700,
+                    "note": "Tax included. "
+                  },
+                  {
+                    "name": "アイスティー",
+                    "price": 500,
+                    "note": "Tax included. "
+                  },
+                  {
+                    "name": "アサヒ熟撰グラス",
+                    "price": 800,
+                    "note": "Tax included. "
+                  },
+                  {
+                    "name": "白・赤ワイングラス",
+                    "price": 700,
+                    "note": "Tax included. "
+                  },
+                  {
+                    "name": "白・赤ワインカラフェ",
+                    "price": 1400,
+                    "note": "Tax included. "
+                  },
+                  {
+                    "name": "グラススパークリング",
+                    "price": 880,
+                    "note": "Tax included. "
+                  },
+                  {
+                    "name": "ノンアルコールビール",
+                    "price": 550,
+                    "note": "Tax included. From."
+                  },
+                  {
+                    "name": "ノンアルコール赤ワイン",
+                    "price": 800,
+                    "note": "Tax included. "
+                  },
+                  {
+                    "name": "ジンジャーエール",
+                    "price": 550,
+                    "note": "Tax included. "
+                  },
+                  {
+                    "name": "クランベリージュース",
+                    "price": 550,
+                    "note": "Tax included. "
+                  },
+                  {
+                    "name": "アップルジュース",
+                    "price": 550,
+                    "note": "Tax included. "
+                  },
+                  {
+                    "name": "オレンジジュース",
+                    "price": 550,
+                    "note": "Tax included. "
+                  },
+                  {
+                    "name": "グレープフルーツジュース",
+                    "price": 550,
+                    "note": "Tax included. "
+                  },
+                  {
+                    "name": "ペリエ330ml",
+                    "price": 650,
+                    "note": "Tax included. "
+                  },
+                  {
+                    "name": "富士スパークリング300ml",
+                    "price": 600,
+                    "note": "Tax included. "
+                  }
+                ],
+                "note": "Current exact-branch lunch page, not old2019Tabelog bar rates."
+              },
+              {
+                "label": "BAR IMURI — current drinks and snacks",
+                "url": "https://kanzan.net/imuri/bar/",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "カクテル",
+                    "price": 1100,
+                    "note": "Tax included; bar table charge¥1,200/person, or¥500after IMURI dinner. From."
+                  },
+                  {
+                    "name": "ウイスキー",
+                    "price": 880,
+                    "note": "Tax included; bar table charge¥1,200/person, or¥500after IMURI dinner. From."
+                  },
+                  {
+                    "name": "グラスワイン",
+                    "price": 880,
+                    "note": "Tax included; bar table charge¥1,200/person, or¥500after IMURI dinner. From."
+                  },
+                  {
+                    "name": "ビール",
+                    "price": 825,
+                    "note": "Tax included; bar table charge¥1,200/person, or¥500after IMURI dinner. From."
+                  },
+                  {
+                    "name": "スナック",
+                    "price": 660,
+                    "note": "Tax included; bar table charge¥1,200/person, or¥500after IMURI dinner. From."
+                  },
+                  {
+                    "name": "スイーツ",
+                    "price": 660,
+                    "note": "Tax included; bar table charge¥1,200/person, or¥500after IMURI dinner. From."
+                  },
+                  {
+                    "name": "クラーケンスパイスドラム47%",
+                    "price": 1100,
+                    "note": "Tax included; bar table charge¥1,200/person, or¥500after IMURI dinner. "
+                  },
+                  {
+                    "name": "オールドモンク42.8%",
+                    "price": 1100,
+                    "note": "Tax included; bar table charge¥1,200/person, or¥500after IMURI dinner. "
+                  },
+                  {
+                    "name": "ラムネイション・デメララNo.14 40%",
+                    "price": 1430,
+                    "note": "Tax included; bar table charge¥1,200/person, or¥500after IMURI dinner. "
+                  },
+                  {
+                    "name": "ロンミロナリオ15リザーブ40%",
+                    "price": 1650,
+                    "note": "Tax included; bar table charge¥1,200/person, or¥500after IMURI dinner. "
+                  },
+                  {
+                    "name": "ロン・サカパXO40%",
+                    "price": 1980,
+                    "note": "Tax included; bar table charge¥1,200/person, or¥500after IMURI dinner. "
+                  },
+                  {
+                    "name": "和栗のパフェ",
+                    "price": 2800,
+                    "note": "Tax included; bar table charge¥1,200/person, or¥500after IMURI dinner. Chestnut and milk ice creams, hojicha meringue, chestnut cream, vanilla panna cotta, pomegranate sauce and streusel; components are one dessert, not separately sold dishes."
+                  }
+                ],
+                "note": "No pour size invented; seasonal stock varies."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://kanzan.net/imuri/",
+            "name": "IMURI — Sakurazaka",
+            "checkedAt": "2026-10-19",
+            "websiteUrl": "https://kanzan.net/imuri/",
+            "phone": "092-762-7070",
+            "openingHours": [
+              {
+                "days": "Lunch",
+                "hours": "11:30–14:30; last order14:00; recommended entry by13:00"
+              },
+              {
+                "days": "Sunday–Thursday dinner",
+                "hours": "17:00–22:00; last order21:00"
+              },
+              {
+                "days": "Friday–Saturday dinner",
+                "hours": "17:00–23:00; last order22:00"
+              },
+              {
+                "days": "Sunday–Thursday bar",
+                "hours": "17:00–23:00; last order22:30"
+              },
+              {
+                "days": "Friday–Saturday bar",
+                "hours": "17:00–24:00; last order23:30"
+              },
+              {
+                "days": "Lunch closed",
+                "hours": "Tuesday and private wedding dates; consult current calendar"
+              }
+            ],
+            "detailsSourceUrl": "https://kanzan.net/imuri/",
+            "additionalSources": [
+              {
+                "label": "Exact branch original opening and detailed hours",
+                "url": "https://tabelog.com/en/fukuoka/A4001/A400105/40000055/"
+              },
+              {
+                "label": "Current ordinary dinner menus",
+                "url": "https://kanzan.net/imuri/menu/"
+              },
+              {
+                "label": "Current lunch and beverages",
+                "url": "https://kanzan.net/imuri/lunch/"
+              },
+              {
+                "label": "Bar current menu",
+                "url": "https://kanzan.net/imuri/bar/"
+              },
+              {
+                "label": "Ordinary celebration plans",
+                "url": "https://kanzan.net/imuri/anniversary/"
+              },
+              {
+                "label": "Explicit2026anniversary course",
+                "url": "https://kanzan.net/imuri/topics-info/6731"
+              },
+              {
+                "label": "2027New Year announcement",
+                "url": "https://kanzan.net/imuri/20261005-6725/"
+              }
+            ],
+            "hoursNote": "Dinner normally junior-high age and older; lunch welcomes children. Dinner table charge¥800/person; bar¥1,200or¥500after dinner, all tax included. Main operator footer broadly says dinner17–23and bar17–24; detailed branch listing provides shorter Sun–Thu hours, retained here. Check calendar/private functions. Lunch course advance reservations specified per menu. New Year2027special temporarily allows children at dinner and uses its own published hours.",
+            "reservationUrl": "https://kanzan.net/imuri/"
+          },
+          "tile": {
+            "regionSlug": "fukuoka",
+            "kind": "top",
+            "slug": "japan102-imuri",
+            "name": "IMURI — Sakurazaka",
+            "neighborhood": "Sakurazaka / Tani",
+            "cuisine": "Japanese / French",
+            "description": "A hillside Japanese and French dining room overlooking Fukuoka, with seasonal Kyushu seafood, Arita beef, lunch courses and a separate cocktail bar.",
+            "address": "1-3-15 Tani, Chuo-ku, Fukuoka",
+            "websiteUrl": "https://kanzan.net/imuri/",
+            "checkedAt": "2026-10-19",
+            "recognition": "Long-established Kanzan Group dining room; original1999branch and current2026operator menus verified",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-19/batch102-imuri-1-2aca66ccc1949c2b.webp",
+            "imageCredit": "IMURI / Kanzan Group official website",
+            "imageSourceUrl": "https://kanzan.net/imuri/",
+            "imageNote": "Exact-branch gallery photograph; no dish name or current availability inferred from the photograph.",
+            "openingConfirmed": true,
+            "day": "1999-11-27"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "originalUrl": "https://kanzan.net/imuri/wp-content/uploads/sites/7/2015/06/top-head02.jpg",
+          "sourcePage": "https://kanzan.net/imuri/",
+          "credit": "IMURI / Kanzan Group official website",
+          "note": "Exact-branch gallery photograph; no dish name or current availability inferred from the photograph.",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-19/batch102-imuri-1-2aca66ccc1949c2b.webp",
+          "sha256": "2aca66ccc1949c2b82f8ff94381d9917e175957e11342a8c4f444410b2953506",
+          "width": 960,
+          "height": 372
+        },
+        {
+          "originalUrl": "https://kanzan.net/imuri/wp-content/uploads/sites/7/2015/06/top-head01.jpg",
+          "sourcePage": "https://kanzan.net/imuri/",
+          "credit": "IMURI / Kanzan Group official website",
+          "note": "Exact-branch gallery photograph; no dish name or current availability inferred from the photograph.",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-19/batch102-imuri-2-dda1736240ad259b.webp",
+          "sha256": "dda1736240ad259bd93f384cac4fb0b76c8b809c93d157a89bea81c8d37ad70f",
+          "width": 960,
+          "height": 372
+        },
+        {
+          "originalUrl": "https://kanzan.net/imuri/wp-content/uploads/sites/7/2015/06/top-head03.jpg",
+          "sourcePage": "https://kanzan.net/imuri/",
+          "credit": "IMURI / Kanzan Group official website",
+          "note": "Exact-branch gallery photograph; no dish name or current availability inferred from the photograph.",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-19/batch102-imuri-3-e63b0099581bf32d.webp",
+          "sha256": "e63b0099581bf32ddb1c4e94b6155d3cfe8569aeca29c50220592e1ba605a0ed",
+          "width": 960,
+          "height": 372
+        }
+      ],
+      "special": {
+        "regionSlug": "fukuoka",
+        "enabled": true,
+        "profile": {
+          "pinSourceUrl": "https://kanzan.net/imuri/",
+          "name": "IMURI — Sakurazaka",
+          "checkedAt": "2026-10-19",
+          "address": "1-3-15 Tani, Chuo-ku, Fukuoka",
+          "neighborhood": "Sakurazaka / Tani",
+          "websiteUrl": "https://kanzan.net/imuri/",
+          "menus": [
+            {
+              "label": "IMURI — 27th anniversary dinner2026",
+              "url": "https://kanzan.net/imuri/topics-info/6731",
+              "currency": "JPY",
+              "coverage": "sample",
+              "items": [
+                {
+                  "name": "27周年感謝の周年コース",
+                  "price": 13200,
+                  "note": "Per person tax included; table charge¥800extra."
+                },
+                {
+                  "name": "周年コースのペアリング",
+                  "price": 4400,
+                  "note": "Optional; tax included;70mlper pour."
+                },
+                {
+                  "name": "季節の前菜7種盛り合わせ",
+                  "priceLabel": "Price not published",
+                  "note": "Included anniversary-course dish or rice choice; no standalone price."
+                },
+                {
+                  "name": "旬のお造り5種盛り合わせ",
+                  "priceLabel": "Price not published",
+                  "note": "Included anniversary-course dish or rice choice; no standalone price."
+                },
+                {
+                  "name": "木の子のクリームスープ",
+                  "priceLabel": "Price not published",
+                  "note": "Included anniversary-course dish or rice choice; no standalone price."
+                },
+                {
+                  "name": "長崎産ぶつ切り活とらふぐの炙り焼き",
+                  "priceLabel": "Price not published",
+                  "note": "Included anniversary-course dish or rice choice; no standalone price."
+                },
+                {
+                  "name": "長崎産とらふぐちり鍋",
+                  "priceLabel": "Price not published",
+                  "note": "Included anniversary-course dish or rice choice; no standalone price."
+                },
+                {
+                  "name": "北海道産エゾ鹿のロースト、ソースペリグー",
+                  "priceLabel": "Price not published",
+                  "note": "Included anniversary-course dish or rice choice; no standalone price."
+                },
+                {
+                  "name": "鍋後の雑炊又は土鍋和風おこげ",
+                  "priceLabel": "Price not published",
+                  "note": "Included anniversary-course dish or rice choice; no standalone price."
+                },
+                {
+                  "name": "西洋菓子工房IMURI特製デザート",
+                  "priceLabel": "Price not published",
+                  "note": "Included anniversary-course dish or rice choice; no standalone price."
+                }
+              ],
+              "note": "Explicit2026November15–30course. Ordinary dinner dishes not borrowed."
+            },
+            {
+              "label": "IMURI — New Year2027special service",
+              "url": "https://kanzan.net/imuri/20261005-6725/",
+              "currency": "JPY",
+              "coverage": "published",
+              "items": [
+                {
+                  "name": "お正月おまかせコース（6,000円）",
+                  "price": 6000,
+                  "note": "Before tax; confirm final charges."
+                },
+                {
+                  "name": "お正月おまかせコース（8,000円）",
+                  "price": 8000,
+                  "note": "Before tax; confirm final charges."
+                },
+                {
+                  "name": "お正月おまかせコース（10,000円）",
+                  "price": 10000,
+                  "note": "Before tax; confirm final charges."
+                },
+                {
+                  "name": "お正月おまかせコース（15,000円〜30,000円）",
+                  "price": 15000,
+                  "note": "Before tax; selected budget through¥30,000; confirm final charges."
+                },
+                {
+                  "name": "お子様ランチプレート",
+                  "priceLabel": "Price not published",
+                  "note": "Published New Year option; reserve and enquire for price and dishes."
+                },
+                {
+                  "name": "お正月のお子様メニュー",
+                  "priceLabel": "Price not published",
+                  "note": "Published New Year option; price and dishes not announced."
+                }
+              ],
+              "note": "Operator announcement datedOctober5,2026explicitly states January2–4,2027and both service windows."
+            }
+          ],
+          "specials": [
+            {
+              "kind": "other",
+              "title": "IMURI27th-anniversary dinner — November15–30",
+              "description": "A separately dated eight-course dinner, ¥13,200tax included, plus¥800table charge; optional pairing¥4,400. Explicit2026operator anniversary body controls stale page heading.",
+              "sourceUrl": "https://kanzan.net/imuri/topics-info/6731",
+              "menuLabel": "IMURI — 27th anniversary dinner2026",
+              "limitedTime": true,
+              "discounted": false,
+              "validFrom": "2026-11-15",
+              "validThrough": "2026-11-30",
+              "schedule": "November15–30,2026; dinner arrival17:00–21:00JST, within the branch’s common last-order window. Confirm calendar closures/private events.",
+              "conditions": [
+                "Reserve by previous day.",
+                "Tax included; dinner table charge¥800/person extra. Optional pairing¥4,400/person,70mlper pour.",
+                "Same-day cancellation100%; seasonal ingredients may change.",
+                "Conservative arrival window uses the earliest published dinner last order; Friday/Saturday later arrivals require confirmation.",
+                "Operator describes27thanniversary and Reiwa8(2026), despite stale26th-anniversary heading."
+              ],
+              "availability": {
+                "windows": [
+                  {
+                    "days": [
+                      0,
+                      1,
+                      2,
+                      3,
+                      4,
+                      5,
+                      6
+                    ],
+                    "start": "17:00",
+                    "end": "21:01"
+                  }
+                ]
+              }
+            },
+            {
+              "kind": "other",
+              "title": "IMURI New Year2027 — January2–4family dining",
+              "description": "Three days of special New Year service, including children at dinner. Omakase courses from¥6,000before tax; children’s plates and limited à la carte menu by enquiry.",
+              "sourceUrl": "https://kanzan.net/imuri/20261005-6725/",
+              "menuLabel": "IMURI — New Year2027special service",
+              "limitedTime": true,
+              "discounted": false,
+              "validFrom": "2027-01-02",
+              "validThrough": "2027-01-04",
+              "schedule": "January2–4,2027; lunch11:30–14:30and dinner17:00–21:00JST.",
+              "conditions": [
+                "Reserve with the restaurant; children are expressly welcome at dinner during these three days.",
+                "All announced course figures are before tax. Confirm dinner table charge and final total when booking.",
+                "Children’s plates and menus available on enquiry; prices and specific dishes not published.",
+                "À la carte selection is reduced during the holiday; no ordinary dish availability promised."
+              ],
+              "availability": {
+                "windows": [
+                  {
+                    "days": [
+                      0,
+                      1,
+                      6
+                    ],
+                    "start": "11:30",
+                    "end": "14:30"
+                  },
+                  {
+                    "days": [
+                      0,
+                      1,
+                      6
+                    ],
+                    "start": "17:00",
+                    "end": "21:00"
+                  }
+                ]
+              }
+            }
+          ],
+          "photo": {
+            "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-19/batch102-imuri-1-2aca66ccc1949c2b.webp",
+            "alt": "Exact-branch gallery photograph; no dish name or current availability inferred from the photograph.",
+            "credit": "IMURI / Kanzan Group official website",
+            "sourceUrl": "https://kanzan.net/imuri/",
+            "originalUrl": "https://kanzan.net/imuri/wp-content/uploads/sites/7/2015/06/top-head02.jpg",
+            "checkedAt": "2026-10-19"
+          }
+        }
+      }
+    }
+  ],
+  "publicationStatus": {
+    "local": "pending",
+    "production": "pending"
+  },
+  "deployment": "No deployment, build, restart or production configuration change.",
+  "researchGaps": [
+    "Continue Coming soon and Just opened in all cities below30, and Osaka Specials29. Expected all six Top sections30after this batch; refresh all24counts after publication.",
+    "RiVi current19,000dinner supersedes expired18,000plan. Christmas2021expired. Operator HTTP accessible, HTTPS certificate failed. Actual current named seasonal dishes/wine bottle tariffs remain unpublished;2024managed dish examples explicitly historical.",
+    "La Table de Provence current relocation September18,2024not original1998founding or conflicting decorative1988graphic. Plate-count and current vs managed price differences disclosed. No dated promotion verified after official, current managed courses/drinks, branch galleries and announcements checks.",
+    "Le Chevalier current Sumiyoshi April10,2026not old Daimyo. Champagne-bottle¥1,100apparent operator typo excluded. Service treatment not explicit; no invented10%service fee. Current full courses/drinks and TableCheck searched; no confirmed current Christmas dates found.",
+    "L’eau Blanche current operator five course rates supersede old directories. Alumni chef feature supplies a named signature;2026gibier fair feature supplies explicitly historical cooking example, not active offer. Exact current fixed dishes, named beverage list/prices and children’s menu remain unpublished after operator, managed branch menus, booking and local features.14current seats vs12historical retained.",
+    "Restaurant MORI exact opening day/building chronology unresolved: operator-authored same-address recruiting profile states1970founding, stored December31year anchor explicitly estimated. Operator main domain403; current LINE and managed bookable courses accessible.2019static food/drink tariffs excluded. Children’s lunch price, exact dinner age threshold and current named beverage tariffs need direct confirmation.",
+    "IMURI explicit202627th-anniversary body supersedes stale26thheading. November closures/private functions require confirmation; conservative common last-order window retained, not a table-availability promise. Sep–OctKyushu course has no explicityear in extracted section, held pending dated source. Ordinary birthday pair plans not the annual anniversary special. New Year2027announcement has explicit dates/hours, before-tax course budgets and child dinner exception; child dishes/prices unpublished. Ordinaryparfaitupgrade¥2,000vs¥2,200conflict withheld. Operator Japanese甘鯛controls erroneousAyu translation.",
+    "All selected photos visually reviewed in exact-branch galleries. Generic Le Chevalier heading banners and identifiable MORI proposal photograph rejected. Historical operator gallery capture dates unknown; no current availability or dish names inferred from pictures."
+  ],
+  "held": [
+    {
+      "name": "IMURI September–October Kyushu special",
+      "sourceUrl": "https://kanzan.net/imuri/menu/",
+      "reason": "Current menu names September1–October31but extracted section lacks explicityear; seek dated2026announcement before scheduling."
+    }
+  ],
+  "photoReview": {
+    "downloadedCandidates": 35,
+    "selectedPhotos": 23,
+    "method": "Plain curl downloads from official exact-branch galleries and managed MORI gallery; photographs visually reviewed. Generic banners and identifiable proposal photo rejected. Representative room/venue/food selected with credits. Public Azure hashes and dimensions verified; no menu identities inferred."
+  }
+}

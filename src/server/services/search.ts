@@ -228,7 +228,8 @@ function asksForNothing(query: SearchQuery, options: SearchOptions) {
 // "company:Apple" as words to match. The text is kept on the filter too:
 // the database widens the service's hits with the pins whose address or
 // translated title names it (searchClauses).
-async function searchFilter(query: SearchQuery, options: SearchOptions): Promise<SearchFilter> {
+async function searchFilter(rawQuery: SearchQuery, options: SearchOptions): Promise<SearchFilter> {
+  const query = withoutRedundantText(rawQuery);
   const excludeTags = options.excludePredicted ? uniqueTags([...query.excludeTags, PREDICTED_TAG]) : query.excludeTags;
   const alternatives = query.alternatives?.map((group) => (options.excludePredicted ? { ...group, excludeTags: uniqueTags([...group.excludeTags, PREDICTED_TAG]) } : group));
   return {
@@ -240,6 +241,19 @@ async function searchFilter(query: SearchQuery, options: SearchOptions): Promise
     favoriteUserId: options.onlyWatched ? options.userId || 0 : null,
     timeZone: timeZoneOrUtc(options.timeZone),
   };
+}
+
+// "nvidia company:NVIDIA": every word typed is already in a company:, user: or
+// tag: value, so the filter says all the text does and the semantic search (the
+// slow part) would only rank pins the filter already picked. Left alone when the
+// query has OR groups, whose terms differ per group.
+export function withoutRedundantText(query: SearchQuery): SearchQuery {
+  if (!query.text || query.alternatives) return query;
+  const words = (value: string) => value.toLowerCase().match(/[\p{L}\p{N}]+/gu) ?? [];
+  const typed = words(query.text);
+  if (!typed.length) return query;
+  const labelled = new Set([...query.companies, ...query.userNames, ...query.tags].flatMap(words));
+  return typed.every((word) => labelled.has(word)) ? { ...query, text: '' } : query;
 }
 
 // A search that names exactly one user also answers with that user's id and
