@@ -1,32 +1,32 @@
 # Japan restaurant target audit — October 16, 2026
 
-Target: **30 distinct eligible restaurants in every tab of every city**. **605 verified memberships; 140 still missing**. This target remains incomplete; surplus in another tab does not offset a shortage.
+Target: **30 distinct eligible restaurants in every tab of every city**. **620 verified memberships; 127 still missing**. This target remains incomplete; surplus in another tab does not offset a shortage.
 
-**Batch 102 published and publicly verified (October 19, 2026):** Added **six restaurants, 197 ordinary menu entries, two dated IMURI offers with 16 menu entries, and 23 credited Azure photos**. RiVi brings Osaka Top restaurants to **30/30**. La Table de Provence, Le Chevalier, L’eau Blanche, Restaurant MORI and IMURI bring Fukuoka Top restaurants to **30/30**; every Japan city now meets the Top target. IMURI’s explicitly dated November 2026 anniversary dinner and January 2027 family service bring Fukuoka Specials to **35/30**, counting the venue once. Five exact branch dates confirmed; MORI retains an explicit year-only 1970 estimate, with finer chronology queued. All six profiles, seven native title/image memberships, menu rendering and credited galleries verified locally and through public production HTTPS. Offer schedules passed 20 boundary checks plus next-start and expiry assertions. All 24 counts match: **605 memberships / 140 missing**. No deployment. [Batch evidence](restaurant-japan-30-japan102-2026-10-19.json).
+**Batch 104 published and publicly verified (October 20, 2026):** Added **five new restaurant pins, 253 ordinary menu entries, five offers and 26 credited Azure photos** across Fukuoka, Osaka and Tokyo. Added LOCOCRA, Kitashinchi Yakiniku Tomoyuri, the relocated Au Bord d’Eau at Solaria, HAREZA Ikebukuro Onodera and Jonetsu Horumon W Tani4. Refreshed existing Xiyangyang Ropponmatsu while preserving its original pin, author, ten-item menu, native slug and gallery; its expired opening discount is explicitly historical. All six profiles, 263 ordinary menu entries (253 new, ten preserved), eight offer-menu entries and eight native title/image memberships verified locally and over public production HTTPS. Five schedules passed 42 boundary assertions plus next-start and expiry checks. Added seven memberships and reduced shortages by five: **620 memberships / 127 missing**. No deployment. [Batch evidence](restaurant-japan-30-japan104-2026-10-20.json).
 
-All 24 local and public production guide counts agree. Batches 88–102 now have complete public HTTPS verification; earlier timeout checkpoints below are historical.
+All 24 local and public production guide counts agree. Batches 88–104 now have complete public HTTPS verification; earlier timeout checkpoints below are historical.
 
 | City (west to east) | Coming soon | Just opened | Top restaurants | Specials |
 | --- | ---: | ---: | ---: | ---: |
-| Fukuoka | 9/30 | 20/30 | 30/30 | 35/30 |
-| Osaka | 12/30 | 22/30 | 30/30 | 29/30 |
+| Fukuoka | 10/30 | 21/30 | 30/30 | 35/30 |
+| Osaka | 14/30 | 24/30 | 30/30 | 31/30 |
 | Kyoto | 11/30 | 33/30 | 30/30 | 34/30 |
 | Nagoya | 11/30 | 31/30 | 30/30 | 31/30 |
-| Tokyo | 14/30 | 23/30 | 30/30 | 37/30 |
-| Sapporo | 11/30 | 28/30 | 30/30 | 34/30 |
+| Tokyo | 15/30 | 26/30 | 30/30 | 38/30 |
+| Sapporo | 11/30 | 30/30 | 30/30 | 34/30 |
 
 ## Each remaining shortage
 
 | City | Tab | Local | Production | Target | Shortfall |
 | --- | --- | ---: | ---: | ---: | ---: |
-| Fukuoka | Coming soon | 9 | 9 | 30 | 21 |
-| Fukuoka | Just opened | 20 | 20 | 30 | 10 |
+| Fukuoka | Coming soon | 10 | 10 | 30 | 20 |
+| Fukuoka | Just opened | 21 | 21 | 30 | 9 |
 | Fukuoka | Top restaurants | 30 | 30 | 30 | 0 |
 | Fukuoka | Specials | 35 | 35 | 30 | 0 |
-| Osaka | Coming soon | 12 | 12 | 30 | 18 |
-| Osaka | Just opened | 22 | 22 | 30 | 8 |
+| Osaka | Coming soon | 14 | 14 | 30 | 16 |
+| Osaka | Just opened | 24 | 24 | 30 | 6 |
 | Osaka | Top restaurants | 30 | 30 | 30 | 0 |
-| Osaka | Specials | 29 | 29 | 30 | 1 |
+| Osaka | Specials | 31 | 31 | 30 | 0 |
 | Kyoto | Coming soon | 11 | 11 | 30 | 19 |
 | Kyoto | Just opened | 33 | 33 | 30 | 0 |
 | Kyoto | Top restaurants | 30 | 30 | 30 | 0 |
@@ -35,12 +35,12 @@ All 24 local and public production guide counts agree. Batches 88–102 now have
 | Nagoya | Just opened | 31 | 31 | 30 | 0 |
 | Nagoya | Top restaurants | 30 | 30 | 30 | 0 |
 | Nagoya | Specials | 31 | 31 | 30 | 0 |
-| Tokyo | Coming soon | 14 | 14 | 30 | 16 |
-| Tokyo | Just opened | 23 | 23 | 30 | 7 |
+| Tokyo | Coming soon | 15 | 15 | 30 | 15 |
+| Tokyo | Just opened | 26 | 26 | 30 | 4 |
 | Tokyo | Top restaurants | 30 | 30 | 30 | 0 |
-| Tokyo | Specials | 37 | 37 | 30 | 0 |
+| Tokyo | Specials | 38 | 38 | 30 | 0 |
 | Sapporo | Coming soon | 11 | 11 | 30 | 19 |
-| Sapporo | Just opened | 28 | 28 | 30 | 2 |
+| Sapporo | Just opened | 30 | 30 | 30 | 0 |
 | Sapporo | Top restaurants | 30 | 30 | 30 | 0 |
 | Sapporo | Specials | 34 | 34 | 30 | 0 |
 

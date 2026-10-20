@@ -10,7 +10,7 @@ import { sessionOf, TOKEN_COOKIE } from '@/server/auth';
 import { homeCacheKey, homeCopy, validTimeZone, type HomeCopy } from '@/server/homeCache';
 import serverConfig from '@/server/config';
 import { cookieGate, gateId, gateIdOf, GATE_COOKIE, GATE_MAX_AGE, GATE_PARAM } from '@/server/cookieGate';
-import { botRetryAfter, ipRetryAfter, pinRetryAfter, PREFETCH_COST, SHED_RETRY_AFTER } from '@/server/botLimit';
+import { botRetryAfter, ipRetryAfter, isMacSafari, pinRetryAfter, PREFETCH_COST, SHED_RETRY_AFTER } from '@/server/botLimit';
 import HeavyUserPlan from '@/server/model/heavyUserPlan';
 import BotVisit from '@/server/model/botVisit';
 import LandingVisit from '@/server/model/landingVisit';
@@ -192,7 +192,7 @@ export async function proxy(request: NextRequest) {
     const key = session ? `u:${session.id}` : `ip:${request.headers.get('x-forwarded-for')?.split(',').pop()?.trim() ?? ''}`;
     const light = session ? await HeavyUserPlan.isActive(session.id).catch(() => false) : false;
     const prefetching = request.headers.has('next-router-prefetch') || request.headers.get('purpose') === 'prefetch';
-    const wait = ipRetryAfter(key, light, Date.now(), prefetching ? PREFETCH_COST : 1);
+    const wait = ipRetryAfter(key, light, Date.now(), prefetching ? PREFETCH_COST : 1, isMacSafari(request.headers.get('user-agent')));
     if (wait != null) return tooManyRequests(request, wait, light);
   }
   if (retryAfter != null) {

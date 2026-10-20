@@ -1,12 +1,12 @@
 city,tab,target,verified_restaurants,production_restaurants,shortfall
-fukuoka,Coming soon,30,9,9,21
-fukuoka,Just opened,30,20,20,10
+fukuoka,Coming soon,30,10,10,20
+fukuoka,Just opened,30,21,21,9
 fukuoka,Top restaurants,30,30,30,0
 fukuoka,Specials,30,35,35,0
-osaka,Coming soon,30,12,12,18
-osaka,Just opened,30,22,22,8
+osaka,Coming soon,30,14,14,16
+osaka,Just opened,30,24,24,6
 osaka,Top restaurants,30,30,30,0
-osaka,Specials,30,29,29,1
+osaka,Specials,30,31,31,0
 kyoto,Coming soon,30,11,11,19
 kyoto,Just opened,30,33,33,0
 kyoto,Top restaurants,30,30,30,0
@@ -15,11 +15,11 @@ nagoya,Coming soon,30,11,11,19
 nagoya,Just opened,30,31,31,0
 nagoya,Top restaurants,30,30,30,0
 nagoya,Specials,30,31,31,0
-tokyo,Coming soon,30,14,14,16
-tokyo,Just opened,30,23,23,7
+tokyo,Coming soon,30,15,15,15
+tokyo,Just opened,30,26,26,4
 tokyo,Top restaurants,30,30,30,0
-tokyo,Specials,30,37,37,0
+tokyo,Specials,30,38,38,0
 sapporo,Coming soon,30,11,11,19
-sapporo,Just opened,30,28,28,2
+sapporo,Just opened,30,30,30,0
 sapporo,Top restaurants,30,30,30,0
 sapporo,Specials,30,34,34,0

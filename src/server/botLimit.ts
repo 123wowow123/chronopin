@@ -133,17 +133,29 @@ export const IP_BURST = 50;
 export const IP_PER_SECOND = 2;
 export const LIGHT_BURST = 1_200;
 export const LIGHT_PER_SECOND = 20;
+// macOS Safari is relaxed three times over: its readers were being rate limited
+// in numbers (2026-10-20 log, 1,158 page 429s on that user agent). The user
+// agent is only a hint a scraper can copy, so this is a wider free budget, not
+// an exemption.
+export const SAFARI_BURST = 150;
+export const SAFARI_PER_SECOND = 6;
 const IP_MAX_ENTRIES = 20_000;
+
+// Desktop Safari: Macintosh with a Version/ token and no Chrome/Chromium token.
+export function isMacSafari(userAgent: string | null | undefined): boolean {
+  const ua = userAgent ?? '';
+  return /Macintosh;.*Version\/[\d.]+.*Safari\//.test(ua) && !/Chrome|Chromium|CriOS|FxiOS|Edg\//.test(ua);
+}
 
 // A link prefetch (cost PREFETCH_COST) is a page's worth of links loading in
 // the background, not a person asking for pages, so it spends a quarter token.
 // `key` is "ip:<address>" or "u:<user id>". Null when the request may go on,
 // else the seconds to wait.
 export const PREFETCH_COST = 0.25;
-export function ipRetryAfter(key: string, light = false, now = Date.now(), cost = 1): number | null {
+export function ipRetryAfter(key: string, light = false, now = Date.now(), cost = 1, safari = false): number | null {
   if (!key || key === 'ip:') return null;
-  const burst = light ? LIGHT_BURST : IP_BURST;
-  const perSecond = light ? LIGHT_PER_SECOND : IP_PER_SECOND;
+  const burst = light ? LIGHT_BURST : safari ? SAFARI_BURST : IP_BURST;
+  const perSecond = light ? LIGHT_PER_SECOND : safari ? SAFARI_PER_SECOND : IP_PER_SECOND;
   const g = globalThis as unknown as { __chronopinIpLimits?: Map<string, Bucket> };
   const buckets = (g.__chronopinIpLimits ??= new Map());
   const bucket = buckets.get(key) ?? { tokens: burst, at: now };
