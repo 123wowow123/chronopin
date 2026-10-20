@@ -808,21 +808,28 @@ function TagCloudView({
   // Places as tags (one word a name, a city's pins summed over any country it shares its name with), for the map.
   const placeTags = useMemo<TagCount[]>(() => {
     const byName = new Map<string, TagCount>();
+    // A city's pins may lack coordinates under one spelling of its country and have them under another: the located row gives the place.
+    const countries = new Map((placeData?.country ?? []).map((c) => [c.name, c]));
     for (const place of placeCounts ?? []) {
       const key = place.name.toLowerCase();
+      const at = place.lat != null && place.lon != null ? place : null;
       const held = byName.get(key);
-      if (held) held.count += place.count;
-      else
-        byName.set(key, {
-          name: place.name,
-          kind: 'topic',
-          count: place.count,
-          ...(place.lat != null && place.lon != null ? { lat: place.lat, lon: place.lon } : {}),
-        });
+      if (held) {
+        held.count += place.count;
+        if (at && held.lat == null) [held.lat, held.lon] = [at.lat!, at.lon!];
+      } else byName.set(key, { name: place.name, kind: 'topic', count: place.count, ...(at ? { lat: at.lat!, lon: at.lon! } : {}) });
+    }
+    // With none located, a city sits where its country does; a place that can be put nowhere is left off the map.
+    for (const [key, tag] of byName) {
+      if (tag.lat != null) continue;
+      const home = (placeCounts ?? []).find((p) => p.name.toLowerCase() === key && p.country && countries.get(p.country)?.lat != null);
+      const country = home && countries.get(home.country!);
+      if (country) [tag.lat, tag.lon] = [country.lat!, country.lon!];
+      else byName.delete(key);
     }
     const all = [...byName.values()];
     return needle ? all.filter((p) => p.name.toLowerCase().includes(needle)) : all;
-  }, [placeCounts, needle]);
+  }, [placeCounts, placeData, needle]);
   const onHot = useCallback((tag: TagCount | null) => setHot(tag ? (tags.find((t) => t.name === tag.name) ?? placeTags.find((t) => t.name === tag.name) ?? tag) : null), [tags, placeTags]);
 
   // Portalled to the body, out of the floating controls' stacking context.
