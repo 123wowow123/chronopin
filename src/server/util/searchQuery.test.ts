@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { dependsOnZone, hasFilters, joinSearchQuery, parseSearchQuery, splitSearchQuery, wordStartPattern } from './searchQuery';
+import { costBounds, dependsOnZone, hasFilters, joinSearchQuery, megawattBounds, parseSearchQuery, splitSearchQuery, wordStartPattern } from './searchQuery';
 
 describe('splitSearchQuery', () => {
   it('keeps terms and text in order, with what each was written as', () => {
@@ -131,6 +131,8 @@ describe('parseSearchQuery', () => {
       personAxes: [],
       ratings: [],
       delays: [],
+      mws: [],
+      costs: [],
       holidays: [],
       text: 'ios',
     });
@@ -354,5 +356,40 @@ describe('relative days in posted: and updated:', () => {
     expect(q.postedDays).toEqual(['today']);
     expect(q.updatedBounds).toEqual([{ op: '>=', day: 'yesterday' }]);
     expect(parseSearchQuery('posted:>today').postedBounds).toEqual([]);
+  });
+});
+
+describe('mw: and cost: bounds', () => {
+  it('reads megawatts with GW and a bare number as a floor', () => {
+    expect(megawattBounds('>=500')).toEqual([{ op: '>=', value: 500 }]);
+    expect(megawattBounds('1gw')).toEqual([{ op: '>=', value: 1000 }]);
+    expect(megawattBounds('<2.5GW')).toEqual([{ op: '<', value: 2500 }]);
+    expect(megawattBounds('100mw-1gw')).toEqual([
+      { op: '>=', value: 100 },
+      { op: '<=', value: 1000 },
+    ]);
+    expect(megawattBounds('lots')).toEqual([]);
+    expect(megawattBounds('5parsecs')).toEqual([]);
+  });
+
+  it('reads dollars with K, M, B and T and an optional $', () => {
+    expect(costBounds('>=1b')).toEqual([{ op: '>=', value: 1e9 }]);
+    expect(costBounds('>$500M')).toEqual([{ op: '>', value: 5e8 }]);
+    expect(costBounds('1-10b')).toEqual([
+      { op: '>=', value: 1e9 },
+      { op: '<=', value: 1e10 },
+    ]);
+    expect(costBounds('cheap')).toEqual([]);
+  });
+
+  it('puts them in the parsed query, not in the free text', () => {
+    const q = parseSearchQuery('solar mw:>=500 cost:>=1b mw:<2gw');
+    expect(q.mws).toEqual([
+      { op: '>=', value: 500 },
+      { op: '<', value: 2000 },
+    ]);
+    expect(q.costs).toEqual([{ op: '>=', value: 1e9 }]);
+    expect(q.text).toBe('solar');
+    expect(hasFilters(parseSearchQuery('mw:>=100'))).toBe(true);
   });
 });

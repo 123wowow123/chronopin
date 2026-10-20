@@ -2618,7 +2618,7 @@
     }
   ],
   "publicationStatus": {
-    "local": "pending",
+    "local": "saved and publicly verified",
     "production": "pending"
   },
   "deployment": "No deployment, build, restart or production configuration change.",
@@ -2640,5 +2640,113 @@
     "downloadedCandidates": 16,
     "selectedPhotos": 16,
     "method": "Sixteen exact-branch gallery photographs downloaded by plain curl, decoded and visually reviewed; captions distinguish Honten,Shirakabe,Meieki and Tenpaku. Four branch-linked PDFs rendered with Poppler. Pages1–7of three sister-branch documents verified pixel-identical by SHA256; all food/takeaway and each distinct drinks page visually read. Original branch has a different two-page menu. Sixteen immutable Azure blobs publicly fetched and SHA256/decode verified before use."
+  },
+  "verification": {
+    "local": {
+      "profiles": [
+        {
+          "pinId": 18233,
+          "sourceUrl": "https://sumiyaki-unafuji.com/shops/honten/",
+          "name": "Sumiyaki Unafuji — Honten",
+          "contentId": 1909,
+          "contentRevision": 1,
+          "verifiedGalleryLinks": 4,
+          "publicPinStatus": 200,
+          "apiBase": "http://localhost:3000",
+          "publicBase": "http://localhost:3000"
+        },
+        {
+          "pinId": 18234,
+          "sourceUrl": "https://sumiyaki-unafuji.com/shops/shirakabe/",
+          "name": "Sumiyaki Unafuji — Shirakabe Bettei",
+          "contentId": 1910,
+          "contentRevision": 1,
+          "verifiedGalleryLinks": 4,
+          "publicPinStatus": 200,
+          "apiBase": "http://localhost:3000",
+          "publicBase": "http://localhost:3000"
+        },
+        {
+          "pinId": 18235,
+          "sourceUrl": "https://sumiyaki-unafuji.com/shops/nagoya-ekimae/",
+          "name": "Sumiyaki Unafuji — Meieki",
+          "contentId": 1911,
+          "contentRevision": 1,
+          "verifiedGalleryLinks": 4,
+          "publicPinStatus": 200,
+          "apiBase": "http://localhost:3000",
+          "publicBase": "http://localhost:3000"
+        },
+        {
+          "pinId": 18236,
+          "sourceUrl": "https://sumiyaki-unafuji.com/shops/tenpaku/",
+          "name": "Sumiyaki Unafuji — Tenpaku Bettei",
+          "contentId": 1912,
+          "contentRevision": 1,
+          "verifiedGalleryLinks": 4,
+          "publicPinStatus": 200,
+          "apiBase": "http://localhost:3000",
+          "publicBase": "http://localhost:3000"
+        }
+      ],
+      "guides": [
+        {
+          "pinId": 18233,
+          "region": "nagoya",
+          "view": "top",
+          "neighborhood": "Shirokane / Tsurumai",
+          "nativeTitleAndImage": true,
+          "hrefs": [
+            "/pin/18233/sumiyaki-unafuji-honten-opens-1995-07-21"
+          ],
+          "browserFiltered": false,
+          "publicBase": "http://localhost:3000",
+          "guideStatus": 200,
+          "offers": []
+        },
+        {
+          "pinId": 18234,
+          "region": "nagoya",
+          "view": "top",
+          "neighborhood": "Shirakabe / Yoshino",
+          "nativeTitleAndImage": true,
+          "hrefs": [
+            "/pin/18234/sumiyaki-unafuji-shirakabe-bettei-opens-2021-07-24"
+          ],
+          "browserFiltered": false,
+          "publicBase": "http://localhost:3000",
+          "guideStatus": 200,
+          "offers": []
+        },
+        {
+          "pinId": 18235,
+          "region": "nagoya",
+          "view": "top",
+          "neighborhood": "Meieki / Nagoya Mitsui Building North",
+          "nativeTitleAndImage": true,
+          "hrefs": [
+            "/pin/18235/sumiyaki-unafuji-meieki-opens-2022-06-19"
+          ],
+          "browserFiltered": false,
+          "publicBase": "http://localhost:3000",
+          "guideStatus": 200,
+          "offers": []
+        },
+        {
+          "pinId": 18236,
+          "region": "nagoya",
+          "view": "top",
+          "neighborhood": "Tenpaku / Sugata",
+          "nativeTitleAndImage": true,
+          "hrefs": [
+            "/pin/18236/sumiyaki-unafuji-tenpaku-bettei-opens-2021-03-31"
+          ],
+          "browserFiltered": false,
+          "publicBase": "http://localhost:3000",
+          "guideStatus": 200,
+          "offers": []
+        }
+      ]
+    }
   }
 }

@@ -918,7 +918,7 @@
     }
   ],
   "publicationStatus": {
-    "local": "pending",
+    "local": "saved and publicly verified",
     "production": "pending"
   },
   "deployment": "No deployment, build, restart or production configuration change.",
@@ -941,5 +941,306 @@
     "downloadedCandidates": 11,
     "selectedPhotos": 10,
     "method": "Eleven operator-gallery candidates downloaded by plain curl and decoded; logo-only slide rejected. Six LaBécasseHiranomachi photos and four PRESQU’ÎLEYodoyabashi photos visually reviewed. Food photos left unlabelled; October2026LaBécasse table rearrangement disclosed. All selected Azure blobs publicly fetched and SHA256/decode verified."
+  },
+  "dateCorrectionStatus": {
+    "local": {
+      "environment": "local",
+      "pinId": 15971,
+      "authorId": 372,
+      "sourceUrl": "https://www.la-cime.com/",
+      "before": {
+        "day": "2010-03-01",
+        "confidence": "estimated"
+      },
+      "after": {
+        "day": "2010-03-19",
+        "confidence": "confirmed"
+      },
+      "reason": "Tsuji Culinary Institute’s alumni restaurant listing, published April 7, 2010, explicitly gives the opening day as March 19, 2010 at 3-2-15 Kawaramachi, Osaka. This contemporaneous exact-branch source resolves the former March 1 month-only anchor. The February 2016 refurbishment is separate.",
+      "referenceUrl": "https://compitum.net/sns/shop/detail?id=1230",
+      "referencePublishedDate": "2010-04-07",
+      "contentId": 1638,
+      "contentRevision": 2,
+      "unchangedPinFields": [
+        "id",
+        "parentId",
+        "title",
+        "description",
+        "sourceUrl",
+        "address",
+        "location",
+        "priceLowerBound",
+        "priceUpperBound",
+        "price",
+        "priceCurrency",
+        "tip",
+        "utcEndDateTime",
+        "allDay",
+        "userId",
+        "utcCreatedDateTime",
+        "utcDeletedDateTime",
+        "companyId",
+        "sourceStartDateTime",
+        "sourceEndDateTime",
+        "originalStartDate",
+        "delayReasoning",
+        "episodeCount",
+        "episodeStatus",
+        "marketVolume",
+        "marketVolumeAt",
+        "allDayStated",
+        "productName"
+      ],
+      "publicApiVerified": true,
+      "verifiedAt": "2026-10-19T21:30:00.740Z"
+    },
+    "production": "pending"
+  },
+  "scheduleVerification": {
+    "boundaries": [
+      {
+        "at": "2026-09-30T03:00:00.000Z",
+        "active": false
+      },
+      {
+        "at": "2026-10-01T02:59:00.000Z",
+        "active": false
+      },
+      {
+        "at": "2026-10-01T03:00:00.000Z",
+        "active": true
+      },
+      {
+        "at": "2026-10-01T03:59:00.000Z",
+        "active": true
+      },
+      {
+        "at": "2026-10-01T04:00:00.000Z",
+        "active": false
+      },
+      {
+        "at": "2026-10-01T04:01:00.000Z",
+        "active": false
+      },
+      {
+        "at": "2026-10-01T08:59:00.000Z",
+        "active": false
+      },
+      {
+        "at": "2026-10-01T09:00:00.000Z",
+        "active": true
+      },
+      {
+        "at": "2026-10-01T10:59:00.000Z",
+        "active": true
+      },
+      {
+        "at": "2026-10-01T11:00:00.000Z",
+        "active": false
+      },
+      {
+        "at": "2026-10-01T11:01:00.000Z",
+        "active": false
+      },
+      {
+        "at": "2026-10-18T03:00:00.000Z",
+        "active": false
+      },
+      {
+        "at": "2026-10-19T03:00:00.000Z",
+        "active": true
+      },
+      {
+        "at": "2026-10-21T09:00:00.000Z",
+        "active": false
+      },
+      {
+        "at": "2026-10-31T10:59:00.000Z",
+        "active": true
+      },
+      {
+        "at": "2026-10-31T11:00:00.000Z",
+        "active": false
+      },
+      {
+        "at": "2026-11-01T03:00:00.000Z",
+        "active": false
+      },
+      {
+        "at": "2027-10-01T03:00:00.000Z",
+        "active": false
+      }
+    ],
+    "nextStarts": [
+      {
+        "startsAt": "2026-10-19T03:00:00.000Z",
+        "end": "13:00"
+      }
+    ]
+  },
+  "verification": {
+    "local": {
+      "profiles": [
+        {
+          "pinId": 18267,
+          "sourceUrl": "https://www.labecasse1990.com/",
+          "name": "La Bécasse — Hiranomachi",
+          "contentId": 1913,
+          "contentRevision": 1,
+          "verifiedGalleryLinks": 6,
+          "publicPinStatus": 200,
+          "apiBase": "http://localhost:3000",
+          "publicBase": "http://localhost:3000"
+        },
+        {
+          "pinId": 18268,
+          "sourceUrl": "https://presquile.jp/",
+          "name": "PRESQU’ÎLE — Yodoyabashi",
+          "contentId": 1914,
+          "contentRevision": 1,
+          "verifiedGalleryLinks": 4,
+          "publicPinStatus": 200,
+          "apiBase": "http://localhost:3000",
+          "publicBase": "http://localhost:3000"
+        }
+      ],
+      "guides": [
+        {
+          "pinId": 18267,
+          "region": "osaka",
+          "view": "top",
+          "neighborhood": "Yodoyabashi / Hiranomachi",
+          "nativeTitleAndImage": true,
+          "hrefs": [
+            "/pin/18267/la-becasse-hiranomachi-opens-2014-10-04"
+          ],
+          "browserFiltered": false,
+          "publicBase": "http://localhost:3000",
+          "guideStatus": 200,
+          "offers": []
+        },
+        {
+          "pinId": 18267,
+          "region": "osaka",
+          "view": "discounts",
+          "neighborhood": "Yodoyabashi / Hiranomachi",
+          "nativeTitleAndImage": true,
+          "hrefs": [
+            "/pin/18267/la-becasse-hiranomachi-opens-2014-10-04"
+          ],
+          "browserFiltered": false,
+          "publicBase": "http://localhost:3000",
+          "guideStatus": 200,
+          "offers": [
+            {
+              "id": "https://www.labecasse1990.com/#0",
+              "name": "La Bécasse — Hiranomachi",
+              "neighborhood": "Yodoyabashi / Hiranomachi",
+              "address": "1F Yuki Building,3-3-9 Hiranomachi,Chuo-ku,Osaka",
+              "restaurantHref": "/pin/18267/la-becasse-hiranomachi-opens-2014-10-04",
+              "checkedAt": "2026-10-19",
+              "special": {
+                "kind": "other",
+                "title": "La Bécasse36th-anniversary masters course",
+                "schedule": "Monday,Tuesday,Thursday,Friday,Saturday12:00–13:00last ordering;18:00–20:00last ordering (JST). Reserve by previous day.",
+                "menuLabel": "La Bécasse — October2026 anniversary menu",
+                "sourceUrl": "https://labecasse1990.seesaa.net/article/521417964.html",
+                "validFrom": "2026-10-01",
+                "conditions": [
+                  "Prior-day reservation required; solo diners accepted.",
+                  "Consumption tax and10%service added; no discount claimed.",
+                  "Game main request must be discussed in advance; specific dishes not guaranteed.",
+                  "Sunday and Wednesday ordinarily closed. October4specialSundaydinner was fully booked and is historical; it is not repeated in this recurring window."
+                ],
+                "discounted": false,
+                "description": "October-only chef’s menu interpreting specialties of AlainChapel,PaulBocuse and JoëlRobuchon. ¥35,000per guest before tax and service; exact plates change with date.",
+                "limitedTime": true,
+                "availability": {
+                  "windows": [
+                    {
+                      "end": "13:00",
+                      "days": [
+                        1,
+                        2,
+                        4,
+                        5,
+                        6
+                      ],
+                      "start": "12:00"
+                    },
+                    {
+                      "end": "20:00",
+                      "days": [
+                        1,
+                        2,
+                        4,
+                        5,
+                        6
+                      ],
+                      "start": "18:00"
+                    }
+                  ]
+                },
+                "validThrough": "2026-10-31"
+              },
+              "venueKey": "labecasse1990.com",
+              "photo": {
+                "alt": "Hiranomachi dining room in the operator gallery; table placement was revised October2026, so this is an architectural view.",
+                "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-19/batch98-becasse-2-07adc55d0539d150.webp",
+                "credit": "La Bécasse / Yoshinori Shibuya",
+                "checkedAt": "2026-10-19",
+                "sourceUrl": "https://www.labecasse1990.com/",
+                "originalUrl": "https://www.labecasse1990.com/wp-content/themes/labecasse/images/home_slide_02.jpg"
+              },
+              "menu": {
+                "url": "https://labecasse1990.seesaa.net/article/521417964.html",
+                "note": "October1–31,2026only. Book by previous day; solo diners accepted; game main by advance enquiry. Named regular/archival examples are not assigned to this course.",
+                "items": [
+                  {
+                    "name": "3人の巨匠のスペシャリテを味わう36周年記念コース",
+                    "note": "Per guest before consumption tax and10%service. Operator says¥35,000tax/service extra; managed listing¥38,500tax included. No additional dish prices published.",
+                    "price": 35000
+                  },
+                  {
+                    "name": "アラン・シャペル氏のスペシャリテ",
+                    "note": "Included in anniversary course; changes by date, exact dish not announced.",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "ポール・ボキューズ氏のスペシャリテ",
+                    "note": "Included; exact dish not announced.",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "ジョエル・ロブション氏のスペシャリテ",
+                    "note": "Included; exact dish not announced.",
+                    "priceLabel": "Price not published"
+                  }
+                ],
+                "label": "La Bécasse — October2026 anniversary menu",
+                "coverage": "published",
+                "currency": "JPY"
+              },
+              "startsAt": "2026-10-20T03:00:00.000Z",
+              "end": "13:00"
+            }
+          ]
+        },
+        {
+          "pinId": 18268,
+          "region": "osaka",
+          "view": "top",
+          "neighborhood": "Yodoyabashi / Imabashi",
+          "nativeTitleAndImage": true,
+          "hrefs": [
+            "/pin/18268/presqu-ile-yodoyabashi-opens-2015-10-20"
+          ],
+          "browserFiltered": false,
+          "publicBase": "http://localhost:3000",
+          "guideStatus": 200,
+          "offers": []
+        }
+      ]
+    }
   }
 }
