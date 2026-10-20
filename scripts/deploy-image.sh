@@ -84,6 +84,10 @@ C='$C'
 if [ $migrate = 1 ]; then \$C --profile tools pull tools && \$C --profile tools run --rm tools npm run create:db; fi
 docker exec docker-caddy-1 caddy validate --config /etc/caddy/Caddyfile >/dev/null
 docker exec docker-caddy-1 caddy reload --config /etc/caddy/Caddyfile
+# The regional-answer cache: started if it is not running, and its config (a
+# directory mount, so rsync's change is visible) reloaded if it is.
+\$C up -d --no-build edgecache
+docker exec docker-edgecache-1 nginx -s reload >/dev/null 2>&1 || true
 \$C --profile next up -d --no-build app-next
 ip=$(ipof app-next); $WAIT
 echo \$ip > .standby-ip"

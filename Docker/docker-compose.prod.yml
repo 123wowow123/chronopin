@@ -68,6 +68,17 @@ services:
     profiles: [next]
     restart: 'no'
 
+  # A shared cache for the regional anonymous API answers (Docker/edgecache).
+  # Caddy tries it first and falls back to `app`, so it can be stopped freely.
+  edgecache:
+    image: nginx:1.27-alpine
+    volumes:
+      - ./edgecache:/etc/nginx/conf.d:ro
+      - edgecache-data:/var/cache/nginx
+    depends_on:
+      - app
+    restart: unless-stopped
+
   caddy:
     image: caddy:2
     ports:
@@ -127,3 +138,4 @@ volumes:
   caddy-data:
   caddy-config:
   next-static:
+  edgecache-data:
