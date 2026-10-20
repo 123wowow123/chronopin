@@ -1,0 +1,2931 @@
+{
+  "batch": 99,
+  "checkedAt": "2026-10-19",
+  "counts": {
+    "venues": 2,
+    "newPins": 2,
+    "menuEntries": 66,
+    "offerMenuEntries": 1,
+    "galleryLinks": 10,
+    "newGuideMemberships": 3,
+    "newSpecialVenues": 1
+  },
+  "entries": [
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Agnel d’or — Awaza Opens 2013-08-08",
+        "description": "Akishige Fujita’s intimate Awaza French restaurant, with seasonal Japanese ingredients, changing lunch and dinner courses and a November15 staff-led special.",
+        "sourceUrl": "https://www.agneldor.com/",
+        "address": "1F Awaza Jutaku Sanei Building, 2-4-4 Nishihommachi, Nishi-ku, Osaka",
+        "productName": "Agnel d’or — Awaza",
+        "utcStartDateTime": "2013-08-08T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "The current operator-managed exact-branch Tabelog record gives August8,2013; operator chef biography independently confirms August2013. This is the original Awaza address, not a later interior refurbishment.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Osaka",
+          "Japan",
+          "Awaza / Nishihommachi",
+          "French"
+        ],
+        "longFormSummary": "<p>Akishige Fujita’s intimate Awaza French restaurant, with seasonal Japanese ingredients, changing lunch and dinner courses and a November15 staff-led special.<cite data-ref=\"https://www.agneldor.com/\"></cite></p><p>The current operator-managed exact-branch Tabelog record gives August8,2013; operator chef biography independently confirms August2013. This is the original Awaza address, not a later interior refurbishment.</p>",
+        "references": [
+          {
+            "url": "https://www.agneldor.com/",
+            "title": "Agnel d’or — Awaza — operator",
+            "confidence": 90,
+            "reasoning": "Agnel d’or — Awaza — operator"
+          },
+          {
+            "url": "https://www.agneldor.com/",
+            "title": "Operator chef history, hours and gallery",
+            "confidence": 90,
+            "reasoning": "Operator chef history, hours and gallery"
+          },
+          {
+            "url": "https://tabelog.com/osaka/A2701/A270105/27074473/",
+            "title": "Exact branch opening and independent selection",
+            "confidence": 90,
+            "reasoning": "Exact branch opening and independent selection"
+          },
+          {
+            "url": "https://www.tablecheck.com/ja/agneldor",
+            "title": "Operator-linked current courses and dated special",
+            "confidence": 90,
+            "reasoning": "Operator-linked current courses and dated special"
+          },
+          {
+            "url": "https://guide.michelin.com/jp/ja/osaka-region/osaka/restaurant/agnel-d-or",
+            "title": "MICHELIN exact branch and credited photos",
+            "confidence": 90,
+            "reasoning": "MICHELIN exact branch and credited photos"
+          },
+          {
+            "url": "https://xn--88jtb2b9cgc8sdee4yf22343aopua.net/2026/09/22/agnel-dor/",
+            "title": "September2026 firsthand drinks-menu photograph",
+            "confidence": 90,
+            "reasoning": "September2026 firsthand drinks-menu photograph"
+          },
+          {
+            "url": "https://jp.gaultmillau.com/ja/restaurants/agnel-d-or",
+            "title": "Gault&Millau exact branch",
+            "confidence": 90,
+            "reasoning": "Gault&Millau exact branch"
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://www.agneldor.com/",
+          "menu": {
+            "pinSourceUrl": "https://www.agneldor.com/",
+            "name": "Agnel d’or — Awaza",
+            "checkedAt": "2026-10-19",
+            "menus": [
+              {
+                "label": "Agnel d’or — 【ランチ スタンダード】Menu Midi 8 Plats",
+                "url": "https://www.tablecheck.com/ja/agneldor",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "【ランチ スタンダード】Menu Midi 8 Plats",
+                    "price": 14000,
+                    "note": "Tax included; 10% service extra. Lunch service."
+                  },
+                  {
+                    "name": "秋刀魚　無花果　蓮根",
+                    "priceLabel": "Price not published",
+                    "note": "Published changing course example; included in course, no standalone price. Availability varies with sourcing."
+                  },
+                  {
+                    "name": "銀鮭　セロリ　菊",
+                    "priceLabel": "Price not published",
+                    "note": "Published changing course example; included in course, no standalone price. Availability varies with sourcing."
+                  },
+                  {
+                    "name": "貝　海藻　豆",
+                    "priceLabel": "Price not published",
+                    "note": "Published changing course example; included in course, no standalone price. Availability varies with sourcing."
+                  },
+                  {
+                    "name": "恵鴨　椎茸　春菊",
+                    "priceLabel": "Price not published",
+                    "note": "Published changing course example; included in course, no standalone price. Availability varies with sourcing."
+                  },
+                  {
+                    "name": "鮮魚　海老　銀杏　鬼灯",
+                    "priceLabel": "Price not published",
+                    "note": "Published changing course example; included in course, no standalone price. Availability varies with sourcing."
+                  },
+                  {
+                    "name": "宮崎牛　舞茸　ミズノミ",
+                    "priceLabel": "Price not published",
+                    "note": "Published changing course example; included in course, no standalone price. Availability varies with sourcing."
+                  },
+                  {
+                    "name": "ガスパチョ　味醂",
+                    "priceLabel": "Price not published",
+                    "note": "Published changing course example; included in course, no standalone price. Availability varies with sourcing."
+                  },
+                  {
+                    "name": "梨　ユリネ　トリュフ",
+                    "priceLabel": "Price not published",
+                    "note": "Published changing course example; included in course, no standalone price. Availability varies with sourcing."
+                  },
+                  {
+                    "name": "新サツマイモのかりんとう饅頭　パースニップのバスクチーズケーキ",
+                    "priceLabel": "Price not published",
+                    "note": "Published changing course example; included in course, no standalone price. Availability varies with sourcing."
+                  }
+                ],
+                "note": "Tax included; 10% service extra. Lunch service. Ordinary courses exclude November15,2026, when the separately listed staff-led special applies. Dinner list published from September17; no fixed daily guarantee."
+              },
+              {
+                "label": "Agnel d’or — 【ランチ ショート】Menu midi 6 Plats",
+                "url": "https://www.tablecheck.com/ja/agneldor",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "【ランチ ショート】Menu midi 6 Plats",
+                    "price": 11000,
+                    "note": "Tax included; 10% service extra. Weekday lunch only, excluding holidays; Wednesday–Friday with ordinary Monday/Tuesday lunch closures."
+                  },
+                  {
+                    "name": "秋刀魚　無花果　蓮根",
+                    "priceLabel": "Price not published",
+                    "note": "Published changing course example; included in course, no standalone price. Availability varies with sourcing."
+                  },
+                  {
+                    "name": "銀鮭　セロリ　菊",
+                    "priceLabel": "Price not published",
+                    "note": "Published changing course example; included in course, no standalone price. Availability varies with sourcing."
+                  },
+                  {
+                    "name": "恵鴨　椎茸　春菊",
+                    "priceLabel": "Price not published",
+                    "note": "Published changing course example; included in course, no standalone price. Availability varies with sourcing."
+                  },
+                  {
+                    "name": "鮮魚　海老　銀杏　鬼灯",
+                    "priceLabel": "Price not published",
+                    "note": "Published changing course example; included in course, no standalone price. Availability varies with sourcing."
+                  },
+                  {
+                    "name": "宮崎牛　舞茸　ミズノミ",
+                    "priceLabel": "Price not published",
+                    "note": "Published changing course example; included in course, no standalone price. Availability varies with sourcing."
+                  },
+                  {
+                    "name": "梨　ユリネ　トリュフ",
+                    "priceLabel": "Price not published",
+                    "note": "Published changing course example; included in course, no standalone price. Availability varies with sourcing."
+                  },
+                  {
+                    "name": "新サツマイモのかりんとう饅頭　パースニップのバスクチーズケーキ",
+                    "priceLabel": "Price not published",
+                    "note": "Published changing course example; included in course, no standalone price. Availability varies with sourcing."
+                  }
+                ],
+                "note": "Tax included; 10% service extra. Weekday lunch only, excluding holidays; Wednesday–Friday with ordinary Monday/Tuesday lunch closures. Ordinary courses exclude November15,2026, when the separately listed staff-led special applies. Dinner list published from September17; no fixed daily guarantee."
+              },
+              {
+                "label": "Agnel d’or — 【ディナー スタンダード】Menu Soir 10 Plats",
+                "url": "https://www.tablecheck.com/ja/agneldor",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "【ディナー スタンダード】Menu Soir 10 Plats",
+                    "price": 22700,
+                    "note": "Tax included; 10% service extra. Dinner service."
+                  },
+                  {
+                    "name": "秋刀魚　無花果　蓮根",
+                    "priceLabel": "Price not published",
+                    "note": "Published changing course example; included in course, no standalone price. Availability varies with sourcing."
+                  },
+                  {
+                    "name": "貝　海藻　豆",
+                    "priceLabel": "Price not published",
+                    "note": "Published changing course example; included in course, no standalone price. Availability varies with sourcing."
+                  },
+                  {
+                    "name": "和牛　芋　フロマージュ",
+                    "priceLabel": "Price not published",
+                    "note": "Published changing course example; included in course, no standalone price. Availability varies with sourcing."
+                  },
+                  {
+                    "name": "銀鮭　セロリ　菊",
+                    "priceLabel": "Price not published",
+                    "note": "Published changing course example; included in course, no standalone price. Availability varies with sourcing."
+                  },
+                  {
+                    "name": "太刀魚　春菊　菊芋　新米",
+                    "priceLabel": "Price not published",
+                    "note": "Published changing course example; included in course, no standalone price. Availability varies with sourcing."
+                  },
+                  {
+                    "name": "鮮魚　海老　銀杏　鬼灯",
+                    "priceLabel": "Price not published",
+                    "note": "Published changing course example; included in course, no standalone price. Availability varies with sourcing."
+                  },
+                  {
+                    "name": "恵鴨　茸　南瓜",
+                    "priceLabel": "Price not published",
+                    "note": "Published changing course example; included in course, no standalone price. Availability varies with sourcing."
+                  },
+                  {
+                    "name": "ビゴール豚　舞茸　ミズノミ",
+                    "priceLabel": "Price not published",
+                    "note": "Published changing course example; included in course, no standalone price. Availability varies with sourcing."
+                  },
+                  {
+                    "name": "ガスパチョ　味醂",
+                    "priceLabel": "Price not published",
+                    "note": "Published changing course example; included in course, no standalone price. Availability varies with sourcing."
+                  },
+                  {
+                    "name": "梨　ユリネ　トリュフ",
+                    "priceLabel": "Price not published",
+                    "note": "Published changing course example; included in course, no standalone price. Availability varies with sourcing."
+                  },
+                  {
+                    "name": "新サツマイモのかりんとう饅頭　パースニップのバスクチーズケーキ",
+                    "priceLabel": "Price not published",
+                    "note": "Published changing course example; included in course, no standalone price. Availability varies with sourcing."
+                  }
+                ],
+                "note": "Tax included; 10% service extra. Dinner service. Ordinary courses exclude November15,2026, when the separately listed staff-led special applies. Dinner list published from September17; no fixed daily guarantee."
+              },
+              {
+                "label": "Agnel d’or — photographed September2026 drinks menu",
+                "url": "https://xn--88jtb2b9cgc8sdee4yf22343aopua.net/2026/09/22/agnel-dor/",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Ginger Ale — 柚子ジンジャーエール",
+                    "price": 1200,
+                    "note": "September2026 firsthand photograph of this branch’s menu; current stock and price reconfirm on reservation. Service treatment not legible on this photographed page."
+                  },
+                  {
+                    "name": "Elderflower Soda — エルダーフラワーソーダ",
+                    "price": 1200,
+                    "note": "September2026 firsthand photograph of this branch’s menu; current stock and price reconfirm on reservation. Service treatment not legible on this photographed page."
+                  },
+                  {
+                    "name": "White grape juice — 白ブドウジュース",
+                    "price": 1200,
+                    "note": "September2026 firsthand photograph of this branch’s menu; current stock and price reconfirm on reservation. Service treatment not legible on this photographed page."
+                  },
+                  {
+                    "name": "Red grape juice — 赤ブドウジュース",
+                    "price": 1200,
+                    "note": "September2026 firsthand photograph of this branch’s menu; current stock and price reconfirm on reservation. Service treatment not legible on this photographed page."
+                  },
+                  {
+                    "name": "Perrier 750ml",
+                    "price": 1200,
+                    "note": "September2026 firsthand photograph of this branch’s menu; current stock and price reconfirm on reservation. Service treatment not legible on this photographed page."
+                  },
+                  {
+                    "name": "San Pellegrino 750ml",
+                    "price": 1200,
+                    "note": "September2026 firsthand photograph of this branch’s menu; current stock and price reconfirm on reservation. Service treatment not legible on this photographed page."
+                  },
+                  {
+                    "name": "Acqua Panna 750ml",
+                    "price": 1200,
+                    "note": "September2026 firsthand photograph of this branch’s menu; current stock and price reconfirm on reservation. Service treatment not legible on this photographed page."
+                  },
+                  {
+                    "name": "Shizen 国産超軟水 750ml",
+                    "price": 1200,
+                    "note": "September2026 firsthand photograph of this branch’s menu; current stock and price reconfirm on reservation. Service treatment not legible on this photographed page."
+                  }
+                ],
+                "note": "Actual branch drink-menu photograph reviewed; no guessed wine vintages, producer names or unclear small print. Historical September menu, not guaranteed October stock."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://www.agneldor.com/",
+            "name": "Agnel d’or — Awaza",
+            "checkedAt": "2026-10-19",
+            "websiteUrl": "https://www.agneldor.com/",
+            "phone": "06-4981-1974",
+            "openingHours": [
+              {
+                "days": "Wednesday–Sunday lunch",
+                "hours": "12:00–15:00; last arrival/order13:00"
+              },
+              {
+                "days": "Tuesday–Sunday dinner",
+                "hours": "18:00–22:00; last arrival/order19:30"
+              },
+              {
+                "days": "Closed",
+                "hours": "Monday and Tuesday lunch"
+              }
+            ],
+            "detailsSourceUrl": "https://www.agneldor.com/",
+            "additionalSources": [
+              {
+                "label": "Operator chef history, hours and gallery",
+                "url": "https://www.agneldor.com/"
+              },
+              {
+                "label": "Exact branch opening and independent selection",
+                "url": "https://tabelog.com/osaka/A2701/A270105/27074473/"
+              },
+              {
+                "label": "Operator-linked current courses and dated special",
+                "url": "https://www.tablecheck.com/ja/agneldor"
+              },
+              {
+                "label": "MICHELIN exact branch and credited photos",
+                "url": "https://guide.michelin.com/jp/ja/osaka-region/osaka/restaurant/agnel-d-or"
+              },
+              {
+                "label": "September2026 firsthand drinks-menu photograph",
+                "url": "https://xn--88jtb2b9cgc8sdee4yf22343aopua.net/2026/09/22/agnel-dor/"
+              },
+              {
+                "label": "Gault&Millau exact branch",
+                "url": "https://jp.gaultmillau.com/ja/restaurants/agnel-d-or"
+              }
+            ],
+            "hoursNote": "Operator/linked booking pages agree on courses, tax inclusion and additional10%service. Six-plate lunch only on non-holiday weekdays. Children accepted only if eating an adult course; parties5+ enquire by phone. Male guests should avoid shorts and sandals. Same-day and previous-day cancellation charged full course price per person. November15special replaces ordinary courses at both meals; no ordinary autumn dishes assigned to that special. Opening date from managed branch record.",
+            "reservationUrl": "https://www.tablecheck.com/ja/agneldor/reserve/"
+          },
+          "tile": {
+            "regionSlug": "osaka",
+            "kind": "top",
+            "slug": "japan99-agnel",
+            "name": "Agnel d’or — Awaza",
+            "neighborhood": "Awaza / Nishihommachi",
+            "cuisine": "French",
+            "description": "Akishige Fujita’s intimate Awaza French restaurant, with seasonal Japanese ingredients, changing lunch and dinner courses and a November15 staff-led special.",
+            "address": "1F Awaza Jutaku Sanei Building, 2-4-4 Nishihommachi, Nishi-ku, Osaka",
+            "websiteUrl": "https://www.agneldor.com/",
+            "checkedAt": "2026-10-19",
+            "recognition": "Tabelog Award2026 Bronze; French WEST Hyakumeiten2025",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-19/batch99-agnel-3-b063361d96244605.webp",
+            "imageCredit": "agnel d’or (via MICHELIN Guide)",
+            "imageSourceUrl": "https://guide.michelin.com/jp/ja/osaka-region/osaka/restaurant/agnel-d-or",
+            "imageNote": "Agnel d’or dining room",
+            "openingConfirmed": true,
+            "day": "2013-08-08"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "originalUrl": "https://prod-pics.guide.michelin.com/api/public/content/f8a4739a1a72489b9d1dc43d9a3c3fa8.jpeg?format=webp&w=500&h=500",
+          "sourcePage": "https://guide.michelin.com/jp/ja/osaka-region/osaka/restaurant/agnel-d-or",
+          "credit": "agnel d’or (via MICHELIN Guide)",
+          "note": "Agnel d’or dining room",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-19/batch99-agnel-3-b063361d96244605.webp",
+          "sha256": "b063361d96244605d0414a0a322e96d2297d517a7c7d88d2dc146ec93a50f7fa",
+          "width": 500,
+          "height": 500
+        },
+        {
+          "originalUrl": "https://prod-pics.guide.michelin.com/api/public/content/ef4e8ad955164f2a8dc4b6884f2140f8.jpeg?format=webp&w=500&h=500",
+          "sourcePage": "https://guide.michelin.com/jp/ja/osaka-region/osaka/restaurant/agnel-d-or",
+          "credit": "agnel d’or (via MICHELIN Guide)",
+          "note": "Agnel d’or gallery dish; no dish name or current availability inferred",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-19/batch99-agnel-1-b48249793348814d.webp",
+          "sha256": "b48249793348814d11084d328ca29feb28ef27b5b937ea09a72205b8fb9b8af9",
+          "width": 500,
+          "height": 500
+        },
+        {
+          "originalUrl": "https://prod-pics.guide.michelin.com/api/public/content/56228d19fcbd4268bca15324d0498fe4.jpeg?format=webp&w=500&h=500",
+          "sourcePage": "https://guide.michelin.com/jp/ja/osaka-region/osaka/restaurant/agnel-d-or",
+          "credit": "agnel d’or (via MICHELIN Guide)",
+          "note": "Agnel d’or gallery dish; no dish name or current availability inferred",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-19/batch99-agnel-2-1d37a68b3e29a016.webp",
+          "sha256": "1d37a68b3e29a016c7bd37250a2eb1e6c53807b75005522d42cf30a4e23d27bc",
+          "width": 500,
+          "height": 500
+        }
+      ],
+      "special": {
+        "regionSlug": "osaka",
+        "enabled": true,
+        "profile": {
+          "pinSourceUrl": "https://www.agneldor.com/",
+          "name": "Agnel d’or — Awaza",
+          "checkedAt": "2026-10-19",
+          "address": "1F Awaza Jutaku Sanei Building, 2-4-4 Nishihommachi, Nishi-ku, Osaka",
+          "neighborhood": "Awaza / Nishihommachi",
+          "websiteUrl": "https://www.agneldor.com/",
+          "menus": [
+            {
+              "label": "Agnel d’or — November15 staff-led special",
+              "url": "https://www.tablecheck.com/ja/agneldor",
+              "currency": "JPY",
+              "coverage": "published",
+              "items": [
+                {
+                  "name": "【特別スタンダード】Menu Soir 7Plats",
+                  "price": 11000,
+                  "note": "Tax included; additional10%service. November15,2026only, lunch and dinner. Young staff cook while chef attends an event; ask on the day for actual dishes."
+                }
+              ],
+              "note": "Primary TableCheck menu record69f025e37114d3f4c52bae35 expressly sets valid_date_ranges2026-11-15to2026-11-15and meals lunch/dinner. No dish list published; ordinary courses expressly exclude this date."
+            }
+          ],
+          "specials": [
+            {
+              "kind": "other",
+              "title": "Agnel d’or November15 staff-led seven-plate special",
+              "description": "One-day seven-plate course cooked by the young team while the chef attends an event. Lunch and dinner; ¥11,000tax included plus10%service. Dishes announced on the day.",
+              "sourceUrl": "https://www.tablecheck.com/ja/agneldor",
+              "menuLabel": "Agnel d’or — November15 staff-led special",
+              "limitedTime": true,
+              "discounted": false,
+              "validFrom": "2026-11-15",
+              "validThrough": "2026-11-15",
+              "schedule": "Sunday November15,2026: lunch12:00–13:00last arrival; dinner18:00–19:30last arrival, JST.",
+              "conditions": [
+                "Reserve in advance; published availability is not a promise of an unbooked table.",
+                "Tax included; additional10%service. No discount claim; different course from ordinary10-plate dinner.",
+                "Chef absent for an event; young staff cook. Exact dishes not announced.",
+                "Ordinary courses do not apply on this date."
+              ],
+              "availability": {
+                "windows": [
+                  {
+                    "days": [
+                      0
+                    ],
+                    "start": "12:00",
+                    "end": "13:00"
+                  },
+                  {
+                    "days": [
+                      0
+                    ],
+                    "start": "18:00",
+                    "end": "19:30"
+                  }
+                ]
+              }
+            }
+          ],
+          "photo": {
+            "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-19/batch99-agnel-3-b063361d96244605.webp",
+            "alt": "Agnel d’or dining room",
+            "credit": "agnel d’or (via MICHELIN Guide)",
+            "sourceUrl": "https://guide.michelin.com/jp/ja/osaka-region/osaka/restaurant/agnel-d-or",
+            "originalUrl": "https://prod-pics.guide.michelin.com/api/public/content/f8a4739a1a72489b9d1dc43d9a3c3fa8.jpeg?format=webp&w=500&h=500",
+            "checkedAt": "2026-10-19"
+          }
+        }
+      }
+    },
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "ad hoc — Fukushima Hotarumachi Opens 2014-09-09",
+        "description": "Hideaki Takayama’s Hotarumachi French restaurant, serving changing seasonal tasting menus in a compact dining room near Fukushima Station.",
+        "sourceUrl": "http://adhoc2014.jp/",
+        "address": "1-1-48 Fukushima, Fukushima-ku, Osaka (Hotarumachi)",
+        "productName": "ad hoc — Fukushima Hotarumachi",
+        "utcStartDateTime": "2014-09-09T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "Operator-managed exact-branch listing dates ad hoc opening to September9,2014. A contemporaneous firsthand report corroborates September9opening and September19lunch start. Earlier ToutLeMonde2002founding and August2014closure are separate restaurant history.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Osaka",
+          "Japan",
+          "Fukushima / Hotarumachi",
+          "French"
+        ],
+        "longFormSummary": "<p>Hideaki Takayama’s Hotarumachi French restaurant, serving changing seasonal tasting menus in a compact dining room near Fukushima Station.<cite data-ref=\"http://adhoc2014.jp/\"></cite></p><p>Operator-managed exact-branch listing dates ad hoc opening to September9,2014. A contemporaneous firsthand report corroborates September9opening and September19lunch start. Earlier ToutLeMonde2002founding and August2014closure are separate restaurant history.</p>",
+        "references": [
+          {
+            "url": "http://adhoc2014.jp/",
+            "title": "ad hoc — Fukushima Hotarumachi — operator",
+            "confidence": 90,
+            "reasoning": "ad hoc — Fukushima Hotarumachi — operator"
+          },
+          {
+            "url": "http://adhoc2014.jp/menu/",
+            "title": "Operator menu, older lunch price",
+            "confidence": 90,
+            "reasoning": "Operator menu, older lunch price"
+          },
+          {
+            "url": "https://myconciergejapan.com/restaurants/adhoc/",
+            "title": "Operator linked reservation partner",
+            "confidence": 90,
+            "reasoning": "Operator linked reservation partner"
+          },
+          {
+            "url": "https://tabelog.com/osaka/A2701/A270108/27080791/",
+            "title": "Exact branch opening/current hours/selection",
+            "confidence": 90,
+            "reasoning": "Exact branch opening/current hours/selection"
+          },
+          {
+            "url": "https://tabelog.com/osaka/A2701/A270108/27080791/dtlrvwlst/B112931591/",
+            "title": "Contemporaneous opening-day corroboration",
+            "confidence": 90,
+            "reasoning": "Contemporaneous opening-day corroboration"
+          },
+          {
+            "url": "https://tabelog.com/rst/rstdtl_party_dtl?LstAre=A270108&LstPrf=A2701&pal=osaka&pplan_id=297125404&rcd=27080791",
+            "title": "Managed lunch11-plate course",
+            "confidence": 90,
+            "reasoning": "Managed lunch11-plate course"
+          },
+          {
+            "url": "https://tabelog.com/rst/rstdtl_party_dtl?LstAre=A270108&LstPrf=A2701&pal=osaka&pplan_id=207787318&rcd=27080791",
+            "title": "Managed dinner13-plate course",
+            "confidence": 90,
+            "reasoning": "Managed dinner13-plate course"
+          },
+          {
+            "url": "http://adhoc2014.jp/staff/",
+            "title": "Operator staff biography",
+            "confidence": 90,
+            "reasoning": "Operator staff biography"
+          },
+          {
+            "url": "http://adhoc2014.jp/wp/news/",
+            "title": "Operator news and schedules",
+            "confidence": 90,
+            "reasoning": "Operator news and schedules"
+          },
+          {
+            "url": "http://adhoc2014.jp/map/",
+            "title": "Operator map/access",
+            "confidence": 90,
+            "reasoning": "Operator map/access"
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "http://adhoc2014.jp/",
+          "menu": {
+            "pinSourceUrl": "http://adhoc2014.jp/",
+            "name": "ad hoc — Fukushima Hotarumachi",
+            "checkedAt": "2026-10-19",
+            "menus": [
+              {
+                "label": "ad hoc — Lunch11-plate course",
+                "url": "https://tabelog.com/rst/rstdtl_party_dtl?LstAre=A270108&LstPrf=A2701&pal=osaka&pplan_id=297125404&rcd=27080791",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Lunch11-plate course",
+                    "price": 16500,
+                    "note": "Tax and restaurant10%service included. Online plan2–4guests,2-hour stay; solo reservations by phone only, limited to one group/day."
+                  },
+                  {
+                    "name": "スッポン、龍泉洞黒豚、蓮根",
+                    "priceLabel": "Price not published",
+                    "note": "Published autumn sample, included in course; no standalone price. Changes with sourcing, not a guaranteed fixed menu."
+                  },
+                  {
+                    "name": "サンマ、佐土原ナス、蕎麦",
+                    "priceLabel": "Price not published",
+                    "note": "Published autumn sample, included in course; no standalone price. Changes with sourcing, not a guaranteed fixed menu."
+                  },
+                  {
+                    "name": "バターナッツ、アシアカエビ、西洋ワサビ",
+                    "priceLabel": "Price not published",
+                    "note": "Published autumn sample, included in course; no standalone price. Changes with sourcing, not a guaranteed fixed menu."
+                  },
+                  {
+                    "name": "淡路島ハモ、南高梅、すだち",
+                    "priceLabel": "Price not published",
+                    "note": "Published autumn sample, included in course; no standalone price. Changes with sourcing, not a guaranteed fixed menu."
+                  },
+                  {
+                    "name": "茸、平飼い卵、アオリイカ",
+                    "priceLabel": "Price not published",
+                    "note": "Published autumn sample, included in course; no standalone price. Changes with sourcing, not a guaranteed fixed menu."
+                  },
+                  {
+                    "name": "地金目鯛、根セロリ、ムール貝",
+                    "priceLabel": "Price not published",
+                    "note": "Published autumn sample, included in course; no standalone price. Changes with sourcing, not a guaranteed fixed menu."
+                  },
+                  {
+                    "name": "紀州鴨、万願寺とうがらし、黒イチジク",
+                    "priceLabel": "Price not published",
+                    "note": "Published autumn sample, included in course; no standalone price. Changes with sourcing, not a guaranteed fixed menu."
+                  },
+                  {
+                    "name": "洋梨、ヴァニラ、ミント",
+                    "priceLabel": "Price not published",
+                    "note": "Published autumn sample, included in course; no standalone price. Changes with sourcing, not a guaranteed fixed menu."
+                  },
+                  {
+                    "name": "和栗、アマゾンカカオ、エクレア",
+                    "priceLabel": "Price not published",
+                    "note": "Published autumn sample, included in course; no standalone price. Changes with sourcing, not a guaranteed fixed menu."
+                  },
+                  {
+                    "name": "林檎、マーガオ、タルト",
+                    "priceLabel": "Price not published",
+                    "note": "Published autumn sample, included in course; no standalone price. Changes with sourcing, not a guaranteed fixed menu."
+                  },
+                  {
+                    "name": "ヘーゼルナッツ、カシス、マカロン",
+                    "priceLabel": "Price not published",
+                    "note": "Published autumn sample, included in course; no standalone price. Changes with sourcing, not a guaranteed fixed menu."
+                  },
+                  {
+                    "name": "食後コーヒー又は紅茶",
+                    "priceLabel": "Price not published",
+                    "note": "Published autumn sample, included in course; no standalone price. Changes with sourcing, not a guaranteed fixed menu."
+                  }
+                ],
+                "note": "Current operator-managed plan and operator-linked concierge agree on current prices. Concierge adds its own10%booking fee; that is separate from included restaurant service. Own old lunch¥13,000+10%service superseded from September3; no expired rate used."
+              },
+              {
+                "label": "ad hoc — Dinner13-plate course",
+                "url": "https://tabelog.com/rst/rstdtl_party_dtl?LstAre=A270108&LstPrf=A2701&pal=osaka&pplan_id=207787318&rcd=27080791",
+                "currency": "JPY",
+                "coverage": "sample",
+                "items": [
+                  {
+                    "name": "Dinner13-plate course",
+                    "price": 25300,
+                    "note": "Tax and restaurant10%service included. Online plan2–4guests,2-hour stay; solo reservations by phone only, limited to one group/day."
+                  },
+                  {
+                    "name": "スッポン、龍泉洞黒豚、蓮根",
+                    "priceLabel": "Price not published",
+                    "note": "Published autumn sample, included in course; no standalone price. Changes with sourcing, not a guaranteed fixed menu."
+                  },
+                  {
+                    "name": "サンマ、佐土原ナス、蕎麦",
+                    "priceLabel": "Price not published",
+                    "note": "Published autumn sample, included in course; no standalone price. Changes with sourcing, not a guaranteed fixed menu."
+                  },
+                  {
+                    "name": "バターナッツ、車海老、西洋ワサビ",
+                    "priceLabel": "Price not published",
+                    "note": "Published autumn sample, included in course; no standalone price. Changes with sourcing, not a guaranteed fixed menu."
+                  },
+                  {
+                    "name": "茸、平飼い卵、アオリイカ",
+                    "priceLabel": "Price not published",
+                    "note": "Published autumn sample, included in course; no standalone price. Changes with sourcing, not a guaranteed fixed menu."
+                  },
+                  {
+                    "name": "淡路島ハモ、南高梅、すだち",
+                    "priceLabel": "Price not published",
+                    "note": "Published autumn sample, included in course; no standalone price. Changes with sourcing, not a guaranteed fixed menu."
+                  },
+                  {
+                    "name": "但馬鶏、松茸、丹波米",
+                    "priceLabel": "Price not published",
+                    "note": "Published autumn sample, included in course; no standalone price. Changes with sourcing, not a guaranteed fixed menu."
+                  },
+                  {
+                    "name": "十勝牛舌、シルクスイート、落花生",
+                    "priceLabel": "Price not published",
+                    "note": "Published autumn sample, included in course; no standalone price. Changes with sourcing, not a guaranteed fixed menu."
+                  },
+                  {
+                    "name": "地金目鯛、根セロリ、ムール貝",
+                    "priceLabel": "Price not published",
+                    "note": "Published autumn sample, included in course; no standalone price. Changes with sourcing, not a guaranteed fixed menu."
+                  },
+                  {
+                    "name": "鶴居村エゾ鹿、万願寺とうがらし、黒イチジク",
+                    "priceLabel": "Price not published",
+                    "note": "Published autumn sample, included in course; no standalone price. Changes with sourcing, not a guaranteed fixed menu."
+                  },
+                  {
+                    "name": "洋梨、ヴァニラ、ミント",
+                    "priceLabel": "Price not published",
+                    "note": "Published autumn sample, included in course; no standalone price. Changes with sourcing, not a guaranteed fixed menu."
+                  },
+                  {
+                    "name": "和栗、アマゾンカカオ、エクレア",
+                    "priceLabel": "Price not published",
+                    "note": "Published autumn sample, included in course; no standalone price. Changes with sourcing, not a guaranteed fixed menu."
+                  },
+                  {
+                    "name": "林檎、マーガオ、タルト",
+                    "priceLabel": "Price not published",
+                    "note": "Published autumn sample, included in course; no standalone price. Changes with sourcing, not a guaranteed fixed menu."
+                  },
+                  {
+                    "name": "ヘーゼルナッツ、カシス、マカロン",
+                    "priceLabel": "Price not published",
+                    "note": "Published autumn sample, included in course; no standalone price. Changes with sourcing, not a guaranteed fixed menu."
+                  },
+                  {
+                    "name": "食後コーヒー又は紅茶",
+                    "priceLabel": "Price not published",
+                    "note": "Published autumn sample, included in course; no standalone price. Changes with sourcing, not a guaranteed fixed menu."
+                  }
+                ],
+                "note": "Current operator-managed plan and operator-linked concierge agree on current prices. Concierge adds its own10%booking fee; that is separate from included restaurant service. Own old lunch¥13,000+10%service superseded from September3; no expired rate used."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "http://adhoc2014.jp/",
+            "name": "ad hoc — Fukushima Hotarumachi",
+            "checkedAt": "2026-10-19",
+            "websiteUrl": "http://adhoc2014.jp/",
+            "phone": "06-6225-8814",
+            "openingHours": [
+              {
+                "days": "Monday,Tuesday,Thursday–Sunday lunch",
+                "hours": "12:00–15:00; last order12:30"
+              },
+              {
+                "days": "Monday,Tuesday,Thursday–Sunday dinner",
+                "hours": "18:00–22:00; current managed listing last order18:30"
+              },
+              {
+                "days": "Closed",
+                "hours": "Wednesday"
+              }
+            ],
+            "detailsSourceUrl": "http://adhoc2014.jp/",
+            "additionalSources": [
+              {
+                "label": "Operator menu, older lunch price",
+                "url": "http://adhoc2014.jp/menu/"
+              },
+              {
+                "label": "Operator linked reservation partner",
+                "url": "https://myconciergejapan.com/restaurants/adhoc/"
+              },
+              {
+                "label": "Exact branch opening/current hours/selection",
+                "url": "https://tabelog.com/osaka/A2701/A270108/27080791/"
+              },
+              {
+                "label": "Contemporaneous opening-day corroboration",
+                "url": "https://tabelog.com/osaka/A2701/A270108/27080791/dtlrvwlst/B112931591/"
+              },
+              {
+                "label": "Managed lunch11-plate course",
+                "url": "https://tabelog.com/rst/rstdtl_party_dtl?LstAre=A270108&LstPrf=A2701&pal=osaka&pplan_id=297125404&rcd=27080791"
+              },
+              {
+                "label": "Managed dinner13-plate course",
+                "url": "https://tabelog.com/rst/rstdtl_party_dtl?LstAre=A270108&LstPrf=A2701&pal=osaka&pplan_id=207787318&rcd=27080791"
+              },
+              {
+                "label": "Operator staff biography",
+                "url": "http://adhoc2014.jp/staff/"
+              },
+              {
+                "label": "Operator news and schedules",
+                "url": "http://adhoc2014.jp/wp/news/"
+              },
+              {
+                "label": "Operator map/access",
+                "url": "http://adhoc2014.jp/map/"
+              }
+            ],
+            "hoursNote": "Current managed course plans and operator-linked concierge supersede old operator-site lunch rate:¥16,500restaurant tax/service included. Dinner¥25,300tax/service included. Concierge separately adds10%booking fee. Current managed dinner last order18:30conflicts with operator/concierge19:00; confirm with restaurant, use earlier last order. Under13not admitted; avoid strong perfume. Cash/cards accepted; no e-money/QR listed. Online plans2–4, solo requests by phone. No dated or discounted offer verified; regular courses are not Specials. HTTPS operator fetch failed502, HTTP operator pages and its linked HTTPS reservation partner were accessible.",
+            "reservationUrl": "https://myconciergejapan.com/restaurants/adhoc/"
+          },
+          "tile": {
+            "regionSlug": "osaka",
+            "kind": "top",
+            "slug": "japan99-adhoc",
+            "name": "ad hoc — Fukushima Hotarumachi",
+            "neighborhood": "Fukushima / Hotarumachi",
+            "cuisine": "French",
+            "description": "Hideaki Takayama’s Hotarumachi French restaurant, serving changing seasonal tasting menus in a compact dining room near Fukushima Station.",
+            "address": "1-1-48 Fukushima, Fukushima-ku, Osaka (Hotarumachi)",
+            "websiteUrl": "http://adhoc2014.jp/",
+            "checkedAt": "2026-10-19",
+            "recognition": "Tabelog Award2026 Bronze; French WEST Hyakumeiten2025",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-19/batch99-adhoc-7-006ead928958e4b9.webp",
+            "imageCredit": "ad hoc / My Concierge Japan",
+            "imageSourceUrl": "https://myconciergejapan.com/restaurants/adhoc/",
+            "imageNote": "ad hoc dining room at Hotarumachi",
+            "openingConfirmed": true,
+            "day": "2014-09-09"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "originalUrl": "https://myconciergejapan.com/wp-content/uploads/2018/10/adhoc_slider_7-1.jpg",
+          "sourcePage": "https://myconciergejapan.com/restaurants/adhoc/",
+          "credit": "ad hoc / My Concierge Japan",
+          "note": "ad hoc dining room at Hotarumachi",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-19/batch99-adhoc-7-006ead928958e4b9.webp",
+          "sha256": "006ead928958e4b93601b2471c3512c3925d2eaef48b3fea25d82533f2e2ec9a",
+          "width": 960,
+          "height": 590
+        },
+        {
+          "originalUrl": "https://myconciergejapan.com/wp-content/uploads/2018/10/adhoc_slider_3.jpg",
+          "sourcePage": "https://myconciergejapan.com/restaurants/adhoc/",
+          "credit": "ad hoc / My Concierge Japan",
+          "note": "ad hoc booking-partner gallery dish; no current course inclusion inferred",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-19/batch99-adhoc-1-b3981f49e7218e2e.webp",
+          "sha256": "b3981f49e7218e2ee80988f4108dc5cba6c4023f5086042cfe0390c7d7a3dbc8",
+          "width": 960,
+          "height": 590
+        },
+        {
+          "originalUrl": "https://myconciergejapan.com/wp-content/uploads/2018/10/adhoc_slider_2.jpg",
+          "sourcePage": "https://myconciergejapan.com/restaurants/adhoc/",
+          "credit": "ad hoc / My Concierge Japan",
+          "note": "ad hoc booking-partner gallery dish; no current course inclusion inferred",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-19/batch99-adhoc-2-68ed71bdd7484ceb.webp",
+          "sha256": "68ed71bdd7484ceb865941f1b9b73ae007fa465d717cbb42911badd7f5ad1c27",
+          "width": 960,
+          "height": 590
+        },
+        {
+          "originalUrl": "https://myconciergejapan.com/wp-content/uploads/2018/10/adhoc_slider_1.jpg",
+          "sourcePage": "https://myconciergejapan.com/restaurants/adhoc/",
+          "credit": "ad hoc / My Concierge Japan",
+          "note": "ad hoc booking-partner gallery dish; no current course inclusion inferred",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-19/batch99-adhoc-3-736fb4fcda14eef3.webp",
+          "sha256": "736fb4fcda14eef3ad4b3cd3bca75b249e7038d92089e17902f21f4349ff29b2",
+          "width": 960,
+          "height": 590
+        },
+        {
+          "originalUrl": "https://myconciergejapan.com/wp-content/uploads/2018/10/adhoc_slider_4.jpg",
+          "sourcePage": "https://myconciergejapan.com/restaurants/adhoc/",
+          "credit": "ad hoc / My Concierge Japan",
+          "note": "ad hoc booking-partner gallery dish; no current course inclusion inferred",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-19/batch99-adhoc-4-b7b6b5e63638a79b.webp",
+          "sha256": "b7b6b5e63638a79baa4c2e21be23d5db3c9766489437ba4e6c069aeb27363b91",
+          "width": 960,
+          "height": 590
+        },
+        {
+          "originalUrl": "https://myconciergejapan.com/wp-content/uploads/2018/10/adhoc_slider_5.jpg",
+          "sourcePage": "https://myconciergejapan.com/restaurants/adhoc/",
+          "credit": "ad hoc / My Concierge Japan",
+          "note": "ad hoc booking-partner gallery dish; no current course inclusion inferred",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-19/batch99-adhoc-5-e67a7a628666a0ea.webp",
+          "sha256": "e67a7a628666a0ea168304eadd0852c9b1d28e72933f997463b61a1b57310ed4",
+          "width": 960,
+          "height": 590
+        },
+        {
+          "originalUrl": "https://myconciergejapan.com/wp-content/uploads/2018/10/adhoc_slider_6.jpg",
+          "sourcePage": "https://myconciergejapan.com/restaurants/adhoc/",
+          "credit": "ad hoc / My Concierge Japan",
+          "note": "ad hoc booking-partner gallery dish; no current course inclusion inferred",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-19/batch99-adhoc-6-2653828bf0312e29.webp",
+          "sha256": "2653828bf0312e296e4be82133830d40061d8a98b295462f06a2dd6d1ff08878",
+          "width": 960,
+          "height": 590
+        }
+      ]
+    }
+  ],
+  "publicationStatus": {
+    "local": "saved and publicly verified",
+    "production": "saved and publicly verified",
+    "publicHttpsVerified": true
+  },
+  "deployment": "No deployment, build, restart or production configuration change.",
+  "researchGaps": [
+    "Osaka Top needs7and Specials3after this batch if verified. All Coming soon sections and several Just opened sections remain below30; full city/tab shortages recorded in refreshed audit.",
+    "Agnel d’or November15special menu/year/meals verified in primary TableCheck record. Dishes are not announced; ordinary autumn dishes not assigned. Staff-led7plates is not a discount from chef’s10plates. Cached September27special ignored. Six-plate lunch restricted to non-holiday weekdays; ordinary courses exclude November15.",
+    "Agnel d’or official JS gallery inspected via rendered browser and booking/gallery links. Three own MICHELIN-credited images selected; four recommendation images of other venues rejected. September2026branch drinks-menu photograph transcribed only where legible; unclear wine lines and stock/prices remain for reconfirmation. Current dishes from operator-linked TableCheck, not the differing Septembervisit.",
+    "ad hoc original HTTP operator pages accessible; HTTPS502and Tabelogplaincurl403 recorded. Current managed booking plans and operator-linked MyConciergeJapan accessible via opened pages. Lunch price rose from¥14,300all-in to¥16,500from September3per partner; old own menu not used. Earlier dinner arrival18:30used due conflicting19:00operator/partner. Official homepage background was also downloaded and visually checked: it is a botanical landscape, not the restaurant, so it was excluded from venue photos. Staff page portrait is not a dining-room/food gallery.",
+    "ad hoc no current named drinks/prices or dated promotion found after operator menu/staff/news/reservation/access, official-linked booking partner and managed course search. No regular tasting menu presented as a special. No independent dining rubric created."
+  ],
+  "photoReview": {
+    "downloadedCandidates": 14,
+    "selectedPhotos": 10,
+    "method": "Three Agnel d’or exact-branch MICHELIN credited gallery photos and seven official-linked ad hoc booking-gallery photos downloaded with plain curl, decoded and visually reviewed. Four Agnel recommendation images rejected as other restaurants. Representative interior card images selected; unlabelled dishes do not imply names, current availability or course membership. All selected Azure photos publicly fetched and SHA256/decode verified. The separately inspected official ad hoc homepage background is an off-subject botanical landscape and was excluded.",
+    "correction": "One initially attached Agnel recommendation photo was identified by image metadata as Yiwanshui and detached via a fresh, narrowly filtered PinMedium soft-delete in both environments. Before-record evidence retained in ignored batch audit files. Final galleries contain only three Agnel d’or images and seven ad hoc images; representative card and Specials images were the correct Agnel interior throughout."
+  },
+  "scheduleVerification": {
+    "boundaries": [
+      {
+        "at": "2026-11-14T03:00:00.000Z",
+        "active": false
+      },
+      {
+        "at": "2026-11-15T02:59:00.000Z",
+        "active": false
+      },
+      {
+        "at": "2026-11-15T03:00:00.000Z",
+        "active": true
+      },
+      {
+        "at": "2026-11-15T03:59:00.000Z",
+        "active": true
+      },
+      {
+        "at": "2026-11-15T04:00:00.000Z",
+        "active": false
+      },
+      {
+        "at": "2026-11-15T08:59:00.000Z",
+        "active": false
+      },
+      {
+        "at": "2026-11-15T09:00:00.000Z",
+        "active": true
+      },
+      {
+        "at": "2026-11-15T10:29:00.000Z",
+        "active": true
+      },
+      {
+        "at": "2026-11-15T10:30:00.000Z",
+        "active": false
+      },
+      {
+        "at": "2026-11-16T03:00:00.000Z",
+        "active": false
+      },
+      {
+        "at": "2027-11-15T03:00:00.000Z",
+        "active": false
+      }
+    ],
+    "nextStarts": [
+      {
+        "startsAt": "2026-11-15T03:00:00.000Z",
+        "end": "13:00"
+      }
+    ]
+  },
+  "verification": {
+    "local": {
+      "profiles": [
+        {
+          "pinId": 18269,
+          "sourceUrl": "https://www.agneldor.com/",
+          "name": "Agnel d’or — Awaza",
+          "contentId": 1915,
+          "contentRevision": 1,
+          "verifiedGalleryLinks": 3,
+          "publicPinStatus": 200,
+          "apiBase": "http://localhost:3000",
+          "publicBase": "http://localhost:3000"
+        },
+        {
+          "pinId": 18270,
+          "sourceUrl": "http://adhoc2014.jp/",
+          "name": "ad hoc — Fukushima Hotarumachi",
+          "contentId": 1916,
+          "contentRevision": 1,
+          "verifiedGalleryLinks": 7,
+          "publicPinStatus": 200,
+          "apiBase": "http://localhost:3000",
+          "publicBase": "http://localhost:3000"
+        }
+      ],
+      "guides": [
+        {
+          "pinId": 18269,
+          "region": "osaka",
+          "view": "top",
+          "neighborhood": "Awaza / Nishihommachi",
+          "nativeTitleAndImage": true,
+          "hrefs": [
+            "/pin/18269/agnel-d-or-awaza-opens-2013-08-08"
+          ],
+          "browserFiltered": false,
+          "publicBase": "http://localhost:3000",
+          "guideStatus": 200,
+          "offers": []
+        },
+        {
+          "pinId": 18269,
+          "region": "osaka",
+          "view": "discounts",
+          "neighborhood": "Awaza / Nishihommachi",
+          "nativeTitleAndImage": true,
+          "hrefs": [
+            "/pin/18269/agnel-d-or-awaza-opens-2013-08-08"
+          ],
+          "browserFiltered": false,
+          "publicBase": "http://localhost:3000",
+          "guideStatus": 200,
+          "offers": [
+            {
+              "id": "https://www.agneldor.com/#0",
+              "name": "Agnel d’or — Awaza",
+              "neighborhood": "Awaza / Nishihommachi",
+              "address": "1F Awaza Jutaku Sanei Building, 2-4-4 Nishihommachi, Nishi-ku, Osaka",
+              "restaurantHref": "/pin/18269/agnel-d-or-awaza-opens-2013-08-08",
+              "checkedAt": "2026-10-19",
+              "special": {
+                "kind": "other",
+                "title": "Agnel d’or November15 staff-led seven-plate special",
+                "schedule": "Sunday November15,2026: lunch12:00–13:00last arrival; dinner18:00–19:30last arrival, JST.",
+                "menuLabel": "Agnel d’or — November15 staff-led special",
+                "sourceUrl": "https://www.tablecheck.com/ja/agneldor",
+                "validFrom": "2026-11-15",
+                "conditions": [
+                  "Reserve in advance; published availability is not a promise of an unbooked table.",
+                  "Tax included; additional10%service. No discount claim; different course from ordinary10-plate dinner.",
+                  "Chef absent for an event; young staff cook. Exact dishes not announced.",
+                  "Ordinary courses do not apply on this date."
+                ],
+                "discounted": false,
+                "description": "One-day seven-plate course cooked by the young team while the chef attends an event. Lunch and dinner; ¥11,000tax included plus10%service. Dishes announced on the day.",
+                "limitedTime": true,
+                "availability": {
+                  "windows": [
+                    {
+                      "end": "13:00",
+                      "days": [
+                        0
+                      ],
+                      "start": "12:00"
+                    },
+                    {
+                      "end": "19:30",
+                      "days": [
+                        0
+                      ],
+                      "start": "18:00"
+                    }
+                  ]
+                },
+                "validThrough": "2026-11-15"
+              },
+              "venueKey": "agneldor.com",
+              "photo": {
+                "alt": "Agnel d’or dining room",
+                "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-19/batch99-agnel-3-b063361d96244605.webp",
+                "credit": "agnel d’or (via MICHELIN Guide)",
+                "checkedAt": "2026-10-19",
+                "sourceUrl": "https://guide.michelin.com/jp/ja/osaka-region/osaka/restaurant/agnel-d-or",
+                "originalUrl": "https://prod-pics.guide.michelin.com/api/public/content/f8a4739a1a72489b9d1dc43d9a3c3fa8.jpeg?format=webp&w=500&h=500"
+              },
+              "menu": {
+                "url": "https://www.tablecheck.com/ja/agneldor",
+                "note": "Primary TableCheck menu record69f025e37114d3f4c52bae35 expressly sets valid_date_ranges2026-11-15to2026-11-15and meals lunch/dinner. No dish list published; ordinary courses expressly exclude this date.",
+                "items": [
+                  {
+                    "name": "【特別スタンダード】Menu Soir 7Plats",
+                    "note": "Tax included; additional10%service. November15,2026only, lunch and dinner. Young staff cook while chef attends an event; ask on the day for actual dishes.",
+                    "price": 11000
+                  }
+                ],
+                "label": "Agnel d’or — November15 staff-led special",
+                "coverage": "published",
+                "currency": "JPY"
+              },
+              "startsAt": "2026-11-15T03:00:00.000Z",
+              "end": "13:00"
+            }
+          ]
+        },
+        {
+          "pinId": 18270,
+          "region": "osaka",
+          "view": "top",
+          "neighborhood": "Fukushima / Hotarumachi",
+          "nativeTitleAndImage": true,
+          "hrefs": [
+            "/pin/18270/ad-hoc-fukushima-hotarumachi-opens-2014-09-09"
+          ],
+          "browserFiltered": false,
+          "publicBase": "http://localhost:3000",
+          "guideStatus": 200,
+          "offers": []
+        }
+      ]
+    },
+    "production": {
+      "profiles": [
+        {
+          "pinId": 18271,
+          "sourceUrl": "https://www.agneldor.com/",
+          "name": "Agnel d’or — Awaza",
+          "contentId": 1915,
+          "contentRevision": 1,
+          "verifiedGalleryLinks": 3,
+          "publicPinStatus": 200,
+          "apiBase": "https://www.chronopin.com",
+          "publicBase": "https://www.chronopin.com"
+        },
+        {
+          "pinId": 18272,
+          "sourceUrl": "http://adhoc2014.jp/",
+          "name": "ad hoc — Fukushima Hotarumachi",
+          "contentId": 1916,
+          "contentRevision": 1,
+          "verifiedGalleryLinks": 7,
+          "publicPinStatus": 200,
+          "apiBase": "https://www.chronopin.com",
+          "publicBase": "https://www.chronopin.com"
+        }
+      ],
+      "guides": [
+        {
+          "pinId": 18271,
+          "region": "osaka",
+          "view": "top",
+          "neighborhood": "Awaza / Nishihommachi",
+          "nativeTitleAndImage": true,
+          "hrefs": [
+            "/pin/18271/agnel-d-or-awaza-opens-2013-08-08"
+          ],
+          "browserFiltered": false,
+          "publicBase": "https://www.chronopin.com",
+          "guideStatus": 200,
+          "offers": []
+        },
+        {
+          "pinId": 18271,
+          "region": "osaka",
+          "view": "discounts",
+          "neighborhood": "Awaza / Nishihommachi",
+          "nativeTitleAndImage": true,
+          "hrefs": [
+            "/pin/18271/agnel-d-or-awaza-opens-2013-08-08"
+          ],
+          "browserFiltered": false,
+          "publicBase": "https://www.chronopin.com",
+          "guideStatus": 200,
+          "offers": [
+            {
+              "id": "https://www.agneldor.com/#0",
+              "name": "Agnel d’or — Awaza",
+              "neighborhood": "Awaza / Nishihommachi",
+              "address": "1F Awaza Jutaku Sanei Building, 2-4-4 Nishihommachi, Nishi-ku, Osaka",
+              "restaurantHref": "/pin/18271/agnel-d-or-awaza-opens-2013-08-08",
+              "checkedAt": "2026-10-19",
+              "special": {
+                "kind": "other",
+                "title": "Agnel d’or November15 staff-led seven-plate special",
+                "schedule": "Sunday November15,2026: lunch12:00–13:00last arrival; dinner18:00–19:30last arrival, JST.",
+                "menuLabel": "Agnel d’or — November15 staff-led special",
+                "sourceUrl": "https://www.tablecheck.com/ja/agneldor",
+                "validFrom": "2026-11-15",
+                "conditions": [
+                  "Reserve in advance; published availability is not a promise of an unbooked table.",
+                  "Tax included; additional10%service. No discount claim; different course from ordinary10-plate dinner.",
+                  "Chef absent for an event; young staff cook. Exact dishes not announced.",
+                  "Ordinary courses do not apply on this date."
+                ],
+                "discounted": false,
+                "description": "One-day seven-plate course cooked by the young team while the chef attends an event. Lunch and dinner; ¥11,000tax included plus10%service. Dishes announced on the day.",
+                "limitedTime": true,
+                "availability": {
+                  "windows": [
+                    {
+                      "end": "13:00",
+                      "days": [
+                        0
+                      ],
+                      "start": "12:00"
+                    },
+                    {
+                      "end": "19:30",
+                      "days": [
+                        0
+                      ],
+                      "start": "18:00"
+                    }
+                  ]
+                },
+                "validThrough": "2026-11-15"
+              },
+              "venueKey": "agneldor.com",
+              "photo": {
+                "alt": "Agnel d’or dining room",
+                "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-19/batch99-agnel-3-b063361d96244605.webp",
+                "credit": "agnel d’or (via MICHELIN Guide)",
+                "checkedAt": "2026-10-19",
+                "sourceUrl": "https://guide.michelin.com/jp/ja/osaka-region/osaka/restaurant/agnel-d-or",
+                "originalUrl": "https://prod-pics.guide.michelin.com/api/public/content/f8a4739a1a72489b9d1dc43d9a3c3fa8.jpeg?format=webp&w=500&h=500"
+              },
+              "menu": {
+                "url": "https://www.tablecheck.com/ja/agneldor",
+                "note": "Primary TableCheck menu record69f025e37114d3f4c52bae35 expressly sets valid_date_ranges2026-11-15to2026-11-15and meals lunch/dinner. No dish list published; ordinary courses expressly exclude this date.",
+                "items": [
+                  {
+                    "name": "【特別スタンダード】Menu Soir 7Plats",
+                    "note": "Tax included; additional10%service. November15,2026only, lunch and dinner. Young staff cook while chef attends an event; ask on the day for actual dishes.",
+                    "price": 11000
+                  }
+                ],
+                "label": "Agnel d’or — November15 staff-led special",
+                "coverage": "published",
+                "currency": "JPY"
+              },
+              "startsAt": "2026-11-15T03:00:00.000Z",
+              "end": "13:00"
+            }
+          ]
+        },
+        {
+          "pinId": 18272,
+          "region": "osaka",
+          "view": "top",
+          "neighborhood": "Fukushima / Hotarumachi",
+          "nativeTitleAndImage": true,
+          "hrefs": [
+            "/pin/18272/ad-hoc-fukushima-hotarumachi-opens-2014-09-09"
+          ],
+          "browserFiltered": false,
+          "publicBase": "https://www.chronopin.com",
+          "guideStatus": 200,
+          "offers": []
+        }
+      ]
+    }
+  },
+  "verifiedGuideCounts": {
+    "local": [
+      {
+        "environment": "local",
+        "city": "fukuoka",
+        "view": "upcoming",
+        "verificationBase": "http://localhost:3000",
+        "count": 9,
+        "ids": [
+          "15398",
+          "15410",
+          "15411",
+          "15415",
+          "15424",
+          "15425",
+          "15426",
+          "15914",
+          "15924"
+        ],
+        "verifiedAt": "2026-10-20T00:49:49.658995+00:00"
+      },
+      {
+        "environment": "local",
+        "city": "fukuoka",
+        "view": "new",
+        "verificationBase": "http://localhost:3000",
+        "count": 20,
+        "ids": [
+          "15399",
+          "15400",
+          "15401",
+          "15409",
+          "15412",
+          "15414",
+          "15421",
+          "15422",
+          "15423",
+          "15427",
+          "15428",
+          "15969",
+          "16026",
+          "16027",
+          "16078",
+          "16290",
+          "16291",
+          "16292",
+          "16326",
+          "17625"
+        ],
+        "verifiedAt": "2026-10-20T00:49:49.667731+00:00"
+      },
+      {
+        "environment": "local",
+        "city": "fukuoka",
+        "view": "top",
+        "verificationBase": "http://localhost:3000",
+        "count": 22,
+        "ids": [
+          "15402",
+          "15403",
+          "15404",
+          "15405",
+          "15406",
+          "15407",
+          "15408",
+          "15413",
+          "15416",
+          "15417",
+          "15418",
+          "15419",
+          "15420",
+          "15429",
+          "18132",
+          "18133",
+          "18134",
+          "18147",
+          "18148",
+          "18149",
+          "18150",
+          "18176"
+        ],
+        "verifiedAt": "2026-10-20T00:49:49.677049+00:00"
+      },
+      {
+        "environment": "local",
+        "city": "fukuoka",
+        "view": "discounts",
+        "verificationBase": "http://localhost:3000",
+        "count": 33,
+        "ids": [
+          "https://010bld.com/gohgan/",
+          "https://333sanmitomatoramen.com/store/%e5%a4%a9%e7%a5%9e%e5%a4%a7%e5%90%8d%e6%9c%ac%e5%ba%97/",
+          "https://and-gallery.com/#hukuoka",
+          "https://cene.tokyo/collections/fukuoka-open",
+          "https://fukuoka-orientalhotel.com/restaurant/linksquare/",
+          "https://fukuokaseahawk.hiltonjapan.co.jp/restaurants/clouds",
+          "https://fukuokaseahawk.hiltonjapan.co.jp/restaurants/seala",
+          "https://kusiyatubame.owst.jp/",
+          "https://le-bistro-aki.com/",
+          "https://onefukuoka-building.jp/shop/55",
+          "https://prtimes.jp/main/html/rd/p/000000060.000179076.html",
+          "https://prtimes.jp/main/html/rd/p/000000064.000152670.html",
+          "https://prtimes.jp/main/html/rd/p/000000170.000101757.html",
+          "https://pukutoco.com/sumomo-bakery-1007open/",
+          "https://pukutoco.com/sumomobakery-akasaka1019open/",
+          "https://toeihotel-fukuoka.com/restaurant/bistro_atrie/",
+          "https://www.eggsnthingsjapan.com/hakata/",
+          "https://www.f-sunpalace.com/restaurant/lagoon/",
+          "https://www.fuk.hotelokura.co.jp/restaurant/lechampdor/",
+          "https://www.gate-hotel.jp/fukuoka/rb/agfukuoka.html",
+          "https://www.ginzalion.jp/shop/brand/yebisubar/onefukuokabldg.html",
+          "https://www.hiramatsurestaurant.jp/hiramatsu-hakata/",
+          "https://www.hiramatsurestaurant.jp/kubotsu/",
+          "https://www.hotelnikko-fukuoka.com/restaurant/celebrites/",
+          "https://www.hotelnikko-fukuoka.com/restaurant/serena/",
+          "https://www.hotpepper.jp/strJ001276550/",
+          "https://www.kys-newotani.co.jp/hakata/restaurant/castillian-bar/",
+          "https://www.orec.co.jp/greenlab-fukuoka/",
+          "https://www.pochi-ito.com/",
+          "https://www.princehotels.co.jp/momochihama/restaurant/yocaterrace/",
+          "https://www.quil-fait-bon.com/pages/fukuoka",
+          "https://www.recent-hotel.com/restaurant/",
+          "https://www.tenchika.com/shop/h_b_antique/"
+        ],
+        "verifiedAt": "2026-10-20T00:49:49.698819+00:00"
+      },
+      {
+        "environment": "local",
+        "city": "osaka",
+        "view": "upcoming",
+        "verificationBase": "http://localhost:3000",
+        "count": 12,
+        "ids": [
+          "15432",
+          "15445",
+          "15447",
+          "15448",
+          "15449",
+          "15458",
+          "15913",
+          "15925",
+          "15975",
+          "16023",
+          "16079",
+          "17168"
+        ],
+        "verifiedAt": "2026-10-20T00:49:50.016770+00:00"
+      },
+      {
+        "environment": "local",
+        "city": "osaka",
+        "view": "new",
+        "verificationBase": "http://localhost:3000",
+        "count": 22,
+        "ids": [
+          "15431",
+          "15435",
+          "15436",
+          "15437",
+          "15438",
+          "15439",
+          "15446",
+          "15451",
+          "15452",
+          "15453",
+          "15454",
+          "15455",
+          "15456",
+          "15457",
+          "17108",
+          "17109",
+          "17110",
+          "17111",
+          "17112",
+          "17622",
+          "17623",
+          "17626"
+        ],
+        "verifiedAt": "2026-10-20T00:49:50.025258+00:00"
+      },
+      {
+        "environment": "local",
+        "city": "osaka",
+        "view": "top",
+        "verificationBase": "http://localhost:3000",
+        "count": 23,
+        "ids": [
+          "15430",
+          "15433",
+          "15434",
+          "15440",
+          "15441",
+          "15442",
+          "15443",
+          "15444",
+          "15450",
+          "15971",
+          "18135",
+          "18136",
+          "18137",
+          "18151",
+          "18152",
+          "18153",
+          "18154",
+          "18166",
+          "18168",
+          "18267",
+          "18268",
+          "18269",
+          "18270"
+        ],
+        "verifiedAt": "2026-10-20T00:49:50.033460+00:00"
+      },
+      {
+        "environment": "local",
+        "city": "osaka",
+        "view": "discounts",
+        "verificationBase": "http://localhost:3000",
+        "count": 27,
+        "ids": [
+          "https://and-gallery.com/#nanba",
+          "https://big-step.co.jp/shop/detail/63",
+          "https://conrad-osaka.hiltonjapan.co.jp/restaurants/40skybar",
+          "https://conrad-osaka.hiltonjapan.co.jp/restaurants/atmos",
+          "https://cross-osaka.orixhotelsandresorts.com/#restaurant",
+          "https://csm-cafe.ltr-online.com/lp/csm-cafe-s022",
+          "https://doubletree-osaka-castle.hiltonjapan.co.jp/restaurants/lounge-bar-sen",
+          "https://doubletree-osaka-castle.hiltonjapan.co.jp/restaurants/restaurant-sen",
+          "https://gabuchiki.com/news/view/308",
+          "https://icosaka.com/offer/pierre_autumnmenu/",
+          "https://jblm2024.wixsite.com/fujiyama-tokyo/%E8%A4%87%E8%A3%BD-namba-osaka",
+          "https://labaie.ritzcarltonosaka.com/",
+          "https://osaka.ekimaru.com/shopguide/detail/103",
+          "https://osaka.hiltonjapan.co.jp/plans/restaurants/other/myplace-happyhour",
+          "https://patinahotels.com/osaka/drink-and-dine/p72",
+          "https://prtimes.jp/main/html/rd/p/000000001.000192433.html/",
+          "https://splendido.ritzcarltonosaka.com/",
+          "https://www.agneldor.com/",
+          "https://www.daimaru.co.jp/shinsaibashi/restaurant/cucina-bella.html",
+          "https://www.gate-hotel.jp/osaka/rb/aosaka.html",
+          "https://www.gate-hotel.jp/osaka/rb/peaks.html",
+          "https://www.hiramatsurestaurant.jp/hiramatsu-lafete/",
+          "https://www.hiramatsurestaurant.jp/hiramatsu-lemidi/",
+          "https://www.hotpepper.jp/strJ004661366/",
+          "https://www.labecasse1990.com/",
+          "https://www.quil-fait-bon.com/pages/grand-front-osaka",
+          "https://www.regine.stregisosaka.com/"
+        ],
+        "verifiedAt": "2026-10-20T00:49:50.051407+00:00"
+      },
+      {
+        "environment": "local",
+        "city": "kyoto",
+        "view": "upcoming",
+        "verificationBase": "http://localhost:3000",
+        "count": 11,
+        "ids": [
+          "15483",
+          "15499",
+          "15500",
+          "15909",
+          "15910",
+          "15911",
+          "15912",
+          "15922",
+          "15931",
+          "16323",
+          "17169"
+        ],
+        "verifiedAt": "2026-10-20T00:49:50.402315+00:00"
+      },
+      {
+        "environment": "local",
+        "city": "kyoto",
+        "view": "new",
+        "verificationBase": "http://localhost:3000",
+        "count": 33,
+        "ids": [
+          "15460",
+          "15461",
+          "15462",
+          "15463",
+          "15464",
+          "15465",
+          "15466",
+          "15467",
+          "15468",
+          "15469",
+          "15470",
+          "15471",
+          "15472",
+          "15473",
+          "15474",
+          "15475",
+          "15476",
+          "15477",
+          "15478",
+          "15479",
+          "15480",
+          "15481",
+          "15482",
+          "15489",
+          "15490",
+          "15491",
+          "15492",
+          "15493",
+          "15494",
+          "15495",
+          "15498",
+          "18025",
+          "18026"
+        ],
+        "verifiedAt": "2026-10-20T00:49:50.411662+00:00"
+      },
+      {
+        "environment": "local",
+        "city": "kyoto",
+        "view": "top",
+        "verificationBase": "http://localhost:3000",
+        "count": 30,
+        "ids": [
+          "15459",
+          "15484",
+          "15485",
+          "15486",
+          "15487",
+          "15488",
+          "15496",
+          "15497",
+          "15501",
+          "15973",
+          "18052",
+          "18060",
+          "18061",
+          "18098",
+          "18099",
+          "18117",
+          "18119",
+          "18155",
+          "18156",
+          "18170",
+          "18171",
+          "18173",
+          "18189",
+          "18191",
+          "18192",
+          "18207",
+          "18208",
+          "18209",
+          "18210",
+          "18211"
+        ],
+        "verifiedAt": "2026-10-20T00:49:50.420340+00:00"
+      },
+      {
+        "environment": "local",
+        "city": "kyoto",
+        "view": "discounts",
+        "verificationBase": "http://localhost:3000",
+        "count": 34,
+        "ids": [
+          "https://cenci-kyoto.com/",
+          "https://droit-kyoto.jp/",
+          "https://hotelfauchonkyoto.com/ja/gourmet/fauchon-salon-de-the-kyoto/",
+          "https://kyoto.hiltonjapan.co.jp/restaurants/teori",
+          "https://www.hiramatsurestaurant.jp/hiramatsu-kodaiji/",
+          "https://www.hiramatsurestaurant.jp/la-luce/",
+          "https://www.instagram.com/jbowl_ritsumeikan_mae/",
+          "https://www.keihanhotels-resorts.co.jp/kyoto-centuryhotel/topics/happyhour-2/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/011/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/012/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/013/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/014/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/015/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/016/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/017/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/018/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/019/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/020/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/022/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/023/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/026/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/028/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/031/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/033/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/039/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/040/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/042/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/043/",
+          "https://www.princess-kyoto.co.jp/restaurant/ambercourt/",
+          "https://www.princess-kyoto.co.jp/restaurant/darley/",
+          "https://www.princess-kyoto.co.jp/restaurant/hisuien/",
+          "https://www.princess-kyoto.co.jp/restaurant/hoen/",
+          "https://www.princess-kyoto.co.jp/restaurant/sagano/",
+          "https://www.quil-fait-bon.com/pages/kyoto"
+        ],
+        "verifiedAt": "2026-10-20T00:49:50.438036+00:00"
+      },
+      {
+        "environment": "local",
+        "city": "nagoya",
+        "view": "upcoming",
+        "verificationBase": "http://localhost:3000",
+        "count": 11,
+        "ids": [
+          "15510",
+          "15512",
+          "15517",
+          "15518",
+          "15521",
+          "15522",
+          "15900",
+          "15901",
+          "15902",
+          "16075",
+          "16080"
+        ],
+        "verifiedAt": "2026-10-20T00:49:50.793405+00:00"
+      },
+      {
+        "environment": "local",
+        "city": "nagoya",
+        "view": "new",
+        "verificationBase": "http://localhost:3000",
+        "count": 31,
+        "ids": [
+          "15509",
+          "15511",
+          "15515",
+          "15516",
+          "15519",
+          "15520",
+          "15898",
+          "15899",
+          "15915",
+          "15916",
+          "15917",
+          "15918",
+          "15919",
+          "15920",
+          "15921",
+          "15932",
+          "15964",
+          "15965",
+          "16020",
+          "16021",
+          "16022",
+          "16076",
+          "16294",
+          "16295",
+          "16767",
+          "16771",
+          "16800",
+          "17107",
+          "17166",
+          "17167",
+          "18045"
+        ],
+        "verifiedAt": "2026-10-20T00:49:50.802533+00:00"
+      },
+      {
+        "environment": "local",
+        "city": "nagoya",
+        "view": "top",
+        "verificationBase": "http://localhost:3000",
+        "count": 30,
+        "ids": [
+          "15502",
+          "15503",
+          "15504",
+          "15505",
+          "15506",
+          "15507",
+          "15508",
+          "15513",
+          "15514",
+          "15523",
+          "15524",
+          "15972",
+          "16024",
+          "18044",
+          "18100",
+          "18101",
+          "18121",
+          "18138",
+          "18190",
+          "18193",
+          "18194",
+          "18212",
+          "18213",
+          "18229",
+          "18231",
+          "18232",
+          "18233",
+          "18234",
+          "18235",
+          "18236"
+        ],
+        "verifiedAt": "2026-10-20T00:49:50.811606+00:00"
+      },
+      {
+        "environment": "local",
+        "city": "nagoya",
+        "view": "discounts",
+        "verificationBase": "http://localhost:3000",
+        "count": 31,
+        "ids": [
+          "https://and-gallery.com/#nagoya",
+          "https://csm-cafe.ltr-online.com/lp/csm-cafe-s017",
+          "https://french-kitamura.jp/",
+          "https://kinzan.nagoya/archives/news/2853/",
+          "https://kobekangroup.com/shop/obanzai_kabtoya/",
+          "https://lebeurrenoisettetokyo.com/nagoya/",
+          "https://nagoya.hiltonjapan.co.jp/restaurants/hideaway3-3",
+          "https://nagoya.hiltonjapan.co.jp/restaurants/inplace3-3",
+          "https://nagoya.hiltonjapan.co.jp/restaurants/ouchou",
+          "https://nagoya.parco.jp/shop/detail/?cd=009191",
+          "https://prtimes.jp/main/html/rd/p/000000004.000116722.html",
+          "https://prtimes.jp/main/html/rd/p/000004440.000018505.html",
+          "https://reconnaissance-nagoya.com/",
+          "https://thetowerhotel.jp/restaurant/",
+          "https://www.anacrowneplaza-nagoya.jp/pages/restaurant_gardencourt",
+          "https://www.anacrowneplaza-nagoya.jp/pages/restaurant_karin",
+          "https://www.anacrowneplaza-nagoya.jp/pages/restaurant_stargate",
+          "https://www.anacrowneplaza-nagoya.jp/pages/restaurant_winglounge",
+          "https://www.associa.com/nma/restaurant/pergola/",
+          "https://www.centralpark.co.jp/shop/sharecafe/",
+          "https://www.espacionagoya.com/restaurant-bar/the-bar-castle/",
+          "https://www.hiramatsurestaurant.jp/aubergedelill-nagoya/",
+          "https://www.hotpepper.jp/strJ004698778/",
+          "https://www.hotpepper.jp/strJ004699003/",
+          "https://www.kochuten.jp/",
+          "https://www.komeda.co.jp/shop/detail.html?id=1215",
+          "https://www.lafloraison-t.jp/",
+          "https://www.livingroom-skybar.com/",
+          "https://www.princehotels.co.jp/nagoya/restaurant/skydining/",
+          "https://www.quil-fait-bon.com/pages/nagoya-sakae",
+          "https://www.thekawabunnagoya.com/thekawabunnagoya/restaurant/"
+        ],
+        "verifiedAt": "2026-10-20T00:49:50.833642+00:00"
+      },
+      {
+        "environment": "local",
+        "city": "tokyo",
+        "view": "upcoming",
+        "verificationBase": "http://localhost:3000",
+        "count": 14,
+        "ids": [
+          "15526",
+          "15538",
+          "15541",
+          "15544",
+          "15546",
+          "15555",
+          "15556",
+          "15557",
+          "15923",
+          "15929",
+          "15930",
+          "17106",
+          "17621",
+          "18027"
+        ],
+        "verifiedAt": "2026-10-20T00:49:51.164755+00:00"
+      },
+      {
+        "environment": "local",
+        "city": "tokyo",
+        "view": "new",
+        "verificationBase": "http://localhost:3000",
+        "count": 23,
+        "ids": [
+          "15527",
+          "15539",
+          "15540",
+          "15551",
+          "15552",
+          "15553",
+          "15554",
+          "15558",
+          "15966",
+          "15967",
+          "15968",
+          "16289",
+          "16325",
+          "17170",
+          "17171",
+          "17172",
+          "17173",
+          "17628",
+          "18043",
+          "18051",
+          "18058",
+          "18102",
+          "18103"
+        ],
+        "verifiedAt": "2026-10-20T00:49:51.186953+00:00"
+      },
+      {
+        "environment": "local",
+        "city": "tokyo",
+        "view": "top",
+        "verificationBase": "http://localhost:3000",
+        "count": 30,
+        "ids": [
+          "15525",
+          "15528",
+          "15529",
+          "15530",
+          "15531",
+          "15532",
+          "15533",
+          "15534",
+          "15535",
+          "15536",
+          "15537",
+          "15542",
+          "15543",
+          "15545",
+          "15547",
+          "15548",
+          "15549",
+          "15550",
+          "15559",
+          "15560",
+          "15561",
+          "15562",
+          "15903",
+          "15974",
+          "18122",
+          "18123",
+          "18140",
+          "18141",
+          "18157",
+          "18158"
+        ],
+        "verifiedAt": "2026-10-20T00:49:51.208086+00:00"
+      },
+      {
+        "environment": "local",
+        "city": "tokyo",
+        "view": "discounts",
+        "verificationBase": "http://localhost:3000",
+        "count": 37,
+        "ids": [
+          "https://and-gallery.com/#ikebukuro",
+          "https://and-gallery.com/#yurakucho",
+          "https://cocco.eastone.co.jp/shop/gotanda",
+          "https://cocco.eastone.co.jp/shop/kameido",
+          "https://conrad-tokyo.hiltonjapan.co.jp/restaurants/cerise",
+          "https://conrad-tokyo.hiltonjapan.co.jp/restaurants/chinablue",
+          "https://conrad-tokyo.hiltonjapan.co.jp/restaurants/twentyeight",
+          "https://csm-cafe.ltr-online.com/lp/csm-cafe-s012",
+          "https://gourmetpress.net/1488798/",
+          "https://miabocca.eastone.co.jp/shop/Ikebukuro",
+          "https://miabocca.eastone.co.jp/shop/Shakujii-park",
+          "https://miabocca.eastone.co.jp/shop/Shinjuku-takasimaya",
+          "https://prtimes.jp/main/html/rd/p/000000009.000161200.html",
+          "https://prtimes.jp/main/html/rd/p/000000048.000152772.html",
+          "https://prtimes.jp/main/html/rd/p/000000196.000049183.html",
+          "https://prtimes.jp/main/html/rd/p/000000356.000048489.html",
+          "https://prtimes.jp/main/html/rd/p/000000592.000071323.html",
+          "https://prtimes.jp/main/html/rd/p/000004178.000003860.html",
+          "https://sarabethsrestaurants.jp/location/omotesando/",
+          "https://sarabethsrestaurants.jp/location/shinagawa/",
+          "https://sarabethsrestaurants.jp/location/shinjuku/",
+          "https://sarabethsrestaurants.jp/location/tokyo/",
+          "https://shibakoen.bar-shinkai.com/",
+          "https://store-info.skylark.co.jp/syabuyo/map/198490/",
+          "https://tabelog.com/en/tokyo/A1303/A130301/13198692/",
+          "https://tokyo.hiltonjapan.co.jp/restaurants/st_georges_bar",
+          "https://www.andaztokyo.jp/restaurants/jp/thetavern-grill-lounge",
+          "https://www.herofield.com/bbq/tokyoprince/",
+          "https://www.hiramatsurestaurant.jp/jardindessens-tokyo/",
+          "https://www.mesm.jp/en/eat-drink/chefs-theatre.html",
+          "https://www.newotani.co.jp/tokyo/restaurant/gardenlounge/",
+          "https://www.quil-fait-bon.com/pages/aoyama",
+          "https://www.quil-fait-bon.com/pages/grand-maison-ginza",
+          "https://www.quil-fait-bon.com/pages/shinjuku",
+          "https://www.quil-fait-bon.com/pages/tokyo-dome-city",
+          "https://www.quil-fait-bon.com/pages/tokyo-skytree-town-solamachi",
+          "https://www.sunamo.jp/floor/shop_detail.html?UC=1_028"
+        ],
+        "verifiedAt": "2026-10-20T00:49:51.231403+00:00"
+      },
+      {
+        "environment": "local",
+        "city": "sapporo",
+        "view": "upcoming",
+        "verificationBase": "http://localhost:3000",
+        "count": 11,
+        "ids": [
+          "15568",
+          "15569",
+          "15570",
+          "15571",
+          "15597",
+          "15926",
+          "15970",
+          "17103",
+          "18047",
+          "18048",
+          "18054"
+        ],
+        "verifiedAt": "2026-10-20T00:49:51.609766+00:00"
+      },
+      {
+        "environment": "local",
+        "city": "sapporo",
+        "view": "new",
+        "verificationBase": "http://localhost:3000",
+        "count": 28,
+        "ids": [
+          "15580",
+          "15586",
+          "15587",
+          "15588",
+          "15589",
+          "15590",
+          "15591",
+          "15592",
+          "15595",
+          "15596",
+          "16293",
+          "16296",
+          "17104",
+          "17105",
+          "17624",
+          "17627",
+          "18028",
+          "18029",
+          "18030",
+          "18031",
+          "18049",
+          "18055",
+          "18056",
+          "18057",
+          "18104",
+          "18105",
+          "18124",
+          "18125"
+        ],
+        "verifiedAt": "2026-10-20T00:49:51.628634+00:00"
+      },
+      {
+        "environment": "local",
+        "city": "sapporo",
+        "view": "top",
+        "verificationBase": "http://localhost:3000",
+        "count": 30,
+        "ids": [
+          "15563",
+          "15564",
+          "15565",
+          "15566",
+          "15567",
+          "15572",
+          "15573",
+          "15574",
+          "15575",
+          "15576",
+          "15577",
+          "15578",
+          "15579",
+          "15581",
+          "15582",
+          "15583",
+          "15584",
+          "15585",
+          "15593",
+          "15594",
+          "15598",
+          "15599",
+          "15600",
+          "15601",
+          "15602",
+          "15603",
+          "15604",
+          "15605",
+          "15606",
+          "15607"
+        ],
+        "verifiedAt": "2026-10-20T00:49:51.638258+00:00"
+      },
+      {
+        "environment": "local",
+        "city": "sapporo",
+        "view": "discounts",
+        "verificationBase": "http://localhost:3000",
+        "count": 34,
+        "ids": [
+          "https://anan.fuji-tatsu.co.jp/shop/sapporo-sinoro/",
+          "https://chocottosushi-kiwami.owst.jp/",
+          "https://cocco.eastone.co.jp/shop/kitahachijo",
+          "https://cocco.eastone.co.jp/shop/kitaichijo",
+          "https://cocco.eastone.co.jp/shop/kotoniekimae",
+          "https://cocco.eastone.co.jp/shop/miyanosawa",
+          "https://cocco.eastone.co.jp/shop/shindohigashi",
+          "https://cocco.eastone.co.jp/shop/souen",
+          "https://grand1934.com/restaurant/garden-dining-waraku/",
+          "https://grand1934.com/restaurant/kokaku/",
+          "https://grand1934.com/restaurant/lobby-lounge-mizar/",
+          "https://grand1934.com/restaurant/northern-terrace-diner/",
+          "https://grand1934.com/restaurant/old-saloon1934/",
+          "https://miabocca.eastone.co.jp/shop/Kita2jo",
+          "https://miabocca.eastone.co.jp/shop/Kotoni-station",
+          "https://miabocca.eastone.co.jp/shop/Sapporo-station",
+          "https://miabocca.eastone.co.jp/shop/atsubetsuminami",
+          "https://miabocca.eastone.co.jp/shop/sapporoduo",
+          "https://michiru.dkdining.com/sapporo/",
+          "https://prtimes.jp/main/html/rd/p/000000010.000134951.html",
+          "https://store-info.skylark.co.jp/syabuyo/map/198489/",
+          "https://www.anahisapporosusukino.com/restaurants/verde/",
+          "https://www.hyatt.com/hyatt-centric/ja-JP/ctsct-hyatt-centric-sapporo/dining",
+          "https://www.jrhotels.co.jp/tower/restaurant/skyj/",
+          "https://www.keioplaza-sapporo.co.jp/restaurants/akizu/",
+          "https://www.keioplaza-sapporo.co.jp/restaurants/crossvault/",
+          "https://www.keioplaza-sapporo.co.jp/restaurants/glass/",
+          "https://www.keioplaza-sapporo.co.jp/restaurants/miyama/",
+          "https://www.keioplaza-sapporo.co.jp/restaurants/yamanami/",
+          "https://www.princehotels.co.jp/sapporo/restaurant/alldaydininggrandeur",
+          "https://www.princehotels.co.jp/sapporo/restaurant/fuyojo",
+          "https://www.princehotels.co.jp/sapporo/restaurant/katsura",
+          "https://www.princehotels.co.jp/sapporo/restaurant/top_prince",
+          "https://www.tokyuhotels.co.jp/sapporostream/restaurant/splish/plan/angel_devil/index.html"
+        ],
+        "verifiedAt": "2026-10-20T00:49:51.662885+00:00"
+      }
+    ],
+    "production": [
+      {
+        "environment": "production",
+        "city": "fukuoka",
+        "view": "upcoming",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 9,
+        "ids": [
+          "15398",
+          "15410",
+          "15411",
+          "15415",
+          "15424",
+          "15425",
+          "15426",
+          "15914",
+          "15924"
+        ],
+        "verifiedAt": "2026-10-20T00:50:48.795315+00:00"
+      },
+      {
+        "environment": "production",
+        "city": "fukuoka",
+        "view": "new",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 20,
+        "ids": [
+          "15399",
+          "15400",
+          "15401",
+          "15409",
+          "15412",
+          "15414",
+          "15421",
+          "15422",
+          "15423",
+          "15427",
+          "15428",
+          "15969",
+          "16026",
+          "16027",
+          "16078",
+          "16290",
+          "16291",
+          "16292",
+          "16326",
+          "17625"
+        ],
+        "verifiedAt": "2026-10-20T00:50:48.993421+00:00"
+      },
+      {
+        "environment": "production",
+        "city": "fukuoka",
+        "view": "top",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 22,
+        "ids": [
+          "15402",
+          "15403",
+          "15404",
+          "15405",
+          "15406",
+          "15407",
+          "15408",
+          "15413",
+          "15416",
+          "15417",
+          "15418",
+          "15419",
+          "15420",
+          "15429",
+          "18132",
+          "18133",
+          "18134",
+          "18147",
+          "18148",
+          "18149",
+          "18150",
+          "18176"
+        ],
+        "verifiedAt": "2026-10-20T00:50:49.227828+00:00"
+      },
+      {
+        "environment": "production",
+        "city": "fukuoka",
+        "view": "discounts",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 33,
+        "ids": [
+          "https://010bld.com/gohgan/",
+          "https://333sanmitomatoramen.com/store/%e5%a4%a9%e7%a5%9e%e5%a4%a7%e5%90%8d%e6%9c%ac%e5%ba%97/",
+          "https://and-gallery.com/#hukuoka",
+          "https://cene.tokyo/collections/fukuoka-open",
+          "https://fukuoka-orientalhotel.com/restaurant/linksquare/",
+          "https://fukuokaseahawk.hiltonjapan.co.jp/restaurants/clouds",
+          "https://fukuokaseahawk.hiltonjapan.co.jp/restaurants/seala",
+          "https://kusiyatubame.owst.jp/",
+          "https://le-bistro-aki.com/",
+          "https://onefukuoka-building.jp/shop/55",
+          "https://prtimes.jp/main/html/rd/p/000000060.000179076.html",
+          "https://prtimes.jp/main/html/rd/p/000000064.000152670.html",
+          "https://prtimes.jp/main/html/rd/p/000000170.000101757.html",
+          "https://pukutoco.com/sumomo-bakery-1007open/",
+          "https://pukutoco.com/sumomobakery-akasaka1019open/",
+          "https://toeihotel-fukuoka.com/restaurant/bistro_atrie/",
+          "https://www.eggsnthingsjapan.com/hakata/",
+          "https://www.f-sunpalace.com/restaurant/lagoon/",
+          "https://www.fuk.hotelokura.co.jp/restaurant/lechampdor/",
+          "https://www.gate-hotel.jp/fukuoka/rb/agfukuoka.html",
+          "https://www.ginzalion.jp/shop/brand/yebisubar/onefukuokabldg.html",
+          "https://www.hiramatsurestaurant.jp/hiramatsu-hakata/",
+          "https://www.hiramatsurestaurant.jp/kubotsu/",
+          "https://www.hotelnikko-fukuoka.com/restaurant/celebrites/",
+          "https://www.hotelnikko-fukuoka.com/restaurant/serena/",
+          "https://www.hotpepper.jp/strJ001276550/",
+          "https://www.kys-newotani.co.jp/hakata/restaurant/castillian-bar/",
+          "https://www.orec.co.jp/greenlab-fukuoka/",
+          "https://www.pochi-ito.com/",
+          "https://www.princehotels.co.jp/momochihama/restaurant/yocaterrace/",
+          "https://www.quil-fait-bon.com/pages/fukuoka",
+          "https://www.recent-hotel.com/restaurant/",
+          "https://www.tenchika.com/shop/h_b_antique/"
+        ],
+        "verifiedAt": "2026-10-20T00:50:49.754290+00:00"
+      },
+      {
+        "environment": "production",
+        "city": "osaka",
+        "view": "upcoming",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 12,
+        "ids": [
+          "15432",
+          "15445",
+          "15447",
+          "15448",
+          "15449",
+          "15458",
+          "15913",
+          "15925",
+          "15975",
+          "16023",
+          "16079",
+          "17168"
+        ],
+        "verifiedAt": "2026-10-20T00:50:54.117381+00:00"
+      },
+      {
+        "environment": "production",
+        "city": "osaka",
+        "view": "new",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 22,
+        "ids": [
+          "15431",
+          "15435",
+          "15436",
+          "15437",
+          "15438",
+          "15439",
+          "15446",
+          "15451",
+          "15452",
+          "15453",
+          "15454",
+          "15455",
+          "15456",
+          "15457",
+          "17108",
+          "17109",
+          "17110",
+          "17111",
+          "17112",
+          "17622",
+          "17623",
+          "17626"
+        ],
+        "verifiedAt": "2026-10-20T00:50:54.313822+00:00"
+      },
+      {
+        "environment": "production",
+        "city": "osaka",
+        "view": "top",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 23,
+        "ids": [
+          "15430",
+          "15433",
+          "15434",
+          "15440",
+          "15441",
+          "15442",
+          "15443",
+          "15444",
+          "15450",
+          "15971",
+          "18135",
+          "18136",
+          "18137",
+          "18151",
+          "18152",
+          "18153",
+          "18154",
+          "18166",
+          "18168",
+          "18224",
+          "18228",
+          "18271",
+          "18272"
+        ],
+        "verifiedAt": "2026-10-20T00:50:54.567863+00:00"
+      },
+      {
+        "environment": "production",
+        "city": "osaka",
+        "view": "discounts",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 27,
+        "ids": [
+          "https://and-gallery.com/#nanba",
+          "https://big-step.co.jp/shop/detail/63",
+          "https://conrad-osaka.hiltonjapan.co.jp/restaurants/40skybar",
+          "https://conrad-osaka.hiltonjapan.co.jp/restaurants/atmos",
+          "https://cross-osaka.orixhotelsandresorts.com/#restaurant",
+          "https://csm-cafe.ltr-online.com/lp/csm-cafe-s022",
+          "https://doubletree-osaka-castle.hiltonjapan.co.jp/restaurants/lounge-bar-sen",
+          "https://doubletree-osaka-castle.hiltonjapan.co.jp/restaurants/restaurant-sen",
+          "https://gabuchiki.com/news/view/308",
+          "https://icosaka.com/offer/pierre_autumnmenu/",
+          "https://jblm2024.wixsite.com/fujiyama-tokyo/%E8%A4%87%E8%A3%BD-namba-osaka",
+          "https://labaie.ritzcarltonosaka.com/",
+          "https://osaka.ekimaru.com/shopguide/detail/103",
+          "https://osaka.hiltonjapan.co.jp/plans/restaurants/other/myplace-happyhour",
+          "https://patinahotels.com/osaka/drink-and-dine/p72",
+          "https://prtimes.jp/main/html/rd/p/000000001.000192433.html/",
+          "https://splendido.ritzcarltonosaka.com/",
+          "https://www.agneldor.com/",
+          "https://www.daimaru.co.jp/shinsaibashi/restaurant/cucina-bella.html",
+          "https://www.gate-hotel.jp/osaka/rb/aosaka.html",
+          "https://www.gate-hotel.jp/osaka/rb/peaks.html",
+          "https://www.hiramatsurestaurant.jp/hiramatsu-lafete/",
+          "https://www.hiramatsurestaurant.jp/hiramatsu-lemidi/",
+          "https://www.hotpepper.jp/strJ004661366/",
+          "https://www.labecasse1990.com/",
+          "https://www.quil-fait-bon.com/pages/grand-front-osaka",
+          "https://www.regine.stregisosaka.com/"
+        ],
+        "verifiedAt": "2026-10-20T00:50:54.995817+00:00"
+      },
+      {
+        "environment": "production",
+        "city": "kyoto",
+        "view": "upcoming",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 11,
+        "ids": [
+          "15483",
+          "15499",
+          "15500",
+          "15909",
+          "15910",
+          "15911",
+          "15912",
+          "15922",
+          "15931",
+          "16323",
+          "17169"
+        ],
+        "verifiedAt": "2026-10-20T00:51:18.387368+00:00"
+      },
+      {
+        "environment": "production",
+        "city": "kyoto",
+        "view": "new",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 33,
+        "ids": [
+          "15460",
+          "15461",
+          "15462",
+          "15463",
+          "15464",
+          "15465",
+          "15466",
+          "15467",
+          "15468",
+          "15469",
+          "15470",
+          "15471",
+          "15472",
+          "15473",
+          "15474",
+          "15475",
+          "15476",
+          "15477",
+          "15478",
+          "15479",
+          "15480",
+          "15481",
+          "15482",
+          "15489",
+          "15490",
+          "15491",
+          "15492",
+          "15493",
+          "15494",
+          "15495",
+          "15498",
+          "18025",
+          "18026"
+        ],
+        "verifiedAt": "2026-10-20T00:51:18.706108+00:00"
+      },
+      {
+        "environment": "production",
+        "city": "kyoto",
+        "view": "top",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 30,
+        "ids": [
+          "15459",
+          "15484",
+          "15485",
+          "15486",
+          "15487",
+          "15488",
+          "15496",
+          "15497",
+          "15501",
+          "15973",
+          "18052",
+          "18060",
+          "18061",
+          "18098",
+          "18099",
+          "18117",
+          "18119",
+          "18155",
+          "18156",
+          "18170",
+          "18171",
+          "18173",
+          "18191",
+          "18193",
+          "18194",
+          "18209",
+          "18210",
+          "18211",
+          "18212",
+          "18213"
+        ],
+        "verifiedAt": "2026-10-20T00:51:19.145583+00:00"
+      },
+      {
+        "environment": "production",
+        "city": "kyoto",
+        "view": "discounts",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 34,
+        "ids": [
+          "https://cenci-kyoto.com/",
+          "https://droit-kyoto.jp/",
+          "https://hotelfauchonkyoto.com/ja/gourmet/fauchon-salon-de-the-kyoto/",
+          "https://kyoto.hiltonjapan.co.jp/restaurants/teori",
+          "https://www.hiramatsurestaurant.jp/hiramatsu-kodaiji/",
+          "https://www.hiramatsurestaurant.jp/la-luce/",
+          "https://www.instagram.com/jbowl_ritsumeikan_mae/",
+          "https://www.keihanhotels-resorts.co.jp/kyoto-centuryhotel/topics/happyhour-2/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/011/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/012/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/013/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/014/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/015/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/016/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/017/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/018/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/019/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/020/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/022/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/023/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/026/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/028/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/031/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/033/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/039/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/040/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/042/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/043/",
+          "https://www.princess-kyoto.co.jp/restaurant/ambercourt/",
+          "https://www.princess-kyoto.co.jp/restaurant/darley/",
+          "https://www.princess-kyoto.co.jp/restaurant/hisuien/",
+          "https://www.princess-kyoto.co.jp/restaurant/hoen/",
+          "https://www.princess-kyoto.co.jp/restaurant/sagano/",
+          "https://www.quil-fait-bon.com/pages/kyoto"
+        ],
+        "verifiedAt": "2026-10-20T00:51:20.018547+00:00"
+      },
+      {
+        "environment": "production",
+        "city": "nagoya",
+        "view": "upcoming",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 11,
+        "ids": [
+          "15510",
+          "15512",
+          "15517",
+          "15518",
+          "15521",
+          "15522",
+          "15900",
+          "15901",
+          "15902",
+          "16075",
+          "16080"
+        ],
+        "verifiedAt": "2026-10-20T00:51:25.602580+00:00"
+      },
+      {
+        "environment": "production",
+        "city": "nagoya",
+        "view": "new",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 31,
+        "ids": [
+          "15509",
+          "15511",
+          "15515",
+          "15516",
+          "15519",
+          "15520",
+          "15898",
+          "15899",
+          "15915",
+          "15916",
+          "15917",
+          "15918",
+          "15919",
+          "15920",
+          "15921",
+          "15932",
+          "15964",
+          "15965",
+          "16020",
+          "16021",
+          "16022",
+          "16076",
+          "16294",
+          "16295",
+          "16767",
+          "16771",
+          "16800",
+          "17107",
+          "17166",
+          "17167",
+          "18045"
+        ],
+        "verifiedAt": "2026-10-20T00:51:25.884399+00:00"
+      },
+      {
+        "environment": "production",
+        "city": "nagoya",
+        "view": "top",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 30,
+        "ids": [
+          "15502",
+          "15503",
+          "15504",
+          "15505",
+          "15506",
+          "15507",
+          "15508",
+          "15513",
+          "15514",
+          "15523",
+          "15524",
+          "15972",
+          "16024",
+          "18044",
+          "18100",
+          "18101",
+          "18121",
+          "18138",
+          "18192",
+          "18195",
+          "18196",
+          "18214",
+          "18215",
+          "18216",
+          "18217",
+          "18218",
+          "18219",
+          "18220",
+          "18221",
+          "18223"
+        ],
+        "verifiedAt": "2026-10-20T00:51:26.090025+00:00"
+      },
+      {
+        "environment": "production",
+        "city": "nagoya",
+        "view": "discounts",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 31,
+        "ids": [
+          "https://and-gallery.com/#nagoya",
+          "https://csm-cafe.ltr-online.com/lp/csm-cafe-s017",
+          "https://french-kitamura.jp/",
+          "https://kinzan.nagoya/archives/news/2853/",
+          "https://kobekangroup.com/shop/obanzai_kabtoya/",
+          "https://lebeurrenoisettetokyo.com/nagoya/",
+          "https://nagoya.hiltonjapan.co.jp/restaurants/hideaway3-3",
+          "https://nagoya.hiltonjapan.co.jp/restaurants/inplace3-3",
+          "https://nagoya.hiltonjapan.co.jp/restaurants/ouchou",
+          "https://nagoya.parco.jp/shop/detail/?cd=009191",
+          "https://prtimes.jp/main/html/rd/p/000000004.000116722.html",
+          "https://prtimes.jp/main/html/rd/p/000004440.000018505.html",
+          "https://reconnaissance-nagoya.com/",
+          "https://thetowerhotel.jp/restaurant/",
+          "https://www.anacrowneplaza-nagoya.jp/pages/restaurant_gardencourt",
+          "https://www.anacrowneplaza-nagoya.jp/pages/restaurant_karin",
+          "https://www.anacrowneplaza-nagoya.jp/pages/restaurant_stargate",
+          "https://www.anacrowneplaza-nagoya.jp/pages/restaurant_winglounge",
+          "https://www.associa.com/nma/restaurant/pergola/",
+          "https://www.centralpark.co.jp/shop/sharecafe/",
+          "https://www.espacionagoya.com/restaurant-bar/the-bar-castle/",
+          "https://www.hiramatsurestaurant.jp/aubergedelill-nagoya/",
+          "https://www.hotpepper.jp/strJ004698778/",
+          "https://www.hotpepper.jp/strJ004699003/",
+          "https://www.kochuten.jp/",
+          "https://www.komeda.co.jp/shop/detail.html?id=1215",
+          "https://www.lafloraison-t.jp/",
+          "https://www.livingroom-skybar.com/",
+          "https://www.princehotels.co.jp/nagoya/restaurant/skydining/",
+          "https://www.quil-fait-bon.com/pages/nagoya-sakae",
+          "https://www.thekawabunnagoya.com/thekawabunnagoya/restaurant/"
+        ],
+        "verifiedAt": "2026-10-20T00:51:26.557075+00:00"
+      },
+      {
+        "environment": "production",
+        "city": "tokyo",
+        "view": "upcoming",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 14,
+        "ids": [
+          "15526",
+          "15538",
+          "15541",
+          "15544",
+          "15546",
+          "15555",
+          "15556",
+          "15557",
+          "15923",
+          "15929",
+          "15930",
+          "17106",
+          "17621",
+          "18027"
+        ],
+        "verifiedAt": "2026-10-20T00:51:27.672835+00:00"
+      },
+      {
+        "environment": "production",
+        "city": "tokyo",
+        "view": "new",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 23,
+        "ids": [
+          "15527",
+          "15539",
+          "15540",
+          "15551",
+          "15552",
+          "15553",
+          "15554",
+          "15558",
+          "15966",
+          "15967",
+          "15968",
+          "16289",
+          "16325",
+          "17170",
+          "17171",
+          "17172",
+          "17173",
+          "17628",
+          "18043",
+          "18051",
+          "18058",
+          "18102",
+          "18103"
+        ],
+        "verifiedAt": "2026-10-20T00:51:27.856641+00:00"
+      },
+      {
+        "environment": "production",
+        "city": "tokyo",
+        "view": "top",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 30,
+        "ids": [
+          "15525",
+          "15528",
+          "15529",
+          "15530",
+          "15531",
+          "15532",
+          "15533",
+          "15534",
+          "15535",
+          "15536",
+          "15537",
+          "15542",
+          "15543",
+          "15545",
+          "15547",
+          "15548",
+          "15549",
+          "15550",
+          "15559",
+          "15560",
+          "15561",
+          "15562",
+          "15903",
+          "15974",
+          "18122",
+          "18123",
+          "18140",
+          "18141",
+          "18157",
+          "18158"
+        ],
+        "verifiedAt": "2026-10-20T00:51:28.121830+00:00"
+      },
+      {
+        "environment": "production",
+        "city": "tokyo",
+        "view": "discounts",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 37,
+        "ids": [
+          "https://and-gallery.com/#ikebukuro",
+          "https://and-gallery.com/#yurakucho",
+          "https://cocco.eastone.co.jp/shop/gotanda",
+          "https://cocco.eastone.co.jp/shop/kameido",
+          "https://conrad-tokyo.hiltonjapan.co.jp/restaurants/cerise",
+          "https://conrad-tokyo.hiltonjapan.co.jp/restaurants/chinablue",
+          "https://conrad-tokyo.hiltonjapan.co.jp/restaurants/twentyeight",
+          "https://csm-cafe.ltr-online.com/lp/csm-cafe-s012",
+          "https://gourmetpress.net/1488798/",
+          "https://miabocca.eastone.co.jp/shop/Ikebukuro",
+          "https://miabocca.eastone.co.jp/shop/Shakujii-park",
+          "https://miabocca.eastone.co.jp/shop/Shinjuku-takasimaya",
+          "https://prtimes.jp/main/html/rd/p/000000009.000161200.html",
+          "https://prtimes.jp/main/html/rd/p/000000048.000152772.html",
+          "https://prtimes.jp/main/html/rd/p/000000196.000049183.html",
+          "https://prtimes.jp/main/html/rd/p/000000356.000048489.html",
+          "https://prtimes.jp/main/html/rd/p/000000592.000071323.html",
+          "https://prtimes.jp/main/html/rd/p/000004178.000003860.html",
+          "https://sarabethsrestaurants.jp/location/omotesando/",
+          "https://sarabethsrestaurants.jp/location/shinagawa/",
+          "https://sarabethsrestaurants.jp/location/shinjuku/",
+          "https://sarabethsrestaurants.jp/location/tokyo/",
+          "https://shibakoen.bar-shinkai.com/",
+          "https://store-info.skylark.co.jp/syabuyo/map/198490/",
+          "https://tabelog.com/en/tokyo/A1303/A130301/13198692/",
+          "https://tokyo.hiltonjapan.co.jp/restaurants/st_georges_bar",
+          "https://www.andaztokyo.jp/restaurants/jp/thetavern-grill-lounge",
+          "https://www.herofield.com/bbq/tokyoprince/",
+          "https://www.hiramatsurestaurant.jp/jardindessens-tokyo/",
+          "https://www.mesm.jp/en/eat-drink/chefs-theatre.html",
+          "https://www.newotani.co.jp/tokyo/restaurant/gardenlounge/",
+          "https://www.quil-fait-bon.com/pages/aoyama",
+          "https://www.quil-fait-bon.com/pages/grand-maison-ginza",
+          "https://www.quil-fait-bon.com/pages/shinjuku",
+          "https://www.quil-fait-bon.com/pages/tokyo-dome-city",
+          "https://www.quil-fait-bon.com/pages/tokyo-skytree-town-solamachi",
+          "https://www.sunamo.jp/floor/shop_detail.html?UC=1_028"
+        ],
+        "verifiedAt": "2026-10-20T00:51:28.549105+00:00"
+      },
+      {
+        "environment": "production",
+        "city": "sapporo",
+        "view": "upcoming",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 11,
+        "ids": [
+          "15568",
+          "15569",
+          "15570",
+          "15571",
+          "15597",
+          "15926",
+          "15970",
+          "17103",
+          "18047",
+          "18048",
+          "18054"
+        ],
+        "verifiedAt": "2026-10-20T00:51:29.653600+00:00"
+      },
+      {
+        "environment": "production",
+        "city": "sapporo",
+        "view": "new",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 28,
+        "ids": [
+          "15580",
+          "15586",
+          "15587",
+          "15588",
+          "15589",
+          "15590",
+          "15591",
+          "15592",
+          "15595",
+          "15596",
+          "16293",
+          "16296",
+          "17104",
+          "17105",
+          "17624",
+          "17627",
+          "18028",
+          "18029",
+          "18030",
+          "18031",
+          "18049",
+          "18055",
+          "18056",
+          "18057",
+          "18104",
+          "18105",
+          "18124",
+          "18125"
+        ],
+        "verifiedAt": "2026-10-20T00:51:29.849873+00:00"
+      },
+      {
+        "environment": "production",
+        "city": "sapporo",
+        "view": "top",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 30,
+        "ids": [
+          "15563",
+          "15564",
+          "15565",
+          "15566",
+          "15567",
+          "15572",
+          "15573",
+          "15574",
+          "15575",
+          "15576",
+          "15577",
+          "15578",
+          "15579",
+          "15581",
+          "15582",
+          "15583",
+          "15584",
+          "15585",
+          "15593",
+          "15594",
+          "15598",
+          "15599",
+          "15600",
+          "15601",
+          "15602",
+          "15603",
+          "15604",
+          "15605",
+          "15606",
+          "15607"
+        ],
+        "verifiedAt": "2026-10-20T00:51:30.095991+00:00"
+      },
+      {
+        "environment": "production",
+        "city": "sapporo",
+        "view": "discounts",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 34,
+        "ids": [
+          "https://anan.fuji-tatsu.co.jp/shop/sapporo-sinoro/",
+          "https://chocottosushi-kiwami.owst.jp/",
+          "https://cocco.eastone.co.jp/shop/kitahachijo",
+          "https://cocco.eastone.co.jp/shop/kitaichijo",
+          "https://cocco.eastone.co.jp/shop/kotoniekimae",
+          "https://cocco.eastone.co.jp/shop/miyanosawa",
+          "https://cocco.eastone.co.jp/shop/shindohigashi",
+          "https://cocco.eastone.co.jp/shop/souen",
+          "https://grand1934.com/restaurant/garden-dining-waraku/",
+          "https://grand1934.com/restaurant/kokaku/",
+          "https://grand1934.com/restaurant/lobby-lounge-mizar/",
+          "https://grand1934.com/restaurant/northern-terrace-diner/",
+          "https://grand1934.com/restaurant/old-saloon1934/",
+          "https://miabocca.eastone.co.jp/shop/Kita2jo",
+          "https://miabocca.eastone.co.jp/shop/Kotoni-station",
+          "https://miabocca.eastone.co.jp/shop/Sapporo-station",
+          "https://miabocca.eastone.co.jp/shop/atsubetsuminami",
+          "https://miabocca.eastone.co.jp/shop/sapporoduo",
+          "https://michiru.dkdining.com/sapporo/",
+          "https://prtimes.jp/main/html/rd/p/000000010.000134951.html",
+          "https://store-info.skylark.co.jp/syabuyo/map/198489/",
+          "https://www.anahisapporosusukino.com/restaurants/verde/",
+          "https://www.hyatt.com/hyatt-centric/ja-JP/ctsct-hyatt-centric-sapporo/dining",
+          "https://www.jrhotels.co.jp/tower/restaurant/skyj/",
+          "https://www.keioplaza-sapporo.co.jp/restaurants/akizu/",
+          "https://www.keioplaza-sapporo.co.jp/restaurants/crossvault/",
+          "https://www.keioplaza-sapporo.co.jp/restaurants/glass/",
+          "https://www.keioplaza-sapporo.co.jp/restaurants/miyama/",
+          "https://www.keioplaza-sapporo.co.jp/restaurants/yamanami/",
+          "https://www.princehotels.co.jp/sapporo/restaurant/alldaydininggrandeur",
+          "https://www.princehotels.co.jp/sapporo/restaurant/fuyojo",
+          "https://www.princehotels.co.jp/sapporo/restaurant/katsura",
+          "https://www.princehotels.co.jp/sapporo/restaurant/top_prince",
+          "https://www.tokyuhotels.co.jp/sapporostream/restaurant/splish/plan/angel_devil/index.html"
+        ],
+        "verifiedAt": "2026-10-20T00:51:30.448104+00:00"
+      }
+    ]
+  },
+  "verifiedAtUtc": "2026-10-20T00:51:49.799641+00:00"
+}

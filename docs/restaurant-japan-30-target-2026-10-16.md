@@ -1,15 +1,15 @@
 # Japan restaurant target audit — October 16, 2026
 
-Target: **30 distinct eligible restaurants in every tab of every city**. **583 verified memberships; 160 still missing**. This target remains incomplete; surplus in another tab does not offset a shortage.
+Target: **30 distinct eligible restaurants in every tab of every city**. **586 verified memberships; 157 still missing**. This target remains incomplete; surplus in another tab does not offset a shortage.
 
-**Batch 98 published and publicly verified (October 19, 2026):** Added **La Bécasse Hiranomachi and PRESQU’ÎLE Yodoyabashi**, with **59 ordinary menu entries, four anniversary menu entries and ten credited Azure photographs**. Exact original/current-branch dates confirmed; obsolete menu translations and historical recipes clearly distinguished. La Bécasse’s dated October anniversary replenishes Specials. **Osaka Top reaches 21/30 and Specials 26/30; Nagoya Top remains 30/30**. Exact saved profiles, every rendered menu entry, gallery credits and native title/image links verified in local and public production. All 24 counts match at **583 memberships / 160 missing**. No deployment. [Batch evidence](restaurant-japan-30-japan98-2026-10-19.json).
+**Batch 99 published and publicly verified (October 19, 2026):** Added **Agnel d’or Awaza and ad hoc Fukushima Hotarumachi**, with **66 ordinary menu entries, one special-course entry and ten credited Azure photographs**. Both original branch dates confirmed. Agnel d’or’s November15,2026 staff-led lunch/dinner course adds one Specials membership, with exact date and meals verified from its operator-linked booking data. Current ad hoc lunch price supersedes the older operator menu; differing last-order times disclosed. **Osaka Top reaches23/30 and Specials27/30**. Exact saved profiles, every rendered menu entry, gallery credits and native title/image links verified in local and public production. All 24 counts match at **586 memberships / 157 missing**. No deployment. [Batch evidence](restaurant-japan-30-japan99-2026-10-19.json).
 
-All 24 local and public production guide counts agree. Batches 88–98 now have complete public HTTPS verification; earlier timeout checkpoints below are historical.
+All 24 local and public production guide counts agree. Batches 88–99 now have complete public HTTPS verification; earlier timeout checkpoints below are historical.
 
 | City (west to east) | Coming soon | Just opened | Top restaurants | Specials |
 | --- | ---: | ---: | ---: | ---: |
 | Fukuoka | 9/30 | 20/30 | 22/30 | 33/30 |
-| Osaka | 12/30 | 22/30 | 21/30 | 26/30 |
+| Osaka | 12/30 | 22/30 | 23/30 | 27/30 |
 | Kyoto | 11/30 | 33/30 | 30/30 | 34/30 |
 | Nagoya | 11/30 | 31/30 | 30/30 | 31/30 |
 | Tokyo | 14/30 | 23/30 | 30/30 | 37/30 |
@@ -25,8 +25,8 @@ All 24 local and public production guide counts agree. Batches 88–98 now have 
 | Fukuoka | Specials | 33 | 33 | 30 | 0 |
 | Osaka | Coming soon | 12 | 12 | 30 | 18 |
 | Osaka | Just opened | 22 | 22 | 30 | 8 |
-| Osaka | Top restaurants | 21 | 21 | 30 | 9 |
-| Osaka | Specials | 26 | 26 | 30 | 4 |
+| Osaka | Top restaurants | 23 | 23 | 30 | 7 |
+| Osaka | Specials | 27 | 27 | 30 | 3 |
 | Kyoto | Coming soon | 11 | 11 | 30 | 19 |
 | Kyoto | Just opened | 33 | 33 | 30 | 0 |
 | Kyoto | Top restaurants | 30 | 30 | 30 | 0 |
