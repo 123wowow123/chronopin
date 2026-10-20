@@ -139,6 +139,23 @@ function tooManyRequests(request: NextRequest, wait: number, light: boolean): Ne
   return NextResponse.rewrite(url, { status: 429, headers });
 }
 
+// A signed-out client over its pin budget (botLimit.pinRetryAfter) is sent to
+// sign in, where the form says signed-in users get higher limits. A browser
+// asking for a page gets a 307 to /login that returns to the pin afterwards;
+// anything else (fetches, RSC, other methods) gets a plain 429.
+function signInForMore(request: NextRequest, wait: number): NextResponse {
+  const wantsPage = request.method === 'GET' && (request.headers.get('accept') ?? '').includes('text/html') && !request.headers.has('rsc');
+  if (!wantsPage) return tooManyRequests(request, wait, false);
+  const cookie = request.cookies.get(LOCALE_COOKIE)?.value;
+  const locale = cookie && isLocale(cookie) ? cookie : DEFAULT_LOCALE;
+  const back = new URL(request.url);
+  back.searchParams.delete(GATE_PARAM);
+  const to = new URL(localizePath('/login', locale), request.url);
+  to.searchParams.set('limited', '1');
+  to.searchParams.set('redirect', back.pathname + back.search);
+  return NextResponse.redirect(to, { status: 307, headers: { 'Retry-After': String(wait) } });
+}
+
 // Every page is routed under its language (src/app/[lang]). English keeps the
 // plain paths: they are rewritten to /en here, and /en/... redirects back to
 // them, so each page has one English URL. A visitor who picked another
@@ -185,7 +202,7 @@ export async function proxy(request: NextRequest) {
     if (gateClient && !bot && !session && /^\/pin\/\d+(?:\/|$)/.test(splitLocale(pathname).path)) {
       const prefetching = request.headers.has('next-router-prefetch') || request.headers.get('purpose') === 'prefetch';
       const wait = pinRetryAfter(gateClient, Date.now(), prefetching ? PREFETCH_COST : 1);
-      if (wait != null) return tooManyRequests(request, wait, false);
+      if (wait != null) return signInForMore(request, wait);
     }
   }
   if (retryAfter == null && !bot && !session?.admin && !isLimitExempt(pathname)) {
