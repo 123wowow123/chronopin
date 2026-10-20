@@ -83,3 +83,6 @@ Fresh English/Japanese Pin-name searches in both environments reconfirm roan1632
 Operator galleries and linked pages were located and fetched where possible; no newly reviewed actual-venue photo is claimed. Instagram extraction alone is insufficient. Employee meal discounts and opening staff shifts are excluded from public offer/service evidence.
 
 See [machine-readable counts, duplicate matches and source hashes](restaurant-japan-other-cities-audit2-2026-10-20.json). Existing [audit1](restaurant-japan-other-cities-audit-2026-10-20.md) and [batch110](restaurant-japan-30-japan110-2026-10-20.json) retain NEUF, Wanon, Chez KOBE and older-history exclusions.
+
+
+Continuation: [Batch111](restaurant-japan-30-japan111-2026-10-20.json) publishes Sapporo Hiraoka with 172 qualified menu entries and three credited images. Sapporo Coming soon is now12/30; four-city totals become436memberships/70missing. This audit table remains the pre-publication snapshot. Continue Ore no Sora, LACHIC and Ripasso before Osaka/Fukuoka.
