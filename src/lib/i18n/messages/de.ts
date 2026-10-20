@@ -1292,6 +1292,8 @@ const de: Messages = {
     statPins: 'Pins:',
     statCost: 'Kosten:',
     statMW: 'MW:',
+    statMWGen: 'MW erzeugt:',
+    statMWUse: 'MW verbraucht:',
     statMedianCost: 'Mediankosten:',
     statMarket: 'Markt:',
     statEpisodes: 'Folgen:',

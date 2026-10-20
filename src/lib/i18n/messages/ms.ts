@@ -1296,6 +1296,8 @@ const ms: Messages = {
     statPins: 'Pin:',
     statCost: 'Kos:',
     statMW: 'MW:',
+    statMWGen: 'MW dijana:',
+    statMWUse: 'MW digunakan:',
     statMedianCost: 'Kos median:',
     statMarket: 'Pasaran:',
     statEpisodes: 'Episod:',

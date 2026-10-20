@@ -1283,6 +1283,8 @@ const it: Messages = {
     statPins: 'Pin:',
     statCost: 'Costo:',
     statMW: 'MW:',
+    statMWGen: 'MW generati:',
+    statMWUse: 'MW consumati:',
     statMedianCost: 'Costo mediano:',
     statMarket: 'Mercato:',
     statEpisodes: 'Episodi:',

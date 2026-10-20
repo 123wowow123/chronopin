@@ -1593,6 +1593,8 @@ const ar: Messages = {
     statPins: 'الدبابيس:',
     statCost: 'التكلفة:',
     statMW: 'ميغاواط:',
+    statMWGen: 'ميغاواط منتجة:',
+    statMWUse: 'ميغاواط مستهلكة:',
     statMedianCost: 'وسيط التكلفة:',
     statMarket: 'السوق:',
     statEpisodes: 'الحلقات:',

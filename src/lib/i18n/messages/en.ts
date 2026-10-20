@@ -1296,6 +1296,8 @@ const en = {
     statPins: 'Pins:',
     statCost: 'Cost:',
     statMW: 'MW:',
+    statMWGen: 'MW generated:',
+    statMWUse: 'MW used:',
     statMedianCost: 'Median cost:',
     statMarket: 'Market:',
     statEpisodes: 'Episodes:',

@@ -215,7 +215,7 @@ export type ReservedTag = {
   // The term a pick writes.
   // posted and updated are time-relative: their value is a relative day
   // (today, >=yesterday) the search resolves in the viewer's zone when it runs.
-  field: 'tag' | 'confidence' | 'posted' | 'updated' | 'mw' | 'cost' | 'energy';
+  field: 'tag' | 'confidence' | 'posted' | 'updated' | 'mw' | 'power' | 'cost' | 'energy';
   value: string;
   // For mw: and cost:, the floor the pill sets (megawatts, US dollars).
   min?: number;
@@ -240,6 +240,9 @@ export const RESERVED_TAGS: ReservedTag[] = [
   ...CONFIDENCE_LEVELS.map((level): ReservedTag => ({ key: level, name: capitalize(level), field: 'confidence', value: level, icon: 'shield' })),
   ...[...CONFIDENCE_BANDS].reverse().map(({ band }): ReservedTag => ({ key: band, name: `${capitalize(band)} confidence`, field: 'confidence', value: band, icon: 'shield' })),
   // Size: the electrical capacity PinPower records and the cost in US dollars.
+  // Power a pin's facility makes against power it draws.
+  { key: 'powerGeneration', name: 'Power generation', field: 'power', value: 'generation', icon: 'bolt' },
+  { key: 'powerUsage', name: 'Power usage', field: 'power', value: 'usage', icon: 'bolt' },
   { key: 'mw100', name: '100+ MW', field: 'mw', value: '>=100', min: 100, icon: 'bolt' },
   { key: 'mw500', name: '500+ MW', field: 'mw', value: '>=500', min: 500, icon: 'bolt' },
   { key: 'gw1', name: '1+ GW', field: 'mw', value: '>=1gw', min: 1000, icon: 'bolt' },
@@ -275,6 +278,7 @@ export function reservedPicked(query: {
   mws?: { op: string; value: number }[];
   costs?: { op: string; value: number }[];
   energies?: { op: string; value: number }[];
+  powerKinds?: string[];
 }): string[] {
   // New and Updated stand for any posted: / updated: term, so a pick made
   // yesterday still reads as picked (and can be taken out) today.
@@ -283,6 +287,8 @@ export function reservedPicked(query: {
       ? !!(query.postedDays?.length || query.postedBounds?.length)
       : r.field === 'updated'
         ? !!(query.updatedDays?.length || query.updatedBounds?.length)
+        : r.field === 'power'
+          ? query.powerKinds?.includes(r.value) === true
         : r.field === 'mw' || r.field === 'cost' || r.field === 'energy'
           ? (r.field === 'mw' ? query.mws : r.field === 'cost' ? query.costs : query.energies)?.some((b) => b.op === '>=' && b.value === r.min) === true
         : r.field === 'tag'
@@ -302,9 +308,9 @@ export function reservedValues(reserved: ReservedTag): string[] {
 // A reserved filter's counted name, for the counts the cloud reads: a date
 // confidence level as the database stores it ("unknown" -> "Unverified"), or
 // a score band ("low" -> "Low confidence").
-export function reservedName(field: 'confidence' | 'band' | 'mw' | 'cost' | 'energy', value: string): string | undefined {
+export function reservedName(field: 'confidence' | 'band' | 'mw' | 'power' | 'cost' | 'energy', value: string): string | undefined {
   const wanted = String(value).toLowerCase();
-  if (field === 'mw' || field === 'cost' || field === 'energy') return RESERVED_TAGS.find((r) => r.field === field && r.value === wanted)?.name;
+  if (field === 'mw' || field === 'power' || field === 'cost' || field === 'energy') return RESERVED_TAGS.find((r) => r.field === field && r.value === wanted)?.name;
   const level = Object.entries(STORED_LEVEL).find(([, stored]) => stored === wanted)?.[0] ?? wanted;
   return RESERVED_TAGS.find((r) => r.field === 'confidence' && r.value === (field === 'band' ? wanted : level))?.name;
 }

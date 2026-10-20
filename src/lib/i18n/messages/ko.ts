@@ -1286,6 +1286,8 @@ const ko: Messages = {
     statPins: '핀:',
     statCost: '비용:',
     statMW: 'MW:',
+    statMWGen: '발전 MW:',
+    statMWUse: '소비 MW:',
     statMedianCost: '비용 중앙값:',
     statMarket: '예측 시장:',
     statEpisodes: '에피소드:',

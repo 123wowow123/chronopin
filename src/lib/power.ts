@@ -1,6 +1,12 @@
 // A pin's electrical capacity (PinPower, 0196).
+// generation: power the facility puts out; usage: power it draws.
+export type PowerKind = 'generation' | 'usage';
+export const POWER_KINDS: readonly PowerKind[] = ['generation', 'usage'];
+export const POWER_KIND_LABEL: Record<PowerKind, string> = { generation: 'Generates', usage: 'Uses' };
+
 export type PinPowerJson = {
   megawatts: number;
+  kind: PowerKind;
   source: 'title' | 'hand';
   sourceUrl: string | null;
   note: string | null;

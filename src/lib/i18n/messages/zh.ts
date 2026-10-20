@@ -1286,6 +1286,8 @@ const zh: Messages = {
     statPins: '图钉：',
     statCost: '成本：',
     statMW: 'MW：',
+    statMWGen: '发电 MW：',
+    statMWUse: '用电 MW：',
     statMedianCost: '成本中位数：',
     statMarket: '预测市场：',
     statEpisodes: '集数：',

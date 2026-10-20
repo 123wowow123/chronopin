@@ -629,7 +629,7 @@ async function PinBody({
 
       {power ? (
         <p className="mt-2 text-sm text-ink">
-          <span className="me-1 text-xs font-semibold tracking-wider text-subtle uppercase">Power</span>
+          <span className="me-1 text-xs font-semibold tracking-wider text-subtle uppercase">{power.kind === 'generation' ? 'Power generation' : 'Power usage'}</span>
           <span className="font-medium tabular-nums">{formatMegawatts(power.megawatts)}</span>
           {power.note ? <span className="text-muted"> · {power.note}</span> : null}
           {power.sourceUrl ? <> · <a href={power.sourceUrl} rel="noopener nofollow" target="_blank" className="text-link">source</a></> : null}
@@ -637,7 +637,7 @@ async function PinBody({
       ) : null}
       {energy ? (
         <p className="mt-1 text-sm text-ink">
-          <span className="me-1 text-xs font-semibold tracking-wider text-subtle uppercase">Energy</span>
+          <span className="me-1 text-xs font-semibold tracking-wider text-subtle uppercase">Energy used</span>
           <span className="font-medium tabular-nums">{formatGigawattHours(energy.gwh)}</span>
           <span className="text-muted"> {ENERGY_BASIS_WORDS[energy.basis]}</span>
           {energy.note ? <span className="text-muted"> · {energy.note}</span> : null}

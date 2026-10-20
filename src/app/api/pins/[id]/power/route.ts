@@ -2,6 +2,7 @@ import type { NextRequest } from 'next/server';
 import { isAdmin, requireUser } from '@/server/auth';
 import * as db from '@/server/db';
 import { HttpError, intParam, json, noContent, readJson, route } from '@/server/http';
+import { POWER_KINDS, type PowerKind } from '@/lib/power';
 import { deletePower, powerForPin, savePower } from '@/server/model/pinPower';
 import { invalidatePin } from '@/server/services/cache';
 
@@ -20,17 +21,19 @@ export const GET = route(async (_request: NextRequest, ctx: Ctx) => {
   return power ? json(power) : noContent();
 });
 
-// body { megawatts, sourceUrl?, note? }: a hand reading, kept over title ones.
+// body { megawatts, kind: 'generation' | 'usage', sourceUrl?, note? }: a hand reading, kept over title ones.
 export const PUT = route(async (request: NextRequest, ctx: Ctx) => {
   const pinId = intParam((await ctx.params).id);
   await authorOrAdmin(request, pinId);
   const body = await readJson(request);
   const megawatts = Number(body.megawatts);
   if (!(megawatts > 0) || megawatts >= 10_000_000) throw new HttpError(400, 'megawatts must be a positive number (1 GW = 1000).');
+  const kind = body.kind as PowerKind;
+  if (!POWER_KINDS.includes(kind)) throw new HttpError(400, "kind must be 'generation' (power it makes) or 'usage' (power it draws).");
   const sourceUrl = typeof body.sourceUrl === 'string' && body.sourceUrl.trim() ? body.sourceUrl.trim() : null;
   if (sourceUrl && !/^https?:\/\/\S+$/i.test(sourceUrl)) throw new HttpError(400, 'sourceUrl is not a web address.');
   const note = typeof body.note === 'string' && body.note.trim() ? body.note.trim().slice(0, 500) : null;
-  await savePower(pinId, megawatts, { source: 'hand', sourceUrl, note });
+  await savePower(pinId, megawatts, { kind, source: 'hand', sourceUrl, note });
   invalidatePin(pinId);
   return json(await powerForPin(pinId));
 });

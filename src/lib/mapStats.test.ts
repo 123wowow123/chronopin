@@ -6,8 +6,8 @@ const pin = (over: Partial<MapPinJson>): MapPinJson => ({ id: 1, title: 't', utc
 
 describe('mapStats', () => {
   it('counts pins and sums USD cost and MW', () => {
-    const stats = mapStats([pin({ price: 1e9, priceCurrency: 'USD', megawatts: 500 }), pin({ price: 2e9, priceCurrency: 'USD', megawatts: 1000 }), pin({ price: 5, priceCurrency: 'EUR' })]);
-    expect(stats.map((s) => [s.key, s.value])).toEqual([['pins', '3'], ['cost', '$3B'], ['mw', '1.5 GW']]);
+    const stats = mapStats([pin({ price: 1e9, priceCurrency: 'USD', megawatts: 500, powerKind: 'generation' }), pin({ price: 2e9, priceCurrency: 'USD', megawatts: 1000, powerKind: 'usage' }), pin({ price: 5, priceCurrency: 'EUR' })]);
+    expect(stats.map((s) => [s.key, s.value])).toEqual([['pins', '3'], ['cost', '$3B'], ['mwGen', '500 MW'], ['mwUse', '1 GW']]);
   });
   it('says the median when one outlier dominates the sum', () => {
     const stats = mapStats([pin({ price: 1e6, priceCurrency: 'USD' }), pin({ price: 2e6, priceCurrency: 'USD' }), pin({ price: 9e12, priceCurrency: 'USD' })]);

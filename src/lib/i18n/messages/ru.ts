@@ -1349,6 +1349,8 @@ const ru: Messages = {
     statPins: 'Пины:',
     statCost: 'Стоимость:',
     statMW: 'MW:',
+    statMWGen: 'МВт выработка:',
+    statMWUse: 'МВт потребление:',
     statMedianCost: 'Медианная стоимость:',
     statMarket: 'Рынок:',
     statEpisodes: 'Эпизоды:',

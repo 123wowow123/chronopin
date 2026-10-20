@@ -1,0 +1,1193 @@
+{
+  "batch": 111,
+  "checkedAt": "2026-10-20",
+  "entries": [
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "Olive no Oka — Sapporo Hiraoka Opens 2026-12-10",
+        "description": "An upcoming Italian family restaurant in Hiraoka, scheduled to open December 10. Planned weekday hours 10:00–24:00; weekends and holidays 07:00–24:00, with breakfast only 07:00–10:00. Browse the linked operator menu preview; launch stock and final branch prices need confirmation.",
+        "sourceUrl": "https://maps.olivenooka.jp/jp/detail/6642.html",
+        "address": "1-1-10 Hiraoka 8-jo, Kiyota-ku, Sapporo, Hokkaido 004-0878",
+        "productName": "Olive no Oka — Sapporo Hiraoka",
+        "utcStartDateTime": "2026-12-10T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "Exact operator Hiraoka page and October 16 operator news feed both announce December 10,2026 grand opening. This is the physical branch opening; recruitment/interview dates, company founding and construction-photo date are not used. Current operator plan is confirmed as announced; check for delays before travel.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Sapporo",
+          "Japan",
+          "Hiraoka / Kiyota-ku",
+          "Italian / Family Restaurant"
+        ],
+        "longFormSummary": "<p>An upcoming Italian family restaurant in Hiraoka, scheduled to open December 10. Planned weekday hours 10:00–24:00; weekends and holidays 07:00–24:00, with breakfast only 07:00–10:00. Browse the linked operator menu preview; launch stock and final branch prices need confirmation.<cite data-ref=\"https://maps.olivenooka.jp/jp/detail/6642.html\"></cite></p><p>Exact operator Hiraoka page and October 16 operator news feed both announce December 10,2026 grand opening. This is the physical branch opening; recruitment/interview dates, company founding and construction-photo date are not used. Current operator plan is confirmed as announced; check for delays before travel.</p>",
+        "references": [
+          {
+            "url": "https://maps.olivenooka.jp/jp/detail/6642.html",
+            "title": "Olive no Oka — Sapporo Hiraoka — branch website",
+            "confidence": 90,
+            "reasoning": "Olive no Oka — Sapporo Hiraoka — branch website"
+          },
+          {
+            "url": "https://www.olivenooka.jp/data/news.csv",
+            "title": "Operator dated opening announcement",
+            "confidence": 90,
+            "reasoning": "Operator dated opening announcement"
+          },
+          {
+            "url": "https://work.olivenooka.jp/brand-jobfind/job/All/35532",
+            "title": "Official Hiraoka employer opening corroboration",
+            "confidence": 90,
+            "reasoning": "Official Hiraoka employer opening corroboration"
+          },
+          {
+            "url": "https://www.olivenooka.jp/menu/index.html",
+            "title": "Operator reference menu linked by Hiraoka",
+            "confidence": 90,
+            "reasoning": "Operator reference menu linked by Hiraoka"
+          },
+          {
+            "url": "https://kiyotakumap.com/custom/olivenooka/",
+            "title": "Credited actual Hiraoka construction-site photographs",
+            "confidence": 90,
+            "reasoning": "Credited actual Hiraoka construction-site photographs"
+          },
+          {
+            "url": "https://www.instagram.com/olivenooka_jp/",
+            "title": "Operator gallery account checked",
+            "confidence": 90,
+            "reasoning": "Operator gallery account checked"
+          }
+        ],
+        "latitude": 43.01516978,
+        "longitude": 141.4521491,
+        "parentId": null
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://maps.olivenooka.jp/jp/detail/6642.html",
+          "menu": {
+            "pinSourceUrl": "https://maps.olivenooka.jp/jp/detail/6642.html",
+            "name": "Olive no Oka — Sapporo Hiraoka",
+            "checkedAt": "2026-10-20",
+            "menus": [
+              {
+                "label": "Operator menu preview — appetizer",
+                "url": "https://www.olivenooka.jp/menu/appetizer.html",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "カクテルえびバジル",
+                    "price": 319,
+                    "note": "Current operator reference menu linked by the exact Hiraoka branch, checked October 20, 2026. Hiraoka opens December 10; launch stock and final branch prices remain subject to confirmation. Operator warns prices can vary by store. Not a sibling branch menu or a guaranteed opening-day selection. Tax-inclusive operator reference price."
+                  },
+                  {
+                    "name": "鴨のマリネ　オレンジ＆バルサミコソース",
+                    "price": 429,
+                    "note": "Current operator reference menu linked by the exact Hiraoka branch, checked October 20, 2026. Hiraoka opens December 10; launch stock and final branch prices remain subject to confirmation. Operator warns prices can vary by store. Not a sibling branch menu or a guaranteed opening-day selection. Tax-inclusive operator reference price."
+                  },
+                  {
+                    "name": "サーモンのカルパッチョ",
+                    "price": 429,
+                    "note": "Current operator reference menu linked by the exact Hiraoka branch, checked October 20, 2026. Hiraoka opens December 10; launch stock and final branch prices remain subject to confirmation. Operator warns prices can vary by store. Not a sibling branch menu or a guaranteed opening-day selection. Tax-inclusive operator reference price."
+                  },
+                  {
+                    "name": "銚子産真いわしのマリネ",
+                    "price": 319,
+                    "note": "Current operator reference menu linked by the exact Hiraoka branch, checked October 20, 2026. Hiraoka opens December 10; launch stock and final branch prices remain subject to confirmation. Operator warns prices can vary by store. Not a sibling branch menu or a guaranteed opening-day selection. Tax-inclusive operator reference price."
+                  },
+                  {
+                    "name": "キャロットラぺ　オレンジ",
+                    "price": 319,
+                    "note": "Current operator reference menu linked by the exact Hiraoka branch, checked October 20, 2026. Hiraoka opens December 10; launch stock and final branch prices remain subject to confirmation. Operator warns prices can vary by store. Not a sibling branch menu or a guaranteed opening-day selection. Tax-inclusive operator reference price."
+                  },
+                  {
+                    "name": "まぐろのブルスケッタ",
+                    "price": 319,
+                    "note": "Current operator reference menu linked by the exact Hiraoka branch, checked October 20, 2026. Hiraoka opens December 10; launch stock and final branch prices remain subject to confirmation. Operator warns prices can vary by store. Not a sibling branch menu or a guaranteed opening-day selection. Tax-inclusive operator reference price."
+                  },
+                  {
+                    "name": "しらすと葱のブルスケッタ",
+                    "price": 319,
+                    "note": "Current operator reference menu linked by the exact Hiraoka branch, checked October 20, 2026. Hiraoka opens December 10; launch stock and final branch prices remain subject to confirmation. Operator warns prices can vary by store. Not a sibling branch menu or a guaranteed opening-day selection. Tax-inclusive operator reference price."
+                  },
+                  {
+                    "name": "レバーパテのブルスケッタ",
+                    "price": 319,
+                    "note": "Current operator reference menu linked by the exact Hiraoka branch, checked October 20, 2026. Hiraoka opens December 10; launch stock and final branch prices remain subject to confirmation. Operator warns prices can vary by store. Not a sibling branch menu or a guaranteed opening-day selection. Tax-inclusive operator reference price."
+                  },
+                  {
+                    "name": "ライスコロッケ（アランチーニ）",
+                    "price": 319,
+                    "note": "Current operator reference menu linked by the exact Hiraoka branch, checked October 20, 2026. Hiraoka opens December 10; launch stock and final branch prices remain subject to confirmation. Operator warns prices can vary by store. Not a sibling branch menu or a guaranteed opening-day selection. Operator marks takeaway eligible; Hiraoka launch takeaway service requires confirmation. Tax-inclusive operator reference price."
+                  },
+                  {
+                    "name": "チキンフリット",
+                    "price": 319,
+                    "note": "Current operator reference menu linked by the exact Hiraoka branch, checked October 20, 2026. Hiraoka opens December 10; launch stock and final branch prices remain subject to confirmation. Operator warns prices can vary by store. Not a sibling branch menu or a guaranteed opening-day selection. Operator marks takeaway eligible; Hiraoka launch takeaway service requires confirmation. Tax-inclusive operator reference price."
+                  },
+                  {
+                    "name": "モッツァレラフリット",
+                    "price": 319,
+                    "note": "Current operator reference menu linked by the exact Hiraoka branch, checked October 20, 2026. Hiraoka opens December 10; launch stock and final branch prices remain subject to confirmation. Operator warns prices can vary by store. Not a sibling branch menu or a guaranteed opening-day selection. Tax-inclusive operator reference price."
+                  },
+                  {
+                    "name": "チーズゼッポリーネ",
+                    "price": 319,
+                    "note": "Current operator reference menu linked by the exact Hiraoka branch, checked October 20, 2026. Hiraoka opens December 10; launch stock and final branch prices remain subject to confirmation. Operator warns prices can vary by store. Not a sibling branch menu or a guaranteed opening-day selection. Operator marks takeaway eligible; Hiraoka launch takeaway service requires confirmation. Tax-inclusive operator reference price."
+                  },
+                  {
+                    "name": "きのこフリット",
+                    "price": 319,
+                    "note": "Current operator reference menu linked by the exact Hiraoka branch, checked October 20, 2026. Hiraoka opens December 10; launch stock and final branch prices remain subject to confirmation. Operator warns prices can vary by store. Not a sibling branch menu or a guaranteed opening-day selection. Tax-inclusive operator reference price."
+                  },
+                  {
+                    "name": "イカフリット（カラマリフリット）",
+                    "price": 429,
+                    "note": "Current operator reference menu linked by the exact Hiraoka branch, checked October 20, 2026. Hiraoka opens December 10; launch stock and final branch prices remain subject to confirmation. Operator warns prices can vary by store. Not a sibling branch menu or a guaranteed opening-day selection. Tax-inclusive operator reference price."
+                  },
+                  {
+                    "name": "フレンチフライ（ケチャップ）",
+                    "price": 429,
+                    "note": "Current operator reference menu linked by the exact Hiraoka branch, checked October 20, 2026. Hiraoka opens December 10; launch stock and final branch prices remain subject to confirmation. Operator warns prices can vary by store. Not a sibling branch menu or a guaranteed opening-day selection. Operator marks takeaway eligible; Hiraoka launch takeaway service requires confirmation. Tax-inclusive operator reference price."
+                  },
+                  {
+                    "name": "～トリュフ香る～フレンチフライ",
+                    "price": 539,
+                    "note": "Current operator reference menu linked by the exact Hiraoka branch, checked October 20, 2026. Hiraoka opens December 10; launch stock and final branch prices remain subject to confirmation. Operator warns prices can vary by store. Not a sibling branch menu or a guaranteed opening-day selection. Tax-inclusive operator reference price."
+                  },
+                  {
+                    "name": "えびとブロッコリーのアヒージョ(バケット3コ付)",
+                    "price": 539,
+                    "note": "Current operator reference menu linked by the exact Hiraoka branch, checked October 20, 2026. Hiraoka opens December 10; launch stock and final branch prices remain subject to confirmation. Operator warns prices can vary by store. Not a sibling branch menu or a guaranteed opening-day selection. Tax-inclusive operator reference price."
+                  },
+                  {
+                    "name": "チキンときのこのペッパーアヒージョ（バケット3コ付）",
+                    "price": 539,
+                    "note": "Current operator reference menu linked by the exact Hiraoka branch, checked October 20, 2026. Hiraoka opens December 10; launch stock and final branch prices remain subject to confirmation. Operator warns prices can vary by store. Not a sibling branch menu or a guaranteed opening-day selection. Tax-inclusive operator reference price."
+                  },
+                  {
+                    "name": "ボローニャ風ラザニア",
+                    "price": 319,
+                    "note": "Current operator reference menu linked by the exact Hiraoka branch, checked October 20, 2026. Hiraoka opens December 10; launch stock and final branch prices remain subject to confirmation. Operator warns prices can vary by store. Not a sibling branch menu or a guaranteed opening-day selection. Tax-inclusive operator reference price."
+                  },
+                  {
+                    "name": "フリコのオーブン焼き～モッツァレラチーズとマッシュポテト～",
+                    "price": 429,
+                    "note": "Current operator reference menu linked by the exact Hiraoka branch, checked October 20, 2026. Hiraoka opens December 10; launch stock and final branch prices remain subject to confirmation. Operator warns prices can vary by store. Not a sibling branch menu or a guaranteed opening-day selection. Tax-inclusive operator reference price."
+                  },
+                  {
+                    "name": "ソーセージのオーブン焼き",
+                    "price": 429,
+                    "note": "Current operator reference menu linked by the exact Hiraoka branch, checked October 20, 2026. Hiraoka opens December 10; launch stock and final branch prices remain subject to confirmation. Operator warns prices can vary by store. Not a sibling branch menu or a guaranteed opening-day selection. Tax-inclusive operator reference price."
+                  },
+                  {
+                    "name": "ほうれん草のガーリックバターソテー",
+                    "price": 319,
+                    "note": "Current operator reference menu linked by the exact Hiraoka branch, checked October 20, 2026. Hiraoka opens December 10; launch stock and final branch prices remain subject to confirmation. Operator warns prices can vary by store. Not a sibling branch menu or a guaranteed opening-day selection. Operator marks takeaway eligible; Hiraoka launch takeaway service requires confirmation. Tax-inclusive operator reference price."
+                  },
+                  {
+                    "name": "ブロッコリーのガーリックソテー",
+                    "price": 319,
+                    "note": "Current operator reference menu linked by the exact Hiraoka branch, checked October 20, 2026. Hiraoka opens December 10; launch stock and final branch prices remain subject to confirmation. Operator warns prices can vary by store. Not a sibling branch menu or a guaranteed opening-day selection. Operator marks takeaway eligible; Hiraoka launch takeaway service requires confirmation. Tax-inclusive operator reference price."
+                  },
+                  {
+                    "name": "あさりの白ワイン蒸し",
+                    "price": 319,
+                    "note": "Current operator reference menu linked by the exact Hiraoka branch, checked October 20, 2026. Hiraoka opens December 10; launch stock and final branch prices remain subject to confirmation. Operator warns prices can vary by store. Not a sibling branch menu or a guaranteed opening-day selection. Operator marks takeaway eligible; Hiraoka launch takeaway service requires confirmation. Tax-inclusive operator reference price."
+                  },
+                  {
+                    "name": "ムール貝の白ワイン蒸し",
+                    "price": 539,
+                    "note": "Current operator reference menu linked by the exact Hiraoka branch, checked October 20, 2026. Hiraoka opens December 10; launch stock and final branch prices remain subject to confirmation. Operator warns prices can vary by store. Not a sibling branch menu or a guaranteed opening-day selection. Operator marks takeaway eligible; Hiraoka launch takeaway service requires confirmation. Tax-inclusive operator reference price."
+                  },
+                  {
+                    "name": "ブルスケッタ",
+                    "price": 209,
+                    "note": "Current operator reference menu linked by the exact Hiraoka branch, checked October 20, 2026. Hiraoka opens December 10; launch stock and final branch prices remain subject to confirmation. Operator warns prices can vary by store. Not a sibling branch menu or a guaranteed opening-day selection. Tax-inclusive operator reference price."
+                  },
+                  {
+                    "name": "ガーリックトースト",
+                    "price": 319,
+                    "note": "Current operator reference menu linked by the exact Hiraoka branch, checked October 20, 2026. Hiraoka opens December 10; launch stock and final branch prices remain subject to confirmation. Operator warns prices can vary by store. Not a sibling branch menu or a guaranteed opening-day selection. Operator marks takeaway eligible; Hiraoka launch takeaway service requires confirmation. Tax-inclusive operator reference price."
+                  }
+                ],
+                "note": "Current operator reference menu linked by the exact Hiraoka branch, checked October 20, 2026. Hiraoka opens December 10; launch stock and final branch prices remain subject to confirmation. Operator warns prices can vary by store. Not a sibling branch menu or a guaranteed opening-day selection. Menu data: https://www.olivenooka.jp/menu/data/menu_appetizer.csv"
+              },
+              {
+                "label": "Operator menu preview — soup",
+                "url": "https://www.olivenooka.jp/menu/soup.html",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "コーンポタージュ",
+                    "price": 275,
+                    "note": "Current operator reference menu linked by the exact Hiraoka branch, checked October 20, 2026. Hiraoka opens December 10; launch stock and final branch prices remain subject to confirmation. Operator warns prices can vary by store. Not a sibling branch menu or a guaranteed opening-day selection. Tax-inclusive operator reference price."
+                  },
+                  {
+                    "name": "クラムチャウダー",
+                    "price": 429,
+                    "note": "Current operator reference menu linked by the exact Hiraoka branch, checked October 20, 2026. Hiraoka opens December 10; launch stock and final branch prices remain subject to confirmation. Operator warns prices can vary by store. Not a sibling branch menu or a guaranteed opening-day selection. Tax-inclusive operator reference price."
+                  },
+                  {
+                    "name": "オニオングラタンスープ",
+                    "price": 429,
+                    "note": "Current operator reference menu linked by the exact Hiraoka branch, checked October 20, 2026. Hiraoka opens December 10; launch stock and final branch prices remain subject to confirmation. Operator warns prices can vary by store. Not a sibling branch menu or a guaranteed opening-day selection. Tax-inclusive operator reference price."
+                  }
+                ],
+                "note": "Current operator reference menu linked by the exact Hiraoka branch, checked October 20, 2026. Hiraoka opens December 10; launch stock and final branch prices remain subject to confirmation. Operator warns prices can vary by store. Not a sibling branch menu or a guaranteed opening-day selection. Menu data: https://www.olivenooka.jp/menu/data/menu_soup.csv"
+              },
+              {
+                "label": "Operator menu preview — salad",
+                "url": "https://www.olivenooka.jp/menu/salad.html",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "グリーンサラダ",
+                    "price": 319,
+                    "note": "Current operator reference menu linked by the exact Hiraoka branch, checked October 20, 2026. Hiraoka opens December 10; launch stock and final branch prices remain subject to confirmation. Operator warns prices can vary by store. Not a sibling branch menu or a guaranteed opening-day selection. Tax-inclusive operator reference price."
+                  },
+                  {
+                    "name": "シーザーサラダ",
+                    "price": 429,
+                    "note": "Current operator reference menu linked by the exact Hiraoka branch, checked October 20, 2026. Hiraoka opens December 10; launch stock and final branch prices remain subject to confirmation. Operator warns prices can vary by store. Not a sibling branch menu or a guaranteed opening-day selection. Tax-inclusive operator reference price."
+                  },
+                  {
+                    "name": "えびとたまごのアイオリサラダ",
+                    "price": 495,
+                    "note": "Current operator reference menu linked by the exact Hiraoka branch, checked October 20, 2026. Hiraoka opens December 10; launch stock and final branch prices remain subject to confirmation. Operator warns prices can vary by store. Not a sibling branch menu or a guaranteed opening-day selection. Tax-inclusive operator reference price."
+                  },
+                  {
+                    "name": "鴨マリネとキャロットラぺのサラダ",
+                    "price": 649,
+                    "note": "Current operator reference menu linked by the exact Hiraoka branch, checked October 20, 2026. Hiraoka opens December 10; launch stock and final branch prices remain subject to confirmation. Operator warns prices can vary by store. Not a sibling branch menu or a guaranteed opening-day selection. Tax-inclusive operator reference price."
+                  },
+                  {
+                    "name": "【シェアサイズ】シーザーサラダ（大）",
+                    "price": 649,
+                    "note": "Current operator reference menu linked by the exact Hiraoka branch, checked October 20, 2026. Hiraoka opens December 10; launch stock and final branch prices remain subject to confirmation. Operator warns prices can vary by store. Not a sibling branch menu or a guaranteed opening-day selection. Tax-inclusive operator reference price."
+                  },
+                  {
+                    "name": "【シェアサイズ】えびとたまごのアイオリサラダ（大）",
+                    "price": 715,
+                    "note": "Current operator reference menu linked by the exact Hiraoka branch, checked October 20, 2026. Hiraoka opens December 10; launch stock and final branch prices remain subject to confirmation. Operator warns prices can vary by store. Not a sibling branch menu or a guaranteed opening-day selection. Tax-inclusive operator reference price."
+                  },
+                  {
+                    "name": "【シェアサイズ】鴨マリネとキャロットラぺのサラダ（大）",
+                    "price": 869,
+                    "note": "Current operator reference menu linked by the exact Hiraoka branch, checked October 20, 2026. Hiraoka opens December 10; launch stock and final branch prices remain subject to confirmation. Operator warns prices can vary by store. Not a sibling branch menu or a guaranteed opening-day selection. Tax-inclusive operator reference price."
+                  }
+                ],
+                "note": "Current operator reference menu linked by the exact Hiraoka branch, checked October 20, 2026. Hiraoka opens December 10; launch stock and final branch prices remain subject to confirmation. Operator warns prices can vary by store. Not a sibling branch menu or a guaranteed opening-day selection. Menu data: https://www.olivenooka.jp/menu/data/menu_salad.csv"
+              },
+              {
+                "label": "Operator menu preview — rice-dishes",
+                "url": "https://www.olivenooka.jp/menu/rice-dishes.html",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "リゾットフォルマッジ",
+                    "price": 605,
+                    "note": "Current operator reference menu linked by the exact Hiraoka branch, checked October 20, 2026. Hiraoka opens December 10; launch stock and final branch prices remain subject to confirmation. Operator warns prices can vary by store. Not a sibling branch menu or a guaranteed opening-day selection. Tax-inclusive operator reference price."
+                  },
+                  {
+                    "name": "えびとブロッコリーのビスククリームリゾット",
+                    "price": 715,
+                    "note": "Current operator reference menu linked by the exact Hiraoka branch, checked October 20, 2026. Hiraoka opens December 10; launch stock and final branch prices remain subject to confirmation. Operator warns prices can vary by store. Not a sibling branch menu or a guaranteed opening-day selection. Tax-inclusive operator reference price."
+                  },
+                  {
+                    "name": "ボローニャドリア",
+                    "price": 539,
+                    "note": "Current operator reference menu linked by the exact Hiraoka branch, checked October 20, 2026. Hiraoka opens December 10; launch stock and final branch prices remain subject to confirmation. Operator warns prices can vary by store. Not a sibling branch menu or a guaranteed opening-day selection. Tax-inclusive operator reference price."
+                  },
+                  {
+                    "name": "カルボナーラドリア",
+                    "price": 649,
+                    "note": "Current operator reference menu linked by the exact Hiraoka branch, checked October 20, 2026. Hiraoka opens December 10; launch stock and final branch prices remain subject to confirmation. Operator warns prices can vary by store. Not a sibling branch menu or a guaranteed opening-day selection. Tax-inclusive operator reference price."
+                  },
+                  {
+                    "name": "えびのビスククリームドリア",
+                    "price": 715,
+                    "note": "Current operator reference menu linked by the exact Hiraoka branch, checked October 20, 2026. Hiraoka opens December 10; launch stock and final branch prices remain subject to confirmation. Operator warns prices can vary by store. Not a sibling branch menu or a guaranteed opening-day selection. Tax-inclusive operator reference price."
+                  },
+                  {
+                    "name": "チキンときのこのドリア",
+                    "price": 649,
+                    "note": "Current operator reference menu linked by the exact Hiraoka branch, checked October 20, 2026. Hiraoka opens December 10; launch stock and final branch prices remain subject to confirmation. Operator warns prices can vary by store. Not a sibling branch menu or a guaranteed opening-day selection. Tax-inclusive operator reference price."
+                  },
+                  {
+                    "name": "ライス",
+                    "price": 242,
+                    "note": "Current operator reference menu linked by the exact Hiraoka branch, checked October 20, 2026. Hiraoka opens December 10; launch stock and final branch prices remain subject to confirmation. Operator warns prices can vary by store. Not a sibling branch menu or a guaranteed opening-day selection. Tax-inclusive operator reference price."
+                  },
+                  {
+                    "name": "ライス(小)",
+                    "price": 220,
+                    "note": "Current operator reference menu linked by the exact Hiraoka branch, checked October 20, 2026. Hiraoka opens December 10; launch stock and final branch prices remain subject to confirmation. Operator warns prices can vary by store. Not a sibling branch menu or a guaranteed opening-day selection. Tax-inclusive operator reference price."
+                  },
+                  {
+                    "name": "ライス（大）",
+                    "price": 330,
+                    "note": "Current operator reference menu linked by the exact Hiraoka branch, checked October 20, 2026. Hiraoka opens December 10; launch stock and final branch prices remain subject to confirmation. Operator warns prices can vary by store. Not a sibling branch menu or a guaranteed opening-day selection. Tax-inclusive operator reference price."
+                  }
+                ],
+                "note": "Current operator reference menu linked by the exact Hiraoka branch, checked October 20, 2026. Hiraoka opens December 10; launch stock and final branch prices remain subject to confirmation. Operator warns prices can vary by store. Not a sibling branch menu or a guaranteed opening-day selection. Menu data: https://www.olivenooka.jp/menu/data/menu_rice.csv"
+              },
+              {
+                "label": "Operator menu preview — pizza",
+                "url": "https://www.olivenooka.jp/menu/pizza.html",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "ピッツァ・マルゲリータ",
+                    "price": 649,
+                    "note": "Current operator reference menu linked by the exact Hiraoka branch, checked October 20, 2026. Hiraoka opens December 10; launch stock and final branch prices remain subject to confirmation. Operator warns prices can vary by store. Not a sibling branch menu or a guaranteed opening-day selection. Operator marks takeaway eligible; Hiraoka launch takeaway service requires confirmation. Tax-inclusive operator reference price."
+                  },
+                  {
+                    "name": "ピッツァ・ガーリックベーコン",
+                    "price": 649,
+                    "note": "Current operator reference menu linked by the exact Hiraoka branch, checked October 20, 2026. Hiraoka opens December 10; launch stock and final branch prices remain subject to confirmation. Operator warns prices can vary by store. Not a sibling branch menu or a guaranteed opening-day selection. Operator marks takeaway eligible; Hiraoka launch takeaway service requires confirmation. Tax-inclusive operator reference price."
+                  },
+                  {
+                    "name": "ピッツァ・たっぷりコーンマヨ",
+                    "price": 649,
+                    "note": "Current operator reference menu linked by the exact Hiraoka branch, checked October 20, 2026. Hiraoka opens December 10; launch stock and final branch prices remain subject to confirmation. Operator warns prices can vary by store. Not a sibling branch menu or a guaranteed opening-day selection. Operator marks takeaway eligible; Hiraoka launch takeaway service requires confirmation. Tax-inclusive operator reference price."
+                  },
+                  {
+                    "name": "ピッツァ・サーモンマヨ",
+                    "price": 759,
+                    "note": "Current operator reference menu linked by the exact Hiraoka branch, checked October 20, 2026. Hiraoka opens December 10; launch stock and final branch prices remain subject to confirmation. Operator warns prices can vary by store. Not a sibling branch menu or a guaranteed opening-day selection. Operator marks takeaway eligible; Hiraoka launch takeaway service requires confirmation. Tax-inclusive operator reference price."
+                  },
+                  {
+                    "name": "ピッツァ・えびマヨガーリック",
+                    "price": 759,
+                    "note": "Current operator reference menu linked by the exact Hiraoka branch, checked October 20, 2026. Hiraoka opens December 10; launch stock and final branch prices remain subject to confirmation. Operator warns prices can vary by store. Not a sibling branch menu or a guaranteed opening-day selection. Operator marks takeaway eligible; Hiraoka launch takeaway service requires confirmation. Tax-inclusive operator reference price."
+                  },
+                  {
+                    "name": "ピッツァ・クワトロフォルマッジ",
+                    "price": 759,
+                    "note": "Current operator reference menu linked by the exact Hiraoka branch, checked October 20, 2026. Hiraoka opens December 10; launch stock and final branch prices remain subject to confirmation. Operator warns prices can vary by store. Not a sibling branch menu or a guaranteed opening-day selection. Operator marks takeaway eligible; Hiraoka launch takeaway service requires confirmation. Tax-inclusive operator reference price."
+                  },
+                  {
+                    "name": "ピッツァ・チキンときのこのバジルクリーム",
+                    "price": 869,
+                    "note": "Current operator reference menu linked by the exact Hiraoka branch, checked October 20, 2026. Hiraoka opens December 10; launch stock and final branch prices remain subject to confirmation. Operator warns prices can vary by store. Not a sibling branch menu or a guaranteed opening-day selection. Operator marks takeaway eligible; Hiraoka launch takeaway service requires confirmation. Tax-inclusive operator reference price."
+                  },
+                  {
+                    "name": "ピッツァ・チチニエッリポモドーロ",
+                    "price": 869,
+                    "note": "Current operator reference menu linked by the exact Hiraoka branch, checked October 20, 2026. Hiraoka opens December 10; launch stock and final branch prices remain subject to confirmation. Operator warns prices can vary by store. Not a sibling branch menu or a guaranteed opening-day selection. Tax-inclusive operator reference price."
+                  },
+                  {
+                    "name": "ミニピッツァ・マルゲリータ",
+                    "price": 429,
+                    "note": "Current operator reference menu linked by the exact Hiraoka branch, checked October 20, 2026. Hiraoka opens December 10; launch stock and final branch prices remain subject to confirmation. Operator warns prices can vary by store. Not a sibling branch menu or a guaranteed opening-day selection. Tax-inclusive operator reference price."
+                  },
+                  {
+                    "name": "ミニピッツァ・ガーリックベーコン",
+                    "price": 495,
+                    "note": "Current operator reference menu linked by the exact Hiraoka branch, checked October 20, 2026. Hiraoka opens December 10; launch stock and final branch prices remain subject to confirmation. Operator warns prices can vary by store. Not a sibling branch menu or a guaranteed opening-day selection. Tax-inclusive operator reference price."
+                  },
+                  {
+                    "name": "ミニピッツァ・たっぷりコーンマヨ",
+                    "price": 495,
+                    "note": "Current operator reference menu linked by the exact Hiraoka branch, checked October 20, 2026. Hiraoka opens December 10; launch stock and final branch prices remain subject to confirmation. Operator warns prices can vary by store. Not a sibling branch menu or a guaranteed opening-day selection. Tax-inclusive operator reference price."
+                  }
+                ],
+                "note": "Current operator reference menu linked by the exact Hiraoka branch, checked October 20, 2026. Hiraoka opens December 10; launch stock and final branch prices remain subject to confirmation. Operator warns prices can vary by store. Not a sibling branch menu or a guaranteed opening-day selection. Menu data: https://www.olivenooka.jp/menu/data/menu_pizza.csv"
+              },
+              {
+                "label": "Operator menu preview — pasta",
+                "url": "https://www.olivenooka.jp/menu/pasta.html",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "アーリオオーリオ・ペペロンチーノ",
+                    "price": 429,
+                    "note": "Current operator reference menu linked by the exact Hiraoka branch, checked October 20, 2026. Hiraoka opens December 10; launch stock and final branch prices remain subject to confirmation. Operator warns prices can vary by store. Not a sibling branch menu or a guaranteed opening-day selection. Tax-inclusive operator reference price."
+                  },
+                  {
+                    "name": "えびとほうれん草のトマトペペロンチーノ",
+                    "price": 649,
+                    "note": "Current operator reference menu linked by the exact Hiraoka branch, checked October 20, 2026. Hiraoka opens December 10; launch stock and final branch prices remain subject to confirmation. Operator warns prices can vary by store. Not a sibling branch menu or a guaranteed opening-day selection. Operator marks takeaway eligible; Hiraoka launch takeaway service requires confirmation. Tax-inclusive operator reference price."
+                  },
+                  {
+                    "name": "ボンゴレビアンコ",
+                    "price": 649,
+                    "note": "Current operator reference menu linked by the exact Hiraoka branch, checked October 20, 2026. Hiraoka opens December 10; launch stock and final branch prices remain subject to confirmation. Operator warns prices can vary by store. Not a sibling branch menu or a guaranteed opening-day selection. Operator marks takeaway eligible; Hiraoka launch takeaway service requires confirmation. Tax-inclusive operator reference price."
+                  },
+                  {
+                    "name": "ごろごろチキンと葱の黒胡椒醤油",
+                    "price": 649,
+                    "note": "Current operator reference menu linked by the exact Hiraoka branch, checked October 20, 2026. Hiraoka opens December 10; launch stock and final branch prices remain subject to confirmation. Operator warns prices can vary by store. Not a sibling branch menu or a guaranteed opening-day selection. Tax-inclusive operator reference price."
+                  },
+                  {
+                    "name": "あさりとほうれん草のバター醤油",
+                    "price": 429,
+                    "note": "Current operator reference menu linked by the exact Hiraoka branch, checked October 20, 2026. Hiraoka opens December 10; launch stock and final branch prices remain subject to confirmation. Operator warns prices can vary by store. Not a sibling branch menu or a guaranteed opening-day selection. Tax-inclusive operator reference price."
+                  },
+                  {
+                    "name": "焼き茄子とベーコンの醤油ソース",
+                    "price": 539,
+                    "note": "Current operator reference menu linked by the exact Hiraoka branch, checked October 20, 2026. Hiraoka opens December 10; launch stock and final branch prices remain subject to confirmation. Operator warns prices can vary by store. Not a sibling branch menu or a guaranteed opening-day selection. Tax-inclusive operator reference price."
+                  },
+                  {
+                    "name": "モッツァトマト",
+                    "price": 649,
+                    "note": "Current operator reference menu linked by the exact Hiraoka branch, checked October 20, 2026. Hiraoka opens December 10; launch stock and final branch prices remain subject to confirmation. Operator warns prices can vary by store. Not a sibling branch menu or a guaranteed opening-day selection. Operator marks takeaway eligible; Hiraoka launch takeaway service requires confirmation. Tax-inclusive operator reference price."
+                  },
+                  {
+                    "name": "アラビアータ",
+                    "price": 539,
+                    "note": "Current operator reference menu linked by the exact Hiraoka branch, checked October 20, 2026. Hiraoka opens December 10; launch stock and final branch prices remain subject to confirmation. Operator warns prices can vary by store. Not a sibling branch menu or a guaranteed opening-day selection. Tax-inclusive operator reference price."
+                  },
+                  {
+                    "name": "ペスカトーレ",
+                    "price": 715,
+                    "note": "Current operator reference menu linked by the exact Hiraoka branch, checked October 20, 2026. Hiraoka opens December 10; launch stock and final branch prices remain subject to confirmation. Operator warns prices can vary by store. Not a sibling branch menu or a guaranteed opening-day selection. Operator marks takeaway eligible; Hiraoka launch takeaway service requires confirmation. Tax-inclusive operator reference price."
+                  },
+                  {
+                    "name": "彩り野菜とベーコンのトマトソース",
+                    "price": 649,
+                    "note": "Current operator reference menu linked by the exact Hiraoka branch, checked October 20, 2026. Hiraoka opens December 10; launch stock and final branch prices remain subject to confirmation. Operator warns prices can vary by store. Not a sibling branch menu or a guaranteed opening-day selection. Operator marks takeaway eligible; Hiraoka launch takeaway service requires confirmation. Tax-inclusive operator reference price."
+                  },
+                  {
+                    "name": "焼き茄子とベーコンのトマトソース",
+                    "price": 605,
+                    "note": "Current operator reference menu linked by the exact Hiraoka branch, checked October 20, 2026. Hiraoka opens December 10; launch stock and final branch prices remain subject to confirmation. Operator warns prices can vary by store. Not a sibling branch menu or a guaranteed opening-day selection. Operator marks takeaway eligible; Hiraoka launch takeaway service requires confirmation. Tax-inclusive operator reference price."
+                  },
+                  {
+                    "name": "ダブルモッツァトマト",
+                    "price": 715,
+                    "note": "Current operator reference menu linked by the exact Hiraoka branch, checked October 20, 2026. Hiraoka opens December 10; launch stock and final branch prices remain subject to confirmation. Operator warns prices can vary by store. Not a sibling branch menu or a guaranteed opening-day selection. Operator marks takeaway eligible; Hiraoka launch takeaway service requires confirmation. Tax-inclusive operator reference price."
+                  },
+                  {
+                    "name": "ボロネーゼ",
+                    "price": 539,
+                    "note": "Current operator reference menu linked by the exact Hiraoka branch, checked October 20, 2026. Hiraoka opens December 10; launch stock and final branch prices remain subject to confirmation. Operator warns prices can vary by store. Not a sibling branch menu or a guaranteed opening-day selection. Tax-inclusive operator reference price."
+                  },
+                  {
+                    "name": "モッツァレラとベーコンのボロネーゼ",
+                    "price": 649,
+                    "note": "Current operator reference menu linked by the exact Hiraoka branch, checked October 20, 2026. Hiraoka opens December 10; launch stock and final branch prices remain subject to confirmation. Operator warns prices can vary by store. Not a sibling branch menu or a guaranteed opening-day selection. Operator marks takeaway eligible; Hiraoka launch takeaway service requires confirmation. Tax-inclusive operator reference price."
+                  },
+                  {
+                    "name": "しらすと葱のジンジャーカルボ",
+                    "price": 649,
+                    "note": "Current operator reference menu linked by the exact Hiraoka branch, checked October 20, 2026. Hiraoka opens December 10; launch stock and final branch prices remain subject to confirmation. Operator warns prices can vary by store. Not a sibling branch menu or a guaranteed opening-day selection. Tax-inclusive operator reference price."
+                  },
+                  {
+                    "name": "カルボナーラ",
+                    "price": 605,
+                    "note": "Current operator reference menu linked by the exact Hiraoka branch, checked October 20, 2026. Hiraoka opens December 10; launch stock and final branch prices remain subject to confirmation. Operator warns prices can vary by store. Not a sibling branch menu or a guaranteed opening-day selection. Tax-inclusive operator reference price."
+                  },
+                  {
+                    "name": "海の幸明太子",
+                    "price": 539,
+                    "note": "Current operator reference menu linked by the exact Hiraoka branch, checked October 20, 2026. Hiraoka opens December 10; launch stock and final branch prices remain subject to confirmation. Operator warns prices can vary by store. Not a sibling branch menu or a guaranteed opening-day selection. Tax-inclusive operator reference price."
+                  },
+                  {
+                    "name": "サーモンとほうれん草のクリームソース",
+                    "price": 649,
+                    "note": "Current operator reference menu linked by the exact Hiraoka branch, checked October 20, 2026. Hiraoka opens December 10; launch stock and final branch prices remain subject to confirmation. Operator warns prices can vary by store. Not a sibling branch menu or a guaranteed opening-day selection. Operator marks takeaway eligible; Hiraoka launch takeaway service requires confirmation. Tax-inclusive operator reference price."
+                  },
+                  {
+                    "name": "明太子クリーム",
+                    "price": 649,
+                    "note": "Current operator reference menu linked by the exact Hiraoka branch, checked October 20, 2026. Hiraoka opens December 10; launch stock and final branch prices remain subject to confirmation. Operator warns prices can vary by store. Not a sibling branch menu or a guaranteed opening-day selection. Tax-inclusive operator reference price."
+                  },
+                  {
+                    "name": "明太子",
+                    "price": 429,
+                    "note": "Current operator reference menu linked by the exact Hiraoka branch, checked October 20, 2026. Hiraoka opens December 10; launch stock and final branch prices remain subject to confirmation. Operator warns prices can vary by store. Not a sibling branch menu or a guaranteed opening-day selection. Tax-inclusive operator reference price."
+                  },
+                  {
+                    "name": "イカ墨（ネーロ）",
+                    "price": 715,
+                    "note": "Current operator reference menu linked by the exact Hiraoka branch, checked October 20, 2026. Hiraoka opens December 10; launch stock and final branch prices remain subject to confirmation. Operator warns prices can vary by store. Not a sibling branch menu or a guaranteed opening-day selection. Operator marks takeaway eligible; Hiraoka launch takeaway service requires confirmation. Tax-inclusive operator reference price."
+                  },
+                  {
+                    "name": "ジェノベーゼ",
+                    "price": 715,
+                    "note": "Current operator reference menu linked by the exact Hiraoka branch, checked October 20, 2026. Hiraoka opens December 10; launch stock and final branch prices remain subject to confirmation. Operator warns prices can vary by store. Not a sibling branch menu or a guaranteed opening-day selection. Tax-inclusive operator reference price."
+                  },
+                  {
+                    "name": "ペンネ　アラビアータ",
+                    "price": 649,
+                    "note": "Current operator reference menu linked by the exact Hiraoka branch, checked October 20, 2026. Hiraoka opens December 10; launch stock and final branch prices remain subject to confirmation. Operator warns prices can vary by store. Not a sibling branch menu or a guaranteed opening-day selection. Operator marks takeaway eligible; Hiraoka launch takeaway service requires confirmation. Tax-inclusive operator reference price."
+                  },
+                  {
+                    "name": "ペンネ　ボロネーゼ",
+                    "price": 649,
+                    "note": "Current operator reference menu linked by the exact Hiraoka branch, checked October 20, 2026. Hiraoka opens December 10; launch stock and final branch prices remain subject to confirmation. Operator warns prices can vary by store. Not a sibling branch menu or a guaranteed opening-day selection. Tax-inclusive operator reference price."
+                  },
+                  {
+                    "name": "ペンネ　ゴルゴンゾーラクリーム",
+                    "price": 759,
+                    "note": "Current operator reference menu linked by the exact Hiraoka branch, checked October 20, 2026. Hiraoka opens December 10; launch stock and final branch prices remain subject to confirmation. Operator warns prices can vary by store. Not a sibling branch menu or a guaranteed opening-day selection. Operator marks takeaway eligible; Hiraoka launch takeaway service requires confirmation. Tax-inclusive operator reference price."
+                  }
+                ],
+                "note": "Current operator reference menu linked by the exact Hiraoka branch, checked October 20, 2026. Hiraoka opens December 10; launch stock and final branch prices remain subject to confirmation. Operator warns prices can vary by store. Not a sibling branch menu or a guaranteed opening-day selection. Menu data: https://www.olivenooka.jp/menu/data/menu_pasta.csv"
+              },
+              {
+                "label": "Operator menu preview — meat-dishes",
+                "url": "https://www.olivenooka.jp/menu/meat-dishes.html",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "デミグラスハンバーグ",
+                    "price": 539,
+                    "note": "Current operator reference menu linked by the exact Hiraoka branch, checked October 20, 2026. Hiraoka opens December 10; launch stock and final branch prices remain subject to confirmation. Operator warns prices can vary by store. Not a sibling branch menu or a guaranteed opening-day selection. Tax-inclusive operator reference price."
+                  },
+                  {
+                    "name": "チーズトマトハンバーグ",
+                    "price": 649,
+                    "note": "Current operator reference menu linked by the exact Hiraoka branch, checked October 20, 2026. Hiraoka opens December 10; launch stock and final branch prices remain subject to confirmation. Operator warns prices can vary by store. Not a sibling branch menu or a guaranteed opening-day selection. Tax-inclusive operator reference price."
+                  },
+                  {
+                    "name": "チキンのオーブン焼き",
+                    "price": 594,
+                    "note": "Current operator reference menu linked by the exact Hiraoka branch, checked October 20, 2026. Hiraoka opens December 10; launch stock and final branch prices remain subject to confirmation. Operator warns prices can vary by store. Not a sibling branch menu or a guaranteed opening-day selection. Tax-inclusive operator reference price."
+                  },
+                  {
+                    "name": "チキンのオーブン焼き～シャキシャキ野菜ソース～",
+                    "price": 715,
+                    "note": "Current operator reference menu linked by the exact Hiraoka branch, checked October 20, 2026. Hiraoka opens December 10; launch stock and final branch prices remain subject to confirmation. Operator warns prices can vary by store. Not a sibling branch menu or a guaranteed opening-day selection. Tax-inclusive operator reference price."
+                  },
+                  {
+                    "name": "ハーブ香る豚のポルケッタ ～チーズトマトソース～",
+                    "price": 869,
+                    "note": "Current operator reference menu linked by the exact Hiraoka branch, checked October 20, 2026. Hiraoka opens December 10; launch stock and final branch prices remain subject to confirmation. Operator warns prices can vary by store. Not a sibling branch menu or a guaranteed opening-day selection. Tax-inclusive operator reference price."
+                  },
+                  {
+                    "name": "ハーブ香る豚のポルケッタ ～ペッパー＆バルサミコソース～",
+                    "price": 869,
+                    "note": "Current operator reference menu linked by the exact Hiraoka branch, checked October 20, 2026. Hiraoka opens December 10; launch stock and final branch prices remain subject to confirmation. Operator warns prices can vary by store. Not a sibling branch menu or a guaranteed opening-day selection. Operator marks takeaway eligible; Hiraoka launch takeaway service requires confirmation. Tax-inclusive operator reference price."
+                  },
+                  {
+                    "name": "鴨のロティ～ペッパー＆デミグラスソース～",
+                    "price": 979,
+                    "note": "Current operator reference menu linked by the exact Hiraoka branch, checked October 20, 2026. Hiraoka opens December 10; launch stock and final branch prices remain subject to confirmation. Operator warns prices can vary by store. Not a sibling branch menu or a guaranteed opening-day selection. Tax-inclusive operator reference price."
+                  }
+                ],
+                "note": "Current operator reference menu linked by the exact Hiraoka branch, checked October 20, 2026. Hiraoka opens December 10; launch stock and final branch prices remain subject to confirmation. Operator warns prices can vary by store. Not a sibling branch menu or a guaranteed opening-day selection. Menu data: https://www.olivenooka.jp/menu/data/menu_meat.csv"
+              },
+              {
+                "label": "Operator menu preview — dessert",
+                "url": "https://www.olivenooka.jp/menu/dessert.html",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "ジェラート　バニラ",
+                    "price": 275,
+                    "note": "Current operator reference menu linked by the exact Hiraoka branch, checked October 20, 2026. Hiraoka opens December 10; launch stock and final branch prices remain subject to confirmation. Operator warns prices can vary by store. Not a sibling branch menu or a guaranteed opening-day selection. Tax-inclusive operator reference price."
+                  },
+                  {
+                    "name": "ジェラート　チョコ",
+                    "price": 275,
+                    "note": "Current operator reference menu linked by the exact Hiraoka branch, checked October 20, 2026. Hiraoka opens December 10; launch stock and final branch prices remain subject to confirmation. Operator warns prices can vary by store. Not a sibling branch menu or a guaranteed opening-day selection. Tax-inclusive operator reference price."
+                  },
+                  {
+                    "name": "ジェラート　いちご",
+                    "price": 275,
+                    "note": "Current operator reference menu linked by the exact Hiraoka branch, checked October 20, 2026. Hiraoka opens December 10; launch stock and final branch prices remain subject to confirmation. Operator warns prices can vary by store. Not a sibling branch menu or a guaranteed opening-day selection. Tax-inclusive operator reference price."
+                  },
+                  {
+                    "name": "2種ジェラート～バニラ＆チョコレート～",
+                    "price": 275,
+                    "note": "Current operator reference menu linked by the exact Hiraoka branch, checked October 20, 2026. Hiraoka opens December 10; launch stock and final branch prices remain subject to confirmation. Operator warns prices can vary by store. Not a sibling branch menu or a guaranteed opening-day selection. Tax-inclusive operator reference price."
+                  },
+                  {
+                    "name": "2種ジェラート～バニラ＆いちご～",
+                    "price": 275,
+                    "note": "Current operator reference menu linked by the exact Hiraoka branch, checked October 20, 2026. Hiraoka opens December 10; launch stock and final branch prices remain subject to confirmation. Operator warns prices can vary by store. Not a sibling branch menu or a guaranteed opening-day selection. Tax-inclusive operator reference price."
+                  },
+                  {
+                    "name": "2種ジェラート～チョコレート＆いちご～",
+                    "price": 275,
+                    "note": "Current operator reference menu linked by the exact Hiraoka branch, checked October 20, 2026. Hiraoka opens December 10; launch stock and final branch prices remain subject to confirmation. Operator warns prices can vary by store. Not a sibling branch menu or a guaranteed opening-day selection. Tax-inclusive operator reference price."
+                  },
+                  {
+                    "name": "オリーブの丘プリン",
+                    "price": 319,
+                    "note": "Current operator reference menu linked by the exact Hiraoka branch, checked October 20, 2026. Hiraoka opens December 10; launch stock and final branch prices remain subject to confirmation. Operator warns prices can vary by store. Not a sibling branch menu or a guaranteed opening-day selection. Tax-inclusive operator reference price."
+                  },
+                  {
+                    "name": "ロイヤルミルクティーグラニータ＆パンナコッタ",
+                    "price": 319,
+                    "note": "Current operator reference menu linked by the exact Hiraoka branch, checked October 20, 2026. Hiraoka opens December 10; launch stock and final branch prices remain subject to confirmation. Operator warns prices can vary by store. Not a sibling branch menu or a guaranteed opening-day selection. Tax-inclusive operator reference price."
+                  },
+                  {
+                    "name": "オリーブの丘ティラミス",
+                    "price": 429,
+                    "note": "Current operator reference menu linked by the exact Hiraoka branch, checked October 20, 2026. Hiraoka opens December 10; launch stock and final branch prices remain subject to confirmation. Operator warns prices can vary by store. Not a sibling branch menu or a guaranteed opening-day selection. Tax-inclusive operator reference price."
+                  },
+                  {
+                    "name": "ショコラケーキ ～カラメルナッツ～",
+                    "price": 429,
+                    "note": "Current operator reference menu linked by the exact Hiraoka branch, checked October 20, 2026. Hiraoka opens December 10; launch stock and final branch prices remain subject to confirmation. Operator warns prices can vary by store. Not a sibling branch menu or a guaranteed opening-day selection. Tax-inclusive operator reference price."
+                  },
+                  {
+                    "name": "バスクチーズケーキ ～オレンジコンフィと苺ソ―ス～",
+                    "price": 539,
+                    "note": "Current operator reference menu linked by the exact Hiraoka branch, checked October 20, 2026. Hiraoka opens December 10; launch stock and final branch prices remain subject to confirmation. Operator warns prices can vary by store. Not a sibling branch menu or a guaranteed opening-day selection. Tax-inclusive operator reference price."
+                  },
+                  {
+                    "name": "窯焼きパン・プディング～バニラジェラートのせ～",
+                    "price": 539,
+                    "note": "Current operator reference menu linked by the exact Hiraoka branch, checked October 20, 2026. Hiraoka opens December 10; launch stock and final branch prices remain subject to confirmation. Operator warns prices can vary by store. Not a sibling branch menu or a guaranteed opening-day selection. Tax-inclusive operator reference price."
+                  },
+                  {
+                    "name": "しぼりたて　オリーブの丘モンブラン",
+                    "price": 605,
+                    "note": "Current operator reference menu linked by the exact Hiraoka branch, checked October 20, 2026. Hiraoka opens December 10; launch stock and final branch prices remain subject to confirmation. Operator warns prices can vary by store. Not a sibling branch menu or a guaranteed opening-day selection. Tax-inclusive operator reference price."
+                  },
+                  {
+                    "name": "自家製オレンジコンフィチュール",
+                    "price": 110,
+                    "note": "Current operator reference menu linked by the exact Hiraoka branch, checked October 20, 2026. Hiraoka opens December 10; launch stock and final branch prices remain subject to confirmation. Operator warns prices can vary by store. Not a sibling branch menu or a guaranteed opening-day selection. Tax-inclusive operator reference price."
+                  },
+                  {
+                    "name": "蜂蜜ナッツ（付け合わせ）",
+                    "price": 110,
+                    "note": "Current operator reference menu linked by the exact Hiraoka branch, checked October 20, 2026. Hiraoka opens December 10; launch stock and final branch prices remain subject to confirmation. Operator warns prices can vary by store. Not a sibling branch menu or a guaranteed opening-day selection. Tax-inclusive operator reference price."
+                  }
+                ],
+                "note": "Current operator reference menu linked by the exact Hiraoka branch, checked October 20, 2026. Hiraoka opens December 10; launch stock and final branch prices remain subject to confirmation. Operator warns prices can vary by store. Not a sibling branch menu or a guaranteed opening-day selection. Menu data: https://www.olivenooka.jp/menu/data/menu_desert.csv"
+              },
+              {
+                "label": "Operator menu preview — alcohol-and-drink",
+                "url": "https://www.olivenooka.jp/menu/alcohol-and-drink.html",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "生ビール　キリン一番搾り",
+                    "price": 572,
+                    "note": "Current operator reference menu linked by the exact Hiraoka branch, checked October 20, 2026. Hiraoka opens December 10; launch stock and final branch prices remain subject to confirmation. Operator warns prices can vary by store. Not a sibling branch menu or a guaranteed opening-day selection. Tax-inclusive operator reference price."
+                  },
+                  {
+                    "name": "ペローニ　ナストロアズーロ（イタリアンプレミアムビール）330ml",
+                    "price": 605,
+                    "note": "Current operator reference menu linked by the exact Hiraoka branch, checked October 20, 2026. Hiraoka opens December 10; launch stock and final branch prices remain subject to confirmation. Operator warns prices can vary by store. Not a sibling branch menu or a guaranteed opening-day selection. Tax-inclusive operator reference price."
+                  },
+                  {
+                    "name": "ハウスワイン白　110ml",
+                    "price": 209,
+                    "note": "Current operator reference menu linked by the exact Hiraoka branch, checked October 20, 2026. Hiraoka opens December 10; launch stock and final branch prices remain subject to confirmation. Operator warns prices can vary by store. Not a sibling branch menu or a guaranteed opening-day selection. Tax-inclusive operator reference price."
+                  },
+                  {
+                    "name": "ハウスワイン　デキャンタ白　440ml",
+                    "price": 759,
+                    "note": "Current operator reference menu linked by the exact Hiraoka branch, checked October 20, 2026. Hiraoka opens December 10; launch stock and final branch prices remain subject to confirmation. Operator warns prices can vary by store. Not a sibling branch menu or a guaranteed opening-day selection. Tax-inclusive operator reference price."
+                  },
+                  {
+                    "name": "ハウスワイン赤　110ml",
+                    "price": 209,
+                    "note": "Current operator reference menu linked by the exact Hiraoka branch, checked October 20, 2026. Hiraoka opens December 10; launch stock and final branch prices remain subject to confirmation. Operator warns prices can vary by store. Not a sibling branch menu or a guaranteed opening-day selection. Tax-inclusive operator reference price."
+                  },
+                  {
+                    "name": "ハウスワイン　デキャンタ赤　440ml",
+                    "price": 759,
+                    "note": "Current operator reference menu linked by the exact Hiraoka branch, checked October 20, 2026. Hiraoka opens December 10; launch stock and final branch prices remain subject to confirmation. Operator warns prices can vary by store. Not a sibling branch menu or a guaranteed opening-day selection. Tax-inclusive operator reference price."
+                  },
+                  {
+                    "name": "マルティーニ　ブリュット　ハーフ(白)　375ml",
+                    "price": 1089,
+                    "note": "Current operator reference menu linked by the exact Hiraoka branch, checked October 20, 2026. Hiraoka opens December 10; launch stock and final branch prices remain subject to confirmation. Operator warns prices can vary by store. Not a sibling branch menu or a guaranteed opening-day selection. Tax-inclusive operator reference price."
+                  },
+                  {
+                    "name": "カーヨ　グランキュヴェ　エクストラドライ(白)750ml",
+                    "price": 1529,
+                    "note": "Current operator reference menu linked by the exact Hiraoka branch, checked October 20, 2026. Hiraoka opens December 10; launch stock and final branch prices remain subject to confirmation. Operator warns prices can vary by store. Not a sibling branch menu or a guaranteed opening-day selection. Tax-inclusive operator reference price."
+                  },
+                  {
+                    "name": "パスクアランブルスコ　デッレミリア(赤)750ml",
+                    "price": 1089,
+                    "note": "Current operator reference menu linked by the exact Hiraoka branch, checked October 20, 2026. Hiraoka opens December 10; launch stock and final branch prices remain subject to confirmation. Operator warns prices can vary by store. Not a sibling branch menu or a guaranteed opening-day selection. Tax-inclusive operator reference price."
+                  },
+                  {
+                    "name": "パスクアロッソヴェネト（赤）750ml",
+                    "price": 1089,
+                    "note": "Current operator reference menu linked by the exact Hiraoka branch, checked October 20, 2026. Hiraoka opens December 10; launch stock and final branch prices remain subject to confirmation. Operator warns prices can vary by store. Not a sibling branch menu or a guaranteed opening-day selection. Tax-inclusive operator reference price."
+                  },
+                  {
+                    "name": "パスクアビアンコヴェネト（白）750ml",
+                    "price": 1089,
+                    "note": "Current operator reference menu linked by the exact Hiraoka branch, checked October 20, 2026. Hiraoka opens December 10; launch stock and final branch prices remain subject to confirmation. Operator warns prices can vary by store. Not a sibling branch menu or a guaranteed opening-day selection. Tax-inclusive operator reference price."
+                  },
+                  {
+                    "name": "アンジェロ・ネロダヴォラ（赤）750ml",
+                    "price": 1529,
+                    "note": "Current operator reference menu linked by the exact Hiraoka branch, checked October 20, 2026. Hiraoka opens December 10; launch stock and final branch prices remain subject to confirmation. Operator warns prices can vary by store. Not a sibling branch menu or a guaranteed opening-day selection. Tax-inclusive operator reference price."
+                  },
+                  {
+                    "name": "マンナラ・ピノグリージョ(白)750ml",
+                    "price": 1529,
+                    "note": "Current operator reference menu linked by the exact Hiraoka branch, checked October 20, 2026. Hiraoka opens December 10; launch stock and final branch prices remain subject to confirmation. Operator warns prices can vary by store. Not a sibling branch menu or a guaranteed opening-day selection. Tax-inclusive operator reference price."
+                  },
+                  {
+                    "name": "サントリー　角ハイボール",
+                    "price": 429,
+                    "note": "Current operator reference menu linked by the exact Hiraoka branch, checked October 20, 2026. Hiraoka opens December 10; launch stock and final branch prices remain subject to confirmation. Operator warns prices can vary by store. Not a sibling branch menu or a guaranteed opening-day selection. Tax-inclusive operator reference price."
+                  },
+                  {
+                    "name": "グレープフルーツサワー",
+                    "price": 429,
+                    "note": "Current operator reference menu linked by the exact Hiraoka branch, checked October 20, 2026. Hiraoka opens December 10; launch stock and final branch prices remain subject to confirmation. Operator warns prices can vary by store. Not a sibling branch menu or a guaranteed opening-day selection. Tax-inclusive operator reference price."
+                  },
+                  {
+                    "name": "レモンサワー",
+                    "price": 429,
+                    "note": "Current operator reference menu linked by the exact Hiraoka branch, checked October 20, 2026. Hiraoka opens December 10; launch stock and final branch prices remain subject to confirmation. Operator warns prices can vary by store. Not a sibling branch menu or a guaranteed opening-day selection. Tax-inclusive operator reference price."
+                  },
+                  {
+                    "name": "サントリーオールフリー",
+                    "price": 429,
+                    "note": "Current operator reference menu linked by the exact Hiraoka branch, checked October 20, 2026. Hiraoka opens December 10; launch stock and final branch prices remain subject to confirmation. Operator warns prices can vary by store. Not a sibling branch menu or a guaranteed opening-day selection. Tax-inclusive operator reference price."
+                  },
+                  {
+                    "name": "ドリンクバー単品",
+                    "price": 396,
+                    "note": "Current operator reference menu linked by the exact Hiraoka branch, checked October 20, 2026. Hiraoka opens December 10; launch stock and final branch prices remain subject to confirmation. Operator warns prices can vary by store. Not a sibling branch menu or a guaranteed opening-day selection. Tax-inclusive operator reference price. Drink-bar age/set eligibility must be confirmed; under-three entry only states operator child entitlement."
+                  },
+                  {
+                    "name": "セットドリンクバー",
+                    "price": 286,
+                    "note": "Current operator reference menu linked by the exact Hiraoka branch, checked October 20, 2026. Hiraoka opens December 10; launch stock and final branch prices remain subject to confirmation. Operator warns prices can vary by store. Not a sibling branch menu or a guaranteed opening-day selection. Tax-inclusive operator reference price. Drink-bar age/set eligibility must be confirmed; under-three entry only states operator child entitlement."
+                  },
+                  {
+                    "name": "ジュニアドリンクバー",
+                    "price": 132,
+                    "note": "Current operator reference menu linked by the exact Hiraoka branch, checked October 20, 2026. Hiraoka opens December 10; launch stock and final branch prices remain subject to confirmation. Operator warns prices can vary by store. Not a sibling branch menu or a guaranteed opening-day selection. Tax-inclusive operator reference price. Drink-bar age/set eligibility must be confirmed; under-three entry only states operator child entitlement."
+                  },
+                  {
+                    "name": "3歳以下のお子様ドリンクバー無料",
+                    "price": 0,
+                    "note": "Current operator reference menu linked by the exact Hiraoka branch, checked October 20, 2026. Hiraoka opens December 10; launch stock and final branch prices remain subject to confirmation. Operator warns prices can vary by store. Not a sibling branch menu or a guaranteed opening-day selection. Tax-inclusive operator reference price. Drink-bar age/set eligibility must be confirmed; under-three entry only states operator child entitlement."
+                  }
+                ],
+                "note": "Current operator reference menu linked by the exact Hiraoka branch, checked October 20, 2026. Hiraoka opens December 10; launch stock and final branch prices remain subject to confirmation. Operator warns prices can vary by store. Not a sibling branch menu or a guaranteed opening-day selection. Menu data: https://www.olivenooka.jp/menu/data/menu_drink.csv"
+              },
+              {
+                "label": "Operator menu preview — kids-menu",
+                "url": "https://www.olivenooka.jp/menu/kids-menu.html",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "キッズプレート",
+                    "price": 539,
+                    "note": "Current operator reference menu linked by the exact Hiraoka branch, checked October 20, 2026. Hiraoka opens December 10; launch stock and final branch prices remain subject to confirmation. Operator warns prices can vary by store. Not a sibling branch menu or a guaranteed opening-day selection. Tax-inclusive operator reference price."
+                  },
+                  {
+                    "name": "キッズカレー",
+                    "price": 539,
+                    "note": "Current operator reference menu linked by the exact Hiraoka branch, checked October 20, 2026. Hiraoka opens December 10; launch stock and final branch prices remain subject to confirmation. Operator warns prices can vary by store. Not a sibling branch menu or a guaranteed opening-day selection. Tax-inclusive operator reference price."
+                  },
+                  {
+                    "name": "キッズカルボナーラ",
+                    "price": 605,
+                    "note": "Current operator reference menu linked by the exact Hiraoka branch, checked October 20, 2026. Hiraoka opens December 10; launch stock and final branch prices remain subject to confirmation. Operator warns prices can vary by store. Not a sibling branch menu or a guaranteed opening-day selection. Tax-inclusive operator reference price."
+                  },
+                  {
+                    "name": "キッズモッツァトマト",
+                    "price": 649,
+                    "note": "Current operator reference menu linked by the exact Hiraoka branch, checked October 20, 2026. Hiraoka opens December 10; launch stock and final branch prices remain subject to confirmation. Operator warns prices can vary by store. Not a sibling branch menu or a guaranteed opening-day selection. Tax-inclusive operator reference price."
+                  },
+                  {
+                    "name": "キッズボロネーゼ",
+                    "price": 539,
+                    "note": "Current operator reference menu linked by the exact Hiraoka branch, checked October 20, 2026. Hiraoka opens December 10; launch stock and final branch prices remain subject to confirmation. Operator warns prices can vary by store. Not a sibling branch menu or a guaranteed opening-day selection. Tax-inclusive operator reference price."
+                  },
+                  {
+                    "name": "キッズ明太子",
+                    "price": 429,
+                    "note": "Current operator reference menu linked by the exact Hiraoka branch, checked October 20, 2026. Hiraoka opens December 10; launch stock and final branch prices remain subject to confirmation. Operator warns prices can vary by store. Not a sibling branch menu or a guaranteed opening-day selection. Tax-inclusive operator reference price."
+                  }
+                ],
+                "note": "Current operator reference menu linked by the exact Hiraoka branch, checked October 20, 2026. Hiraoka opens December 10; launch stock and final branch prices remain subject to confirmation. Operator warns prices can vary by store. Not a sibling branch menu or a guaranteed opening-day selection. Menu data: https://www.olivenooka.jp/menu/data/menu_kids.csv"
+              },
+              {
+                "label": "Current category-page toppings preview",
+                "url": "https://www.olivenooka.jp/menu/pasta.html",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "トッピング 半熟卵",
+                    "price": 110,
+                    "note": "Current operator reference menu linked by the exact Hiraoka branch, checked October 20, 2026. Hiraoka opens December 10; launch stock and final branch prices remain subject to confirmation. Operator warns prices can vary by store. Not a sibling branch menu or a guaranteed opening-day selection. Current pasta category page publishes ¥100 before tax / ¥110 inclusive. The older separate topping page lists ¥90/¥99 and is not used for current reference price."
+                  },
+                  {
+                    "name": "トッピング オリーブの丘特製アイオリソース",
+                    "price": 110,
+                    "note": "Current operator reference menu linked by the exact Hiraoka branch, checked October 20, 2026. Hiraoka opens December 10; launch stock and final branch prices remain subject to confirmation. Operator warns prices can vary by store. Not a sibling branch menu or a guaranteed opening-day selection. Current pasta category page publishes ¥100 before tax / ¥110 inclusive. The older separate topping page lists ¥90/¥99 and is not used for current reference price."
+                  },
+                  {
+                    "name": "トッピング シャキシャキ野菜ソース",
+                    "price": 110,
+                    "note": "Current operator reference menu linked by the exact Hiraoka branch, checked October 20, 2026. Hiraoka opens December 10; launch stock and final branch prices remain subject to confirmation. Operator warns prices can vary by store. Not a sibling branch menu or a guaranteed opening-day selection. Current pasta category page publishes ¥100 before tax / ¥110 inclusive. The older separate topping page lists ¥90/¥99 and is not used for current reference price."
+                  }
+                ],
+                "note": "Current operator reference menu linked by the exact Hiraoka branch, checked October 20, 2026. Hiraoka opens December 10; launch stock and final branch prices remain subject to confirmation. Operator warns prices can vary by store. Not a sibling branch menu or a guaranteed opening-day selection."
+              },
+              {
+                "label": "Published breakfast preview — weekend/holiday service",
+                "url": "https://www.olivenooka.jp/menu/olivenooka_morning.pdf",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "カスクートサンド ～バジルチキンマヨ～ セット",
+                    "price": 649,
+                    "note": "Current operator reference menu linked by the exact Hiraoka branch, checked October 20, 2026. Hiraoka opens December 10; launch stock and final branch prices remain subject to confirmation. Operator warns prices can vary by store. Not a sibling branch menu or a guaranteed opening-day selection. Operator breakfast set includes drink bar and salad. PDF window 07:00–10:00; exact Hiraoka planned hours support this only on weekends/holidays. Weekdays open at10:00, so no weekday breakfast promised. Salad may vary; no lunch soup assumed."
+                  },
+                  {
+                    "name": "カスクートサンド ～コーン＆マヨ～ セット",
+                    "price": 539,
+                    "note": "Current operator reference menu linked by the exact Hiraoka branch, checked October 20, 2026. Hiraoka opens December 10; launch stock and final branch prices remain subject to confirmation. Operator warns prices can vary by store. Not a sibling branch menu or a guaranteed opening-day selection. Operator breakfast set includes drink bar and salad. PDF window 07:00–10:00; exact Hiraoka planned hours support this only on weekends/holidays. Weekdays open at10:00, so no weekday breakfast promised. Salad may vary; no lunch soup assumed."
+                  },
+                  {
+                    "name": "パニーニ ～スピナッチ～ セット",
+                    "price": 715,
+                    "note": "Current operator reference menu linked by the exact Hiraoka branch, checked October 20, 2026. Hiraoka opens December 10; launch stock and final branch prices remain subject to confirmation. Operator warns prices can vary by store. Not a sibling branch menu or a guaranteed opening-day selection. Operator breakfast set includes drink bar and salad. PDF window 07:00–10:00; exact Hiraoka planned hours support this only on weekends/holidays. Weekdays open at10:00, so no weekday breakfast promised. Salad may vary; no lunch soup assumed."
+                  },
+                  {
+                    "name": "モーニングピッツァ ～ビスマルク風～ セット",
+                    "price": 539,
+                    "note": "Current operator reference menu linked by the exact Hiraoka branch, checked October 20, 2026. Hiraoka opens December 10; launch stock and final branch prices remain subject to confirmation. Operator warns prices can vary by store. Not a sibling branch menu or a guaranteed opening-day selection. Operator breakfast set includes drink bar and salad. PDF window 07:00–10:00; exact Hiraoka planned hours support this only on weekends/holidays. Weekdays open at10:00, so no weekday breakfast promised. Salad may vary; no lunch soup assumed."
+                  },
+                  {
+                    "name": "モーニングピッツァ ～3種チーズ～ セット",
+                    "price": 539,
+                    "note": "Current operator reference menu linked by the exact Hiraoka branch, checked October 20, 2026. Hiraoka opens December 10; launch stock and final branch prices remain subject to confirmation. Operator warns prices can vary by store. Not a sibling branch menu or a guaranteed opening-day selection. Operator breakfast set includes drink bar and salad. PDF window 07:00–10:00; exact Hiraoka planned hours support this only on weekends/holidays. Weekdays open at10:00, so no weekday breakfast promised. Salad may vary; no lunch soup assumed."
+                  },
+                  {
+                    "name": "窯焼きパン・プディング ～バニラジェラートのせ～ セット",
+                    "price": 649,
+                    "note": "Current operator reference menu linked by the exact Hiraoka branch, checked October 20, 2026. Hiraoka opens December 10; launch stock and final branch prices remain subject to confirmation. Operator warns prices can vary by store. Not a sibling branch menu or a guaranteed opening-day selection. Operator breakfast set includes drink bar and salad. PDF window 07:00–10:00; exact Hiraoka planned hours support this only on weekends/holidays. Weekdays open at10:00, so no weekday breakfast promised. Salad may vary; no lunch soup assumed."
+                  },
+                  {
+                    "name": "モーニングリゾット ～ベーコンとチーズ～ セット",
+                    "price": 649,
+                    "note": "Current operator reference menu linked by the exact Hiraoka branch, checked October 20, 2026. Hiraoka opens December 10; launch stock and final branch prices remain subject to confirmation. Operator warns prices can vary by store. Not a sibling branch menu or a guaranteed opening-day selection. Operator breakfast set includes drink bar and salad. PDF window 07:00–10:00; exact Hiraoka planned hours support this only on weekends/holidays. Weekdays open at10:00, so no weekday breakfast promised. Salad may vary; no lunch soup assumed."
+                  },
+                  {
+                    "name": "モーニングリゾット ～えびのビスクトマト～ セット",
+                    "price": 649,
+                    "note": "Current operator reference menu linked by the exact Hiraoka branch, checked October 20, 2026. Hiraoka opens December 10; launch stock and final branch prices remain subject to confirmation. Operator warns prices can vary by store. Not a sibling branch menu or a guaranteed opening-day selection. Operator breakfast set includes drink bar and salad. PDF window 07:00–10:00; exact Hiraoka planned hours support this only on weekends/holidays. Weekdays open at10:00, so no weekday breakfast promised. Salad may vary; no lunch soup assumed."
+                  },
+                  {
+                    "name": "モーニングミニドリア ～チーズミート～ セット",
+                    "price": 649,
+                    "note": "Current operator reference menu linked by the exact Hiraoka branch, checked October 20, 2026. Hiraoka opens December 10; launch stock and final branch prices remain subject to confirmation. Operator warns prices can vary by store. Not a sibling branch menu or a guaranteed opening-day selection. Operator breakfast set includes drink bar and salad. PDF window 07:00–10:00; exact Hiraoka planned hours support this only on weekends/holidays. Weekdays open at10:00, so no weekday breakfast promised. Salad may vary; no lunch soup assumed."
+                  },
+                  {
+                    "name": "半熟卵 — モーニング追加",
+                    "price": 99,
+                    "note": "Current operator reference menu linked by the exact Hiraoka branch, checked October 20, 2026. Hiraoka opens December 10; launch stock and final branch prices remain subject to confirmation. Operator warns prices can vary by store. Not a sibling branch menu or a guaranteed opening-day selection. Breakfast add-on, tax inclusive; ordering/launch availability requires confirmation."
+                  },
+                  {
+                    "name": "削りグラナパダーノ — モーニング追加",
+                    "price": 99,
+                    "note": "Current operator reference menu linked by the exact Hiraoka branch, checked October 20, 2026. Hiraoka opens December 10; launch stock and final branch prices remain subject to confirmation. Operator warns prices can vary by store. Not a sibling branch menu or a guaranteed opening-day selection. Breakfast add-on, tax inclusive; ordering/launch availability requires confirmation."
+                  },
+                  {
+                    "name": "ブルスケッタ（2枚）— モーニング追加",
+                    "price": 99,
+                    "note": "Current operator reference menu linked by the exact Hiraoka branch, checked October 20, 2026. Hiraoka opens December 10; launch stock and final branch prices remain subject to confirmation. Operator warns prices can vary by store. Not a sibling branch menu or a guaranteed opening-day selection. Breakfast add-on, tax inclusive; ordering/launch availability requires confirmation."
+                  },
+                  {
+                    "name": "オリーブの丘プリン — モーニングデザート",
+                    "price": 319,
+                    "note": "Current operator reference menu linked by the exact Hiraoka branch, checked October 20, 2026. Hiraoka opens December 10; launch stock and final branch prices remain subject to confirmation. Operator warns prices can vary by store. Not a sibling branch menu or a guaranteed opening-day selection. Tax-inclusive published breakfast price; standalone/dessert items exclude drink bar unless separately ordered. Takeaway-specific prices kept distinct. Hiraoka weekend/holiday breakfast service only; confirm launch stock."
+                  },
+                  {
+                    "name": "トルタパラディーゾ — モーニングデザート",
+                    "price": 165,
+                    "note": "Current operator reference menu linked by the exact Hiraoka branch, checked October 20, 2026. Hiraoka opens December 10; launch stock and final branch prices remain subject to confirmation. Operator warns prices can vary by store. Not a sibling branch menu or a guaranteed opening-day selection. Tax-inclusive published breakfast price; standalone/dessert items exclude drink bar unless separately ordered. Takeaway-specific prices kept distinct. Hiraoka weekend/holiday breakfast service only; confirm launch stock."
+                  },
+                  {
+                    "name": "モーニングピッツァ ～ビスマルク風～ 単品",
+                    "price": 429,
+                    "note": "Current operator reference menu linked by the exact Hiraoka branch, checked October 20, 2026. Hiraoka opens December 10; launch stock and final branch prices remain subject to confirmation. Operator warns prices can vary by store. Not a sibling branch menu or a guaranteed opening-day selection. Tax-inclusive published breakfast price; standalone/dessert items exclude drink bar unless separately ordered. Takeaway-specific prices kept distinct. Hiraoka weekend/holiday breakfast service only; confirm launch stock."
+                  },
+                  {
+                    "name": "モーニングピッツァ ～3種チーズ～ 単品",
+                    "price": 429,
+                    "note": "Current operator reference menu linked by the exact Hiraoka branch, checked October 20, 2026. Hiraoka opens December 10; launch stock and final branch prices remain subject to confirmation. Operator warns prices can vary by store. Not a sibling branch menu or a guaranteed opening-day selection. Tax-inclusive published breakfast price; standalone/dessert items exclude drink bar unless separately ordered. Takeaway-specific prices kept distinct. Hiraoka weekend/holiday breakfast service only; confirm launch stock."
+                  },
+                  {
+                    "name": "カスクートサンド ～コーン＆マヨ～ 単品",
+                    "price": 429,
+                    "note": "Current operator reference menu linked by the exact Hiraoka branch, checked October 20, 2026. Hiraoka opens December 10; launch stock and final branch prices remain subject to confirmation. Operator warns prices can vary by store. Not a sibling branch menu or a guaranteed opening-day selection. Tax-inclusive published breakfast price; standalone/dessert items exclude drink bar unless separately ordered. Takeaway-specific prices kept distinct. Hiraoka weekend/holiday breakfast service only; confirm launch stock."
+                  },
+                  {
+                    "name": "カスクートサンド ～バジルチキンマヨ～ 単品",
+                    "price": 539,
+                    "note": "Current operator reference menu linked by the exact Hiraoka branch, checked October 20, 2026. Hiraoka opens December 10; launch stock and final branch prices remain subject to confirmation. Operator warns prices can vary by store. Not a sibling branch menu or a guaranteed opening-day selection. Tax-inclusive published breakfast price; standalone/dessert items exclude drink bar unless separately ordered. Takeaway-specific prices kept distinct. Hiraoka weekend/holiday breakfast service only; confirm launch stock."
+                  },
+                  {
+                    "name": "カスクートサンド ～コーン＆マヨ～ 持ち帰り",
+                    "price": 421,
+                    "note": "Current operator reference menu linked by the exact Hiraoka branch, checked October 20, 2026. Hiraoka opens December 10; launch stock and final branch prices remain subject to confirmation. Operator warns prices can vary by store. Not a sibling branch menu or a guaranteed opening-day selection. Tax-inclusive published breakfast price; standalone/dessert items exclude drink bar unless separately ordered. Takeaway-specific prices kept distinct. Hiraoka weekend/holiday breakfast service only; confirm launch stock."
+                  },
+                  {
+                    "name": "カスクートサンド ～バジルチキンマヨ～ 持ち帰り",
+                    "price": 529,
+                    "note": "Current operator reference menu linked by the exact Hiraoka branch, checked October 20, 2026. Hiraoka opens December 10; launch stock and final branch prices remain subject to confirmation. Operator warns prices can vary by store. Not a sibling branch menu or a guaranteed opening-day selection. Tax-inclusive published breakfast price; standalone/dessert items exclude drink bar unless separately ordered. Takeaway-specific prices kept distinct. Hiraoka weekend/holiday breakfast service only; confirm launch stock."
+                  },
+                  {
+                    "name": "パニーニ ～スピナッチ～ 単品",
+                    "price": 605,
+                    "note": "Current operator reference menu linked by the exact Hiraoka branch, checked October 20, 2026. Hiraoka opens December 10; launch stock and final branch prices remain subject to confirmation. Operator warns prices can vary by store. Not a sibling branch menu or a guaranteed opening-day selection. Tax-inclusive published breakfast price; standalone/dessert items exclude drink bar unless separately ordered. Takeaway-specific prices kept distinct. Hiraoka weekend/holiday breakfast service only; confirm launch stock."
+                  },
+                  {
+                    "name": "パニーニ ～スピナッチ～ 持ち帰り",
+                    "price": 594,
+                    "note": "Current operator reference menu linked by the exact Hiraoka branch, checked October 20, 2026. Hiraoka opens December 10; launch stock and final branch prices remain subject to confirmation. Operator warns prices can vary by store. Not a sibling branch menu or a guaranteed opening-day selection. Tax-inclusive published breakfast price; standalone/dessert items exclude drink bar unless separately ordered. Takeaway-specific prices kept distinct. Hiraoka weekend/holiday breakfast service only; confirm launch stock."
+                  },
+                  {
+                    "name": "窯焼きパン・プディング ～バニラジェラートのせ～ 単品",
+                    "price": 539,
+                    "note": "Current operator reference menu linked by the exact Hiraoka branch, checked October 20, 2026. Hiraoka opens December 10; launch stock and final branch prices remain subject to confirmation. Operator warns prices can vary by store. Not a sibling branch menu or a guaranteed opening-day selection. Tax-inclusive published breakfast price; standalone/dessert items exclude drink bar unless separately ordered. Takeaway-specific prices kept distinct. Hiraoka weekend/holiday breakfast service only; confirm launch stock."
+                  },
+                  {
+                    "name": "モーニングリゾット ～ベーコンとチーズ～ 単品",
+                    "price": 539,
+                    "note": "Current operator reference menu linked by the exact Hiraoka branch, checked October 20, 2026. Hiraoka opens December 10; launch stock and final branch prices remain subject to confirmation. Operator warns prices can vary by store. Not a sibling branch menu or a guaranteed opening-day selection. Tax-inclusive published breakfast price; standalone/dessert items exclude drink bar unless separately ordered. Takeaway-specific prices kept distinct. Hiraoka weekend/holiday breakfast service only; confirm launch stock."
+                  },
+                  {
+                    "name": "モーニングリゾット ～えびのビスクトマト～ 単品",
+                    "price": 539,
+                    "note": "Current operator reference menu linked by the exact Hiraoka branch, checked October 20, 2026. Hiraoka opens December 10; launch stock and final branch prices remain subject to confirmation. Operator warns prices can vary by store. Not a sibling branch menu or a guaranteed opening-day selection. Tax-inclusive published breakfast price; standalone/dessert items exclude drink bar unless separately ordered. Takeaway-specific prices kept distinct. Hiraoka weekend/holiday breakfast service only; confirm launch stock."
+                  },
+                  {
+                    "name": "モーニングミニドリア ～チーズミート～ 単品",
+                    "price": 539,
+                    "note": "Current operator reference menu linked by the exact Hiraoka branch, checked October 20, 2026. Hiraoka opens December 10; launch stock and final branch prices remain subject to confirmation. Operator warns prices can vary by store. Not a sibling branch menu or a guaranteed opening-day selection. Tax-inclusive published breakfast price; standalone/dessert items exclude drink bar unless separately ordered. Takeaway-specific prices kept distinct. Hiraoka weekend/holiday breakfast service only; confirm launch stock."
+                  },
+                  {
+                    "name": "ドリンクバー単品 — モーニング",
+                    "price": 396,
+                    "note": "Current operator reference menu linked by the exact Hiraoka branch, checked October 20, 2026. Hiraoka opens December 10; launch stock and final branch prices remain subject to confirmation. Operator warns prices can vary by store. Not a sibling branch menu or a guaranteed opening-day selection. Tax-inclusive published breakfast price; standalone/dessert items exclude drink bar unless separately ordered. Takeaway-specific prices kept distinct. Hiraoka weekend/holiday breakfast service only; confirm launch stock."
+                  }
+                ],
+                "note": "Current operator reference menu linked by the exact Hiraoka branch, checked October 20, 2026. Hiraoka opens December 10; launch stock and final branch prices remain subject to confirmation. Operator warns prices can vary by store. Not a sibling branch menu or a guaranteed opening-day selection. Visually inspected PDF. Exact Hiraoka hours restrict breakfast to weekends/public holidays07:00–10:00. No weekday breakfast, staff meal discount or new public offer inferred."
+              },
+              {
+                "label": "Published lunch options — branch version pending",
+                "url": "https://www.olivenooka.jp/menu/olivenooka_lunch_b.pdf?v=20260525",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "海の幸のマスカルポーネトマトソースセット",
+                    "priceLabel": "B ¥979 / C ¥1089; Hiraoka version unconfirmed",
+                    "note": "Exact branch links operator menu with both B and C lunch documents. Tax-inclusive published reference: B ¥979; C ¥1089. Hiraoka version not identified, so neither price is asserted as the Hiraoka price. B weekday10:00–17:00 with soup bar; C weekday09:00–15:00 with different sides/drinks. Hiraoka weekday opening is10:00; do not apply the C09:00start. Confirm version, ordering hours, sides and final launch stock."
+                  },
+                  {
+                    "name": "えびとブロッコリーのバジルクリームセット",
+                    "priceLabel": "B ¥979 / C ¥1089; Hiraoka version unconfirmed",
+                    "note": "Exact branch links operator menu with both B and C lunch documents. Tax-inclusive published reference: B ¥979; C ¥1089. Hiraoka version not identified, so neither price is asserted as the Hiraoka price. B weekday10:00–17:00 with soup bar; C weekday09:00–15:00 with different sides/drinks. Hiraoka weekday opening is10:00; do not apply the C09:00start. Confirm version, ordering hours, sides and final launch stock."
+                  },
+                  {
+                    "name": "焼き茄子とベーコンのモッツァトマトセット",
+                    "priceLabel": "B ¥869 / C ¥979; Hiraoka version unconfirmed",
+                    "note": "Exact branch links operator menu with both B and C lunch documents. Tax-inclusive published reference: B ¥869; C ¥979. Hiraoka version not identified, so neither price is asserted as the Hiraoka price. B weekday10:00–17:00 with soup bar; C weekday09:00–15:00 with different sides/drinks. Hiraoka weekday opening is10:00; do not apply the C09:00start. Confirm version, ordering hours, sides and final launch stock."
+                  },
+                  {
+                    "name": "ごろごろチキンのボロネーゼセット",
+                    "priceLabel": "B ¥869 / C ¥979; Hiraoka version unconfirmed",
+                    "note": "Exact branch links operator menu with both B and C lunch documents. Tax-inclusive published reference: B ¥869; C ¥979. Hiraoka version not identified, so neither price is asserted as the Hiraoka price. B weekday10:00–17:00 with soup bar; C weekday09:00–15:00 with different sides/drinks. Hiraoka weekday opening is10:00; do not apply the C09:00start. Confirm version, ordering hours, sides and final launch stock."
+                  },
+                  {
+                    "name": "とろたま明太子セット",
+                    "priceLabel": "B ¥759 / C ¥869; Hiraoka version unconfirmed",
+                    "note": "Exact branch links operator menu with both B and C lunch documents. Tax-inclusive published reference: B ¥759; C ¥869. Hiraoka version not identified, so neither price is asserted as the Hiraoka price. B weekday10:00–17:00 with soup bar; C weekday09:00–15:00 with different sides/drinks. Hiraoka weekday opening is10:00; do not apply the C09:00start. Confirm version, ordering hours, sides and final launch stock."
+                  },
+                  {
+                    "name": "しらすとほうれん草のペペロンチーノセット",
+                    "priceLabel": "B ¥759 / C ¥869; Hiraoka version unconfirmed",
+                    "note": "Exact branch links operator menu with both B and C lunch documents. Tax-inclusive published reference: B ¥759; C ¥869. Hiraoka version not identified, so neither price is asserted as the Hiraoka price. B weekday10:00–17:00 with soup bar; C weekday09:00–15:00 with different sides/drinks. Hiraoka weekday opening is10:00; do not apply the C09:00start. Confirm version, ordering hours, sides and final launch stock."
+                  },
+                  {
+                    "name": "チキンのオーブン焼き ～グリル茄子トマトソース～セット",
+                    "priceLabel": "B ¥979 / C ¥1155; Hiraoka version unconfirmed",
+                    "note": "Exact branch links operator menu with both B and C lunch documents. Tax-inclusive published reference: B ¥979; C ¥1155. Hiraoka version not identified, so neither price is asserted as the Hiraoka price. B weekday10:00–17:00 with soup bar; C weekday09:00–15:00 with different sides/drinks. Hiraoka weekday opening is10:00; do not apply the C09:00start. Confirm version, ordering hours, sides and final launch stock."
+                  },
+                  {
+                    "name": "チキンのオーブン焼き ～シャキシャキ野菜ソース～セット",
+                    "priceLabel": "B ¥869 / C ¥1045; Hiraoka version unconfirmed",
+                    "note": "Exact branch links operator menu with both B and C lunch documents. Tax-inclusive published reference: B ¥869; C ¥1045. Hiraoka version not identified, so neither price is asserted as the Hiraoka price. B weekday10:00–17:00 with soup bar; C weekday09:00–15:00 with different sides/drinks. Hiraoka weekday opening is10:00; do not apply the C09:00start. Confirm version, ordering hours, sides and final launch stock."
+                  },
+                  {
+                    "name": "チキンのオーブン焼きセット",
+                    "priceLabel": "B ¥759 / C ¥935; Hiraoka version unconfirmed",
+                    "note": "Exact branch links operator menu with both B and C lunch documents. Tax-inclusive published reference: B ¥759; C ¥935. Hiraoka version not identified, so neither price is asserted as the Hiraoka price. B weekday10:00–17:00 with soup bar; C weekday09:00–15:00 with different sides/drinks. Hiraoka weekday opening is10:00; do not apply the C09:00start. Confirm version, ordering hours, sides and final launch stock."
+                  },
+                  {
+                    "name": "チーズトマトハンバーグセット",
+                    "priceLabel": "B ¥869 / C ¥1045; Hiraoka version unconfirmed",
+                    "note": "Exact branch links operator menu with both B and C lunch documents. Tax-inclusive published reference: B ¥869; C ¥1045. Hiraoka version not identified, so neither price is asserted as the Hiraoka price. B weekday10:00–17:00 with soup bar; C weekday09:00–15:00 with different sides/drinks. Hiraoka weekday opening is10:00; do not apply the C09:00start. Confirm version, ordering hours, sides and final launch stock."
+                  },
+                  {
+                    "name": "デミたまハンバーグセット",
+                    "priceLabel": "B ¥759 / C ¥935; Hiraoka version unconfirmed",
+                    "note": "Exact branch links operator menu with both B and C lunch documents. Tax-inclusive published reference: B ¥759; C ¥935. Hiraoka version not identified, so neither price is asserted as the Hiraoka price. B weekday10:00–17:00 with soup bar; C weekday09:00–15:00 with different sides/drinks. Hiraoka weekday opening is10:00; do not apply the C09:00start. Confirm version, ordering hours, sides and final launch stock."
+                  }
+                ],
+                "note": "Current operator reference menu linked by the exact Hiraoka branch, checked October 20, 2026. Hiraoka opens December 10; launch stock and final branch prices remain subject to confirmation. Operator warns prices can vary by store. Not a sibling branch menu or a guaranteed opening-day selection. Alternative operator documents have different prices, hours and inclusions. No branch-specific lunch schedule or discount created. C: https://www.olivenooka.jp/menu/olivenooka_lunch_c.pdf?v=20260525"
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://maps.olivenooka.jp/jp/detail/6642.html",
+            "name": "Olive no Oka — Sapporo Hiraoka",
+            "checkedAt": "2026-10-20",
+            "websiteUrl": "https://maps.olivenooka.jp/jp/detail/6642.html",
+            "phone": null,
+            "openingHours": [
+              {
+                "days": "Monday–Friday",
+                "hours": "10:00–24:00"
+              },
+              {
+                "days": "Saturday, Sunday and public holidays",
+                "hours": "07:00–24:00;07:00–10:00 morning menu only"
+              }
+            ],
+            "detailsSourceUrl": "https://maps.olivenooka.jp/jp/detail/6642.html",
+            "additionalSources": [
+              {
+                "label": "Operator dated opening announcement",
+                "url": "https://www.olivenooka.jp/data/news.csv"
+              },
+              {
+                "label": "Official Hiraoka employer opening corroboration",
+                "url": "https://work.olivenooka.jp/brand-jobfind/job/All/35532"
+              },
+              {
+                "label": "Operator reference menu linked by Hiraoka",
+                "url": "https://www.olivenooka.jp/menu/index.html"
+              },
+              {
+                "label": "Credited actual Hiraoka construction-site photographs",
+                "url": "https://kiyotakumap.com/custom/olivenooka/"
+              },
+              {
+                "label": "Operator gallery account checked",
+                "url": "https://www.instagram.com/olivenooka_jp/"
+              }
+            ],
+            "hoursNote": "Planned hours from exact operator branch page; last-order times and launch-day exceptions not published. No seat reservations accepted. Parking, non-smoking premises, baby-changing facilities and accessible toilet listed. Cards, cashless payments andV/Rakuten/dpoints supported; verify individual payment acceptance. No customer phone published; recruiter 0120 number is not used. Published menu is an operator reference directly linked by this branch; prices can vary and December stock is not guaranteed. Two linked lunch versions differ in prices, hours and inclusions; Hiraoka allocation unconfirmed. Breakfast supported only weekends/holidays 07:00–10:00; no weekday breakfast. Staff 50%meal benefit is not a public Special. Construction image is labelled under scaffolding, not completed frontage/interior."
+          },
+          "tile": {
+            "regionSlug": "sapporo",
+            "kind": "opening",
+            "slug": "japan111-hiraoka",
+            "name": "Olive no Oka — Sapporo Hiraoka",
+            "neighborhood": "Hiraoka / Kiyota-ku",
+            "cuisine": "Italian / Family Restaurant",
+            "description": "An upcoming Italian family restaurant in Hiraoka, scheduled to open December 10. Planned weekday hours 10:00–24:00; weekends and holidays 07:00–24:00, with breakfast only 07:00–10:00. Browse the linked operator menu preview; launch stock and final branch prices need confirmation.",
+            "address": "1-1-10 Hiraoka 8-jo, Kiyota-ku, Sapporo, Hokkaido 004-0878",
+            "websiteUrl": "https://maps.olivenooka.jp/jp/detail/6642.html",
+            "checkedAt": "2026-10-20",
+            "recognition": "Operator-announced December 10,2026 grand opening; no published dining award or rating asserted.",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-20/batch111-hiraoka-0-4719e970950c970c.webp",
+            "imageCredit": "Kiyota-ku Map (清田区マップ)",
+            "imageSourceUrl": "https://kiyotakumap.com/custom/olivenooka/",
+            "imageNote": "Hiraoka development site under scaffolding; local publisher labels the photograph September 3, 2026. Construction progress photo, not a completed restaurant interior.",
+            "openingConfirmed": true,
+            "day": "2026-12-10"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "originalUrl": "https://kiyotakumap.com/wp-content/uploads/2026/01/IMG_7523.jpeg",
+          "sourcePage": "https://kiyotakumap.com/custom/olivenooka/",
+          "credit": "Kiyota-ku Map (清田区マップ)",
+          "note": "Hiraoka development site under scaffolding; local publisher labels the photograph September 3, 2026. Construction progress photo, not a completed restaurant interior.",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-20/batch111-hiraoka-0-4719e970950c970c.webp",
+          "sha256": "4719e970950c970c50828fbc1f2d7478fb25f593e9070bb4f14ca8fe137e020e",
+          "width": 640,
+          "height": 480
+        },
+        {
+          "originalUrl": "https://www.olivenooka.jp/menu/images/menu/e01.png",
+          "sourcePage": "https://www.olivenooka.jp/menu/pizza.html",
+          "credit": "Olive no Oka",
+          "note": "Operator menu illustration: ピッツァ・マルゲリータ. Published operator menu linked by the Hiraoka branch; not photographed at Hiraoka and not confirmation of December launch stock.",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-20/batch111-hiraoka-1-2c6c0694900492b7.webp",
+          "sha256": "2c6c0694900492b743a7d60cc40f3e77d6a8c5f9719849927e2918e536b3fa9a",
+          "width": 480,
+          "height": 420
+        },
+        {
+          "originalUrl": "https://www.olivenooka.jp/menu/images/menu/f01.png",
+          "sourcePage": "https://www.olivenooka.jp/menu/pasta.html",
+          "credit": "Olive no Oka",
+          "note": "Operator menu illustration: アーリオオーリオ・ペペロンチーノ. Published operator menu linked by the Hiraoka branch; not photographed at Hiraoka and not confirmation of December launch stock.",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-20/batch111-hiraoka-2-381e8cc45ed2204f.webp",
+          "sha256": "381e8cc45ed2204fe6eddfd7cf7ad489e6772bcc5611aebbb3f6966953c8bdd4",
+          "width": 480,
+          "height": 420
+        }
+      ]
+    }
+  ],
+  "counts": {
+    "venues": 1,
+    "newPins": 1,
+    "ordinaryMenuItems": 172,
+    "offers": 0,
+    "offerMenuItems": 0,
+    "photos": 3
+  },
+  "researchNotes": [
+    "Other-cities-first continuation: published one Sapporo Coming soon branch; no Osaka/Fukuoka venue added. Exact branch operator opening date and coordinates verified.",
+    "Exact Hiraoka page links the common operator menu, not a sibling branch booking page. All published menu prices are clearly current operator reference prices; no claim that December launch stock or final branch prices are fixed. October seasonal page excluded from launch coverage.",
+    "126rawoperatorCSVrows split rice into3sizes and drinkbar into4eligibility variants; sourceHTMLbreaks removed from names. Threecurrentcategorytoppings¥110used; legacyseparatetoppingpage¥99conflict recorded and notmixed.",
+    "All3linkedbreakfast/lunchPDFs rendered and visually read. Breakfast standalone/takeaway/set prices and inclusions separated; onlyweekend/holiday07:00–10:00supported by actualbranchhours. Two alternative lunch PDFs differ in prices, hours and sides; named11options retained with both references and branchversionunconfirmed, no Hiraoka price or schedule invented.",
+    "Exact operator gallery/Instagram checked; no reviewed completed Hiraoka room photograph found. Kiyota-kuMapprovided two actualsite photos; scaffolding photo selected, administrativeconstructionnotice excluded from visitor gallery. PublishercaptionSeptember3retained rather than inferring capture date from uploadpath.",
+    "Two actualoperator dish illustrations visually verified and explicitly labelled brand menu illustration, not photographed at Hiraoka or launchstock proof. Representative card uses actualconstructionphoto; all3uploadedAzureverifiedhash/decode.",
+    "No staff50%meal discount, regular lunch set, inferredopeningreward or seasonalOctoberfood assigned to Specials. Existing Sapporo34Specials remain intact. No PinDining or standalonefoodproductPincreated.",
+    "Retain Ore noSora own-menu/gallery gap, NagoyaLACHICselector/date/photos, KyotoRipassoNovember/Decemberconflict and HokutoDecemberprovisionallead from audit2."
+  ],
+  "held": [
+    {
+      "name": "Hiraoka final branch menu and lunch version",
+      "sourceUrl": "https://maps.olivenooka.jp/jp/detail/6642.html",
+      "reason": "Operator reference menu linked by exact branch; final Decemberprices/stock and B/C lunch allocation not published. Preview qualifications kept visible."
+    },
+    {
+      "name": "Hiraoka completed room gallery",
+      "sourceUrl": "https://www.instagram.com/olivenooka_jp/",
+      "reason": "No visually verified completedbranchroomphoto; actualconstructionphoto and explicitlylabelledoperatorfoodillustrations retained."
+    }
+  ],
+  "photoReview": {
+    "downloadedCandidates": 4,
+    "selectedPhotos": 3,
+    "method": "Visually reviewed construction site, construction notice and two operator dishes. Construction notice excluded. Three credited Azure photos verified by public hash and image decoding."
+  }
+}

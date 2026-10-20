@@ -246,6 +246,9 @@ export type SearchQuery = {
   costs: RatingBound[];
   // Bounds a pin's annual electricity use in gigawatt-hours (energy:>=1twh).
   energies: RatingBound[];
+  // Whether a pin's megawatts are power it makes or power it draws
+  // (power:generation, power:usage), any of them.
+  powerKinds: ('generation' | 'usage')[];
   // Holidays and special days by name, any of them (holiday:Halloween); the
   // server turns each into the days it falls on.
   holidays: string[];
@@ -261,7 +264,7 @@ const AXIS_ALIASES: Record<string, OctagonAxis> = { 'public-standing': 'standing
 
 // A leading "-" leaves out what the term would match (-tag:Anime); only tags
 // read it so far, and any other field written that way is left out.
-const FIELD = '(-?(?:company|category|user|confidence|date|posted|updated|tag|pin|place|rating|delay|mw|cost|energy|platform|rated|holiday|taste|carperf|dining|hotel|rubric|person|' + [...OCTAGON_AXES, ...Object.keys(AXIS_ALIASES)].join('|') + '))';
+const FIELD = '(-?(?:company|category|user|confidence|date|posted|updated|tag|pin|place|rating|delay|mw|power|cost|energy|platform|rated|holiday|taste|carperf|dining|hotel|rubric|person|' + [...OCTAGON_AXES, ...Object.keys(AXIS_ALIASES)].join('|') + '))';
 const DOUBLE_QUOTED = '([^"]*)"?';
 const SINGLE_QUOTED = "((?:[^']|'(?!\\s|$))*)'?";
 
@@ -281,7 +284,7 @@ const FIELD_TERM = new RegExp(
 // A bare @name, or a bare $ticker standing as a word of its own.
 const BARE_TERM = /(^|\s)(@\S+|\$[A-Za-z][A-Za-z0-9.-]{0,11}(?=\s|$))/g;
 
-export type TermField = 'user' | 'ticker' | 'company' | 'category' | 'confidence' | 'date' | 'posted' | 'updated' | 'tag' | 'pin' | 'place' | 'rating' | 'delay' | 'mw' | 'cost' | 'energy' | 'platform' | 'rated' | 'holiday' | 'taste' | 'carperf' | 'dining' | 'hotel' | 'rubric' | 'person' | OctagonAxis;
+export type TermField = 'user' | 'ticker' | 'company' | 'category' | 'confidence' | 'date' | 'posted' | 'updated' | 'tag' | 'pin' | 'place' | 'rating' | 'delay' | 'mw' | 'power' | 'cost' | 'energy' | 'platform' | 'rated' | 'holiday' | 'taste' | 'carperf' | 'dining' | 'hotel' | 'rubric' | 'person' | OctagonAxis;
 
 export type QueryPart =
   | { kind: 'term'; field: TermField; value: string; raw: string; negated?: boolean }
@@ -395,6 +398,7 @@ function readParts(parts: QueryPart[]): SearchQuery {
     mws: [],
     costs: [],
     energies: [],
+    powerKinds: [],
     holidays: [],
     text: '',
   };
@@ -480,6 +484,9 @@ function readParts(parts: QueryPart[]): SearchQuery {
       for (const bound of bounds) {
         if (!held.some((b) => b.op === bound.op && b.value === bound.value)) held.push(bound);
       }
+    } else if (part.field === 'power') {
+      const kind = /^(gen(?:erat\w*)?|production|produc\w*|supply)$/i.test(part.value) ? 'generation' : /^(us(?:e|age|ed)|consum\w*|demand|draw\w*|load)$/i.test(part.value) ? 'usage' : null;
+      if (kind && !query.powerKinds.includes(kind)) query.powerKinds.push(kind);
     } else if (part.field === 'delay') {
       for (const bound of delayBounds(part.value)) {
         if (!query.delays.some((b) => b.op === bound.op && b.unit === bound.unit && b.value === bound.value)) query.delays.push(bound);
@@ -525,6 +532,7 @@ export function hasFilters(query: SearchQuery): boolean {
     query.mws.length ||
     query.costs.length ||
     query.energies.length ||
+    query.powerKinds.length ||
     query.holidays.length
   );
 }

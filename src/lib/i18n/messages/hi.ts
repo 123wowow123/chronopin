@@ -1302,6 +1302,8 @@ const hi: Messages = {
     statPins: 'पिन:',
     statCost: 'लागत:',
     statMW: 'MW:',
+    statMWGen: 'MW उत्पादन:',
+    statMWUse: 'MW खपत:',
     statMedianCost: 'औसत लागत (माध्यिका):',
     statMarket: 'बाज़ार:',
     statEpisodes: 'एपिसोड:',

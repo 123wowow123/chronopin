@@ -134,6 +134,7 @@ describe('parseSearchQuery', () => {
       mws: [],
       costs: [],
       energies: [],
+      powerKinds: [],
       holidays: [],
       text: 'ios',
     });
@@ -410,6 +411,7 @@ describe('energy: bounds', () => {
   it('is a term of its own, not free text', () => {
     const q = parseSearchQuery('smelter energy:>=2twh');
     expect(q.energies).toEqual([{ op: '>=', value: 2000 }]);
+    expect(parseSearchQuery('power:generation power:Usage power:generation power:nonsense').powerKinds).toEqual(['generation', 'usage']);
     expect(q.text).toBe('smelter');
   });
 });

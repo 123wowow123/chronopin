@@ -1296,6 +1296,8 @@ const id: Messages = {
     statPins: 'Pin:',
     statCost: 'Biaya:',
     statMW: 'MW:',
+    statMWGen: 'MW dihasilkan:',
+    statMWUse: 'MW dipakai:',
     statMedianCost: 'Median biaya:',
     statMarket: 'Pasar:',
     statEpisodes: 'Episode:',

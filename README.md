@@ -451,7 +451,7 @@ pin category should be promoted to tag groups and tag cloud group should reflect
 - backup data before doing this
 
 
-there should be distiction before power generation and power usage
+there should be distiction between power generation and power usage
 
 
 ensure the product buy button is working in the country your in or collapse it in ellipsis with country category

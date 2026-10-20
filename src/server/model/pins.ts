@@ -65,6 +65,7 @@ export type PinSearchFilters = {
   mws: RatingBound[];
   costs: RatingBound[];
   energies: RatingBound[];
+  powerKinds: ('generation' | 'usage')[];
   holidays: string[];
 };
 
@@ -549,6 +550,7 @@ const MAP_SELECT = `
     ST_X("p"."location"::geometry) AS "longitude",
     "p"."price", "p"."priceCurrency", "p"."sourceUrl",
     (SELECT "pw"."megawatts"::float8 FROM "PinPower" AS "pw" WHERE "pw"."pinId" = "p"."id") AS "megawatts",
+    (SELECT "pw"."kind" FROM "PinPower" AS "pw" WHERE "pw"."pinId" = "p"."id") AS "powerKind",
     "p"."marketVolume"::float8 AS "marketVolume", "p"."episodeCount",
     (SELECT round(avg("r"."score" / NULLIF("r"."scoreMax", 0) * 100))::float8 FROM "PinRating" AS "r" WHERE "r"."pinId" = "p"."id") AS "ratingPercent",
     (SELECT "e"."lowPrice"::float8 FROM "PinEventInfo" AS "e" WHERE "e"."pinId" = "p"."id" AND "e"."priceCurrency" = 'USD' AND "e"."lowPrice" > 0) AS "ticketLowUsd",
@@ -608,7 +610,7 @@ async function countReserved(from: string, where: string[], params: unknown[], c
   const now = Date.now();
   const postedSince = new Date(dayStartIn(dayKeyIn(now, zone), zone));
   const updatedSince = new Date(dayStartIn(dayKeyIn(now - UPDATED_WITHIN_MS, zone), zone));
-  const rows = await db.query<{ field: 'tag' | 'confidence' | 'band' | 'mw' | 'cost' | 'energy'; value: string; count: number }>(
+  const rows = await db.query<{ field: 'tag' | 'confidence' | 'band' | 'mw' | 'power' | 'cost' | 'energy'; value: string; count: number }>(
     `
       ${withCtes(
         ...ctes,
@@ -642,6 +644,10 @@ async function countReserved(from: string, where: string[], params: unknown[], c
       FROM "hits" INNER JOIN "PinPower" AS "pw" ON "pw"."pinId" = "hits"."id"
         INNER JOIN (VALUES ('>=100', 100), ('>=500', 500), ('>=1gw', 1000)) AS "floor" ("value", "min") ON "pw"."megawatts" >= "floor"."min"
       GROUP BY "floor"."value"
+      UNION ALL
+      SELECT 'power', "pk"."kind", COUNT(*)::integer
+      FROM "hits" INNER JOIN "PinPower" AS "pk" ON "pk"."pinId" = "hits"."id"
+      GROUP BY "pk"."kind"
       UNION ALL
       SELECT 'energy', "floor"."value", COUNT(*)::integer
       FROM "hits" INNER JOIN "PinEnergy" AS "en" ON "en"."pinId" = "hits"."id"
@@ -1268,6 +1274,11 @@ export function searchClauses(filter: SearchFilter) {
     if (filter.mws.length) {
       const bounds = filter.mws.map(({ op, value }) => `"pw"."megawatts" ${RATING_OPS[op]} ${add(value)}::numeric`);
       where.push(`EXISTS (SELECT 1 FROM "PinPower" AS "pw" WHERE "pw"."pinId" = "Pin"."id" AND ${bounds.join(' AND ')})`);
+    }
+    // power:generation / power:usage: whether the megawatts PinPower records
+    // are power the facility makes or power it draws.
+    if (filter.powerKinds.length) {
+      where.push(`EXISTS (SELECT 1 FROM "PinPower" AS "pk" WHERE "pk"."pinId" = "Pin"."id" AND "pk"."kind" = ANY(${add(filter.powerKinds)}::text[]))`);
     }
     if (filter.costs.length) {
       const usd = usdPriceSql('"Pin"."price"', '"Pin"."priceCurrency"');
