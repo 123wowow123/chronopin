@@ -449,13 +449,13 @@ export async function timelineTagCounts(created: CreatedQuery, limit = TAG_CLOUD
   return Pins.countTimelineTags(resolveCreatedSince(created), await timelineMinConfidence(), limit);
 }
 
-// The places the timeline's pins stand in (countries, or cities), for the
+// The places the timeline's pins stand in (countries and cities), for the
 // tag cloud's map view. Kept for hours, as the tags are.
-export async function timelinePlaceCounts(kind: 'country' | 'city', created: CreatedQuery, limit = TAG_CLOUD_SIZE) {
+export async function timelinePlaceCounts(created: CreatedQuery, limit = TAG_CLOUD_SIZE) {
   'use cache';
   cacheLife('hours');
   cacheTag(TAGS.timeline);
-  return Pins.countTimelinePlaces(kind, resolveCreatedSince(created), await timelineMinConfidence(), limit);
+  return Pins.countTimelinePlaces(resolveCreatedSince(created), await timelineMinConfidence(), limit);
 }
 
 export async function searchPageTagCounts(

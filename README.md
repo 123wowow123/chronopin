@@ -450,8 +450,6 @@ also add information from these sites and create stats for HUD and pin detail if
 pin category should be promoted to tag groups and tag cloud group should reflect this
 - backup data before doing this
 
-need to be able to filter pin by country / state
-
 
 there should be distiction before power generation and power usage
 

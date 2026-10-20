@@ -44,6 +44,7 @@ const READ_ONLY: Record<string, string> = {
   PinBaseCache: "Kept in step with PinBaseView by 0072's triggers.",
   PinTagCache: "Kept in step with PinTagBaseView by 0145's triggers.",
   PinConfidence: "Each pin's confidence score, kept in step with its references by 0147's triggers.",
+  PinAddressPlace: "Each pin's country and city read off its address, filled on demand by Pins.syncPlaces (0199).",
   AdminAudit: "The record of this API's own writes.",
 };
 

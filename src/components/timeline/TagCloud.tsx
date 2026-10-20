@@ -50,9 +50,32 @@ function countsFor(url: string): Promise<TagCount[]> {
   return counts;
 }
 
+type PlaceCount = { name: string; country: string | null; count: number; lat: number | null; lon: number | null };
+type PlaceCounts = { country: PlaceCount[]; city: PlaceCount[] };
+
+// The place map's counts (countries and cities in one answer), read ahead like the tags'.
+const placesAhead = new Map<string, { at: number; counts: Promise<PlaceCounts> }>();
+
+function placesFor(url: string): Promise<PlaceCounts> {
+  const held = placesAhead.get(url);
+  if (held && Date.now() - held.at < AHEAD_MS) return held.counts;
+  const counts = api.get<PlaceCounts>(url);
+  counts.catch(() => placesAhead.delete(url));
+  placesAhead.set(url, { at: Date.now(), counts });
+  return counts;
+}
+
+// The place counts' URL for a tag cloud's counts URL: the same posted-within cutoff.
+function placesUrl(countsUrl: string) {
+  const own = new URLSearchParams(countsUrl.split('?')[1] ?? '');
+  const params = new URLSearchParams({ limit: String(VIEW_LIMIT) });
+  for (const key of ['created_since', 'created_within']) if (own.get(key)) params.set(key, own.get(key)!);
+  return `/api/pins/place-counts?${params.toString()}`;
+}
+
 // Asks for these counts when the browser has nothing better to do.
 function readAhead(urls: string[]) {
-  const go = () => urls.forEach((url) => void countsFor(url).catch(() => {}));
+  const go = () => urls.forEach((url) => void (url.startsWith('/api/pins/place-counts') ? placesFor(url) : countsFor(url)).catch(() => {}));
   if ('requestIdleCallback' in window) {
     const id = window.requestIdleCallback(go, { timeout: 3000 });
     return () => window.cancelIdleCallback(id);
@@ -150,7 +173,7 @@ export function TagCloud({
 
   // Read ahead: the big cloud's counts (its button is here, and the drawer
   // and the tags pill open it too).
-  useEffect(() => readAhead([viewUrl(countsUrl)]), [countsUrl]);
+  useEffect(() => readAhead([viewUrl(countsUrl), placesUrl(countsUrl)]), [countsUrl]);
 
   // Combined searches are remembered for the cloud's row of them.
   useEffect(() => {
@@ -611,14 +634,6 @@ function Segmented<V extends string>({ label, value, options, onChange }: { labe
 let rememberedPlaces = false;
 let rememberedCities = false;
 
-type PlaceCount = {
-  name: string;
-  country: string | null;
-  count: number;
-  lat: number | null;
-  lon: number | null;
-};
-
 // How many tags the big cloud reads.
 const VIEW_LIMIT = 200;
 const viewUrl = (countsUrl: string) => `${countsUrl}&limit=${VIEW_LIMIT}`;
@@ -686,7 +701,8 @@ function TagCloudView({
     setHot(null);
     setCitiesState(next);
   };
-  const [placeCounts, setPlaceCounts] = useState<PlaceCount[] | null>(null);
+  const [placeData, setPlaceData] = useState<PlaceCounts | null>(null);
+  const placeCounts = placeData ? (cities ? placeData.city : placeData.country) : null;
   const [placesFailed, setPlacesFailed] = useState(false);
   const url = viewUrl(countsUrl);
   useScrollLock(true);
@@ -732,26 +748,19 @@ function TagCloudView({
     };
   }, [baseUrl]);
 
-  // The places for the map view, asked for once it is shown.
+  // The places for the map view, asked for once it is shown (usually already read ahead).
   useEffect(() => {
     if (!mapView) return;
     let cancelled = false;
-    const own = new URLSearchParams(countsUrl.split('?')[1] ?? '');
-    const params = new URLSearchParams({
-      kind: cities ? 'city' : 'country',
-      limit: String(VIEW_LIMIT),
-    });
-    for (const key of ['created_since', 'created_within']) if (own.get(key)) params.set(key, own.get(key)!);
-    setPlaceCounts(null);
     setPlacesFailed(false);
-    api.get<PlaceCount[]>(`/api/pins/place-counts?${params.toString()}`).then(
-      (next) => !cancelled && setPlaceCounts(next),
+    placesFor(placesUrl(countsUrl)).then(
+      (next) => !cancelled && setPlaceData(next),
       () => !cancelled && setPlacesFailed(true),
     );
     return () => {
       cancelled = true;
     };
-  }, [mapView, cities, countsUrl]);
+  }, [mapView, countsUrl]);
 
   useEffect(() => {
     let cancelled = false;

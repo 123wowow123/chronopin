@@ -351,40 +351,60 @@ export default class Pins extends BasePins<Pin> {
     );
   }
 
-  // The places the timeline's pins stand in, read off their addresses
-  // (src/lib/city.ts): countries, or cities with their country, with how many
-  // pins each holds, busiest first. Pins with no readable place are left out.
-  static async countTimelinePlaces(kind: 'country' | 'city', createdSince: Date | null | undefined, minConfidence: number | null, limit: number) {
-    const rows = await db.query<{ address: string; latitude: number | null; longitude: number | null }>(
-      `SELECT "Pin"."address", ST_Y("Pin"."location"::geometry) AS "latitude", ST_X("Pin"."location"::geometry) AS "longitude"
-       FROM "Pin"
-       WHERE "Pin"."utcDeletedDateTime" IS NULL
-         AND "Pin"."address" IS NOT NULL AND "Pin"."address" <> ''
-         AND ($1::timestamptz IS NULL OR "Pin"."utcCreatedDateTime" >= $1)
-         AND ($2::integer IS NULL OR COALESCE(${pinConfidenceOf('Pin')}, $2) >= $2)`,
-      [createdSince || null, minConfidence],
+  // Fills "PinAddressPlace" (0199) for the pins that have no row, or one made for
+  // another address or position: only those addresses are read.
+  static async syncPlaces() {
+    const stale = await db.query<{ id: number; address: string; latitude: number | null; longitude: number | null }>(
+      `SELECT "p"."id", "p"."address", ST_Y("p"."location"::geometry) AS "latitude", ST_X("p"."location"::geometry) AS "longitude"
+       FROM "Pin" AS "p"
+         LEFT JOIN "PinAddressPlace" AS "pp" ON "pp"."pinId" = "p"."id"
+       WHERE "p"."address" IS NOT NULL AND "p"."address" <> ''
+         AND ("pp"."pinId" IS NULL OR "pp"."address" <> "p"."address"
+              OR "pp"."lat" IS DISTINCT FROM ST_Y("p"."location"::geometry) OR "pp"."lon" IS DISTINCT FROM ST_X("p"."location"::geometry))`,
     );
-    const counts = new Map<string, { name: string; country: string | null; count: number; lats: number[]; lons: number[] }>();
-    for (const { address, latitude, longitude } of rows) {
-      const country = countryOf(address);
-      const name = kind === 'country' ? country : cityOf(address);
-      if (!name) continue;
-      const key = kind === 'city' ? `${name}|${country ?? ''}` : name;
-      const held = counts.get(key) ?? { name, country, count: 0, lats: [], lons: [] };
-      counts.set(key, held);
-      held.count++;
-      if (latitude != null && longitude != null) {
-        held.lats.push(latitude);
-        held.lons.push(longitude);
-      }
+    for (let from = 0; from < stale.length; from += 1000) {
+      const batch = stale.slice(from, from + 1000);
+      await db.query(
+        `INSERT INTO "PinAddressPlace" ("pinId", "address", "country", "city", "lat", "lon")
+         SELECT * FROM unnest($1::integer[], $2::text[], $3::text[], $4::text[], $5::double precision[], $6::double precision[])
+         ON CONFLICT ("pinId") DO UPDATE SET "address" = EXCLUDED."address", "country" = EXCLUDED."country", "city" = EXCLUDED."city", "lat" = EXCLUDED."lat", "lon" = EXCLUDED."lon"`,
+        [batch.map((r) => r.id), batch.map((r) => r.address), batch.map((r) => countryOf(r.address)), batch.map((r) => cityOf(r.address)), batch.map((r) => r.latitude), batch.map((r) => r.longitude)],
+      );
     }
-    // Where a place sits on the map: the middle of its pins' coordinates (the
-    // median, so a far-off island does not drag a country away).
-    const median = (values: number[]) => (values.length ? [...values].sort((a, b) => a - b)[Math.floor(values.length / 2)] : null);
-    return [...counts.values()]
-      .sort((a, b) => b.count - a.count || a.name.localeCompare(b.name))
-      .slice(0, limit)
-      .map(({ name, country, count, lats, lons }) => ({ name, country, count, lat: median(lats), lon: median(lons) }));
+  }
+
+  // The places the timeline's pins stand in, read off their addresses
+  // (src/lib/city.ts, stored in "PinAddressPlace"): countries and cities with how
+  // many pins each holds and where (the median of their coordinates, so a
+  // far-off island does not drag a country away), busiest first. Pins with
+  // no readable place are left out.
+  static async countTimelinePlaces(createdSince: Date | null | undefined, minConfidence: number | null, limit: number) {
+    await Pins.syncPlaces();
+    const live = `FROM "PinAddressPlace" AS "pp"
+         JOIN "Pin" ON "Pin"."id" = "pp"."pinId"
+       WHERE "Pin"."utcDeletedDateTime" IS NULL
+         AND ($1::timestamptz IS NULL OR "Pin"."utcCreatedDateTime" >= $1)
+         AND ($2::integer IS NULL OR COALESCE(${pinConfidenceOf('Pin')}, $2) >= $2)`;
+    const shape = (rows: { name: string; country: string | null; count: string; lat: number | null; lon: number | null }[]) =>
+      rows.map((r) => ({ ...r, count: Number(r.count) }));
+    const params = [createdSince || null, minConfidence, limit];
+    const [country, city] = await Promise.all([
+      db.query<{ name: string; country: string | null; count: string; lat: number | null; lon: number | null }>(
+        `SELECT "pp"."country" AS "name", "pp"."country", count(*) AS "count",
+           percentile_cont(0.5) WITHIN GROUP (ORDER BY "pp"."lat") AS "lat", percentile_cont(0.5) WITHIN GROUP (ORDER BY "pp"."lon") AS "lon"
+         ${live} AND "pp"."country" IS NOT NULL
+         GROUP BY "pp"."country" ORDER BY count(*) DESC, "pp"."country" LIMIT $3`,
+        params,
+      ),
+      db.query<{ name: string; country: string | null; count: string; lat: number | null; lon: number | null }>(
+        `SELECT "pp"."city" AS "name", "pp"."country", count(*) AS "count",
+           percentile_cont(0.5) WITHIN GROUP (ORDER BY "pp"."lat") AS "lat", percentile_cont(0.5) WITHIN GROUP (ORDER BY "pp"."lon") AS "lon"
+         ${live} AND "pp"."city" IS NOT NULL
+         GROUP BY "pp"."city", "pp"."country" ORDER BY count(*) DESC, "pp"."city" LIMIT $3`,
+        params,
+      ),
+    ]);
+    return { country: shape(country), city: shape(city) };
   }
 
   // Every live pin's id and last change, oldest first, for the sitemap; with
