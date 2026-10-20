@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { cityOf } from './city';
+import { cityOf, countryOf } from './city';
 
 // Addresses as pins carry them, hand-written and reverse-geocoded.
 describe('cityOf', () => {
@@ -48,5 +48,22 @@ describe('cityOf', () => {
     '',
   ])('%s has no city', (address) => {
     expect(cityOf(address)).toBeNull();
+  });
+});
+
+describe('countryOf', () => {
+  it('reads the country off the end of an address', () => {
+    expect(countryOf('Paris, France')).toBe('France');
+    expect(countryOf('Etsy, Brooklyn, New York, 11201, United States')).toBe('United States');
+    expect(countryOf('Rayleigh, Essex, England, UK')).toBe('United Kingdom');
+    expect(countryOf('Tokyo, 日本')).toBe('Japan');
+    expect(countryOf('Singapore')).toBe('Singapore');
+  });
+  it('takes an address ending in a US state for the United States', () => {
+    expect(countryOf('Anthropic, 500 Howard Street, San Francisco, CA')).toBe('United States');
+  });
+  it('has none for a description', () => {
+    expect(countryOf('Point of greatest eclipse at sea')).toBeNull();
+    expect(countryOf(null)).toBeNull();
   });
 });

@@ -13,7 +13,8 @@
 // relative to the anchor's cell; cells is row-major, 1 where it inks.
 export type Sprite = { cols: number; rows: number; offX: number; offY: number; cells: Uint8Array };
 
-export type CloudWord = { key: string; text: string; weight: number; vertical: boolean };
+// anchor: where the word wants to sit, as fractions of the box (a place on a map); it is packed as near it as it fits.
+export type CloudWord = { key: string; text: string; weight: number; vertical: boolean; anchor?: { x: number; y: number } };
 
 // A placed word: its anchor in px and the font size it was placed at.
 export type PlacedWord = CloudWord & { x: number; y: number; size: number };
@@ -87,7 +88,7 @@ function attempt(words: CloudWord[], scale: number, o: CloudOptions): PlacedWord
   for (const word of words) {
     const size = o.sizeFor(word.weight, scale);
     const sprite = packSprite(dilate(o.sprite(word, size), o.pad ?? 1));
-    const at = board.find(sprite, W / 2, H / 2, hash(word.key));
+    const at = board.find(sprite, (word.anchor?.x ?? 0.5) * W, (word.anchor?.y ?? 0.5) * H, hash(word.key));
     if (!at) continue;
     board.stamp(sprite, at.x, at.y);
     placed.push({ ...word, size, x: (at.x - sprite.offX) * o.cell, y: (at.y - sprite.offY) * o.cell });

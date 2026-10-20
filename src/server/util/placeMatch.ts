@@ -20,6 +20,9 @@ import { US_STATES } from '@/lib/usStates';
 export function placeNames(value: string): string[] {
   const place = value.trim();
   const lower = place.toLowerCase();
+  // The two countries addresses spell many ways (the cloud's map view picks them by their English name).
+  if (lower === 'united states') return [place, 'USA', 'United States of America'];
+  if (lower === 'united kingdom') return [place, 'UK', 'Great Britain', 'England', 'Scotland', 'Wales', 'Northern Ireland'];
   const state = US_STATES.find(([name, code]) => lower === name.toLowerCase() || lower === code.toLowerCase());
   if (!state) return [place];
   const [name, code] = state;

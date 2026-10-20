@@ -453,12 +453,10 @@ pin category should be promoted to tag groups and tag cloud group should reflect
 need to be able to filter pin by country / state
 
 
-there should be distiction before power generation and popwer usage
+there should be distiction before power generation and power usage
 
 
 ensure the product buy button is working in the country your in or collapse it in ellipsis with country category
 http://localhost:3000/pin/15767/eric-bordelet-sydre-argelette-grand-cru-celebrated-worldwide-as-the-apex-of-fine
 
 
-
-pin Nvidia Vera Rubin

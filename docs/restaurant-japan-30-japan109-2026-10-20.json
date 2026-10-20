@@ -1,0 +1,4494 @@
+{
+  "batch": 109,
+  "checkedAt": "2026-10-20",
+  "entries": [
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "OSTERIA SALVATORE — Asagaya Opens 2026-11-01",
+        "description": "An Italian osteria opening in Asagaya with wood-fired pizza, pasta, afternoon café service and a terrace; breakfast starts November 7 and deliveryNovember 18.",
+        "sourceUrl": "https://salvatore.jp/restaurant/asagaya/",
+        "address": "1F A-3 ASAGAYA, 1-47-17 Asagaya-minami, Suginami-ku, Tokyo",
+        "productName": "OSTERIA SALVATORE — Asagaya",
+        "utcStartDateTime": "2026-11-01T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "Exact operator branch website and October 20,2026 corporate launch release explicitly announce November 1,2026 grand opening of OSTERIA SALVATORE Asagaya. Morning beginsNovember 7 anddeliveryNovember 18; neither is used as the branch opening. No older brand-founding date or menu-publication date substituted.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Tokyo",
+          "Japan",
+          "Asagaya",
+          "Italian / Pizza"
+        ],
+        "longFormSummary": "<p>An Italian osteria opening in Asagaya with wood-fired pizza, pasta, afternoon café service and a terrace; breakfast starts November 7 and deliveryNovember 18.<cite data-ref=\"https://salvatore.jp/restaurant/asagaya/\"></cite></p><p>Exact operator branch website and October 20,2026 corporate launch release explicitly announce November 1,2026 grand opening of OSTERIA SALVATORE Asagaya. Morning beginsNovember 7 anddeliveryNovember 18; neither is used as the branch opening. No older brand-founding date or menu-publication date substituted.</p>",
+        "references": [
+          {
+            "url": "https://salvatore.jp/restaurant/asagaya/",
+            "title": "OSTERIA SALVATORE — Asagaya — branch website",
+            "confidence": 90,
+            "reasoning": "OSTERIA SALVATORE — Asagaya — branch website"
+          },
+          {
+            "url": "https://prtimes.jp/main/html/rd/p/000000074.000012023.html",
+            "title": "CorporateOctober 20 launch announcement and campaign terms",
+            "confidence": 90,
+            "reasoning": "CorporateOctober 20 launch announcement and campaign terms"
+          },
+          {
+            "url": "https://www.hotpepper.jp/strJ004698306/food/",
+            "title": "Exact branch planned food menu",
+            "confidence": 90,
+            "reasoning": "Exact branch planned food menu"
+          },
+          {
+            "url": "https://www.hotpepper.jp/strJ004698306/drink/",
+            "title": "Exact branch planned drink menu",
+            "confidence": 90,
+            "reasoning": "Exact branch planned drink menu"
+          },
+          {
+            "url": "https://www.hotpepper.jp/strJ004698306/",
+            "title": "Exact managed booking page; older logistics conflict",
+            "confidence": 90,
+            "reasoning": "Exact managed booking page; older logistics conflict"
+          },
+          {
+            "url": "https://www.hotpepper.jp/strJ004698306/appearance/",
+            "title": "Checked operator-linked branch gallery; no completed-room confirmation",
+            "confidence": 90,
+            "reasoning": "Checked operator-linked branch gallery; no completed-room confirmation"
+          },
+          {
+            "url": "https://tabelog.com/en/tokyo/A1319/A131905/13325894/dtlmenu/",
+            "title": "Checked empty branch Tabelog food tab",
+            "confidence": 90,
+            "reasoning": "Checked empty branch Tabelog food tab"
+          },
+          {
+            "url": "https://tabelog.com/en/tokyo/A1319/A131905/13325894/dtlphotolst/smp2/",
+            "title": "Checked empty branch Tabelog gallery",
+            "confidence": 90,
+            "reasoning": "Checked empty branch Tabelog gallery"
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://salvatore.jp/restaurant/asagaya/",
+          "menu": {
+            "pinSourceUrl": "https://salvatore.jp/restaurant/asagaya/",
+            "name": "OSTERIA SALVATORE — Asagaya",
+            "checkedAt": "2026-10-20",
+            "menus": [
+              {
+                "label": "Asagaya — planned autumn food menu",
+                "url": "https://www.hotpepper.jp/strJ004698306/food/",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "【プレミアムモッツァレラ使用】至高のマルゲリータ　S/M/L — Sサイズ",
+                    "price": 2783,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change. Published pizzaSdiameter23cm.",
+                    "category": "PIZZA〈ピッツァ〉　※Pizza Size：S size 23cm/M size 27cm/L size 30cm"
+                  },
+                  {
+                    "name": "【プレミアムモッツァレラ使用】至高のマルゲリータ　S/M/L — Mサイズ",
+                    "price": 3135,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change. Published pizzaMdiameter27cm.",
+                    "category": "PIZZA〈ピッツァ〉　※Pizza Size：S size 23cm/M size 27cm/L size 30cm"
+                  },
+                  {
+                    "name": "【プレミアムモッツァレラ使用】至高のマルゲリータ　S/M/L — Lサイズ",
+                    "price": 3520,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change. Published pizzaLdiameter30cm.",
+                    "category": "PIZZA〈ピッツァ〉　※Pizza Size：S size 23cm/M size 27cm/L size 30cm"
+                  },
+                  {
+                    "name": "【プレミアムモッツァレラ使用】“D.O.C”～ドック～　S/M/L — Sサイズ",
+                    "price": 3553,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change. Published pizzaSdiameter23cm.",
+                    "category": "PIZZA〈ピッツァ〉　※Pizza Size：S size 23cm/M size 27cm/L size 30cm"
+                  },
+                  {
+                    "name": "【プレミアムモッツァレラ使用】“D.O.C”～ドック～　S/M/L — Mサイズ",
+                    "price": 3905,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change. Published pizzaMdiameter27cm.",
+                    "category": "PIZZA〈ピッツァ〉　※Pizza Size：S size 23cm/M size 27cm/L size 30cm"
+                  },
+                  {
+                    "name": "【プレミアムモッツァレラ使用】“D.O.C”～ドック～　S/M/L — Lサイズ",
+                    "price": 4290,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change. Published pizzaLdiameter30cm.",
+                    "category": "PIZZA〈ピッツァ〉　※Pizza Size：S size 23cm/M size 27cm/L size 30cm"
+                  },
+                  {
+                    "name": "マルゲリータ　S/M/L — Sサイズ",
+                    "price": 2178,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change. Published pizzaSdiameter23cm.",
+                    "category": "PIZZA〈ピッツァ〉　※Pizza Size：S size 23cm/M size 27cm/L size 30cm"
+                  },
+                  {
+                    "name": "マルゲリータ　S/M/L — Mサイズ",
+                    "price": 2530,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change. Published pizzaMdiameter27cm.",
+                    "category": "PIZZA〈ピッツァ〉　※Pizza Size：S size 23cm/M size 27cm/L size 30cm"
+                  },
+                  {
+                    "name": "マルゲリータ　S/M/L — Lサイズ",
+                    "price": 2915,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change. Published pizzaLdiameter30cm.",
+                    "category": "PIZZA〈ピッツァ〉　※Pizza Size：S size 23cm/M size 27cm/L size 30cm"
+                  },
+                  {
+                    "name": "4種のチーズのピッツァ ～ハチミツ付～　S/M/L — Sサイズ",
+                    "price": 2453,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change. Published pizzaSdiameter23cm.",
+                    "category": "PIZZA〈ピッツァ〉　※Pizza Size：S size 23cm/M size 27cm/L size 30cm"
+                  },
+                  {
+                    "name": "4種のチーズのピッツァ ～ハチミツ付～　S/M/L — Mサイズ",
+                    "price": 2805,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change. Published pizzaMdiameter27cm.",
+                    "category": "PIZZA〈ピッツァ〉　※Pizza Size：S size 23cm/M size 27cm/L size 30cm"
+                  },
+                  {
+                    "name": "4種のチーズのピッツァ ～ハチミツ付～　S/M/L — Lサイズ",
+                    "price": 3190,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change. Published pizzaLdiameter30cm.",
+                    "category": "PIZZA〈ピッツァ〉　※Pizza Size：S size 23cm/M size 27cm/L size 30cm"
+                  },
+                  {
+                    "name": "マリナーラ No.1　S/M/L — Sサイズ",
+                    "price": 1628,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change. Published pizzaSdiameter23cm.",
+                    "category": "PIZZA〈ピッツァ〉　※Pizza Size：S size 23cm/M size 27cm/L size 30cm"
+                  },
+                  {
+                    "name": "マリナーラ No.1　S/M/L — Mサイズ",
+                    "price": 1958,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change. Published pizzaMdiameter27cm.",
+                    "category": "PIZZA〈ピッツァ〉　※Pizza Size：S size 23cm/M size 27cm/L size 30cm"
+                  },
+                  {
+                    "name": "マリナーラ No.1　S/M/L — Lサイズ",
+                    "price": 2288,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change. Published pizzaLdiameter30cm.",
+                    "category": "PIZZA〈ピッツァ〉　※Pizza Size：S size 23cm/M size 27cm/L size 30cm"
+                  },
+                  {
+                    "name": "ピッツァタルトゥーフォ　S/M/L — Sサイズ",
+                    "price": 3223,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change. Published pizzaSdiameter23cm.",
+                    "category": "PIZZA〈ピッツァ〉　※Pizza Size：S size 23cm/M size 27cm/L size 30cm"
+                  },
+                  {
+                    "name": "ピッツァタルトゥーフォ　S/M/L — Mサイズ",
+                    "price": 3575,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change. Published pizzaMdiameter27cm.",
+                    "category": "PIZZA〈ピッツァ〉　※Pizza Size：S size 23cm/M size 27cm/L size 30cm"
+                  },
+                  {
+                    "name": "ピッツァタルトゥーフォ　S/M/L — Lサイズ",
+                    "price": 3960,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change. Published pizzaLdiameter30cm.",
+                    "category": "PIZZA〈ピッツァ〉　※Pizza Size：S size 23cm/M size 27cm/L size 30cm"
+                  },
+                  {
+                    "name": "気まぐれピッツァ　S/M/L — Sサイズ",
+                    "price": 2376,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change. Published pizzaSdiameter23cm.",
+                    "category": "PIZZA〈ピッツァ〉　※Pizza Size：S size 23cm/M size 27cm/L size 30cm"
+                  },
+                  {
+                    "name": "気まぐれピッツァ　S/M/L — Mサイズ",
+                    "price": 2728,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change. Published pizzaMdiameter27cm.",
+                    "category": "PIZZA〈ピッツァ〉　※Pizza Size：S size 23cm/M size 27cm/L size 30cm"
+                  },
+                  {
+                    "name": "気まぐれピッツァ　S/M/L — Lサイズ",
+                    "price": 3113,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change. Published pizzaLdiameter30cm.",
+                    "category": "PIZZA〈ピッツァ〉　※Pizza Size：S size 23cm/M size 27cm/L size 30cm"
+                  },
+                  {
+                    "name": "ポルチーニ茸と生ハムのピッツァ　S/M/L — Sサイズ",
+                    "price": 2761,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change. Published pizzaSdiameter23cm.",
+                    "category": "PIZZA〈ピッツァ〉　※Pizza Size：S size 23cm/M size 27cm/L size 30cm"
+                  },
+                  {
+                    "name": "ポルチーニ茸と生ハムのピッツァ　S/M/L — Mサイズ",
+                    "price": 3113,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change. Published pizzaMdiameter27cm.",
+                    "category": "PIZZA〈ピッツァ〉　※Pizza Size：S size 23cm/M size 27cm/L size 30cm"
+                  },
+                  {
+                    "name": "ポルチーニ茸と生ハムのピッツァ　S/M/L — Lサイズ",
+                    "price": 3498,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change. Published pizzaLdiameter30cm.",
+                    "category": "PIZZA〈ピッツァ〉　※Pizza Size：S size 23cm/M size 27cm/L size 30cm"
+                  },
+                  {
+                    "name": "黄金トマトとアンチョビのマルゲリータ　S/M/L — Sサイズ",
+                    "price": 2321,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change. Published pizzaSdiameter23cm.",
+                    "category": "PIZZA〈ピッツァ〉　※Pizza Size：S size 23cm/M size 27cm/L size 30cm"
+                  },
+                  {
+                    "name": "黄金トマトとアンチョビのマルゲリータ　S/M/L — Mサイズ",
+                    "price": 2673,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change. Published pizzaMdiameter27cm.",
+                    "category": "PIZZA〈ピッツァ〉　※Pizza Size：S size 23cm/M size 27cm/L size 30cm"
+                  },
+                  {
+                    "name": "黄金トマトとアンチョビのマルゲリータ　S/M/L — Lサイズ",
+                    "price": 3058,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change. Published pizzaLdiameter30cm.",
+                    "category": "PIZZA〈ピッツァ〉　※Pizza Size：S size 23cm/M size 27cm/L size 30cm"
+                  },
+                  {
+                    "name": "ディアボラ ンドゥイヤ＜HOT＞　S/M/L — Sサイズ",
+                    "price": 2673,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change. Published pizzaSdiameter23cm.",
+                    "category": "PIZZA〈ピッツァ〉　※Pizza Size：S size 23cm/M size 27cm/L size 30cm"
+                  },
+                  {
+                    "name": "ディアボラ ンドゥイヤ＜HOT＞　S/M/L — Mサイズ",
+                    "price": 3025,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change. Published pizzaMdiameter27cm.",
+                    "category": "PIZZA〈ピッツァ〉　※Pizza Size：S size 23cm/M size 27cm/L size 30cm"
+                  },
+                  {
+                    "name": "ディアボラ ンドゥイヤ＜HOT＞　S/M/L — Lサイズ",
+                    "price": 3410,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change. Published pizzaLdiameter30cm.",
+                    "category": "PIZZA〈ピッツァ〉　※Pizza Size：S size 23cm/M size 27cm/L size 30cm"
+                  },
+                  {
+                    "name": "トリュフクリームのビスマルク　S/M/L — Sサイズ",
+                    "price": 2893,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change. Published pizzaSdiameter23cm.",
+                    "category": "PIZZA〈ピッツァ〉　※Pizza Size：S size 23cm/M size 27cm/L size 30cm"
+                  },
+                  {
+                    "name": "トリュフクリームのビスマルク　S/M/L — Mサイズ",
+                    "price": 3245,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change. Published pizzaMdiameter27cm.",
+                    "category": "PIZZA〈ピッツァ〉　※Pizza Size：S size 23cm/M size 27cm/L size 30cm"
+                  },
+                  {
+                    "name": "トリュフクリームのビスマルク　S/M/L — Lサイズ",
+                    "price": 3630,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change. Published pizzaLdiameter30cm.",
+                    "category": "PIZZA〈ピッツァ〉　※Pizza Size：S size 23cm/M size 27cm/L size 30cm"
+                  },
+                  {
+                    "name": "豚肉の香草ローストと生ハムサラミ＜HOT＞　S/M/L — Sサイズ",
+                    "price": 2893,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change. Published pizzaSdiameter23cm.",
+                    "category": "PIZZA〈ピッツァ〉　※Pizza Size：S size 23cm/M size 27cm/L size 30cm"
+                  },
+                  {
+                    "name": "豚肉の香草ローストと生ハムサラミ＜HOT＞　S/M/L — Mサイズ",
+                    "price": 3245,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change. Published pizzaMdiameter27cm.",
+                    "category": "PIZZA〈ピッツァ〉　※Pizza Size：S size 23cm/M size 27cm/L size 30cm"
+                  },
+                  {
+                    "name": "豚肉の香草ローストと生ハムサラミ＜HOT＞　S/M/L — Lサイズ",
+                    "price": 3630,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change. Published pizzaLdiameter30cm.",
+                    "category": "PIZZA〈ピッツァ〉　※Pizza Size：S size 23cm/M size 27cm/L size 30cm"
+                  },
+                  {
+                    "name": "◆チーズのアップグレード プレミアムモッツァレラ",
+                    "price": 660,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change. Optional supplement, not a standalone dish.",
+                    "category": "TOPPINGS〈お好みに合わせトッピング〉"
+                  },
+                  {
+                    "name": "生ハム",
+                    "price": 385,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change.",
+                    "category": "TOPPINGS〈お好みに合わせトッピング〉"
+                  },
+                  {
+                    "name": "ルーコラ",
+                    "price": 275,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change.",
+                    "category": "TOPPINGS〈お好みに合わせトッピング〉"
+                  },
+                  {
+                    "name": "サラミ",
+                    "price": 330,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change.",
+                    "category": "TOPPINGS〈お好みに合わせトッピング〉"
+                  },
+                  {
+                    "name": "アンチョビ",
+                    "price": 242,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change.",
+                    "category": "TOPPINGS〈お好みに合わせトッピング〉"
+                  },
+                  {
+                    "name": "揚げなすのペンネ “アラビアータ”＜HOT＞　R/L — R",
+                    "price": 1375,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change. Pasta R:1–2guests; L:3–4guests per source.",
+                    "category": "PASTA〈パスタ〉　※Pasta Size：R(レギュラーサイズ) 1～2名前/L(ラージサイズ) 3～4名様"
+                  },
+                  {
+                    "name": "揚げなすのペンネ “アラビアータ”＜HOT＞　R/L — L",
+                    "price": 2062,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change. Pasta R:1–2guests; L:3–4guests per source.",
+                    "category": "PASTA〈パスタ〉　※Pasta Size：R(レギュラーサイズ) 1～2名前/L(ラージサイズ) 3～4名様"
+                  },
+                  {
+                    "name": "フレッシュトマトとバジルのスパゲッティ　R/L — R",
+                    "price": 1738,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change. Pasta R:1–2guests; L:3–4guests per source.",
+                    "category": "PASTA〈パスタ〉　※Pasta Size：R(レギュラーサイズ) 1～2名前/L(ラージサイズ) 3～4名様"
+                  },
+                  {
+                    "name": "フレッシュトマトとバジルのスパゲッティ　R/L — L",
+                    "price": 2607,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change. Pasta R:1–2guests; L:3–4guests per source.",
+                    "category": "PASTA〈パスタ〉　※Pasta Size：R(レギュラーサイズ) 1～2名前/L(ラージサイズ) 3～4名様"
+                  },
+                  {
+                    "name": "アサリとズッキーニのスパゲッティ　R/L — R",
+                    "price": 1760,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change. Pasta R:1–2guests; L:3–4guests per source.",
+                    "category": "PASTA〈パスタ〉　※Pasta Size：R(レギュラーサイズ) 1～2名前/L(ラージサイズ) 3～4名様"
+                  },
+                  {
+                    "name": "アサリとズッキーニのスパゲッティ　R/L — L",
+                    "price": 2640,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change. Pasta R:1–2guests; L:3–4guests per source.",
+                    "category": "PASTA〈パスタ〉　※Pasta Size：R(レギュラーサイズ) 1～2名前/L(ラージサイズ) 3～4名様"
+                  },
+                  {
+                    "name": "漁師風魚介のペスカトーレリングイネ　R/L — R",
+                    "price": 2145,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change. Pasta R:1–2guests; L:3–4guests per source.",
+                    "category": "PASTA〈パスタ〉　※Pasta Size：R(レギュラーサイズ) 1～2名前/L(ラージサイズ) 3～4名様"
+                  },
+                  {
+                    "name": "漁師風魚介のペスカトーレリングイネ　R/L — L",
+                    "price": 3217,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change. Pasta R:1–2guests; L:3–4guests per source.",
+                    "category": "PASTA〈パスタ〉　※Pasta Size：R(レギュラーサイズ) 1～2名前/L(ラージサイズ) 3～4名様"
+                  },
+                  {
+                    "name": "チーズとミートソースの窯焼きパスタ “ラザニア”",
+                    "price": 1815,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change.",
+                    "category": "PASTA〈パスタ〉　※Pasta Size：R(レギュラーサイズ) 1～2名前/L(ラージサイズ) 3～4名様"
+                  },
+                  {
+                    "name": "4種チーズのクリームニョッキ　R/L — R",
+                    "price": 1705,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change. Pasta R:1–2guests; L:3–4guests per source.",
+                    "category": "PASTA〈パスタ〉　※Pasta Size：R(レギュラーサイズ) 1～2名前/L(ラージサイズ) 3～4名様"
+                  },
+                  {
+                    "name": "4種チーズのクリームニョッキ　R/L — L",
+                    "price": 2557,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change. Pasta R:1–2guests; L:3–4guests per source.",
+                    "category": "PASTA〈パスタ〉　※Pasta Size：R(レギュラーサイズ) 1～2名前/L(ラージサイズ) 3～4名様"
+                  },
+                  {
+                    "name": "ボローニャ風スパゲッティ　R/L — R",
+                    "price": 1848,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change. Pasta R:1–2guests; L:3–4guests per source.",
+                    "category": "PASTA〈パスタ〉　※Pasta Size：R(レギュラーサイズ) 1～2名前/L(ラージサイズ) 3～4名様"
+                  },
+                  {
+                    "name": "ボローニャ風スパゲッティ　R/L — L",
+                    "price": 2772,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change. Pasta R:1–2guests; L:3–4guests per source.",
+                    "category": "PASTA〈パスタ〉　※Pasta Size：R(レギュラーサイズ) 1～2名前/L(ラージサイズ) 3～4名様"
+                  },
+                  {
+                    "name": "サーモンのレモンクリームフェットチーネ　R/L — R",
+                    "price": 1980,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change. Pasta R:1–2guests; L:3–4guests per source.",
+                    "category": "PASTA〈パスタ〉　※Pasta Size：R(レギュラーサイズ) 1～2名前/L(ラージサイズ) 3～4名様"
+                  },
+                  {
+                    "name": "サーモンのレモンクリームフェットチーネ　R/L — L",
+                    "price": 2970,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change. Pasta R:1–2guests; L:3–4guests per source.",
+                    "category": "PASTA〈パスタ〉　※Pasta Size：R(レギュラーサイズ) 1～2名前/L(ラージサイズ) 3～4名様"
+                  },
+                  {
+                    "name": "ナポリ風ラグーソースのフェットチーネ　R/L — R",
+                    "price": 1980,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change. Pasta R:1–2guests; L:3–4guests per source.",
+                    "category": "PASTA〈パスタ〉　※Pasta Size：R(レギュラーサイズ) 1～2名前/L(ラージサイズ) 3～4名様"
+                  },
+                  {
+                    "name": "ナポリ風ラグーソースのフェットチーネ　R/L — L",
+                    "price": 2970,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change. Pasta R:1–2guests; L:3–4guests per source.",
+                    "category": "PASTA〈パスタ〉　※Pasta Size：R(レギュラーサイズ) 1～2名前/L(ラージサイズ) 3～4名様"
+                  },
+                  {
+                    "name": "黒トリュフと生ハムの贅沢カルボナーラフェットチーネ　R/L — R",
+                    "price": 2805,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change. Pasta R:1–2guests; L:3–4guests per source.",
+                    "category": "PASTA〈パスタ〉　※Pasta Size：R(レギュラーサイズ) 1～2名前/L(ラージサイズ) 3～4名様"
+                  },
+                  {
+                    "name": "黒トリュフと生ハムの贅沢カルボナーラフェットチーネ　R/L — L",
+                    "price": 4207,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change. Pasta R:1–2guests; L:3–4guests per source.",
+                    "category": "PASTA〈パスタ〉　※Pasta Size：R(レギュラーサイズ) 1～2名前/L(ラージサイズ) 3～4名様"
+                  },
+                  {
+                    "name": "生ハムのカルボナーラスパゲッティ　R/L — R",
+                    "price": 1958,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change. Pasta R:1–2guests; L:3–4guests per source.",
+                    "category": "PASTA〈パスタ〉　※Pasta Size：R(レギュラーサイズ) 1～2名前/L(ラージサイズ) 3～4名様"
+                  },
+                  {
+                    "name": "生ハムのカルボナーラスパゲッティ　R/L — L",
+                    "price": 2937,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change. Pasta R:1–2guests; L:3–4guests per source.",
+                    "category": "PASTA〈パスタ〉　※Pasta Size：R(レギュラーサイズ) 1～2名前/L(ラージサイズ) 3～4名様"
+                  },
+                  {
+                    "name": "秋刀魚とキノコのペペロンチーノ～ゆずのアクセント～＜HOT＞　R/L — R",
+                    "price": 1892,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change. Pasta R:1–2guests; L:3–4guests per source.",
+                    "category": "PASTA〈パスタ〉　※Pasta Size：R(レギュラーサイズ) 1～2名前/L(ラージサイズ) 3～4名様"
+                  },
+                  {
+                    "name": "秋刀魚とキノコのペペロンチーノ～ゆずのアクセント～＜HOT＞　R/L — L",
+                    "price": 2838,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change. Pasta R:1–2guests; L:3–4guests per source.",
+                    "category": "PASTA〈パスタ〉　※Pasta Size：R(レギュラーサイズ) 1～2名前/L(ラージサイズ) 3～4名様"
+                  },
+                  {
+                    "name": "生ハムとポルチーニ茸のクリーム フェットチーネ　R/L — R",
+                    "price": 2035,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change. Pasta R:1–2guests; L:3–4guests per source.",
+                    "category": "PASTA〈パスタ〉　※Pasta Size：R(レギュラーサイズ) 1～2名前/L(ラージサイズ) 3～4名様"
+                  },
+                  {
+                    "name": "生ハムとポルチーニ茸のクリーム フェットチーネ　R/L — L",
+                    "price": 3052,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change. Pasta R:1–2guests; L:3–4guests per source.",
+                    "category": "PASTA〈パスタ〉　※Pasta Size：R(レギュラーサイズ) 1～2名前/L(ラージサイズ) 3～4名様"
+                  },
+                  {
+                    "name": "黒毛和牛ミートソースのフェットチーネ　R/L — R",
+                    "price": 2970,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change. Pasta R:1–2guests; L:3–4guests per source.",
+                    "category": "PASTA〈パスタ〉　※Pasta Size：R(レギュラーサイズ) 1～2名前/L(ラージサイズ) 3～4名様"
+                  },
+                  {
+                    "name": "黒毛和牛ミートソースのフェットチーネ　R/L — L",
+                    "price": 4455,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change. Pasta R:1–2guests; L:3–4guests per source.",
+                    "category": "PASTA〈パスタ〉　※Pasta Size：R(レギュラーサイズ) 1～2名前/L(ラージサイズ) 3～4名様"
+                  },
+                  {
+                    "name": "◆スパゲッティをグルテンフリーへ変更",
+                    "price": 220,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change. Optional supplement, not a standalone dish.",
+                    "category": "PASTA〈パスタ〉　※Pasta Size：R(レギュラーサイズ) 1～2名前/L(ラージサイズ) 3～4名様"
+                  },
+                  {
+                    "name": "タコのカルパッチョ仕立て",
+                    "price": 1078,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change.",
+                    "category": "ANTIPASTO〈前菜〉"
+                  },
+                  {
+                    "name": "《Recommended》水牛モッツァレラ“ボッコンチーニ”のカプレーゼ",
+                    "price": 1353,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change.",
+                    "category": "ANTIPASTO〈前菜〉"
+                  },
+                  {
+                    "name": "サラミとハムの盛り合わせ",
+                    "price": 1848,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change.",
+                    "category": "ANTIPASTO〈前菜〉"
+                  },
+                  {
+                    "name": "黒毛和牛のカルパッチョ仕立て",
+                    "price": 1848,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change.",
+                    "category": "ANTIPASTO〈前菜〉"
+                  },
+                  {
+                    "name": "窯焼きソーセージ “サルシッチャ”",
+                    "price": 1188,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change.",
+                    "category": "PIATTO CALDO〈温菜〉"
+                  },
+                  {
+                    "name": "ムール貝の白ワイン蒸し＜HOT＞",
+                    "price": 1320,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change.",
+                    "category": "PIATTO CALDO〈温菜〉"
+                  },
+                  {
+                    "name": "海老とマッシュルームのアヒージョ",
+                    "price": 1518,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change.",
+                    "category": "PIATTO CALDO〈温菜〉"
+                  },
+                  {
+                    "name": "イカと舞茸のフリット",
+                    "price": 1188,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change.",
+                    "category": "PIATTO CALDO〈温菜〉"
+                  },
+                  {
+                    "name": "グリーンハーブサラダ",
+                    "price": 968,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change.",
+                    "category": "INSALATA〈サラダ〉"
+                  },
+                  {
+                    "name": "特製ベーコンのシーザーサラダ",
+                    "price": 1408,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change.",
+                    "category": "INSALATA〈サラダ〉"
+                  },
+                  {
+                    "name": "生ハムと3種キノコのサラダ",
+                    "price": 1408,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change.",
+                    "category": "INSALATA〈サラダ〉"
+                  },
+                  {
+                    "name": "トマトのブルスケッタ(1P)",
+                    "price": 330,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change.",
+                    "category": "PANE〈パン〉"
+                  },
+                  {
+                    "name": "バゲット(1P)",
+                    "price": 132,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change.",
+                    "category": "PANE〈パン〉"
+                  },
+                  {
+                    "name": "ガーリックトースト(1P)",
+                    "price": 220,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change.",
+                    "category": "PANE〈パン〉"
+                  },
+                  {
+                    "name": "サーモンのカリカリパン粉焼き～自家製タルタルソース～",
+                    "price": 2508,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change.",
+                    "category": "SECONDO〈肉・魚料理〉"
+                  },
+                  {
+                    "name": "鶏もも肉のソテー～ガーリックバターソース～",
+                    "price": 1958,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change.",
+                    "category": "SECONDO〈肉・魚料理〉"
+                  },
+                  {
+                    "name": "赤身のグリルステーキ～オリジナルステーキソース～　150g/200g/300g — 150g",
+                    "price": 2618,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change.",
+                    "category": "SECONDO〈肉・魚料理〉"
+                  },
+                  {
+                    "name": "赤身のグリルステーキ～オリジナルステーキソース～　150g/200g/300g — 200g",
+                    "price": 3168,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change.",
+                    "category": "SECONDO〈肉・魚料理〉"
+                  },
+                  {
+                    "name": "赤身のグリルステーキ～オリジナルステーキソース～　150g/200g/300g — 300g",
+                    "price": 4125,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change.",
+                    "category": "SECONDO〈肉・魚料理〉"
+                  },
+                  {
+                    "name": "特製スペアリブ～骨付き豚肉のグレービーソース～",
+                    "price": 2728,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change.",
+                    "category": "SECONDO〈肉・魚料理〉"
+                  },
+                  {
+                    "name": "≪Recommend≫黒毛和牛のグリル～赤ワインソース～",
+                    "price": 4180,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change.",
+                    "category": "SECONDO〈肉・魚料理〉"
+                  },
+                  {
+                    "name": "クラシックティラミス",
+                    "price": 770,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change.",
+                    "category": "DOLCE〈デザート〉"
+                  },
+                  {
+                    "name": "トルタ カプレーゼ",
+                    "price": 638,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change.",
+                    "category": "DOLCE〈デザート〉"
+                  },
+                  {
+                    "name": "ミルクレープ",
+                    "price": 704,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change.",
+                    "category": "DOLCE〈デザート〉"
+                  },
+                  {
+                    "name": "マロンタルト",
+                    "price": 748,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change.",
+                    "category": "DOLCE〈デザート〉"
+                  },
+                  {
+                    "name": "レアチーズケーキ ～キャラメリゼ～",
+                    "price": 660,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change.",
+                    "category": "DOLCE〈デザート〉"
+                  },
+                  {
+                    "name": "カタラーナ",
+                    "price": 693,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change.",
+                    "category": "DOLCE〈デザート〉"
+                  },
+                  {
+                    "name": "本日のジェラート",
+                    "price": 638,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change.",
+                    "category": "DOLCE〈デザート〉"
+                  },
+                  {
+                    "name": "ドルチェミスト～小さなデザート盛り合わせ～6種",
+                    "price": 2640,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change.",
+                    "category": "DOLCE〈デザート〉"
+                  }
+                ],
+                "note": "Tax-inclusive exact Asagaya managed booking page, food datedSeptember16/updatedSeptember18. Preopening planned menu, subject to change. Size variants separated. Pizza23/27/30cm; pastaR1–2,L3–4. Supplements separately charged. Not a promise that every dinner dish is served during breakfast or café time."
+              },
+              {
+                "label": "Asagaya — planned drinks and wines",
+                "url": "https://www.hotpepper.jp/strJ004698306/drink/",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "【スパークリングワイン/グラス】マルティーニ ブリュット",
+                    "price": 880,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change.",
+                    "category": "GLASS WINE MENU　グラスワイン"
+                  },
+                  {
+                    "name": "【白ワイン/グラス】サンタ クリスティーナ ビアンコ",
+                    "price": 1430,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change.",
+                    "category": "GLASS WINE MENU　グラスワイン"
+                  },
+                  {
+                    "name": "【白ワイン/グラス】シャルドネ リミテッド エディション",
+                    "price": 1210,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change.",
+                    "category": "GLASS WINE MENU　グラスワイン"
+                  },
+                  {
+                    "name": "【白ワイン/グラス】レ ミュー ピノ グリージョ<PB>",
+                    "price": 880,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change.",
+                    "category": "GLASS WINE MENU　グラスワイン"
+                  },
+                  {
+                    "name": "【赤ワイン/グラス】ドルチェット ダルバ ブリッコ バスティア",
+                    "price": 1650,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change.",
+                    "category": "GLASS WINE MENU　グラスワイン"
+                  },
+                  {
+                    "name": "【赤ワイン/グラス】カベルネ ソーヴィニヨン リミテッド エディション",
+                    "price": 1210,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change.",
+                    "category": "GLASS WINE MENU　グラスワイン"
+                  },
+                  {
+                    "name": "【赤ワイン/グラス】ソーレブルーノ プーリア ロッソ<PB>",
+                    "price": 880,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change.",
+                    "category": "GLASS WINE MENU　グラスワイン"
+                  },
+                  {
+                    "name": "カステロ ロンゴバルド ミレジマート<PB>",
+                    "price": 3630,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change.",
+                    "category": "SPARKLING WINE　スパークリングワイン"
+                  },
+                  {
+                    "name": "マルティーニ ロゼ",
+                    "price": 5500,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change.",
+                    "category": "SPARKLING WINE　スパークリングワイン"
+                  },
+                  {
+                    "name": "マルティーニ ブリュット",
+                    "price": 4950,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change.",
+                    "category": "SPARKLING WINE　スパークリングワイン"
+                  },
+                  {
+                    "name": "ガンチア プロセッコ スプマンテ",
+                    "price": 6600,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change.",
+                    "category": "SPARKLING WINE　スパークリングワイン"
+                  },
+                  {
+                    "name": "フェッラーリ マキシマム ブラン ド ブラン",
+                    "price": 9460,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change.",
+                    "category": "SPARKLING WINE　スパークリングワイン"
+                  },
+                  {
+                    "name": "モエ エ シャンドン モエ アンペリアル",
+                    "price": 13200,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change.",
+                    "category": "SPARKLING WINE　スパークリングワイン"
+                  },
+                  {
+                    "name": "ザ ペール ロゼ",
+                    "price": 6050,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change.",
+                    "category": "ROSE WINE　ロゼワイン"
+                  },
+                  {
+                    "name": "アランサット ボルゴ サヴァイアン",
+                    "price": 6380,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change.",
+                    "category": "ORANGE WINE　オレンジワイン"
+                  },
+                  {
+                    "name": "サンタ クリスティーナ ビアンコ",
+                    "price": 8360,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change.",
+                    "category": "WHITE WINE　白ワイン"
+                  },
+                  {
+                    "name": "シャルドネ リミテッド エディション",
+                    "price": 7040,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change.",
+                    "category": "WHITE WINE　白ワイン"
+                  },
+                  {
+                    "name": "カステッリ ディ セヴェリーノ プーリア ビアンコ",
+                    "price": 3300,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change.",
+                    "category": "WHITE WINE　白ワイン"
+                  },
+                  {
+                    "name": "クラシック コンドール シャルドネ<PB>",
+                    "price": 3630,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change.",
+                    "category": "WHITE WINE　白ワイン"
+                  },
+                  {
+                    "name": "レ ミュー ピノ グリージョ<PB>",
+                    "price": 4290,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change.",
+                    "category": "WHITE WINE　白ワイン"
+                  },
+                  {
+                    "name": "カザル ガルシア",
+                    "price": 4620,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change.",
+                    "category": "WHITE WINE　白ワイン"
+                  },
+                  {
+                    "name": "コルテ アダミ ソアーヴェ",
+                    "price": 4950,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change.",
+                    "category": "WHITE WINE　白ワイン"
+                  },
+                  {
+                    "name": "シャルドネ ヴェネト バリック",
+                    "price": 5280,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change.",
+                    "category": "WHITE WINE　白ワイン"
+                  },
+                  {
+                    "name": "ロバートソン ゲヴェルツトラミネール",
+                    "price": 5720,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change.",
+                    "category": "WHITE WINE　白ワイン"
+                  },
+                  {
+                    "name": "ラ セグレタ グリッロ",
+                    "price": 6160,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change.",
+                    "category": "WHITE WINE　白ワイン"
+                  },
+                  {
+                    "name": "イ ペントゥリ ファランギーナ",
+                    "price": 6600,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change.",
+                    "category": "WHITE WINE　白ワイン"
+                  },
+                  {
+                    "name": "マトゥア リージョナル ソーヴィニヨン ブラン マルボロ",
+                    "price": 6820,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change.",
+                    "category": "WHITE WINE　白ワイン"
+                  },
+                  {
+                    "name": "シャトーメルシャン 萌黄",
+                    "price": 7040,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change.",
+                    "category": "WHITE WINE　白ワイン"
+                  },
+                  {
+                    "name": "テラザス レゼルヴァ シャルドネ",
+                    "price": 7920,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change.",
+                    "category": "WHITE WINE　白ワイン"
+                  },
+                  {
+                    "name": "シモネ フェブル シャブリ",
+                    "price": 9350,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change.",
+                    "category": "WHITE WINE　白ワイン"
+                  },
+                  {
+                    "name": "ブレッド&バター シャルドネ",
+                    "price": 10450,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change.",
+                    "category": "WHITE WINE　白ワイン"
+                  },
+                  {
+                    "name": "ドルチェット ダルバ ブリッコ バスティア",
+                    "price": 9680,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change.",
+                    "category": "RED WINE　赤ワイン"
+                  },
+                  {
+                    "name": "カベルネ ソーヴィニヨン リミテッド エディション",
+                    "price": 7040,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change.",
+                    "category": "RED WINE　赤ワイン"
+                  },
+                  {
+                    "name": "カステッリ ディ セヴェリーノ カベルネ サンジョヴェーゼ",
+                    "price": 3300,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change.",
+                    "category": "RED WINE　赤ワイン"
+                  },
+                  {
+                    "name": "クラシック コンドール カベルネ ソーヴィニヨン<PB>",
+                    "price": 3630,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change.",
+                    "category": "RED WINE　赤ワイン"
+                  },
+                  {
+                    "name": "ソーレブルーノ プーリア ロッソ<PB>",
+                    "price": 4290,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change.",
+                    "category": "RED WINE　赤ワイン"
+                  },
+                  {
+                    "name": "ローマ ロッソ",
+                    "price": 4620,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change.",
+                    "category": "RED WINE　赤ワイン"
+                  },
+                  {
+                    "name": "サンジョヴェーゼ  ディ ロマーニャ リゼルヴァ",
+                    "price": 4840,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change.",
+                    "category": "RED WINE　赤ワイン"
+                  },
+                  {
+                    "name": "ラッロ イル プリンチペ",
+                    "price": 5390,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change.",
+                    "category": "RED WINE　赤ワイン"
+                  },
+                  {
+                    "name": "マーレ マンニュム マンモス ジンファンデル",
+                    "price": 5720,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change.",
+                    "category": "RED WINE　赤ワイン"
+                  },
+                  {
+                    "name": "スモーキング ルーン メルロー カリフォルニア",
+                    "price": 5940,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change.",
+                    "category": "RED WINE　赤ワイン"
+                  },
+                  {
+                    "name": "シャトーメルシャン 藍茜",
+                    "price": 6490,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change.",
+                    "category": "RED WINE　赤ワイン"
+                  },
+                  {
+                    "name": "シレーニ セラー セレクション ピノ ノワール",
+                    "price": 6600,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change.",
+                    "category": "RED WINE　赤ワイン"
+                  },
+                  {
+                    "name": "モンティ ロッソ",
+                    "price": 6820,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change.",
+                    "category": "RED WINE　赤ワイン"
+                  },
+                  {
+                    "name": "ペポリ キャンティ クラシコ アンティノリ",
+                    "price": 7370,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change.",
+                    "category": "RED WINE　赤ワイン"
+                  },
+                  {
+                    "name": "テラザス レゼルヴァ カベルネ ソーヴィニヨン",
+                    "price": 7920,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change.",
+                    "category": "RED WINE　赤ワイン"
+                  },
+                  {
+                    "name": "ヴァルモワシン ピノノワール",
+                    "price": 8140,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change.",
+                    "category": "RED WINE　赤ワイン"
+                  },
+                  {
+                    "name": "チェレット モンソルド ランゲ ロッソ",
+                    "price": 9460,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change.",
+                    "category": "RED WINE　赤ワイン"
+                  },
+                  {
+                    "name": "ガヤ プロミス",
+                    "price": 14080,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change.",
+                    "category": "RED WINE　赤ワイン"
+                  },
+                  {
+                    "name": "アサヒ スーパードライ エクストラコールド(グラス)",
+                    "price": 902,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change.",
+                    "category": "DRAFT BEER／BOTTLED BEER"
+                  },
+                  {
+                    "name": "アサヒ スーパードライ — グラス",
+                    "price": 638,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change.",
+                    "category": "DRAFT BEER／BOTTLED BEER"
+                  },
+                  {
+                    "name": "アサヒ スーパードライ — ジョッキ",
+                    "price": 858,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change.",
+                    "category": "DRAFT BEER／BOTTLED BEER"
+                  },
+                  {
+                    "name": "ナストロアズーロ(ボトル)",
+                    "price": 858,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change.",
+                    "category": "DRAFT BEER／BOTTLED BEER"
+                  },
+                  {
+                    "name": "コロナ エキストラ(ボトル)",
+                    "price": 858,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change.",
+                    "category": "DRAFT BEER／BOTTLED BEER"
+                  },
+                  {
+                    "name": "ギネス(ボトル)",
+                    "price": 880,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change.",
+                    "category": "DRAFT BEER／BOTTLED BEER"
+                  },
+                  {
+                    "name": "カシスのビアクーラー",
+                    "price": 935,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change.",
+                    "category": "SEASONAL FRUIT COCKTAIL／SIGNATURE COCKTAIL"
+                  },
+                  {
+                    "name": "たっぷりミントのカシスティーヌーヴォ",
+                    "price": 935,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change.",
+                    "category": "SEASONAL FRUIT COCKTAIL／SIGNATURE COCKTAIL"
+                  },
+                  {
+                    "name": "生カシスオレンジ",
+                    "price": 990,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change.",
+                    "category": "SEASONAL FRUIT COCKTAIL／SIGNATURE COCKTAIL"
+                  },
+                  {
+                    "name": "アペロールスプリッツ",
+                    "price": 880,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change.",
+                    "category": "SEASONAL FRUIT COCKTAIL／SIGNATURE COCKTAIL"
+                  },
+                  {
+                    "name": "シグネチャーモヒート",
+                    "price": 968,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change.",
+                    "category": "SEASONAL FRUIT COCKTAIL／SIGNATURE COCKTAIL"
+                  },
+                  {
+                    "name": "オリジナル サングリア",
+                    "price": 968,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change.",
+                    "category": "SEASONAL FRUIT COCKTAIL／SIGNATURE COCKTAIL"
+                  },
+                  {
+                    "name": "YUZUジントニック",
+                    "price": 968,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change.",
+                    "category": "SEASONAL FRUIT COCKTAIL／SIGNATURE COCKTAIL"
+                  },
+                  {
+                    "name": "ボタニカル バブリングミモザ",
+                    "price": 990,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change.",
+                    "category": "SEASONAL FRUIT COCKTAIL／SIGNATURE COCKTAIL"
+                  },
+                  {
+                    "name": "瀬戸内レモンサワー",
+                    "price": 770,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change.",
+                    "category": "CRAFT LEMON SOUR(定番からオリジナルスタイルまで)"
+                  },
+                  {
+                    "name": "リッチ カルピスレモンサワー",
+                    "price": 825,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change.",
+                    "category": "CRAFT LEMON SOUR(定番からオリジナルスタイルまで)"
+                  },
+                  {
+                    "name": "無糖レモンサワー",
+                    "price": 935,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change.",
+                    "category": "CRAFT LEMON SOUR(定番からオリジナルスタイルまで)"
+                  },
+                  {
+                    "name": "贅沢レモンサワー",
+                    "price": 935,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change.",
+                    "category": "CRAFT LEMON SOUR(定番からオリジナルスタイルまで)"
+                  },
+                  {
+                    "name": "HIGHBALL — ブラックニッカハイボール",
+                    "price": 748,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change.",
+                    "category": "HIGHBALL／JAPANESE HIGHBALL／GIAPPONESE"
+                  },
+                  {
+                    "name": "HIGHBALL — ジンジャーハイボール",
+                    "price": 748,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change.",
+                    "category": "HIGHBALL／JAPANESE HIGHBALL／GIAPPONESE"
+                  },
+                  {
+                    "name": "HIGHBALL — ブッシュミルズハイボール",
+                    "price": 770,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change.",
+                    "category": "HIGHBALL／JAPANESE HIGHBALL／GIAPPONESE"
+                  },
+                  {
+                    "name": "HIGHBALL — グレンモーレンジィ ソーダ",
+                    "price": 1045,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change.",
+                    "category": "HIGHBALL／JAPANESE HIGHBALL／GIAPPONESE"
+                  },
+                  {
+                    "name": "JAPANESE HIGHBALL — フロンティア スモーキー ハイボール",
+                    "price": 1045,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change.",
+                    "category": "HIGHBALL／JAPANESE HIGHBALL／GIAPPONESE"
+                  },
+                  {
+                    "name": "JAPANESE HIGHBALL — 余市 ハイボール",
+                    "price": 1320,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change.",
+                    "category": "HIGHBALL／JAPANESE HIGHBALL／GIAPPONESE"
+                  },
+                  {
+                    "name": "JAPANESE HIGHBALL — 竹鶴 ハイボール",
+                    "price": 1375,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change.",
+                    "category": "HIGHBALL／JAPANESE HIGHBALL／GIAPPONESE"
+                  },
+                  {
+                    "name": "GIAPPONESE — 緑茶ハイ From 伊右衛門",
+                    "price": 748,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change.",
+                    "category": "HIGHBALL／JAPANESE HIGHBALL／GIAPPONESE"
+                  },
+                  {
+                    "name": "GIAPPONESE — ウーロンハイ",
+                    "price": 748,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change.",
+                    "category": "HIGHBALL／JAPANESE HIGHBALL／GIAPPONESE"
+                  },
+                  {
+                    "name": "GIAPPONESE — 無糖紅茶ハイ",
+                    "price": 825,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change.",
+                    "category": "HIGHBALL／JAPANESE HIGHBALL／GIAPPONESE"
+                  },
+                  {
+                    "name": "GIAPPONESE — ジャスミンハイ",
+                    "price": 858,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change.",
+                    "category": "HIGHBALL／JAPANESE HIGHBALL／GIAPPONESE"
+                  },
+                  {
+                    "name": "【季節のおすすめ】カシスのスパークリングレモネード",
+                    "price": 880,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change.",
+                    "category": "MOCTAILS NON-ALCOHOLIC COCTAIL(いろいろ選べるノンアル、とっておきの一杯で乾杯！)"
+                  },
+                  {
+                    "name": "オリジナルレモンスカッシュ",
+                    "price": 803,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change.",
+                    "category": "MOCTAILS NON-ALCOHOLIC COCTAIL(いろいろ選べるノンアル、とっておきの一杯で乾杯！)"
+                  },
+                  {
+                    "name": "イチゴとフレッシュライムのベリーモー二",
+                    "price": 825,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change.",
+                    "category": "MOCTAILS NON-ALCOHOLIC COCTAIL(いろいろ選べるノンアル、とっておきの一杯で乾杯！)"
+                  },
+                  {
+                    "name": "イタリアンピーチアイスティー",
+                    "price": 825,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change.",
+                    "category": "MOCTAILS NON-ALCOHOLIC COCTAIL(いろいろ選べるノンアル、とっておきの一杯で乾杯！)"
+                  },
+                  {
+                    "name": "フルッタトロピカーレ",
+                    "price": 858,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change.",
+                    "category": "MOCTAILS NON-ALCOHOLIC COCTAIL(いろいろ選べるノンアル、とっておきの一杯で乾杯！)"
+                  },
+                  {
+                    "name": "ピースフルスカイ",
+                    "price": 858,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change.",
+                    "category": "MOCTAILS NON-ALCOHOLIC COCTAIL(いろいろ選べるノンアル、とっておきの一杯で乾杯！)"
+                  },
+                  {
+                    "name": "アサヒ ゼロ[ノンアルコール]",
+                    "price": 715,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change.",
+                    "category": "NON-ALCOHOL"
+                  },
+                  {
+                    "name": "CREAM SODA(心ときめく、幸せクリームソーダ) — クリームソーダ",
+                    "price": 858,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change.",
+                    "category": "NON-ALCOHOL"
+                  },
+                  {
+                    "name": "CREAM SODA(心ときめく、幸せクリームソーダ) — ブルーレモンクリームソーダ",
+                    "price": 858,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change.",
+                    "category": "NON-ALCOHOL"
+                  },
+                  {
+                    "name": "JUICE — 100%オレンジジュース",
+                    "price": 660,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change.",
+                    "category": "NON-ALCOHOL"
+                  },
+                  {
+                    "name": "JUICE — 100%アップルジュース",
+                    "price": 660,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change.",
+                    "category": "NON-ALCOHOL"
+                  },
+                  {
+                    "name": "JUICE — 100%グレープフルーツジュース",
+                    "price": 660,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change.",
+                    "category": "NON-ALCOHOL"
+                  },
+                  {
+                    "name": "JUICE — 100%マンゴージュース",
+                    "price": 748,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change.",
+                    "category": "NON-ALCOHOL"
+                  },
+                  {
+                    "name": "SODA POP & WATER — コーラ",
+                    "price": 660,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change.",
+                    "category": "NON-ALCOHOL"
+                  },
+                  {
+                    "name": "SODA POP & WATER — ジンジャーエール",
+                    "price": 660,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change.",
+                    "category": "NON-ALCOHOL"
+                  },
+                  {
+                    "name": "SODA POP & WATER — トニックウォーター",
+                    "price": 660,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change.",
+                    "category": "NON-ALCOHOL"
+                  },
+                  {
+                    "name": "SODA POP & WATER — サンペレグリノ(ブラッドオレンジ味)",
+                    "price": 770,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change.",
+                    "category": "NON-ALCOHOL"
+                  },
+                  {
+                    "name": "SODA POP & WATER — サンペレグリノ(グレープフルーツ味)",
+                    "price": 770,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change.",
+                    "category": "NON-ALCOHOL"
+                  },
+                  {
+                    "name": "SODA POP & WATER — サンペレグリノ(イタリアの炭酸ナチュラルウォーター) 500ml",
+                    "price": 660,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change.",
+                    "category": "NON-ALCOHOL"
+                  },
+                  {
+                    "name": "SODA POP & WATER — モンスターエナジー",
+                    "price": 803,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change.",
+                    "category": "NON-ALCOHOL"
+                  },
+                  {
+                    "name": "ITALIAN SODA(自然派のシロップでつくるイタリアンソーダ) — ストロベリー",
+                    "price": 715,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change.",
+                    "category": "NON-ALCOHOL"
+                  },
+                  {
+                    "name": "ITALIAN SODA(自然派のシロップでつくるイタリアンソーダ) — ホワイトピーチ",
+                    "price": 715,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change.",
+                    "category": "NON-ALCOHOL"
+                  },
+                  {
+                    "name": "ITALIAN SODA(自然派のシロップでつくるイタリアンソーダ) — 柚子シトロン",
+                    "price": 715,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change.",
+                    "category": "NON-ALCOHOL"
+                  },
+                  {
+                    "name": "COFFEE & TEA — オリジナル ブレンドコーヒー",
+                    "price": 660,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change.",
+                    "category": "NON-ALCOHOL"
+                  },
+                  {
+                    "name": "COFFEE & TEA — エスプレッソ",
+                    "price": 440,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change.",
+                    "category": "NON-ALCOHOL"
+                  },
+                  {
+                    "name": "COFFEE & TEA — エスプレッソ ダブル",
+                    "price": 605,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change.",
+                    "category": "NON-ALCOHOL"
+                  },
+                  {
+                    "name": "COFFEE & TEA — アイスコーヒー",
+                    "price": 660,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change.",
+                    "category": "NON-ALCOHOL"
+                  },
+                  {
+                    "name": "COFFEE & TEA — カプチーノ",
+                    "price": 715,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change.",
+                    "category": "NON-ALCOHOL"
+                  },
+                  {
+                    "name": "COFFEE & TEA — カフェラテ",
+                    "price": 715,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change.",
+                    "category": "NON-ALCOHOL"
+                  },
+                  {
+                    "name": "COFFEE & TEA — アイスカフェラテ",
+                    "price": 715,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change.",
+                    "category": "NON-ALCOHOL"
+                  },
+                  {
+                    "name": "COFFEE & TEA — 紅茶",
+                    "price": 660,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change.",
+                    "category": "NON-ALCOHOL"
+                  },
+                  {
+                    "name": "COFFEE & TEA — アイスティー",
+                    "price": 660,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change.",
+                    "category": "NON-ALCOHOL"
+                  },
+                  {
+                    "name": "COFFEE & TEA — ウーロン茶",
+                    "price": 605,
+                    "note": "Tax included. Exact Asagaya managed branch booking menu; preopening list, subject to change.",
+                    "category": "NON-ALCOHOL"
+                  }
+                ],
+                "note": "Tax-inclusive exact Asagaya managed booking page, drink list datedAugust19. Preopening planned menu; reconfirm launch stock/prices. Glass and bottle wine separate. Only bottles explicitly markedPBare used in the bottle-wine offer menu; unmarked wines and glasses excluded."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://salvatore.jp/restaurant/asagaya/",
+            "name": "OSTERIA SALVATORE — Asagaya",
+            "checkedAt": "2026-10-20",
+            "websiteUrl": "https://salvatore.jp/restaurant/asagaya/",
+            "phone": "03-5929-9305",
+            "openingHours": [
+              {
+                "days": "Weekdays lunch",
+                "hours": "11:30–15:00; last order 14:00"
+              },
+              {
+                "days": "Weekdays café",
+                "hours": "15:00–17:00; last order 16:30"
+              },
+              {
+                "days": "Daily dinner",
+                "hours": "17:00–23:00; last order 22:00"
+              },
+              {
+                "days": "Weekends and public holidays lunch/café/dinner",
+                "hours": "11:30–23:00; last order 22:00"
+              },
+              {
+                "days": "Morning fromNovember 7",
+                "hours": "08:30–10:30; last order 10:00"
+              },
+              {
+                "days": "Delivery fromNovember 18, weekdays",
+                "hours": "11:00–14:00 and 17:00–22:00"
+              },
+              {
+                "days": "Delivery fromNovember 18, weekends/public holidays",
+                "hours": "11:00–22:00"
+              }
+            ],
+            "detailsSourceUrl": "https://salvatore.jp/restaurant/asagaya/",
+            "additionalSources": [
+              {
+                "label": "CorporateOctober 20 launch announcement and campaign terms",
+                "url": "https://prtimes.jp/main/html/rd/p/000000074.000012023.html"
+              },
+              {
+                "label": "Exact branch planned food menu",
+                "url": "https://www.hotpepper.jp/strJ004698306/food/"
+              },
+              {
+                "label": "Exact branch planned drink menu",
+                "url": "https://www.hotpepper.jp/strJ004698306/drink/"
+              },
+              {
+                "label": "Exact managed booking page; older logistics conflict",
+                "url": "https://www.hotpepper.jp/strJ004698306/"
+              },
+              {
+                "label": "Checked operator-linked branch gallery; no completed-room confirmation",
+                "url": "https://www.hotpepper.jp/strJ004698306/appearance/"
+              },
+              {
+                "label": "Checked empty branch Tabelog food tab",
+                "url": "https://tabelog.com/en/tokyo/A1319/A131905/13325894/dtlmenu/"
+              },
+              {
+                "label": "Checked empty branch Tabelog gallery",
+                "url": "https://tabelog.com/en/tokyo/A1319/A131905/13325894/dtlphotolst/smp2/"
+              }
+            ],
+            "hoursNote": "Operator lists 69 indoor seats (60 table plus 9 counter) and 20 terrace seats; non-smoking. Terrace pets permitted, with possible restrictions for large dogs. Irregular closure follows facility closures; confirm before visiting. Lunch/dinner reservations accepted. Dinner cover¥330 per person; morning/lunch/caféno cover. Use operator address 1-47-17; older booking pages list 1-47-11 and different hours/seating. Operator details take precedence. Branch booking menu publishes autumn food and drink lists; prices and availability may change before opening. PizzaS/M/Ldiameters 23/27/30 cm; pastaRserves 1–2,L 3–4. Delivery phone 03-5929-9306; delivery startsNovember 18. No delivery-appprice inferred from dine-in menu. OpeningMargherita poster says limited 100 pizzas; daily versus total allocation is unstated. Actual completed-room gallery remains unverified; images are labelled operator promotional material.",
+            "reservationUrl": "https://salvatore.jp/restaurant/asagaya/"
+          },
+          "tile": {
+            "regionSlug": "tokyo",
+            "kind": "opening",
+            "slug": "japan109-salvatore",
+            "name": "OSTERIA SALVATORE — Asagaya",
+            "neighborhood": "Asagaya",
+            "cuisine": "Italian / Pizza",
+            "description": "An Italian osteria opening in Asagaya with wood-fired pizza, pasta, afternoon café service and a terrace; breakfast starts November 7 and deliveryNovember 18.",
+            "address": "1F A-3 ASAGAYA, 1-47-17 Asagaya-minami, Suginami-ku, Tokyo",
+            "websiteUrl": "https://salvatore.jp/restaurant/asagaya/",
+            "checkedAt": "2026-10-20",
+            "recognition": "November 1 opening confirmed by exact branch operator page and corporate release",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-20/batch109-salvatore-1-00a9f2b8350e57dc.webp",
+            "imageCredit": "Y’s Table Corporation / OSTERIA SALVATORE Asagaya opening release",
+            "imageSourceUrl": "https://prtimes.jp/main/html/rd/p/000000074.000012023.html",
+            "imageNote": "Operator Asagaya opening-announcement food photograph; presentation example, not a promised meal bundle or portion size.",
+            "openingConfirmed": true,
+            "day": "2026-11-01"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "originalUrl": "https://prcdn.freetls.fastly.net/release_image/12023/74/12023-74-965ec69f489b21abab53a14eaee7124e-1536x1024.png?width=1950&height=1350&quality=85%2C65&format=jpeg&auto=webp&fit=bounds&bg-color=fff",
+          "sourcePage": "https://prtimes.jp/main/html/rd/p/000000074.000012023.html",
+          "credit": "Y’s Table Corporation / OSTERIA SALVATORE Asagaya opening release",
+          "note": "Operator Asagaya opening-announcement food photograph; presentation example, not a promised meal bundle or portion size.",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-20/batch109-salvatore-1-00a9f2b8350e57dc.webp",
+          "sha256": "00a9f2b8350e57dc2c1f36459fd880507232ffc2ff3621b9a484ec67215222ae",
+          "width": 1536,
+          "height": 1024
+        },
+        {
+          "originalUrl": "https://prcdn.freetls.fastly.net/release_image/12023/74/12023-74-7277394bdccf4cc73932e87e3f5e15e2-1480x1480.jpg?width=1950&height=1350&quality=85%2C65&format=jpeg&auto=webp&fit=bounds&bg-color=fff",
+          "sourcePage": "https://prtimes.jp/main/html/rd/p/000000074.000012023.html",
+          "credit": "Y’s Table Corporation / OSTERIA SALVATORE Asagaya opening release",
+          "note": "Asagaya November1–8Margherita half-price launch poster. Poster says limited100pizzas; allocation period is not stated.",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-20/batch109-salvatore-2-c8986fb65564aba9.webp",
+          "sha256": "c8986fb65564aba9dad01331094b05b0641a81cf3a2d69ec06985b18b9e3665d",
+          "width": 1350,
+          "height": 1350
+        }
+      ],
+      "special": {
+        "regionSlug": "tokyo",
+        "enabled": true,
+        "profile": {
+          "pinSourceUrl": "https://salvatore.jp/restaurant/asagaya/",
+          "name": "OSTERIA SALVATORE — Asagaya",
+          "checkedAt": "2026-10-20",
+          "address": "1F A-3 ASAGAYA, 1-47-17 Asagaya-minami, Suginami-ku, Tokyo",
+          "neighborhood": "Asagaya",
+          "websiteUrl": "https://salvatore.jp/restaurant/asagaya/",
+          "menus": [
+            {
+              "label": "Asagaya — M Margherita launch offer",
+              "url": "https://prtimes.jp/main/html/rd/p/000000074.000012023.html",
+              "currency": "JPY",
+              "coverage": "published",
+              "items": [
+                {
+                  "name": "マルゲリータ — Mサイズ（店内・テイクアウト半額）",
+                  "price": 1265,
+                  "note": "50%of branch-booking ordinary¥2530tax-inclusive M price; arithmetic derived, final launch price subject to change. Limited100pizzas per poster; allocation period unstated. Regular Margherita only, not premium or other variants."
+                }
+              ],
+              "note": "OperatorNovember1–8offer, dine-in/takeaway MMargherita.¥1265is calculated from the separate planned branch menu¥2530, not a guaranteed launch checkout total."
+            },
+            {
+              "label": "Asagaya — PB bottled-wine launch offer",
+              "url": "https://www.hotpepper.jp/strJ004698306/drink/",
+              "currency": "JPY",
+              "coverage": "published",
+              "items": [
+                {
+                  "name": "カステロ ロンゴバルド ミレジマート<PB> — bottle, 50%off",
+                  "price": 1815.0,
+                  "note": "Derived half of planned ordinary bottle¥3630tax included; branch labels this bottlePB. Launch stock and final base price may change; confirm with branch."
+                },
+                {
+                  "name": "クラシック コンドール シャルドネ<PB> — bottle, 50%off",
+                  "price": 1815.0,
+                  "note": "Derived half of planned ordinary bottle¥3630tax included; branch labels this bottlePB. Launch stock and final base price may change; confirm with branch."
+                },
+                {
+                  "name": "レ ミュー ピノ グリージョ<PB> — bottle, 50%off",
+                  "price": 2145.0,
+                  "note": "Derived half of planned ordinary bottle¥4290tax included; branch labels this bottlePB. Launch stock and final base price may change; confirm with branch."
+                },
+                {
+                  "name": "クラシック コンドール カベルネ ソーヴィニヨン<PB> — bottle, 50%off",
+                  "price": 1815.0,
+                  "note": "Derived half of planned ordinary bottle¥3630tax included; branch labels this bottlePB. Launch stock and final base price may change; confirm with branch."
+                },
+                {
+                  "name": "ソーレブルーノ プーリア ロッソ<PB> — bottle, 50%off",
+                  "price": 2145.0,
+                  "note": "Derived half of planned ordinary bottle¥4290tax included; branch labels this bottlePB. Launch stock and final base price may change; confirm with branch."
+                }
+              ],
+              "note": "OperatorNovember9–30private-label bottled wines half-price. Five exact PBbottles only. Prices calculated from branch planned menu, subject to launch changes. Glass wines and unmarked bottles excluded."
+            },
+            {
+              "label": "Asagaya — delivery-app L Margherita launch offer",
+              "url": "https://prtimes.jp/main/html/rd/p/000000074.000012023.html",
+              "currency": "JPY",
+              "coverage": "published",
+              "items": [
+                {
+                  "name": "マルゲリータ — Lサイズ（対象デリバリーアプリ半額）",
+                  "priceLabel": "50% off participating app price; price not published",
+                  "note": "November18–24only through participating delivery apps; platforms and app base price not published. Dine-inL¥2915is not used as a delivery base."
+                }
+              ],
+              "note": "OperatorNovember18–24delivery-appLMargherita half-price. No delivery app, base price, fee or discount total invented."
+            }
+          ],
+          "specials": [
+            {
+              "kind": "other",
+              "title": "M Margherita half-price — dine-in and takeaway",
+              "description": "Regular M-size Margherita half-price for dine-in/takeaway,November1–8. Limited100pizzas per poster; allocation period unstated.",
+              "sourceUrl": "https://prtimes.jp/main/html/rd/p/000000074.000012023.html",
+              "discounted": true,
+              "limitedTime": true,
+              "validFrom": "2026-11-01",
+              "validThrough": "2026-11-08",
+              "menuLabel": "Asagaya — M Margherita launch offer",
+              "schedule": "Published non-morning restaurant ordering periods; last-order cutoffs apply.",
+              "conditions": [
+                "Only OSTERIA SALVATORE Asagaya; dated opening campaign.",
+                "Final launch menu prices and availability may change.",
+                "Regular M-size Margherita; dine-in and takeaway.",
+                "Poster says limited100pizzas; total versus daily allocation not stated. Offer remains subject to available allocation.",
+                "Morning bread/espresso service beginsNovember7; morning pizza eligibility not published."
+              ],
+              "availability": {
+                "windows": [
+                  {
+                    "days": [
+                      1,
+                      2,
+                      3,
+                      4,
+                      5
+                    ],
+                    "start": "11:30",
+                    "end": "14:00"
+                  },
+                  {
+                    "days": [
+                      1,
+                      2,
+                      3,
+                      4,
+                      5
+                    ],
+                    "start": "15:00",
+                    "end": "16:30"
+                  },
+                  {
+                    "days": [
+                      1,
+                      2,
+                      3,
+                      4,
+                      5
+                    ],
+                    "start": "17:00",
+                    "end": "22:00"
+                  },
+                  {
+                    "days": [
+                      0,
+                      6
+                    ],
+                    "start": "11:30",
+                    "end": "22:00"
+                  }
+                ]
+              }
+            },
+            {
+              "kind": "other",
+              "title": "Private-label bottled wines half-price",
+              "description": "Private-label bottled wines half-price,November9–30; glass wines excluded. Launch stock/prices require confirmation.",
+              "sourceUrl": "https://prtimes.jp/main/html/rd/p/000000074.000012023.html",
+              "discounted": true,
+              "limitedTime": true,
+              "validFrom": "2026-11-09",
+              "validThrough": "2026-11-30",
+              "menuLabel": "Asagaya — PB bottled-wine launch offer",
+              "schedule": "Published non-morning restaurant ordering periods; last-order cutoffs apply.",
+              "conditions": [
+                "Only OSTERIA SALVATORE Asagaya; dated opening campaign.",
+                "Final launch menu prices and availability may change.",
+                "Private-label bottled wines only; glasses excluded.",
+                "Five PB-marked bottles are examples from exact planned branch menu; launch inventory may change.",
+                "Morning wine service not verified."
+              ],
+              "availability": {
+                "windows": [
+                  {
+                    "days": [
+                      1,
+                      2,
+                      3,
+                      4,
+                      5
+                    ],
+                    "start": "11:30",
+                    "end": "14:00"
+                  },
+                  {
+                    "days": [
+                      1,
+                      2,
+                      3,
+                      4,
+                      5
+                    ],
+                    "start": "15:00",
+                    "end": "16:30"
+                  },
+                  {
+                    "days": [
+                      1,
+                      2,
+                      3,
+                      4,
+                      5
+                    ],
+                    "start": "17:00",
+                    "end": "22:00"
+                  },
+                  {
+                    "days": [
+                      0,
+                      6
+                    ],
+                    "start": "11:30",
+                    "end": "22:00"
+                  }
+                ]
+              }
+            },
+            {
+              "kind": "other",
+              "title": "L Margherita half-price — delivery apps",
+              "description": "L-size Margherita half-price via participating delivery apps,November18–24. App names, base price and fees not published.",
+              "sourceUrl": "https://prtimes.jp/main/html/rd/p/000000074.000012023.html",
+              "discounted": true,
+              "limitedTime": true,
+              "validFrom": "2026-11-18",
+              "validThrough": "2026-11-24",
+              "menuLabel": "Asagaya — delivery-app L Margherita launch offer",
+              "schedule": "Published delivery hours fromNovember18: weekdays11:00–14:00/17:00–22:00,weekends11:00–22:00. Broader public-holiday gaps need branch confirmation.",
+              "conditions": [
+                "Only OSTERIA SALVATORE Asagaya; dated opening campaign.",
+                "Final launch menu prices and availability may change.",
+                "Participating delivery apps only; specific platforms not named in operator announcement.",
+                "App base price, delivery/platform fees and rounding not published.",
+                "Delivery beginsNovember18; dine-in prices do not establish app prices."
+              ],
+              "availability": {
+                "windows": [
+                  {
+                    "days": [
+                      1,
+                      2,
+                      3,
+                      4,
+                      5
+                    ],
+                    "start": "11:00",
+                    "end": "14:00"
+                  },
+                  {
+                    "days": [
+                      1,
+                      2,
+                      3,
+                      4,
+                      5
+                    ],
+                    "start": "17:00",
+                    "end": "22:00"
+                  },
+                  {
+                    "days": [
+                      0,
+                      6
+                    ],
+                    "start": "11:00",
+                    "end": "22:00"
+                  }
+                ]
+              }
+            }
+          ],
+          "photo": {
+            "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-20/batch109-salvatore-1-00a9f2b8350e57dc.webp",
+            "alt": "Operator Asagaya opening-announcement food photograph; presentation example, not a promised meal bundle or portion size.",
+            "credit": "Y’s Table Corporation / OSTERIA SALVATORE Asagaya opening release",
+            "sourceUrl": "https://prtimes.jp/main/html/rd/p/000000074.000012023.html",
+            "originalUrl": "https://prcdn.freetls.fastly.net/release_image/12023/74/12023-74-965ec69f489b21abab53a14eaee7124e-1536x1024.png?width=1950&height=1350&quality=85%2C65&format=jpeg&auto=webp&fit=bounds&bg-color=fff",
+            "checkedAt": "2026-10-20"
+          }
+        }
+      }
+    }
+  ],
+  "researchNotes": [
+    "Owner requested other cities first. This batch publishes Tokyo Coming soon and Specials only; no additional Osaka/Fukuoka work. Sapporo deep search retained as specific menu/gallery gap instead of copying another branch.",
+    "OSTERIA SALVATORE Asagaya exact operator website and October20corporate release confirmNovember1opening. Primary1-47-17address,69indoor+20terrace seats, current last orders and¥330dinner charge override older branch-booking1-47-11address, morning/lunch last orders, no-terrace and seating template conflicts.",
+    "Exact branch HotPepper planned menu supplies98food size/portion entries and111drink/wine variants. Ordinary branch operator site stillsaysComingSoon andTabelogfood/drink/galleryareempty. Preopening lists retain source datesSeptember16food/August19drinks, tax and caveat; launch stock/prices not guaranteed. Do not treat the older menu publication as restaurant opening.",
+    "Three corporate launch phases retained separately: November1–8regularMMargherita dine-in/takeaway,November9–30private-label bottles,November18–24delivery-appLMargherita. Ordinary prices plus50%arithmetic labelled derived; app price not borrowed from dine-in. Unmarked bottles and glass wines excluded.",
+    "Poster read visually reveals limited100pizzas absent from body text; daily versus whole-campaign allocation unstated. Explicit conditional availability, no invented per-person limit or unlimited stock.",
+    "Campaigns have no meal-period restriction in release; scheduled in published non-morning ordering periods, excluding breakfast bread/espresso service. Weekday last-order gaps respected. November3and23public holidays have broader continuous operator service; schema windows cannot add date-specific extended service, so conservative weekday gaps retained and earlier/broader holiday eligibility requires confirmation. No assertion that offer is invalid during those unscheduled gaps. Delivery phases use separate delivery ordering hours.",
+    "All official/branch-linked galleries checked. HotPepper appearance page includes generic old oven and brand-gallery material with incompatible terrace/seating copy; not used as completed Asagaya venue evidence. Two corporate launch images selected: promotional food photo and exact quota-bearing campaign poster. Generic brand/chef montage excluded. No verified completed-room/exterior photo yet; specific remaining gallery gap.",
+    "Sapporo Ore no Sora latest corporate announcementOctober22supersedes olderSeptemberestimated recruitment/local list; actual first-service history should still be checked against any soft-opening evidence. Official release provides address, phone andhours but no menu/gallery. Exact-name searches, local branch index and employer detail searches yielded no verifiable branch-priced menu or actual venue photo; no generic Tadokoro menu/another branch photo substituted.",
+    "NEUF Oike November1employer date/menu/gallery, CITYBAKERYLACHICmonth-onlyopening and current branch-menu/gallery gaps remain next-city research queue from audit."
+  ],
+  "held": [
+    {
+      "name": "Tadokoro Shoten / Ore no Sora — Sapporo",
+      "sourceUrl": "https://misoya.net/news/open-orenosoras-sapporo/",
+      "reason": "October22operator-announced opening/address/hours confirmed, but no own menu or usable actual branch photo after exact-name web, operator releases, local branch index and recruitment checks. Old Septemberestimated listings must not override latest primary date; recheck first service."
+    },
+    {
+      "name": "NEUF CRÊPERIE — Karasuma Oike",
+      "sourceUrl": "https://www.baitoru.com/jobdetail/163506169",
+      "reason": "November1employer date found in prior audit; exact branch menu and completed-gallery evidence unresolved."
+    },
+    {
+      "name": "THE CITY BAKERY — LACHIC",
+      "sourceUrl": "https://job.inshokuten.com/tokai/work/detail/91244",
+      "reason": "Novembermonth-onlyemployer evidence; exact branch operator menu/gallery and opening precision unresolved."
+    }
+  ],
+  "counts": {
+    "venues": 1,
+    "newPins": 1,
+    "ordinaryMenuItems": 209,
+    "offers": 3,
+    "offerMenuItems": 7,
+    "photos": 2,
+    "newOrdinaryMenuItems": 209,
+    "preservedOrdinaryMenuItems": 0,
+    "newMemberships": 2,
+    "shortfallReduction": 1
+  },
+  "photoReview": {
+    "downloadedCandidates": 5,
+    "selectedPhotos": 2,
+    "method": "Five plaincurl corporate-release images visually inspected. Two selected and credited: Asagaya launch food photograph and quota-bearing campaign poster. Logos and generic brand montage excluded. Exact branch official and booking galleries checked; no completed-room photo verified. Azure publichash/image decode verified."
+  },
+  "verification": {
+    "local": {
+      "profiles": [
+        {
+          "pinId": 18720,
+          "sourceUrl": "https://salvatore.jp/restaurant/asagaya/",
+          "name": "OSTERIA SALVATORE — Asagaya",
+          "contentId": 1956,
+          "contentRevision": 1,
+          "verifiedGalleryLinks": 2,
+          "publicPinStatus": 200,
+          "apiBase": "http://localhost:3000",
+          "publicBase": "http://localhost:3000"
+        }
+      ],
+      "guides": [
+        {
+          "pinId": 18720,
+          "region": "tokyo",
+          "view": "upcoming",
+          "neighborhood": "Asagaya",
+          "nativeTitleAndImage": true,
+          "hrefs": [
+            "/pin/18720/osteria-salvatore-asagaya-opens-2026-11-01"
+          ],
+          "browserFiltered": false,
+          "publicBase": "http://localhost:3000",
+          "guideStatus": 200,
+          "offers": []
+        },
+        {
+          "pinId": 18720,
+          "region": "tokyo",
+          "view": "discounts",
+          "neighborhood": "Asagaya",
+          "nativeTitleAndImage": true,
+          "hrefs": [
+            "/pin/18720/osteria-salvatore-asagaya-opens-2026-11-01"
+          ],
+          "browserFiltered": true,
+          "publicBase": "http://localhost:3000",
+          "guideStatus": 200,
+          "offers": [
+            {
+              "id": "https://salvatore.jp/restaurant/asagaya/#0",
+              "name": "OSTERIA SALVATORE — Asagaya",
+              "neighborhood": "Asagaya",
+              "address": "1F A-3 ASAGAYA, 1-47-17 Asagaya-minami, Suginami-ku, Tokyo",
+              "restaurantHref": "/pin/18720/osteria-salvatore-asagaya-opens-2026-11-01",
+              "checkedAt": "2026-10-20",
+              "special": {
+                "kind": "other",
+                "title": "M Margherita half-price — dine-in and takeaway",
+                "schedule": "Published non-morning restaurant ordering periods; last-order cutoffs apply.",
+                "menuLabel": "Asagaya — M Margherita launch offer",
+                "sourceUrl": "https://prtimes.jp/main/html/rd/p/000000074.000012023.html",
+                "validFrom": "2026-11-01",
+                "conditions": [
+                  "Only OSTERIA SALVATORE Asagaya; dated opening campaign.",
+                  "Final launch menu prices and availability may change.",
+                  "Regular M-size Margherita; dine-in and takeaway.",
+                  "Poster says limited100pizzas; total versus daily allocation not stated. Offer remains subject to available allocation.",
+                  "Morning bread/espresso service beginsNovember7; morning pizza eligibility not published."
+                ],
+                "discounted": true,
+                "description": "Regular M-size Margherita half-price for dine-in/takeaway,November1–8. Limited100pizzas per poster; allocation period unstated.",
+                "limitedTime": true,
+                "availability": {
+                  "windows": [
+                    {
+                      "end": "14:00",
+                      "days": [
+                        1,
+                        2,
+                        3,
+                        4,
+                        5
+                      ],
+                      "start": "11:30"
+                    },
+                    {
+                      "end": "16:30",
+                      "days": [
+                        1,
+                        2,
+                        3,
+                        4,
+                        5
+                      ],
+                      "start": "15:00"
+                    },
+                    {
+                      "end": "22:00",
+                      "days": [
+                        1,
+                        2,
+                        3,
+                        4,
+                        5
+                      ],
+                      "start": "17:00"
+                    },
+                    {
+                      "end": "22:00",
+                      "days": [
+                        0,
+                        6
+                      ],
+                      "start": "11:30"
+                    }
+                  ]
+                },
+                "validThrough": "2026-11-08"
+              },
+              "venueKey": "salvatore.jp/restaurant/asagaya",
+              "photo": {
+                "alt": "Operator Asagaya opening-announcement food photograph; presentation example, not a promised meal bundle or portion size.",
+                "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-20/batch109-salvatore-1-00a9f2b8350e57dc.webp",
+                "credit": "Y’s Table Corporation / OSTERIA SALVATORE Asagaya opening release",
+                "checkedAt": "2026-10-20",
+                "sourceUrl": "https://prtimes.jp/main/html/rd/p/000000074.000012023.html",
+                "originalUrl": "https://prcdn.freetls.fastly.net/release_image/12023/74/12023-74-965ec69f489b21abab53a14eaee7124e-1536x1024.png?width=1950&height=1350&quality=85%2C65&format=jpeg&auto=webp&fit=bounds&bg-color=fff"
+              },
+              "menu": {
+                "url": "https://prtimes.jp/main/html/rd/p/000000074.000012023.html",
+                "note": "OperatorNovember1–8offer, dine-in/takeaway MMargherita.¥1265is calculated from the separate planned branch menu¥2530, not a guaranteed launch checkout total.",
+                "items": [
+                  {
+                    "name": "マルゲリータ — Mサイズ（店内・テイクアウト半額）",
+                    "note": "50%of branch-booking ordinary¥2530tax-inclusive M price; arithmetic derived, final launch price subject to change. Limited100pizzas per poster; allocation period unstated. Regular Margherita only, not premium or other variants.",
+                    "price": 1265
+                  }
+                ],
+                "label": "Asagaya — M Margherita launch offer",
+                "coverage": "published",
+                "currency": "JPY"
+              },
+              "startsAt": "2026-11-01T02:30:00.000Z",
+              "end": "22:00"
+            },
+            {
+              "id": "https://salvatore.jp/restaurant/asagaya/#1",
+              "name": "OSTERIA SALVATORE — Asagaya",
+              "neighborhood": "Asagaya",
+              "address": "1F A-3 ASAGAYA, 1-47-17 Asagaya-minami, Suginami-ku, Tokyo",
+              "restaurantHref": "/pin/18720/osteria-salvatore-asagaya-opens-2026-11-01",
+              "checkedAt": "2026-10-20",
+              "special": {
+                "kind": "other",
+                "title": "Private-label bottled wines half-price",
+                "schedule": "Published non-morning restaurant ordering periods; last-order cutoffs apply.",
+                "menuLabel": "Asagaya — PB bottled-wine launch offer",
+                "sourceUrl": "https://prtimes.jp/main/html/rd/p/000000074.000012023.html",
+                "validFrom": "2026-11-09",
+                "conditions": [
+                  "Only OSTERIA SALVATORE Asagaya; dated opening campaign.",
+                  "Final launch menu prices and availability may change.",
+                  "Private-label bottled wines only; glasses excluded.",
+                  "Five PB-marked bottles are examples from exact planned branch menu; launch inventory may change.",
+                  "Morning wine service not verified."
+                ],
+                "discounted": true,
+                "description": "Private-label bottled wines half-price,November9–30; glass wines excluded. Launch stock/prices require confirmation.",
+                "limitedTime": true,
+                "availability": {
+                  "windows": [
+                    {
+                      "end": "14:00",
+                      "days": [
+                        1,
+                        2,
+                        3,
+                        4,
+                        5
+                      ],
+                      "start": "11:30"
+                    },
+                    {
+                      "end": "16:30",
+                      "days": [
+                        1,
+                        2,
+                        3,
+                        4,
+                        5
+                      ],
+                      "start": "15:00"
+                    },
+                    {
+                      "end": "22:00",
+                      "days": [
+                        1,
+                        2,
+                        3,
+                        4,
+                        5
+                      ],
+                      "start": "17:00"
+                    },
+                    {
+                      "end": "22:00",
+                      "days": [
+                        0,
+                        6
+                      ],
+                      "start": "11:30"
+                    }
+                  ]
+                },
+                "validThrough": "2026-11-30"
+              },
+              "venueKey": "salvatore.jp/restaurant/asagaya",
+              "photo": {
+                "alt": "Operator Asagaya opening-announcement food photograph; presentation example, not a promised meal bundle or portion size.",
+                "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-20/batch109-salvatore-1-00a9f2b8350e57dc.webp",
+                "credit": "Y’s Table Corporation / OSTERIA SALVATORE Asagaya opening release",
+                "checkedAt": "2026-10-20",
+                "sourceUrl": "https://prtimes.jp/main/html/rd/p/000000074.000012023.html",
+                "originalUrl": "https://prcdn.freetls.fastly.net/release_image/12023/74/12023-74-965ec69f489b21abab53a14eaee7124e-1536x1024.png?width=1950&height=1350&quality=85%2C65&format=jpeg&auto=webp&fit=bounds&bg-color=fff"
+              },
+              "menu": {
+                "url": "https://www.hotpepper.jp/strJ004698306/drink/",
+                "note": "OperatorNovember9–30private-label bottled wines half-price. Five exact PBbottles only. Prices calculated from branch planned menu, subject to launch changes. Glass wines and unmarked bottles excluded.",
+                "items": [
+                  {
+                    "name": "カステロ ロンゴバルド ミレジマート<PB> — bottle, 50%off",
+                    "note": "Derived half of planned ordinary bottle¥3630tax included; branch labels this bottlePB. Launch stock and final base price may change; confirm with branch.",
+                    "price": 1815
+                  },
+                  {
+                    "name": "クラシック コンドール シャルドネ<PB> — bottle, 50%off",
+                    "note": "Derived half of planned ordinary bottle¥3630tax included; branch labels this bottlePB. Launch stock and final base price may change; confirm with branch.",
+                    "price": 1815
+                  },
+                  {
+                    "name": "レ ミュー ピノ グリージョ<PB> — bottle, 50%off",
+                    "note": "Derived half of planned ordinary bottle¥4290tax included; branch labels this bottlePB. Launch stock and final base price may change; confirm with branch.",
+                    "price": 2145
+                  },
+                  {
+                    "name": "クラシック コンドール カベルネ ソーヴィニヨン<PB> — bottle, 50%off",
+                    "note": "Derived half of planned ordinary bottle¥3630tax included; branch labels this bottlePB. Launch stock and final base price may change; confirm with branch.",
+                    "price": 1815
+                  },
+                  {
+                    "name": "ソーレブルーノ プーリア ロッソ<PB> — bottle, 50%off",
+                    "note": "Derived half of planned ordinary bottle¥4290tax included; branch labels this bottlePB. Launch stock and final base price may change; confirm with branch.",
+                    "price": 2145
+                  }
+                ],
+                "label": "Asagaya — PB bottled-wine launch offer",
+                "coverage": "published",
+                "currency": "JPY"
+              },
+              "startsAt": "2026-11-09T02:30:00.000Z",
+              "end": "14:00"
+            },
+            {
+              "id": "https://salvatore.jp/restaurant/asagaya/#2",
+              "name": "OSTERIA SALVATORE — Asagaya",
+              "neighborhood": "Asagaya",
+              "address": "1F A-3 ASAGAYA, 1-47-17 Asagaya-minami, Suginami-ku, Tokyo",
+              "restaurantHref": "/pin/18720/osteria-salvatore-asagaya-opens-2026-11-01",
+              "checkedAt": "2026-10-20",
+              "special": {
+                "kind": "other",
+                "title": "L Margherita half-price — delivery apps",
+                "schedule": "Published delivery hours fromNovember18: weekdays11:00–14:00/17:00–22:00,weekends11:00–22:00. Broader public-holiday gaps need branch confirmation.",
+                "menuLabel": "Asagaya — delivery-app L Margherita launch offer",
+                "sourceUrl": "https://prtimes.jp/main/html/rd/p/000000074.000012023.html",
+                "validFrom": "2026-11-18",
+                "conditions": [
+                  "Only OSTERIA SALVATORE Asagaya; dated opening campaign.",
+                  "Final launch menu prices and availability may change.",
+                  "Participating delivery apps only; specific platforms not named in operator announcement.",
+                  "App base price, delivery/platform fees and rounding not published.",
+                  "Delivery beginsNovember18; dine-in prices do not establish app prices."
+                ],
+                "discounted": true,
+                "description": "L-size Margherita half-price via participating delivery apps,November18–24. App names, base price and fees not published.",
+                "limitedTime": true,
+                "availability": {
+                  "windows": [
+                    {
+                      "end": "14:00",
+                      "days": [
+                        1,
+                        2,
+                        3,
+                        4,
+                        5
+                      ],
+                      "start": "11:00"
+                    },
+                    {
+                      "end": "22:00",
+                      "days": [
+                        1,
+                        2,
+                        3,
+                        4,
+                        5
+                      ],
+                      "start": "17:00"
+                    },
+                    {
+                      "end": "22:00",
+                      "days": [
+                        0,
+                        6
+                      ],
+                      "start": "11:00"
+                    }
+                  ]
+                },
+                "validThrough": "2026-11-24"
+              },
+              "venueKey": "salvatore.jp/restaurant/asagaya",
+              "photo": {
+                "alt": "Operator Asagaya opening-announcement food photograph; presentation example, not a promised meal bundle or portion size.",
+                "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-20/batch109-salvatore-1-00a9f2b8350e57dc.webp",
+                "credit": "Y’s Table Corporation / OSTERIA SALVATORE Asagaya opening release",
+                "checkedAt": "2026-10-20",
+                "sourceUrl": "https://prtimes.jp/main/html/rd/p/000000074.000012023.html",
+                "originalUrl": "https://prcdn.freetls.fastly.net/release_image/12023/74/12023-74-965ec69f489b21abab53a14eaee7124e-1536x1024.png?width=1950&height=1350&quality=85%2C65&format=jpeg&auto=webp&fit=bounds&bg-color=fff"
+              },
+              "menu": {
+                "url": "https://prtimes.jp/main/html/rd/p/000000074.000012023.html",
+                "note": "OperatorNovember18–24delivery-appLMargherita half-price. No delivery app, base price, fee or discount total invented.",
+                "items": [
+                  {
+                    "name": "マルゲリータ — Lサイズ（対象デリバリーアプリ半額）",
+                    "note": "November18–24only through participating delivery apps; platforms and app base price not published. Dine-inL¥2915is not used as a delivery base.",
+                    "priceLabel": "50% off participating app price; price not published"
+                  }
+                ],
+                "label": "Asagaya — delivery-app L Margherita launch offer",
+                "coverage": "published",
+                "currency": "JPY"
+              },
+              "startsAt": "2026-11-18T02:00:00.000Z",
+              "end": "14:00"
+            }
+          ]
+        }
+      ]
+    },
+    "production": {
+      "profiles": [
+        {
+          "pinId": 18722,
+          "sourceUrl": "https://salvatore.jp/restaurant/asagaya/",
+          "name": "OSTERIA SALVATORE — Asagaya",
+          "contentId": 1956,
+          "contentRevision": 1,
+          "verifiedGalleryLinks": 2,
+          "publicPinStatus": 200,
+          "apiBase": "https://www.chronopin.com",
+          "publicBase": "https://www.chronopin.com"
+        }
+      ],
+      "guides": [
+        {
+          "pinId": 18722,
+          "region": "tokyo",
+          "view": "upcoming",
+          "neighborhood": "Asagaya",
+          "nativeTitleAndImage": true,
+          "hrefs": [
+            "/pin/18722/osteria-salvatore-asagaya-opens-2026-11-01"
+          ],
+          "browserFiltered": false,
+          "publicBase": "https://www.chronopin.com",
+          "guideStatus": 200,
+          "offers": []
+        },
+        {
+          "pinId": 18722,
+          "region": "tokyo",
+          "view": "discounts",
+          "neighborhood": "Asagaya",
+          "nativeTitleAndImage": true,
+          "hrefs": [
+            "/pin/18722/osteria-salvatore-asagaya-opens-2026-11-01"
+          ],
+          "browserFiltered": true,
+          "publicBase": "https://www.chronopin.com",
+          "guideStatus": 200,
+          "offers": [
+            {
+              "id": "https://salvatore.jp/restaurant/asagaya/#0",
+              "name": "OSTERIA SALVATORE — Asagaya",
+              "neighborhood": "Asagaya",
+              "address": "1F A-3 ASAGAYA, 1-47-17 Asagaya-minami, Suginami-ku, Tokyo",
+              "restaurantHref": "/pin/18722/osteria-salvatore-asagaya-opens-2026-11-01",
+              "checkedAt": "2026-10-20",
+              "special": {
+                "kind": "other",
+                "title": "M Margherita half-price — dine-in and takeaway",
+                "schedule": "Published non-morning restaurant ordering periods; last-order cutoffs apply.",
+                "menuLabel": "Asagaya — M Margherita launch offer",
+                "sourceUrl": "https://prtimes.jp/main/html/rd/p/000000074.000012023.html",
+                "validFrom": "2026-11-01",
+                "conditions": [
+                  "Only OSTERIA SALVATORE Asagaya; dated opening campaign.",
+                  "Final launch menu prices and availability may change.",
+                  "Regular M-size Margherita; dine-in and takeaway.",
+                  "Poster says limited100pizzas; total versus daily allocation not stated. Offer remains subject to available allocation.",
+                  "Morning bread/espresso service beginsNovember7; morning pizza eligibility not published."
+                ],
+                "discounted": true,
+                "description": "Regular M-size Margherita half-price for dine-in/takeaway,November1–8. Limited100pizzas per poster; allocation period unstated.",
+                "limitedTime": true,
+                "availability": {
+                  "windows": [
+                    {
+                      "end": "14:00",
+                      "days": [
+                        1,
+                        2,
+                        3,
+                        4,
+                        5
+                      ],
+                      "start": "11:30"
+                    },
+                    {
+                      "end": "16:30",
+                      "days": [
+                        1,
+                        2,
+                        3,
+                        4,
+                        5
+                      ],
+                      "start": "15:00"
+                    },
+                    {
+                      "end": "22:00",
+                      "days": [
+                        1,
+                        2,
+                        3,
+                        4,
+                        5
+                      ],
+                      "start": "17:00"
+                    },
+                    {
+                      "end": "22:00",
+                      "days": [
+                        0,
+                        6
+                      ],
+                      "start": "11:30"
+                    }
+                  ]
+                },
+                "validThrough": "2026-11-08"
+              },
+              "venueKey": "salvatore.jp/restaurant/asagaya",
+              "photo": {
+                "alt": "Operator Asagaya opening-announcement food photograph; presentation example, not a promised meal bundle or portion size.",
+                "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-20/batch109-salvatore-1-00a9f2b8350e57dc.webp",
+                "credit": "Y’s Table Corporation / OSTERIA SALVATORE Asagaya opening release",
+                "checkedAt": "2026-10-20",
+                "sourceUrl": "https://prtimes.jp/main/html/rd/p/000000074.000012023.html",
+                "originalUrl": "https://prcdn.freetls.fastly.net/release_image/12023/74/12023-74-965ec69f489b21abab53a14eaee7124e-1536x1024.png?width=1950&height=1350&quality=85%2C65&format=jpeg&auto=webp&fit=bounds&bg-color=fff"
+              },
+              "menu": {
+                "url": "https://prtimes.jp/main/html/rd/p/000000074.000012023.html",
+                "note": "OperatorNovember1–8offer, dine-in/takeaway MMargherita.¥1265is calculated from the separate planned branch menu¥2530, not a guaranteed launch checkout total.",
+                "items": [
+                  {
+                    "name": "マルゲリータ — Mサイズ（店内・テイクアウト半額）",
+                    "note": "50%of branch-booking ordinary¥2530tax-inclusive M price; arithmetic derived, final launch price subject to change. Limited100pizzas per poster; allocation period unstated. Regular Margherita only, not premium or other variants.",
+                    "price": 1265
+                  }
+                ],
+                "label": "Asagaya — M Margherita launch offer",
+                "coverage": "published",
+                "currency": "JPY"
+              },
+              "startsAt": "2026-11-01T02:30:00.000Z",
+              "end": "22:00"
+            },
+            {
+              "id": "https://salvatore.jp/restaurant/asagaya/#1",
+              "name": "OSTERIA SALVATORE — Asagaya",
+              "neighborhood": "Asagaya",
+              "address": "1F A-3 ASAGAYA, 1-47-17 Asagaya-minami, Suginami-ku, Tokyo",
+              "restaurantHref": "/pin/18722/osteria-salvatore-asagaya-opens-2026-11-01",
+              "checkedAt": "2026-10-20",
+              "special": {
+                "kind": "other",
+                "title": "Private-label bottled wines half-price",
+                "schedule": "Published non-morning restaurant ordering periods; last-order cutoffs apply.",
+                "menuLabel": "Asagaya — PB bottled-wine launch offer",
+                "sourceUrl": "https://prtimes.jp/main/html/rd/p/000000074.000012023.html",
+                "validFrom": "2026-11-09",
+                "conditions": [
+                  "Only OSTERIA SALVATORE Asagaya; dated opening campaign.",
+                  "Final launch menu prices and availability may change.",
+                  "Private-label bottled wines only; glasses excluded.",
+                  "Five PB-marked bottles are examples from exact planned branch menu; launch inventory may change.",
+                  "Morning wine service not verified."
+                ],
+                "discounted": true,
+                "description": "Private-label bottled wines half-price,November9–30; glass wines excluded. Launch stock/prices require confirmation.",
+                "limitedTime": true,
+                "availability": {
+                  "windows": [
+                    {
+                      "end": "14:00",
+                      "days": [
+                        1,
+                        2,
+                        3,
+                        4,
+                        5
+                      ],
+                      "start": "11:30"
+                    },
+                    {
+                      "end": "16:30",
+                      "days": [
+                        1,
+                        2,
+                        3,
+                        4,
+                        5
+                      ],
+                      "start": "15:00"
+                    },
+                    {
+                      "end": "22:00",
+                      "days": [
+                        1,
+                        2,
+                        3,
+                        4,
+                        5
+                      ],
+                      "start": "17:00"
+                    },
+                    {
+                      "end": "22:00",
+                      "days": [
+                        0,
+                        6
+                      ],
+                      "start": "11:30"
+                    }
+                  ]
+                },
+                "validThrough": "2026-11-30"
+              },
+              "venueKey": "salvatore.jp/restaurant/asagaya",
+              "photo": {
+                "alt": "Operator Asagaya opening-announcement food photograph; presentation example, not a promised meal bundle or portion size.",
+                "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-20/batch109-salvatore-1-00a9f2b8350e57dc.webp",
+                "credit": "Y’s Table Corporation / OSTERIA SALVATORE Asagaya opening release",
+                "checkedAt": "2026-10-20",
+                "sourceUrl": "https://prtimes.jp/main/html/rd/p/000000074.000012023.html",
+                "originalUrl": "https://prcdn.freetls.fastly.net/release_image/12023/74/12023-74-965ec69f489b21abab53a14eaee7124e-1536x1024.png?width=1950&height=1350&quality=85%2C65&format=jpeg&auto=webp&fit=bounds&bg-color=fff"
+              },
+              "menu": {
+                "url": "https://www.hotpepper.jp/strJ004698306/drink/",
+                "note": "OperatorNovember9–30private-label bottled wines half-price. Five exact PBbottles only. Prices calculated from branch planned menu, subject to launch changes. Glass wines and unmarked bottles excluded.",
+                "items": [
+                  {
+                    "name": "カステロ ロンゴバルド ミレジマート<PB> — bottle, 50%off",
+                    "note": "Derived half of planned ordinary bottle¥3630tax included; branch labels this bottlePB. Launch stock and final base price may change; confirm with branch.",
+                    "price": 1815
+                  },
+                  {
+                    "name": "クラシック コンドール シャルドネ<PB> — bottle, 50%off",
+                    "note": "Derived half of planned ordinary bottle¥3630tax included; branch labels this bottlePB. Launch stock and final base price may change; confirm with branch.",
+                    "price": 1815
+                  },
+                  {
+                    "name": "レ ミュー ピノ グリージョ<PB> — bottle, 50%off",
+                    "note": "Derived half of planned ordinary bottle¥4290tax included; branch labels this bottlePB. Launch stock and final base price may change; confirm with branch.",
+                    "price": 2145
+                  },
+                  {
+                    "name": "クラシック コンドール カベルネ ソーヴィニヨン<PB> — bottle, 50%off",
+                    "note": "Derived half of planned ordinary bottle¥3630tax included; branch labels this bottlePB. Launch stock and final base price may change; confirm with branch.",
+                    "price": 1815
+                  },
+                  {
+                    "name": "ソーレブルーノ プーリア ロッソ<PB> — bottle, 50%off",
+                    "note": "Derived half of planned ordinary bottle¥4290tax included; branch labels this bottlePB. Launch stock and final base price may change; confirm with branch.",
+                    "price": 2145
+                  }
+                ],
+                "label": "Asagaya — PB bottled-wine launch offer",
+                "coverage": "published",
+                "currency": "JPY"
+              },
+              "startsAt": "2026-11-09T02:30:00.000Z",
+              "end": "14:00"
+            },
+            {
+              "id": "https://salvatore.jp/restaurant/asagaya/#2",
+              "name": "OSTERIA SALVATORE — Asagaya",
+              "neighborhood": "Asagaya",
+              "address": "1F A-3 ASAGAYA, 1-47-17 Asagaya-minami, Suginami-ku, Tokyo",
+              "restaurantHref": "/pin/18722/osteria-salvatore-asagaya-opens-2026-11-01",
+              "checkedAt": "2026-10-20",
+              "special": {
+                "kind": "other",
+                "title": "L Margherita half-price — delivery apps",
+                "schedule": "Published delivery hours fromNovember18: weekdays11:00–14:00/17:00–22:00,weekends11:00–22:00. Broader public-holiday gaps need branch confirmation.",
+                "menuLabel": "Asagaya — delivery-app L Margherita launch offer",
+                "sourceUrl": "https://prtimes.jp/main/html/rd/p/000000074.000012023.html",
+                "validFrom": "2026-11-18",
+                "conditions": [
+                  "Only OSTERIA SALVATORE Asagaya; dated opening campaign.",
+                  "Final launch menu prices and availability may change.",
+                  "Participating delivery apps only; specific platforms not named in operator announcement.",
+                  "App base price, delivery/platform fees and rounding not published.",
+                  "Delivery beginsNovember18; dine-in prices do not establish app prices."
+                ],
+                "discounted": true,
+                "description": "L-size Margherita half-price via participating delivery apps,November18–24. App names, base price and fees not published.",
+                "limitedTime": true,
+                "availability": {
+                  "windows": [
+                    {
+                      "end": "14:00",
+                      "days": [
+                        1,
+                        2,
+                        3,
+                        4,
+                        5
+                      ],
+                      "start": "11:00"
+                    },
+                    {
+                      "end": "22:00",
+                      "days": [
+                        1,
+                        2,
+                        3,
+                        4,
+                        5
+                      ],
+                      "start": "17:00"
+                    },
+                    {
+                      "end": "22:00",
+                      "days": [
+                        0,
+                        6
+                      ],
+                      "start": "11:00"
+                    }
+                  ]
+                },
+                "validThrough": "2026-11-24"
+              },
+              "venueKey": "salvatore.jp/restaurant/asagaya",
+              "photo": {
+                "alt": "Operator Asagaya opening-announcement food photograph; presentation example, not a promised meal bundle or portion size.",
+                "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-20/batch109-salvatore-1-00a9f2b8350e57dc.webp",
+                "credit": "Y’s Table Corporation / OSTERIA SALVATORE Asagaya opening release",
+                "checkedAt": "2026-10-20",
+                "sourceUrl": "https://prtimes.jp/main/html/rd/p/000000074.000012023.html",
+                "originalUrl": "https://prcdn.freetls.fastly.net/release_image/12023/74/12023-74-965ec69f489b21abab53a14eaee7124e-1536x1024.png?width=1950&height=1350&quality=85%2C65&format=jpeg&auto=webp&fit=bounds&bg-color=fff"
+              },
+              "menu": {
+                "url": "https://prtimes.jp/main/html/rd/p/000000074.000012023.html",
+                "note": "OperatorNovember18–24delivery-appLMargherita half-price. No delivery app, base price, fee or discount total invented.",
+                "items": [
+                  {
+                    "name": "マルゲリータ — Lサイズ（対象デリバリーアプリ半額）",
+                    "note": "November18–24only through participating delivery apps; platforms and app base price not published. Dine-inL¥2915is not used as a delivery base.",
+                    "priceLabel": "50% off participating app price; price not published"
+                  }
+                ],
+                "label": "Asagaya — delivery-app L Margherita launch offer",
+                "coverage": "published",
+                "currency": "JPY"
+              },
+              "startsAt": "2026-11-18T02:00:00.000Z",
+              "end": "14:00"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "publicationStatus": {
+    "local": "saved and publicly verified",
+    "production": "saved and publicly verified",
+    "publicHttpsVerified": true
+  },
+  "verifiedGuideCounts": {
+    "local": [
+      {
+        "environment": "local",
+        "city": "fukuoka",
+        "view": "upcoming",
+        "verificationBase": "http://localhost:3000",
+        "count": 10,
+        "ids": [
+          "15398",
+          "15410",
+          "15411",
+          "15415",
+          "15424",
+          "15425",
+          "15426",
+          "15914",
+          "15924",
+          "18421"
+        ],
+        "verifiedAt": "2026-10-20T21:13:55.295241+00:00"
+      },
+      {
+        "environment": "local",
+        "city": "fukuoka",
+        "view": "new",
+        "verificationBase": "http://localhost:3000",
+        "count": 24,
+        "ids": [
+          "15399",
+          "15400",
+          "15401",
+          "15409",
+          "15412",
+          "15414",
+          "15421",
+          "15422",
+          "15423",
+          "15427",
+          "15428",
+          "15969",
+          "16026",
+          "16027",
+          "16078",
+          "16290",
+          "16291",
+          "16292",
+          "16326",
+          "17625",
+          "18418",
+          "18506",
+          "18536",
+          "18537"
+        ],
+        "verifiedAt": "2026-10-20T21:13:55.364658+00:00"
+      },
+      {
+        "environment": "local",
+        "city": "fukuoka",
+        "view": "top",
+        "verificationBase": "http://localhost:3000",
+        "count": 30,
+        "ids": [
+          "15402",
+          "15403",
+          "15404",
+          "15405",
+          "15406",
+          "15407",
+          "15408",
+          "15413",
+          "15416",
+          "15417",
+          "15418",
+          "15419",
+          "15420",
+          "15429",
+          "18132",
+          "18133",
+          "18134",
+          "18147",
+          "18148",
+          "18149",
+          "18150",
+          "18176",
+          "18279",
+          "18280",
+          "18281",
+          "18289",
+          "18291",
+          "18293",
+          "18295",
+          "18296"
+        ],
+        "verifiedAt": "2026-10-20T21:13:55.579982+00:00"
+      },
+      {
+        "environment": "local",
+        "city": "fukuoka",
+        "view": "discounts",
+        "verificationBase": "http://localhost:3000",
+        "count": 36,
+        "ids": [
+          "http://raisindor.jp/",
+          "https://010bld.com/gohgan/",
+          "https://333sanmitomatoramen.com/store/%e5%a4%a9%e7%a5%9e%e5%a4%a7%e5%90%8d%e6%9c%ac%e5%ba%97/",
+          "https://and-gallery.com/#hukuoka",
+          "https://cene.tokyo/collections/fukuoka-open",
+          "https://fukuoka-orientalhotel.com/restaurant/linksquare/",
+          "https://fukuokaseahawk.hiltonjapan.co.jp/restaurants/clouds",
+          "https://fukuokaseahawk.hiltonjapan.co.jp/restaurants/seala",
+          "https://kanzan.net/imuri/",
+          "https://kusiyatubame.owst.jp/",
+          "https://le-bistro-aki.com/",
+          "https://onefukuoka-building.jp/shop/55",
+          "https://prtimes.jp/main/html/rd/p/000000060.000179076.html",
+          "https://prtimes.jp/main/html/rd/p/000000064.000152670.html",
+          "https://prtimes.jp/main/html/rd/p/000000170.000101757.html",
+          "https://pukutoco.com/sumomo-bakery-1007open/",
+          "https://pukutoco.com/sumomobakery-akasaka1019open/",
+          "https://tabelog.com/en/fukuoka/A4001/A400102/40074846/",
+          "https://toeihotel-fukuoka.com/restaurant/bistro_atrie/",
+          "https://www.eggsnthingsjapan.com/hakata/",
+          "https://www.f-sunpalace.com/restaurant/lagoon/",
+          "https://www.fuk.hotelokura.co.jp/restaurant/lechampdor/",
+          "https://www.gate-hotel.jp/fukuoka/rb/agfukuoka.html",
+          "https://www.ginzalion.jp/shop/brand/yebisubar/onefukuokabldg.html",
+          "https://www.hiramatsurestaurant.jp/hiramatsu-hakata/",
+          "https://www.hiramatsurestaurant.jp/kubotsu/",
+          "https://www.hotelnikko-fukuoka.com/restaurant/celebrites/",
+          "https://www.hotelnikko-fukuoka.com/restaurant/serena/",
+          "https://www.hotpepper.jp/strJ001276550/",
+          "https://www.kys-newotani.co.jp/hakata/restaurant/castillian-bar/",
+          "https://www.orec.co.jp/greenlab-fukuoka/",
+          "https://www.pochi-ito.com/",
+          "https://www.princehotels.co.jp/momochihama/restaurant/yocaterrace/",
+          "https://www.quil-fait-bon.com/pages/fukuoka",
+          "https://www.recent-hotel.com/restaurant/",
+          "https://www.tenchika.com/shop/h_b_antique/"
+        ],
+        "verifiedAt": "2026-10-20T21:13:56.335538+00:00"
+      },
+      {
+        "environment": "local",
+        "city": "osaka",
+        "view": "upcoming",
+        "verificationBase": "http://localhost:3000",
+        "count": 12,
+        "ids": [
+          "15432",
+          "15445",
+          "15447",
+          "15448",
+          "15449",
+          "15458",
+          "15913",
+          "15925",
+          "15975",
+          "16023",
+          "16079",
+          "17168"
+        ],
+        "verifiedAt": "2026-10-20T21:13:56.890745+00:00"
+      },
+      {
+        "environment": "local",
+        "city": "osaka",
+        "view": "new",
+        "verificationBase": "http://localhost:3000",
+        "count": 30,
+        "ids": [
+          "15431",
+          "15435",
+          "15436",
+          "15437",
+          "15438",
+          "15439",
+          "15446",
+          "15451",
+          "15452",
+          "15453",
+          "15454",
+          "15455",
+          "15456",
+          "15457",
+          "17108",
+          "17109",
+          "17110",
+          "17111",
+          "17112",
+          "17622",
+          "17623",
+          "17626",
+          "18303",
+          "18304",
+          "18420",
+          "18424",
+          "18505",
+          "18511",
+          "18550",
+          "18551"
+        ],
+        "verifiedAt": "2026-10-20T21:13:56.900512+00:00"
+      },
+      {
+        "environment": "local",
+        "city": "osaka",
+        "view": "top",
+        "verificationBase": "http://localhost:3000",
+        "count": 30,
+        "ids": [
+          "15430",
+          "15433",
+          "15434",
+          "15440",
+          "15441",
+          "15442",
+          "15443",
+          "15444",
+          "15450",
+          "15971",
+          "18135",
+          "18136",
+          "18137",
+          "18151",
+          "18152",
+          "18153",
+          "18154",
+          "18166",
+          "18168",
+          "18224",
+          "18228",
+          "18271",
+          "18272",
+          "18273",
+          "18274",
+          "18275",
+          "18276",
+          "18277",
+          "18278",
+          "18287"
+        ],
+        "verifiedAt": "2026-10-20T21:13:56.909663+00:00"
+      },
+      {
+        "environment": "local",
+        "city": "osaka",
+        "view": "discounts",
+        "verificationBase": "http://localhost:3000",
+        "count": 31,
+        "ids": [
+          "https://and-gallery.com/#nanba",
+          "https://big-step.co.jp/shop/detail/63",
+          "https://conrad-osaka.hiltonjapan.co.jp/restaurants/40skybar",
+          "https://conrad-osaka.hiltonjapan.co.jp/restaurants/atmos",
+          "https://cross-osaka.orixhotelsandresorts.com/#restaurant",
+          "https://csm-cafe.ltr-online.com/lp/csm-cafe-s022",
+          "https://doubletree-osaka-castle.hiltonjapan.co.jp/restaurants/lounge-bar-sen",
+          "https://doubletree-osaka-castle.hiltonjapan.co.jp/restaurants/restaurant-sen",
+          "https://gabuchiki.com/news/view/308",
+          "https://icosaka.com/offer/pierre_autumnmenu/",
+          "https://jblm2024.wixsite.com/fujiyama-tokyo/%E8%A4%87%E8%A3%BD-namba-osaka",
+          "https://k-coeur.com/restaurant/",
+          "https://labaie.ritzcarltonosaka.com/",
+          "https://osaka.ekimaru.com/shopguide/detail/103",
+          "https://osaka.hiltonjapan.co.jp/plans/restaurants/other/myplace-happyhour",
+          "https://patinahotels.com/osaka/drink-and-dine/p72",
+          "https://prtimes.jp/main/html/rd/p/000000001.000192433.html/",
+          "https://prtimes.jp/main/html/rd/p/000000033.000027700.html",
+          "https://splendido.ritzcarltonosaka.com/",
+          "https://takemon-fukahire.com/",
+          "https://www.agneldor.com/",
+          "https://www.daimaru.co.jp/shinsaibashi/restaurant/cucina-bella.html",
+          "https://www.gate-hotel.jp/osaka/rb/aosaka.html",
+          "https://www.gate-hotel.jp/osaka/rb/peaks.html",
+          "https://www.hiramatsurestaurant.jp/hiramatsu-lafete/",
+          "https://www.hiramatsurestaurant.jp/hiramatsu-lemidi/",
+          "https://www.hotpepper.jp/strJ004661366/",
+          "https://www.labecasse1990.com/",
+          "https://www.quil-fait-bon.com/pages/grand-front-osaka",
+          "https://www.regine.stregisosaka.com/",
+          "https://www.y-unico.jp/"
+        ],
+        "verifiedAt": "2026-10-20T21:13:56.930742+00:00"
+      },
+      {
+        "environment": "local",
+        "city": "kyoto",
+        "view": "upcoming",
+        "verificationBase": "http://localhost:3000",
+        "count": 12,
+        "ids": [
+          "15483",
+          "15499",
+          "15500",
+          "15909",
+          "15910",
+          "15911",
+          "15912",
+          "15922",
+          "15931",
+          "16323",
+          "17169",
+          "18510"
+        ],
+        "verifiedAt": "2026-10-20T21:13:57.271308+00:00"
+      },
+      {
+        "environment": "local",
+        "city": "kyoto",
+        "view": "new",
+        "verificationBase": "http://localhost:3000",
+        "count": 33,
+        "ids": [
+          "15460",
+          "15461",
+          "15462",
+          "15463",
+          "15464",
+          "15465",
+          "15466",
+          "15467",
+          "15468",
+          "15469",
+          "15470",
+          "15471",
+          "15472",
+          "15473",
+          "15474",
+          "15475",
+          "15476",
+          "15477",
+          "15478",
+          "15479",
+          "15480",
+          "15481",
+          "15482",
+          "15489",
+          "15490",
+          "15491",
+          "15492",
+          "15493",
+          "15494",
+          "15495",
+          "15498",
+          "18025",
+          "18026"
+        ],
+        "verifiedAt": "2026-10-20T21:13:57.279667+00:00"
+      },
+      {
+        "environment": "local",
+        "city": "kyoto",
+        "view": "top",
+        "verificationBase": "http://localhost:3000",
+        "count": 30,
+        "ids": [
+          "15459",
+          "15484",
+          "15485",
+          "15486",
+          "15487",
+          "15488",
+          "15496",
+          "15497",
+          "15501",
+          "15973",
+          "18052",
+          "18060",
+          "18061",
+          "18098",
+          "18099",
+          "18117",
+          "18119",
+          "18155",
+          "18156",
+          "18170",
+          "18171",
+          "18173",
+          "18191",
+          "18193",
+          "18194",
+          "18209",
+          "18210",
+          "18211",
+          "18212",
+          "18213"
+        ],
+        "verifiedAt": "2026-10-20T21:13:57.288463+00:00"
+      },
+      {
+        "environment": "local",
+        "city": "kyoto",
+        "view": "discounts",
+        "verificationBase": "http://localhost:3000",
+        "count": 35,
+        "ids": [
+          "https://cenci-kyoto.com/",
+          "https://droit-kyoto.jp/",
+          "https://hotelfauchonkyoto.com/ja/gourmet/fauchon-salon-de-the-kyoto/",
+          "https://kyoto.hiltonjapan.co.jp/restaurants/teori",
+          "https://www.hiramatsurestaurant.jp/hiramatsu-kodaiji/",
+          "https://www.hiramatsurestaurant.jp/la-luce/",
+          "https://www.instagram.com/jbowl_ritsumeikan_mae/",
+          "https://www.keihanhotels-resorts.co.jp/kyoto-centuryhotel/topics/happyhour-2/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/011/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/012/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/013/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/014/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/015/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/016/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/017/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/018/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/019/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/020/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/022/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/023/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/026/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/028/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/031/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/033/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/039/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/040/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/042/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/043/",
+          "https://www.next-hero-kyoto.com/%E3%81%9F%E3%81%93%EF%BC%98%E5%BA%97%E8%88%97%E6%83%85%E5%A0%B1/",
+          "https://www.princess-kyoto.co.jp/restaurant/ambercourt/",
+          "https://www.princess-kyoto.co.jp/restaurant/darley/",
+          "https://www.princess-kyoto.co.jp/restaurant/hisuien/",
+          "https://www.princess-kyoto.co.jp/restaurant/hoen/",
+          "https://www.princess-kyoto.co.jp/restaurant/sagano/",
+          "https://www.quil-fait-bon.com/pages/kyoto"
+        ],
+        "verifiedAt": "2026-10-20T21:13:57.306615+00:00"
+      },
+      {
+        "environment": "local",
+        "city": "nagoya",
+        "view": "upcoming",
+        "verificationBase": "http://localhost:3000",
+        "count": 11,
+        "ids": [
+          "15510",
+          "15512",
+          "15517",
+          "15518",
+          "15521",
+          "15522",
+          "15900",
+          "15901",
+          "15902",
+          "16075",
+          "16080"
+        ],
+        "verifiedAt": "2026-10-20T21:13:57.671303+00:00"
+      },
+      {
+        "environment": "local",
+        "city": "nagoya",
+        "view": "new",
+        "verificationBase": "http://localhost:3000",
+        "count": 31,
+        "ids": [
+          "15509",
+          "15511",
+          "15515",
+          "15516",
+          "15519",
+          "15520",
+          "15898",
+          "15899",
+          "15915",
+          "15916",
+          "15917",
+          "15918",
+          "15919",
+          "15920",
+          "15921",
+          "15932",
+          "15964",
+          "15965",
+          "16020",
+          "16021",
+          "16022",
+          "16076",
+          "16294",
+          "16295",
+          "16767",
+          "16771",
+          "16800",
+          "17107",
+          "17166",
+          "17167",
+          "18045"
+        ],
+        "verifiedAt": "2026-10-20T21:13:57.681548+00:00"
+      },
+      {
+        "environment": "local",
+        "city": "nagoya",
+        "view": "top",
+        "verificationBase": "http://localhost:3000",
+        "count": 30,
+        "ids": [
+          "15502",
+          "15503",
+          "15504",
+          "15505",
+          "15506",
+          "15507",
+          "15508",
+          "15513",
+          "15514",
+          "15523",
+          "15524",
+          "15972",
+          "16024",
+          "18044",
+          "18100",
+          "18101",
+          "18121",
+          "18138",
+          "18192",
+          "18195",
+          "18196",
+          "18214",
+          "18215",
+          "18216",
+          "18217",
+          "18218",
+          "18219",
+          "18220",
+          "18221",
+          "18223"
+        ],
+        "verifiedAt": "2026-10-20T21:13:57.694743+00:00"
+      },
+      {
+        "environment": "local",
+        "city": "nagoya",
+        "view": "discounts",
+        "verificationBase": "http://localhost:3000",
+        "count": 31,
+        "ids": [
+          "https://and-gallery.com/#nagoya",
+          "https://csm-cafe.ltr-online.com/lp/csm-cafe-s017",
+          "https://french-kitamura.jp/",
+          "https://kinzan.nagoya/archives/news/2853/",
+          "https://kobekangroup.com/shop/obanzai_kabtoya/",
+          "https://lebeurrenoisettetokyo.com/nagoya/",
+          "https://nagoya.hiltonjapan.co.jp/restaurants/hideaway3-3",
+          "https://nagoya.hiltonjapan.co.jp/restaurants/inplace3-3",
+          "https://nagoya.hiltonjapan.co.jp/restaurants/ouchou",
+          "https://nagoya.parco.jp/shop/detail/?cd=009191",
+          "https://prtimes.jp/main/html/rd/p/000000004.000116722.html",
+          "https://prtimes.jp/main/html/rd/p/000004440.000018505.html",
+          "https://reconnaissance-nagoya.com/",
+          "https://thetowerhotel.jp/restaurant/",
+          "https://www.anacrowneplaza-nagoya.jp/pages/restaurant_gardencourt",
+          "https://www.anacrowneplaza-nagoya.jp/pages/restaurant_karin",
+          "https://www.anacrowneplaza-nagoya.jp/pages/restaurant_stargate",
+          "https://www.anacrowneplaza-nagoya.jp/pages/restaurant_winglounge",
+          "https://www.associa.com/nma/restaurant/pergola/",
+          "https://www.centralpark.co.jp/shop/sharecafe/",
+          "https://www.espacionagoya.com/restaurant-bar/the-bar-castle/",
+          "https://www.hiramatsurestaurant.jp/aubergedelill-nagoya/",
+          "https://www.hotpepper.jp/strJ004698778/",
+          "https://www.hotpepper.jp/strJ004699003/",
+          "https://www.kochuten.jp/",
+          "https://www.komeda.co.jp/shop/detail.html?id=1215",
+          "https://www.lafloraison-t.jp/",
+          "https://www.livingroom-skybar.com/",
+          "https://www.princehotels.co.jp/nagoya/restaurant/skydining/",
+          "https://www.quil-fait-bon.com/pages/nagoya-sakae",
+          "https://www.thekawabunnagoya.com/thekawabunnagoya/restaurant/"
+        ],
+        "verifiedAt": "2026-10-20T21:13:57.717054+00:00"
+      },
+      {
+        "environment": "local",
+        "city": "tokyo",
+        "view": "upcoming",
+        "verificationBase": "http://localhost:3000",
+        "count": 15,
+        "ids": [
+          "15526",
+          "15538",
+          "15541",
+          "15544",
+          "15546",
+          "15555",
+          "15556",
+          "15557",
+          "15923",
+          "15929",
+          "15930",
+          "17106",
+          "17621",
+          "18422",
+          "18720"
+        ],
+        "verifiedAt": "2026-10-20T21:13:58.067939+00:00"
+      },
+      {
+        "environment": "local",
+        "city": "tokyo",
+        "view": "new",
+        "verificationBase": "http://localhost:3000",
+        "count": 31,
+        "ids": [
+          "15527",
+          "15539",
+          "15540",
+          "15551",
+          "15552",
+          "15553",
+          "15554",
+          "15558",
+          "15966",
+          "15967",
+          "15968",
+          "16289",
+          "16325",
+          "17170",
+          "17171",
+          "17172",
+          "17173",
+          "17628",
+          "18027",
+          "18043",
+          "18051",
+          "18058",
+          "18102",
+          "18103",
+          "18300",
+          "18301",
+          "18302",
+          "18444",
+          "18507",
+          "18508",
+          "18509"
+        ],
+        "verifiedAt": "2026-10-20T21:13:58.077975+00:00"
+      },
+      {
+        "environment": "local",
+        "city": "tokyo",
+        "view": "top",
+        "verificationBase": "http://localhost:3000",
+        "count": 30,
+        "ids": [
+          "15525",
+          "15528",
+          "15529",
+          "15530",
+          "15531",
+          "15532",
+          "15533",
+          "15534",
+          "15535",
+          "15536",
+          "15537",
+          "15542",
+          "15543",
+          "15545",
+          "15547",
+          "15548",
+          "15549",
+          "15550",
+          "15559",
+          "15560",
+          "15561",
+          "15562",
+          "15903",
+          "15974",
+          "18122",
+          "18123",
+          "18140",
+          "18141",
+          "18157",
+          "18158"
+        ],
+        "verifiedAt": "2026-10-20T21:13:58.088150+00:00"
+      },
+      {
+        "environment": "local",
+        "city": "tokyo",
+        "view": "discounts",
+        "verificationBase": "http://localhost:3000",
+        "count": 40,
+        "ids": [
+          "https://and-gallery.com/#ikebukuro",
+          "https://and-gallery.com/#yurakucho",
+          "https://cocco.eastone.co.jp/shop/gotanda",
+          "https://cocco.eastone.co.jp/shop/kameido",
+          "https://conrad-tokyo.hiltonjapan.co.jp/restaurants/cerise",
+          "https://conrad-tokyo.hiltonjapan.co.jp/restaurants/chinablue",
+          "https://conrad-tokyo.hiltonjapan.co.jp/restaurants/twentyeight",
+          "https://csm-cafe.ltr-online.com/lp/csm-cafe-s012",
+          "https://gourmetpress.net/1488798/",
+          "https://miabocca.eastone.co.jp/shop/Ikebukuro",
+          "https://miabocca.eastone.co.jp/shop/Shakujii-park",
+          "https://miabocca.eastone.co.jp/shop/Shinjuku-takasimaya",
+          "https://mimimi-jiyugaoka.com/#floor1",
+          "https://onodera-group.com/kaitensushi-ikebukuro/",
+          "https://prtimes.jp/main/html/rd/p/000000009.000161200.html",
+          "https://prtimes.jp/main/html/rd/p/000000048.000152772.html",
+          "https://prtimes.jp/main/html/rd/p/000000196.000049183.html",
+          "https://prtimes.jp/main/html/rd/p/000000356.000048489.html",
+          "https://prtimes.jp/main/html/rd/p/000000592.000071323.html",
+          "https://prtimes.jp/main/html/rd/p/000004178.000003860.html",
+          "https://salvatore.jp/restaurant/asagaya/",
+          "https://sarabethsrestaurants.jp/location/omotesando/",
+          "https://sarabethsrestaurants.jp/location/shinagawa/",
+          "https://sarabethsrestaurants.jp/location/shinjuku/",
+          "https://sarabethsrestaurants.jp/location/tokyo/",
+          "https://shibakoen.bar-shinkai.com/",
+          "https://store-info.skylark.co.jp/syabuyo/map/198490/",
+          "https://tabelog.com/en/tokyo/A1303/A130301/13198692/",
+          "https://tokyo.hiltonjapan.co.jp/restaurants/st_georges_bar",
+          "https://www.andaztokyo.jp/restaurants/jp/thetavern-grill-lounge",
+          "https://www.herofield.com/bbq/tokyoprince/",
+          "https://www.hiramatsurestaurant.jp/jardindessens-tokyo/",
+          "https://www.mesm.jp/en/eat-drink/chefs-theatre.html",
+          "https://www.newotani.co.jp/tokyo/restaurant/gardenlounge/",
+          "https://www.quil-fait-bon.com/pages/aoyama",
+          "https://www.quil-fait-bon.com/pages/grand-maison-ginza",
+          "https://www.quil-fait-bon.com/pages/shinjuku",
+          "https://www.quil-fait-bon.com/pages/tokyo-dome-city",
+          "https://www.quil-fait-bon.com/pages/tokyo-skytree-town-solamachi",
+          "https://www.sunamo.jp/floor/shop_detail.html?UC=1_028"
+        ],
+        "verifiedAt": "2026-10-20T21:13:58.113462+00:00"
+      },
+      {
+        "environment": "local",
+        "city": "sapporo",
+        "view": "upcoming",
+        "verificationBase": "http://localhost:3000",
+        "count": 11,
+        "ids": [
+          "15568",
+          "15569",
+          "15570",
+          "15571",
+          "15597",
+          "15926",
+          "15970",
+          "17103",
+          "18047",
+          "18048",
+          "18054"
+        ],
+        "verifiedAt": "2026-10-20T21:13:58.434213+00:00"
+      },
+      {
+        "environment": "local",
+        "city": "sapporo",
+        "view": "new",
+        "verificationBase": "http://localhost:3000",
+        "count": 30,
+        "ids": [
+          "15580",
+          "15586",
+          "15587",
+          "15588",
+          "15589",
+          "15590",
+          "15591",
+          "15592",
+          "15595",
+          "15596",
+          "16293",
+          "16296",
+          "17104",
+          "17105",
+          "17624",
+          "17627",
+          "18028",
+          "18029",
+          "18030",
+          "18031",
+          "18049",
+          "18055",
+          "18056",
+          "18057",
+          "18104",
+          "18105",
+          "18124",
+          "18125",
+          "18305",
+          "18306"
+        ],
+        "verifiedAt": "2026-10-20T21:13:58.444710+00:00"
+      },
+      {
+        "environment": "local",
+        "city": "sapporo",
+        "view": "top",
+        "verificationBase": "http://localhost:3000",
+        "count": 30,
+        "ids": [
+          "15563",
+          "15564",
+          "15565",
+          "15566",
+          "15567",
+          "15572",
+          "15573",
+          "15574",
+          "15575",
+          "15576",
+          "15577",
+          "15578",
+          "15579",
+          "15581",
+          "15582",
+          "15583",
+          "15584",
+          "15585",
+          "15593",
+          "15594",
+          "15598",
+          "15599",
+          "15600",
+          "15601",
+          "15602",
+          "15603",
+          "15604",
+          "15605",
+          "15606",
+          "15607"
+        ],
+        "verifiedAt": "2026-10-20T21:13:58.455450+00:00"
+      },
+      {
+        "environment": "local",
+        "city": "sapporo",
+        "view": "discounts",
+        "verificationBase": "http://localhost:3000",
+        "count": 34,
+        "ids": [
+          "https://anan.fuji-tatsu.co.jp/shop/sapporo-sinoro/",
+          "https://chocottosushi-kiwami.owst.jp/",
+          "https://cocco.eastone.co.jp/shop/kitahachijo",
+          "https://cocco.eastone.co.jp/shop/kitaichijo",
+          "https://cocco.eastone.co.jp/shop/kotoniekimae",
+          "https://cocco.eastone.co.jp/shop/miyanosawa",
+          "https://cocco.eastone.co.jp/shop/shindohigashi",
+          "https://cocco.eastone.co.jp/shop/souen",
+          "https://grand1934.com/restaurant/garden-dining-waraku/",
+          "https://grand1934.com/restaurant/kokaku/",
+          "https://grand1934.com/restaurant/lobby-lounge-mizar/",
+          "https://grand1934.com/restaurant/northern-terrace-diner/",
+          "https://grand1934.com/restaurant/old-saloon1934/",
+          "https://miabocca.eastone.co.jp/shop/Kita2jo",
+          "https://miabocca.eastone.co.jp/shop/Kotoni-station",
+          "https://miabocca.eastone.co.jp/shop/Sapporo-station",
+          "https://miabocca.eastone.co.jp/shop/atsubetsuminami",
+          "https://miabocca.eastone.co.jp/shop/sapporoduo",
+          "https://michiru.dkdining.com/sapporo/",
+          "https://prtimes.jp/main/html/rd/p/000000010.000134951.html",
+          "https://store-info.skylark.co.jp/syabuyo/map/198489/",
+          "https://www.anahisapporosusukino.com/restaurants/verde/",
+          "https://www.hyatt.com/hyatt-centric/ja-JP/ctsct-hyatt-centric-sapporo/dining",
+          "https://www.jrhotels.co.jp/tower/restaurant/skyj/",
+          "https://www.keioplaza-sapporo.co.jp/restaurants/akizu/",
+          "https://www.keioplaza-sapporo.co.jp/restaurants/crossvault/",
+          "https://www.keioplaza-sapporo.co.jp/restaurants/glass/",
+          "https://www.keioplaza-sapporo.co.jp/restaurants/miyama/",
+          "https://www.keioplaza-sapporo.co.jp/restaurants/yamanami/",
+          "https://www.princehotels.co.jp/sapporo/restaurant/alldaydininggrandeur",
+          "https://www.princehotels.co.jp/sapporo/restaurant/fuyojo",
+          "https://www.princehotels.co.jp/sapporo/restaurant/katsura",
+          "https://www.princehotels.co.jp/sapporo/restaurant/top_prince",
+          "https://www.tokyuhotels.co.jp/sapporostream/restaurant/splish/plan/angel_devil/index.html"
+        ],
+        "verifiedAt": "2026-10-20T21:13:58.481949+00:00"
+      }
+    ],
+    "production": [
+      {
+        "environment": "production",
+        "city": "fukuoka",
+        "view": "upcoming",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 10,
+        "ids": [
+          "15398",
+          "15410",
+          "15411",
+          "15415",
+          "15424",
+          "15425",
+          "15426",
+          "15914",
+          "15924",
+          "18421"
+        ],
+        "verifiedAt": "2026-10-20T21:14:18.392844+00:00"
+      },
+      {
+        "environment": "production",
+        "city": "fukuoka",
+        "view": "new",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 24,
+        "ids": [
+          "15399",
+          "15400",
+          "15401",
+          "15409",
+          "15412",
+          "15414",
+          "15421",
+          "15422",
+          "15423",
+          "15427",
+          "15428",
+          "15969",
+          "16026",
+          "16027",
+          "16078",
+          "16290",
+          "16291",
+          "16292",
+          "16326",
+          "17625",
+          "18418",
+          "18506",
+          "18534",
+          "18536"
+        ],
+        "verifiedAt": "2026-10-20T21:14:18.603243+00:00"
+      },
+      {
+        "environment": "production",
+        "city": "fukuoka",
+        "view": "top",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 30,
+        "ids": [
+          "15402",
+          "15403",
+          "15404",
+          "15405",
+          "15406",
+          "15407",
+          "15408",
+          "15413",
+          "15416",
+          "15417",
+          "15418",
+          "15419",
+          "15420",
+          "15429",
+          "18132",
+          "18133",
+          "18134",
+          "18147",
+          "18148",
+          "18149",
+          "18150",
+          "18176",
+          "18279",
+          "18280",
+          "18281",
+          "18289",
+          "18291",
+          "18293",
+          "18295",
+          "18296"
+        ],
+        "verifiedAt": "2026-10-20T21:14:18.857205+00:00"
+      },
+      {
+        "environment": "production",
+        "city": "fukuoka",
+        "view": "discounts",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 36,
+        "ids": [
+          "http://raisindor.jp/",
+          "https://010bld.com/gohgan/",
+          "https://333sanmitomatoramen.com/store/%e5%a4%a9%e7%a5%9e%e5%a4%a7%e5%90%8d%e6%9c%ac%e5%ba%97/",
+          "https://and-gallery.com/#hukuoka",
+          "https://cene.tokyo/collections/fukuoka-open",
+          "https://fukuoka-orientalhotel.com/restaurant/linksquare/",
+          "https://fukuokaseahawk.hiltonjapan.co.jp/restaurants/clouds",
+          "https://fukuokaseahawk.hiltonjapan.co.jp/restaurants/seala",
+          "https://kanzan.net/imuri/",
+          "https://kusiyatubame.owst.jp/",
+          "https://le-bistro-aki.com/",
+          "https://onefukuoka-building.jp/shop/55",
+          "https://prtimes.jp/main/html/rd/p/000000060.000179076.html",
+          "https://prtimes.jp/main/html/rd/p/000000064.000152670.html",
+          "https://prtimes.jp/main/html/rd/p/000000170.000101757.html",
+          "https://pukutoco.com/sumomo-bakery-1007open/",
+          "https://pukutoco.com/sumomobakery-akasaka1019open/",
+          "https://tabelog.com/en/fukuoka/A4001/A400102/40074846/",
+          "https://toeihotel-fukuoka.com/restaurant/bistro_atrie/",
+          "https://www.eggsnthingsjapan.com/hakata/",
+          "https://www.f-sunpalace.com/restaurant/lagoon/",
+          "https://www.fuk.hotelokura.co.jp/restaurant/lechampdor/",
+          "https://www.gate-hotel.jp/fukuoka/rb/agfukuoka.html",
+          "https://www.ginzalion.jp/shop/brand/yebisubar/onefukuokabldg.html",
+          "https://www.hiramatsurestaurant.jp/hiramatsu-hakata/",
+          "https://www.hiramatsurestaurant.jp/kubotsu/",
+          "https://www.hotelnikko-fukuoka.com/restaurant/celebrites/",
+          "https://www.hotelnikko-fukuoka.com/restaurant/serena/",
+          "https://www.hotpepper.jp/strJ001276550/",
+          "https://www.kys-newotani.co.jp/hakata/restaurant/castillian-bar/",
+          "https://www.orec.co.jp/greenlab-fukuoka/",
+          "https://www.pochi-ito.com/",
+          "https://www.princehotels.co.jp/momochihama/restaurant/yocaterrace/",
+          "https://www.quil-fait-bon.com/pages/fukuoka",
+          "https://www.recent-hotel.com/restaurant/",
+          "https://www.tenchika.com/shop/h_b_antique/"
+        ],
+        "verifiedAt": "2026-10-20T21:14:19.217809+00:00"
+      },
+      {
+        "environment": "production",
+        "city": "osaka",
+        "view": "upcoming",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 12,
+        "ids": [
+          "15432",
+          "15445",
+          "15447",
+          "15448",
+          "15449",
+          "15458",
+          "15913",
+          "15925",
+          "15975",
+          "16023",
+          "16079",
+          "17168"
+        ],
+        "verifiedAt": "2026-10-20T21:14:20.471280+00:00"
+      },
+      {
+        "environment": "production",
+        "city": "osaka",
+        "view": "new",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 30,
+        "ids": [
+          "15431",
+          "15435",
+          "15436",
+          "15437",
+          "15438",
+          "15439",
+          "15446",
+          "15451",
+          "15452",
+          "15453",
+          "15454",
+          "15455",
+          "15456",
+          "15457",
+          "17108",
+          "17109",
+          "17110",
+          "17111",
+          "17112",
+          "17622",
+          "17623",
+          "17626",
+          "18303",
+          "18304",
+          "18420",
+          "18424",
+          "18449",
+          "18504",
+          "18554",
+          "18555"
+        ],
+        "verifiedAt": "2026-10-20T21:14:20.660293+00:00"
+      },
+      {
+        "environment": "production",
+        "city": "osaka",
+        "view": "top",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 30,
+        "ids": [
+          "15430",
+          "15433",
+          "15434",
+          "15440",
+          "15441",
+          "15442",
+          "15443",
+          "15444",
+          "15450",
+          "15971",
+          "18135",
+          "18136",
+          "18137",
+          "18151",
+          "18152",
+          "18153",
+          "18154",
+          "18166",
+          "18168",
+          "18224",
+          "18228",
+          "18271",
+          "18272",
+          "18273",
+          "18274",
+          "18275",
+          "18276",
+          "18277",
+          "18278",
+          "18287"
+        ],
+        "verifiedAt": "2026-10-20T21:14:20.960365+00:00"
+      },
+      {
+        "environment": "production",
+        "city": "osaka",
+        "view": "discounts",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 31,
+        "ids": [
+          "https://and-gallery.com/#nanba",
+          "https://big-step.co.jp/shop/detail/63",
+          "https://conrad-osaka.hiltonjapan.co.jp/restaurants/40skybar",
+          "https://conrad-osaka.hiltonjapan.co.jp/restaurants/atmos",
+          "https://cross-osaka.orixhotelsandresorts.com/#restaurant",
+          "https://csm-cafe.ltr-online.com/lp/csm-cafe-s022",
+          "https://doubletree-osaka-castle.hiltonjapan.co.jp/restaurants/lounge-bar-sen",
+          "https://doubletree-osaka-castle.hiltonjapan.co.jp/restaurants/restaurant-sen",
+          "https://gabuchiki.com/news/view/308",
+          "https://icosaka.com/offer/pierre_autumnmenu/",
+          "https://jblm2024.wixsite.com/fujiyama-tokyo/%E8%A4%87%E8%A3%BD-namba-osaka",
+          "https://k-coeur.com/restaurant/",
+          "https://labaie.ritzcarltonosaka.com/",
+          "https://osaka.ekimaru.com/shopguide/detail/103",
+          "https://osaka.hiltonjapan.co.jp/plans/restaurants/other/myplace-happyhour",
+          "https://patinahotels.com/osaka/drink-and-dine/p72",
+          "https://prtimes.jp/main/html/rd/p/000000001.000192433.html/",
+          "https://prtimes.jp/main/html/rd/p/000000033.000027700.html",
+          "https://splendido.ritzcarltonosaka.com/",
+          "https://takemon-fukahire.com/",
+          "https://www.agneldor.com/",
+          "https://www.daimaru.co.jp/shinsaibashi/restaurant/cucina-bella.html",
+          "https://www.gate-hotel.jp/osaka/rb/aosaka.html",
+          "https://www.gate-hotel.jp/osaka/rb/peaks.html",
+          "https://www.hiramatsurestaurant.jp/hiramatsu-lafete/",
+          "https://www.hiramatsurestaurant.jp/hiramatsu-lemidi/",
+          "https://www.hotpepper.jp/strJ004661366/",
+          "https://www.labecasse1990.com/",
+          "https://www.quil-fait-bon.com/pages/grand-front-osaka",
+          "https://www.regine.stregisosaka.com/",
+          "https://www.y-unico.jp/"
+        ],
+        "verifiedAt": "2026-10-20T21:14:21.324170+00:00"
+      },
+      {
+        "environment": "production",
+        "city": "kyoto",
+        "view": "upcoming",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 12,
+        "ids": [
+          "15483",
+          "15499",
+          "15500",
+          "15909",
+          "15910",
+          "15911",
+          "15912",
+          "15922",
+          "15931",
+          "16323",
+          "17169",
+          "18448"
+        ],
+        "verifiedAt": "2026-10-20T21:14:23.415911+00:00"
+      },
+      {
+        "environment": "production",
+        "city": "kyoto",
+        "view": "new",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 33,
+        "ids": [
+          "15460",
+          "15461",
+          "15462",
+          "15463",
+          "15464",
+          "15465",
+          "15466",
+          "15467",
+          "15468",
+          "15469",
+          "15470",
+          "15471",
+          "15472",
+          "15473",
+          "15474",
+          "15475",
+          "15476",
+          "15477",
+          "15478",
+          "15479",
+          "15480",
+          "15481",
+          "15482",
+          "15489",
+          "15490",
+          "15491",
+          "15492",
+          "15493",
+          "15494",
+          "15495",
+          "15498",
+          "18025",
+          "18026"
+        ],
+        "verifiedAt": "2026-10-20T21:14:23.727151+00:00"
+      },
+      {
+        "environment": "production",
+        "city": "kyoto",
+        "view": "top",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 30,
+        "ids": [
+          "15459",
+          "15484",
+          "15485",
+          "15486",
+          "15487",
+          "15488",
+          "15496",
+          "15497",
+          "15501",
+          "15973",
+          "18052",
+          "18060",
+          "18061",
+          "18098",
+          "18099",
+          "18117",
+          "18119",
+          "18155",
+          "18156",
+          "18170",
+          "18171",
+          "18173",
+          "18191",
+          "18193",
+          "18194",
+          "18209",
+          "18210",
+          "18211",
+          "18212",
+          "18213"
+        ],
+        "verifiedAt": "2026-10-20T21:14:23.919454+00:00"
+      },
+      {
+        "environment": "production",
+        "city": "kyoto",
+        "view": "discounts",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 35,
+        "ids": [
+          "https://cenci-kyoto.com/",
+          "https://droit-kyoto.jp/",
+          "https://hotelfauchonkyoto.com/ja/gourmet/fauchon-salon-de-the-kyoto/",
+          "https://kyoto.hiltonjapan.co.jp/restaurants/teori",
+          "https://www.hiramatsurestaurant.jp/hiramatsu-kodaiji/",
+          "https://www.hiramatsurestaurant.jp/la-luce/",
+          "https://www.instagram.com/jbowl_ritsumeikan_mae/",
+          "https://www.keihanhotels-resorts.co.jp/kyoto-centuryhotel/topics/happyhour-2/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/011/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/012/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/013/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/014/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/015/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/016/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/017/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/018/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/019/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/020/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/022/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/023/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/026/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/028/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/031/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/033/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/039/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/040/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/042/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/043/",
+          "https://www.next-hero-kyoto.com/%E3%81%9F%E3%81%93%EF%BC%98%E5%BA%97%E8%88%97%E6%83%85%E5%A0%B1/",
+          "https://www.princess-kyoto.co.jp/restaurant/ambercourt/",
+          "https://www.princess-kyoto.co.jp/restaurant/darley/",
+          "https://www.princess-kyoto.co.jp/restaurant/hisuien/",
+          "https://www.princess-kyoto.co.jp/restaurant/hoen/",
+          "https://www.princess-kyoto.co.jp/restaurant/sagano/",
+          "https://www.quil-fait-bon.com/pages/kyoto"
+        ],
+        "verifiedAt": "2026-10-20T21:14:24.355912+00:00"
+      },
+      {
+        "environment": "production",
+        "city": "nagoya",
+        "view": "upcoming",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 11,
+        "ids": [
+          "15510",
+          "15512",
+          "15517",
+          "15518",
+          "15521",
+          "15522",
+          "15900",
+          "15901",
+          "15902",
+          "16075",
+          "16080"
+        ],
+        "verifiedAt": "2026-10-20T21:14:25.311856+00:00"
+      },
+      {
+        "environment": "production",
+        "city": "nagoya",
+        "view": "new",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 31,
+        "ids": [
+          "15509",
+          "15511",
+          "15515",
+          "15516",
+          "15519",
+          "15520",
+          "15898",
+          "15899",
+          "15915",
+          "15916",
+          "15917",
+          "15918",
+          "15919",
+          "15920",
+          "15921",
+          "15932",
+          "15964",
+          "15965",
+          "16020",
+          "16021",
+          "16022",
+          "16076",
+          "16294",
+          "16295",
+          "16767",
+          "16771",
+          "16800",
+          "17107",
+          "17166",
+          "17167",
+          "18045"
+        ],
+        "verifiedAt": "2026-10-20T21:14:25.499075+00:00"
+      },
+      {
+        "environment": "production",
+        "city": "nagoya",
+        "view": "top",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 30,
+        "ids": [
+          "15502",
+          "15503",
+          "15504",
+          "15505",
+          "15506",
+          "15507",
+          "15508",
+          "15513",
+          "15514",
+          "15523",
+          "15524",
+          "15972",
+          "16024",
+          "18044",
+          "18100",
+          "18101",
+          "18121",
+          "18138",
+          "18192",
+          "18195",
+          "18196",
+          "18214",
+          "18215",
+          "18216",
+          "18217",
+          "18218",
+          "18219",
+          "18220",
+          "18221",
+          "18223"
+        ],
+        "verifiedAt": "2026-10-20T21:14:25.800903+00:00"
+      },
+      {
+        "environment": "production",
+        "city": "nagoya",
+        "view": "discounts",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 31,
+        "ids": [
+          "https://and-gallery.com/#nagoya",
+          "https://csm-cafe.ltr-online.com/lp/csm-cafe-s017",
+          "https://french-kitamura.jp/",
+          "https://kinzan.nagoya/archives/news/2853/",
+          "https://kobekangroup.com/shop/obanzai_kabtoya/",
+          "https://lebeurrenoisettetokyo.com/nagoya/",
+          "https://nagoya.hiltonjapan.co.jp/restaurants/hideaway3-3",
+          "https://nagoya.hiltonjapan.co.jp/restaurants/inplace3-3",
+          "https://nagoya.hiltonjapan.co.jp/restaurants/ouchou",
+          "https://nagoya.parco.jp/shop/detail/?cd=009191",
+          "https://prtimes.jp/main/html/rd/p/000000004.000116722.html",
+          "https://prtimes.jp/main/html/rd/p/000004440.000018505.html",
+          "https://reconnaissance-nagoya.com/",
+          "https://thetowerhotel.jp/restaurant/",
+          "https://www.anacrowneplaza-nagoya.jp/pages/restaurant_gardencourt",
+          "https://www.anacrowneplaza-nagoya.jp/pages/restaurant_karin",
+          "https://www.anacrowneplaza-nagoya.jp/pages/restaurant_stargate",
+          "https://www.anacrowneplaza-nagoya.jp/pages/restaurant_winglounge",
+          "https://www.associa.com/nma/restaurant/pergola/",
+          "https://www.centralpark.co.jp/shop/sharecafe/",
+          "https://www.espacionagoya.com/restaurant-bar/the-bar-castle/",
+          "https://www.hiramatsurestaurant.jp/aubergedelill-nagoya/",
+          "https://www.hotpepper.jp/strJ004698778/",
+          "https://www.hotpepper.jp/strJ004699003/",
+          "https://www.kochuten.jp/",
+          "https://www.komeda.co.jp/shop/detail.html?id=1215",
+          "https://www.lafloraison-t.jp/",
+          "https://www.livingroom-skybar.com/",
+          "https://www.princehotels.co.jp/nagoya/restaurant/skydining/",
+          "https://www.quil-fait-bon.com/pages/nagoya-sakae",
+          "https://www.thekawabunnagoya.com/thekawabunnagoya/restaurant/"
+        ],
+        "verifiedAt": "2026-10-20T21:14:26.244761+00:00"
+      },
+      {
+        "environment": "production",
+        "city": "tokyo",
+        "view": "upcoming",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 15,
+        "ids": [
+          "15526",
+          "15538",
+          "15541",
+          "15544",
+          "15546",
+          "15555",
+          "15556",
+          "15557",
+          "15923",
+          "15929",
+          "15930",
+          "17106",
+          "17621",
+          "18422",
+          "18722"
+        ],
+        "verifiedAt": "2026-10-20T21:14:27.467075+00:00"
+      },
+      {
+        "environment": "production",
+        "city": "tokyo",
+        "view": "new",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 31,
+        "ids": [
+          "15527",
+          "15539",
+          "15540",
+          "15551",
+          "15552",
+          "15553",
+          "15554",
+          "15558",
+          "15966",
+          "15967",
+          "15968",
+          "16289",
+          "16325",
+          "17170",
+          "17171",
+          "17172",
+          "17173",
+          "17628",
+          "18027",
+          "18043",
+          "18051",
+          "18058",
+          "18102",
+          "18103",
+          "18300",
+          "18301",
+          "18302",
+          "18444",
+          "18445",
+          "18446",
+          "18447"
+        ],
+        "verifiedAt": "2026-10-20T21:14:28.565282+00:00"
+      },
+      {
+        "environment": "production",
+        "city": "tokyo",
+        "view": "top",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 30,
+        "ids": [
+          "15525",
+          "15528",
+          "15529",
+          "15530",
+          "15531",
+          "15532",
+          "15533",
+          "15534",
+          "15535",
+          "15536",
+          "15537",
+          "15542",
+          "15543",
+          "15545",
+          "15547",
+          "15548",
+          "15549",
+          "15550",
+          "15559",
+          "15560",
+          "15561",
+          "15562",
+          "15903",
+          "15974",
+          "18122",
+          "18123",
+          "18140",
+          "18141",
+          "18157",
+          "18158"
+        ],
+        "verifiedAt": "2026-10-20T21:14:29.609640+00:00"
+      },
+      {
+        "environment": "production",
+        "city": "tokyo",
+        "view": "discounts",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 40,
+        "ids": [
+          "https://and-gallery.com/#ikebukuro",
+          "https://and-gallery.com/#yurakucho",
+          "https://cocco.eastone.co.jp/shop/gotanda",
+          "https://cocco.eastone.co.jp/shop/kameido",
+          "https://conrad-tokyo.hiltonjapan.co.jp/restaurants/cerise",
+          "https://conrad-tokyo.hiltonjapan.co.jp/restaurants/chinablue",
+          "https://conrad-tokyo.hiltonjapan.co.jp/restaurants/twentyeight",
+          "https://csm-cafe.ltr-online.com/lp/csm-cafe-s012",
+          "https://gourmetpress.net/1488798/",
+          "https://miabocca.eastone.co.jp/shop/Ikebukuro",
+          "https://miabocca.eastone.co.jp/shop/Shakujii-park",
+          "https://miabocca.eastone.co.jp/shop/Shinjuku-takasimaya",
+          "https://mimimi-jiyugaoka.com/#floor1",
+          "https://onodera-group.com/kaitensushi-ikebukuro/",
+          "https://prtimes.jp/main/html/rd/p/000000009.000161200.html",
+          "https://prtimes.jp/main/html/rd/p/000000048.000152772.html",
+          "https://prtimes.jp/main/html/rd/p/000000196.000049183.html",
+          "https://prtimes.jp/main/html/rd/p/000000356.000048489.html",
+          "https://prtimes.jp/main/html/rd/p/000000592.000071323.html",
+          "https://prtimes.jp/main/html/rd/p/000004178.000003860.html",
+          "https://salvatore.jp/restaurant/asagaya/",
+          "https://sarabethsrestaurants.jp/location/omotesando/",
+          "https://sarabethsrestaurants.jp/location/shinagawa/",
+          "https://sarabethsrestaurants.jp/location/shinjuku/",
+          "https://sarabethsrestaurants.jp/location/tokyo/",
+          "https://shibakoen.bar-shinkai.com/",
+          "https://store-info.skylark.co.jp/syabuyo/map/198490/",
+          "https://tabelog.com/en/tokyo/A1303/A130301/13198692/",
+          "https://tokyo.hiltonjapan.co.jp/restaurants/st_georges_bar",
+          "https://www.andaztokyo.jp/restaurants/jp/thetavern-grill-lounge",
+          "https://www.herofield.com/bbq/tokyoprince/",
+          "https://www.hiramatsurestaurant.jp/jardindessens-tokyo/",
+          "https://www.mesm.jp/en/eat-drink/chefs-theatre.html",
+          "https://www.newotani.co.jp/tokyo/restaurant/gardenlounge/",
+          "https://www.quil-fait-bon.com/pages/aoyama",
+          "https://www.quil-fait-bon.com/pages/grand-maison-ginza",
+          "https://www.quil-fait-bon.com/pages/shinjuku",
+          "https://www.quil-fait-bon.com/pages/tokyo-dome-city",
+          "https://www.quil-fait-bon.com/pages/tokyo-skytree-town-solamachi",
+          "https://www.sunamo.jp/floor/shop_detail.html?UC=1_028"
+        ],
+        "verifiedAt": "2026-10-20T21:14:31.221655+00:00"
+      },
+      {
+        "environment": "production",
+        "city": "sapporo",
+        "view": "upcoming",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 11,
+        "ids": [
+          "15568",
+          "15569",
+          "15570",
+          "15571",
+          "15597",
+          "15926",
+          "15970",
+          "17103",
+          "18047",
+          "18048",
+          "18054"
+        ],
+        "verifiedAt": "2026-10-20T21:14:32.747919+00:00"
+      },
+      {
+        "environment": "production",
+        "city": "sapporo",
+        "view": "new",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 30,
+        "ids": [
+          "15580",
+          "15586",
+          "15587",
+          "15588",
+          "15589",
+          "15590",
+          "15591",
+          "15592",
+          "15595",
+          "15596",
+          "16293",
+          "16296",
+          "17104",
+          "17105",
+          "17624",
+          "17627",
+          "18028",
+          "18029",
+          "18030",
+          "18031",
+          "18049",
+          "18055",
+          "18056",
+          "18057",
+          "18104",
+          "18105",
+          "18124",
+          "18125",
+          "18305",
+          "18306"
+        ],
+        "verifiedAt": "2026-10-20T21:14:33.011915+00:00"
+      },
+      {
+        "environment": "production",
+        "city": "sapporo",
+        "view": "top",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 30,
+        "ids": [
+          "15563",
+          "15564",
+          "15565",
+          "15566",
+          "15567",
+          "15572",
+          "15573",
+          "15574",
+          "15575",
+          "15576",
+          "15577",
+          "15578",
+          "15579",
+          "15581",
+          "15582",
+          "15583",
+          "15584",
+          "15585",
+          "15593",
+          "15594",
+          "15598",
+          "15599",
+          "15600",
+          "15601",
+          "15602",
+          "15603",
+          "15604",
+          "15605",
+          "15606",
+          "15607"
+        ],
+        "verifiedAt": "2026-10-20T21:14:33.289548+00:00"
+      },
+      {
+        "environment": "production",
+        "city": "sapporo",
+        "view": "discounts",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 34,
+        "ids": [
+          "https://anan.fuji-tatsu.co.jp/shop/sapporo-sinoro/",
+          "https://chocottosushi-kiwami.owst.jp/",
+          "https://cocco.eastone.co.jp/shop/kitahachijo",
+          "https://cocco.eastone.co.jp/shop/kitaichijo",
+          "https://cocco.eastone.co.jp/shop/kotoniekimae",
+          "https://cocco.eastone.co.jp/shop/miyanosawa",
+          "https://cocco.eastone.co.jp/shop/shindohigashi",
+          "https://cocco.eastone.co.jp/shop/souen",
+          "https://grand1934.com/restaurant/garden-dining-waraku/",
+          "https://grand1934.com/restaurant/kokaku/",
+          "https://grand1934.com/restaurant/lobby-lounge-mizar/",
+          "https://grand1934.com/restaurant/northern-terrace-diner/",
+          "https://grand1934.com/restaurant/old-saloon1934/",
+          "https://miabocca.eastone.co.jp/shop/Kita2jo",
+          "https://miabocca.eastone.co.jp/shop/Kotoni-station",
+          "https://miabocca.eastone.co.jp/shop/Sapporo-station",
+          "https://miabocca.eastone.co.jp/shop/atsubetsuminami",
+          "https://miabocca.eastone.co.jp/shop/sapporoduo",
+          "https://michiru.dkdining.com/sapporo/",
+          "https://prtimes.jp/main/html/rd/p/000000010.000134951.html",
+          "https://store-info.skylark.co.jp/syabuyo/map/198489/",
+          "https://www.anahisapporosusukino.com/restaurants/verde/",
+          "https://www.hyatt.com/hyatt-centric/ja-JP/ctsct-hyatt-centric-sapporo/dining",
+          "https://www.jrhotels.co.jp/tower/restaurant/skyj/",
+          "https://www.keioplaza-sapporo.co.jp/restaurants/akizu/",
+          "https://www.keioplaza-sapporo.co.jp/restaurants/crossvault/",
+          "https://www.keioplaza-sapporo.co.jp/restaurants/glass/",
+          "https://www.keioplaza-sapporo.co.jp/restaurants/miyama/",
+          "https://www.keioplaza-sapporo.co.jp/restaurants/yamanami/",
+          "https://www.princehotels.co.jp/sapporo/restaurant/alldaydininggrandeur",
+          "https://www.princehotels.co.jp/sapporo/restaurant/fuyojo",
+          "https://www.princehotels.co.jp/sapporo/restaurant/katsura",
+          "https://www.princehotels.co.jp/sapporo/restaurant/top_prince",
+          "https://www.tokyuhotels.co.jp/sapporostream/restaurant/splish/plan/angel_devil/index.html"
+        ],
+        "verifiedAt": "2026-10-20T21:14:34.545566+00:00"
+      }
+    ]
+  },
+  "verifiedAtUtc": "2026-10-20T21:15:09.464176+00:00",
+  "scheduleVerification": {
+    "boundaries": [
+      {
+        "offer": "M Margherita half-price — dine-in and takeaway",
+        "at": "2026-10-31T03:00:00.000Z",
+        "active": false
+      },
+      {
+        "offer": "M Margherita half-price — dine-in and takeaway",
+        "at": "2026-11-01T02:29:00.000Z",
+        "active": false
+      },
+      {
+        "offer": "M Margherita half-price — dine-in and takeaway",
+        "at": "2026-11-01T02:30:00.000Z",
+        "active": true
+      },
+      {
+        "offer": "M Margherita half-price — dine-in and takeaway",
+        "at": "2026-11-01T12:59:00.000Z",
+        "active": true
+      },
+      {
+        "offer": "M Margherita half-price — dine-in and takeaway",
+        "at": "2026-11-01T13:00:00.000Z",
+        "active": false
+      },
+      {
+        "offer": "M Margherita half-price — dine-in and takeaway",
+        "at": "2026-11-02T04:59:00.000Z",
+        "active": true
+      },
+      {
+        "offer": "M Margherita half-price — dine-in and takeaway",
+        "at": "2026-11-02T05:00:00.000Z",
+        "active": false
+      },
+      {
+        "offer": "M Margherita half-price — dine-in and takeaway",
+        "at": "2026-11-02T06:00:00.000Z",
+        "active": true
+      },
+      {
+        "offer": "M Margherita half-price — dine-in and takeaway",
+        "at": "2026-11-02T07:30:00.000Z",
+        "active": false
+      },
+      {
+        "offer": "M Margherita half-price — dine-in and takeaway",
+        "at": "2026-11-02T08:00:00.000Z",
+        "active": true
+      },
+      {
+        "offer": "M Margherita half-price — dine-in and takeaway",
+        "at": "2026-11-06T23:30:00.000Z",
+        "active": false
+      },
+      {
+        "offer": "M Margherita half-price — dine-in and takeaway",
+        "at": "2026-11-08T12:59:00.000Z",
+        "active": true
+      },
+      {
+        "offer": "M Margherita half-price — dine-in and takeaway",
+        "at": "2026-11-09T03:00:00.000Z",
+        "active": false
+      },
+      {
+        "offer": "Private-label bottled wines half-price",
+        "at": "2026-11-08T03:00:00.000Z",
+        "active": false
+      },
+      {
+        "offer": "Private-label bottled wines half-price",
+        "at": "2026-11-09T02:29:00.000Z",
+        "active": false
+      },
+      {
+        "offer": "Private-label bottled wines half-price",
+        "at": "2026-11-09T02:30:00.000Z",
+        "active": true
+      },
+      {
+        "offer": "Private-label bottled wines half-price",
+        "at": "2026-11-09T05:00:00.000Z",
+        "active": false
+      },
+      {
+        "offer": "Private-label bottled wines half-price",
+        "at": "2026-11-09T06:00:00.000Z",
+        "active": true
+      },
+      {
+        "offer": "Private-label bottled wines half-price",
+        "at": "2026-11-09T07:30:00.000Z",
+        "active": false
+      },
+      {
+        "offer": "Private-label bottled wines half-price",
+        "at": "2026-11-09T08:00:00.000Z",
+        "active": true
+      },
+      {
+        "offer": "Private-label bottled wines half-price",
+        "at": "2026-11-30T12:59:00.000Z",
+        "active": true
+      },
+      {
+        "offer": "Private-label bottled wines half-price",
+        "at": "2026-11-30T13:00:00.000Z",
+        "active": false
+      },
+      {
+        "offer": "Private-label bottled wines half-price",
+        "at": "2026-12-01T03:00:00.000Z",
+        "active": false
+      },
+      {
+        "offer": "L Margherita half-price — delivery apps",
+        "at": "2026-11-17T03:00:00.000Z",
+        "active": false
+      },
+      {
+        "offer": "L Margherita half-price — delivery apps",
+        "at": "2026-11-18T01:59:00.000Z",
+        "active": false
+      },
+      {
+        "offer": "L Margherita half-price — delivery apps",
+        "at": "2026-11-18T02:00:00.000Z",
+        "active": true
+      },
+      {
+        "offer": "L Margherita half-price — delivery apps",
+        "at": "2026-11-18T05:00:00.000Z",
+        "active": false
+      },
+      {
+        "offer": "L Margherita half-price — delivery apps",
+        "at": "2026-11-18T07:59:00.000Z",
+        "active": false
+      },
+      {
+        "offer": "L Margherita half-price — delivery apps",
+        "at": "2026-11-18T08:00:00.000Z",
+        "active": true
+      },
+      {
+        "offer": "L Margherita half-price — delivery apps",
+        "at": "2026-11-18T13:00:00.000Z",
+        "active": false
+      },
+      {
+        "offer": "L Margherita half-price — delivery apps",
+        "at": "2026-11-21T06:00:00.000Z",
+        "active": true
+      },
+      {
+        "offer": "L Margherita half-price — delivery apps",
+        "at": "2026-11-24T12:59:00.000Z",
+        "active": true
+      },
+      {
+        "offer": "L Margherita half-price — delivery apps",
+        "at": "2026-11-25T03:00:00.000Z",
+        "active": false
+      }
+    ],
+    "nextStarts": [
+      {
+        "title": "M Margherita half-price — dine-in and takeaway",
+        "startsAt": "2026-11-01T02:30:00.000Z",
+        "end": "22:00"
+      },
+      {
+        "title": "Private-label bottled wines half-price",
+        "startsAt": "2026-11-09T02:30:00.000Z",
+        "end": "14:00"
+      },
+      {
+        "title": "L Margherita half-price — delivery apps",
+        "startsAt": "2026-11-18T02:00:00.000Z",
+        "end": "14:00"
+      }
+    ],
+    "pricingChecks": "M half-price arithmetic; five PB bottles only; no delivery base price invented;100pizza allocation condition retained"
+  },
+  "readerEvidence": [
+    {
+      "url": "https://www.hotpepper.jp/strJ004698306/appearance/",
+      "htmlSha256": "161e347b228927e5a2a987cf2f3edf9a1a32696f385fb1fddb7c32ccf78be987"
+    },
+    {
+      "url": "https://tabelog.com/en/tokyo/A1319/A131905/13325894/dtlmenu/drink/",
+      "htmlSha256": "2dc8b35ca65136c76b50cc7ad52fb9b567b1ae3c642635edf89edde0153ad8ad"
+    },
+    {
+      "url": "https://tabelog.com/en/tokyo/A1319/A131905/13325894/dtlmenu/",
+      "htmlSha256": "305d1b1b8b5e17d3904b1172dec12c337bc411076461e40594fcf6e1a1b80ed5"
+    },
+    {
+      "url": "https://www.hotpepper.jp/strJ004698306/photo/",
+      "htmlSha256": "8a43a079bf1430081a79301407aee32563628e8eee67f9f28b5766afb424028f"
+    },
+    {
+      "url": "https://www.hotpepper.jp/strJ004698306/drink/",
+      "htmlSha256": "111f43d98d21a3a45cc4e039e5585fe2be4ea84dd7ae27cc178161a65c21e787"
+    },
+    {
+      "url": "https://www.hotpepper.jp/strJ004698306/food/",
+      "htmlSha256": "cb535ca32c0cb2c5478ffc293ca43327830f44ab63e0a1cc55727f33f9ca19bb"
+    },
+    {
+      "url": "https://www.hotpepper.jp/strJ004698306/",
+      "htmlSha256": "24bbc978e9b107f3f90ef2e01dc008ebd76fddf98d350e601f0e5e82efae411b"
+    },
+    {
+      "url": "https://tabelog.com/en/tokyo/A1319/A131905/13325894/dtlphotolst/smp2/",
+      "htmlSha256": "12d3509003c259896c5235d36fea416475f49fe8c87167c5ca234789aef0d598"
+    },
+    {
+      "url": "https://salvatore.jp/restaurant/asagaya/",
+      "htmlSha256": "05af9a21a5cffa4baec686318c842fbf83d2ee071cc4be682b0613e13e5e8296"
+    },
+    {
+      "url": "https://prtimes.jp/main/html/rd/p/000000074.000012023.html",
+      "htmlSha256": "8ac64c2e5000167f21bb6d4bbbdce900226ce8b63692e6892e33e5aed5d12d89"
+    },
+    {
+      "url": "https://tabelog.com/en/tokyo/A1319/A131905/13325894/",
+      "htmlSha256": "c3ec22dc89315cd85ae93aff582f6d6e6e282505c1138c63a33b45b5ec2cd096"
+    },
+    {
+      "url": "https://sapporo-list.info/shop-tag/inadumikouen/",
+      "htmlSha256": "31be8cdebb34163d96e15c74f5acf4161403cdc8e6a26cd2a5b18ce1318a22c6"
+    },
+    {
+      "url": "https://misoya.net/news/open-orenosoras-sapporo/",
+      "htmlSha256": "7349036fa3faa4d308542628f0ebbe991815a38b18b0cd36ea7f1c135cc784a6"
+    }
+  ]
+}

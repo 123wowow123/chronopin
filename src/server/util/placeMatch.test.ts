@@ -7,6 +7,10 @@ const matches = (patterns: string[], address: string) =>
   patterns.some((pattern) => new RegExp(pattern.replaceAll('[:alnum:]', 'a-zA-Z0-9'), 'i').test(address));
 
 describe('placeNames', () => {
+  it('answers to the other spellings of the United States and the United Kingdom', () => {
+    expect(placeNames('United States')).toContain('USA');
+    expect(placeNames('united kingdom')).toContain('England');
+  });
   it('gives a US state both its name and its code, whichever was searched', () => {
     expect(placeNames('California')).toEqual(['California', 'CA']);
     expect(placeNames('ny')).toEqual(['New York', 'NY']);

@@ -63,3 +63,12 @@ Sources checked: [Source 1](https://job.inshokuten.com/tokai/work/detail/91244),
 Sources checked: [Source 1](https://part.mynavi.jp/job/136811621/), [Source 2](https://baito.line.me/jobs/J0136811621).
 
 [Fresh counts, duplicate checks, source hashes and access notes](restaurant-japan-other-cities-audit-2026-10-20.json). Existing batch108totals remain635memberships /116missing across all six cities; this check added no venue.
+
+
+Continuation: [Batch109](restaurant-japan-30-japan109-2026-10-20.json) publishes the Tokyo Asagaya lead with its three dated launch phases. Tokyo now has15Coming soon and40Specials; the table above remains the original audit snapshot. Sapporo own-menu/gallery gap remains held after deeper checks; continue Sapporo, Kyoto and Nagoya next.
+
+
+Continuation: [Batch110](restaurant-japan-30-japan110-2026-10-20.json) adds THE LAB NAGOYA to Specials with its actual July2024branch opening retained. Nagoya Specials now32; Coming soon shortages remain unchanged. Kyoto Wanon gallery downloads were all placeholderart; no venue was created from captions alone. Asayu actualJune2026café opening is older than its Octobershop grand opening and outside the Just opened window.
+
+
+Latest check: [Second other-city audit](restaurant-japan-other-cities-audit2-2026-10-20.md) refreshes all16sections after batches109/110 to435memberships/71missing and records SapporoHiraoka, LACHIC ordering-system configuration and Ripasso/Hokuto date conflicts. The original table above remains the earlier snapshot.

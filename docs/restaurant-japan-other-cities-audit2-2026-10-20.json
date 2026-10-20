@@ -1,0 +1,1846 @@
+{
+  "checkedAtUtc": "2026-10-20T21:47:22.926042+00:00",
+  "request": "Check other cities first",
+  "scope": [
+    "kyoto",
+    "nagoya",
+    "tokyo",
+    "sapporo"
+  ],
+  "mode": "Read-only runtime audit and research; no deployment",
+  "guideCounts": {
+    "local": [
+      {
+        "environment": "local",
+        "city": "kyoto",
+        "view": "upcoming",
+        "verificationBase": "http://localhost:3000",
+        "count": 12,
+        "ids": [
+          "15483",
+          "15499",
+          "15500",
+          "15909",
+          "15910",
+          "15911",
+          "15912",
+          "15922",
+          "15931",
+          "16323",
+          "17169",
+          "18510"
+        ],
+        "verifiedAt": "2026-10-20T21:43:57.964539+00:00"
+      },
+      {
+        "environment": "local",
+        "city": "kyoto",
+        "view": "new",
+        "verificationBase": "http://localhost:3000",
+        "count": 33,
+        "ids": [
+          "15460",
+          "15461",
+          "15462",
+          "15463",
+          "15464",
+          "15465",
+          "15466",
+          "15467",
+          "15468",
+          "15469",
+          "15470",
+          "15471",
+          "15472",
+          "15473",
+          "15474",
+          "15475",
+          "15476",
+          "15477",
+          "15478",
+          "15479",
+          "15480",
+          "15481",
+          "15482",
+          "15489",
+          "15490",
+          "15491",
+          "15492",
+          "15493",
+          "15494",
+          "15495",
+          "15498",
+          "18025",
+          "18026"
+        ],
+        "verifiedAt": "2026-10-20T21:43:57.981988+00:00"
+      },
+      {
+        "environment": "local",
+        "city": "kyoto",
+        "view": "top",
+        "verificationBase": "http://localhost:3000",
+        "count": 30,
+        "ids": [
+          "15459",
+          "15484",
+          "15485",
+          "15486",
+          "15487",
+          "15488",
+          "15496",
+          "15497",
+          "15501",
+          "15973",
+          "18052",
+          "18060",
+          "18061",
+          "18098",
+          "18099",
+          "18117",
+          "18119",
+          "18155",
+          "18156",
+          "18170",
+          "18171",
+          "18173",
+          "18191",
+          "18193",
+          "18194",
+          "18209",
+          "18210",
+          "18211",
+          "18212",
+          "18213"
+        ],
+        "verifiedAt": "2026-10-20T21:43:57.996833+00:00"
+      },
+      {
+        "environment": "local",
+        "city": "kyoto",
+        "view": "discounts",
+        "verificationBase": "http://localhost:3000",
+        "count": 35,
+        "ids": [
+          "https://cenci-kyoto.com/",
+          "https://droit-kyoto.jp/",
+          "https://hotelfauchonkyoto.com/ja/gourmet/fauchon-salon-de-the-kyoto/",
+          "https://kyoto.hiltonjapan.co.jp/restaurants/teori",
+          "https://www.hiramatsurestaurant.jp/hiramatsu-kodaiji/",
+          "https://www.hiramatsurestaurant.jp/la-luce/",
+          "https://www.instagram.com/jbowl_ritsumeikan_mae/",
+          "https://www.keihanhotels-resorts.co.jp/kyoto-centuryhotel/topics/happyhour-2/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/011/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/012/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/013/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/014/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/015/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/016/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/017/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/018/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/019/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/020/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/022/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/023/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/026/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/028/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/031/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/033/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/039/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/040/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/042/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/043/",
+          "https://www.next-hero-kyoto.com/%E3%81%9F%E3%81%93%EF%BC%98%E5%BA%97%E8%88%97%E6%83%85%E5%A0%B1/",
+          "https://www.princess-kyoto.co.jp/restaurant/ambercourt/",
+          "https://www.princess-kyoto.co.jp/restaurant/darley/",
+          "https://www.princess-kyoto.co.jp/restaurant/hisuien/",
+          "https://www.princess-kyoto.co.jp/restaurant/hoen/",
+          "https://www.princess-kyoto.co.jp/restaurant/sagano/",
+          "https://www.quil-fait-bon.com/pages/kyoto"
+        ],
+        "verifiedAt": "2026-10-20T21:43:58.056583+00:00"
+      },
+      {
+        "environment": "local",
+        "city": "nagoya",
+        "view": "upcoming",
+        "verificationBase": "http://localhost:3000",
+        "count": 11,
+        "ids": [
+          "15510",
+          "15512",
+          "15517",
+          "15518",
+          "15521",
+          "15522",
+          "15900",
+          "15901",
+          "15902",
+          "16075",
+          "16080"
+        ],
+        "verifiedAt": "2026-10-20T21:43:58.145329+00:00"
+      },
+      {
+        "environment": "local",
+        "city": "nagoya",
+        "view": "new",
+        "verificationBase": "http://localhost:3000",
+        "count": 31,
+        "ids": [
+          "15509",
+          "15511",
+          "15515",
+          "15516",
+          "15519",
+          "15520",
+          "15898",
+          "15899",
+          "15915",
+          "15916",
+          "15917",
+          "15918",
+          "15919",
+          "15920",
+          "15921",
+          "15932",
+          "15964",
+          "15965",
+          "16020",
+          "16021",
+          "16022",
+          "16076",
+          "16294",
+          "16295",
+          "16767",
+          "16771",
+          "16800",
+          "17107",
+          "17166",
+          "17167",
+          "18045"
+        ],
+        "verifiedAt": "2026-10-20T21:43:58.223082+00:00"
+      },
+      {
+        "environment": "local",
+        "city": "nagoya",
+        "view": "top",
+        "verificationBase": "http://localhost:3000",
+        "count": 30,
+        "ids": [
+          "15502",
+          "15503",
+          "15504",
+          "15505",
+          "15506",
+          "15507",
+          "15508",
+          "15513",
+          "15514",
+          "15523",
+          "15524",
+          "15972",
+          "16024",
+          "18044",
+          "18100",
+          "18101",
+          "18121",
+          "18138",
+          "18192",
+          "18195",
+          "18196",
+          "18214",
+          "18215",
+          "18216",
+          "18217",
+          "18218",
+          "18219",
+          "18220",
+          "18221",
+          "18223"
+        ],
+        "verifiedAt": "2026-10-20T21:43:58.279530+00:00"
+      },
+      {
+        "environment": "local",
+        "city": "nagoya",
+        "view": "discounts",
+        "verificationBase": "http://localhost:3000",
+        "count": 32,
+        "ids": [
+          "https://and-gallery.com/#nagoya",
+          "https://csm-cafe.ltr-online.com/lp/csm-cafe-s017",
+          "https://french-kitamura.jp/",
+          "https://kinzan.nagoya/archives/news/2853/",
+          "https://kobekangroup.com/shop/obanzai_kabtoya/",
+          "https://lebeurrenoisettetokyo.com/nagoya/",
+          "https://nagoya.hiltonjapan.co.jp/restaurants/hideaway3-3",
+          "https://nagoya.hiltonjapan.co.jp/restaurants/inplace3-3",
+          "https://nagoya.hiltonjapan.co.jp/restaurants/ouchou",
+          "https://nagoya.parco.jp/shop/detail/?cd=009191",
+          "https://prtimes.jp/main/html/rd/p/000000004.000116722.html",
+          "https://prtimes.jp/main/html/rd/p/000004440.000018505.html",
+          "https://reconnaissance-nagoya.com/",
+          "https://tabelog.com/en/aichi/A2301/A230110/23089382/",
+          "https://thetowerhotel.jp/restaurant/",
+          "https://www.anacrowneplaza-nagoya.jp/pages/restaurant_gardencourt",
+          "https://www.anacrowneplaza-nagoya.jp/pages/restaurant_karin",
+          "https://www.anacrowneplaza-nagoya.jp/pages/restaurant_stargate",
+          "https://www.anacrowneplaza-nagoya.jp/pages/restaurant_winglounge",
+          "https://www.associa.com/nma/restaurant/pergola/",
+          "https://www.centralpark.co.jp/shop/sharecafe/",
+          "https://www.espacionagoya.com/restaurant-bar/the-bar-castle/",
+          "https://www.hiramatsurestaurant.jp/aubergedelill-nagoya/",
+          "https://www.hotpepper.jp/strJ004698778/",
+          "https://www.hotpepper.jp/strJ004699003/",
+          "https://www.kochuten.jp/",
+          "https://www.komeda.co.jp/shop/detail.html?id=1215",
+          "https://www.lafloraison-t.jp/",
+          "https://www.livingroom-skybar.com/",
+          "https://www.princehotels.co.jp/nagoya/restaurant/skydining/",
+          "https://www.quil-fait-bon.com/pages/nagoya-sakae",
+          "https://www.thekawabunnagoya.com/thekawabunnagoya/restaurant/"
+        ],
+        "verifiedAt": "2026-10-20T21:43:59.052261+00:00"
+      },
+      {
+        "environment": "local",
+        "city": "tokyo",
+        "view": "upcoming",
+        "verificationBase": "http://localhost:3000",
+        "count": 15,
+        "ids": [
+          "15526",
+          "15538",
+          "15541",
+          "15544",
+          "15546",
+          "15555",
+          "15556",
+          "15557",
+          "15923",
+          "15929",
+          "15930",
+          "17106",
+          "17621",
+          "18422",
+          "18720"
+        ],
+        "verifiedAt": "2026-10-20T21:43:59.216341+00:00"
+      },
+      {
+        "environment": "local",
+        "city": "tokyo",
+        "view": "new",
+        "verificationBase": "http://localhost:3000",
+        "count": 31,
+        "ids": [
+          "15527",
+          "15539",
+          "15540",
+          "15551",
+          "15552",
+          "15553",
+          "15554",
+          "15558",
+          "15966",
+          "15967",
+          "15968",
+          "16289",
+          "16325",
+          "17170",
+          "17171",
+          "17172",
+          "17173",
+          "17628",
+          "18027",
+          "18043",
+          "18051",
+          "18058",
+          "18102",
+          "18103",
+          "18300",
+          "18301",
+          "18302",
+          "18444",
+          "18507",
+          "18508",
+          "18509"
+        ],
+        "verifiedAt": "2026-10-20T21:43:59.360323+00:00"
+      },
+      {
+        "environment": "local",
+        "city": "tokyo",
+        "view": "top",
+        "verificationBase": "http://localhost:3000",
+        "count": 30,
+        "ids": [
+          "15525",
+          "15528",
+          "15529",
+          "15530",
+          "15531",
+          "15532",
+          "15533",
+          "15534",
+          "15535",
+          "15536",
+          "15537",
+          "15542",
+          "15543",
+          "15545",
+          "15547",
+          "15548",
+          "15549",
+          "15550",
+          "15559",
+          "15560",
+          "15561",
+          "15562",
+          "15903",
+          "15974",
+          "18122",
+          "18123",
+          "18140",
+          "18141",
+          "18157",
+          "18158"
+        ],
+        "verifiedAt": "2026-10-20T21:43:59.390694+00:00"
+      },
+      {
+        "environment": "local",
+        "city": "tokyo",
+        "view": "discounts",
+        "verificationBase": "http://localhost:3000",
+        "count": 40,
+        "ids": [
+          "https://and-gallery.com/#ikebukuro",
+          "https://and-gallery.com/#yurakucho",
+          "https://cocco.eastone.co.jp/shop/gotanda",
+          "https://cocco.eastone.co.jp/shop/kameido",
+          "https://conrad-tokyo.hiltonjapan.co.jp/restaurants/cerise",
+          "https://conrad-tokyo.hiltonjapan.co.jp/restaurants/chinablue",
+          "https://conrad-tokyo.hiltonjapan.co.jp/restaurants/twentyeight",
+          "https://csm-cafe.ltr-online.com/lp/csm-cafe-s012",
+          "https://gourmetpress.net/1488798/",
+          "https://miabocca.eastone.co.jp/shop/Ikebukuro",
+          "https://miabocca.eastone.co.jp/shop/Shakujii-park",
+          "https://miabocca.eastone.co.jp/shop/Shinjuku-takasimaya",
+          "https://mimimi-jiyugaoka.com/#floor1",
+          "https://onodera-group.com/kaitensushi-ikebukuro/",
+          "https://prtimes.jp/main/html/rd/p/000000009.000161200.html",
+          "https://prtimes.jp/main/html/rd/p/000000048.000152772.html",
+          "https://prtimes.jp/main/html/rd/p/000000196.000049183.html",
+          "https://prtimes.jp/main/html/rd/p/000000356.000048489.html",
+          "https://prtimes.jp/main/html/rd/p/000000592.000071323.html",
+          "https://prtimes.jp/main/html/rd/p/000004178.000003860.html",
+          "https://salvatore.jp/restaurant/asagaya/",
+          "https://sarabethsrestaurants.jp/location/omotesando/",
+          "https://sarabethsrestaurants.jp/location/shinagawa/",
+          "https://sarabethsrestaurants.jp/location/shinjuku/",
+          "https://sarabethsrestaurants.jp/location/tokyo/",
+          "https://shibakoen.bar-shinkai.com/",
+          "https://store-info.skylark.co.jp/syabuyo/map/198490/",
+          "https://tabelog.com/en/tokyo/A1303/A130301/13198692/",
+          "https://tokyo.hiltonjapan.co.jp/restaurants/st_georges_bar",
+          "https://www.andaztokyo.jp/restaurants/jp/thetavern-grill-lounge",
+          "https://www.herofield.com/bbq/tokyoprince/",
+          "https://www.hiramatsurestaurant.jp/jardindessens-tokyo/",
+          "https://www.mesm.jp/en/eat-drink/chefs-theatre.html",
+          "https://www.newotani.co.jp/tokyo/restaurant/gardenlounge/",
+          "https://www.quil-fait-bon.com/pages/aoyama",
+          "https://www.quil-fait-bon.com/pages/grand-maison-ginza",
+          "https://www.quil-fait-bon.com/pages/shinjuku",
+          "https://www.quil-fait-bon.com/pages/tokyo-dome-city",
+          "https://www.quil-fait-bon.com/pages/tokyo-skytree-town-solamachi",
+          "https://www.sunamo.jp/floor/shop_detail.html?UC=1_028"
+        ],
+        "verifiedAt": "2026-10-20T21:43:59.662023+00:00"
+      },
+      {
+        "environment": "local",
+        "city": "sapporo",
+        "view": "upcoming",
+        "verificationBase": "http://localhost:3000",
+        "count": 11,
+        "ids": [
+          "15568",
+          "15569",
+          "15570",
+          "15571",
+          "15597",
+          "15926",
+          "15970",
+          "17103",
+          "18047",
+          "18048",
+          "18054"
+        ],
+        "verifiedAt": "2026-10-20T21:43:59.705392+00:00"
+      },
+      {
+        "environment": "local",
+        "city": "sapporo",
+        "view": "new",
+        "verificationBase": "http://localhost:3000",
+        "count": 30,
+        "ids": [
+          "15580",
+          "15586",
+          "15587",
+          "15588",
+          "15589",
+          "15590",
+          "15591",
+          "15592",
+          "15595",
+          "15596",
+          "16293",
+          "16296",
+          "17104",
+          "17105",
+          "17624",
+          "17627",
+          "18028",
+          "18029",
+          "18030",
+          "18031",
+          "18049",
+          "18055",
+          "18056",
+          "18057",
+          "18104",
+          "18105",
+          "18124",
+          "18125",
+          "18305",
+          "18306"
+        ],
+        "verifiedAt": "2026-10-20T21:43:59.738629+00:00"
+      },
+      {
+        "environment": "local",
+        "city": "sapporo",
+        "view": "top",
+        "verificationBase": "http://localhost:3000",
+        "count": 30,
+        "ids": [
+          "15563",
+          "15564",
+          "15565",
+          "15566",
+          "15567",
+          "15572",
+          "15573",
+          "15574",
+          "15575",
+          "15576",
+          "15577",
+          "15578",
+          "15579",
+          "15581",
+          "15582",
+          "15583",
+          "15584",
+          "15585",
+          "15593",
+          "15594",
+          "15598",
+          "15599",
+          "15600",
+          "15601",
+          "15602",
+          "15603",
+          "15604",
+          "15605",
+          "15606",
+          "15607"
+        ],
+        "verifiedAt": "2026-10-20T21:43:59.754397+00:00"
+      },
+      {
+        "environment": "local",
+        "city": "sapporo",
+        "view": "discounts",
+        "verificationBase": "http://localhost:3000",
+        "count": 34,
+        "ids": [
+          "https://anan.fuji-tatsu.co.jp/shop/sapporo-sinoro/",
+          "https://chocottosushi-kiwami.owst.jp/",
+          "https://cocco.eastone.co.jp/shop/kitahachijo",
+          "https://cocco.eastone.co.jp/shop/kitaichijo",
+          "https://cocco.eastone.co.jp/shop/kotoniekimae",
+          "https://cocco.eastone.co.jp/shop/miyanosawa",
+          "https://cocco.eastone.co.jp/shop/shindohigashi",
+          "https://cocco.eastone.co.jp/shop/souen",
+          "https://grand1934.com/restaurant/garden-dining-waraku/",
+          "https://grand1934.com/restaurant/kokaku/",
+          "https://grand1934.com/restaurant/lobby-lounge-mizar/",
+          "https://grand1934.com/restaurant/northern-terrace-diner/",
+          "https://grand1934.com/restaurant/old-saloon1934/",
+          "https://miabocca.eastone.co.jp/shop/Kita2jo",
+          "https://miabocca.eastone.co.jp/shop/Kotoni-station",
+          "https://miabocca.eastone.co.jp/shop/Sapporo-station",
+          "https://miabocca.eastone.co.jp/shop/atsubetsuminami",
+          "https://miabocca.eastone.co.jp/shop/sapporoduo",
+          "https://michiru.dkdining.com/sapporo/",
+          "https://prtimes.jp/main/html/rd/p/000000010.000134951.html",
+          "https://store-info.skylark.co.jp/syabuyo/map/198489/",
+          "https://www.anahisapporosusukino.com/restaurants/verde/",
+          "https://www.hyatt.com/hyatt-centric/ja-JP/ctsct-hyatt-centric-sapporo/dining",
+          "https://www.jrhotels.co.jp/tower/restaurant/skyj/",
+          "https://www.keioplaza-sapporo.co.jp/restaurants/akizu/",
+          "https://www.keioplaza-sapporo.co.jp/restaurants/crossvault/",
+          "https://www.keioplaza-sapporo.co.jp/restaurants/glass/",
+          "https://www.keioplaza-sapporo.co.jp/restaurants/miyama/",
+          "https://www.keioplaza-sapporo.co.jp/restaurants/yamanami/",
+          "https://www.princehotels.co.jp/sapporo/restaurant/alldaydininggrandeur",
+          "https://www.princehotels.co.jp/sapporo/restaurant/fuyojo",
+          "https://www.princehotels.co.jp/sapporo/restaurant/katsura",
+          "https://www.princehotels.co.jp/sapporo/restaurant/top_prince",
+          "https://www.tokyuhotels.co.jp/sapporostream/restaurant/splish/plan/angel_devil/index.html"
+        ],
+        "verifiedAt": "2026-10-20T21:44:00.617291+00:00"
+      }
+    ],
+    "production": [
+      {
+        "environment": "production",
+        "city": "kyoto",
+        "view": "upcoming",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 12,
+        "ids": [
+          "15483",
+          "15499",
+          "15500",
+          "15909",
+          "15910",
+          "15911",
+          "15912",
+          "15922",
+          "15931",
+          "16323",
+          "17169",
+          "18448"
+        ],
+        "verifiedAt": "2026-10-20T21:43:57.738853+00:00"
+      },
+      {
+        "environment": "production",
+        "city": "kyoto",
+        "view": "new",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 33,
+        "ids": [
+          "15460",
+          "15461",
+          "15462",
+          "15463",
+          "15464",
+          "15465",
+          "15466",
+          "15467",
+          "15468",
+          "15469",
+          "15470",
+          "15471",
+          "15472",
+          "15473",
+          "15474",
+          "15475",
+          "15476",
+          "15477",
+          "15478",
+          "15479",
+          "15480",
+          "15481",
+          "15482",
+          "15489",
+          "15490",
+          "15491",
+          "15492",
+          "15493",
+          "15494",
+          "15495",
+          "15498",
+          "18025",
+          "18026"
+        ],
+        "verifiedAt": "2026-10-20T21:43:57.927225+00:00"
+      },
+      {
+        "environment": "production",
+        "city": "kyoto",
+        "view": "top",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 30,
+        "ids": [
+          "15459",
+          "15484",
+          "15485",
+          "15486",
+          "15487",
+          "15488",
+          "15496",
+          "15497",
+          "15501",
+          "15973",
+          "18052",
+          "18060",
+          "18061",
+          "18098",
+          "18099",
+          "18117",
+          "18119",
+          "18155",
+          "18156",
+          "18170",
+          "18171",
+          "18173",
+          "18191",
+          "18193",
+          "18194",
+          "18209",
+          "18210",
+          "18211",
+          "18212",
+          "18213"
+        ],
+        "verifiedAt": "2026-10-20T21:43:58.110510+00:00"
+      },
+      {
+        "environment": "production",
+        "city": "kyoto",
+        "view": "discounts",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 35,
+        "ids": [
+          "https://cenci-kyoto.com/",
+          "https://droit-kyoto.jp/",
+          "https://hotelfauchonkyoto.com/ja/gourmet/fauchon-salon-de-the-kyoto/",
+          "https://kyoto.hiltonjapan.co.jp/restaurants/teori",
+          "https://www.hiramatsurestaurant.jp/hiramatsu-kodaiji/",
+          "https://www.hiramatsurestaurant.jp/la-luce/",
+          "https://www.instagram.com/jbowl_ritsumeikan_mae/",
+          "https://www.keihanhotels-resorts.co.jp/kyoto-centuryhotel/topics/happyhour-2/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/011/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/012/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/013/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/014/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/015/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/016/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/017/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/018/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/019/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/020/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/022/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/023/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/026/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/028/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/031/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/033/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/039/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/040/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/042/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/043/",
+          "https://www.next-hero-kyoto.com/%E3%81%9F%E3%81%93%EF%BC%98%E5%BA%97%E8%88%97%E6%83%85%E5%A0%B1/",
+          "https://www.princess-kyoto.co.jp/restaurant/ambercourt/",
+          "https://www.princess-kyoto.co.jp/restaurant/darley/",
+          "https://www.princess-kyoto.co.jp/restaurant/hisuien/",
+          "https://www.princess-kyoto.co.jp/restaurant/hoen/",
+          "https://www.princess-kyoto.co.jp/restaurant/sagano/",
+          "https://www.quil-fait-bon.com/pages/kyoto"
+        ],
+        "verifiedAt": "2026-10-20T21:43:58.515187+00:00"
+      },
+      {
+        "environment": "production",
+        "city": "nagoya",
+        "view": "upcoming",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 11,
+        "ids": [
+          "15510",
+          "15512",
+          "15517",
+          "15518",
+          "15521",
+          "15522",
+          "15900",
+          "15901",
+          "15902",
+          "16075",
+          "16080"
+        ],
+        "verifiedAt": "2026-10-20T21:43:59.497041+00:00"
+      },
+      {
+        "environment": "production",
+        "city": "nagoya",
+        "view": "new",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 31,
+        "ids": [
+          "15509",
+          "15511",
+          "15515",
+          "15516",
+          "15519",
+          "15520",
+          "15898",
+          "15899",
+          "15915",
+          "15916",
+          "15917",
+          "15918",
+          "15919",
+          "15920",
+          "15921",
+          "15932",
+          "15964",
+          "15965",
+          "16020",
+          "16021",
+          "16022",
+          "16076",
+          "16294",
+          "16295",
+          "16767",
+          "16771",
+          "16800",
+          "17107",
+          "17166",
+          "17167",
+          "18045"
+        ],
+        "verifiedAt": "2026-10-20T21:43:59.686736+00:00"
+      },
+      {
+        "environment": "production",
+        "city": "nagoya",
+        "view": "top",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 30,
+        "ids": [
+          "15502",
+          "15503",
+          "15504",
+          "15505",
+          "15506",
+          "15507",
+          "15508",
+          "15513",
+          "15514",
+          "15523",
+          "15524",
+          "15972",
+          "16024",
+          "18044",
+          "18100",
+          "18101",
+          "18121",
+          "18138",
+          "18192",
+          "18195",
+          "18196",
+          "18214",
+          "18215",
+          "18216",
+          "18217",
+          "18218",
+          "18219",
+          "18220",
+          "18221",
+          "18223"
+        ],
+        "verifiedAt": "2026-10-20T21:43:59.926572+00:00"
+      },
+      {
+        "environment": "production",
+        "city": "nagoya",
+        "view": "discounts",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 32,
+        "ids": [
+          "https://and-gallery.com/#nagoya",
+          "https://csm-cafe.ltr-online.com/lp/csm-cafe-s017",
+          "https://french-kitamura.jp/",
+          "https://kinzan.nagoya/archives/news/2853/",
+          "https://kobekangroup.com/shop/obanzai_kabtoya/",
+          "https://lebeurrenoisettetokyo.com/nagoya/",
+          "https://nagoya.hiltonjapan.co.jp/restaurants/hideaway3-3",
+          "https://nagoya.hiltonjapan.co.jp/restaurants/inplace3-3",
+          "https://nagoya.hiltonjapan.co.jp/restaurants/ouchou",
+          "https://nagoya.parco.jp/shop/detail/?cd=009191",
+          "https://prtimes.jp/main/html/rd/p/000000004.000116722.html",
+          "https://prtimes.jp/main/html/rd/p/000004440.000018505.html",
+          "https://reconnaissance-nagoya.com/",
+          "https://tabelog.com/en/aichi/A2301/A230110/23089382/",
+          "https://thetowerhotel.jp/restaurant/",
+          "https://www.anacrowneplaza-nagoya.jp/pages/restaurant_gardencourt",
+          "https://www.anacrowneplaza-nagoya.jp/pages/restaurant_karin",
+          "https://www.anacrowneplaza-nagoya.jp/pages/restaurant_stargate",
+          "https://www.anacrowneplaza-nagoya.jp/pages/restaurant_winglounge",
+          "https://www.associa.com/nma/restaurant/pergola/",
+          "https://www.centralpark.co.jp/shop/sharecafe/",
+          "https://www.espacionagoya.com/restaurant-bar/the-bar-castle/",
+          "https://www.hiramatsurestaurant.jp/aubergedelill-nagoya/",
+          "https://www.hotpepper.jp/strJ004698778/",
+          "https://www.hotpepper.jp/strJ004699003/",
+          "https://www.kochuten.jp/",
+          "https://www.komeda.co.jp/shop/detail.html?id=1215",
+          "https://www.lafloraison-t.jp/",
+          "https://www.livingroom-skybar.com/",
+          "https://www.princehotels.co.jp/nagoya/restaurant/skydining/",
+          "https://www.quil-fait-bon.com/pages/nagoya-sakae",
+          "https://www.thekawabunnagoya.com/thekawabunnagoya/restaurant/"
+        ],
+        "verifiedAt": "2026-10-20T21:44:00.401302+00:00"
+      },
+      {
+        "environment": "production",
+        "city": "tokyo",
+        "view": "upcoming",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 15,
+        "ids": [
+          "15526",
+          "15538",
+          "15541",
+          "15544",
+          "15546",
+          "15555",
+          "15556",
+          "15557",
+          "15923",
+          "15929",
+          "15930",
+          "17106",
+          "17621",
+          "18422",
+          "18722"
+        ],
+        "verifiedAt": "2026-10-20T21:44:01.441857+00:00"
+      },
+      {
+        "environment": "production",
+        "city": "tokyo",
+        "view": "new",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 31,
+        "ids": [
+          "15527",
+          "15539",
+          "15540",
+          "15551",
+          "15552",
+          "15553",
+          "15554",
+          "15558",
+          "15966",
+          "15967",
+          "15968",
+          "16289",
+          "16325",
+          "17170",
+          "17171",
+          "17172",
+          "17173",
+          "17628",
+          "18027",
+          "18043",
+          "18051",
+          "18058",
+          "18102",
+          "18103",
+          "18300",
+          "18301",
+          "18302",
+          "18444",
+          "18445",
+          "18446",
+          "18447"
+        ],
+        "verifiedAt": "2026-10-20T21:44:01.639243+00:00"
+      },
+      {
+        "environment": "production",
+        "city": "tokyo",
+        "view": "top",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 30,
+        "ids": [
+          "15525",
+          "15528",
+          "15529",
+          "15530",
+          "15531",
+          "15532",
+          "15533",
+          "15534",
+          "15535",
+          "15536",
+          "15537",
+          "15542",
+          "15543",
+          "15545",
+          "15547",
+          "15548",
+          "15549",
+          "15550",
+          "15559",
+          "15560",
+          "15561",
+          "15562",
+          "15903",
+          "15974",
+          "18122",
+          "18123",
+          "18140",
+          "18141",
+          "18157",
+          "18158"
+        ],
+        "verifiedAt": "2026-10-20T21:44:01.930317+00:00"
+      },
+      {
+        "environment": "production",
+        "city": "tokyo",
+        "view": "discounts",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 40,
+        "ids": [
+          "https://and-gallery.com/#ikebukuro",
+          "https://and-gallery.com/#yurakucho",
+          "https://cocco.eastone.co.jp/shop/gotanda",
+          "https://cocco.eastone.co.jp/shop/kameido",
+          "https://conrad-tokyo.hiltonjapan.co.jp/restaurants/cerise",
+          "https://conrad-tokyo.hiltonjapan.co.jp/restaurants/chinablue",
+          "https://conrad-tokyo.hiltonjapan.co.jp/restaurants/twentyeight",
+          "https://csm-cafe.ltr-online.com/lp/csm-cafe-s012",
+          "https://gourmetpress.net/1488798/",
+          "https://miabocca.eastone.co.jp/shop/Ikebukuro",
+          "https://miabocca.eastone.co.jp/shop/Shakujii-park",
+          "https://miabocca.eastone.co.jp/shop/Shinjuku-takasimaya",
+          "https://mimimi-jiyugaoka.com/#floor1",
+          "https://onodera-group.com/kaitensushi-ikebukuro/",
+          "https://prtimes.jp/main/html/rd/p/000000009.000161200.html",
+          "https://prtimes.jp/main/html/rd/p/000000048.000152772.html",
+          "https://prtimes.jp/main/html/rd/p/000000196.000049183.html",
+          "https://prtimes.jp/main/html/rd/p/000000356.000048489.html",
+          "https://prtimes.jp/main/html/rd/p/000000592.000071323.html",
+          "https://prtimes.jp/main/html/rd/p/000004178.000003860.html",
+          "https://salvatore.jp/restaurant/asagaya/",
+          "https://sarabethsrestaurants.jp/location/omotesando/",
+          "https://sarabethsrestaurants.jp/location/shinagawa/",
+          "https://sarabethsrestaurants.jp/location/shinjuku/",
+          "https://sarabethsrestaurants.jp/location/tokyo/",
+          "https://shibakoen.bar-shinkai.com/",
+          "https://store-info.skylark.co.jp/syabuyo/map/198490/",
+          "https://tabelog.com/en/tokyo/A1303/A130301/13198692/",
+          "https://tokyo.hiltonjapan.co.jp/restaurants/st_georges_bar",
+          "https://www.andaztokyo.jp/restaurants/jp/thetavern-grill-lounge",
+          "https://www.herofield.com/bbq/tokyoprince/",
+          "https://www.hiramatsurestaurant.jp/jardindessens-tokyo/",
+          "https://www.mesm.jp/en/eat-drink/chefs-theatre.html",
+          "https://www.newotani.co.jp/tokyo/restaurant/gardenlounge/",
+          "https://www.quil-fait-bon.com/pages/aoyama",
+          "https://www.quil-fait-bon.com/pages/grand-maison-ginza",
+          "https://www.quil-fait-bon.com/pages/shinjuku",
+          "https://www.quil-fait-bon.com/pages/tokyo-dome-city",
+          "https://www.quil-fait-bon.com/pages/tokyo-skytree-town-solamachi",
+          "https://www.sunamo.jp/floor/shop_detail.html?UC=1_028"
+        ],
+        "verifiedAt": "2026-10-20T21:44:02.292851+00:00"
+      },
+      {
+        "environment": "production",
+        "city": "sapporo",
+        "view": "upcoming",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 11,
+        "ids": [
+          "15568",
+          "15569",
+          "15570",
+          "15571",
+          "15597",
+          "15926",
+          "15970",
+          "17103",
+          "18047",
+          "18048",
+          "18054"
+        ],
+        "verifiedAt": "2026-10-20T21:44:03.287658+00:00"
+      },
+      {
+        "environment": "production",
+        "city": "sapporo",
+        "view": "new",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 30,
+        "ids": [
+          "15580",
+          "15586",
+          "15587",
+          "15588",
+          "15589",
+          "15590",
+          "15591",
+          "15592",
+          "15595",
+          "15596",
+          "16293",
+          "16296",
+          "17104",
+          "17105",
+          "17624",
+          "17627",
+          "18028",
+          "18029",
+          "18030",
+          "18031",
+          "18049",
+          "18055",
+          "18056",
+          "18057",
+          "18104",
+          "18105",
+          "18124",
+          "18125",
+          "18305",
+          "18306"
+        ],
+        "verifiedAt": "2026-10-20T21:44:03.556215+00:00"
+      },
+      {
+        "environment": "production",
+        "city": "sapporo",
+        "view": "top",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 30,
+        "ids": [
+          "15563",
+          "15564",
+          "15565",
+          "15566",
+          "15567",
+          "15572",
+          "15573",
+          "15574",
+          "15575",
+          "15576",
+          "15577",
+          "15578",
+          "15579",
+          "15581",
+          "15582",
+          "15583",
+          "15584",
+          "15585",
+          "15593",
+          "15594",
+          "15598",
+          "15599",
+          "15600",
+          "15601",
+          "15602",
+          "15603",
+          "15604",
+          "15605",
+          "15606",
+          "15607"
+        ],
+        "verifiedAt": "2026-10-20T21:44:03.778312+00:00"
+      },
+      {
+        "environment": "production",
+        "city": "sapporo",
+        "view": "discounts",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 34,
+        "ids": [
+          "https://anan.fuji-tatsu.co.jp/shop/sapporo-sinoro/",
+          "https://chocottosushi-kiwami.owst.jp/",
+          "https://cocco.eastone.co.jp/shop/kitahachijo",
+          "https://cocco.eastone.co.jp/shop/kitaichijo",
+          "https://cocco.eastone.co.jp/shop/kotoniekimae",
+          "https://cocco.eastone.co.jp/shop/miyanosawa",
+          "https://cocco.eastone.co.jp/shop/shindohigashi",
+          "https://cocco.eastone.co.jp/shop/souen",
+          "https://grand1934.com/restaurant/garden-dining-waraku/",
+          "https://grand1934.com/restaurant/kokaku/",
+          "https://grand1934.com/restaurant/lobby-lounge-mizar/",
+          "https://grand1934.com/restaurant/northern-terrace-diner/",
+          "https://grand1934.com/restaurant/old-saloon1934/",
+          "https://miabocca.eastone.co.jp/shop/Kita2jo",
+          "https://miabocca.eastone.co.jp/shop/Kotoni-station",
+          "https://miabocca.eastone.co.jp/shop/Sapporo-station",
+          "https://miabocca.eastone.co.jp/shop/atsubetsuminami",
+          "https://miabocca.eastone.co.jp/shop/sapporoduo",
+          "https://michiru.dkdining.com/sapporo/",
+          "https://prtimes.jp/main/html/rd/p/000000010.000134951.html",
+          "https://store-info.skylark.co.jp/syabuyo/map/198489/",
+          "https://www.anahisapporosusukino.com/restaurants/verde/",
+          "https://www.hyatt.com/hyatt-centric/ja-JP/ctsct-hyatt-centric-sapporo/dining",
+          "https://www.jrhotels.co.jp/tower/restaurant/skyj/",
+          "https://www.keioplaza-sapporo.co.jp/restaurants/akizu/",
+          "https://www.keioplaza-sapporo.co.jp/restaurants/crossvault/",
+          "https://www.keioplaza-sapporo.co.jp/restaurants/glass/",
+          "https://www.keioplaza-sapporo.co.jp/restaurants/miyama/",
+          "https://www.keioplaza-sapporo.co.jp/restaurants/yamanami/",
+          "https://www.princehotels.co.jp/sapporo/restaurant/alldaydininggrandeur",
+          "https://www.princehotels.co.jp/sapporo/restaurant/fuyojo",
+          "https://www.princehotels.co.jp/sapporo/restaurant/katsura",
+          "https://www.princehotels.co.jp/sapporo/restaurant/top_prince",
+          "https://www.tokyuhotels.co.jp/sapporostream/restaurant/splish/plan/angel_devil/index.html"
+        ],
+        "verifiedAt": "2026-10-20T21:44:04.177294+00:00"
+      }
+    ]
+  },
+  "distinctMembershipsAcrossFourCities": 435,
+  "shortfallAcrossFourCities": 71,
+  "shortfallByCity": {
+    "kyoto": 18,
+    "nagoya": 19,
+    "tokyo": 15,
+    "sapporo": 19
+  },
+  "leads": [
+    {
+      "city": "sapporo",
+      "name": "Olive no Oka — Sapporo Hiraoka",
+      "priority": 1,
+      "status": "Strongest new candidate; finish exact branch menu and photo research",
+      "opening": "2026-12-10",
+      "sources": [
+        "https://www.olivenooka.jp/data/news.csv",
+        "https://maps.olivenooka.jp/jp/detail/6642.html",
+        "https://work.olivenooka.jp/brand-jobfind/job/All/35532",
+        "https://www.olivenooka.jp/menu/index.html",
+        "https://www.olivenooka.jp/menu/pasta.html",
+        "https://www.instagram.com/olivenooka_jp/"
+      ],
+      "findings": "Operator October16 news feed and exact branch page agree on December10. Address: Sapporo Kiyota-ku Hiraoka8-jo1-1-10. Published service: weekdays10:00–24:00; weekends/holidays07:00–24:00;07:00–10:00morning menu only. Exact branch page links operator menu, including breakfast. Name checks in both environments find only Shinkotoni15568andNishimachi16296, distinct branches.",
+      "gaps": [
+        "Transcribe applicable operator menu items/prices and confirm launch-period availability; do not promise current autumn specials in December.",
+        "Find and visually verify actual Hiraoka venue/photos or exact-branch promotional material, with source and credits. No branch-specific photo is exposed in the fetched detail-page image list. Instagram fetched but gallery photos have not been validated.",
+        "Do not use the Toyohira-ku interview venue as the restaurant address, recruitment shifts as service hours, or staff50%-meal benefit as a public Special."
+      ]
+    },
+    {
+      "city": "sapporo",
+      "name": "Ore no Sora — Sapporo",
+      "priority": 2,
+      "status": "Retain imminent-opening priority, own menu/gallery unresolved",
+      "opening": "2026-10-22",
+      "sources": [
+        "https://misoya.net/news/open-orenosoras-sapporo/",
+        "https://try-international.co.jp/news/grand-opening/10092/"
+      ],
+      "findings": "Current operator opening remains October22. Broad name checks still find no matching Pin. Refetched operator HTML successfully despite web-reader access failure; no usable exact-branch menu/photo improvement established.",
+      "gaps": [
+        "Verify actual first-service history against obsolete September recruitment estimates.",
+        "Find exact branch menu with named dishes/prices and actual gallery; do not copy another Tadokoro/Ore no Sora branch."
+      ]
+    },
+    {
+      "city": "sapporo",
+      "name": "Shokudo Hokuto — Sapporo station",
+      "priority": 5,
+      "status": "Current employer reading supersedes stale search snippet; date remains provisional",
+      "openingPrecision": "December2026, mid-month in current service job; no exact day",
+      "sources": [
+        "https://next.rikunabi.com/viewjob/jkee7ffeb54e7101aa/",
+        "https://next.rikunabi.com/viewjob/jk324f4b848dc37676/",
+        "https://townwork.net/viewjob/jobid_e9bbd12f8c3bbe24/"
+      ],
+      "findings": "Opening dates drift across recruitment copies. Search snippet says November but opened current service job says mid-December; current kitchen job also says December. Address identifies Kita2-joNishi2-4. No matching Hokuto/ほく斗 Pin found in either environment.",
+      "gaps": [
+        "Obtain operator customer announcement to settle date; current employer month is a provisional lead, not exact confirmed opening.",
+        "Find public service hours, actual named menu/prices and actual branch gallery; employee shifts do not supply service hours."
+      ]
+    },
+    {
+      "city": "kyoto",
+      "name": "Ripasso — Fushimi Nakashojima",
+      "priority": 4,
+      "status": "Fresh lead; operator/recruitment opening conflict",
+      "openingPrecision": "Operator site November2026; current employer December10; local listing Decembermonth",
+      "sources": [
+        "https://www.moment2026.com/",
+        "https://job.inshokuten.com/kansai/work/detail/94595",
+        "https://kyoto.mypl.net/shop/00000390130/",
+        "https://www.instagram.com/ripasso2026/"
+      ],
+      "findings": "All exact sources identify4-21Minamishinchi,Fushimi-ku. Operator site says2026.11OPENINGSOON; opened current employer saysDecember10; local listing saysDecember. Operator links restaurantInstagramripasso2026separately from guesthouseettoi2026. No Ripasso Pin found in either environment.",
+      "gaps": [
+        "Resolve restaurant versus guesthouse launch chronology before selecting Pin opening. Cached employer query variants sayDecember1and must not outrank opened current page without confirmation.",
+        "Publish actual named branch dishes/prices or explicitly unpriced items after verifying operator menu; generic pizza/wine job descriptions are insufficient.",
+        "Visually validate actual venue/food photos. Instagram fetched bycurl but web reader throttled; no reviewed photo claimed. Employer Michelin tag does not establish this new branch recognition."
+      ]
+    },
+    {
+      "city": "nagoya",
+      "name": "THE CITY BAKERY — LACHIC",
+      "priority": 3,
+      "status": "New exact branch ordering-system lead; no verified priced menu yet",
+      "openingPrecision": "November2026month only",
+      "sources": [
+        "https://arwrk.net/recruit/eknv2tjmve4pfg4/13120358/",
+        "https://thecitybakery.jp/shop",
+        "https://foodmenu.cb.monoedge.ai/v1/cb/"
+      ],
+      "findings": "Exact employer page confirmsNovemberplanned andLACHICB1,3-6-1Sakae. Operator shop directory still has noLACHICtext, but linked public mobile-menu HTML contains CBラシック location_url_name lachic and corresponding shop. Public configuration marks the shop Holiday with empty service hours/address/phone; Active configuration is not evidence of service having begun.",
+      "gaps": [
+        "Resolve exact branch opening day or preserve an explicitly estimated month anchor.",
+        "Use the real branch selector to investigate its menu; no LACHIC named dishes/prices were yet verified. A guessed /v1/cb/lachic URL failed and is not evidence.",
+        "Verify exact completed venue or exact-branch promotional gallery. Do not borrow JR NagoyaTakashimaya15900menu/photos; employer shifts do not prove public service hours."
+      ]
+    },
+    {
+      "city": "tokyo",
+      "name": "OSTERIA SALVATORE — Asagaya",
+      "priority": 6,
+      "status": "Already published in batch109; follow-up quality gaps remain",
+      "opening": "2026-11-01",
+      "sources": [
+        "https://salvatore.jp/restaurant/asagaya/",
+        "https://prtimes.jp/main/html/rd/p/000000074.000012023.html"
+      ],
+      "findings": "Refetched official branch page still saysComingSoonfor menu. Existing batch109 includes branch-booking planned menu and three dated launch phases; no duplicate addition warranted.",
+      "gaps": [
+        "Check final operator menu/prices and completed-room/exterior photos when published.",
+        "Keep100pizzaquota allocation, participating delivery app names and broader holiday/early service terms pending as inbatch109."
+      ]
+    },
+    {
+      "city": "tokyo",
+      "name": "LONGING HOUSE — Gaienmae",
+      "priority": 7,
+      "status": "Exclude November refurbishment from new-opening replenishment",
+      "opening": "2025-09-18",
+      "sources": [
+        "https://job.inshokuten.com/kanto/work/detail/92814?searchJobCharacteristicId=6&searchType=p",
+        "https://longinghouse.com/no.2/blog/news/aoyama_news/545",
+        "https://tabelog.com/tokyo/A1306/A130603/13311582/"
+      ],
+      "findings": "Employer November2026listing explicitly saysrenewal. Operator opening-history page and exact current branch listing establishSeptember18,2025at3-41-6Jingumae. Operator history page also carries maintenance-closure notice.",
+      "gaps": [
+        "Do not reset actual branch date toNovember2026. Confirm reopening service separately before considering any eligible offer."
+      ]
+    }
+  ],
+  "duplicateChecks": {
+    "local": {
+      "checkedAt": "2026-10-20T21:44:48.935265+00:00",
+      "queries": [
+        {
+          "term": "roan",
+          "matches": [
+            {
+              "id": 15459,
+              "name": "Roan Kikunoi",
+              "sourceUrl": "https://kikunoi.jp/restaurant/roan.html",
+              "opening": "2026-10-09T00:00:00.000Z"
+            },
+            {
+              "id": 16323,
+              "name": "roan — Kyoto Marutamachi",
+              "sourceUrl": "https://www.instagram.com/roan.cafe/",
+              "opening": "2026-11-14T00:00:00.000Z"
+            }
+          ]
+        },
+        {
+          "term": "Shunka",
+          "matches": [
+            {
+              "id": 15597,
+              "name": "Hakodate Shunka — Sapporo",
+              "sourceUrl": "https://sapporo-list.info/shop/kaitensushi-hunka-sapporo/",
+              "opening": "2026-11-30T00:00:00.000Z"
+            }
+          ]
+        },
+        {
+          "term": "くろ凪",
+          "matches": []
+        },
+        {
+          "term": "Kuro",
+          "matches": [
+            {
+              "id": 13995,
+              "name": "F&N Magnolia My Melody & Kuromi Strawberry and Yoghurt Ice Confection",
+              "sourceUrl": "https://www.minimeinsights.com/2026/09/04/revel-in-the-sweet-and-sassy-delight-of-fn-magnolias-new-limited-edition-my-melody-kuromi-strawberry-and-yoghurt-ice-confection/",
+              "opening": "2026-09-03T00:00:00.000Z"
+            },
+            {
+              "id": 15522,
+              "name": "KuroNagi — Global Gate",
+              "sourceUrl": "https://prtimes.jp/main/html/rd/p/000000002.000190931.html",
+              "opening": "2026-10-26T00:00:00.000Z"
+            },
+            {
+              "id": 15529,
+              "name": "Mia Bocca — Ikebukuro Tobu",
+              "sourceUrl": "https://miabocca.eastone.co.jp/shop/Ikebukuro",
+              "opening": "2026-10-14T00:00:00.000Z"
+            },
+            {
+              "id": 15907,
+              "name": "and GALLERY — Ikebukuro",
+              "sourceUrl": "https://and-gallery.com/#ikebukuro",
+              "opening": "2026-10-15T00:00:00.000Z"
+            },
+            {
+              "id": 16294,
+              "name": "Sakutako — Kurokawa",
+              "sourceUrl": "https://jouhou.nagoya/sakutako-kurokawa/",
+              "opening": "2026-10-13T00:00:00.000Z"
+            },
+            {
+              "id": 18045,
+              "name": "Odaidokoro Rokurokudo",
+              "sourceUrl": "https://prtimes.jp/main/html/rd/p/000000001.000191903.html",
+              "opening": "2026-10-08T00:00:00.000Z"
+            },
+            {
+              "id": 18422,
+              "name": "Kaiten Sushi Ginza Onodera — HAREZA Ikebukuro",
+              "sourceUrl": "https://onodera-group.com/kaitensushi-ikebukuro/",
+              "opening": "2026-10-23T00:00:00.000Z"
+            },
+            {
+              "id": 18506,
+              "name": "Kuroge Wagyu Mabushi Akatsuki — Tenjin",
+              "sourceUrl": "https://tabelog.com/en/fukuoka/A4001/A400103/40075068/",
+              "opening": "2026-10-01T00:00:00.000Z"
+            }
+          ]
+        },
+        {
+          "term": "Ripasso",
+          "matches": []
+        },
+        {
+          "term": "ほく斗",
+          "matches": []
+        },
+        {
+          "term": "Hokuto",
+          "matches": []
+        },
+        {
+          "term": "Olive",
+          "matches": [
+            {
+              "id": 321,
+              "name": "Sony WH-1000XM6 Olive Gray",
+              "sourceUrl": "https://electronics.sony.com/audio/headphones/headband/p/wh1000xm6-g",
+              "opening": "2026-08-03T00:00:00.000Z"
+            },
+            {
+              "id": 4472,
+              "name": "Palace South2 West8 River Trek Jacket Olive Camo",
+              "sourceUrl": "https://usa.palaceskateboards.com/advice/palace-south2-west8",
+              "opening": "2026-08-14T10:00:00.000Z"
+            },
+            {
+              "id": 6242,
+              "name": "Oliver & Company",
+              "sourceUrl": "https://www.imdb.com/title/tt0095776/",
+              "opening": "1988-11-18T00:00:00.000Z"
+            },
+            {
+              "id": 6691,
+              "name": "Olive Juice",
+              "sourceUrl": "https://www.eatolivejuice.com/",
+              "opening": "2026-10-08T00:00:00.000Z"
+            },
+            {
+              "id": 14263,
+              "name": "Fig ＆ Olive (Sinar Mas Plaza)",
+              "sourceUrl": "https://www.diningcity.cn/shanghai/fig_olive_sinar_mas_plaza",
+              "opening": "2026-10-13T00:00:00.000Z"
+            },
+            {
+              "id": 15568,
+              "name": "Olive no Oka — Sapporo Shinkotoni",
+              "sourceUrl": "https://maps.olivenooka.jp/jp/detail/6621.html",
+              "opening": "2026-10-22T00:00:00.000Z"
+            },
+            {
+              "id": 15770,
+              "name": "Oliver's Cider & Perry Yarlington Mill (750ml)",
+              "sourceUrl": "https://theolivers.org.uk/product/yarlington-mill/",
+              "opening": "2026-06-15T00:00:00.000Z"
+            },
+            {
+              "id": 16296,
+              "name": "Olive no Oka — Sapporo Nishimachi",
+              "sourceUrl": "https://maps.olivenooka.jp/jp/detail/6620.html",
+              "opening": "2026-10-08T00:00:00.000Z"
+            }
+          ]
+        },
+        {
+          "term": "RAZAN",
+          "matches": []
+        },
+        {
+          "term": "Ore no Sora",
+          "matches": []
+        },
+        {
+          "term": "田所",
+          "matches": []
+        }
+      ]
+    },
+    "production": {
+      "checkedAt": "2026-10-20T21:44:48.735748+00:00",
+      "queries": [
+        {
+          "term": "roan",
+          "matches": [
+            {
+              "id": 15459,
+              "name": "Roan Kikunoi",
+              "sourceUrl": "https://kikunoi.jp/restaurant/roan.html",
+              "opening": "2026-10-09T00:00:00.000Z"
+            },
+            {
+              "id": 16323,
+              "name": "roan — Kyoto Marutamachi",
+              "sourceUrl": "https://www.instagram.com/roan.cafe/",
+              "opening": "2026-11-14T00:00:00.000Z"
+            }
+          ]
+        },
+        {
+          "term": "Shunka",
+          "matches": [
+            {
+              "id": 15597,
+              "name": "Hakodate Shunka — Sapporo",
+              "sourceUrl": "https://sapporo-list.info/shop/kaitensushi-hunka-sapporo/",
+              "opening": "2026-11-30T00:00:00.000Z"
+            }
+          ]
+        },
+        {
+          "term": "くろ凪",
+          "matches": []
+        },
+        {
+          "term": "Kuro",
+          "matches": [
+            {
+              "id": 13995,
+              "name": "F&N Magnolia My Melody & Kuromi Strawberry and Yoghurt Ice Confection",
+              "sourceUrl": "https://www.minimeinsights.com/2026/09/04/revel-in-the-sweet-and-sassy-delight-of-fn-magnolias-new-limited-edition-my-melody-kuromi-strawberry-and-yoghurt-ice-confection/",
+              "opening": "2026-09-03T00:00:00.000Z"
+            },
+            {
+              "id": 15522,
+              "name": "KuroNagi — Global Gate",
+              "sourceUrl": "https://prtimes.jp/main/html/rd/p/000000002.000190931.html",
+              "opening": "2026-10-26T00:00:00.000Z"
+            },
+            {
+              "id": 15529,
+              "name": "Mia Bocca — Ikebukuro Tobu",
+              "sourceUrl": "https://miabocca.eastone.co.jp/shop/Ikebukuro",
+              "opening": "2026-10-14T00:00:00.000Z"
+            },
+            {
+              "id": 15907,
+              "name": "and GALLERY — Ikebukuro",
+              "sourceUrl": "https://and-gallery.com/#ikebukuro",
+              "opening": "2026-10-15T00:00:00.000Z"
+            },
+            {
+              "id": 16294,
+              "name": "Sakutako — Kurokawa",
+              "sourceUrl": "https://jouhou.nagoya/sakutako-kurokawa/",
+              "opening": "2026-10-13T00:00:00.000Z"
+            },
+            {
+              "id": 18045,
+              "name": "Odaidokoro Rokurokudo",
+              "sourceUrl": "https://prtimes.jp/main/html/rd/p/000000001.000191903.html",
+              "opening": "2026-10-08T00:00:00.000Z"
+            },
+            {
+              "id": 18422,
+              "name": "Kaiten Sushi Ginza Onodera — HAREZA Ikebukuro",
+              "sourceUrl": "https://onodera-group.com/kaitensushi-ikebukuro/",
+              "opening": "2026-10-23T00:00:00.000Z"
+            },
+            {
+              "id": 18506,
+              "name": "Kuroge Wagyu Mabushi Akatsuki — Tenjin",
+              "sourceUrl": "https://tabelog.com/en/fukuoka/A4001/A400103/40075068/",
+              "opening": "2026-10-01T00:00:00.000Z"
+            }
+          ]
+        },
+        {
+          "term": "Ripasso",
+          "matches": []
+        },
+        {
+          "term": "ほく斗",
+          "matches": []
+        },
+        {
+          "term": "Hokuto",
+          "matches": []
+        },
+        {
+          "term": "Olive",
+          "matches": [
+            {
+              "id": 321,
+              "name": "Sony WH-1000XM6 Olive Gray",
+              "sourceUrl": "https://electronics.sony.com/audio/headphones/headband/p/wh1000xm6-g",
+              "opening": "2026-08-03T00:00:00.000Z"
+            },
+            {
+              "id": 4472,
+              "name": "Palace South2 West8 River Trek Jacket Olive Camo",
+              "sourceUrl": "https://usa.palaceskateboards.com/advice/palace-south2-west8",
+              "opening": "2026-08-14T10:00:00.000Z"
+            },
+            {
+              "id": 6242,
+              "name": "Oliver & Company",
+              "sourceUrl": "https://www.imdb.com/title/tt0095776/",
+              "opening": "1988-11-18T00:00:00.000Z"
+            },
+            {
+              "id": 6691,
+              "name": "Olive Juice",
+              "sourceUrl": "https://www.eatolivejuice.com/",
+              "opening": "2026-10-08T00:00:00.000Z"
+            },
+            {
+              "id": 14263,
+              "name": "Fig ＆ Olive (Sinar Mas Plaza)",
+              "sourceUrl": "https://www.diningcity.cn/shanghai/fig_olive_sinar_mas_plaza",
+              "opening": "2026-10-13T00:00:00.000Z"
+            },
+            {
+              "id": 15568,
+              "name": "Olive no Oka — Sapporo Shinkotoni",
+              "sourceUrl": "https://maps.olivenooka.jp/jp/detail/6621.html",
+              "opening": "2026-10-22T00:00:00.000Z"
+            },
+            {
+              "id": 15770,
+              "name": "Oliver's Cider & Perry Yarlington Mill (750ml)",
+              "sourceUrl": "https://theolivers.org.uk/product/yarlington-mill/",
+              "opening": "2026-06-15T00:00:00.000Z"
+            },
+            {
+              "id": 16296,
+              "name": "Olive no Oka — Sapporo Nishimachi",
+              "sourceUrl": "https://maps.olivenooka.jp/jp/detail/6620.html",
+              "opening": "2026-10-08T00:00:00.000Z"
+            }
+          ]
+        },
+        {
+          "term": "RAZAN",
+          "matches": []
+        },
+        {
+          "term": "Ore no Sora",
+          "matches": []
+        },
+        {
+          "term": "田所",
+          "matches": []
+        }
+      ]
+    }
+  },
+  "knownExisting": [
+    {
+      "name": "roan — Kyoto Marutamachi",
+      "pinId": 16323
+    },
+    {
+      "name": "Hakodate Shunka — Sapporo",
+      "pinId": 15597
+    },
+    {
+      "name": "KuroNagi — Global Gate",
+      "pinId": 15522
+    }
+  ],
+  "sourceEvidence": [
+    {
+      "url": "https://foodmenu.cb.monoedge.ai/v1/cb/",
+      "bytes": 734686,
+      "sha256": "18390f3418c4b1d433d8b4d3664430d70f59630724ea44649357370efcfcf910"
+    },
+    {
+      "url": "https://longinghouse.com/no.2/blog/news/aoyama_news/545",
+      "bytes": 77624,
+      "sha256": "7ab128bd3b918d06da1152b268f7284e51a310ee12bdd21c65e420b39c3ce81a"
+    },
+    {
+      "url": "https://thecitybakery.jp/shop",
+      "bytes": 127360,
+      "sha256": "967bd88e1c600a3d308ed03f4a6f67f5f1f49575ba189ad52b4e6047f03b67e3"
+    },
+    {
+      "url": "https://www.instagram.com/olivenooka_jp/",
+      "bytes": 698643,
+      "sha256": "f9ed9b327cae89759f08801cd5597b8ec2d78d64342b79b742eee0061861a9a4"
+    },
+    {
+      "url": "https://maps.olivenooka.jp/jp/detail/6642.html",
+      "bytes": 25584,
+      "sha256": "6433602c3077a58eb6789f2b5f5d58dae53ed231bbc2db9aa63f972e79e083da"
+    },
+    {
+      "url": "https://www.olivenooka.jp/",
+      "bytes": 28587,
+      "sha256": "967544af2dbca3af5d945b1a058cd87e4827766a7b600d6211ddbc3785a90dec"
+    },
+    {
+      "url": "https://www.olivenooka.jp/menu/index.html",
+      "bytes": 9209,
+      "sha256": "807f0ce44fb0af8abca0244fa034f9b540680680f16b5540d3884c9de3386694"
+    },
+    {
+      "url": "https://www.olivenooka.jp/data/news.csv",
+      "bytes": 10917,
+      "sha256": "8a22675d4de6f04ce78f74150fe9b3b8d2ab6a099e182f0b3e30d07eedfdbfa7"
+    },
+    {
+      "url": "https://www.olivenooka.jp/menu/pasta.html",
+      "bytes": 10636,
+      "sha256": "dbbee6a9b53b3908d329c834800095414caaebf73dd08123e5755dcda3131bb9"
+    },
+    {
+      "url": "https://www.olivenooka.jp/js/function_common.js",
+      "bytes": 1682,
+      "sha256": "021e2baccd949ff190de3f4b419b2b192f8ecd8b448f45385d921513c7ca01be"
+    },
+    {
+      "url": "https://www.instagram.com/ripasso2026/",
+      "bytes": 697468,
+      "sha256": "c9666914c783ca2cde08e2b4a8d51d68f46b65c95c361e45da280a8d6a607da5"
+    },
+    {
+      "url": "https://www.moment2026.com/",
+      "bytes": 3728,
+      "sha256": "ff2cb2a1307ac9000084e07f5376f9d6a63c7588f6c38e2defee2c0de6254b77"
+    },
+    {
+      "url": "https://kyoto.mypl.net/shop/00000390130/",
+      "bytes": 66109,
+      "sha256": "d158732ac430e35d06b2a72c54fc89f8c1b10584b9ca64f0728231fa3f415e77"
+    },
+    {
+      "url": "https://sapporo-list.info/open/november-open/",
+      "bytes": 42991,
+      "sha256": "fa4743f7d06b854b4af4f257eda982348e06b3212e1c2396f5a56d2a003aeafe"
+    },
+    {
+      "url": "https://misoya.net/news/open-orenosoras-sapporo/",
+      "bytes": 58119,
+      "sha256": "7349036fa3faa4d308542628f0ebbe991815a38b18b0cd36ea7f1c135cc784a6"
+    },
+    {
+      "url": "https://salvatore.jp/restaurant/asagaya/",
+      "bytes": 21299,
+      "sha256": "05af9a21a5cffa4baec686318c842fbf83d2ee071cc4be682b0613e13e5e8296"
+    }
+  ],
+  "orderingSystemEvidence": {
+    "location": {
+      "location_4ed8cbc5e2858504357926940ff4551f": {
+        "location_status": "Active",
+        "location_name": "CB ラシック",
+        "location_url_name": "lachic",
+        "location_shop_uuids": {
+          "Register": {
+            "shop_uuid": "shop_fecf174c3e3a801d2e6e076b4a5f57c7",
+            "db_sfx": "s52"
+          },
+          "Online": {
+            "shop_uuid": "shop_6d6c3d3365e6fb87e50ca1d6035cfd4e",
+            "db_sfx": "o52"
+          }
+        },
+        "location_desc": "",
+        "location_db_sfx_number": "52",
+        "location_cti_flag_use": 0,
+        "location_cti_phone": "",
+        "location_time_create_utc": "2027-09-02T00:00:00",
+        "location_time_update_utc": "2027-09-02T00:00:00",
+        "location_apps": [
+          "Foodmenu"
+        ],
+        "location_country": "japan",
+        "location_logo_receipt": "",
+        "location_sort": 2303,
+        "location_area": "愛知県",
+        "location_is_restricted": "",
+        "location_restricted_at": "",
+        "location_delivery_mode": "",
+        "location_delivery_area_config": "",
+        "location_delivery_schedule_config": "",
+        "location_geofence_lat": 0.0,
+        "location_geofence_lng": 0.0,
+        "location_geofence_radius_m": 150,
+        "location_wifi_bssid": "",
+        "location_area_code": "",
+        "location_group_code": "",
+        "location_jurisdiction_uuid": "",
+        "location_ot_premium": "",
+        "location_night_premium": "",
+        "location_holiday_premium": "",
+        "location_sms_name": "",
+        "location_legal_name": "",
+        "location_legal_address": "",
+        "location_gst_reg_no": "",
+        "location_le_uuid": "",
+        "location_uuid": "location_4ed8cbc5e2858504357926940ff4551f"
+      }
+    },
+    "shop": {
+      "shop_6d6c3d3365e6fb87e50ca1d6035cfd4e": {
+        "shop_name": "ラシック",
+        "shop_status": "Active",
+        "shop_url_name": "lachic",
+        "open_status": "Holiday",
+        "service_hours": [],
+        "shop_address1": "",
+        "shop_phone": ""
+      }
+    }
+  },
+  "notes": [
+    "Read-only runtime audit: no Pin, menu, Specials, media or deployment writes. Local and public production all16section counts freshly read; count checkpoint folder was new, not prior cached results.",
+    "Counts are distinct restaurants per tab. Specials unifies available and next IDs and strips offer suffixes. Targets below30remain research shortages, never reasons to weaken eligibility.",
+    "Opened current Hokuto pages changed Novembersearch-snippet wording toDecember; current opened text is retained and date remains provisional.",
+    "Plaincurl403for officialOlivejob, LACHICemployer andTabelogLONGING; corresponding pages opened through web reader. OperatorOlivenewsCSVandHiraokadetail, Ripassooperator, LONGINGoperatorhistory all downloaded successfully.",
+    "InstagramcurlreturnedHTMLbutphotographic evidence was not visually verified. Ripassowebreader throttled; do not callthis a completed gallery inspection.",
+    "Reader failed onseveraloperatorpages thatplaincurlretrieved; rawHTMLhashesbelowretain provenance.",
+    "No image binaries added toGit. No ratings, opening dates or Specialsoffers invented.",
+    "Other cities remain higher priority than Osaka/Fukuoka. Finish SapporoHiraokafirst, checkimminentOre noSora, thenLACHIC/Ripasso. RetainexistingNEUFOike/Wanon/ ChezKOBE/Asayuhistorygapsfromaudit1andbatch110."
+  ]
+}

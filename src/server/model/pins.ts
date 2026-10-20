@@ -12,6 +12,7 @@ import { CAR_PERF_KEYS, CAR_PERF_STRONG, type CarPerfAxis } from '@/lib/pinCarPe
 import { DINING_KEYS, DINING_STRONG, type DiningAxis } from '@/lib/pinDining';
 import { HOTEL_KEYS, HOTEL_STRONG, type HotelAxis } from '@/lib/pinHotel';
 import { usdPriceSql } from '@/lib/currency';
+import { cityOf, countryOf } from '@/lib/city';
 import { NEW_TAG, PREDICTED_TAG, reservedName, UPDATED_TAG, UPDATED_WITHIN_MS, tagGroupPatterns, type TagCount } from '@/lib/tags';
 import { CONFIDENCE_BANDS, CONFIDENCE_BARS, type ConfidenceBand } from '@/lib/referenceConfidence';
 import { PLACE_TEXT_SCORE, SEMANTIC_ALONE_SCORE, TITLE_TEXT_SCORE, isCjkText, looksLikePlaceText, placePatterns, typedTextPatterns, typedWordPatterns, wholeWordPattern } from '../util/placeMatch';
@@ -348,6 +349,42 @@ export default class Pins extends BasePins<Pin> {
       [createdSince || null, minConfidence],
       limit,
     );
+  }
+
+  // The places the timeline's pins stand in, read off their addresses
+  // (src/lib/city.ts): countries, or cities with their country, with how many
+  // pins each holds, busiest first. Pins with no readable place are left out.
+  static async countTimelinePlaces(kind: 'country' | 'city', createdSince: Date | null | undefined, minConfidence: number | null, limit: number) {
+    const rows = await db.query<{ address: string; latitude: number | null; longitude: number | null }>(
+      `SELECT "Pin"."address", ST_Y("Pin"."location"::geometry) AS "latitude", ST_X("Pin"."location"::geometry) AS "longitude"
+       FROM "Pin"
+       WHERE "Pin"."utcDeletedDateTime" IS NULL
+         AND "Pin"."address" IS NOT NULL AND "Pin"."address" <> ''
+         AND ($1::timestamptz IS NULL OR "Pin"."utcCreatedDateTime" >= $1)
+         AND ($2::integer IS NULL OR COALESCE(${pinConfidenceOf('Pin')}, $2) >= $2)`,
+      [createdSince || null, minConfidence],
+    );
+    const counts = new Map<string, { name: string; country: string | null; count: number; lats: number[]; lons: number[] }>();
+    for (const { address, latitude, longitude } of rows) {
+      const country = countryOf(address);
+      const name = kind === 'country' ? country : cityOf(address);
+      if (!name) continue;
+      const key = kind === 'city' ? `${name}|${country ?? ''}` : name;
+      const held = counts.get(key) ?? { name, country, count: 0, lats: [], lons: [] };
+      counts.set(key, held);
+      held.count++;
+      if (latitude != null && longitude != null) {
+        held.lats.push(latitude);
+        held.lons.push(longitude);
+      }
+    }
+    // Where a place sits on the map: the middle of its pins' coordinates (the
+    // median, so a far-off island does not drag a country away).
+    const median = (values: number[]) => (values.length ? [...values].sort((a, b) => a - b)[Math.floor(values.length / 2)] : null);
+    return [...counts.values()]
+      .sort((a, b) => b.count - a.count || a.name.localeCompare(b.name))
+      .slice(0, limit)
+      .map(({ name, country, count, lats, lons }) => ({ name, country, count, lat: median(lats), lon: median(lons) }));
   }
 
   // Every live pin's id and last change, oldest first, for the sitemap; with

@@ -1,0 +1,2626 @@
+{
+  "batch": 110,
+  "checkedAt": "2026-10-20",
+  "entries": [
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "THE LAB NAGOYA — SAKUMACHI Opens 2024-07-23",
+        "description": "A 15-seat chocolate-cake café in SAKUMACHI Shopping Street, serving chocolate and matcha cake sets, homemade chai and a seasonal sweet-potato dessert.",
+        "sourceUrl": "https://tabelog.com/en/aichi/A2301/A230110/23089382/",
+        "address": "SAKUMACHI Shopping Street, 1-19-10 Osugi, Kita-ku, Nagoya",
+        "productName": "THE LAB NAGOYA — SAKUMACHI",
+        "utcStartDateTime": "2024-07-23T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "Current SAKUMACHI branch opened July 23,2024 at 11:00 per June 28,2024 operator launch release, which explicitly lists the new Nagoya relocation after the Tokyo shop closed. Exact managed listing independently records 2024.7.23 andaddress 1-19-10 Osugi. Earlier 2020 brand creation/2021 Nagoya storefront and November 2026 promotion dates are not used for this physical branch.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Nagoya",
+          "Japan",
+          "Amagasaka / SAKUMACHI",
+          "Cafe / Desserts"
+        ],
+        "longFormSummary": "<p>A 15-seat chocolate-cake café in SAKUMACHI Shopping Street, serving chocolate and matcha cake sets, homemade chai and a seasonal sweet-potato dessert.<cite data-ref=\"https://tabelog.com/en/aichi/A2301/A230110/23089382/\"></cite></p><p>Current SAKUMACHI branch opened July 23,2024 at 11:00 per June 28,2024 operator launch release, which explicitly lists the new Nagoya relocation after the Tokyo shop closed. Exact managed listing independently records 2024.7.23 andaddress 1-19-10 Osugi. Earlier 2020 brand creation/2021 Nagoya storefront and November 2026 promotion dates are not used for this physical branch.</p>",
+        "references": [
+          {
+            "url": "https://tabelog.com/en/aichi/A2301/A230110/23089382/",
+            "title": "THE LAB NAGOYA — SAKUMACHI — branch website",
+            "confidence": 90,
+            "reasoning": "THE LAB NAGOYA — SAKUMACHI — branch website"
+          },
+          {
+            "url": "https://www.the-chocola.com/",
+            "title": "Current operator brand site and regular closure",
+            "confidence": 90,
+            "reasoning": "Current operator brand site and regular closure"
+          },
+          {
+            "url": "https://tabelog.com/en/aichi/A2301/A230110/23089382/dtlmenu/",
+            "title": "Exact branch food prices",
+            "confidence": 90,
+            "reasoning": "Exact branch food prices"
+          },
+          {
+            "url": "https://tabelog.com/en/aichi/A2301/A230110/23089382/dtlmenu/drink/",
+            "title": "Exact branch drink price",
+            "confidence": 90,
+            "reasoning": "Exact branch drink price"
+          },
+          {
+            "url": "https://prtimes.jp/main/html/rd/p/000000029.000076024.html",
+            "title": "OperatorNovember 26–29 fan-plan announcement",
+            "confidence": 90,
+            "reasoning": "OperatorNovember 26–29 fan-plan announcement"
+          },
+          {
+            "url": "https://prtimes.jp/main/html/rd/p/000000010.000076024.html",
+            "title": "Operator 2024 current-branch opening history",
+            "confidence": 90,
+            "reasoning": "Operator 2024 current-branch opening history"
+          },
+          {
+            "url": "https://www.instagram.com/the_lab_nagoya_",
+            "title": "Branch Instagram reservation account (posts not exposed)",
+            "confidence": 90,
+            "reasoning": "Branch Instagram reservation account (posts not exposed)"
+          }
+        ]
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://tabelog.com/en/aichi/A2301/A230110/23089382/",
+          "menu": {
+            "pinSourceUrl": "https://tabelog.com/en/aichi/A2301/A230110/23089382/",
+            "name": "THE LAB NAGOYA — SAKUMACHI",
+            "checkedAt": "2026-10-20",
+            "menus": [
+              {
+                "label": "THE LAB NAGOYA — ordinary cakes and sets",
+                "url": "https://tabelog.com/en/aichi/A2301/A230110/23089382/dtlmenu/",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "THE Chocola Nagoya Specialty",
+                    "note": "Tax included; exact branch managed menu updatedOctober18,2026. Whole takeaway item; current price, not the2024launch price.",
+                    "price": 8000
+                  },
+                  {
+                    "name": "THE Chocola Matcha",
+                    "note": "Tax included; exact branch managed menu updatedOctober18,2026. Whole takeaway item; current price, not the2024launch price.",
+                    "price": 10000
+                  },
+                  {
+                    "name": "THE Pudding Limited Edition (March to August)",
+                    "note": "Tax included; exact branch managed menu updatedOctober18,2026. Whole takeaway item; current price, not the2024launch price. SeasonalMarch–August; not advertised as currentOctober/Novemberstock.",
+                    "price": 5500
+                  },
+                  {
+                    "name": "THE Potato Limited Edition (September to November)",
+                    "note": "Tax included; exact branch managed menu updatedOctober18,2026. Whole takeaway item; current price, not the2024launch price. SeasonalSeptember–November, subject to stock.",
+                    "price": 4500
+                  },
+                  {
+                    "name": "THE Tiramisu Limited Edition (December to February)",
+                    "note": "Tax included; exact branch managed menu updatedOctober18,2026. Whole takeaway item; current price, not the2024launch price. SeasonalDecember–February; not advertised as currentOctober/Novemberstock.",
+                    "price": 5500
+                  },
+                  {
+                    "name": "THE chocola (With Drink) Nagoya Specialty",
+                    "note": "Tax included; exact branch managed menu updatedOctober18,2026. Ordinary eat-in cake set includes a drink and45-minute homemade chai service per branch menu; this is distinct from the November fan plan.",
+                    "price": 2000
+                  },
+                  {
+                    "name": "THE Chocola Matcha (With Drink)",
+                    "note": "Tax included; exact branch managed menu updatedOctober18,2026. Ordinary eat-in cake set includes a drink and45-minute homemade chai service per branch menu; this is distinct from the November fan plan.",
+                    "price": 2000
+                  },
+                  {
+                    "name": "THE Pudding Limited from March to August (with drink)",
+                    "note": "Tax included; exact branch managed menu updatedOctober18,2026. Ordinary eat-in cake set includes a drink and45-minute homemade chai service per branch menu; this is distinct from the November fan plan. SeasonalMarch–August; not advertised as currentOctober/Novemberstock.",
+                    "price": 2000
+                  },
+                  {
+                    "name": "THE Potato Limited from September to November (with drink)",
+                    "note": "Tax included; exact branch managed menu updatedOctober18,2026. Ordinary eat-in cake set includes a drink and45-minute homemade chai service per branch menu; this is distinct from the November fan plan. SeasonalSeptember–November, subject to stock.",
+                    "price": 2000
+                  },
+                  {
+                    "name": "THE Tiramisu Limited from December to February (with drink)",
+                    "note": "Tax included; exact branch managed menu updatedOctober18,2026. Ordinary eat-in cake set includes a drink and45-minute homemade chai service per branch menu; this is distinct from the November fan plan. SeasonalDecember–February; not advertised as currentOctober/Novemberstock.",
+                    "price": 2000
+                  }
+                ],
+                "note": "Tax-inclusive exact branch list updatedOctober18. Five whole takeaway products and five eat-in sets; seasonal months explicit. Historical2024¥4000/¥4800whole and¥1500eat-in launch prices are superseded and not copied. Regular eat-in sets differ from the November art-plate plan."
+              },
+              {
+                "label": "THE LAB NAGOYA — homemade chai",
+                "url": "https://tabelog.com/en/aichi/A2301/A230110/23089382/dtlmenu/drink/",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "THE Chai",
+                    "note": "Tax included; named branch à-la-carte homemade chai¥500, drink list updatedAugust2,2026. Other drink choices exist but names/prices are not published. Do not assume this drink or unlimited refills participates in the November fan plan.",
+                    "price": 500
+                  }
+                ],
+                "note": "Tax-inclusive branch à-la-carte chai. Other drinks remain unnamed; no invented beverage choices or prices."
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://tabelog.com/en/aichi/A2301/A230110/23089382/",
+            "name": "THE LAB NAGOYA — SAKUMACHI",
+            "checkedAt": "2026-10-20",
+            "websiteUrl": "https://tabelog.com/en/aichi/A2301/A230110/23089382/",
+            "phone": "052-385-7215",
+            "openingHours": [
+              {
+                "days": "Monday–Saturday and public holidays except regular Sunday closure",
+                "hours": "11:00–17:00; closes when sold out"
+              },
+              {
+                "days": "Sunday",
+                "hours": "Closed in current regular branch hours; advertisedNovember 29 event service needs confirmation"
+              }
+            ],
+            "detailsSourceUrl": "https://tabelog.com/en/aichi/A2301/A230110/23089382/",
+            "additionalSources": [
+              {
+                "label": "Current operator brand site and regular closure",
+                "url": "https://www.the-chocola.com/"
+              },
+              {
+                "label": "Exact branch food prices",
+                "url": "https://tabelog.com/en/aichi/A2301/A230110/23089382/dtlmenu/"
+              },
+              {
+                "label": "Exact branch drink price",
+                "url": "https://tabelog.com/en/aichi/A2301/A230110/23089382/dtlmenu/drink/"
+              },
+              {
+                "label": "OperatorNovember 26–29 fan-plan announcement",
+                "url": "https://prtimes.jp/main/html/rd/p/000000029.000076024.html"
+              },
+              {
+                "label": "Operator 2024 current-branch opening history",
+                "url": "https://prtimes.jp/main/html/rd/p/000000010.000076024.html"
+              },
+              {
+                "label": "Branch Instagram reservation account (posts not exposed)",
+                "url": "https://www.instagram.com/the_lab_nagoya_"
+              }
+            ],
+            "hoursNote": "15 seats:10 table and 5 counter seats; non-smoking, no private room or on-site parking. Cards accepted; e-money andQRpayments not accepted. No service charge in original Japanese managed field. Private hire available, but template 20–50 capacity exceeds 15 seats: confirm actual arrangement directly. Ordinary eat-in sets list 45 minutes and homemade chai service; seasonal March–August andDecember–February products are not current stock claims. Operator announces November 26–29 fan café plan,¥3000 tax included per guest with one drink and chocolate-art plate. Reposting the specificXpost earns¥500 off; whether per guest or booking is not stated. Reserve by official InstagramDM. November 29 fallsSundayandconflicts with current closure: confirm special service before booking that date. Exact entry times, final orders, message approval and stock subject to branch confirmation. No band affiliation implied.",
+            "reservationUrl": "https://tabelog.com/en/aichi/A2301/A230110/23089382/"
+          },
+          "tile": {
+            "regionSlug": "nagoya",
+            "kind": "opening",
+            "slug": "japan110-lab",
+            "name": "THE LAB NAGOYA — SAKUMACHI",
+            "neighborhood": "Amagasaka / SAKUMACHI",
+            "cuisine": "Cafe / Desserts",
+            "description": "A 15-seat chocolate-cake café in SAKUMACHI Shopping Street, serving chocolate and matcha cake sets, homemade chai and a seasonal sweet-potato dessert.",
+            "address": "SAKUMACHI Shopping Street, 1-19-10 Osugi, Kita-ku, Nagoya",
+            "websiteUrl": "https://tabelog.com/en/aichi/A2301/A230110/23089382/",
+            "checkedAt": "2026-10-20",
+            "recognition": "Current branch opening verified in operator 2024 launch release; dated November fan-plan offer",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-20/batch110-lab-1-db19d94b58e706c6.webp",
+            "imageCredit": "THE LAB NAGOYA / Tabelog operator gallery",
+            "imageSourceUrl": "https://tabelog.com/en/aichi/A2301/A230110/23089382/dtlphotolst/smp2/",
+            "imageNote": "Actual THE LAB NAGOYA SAKUMACHI branch storefront and sign; operator exact-branch gallery.",
+            "openingConfirmed": true,
+            "day": "2024-07-23"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "originalUrl": "https://tblg.k-img.com/restaurant/images/Rvw/373173/640x640_rect_a85fee350af1cfc4cec12cb73108c0f5.jpg",
+          "sourcePage": "https://tabelog.com/en/aichi/A2301/A230110/23089382/dtlphotolst/smp2/",
+          "credit": "THE LAB NAGOYA / Tabelog operator gallery",
+          "note": "Actual THE LAB NAGOYA SAKUMACHI branch storefront and sign; operator exact-branch gallery.",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-20/batch110-lab-1-db19d94b58e706c6.webp",
+          "sha256": "db19d94b58e706c6e95be8519d6b04b118ead1a940c2e362dadf9bb4c62cc2b8",
+          "width": 640,
+          "height": 359
+        },
+        {
+          "originalUrl": "https://tblg.k-img.com/restaurant/images/Rvw/370055/640x640_rect_ae95cc4bc5956c3ea979330229667271.jpg",
+          "sourcePage": "https://tabelog.com/en/aichi/A2301/A230110/23089382/dtlphotolst/smp2/",
+          "credit": "THE LAB NAGOYA / Tabelog operator gallery",
+          "note": "Face-to-face table seating at the SAKUMACHI branch; operator exact-branch gallery.",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-20/batch110-lab-3-a62a0adc5c1e33b8.webp",
+          "sha256": "a62a0adc5c1e33b8000a1be600bd1c601904789d7485d0a244aa6840c771a170",
+          "width": 640,
+          "height": 471
+        },
+        {
+          "originalUrl": "https://tblg.k-img.com/restaurant/images/Rvw/370055/640x640_rect_280f02b0d3a8c6ae4e1e2ca30566db5a.jpg",
+          "sourcePage": "https://tabelog.com/en/aichi/A2301/A230110/23089382/dtlphotolst/smp2/",
+          "credit": "THE LAB NAGOYA / Tabelog operator gallery",
+          "note": "Side-by-side seating at the SAKUMACHI branch; operator exact-branch gallery.",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-20/batch110-lab-5-d2b9bcfd5a4de7ab.webp",
+          "sha256": "d2b9bcfd5a4de7abc993d26e1175ba51013416f6fc736f8c8e0da8e0fd1b21e0",
+          "width": 640,
+          "height": 468
+        },
+        {
+          "originalUrl": "https://tblg.k-img.com/restaurant/images/Rvw/370056/640x640_rect_65a1df1593855cd8e2b553a94d943c8f.jpg",
+          "sourcePage": "https://tabelog.com/en/aichi/A2301/A230110/23089382/dtlphotolst/smp2/",
+          "credit": "THE LAB NAGOYA / Tabelog operator gallery",
+          "note": "Window counter seating at the SAKUMACHI branch; operator exact-branch gallery.",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-20/batch110-lab-7-fe26cc8ef129136e.webp",
+          "sha256": "fe26cc8ef129136e73e94de12e4606e26dfb9a1904f0948558a717b65a6940a5",
+          "width": 640,
+          "height": 471
+        },
+        {
+          "originalUrl": "https://tblg.k-img.com/restaurant/images/Rvw/373173/640x640_rect_8386e3b7b3e725104d78d36a34d4a5c5.jpg",
+          "sourcePage": "https://tabelog.com/en/aichi/A2301/A230110/23089382/dtlphotolst/smp2/",
+          "credit": "THE LAB NAGOYA / Tabelog operator gallery",
+          "note": "Chocolate cake and drink presentation in the operator branch gallery; no portion weight or November fan-plan entitlement inferred.",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-20/batch110-lab-10-4e1311c695c92f45.webp",
+          "sha256": "4e1311c695c92f45408c90edc1d341581be81ab12c1623b322c4814f806f5aa1",
+          "width": 640,
+          "height": 359
+        },
+        {
+          "originalUrl": "https://tblg.k-img.com/restaurant/images/Rvw/373173/640x640_rect_315855f58ca9b59275ed2532967eb835.jpg",
+          "sourcePage": "https://tabelog.com/en/aichi/A2301/A230110/23089382/dtlphotolst/smp2/",
+          "credit": "THE LAB NAGOYA / Tabelog operator gallery",
+          "note": "Matcha cake and drink presentation in the operator branch gallery; no portion weight or November fan-plan entitlement inferred.",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-20/batch110-lab-11-95550a7f4b3bdf97.webp",
+          "sha256": "95550a7f4b3bdf974a7cd4a8fd1a034ca1f0be2ecb3e2f5a060d70d2e6a3d593",
+          "width": 640,
+          "height": 359
+        }
+      ],
+      "special": {
+        "regionSlug": "nagoya",
+        "enabled": true,
+        "profile": {
+          "pinSourceUrl": "https://tabelog.com/en/aichi/A2301/A230110/23089382/",
+          "name": "THE LAB NAGOYA — SAKUMACHI",
+          "checkedAt": "2026-10-20",
+          "address": "SAKUMACHI Shopping Street, 1-19-10 Osugi, Kita-ku, Nagoya",
+          "neighborhood": "Amagasaka / SAKUMACHI",
+          "websiteUrl": "https://tabelog.com/en/aichi/A2301/A230110/23089382/",
+          "menus": [
+            {
+              "label": "THE LAB NAGOYA — November fan café plan",
+              "url": "https://prtimes.jp/main/html/rd/p/000000029.000076024.html",
+              "currency": "JPY",
+              "coverage": "published",
+              "items": [
+                {
+                  "name": "Fan plate + three-dimensional chocolate art + one drink",
+                  "price": 3000,
+                  "note": "Tax included, per guest. November26–29advertised by operator; specificSundayNovember29service conflicts with regular closure and needs confirmation. Drink choice not named; regular45-minute chai refill service not inferred."
+                },
+                {
+                  "name": "Repost reward for the specified THE LAB X post",
+                  "priceLabel": "¥500 off; allocation not published",
+                  "note": "Operator says¥500off when reposting the linked post. Per-person versus per-booking allocation, combination rules and presentation method not published; confirm byDM. No guaranteed¥2500per-person total asserted."
+                }
+              ],
+              "note": "Operator event price¥3000per guest includes drink and chocolate art.¥500repost reward allocation unresolved, so no final per-person checkout total invented. OnlyThu–Satregularhours scheduled; Sundayevent service awaiting confirmation."
+            }
+          ],
+          "specials": [
+            {
+              "kind": "other",
+              "title": "November fan café plan — ¥500 repost offer",
+              "description": "Chocolate-art fan plate and one drink for¥3000tax included per guest,November26–29. Repost the operator’s specifiedXpost for¥500off; allocation requires confirmation. November29Sundayservice remains unresolved.",
+              "sourceUrl": "https://prtimes.jp/main/html/rd/p/000000029.000076024.html",
+              "discounted": true,
+              "limitedTime": true,
+              "validFrom": "2026-11-26",
+              "validThrough": "2026-11-29",
+              "schedule": "Verified regular Thursday–Saturday service11:00–17:00JST, subject to sold-out closure and booked arrival time. November29Sundaywas advertised but hours conflict; contact operator.",
+              "menuLabel": "THE LAB NAGOYA — November fan café plan",
+              "conditions": [
+                "Reserve through the official Nagoya InstagramDM.",
+                "One drink included; eligible choices not named.",
+                "Repost this operator-specified post:https://x.com/the_chocola/status/2096886418773786679",
+                "¥500reward allocation per guest versus booking not stated; confirm before booking.",
+                "Messages subject to operator acceptance; illustrations and logos not offered.",
+                "Fan-organized café plan; not an official band collaboration.",
+                "November29Sundayservice advertised but conflicts with current closure; no unverifiedSundayhours scheduled.",
+                "Regular45-minute chai-set terms are not assumed for this special plan."
+              ],
+              "availability": {
+                "windows": [
+                  {
+                    "days": [
+                      4,
+                      5,
+                      6
+                    ],
+                    "start": "11:00",
+                    "end": "17:00"
+                  }
+                ]
+              }
+            }
+          ],
+          "photo": {
+            "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-20/batch110-lab-1-db19d94b58e706c6.webp",
+            "alt": "Actual THE LAB NAGOYA SAKUMACHI branch storefront and sign; operator exact-branch gallery.",
+            "credit": "THE LAB NAGOYA / Tabelog operator gallery",
+            "sourceUrl": "https://tabelog.com/en/aichi/A2301/A230110/23089382/dtlphotolst/smp2/",
+            "originalUrl": "https://tblg.k-img.com/restaurant/images/Rvw/373173/640x640_rect_a85fee350af1cfc4cec12cb73108c0f5.jpg",
+            "checkedAt": "2026-10-20"
+          }
+        }
+      }
+    }
+  ],
+  "researchNotes": [
+    "Other-cities-first continuation: researched Kyoto and Nagoya Coming soon deeply, then published a verified Nagoya dated offer rather than fabricate upcoming openings from weak evidence. One new backing restaurantPin uses its actual2024branch opening; only one Specials membership claimed. No Coming soon/Just opened/Top membership claimed for this established branch.",
+    "THE LAB NAGOYA current SAKUMACHI physical branch openingJuly23,2024is confirmed by original operator launch release and managed listing. Brand2020origin and older2021small Nagoya store are different history; November2026event is not an opening date. CurrentOctober18menu prices supersede2024launch figures.",
+    "Exact branch menu has10cake/portion entries plus1named chai. Whole takeaway and dine-in prices distinct; five variants each. PuddingMarch–August andtiramisuDecember–February remain labelled seasonal rather than currentOctoberstock. Ordinary45-minute chai refills are not assumed to apply to special¥3000art plan.",
+    "November26–29operator release supplies specialplan¥3000per guest includingoneunnameddrink and¥500Xrepost reward. Discount allocation per guest/booking not published; no¥2500per-person promise. SpecificXpost opened but403; operator release itself links it and supports reward. ReservationthroughInstagramDM; no invented delivery/app/limitedtickets.",
+    "November29isSundayandregularoperator/managedhours saySundayclosed. Preserve advertised4-daycampaignvalidity but schedule onlyThursday–Saturday11–17supportedhours; Sundayneeds specificoperatorconfirmation. Never invent a holiday opening or silently remove contradictory evidence.",
+    "All12operator exact-branch gallery candidates downloaded byplaincurl and visually checked; six selected showing actual SAKUMACHIstorefront, rooms and example cake/drink presentation. Credits/sourceURLs retained; Azure publichash and image decode verified. Official online-shop stock photos not substituted for venue images; gallery cake portions do not identify exact special entitlements.",
+    "Soba Labo Wanon Kyoto: November2026month-onlyrecruitment confirmed through opened HelloWork-republication26010-23345661; exactbranchbooking pages publish64rawmenurows with large-size variants and conflicting smallsideprices. All12actualgallerydownloads areComingSoonplaceholderart despite detailedroom/dishcaptions. No pin created or imagecaptiontreatedasphotographic evidence. Need actualbranchphotos, exactdate and resolution ofduplicate小鉢3品¥150/¥300. FirstreservableNovember11isnotproof ofopeningday. Threecouponoffers have noexpiry but eligibility/drinkchoice and opening activation remain unresolved.",
+    "GraniphCafeKyoto15922andthreeMAMAvenues15494/15499/15500alreadyexistunderEnglishspellings; no duplicates. Graniphclothinggifts/memberpreopening are not caféfoodpromotions. NEUF Oike andCITYBAKERYLACHICstillneedownmenus/gallery; ownbranch evidence not substituted from siblings.",
+    "Asayu KyotoOctober1grandopening expands2Fshop, but actual caféoperatedfromJune30,2026perbranchlistingandearlieroperatorpreopeningrelease. It is outside90-dayJustopenedeligibility; noOct1reset.",
+    "NagoyaHoshinoCoffeeUnimollrecruitment claimsNovemberopening but exactbranchlistingrecordsNovember7,2014; reopeningnotnewbranch untilchronologyresolved. SaishokuKengyuHabashita2-1-10employerNovemberplanned site differs fromexistingYanagibashi5-31-8(2025opening); existingmenu/photosmustnotbetransferred. ZenkyuSONOtwo-daylobbyeventhasmenusandvenuephotosbutisnotcountedasnewpermanentrestaurantorusinghotelopeningasitsbranchdate."
+  ],
+  "held": [
+    {
+      "name": "Soba Labo Wanon — Kyoto",
+      "sourceUrl": "https://www.hotpepper.jp/strJ004698590/",
+      "reason": "Month-onlyNovemberopening; all12gallerydownloadsareComingSoonplaceholderart despite captions. Exactday, realvenueimages and contradictorysmallsideprices remain unresolved."
+    },
+    {
+      "name": "NEUF CRÊPERIE — Karasuma Oike",
+      "sourceUrl": "https://www.baitoru.com/jobdetail/163506169",
+      "reason": "November1employerannouncement; ownbranchmenuandcompletedgalleryremainunresolved."
+    },
+    {
+      "name": "THE CITY BAKERY — LACHIC",
+      "sourceUrl": "https://job.inshokuten.com/tokai/work/detail/91244",
+      "reason": "Month-onlyrecruitment; ownbranchmenuandgallerynotverified."
+    },
+    {
+      "name": "Saishoku Kengyu — Habashita planned branch",
+      "sourceUrl": "https://wagasyade-saiyo.jp/saisyokukengyu/recruitment/detail/4193937/",
+      "reason": "Novemberrecruitmentat2-1-10Habashita; exactopeningdayandownmenu/gallerynotverified. Do notborrowYanagibashi branch."
+    },
+    {
+      "name": "Asayu Store Cafe — Kyoto",
+      "sourceUrl": "https://prtimes.jp/main/html/rd/p/000000198.000111100.html",
+      "reason": "October1grandopeningisnotoriginalcafestart; June30preopeningputsactualbranchoutside90-daynewwindow."
+    },
+    {
+      "name": "THE LAB NAGOYA — November29Sundayservice",
+      "sourceUrl": "https://prtimes.jp/main/html/rd/p/000000029.000076024.html",
+      "reason": "OperatorcampaignincludesSundaybutregularoperatorandmanagedpageclosedSunday; preservecampaignclaim, scheduleonlyverifiedThu–SatuntilspecificSundayhoursverified."
+    }
+  ],
+  "counts": {
+    "venues": 1,
+    "newPins": 1,
+    "ordinaryMenuItems": 11,
+    "offers": 1,
+    "offerMenuItems": 2,
+    "photos": 6,
+    "newOrdinaryMenuItems": 11,
+    "preservedOrdinaryMenuItems": 0,
+    "newMemberships": 1,
+    "shortfallReduction": 0
+  },
+  "photoReview": {
+    "downloadedCandidates": 24,
+    "selectedPhotos": 6,
+    "method": "Twelve Wanonplaceholderimages visually rejected; twelve actualTHELABoperatorgalleryphotos visually reviewed, six selected. Genuine current SAKUMACHIbranch frontage/rooms and creditedcakepresentation retained; no falseplaceholders, siblinggallery or inferredspecialingredients. PublicAzurehash/decodeverified."
+  },
+  "rejectedPlaceholderPhotos": {
+    "venue": "Soba Labo Wanon",
+    "candidateCount": 12,
+    "reason": "Actual downloaded artwork visually readsComingSoon; descriptive gallery captions are not proof of completed rooms or food.",
+    "candidateHashes": [
+      {
+        "file": "wanon-0.jpg",
+        "sha256": "cca09e0d27f256bd3ceb9861e386f72c01a7b7b02d57d18ea064e8bb203d8b9c"
+      },
+      {
+        "file": "wanon-1.jpg",
+        "sha256": "cca09e0d27f256bd3ceb9861e386f72c01a7b7b02d57d18ea064e8bb203d8b9c"
+      },
+      {
+        "file": "wanon-10.jpg",
+        "sha256": "361f860af7bfc585147a52e4af8b6417450148d6bc1dafe014d3fc561be68f17"
+      },
+      {
+        "file": "wanon-11.jpg",
+        "sha256": "361f860af7bfc585147a52e4af8b6417450148d6bc1dafe014d3fc561be68f17"
+      },
+      {
+        "file": "wanon-2.jpg",
+        "sha256": "cca09e0d27f256bd3ceb9861e386f72c01a7b7b02d57d18ea064e8bb203d8b9c"
+      },
+      {
+        "file": "wanon-3.jpg",
+        "sha256": "cca09e0d27f256bd3ceb9861e386f72c01a7b7b02d57d18ea064e8bb203d8b9c"
+      },
+      {
+        "file": "wanon-4.jpg",
+        "sha256": "cca09e0d27f256bd3ceb9861e386f72c01a7b7b02d57d18ea064e8bb203d8b9c"
+      },
+      {
+        "file": "wanon-5.jpg",
+        "sha256": "cca09e0d27f256bd3ceb9861e386f72c01a7b7b02d57d18ea064e8bb203d8b9c"
+      },
+      {
+        "file": "wanon-6.jpg",
+        "sha256": "cca09e0d27f256bd3ceb9861e386f72c01a7b7b02d57d18ea064e8bb203d8b9c"
+      },
+      {
+        "file": "wanon-7.jpg",
+        "sha256": "cca09e0d27f256bd3ceb9861e386f72c01a7b7b02d57d18ea064e8bb203d8b9c"
+      },
+      {
+        "file": "wanon-8.jpg",
+        "sha256": "361f860af7bfc585147a52e4af8b6417450148d6bc1dafe014d3fc561be68f17"
+      },
+      {
+        "file": "wanon-9.jpg",
+        "sha256": "361f860af7bfc585147a52e4af8b6417450148d6bc1dafe014d3fc561be68f17"
+      }
+    ]
+  },
+  "verification": {
+    "local": {
+      "profiles": [
+        {
+          "pinId": 18745,
+          "sourceUrl": "https://tabelog.com/en/aichi/A2301/A230110/23089382/",
+          "name": "THE LAB NAGOYA — SAKUMACHI",
+          "contentId": 1957,
+          "contentRevision": 1,
+          "verifiedGalleryLinks": 6,
+          "publicPinStatus": 200,
+          "apiBase": "http://localhost:3000",
+          "publicBase": "http://localhost:3000"
+        }
+      ],
+      "guides": [
+        {
+          "pinId": 18745,
+          "region": "nagoya",
+          "view": "discounts",
+          "neighborhood": "Amagasaka / SAKUMACHI",
+          "nativeTitleAndImage": true,
+          "hrefs": [
+            "/pin/18745/the-lab-nagoya-sakumachi-opens-2024-07-23"
+          ],
+          "browserFiltered": true,
+          "publicBase": "http://localhost:3000",
+          "guideStatus": 200,
+          "offers": [
+            {
+              "id": "https://tabelog.com/en/aichi/A2301/A230110/23089382/#0",
+              "name": "THE LAB NAGOYA — SAKUMACHI",
+              "neighborhood": "Amagasaka / SAKUMACHI",
+              "address": "SAKUMACHI Shopping Street, 1-19-10 Osugi, Kita-ku, Nagoya",
+              "restaurantHref": "/pin/18745/the-lab-nagoya-sakumachi-opens-2024-07-23",
+              "checkedAt": "2026-10-20",
+              "special": {
+                "kind": "other",
+                "title": "November fan café plan — ¥500 repost offer",
+                "schedule": "Verified regular Thursday–Saturday service11:00–17:00JST, subject to sold-out closure and booked arrival time. November29Sundaywas advertised but hours conflict; contact operator.",
+                "menuLabel": "THE LAB NAGOYA — November fan café plan",
+                "sourceUrl": "https://prtimes.jp/main/html/rd/p/000000029.000076024.html",
+                "validFrom": "2026-11-26",
+                "conditions": [
+                  "Reserve through the official Nagoya InstagramDM.",
+                  "One drink included; eligible choices not named.",
+                  "Repost this operator-specified post:https://x.com/the_chocola/status/2096886418773786679",
+                  "¥500reward allocation per guest versus booking not stated; confirm before booking.",
+                  "Messages subject to operator acceptance; illustrations and logos not offered.",
+                  "Fan-organized café plan; not an official band collaboration.",
+                  "November29Sundayservice advertised but conflicts with current closure; no unverifiedSundayhours scheduled.",
+                  "Regular45-minute chai-set terms are not assumed for this special plan."
+                ],
+                "discounted": true,
+                "description": "Chocolate-art fan plate and one drink for¥3000tax included per guest,November26–29. Repost the operator’s specifiedXpost for¥500off; allocation requires confirmation. November29Sundayservice remains unresolved.",
+                "limitedTime": true,
+                "availability": {
+                  "windows": [
+                    {
+                      "end": "17:00",
+                      "days": [
+                        4,
+                        5,
+                        6
+                      ],
+                      "start": "11:00"
+                    }
+                  ]
+                },
+                "validThrough": "2026-11-29"
+              },
+              "venueKey": "tabelog.com/en/aichi/A2301/A230110/23089382",
+              "photo": {
+                "alt": "Actual THE LAB NAGOYA SAKUMACHI branch storefront and sign; operator exact-branch gallery.",
+                "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-20/batch110-lab-1-db19d94b58e706c6.webp",
+                "credit": "THE LAB NAGOYA / Tabelog operator gallery",
+                "checkedAt": "2026-10-20",
+                "sourceUrl": "https://tabelog.com/en/aichi/A2301/A230110/23089382/dtlphotolst/smp2/",
+                "originalUrl": "https://tblg.k-img.com/restaurant/images/Rvw/373173/640x640_rect_a85fee350af1cfc4cec12cb73108c0f5.jpg"
+              },
+              "menu": {
+                "url": "https://prtimes.jp/main/html/rd/p/000000029.000076024.html",
+                "note": "Operator event price¥3000per guest includes drink and chocolate art.¥500repost reward allocation unresolved, so no final per-person checkout total invented. OnlyThu–Satregularhours scheduled; Sundayevent service awaiting confirmation.",
+                "items": [
+                  {
+                    "name": "Fan plate + three-dimensional chocolate art + one drink",
+                    "note": "Tax included, per guest. November26–29advertised by operator; specificSundayNovember29service conflicts with regular closure and needs confirmation. Drink choice not named; regular45-minute chai refill service not inferred.",
+                    "price": 3000
+                  },
+                  {
+                    "name": "Repost reward for the specified THE LAB X post",
+                    "note": "Operator says¥500off when reposting the linked post. Per-person versus per-booking allocation, combination rules and presentation method not published; confirm byDM. No guaranteed¥2500per-person total asserted.",
+                    "priceLabel": "¥500 off; allocation not published"
+                  }
+                ],
+                "label": "THE LAB NAGOYA — November fan café plan",
+                "coverage": "published",
+                "currency": "JPY"
+              },
+              "startsAt": "2026-11-26T02:00:00.000Z",
+              "end": "17:00"
+            }
+          ]
+        }
+      ]
+    },
+    "production": {
+      "profiles": [
+        {
+          "pinId": 18749,
+          "sourceUrl": "https://tabelog.com/en/aichi/A2301/A230110/23089382/",
+          "name": "THE LAB NAGOYA — SAKUMACHI",
+          "contentId": 1957,
+          "contentRevision": 1,
+          "verifiedGalleryLinks": 6,
+          "publicPinStatus": 200,
+          "apiBase": "https://www.chronopin.com",
+          "publicBase": "https://www.chronopin.com"
+        }
+      ],
+      "guides": [
+        {
+          "pinId": 18749,
+          "region": "nagoya",
+          "view": "discounts",
+          "neighborhood": "Amagasaka / SAKUMACHI",
+          "nativeTitleAndImage": true,
+          "hrefs": [
+            "/pin/18749/the-lab-nagoya-sakumachi-opens-2024-07-23"
+          ],
+          "browserFiltered": true,
+          "publicBase": "https://www.chronopin.com",
+          "guideStatus": 200,
+          "offers": [
+            {
+              "id": "https://tabelog.com/en/aichi/A2301/A230110/23089382/#0",
+              "name": "THE LAB NAGOYA — SAKUMACHI",
+              "neighborhood": "Amagasaka / SAKUMACHI",
+              "address": "SAKUMACHI Shopping Street, 1-19-10 Osugi, Kita-ku, Nagoya",
+              "restaurantHref": "/pin/18749/the-lab-nagoya-sakumachi-opens-2024-07-23",
+              "checkedAt": "2026-10-20",
+              "special": {
+                "kind": "other",
+                "title": "November fan café plan — ¥500 repost offer",
+                "schedule": "Verified regular Thursday–Saturday service11:00–17:00JST, subject to sold-out closure and booked arrival time. November29Sundaywas advertised but hours conflict; contact operator.",
+                "menuLabel": "THE LAB NAGOYA — November fan café plan",
+                "sourceUrl": "https://prtimes.jp/main/html/rd/p/000000029.000076024.html",
+                "validFrom": "2026-11-26",
+                "conditions": [
+                  "Reserve through the official Nagoya InstagramDM.",
+                  "One drink included; eligible choices not named.",
+                  "Repost this operator-specified post:https://x.com/the_chocola/status/2096886418773786679",
+                  "¥500reward allocation per guest versus booking not stated; confirm before booking.",
+                  "Messages subject to operator acceptance; illustrations and logos not offered.",
+                  "Fan-organized café plan; not an official band collaboration.",
+                  "November29Sundayservice advertised but conflicts with current closure; no unverifiedSundayhours scheduled.",
+                  "Regular45-minute chai-set terms are not assumed for this special plan."
+                ],
+                "discounted": true,
+                "description": "Chocolate-art fan plate and one drink for¥3000tax included per guest,November26–29. Repost the operator’s specifiedXpost for¥500off; allocation requires confirmation. November29Sundayservice remains unresolved.",
+                "limitedTime": true,
+                "availability": {
+                  "windows": [
+                    {
+                      "end": "17:00",
+                      "days": [
+                        4,
+                        5,
+                        6
+                      ],
+                      "start": "11:00"
+                    }
+                  ]
+                },
+                "validThrough": "2026-11-29"
+              },
+              "venueKey": "tabelog.com/en/aichi/A2301/A230110/23089382",
+              "photo": {
+                "alt": "Actual THE LAB NAGOYA SAKUMACHI branch storefront and sign; operator exact-branch gallery.",
+                "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-20/batch110-lab-1-db19d94b58e706c6.webp",
+                "credit": "THE LAB NAGOYA / Tabelog operator gallery",
+                "checkedAt": "2026-10-20",
+                "sourceUrl": "https://tabelog.com/en/aichi/A2301/A230110/23089382/dtlphotolst/smp2/",
+                "originalUrl": "https://tblg.k-img.com/restaurant/images/Rvw/373173/640x640_rect_a85fee350af1cfc4cec12cb73108c0f5.jpg"
+              },
+              "menu": {
+                "url": "https://prtimes.jp/main/html/rd/p/000000029.000076024.html",
+                "note": "Operator event price¥3000per guest includes drink and chocolate art.¥500repost reward allocation unresolved, so no final per-person checkout total invented. OnlyThu–Satregularhours scheduled; Sundayevent service awaiting confirmation.",
+                "items": [
+                  {
+                    "name": "Fan plate + three-dimensional chocolate art + one drink",
+                    "note": "Tax included, per guest. November26–29advertised by operator; specificSundayNovember29service conflicts with regular closure and needs confirmation. Drink choice not named; regular45-minute chai refill service not inferred.",
+                    "price": 3000
+                  },
+                  {
+                    "name": "Repost reward for the specified THE LAB X post",
+                    "note": "Operator says¥500off when reposting the linked post. Per-person versus per-booking allocation, combination rules and presentation method not published; confirm byDM. No guaranteed¥2500per-person total asserted.",
+                    "priceLabel": "¥500 off; allocation not published"
+                  }
+                ],
+                "label": "THE LAB NAGOYA — November fan café plan",
+                "coverage": "published",
+                "currency": "JPY"
+              },
+              "startsAt": "2026-11-26T02:00:00.000Z",
+              "end": "17:00"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "publicationStatus": {
+    "local": "saved and publicly verified",
+    "production": "saved and publicly verified",
+    "publicHttpsVerified": true
+  },
+  "verifiedGuideCounts": {
+    "local": [
+      {
+        "environment": "local",
+        "city": "fukuoka",
+        "view": "upcoming",
+        "verificationBase": "http://localhost:3000",
+        "count": 10,
+        "ids": [
+          "15398",
+          "15410",
+          "15411",
+          "15415",
+          "15424",
+          "15425",
+          "15426",
+          "15914",
+          "15924",
+          "18421"
+        ],
+        "verifiedAt": "2026-10-20T21:37:13.581577+00:00"
+      },
+      {
+        "environment": "local",
+        "city": "fukuoka",
+        "view": "new",
+        "verificationBase": "http://localhost:3000",
+        "count": 24,
+        "ids": [
+          "15399",
+          "15400",
+          "15401",
+          "15409",
+          "15412",
+          "15414",
+          "15421",
+          "15422",
+          "15423",
+          "15427",
+          "15428",
+          "15969",
+          "16026",
+          "16027",
+          "16078",
+          "16290",
+          "16291",
+          "16292",
+          "16326",
+          "17625",
+          "18418",
+          "18506",
+          "18536",
+          "18537"
+        ],
+        "verifiedAt": "2026-10-20T21:37:13.809815+00:00"
+      },
+      {
+        "environment": "local",
+        "city": "fukuoka",
+        "view": "top",
+        "verificationBase": "http://localhost:3000",
+        "count": 30,
+        "ids": [
+          "15402",
+          "15403",
+          "15404",
+          "15405",
+          "15406",
+          "15407",
+          "15408",
+          "15413",
+          "15416",
+          "15417",
+          "15418",
+          "15419",
+          "15420",
+          "15429",
+          "18132",
+          "18133",
+          "18134",
+          "18147",
+          "18148",
+          "18149",
+          "18150",
+          "18176",
+          "18279",
+          "18280",
+          "18281",
+          "18289",
+          "18291",
+          "18293",
+          "18295",
+          "18296"
+        ],
+        "verifiedAt": "2026-10-20T21:37:13.935271+00:00"
+      },
+      {
+        "environment": "local",
+        "city": "fukuoka",
+        "view": "discounts",
+        "verificationBase": "http://localhost:3000",
+        "count": 36,
+        "ids": [
+          "http://raisindor.jp/",
+          "https://010bld.com/gohgan/",
+          "https://333sanmitomatoramen.com/store/%e5%a4%a9%e7%a5%9e%e5%a4%a7%e5%90%8d%e6%9c%ac%e5%ba%97/",
+          "https://and-gallery.com/#hukuoka",
+          "https://cene.tokyo/collections/fukuoka-open",
+          "https://fukuoka-orientalhotel.com/restaurant/linksquare/",
+          "https://fukuokaseahawk.hiltonjapan.co.jp/restaurants/clouds",
+          "https://fukuokaseahawk.hiltonjapan.co.jp/restaurants/seala",
+          "https://kanzan.net/imuri/",
+          "https://kusiyatubame.owst.jp/",
+          "https://le-bistro-aki.com/",
+          "https://onefukuoka-building.jp/shop/55",
+          "https://prtimes.jp/main/html/rd/p/000000060.000179076.html",
+          "https://prtimes.jp/main/html/rd/p/000000064.000152670.html",
+          "https://prtimes.jp/main/html/rd/p/000000170.000101757.html",
+          "https://pukutoco.com/sumomo-bakery-1007open/",
+          "https://pukutoco.com/sumomobakery-akasaka1019open/",
+          "https://tabelog.com/en/fukuoka/A4001/A400102/40074846/",
+          "https://toeihotel-fukuoka.com/restaurant/bistro_atrie/",
+          "https://www.eggsnthingsjapan.com/hakata/",
+          "https://www.f-sunpalace.com/restaurant/lagoon/",
+          "https://www.fuk.hotelokura.co.jp/restaurant/lechampdor/",
+          "https://www.gate-hotel.jp/fukuoka/rb/agfukuoka.html",
+          "https://www.ginzalion.jp/shop/brand/yebisubar/onefukuokabldg.html",
+          "https://www.hiramatsurestaurant.jp/hiramatsu-hakata/",
+          "https://www.hiramatsurestaurant.jp/kubotsu/",
+          "https://www.hotelnikko-fukuoka.com/restaurant/celebrites/",
+          "https://www.hotelnikko-fukuoka.com/restaurant/serena/",
+          "https://www.hotpepper.jp/strJ001276550/",
+          "https://www.kys-newotani.co.jp/hakata/restaurant/castillian-bar/",
+          "https://www.orec.co.jp/greenlab-fukuoka/",
+          "https://www.pochi-ito.com/",
+          "https://www.princehotels.co.jp/momochihama/restaurant/yocaterrace/",
+          "https://www.quil-fait-bon.com/pages/fukuoka",
+          "https://www.recent-hotel.com/restaurant/",
+          "https://www.tenchika.com/shop/h_b_antique/"
+        ],
+        "verifiedAt": "2026-10-20T21:37:14.562687+00:00"
+      },
+      {
+        "environment": "local",
+        "city": "osaka",
+        "view": "upcoming",
+        "verificationBase": "http://localhost:3000",
+        "count": 12,
+        "ids": [
+          "15432",
+          "15445",
+          "15447",
+          "15448",
+          "15449",
+          "15458",
+          "15913",
+          "15925",
+          "15975",
+          "16023",
+          "16079",
+          "17168"
+        ],
+        "verifiedAt": "2026-10-20T21:37:17.650505+00:00"
+      },
+      {
+        "environment": "local",
+        "city": "osaka",
+        "view": "new",
+        "verificationBase": "http://localhost:3000",
+        "count": 30,
+        "ids": [
+          "15431",
+          "15435",
+          "15436",
+          "15437",
+          "15438",
+          "15439",
+          "15446",
+          "15451",
+          "15452",
+          "15453",
+          "15454",
+          "15455",
+          "15456",
+          "15457",
+          "17108",
+          "17109",
+          "17110",
+          "17111",
+          "17112",
+          "17622",
+          "17623",
+          "17626",
+          "18303",
+          "18304",
+          "18420",
+          "18424",
+          "18505",
+          "18511",
+          "18550",
+          "18551"
+        ],
+        "verifiedAt": "2026-10-20T21:37:17.671415+00:00"
+      },
+      {
+        "environment": "local",
+        "city": "osaka",
+        "view": "top",
+        "verificationBase": "http://localhost:3000",
+        "count": 30,
+        "ids": [
+          "15430",
+          "15433",
+          "15434",
+          "15440",
+          "15441",
+          "15442",
+          "15443",
+          "15444",
+          "15450",
+          "15971",
+          "18135",
+          "18136",
+          "18137",
+          "18151",
+          "18152",
+          "18153",
+          "18154",
+          "18166",
+          "18168",
+          "18224",
+          "18228",
+          "18271",
+          "18272",
+          "18273",
+          "18274",
+          "18275",
+          "18276",
+          "18277",
+          "18278",
+          "18287"
+        ],
+        "verifiedAt": "2026-10-20T21:37:17.686958+00:00"
+      },
+      {
+        "environment": "local",
+        "city": "osaka",
+        "view": "discounts",
+        "verificationBase": "http://localhost:3000",
+        "count": 31,
+        "ids": [
+          "https://and-gallery.com/#nanba",
+          "https://big-step.co.jp/shop/detail/63",
+          "https://conrad-osaka.hiltonjapan.co.jp/restaurants/40skybar",
+          "https://conrad-osaka.hiltonjapan.co.jp/restaurants/atmos",
+          "https://cross-osaka.orixhotelsandresorts.com/#restaurant",
+          "https://csm-cafe.ltr-online.com/lp/csm-cafe-s022",
+          "https://doubletree-osaka-castle.hiltonjapan.co.jp/restaurants/lounge-bar-sen",
+          "https://doubletree-osaka-castle.hiltonjapan.co.jp/restaurants/restaurant-sen",
+          "https://gabuchiki.com/news/view/308",
+          "https://icosaka.com/offer/pierre_autumnmenu/",
+          "https://jblm2024.wixsite.com/fujiyama-tokyo/%E8%A4%87%E8%A3%BD-namba-osaka",
+          "https://k-coeur.com/restaurant/",
+          "https://labaie.ritzcarltonosaka.com/",
+          "https://osaka.ekimaru.com/shopguide/detail/103",
+          "https://osaka.hiltonjapan.co.jp/plans/restaurants/other/myplace-happyhour",
+          "https://patinahotels.com/osaka/drink-and-dine/p72",
+          "https://prtimes.jp/main/html/rd/p/000000001.000192433.html/",
+          "https://prtimes.jp/main/html/rd/p/000000033.000027700.html",
+          "https://splendido.ritzcarltonosaka.com/",
+          "https://takemon-fukahire.com/",
+          "https://www.agneldor.com/",
+          "https://www.daimaru.co.jp/shinsaibashi/restaurant/cucina-bella.html",
+          "https://www.gate-hotel.jp/osaka/rb/aosaka.html",
+          "https://www.gate-hotel.jp/osaka/rb/peaks.html",
+          "https://www.hiramatsurestaurant.jp/hiramatsu-lafete/",
+          "https://www.hiramatsurestaurant.jp/hiramatsu-lemidi/",
+          "https://www.hotpepper.jp/strJ004661366/",
+          "https://www.labecasse1990.com/",
+          "https://www.quil-fait-bon.com/pages/grand-front-osaka",
+          "https://www.regine.stregisosaka.com/",
+          "https://www.y-unico.jp/"
+        ],
+        "verifiedAt": "2026-10-20T21:37:17.831968+00:00"
+      },
+      {
+        "environment": "local",
+        "city": "kyoto",
+        "view": "upcoming",
+        "verificationBase": "http://localhost:3000",
+        "count": 12,
+        "ids": [
+          "15483",
+          "15499",
+          "15500",
+          "15909",
+          "15910",
+          "15911",
+          "15912",
+          "15922",
+          "15931",
+          "16323",
+          "17169",
+          "18510"
+        ],
+        "verifiedAt": "2026-10-20T21:37:19.842938+00:00"
+      },
+      {
+        "environment": "local",
+        "city": "kyoto",
+        "view": "new",
+        "verificationBase": "http://localhost:3000",
+        "count": 33,
+        "ids": [
+          "15460",
+          "15461",
+          "15462",
+          "15463",
+          "15464",
+          "15465",
+          "15466",
+          "15467",
+          "15468",
+          "15469",
+          "15470",
+          "15471",
+          "15472",
+          "15473",
+          "15474",
+          "15475",
+          "15476",
+          "15477",
+          "15478",
+          "15479",
+          "15480",
+          "15481",
+          "15482",
+          "15489",
+          "15490",
+          "15491",
+          "15492",
+          "15493",
+          "15494",
+          "15495",
+          "15498",
+          "18025",
+          "18026"
+        ],
+        "verifiedAt": "2026-10-20T21:37:19.855802+00:00"
+      },
+      {
+        "environment": "local",
+        "city": "kyoto",
+        "view": "top",
+        "verificationBase": "http://localhost:3000",
+        "count": 30,
+        "ids": [
+          "15459",
+          "15484",
+          "15485",
+          "15486",
+          "15487",
+          "15488",
+          "15496",
+          "15497",
+          "15501",
+          "15973",
+          "18052",
+          "18060",
+          "18061",
+          "18098",
+          "18099",
+          "18117",
+          "18119",
+          "18155",
+          "18156",
+          "18170",
+          "18171",
+          "18173",
+          "18191",
+          "18193",
+          "18194",
+          "18209",
+          "18210",
+          "18211",
+          "18212",
+          "18213"
+        ],
+        "verifiedAt": "2026-10-20T21:37:19.871713+00:00"
+      },
+      {
+        "environment": "local",
+        "city": "kyoto",
+        "view": "discounts",
+        "verificationBase": "http://localhost:3000",
+        "count": 35,
+        "ids": [
+          "https://cenci-kyoto.com/",
+          "https://droit-kyoto.jp/",
+          "https://hotelfauchonkyoto.com/ja/gourmet/fauchon-salon-de-the-kyoto/",
+          "https://kyoto.hiltonjapan.co.jp/restaurants/teori",
+          "https://www.hiramatsurestaurant.jp/hiramatsu-kodaiji/",
+          "https://www.hiramatsurestaurant.jp/la-luce/",
+          "https://www.instagram.com/jbowl_ritsumeikan_mae/",
+          "https://www.keihanhotels-resorts.co.jp/kyoto-centuryhotel/topics/happyhour-2/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/011/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/012/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/013/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/014/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/015/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/016/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/017/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/018/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/019/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/020/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/022/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/023/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/026/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/028/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/031/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/033/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/039/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/040/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/042/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/043/",
+          "https://www.next-hero-kyoto.com/%E3%81%9F%E3%81%93%EF%BC%98%E5%BA%97%E8%88%97%E6%83%85%E5%A0%B1/",
+          "https://www.princess-kyoto.co.jp/restaurant/ambercourt/",
+          "https://www.princess-kyoto.co.jp/restaurant/darley/",
+          "https://www.princess-kyoto.co.jp/restaurant/hisuien/",
+          "https://www.princess-kyoto.co.jp/restaurant/hoen/",
+          "https://www.princess-kyoto.co.jp/restaurant/sagano/",
+          "https://www.quil-fait-bon.com/pages/kyoto"
+        ],
+        "verifiedAt": "2026-10-20T21:37:19.940674+00:00"
+      },
+      {
+        "environment": "local",
+        "city": "nagoya",
+        "view": "upcoming",
+        "verificationBase": "http://localhost:3000",
+        "count": 11,
+        "ids": [
+          "15510",
+          "15512",
+          "15517",
+          "15518",
+          "15521",
+          "15522",
+          "15900",
+          "15901",
+          "15902",
+          "16075",
+          "16080"
+        ],
+        "verifiedAt": "2026-10-20T21:37:22.214028+00:00"
+      },
+      {
+        "environment": "local",
+        "city": "nagoya",
+        "view": "new",
+        "verificationBase": "http://localhost:3000",
+        "count": 31,
+        "ids": [
+          "15509",
+          "15511",
+          "15515",
+          "15516",
+          "15519",
+          "15520",
+          "15898",
+          "15899",
+          "15915",
+          "15916",
+          "15917",
+          "15918",
+          "15919",
+          "15920",
+          "15921",
+          "15932",
+          "15964",
+          "15965",
+          "16020",
+          "16021",
+          "16022",
+          "16076",
+          "16294",
+          "16295",
+          "16767",
+          "16771",
+          "16800",
+          "17107",
+          "17166",
+          "17167",
+          "18045"
+        ],
+        "verifiedAt": "2026-10-20T21:37:22.230186+00:00"
+      },
+      {
+        "environment": "local",
+        "city": "nagoya",
+        "view": "top",
+        "verificationBase": "http://localhost:3000",
+        "count": 30,
+        "ids": [
+          "15502",
+          "15503",
+          "15504",
+          "15505",
+          "15506",
+          "15507",
+          "15508",
+          "15513",
+          "15514",
+          "15523",
+          "15524",
+          "15972",
+          "16024",
+          "18044",
+          "18100",
+          "18101",
+          "18121",
+          "18138",
+          "18192",
+          "18195",
+          "18196",
+          "18214",
+          "18215",
+          "18216",
+          "18217",
+          "18218",
+          "18219",
+          "18220",
+          "18221",
+          "18223"
+        ],
+        "verifiedAt": "2026-10-20T21:37:22.257424+00:00"
+      },
+      {
+        "environment": "local",
+        "city": "nagoya",
+        "view": "discounts",
+        "verificationBase": "http://localhost:3000",
+        "count": 32,
+        "ids": [
+          "https://and-gallery.com/#nagoya",
+          "https://csm-cafe.ltr-online.com/lp/csm-cafe-s017",
+          "https://french-kitamura.jp/",
+          "https://kinzan.nagoya/archives/news/2853/",
+          "https://kobekangroup.com/shop/obanzai_kabtoya/",
+          "https://lebeurrenoisettetokyo.com/nagoya/",
+          "https://nagoya.hiltonjapan.co.jp/restaurants/hideaway3-3",
+          "https://nagoya.hiltonjapan.co.jp/restaurants/inplace3-3",
+          "https://nagoya.hiltonjapan.co.jp/restaurants/ouchou",
+          "https://nagoya.parco.jp/shop/detail/?cd=009191",
+          "https://prtimes.jp/main/html/rd/p/000000004.000116722.html",
+          "https://prtimes.jp/main/html/rd/p/000004440.000018505.html",
+          "https://reconnaissance-nagoya.com/",
+          "https://tabelog.com/en/aichi/A2301/A230110/23089382/",
+          "https://thetowerhotel.jp/restaurant/",
+          "https://www.anacrowneplaza-nagoya.jp/pages/restaurant_gardencourt",
+          "https://www.anacrowneplaza-nagoya.jp/pages/restaurant_karin",
+          "https://www.anacrowneplaza-nagoya.jp/pages/restaurant_stargate",
+          "https://www.anacrowneplaza-nagoya.jp/pages/restaurant_winglounge",
+          "https://www.associa.com/nma/restaurant/pergola/",
+          "https://www.centralpark.co.jp/shop/sharecafe/",
+          "https://www.espacionagoya.com/restaurant-bar/the-bar-castle/",
+          "https://www.hiramatsurestaurant.jp/aubergedelill-nagoya/",
+          "https://www.hotpepper.jp/strJ004698778/",
+          "https://www.hotpepper.jp/strJ004699003/",
+          "https://www.kochuten.jp/",
+          "https://www.komeda.co.jp/shop/detail.html?id=1215",
+          "https://www.lafloraison-t.jp/",
+          "https://www.livingroom-skybar.com/",
+          "https://www.princehotels.co.jp/nagoya/restaurant/skydining/",
+          "https://www.quil-fait-bon.com/pages/nagoya-sakae",
+          "https://www.thekawabunnagoya.com/thekawabunnagoya/restaurant/"
+        ],
+        "verifiedAt": "2026-10-20T21:37:22.411249+00:00"
+      },
+      {
+        "environment": "local",
+        "city": "tokyo",
+        "view": "upcoming",
+        "verificationBase": "http://localhost:3000",
+        "count": 15,
+        "ids": [
+          "15526",
+          "15538",
+          "15541",
+          "15544",
+          "15546",
+          "15555",
+          "15556",
+          "15557",
+          "15923",
+          "15929",
+          "15930",
+          "17106",
+          "17621",
+          "18422",
+          "18720"
+        ],
+        "verifiedAt": "2026-10-20T21:37:24.291899+00:00"
+      },
+      {
+        "environment": "local",
+        "city": "tokyo",
+        "view": "new",
+        "verificationBase": "http://localhost:3000",
+        "count": 31,
+        "ids": [
+          "15527",
+          "15539",
+          "15540",
+          "15551",
+          "15552",
+          "15553",
+          "15554",
+          "15558",
+          "15966",
+          "15967",
+          "15968",
+          "16289",
+          "16325",
+          "17170",
+          "17171",
+          "17172",
+          "17173",
+          "17628",
+          "18027",
+          "18043",
+          "18051",
+          "18058",
+          "18102",
+          "18103",
+          "18300",
+          "18301",
+          "18302",
+          "18444",
+          "18507",
+          "18508",
+          "18509"
+        ],
+        "verifiedAt": "2026-10-20T21:37:24.309398+00:00"
+      },
+      {
+        "environment": "local",
+        "city": "tokyo",
+        "view": "top",
+        "verificationBase": "http://localhost:3000",
+        "count": 30,
+        "ids": [
+          "15525",
+          "15528",
+          "15529",
+          "15530",
+          "15531",
+          "15532",
+          "15533",
+          "15534",
+          "15535",
+          "15536",
+          "15537",
+          "15542",
+          "15543",
+          "15545",
+          "15547",
+          "15548",
+          "15549",
+          "15550",
+          "15559",
+          "15560",
+          "15561",
+          "15562",
+          "15903",
+          "15974",
+          "18122",
+          "18123",
+          "18140",
+          "18141",
+          "18157",
+          "18158"
+        ],
+        "verifiedAt": "2026-10-20T21:37:24.333849+00:00"
+      },
+      {
+        "environment": "local",
+        "city": "tokyo",
+        "view": "discounts",
+        "verificationBase": "http://localhost:3000",
+        "count": 40,
+        "ids": [
+          "https://and-gallery.com/#ikebukuro",
+          "https://and-gallery.com/#yurakucho",
+          "https://cocco.eastone.co.jp/shop/gotanda",
+          "https://cocco.eastone.co.jp/shop/kameido",
+          "https://conrad-tokyo.hiltonjapan.co.jp/restaurants/cerise",
+          "https://conrad-tokyo.hiltonjapan.co.jp/restaurants/chinablue",
+          "https://conrad-tokyo.hiltonjapan.co.jp/restaurants/twentyeight",
+          "https://csm-cafe.ltr-online.com/lp/csm-cafe-s012",
+          "https://gourmetpress.net/1488798/",
+          "https://miabocca.eastone.co.jp/shop/Ikebukuro",
+          "https://miabocca.eastone.co.jp/shop/Shakujii-park",
+          "https://miabocca.eastone.co.jp/shop/Shinjuku-takasimaya",
+          "https://mimimi-jiyugaoka.com/#floor1",
+          "https://onodera-group.com/kaitensushi-ikebukuro/",
+          "https://prtimes.jp/main/html/rd/p/000000009.000161200.html",
+          "https://prtimes.jp/main/html/rd/p/000000048.000152772.html",
+          "https://prtimes.jp/main/html/rd/p/000000196.000049183.html",
+          "https://prtimes.jp/main/html/rd/p/000000356.000048489.html",
+          "https://prtimes.jp/main/html/rd/p/000000592.000071323.html",
+          "https://prtimes.jp/main/html/rd/p/000004178.000003860.html",
+          "https://salvatore.jp/restaurant/asagaya/",
+          "https://sarabethsrestaurants.jp/location/omotesando/",
+          "https://sarabethsrestaurants.jp/location/shinagawa/",
+          "https://sarabethsrestaurants.jp/location/shinjuku/",
+          "https://sarabethsrestaurants.jp/location/tokyo/",
+          "https://shibakoen.bar-shinkai.com/",
+          "https://store-info.skylark.co.jp/syabuyo/map/198490/",
+          "https://tabelog.com/en/tokyo/A1303/A130301/13198692/",
+          "https://tokyo.hiltonjapan.co.jp/restaurants/st_georges_bar",
+          "https://www.andaztokyo.jp/restaurants/jp/thetavern-grill-lounge",
+          "https://www.herofield.com/bbq/tokyoprince/",
+          "https://www.hiramatsurestaurant.jp/jardindessens-tokyo/",
+          "https://www.mesm.jp/en/eat-drink/chefs-theatre.html",
+          "https://www.newotani.co.jp/tokyo/restaurant/gardenlounge/",
+          "https://www.quil-fait-bon.com/pages/aoyama",
+          "https://www.quil-fait-bon.com/pages/grand-maison-ginza",
+          "https://www.quil-fait-bon.com/pages/shinjuku",
+          "https://www.quil-fait-bon.com/pages/tokyo-dome-city",
+          "https://www.quil-fait-bon.com/pages/tokyo-skytree-town-solamachi",
+          "https://www.sunamo.jp/floor/shop_detail.html?UC=1_028"
+        ],
+        "verifiedAt": "2026-10-20T21:37:24.393336+00:00"
+      },
+      {
+        "environment": "local",
+        "city": "sapporo",
+        "view": "upcoming",
+        "verificationBase": "http://localhost:3000",
+        "count": 11,
+        "ids": [
+          "15568",
+          "15569",
+          "15570",
+          "15571",
+          "15597",
+          "15926",
+          "15970",
+          "17103",
+          "18047",
+          "18048",
+          "18054"
+        ],
+        "verifiedAt": "2026-10-20T21:37:26.814216+00:00"
+      },
+      {
+        "environment": "local",
+        "city": "sapporo",
+        "view": "new",
+        "verificationBase": "http://localhost:3000",
+        "count": 30,
+        "ids": [
+          "15580",
+          "15586",
+          "15587",
+          "15588",
+          "15589",
+          "15590",
+          "15591",
+          "15592",
+          "15595",
+          "15596",
+          "16293",
+          "16296",
+          "17104",
+          "17105",
+          "17624",
+          "17627",
+          "18028",
+          "18029",
+          "18030",
+          "18031",
+          "18049",
+          "18055",
+          "18056",
+          "18057",
+          "18104",
+          "18105",
+          "18124",
+          "18125",
+          "18305",
+          "18306"
+        ],
+        "verifiedAt": "2026-10-20T21:37:26.870811+00:00"
+      },
+      {
+        "environment": "local",
+        "city": "sapporo",
+        "view": "top",
+        "verificationBase": "http://localhost:3000",
+        "count": 30,
+        "ids": [
+          "15563",
+          "15564",
+          "15565",
+          "15566",
+          "15567",
+          "15572",
+          "15573",
+          "15574",
+          "15575",
+          "15576",
+          "15577",
+          "15578",
+          "15579",
+          "15581",
+          "15582",
+          "15583",
+          "15584",
+          "15585",
+          "15593",
+          "15594",
+          "15598",
+          "15599",
+          "15600",
+          "15601",
+          "15602",
+          "15603",
+          "15604",
+          "15605",
+          "15606",
+          "15607"
+        ],
+        "verifiedAt": "2026-10-20T21:37:26.957619+00:00"
+      },
+      {
+        "environment": "local",
+        "city": "sapporo",
+        "view": "discounts",
+        "verificationBase": "http://localhost:3000",
+        "count": 34,
+        "ids": [
+          "https://anan.fuji-tatsu.co.jp/shop/sapporo-sinoro/",
+          "https://chocottosushi-kiwami.owst.jp/",
+          "https://cocco.eastone.co.jp/shop/kitahachijo",
+          "https://cocco.eastone.co.jp/shop/kitaichijo",
+          "https://cocco.eastone.co.jp/shop/kotoniekimae",
+          "https://cocco.eastone.co.jp/shop/miyanosawa",
+          "https://cocco.eastone.co.jp/shop/shindohigashi",
+          "https://cocco.eastone.co.jp/shop/souen",
+          "https://grand1934.com/restaurant/garden-dining-waraku/",
+          "https://grand1934.com/restaurant/kokaku/",
+          "https://grand1934.com/restaurant/lobby-lounge-mizar/",
+          "https://grand1934.com/restaurant/northern-terrace-diner/",
+          "https://grand1934.com/restaurant/old-saloon1934/",
+          "https://miabocca.eastone.co.jp/shop/Kita2jo",
+          "https://miabocca.eastone.co.jp/shop/Kotoni-station",
+          "https://miabocca.eastone.co.jp/shop/Sapporo-station",
+          "https://miabocca.eastone.co.jp/shop/atsubetsuminami",
+          "https://miabocca.eastone.co.jp/shop/sapporoduo",
+          "https://michiru.dkdining.com/sapporo/",
+          "https://prtimes.jp/main/html/rd/p/000000010.000134951.html",
+          "https://store-info.skylark.co.jp/syabuyo/map/198489/",
+          "https://www.anahisapporosusukino.com/restaurants/verde/",
+          "https://www.hyatt.com/hyatt-centric/ja-JP/ctsct-hyatt-centric-sapporo/dining",
+          "https://www.jrhotels.co.jp/tower/restaurant/skyj/",
+          "https://www.keioplaza-sapporo.co.jp/restaurants/akizu/",
+          "https://www.keioplaza-sapporo.co.jp/restaurants/crossvault/",
+          "https://www.keioplaza-sapporo.co.jp/restaurants/glass/",
+          "https://www.keioplaza-sapporo.co.jp/restaurants/miyama/",
+          "https://www.keioplaza-sapporo.co.jp/restaurants/yamanami/",
+          "https://www.princehotels.co.jp/sapporo/restaurant/alldaydininggrandeur",
+          "https://www.princehotels.co.jp/sapporo/restaurant/fuyojo",
+          "https://www.princehotels.co.jp/sapporo/restaurant/katsura",
+          "https://www.princehotels.co.jp/sapporo/restaurant/top_prince",
+          "https://www.tokyuhotels.co.jp/sapporostream/restaurant/splish/plan/angel_devil/index.html"
+        ],
+        "verifiedAt": "2026-10-20T21:37:27.040650+00:00"
+      }
+    ],
+    "production": [
+      {
+        "environment": "production",
+        "city": "fukuoka",
+        "view": "upcoming",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 10,
+        "ids": [
+          "15398",
+          "15410",
+          "15411",
+          "15415",
+          "15424",
+          "15425",
+          "15426",
+          "15914",
+          "15924",
+          "18421"
+        ],
+        "verifiedAt": "2026-10-20T21:37:58.075654+00:00"
+      },
+      {
+        "environment": "production",
+        "city": "fukuoka",
+        "view": "new",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 24,
+        "ids": [
+          "15399",
+          "15400",
+          "15401",
+          "15409",
+          "15412",
+          "15414",
+          "15421",
+          "15422",
+          "15423",
+          "15427",
+          "15428",
+          "15969",
+          "16026",
+          "16027",
+          "16078",
+          "16290",
+          "16291",
+          "16292",
+          "16326",
+          "17625",
+          "18418",
+          "18506",
+          "18534",
+          "18536"
+        ],
+        "verifiedAt": "2026-10-20T21:37:58.296192+00:00"
+      },
+      {
+        "environment": "production",
+        "city": "fukuoka",
+        "view": "top",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 30,
+        "ids": [
+          "15402",
+          "15403",
+          "15404",
+          "15405",
+          "15406",
+          "15407",
+          "15408",
+          "15413",
+          "15416",
+          "15417",
+          "15418",
+          "15419",
+          "15420",
+          "15429",
+          "18132",
+          "18133",
+          "18134",
+          "18147",
+          "18148",
+          "18149",
+          "18150",
+          "18176",
+          "18279",
+          "18280",
+          "18281",
+          "18289",
+          "18291",
+          "18293",
+          "18295",
+          "18296"
+        ],
+        "verifiedAt": "2026-10-20T21:37:58.491186+00:00"
+      },
+      {
+        "environment": "production",
+        "city": "fukuoka",
+        "view": "discounts",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 36,
+        "ids": [
+          "http://raisindor.jp/",
+          "https://010bld.com/gohgan/",
+          "https://333sanmitomatoramen.com/store/%e5%a4%a9%e7%a5%9e%e5%a4%a7%e5%90%8d%e6%9c%ac%e5%ba%97/",
+          "https://and-gallery.com/#hukuoka",
+          "https://cene.tokyo/collections/fukuoka-open",
+          "https://fukuoka-orientalhotel.com/restaurant/linksquare/",
+          "https://fukuokaseahawk.hiltonjapan.co.jp/restaurants/clouds",
+          "https://fukuokaseahawk.hiltonjapan.co.jp/restaurants/seala",
+          "https://kanzan.net/imuri/",
+          "https://kusiyatubame.owst.jp/",
+          "https://le-bistro-aki.com/",
+          "https://onefukuoka-building.jp/shop/55",
+          "https://prtimes.jp/main/html/rd/p/000000060.000179076.html",
+          "https://prtimes.jp/main/html/rd/p/000000064.000152670.html",
+          "https://prtimes.jp/main/html/rd/p/000000170.000101757.html",
+          "https://pukutoco.com/sumomo-bakery-1007open/",
+          "https://pukutoco.com/sumomobakery-akasaka1019open/",
+          "https://tabelog.com/en/fukuoka/A4001/A400102/40074846/",
+          "https://toeihotel-fukuoka.com/restaurant/bistro_atrie/",
+          "https://www.eggsnthingsjapan.com/hakata/",
+          "https://www.f-sunpalace.com/restaurant/lagoon/",
+          "https://www.fuk.hotelokura.co.jp/restaurant/lechampdor/",
+          "https://www.gate-hotel.jp/fukuoka/rb/agfukuoka.html",
+          "https://www.ginzalion.jp/shop/brand/yebisubar/onefukuokabldg.html",
+          "https://www.hiramatsurestaurant.jp/hiramatsu-hakata/",
+          "https://www.hiramatsurestaurant.jp/kubotsu/",
+          "https://www.hotelnikko-fukuoka.com/restaurant/celebrites/",
+          "https://www.hotelnikko-fukuoka.com/restaurant/serena/",
+          "https://www.hotpepper.jp/strJ001276550/",
+          "https://www.kys-newotani.co.jp/hakata/restaurant/castillian-bar/",
+          "https://www.orec.co.jp/greenlab-fukuoka/",
+          "https://www.pochi-ito.com/",
+          "https://www.princehotels.co.jp/momochihama/restaurant/yocaterrace/",
+          "https://www.quil-fait-bon.com/pages/fukuoka",
+          "https://www.recent-hotel.com/restaurant/",
+          "https://www.tenchika.com/shop/h_b_antique/"
+        ],
+        "verifiedAt": "2026-10-20T21:37:58.891450+00:00"
+      },
+      {
+        "environment": "production",
+        "city": "osaka",
+        "view": "upcoming",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 12,
+        "ids": [
+          "15432",
+          "15445",
+          "15447",
+          "15448",
+          "15449",
+          "15458",
+          "15913",
+          "15925",
+          "15975",
+          "16023",
+          "16079",
+          "17168"
+        ],
+        "verifiedAt": "2026-10-20T21:37:59.829151+00:00"
+      },
+      {
+        "environment": "production",
+        "city": "osaka",
+        "view": "new",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 30,
+        "ids": [
+          "15431",
+          "15435",
+          "15436",
+          "15437",
+          "15438",
+          "15439",
+          "15446",
+          "15451",
+          "15452",
+          "15453",
+          "15454",
+          "15455",
+          "15456",
+          "15457",
+          "17108",
+          "17109",
+          "17110",
+          "17111",
+          "17112",
+          "17622",
+          "17623",
+          "17626",
+          "18303",
+          "18304",
+          "18420",
+          "18424",
+          "18449",
+          "18504",
+          "18554",
+          "18555"
+        ],
+        "verifiedAt": "2026-10-20T21:38:00.023680+00:00"
+      },
+      {
+        "environment": "production",
+        "city": "osaka",
+        "view": "top",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 30,
+        "ids": [
+          "15430",
+          "15433",
+          "15434",
+          "15440",
+          "15441",
+          "15442",
+          "15443",
+          "15444",
+          "15450",
+          "15971",
+          "18135",
+          "18136",
+          "18137",
+          "18151",
+          "18152",
+          "18153",
+          "18154",
+          "18166",
+          "18168",
+          "18224",
+          "18228",
+          "18271",
+          "18272",
+          "18273",
+          "18274",
+          "18275",
+          "18276",
+          "18277",
+          "18278",
+          "18287"
+        ],
+        "verifiedAt": "2026-10-20T21:38:00.309141+00:00"
+      },
+      {
+        "environment": "production",
+        "city": "osaka",
+        "view": "discounts",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 31,
+        "ids": [
+          "https://and-gallery.com/#nanba",
+          "https://big-step.co.jp/shop/detail/63",
+          "https://conrad-osaka.hiltonjapan.co.jp/restaurants/40skybar",
+          "https://conrad-osaka.hiltonjapan.co.jp/restaurants/atmos",
+          "https://cross-osaka.orixhotelsandresorts.com/#restaurant",
+          "https://csm-cafe.ltr-online.com/lp/csm-cafe-s022",
+          "https://doubletree-osaka-castle.hiltonjapan.co.jp/restaurants/lounge-bar-sen",
+          "https://doubletree-osaka-castle.hiltonjapan.co.jp/restaurants/restaurant-sen",
+          "https://gabuchiki.com/news/view/308",
+          "https://icosaka.com/offer/pierre_autumnmenu/",
+          "https://jblm2024.wixsite.com/fujiyama-tokyo/%E8%A4%87%E8%A3%BD-namba-osaka",
+          "https://k-coeur.com/restaurant/",
+          "https://labaie.ritzcarltonosaka.com/",
+          "https://osaka.ekimaru.com/shopguide/detail/103",
+          "https://osaka.hiltonjapan.co.jp/plans/restaurants/other/myplace-happyhour",
+          "https://patinahotels.com/osaka/drink-and-dine/p72",
+          "https://prtimes.jp/main/html/rd/p/000000001.000192433.html/",
+          "https://prtimes.jp/main/html/rd/p/000000033.000027700.html",
+          "https://splendido.ritzcarltonosaka.com/",
+          "https://takemon-fukahire.com/",
+          "https://www.agneldor.com/",
+          "https://www.daimaru.co.jp/shinsaibashi/restaurant/cucina-bella.html",
+          "https://www.gate-hotel.jp/osaka/rb/aosaka.html",
+          "https://www.gate-hotel.jp/osaka/rb/peaks.html",
+          "https://www.hiramatsurestaurant.jp/hiramatsu-lafete/",
+          "https://www.hiramatsurestaurant.jp/hiramatsu-lemidi/",
+          "https://www.hotpepper.jp/strJ004661366/",
+          "https://www.labecasse1990.com/",
+          "https://www.quil-fait-bon.com/pages/grand-front-osaka",
+          "https://www.regine.stregisosaka.com/",
+          "https://www.y-unico.jp/"
+        ],
+        "verifiedAt": "2026-10-20T21:38:00.740971+00:00"
+      },
+      {
+        "environment": "production",
+        "city": "kyoto",
+        "view": "upcoming",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 12,
+        "ids": [
+          "15483",
+          "15499",
+          "15500",
+          "15909",
+          "15910",
+          "15911",
+          "15912",
+          "15922",
+          "15931",
+          "16323",
+          "17169",
+          "18448"
+        ],
+        "verifiedAt": "2026-10-20T21:38:01.746880+00:00"
+      },
+      {
+        "environment": "production",
+        "city": "kyoto",
+        "view": "new",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 33,
+        "ids": [
+          "15460",
+          "15461",
+          "15462",
+          "15463",
+          "15464",
+          "15465",
+          "15466",
+          "15467",
+          "15468",
+          "15469",
+          "15470",
+          "15471",
+          "15472",
+          "15473",
+          "15474",
+          "15475",
+          "15476",
+          "15477",
+          "15478",
+          "15479",
+          "15480",
+          "15481",
+          "15482",
+          "15489",
+          "15490",
+          "15491",
+          "15492",
+          "15493",
+          "15494",
+          "15495",
+          "15498",
+          "18025",
+          "18026"
+        ],
+        "verifiedAt": "2026-10-20T21:38:01.939049+00:00"
+      },
+      {
+        "environment": "production",
+        "city": "kyoto",
+        "view": "top",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 30,
+        "ids": [
+          "15459",
+          "15484",
+          "15485",
+          "15486",
+          "15487",
+          "15488",
+          "15496",
+          "15497",
+          "15501",
+          "15973",
+          "18052",
+          "18060",
+          "18061",
+          "18098",
+          "18099",
+          "18117",
+          "18119",
+          "18155",
+          "18156",
+          "18170",
+          "18171",
+          "18173",
+          "18191",
+          "18193",
+          "18194",
+          "18209",
+          "18210",
+          "18211",
+          "18212",
+          "18213"
+        ],
+        "verifiedAt": "2026-10-20T21:38:02.135133+00:00"
+      },
+      {
+        "environment": "production",
+        "city": "kyoto",
+        "view": "discounts",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 35,
+        "ids": [
+          "https://cenci-kyoto.com/",
+          "https://droit-kyoto.jp/",
+          "https://hotelfauchonkyoto.com/ja/gourmet/fauchon-salon-de-the-kyoto/",
+          "https://kyoto.hiltonjapan.co.jp/restaurants/teori",
+          "https://www.hiramatsurestaurant.jp/hiramatsu-kodaiji/",
+          "https://www.hiramatsurestaurant.jp/la-luce/",
+          "https://www.instagram.com/jbowl_ritsumeikan_mae/",
+          "https://www.keihanhotels-resorts.co.jp/kyoto-centuryhotel/topics/happyhour-2/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/011/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/012/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/013/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/014/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/015/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/016/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/017/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/018/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/019/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/020/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/022/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/023/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/026/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/028/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/031/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/033/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/039/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/040/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/042/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/043/",
+          "https://www.next-hero-kyoto.com/%E3%81%9F%E3%81%93%EF%BC%98%E5%BA%97%E8%88%97%E6%83%85%E5%A0%B1/",
+          "https://www.princess-kyoto.co.jp/restaurant/ambercourt/",
+          "https://www.princess-kyoto.co.jp/restaurant/darley/",
+          "https://www.princess-kyoto.co.jp/restaurant/hisuien/",
+          "https://www.princess-kyoto.co.jp/restaurant/hoen/",
+          "https://www.princess-kyoto.co.jp/restaurant/sagano/",
+          "https://www.quil-fait-bon.com/pages/kyoto"
+        ],
+        "verifiedAt": "2026-10-20T21:38:02.560841+00:00"
+      },
+      {
+        "environment": "production",
+        "city": "nagoya",
+        "view": "upcoming",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 11,
+        "ids": [
+          "15510",
+          "15512",
+          "15517",
+          "15518",
+          "15521",
+          "15522",
+          "15900",
+          "15901",
+          "15902",
+          "16075",
+          "16080"
+        ],
+        "verifiedAt": "2026-10-20T21:38:03.466014+00:00"
+      },
+      {
+        "environment": "production",
+        "city": "nagoya",
+        "view": "new",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 31,
+        "ids": [
+          "15509",
+          "15511",
+          "15515",
+          "15516",
+          "15519",
+          "15520",
+          "15898",
+          "15899",
+          "15915",
+          "15916",
+          "15917",
+          "15918",
+          "15919",
+          "15920",
+          "15921",
+          "15932",
+          "15964",
+          "15965",
+          "16020",
+          "16021",
+          "16022",
+          "16076",
+          "16294",
+          "16295",
+          "16767",
+          "16771",
+          "16800",
+          "17107",
+          "17166",
+          "17167",
+          "18045"
+        ],
+        "verifiedAt": "2026-10-20T21:38:03.678229+00:00"
+      },
+      {
+        "environment": "production",
+        "city": "nagoya",
+        "view": "top",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 30,
+        "ids": [
+          "15502",
+          "15503",
+          "15504",
+          "15505",
+          "15506",
+          "15507",
+          "15508",
+          "15513",
+          "15514",
+          "15523",
+          "15524",
+          "15972",
+          "16024",
+          "18044",
+          "18100",
+          "18101",
+          "18121",
+          "18138",
+          "18192",
+          "18195",
+          "18196",
+          "18214",
+          "18215",
+          "18216",
+          "18217",
+          "18218",
+          "18219",
+          "18220",
+          "18221",
+          "18223"
+        ],
+        "verifiedAt": "2026-10-20T21:38:03.938347+00:00"
+      },
+      {
+        "environment": "production",
+        "city": "nagoya",
+        "view": "discounts",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 32,
+        "ids": [
+          "https://and-gallery.com/#nagoya",
+          "https://csm-cafe.ltr-online.com/lp/csm-cafe-s017",
+          "https://french-kitamura.jp/",
+          "https://kinzan.nagoya/archives/news/2853/",
+          "https://kobekangroup.com/shop/obanzai_kabtoya/",
+          "https://lebeurrenoisettetokyo.com/nagoya/",
+          "https://nagoya.hiltonjapan.co.jp/restaurants/hideaway3-3",
+          "https://nagoya.hiltonjapan.co.jp/restaurants/inplace3-3",
+          "https://nagoya.hiltonjapan.co.jp/restaurants/ouchou",
+          "https://nagoya.parco.jp/shop/detail/?cd=009191",
+          "https://prtimes.jp/main/html/rd/p/000000004.000116722.html",
+          "https://prtimes.jp/main/html/rd/p/000004440.000018505.html",
+          "https://reconnaissance-nagoya.com/",
+          "https://tabelog.com/en/aichi/A2301/A230110/23089382/",
+          "https://thetowerhotel.jp/restaurant/",
+          "https://www.anacrowneplaza-nagoya.jp/pages/restaurant_gardencourt",
+          "https://www.anacrowneplaza-nagoya.jp/pages/restaurant_karin",
+          "https://www.anacrowneplaza-nagoya.jp/pages/restaurant_stargate",
+          "https://www.anacrowneplaza-nagoya.jp/pages/restaurant_winglounge",
+          "https://www.associa.com/nma/restaurant/pergola/",
+          "https://www.centralpark.co.jp/shop/sharecafe/",
+          "https://www.espacionagoya.com/restaurant-bar/the-bar-castle/",
+          "https://www.hiramatsurestaurant.jp/aubergedelill-nagoya/",
+          "https://www.hotpepper.jp/strJ004698778/",
+          "https://www.hotpepper.jp/strJ004699003/",
+          "https://www.kochuten.jp/",
+          "https://www.komeda.co.jp/shop/detail.html?id=1215",
+          "https://www.lafloraison-t.jp/",
+          "https://www.livingroom-skybar.com/",
+          "https://www.princehotels.co.jp/nagoya/restaurant/skydining/",
+          "https://www.quil-fait-bon.com/pages/nagoya-sakae",
+          "https://www.thekawabunnagoya.com/thekawabunnagoya/restaurant/"
+        ],
+        "verifiedAt": "2026-10-20T21:38:04.405896+00:00"
+      },
+      {
+        "environment": "production",
+        "city": "tokyo",
+        "view": "upcoming",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 15,
+        "ids": [
+          "15526",
+          "15538",
+          "15541",
+          "15544",
+          "15546",
+          "15555",
+          "15556",
+          "15557",
+          "15923",
+          "15929",
+          "15930",
+          "17106",
+          "17621",
+          "18422",
+          "18722"
+        ],
+        "verifiedAt": "2026-10-20T21:38:05.315137+00:00"
+      },
+      {
+        "environment": "production",
+        "city": "tokyo",
+        "view": "new",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 31,
+        "ids": [
+          "15527",
+          "15539",
+          "15540",
+          "15551",
+          "15552",
+          "15553",
+          "15554",
+          "15558",
+          "15966",
+          "15967",
+          "15968",
+          "16289",
+          "16325",
+          "17170",
+          "17171",
+          "17172",
+          "17173",
+          "17628",
+          "18027",
+          "18043",
+          "18051",
+          "18058",
+          "18102",
+          "18103",
+          "18300",
+          "18301",
+          "18302",
+          "18444",
+          "18445",
+          "18446",
+          "18447"
+        ],
+        "verifiedAt": "2026-10-20T21:38:05.554252+00:00"
+      },
+      {
+        "environment": "production",
+        "city": "tokyo",
+        "view": "top",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 30,
+        "ids": [
+          "15525",
+          "15528",
+          "15529",
+          "15530",
+          "15531",
+          "15532",
+          "15533",
+          "15534",
+          "15535",
+          "15536",
+          "15537",
+          "15542",
+          "15543",
+          "15545",
+          "15547",
+          "15548",
+          "15549",
+          "15550",
+          "15559",
+          "15560",
+          "15561",
+          "15562",
+          "15903",
+          "15974",
+          "18122",
+          "18123",
+          "18140",
+          "18141",
+          "18157",
+          "18158"
+        ],
+        "verifiedAt": "2026-10-20T21:38:05.737140+00:00"
+      },
+      {
+        "environment": "production",
+        "city": "tokyo",
+        "view": "discounts",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 40,
+        "ids": [
+          "https://and-gallery.com/#ikebukuro",
+          "https://and-gallery.com/#yurakucho",
+          "https://cocco.eastone.co.jp/shop/gotanda",
+          "https://cocco.eastone.co.jp/shop/kameido",
+          "https://conrad-tokyo.hiltonjapan.co.jp/restaurants/cerise",
+          "https://conrad-tokyo.hiltonjapan.co.jp/restaurants/chinablue",
+          "https://conrad-tokyo.hiltonjapan.co.jp/restaurants/twentyeight",
+          "https://csm-cafe.ltr-online.com/lp/csm-cafe-s012",
+          "https://gourmetpress.net/1488798/",
+          "https://miabocca.eastone.co.jp/shop/Ikebukuro",
+          "https://miabocca.eastone.co.jp/shop/Shakujii-park",
+          "https://miabocca.eastone.co.jp/shop/Shinjuku-takasimaya",
+          "https://mimimi-jiyugaoka.com/#floor1",
+          "https://onodera-group.com/kaitensushi-ikebukuro/",
+          "https://prtimes.jp/main/html/rd/p/000000009.000161200.html",
+          "https://prtimes.jp/main/html/rd/p/000000048.000152772.html",
+          "https://prtimes.jp/main/html/rd/p/000000196.000049183.html",
+          "https://prtimes.jp/main/html/rd/p/000000356.000048489.html",
+          "https://prtimes.jp/main/html/rd/p/000000592.000071323.html",
+          "https://prtimes.jp/main/html/rd/p/000004178.000003860.html",
+          "https://salvatore.jp/restaurant/asagaya/",
+          "https://sarabethsrestaurants.jp/location/omotesando/",
+          "https://sarabethsrestaurants.jp/location/shinagawa/",
+          "https://sarabethsrestaurants.jp/location/shinjuku/",
+          "https://sarabethsrestaurants.jp/location/tokyo/",
+          "https://shibakoen.bar-shinkai.com/",
+          "https://store-info.skylark.co.jp/syabuyo/map/198490/",
+          "https://tabelog.com/en/tokyo/A1303/A130301/13198692/",
+          "https://tokyo.hiltonjapan.co.jp/restaurants/st_georges_bar",
+          "https://www.andaztokyo.jp/restaurants/jp/thetavern-grill-lounge",
+          "https://www.herofield.com/bbq/tokyoprince/",
+          "https://www.hiramatsurestaurant.jp/jardindessens-tokyo/",
+          "https://www.mesm.jp/en/eat-drink/chefs-theatre.html",
+          "https://www.newotani.co.jp/tokyo/restaurant/gardenlounge/",
+          "https://www.quil-fait-bon.com/pages/aoyama",
+          "https://www.quil-fait-bon.com/pages/grand-maison-ginza",
+          "https://www.quil-fait-bon.com/pages/shinjuku",
+          "https://www.quil-fait-bon.com/pages/tokyo-dome-city",
+          "https://www.quil-fait-bon.com/pages/tokyo-skytree-town-solamachi",
+          "https://www.sunamo.jp/floor/shop_detail.html?UC=1_028"
+        ],
+        "verifiedAt": "2026-10-20T21:38:06.123425+00:00"
+      },
+      {
+        "environment": "production",
+        "city": "sapporo",
+        "view": "upcoming",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 11,
+        "ids": [
+          "15568",
+          "15569",
+          "15570",
+          "15571",
+          "15597",
+          "15926",
+          "15970",
+          "17103",
+          "18047",
+          "18048",
+          "18054"
+        ],
+        "verifiedAt": "2026-10-20T21:38:07.194884+00:00"
+      },
+      {
+        "environment": "production",
+        "city": "sapporo",
+        "view": "new",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 30,
+        "ids": [
+          "15580",
+          "15586",
+          "15587",
+          "15588",
+          "15589",
+          "15590",
+          "15591",
+          "15592",
+          "15595",
+          "15596",
+          "16293",
+          "16296",
+          "17104",
+          "17105",
+          "17624",
+          "17627",
+          "18028",
+          "18029",
+          "18030",
+          "18031",
+          "18049",
+          "18055",
+          "18056",
+          "18057",
+          "18104",
+          "18105",
+          "18124",
+          "18125",
+          "18305",
+          "18306"
+        ],
+        "verifiedAt": "2026-10-20T21:38:07.552587+00:00"
+      },
+      {
+        "environment": "production",
+        "city": "sapporo",
+        "view": "top",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 30,
+        "ids": [
+          "15563",
+          "15564",
+          "15565",
+          "15566",
+          "15567",
+          "15572",
+          "15573",
+          "15574",
+          "15575",
+          "15576",
+          "15577",
+          "15578",
+          "15579",
+          "15581",
+          "15582",
+          "15583",
+          "15584",
+          "15585",
+          "15593",
+          "15594",
+          "15598",
+          "15599",
+          "15600",
+          "15601",
+          "15602",
+          "15603",
+          "15604",
+          "15605",
+          "15606",
+          "15607"
+        ],
+        "verifiedAt": "2026-10-20T21:38:07.746201+00:00"
+      },
+      {
+        "environment": "production",
+        "city": "sapporo",
+        "view": "discounts",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 34,
+        "ids": [
+          "https://anan.fuji-tatsu.co.jp/shop/sapporo-sinoro/",
+          "https://chocottosushi-kiwami.owst.jp/",
+          "https://cocco.eastone.co.jp/shop/kitahachijo",
+          "https://cocco.eastone.co.jp/shop/kitaichijo",
+          "https://cocco.eastone.co.jp/shop/kotoniekimae",
+          "https://cocco.eastone.co.jp/shop/miyanosawa",
+          "https://cocco.eastone.co.jp/shop/shindohigashi",
+          "https://cocco.eastone.co.jp/shop/souen",
+          "https://grand1934.com/restaurant/garden-dining-waraku/",
+          "https://grand1934.com/restaurant/kokaku/",
+          "https://grand1934.com/restaurant/lobby-lounge-mizar/",
+          "https://grand1934.com/restaurant/northern-terrace-diner/",
+          "https://grand1934.com/restaurant/old-saloon1934/",
+          "https://miabocca.eastone.co.jp/shop/Kita2jo",
+          "https://miabocca.eastone.co.jp/shop/Kotoni-station",
+          "https://miabocca.eastone.co.jp/shop/Sapporo-station",
+          "https://miabocca.eastone.co.jp/shop/atsubetsuminami",
+          "https://miabocca.eastone.co.jp/shop/sapporoduo",
+          "https://michiru.dkdining.com/sapporo/",
+          "https://prtimes.jp/main/html/rd/p/000000010.000134951.html",
+          "https://store-info.skylark.co.jp/syabuyo/map/198489/",
+          "https://www.anahisapporosusukino.com/restaurants/verde/",
+          "https://www.hyatt.com/hyatt-centric/ja-JP/ctsct-hyatt-centric-sapporo/dining",
+          "https://www.jrhotels.co.jp/tower/restaurant/skyj/",
+          "https://www.keioplaza-sapporo.co.jp/restaurants/akizu/",
+          "https://www.keioplaza-sapporo.co.jp/restaurants/crossvault/",
+          "https://www.keioplaza-sapporo.co.jp/restaurants/glass/",
+          "https://www.keioplaza-sapporo.co.jp/restaurants/miyama/",
+          "https://www.keioplaza-sapporo.co.jp/restaurants/yamanami/",
+          "https://www.princehotels.co.jp/sapporo/restaurant/alldaydininggrandeur",
+          "https://www.princehotels.co.jp/sapporo/restaurant/fuyojo",
+          "https://www.princehotels.co.jp/sapporo/restaurant/katsura",
+          "https://www.princehotels.co.jp/sapporo/restaurant/top_prince",
+          "https://www.tokyuhotels.co.jp/sapporostream/restaurant/splish/plan/angel_devil/index.html"
+        ],
+        "verifiedAt": "2026-10-20T21:38:08.223863+00:00"
+      }
+    ]
+  },
+  "verifiedAtUtc": "2026-10-20T21:40:02.464370+00:00",
+  "scheduleVerification": {
+    "boundaries": [
+      {
+        "at": "2026-11-25T03:00:00.000Z",
+        "configuredCoverage": false
+      },
+      {
+        "at": "2026-11-26T01:59:00.000Z",
+        "configuredCoverage": false
+      },
+      {
+        "at": "2026-11-26T02:00:00.000Z",
+        "configuredCoverage": true
+      },
+      {
+        "at": "2026-11-26T07:59:00.000Z",
+        "configuredCoverage": true
+      },
+      {
+        "at": "2026-11-26T08:00:00.000Z",
+        "configuredCoverage": false
+      },
+      {
+        "at": "2026-11-27T03:00:00.000Z",
+        "configuredCoverage": true
+      },
+      {
+        "at": "2026-11-28T03:00:00.000Z",
+        "configuredCoverage": true
+      },
+      {
+        "at": "2026-11-29T03:00:00.000Z",
+        "configuredCoverage": false
+      },
+      {
+        "at": "2026-11-30T03:00:00.000Z",
+        "configuredCoverage": false
+      }
+    ],
+    "nextStart": {
+      "startsAt": "2026-11-26T02:00:00.000Z",
+      "end": "17:00"
+    },
+    "unresolvedSunday": "False configured coverage onNovember29reflects held Sunday hours, not a claim that operator cancelled the advertised event.",
+    "priceChecks": "¥3000base; no invented¥2500per-person total or ordinary-set drink entitlement"
+  },
+  "readerEvidence": [
+    {
+      "url": "https://www.instagram.com/asayu_store_cafe/",
+      "htmlSha256": "0bba5e9138ea4a875bbe9f9cb5419dc47d4f0dd7021ad915dc4453b4042e00d9"
+    },
+    {
+      "url": "https://asayujapan.com/pages/kyoto-store",
+      "htmlSha256": "43f2f3b4f66a4ae1cd7c242e55ae499c7a27a4ebaae728f152f663316eafdc6a"
+    },
+    {
+      "url": "https://prtimes.jp/main/html/rd/p/000000198.000111100.html",
+      "htmlSha256": "3546f38bd20a8a03f46243fb9779719255789f9a19cbaddf03672cee99368839"
+    },
+    {
+      "url": "https://prtimes.jp/main/html/rd/p/000000179.000111100.html",
+      "htmlSha256": "a5c4bca2f7bd7e04e3caab2226572a49ac46cc148f194c31b0b603b40148c5b0"
+    },
+    {
+      "url": "https://tabelog.com/en/kyoto/A2601/A260201/26045508/",
+      "htmlSha256": "83d3fdd3359bd0f54407d3c25aac06145494cdfa55aa8aeb94d6f13334769ff3"
+    },
+    {
+      "url": "https://graniph.co.jp/archives/4868",
+      "htmlSha256": "31a83b84fda71330af401505ddaabc4a1965e9c7367dc8ca4290c1ae6129d1bb"
+    },
+    {
+      "url": "https://www.graniph.com/other/graniphkyoto",
+      "htmlSha256": "b1ff57ac8d956d0a44ac5d9780fcfb01245b51ff45f15496aee3d4e66c3aee24"
+    },
+    {
+      "url": "https://prtimes.jp/main/html/rd/p/000000226.000067867.html",
+      "htmlSha256": "7727017f874a35fd9bb1117d7ad35fdcbd3219b0a502655129652354efaee778"
+    },
+    {
+      "url": "https://kansai-kaiten.com/kaitenheiten2026_kyoto/",
+      "htmlSha256": "21370bf061de77b932a5cb47c7529325f9b81fce7e12831ca3448b0661c22cfa"
+    },
+    {
+      "url": "https://tabelog.com/en/aichi/A2301/A230110/23089382/party/",
+      "htmlSha256": "a79b876c2965b72bf7de20fcc5c7bcbc5eb49c2efc9bcf08ba641000446dedab"
+    },
+    {
+      "url": "https://tabelog.com/en/aichi/A2301/A230110/23089382/dtlmenu/drink/",
+      "htmlSha256": "b9dc24ab343c4fb0214a2fcb6dbccea9fbc5f208168e5754d0498ff1d278560a"
+    },
+    {
+      "url": "https://tabelog.com/en/aichi/A2301/A230110/23089382/dtlmenu/",
+      "htmlSha256": "1622610f9f2cee9e46026fb9649b4eaa1408b3fdce55a8d71276b99522efb141"
+    },
+    {
+      "url": "https://www.instagram.com/the_lab_nagoya_",
+      "htmlSha256": "dce6f76a93c477fc51189902126cb06e94af3d2a53b652b17fb58639e32c43b3"
+    },
+    {
+      "url": "https://www.the-chocola.com/",
+      "htmlSha256": "6aa4a1e8ff76facb9591d982837522e0766ea0542f88781e1ec2fe5490a73534"
+    },
+    {
+      "url": "https://prtimes.jp/main/html/rd/p/000000010.000076024.html",
+      "htmlSha256": "a664725f16bea83c98191edab93421aea80e6f174faf23cdda0a5a072715e515"
+    },
+    {
+      "url": "https://tabelog.com/en/aichi/A2301/A230110/23089382/dtlphotolst/smp2/",
+      "htmlSha256": "6a887afbd4ae587544cfe508e13d8dd4967b435645f0083221bf30d3741bfc9a"
+    },
+    {
+      "url": "https://prtimes.jp/main/html/rd/p/000000029.000076024.html",
+      "htmlSha256": "7bdd2b728da96d223b152100d7462facef1f3bf16d0201ba47570fe9f15bdf5c"
+    },
+    {
+      "url": "https://tabelog.com/en/aichi/A2301/A230110/23089382/",
+      "htmlSha256": "3033da9b8a3c658ca73c21f1080fd51e200cda3efe79fa1c5d430f27d8257b45"
+    },
+    {
+      "url": "https://nagoyajin.nagoya/nagoya-kaiten-heiten-2026/",
+      "htmlSha256": "e19829b6830d83afebf37564671e8559a25d2562867c2d0fc4b048e780a22393"
+    },
+    {
+      "url": "https://prtimes.jp/main/html/rd/p/000000012.000182657.html",
+      "htmlSha256": "f9037257ff3362cb4eda6daca2d46fe4480765da9a6564a3d712d67165c0312a"
+    },
+    {
+      "url": "https://www.hotpepper.jp/strJ004698590/map/",
+      "htmlSha256": "61312a407bed41613f84a9f2e5f72ab9b809d80e13d0d0048c62e08edfd5f2dc"
+    },
+    {
+      "url": "https://www.hotpepper.jp/strJ004698590/course/",
+      "htmlSha256": "f704a9a12b6e2ec116da4c014ba9c3647728b04a67129c6af655f3da4f711352"
+    },
+    {
+      "url": "https://www.hotpepper.jp/strJ004698590/drink/",
+      "htmlSha256": "7a5f0b5a441c7dee9052c49ec167f7ab9bd336888c25b06cacba3bf060daced9"
+    },
+    {
+      "url": "https://www.hotpepper.jp/strJ004698590/food/",
+      "htmlSha256": "7cb17ec1c00f093c6b4bdda3c97e3127d4200ce1be599e778ef0c926b302a84d"
+    },
+    {
+      "url": "https://www.hotpepper.jp/strJ004698590/appearance/",
+      "htmlSha256": "1edb0b5cbd1f990f23928790ea7e15335c7c21aae6e05028160499ae5d46322b"
+    },
+    {
+      "url": "https://www.hotpepper.jp/strJ004698590/lunch/",
+      "htmlSha256": "31f159ae86fe28a8c5ec518d447e16f64351f09c15461f2013b0cb37be135196"
+    },
+    {
+      "url": "https://www.hotpepper.jp/strJ004698590/photo/",
+      "htmlSha256": "6b5cecca3975d05adaf09d8a5a9c9a137aeba0817e0873258762d6b80978b569"
+    },
+    {
+      "url": "https://www.hotpepper.jp/strJ004698590/",
+      "htmlSha256": "8e3437a2e9d0a1f6c95b956efb8e651afc4a26d0121b09ba909200632103dd0d"
+    }
+  ]
+}

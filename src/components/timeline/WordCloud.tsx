@@ -19,6 +19,7 @@ import {
 } from '@/lib/wordCloud';
 import { useT } from '@/lib/client/i18n';
 import { categoryLabel } from '@/lib/i18n/labels';
+import { worldPoint } from '@/lib/worldMask';
 
 // px per board cell: fine enough for small words to sit inside big ones' gaps.
 const CELL = 2;
@@ -126,6 +127,7 @@ export function WordCloud({
   excluded = [],
   onToggle,
   onHot,
+  shape = 'cloud',
 }: {
   tags: TagCount[];
   selected: string[];
@@ -134,6 +136,8 @@ export function WordCloud({
   onToggle: (name: string) => void;
   // The tag under the pointer or focus, for the caller to describe.
   onHot?: (tag: TagCount | null) => void;
+  // The outline the words fill: a cloud, or the map of the world (its box has the map's proportions).
+  shape?: 'cloud' | 'world';
 }) {
   const id = useId().replace(/:/g, '');
   const translate = useT();
@@ -163,10 +167,10 @@ export function WordCloud({
   const words = useMemo(() => {
     const busiest = [...tags].sort((a, b) => b.count - a.count || a.name.localeCompare(b.name));
     const weights = cloudWeights(busiest.map((t) => t.count));
-    return busiest.map((t, rank) => ({ key: t.name.toLowerCase(), text: t.kind === 'category' ? categoryLabel(translate, t.name) : t.name, weight: weights[rank], vertical: isVertical(t.name.toLowerCase(), rank) }));
-  }, [tags, translate]);
+    return busiest.map((t, rank) => ({ key: t.name.toLowerCase(), text: t.kind === 'category' ? categoryLabel(translate, t.name) : t.name, weight: weights[rank], vertical: isVertical(t.name.toLowerCase(), rank), anchor: shape === 'world' && t.lat != null && t.lon != null ? worldPoint(t.lat, t.lon) : undefined }));
+  }, [tags, translate, shape]);
   // What a layout depends on besides the box, to tell whether the last one fits.
-  const wordsKey = useMemo(() => words.map((w) => `${w.key}\t${w.text}\t${w.weight}\t${w.vertical ? 1 : 0}`).join('\n'), [words]);
+  const wordsKey = useMemo(() => shape + '\n' + words.map((w) => `${w.key}\t${w.text}\t${w.weight}\t${w.vertical ? 1 : 0}\t${w.anchor?.x}\t${w.anchor?.y}`).join('\n'), [words, shape]);
   const reused = lastLayout && size && lastLayout.words === wordsKey && lastLayout.width === size.width && lastLayout.height === size.height ? lastLayout.layout : null;
   // Until this cloud has laid out its own, the last one where it still fits -
   // or, for the moment its own takes (fresh counts after a pick), the last
@@ -187,7 +191,8 @@ export function WordCloud({
       const maxSize = Math.min(110, Math.max(26, Math.min(width, height) / 5.2));
       const minSize = width < 500 ? 11 : 12;
       const sizeFor = (weight: number, scale: number) => Math.max(10, Math.round((minSize + (maxSize - minSize) * weight ** 1.1) * scale));
-      const inside = cloudShape(width, height);
+      // On the map a word may sit anywhere, as near its place as it fits.
+      const inside = shape === 'world' ? () => true : cloudShape(width, height);
       // A first guess at the size that fills the shape, from the words'
       // widths at scale 1 (about 0.6em a letter in bold) and heights. Not
       // capped at 1: a roomy box (the big cloud on a tall phone) grows them
@@ -195,7 +200,7 @@ export function WordCloud({
       const start = fitScale(
         words.map((w) => (w.text.length * 0.6 + 0.4) * sizeFor(w.weight, 1) ** 2 * 1.15),
         shapeArea(width, height, inside),
-        0.42,
+        shape === 'world' ? 0.16 : 0.42,
         Infinity,
       );
       const options = { width, height, cell: CELL, inside, sizeFor, sprite: spriteMaker(family, boxes), pad: 1 };
@@ -216,9 +221,10 @@ export function WordCloud({
           break;
         }
       }
+      // On the map the words stay where they fit near their places, not grown to fill.
       if (placed) {
         let over = fit * 3;
-        for (let i = 0; i < 7; i++) {
+        for (let i = 0; i < (shape === 'world' ? 0 : 7); i++) {
           const mid = (fit + over) / 2;
           const next = whole(mid);
           if (next) [fit, placed] = [mid, next];
@@ -237,7 +243,7 @@ export function WordCloud({
     return () => {
       cancelled = true;
     };
-  }, [size, words, wordsKey, reused]);
+  }, [size, words, wordsKey, reused, shape]);
 
   useEffect(() => {
     if (!layout || !refocusKey) return;

@@ -23,7 +23,7 @@ const COUNTRY_ALIASES = [
   'USA', 'US', 'U.S.', 'U.S.A.', 'United States of America', 'UK', 'U.K.', 'Great Britain', 'Britain',
   'Turkey', 'Turkiye', 'Czech Republic', 'Burma', 'Ivory Coast', 'Korea', "People's Republic of China", 'PRC',
   'Russian Federation', 'UAE', 'Holland', 'Vatican', 'Palestine', 'Metropolitan France', 'Mainland Finland',
-  'La Réunion', 'Mainland China',
+  'La Réunion', 'Mainland China', 'France métropolitaine', 'Schweiz/Suisse/Svizzera/Svizra',
   // The UK's nations stand where a country does: "Rayleigh, Essex, England, UK".
   'England', 'Scotland', 'Wales', 'Northern Ireland',
 ];
@@ -232,4 +232,56 @@ export function cityOf(address: string | null | undefined): string | null {
     return name;
   }
   return null;
+}
+
+// The country an address ends in, by its English name ("Paris, France" ->
+// "France"), for the place cloud. A US address that stops at its state ("San
+// Francisco, CA") is the United States; the UK's nations are the United
+// Kingdom. null when the last part names no country.
+const COUNTRY_ENGLISH: Record<string, string> = {
+  usa: 'United States', us: 'United States', 'u.s.': 'United States', 'u.s.a.': 'United States', 'united states of america': 'United States',
+  uk: 'United Kingdom', 'u.k.': 'United Kingdom', 'great britain': 'United Kingdom', britain: 'United Kingdom', england: 'United Kingdom',
+  scotland: 'United Kingdom', wales: 'United Kingdom', 'northern ireland': 'United Kingdom',
+  turkiye: 'Türkiye', turkey: 'Türkiye', 'czech republic': 'Czechia', burma: 'Myanmar', 'ivory coast': 'Côte d’Ivoire', korea: 'South Korea',
+  "people's republic of china": 'China', prc: 'China', 'mainland china': 'China', 'russian federation': 'Russia', uae: 'United Arab Emirates',
+  holland: 'Netherlands', vatican: 'Vatican City', palestine: 'Palestinian Territories', 'metropolitan france': 'France',
+  'mainland finland': 'Finland', 'france métropolitaine': 'France', 'schweiz/suisse/svizzera/svizra': 'Switzerland', 'la réunion': 'France',
+};
+
+let countryByName: Map<string, string> | undefined;
+
+function countryLookup(): Map<string, string> {
+  if (countryByName) return countryByName;
+  const english = new Intl.DisplayNames(['en'], { type: 'region', fallback: 'none' });
+  const byName = new Map<string, string>();
+  for (const language of COUNTRY_LANGUAGES) {
+    const display = new Intl.DisplayNames([language], { type: 'region', fallback: 'none' });
+    for (let a = 65; a <= 90; a++) {
+      for (let b = 65; b <= 90; b++) {
+        const code = String.fromCharCode(a, b);
+        const name = display.of(code);
+        const home = english.of(code);
+        if (name && home && name !== code && !byName.has(name.toLowerCase())) byName.set(name.toLowerCase(), home);
+      }
+    }
+  }
+  for (const [alias, name] of Object.entries(COUNTRY_ENGLISH)) byName.set(alias, name);
+  return (countryByName = byName);
+}
+
+export function countryOf(address: string | null | undefined): string | null {
+  if (!address) return null;
+  const parts = address
+    .replace(/\([^)]*\)/g, '')
+    .split(',')
+    .map((part) => part.trim())
+    .filter(Boolean);
+  const last = parts.at(-1);
+  if (!last) return null;
+  const lower = last.toLowerCase();
+  if (CITY_STATES.has(lower)) return countryLookup().get(lower) ?? CITY_STATES.get(lower)!;
+  const found = countryLookup().get(lower.replace(/^(the|republic of|federated states of)\s+/, ''));
+  if (found) return found;
+  // "San Francisco, CA" / "Chicago, Illinois 60601": it ends in a US state.
+  return usStateOf(withoutCodes(last)) ? 'United States' : null;
 }

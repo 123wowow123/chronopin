@@ -1,18 +1,18 @@
 # Japan restaurant target audit — October 16, 2026
 
-Target: **30 distinct eligible restaurants in every tab of every city**. **635 verified memberships; 116 still missing**. This target remains incomplete; surplus in another tab does not offset a shortage.
+Target: **30 distinct eligible restaurants in every tab of every city**. **638 verified memberships; 115 still missing**. This target remains incomplete; surplus in another tab does not offset a shortage.
 
-**Batch 108 published and publicly verified (October 20, 2026):** Added **two new Osaka restaurant pins, 147 ordinary menu/course entries and 12 credited Azure photos**: Izakaya Sakigake Osaka Fukushima Honten and Tonkatsu Hitotsubu Hitotsubu Fukushima, both opened October 19. Exact branch dates, complete saved profiles, all menu items, gallery credits and native title/image cards verified locally and over public production HTTPS. Sakigake portions, sashimi minimum, appetizer charge, daily last orders and group-course conditions retained; conflicting course duration recorded. Hitotsubu course prices, daily pork examples and optional curry-price gap retained. AFRO original first-service chronology remains held. Osaka Just opened reaches **30/30**; Fukuoka is the only city with a Just opened shortage (**24/30**). All 24 counts agree at **635 memberships / 116 missing**. No deployment. [Batch evidence](restaurant-japan-30-japan108-2026-10-20.json).
+**Batch 110 published and publicly verified (October 20, 2026):** Added **THE LAB NAGOYA SAKUMACHI backing pin, 11 ordinary menu entries, one dated Specials offer with two menu entries and six credited Azure photographs**. Its original physical-branch opening is July 23, 2024; the November 26–29 fan-café promotion does not reset that date. Regular ¥2,000 cake sets differ from the ¥3,000 fan plan; the ¥500 repost reward has no published per-guest/booking allocation, so no ¥2,500-per-person price is invented. Sunday November29 conflicts with current closure and remains explicitly held; only verified Thursday–Saturday hours scheduled. Exact profiles, every public menu entry, gallery credits and the native Specials title/image verified locally and over public production HTTPS. Kyoto Wanon’s 12 downloaded pictures are Coming soon placeholders, so it remains held despite menu and room captions. Asayu’s June café opening excludes an October grand-opening reset. Nagoya Specials reaches **32/30**. All 24 counts agree at **638 memberships / 115 missing**; no reduction of Coming soon shortages claimed. No deployment. [Batch evidence](restaurant-japan-30-japan110-2026-10-20.json).
 
-All 24 local and public production guide counts agree. Batches 88–108 now have complete public HTTPS verification; earlier timeout checkpoints below are historical.
+All 24 local and public production guide counts agree. Batches 88–110 now have complete public HTTPS verification; earlier timeout checkpoints below are historical.
 
 | City (west to east) | Coming soon | Just opened | Top restaurants | Specials |
 | --- | ---: | ---: | ---: | ---: |
 | Fukuoka | 10/30 | 24/30 | 30/30 | 36/30 |
 | Osaka | 12/30 | 30/30 | 30/30 | 31/30 |
 | Kyoto | 12/30 | 33/30 | 30/30 | 35/30 |
-| Nagoya | 11/30 | 31/30 | 30/30 | 31/30 |
-| Tokyo | 14/30 | 31/30 | 30/30 | 39/30 |
+| Nagoya | 11/30 | 31/30 | 30/30 | 32/30 |
+| Tokyo | 15/30 | 31/30 | 30/30 | 40/30 |
 | Sapporo | 11/30 | 30/30 | 30/30 | 34/30 |
 
 ## Each remaining shortage
@@ -34,11 +34,11 @@ All 24 local and public production guide counts agree. Batches 88–108 now have
 | Nagoya | Coming soon | 11 | 11 | 30 | 19 |
 | Nagoya | Just opened | 31 | 31 | 30 | 0 |
 | Nagoya | Top restaurants | 30 | 30 | 30 | 0 |
-| Nagoya | Specials | 31 | 31 | 30 | 0 |
-| Tokyo | Coming soon | 14 | 14 | 30 | 16 |
+| Nagoya | Specials | 32 | 32 | 30 | 0 |
+| Tokyo | Coming soon | 15 | 15 | 30 | 15 |
 | Tokyo | Just opened | 31 | 31 | 30 | 0 |
 | Tokyo | Top restaurants | 30 | 30 | 30 | 0 |
-| Tokyo | Specials | 39 | 39 | 30 | 0 |
+| Tokyo | Specials | 40 | 40 | 30 | 0 |
 | Sapporo | Coming soon | 11 | 11 | 30 | 19 |
 | Sapporo | Just opened | 30 | 30 | 30 | 0 |
 | Sapporo | Top restaurants | 30 | 30 | 30 | 0 |
@@ -54,7 +54,7 @@ Nineteen cumulative branch opening-date repairs were read back in both environme
 
 Checked exact complete saved profiles, original author presence, native public pin pages and all ordinary menu items, Azure image decode/hash/credit metadata, all 37 new venue cards across paginated guide APIs, native pin identifiers/links and upcoming offer start times. All six production guide HTML pages also returned HTTP 200 with native pin title/image links. The existing Eggs ’n Things pin exposes all 11 new menu entries; the successor starts October 21 at 09:00 JST and retains the prior October 20 expiry.
 
-Continue every under-target cell. Coming soon deficits: Fukuoka 20; Osaka 18; Kyoto 18; Nagoya 19; Tokyo 16; Sapporo 19. Nagoya Just opened is 31/30; continue renewing its 90-day window. Kyoto Specials reaches 30, but dated offers expire and must be replenished. Detailed sources, held leads and October 17–22 expiry watch are in [research notes](restaurant-japan-30-progress-2026-10-16.md). [CSV](restaurant-japan-30-counts-2026-10-16.csv) and [production delta](restaurant-japan-production-2026-10-16.json) cover this session; older snapshots are history, not permission to overwrite current API profiles.
+Continue every under-target cell. Coming soon deficits: Fukuoka 20; Osaka 18; Kyoto 18; Nagoya 19; Tokyo 15; Sapporo 19. Nagoya Just opened is 31/30; continue renewing its 90-day window. Kyoto Specials reaches 30, but dated offers expire and must be replenished. Detailed sources, held leads and October 17–22 expiry watch are in [research notes](restaurant-japan-30-progress-2026-10-16.md). [CSV](restaurant-japan-30-counts-2026-10-16.csv) and [production delta](restaurant-japan-production-2026-10-16.json) cover this session; older snapshots are history, not permission to overwrite current API profiles.
 
 No application code changes, build, restart or deployment. Release `157e1750` remains the previously documented deployed baseline; this content-maintenance session did not change it.
 

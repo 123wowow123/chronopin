@@ -18,6 +18,7 @@ import { leaveDrawerForCloud, onOpenTagCloud } from '@/lib/client/controlsDrawer
 import { mergedSection, useInDrawerPanel, useMergedPanel } from './FloatingControls';
 import { iconButton, PanelHeader } from './PanelHeader';
 import { WordCloud } from './WordCloud';
+import { WORLD_COLS, WORLD_LAND_PATH, WORLD_ROWS } from '@/lib/worldMask';
 import { useT } from '@/lib/client/i18n';
 import { FORMAT_WORDS } from '@/lib/i18n/formatWords';
 import { tagLabel } from '@/lib/i18n/labels';
@@ -235,9 +236,18 @@ export function TagCloud({
       on ? reserved.filter((r) => r.toLowerCase() !== name.toLowerCase()) : [...reserved, name],
     );
   };
-  const clear = () => go((q) => reserved.reduce(withoutReserved, [...selected, ...excluded].reduce(withoutTag, q)), [], [], []);
+  // A place's term, put in or taken out: the cloud's map view picks places
+  // with place:, which searches the address a pin was given.
+  const places = parsed.places;
+  const togglePlace = (name: string) => {
+    const on = places.some((p) => p.toLowerCase() === name.toLowerCase());
+    go((q) => (on ? removeTerm(q, 'place', name) : refineQuery(q, 'place', name)), selected);
+  };
+  const clear = () => go((q) => places.reduce((rest, name) => removeTerm(rest, 'place', name), reserved.reduce(withoutReserved, [...selected, ...excluded].reduce(withoutTag, q))), [], [], []);
 
-  const openCloud = () => {
+  // Opens on the tags, or on the map of places (the Places row).
+  const openCloud = (map = false) => {
+    rememberedPlaces = map;
     // From the drawer, the cloud would open under it; closing the cloud
     // leaves the drawer shut, back on the page.
     if (inDrawer) leaveDrawerForCloud();
@@ -245,7 +255,7 @@ export function TagCloud({
   };
   const closeCloud = () => setExpanded(false);
   // The tags pill between lg and xl, and the drawer's.
-  useEffect(() => onOpenTagCloud(openCloud));
+  useEffect(() => onOpenTagCloud(() => openCloud()));
 
   return (
     <div className={`floating flex min-h-0 flex-col text-sm ${merged ? mergedSection : ''} ${className}`}>
@@ -255,10 +265,30 @@ export function TagCloud({
         captionClass="font-semibold text-tags"
         value={summary}
         open={false}
-        onToggle={openCloud}
+        onToggle={() => openCloud()}
         opensDialog
         label={t('tagCloud.tagsSummary', { summary })}
         reset={selected.length || reserved.length || excluded.length ? { label: t('tagCloud.clear'), onClick: clear } : undefined}
+      />
+      {/* Its own row under the tags: the same cloud, opened on the map of places. */}
+      <PanelHeader
+        caption={t('tagCloud.places')}
+        captionClass="font-semibold text-tags"
+        value={tagSummary(places, t.locale)}
+        open={false}
+        onToggle={() => openCloud(true)}
+        opensDialog
+        label={t('tagCloud.placesSummary', {
+          summary: tagSummary(places, t.locale),
+        })}
+        reset={
+          places.length
+            ? {
+                label: t('tagCloud.clear'),
+                onClick: () => go((q) => places.reduce((rest, name) => removeTerm(rest, 'place', name), q), selected),
+              }
+            : undefined
+        }
       />
       {expanded ? (
         <TagCloudView
@@ -270,6 +300,8 @@ export function TagCloud({
           wrapped={wrapped}
           onWrappedChange={setWrapped}
           onToggle={toggle}
+          places={places}
+          onTogglePlace={togglePlace}
           onToggleReserved={toggleReserved}
           onOpenQuery={openQuery}
           currentQuery={query ?? ''}
@@ -358,7 +390,7 @@ function ReservedFilters({
 }
 
 // The combined searches this viewer runs most (savedQueries), one click each.
-function SavedQueries({ current, onOpen, className = '' }: { current: string; onOpen: (query: string) => void; className?: string }) {
+function SavedQueries({ current, onOpen, className = '', placesOnly = false }: { current: string; onOpen: (query: string) => void; className?: string; placesOnly?: boolean }) {
   const t = useT();
   const label = t('tagCloud.savedQueries');
   const [popular, setPopular] = useState<string[]>([]);
@@ -382,7 +414,10 @@ function SavedQueries({ current, onOpen, className = '' }: { current: string; on
     const from = { x: down.clientX, y: down.clientY };
     // Keep the copy where the pill was grabbed, so it doesn't jump to the cursor.
     const box = down.currentTarget.getBoundingClientRect();
-    const grab = { x: down.clientX - (box.left + box.width / 2), y: down.clientY - (box.top + box.height / 2) };
+    const grab = {
+      x: down.clientX - (box.left + box.width / 2),
+      y: down.clientY - (box.top + box.height / 2),
+    };
     let live = false;
     const hit = (x: number, y: number) => {
       const r = zone.current?.getBoundingClientRect();
@@ -415,7 +450,8 @@ function SavedQueries({ current, onOpen, className = '' }: { current: string; on
     sharedQueries().then(setPopular);
   }, [current]);
   // Pinned searches lead (amber), then this viewer's recent ones (blue), then the popular ones.
-  const list = [...new Set([...pinned, ...recent, ...popular])];
+  // The place cloud keeps to searches by place (a country or a city).
+  const list = [...new Set([...pinned, ...recent, ...popular])].filter((q) => !placesOnly || parseSearchQuery(q).places.length > 0);
   if (!list.length) return null;
   const now = current.trim().replace(/\s+/g, ' ');
   const toneFor = (q: string) =>
@@ -551,6 +587,38 @@ function GroupedToggle({ wrapped, onChange }: { wrapped: boolean; onChange: (wra
   );
 }
 
+// Either-or choices as one joined pill: exactly one is on.
+function Segmented<V extends string>({ label, value, options, onChange }: { label: string; value: V; options: [V, string][]; onChange: (value: V) => void }) {
+  return (
+    <span role="radiogroup" aria-label={label} title={label} className="flex shrink-0 overflow-hidden rounded-full ring-1 ring-line ring-inset">
+      {options.map(([key, text]) => (
+        <button
+          key={key}
+          type="button"
+          role="radio"
+          aria-checked={value === key}
+          onClick={() => onChange(key)}
+          className="px-2.5 py-1 text-xs font-medium text-muted hover:bg-raised hover:text-ink aria-checked:bg-accent/15 aria-checked:text-link"
+        >
+          {text}
+        </button>
+      ))}
+    </span>
+  );
+}
+
+// Places the cloud's map view last held, so it opens on the same view again.
+let rememberedPlaces = false;
+let rememberedCities = false;
+
+type PlaceCount = {
+  name: string;
+  country: string | null;
+  count: number;
+  lat: number | null;
+  lon: number | null;
+};
+
 // How many tags the big cloud reads.
 const VIEW_LIMIT = 200;
 const viewUrl = (countsUrl: string) => `${countsUrl}&limit=${VIEW_LIMIT}`;
@@ -575,6 +643,8 @@ function TagCloudView({
   wrapped,
   onWrappedChange,
   onToggle,
+  places,
+  onTogglePlace,
   onToggleReserved,
   onOpenQuery,
   currentQuery,
@@ -589,6 +659,8 @@ function TagCloudView({
   wrapped: boolean;
   onWrappedChange: (wrapped: boolean) => void;
   onToggle: (name: string) => void;
+  places: string[];
+  onTogglePlace: (name: string) => void;
   onToggleReserved: (name: string) => void;
   onOpenQuery: (query: string) => void;
   currentQuery: string;
@@ -601,6 +673,21 @@ function TagCloudView({
   const [failed, setFailed] = useState(false);
   const [filter, setFilter] = useState('');
   const [hot, setHot] = useState<TagGroup | null>(null);
+  // The map view: places, countries or cities, in a cloud shaped like the world.
+  const [mapView, setMapViewState] = useState(() => rememberedPlaces);
+  const [cities, setCitiesState] = useState(() => rememberedCities);
+  const setMapView = (next: boolean) => {
+    rememberedPlaces = next;
+    setHot(null);
+    setMapViewState(next);
+  };
+  const setCities = (next: boolean) => {
+    rememberedCities = next;
+    setHot(null);
+    setCitiesState(next);
+  };
+  const [placeCounts, setPlaceCounts] = useState<PlaceCount[] | null>(null);
+  const [placesFailed, setPlacesFailed] = useState(false);
   const url = viewUrl(countsUrl);
   useScrollLock(true);
   const rootRef = useRef<HTMLDivElement>(null);
@@ -645,6 +732,27 @@ function TagCloudView({
     };
   }, [baseUrl]);
 
+  // The places for the map view, asked for once it is shown.
+  useEffect(() => {
+    if (!mapView) return;
+    let cancelled = false;
+    const own = new URLSearchParams(countsUrl.split('?')[1] ?? '');
+    const params = new URLSearchParams({
+      kind: cities ? 'city' : 'country',
+      limit: String(VIEW_LIMIT),
+    });
+    for (const key of ['created_since', 'created_within']) if (own.get(key)) params.set(key, own.get(key)!);
+    setPlaceCounts(null);
+    setPlacesFailed(false);
+    api.get<PlaceCount[]>(`/api/pins/place-counts?${params.toString()}`).then(
+      (next) => !cancelled && setPlaceCounts(next),
+      () => !cancelled && setPlacesFailed(true),
+    );
+    return () => {
+      cancelled = true;
+    };
+  }, [mapView, cities, countsUrl]);
+
   useEffect(() => {
     let cancelled = false;
     countsFor(url).then(
@@ -688,7 +796,25 @@ function TagCloudView({
     const all = cloudTags(flat ? written : groups, flat ? selected : groupSelection(groups, selected), VIEW_LIMIT);
     return needle ? all.filter((t) => t.name.toLowerCase().includes(needle)) : all;
   }, [written, selected, needle, wrapped]);
-  const onHot = useCallback((tag: TagCount | null) => setHot(tag ? (tags.find((t) => t.name === tag.name) ?? tag) : null), [tags]);
+  // Places as tags (one word a name, a city's pins summed over any country it shares its name with), for the map.
+  const placeTags = useMemo<TagCount[]>(() => {
+    const byName = new Map<string, TagCount>();
+    for (const place of placeCounts ?? []) {
+      const key = place.name.toLowerCase();
+      const held = byName.get(key);
+      if (held) held.count += place.count;
+      else
+        byName.set(key, {
+          name: place.name,
+          kind: 'topic',
+          count: place.count,
+          ...(place.lat != null && place.lon != null ? { lat: place.lat, lon: place.lon } : {}),
+        });
+    }
+    const all = [...byName.values()];
+    return needle ? all.filter((p) => p.name.toLowerCase().includes(needle)) : all;
+  }, [placeCounts, needle]);
+  const onHot = useCallback((tag: TagCount | null) => setHot(tag ? (tags.find((t) => t.name === tag.name) ?? placeTags.find((t) => t.name === tag.name) ?? tag) : null), [tags, placeTags]);
 
   // Portalled to the body, out of the floating controls' stacking context.
   // It starts under the navbar and sits below it (z-40) and its search
@@ -702,13 +828,25 @@ function TagCloudView({
         <div className="flex items-center gap-3 border-b border-line px-5 py-3 max-sm:flex-wrap max-sm:px-3">
           <Icon name="tag" className="size-5 shrink-0 text-link" />
           <h2 id={titleId} className="shrink-0 text-base font-semibold text-ink">
-            {t('tagCloud.title')}
+            {mapView ? t('tagCloud.placeTitle') : t('tagCloud.title')}
           </h2>
-          {counts || baseline ? <span className="shrink-0 text-sm text-subtle">{t('tagCloud.tags', { count: written.length })}</span> : null}
+          {!mapView && (counts || baseline) ? <span className="shrink-0 text-sm text-subtle">{t('tagCloud.tags', { count: written.length })}</span> : null}
           <FindTag value={filter} onChange={setFilter} className="min-w-0 flex-1 max-sm:order-last max-sm:basis-full" />
           <span className="flex shrink-0 items-center gap-3 max-sm:ms-auto">
-            <GroupedToggle wrapped={wrapped} onChange={onWrappedChange} />
-            {selected.length || reserved.length ? (
+            {mapView ? (
+              <Segmented
+                label={t('tagCloud.placesTitle')}
+                value={cities ? 'cities' : 'countries'}
+                options={[
+                  ['countries', t('tagCloud.places')],
+                  ['cities', t('tagCloud.cities')],
+                ]}
+                onChange={(next) => setCities(next === 'cities')}
+              />
+            ) : (
+              <GroupedToggle wrapped={wrapped} onChange={onWrappedChange} />
+            )}
+            {selected.length || reserved.length || places.length ? (
               <button type="button" onClick={onClear} className={iconButton} aria-label={t('tagCloud.clear')} title={t('tagCloud.clear')}>
                 <Icon name="filter-off" className="size-5" />
               </button>
@@ -718,10 +856,32 @@ function TagCloudView({
             </button>
           </span>
         </div>
-        <ReservedFilters counts={counts ?? []} selected={reserved} needle={needle} showAll={(parseSearchQuery(currentQuery).alternatives?.length ?? 0) > 1} onToggle={onToggleReserved} large className="border-b border-line px-5 py-2.5 max-sm:px-3" />
-        <SavedQueries current={currentQuery} onOpen={onOpenQuery} className="border-b border-line px-5 py-2.5 max-sm:px-3" />
+        {mapView ? null : (
+          <ReservedFilters counts={counts ?? []} selected={reserved} needle={needle} showAll={(parseSearchQuery(currentQuery).alternatives?.length ?? 0) > 1} onToggle={onToggleReserved} large className="border-b border-line px-5 py-2.5 max-sm:px-3" />
+        )}
+        <SavedQueries current={currentQuery} onOpen={onOpenQuery} placesOnly={mapView} className="border-b border-line px-5 py-2.5 max-sm:px-3" />
         <div aria-busy={busy || undefined} className="relative min-h-60 flex-1 overflow-hidden">
-          {failed && !baseline ? (
+          {mapView ? (
+            placesFailed ? (
+              <p className="absolute inset-0 flex items-center justify-center text-sm text-subtle">{t('tagCloud.unavailable')}</p>
+            ) : !placeCounts ? (
+              <p role="status" className="absolute inset-0 flex items-center justify-center text-sm text-subtle">
+                {t('tagCloud.loading')}
+              </p>
+            ) : !placeTags.length ? (
+              <p className="absolute inset-0 flex items-center justify-center text-sm text-subtle">{needle ? t('tagCloud.noMatch') : t('tagCloud.none')}</p>
+            ) : (
+              // The map stretched to fill the panel, taller when there is room.
+              <div className="absolute inset-0">
+                <div className="relative size-full">
+                  <svg aria-hidden viewBox={`0 0 ${WORLD_COLS} ${WORLD_ROWS}`} preserveAspectRatio="none" className="absolute inset-0 size-full fill-line/50">
+                    <path d={WORLD_LAND_PATH} />
+                  </svg>
+                  <WordCloud tags={placeTags} selected={places} onToggle={onTogglePlace} onHot={onHot} shape="world" />
+                </div>
+              </div>
+            )
+          ) : failed && !baseline ? (
             <p className="absolute inset-0 flex items-center justify-center text-sm text-subtle">{t('tagCloud.unavailable')}</p>
           ) : !counts && !baseline ? (
             <p role="status" className="absolute inset-0 flex items-center justify-center text-sm text-subtle">
@@ -744,7 +904,16 @@ function TagCloudView({
             and across a pick, and its layout still fits the next page's. */}
         <p aria-live="polite" className="flex items-center border-t border-line px-5 py-2.5 text-xs text-subtle max-sm:px-3 max-sm:pb-[max(0.625rem,env(safe-area-inset-bottom))]">
           <span className="line-clamp-2 min-h-8 sm:line-clamp-1 sm:min-h-4">
-            {hot ? (
+            {mapView ? (
+              hot ? (
+                <>
+                  <span className="font-semibold text-ink">{hot.name}</span> · {t('tagCloud.pins', { count: hot.count })} ·{' '}
+                  {places.some((p) => p.toLowerCase() === hot.name.toLowerCase()) ? t('tagCloud.clickToDrop') : t('tagCloud.clickToAdd')}
+                </>
+              ) : (
+                t('tagCloud.placeHint')
+              )
+            ) : hot ? (
               <>
                 <span className="font-semibold text-ink">{tagLabel(t, hot)}</span>{' '}
                 · {hot.members ? t('tagCloud.tags', { count: hot.members.length }) : t(KIND_LABEL[hot.kind])} · {t('tagCloud.pins', { count: hot.dim ? 0 : hot.count })} ·{' '}
