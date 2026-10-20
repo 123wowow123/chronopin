@@ -201,7 +201,7 @@ export async function proxy(request: NextRequest) {
     // and admins have their own, and named bots theirs.
     if (gateClient && !bot && !session && /^\/pin\/\d+(?:\/|$)/.test(splitLocale(pathname).path)) {
       const prefetching = request.headers.has('next-router-prefetch') || request.headers.get('purpose') === 'prefetch';
-      const wait = pinRetryAfter(gateClient, Date.now(), prefetching ? PREFETCH_COST : 1);
+      const wait = pinRetryAfter(gateClient, Date.now(), prefetching ? PREFETCH_COST : 1, isMacSafari(request.headers.get('user-agent')));
       if (wait != null) return signInForMore(request, wait);
     }
   }

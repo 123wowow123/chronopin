@@ -176,15 +176,19 @@ export function ipRetryAfter(key: string, light = false, now = Date.now(), cost 
 // but each of its clients still reads pins, and a person opening a few pins
 // from the timeline stays far inside it. A client that discards its cookie
 // starts again, but only by going back through the gate's redirect.
-// Burst 30, then one pin every 4 s (15 a minute).
+// Burst 30, then one pin every 4 s (15 a minute); macOS Safari gets three times that.
 export const PIN_BURST = 30;
 export const PIN_PER_SECOND = 0.25;
-export function pinRetryAfter(clientId: string, now = Date.now(), cost = 1): number | null {
+export const SAFARI_PIN_BURST = PIN_BURST * 3;
+export const SAFARI_PIN_PER_SECOND = PIN_PER_SECOND * 3;
+export function pinRetryAfter(clientId: string, now = Date.now(), cost = 1, safari = false): number | null {
   if (!clientId) return null;
+  const burst = safari ? SAFARI_PIN_BURST : PIN_BURST;
+  const perSecond = safari ? SAFARI_PIN_PER_SECOND : PIN_PER_SECOND;
   const g = globalThis as unknown as { __chronopinPinLimits?: Map<string, Bucket> };
   const buckets = (g.__chronopinPinLimits ??= new Map());
-  const bucket = buckets.get(clientId) ?? { tokens: PIN_BURST, at: now };
-  refill(bucket, now, PIN_BURST, PIN_PER_SECOND);
+  const bucket = buckets.get(clientId) ?? { tokens: burst, at: now };
+  refill(bucket, now, burst, perSecond);
   buckets.delete(clientId);
   buckets.set(clientId, bucket);
   if (buckets.size > IP_MAX_ENTRIES) buckets.delete(buckets.keys().next().value!);
@@ -192,5 +196,5 @@ export function pinRetryAfter(clientId: string, now = Date.now(), cost = 1): num
     bucket.tokens -= cost;
     return null;
   }
-  return Math.ceil((cost - bucket.tokens) / PIN_PER_SECOND);
+  return Math.ceil((cost - bucket.tokens) / perSecond);
 }

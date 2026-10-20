@@ -1,18 +1,18 @@
 # Japan restaurant target audit — October 16, 2026
 
-Target: **30 distinct eligible restaurants in every tab of every city**. **620 verified memberships; 127 still missing**. This target remains incomplete; surplus in another tab does not offset a shortage.
+Target: **30 distinct eligible restaurants in every tab of every city**. **628 verified memberships; 121 still missing**. This target remains incomplete; surplus in another tab does not offset a shortage.
 
-**Batch 104 published and publicly verified (October 20, 2026):** Added **five new restaurant pins, 253 ordinary menu entries, five offers and 26 credited Azure photos** across Fukuoka, Osaka and Tokyo. Added LOCOCRA, Kitashinchi Yakiniku Tomoyuri, the relocated Au Bord d’Eau at Solaria, HAREZA Ikebukuro Onodera and Jonetsu Horumon W Tani4. Refreshed existing Xiyangyang Ropponmatsu while preserving its original pin, author, ten-item menu, native slug and gallery; its expired opening discount is explicitly historical. All six profiles, 263 ordinary menu entries (253 new, ten preserved), eight offer-menu entries and eight native title/image memberships verified locally and over public production HTTPS. Five schedules passed 42 boundary assertions plus next-start and expiry checks. Added seven memberships and reduced shortages by five: **620 memberships / 127 missing**. No deployment. [Batch evidence](restaurant-japan-30-japan104-2026-10-20.json).
+**Batch 105 published and publicly verified (October 20, 2026):** Added **six new restaurant pins, 314 ordinary menu entries, two scheduled offers and 28 credited Azure photos**. Four mimimi Jiyugaoka restaurants bring **Tokyo Just opened to 30/30**: guu table, HoaHoa, Yohaku and LALA PASTA. Added upcoming Tako8 Otesuji in Kyoto and newly opened Kitahama Yakitori porc in Osaka. Enriched existing Moriokake with four unpriced drink categories while preserving its original pin, author, native slug, five-item priced obanzai board and gallery. All seven profiles, 319 ordinary entries (314 new, five preserved), two offer-menu entries and nine native title/image memberships verified locally and over public production HTTPS. Two schedules passed 22 boundary assertions plus next-start, Monday-closure and expiry checks. Added eight memberships and reduced shortages by six: **628 memberships / 121 missing**. No deployment. [Batch evidence](restaurant-japan-30-japan105-2026-10-20.json).
 
-All 24 local and public production guide counts agree. Batches 88–104 now have complete public HTTPS verification; earlier timeout checkpoints below are historical.
+All 24 local and public production guide counts agree. Batches 88–105 now have complete public HTTPS verification; earlier timeout checkpoints below are historical.
 
 | City (west to east) | Coming soon | Just opened | Top restaurants | Specials |
 | --- | ---: | ---: | ---: | ---: |
 | Fukuoka | 10/30 | 21/30 | 30/30 | 35/30 |
-| Osaka | 14/30 | 24/30 | 30/30 | 31/30 |
-| Kyoto | 11/30 | 33/30 | 30/30 | 34/30 |
+| Osaka | 14/30 | 25/30 | 30/30 | 31/30 |
+| Kyoto | 12/30 | 33/30 | 30/30 | 35/30 |
 | Nagoya | 11/30 | 31/30 | 30/30 | 31/30 |
-| Tokyo | 15/30 | 26/30 | 30/30 | 38/30 |
+| Tokyo | 15/30 | 30/30 | 30/30 | 39/30 |
 | Sapporo | 11/30 | 30/30 | 30/30 | 34/30 |
 
 ## Each remaining shortage
@@ -24,21 +24,21 @@ All 24 local and public production guide counts agree. Batches 88–104 now have
 | Fukuoka | Top restaurants | 30 | 30 | 30 | 0 |
 | Fukuoka | Specials | 35 | 35 | 30 | 0 |
 | Osaka | Coming soon | 14 | 14 | 30 | 16 |
-| Osaka | Just opened | 24 | 24 | 30 | 6 |
+| Osaka | Just opened | 25 | 25 | 30 | 5 |
 | Osaka | Top restaurants | 30 | 30 | 30 | 0 |
 | Osaka | Specials | 31 | 31 | 30 | 0 |
-| Kyoto | Coming soon | 11 | 11 | 30 | 19 |
+| Kyoto | Coming soon | 12 | 12 | 30 | 18 |
 | Kyoto | Just opened | 33 | 33 | 30 | 0 |
 | Kyoto | Top restaurants | 30 | 30 | 30 | 0 |
-| Kyoto | Specials | 34 | 34 | 30 | 0 |
+| Kyoto | Specials | 35 | 35 | 30 | 0 |
 | Nagoya | Coming soon | 11 | 11 | 30 | 19 |
 | Nagoya | Just opened | 31 | 31 | 30 | 0 |
 | Nagoya | Top restaurants | 30 | 30 | 30 | 0 |
 | Nagoya | Specials | 31 | 31 | 30 | 0 |
 | Tokyo | Coming soon | 15 | 15 | 30 | 15 |
-| Tokyo | Just opened | 26 | 26 | 30 | 4 |
+| Tokyo | Just opened | 30 | 30 | 30 | 0 |
 | Tokyo | Top restaurants | 30 | 30 | 30 | 0 |
-| Tokyo | Specials | 38 | 38 | 30 | 0 |
+| Tokyo | Specials | 39 | 39 | 30 | 0 |
 | Sapporo | Coming soon | 11 | 11 | 30 | 19 |
 | Sapporo | Just opened | 30 | 30 | 30 | 0 |
 | Sapporo | Top restaurants | 30 | 30 | 30 | 0 |
