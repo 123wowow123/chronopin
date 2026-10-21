@@ -49,6 +49,10 @@
   - Populated `"PinPower"`, `"PinEnergy"`, `"PinDatacenter"`, `"PinTag"`, and `"PinReference"` for all seeded campuses.
   - Successfully synced all 170 new pins, 703 `"PinPower"`, 703 `"PinEnergy"`, 843 `"PinDatacenter"` rows, and 279 `"PinSiteShape"` rows to production with zero errors.
 - [x] **Data integrity cleanup for false-positive data center tags:** Cleaned up 3 hotel pins (`15801`, `15802`, `15803`) that had accidental Cleanview data center tags/rows. Removed stray tags and deleted the erroneous `PinDatacenter` row on `15801` both locally and on production.
+- [x] **Pin Wiki to research deliverable & OKF SourceWiki production sync (`scripts/power/researchDatacenterWikis.ts`, `docs/datacenter-stats-research-2026-10-21.json`, `docs/datacenter-stats-research-2026-10-21.md`):**
+  - Generated comprehensive research manifest [`datacenter-stats-research-2026-10-21.json`](docs/datacenter-stats-research-2026-10-21.json) and Markdown companion [`datacenter-stats-research-2026-10-21.md`](docs/datacenter-stats-research-2026-10-21.md) auditing all 843 data center pins across 353,489 MW, 6,445 generators/turbines, 28.7M frontier AI chips, 441.6 MGD water use, and 279 site outline polygons.
+  - Bound all 843 data center pins to their backing OKF SourceWiki records (1,743 `PinSource` citation bindings across 1,324 distinct source URLs).
+  - Applied prebuilt OKF Source Wikis locally and pushed 114 distinct source wikis across all 5 batches to production via authenticated admin API (`POST /api/admin/source-wikis`). Verified `/api/pins/:id/sources` and `/api/pins/:id/okf` on production return HTTP 200 with complete OKF markdown bundles.
 
 **Remainder work & follow-up items:**
 - [ ] **Map popular compound tags & quick-filter groups (`README.md` lines 404–411):**
