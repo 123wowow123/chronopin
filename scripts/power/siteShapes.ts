@@ -175,15 +175,31 @@ async function main() {
 async function prod(pins: PinRow[], result: Map<number, PinSiteShapeJson>) {
   const base = (flags.base ?? 'https://www.chronopin.com').replace(/\/$/, '');
   const call = async (method: string, route: string, token: string, body?: unknown) => {
-    const res = await fetch(base + route, { method, headers: { 'Content-Type': 'application/json', 'User-Agent': 'chronopin-siteshape/1.0', Authorization: `Bearer ${token}` }, body: body === undefined ? undefined : JSON.stringify(body) });
-    const text = await res.text();
-    let data: any = text;
-    try {
-      data = text ? JSON.parse(text) : null;
-    } catch {
-      // not JSON
+    for (let attempt = 1; attempt <= 3; attempt++) {
+      try {
+        const res = await fetch(base + route, {
+          method,
+          headers: {
+            'Content-Type': 'application/json',
+            'User-Agent': 'chronopin-siteshape/1.0',
+            Authorization: `Bearer ${token}`,
+          },
+          body: body === undefined ? undefined : JSON.stringify(body),
+        });
+        const text = await res.text();
+        let data: any = text;
+        try {
+          data = text ? JSON.parse(text) : null;
+        } catch {
+          // not JSON
+        }
+        return { status: res.status, data };
+      } catch (err: any) {
+        if (attempt === 3) throw err;
+        await new Promise((r) => setTimeout(r, 1000 * attempt));
+      }
     }
-    return { status: res.status, data };
+    throw new Error('Unreachable');
   };
   const tokenFile = path.resolve('.scrape/admin.token');
   const token = fs.existsSync(tokenFile) ? fs.readFileSync(tokenFile, 'utf8').trim() : '';
@@ -193,7 +209,7 @@ async function prod(pins: PinRow[], result: Map<number, PinSiteShapeJson>) {
 
   const rows: any[] = [];
   const problems: string[] = [];
-  const CONCURRENCY = 12;
+  const CONCURRENCY = 6;
   const entries = [...result];
   for (let i = 0; i < entries.length; i += CONCURRENCY) {
     await Promise.all(

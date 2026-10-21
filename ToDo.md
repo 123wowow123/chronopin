@@ -16,17 +16,41 @@
   - Applied migration `0203_pin_site_shape.sql` (`"PinSiteShape"` table storing GeoJSON FeatureCollection, source, sourceUrl).
   - Extended Leaflet map to frame bounds on site polygons and draw campus boundaries, buildings, cooling units, backup generators, power substations, and dedicated power generation with styled fill and strokes.
   - Added translated color-coded `SiteShapeKey` below map across all 16 locales in `src/lib/i18n/messages/*.ts`.
-  - Matched and populated 153 `PinSiteShape` rows locally (`scripts/power/siteShapes.ts`).
-  - **Deployed to production** via `npm run deploy` and synced all 153 `PinSiteShape` rows to production with `npx tsx scripts/power/siteShapes.ts --prod` (0 errors).
+  - Matched and populated 279 `PinSiteShape` rows locally and on production via [`siteShapes.ts --prod`](scripts/power/siteShapes.ts) (server `PinSiteShape` total now 300; 209 campus boundary polygons, 329 backup generators, 396 cooling units, 387 buildings, 185 substations, and 14 power generation features).
+- [x] **Air-permit backup generator and dedicated gas turbine ingestion (`.scrape/datacenter-stats-2026-10-21/dct_fights.json`, `scripts/power/ingestAndSeedCampuses.ts`):**
+  - Ingested verified air-permit generator fleet counts and turbine specifications across 32 facilities into `"PinDatacenter"` locally and pushed to production (`PinDatacenter` count on production increased from 673 to 843, with 107 pins having explicit generator fleets and 504 pins having powerSource). Highlights include:
+    - Starwood Project Washington DE: 516 backup diesel generators
+    - QTS Henrico County VA: 370 backup diesel generators
+    - Lehigh County / Project Atlas South Whitehall PA: 356 diesel generators
+    - Equus Capital Partners Virginia Technology Park: 288 backup generators
+    - Amazon Becker MN: 250 diesel backup generators
+    - Oppidan Hampton MN: 250 diesel backup generators
+    - Google Fort Wayne IN (Project Zodiac): 179 diesel generators
+    - QTS Aurora CO: 138 backup diesel generators
+    - Google Lima OH (Project Bistrozzi): 115 diesel generators
+    - Meta El Paso TX: 813 small natural gas generators
+    - Crusoe Taylor County TX: 62 diesel generators + 10 gas turbines
+    - xAI Colossus 1 Boxtown Memphis TN: 15 permitted gas turbines (and 35 unpermitted SELC/NAACP notice of intent to sue)
+    - xAI Colossus 2 Southaven MS: 87 gas turbines
+    - Vantage Stargate Port Washington WI: 45 backup diesel generators
+    - Microsoft Fairwater Mount Pleasant WI: 40 emergency diesel generators
+    - Avaio Digital Pittsburg CA: 37 backup diesel generators
+    - RadiusDC Nashville TN: 27 backup diesel generators
+    - Markley Group Lowell MA: 27 backup generators
+    - AWS Gilroy CA: 25 emergency generators
+    - Related Digital / OpenAI Stargate Saline MI: 15 backup diesel generators
+    - Valara Spartanburg SC: 11 gas turbines
+    - TeraWulf Cayuga Lake NY: 6 diesel backup generators
+    - Black Mountain Weatherford TX: 5 natural gas turbines
+    - AWS Keystone Trade Center Bucks County PA: 3 emergency generators
+    - AWS Hilliard Scioto Campus OH: 2 backup generators
+- [x] **Seed pins and ingest site boundaries for remaining unpinned US Data Center Tracker campuses and Epoch AI frontier clusters:**
+  - Seeded 170 new data center pins across 21 states (40 Epoch AI frontier clusters and 106 US Data Center Tracker campuses with GeoJSON boundary polygons, plus verified air-permit facilities).
+  - Populated `"PinPower"`, `"PinEnergy"`, `"PinDatacenter"`, `"PinTag"`, and `"PinReference"` for all seeded campuses.
+  - Successfully synced all 170 new pins, 703 `"PinPower"`, 703 `"PinEnergy"`, 843 `"PinDatacenter"` rows, and 279 `"PinSiteShape"` rows to production with zero errors.
 - [x] **Data integrity cleanup for false-positive data center tags:** Cleaned up 3 hotel pins (`15801`, `15802`, `15803`) that had accidental Cleanview data center tags/rows. Removed stray tags and deleted the erroneous `PinDatacenter` row on `15801` both locally and on production.
 
 **Remainder work & follow-up items:**
-- [ ] **Air-permit backup generator and dedicated gas turbine ingestion (`dct_fights.json`):**
-  - 95 fight summaries in `.scrape/datacenter-stats-2026-10-21/dct_fights.json` contain explicit air-permit and utility-filing counts for backup generators and gas turbines (e.g., Becker MN: 250 diesel backup generators; Gilroy CA: 25 emergency generators; Project Washington DE: 516 generators; Henrico County VA: 370 generators; South Whitehall PA: 356 generators; Frederick County VA: 288 generators).
-  - Create an ingestion script to match these facilities against pins by state, county, and operator, populate `PinDatacenter.generators` and `powerSource`, and sync them locally and to production.
-- [ ] **Seed pins and ingest site boundaries for remaining unpinned US Data Center Tracker campuses:**
-  - `trackdatacenters.json` has 213 records with GeoJSON boundary polygons; `siteShapes.ts` currently matched 94 of them to existing pins. ~119 Tracker polygons and ~20 Epoch clusters belong to campuses without a backing pin yet (e.g., Northern Virginia multi-tenant parks, Oregon Columbia Basin clusters).
-  - Seed pins for the top high-MW unpinned campuses and re-run `scripts/power/siteShapes.ts` to attach boundary polygons.
 - [ ] **Map popular compound tags & quick-filter groups (`README.md` lines 404–411):**
   - Add clickable popular tag combination chips on `/map` (e.g. `under construction + data centers`, `planned + data centers`, `tesla + battery storage`).
   - Clicking a group wrapper applies and filters the map by those tags simultaneously.
