@@ -253,6 +253,12 @@ export type MapPinJson = Pick<PinJson, 'id' | 'title' | 'address' | 'categories'
   megawatts?: number | null;
   // Whether those megawatts are power it makes or power it draws.
   powerKind?: 'generation' | 'usage' | 'storage' | null;
+  // Data-centre / facility metrics (PinDatacenter, 0202), for the map's HUD totals.
+  waterGallonsPerDay?: number | null;
+  chips?: number | null;
+  acres?: number | null;
+  sqft?: number | null;
+  generators?: number | null;
   // Its dollars traded on prediction markets, episodes, mean rating (0-100)
   // and cheapest USD ticket, for the map's totals (src/lib/mapStats.ts).
   marketVolume?: number | null;

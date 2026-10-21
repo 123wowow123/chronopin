@@ -114,18 +114,40 @@ function localStart(pin: MapPinJson) {
 // No picks shows every pin; several show pins in any of them.
 const inCategories = (categories: string[], picks: string[]) => !picks.length || categories.some((c) => picks.includes(c));
 
+const STAT_DOT_CLASS: Record<string, string> = {
+  pins: 'bg-sky-400',
+  cost: 'bg-emerald-400',
+  mw: 'bg-amber-400',
+  mwGen: 'bg-emerald-400',
+  mwUse: 'bg-amber-400',
+  mwStore: 'bg-cyan-400',
+  water: 'bg-sky-400',
+  chips: 'bg-violet-400',
+  acres: 'bg-teal-400',
+  sqft: 'bg-indigo-400',
+  generators: 'bg-orange-400',
+  market: 'bg-fuchsia-400',
+  episodes: 'bg-sky-400',
+  rating: 'bg-amber-400',
+  tickets: 'bg-emerald-400',
+};
+
+const DC_DETAIL_KEYS = new Set(['water', 'chips', 'acres', 'sqft', 'generators']);
+
 // The count and totals of the markers a category pick leaves showing (the
-// focused pin always shows).
+// focused pin always shows). Clicking the HUD toggles between the compact
+// 1-row strip and the larger 2-column telemetry grid.
 function StatsStrip({ label, stats, t }: { label: string; stats: MapStat[]; t: ReturnType<typeof useT> }) {
   const inDrawer = useInDrawerPanel();
   const ref = useRef<HTMLDListElement>(null);
+  const [expanded, setExpanded] = useState(false);
   // Squeezed strips swap the median label for its symbol rather than clip it.
   const [compact, setCompact] = useState(false);
-  useLayoutEffect(() => { setCompact(false); }, [stats]);
+  useLayoutEffect(() => { setCompact(false); }, [stats, expanded]);
   useLayoutEffect(() => {
     const el = ref.current;
-    if (el && !compact && el.scrollWidth > el.clientWidth) setCompact(true);
-  }, [stats, compact]);
+    if (el && !expanded && !compact && el.scrollWidth > el.clientWidth) setCompact(true);
+  }, [stats, expanded, compact]);
   useEffect(() => {
     const el = ref.current;
     if (!el || typeof ResizeObserver === 'undefined') return;
@@ -134,10 +156,73 @@ function StatsStrip({ label, stats, t }: { label: string; stats: MapStat[]; t: R
     ro.observe(el);
     return () => ro.disconnect();
   }, []);
+
+  const cleanLabel = (raw: string) => raw.replace(/\s*[:：]\s*$/, '');
+  const canToggle = stats.length > 1;
+  const primaryStats = stats.filter((s) => !DC_DETAIL_KEYS.has(s.key)).slice(0, 4);
+  const rowStats = primaryStats.length > 1 ? primaryStats : stats.slice(0, 3);
+  const toggle = canToggle ? () => setExpanded((prev) => !prev) : undefined;
+  const onKeyDown = canToggle
+    ? (e: React.KeyboardEvent) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          setExpanded((prev) => !prev);
+        }
+      }
+    : undefined;
+
+  if (expanded) {
+    return (
+      <dl
+        ref={ref}
+        aria-label={label}
+        role={canToggle ? 'button' : undefined}
+        tabIndex={canToggle ? 0 : undefined}
+        aria-expanded={canToggle ? true : undefined}
+        onClick={toggle}
+        onKeyDown={onKeyDown}
+        className={`${inDrawer ? 'px-3 ' : 'floating rounded-2xl border border-line/80 bg-panel/95 p-2 shadow-lg backdrop-blur-md '}mt-2 grid w-full grid-cols-2 gap-1.5 text-xs ${canToggle ? 'cursor-pointer select-none' : ''}`}
+      >
+        {stats.map((stat, idx) => {
+          const isOddLast = stats.length % 2 === 1 && idx === stats.length - 1;
+          const dot = STAT_DOT_CLASS[stat.key] ?? 'bg-subtle';
+          return (
+            <div
+              key={stat.key}
+              className={`flex flex-col justify-between rounded-xl bg-raised/70 px-2.5 py-1.5 ring-1 ring-line/60 ring-inset transition-colors hover:bg-raised ${isOddLast ? 'col-span-2' : ''}`}
+            >
+              <dt className="flex items-center gap-1.5 text-[10px] font-semibold tracking-wide text-subtle uppercase">
+                <span className={`size-1.5 shrink-0 rounded-full ${dot}`} aria-hidden />
+                <span className="truncate">{cleanLabel(t(`map.${stat.labelKey}`))}</span>
+              </dt>
+              <dd className={`mt-0.5 text-sm leading-tight font-bold tracking-tight tabular-nums ${stat.tone}`} title={stat.key !== 'pins' && stat.have > 0 ? `${stat.have} pins` : undefined}>
+                {stat.value}
+              </dd>
+            </div>
+          );
+        })}
+      </dl>
+    );
+  }
+
   return (
-    <dl ref={ref} aria-label={label} className={`${inDrawer ? 'px-3 ' : 'floating rounded-lg px-3 py-1.5 '}mt-2 flex w-full flex-nowrap items-baseline justify-between gap-x-1.5 overflow-hidden text-xs whitespace-nowrap`}>
-      {stats.map((stat) => (
-        <div key={stat.key} className="flex gap-0.5"><dt className="text-muted" title={compact && stat.labelKey === 'statMedianCost' ? t(`map.${stat.labelKey}`) : undefined}>{compact && stat.labelKey === 'statMedianCost' ? 'x̃:' : t(`map.${stat.labelKey}`)}</dt><dd className={`font-semibold tabular-nums ${stat.tone}`}>{stat.value}</dd></div>
+    <dl
+      ref={ref}
+      aria-label={label}
+      role={canToggle ? 'button' : undefined}
+      tabIndex={canToggle ? 0 : undefined}
+      aria-expanded={canToggle ? false : undefined}
+      onClick={toggle}
+      onKeyDown={onKeyDown}
+      className={`${inDrawer ? 'px-3 ' : `floating rounded-lg ${compact ? 'px-2 py-1.5' : 'px-3 py-1.5'} `}mt-2 flex w-full flex-nowrap items-baseline justify-between ${compact ? 'gap-x-1 text-[11px]' : 'gap-x-1.5 text-xs'} overflow-hidden whitespace-nowrap ${canToggle ? 'cursor-pointer select-none hover:bg-raised/80' : ''}`}
+    >
+      {rowStats.map((stat) => (
+        <div key={stat.key} className="flex gap-0.5">
+          <dt className="text-muted" title={compact && stat.labelKey === 'statMedianCost' ? t(`map.${stat.labelKey}`) : undefined}>
+            {compact && stat.labelKey === 'statMedianCost' ? 'x̃:' : t(`map.${stat.labelKey}`)}
+          </dt>
+          <dd className={`font-semibold tabular-nums ${stat.tone}`}>{stat.value}</dd>
+        </div>
       ))}
     </dl>
   );

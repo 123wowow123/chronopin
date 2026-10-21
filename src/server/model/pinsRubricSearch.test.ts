@@ -108,3 +108,16 @@ describe('searchClauses watch view', () => {
     expect(where.some((w) => w.startsWith('NOT EXISTS (SELECT 1 FROM "PinTagView" AS "pt" WHERE "pt"."pinId" = "Pin"."id"'))).toBe(true);
   });
 });
+
+describe('searchClauses datacenter telemetry:', () => {
+  it('combines water:, chips:, acres:, sqft:, and generators: bounds into a single PinDatacenter EXISTS clause', () => {
+    const { where, params } = clauses('water:>=1mgd chips:>=100k acres:>=500 sqft:>=1m generators:>=40');
+    const dcClause = where.find((w) => w.includes('"PinDatacenter"'))!;
+    expect(dcClause).toContain('"dc"."waterGallonsPerDay" >= $1::numeric');
+    expect(dcClause).toContain('COALESCE("dc"."h100Equivalents", "dc"."chips") >= $2::numeric');
+    expect(dcClause).toContain('"dc"."acres" >= $3::numeric');
+    expect(dcClause).toContain('"dc"."sqft" >= $4::numeric');
+    expect(dcClause).toContain('"dc"."generators" >= $5::numeric');
+    expect(params).toEqual([1_000_000, 100_000, 500, 1_000_000, 40]);
+  });
+});

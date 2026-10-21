@@ -431,7 +431,7 @@ https://www.cnbc.com/2026/10/19/how-data-centers-are-reshaping-americas-aging-gr
 
 
 
-pin datacenter project and add stats like wateruage , MW, chip quantities, and etc of datacenter. These should be saved in table like MW and should show on aggrigate HUD on map
+pin datacenter project and add stats like water uage, MW, chip quantities, and etc of datacenter. These should be saved in table like MW and should show on aggrigate HUD on map
 https://trackdatacenters.com/usa/pennsylvania
 https://aidatacentermap.org/map
 
@@ -443,6 +443,8 @@ also add information from these sites and create stats for HUD and pin detail if
 • Epoch AI Data Center Datasets: Provides downloadable, frequently updated CSV datasets tracking AI data centers, timelines, and chip quantities (updated through October 2026).
 • Business Insider Data Center Tracker: Maps data centers with air permits issued through December 2025, detailing estimated electricity use and dedicated power sources like natural gas plants.
 • AI Data Center Legislation Tracker: Tracks active and failed state-level bills and regulatory policies regarding AI data center energy usage and environmental accountability.
+
+put in todo.md remainder itmes before session credit runs out
 
 
 

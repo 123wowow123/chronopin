@@ -246,6 +246,14 @@ export type SearchQuery = {
   costs: RatingBound[];
   // Bounds a pin's annual electricity use in gigawatt-hours (energy:>=1twh).
   energies: RatingBound[];
+  // Bounds a datacenter pin's water use in gallons/day (water:>=1mgd), AI
+  // chip count (chips:>=100k), site acreage (acres:>=500), building floor area
+  // in sq ft (sqft:>=1m), and backup generator count (generators:>=50).
+  waters: RatingBound[];
+  chips: RatingBound[];
+  acres: RatingBound[];
+  sqfts: RatingBound[];
+  generators: RatingBound[];
   // Whether a pin's megawatts are power it makes or power it draws
   // or stores (power:generation, power:usage, power:storage), any of them.
   powerKinds: ('generation' | 'usage' | 'storage')[];
@@ -264,7 +272,7 @@ const AXIS_ALIASES: Record<string, OctagonAxis> = { 'public-standing': 'standing
 
 // A leading "-" leaves out what the term would match (-tag:Anime); only tags
 // read it so far, and any other field written that way is left out.
-const FIELD = '(-?(?:company|category|user|confidence|date|posted|updated|tag|pin|place|rating|delay|mw|power|cost|energy|platform|rated|holiday|taste|carperf|dining|hotel|rubric|person|' + [...OCTAGON_AXES, ...Object.keys(AXIS_ALIASES)].join('|') + '))';
+const FIELD = '(-?(?:company|category|user|confidence|date|posted|updated|tag|pin|place|rating|delay|mw|power|cost|energy|water|chips|acres|sqft|generators|platform|rated|holiday|taste|carperf|dining|hotel|rubric|person|' + [...OCTAGON_AXES, ...Object.keys(AXIS_ALIASES)].join('|') + '))';
 const DOUBLE_QUOTED = '([^"]*)"?';
 const SINGLE_QUOTED = "((?:[^']|'(?!\\s|$))*)'?";
 
@@ -284,7 +292,7 @@ const FIELD_TERM = new RegExp(
 // A bare @name, or a bare $ticker standing as a word of its own.
 const BARE_TERM = /(^|\s)(@\S+|\$[A-Za-z][A-Za-z0-9.-]{0,11}(?=\s|$))/g;
 
-export type TermField = 'user' | 'ticker' | 'company' | 'category' | 'confidence' | 'date' | 'posted' | 'updated' | 'tag' | 'pin' | 'place' | 'rating' | 'delay' | 'mw' | 'power' | 'cost' | 'energy' | 'platform' | 'rated' | 'holiday' | 'taste' | 'carperf' | 'dining' | 'hotel' | 'rubric' | 'person' | OctagonAxis;
+export type TermField = 'user' | 'ticker' | 'company' | 'category' | 'confidence' | 'date' | 'posted' | 'updated' | 'tag' | 'pin' | 'place' | 'rating' | 'delay' | 'mw' | 'power' | 'cost' | 'energy' | 'water' | 'chips' | 'acres' | 'sqft' | 'generators' | 'platform' | 'rated' | 'holiday' | 'taste' | 'carperf' | 'dining' | 'hotel' | 'rubric' | 'person' | OctagonAxis;
 
 export type QueryPart =
   | { kind: 'term'; field: TermField; value: string; raw: string; negated?: boolean }
@@ -398,6 +406,11 @@ function readParts(parts: QueryPart[]): SearchQuery {
     mws: [],
     costs: [],
     energies: [],
+    waters: [],
+    chips: [],
+    acres: [],
+    sqfts: [],
+    generators: [],
     powerKinds: [],
     holidays: [],
     text: '',
@@ -479,8 +492,23 @@ function readParts(parts: QueryPart[]): SearchQuery {
       for (const bound of ratingBounds(part.value)) {
         if (!query.ratings.some((b) => b.op === bound.op && b.value === bound.value)) query.ratings.push(bound);
       }
-    } else if (part.field === 'mw' || part.field === 'cost' || part.field === 'energy') {
-      const [bounds, held] = part.field === 'mw' ? [megawattBounds(part.value), query.mws] : part.field === 'cost' ? [costBounds(part.value), query.costs] : [energyBounds(part.value), query.energies];
+    } else if (part.field === 'mw' || part.field === 'cost' || part.field === 'energy' || part.field === 'water' || part.field === 'chips' || part.field === 'acres' || part.field === 'sqft' || part.field === 'generators') {
+      const [bounds, held] =
+        part.field === 'mw'
+          ? [megawattBounds(part.value), query.mws]
+          : part.field === 'cost'
+            ? [costBounds(part.value), query.costs]
+            : part.field === 'energy'
+              ? [energyBounds(part.value), query.energies]
+              : part.field === 'water'
+                ? [waterBounds(part.value), query.waters]
+                : part.field === 'chips'
+                  ? [chipBounds(part.value), query.chips]
+                  : part.field === 'acres'
+                    ? [acreBounds(part.value), query.acres]
+                    : part.field === 'sqft'
+                      ? [sqftBounds(part.value), query.sqfts]
+                      : [generatorBounds(part.value), query.generators];
       for (const bound of bounds) {
         if (!held.some((b) => b.op === bound.op && b.value === bound.value)) held.push(bound);
       }
@@ -532,6 +560,11 @@ export function hasFilters(query: SearchQuery): boolean {
     query.mws.length ||
     query.costs.length ||
     query.energies.length ||
+    query.waters.length ||
+    query.chips.length ||
+    query.acres.length ||
+    query.sqfts.length ||
+    query.generators.length ||
     query.powerKinds.length ||
     query.holidays.length
   );
@@ -614,12 +647,17 @@ export function ratingBounds(value: string): RatingBound[] {
 
 // An amount with a unit after it (500mw, 1.5gw, $2.5b), as a number of the
 // unit's base: megawatts for mw:, dollars for cost:. A bare number is the base.
-const SIZED = '\\$?(\\d+(?:\\.\\d+)?)\\s*([a-z]*)';
+const SIZED = '\\$?(\\d+(?:\\.\\d+)?)\\s*([a-z][a-z0-9]*|)';
 const SIZED_BOUND = new RegExp(`^(>=|<=|=>|=<|>|<|=)?\\s*${SIZED}$`, 'i');
 const SIZED_RANGE = new RegExp(`^${SIZED}\\s*-\\s*${SIZED}$`, 'i');
 const MEGAWATT_UNITS: Record<string, number> = { '': 1, mw: 1, gw: 1000, tw: 1_000_000 };
 const ENERGY_UNITS: Record<string, number> = { '': 1, mwh: 0.001, gwh: 1, twh: 1000, pwh: 1_000_000 };
 const COST_UNITS: Record<string, number> = { '': 1, k: 1e3, m: 1e6, mn: 1e6, b: 1e9, bn: 1e9, t: 1e12, tn: 1e12 };
+const WATER_UNITS: Record<string, number> = { '': 1, gpd: 1, gal: 1, k: 1e3, kgpd: 1e3, m: 1e6, mgd: 1e6, b: 1e9, bgd: 1e9 };
+const CHIP_UNITS: Record<string, number> = { '': 1, h100e: 1, k: 1e3, kh100e: 1e3, m: 1e6, mh100e: 1e6, b: 1e9 };
+const ACRE_UNITS: Record<string, number> = { '': 1, ac: 1, acre: 1, acres: 1, k: 1e3, kac: 1e3 };
+const SQFT_UNITS: Record<string, number> = { '': 1, sf: 1, sqft: 1, k: 1e3, ksf: 1e3, ksqft: 1e3, m: 1e6, msf: 1e6, msqft: 1e6, b: 1e9 };
+const GENERATOR_UNITS: Record<string, number> = { '': 1, gen: 1, gens: 1, k: 1e3 };
 
 function sizedBounds(value: string, units: Record<string, number>): RatingBound[] {
   const text = value.trim();
@@ -658,6 +696,31 @@ export function energyBounds(value: string): RatingBound[] {
 // The bounds a cost: value sets, in US dollars (cost:>=1B, cost:>500m, cost:1b-10b).
 export function costBounds(value: string): RatingBound[] {
   return sizedBounds(value, COST_UNITS);
+}
+
+// The bounds a water: value sets, in gallons per day (water:>=1mgd, water:>=500k).
+export function waterBounds(value: string): RatingBound[] {
+  return sizedBounds(value, WATER_UNITS);
+}
+
+// The bounds a chips: value sets, in AI chips / H100-equivalents (chips:>=100k, chips:>=1m).
+export function chipBounds(value: string): RatingBound[] {
+  return sizedBounds(value, CHIP_UNITS);
+}
+
+// The bounds an acres: value sets, in acres (acres:>=500, acres:100-1000ac).
+export function acreBounds(value: string): RatingBound[] {
+  return sizedBounds(value, ACRE_UNITS);
+}
+
+// The bounds a sqft: value sets, in square feet (sqft:>=1m, sqft:>=500ksf).
+export function sqftBounds(value: string): RatingBound[] {
+  return sizedBounds(value, SQFT_UNITS);
+}
+
+// The bounds a generators: value sets, in backup generator units (generators:>=50).
+export function generatorBounds(value: string): RatingBound[] {
+  return sizedBounds(value, GENERATOR_UNITS);
 }
 
 const SPAN = '(\\d+(?:\\.\\d+)?)\\s*([a-z]*)';

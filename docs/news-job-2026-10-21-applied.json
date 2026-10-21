@@ -1,0 +1,6102 @@
+{
+  "runId": 15,
+  "job": "news",
+  "session": "active Codex session",
+  "checkedAt": "2026-10-21T15:49:38.921901+00:00",
+  "production": true,
+  "newPinIds": [
+    18956,
+    18957,
+    18958,
+    18959,
+    18960
+  ],
+  "updatedExistingPinIds": [
+    858,
+    1950,
+    1952,
+    1953,
+    1954,
+    1955,
+    1956,
+    1957,
+    1958,
+    1964,
+    1968,
+    1970,
+    1976,
+    1987,
+    1989,
+    2890,
+    2979,
+    5118,
+    5174,
+    5181,
+    6648,
+    15120,
+    15613,
+    16016,
+    16017,
+    17115,
+    18190
+  ],
+  "sentiment": {
+    "distinctPins": 456,
+    "verifiedSaves": 457,
+    "scores": [
+      {
+        "id": 1989,
+        "textHash": "2edba7fe435864106edc0afac28cf98eb6aa326159a0aec8b31a3916d481d38f",
+        "sentiment": 0,
+        "product": ""
+      },
+      {
+        "id": 2890,
+        "textHash": "12bfe1162437c7938f3727ba433ee3e466410d41c130e82cc05d88761d47fa73",
+        "sentiment": -0.1,
+        "product": ""
+      },
+      {
+        "id": 5181,
+        "textHash": "99bff5a8331292c1c83c5880f55252073fe40ab7e7f86085813daeded0e9db0d",
+        "sentiment": 0.1,
+        "product": ""
+      },
+      {
+        "id": 6648,
+        "textHash": "cacc7db3144a0de0baaee3e788a523ae17e70e16e539e14600ddde0da7ce38b4",
+        "sentiment": 0.45,
+        "product": ""
+      },
+      {
+        "id": 16016,
+        "textHash": "ef48684b91fdceae927ed1849bbcee22f4263e0c4b2d4147445e8aa910c28e24",
+        "sentiment": 0,
+        "product": ""
+      },
+      {
+        "id": 18190,
+        "textHash": "5645c1dff3ece6998f4710641da8602013fd8991427a3b010b52687b433f3684",
+        "sentiment": 0.1,
+        "product": ""
+      },
+      {
+        "id": 18502,
+        "textHash": "c028963222e4fe74c270d16dc6488e25efc85042f5ea7fd1a5cfb6c1d110561a",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18503,
+        "textHash": "983e87187a2d50d1fc2428ad15deae5b8187b0d5cab059a93e0c395e98c863d1",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18505,
+        "textHash": "c08b56663f96b2d255d187898c817248b2ec50dc6dae60f722dd39e39d61d03d",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18507,
+        "textHash": "45652b80a24cc62ebdb29cf178bb6a92fd06b9c1f1ad677aec0d3cd40511ca63",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18508,
+        "textHash": "8d08ba50e2fa543df1e8c12537b70fd5a28b100de3a0ad32d791f3466c03add6",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18509,
+        "textHash": "ba4bbdd28c41a4aff10bcd3673020004575130130da7eda93c5d13a7f0a24e98",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18510,
+        "textHash": "b1896ec803a519b2495f4dd9d58a3dff3491bdb2ecbe1ac1796469c2ec3f1ff7",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18511,
+        "textHash": "56e76099c9ab483e3e3af0619c71d01cf4b329a6cd95ddbe3ed4e023e9c0b117",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18512,
+        "textHash": "6761b193f0f567de7e6a3359bdfac2635b81c370001fccbda2892027dc8f607b",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18513,
+        "textHash": "114b8f73d7574f0ff8a0064ceae235addb313c60383956defbd5e9c79f0fedaf",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18514,
+        "textHash": "97836546849dbb2aa4ba2ff63997dc988a3e34f7b3cb3d640024cb916e1a5773",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18515,
+        "textHash": "912616dc1736f8854360713b9e5778662cc8ceb3353acbe967ea0b3219e7e541",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18516,
+        "textHash": "cf1793c4416fc7b1f8ce7f37749180ac83cce1a5006962e5a90004946971bd5c",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18517,
+        "textHash": "38b15185a9e9ddbe1bab45f2b88092393da9759b9e1bb8e91e16338c698194e2",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18518,
+        "textHash": "582b4d1d838fc2dda01f32e7958050ac802c290d91c0a16bae21e0dba3472e56",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18519,
+        "textHash": "4fab5dfdd72ac433f6da7a6d3c83a80d05401623bf7644444020506e74e936c1",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18520,
+        "textHash": "b53ab40824458ccbd8ca675ce16b36a5a55363f376aa147c6543549cd7e0a066",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18521,
+        "textHash": "8d385a2ebb8a1ae3a01055a9b34dc4bf386ce284c77b54ff26bd9ce8a12f0d2c",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18522,
+        "textHash": "3ef8963961d229656201aa0223c221d295e2b271676b35c4b3a89da65162d4c8",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18523,
+        "textHash": "f552eb133cb098d51c2acceff1e310454aaaec5b26dd2617c1c273f10cdb4db7",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18524,
+        "textHash": "e7fe7e8606b5946cecce230286899a09e12f4681b4bc289a412b94a0abc199d4",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18525,
+        "textHash": "1d1cfcae3f4416f74e9fc77de57885029a26d923420ee4a9f5782eb97320c32a",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18526,
+        "textHash": "04d9525629eeb84edb44e06b8626b0a7ea39e84f9ec6d5135cd20723a06c2290",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18527,
+        "textHash": "07f96acafe10dff933356c75462348d7137074754ba072e02e50635dc5e91569",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18528,
+        "textHash": "6c43feb3aeb0c93e63b5115dae7690bc48ef143508565e09f498a54d98ea043c",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18529,
+        "textHash": "f3158b75cc57b80a0321df2236560da177a7c0fa241fb20304b6242662d55cb3",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18530,
+        "textHash": "787f57c77150c8bbf4fff2a6566fc0bdc77a2f42722baee5752bb247ce8a4867",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18531,
+        "textHash": "43f13face5530060545d9a48a2a174cc268d4f01f13b7ed8cf13d71247047e27",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18532,
+        "textHash": "b83c57f52bcd9eec36436107c1e72d8d6c948f3cf23d29e01c79fef1f15f149c",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18533,
+        "textHash": "888fa3ccfc9765fe1c342796c561a4c35a66f319636965f615274dda4542c2a5",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18535,
+        "textHash": "0e8c029b8e3f87bfd36656d8ccd819f13a50227a4091106b5aebd7d8ebe256f4",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18537,
+        "textHash": "22d6a615434137a310ebfb3a42556c8d7cd8a657b3f8b1ec424660099e1cb866",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18538,
+        "textHash": "6cd7ca424e1abd987ce60b061471c5880ba49116e318c4b26eb0d0dcee3bf5b4",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18539,
+        "textHash": "b83e7327da8882e83777691d999c127d808188bd8d6e8f00afbbb1c0e8171251",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18540,
+        "textHash": "e8919951cf72a88f5d63bc9e47889467b36e0001d3dc61dfbe36cbb7efbf9b1c",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18541,
+        "textHash": "d764badf3e575c906bdc7114ba2aa263cf0ca08cabcff30701a8d0d382c4fdc9",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18542,
+        "textHash": "603b5ecd83edd97421b3dc9bbef5ea9cffc7d40140709529da69a5b65bc6b7d4",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18543,
+        "textHash": "360238b60dd33d01463654098e8b91d3176ed45fe8694897fa20758421eb955d",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18544,
+        "textHash": "7a1d34a2550f32f8eb5b35ec11f452999774848f8d373254ec7bf67a460475a7",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18545,
+        "textHash": "1375567ad2b43ddce86eb43831df8118470c0c42cadf576b277485b08a27c21c",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18546,
+        "textHash": "edd5c604ddf0e242889bb4aeb96649da66724fd376dbf1f21c02d13c69f982d7",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18547,
+        "textHash": "a3627c4a335fa8e74c9222d14771878c158701f05f0a4d7aef6eb4b51d4aad69",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18548,
+        "textHash": "b2e3b1b975313c0f86638dbe13b369900d403e38ef97d33d486c076352ba6f8f",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18549,
+        "textHash": "077bb7c63c2c49231e0c2b7861b2888166365a2fe1df3d123d7e2432fd1b74d5",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18550,
+        "textHash": "cb1b3ffacab8811f2048fe888ec14676333b3ca9ac1f1db43db80ebd6b3950cb",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18551,
+        "textHash": "c6cddc8befa3fc608a27cb714c76af8f1c296a6ebdd1ff041f7e24698ac59756",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18552,
+        "textHash": "5a54472c85d80485652e00628f1c5eb2c52c778191a7e997981fe1aa3fe2ff53",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18553,
+        "textHash": "a100567fff28ed3135607f236a4bb6f4db585ae1db91e6112593a380c52bbdbf",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18556,
+        "textHash": "5a9edcdd039da03e696d574eb7a408327be6fd9e5baeaa5f29f48d582868065b",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18557,
+        "textHash": "bc33be2c99cddfae06ae31a62ba2e00b97e0b98783439cc3dd751f63278a3c48",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18558,
+        "textHash": "815d73704734be30a6fa1a48f8bd2c73a41958d621d8be7567aaae4c873450de",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18559,
+        "textHash": "2ebc31f391e123188bbec468e3b6131fe87b6802840446b99532b45ab4370cf2",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18560,
+        "textHash": "fc3dfc3535206d20bd59545c4838f6c3242987fcfd33327437ed3a6241c86ca3",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18561,
+        "textHash": "732bb0de7f41954137b4d4106238ef39ab1059926a10efe98b7bf950c73eaf06",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18562,
+        "textHash": "27a64873312a6dcc1c2bcb12b9fba75575b7b2180e4296040048f02f1337113b",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18563,
+        "textHash": "678b4b78c10c8944e5eae642456be22cd4c4dabb54ce0736b6901567c60e3b36",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18564,
+        "textHash": "573392b69cbfc10fc1c01256fb5cc1945ebbbc304851d2bd86b154cea2f9a508",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18565,
+        "textHash": "5ec74db35ecad4bc7249ec11635399e53c346a7d03330637351979d5838969f5",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18566,
+        "textHash": "4b0f030343badd68c7782e0d1cbbed40afc9a0fc339ad124b10436a4c9f45517",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18567,
+        "textHash": "49cecc0ac62af4fcce6c2d39a52abc0bf09accb5ec16de48037b3fd0bdc35b8b",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18568,
+        "textHash": "2e148632a172ee7b28740186f68877cc08cb4d67cfd2a0efe940991f1f8a3cc9",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18569,
+        "textHash": "8dace77adf066fa13170070eb124f3be38496936a1d42fae1a479a119258c376",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18570,
+        "textHash": "e1dc242a947543da06ce008d845e99aba695bdad2ebf093aeb246a49115e63dd",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18571,
+        "textHash": "c58004f8eb24a03859437509ed8d20a66e59da494a18bc0919d7de2a3d4c85eb",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18572,
+        "textHash": "4782e28441449b5618bb7d7e0c02a5dc34258c64007490bb0ebc2c45c0f099eb",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18573,
+        "textHash": "3702f8a75e7114224d843f3aade89aee453a8c881a4a10c3ea331aef21227c78",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18574,
+        "textHash": "f284c5053530a912a871fc14506849d790013ce27f45332aba333a8c49775db1",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18575,
+        "textHash": "bab35b80d938b4a5fde90c2e664097b793f3c28305bb7fbf7de322a5ba64b77a",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18576,
+        "textHash": "7a7af182751d5a1b8ddd3ea73ce1825fb2e5e4a3e05d4c4906e846f64b7e00da",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18577,
+        "textHash": "a011cb6cdf4801e9139f57e91b43e990084ebac56982813d3e03c8cfb10e5343",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18578,
+        "textHash": "abb4fcdb15596f68d4952ef522a715ff78727f9d0af447362acf0ebdab9c82a3",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18579,
+        "textHash": "92b7e42796a573d41ca325b12bcbd8bfaa4c90a2e07b3372edf8f97dfd0a9108",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18580,
+        "textHash": "9aa677686bced2533804017e0720c629dca0fa1d30b3e8acb744a7f4e349e060",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18581,
+        "textHash": "a44943137ee40d9c4f5f477573649fc24c39db961449465e7156046b2e340fd7",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18582,
+        "textHash": "81078bd18c30065464fe925ea52a376a62b43aa03296f44b35880d1bb21eacbc",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18583,
+        "textHash": "f8d46f345ed61b6312abb742773f2324efd99f91bba1d43324b1f7b96ba0743c",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18584,
+        "textHash": "fd00071e635c975b652a02b3d012013e1ff924076a050ee5b04f3c1a20912fd5",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18585,
+        "textHash": "1eb579cdf7df57a05d0675068cc638ac487bfec0fd2d379a4550da59f14ef516",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18586,
+        "textHash": "6c3b6942a1103ebd32b3ea989144620d2bd3d2258104dedc809df18fbfb8a718",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18587,
+        "textHash": "9cbce52b742f11914dfc8604841c420fc9e48a175b8d6c3a071065fa325e2d8f",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18588,
+        "textHash": "afe188c251bffb3f80f6524d1afa427eba3b164ba5b2dfb62c52de06c1fc8ec9",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18589,
+        "textHash": "07b3d53affefcadc6b1656b4c4e9404f1b56571b2ac05601603db47bb27ed7bc",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18590,
+        "textHash": "489c867196959d7ee307df6b9598384f0801b7b0361898f2abcf718e96e942bd",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18591,
+        "textHash": "ea5ab703d252c50f0a7b5927880ed169075f19aeb6c8463de27e25cda7d119e6",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18592,
+        "textHash": "8a0d14c49a77150bf2d222acd92d6a0178789f56bb180f4e5fa438321b3d23c9",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18593,
+        "textHash": "c039369017863dc92c704ad5bd0b4f95ebb917871c1cd581a34d02da3b412310",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18594,
+        "textHash": "8d5f4382c364665b8afaabc7e81aee679487254e11672aa451a94d026b66f503",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18595,
+        "textHash": "8213e6f69e32bb9ea7f55907ffbbb040c9a3a1b9a41fbaf3b94edbe0fc9cd8b8",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18596,
+        "textHash": "5a3401784284caac2c8590409e5aaf1a48b931668e70f8985eb5a24f79f36626",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18597,
+        "textHash": "f8357f83f6c96c4a3467800052ada67313ebb673efc6819f47b3f1c7f09abe4b",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18598,
+        "textHash": "9eecd3ebee879e69a2c37e9a6f8902b337fdc14d2dac6899edc33bdf3aad02fe",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18599,
+        "textHash": "d4c39e4b48d5695e4daaadc2c9fe9d81c65361ae3b2e4effa37033ac31635191",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18600,
+        "textHash": "a0453983eec9ec97321a52549c6a4cbe9cf820cab1f4036026c30212ed03ed61",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18601,
+        "textHash": "4ed87910e72e3fc4e87607ba024b9f8f74accb8b326cc5bb0dcc3fbd6e7368a5",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18602,
+        "textHash": "137ab77273b3a23d6fb1a41a94631766cbf3d30e2626a135968df2393d222173",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18603,
+        "textHash": "72d01748a95a9e12ae2ca535e310f77d72f33d8e884e2fcf35a975d22dd4b616",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18604,
+        "textHash": "e6eb888cd545213a4fba0ae97b492360e74f4fbfb68718dfedcebb09cba800ca",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18605,
+        "textHash": "dede1546165aaa90187cc6f6b24c6d0e57761603b325d2e22d5069c8bf50db6e",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18606,
+        "textHash": "eba57d2eea001d19fbe3bbb2ff128f677f0f2d7e6ce3972b4295fe3f6595e487",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18607,
+        "textHash": "b52e9cfb30b9d6ef04bd7e0982c7e8c527a6d89b843802be905e26ad7376efce",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18608,
+        "textHash": "55185cf6b0056dc30f7e554b467264bd42994f949ac242c115d67ac22efe076b",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18609,
+        "textHash": "48e615377f2837626e81d5af94997946e6535b076a3fc6f1a069928d158cf14b",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18610,
+        "textHash": "4d2d951ee791ae02be55fbcd24f193f1f0b3e5f50ab18ad4925f99cf2d708d93",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18611,
+        "textHash": "dd2953f651932badc06d58a68d8feb35501109fa7046adb6d0f492c6b7baebba",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18612,
+        "textHash": "9a955594365bf3d017d2010a2e132397de54d9e5b138df8296cbee968547f1ab",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18613,
+        "textHash": "518b8017c4f59eb8beeee3dea32d11c60c149ac6ace2d80e1e043ce6d22180b6",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18614,
+        "textHash": "ca5899a3453bedbf2d07c9db0ea7ed464b9777dee1e7e88794cdd1426371dad4",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18615,
+        "textHash": "fbdc2f999ebc87feeff126ea94a5ae5eae10e0e0e8bdef625dc47eafe468ba0c",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18616,
+        "textHash": "604adfabc12d03dde44e6f1230fd0b2b0f7d27efc59a34f83c2c2961e1d24fc0",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18617,
+        "textHash": "084511f985b73352909bb1fedec577c37855caaeb4ebc1c3d46d0c029d06da31",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18618,
+        "textHash": "fe199f51645b432458dddb547807c9479b6cc9762c75e6487259d2e2a9fbec32",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18619,
+        "textHash": "3c760ebdd924118ba567a90d3c9309a60cf08aff5a33baa06d6b523aa1a4a85e",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18620,
+        "textHash": "2ad4f7df1afda61a756d979fd9879f05dab4b0cb116602e310d1ffb55376b71c",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18621,
+        "textHash": "382eeab34359f493e184c9a1f66c8a8f1fe5a5aa21df57f4c587c7ef9e36bda2",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18622,
+        "textHash": "d3648fc11f63adcad619b8c3045f83146d7a04fe669361930014e6899f24ba05",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18623,
+        "textHash": "a99a2268ff02b09179cddd2fe40a0c761ba7bf143aaa6de740c590677be9faec",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18624,
+        "textHash": "0f8e9e97a8ae6bcfecec5e9d6cbacf96157399fa1f2dfba58f1319896fbec004",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18625,
+        "textHash": "f8f48b1037233da1acbba70ad5862ab7de1d9416e759edabd6596376ffe78bfd",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18626,
+        "textHash": "37218cf5c858b1223c4f738c3fa13cb48a4a78893977e50177ae12d8fb772458",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18627,
+        "textHash": "e1af98159f699f57b1251914fc85d76c2fe34d10f88423105e02593fe311c66b",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18628,
+        "textHash": "419afab203e54a473d41ec2109e620212eb6af18a408f3cb95ea9f1d86d3bce5",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18629,
+        "textHash": "a3ac8769689b1d3e90e89e10cd5a821ef995ca1045ac0e2c4c32877793bcbc87",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18630,
+        "textHash": "bdf1953f72053485c5061ba7190f712008c55b31d7e2ee27f0a7b8dec336c36d",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18631,
+        "textHash": "f5d9c5641a927f47cd61efc25afb9e7512d9f8c12f674b6b88430d58e7a2841d",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18632,
+        "textHash": "5cc4c4a7e24693b7d692a16a983d79e20352922223620aac0925e885b6e3a56d",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18633,
+        "textHash": "18c2baeaca7af79d8b9b9322168efa4fa25d4a9f3c463301be45734540d4fcbb",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18634,
+        "textHash": "723ccb25e3ad658c2d729147db17c5bdd01e77dfe813a6638d79c055d301309b",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18635,
+        "textHash": "03f1910f9bfca594b014fc394a6f80530c202603d1d172d9f63389acc6b49844",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18636,
+        "textHash": "8287886d55ec69d9b3c82a82b1b4c9ddf6ee78ce0f0746ce36cc14254b38b0a4",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18637,
+        "textHash": "d41e91c19b5b70663cf507c86449d13e406d57936d20025831732c794751909f",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18638,
+        "textHash": "369e26f3ea67c48c124454b74896f48cb160af496537a715c5c03b494edce7ff",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18639,
+        "textHash": "131f35cfe1ee0bb294b330e0c81d72c8b843c789850f00d4d2b120cea8d535f3",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18640,
+        "textHash": "062129217f8941022ab956fa980657435aa6c73394813e683babef396abae651",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18641,
+        "textHash": "c868bea995e6f31fb2003f6d4d929f05c9b5ef508f984a5ec2932c4d842fc2dc",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18642,
+        "textHash": "cc12e707603eaa85562da94504f5d1ff256bb0125a4ea116fe6a4451c8d86c5b",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18643,
+        "textHash": "00905832f1ce7eb811b797def4f49c0ca627eccc0f0a2736d63ccdfb23070405",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18644,
+        "textHash": "355421b8c25ef16ed3f61ebd2cf330d5880e9982cc31028650e5adeefc968f99",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18645,
+        "textHash": "432b88360cf1bbe3734fb5f335cde1c61fa586d59200bb154e15603b9f2ddca4",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18646,
+        "textHash": "c879e7cc68cb6fea84c2cdb81f85f50b6075b30ce6eb01e68b5f2989dfd878d4",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18647,
+        "textHash": "3e815a0a1a62782ee818fabf1b77575b10d9c27f221b1853fc2dfadf37687e9d",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18648,
+        "textHash": "892ca67c45640acb7af0960116815e51241be7b0b506ecf502fc57aee0d17b90",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18649,
+        "textHash": "adee9893f09b722a0a24fe4e1927de6dba1818f350247caf53e1617d5bc6e69b",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18650,
+        "textHash": "2e1eab6851ea3ddbbd0ea518591adb8af151cc9905e01fe56f17d43e3908757b",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18651,
+        "textHash": "8c99a5ece90cded7aca4d84c7bc4ed141f09c4473518ca6aefd854dfdaa2c439",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18652,
+        "textHash": "24dce4b7bb48882a1901d33fef0eb5239c1360c528136769f3bd5fe081fdd4a2",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18653,
+        "textHash": "d0397969b522d54b8693bb589b27ffb0cea097faad7bf07869e57c0448b26357",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18654,
+        "textHash": "a76c94471741e90c0bd7d74e49f0e7d329f84539ed16b76fb970cc6c4b49ec68",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18655,
+        "textHash": "78cca209ed4a8690ae7fa7ef2aac1fb2a780592e401cb4f958d4d7e0c812c599",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18656,
+        "textHash": "4456b79fb175f441de3fac59cce9bdf783006fd7a7de3a00e1225244d5994d36",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18657,
+        "textHash": "eab8864deb0db8d2d635c90530493fad1feb2c9164900c359f571eccbeb1770a",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18658,
+        "textHash": "e87a3a63ca38e26b74c459dabee56b396d0e122b07a5e825d3fbd223a31b16b5",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18659,
+        "textHash": "5558cd18789496ab3500f51a1d3071de43ea68896cba0b7e8e730ab29528b4cb",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18660,
+        "textHash": "03da5c5a83ad8f20ec56cc13bd7e9ac862d5f9e3c219fadfde784c88b57a7559",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18661,
+        "textHash": "9c9c0c2064023fcf99fe170f0157895696acf5a10f74f957b54a955fce7b3a91",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18662,
+        "textHash": "d9c5f41d01e446cd94657ccf180ab13e0f857ad0a3c3137e57488f7b5cbe5d00",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18663,
+        "textHash": "f94856d0f2357bfaa1a5d3ddd911abc006855af0332fdaa10e42052a23f6f1c4",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18664,
+        "textHash": "cc53702736c8aebaaa0c2a7063f88649daa908091355a31149456173f85ff733",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18665,
+        "textHash": "f9f794dff604ed10461cf43ff60da6cc457af9060fba824f55e84fc800396051",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18666,
+        "textHash": "bf9d9e60c9ab62065b645a45174f36e8322569d36f43fda229aadf93a4a24857",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18667,
+        "textHash": "9733a1cafbbff2b44ec7bb3a5c1587cb0cd514fb1df762000eabf6c77f1686ae",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18668,
+        "textHash": "25b301f07b7ea8cc179bb9f72b1fcb7209c4ffa72356302835cfc6f0c0a7beec",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18669,
+        "textHash": "31dda657c807ec682ba1b8b6ddcde2931a6c3c91869227c3bc4fd08451a63030",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18670,
+        "textHash": "c146bed297c8595519e57b3a5c2e462f21ce57f1030270924a78b9406c07e2d6",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18671,
+        "textHash": "0a0cba72dece69115cef1bfc5c36fc05182f26b4e5d3e11a4d866605ffb7269d",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18672,
+        "textHash": "451816708805db343aab740c000b2563793f8624186098777dbb7a35a5313add",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18673,
+        "textHash": "8832a4016ff422bafd61cef627338b6ac742342c1b9550302e7801ba61da5d58",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18674,
+        "textHash": "d344c85322a46086a66bf4ebb47b421f0ec51fc87d8830cdb69148e7366fd81e",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18675,
+        "textHash": "2e7c0d64774ecf0b0315a8b7ab9fd6a8780e9db0877434ddc93351540fd33109",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18676,
+        "textHash": "8caafad8a2b025884bd6cdbcfdfcfaffd1ffe2626e0b9be8be4f2fc904fdc8fd",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18677,
+        "textHash": "cc4c0b4b8151ebe6939c701da4b155d4bbae5d4cae9f82b4f7be78a8bdb917e8",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18678,
+        "textHash": "17f6201dadee9dbb17e82fdc14085e2fb1059bd7032998f3d76407d177d19adf",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18679,
+        "textHash": "15f2ba68690d7e852d7e79c632e4e2073cd9120148eefb8e1e8b71783618ac22",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18680,
+        "textHash": "1b37812d36fbe0c1e2a02c959d78dd21c33fe2fa4f38e994517194249f521853",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18681,
+        "textHash": "d6842c9643f9fe6be3474eee750191c2a02caefe05780e571caac408a97e9f03",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18682,
+        "textHash": "484d0e6e2f2a7747715e0b730208b6698a9627dff0bc0ab4f8808fa09befb003",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18683,
+        "textHash": "e9dcf5cf62499c9e403f2a3253a62f399893a1eebff032b8b2926a1b9eb54ca5",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18684,
+        "textHash": "7aa77174145c46fe47034797e2a743e32910ed67220623da1cf4128c3d239c4a",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18685,
+        "textHash": "aac0bf944bd380fbb33feb5d25f4a5bc5c17138c960d384164a4a3f24a263706",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18686,
+        "textHash": "eee98fe00675fabede2a9c39a4626b01893dd0a2f47f6e863d915fe8f0d0f041",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18687,
+        "textHash": "f794ab1056a4716bc1873fc377672c6d2623c4b39ec65aa55f477377ebdac794",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18688,
+        "textHash": "bbcd68698996484634a3de3aabdf666c6e2f75135ffc33a5865a6f28c9dab6fc",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18689,
+        "textHash": "148197d9937896dd43ab93c716c22a5af192041a66bb626062a02c0725f044a9",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18690,
+        "textHash": "effbdcf07ddd70477ac837479bcfbda3f69e1022dd15797ab22bb0258292c541",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18691,
+        "textHash": "8f6af71092849291f58f6becd10180c732ae8c23dd2297899fc489741c9161dc",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18692,
+        "textHash": "3edcac461116983113f7f0060473a68b68f22cee16dee897a93ba5b8d61e52bd",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18693,
+        "textHash": "786984ab82f3c0c41eece131332980a2769a8f85217363782fc830216b8a994d",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18694,
+        "textHash": "2a14874d627e29b836b7ba48072d01d635e8b7a36aba856424a8ade8206175b6",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18695,
+        "textHash": "1e3493256177cc29679b28ec04a0dc9163947177475447d10807f492e8bc63ce",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18696,
+        "textHash": "b01dfdd59d0bfebccbd185becfe5e4483e95d057a0bf3544475014cd921c0f75",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18697,
+        "textHash": "3c8456d61c050cea269ca2d27bb468f9e51f1b05f48db6fddb4b456736e0c456",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18698,
+        "textHash": "e62820c9eda5481d9afcf689e2869f6c1f3b0a34768ea86b33398124a51c564c",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18699,
+        "textHash": "e6583909b85a35811fbf7d45c7ceec756c3d05f650a3b0fd88e3395066216ce5",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18700,
+        "textHash": "666c3e056f1dd0a40c3c0bcfdd73f3db2cb06add5938d51a656c58e758f63ff6",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18701,
+        "textHash": "45dac800bbf225b69699257d5a5baf0800c9e1e4bd552a74567a29b4fc39342a",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18702,
+        "textHash": "d9741dc03c0a5adae3ad02eaff0a22531b958e99dc1c7920442139320551bbce",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18703,
+        "textHash": "61ed97a6eaeeb872b3a9d3da52d96f640e2efaed926594283cde00285ac7175f",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18704,
+        "textHash": "eb8006136067897e19a594df00c855b44139cd396ae49eb62a7df6d3b41db0bc",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18705,
+        "textHash": "887dbd75db1c32693d5fc9997cd4e3621b753c8c62720c28dae859af431b6999",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18706,
+        "textHash": "5f7b85dee6267f06af7173c162deda2c8540f2d53817ec811a21e7e1629a8348",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18707,
+        "textHash": "5250a6b4e1efcb6be352c38e0d69776fcaff16c0df3b949a1a9ba1a793b7021c",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18708,
+        "textHash": "8acecbacc3faab5b9ed115b5fb94ddcd4122ac003740fb508e7c54729e6d6ded",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18709,
+        "textHash": "d857494c6a061eb0fbd23ef10a790830a0d6340d61aa0fc51db4083b4aa06fb9",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18710,
+        "textHash": "7d2f4110febaab060d3343302c6e0c18e7e8045f337ea500144973031ee29583",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18711,
+        "textHash": "45f2586d2f832606fa266e4cb3e95aa71eb3fae8336a49a0037802538ca981d7",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18712,
+        "textHash": "106fa41e8de4c4ca0ab7e84ad01c4ce1d14d6734e0a08a607655462ef008f1c3",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18713,
+        "textHash": "1e4b926476ee5813c795032f9693dc1bc62e67a189f337e7e31d2cbbe9b19109",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18714,
+        "textHash": "76932ad8a8ed56931c1437d7e57fc3a3aca8f78b685cb69a35a81e0be53336e0",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18715,
+        "textHash": "385a4063c1d74d299ea6f79eae5a3f1211caff26b2aa39ae30529a91d7907f93",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18716,
+        "textHash": "02181d84f5a2beeea85798e11aee55f2a9aad4f7fc31801e16fe35508e248afa",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18717,
+        "textHash": "83848ac11165dc9d77ab8530d5965d5bc2354b416fb3e538f558e2be00550821",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18718,
+        "textHash": "cfd86fa78eefafedca8c2184595141a8b58dee34564cb6dd168aab84b6d410cc",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18719,
+        "textHash": "b08485d797ad8c6ae37b6b35a639920b5e1c3d7d6dbd8416c749e91e88944af3",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18720,
+        "textHash": "3ed652aa4c9e22186827e164535ae2fb84478b907359979b64d69656c3fe9468",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18721,
+        "textHash": "bdaa5860f80f4659db1da2b2a08b5e7821fdde123879c3fc19b53639f8b99445",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18723,
+        "textHash": "5f5ae61aeddeedd1115b6e4a8f89edc64794074e9b1a978836bcb657b7e7e8dc",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18724,
+        "textHash": "232dcdd3adcb273c8f902a29cddb6fac2bda2b090ef64a98746ac031c2b2087a",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18725,
+        "textHash": "bcc1b5e923b6fffd60fe38536ac970b5c4c6c5740325095f9db5fc111615b326",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18726,
+        "textHash": "c536e902a0e0584aead7fddf1d74de3c228f9cc7d4215d098b4924230b8f1647",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18727,
+        "textHash": "f52d5fff58ac8ed7a4f7b21ef860d26ad50802342367da573b249b64bdca62c0",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18728,
+        "textHash": "22823cd7953620346b5ee7aa39f139d9f04582a3334ab8eb139dd46b6a35a836",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18729,
+        "textHash": "48e6d1edee592cc6bc60903320aa27a90a93a07b9257a9eaf703fa2b27bcc7cb",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18730,
+        "textHash": "c9dfc87f5036a1d5a21702f47743ce2c4d716d768626a3f79a7b0b5f4addc4d3",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18731,
+        "textHash": "0a657b829163773a424f9a27b986c5ae59f035fada9bd686cad66ba2318682c2",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18732,
+        "textHash": "39bf6466458e0c0e7002ad44bad5423dd1d98ccb67782338958a67d4a4698ef6",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18733,
+        "textHash": "86719653ebf1bff9594c2fc730329cb937a285976687ca695338efc39e1db6b4",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18734,
+        "textHash": "df4499872b9e8136f30ac88742eaa36f61efafac639d8c0d2aec7e004ef99930",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18735,
+        "textHash": "8190984155500fd8742efe22c0da38d8a42b571868fbfab6d182a4ebbc651d8b",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18736,
+        "textHash": "481e252e03dddd72fbc640cdd48f36d3c2d9bc6f007f1de81dbd267a4f584394",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18737,
+        "textHash": "e0d60e01c3304803dee53c6e08fc258d4f82d299dc6acfd329ee62041ece6476",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18738,
+        "textHash": "7c57910c0b34ccf0cc9baa6ecba990f0216941ad24e10fcfdacd7d2a2523d856",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18739,
+        "textHash": "e83b1ee09d3625a08eff2fc0e24157298cff15b2abd4082785082ec6a9b079c2",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18740,
+        "textHash": "244dc9b6257d7c868ccea560888d4e071ab1e203c45d77c5d5c97c0b2cecd085",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18741,
+        "textHash": "9fc6907f2c7164635742c117216802906be86b9bc2ca26a896090c3b537510e4",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18742,
+        "textHash": "5dc76306142cb14258a4d83568ce6a842f30a81750f242182ce1724f1be50d5b",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18743,
+        "textHash": "9e6d3465806ff26fe65d16a3f093b619951fe0bbcf84bdf1786253c32357d461",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18744,
+        "textHash": "94f298a469156452df3e8becdc35cf8c7e88c2bec5b582af1480cba3ac88adc2",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18745,
+        "textHash": "cfffff9edc0f5cf69dc46cd437d345c586832ee2c67690b1925cf6a988df3668",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18746,
+        "textHash": "0bbc6a984c6c11dd16b8f013df216195be0fe5a36f1584a53fdb5ebc8c409e58",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18747,
+        "textHash": "70cfea9e9bb5425ff0ed4f3c584bc03bc9ebdd495fd975fab701ff98c84fd168",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18748,
+        "textHash": "3cdb2d0eb0ad6a66fcc6d381fccc828f6d58d3160ea12b92f114ef301ddfd64e",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18750,
+        "textHash": "071cb03f77fdb39a2b306ee30defac71a5661d57e23e7b9bbf87679225b8dfa3",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18751,
+        "textHash": "d96f8517281b824d5286beb59a474b48984091d8e9c049a50acd9514845ca2fa",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18752,
+        "textHash": "76afcf0bde393f409f4891d1f16d5583c2cb73be27245fad99ef2d22de5b6aca",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18753,
+        "textHash": "63e546edc69533b425039b10d58af08d56308a8b0fe82f2472fd3a7d62d9f470",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18754,
+        "textHash": "6f496afcb66e4c31e30121df72901200c5d7509b1ef13107bc76adbe6258c412",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18755,
+        "textHash": "8c98d570e34ddd1eab2c80f32cfc48547ee630633c6a3c620685ea7e829cb5e3",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18756,
+        "textHash": "95d825dae34c1fc2fc80cbdf8565b6509157135d01354bf09ea04ea2616f48ae",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18757,
+        "textHash": "bd9bef5e52ed2474ca453af26f284abad9e040d059f1df9394f7cb3a7d3d9444",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18758,
+        "textHash": "9a37b9519880d5411f874f47ffcc1944a34385d8ed9e4532634af5d09874d0b1",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18759,
+        "textHash": "452f5e06f2c8b4208d803b31033451d4fec656710875b4a8692a61344d6418e5",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18760,
+        "textHash": "432cc6b4ceed2c12ade764d42d25ff3db36a77e76aee4bc073f4619bceb280bf",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18761,
+        "textHash": "de94d9c914b15253e38d22fb27dfaf1d62e342d1bb55b556bc1830b45d2f1a91",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18762,
+        "textHash": "d18a913e959f0c2317366ad19b11cb25fffbf4fcd8a4173d8a861fada7f37770",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18763,
+        "textHash": "63a855d6cec73bd24e9bd142467e052529bee11e565440611bc03a3f49f6614b",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18764,
+        "textHash": "c45922e85bc733640c9d629ddbd80e4aa5d7f2eec9f83981a527d3c40d158bfd",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18765,
+        "textHash": "f5fa293a7a744390c36434aab57cfbadf9f9d972e639fb07cb668b5e527c2faa",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18766,
+        "textHash": "bd57bcd7659bec3e7dd69459533329d6d3e82694087638e10808086d7bb4aed3",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18767,
+        "textHash": "3b87c437e62b1cf4352d75cabb50636c39b1d74cc23c09e3d5b65b5a59897355",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18768,
+        "textHash": "5d5b9e0d838c2d739974c7b893f3d68c8e9bfb46d3d2658359b79fd0fdb4e12d",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18769,
+        "textHash": "125efe2c45fb5ac73bd0b94f060f3e42ebd8ec4d244c9e3567e615c5b6f7f259",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18770,
+        "textHash": "3c6f612706a743f17a1eef18d027106564b9ecfec45cdb8e3079a16187a95a26",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18771,
+        "textHash": "c8fe9d41dbe4720aeb27b3245628e6f760ca3f7ca4dbaedd8a8bcab51d9e2b05",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18772,
+        "textHash": "3e25a351d3d19ee15333c06c613f354766713f2bbf225601ea925ed4fc08ab14",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18773,
+        "textHash": "a9c6600d48219b6030b410f0a77a730276766e2e7ea7d1f476a31bdbba8877a1",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18774,
+        "textHash": "64b5359a48a3f3960cbc12044749d5419f2a21d21ca609eb7cb49760c11a6ec4",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18775,
+        "textHash": "2ef98f170dbee983ebf286266b399c269e52ab2a7412a3a36a874b56ea7cddd8",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18776,
+        "textHash": "f27645a7c924562044f2b173403422edee7cba4a03ab865bdc45b37433344de1",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18777,
+        "textHash": "340fbbeb1bf227fa4990daa0fa22d57124444b4e790ebedf6cc5741cd4ab0d16",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18778,
+        "textHash": "4dbf1bc33c049d65f6e220647fd26afb9c9096267acad5c385f202ceedf5eb52",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18779,
+        "textHash": "fb84dcd9cf1048625cd2b9754f38cd29231abfde56077bb381783f053d913c3b",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18780,
+        "textHash": "6cae4d4dd53ea74a1c7cbf9ca7fa056f81c89d9a90990adefb28daebc809ddd0",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18781,
+        "textHash": "0f5705241b94e7e439048efaa72d8b69c23ff1d6b85c3f9254bf506b0e9f1457",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18782,
+        "textHash": "270e4db2156148c8c63b5f7b1a75e54a615c5976d14b00916bdbd0f712cfa8b1",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18783,
+        "textHash": "a2209ed538472bcf2d2300aeb8236f48e0d71e7c7663bfeae6e8aa041308c9f2",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18784,
+        "textHash": "89fc04c0a03ab1ca7ef7b73a0e96a727fbab9989f3da7e282c1ec16b6419dace",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18785,
+        "textHash": "d66dffff8574cf53a75faa261972544808aa419093adcfb18fda092e19da2ea1",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18786,
+        "textHash": "f25ab37747f3ff9859cf4b1249f9ad97b301515d2964affd46bdfea04b1d0c15",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18787,
+        "textHash": "08f828a6980a79760d42cf94b0809007a5378c07ef44e095e01274b1ef048628",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18788,
+        "textHash": "5c94f69de16a6d0bb5bd7178350dbc603e2bed885ec7923d5fc1afb8aafc3e31",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18789,
+        "textHash": "7310ef7b94773b95e925744d7c3640eeec068273903f6d86d22c76ccf611df6d",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18790,
+        "textHash": "b07b56334643b8683fa902606212ecf3cee4662d1733ca3021e3dabe0c9dacb5",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18791,
+        "textHash": "5f4c0f5a83ef9e8a3b7e51b3d0df51f4a59dd843d4ec1b0417dc2a7ee26f5d65",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18792,
+        "textHash": "92ef22b766c8dc38bf909e1b76c4d176177847bf853bc1d634f5ccc4d0b394be",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18793,
+        "textHash": "a310ee02ef512b2cd164bfc196c953576be09f8f594f3e80ea54e27389ddb38e",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18794,
+        "textHash": "20d2987aea5bfba73042ba2ebe6b877149c8b133b6db6c521fdc14624a69a317",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18795,
+        "textHash": "86c171077ddf40482aa0cbcadb9365d754ceb9eb871f0fedd9fa9e6dba179e81",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18796,
+        "textHash": "1fffe9485fe71cf3a914694a1e2a4c524d82a923cf003f9a520d1726ba256473",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18797,
+        "textHash": "3350bbf730de913a44d144a015f77d40b1a0490e611a85f9f646d919a022ed34",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18798,
+        "textHash": "a2dc4d5fb20fe4a27dcbfc5c9265bb9ae135299eaee7411b468329fc96363ddd",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18799,
+        "textHash": "44a9f4b9ba643679220e2da060ed9308a52e24dbda4815940f1c2b9686724682",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18800,
+        "textHash": "d75801527f98af95de061e9e44c636c30758b0f8767700162619cc2505ee9e57",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18801,
+        "textHash": "ca83b6553a782c6acaf2759142584fbae458db1682886ae06bc01326a26db1ca",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18802,
+        "textHash": "8be0971eef0c3d5a206a6f7d97def74951689f24f0dc4940328a810f484cad29",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18803,
+        "textHash": "6a2a7d82c921ef10f3b487d6ef3cbe9e3953bdedd13617e064471f67c5ba5a57",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18804,
+        "textHash": "e1453b5a9febf1f83db4955612cc0461bc253381ef23d541dd48270d0af05d2e",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18805,
+        "textHash": "56cdaf1eb412f357e030702c73856e98b69efd08b8ff352ac1074c24ebca0bfd",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18806,
+        "textHash": "e13245109f2f7ecec9647bc1f24d412e552724ac16e608971345d20abc74c92b",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18807,
+        "textHash": "c31ae76da9f0eabde6c9210f79b173b88917ceac47e605d3573625d410acf049",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18808,
+        "textHash": "c2e3b39914d365bf44149038612f82eefc68c03d0509e1453bb482140a2bba7f",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18809,
+        "textHash": "97f7abe23a3ad36e2f6d38b5c1dac4c234235249c6fe687f6f69a2d82ec0d22a",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18811,
+        "textHash": "05576698555e46f28912c23b711601ec4363cdab06ea04d8ff88c3c39a30f41f",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18812,
+        "textHash": "52bcccd584dcd2adf97cab54fd9ddaa6ef59b5fae46de55a67b47c8ea2190533",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18813,
+        "textHash": "d0947ba40219501d97a0c915bbe2e16c436e1f1e4148054757e6288b6d59f9ed",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18814,
+        "textHash": "bc7e3c9550692a276a89e112f8cc0d179233b26daeb9506e44291ba6fb138f91",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18815,
+        "textHash": "698353fc990223da6f7cafef117fa7503573efe4edcc0a78f0eba3da1b3a690e",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18816,
+        "textHash": "78f20aef80b2fd48e67278e11c2210775b96dba548fc9d1747c2f65342be541c",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18817,
+        "textHash": "8b83955f865e5c56f2ae74055dea2222d3c2a3b0ec471a51ff30dc4dc5c0029d",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18818,
+        "textHash": "543b897fc69265160b08ee31716b5e65a6ea0afbc4b68dbffb1850c3540c07d3",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18819,
+        "textHash": "5483900e7c526a0158aa13f29527334efe40f0b0fc8c1ec86bcb0b2e044f53b1",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18820,
+        "textHash": "ded1e8ed109fcdea37f37724d5fbaffc6eaeb3d8f86d8c85cbdfe3fdce49d7d9",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18821,
+        "textHash": "98daf1bc2040dc8a192013761776a1de11efe3aeb59c16c0807657a1cd8ee4e3",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18822,
+        "textHash": "27ac28a89a037d2b848d7c683dbb001b77d683382de9c9ccc0d3f6fcd0918726",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18823,
+        "textHash": "2387335a1a552399927b52d48fd237e60c160e96ead05f3445ea45348d280e57",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18824,
+        "textHash": "e2a66c0d0a0d37773a6a19ec56538d0d634cce961f5b64904b3d70b1701fb119",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18825,
+        "textHash": "405e733d2912f239e917ab176d50ab2584915c1163232ffed848114d2e636ccb",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18826,
+        "textHash": "e4a2b652794d1ce974b249b0d0fa2a14ac4ec013822eacfb91448fda1c9a2a5e",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18827,
+        "textHash": "8cb7391711dea8d8ee6058c351587034a4e8a745324708949673df25c50cf4ce",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18828,
+        "textHash": "c5576136d9d926db7481f583dca7509b88bf7f84495e07f6d78736506f3b748f",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18829,
+        "textHash": "8ac146de417e57ad9786e2c67469c48df94a87f9390f68525460df6299b11474",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18830,
+        "textHash": "b4fbed63814f4decd507e3f1b280272ea439abe3abb87a8491ed396e60cbfb61",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18831,
+        "textHash": "999738922cdc43e876d88bcf567afd3361fd495a3a4c49f9f421aca2e5e3a404",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18832,
+        "textHash": "842042635bd8e288782499e9abf2484b3bf364cd4eec985cd841471292483e13",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18833,
+        "textHash": "956e09d6427171da4b883d1ae09e179939b7dde6c94235ddc927dfba2de46cda",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18834,
+        "textHash": "42c3c0fd7930a42f677598faa99b7e3ba8a8cd68307f6db6ba2553f71955349f",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18836,
+        "textHash": "1450bedc02ff9965892d7f4b981fd6b8935dec78a1a8addf13cf1349d907ec1d",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18837,
+        "textHash": "6b9975b356769dfe5d5a61d5b5bb275edc9564aa026713c0649b08bc86576a99",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18838,
+        "textHash": "62f1fcaa28f94bc3182f318032cd24d0c580363dbaa24ed85f4234b09b4c8969",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18839,
+        "textHash": "91e03121ce0ec5bab4b444e52ff87169c0e9bbc4663d383425c34f1aabeae7fc",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18840,
+        "textHash": "5816aaddf5e4e76017014ef9cfcb815acf2ed3985df3c98be1d571396c765bf8",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18841,
+        "textHash": "da3af766b4e80a628b730b1ad4788c36868e1cafc5c1813b4f7df755c4be770d",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18842,
+        "textHash": "ab187bc04cc27154679486622159c6492f5f6d3645baf252a1275c12af889459",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18843,
+        "textHash": "c0a1df31af1830300077c4b403a0b944b2842b4a51785d6d0969d7334eac4c0c",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18844,
+        "textHash": "4b5a830b961f65c7cecc58d6e9da60b0accbb9855a8ef9bd0e7ba645e45ef9d4",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18845,
+        "textHash": "ae74275f7fb7443fe6111537b21a517e4b09ff1ab6087218a8ad2a206b642339",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18846,
+        "textHash": "32bbd1668e77cbb42d4f5a8c5e2db6c75d243a643635a28eb58de9962c22d970",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18847,
+        "textHash": "1da33c267f5a38a35368b88d1603cf3052543b630bfe0cb28b13aa1db8c5fffb",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18848,
+        "textHash": "6923e5cd6976c4e2c8553c6e1af2b1c9f3e78e063e6ea4da959f4fd94736af87",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18849,
+        "textHash": "7e4efc8a2221645352c8ce37fb4790acdc565bad458c8d69caea02fdbe2cf68d",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18850,
+        "textHash": "30ad3041ea738025089fc7eb8409856b39cb9d6d034ade02df3b7a393d11b357",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18851,
+        "textHash": "3a60bb2a6b6e4ab05559e569300f7f5e78cff32360f989bc1dd95d93fb6d353d",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18852,
+        "textHash": "fe3efe1c1b80e3be77b3495f20e3cf61aeda3e9a4b9698aa9b092026236e40c6",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18853,
+        "textHash": "9b141a66d4112ed19d59bde68dc20ba6bf8ceffa5a18ed0cfb5734bad889bf5b",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18854,
+        "textHash": "439ef451163b2c993f5ced7c135986463556d3f8ebc480839e0cf32e2b2dcff4",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18855,
+        "textHash": "d7dcedd9b3cf6c9bcd1f715db6763d57722f4b99b35e1059be23d88ffcd17605",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18856,
+        "textHash": "055db33b98b8ad8744303cf3be727311b82dbc5e354a2d9aa030c6755ae2d401",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18857,
+        "textHash": "ae6619fc5dd53668239f6e6888e2deb4423524b55b786aa343f687111ce8f0f9",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18858,
+        "textHash": "4d642afdd304a5204eb5ebc45918a60caf73085b135f8d12fd515b8b5cd17383",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18859,
+        "textHash": "d42a5cf8463cd492909ea903b3a967c236eedd2fd0dc6ab7869d2e9190b0db68",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18860,
+        "textHash": "e791a6c5282cc388d616ae22dd0c87e3d55bc0127ab9330aa681c4af002d17b5",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18861,
+        "textHash": "77956b37bb234b132bbe3d858b4430bcdc0336fe43d8ef7019a9f7cb4ef64849",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18862,
+        "textHash": "3f869c511e26e6851b9a97e8b1724754cbce8087696f7cc09f660bfebcd67a09",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18863,
+        "textHash": "f25efab8bb87c3ff3b300312e9d64975d76b4da79cb5df1d02b64b546f4a006f",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18864,
+        "textHash": "5e63d999a0d8cfed4aa490de78251b99da0819efdeb6749a3138126c9df41bc2",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18865,
+        "textHash": "c9770413e33272cd1c8b8a25cca33b195fbab31896c882bbbce1780b7f2c9438",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18866,
+        "textHash": "a2a166079b364bd3065aef64e6ab59dadfc8f5f4e8c22b4b396866004ff08b5b",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18867,
+        "textHash": "0e05cdf88d72a72fe52df49b23eaab3f7100b93aa9df452dec2047485903cc60",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18868,
+        "textHash": "5c783d5a8b8e6357089da9ec2992ba29e4a698aea4a39ab43b9cbee655d73580",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18869,
+        "textHash": "b4dffb927d522d6895f34d17939aea40e5ce103fb4bbc23547ac35b58e19d452",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18870,
+        "textHash": "10f6022afe4339f22dd98f40e61e964abdfe9b27d5058e122473d24b51644ad9",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18871,
+        "textHash": "989016b928415add721c95f23babb5ee345122061e75ba5c129804a8054ff57a",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18872,
+        "textHash": "a4a69087f2c0181465c40c15c47eaadbb8ed2358a81d738818bf53853b5716b7",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18873,
+        "textHash": "16575e4c4803b8b49f290ab44f99806b0d4c041cedcbf133c43b4802bea52743",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18874,
+        "textHash": "ece6151759a7ca7da067431f4e7ced4c38f3d33dc68205d6d2ed4cb8ba520840",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18875,
+        "textHash": "1868c58a333dff36437c7b614af660f0dd93e3fd0e39c15445115049caed78fd",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18876,
+        "textHash": "3955043a8ed6ddcc02b168caaec18f958edb2048e73795ee7a06570be875f966",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18877,
+        "textHash": "ec8c24220c8001df56836dd9e94fe64e84adaeb63703da0975ee5737c09f6187",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18878,
+        "textHash": "7e39f648f8a7aaa12b4075d1a704e99a724808d6a61c8340af458edc0ddef7ee",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18879,
+        "textHash": "bb8487d8d87e5c568d27b55f8e2a55d054a0ade18d270441796f8cbdd0949474",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18880,
+        "textHash": "9edeb4d08d07612c0dc00d68b8a06533a7c6268fbf7069a6e27cc408ac7c2a03",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18881,
+        "textHash": "9f60d15b04c430dd37889d49f644415961906ddd29a3021ce124ce4b4d331156",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18882,
+        "textHash": "e10c88e7b92a85cd2b5266c9c6235f7989f100e6f7ff26c4e7af6c3e38e62885",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18883,
+        "textHash": "149c999020625610cae97141342f860ebac6afe8d51a79dccdd5e0c252fa2386",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18884,
+        "textHash": "cd34332dfdec7cbebc67ea77668f01757e2a2de8cb1bdc4d2458fb5250efe80e",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18885,
+        "textHash": "482584bef760d1a637e964453e27138f13cfdced2dedcea78d8845f1be0622b9",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18886,
+        "textHash": "b13262a9ddb53e731c6e711b28cca24d9a06b02b57c0711b2fc7b44f6338d6a5",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18887,
+        "textHash": "2a79010815adb3977164157cc2df8227de0e72da84bf189466ef28c387c7b421",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18888,
+        "textHash": "628d390275d644a8d0b4cbabeb6762336e6a404d21f8cf6dd78b450a8c433228",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18889,
+        "textHash": "725befe733ae704e8961370553316202d04cf7e3c223464dec3c6a3d3a219086",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18890,
+        "textHash": "2f0aaac36017758fddb8165b62c4e2775db56e27c48a88af779836b93513372f",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18891,
+        "textHash": "13db8865be8e2d22b265b20b31d9f513026c3a9f8a6b838d2427488b987085eb",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18892,
+        "textHash": "174e46f846ac1cc90710f0d44f09213dcceced788d22eab2d780b7d6c4d11c30",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18893,
+        "textHash": "96881a8d4a3812717c0f5d4bc124338dc494665e8d5dcca7fd4187a2f05f16cc",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18894,
+        "textHash": "6896270ae1d6940fa2d235f7171f59e955e73ca7a36e7663a23c6cad60bae61d",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18895,
+        "textHash": "9472c1bd33e9cdd2216aed0d86b406b536bca2d8ee9485e51a1591785c3a6a3a",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18896,
+        "textHash": "e78b868d182549e5f90bc0a9b774337417853ce64e4131d27729a884cbdb3d27",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18897,
+        "textHash": "6b7adffbcd6dc6595d67539b1debd46633d668050a4237d15fafa755e9312b29",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18898,
+        "textHash": "181b113857b36c7eeb86624dd06143538b70545ac7996c47592fa9171ae95ee8",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18899,
+        "textHash": "7c94cb7c301db1bf1ebe3ace80edf37473318b301e35f03a40e5f8bc9ae5e8d2",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18900,
+        "textHash": "3bec50d95e313011fe157f6e29e0a33a5cbbc3f54230a88b5ba55a6502aadb1b",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18901,
+        "textHash": "c1af84d9f94a1866aba6cfe74d47b8258c2e8aae087b27a2cbeea782feb87be9",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18902,
+        "textHash": "48f6f8ba121d81410e0c3a895fc8f05b432b7ccf9dd36cdf81b746053a043ff2",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18903,
+        "textHash": "f112644ed24ff0c3b62fad0b59da8438c0af001bb4d5d22f793bf70897e0f99f",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18904,
+        "textHash": "4fbe33c5d17002b2227902804094aa2ab60ff2e7b5b284ccd3ec1f915aec9b9f",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18905,
+        "textHash": "aeab6c5ec09c26e2e1cd5aa22891b8d25c0c28a277c81ad6bda28ca2d51ff1c8",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18906,
+        "textHash": "f64377d195d701fd7f6a7169bb7d51cb7e3061ae0c6ab0d2e5e82c559bd68f81",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18907,
+        "textHash": "b0569835ce86431978927bef46852d7b2ebe9870158f29bc80414b757ee927e1",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18908,
+        "textHash": "b5506a7487741d0f1238008b6b0cc063f02f3851479b3d0bcae8d97c8e94fa8f",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18909,
+        "textHash": "2cb8b553e49fb83891c68e94fdb7478b62abdc0900d03a6d03bf3c609fce509e",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18910,
+        "textHash": "ff4011999a86beb4aaa080d77ab94c93577393f1acf041f2ba74bb05ec0280c4",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18911,
+        "textHash": "80b84a570454a02ce853089ef1fd2ecab2d874b406e554ee3f1817fc523361fd",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18912,
+        "textHash": "6bf3cf7dc88bbae7d5d8bc42dd6b26d6cd4ddc3335227697fe1824fb884d1adb",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18913,
+        "textHash": "d157e1926157872c180b2bb4e871366ec2db1466a2c193fb63f17edfda761ada",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18914,
+        "textHash": "a916739e51c227e2d2f86466fe71fc7ba2556f6f9ac1d2098344668e01e23b30",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18915,
+        "textHash": "2b13d76775a9099e76f1dee6e86cd61e5f1ab589144668ba230a3c07a610be7d",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18916,
+        "textHash": "f1c84049cd178ad6edd78b86f844ccc04d5450dca424db9378ee4537044914f3",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18917,
+        "textHash": "b239fd76cf5b8e31ab3bf89195c1db7e15edc0fbb1fffc7db908f05eb3891716",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18918,
+        "textHash": "55f9a22b5d365ccad1981370862c97cc3b8036f6d9eff1ec91718841870b2907",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18919,
+        "textHash": "794f45cdaddda0df4fb5c5cdd21a6ccb9ff9ce071b7871807eb0a148bd71f652",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18920,
+        "textHash": "e074257a733b714554c752563b46361628e4d0b251b641f35a9803cd0b719e89",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18921,
+        "textHash": "0f978ccd019626878d94a48be8408c197ca0a7b4d985d1191f3b96b6388fc4ad",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18922,
+        "textHash": "1e1f41d5faadb384c5bf4af1ccad6784da498fb588c87aaf40b926bd1def69cf",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18923,
+        "textHash": "984d1aea065c77e31a8eef06a75f8486ccb03edfda2211b340f066faf7e3f547",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18924,
+        "textHash": "629905f466add41dad471d11169dbd23c09f3e095339f46b52d1b91fe9fd0749",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18925,
+        "textHash": "7778ab7da210d548e3cbd7cd1f63a4fa7ccb4211017c9c6c7e1a3791556ff167",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18926,
+        "textHash": "18934f3bb448244caf56510d7034f398508a87faaa73de9288a810c65d5d16a1",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18927,
+        "textHash": "ecc529b8e8d1e3d8ccb88ca05656033de18024b4714285740da56db39c9789b4",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18928,
+        "textHash": "4d58292641c09890a81383b81c9a1cbffc5de328c1b7095878bd17f5caab9bd5",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18929,
+        "textHash": "97d2fcf15e1f62b798c242ec5fd30b7d5844c882bb82547eefe6c1861325e1b1",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18930,
+        "textHash": "15b4b7a3a6354cea165ffef03a2e59e29bc7d71c98e4502cdcfa1ca6cf0baa84",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18931,
+        "textHash": "06c3cbb4e46282eab5a56fd2c69cd483e7d36153a6ee958a843a3b15a2170493",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18932,
+        "textHash": "101871b82563e892506b00b9af12bba2f9bf48833450bea6e85d6617202ce9e8",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18933,
+        "textHash": "8d046fc67bfcc69fffa3eccf0ecd3f7c6274989809a7607a412cfbf23211afc3",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18934,
+        "textHash": "1550c1e362ae4860199b8e7a34b53aa27138cce8293929eaf7fac031242265ae",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18935,
+        "textHash": "a881d65e1c699a37eb60ca94459bcd5e42416776c083d422f3e5cc6d6aca1f92",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18936,
+        "textHash": "fc9b6522daa06621e1eb405962de36fe273322ddd46766bd26f19f71ada9f429",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18937,
+        "textHash": "7985b49b76265e4f5c126d32dac5c9f8a33ad7941f4e67f5172bbfcb59d8fe6c",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18938,
+        "textHash": "00d5fdbac14641a012c50c60a7f34e48779cfcb9e52804028c628b76db7d4639",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18939,
+        "textHash": "4fb9eeb8d4ff9f8679f5ff00f70d7787fea34b6c83f97c6d52a9803c435702a1",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18940,
+        "textHash": "10227f238bd6b24778f1135ed039f2ebf57d65e60c58417e1473914e4e96a0aa",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18941,
+        "textHash": "8f452b6dde7c8fdeffb9311b16189af72ca21066ba6cc1f3783455a08624a529",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18942,
+        "textHash": "bc5b083a07f0b57cc04addfb8e59d6d626734c9944096962e53c41f96eefb2f4",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18943,
+        "textHash": "adc306ae7d499c1e309d1c7d74c5904691c9649068c9868671a68ca883fd45b9",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18944,
+        "textHash": "deb16218bf7421104a196d18c25d2bc716a247d4cfc18bac27622f8f120d9bb9",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18945,
+        "textHash": "e156463f9f67d26956eeca548d03f7dd68f76c3f0cb529ef885a1be9f565d97a",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18946,
+        "textHash": "30f61d80a8b06a427d125548da7d1f07316a77fa852d28ae5202df4bebdadbc8",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18947,
+        "textHash": "e1e5872ee4fd37765696395ac13c6e66068bb084d852cc43c3705a88a13149a7",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18948,
+        "textHash": "48cc55f9479c3f2551b4ca16d9750c0eea9e28641225c7b7b6ac5818a4a50880",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18949,
+        "textHash": "701c9e4dbc83aabeff74a64766554f50cb0fa84f68a3ae6155cec5735bed396d",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18950,
+        "textHash": "ee260eefbac1b861a5d0ef0c34e18707effbe99c331ab7c9f893fd64277fed3e",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18951,
+        "textHash": "a5f5f8d7450cd7880f1c49fa481610dba0bccb0102b289d54ed6b3e94a1f3c6f",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18952,
+        "textHash": "8094d0d5e329f0365ff945f36eb27038754505862a7ef009affe1b6e198727c1",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18953,
+        "textHash": "d28a62d701fde950357fa688066cd76b1877c408df1d95234fa0c991a608025a",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18954,
+        "textHash": "3a0d53cc45e3b38aa15881cac6c0b08ea373f103306ed86e5d8eb3e85284b42d",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18955,
+        "textHash": "a12ed50892ea67d4fe7891c6cad90f10dcc293bb22f23a096bb181a40f42a7d3",
+        "sentiment": 0.2,
+        "product": ""
+      },
+      {
+        "id": 18957,
+        "textHash": "afe0d96ff6bf3dc5c6699ecb954e8a3bc29097b1f13c0f0e3fba641ade94bd66",
+        "sentiment": 0.4,
+        "product": ""
+      },
+      {
+        "id": 858,
+        "textHash": "79219e07a7569b2be7b23557663bcee450f0dab2f442a2cdd4eb659bc1c13409",
+        "sentiment": 0.5,
+        "product": "Cyberpunk: Edgerunners"
+      },
+      {
+        "id": 1987,
+        "textHash": "e2750fdde786eb8c41d413a16c58c56c7fb1656f5a360cbaadcce6e10ca8d9ff",
+        "sentiment": 0.1,
+        "product": ""
+      },
+      {
+        "id": 2979,
+        "textHash": "a6c61e7d9eddf061eabd63409b9f11352bfbb29884e9d71f08bbd10a83a25362",
+        "sentiment": 0,
+        "product": ""
+      },
+      {
+        "id": 5181,
+        "textHash": "4fac637eb8196d746c009bb8a439fad589c4b0e7c6c570dd739da8278a6024d5",
+        "sentiment": 0.1,
+        "product": ""
+      },
+      {
+        "id": 18956,
+        "textHash": "2129dc2db5e061db57ae0b163862fc1dd717f4bf71b1c543d0fa63c7f03c51b3",
+        "sentiment": -0.5,
+        "product": ""
+      },
+      {
+        "id": 18958,
+        "textHash": "f80cbaa9976ee71b38317c697311b9994c0b6d73032f0826304d873ef94f0530",
+        "sentiment": 0.2,
+        "product": ""
+      }
+    ],
+    "held": [
+      {
+        "id": 15801,
+        "textHash": "22c84ba98e6c"
+      },
+      {
+        "id": 15802,
+        "textHash": "c40878743619"
+      },
+      {
+        "id": 15803,
+        "textHash": "60d33be899eb"
+      },
+      {
+        "id": 15985,
+        "textHash": "f5677d524e01"
+      },
+      {
+        "id": 16361,
+        "textHash": "dbf88fd39233"
+      },
+      {
+        "id": 16366,
+        "textHash": "46de75a74fb2"
+      },
+      {
+        "id": 16367,
+        "textHash": "535e6a45d8e0"
+      },
+      {
+        "id": 16368,
+        "textHash": "ca58b012d910"
+      },
+      {
+        "id": 16375,
+        "textHash": "e2cbcec70ecb"
+      },
+      {
+        "id": 16408,
+        "textHash": "77416382762c"
+      }
+    ]
+  },
+  "events": {
+    "pins": 40,
+    "pages": 99,
+    "preservedHumanFields": true,
+    "checkedPinIds": [
+      2544,
+      2545,
+      2879,
+      2952,
+      3169,
+      3401,
+      3493,
+      3512,
+      3517,
+      3546,
+      3550,
+      4022,
+      4670,
+      4865,
+      4866,
+      4868,
+      4890,
+      4891,
+      4893,
+      4897,
+      4900,
+      4905,
+      4913,
+      4928,
+      4984,
+      4985,
+      4991,
+      5094,
+      5107,
+      5108,
+      5118,
+      5200,
+      5202,
+      5439,
+      5493,
+      5496,
+      5518,
+      6077,
+      6554,
+      6637
+    ]
+  },
+  "ads": {
+    "pin": {
+      "PinAd": {
+        "verified": 65,
+        "refreshed": 56,
+        "added": 1,
+        "concurrentSkipped": []
+      },
+      "ProductAd": {
+        "verified": 36,
+        "refreshed": 33,
+        "added": 0,
+        "concurrentSkipped": []
+      }
+    },
+    "holiday": {
+      "verified": 163,
+      "refreshed": 67,
+      "added": 2,
+      "rejected": {
+        "B0DLFX3G2Q": "Generic craft feathers do not establish specific traditional Brazilian Carnival use.",
+        "B07CTB9N9P": "Generic Halloween/music-festival/rave face stickers are insufficient traditional Carnival coverage.",
+        "B0H2ZP71CJ": "Halloween lace masquerade listing does not establish Brazilian Carnival relevance."
+      }
+    },
+    "translationRows": 60,
+    "workingTitleGaps": []
+  },
+  "personTrades": {
+    "filings": 2,
+    "trades": 8,
+    "unmatched": [],
+    "failed": [
+      "Bryan Bedford BC33926D1346296F85258D86003449A3: all transaction line(s) unreadable (scanned report or unknown layout) - not stored, https://extapps2.oge.gov/201/Presiden.nsf/PAS+Index/BC33926D1346296F85258D86003449A3/$FILE/Bryan-Bedford-11.03.2025-278T.pdf"
+    ],
+    "production": {
+      "added": 8,
+      "missing": []
+    }
+  },
+  "markets": {
+    "window": {
+      "from": "2026-10-21T15:10:10.600Z",
+      "to": "2026-10-28T15:10:10.600Z",
+      "newSince": "2026-10-20T15:10:10.600Z"
+    },
+    "read": {
+      "kalshiEvents": 5733,
+      "polymarketEvents": 1500
+    },
+    "interesting": [
+      {
+        "exchange": "Polymarket",
+        "url": "https://polymarket.com/event/democratic-presidential-nominee-2028",
+        "title": "Democratic Presidential Nominee 2028",
+        "kind": "united-states, elections, politics, us-presidential-election, world-elections",
+        "closes": "2028-11-08T04:59:00Z",
+        "listed": "2025-07-11T18:35:56.805Z",
+        "isNew": false,
+        "volume": 1296295550,
+        "volume24h": 550361,
+        "odds": [
+          {
+            "label": "Alexandria Ocasio-Cortez",
+            "chance": 0.165
+          },
+          {
+            "label": "Gavin Newsom",
+            "chance": 0.164
+          },
+          {
+            "label": "Jon Ossoff",
+            "chance": 0.148
+          },
+          {
+            "label": "Kamala Harris",
+            "chance": 0.07
+          }
+        ],
+        "coveredByPin": 1950,
+        "related": [
+          "Presidential Election Winner 2028",
+          "Republican Presidential Nominee 2028",
+          "Which party wins 2028 US Presidential Election?"
+        ]
+      },
+      {
+        "exchange": "Polymarket",
+        "url": "https://polymarket.com/event/2026-f1-drivers-champion",
+        "title": "F1 Drivers' Champion",
+        "kind": "sports, formula1, f1",
+        "closes": "2027-04-01T03:59:00Z",
+        "listed": "2025-12-09T00:55:47.605573Z",
+        "isNew": false,
+        "volume": 204543749,
+        "volume24h": 28540,
+        "odds": [
+          {
+            "label": "Kimi Antonelli",
+            "chance": 0.979
+          },
+          {
+            "label": "Max Verstappen",
+            "chance": 0.015
+          },
+          {
+            "label": "Lewis Hamilton",
+            "chance": 0.002
+          },
+          {
+            "label": "Lando Norris",
+            "chance": 0.001
+          }
+        ],
+        "coveredByPin": 17115,
+        "related": [
+          "F1 Constructors' Champion"
+        ]
+      },
+      {
+        "exchange": "Polymarket",
+        "url": "https://polymarket.com/event/brazil-presidential-election",
+        "title": "Brazil Presidential Election",
+        "kind": "politics, macro-election-2, main-election, brazil, global-elections",
+        "closes": "2026-10-26T03:59:00Z",
+        "listed": "2025-09-18T20:07:57.76Z",
+        "isNew": false,
+        "volume": 190486578,
+        "volume24h": 1597243,
+        "odds": [
+          {
+            "label": "Flávio Bolsonaro",
+            "chance": 0.777
+          },
+          {
+            "label": "Luiz Inácio Lula da Silva",
+            "chance": 0.225
+          },
+          {
+            "label": "Other",
+            "chance": null
+          }
+        ],
+        "coveredByPin": 1968,
+        "related": [
+          "Brazil Presidential Election Second Round: Margin of Victory",
+          "Brazil Presidential Election Second Round: 1st Place in Amapá"
+        ]
+      },
+      {
+        "exchange": "Polymarket",
+        "url": "https://polymarket.com/event/next-french-presidential-election",
+        "title": "Next French Presidential Election",
+        "kind": "french-election, main-election, france, world, politics",
+        "closes": "2027-04-19T03:59:00Z",
+        "listed": "2025-11-13T23:09:35.8119Z",
+        "isNew": false,
+        "volume": 154500605,
+        "volume24h": 354542,
+        "odds": [
+          {
+            "label": "Marine Le Pen",
+            "chance": 0.464
+          },
+          {
+            "label": "Édouard Philippe",
+            "chance": 0.185
+          },
+          {
+            "label": "David Lisnard",
+            "chance": 0.117
+          },
+          {
+            "label": "Jean-Luc Mélenchon",
+            "chance": 0.105
+          }
+        ],
+        "coveredByPin": 1976,
+        "related": [
+          "Next French Presidential Election: who will advance to the 2nd round?"
+        ]
+      },
+      {
+        "exchange": "Polymarket",
+        "url": "https://polymarket.com/event/netanyahu-out-before-2027",
+        "title": "Netanyahu out by...?",
+        "kind": "geopolitics, world, middle-east, israel, politics",
+        "closes": "2027-01-01T04:59:00Z",
+        "listed": "2025-07-24T23:38:14.261Z",
+        "isNew": false,
+        "volume": 124622896,
+        "volume24h": 2570,
+        "odds": [
+          {
+            "label": "Yes",
+            "chance": 0.415
+          }
+        ],
+        "coveredByPin": 1969,
+        "related": [
+          "Will the U.S. invade Iran before 2027?",
+          "Will China invade Taiwan by end of 2026?",
+          "Iran leader end of 2026?",
+          "Xi Jinping out before 2027?",
+          "Will the US officially declare war on Iran by...?",
+          "How many different countries will Israel strike in 2026?",
+          "Mojtaba Khamenei public appearance by...?",
+          "Israel x Hamas ceasefire cancelled by...?",
+          "Will Hamas agree to disarm by...?",
+          "Israel and Indonesia normalize relations by...?",
+          "Will Hezbollah disarm by...?",
+          "Israel x Hamas Ceasefire Phase II by...?"
+        ]
+      },
+      {
+        "exchange": "Polymarket",
+        "url": "https://polymarket.com/event/venezuela-leader-end-of-2026",
+        "title": "Venezuela leader end of 2026?",
+        "kind": "trump-machado, rewards-20-4pt5-50, venezuela, trump, politics",
+        "closes": "2027-01-01T04:59:00Z",
+        "listed": "2026-01-04T18:21:09.391Z",
+        "isNew": false,
+        "volume": 98623434,
+        "volume24h": 92377,
+        "odds": [
+          {
+            "label": "Nicolás Maduro",
+            "chance": 0.766
+          },
+          {
+            "label": "Delcy Rodríguez",
+            "chance": 0.185
+          },
+          {
+            "label": "No Head of State",
+            "chance": 0.021
+          },
+          {
+            "label": "María Corina Machado",
+            "chance": 0.006
+          }
+        ],
+        "coveredByPin": 1951,
+        "related": [
+          "Clarity Act (H.R.3633) signed into law in 2026?",
+          "Iran agrees to surrender enriched uranium stockpile by...?",
+          "Will the U.S. invade Venezuela by...?",
+          "Trump out as President before 2027?",
+          "Will the US acquire part of Greenland in 2026?",
+          "NATO x Russia military clash by...?",
+          "US military action against Cuba by...?",
+          "María Corina Machado enters Venezuela by...?",
+          "Will US withdraw from NATO by...?",
+          "Russia nuclear test by...?",
+          "Epstein client list released by...?",
+          "Will the U.S. invade Cuba in 2026?"
+        ]
+      },
+      {
+        "exchange": "Polymarket",
+        "url": "https://polymarket.com/event/kharg-island-no-longer-under-iranian-control-by-march-31",
+        "title": "Kharg Island no longer under Iranian control by...?",
+        "kind": "iranian-leadership-regime, iran, mojtaba-khamenei, khamenei, geopolitics",
+        "closes": "2027-01-01T04:59:00Z",
+        "listed": "2026-03-14T00:25:34.154359Z",
+        "isNew": false,
+        "volume": 76393297,
+        "volume24h": 21390,
+        "odds": [
+          {
+            "label": "December 31",
+            "chance": 0.075
+          },
+          {
+            "label": "October 31",
+            "chance": 0.007
+          }
+        ],
+        "coveredByPin": null,
+        "related": [
+          "US announces end of Iranian blockade by...?",
+          "Israel x Iran ceasefire continues through...?",
+          "US obtains Iranian enriched uranium by...?",
+          "Will the Iranian regime fall before 2027?",
+          "Will Reza Pahlavi enter Iran by...?",
+          "US-Iran Final Nuclear Deal by…?",
+          "Bab el-Mandeb Strait effectively closed by...?",
+          "Will Reza Pahlavi lead Iran in 2026?",
+          "Iran full airspace closure by...?",
+          "Israel withdraws from Lebanon by...?",
+          "Crude Oil all time high by...?",
+          "Iran charges Hormuz fees by...?"
+        ]
+      },
+      {
+        "exchange": "Polymarket",
+        "url": "https://polymarket.com/event/will-the-us-confirm-that-aliens-exist-before-2027",
+        "title": "Will the US confirm that aliens exist by...?",
+        "kind": "aliens, politics, pop-culture, science",
+        "closes": "2027-01-01T04:59:00Z",
+        "listed": "2025-11-25T18:05:19.721Z",
+        "isNew": false,
+        "volume": 74450011,
+        "volume24h": 105663,
+        "odds": [
+          {
+            "label": "December 31",
+            "chance": 0.045
+          },
+          {
+            "label": "October 31",
+            "chance": 0.004
+          }
+        ],
+        "coveredByPin": null,
+        "related": [
+          "Largest IPO by market cap in 2026?",
+          "Human moon landing in 2026?",
+          "FDA approves Retatrutide this year?",
+          "Plague pandemic in 2026?"
+        ]
+      },
+      {
+        "exchange": "Polymarket",
+        "url": "https://polymarket.com/event/pro-football-2027-champion-20260729185915366",
+        "title": "Pro Football: 2027 Champion",
+        "kind": "sports, nfl, football, super-bowl, nfl-team-futures",
+        "closes": "2027-04-01T03:59:00Z",
+        "listed": "2026-02-09T00:41:51.439Z",
+        "isNew": false,
+        "volume": 68693411,
+        "volume24h": 83177,
+        "odds": [
+          {
+            "label": "San Francisco 49ers",
+            "chance": 0.155
+          },
+          {
+            "label": "Kansas City Chiefs",
+            "chance": 0.113
+          },
+          {
+            "label": "Buffalo Bills",
+            "chance": 0.105
+          },
+          {
+            "label": "Baltimore Ravens",
+            "chance": 0.067
+          }
+        ],
+        "coveredByPin": 1954,
+        "related": [
+          "Pro Football: 2027 NFC Champion ",
+          "Pro Football: 2027 AFC Champion "
+        ]
+      },
+      {
+        "exchange": "Polymarket",
+        "url": "https://polymarket.com/event/will-jesus-christ-return-before-2027",
+        "title": "Will Jesus Christ return before 2027?",
+        "kind": "parent-for-derivative, pop-culture",
+        "closes": "2027-01-01T04:59:00Z",
+        "listed": "2025-11-25T18:08:21.296Z",
+        "isNew": false,
+        "volume": 66599478,
+        "volume24h": 19866,
+        "odds": [
+          {
+            "label": "Yes",
+            "chance": 0.014
+          }
+        ],
+        "coveredByPin": null,
+        "related": [
+          "Will Trump acquire Greenland before 2027?"
+        ]
+      },
+      {
+        "exchange": "Polymarket",
+        "url": "https://polymarket.com/event/uefa-champions-league-2027-champion-20260701202025549",
+        "title": "UEFA Champions League: 2027 Champion",
+        "kind": "ucl, soccer, sports, champions-league, ucl-matchday",
+        "closes": "2027-06-20T03:59:00Z",
+        "listed": "2026-07-02T19:03:02.322624Z",
+        "isNew": false,
+        "volume": 57574387,
+        "volume24h": 1515276,
+        "odds": [
+          {
+            "label": "Other",
+            "chance": 0.5
+          },
+          {
+            "label": "Barcelona",
+            "chance": 0.23
+          },
+          {
+            "label": "Paris Saint-Germain",
+            "chance": 0.185
+          },
+          {
+            "label": "Arsenal",
+            "chance": 0.135
+          }
+        ],
+        "coveredByPin": 1957
+      },
+      {
+        "exchange": "Polymarket",
+        "url": "https://polymarket.com/event/ballon-dor-winner-2026",
+        "title": "Ballon d'Or Winner 2026",
+        "kind": "soccer, sports, awards, ballon-dor",
+        "closes": "2027-01-01T04:59:00Z",
+        "listed": "2025-09-22T23:39:02.010671Z",
+        "isNew": false,
+        "volume": 56675531,
+        "volume24h": 1430199,
+        "odds": [
+          {
+            "label": "Harry Kane",
+            "chance": 0.736
+          },
+          {
+            "label": "Lamine Yamal",
+            "chance": 0.185
+          },
+          {
+            "label": "Kylian Mbappé",
+            "chance": 0.045
+          },
+          {
+            "label": "Lionel Messi",
+            "chance": 0.021
+          }
+        ],
+        "coveredByPin": 1958,
+        "related": [
+          "MLS Cup Winner 2026",
+          "MLB: AL Rookie of the Year",
+          "MLB: 2026 NL MVP",
+          "MLB: 2026 AL Cy Young Winner",
+          "MLB: NL Platinum Glove Winner",
+          "MLB: NL Rookie of the Year",
+          "MLB: 2026 NL Cy Young Winner",
+          "MLB: AL Platinum Glove Winner",
+          "MLB: 2026 AL MVP ",
+          "MLS: 2026 Golden Boot Winner",
+          "MLS: 2026 Defender of the Year",
+          "Ballon d'Or Top 3 Finish 2026"
+        ]
+      },
+      {
+        "exchange": "Polymarket",
+        "url": "https://polymarket.com/event/how-many-fed-rate-cuts-in-2026",
+        "title": "How many Fed rate cuts in 2026?",
+        "kind": "rewards-200-4pt5-50, fed-rates, economic-policy, fed, business",
+        "closes": "2027-01-01T04:59:00Z",
+        "listed": "2025-09-29T22:24:45.988997Z",
+        "isNew": false,
+        "volume": 54637132,
+        "volume24h": 85849,
+        "odds": [
+          {
+            "label": "0 (0 bps)",
+            "chance": 0.973
+          },
+          {
+            "label": "1 (25 bps)",
+            "chance": 0.01
+          },
+          {
+            "label": "2 (50 bps)",
+            "chance": 0.004
+          },
+          {
+            "label": "3 (75 bps)",
+            "chance": 0.002
+          }
+        ],
+        "coveredByPin": null,
+        "related": [
+          "What will the Fed rate be at the end of 2026?",
+          "What will Fed Rate hit before 2027?",
+          "How many Fed rate hikes in 2026?",
+          "Jerome Powell out of Fed Board by…?",
+          "How low will 10-year Treasury yield get before 2027?"
+        ]
+      },
+      {
+        "exchange": "Polymarket",
+        "url": "https://polymarket.com/event/who-will-be-the-next-prime-minister-of-israel-after-the-next-election",
+        "title": "Prime Minister of Israel after the next election?",
+        "kind": "main-election, israel-election, politics, middle-east, israel",
+        "closes": "2026-10-28T03:59:00Z",
+        "listed": "2025-11-15T00:27:02.243822Z",
+        "isNew": false,
+        "volume": 50030733,
+        "volume24h": 533660,
+        "odds": [
+          {
+            "label": "Gadi Eizenkot",
+            "chance": 0.527
+          },
+          {
+            "label": "Benjamin Netanyahu",
+            "chance": 0.275
+          },
+          {
+            "label": "Naftali Bennett",
+            "chance": 0.125
+          },
+          {
+            "label": "Avigdor Lieberman",
+            "chance": 0.026
+          }
+        ],
+        "coveredByPin": 1969,
+        "related": [
+          "Israeli Legislative Election Winner",
+          "Israel Election: Likud # of seats?"
+        ]
+      },
+      {
+        "exchange": "Polymarket",
+        "url": "https://polymarket.com/event/mlb-world-series-champion-2026",
+        "title": "MLB World Series Champion 2026",
+        "kind": "sports, world-series, mlb, mlb-playoffs, baseball",
+        "closes": "2026-10-31T23:55:00Z",
+        "listed": "2026-01-21T20:45:03.607Z",
+        "isNew": false,
+        "volume": 45535946,
+        "volume24h": 52219,
+        "odds": [
+          {
+            "label": "Milwaukee Brewers",
+            "chance": 0.627
+          },
+          {
+            "label": "Tampa Bay Rays",
+            "chance": 0.373
+          },
+          {
+            "label": "Other",
+            "chance": null
+          }
+        ],
+        "coveredByPin": 1953
+      },
+      {
+        "exchange": "Polymarket",
+        "url": "https://polymarket.com/event/california-governor-election-2026",
+        "title": "California Governor Election Winner",
+        "kind": "california-midterm, governor-midterms, california-governor, elections, politics",
+        "closes": "2026-11-04T04:59:00Z",
+        "listed": "2025-10-09T23:29:47.170218Z",
+        "isNew": false,
+        "volume": 42167473,
+        "volume24h": 41283,
+        "odds": [
+          {
+            "label": "Xavier Becerra",
+            "chance": 0.966
+          },
+          {
+            "label": "Steve Hilton",
+            "chance": 0.033
+          },
+          {
+            "label": "Tom Steyer",
+            "chance": 0.002
+          },
+          {
+            "label": "Rick Caruso",
+            "chance": 0.001
+          }
+        ],
+        "coveredByPin": 1970,
+        "related": [
+          "Balance of Power: 2026 Midterms",
+          "Which party will win the House in 2026?",
+          "Which party will win the Senate in 2026?",
+          "Texas Senate Election Winner",
+          "Republican Senate seats after the 2026 midterm elections?",
+          "Alaska Governor Election Winner  ",
+          "Alaska Senate Election Winner",
+          "Wisconsin Governor Election Winner",
+          "Texas Governor Election Winner",
+          "Nevada Governor Election Winner",
+          "Ohio Governor Election Winner",
+          "Michigan Governor Election Winner"
+        ]
+      },
+      {
+        "exchange": "Polymarket",
+        "url": "https://polymarket.com/event/new-stranger-things-episode-released-by-wednesday",
+        "title": "New \"Stranger Things\" episode released by...? ",
+        "kind": "pop-culture, tv, netflix, movies",
+        "closes": "2027-04-01T03:59:00Z",
+        "listed": "2026-01-05T22:17:09.989275Z",
+        "isNew": false,
+        "volume": 30906055,
+        "volume24h": 44,
+        "odds": [
+          {
+            "label": "March 31, 2027",
+            "chance": 0.055
+          },
+          {
+            "label": "December 31, 2026",
+            "chance": 0.022
+          }
+        ],
+        "coveredByPin": null
+      },
+      {
+        "exchange": "Polymarket",
+        "url": "https://polymarket.com/event/putin-out-before-2027",
+        "title": "Putin out as President of Russia by...?",
+        "kind": "putin, geopolitics, ukraine, politics, world",
+        "closes": "2027-07-01T03:59:00Z",
+        "listed": "2025-07-06T22:30:10.584Z",
+        "isNew": false,
+        "volume": 29992877,
+        "volume24h": 267305,
+        "odds": [
+          {
+            "label": "June 30, 2027",
+            "chance": 0.095
+          },
+          {
+            "label": "December 31, 2026",
+            "chance": 0.019
+          }
+        ],
+        "coveredByPin": null,
+        "related": [
+          "Russia x Ukraine ceasefire agreement by...?",
+          "Will Ukraine recapture Crimean territory by...?"
+        ]
+      },
+      {
+        "exchange": "Polymarket",
+        "url": "https://polymarket.com/event/nba-2027-champion",
+        "title": "NBA: 2027 Champion",
+        "kind": "nba-finals, nba, sports, basketball, nba-tip-off",
+        "closes": "2027-07-01T03:59:00Z",
+        "listed": "2026-05-13T20:07:53.605766Z",
+        "isNew": false,
+        "volume": 27861900,
+        "volume24h": 1090439,
+        "odds": [
+          {
+            "label": "Oklahoma City Thunder",
+            "chance": 0.225
+          },
+          {
+            "label": "San Antonio Spurs",
+            "chance": 0.195
+          },
+          {
+            "label": "Philadelphia 76ers",
+            "chance": 0.112
+          },
+          {
+            "label": "Boston Celtics",
+            "chance": 0.065
+          }
+        ],
+        "coveredByPin": 1955
+      },
+      {
+        "exchange": "Polymarket",
+        "url": "https://polymarket.com/event/iran-leadership-change-by",
+        "title": "Iran leadership change by...?",
+        "kind": "politics, iran, iranian-leadership-regime, geopolitics, mojtaba",
+        "closes": "2027-07-01T03:59:00Z",
+        "listed": "2026-03-09T02:58:15.361Z",
+        "isNew": false,
+        "volume": 27833707,
+        "volume24h": 219234,
+        "odds": [
+          {
+            "label": "June 30, 2027",
+            "chance": 0.245
+          },
+          {
+            "label": "December 31",
+            "chance": 0.115
+          },
+          {
+            "label": "November 30",
+            "chance": 0.075
+          },
+          {
+            "label": "October 31",
+            "chance": 0.013
+          }
+        ],
+        "coveredByPin": null
+      },
+      {
+        "exchange": "Polymarket",
+        "url": "https://polymarket.com/event/epl-2027-champion-20260701200428749",
+        "title": "EPL: 2027 Champion",
+        "kind": "EPL, soccer, sports",
+        "closes": "2027-06-15T03:59:00Z",
+        "listed": "2026-07-02T18:13:08.776718Z",
+        "isNew": false,
+        "volume": 22827080,
+        "volume24h": 40302,
+        "odds": [
+          {
+            "label": "Arsenal",
+            "chance": 0.625
+          },
+          {
+            "label": "Other",
+            "chance": 0.5
+          },
+          {
+            "label": "Manchester City",
+            "chance": 0.135
+          },
+          {
+            "label": "Chelsea",
+            "chance": 0.069
+          }
+        ],
+        "coveredByPin": null,
+        "related": [
+          "LALIGA: 2027 Champion",
+          "Bundesliga: 2027 Champion",
+          "Ligue 1: 2027 Champion"
+        ]
+      },
+      {
+        "exchange": "Polymarket",
+        "url": "https://polymarket.com/event/us-iran-ceasefire-continues-throughptptpt",
+        "title": "US-Iran ceasefire continues through...?",
+        "kind": "iran, trump, israel, military, politics",
+        "closes": "2026-10-31T23:59:00Z",
+        "listed": "2026-09-17T15:54:28Z",
+        "isNew": false,
+        "volume": 19569075,
+        "volume24h": 489921,
+        "odds": [
+          {
+            "label": "October 22",
+            "chance": 0.97
+          },
+          {
+            "label": "October 24",
+            "chance": 0.935
+          },
+          {
+            "label": "October 28",
+            "chance": 0.86
+          },
+          {
+            "label": "October 31",
+            "chance": 0.815
+          }
+        ],
+        "coveredByPin": 1952,
+        "related": [
+          "Iran-Oman Hormuz Management Agreement by...?",
+          "Strait of Hormuz traffic returns to normal by October 31?",
+          "US-Yemen ceasefire continues through...?",
+          "Saudi Arabia military action against Yemen on...?",
+          "Israel accuses Iran/proxies of plane stabbing incident by Oct 31?",
+          "US Announces Diesel Export ban by...?",
+          "Israel military action against Beirut by...?",
+          "US reissues Iran oil sales sanction relief by...?"
+        ]
+      },
+      {
+        "exchange": "Polymarket",
+        "url": "https://polymarket.com/event/which-companies-will-be-acquired-before-2027",
+        "title": "Which companies will be acquired before 2027?",
+        "kind": "business, big-tech, prediction-markets, finance, tech",
+        "closes": "2027-01-01T04:59:00Z",
+        "listed": "2025-11-24T17:49:12.509Z",
+        "isNew": false,
+        "volume": 18385130,
+        "volume24h": 2185,
+        "odds": [
+          {
+            "label": "Viking Therapeutics",
+            "chance": 0.115
+          },
+          {
+            "label": "Perplexity AI",
+            "chance": 0.11
+          },
+          {
+            "label": "PayPal",
+            "chance": 0.1
+          },
+          {
+            "label": "MGM Resorts",
+            "chance": 0.08
+          }
+        ],
+        "coveredByPin": null,
+        "related": [
+          "Will GameStop acquire eBay?",
+          "AI bubble burst by...?",
+          "Satoshi's identity be proven by...?",
+          "Will Apple release a foldable iPhone by...?",
+          "SCOTUS accepts sports event contract case by...?     ",
+          "Next Fable Model (5.2+) released by...?",
+          "Which CEOs will be out before 2027?",
+          "Will OpenAI launch a consumer hardware product by...?",
+          "What kind of product will OpenAI announce in 2026?",
+          "How many more Millennium Prize Problems will AI solve in 2026?"
+        ]
+      },
+      {
+        "exchange": "Polymarket",
+        "url": "https://polymarket.com/event/highest-grossing-movie-in-2026",
+        "title": "Highest grossing movie in 2026?",
+        "kind": "rewards-20-4pt5-50, the-odyssey, pop-culture, movies, spider-man",
+        "closes": "2027-01-08T04:59:00Z",
+        "listed": "2025-11-12T16:58:08.812175Z",
+        "isNew": false,
+        "volume": 17758586,
+        "volume24h": 91704,
+        "odds": [
+          {
+            "label": "Spider-Man: Brand New Day",
+            "chance": 0.9
+          },
+          {
+            "label": "Avengers: Doomsday",
+            "chance": 0.094
+          },
+          {
+            "label": "Wicked: For Good",
+            "chance": 0.001
+          },
+          {
+            "label": "Wuthering Heights",
+            "chance": 0.001
+          }
+        ],
+        "coveredByPin": 1964
+      },
+      {
+        "exchange": "Polymarket",
+        "url": "https://polymarket.com/event/los-angeles-mayoral-election-117",
+        "title": "Los Angeles Mayoral Election",
+        "kind": "la, los-angeles-mayoral-election, la-mayor, mayor, politics",
+        "closes": "2026-06-03T03:59:00Z",
+        "listed": "2025-10-09T20:38:05.450894Z",
+        "isNew": false,
+        "volume": 15508240,
+        "volume24h": 77355,
+        "odds": [
+          {
+            "label": "Karen Bass",
+            "chance": 0.565
+          },
+          {
+            "label": "Nithya Raman",
+            "chance": 0.436
+          },
+          {
+            "label": "Other",
+            "chance": null
+          }
+        ],
+        "coveredByPin": null
+      },
+      {
+        "exchange": "Polymarket",
+        "url": "https://polymarket.com/event/next-prime-minister-of-sweden",
+        "title": "Next Prime Minister of Sweden",
+        "kind": "elections, world, world-elections, global-elections, sweden",
+        "closes": "2026-09-14T03:59:00Z",
+        "listed": "2026-01-19T20:34:34.381805Z",
+        "isNew": false,
+        "volume": 10334593,
+        "volume24h": 29118,
+        "odds": [
+          {
+            "label": "Magdalena Andersson",
+            "chance": 0.785
+          },
+          {
+            "label": "Ulf Kristersson",
+            "chance": 0.154
+          },
+          {
+            "label": "Ebba Busch",
+            "chance": 0.03
+          },
+          {
+            "label": "Elisabeth Thand Ringqvist",
+            "chance": 0.01
+          }
+        ],
+        "coveredByPin": null
+      },
+      {
+        "exchange": "Polymarket",
+        "url": "https://polymarket.com/event/will-metamask-launch-a-token-in-2025",
+        "title": "Will MetaMask launch a token by ___ ?",
+        "kind": "token-launch, crypto, pre-market, metamask",
+        "closes": "2027-01-01T04:59:00Z",
+        "listed": "2025-09-19T12:04:46.255214Z",
+        "isNew": false,
+        "volume": 8724353,
+        "volume24h": 51,
+        "odds": [
+          {
+            "label": "Yes",
+            "chance": 0.06
+          }
+        ],
+        "coveredByPin": null,
+        "related": [
+          "Opensea FDV above ___ one day after launch?",
+          "Puffpaw FDV above ___ one day after launch?",
+          "Will Satoshi move any Bitcoin in 2026?",
+          "Extended FDV above ___ one day after launch?",
+          "Metamask FDV above ___ one day after launch?",
+          "Pump.fun airdrop by ....? ",
+          "MegaETH airdrop by...?",
+          "StandX FDV above ___ one day after launch?",
+          "Will Opensea launch a token by ___?",
+          "Microstrategy delisted from MSCI index by...?",
+          "Ink FDV above ___ one day after launch?",
+          "OKX IPO in 2026?"
+        ]
+      },
+      {
+        "exchange": "Polymarket",
+        "url": "https://polymarket.com/event/will-base-launch-a-token-in-2025-341",
+        "title": "Will Base launch a token by ___ ?",
+        "kind": "token-launch, crypto, pre-market, base",
+        "closes": "2028-01-01T04:59:00Z",
+        "listed": "2025-09-15T15:41:29.727882Z",
+        "isNew": false,
+        "volume": 8048451,
+        "volume24h": 213,
+        "odds": [
+          {
+            "label": "December 31, 2027",
+            "chance": 0.415
+          },
+          {
+            "label": "June 30, 2027",
+            "chance": 0.205
+          },
+          {
+            "label": "December 31, 2026",
+            "chance": 0.055
+          }
+        ],
+        "coveredByPin": null,
+        "related": [
+          "Predict.fun FDV above ___ one day after launch?",
+          "Variational FDV above ___ one day after launch?",
+          "Kraken IPO by ___ ?",
+          "Will Tempo launch a token by ___ ?",
+          "Base FDV above ___ one day after launch?",
+          "Will fomo.family launch a token by ___ ?",
+          "Will Predict.fun launch a token by ___?",
+          "Will Abstract launch a token by ___?",
+          "Will Arc launch a token by ___ ?",
+          "Hyperliquid airdrop by ....? ",
+          "Abstract FDV above ___ one day after launch?",
+          "Will Exponent launch a token by ___?"
+        ]
+      },
+      {
+        "exchange": "Polymarket",
+        "url": "https://polymarket.com/event/nba-2026-27-rookie-of-the-year-20260624161716143",
+        "title": "NBA: 2026-27 Rookie of the Year",
+        "kind": "nba, sports, basketball, rookie-of-the-year, nba-tip-off",
+        "closes": "2027-05-01T03:59:00Z",
+        "listed": "2026-06-24T16:29:39.613739Z",
+        "isNew": false,
+        "volume": 7992912,
+        "volume24h": 13198,
+        "odds": [
+          {
+            "label": "Player AA",
+            "chance": 0.5
+          },
+          {
+            "label": "Player AB",
+            "chance": 0.5
+          },
+          {
+            "label": "Player AC",
+            "chance": 0.5
+          },
+          {
+            "label": "Player AD",
+            "chance": 0.5
+          }
+        ],
+        "coveredByPin": null
+      },
+      {
+        "exchange": "Polymarket",
+        "url": "https://polymarket.com/event/indiana-enacts-data-center-moratorium-by-20260929",
+        "title": "Indiana enacts data center moratorium by...?",
+        "kind": "ai, tech, states, compute, earn-4",
+        "closes": "2029-01-01T04:59:00Z",
+        "listed": "2026-09-29T15:56:31Z",
+        "isNew": false,
+        "volume": 6079229,
+        "volume24h": 5851,
+        "odds": [
+          {
+            "label": "December 31, 2028",
+            "chance": 0.285
+          },
+          {
+            "label": "December 31, 2027",
+            "chance": 0.135
+          },
+          {
+            "label": "June 30, 2027",
+            "chance": 0.095
+          },
+          {
+            "label": "December 31, 2026",
+            "chance": 0.021
+          }
+        ],
+        "coveredByPin": null,
+        "related": [
+          "Oklahoma enacts data center moratorium by...?",
+          "Texas enacts data center moratorium by...?",
+          "Missouri enacts data center moratorium by...?",
+          "Louisiana enacts data center moratorium by...?",
+          "Ohio enacts data center moratorium by...?"
+        ]
+      },
+      {
+        "exchange": "Polymarket",
+        "url": "https://polymarket.com/event/will-russia-invade-a-nato-country-in-2025",
+        "title": "Will Russia invade a NATO country by...?",
+        "kind": "politics, world, ukraine, geopolitics, poland",
+        "closes": "2027-01-01T04:59:00Z",
+        "listed": "2025-05-28T22:16:59.523581Z",
+        "isNew": false,
+        "volume": 5522054,
+        "volume24h": 954,
+        "odds": [
+          {
+            "label": "Yes",
+            "chance": 0.045
+          }
+        ],
+        "coveredByPin": null,
+        "related": [
+          "Where will Zelenskyy and Putin meet next before 2027?",
+          "Zelenskyy out as Ukraine president by end of 2026?",
+          "Ukraine signs peace deal with Russia before 2027?",
+          "Where will Trump and Putin meet next in 2026?",
+          "Ukraine election called by...?",
+          "Russia x Ukraine peace talks by...?",
+          "Will any country leave NATO by...?",
+          "Ukraine joins NATO before 2027?",
+          "Will Zelenskyy talk to Putin by...?",
+          "U.S. nuclear test by...?",
+          "Russia x Ukraine any diplomatic meeting by...?",
+          "Russia x Ukraine Peace Combo"
+        ]
+      },
+      {
+        "exchange": "Polymarket",
+        "url": "https://polymarket.com/event/anthropic-ipo-by",
+        "title": "Anthropic IPO by __?",
+        "kind": "finance, ipo, anthropic-ipo, anthropic, ipos",
+        "closes": "2027-01-01T04:59:00Z",
+        "listed": "2026-06-01T21:08:14.753601Z",
+        "isNew": false,
+        "volume": 5189589,
+        "volume24h": 42682,
+        "odds": [
+          {
+            "label": "December 31, 2026",
+            "chance": 0.805
+          },
+          {
+            "label": "December 15, 2026",
+            "chance": 0.755
+          },
+          {
+            "label": "November 30, 2026",
+            "chance": 0.645
+          },
+          {
+            "label": "November 15, 2026",
+            "chance": 0.081
+          }
+        ],
+        "coveredByPin": null,
+        "related": [
+          "Oura IPO Closing Market Cap"
+        ]
+      },
+      {
+        "exchange": "Polymarket",
+        "url": "https://polymarket.com/event/will-samuel-alito-announce-his-retirement-by",
+        "title": "Will Samuel Alito announce his retirement by...?",
+        "kind": "politics, supreme-court, courts, alito, scotus",
+        "closes": "2027-07-01T03:59:00Z",
+        "listed": "2026-02-17T16:25:21.594Z",
+        "isNew": false,
+        "volume": 4340272,
+        "volume24h": 11824,
+        "odds": [
+          {
+            "label": "June 30, 2027",
+            "chance": 0.44
+          },
+          {
+            "label": "December 31",
+            "chance": 0.135
+          }
+        ],
+        "coveredByPin": null
+      },
+      {
+        "exchange": "Polymarket",
+        "url": "https://polymarket.com/event/billionaire-one-time-wealth-tax-passes-in-california-election-2026",
+        "title": "Billionaire one-time wealth tax passes in California election 2026?",
+        "kind": "taxes, referendum, referendums-midterms, fiscal, politics",
+        "closes": "2026-11-04T04:59:00Z",
+        "listed": "2025-10-24T19:49:02.306Z",
+        "isNew": false,
+        "volume": 3940103,
+        "volume24h": 1248,
+        "odds": [
+          {
+            "label": "Yes",
+            "chance": 0.225
+          }
+        ],
+        "coveredByPin": null
+      },
+      {
+        "exchange": "Polymarket",
+        "url": "https://polymarket.com/event/fed-rate-cut-by-629",
+        "title": "Fed rate cut by...?",
+        "kind": "fed, fed-rates, finance, economy, economic-policy",
+        "closes": "2028-01-29T04:59:00Z",
+        "listed": "2025-12-16T19:36:41.87716Z",
+        "isNew": false,
+        "volume": 3802937,
+        "volume24h": 4475,
+        "odds": [
+          {
+            "label": "July 2027 Meeting",
+            "chance": 0.495
+          },
+          {
+            "label": "April 2027 Meeting",
+            "chance": 0.33
+          },
+          {
+            "label": "June 2027 Meeting",
+            "chance": 0.28
+          },
+          {
+            "label": "March 2027 Meeting",
+            "chance": 0.145
+          }
+        ],
+        "coveredByPin": null
+      },
+      {
+        "exchange": "Polymarket",
+        "url": "https://polymarket.com/event/will-china-invade-taiwan-by-december-31-2027",
+        "title": "Will China invade Taiwan by December 31, 2027?",
+        "kind": "china, politics, world, geopolitics",
+        "closes": "2028-01-01T04:59:00Z",
+        "listed": "2026-03-17T23:32:00.623Z",
+        "isNew": false,
+        "volume": 3534052,
+        "volume24h": 615,
+        "odds": [
+          {
+            "label": "Yes",
+            "chance": 0.095
+          }
+        ],
+        "coveredByPin": null
+      },
+      {
+        "exchange": "Polymarket",
+        "url": "https://polymarket.com/event/china-x-taiwan-military-clash-before-2027",
+        "title": "China x Taiwan military clash before 2027?",
+        "kind": "hfc, world, taiwan, foreign-policy, china",
+        "closes": "2027-01-01T04:59:00Z",
+        "listed": "2025-11-13T23:12:30.385Z",
+        "isNew": false,
+        "volume": 3485900,
+        "volume24h": 190,
+        "odds": [
+          {
+            "label": "Yes",
+            "chance": 0.029
+          }
+        ],
+        "coveredByPin": 1972,
+        "related": [
+          "Ukraine recognizes Russian sovereignty over its territory by...?",
+          "How many different countries will the US conduct military action against in 2026?",
+          "China x Japan military clash before 2027?",
+          "Lai Ching-te impeached by...?",
+          "Will China unban Bitcoin by 2027?",
+          "U.S. x Russia Nuclear deal by...?",
+          "China x Philippines military clash before 2027?",
+          "Will China blockade Taiwan in 2026?",
+          "Jimmy Lai released by...?"
+        ]
+      },
+      {
+        "exchange": "Polymarket",
+        "url": "https://polymarket.com/event/will-russia-capture-lyman-in-2025",
+        "title": "Will Russia capture Lyman by...?",
+        "kind": "geopolitics, world-affairs, politics, world, russia-capture",
+        "closes": "2027-01-01T04:59:00Z",
+        "listed": "2025-07-22T21:41:18.897452Z",
+        "isNew": false,
+        "volume": 3133997,
+        "volume24h": 450,
+        "odds": [
+          {
+            "label": "Yes",
+            "chance": 0.055
+          }
+        ],
+        "coveredByPin": null,
+        "related": [
+          "Will Russia capture all of Stepnohirsk by...?",
+          "Will Russia capture all of Kupiansk by...?",
+          "Will Russia capture all of Kostyantynivka by...?",
+          "Which cities will Russia enter by December 31?",
+          "Will Russia capture all of Prymorske by...?",
+          "Will Russia capture all of Vovchansk by...?",
+          "Will Russia capture all of Donetsk Oblast by...?",
+          "Will Russia capture Orikhiv by...?",
+          "Will Russia capture Bilytske by...?",
+          "Will Russia capture Mala Tokmachka by...?",
+          "Will Russia capture all of Lyman by...?"
+        ]
+      },
+      {
+        "exchange": "Polymarket",
+        "url": "https://polymarket.com/event/openai-ipo-by",
+        "title": "OpenAI IPO by...?",
+        "kind": "openai-ipo, ipos, big-tech, ai, finance",
+        "closes": "2027-07-01T03:59:00Z",
+        "listed": "2025-10-30T00:29:28.969Z",
+        "isNew": false,
+        "volume": 3063235,
+        "volume24h": 87,
+        "odds": [
+          {
+            "label": "June 30, 2027",
+            "chance": 0.335
+          },
+          {
+            "label": "March 31, 2027",
+            "chance": 0.195
+          },
+          {
+            "label": "December 31, 2026",
+            "chance": 0.046
+          }
+        ],
+        "coveredByPin": null,
+        "related": [
+          "Who will be removed from Chinese Military Companies list by June 30, 2027?"
+        ]
+      },
+      {
+        "exchange": "Polymarket",
+        "url": "https://polymarket.com/event/friedrich-merz-out-as-chancellor-of-germany-before-2027",
+        "title": "Friedrich Merz out as Chancellor of Germany by...?",
+        "kind": "politics, germany, world",
+        "closes": "2027-01-01T04:59:00Z",
+        "listed": "2025-11-05T19:35:55.838Z",
+        "isNew": false,
+        "volume": 2947254,
+        "volume24h": 16074,
+        "odds": [
+          {
+            "label": "December 31, 2027",
+            "chance": 0.395
+          },
+          {
+            "label": "June 30, 2027",
+            "chance": 0.295
+          },
+          {
+            "label": "March 31, 2027",
+            "chance": 0.08
+          },
+          {
+            "label": "December 31, 2026",
+            "chance": 0.075
+          }
+        ],
+        "coveredByPin": 1977
+      },
+      {
+        "exchange": "Polymarket",
+        "url": "https://polymarket.com/event/ukraine-election-held-in-2025",
+        "title": "Ukraine election held by...?",
+        "kind": "ukraine, politics, geopolitics, foreign-policy, world",
+        "closes": "2027-02-13T04:59:00Z",
+        "listed": "2025-02-14T00:02:53.059603Z",
+        "isNew": false,
+        "volume": 2501899,
+        "volume24h": 0,
+        "odds": [
+          {
+            "label": "Yes",
+            "chance": 0.037
+          }
+        ],
+        "coveredByPin": null
+      },
+      {
+        "exchange": "Polymarket",
+        "url": "https://polymarket.com/event/bachelorette-season-22-winner",
+        "title": "Bachelorette Season 22 Winner",
+        "kind": "pop-culture, reality-tv, celebrities",
+        "closes": "2026-12-01T04:59:00Z",
+        "listed": "2026-02-24T23:52:04.077371Z",
+        "isNew": false,
+        "volume": 2468969,
+        "volume24h": 293,
+        "odds": [
+          {
+            "label": "Other (Season Cancelled)",
+            "chance": 0.91
+          },
+          {
+            "label": "Doug Mason",
+            "chance": 0.012
+          },
+          {
+            "label": "Matt Carroll",
+            "chance": 0.01
+          },
+          {
+            "label": "Michael Baba",
+            "chance": 0.009
+          }
+        ],
+        "coveredByPin": null
+      },
+      {
+        "exchange": "Polymarket",
+        "url": "https://polymarket.com/event/which-movie-has-biggest-opening-weekend-in-2026",
+        "title": "Which movie has biggest opening weekend in 2026?",
+        "kind": "the-odyssey, movies, pop-culture, spider-man",
+        "closes": "2027-02-01T04:59:00Z",
+        "listed": "2025-11-12T22:23:26.972468Z",
+        "isNew": false,
+        "volume": 2446435,
+        "volume24h": 5459,
+        "odds": [
+          {
+            "label": "Avengers: Doomsday",
+            "chance": 0.56
+          },
+          {
+            "label": "Spider-Man: Brand New Day",
+            "chance": 0.435
+          },
+          {
+            "label": "The Hunger Games: Sunrise on the Reaping",
+            "chance": 0.001
+          },
+          {
+            "label": "Dune: Messiah",
+            "chance": 0.001
+          }
+        ],
+        "coveredByPin": null
+      },
+      {
+        "exchange": "Polymarket",
+        "url": "https://polymarket.com/event/who-wins-the-senate-pending-hormuz-agreement",
+        "title": "Who wins the Senate pending Hormuz Agreement by Oct 23?",
+        "kind": "iran, senate-elections, midterms, politics, elections",
+        "closes": "2026-11-04T04:59:00Z",
+        "listed": "2026-10-11T16:51:10Z",
+        "isNew": false,
+        "volume": 2377327,
+        "volume24h": 47281,
+        "odds": [
+          {
+            "label": "No Hormuz Agreement",
+            "chance": 0.946
+          },
+          {
+            "label": "Hormuz Agreement; R Senate",
+            "chance": 0.027
+          },
+          {
+            "label": "Hormuz Agreement; D Senate",
+            "chance": 0.026
+          }
+        ],
+        "coveredByPin": null,
+        "related": [
+          "Maine Senate Election Winner",
+          "Michigan Senate Election Winner",
+          "Ohio Senate Election Winner",
+          "Who wins the Senate pending Hormuz Agreement before the midterms?",
+          "Who wins the Senate pending oil below $85 before the midterms?",
+          "Iowa Senate Election Winner",
+          "Kansas Senate Election Winner",
+          "South Carolina Senate Election Winner",
+          "US-Iran ceasefire continues through the midterms?",
+          "Nebraska Senate Election Winner  ",
+          "How many Republican Governors after the 2026 midterm elections?",
+          "Who wins the Senate pending oil above or below $80 before the midterms?"
+        ]
+      },
+      {
+        "exchange": "Polymarket",
+        "url": "https://polymarket.com/event/anthropic-announces-bankruptcy-by",
+        "title": "Anthropic announces bankruptcy by...?",
+        "kind": "tech, finance, business, anthropic, corporate-financials",
+        "closes": "2030-01-01T04:59:00Z",
+        "listed": "2026-09-17T22:38:03Z",
+        "isNew": false,
+        "volume": 2340872,
+        "volume24h": 256317,
+        "odds": [
+          {
+            "label": "December 31, 2029",
+            "chance": 0.195
+          },
+          {
+            "label": "December 31, 2028",
+            "chance": 0.165
+          },
+          {
+            "label": "December 31, 2027",
+            "chance": 0.085
+          }
+        ],
+        "coveredByPin": null
+      },
+      {
+        "exchange": "Polymarket",
+        "url": "https://polymarket.com/event/macron-out-in-2025",
+        "title": "Macron out by...?",
+        "kind": "france, politics, macron, 2025-predictions, world",
+        "closes": "2027-01-01T04:59:00Z",
+        "listed": "2025-01-03T19:35:04.095066Z",
+        "isNew": false,
+        "volume": 2212591,
+        "volume24h": 728,
+        "odds": [
+          {
+            "label": "Yes",
+            "chance": 0.043
+          }
+        ],
+        "coveredByPin": 1976,
+        "related": [
+          "French election called by...?"
+        ]
+      },
+      {
+        "exchange": "Polymarket",
+        "url": "https://polymarket.com/event/taylor-swift-pregnant-in-2025",
+        "title": "Taylor Swift pregnant by...?",
+        "kind": "music, celebrities, pop-culture, taylor-swift, pregnant",
+        "closes": "2027-01-01T04:59:00Z",
+        "listed": "2025-07-30T15:52:32.624357Z",
+        "isNew": false,
+        "volume": 2059879,
+        "volume24h": 21,
+        "odds": [
+          {
+            "label": "Yes",
+            "chance": 0.245
+          }
+        ],
+        "coveredByPin": null,
+        "related": [
+          "Next James Bond actor?",
+          "Who will attend Taylor Swift and Travis Kelce's wedding?",
+          "Who will announce Presidential run before 2027?"
+        ]
+      },
+      {
+        "exchange": "Polymarket",
+        "url": "https://polymarket.com/event/next-prime-minister-of-spain-20260625005215443",
+        "title": "Next Prime Minister of Spain?",
+        "kind": "spain, politics, elections, parliament, main-election",
+        "closes": "2028-04-01T03:59:00Z",
+        "listed": "2026-06-26T17:29:45.854411Z",
+        "isNew": false,
+        "volume": 2034651,
+        "volume24h": 13911,
+        "odds": [
+          {
+            "label": "Alberto Núñez Feijóo",
+            "chance": 0.83
+          },
+          {
+            "label": "Person AA",
+            "chance": 0.5
+          },
+          {
+            "label": "Person AB",
+            "chance": 0.5
+          },
+          {
+            "label": "Person AC",
+            "chance": 0.5
+          }
+        ],
+        "coveredByPin": null
+      },
+      {
+        "exchange": "Polymarket",
+        "url": "https://polymarket.com/event/serbia-parliamentary-election-winner-2026",
+        "title": "Serbia Parliamentary Election Winner",
+        "kind": "serbia, politics, elections, main-election, global-elections",
+        "closes": "2026-10-25T23:59:00Z",
+        "listed": "2026-09-21T22:57:07Z",
+        "isNew": false,
+        "volume": 1913961,
+        "volume24h": 188648,
+        "odds": [
+          {
+            "label": "Aleksandar Vučić – United Serbia",
+            "chance": 0.69
+          },
+          {
+            "label": "List A",
+            "chance": 0.5
+          },
+          {
+            "label": "List B",
+            "chance": 0.5
+          },
+          {
+            "label": "List C",
+            "chance": 0.5
+          }
+        ],
+        "coveredByPin": null,
+        "related": [
+          "Next Prime Minister of Serbia?"
+        ]
+      },
+      {
+        "exchange": "Polymarket",
+        "url": "https://polymarket.com/event/will-mitch-mcconnell-resign-from-the-senate-before-his-term-ends",
+        "title": "Mitch McConnell steps down from Senate before his term ends?",
+        "kind": "politics, congress, senate-elections",
+        "closes": "2027-01-04T04:59:00Z",
+        "listed": "2025-10-17T21:26:50.709Z",
+        "isNew": false,
+        "volume": 1790654,
+        "volume24h": 5710,
+        "odds": [
+          {
+            "label": "Yes",
+            "chance": 0.075
+          }
+        ],
+        "coveredByPin": null
+      },
+      {
+        "exchange": "Polymarket",
+        "url": "https://polymarket.com/event/top-spotify-artist-2026",
+        "title": "Top Spotify Artist 2026",
+        "kind": "pop-culture, music, spotify",
+        "closes": "2027-02-01T04:59:00Z",
+        "listed": "2025-12-22T21:40:01.412Z",
+        "isNew": false,
+        "volume": 1743043,
+        "volume24h": 9826,
+        "odds": [
+          {
+            "label": "Bad Bunny",
+            "chance": 0.855
+          },
+          {
+            "label": "Taylor Swift",
+            "chance": 0.062
+          },
+          {
+            "label": "Drake",
+            "chance": 0.024
+          },
+          {
+            "label": "Bruno Mars",
+            "chance": 0.015
+          }
+        ],
+        "coveredByPin": 1965
+      },
+      {
+        "exchange": "Polymarket",
+        "url": "https://polymarket.com/event/next-google-gemini-pro-model-released-byptptpt",
+        "title": "Next Google Gemini Pro Model released by...?",
+        "kind": "ai, tech, gemini, google, ai-releases",
+        "closes": "2026-11-01T03:59:00Z",
+        "listed": "2026-06-01T22:56:44.54Z",
+        "isNew": false,
+        "volume": 1660394,
+        "volume24h": 3087,
+        "odds": [
+          {
+            "label": "November 30",
+            "chance": 0.13
+          },
+          {
+            "label": "December 31",
+            "chance": 0.13
+          },
+          {
+            "label": "October 31",
+            "chance": 0.024
+          },
+          {
+            "label": "October 23",
+            "chance": 0.016
+          }
+        ],
+        "coveredByPin": 1989
+      },
+      {
+        "exchange": "Polymarket",
+        "url": "https://polymarket.com/event/wnba-2026-champion-464",
+        "title": "WNBA: 2026 Champion",
+        "kind": "wnba, basketball, sports, rewards-automation-50-4pt5-50",
+        "closes": "2026-11-15T04:59:00Z",
+        "listed": "2026-04-06T16:31:00.904Z",
+        "isNew": false,
+        "volume": 1590555,
+        "volume24h": 5129,
+        "odds": [
+          {
+            "label": "Atlanta Dream",
+            "chance": 0.575
+          },
+          {
+            "label": "Golden State Valkyries",
+            "chance": 0.42
+          },
+          {
+            "label": "Other",
+            "chance": null
+          }
+        ],
+        "coveredByPin": null
+      },
+      {
+        "exchange": "Polymarket",
+        "url": "https://polymarket.com/event/openai-ipo-closing-market-cap-above",
+        "title": "OpenAI IPO closing market cap above ___ ?",
+        "kind": "finance, ipos, ai, big-tech, openai",
+        "closes": "2028-01-01T04:59:00Z",
+        "listed": "2026-01-31T00:27:25.69Z",
+        "isNew": false,
+        "volume": 1563590,
+        "volume24h": 594,
+        "odds": [
+          {
+            "label": "$800B",
+            "chance": 0.778
+          },
+          {
+            "label": "$1T",
+            "chance": 0.71
+          },
+          {
+            "label": "$1.2T",
+            "chance": 0.63
+          },
+          {
+            "label": "$1.4T",
+            "chance": 0.62
+          }
+        ],
+        "coveredByPin": null,
+        "related": [
+          "Tesla and SpaceX merger officially announced by...?",
+          "OpenAI announces another Millennium Prize solution by...?",
+          "Will Anthropic or OpenAI IPO first?",
+          "What will OpenAI's IPO valuation be?",
+          "In which month will Anthropic IPO?"
+        ]
+      },
+      {
+        "exchange": "Polymarket",
+        "url": "https://polymarket.com/event/taipei-mayor-election-winner-20260813125857100",
+        "title": "Taipei Mayor Election Winner",
+        "kind": "taiwan, politics, elections, main-election, global-elections",
+        "closes": "2026-11-29T04:59:00Z",
+        "listed": "2026-08-14T12:25:31Z",
+        "isNew": false,
+        "volume": 1534572,
+        "volume24h": 114787,
+        "odds": [
+          {
+            "label": "Chiang Wan-an",
+            "chance": 0.645
+          },
+          {
+            "label": "Other",
+            "chance": 0.5
+          },
+          {
+            "label": "Puma Shen",
+            "chance": 0.356
+          },
+          {
+            "label": "Kuo Hsi",
+            "chance": 0.001
+          }
+        ],
+        "coveredByPin": null
+      },
+      {
+        "exchange": "Polymarket",
+        "url": "https://polymarket.com/event/how-high-will-inflation-get-in-2026",
+        "title": "How high will inflation get in 2026?",
+        "kind": "inflation, macro-indicators, economy, politics",
+        "closes": "2027-02-01T04:59:00Z",
+        "listed": "2025-11-13T21:32:45.893Z",
+        "isNew": false,
+        "volume": 1495596,
+        "volume24h": 1872,
+        "odds": [
+          {
+            "label": "Above 4.5%",
+            "chance": 0.155
+          },
+          {
+            "label": "Above 5%",
+            "chance": 0.08
+          },
+          {
+            "label": "Above 6%",
+            "chance": 0.034
+          },
+          {
+            "label": "Above 8%",
+            "chance": 0.032
+          }
+        ],
+        "coveredByPin": null,
+        "related": [
+          "China Annual GDP Growth 2026"
+        ]
+      },
+      {
+        "exchange": "Polymarket",
+        "url": "https://polymarket.com/event/next-leader-out-of-power-before-2027-no-starmer-or-petro-20260630194619406",
+        "title": "Next leader out of power before 2027?",
+        "kind": "starmer, politics, geopolitics, uk-labour-leadership",
+        "closes": "2027-01-01T04:59:00Z",
+        "listed": "2026-07-01T02:18:26.879119Z",
+        "isNew": false,
+        "volume": 1422315,
+        "volume24h": 53558,
+        "odds": [
+          {
+            "label": "None before 2027",
+            "chance": 0.465
+          },
+          {
+            "label": "Netanyahu - Israel PM",
+            "chance": 0.325
+          },
+          {
+            "label": "Sánchez - Spanish PM",
+            "chance": 0.061
+          },
+          {
+            "label": "Lecornu - France PM",
+            "chance": 0.04
+          }
+        ],
+        "coveredByPin": null
+      },
+      {
+        "exchange": "Polymarket",
+        "url": "https://polymarket.com/event/israeli-forces-withdraw-from-beyond-the-litani-river-by-20260607234645733",
+        "title": "Israeli forces withdraw from beyond the Litani River by…?",
+        "kind": "israel, litani, lebanon, politics, geopolitics",
+        "closes": "2026-09-01T03:59:00Z",
+        "listed": "2026-06-08T02:23:57.0642Z",
+        "isNew": false,
+        "volume": 1405533,
+        "volume24h": 81,
+        "odds": [
+          {
+            "label": "March 31",
+            "chance": 0.195
+          },
+          {
+            "label": "December 31",
+            "chance": 0.075
+          },
+          {
+            "label": "October 31",
+            "chance": 0.01
+          }
+        ],
+        "coveredByPin": null
+      },
+      {
+        "exchange": "Polymarket",
+        "url": "https://polymarket.com/event/nhl-2027-champion-20260612185656162",
+        "title": "NHL: 2027 Champion",
+        "kind": "nhl, sports, stanley-cup, rewards-50-4pt5-20, hockey",
+        "closes": "2027-07-01T03:59:00Z",
+        "listed": "2026-06-12T19:43:46.737243Z",
+        "isNew": false,
+        "volume": 1351001,
+        "volume24h": 48641,
+        "odds": [
+          {
+            "label": "Other",
+            "chance": 0.5
+          },
+          {
+            "label": "Colorado Avalanche",
+            "chance": 0.115
+          },
+          {
+            "label": "Carolina Hurricanes",
+            "chance": 0.105
+          },
+          {
+            "label": "Edmonton Oilers",
+            "chance": 0.105
+          }
+        ],
+        "coveredByPin": 1956
+      },
+      {
+        "exchange": "Polymarket",
+        "url": "https://polymarket.com/event/bulgaria-presidential-election",
+        "title": "Bulgaria Presidential Election",
+        "kind": "world-elections, elections, global-elections, politics, world",
+        "closes": "2026-10-26T03:59:00Z",
+        "listed": "2026-01-19T20:20:24.477487Z",
+        "isNew": false,
+        "volume": 1305442,
+        "volume24h": 42838,
+        "odds": [
+          {
+            "label": "Iliana Iotova",
+            "chance": 0.905
+          },
+          {
+            "label": "Аndrey Gyurov",
+            "chance": 0.095
+          },
+          {
+            "label": "Nikolai Denkov",
+            "chance": 0.001
+          },
+          {
+            "label": "Blagomir Kotsev",
+            "chance": 0.001
+          }
+        ],
+        "coveredByPin": null,
+        "related": [
+          "Bulgaria Presidential Election First Round: Margin of Victory",
+          "Toronto Mayoral Election Winner"
+        ]
+      }
+    ],
+    "thisWeek": [
+      {
+        "exchange": "Polymarket",
+        "url": "https://polymarket.com/event/brazil-presidential-election",
+        "title": "Brazil Presidential Election",
+        "kind": "politics, macro-election-2, main-election, brazil, global-elections",
+        "closes": "2026-10-26T03:59:00Z",
+        "listed": "2025-09-18T20:07:57.76Z",
+        "isNew": false,
+        "volume": 190486578,
+        "volume24h": 1597243,
+        "odds": [
+          {
+            "label": "Flávio Bolsonaro",
+            "chance": 0.777
+          },
+          {
+            "label": "Luiz Inácio Lula da Silva",
+            "chance": 0.225
+          },
+          {
+            "label": "Other",
+            "chance": null
+          }
+        ],
+        "coveredByPin": 1968,
+        "related": [
+          "Brazil Presidential Election Second Round: Margin of Victory",
+          "Brazil Presidential Election Second Round: 1st Place in Amapá",
+          "Brazil Presidential Election Second Round: 1st Place Abroad",
+          "Brazil Presidential Election Second Round: 1st Place in Amazonas",
+          "Amazonas Governor Election Winner",
+          "Brazil Presidential Election Second Round: 1st Place in Pará",
+          "Rio Grande do Norte Governor Election Winner",
+          "Acre Governor Election Winner",
+          "Who will Trump endorse for President of Brazil?",
+          "Brazil Presidential Election Second Round: Turnout",
+          "Espírito Santo Governor Election Winner ",
+          "Rio de Janeiro Governor Election Second Round: Margin of Victory"
+        ]
+      },
+      {
+        "exchange": "Polymarket",
+        "url": "https://polymarket.com/event/who-will-be-the-next-prime-minister-of-israel-after-the-next-election",
+        "title": "Prime Minister of Israel after the next election?",
+        "kind": "main-election, israel-election, politics, middle-east, israel",
+        "closes": "2026-10-28T03:59:00Z",
+        "listed": "2025-11-15T00:27:02.243822Z",
+        "isNew": false,
+        "volume": 50030733,
+        "volume24h": 533660,
+        "odds": [
+          {
+            "label": "Gadi Eizenkot",
+            "chance": 0.527
+          },
+          {
+            "label": "Benjamin Netanyahu",
+            "chance": 0.275
+          },
+          {
+            "label": "Naftali Bennett",
+            "chance": 0.125
+          },
+          {
+            "label": "Avigdor Lieberman",
+            "chance": 0.026
+          }
+        ],
+        "coveredByPin": 1969,
+        "related": [
+          "Israeli Legislative Election Winner",
+          "Israel Election: Likud # of seats?",
+          "Israeli Legislative Election: 3rd Place",
+          "Will Israel election happen as scheduled?",
+          "How many Israeli elections before government formed?",
+          "Israeli Legislative Election: 2nd Place",
+          "Israel election: will Likud lose seats?",
+          "Israel Election: Yisrael Beiteinu vote share?",
+          "Israel Election: Yashar # of seats?",
+          "Israel Election: Any Coalition Wins a Majority?",
+          "Israeli election results in a hung parliament?",
+          "Israel Election: RZP-Zehut # of seats?"
+        ]
+      },
+      {
+        "exchange": "Polymarket",
+        "url": "https://polymarket.com/event/serbia-parliamentary-election-winner-2026",
+        "title": "Serbia Parliamentary Election Winner",
+        "kind": "serbia, politics, elections, main-election, global-elections",
+        "closes": "2026-10-25T23:59:00Z",
+        "listed": "2026-09-21T22:57:07Z",
+        "isNew": false,
+        "volume": 1913961,
+        "volume24h": 188648,
+        "odds": [
+          {
+            "label": "Aleksandar Vučić – United Serbia",
+            "chance": 0.69
+          },
+          {
+            "label": "List A",
+            "chance": 0.5
+          },
+          {
+            "label": "List B",
+            "chance": 0.5
+          },
+          {
+            "label": "List C",
+            "chance": 0.5
+          }
+        ],
+        "coveredByPin": null,
+        "related": [
+          "Next Prime Minister of Serbia?",
+          "Serbia Election: Student List Vote Share?",
+          "Serbia Parliamentary Election: 3rd Place",
+          "Serbia Election: United Serbia Vote Share?",
+          "Serbia Parliamentary Election: Turnout",
+          "Serbia Parliamentary Election Vote Share Margin of Victory"
+        ]
+      },
+      {
+        "exchange": "Polymarket",
+        "url": "https://polymarket.com/event/bulgaria-presidential-election",
+        "title": "Bulgaria Presidential Election",
+        "kind": "world-elections, elections, global-elections, politics, world",
+        "closes": "2026-10-26T03:59:00Z",
+        "listed": "2026-01-19T20:20:24.477487Z",
+        "isNew": false,
+        "volume": 1305442,
+        "volume24h": 42838,
+        "odds": [
+          {
+            "label": "Iliana Iotova",
+            "chance": 0.905
+          },
+          {
+            "label": "Аndrey Gyurov",
+            "chance": 0.095
+          },
+          {
+            "label": "Nikolai Denkov",
+            "chance": 0.001
+          },
+          {
+            "label": "Blagomir Kotsev",
+            "chance": 0.001
+          }
+        ],
+        "coveredByPin": null,
+        "related": [
+          "Bulgaria Presidential Election First Round: Margin of Victory",
+          "Toronto Mayoral Election Winner",
+          "Bulgaria Presidential Election First Round Winner",
+          "Bulgaria Presidential Election First Round: 2nd Place"
+        ]
+      },
+      {
+        "exchange": "Polymarket",
+        "url": "https://polymarket.com/event/of-views-of-grand-theft-auto-vi-launch-trailer-on-week-1",
+        "title": "# of views of Grand Theft Auto VI Launch Trailer on week 1?",
+        "kind": "gta-vi, pop-culture, youtube, rockstar",
+        "closes": "2026-10-23T03:59:00Z",
+        "listed": "2026-10-15T14:34:22Z",
+        "isNew": false,
+        "volume": 941564,
+        "volume24h": 236411,
+        "odds": [
+          {
+            "label": "60-80M",
+            "chance": 0.896
+          },
+          {
+            "label": "40-60M",
+            "chance": 0.101
+          },
+          {
+            "label": "100-120M",
+            "chance": 0.005
+          },
+          {
+            "label": "120-140M",
+            "chance": 0.003
+          }
+        ],
+        "coveredByPin": null
+      },
+      {
+        "exchange": "Kalshi",
+        "url": "https://kalshi.com/markets/kxnextteamnba/bronny-james-next-team-before-oct-23-2026/kxnextteamnba-26bjames9",
+        "title": "Bronny James' Next Team Before Oct 23, 2026",
+        "kind": "KXNEXTTEAMNBA",
+        "closes": "2026-10-23T03:59:00Z",
+        "listed": "2026-05-13T02:25:00Z",
+        "isNew": false,
+        "volume": 603483,
+        "volume24h": 7760,
+        "odds": [
+          {
+            "label": "Los Angeles L",
+            "chance": 0.97
+          },
+          {
+            "label": "Boston",
+            "chance": 0.02
+          },
+          {
+            "label": "Philadelphia",
+            "chance": 0.02
+          },
+          {
+            "label": "Sacramento",
+            "chance": 0.02
+          }
+        ],
+        "coveredByPin": null
+      },
+      {
+        "exchange": "Kalshi",
+        "url": "https://kalshi.com/markets/kxtestmatch/south-africa-vs-australia-sa-vs-aus-oct-18/kxtestmatch-26oct180400aussa",
+        "title": "South Africa vs Australia SA vs AUS (Oct 18)",
+        "kind": "KXTESTMATCH",
+        "closes": "2026-10-25T08:00:00Z",
+        "listed": "2026-10-16T00:10:00Z",
+        "isNew": false,
+        "volume": 432324,
+        "volume24h": 183496,
+        "odds": [
+          {
+            "label": "South Africa",
+            "chance": 0.81
+          },
+          {
+            "label": "Draw/Tie",
+            "chance": 0.18
+          },
+          {
+            "label": "Australia",
+            "chance": 0.01
+          }
+        ],
+        "coveredByPin": null
+      },
+      {
+        "exchange": "Polymarket",
+        "url": "https://polymarket.com/event/nba-stephen-curry-to-leave-warriors",
+        "title": "NBA: Stephen Curry to leave Warriors?",
+        "kind": "nba, basketball, golden-state-warriors, stephen-curry, sports",
+        "closes": "2026-10-23T03:59:00Z",
+        "listed": "2026-04-28T21:11:18.039593Z",
+        "isNew": false,
+        "volume": 326646,
+        "volume24h": 1019,
+        "odds": [
+          {
+            "label": "Yes",
+            "chance": 0.001
+          }
+        ],
+        "coveredByPin": null,
+        "related": [
+          "NBA: Will Anthony Davis be traded by next season?"
+        ]
+      },
+      {
+        "exchange": "Polymarket",
+        "url": "https://polymarket.com/event/next-premier-of-british-columbia",
+        "title": "Next Premier of British Columbia",
+        "kind": "canada, politics, elections, main-election, british-columbia",
+        "closes": "2026-10-24T23:59:00Z",
+        "listed": "2026-09-23T13:55:00Z",
+        "isNew": false,
+        "volume": 203172,
+        "volume24h": 16545,
+        "odds": [
+          {
+            "label": "Lorne Doerkson",
+            "chance": 0.885
+          },
+          {
+            "label": "Other",
+            "chance": 0.5
+          },
+          {
+            "label": "David Eby",
+            "chance": 0.115
+          },
+          {
+            "label": "John Rustad",
+            "chance": 0.001
+          }
+        ],
+        "coveredByPin": null,
+        "related": [
+          "British Columbia General Election Winner",
+          "British Columbia General Election: 2nd Place",
+          "Vancouver-Yaletown British Columbia Legislative Assembly Election Winner",
+          "Milton, ON Mayoral Election Winner",
+          "Vernon-Lumby British Columbia Legislative Assembly Election Winner"
+        ]
+      },
+      {
+        "exchange": "Kalshi",
+        "url": "https://kalshi.com/markets/kxmlbgame/game-1-tampa-bay-vs-milwaukee-tb-vs-mil-oct-23/kxmlbgame-26oct232000tbmil",
+        "title": "Game 1: Tampa Bay vs Milwaukee TB vs MIL (Oct 23)",
+        "kind": "KXMLBGAME",
+        "closes": "2026-10-27T00:00:00Z",
+        "listed": "2026-10-20T03:41:00Z",
+        "isNew": false,
+        "volume": 202121,
+        "volume24h": 129940,
+        "odds": [
+          {
+            "label": "Milwaukee",
+            "chance": 0.61
+          },
+          {
+            "label": "Tampa Bay",
+            "chance": 0.4
+          }
+        ],
+        "coveredByPin": null
+      },
+      {
+        "exchange": "Kalshi",
+        "url": "https://kalshi.com/markets/kxcbdecisioncanada/bank-of-canada-decision-in-oct-2026/kxcbdecisioncanada-26oct",
+        "title": "Bank of Canada decision in Oct 2026?",
+        "kind": "KXCBDECISIONCANADA",
+        "closes": "2026-10-28T13:29:00Z",
+        "listed": "2025-10-13T14:00:00Z",
+        "isNew": false,
+        "volume": 156747,
+        "volume24h": 13905,
+        "odds": [
+          {
+            "label": "Hike 25bps",
+            "chance": 0.71
+          },
+          {
+            "label": "Maintains rate",
+            "chance": 0.27
+          },
+          {
+            "label": "Cut >25bps",
+            "chance": 0.01
+          },
+          {
+            "label": "Cut 25bps",
+            "chance": 0.01
+          }
+        ],
+        "coveredByPin": null
+      },
+      {
+        "exchange": "Kalshi",
+        "url": "https://kalshi.com/markets/kxwnbagame/game-3-golden-state-vs-atlanta-golden-state-vs-atlanta-oct-22/kxwnbagame-26oct22gsatl",
+        "title": "Game 3: Golden State vs Atlanta Golden State vs Atlanta (Oct 22)",
+        "kind": "KXWNBAGAME",
+        "closes": "2026-10-25T00:00:00Z",
+        "listed": "2026-10-10T15:10:00Z",
+        "isNew": false,
+        "volume": 111434,
+        "volume24h": 68966,
+        "odds": [
+          {
+            "label": "Atlanta",
+            "chance": 0.61
+          },
+          {
+            "label": "Golden State",
+            "chance": 0.4
+          }
+        ],
+        "coveredByPin": null
+      },
+      {
+        "exchange": "Polymarket",
+        "url": "https://polymarket.com/event/ottawa-mayoral-election-winner",
+        "title": "Ottawa Mayoral Election Winner",
+        "kind": "canada, world-elections, mayoral-elections, politics, elections",
+        "closes": "2026-10-27T03:59:00Z",
+        "listed": "2026-04-02T20:44:29.492549Z",
+        "isNew": false,
+        "volume": 99767,
+        "volume24h": 2065,
+        "odds": [
+          {
+            "label": "Mark Sutcliffe",
+            "chance": 0.87
+          },
+          {
+            "label": "Jeff Leiper",
+            "chance": 0.079
+          },
+          {
+            "label": "Alex Lawson",
+            "chance": 0.019
+          },
+          {
+            "label": "Neil Saravanamuttoo",
+            "chance": 0.009
+          }
+        ],
+        "coveredByPin": null,
+        "related": [
+          "Oshawa, ON Mayoral Election Winner",
+          "Mississauga Mayoral Election Winner",
+          "Stratford, ON Mayoral Election Winner",
+          "Vaughan, ON Mayoral Election Winner",
+          "Markham, ON Mayoral Election Winner",
+          "Waterloo, ON Mayoral Election Winner",
+          "Hamilton Mayoral Election",
+          "Niagara-on-the-Lake, ON Mayoral Election Winner",
+          "Thunder Bay, ON Mayoral Election Winner",
+          "Barrie, ON Mayoral Election Winner",
+          "London, ON Mayoral Election Winner",
+          "Kingston, ON Mayoral Election Winner"
+        ]
+      },
+      {
+        "exchange": "Kalshi",
+        "url": "https://kalshi.com/markets/kxtrumpapprove/trump-s-rcp-approval-average-on-oct-21-2026/kxtrumpapprove-26oct21",
+        "title": "Trump's RCP approval average on Oct 21, 2026?",
+        "kind": "KXTRUMPAPPROVE",
+        "closes": "2026-10-21T16:59:00Z",
+        "listed": "2026-10-20T14:02:00Z",
+        "isNew": false,
+        "volume": 68300,
+        "volume24h": 67797,
+        "odds": [
+          {
+            "label": "Below 38.6%",
+            "chance": 0.98
+          },
+          {
+            "label": "38.6%",
+            "chance": 0.02
+          },
+          {
+            "label": "38.7%",
+            "chance": 0.01
+          },
+          {
+            "label": "38.8%",
+            "chance": 0.01
+          }
+        ],
+        "coveredByPin": null
+      },
+      {
+        "exchange": "Polymarket",
+        "url": "https://polymarket.com/event/no-change-or-hike-25-bps-favored-on-october-27",
+        "title": "No change or Hike 25 bps favored on October 27?",
+        "kind": "fed, fomc, economy, fed-rates, derivatives",
+        "closes": "2026-10-27T12:00:00Z",
+        "listed": "2026-09-24T19:53:51Z",
+        "isNew": false,
+        "volume": 52437,
+        "volume24h": 1713,
+        "odds": [
+          {
+            "label": "Yes",
+            "chance": 0.981
+          }
+        ],
+        "coveredByPin": null
+      },
+      {
+        "exchange": "Kalshi",
+        "url": "https://kalshi.com/markets/kxcopperw/copper-price-on-oct-23-2026-at-5-00-pm-edt/kxcopperw-26oct2317",
+        "title": "Copper price on Oct 23, 2026 at 5:00 PM EDT?",
+        "kind": "KXCOPPERW",
+        "closes": "2026-10-23T21:00:00Z",
+        "listed": "2026-10-16T21:00:00Z",
+        "isNew": false,
+        "volume": 46538,
+        "volume24h": 4517,
+        "odds": [
+          {
+            "label": "Above $6.45",
+            "chance": 0.95
+          },
+          {
+            "label": "Above $6.48",
+            "chance": 0.95
+          },
+          {
+            "label": "Above $6.51",
+            "chance": 0.85
+          },
+          {
+            "label": "Above $6.54",
+            "chance": 0.84
+          }
+        ],
+        "coveredByPin": null
+      },
+      {
+        "exchange": "Kalshi",
+        "url": "https://kalshi.com/markets/kxbbsingle/housewife-by-tate-mcrae-billboard-hot-100-rank-oct-31-2026/kxbbsingle-26oct31hou",
+        "title": "\"Housewife\" by Tate McRae · Billboard Hot 100 rank (Oct 31, 2026)",
+        "kind": "KXBBSINGLE",
+        "closes": "2026-10-26T03:59:00Z",
+        "listed": "2026-10-13T18:00:00Z",
+        "isNew": false,
+        "volume": 41435,
+        "volume24h": 3795,
+        "odds": [
+          {
+            "label": "Rank 1 to 2",
+            "chance": 0.98
+          },
+          {
+            "label": "Rank 3 to 4",
+            "chance": 0.03
+          },
+          {
+            "label": "Rank 16 to 20",
+            "chance": 0.02
+          },
+          {
+            "label": "Rank 5 to 6",
+            "chance": 0.01
+          }
+        ],
+        "coveredByPin": null
+      },
+      {
+        "exchange": "Kalshi",
+        "url": "https://kalshi.com/markets/kxdji/pyth-index-us30-usd-price-on-oct-21-2026-at-4pm-edt-october-21-2026-at-4pm-et/kxdji-26oct2116",
+        "title": "(Pyth Index.US30/USD) price on Oct 21, 2026 at 4pm EDT October 21, 2026 at 4pm ET",
+        "kind": "KXDJI",
+        "closes": "2026-10-21T20:00:00Z",
+        "listed": "2026-10-20T20:00:00Z",
+        "isNew": true,
+        "volume": 40742,
+        "volume24h": 40739,
+        "odds": [
+          {
+            "label": "At least $51,450",
+            "chance": 0.995
+          },
+          {
+            "label": "At least $51,525",
+            "chance": 0.995
+          },
+          {
+            "label": "At least $51,550",
+            "chance": 0.995
+          },
+          {
+            "label": "At least $51,625",
+            "chance": 0.995
+          }
+        ],
+        "coveredByPin": null
+      },
+      {
+        "exchange": "Polymarket",
+        "url": "https://polymarket.com/event/huon-valley-mayoral-election-winner-2026",
+        "title": "Huon Valley Mayoral Election Winner",
+        "kind": "mayoral, politics, australia, main-election, global-elections",
+        "closes": "2026-10-28T03:59:00Z",
+        "listed": "2026-09-03T20:18:25Z",
+        "isNew": false,
+        "volume": 30979,
+        "volume24h": 192,
+        "odds": [
+          {
+            "label": "Other",
+            "chance": 0.5
+          },
+          {
+            "label": "Abby McKibben",
+            "chance": 0.365
+          },
+          {
+            "label": "Paul Gibson",
+            "chance": 0.24
+          },
+          {
+            "label": "Mark Jessop",
+            "chance": 0.23
+          }
+        ],
+        "coveredByPin": null,
+        "related": [
+          "Clarence Mayoral Election Winner",
+          "Waratah–Wynyard Mayoral Election Winner",
+          "Hobart Lord Mayor Election Winner",
+          "Latrobe Mayoral Election Winner",
+          "Northern Midlands Mayoral Election Winner",
+          "Central Coast Mayoral Election Winner",
+          "Meander Valley Mayoral Election Winner",
+          "Launceston Mayoral Election Winner",
+          "Burnie Mayoral Election Winner",
+          "Sorell Mayoral Election Winner"
+        ]
+      },
+      {
+        "exchange": "Polymarket",
+        "url": "https://polymarket.com/event/nitra-mayoral-election-winner-2026",
+        "title": "Nitra Mayoral Election Winner",
+        "kind": "mayoral, politics, slovakia, main-election, global-elections",
+        "closes": "2026-10-25T03:59:00Z",
+        "listed": "2026-08-31T18:00:44Z",
+        "isNew": false,
+        "volume": 27582,
+        "volume24h": 1529,
+        "odds": [
+          {
+            "label": "Marek Hattas",
+            "chance": 0.83
+          },
+          {
+            "label": "Other",
+            "chance": 0.5
+          },
+          {
+            "label": "Igor Kršiak",
+            "chance": 0.165
+          },
+          {
+            "label": "Marek Illéš",
+            "chance": 0.012
+          }
+        ],
+        "coveredByPin": null,
+        "related": [
+          "Prešov Mayoral Election Winner",
+          "Poprad Mayoral Election Winner",
+          "Bratislava Mayoral Election Winner",
+          "Martin Mayoral Election Winner",
+          "Bratislava Region Governor Election Winner",
+          "Trnava Mayoral Election Winner",
+          "Žilina Region Governor Election Winner",
+          "Nitra Region Governor Election Winner",
+          "Trenčín Region Governor Election Winner",
+          "Žilina Mayoral Election Winner",
+          "Trenčín Mayoral Election Winner",
+          "Banská Bystrica Mayoral Election Winner"
+        ]
+      },
+      {
+        "exchange": "Kalshi",
+        "url": "https://kalshi.com/markets/kxnflrec/new-england-vs-chicago-receptions-ne-vs-chi-oct-22/kxnflrec-26oct22nechi",
+        "title": "New England vs Chicago: Receptions NE vs CHI (Oct 22)",
+        "kind": "KXNFLREC",
+        "closes": "2026-10-25T00:15:00Z",
+        "listed": "2026-10-20T01:15:00Z",
+        "isNew": false,
+        "volume": 22131,
+        "volume24h": 18347,
+        "odds": [
+          {
+            "label": "Luther Burden III: 2+",
+            "chance": 0.92
+          },
+          {
+            "label": "Colston Loveland: 2+",
+            "chance": 0.9
+          },
+          {
+            "label": "DeMario Douglas: 2+",
+            "chance": 0.84
+          },
+          {
+            "label": "Rome Odunze: 2+",
+            "chance": 0.835
+          }
+        ],
+        "coveredByPin": null
+      },
+      {
+        "exchange": "Kalshi",
+        "url": "https://kalshi.com/markets/kxsshieldmatch/tasmania-vs-victoria-tas-vs-vic-oct-18/kxsshieldmatch-26oct181930victas",
+        "title": "Tasmania vs Victoria TAS vs VIC (Oct 18)",
+        "kind": "KXSSHIELDMATCH",
+        "closes": "2026-10-25T23:30:00Z",
+        "listed": "2026-10-13T08:11:00Z",
+        "isNew": false,
+        "volume": 21928,
+        "volume24h": 12457,
+        "odds": [
+          {
+            "label": "Tasmania",
+            "chance": 0.74
+          },
+          {
+            "label": "Victoria",
+            "chance": 0.23
+          }
+        ],
+        "coveredByPin": null
+      },
+      {
+        "exchange": "Kalshi",
+        "url": "https://kalshi.com/markets/kxnextteamnba/jayson-tatum-s-next-team/kxnextteamnba-26jtatum0",
+        "title": "Jayson Tatum's Next Team",
+        "kind": "KXNEXTTEAMNBA",
+        "closes": "2026-10-23T03:59:00Z",
+        "listed": "2026-05-04T14:30:00Z",
+        "isNew": false,
+        "volume": 21570,
+        "volume24h": 244,
+        "odds": [
+          {
+            "label": "Stays with Boston or Retires",
+            "chance": 0.99
+          },
+          {
+            "label": "San Antonio",
+            "chance": 0.09
+          },
+          {
+            "label": "Cleveland",
+            "chance": 0.08
+          },
+          {
+            "label": "Portland",
+            "chance": 0.02
+          }
+        ],
+        "coveredByPin": null
+      },
+      {
+        "exchange": "Kalshi",
+        "url": "https://kalshi.com/markets/kxnear15m/near-15-min-5-2727-target-oct-21-11-00am-edt-to-11-15am-edt/kxnear15m-26oct211115",
+        "title": "NEAR 15 min · $5.2727 target Oct 21 - 11:00AM EDT to 11:15AM EDT",
+        "kind": "KXNEAR15M",
+        "closes": "2026-10-21T15:15:00Z",
+        "listed": "2026-10-21T15:00:00Z",
+        "isNew": true,
+        "volume": 19064,
+        "volume24h": 714,
+        "odds": [
+          {
+            "label": "Yes",
+            "chance": 0.993
+          },
+          {
+            "label": "No",
+            "chance": 0.007
+          }
+        ],
+        "coveredByPin": null
+      },
+      {
+        "exchange": "Kalshi",
+        "url": "https://kalshi.com/markets/kx30ymortw/30-year-mortgage-rate-this-week-oct-22-2026/kx30ymortw-26oct22",
+        "title": "30-year mortgage rate this week Oct 22, 2026",
+        "kind": "KX30YMORTW",
+        "closes": "2026-10-22T15:59:00Z",
+        "listed": "2026-10-15T17:00:00Z",
+        "isNew": false,
+        "volume": 15517,
+        "volume24h": 5461,
+        "odds": [
+          {
+            "label": "Above 7.23%",
+            "chance": 0.99
+          },
+          {
+            "label": "Above 7.24%",
+            "chance": 0.99
+          },
+          {
+            "label": "Above 7.25%",
+            "chance": 0.985
+          },
+          {
+            "label": "Above 7.26%",
+            "chance": 0.985
+          }
+        ],
+        "coveredByPin": null
+      },
+      {
+        "exchange": "Kalshi",
+        "url": "https://kalshi.com/markets/kxaprpotus/trump-s-approval-rating-on-oct-23-2026/kxaprpotus-26oct23",
+        "title": "Trump's approval rating on Oct 23, 2026?",
+        "kind": "KXAPRPOTUS",
+        "closes": "2026-10-23T15:00:00Z",
+        "listed": "2026-10-16T15:00:40Z",
+        "isNew": false,
+        "volume": 13351,
+        "volume24h": 6925,
+        "odds": [
+          {
+            "label": "38.1 to 38.3",
+            "chance": 0.26
+          },
+          {
+            "label": "38.4 to 38.6",
+            "chance": 0.26
+          },
+          {
+            "label": "Below 37.8",
+            "chance": 0.17
+          },
+          {
+            "label": "38.7 to 38.9",
+            "chance": 0.17
+          }
+        ],
+        "coveredByPin": null
+      },
+      {
+        "exchange": "Polymarket",
+        "url": "https://polymarket.com/event/clayface-opening-weekend-box-office",
+        "title": "\"Clayface\" Opening Weekend Box Office",
+        "kind": "movies, pop-culture, box-office",
+        "closes": "2026-10-26T03:59:00Z",
+        "listed": "2026-10-19T23:29:46Z",
+        "isNew": false,
+        "volume": 12827,
+        "volume24h": 11815,
+        "odds": [
+          {
+            "label": "<22m",
+            "chance": 0.34
+          },
+          {
+            "label": "25m-28m",
+            "chance": 0.28
+          },
+          {
+            "label": "22m-25m",
+            "chance": 0.21
+          },
+          {
+            "label": "28m-31m",
+            "chance": 0.14
+          }
+        ],
+        "coveredByPin": null,
+        "related": [
+          "\"Wildwood\" Opening Weekend Box Office"
+        ]
+      },
+      {
+        "exchange": "Polymarket",
+        "url": "https://polymarket.com/event/democratic-senate-odds-on-october-23",
+        "title": "Democratic Senate odds on October 23?",
+        "kind": "midterms, politics, elections, derivatives, us-presidential-election",
+        "closes": "2026-10-23T16:00:00Z",
+        "listed": "2026-10-15T13:58:56Z",
+        "isNew": false,
+        "volume": 12456,
+        "volume24h": 3437,
+        "odds": [
+          {
+            "label": "64-66%",
+            "chance": 0.62
+          },
+          {
+            "label": "62-64%",
+            "chance": 0.29
+          },
+          {
+            "label": ">66%",
+            "chance": 0.09
+          },
+          {
+            "label": "60-62%",
+            "chance": 0.006
+          }
+        ],
+        "coveredByPin": null
+      },
+      {
+        "exchange": "Kalshi",
+        "url": "https://kalshi.com/markets/kxbrazilturnout/brazil-presidential-runoff-voter-turnout-on-oct-25-2026/kxbrazilturnout-26oct25",
+        "title": "Brazil presidential runoff: voter turnout On Oct 25, 2026",
+        "kind": "KXBRAZILTURNOUT",
+        "closes": "2026-10-25T03:59:00Z",
+        "listed": "2026-10-05T21:00:00Z",
+        "isNew": false,
+        "volume": 12358,
+        "volume24h": 10,
+        "odds": [
+          {
+            "label": "At least 119,000,000",
+            "chance": 0.98
+          },
+          {
+            "label": "At least 121,000,000",
+            "chance": 0.97
+          },
+          {
+            "label": "At least 123,000,000",
+            "chance": 0.92
+          },
+          {
+            "label": "At least 129,000,000",
+            "chance": 0.84
+          }
+        ],
+        "coveredByPin": null
+      },
+      {
+        "exchange": "Kalshi",
+        "url": "https://kalshi.com/markets/kxdieselw/diesel-prices-this-week-october-26-2026/kxdieselw-26oct26",
+        "title": "Diesel prices this week October 26, 2026",
+        "kind": "KXDIESELW",
+        "closes": "2026-10-26T03:59:00Z",
+        "listed": "2026-10-19T12:00:00Z",
+        "isNew": false,
+        "volume": 11725,
+        "volume24h": 6578,
+        "odds": [
+          {
+            "label": "Above $6.12",
+            "chance": 0.92
+          },
+          {
+            "label": "Above $6.14",
+            "chance": 0.92
+          },
+          {
+            "label": "Above $6.16",
+            "chance": 0.92
+          },
+          {
+            "label": "Above $6.18",
+            "chance": 0.92
+          }
+        ],
+        "coveredByPin": null
+      },
+      {
+        "exchange": "Kalshi",
+        "url": "https://kalshi.com/markets/kxdieseld/diesel-prices-tomorrow-october-22-2026/kxdieseld-26oct22",
+        "title": "Diesel prices tomorrow October 22, 2026",
+        "kind": "KXDIESELD",
+        "closes": "2026-10-22T03:59:00Z",
+        "listed": "2026-10-21T12:00:00Z",
+        "isNew": true,
+        "volume": 11281,
+        "volume24h": 11275,
+        "odds": [
+          {
+            "label": "Above $6.265",
+            "chance": 0.995
+          },
+          {
+            "label": "Above $6.270",
+            "chance": 0.995
+          },
+          {
+            "label": "Above $6.275",
+            "chance": 0.995
+          },
+          {
+            "label": "Above $6.280",
+            "chance": 0.995
+          }
+        ],
+        "coveredByPin": null
+      },
+      {
+        "exchange": "Kalshi",
+        "url": "https://kalshi.com/markets/kxtokenusem/openrouter-ai-token-usage-in-october-october-2026-sep-28-oct-25/kxtokenusem-26oct26",
+        "title": "OpenRouter AI token usage in October October 2026 (Sep 28–Oct 25)",
+        "kind": "KXTOKENUSEM",
+        "closes": "2026-10-26T03:59:00Z",
+        "listed": "2026-09-28T16:30:00Z",
+        "isNew": false,
+        "volume": 11281,
+        "volume24h": 2,
+        "odds": [
+          {
+            "label": "Above 450T tokens",
+            "chance": 0.99
+          },
+          {
+            "label": "Above 500T tokens",
+            "chance": 0.99
+          },
+          {
+            "label": "Above 575T tokens",
+            "chance": 0.99
+          },
+          {
+            "label": "Above 600T tokens",
+            "chance": 0.99
+          }
+        ],
+        "coveredByPin": null
+      },
+      {
+        "exchange": "Kalshi",
+        "url": "https://kalshi.com/markets/kxbnb15m/bnb-15-min-747-23-target-oct-21-11-00am-edt-to-11-15am-edt/kxbnb15m-26oct211115",
+        "title": "BNB 15 min · $747.23 target Oct 21 - 11:00AM EDT to 11:15AM EDT",
+        "kind": "KXBNB15M",
+        "closes": "2026-10-21T15:15:00Z",
+        "listed": "2026-10-21T15:00:00Z",
+        "isNew": true,
+        "volume": 11239,
+        "volume24h": 1299,
+        "odds": [
+          {
+            "label": "Yes",
+            "chance": 0.99
+          },
+          {
+            "label": "No",
+            "chance": 0.01
+          }
+        ],
+        "coveredByPin": null
+      },
+      {
+        "exchange": "Kalshi",
+        "url": "https://kalshi.com/markets/kxzec15m/zec-15-min-1-327-8794-target-oct-21-11-00am-edt-to-11-15am-edt/kxzec15m-26oct211115",
+        "title": "ZEC 15 min · $1,327.8794 target Oct 21 - 11:00AM EDT to 11:15AM EDT",
+        "kind": "KXZEC15M",
+        "closes": "2026-10-21T15:15:00Z",
+        "listed": "2026-10-21T15:00:00Z",
+        "isNew": true,
+        "volume": 10858,
+        "volume24h": 479,
+        "odds": [
+          {
+            "label": "Yes",
+            "chance": 0.89
+          },
+          {
+            "label": "No",
+            "chance": 0.11
+          }
+        ],
+        "coveredByPin": null
+      },
+      {
+        "exchange": "Kalshi",
+        "url": "https://kalshi.com/markets/kxcopper15m/copper-15-min-6-64081-target-oct-21-11-00am-edt-to-11-15am-edt/kxcopper15m-26oct211115",
+        "title": "Copper 15 min · $6.64081 target Oct 21 - 11:00AM EDT to 11:15AM EDT",
+        "kind": "KXCOPPER15M",
+        "closes": "2026-10-21T15:15:00Z",
+        "listed": "2026-10-21T15:00:00Z",
+        "isNew": true,
+        "volume": 10807,
+        "volume24h": 413,
+        "odds": [
+          {
+            "label": "Yes",
+            "chance": 0.99
+          },
+          {
+            "label": "No",
+            "chance": 0.01
+          }
+        ],
+        "coveredByPin": null
+      },
+      {
+        "exchange": "Kalshi",
+        "url": "https://kalshi.com/markets/kxranklistsongtop10/top-10-on-the-billboard-hot-100-chart-for-the-week-of-oct-31-2026-on-oct-31-2026/kxranklistsongtop10-26oct31",
+        "title": "Top 10 on the Billboard Hot 100 chart for the Week of Oct 31, 2026? On Oct 31, 2026",
+        "kind": "KXRANKLISTSONGTOP10",
+        "closes": "2026-10-26T03:59:00Z",
+        "listed": "2026-10-14T15:00:00Z",
+        "isNew": false,
+        "volume": 10591,
+        "volume24h": 9276,
+        "odds": [
+          {
+            "label": "Been By Now",
+            "chance": 0.99
+          },
+          {
+            "label": "Choosin' Texas",
+            "chance": 0.99
+          },
+          {
+            "label": "Lies",
+            "chance": 0.99
+          },
+          {
+            "label": "HOUSEWIFE",
+            "chance": 0.97
+          }
+        ],
+        "coveredByPin": null
+      }
+    ],
+    "newlyListed": [
+      {
+        "exchange": "Polymarket",
+        "url": "https://polymarket.com/event/south-carolina-senate-election-greenville-county-winner",
+        "title": "South Carolina Senate Election: Greenville County Winner",
+        "kind": "senate-elections, midterms, politics, elections, us-presidential-election",
+        "closes": "2026-11-03T23:59:00Z",
+        "listed": "2026-10-20T15:17:51Z",
+        "isNew": true,
+        "volume": 12209,
+        "volume24h": 12570,
+        "odds": [
+          {
+            "label": "Darline Graham Nordone (R)",
+            "chance": 0.71
+          },
+          {
+            "label": "Other",
+            "chance": 0.5
+          },
+          {
+            "label": "Annie Andrews (D)",
+            "chance": 0.215
+          }
+        ],
+        "coveredByPin": null
+      }
+    ],
+    "problems": []
+  },
+  "publicPages": [
+    {
+      "pinId": 18956,
+      "status": 200,
+      "url": "https://www.chronopin.com/pin/18956/ebay-announces-a-9-workforce-reduction",
+      "title": "eBay Announces a 9% Workforce Reduction · Chronopin"
+    },
+    {
+      "pinId": 18957,
+      "status": 200,
+      "url": "https://www.chronopin.com/pin/18957/westinghouse-announces-us-1-billion-hopkins-nuclear-fuel-expansion",
+      "title": "Westinghouse Announces US$1 Billion Hopkins Nuclear-Fuel Expansion · Chronopin"
+    },
+    {
+      "pinId": 18958,
+      "status": 200,
+      "url": "https://www.chronopin.com/pin/18958/the-nuclear-company-proposes-the-6-6-gw-prosperity-one-campus",
+      "title": "The Nuclear Company Proposes the 6.6 GW Prosperity One Campus · Chronopin"
+    },
+    {
+      "pinId": 18959,
+      "status": 200,
+      "url": "https://www.chronopin.com/pin/18959/iotova-is-favoured-as-bulgaria-opens-presidential-voting-on-october-25",
+      "title": "Iotova Is Favoured as Bulgaria Opens Presidential Voting on October 25 · Chronopin",
+      "predictedVisible": true
+    },
+    {
+      "pinId": 18960,
+      "status": 200,
+      "url": "https://www.chronopin.com/pin/18960/kalshi-favours-a-bank-of-canada-rate-hike-on-october-28",
+      "title": "Kalshi Favours a Bank of Canada Rate Hike on October 28 · Chronopin",
+      "predictedVisible": true
+    },
+    {
+      "pinId": 15120,
+      "status": 200,
+      "url": "https://www.chronopin.com/pin/15120/glm-5-3-released",
+      "title": "GLM-5.3 Released · Chronopin"
+    },
+    {
+      "pinId": 2890,
+      "status": 200,
+      "url": "https://www.chronopin.com/pin/2890/abbott-q3-2026-sales-rise-14-5-adjusted-eps-guidance-tightens",
+      "title": "Abbott Q3 2026: Sales Rise 14.5%; Adjusted EPS Guidance Tightens · Chronopin"
+    },
+    {
+      "pinId": 6648,
+      "status": 200,
+      "url": "https://www.chronopin.com/pin/6648/united-q3-2026-revenue-reaches-us-17-9-billion-up-17-4",
+      "title": "United Q3 2026: Revenue Reaches US$17.9 Billion, Up 17.4% · Chronopin"
+    },
+    {
+      "pinId": 5181,
+      "status": 200,
+      "url": "https://www.chronopin.com/pin/5181/trump-names-jay-clayton-as-white-house-ai-czar",
+      "title": "Trump Names Jay Clayton as White House AI Czar · Chronopin"
+    },
+    {
+      "pinId": 16016,
+      "status": 200,
+      "url": "https://www.chronopin.com/pin/16016/anthropic-releases-its-next-claude-fable-model",
+      "title": "Anthropic Releases Its Next Claude Fable Model · Chronopin"
+    },
+    {
+      "pinId": 15613,
+      "status": 200,
+      "url": "https://www.chronopin.com/pin/15613/anthropic-releases-its-next-claude-opus-model",
+      "title": "Anthropic Releases Its Next Claude Opus Model · Chronopin"
+    },
+    {
+      "pinId": 858,
+      "status": 200,
+      "url": "https://www.chronopin.com/pin/858/cyberpunk-edgerunners-2-releases-on-netflix",
+      "title": "Cyberpunk: Edgerunners 2 Releases on Netflix · Chronopin"
+    },
+    {
+      "pinId": 18956,
+      "status": 200,
+      "url": "https://www.chronopin.com/pin/18956/ebay-announces-a-9-workforce-reduction",
+      "title": "eBay Announces a 9% Workforce Reduction · Chronopin"
+    },
+    {
+      "pinId": 18957,
+      "status": 200,
+      "url": "https://www.chronopin.com/pin/18957/westinghouse-announces-us-1-billion-hopkins-nuclear-fuel-expansion",
+      "title": "Westinghouse Announces US$1 Billion Hopkins Nuclear-Fuel Expansion · Chronopin"
+    },
+    {
+      "pinId": 2979,
+      "status": 200,
+      "url": "https://www.chronopin.com/pin/2979/morocco-s-pam-leads-the-2026-election-with-97-of-395-seats",
+      "title": "Morocco’s PAM Leads the 2026 Election With 97 of 395 Seats · Chronopin"
+    },
+    {
+      "pinId": 5118,
+      "status": 200,
+      "url": "https://www.chronopin.com/pin/5118/euronaval-2026-opens-its-30th-edition-at-paris-nord-villepinte",
+      "title": "Euronaval 2026 Opens Its 30th Edition at Paris Nord Villepinte · Chronopin"
+    },
+    {
+      "pinId": 5174,
+      "status": 200,
+      "url": "https://www.chronopin.com/pin/5174/brazil-holds-a-lula-vs-flavio-bolsonaro-presidential-runoff",
+      "title": "Brazil Holds a Lula vs Flávio Bolsonaro Presidential Runoff · Chronopin"
+    }
+  ],
+  "resolvedReviewPinIds": [
+    5118
+  ],
+  "newOrRefreshedReviewPinIds": [
+    2952,
+    4951,
+    2979
+  ],
+  "localCatchup": {
+    "scoresSaved": 444,
+    "scoresSkippedForLocalTextOrAbsentPin": 13,
+    "eventChecks": 40
+  },
+  "images": [
+    {
+      "slug": "westinghouse-render",
+      "originalUrl": "https://info.westinghousenuclear.com/hubfs/LEU%2B%20Fuel%20Expansion%20Media%20Kit%20Page/Initial%20carousel%20slide.jpg",
+      "source": "https://info.westinghousenuclear.com/leu-fuel-expansion-media-kit",
+      "credit": "Westinghouse Electric Company, ©2026",
+      "caption": "Rendering of the proposed LEU+ fuel building in Hopkins, South Carolina; not a completed factory.",
+      "region": "2026-10-21",
+      "url": "https://chronopin.blob.core.windows.net/thumb/news-images/2026-10-21/westinghouse-render-6baf927870d3d3d0.webp",
+      "sha256": "6baf927870d3d3d0ddd314e5850ad256a152b988828fb6bae48e9ce6d65f64cf",
+      "width": 1038,
+      "height": 594
+    },
+    {
+      "slug": "westinghouse-aerial",
+      "originalUrl": "https://info.westinghousenuclear.com/hubfs/LEU%2B%20Fuel%20Expansion%20Media%20Kit%20Page/Ariel%20View%20-%20LEU%2B.png",
+      "source": "https://info.westinghousenuclear.com/leu-fuel-expansion-media-kit",
+      "credit": "Westinghouse Electric Company, ©2026",
+      "caption": "Aerial view of the Columbia Fuel Fabrication Facility, published in the October2026 LEU+ expansion media kit.",
+      "region": "2026-10-21",
+      "url": "https://chronopin.blob.core.windows.net/thumb/news-images/2026-10-21/westinghouse-aerial-7f1b5f5f3476cdc9.webp",
+      "sha256": "7f1b5f5f3476cdc9910694d0727f56af14c1b29ee1b877f4edfee666356edaa8",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "slug": "ebay-reuters",
+      "originalUrl": "https://img.ksl.com/slc/3206/320628/32062858.JPG?filter=kslv2/responsive_story_lg",
+      "source": "https://www.ksl.com/article/51639105/exclusive-ebay-to-lay-off-9-of-workforce-in-push-to-simplify-operations-internal-memo-shows",
+      "credit": "Dado Ruvic / Reuters via KSL",
+      "caption": "eBay logo illustration dated February11,2025; background image, not the October2026 layoff announcement.",
+      "region": "2026-10-21",
+      "url": "https://chronopin.blob.core.windows.net/thumb/news-images/2026-10-21/ebay-reuters-915b10b1e34fe78b.webp",
+      "sha256": "915b10b1e34fe78b32d61c571d56548375d908db66adc63d2ca5f67fea8b5895",
+      "width": 1228,
+      "height": 690
+    },
+    {
+      "slug": "prosperity-site",
+      "originalUrl": "https://lewiscountyherald.com/wp-content/uploads/2026/10/Carrs-Bottom-1.png",
+      "source": "https://lewiscountyherald.com/6-6-gigawatt-nuclear-generating-campus-proposed-for-carrs-bottom/",
+      "credit": "Lewis County Herald / Dennis K Brown",
+      "caption": "Carrs Bottom site along the Ohio River, identified in local reporting as the proposed Prosperity One campus; no operating nuclear plant is shown.",
+      "region": "2026-10-21",
+      "url": "https://chronopin.blob.core.windows.net/thumb/news-images/2026-10-21/prosperity-site-0b1669ff0c2703ea.webp",
+      "sha256": "0b1669ff0c2703ea36ba67a2c7e326635c2e20c2066153daff16dcf7b14334d4",
+      "width": 1600,
+      "height": 900
+    },
+    {
+      "slug": "boc-market",
+      "originalUrl": "https://kalshi.com/api-app/preview/KXCBDECISIONCANADA-26OCT?width=1200&height=630",
+      "source": "https://kalshi.com/markets/kxcbdecisioncanada/bank-of-canada-decision-in-oct-2026/kxcbdecisioncanada-26oct",
+      "credit": "Kalshi",
+      "caption": "Prediction market preview observed October21,2026; a forecast, not an official result.",
+      "region": "2026-10-21",
+      "url": "https://chronopin.blob.core.windows.net/thumb/news-images/2026-10-21/boc-market-eaa10aa9bae4f7af.webp",
+      "sha256": "eaa10aa9bae4f7afad1e36b5ae3bbb9ab355039c0ab3300c82e8ae45160f1bf5",
+      "width": 1200,
+      "height": 630
+    },
+    {
+      "slug": "bulgaria-market",
+      "originalUrl": "https://polymarket.com/api/og?eslug=bulgaria-presidential-election&tid=1792595826780",
+      "source": "https://polymarket.com/event/bulgaria-presidential-election",
+      "credit": "Polymarket",
+      "caption": "Prediction market preview observed October21,2026; a forecast, not an official result.",
+      "region": "2026-10-21",
+      "url": "https://chronopin.blob.core.windows.net/thumb/news-images/2026-10-21/bulgaria-market-eaff5cc1a1e52acc.webp",
+      "sha256": "eaff5cc1a1e52acc9ecea019585c46fa35ebe96b7b1b5de27fd45dc69f86ddae",
+      "width": 800,
+      "height": 418
+    },
+    {
+      "slug": "ebay-office",
+      "originalUrl": "https://images.wsj.net/im-44926692?height=466&width=700",
+      "source": "https://www.wsj.com/business/ebay-to-cut-9-of-workforce-in-latest-round-of-layoffs-792be2cb",
+      "credit": "Beck Diefenbach / Reuters via The Wall Street Journal",
+      "caption": "eBay office sign in San Jose; file photograph accompanying the October2026 layoff reporting.",
+      "region": "2026-10-21",
+      "url": "https://chronopin.blob.core.windows.net/thumb/news-images/2026-10-21/ebay-office-56f8985461152563.webp",
+      "sha256": "56f8985461152563b8ada04f74b9023cb02f4b12a9a85c231de9740ce233bf41",
+      "width": 700,
+      "height": 466
+    }
+  ],
+  "noDeployment": true,
+  "noPostRunDatabasePull": true,
+  "completion": {
+    "id": 15,
+    "status": "ok",
+    "utcStartedDateTime": "2026-10-21T15:09:50.966Z",
+    "utcFinishedDateTime": "2026-10-21T15:49:51.133Z"
+  }
+}

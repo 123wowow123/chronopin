@@ -65,6 +65,11 @@ export type PinSearchFilters = {
   mws: RatingBound[];
   costs: RatingBound[];
   energies: RatingBound[];
+  waters?: RatingBound[];
+  chips?: RatingBound[];
+  acres?: RatingBound[];
+  sqfts?: RatingBound[];
+  generators?: RatingBound[];
   powerKinds: ('generation' | 'usage' | 'storage')[];
   holidays: string[];
 };
@@ -551,11 +556,17 @@ const MAP_SELECT = `
     "p"."price", "p"."priceCurrency", "p"."sourceUrl",
     (SELECT "pw"."megawatts"::float8 FROM "PinPower" AS "pw" WHERE "pw"."pinId" = "p"."id") AS "megawatts",
     (SELECT "pw"."kind" FROM "PinPower" AS "pw" WHERE "pw"."pinId" = "p"."id") AS "powerKind",
+    "dc"."waterGallonsPerDay"::float8 AS "waterGallonsPerDay",
+    COALESCE("dc"."chips"::float8, round("dc"."h100Equivalents")::float8) AS "chips",
+    "dc"."acres"::float8 AS "acres",
+    "dc"."sqft"::float8 AS "sqft",
+    "dc"."generators"::float8 AS "generators",
     "p"."marketVolume"::float8 AS "marketVolume", "p"."episodeCount",
     (SELECT round(avg("r"."score" / NULLIF("r"."scoreMax", 0) * 100))::float8 FROM "PinRating" AS "r" WHERE "r"."pinId" = "p"."id") AS "ratingPercent",
     (SELECT "e"."lowPrice"::float8 FROM "PinEventInfo" AS "e" WHERE "e"."pinId" = "p"."id" AND "e"."priceCurrency" = 'USD' AND "e"."lowPrice" > 0) AS "ticketLowUsd",
     ${MAP_MEDIA} AS "media"
-  FROM "Pin" AS "p"`;
+  FROM "Pin" AS "p"
+    LEFT JOIN "PinDatacenter" AS "dc" ON "dc"."pinId" = "p"."id"`;
 
 const MAP_WHERE = `"p"."location" IS NOT NULL
         AND "p"."utcDeletedDateTime" IS NULL
@@ -1289,6 +1300,27 @@ export function searchClauses(filter: SearchFilter) {
     if (filter.energies.length) {
       const bounds = filter.energies.map(({ op, value }) => `"pe"."gwh" ${RATING_OPS[op]} ${add(value)}::numeric`);
       where.push(`EXISTS (SELECT 1 FROM "PinEnergy" AS "pe" WHERE "pe"."pinId" = "Pin"."id" AND ${bounds.join(' AND ')})`);
+    }
+    // Every water:, chips:, acres:, sqft: and generators: bound, on the
+    // telemetry PinDatacenter records.
+    const dcBounds: string[] = [];
+    if (filter.waters?.length) {
+      dcBounds.push(...filter.waters.map(({ op, value }) => `"dc"."waterGallonsPerDay" ${RATING_OPS[op]} ${add(value)}::numeric`));
+    }
+    if (filter.chips?.length) {
+      dcBounds.push(...filter.chips.map(({ op, value }) => `COALESCE("dc"."h100Equivalents", "dc"."chips") ${RATING_OPS[op]} ${add(value)}::numeric`));
+    }
+    if (filter.acres?.length) {
+      dcBounds.push(...filter.acres.map(({ op, value }) => `"dc"."acres" ${RATING_OPS[op]} ${add(value)}::numeric`));
+    }
+    if (filter.sqfts?.length) {
+      dcBounds.push(...filter.sqfts.map(({ op, value }) => `"dc"."sqft" ${RATING_OPS[op]} ${add(value)}::numeric`));
+    }
+    if (filter.generators?.length) {
+      dcBounds.push(...filter.generators.map(({ op, value }) => `"dc"."generators" ${RATING_OPS[op]} ${add(value)}::numeric`));
+    }
+    if (dcBounds.length) {
+      where.push(`EXISTS (SELECT 1 FROM "PinDatacenter" AS "dc" WHERE "dc"."pinId" = "Pin"."id" AND ${dcBounds.join(' AND ')})`);
     }
     // Every delay: bound, on how far the start has slipped from the day first
     // promised. A pin whose start is no later than that day has not slipped and

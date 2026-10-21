@@ -11,10 +11,12 @@ import Favorite from '../model/favorite';
 import { eventInfoForPin } from '../model/pinEventInfo';
 import { powerForPin } from '../model/pinPower';
 import { energyForPin } from '../model/pinEnergy';
+import { datacenterForPin } from '../model/pinDatacenter';
 import { perfForPin } from '../model/pinPerf';
 import type { PinPerfJson } from '@/lib/pinPerf';
 import type { PinEnergyJson } from '@/lib/energy';
 import type { PinPowerJson } from '@/lib/power';
+import type { PinDatacenterJson } from '@/lib/datacenter';
 import { candidatesForPin } from '../model/pinCandidate';
 import { gameInfoForPin } from '../model/pinGameInfo';
 import { tasteForPin } from '../model/pinTaste';
@@ -243,6 +245,14 @@ export async function pinEnergy(id: number): Promise<PinEnergyJson | null> {
   cacheLife('hours');
   cacheTag(TAGS.pin(id));
   return energyForPin(id);
+}
+
+// The pin's datacenter water, chip, footprint, cooling and generator stats.
+export async function pinDatacenter(id: number): Promise<PinDatacenterJson | null> {
+  'use cache';
+  cacheLife('hours');
+  cacheTag(TAGS.pin(id));
+  return datacenterForPin(id);
 }
 
 // The pin's hardware performance charts and tables, or null when none is recorded.

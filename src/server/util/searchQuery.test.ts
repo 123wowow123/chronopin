@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { costBounds, energyBounds, dependsOnZone, hasFilters, joinSearchQuery, megawattBounds, parseSearchQuery, splitSearchQuery, wordStartPattern } from './searchQuery';
+import { acreBounds, chipBounds, costBounds, energyBounds, dependsOnZone, generatorBounds, hasFilters, joinSearchQuery, megawattBounds, parseSearchQuery, splitSearchQuery, sqftBounds, waterBounds, wordStartPattern } from './searchQuery';
 
 describe('splitSearchQuery', () => {
   it('keeps terms and text in order, with what each was written as', () => {
@@ -134,6 +134,11 @@ describe('parseSearchQuery', () => {
       mws: [],
       costs: [],
       energies: [],
+      waters: [],
+      chips: [],
+      acres: [],
+      sqfts: [],
+      generators: [],
       powerKinds: [],
       holidays: [],
       text: 'ios',
@@ -413,5 +418,30 @@ describe('energy: bounds', () => {
     expect(q.energies).toEqual([{ op: '>=', value: 2000 }]);
     expect(parseSearchQuery('power:generation power:Usage power:generation power:nonsense power:BESS').powerKinds).toEqual(['generation', 'usage', 'storage']);
     expect(q.text).toBe('smelter');
+  });
+});
+
+describe('datacenter telemetry bounds (water:, chips:, acres:, sqft:, generators:)', () => {
+  it('parses water:, chips:, acres:, sqft:, and generators: with unit suffixes', () => {
+    expect(waterBounds('>=1.5mgd')).toEqual([{ op: '>=', value: 1_500_000 }]);
+    expect(waterBounds('500k-2mgd')).toEqual([
+      { op: '>=', value: 500_000 },
+      { op: '<=', value: 2_000_000 },
+    ]);
+    expect(chipBounds('>=100k')).toEqual([{ op: '>=', value: 100_000 }]);
+    expect(chipBounds('500kh100e')).toEqual([{ op: '>=', value: 500_000 }]);
+    expect(acreBounds('>=500ac')).toEqual([{ op: '>=', value: 500 }]);
+    expect(sqftBounds('>=1.2msf')).toEqual([{ op: '>=', value: 1_200_000 }]);
+    expect(generatorBounds('>=50')).toEqual([{ op: '>=', value: 50 }]);
+
+    const q = parseSearchQuery('datacenter water:>=1mgd chips:>=100k acres:>=500 sqft:>=1m generators:>=40');
+    expect(q.waters).toEqual([{ op: '>=', value: 1_000_000 }]);
+    expect(q.chips).toEqual([{ op: '>=', value: 100_000 }]);
+    expect(q.acres).toEqual([{ op: '>=', value: 500 }]);
+    expect(q.sqfts).toEqual([{ op: '>=', value: 1_000_000 }]);
+    expect(q.generators).toEqual([{ op: '>=', value: 40 }]);
+    expect(q.text).toBe('datacenter');
+    expect(hasFilters(parseSearchQuery('water:>=1mgd'))).toBe(true);
+    expect(hasFilters(parseSearchQuery('chips:>=100k'))).toBe(true);
   });
 });

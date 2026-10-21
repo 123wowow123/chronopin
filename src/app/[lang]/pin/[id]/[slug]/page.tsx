@@ -2,7 +2,7 @@ import Anchor from '@/components/ui/Anchor';
 import type { Metadata } from 'next';
 import Link from '@/components/ui/Link';
 import { notFound } from 'next/navigation';
-import { Fragment, Suspense } from 'react';
+import { Suspense } from 'react';
 import { JsonLd } from '@/components/JsonLd';
 import { Comments } from '@/components/pin/Comments';
 import { PlaceLinks } from '@/components/pin/PlaceLinks';
@@ -96,9 +96,10 @@ import { pinTense } from '@/lib/timeline';
 import type { PinEventInfoJson } from '@/lib/eventInfo';
 import { formatMegawatts, type PinPowerJson } from '@/lib/power';
 import { ENERGY_BASIS_WORDS, formatGigawattHours, type PinEnergyJson } from '@/lib/energy';
+import { WATER_BASIS_WORDS, estimateHomesEquivalentFromMw, formatAcres, formatChips, formatSqft, formatWaterGallonsPerDay, type PinDatacenterJson } from '@/lib/datacenter';
 import type { PinCandidateJson } from '@/lib/candidates';
 import type { PinJson } from '@/lib/types';
-import { companyWebsite, duplicateGroupPins, pinById, pinCandidates, pinEventInfo, pinPower, pinEnergy, pinPerf, pinCarPerf, pinGasCarPerf, pinDining, pinHotel, pinGameInfo, pinTaste, pinComments, pinUpdates, threadPins, timelineVideo, adPlacements, adsenseSlots, hideThinPins, pinAlternateNames } from '@/server/services/pages';
+import { companyWebsite, duplicateGroupPins, pinById, pinCandidates, pinEventInfo, pinPower, pinEnergy, pinDatacenter, pinPerf, pinCarPerf, pinGasCarPerf, pinDining, pinHotel, pinGameInfo, pinTaste, pinComments, pinUpdates, threadPins, timelineVideo, adPlacements, adsenseSlots, hideThinPins, pinAlternateNames } from '@/server/services/pages';
 import { viewerTimeZone, viewerUser } from '@/server/viewer';
 import { getLocale, getT } from '@/lib/i18n/server';
 import { DEFAULT_LOCALE, pinTextDir } from '@/lib/i18n/config';
@@ -161,7 +162,7 @@ async function PinContent({ params, searchParams }: Pick<Props, 'params' | 'sear
   const event = isAttendableEvent(pin);
   // A museum or park sells admission, not a dated event: same ticket panel.
   const venue = !event && isTicketedVenue(pin);
-  const [updates, timeZone, organizerUrl, eventInfo, power, energy, perf, gameInfo, taste, carPerf, gasCarPerf, dining, hotel, candidates, ads, adsense, viewer, alternateNames] = await Promise.all([
+  const [updates, timeZone, organizerUrl, eventInfo, power, energy, datacenter, perf, gameInfo, taste, carPerf, gasCarPerf, dining, hotel, candidates, ads, adsense, viewer, alternateNames] = await Promise.all([
     pinUpdates(pin.id),
     viewerTimeZone(),
     (event || venue) && pin.companyId ? companyWebsite(pin.companyId) : null,
@@ -170,6 +171,7 @@ async function PinContent({ params, searchParams }: Pick<Props, 'params' | 'sear
     pinEventInfo(pin.id),
     pinPower(pin.id),
     pinEnergy(pin.id),
+    pinDatacenter(pin.id),
     pinPerf(pin.id),
     pin.categories?.includes('Gaming') ? pinGameInfo(pin.id) : null,
     pinTaste(pin.id),
@@ -211,7 +213,7 @@ async function PinContent({ params, searchParams }: Pick<Props, 'params' | 'sear
           stretches that row, not the gap between article and references. */}
       <div data-pin-grid className="grid grid-cols-[minmax(0,1fr)] gap-8 lg:grid-cols-[minmax(0,7fr)_minmax(0,5fr)] lg:grid-rows-[auto_1fr] lg:gap-10">
         <article className="lg:col-start-1 lg:row-start-1">
-          <PinBody pin={pin} timeZone={timeZone} t={t} eventInfo={eventInfo} power={power} energy={energy} venue={venue} candidates={candidates} isHotel={!!hotel} autoplay={autoplay} />
+          <PinBody pin={pin} timeZone={timeZone} t={t} eventInfo={eventInfo} power={power} energy={energy} datacenter={datacenter} venue={venue} candidates={candidates} isHotel={!!hotel} autoplay={autoplay} />
         </article>
 
         <aside className="min-w-0 lg:col-start-2 lg:row-span-2 lg:row-start-1">
@@ -326,6 +328,7 @@ async function PinBody({
   eventInfo,
   power,
   energy,
+  datacenter,
   venue,
   candidates,
   isHotel,
@@ -337,6 +340,7 @@ async function PinBody({
   eventInfo?: PinEventInfoJson | null;
   power?: PinPowerJson | null;
   energy?: PinEnergyJson | null;
+  datacenter?: PinDatacenterJson | null;
   venue?: boolean;
   candidates?: PinCandidateJson[];
   isHotel?: boolean;
@@ -627,23 +631,177 @@ async function PinBody({
         </div>
       </div>
 
-      {power ? (
-        <p className="mt-2 text-sm text-ink">
-          <span className="me-1 text-xs font-semibold tracking-wider text-subtle uppercase">{power.kind === 'generation' ? 'Power generation' : power.kind === 'storage' ? 'Power storage' : 'Power usage'}</span>
-          <span className="font-medium tabular-nums">{formatMegawatts(power.megawatts)}</span>
-          {power.note ? <span className="text-muted"> · {power.note}</span> : null}
-          {power.sourceUrl ? <> · <a href={power.sourceUrl} rel="noopener nofollow" target="_blank" className="text-link">source</a></> : null}
-        </p>
-      ) : null}
-      {energy ? (
-        <p className="mt-1 text-sm text-ink">
-          <span className="me-1 text-xs font-semibold tracking-wider text-subtle uppercase">Energy used</span>
-          <span className="font-medium tabular-nums">{formatGigawattHours(energy.gwh)}</span>
-          <span className="text-muted"> {ENERGY_BASIS_WORDS[energy.basis]}</span>
-          {energy.note ? <span className="text-muted"> · {energy.note}</span> : null}
-          {energy.sourceUrl ? <> · <a href={energy.sourceUrl} rel="noopener nofollow" target="_blank" className="text-link">source</a></> : null}
-        </p>
-      ) : null}
+      {datacenter ? (
+        <section data-datacenter-panel aria-label="Datacenter and infrastructure specifications" className="surface mt-3 rounded-2xl border border-line bg-raised/40 p-4 shadow-sm">
+          <div className="mb-3 flex flex-wrap items-center justify-between gap-2">
+            <div className="flex items-center gap-2">
+              <span className="inline-flex size-6 items-center justify-center rounded-lg bg-amber-500/15 text-amber-400 ring-1 ring-amber-500/30 ring-inset">
+                <Icon name="bolt" className="size-3.5" />
+              </span>
+              <h2 className="text-xs font-semibold tracking-wider text-subtle uppercase">
+                Datacenter &amp; Infrastructure Telemetry
+              </h2>
+            </div>
+            {(datacenter.sourceUrl || power?.sourceUrl || energy?.sourceUrl) ? (
+              <a
+                href={(datacenter.sourceUrl || power?.sourceUrl || energy?.sourceUrl)!}
+                rel="noopener nofollow"
+                target="_blank"
+                className="inline-flex items-center gap-1 rounded-full bg-raised px-2.5 py-0.5 text-xs font-medium text-link ring-1 ring-line ring-inset transition-colors hover:bg-raised-2 hover:no-underline"
+              >
+                Tracker source
+                <Icon name="external" className="size-3 opacity-70" />
+              </a>
+            ) : null}
+          </div>
+
+          <div className="grid grid-cols-2 gap-2.5 sm:grid-cols-4">
+            {power ? (
+              <div className="flex flex-col rounded-xl border border-line/70 bg-panel/70 p-3">
+                <div className="flex items-center gap-1.5 text-[11px] font-semibold tracking-wider text-subtle uppercase">
+                  <span className="size-2 rounded-full bg-amber-400" aria-hidden />
+                  {power.kind === 'generation' ? 'Power generation' : power.kind === 'storage' ? 'Power storage' : 'Power usage'}
+                </div>
+                <div className="mt-1.5 text-lg leading-tight font-bold tracking-tight text-past tabular-nums">
+                  {formatMegawatts(power.megawatts)}
+                </div>
+                <div className="mt-1 text-xs text-muted tabular-nums">
+                  {power.kind === 'usage'
+                    ? `~${estimateHomesEquivalentFromMw(power.megawatts).toLocaleString('en-US')} US homes`
+                    : power.note ?? 'Grid capacity'}
+                </div>
+              </div>
+            ) : null}
+
+            {datacenter.waterGallonsPerDay != null ? (
+              <div className="flex flex-col rounded-xl border border-line/70 bg-panel/70 p-3">
+                <div className="flex items-center gap-1.5 text-[11px] font-semibold tracking-wider text-subtle uppercase">
+                  <span className="size-2 rounded-full bg-sky-400" aria-hidden />
+                  Water usage
+                </div>
+                <div className="mt-1.5 text-lg leading-tight font-bold tracking-tight text-link tabular-nums">
+                  {formatWaterGallonsPerDay(datacenter.waterGallonsPerDay)}
+                </div>
+                <div className="mt-1 text-xs text-muted">
+                  {datacenter.waterBasis ? WATER_BASIS_WORDS[datacenter.waterBasis] : 'daily cooling draw'}
+                </div>
+              </div>
+            ) : null}
+
+            {(datacenter.chips != null || datacenter.h100Equivalents != null) ? (
+              <div className="flex flex-col rounded-xl border border-line/70 bg-panel/70 p-3">
+                <div className="flex items-center gap-1.5 text-[11px] font-semibold tracking-wider text-subtle uppercase">
+                  <span className="size-2 rounded-full bg-violet-400" aria-hidden />
+                  AI chips
+                </div>
+                <div className="mt-1.5 text-lg leading-tight font-bold tracking-tight text-future tabular-nums">
+                  {datacenter.chips != null
+                    ? formatChips(datacenter.chips)
+                    : `${formatChips(Math.round(datacenter.h100Equivalents!))} H100-eq`}
+                </div>
+                <div className="mt-1 line-clamp-2 text-xs text-muted" title={datacenter.chipModel ?? undefined}>
+                  {datacenter.chipModel ?? 'AI accelerators'}
+                  {datacenter.chips != null && datacenter.h100Equivalents != null
+                    ? ` · ${formatChips(Math.round(datacenter.h100Equivalents))} H100-eq`
+                    : ''}
+                </div>
+              </div>
+            ) : null}
+
+            {energy ? (
+              <div className="flex flex-col rounded-xl border border-line/70 bg-panel/70 p-3">
+                <div className="flex items-center gap-1.5 text-[11px] font-semibold tracking-wider text-subtle uppercase">
+                  <span className="size-2 rounded-full bg-emerald-400" aria-hidden />
+                  Energy used
+                </div>
+                <div className="mt-1.5 text-lg leading-tight font-bold tracking-tight text-success tabular-nums">
+                  {formatGigawattHours(energy.gwh)}
+                </div>
+                <div className="mt-1 text-xs text-muted">
+                  {ENERGY_BASIS_WORDS[energy.basis]}
+                </div>
+              </div>
+            ) : null}
+          </div>
+
+          {(datacenter.acres != null ||
+            datacenter.sqft != null ||
+            datacenter.buildings != null ||
+            datacenter.generators != null ||
+            datacenter.cooling ||
+            datacenter.powerSource ||
+            datacenter.note) ? (
+            <dl className="mt-3 grid grid-cols-1 gap-x-6 gap-y-2 border-t border-line/70 pt-3 text-xs sm:grid-cols-2">
+              {(datacenter.acres != null || datacenter.sqft != null || datacenter.buildings != null) ? (
+                <div className="flex flex-col gap-0.5">
+                  <dt className="font-semibold tracking-wider text-subtle uppercase">Footprint &amp; Facility</dt>
+                  <dd className="font-medium text-ink tabular-nums">
+                    {[
+                      datacenter.acres != null ? formatAcres(datacenter.acres) : null,
+                      datacenter.sqft != null ? formatSqft(datacenter.sqft) : null,
+                      datacenter.buildings != null
+                        ? `${datacenter.buildings.toLocaleString('en-US')} ${datacenter.buildings === 1 ? 'building' : 'buildings'}`
+                        : null,
+                    ]
+                      .filter(Boolean)
+                      .join(' · ')}
+                  </dd>
+                </div>
+              ) : null}
+
+              {datacenter.generators != null ? (
+                <div className="flex flex-col gap-0.5">
+                  <dt className="font-semibold tracking-wider text-subtle uppercase">Backup Generation</dt>
+                  <dd className="font-medium text-ink tabular-nums">
+                    {datacenter.generators.toLocaleString('en-US')} permitted backup {datacenter.generators === 1 ? 'generator' : 'generators'}
+                  </dd>
+                </div>
+              ) : null}
+
+              {datacenter.cooling ? (
+                <div className="flex flex-col gap-0.5">
+                  <dt className="font-semibold tracking-wider text-subtle uppercase">Cooling Architecture</dt>
+                  <dd className="font-medium text-ink">{datacenter.cooling}</dd>
+                </div>
+              ) : null}
+
+              {datacenter.powerSource ? (
+                <div className="flex flex-col gap-0.5">
+                  <dt className="font-semibold tracking-wider text-subtle uppercase">Power Source &amp; Grid</dt>
+                  <dd className="font-medium text-ink">{datacenter.powerSource}</dd>
+                </div>
+              ) : null}
+
+              {datacenter.note ? (
+                <div className="flex flex-col gap-0.5 sm:col-span-2">
+                  <dt className="font-semibold tracking-wider text-subtle uppercase">Tracker Notes</dt>
+                  <dd className="text-muted">{datacenter.note}</dd>
+                </div>
+              ) : null}
+            </dl>
+          ) : null}
+        </section>
+      ) : (
+        <>
+          {power ? (
+            <p className="mt-2 text-sm text-ink">
+              <span className="me-1 text-xs font-semibold tracking-wider text-subtle uppercase">{power.kind === 'generation' ? 'Power generation' : power.kind === 'storage' ? 'Power storage' : 'Power usage'}</span>
+              <span className="font-medium tabular-nums">{formatMegawatts(power.megawatts)}</span>
+              {power.note ? <span className="text-muted"> · {power.note}</span> : null}
+              {power.sourceUrl ? <> · <a href={power.sourceUrl} rel="noopener nofollow" target="_blank" className="text-link">source</a></> : null}
+            </p>
+          ) : null}
+          {energy ? (
+            <p className="mt-1 text-sm text-ink">
+              <span className="me-1 text-xs font-semibold tracking-wider text-subtle uppercase">Energy used</span>
+              <span className="font-medium tabular-nums">{formatGigawattHours(energy.gwh)}</span>
+              <span className="text-muted"> {ENERGY_BASIS_WORDS[energy.basis]}</span>
+              {energy.note ? <span className="text-muted"> · {energy.note}</span> : null}
+              {energy.sourceUrl ? <> · <a href={energy.sourceUrl} rel="noopener nofollow" target="_blank" className="text-link">source</a></> : null}
+            </p>
+          ) : null}
+        </>
+      )}
       {eventInfo ? <PinEventInfo info={eventInfo} started={!venue && pinTense(pin, new Date(), dayKeyIn(new Date(), timeZone)) === 'past'} t={t} /> : null}
 
       {/* Where to watch a film, series or anime: a merchant whose link is a
