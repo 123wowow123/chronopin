@@ -151,7 +151,9 @@ function extractGeneratorFights(fights: any[]): GeneratorFight[] {
     }
 
     if (gens) {
-      const firstSource = Array.isArray(f.sources) ? f.sources[0] : (typeof f.sources === 'string' ? f.sources.split(',')[0] : null);
+      const firstSource = Array.isArray(f.sources)
+        ? (typeof f.sources[0] === 'string' ? f.sources[0] : f.sources[0]?.url || f.sources[0]?.id)
+        : (typeof f.sources === 'string' ? f.sources.split(',')[0] : null);
       results.push({
         id: f.id,
         company: f.company,
