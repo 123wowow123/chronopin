@@ -1,0 +1,1256 @@
+{
+  "batch": 114,
+  "checkedAt": "2026-10-20",
+  "entries": [
+    {
+      "existing": true,
+      "pin": {
+        "id": 15926,
+        "parentId": null,
+        "title": "Oden-to Sakana SHINOYA — Susukino Opens in Susukino",
+        "description": "An announced Susukino izakaya with a branch-published menu of seafood, Niigata dishes, rice pots and hegi soba.",
+        "sourceUrl": "https://r.gnavi.co.jp/jpzp8kr80000/",
+        "longFormSummary": "<p>An announced Susukino izakaya with a branch-published menu of seafood, Niigata dishes, rice pots and hegi soba.<cite data-ref=\"https://r.gnavi.co.jp/jpzp8kr80000/\"></cite></p><p>Employer announcement confirms November 2026 but no firm day. November 30 is an explicitly estimated month-end sorting placeholder, not a confirmed opening. Tabelog November 2 remains to reconcile with operator.</p>",
+        "address": "5F ARTBUILDING, 6-8-2 Minami 6-jo Nishi, Chuo-ku, Sapporo",
+        "location": "SRID=4326;POINT(141.3490776 43.0561579)",
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "price": null,
+        "priceCurrency": null,
+        "tip": null,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "Employer announcement confirms November 2026 but no firm day. November 30 is an explicitly estimated month-end sorting placeholder, not a confirmed opening. Tabelog November 2 remains to reconcile with operator.",
+        "utcStartDateTime": "2026-11-30T00:00:00.000Z",
+        "utcEndDateTime": null,
+        "allDay": true,
+        "userId": 372,
+        "utcCreatedDateTime": "2026-10-16T04:50:14.671Z",
+        "utcUpdatedDateTime": null,
+        "utcDeletedDateTime": null,
+        "companyId": null,
+        "sourceStartDateTime": null,
+        "sourceEndDateTime": null,
+        "originalStartDate": null,
+        "delayReasoning": null,
+        "episodeCount": null,
+        "episodeStatus": null,
+        "marketVolume": null,
+        "marketVolumeAt": null,
+        "allDayStated": true,
+        "productName": "Oden-to Sakana SHINOYA — Susukino",
+        "userName": "FoodDesk"
+      },
+      "content": {
+        "enabled": true,
+        "profile": {
+          "menu": {
+            "name": "Oden-to Sakana SHINOYA — Susukino",
+            "menus": [
+              {
+                "url": "https://r.gnavi.co.jp/jpzp8kr80000/menu10/",
+                "note": "Exact Sapporo branch native menu prices, not a menu borrowed from another address. Employer confirms November only; November 2 on Tabelog is unconfirmed. Oden cover conflicts: a la carte page ¥680 versus booking-course text ¥580, so no numeric cover or free-oden claim saved. Seats also conflict (98/108), omitted. Two branch-published dish promotions labelled as promotional, not completed premises. Checked operator Gorp page, full Gnavi gallery/menu/course tabs, exact employer listing and Tabelog; completed branch interior and firm day remain gaps. Under-20s not admitted per branch page; heated-tobacco smoking allowed.",
+                "items": [
+                  {
+                    "name": "焼き枝豆",
+                    "price": 580
+                  },
+                  {
+                    "name": "長いもの山葵漬け",
+                    "price": 580
+                  },
+                  {
+                    "name": "郷土料理！おでん出しで作ったのっぺ",
+                    "price": 630
+                  },
+                  {
+                    "name": "ヤリイカの醤油こうじ！卵黄のせ",
+                    "price": 880
+                  },
+                  {
+                    "name": "サーモンの醤油こうじ！いくらのせ",
+                    "price": 780
+                  },
+                  {
+                    "name": "あさりチャンジャ",
+                    "price": 630
+                  },
+                  {
+                    "name": "ピリ辛ゴマきゅうり",
+                    "price": 630
+                  },
+                  {
+                    "name": "農家の漬物盛り合わせ",
+                    "price": 680
+                  },
+                  {
+                    "name": "つぶ貝の松前漬け",
+                    "price": 980
+                  },
+                  {
+                    "name": "クリームチーZOO",
+                    "price": 880
+                  },
+                  {
+                    "name": "漁師風海鮮サラダ",
+                    "price": 1480
+                  },
+                  {
+                    "name": "チーズたっぷりシーザーサラダ",
+                    "price": 1280
+                  },
+                  {
+                    "name": "感謝を込めて！ブーケサラダ",
+                    "price": 1880
+                  },
+                  {
+                    "name": "炙りしめ鯖",
+                    "price": 1280
+                  },
+                  {
+                    "name": "本日お刺身3種",
+                    "price": 1580
+                  },
+                  {
+                    "name": "本日のお刺身5種",
+                    "price": 2480
+                  },
+                  {
+                    "name": "新潟名物！タレカツ",
+                    "price": 840
+                  },
+                  {
+                    "name": "新潟名物！する天（スルメイカの天ぷら）",
+                    "price": 980
+                  },
+                  {
+                    "name": "真タコのから揚げ",
+                    "price": 780
+                  },
+                  {
+                    "name": "青のりたっぷり南蛮エビのから揚げ",
+                    "price": 780
+                  },
+                  {
+                    "name": "ほくほく塩ポテト",
+                    "price": 740
+                  },
+                  {
+                    "name": "若どりのから揚げ～紅しょうがタルタル～",
+                    "price": 980
+                  },
+                  {
+                    "name": "サーモンレアかつ～いくらのせ～",
+                    "price": 1580
+                  },
+                  {
+                    "name": "マグロレアかつ～磯辺巻き～",
+                    "price": 1480
+                  },
+                  {
+                    "name": "ふぐの唐揚げ",
+                    "price": 1380
+                  },
+                  {
+                    "name": "鮎の塩焼き",
+                    "price": 980
+                  },
+                  {
+                    "name": "とろ鯖の塩焼き（半身）",
+                    "price": 1280
+                  },
+                  {
+                    "name": "銀鮭の塩焼き",
+                    "price": 1280
+                  },
+                  {
+                    "name": "ホッケの一夜干し（半身）",
+                    "price": 1180
+                  },
+                  {
+                    "name": "炙りエイヒレ",
+                    "price": 840
+                  },
+                  {
+                    "name": "銀鱈の西京焼き",
+                    "price": 1180
+                  },
+                  {
+                    "name": "スルメイカのみそ漬け焼き",
+                    "price": 1280
+                  },
+                  {
+                    "name": "新潟県長岡市名物　栃尾ジャンボ油揚げ",
+                    "price": 780
+                  },
+                  {
+                    "name": "新潟県長岡市名物　栃尾ジャンボ油揚げ（葱味噌はさみ焼）",
+                    "price": 840
+                  },
+                  {
+                    "name": "新潟県長岡市名物　栃尾ジャンボ油揚げ（納豆はさみ焼）",
+                    "price": 840
+                  },
+                  {
+                    "name": "新潟県長岡市名物　栃尾ジャンボ油揚げ（食べるラー油がけ）",
+                    "price": 920
+                  },
+                  {
+                    "name": "のど黒の塩焼き",
+                    "priceLabel": "Market price"
+                  },
+                  {
+                    "name": "白米新之助",
+                    "price": 1080
+                  },
+                  {
+                    "name": "銀鮭と山菜",
+                    "price": 1780
+                  },
+                  {
+                    "name": "越の鶏と山菜",
+                    "price": 1680
+                  },
+                  {
+                    "name": "へぎそば　小　1人前",
+                    "price": 1280
+                  },
+                  {
+                    "name": "へぎそば　中　2～3人前",
+                    "price": 2180
+                  },
+                  {
+                    "name": "へぎそば　大　3～4人前",
+                    "price": 3080
+                  },
+                  {
+                    "name": "抹茶アイスの白玉クリームあんみつ",
+                    "price": 480
+                  },
+                  {
+                    "name": "きな粉たっぷり濃厚バニラアイス",
+                    "price": 680
+                  },
+                  {
+                    "name": "一口串団子",
+                    "price": 480
+                  }
+                ],
+                "label": "Published Susukino a la carte menu",
+                "coverage": "sample",
+                "currency": "JPY"
+              },
+              {
+                "label": "SHINOYA — three-bite seafood rice bowls",
+                "url": "https://r.gnavi.co.jp/jpzp8kr80000/menu7/",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "THEトロたく",
+                    "price": 680,
+                    "note": "Tax-inclusive exact branch menu preview. Three-bite seafood rice bowl; optional oden broth listed free for these bowls only, not a waiver of mandatory table cover. Final launch stock subject to confirmation."
+                  },
+                  {
+                    "name": "トロと本マグロ",
+                    "price": 1280,
+                    "note": "Tax-inclusive exact branch menu preview. Three-bite seafood rice bowl; optional oden broth listed free for these bowls only, not a waiver of mandatory table cover. Final launch stock subject to confirmation."
+                  },
+                  {
+                    "name": "本マグロ",
+                    "price": 1280,
+                    "note": "Tax-inclusive exact branch menu preview. Three-bite seafood rice bowl; optional oden broth listed free for these bowls only, not a waiver of mandatory table cover. Final launch stock subject to confirmation."
+                  },
+                  {
+                    "name": "サーモンといくら",
+                    "price": 980,
+                    "note": "Tax-inclusive exact branch menu preview. Three-bite seafood rice bowl; optional oden broth listed free for these bowls only, not a waiver of mandatory table cover. Final launch stock subject to confirmation."
+                  },
+                  {
+                    "name": "ズワイガニと蟹味噌",
+                    "price": 880,
+                    "note": "Tax-inclusive exact branch menu preview. Three-bite seafood rice bowl; optional oden broth listed free for these bowls only, not a waiver of mandatory table cover. Final launch stock subject to confirmation."
+                  },
+                  {
+                    "name": "本日の鮮魚",
+                    "price": 880,
+                    "note": "Tax-inclusive exact branch menu preview. Three-bite seafood rice bowl; optional oden broth listed free for these bowls only, not a waiver of mandatory table cover. Final launch stock subject to confirmation."
+                  },
+                  {
+                    "name": "いくら",
+                    "price": 1180,
+                    "note": "Tax-inclusive exact branch menu preview. Three-bite seafood rice bowl; optional oden broth listed free for these bowls only, not a waiver of mandatory table cover. Final launch stock subject to confirmation."
+                  },
+                  {
+                    "name": "ヤリイカ",
+                    "price": 780,
+                    "note": "Tax-inclusive exact branch menu preview. Three-bite seafood rice bowl; optional oden broth listed free for these bowls only, not a waiver of mandatory table cover. Final launch stock subject to confirmation."
+                  },
+                  {
+                    "name": "シラス",
+                    "price": 580,
+                    "note": "Tax-inclusive exact branch menu preview. Three-bite seafood rice bowl; optional oden broth listed free for these bowls only, not a waiver of mandatory table cover. Final launch stock subject to confirmation."
+                  },
+                  {
+                    "name": "甘エビ",
+                    "price": 980,
+                    "note": "Tax-inclusive exact branch menu preview. Three-bite seafood rice bowl; optional oden broth listed free for these bowls only, not a waiver of mandatory table cover. Final launch stock subject to confirmation."
+                  },
+                  {
+                    "name": "サーモンのなめろう",
+                    "price": 880,
+                    "note": "Tax-inclusive exact branch menu preview. Three-bite seafood rice bowl; optional oden broth listed free for these bowls only, not a waiver of mandatory table cover. Final launch stock subject to confirmation."
+                  },
+                  {
+                    "name": "鮮魚のなめろう",
+                    "price": 880,
+                    "note": "Tax-inclusive exact branch menu preview. Three-bite seafood rice bowl; optional oden broth listed free for these bowls only, not a waiver of mandatory table cover. Final launch stock subject to confirmation."
+                  },
+                  {
+                    "name": "おでん出汁",
+                    "price": 0,
+                    "note": "Tax-inclusive exact branch menu preview. Three-bite seafood rice bowl; optional oden broth listed free for these bowls only, not a waiver of mandatory table cover. Final launch stock subject to confirmation."
+                  }
+                ],
+                "note": "Exact Susukino branch managed menu, checked October 20. Named food and drink prices as published; opening-day stock requires confirmation. Optional free bowl broth is distinct from mandatory oden cover. No drink-plan eligibility inferred."
+              },
+              {
+                "label": "SHINOYA — à-la-carte drinks",
+                "url": "https://r.gnavi.co.jp/jpzp8kr80000/menu3/",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "サントリープレミアムモルツ　ジョッキ",
+                    "price": 680,
+                    "note": "Exact branch published price, tax included. Planned menu preview until opening; stock and final availability subject to confirmation. À-la-carte drink; no inclusion in ¥1500 coupon plan inferred. "
+                  },
+                  {
+                    "name": "マンゴービア",
+                    "price": 680,
+                    "note": "Exact branch published price, tax included. Planned menu preview until opening; stock and final availability subject to confirmation. À-la-carte drink; no inclusion in ¥1500 coupon plan inferred. "
+                  },
+                  {
+                    "name": "サントリー生　中瓶",
+                    "price": 790,
+                    "note": "Exact branch published price, tax included. Planned menu preview until opening; stock and final availability subject to confirmation. À-la-carte drink; no inclusion in ¥1500 coupon plan inferred. "
+                  },
+                  {
+                    "name": "マルエフ生　中瓶",
+                    "price": 790,
+                    "note": "Exact branch published price, tax included. Planned menu preview until opening; stock and final availability subject to confirmation. À-la-carte drink; no inclusion in ¥1500 coupon plan inferred. "
+                  },
+                  {
+                    "name": "アサヒスーパードライ　中瓶",
+                    "price": 790,
+                    "note": "Exact branch published price, tax included. Planned menu preview until opening; stock and final availability subject to confirmation. À-la-carte drink; no inclusion in ¥1500 coupon plan inferred. "
+                  },
+                  {
+                    "name": "オールフリー（ノンアルコール）",
+                    "price": 420,
+                    "note": "Exact branch published price, tax included. Planned menu preview until opening; stock and final availability subject to confirmation. À-la-carte drink; no inclusion in ¥1500 coupon plan inferred. "
+                  },
+                  {
+                    "name": "スワンレイクエール　330ml瓶",
+                    "price": 1180,
+                    "note": "Exact branch published price, tax included. Planned menu preview until opening; stock and final availability subject to confirmation. À-la-carte drink; no inclusion in ¥1500 coupon plan inferred. "
+                  },
+                  {
+                    "name": "エチゴビール　レッドエール330ml瓶",
+                    "price": 980,
+                    "note": "Exact branch published price, tax included. Planned menu preview until opening; stock and final availability subject to confirmation. À-la-carte drink; no inclusion in ¥1500 coupon plan inferred. "
+                  },
+                  {
+                    "name": "エチゴビール　のんびりふんわり白ビール350ml",
+                    "price": 780,
+                    "note": "Exact branch published price, tax included. Planned menu preview until opening; stock and final availability subject to confirmation. À-la-carte drink; no inclusion in ¥1500 coupon plan inferred. "
+                  },
+                  {
+                    "name": "ビームハイボール",
+                    "price": 530,
+                    "note": "Exact branch published price, tax included. Planned menu preview until opening; stock and final availability subject to confirmation. À-la-carte drink; no inclusion in ¥1500 coupon plan inferred. "
+                  },
+                  {
+                    "name": "ビームハイボール濃いめ",
+                    "price": 630,
+                    "note": "Exact branch published price, tax included. Planned menu preview until opening; stock and final availability subject to confirmation. À-la-carte drink; no inclusion in ¥1500 coupon plan inferred. "
+                  },
+                  {
+                    "name": "ビームコークハイボール",
+                    "price": 630,
+                    "note": "Exact branch published price, tax included. Planned menu preview until opening; stock and final availability subject to confirmation. À-la-carte drink; no inclusion in ¥1500 coupon plan inferred. "
+                  },
+                  {
+                    "name": "ビームジンジャーハイボール",
+                    "price": 630,
+                    "note": "Exact branch published price, tax included. Planned menu preview until opening; stock and final availability subject to confirmation. À-la-carte drink; no inclusion in ¥1500 coupon plan inferred. "
+                  },
+                  {
+                    "name": "角ハイボール",
+                    "price": 550,
+                    "note": "Exact branch published price, tax included. Planned menu preview until opening; stock and final availability subject to confirmation. À-la-carte drink; no inclusion in ¥1500 coupon plan inferred. "
+                  },
+                  {
+                    "name": "角ハイボール濃いめ",
+                    "price": 660,
+                    "note": "Exact branch published price, tax included. Planned menu preview until opening; stock and final availability subject to confirmation. À-la-carte drink; no inclusion in ¥1500 coupon plan inferred. "
+                  },
+                  {
+                    "name": "角コークハイボール",
+                    "price": 660,
+                    "note": "Exact branch published price, tax included. Planned menu preview until opening; stock and final availability subject to confirmation. À-la-carte drink; no inclusion in ¥1500 coupon plan inferred. "
+                  },
+                  {
+                    "name": "角ジンジャーハイボール",
+                    "price": 660,
+                    "note": "Exact branch published price, tax included. Planned menu preview until opening; stock and final availability subject to confirmation. À-la-carte drink; no inclusion in ¥1500 coupon plan inferred. "
+                  },
+                  {
+                    "name": "白州ハイボール",
+                    "price": 1420,
+                    "note": "Exact branch published price, tax included. Planned menu preview until opening; stock and final availability subject to confirmation. À-la-carte drink; no inclusion in ¥1500 coupon plan inferred. "
+                  },
+                  {
+                    "name": "白州ハイボール濃いめ",
+                    "price": 1640,
+                    "note": "Exact branch published price, tax included. Planned menu preview until opening; stock and final availability subject to confirmation. À-la-carte drink; no inclusion in ¥1500 coupon plan inferred. "
+                  },
+                  {
+                    "name": "知多ハイボール",
+                    "price": 1080,
+                    "note": "Exact branch published price, tax included. Planned menu preview until opening; stock and final availability subject to confirmation. À-la-carte drink; no inclusion in ¥1500 coupon plan inferred. "
+                  },
+                  {
+                    "name": "知多ハイボール濃いめ",
+                    "price": 1280,
+                    "note": "Exact branch published price, tax included. Planned menu preview until opening; stock and final availability subject to confirmation. À-la-carte drink; no inclusion in ¥1500 coupon plan inferred. "
+                  },
+                  {
+                    "name": "碧Aoハイボール",
+                    "price": 1080,
+                    "note": "Exact branch published price, tax included. Planned menu preview until opening; stock and final availability subject to confirmation. À-la-carte drink; no inclusion in ¥1500 coupon plan inferred. "
+                  },
+                  {
+                    "name": "碧Aoハイボール濃いめ",
+                    "price": 1280,
+                    "note": "Exact branch published price, tax included. Planned menu preview until opening; stock and final availability subject to confirmation. À-la-carte drink; no inclusion in ¥1500 coupon plan inferred. "
+                  },
+                  {
+                    "name": "青りんごハイボール",
+                    "price": 580,
+                    "note": "Exact branch published price, tax included. Planned menu preview until opening; stock and final availability subject to confirmation. À-la-carte drink; no inclusion in ¥1500 coupon plan inferred. "
+                  },
+                  {
+                    "name": "グレープフルーツハイボール",
+                    "price": 580,
+                    "note": "Exact branch published price, tax included. Planned menu preview until opening; stock and final availability subject to confirmation. À-la-carte drink; no inclusion in ¥1500 coupon plan inferred. "
+                  },
+                  {
+                    "name": "巨峰ハイボール",
+                    "price": 580,
+                    "note": "Exact branch published price, tax included. Planned menu preview until opening; stock and final availability subject to confirmation. À-la-carte drink; no inclusion in ¥1500 coupon plan inferred. "
+                  },
+                  {
+                    "name": "つぶつぶみかんハイボール",
+                    "price": 580,
+                    "note": "Exact branch published price, tax included. Planned menu preview until opening; stock and final availability subject to confirmation. À-la-carte drink; no inclusion in ¥1500 coupon plan inferred. "
+                  },
+                  {
+                    "name": "カシスハイボール",
+                    "price": 580,
+                    "note": "Exact branch published price, tax included. Planned menu preview until opening; stock and final availability subject to confirmation. À-la-carte drink; no inclusion in ¥1500 coupon plan inferred. "
+                  },
+                  {
+                    "name": "レモンハイボール",
+                    "price": 580,
+                    "note": "Exact branch published price, tax included. Planned menu preview until opening; stock and final availability subject to confirmation. À-la-carte drink; no inclusion in ¥1500 coupon plan inferred. "
+                  },
+                  {
+                    "name": "メロンハイボール",
+                    "price": 580,
+                    "note": "Exact branch published price, tax included. Planned menu preview until opening; stock and final availability subject to confirmation. À-la-carte drink; no inclusion in ¥1500 coupon plan inferred. "
+                  },
+                  {
+                    "name": "こだわりレモンサワー",
+                    "price": 520,
+                    "note": "Exact branch published price, tax included. Planned menu preview until opening; stock and final availability subject to confirmation. À-la-carte drink; no inclusion in ¥1500 coupon plan inferred. "
+                  },
+                  {
+                    "name": "GINONレモンサワー",
+                    "price": 520,
+                    "note": "Exact branch published price, tax included. Planned menu preview until opening; stock and final availability subject to confirmation. À-la-carte drink; no inclusion in ¥1500 coupon plan inferred. "
+                  },
+                  {
+                    "name": "シークワーサーサワー",
+                    "price": 520,
+                    "note": "Exact branch published price, tax included. Planned menu preview until opening; stock and final availability subject to confirmation. À-la-carte drink; no inclusion in ¥1500 coupon plan inferred. "
+                  },
+                  {
+                    "name": "巨峰サワー",
+                    "price": 520,
+                    "note": "Exact branch published price, tax included. Planned menu preview until opening; stock and final availability subject to confirmation. À-la-carte drink; no inclusion in ¥1500 coupon plan inferred. "
+                  },
+                  {
+                    "name": "グレープフルーツサワー",
+                    "price": 520,
+                    "note": "Exact branch published price, tax included. Planned menu preview until opening; stock and final availability subject to confirmation. À-la-carte drink; no inclusion in ¥1500 coupon plan inferred. "
+                  },
+                  {
+                    "name": "青りんごサワー",
+                    "price": 520,
+                    "note": "Exact branch published price, tax included. Planned menu preview until opening; stock and final availability subject to confirmation. À-la-carte drink; no inclusion in ¥1500 coupon plan inferred. "
+                  },
+                  {
+                    "name": "メロンサワー",
+                    "price": 520,
+                    "note": "Exact branch published price, tax included. Planned menu preview until opening; stock and final availability subject to confirmation. À-la-carte drink; no inclusion in ¥1500 coupon plan inferred. "
+                  },
+                  {
+                    "name": "カルピスサワー",
+                    "price": 520,
+                    "note": "Exact branch published price, tax included. Planned menu preview until opening; stock and final availability subject to confirmation. À-la-carte drink; no inclusion in ¥1500 coupon plan inferred. "
+                  },
+                  {
+                    "name": "つぶつぶみかんサワー",
+                    "price": 620,
+                    "note": "Exact branch published price, tax included. Planned menu preview until opening; stock and final availability subject to confirmation. À-la-carte drink; no inclusion in ¥1500 coupon plan inferred. "
+                  },
+                  {
+                    "name": "カシスオレンジ",
+                    "price": 520,
+                    "note": "Exact branch published price, tax included. Planned menu preview until opening; stock and final availability subject to confirmation. À-la-carte drink; no inclusion in ¥1500 coupon plan inferred. "
+                  },
+                  {
+                    "name": "カシスグレープフルーツ",
+                    "price": 520,
+                    "note": "Exact branch published price, tax included. Planned menu preview until opening; stock and final availability subject to confirmation. À-la-carte drink; no inclusion in ¥1500 coupon plan inferred. "
+                  },
+                  {
+                    "name": "カシスソーダ",
+                    "price": 520,
+                    "note": "Exact branch published price, tax included. Planned menu preview until opening; stock and final availability subject to confirmation. À-la-carte drink; no inclusion in ¥1500 coupon plan inferred. "
+                  },
+                  {
+                    "name": "カシスウーロン",
+                    "price": 520,
+                    "note": "Exact branch published price, tax included. Planned menu preview until opening; stock and final availability subject to confirmation. À-la-carte drink; no inclusion in ¥1500 coupon plan inferred. "
+                  },
+                  {
+                    "name": "ウーロンハイ",
+                    "price": 520,
+                    "note": "Exact branch published price, tax included. Planned menu preview until opening; stock and final availability subject to confirmation. À-la-carte drink; no inclusion in ¥1500 coupon plan inferred. "
+                  },
+                  {
+                    "name": "緑茶ハイ",
+                    "price": 520,
+                    "note": "Exact branch published price, tax included. Planned menu preview until opening; stock and final availability subject to confirmation. À-la-carte drink; no inclusion in ¥1500 coupon plan inferred. "
+                  },
+                  {
+                    "name": "無糖紅茶ハイ",
+                    "price": 520,
+                    "note": "Exact branch published price, tax included. Planned menu preview until opening; stock and final availability subject to confirmation. À-la-carte drink; no inclusion in ¥1500 coupon plan inferred. "
+                  },
+                  {
+                    "name": "ジャスミンハイ",
+                    "price": 520,
+                    "note": "Exact branch published price, tax included. Planned menu preview until opening; stock and final availability subject to confirmation. À-la-carte drink; no inclusion in ¥1500 coupon plan inferred. "
+                  },
+                  {
+                    "name": "タコハイ",
+                    "price": 520,
+                    "note": "Exact branch published price, tax included. Planned menu preview until opening; stock and final availability subject to confirmation. À-la-carte drink; no inclusion in ¥1500 coupon plan inferred. "
+                  },
+                  {
+                    "name": "酎ハイ",
+                    "price": 380,
+                    "note": "Exact branch published price, tax included. Planned menu preview until opening; stock and final availability subject to confirmation. À-la-carte drink; no inclusion in ¥1500 coupon plan inferred. "
+                  },
+                  {
+                    "name": "中々（麦）",
+                    "price": 680,
+                    "note": "Exact branch published price, tax included. Planned menu preview until opening; stock and final availability subject to confirmation. À-la-carte drink; no inclusion in ¥1500 coupon plan inferred. "
+                  },
+                  {
+                    "name": "知心剣（麦）",
+                    "price": 530,
+                    "note": "Exact branch published price, tax included. Planned menu preview until opening; stock and final availability subject to confirmation. À-la-carte drink; no inclusion in ¥1500 coupon plan inferred. "
+                  },
+                  {
+                    "name": "黒霧島（芋）",
+                    "price": 680,
+                    "note": "Exact branch published price, tax included. Planned menu preview until opening; stock and final availability subject to confirmation. À-la-carte drink; no inclusion in ¥1500 coupon plan inferred. "
+                  },
+                  {
+                    "name": "一刻者（芋）",
+                    "price": 680,
+                    "note": "Exact branch published price, tax included. Planned menu preview until opening; stock and final availability subject to confirmation. À-la-carte drink; no inclusion in ¥1500 coupon plan inferred. "
+                  },
+                  {
+                    "name": "鍛高譚（紫蘇）",
+                    "price": 680,
+                    "note": "Exact branch published price, tax included. Planned menu preview until opening; stock and final availability subject to confirmation. À-la-carte drink; no inclusion in ¥1500 coupon plan inferred. "
+                  },
+                  {
+                    "name": "グラスワイン  赤",
+                    "price": 480,
+                    "note": "Exact branch published price, tax included. Planned menu preview until opening; stock and final availability subject to confirmation. À-la-carte drink; no inclusion in ¥1500 coupon plan inferred. "
+                  },
+                  {
+                    "name": "グラスワイン  白",
+                    "price": 480,
+                    "note": "Exact branch published price, tax included. Planned menu preview until opening; stock and final availability subject to confirmation. À-la-carte drink; no inclusion in ¥1500 coupon plan inferred. "
+                  },
+                  {
+                    "name": "こだわり梅酒",
+                    "price": 520,
+                    "note": "Exact branch published price, tax included. Planned menu preview until opening; stock and final availability subject to confirmation. À-la-carte drink; no inclusion in ¥1500 coupon plan inferred. "
+                  },
+                  {
+                    "name": "越乃景虎　超辛口",
+                    "price": 500,
+                    "note": "Exact branch published price, tax included. Planned menu preview until opening; stock and final availability subject to confirmation. À-la-carte drink; no inclusion in ¥1500 coupon plan inferred.  Published serving: 150ml 徳利."
+                  },
+                  {
+                    "name": "泉　雪",
+                    "price": 530,
+                    "note": "Exact branch published price, tax included. Planned menu preview until opening; stock and final availability subject to confirmation. À-la-carte drink; no inclusion in ¥1500 coupon plan inferred.  Published serving: 150ml 徳利."
+                  },
+                  {
+                    "name": "鶴の友　上白",
+                    "price": 540,
+                    "note": "Exact branch published price, tax included. Planned menu preview until opening; stock and final availability subject to confirmation. À-la-carte drink; no inclusion in ¥1500 coupon plan inferred.  Published serving: 150ml 徳利."
+                  },
+                  {
+                    "name": "〆張鶴　花",
+                    "price": 610,
+                    "note": "Exact branch published price, tax included. Planned menu preview until opening; stock and final availability subject to confirmation. À-la-carte drink; no inclusion in ¥1500 coupon plan inferred.  Published serving: 150ml 徳利."
+                  },
+                  {
+                    "name": "鶴齢　普通酒",
+                    "price": 610,
+                    "note": "Exact branch published price, tax included. Planned menu preview until opening; stock and final availability subject to confirmation. À-la-carte drink; no inclusion in ¥1500 coupon plan inferred.  Published serving: 150ml 徳利."
+                  },
+                  {
+                    "name": "麒麟山　伝辛",
+                    "price": 630,
+                    "note": "Exact branch published price, tax included. Planned menu preview until opening; stock and final availability subject to confirmation. À-la-carte drink; no inclusion in ¥1500 coupon plan inferred.  Published serving: 150ml 徳利."
+                  },
+                  {
+                    "name": "高千代　からくち純米+19",
+                    "price": 650,
+                    "note": "Exact branch published price, tax included. Planned menu preview until opening; stock and final availability subject to confirmation. À-la-carte drink; no inclusion in ¥1500 coupon plan inferred.  Published serving: 150ml 徳利."
+                  },
+                  {
+                    "name": "村佑　和　吟醸",
+                    "price": 790,
+                    "note": "Exact branch published price, tax included. Planned menu preview until opening; stock and final availability subject to confirmation. À-la-carte drink; no inclusion in ¥1500 coupon plan inferred.  Published serving: 150ml 徳利."
+                  },
+                  {
+                    "name": "八海山　特別本醸造",
+                    "price": 800,
+                    "note": "Exact branch published price, tax included. Planned menu preview until opening; stock and final availability subject to confirmation. À-la-carte drink; no inclusion in ¥1500 coupon plan inferred.  Published serving: 150ml 徳利."
+                  },
+                  {
+                    "name": "真野鶴　辛口純米",
+                    "price": 820,
+                    "note": "Exact branch published price, tax included. Planned menu preview until opening; stock and final availability subject to confirmation. À-la-carte drink; no inclusion in ¥1500 coupon plan inferred.  Published serving: 150ml 徳利."
+                  },
+                  {
+                    "name": "久保田　千寿",
+                    "price": 840,
+                    "note": "Exact branch published price, tax included. Planned menu preview until opening; stock and final availability subject to confirmation. À-la-carte drink; no inclusion in ¥1500 coupon plan inferred.  Published serving: 150ml 徳利."
+                  },
+                  {
+                    "name": "緑川　純米",
+                    "price": 870,
+                    "note": "Exact branch published price, tax included. Planned menu preview until opening; stock and final availability subject to confirmation. À-la-carte drink; no inclusion in ¥1500 coupon plan inferred.  Published serving: 150ml 徳利."
+                  },
+                  {
+                    "name": "松竹梅　天　おでん出汁割り",
+                    "price": 480,
+                    "note": "Exact branch published price, tax included. Planned menu preview until opening; stock and final availability subject to confirmation. À-la-carte drink; no inclusion in ¥1500 coupon plan inferred.  Published serving: 湯呑グラス; volume not published."
+                  },
+                  {
+                    "name": "亀の王　純吟　生貯蔵酒",
+                    "price": 750,
+                    "note": "Exact branch published price, tax included. Planned menu preview until opening; stock and final availability subject to confirmation. À-la-carte drink; no inclusion in ¥1500 coupon plan inferred.  Published serving: 120ml グラス."
+                  },
+                  {
+                    "name": "真稜　純米吟醸　至",
+                    "price": 800,
+                    "note": "Exact branch published price, tax included. Planned menu preview until opening; stock and final availability subject to confirmation. À-la-carte drink; no inclusion in ¥1500 coupon plan inferred.  Published serving: 120ml グラス."
+                  },
+                  {
+                    "name": "雅楽代　月華",
+                    "price": 840,
+                    "note": "Exact branch published price, tax included. Planned menu preview until opening; stock and final availability subject to confirmation. À-la-carte drink; no inclusion in ¥1500 coupon plan inferred.  Published serving: 120ml グラス."
+                  },
+                  {
+                    "name": "北雪　純米吟醸　ver.N",
+                    "price": 840,
+                    "note": "Exact branch published price, tax included. Planned menu preview until opening; stock and final availability subject to confirmation. À-la-carte drink; no inclusion in ¥1500 coupon plan inferred.  Published serving: 120ml グラス."
+                  },
+                  {
+                    "name": "〆張鶴　吟醸生貯蔵酒",
+                    "price": 840,
+                    "note": "Exact branch published price, tax included. Planned menu preview until opening; stock and final availability subject to confirmation. À-la-carte drink; no inclusion in ¥1500 coupon plan inferred.  Published serving: 120ml グラス."
+                  },
+                  {
+                    "name": "雪洞貯蔵酒　緑",
+                    "price": 850,
+                    "note": "Exact branch published price, tax included. Planned menu preview until opening; stock and final availability subject to confirmation. À-la-carte drink; no inclusion in ¥1500 coupon plan inferred.  Published serving: 120ml グラス."
+                  },
+                  {
+                    "name": "鶴齢　濃藍色",
+                    "price": 850,
+                    "note": "Exact branch published price, tax included. Planned menu preview until opening; stock and final availability subject to confirmation. À-la-carte drink; no inclusion in ¥1500 coupon plan inferred.  Published serving: 120ml グラス."
+                  },
+                  {
+                    "name": "真野鶴　緑紋",
+                    "price": 890,
+                    "note": "Exact branch published price, tax included. Planned menu preview until opening; stock and final availability subject to confirmation. À-la-carte drink; no inclusion in ¥1500 coupon plan inferred.  Published serving: 120ml グラス."
+                  },
+                  {
+                    "name": "コーラ",
+                    "price": 380,
+                    "note": "Exact branch published price, tax included. Planned menu preview until opening; stock and final availability subject to confirmation. À-la-carte drink; no inclusion in ¥1500 coupon plan inferred. "
+                  },
+                  {
+                    "name": "ジンジャーエール",
+                    "price": 380,
+                    "note": "Exact branch published price, tax included. Planned menu preview until opening; stock and final availability subject to confirmation. À-la-carte drink; no inclusion in ¥1500 coupon plan inferred. "
+                  },
+                  {
+                    "name": "巨峰ソーダ",
+                    "price": 380,
+                    "note": "Exact branch published price, tax included. Planned menu preview until opening; stock and final availability subject to confirmation. À-la-carte drink; no inclusion in ¥1500 coupon plan inferred. "
+                  },
+                  {
+                    "name": "青りんごソーダ",
+                    "price": 380,
+                    "note": "Exact branch published price, tax included. Planned menu preview until opening; stock and final availability subject to confirmation. À-la-carte drink; no inclusion in ¥1500 coupon plan inferred. "
+                  },
+                  {
+                    "name": "つぶつぶみかんソーダ",
+                    "price": 480,
+                    "note": "Exact branch published price, tax included. Planned menu preview until opening; stock and final availability subject to confirmation. À-la-carte drink; no inclusion in ¥1500 coupon plan inferred. "
+                  },
+                  {
+                    "name": "マンゴージュース",
+                    "price": 480,
+                    "note": "Exact branch published price, tax included. Planned menu preview until opening; stock and final availability subject to confirmation. À-la-carte drink; no inclusion in ¥1500 coupon plan inferred. "
+                  },
+                  {
+                    "name": "オレンジグレープフルーツ",
+                    "price": 480,
+                    "note": "Exact branch published price, tax included. Planned menu preview until opening; stock and final availability subject to confirmation. À-la-carte drink; no inclusion in ¥1500 coupon plan inferred. "
+                  },
+                  {
+                    "name": "カルピスソーダ",
+                    "price": 420,
+                    "note": "Exact branch published price, tax included. Planned menu preview until opening; stock and final availability subject to confirmation. À-la-carte drink; no inclusion in ¥1500 coupon plan inferred. "
+                  },
+                  {
+                    "name": "カルピスウォーター",
+                    "price": 420,
+                    "note": "Exact branch published price, tax included. Planned menu preview until opening; stock and final availability subject to confirmation. À-la-carte drink; no inclusion in ¥1500 coupon plan inferred. "
+                  },
+                  {
+                    "name": "ウーロン茶",
+                    "price": 380,
+                    "note": "Exact branch published price, tax included. Planned menu preview until opening; stock and final availability subject to confirmation. À-la-carte drink; no inclusion in ¥1500 coupon plan inferred. "
+                  },
+                  {
+                    "name": "緑茶",
+                    "price": 380,
+                    "note": "Exact branch published price, tax included. Planned menu preview until opening; stock and final availability subject to confirmation. À-la-carte drink; no inclusion in ¥1500 coupon plan inferred. "
+                  },
+                  {
+                    "name": "無糖紅茶",
+                    "price": 380,
+                    "note": "Exact branch published price, tax included. Planned menu preview until opening; stock and final availability subject to confirmation. À-la-carte drink; no inclusion in ¥1500 coupon plan inferred. "
+                  },
+                  {
+                    "name": "ジャスミン茶",
+                    "price": 380,
+                    "note": "Exact branch published price, tax included. Planned menu preview until opening; stock and final availability subject to confirmation. À-la-carte drink; no inclusion in ¥1500 coupon plan inferred. "
+                  }
+                ],
+                "note": "Exact Susukino branch managed menu, checked October 20. Named food and drink prices as published; opening-day stock requires confirmation. Optional free bowl broth is distinct from mandatory oden cover. No drink-plan eligibility inferred."
+              },
+              {
+                "label": "SHINOYA — rice-pot toppings",
+                "url": "https://r.gnavi.co.jp/jpzp8kr80000/menu9/",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "シラス — 釜めしトッピング",
+                    "price": 700,
+                    "note": "Published optional rice-pot topping; tax included. Add-on price only, not a standalone rice bowl."
+                  },
+                  {
+                    "name": "いくら — 釜めしトッピング",
+                    "price": 1600,
+                    "note": "Published optional rice-pot topping; tax included. Add-on price only, not a standalone rice bowl."
+                  },
+                  {
+                    "name": "とびっこ — 釜めしトッピング",
+                    "price": 800,
+                    "note": "Published optional rice-pot topping; tax included. Add-on price only, not a standalone rice bowl."
+                  }
+                ],
+                "note": ""
+              }
+            ],
+            "specials": [],
+            "checkedAt": "2026-10-20",
+            "pinSourceUrl": "https://r.gnavi.co.jp/jpzp8kr80000/"
+          },
+          "tile": {
+            "kind": "opening",
+            "name": "Oden-to Sakana SHINOYA — Susukino",
+            "slug": "shinoya",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-15/shinoya-2-0bb5cb4c46ba5b16.webp",
+            "address": "5F ARTBUILDING, 6-8-2 Minami 6-jo Nishi, Chuo-ku, Sapporo",
+            "cuisine": "Oden / Niigata cuisine",
+            "checkedAt": "2026-10-20",
+            "imageNote": "Branch-published promotional dish photograph: 新潟名物！タレカツ. Not a photograph of completed Sapporo premises.",
+            "priceRange": "",
+            "regionSlug": "sapporo",
+            "websiteUrl": "https://r.gnavi.co.jp/jpzp8kr80000/",
+            "description": "An announced Susukino izakaya with a branch-published menu of seafood, Niigata dishes, rice pots and hegi soba.",
+            "imageCredit": "おでんトさかな しのや すすきの店 / 楽天ぐるなび",
+            "recognition": "",
+            "neighborhood": "Susukino",
+            "imageSourceUrl": "https://r.gnavi.co.jp/jpzp8kr80000/menu9/"
+          },
+          "details": {
+            "name": "Oden-to Sakana SHINOYA — Susukino",
+            "phone": "050-3529-5649",
+            "checkedAt": "2026-10-20",
+            "websiteUrl": "https://r.gnavi.co.jp/jpzp8kr80000/",
+            "openingHours": [
+              {
+                "days": "Published regular hours after opening",
+                "hours": "15:00–23:00; food last order 22:00, drinks 22:30; no regular closing day"
+              }
+            ],
+            "pinSourceUrl": "https://r.gnavi.co.jp/jpzp8kr80000/",
+            "detailsSourceUrl": "https://r.gnavi.co.jp/jpzp8kr80000/",
+            "additionalSources": [
+              {
+                "url": "https://townwork.net/viewjob/jobid_d4a16d8e69562a24/",
+                "label": "Research evidence"
+              },
+              {
+                "url": "https://tabelog.com/hokkaido/A0101/A010103/1086177/",
+                "label": "Research evidence"
+              },
+              {
+                "url": "https://ha8u200.gorp.jp/",
+                "label": "Research evidence"
+              },
+              {
+                "url": "https://r.gnavi.co.jp/jpzp8kr80000/menu9/",
+                "label": "Research evidence"
+              },
+              {
+                "url": "https://r.gnavi.co.jp/jpzp8kr80000/photo/",
+                "label": "Research evidence"
+              },
+              {
+                "label": "Exact branch seafood rice bowls",
+                "url": "https://r.gnavi.co.jp/jpzp8kr80000/menu7/"
+              },
+              {
+                "label": "Exact branch à-la-carte drinks and pour sizes",
+                "url": "https://r.gnavi.co.jp/jpzp8kr80000/menu3/"
+              },
+              {
+                "label": "Drink plan conditions and conflicting cover",
+                "url": "https://r.gnavi.co.jp/jpzp8kr80000/menu5/"
+              },
+              {
+                "label": "Coupon page checked; no usable coupon displayed",
+                "url": "https://r.gnavi.co.jp/jpzp8kr80000/coupon/"
+              }
+            ],
+            "hoursNote": "Planned regular hours 15:00–23:00, food last order 22:00, drinks 22:30; no regular closing day. Booking pages accept arrivals until 23:15, inconsistent with the 23:00 closure: confirm directly. Mandatory oden cover remains unresolved: à-la-carte page ¥680 versus seat/drink-plan booking text ¥580 inclusive. Under-20s are not admitted; heated-tobacco smoking allowed, paper cigarettes only in designated outside area. No parking. Conflicting 98/108 capacity fields are omitted. Opening remains a November estimate: employer variants say November 1 while Tabelog/local reports say November 2; the operator customer page gives no exact day. Original Pin date and text preserved. The ¥1500 drink plan requires a coupon, minimum two guests and two food orders per person, 120 minutes with last orders 30 minutes before the end, plus the disputed cover. Coupon page displays no usable coupon or expiry. No active discount or free-oden entitlement asserted. Menu and gallery are branch-published promotional previews; final launch stock requires confirmation."
+          },
+          "pinSourceUrl": "https://r.gnavi.co.jp/jpzp8kr80000/"
+        }
+      },
+      "expectedBefore": {
+        "content": {
+          "menu": {
+            "name": "Oden-to Sakana SHINOYA — Susukino",
+            "menus": [
+              {
+                "url": "https://r.gnavi.co.jp/jpzp8kr80000/menu10/",
+                "note": "Exact Sapporo branch native menu prices, not a menu borrowed from another address. Employer confirms November only; November 2 on Tabelog is unconfirmed. Oden cover conflicts: a la carte page ¥680 versus booking-course text ¥580, so no numeric cover or free-oden claim saved. Seats also conflict (98/108), omitted. Two branch-published dish promotions labelled as promotional, not completed premises. Checked operator Gorp page, full Gnavi gallery/menu/course tabs, exact employer listing and Tabelog; completed branch interior and firm day remain gaps. Under-20s not admitted per branch page; heated-tobacco smoking allowed.",
+                "items": [
+                  {
+                    "name": "焼き枝豆",
+                    "price": 580
+                  },
+                  {
+                    "name": "長いもの山葵漬け",
+                    "price": 580
+                  },
+                  {
+                    "name": "郷土料理！おでん出しで作ったのっぺ",
+                    "price": 630
+                  },
+                  {
+                    "name": "ヤリイカの醤油こうじ！卵黄のせ",
+                    "price": 880
+                  },
+                  {
+                    "name": "サーモンの醤油こうじ！いくらのせ",
+                    "price": 780
+                  },
+                  {
+                    "name": "あさりチャンジャ",
+                    "price": 630
+                  },
+                  {
+                    "name": "ピリ辛ゴマきゅうり",
+                    "price": 630
+                  },
+                  {
+                    "name": "農家の漬物盛り合わせ",
+                    "price": 680
+                  },
+                  {
+                    "name": "つぶ貝の松前漬け",
+                    "price": 980
+                  },
+                  {
+                    "name": "クリームチーZOO",
+                    "price": 880
+                  },
+                  {
+                    "name": "漁師風海鮮サラダ",
+                    "price": 1480
+                  },
+                  {
+                    "name": "チーズたっぷりシーザーサラダ",
+                    "price": 1280
+                  },
+                  {
+                    "name": "感謝を込めて！ブーケサラダ",
+                    "price": 1880
+                  },
+                  {
+                    "name": "炙りしめ鯖",
+                    "price": 1280
+                  },
+                  {
+                    "name": "本日お刺身3種",
+                    "price": 1580
+                  },
+                  {
+                    "name": "本日のお刺身5種",
+                    "price": 2480
+                  },
+                  {
+                    "name": "新潟名物！タレカツ",
+                    "price": 840
+                  },
+                  {
+                    "name": "新潟名物！する天（スルメイカの天ぷら）",
+                    "price": 980
+                  },
+                  {
+                    "name": "真タコのから揚げ",
+                    "price": 780
+                  },
+                  {
+                    "name": "青のりたっぷり南蛮エビのから揚げ",
+                    "price": 780
+                  },
+                  {
+                    "name": "ほくほく塩ポテト",
+                    "price": 740
+                  },
+                  {
+                    "name": "若どりのから揚げ～紅しょうがタルタル～",
+                    "price": 980
+                  },
+                  {
+                    "name": "サーモンレアかつ～いくらのせ～",
+                    "price": 1580
+                  },
+                  {
+                    "name": "マグロレアかつ～磯辺巻き～",
+                    "price": 1480
+                  },
+                  {
+                    "name": "ふぐの唐揚げ",
+                    "price": 1380
+                  },
+                  {
+                    "name": "鮎の塩焼き",
+                    "price": 980
+                  },
+                  {
+                    "name": "とろ鯖の塩焼き（半身）",
+                    "price": 1280
+                  },
+                  {
+                    "name": "銀鮭の塩焼き",
+                    "price": 1280
+                  },
+                  {
+                    "name": "ホッケの一夜干し（半身）",
+                    "price": 1180
+                  },
+                  {
+                    "name": "炙りエイヒレ",
+                    "price": 840
+                  },
+                  {
+                    "name": "銀鱈の西京焼き",
+                    "price": 1180
+                  },
+                  {
+                    "name": "スルメイカのみそ漬け焼き",
+                    "price": 1280
+                  },
+                  {
+                    "name": "新潟県長岡市名物　栃尾ジャンボ油揚げ",
+                    "price": 780
+                  },
+                  {
+                    "name": "新潟県長岡市名物　栃尾ジャンボ油揚げ（葱味噌はさみ焼）",
+                    "price": 840
+                  },
+                  {
+                    "name": "新潟県長岡市名物　栃尾ジャンボ油揚げ（納豆はさみ焼）",
+                    "price": 840
+                  },
+                  {
+                    "name": "新潟県長岡市名物　栃尾ジャンボ油揚げ（食べるラー油がけ）",
+                    "price": 920
+                  },
+                  {
+                    "name": "のど黒の塩焼き",
+                    "priceLabel": "Market price"
+                  },
+                  {
+                    "name": "白米新之助",
+                    "price": 1080
+                  },
+                  {
+                    "name": "銀鮭と山菜",
+                    "price": 1780
+                  },
+                  {
+                    "name": "越の鶏と山菜",
+                    "price": 1680
+                  },
+                  {
+                    "name": "へぎそば　小　1人前",
+                    "price": 1280
+                  },
+                  {
+                    "name": "へぎそば　中　2～3人前",
+                    "price": 2180
+                  },
+                  {
+                    "name": "へぎそば　大　3～4人前",
+                    "price": 3080
+                  },
+                  {
+                    "name": "抹茶アイスの白玉クリームあんみつ",
+                    "price": 480
+                  },
+                  {
+                    "name": "きな粉たっぷり濃厚バニラアイス",
+                    "price": 680
+                  },
+                  {
+                    "name": "一口串団子",
+                    "price": 480
+                  }
+                ],
+                "label": "Published Susukino a la carte menu",
+                "coverage": "sample",
+                "currency": "JPY"
+              }
+            ],
+            "specials": [],
+            "checkedAt": "2026-10-15",
+            "pinSourceUrl": "https://r.gnavi.co.jp/jpzp8kr80000/"
+          },
+          "tile": {
+            "kind": "opening",
+            "name": "Oden-to Sakana SHINOYA — Susukino",
+            "slug": "shinoya",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-15/shinoya-2-0bb5cb4c46ba5b16.webp",
+            "address": "5F ARTBUILDING, 6-8-2 Minami 6-jo Nishi, Chuo-ku, Sapporo",
+            "cuisine": "Oden / Niigata cuisine",
+            "checkedAt": "2026-10-15",
+            "imageNote": "Branch-published promotional dish photograph: 新潟名物！タレカツ. Not a photograph of completed Sapporo premises.",
+            "priceRange": "",
+            "regionSlug": "sapporo",
+            "websiteUrl": "https://r.gnavi.co.jp/jpzp8kr80000/",
+            "description": "An announced Susukino izakaya with a branch-published menu of seafood, Niigata dishes, rice pots and hegi soba.",
+            "imageCredit": "おでんトさかな しのや すすきの店 / 楽天ぐるなび",
+            "recognition": "",
+            "neighborhood": "Susukino",
+            "imageSourceUrl": "https://r.gnavi.co.jp/jpzp8kr80000/menu9/"
+          },
+          "details": {
+            "name": "Oden-to Sakana SHINOYA — Susukino",
+            "phone": "050-3529-5649",
+            "checkedAt": "2026-10-15",
+            "websiteUrl": "https://r.gnavi.co.jp/jpzp8kr80000/",
+            "openingHours": [
+              {
+                "days": "Published regular hours after opening",
+                "hours": "15:00–23:00; food last order 22:00, drinks 22:30; no regular closing day"
+              }
+            ],
+            "pinSourceUrl": "https://r.gnavi.co.jp/jpzp8kr80000/",
+            "detailsSourceUrl": "https://r.gnavi.co.jp/jpzp8kr80000/",
+            "additionalSources": [
+              {
+                "url": "https://townwork.net/viewjob/jobid_d4a16d8e69562a24/",
+                "label": "Research evidence"
+              },
+              {
+                "url": "https://tabelog.com/hokkaido/A0101/A010103/1086177/",
+                "label": "Research evidence"
+              },
+              {
+                "url": "https://ha8u200.gorp.jp/",
+                "label": "Research evidence"
+              },
+              {
+                "url": "https://r.gnavi.co.jp/jpzp8kr80000/menu9/",
+                "label": "Research evidence"
+              },
+              {
+                "url": "https://r.gnavi.co.jp/jpzp8kr80000/photo/",
+                "label": "Research evidence"
+              }
+            ]
+          },
+          "pinSourceUrl": "https://r.gnavi.co.jp/jpzp8kr80000/"
+        }
+      },
+      "photos": [
+        {
+          "originalUrl": "https://rimage.gnst.jp/rest/img/jpzp8kr80000/s_0n92.jpg?t=1791188237",
+          "sourcePage": "https://r.gnavi.co.jp/jpzp8kr80000/photo/",
+          "credit": "SHINOYA Susukino / Rakuten Gurunavi",
+          "note": "Sashimi presentation — branch-published promotional food photograph; not proof of completed Susukino premises or guaranteed launch stock.",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-20/batch114-shinoya-0-caa0bb61c7a95eff.webp",
+          "sha256": "caa0bb61c7a95eff661eceb83540ebbd538c5e8954ea820b71ef0f18a60b26b7",
+          "width": 852,
+          "height": 851
+        },
+        {
+          "originalUrl": "https://rimage.gnst.jp/rest/img/jpzp8kr80000/s_0n8k.jpg?t=1791188237",
+          "sourcePage": "https://r.gnavi.co.jp/jpzp8kr80000/photo/",
+          "credit": "SHINOYA Susukino / Rakuten Gurunavi",
+          "note": "Hegi soba presentation — branch-published promotional food photograph; not proof of completed Susukino premises or guaranteed launch stock.",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-20/batch114-shinoya-1-dfa4d7eb748fa36f.webp",
+          "sha256": "dfa4d7eb748fa36f76bd943c7725d5869561c485c83daa61e8979f9a02078ade",
+          "width": 852,
+          "height": 851
+        },
+        {
+          "originalUrl": "https://rimage.gnst.jp/rest/img/jpzp8kr80000/s_0n89.jpg?t=1791188236",
+          "sourcePage": "https://r.gnavi.co.jp/jpzp8kr80000/photo/",
+          "credit": "SHINOYA Susukino / Rakuten Gurunavi",
+          "note": "Seafood rice bowl presentation — branch-published promotional food photograph; not proof of completed Susukino premises or guaranteed launch stock.",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-20/batch114-shinoya-18-bcef04705d1c696c.webp",
+          "sha256": "bcef04705d1c696c8c99bf73e4dd3765ed8e5e5f060e8aece61f801c284040c4",
+          "width": 852,
+          "height": 851
+        },
+        {
+          "originalUrl": "https://rimage.gnst.jp/rest/img/jpzp8kr80000/s_0n85.jpg?t=1791188236",
+          "sourcePage": "https://r.gnavi.co.jp/jpzp8kr80000/photo/",
+          "credit": "SHINOYA Susukino / Rakuten Gurunavi",
+          "note": "Seafood rice bowl presentation — branch-published promotional food photograph; not proof of completed Susukino premises or guaranteed launch stock.",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-20/batch114-shinoya-22-407dd090a0ec66e8.webp",
+          "sha256": "407dd090a0ec66e8f898cf8f7703694d9662f1691dc9e0825ec98be330749e17",
+          "width": 852,
+          "height": 851
+        },
+        {
+          "originalUrl": "https://rimage.gnst.jp/rest/img/jpzp8kr80000/s_0n84.jpg?t=1791188236",
+          "sourcePage": "https://r.gnavi.co.jp/jpzp8kr80000/photo/",
+          "credit": "SHINOYA Susukino / Rakuten Gurunavi",
+          "note": "Seafood rice bowl presentation — branch-published promotional food photograph; not proof of completed Susukino premises or guaranteed launch stock.",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-20/batch114-shinoya-23-219aa2eefca64176.webp",
+          "sha256": "219aa2eefca641765ba2ea304c8a980b3169f5e44f46eb36521389f793e7e6b9",
+          "width": 852,
+          "height": 851
+        },
+        {
+          "originalUrl": "https://rimage.gnst.jp/rest/img/jpzp8kr80000/s_0n82.jpg?t=1791188236",
+          "sourcePage": "https://r.gnavi.co.jp/jpzp8kr80000/photo/",
+          "credit": "SHINOYA Susukino / Rakuten Gurunavi",
+          "note": "Seafood rice bowl presentation — branch-published promotional food photograph; not proof of completed Susukino premises or guaranteed launch stock.",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-20/batch114-shinoya-25-3809ed21e6cff8db.webp",
+          "sha256": "3809ed21e6cff8db833a8128d5b4b5f71a7ed836f51993cd742ee593c37bad28",
+          "width": 852,
+          "height": 851
+        }
+      ]
+    }
+  ],
+  "counts": {
+    "venues": 1,
+    "newPins": 0,
+    "ordinaryMenuItems": 153,
+    "newOrdinaryMenuItems": 107,
+    "preservedOrdinaryMenuItems": 46,
+    "offers": 0,
+    "offerMenuItems": 0,
+    "photos": 6,
+    "newMemberships": 0,
+    "shortfallReduction": 0
+  },
+  "researchNotes": [
+    "Other-cities-first round: reviewed Kyoto and Nagoya forthcoming-opening lists and Sapporo November leads, then enriched existing SHINOYA 15926. No duplicate venue or Osaka/Fukuoka write.",
+    "Fresh English/Japanese duplicate searches and both environment profiles verified. Preserved 46 ordinary menu entries, representative card, original author, Pin text/source and estimated November 30 month anchor. Exact opening day remains unresolved.",
+    "Added 12 priced three-bite seafood rice bowls and optional free broth; the latter does not waive mandatory cover. Added 91 priced à-la-carte drink choices and three priced rice-pot toppings. Split choices only where a shared price is explicitly published. Sake serving sizes retained. No drink-plan inclusion inferred.",
+    "Checked exact operator Gorp page and all managed menu, gallery, course and coupon pages. Gorp returns structured public JSON identifying this branch and the same assets. Food and drink transcription uses branch-managed Gnavi HTML. Menu9 duplicates existing dishes, so only missing toppings were added.",
+    "Employer variants say November 1 while Tabelog and local opening reports say November 2. No exact-day operator customer announcement found. Preserve the existing month estimate; current menu publication and first booking dates are not opening evidence.",
+    "Mandatory oden cover conflicts: ¥680 food menu versus ¥580 booking plan. Coupon-dependent ¥1500 drink plan has no displayed usable coupon or expiry. Booking arrival until 23:15 conflicts with 23:00 closure. No new Specials membership or invented final bill.",
+    "All 42 gallery/menu images downloaded by plain curl and contact sheet visually reviewed. Six promotional dish photographs selected and verified through public Azure hash and image decoding. Room image38 lacks verified completed Susukino capture and was not used as actual venue evidence. Existing card and media preserved.",
+    "Nagoya TAPETUM employer restaurant remains unnamed with no own menu/gallery. Kyoto MAMA venues already exist; Uji openings fall outside Kyoto city. Retain LACHIC, NEUF and Ripasso chronology/menu/gallery gaps. No food product or PinDining record created."
+  ],
+  "held": [
+    {
+      "name": "SHINOYA exact opening day",
+      "sourceUrl": "https://tabelog.com/hokkaido/A0101/A010103/1086177/",
+      "reason": "November 2 listing/local reports versus November 1 employer variants; exact-day operator customer confirmation missing. Preserve month estimate."
+    },
+    {
+      "name": "SHINOYA drink-plan coupon and oden charge",
+      "sourceUrl": "https://r.gnavi.co.jp/jpzp8kr80000/menu5/",
+      "reason": "Coupon required but coupon page displays none; expiry unpublished. Mandatory cover is ¥580 in booking text versus ¥680 menu. No active Special created."
+    },
+    {
+      "name": "SHINOYA completed premises and hours conflict",
+      "sourceUrl": "https://r.gnavi.co.jp/jpzp8kr80000/photo/",
+      "reason": "Room image has no verified exact-site capture; 23:15 booking arrivals conflict with 23:00 closure. Added six labelled food promotions and retained regular hours."
+    },
+    {
+      "name": "TAPETUM unnamed Nagoya November restaurant",
+      "sourceUrl": "https://jp.indeed.com/viewjob?jk=5475ed2f9c69843d",
+      "reason": "Unnamed branch; customer identity, own menu and gallery unresolved. Employer November 1 is not a validated public service announcement."
+    }
+  ],
+  "photoReview": {
+    "downloadedCandidates": 42,
+    "selectedPhotos": 6,
+    "method": "42 exact managed gallery/menu images downloaded and visually reviewed; six labelled promotional food photographs selected. No completed-room claim, original gallery/card preserved. All six Azure public hashes and image decoding verified."
+  }
+}

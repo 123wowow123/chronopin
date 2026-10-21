@@ -5,7 +5,7 @@ import Anchor from '@/components/ui/Anchor';
 import 'leaflet/dist/leaflet.css';
 import L from 'leaflet';
 import { localizeHere, useRouter, useSearchParams, withPageLang } from '@/lib/client/navigation';
-import { useCallback, useEffect, useRef, useState } from 'react';
+import { useCallback, useEffect, useLayoutEffect, useRef, useState } from 'react';
 import { MAP_ATTRIBUTION_PREFIX, TILE_ATTRIBUTION, TILE_URL } from '@/components/pin/PinMap';
 import { FloatingControls, useInDrawerPanel } from '@/components/timeline/FloatingControls';
 import { TagCloud, tagPillSummary } from '@/components/timeline/TagCloud';
@@ -118,10 +118,26 @@ const inCategories = (categories: string[], picks: string[]) => !picks.length ||
 // focused pin always shows).
 function StatsStrip({ label, stats, t }: { label: string; stats: MapStat[]; t: ReturnType<typeof useT> }) {
   const inDrawer = useInDrawerPanel();
+  const ref = useRef<HTMLDListElement>(null);
+  // Squeezed strips swap the median label for its symbol rather than clip it.
+  const [compact, setCompact] = useState(false);
+  useLayoutEffect(() => { setCompact(false); }, [stats]);
+  useLayoutEffect(() => {
+    const el = ref.current;
+    if (el && !compact && el.scrollWidth > el.clientWidth) setCompact(true);
+  }, [stats, compact]);
+  useEffect(() => {
+    const el = ref.current;
+    if (!el || typeof ResizeObserver === 'undefined') return;
+    let width = el.clientWidth;
+    const ro = new ResizeObserver(() => { if (el.clientWidth !== width) { width = el.clientWidth; setCompact(false); } });
+    ro.observe(el);
+    return () => ro.disconnect();
+  }, []);
   return (
-    <dl aria-label={label} className={`${inDrawer ? 'px-3 ' : 'floating rounded-lg px-3 py-1.5 '}mt-2 flex w-full flex-nowrap items-baseline justify-between gap-x-1.5 overflow-hidden text-xs whitespace-nowrap`}>
+    <dl ref={ref} aria-label={label} className={`${inDrawer ? 'px-3 ' : 'floating rounded-lg px-3 py-1.5 '}mt-2 flex w-full flex-nowrap items-baseline justify-between gap-x-1.5 overflow-hidden text-xs whitespace-nowrap`}>
       {stats.map((stat) => (
-        <div key={stat.key} className="flex gap-0.5"><dt className="text-muted">{t(`map.${stat.labelKey}`)}</dt><dd className={`font-semibold tabular-nums ${stat.tone}`}>{stat.value}</dd></div>
+        <div key={stat.key} className="flex gap-0.5"><dt className="text-muted" title={compact && stat.labelKey === 'statMedianCost' ? t(`map.${stat.labelKey}`) : undefined}>{compact && stat.labelKey === 'statMedianCost' ? 'x̃:' : t(`map.${stat.labelKey}`)}</dt><dd className={`font-semibold tabular-nums ${stat.tone}`}>{stat.value}</dd></div>
       ))}
     </dl>
   );

@@ -423,7 +423,7 @@ political figure in other countries
 
 30s play should fade in last .5sec and new song should start playing during that fade
 
-do 6am job on prod using this session
+do 6am/6pm job on prod using this session
 
 
 datacenter
@@ -456,3 +456,5 @@ ensure the product buy button is working in the country your in or collapse it i
 http://localhost:3000/pin/15767/eric-bordelet-sydre-argelette-grand-cru-celebrated-worldwide-as-the-apex-of-fine
 
 
+pin thread of plane releases and specs
+https://www.cnbc.com/2026/10/20/boeing-737-max-10-certification.html
