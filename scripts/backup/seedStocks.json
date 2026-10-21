@@ -43607,6 +43607,810 @@
       "utcRemovedDateTime": null,
       "relation": "company",
       "note": null
+    },
+    {
+      "id": 4536,
+      "pinId": 17135,
+      "symbol": "META",
+      "name": "Meta Platforms",
+      "assetClass": "stocks",
+      "origin": "company",
+      "utcCreatedDateTime": "2026-10-18T14:30:45.029Z",
+      "utcRemovedDateTime": null,
+      "relation": "company",
+      "note": null
+    },
+    {
+      "id": 4537,
+      "pinId": 17136,
+      "symbol": "PLD",
+      "name": "Prologis",
+      "assetClass": "stocks",
+      "origin": "company",
+      "utcCreatedDateTime": "2026-10-18T14:31:23.151Z",
+      "utcRemovedDateTime": null,
+      "relation": "company",
+      "note": null
+    },
+    {
+      "id": 4538,
+      "pinId": 17137,
+      "symbol": "PLD",
+      "name": "Prologis",
+      "assetClass": "stocks",
+      "origin": "company",
+      "utcCreatedDateTime": "2026-10-18T14:31:54.041Z",
+      "utcRemovedDateTime": null,
+      "relation": "company",
+      "note": null
+    },
+    {
+      "id": 4539,
+      "pinId": 17143,
+      "symbol": "LNT",
+      "name": "Alliant Energy",
+      "assetClass": "stocks",
+      "origin": "company",
+      "utcCreatedDateTime": "2026-10-18T14:38:04.988Z",
+      "utcRemovedDateTime": null,
+      "relation": "company",
+      "note": null
+    },
+    {
+      "id": 4540,
+      "pinId": 17145,
+      "symbol": "CMS",
+      "name": "Consumers Energy",
+      "assetClass": "stocks",
+      "origin": "company",
+      "utcCreatedDateTime": "2026-10-18T14:39:05.214Z",
+      "utcRemovedDateTime": null,
+      "relation": "company",
+      "note": "the parent of Consumers Energy, which owns the J.H. Campbell coal plant"
+    },
+    {
+      "id": 4541,
+      "pinId": 17147,
+      "symbol": "META",
+      "name": "Meta Platforms",
+      "assetClass": "stocks",
+      "origin": "company",
+      "utcCreatedDateTime": "2026-10-18T14:40:03.186Z",
+      "utcRemovedDateTime": null,
+      "relation": "company",
+      "note": null
+    },
+    {
+      "id": 4542,
+      "pinId": 17161,
+      "symbol": "WULF",
+      "name": "TeraWulf",
+      "assetClass": "stocks",
+      "origin": "company",
+      "utcCreatedDateTime": "2026-10-18T14:48:21.365Z",
+      "utcRemovedDateTime": null,
+      "relation": "company",
+      "note": null
+    },
+    {
+      "id": 4543,
+      "pinId": 17294,
+      "symbol": "WULF",
+      "name": "TeraWulf",
+      "assetClass": "stocks",
+      "origin": "company",
+      "utcCreatedDateTime": "2026-10-18T17:23:23.218Z",
+      "utcRemovedDateTime": null,
+      "relation": "company",
+      "note": null
+    },
+    {
+      "id": 4544,
+      "pinId": 17297,
+      "symbol": "CMS",
+      "name": "Consumers Energy",
+      "assetClass": "stocks",
+      "origin": "company",
+      "utcCreatedDateTime": "2026-10-18T17:24:49.523Z",
+      "utcRemovedDateTime": null,
+      "relation": "company",
+      "note": "the parent of Consumers Energy, which owns the J.H. Campbell coal plant"
+    },
+    {
+      "id": 4545,
+      "pinId": 17306,
+      "symbol": "WULF",
+      "name": "TeraWulf",
+      "assetClass": "stocks",
+      "origin": "company",
+      "utcCreatedDateTime": "2026-10-18T17:29:13.754Z",
+      "utcRemovedDateTime": null,
+      "relation": "company",
+      "note": null
+    },
+    {
+      "id": 4546,
+      "pinId": 17307,
+      "symbol": "CMS",
+      "name": "Consumers Energy",
+      "assetClass": "stocks",
+      "origin": "company",
+      "utcCreatedDateTime": "2026-10-18T17:29:43.300Z",
+      "utcRemovedDateTime": null,
+      "relation": "company",
+      "note": "the parent of Consumers Energy, which owns the J.H. Campbell coal plant"
+    },
+    {
+      "id": 4547,
+      "pinId": 17311,
+      "symbol": "VST",
+      "name": "Vistra Corp",
+      "assetClass": "stocks",
+      "origin": "company",
+      "utcCreatedDateTime": "2026-10-18T17:31:39.615Z",
+      "utcRemovedDateTime": null,
+      "relation": "company",
+      "note": null
+    },
+    {
+      "id": 4548,
+      "pinId": 17316,
+      "symbol": "GOOGL",
+      "name": "Google",
+      "assetClass": "stocks",
+      "origin": "company",
+      "utcCreatedDateTime": "2026-10-18T17:34:05.027Z",
+      "utcRemovedDateTime": null,
+      "relation": "company",
+      "note": "Google's parent, behind Android XR and Gemini."
+    },
+    {
+      "id": 4549,
+      "pinId": 17318,
+      "symbol": "WULF",
+      "name": "TeraWulf",
+      "assetClass": "stocks",
+      "origin": "company",
+      "utcCreatedDateTime": "2026-10-18T17:35:04.414Z",
+      "utcRemovedDateTime": null,
+      "relation": "company",
+      "note": null
+    },
+    {
+      "id": 4550,
+      "pinId": 17320,
+      "symbol": "CMS",
+      "name": "Consumers Energy",
+      "assetClass": "stocks",
+      "origin": "company",
+      "utcCreatedDateTime": "2026-10-18T17:36:07.430Z",
+      "utcRemovedDateTime": null,
+      "relation": "company",
+      "note": "the parent of Consumers Energy, which owns the J.H. Campbell coal plant"
+    },
+    {
+      "id": 4551,
+      "pinId": 17321,
+      "symbol": "XEL",
+      "name": "Xcel Energy",
+      "assetClass": "stocks",
+      "origin": "company",
+      "utcCreatedDateTime": "2026-10-18T17:36:37.627Z",
+      "utcRemovedDateTime": null,
+      "relation": "company",
+      "note": null
+    },
+    {
+      "id": 4552,
+      "pinId": 17328,
+      "symbol": "GOOGL",
+      "name": "Google",
+      "assetClass": "stocks",
+      "origin": "company",
+      "utcCreatedDateTime": "2026-10-18T17:40:04.726Z",
+      "utcRemovedDateTime": null,
+      "relation": "company",
+      "note": "Google's parent, behind Android XR and Gemini."
+    },
+    {
+      "id": 4553,
+      "pinId": 17330,
+      "symbol": "WULF",
+      "name": "TeraWulf",
+      "assetClass": "stocks",
+      "origin": "company",
+      "utcCreatedDateTime": "2026-10-18T17:41:02.988Z",
+      "utcRemovedDateTime": null,
+      "relation": "company",
+      "note": null
+    },
+    {
+      "id": 4554,
+      "pinId": 17337,
+      "symbol": "TVC",
+      "name": "Tennessee Valley Authority",
+      "assetClass": "stocks",
+      "origin": "company",
+      "utcCreatedDateTime": "2026-10-18T17:44:25.482Z",
+      "utcRemovedDateTime": null,
+      "relation": "company",
+      "note": null
+    },
+    {
+      "id": 4555,
+      "pinId": 17338,
+      "symbol": "XEL",
+      "name": "Xcel Energy",
+      "assetClass": "stocks",
+      "origin": "company",
+      "utcCreatedDateTime": "2026-10-18T17:44:54.643Z",
+      "utcRemovedDateTime": null,
+      "relation": "company",
+      "note": null
+    },
+    {
+      "id": 4556,
+      "pinId": 17340,
+      "symbol": "GOOGL",
+      "name": "Google",
+      "assetClass": "stocks",
+      "origin": "company",
+      "utcCreatedDateTime": "2026-10-18T17:45:53.437Z",
+      "utcRemovedDateTime": null,
+      "relation": "company",
+      "note": "Google's parent, behind Android XR and Gemini."
+    },
+    {
+      "id": 4557,
+      "pinId": 17342,
+      "symbol": "WULF",
+      "name": "TeraWulf",
+      "assetClass": "stocks",
+      "origin": "company",
+      "utcCreatedDateTime": "2026-10-18T17:46:52.629Z",
+      "utcRemovedDateTime": null,
+      "relation": "company",
+      "note": null
+    },
+    {
+      "id": 4558,
+      "pinId": 17344,
+      "symbol": "LNT",
+      "name": "Alliant Energy",
+      "assetClass": "stocks",
+      "origin": "company",
+      "utcCreatedDateTime": "2026-10-18T17:47:50.834Z",
+      "utcRemovedDateTime": null,
+      "relation": "company",
+      "note": null
+    },
+    {
+      "id": 4559,
+      "pinId": 17350,
+      "symbol": "XEL",
+      "name": "Xcel Energy",
+      "assetClass": "stocks",
+      "origin": "company",
+      "utcCreatedDateTime": "2026-10-18T17:50:47.870Z",
+      "utcRemovedDateTime": null,
+      "relation": "company",
+      "note": null
+    },
+    {
+      "id": 4560,
+      "pinId": 17353,
+      "symbol": "WULF",
+      "name": "TeraWulf",
+      "assetClass": "stocks",
+      "origin": "company",
+      "utcCreatedDateTime": "2026-10-18T17:52:14.337Z",
+      "utcRemovedDateTime": null,
+      "relation": "company",
+      "note": null
+    },
+    {
+      "id": 4561,
+      "pinId": 17354,
+      "symbol": "GOOGL",
+      "name": "Google",
+      "assetClass": "stocks",
+      "origin": "company",
+      "utcCreatedDateTime": "2026-10-18T17:52:44.104Z",
+      "utcRemovedDateTime": null,
+      "relation": "company",
+      "note": "Google's parent, behind Android XR and Gemini."
+    },
+    {
+      "id": 4562,
+      "pinId": 17356,
+      "symbol": "TVC",
+      "name": "Tennessee Valley Authority",
+      "assetClass": "stocks",
+      "origin": "company",
+      "utcCreatedDateTime": "2026-10-18T17:53:43.162Z",
+      "utcRemovedDateTime": null,
+      "relation": "company",
+      "note": null
+    },
+    {
+      "id": 4563,
+      "pinId": 18037,
+      "symbol": "GOOGL",
+      "name": "Google",
+      "assetClass": "stocks",
+      "origin": "company",
+      "utcCreatedDateTime": "2026-10-18T22:47:01.668Z",
+      "utcRemovedDateTime": null,
+      "relation": "company",
+      "note": "Google's parent, behind Android XR and Gemini."
+    },
+    {
+      "id": 4564,
+      "pinId": 18038,
+      "symbol": "GOOGL",
+      "name": "Google",
+      "assetClass": "stocks",
+      "origin": "company",
+      "utcCreatedDateTime": "2026-10-18T22:47:30.495Z",
+      "utcRemovedDateTime": null,
+      "relation": "company",
+      "note": "Google's parent, behind Android XR and Gemini."
+    },
+    {
+      "id": 4565,
+      "pinId": 18039,
+      "symbol": "GOOGL",
+      "name": "Google",
+      "assetClass": "stocks",
+      "origin": "company",
+      "utcCreatedDateTime": "2026-10-18T22:48:00.399Z",
+      "utcRemovedDateTime": null,
+      "relation": "company",
+      "note": "Google's parent, behind Android XR and Gemini."
+    },
+    {
+      "id": 4566,
+      "pinId": 18066,
+      "symbol": "META",
+      "name": "Meta",
+      "assetClass": "stocks",
+      "origin": "company",
+      "utcCreatedDateTime": "2026-10-19T03:19:48.315Z",
+      "utcRemovedDateTime": null,
+      "relation": "company",
+      "note": "the maker of the Ray-Ban and Oakley Meta smart glasses."
+    },
+    {
+      "id": 4567,
+      "pinId": 18067,
+      "symbol": "META",
+      "name": "Meta",
+      "assetClass": "stocks",
+      "origin": "company",
+      "utcCreatedDateTime": "2026-10-19T03:20:18.291Z",
+      "utcRemovedDateTime": null,
+      "relation": "company",
+      "note": "the maker of the Ray-Ban and Oakley Meta smart glasses."
+    },
+    {
+      "id": 4568,
+      "pinId": 18078,
+      "symbol": "GOOGL",
+      "name": "Google",
+      "assetClass": "stocks",
+      "origin": "company",
+      "utcCreatedDateTime": "2026-10-19T03:36:00.254Z",
+      "utcRemovedDateTime": null,
+      "relation": "company",
+      "note": "Google's parent, behind Android XR and Gemini."
+    },
+    {
+      "id": 4569,
+      "pinId": 18079,
+      "symbol": "APLD",
+      "name": "Applied Digital",
+      "assetClass": "stocks",
+      "origin": "company",
+      "utcCreatedDateTime": "2026-10-19T03:36:30.580Z",
+      "utcRemovedDateTime": null,
+      "relation": "company",
+      "note": null
+    },
+    {
+      "id": 4570,
+      "pinId": 18080,
+      "symbol": "APLD",
+      "name": "Applied Digital",
+      "assetClass": "stocks",
+      "origin": "company",
+      "utcCreatedDateTime": "2026-10-19T03:37:17.796Z",
+      "utcRemovedDateTime": null,
+      "relation": "company",
+      "note": null
+    },
+    {
+      "id": 4571,
+      "pinId": 18081,
+      "symbol": "APLD",
+      "name": "Applied Digital",
+      "assetClass": "stocks",
+      "origin": "company",
+      "utcCreatedDateTime": "2026-10-19T03:38:20.451Z",
+      "utcRemovedDateTime": null,
+      "relation": "company",
+      "note": null
+    },
+    {
+      "id": 4572,
+      "pinId": 18182,
+      "symbol": "META",
+      "name": "Meta Platforms",
+      "assetClass": "stocks",
+      "origin": "company",
+      "utcCreatedDateTime": "2026-10-19T06:30:59.283Z",
+      "utcRemovedDateTime": null,
+      "relation": "company",
+      "note": null
+    },
+    {
+      "id": 4573,
+      "pinId": 18183,
+      "symbol": "MSFT",
+      "name": "Microsoft Corporation",
+      "assetClass": "stocks",
+      "origin": "company",
+      "utcCreatedDateTime": "2026-10-19T06:31:29.932Z",
+      "utcRemovedDateTime": null,
+      "relation": "company",
+      "note": null
+    },
+    {
+      "id": 4574,
+      "pinId": 18184,
+      "symbol": "MSFT",
+      "name": "Microsoft Corporation",
+      "assetClass": "stocks",
+      "origin": "company",
+      "utcCreatedDateTime": "2026-10-19T06:31:59.365Z",
+      "utcRemovedDateTime": null,
+      "relation": "company",
+      "note": null
+    },
+    {
+      "id": 4575,
+      "pinId": 18190,
+      "symbol": "SPCX",
+      "name": "SpaceX",
+      "assetClass": "stocks",
+      "origin": "company",
+      "utcCreatedDateTime": "2026-10-19T14:08:06.743Z",
+      "utcRemovedDateTime": null,
+      "relation": "company",
+      "note": "the rocket, satellite and AI company leading the full-scale Terafab with Tesla"
+    },
+    {
+      "id": 4576,
+      "pinId": 18201,
+      "symbol": "MSFT",
+      "name": "Microsoft Corporation",
+      "assetClass": "stocks",
+      "origin": "company",
+      "utcCreatedDateTime": "2026-10-19T20:49:31.490Z",
+      "utcRemovedDateTime": null,
+      "relation": "company",
+      "note": null
+    },
+    {
+      "id": 4577,
+      "pinId": 18202,
+      "symbol": "MSFT",
+      "name": "Microsoft Corporation",
+      "assetClass": "stocks",
+      "origin": "company",
+      "utcCreatedDateTime": "2026-10-19T20:50:01.575Z",
+      "utcRemovedDateTime": null,
+      "relation": "company",
+      "note": null
+    },
+    {
+      "id": 4578,
+      "pinId": 18203,
+      "symbol": "MSFT",
+      "name": "Microsoft Corporation",
+      "assetClass": "stocks",
+      "origin": "company",
+      "utcCreatedDateTime": "2026-10-19T20:50:31.224Z",
+      "utcRemovedDateTime": null,
+      "relation": "company",
+      "note": null
+    },
+    {
+      "id": 4579,
+      "pinId": 18227,
+      "symbol": "INTC",
+      "name": "Intel",
+      "assetClass": "stocks",
+      "origin": "company",
+      "utcCreatedDateTime": "2026-10-19T21:36:32.334Z",
+      "utcRemovedDateTime": null,
+      "relation": "company",
+      "note": "the American chipmaker behind most PC and server processors"
+    },
+    {
+      "id": 4580,
+      "pinId": 18229,
+      "symbol": "GEV",
+      "name": "GE Vernova",
+      "assetClass": "stocks",
+      "origin": "article",
+      "utcCreatedDateTime": "2026-10-19T21:42:40.046Z",
+      "utcRemovedDateTime": null,
+      "relation": "supplier",
+      "note": "supplies the gas turbines for the 2,700 MW plant"
+    },
+    {
+      "id": 4581,
+      "pinId": 18231,
+      "symbol": "AWK",
+      "name": "American Water Works",
+      "assetClass": "stocks",
+      "origin": "article",
+      "utcCreatedDateTime": "2026-10-19T21:43:32.280Z",
+      "utcRemovedDateTime": null,
+      "relation": "company",
+      "note": "parent of California American Water, which applied for the lease"
+    },
+    {
+      "id": 4582,
+      "pinId": 18232,
+      "symbol": "MU",
+      "name": "Micron Technology",
+      "assetClass": "stocks",
+      "origin": "company",
+      "utcCreatedDateTime": "2026-10-19T21:43:50.977Z",
+      "utcRemovedDateTime": null,
+      "relation": "company",
+      "note": null
+    },
+    {
+      "id": 4583,
+      "pinId": 18236,
+      "symbol": "TSM",
+      "name": "TSMC",
+      "assetClass": "stocks",
+      "origin": "company",
+      "utcCreatedDateTime": "2026-10-19T21:46:09.869Z",
+      "utcRemovedDateTime": null,
+      "relation": "company",
+      "note": "the Taiwanese foundry that makes most of the world's most advanced chips for Apple, Nvidia and AMD"
+    },
+    {
+      "id": 4584,
+      "pinId": 18236,
+      "symbol": "AAPL",
+      "name": "Apple",
+      "assetClass": "stocks",
+      "origin": "company",
+      "utcCreatedDateTime": "2026-10-19T21:46:14.511Z",
+      "utcRemovedDateTime": null,
+      "relation": "related",
+      "note": "the biggest customer for TSMC's leading-edge chips"
+    },
+    {
+      "id": 4585,
+      "pinId": 18236,
+      "symbol": "NVDA",
+      "name": "Nvidia",
+      "assetClass": "stocks",
+      "origin": "company",
+      "utcCreatedDateTime": "2026-10-19T21:46:15.813Z",
+      "utcRemovedDateTime": null,
+      "relation": "related",
+      "note": "whose AI GPUs are made by TSMC"
+    },
+    {
+      "id": 4586,
+      "pinId": 18236,
+      "symbol": "ASML",
+      "name": "ASML Holding N.V. New York Registry Shares",
+      "assetClass": "stocks",
+      "origin": "company",
+      "utcCreatedDateTime": "2026-10-19T21:46:17.805Z",
+      "utcRemovedDateTime": null,
+      "relation": "supplier",
+      "note": "which supplies the EUV lithography machines in TSMC's fabs"
+    },
+    {
+      "id": 4587,
+      "pinId": 18251,
+      "symbol": "ERII",
+      "name": "Energy Recovery, Inc.",
+      "assetClass": "stocks",
+      "origin": "article",
+      "utcCreatedDateTime": "2026-10-19T21:53:23.878Z",
+      "utcRemovedDateTime": null,
+      "relation": "company",
+      "note": "Maker of the PX Q650 pressure exchanger supplied under the contract"
+    },
+    {
+      "id": 4588,
+      "pinId": 18254,
+      "symbol": "CENX",
+      "name": "Century Aluminum",
+      "assetClass": "stocks",
+      "origin": "company",
+      "utcCreatedDateTime": "2026-10-19T21:54:22.871Z",
+      "utcRemovedDateTime": null,
+      "relation": "company",
+      "note": null
+    },
+    {
+      "id": 4589,
+      "pinId": 18258,
+      "symbol": "RIO",
+      "name": "Rio Tinto",
+      "assetClass": "stocks",
+      "origin": "company",
+      "utcCreatedDateTime": "2026-10-19T21:55:30.440Z",
+      "utcRemovedDateTime": null,
+      "relation": "company",
+      "note": "completed its acquisition of Arcadium Lithium for US$6.7 billion"
+    },
+    {
+      "id": 4590,
+      "pinId": 18259,
+      "symbol": "BTDR",
+      "name": "Bitdeer Technologies Group",
+      "assetClass": "stocks",
+      "origin": "company",
+      "utcCreatedDateTime": "2026-10-19T21:55:56.716Z",
+      "utcRemovedDateTime": null,
+      "relation": "company",
+      "note": null
+    },
+    {
+      "id": 4591,
+      "pinId": 18268,
+      "symbol": "J",
+      "name": "Jacobs Solutions",
+      "assetClass": "stocks",
+      "origin": "article",
+      "utcCreatedDateTime": "2026-10-19T22:00:20.568Z",
+      "utcRemovedDateTime": null,
+      "relation": "company",
+      "note": "engineering firm PUB appointed to run the feasibility study"
+    },
+    {
+      "id": 4592,
+      "pinId": 18339,
+      "symbol": "DTE",
+      "name": "DTE Energy",
+      "assetClass": "stocks",
+      "origin": "company",
+      "utcCreatedDateTime": "2026-10-20T05:17:36.186Z",
+      "utcRemovedDateTime": null,
+      "relation": "company",
+      "note": null
+    },
+    {
+      "id": 4593,
+      "pinId": 18345,
+      "symbol": "ORA",
+      "name": "Ormat Technologies",
+      "assetClass": "stocks",
+      "origin": "company",
+      "utcCreatedDateTime": "2026-10-20T05:27:41.172Z",
+      "utcRemovedDateTime": null,
+      "relation": "company",
+      "note": null
+    },
+    {
+      "id": 4594,
+      "pinId": 18357,
+      "symbol": "EVRG",
+      "name": "Evergy",
+      "assetClass": "stocks",
+      "origin": "company",
+      "utcCreatedDateTime": "2026-10-20T05:40:40.660Z",
+      "utcRemovedDateTime": null,
+      "relation": "company",
+      "note": null
+    },
+    {
+      "id": 4595,
+      "pinId": 18385,
+      "symbol": "CMS",
+      "name": "Consumers Energy",
+      "assetClass": "stocks",
+      "origin": "company",
+      "utcCreatedDateTime": "2026-10-20T06:19:06.502Z",
+      "utcRemovedDateTime": null,
+      "relation": "company",
+      "note": "the parent of Consumers Energy, which owns the J.H. Campbell coal plant"
+    },
+    {
+      "id": 4596,
+      "pinId": 18415,
+      "symbol": "XEL",
+      "name": "Xcel Energy",
+      "assetClass": "stocks",
+      "origin": "company",
+      "utcCreatedDateTime": "2026-10-20T13:56:37.228Z",
+      "utcRemovedDateTime": null,
+      "relation": "company",
+      "note": null
+    },
+    {
+      "id": 4597,
+      "pinId": 18426,
+      "symbol": "TTE",
+      "name": "TotalEnergies",
+      "assetClass": "stocks",
+      "origin": "company",
+      "utcCreatedDateTime": "2026-10-20T13:59:29.780Z",
+      "utcRemovedDateTime": null,
+      "relation": "company",
+      "note": null
+    },
+    {
+      "id": 4598,
+      "pinId": 18434,
+      "symbol": "D",
+      "name": "Dominion Energy",
+      "assetClass": "stocks",
+      "origin": "company",
+      "utcCreatedDateTime": "2026-10-20T14:10:30.063Z",
+      "utcRemovedDateTime": null,
+      "relation": "company",
+      "note": "the utility building the Coastal Virginia Offshore Wind farm"
+    },
+    {
+      "id": 4599,
+      "pinId": 18442,
+      "symbol": "VST",
+      "name": "Vistra",
+      "assetClass": "stocks",
+      "origin": "company",
+      "utcCreatedDateTime": "2026-10-20T14:14:37.207Z",
+      "utcRemovedDateTime": null,
+      "relation": "company",
+      "note": null
+    },
+    {
+      "id": 4600,
+      "pinId": 18457,
+      "symbol": "ITT",
+      "name": "ITT",
+      "assetClass": "stocks",
+      "origin": "company",
+      "utcCreatedDateTime": "2026-10-20T14:28:19.518Z",
+      "utcRemovedDateTime": null,
+      "relation": "company",
+      "note": null
+    },
+    {
+      "id": 4601,
+      "pinId": 18458,
+      "symbol": "QCOM",
+      "name": "Qualcomm",
+      "assetClass": "stocks",
+      "origin": "company",
+      "utcCreatedDateTime": "2026-10-20T14:28:26.157Z",
+      "utcRemovedDateTime": null,
+      "relation": "company",
+      "note": "the chip designer behind the Snapdragon processors and modems in most Android phones"
+    },
+    {
+      "id": 4602,
+      "pinId": 20,
+      "symbol": "NRG",
+      "name": "NRG Energy",
+      "assetClass": "stocks",
+      "origin": "company",
+      "utcCreatedDateTime": "2026-10-21T00:40:17.965Z",
+      "utcRemovedDateTime": null,
+      "relation": "company",
+      "note": null
     }
   ],
   "prices": [
@@ -43673,7 +44477,7 @@
       "day": "2013-09-09",
       "price": null,
       "utcPriceDateTime": null,
-      "utcCheckedDateTime": "2026-10-17T08:22:56.730Z",
+      "utcCheckedDateTime": "2026-10-19T23:33:52.914Z",
       "utcSetDateTime": "2026-09-19T05:11:42.354Z"
     },
     {
@@ -43695,7 +44499,7 @@
       "day": "2013-10-17",
       "price": null,
       "utcPriceDateTime": null,
-      "utcCheckedDateTime": "2026-10-17T10:01:34.308Z",
+      "utcCheckedDateTime": "2026-10-19T17:02:53.807Z",
       "utcSetDateTime": "2026-09-19T05:11:44.043Z"
     },
     {
@@ -43717,7 +44521,7 @@
       "day": "2013-11-06",
       "price": null,
       "utcPriceDateTime": null,
-      "utcCheckedDateTime": "2026-10-17T23:05:17.153Z",
+      "utcCheckedDateTime": "2026-10-19T22:12:05.986Z",
       "utcSetDateTime": "2026-09-19T05:11:46.152Z"
     },
     {
@@ -43728,7 +44532,7 @@
       "day": null,
       "price": null,
       "utcPriceDateTime": null,
-      "utcCheckedDateTime": "2026-10-10T22:14:12.919Z",
+      "utcCheckedDateTime": "2026-10-19T08:17:50.461Z",
       "utcSetDateTime": "2026-09-19T05:11:49.013Z"
     },
     {
@@ -43739,7 +44543,7 @@
       "day": "2013-11-13",
       "price": null,
       "utcPriceDateTime": null,
-      "utcCheckedDateTime": "2026-10-10T22:14:10.677Z",
+      "utcCheckedDateTime": "2026-10-19T08:17:49.871Z",
       "utcSetDateTime": "2026-09-19T05:11:49.017Z"
     },
     {
@@ -43761,7 +44565,7 @@
       "day": "2013-11-14",
       "price": null,
       "utcPriceDateTime": null,
-      "utcCheckedDateTime": "2026-10-17T16:28:45.150Z",
+      "utcCheckedDateTime": "2026-10-19T04:17:27.433Z",
       "utcSetDateTime": "2026-09-19T05:11:51.414Z"
     },
     {
@@ -43783,7 +44587,7 @@
       "day": "2014-03-05",
       "price": null,
       "utcPriceDateTime": null,
-      "utcCheckedDateTime": "2026-10-18T00:22:28.028Z",
+      "utcCheckedDateTime": "2026-10-20T07:08:30.175Z",
       "utcSetDateTime": "2026-09-19T05:11:55.639Z"
     },
     {
@@ -43805,7 +44609,7 @@
       "day": "2014-03-26",
       "price": null,
       "utcPriceDateTime": null,
-      "utcCheckedDateTime": "2026-10-16T06:15:27.859Z",
+      "utcCheckedDateTime": "2026-10-19T22:05:49.519Z",
       "utcSetDateTime": "2026-09-19T05:11:58.622Z"
     },
     {
@@ -43827,7 +44631,7 @@
       "day": "2014-03-31",
       "price": null,
       "utcPriceDateTime": null,
-      "utcCheckedDateTime": "2026-10-17T11:01:30.630Z",
+      "utcCheckedDateTime": "2026-10-18T15:01:53.810Z",
       "utcSetDateTime": "2026-09-19T05:12:00.843Z"
     },
     {
@@ -43849,7 +44653,7 @@
       "day": "2014-04-07",
       "price": null,
       "utcPriceDateTime": null,
-      "utcCheckedDateTime": "2026-10-17T08:34:38.943Z",
+      "utcCheckedDateTime": "2026-10-18T08:45:53.533Z",
       "utcSetDateTime": "2026-09-19T05:12:03.110Z"
     },
     {
@@ -43871,7 +44675,7 @@
       "day": "2014-05-12",
       "price": null,
       "utcPriceDateTime": null,
-      "utcCheckedDateTime": "2026-10-18T03:10:15.183Z",
+      "utcCheckedDateTime": "2026-10-19T06:53:34.821Z",
       "utcSetDateTime": "2026-09-19T05:12:03.888Z"
     },
     {
@@ -43893,7 +44697,7 @@
       "day": "2014-07-12",
       "price": null,
       "utcPriceDateTime": null,
-      "utcCheckedDateTime": "2026-10-08T00:54:19.506Z",
+      "utcCheckedDateTime": "2026-10-19T18:19:18.756Z",
       "utcSetDateTime": "2026-09-19T05:12:08.474Z"
     },
     {
@@ -43915,7 +44719,7 @@
       "day": "2014-07-14",
       "price": null,
       "utcPriceDateTime": null,
-      "utcCheckedDateTime": "2026-10-18T02:40:15.590Z",
+      "utcCheckedDateTime": "2026-10-20T01:27:15.470Z",
       "utcSetDateTime": "2026-09-19T05:12:09.298Z"
     },
     {
@@ -43937,7 +44741,7 @@
       "day": "2014-07-15",
       "price": null,
       "utcPriceDateTime": null,
-      "utcCheckedDateTime": "2026-10-18T01:21:52.105Z",
+      "utcCheckedDateTime": "2026-10-19T04:42:06.809Z",
       "utcSetDateTime": "2026-09-19T05:12:11.081Z"
     },
     {
@@ -44003,7 +44807,7 @@
       "day": "2014-07-28",
       "price": null,
       "utcPriceDateTime": null,
-      "utcCheckedDateTime": "2026-10-17T14:05:39.611Z",
+      "utcCheckedDateTime": "2026-10-19T10:21:19.609Z",
       "utcSetDateTime": "2026-09-19T05:12:14.886Z"
     },
     {
@@ -44025,7 +44829,7 @@
       "day": "2014-07-29",
       "price": null,
       "utcPriceDateTime": null,
-      "utcCheckedDateTime": "2026-10-18T00:26:00.374Z",
+      "utcCheckedDateTime": "2026-10-19T15:53:15.056Z",
       "utcSetDateTime": "2026-09-19T05:12:15.931Z"
     },
     {
@@ -44047,7 +44851,7 @@
       "day": "2014-08-04",
       "price": null,
       "utcPriceDateTime": null,
-      "utcCheckedDateTime": "2026-10-16T06:33:02.002Z",
+      "utcCheckedDateTime": "2026-10-20T04:06:03.533Z",
       "utcSetDateTime": "2026-09-19T05:12:18.881Z"
     },
     {
@@ -44069,7 +44873,7 @@
       "day": "2014-08-11",
       "price": null,
       "utcPriceDateTime": null,
-      "utcCheckedDateTime": "2026-10-18T02:10:06.444Z",
+      "utcCheckedDateTime": "2026-10-19T15:30:02.519Z",
       "utcSetDateTime": "2026-09-19T05:12:19.737Z"
     },
     {
@@ -44091,7 +44895,7 @@
       "day": "2014-08-29",
       "price": null,
       "utcPriceDateTime": null,
-      "utcCheckedDateTime": "2026-10-17T21:48:39.214Z",
+      "utcCheckedDateTime": "2026-10-19T10:21:30.278Z",
       "utcSetDateTime": "2026-09-19T05:12:22.448Z"
     },
     {
@@ -44113,7 +44917,7 @@
       "day": "2014-09-03",
       "price": null,
       "utcPriceDateTime": null,
-      "utcCheckedDateTime": "2026-10-18T00:18:30.646Z",
+      "utcCheckedDateTime": "2026-10-20T03:39:43.828Z",
       "utcSetDateTime": "2026-09-19T05:12:23.874Z"
     },
     {
@@ -44135,7 +44939,7 @@
       "day": "2014-09-03",
       "price": null,
       "utcPriceDateTime": null,
-      "utcCheckedDateTime": "2026-10-17T09:45:28.130Z",
+      "utcCheckedDateTime": "2026-10-18T11:27:59.415Z",
       "utcSetDateTime": "2026-09-19T05:12:25.174Z"
     },
     {
@@ -44157,7 +44961,7 @@
       "day": "2014-09-09",
       "price": null,
       "utcPriceDateTime": null,
-      "utcCheckedDateTime": "2026-10-09T07:38:53.118Z",
+      "utcCheckedDateTime": "2026-10-20T07:29:30.776Z",
       "utcSetDateTime": "2026-09-19T05:12:27.471Z"
     },
     {
@@ -44179,7 +44983,7 @@
       "day": "2014-09-15",
       "price": null,
       "utcPriceDateTime": null,
-      "utcCheckedDateTime": "2026-10-17T18:16:03.219Z",
+      "utcCheckedDateTime": "2026-10-19T08:24:18.593Z",
       "utcSetDateTime": "2026-09-19T05:12:28.515Z"
     },
     {
@@ -44201,7 +45005,7 @@
       "day": "2014-09-18",
       "price": null,
       "utcPriceDateTime": null,
-      "utcCheckedDateTime": "2026-10-17T18:06:25.311Z",
+      "utcCheckedDateTime": "2026-10-20T03:55:37.069Z",
       "utcSetDateTime": "2026-09-19T05:12:29.571Z"
     },
     {
@@ -44223,7 +45027,7 @@
       "day": "2014-09-19",
       "price": null,
       "utcPriceDateTime": null,
-      "utcCheckedDateTime": "2026-10-18T02:02:34.667Z",
+      "utcCheckedDateTime": "2026-10-19T09:28:48.296Z",
       "utcSetDateTime": "2026-09-19T05:12:30.607Z"
     },
     {
@@ -44245,7 +45049,7 @@
       "day": "2014-09-20",
       "price": null,
       "utcPriceDateTime": null,
-      "utcCheckedDateTime": "2026-10-17T22:58:47.027Z",
+      "utcCheckedDateTime": "2026-10-20T08:13:28.056Z",
       "utcSetDateTime": "2026-09-19T05:12:31.660Z"
     },
     {
@@ -44267,7 +45071,7 @@
       "day": "2014-09-23",
       "price": null,
       "utcPriceDateTime": null,
-      "utcCheckedDateTime": "2026-10-17T21:02:31.855Z",
+      "utcCheckedDateTime": "2026-10-20T06:16:00.242Z",
       "utcSetDateTime": "2026-09-19T05:12:32.707Z"
     },
     {
@@ -44289,7 +45093,7 @@
       "day": "2014-09-30",
       "price": null,
       "utcPriceDateTime": null,
-      "utcCheckedDateTime": "2026-10-17T17:53:55.439Z",
+      "utcCheckedDateTime": "2026-10-19T21:01:51.254Z",
       "utcSetDateTime": "2026-09-19T05:12:33.562Z"
     },
     {
@@ -44311,7 +45115,7 @@
       "day": "2014-10-06",
       "price": null,
       "utcPriceDateTime": null,
-      "utcCheckedDateTime": "2026-10-14T15:34:42.882Z",
+      "utcCheckedDateTime": "2026-10-19T10:58:09.144Z",
       "utcSetDateTime": "2026-09-19T05:12:35.340Z"
     },
     {
@@ -44355,7 +45159,7 @@
       "day": "2014-10-15",
       "price": null,
       "utcPriceDateTime": null,
-      "utcCheckedDateTime": "2026-10-17T22:58:11.289Z",
+      "utcCheckedDateTime": "2026-10-19T11:02:35.961Z",
       "utcSetDateTime": "2026-09-19T05:12:36.950Z"
     },
     {
@@ -44399,7 +45203,7 @@
       "day": "2014-10-31",
       "price": null,
       "utcPriceDateTime": null,
-      "utcCheckedDateTime": "2026-10-17T20:08:15.742Z",
+      "utcCheckedDateTime": "2026-10-19T06:43:07.319Z",
       "utcSetDateTime": "2026-09-19T05:12:39.086Z"
     },
     {
@@ -44421,7 +45225,7 @@
       "day": "2014-11-14",
       "price": null,
       "utcPriceDateTime": null,
-      "utcCheckedDateTime": "2026-10-18T01:52:40.951Z",
+      "utcCheckedDateTime": "2026-10-19T07:26:16.398Z",
       "utcSetDateTime": "2026-09-19T05:12:39.937Z"
     },
     {
@@ -44443,7 +45247,7 @@
       "day": "2015-03-02",
       "price": null,
       "utcPriceDateTime": null,
-      "utcCheckedDateTime": "2026-10-18T02:47:52.629Z",
+      "utcCheckedDateTime": "2026-10-20T08:16:18.369Z",
       "utcSetDateTime": "2026-09-19T05:12:41.159Z"
     },
     {
@@ -44454,7 +45258,7 @@
       "day": null,
       "price": null,
       "utcPriceDateTime": null,
-      "utcCheckedDateTime": "2026-10-18T03:26:54.766Z",
+      "utcCheckedDateTime": "2026-10-19T08:05:17.211Z",
       "utcSetDateTime": "2026-09-19T05:12:42.774Z"
     },
     {
@@ -44465,7 +45269,7 @@
       "day": "2017-03-24",
       "price": null,
       "utcPriceDateTime": null,
-      "utcCheckedDateTime": "2026-10-18T03:26:52.379Z",
+      "utcCheckedDateTime": "2026-10-19T08:05:15.972Z",
       "utcSetDateTime": "2026-09-19T05:12:42.776Z"
     },
     {
@@ -44674,7 +45478,7 @@
       "day": null,
       "price": null,
       "utcPriceDateTime": null,
-      "utcCheckedDateTime": "2026-10-18T02:21:00.285Z",
+      "utcCheckedDateTime": "2026-10-20T08:06:52.850Z",
       "utcSetDateTime": "2026-09-19T05:12:57.382Z"
     },
     {
@@ -44685,7 +45489,7 @@
       "day": "2017-06-30",
       "price": null,
       "utcPriceDateTime": null,
-      "utcCheckedDateTime": "2026-10-18T02:20:57.296Z",
+      "utcCheckedDateTime": "2026-10-20T08:06:52.451Z",
       "utcSetDateTime": "2026-09-19T05:12:57.384Z"
     },
     {
@@ -44839,7 +45643,7 @@
       "day": "2016-07-29",
       "price": null,
       "utcPriceDateTime": null,
-      "utcCheckedDateTime": "2026-10-18T04:00:14.295Z",
+      "utcCheckedDateTime": "2026-10-19T06:45:58.418Z",
       "utcSetDateTime": "2026-09-19T05:13:12.879Z"
     },
     {
@@ -44850,7 +45654,7 @@
       "day": null,
       "price": null,
       "utcPriceDateTime": null,
-      "utcCheckedDateTime": "2026-10-17T07:56:35.696Z",
+      "utcCheckedDateTime": "2026-10-19T16:41:25.659Z",
       "utcSetDateTime": "2026-09-19T05:13:15.385Z"
     },
     {
@@ -44861,7 +45665,7 @@
       "day": "2018-03-30",
       "price": null,
       "utcPriceDateTime": null,
-      "utcCheckedDateTime": "2026-10-17T07:56:31.728Z",
+      "utcCheckedDateTime": "2026-10-20T02:35:06.322Z",
       "utcSetDateTime": "2026-09-19T05:13:15.386Z"
     },
     {
@@ -45290,7 +46094,7 @@
       "day": null,
       "price": null,
       "utcPriceDateTime": null,
-      "utcCheckedDateTime": "2026-10-18T02:59:39.260Z",
+      "utcCheckedDateTime": "2026-10-19T10:22:09.278Z",
       "utcSetDateTime": "2026-09-19T05:20:28.354Z"
     },
     {
@@ -46159,7 +46963,7 @@
       "day": "2004-05-18",
       "price": null,
       "utcPriceDateTime": null,
-      "utcCheckedDateTime": "2026-10-17T20:20:38.028Z",
+      "utcCheckedDateTime": "2026-10-20T03:55:26.691Z",
       "utcSetDateTime": "2026-09-19T05:23:57.951Z"
     },
     {
@@ -46269,7 +47073,7 @@
       "day": "1998-09-29",
       "price": null,
       "utcPriceDateTime": null,
-      "utcCheckedDateTime": "2026-10-17T17:25:19.090Z",
+      "utcCheckedDateTime": "2026-10-19T07:09:27.289Z",
       "utcSetDateTime": "2026-09-19T05:26:19.132Z"
     },
     {
@@ -46291,7 +47095,7 @@
       "day": "2010-06-17",
       "price": null,
       "utcPriceDateTime": null,
-      "utcCheckedDateTime": "2026-10-17T23:03:18.615Z",
+      "utcCheckedDateTime": "2026-10-19T19:16:17.442Z",
       "utcSetDateTime": "2026-09-19T05:26:39.126Z"
     },
     {
@@ -46313,7 +47117,7 @@
       "day": "1996-09-18",
       "price": null,
       "utcPriceDateTime": null,
-      "utcCheckedDateTime": "2026-10-18T01:07:58.027Z",
+      "utcCheckedDateTime": "2026-10-19T16:43:32.024Z",
       "utcSetDateTime": "2026-09-19T05:27:34.312Z"
     },
     {
@@ -46335,7 +47139,7 @@
       "day": "2011-10-12",
       "price": null,
       "utcPriceDateTime": null,
-      "utcCheckedDateTime": "2026-10-17T17:49:39.593Z",
+      "utcCheckedDateTime": "2026-10-19T12:49:32.637Z",
       "utcSetDateTime": "2026-09-19T05:27:38.678Z"
     },
     {
@@ -46379,7 +47183,7 @@
       "day": "1938-06-07",
       "price": null,
       "utcPriceDateTime": null,
-      "utcCheckedDateTime": "2026-10-17T22:45:59.829Z",
+      "utcCheckedDateTime": "2026-10-19T08:44:17.362Z",
       "utcSetDateTime": "2026-09-19T05:28:39.503Z"
     },
     {
@@ -46401,7 +47205,7 @@
       "day": "1913-12-01",
       "price": null,
       "utcPriceDateTime": null,
-      "utcCheckedDateTime": "2026-10-11T02:54:14.732Z",
+      "utcCheckedDateTime": "2026-10-20T07:37:47.417Z",
       "utcSetDateTime": "2026-09-19T05:28:47.209Z"
     },
     {
@@ -46423,7 +47227,7 @@
       "day": "1961-01-01",
       "price": null,
       "utcPriceDateTime": null,
-      "utcCheckedDateTime": "2026-10-18T00:03:21.442Z",
+      "utcCheckedDateTime": "2026-10-19T12:30:41.324Z",
       "utcSetDateTime": "2026-09-19T05:28:52.072Z"
     },
     {
@@ -46445,7 +47249,7 @@
       "day": "1967-01-01",
       "price": null,
       "utcPriceDateTime": null,
-      "utcCheckedDateTime": "2026-10-18T02:26:53.745Z",
+      "utcCheckedDateTime": "2026-10-19T06:40:59.419Z",
       "utcSetDateTime": "2026-09-19T05:28:55.835Z"
     },
     {
@@ -46533,7 +47337,7 @@
       "day": "2013-11-14",
       "price": null,
       "utcPriceDateTime": null,
-      "utcCheckedDateTime": "2026-10-17T16:28:44.791Z",
+      "utcCheckedDateTime": "2026-10-19T04:17:26.950Z",
       "utcSetDateTime": "2026-09-19T06:02:08.259Z"
     },
     {
@@ -46555,7 +47359,7 @@
       "day": "2013-11-14",
       "price": null,
       "utcPriceDateTime": null,
-      "utcCheckedDateTime": "2026-10-17T16:28:44.192Z",
+      "utcCheckedDateTime": "2026-10-19T04:17:26.645Z",
       "utcSetDateTime": "2026-09-19T06:02:08.262Z"
     },
     {
@@ -46577,7 +47381,7 @@
       "day": "2013-11-14",
       "price": null,
       "utcPriceDateTime": null,
-      "utcCheckedDateTime": "2026-10-17T16:28:44.134Z",
+      "utcCheckedDateTime": "2026-10-19T04:17:26.336Z",
       "utcSetDateTime": "2026-09-19T06:02:08.264Z"
     },
     {
@@ -47435,7 +48239,7 @@
       "day": "2024-05-13",
       "price": null,
       "utcPriceDateTime": null,
-      "utcCheckedDateTime": "2026-10-12T22:53:14.875Z",
+      "utcCheckedDateTime": "2026-10-20T04:56:25.366Z",
       "utcSetDateTime": "2026-09-19T15:10:53.695Z"
     },
     {
@@ -47633,7 +48437,7 @@
       "day": "2024-07-18",
       "price": null,
       "utcPriceDateTime": null,
-      "utcCheckedDateTime": "2026-10-18T02:39:26.036Z",
+      "utcCheckedDateTime": "2026-10-20T02:28:42.076Z",
       "utcSetDateTime": "2026-09-19T15:10:53.708Z"
     },
     {
@@ -47941,7 +48745,7 @@
       "day": "2024-08-12",
       "price": null,
       "utcPriceDateTime": null,
-      "utcCheckedDateTime": "2026-10-17T08:59:10.508Z",
+      "utcCheckedDateTime": "2026-10-19T13:11:43.595Z",
       "utcSetDateTime": "2026-09-19T15:10:53.766Z"
     },
     {
@@ -48029,7 +48833,7 @@
       "day": "2024-09-03",
       "price": null,
       "utcPriceDateTime": null,
-      "utcCheckedDateTime": "2026-10-08T12:16:50.487Z",
+      "utcCheckedDateTime": "2026-10-19T12:28:48.965Z",
       "utcSetDateTime": "2026-09-19T15:10:53.770Z"
     },
     {
@@ -48227,7 +49031,7 @@
       "day": "2024-09-12",
       "price": null,
       "utcPriceDateTime": null,
-      "utcCheckedDateTime": "2026-10-17T23:56:32.286Z",
+      "utcCheckedDateTime": "2026-10-19T09:15:50.434Z",
       "utcSetDateTime": "2026-09-19T15:10:53.809Z"
     },
     {
@@ -48425,7 +49229,7 @@
       "day": "2024-11-05",
       "price": null,
       "utcPriceDateTime": null,
-      "utcCheckedDateTime": "2026-10-17T21:00:09.364Z",
+      "utcCheckedDateTime": "2026-10-19T09:53:52.357Z",
       "utcSetDateTime": "2026-09-19T15:10:53.835Z"
     },
     {
@@ -48623,7 +49427,7 @@
       "day": "2024-11-20",
       "price": null,
       "utcPriceDateTime": null,
-      "utcCheckedDateTime": "2026-10-05T04:15:48.575Z",
+      "utcCheckedDateTime": "2026-10-19T11:13:10.619Z",
       "utcSetDateTime": "2026-09-19T15:10:53.865Z"
     },
     {
@@ -48821,7 +49625,7 @@
       "day": "2025-01-29",
       "price": null,
       "utcPriceDateTime": null,
-      "utcCheckedDateTime": "2026-10-18T01:47:57.264Z",
+      "utcCheckedDateTime": "2026-10-20T01:49:19.310Z",
       "utcSetDateTime": "2026-09-19T15:10:53.904Z"
     },
     {
@@ -49019,7 +49823,7 @@
       "day": "2025-01-31",
       "price": null,
       "utcPriceDateTime": null,
-      "utcCheckedDateTime": "2026-10-17T06:55:51.714Z",
+      "utcCheckedDateTime": "2026-10-19T17:17:59.042Z",
       "utcSetDateTime": "2026-09-19T15:10:53.925Z"
     },
     {
@@ -49217,7 +50021,7 @@
       "day": "2025-02-27",
       "price": null,
       "utcPriceDateTime": null,
-      "utcCheckedDateTime": "2026-10-11T19:19:25.193Z",
+      "utcCheckedDateTime": "2026-10-19T08:16:06.088Z",
       "utcSetDateTime": "2026-09-19T15:10:53.971Z"
     },
     {
@@ -49415,7 +50219,7 @@
       "day": "2025-03-27",
       "price": null,
       "utcPriceDateTime": null,
-      "utcCheckedDateTime": "2026-09-28T20:06:48.156Z",
+      "utcCheckedDateTime": "2026-10-19T10:15:27.156Z",
       "utcSetDateTime": "2026-09-19T15:10:53.995Z"
     },
     {
@@ -53991,7 +54795,7 @@
       "day": "2024-10-03",
       "price": null,
       "utcPriceDateTime": null,
-      "utcCheckedDateTime": "2026-10-16T06:10:46.304Z",
+      "utcCheckedDateTime": "2026-10-19T21:04:54.399Z",
       "utcSetDateTime": "2026-09-19T19:19:06.699Z"
     },
     {
@@ -54189,7 +54993,7 @@
       "day": "2025-01-14",
       "price": null,
       "utcPriceDateTime": null,
-      "utcCheckedDateTime": "2026-10-17T17:34:08.552Z",
+      "utcCheckedDateTime": "2026-10-19T23:43:54.514Z",
       "utcSetDateTime": "2026-09-19T19:19:06.756Z"
     },
     {
@@ -56277,9 +57081,9 @@
       "kind": "start",
       "utcStartDateTime": "2026-09-28T00:30:00.000Z",
       "day": "2026-09-27",
-      "price": null,
-      "utcPriceDateTime": null,
-      "utcCheckedDateTime": null,
+      "price": 56.54,
+      "utcPriceDateTime": "2026-09-25T20:00:00.000Z",
+      "utcCheckedDateTime": "2026-10-18T06:40:36.817Z",
       "utcSetDateTime": "2026-09-20T16:28:44.642Z"
     },
     {
@@ -59590,7 +60394,7 @@
       "day": "1969-02-09",
       "price": null,
       "utcPriceDateTime": null,
-      "utcCheckedDateTime": "2026-10-17T17:21:47.644Z",
+      "utcCheckedDateTime": "2026-10-19T08:02:53.422Z",
       "utcSetDateTime": "2026-09-21T04:55:55.006Z"
     },
     {
@@ -59612,7 +60416,7 @@
       "day": "2009-12-15",
       "price": null,
       "utcPriceDateTime": null,
-      "utcCheckedDateTime": "2026-10-17T17:26:13.118Z",
+      "utcCheckedDateTime": "2026-10-19T07:34:32.587Z",
       "utcSetDateTime": "2026-09-21T04:56:06.694Z"
     },
     {
@@ -59876,7 +60680,7 @@
       "day": "1962-07-02",
       "price": null,
       "utcPriceDateTime": null,
-      "utcCheckedDateTime": "2026-10-17T20:06:40.266Z",
+      "utcCheckedDateTime": "2026-10-19T22:16:02.816Z",
       "utcSetDateTime": "2026-09-21T23:24:07.974Z"
     },
     {
@@ -59898,7 +60702,7 @@
       "day": "1995-07-16",
       "price": null,
       "utcPriceDateTime": null,
-      "utcCheckedDateTime": "2026-10-11T06:40:50.926Z",
+      "utcCheckedDateTime": "2026-10-19T07:28:30.817Z",
       "utcSetDateTime": "2026-09-21T23:24:08.006Z"
     },
     {
@@ -60327,7 +61131,7 @@
       "day": "2013-11-13",
       "price": null,
       "utcPriceDateTime": null,
-      "utcCheckedDateTime": "2026-10-18T00:04:32.417Z",
+      "utcCheckedDateTime": "2026-10-20T00:09:46.019Z",
       "utcSetDateTime": "2026-09-22T23:58:08.799Z"
     },
     {
@@ -60349,7 +61153,7 @@
       "day": "2014-01-13",
       "price": null,
       "utcPriceDateTime": null,
-      "utcCheckedDateTime": "2026-10-17T19:14:33.166Z",
+      "utcCheckedDateTime": "2026-10-20T07:58:13.122Z",
       "utcSetDateTime": "2026-09-22T23:58:08.914Z"
     },
     {
@@ -60371,7 +61175,7 @@
       "day": "2014-05-13",
       "price": null,
       "utcPriceDateTime": null,
-      "utcCheckedDateTime": "2026-10-17T07:40:54.313Z",
+      "utcCheckedDateTime": "2026-10-19T20:26:36.489Z",
       "utcSetDateTime": "2026-09-22T23:58:09.178Z"
     },
     {
@@ -60393,7 +61197,7 @@
       "day": "2014-08-13",
       "price": null,
       "utcPriceDateTime": null,
-      "utcCheckedDateTime": "2026-10-18T00:29:34.486Z",
+      "utcCheckedDateTime": "2026-10-19T07:22:20.982Z",
       "utcSetDateTime": "2026-09-22T23:58:10.317Z"
     },
     {
@@ -60470,7 +61274,7 @@
       "day": "2014-07-31",
       "price": null,
       "utcPriceDateTime": null,
-      "utcCheckedDateTime": "2026-10-17T11:01:30.614Z",
+      "utcCheckedDateTime": "2026-10-18T15:01:53.796Z",
       "utcSetDateTime": "2026-09-23T00:04:33.582Z"
     },
     {
@@ -60481,7 +61285,7 @@
       "day": "2014-09-29",
       "price": null,
       "utcPriceDateTime": null,
-      "utcCheckedDateTime": "2026-10-17T21:02:31.729Z",
+      "utcCheckedDateTime": "2026-10-20T06:16:00.232Z",
       "utcSetDateTime": "2026-09-23T00:04:33.697Z"
     },
     {
@@ -80499,9 +81303,9 @@
       "kind": "start",
       "utcStartDateTime": "2026-09-27T07:00:00.000Z",
       "day": "2026-09-27",
-      "price": null,
-      "utcPriceDateTime": null,
-      "utcCheckedDateTime": null,
+      "price": 35.75,
+      "utcPriceDateTime": "2026-09-25T20:00:00.000Z",
+      "utcCheckedDateTime": "2026-10-18T08:33:13.969Z",
       "utcSetDateTime": "2026-09-24T20:56:03.535Z"
     },
     {
@@ -86516,9 +87320,9 @@
       "kind": "start",
       "utcStartDateTime": "2026-10-19T00:00:00.000Z",
       "day": "2026-10-19",
-      "price": null,
-      "utcPriceDateTime": null,
-      "utcCheckedDateTime": null,
+      "price": 108.57,
+      "utcPriceDateTime": "2026-10-19T20:00:00.000Z",
+      "utcCheckedDateTime": "2026-10-20T07:47:32.108Z",
       "utcSetDateTime": "2026-09-27T15:52:25.173Z"
     },
     {
@@ -87585,7 +88389,7 @@
       "day": "2015-05-19",
       "price": null,
       "utcPriceDateTime": null,
-      "utcCheckedDateTime": "2026-10-15T10:10:54.821Z",
+      "utcCheckedDateTime": "2026-10-19T09:55:40.519Z",
       "utcSetDateTime": "2026-09-28T15:34:06.259Z"
     },
     {
@@ -87607,7 +88411,7 @@
       "day": "2015-05-19",
       "price": null,
       "utcPriceDateTime": null,
-      "utcCheckedDateTime": "2026-10-15T10:10:54.482Z",
+      "utcCheckedDateTime": "2026-10-19T09:55:39.933Z",
       "utcSetDateTime": "2026-09-28T15:34:06.290Z"
     },
     {
@@ -87629,7 +88433,7 @@
       "day": "2015-05-19",
       "price": null,
       "utcPriceDateTime": null,
-      "utcCheckedDateTime": "2026-10-15T10:10:53.995Z",
+      "utcCheckedDateTime": "2026-10-19T09:55:39.885Z",
       "utcSetDateTime": "2026-09-28T15:34:06.404Z"
     },
     {
@@ -89389,7 +90193,7 @@
       "day": "2026-01-16",
       "price": null,
       "utcPriceDateTime": null,
-      "utcCheckedDateTime": "2026-10-15T19:07:17.837Z",
+      "utcCheckedDateTime": "2026-10-19T07:08:16.000Z",
       "utcSetDateTime": "2026-09-28T17:38:14.374Z"
     },
     {
@@ -89620,7 +90424,7 @@
       "day": "2026-03-21",
       "price": null,
       "utcPriceDateTime": null,
-      "utcCheckedDateTime": "2026-10-17T18:19:28.479Z",
+      "utcCheckedDateTime": "2026-10-19T21:42:31.647Z",
       "utcSetDateTime": "2026-09-28T17:41:42.732Z"
     },
     {
@@ -95283,9 +96087,9 @@
       "kind": "start",
       "utcStartDateTime": "2026-10-13T00:00:00.000Z",
       "day": "2026-10-13",
-      "price": null,
-      "utcPriceDateTime": null,
-      "utcCheckedDateTime": null,
+      "price": 543.45,
+      "utcPriceDateTime": "2026-10-13T20:00:00.000Z",
+      "utcCheckedDateTime": "2026-10-18T05:02:34.943Z",
       "utcSetDateTime": "2026-10-04T14:56:29.572Z"
     },
     {
@@ -95305,9 +96109,9 @@
       "kind": "start",
       "utcStartDateTime": "2026-10-13T00:00:00.000Z",
       "day": "2026-10-13",
-      "price": null,
-      "utcPriceDateTime": null,
-      "utcCheckedDateTime": null,
+      "price": 258.58,
+      "utcPriceDateTime": "2026-10-13T20:00:00.000Z",
+      "utcCheckedDateTime": "2026-10-18T05:02:34.933Z",
       "utcSetDateTime": "2026-10-04T14:56:29.747Z"
     },
     {
@@ -95327,9 +96131,9 @@
       "kind": "start",
       "utcStartDateTime": "2026-10-13T00:00:00.000Z",
       "day": "2026-10-13",
-      "price": null,
-      "utcPriceDateTime": null,
-      "utcCheckedDateTime": null,
+      "price": 353.78,
+      "utcPriceDateTime": "2026-10-13T20:00:00.000Z",
+      "utcCheckedDateTime": "2026-10-18T05:02:34.891Z",
       "utcSetDateTime": "2026-10-04T14:56:29.850Z"
     },
     {
@@ -95349,9 +96153,9 @@
       "kind": "start",
       "utcStartDateTime": "2026-10-13T00:00:00.000Z",
       "day": "2026-10-13",
-      "price": null,
-      "utcPriceDateTime": null,
-      "utcCheckedDateTime": null,
+      "price": 238.01,
+      "utcPriceDateTime": "2026-10-13T20:00:00.000Z",
+      "utcCheckedDateTime": "2026-10-18T05:02:34.830Z",
       "utcSetDateTime": "2026-10-04T14:56:29.923Z"
     },
     {
@@ -95371,9 +96175,9 @@
       "kind": "start",
       "utcStartDateTime": "2026-10-13T00:00:00.000Z",
       "day": "2026-10-13",
-      "price": null,
-      "utcPriceDateTime": null,
-      "utcCheckedDateTime": null,
+      "price": 228.52,
+      "utcPriceDateTime": "2026-10-13T20:00:00.000Z",
+      "utcCheckedDateTime": "2026-10-18T05:02:34.452Z",
       "utcSetDateTime": "2026-10-04T14:56:30.059Z"
     },
     {
@@ -95393,9 +96197,9 @@
       "kind": "start",
       "utcStartDateTime": "2026-10-13T00:00:00.000Z",
       "day": "2026-10-13",
-      "price": null,
-      "utcPriceDateTime": null,
-      "utcCheckedDateTime": null,
+      "price": 605.53,
+      "utcPriceDateTime": "2026-10-13T20:00:00.000Z",
+      "utcCheckedDateTime": "2026-10-18T05:02:34.001Z",
       "utcSetDateTime": "2026-10-04T14:56:30.200Z"
     },
     {
@@ -95415,9 +96219,9 @@
       "kind": "start",
       "utcStartDateTime": "2026-10-13T00:00:00.000Z",
       "day": "2026-10-13",
-      "price": null,
-      "utcPriceDateTime": null,
-      "utcCheckedDateTime": null,
+      "price": 102.81,
+      "utcPriceDateTime": "2026-10-13T20:00:00.000Z",
+      "utcCheckedDateTime": "2026-10-18T05:02:33.729Z",
       "utcSetDateTime": "2026-10-04T14:56:30.284Z"
     },
     {
@@ -95879,7 +96683,7 @@
       "day": "2004-08-19",
       "price": null,
       "utcPriceDateTime": null,
-      "utcCheckedDateTime": "2026-10-18T00:15:06.570Z",
+      "utcCheckedDateTime": "2026-10-20T00:18:25.420Z",
       "utcSetDateTime": "2026-10-04T16:53:29.260Z"
     },
     {
@@ -96209,7 +97013,7 @@
       "day": "1990-02-16",
       "price": null,
       "utcPriceDateTime": null,
-      "utcCheckedDateTime": "2026-10-18T00:48:20.408Z",
+      "utcCheckedDateTime": "2026-10-19T02:43:27.250Z",
       "utcSetDateTime": "2026-10-04T17:01:53.345Z"
     },
     {
@@ -96341,7 +97145,7 @@
       "day": "2013-10-29",
       "price": null,
       "utcPriceDateTime": null,
-      "utcCheckedDateTime": "2026-10-18T01:26:44.730Z",
+      "utcCheckedDateTime": "2026-10-19T07:11:19.039Z",
       "utcSetDateTime": "2026-10-04T17:03:53.556Z"
     },
     {
@@ -96539,7 +97343,7 @@
       "day": "2012-10-30",
       "price": null,
       "utcPriceDateTime": null,
-      "utcCheckedDateTime": "2026-10-17T19:35:29.332Z",
+      "utcCheckedDateTime": "2026-10-20T16:23:04.516Z",
       "utcSetDateTime": "2026-10-04T17:05:50.595Z"
     },
     {
@@ -96693,7 +97497,7 @@
       "day": "1999-11-30",
       "price": null,
       "utcPriceDateTime": null,
-      "utcCheckedDateTime": "2026-10-13T03:08:09.635Z",
+      "utcCheckedDateTime": "2026-10-19T17:33:04.646Z",
       "utcSetDateTime": "2026-10-04T17:07:43.392Z"
     },
     {
@@ -96759,7 +97563,7 @@
       "day": "1989-03-24",
       "price": null,
       "utcPriceDateTime": null,
-      "utcCheckedDateTime": "2026-10-18T04:24:53.964Z",
+      "utcCheckedDateTime": "2026-10-19T08:16:50.324Z",
       "utcSetDateTime": "2026-10-04T17:08:40.359Z"
     },
     {
@@ -96803,7 +97607,7 @@
       "day": "1999-05-04",
       "price": null,
       "utcPriceDateTime": null,
-      "utcCheckedDateTime": "2026-10-17T21:56:36.604Z",
+      "utcCheckedDateTime": "2026-10-19T19:02:07.131Z",
       "utcSetDateTime": "2026-10-04T17:09:19.040Z"
     },
     {
@@ -96957,7 +97761,7 @@
       "day": "2008-03-19",
       "price": null,
       "utcPriceDateTime": null,
-      "utcCheckedDateTime": "2026-10-17T22:52:33.322Z",
+      "utcCheckedDateTime": "2026-10-19T21:18:52.230Z",
       "utcSetDateTime": "2026-10-04T17:11:29.667Z"
     },
     {
@@ -97397,7 +98201,7 @@
       "day": "2022-02-08",
       "price": null,
       "utcPriceDateTime": null,
-      "utcCheckedDateTime": "2026-10-12T18:38:03.109Z",
+      "utcCheckedDateTime": "2026-10-18T05:33:50.031Z",
       "utcSetDateTime": "2026-10-04T17:33:33.468Z"
     },
     {
@@ -97661,7 +98465,7 @@
       "day": "1998-04-06",
       "price": null,
       "utcPriceDateTime": null,
-      "utcCheckedDateTime": "2026-10-18T02:08:09.097Z",
+      "utcCheckedDateTime": "2026-10-19T21:59:26.530Z",
       "utcSetDateTime": "2026-10-04T17:36:24.812Z"
     },
     {
@@ -97683,7 +98487,7 @@
       "day": "1955-04-15",
       "price": null,
       "utcPriceDateTime": null,
-      "utcCheckedDateTime": "2026-10-12T10:37:12.065Z",
+      "utcCheckedDateTime": "2026-10-19T07:38:00.884Z",
       "utcSetDateTime": "2026-10-04T17:36:43.139Z"
     },
     {
@@ -97837,7 +98641,7 @@
       "day": "2014-09-04",
       "price": null,
       "utcPriceDateTime": null,
-      "utcCheckedDateTime": "2026-10-17T08:58:57.334Z",
+      "utcCheckedDateTime": "2026-10-18T09:19:35.248Z",
       "utcSetDateTime": "2026-10-04T17:39:01.834Z"
     },
     {
@@ -98057,7 +98861,7 @@
       "day": "1898-08-28",
       "price": null,
       "utcPriceDateTime": null,
-      "utcCheckedDateTime": "2026-10-18T01:11:16.359Z",
+      "utcCheckedDateTime": "2026-10-20T02:58:09.977Z",
       "utcSetDateTime": "2026-10-04T17:42:41.797Z"
     },
     {
@@ -98409,7 +99213,7 @@
       "day": "2025-09-12",
       "price": null,
       "utcPriceDateTime": null,
-      "utcCheckedDateTime": "2026-10-17T22:28:37.665Z",
+      "utcCheckedDateTime": "2026-10-19T17:13:45.573Z",
       "utcSetDateTime": "2026-10-04T17:46:52.246Z"
     },
     {
@@ -98453,7 +99257,7 @@
       "day": "2026-04-23",
       "price": null,
       "utcPriceDateTime": null,
-      "utcCheckedDateTime": "2026-10-17T18:14:24.441Z",
+      "utcCheckedDateTime": "2026-10-19T03:43:03.974Z",
       "utcSetDateTime": "2026-10-04T17:47:41.463Z"
     },
     {
@@ -98497,7 +99301,7 @@
       "day": "2025-10-29",
       "price": null,
       "utcPriceDateTime": null,
-      "utcCheckedDateTime": "2026-10-17T17:38:24.409Z",
+      "utcCheckedDateTime": "2026-10-19T04:02:06.685Z",
       "utcSetDateTime": "2026-10-04T17:48:29.958Z"
     },
     {
@@ -98519,7 +99323,7 @@
       "day": "2021-12-30",
       "price": null,
       "utcPriceDateTime": null,
-      "utcCheckedDateTime": "2026-10-17T17:48:49.739Z",
+      "utcCheckedDateTime": "2026-10-20T06:08:33.940Z",
       "utcSetDateTime": "2026-10-04T17:48:53.381Z"
     },
     {
@@ -98629,7 +99433,7 @@
       "day": "1958-09-12",
       "price": null,
       "utcPriceDateTime": null,
-      "utcCheckedDateTime": "2026-10-10T10:40:57.695Z",
+      "utcCheckedDateTime": "2026-10-18T06:07:19.600Z",
       "utcSetDateTime": "2026-10-04T17:50:08.203Z"
     },
     {
@@ -98871,7 +99675,7 @@
       "day": "1989-06-01",
       "price": null,
       "utcPriceDateTime": null,
-      "utcCheckedDateTime": "2026-10-18T01:46:22.224Z",
+      "utcCheckedDateTime": "2026-10-19T08:57:02.891Z",
       "utcSetDateTime": "2026-10-04T22:26:12.499Z"
     },
     {
@@ -100279,7 +101083,7 @@
       "day": "2014-09-19",
       "price": null,
       "utcPriceDateTime": null,
-      "utcCheckedDateTime": "2026-10-18T00:29:11.095Z",
+      "utcCheckedDateTime": "2026-10-20T21:07:02.144Z",
       "utcSetDateTime": "2026-10-04T23:03:00.553Z"
     },
     {
@@ -100367,7 +101171,7 @@
       "day": "1994-06-12",
       "price": null,
       "utcPriceDateTime": null,
-      "utcCheckedDateTime": "2026-10-18T02:26:53.746Z",
+      "utcCheckedDateTime": "2026-10-19T23:07:05.112Z",
       "utcSetDateTime": "2026-10-04T23:04:14.781Z"
     },
     {
@@ -100675,7 +101479,7 @@
       "day": "1947-03-12",
       "price": null,
       "utcPriceDateTime": null,
-      "utcCheckedDateTime": "2026-10-18T03:27:55.137Z",
+      "utcCheckedDateTime": "2026-10-19T03:38:11.461Z",
       "utcSetDateTime": "2026-10-04T23:08:48.388Z"
     },
     {
@@ -100763,7 +101567,7 @@
       "day": "2015-10-21",
       "price": null,
       "utcPriceDateTime": null,
-      "utcCheckedDateTime": "2026-10-11T14:50:39.368Z",
+      "utcCheckedDateTime": "2026-10-20T16:38:03.944Z",
       "utcSetDateTime": "2026-10-04T23:10:21.409Z"
     },
     {
@@ -100851,7 +101655,7 @@
       "day": "2008-10-16",
       "price": null,
       "utcPriceDateTime": null,
-      "utcCheckedDateTime": "2026-10-18T03:01:49.315Z",
+      "utcCheckedDateTime": "2026-10-19T08:55:52.817Z",
       "utcSetDateTime": "2026-10-04T23:11:35.560Z"
     },
     {
@@ -100873,7 +101677,7 @@
       "day": "2010-11-18",
       "price": null,
       "utcPriceDateTime": null,
-      "utcCheckedDateTime": "2026-10-17T12:39:06.562Z",
+      "utcCheckedDateTime": "2026-10-18T13:50:11.106Z",
       "utcSetDateTime": "2026-10-04T23:11:53.828Z"
     },
     {
@@ -102149,7 +102953,7 @@
       "day": "2015-12-10",
       "price": null,
       "utcPriceDateTime": null,
-      "utcCheckedDateTime": "2026-10-18T02:19:37.740Z",
+      "utcCheckedDateTime": "2026-10-19T08:06:38.058Z",
       "utcSetDateTime": "2026-10-04T23:54:43.501Z"
     },
     {
@@ -102215,7 +103019,7 @@
       "day": "2011-01-28",
       "price": null,
       "utcPriceDateTime": null,
-      "utcCheckedDateTime": "2026-10-17T22:58:46.575Z",
+      "utcCheckedDateTime": "2026-10-19T18:46:37.132Z",
       "utcSetDateTime": "2026-10-04T23:55:53.117Z"
     },
     {
@@ -102391,7 +103195,7 @@
       "day": "1903-06-16",
       "price": null,
       "utcPriceDateTime": null,
-      "utcCheckedDateTime": "2026-10-18T04:25:30.466Z",
+      "utcCheckedDateTime": "2026-10-20T07:20:37.363Z",
       "utcSetDateTime": "2026-10-05T00:00:02.961Z"
     },
     {
@@ -102413,7 +103217,7 @@
       "day": "1956-01-17",
       "price": null,
       "utcPriceDateTime": null,
-      "utcCheckedDateTime": "2026-10-18T01:04:22.325Z",
+      "utcCheckedDateTime": "2026-10-19T20:26:55.587Z",
       "utcSetDateTime": "2026-10-05T00:05:05.266Z"
     },
     {
@@ -102435,7 +103239,7 @@
       "day": "1956-01-17",
       "price": null,
       "utcPriceDateTime": null,
-      "utcCheckedDateTime": "2026-10-18T01:04:19.120Z",
+      "utcCheckedDateTime": "2026-10-19T20:26:54.276Z",
       "utcSetDateTime": "2026-10-05T00:05:05.327Z"
     },
     {
@@ -102567,7 +103371,7 @@
       "day": "1954-01-21",
       "price": null,
       "utcPriceDateTime": null,
-      "utcCheckedDateTime": "2026-10-17T10:02:34.096Z",
+      "utcCheckedDateTime": "2026-10-18T14:23:57.073Z",
       "utcSetDateTime": "2026-10-05T00:07:06.382Z"
     },
     {
@@ -102743,7 +103547,7 @@
       "day": "2013-11-13",
       "price": null,
       "utcPriceDateTime": null,
-      "utcCheckedDateTime": "2026-10-17T23:19:39.797Z",
+      "utcCheckedDateTime": "2026-10-19T08:25:45.939Z",
       "utcSetDateTime": "2026-10-05T00:09:31.037Z"
     },
     {
@@ -102853,7 +103657,7 @@
       "day": "1971-02-08",
       "price": null,
       "utcPriceDateTime": null,
-      "utcCheckedDateTime": "2026-10-17T18:16:31.566Z",
+      "utcCheckedDateTime": "2026-10-19T04:47:55.586Z",
       "utcSetDateTime": "2026-10-05T00:15:45.334Z"
     },
     {
@@ -103029,7 +103833,7 @@
       "day": "2011-11-18",
       "price": null,
       "utcPriceDateTime": null,
-      "utcCheckedDateTime": "2026-10-16T04:17:46.389Z",
+      "utcCheckedDateTime": "2026-10-18T07:45:59.508Z",
       "utcSetDateTime": "2026-10-05T03:00:02.234Z"
     },
     {
@@ -103161,7 +103965,7 @@
       "day": "2018-01-21",
       "price": null,
       "utcPriceDateTime": null,
-      "utcCheckedDateTime": "2026-10-17T23:32:51.364Z",
+      "utcCheckedDateTime": "2026-10-19T17:27:07.093Z",
       "utcSetDateTime": "2026-10-05T03:02:22.571Z"
     },
     {
@@ -103293,7 +104097,7 @@
       "day": "1962-05-01",
       "price": null,
       "utcPriceDateTime": null,
-      "utcCheckedDateTime": "2026-10-17T20:03:06.522Z",
+      "utcCheckedDateTime": "2026-10-19T18:54:37.011Z",
       "utcSetDateTime": "2026-10-05T03:05:15.855Z"
     },
     {
@@ -103381,7 +104185,7 @@
       "day": "1907-08-28",
       "price": null,
       "utcPriceDateTime": null,
-      "utcCheckedDateTime": "2026-10-10T13:46:58.980Z",
+      "utcCheckedDateTime": "2026-10-20T05:03:37.940Z",
       "utcSetDateTime": "2026-10-05T03:06:43.297Z"
     },
     {
@@ -103403,7 +104207,7 @@
       "day": "1999-11-10",
       "price": null,
       "utcPriceDateTime": null,
-      "utcCheckedDateTime": "2026-10-10T12:42:46.374Z",
+      "utcCheckedDateTime": "2026-10-20T08:21:17.843Z",
       "utcSetDateTime": "2026-10-05T03:07:03.157Z"
     },
     {
@@ -103689,7 +104493,7 @@
       "day": "2006-01-24",
       "price": null,
       "utcPriceDateTime": null,
-      "utcCheckedDateTime": "2026-10-18T02:26:27.366Z",
+      "utcCheckedDateTime": "2026-10-20T16:40:53.826Z",
       "utcSetDateTime": "2026-10-05T15:55:52.693Z"
     },
     {
@@ -103821,7 +104625,7 @@
       "day": "2023-02-01",
       "price": null,
       "utcPriceDateTime": null,
-      "utcCheckedDateTime": "2026-10-17T08:52:51.772Z",
+      "utcCheckedDateTime": "2026-10-20T02:15:06.194Z",
       "utcSetDateTime": "2026-10-05T16:04:31.267Z"
     },
     {
@@ -103887,7 +104691,7 @@
       "day": "2023-02-01",
       "price": null,
       "utcPriceDateTime": null,
-      "utcCheckedDateTime": "2026-10-17T08:52:51.734Z",
+      "utcCheckedDateTime": "2026-10-20T02:15:02.435Z",
       "utcSetDateTime": "2026-10-05T16:04:31.360Z"
     },
     {
@@ -104129,7 +104933,7 @@
       "day": "2024-10-13",
       "price": null,
       "utcPriceDateTime": null,
-      "utcCheckedDateTime": "2026-10-17T21:29:18.366Z",
+      "utcCheckedDateTime": "2026-10-18T23:07:57.786Z",
       "utcSetDateTime": "2026-10-05T16:14:30.896Z"
     },
     {
@@ -104151,7 +104955,7 @@
       "day": "2014-09-09",
       "price": null,
       "utcPriceDateTime": null,
-      "utcCheckedDateTime": "2026-10-18T00:16:25.003Z",
+      "utcCheckedDateTime": "2026-10-20T15:18:57.402Z",
       "utcSetDateTime": "2026-10-05T20:26:37.193Z"
     },
     {
@@ -104173,7 +104977,7 @@
       "day": "2015-04-24",
       "price": null,
       "utcPriceDateTime": null,
-      "utcCheckedDateTime": "2026-10-18T04:01:44.204Z",
+      "utcCheckedDateTime": "2026-10-19T14:41:13.893Z",
       "utcSetDateTime": "2026-10-05T20:27:17.515Z"
     },
     {
@@ -104525,7 +105329,7 @@
       "day": "2015-01-21",
       "price": null,
       "utcPriceDateTime": null,
-      "utcCheckedDateTime": "2026-10-17T23:22:59.038Z",
+      "utcCheckedDateTime": "2026-10-19T07:16:36.041Z",
       "utcSetDateTime": "2026-10-08T13:04:55.196Z"
     },
     {
@@ -104547,7 +105351,7 @@
       "day": "2015-01-21",
       "price": null,
       "utcPriceDateTime": null,
-      "utcCheckedDateTime": "2026-10-17T23:22:58.292Z",
+      "utcCheckedDateTime": "2026-10-19T07:16:36.008Z",
       "utcSetDateTime": "2026-10-08T13:04:56.418Z"
     },
     {
@@ -104569,7 +105373,7 @@
       "day": "2015-01-21",
       "price": null,
       "utcPriceDateTime": null,
-      "utcCheckedDateTime": "2026-10-17T23:22:55.846Z",
+      "utcCheckedDateTime": "2026-10-19T07:16:35.711Z",
       "utcSetDateTime": "2026-10-08T13:04:58.674Z"
     },
     {
@@ -104591,7 +105395,7 @@
       "day": "2015-01-21",
       "price": null,
       "utcPriceDateTime": null,
-      "utcCheckedDateTime": "2026-10-17T23:22:54.990Z",
+      "utcCheckedDateTime": "2026-10-19T07:16:35.683Z",
       "utcSetDateTime": "2026-10-08T13:04:58.749Z"
     },
     {
@@ -104613,7 +105417,7 @@
       "day": "2015-01-21",
       "price": null,
       "utcPriceDateTime": null,
-      "utcCheckedDateTime": "2026-10-17T23:22:50.942Z",
+      "utcCheckedDateTime": "2026-10-19T07:16:35.337Z",
       "utcSetDateTime": "2026-10-08T13:04:58.828Z"
     },
     {
@@ -104635,7 +105439,7 @@
       "day": "2015-01-21",
       "price": null,
       "utcPriceDateTime": null,
-      "utcCheckedDateTime": "2026-10-17T23:22:48.226Z",
+      "utcCheckedDateTime": "2026-10-19T07:16:34.885Z",
       "utcSetDateTime": "2026-10-08T13:04:58.866Z"
     },
     {
@@ -104657,7 +105461,7 @@
       "day": "2015-01-21",
       "price": null,
       "utcPriceDateTime": null,
-      "utcCheckedDateTime": "2026-10-17T23:22:44.061Z",
+      "utcCheckedDateTime": "2026-10-19T07:16:33.540Z",
       "utcSetDateTime": "2026-10-08T13:04:58.899Z"
     },
     {
@@ -104679,7 +105483,7 @@
       "day": "2016-03-30",
       "price": null,
       "utcPriceDateTime": null,
-      "utcCheckedDateTime": "2026-10-18T00:24:28.598Z",
+      "utcCheckedDateTime": "2026-10-19T12:04:42.610Z",
       "utcSetDateTime": "2026-10-08T13:05:37.884Z"
     },
     {
@@ -104701,7 +105505,7 @@
       "day": "2016-03-30",
       "price": null,
       "utcPriceDateTime": null,
-      "utcCheckedDateTime": "2026-10-18T00:24:28.583Z",
+      "utcCheckedDateTime": "2026-10-19T12:04:42.573Z",
       "utcSetDateTime": "2026-10-08T13:05:38.128Z"
     },
     {
@@ -104723,7 +105527,7 @@
       "day": "2016-03-30",
       "price": null,
       "utcPriceDateTime": null,
-      "utcCheckedDateTime": "2026-10-18T00:24:28.308Z",
+      "utcCheckedDateTime": "2026-10-19T12:04:42.525Z",
       "utcSetDateTime": "2026-10-08T13:05:38.277Z"
     },
     {
@@ -104745,7 +105549,7 @@
       "day": "2016-03-30",
       "price": null,
       "utcPriceDateTime": null,
-      "utcCheckedDateTime": "2026-10-18T00:24:28.264Z",
+      "utcCheckedDateTime": "2026-10-19T12:04:42.380Z",
       "utcSetDateTime": "2026-10-08T13:05:38.397Z"
     },
     {
@@ -104767,7 +105571,7 @@
       "day": "2016-03-30",
       "price": null,
       "utcPriceDateTime": null,
-      "utcCheckedDateTime": "2026-10-18T00:24:28.149Z",
+      "utcCheckedDateTime": "2026-10-19T12:04:42.307Z",
       "utcSetDateTime": "2026-10-08T13:05:38.511Z"
     },
     {
@@ -104789,7 +105593,7 @@
       "day": "2016-03-30",
       "price": null,
       "utcPriceDateTime": null,
-      "utcCheckedDateTime": "2026-10-18T00:24:28.028Z",
+      "utcCheckedDateTime": "2026-10-19T12:04:42.233Z",
       "utcSetDateTime": "2026-10-08T13:05:38.802Z"
     },
     {
@@ -104811,7 +105615,7 @@
       "day": "2016-03-30",
       "price": null,
       "utcPriceDateTime": null,
-      "utcCheckedDateTime": "2026-10-18T00:24:27.531Z",
+      "utcCheckedDateTime": "2026-10-19T12:04:42.101Z",
       "utcSetDateTime": "2026-10-08T13:05:40.641Z"
     },
     {
@@ -105603,7 +106407,7 @@
       "day": "2008-03-16",
       "price": null,
       "utcPriceDateTime": null,
-      "utcCheckedDateTime": "2026-10-13T14:34:52.513Z",
+      "utcCheckedDateTime": "2026-10-19T08:25:02.463Z",
       "utcSetDateTime": "2026-10-08T13:12:24.397Z"
     },
     {
@@ -106769,7 +107573,7 @@
       "day": "1955-10-06",
       "price": null,
       "utcPriceDateTime": null,
-      "utcCheckedDateTime": "2026-10-18T03:41:54.610Z",
+      "utcCheckedDateTime": "2026-10-19T06:21:51.769Z",
       "utcSetDateTime": "2026-10-08T13:28:39.550Z"
     },
     {
@@ -106857,7 +107661,7 @@
       "day": "1964-04-17",
       "price": null,
       "utcPriceDateTime": null,
-      "utcCheckedDateTime": "2026-10-18T02:18:24.094Z",
+      "utcCheckedDateTime": "2026-10-19T12:35:00.055Z",
       "utcSetDateTime": "2026-10-08T13:29:22.411Z"
     },
     {
@@ -106879,7 +107683,7 @@
       "day": "1953-01-17",
       "price": null,
       "utcPriceDateTime": null,
-      "utcCheckedDateTime": "2026-10-18T02:07:41.161Z",
+      "utcCheckedDateTime": "2026-10-19T12:25:34.831Z",
       "utcSetDateTime": "2026-10-08T13:29:51.167Z"
     },
     {
@@ -107847,7 +108651,7 @@
       "day": "1970-01-22",
       "price": null,
       "utcPriceDateTime": null,
-      "utcCheckedDateTime": "2026-10-17T16:33:16.750Z",
+      "utcCheckedDateTime": "2026-10-19T03:23:28.309Z",
       "utcSetDateTime": "2026-10-08T13:45:58.290Z"
     },
     {
@@ -108452,7 +109256,7 @@
       "day": "2011-12-31",
       "price": null,
       "utcPriceDateTime": null,
-      "utcCheckedDateTime": "2026-10-17T20:01:27.153Z",
+      "utcCheckedDateTime": "2026-10-19T09:22:43.180Z",
       "utcSetDateTime": "2026-10-10T14:15:50.767Z"
     },
     {
@@ -108474,7 +109278,7 @@
       "day": "2010-12-31",
       "price": null,
       "utcPriceDateTime": null,
-      "utcCheckedDateTime": "2026-10-17T21:58:49.343Z",
+      "utcCheckedDateTime": "2026-10-19T07:14:19.227Z",
       "utcSetDateTime": "2026-10-10T14:15:56.146Z"
     },
     {
@@ -108628,7 +109432,7 @@
       "day": "2006-01-01",
       "price": null,
       "utcPriceDateTime": null,
-      "utcCheckedDateTime": "2026-10-17T18:23:14.534Z",
+      "utcCheckedDateTime": "2026-10-20T00:00:45.328Z",
       "utcSetDateTime": "2026-10-10T14:41:41.625Z"
     },
     {
@@ -108694,7 +109498,7 @@
       "day": "2013-01-01",
       "price": null,
       "utcPriceDateTime": null,
-      "utcCheckedDateTime": "2026-10-18T02:09:03.640Z",
+      "utcCheckedDateTime": "2026-10-20T06:51:54.367Z",
       "utcSetDateTime": "2026-10-10T14:42:39.306Z"
     },
     {
@@ -108716,7 +109520,7 @@
       "day": "2012-01-01",
       "price": null,
       "utcPriceDateTime": null,
-      "utcCheckedDateTime": "2026-10-17T19:13:28.434Z",
+      "utcCheckedDateTime": "2026-10-19T16:03:17.944Z",
       "utcSetDateTime": "2026-10-10T14:42:44.127Z"
     },
     {
@@ -108914,7 +109718,7 @@
       "day": "2007-01-01",
       "price": null,
       "utcPriceDateTime": null,
-      "utcCheckedDateTime": "2026-10-17T14:00:05.787Z",
+      "utcCheckedDateTime": "2026-10-18T15:23:45.427Z",
       "utcSetDateTime": "2026-10-10T14:43:54.740Z"
     },
     {
@@ -108958,7 +109762,7 @@
       "day": "2007-01-01",
       "price": null,
       "utcPriceDateTime": null,
-      "utcCheckedDateTime": "2026-10-17T22:43:55.020Z",
+      "utcCheckedDateTime": "2026-10-19T12:56:16.908Z",
       "utcSetDateTime": "2026-10-10T14:44:04.571Z"
     },
     {
@@ -109068,7 +109872,7 @@
       "day": "2008-01-01",
       "price": null,
       "utcPriceDateTime": null,
-      "utcCheckedDateTime": "2026-10-18T01:42:45.018Z",
+      "utcCheckedDateTime": "2026-10-19T08:03:00.907Z",
       "utcSetDateTime": "2026-10-10T14:45:05.583Z"
     },
     {
@@ -109134,7 +109938,7 @@
       "day": "2007-01-01",
       "price": null,
       "utcPriceDateTime": null,
-      "utcCheckedDateTime": "2026-10-16T06:05:17.370Z",
+      "utcCheckedDateTime": "2026-10-20T03:46:42.090Z",
       "utcSetDateTime": "2026-10-10T14:45:19.200Z"
     },
     {
@@ -109310,7 +110114,7 @@
       "day": "2016-01-01",
       "price": null,
       "utcPriceDateTime": null,
-      "utcCheckedDateTime": "2026-10-16T03:38:04.446Z",
+      "utcCheckedDateTime": "2026-10-19T22:44:19.178Z",
       "utcSetDateTime": "2026-10-10T14:47:10.601Z"
     },
     {
@@ -109332,7 +110136,7 @@
       "day": "2011-01-01",
       "price": null,
       "utcPriceDateTime": null,
-      "utcCheckedDateTime": "2026-10-17T16:12:56.346Z",
+      "utcCheckedDateTime": "2026-10-20T00:03:52.528Z",
       "utcSetDateTime": "2026-10-10T14:47:15.562Z"
     },
     {
@@ -109530,7 +110334,7 @@
       "day": "2013-01-01",
       "price": null,
       "utcPriceDateTime": null,
-      "utcCheckedDateTime": "2026-10-17T22:09:38.144Z",
+      "utcCheckedDateTime": "2026-10-19T07:50:16.281Z",
       "utcSetDateTime": "2026-10-10T14:48:46.690Z"
     },
     {
@@ -109618,7 +110422,7 @@
       "day": "2016-01-01",
       "price": null,
       "utcPriceDateTime": null,
-      "utcCheckedDateTime": "2026-10-18T02:55:52.826Z",
+      "utcCheckedDateTime": "2026-10-19T15:13:44.085Z",
       "utcSetDateTime": "2026-10-10T14:49:11.043Z"
     },
     {
@@ -109640,7 +110444,7 @@
       "day": "2010-01-01",
       "price": null,
       "utcPriceDateTime": null,
-      "utcCheckedDateTime": "2026-10-16T02:19:38.058Z",
+      "utcCheckedDateTime": "2026-10-19T17:04:47.781Z",
       "utcSetDateTime": "2026-10-10T14:49:15.505Z"
     },
     {
@@ -109728,7 +110532,7 @@
       "day": "2010-01-01",
       "price": null,
       "utcPriceDateTime": null,
-      "utcCheckedDateTime": "2026-10-17T22:58:09.538Z",
+      "utcCheckedDateTime": "2026-10-20T03:18:43.880Z",
       "utcSetDateTime": "2026-10-10T14:49:55.879Z"
     },
     {
@@ -117703,7 +118507,7 @@
       "day": "2023-11-06",
       "price": null,
       "utcPriceDateTime": null,
-      "utcCheckedDateTime": "2026-10-18T02:17:30.556Z",
+      "utcCheckedDateTime": "2026-10-20T17:10:06.188Z",
       "utcSetDateTime": "2026-10-12T21:01:02.838Z"
     },
     {
@@ -117769,7 +118573,7 @@
       "day": "2023-11-06",
       "price": null,
       "utcPriceDateTime": null,
-      "utcCheckedDateTime": "2026-10-18T02:17:30.286Z",
+      "utcCheckedDateTime": "2026-10-20T17:10:06.081Z",
       "utcSetDateTime": "2026-10-12T21:01:03.029Z"
     },
     {
@@ -119859,7 +120663,7 @@
       "day": "2026-04-30",
       "price": null,
       "utcPriceDateTime": null,
-      "utcCheckedDateTime": "2026-10-17T18:22:28.677Z",
+      "utcCheckedDateTime": "2026-10-19T04:14:15.625Z",
       "utcSetDateTime": "2026-10-12T21:40:47.575Z"
     },
     {
@@ -121826,9 +122630,9 @@
       "kind": "start",
       "utcStartDateTime": "2025-04-10T00:00:00.000Z",
       "day": "2025-04-10",
-      "price": null,
-      "utcPriceDateTime": null,
-      "utcCheckedDateTime": null,
+      "price": 103.4,
+      "utcPriceDateTime": "2025-04-10T20:00:00.000Z",
+      "utcCheckedDateTime": "2026-10-18T10:11:36.546Z",
       "utcSetDateTime": "2026-10-15T15:17:48.243Z"
     },
     {
@@ -123817,9 +124621,9 @@
       "kind": "posted",
       "utcStartDateTime": null,
       "day": null,
-      "price": null,
-      "utcPriceDateTime": null,
-      "utcCheckedDateTime": null,
+      "price": 527.0258,
+      "utcPriceDateTime": "2026-10-16T23:59:00.000Z",
+      "utcCheckedDateTime": "2026-10-18T22:14:46.160Z",
       "utcSetDateTime": "2026-10-17T20:08:10.864Z"
     },
     {
@@ -124250,6 +125054,2140 @@
       "utcPriceDateTime": null,
       "utcCheckedDateTime": null,
       "utcSetDateTime": "2026-10-18T04:33:50.851Z"
+    },
+    {
+      "id": 103443,
+      "pinTickerId": 4536,
+      "kind": "posted",
+      "utcStartDateTime": null,
+      "day": null,
+      "price": 705.35,
+      "utcPriceDateTime": "2026-10-16T23:59:00.000Z",
+      "utcCheckedDateTime": "2026-10-18T14:30:53.101Z",
+      "utcSetDateTime": "2026-10-18T14:30:47.370Z"
+    },
+    {
+      "id": 103444,
+      "pinTickerId": 4536,
+      "kind": "start",
+      "utcStartDateTime": "2026-10-18T00:00:00.000Z",
+      "day": "2026-10-18",
+      "price": 709.325,
+      "utcPriceDateTime": "2026-10-16T20:00:00.000Z",
+      "utcCheckedDateTime": "2026-10-18T21:54:08.033Z",
+      "utcSetDateTime": "2026-10-18T14:30:47.820Z"
+    },
+    {
+      "id": 103488,
+      "pinTickerId": 4537,
+      "kind": "posted",
+      "utcStartDateTime": null,
+      "day": null,
+      "price": 125.99,
+      "utcPriceDateTime": "2026-10-16T23:51:00.000Z",
+      "utcCheckedDateTime": "2026-10-18T14:31:24.762Z",
+      "utcSetDateTime": "2026-10-18T14:31:23.468Z"
+    },
+    {
+      "id": 103492,
+      "pinTickerId": 4537,
+      "kind": "start",
+      "utcStartDateTime": "2026-10-18T00:00:00.000Z",
+      "day": "2026-10-18",
+      "price": 125.75,
+      "utcPriceDateTime": "2026-10-16T20:00:00.000Z",
+      "utcCheckedDateTime": "2026-10-18T21:54:12.599Z",
+      "utcSetDateTime": "2026-10-18T14:31:23.534Z"
+    },
+    {
+      "id": 103519,
+      "pinTickerId": 4538,
+      "kind": "posted",
+      "utcStartDateTime": null,
+      "day": null,
+      "price": 125.99,
+      "utcPriceDateTime": "2026-10-16T23:51:00.000Z",
+      "utcCheckedDateTime": "2026-10-18T14:31:55.931Z",
+      "utcSetDateTime": "2026-10-18T14:31:54.496Z"
+    },
+    {
+      "id": 103521,
+      "pinTickerId": 4538,
+      "kind": "start",
+      "utcStartDateTime": "2026-10-18T00:00:00.000Z",
+      "day": "2026-10-18",
+      "price": 125.75,
+      "utcPriceDateTime": "2026-10-16T20:00:00.000Z",
+      "utcCheckedDateTime": "2026-10-18T21:52:57.528Z",
+      "utcSetDateTime": "2026-10-18T14:31:54.662Z"
+    },
+    {
+      "id": 103897,
+      "pinTickerId": 4539,
+      "kind": "posted",
+      "utcStartDateTime": null,
+      "day": null,
+      "price": 68.32,
+      "utcPriceDateTime": "2026-10-16T23:30:00.000Z",
+      "utcCheckedDateTime": "2026-10-18T14:38:07.721Z",
+      "utcSetDateTime": "2026-10-18T14:38:05.294Z"
+    },
+    {
+      "id": 103898,
+      "pinTickerId": 4539,
+      "kind": "start",
+      "utcStartDateTime": "2026-10-18T00:00:00.000Z",
+      "day": "2026-10-18",
+      "price": 68.32,
+      "utcPriceDateTime": "2026-10-16T20:00:00.000Z",
+      "utcCheckedDateTime": "2026-10-18T21:52:55.159Z",
+      "utcSetDateTime": "2026-10-18T14:38:05.581Z"
+    },
+    {
+      "id": 103923,
+      "pinTickerId": 4540,
+      "kind": "posted",
+      "utcStartDateTime": null,
+      "day": null,
+      "price": 68.63,
+      "utcPriceDateTime": "2026-10-16T23:33:00.000Z",
+      "utcCheckedDateTime": "2026-10-18T14:39:07.456Z",
+      "utcSetDateTime": "2026-10-18T14:39:05.428Z"
+    },
+    {
+      "id": 103924,
+      "pinTickerId": 4540,
+      "kind": "start",
+      "utcStartDateTime": "2026-10-18T00:00:00.000Z",
+      "day": "2026-10-18",
+      "price": 68.7,
+      "utcPriceDateTime": "2026-10-16T20:00:00.000Z",
+      "utcCheckedDateTime": "2026-10-18T21:52:55.741Z",
+      "utcSetDateTime": "2026-10-18T14:39:05.677Z"
+    },
+    {
+      "id": 103981,
+      "pinTickerId": 4541,
+      "kind": "posted",
+      "utcStartDateTime": null,
+      "day": null,
+      "price": 705.35,
+      "utcPriceDateTime": "2026-10-16T23:59:00.000Z",
+      "utcCheckedDateTime": "2026-10-18T14:40:03.925Z",
+      "utcSetDateTime": "2026-10-18T14:40:03.270Z"
+    },
+    {
+      "id": 103982,
+      "pinTickerId": 4541,
+      "kind": "start",
+      "utcStartDateTime": "2026-10-18T00:00:00.000Z",
+      "day": "2026-10-18",
+      "price": 709.325,
+      "utcPriceDateTime": "2026-10-16T20:00:00.000Z",
+      "utcCheckedDateTime": "2026-10-18T21:54:06.256Z",
+      "utcSetDateTime": "2026-10-18T14:40:03.326Z"
+    },
+    {
+      "id": 104241,
+      "pinTickerId": 4542,
+      "kind": "posted",
+      "utcStartDateTime": null,
+      "day": null,
+      "price": 11.64,
+      "utcPriceDateTime": "2026-10-16T23:59:00.000Z",
+      "utcCheckedDateTime": "2026-10-18T14:48:25.944Z",
+      "utcSetDateTime": "2026-10-18T14:48:22.767Z"
+    },
+    {
+      "id": 104242,
+      "pinTickerId": 4542,
+      "kind": "start",
+      "utcStartDateTime": "2026-10-18T00:00:00.000Z",
+      "day": "2026-10-18",
+      "price": 11.68,
+      "utcPriceDateTime": "2026-10-16T20:00:00.000Z",
+      "utcCheckedDateTime": "2026-10-18T21:54:26.820Z",
+      "utcSetDateTime": "2026-10-18T14:48:22.934Z"
+    },
+    {
+      "id": 109115,
+      "pinTickerId": 4543,
+      "kind": "posted",
+      "utcStartDateTime": null,
+      "day": null,
+      "price": 11.64,
+      "utcPriceDateTime": "2026-10-16T23:59:00.000Z",
+      "utcCheckedDateTime": "2026-10-18T17:23:24.984Z",
+      "utcSetDateTime": "2026-10-18T17:23:23.348Z"
+    },
+    {
+      "id": 109116,
+      "pinTickerId": 4543,
+      "kind": "start",
+      "utcStartDateTime": "2026-10-18T00:00:00.000Z",
+      "day": "2026-10-18",
+      "price": 11.68,
+      "utcPriceDateTime": "2026-10-16T20:00:00.000Z",
+      "utcCheckedDateTime": "2026-10-18T21:54:27.081Z",
+      "utcSetDateTime": "2026-10-18T17:23:23.399Z"
+    },
+    {
+      "id": 109157,
+      "pinTickerId": 4544,
+      "kind": "posted",
+      "utcStartDateTime": null,
+      "day": null,
+      "price": 68.63,
+      "utcPriceDateTime": "2026-10-16T23:33:00.000Z",
+      "utcCheckedDateTime": "2026-10-18T17:24:51.327Z",
+      "utcSetDateTime": "2026-10-18T17:24:49.562Z"
+    },
+    {
+      "id": 109158,
+      "pinTickerId": 4544,
+      "kind": "start",
+      "utcStartDateTime": "2026-10-18T00:00:00.000Z",
+      "day": "2026-10-18",
+      "price": 68.7,
+      "utcPriceDateTime": "2026-10-16T20:00:00.000Z",
+      "utcCheckedDateTime": "2026-10-18T20:48:03.053Z",
+      "utcSetDateTime": "2026-10-18T17:24:49.591Z"
+    },
+    {
+      "id": 109169,
+      "pinTickerId": 4545,
+      "kind": "posted",
+      "utcStartDateTime": null,
+      "day": null,
+      "price": 11.64,
+      "utcPriceDateTime": "2026-10-16T23:59:00.000Z",
+      "utcCheckedDateTime": "2026-10-18T17:29:15.145Z",
+      "utcSetDateTime": "2026-10-18T17:29:14.055Z"
+    },
+    {
+      "id": 109170,
+      "pinTickerId": 4545,
+      "kind": "start",
+      "utcStartDateTime": "2026-10-18T00:00:00.000Z",
+      "day": "2026-10-18",
+      "price": 11.68,
+      "utcPriceDateTime": "2026-10-16T20:00:00.000Z",
+      "utcCheckedDateTime": "2026-10-18T21:54:28.058Z",
+      "utcSetDateTime": "2026-10-18T17:29:14.355Z"
+    },
+    {
+      "id": 109171,
+      "pinTickerId": 4546,
+      "kind": "posted",
+      "utcStartDateTime": null,
+      "day": null,
+      "price": 68.63,
+      "utcPriceDateTime": "2026-10-16T23:33:00.000Z",
+      "utcCheckedDateTime": "2026-10-18T17:29:43.979Z",
+      "utcSetDateTime": "2026-10-18T17:29:43.334Z"
+    },
+    {
+      "id": 109172,
+      "pinTickerId": 4546,
+      "kind": "start",
+      "utcStartDateTime": "2026-10-18T00:00:00.000Z",
+      "day": "2026-10-18",
+      "price": 68.7,
+      "utcPriceDateTime": "2026-10-16T20:00:00.000Z",
+      "utcCheckedDateTime": "2026-10-18T21:55:14.447Z",
+      "utcSetDateTime": "2026-10-18T17:29:43.366Z"
+    },
+    {
+      "id": 109219,
+      "pinTickerId": 4547,
+      "kind": "posted",
+      "utcStartDateTime": null,
+      "day": null,
+      "price": 151.09,
+      "utcPriceDateTime": "2026-10-16T23:59:00.000Z",
+      "utcCheckedDateTime": "2026-10-18T17:31:41.650Z",
+      "utcSetDateTime": "2026-10-18T17:31:39.705Z"
+    },
+    {
+      "id": 109220,
+      "pinTickerId": 4547,
+      "kind": "start",
+      "utcStartDateTime": "2026-10-18T00:00:00.000Z",
+      "day": "2026-10-18",
+      "price": 152.02,
+      "utcPriceDateTime": "2026-10-16T20:00:00.000Z",
+      "utcCheckedDateTime": "2026-10-18T21:52:58.156Z",
+      "utcSetDateTime": "2026-10-18T17:31:39.986Z"
+    },
+    {
+      "id": 109249,
+      "pinTickerId": 4548,
+      "kind": "posted",
+      "utcStartDateTime": null,
+      "day": null,
+      "price": 339.6,
+      "utcPriceDateTime": "2026-10-16T23:59:00.000Z",
+      "utcCheckedDateTime": "2026-10-18T17:34:06.006Z",
+      "utcSetDateTime": "2026-10-18T17:34:05.055Z"
+    },
+    {
+      "id": 109250,
+      "pinTickerId": 4548,
+      "kind": "start",
+      "utcStartDateTime": "2026-10-18T00:00:00.000Z",
+      "day": "2026-10-18",
+      "price": 340.59,
+      "utcPriceDateTime": "2026-10-16T20:00:00.000Z",
+      "utcCheckedDateTime": "2026-10-18T21:53:56.308Z",
+      "utcSetDateTime": "2026-10-18T17:34:05.085Z"
+    },
+    {
+      "id": 109255,
+      "pinTickerId": 4549,
+      "kind": "posted",
+      "utcStartDateTime": null,
+      "day": null,
+      "price": 11.64,
+      "utcPriceDateTime": "2026-10-16T23:59:00.000Z",
+      "utcCheckedDateTime": "2026-10-18T17:35:05.595Z",
+      "utcSetDateTime": "2026-10-18T17:35:04.453Z"
+    },
+    {
+      "id": 109256,
+      "pinTickerId": 4549,
+      "kind": "start",
+      "utcStartDateTime": "2026-10-18T00:00:00.000Z",
+      "day": "2026-10-18",
+      "price": 11.68,
+      "utcPriceDateTime": "2026-10-16T20:00:00.000Z",
+      "utcCheckedDateTime": "2026-10-18T21:54:29.317Z",
+      "utcSetDateTime": "2026-10-18T17:35:04.476Z"
+    },
+    {
+      "id": 109257,
+      "pinTickerId": 4550,
+      "kind": "posted",
+      "utcStartDateTime": null,
+      "day": null,
+      "price": 68.63,
+      "utcPriceDateTime": "2026-10-16T23:33:00.000Z",
+      "utcCheckedDateTime": "2026-10-18T17:36:09.139Z",
+      "utcSetDateTime": "2026-10-18T17:36:07.536Z"
+    },
+    {
+      "id": 109258,
+      "pinTickerId": 4550,
+      "kind": "start",
+      "utcStartDateTime": "2026-10-18T00:00:00.000Z",
+      "day": "2026-10-18",
+      "price": 68.7,
+      "utcPriceDateTime": "2026-10-16T20:00:00.000Z",
+      "utcCheckedDateTime": "2026-10-18T20:47:11.294Z",
+      "utcSetDateTime": "2026-10-18T17:36:07.618Z"
+    },
+    {
+      "id": 109259,
+      "pinTickerId": 4551,
+      "kind": "posted",
+      "utcStartDateTime": null,
+      "day": null,
+      "price": 76.31,
+      "utcPriceDateTime": "2026-10-16T23:30:00.000Z",
+      "utcCheckedDateTime": "2026-10-18T17:36:40.079Z",
+      "utcSetDateTime": "2026-10-18T17:36:38.358Z"
+    },
+    {
+      "id": 109260,
+      "pinTickerId": 4551,
+      "kind": "start",
+      "utcStartDateTime": "2026-10-18T00:00:00.000Z",
+      "day": "2026-10-18",
+      "price": 76.31,
+      "utcPriceDateTime": "2026-10-16T20:00:00.000Z",
+      "utcCheckedDateTime": "2026-10-18T21:55:02.760Z",
+      "utcSetDateTime": "2026-10-18T17:36:38.412Z"
+    },
+    {
+      "id": 109299,
+      "pinTickerId": 4552,
+      "kind": "posted",
+      "utcStartDateTime": null,
+      "day": null,
+      "price": 339.6,
+      "utcPriceDateTime": "2026-10-16T23:59:00.000Z",
+      "utcCheckedDateTime": "2026-10-18T17:40:05.996Z",
+      "utcSetDateTime": "2026-10-18T17:40:04.776Z"
+    },
+    {
+      "id": 109300,
+      "pinTickerId": 4552,
+      "kind": "start",
+      "utcStartDateTime": "2026-10-18T00:00:00.000Z",
+      "day": "2026-10-18",
+      "price": 340.59,
+      "utcPriceDateTime": "2026-10-16T20:00:00.000Z",
+      "utcCheckedDateTime": "2026-10-18T21:53:56.310Z",
+      "utcSetDateTime": "2026-10-18T17:40:04.839Z"
+    },
+    {
+      "id": 109303,
+      "pinTickerId": 4553,
+      "kind": "posted",
+      "utcStartDateTime": null,
+      "day": null,
+      "price": 11.64,
+      "utcPriceDateTime": "2026-10-16T23:59:00.000Z",
+      "utcCheckedDateTime": "2026-10-18T17:41:04.402Z",
+      "utcSetDateTime": "2026-10-18T17:41:03.026Z"
+    },
+    {
+      "id": 109304,
+      "pinTickerId": 4553,
+      "kind": "start",
+      "utcStartDateTime": "2026-10-18T00:00:00.000Z",
+      "day": "2026-10-18",
+      "price": 11.68,
+      "utcPriceDateTime": "2026-10-16T20:00:00.000Z",
+      "utcCheckedDateTime": "2026-10-18T21:54:30.073Z",
+      "utcSetDateTime": "2026-10-18T17:41:03.062Z"
+    },
+    {
+      "id": 109317,
+      "pinTickerId": 4554,
+      "kind": "posted",
+      "utcStartDateTime": null,
+      "day": null,
+      "price": 23.83,
+      "utcPriceDateTime": "2026-10-16T23:00:00.000Z",
+      "utcCheckedDateTime": "2026-10-18T17:44:26.845Z",
+      "utcSetDateTime": "2026-10-18T17:44:25.512Z"
+    },
+    {
+      "id": 109318,
+      "pinTickerId": 4554,
+      "kind": "start",
+      "utcStartDateTime": "2026-10-18T00:00:00.000Z",
+      "day": "2026-10-18",
+      "price": 23.83,
+      "utcPriceDateTime": "2026-10-16T20:00:00.000Z",
+      "utcCheckedDateTime": "2026-10-18T20:44:58.740Z",
+      "utcSetDateTime": "2026-10-18T17:44:25.531Z"
+    },
+    {
+      "id": 109319,
+      "pinTickerId": 4555,
+      "kind": "posted",
+      "utcStartDateTime": null,
+      "day": null,
+      "price": 76.31,
+      "utcPriceDateTime": "2026-10-16T23:30:00.000Z",
+      "utcCheckedDateTime": "2026-10-18T17:44:56.059Z",
+      "utcSetDateTime": "2026-10-18T17:44:54.672Z"
+    },
+    {
+      "id": 109320,
+      "pinTickerId": 4555,
+      "kind": "start",
+      "utcStartDateTime": "2026-10-18T00:00:00.000Z",
+      "day": "2026-10-18",
+      "price": 76.31,
+      "utcPriceDateTime": "2026-10-16T20:00:00.000Z",
+      "utcCheckedDateTime": "2026-10-18T21:53:26.548Z",
+      "utcSetDateTime": "2026-10-18T17:44:54.708Z"
+    },
+    {
+      "id": 109321,
+      "pinTickerId": 4556,
+      "kind": "posted",
+      "utcStartDateTime": null,
+      "day": null,
+      "price": 339.6,
+      "utcPriceDateTime": "2026-10-16T23:59:00.000Z",
+      "utcCheckedDateTime": "2026-10-18T17:45:54.497Z",
+      "utcSetDateTime": "2026-10-18T17:45:53.582Z"
+    },
+    {
+      "id": 109322,
+      "pinTickerId": 4556,
+      "kind": "start",
+      "utcStartDateTime": "2026-10-18T00:00:00.000Z",
+      "day": "2026-10-18",
+      "price": 340.59,
+      "utcPriceDateTime": "2026-10-16T20:00:00.000Z",
+      "utcCheckedDateTime": "2026-10-18T21:53:56.873Z",
+      "utcSetDateTime": "2026-10-18T17:45:53.725Z"
+    },
+    {
+      "id": 109325,
+      "pinTickerId": 4557,
+      "kind": "posted",
+      "utcStartDateTime": null,
+      "day": null,
+      "price": 11.64,
+      "utcPriceDateTime": "2026-10-16T23:59:00.000Z",
+      "utcCheckedDateTime": "2026-10-18T17:46:53.738Z",
+      "utcSetDateTime": "2026-10-18T17:46:52.812Z"
+    },
+    {
+      "id": 109326,
+      "pinTickerId": 4557,
+      "kind": "start",
+      "utcStartDateTime": "2026-10-18T00:00:00.000Z",
+      "day": "2026-10-18",
+      "price": 11.68,
+      "utcPriceDateTime": "2026-10-16T20:00:00.000Z",
+      "utcCheckedDateTime": "2026-10-18T21:54:30.839Z",
+      "utcSetDateTime": "2026-10-18T17:46:52.972Z"
+    },
+    {
+      "id": 109329,
+      "pinTickerId": 4558,
+      "kind": "posted",
+      "utcStartDateTime": null,
+      "day": null,
+      "price": 68.32,
+      "utcPriceDateTime": "2026-10-16T23:30:00.000Z",
+      "utcCheckedDateTime": "2026-10-18T17:47:51.922Z",
+      "utcSetDateTime": "2026-10-18T17:47:50.881Z"
+    },
+    {
+      "id": 109330,
+      "pinTickerId": 4558,
+      "kind": "start",
+      "utcStartDateTime": "2026-10-18T00:00:00.000Z",
+      "day": "2026-10-18",
+      "price": 68.32,
+      "utcPriceDateTime": "2026-10-16T20:00:00.000Z",
+      "utcCheckedDateTime": "2026-10-18T20:47:40.944Z",
+      "utcSetDateTime": "2026-10-18T17:47:50.908Z"
+    },
+    {
+      "id": 109343,
+      "pinTickerId": 4559,
+      "kind": "posted",
+      "utcStartDateTime": null,
+      "day": null,
+      "price": 76.31,
+      "utcPriceDateTime": "2026-10-16T23:30:00.000Z",
+      "utcCheckedDateTime": "2026-10-18T17:50:48.694Z",
+      "utcSetDateTime": "2026-10-18T17:50:47.906Z"
+    },
+    {
+      "id": 109344,
+      "pinTickerId": 4559,
+      "kind": "start",
+      "utcStartDateTime": "2026-10-18T00:00:00.000Z",
+      "day": "2026-10-18",
+      "price": 76.31,
+      "utcPriceDateTime": "2026-10-16T20:00:00.000Z",
+      "utcCheckedDateTime": "2026-10-18T21:53:03.516Z",
+      "utcSetDateTime": "2026-10-18T17:50:48.020Z"
+    },
+    {
+      "id": 109349,
+      "pinTickerId": 4560,
+      "kind": "posted",
+      "utcStartDateTime": null,
+      "day": null,
+      "price": 11.64,
+      "utcPriceDateTime": "2026-10-16T23:59:00.000Z",
+      "utcCheckedDateTime": "2026-10-18T17:52:15.521Z",
+      "utcSetDateTime": "2026-10-18T17:52:14.358Z"
+    },
+    {
+      "id": 109350,
+      "pinTickerId": 4560,
+      "kind": "start",
+      "utcStartDateTime": "2026-10-18T00:00:00.000Z",
+      "day": "2026-10-18",
+      "price": 11.68,
+      "utcPriceDateTime": "2026-10-16T20:00:00.000Z",
+      "utcCheckedDateTime": "2026-10-18T21:54:31.578Z",
+      "utcSetDateTime": "2026-10-18T17:52:14.392Z"
+    },
+    {
+      "id": 109351,
+      "pinTickerId": 4561,
+      "kind": "posted",
+      "utcStartDateTime": null,
+      "day": null,
+      "price": 339.6,
+      "utcPriceDateTime": "2026-10-16T23:59:00.000Z",
+      "utcCheckedDateTime": "2026-10-18T17:52:46.645Z",
+      "utcSetDateTime": "2026-10-18T17:52:44.235Z"
+    },
+    {
+      "id": 109352,
+      "pinTickerId": 4561,
+      "kind": "start",
+      "utcStartDateTime": "2026-10-18T00:00:00.000Z",
+      "day": "2026-10-18",
+      "price": 340.59,
+      "utcPriceDateTime": "2026-10-16T20:00:00.000Z",
+      "utcCheckedDateTime": "2026-10-18T21:53:57.535Z",
+      "utcSetDateTime": "2026-10-18T17:52:44.281Z"
+    },
+    {
+      "id": 109357,
+      "pinTickerId": 4562,
+      "kind": "posted",
+      "utcStartDateTime": null,
+      "day": null,
+      "price": 23.83,
+      "utcPriceDateTime": "2026-10-16T23:00:00.000Z",
+      "utcCheckedDateTime": "2026-10-18T17:53:43.858Z",
+      "utcSetDateTime": "2026-10-18T17:53:43.221Z"
+    },
+    {
+      "id": 109358,
+      "pinTickerId": 4562,
+      "kind": "start",
+      "utcStartDateTime": "2026-10-18T00:00:00.000Z",
+      "day": "2026-10-18",
+      "price": 23.83,
+      "utcPriceDateTime": "2026-10-16T20:00:00.000Z",
+      "utcCheckedDateTime": "2026-10-18T20:48:00.483Z",
+      "utcSetDateTime": "2026-10-18T17:53:43.259Z"
+    },
+    {
+      "id": 109378,
+      "pinTickerId": 4540,
+      "kind": "start",
+      "utcStartDateTime": "2030-06-01T00:00:00.000Z",
+      "day": "2030-06-01",
+      "price": null,
+      "utcPriceDateTime": null,
+      "utcCheckedDateTime": null,
+      "utcSetDateTime": "2026-10-18T18:06:21.011Z"
+    },
+    {
+      "id": 109380,
+      "pinTickerId": 4539,
+      "kind": "start",
+      "utcStartDateTime": "2028-06-01T00:00:00.000Z",
+      "day": "2028-06-01",
+      "price": null,
+      "utcPriceDateTime": null,
+      "utcCheckedDateTime": null,
+      "utcSetDateTime": "2026-10-18T18:07:39.903Z"
+    },
+    {
+      "id": 109382,
+      "pinTickerId": 4538,
+      "kind": "start",
+      "utcStartDateTime": "2028-03-01T00:00:00.000Z",
+      "day": "2028-03-01",
+      "price": null,
+      "utcPriceDateTime": null,
+      "utcCheckedDateTime": null,
+      "utcSetDateTime": "2026-10-18T18:07:51.164Z"
+    },
+    {
+      "id": 109384,
+      "pinTickerId": 4547,
+      "kind": "start",
+      "utcStartDateTime": "2027-05-01T00:00:00.000Z",
+      "day": "2027-05-01",
+      "price": null,
+      "utcPriceDateTime": null,
+      "utcCheckedDateTime": null,
+      "utcSetDateTime": "2026-10-18T18:07:53.701Z"
+    },
+    {
+      "id": 109386,
+      "pinTickerId": 4559,
+      "kind": "start",
+      "utcStartDateTime": "2027-10-01T00:00:00.000Z",
+      "day": "2027-10-01",
+      "price": null,
+      "utcPriceDateTime": null,
+      "utcCheckedDateTime": null,
+      "utcSetDateTime": "2026-10-18T18:08:10.547Z"
+    },
+    {
+      "id": 109390,
+      "pinTickerId": 4554,
+      "kind": "start",
+      "utcStartDateTime": "2025-02-01T00:00:00.000Z",
+      "day": "2025-02-01",
+      "price": 22.83,
+      "utcPriceDateTime": "2025-01-31T21:00:00.000Z",
+      "utcCheckedDateTime": "2026-10-18T18:09:10.990Z",
+      "utcSetDateTime": "2026-10-18T18:09:10.872Z"
+    },
+    {
+      "id": 109392,
+      "pinTickerId": 4555,
+      "kind": "start",
+      "utcStartDateTime": "2030-06-01T00:00:00.000Z",
+      "day": "2030-06-01",
+      "price": null,
+      "utcPriceDateTime": null,
+      "utcCheckedDateTime": null,
+      "utcSetDateTime": "2026-10-18T18:09:13.448Z"
+    },
+    {
+      "id": 109398,
+      "pinTickerId": 4548,
+      "kind": "start",
+      "utcStartDateTime": "2030-06-01T00:00:00.000Z",
+      "day": "2030-06-01",
+      "price": null,
+      "utcPriceDateTime": null,
+      "utcCheckedDateTime": null,
+      "utcSetDateTime": "2026-10-18T18:11:03.734Z"
+    },
+    {
+      "id": 109404,
+      "pinTickerId": 4552,
+      "kind": "start",
+      "utcStartDateTime": "2031-06-01T00:00:00.000Z",
+      "day": "2031-06-01",
+      "price": null,
+      "utcPriceDateTime": null,
+      "utcCheckedDateTime": null,
+      "utcSetDateTime": "2026-10-18T18:11:05.293Z"
+    },
+    {
+      "id": 109406,
+      "pinTickerId": 4556,
+      "kind": "start",
+      "utcStartDateTime": "2032-03-01T00:00:00.000Z",
+      "day": "2032-03-01",
+      "price": null,
+      "utcPriceDateTime": null,
+      "utcCheckedDateTime": null,
+      "utcSetDateTime": "2026-10-18T18:11:07.537Z"
+    },
+    {
+      "id": 109410,
+      "pinTickerId": 4561,
+      "kind": "start",
+      "utcStartDateTime": "2032-09-01T00:00:00.000Z",
+      "day": "2032-09-01",
+      "price": null,
+      "utcPriceDateTime": null,
+      "utcCheckedDateTime": null,
+      "utcSetDateTime": "2026-10-18T18:11:10.890Z"
+    },
+    {
+      "id": 109412,
+      "pinTickerId": 4541,
+      "kind": "start",
+      "utcStartDateTime": "2027-06-01T00:00:00.000Z",
+      "day": "2027-06-01",
+      "price": null,
+      "utcPriceDateTime": null,
+      "utcCheckedDateTime": null,
+      "utcSetDateTime": "2026-10-18T18:11:21.852Z"
+    },
+    {
+      "id": 109414,
+      "pinTickerId": 4536,
+      "kind": "start",
+      "utcStartDateTime": "2027-08-01T00:00:00.000Z",
+      "day": "2027-08-01",
+      "price": null,
+      "utcPriceDateTime": null,
+      "utcCheckedDateTime": null,
+      "utcSetDateTime": "2026-10-18T18:11:24.296Z"
+    },
+    {
+      "id": 109416,
+      "pinTickerId": 4537,
+      "kind": "start",
+      "utcStartDateTime": "2027-12-01T00:00:00.000Z",
+      "day": "2027-12-01",
+      "price": null,
+      "utcPriceDateTime": null,
+      "utcCheckedDateTime": null,
+      "utcSetDateTime": "2026-10-18T18:11:26.422Z"
+    },
+    {
+      "id": 109418,
+      "pinTickerId": 4542,
+      "kind": "start",
+      "utcStartDateTime": "2028-06-01T00:00:00.000Z",
+      "day": "2028-06-01",
+      "price": null,
+      "utcPriceDateTime": null,
+      "utcCheckedDateTime": null,
+      "utcSetDateTime": "2026-10-18T18:11:52.981Z"
+    },
+    {
+      "id": 109420,
+      "pinTickerId": 4543,
+      "kind": "start",
+      "utcStartDateTime": "2029-06-01T00:00:00.000Z",
+      "day": "2029-06-01",
+      "price": null,
+      "utcPriceDateTime": null,
+      "utcCheckedDateTime": null,
+      "utcSetDateTime": "2026-10-18T18:11:55.351Z"
+    },
+    {
+      "id": 109422,
+      "pinTickerId": 4545,
+      "kind": "start",
+      "utcStartDateTime": "2030-02-01T00:00:00.000Z",
+      "day": "2030-02-01",
+      "price": null,
+      "utcPriceDateTime": null,
+      "utcCheckedDateTime": null,
+      "utcSetDateTime": "2026-10-18T18:11:57.579Z"
+    },
+    {
+      "id": 109424,
+      "pinTickerId": 4549,
+      "kind": "start",
+      "utcStartDateTime": "2030-05-01T00:00:00.000Z",
+      "day": "2030-05-01",
+      "price": null,
+      "utcPriceDateTime": null,
+      "utcCheckedDateTime": null,
+      "utcSetDateTime": "2026-10-18T18:11:59.769Z"
+    },
+    {
+      "id": 109426,
+      "pinTickerId": 4553,
+      "kind": "start",
+      "utcStartDateTime": "2030-08-01T00:00:00.000Z",
+      "day": "2030-08-01",
+      "price": null,
+      "utcPriceDateTime": null,
+      "utcCheckedDateTime": null,
+      "utcSetDateTime": "2026-10-18T18:12:01.955Z"
+    },
+    {
+      "id": 109428,
+      "pinTickerId": 4557,
+      "kind": "start",
+      "utcStartDateTime": "2030-11-01T00:00:00.000Z",
+      "day": "2030-11-01",
+      "price": null,
+      "utcPriceDateTime": null,
+      "utcCheckedDateTime": null,
+      "utcSetDateTime": "2026-10-18T18:12:04.066Z"
+    },
+    {
+      "id": 109430,
+      "pinTickerId": 4560,
+      "kind": "start",
+      "utcStartDateTime": "2031-02-01T00:00:00.000Z",
+      "day": "2031-02-01",
+      "price": null,
+      "utcPriceDateTime": null,
+      "utcCheckedDateTime": null,
+      "utcSetDateTime": "2026-10-18T18:12:06.214Z"
+    },
+    {
+      "id": 109432,
+      "pinTickerId": 4550,
+      "kind": "start",
+      "utcStartDateTime": "2026-01-01T00:00:00.000Z",
+      "day": "2026-01-01",
+      "price": 69.93,
+      "utcPriceDateTime": "2025-12-31T21:00:00.000Z",
+      "utcCheckedDateTime": "2026-10-18T18:12:20.476Z",
+      "utcSetDateTime": "2026-10-18T18:12:20.407Z"
+    },
+    {
+      "id": 109434,
+      "pinTickerId": 4551,
+      "kind": "start",
+      "utcStartDateTime": "2030-09-01T00:00:00.000Z",
+      "day": "2030-09-01",
+      "price": null,
+      "utcPriceDateTime": null,
+      "utcCheckedDateTime": null,
+      "utcSetDateTime": "2026-10-18T18:12:27.392Z"
+    },
+    {
+      "id": 109436,
+      "pinTickerId": 4546,
+      "kind": "start",
+      "utcStartDateTime": "2028-11-01T00:00:00.000Z",
+      "day": "2028-11-01",
+      "price": null,
+      "utcPriceDateTime": null,
+      "utcCheckedDateTime": null,
+      "utcSetDateTime": "2026-10-18T18:12:46.345Z"
+    },
+    {
+      "id": 109444,
+      "pinTickerId": 4558,
+      "kind": "start",
+      "utcStartDateTime": "2026-09-01T00:00:00.000Z",
+      "day": "2026-09-01",
+      "price": 67.92,
+      "utcPriceDateTime": "2026-09-01T20:00:00.000Z",
+      "utcCheckedDateTime": "2026-10-18T18:13:01.612Z",
+      "utcSetDateTime": "2026-10-18T18:13:01.552Z"
+    },
+    {
+      "id": 109446,
+      "pinTickerId": 4562,
+      "kind": "start",
+      "utcStartDateTime": "2024-12-01T00:00:00.000Z",
+      "day": "2024-12-01",
+      "price": 22.75,
+      "utcPriceDateTime": "2024-11-29T21:00:00.000Z",
+      "utcCheckedDateTime": "2026-10-18T18:13:23.327Z",
+      "utcSetDateTime": "2026-10-18T18:13:23.308Z"
+    },
+    {
+      "id": 109448,
+      "pinTickerId": 4544,
+      "kind": "start",
+      "utcStartDateTime": "2025-08-01T00:00:00.000Z",
+      "day": "2025-08-01",
+      "price": 74.08,
+      "utcPriceDateTime": "2025-08-01T20:00:00.000Z",
+      "utcCheckedDateTime": "2026-10-18T18:13:39.752Z",
+      "utcSetDateTime": "2026-10-18T18:13:39.734Z"
+    },
+    {
+      "id": 109888,
+      "pinTickerId": 4554,
+      "kind": "start",
+      "utcStartDateTime": "2028-01-01T00:00:00.000Z",
+      "day": "2028-01-01",
+      "price": null,
+      "utcPriceDateTime": null,
+      "utcCheckedDateTime": null,
+      "utcSetDateTime": "2026-10-18T20:44:58.265Z"
+    },
+    {
+      "id": 109890,
+      "pinTickerId": 4499,
+      "kind": "start",
+      "utcStartDateTime": "2027-12-01T00:00:00.000Z",
+      "day": "2027-12-01",
+      "price": null,
+      "utcPriceDateTime": null,
+      "utcCheckedDateTime": null,
+      "utcSetDateTime": "2026-10-18T20:45:44.664Z"
+    },
+    {
+      "id": 109892,
+      "pinTickerId": 4508,
+      "kind": "start",
+      "utcStartDateTime": "2027-06-01T00:00:00.000Z",
+      "day": "2027-06-01",
+      "price": null,
+      "utcPriceDateTime": null,
+      "utcCheckedDateTime": null,
+      "utcSetDateTime": "2026-10-18T20:45:48.874Z"
+    },
+    {
+      "id": 109894,
+      "pinTickerId": 4510,
+      "kind": "start",
+      "utcStartDateTime": "2028-06-01T00:00:00.000Z",
+      "day": "2028-06-01",
+      "price": null,
+      "utcPriceDateTime": null,
+      "utcCheckedDateTime": null,
+      "utcSetDateTime": "2026-10-18T20:45:50.989Z"
+    },
+    {
+      "id": 109896,
+      "pinTickerId": 4503,
+      "kind": "start",
+      "utcStartDateTime": "2028-01-01T00:00:00.000Z",
+      "day": "2028-01-01",
+      "price": null,
+      "utcPriceDateTime": null,
+      "utcCheckedDateTime": null,
+      "utcSetDateTime": "2026-10-18T20:45:53.097Z"
+    },
+    {
+      "id": 109898,
+      "pinTickerId": 4509,
+      "kind": "start",
+      "utcStartDateTime": "2027-06-01T00:00:00.000Z",
+      "day": "2027-06-01",
+      "price": null,
+      "utcPriceDateTime": null,
+      "utcCheckedDateTime": null,
+      "utcSetDateTime": "2026-10-18T20:45:55.277Z"
+    },
+    {
+      "id": 109900,
+      "pinTickerId": 4504,
+      "kind": "start",
+      "utcStartDateTime": "2031-01-01T00:00:00.000Z",
+      "day": "2031-01-01",
+      "price": null,
+      "utcPriceDateTime": null,
+      "utcCheckedDateTime": null,
+      "utcSetDateTime": "2026-10-18T20:45:58.922Z"
+    },
+    {
+      "id": 109902,
+      "pinTickerId": 4511,
+      "kind": "start",
+      "utcStartDateTime": "2027-06-01T00:00:00.000Z",
+      "day": "2027-06-01",
+      "price": null,
+      "utcPriceDateTime": null,
+      "utcCheckedDateTime": null,
+      "utcSetDateTime": "2026-10-18T20:46:05.517Z"
+    },
+    {
+      "id": 109904,
+      "pinTickerId": 4512,
+      "kind": "start",
+      "utcStartDateTime": "2027-06-01T00:00:00.000Z",
+      "day": "2027-06-01",
+      "price": null,
+      "utcPriceDateTime": null,
+      "utcCheckedDateTime": null,
+      "utcSetDateTime": "2026-10-18T20:46:07.637Z"
+    },
+    {
+      "id": 109906,
+      "pinTickerId": 4513,
+      "kind": "start",
+      "utcStartDateTime": "2027-06-01T00:00:00.000Z",
+      "day": "2027-06-01",
+      "price": null,
+      "utcPriceDateTime": null,
+      "utcCheckedDateTime": null,
+      "utcSetDateTime": "2026-10-18T20:46:09.943Z"
+    },
+    {
+      "id": 109908,
+      "pinTickerId": 4488,
+      "kind": "start",
+      "utcStartDateTime": "2028-06-01T00:00:00.000Z",
+      "day": "2028-06-01",
+      "price": null,
+      "utcPriceDateTime": null,
+      "utcCheckedDateTime": null,
+      "utcSetDateTime": "2026-10-18T20:46:14.375Z"
+    },
+    {
+      "id": 109910,
+      "pinTickerId": 4489,
+      "kind": "start",
+      "utcStartDateTime": "2028-06-01T00:00:00.000Z",
+      "day": "2028-06-01",
+      "price": null,
+      "utcPriceDateTime": null,
+      "utcCheckedDateTime": null,
+      "utcSetDateTime": "2026-10-18T20:46:14.392Z"
+    },
+    {
+      "id": 109912,
+      "pinTickerId": 4490,
+      "kind": "start",
+      "utcStartDateTime": "2028-06-01T00:00:00.000Z",
+      "day": "2028-06-01",
+      "price": null,
+      "utcPriceDateTime": null,
+      "utcCheckedDateTime": null,
+      "utcSetDateTime": "2026-10-18T20:46:14.407Z"
+    },
+    {
+      "id": 109914,
+      "pinTickerId": 4491,
+      "kind": "start",
+      "utcStartDateTime": "2028-06-01T00:00:00.000Z",
+      "day": "2028-06-01",
+      "price": null,
+      "utcPriceDateTime": null,
+      "utcCheckedDateTime": null,
+      "utcSetDateTime": "2026-10-18T20:46:14.419Z"
+    },
+    {
+      "id": 109916,
+      "pinTickerId": 4492,
+      "kind": "start",
+      "utcStartDateTime": "2028-06-01T00:00:00.000Z",
+      "day": "2028-06-01",
+      "price": null,
+      "utcPriceDateTime": null,
+      "utcCheckedDateTime": null,
+      "utcSetDateTime": "2026-10-18T20:46:14.434Z"
+    },
+    {
+      "id": 109918,
+      "pinTickerId": 4493,
+      "kind": "start",
+      "utcStartDateTime": "2028-06-01T00:00:00.000Z",
+      "day": "2028-06-01",
+      "price": null,
+      "utcPriceDateTime": null,
+      "utcCheckedDateTime": null,
+      "utcSetDateTime": "2026-10-18T20:46:14.458Z"
+    },
+    {
+      "id": 109920,
+      "pinTickerId": 4494,
+      "kind": "start",
+      "utcStartDateTime": "2028-06-01T00:00:00.000Z",
+      "day": "2028-06-01",
+      "price": null,
+      "utcPriceDateTime": null,
+      "utcCheckedDateTime": null,
+      "utcSetDateTime": "2026-10-18T20:46:14.612Z"
+    },
+    {
+      "id": 109922,
+      "pinTickerId": 4500,
+      "kind": "start",
+      "utcStartDateTime": "2028-06-01T00:00:00.000Z",
+      "day": "2028-06-01",
+      "price": null,
+      "utcPriceDateTime": null,
+      "utcCheckedDateTime": null,
+      "utcSetDateTime": "2026-10-18T20:46:40.935Z"
+    },
+    {
+      "id": 109924,
+      "pinTickerId": 4496,
+      "kind": "start",
+      "utcStartDateTime": "2028-09-01T00:00:00.000Z",
+      "day": "2028-09-01",
+      "price": null,
+      "utcPriceDateTime": null,
+      "utcCheckedDateTime": null,
+      "utcSetDateTime": "2026-10-18T20:47:01.476Z"
+    },
+    {
+      "id": 109926,
+      "pinTickerId": 4550,
+      "kind": "start",
+      "utcStartDateTime": "2027-06-01T00:00:00.000Z",
+      "day": "2027-06-01",
+      "price": null,
+      "utcPriceDateTime": null,
+      "utcCheckedDateTime": null,
+      "utcSetDateTime": "2026-10-18T20:47:10.754Z"
+    },
+    {
+      "id": 109928,
+      "pinTickerId": 4501,
+      "kind": "start",
+      "utcStartDateTime": "2032-12-01T00:00:00.000Z",
+      "day": "2032-12-01",
+      "price": null,
+      "utcPriceDateTime": null,
+      "utcCheckedDateTime": null,
+      "utcSetDateTime": "2026-10-18T20:47:19.503Z"
+    },
+    {
+      "id": 109930,
+      "pinTickerId": 4558,
+      "kind": "start",
+      "utcStartDateTime": "2026-12-01T00:00:00.000Z",
+      "day": "2026-12-01",
+      "price": null,
+      "utcPriceDateTime": null,
+      "utcCheckedDateTime": null,
+      "utcSetDateTime": "2026-10-18T20:47:40.564Z"
+    },
+    {
+      "id": 109932,
+      "pinTickerId": 4497,
+      "kind": "start",
+      "utcStartDateTime": "2026-12-01T00:00:00.000Z",
+      "day": "2026-12-01",
+      "price": null,
+      "utcPriceDateTime": null,
+      "utcCheckedDateTime": null,
+      "utcSetDateTime": "2026-10-18T20:47:47.162Z"
+    },
+    {
+      "id": 109934,
+      "pinTickerId": 4498,
+      "kind": "start",
+      "utcStartDateTime": "2027-03-01T00:00:00.000Z",
+      "day": "2027-03-01",
+      "price": null,
+      "utcPriceDateTime": null,
+      "utcCheckedDateTime": null,
+      "utcSetDateTime": "2026-10-18T20:47:49.286Z"
+    },
+    {
+      "id": 109936,
+      "pinTickerId": 4502,
+      "kind": "start",
+      "utcStartDateTime": "2027-12-01T00:00:00.000Z",
+      "day": "2027-12-01",
+      "price": null,
+      "utcPriceDateTime": null,
+      "utcCheckedDateTime": null,
+      "utcSetDateTime": "2026-10-18T20:47:56.011Z"
+    },
+    {
+      "id": 109938,
+      "pinTickerId": 4562,
+      "kind": "start",
+      "utcStartDateTime": "2027-12-01T00:00:00.000Z",
+      "day": "2027-12-01",
+      "price": null,
+      "utcPriceDateTime": null,
+      "utcCheckedDateTime": null,
+      "utcSetDateTime": "2026-10-18T20:48:00.464Z"
+    },
+    {
+      "id": 109940,
+      "pinTickerId": 4544,
+      "kind": "start",
+      "utcStartDateTime": "2027-08-01T00:00:00.000Z",
+      "day": "2027-08-01",
+      "price": null,
+      "utcPriceDateTime": null,
+      "utcCheckedDateTime": null,
+      "utcSetDateTime": "2026-10-18T20:48:03.034Z"
+    },
+    {
+      "id": 110323,
+      "pinTickerId": 4563,
+      "kind": "posted",
+      "utcStartDateTime": null,
+      "day": null,
+      "price": 339.6,
+      "utcPriceDateTime": "2026-10-16T23:59:00.000Z",
+      "utcCheckedDateTime": "2026-10-18T22:47:03.053Z",
+      "utcSetDateTime": "2026-10-18T22:47:01.727Z"
+    },
+    {
+      "id": 110324,
+      "pinTickerId": 4563,
+      "kind": "start",
+      "utcStartDateTime": "2028-06-01T00:00:00.000Z",
+      "day": "2028-06-01",
+      "price": null,
+      "utcPriceDateTime": null,
+      "utcCheckedDateTime": null,
+      "utcSetDateTime": "2026-10-18T22:47:01.796Z"
+    },
+    {
+      "id": 110325,
+      "pinTickerId": 4564,
+      "kind": "posted",
+      "utcStartDateTime": null,
+      "day": null,
+      "price": 339.6,
+      "utcPriceDateTime": "2026-10-16T23:59:00.000Z",
+      "utcCheckedDateTime": "2026-10-18T22:47:31.334Z",
+      "utcSetDateTime": "2026-10-18T22:47:30.532Z"
+    },
+    {
+      "id": 110326,
+      "pinTickerId": 4564,
+      "kind": "start",
+      "utcStartDateTime": "2028-06-01T00:00:00.000Z",
+      "day": "2028-06-01",
+      "price": null,
+      "utcPriceDateTime": null,
+      "utcCheckedDateTime": null,
+      "utcSetDateTime": "2026-10-18T22:47:30.559Z"
+    },
+    {
+      "id": 110327,
+      "pinTickerId": 4565,
+      "kind": "posted",
+      "utcStartDateTime": null,
+      "day": null,
+      "price": 339.6,
+      "utcPriceDateTime": "2026-10-16T23:59:00.000Z",
+      "utcCheckedDateTime": "2026-10-18T22:48:01.622Z",
+      "utcSetDateTime": "2026-10-18T22:48:00.697Z"
+    },
+    {
+      "id": 110328,
+      "pinTickerId": 4565,
+      "kind": "start",
+      "utcStartDateTime": "2028-09-01T00:00:00.000Z",
+      "day": "2028-09-01",
+      "price": null,
+      "utcPriceDateTime": null,
+      "utcCheckedDateTime": null,
+      "utcSetDateTime": "2026-10-18T22:48:00.973Z"
+    },
+    {
+      "id": 110639,
+      "pinTickerId": 4566,
+      "kind": "posted",
+      "utcStartDateTime": null,
+      "day": null,
+      "price": 705.35,
+      "utcPriceDateTime": "2026-10-16T23:59:00.000Z",
+      "utcCheckedDateTime": "2026-10-19T03:19:49.546Z",
+      "utcSetDateTime": "2026-10-19T03:19:48.327Z"
+    },
+    {
+      "id": 110640,
+      "pinTickerId": 4566,
+      "kind": "start",
+      "utcStartDateTime": "2027-06-01T00:00:00.000Z",
+      "day": "2027-06-01",
+      "price": null,
+      "utcPriceDateTime": null,
+      "utcCheckedDateTime": null,
+      "utcSetDateTime": "2026-10-19T03:19:48.339Z"
+    },
+    {
+      "id": 110641,
+      "pinTickerId": 4567,
+      "kind": "posted",
+      "utcStartDateTime": null,
+      "day": null,
+      "price": 705.35,
+      "utcPriceDateTime": "2026-10-16T23:59:00.000Z",
+      "utcCheckedDateTime": "2026-10-19T03:20:19.395Z",
+      "utcSetDateTime": "2026-10-19T03:20:18.332Z"
+    },
+    {
+      "id": 110642,
+      "pinTickerId": 4567,
+      "kind": "start",
+      "utcStartDateTime": "2028-06-01T00:00:00.000Z",
+      "day": "2028-06-01",
+      "price": null,
+      "utcPriceDateTime": null,
+      "utcCheckedDateTime": null,
+      "utcSetDateTime": "2026-10-19T03:20:18.369Z"
+    },
+    {
+      "id": 110655,
+      "pinTickerId": 4568,
+      "kind": "posted",
+      "utcStartDateTime": null,
+      "day": null,
+      "price": 339.6,
+      "utcPriceDateTime": "2026-10-16T23:59:00.000Z",
+      "utcCheckedDateTime": "2026-10-19T03:36:04.602Z",
+      "utcSetDateTime": "2026-10-19T03:36:00.427Z"
+    },
+    {
+      "id": 110656,
+      "pinTickerId": 4568,
+      "kind": "start",
+      "utcStartDateTime": "2026-12-01T00:00:00.000Z",
+      "day": "2026-12-01",
+      "price": null,
+      "utcPriceDateTime": null,
+      "utcCheckedDateTime": null,
+      "utcSetDateTime": "2026-10-19T03:36:01.334Z"
+    },
+    {
+      "id": 110671,
+      "pinTickerId": 4569,
+      "kind": "posted",
+      "utcStartDateTime": null,
+      "day": null,
+      "price": 18.06,
+      "utcPriceDateTime": "2026-10-16T23:59:00.000Z",
+      "utcCheckedDateTime": "2026-10-19T03:36:45.995Z",
+      "utcSetDateTime": "2026-10-19T03:36:32.888Z"
+    },
+    {
+      "id": 110672,
+      "pinTickerId": 4569,
+      "kind": "start",
+      "utcStartDateTime": "2026-12-01T00:00:00.000Z",
+      "day": "2026-12-01",
+      "price": null,
+      "utcPriceDateTime": null,
+      "utcCheckedDateTime": null,
+      "utcSetDateTime": "2026-10-19T03:36:37.070Z"
+    },
+    {
+      "id": 110679,
+      "pinTickerId": 4570,
+      "kind": "posted",
+      "utcStartDateTime": null,
+      "day": null,
+      "price": 18.06,
+      "utcPriceDateTime": "2026-10-16T23:59:00.000Z",
+      "utcCheckedDateTime": "2026-10-19T03:37:25.220Z",
+      "utcSetDateTime": "2026-10-19T03:37:19.949Z"
+    },
+    {
+      "id": 110680,
+      "pinTickerId": 4570,
+      "kind": "start",
+      "utcStartDateTime": "2027-06-01T00:00:00.000Z",
+      "day": "2027-06-01",
+      "price": null,
+      "utcPriceDateTime": null,
+      "utcCheckedDateTime": null,
+      "utcSetDateTime": "2026-10-19T03:37:20.893Z"
+    },
+    {
+      "id": 110697,
+      "pinTickerId": 4571,
+      "kind": "posted",
+      "utcStartDateTime": null,
+      "day": null,
+      "price": 18.06,
+      "utcPriceDateTime": "2026-10-16T23:59:00.000Z",
+      "utcCheckedDateTime": "2026-10-19T03:38:33.850Z",
+      "utcSetDateTime": "2026-10-19T03:38:26.323Z"
+    },
+    {
+      "id": 110698,
+      "pinTickerId": 4571,
+      "kind": "start",
+      "utcStartDateTime": "2027-06-01T00:00:00.000Z",
+      "day": "2027-06-01",
+      "price": null,
+      "utcPriceDateTime": null,
+      "utcCheckedDateTime": null,
+      "utcSetDateTime": "2026-10-19T03:38:28.631Z"
+    },
+    {
+      "id": 111939,
+      "pinTickerId": 4572,
+      "kind": "posted",
+      "utcStartDateTime": null,
+      "day": null,
+      "price": 705.35,
+      "utcPriceDateTime": "2026-10-16T23:59:00.000Z",
+      "utcCheckedDateTime": "2026-10-19T06:31:01.152Z",
+      "utcSetDateTime": "2026-10-19T06:30:59.404Z"
+    },
+    {
+      "id": 111940,
+      "pinTickerId": 4572,
+      "kind": "start",
+      "utcStartDateTime": "2027-06-01T00:00:00.000Z",
+      "day": "2027-06-01",
+      "price": null,
+      "utcPriceDateTime": null,
+      "utcCheckedDateTime": null,
+      "utcSetDateTime": "2026-10-19T06:30:59.435Z"
+    },
+    {
+      "id": 111943,
+      "pinTickerId": 4573,
+      "kind": "posted",
+      "utcStartDateTime": null,
+      "day": null,
+      "price": 527.0258,
+      "utcPriceDateTime": "2026-10-16T23:59:00.000Z",
+      "utcCheckedDateTime": "2026-10-19T06:31:33.420Z",
+      "utcSetDateTime": "2026-10-19T06:31:30.208Z"
+    },
+    {
+      "id": 111944,
+      "pinTickerId": 4573,
+      "kind": "start",
+      "utcStartDateTime": "2027-06-01T00:00:00.000Z",
+      "day": "2027-06-01",
+      "price": null,
+      "utcPriceDateTime": null,
+      "utcCheckedDateTime": null,
+      "utcSetDateTime": "2026-10-19T06:31:30.775Z"
+    },
+    {
+      "id": 111945,
+      "pinTickerId": 4574,
+      "kind": "posted",
+      "utcStartDateTime": null,
+      "day": null,
+      "price": 527.0258,
+      "utcPriceDateTime": "2026-10-16T23:59:00.000Z",
+      "utcCheckedDateTime": "2026-10-19T06:32:00.141Z",
+      "utcSetDateTime": "2026-10-19T06:31:59.456Z"
+    },
+    {
+      "id": 111946,
+      "pinTickerId": 4574,
+      "kind": "start",
+      "utcStartDateTime": "2028-06-01T00:00:00.000Z",
+      "day": "2028-06-01",
+      "price": null,
+      "utcPriceDateTime": null,
+      "utcCheckedDateTime": null,
+      "utcSetDateTime": "2026-10-19T06:31:59.506Z"
+    },
+    {
+      "id": 117161,
+      "pinTickerId": 4575,
+      "kind": "posted",
+      "utcStartDateTime": null,
+      "day": null,
+      "price": 148.255,
+      "utcPriceDateTime": "2026-10-19T14:07:00.000Z",
+      "utcCheckedDateTime": "2026-10-19T14:08:07.227Z",
+      "utcSetDateTime": "2026-10-19T14:08:06.773Z"
+    },
+    {
+      "id": 117162,
+      "pinTickerId": 4575,
+      "kind": "start",
+      "utcStartDateTime": "2026-11-30T00:00:00.000Z",
+      "day": "2026-11-30",
+      "price": null,
+      "utcPriceDateTime": null,
+      "utcCheckedDateTime": null,
+      "utcSetDateTime": "2026-10-19T14:08:06.802Z"
+    },
+    {
+      "id": 117258,
+      "pinTickerId": 2350,
+      "kind": "start",
+      "utcStartDateTime": "2026-10-22T20:30:00.000Z",
+      "day": "2026-10-22",
+      "price": null,
+      "utcPriceDateTime": null,
+      "utcCheckedDateTime": null,
+      "utcSetDateTime": "2026-10-19T14:54:20.447Z"
+    },
+    {
+      "id": 120211,
+      "pinTickerId": 4576,
+      "kind": "posted",
+      "utcStartDateTime": null,
+      "day": null,
+      "price": 533.2673,
+      "utcPriceDateTime": "2026-10-19T20:48:00.000Z",
+      "utcCheckedDateTime": "2026-10-19T20:49:32.372Z",
+      "utcSetDateTime": "2026-10-19T20:49:31.534Z"
+    },
+    {
+      "id": 120212,
+      "pinTickerId": 4576,
+      "kind": "start",
+      "utcStartDateTime": "2033-06-01T00:00:00.000Z",
+      "day": "2033-06-01",
+      "price": null,
+      "utcPriceDateTime": null,
+      "utcCheckedDateTime": null,
+      "utcSetDateTime": "2026-10-19T20:49:31.574Z"
+    },
+    {
+      "id": 120213,
+      "pinTickerId": 4577,
+      "kind": "posted",
+      "utcStartDateTime": null,
+      "day": null,
+      "price": 533.2673,
+      "utcPriceDateTime": "2026-10-19T20:48:00.000Z",
+      "utcCheckedDateTime": "2026-10-19T20:50:03.091Z",
+      "utcSetDateTime": "2026-10-19T20:50:01.645Z"
+    },
+    {
+      "id": 120214,
+      "pinTickerId": 4577,
+      "kind": "start",
+      "utcStartDateTime": "2029-06-01T00:00:00.000Z",
+      "day": "2029-06-01",
+      "price": null,
+      "utcPriceDateTime": null,
+      "utcCheckedDateTime": null,
+      "utcSetDateTime": "2026-10-19T20:50:01.751Z"
+    },
+    {
+      "id": 120215,
+      "pinTickerId": 4578,
+      "kind": "posted",
+      "utcStartDateTime": null,
+      "day": null,
+      "price": 533.2673,
+      "utcPriceDateTime": "2026-10-19T20:48:00.000Z",
+      "utcCheckedDateTime": "2026-10-19T20:50:32.822Z",
+      "utcSetDateTime": "2026-10-19T20:50:31.521Z"
+    },
+    {
+      "id": 120216,
+      "pinTickerId": 4578,
+      "kind": "start",
+      "utcStartDateTime": "2030-06-01T00:00:00.000Z",
+      "day": "2030-06-01",
+      "price": null,
+      "utcPriceDateTime": null,
+      "utcCheckedDateTime": null,
+      "utcSetDateTime": "2026-10-19T20:50:31.590Z"
+    },
+    {
+      "id": 120481,
+      "pinTickerId": 4579,
+      "kind": "posted",
+      "utcStartDateTime": null,
+      "day": null,
+      "price": 92.32,
+      "utcPriceDateTime": "2026-10-19T21:35:00.000Z",
+      "utcCheckedDateTime": "2026-10-19T21:36:35.434Z",
+      "utcSetDateTime": "2026-10-19T21:36:33.173Z"
+    },
+    {
+      "id": 120482,
+      "pinTickerId": 4579,
+      "kind": "start",
+      "utcStartDateTime": "2031-01-01T00:00:00.000Z",
+      "day": "2031-01-01",
+      "price": null,
+      "utcPriceDateTime": null,
+      "utcCheckedDateTime": null,
+      "utcSetDateTime": "2026-10-19T21:36:33.293Z"
+    },
+    {
+      "id": 120497,
+      "pinTickerId": 4580,
+      "kind": "posted",
+      "utcStartDateTime": null,
+      "day": null,
+      "price": 908.98,
+      "utcPriceDateTime": "2026-10-19T21:42:00.000Z",
+      "utcCheckedDateTime": "2026-10-19T21:42:41.652Z",
+      "utcSetDateTime": "2026-10-19T21:42:40.192Z"
+    },
+    {
+      "id": 120498,
+      "pinTickerId": 4580,
+      "kind": "start",
+      "utcStartDateTime": "2026-02-03T00:00:00.000Z",
+      "day": "2026-02-03",
+      "price": 780.25,
+      "utcPriceDateTime": "2026-02-03T21:00:00.000Z",
+      "utcCheckedDateTime": "2026-10-19T21:42:40.648Z",
+      "utcSetDateTime": "2026-10-19T21:42:40.232Z"
+    },
+    {
+      "id": 120513,
+      "pinTickerId": 4581,
+      "kind": "posted",
+      "utcStartDateTime": null,
+      "day": null,
+      "price": 133.57,
+      "utcPriceDateTime": "2026-10-19T20:52:00.000Z",
+      "utcCheckedDateTime": "2026-10-19T21:43:47.081Z",
+      "utcSetDateTime": "2026-10-19T21:43:35.778Z"
+    },
+    {
+      "id": 120514,
+      "pinTickerId": 4581,
+      "kind": "start",
+      "utcStartDateTime": "2026-06-23T00:00:00.000Z",
+      "day": "2026-06-23",
+      "price": 126.6,
+      "utcPriceDateTime": "2026-06-23T20:00:00.000Z",
+      "utcCheckedDateTime": "2026-10-19T21:43:43.872Z",
+      "utcSetDateTime": "2026-10-19T21:43:37.150Z"
+    },
+    {
+      "id": 120517,
+      "pinTickerId": 4582,
+      "kind": "posted",
+      "utcStartDateTime": null,
+      "day": null,
+      "price": 906.19,
+      "utcPriceDateTime": "2026-10-19T21:43:00.000Z",
+      "utcCheckedDateTime": "2026-10-19T21:43:55.719Z",
+      "utcSetDateTime": "2026-10-19T21:43:51.297Z"
+    },
+    {
+      "id": 120518,
+      "pinTickerId": 4582,
+      "kind": "start",
+      "utcStartDateTime": "2030-10-01T00:00:00.000Z",
+      "day": "2030-10-01",
+      "price": null,
+      "utcPriceDateTime": null,
+      "utcCheckedDateTime": null,
+      "utcSetDateTime": "2026-10-19T21:43:51.353Z"
+    },
+    {
+      "id": 120527,
+      "pinTickerId": 4583,
+      "kind": "posted",
+      "utcStartDateTime": null,
+      "day": null,
+      "price": 420.9497,
+      "utcPriceDateTime": "2026-10-19T21:46:00.000Z",
+      "utcCheckedDateTime": "2026-10-19T21:47:14.857Z",
+      "utcSetDateTime": "2026-10-19T21:46:23.094Z"
+    },
+    {
+      "id": 120528,
+      "pinTickerId": 4583,
+      "kind": "start",
+      "utcStartDateTime": "2026-10-01T00:00:00.000Z",
+      "day": "2026-10-01",
+      "price": 459.2,
+      "utcPriceDateTime": "2026-10-01T20:00:00.000Z",
+      "utcCheckedDateTime": "2026-10-19T21:47:13.703Z",
+      "utcSetDateTime": "2026-10-19T21:46:26.563Z"
+    },
+    {
+      "id": 120529,
+      "pinTickerId": 4584,
+      "kind": "posted",
+      "utcStartDateTime": null,
+      "day": null,
+      "price": 342.8664,
+      "utcPriceDateTime": "2026-10-19T21:46:00.000Z",
+      "utcCheckedDateTime": "2026-10-19T21:47:12.897Z",
+      "utcSetDateTime": "2026-10-19T21:46:33.838Z"
+    },
+    {
+      "id": 120530,
+      "pinTickerId": 4584,
+      "kind": "start",
+      "utcStartDateTime": "2026-10-01T00:00:00.000Z",
+      "day": "2026-10-01",
+      "price": 330.32,
+      "utcPriceDateTime": "2026-10-01T20:00:00.000Z",
+      "utcCheckedDateTime": "2026-10-19T21:47:11.289Z",
+      "utcSetDateTime": "2026-10-19T21:46:42.601Z"
+    },
+    {
+      "id": 120531,
+      "pinTickerId": 4585,
+      "kind": "posted",
+      "utcStartDateTime": null,
+      "day": null,
+      "price": 217.52,
+      "utcPriceDateTime": "2026-10-19T21:46:00.000Z",
+      "utcCheckedDateTime": "2026-10-19T21:47:09.546Z",
+      "utcSetDateTime": "2026-10-19T21:46:45.265Z"
+    },
+    {
+      "id": 120532,
+      "pinTickerId": 4585,
+      "kind": "start",
+      "utcStartDateTime": "2026-10-01T00:00:00.000Z",
+      "day": "2026-10-01",
+      "price": 230.86,
+      "utcPriceDateTime": "2026-10-01T20:00:00.000Z",
+      "utcCheckedDateTime": "2026-10-19T21:47:07.863Z",
+      "utcSetDateTime": "2026-10-19T21:46:47.676Z"
+    },
+    {
+      "id": 120533,
+      "pinTickerId": 4586,
+      "kind": "posted",
+      "utcStartDateTime": null,
+      "day": null,
+      "price": 1651.51,
+      "utcPriceDateTime": "2026-10-19T21:45:00.000Z",
+      "utcCheckedDateTime": "2026-10-19T21:47:03.326Z",
+      "utcSetDateTime": "2026-10-19T21:46:50.691Z"
+    },
+    {
+      "id": 120534,
+      "pinTickerId": 4586,
+      "kind": "start",
+      "utcStartDateTime": "2026-10-01T00:00:00.000Z",
+      "day": "2026-10-01",
+      "price": 1808.49,
+      "utcPriceDateTime": "2026-10-01T20:00:00.000Z",
+      "utcCheckedDateTime": "2026-10-19T21:46:59.838Z",
+      "utcSetDateTime": "2026-10-19T21:46:56.176Z"
+    },
+    {
+      "id": 120565,
+      "pinTickerId": 4587,
+      "kind": "posted",
+      "utcStartDateTime": null,
+      "day": null,
+      "price": 6.7,
+      "utcPriceDateTime": "2026-10-19T21:38:00.000Z",
+      "utcCheckedDateTime": "2026-10-19T21:53:29.041Z",
+      "utcSetDateTime": "2026-10-19T21:53:24.795Z"
+    },
+    {
+      "id": 120566,
+      "pinTickerId": 4587,
+      "kind": "start",
+      "utcStartDateTime": "2026-10-08T00:00:00.000Z",
+      "day": "2026-10-08",
+      "price": 6.84,
+      "utcPriceDateTime": "2026-10-08T20:00:00.000Z",
+      "utcCheckedDateTime": "2026-10-19T21:53:25.712Z",
+      "utcSetDateTime": "2026-10-19T21:53:24.836Z"
+    },
+    {
+      "id": 120583,
+      "pinTickerId": 4588,
+      "kind": "posted",
+      "utcStartDateTime": null,
+      "day": null,
+      "price": 34.03,
+      "utcPriceDateTime": "2026-10-19T21:51:00.000Z",
+      "utcCheckedDateTime": "2026-10-19T21:54:25.016Z",
+      "utcSetDateTime": "2026-10-19T21:54:23.292Z"
+    },
+    {
+      "id": 120584,
+      "pinTickerId": 4588,
+      "kind": "start",
+      "utcStartDateTime": "2026-06-30T00:00:00.000Z",
+      "day": "2026-06-30",
+      "price": 46.01,
+      "utcPriceDateTime": "2026-06-30T20:00:00.000Z",
+      "utcCheckedDateTime": "2026-10-19T21:54:23.453Z",
+      "utcSetDateTime": "2026-10-19T21:54:23.341Z"
+    },
+    {
+      "id": 120589,
+      "pinTickerId": 4589,
+      "kind": "posted",
+      "utcStartDateTime": null,
+      "day": null,
+      "price": 89.6352,
+      "utcPriceDateTime": "2026-10-19T21:54:00.000Z",
+      "utcCheckedDateTime": "2026-10-19T21:55:31.436Z",
+      "utcSetDateTime": "2026-10-19T21:55:30.455Z"
+    },
+    {
+      "id": 120590,
+      "pinTickerId": 4589,
+      "kind": "start",
+      "utcStartDateTime": "2030-01-01T00:00:00.000Z",
+      "day": "2030-01-01",
+      "price": null,
+      "utcPriceDateTime": null,
+      "utcCheckedDateTime": null,
+      "utcSetDateTime": "2026-10-19T21:55:30.471Z"
+    },
+    {
+      "id": 120595,
+      "pinTickerId": 4590,
+      "kind": "posted",
+      "utcStartDateTime": null,
+      "day": null,
+      "price": 8.01,
+      "utcPriceDateTime": "2026-10-19T21:55:00.000Z",
+      "utcCheckedDateTime": "2026-10-19T21:55:59.898Z",
+      "utcSetDateTime": "2026-10-19T21:55:56.883Z"
+    },
+    {
+      "id": 120596,
+      "pinTickerId": 4590,
+      "kind": "start",
+      "utcStartDateTime": "2026-09-01T00:00:00.000Z",
+      "day": "2026-09-01",
+      "price": 10.35,
+      "utcPriceDateTime": "2026-09-01T20:00:00.000Z",
+      "utcCheckedDateTime": "2026-10-19T21:55:57.664Z",
+      "utcSetDateTime": "2026-10-19T21:55:56.915Z"
+    },
+    {
+      "id": 120631,
+      "pinTickerId": 4591,
+      "kind": "posted",
+      "utcStartDateTime": null,
+      "day": null,
+      "price": 137.24,
+      "utcPriceDateTime": "2026-10-19T21:00:00.000Z",
+      "utcCheckedDateTime": "2026-10-19T22:00:22.137Z",
+      "utcSetDateTime": "2026-10-19T22:00:20.648Z"
+    },
+    {
+      "id": 120632,
+      "pinTickerId": 4591,
+      "kind": "start",
+      "utcStartDateTime": "2025-12-26T00:00:00.000Z",
+      "day": "2025-12-26",
+      "price": 135.28,
+      "utcPriceDateTime": "2025-12-26T21:00:00.000Z",
+      "utcCheckedDateTime": "2026-10-19T22:00:21.120Z",
+      "utcSetDateTime": "2026-10-19T22:00:20.662Z"
+    },
+    {
+      "id": 124099,
+      "pinTickerId": 4592,
+      "kind": "posted",
+      "utcStartDateTime": null,
+      "day": null,
+      "price": 126.8,
+      "utcPriceDateTime": "2026-10-19T23:33:00.000Z",
+      "utcCheckedDateTime": "2026-10-20T05:17:37.644Z",
+      "utcSetDateTime": "2026-10-20T05:17:36.255Z"
+    },
+    {
+      "id": 124100,
+      "pinTickerId": 4592,
+      "kind": "start",
+      "utcStartDateTime": "2026-12-01T00:00:00.000Z",
+      "day": "2026-12-01",
+      "price": null,
+      "utcPriceDateTime": null,
+      "utcCheckedDateTime": null,
+      "utcSetDateTime": "2026-10-20T05:17:36.295Z"
+    },
+    {
+      "id": 124125,
+      "pinTickerId": 4593,
+      "kind": "posted",
+      "utcStartDateTime": null,
+      "day": null,
+      "price": 87.43,
+      "utcPriceDateTime": "2026-10-19T23:55:00.000Z",
+      "utcCheckedDateTime": "2026-10-20T05:27:42.116Z",
+      "utcSetDateTime": "2026-10-20T05:27:41.202Z"
+    },
+    {
+      "id": 124126,
+      "pinTickerId": 4593,
+      "kind": "start",
+      "utcStartDateTime": "2027-10-01T00:00:00.000Z",
+      "day": "2027-10-01",
+      "price": null,
+      "utcPriceDateTime": null,
+      "utcCheckedDateTime": null,
+      "utcSetDateTime": "2026-10-20T05:27:41.210Z"
+    },
+    {
+      "id": 124163,
+      "pinTickerId": 4594,
+      "kind": "posted",
+      "utcStartDateTime": null,
+      "day": null,
+      "price": 81.61,
+      "utcPriceDateTime": "2026-10-19T23:30:00.000Z",
+      "utcCheckedDateTime": "2026-10-20T05:40:42.141Z",
+      "utcSetDateTime": "2026-10-20T05:40:40.672Z"
+    },
+    {
+      "id": 124164,
+      "pinTickerId": 4594,
+      "kind": "start",
+      "utcStartDateTime": "2027-12-01T00:00:00.000Z",
+      "day": "2027-12-01",
+      "price": null,
+      "utcPriceDateTime": null,
+      "utcCheckedDateTime": null,
+      "utcSetDateTime": "2026-10-20T05:40:40.681Z"
+    },
+    {
+      "id": 124381,
+      "pinTickerId": 4595,
+      "kind": "posted",
+      "utcStartDateTime": null,
+      "day": null,
+      "price": 66.66,
+      "utcPriceDateTime": "2026-10-19T23:45:00.000Z",
+      "utcCheckedDateTime": "2026-10-20T06:19:08.312Z",
+      "utcSetDateTime": "2026-10-20T06:19:06.820Z"
+    },
+    {
+      "id": 124382,
+      "pinTickerId": 4595,
+      "kind": "start",
+      "utcStartDateTime": "2026-12-01T00:00:00.000Z",
+      "day": "2026-12-01",
+      "price": null,
+      "utcPriceDateTime": null,
+      "utcCheckedDateTime": null,
+      "utcSetDateTime": "2026-10-20T06:19:07.147Z"
+    },
+    {
+      "id": 125365,
+      "pinTickerId": 4596,
+      "kind": "posted",
+      "utcStartDateTime": null,
+      "day": null,
+      "price": 76.24,
+      "utcPriceDateTime": "2026-10-20T13:55:00.000Z",
+      "utcCheckedDateTime": "2026-10-20T13:56:39.180Z",
+      "utcSetDateTime": "2026-10-20T13:56:37.569Z"
+    },
+    {
+      "id": 125366,
+      "pinTickerId": 4596,
+      "kind": "start",
+      "utcStartDateTime": "2027-12-01T00:00:00.000Z",
+      "day": "2027-12-01",
+      "price": null,
+      "utcPriceDateTime": null,
+      "utcCheckedDateTime": null,
+      "utcSetDateTime": "2026-10-20T13:56:38.081Z"
+    },
+    {
+      "id": 125367,
+      "pinTickerId": 4597,
+      "kind": "posted",
+      "utcStartDateTime": null,
+      "day": null,
+      "price": 90.605,
+      "utcPriceDateTime": "2026-10-20T13:58:00.000Z",
+      "utcCheckedDateTime": "2026-10-20T13:59:30.601Z",
+      "utcSetDateTime": "2026-10-20T13:59:29.793Z"
+    },
+    {
+      "id": 125368,
+      "pinTickerId": 4597,
+      "kind": "start",
+      "utcStartDateTime": "2028-06-01T00:00:00.000Z",
+      "day": "2028-06-01",
+      "price": null,
+      "utcPriceDateTime": null,
+      "utcCheckedDateTime": null,
+      "utcSetDateTime": "2026-10-20T13:59:29.802Z"
+    },
+    {
+      "id": 125371,
+      "pinTickerId": 4598,
+      "kind": "posted",
+      "utcStartDateTime": null,
+      "day": null,
+      "price": 62.96,
+      "utcPriceDateTime": "2026-10-20T14:10:00.000Z",
+      "utcCheckedDateTime": "2026-10-20T14:10:31.795Z",
+      "utcSetDateTime": "2026-10-20T14:10:30.088Z"
+    },
+    {
+      "id": 125372,
+      "pinTickerId": 4598,
+      "kind": "start",
+      "utcStartDateTime": "2027-03-01T00:00:00.000Z",
+      "day": "2027-03-01",
+      "price": null,
+      "utcPriceDateTime": null,
+      "utcCheckedDateTime": null,
+      "utcSetDateTime": "2026-10-20T14:10:30.144Z"
+    },
+    {
+      "id": 125373,
+      "pinTickerId": 4599,
+      "kind": "posted",
+      "utcStartDateTime": null,
+      "day": null,
+      "price": 148.59,
+      "utcPriceDateTime": "2026-10-20T14:13:00.000Z",
+      "utcCheckedDateTime": "2026-10-20T14:14:38.677Z",
+      "utcSetDateTime": "2026-10-20T14:14:37.218Z"
+    },
+    {
+      "id": 125374,
+      "pinTickerId": 4599,
+      "kind": "start",
+      "utcStartDateTime": "2026-11-01T00:00:00.000Z",
+      "day": "2026-11-01",
+      "price": null,
+      "utcPriceDateTime": null,
+      "utcCheckedDateTime": null,
+      "utcSetDateTime": "2026-10-20T14:14:37.227Z"
+    },
+    {
+      "id": 125380,
+      "pinTickerId": 4575,
+      "kind": "start",
+      "utcStartDateTime": "2026-11-16T00:00:00.000Z",
+      "day": "2026-11-16",
+      "price": null,
+      "utcPriceDateTime": null,
+      "utcCheckedDateTime": null,
+      "utcSetDateTime": "2026-10-20T14:23:28.320Z"
+    },
+    {
+      "id": 125385,
+      "pinTickerId": 590,
+      "kind": "start",
+      "utcStartDateTime": "2026-11-01T00:00:00.000Z",
+      "day": "2026-11-01",
+      "price": null,
+      "utcPriceDateTime": null,
+      "utcCheckedDateTime": null,
+      "utcSetDateTime": "2026-10-20T14:23:33.570Z"
+    },
+    {
+      "id": 125389,
+      "pinTickerId": 591,
+      "kind": "start",
+      "utcStartDateTime": "2026-11-01T00:00:00.000Z",
+      "day": "2026-11-01",
+      "price": null,
+      "utcPriceDateTime": null,
+      "utcCheckedDateTime": null,
+      "utcSetDateTime": "2026-10-20T14:23:33.609Z"
+    },
+    {
+      "id": 125400,
+      "pinTickerId": 579,
+      "kind": "start",
+      "utcStartDateTime": "2026-11-01T00:00:00.000Z",
+      "day": "2026-11-01",
+      "price": null,
+      "utcPriceDateTime": null,
+      "utcCheckedDateTime": null,
+      "utcSetDateTime": "2026-10-20T14:25:51.465Z"
+    },
+    {
+      "id": 125404,
+      "pinTickerId": 580,
+      "kind": "start",
+      "utcStartDateTime": "2026-11-01T00:00:00.000Z",
+      "day": "2026-11-01",
+      "price": null,
+      "utcPriceDateTime": null,
+      "utcCheckedDateTime": null,
+      "utcSetDateTime": "2026-10-20T14:25:51.489Z"
+    },
+    {
+      "id": 125407,
+      "pinTickerId": 4600,
+      "kind": "posted",
+      "utcStartDateTime": null,
+      "day": null,
+      "price": 198.29,
+      "utcPriceDateTime": "2026-10-20T14:28:00.000Z",
+      "utcCheckedDateTime": "2026-10-20T14:28:20.793Z",
+      "utcSetDateTime": "2026-10-20T14:28:19.533Z"
+    },
+    {
+      "id": 125408,
+      "pinTickerId": 4600,
+      "kind": "start",
+      "utcStartDateTime": "2026-10-19T00:00:00.000Z",
+      "day": "2026-10-19",
+      "price": 198.41,
+      "utcPriceDateTime": "2026-10-19T20:00:00.000Z",
+      "utcCheckedDateTime": "2026-10-20T14:28:19.976Z",
+      "utcSetDateTime": "2026-10-20T14:28:19.544Z"
+    },
+    {
+      "id": 125409,
+      "pinTickerId": 4601,
+      "kind": "posted",
+      "utcStartDateTime": null,
+      "day": null,
+      "price": 176.145,
+      "utcPriceDateTime": "2026-10-20T14:28:00.000Z",
+      "utcCheckedDateTime": "2026-10-20T14:28:27.655Z",
+      "utcSetDateTime": "2026-10-20T14:28:26.175Z"
+    },
+    {
+      "id": 125410,
+      "pinTickerId": 4601,
+      "kind": "start",
+      "utcStartDateTime": "2026-10-19T00:00:00.000Z",
+      "day": "2026-10-19",
+      "price": 173.53,
+      "utcPriceDateTime": "2026-10-19T20:00:00.000Z",
+      "utcCheckedDateTime": "2026-10-20T14:28:26.650Z",
+      "utcSetDateTime": "2026-10-20T14:28:26.185Z"
+    },
+    {
+      "id": 125781,
+      "pinTickerId": 4602,
+      "kind": "posted",
+      "utcStartDateTime": null,
+      "day": null,
+      "price": 16.47,
+      "utcPriceDateTime": "2017-06-14T20:00:00.000Z",
+      "utcCheckedDateTime": "2026-10-21T00:40:20.780Z",
+      "utcSetDateTime": "2026-10-21T00:40:18.429Z"
+    },
+    {
+      "id": 125784,
+      "pinTickerId": 4602,
+      "kind": "start",
+      "utcStartDateTime": "2014-05-08T00:00:00.000Z",
+      "day": "2014-05-08",
+      "price": null,
+      "utcPriceDateTime": null,
+      "utcCheckedDateTime": "2026-10-21T00:40:19.185Z",
+      "utcSetDateTime": "2026-10-21T00:40:18.697Z"
     }
   ],
   "relations": [
