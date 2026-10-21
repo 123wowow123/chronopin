@@ -136,6 +136,7 @@ const ja: Messages = {
     tradeBuys: '買い',
     tradeSells: '売り',
     tradesToday: '最近の株式取引',
+    tradesHistory: 'もっと見る',
     whyTrade: '{name}の取引を通知中',
     whyWatch: 'ウォッチ中のピン',
     whyThread: 'ウォッチ中のスレッド',
@@ -145,7 +146,7 @@ const ja: Messages = {
     whyYourComment: 'あなたのコメント',
     following: 'フォロー中',
     followBack: 'フォローバック',
-    groupWatching: 'ウォッチ中',
+    groupWatching: 'ウォッチ中のピンと人物から',
     groupYours: 'あなたの投稿',
   },
   dm: {

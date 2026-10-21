@@ -136,6 +136,7 @@ const th: Messages = {
     tradeBuys: 'ซื้อ',
     tradeSells: 'ขาย',
     tradesToday: 'การซื้อขายหุ้นล่าสุด',
+    tradesHistory: 'ดูเพิ่มเติม',
     whyTrade: 'คุณกำลังติดตามการซื้อขายของ {name}',
     whyWatch: 'หมุดที่คุณติดตาม',
     whyThread: 'เธรดที่คุณติดตาม',
@@ -145,7 +146,7 @@ const th: Messages = {
     whyYourComment: 'ความคิดเห็นของคุณ',
     following: 'กำลังติดตาม',
     followBack: 'ติดตามกลับ',
-    groupWatching: 'เฝ้าดู',
+    groupWatching: 'จากพินและบุคคลที่คุณเฝ้าดู',
     groupYours: 'ในหมุดของคุณ',
   },
   dm: {

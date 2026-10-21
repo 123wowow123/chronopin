@@ -143,6 +143,7 @@ const ru: Messages = {
     tradeBuys: 'Покупки',
     tradeSells: 'Продажи',
     tradesToday: 'Недавние сделки с акциями',
+    tradesHistory: 'Ещё',
     whyTrade: 'Вы следите за сделками {name}',
     whyWatch: 'Отслеживаемый вами пин',
     whyThread: 'Отслеживаемая вами цепочка',
@@ -152,7 +153,7 @@ const ru: Messages = {
     whyYourComment: 'Ваш комментарий',
     following: 'Вы подписаны',
     followBack: 'Подписаться в ответ',
-    groupWatching: 'Отслеживаемое',
+    groupWatching: 'От отслеживаемых пинов и людей',
     groupYours: 'К вашим публикациям',
   },
   dm: {

@@ -158,6 +158,7 @@ const ar: Messages = {
     tradeBuys: 'شراء',
     tradeSells: 'بيع',
     tradesToday: 'صفقات الأسهم الأخيرة',
+    tradesHistory: 'عرض المزيد',
     whyTrade: 'أنت تتابع صفقات {name}',
     whyWatch: 'دبوس تراقبه',
     whyThread: 'سلسلة تراقبها',
@@ -167,7 +168,7 @@ const ar: Messages = {
     whyYourComment: 'تعليقك',
     following: 'متابَع',
     followBack: 'رد المتابعة',
-    groupWatching: 'تراقبها',
+    groupWatching: 'من الدبابيس والأشخاص الذين تتابعهم بالمراقبة',
     groupYours: 'على منشوراتك',
   },
   dm: {

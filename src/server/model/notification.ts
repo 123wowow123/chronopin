@@ -406,8 +406,9 @@ export default class Notification {
   // are left out. A batch (see groupKey) arrives as its newest notification,
   // carrying how many others stand behind it; the limit counts entries, not
   // rows, so a batch never crowds the list.
-  static list(userId: number, limit?: string | number | null, timeZone = 'UTC') {
-    const n = Math.min(Math.max(parseInt(String(limit), 10) || DEFAULT_LIMIT, 1), 100);
+  static list(userId: number, limit?: string | number | null, timeZone = 'UTC', type?: string | null) {
+    // A single kind (the trades history) can reach back weeks, so it may ask for more.
+    const n = Math.min(Math.max(parseInt(String(limit), 10) || DEFAULT_LIMIT, 1), type ? 2000 : 100);
     return inZone(timeZone, (zone) =>
       db.query<NotificationItem>(
         `
@@ -446,6 +447,7 @@ export default class Notification {
                    AND f."utcDeletedDateTime" IS NULL) AS "followingBack"
         ${VISIBLE_FROM}
           AND n."userId" = $1 AND n."utcDeletedDateTime" IS NULL
+          AND ($4::text IS NULL OR n."type"::text = $4)
       ),
       entries AS (
         -- The newest of each batch stands for it, and a batch counts as read
@@ -472,7 +474,7 @@ export default class Notification {
       FROM entries
       ORDER BY "utcCreatedDateTime" DESC, "id" DESC
       LIMIT $3`,
-        [userId, zone, n],
+        [userId, zone, n, type ?? null],
       ),
     );
   }

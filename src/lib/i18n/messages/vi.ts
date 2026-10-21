@@ -136,6 +136,7 @@ const vi: Messages = {
     tradeBuys: 'Mua',
     tradeSells: 'Bán',
     tradesToday: 'Giao dịch cổ phiếu gần đây',
+    tradesHistory: 'Xem thêm',
     whyTrade: 'Bạn đang theo dõi giao dịch của {name}',
     whyWatch: 'Một ghim bạn đang quan sát',
     whyThread: 'Một chuỗi bạn đang quan sát',
@@ -145,7 +146,7 @@ const vi: Messages = {
     whyYourComment: 'Bình luận của bạn',
     following: 'Đang theo dõi',
     followBack: 'Theo dõi lại',
-    groupWatching: 'Đang quan sát',
+    groupWatching: 'Từ ghim và người bạn theo dõi',
     groupYours: 'Trên bài của bạn',
   },
   // Direct messages: the navbar's chats panel, docked chat windows, /messages.

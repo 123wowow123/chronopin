@@ -137,6 +137,7 @@ const id: Messages = {
     tradeBuys: 'Pembelian',
     tradeSells: 'Penjualan',
     tradesToday: 'Perdagangan saham terbaru',
+    tradesHistory: 'Lihat selengkapnya',
     whyTrade: 'Anda memantau transaksi {name}',
     whyWatch: 'Pin yang Anda pantau',
     whyThread: 'Utas yang Anda pantau',
@@ -146,7 +147,7 @@ const id: Messages = {
     whyYourComment: 'Komentar Anda',
     following: 'Mengikuti',
     followBack: 'Ikuti balik',
-    groupWatching: 'Dipantau',
+    groupWatching: 'Dari pin dan orang yang kamu pantau',
     groupYours: 'Pada kiriman Anda',
   },
   // Direct messages: the navbar's chats panel, docked chat windows, /messages.

@@ -137,6 +137,7 @@ const zh: Messages = {
     tradeBuys: '买入',
     tradeSells: '卖出',
     tradesToday: '近期股票交易',
+    tradesHistory: '查看更多',
     whyTrade: '你在关注 {name} 的交易',
     whyWatch: '你关注的图钉',
     whyThread: '你关注的串',
@@ -146,7 +147,7 @@ const zh: Messages = {
     whyYourComment: '你的评论',
     following: '已关注',
     followBack: '回关',
-    groupWatching: '关注中的',
+    groupWatching: '来自你关注的图钉和人物',
     groupYours: '你的帖子',
   },
   dm: {

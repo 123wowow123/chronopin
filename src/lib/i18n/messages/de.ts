@@ -136,6 +136,7 @@ const de: Messages = {
     tradeBuys: 'Käufe',
     tradeSells: 'Verkäufe',
     tradesToday: 'Aktienhandel zuletzt',
+    tradesHistory: 'Mehr anzeigen',
     whyTrade: 'Du beobachtest die Geschäfte von {name}',
     whyWatch: 'Pin, den du beobachtest',
     whyThread: 'Thread, den du beobachtest',
@@ -145,7 +146,7 @@ const de: Messages = {
     whyYourComment: 'Dein Kommentar',
     following: 'Folge ich',
     followBack: 'Zurückfolgen',
-    groupWatching: 'Beobachtet',
+    groupWatching: 'Von Pins und Personen, die du beobachtest',
     groupYours: 'Zu deinen Beiträgen',
   },
   dm: {

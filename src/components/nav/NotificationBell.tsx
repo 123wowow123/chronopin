@@ -300,17 +300,18 @@ function sectionsOf(items: Notification[]): { section: Section; items: Notificat
   return sections;
 }
 
-type Entry = { kind: 'row'; n: Notification } | { kind: 'trades'; groups: { day: 0 | -1; items: Notification[] }[] };
+type Entry = { kind: 'row'; n: Notification } | { kind: 'trades'; groups: { day: number; items: Notification[] }[] };
 
 // Stock-trade rows fold into one group per day (today, yesterday), placed where
 // the newest of each sits; older filings drop out.
+const dayKey = (offset: number) => {
+  const d = new Date();
+  d.setDate(d.getDate() + offset);
+  return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
+};
+
 function entriesOf(allRows: Notification[]): Entry[] {
-  const key = (offset: number) => {
-    const d = new Date();
-    d.setDate(d.getDate() + offset);
-    return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
-  };
-  const days = [[0, key(0)], [-1, key(-1)]] as const;
+  const days = [[0, dayKey(0)], [-1, dayKey(-1)]] as const;
   const dayOf = (n: Notification) => days.find(([, k]) => n.tradeFiledDate?.slice(0, 10) === k)?.[0];
   const rows = allRows.filter((n) => n.type !== 'trade' || dayOf(n) !== undefined);
   const entries: Entry[] = [];
@@ -330,9 +331,12 @@ function entriesOf(allRows: Notification[]): Entry[] {
 
 // The watched people's recent trades, collapsed to buy and sell totals with
 // their tickers (every row below counts, so the tiles always add up); opening it lists each filing.
-function TradeDay({ items, day, renderRow }: { items: Notification[]; day: 0 | -1; renderRow: (n: Notification) => React.ReactNode }) {
+function TradeDay({ items, day, renderRow }: { items: Notification[]; day: number; renderRow: (n: Notification) => React.ReactNode }) {
   const t = useT();
-  const dayLabel = new Intl.RelativeTimeFormat(useIntlLocale(), { numeric: 'auto' }).format(day, 'day');
+  const locale = useIntlLocale();
+  const dayLabel = day >= -1
+    ? new Intl.RelativeTimeFormat(locale, { numeric: 'auto' }).format(day, 'day')
+    : new Intl.DateTimeFormat(locale, { weekday: 'long', month: 'short', day: 'numeric' }).format(dayDate(day));
   const [open, setOpen] = useState(false);
   const listId = useId();
   const sum = (pick: (n: Notification) => number | null) => items.reduce((total, n) => total + (pick(n) ?? 0), 0);
@@ -397,22 +401,29 @@ function TradeDay({ items, day, renderRow }: { items: Notification[]; day: 0 | -
 }
 
 // One collapsible block holding today's and yesterday's panes stuck together.
-function TradeGroup({ groups, renderRow }: { groups: { day: 0 | -1; items: Notification[] }[]; renderRow: (n: Notification) => React.ReactNode }) {
+function TradeGroup({ groups, renderRow }: { groups: { day: number; items: Notification[] }[]; renderRow: (n: Notification) => React.ReactNode }) {
   const t = useT();
   const [open, setOpen] = useState(true);
   const bodyId = useId();
   return (
     <li className="text-sm">
-      <button
-        type="button"
-        aria-expanded={open}
-        aria-controls={bodyId}
-        onClick={() => setOpen((o) => !o)}
-        className="flex w-full items-center justify-between gap-2 px-4 py-2.5 text-start font-semibold text-ink"
-      >
-        {t('notifications.tradesToday')}
-        <Icon name="chevron" className={`size-4 shrink-0 text-subtle transition-transform ${open ? 'rotate-180' : ''}`} />
-      </button>
+      <div className="flex items-center gap-2 px-4 py-2.5">
+        <button
+          type="button"
+          aria-expanded={open}
+          aria-controls={bodyId}
+          onClick={() => setOpen((o) => !o)}
+          className="min-w-0 text-start font-semibold text-ink"
+        >
+          {t('notifications.tradesToday')}
+        </button>
+        <Link href="/notifications/trades" className="shrink-0 text-xs font-medium text-link">
+          {t('notifications.tradesHistory')}
+        </Link>
+        <button type="button" aria-hidden tabIndex={-1} onClick={() => setOpen((o) => !o)} className="ms-auto shrink-0">
+          <Icon name="chevron" className={`size-4 text-subtle transition-transform ${open ? 'rotate-180' : ''}`} />
+        </button>
+      </div>
       {open ? (
         <div id={bodyId} className="divide-y divide-line border-t border-line">
           {groups.map((g) => <TradeDay key={g.day} items={g.items} day={g.day} renderRow={renderRow} />)}
@@ -826,6 +837,169 @@ export function NotificationsFeed() {
     <div className="surface overflow-hidden">
       <LocalWeatherRow className="border-b border-line" />
       <NotificationItems {...list} />
+    </div>
+  );
+}
+
+const HISTORY_WEEKS = [1, 2, 4, 8, 12];
+const TOP_TICKERS = 10;
+
+const dayDate = (offset: number) => {
+  const d = new Date();
+  d.setDate(d.getDate() + offset);
+  return d;
+};
+
+// The /notifications/trades page: each day's buys and sells for the past two
+// weeks. Read-only, so unlike the main list it leaves the unread marks alone.
+export function TradesHistoryFeed() {
+  const t = useT();
+  const locale = useIntlLocale();
+  const [weeks, setWeeks] = useState(2);
+  const [items, setItems] = useState<Notification[] | null>(null);
+  const [failed, setFailed] = useState(false);
+  const load = useCallback(() => {
+    setFailed(false);
+    api
+      .get<{ notifications: Notification[] }>('/api/notifications?type=trade&limit=2000')
+      .then((res) => setItems(res.notifications))
+      .catch(() => setFailed(true));
+  }, []);
+  useEffect(() => {
+    const id = window.setTimeout(load, 0);
+    return () => window.clearTimeout(id);
+  }, [load]);
+  if (failed) return (
+    <div role="alert" className="surface px-4 py-6 text-center text-sm text-subtle">
+      {t('common.somethingWrong')}{' '}
+      <button type="button" className="text-link" onClick={load}>{t('common.retry')}</button>
+    </div>
+  );
+  if (items === null) return <div className="surface px-4 py-6 text-center text-sm text-subtle">{t('common.loading')}</div>;
+  const days = Array.from({ length: weeks * 7 }, (_, i) => ({
+    day: -i,
+    items: items.filter((n) => n.tradeFiledDate?.slice(0, 10) === dayKey(-i)),
+  })).filter((g) => g.items.length);
+  if (!days.length) return <div className="surface px-4 py-10 text-center text-sm text-subtle">{t('notifications.empty')}</div>;
+  const sum = (rows: Notification[], pick: (n: Notification) => number | null) => rows.reduce((total, n) => total + (pick(n) ?? 0), 0);
+  const all = days.flatMap((g) => g.items);
+  const people = new Set(all.map((n) => n.personName)).size;
+  const tone = { tradeBuys: 'text-success-soft ring-success/40', tradeSells: 'text-danger-soft ring-danger/40' } as const;
+  const dayLabel = (day: number) =>
+    day >= -1
+      ? new Intl.RelativeTimeFormat(locale, { numeric: 'auto' }).format(day, 'day')
+      : new Intl.DateTimeFormat(locale, { weekday: 'long' }).format(dayDate(day));
+  const dateLabel = (day: number) => new Intl.DateTimeFormat(locale, { month: 'short', day: 'numeric' }).format(dayDate(day));
+  // Per ticker: how many people traded it and the midpoint dollar value, ranked like the bell.
+  const rank = (pick: (n: Notification) => Record<string, number> | null) => {
+    const stats = new Map<string, { people: Set<string>; value: number }>();
+    for (const n of all) {
+      for (const [ticker, value] of Object.entries(pick(n) ?? {})) {
+        const st = stats.get(ticker) ?? { people: new Set<string>(), value: 0 };
+        st.people.add(n.personName ?? String(n.id));
+        st.value += value;
+        stats.set(ticker, st);
+      }
+    }
+    return [...stats].sort((a, b) => b[1].people.size - a[1].people.size || b[1].value - a[1].value);
+  };
+  const money = new Intl.NumberFormat(locale, { style: 'currency', currency: 'USD', notation: 'compact', maximumFractionDigits: 1 });
+  const total = (values: Record<string, number> | null) => Object.values(values ?? {}).reduce((a, b) => a + b, 0);
+  const weekLabel = (w: number) => new Intl.NumberFormat(locale, { style: 'unit', unit: 'week', unitDisplay: 'narrow' }).format(w);
+  const chips = (tickers: string[] | null, cls: string) =>
+    tickers?.map((tk) => <span key={tk} className={`rounded-md px-1.5 py-0.5 text-[11px] font-semibold ${cls}`}>{tk}</span>);
+  return (
+    <div className="flex flex-col gap-4">
+      <div role="group" aria-label={t('notifications.tradesToday')} className="surface flex gap-1 p-1">
+        {HISTORY_WEEKS.map((w) => (
+          <button
+            key={w}
+            type="button"
+            aria-pressed={w === weeks}
+            onClick={() => setWeeks(w)}
+            className={`flex-1 rounded-lg px-2 py-1.5 text-sm font-semibold tabular-nums ${w === weeks ? 'bg-accent text-white' : 'text-muted hover:bg-raised hover:text-ink'}`}
+          >
+            {weekLabel(w)}
+          </button>
+        ))}
+      </div>
+      <div className="surface grid grid-cols-3 divide-x divide-line rtl:divide-x-reverse">
+        {([
+          ['tradeBuys', sum(all, (n) => n.tradeBuys)],
+          ['tradeSells', sum(all, (n) => n.tradeSells)],
+        ] as const).map(([key, count]) => (
+          <div key={key} className="flex flex-col items-center gap-0.5 px-2 py-4">
+            <span className={`text-3xl font-semibold tabular-nums ${count ? tone[key].split(' ')[0] : 'text-subtle'}`}>{count}</span>
+            <span className="text-xs font-medium tracking-wide text-subtle uppercase">{t(`notifications.${key}`)}</span>
+          </div>
+        ))}
+        <div className="flex flex-col items-center gap-0.5 px-2 py-4">
+          <span className="text-3xl font-semibold text-ink tabular-nums">{people}</span>
+          <Icon name="users" className="size-4 text-subtle" />
+        </div>
+      </div>
+      <div className="surface grid grid-cols-1 divide-y divide-line sm:grid-cols-2 sm:divide-x sm:divide-y-0 rtl:sm:divide-x-reverse">
+        {([
+          ['tradeBuys', rank((n) => n.tradeBuyValues)],
+          ['tradeSells', rank((n) => n.tradeSellValues)],
+        ] as const).map(([key, list]) => (
+          <div key={key} className="min-w-0 px-4 py-3">
+            <h2 className={`mb-1.5 text-xs font-semibold tracking-wide uppercase ${tone[key].split(' ')[0]}`}>{t(`notifications.${key}`)}</h2>
+            {list.length ? (
+              <ol className="flex flex-col gap-1 text-sm">
+                {list.slice(0, TOP_TICKERS).map(([ticker, st]) => (
+                  <li key={ticker} className="flex items-baseline gap-2">
+                    <span className="w-5 shrink-0 text-end text-xs tabular-nums text-subtle">{st.people.size}</span>
+                    <span className="min-w-0 flex-1 truncate font-semibold text-ink">{ticker}</span>
+                    {st.value ? <span className="text-xs tabular-nums text-muted">{money.format(st.value)}</span> : null}
+                  </li>
+                ))}
+              </ol>
+            ) : (
+              <span className="text-sm text-subtle">—</span>
+            )}
+          </div>
+        ))}
+      </div>
+      {days.map((g) => (
+        <section key={g.day} className="surface overflow-hidden">
+          <header className="flex items-baseline justify-between gap-2 border-b border-line bg-raised/40 px-4 py-2.5">
+            <h2 className="font-semibold text-ink capitalize">{dayLabel(g.day)}</h2>
+            <span className="flex items-center gap-3 text-xs tabular-nums text-subtle">
+              <span className="text-success-soft">{t('notifications.tradeBuys')} {sum(g.items, (n) => n.tradeBuys)} · {money.format(sum(g.items, (n) => total(n.tradeBuyValues)))}</span>
+              <span className="text-danger-soft">{t('notifications.tradeSells')} {sum(g.items, (n) => n.tradeSells)} · {money.format(sum(g.items, (n) => total(n.tradeSellValues)))}</span>
+              <span>{dateLabel(g.day)}</span>
+            </span>
+          </header>
+          <ul className="divide-y divide-line">
+            {g.items.map((n) => (
+              <li key={n.id}>
+                <Link href={`${personPath(n.personName ?? '')}#trades`} className="flex items-start gap-3 px-4 py-3 text-sm hover:bg-raised/50">
+                  {n.personPhotoUrl ? (
+                    // eslint-disable-next-line @next/next/no-img-element -- portraits from arbitrary hosts
+                    <img src={n.personPhotoUrl} alt="" loading="lazy" referrerPolicy="no-referrer" className="size-10 shrink-0 rounded-full bg-raised object-cover" />
+                  ) : (
+                    <span aria-hidden className="flex size-10 shrink-0 items-center justify-center rounded-full bg-raised text-muted">
+                      <Icon name="users" className="size-5" />
+                    </span>
+                  )}
+                  <span className="flex min-w-0 flex-1 flex-col gap-1.5">
+                    <span className="truncate font-semibold text-ink">{n.personName}</span>
+                    <span className="flex flex-wrap items-center gap-1">
+                      {chips(n.tradeBuyTickers, 'bg-success/15 text-success-soft')}
+                      {chips(n.tradeSellTickers, 'bg-danger/15 text-danger-soft')}
+                    </span>
+                  </span>
+                  <span className="flex shrink-0 gap-1.5 text-xs font-semibold tabular-nums">
+                    {total(n.tradeBuyValues) ? <span className={`rounded-full px-2 py-0.5 ring-1 ring-inset ${tone.tradeBuys}`}>{money.format(total(n.tradeBuyValues))}</span> : null}
+                    {total(n.tradeSellValues) ? <span className={`rounded-full px-2 py-0.5 ring-1 ring-inset ${tone.tradeSells}`}>{money.format(total(n.tradeSellValues))}</span> : null}
+                  </span>
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </section>
+      ))}
     </div>
   );
 }

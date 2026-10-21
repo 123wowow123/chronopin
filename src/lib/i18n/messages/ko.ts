@@ -136,6 +136,7 @@ const ko: Messages = {
     tradeBuys: '매수',
     tradeSells: '매도',
     tradesToday: '최근 주식 거래',
+    tradesHistory: '더 보기',
     whyTrade: '{name} 님의 거래를 지켜보는 중',
     whyWatch: '관심 핀',
     whyThread: '지켜보는 스레드',
@@ -145,7 +146,7 @@ const ko: Messages = {
     whyYourComment: '내 댓글',
     following: '팔로우 중',
     followBack: '맞팔로우',
-    groupWatching: '관심',
+    groupWatching: '지켜보는 핀과 사람에게서',
     groupYours: '내 게시물',
   },
   dm: {

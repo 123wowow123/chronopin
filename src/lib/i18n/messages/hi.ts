@@ -137,6 +137,7 @@ const hi: Messages = {
     tradeBuys: 'खरीद',
     tradeSells: 'बिक्री',
     tradesToday: 'हाल के शेयर ट्रेड',
+    tradesHistory: 'और देखें',
     whyTrade: 'आप {name} के लेन-देन देख रहे हैं',
     whyWatch: 'एक पिन जिसे आप देख रहे हैं',
     whyThread: 'एक थ्रेड जिसे आप देख रहे हैं',
@@ -146,7 +147,7 @@ const hi: Messages = {
     whyYourComment: 'आपका कमेंट',
     following: 'फ़ॉलो कर रहे हैं',
     followBack: 'फ़ॉलो बैक करें',
-    groupWatching: 'देख रहे हैं',
+    groupWatching: 'आपके देखे जा रहे पिन और लोगों से',
     groupYours: 'आपकी पोस्ट पर',
   },
   dm: {

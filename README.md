@@ -440,3 +440,15 @@ http://localhost:3000/pin/15767/eric-bordelet-sydre-argelette-grand-cru-celebrat
 
 pin thread of plane releases and specs
 https://www.cnbc.com/2026/10/20/boeing-737-max-10-certification.html
+
+
+
+
+https://www.chronopin.com/pin/19327/lehigh-county-data-center-150-mw-facility-with-356-diesel-backup-generators-in-l
+are they keywards in Datacenter & Infrastructure Telemetry that can be used for search pills?
+
+
+clicking stock ticker should show company and stock graph
+http://localhost:3000/notifications/trades
+
+should show conflict of interest label if trade are flagged as such. thier profile should show which committies they are sitting on

@@ -137,6 +137,7 @@ const en = {
     tradeBuys: 'Buys',
     tradeSells: 'Sells',
     tradesToday: 'Recent stock trades',
+    tradesHistory: 'See more',
     whyTrade: 'You watch {name}’s trades',
     whyWatch: 'A pin you watch',
     whyThread: 'A thread you watch',
@@ -146,7 +147,7 @@ const en = {
     whyYourComment: 'Your comment',
     following: 'Following',
     followBack: 'Follow back',
-    groupWatching: 'Watching',
+    groupWatching: 'From pins & people you watch',
     groupYours: 'On your posts',
   },
   // Direct messages: the navbar's chats panel, docked chat windows, /messages.
