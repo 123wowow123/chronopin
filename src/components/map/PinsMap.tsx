@@ -116,6 +116,17 @@ const inCategories = (categories: string[], picks: string[]) => !picks.length ||
 
 // The count and totals of the markers a category pick leaves showing (the
 // focused pin always shows).
+function StatsStrip({ label, stats, t }: { label: string; stats: MapStat[]; t: ReturnType<typeof useT> }) {
+  const inDrawer = useInDrawerPanel();
+  return (
+    <dl aria-label={label} className={`${inDrawer ? 'px-3 ' : 'floating rounded-lg px-3 py-1.5 '}mt-2 flex w-full flex-nowrap items-baseline justify-between gap-x-1.5 overflow-hidden text-xs whitespace-nowrap`}>
+      {stats.map((stat) => (
+        <div key={stat.key} className="flex gap-0.5"><dt className="text-muted">{t(`map.${stat.labelKey}`)}</dt><dd className={`font-semibold tabular-nums ${stat.tone}`}>{stat.value}</dd></div>
+      ))}
+    </dl>
+  );
+}
+
 function publishMapStats(entries: MapEntry[], picks: string[], setCount: (n: number) => void, setStats: (stats: MapStat[]) => void, numberLocale: string) {
   const shown = entries.filter((e) => e.focus || inCategories(e.categories, picks)).map((e) => e.pin);
   setCount(shown.length);
@@ -1033,11 +1044,7 @@ export default function PinsMap({ sliderTyping = false, ads = false }: { sliderT
         <FloatingControls
           merge
           cards={layer === 'pins' && fetchQuery && status === 'ready' && count > 0 ? (
-            <dl aria-label={t('map.statsLabel')} className="floating mt-2 flex w-full flex-nowrap items-baseline justify-between gap-x-2.5 overflow-hidden rounded-lg px-3 py-1.5 text-xs whitespace-nowrap">
-              {stats.map((stat) => (
-                <div key={stat.key} className="flex gap-1"><dt className="text-muted">{t(`map.${stat.labelKey}`)}</dt><dd className={`font-semibold tabular-nums ${stat.tone}`}>{stat.value}</dd></div>
-              ))}
-            </dl>
+            <StatsStrip label={t('map.statsLabel')} stats={stats} t={t} />
           ) : undefined}
           drawerTop={<LayerToggle layer={layer} available={available} onChange={(next) => {
             if (next !== layer) setLayer(next);
