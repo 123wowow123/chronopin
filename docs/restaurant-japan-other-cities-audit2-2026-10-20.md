@@ -92,3 +92,6 @@ Continuation: [Batch112](restaurant-japan-30-japan112-2026-10-20.json) enriches 
 
 
 Continuation: [Batch113](restaurant-japan-30-japan113-2026-10-20.json) adds Tamazakai to Tokyo Coming soon after other-city review: October30opening,86priceditems,sixlabelledlaunchillustrations. Tokyo16/30;640memberships/ 113 missing. Other-city unresolved chronology/menu/photo leads retained.
+
+
+Continuation: [Batch114](restaurant-japan-30-japan114-2026-10-20.json) enriches existing SHINOYA 15926 with 107 new menu entries and six labelled promotional food photos. Opening day, cover, coupon and late booking conflicts remain unresolved. Counts unchanged at 640 memberships / 113 missing. Other-city unresolved chronology/menu/photo leads retained.
