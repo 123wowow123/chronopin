@@ -332,7 +332,6 @@ async function main() {
         powerSource: powerSource ?? null,
         sourceUrl,
         note: `Epoch AI cluster: ${ep.id}${genFight ? ` | Air permit fight: ${genFight.quote}` : ''}`,
-        checkedAt: CHECKED_AT,
       });
     }
   }
@@ -451,7 +450,6 @@ async function main() {
       powerSource: powerSource ?? null,
       sourceUrl,
       note: `Tracker #${td.id}${genFight ? ` | Air permit fight: ${genFight.quote}` : ''}`,
-      checkedAt: CHECKED_AT,
     });
 
     // Tags
@@ -552,7 +550,6 @@ async function main() {
       powerSource: gf.powerSource,
       sourceUrl,
       note: `Air permit filing: ${gf.quote}`,
-      checkedAt: CHECKED_AT,
     });
 
     // Tags
