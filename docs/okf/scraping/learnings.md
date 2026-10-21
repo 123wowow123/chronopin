@@ -15,6 +15,13 @@ Entry format: `## YYYY-MM-DD - <job>`, then `* **Learned**`, `* **Feedback**` (o
 
 
 
+## 2026-10-20 - Power kind: generation, usage, storage (PinPower.kind)
+
+* **Done:** Added `PinPower.kind` (0200, 0201), the pin-page labels, separate map totals (MW generated / used / stored), `power:` search and tag pills. Audit of the 795 existing rows found 10 wrong kinds (hydrogen electrolysers, a smelter and an EV-battery plant filed as generation; a coal plant, fuel-cell deals, a gravity-storage plant and a solar hybrid filed wrongly the other way) and 659 pins with a stated capacity but no row (376 "MWac/MWdc/MWp" solar titles the 0196 regex missed, plus pins added since). All fixed locally and on prod (1,454 rows: 627 generation, 426 storage, 401 usage).
+* **Feedback:** Owner asked for generation and usage to be distinguished, then for battery storage to be a separate group.
+* **Learned:** (1) Keyword classification needs an order: usage words, then explicit sources (solar, wind, nuclear), then storage, then weak words ("clean energy", "energy center"). (2) Prod pin ids matched local up to about 15700; match by `sourceUrl` anyway. (3) Hand-set rows can be wrong too; the audit listed them separately. (4) A per-pin prod read (two requests per pin) takes about 10 minutes for 1,450 rows; run it in the background.
+* **Changed:** [Fields](fields.md) gained "Power generation, usage and storage"; [PinPower](../tables/pin-power.md) documents `kind`. Scripts: `scripts/power/backfillTitles.ts`, `scripts/power/powerKindProd.ts`.
+
 ## 2026-10-19 - Data-centre megawatts (PinPower)
 
 * **Done:** Added the `PinPower` table (0196) and the pin-page Power line. Backfilled 367 of 566 data-centre pins from titles that state MW/GW. Five parallel research lanes (pins 2969-7382) found 48 sourced figures, a deeper re-run of the 32 empty pins found 1 more (7313 Beaver Dam, 220 MW), and one press estimate was added on request (7256 The Dalles, 103 MW). `PinPower` holds 831 rows locally; production has neither the table nor the values yet.

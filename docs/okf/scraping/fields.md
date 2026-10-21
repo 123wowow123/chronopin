@@ -115,6 +115,23 @@ Owner, 2026-10-18 (on the 51-round Cleanview batch): verify that `utcStartDateTi
 3. **Re-date stale past queue targets:** Interconnection queue rows (MISO, PJM, ERCOT, SPP, CAISO, NYISO, ISO-NE) frequently carry an initial target COD that has already passed while the project remains in active study (`Planned`). Never leave a `Planned` pin on a past target date; re-check and re-date it to the active revised commercial operation window and note the queue revision in `dateConfidenceReasoning`.
 4. **Use `PUT /api/pins/:id?lightweight=1` for date/metadata backfills:** Admin `PUT` with `?lightweight=1` updates the pin and search index while skipping heavy background listeners (`refreshWiki`, sentiment, translations), avoiding production VM load. Always `GET /api/pins/:id` first and pass the complete `media` and `references` arrays back in the `PUT` payload so existing media rows are preserved.
 
+## Power generation, usage and storage (PinPower.kind)
+
+Owner, 2026-10-20: pins, the map and search must tell power a facility **makes** from power it **draws**, with batteries as their own group. Every pin that gets a [PinPower](../tables/pin-power.md) megawatt figure gets a `kind` with it:
+
+| kind | What the megawatts are | Typical pins |
+| --- | --- | --- |
+| `generation` | Output capacity put on the grid or on site. A solar/wind + storage hybrid is generation (headline figure is the generating side; prefer MWac over MWdc). | solar, wind, nuclear/SMR, gas, coal, hydro, geothermal, fuel cells |
+| `usage` | Load drawn. | data centres and AI campuses, smelters, fabs, gigafactories, electrolysers (even when powered by new wind/solar), charging hubs, bitcoin mining |
+| `storage` | Rated charge/discharge power, neither made nor drawn. | BESS, battery storage, pumped storage |
+
+1. **Decide the kind from what the figure measures, not the pin's theme.** "Data centre powered by 2 GW of fuel cells" is usage if the figure is the campus load and generation if it is the fuel-cell order; read which number the title/source states. A plant's `PinEnergy` (annual TWh) is always usage.
+2. **Set it at scrape time.** A scrape that reads a facility capacity writes the row with `PUT /api/pins/:id/power` (`{ megawatts, kind, sourceUrl, note }`; `kind` is required). As a safety net, every pin save (`POST /api/pins`, `PUT /api/pins/:id`, so the daily jobs too) reads the title with `titlePower()` (`src/lib/power.ts`) and inserts a `title` row when the pin has none; it never replaces a row. So put the capacity in the title ("150 MW BESS", "402 MWac Solar") and still send a hand reading when the source gives a better figure or the title's kind would be wrong (a figure the title cannot classify gets no row).
+3. **Capacity units:** `MW`, `MWac`, `MWdc`, `MWp`, `GW...` all count; `MWh`/`GWh` are energy, not capacity (a "200 MW / 800 MWh" BESS is 200 MW). When both DC and AC are given, store AC.
+4. **Backfill and audit:** `npx tsx scripts/power/backfillTitles.ts --dry` lists pins whose title states a capacity but have no row (kind read off the title; unclassifiable or non-facility titles such as deliveries and deals are skipped and listed); drop `--dry` to add them. Check the **kind keyword traps** before trusting it: "Clean Energy Storage Center" is storage not generation; "Power Project" is not a power plant; a smelter or EV-battery plant is usage even though the title says "battery".
+5. **Push to prod** with `npx tsx scripts/power/powerKindProd.ts` (`--dry` first). It matches pins by `sourceUrl`, patches kinds that differ and inserts missing rows through `/api/admin/db/PinPower` so a title reading stays `title`. Admin writes do not invalidate the cached pin page.
+6. **Search words:** `power:generation`, `power:usage`, `power:storage` (aliases production/demand/battery/bess); tag pills "Power generation", "Power usage", "Power storage".
+
 # Adding a category
 
 A category name lives in **seven files**: `categories.ts` and all six

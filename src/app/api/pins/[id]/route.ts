@@ -7,6 +7,7 @@ import Pin, { sameSourceUrlKey } from '@/server/model/pin';
 import PinDuplicate from '@/server/model/pinDuplicate';
 import PinReference from '@/server/model/pinReference';
 import type User from '@/server/model/user';
+import { saveTitlePower } from '@/server/model/pinPower';
 import { invalidatePin } from '@/server/services/cache';
 import { welcomeToThread } from '@/server/services/watchAlerts';
 import { recordPinUpdate } from '@/server/services/pinUpdates';
@@ -118,6 +119,7 @@ const update = route(async (request: NextRequest, ctx: Ctx) => {
       ),
     );
   }
+  await saveTitlePower(updated.id, updated.title, updated.sourceUrl ?? null).catch((err) => log.warn('reading the title\'s power failed:', (err as Error).message));
   invalidatePin(updated.id);
   // A response moved between threads leaves one and joins the other.
   for (const parentId of new Set([existing.parentId, updated.parentId])) if (parentId) invalidatePin(parentId);

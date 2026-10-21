@@ -89,3 +89,6 @@ Continuation: [Batch111](restaurant-japan-30-japan111-2026-10-20.json) publishes
 
 
 Continuation: [Batch112](restaurant-japan-30-japan112-2026-10-20.json) enriches existing NorthContinent15590with30newmenuentries/fourphotos; no additional membership. LACHIC customer branch selector omits the configured branch; Ore no Sora brand menu labelsChibaMakuhariandcannotbeusedforSapporo. CHAEN and Doutor timeline/site/menu gaps are recorded. All-six-city counts remain639/114; other-city priority retained.
+
+
+Continuation: [Batch113](restaurant-japan-30-japan113-2026-10-20.json) adds Tamazakai to Tokyo Coming soon after other-city review: October30opening,86priceditems,sixlabelledlaunchillustrations. Tokyo16/30;640memberships/ 113 missing. Other-city unresolved chronology/menu/photo leads retained.

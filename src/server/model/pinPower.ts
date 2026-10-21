@@ -2,7 +2,7 @@
 // a row set by hand is never replaced by one read off the title.
 
 import * as db from '../db';
-import type { PinPowerJson, PowerKind } from '@/lib/power';
+import { titlePower, type PinPowerJson, type PowerKind } from '@/lib/power';
 
 type Row = Omit<PinPowerJson, 'megawatts' | 'checkedAt'> & { megawatts: string; checkedAt: Date };
 
@@ -26,4 +26,17 @@ export async function savePower(pinId: number, megawatts: number, { kind, source
 
 export async function deletePower(pinId: number) {
   await db.query(`DELETE FROM "PinPower" WHERE "pinId" = $1`, [pinId]);
+}
+
+// A pin saved with a capacity in its title ("200 MW BESS", "1,124 MWac Solar")
+// and no PinPower row gets a 'title' one, kind read off the title. Never
+// replaces a row, so a hand reading or an earlier title one stands.
+export async function saveTitlePower(pinId: number, title: string, sourceUrl: string | null) {
+  const read = titlePower(title);
+  if (!read) return false;
+  const rows = await db.query(
+    `INSERT INTO "PinPower" ("pinId", "megawatts", "kind", "source", "sourceUrl") VALUES ($1, $2, $3, 'title', $4) ON CONFLICT DO NOTHING RETURNING "pinId"`,
+    [pinId, read.megawatts, read.kind, sourceUrl],
+  );
+  return rows.length > 0;
 }

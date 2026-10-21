@@ -21,6 +21,7 @@ import { tagIfFrontier } from './frontierTag';
 import { prequelPinFor, reslotSequels } from '@/server/scrape/prequel';
 import { applyPrebuiltWikis, type PrebuiltResult, type PrebuiltWiki } from '@/server/services/prebuiltWikis';
 import { flightPathProblem, saveFlightPath } from '@/server/services/pinFlightPath';
+import { saveTitlePower } from '@/server/model/pinPower';
 import { addPinStocksQuietly } from '@/server/services/pinStocks';
 import log from '@/server/util/log';
 import { citePostedSummary } from '@/server/extract/references';
@@ -127,6 +128,7 @@ export async function createPin(body: Record<string, any>, user: User, { noBrows
       .catch((err) => log.warn('frontier tag failed:', (err as Error).message)),
   );
   if (stocks.length) after(() => addPinStocksQuietly(saved.id, stocks));
+  await saveTitlePower(saved.id, saved.title, saved.sourceUrl ?? null).catch((err) => log.warn('reading the title\'s power failed:', (err as Error).message));
   // A game's maturity rating, platforms and scores, from its Steam page.
   after(() => refreshGameInfo(saved.id).catch((err) => log.warn('game info lookup failed:', (err as Error).message)));
 

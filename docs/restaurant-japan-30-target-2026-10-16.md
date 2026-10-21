@@ -1,8 +1,8 @@
 # Japan restaurant target audit — October 16, 2026
 
-Target: **30 distinct eligible restaurants in every tab of every city**. **639 verified memberships; 114 still missing**. This target remains incomplete; surplus in another tab does not offset a shortage.
+Target: **30 distinct eligible restaurants in every tab of every city**. **640 verified memberships; 113 still missing**. This target remains incomplete; surplus in another tab does not offset a shortage.
 
-**Batch 112 published and publicly verified (October 20, 2026):** Enriched existing **NorthContinent — Akaren ga (15590)** with **30 new menu entries and four credited Azure photos**, preserving its original 14 entries, author, Pin text and actual September 1 opening date. Exact branch menu photographs establish 21 meat/sauce price variants, the two-drink meat-plate set at ¥2,640 inclusive and six eligible drink choices; existing one-drink set now has its verified ¥2,310 inclusive price. Public operator captions distinguish September public soft opening from October breakfast launch. Dinner last order is now verified at21:00. Actual counter/sign photographs replace the card illustration; original media preserved. No duplicate Pin, public coupon or new Specials membership created. Local and production exact saved profiles, every public menu entry, photo credits and native Just opened title/image links verified. All 24 counts agree at **639 memberships / 114 missing**, unchanged. LACHIC picker omits the planned branch; Ore no Sora menu explicitly belongs to Chiba Makuhari; CHAEN and Doutor chronology/menu/gallery gaps recorded. No deployment. [Batch evidence](restaurant-japan-30-japan112-2026-10-20.json).
+**Batch 113 published and publicly verified (October 20, 2026):** Added **ITALIAN RESORT PERTICA — Tamazakai** to Tokyo Coming soon, with its operator-confirmed **October 30 opening**, **86 priced menu entries** and **six credited Azure launch illustrations**. Operator menu explicitly assigns Tamazakai to the reviewed menu book; à-la-carte prices and meal-set conditions remain distinct. Planned hours 10:30–23:00, last orders 22:00; 104 seats and 34 parking spaces. Exterior card labelled rendering. Undated Coming Soon tea plans and Tamazakai-excluded anniversary cakes omitted. Local and production saved profiles, every public menu entry, media credits and native Coming soon title/image links verified. Tokyo Coming soon **16/30**; all-six-city counts agree at **640 memberships / 113 missing**. Other-city priority retained; no deployment. [Batch evidence](restaurant-japan-30-japan113-2026-10-20.json).
 
 All 24 local and public production guide counts agree. Batches 88–110 now have complete public HTTPS verification; earlier timeout checkpoints below are historical.
 
@@ -12,37 +12,37 @@ All 24 local and public production guide counts agree. Batches 88–110 now have
 | Osaka | 12/30 | 30/30 | 30/30 | 31/30 |
 | Kyoto | 12/30 | 33/30 | 30/30 | 35/30 |
 | Nagoya | 11/30 | 31/30 | 30/30 | 32/30 |
-| Tokyo | 15/30 | 31/30 | 30/30 | 40/30 |
+| Tokyo | 16/30 | 31/30 | 30/30 | 40/30 |
 | Sapporo | 12/30 | 30/30 | 30/30 | 34/30 |
 
 ## Each remaining shortage
 
 | City | Tab | Local | Production | Target | Shortfall |
 | --- | --- | ---: | ---: | ---: | ---: |
-| Fukuoka | Coming soon | 10 | 10 | 30 | 20 |
-| Fukuoka | Just opened | 24 | 24 | 30 | 6 |
-| Fukuoka | Top restaurants | 30 | 30 | 30 | 0 |
-| Fukuoka | Specials | 36 | 36 | 30 | 0 |
-| Osaka | Coming soon | 12 | 12 | 30 | 18 |
-| Osaka | Just opened | 30 | 30 | 30 | 0 |
-| Osaka | Top restaurants | 30 | 30 | 30 | 0 |
-| Osaka | Specials | 31 | 31 | 30 | 0 |
-| Kyoto | Coming soon | 12 | 12 | 30 | 18 |
-| Kyoto | Just opened | 33 | 33 | 30 | 0 |
-| Kyoto | Top restaurants | 30 | 30 | 30 | 0 |
-| Kyoto | Specials | 35 | 35 | 30 | 0 |
-| Nagoya | Coming soon | 11 | 11 | 30 | 19 |
-| Nagoya | Just opened | 31 | 31 | 30 | 0 |
-| Nagoya | Top restaurants | 30 | 30 | 30 | 0 |
-| Nagoya | Specials | 32 | 32 | 30 | 0 |
-| Tokyo | Coming soon | 15 | 15 | 30 | 15 |
-| Tokyo | Just opened | 31 | 31 | 30 | 0 |
-| Tokyo | Top restaurants | 30 | 30 | 30 | 0 |
-| Tokyo | Specials | 40 | 40 | 30 | 0 |
-| Sapporo | Coming soon | 12 | 12 | 30 | 18 |
-| Sapporo | Just opened | 30 | 30 | 30 | 0 |
-| Sapporo | Top restaurants | 30 | 30 | 30 | 0 |
-| Sapporo | Specials | 34 | 34 | 30 | 0 |
+| Fukuoka | Coming soon | 10 | 10 |30| 20 |
+| Fukuoka | Just opened | 24 | 24 |30| 6 |
+| Fukuoka | Top restaurants | 30 | 30 |30| 0 |
+| Fukuoka | Specials | 36 | 36 |30| 0 |
+| Osaka | Coming soon | 12 | 12 |30| 18 |
+| Osaka | Just opened | 30 | 30 |30| 0 |
+| Osaka | Top restaurants | 30 | 30 |30| 0 |
+| Osaka | Specials | 31 | 31 |30| 0 |
+| Kyoto | Coming soon | 12 | 12 |30| 18 |
+| Kyoto | Just opened | 33 | 33 |30| 0 |
+| Kyoto | Top restaurants | 30 | 30 |30| 0 |
+| Kyoto | Specials | 35 | 35 |30| 0 |
+| Nagoya | Coming soon | 11 | 11 |30| 19 |
+| Nagoya | Just opened | 31 | 31 |30| 0 |
+| Nagoya | Top restaurants | 30 | 30 |30| 0 |
+| Nagoya | Specials | 32 | 32 |30| 0 |
+| Tokyo | Coming soon | 16 | 16 |30| 14 |
+| Tokyo | Just opened | 31 | 31 |30| 0 |
+| Tokyo | Top restaurants | 30 | 30 |30| 0 |
+| Tokyo | Specials | 40 | 40 |30| 0 |
+| Sapporo | Coming soon | 12 | 12 |30| 18 |
+| Sapporo | Just opened | 30 | 30 |30| 0 |
+| Sapporo | Top restaurants | 30 | 30 |30| 0 |
+| Sapporo | Specials | 34 | 34 |30| 0 |
 
 ## Verification and continuation
 
@@ -54,7 +54,7 @@ Nineteen cumulative branch opening-date repairs were read back in both environme
 
 Checked exact complete saved profiles, original author presence, native public pin pages and all ordinary menu items, Azure image decode/hash/credit metadata, all 37 new venue cards across paginated guide APIs, native pin identifiers/links and upcoming offer start times. All six production guide HTML pages also returned HTTP 200 with native pin title/image links. The existing Eggs ’n Things pin exposes all 11 new menu entries; the successor starts October 21 at 09:00 JST and retains the prior October 20 expiry.
 
-Continue every under-target cell. Coming soon deficits: Fukuoka 20; Osaka 18; Kyoto 18; Nagoya 19; Tokyo 15; Sapporo 18. Nagoya Just opened is 31/30; continue renewing its 90-day window. Kyoto Specials reaches 30, but dated offers expire and must be replenished. Detailed sources, held leads and October 17–22 expiry watch are in [research notes](restaurant-japan-30-progress-2026-10-16.md). [CSV](restaurant-japan-30-counts-2026-10-16.csv) and [production delta](restaurant-japan-production-2026-10-16.json) cover this session; older snapshots are history, not permission to overwrite current API profiles.
+Continue every under-target cell. Coming soon deficits: Fukuoka 20; Osaka 18; Kyoto 18; Nagoya 19; Tokyo 14; Sapporo 18. Nagoya Just opened is 31/30; continue renewing its 90-day window. Kyoto Specials reaches 30, but dated offers expire and must be replenished. Detailed sources, held leads and October 17–22 expiry watch are in [research notes](restaurant-japan-30-progress-2026-10-16.md). [CSV](restaurant-japan-30-counts-2026-10-16.csv) and [production delta](restaurant-japan-production-2026-10-16.json) cover this session; older snapshots are history, not permission to overwrite current API profiles.
 
 No application code changes, build, restart or deployment. Release `157e1750` remains the previously documented deployed baseline; this content-maintenance session did not change it.
 

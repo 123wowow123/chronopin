@@ -1,0 +1,2743 @@
+{
+  "batch": 113,
+  "checkedAt": "2026-10-20",
+  "entries": [
+    {
+      "pin": {
+        "userName": "FoodDesk",
+        "title": "ITALIAN RESORT PERTICA — Tamazakai Opens 2026-10-30",
+        "description": "An upcoming Italian restaurant in Machida with fresh pasta, pizza, meat dishes and a self-service drink bar. Opening October 30; planned hours 10:30–23:00, last orders 22:00. Launch images are operator illustrations.",
+        "sourceUrl": "https://prtimes.jp/main/html/rd/p/000001283.000033462.html",
+        "address": "1158-1 Oyamamachi, Machida, Tokyo 194-0212",
+        "productName": "ITALIAN RESORT PERTICA — Tamazakai",
+        "utcStartDateTime": "2026-10-30T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "Operator release dated October 19 explicitly confirms Tamazakai grand opening October 30, 2026; exact branch listing corroborates. Older November 2 reporting is superseded. Brand founding and former Gusto opening are not this branch date.",
+        "categories": [
+          "Food"
+        ],
+        "tags": [
+          "Restaurant",
+          "Restaurant Opening",
+          "Tokyo",
+          "Japan",
+          "Tamazakai / Machida",
+          "Italian / Family Restaurant"
+        ],
+        "longFormSummary": "<p>An upcoming Italian restaurant in Machida with fresh pasta, pizza, meat dishes and a self-service drink bar. Opening October 30; planned hours 10:30–23:00, last orders 22:00. Launch images are operator illustrations.<cite data-ref=\"https://prtimes.jp/main/html/rd/p/000001283.000033462.html\"></cite></p><p>Operator release dated October 19 explicitly confirms Tamazakai grand opening October 30, 2026; exact branch listing corroborates. Older November 2 reporting is superseded. Brand founding and former Gusto opening are not this branch date.</p>",
+        "references": [
+          {
+            "url": "https://prtimes.jp/main/html/rd/p/000001283.000033462.html",
+            "title": "ITALIAN RESORT PERTICA — Tamazakai — branch website",
+            "confidence": 90,
+            "reasoning": "ITALIAN RESORT PERTICA — Tamazakai — branch website"
+          },
+          {
+            "url": "https://www.nilax.jp/pertica",
+            "title": "Official PERTICA website",
+            "confidence": 90,
+            "reasoning": "Official PERTICA website"
+          },
+          {
+            "url": "https://www.nilax.jp/pertica/menu",
+            "title": "Branch-assigned operator menu",
+            "confidence": 90,
+            "reasoning": "Branch-assigned operator menu"
+          },
+          {
+            "url": "https://tabelog.com/tokyo/A1327/A132701/13327347/",
+            "title": "Exact Tamazakai branch listing",
+            "confidence": 90,
+            "reasoning": "Exact Tamazakai branch listing"
+          }
+        ],
+        "parentId": null
+      },
+      "content": {
+        "profile": {
+          "pinSourceUrl": "https://prtimes.jp/main/html/rd/p/000001283.000033462.html",
+          "menu": {
+            "pinSourceUrl": "https://prtimes.jp/main/html/rd/p/000001283.000033462.html",
+            "name": "ITALIAN RESORT PERTICA — Tamazakai",
+            "checkedAt": "2026-10-20",
+            "menus": [
+              {
+                "label": "Pasta — à la carte",
+                "url": "https://media.yappli.com/assets/nilax/files/01M2M00NMPYREJMNJ36KWKHDMD.jpg",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "3種きのことベーコンのペペロンチーノ",
+                    "price": 1099,
+                    "note": "Operator menu explicitly assigned to Kamakura, Ichikawa and Tamazakai; checked October 20, 2026. Tax-inclusive à-la-carte price, distinct from set supplements. Tamazakai opens October 30; final launch stock subject to confirmation."
+                  },
+                  {
+                    "name": "たっぷりあさりのボンゴレビアンコ",
+                    "price": 1209,
+                    "note": "Operator menu explicitly assigned to Kamakura, Ichikawa and Tamazakai; checked October 20, 2026. Tax-inclusive à-la-carte price, distinct from set supplements. Tamazakai opens October 30; final launch stock subject to confirmation."
+                  },
+                  {
+                    "name": "生ハムとロメインレタスのペペロンチーノ",
+                    "price": 1209,
+                    "note": "Operator menu explicitly assigned to Kamakura, Ichikawa and Tamazakai; checked October 20, 2026. Tax-inclusive à-la-carte price, distinct from set supplements. Tamazakai opens October 30; final launch stock subject to confirmation."
+                  },
+                  {
+                    "name": "和風明太子ときのこ",
+                    "price": 1099,
+                    "note": "Operator menu explicitly assigned to Kamakura, Ichikawa and Tamazakai; checked October 20, 2026. Tax-inclusive à-la-carte price, distinct from set supplements. Tamazakai opens October 30; final launch stock subject to confirmation."
+                  },
+                  {
+                    "name": "しらすときのこの和風ペペロンチーノ",
+                    "price": 1099,
+                    "note": "Operator menu explicitly assigned to Kamakura, Ichikawa and Tamazakai; checked October 20, 2026. Tax-inclusive à-la-carte price, distinct from set supplements. Tamazakai opens October 30; final launch stock subject to confirmation."
+                  },
+                  {
+                    "name": "魚介たっぷり和風ペスカトーレ",
+                    "price": 1539,
+                    "note": "Operator menu explicitly assigned to Kamakura, Ichikawa and Tamazakai; checked October 20, 2026. Tax-inclusive à-la-carte price, distinct from set supplements. Tamazakai opens October 30; final launch stock subject to confirmation."
+                  },
+                  {
+                    "name": "ベーコンとロメインレタスのクリームソース",
+                    "price": 1099,
+                    "note": "Operator menu explicitly assigned to Kamakura, Ichikawa and Tamazakai; checked October 20, 2026. Tax-inclusive à-la-carte price, distinct from set supplements. Tamazakai opens October 30; final launch stock subject to confirmation."
+                  },
+                  {
+                    "name": "海老とアボカドのレモンクリームソース",
+                    "price": 1539,
+                    "note": "Operator menu explicitly assigned to Kamakura, Ichikawa and Tamazakai; checked October 20, 2026. Tax-inclusive à-la-carte price, distinct from set supplements. Tamazakai opens October 30; final launch stock subject to confirmation."
+                  },
+                  {
+                    "name": "たっぷりチーズの濃厚カルボナーラ",
+                    "price": 1539,
+                    "note": "Operator menu explicitly assigned to Kamakura, Ichikawa and Tamazakai; checked October 20, 2026. Tax-inclusive à-la-carte price, distinct from set supplements. Tamazakai opens October 30; final launch stock subject to confirmation."
+                  },
+                  {
+                    "name": "ポルチーニ茸とマッシュルームのクリームソース",
+                    "price": 1429,
+                    "note": "Operator menu explicitly assigned to Kamakura, Ichikawa and Tamazakai; checked October 20, 2026. Tax-inclusive à-la-carte price, distinct from set supplements. Tamazakai opens October 30; final launch stock subject to confirmation."
+                  },
+                  {
+                    "name": "ずわい蟹のビスククリームソース",
+                    "price": 1649,
+                    "note": "Operator menu explicitly assigned to Kamakura, Ichikawa and Tamazakai; checked October 20, 2026. Tax-inclusive à-la-carte price, distinct from set supplements. Tamazakai opens October 30; final launch stock subject to confirmation."
+                  },
+                  {
+                    "name": "チーズ溺れる魚介の熱々グラタンパスタ",
+                    "price": 1759,
+                    "note": "Operator menu explicitly assigned to Kamakura, Ichikawa and Tamazakai; checked October 20, 2026. Tax-inclusive à-la-carte price, distinct from set supplements. Tamazakai opens October 30; final launch stock subject to confirmation."
+                  },
+                  {
+                    "name": "雲丹とずわい蟹の特製カルボナーラ",
+                    "price": 1979,
+                    "note": "Operator menu explicitly assigned to Kamakura, Ichikawa and Tamazakai; checked October 20, 2026. Tax-inclusive à-la-carte price, distinct from set supplements. Tamazakai opens October 30; final launch stock subject to confirmation."
+                  },
+                  {
+                    "name": "イタリア産トマトを使った完熟トマトソース",
+                    "price": 1099,
+                    "note": "Operator menu explicitly assigned to Kamakura, Ichikawa and Tamazakai; checked October 20, 2026. Tax-inclusive à-la-carte price, distinct from set supplements. Tamazakai opens October 30; final launch stock subject to confirmation."
+                  },
+                  {
+                    "name": "モッツァレラチーズと茄子のトマトソース",
+                    "price": 1319,
+                    "note": "Operator menu explicitly assigned to Kamakura, Ichikawa and Tamazakai; checked October 20, 2026. Tax-inclusive à-la-carte price, distinct from set supplements. Tamazakai opens October 30; final launch stock subject to confirmation."
+                  },
+                  {
+                    "name": "たっぷりあさりと完熟トマトのボンゴレロッソ",
+                    "price": 1319,
+                    "note": "Operator menu explicitly assigned to Kamakura, Ichikawa and Tamazakai; checked October 20, 2026. Tax-inclusive à-la-carte price, distinct from set supplements. Tamazakai opens October 30; final launch stock subject to confirmation."
+                  },
+                  {
+                    "name": "魚介たっぷりペスカトーレ 濃厚魚介トマトソース",
+                    "price": 1649,
+                    "note": "Operator menu explicitly assigned to Kamakura, Ichikawa and Tamazakai; checked October 20, 2026. Tax-inclusive à-la-carte price, distinct from set supplements. Tamazakai opens October 30; final launch stock subject to confirmation."
+                  },
+                  {
+                    "name": "赤ワインで煮込んだ特製ボロネーゼ",
+                    "price": 1209,
+                    "note": "Operator menu explicitly assigned to Kamakura, Ichikawa and Tamazakai; checked October 20, 2026. Tax-inclusive à-la-carte price, distinct from set supplements. Tamazakai opens October 30; final launch stock subject to confirmation."
+                  },
+                  {
+                    "name": "赤ワインで煮込んだ特製ボロネーゼ 温泉卵とたっぷりチーズ",
+                    "price": 1319,
+                    "note": "Operator menu explicitly assigned to Kamakura, Ichikawa and Tamazakai; checked October 20, 2026. Tax-inclusive à-la-carte price, distinct from set supplements. Tamazakai opens October 30; final launch stock subject to confirmation."
+                  },
+                  {
+                    "name": "擦りたてフレッシュバジルのジェノベーゼ",
+                    "price": 1649,
+                    "note": "Operator menu explicitly assigned to Kamakura, Ichikawa and Tamazakai; checked October 20, 2026. Tax-inclusive à-la-carte price, distinct from set supplements. Tamazakai opens October 30; final launch stock subject to confirmation."
+                  },
+                  {
+                    "name": "北海道産ホタテと海老の擦りたてフレッシュバジルのジェノベーゼ",
+                    "price": 1979,
+                    "note": "Operator menu explicitly assigned to Kamakura, Ichikawa and Tamazakai; checked October 20, 2026. Tax-inclusive à-la-carte price, distinct from set supplements. Tamazakai opens October 30; final launch stock subject to confirmation."
+                  }
+                ],
+                "note": "Operator menu explicitly assigned to Kamakura, Ichikawa and Tamazakai; checked October 20, 2026. Tax-inclusive à-la-carte price, distinct from set supplements. Tamazakai opens October 30; final launch stock subject to confirmation. Branch allocation: https://www.nilax.jp/pertica/menu"
+              },
+              {
+                "label": "Grain-rice doria — à la carte",
+                "url": "https://media.yappli.com/assets/nilax/files/01M2M00NMPYREJMNJ36KWKHDMD.jpg",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "きのことベーコンの特製ボロネーゼ雑穀米ドリア",
+                    "price": 1319,
+                    "note": "Operator menu explicitly assigned to Kamakura, Ichikawa and Tamazakai; checked October 20, 2026. Tax-inclusive à-la-carte price, distinct from set supplements. Tamazakai opens October 30; final launch stock subject to confirmation."
+                  },
+                  {
+                    "name": "明太子としらすの雑穀米ドリア",
+                    "price": 1429,
+                    "note": "Operator menu explicitly assigned to Kamakura, Ichikawa and Tamazakai; checked October 20, 2026. Tax-inclusive à-la-carte price, distinct from set supplements. Tamazakai opens October 30; final launch stock subject to confirmation."
+                  },
+                  {
+                    "name": "ずわい蟹と海老の雑穀米ドリア",
+                    "price": 1759,
+                    "note": "Operator menu explicitly assigned to Kamakura, Ichikawa and Tamazakai; checked October 20, 2026. Tax-inclusive à-la-carte price, distinct from set supplements. Tamazakai opens October 30; final launch stock subject to confirmation."
+                  }
+                ],
+                "note": "Operator menu explicitly assigned to Kamakura, Ichikawa and Tamazakai; checked October 20, 2026. Tax-inclusive à-la-carte price, distinct from set supplements. Tamazakai opens October 30; final launch stock subject to confirmation. Branch allocation: https://www.nilax.jp/pertica/menu"
+              },
+              {
+                "label": "Risotto — à la carte",
+                "url": "https://media.yappli.com/assets/nilax/files/01M2M00NMPYREJMNJ36KWKHDMD.jpg",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "ベーコンと3種きのこのクリーム — リゾット",
+                    "price": 1099,
+                    "note": "Operator menu explicitly assigned to Kamakura, Ichikawa and Tamazakai; checked October 20, 2026. Tax-inclusive à-la-carte price, distinct from set supplements. Tamazakai opens October 30; final launch stock subject to confirmation."
+                  },
+                  {
+                    "name": "バジルとモッツァレラのトマト — リゾット",
+                    "price": 1209,
+                    "note": "Operator menu explicitly assigned to Kamakura, Ichikawa and Tamazakai; checked October 20, 2026. Tax-inclusive à-la-carte price, distinct from set supplements. Tamazakai opens October 30; final launch stock subject to confirmation."
+                  },
+                  {
+                    "name": "赤ワインで煮込んだ特製ボロネーゼ — リゾット",
+                    "price": 1209,
+                    "note": "Operator menu explicitly assigned to Kamakura, Ichikawa and Tamazakai; checked October 20, 2026. Tax-inclusive à-la-carte price, distinct from set supplements. Tamazakai opens October 30; final launch stock subject to confirmation."
+                  },
+                  {
+                    "name": "赤ワインで煮込んだ特製ボロネーゼ 温泉卵とたっぷりチーズ — リゾット",
+                    "price": 1319,
+                    "note": "Operator menu explicitly assigned to Kamakura, Ichikawa and Tamazakai; checked October 20, 2026. Tax-inclusive à-la-carte price, distinct from set supplements. Tamazakai opens October 30; final launch stock subject to confirmation."
+                  },
+                  {
+                    "name": "海老とアボカドのトマトクリーム — リゾット",
+                    "price": 1539,
+                    "note": "Operator menu explicitly assigned to Kamakura, Ichikawa and Tamazakai; checked October 20, 2026. Tax-inclusive à-la-carte price, distinct from set supplements. Tamazakai opens October 30; final launch stock subject to confirmation."
+                  },
+                  {
+                    "name": "ゴルゴンゾーラチーズときのこのクリーム — リゾット",
+                    "price": 1539,
+                    "note": "Operator menu explicitly assigned to Kamakura, Ichikawa and Tamazakai; checked October 20, 2026. Tax-inclusive à-la-carte price, distinct from set supplements. Tamazakai opens October 30; final launch stock subject to confirmation."
+                  },
+                  {
+                    "name": "ローストビーフのきのこクリーム — リゾット",
+                    "price": 1539,
+                    "note": "Operator menu explicitly assigned to Kamakura, Ichikawa and Tamazakai; checked October 20, 2026. Tax-inclusive à-la-carte price, distinct from set supplements. Tamazakai opens October 30; final launch stock subject to confirmation."
+                  },
+                  {
+                    "name": "ずわい蟹のビスククリーム — リゾット",
+                    "price": 1759,
+                    "note": "Operator menu explicitly assigned to Kamakura, Ichikawa and Tamazakai; checked October 20, 2026. Tax-inclusive à-la-carte price, distinct from set supplements. Tamazakai opens October 30; final launch stock subject to confirmation."
+                  }
+                ],
+                "note": "Operator menu explicitly assigned to Kamakura, Ichikawa and Tamazakai; checked October 20, 2026. Tax-inclusive à-la-carte price, distinct from set supplements. Tamazakai opens October 30; final launch stock subject to confirmation. Branch allocation: https://www.nilax.jp/pertica/menu"
+              },
+              {
+                "label": "Pizza — à la carte",
+                "url": "https://media.yappli.com/assets/nilax/files/01M2M00NMPYREJMNJ36KWKHDMD.jpg",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "ベーコンとポテト — ピッツァ",
+                    "price": 1099,
+                    "note": "Operator menu explicitly assigned to Kamakura, Ichikawa and Tamazakai; checked October 20, 2026. Tax-inclusive à-la-carte price, distinct from set supplements. Tamazakai opens October 30; final launch stock subject to confirmation."
+                  },
+                  {
+                    "name": "ペパロニ — ピッツァ",
+                    "price": 1209,
+                    "note": "Operator menu explicitly assigned to Kamakura, Ichikawa and Tamazakai; checked October 20, 2026. Tax-inclusive à-la-carte price, distinct from set supplements. Tamazakai opens October 30; final launch stock subject to confirmation."
+                  },
+                  {
+                    "name": "マルゲリータ — ピッツァ",
+                    "price": 1649,
+                    "note": "Operator menu explicitly assigned to Kamakura, Ichikawa and Tamazakai; checked October 20, 2026. Tax-inclusive à-la-carte price, distinct from set supplements. Tamazakai opens October 30; final launch stock subject to confirmation."
+                  },
+                  {
+                    "name": "魚介たっぷりペスカトーレ 漁師風 — ピッツァ",
+                    "price": 1649,
+                    "note": "Operator menu explicitly assigned to Kamakura, Ichikawa and Tamazakai; checked October 20, 2026. Tax-inclusive à-la-carte price, distinct from set supplements. Tamazakai opens October 30; final launch stock subject to confirmation."
+                  },
+                  {
+                    "name": "ボローニャ風 — ピッツァ",
+                    "price": 1099,
+                    "note": "Operator menu explicitly assigned to Kamakura, Ichikawa and Tamazakai; checked October 20, 2026. Tax-inclusive à-la-carte price, distinct from set supplements. Tamazakai opens October 30; final launch stock subject to confirmation."
+                  },
+                  {
+                    "name": "3種きのこフンギ — ピッツァ",
+                    "price": 1209,
+                    "note": "Operator menu explicitly assigned to Kamakura, Ichikawa and Tamazakai; checked October 20, 2026. Tax-inclusive à-la-carte price, distinct from set supplements. Tamazakai opens October 30; final launch stock subject to confirmation."
+                  },
+                  {
+                    "name": "4種チーズのクアトロフォルマッジ（はちみつ添え） — ピッツァ",
+                    "price": 1429,
+                    "note": "Operator menu explicitly assigned to Kamakura, Ichikawa and Tamazakai; checked October 20, 2026. Tax-inclusive à-la-carte price, distinct from set supplements. Tamazakai opens October 30; final launch stock subject to confirmation."
+                  },
+                  {
+                    "name": "やわらかポークのテリヤキスタイル — ピッツァ",
+                    "price": 1209,
+                    "note": "Operator menu explicitly assigned to Kamakura, Ichikawa and Tamazakai; checked October 20, 2026. Tax-inclusive à-la-carte price, distinct from set supplements. Tamazakai opens October 30; final launch stock subject to confirmation."
+                  },
+                  {
+                    "name": "芳醇特製ジェノバのカプレーゼ — ピッツァ",
+                    "price": 1759,
+                    "note": "Operator menu explicitly assigned to Kamakura, Ichikawa and Tamazakai; checked October 20, 2026. Tax-inclusive à-la-carte price, distinct from set supplements. Tamazakai opens October 30; final launch stock subject to confirmation."
+                  },
+                  {
+                    "name": "生ハム・ペパロニのガーデンサラダピッツァ — ピッツァ",
+                    "price": 1869,
+                    "note": "Operator menu explicitly assigned to Kamakura, Ichikawa and Tamazakai; checked October 20, 2026. Tax-inclusive à-la-carte price, distinct from set supplements. Tamazakai opens October 30; final launch stock subject to confirmation."
+                  },
+                  {
+                    "name": "ベーコンとポテト＆3種きのこのフンギ — ハーフ＆ハーフ — ピッツァ",
+                    "price": 1539,
+                    "note": "Operator menu explicitly assigned to Kamakura, Ichikawa and Tamazakai; checked October 20, 2026. Tax-inclusive à-la-carte price, distinct from set supplements. Tamazakai opens October 30; final launch stock subject to confirmation."
+                  },
+                  {
+                    "name": "マルゲリータ＆4種チーズのクアトロフォルマッジ — ハーフ＆ハーフ — ピッツァ",
+                    "price": 1979,
+                    "note": "Operator menu explicitly assigned to Kamakura, Ichikawa and Tamazakai; checked October 20, 2026. Tax-inclusive à-la-carte price, distinct from set supplements. Tamazakai opens October 30; final launch stock subject to confirmation."
+                  },
+                  {
+                    "name": "マルゲリータ＆芳醇ジェノバのカプレーゼ — ハーフ＆ハーフ — ピッツァ",
+                    "price": 2089,
+                    "note": "Operator menu explicitly assigned to Kamakura, Ichikawa and Tamazakai; checked October 20, 2026. Tax-inclusive à-la-carte price, distinct from set supplements. Tamazakai opens October 30; final launch stock subject to confirmation."
+                  }
+                ],
+                "note": "Operator menu explicitly assigned to Kamakura, Ichikawa and Tamazakai; checked October 20, 2026. Tax-inclusive à-la-carte price, distinct from set supplements. Tamazakai opens October 30; final launch stock subject to confirmation. Branch allocation: https://www.nilax.jp/pertica/menu"
+              },
+              {
+                "label": "Meat — à la carte",
+                "url": "https://media.yappli.com/assets/nilax/files/01M2M00NMPYREJMNJ36KWKHDMD.jpg",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "ビーフ100%粗挽きハンバーグ イタリアントマトチーズ",
+                    "price": 1539,
+                    "note": "Operator menu explicitly assigned to Kamakura, Ichikawa and Tamazakai; checked October 20, 2026. Tax-inclusive à-la-carte price, distinct from set supplements. Tamazakai opens October 30; final launch stock subject to confirmation."
+                  },
+                  {
+                    "name": "ビーフ100%粗挽きハンバーグ たっぷり玉ねぎ醤油ソース",
+                    "price": 1539,
+                    "note": "Operator menu explicitly assigned to Kamakura, Ichikawa and Tamazakai; checked October 20, 2026. Tax-inclusive à-la-carte price, distinct from set supplements. Tamazakai opens October 30; final launch stock subject to confirmation."
+                  },
+                  {
+                    "name": "ビーフ100%粗挽きハンバーグ ぐつぐつシチューソース",
+                    "price": 1649,
+                    "note": "Operator menu explicitly assigned to Kamakura, Ichikawa and Tamazakai; checked October 20, 2026. Tax-inclusive à-la-carte price, distinct from set supplements. Tamazakai opens October 30; final launch stock subject to confirmation."
+                  },
+                  {
+                    "name": "低温焼成やわらかローストビーフ グレイビーソース 100g",
+                    "price": 2089,
+                    "note": "Operator menu explicitly assigned to Kamakura, Ichikawa and Tamazakai; checked October 20, 2026. Tax-inclusive à-la-carte price, distinct from set supplements. Tamazakai opens October 30; final launch stock subject to confirmation."
+                  },
+                  {
+                    "name": "低温焼成やわらかローストビーフ グレイビーソース 150g",
+                    "price": 2529,
+                    "note": "Operator menu explicitly assigned to Kamakura, Ichikawa and Tamazakai; checked October 20, 2026. Tax-inclusive à-la-carte price, distinct from set supplements. Tamazakai opens October 30; final launch stock subject to confirmation."
+                  },
+                  {
+                    "name": "低温焼成やわらかローストビーフ グレイビーソース 200g",
+                    "price": 2969,
+                    "note": "Operator menu explicitly assigned to Kamakura, Ichikawa and Tamazakai; checked October 20, 2026. Tax-inclusive à-la-carte price, distinct from set supplements. Tamazakai opens October 30; final launch stock subject to confirmation."
+                  },
+                  {
+                    "name": "厚切りやわらかポークグリル たっぷり玉ねぎ醤油ソース",
+                    "price": 1869,
+                    "note": "Operator menu explicitly assigned to Kamakura, Ichikawa and Tamazakai; checked October 20, 2026. Tax-inclusive à-la-carte price, distinct from set supplements. Tamazakai opens October 30; final launch stock subject to confirmation."
+                  },
+                  {
+                    "name": "厚切りやわらかポークグリル ガーリックバターとトリュフの香り",
+                    "price": 2199,
+                    "note": "Operator menu explicitly assigned to Kamakura, Ichikawa and Tamazakai; checked October 20, 2026. Tax-inclusive à-la-carte price, distinct from set supplements. Tamazakai opens October 30; final launch stock subject to confirmation."
+                  },
+                  {
+                    "name": "チキン パリッとうまトマトバーベキューソース",
+                    "price": 1539,
+                    "note": "Operator menu explicitly assigned to Kamakura, Ichikawa and Tamazakai; checked October 20, 2026. Tax-inclusive à-la-carte price, distinct from set supplements. Tamazakai opens October 30; final launch stock subject to confirmation."
+                  },
+                  {
+                    "name": "チキン シャリアピンステーキ W玉ねぎソース",
+                    "price": 1759,
+                    "note": "Operator menu explicitly assigned to Kamakura, Ichikawa and Tamazakai; checked October 20, 2026. Tax-inclusive à-la-carte price, distinct from set supplements. Tamazakai opens October 30; final launch stock subject to confirmation."
+                  }
+                ],
+                "note": "Operator menu explicitly assigned to Kamakura, Ichikawa and Tamazakai; checked October 20, 2026. Tax-inclusive à-la-carte price, distinct from set supplements. Tamazakai opens October 30; final launch stock subject to confirmation. Branch allocation: https://www.nilax.jp/pertica/menu"
+              },
+              {
+                "label": "Published drinks",
+                "url": "https://media.yappli.com/assets/nilax/files/01KVESSHQVHFJ5MQQ75CS1KD15.jpg",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "アペロールスプリッツ",
+                    "price": 659,
+                    "note": "Operator menu explicitly assigned to Kamakura, Ichikawa and Tamazakai; checked October 20, 2026. Tax-inclusive à-la-carte price, distinct from set supplements. Tamazakai opens October 30; final launch stock subject to confirmation."
+                  },
+                  {
+                    "name": "リモンチェッロソーダ",
+                    "price": 659,
+                    "note": "Operator menu explicitly assigned to Kamakura, Ichikawa and Tamazakai; checked October 20, 2026. Tax-inclusive à-la-carte price, distinct from set supplements. Tamazakai opens October 30; final launch stock subject to confirmation."
+                  },
+                  {
+                    "name": "マンゴースプリッツァー",
+                    "price": 549,
+                    "note": "Operator menu explicitly assigned to Kamakura, Ichikawa and Tamazakai; checked October 20, 2026. Tax-inclusive à-la-carte price, distinct from set supplements. Tamazakai opens October 30; final launch stock subject to confirmation."
+                  },
+                  {
+                    "name": "グレープスプリッツァールージュ",
+                    "price": 549,
+                    "note": "Operator menu explicitly assigned to Kamakura, Ichikawa and Tamazakai; checked October 20, 2026. Tax-inclusive à-la-carte price, distinct from set supplements. Tamazakai opens October 30; final launch stock subject to confirmation."
+                  },
+                  {
+                    "name": "サングリア グラス",
+                    "price": 659,
+                    "note": "Operator menu explicitly assigned to Kamakura, Ichikawa and Tamazakai; checked October 20, 2026. Tax-inclusive à-la-carte price, distinct from set supplements. Tamazakai opens October 30; final launch stock subject to confirmation."
+                  },
+                  {
+                    "name": "サングリア デキャンタ",
+                    "price": 1429,
+                    "note": "Operator menu explicitly assigned to Kamakura, Ichikawa and Tamazakai; checked October 20, 2026. Tax-inclusive à-la-carte price, distinct from set supplements. Tamazakai opens October 30; final launch stock subject to confirmation."
+                  },
+                  {
+                    "name": "レモンビール",
+                    "price": 714,
+                    "note": "Operator menu explicitly assigned to Kamakura, Ichikawa and Tamazakai; checked October 20, 2026. Tax-inclusive à-la-carte price, distinct from set supplements. Tamazakai opens October 30; final launch stock subject to confirmation."
+                  },
+                  {
+                    "name": "ザ・プレミアム・モルツ 香るエール",
+                    "price": 659,
+                    "note": "Operator menu explicitly assigned to Kamakura, Ichikawa and Tamazakai; checked October 20, 2026. Tax-inclusive à-la-carte price, distinct from set supplements. Tamazakai opens October 30; final launch stock subject to confirmation."
+                  },
+                  {
+                    "name": "サントリー オールフリー",
+                    "price": 483,
+                    "note": "Operator menu explicitly assigned to Kamakura, Ichikawa and Tamazakai; checked October 20, 2026. Tax-inclusive à-la-carte price, distinct from set supplements. Tamazakai opens October 30; final launch stock subject to confirmation."
+                  },
+                  {
+                    "name": "ハイボール",
+                    "price": 549,
+                    "note": "Operator menu explicitly assigned to Kamakura, Ichikawa and Tamazakai; checked October 20, 2026. Tax-inclusive à-la-carte price, distinct from set supplements. Tamazakai opens October 30; final launch stock subject to confirmation."
+                  },
+                  {
+                    "name": "コークハイボール",
+                    "price": 549,
+                    "note": "Operator menu explicitly assigned to Kamakura, Ichikawa and Tamazakai; checked October 20, 2026. Tax-inclusive à-la-carte price, distinct from set supplements. Tamazakai opens October 30; final launch stock subject to confirmation."
+                  },
+                  {
+                    "name": "ジンジャーハイボール",
+                    "price": 549,
+                    "note": "Operator menu explicitly assigned to Kamakura, Ichikawa and Tamazakai; checked October 20, 2026. Tax-inclusive à-la-carte price, distinct from set supplements. Tamazakai opens October 30; final launch stock subject to confirmation."
+                  },
+                  {
+                    "name": "レモンサワー",
+                    "price": 549,
+                    "note": "Operator menu explicitly assigned to Kamakura, Ichikawa and Tamazakai; checked October 20, 2026. Tax-inclusive à-la-carte price, distinct from set supplements. Tamazakai opens October 30; final launch stock subject to confirmation."
+                  },
+                  {
+                    "name": "グレープフルーツサワー",
+                    "price": 549,
+                    "note": "Operator menu explicitly assigned to Kamakura, Ichikawa and Tamazakai; checked October 20, 2026. Tax-inclusive à-la-carte price, distinct from set supplements. Tamazakai opens October 30; final launch stock subject to confirmation."
+                  }
+                ],
+                "note": "Operator menu explicitly assigned to Kamakura, Ichikawa and Tamazakai; checked October 20, 2026. Tax-inclusive à-la-carte price, distinct from set supplements. Tamazakai opens October 30; final launch stock subject to confirmation. Branch allocation: https://www.nilax.jp/pertica/menu"
+              },
+              {
+                "label": "Wine",
+                "url": "https://media.yappli.com/assets/nilax/files/01KVESSHSFMYXB54FV5XPR4T2Y.jpg",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "House Santa Campanella white — glass",
+                    "price": 439,
+                    "note": "Operator menu explicitly assigned to Kamakura, Ichikawa and Tamazakai; checked October 20, 2026. Tax-inclusive à-la-carte price, distinct from set supplements. Tamazakai opens October 30; final launch stock subject to confirmation."
+                  },
+                  {
+                    "name": "House Santa Campanella red — glass",
+                    "price": 439,
+                    "note": "Operator menu explicitly assigned to Kamakura, Ichikawa and Tamazakai; checked October 20, 2026. Tax-inclusive à-la-carte price, distinct from set supplements. Tamazakai opens October 30; final launch stock subject to confirmation."
+                  },
+                  {
+                    "name": "House Santa Campanella white — decanter",
+                    "price": 1209,
+                    "note": "Operator menu explicitly assigned to Kamakura, Ichikawa and Tamazakai; checked October 20, 2026. Tax-inclusive à-la-carte price, distinct from set supplements. Tamazakai opens October 30; final launch stock subject to confirmation."
+                  },
+                  {
+                    "name": "House Santa Campanella red — decanter",
+                    "price": 1209,
+                    "note": "Operator menu explicitly assigned to Kamakura, Ichikawa and Tamazakai; checked October 20, 2026. Tax-inclusive à-la-carte price, distinct from set supplements. Tamazakai opens October 30; final launch stock subject to confirmation."
+                  },
+                  {
+                    "name": "Gancia Spumante Brut — 750ml",
+                    "price": 3299,
+                    "note": "Operator menu explicitly assigned to Kamakura, Ichikawa and Tamazakai; checked October 20, 2026. Tax-inclusive à-la-carte price, distinct from set supplements. Tamazakai opens October 30; final launch stock subject to confirmation."
+                  },
+                  {
+                    "name": "Pirovano Terre Passeri Trebbiano — 750ml",
+                    "price": 2859,
+                    "note": "Operator menu explicitly assigned to Kamakura, Ichikawa and Tamazakai; checked October 20, 2026. Tax-inclusive à-la-carte price, distinct from set supplements. Tamazakai opens October 30; final launch stock subject to confirmation."
+                  },
+                  {
+                    "name": "Pirovano Terre Passeri Montepulciano d’Abruzzo — 750ml",
+                    "price": 2859,
+                    "note": "Operator menu explicitly assigned to Kamakura, Ichikawa and Tamazakai; checked October 20, 2026. Tax-inclusive à-la-carte price, distinct from set supplements. Tamazakai opens October 30; final launch stock subject to confirmation."
+                  },
+                  {
+                    "name": "Botteale Il Cantico Soave — 750ml",
+                    "price": 3299,
+                    "note": "Operator menu explicitly assigned to Kamakura, Ichikawa and Tamazakai; checked October 20, 2026. Tax-inclusive à-la-carte price, distinct from set supplements. Tamazakai opens October 30; final launch stock subject to confirmation."
+                  },
+                  {
+                    "name": "Castellani Santa Pietra Chianti — 750ml",
+                    "price": 3299,
+                    "note": "Operator menu explicitly assigned to Kamakura, Ichikawa and Tamazakai; checked October 20, 2026. Tax-inclusive à-la-carte price, distinct from set supplements. Tamazakai opens October 30; final launch stock subject to confirmation."
+                  },
+                  {
+                    "name": "Firriato Emporio Bianco — 750ml",
+                    "price": 4289,
+                    "note": "Operator menu explicitly assigned to Kamakura, Ichikawa and Tamazakai; checked October 20, 2026. Tax-inclusive à-la-carte price, distinct from set supplements. Tamazakai opens October 30; final launch stock subject to confirmation."
+                  },
+                  {
+                    "name": "Firriato Emporio Rosso — 750ml",
+                    "price": 4289,
+                    "note": "Operator menu explicitly assigned to Kamakura, Ichikawa and Tamazakai; checked October 20, 2026. Tax-inclusive à-la-carte price, distinct from set supplements. Tamazakai opens October 30; final launch stock subject to confirmation."
+                  }
+                ],
+                "note": "Operator menu explicitly assigned to Kamakura, Ichikawa and Tamazakai; checked October 20, 2026. Tax-inclusive à-la-carte price, distinct from set supplements. Tamazakai opens October 30; final launch stock subject to confirmation. Branch allocation: https://www.nilax.jp/pertica/menu"
+              },
+              {
+                "label": "Meal sets — base prices",
+                "url": "https://media.yappli.com/assets/nilax/files/01KVESSHHGQ5B0S4D7NZKEGJQF.jpg",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "Aセット — 基本料金",
+                    "price": 1649,
+                    "note": "Tax-inclusive base set prices for eligible main dishes. Premium main-dish supplements are additional. Dinner and Saturdays/Sundays/public holidays add ¥110 inclusive; not a double surcharge. A includes one salad plate, one focaccia plate, soup refills and Imperial drink bar. B adds unlimited salad/focaccia and two dip sauces. C adds one six-item Deli BOX to B. Confirm launch stock."
+                  },
+                  {
+                    "name": "Bセット — 基本料金",
+                    "price": 1979,
+                    "note": "Tax-inclusive base set prices for eligible main dishes. Premium main-dish supplements are additional. Dinner and Saturdays/Sundays/public holidays add ¥110 inclusive; not a double surcharge. A includes one salad plate, one focaccia plate, soup refills and Imperial drink bar. B adds unlimited salad/focaccia and two dip sauces. C adds one six-item Deli BOX to B. Confirm launch stock."
+                  },
+                  {
+                    "name": "Cセット — 基本料金",
+                    "price": 2199,
+                    "note": "Tax-inclusive base set prices for eligible main dishes. Premium main-dish supplements are additional. Dinner and Saturdays/Sundays/public holidays add ¥110 inclusive; not a double surcharge. A includes one salad plate, one focaccia plate, soup refills and Imperial drink bar. B adds unlimited salad/focaccia and two dip sauces. C adds one six-item Deli BOX to B. Confirm launch stock."
+                  }
+                ],
+                "note": "Tax-inclusive base set prices for eligible main dishes. Premium main-dish supplements are additional. Dinner and Saturdays/Sundays/public holidays add ¥110 inclusive; not a double surcharge. A includes one salad plate, one focaccia plate, soup refills and Imperial drink bar. B adds unlimited salad/focaccia and two dip sauces. C adds one six-item Deli BOX to B. Confirm launch stock. Branch allocation: https://www.nilax.jp/pertica/menu"
+              },
+              {
+                "label": "Dolce and gelato selection tickets",
+                "url": "https://media.yappli.com/assets/nilax/files/01KZCY8ZD0NT1RBZGPP99E6X5Y.jpg",
+                "currency": "JPY",
+                "coverage": "published",
+                "items": [
+                  {
+                    "name": "ドルチェ＆ジェラート 1品",
+                    "price": 329,
+                    "note": "Tax-inclusive selection-ticket prices; one gelato plate may contain two flavours. Individual current dessert names and stock not established. Afternoon tea and Select Sweets are marked Coming Soon and excluded; anniversary cake explicitly unavailable at Tamazakai."
+                  },
+                  {
+                    "name": "ドルチェ＆ジェラート 2品",
+                    "price": 549,
+                    "note": "Tax-inclusive selection-ticket prices; one gelato plate may contain two flavours. Individual current dessert names and stock not established. Afternoon tea and Select Sweets are marked Coming Soon and excluded; anniversary cake explicitly unavailable at Tamazakai."
+                  },
+                  {
+                    "name": "ドルチェ＆ジェラート 3品",
+                    "price": 714,
+                    "note": "Tax-inclusive selection-ticket prices; one gelato plate may contain two flavours. Individual current dessert names and stock not established. Afternoon tea and Select Sweets are marked Coming Soon and excluded; anniversary cake explicitly unavailable at Tamazakai."
+                  }
+                ],
+                "note": "Tax-inclusive selection-ticket prices; one gelato plate may contain two flavours. Individual current dessert names and stock not established. Afternoon tea and Select Sweets are marked Coming Soon and excluded; anniversary cake explicitly unavailable at Tamazakai. Branch allocation: https://www.nilax.jp/pertica/menu"
+              }
+            ],
+            "specials": []
+          },
+          "details": {
+            "pinSourceUrl": "https://prtimes.jp/main/html/rd/p/000001283.000033462.html",
+            "name": "ITALIAN RESORT PERTICA — Tamazakai",
+            "checkedAt": "2026-10-20",
+            "websiteUrl": "https://prtimes.jp/main/html/rd/p/000001283.000033462.html",
+            "phone": "042-798-7020",
+            "openingHours": [
+              {
+                "days": "Daily",
+                "hours": "10:30–23:00; last orders 22:00"
+              }
+            ],
+            "detailsSourceUrl": "https://prtimes.jp/main/html/rd/p/000001283.000033462.html",
+            "additionalSources": [
+              {
+                "label": "Official PERTICA website",
+                "url": "https://www.nilax.jp/pertica"
+              },
+              {
+                "label": "Branch-assigned operator menu",
+                "url": "https://www.nilax.jp/pertica/menu"
+              },
+              {
+                "label": "Exact Tamazakai branch listing",
+                "url": "https://tabelog.com/tokyo/A1327/A132701/13327347/"
+              }
+            ],
+            "hoursNote": "104 seats and 34 parking spaces in operator launch announcement. Operator menu specifically assigns Kamakura, Ichikawa and Tamazakai to this menu book; prices include tax. À-la-carte and set supplement prices are distinct. Dinner and weekends/public holidays carry the published ¥110 set surcharge. Launch selection subject to confirmation. Anniversary cakes expressly exclude Tamazakai; afternoon-tea and Select Sweets plans are Coming Soon without a start date and are not advertised as available. Gallery uses credited launch illustrations and proposed exterior render, not completed branch photographs."
+          },
+          "tile": {
+            "regionSlug": "tokyo",
+            "kind": "opening",
+            "slug": "japan113-tamazakai",
+            "name": "ITALIAN RESORT PERTICA — Tamazakai",
+            "neighborhood": "Tamazakai / Machida",
+            "cuisine": "Italian / Family Restaurant",
+            "description": "An upcoming Italian restaurant in Machida with fresh pasta, pizza, meat dishes and a self-service drink bar. Opening October 30; planned hours 10:30–23:00, last orders 22:00. Launch images are operator illustrations.",
+            "address": "1158-1 Oyamamachi, Machida, Tokyo 194-0212",
+            "websiteUrl": "https://prtimes.jp/main/html/rd/p/000001283.000033462.html",
+            "checkedAt": "2026-10-20",
+            "recognition": "Operator-announced October 30 opening; no published rating asserted.",
+            "priceRange": "",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-20/batch113-tamazakai-0-f818c70cac1d0bbe.webp",
+            "imageCredit": "NILAX / PERTICA via PR TIMES",
+            "imageSourceUrl": "https://prtimes.jp/main/html/rd/p/000001283.000033462.html",
+            "imageNote": "Tamazakai October 30 opening poster with proposed exterior rendering; operator launch illustration, not a completed-site photograph.",
+            "openingConfirmed": true,
+            "day": "2026-10-30"
+          }
+        },
+        "enabled": true
+      },
+      "photos": [
+        {
+          "originalUrl": "https://prcdn.freetls.fastly.net/release_image/33462/1283/33462-1283-e424ef1662781af6cc442668baa5d13a-1200x900.jpg?width=1950&height=1350&quality=85%2C65&format=jpeg&auto=webp&fit=bounds&bg-color=fff",
+          "sourcePage": "https://prtimes.jp/main/html/rd/p/000001283.000033462.html",
+          "credit": "NILAX / PERTICA via PR TIMES",
+          "note": "Tamazakai October 30 opening poster with proposed exterior rendering; operator launch illustration, not a completed-site photograph.",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-20/batch113-tamazakai-0-f818c70cac1d0bbe.webp",
+          "sha256": "f818c70cac1d0bbe6bb2a35d3101e39f29c10b3612d07b252625f81f5618a4e2",
+          "width": 1200,
+          "height": 900
+        },
+        {
+          "originalUrl": "https://prcdn.freetls.fastly.net/release_image/33462/1283/33462-1283-59b9e322270258dde9ee4d0b14b41b61-1200x900.jpg?width=1950&height=1350&quality=85%2C65&format=jpeg&auto=webp&fit=bounds&bg-color=fff",
+          "sourcePage": "https://prtimes.jp/main/html/rd/p/000001283.000033462.html",
+          "credit": "NILAX / PERTICA via PR TIMES",
+          "note": "Fresh-basil Genovese pasta; operator launch food illustration, not photographed at the unopened Tamazakai branch.",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-20/batch113-tamazakai-6-610366f7d99b936b.webp",
+          "sha256": "610366f7d99b936bba037c2433ebd8aeb90282aa5f851d6dbd0dae8ced24317d",
+          "width": 1200,
+          "height": 900
+        },
+        {
+          "originalUrl": "https://prcdn.freetls.fastly.net/release_image/33462/1283/33462-1283-738cbc7effe8c0b2474aff22f367e7d1-1200x900.jpg?width=1950&height=1350&quality=85%2C65&format=jpeg&auto=webp&fit=bounds&bg-color=fff",
+          "sourcePage": "https://prtimes.jp/main/html/rd/p/000001283.000033462.html",
+          "credit": "NILAX / PERTICA via PR TIMES",
+          "note": "Garden salad pizza; operator launch food illustration, not photographed at the unopened Tamazakai branch.",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-20/batch113-tamazakai-7-cd2b26f2d1daf6fc.webp",
+          "sha256": "cd2b26f2d1daf6fce64d9ec140524bad6bc5ceaf08a8c09a81ddde0e3aab41e3",
+          "width": 1200,
+          "height": 900
+        },
+        {
+          "originalUrl": "https://prcdn.freetls.fastly.net/release_image/33462/1283/33462-1283-4cdca3cdec81cc5f65ae573c678eaa14-1200x900.jpg?width=1950&height=1350&quality=85%2C65&format=jpeg&auto=webp&fit=bounds&bg-color=fff",
+          "sourcePage": "https://prtimes.jp/main/html/rd/p/000001283.000033462.html",
+          "credit": "NILAX / PERTICA via PR TIMES",
+          "note": "Roast beef presentation; operator launch food illustration, not a guaranteed portion or final launch selection.",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-20/batch113-tamazakai-8-75b99bd4118a8bc8.webp",
+          "sha256": "75b99bd4118a8bc8ac4372edb7574eba6ea52e319152ba0de1158e7f24104b47",
+          "width": 1200,
+          "height": 900
+        },
+        {
+          "originalUrl": "https://prcdn.freetls.fastly.net/release_image/33462/1283/33462-1283-3cfd7235cf2ca9917250d8e36eca0133-1200x900.jpg?width=1950&height=1350&quality=85%2C65&format=jpeg&auto=webp&fit=bounds&bg-color=fff",
+          "sourcePage": "https://prtimes.jp/main/html/rd/p/000001283.000033462.html",
+          "credit": "NILAX / PERTICA via PR TIMES",
+          "note": "Thick-cut pork presentation; operator launch food illustration, not photographed at the unopened Tamazakai branch.",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-20/batch113-tamazakai-9-d754353fe3befd63.webp",
+          "sha256": "d754353fe3befd6388776f64f2a497067c7371e88fb20ed52bd56e8b08130309",
+          "width": 1200,
+          "height": 900
+        },
+        {
+          "originalUrl": "https://prcdn.freetls.fastly.net/release_image/33462/1283/33462-1283-38e59cd77087b50f779a7f261c3666b4-1200x900.jpg?width=1950&height=1350&quality=85%2C65&format=jpeg&auto=webp&fit=bounds&bg-color=fff",
+          "sourcePage": "https://prtimes.jp/main/html/rd/p/000001283.000033462.html",
+          "credit": "NILAX / PERTICA via PR TIMES",
+          "note": "Dessert display; operator launch illustration, not proof of individual Tamazakai dessert availability.",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-20/batch113-tamazakai-10-7c6f4c6d882867dd.webp",
+          "sha256": "7c6f4c6d882867ddee66104146ea1bad0a3208274f93e1126520e0fa016c0264",
+          "width": 1200,
+          "height": 900
+        }
+      ]
+    }
+  ],
+  "counts": {
+    "venues": 1,
+    "newPins": 1,
+    "ordinaryMenuItems": 86,
+    "offers": 0,
+    "offerMenuItems": 0,
+    "photos": 6,
+    "newMemberships": 1,
+    "shortfallReduction": 1
+  },
+  "researchNotes": [
+    "Other-cities-first continuation: reviewed Kyoto, Nagoya, Tokyo and Sapporo content before adding this verified Tokyo Coming soon branch. No Osaka/Fukuoka addition.",
+    "Operator October 19 launch announcement confirms October 30 actual branch opening; older November 2 local estimate superseded. Address, phone, planned hours, seats and parking verified from exact launch release.",
+    "Exact operator menu lightbox labelled Kamakura/Ichikawa/Tamazakai opened in Chrome. All 28 branch-assigned pages downloaded by plain curl and visually reviewed as contact sheets; detailed food, set, dessert, alcohol and wine pages read. À-la-carte prices kept distinct from set supplements.",
+    "No invented launch discount or regular set assigned to Specials. Anniversary cake explicitly excludes Tamazakai. Afternoon tea and Select Sweets marked Coming Soon without start date are excluded from available menus and Specials.",
+    "Official website/gallery and launch gallery checked; 12 launch images downloaded. Six visually reviewed launch illustrations uploaded to Azure and public hash/image decoding verified. Exterior card explicitly a render; no completed branch room photo claimed.",
+    "Held earlier other-city leads retain specific gaps: CHAEN opening chronology/address/menu; YUI conflicting employer dates; NEUF Oike exact own menu/gallery; CITY BAKERY LACHIC branch missing from customer menu selector; Chez Kobe Matsuzakaya renewal history is not a new opening.",
+    "Fresh broad Pin-name duplicate search returned none in both environments; fresh source URL checks performed before writes. No PinDining or standalone food product created."
+  ],
+  "held": [
+    {
+      "name": "Tamazakai completed room gallery",
+      "sourceUrl": "https://prtimes.jp/main/html/rd/p/000001283.000033462.html",
+      "reason": "Operator marks all launch images illustrative; no completed branch photograph verified. Render and food illustrations labelled explicitly."
+    },
+    {
+      "name": "Tamazakai afternoon tea and anniversary cake",
+      "sourceUrl": "https://www.nilax.jp/pertica/menu",
+      "reason": "Afternoon tea and Select Sweets remain Coming Soon without date; anniversary cakes explicitly exclude Tamazakai. No active offer created."
+    },
+    {
+      "name": "100 HOURS DINER Ariake",
+      "sourceUrl": "https://job.inshokuten.com/kanto/work/detail/93347/parttime/cooking-staff?assistLinkCode=62",
+      "reason": "Early November employer lead, exact day and branch menu prices/gallery unresolved; not published."
+    }
+  ],
+  "photoReview": {
+    "downloadedCandidates": 40,
+    "selectedPhotos": 6,
+    "method": "28 exact allocated menu pages plus 12 launch images downloaded. Contact sheets and detailed pages visually reviewed; six explicitly labelled operator illustrations selected, Azure public hash/decode verified."
+  },
+  "verification": {
+    "local": {
+      "profiles": [
+        {
+          "pinId": 18831,
+          "sourceUrl": "https://prtimes.jp/main/html/rd/p/000001283.000033462.html",
+          "name": "ITALIAN RESORT PERTICA — Tamazakai",
+          "contentId": 1959,
+          "contentRevision": 1,
+          "verifiedGalleryLinks": 6,
+          "publicPinStatus": 200,
+          "apiBase": "http://localhost:3000",
+          "publicBase": "http://localhost:3000"
+        }
+      ],
+      "guides": [
+        {
+          "pinId": 18831,
+          "region": "tokyo",
+          "view": "upcoming",
+          "neighborhood": "Tamazakai / Machida",
+          "nativeTitleAndImage": true,
+          "hrefs": [
+            "/pin/18831/italian-resort-pertica-tamazakai-opens-2026-10-30"
+          ],
+          "browserFiltered": false,
+          "publicBase": "http://localhost:3000",
+          "guideStatus": 200,
+          "offers": []
+        }
+      ]
+    },
+    "production": {
+      "profiles": [
+        {
+          "pinId": 18835,
+          "sourceUrl": "https://prtimes.jp/main/html/rd/p/000001283.000033462.html",
+          "name": "ITALIAN RESORT PERTICA — Tamazakai",
+          "contentId": 1959,
+          "contentRevision": 1,
+          "verifiedGalleryLinks": 6,
+          "publicPinStatus": 200,
+          "apiBase": "https://www.chronopin.com",
+          "publicBase": "https://www.chronopin.com"
+        }
+      ],
+      "guides": [
+        {
+          "pinId": 18835,
+          "region": "tokyo",
+          "view": "upcoming",
+          "neighborhood": "Tamazakai / Machida",
+          "nativeTitleAndImage": true,
+          "hrefs": [
+            "/pin/18835/italian-resort-pertica-tamazakai-opens-2026-10-30"
+          ],
+          "browserFiltered": false,
+          "publicBase": "https://www.chronopin.com",
+          "guideStatus": 200,
+          "offers": []
+        }
+      ]
+    }
+  },
+  "publicationStatus": {
+    "local": "saved and publicly verified",
+    "production": "saved and publicly verified",
+    "publicHttpsVerified": true
+  },
+  "verifiedGuideCounts": {
+    "local": [
+      {
+        "environment": "local",
+        "city": "fukuoka",
+        "view": "upcoming",
+        "verificationBase": "http://localhost:3000",
+        "count": 10,
+        "ids": [
+          "15398",
+          "15410",
+          "15411",
+          "15415",
+          "15424",
+          "15425",
+          "15426",
+          "15914",
+          "15924",
+          "18421"
+        ],
+        "verifiedAt": "2026-10-20T23:52:36.677099+00:00"
+      },
+      {
+        "environment": "local",
+        "city": "fukuoka",
+        "view": "new",
+        "verificationBase": "http://localhost:3000",
+        "count": 24,
+        "ids": [
+          "15399",
+          "15400",
+          "15401",
+          "15409",
+          "15412",
+          "15414",
+          "15421",
+          "15422",
+          "15423",
+          "15427",
+          "15428",
+          "15969",
+          "16026",
+          "16027",
+          "16078",
+          "16290",
+          "16291",
+          "16292",
+          "16326",
+          "17625",
+          "18418",
+          "18506",
+          "18536",
+          "18537"
+        ],
+        "verifiedAt": "2026-10-20T23:52:36.686960+00:00"
+      },
+      {
+        "environment": "local",
+        "city": "fukuoka",
+        "view": "top",
+        "verificationBase": "http://localhost:3000",
+        "count": 30,
+        "ids": [
+          "15402",
+          "15403",
+          "15404",
+          "15405",
+          "15406",
+          "15407",
+          "15408",
+          "15413",
+          "15416",
+          "15417",
+          "15418",
+          "15419",
+          "15420",
+          "15429",
+          "18132",
+          "18133",
+          "18134",
+          "18147",
+          "18148",
+          "18149",
+          "18150",
+          "18176",
+          "18279",
+          "18280",
+          "18281",
+          "18289",
+          "18291",
+          "18293",
+          "18295",
+          "18296"
+        ],
+        "verifiedAt": "2026-10-20T23:52:36.754091+00:00"
+      },
+      {
+        "environment": "local",
+        "city": "fukuoka",
+        "view": "discounts",
+        "verificationBase": "http://localhost:3000",
+        "count": 36,
+        "ids": [
+          "http://raisindor.jp/",
+          "https://010bld.com/gohgan/",
+          "https://333sanmitomatoramen.com/store/%e5%a4%a9%e7%a5%9e%e5%a4%a7%e5%90%8d%e6%9c%ac%e5%ba%97/",
+          "https://and-gallery.com/#hukuoka",
+          "https://cene.tokyo/collections/fukuoka-open",
+          "https://fukuoka-orientalhotel.com/restaurant/linksquare/",
+          "https://fukuokaseahawk.hiltonjapan.co.jp/restaurants/clouds",
+          "https://fukuokaseahawk.hiltonjapan.co.jp/restaurants/seala",
+          "https://kanzan.net/imuri/",
+          "https://kusiyatubame.owst.jp/",
+          "https://le-bistro-aki.com/",
+          "https://onefukuoka-building.jp/shop/55",
+          "https://prtimes.jp/main/html/rd/p/000000060.000179076.html",
+          "https://prtimes.jp/main/html/rd/p/000000064.000152670.html",
+          "https://prtimes.jp/main/html/rd/p/000000170.000101757.html",
+          "https://pukutoco.com/sumomo-bakery-1007open/",
+          "https://pukutoco.com/sumomobakery-akasaka1019open/",
+          "https://tabelog.com/en/fukuoka/A4001/A400102/40074846/",
+          "https://toeihotel-fukuoka.com/restaurant/bistro_atrie/",
+          "https://www.eggsnthingsjapan.com/hakata/",
+          "https://www.f-sunpalace.com/restaurant/lagoon/",
+          "https://www.fuk.hotelokura.co.jp/restaurant/lechampdor/",
+          "https://www.gate-hotel.jp/fukuoka/rb/agfukuoka.html",
+          "https://www.ginzalion.jp/shop/brand/yebisubar/onefukuokabldg.html",
+          "https://www.hiramatsurestaurant.jp/hiramatsu-hakata/",
+          "https://www.hiramatsurestaurant.jp/kubotsu/",
+          "https://www.hotelnikko-fukuoka.com/restaurant/celebrites/",
+          "https://www.hotelnikko-fukuoka.com/restaurant/serena/",
+          "https://www.hotpepper.jp/strJ001276550/",
+          "https://www.kys-newotani.co.jp/hakata/restaurant/castillian-bar/",
+          "https://www.orec.co.jp/greenlab-fukuoka/",
+          "https://www.pochi-ito.com/",
+          "https://www.princehotels.co.jp/momochihama/restaurant/yocaterrace/",
+          "https://www.quil-fait-bon.com/pages/fukuoka",
+          "https://www.recent-hotel.com/restaurant/",
+          "https://www.tenchika.com/shop/h_b_antique/"
+        ],
+        "verifiedAt": "2026-10-20T23:52:36.776598+00:00"
+      },
+      {
+        "environment": "local",
+        "city": "osaka",
+        "view": "upcoming",
+        "verificationBase": "http://localhost:3000",
+        "count": 12,
+        "ids": [
+          "15432",
+          "15445",
+          "15447",
+          "15448",
+          "15449",
+          "15458",
+          "15913",
+          "15925",
+          "15975",
+          "16023",
+          "16079",
+          "17168"
+        ],
+        "verifiedAt": "2026-10-20T23:52:37.218790+00:00"
+      },
+      {
+        "environment": "local",
+        "city": "osaka",
+        "view": "new",
+        "verificationBase": "http://localhost:3000",
+        "count": 30,
+        "ids": [
+          "15431",
+          "15435",
+          "15436",
+          "15437",
+          "15438",
+          "15439",
+          "15446",
+          "15451",
+          "15452",
+          "15453",
+          "15454",
+          "15455",
+          "15456",
+          "15457",
+          "17108",
+          "17109",
+          "17110",
+          "17111",
+          "17112",
+          "17622",
+          "17623",
+          "17626",
+          "18303",
+          "18304",
+          "18420",
+          "18424",
+          "18505",
+          "18511",
+          "18550",
+          "18551"
+        ],
+        "verifiedAt": "2026-10-20T23:52:37.227445+00:00"
+      },
+      {
+        "environment": "local",
+        "city": "osaka",
+        "view": "top",
+        "verificationBase": "http://localhost:3000",
+        "count": 30,
+        "ids": [
+          "15430",
+          "15433",
+          "15434",
+          "15440",
+          "15441",
+          "15442",
+          "15443",
+          "15444",
+          "15450",
+          "15971",
+          "18135",
+          "18136",
+          "18137",
+          "18151",
+          "18152",
+          "18153",
+          "18154",
+          "18166",
+          "18168",
+          "18224",
+          "18228",
+          "18271",
+          "18272",
+          "18273",
+          "18274",
+          "18275",
+          "18276",
+          "18277",
+          "18278",
+          "18287"
+        ],
+        "verifiedAt": "2026-10-20T23:52:37.236662+00:00"
+      },
+      {
+        "environment": "local",
+        "city": "osaka",
+        "view": "discounts",
+        "verificationBase": "http://localhost:3000",
+        "count": 31,
+        "ids": [
+          "https://and-gallery.com/#nanba",
+          "https://big-step.co.jp/shop/detail/63",
+          "https://conrad-osaka.hiltonjapan.co.jp/restaurants/40skybar",
+          "https://conrad-osaka.hiltonjapan.co.jp/restaurants/atmos",
+          "https://cross-osaka.orixhotelsandresorts.com/#restaurant",
+          "https://csm-cafe.ltr-online.com/lp/csm-cafe-s022",
+          "https://doubletree-osaka-castle.hiltonjapan.co.jp/restaurants/lounge-bar-sen",
+          "https://doubletree-osaka-castle.hiltonjapan.co.jp/restaurants/restaurant-sen",
+          "https://gabuchiki.com/news/view/308",
+          "https://icosaka.com/offer/pierre_autumnmenu/",
+          "https://jblm2024.wixsite.com/fujiyama-tokyo/%E8%A4%87%E8%A3%BD-namba-osaka",
+          "https://k-coeur.com/restaurant/",
+          "https://labaie.ritzcarltonosaka.com/",
+          "https://osaka.ekimaru.com/shopguide/detail/103",
+          "https://osaka.hiltonjapan.co.jp/plans/restaurants/other/myplace-happyhour",
+          "https://patinahotels.com/osaka/drink-and-dine/p72",
+          "https://prtimes.jp/main/html/rd/p/000000001.000192433.html/",
+          "https://prtimes.jp/main/html/rd/p/000000033.000027700.html",
+          "https://splendido.ritzcarltonosaka.com/",
+          "https://takemon-fukahire.com/",
+          "https://www.agneldor.com/",
+          "https://www.daimaru.co.jp/shinsaibashi/restaurant/cucina-bella.html",
+          "https://www.gate-hotel.jp/osaka/rb/aosaka.html",
+          "https://www.gate-hotel.jp/osaka/rb/peaks.html",
+          "https://www.hiramatsurestaurant.jp/hiramatsu-lafete/",
+          "https://www.hiramatsurestaurant.jp/hiramatsu-lemidi/",
+          "https://www.hotpepper.jp/strJ004661366/",
+          "https://www.labecasse1990.com/",
+          "https://www.quil-fait-bon.com/pages/grand-front-osaka",
+          "https://www.regine.stregisosaka.com/",
+          "https://www.y-unico.jp/"
+        ],
+        "verifiedAt": "2026-10-20T23:52:37.255131+00:00"
+      },
+      {
+        "environment": "local",
+        "city": "kyoto",
+        "view": "upcoming",
+        "verificationBase": "http://localhost:3000",
+        "count": 12,
+        "ids": [
+          "15483",
+          "15499",
+          "15500",
+          "15909",
+          "15910",
+          "15911",
+          "15912",
+          "15922",
+          "15931",
+          "16323",
+          "17169",
+          "18510"
+        ],
+        "verifiedAt": "2026-10-20T23:52:37.593554+00:00"
+      },
+      {
+        "environment": "local",
+        "city": "kyoto",
+        "view": "new",
+        "verificationBase": "http://localhost:3000",
+        "count": 33,
+        "ids": [
+          "15460",
+          "15461",
+          "15462",
+          "15463",
+          "15464",
+          "15465",
+          "15466",
+          "15467",
+          "15468",
+          "15469",
+          "15470",
+          "15471",
+          "15472",
+          "15473",
+          "15474",
+          "15475",
+          "15476",
+          "15477",
+          "15478",
+          "15479",
+          "15480",
+          "15481",
+          "15482",
+          "15489",
+          "15490",
+          "15491",
+          "15492",
+          "15493",
+          "15494",
+          "15495",
+          "15498",
+          "18025",
+          "18026"
+        ],
+        "verifiedAt": "2026-10-20T23:52:37.601678+00:00"
+      },
+      {
+        "environment": "local",
+        "city": "kyoto",
+        "view": "top",
+        "verificationBase": "http://localhost:3000",
+        "count": 30,
+        "ids": [
+          "15459",
+          "15484",
+          "15485",
+          "15486",
+          "15487",
+          "15488",
+          "15496",
+          "15497",
+          "15501",
+          "15973",
+          "18052",
+          "18060",
+          "18061",
+          "18098",
+          "18099",
+          "18117",
+          "18119",
+          "18155",
+          "18156",
+          "18170",
+          "18171",
+          "18173",
+          "18191",
+          "18193",
+          "18194",
+          "18209",
+          "18210",
+          "18211",
+          "18212",
+          "18213"
+        ],
+        "verifiedAt": "2026-10-20T23:52:37.610050+00:00"
+      },
+      {
+        "environment": "local",
+        "city": "kyoto",
+        "view": "discounts",
+        "verificationBase": "http://localhost:3000",
+        "count": 35,
+        "ids": [
+          "https://cenci-kyoto.com/",
+          "https://droit-kyoto.jp/",
+          "https://hotelfauchonkyoto.com/ja/gourmet/fauchon-salon-de-the-kyoto/",
+          "https://kyoto.hiltonjapan.co.jp/restaurants/teori",
+          "https://www.hiramatsurestaurant.jp/hiramatsu-kodaiji/",
+          "https://www.hiramatsurestaurant.jp/la-luce/",
+          "https://www.instagram.com/jbowl_ritsumeikan_mae/",
+          "https://www.keihanhotels-resorts.co.jp/kyoto-centuryhotel/topics/happyhour-2/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/011/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/012/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/013/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/014/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/015/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/016/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/017/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/018/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/019/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/020/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/022/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/023/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/026/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/028/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/031/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/033/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/039/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/040/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/042/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/043/",
+          "https://www.next-hero-kyoto.com/%E3%81%9F%E3%81%93%EF%BC%98%E5%BA%97%E8%88%97%E6%83%85%E5%A0%B1/",
+          "https://www.princess-kyoto.co.jp/restaurant/ambercourt/",
+          "https://www.princess-kyoto.co.jp/restaurant/darley/",
+          "https://www.princess-kyoto.co.jp/restaurant/hisuien/",
+          "https://www.princess-kyoto.co.jp/restaurant/hoen/",
+          "https://www.princess-kyoto.co.jp/restaurant/sagano/",
+          "https://www.quil-fait-bon.com/pages/kyoto"
+        ],
+        "verifiedAt": "2026-10-20T23:52:37.626565+00:00"
+      },
+      {
+        "environment": "local",
+        "city": "nagoya",
+        "view": "upcoming",
+        "verificationBase": "http://localhost:3000",
+        "count": 11,
+        "ids": [
+          "15510",
+          "15512",
+          "15517",
+          "15518",
+          "15521",
+          "15522",
+          "15900",
+          "15901",
+          "15902",
+          "16075",
+          "16080"
+        ],
+        "verifiedAt": "2026-10-20T23:52:37.963645+00:00"
+      },
+      {
+        "environment": "local",
+        "city": "nagoya",
+        "view": "new",
+        "verificationBase": "http://localhost:3000",
+        "count": 31,
+        "ids": [
+          "15509",
+          "15511",
+          "15515",
+          "15516",
+          "15519",
+          "15520",
+          "15898",
+          "15899",
+          "15915",
+          "15916",
+          "15917",
+          "15918",
+          "15919",
+          "15920",
+          "15921",
+          "15932",
+          "15964",
+          "15965",
+          "16020",
+          "16021",
+          "16022",
+          "16076",
+          "16294",
+          "16295",
+          "16767",
+          "16771",
+          "16800",
+          "17107",
+          "17166",
+          "17167",
+          "18045"
+        ],
+        "verifiedAt": "2026-10-20T23:52:37.972470+00:00"
+      },
+      {
+        "environment": "local",
+        "city": "nagoya",
+        "view": "top",
+        "verificationBase": "http://localhost:3000",
+        "count": 30,
+        "ids": [
+          "15502",
+          "15503",
+          "15504",
+          "15505",
+          "15506",
+          "15507",
+          "15508",
+          "15513",
+          "15514",
+          "15523",
+          "15524",
+          "15972",
+          "16024",
+          "18044",
+          "18100",
+          "18101",
+          "18121",
+          "18138",
+          "18192",
+          "18195",
+          "18196",
+          "18214",
+          "18215",
+          "18216",
+          "18217",
+          "18218",
+          "18219",
+          "18220",
+          "18221",
+          "18223"
+        ],
+        "verifiedAt": "2026-10-20T23:52:37.981127+00:00"
+      },
+      {
+        "environment": "local",
+        "city": "nagoya",
+        "view": "discounts",
+        "verificationBase": "http://localhost:3000",
+        "count": 32,
+        "ids": [
+          "https://and-gallery.com/#nagoya",
+          "https://csm-cafe.ltr-online.com/lp/csm-cafe-s017",
+          "https://french-kitamura.jp/",
+          "https://kinzan.nagoya/archives/news/2853/",
+          "https://kobekangroup.com/shop/obanzai_kabtoya/",
+          "https://lebeurrenoisettetokyo.com/nagoya/",
+          "https://nagoya.hiltonjapan.co.jp/restaurants/hideaway3-3",
+          "https://nagoya.hiltonjapan.co.jp/restaurants/inplace3-3",
+          "https://nagoya.hiltonjapan.co.jp/restaurants/ouchou",
+          "https://nagoya.parco.jp/shop/detail/?cd=009191",
+          "https://prtimes.jp/main/html/rd/p/000000004.000116722.html",
+          "https://prtimes.jp/main/html/rd/p/000004440.000018505.html",
+          "https://reconnaissance-nagoya.com/",
+          "https://tabelog.com/en/aichi/A2301/A230110/23089382/",
+          "https://thetowerhotel.jp/restaurant/",
+          "https://www.anacrowneplaza-nagoya.jp/pages/restaurant_gardencourt",
+          "https://www.anacrowneplaza-nagoya.jp/pages/restaurant_karin",
+          "https://www.anacrowneplaza-nagoya.jp/pages/restaurant_stargate",
+          "https://www.anacrowneplaza-nagoya.jp/pages/restaurant_winglounge",
+          "https://www.associa.com/nma/restaurant/pergola/",
+          "https://www.centralpark.co.jp/shop/sharecafe/",
+          "https://www.espacionagoya.com/restaurant-bar/the-bar-castle/",
+          "https://www.hiramatsurestaurant.jp/aubergedelill-nagoya/",
+          "https://www.hotpepper.jp/strJ004698778/",
+          "https://www.hotpepper.jp/strJ004699003/",
+          "https://www.kochuten.jp/",
+          "https://www.komeda.co.jp/shop/detail.html?id=1215",
+          "https://www.lafloraison-t.jp/",
+          "https://www.livingroom-skybar.com/",
+          "https://www.princehotels.co.jp/nagoya/restaurant/skydining/",
+          "https://www.quil-fait-bon.com/pages/nagoya-sakae",
+          "https://www.thekawabunnagoya.com/thekawabunnagoya/restaurant/"
+        ],
+        "verifiedAt": "2026-10-20T23:52:38.002978+00:00"
+      },
+      {
+        "environment": "local",
+        "city": "tokyo",
+        "view": "upcoming",
+        "verificationBase": "http://localhost:3000",
+        "count": 16,
+        "ids": [
+          "15526",
+          "15538",
+          "15541",
+          "15544",
+          "15546",
+          "15555",
+          "15556",
+          "15557",
+          "15923",
+          "15929",
+          "15930",
+          "17106",
+          "17621",
+          "18422",
+          "18720",
+          "18831"
+        ],
+        "verifiedAt": "2026-10-20T23:52:38.012868+00:00"
+      },
+      {
+        "environment": "local",
+        "city": "tokyo",
+        "view": "new",
+        "verificationBase": "http://localhost:3000",
+        "count": 31,
+        "ids": [
+          "15527",
+          "15539",
+          "15540",
+          "15551",
+          "15552",
+          "15553",
+          "15554",
+          "15558",
+          "15966",
+          "15967",
+          "15968",
+          "16289",
+          "16325",
+          "17170",
+          "17171",
+          "17172",
+          "17173",
+          "17628",
+          "18027",
+          "18043",
+          "18051",
+          "18058",
+          "18102",
+          "18103",
+          "18300",
+          "18301",
+          "18302",
+          "18444",
+          "18507",
+          "18508",
+          "18509"
+        ],
+        "verifiedAt": "2026-10-20T23:52:38.021210+00:00"
+      },
+      {
+        "environment": "local",
+        "city": "tokyo",
+        "view": "top",
+        "verificationBase": "http://localhost:3000",
+        "count": 30,
+        "ids": [
+          "15525",
+          "15528",
+          "15529",
+          "15530",
+          "15531",
+          "15532",
+          "15533",
+          "15534",
+          "15535",
+          "15536",
+          "15537",
+          "15542",
+          "15543",
+          "15545",
+          "15547",
+          "15548",
+          "15549",
+          "15550",
+          "15559",
+          "15560",
+          "15561",
+          "15562",
+          "15903",
+          "15974",
+          "18122",
+          "18123",
+          "18140",
+          "18141",
+          "18157",
+          "18158"
+        ],
+        "verifiedAt": "2026-10-20T23:52:38.028397+00:00"
+      },
+      {
+        "environment": "local",
+        "city": "tokyo",
+        "view": "discounts",
+        "verificationBase": "http://localhost:3000",
+        "count": 40,
+        "ids": [
+          "https://and-gallery.com/#ikebukuro",
+          "https://and-gallery.com/#yurakucho",
+          "https://cocco.eastone.co.jp/shop/gotanda",
+          "https://cocco.eastone.co.jp/shop/kameido",
+          "https://conrad-tokyo.hiltonjapan.co.jp/restaurants/cerise",
+          "https://conrad-tokyo.hiltonjapan.co.jp/restaurants/chinablue",
+          "https://conrad-tokyo.hiltonjapan.co.jp/restaurants/twentyeight",
+          "https://csm-cafe.ltr-online.com/lp/csm-cafe-s012",
+          "https://gourmetpress.net/1488798/",
+          "https://miabocca.eastone.co.jp/shop/Ikebukuro",
+          "https://miabocca.eastone.co.jp/shop/Shakujii-park",
+          "https://miabocca.eastone.co.jp/shop/Shinjuku-takasimaya",
+          "https://mimimi-jiyugaoka.com/#floor1",
+          "https://onodera-group.com/kaitensushi-ikebukuro/",
+          "https://prtimes.jp/main/html/rd/p/000000009.000161200.html",
+          "https://prtimes.jp/main/html/rd/p/000000048.000152772.html",
+          "https://prtimes.jp/main/html/rd/p/000000196.000049183.html",
+          "https://prtimes.jp/main/html/rd/p/000000356.000048489.html",
+          "https://prtimes.jp/main/html/rd/p/000000592.000071323.html",
+          "https://prtimes.jp/main/html/rd/p/000004178.000003860.html",
+          "https://salvatore.jp/restaurant/asagaya/",
+          "https://sarabethsrestaurants.jp/location/omotesando/",
+          "https://sarabethsrestaurants.jp/location/shinagawa/",
+          "https://sarabethsrestaurants.jp/location/shinjuku/",
+          "https://sarabethsrestaurants.jp/location/tokyo/",
+          "https://shibakoen.bar-shinkai.com/",
+          "https://store-info.skylark.co.jp/syabuyo/map/198490/",
+          "https://tabelog.com/en/tokyo/A1303/A130301/13198692/",
+          "https://tokyo.hiltonjapan.co.jp/restaurants/st_georges_bar",
+          "https://www.andaztokyo.jp/restaurants/jp/thetavern-grill-lounge",
+          "https://www.herofield.com/bbq/tokyoprince/",
+          "https://www.hiramatsurestaurant.jp/jardindessens-tokyo/",
+          "https://www.mesm.jp/en/eat-drink/chefs-theatre.html",
+          "https://www.newotani.co.jp/tokyo/restaurant/gardenlounge/",
+          "https://www.quil-fait-bon.com/pages/aoyama",
+          "https://www.quil-fait-bon.com/pages/grand-maison-ginza",
+          "https://www.quil-fait-bon.com/pages/shinjuku",
+          "https://www.quil-fait-bon.com/pages/tokyo-dome-city",
+          "https://www.quil-fait-bon.com/pages/tokyo-skytree-town-solamachi",
+          "https://www.sunamo.jp/floor/shop_detail.html?UC=1_028"
+        ],
+        "verifiedAt": "2026-10-20T23:52:38.048261+00:00"
+      },
+      {
+        "environment": "local",
+        "city": "sapporo",
+        "view": "upcoming",
+        "verificationBase": "http://localhost:3000",
+        "count": 12,
+        "ids": [
+          "15568",
+          "15569",
+          "15570",
+          "15571",
+          "15597",
+          "15926",
+          "15970",
+          "17103",
+          "18047",
+          "18048",
+          "18054",
+          "18806"
+        ],
+        "verifiedAt": "2026-10-20T23:52:38.377642+00:00"
+      },
+      {
+        "environment": "local",
+        "city": "sapporo",
+        "view": "new",
+        "verificationBase": "http://localhost:3000",
+        "count": 30,
+        "ids": [
+          "15580",
+          "15586",
+          "15587",
+          "15588",
+          "15589",
+          "15590",
+          "15591",
+          "15592",
+          "15595",
+          "15596",
+          "16293",
+          "16296",
+          "17104",
+          "17105",
+          "17624",
+          "17627",
+          "18028",
+          "18029",
+          "18030",
+          "18031",
+          "18049",
+          "18055",
+          "18056",
+          "18057",
+          "18104",
+          "18105",
+          "18124",
+          "18125",
+          "18305",
+          "18306"
+        ],
+        "verifiedAt": "2026-10-20T23:52:38.387187+00:00"
+      },
+      {
+        "environment": "local",
+        "city": "sapporo",
+        "view": "top",
+        "verificationBase": "http://localhost:3000",
+        "count": 30,
+        "ids": [
+          "15563",
+          "15564",
+          "15565",
+          "15566",
+          "15567",
+          "15572",
+          "15573",
+          "15574",
+          "15575",
+          "15576",
+          "15577",
+          "15578",
+          "15579",
+          "15581",
+          "15582",
+          "15583",
+          "15584",
+          "15585",
+          "15593",
+          "15594",
+          "15598",
+          "15599",
+          "15600",
+          "15601",
+          "15602",
+          "15603",
+          "15604",
+          "15605",
+          "15606",
+          "15607"
+        ],
+        "verifiedAt": "2026-10-20T23:52:38.396143+00:00"
+      },
+      {
+        "environment": "local",
+        "city": "sapporo",
+        "view": "discounts",
+        "verificationBase": "http://localhost:3000",
+        "count": 34,
+        "ids": [
+          "https://anan.fuji-tatsu.co.jp/shop/sapporo-sinoro/",
+          "https://chocottosushi-kiwami.owst.jp/",
+          "https://cocco.eastone.co.jp/shop/kitahachijo",
+          "https://cocco.eastone.co.jp/shop/kitaichijo",
+          "https://cocco.eastone.co.jp/shop/kotoniekimae",
+          "https://cocco.eastone.co.jp/shop/miyanosawa",
+          "https://cocco.eastone.co.jp/shop/shindohigashi",
+          "https://cocco.eastone.co.jp/shop/souen",
+          "https://grand1934.com/restaurant/garden-dining-waraku/",
+          "https://grand1934.com/restaurant/kokaku/",
+          "https://grand1934.com/restaurant/lobby-lounge-mizar/",
+          "https://grand1934.com/restaurant/northern-terrace-diner/",
+          "https://grand1934.com/restaurant/old-saloon1934/",
+          "https://miabocca.eastone.co.jp/shop/Kita2jo",
+          "https://miabocca.eastone.co.jp/shop/Kotoni-station",
+          "https://miabocca.eastone.co.jp/shop/Sapporo-station",
+          "https://miabocca.eastone.co.jp/shop/atsubetsuminami",
+          "https://miabocca.eastone.co.jp/shop/sapporoduo",
+          "https://michiru.dkdining.com/sapporo/",
+          "https://prtimes.jp/main/html/rd/p/000000010.000134951.html",
+          "https://store-info.skylark.co.jp/syabuyo/map/198489/",
+          "https://www.anahisapporosusukino.com/restaurants/verde/",
+          "https://www.hyatt.com/hyatt-centric/ja-JP/ctsct-hyatt-centric-sapporo/dining",
+          "https://www.jrhotels.co.jp/tower/restaurant/skyj/",
+          "https://www.keioplaza-sapporo.co.jp/restaurants/akizu/",
+          "https://www.keioplaza-sapporo.co.jp/restaurants/crossvault/",
+          "https://www.keioplaza-sapporo.co.jp/restaurants/glass/",
+          "https://www.keioplaza-sapporo.co.jp/restaurants/miyama/",
+          "https://www.keioplaza-sapporo.co.jp/restaurants/yamanami/",
+          "https://www.princehotels.co.jp/sapporo/restaurant/alldaydininggrandeur",
+          "https://www.princehotels.co.jp/sapporo/restaurant/fuyojo",
+          "https://www.princehotels.co.jp/sapporo/restaurant/katsura",
+          "https://www.princehotels.co.jp/sapporo/restaurant/top_prince",
+          "https://www.tokyuhotels.co.jp/sapporostream/restaurant/splish/plan/angel_devil/index.html"
+        ],
+        "verifiedAt": "2026-10-20T23:52:38.419051+00:00"
+      }
+    ],
+    "production": [
+      {
+        "environment": "production",
+        "city": "fukuoka",
+        "view": "upcoming",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 10,
+        "ids": [
+          "15398",
+          "15410",
+          "15411",
+          "15415",
+          "15424",
+          "15425",
+          "15426",
+          "15914",
+          "15924",
+          "18421"
+        ],
+        "verifiedAt": "2026-10-20T23:52:43.317991+00:00"
+      },
+      {
+        "environment": "production",
+        "city": "fukuoka",
+        "view": "new",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 24,
+        "ids": [
+          "15399",
+          "15400",
+          "15401",
+          "15409",
+          "15412",
+          "15414",
+          "15421",
+          "15422",
+          "15423",
+          "15427",
+          "15428",
+          "15969",
+          "16026",
+          "16027",
+          "16078",
+          "16290",
+          "16291",
+          "16292",
+          "16326",
+          "17625",
+          "18418",
+          "18506",
+          "18534",
+          "18536"
+        ],
+        "verifiedAt": "2026-10-20T23:52:43.527572+00:00"
+      },
+      {
+        "environment": "production",
+        "city": "fukuoka",
+        "view": "top",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 30,
+        "ids": [
+          "15402",
+          "15403",
+          "15404",
+          "15405",
+          "15406",
+          "15407",
+          "15408",
+          "15413",
+          "15416",
+          "15417",
+          "15418",
+          "15419",
+          "15420",
+          "15429",
+          "18132",
+          "18133",
+          "18134",
+          "18147",
+          "18148",
+          "18149",
+          "18150",
+          "18176",
+          "18279",
+          "18280",
+          "18281",
+          "18289",
+          "18291",
+          "18293",
+          "18295",
+          "18296"
+        ],
+        "verifiedAt": "2026-10-20T23:52:43.792177+00:00"
+      },
+      {
+        "environment": "production",
+        "city": "fukuoka",
+        "view": "discounts",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 36,
+        "ids": [
+          "http://raisindor.jp/",
+          "https://010bld.com/gohgan/",
+          "https://333sanmitomatoramen.com/store/%e5%a4%a9%e7%a5%9e%e5%a4%a7%e5%90%8d%e6%9c%ac%e5%ba%97/",
+          "https://and-gallery.com/#hukuoka",
+          "https://cene.tokyo/collections/fukuoka-open",
+          "https://fukuoka-orientalhotel.com/restaurant/linksquare/",
+          "https://fukuokaseahawk.hiltonjapan.co.jp/restaurants/clouds",
+          "https://fukuokaseahawk.hiltonjapan.co.jp/restaurants/seala",
+          "https://kanzan.net/imuri/",
+          "https://kusiyatubame.owst.jp/",
+          "https://le-bistro-aki.com/",
+          "https://onefukuoka-building.jp/shop/55",
+          "https://prtimes.jp/main/html/rd/p/000000060.000179076.html",
+          "https://prtimes.jp/main/html/rd/p/000000064.000152670.html",
+          "https://prtimes.jp/main/html/rd/p/000000170.000101757.html",
+          "https://pukutoco.com/sumomo-bakery-1007open/",
+          "https://pukutoco.com/sumomobakery-akasaka1019open/",
+          "https://tabelog.com/en/fukuoka/A4001/A400102/40074846/",
+          "https://toeihotel-fukuoka.com/restaurant/bistro_atrie/",
+          "https://www.eggsnthingsjapan.com/hakata/",
+          "https://www.f-sunpalace.com/restaurant/lagoon/",
+          "https://www.fuk.hotelokura.co.jp/restaurant/lechampdor/",
+          "https://www.gate-hotel.jp/fukuoka/rb/agfukuoka.html",
+          "https://www.ginzalion.jp/shop/brand/yebisubar/onefukuokabldg.html",
+          "https://www.hiramatsurestaurant.jp/hiramatsu-hakata/",
+          "https://www.hiramatsurestaurant.jp/kubotsu/",
+          "https://www.hotelnikko-fukuoka.com/restaurant/celebrites/",
+          "https://www.hotelnikko-fukuoka.com/restaurant/serena/",
+          "https://www.hotpepper.jp/strJ001276550/",
+          "https://www.kys-newotani.co.jp/hakata/restaurant/castillian-bar/",
+          "https://www.orec.co.jp/greenlab-fukuoka/",
+          "https://www.pochi-ito.com/",
+          "https://www.princehotels.co.jp/momochihama/restaurant/yocaterrace/",
+          "https://www.quil-fait-bon.com/pages/fukuoka",
+          "https://www.recent-hotel.com/restaurant/",
+          "https://www.tenchika.com/shop/h_b_antique/"
+        ],
+        "verifiedAt": "2026-10-20T23:52:44.156597+00:00"
+      },
+      {
+        "environment": "production",
+        "city": "osaka",
+        "view": "upcoming",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 12,
+        "ids": [
+          "15432",
+          "15445",
+          "15447",
+          "15448",
+          "15449",
+          "15458",
+          "15913",
+          "15925",
+          "15975",
+          "16023",
+          "16079",
+          "17168"
+        ],
+        "verifiedAt": "2026-10-20T23:52:45.142704+00:00"
+      },
+      {
+        "environment": "production",
+        "city": "osaka",
+        "view": "new",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 30,
+        "ids": [
+          "15431",
+          "15435",
+          "15436",
+          "15437",
+          "15438",
+          "15439",
+          "15446",
+          "15451",
+          "15452",
+          "15453",
+          "15454",
+          "15455",
+          "15456",
+          "15457",
+          "17108",
+          "17109",
+          "17110",
+          "17111",
+          "17112",
+          "17622",
+          "17623",
+          "17626",
+          "18303",
+          "18304",
+          "18420",
+          "18424",
+          "18449",
+          "18504",
+          "18554",
+          "18555"
+        ],
+        "verifiedAt": "2026-10-20T23:52:45.478368+00:00"
+      },
+      {
+        "environment": "production",
+        "city": "osaka",
+        "view": "top",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 30,
+        "ids": [
+          "15430",
+          "15433",
+          "15434",
+          "15440",
+          "15441",
+          "15442",
+          "15443",
+          "15444",
+          "15450",
+          "15971",
+          "18135",
+          "18136",
+          "18137",
+          "18151",
+          "18152",
+          "18153",
+          "18154",
+          "18166",
+          "18168",
+          "18224",
+          "18228",
+          "18271",
+          "18272",
+          "18273",
+          "18274",
+          "18275",
+          "18276",
+          "18277",
+          "18278",
+          "18287"
+        ],
+        "verifiedAt": "2026-10-20T23:52:45.852058+00:00"
+      },
+      {
+        "environment": "production",
+        "city": "osaka",
+        "view": "discounts",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 31,
+        "ids": [
+          "https://and-gallery.com/#nanba",
+          "https://big-step.co.jp/shop/detail/63",
+          "https://conrad-osaka.hiltonjapan.co.jp/restaurants/40skybar",
+          "https://conrad-osaka.hiltonjapan.co.jp/restaurants/atmos",
+          "https://cross-osaka.orixhotelsandresorts.com/#restaurant",
+          "https://csm-cafe.ltr-online.com/lp/csm-cafe-s022",
+          "https://doubletree-osaka-castle.hiltonjapan.co.jp/restaurants/lounge-bar-sen",
+          "https://doubletree-osaka-castle.hiltonjapan.co.jp/restaurants/restaurant-sen",
+          "https://gabuchiki.com/news/view/308",
+          "https://icosaka.com/offer/pierre_autumnmenu/",
+          "https://jblm2024.wixsite.com/fujiyama-tokyo/%E8%A4%87%E8%A3%BD-namba-osaka",
+          "https://k-coeur.com/restaurant/",
+          "https://labaie.ritzcarltonosaka.com/",
+          "https://osaka.ekimaru.com/shopguide/detail/103",
+          "https://osaka.hiltonjapan.co.jp/plans/restaurants/other/myplace-happyhour",
+          "https://patinahotels.com/osaka/drink-and-dine/p72",
+          "https://prtimes.jp/main/html/rd/p/000000001.000192433.html/",
+          "https://prtimes.jp/main/html/rd/p/000000033.000027700.html",
+          "https://splendido.ritzcarltonosaka.com/",
+          "https://takemon-fukahire.com/",
+          "https://www.agneldor.com/",
+          "https://www.daimaru.co.jp/shinsaibashi/restaurant/cucina-bella.html",
+          "https://www.gate-hotel.jp/osaka/rb/aosaka.html",
+          "https://www.gate-hotel.jp/osaka/rb/peaks.html",
+          "https://www.hiramatsurestaurant.jp/hiramatsu-lafete/",
+          "https://www.hiramatsurestaurant.jp/hiramatsu-lemidi/",
+          "https://www.hotpepper.jp/strJ004661366/",
+          "https://www.labecasse1990.com/",
+          "https://www.quil-fait-bon.com/pages/grand-front-osaka",
+          "https://www.regine.stregisosaka.com/",
+          "https://www.y-unico.jp/"
+        ],
+        "verifiedAt": "2026-10-20T23:52:46.223415+00:00"
+      },
+      {
+        "environment": "production",
+        "city": "kyoto",
+        "view": "upcoming",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 12,
+        "ids": [
+          "15483",
+          "15499",
+          "15500",
+          "15909",
+          "15910",
+          "15911",
+          "15912",
+          "15922",
+          "15931",
+          "16323",
+          "17169",
+          "18448"
+        ],
+        "verifiedAt": "2026-10-20T23:52:47.147871+00:00"
+      },
+      {
+        "environment": "production",
+        "city": "kyoto",
+        "view": "new",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 33,
+        "ids": [
+          "15460",
+          "15461",
+          "15462",
+          "15463",
+          "15464",
+          "15465",
+          "15466",
+          "15467",
+          "15468",
+          "15469",
+          "15470",
+          "15471",
+          "15472",
+          "15473",
+          "15474",
+          "15475",
+          "15476",
+          "15477",
+          "15478",
+          "15479",
+          "15480",
+          "15481",
+          "15482",
+          "15489",
+          "15490",
+          "15491",
+          "15492",
+          "15493",
+          "15494",
+          "15495",
+          "15498",
+          "18025",
+          "18026"
+        ],
+        "verifiedAt": "2026-10-20T23:52:47.421981+00:00"
+      },
+      {
+        "environment": "production",
+        "city": "kyoto",
+        "view": "top",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 30,
+        "ids": [
+          "15459",
+          "15484",
+          "15485",
+          "15486",
+          "15487",
+          "15488",
+          "15496",
+          "15497",
+          "15501",
+          "15973",
+          "18052",
+          "18060",
+          "18061",
+          "18098",
+          "18099",
+          "18117",
+          "18119",
+          "18155",
+          "18156",
+          "18170",
+          "18171",
+          "18173",
+          "18191",
+          "18193",
+          "18194",
+          "18209",
+          "18210",
+          "18211",
+          "18212",
+          "18213"
+        ],
+        "verifiedAt": "2026-10-20T23:52:47.643711+00:00"
+      },
+      {
+        "environment": "production",
+        "city": "kyoto",
+        "view": "discounts",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 35,
+        "ids": [
+          "https://cenci-kyoto.com/",
+          "https://droit-kyoto.jp/",
+          "https://hotelfauchonkyoto.com/ja/gourmet/fauchon-salon-de-the-kyoto/",
+          "https://kyoto.hiltonjapan.co.jp/restaurants/teori",
+          "https://www.hiramatsurestaurant.jp/hiramatsu-kodaiji/",
+          "https://www.hiramatsurestaurant.jp/la-luce/",
+          "https://www.instagram.com/jbowl_ritsumeikan_mae/",
+          "https://www.keihanhotels-resorts.co.jp/kyoto-centuryhotel/topics/happyhour-2/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/011/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/012/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/013/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/014/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/015/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/016/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/017/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/018/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/019/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/020/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/022/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/023/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/026/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/028/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/031/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/033/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/039/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/040/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/042/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/043/",
+          "https://www.next-hero-kyoto.com/%E3%81%9F%E3%81%93%EF%BC%98%E5%BA%97%E8%88%97%E6%83%85%E5%A0%B1/",
+          "https://www.princess-kyoto.co.jp/restaurant/ambercourt/",
+          "https://www.princess-kyoto.co.jp/restaurant/darley/",
+          "https://www.princess-kyoto.co.jp/restaurant/hisuien/",
+          "https://www.princess-kyoto.co.jp/restaurant/hoen/",
+          "https://www.princess-kyoto.co.jp/restaurant/sagano/",
+          "https://www.quil-fait-bon.com/pages/kyoto"
+        ],
+        "verifiedAt": "2026-10-20T23:52:48.086416+00:00"
+      },
+      {
+        "environment": "production",
+        "city": "nagoya",
+        "view": "upcoming",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 11,
+        "ids": [
+          "15510",
+          "15512",
+          "15517",
+          "15518",
+          "15521",
+          "15522",
+          "15900",
+          "15901",
+          "15902",
+          "16075",
+          "16080"
+        ],
+        "verifiedAt": "2026-10-20T23:52:48.993769+00:00"
+      },
+      {
+        "environment": "production",
+        "city": "nagoya",
+        "view": "new",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 31,
+        "ids": [
+          "15509",
+          "15511",
+          "15515",
+          "15516",
+          "15519",
+          "15520",
+          "15898",
+          "15899",
+          "15915",
+          "15916",
+          "15917",
+          "15918",
+          "15919",
+          "15920",
+          "15921",
+          "15932",
+          "15964",
+          "15965",
+          "16020",
+          "16021",
+          "16022",
+          "16076",
+          "16294",
+          "16295",
+          "16767",
+          "16771",
+          "16800",
+          "17107",
+          "17166",
+          "17167",
+          "18045"
+        ],
+        "verifiedAt": "2026-10-20T23:52:49.197514+00:00"
+      },
+      {
+        "environment": "production",
+        "city": "nagoya",
+        "view": "top",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 30,
+        "ids": [
+          "15502",
+          "15503",
+          "15504",
+          "15505",
+          "15506",
+          "15507",
+          "15508",
+          "15513",
+          "15514",
+          "15523",
+          "15524",
+          "15972",
+          "16024",
+          "18044",
+          "18100",
+          "18101",
+          "18121",
+          "18138",
+          "18192",
+          "18195",
+          "18196",
+          "18214",
+          "18215",
+          "18216",
+          "18217",
+          "18218",
+          "18219",
+          "18220",
+          "18221",
+          "18223"
+        ],
+        "verifiedAt": "2026-10-20T23:52:49.414681+00:00"
+      },
+      {
+        "environment": "production",
+        "city": "nagoya",
+        "view": "discounts",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 32,
+        "ids": [
+          "https://and-gallery.com/#nagoya",
+          "https://csm-cafe.ltr-online.com/lp/csm-cafe-s017",
+          "https://french-kitamura.jp/",
+          "https://kinzan.nagoya/archives/news/2853/",
+          "https://kobekangroup.com/shop/obanzai_kabtoya/",
+          "https://lebeurrenoisettetokyo.com/nagoya/",
+          "https://nagoya.hiltonjapan.co.jp/restaurants/hideaway3-3",
+          "https://nagoya.hiltonjapan.co.jp/restaurants/inplace3-3",
+          "https://nagoya.hiltonjapan.co.jp/restaurants/ouchou",
+          "https://nagoya.parco.jp/shop/detail/?cd=009191",
+          "https://prtimes.jp/main/html/rd/p/000000004.000116722.html",
+          "https://prtimes.jp/main/html/rd/p/000004440.000018505.html",
+          "https://reconnaissance-nagoya.com/",
+          "https://tabelog.com/en/aichi/A2301/A230110/23089382/",
+          "https://thetowerhotel.jp/restaurant/",
+          "https://www.anacrowneplaza-nagoya.jp/pages/restaurant_gardencourt",
+          "https://www.anacrowneplaza-nagoya.jp/pages/restaurant_karin",
+          "https://www.anacrowneplaza-nagoya.jp/pages/restaurant_stargate",
+          "https://www.anacrowneplaza-nagoya.jp/pages/restaurant_winglounge",
+          "https://www.associa.com/nma/restaurant/pergola/",
+          "https://www.centralpark.co.jp/shop/sharecafe/",
+          "https://www.espacionagoya.com/restaurant-bar/the-bar-castle/",
+          "https://www.hiramatsurestaurant.jp/aubergedelill-nagoya/",
+          "https://www.hotpepper.jp/strJ004698778/",
+          "https://www.hotpepper.jp/strJ004699003/",
+          "https://www.kochuten.jp/",
+          "https://www.komeda.co.jp/shop/detail.html?id=1215",
+          "https://www.lafloraison-t.jp/",
+          "https://www.livingroom-skybar.com/",
+          "https://www.princehotels.co.jp/nagoya/restaurant/skydining/",
+          "https://www.quil-fait-bon.com/pages/nagoya-sakae",
+          "https://www.thekawabunnagoya.com/thekawabunnagoya/restaurant/"
+        ],
+        "verifiedAt": "2026-10-20T23:52:50.060199+00:00"
+      },
+      {
+        "environment": "production",
+        "city": "tokyo",
+        "view": "upcoming",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 16,
+        "ids": [
+          "15526",
+          "15538",
+          "15541",
+          "15544",
+          "15546",
+          "15555",
+          "15556",
+          "15557",
+          "15923",
+          "15929",
+          "15930",
+          "17106",
+          "17621",
+          "18422",
+          "18722",
+          "18835"
+        ],
+        "verifiedAt": "2026-10-20T23:52:50.995086+00:00"
+      },
+      {
+        "environment": "production",
+        "city": "tokyo",
+        "view": "new",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 31,
+        "ids": [
+          "15527",
+          "15539",
+          "15540",
+          "15551",
+          "15552",
+          "15553",
+          "15554",
+          "15558",
+          "15966",
+          "15967",
+          "15968",
+          "16289",
+          "16325",
+          "17170",
+          "17171",
+          "17172",
+          "17173",
+          "17628",
+          "18027",
+          "18043",
+          "18051",
+          "18058",
+          "18102",
+          "18103",
+          "18300",
+          "18301",
+          "18302",
+          "18444",
+          "18445",
+          "18446",
+          "18447"
+        ],
+        "verifiedAt": "2026-10-20T23:52:51.657546+00:00"
+      },
+      {
+        "environment": "production",
+        "city": "tokyo",
+        "view": "top",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 30,
+        "ids": [
+          "15525",
+          "15528",
+          "15529",
+          "15530",
+          "15531",
+          "15532",
+          "15533",
+          "15534",
+          "15535",
+          "15536",
+          "15537",
+          "15542",
+          "15543",
+          "15545",
+          "15547",
+          "15548",
+          "15549",
+          "15550",
+          "15559",
+          "15560",
+          "15561",
+          "15562",
+          "15903",
+          "15974",
+          "18122",
+          "18123",
+          "18140",
+          "18141",
+          "18157",
+          "18158"
+        ],
+        "verifiedAt": "2026-10-20T23:52:52.021183+00:00"
+      },
+      {
+        "environment": "production",
+        "city": "tokyo",
+        "view": "discounts",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 40,
+        "ids": [
+          "https://and-gallery.com/#ikebukuro",
+          "https://and-gallery.com/#yurakucho",
+          "https://cocco.eastone.co.jp/shop/gotanda",
+          "https://cocco.eastone.co.jp/shop/kameido",
+          "https://conrad-tokyo.hiltonjapan.co.jp/restaurants/cerise",
+          "https://conrad-tokyo.hiltonjapan.co.jp/restaurants/chinablue",
+          "https://conrad-tokyo.hiltonjapan.co.jp/restaurants/twentyeight",
+          "https://csm-cafe.ltr-online.com/lp/csm-cafe-s012",
+          "https://gourmetpress.net/1488798/",
+          "https://miabocca.eastone.co.jp/shop/Ikebukuro",
+          "https://miabocca.eastone.co.jp/shop/Shakujii-park",
+          "https://miabocca.eastone.co.jp/shop/Shinjuku-takasimaya",
+          "https://mimimi-jiyugaoka.com/#floor1",
+          "https://onodera-group.com/kaitensushi-ikebukuro/",
+          "https://prtimes.jp/main/html/rd/p/000000009.000161200.html",
+          "https://prtimes.jp/main/html/rd/p/000000048.000152772.html",
+          "https://prtimes.jp/main/html/rd/p/000000196.000049183.html",
+          "https://prtimes.jp/main/html/rd/p/000000356.000048489.html",
+          "https://prtimes.jp/main/html/rd/p/000000592.000071323.html",
+          "https://prtimes.jp/main/html/rd/p/000004178.000003860.html",
+          "https://salvatore.jp/restaurant/asagaya/",
+          "https://sarabethsrestaurants.jp/location/omotesando/",
+          "https://sarabethsrestaurants.jp/location/shinagawa/",
+          "https://sarabethsrestaurants.jp/location/shinjuku/",
+          "https://sarabethsrestaurants.jp/location/tokyo/",
+          "https://shibakoen.bar-shinkai.com/",
+          "https://store-info.skylark.co.jp/syabuyo/map/198490/",
+          "https://tabelog.com/en/tokyo/A1303/A130301/13198692/",
+          "https://tokyo.hiltonjapan.co.jp/restaurants/st_georges_bar",
+          "https://www.andaztokyo.jp/restaurants/jp/thetavern-grill-lounge",
+          "https://www.herofield.com/bbq/tokyoprince/",
+          "https://www.hiramatsurestaurant.jp/jardindessens-tokyo/",
+          "https://www.mesm.jp/en/eat-drink/chefs-theatre.html",
+          "https://www.newotani.co.jp/tokyo/restaurant/gardenlounge/",
+          "https://www.quil-fait-bon.com/pages/aoyama",
+          "https://www.quil-fait-bon.com/pages/grand-maison-ginza",
+          "https://www.quil-fait-bon.com/pages/shinjuku",
+          "https://www.quil-fait-bon.com/pages/tokyo-dome-city",
+          "https://www.quil-fait-bon.com/pages/tokyo-skytree-town-solamachi",
+          "https://www.sunamo.jp/floor/shop_detail.html?UC=1_028"
+        ],
+        "verifiedAt": "2026-10-20T23:52:52.497892+00:00"
+      },
+      {
+        "environment": "production",
+        "city": "sapporo",
+        "view": "upcoming",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 12,
+        "ids": [
+          "15568",
+          "15569",
+          "15570",
+          "15571",
+          "15597",
+          "15926",
+          "15970",
+          "17103",
+          "18047",
+          "18048",
+          "18054",
+          "18810"
+        ],
+        "verifiedAt": "2026-10-20T23:52:53.492109+00:00"
+      },
+      {
+        "environment": "production",
+        "city": "sapporo",
+        "view": "new",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 30,
+        "ids": [
+          "15580",
+          "15586",
+          "15587",
+          "15588",
+          "15589",
+          "15590",
+          "15591",
+          "15592",
+          "15595",
+          "15596",
+          "16293",
+          "16296",
+          "17104",
+          "17105",
+          "17624",
+          "17627",
+          "18028",
+          "18029",
+          "18030",
+          "18031",
+          "18049",
+          "18055",
+          "18056",
+          "18057",
+          "18104",
+          "18105",
+          "18124",
+          "18125",
+          "18305",
+          "18306"
+        ],
+        "verifiedAt": "2026-10-20T23:52:53.755074+00:00"
+      },
+      {
+        "environment": "production",
+        "city": "sapporo",
+        "view": "top",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 30,
+        "ids": [
+          "15563",
+          "15564",
+          "15565",
+          "15566",
+          "15567",
+          "15572",
+          "15573",
+          "15574",
+          "15575",
+          "15576",
+          "15577",
+          "15578",
+          "15579",
+          "15581",
+          "15582",
+          "15583",
+          "15584",
+          "15585",
+          "15593",
+          "15594",
+          "15598",
+          "15599",
+          "15600",
+          "15601",
+          "15602",
+          "15603",
+          "15604",
+          "15605",
+          "15606",
+          "15607"
+        ],
+        "verifiedAt": "2026-10-20T23:52:53.952934+00:00"
+      },
+      {
+        "environment": "production",
+        "city": "sapporo",
+        "view": "discounts",
+        "verificationBase": "https://www.chronopin.com",
+        "count": 34,
+        "ids": [
+          "https://anan.fuji-tatsu.co.jp/shop/sapporo-sinoro/",
+          "https://chocottosushi-kiwami.owst.jp/",
+          "https://cocco.eastone.co.jp/shop/kitahachijo",
+          "https://cocco.eastone.co.jp/shop/kitaichijo",
+          "https://cocco.eastone.co.jp/shop/kotoniekimae",
+          "https://cocco.eastone.co.jp/shop/miyanosawa",
+          "https://cocco.eastone.co.jp/shop/shindohigashi",
+          "https://cocco.eastone.co.jp/shop/souen",
+          "https://grand1934.com/restaurant/garden-dining-waraku/",
+          "https://grand1934.com/restaurant/kokaku/",
+          "https://grand1934.com/restaurant/lobby-lounge-mizar/",
+          "https://grand1934.com/restaurant/northern-terrace-diner/",
+          "https://grand1934.com/restaurant/old-saloon1934/",
+          "https://miabocca.eastone.co.jp/shop/Kita2jo",
+          "https://miabocca.eastone.co.jp/shop/Kotoni-station",
+          "https://miabocca.eastone.co.jp/shop/Sapporo-station",
+          "https://miabocca.eastone.co.jp/shop/atsubetsuminami",
+          "https://miabocca.eastone.co.jp/shop/sapporoduo",
+          "https://michiru.dkdining.com/sapporo/",
+          "https://prtimes.jp/main/html/rd/p/000000010.000134951.html",
+          "https://store-info.skylark.co.jp/syabuyo/map/198489/",
+          "https://www.anahisapporosusukino.com/restaurants/verde/",
+          "https://www.hyatt.com/hyatt-centric/ja-JP/ctsct-hyatt-centric-sapporo/dining",
+          "https://www.jrhotels.co.jp/tower/restaurant/skyj/",
+          "https://www.keioplaza-sapporo.co.jp/restaurants/akizu/",
+          "https://www.keioplaza-sapporo.co.jp/restaurants/crossvault/",
+          "https://www.keioplaza-sapporo.co.jp/restaurants/glass/",
+          "https://www.keioplaza-sapporo.co.jp/restaurants/miyama/",
+          "https://www.keioplaza-sapporo.co.jp/restaurants/yamanami/",
+          "https://www.princehotels.co.jp/sapporo/restaurant/alldaydininggrandeur",
+          "https://www.princehotels.co.jp/sapporo/restaurant/fuyojo",
+          "https://www.princehotels.co.jp/sapporo/restaurant/katsura",
+          "https://www.princehotels.co.jp/sapporo/restaurant/top_prince",
+          "https://www.tokyuhotels.co.jp/sapporostream/restaurant/splish/plan/angel_devil/index.html"
+        ],
+        "verifiedAt": "2026-10-20T23:52:54.447145+00:00"
+      }
+    ]
+  },
+  "verifiedAtUtc": "2026-10-20T23:53:05.538592+00:00",
+  "readerEvidence": [
+    {
+      "url": "https://www.nilax.jp/pertica/menu",
+      "htmlSha256": "f63dec383533d8247a5aa1acb697c7d931c1f568ade2408b6e386f3d49a9e93d"
+    },
+    {
+      "url": "https://www.nilax.jp/pertica",
+      "htmlSha256": "4b79f24bcd01923a92af4600b6dafe576d6297fe561dd6df4078e34d0b852ffd"
+    },
+    {
+      "url": "https://prtimes.jp/main/html/rd/p/000001283.000033462.html",
+      "htmlSha256": "8c1e89e2b8a5f5798b7b944897350c59709783d46b80ec92e62bb4bf28fa7458"
+    },
+    {
+      "url": "https://tabelog.com/en/tokyo/A1327/A132701/13327347/",
+      "htmlSha256": "335418f315a2f932363916a17a0b4c9fd51b3467c1143371948ceb2016668a06"
+    }
+  ],
+  "duplicateChecks": {
+    "local": [
+      {
+        "term": "PERTICA",
+        "matches": []
+      },
+      {
+        "term": "ペルティカ",
+        "matches": []
+      },
+      {
+        "term": "多摩境",
+        "matches": []
+      },
+      {
+        "term": "Tamazakai",
+        "matches": []
+      }
+    ],
+    "production": [
+      {
+        "term": "PERTICA",
+        "matches": []
+      },
+      {
+        "term": "ペルティカ",
+        "matches": []
+      },
+      {
+        "term": "多摩境",
+        "matches": []
+      },
+      {
+        "term": "Tamazakai",
+        "matches": []
+      }
+    ]
+  },
+  "menuImageEvidence": [
+    {
+      "url": "https://media.yappli.com/assets/nilax/files/01KVESSJ0H7GK43RYS86EPMDZ0.jpg",
+      "sha256": "feb572edbfe533fdd9373b81a14b26d9b2931d2859ba6656bf2163f526c107bd"
+    },
+    {
+      "url": "https://media.yappli.com/assets/nilax/files/01KZCY8ZD0NT1RBZGPP99E6X5Y.jpg",
+      "sha256": "810b0ab1430076f9e27ddac667ddcfe74be8b694cd001a44a1fb5c61a6f112af"
+    },
+    {
+      "url": "https://media.yappli.com/assets/nilax/files/01M2M00NMPYREJMNJ36KWKHDMD.jpg",
+      "sha256": "bb6bd574ceb4a3081c711005f3646e68e942fecc038f121e6ef1120f465d205c"
+    },
+    {
+      "url": "https://media.yappli.com/assets/nilax/files/01KVESSHDW5BPGZ1WWTA85QWKS.jpg",
+      "sha256": "ed36b4f373af3b057483cf762f9c8384787dfdacaaee1e3ad7a844cb7669f3c3"
+    },
+    {
+      "url": "https://media.yappli.com/assets/nilax/files/01KVESSHHGQ5B0S4D7NZKEGJQF.jpg",
+      "sha256": "0ee913bb63a2d0366453a294854f14ef9e5ab6d48e3f7c06630606d7ad1018c5"
+    },
+    {
+      "url": "https://media.yappli.com/assets/nilax/files/01M3NJJ9NBRVN51MG74TG3JDWM.jpg",
+      "sha256": "926a956df4791e338846feec71fbdfcca7cff617fb2ccf7ce063b70c2f923e85"
+    },
+    {
+      "url": "https://media.yappli.com/assets/nilax/files/01M38G5D5JQTFTP9AT9M4QQHVH.jpg",
+      "sha256": "83ae5e2854b49b23b19931996dbf3a28b5521d644ecd9049f4b062218994318a"
+    },
+    {
+      "url": "https://media.yappli.com/assets/nilax/files/01KVESSHQVHFJ5MQQ75CS1KD15.jpg",
+      "sha256": "fe13bd17ef44a23584cff79602a891ecb180c148b61f8c10bf3532e581ffa058"
+    },
+    {
+      "url": "https://media.yappli.com/assets/nilax/files/01KVESSHSFMYXB54FV5XPR4T2Y.jpg",
+      "sha256": "394c835aba5c5cd3aef3479a903866ed74956502b4d0a3fba6b4a86c7ba32a9a"
+    },
+    {
+      "url": "https://media.yappli.com/assets/nilax/files/01KVESSHXYCQY031QHZ0DVH8HW.jpg",
+      "sha256": "33097c33530fa263cdf8cf18e00a01e9f877f2e2a45b9a363189f9dfed12eb52"
+    },
+    {
+      "url": "https://media.yappli.com/assets/nilax/files/01KVESSHTGGWK7WAPBDV65GWX1.jpg",
+      "sha256": "1b591cc3f46d36e6f773b70dedea886b23eeea95cb2b50b8973f6127bda67e47"
+    },
+    {
+      "url": "https://media.yappli.com/assets/nilax/files/01KVESSHP3GZZWGVVQCZRYHS2X.jpg",
+      "sha256": "7b9d05fe71bae57440a14df1bcbe5a5e9b4f7d3ca3d335bd722da7c532301eef"
+    },
+    {
+      "url": "https://media.yappli.com/assets/nilax/files/01KVESSHVPRYP9MWC2T0DVKQFR.jpg",
+      "sha256": "05ed726ca1f019bc1edab40dcf57aac1ebdf60911605979ad37afe8f3cb676dd"
+    },
+    {
+      "url": "https://media.yappli.com/assets/nilax/files/01KVESSHXH6Q6CEPNBQBJ5Q3V2.jpg",
+      "sha256": "f7f41e163016c987d43c702689304d55a75522310ad4f0547c1be74cf84c0914"
+    },
+    {
+      "url": "https://media.yappli.com/assets/nilax/files/01KVESSHXXBDAF129YQZ4A4YWD.jpg",
+      "sha256": "e1ff245a55b2132cee9dba95f9395c18f68c550d7bb0927bfb9769ce339d4f1c"
+    },
+    {
+      "url": "https://media.yappli.com/assets/nilax/files/01M2M00NMX56K9589AJGZHV0FS.jpg",
+      "sha256": "50d37d8dd6a6ad5b851647bb323f1093a90f7923adb8175dc74fef12ddab8e62"
+    },
+    {
+      "url": "https://media.yappli.com/assets/nilax/files/01KVESSHWHR2M7WEATCC8EQG7P.jpg",
+      "sha256": "5126ef673ecc91693607258db55f01d834604ae11e34512fd70b903318f45df1"
+    },
+    {
+      "url": "https://media.yappli.com/assets/nilax/files/01KZCY4AQZE2FMKSXF9V7QWY9C.jpg",
+      "sha256": "6b20183413f2c1190419d8d36d7e5673f10966f352b20ad79d893d3d02d76db2"
+    },
+    {
+      "url": "https://media.yappli.com/assets/nilax/files/01KVESSHY3R367PVX36RF1AM03.jpg",
+      "sha256": "6c7d183e57d07cda5fc69ef1793078cc0a3b4199bc636f11bec06d449fba86d3"
+    },
+    {
+      "url": "https://media.yappli.com/assets/nilax/files/01KVESSHYAY90ESGX10G8NK0KA.jpg",
+      "sha256": "e3d0f7093b5f748f5fe12cc184916b254f444ddf9a78e56cba510e474c3b91a2"
+    },
+    {
+      "url": "https://media.yappli.com/assets/nilax/files/01KVESSHY7BM043B0B3K7SH1SF.jpg",
+      "sha256": "1dd35dda24cce2c80b4d4cf4c00e8935c498b1f17564a6df0baffa76a9480eb9"
+    },
+    {
+      "url": "https://media.yappli.com/assets/nilax/files/01M2M00NN80G4HXVFAZKN0GFV5.jpg",
+      "sha256": "746a2313441019f550d45a777d3465e6bb5fb02a7981dd0f4a1926a0d4ad54b0"
+    },
+    {
+      "url": "https://media.yappli.com/assets/nilax/files/01KVESSJ3Q9RSQDZDFPV3DG2A4.jpg",
+      "sha256": "403226f00bf19b8330bb0f0dfb347d2547297d1d564903ba9346884626c9e5fc"
+    },
+    {
+      "url": "https://media.yappli.com/assets/nilax/files/01KVESSHZQHY05VFCQKRHCE8AQ.jpg",
+      "sha256": "3af9b88bcd4f244c8664baae4cac3901064bb0733213b2fbb5691a60dbe58d61"
+    },
+    {
+      "url": "https://media.yappli.com/assets/nilax/files/01KVESSHZXVJW1QVQ0S9TCN7FM.jpg",
+      "sha256": "bfef255e34a215ef22cdbaf4c2efb4e72dfefcd5b1aeec358452a6daecf4cec0"
+    },
+    {
+      "url": "https://media.yappli.com/assets/nilax/files/01KVESSJ115TXD4G16W9Q8ST2P.jpg",
+      "sha256": "6ea1fe149e8ee3c3b5480deb583f97ad0922ab84080be6fa6e9cde9ebebd3751"
+    },
+    {
+      "url": "https://media.yappli.com/assets/nilax/files/01KZCY4AR38GH40V58DKNGSDPH.jpg",
+      "sha256": "f495c6c228c915fb1829f08ce047ebeebebeb0cb0007d2048d86aa5c88abdf13"
+    },
+    {
+      "url": "https://media.yappli.com/assets/nilax/files/01KVESSHZZZGRW0NEBHZB0MX1G.jpg",
+      "sha256": "d15eb976cbd9288a20974781498eabdba834018dc454a80058ba9bbb0db08f08"
+    }
+  ]
+}
