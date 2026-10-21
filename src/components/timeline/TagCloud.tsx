@@ -12,6 +12,7 @@ import { hrefKeepingDate, hrefNearDay } from '@/lib/client/returnSpot';
 import { useScrollLock } from '@/lib/client/scrollLock';
 import { refineQuery, removeFields, removeTerm, term } from '@/lib/searchTerms';
 import { pinnedQueries, recentQueries, recordQuery, recordRecentQuery, sharedQueries, togglePinnedQuery } from '@/lib/savedQueries';
+import { isCategory } from '@/lib/categories';
 import { cloudTags, groupSelection, groupTags, isReserved, reservedPicked, reservedTag, reservedValues, RESERVED_TAGS, type TagCount, type TagGroup } from '@/lib/tags';
 import { parseSearchQuery } from '@/server/util/searchQuery';
 import { leaveDrawerForCloud, onOpenTagCloud } from '@/lib/client/controlsDrawer';
@@ -799,12 +800,16 @@ function TagCloudView({
     const known = new Set(base.map((t) => t.name.toLowerCase()));
     return [...merged, ...[...here.values()].filter((t) => !known.has(t.name.toLowerCase()))];
   }, [counts, baseline]);
+  const categories = useMemo(() => groupTags(written).filter((tag) => tag.kind === 'category'), [written]);
   const tags = useMemo<TagGroup[]>(() => {
-    const flat = needle || !wrapped;
-    const groups = flat ? [] : groupTags(written);
-    const all = cloudTags(flat ? written : groups, flat ? selected : groupSelection(groups, selected), VIEW_LIMIT);
-    return needle ? all.filter((t) => t.name.toLowerCase().includes(needle)) : all;
-  }, [written, selected, needle, wrapped]);
+    const groups = wrapped ? categories : written;
+    const picked = wrapped ? groupSelection(groups, selected).filter((name) => isCategory(name) || groups.some((g) => g.name.toLowerCase() === name.toLowerCase())) : selected;
+    const all = cloudTags(groups, picked, VIEW_LIMIT);
+    return needle ? all.filter((tag) => tag.name.toLowerCase().includes(needle) || tagLabel(t, tag).toLowerCase().includes(needle)) : all;
+  }, [categories, written, selected, needle, wrapped, t]);
+  const cloudSelected = useMemo(() => (wrapped ? groupSelection(tags, selected) : selected), [wrapped, tags, selected]);
+  const cloudExcluded = useMemo(() => (wrapped ? groupSelection(tags, excluded) : excluded), [wrapped, tags, excluded]);
+  const showAllReserved = useMemo(() => (parseSearchQuery(currentQuery).alternatives?.length ?? 0) > 1, [currentQuery]);
   // Places as tags (one word a name, a city's pins summed over any country it shares its name with), for the map.
   const placeTags = useMemo<TagCount[]>(() => {
     const byName = new Map<string, TagCount>();
@@ -846,7 +851,7 @@ function TagCloudView({
           <h2 id={titleId} className="shrink-0 text-base font-semibold text-ink">
             {mapView ? t('tagCloud.placeTitle') : t('tagCloud.title')}
           </h2>
-          {!mapView && (counts || baseline) ? <span className="shrink-0 text-sm text-subtle">{t('tagCloud.tags', { count: written.length })}</span> : null}
+          {!mapView && (counts || baseline) ? <span className="shrink-0 text-sm text-subtle">{t('tagCloud.tags', { count: wrapped ? tags.length : written.length })}</span> : null}
           <FindTag value={filter} onChange={setFilter} className="min-w-0 flex-1 max-sm:order-last max-sm:basis-full" />
           <span className="flex shrink-0 items-center gap-3 max-sm:ms-auto">
             {mapView ? (
@@ -873,7 +878,7 @@ function TagCloudView({
           </span>
         </div>
         {mapView ? null : (
-          <ReservedFilters counts={counts ?? []} selected={reserved} needle={needle} showAll={(parseSearchQuery(currentQuery).alternatives?.length ?? 0) > 1} onToggle={onToggleReserved} large className="border-b border-line px-5 py-2.5 max-sm:px-3" />
+          <ReservedFilters counts={counts ?? []} selected={reserved} needle={needle} showAll={showAllReserved} onToggle={onToggleReserved} large className="border-b border-line px-5 py-2.5 max-sm:px-3" />
         )}
         <SavedQueries current={currentQuery} onOpen={onOpenQuery} placesOnly={mapView} className="border-b border-line px-5 py-2.5 max-sm:px-3" />
         <div aria-busy={busy || undefined} className="relative min-h-60 flex-1 overflow-hidden">
@@ -908,8 +913,8 @@ function TagCloudView({
           ) : (
             <WordCloud
               tags={tags}
-              selected={wrapped ? groupSelection(tags, selected) : selected}
-              excluded={wrapped ? groupSelection(tags, excluded) : excluded}
+              selected={cloudSelected}
+              excluded={cloudExcluded}
               onToggle={onToggle}
               onHot={onHot}
             />

@@ -1216,7 +1216,7 @@ const zh: Messages = {
     findClear: '清除标签查找',
     ungroupTitle: '单独显示每个标签',
     groupTitle: '将标签归入更大的分类',
-    grouped: '分组',
+    grouped: '分类',
     places: '国家',
     placesSummary: '国家：{summary}',
     placeTitle: '地点云',

@@ -1225,7 +1225,7 @@ const vi: Messages = {
     findClear: 'Xóa tìm kiếm thẻ',
     ungroupTitle: 'Hiện từng thẻ riêng lẻ',
     groupTitle: 'Gộp các thẻ thành những danh mục lớn hơn',
-    grouped: 'Đã gộp nhóm',
+    grouped: 'Danh mục',
     places: 'Quốc gia',
     placesSummary: 'Quốc gia: {summary}',
     placeTitle: 'Đám mây địa điểm',

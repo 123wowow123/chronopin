@@ -1222,7 +1222,7 @@ const fr: Messages = {
     findClear: 'Effacer la recherche de tags',
     ungroupTitle: 'Afficher chaque tag séparément',
     groupTitle: 'Regrouper les tags en catégories plus larges',
-    grouped: 'Groupés',
+    grouped: 'Catégories',
     places: 'Pays',
     placesSummary: 'Pays : {summary}',
     placeTitle: 'Nuage de lieux',

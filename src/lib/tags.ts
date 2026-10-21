@@ -20,7 +20,7 @@
 //
 // Pure: parsing, naming and sizing only.
 
-import { isCategory } from './categories';
+import { canonicalCategory, isCategory } from './categories';
 import { pinMarketRefs } from './predictionMarkets';
 import { CONFIDENCE_BANDS } from './referenceConfidence';
 
@@ -464,21 +464,34 @@ function mostCommonCategory(members: TagCount[]): string | null {
 }
 
 // Categories on top: every other entry goes under the category most of its
-// pins carry, when that category is among the tags. A category counts its own
-// pins, not its members'. One with nothing under it stays a lone tag.
+// pins carry, promoting that category to a group when it is not already among
+// the tags. A category counts its own pins (or its members' when promoted),
+// and when categories are present only categories are returned.
 function wrapInCategories(entries: TagGroup[]): TagGroup[] {
-  const categories = new Map(entries.filter((e) => e.kind === 'category').map((e) => [e.name.toLowerCase(), { ...e, members: [] as TagGroup[] }]));
+  const categories = new Map(entries.filter((e) => e.kind === 'category').map((e) => [e.name.toLowerCase(), { ...e, promoted: false, members: [] as TagGroup[] }]));
   const loose: TagGroup[] = [];
   for (const entry of entries) {
     if (entry.kind === 'category') continue;
-    const home = entry.category ? categories.get(entry.category.toLowerCase()) : undefined;
-    if (home) home.members.push(entry);
-    else loose.push(entry);
+    if (entry.category) {
+      const key = entry.category.toLowerCase();
+      let home = categories.get(key);
+      if (!home) {
+        home = { name: canonicalCategory(entry.category), kind: 'category', count: 0, promoted: true, members: [] };
+        categories.set(key, home);
+      }
+      home.members.push(entry);
+    } else {
+      loose.push(entry);
+    }
   }
-  const wrapped = [...categories.values()].map(({ members, ...category }) =>
-    members.length ? { ...category, members: members.sort((a, b) => b.count - a.count || a.name.localeCompare(b.name)) } : category,
-  );
-  return [...loose, ...wrapped];
+  if (!categories.size) return loose;
+  return [...categories.values()].map(({ members, promoted, ...category }) => {
+    const count = promoted ? members.reduce((n, m) => n + m.count, 0) : category.count;
+    const dim = promoted ? members.every((m) => m.dim) : category.dim;
+    return members.length
+      ? { ...category, count, ...(dim !== undefined ? { dim } : {}), members: members.sort((a, b) => b.count - a.count || a.name.localeCompare(b.name)) }
+      : { ...category, count };
+  });
 }
 
 // Every tag inside an entry, however deep.

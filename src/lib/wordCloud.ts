@@ -34,6 +34,8 @@ export type CloudOptions = {
   pad?: number;
   // The scales tried in turn until every word fits (default SCALES).
   scales?: number[];
+  // Stop a scale trial as soon as one word fails to fit, when only a complete placement counts.
+  allOrNothing?: boolean;
 };
 
 // Words shrink by these steps until all of them fit.
@@ -61,35 +63,72 @@ export function shapeArea(width: number, height: number, inside: (x: number, y: 
   return hits * step * step;
 }
 
+// Cached board masks per `inside` function and board dimensions, so repeated
+// scale probes (e.g. binary search) copy a Uint32Array instead of re-sampling
+// `inside(x, y)` across every cell on each trial.
+const maskCache = new WeakMap<(x: number, y: number) => boolean, { key: string; bits: Uint32Array }>();
+
+function boardMask(W: number, H: number, cell: number, inside: (x: number, y: number) => boolean): Uint32Array {
+  const key = `${W}x${H}@${cell}`;
+  const cached = maskCache.get(inside);
+  if (cached?.key === key) return cached.bits;
+  const board = new Board(W, H);
+  for (let y = 0; y < H; y++) {
+    const py = (y + 0.5) * cell;
+    for (let x = 0; x < W; x++) {
+      if (!inside((x + 0.5) * cell, py)) board.set(x, y);
+    }
+  }
+  maskCache.set(inside, { key, bits: board.bits });
+  return board.bits;
+}
+
+// Cached dilated+packed sprites per Sprite instance and pad, avoiding repeated
+// dilation and bit-packing when two scales round to the same integer font size.
+const packedCache = new WeakMap<Sprite, Map<number, Packed>>();
+
+function packedSprite(raw: Sprite, pad: number): Packed {
+  let byPad = packedCache.get(raw);
+  if (!byPad) {
+    byPad = new Map();
+    packedCache.set(raw, byPad);
+  }
+  let packed = byPad.get(pad);
+  if (!packed) {
+    packed = packSprite(dilate(raw, pad));
+    byPad.set(pad, packed);
+  }
+  return packed;
+}
+
 // Words laid out biggest first, all of them if any scale fits them, else as
 // many as the scale that fitted the most. Deterministic for the same input.
 export function layoutCloud(words: CloudWord[], options: CloudOptions): PlacedWord[] {
   const order = [...words].sort((a, b) => b.weight - a.weight || a.key.localeCompare(b.key));
+  const W = Math.floor(options.width / options.cell);
+  const H = Math.floor(options.height / options.cell);
+  const mask = boardMask(W, H, options.cell, options.inside);
   let best: PlacedWord[] = [];
   for (const scale of options.scales ?? SCALES) {
-    const placed = attempt(order, scale, options);
+    const placed = attempt(order, scale, options, W, H, mask);
     if (placed.length === order.length) return placed;
     if (placed.length > best.length) best = placed;
   }
   return best;
 }
 
-function attempt(words: CloudWord[], scale: number, o: CloudOptions): PlacedWord[] {
-  const W = Math.floor(o.width / o.cell);
-  const H = Math.floor(o.height / o.cell);
-  const board = new Board(W, H);
-  // Outside the shape counts as taken.
-  for (let y = 0; y < H; y++) {
-    for (let x = 0; x < W; x++) {
-      if (!o.inside((x + 0.5) * o.cell, (y + 0.5) * o.cell)) board.set(x, y);
-    }
-  }
+function attempt(words: CloudWord[], scale: number, o: CloudOptions, W: number, H: number, mask: Uint32Array): PlacedWord[] {
+  const board = new Board(W, H, mask);
+  const pad = o.pad ?? 1;
   const placed: PlacedWord[] = [];
   for (const word of words) {
     const size = o.sizeFor(word.weight, scale);
-    const sprite = packSprite(dilate(o.sprite(word, size), o.pad ?? 1));
+    const sprite = packedSprite(o.sprite(word, size), pad);
     const at = board.find(sprite, (word.anchor?.x ?? 0.5) * W, (word.anchor?.y ?? 0.5) * H, hash(word.key));
-    if (!at) continue;
+    if (!at) {
+      if (o.allOrNothing) return [];
+      continue;
+    }
     board.stamp(sprite, at.x, at.y);
     placed.push({ ...word, size, x: (at.x - sprite.offX) * o.cell, y: (at.y - sprite.offY) * o.cell });
   }
@@ -135,9 +174,10 @@ class Board {
   constructor(
     readonly width: number,
     readonly height: number,
+    mask?: Uint32Array,
   ) {
     this.words = Math.ceil(width / 32);
-    this.bits = new Uint32Array(this.words * height);
+    this.bits = mask ? new Uint32Array(mask) : new Uint32Array(this.words * height);
   }
 
   set(x: number, y: number) {
@@ -184,6 +224,8 @@ class Board {
     const reach = Math.hypot(this.width, this.height) / 2;
     const midX = Math.round(s.cols / 2) + s.offX;
     const midY = Math.round(s.rows / 2) + s.offY;
+    let prevLeft = NaN;
+    let prevTop = NaN;
     for (let t = 0; ; t += 0.08) {
       const r = t * 0.55;
       if (r > reach) return null;
@@ -191,6 +233,9 @@ class Board {
       const ay = Math.round(cy + r * Math.sin(t + turn)) - midY;
       const left = ax + s.offX;
       const top = ay + s.offY;
+      if (left === prevLeft && top === prevTop) continue;
+      prevLeft = left;
+      prevTop = top;
       if (this.fits(s, left, top)) return { x: left, y: top };
     }
   }

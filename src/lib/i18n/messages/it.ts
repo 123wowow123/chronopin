@@ -1213,7 +1213,7 @@ const it: Messages = {
     findClear: 'Cancella la ricerca dei tag',
     ungroupTitle: 'Mostra ogni tag separatamente',
     groupTitle: 'Raggruppa i tag in categorie più ampie',
-    grouped: 'Raggruppati',
+    grouped: 'Categorie',
     places: 'Paesi',
     placesSummary: 'Paesi: {summary}',
     placeTitle: 'Nuvola di luoghi',

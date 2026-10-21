@@ -1222,7 +1222,7 @@ const de: Messages = {
     findClear: 'Tag-Suche löschen',
     ungroupTitle: 'Jeden Tag einzeln zeigen',
     groupTitle: 'Tags in größere Kategorien zusammenfassen',
-    grouped: 'Gruppiert',
+    grouped: 'Kategorien',
     places: 'Länder',
     placesSummary: 'Länder: {summary}',
     placeTitle: 'Ortswolke',

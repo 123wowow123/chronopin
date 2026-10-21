@@ -154,7 +154,7 @@ export default class PinTag {
         SELECT "name", min("name"::text) AS "spelling", min("kind") AS "kind", COUNT(DISTINCT "pinId")::integer AS "count"
         FROM "hits"
         GROUP BY "name"
-        ORDER BY 4 DESC, 2
+        ORDER BY (min("kind") = 'category') DESC, 4 DESC, 2
         LIMIT ${Number(limit)}
       ),
       "homes" AS (

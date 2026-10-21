@@ -1232,7 +1232,7 @@ const hi: Messages = {
     findClear: 'टैग खोज मिटाएं',
     ungroupTitle: 'हर टैग अलग से दिखाएं',
     groupTitle: 'टैग को बड़ी कैटेगरी में समेटें',
-    grouped: 'ग्रुप में',
+    grouped: 'कैटेगरी',
     places: 'देश',
     placesSummary: 'देश: {summary}',
     placeTitle: 'स्थान क्लाउड',

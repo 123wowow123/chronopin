@@ -1216,7 +1216,7 @@ const ko: Messages = {
     findClear: '태그 검색 지우기',
     ungroupTitle: '모든 태그를 개별로 표시',
     groupTitle: '태그를 더 큰 카테고리로 묶기',
-    grouped: '그룹화됨',
+    grouped: '카테고리',
     places: '국가',
     placesSummary: '국가: {summary}',
     placeTitle: '장소 클라우드',

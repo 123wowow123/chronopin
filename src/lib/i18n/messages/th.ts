@@ -1212,7 +1212,7 @@ const th: Messages = {
     findClear: 'ล้างการค้นหาแท็ก',
     ungroupTitle: 'แสดงแต่ละแท็กแยกกัน',
     groupTitle: 'รวมแท็กเป็นหมวดหมู่ที่ใหญ่ขึ้น',
-    grouped: 'จัดกลุ่มแล้ว',
+    grouped: 'หมวดหมู่',
     places: 'ประเทศ',
     placesSummary: 'ประเทศ: {summary}',
     placeTitle: 'คลาวด์สถานที่',

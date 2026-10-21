@@ -1216,7 +1216,7 @@ const ja: Messages = {
     findClear: 'タグ検索をクリア',
     ungroupTitle: 'タグを個別に表示',
     groupTitle: 'タグを大きなカテゴリにまとめる',
-    grouped: 'グループ化',
+    grouped: 'カテゴリ',
     places: '国',
     placesSummary: '国：{summary}',
     placeTitle: '場所クラウド',

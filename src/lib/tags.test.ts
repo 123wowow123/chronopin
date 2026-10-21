@@ -284,7 +284,7 @@ describe('tag groups', () => {
     expect(grouped[2].members).toHaveLength(2);
   });
 
-  it('puts every other entry under the category most of its pins carry', () => {
+  it('puts every other entry under the category most of its pins carry and promotes missing categories', () => {
     const counts = [
       { name: 'Anime', kind: 'category' as const, count: 650 },
       { name: 'Movie', kind: 'category' as const, count: 20 },
@@ -296,8 +296,12 @@ describe('tag groups', () => {
       { name: 'Prediction Market', kind: 'topic' as const, count: 2, category: null },
     ];
     const grouped = groupTags(counts);
-    // Artemis's category is not among the tags, and Prediction Market has none.
-    expect(grouped.map((g) => g.name)).toEqual(['Artemis', 'Prediction Market', 'Anime', 'Movie', 'Audio']);
+    // Only categories are returned: Artemis promotes Space to a category group, and Prediction Market (no category) is left out.
+    expect(grouped.map((g) => g.name)).toEqual(['Anime', 'Movie', 'Audio', 'Space']);
+    expect(grouped.every((g) => g.kind === 'category')).toBe(true);
+    const space = grouped.find((g) => g.name === 'Space')!;
+    expect(space.count).toBe(5);
+    expect(space.members!.map((m) => m.name)).toEqual(['Artemis']);
     const anime = grouped.find((g) => g.name === 'Anime')!;
     // A category counts its own pins, and wraps the award body's group.
     expect(anime.count).toBe(650);

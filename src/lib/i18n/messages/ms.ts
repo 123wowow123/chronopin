@@ -1226,7 +1226,7 @@ const ms: Messages = {
     findClear: 'Kosongkan carian teg',
     ungroupTitle: 'Tunjuk setiap teg secara berasingan',
     groupTitle: 'Himpunkan teg ke dalam kategori yang lebih besar',
-    grouped: 'Dikumpulkan',
+    grouped: 'Kategori',
     places: 'Negara',
     placesSummary: 'Negara: {summary}',
     placeTitle: 'Awan tempat',

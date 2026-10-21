@@ -49,11 +49,23 @@ const carriedNow = () => (carried && Date.now() < carried.until ? carried : null
 type Box = { cx: number; cy: number; minX: number; maxX: number; minY: number; maxY: number };
 type Layout = { width: number; height: number; placed: PlacedWord[]; boxes: Map<string, Box>; palette: string[] };
 
-// The last layout, with the words and box it was made for. A pick in the big
-// cloud is a search, so a new page and a new cloud, which would otherwise
-// wait for its box's size and lay every word out again, blank meanwhile. The
-// same words in the same box take this one as it stands instead.
+// Recent layouts, keyed by box size and words, plus the very last one. A pick
+// in the big cloud is a search (a new page and a new cloud), and toggling
+// Categories or switching views swaps between word sets in the same box: both
+// reuse a layout already computed instead of laying every word out again.
 let lastLayout: { words: string; width: number; height: number; layout: Layout } | null = null;
+const layoutCache = new Map<string, Layout>();
+const MAX_CACHED_LAYOUTS = 8;
+
+function rememberLayout(cacheKey: string, words: string, width: number, height: number, layout: Layout) {
+  lastLayout = { words, width, height, layout };
+  if (layoutCache.has(cacheKey)) layoutCache.delete(cacheKey);
+  layoutCache.set(cacheKey, layout);
+  if (layoutCache.size > MAX_CACHED_LAYOUTS) {
+    const oldest = layoutCache.keys().next().value;
+    if (oldest !== undefined) layoutCache.delete(oldest);
+  }
+}
 
 const fontWeight = (weight: number) => (weight > 0.66 ? 800 : weight > 0.33 ? 700 : 600);
 
@@ -62,7 +74,11 @@ const fontWeight = (weight: number) => (weight > 0.66 ? 800 : weight > 0.33 ? 70
 function spriteMaker(family: string, boxes: Map<string, Box>) {
   const canvas = document.createElement('canvas');
   const ctx = canvas.getContext('2d', { willReadFrequently: true })!;
+  const sprites = new Map<string, Sprite>();
   return (word: CloudWord, size: number): Sprite => {
+    const cacheKey = `${word.key}|${size}`;
+    const hit = sprites.get(cacheKey);
+    if (hit) return hit;
     const font = `${fontWeight(word.weight)} ${size}px ${family}`;
     ctx.font = font;
     ctx.textAlign = 'center';
@@ -99,8 +115,10 @@ function spriteMaker(family: string, boxes: Map<string, Box>) {
         if (cx >= 0 && cy >= 0 && cx < cols && cy < rows) cells[cy * cols + cx] = 1;
       }
     }
-    boxes.set(`${word.key}|${size}`, { cx: (minX + maxX) / 2, cy: (minY + maxY) / 2, minX, maxX, minY, maxY });
-    return { cols, rows, offX, offY, cells };
+    boxes.set(cacheKey, { cx: (minX + maxX) / 2, cy: (minY + maxY) / 2, minX, maxX, minY, maxY });
+    const sprite = { cols, rows, offX, offY, cells };
+    sprites.set(cacheKey, sprite);
+    return sprite;
   };
 }
 
@@ -144,7 +162,7 @@ export function WordCloud({
   const boxRef = useRef<HTMLDivElement>(null);
   const svgRef = useRef<SVGSVGElement>(null);
   const [size, setSize] = useState<{ width: number; height: number } | null>(() => (lastLayout ? { width: lastLayout.width, height: lastLayout.height } : null));
-  const [ownLayout, setLayout] = useState<Layout | null>(null);
+  const [ownLayout, setLayout] = useState<{ key: string; layout: Layout } | null>(null);
   const [hot, setHot] = useState<string | null>(() => carriedNow()?.key ?? null);
 
   // Follows the box's size, settling before a layout rather than on every frame of a resize.
@@ -169,17 +187,17 @@ export function WordCloud({
     const weights = cloudWeights(busiest.map((t) => t.count));
     return busiest.map((t, rank) => ({ key: t.name.toLowerCase(), text: t.kind === 'category' ? categoryLabel(translate, t.name) : t.name, weight: weights[rank], vertical: isVertical(t.name.toLowerCase(), rank), anchor: shape === 'world' && t.lat != null && t.lon != null ? worldPoint(t.lat, t.lon) : undefined }));
   }, [tags, translate, shape]);
-  // What a layout depends on besides the box, to tell whether the last one fits.
+  // What a layout depends on besides the box, to tell whether a cached one fits.
   const wordsKey = useMemo(() => shape + '\n' + words.map((w) => `${w.key}\t${w.text}\t${w.weight}\t${w.vertical ? 1 : 0}\t${w.anchor?.x}\t${w.anchor?.y}`).join('\n'), [words, shape]);
-  const reused = lastLayout && size && lastLayout.words === wordsKey && lastLayout.width === size.width && lastLayout.height === size.height ? lastLayout.layout : null;
-  // Until this cloud has laid out its own, the last one where it still fits -
-  // or, for the moment its own takes (fresh counts after a pick), the last
-  // one in this box as it stood, so the cloud never blanks between the two.
-  const held = !ownLayout && !reused && lastLayout && size && lastLayout.width === size.width && lastLayout.height === size.height ? lastLayout.layout : null;
-  const layout = ownLayout ?? reused ?? held;
+  const cacheKey = size ? `${size.width}x${size.height}\n${wordsKey}` : null;
+  const reused = cacheKey ? ((ownLayout?.key === cacheKey ? ownLayout.layout : null) ?? layoutCache.get(cacheKey) ?? null) : null;
+  // Until this cloud has laid out its own, the last one in this box as it
+  // stood, so the cloud never blanks while fresh counts or a new filter settle.
+  const held = !reused && size ? (ownLayout && ownLayout.layout.width === size.width && ownLayout.layout.height === size.height ? ownLayout.layout : lastLayout && lastLayout.width === size.width && lastLayout.height === size.height ? lastLayout.layout : null) : null;
+  const layout = reused ?? held;
 
   useEffect(() => {
-    if (!size || size.width < 80 || size.height < 80) return;
+    if (!size || size.width < 80 || size.height < 80 || !cacheKey) return;
     if (reused) return;
     let cancelled = false;
     // Measured in the font the words are drawn in, once it has loaded.
@@ -206,7 +224,7 @@ export function WordCloud({
       const options = { width, height, cell: CELL, inside, sizeFor, sprite: spriteMaker(family, boxes), pad: 1 };
       // Every word at one scale, or null when any is left out.
       const whole = (scale: number) => {
-        const out = layoutCloud(words, { ...options, scales: [scale] });
+        const out = layoutCloud(words, { ...options, scales: [scale], allOrNothing: true });
         return out.length === words.length ? out : null;
       };
       // Down from a little over the guess to the first scale that places
@@ -237,13 +255,13 @@ export function WordCloud({
       const kept = new Map<string, Box>();
       for (const p of placed) kept.set(p.key, boxes.get(`${p.key}|${p.size}`)!);
       const next = { width, height, placed, boxes: kept, palette: isDark() ? DARK_PALETTE : LIGHT_PALETTE };
-      lastLayout = { words: wordsKey, width, height, layout: next };
-      setLayout(next);
+      rememberLayout(cacheKey, wordsKey, width, height, next);
+      setLayout({ key: cacheKey, layout: next });
     });
     return () => {
       cancelled = true;
     };
-  }, [size, words, wordsKey, reused, shape]);
+  }, [size, words, wordsKey, cacheKey, reused, shape]);
 
   useEffect(() => {
     if (!layout || !refocusKey) return;

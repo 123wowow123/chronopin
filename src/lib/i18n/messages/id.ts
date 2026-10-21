@@ -1226,7 +1226,7 @@ const id: Messages = {
     findClear: 'Hapus pencarian tag',
     ungroupTitle: 'Tampilkan setiap tag secara terpisah',
     groupTitle: 'Kelompokkan tag ke dalam kategori yang lebih besar',
-    grouped: 'Dikelompokkan',
+    grouped: 'Kategori',
     places: 'Negara',
     placesSummary: 'Negara: {summary}',
     placeTitle: 'Awan tempat',

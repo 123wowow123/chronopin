@@ -1222,7 +1222,7 @@ const es: Messages = {
     findClear: 'Borrar la búsqueda de etiquetas',
     ungroupTitle: 'Mostrar cada etiqueta por separado',
     groupTitle: 'Agrupar etiquetas en categorías más amplias',
-    grouped: 'Agrupadas',
+    grouped: 'Categorías',
     places: 'Países',
     placesSummary: 'Países: {summary}',
     placeTitle: 'Nube de lugares',

@@ -1523,7 +1523,7 @@ const ar: Messages = {
     findClear: 'مسح البحث عن الوسوم',
     ungroupTitle: 'عرض كل وسم على حدة',
     groupTitle: 'ضمّ الوسوم في فئات أكبر',
-    grouped: 'مجمَّعة',
+    grouped: 'الفئات',
     places: 'الدول',
     placesSummary: 'الدول: {summary}',
     placeTitle: 'سحابة الأماكن',

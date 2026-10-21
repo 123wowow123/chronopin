@@ -1213,7 +1213,7 @@ const pt: Messages = {
     findClear: 'Limpar a busca de tags',
     ungroupTitle: 'Mostrar cada tag separadamente',
     groupTitle: 'Agrupar tags em categorias maiores',
-    grouped: 'Agrupadas',
+    grouped: 'Categorias',
     places: 'Países',
     placesSummary: 'Países: {summary}',
     placeTitle: 'Nuvem de lugares',

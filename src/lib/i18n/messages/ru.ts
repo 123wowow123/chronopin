@@ -1279,7 +1279,7 @@ const ru: Messages = {
     findClear: 'Очистить поиск тегов',
     ungroupTitle: 'Показать каждый тег отдельно',
     groupTitle: 'Объединить теги в крупные категории',
-    grouped: 'Сгруппировано',
+    grouped: 'Категории',
     places: 'Страны',
     placesSummary: 'Страны: {summary}',
     placeTitle: 'Облако мест',
