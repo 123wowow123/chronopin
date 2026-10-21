@@ -5,6 +5,7 @@ import L from 'leaflet';
 import { useEffect, useRef, useState } from 'react';
 import { useT } from '@/lib/client/i18n';
 import type { PinFlightPathJson } from '@/lib/types';
+import { SITE_KINDS, SITE_STYLE, type PinSiteShapeJson } from '@/lib/siteShape';
 
 // Leaflet's default marker images are resolved relative to its CSS, which a
 // bundler breaks; point them at the CDN copies instead.
@@ -29,11 +30,13 @@ export default function PinMap({
   longitude,
   title,
   flightPath,
+  siteShape,
 }: {
   latitude: number;
   longitude: number;
   title: string;
   flightPath?: PinFlightPathJson;
+  siteShape?: PinSiteShapeJson;
 }) {
   const ref = useRef<HTMLDivElement>(null);
   const [armed, setArmed] = useState(false);
@@ -72,11 +75,27 @@ export default function PinMap({
       }).addTo(map);
       map.fitBounds(line.getBounds().extend([latitude, longitude]), { padding: [24, 24], maxZoom: 6 });
     }
+    // A data centre's traced outlines: the campus boundary under, its parts over
+    // (SITE_KINDS is in drawing order), the map framed on the whole site.
+    if (siteShape?.geojson.features.length) {
+      const site = L.featureGroup().addTo(map);
+      for (const kind of SITE_KINDS) {
+        const style = SITE_STYLE[kind];
+        const features = siteShape.geojson.features.filter((f) => f.properties.kind === kind);
+        if (!features.length) continue;
+        L.geoJSON({ type: 'FeatureCollection', features } as never, {
+          style: () => ({ color: style.color, weight: kind === 'site' ? 2 : 1.5, opacity: 0.95, fillColor: style.color, fillOpacity: style.fill, dashArray: style.dash }),
+          interactive: false,
+        }).addTo(site);
+      }
+      const bounds = site.getBounds();
+      if (bounds.isValid()) map.fitBounds(bounds.extend([latitude, longitude]), { padding: [24, 24], maxZoom: 17 });
+    }
     return () => {
       map.getContainer().removeEventListener('mouseleave', disarm);
       map.remove();
     };
-  }, [latitude, longitude, title, flightPath]);
+  }, [latitude, longitude, title, flightPath, siteShape]);
 
   // isolate: Leaflet's panes and controls use z-index 400-1000, which would
   // otherwise scroll over the sticky navbar.

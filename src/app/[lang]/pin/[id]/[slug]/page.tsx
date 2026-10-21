@@ -69,6 +69,7 @@ import { PinReferences } from '@/components/pin/PinReferences';
 import { PinPhotos } from '@/components/pin/PinPhotos';
 import { PinSuggest } from '@/components/pin/PinSuggest';
 import { PinMapLoader } from '@/components/pin/PinMapLoader';
+import { SiteShapeKey } from '@/components/pin/SiteShapeKey';
 import { PinMediaFrame } from '@/components/pin/PinMedia';
 import { PinWeather } from '@/components/pin/PinWeather';
 import { RelatedPins } from '@/components/pin/RelatedPins';
@@ -99,7 +100,7 @@ import { ENERGY_BASIS_WORDS, formatGigawattHours, type PinEnergyJson } from '@/l
 import { WATER_BASIS_WORDS, estimateHomesEquivalentFromMw, formatAcres, formatChips, formatSqft, formatWaterGallonsPerDay, type PinDatacenterJson } from '@/lib/datacenter';
 import type { PinCandidateJson } from '@/lib/candidates';
 import type { PinJson } from '@/lib/types';
-import { companyWebsite, duplicateGroupPins, pinById, pinCandidates, pinEventInfo, pinPower, pinEnergy, pinDatacenter, pinPerf, pinCarPerf, pinGasCarPerf, pinDining, pinHotel, pinGameInfo, pinTaste, pinComments, pinUpdates, threadPins, timelineVideo, adPlacements, adsenseSlots, hideThinPins, pinAlternateNames } from '@/server/services/pages';
+import { companyWebsite, duplicateGroupPins, pinById, pinCandidates, pinEventInfo, pinPower, pinEnergy, pinDatacenter, pinSiteShape, pinPerf, pinCarPerf, pinGasCarPerf, pinDining, pinHotel, pinGameInfo, pinTaste, pinComments, pinUpdates, threadPins, timelineVideo, adPlacements, adsenseSlots, hideThinPins, pinAlternateNames } from '@/server/services/pages';
 import { viewerTimeZone, viewerUser } from '@/server/viewer';
 import { getLocale, getT } from '@/lib/i18n/server';
 import { DEFAULT_LOCALE, pinTextDir } from '@/lib/i18n/config';
@@ -162,7 +163,7 @@ async function PinContent({ params, searchParams }: Pick<Props, 'params' | 'sear
   const event = isAttendableEvent(pin);
   // A museum or park sells admission, not a dated event: same ticket panel.
   const venue = !event && isTicketedVenue(pin);
-  const [updates, timeZone, organizerUrl, eventInfo, power, energy, datacenter, perf, gameInfo, taste, carPerf, gasCarPerf, dining, hotel, candidates, ads, adsense, viewer, alternateNames] = await Promise.all([
+  const [updates, timeZone, organizerUrl, eventInfo, power, energy, datacenter, siteShape, perf, gameInfo, taste, carPerf, gasCarPerf, dining, hotel, candidates, ads, adsense, viewer, alternateNames] = await Promise.all([
     pinUpdates(pin.id),
     viewerTimeZone(),
     (event || venue) && pin.companyId ? companyWebsite(pin.companyId) : null,
@@ -172,6 +173,7 @@ async function PinContent({ params, searchParams }: Pick<Props, 'params' | 'sear
     pinPower(pin.id),
     pinEnergy(pin.id),
     pinDatacenter(pin.id),
+    pinSiteShape(pin.id),
     pinPerf(pin.id),
     pin.categories?.includes('Gaming') ? pinGameInfo(pin.id) : null,
     pinTaste(pin.id),
@@ -233,7 +235,8 @@ async function PinContent({ params, searchParams }: Pick<Props, 'params' | 'sear
                   {t('pin.toMap')}
                 </Link>
               </div>
-              <PinMapLoader latitude={pin.latitude} longitude={pin.longitude} title={pin.title} flightPath={pin.flightPath} />
+              <PinMapLoader latitude={pin.latitude} longitude={pin.longitude} title={pin.title} flightPath={pin.flightPath} siteShape={siteShape ?? undefined} />
+              {siteShape ? <SiteShapeKey shape={siteShape} t={t} /> : null}
               {pin.flightPath ? (
                 <p className="mt-2 flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-muted">
                   <span>
