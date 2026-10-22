@@ -124,6 +124,7 @@ export function PersonView({
 
   // Where the page jumps to, in the order it runs.
   const nav = [
+    committees.length ? { id: 'committees', label: t('person.committees.title') } : null,
     years.length ? { id: 'earnings', label: t('person.earnings') } : null,
     trades.length ? { id: 'trades', label: t('person.trades.title') } : null,
     campaigns.length ? { id: 'campaign', label: t('person.campaign.title') } : null,
@@ -251,6 +252,8 @@ export function PersonView({
 
       <div className="mt-12 flex flex-col gap-14">
         {/* Earnings, a tile a year, directly under the main pane. */}
+        {committees.length ? <CommitteesSection seats={committees} t={t} /> : null}
+
         {years.length ? (
           <section id="earnings" aria-labelledby="earnings-heading" className="scroll-mt-20">
             <EarningsRow
@@ -301,8 +304,6 @@ export function PersonView({
             </EarningsRow>
           </section>
         ) : null}
-
-        {committees.length ? <CommitteesSection seats={committees} t={t} /> : null}
 
         {trades.length ? <TradesSection personId={profile.id} name={profile.name} trades={trades} summary={tradeSummary} t={t} /> : null}
 
