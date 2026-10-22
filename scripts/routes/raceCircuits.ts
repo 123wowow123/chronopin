@@ -8,6 +8,10 @@
 //
 //   npx tsx scripts/routes/raceCircuits.ts          local database
 //   npx tsx scripts/routes/raceCircuits.ts --dry    matching only, nothing written
+//   npx tsx scripts/routes/raceCircuits.ts --refresh  also redo the pins this script drew before
+//
+// Each circuit also carries its length, altitude and the years it opened and
+// first held a Grand Prix (properties of the route feature, shown under the map).
 
 import '../env';
 import fs from 'node:fs';
@@ -17,13 +21,13 @@ import * as db from '@/server/db';
 import { roundCoords, type PinSiteShapeJson } from '@/lib/siteShape';
 import { saveSiteShape } from '@/server/model/pinSiteShape';
 
-const { values: flags } = parseArgs({ options: { dry: { type: 'boolean', default: false } } });
+const { values: flags } = parseArgs({ options: { dry: { type: 'boolean', default: false }, refresh: { type: 'boolean', default: false } } });
 const DATA_URL = 'https://raw.githubusercontent.com/bacinger/f1-circuits/master/f1-circuits.geojson';
 const SOURCE_URL = 'https://github.com/bacinger/f1-circuits';
 const FILE = path.resolve('.scrape/routes/f1-circuits.geojson');
 const MATCH_KM = 1.5;
 
-type Circuit = { properties: { id: string; Name: string }; geometry: { type: 'LineString'; coordinates: [number, number][] } };
+type Circuit = { properties: { id: string; Name: string; length?: number; altitude?: number; opened?: number; firstgp?: number }; geometry: { type: 'LineString'; coordinates: [number, number][] } };
 type PinRow = { id: number; title: string; lat: number; lon: number };
 
 function haversineKm(lat1: number, lon1: number, lat2: number, lon2: number): number {
@@ -49,8 +53,8 @@ async function main() {
     FROM "Pin" p JOIN "PinTag" t ON t."pinId" = p."id" AND t."name" IN ('Formula 1', 'Grand Prix')
     WHERE p."utcDeletedDateTime" IS NULL AND p."location" IS NOT NULL
       AND p."title" ~* '(grand prix|\\mf1\\M|formula|sprint)'
-      AND NOT EXISTS (SELECT 1 FROM "PinSiteShape" s WHERE s."pinId" = p."id")
-    ORDER BY p."id"`);
+      AND NOT EXISTS (SELECT 1 FROM "PinSiteShape" s WHERE s."pinId" = p."id" AND (NOT $1::boolean OR s."source" <> 'f1-circuits (OpenStreetMap)'))
+    ORDER BY p."id"`, [flags.refresh]);
   let saved = 0;
   const unmatched: string[] = [];
   for (const pin of pins) {
@@ -68,7 +72,7 @@ async function main() {
     const shape: PinSiteShapeJson = {
       geojson: {
         type: 'FeatureCollection',
-        features: [{ type: 'Feature', geometry: { type: 'LineString', coordinates: roundCoords(best.c.geometry.coordinates) }, properties: { kind: 'route' } }],
+        features: [{ type: 'Feature', geometry: { type: 'LineString', coordinates: roundCoords(best.c.geometry.coordinates) }, properties: { kind: 'route', lengthM: best.c.properties.length, altitudeM: best.c.properties.altitude, opened: best.c.properties.opened, firstGp: best.c.properties.firstgp } }],
       },
       source: 'f1-circuits (OpenStreetMap)',
       sourceUrl: SOURCE_URL,

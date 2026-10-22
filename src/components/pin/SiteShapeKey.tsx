@@ -1,4 +1,4 @@
-import { SITE_KINDS, SITE_STYLE, type PinSiteShapeJson } from '@/lib/siteShape';
+import { SITE_KINDS, SITE_STYLE, routeFacts, type PinSiteShapeJson } from '@/lib/siteShape';
 import type { Translator } from '@/lib/i18n/translate';
 import Anchor from '@/components/ui/Anchor';
 
@@ -7,6 +7,11 @@ import Anchor from '@/components/ui/Anchor';
 export function SiteShapeKey({ shape, t }: { shape: PinSiteShapeJson; t: Translator }) {
   const counts = new Map<string, number>();
   for (const f of shape.geojson.features) counts.set(f.properties.kind, (counts.get(f.properties.kind) ?? 0) + 1);
+  const facts = routeFacts(shape);
+  const number = new Intl.NumberFormat(t.locale, { maximumFractionDigits: 2 });
+  const profile = facts?.profile;
+  const [minAlt, maxAlt] = profile?.length ? [Math.min(...profile.map((p) => p[1])), Math.max(...profile.map((p) => p[1]))] : [0, 0];
+  const lastKm = profile?.length ? profile[profile.length - 1][0] : 0;
   return (
     <div className="mt-2 text-xs text-muted">
       <ul className="flex flex-wrap items-center gap-x-3 gap-y-1">
@@ -22,6 +27,39 @@ export function SiteShapeKey({ shape, t }: { shape: PinSiteShapeJson; t: Transla
           </li>
         ))}
       </ul>
+      {facts ? (
+        <dl className="mt-1.5 flex flex-wrap gap-x-4 gap-y-0.5">
+          {[
+            [t('pin.route.length'), facts.lengthM ? `${number.format(facts.lengthM / 1000)} km` : null],
+            [t('pin.route.altitude'), facts.altitudeM ? `${number.format(facts.altitudeM)} m` : null],
+            [t('pin.route.opened'), facts.opened ? String(facts.opened) : null],
+            [t('pin.route.firstGp'), facts.firstGp ? String(facts.firstGp) : null],
+          ]
+            .filter((row): row is [string, string] => !!row[1])
+            .map(([label, value]) => (
+              <div key={label} className="inline-flex gap-1">
+                <dt>{label}</dt>
+                <dd className="font-medium tabular-nums text-ink">{value}</dd>
+              </div>
+            ))}
+        </dl>
+      ) : null}
+      {profile && profile.length > 1 && maxAlt > minAlt ? (
+        <figure className="mt-2">
+          <figcaption>
+            {t('pin.route.elevation')}: <span className="tabular-nums text-ink">{number.format(minAlt)}-{number.format(maxAlt)} m</span>
+          </figcaption>
+          <svg viewBox="0 0 300 60" role="img" aria-label={t('pin.route.elevation')} className="mt-1 h-14 w-full" preserveAspectRatio="none">
+            <polygon
+              points={`0,60 ${profile.map(([km, m]) => `${((km / lastKm) * 300).toFixed(1)},${(56 - ((m - minAlt) / (maxAlt - minAlt)) * 52).toFixed(1)}`).join(' ')} 300,60`}
+              fill="#e11d4833"
+              stroke="#e11d48"
+              strokeWidth="1.2"
+              vectorEffect="non-scaling-stroke"
+            />
+          </svg>
+        </figure>
+      ) : null}
       <p className="mt-1">
         {t('pin.siteKey.caption')}{' '}
         {shape.sourceUrl ? (

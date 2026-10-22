@@ -5,7 +5,7 @@ import L from 'leaflet';
 import { useEffect, useRef, useState } from 'react';
 import { useT } from '@/lib/client/i18n';
 import type { PinFlightPathJson } from '@/lib/types';
-import { SITE_KINDS, SITE_STYLE, type PinSiteShapeJson } from '@/lib/siteShape';
+import { SITE_KINDS, SITE_STYLE, alongLine, type PinSiteShapeJson } from '@/lib/siteShape';
 
 // Leaflet's default marker images are resolved relative to its CSS, which a
 // bundler breaks; point them at the CDN copies instead.
@@ -41,6 +41,7 @@ export default function PinMap({
   const ref = useRef<HTMLDivElement>(null);
   const [armed, setArmed] = useState(false);
   const t = useT();
+  const [startLabel, finishLabel, loopLabel] = [t('pin.routeStart'), t('pin.routeFinish'), t('pin.routeStartFinish')];
 
   useEffect(() => {
     if (!ref.current) return;
@@ -88,6 +89,30 @@ export default function PinMap({
           interactive: false,
         }).addTo(site);
       }
+      // A course (a single line) gets its start and finish, and a number every
+      // 5 km when it is a long one, a marathon but not a circuit.
+      const course = siteShape.geojson.features.find((f) => f.properties.kind === 'route' && f.geometry.type === 'LineString');
+      if (course) {
+        const line = course.geometry.coordinates as [number, number][];
+        const dot = (color: string, text: string, size: number) =>
+          L.divIcon({
+            className: '',
+            iconSize: [size, size],
+            html: `<span style="display:flex;align-items:center;justify-content:center;width:${size}px;height:${size}px;border-radius:9999px;background:${color};color:#fff;border:2px solid #fff;font:700 ${size > 16 ? 10 : 9}px system-ui">${text}</span>`,
+          });
+        const { marks, totalKm } = alongLine(line, 5);
+        const first = line[0];
+        const last = line[line.length - 1];
+        const loop = Math.hypot(first[0] - last[0], first[1] - last[1]) < 0.003;
+        L.marker([first[1], first[0]], { icon: dot('#16a34a', '', 16), interactive: false, keyboard: false }).addTo(site).bindTooltip(loop ? loopLabel : startLabel, { direction: 'top' });
+        if (!loop) L.marker([last[1], last[0]], { icon: dot('#111827', '', 16), interactive: false, keyboard: false }).addTo(site).bindTooltip(finishLabel, { direction: 'top' });
+        if (totalKm >= 15) {
+          for (const m of marks) {
+            if (m.km >= totalKm - 1) continue;
+            L.marker([m.lat, m.lon], { icon: dot('#e11d48', String(m.km), 20), interactive: false, keyboard: false }).addTo(site);
+          }
+        }
+      }
       const bounds = site.getBounds();
       if (bounds.isValid()) map.fitBounds(bounds.extend([latitude, longitude]), { padding: [24, 24], maxZoom: 17 });
     }
@@ -95,7 +120,7 @@ export default function PinMap({
       map.getContainer().removeEventListener('mouseleave', disarm);
       map.remove();
     };
-  }, [latitude, longitude, title, flightPath, siteShape]);
+  }, [latitude, longitude, title, flightPath, siteShape, startLabel, finishLabel, loopLabel]);
 
   // isolate: Leaflet's panes and controls use z-index 400-1000, which would
   // otherwise scroll over the sticky navbar.

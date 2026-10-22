@@ -4,10 +4,14 @@
 export const SITE_KINDS = ['site', 'building', 'cooling', 'generator', 'substation', 'power', 'route'] as const;
 export type SiteKind = (typeof SITE_KINDS)[number];
 
+// What a route feature may say about its course: a circuit's length, altitude
+// and first seasons, and a profile of [km along the course, metres] points.
+export type RouteFacts = { lengthM?: number; altitudeM?: number; opened?: number; firstGp?: number; profile?: [number, number][] };
+
 export type SiteFeature = {
   type: 'Feature';
   geometry: { type: 'Polygon' | 'MultiPolygon' | 'LineString' | 'MultiLineString'; coordinates: unknown };
-  properties: { kind: SiteKind };
+  properties: { kind: SiteKind } & RouteFacts;
 };
 
 export type PinSiteShapeJson = {
@@ -49,4 +53,32 @@ export function epochKind(type: string | undefined): SiteKind | null {
 export function roundCoords(c: unknown): unknown {
   if (typeof c === 'number') return Math.round(c * 1e6) / 1e6;
   return Array.isArray(c) ? c.map(roundCoords) : c;
+}
+
+// The facts a shape's route feature carries, if it has any.
+export function routeFacts(shape: PinSiteShapeJson): RouteFacts | null {
+  const f = shape.geojson.features.find((x) => x.properties.kind === 'route');
+  if (!f) return null;
+  const { lengthM, altitudeM, opened, firstGp, profile } = f.properties;
+  return lengthM || altitudeM || opened || firstGp || profile?.length ? { lengthM, altitudeM, opened, firstGp, profile } : null;
+}
+
+// Points every `everyKm` along a line, with the distance each is at, and the line's
+// whole length in km: where a course's distance markers go.
+export function alongLine(line: [number, number][], everyKm: number): { marks: { lon: number; lat: number; km: number }[]; totalKm: number } {
+  const marks: { lon: number; lat: number; km: number }[] = [];
+  let total = 0;
+  let next = everyKm;
+  for (let i = 1; i < line.length; i++) {
+    const [lon1, lat1] = line[i - 1];
+    const [lon2, lat2] = line[i];
+    const km = Math.hypot((lon2 - lon1) * 111.32 * Math.cos((((lat1 + lat2) / 2) * Math.PI) / 180), (lat2 - lat1) * 111.32);
+    while (km > 0 && total + km >= next) {
+      const t = (next - total) / km;
+      marks.push({ lon: lon1 + (lon2 - lon1) * t, lat: lat1 + (lat2 - lat1) * t, km: next });
+      next += everyKm;
+    }
+    total += km;
+  }
+  return { marks, totalKm: total };
 }
