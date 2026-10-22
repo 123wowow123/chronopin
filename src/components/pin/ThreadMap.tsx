@@ -10,7 +10,7 @@ import { MAP_ATTRIBUTION_PREFIX, TILE_ATTRIBUTION, TILE_URL } from './PinMap';
 export type ThreadMapStop = { id: number; n: number; title: string; href: string; latitude: number; longitude: number };
 
 // Every located pin of a thread on one map: numbered as in the thread list,
-// joined in order, the pin being read highlighted.
+// joined in order when the thread is a journey, the pin being read highlighted.
 export default function ThreadMap({ stops, currentId, backHref }: { stops: ThreadMapStop[]; currentId: number; backHref: string }) {
   const ref = useRef<HTMLDivElement>(null);
   const t = useT();
@@ -21,7 +21,15 @@ export default function ThreadMap({ stops, currentId, backHref }: { stops: Threa
     map.attributionControl.setPrefix(MAP_ATTRIBUTION_PREFIX);
     L.tileLayer(TILE_URL, { maxZoom: 19, attribution: TILE_ATTRIBUTION }).addTo(map);
     const points = stops.map((s) => [s.latitude, s.longitude] as [number, number]);
-    L.polyline(points, { color: '#2563eb', weight: 2, opacity: 0.6, dashArray: '4 6' }).addTo(map);
+    // The order is the numbers on the markers. A line joining them only helps when
+    // the thread moves on, a tour or a route: one that doubles back over itself
+    // (a tournament's venues) would cross the map, so it is left off when the path
+    // is much longer than the area the pins cover.
+    const km = (a: [number, number], b: [number, number]) => Math.hypot((b[1] - a[1]) * 111.32 * Math.cos((((a[0] + b[0]) / 2) * Math.PI) / 180), (b[0] - a[0]) * 111.32);
+    const bounds = L.latLngBounds(points);
+    const diagonal = km([bounds.getSouth(), bounds.getWest()], [bounds.getNorth(), bounds.getEast()]);
+    const path = points.reduce((n, p, i) => (i ? n + km(points[i - 1], p) : 0), 0);
+    if (path <= diagonal * 2.5) L.polyline(points, { color: '#2563eb', weight: 2, opacity: 0.6, dashArray: '4 6' }).addTo(map);
     for (const s of stops) {
       const marker = L.marker([s.latitude, s.longitude], {
         icon: L.divIcon({
