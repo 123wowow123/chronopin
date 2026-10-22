@@ -1,3 +1,4 @@
+import { COMMITTEE_ABOUT } from '@/lib/committeeAbout';
 import type { Seat } from '@/lib/conflicts';
 import type { Translator } from '@/lib/i18n/translate';
 
@@ -26,6 +27,7 @@ export function CommitteesSection({ seats, t }: { seats: Seat[]; t: Translator }
               <span className="font-medium text-ink">{c.parentId ? c.name.replace(/^.*?: /, '') : c.name}</span>
               {role(c) ? <span className="shrink-0 text-xs font-semibold text-accent">{role(c)}</span> : null}
             </span>
+            {!c.parentId && COMMITTEE_ABOUT[c.committeeId] ? <p className="text-xs leading-relaxed text-muted">{COMMITTEE_ABOUT[c.committeeId]}</p> : null}
             {c.sectors.length ? (
               <span className="flex flex-wrap gap-1.5">
                 {c.sectors.map((x) => (

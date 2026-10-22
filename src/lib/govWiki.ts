@@ -1,6 +1,7 @@
 // Wikis for a congressional committee and for a trade filing, as Open Knowledge Format (v0.2) concepts whose
 // statements cite numbered sources. Pure: the server loads the rows (src/server/model/govWiki.ts).
 
+import { COMMITTEE_ABOUT } from './committeeAbout';
 import { frontmatter } from './okf';
 import { personPath } from './people';
 import { formatAmountRange } from './trades';
@@ -53,6 +54,7 @@ export function compileCommittee(f: CommitteeFacts, at: Date, origin = 'https://
   const own = f.name.replace(/^.*?: /, '');
   const lines = [`# ${f.parent ? `${own} (${f.parent.name})` : f.name}`, ''];
   lines.push(`${f.parent ? `A subcommittee of the ${f.parent.name}` : `A ${f.chamber} committee of the U.S. Congress`}, identified as ${f.committeeId}${cite(COMMITTEES_URL, 'congress-legislators: current committees')}.`);
+  if (COMMITTEE_ABOUT[f.committeeId]) lines.push('', COMMITTEE_ABOUT[f.committeeId]);
   lines.push('', '## Oversight', '');
   lines.push(
     f.sectors.length
@@ -67,7 +69,7 @@ export function compileCommittee(f: CommitteeFacts, at: Date, origin = 'https://
   if (f.flagged.trades) {
     lines.push('', '## Trades marked as possible conflicts', '', `${f.flagged.trades} disclosed trade(s) by ${f.flagged.people} member(s) are in a sector this committee oversees; most-traded: ${f.flagged.tickers.map((t) => `${t.ticker} (${t.count})`).join(', ')}. Seats are today's, so older trades are judged by current membership; a match is a prompt to look, not a finding.`);
   }
-  return finish('Committee', f.name, `${f.chamber} committee ${f.committeeId}${f.sectors.length ? `; oversees ${f.sectors.join(', ')}` : ''}`, `${origin}/api/committees/${f.committeeId}/wiki?path=page`, ['committee', f.chamber, ...f.sectors], lines, sources, at);
+  return finish('Committee', f.name, COMMITTEE_ABOUT[f.committeeId] ?? `${f.chamber} committee ${f.committeeId}${f.sectors.length ? `; oversees ${f.sectors.join(', ')}` : ''}`, `${origin}/api/committees/${f.committeeId}/wiki?path=page`, ['committee', f.chamber, ...f.sectors], lines, sources, at);
 }
 
 export type FilingFacts = {
