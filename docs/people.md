@@ -714,8 +714,7 @@ cite the committee wikis. A filing is the unit for trades (one report, one sourc
 `names`, `sectors` (SEC lookup, minutes - background, 202) and `wikis` (`committees|filings|companies`); default is everything but `sectors`.
 `PUT {tickers:[{ticker, sector|null}], committees:[{committeeId, sectors}]}` sets sectors by hand and rebuilds the wikis it changes.
 Per-item rebuilds: `POST /api/committees/:id/wiki`, `POST /api/trade-filings/:chamber/:filingId/wiki`, `POST /api/companies/:id/wiki`.
-A `seats` refresh recomputes committee sectors from `COMMITTEE_SECTORS`, so a hand-set committee sector is lost on the next refresh (edit the
-map in `src/lib/conflicts.ts` to keep it); a hand-set ticker sector survives (`sicLabel` = "set by hand"; `sectors` only classifies tickers with no row).
+A hand-set committee sector is stored in `CommitteeSector` (0208), wins over `COMMITTEE_SECTORS` in `src/lib/conflicts.ts` and survives a `seats` refresh; `sectors: null` on a committee drops it. A hand-set ticker sector survives too (`sicLabel` = "set by hand"; `sectors` only classifies tickers with no row).
 
 ## Campaign finance and opponents (0189)
 

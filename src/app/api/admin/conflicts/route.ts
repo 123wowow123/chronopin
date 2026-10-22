@@ -15,8 +15,9 @@ const STEPS = ['seats', 'names', 'sectors', 'wikis'] as const;
 //         runs the refreshes in that order (default all but sectors): seats re-reads today's committees from
 //         congress-legislators; names classifies bonds, funds and ADRs by name; sectors classifies new tickers
 //         from SEC SIC codes (minutes - runs in the background, answers 202); wikis rebuilds the wikis.
-//   PUT   { tickers?: [{ ticker, sector|null }], committees?: [{ committeeId, sectors: [...] }] }
-//         sets a ticker's sector or the sectors a committee oversees by hand, and rebuilds the wikis it changes.
+//   PUT   { tickers?: [{ ticker, sector|null }], committees?: [{ committeeId, sectors: [...]|null }] }
+//         sets a ticker's sector or the sectors a committee oversees by hand (kept across seat refreshes; null on
+//         a committee returns it to the map in src/lib/conflicts.ts), and rebuilds the wikis it changes.
 //         Sectors: defense, energy, utilities, finance, realestate, healthcare, tech, telecom, transport,
 //         agriculture, materials, industrial, consumer.
 export const GET = route(async (request: NextRequest) => {

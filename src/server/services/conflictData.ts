@@ -27,12 +27,14 @@ export async function refreshSeats(): Promise<{ seats: number; unmatched: string
   const people = await db.query<{ id: number; bioguideId: string }>(`SELECT "id", "bioguideId" FROM "Person" WHERE "bioguideId" IS NOT NULL`);
   const byBio = new Map(people.map((p) => [p.bioguideId, p.id]));
   await db.query(`DELETE FROM "PersonCommittee"`);
+  // Sectors set by hand (CommitteeSector) win over the map.
+  const overrides = new Map((await db.query<{ committeeId: string; sectors: string[] }>(`SELECT "committeeId", "sectors" FROM "CommitteeSector"`)).map((r) => [r.committeeId, r.sectors]));
   let seats = 0;
   const unmatched = new Set<string>();
   for (const [id, list] of Object.entries(members)) {
     const c = info.get(id);
     if (!c) continue;
-    const sectors = committeeSectors(id, c.name);
+    const sectors = overrides.get(id) ?? committeeSectors(id, c.name);
     for (const m of list) {
       const personId = byBio.get(m.bioguide);
       if (!personId) {
@@ -112,7 +114,8 @@ export type ConflictEdit = {
   // Set (or, with null, clear) the sector of a ticker.
   tickers?: { ticker: string; sector: Sector | null }[];
   // Set the sectors a committee (or subcommittee) oversees, on every seat of it.
-  committees?: { committeeId: string; sectors: Sector[] }[];
+  // `sectors: null` drops the hand-set value and goes back to the map in src/lib/conflicts.ts.
+  committees?: { committeeId: string; sectors: Sector[] | null }[];
 };
 
 const isSector = (s: unknown): s is Sector => typeof s === 'string' && (SECTORS as readonly string[]).includes(s);
@@ -132,8 +135,8 @@ export function readEdit(body: unknown): ConflictEdit {
     if (!Array.isArray(b.committees) || b.committees.length > 500) throw new Error('committees: an array of at most 500 { committeeId, sectors }');
     edit.committees = b.committees.map((c: { committeeId?: unknown; sectors?: unknown }) => {
       if (typeof c?.committeeId !== 'string' || !/^[A-Z]{2,4}\d{0,3}$/.test(c.committeeId)) throw new Error('committees[].committeeId must be a Thomas id such as HSAS or HSAS03');
-      if (!Array.isArray(c.sectors) || !c.sectors.every(isSector)) throw new Error(`committees[].sectors must be a list of ${SECTORS.join(', ')}`);
-      return { committeeId: c.committeeId, sectors: c.sectors };
+      if (c.sectors !== null && (!Array.isArray(c.sectors) || !c.sectors.every(isSector))) throw new Error(`committees[].sectors must be null or a list of ${SECTORS.join(', ')}`);
+      return { committeeId: c.committeeId, sectors: c.sectors as Sector[] | null };
     });
   }
   return edit;
@@ -153,7 +156,17 @@ export async function applyEdit(edit: ConflictEdit): Promise<{ tickers: number; 
     tickers++;
   }
   for (const c of edit.committees ?? []) {
-    const rows = await db.query(`UPDATE "PersonCommittee" SET "sectors" = $2 WHERE "committeeId" = $1 RETURNING 1`, [c.committeeId, c.sectors]);
+    if (c.sectors) {
+      await db.query(
+        `INSERT INTO "CommitteeSector" ("committeeId", "sectors") VALUES ($1, $2) ON CONFLICT ("committeeId") DO UPDATE SET "sectors" = $2, "updatedAt" = now()`,
+        [c.committeeId, c.sectors],
+      );
+    } else {
+      await db.query(`DELETE FROM "CommitteeSector" WHERE "committeeId" = $1`, [c.committeeId]);
+    }
+    // Reset to the map's value for the seats already stored; a refresh would do the same.
+    const sectors = c.sectors ?? (await db.query<{ name: string }>(`SELECT "name" FROM "PersonCommittee" WHERE "committeeId" = $1 LIMIT 1`, [c.committeeId])).map((r) => committeeSectors(c.committeeId, r.name.replace(/^.*?: /, '')))[0] ?? [];
+    const rows = await db.query(`UPDATE "PersonCommittee" SET "sectors" = $2 WHERE "committeeId" = $1 RETURNING 1`, [c.committeeId, sectors]);
     committees += rows.length;
   }
   const wikis: Record<string, number> = {};
