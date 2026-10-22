@@ -1,5 +1,9 @@
 import * as db from '../db';
+import { sectorOfName, TICKER_SECTORS } from '@/lib/conflicts';
 import type { TradeRow, ParsedTrade, TradeSummary } from '@/lib/trades';
+
+// A holding's sector from its ticker or name, for the ones EDGAR's SIC codes do not reach.
+export const holdingSector = (ticker: string | null, asset: string) => (ticker && TICKER_SECTORS[ticker]) || sectorOfName(asset);
 
 export type TradeFiling = {
   chamber: 'house' | 'senate' | 'executive';
@@ -11,8 +15,15 @@ export type TradeFiling = {
 
 export type WatchStatus = { watcherCount: number; watching: boolean };
 
+// The committee seats whose sectors include the traded ticker's sector (src/lib/conflicts.ts), as
+// [{committee, sector}]; `t` names the PersonTrade row (or alias) the subquery reads.
+export const CONFLICTS = (t: string) => `COALESCE((SELECT jsonb_agg(DISTINCT jsonb_build_object('committee', pc."name", 'sector', x."sector"))
+  FROM (SELECT COALESCE((SELECT ts."sector" FROM "TickerSector" ts WHERE ts."ticker" = ${t}."ticker"), ${t}."sector") AS "sector") x
+  JOIN "PersonCommittee" pc ON x."sector" = ANY (pc."sectors")
+  WHERE pc."personId" = ${t}."personId"), '[]'::jsonb)`;
+
 const COLUMNS = `"id", "chamber", "filingId", "owner", "asset", "ticker", "assetType", "txType", "txDate"::text AS "txDate",
-  "notifiedDate"::text AS "notifiedDate", "filedDate"::text AS "filedDate", "amountLow"::float8 AS "amountLow", "amountHigh"::float8 AS "amountHigh", "sourceUrl"`;
+  "notifiedDate"::text AS "notifiedDate", "filedDate"::text AS "filedDate", "amountLow"::float8 AS "amountLow", "amountHigh"::float8 AS "amountHigh", "sourceUrl", ${CONFLICTS('"PersonTrade"')} AS "conflicts"`;
 
 // Stock trades a person disclosed (0188), and who watches for new ones.
 export default class PersonTrade {
@@ -33,11 +44,11 @@ export default class PersonTrade {
     let added = 0;
     for (const t of filing.trades) {
       const rows = await db.query(
-        `INSERT INTO "PersonTrade" ("personId", "chamber", "filingId", "owner", "asset", "ticker", "assetType", "txType", "txDate", "notifiedDate", "filedDate", "amountLow", "amountHigh", "sourceUrl")
-         VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14)
+        `INSERT INTO "PersonTrade" ("personId", "chamber", "filingId", "owner", "asset", "ticker", "assetType", "txType", "txDate", "notifiedDate", "filedDate", "amountLow", "amountHigh", "sourceUrl", "sector")
+         VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15)
          ON CONFLICT ON CONSTRAINT "UC_PersonTrade_line" DO NOTHING
          RETURNING "id"`,
-        [personId, filing.chamber, filing.filingId, t.owner, t.asset.slice(0, 300), t.ticker, t.assetType, t.txType, t.txDate, t.notifiedDate, filing.filedDate, t.amountLow, t.amountHigh, filing.sourceUrl],
+        [personId, filing.chamber, filing.filingId, t.owner, t.asset.slice(0, 300), t.ticker, t.assetType, t.txType, t.txDate, t.notifiedDate, filing.filedDate, t.amountLow, t.amountHigh, filing.sourceUrl, holdingSector(t.ticker, t.asset)],
       );
       added += rows.length;
     }

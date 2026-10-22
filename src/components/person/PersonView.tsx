@@ -38,6 +38,8 @@ import { personJsonLd } from '@/lib/seo';
 import { term } from '@/lib/searchTerms';
 import type { TimelineVideoSetting } from '@/lib/timelineVideo';
 import type { PinJson } from '@/lib/types';
+import { CommitteesSection } from '@/components/person/CommitteesSection';
+import type { Seat } from '@/lib/conflicts';
 import { TradesSection } from '@/components/person/TradesSection';
 import type { TradeRow, TradeSummary } from '@/lib/trades';
 import { CampaignSection } from '@/components/person/CampaignSection';
@@ -55,6 +57,7 @@ export function PersonView({
   pins,
   trades,
   tradeSummary,
+  committees = [],
   campaigns,
   timeZone,
   video,
@@ -64,6 +67,7 @@ export function PersonView({
   pins: PinJson[];
   trades: TradeRow[];
   tradeSummary?: TradeSummary;
+  committees?: Seat[];
   campaigns: CampaignCycle[];
   timeZone: string;
   video: TimelineVideoSetting;
@@ -297,6 +301,8 @@ export function PersonView({
             </EarningsRow>
           </section>
         ) : null}
+
+        {committees.length ? <CommitteesSection seats={committees} t={t} /> : null}
 
         {trades.length ? <TradesSection personId={profile.id} name={profile.name} trades={trades} summary={tradeSummary} t={t} /> : null}
 

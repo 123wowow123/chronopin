@@ -663,6 +663,60 @@ from. Filings can arrive up to 45 days after a trade; the section says it is not
   `GET /api/people/:id/trades?limit=100&offset=N` (limit 1-200; with neither parameter the newest 500;
   the answer carries `total`). Donald Trump's page went from 2.7 MB to under 0.7 MB.
 
+### Conflict-of-interest mark and committees (0204)
+
+A trade shows "Possible conflict of interest" when its ticker's sector is one a committee the member sits on oversees
+(`PersonCommittee.sectors`, set from `COMMITTEE_SECTORS` / subcommittee keywords in `src/lib/conflicts.ts`; the ticker's sector is
+`TickerSector`, from the SEC SIC code via `sectorOfSic`). It is computed at read time (`CONFLICTS()` in `model/personTrade.ts`), shown in
+the person's trades table, the bell and `/notifications/trades`; the person page lists the committees (`CommitteesSection`).
+
+`npm run people:committees [-- --seats | --sectors]` refreshes the seats (congress-legislators committee-membership-current, replaces all rows)
+and classifies tickers not yet in `TickerSector` (~8 SEC requests a second). Limits: seats are *today's*, so an old trade is judged by
+current committees and former members have none; funds, ETFs, bonds and non-SEC tickers have no sector (about a quarter of tickers);
+Appropriations/Budget/Rules/Ethics oversee everything and mark nothing (only Appropriations subcommittees do). Local only until pushed to prod.
+
+**Sector sources.** Committee seats: congress-legislators `committee-membership-current.json` and `committees-current.json`
+(unitedstates.github.io/congress-legislators). Ticker sectors, in order: SEC SIC code from `data.sec.gov/submissions` (`TickerSector`);
+`TICKER_SECTORS` in `src/lib/conflicts.ts` (hand-checked, tickers EDGAR's `company_tickers.json` lacks - it omits e.g. BK, EA, AVB, K - plus
+foreign ADRs); then `sectorOfName` on the asset text (bonds -> finance, sector/thematic funds, name keywords). Broad-market equity funds
+(S&P 500, Russell, MSCI, total market) are deliberately unclassified: they hold every sector, so flagging them would mark every trade by anyone on a
+sector committee. `PersonTrade.sector` holds the name-derived sector (0205); a `TickerSector` sector wins.
+
+Foreign names checked by web search 2026-10-21 (data-vendor labels, not index-provider GICS; the sector we store is the nearest of ours):
+
+| Ticker | Company | Vendor classification | Stored | Source |
+|---|---|---|---|---|
+| NSRGY | Nestlé | Consumer Staples / Food Products | agriculture (food) | ycharts.com/companies/NSRGY |
+| RHHBY | Roche | Healthcare / Drug Manufacturers - General | healthcare | finance.yahoo.com/quote/RHHBY |
+| TCTZF | Tencent | Communication Services / Internet Content & Information (SIC 7370) | tech | stockanalysis.com/quote/otc/TCTZF/company/ |
+| NTDOY | Nintendo | Communication Services (most); Consumer Discretionary (Macrotrends) | consumer | morningstar.com/stocks/otcm/ntdoy/quote |
+| HESAF | Hermès | Consumer Discretionary / Luxury Goods | consumer | ycharts.com/companies/HESAF |
+| XIACF | Xiaomi | Technology / Consumer Electronics (GICS-style: Tech Hardware) | tech | benzinga.com/stock/XIACF |
+
+The other ~95 entries in `TICKER_SECTORS` (2026-10 sweep) were set from knowledge of each company's main business, not searched individually;
+re-check one against its filer page before relying on it.
+
+**Company wikis (0206).** Every company has a wiki behind it, like a person: `CompanyWiki` holds an OKF v0.2 `Organization` concept
+(`src/lib/companyWiki.ts`) compiled from the company's description, ticker, headquarters, parent, sector (with how it was decided - the SEC SIC
+code and its EDGAR page, the hand-checked `TICKER_SECTORS` list, or the asset name), leadership and the disclosed trades in its ticker with the
+committees whose oversight covers its sector. Each statement cites a numbered source. `npm run companies:wiki [-- --id N]` rebuilds them
+(re-run after `people:committees`, new trades or executives); `GET /api/companies/:id/wiki[?path=page]` serves one, `POST` (admin) rebuilds it.
+Not yet rendered on the company page, and not seeded (compiled data); link wikis for the cited sources are not created.
+
+**Committee and trade-filing wikis (0207).** `GovWiki` holds an OKF concept per committee/subcommittee (`type: Committee`: members, the sectors it
+oversees and the trades it marks) and per filing (`type: Report`: every trade with its sector and possible conflicts, citing the filing PDF).
+`npm run gov:wiki [-- --committees | --filings]` rebuilds them; public stable URLs `GET /api/committees/:thomasId/wiki?path=page` and
+`GET /api/trade-filings/:chamber/:filingId/wiki?path=page` (admin `POST` rebuilds one) can be cited as references, and the company wikis already
+cite the committee wikis. A filing is the unit for trades (one report, one source document); individual trades are rows in it.
+
+**Admin API: `/api/admin/conflicts`** (admin only; the work is in `services/conflictData.ts`, which the npm scripts share).
+`GET` counts seats, tickers (and unclassified) and wikis. `POST {steps?, wikis?}` refreshes in order: `seats` (today's committees),
+`names`, `sectors` (SEC lookup, minutes - background, 202) and `wikis` (`committees|filings|companies`); default is everything but `sectors`.
+`PUT {tickers:[{ticker, sector|null}], committees:[{committeeId, sectors}]}` sets sectors by hand and rebuilds the wikis it changes.
+Per-item rebuilds: `POST /api/committees/:id/wiki`, `POST /api/trade-filings/:chamber/:filingId/wiki`, `POST /api/companies/:id/wiki`.
+A `seats` refresh recomputes committee sectors from `COMMITTEE_SECTORS`, so a hand-set committee sector is lost on the next refresh (edit the
+map in `src/lib/conflicts.ts` to keep it); a hand-set ticker sector survives (`sicLabel` = "set by hand"; `sectors` only classifies tickers with no row).
+
 ## Campaign finance and opponents (0189)
 
 The **Campaign finance** section (the OpenSecrets / Quiver election pages) shows, per

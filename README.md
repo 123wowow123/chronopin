@@ -446,4 +446,10 @@ are they keywards in Datacenter & Infrastructure Telemetry that can be used for 
 clicking stock ticker should search the company and show company and stock graph on the side panel
 http://localhost:3000/notifications/trades
 
-should show conflict of interest label if trade are flagged as such. thier profile should show which committies they are sitting on
+
+
+http://localhost:3000/notifications/trades
+Trade should show conflict of interest label if trade are flagged as such. Their profile should show which committies they are sitting on.
+
+
+are there other things that can use geojson

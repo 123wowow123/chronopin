@@ -39,6 +39,7 @@ type Notification = {
   tradeSellTickers: string[] | null;
   tradeBuyValues: Record<string, number> | null;
   tradeSellValues: Record<string, number> | null;
+  tradeConflicts: { ticker: string; committee: string; sector: string }[] | null;
   utcCreatedDateTime: string;
   read: boolean;
   groupCount: number;
@@ -332,6 +333,23 @@ function entriesOf(allRows: Notification[]): Entry[] {
 
 // The watched people's recent trades, collapsed to buy and sell totals with
 // their tickers (every row below counts, so the tiles always add up); opening it lists each filing.
+// "Possible conflict of interest": the filing trades a sector one of the member's committees oversees.
+function ConflictBadge({ n }: { n: Notification }) {
+  const t = useT();
+  if (!n.tradeConflicts?.length) return null;
+  const committees = [...new Set(n.tradeConflicts.map((c) => c.committee.split(': ')[0].replace(/^(House|Senate|Joint) (Select )?Committee on (the )?/, '')))].slice(0, 3).join(', ');
+  const tickers = [...new Set(n.tradeConflicts.map((c) => c.ticker))].slice(0, 4).join(', ');
+  return (
+    <span
+      className="inline-flex max-w-full items-center gap-1 self-start rounded-full bg-warning/15 px-2 py-0.5 text-[11px] font-semibold text-warning-soft ring-1 ring-warning/40 ring-inset"
+      title={t('notifications.conflictHint', { tickers, committees })}
+    >
+      <Icon name="warning" className="size-3 shrink-0" />
+      <span className="truncate">{t('notifications.conflict')}: {committees}</span>
+    </span>
+  );
+}
+
 function TradeDay({ items, day, renderRow }: { items: Notification[]; day: number; renderRow: (n: Notification) => React.ReactNode }) {
   const t = useT();
   const locale = useIntlLocale();
@@ -512,6 +530,7 @@ function NotificationItems({
                           tickers: n.tradeTickers?.length ? `: ${n.tradeTickers.slice(0, 4).join(', ')}` : '',
                           person: () => <span className="font-semibold">{n.personName}</span>,
                         })}
+                        {n.tradeConflicts?.length ? <span className="mt-1.5 flex"><ConflictBadge n={n} /></span> : null}
                         {n.tradeBuys || n.tradeSells ? (
                           <span className="mt-1.5 grid grid-cols-2 gap-2">
                             {(
@@ -999,6 +1018,7 @@ export function TradesHistoryFeed() {
                       {chips(n.tradeBuyTickers, 'bg-success/15 text-success-soft')}
                       {chips(n.tradeSellTickers, 'bg-danger/15 text-danger-soft')}
                     </span>
+                    <ConflictBadge n={n} />
                   </span>
                   <span className="flex shrink-0 gap-1.5 text-xs font-semibold tabular-nums">
                     {total(n.tradeBuyValues) ? <span className={`rounded-full px-2 py-0.5 ring-1 ring-inset ${tone.tradeBuys}`}>{money.format(total(n.tradeBuyValues))}</span> : null}

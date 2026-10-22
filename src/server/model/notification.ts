@@ -3,6 +3,7 @@ import type { QueryFn, Row } from '../db';
 import { emitNotificationsChanged } from '../events';
 import { ALERT_SOON_MINUTES } from '@/lib/alerts';
 import { blockedBetween } from './blockSql';
+import { CONFLICTS } from './personTrade';
 
 // Tells the live feed whose notifications a write changed, once it commits.
 // rows are what the write RETURNed, so a write that changed nothing is quiet.
@@ -124,6 +125,8 @@ export type NotificationItem = {
   // Per-ticker dollar value (midpoint of the disclosed range) in this filing.
   tradeBuyValues: Record<string, number> | null;
   tradeSellValues: Record<string, number> | null;
+  // Tickers in this filing that sit in a sector one of the member's committees oversees.
+  tradeConflicts: { ticker: string; committee: string; sector: string }[] | null;
   utcCreatedDateTime: Date;
   read: boolean;
   // How many notifications this entry stands for (1 unless it is a batch),
@@ -432,6 +435,9 @@ export default class Notification {
                   FROM "PersonTrade" t WHERE t."personId" = n."personId" AND t."filingId" = n."tradeFiling" AND t."ticker" IS NOT NULL AND t."txType" = 'purchase' GROUP BY t."ticker") v) AS "tradeBuyValues",
                (SELECT COALESCE(jsonb_object_agg(v."ticker", v."value"), '{}'::jsonb) FROM (SELECT t."ticker", SUM((COALESCE(t."amountLow", 0) + COALESCE(t."amountHigh", t."amountLow", 0)) / 2)::float8 AS "value"
                   FROM "PersonTrade" t WHERE t."personId" = n."personId" AND t."filingId" = n."tradeFiling" AND t."ticker" IS NOT NULL AND t."txType" IN ('sale', 'partial') GROUP BY t."ticker") v) AS "tradeSellValues",
+               (SELECT jsonb_agg(DISTINCT jsonb_build_object('ticker', t."ticker", 'committee', c ->> 'committee', 'sector', c ->> 'sector'))
+                  FROM "PersonTrade" t CROSS JOIN LATERAL jsonb_array_elements(${CONFLICTS('t')}) c
+                  WHERE t."personId" = n."personId" AND t."filingId" = n."tradeFiling") AS "tradeConflicts",
                n."utcCreatedDateTime", n."utcReadDateTime",
                to_char((n."utcCreatedDateTime" AT TIME ZONE $2)::date, 'YYYY-MM-DD') AS "groupDay",
                ${groupKey('$2')} AS "groupKey",
@@ -466,7 +472,7 @@ export default class Notification {
         ORDER BY "groupKey", "utcCreatedDateTime" DESC, "id" DESC
       )
       SELECT "id", "type", "pinId", "pinTitle", "commentId", "commentText", "companyId",
-             "companyName", "companyLogoUrl", "personName", "personPhotoUrl", "tradeFiling", "tradeFiledDate", "tradeCount", "tradeTickers", "tradeBuys", "tradeSells", "tradeBuyTickers", "tradeSellTickers", "tradeBuyValues", "tradeSellValues",
+             "companyName", "companyLogoUrl", "personName", "personPhotoUrl", "tradeFiling", "tradeFiledDate", "tradeCount", "tradeTickers", "tradeBuys", "tradeSells", "tradeBuyTickers", "tradeSellTickers", "tradeBuyValues", "tradeSellValues", "tradeConflicts",
              "utcCreatedDateTime", "read", "actor",
              "followingBack", "groupCount", "groupDay",
              COALESCE("pinIds"[1:${MAX_BATCH_PINS}], '{}') AS "pinIds",

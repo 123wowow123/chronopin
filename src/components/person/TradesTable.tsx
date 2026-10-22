@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Anchor from '@/components/ui/Anchor';
+import { Icon } from '@/components/ui/Icon';
 import { useT } from '@/lib/client/i18n';
 import { dateFormat } from '@/lib/format';
 import { INTL_LOCALES } from '@/lib/i18n/config';
@@ -57,6 +58,15 @@ export function TradesTable({ personId, initial, total }: { personId: number; in
                   <td className="px-3 py-2">
                     <span className="font-medium text-ink">{tr.ticker ?? '—'}</span>
                     <span className="block max-w-xs text-xs text-subtle">{tr.asset}</span>
+                    {tr.conflicts?.length ? (
+                      <span
+                        className="mt-1 inline-flex max-w-xs items-center gap-1 rounded-full bg-warning/15 px-2 py-0.5 text-[11px] font-semibold text-warning-soft ring-1 ring-warning/40 ring-inset"
+                        title={t('person.conflict.hint', { committees: [...new Set(tr.conflicts.map((c) => c.committee.split(': ')[0]))].slice(0, 3).join('; '), sector: t.dynamic(`person.sectors.${tr.conflicts[0].sector}`, tr.conflicts[0].sector) })}
+                      >
+                        <Icon name="warning" className="size-3 shrink-0" />
+                        <span className="truncate">{t('person.conflict.label')}</span>
+                      </span>
+                    ) : null}
                   </td>
                   <td className="px-3 py-2 whitespace-nowrap">
                     <span className={tr.txType === 'purchase' ? 'text-success' : tr.txType === 'exchange' ? 'text-muted' : 'text-danger'}>{t(`person.trades.types.${tr.txType}`)}</span>
