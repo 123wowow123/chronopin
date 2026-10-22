@@ -17,6 +17,8 @@ describe('cookieGate', () => {
     expect(cookieGate({ ...base, signedIn: true })).toBe('pass');
     expect(cookieGate({ ...base, path: '/map' })).toBe('pass');
     expect(cookieGate({ ...base, path: '/pin/12' })).toBe('issue');
+    expect(cookieGate({ ...base, path: '/search', hasQuery: true })).toBe('issue');
+    expect(cookieGate({ ...base, path: '/search' })).toBe('pass');
     expect(cookieGate({ ...base, method: 'POST' })).toBe('pass');
   });
 });

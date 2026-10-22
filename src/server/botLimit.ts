@@ -129,9 +129,9 @@ export function botRetryAfter(bot: Bot | null, now = Date.now()): number | null 
 // traffic looked like bots). A visitor who runs out is shown the heavy user
 // plan (src/app/[lang]/heavy-use): with it the budget is LIGHT_*, still a limit
 // but ten times looser. Admins and named crawlers have their own rules.
-// Burst 150, refill 6/s: the figures macOS Safari readers were first given (2026-10-20, after
+// Burst 100 (150 until 2026-10-22), refill 6/s: the figures macOS Safari readers were first given (2026-10-20, after
 // their page requests were being refused), now the same for every browser.
-export const IP_BURST = 150;
+export const IP_BURST = 100;
 export const IP_PER_SECOND = 6;
 export const LIGHT_BURST = 1_200;
 export const LIGHT_PER_SECOND = 20;

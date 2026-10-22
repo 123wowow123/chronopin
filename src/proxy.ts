@@ -195,6 +195,7 @@ export async function proxy(request: NextRequest) {
       signedIn: !!session,
       hasGateCookie: gateClient != null,
       hasGateParam: request.nextUrl.searchParams.has(GATE_PARAM),
+      hasQuery: request.nextUrl.searchParams.has('q'),
     });
     if (gate !== 'pass') return gated(request, gate);
     // Each cookie's own pin budget (botLimit.pinRetryAfter): signed-in users

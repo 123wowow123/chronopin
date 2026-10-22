@@ -8,7 +8,9 @@
 //   ?cg and no cookie      -> 'blocked': a client that keeps no cookies is not looped
 //   the cookie, no ?cg     -> 'pass'
 //
-// Named bots and signed-in users pass, and so does everything but pin pages.
+// Named bots and signed-in users pass, and so does everything but pin pages
+// and searches with a query (2026-10-22: a crawler walked ~2,600 distinct
+// tag:/company: searches in 30 minutes, each a fresh tag-count query).
 //
 // The cookie's value is an id the server made, signed (gateId / gateIdOf), so
 // each client has its own identity for the per-cookie pin budget
@@ -47,13 +49,16 @@ export type GateInput = {
   signedIn: boolean;
   hasGateCookie: boolean;
   hasGateParam: boolean;
+  // Whether the URL carries a search query (?q=): only those searches are gated.
+  hasQuery?: boolean;
 };
 
 export type GateAction = 'pass' | 'issue' | 'strip' | 'blocked';
 
 export function cookieGate(input: GateInput): GateAction {
   if (input.method !== 'GET' || input.bot || input.signedIn) return 'pass';
-  if (!/^\/pin\/\d+(?:\/|$)/.test(input.path)) return 'pass';
+  const gated = /^\/pin\/\d+(?:\/|$)/.test(input.path) || (input.path === '/search' && input.hasQuery);
+  if (!gated) return 'pass';
   if (input.hasGateCookie) return input.hasGateParam ? 'strip' : 'pass';
   return input.hasGateParam ? 'blocked' : 'issue';
 }

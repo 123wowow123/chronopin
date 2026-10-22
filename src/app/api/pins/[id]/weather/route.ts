@@ -8,6 +8,11 @@ import * as weather from '@/server/weather';
 // recorded, or what is typical, depending on how far off the date is. 204
 // when the pin has no location or date.
 export const GET = route(async (_request: NextRequest, ctx: RouteContext<'/api/pins/[id]/weather'>) => {
+  // While Open-Meteo refuses everything, skip the pin lookup too: this route
+  // was 8,000 502s per half hour, each costing a database read.
+  if (weather.quotaExhausted()) {
+    return new Response(null, { status: 204, headers: { 'Cache-Control': 'public, max-age=900' } });
+  }
   const { pin } = await Pin.queryById(intParam((await ctx.params).id));
   if (!pin) {
     return new Response(null, { status: 404 });

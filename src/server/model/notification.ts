@@ -422,24 +422,7 @@ export default class Notification {
                p."utcStartDateTime" AS "pinStart",
                n."commentId", c."text" AS "commentText",
                n."companyId", co."name"::text AS "companyName", co."logoUrl" AS "companyLogoUrl",
-               pe."name"::text AS "personName", pe."photoUrl" AS "personPhotoUrl", n."tradeFiling",
-               (SELECT MAX(t."filedDate")::text FROM "PersonTrade" t WHERE t."personId" = n."personId" AND t."filingId" = n."tradeFiling") AS "tradeFiledDate",
-               (SELECT COUNT(DISTINCT COALESCE(t."ticker", t."id"::text))::int FROM "PersonTrade" t WHERE t."personId" = n."personId" AND t."filingId" = n."tradeFiling") AS "tradeCount",
-               (SELECT array_agg(DISTINCT t."ticker") FILTER (WHERE t."ticker" IS NOT NULL)
-                  FROM "PersonTrade" t WHERE t."personId" = n."personId" AND t."filingId" = n."tradeFiling") AS "tradeTickers",
-               (SELECT COUNT(DISTINCT COALESCE(t."ticker", t."id"::text))::int FROM "PersonTrade" t WHERE t."personId" = n."personId" AND t."filingId" = n."tradeFiling" AND t."txType" = 'purchase') AS "tradeBuys",
-               (SELECT COUNT(DISTINCT COALESCE(t."ticker", t."id"::text))::int FROM "PersonTrade" t WHERE t."personId" = n."personId" AND t."filingId" = n."tradeFiling" AND t."txType" IN ('sale', 'partial')) AS "tradeSells",
-               (SELECT array_agg(DISTINCT t."ticker") FILTER (WHERE t."ticker" IS NOT NULL)
-                  FROM "PersonTrade" t WHERE t."personId" = n."personId" AND t."filingId" = n."tradeFiling" AND t."txType" = 'purchase') AS "tradeBuyTickers",
-               (SELECT array_agg(DISTINCT t."ticker") FILTER (WHERE t."ticker" IS NOT NULL)
-                  FROM "PersonTrade" t WHERE t."personId" = n."personId" AND t."filingId" = n."tradeFiling" AND t."txType" IN ('sale', 'partial')) AS "tradeSellTickers",
-               (SELECT COALESCE(jsonb_object_agg(v."ticker", v."value"), '{}'::jsonb) FROM (SELECT t."ticker", SUM((COALESCE(t."amountLow", 0) + COALESCE(t."amountHigh", t."amountLow", 0)) / 2)::float8 AS "value"
-                  FROM "PersonTrade" t WHERE t."personId" = n."personId" AND t."filingId" = n."tradeFiling" AND t."ticker" IS NOT NULL AND t."txType" = 'purchase' GROUP BY t."ticker") v) AS "tradeBuyValues",
-               (SELECT COALESCE(jsonb_object_agg(v."ticker", v."value"), '{}'::jsonb) FROM (SELECT t."ticker", SUM((COALESCE(t."amountLow", 0) + COALESCE(t."amountHigh", t."amountLow", 0)) / 2)::float8 AS "value"
-                  FROM "PersonTrade" t WHERE t."personId" = n."personId" AND t."filingId" = n."tradeFiling" AND t."ticker" IS NOT NULL AND t."txType" IN ('sale', 'partial') GROUP BY t."ticker") v) AS "tradeSellValues",
-               (SELECT jsonb_agg(DISTINCT jsonb_build_object('ticker', t."ticker", 'committee', c ->> 'committee', 'sector', c ->> 'sector'))
-                  FROM "PersonTrade" t CROSS JOIN LATERAL jsonb_array_elements(${CONFLICTS('t')}) c
-                  WHERE t."personId" = n."personId" AND t."filingId" = n."tradeFiling") AS "tradeConflicts",
+               pe."name"::text AS "personName", pe."photoUrl" AS "personPhotoUrl", n."tradeFiling", n."personId",
                n."utcCreatedDateTime", n."utcReadDateTime",
                to_char((n."utcCreatedDateTime" AT TIME ZONE $2)::date, 'YYYY-MM-DD') AS "groupDay",
                ${groupKey('$2')} AS "groupKey",
@@ -475,17 +458,39 @@ export default class Notification {
                        ROWS BETWEEN UNBOUNDED PRECEDING AND UNBOUNDED FOLLOWING) AS "pinTitles"
         FROM visible
         ORDER BY "groupKey", "utcCreatedDateTime" DESC, "id" DESC
+      ),
+      -- Only the entries the list shows pay for the trade summaries below.
+      page AS (
+        SELECT * FROM entries
+        ORDER BY "utcCreatedDateTime" DESC, "id" DESC
+        LIMIT $3
       )
-      SELECT "id", "type", "pinId", "pinTitle", "commentId", "commentText", "companyId",
-             "companyName", "companyLogoUrl", "personName", "personPhotoUrl", "tradeFiling", "tradeFiledDate", "tradeCount", "tradeTickers", "tradeBuys", "tradeSells", "tradeBuyTickers", "tradeSellTickers", "tradeBuyValues", "tradeSellValues", "tradeConflicts",
-             "utcCreatedDateTime", "read", "actor",
-             "followingBack", "groupCount", "groupDay",
-             COALESCE("pinIds"[1:${MAX_BATCH_PINS}], '{}') AS "pinIds",
-             COALESCE("pinStarts"[1:${MAX_BATCH_PINS}], '{}') AS "pinStarts",
-             COALESCE("pinTitles"[1:3], '{}') AS "pinTitles"
-      FROM entries
-      ORDER BY "utcCreatedDateTime" DESC, "id" DESC
-      LIMIT $3`,
+      SELECT e."id", e."type", e."pinId", e."pinTitle", e."commentId", e."commentText", e."companyId",
+             e."companyName", e."companyLogoUrl", e."personName", e."personPhotoUrl", e."tradeFiling",
+               (SELECT MAX(t."filedDate")::text FROM "PersonTrade" t WHERE t."personId" = e."personId" AND t."filingId" = e."tradeFiling") AS "tradeFiledDate",
+               (SELECT COUNT(DISTINCT COALESCE(t."ticker", t."id"::text))::int FROM "PersonTrade" t WHERE t."personId" = e."personId" AND t."filingId" = e."tradeFiling") AS "tradeCount",
+               (SELECT array_agg(DISTINCT t."ticker") FILTER (WHERE t."ticker" IS NOT NULL)
+                  FROM "PersonTrade" t WHERE t."personId" = e."personId" AND t."filingId" = e."tradeFiling") AS "tradeTickers",
+               (SELECT COUNT(DISTINCT COALESCE(t."ticker", t."id"::text))::int FROM "PersonTrade" t WHERE t."personId" = e."personId" AND t."filingId" = e."tradeFiling" AND t."txType" = 'purchase') AS "tradeBuys",
+               (SELECT COUNT(DISTINCT COALESCE(t."ticker", t."id"::text))::int FROM "PersonTrade" t WHERE t."personId" = e."personId" AND t."filingId" = e."tradeFiling" AND t."txType" IN ('sale', 'partial')) AS "tradeSells",
+               (SELECT array_agg(DISTINCT t."ticker") FILTER (WHERE t."ticker" IS NOT NULL)
+                  FROM "PersonTrade" t WHERE t."personId" = e."personId" AND t."filingId" = e."tradeFiling" AND t."txType" = 'purchase') AS "tradeBuyTickers",
+               (SELECT array_agg(DISTINCT t."ticker") FILTER (WHERE t."ticker" IS NOT NULL)
+                  FROM "PersonTrade" t WHERE t."personId" = e."personId" AND t."filingId" = e."tradeFiling" AND t."txType" IN ('sale', 'partial')) AS "tradeSellTickers",
+               (SELECT COALESCE(jsonb_object_agg(v."ticker", v."value"), '{}'::jsonb) FROM (SELECT t."ticker", SUM((COALESCE(t."amountLow", 0) + COALESCE(t."amountHigh", t."amountLow", 0)) / 2)::float8 AS "value"
+                  FROM "PersonTrade" t WHERE t."personId" = e."personId" AND t."filingId" = e."tradeFiling" AND t."ticker" IS NOT NULL AND t."txType" = 'purchase' GROUP BY t."ticker") v) AS "tradeBuyValues",
+               (SELECT COALESCE(jsonb_object_agg(v."ticker", v."value"), '{}'::jsonb) FROM (SELECT t."ticker", SUM((COALESCE(t."amountLow", 0) + COALESCE(t."amountHigh", t."amountLow", 0)) / 2)::float8 AS "value"
+                  FROM "PersonTrade" t WHERE t."personId" = e."personId" AND t."filingId" = e."tradeFiling" AND t."ticker" IS NOT NULL AND t."txType" IN ('sale', 'partial') GROUP BY t."ticker") v) AS "tradeSellValues",
+               (SELECT jsonb_agg(DISTINCT jsonb_build_object('ticker', t."ticker", 'committee', c ->> 'committee', 'sector', c ->> 'sector'))
+                  FROM "PersonTrade" t CROSS JOIN LATERAL jsonb_array_elements(${CONFLICTS('t')}) c
+                  WHERE t."personId" = e."personId" AND t."filingId" = e."tradeFiling") AS "tradeConflicts",
+             e."utcCreatedDateTime", e."read", e."actor",
+             e."followingBack", e."groupCount", e."groupDay",
+             COALESCE(e."pinIds"[1:${MAX_BATCH_PINS}], '{}') AS "pinIds",
+             COALESCE(e."pinStarts"[1:${MAX_BATCH_PINS}], '{}') AS "pinStarts",
+             COALESCE(e."pinTitles"[1:3], '{}') AS "pinTitles"
+      FROM page e
+      ORDER BY e."utcCreatedDateTime" DESC, e."id" DESC`,
         [userId, zone, n, type ?? null],
       ),
     );
