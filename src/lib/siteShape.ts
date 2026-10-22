@@ -1,12 +1,12 @@
-// A data centre's mapped outlines (PinSiteShape, 0203): the campus boundary and
-// its parts, drawn on the pin page's map.
+// A pin's mapped outlines (PinSiteShape, 0203): a data centre's campus boundary
+// and its parts, or a course or line as a 'route', drawn on the pin page's map.
 
-export const SITE_KINDS = ['site', 'building', 'cooling', 'generator', 'substation', 'power'] as const;
+export const SITE_KINDS = ['site', 'building', 'cooling', 'generator', 'substation', 'power', 'route'] as const;
 export type SiteKind = (typeof SITE_KINDS)[number];
 
 export type SiteFeature = {
   type: 'Feature';
-  geometry: { type: 'Polygon' | 'MultiPolygon' | 'LineString'; coordinates: unknown };
+  geometry: { type: 'Polygon' | 'MultiPolygon' | 'LineString' | 'MultiLineString'; coordinates: unknown };
   properties: { kind: SiteKind };
 };
 
@@ -24,6 +24,7 @@ export const SITE_STYLE: Record<SiteKind, { color: string; fill: number; dash?: 
   generator: { color: '#ea580c', fill: 0.55 },
   substation: { color: '#ca8a04', fill: 0.5 },
   power: { color: '#16a34a', fill: 0.5 },
+  route: { color: '#e11d48', fill: 0 },
 };
 
 // Epoch AI's annotation types, as ours.

@@ -9,7 +9,7 @@
 import '../env';
 import fs from 'node:fs';
 import * as db from '@/server/db';
-import { estimateWaterGallonsPerDayFromMw, type WaterBasis } from '@/lib/datacenter';
+import { estimateWaterGallonsPerDayFromMw, normalizeCooling, normalizePowerSource, type WaterBasis } from '@/lib/datacenter';
 import { saveDatacenter } from '@/server/model/pinDatacenter';
 
 const CHECKED_AT = '2026-10-21';
@@ -177,11 +177,12 @@ async function main() {
       waterBasis = 'estimated';
     }
 
-    const cooling = [td.coolingType, td.coolingSource].filter(Boolean).join(' · ') || null;
-    const powerSource =
+    const cooling = normalizeCooling([td.coolingType, td.coolingSource].filter(Boolean).join(' · ') || null);
+    const powerSource = normalizePowerSource(
       (Array.isArray(td.powerSource) && td.powerSource.length ? td.powerSource.join(', ') : typeof td.powerSource === 'string' && td.powerSource ? td.powerSource : null) ??
       (Array.isArray(td.btmPowerName) && td.btmPowerName.length ? td.btmPowerName.join(', ') : null) ??
-      'PJM Interconnection / Pennsylvania Grid';
+      'PJM Interconnection / Pennsylvania Grid',
+    );
 
     const stakeholders = td.stakeholders ? Object.values(td.stakeholders).flat().filter(Boolean).map(String) : [];
     const companyName = stakeholders[0] || nearDct?.company || nearDct?.hyperscaler || `${name} LLC`;

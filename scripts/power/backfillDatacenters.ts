@@ -13,7 +13,7 @@
 import '../env';
 import fs from 'node:fs';
 import * as db from '@/server/db';
-import { estimateWaterGallonsPerDayFromMw, type WaterBasis } from '@/lib/datacenter';
+import { estimateWaterGallonsPerDayFromMw, normalizeCooling, normalizePowerSource, type WaterBasis } from '@/lib/datacenter';
 import { saveDatacenter } from '@/server/model/pinDatacenter';
 
 const CHECKED_AT = '2026-10-21';
@@ -920,9 +920,9 @@ async function main() {
         if (bestTdc.numberOfBuildings && !buildings) buildings = Number(bestTdc.numberOfBuildings);
         if (bestTdc.numberOfGenerators && !generators) generators = Number(bestTdc.numberOfGenerators);
         if ((bestTdc.coolingType || bestTdc.coolingSource) && !cooling) {
-          cooling = [bestTdc.coolingType, bestTdc.coolingSource].filter(Boolean).join(' · ');
+          cooling = normalizeCooling([bestTdc.coolingType, bestTdc.coolingSource].filter(Boolean).join(' · '));
         }
-        if (bestTdc.powerSource && !powerSource) powerSource = String(bestTdc.powerSource);
+        if (bestTdc.powerSource && !powerSource) powerSource = normalizePowerSource(String(bestTdc.powerSource));
         if (bestTdc.capacityMw && !mw) mw = Number(bestTdc.capacityMw);
       }
     }

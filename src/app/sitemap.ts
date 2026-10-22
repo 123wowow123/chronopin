@@ -58,6 +58,7 @@ async function sitemapEntries(offered: readonly Locale[]): Promise<MetadataRoute
     // English only: the other languages' copies show the English text (src/components/legal/LegalPage.tsx).
     { url: absoluteUrl('/privacy'), changeFrequency: 'yearly', priority: 0.2 },
     { url: absoluteUrl('/terms'), changeFrequency: 'yearly', priority: 0.2 },
+    { url: absoluteUrl('/search-guide'), changeFrequency: 'monthly', priority: 0.3 },
     { url: absoluteUrl('/map'), changeFrequency: 'daily', priority: 0.5, alternates: inEveryLanguage('/map') },
     { url: absoluteUrl('/tags'), changeFrequency: 'daily', priority: 0.6, alternates: inEveryLanguage('/tags') },
     { url: absoluteUrl('/products'), changeFrequency: 'daily', priority: 0.6, alternates: inEveryLanguage('/products') },

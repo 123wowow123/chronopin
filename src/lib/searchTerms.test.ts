@@ -1,5 +1,6 @@
 import { describe, expect, it } from 'vitest';
-import { hasTerm, refineQuery, removeTerm, toggleTerm } from './searchTerms';
+import { hasTerm, pinMarkerLabels, refineQuery, removeTerm, toggleTerm } from './searchTerms';
+import { parseSearchQuery } from '@/server/util/searchQuery';
 
 describe('refineQuery', () => {
   it('adds a quoted term once', () => {
@@ -52,5 +53,16 @@ describe('toggleTerm', () => {
     expect(added).toBe('user:GameDesk tag:"Prediction Market"');
     expect(hasTerm(added, 'tag', 'Prediction Market')).toBe(true);
     expect(toggleTerm(added, 'tag', 'Prediction Market')).toBe('user:GameDesk');
+  });
+});
+
+describe('pin marker labels', () => {
+  it('reads labels from pin: terms and the search still matches the ids', () => {
+    const q = 'pin:5711=1,5712=2,5713 tag:Sports';
+    expect([...pinMarkerLabels(q)]).toEqual([[5711, '1'], [5712, '2']]);
+    expect(parseSearchQuery(q).ids).toEqual([5711, 5712, 5713]);
+  });
+  it('ignores labels that are too long or not alphanumeric', () => {
+    expect(pinMarkerLabels('pin:1=12345,2=<b>,3=A1').size).toBe(1);
   });
 });

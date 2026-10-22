@@ -18,7 +18,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { parseArgs } from 'node:util';
 import * as db from '@/server/db';
-import { estimateWaterGallonsPerDayFromMw, type WaterBasis } from '@/lib/datacenter';
+import { estimateWaterGallonsPerDayFromMw, normalizeCooling, normalizePowerSource, type WaterBasis } from '@/lib/datacenter';
 import { saveDatacenter } from '@/server/model/pinDatacenter';
 
 const { values: flags } = parseArgs({
@@ -384,7 +384,7 @@ async function main() {
       (nearDct?.building_sq_ft != null && Number(nearDct.building_sq_ft) > 0 ? Number(nearDct.building_sq_ft) : null);
 
     const generators = genFight?.gens ?? (td.numberOfGenerators ? Number(td.numberOfGenerators) : null);
-    const powerSource = genFight?.powerSource ?? (td.btmPowerName ? `BTM: ${td.btmPowerName}` : 'Utility grid');
+    const powerSource = normalizePowerSource(genFight?.powerSource ?? (td.btmPowerName ? `BTM: ${td.btmPowerName}` : 'Utility grid'));
 
     const dateStr = parseDateAnnounced(td.announcementDate || nearDct?.date, '2026-07-01T00:00:00Z');
 

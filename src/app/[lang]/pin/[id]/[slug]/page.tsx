@@ -2,7 +2,7 @@ import Anchor from '@/components/ui/Anchor';
 import type { Metadata } from 'next';
 import Link from '@/components/ui/Link';
 import { notFound } from 'next/navigation';
-import { Suspense } from 'react';
+import { Fragment, Suspense } from 'react';
 import { JsonLd } from '@/components/JsonLd';
 import { Comments } from '@/components/pin/Comments';
 import { PlaceLinks } from '@/components/pin/PlaceLinks';
@@ -68,7 +68,7 @@ import { MarketVolume } from '@/components/pin/MarketVolume';
 import { PinReferences } from '@/components/pin/PinReferences';
 import { PinPhotos } from '@/components/pin/PinPhotos';
 import { PinSuggest } from '@/components/pin/PinSuggest';
-import { PinMapLoader } from '@/components/pin/PinMapLoader';
+import { PinMapLoader, ThreadMapLoader } from '@/components/pin/PinMapLoader';
 import { SiteShapeKey } from '@/components/pin/SiteShapeKey';
 import { PinMediaFrame } from '@/components/pin/PinMedia';
 import { PinWeather } from '@/components/pin/PinWeather';
@@ -97,7 +97,7 @@ import { pinTense } from '@/lib/timeline';
 import type { PinEventInfoJson } from '@/lib/eventInfo';
 import { formatMegawatts, type PinPowerJson } from '@/lib/power';
 import { ENERGY_BASIS_WORDS, formatGigawattHours, type PinEnergyJson } from '@/lib/energy';
-import { WATER_BASIS_WORDS, estimateHomesEquivalentFromMw, formatAcres, formatChips, formatSqft, formatWaterGallonsPerDay, type PinDatacenterJson } from '@/lib/datacenter';
+import { WATER_BASIS_WORDS, coolingSegments, powerSourceSegments, datacenterSearchPills, estimateHomesEquivalentFromMw, formatAcres, formatChips, formatSqft, formatWaterGallonsPerDay, type PinDatacenterJson } from '@/lib/datacenter';
 import type { PinCandidateJson } from '@/lib/candidates';
 import type { PinJson } from '@/lib/types';
 import { companyWebsite, duplicateGroupPins, pinById, pinCandidates, pinEventInfo, pinPower, pinEnergy, pinDatacenter, pinSiteShape, pinPerf, pinCarPerf, pinGasCarPerf, pinDining, pinHotel, pinGameInfo, pinTaste, pinComments, pinUpdates, threadPins, timelineVideo, adPlacements, adsenseSlots, hideThinPins, pinAlternateNames } from '@/server/services/pages';
@@ -350,6 +350,18 @@ async function PinBody({
   autoplay?: boolean;
 }) {
   const hasCoordinates = pin.latitude != null && pin.longitude != null;
+  // A datacenter figure searches for the pins at least that size (mw:>=100).
+  const dcPills = datacenter ? datacenterSearchPills(datacenter, power, energy) : null;
+  const dcLink = (key: keyof NonNullable<typeof dcPills>, children: React.ReactNode, tone = 'text-inherit') => {
+    const pill = dcPills?.[key][0];
+    return pill ? (
+      <Link href={`/search?q=${encodeURIComponent(pill.q)}`} title={`Search ${pill.q}`} className={`${tone} underline-offset-2 hover:underline`}>
+        {children}
+      </Link>
+    ) : (
+      children
+    );
+  };
   const isRestaurant = pin.categories?.includes('Food') && pin.tags?.some((tag) => /^(Restaurant Opening|Restaurants?)$/i.test(tag.name));
   const restaurantRegion = isRestaurant
     ? RESTAURANT_REGIONS.find((region) => pin.tags?.some((tag) => tag.name === region.name))
@@ -666,7 +678,7 @@ async function PinBody({
                   {power.kind === 'generation' ? 'Power generation' : power.kind === 'storage' ? 'Power storage' : 'Power usage'}
                 </div>
                 <div className="mt-1.5 text-lg leading-tight font-bold tracking-tight text-past tabular-nums">
-                  {formatMegawatts(power.megawatts)}
+                  {dcLink('power', formatMegawatts(power.megawatts))}
                 </div>
                 <div className="mt-1 text-xs text-muted tabular-nums">
                   {power.kind === 'usage'
@@ -683,7 +695,7 @@ async function PinBody({
                   Water usage
                 </div>
                 <div className="mt-1.5 text-lg leading-tight font-bold tracking-tight text-link tabular-nums">
-                  {formatWaterGallonsPerDay(datacenter.waterGallonsPerDay)}
+                  {dcLink('water', formatWaterGallonsPerDay(datacenter.waterGallonsPerDay))}
                 </div>
                 <div className="mt-1 text-xs text-muted">
                   {datacenter.waterBasis ? WATER_BASIS_WORDS[datacenter.waterBasis] : 'daily cooling draw'}
@@ -698,9 +710,12 @@ async function PinBody({
                   AI chips
                 </div>
                 <div className="mt-1.5 text-lg leading-tight font-bold tracking-tight text-future tabular-nums">
-                  {datacenter.chips != null
-                    ? formatChips(datacenter.chips)
-                    : `${formatChips(Math.round(datacenter.h100Equivalents!))} H100-eq`}
+                  {dcLink(
+                    'chips',
+                    datacenter.chips != null
+                      ? formatChips(datacenter.chips)
+                      : `${formatChips(Math.round(datacenter.h100Equivalents!))} H100-eq`,
+                  )}
                 </div>
                 <div className="mt-1 line-clamp-2 text-xs text-muted" title={datacenter.chipModel ?? undefined}>
                   {datacenter.chipModel ?? 'AI accelerators'}
@@ -718,7 +733,7 @@ async function PinBody({
                   Energy used
                 </div>
                 <div className="mt-1.5 text-lg leading-tight font-bold tracking-tight text-success tabular-nums">
-                  {formatGigawattHours(energy.gwh)}
+                  {dcLink('energy', formatGigawattHours(energy.gwh))}
                 </div>
                 <div className="mt-1 text-xs text-muted">
                   {ENERGY_BASIS_WORDS[energy.basis]}
@@ -740,14 +755,19 @@ async function PinBody({
                   <dt className="font-semibold tracking-wider text-subtle uppercase">Footprint &amp; Facility</dt>
                   <dd className="font-medium text-ink tabular-nums">
                     {[
-                      datacenter.acres != null ? formatAcres(datacenter.acres) : null,
-                      datacenter.sqft != null ? formatSqft(datacenter.sqft) : null,
+                      datacenter.acres != null ? dcLink('acres', formatAcres(datacenter.acres), 'text-link') : null,
+                      datacenter.sqft != null ? dcLink('sqft', formatSqft(datacenter.sqft), 'text-link') : null,
                       datacenter.buildings != null
                         ? `${datacenter.buildings.toLocaleString('en-US')} ${datacenter.buildings === 1 ? 'building' : 'buildings'}`
                         : null,
                     ]
                       .filter(Boolean)
-                      .join(' · ')}
+                      .map((part, i) => (
+                        <Fragment key={i}>
+                          {i ? ' · ' : null}
+                          {part}
+                        </Fragment>
+                      ))}
                   </dd>
                 </div>
               ) : null}
@@ -756,7 +776,7 @@ async function PinBody({
                 <div className="flex flex-col gap-0.5">
                   <dt className="font-semibold tracking-wider text-subtle uppercase">Backup Generation</dt>
                   <dd className="font-medium text-ink tabular-nums">
-                    {datacenter.generators.toLocaleString('en-US')} permitted backup {datacenter.generators === 1 ? 'generator' : 'generators'}
+                    {dcLink('generators', datacenter.generators.toLocaleString('en-US'), 'text-link')} permitted backup {datacenter.generators === 1 ? 'generator' : 'generators'}
                   </dd>
                 </div>
               ) : null}
@@ -764,14 +784,34 @@ async function PinBody({
               {datacenter.cooling ? (
                 <div className="flex flex-col gap-0.5">
                   <dt className="font-semibold tracking-wider text-subtle uppercase">Cooling Architecture</dt>
-                  <dd className="font-medium text-ink">{datacenter.cooling}</dd>
+                  <dd className="font-medium text-ink">
+                    {coolingSegments(datacenter.cooling).map((seg, i) =>
+                      seg.q ? (
+                        <Link key={i} href={`/search?q=${encodeURIComponent(seg.q)}`} title={`Search ${seg.q}`} className="text-link underline-offset-2 hover:underline">
+                          {seg.text}
+                        </Link>
+                      ) : (
+                        <Fragment key={i}>{seg.text}</Fragment>
+                      ),
+                    )}
+                  </dd>
                 </div>
               ) : null}
 
               {datacenter.powerSource ? (
                 <div className="flex flex-col gap-0.5">
                   <dt className="font-semibold tracking-wider text-subtle uppercase">Power Source &amp; Grid</dt>
-                  <dd className="font-medium text-ink">{datacenter.powerSource}</dd>
+                  <dd className="font-medium text-ink">
+                    {powerSourceSegments(datacenter.powerSource).map((seg, i) =>
+                      seg.q ? (
+                        <Link key={i} href={`/search?q=${encodeURIComponent(seg.q)}`} title={`Search ${seg.q}`} className="text-link underline-offset-2 hover:underline">
+                          {seg.text}
+                        </Link>
+                      ) : (
+                        <Fragment key={i}>{seg.text}</Fragment>
+                      ),
+                    )}
+                  </dd>
                 </div>
               ) : null}
 
@@ -886,6 +926,11 @@ async function Thread({ pin }: { pin: PinJson }) {
   const t = await getT();
   const pins = await threadPins(pin.id, t.locale);
   const numbers = threadNumbers(pins);
+  const stops = pins.flatMap((p) =>
+    p.latitude != null && p.longitude != null
+      ? [{ id: p.id, n: numbers.get(p.id) ?? 0, title: p.title, href: pinPath(p), latitude: p.latitude, longitude: p.longitude }]
+      : [],
+  );
   return (
     <section aria-labelledby="thread-heading" className="surface mt-6 p-5">
       <div className="flex items-center justify-between">
@@ -900,6 +945,7 @@ async function Thread({ pin }: { pin: PinJson }) {
         </Link>
       </div>
       <ThreadSuggestion pinId={pin.id} />
+      {stops.length > 1 ? <ThreadMapLoader stops={stops} currentId={pin.id} backHref={pinPath(pin)} /> : null}
       <ThreadList
         key={pin.id}
         current={Math.max(0, pins.findIndex((p) => p.id === pin.id))}

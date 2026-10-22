@@ -111,3 +111,17 @@ export function refineQuery(current: string, field: LabelField, value: string): 
   }
   return `${base} ${term(field, cleaned)}`.trim();
 }
+
+// The marker labels a query's pin: terms give (pin:5711=1,5712=2): pin id to
+// label, for the map to draw on those pins' markers. A label is up to 4
+// letters or digits; anything else is ignored.
+export function pinMarkerLabels(query: string): Map<number, string> {
+  const labels = new Map<number, string>();
+  for (const [, value] of query.matchAll(/(?:^|\s)["']?pin:["']?([^\s"']+)/gi)) {
+    for (const item of value.split(',')) {
+      const [id, label] = item.split('=');
+      if (label && /^[\p{L}\p{N}]{1,4}$/u.test(label) && Number.isInteger(Number(id))) labels.set(Number(id), label);
+    }
+  }
+  return labels;
+}

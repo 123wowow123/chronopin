@@ -132,6 +132,10 @@
 // pins and no others. Nothing in the site writes one by hand - it is how a
 // batch of notifications links to the pins it stands for, which no day or
 // author term can name exactly. The search box shows it as "3 pins".
+// An id can be followed by = and a label of up to 4 letters or digits
+// (pin:5711=1,5712=2): the map draws that label on the pin's marker, as a
+// thread's map numbers its pins as the thread list does. The search itself
+// ignores the label.
 //
 // A value with spaces is quoted, as the labels write it. Several values for
 // one field widen the search (either company), while different fields narrow
@@ -254,6 +258,12 @@ export type SearchQuery = {
   acres: RatingBound[];
   sqfts: RatingBound[];
   generators: RatingBound[];
+  // A datacenter's cooling architecture by keyword, any of them
+  // (cooling:closed-loop, cooling:"direct-to-chip").
+  coolings: string[];
+  // Its power source and grid by keyword, any of them (powersource:PJM,
+  // powersource:"natural gas").
+  powerSources: string[];
   // Whether a pin's megawatts are power it makes or power it draws
   // or stores (power:generation, power:usage, power:storage), any of them.
   powerKinds: ('generation' | 'usage' | 'storage')[];
@@ -272,7 +282,7 @@ const AXIS_ALIASES: Record<string, OctagonAxis> = { 'public-standing': 'standing
 
 // A leading "-" leaves out what the term would match (-tag:Anime); only tags
 // read it so far, and any other field written that way is left out.
-const FIELD = '(-?(?:company|category|user|confidence|date|posted|updated|tag|pin|place|rating|delay|mw|power|cost|energy|water|chips|acres|sqft|generators|platform|rated|holiday|taste|carperf|dining|hotel|rubric|person|' + [...OCTAGON_AXES, ...Object.keys(AXIS_ALIASES)].join('|') + '))';
+const FIELD = '(-?(?:company|category|user|confidence|date|posted|updated|tag|pin|place|rating|delay|mw|power|cost|energy|water|chips|acres|sqft|generators|cooling|powersource|platform|rated|holiday|taste|carperf|dining|hotel|rubric|person|' + [...OCTAGON_AXES, ...Object.keys(AXIS_ALIASES)].join('|') + '))';
 const DOUBLE_QUOTED = '([^"]*)"?';
 const SINGLE_QUOTED = "((?:[^']|'(?!\\s|$))*)'?";
 
@@ -292,7 +302,7 @@ const FIELD_TERM = new RegExp(
 // A bare @name, or a bare $ticker standing as a word of its own.
 const BARE_TERM = /(^|\s)(@\S+|\$[A-Za-z][A-Za-z0-9.-]{0,11}(?=\s|$))/g;
 
-export type TermField = 'user' | 'ticker' | 'company' | 'category' | 'confidence' | 'date' | 'posted' | 'updated' | 'tag' | 'pin' | 'place' | 'rating' | 'delay' | 'mw' | 'power' | 'cost' | 'energy' | 'water' | 'chips' | 'acres' | 'sqft' | 'generators' | 'platform' | 'rated' | 'holiday' | 'taste' | 'carperf' | 'dining' | 'hotel' | 'rubric' | 'person' | OctagonAxis;
+export type TermField = 'user' | 'ticker' | 'company' | 'category' | 'confidence' | 'date' | 'posted' | 'updated' | 'tag' | 'pin' | 'place' | 'rating' | 'delay' | 'mw' | 'power' | 'cost' | 'energy' | 'water' | 'chips' | 'acres' | 'sqft' | 'generators' | 'cooling' | 'powersource' | 'platform' | 'rated' | 'holiday' | 'taste' | 'carperf' | 'dining' | 'hotel' | 'rubric' | 'person' | OctagonAxis;
 
 export type QueryPart =
   | { kind: 'term'; field: TermField; value: string; raw: string; negated?: boolean }
@@ -411,6 +421,8 @@ function readParts(parts: QueryPart[]): SearchQuery {
     acres: [],
     sqfts: [],
     generators: [],
+    coolings: [],
+    powerSources: [],
     powerKinds: [],
     holidays: [],
     text: '',
@@ -431,8 +443,9 @@ function readParts(parts: QueryPart[]): SearchQuery {
       addConfidence(query, part.value);
     } else if (part.field === 'pin') {
       // Anything that is not a pin id is left out rather than matching nothing.
+      // An id may carry a marker label (5711=1), which only the map reads.
       for (const id of part.value.split(',')) {
-        const n = Number(id.trim());
+        const n = Number(id.split('=')[0].trim());
         if (Number.isInteger(n) && n > 0 && !query.ids.includes(n)) query.ids.push(n);
       }
     } else if (part.field === 'date' || part.field === 'posted' || part.field === 'updated') {
@@ -451,6 +464,10 @@ function readParts(parts: QueryPart[]): SearchQuery {
       // A name nobody ships on is left out rather than matching nothing.
       const key = platformFromName(part.value) ?? (isPlatformKey(part.value.toLowerCase()) ? part.value.toLowerCase() : undefined);
       if (key) addUnique(query.platforms, key);
+    } else if (part.field === 'cooling') {
+      if (part.value.trim()) addUnique(query.coolings, part.value.trim());
+    } else if (part.field === 'powersource') {
+      if (part.value.trim()) addUnique(query.powerSources, part.value.trim());
     } else if (part.field === 'holiday') {
       if (part.value) addUnique(query.holidays, part.value);
     } else if (part.field === 'taste') {
@@ -565,6 +582,8 @@ export function hasFilters(query: SearchQuery): boolean {
     query.acres.length ||
     query.sqfts.length ||
     query.generators.length ||
+    query.coolings.length ||
+    query.powerSources.length ||
     query.powerKinds.length ||
     query.holidays.length
   );

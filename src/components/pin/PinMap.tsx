@@ -84,7 +84,7 @@ export default function PinMap({
         const features = siteShape.geojson.features.filter((f) => f.properties.kind === kind);
         if (!features.length) continue;
         L.geoJSON({ type: 'FeatureCollection', features } as never, {
-          style: () => ({ color: style.color, weight: kind === 'site' ? 2 : 1.5, opacity: 0.95, fillColor: style.color, fillOpacity: style.fill, dashArray: style.dash }),
+          style: () => ({ color: style.color, weight: kind === 'site' ? 2 : kind === 'route' ? 3 : 1.5, opacity: 0.95, fillColor: style.color, fillOpacity: style.fill, dashArray: style.dash }),
           interactive: false,
         }).addTo(site);
       }

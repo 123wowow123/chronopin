@@ -21,6 +21,7 @@ export async function SiteFooter() {
     { href: LEGAL_PATHS.privacy, label: t('legal.privacyTitle') },
     { href: LEGAL_PATHS.terms, label: t('legal.termsTitle') },
     { href: LEGAL_PATHS.contact, label: t('legal.contactTitle') },
+    { href: LEGAL_PATHS.searchGuide, label: t('legal.searchTitle') },
   ];
   return (
     // data-site-footer: a page that fills the window (the map) hides it, globals.css.

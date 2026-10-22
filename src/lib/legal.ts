@@ -11,4 +11,4 @@ export const OPERATOR_REGION = 'California, United States';
 export const LEGAL_UPDATED = '2026-10-04';
 
 // The site-wide links in the footer, in order.
-export const LEGAL_PATHS = { about: '/about', privacy: '/privacy', terms: '/terms', contact: '/contact' } as const;
+export const LEGAL_PATHS = { about: '/about', privacy: '/privacy', terms: '/terms', contact: '/contact', searchGuide: '/search-guide' } as const;

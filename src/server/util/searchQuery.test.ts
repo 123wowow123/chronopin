@@ -139,6 +139,8 @@ describe('parseSearchQuery', () => {
       acres: [],
       sqfts: [],
       generators: [],
+      coolings: [],
+      powerSources: [],
       powerKinds: [],
       holidays: [],
       text: 'ios',

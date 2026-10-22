@@ -443,13 +443,7 @@ https://www.chronopin.com/pin/19327/lehigh-county-data-center-150-mw-facility-wi
 are they keywards in Datacenter & Infrastructure Telemetry that can be used for search pills?
 
 
-clicking stock ticker should search the company and show company and stock graph on the side panel
-http://localhost:3000/notifications/trades
-
-
-
-http://localhost:3000/notifications/trades
-Trade should show conflict of interest label if trade are flagged as such. Their profile should show which committies they are sitting on.
 
 
 are there other things that can use geojson
+

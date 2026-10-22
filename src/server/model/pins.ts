@@ -70,6 +70,8 @@ export type PinSearchFilters = {
   acres?: RatingBound[];
   sqfts?: RatingBound[];
   generators?: RatingBound[];
+  coolings?: string[];
+  powerSources?: string[];
   powerKinds: ('generation' | 'usage' | 'storage')[];
   holidays: string[];
 };
@@ -1301,7 +1303,7 @@ export function searchClauses(filter: SearchFilter) {
       const bounds = filter.energies.map(({ op, value }) => `"pe"."gwh" ${RATING_OPS[op]} ${add(value)}::numeric`);
       where.push(`EXISTS (SELECT 1 FROM "PinEnergy" AS "pe" WHERE "pe"."pinId" = "Pin"."id" AND ${bounds.join(' AND ')})`);
     }
-    // Every water:, chips:, acres:, sqft: and generators: bound, on the
+    // Every water:, chips:, acres:, sqft: and generators: bound, and cooling:/powersource: keywords, on the
     // telemetry PinDatacenter records.
     const dcBounds: string[] = [];
     if (filter.waters?.length) {
@@ -1318,6 +1320,12 @@ export function searchClauses(filter: SearchFilter) {
     }
     if (filter.generators?.length) {
       dcBounds.push(...filter.generators.map(({ op, value }) => `"dc"."generators" ${RATING_OPS[op]} ${add(value)}::numeric`));
+    }
+    // Any of these keywords inside the cooling architecture or power source text.
+    for (const [words, column] of [[filter.coolings, 'cooling'], [filter.powerSources, 'powerSource']] as const) {
+      if (!words?.length) continue;
+      const likes = words.map((word) => `"dc"."${column}" ILIKE ${add(`%${word.replace(/[\\%_]/g, '\\$&')}%`)}`);
+      dcBounds.push(`(${likes.join(' OR ')})`);
     }
     if (dcBounds.length) {
       where.push(`EXISTS (SELECT 1 FROM "PinDatacenter" AS "dc" WHERE "dc"."pinId" = "Pin"."id" AND ${dcBounds.join(' AND ')})`);

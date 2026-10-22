@@ -29,7 +29,7 @@ import { parseSearchQuery } from '@/server/util/searchQuery';
 import { pinPath } from '@/lib/seo';
 import type { MapPinJson, PinJson } from '@/lib/types';
 import { joinSearchQuery, splitSearchQuery } from '@/server/util/searchQuery';
-import { refineQuery } from '@/lib/searchTerms';
+import { pinMarkerLabels, refineQuery } from '@/lib/searchTerms';
 import { useT } from '@/lib/client/i18n';
 import { DEFAULT_LOCALE, INTL_LOCALES, isRtl, splitLocale } from '@/lib/i18n/config';
 import { categoryLabel } from '@/lib/i18n/labels';
@@ -91,16 +91,24 @@ const DEFAULT_SPAN = '1y';
 // own map: a line the app drew rather than a relation between two pins.
 const FROM_COLOR = '#e11d48';
 
-const PIN_SVG =
-  '<svg viewBox="0 0 24 36" xmlns="http://www.w3.org/2000/svg" width="24" height="36"><path fill="currentColor" stroke="rgba(0,0,0,.35)" d="M12 0C5.373 0 0 5.373 0 12c0 9 12 24 12 24s12-15 12-24C24 5.373 18.627 0 12 0z"/><circle cx="12" cy="12" r="5" fill="#fff"/></svg>';
+const PIN_PATH = '<path fill="currentColor" stroke="rgba(0,0,0,.35)" d="M12 0C5.373 0 0 5.373 0 12c0 9 12 24 12 24s12-15 12-24C24 5.373 18.627 0 12 0z"/>';
+const PIN_SVG = `<svg viewBox="0 0 24 36" xmlns="http://www.w3.org/2000/svg" width="24" height="36">${PIN_PATH}<circle cx="12" cy="12" r="5" fill="#fff"/></svg>`;
+
+// A pin with a label (pin:5711=1 in the search) shows it in the marker's
+// white disc, larger and darker than the plain disc's dot.
+function labelledPinSvg(label: string) {
+  const size = label.length > 2 ? 8 : label.length > 1 ? 10 : 12;
+  const text = label.replace(/[&<>]/g, '');
+  return `<svg viewBox="0 0 24 36" xmlns="http://www.w3.org/2000/svg" width="24" height="36">${PIN_PATH}<circle cx="12" cy="12" r="9" fill="#fff"/><text x="12" y="12" text-anchor="middle" dominant-baseline="central" font-family="system-ui,sans-serif" font-weight="700" font-size="${size}" fill="#111">${text}</text></svg>`;
+}
 
 // scale-100: Leaflet makes a marker role=button, and the press shrink every
 // button gets (globals.css) would scale it about the pane's corner, sliding
 // it out from under the pointer between mousedown and mouseup, so no click.
-function pinIcon(isPast: boolean) {
+function pinIcon(isPast: boolean, label?: string) {
   return L.divIcon({
     className: `scale-100 ${isPast ? 'text-past' : 'text-future'}`,
-    html: PIN_SVG,
+    html: label ? labelledPinSvg(label) : PIN_SVG,
     iconSize: [24, 36],
     iconAnchor: [12, 36],
   });
@@ -440,7 +448,9 @@ export default function PinsMap({ sliderTyping = false, ads = false }: { sliderT
   const specials = params.get('specials');
   const requestedBounds = params.get('bounds');
   const returnParam = params.get('returnTo') ?? '';
-  const returnTo = /^\/restaurants(?:\/[a-z0-9-]+)?#available-now$/.test(returnParam) ? returnParam : undefined;
+  // Only the restaurants' specials view and a pin page (a thread's map) are
+  // places the map's back button may return to.
+  const returnTo = /^\/restaurants(?:\/[a-z0-9-]+)?#available-now$|^\/pin\/\d+(?:\/[^/?#\s]+)?$/.test(returnParam) ? returnParam : undefined;
   // Layer switches keep the viewport; links to a guide can still fit results.
   const preserveView = params.get('fit') === 'view';
   const fitResults = !preserveView && (restaurantLayer || params.get('fit') === 'results'
@@ -490,6 +500,19 @@ export default function PinsMap({ sliderTyping = false, ads = false }: { sliderT
   const fromLayerRef = useRef<L.LayerGroup | null>(null);
   const [status, setStatus] = useState<'loading' | 'ready' | 'error'>('loading');
   const [count, setCount] = useState(0);
+  // The labelled pins (pin:5711=1,...) in label order, for the stepper that
+  // walks the map from one to the next; step is the one the map last went to.
+  const [step, setStep] = useState<number | null>(null);
+  const [labelledStops, setLabelledStops] = useState<{ pin: MapPinJson; label: string }[]>([]);
+  const walkTo = (index: number) => {
+    const map = mapRef.current;
+    const stop = labelledStops[index];
+    if (!map || !stop || stop.pin.latitude == null || stop.pin.longitude == null) return;
+    setStep(index);
+    const at = L.latLng(stop.pin.latitude, stop.pin.longitude + 360 * nearestOffset(stop.pin.longitude, map.getCenter().lng));
+    map.flyTo(at, Math.max(map.getZoom(), 8));
+    stickPopup(map, stickyRef, stop.pin, at);
+  };
   // What the plotted, category-visible pins add up to: dollars of cost (only
   // USD ones - there is no FX anywhere, so currencies never mix) and the
   // megawatts their titles state.
@@ -746,6 +769,7 @@ export default function PinsMap({ sliderTyping = false, ads = false }: { sliderT
     const pastBoundary = past ? offsetDate(now, past, -1) : null;
     const futureBoundary = future ? offsetDate(now, future, 1) : null;
     const seen = new Set<number>();
+    const markerLabels = pinMarkerLabels(fetchQuery);
 
     const stick = (pin: MapPinJson, at: L.LatLng) => stickPopup(map, stickyRef, pin, at);
 
@@ -756,7 +780,7 @@ export default function PinsMap({ sliderTyping = false, ads = false }: { sliderT
         const start = new Date(pin.utcStartDateTime);
         if (!focus && ((pastBoundary && start < pastBoundary) || (futureBoundary && start > futureBoundary))) continue;
         seen.add(pin.id);
-        const icon = pinIcon(localStart(pin) <= now);
+        const icon = pinIcon(localStart(pin) <= now, markerLabels.get(pin.id));
         const make = (offset: number) => {
           const marker = L.marker([pin.latitude!, pin.longitude! + 360 * offset], { icon, title: pin.title });
           // Opens on hover, and stays open while the pointer moves from the marker
@@ -849,7 +873,16 @@ export default function PinsMap({ sliderTyping = false, ads = false }: { sliderT
     (async () => {
       try {
         await load();
-        if (!cancelled) setStatus('ready');
+        if (cancelled) return;
+        const labels = pinMarkerLabels(fetchQuery);
+        setStep(null);
+        setLabelledStops(
+          markersRef.current
+            .filter((m) => labels.has(m.pin.id))
+            .map((m) => ({ pin: m.pin, label: labels.get(m.pin.id)! }))
+            .sort((a, b) => a.label.localeCompare(b.label, undefined, { numeric: true })),
+        );
+        setStatus('ready');
       } catch {
         if (!cancelled) setStatus('error');
       }
@@ -1112,7 +1145,7 @@ export default function PinsMap({ sliderTyping = false, ads = false }: { sliderT
           className="floating absolute top-2.5 start-2.5 z-[1000] flex items-center gap-1.5 rounded-full px-3 py-1.5 text-sm font-medium text-ink transition-colors hover:bg-raised hover:no-underline active:bg-raised-2"
         >
           <Icon name="back" className="size-4 text-link" />
-          {t.dynamic('map.backToSpecials', 'Back to specials')}
+          {returnTo.startsWith('/pin/') ? t('map.backToPin') : t.dynamic('map.backToSpecials', 'Back to specials')}
         </Anchor>
       ) : focusId ? (
         // Above Leaflet's zoom buttons. Back through history when the map was
@@ -1131,6 +1164,33 @@ export default function PinsMap({ sliderTyping = false, ads = false }: { sliderT
           <Icon name="back" className="size-4 text-link" />
           {t('map.backToPin')}
         </Anchor>
+      ) : null}
+      {labelledStops.length > 1 ? (
+        <div
+          role="group"
+          aria-label={t.dynamic('map.stepGroup', 'Walk through the numbered pins')}
+          className={`floating absolute top-2.5 z-[1000] flex h-8 items-center rounded-full text-sm font-medium text-ink ${returnTo || focusId ? 'start-36' : 'start-2.5'}`}
+        >
+          <button
+            type="button"
+            onClick={() => walkTo(step == null ? labelledStops.length - 1 : (step - 1 + labelledStops.length) % labelledStops.length)}
+            aria-label={t.dynamic('map.stepPrev', 'Previous pin')}
+            className="flex size-8 items-center justify-center rounded-full transition-colors hover:bg-raised active:bg-raised-2"
+          >
+            <Icon name="chevron" className="size-4 rotate-90 rtl:-rotate-90" />
+          </button>
+          <span aria-live="polite" className="min-w-14 text-center tabular-nums">
+            {step == null ? '–' : labelledStops[step]?.label} / {labelledStops.length}
+          </span>
+          <button
+            type="button"
+            onClick={() => walkTo(step == null ? 0 : (step + 1) % labelledStops.length)}
+            aria-label={t.dynamic('map.stepNext', 'Next pin')}
+            className="flex size-8 items-center justify-center rounded-full transition-colors hover:bg-raised active:bg-raised-2"
+          >
+            <Icon name="chevron" className="size-4 -rotate-90 rtl:rotate-90" />
+          </button>
+        </div>
       ) : null}
       {/* As on the timeline: top right on wide screens, folded behind pills at
           the bottom narrower. Its fixed panels stack inside this z-[1000], over
