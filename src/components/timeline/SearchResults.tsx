@@ -34,6 +34,7 @@ import { CompanyExecutivesPanel } from './CompanyExecutives';
 import { CompanyParentsPanel } from './CompanyParents';
 import { CompanyProductsPanel } from './CompanyProducts';
 import { SearchedCompanyPanel } from './SearchedCompany';
+import { StockPanel } from './StockPanel';
 import { SearchedPersonPanel } from './SearchedPerson';
 import { TagCloud, tagPillSummary } from './TagCloud';
 import { FloatingControls } from './FloatingControls';
@@ -636,6 +637,7 @@ export function SearchResults({
                     }
                   />
                 ) : null}
+                {searchedCompany?.ticker ? <StockPanel symbol={searchedCompany.ticker} /> : null}
                 {searchedCompany?.sentiment ? <CompanyProductsPanel name={searchedCompany.name} sentiment={searchedCompany.sentiment} /> : null}
                 {searchedCompany?.executives?.length ? <CompanyExecutivesPanel name={searchedCompany.name} executives={searchedCompany.executives} /> : null}
               </>

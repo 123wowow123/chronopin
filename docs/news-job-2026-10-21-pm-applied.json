@@ -1,0 +1,4051 @@
+{
+  "runId": 16,
+  "job": "news",
+  "production": true,
+  "session": "active Codex session",
+  "utcStartedDateTime": "2026-10-21T22:02:02.811Z",
+  "newPinIds": [
+    19328,
+    19329,
+    19330,
+    19331,
+    19332,
+    19333
+  ],
+  "updatedExistingPinIds": [
+    158,
+    1678,
+    1950,
+    1952,
+    1953,
+    1954,
+    1955,
+    1956,
+    1957,
+    1958,
+    1964,
+    1970,
+    1976,
+    2827,
+    4013,
+    5174,
+    15638,
+    15985,
+    16017,
+    16408,
+    17115
+  ],
+  "scores": [
+    {
+      "id": 1678,
+      "textHash": "e0d893babfc8091be261c09e9c47c8a62ae972fe519e4a43e21f08e25cc090c3",
+      "sentiment": 0,
+      "product": ""
+    },
+    {
+      "id": 2827,
+      "textHash": "cec181ee71e763de1a276482cb6c3b37e0ef5f29cd11920ec45e4f4480204984",
+      "sentiment": -0.1,
+      "product": ""
+    },
+    {
+      "id": 4013,
+      "textHash": "b62efc84e09ee4aeb6b9a08c38755492946119c51a6ea22cd1ec2abc5ca67fe8",
+      "sentiment": 0,
+      "product": ""
+    },
+    {
+      "id": 15985,
+      "textHash": "b744da1495619b960a4a55763e18e1808659d8a3f4db4af4e04ec8d1b552906d",
+      "sentiment": 0.2,
+      "product": ""
+    },
+    {
+      "id": 16408,
+      "textHash": "1ba5ab6353a3acc22371cfbe02bbcffb039546b031413006e95aa239c86c6bb6",
+      "sentiment": 0.1,
+      "product": ""
+    },
+    {
+      "id": 19328,
+      "textHash": "29f7e6b6d4cca5e8e026e42cf84b14f72339d478c250f1fca8c5ac69bfca74e8",
+      "sentiment": -0.8,
+      "product": ""
+    },
+    {
+      "id": 19329,
+      "textHash": "2d7a96d9ce9f0a1b0600f12826eb8702d990e4bacc9f5742ddefd6ca5023fb41",
+      "sentiment": 0.35,
+      "product": ""
+    },
+    {
+      "id": 19330,
+      "textHash": "9624d937eb132cad548dfcf60b1f0c8d7c13deefd54fc4d7b55868059b3b1aed",
+      "sentiment": 0.25,
+      "product": ""
+    },
+    {
+      "id": 19331,
+      "textHash": "daac0c5af1a6b4f9f98d4cbe8ce849c3defb47f27e6da866b416c8468b97ce4d",
+      "sentiment": -0.5,
+      "product": ""
+    }
+  ],
+  "held": [
+    {
+      "id": 15801,
+      "textHash": "22c84ba98e6c"
+    },
+    {
+      "id": 15802,
+      "textHash": "c40878743619"
+    },
+    {
+      "id": 15803,
+      "textHash": "60d33be899eb"
+    },
+    {
+      "id": 16361,
+      "textHash": "dbf88fd39233"
+    },
+    {
+      "id": 16366,
+      "textHash": "46de75a74fb2"
+    },
+    {
+      "id": 16367,
+      "textHash": "535e6a45d8e0"
+    },
+    {
+      "id": 16368,
+      "textHash": "ca58b012d910"
+    },
+    {
+      "id": 16375,
+      "textHash": "e2cbcec70ecb"
+    }
+  ],
+  "events": {
+    "pins": 40,
+    "pages": 97,
+    "preservedAllHumanFields": true,
+    "checkedPinIds": [
+      2108,
+      2480,
+      2481,
+      2494,
+      2495,
+      2860,
+      2953,
+      3303,
+      3327,
+      3331,
+      3336,
+      3522,
+      3529,
+      3533,
+      3631,
+      3662,
+      4338,
+      4615,
+      4697,
+      4870,
+      4872,
+      4873,
+      4874,
+      4892,
+      4894,
+      4895,
+      4896,
+      4899,
+      4901,
+      4989,
+      4990,
+      5029,
+      5128,
+      5204,
+      5499,
+      6556,
+      6559,
+      6564,
+      6638,
+      6639
+    ]
+  },
+  "adStats": {
+    "PinAd": {
+      "verified": 66,
+      "refreshed": 1,
+      "added": 1,
+      "concurrentSkipped": []
+    },
+    "ProductAd": {
+      "verified": 36,
+      "refreshed": 2,
+      "added": 0,
+      "concurrentSkipped": []
+    },
+    "HolidayAd": {
+      "verified": 169,
+      "refreshed": 65,
+      "added": 6,
+      "concurrentSkipped": []
+    }
+  },
+  "translationRows": 105,
+  "workingTranslationGaps": [],
+  "personTrades": {
+    "filings": 4,
+    "trades": 19,
+    "unmatched": [],
+    "failed": [
+      "Bryan Bedford BC33926D1346296F85258D86003449A3: all transaction line(s) unreadable (scanned report or unknown layout) - not stored, https://extapps2.oge.gov/201/Presiden.nsf/PAS+Index/BC33926D1346296F85258D86003449A3/$FILE/Bryan-Bedford-11.03.2025-278T.pdf"
+    ],
+    "production": {
+      "added": 19,
+      "missing": []
+    }
+  },
+  "verifiedNewTrades": 19,
+  "oil": {
+    "octoberContracts": 30,
+    "band": [
+      0.16499999999999998,
+      106.99,
+      108.99
+    ],
+    "nearest50": [
+      106.99,
+      0.45999999999999996
+    ],
+    "estimatedDollarVolume": 71805.77200000001,
+    "wtiContracts": 0,
+    "priorFinalized": [
+      {
+        "ticker": "KXBRENTMON-26SEP3017-T129.99",
+        "value": "97.92",
+        "status": "finalized"
+      },
+      {
+        "ticker": "KXBRENTMON-26SEP3017-T127.99",
+        "value": "97.92",
+        "status": "finalized"
+      },
+      {
+        "ticker": "KXBRENTMON-26SEP3017-T125.99",
+        "value": "97.92",
+        "status": "finalized"
+      },
+      {
+        "ticker": "KXBRENTMON-26SEP3017-T123.99",
+        "value": "97.92",
+        "status": "finalized"
+      },
+      {
+        "ticker": "KXBRENTMON-26SEP3017-T121.99",
+        "value": "97.92",
+        "status": "finalized"
+      },
+      {
+        "ticker": "KXBRENTMON-26SEP3017-T119.99",
+        "value": "97.92",
+        "status": "finalized"
+      },
+      {
+        "ticker": "KXBRENTMON-26SEP3017-T117.99",
+        "value": "97.92",
+        "status": "finalized"
+      },
+      {
+        "ticker": "KXBRENTMON-26SEP3017-T115.99",
+        "value": "97.92",
+        "status": "finalized"
+      },
+      {
+        "ticker": "KXBRENTMON-26SEP3017-T113.99",
+        "value": "97.92",
+        "status": "finalized"
+      },
+      {
+        "ticker": "KXBRENTMON-26SEP3017-T111.99",
+        "value": "97.92",
+        "status": "finalized"
+      },
+      {
+        "ticker": "KXBRENTMON-26SEP3017-T51.99",
+        "value": "97.92",
+        "status": "finalized"
+      },
+      {
+        "ticker": "KXBRENTMON-26SEP3017-T53.99",
+        "value": "97.92",
+        "status": "finalized"
+      },
+      {
+        "ticker": "KXBRENTMON-26SEP3017-T55.99",
+        "value": "97.92",
+        "status": "finalized"
+      },
+      {
+        "ticker": "KXBRENTMON-26SEP3017-T57.99",
+        "value": "97.92",
+        "status": "finalized"
+      },
+      {
+        "ticker": "KXBRENTMON-26SEP3017-T59.99",
+        "value": "97.92",
+        "status": "finalized"
+      },
+      {
+        "ticker": "KXBRENTMON-26SEP3017-T61.99",
+        "value": "97.92",
+        "status": "finalized"
+      },
+      {
+        "ticker": "KXBRENTMON-26SEP3017-T63.99",
+        "value": "97.92",
+        "status": "finalized"
+      },
+      {
+        "ticker": "KXBRENTMON-26SEP3017-T65.99",
+        "value": "97.92",
+        "status": "finalized"
+      },
+      {
+        "ticker": "KXBRENTMON-26SEP3017-T67.99",
+        "value": "97.92",
+        "status": "finalized"
+      },
+      {
+        "ticker": "KXBRENTMON-26SEP3017-T69.99",
+        "value": "97.92",
+        "status": "finalized"
+      },
+      {
+        "ticker": "KXBRENTMON-26SEP3017-T99.99",
+        "value": "97.92",
+        "status": "finalized"
+      },
+      {
+        "ticker": "KXBRENTMON-26SEP3017-T97.99",
+        "value": "97.92",
+        "status": "finalized"
+      },
+      {
+        "ticker": "KXBRENTMON-26SEP3017-T95.99",
+        "value": "97.92",
+        "status": "finalized"
+      },
+      {
+        "ticker": "KXBRENTMON-26SEP3017-T93.99",
+        "value": "97.92",
+        "status": "finalized"
+      },
+      {
+        "ticker": "KXBRENTMON-26SEP3017-T91.99",
+        "value": "97.92",
+        "status": "finalized"
+      },
+      {
+        "ticker": "KXBRENTMON-26SEP3017-T89.99",
+        "value": "97.92",
+        "status": "finalized"
+      },
+      {
+        "ticker": "KXBRENTMON-26SEP3017-T87.99",
+        "value": "97.92",
+        "status": "finalized"
+      },
+      {
+        "ticker": "KXBRENTMON-26SEP3017-T85.99",
+        "value": "97.92",
+        "status": "finalized"
+      },
+      {
+        "ticker": "KXBRENTMON-26SEP3017-T83.99",
+        "value": "97.92",
+        "status": "finalized"
+      },
+      {
+        "ticker": "KXBRENTMON-26SEP3017-T81.99",
+        "value": "97.92",
+        "status": "finalized"
+      },
+      {
+        "ticker": "KXBRENTMON-26SEP3017-T79.99",
+        "value": "97.92",
+        "status": "finalized"
+      },
+      {
+        "ticker": "KXBRENTMON-26SEP3017-T77.99",
+        "value": "97.92",
+        "status": "finalized"
+      },
+      {
+        "ticker": "KXBRENTMON-26SEP3017-T75.99",
+        "value": "97.92",
+        "status": "finalized"
+      },
+      {
+        "ticker": "KXBRENTMON-26SEP3017-T73.99",
+        "value": "97.92",
+        "status": "finalized"
+      },
+      {
+        "ticker": "KXBRENTMON-26SEP3017-T71.99",
+        "value": "97.92",
+        "status": "finalized"
+      },
+      {
+        "ticker": "KXBRENTMON-26SEP3017-T109.99",
+        "value": "97.92",
+        "status": "finalized"
+      },
+      {
+        "ticker": "KXBRENTMON-26SEP3017-T107.99",
+        "value": "97.92",
+        "status": "finalized"
+      },
+      {
+        "ticker": "KXBRENTMON-26SEP3017-T105.99",
+        "value": "97.92",
+        "status": "finalized"
+      },
+      {
+        "ticker": "KXBRENTMON-26SEP3017-T103.99",
+        "value": "97.92",
+        "status": "finalized"
+      },
+      {
+        "ticker": "KXBRENTMON-26SEP3017-T101.99",
+        "value": "97.92",
+        "status": "finalized"
+      },
+      {
+        "ticker": "KXBRENTMON-26AUG3117-T98.99",
+        "value": "90.75",
+        "status": "finalized"
+      },
+      {
+        "ticker": "KXBRENTMON-26AUG3117-T96.99",
+        "value": "90.75",
+        "status": "finalized"
+      },
+      {
+        "ticker": "KXBRENTMON-26AUG3117-T94.99",
+        "value": "90.75",
+        "status": "finalized"
+      },
+      {
+        "ticker": "KXBRENTMON-26AUG3117-T92.99",
+        "value": "90.75",
+        "status": "finalized"
+      },
+      {
+        "ticker": "KXBRENTMON-26AUG3117-T90.99",
+        "value": "90.75",
+        "status": "finalized"
+      },
+      {
+        "ticker": "KXBRENTMON-26AUG3117-T88.99",
+        "value": "90.75",
+        "status": "finalized"
+      },
+      {
+        "ticker": "KXBRENTMON-26AUG3117-T86.99",
+        "value": "90.75",
+        "status": "finalized"
+      },
+      {
+        "ticker": "KXBRENTMON-26AUG3117-T84.99",
+        "value": "90.75",
+        "status": "finalized"
+      },
+      {
+        "ticker": "KXBRENTMON-26AUG3117-T82.99",
+        "value": "90.75",
+        "status": "finalized"
+      },
+      {
+        "ticker": "KXBRENTMON-26AUG3117-T80.99",
+        "value": "90.75",
+        "status": "finalized"
+      },
+      {
+        "ticker": "KXBRENTMON-26AUG3117-T78.99",
+        "value": "90.75",
+        "status": "finalized"
+      },
+      {
+        "ticker": "KXBRENTMON-26AUG3117-T76.99",
+        "value": "90.75",
+        "status": "finalized"
+      },
+      {
+        "ticker": "KXBRENTMON-26AUG3117-T74.99",
+        "value": "90.75",
+        "status": "finalized"
+      },
+      {
+        "ticker": "KXBRENTMON-26AUG3117-T72.99",
+        "value": "90.75",
+        "status": "finalized"
+      },
+      {
+        "ticker": "KXBRENTMON-26AUG3117-T70.99",
+        "value": "90.75",
+        "status": "finalized"
+      },
+      {
+        "ticker": "KXBRENTMON-26AUG3117-T108.99",
+        "value": "90.75",
+        "status": "finalized"
+      },
+      {
+        "ticker": "KXBRENTMON-26AUG3117-T106.99",
+        "value": "90.75",
+        "status": "finalized"
+      },
+      {
+        "ticker": "KXBRENTMON-26AUG3117-T104.99",
+        "value": "90.75",
+        "status": "finalized"
+      },
+      {
+        "ticker": "KXBRENTMON-26AUG3117-T102.99",
+        "value": "90.75",
+        "status": "finalized"
+      },
+      {
+        "ticker": "KXBRENTMON-26AUG3117-T100.99",
+        "value": "90.75",
+        "status": "finalized"
+      }
+    ]
+  },
+  "marketScan": {
+    "window": {
+      "from": "2026-10-21T22:02:15.430Z",
+      "to": "2026-10-28T22:02:15.430Z",
+      "newSince": "2026-10-20T22:02:15.430Z"
+    },
+    "read": {
+      "kalshiEvents": 6064,
+      "polymarketEvents": 1500
+    },
+    "interesting": [
+      {
+        "exchange": "Polymarket",
+        "url": "https://polymarket.com/event/democratic-presidential-nominee-2028",
+        "title": "Democratic Presidential Nominee 2028",
+        "kind": "united-states, elections, politics, us-presidential-election, world-elections",
+        "closes": "2028-11-08T04:59:00Z",
+        "listed": "2025-07-11T18:35:56.805Z",
+        "isNew": false,
+        "volume": 1296670938,
+        "volume24h": 745219,
+        "odds": [
+          {
+            "label": "Alexandria Ocasio-Cortez",
+            "chance": 0.166
+          },
+          {
+            "label": "Gavin Newsom",
+            "chance": 0.163
+          },
+          {
+            "label": "Jon Ossoff",
+            "chance": 0.14
+          },
+          {
+            "label": "Kamala Harris",
+            "chance": 0.067
+          }
+        ],
+        "coveredByPin": 1950,
+        "related": [
+          "Presidential Election Winner 2028",
+          "Republican Presidential Nominee 2028",
+          "Which party wins 2028 US Presidential Election?"
+        ]
+      },
+      {
+        "exchange": "Polymarket",
+        "url": "https://polymarket.com/event/2026-f1-drivers-champion",
+        "title": "F1 Drivers' Champion",
+        "kind": "sports, formula1, f1",
+        "closes": "2027-04-01T03:59:00Z",
+        "listed": "2025-12-09T00:55:47.605573Z",
+        "isNew": false,
+        "volume": 204551845,
+        "volume24h": 30786,
+        "odds": [
+          {
+            "label": "Kimi Antonelli",
+            "chance": 0.978
+          },
+          {
+            "label": "Max Verstappen",
+            "chance": 0.017
+          },
+          {
+            "label": "Lewis Hamilton",
+            "chance": 0.002
+          },
+          {
+            "label": "Lando Norris",
+            "chance": 0.001
+          }
+        ],
+        "coveredByPin": 17115,
+        "related": [
+          "F1 Constructors' Champion"
+        ]
+      },
+      {
+        "exchange": "Polymarket",
+        "url": "https://polymarket.com/event/brazil-presidential-election",
+        "title": "Brazil Presidential Election",
+        "kind": "politics, macro-election-2, main-election, brazil, global-elections",
+        "closes": "2026-10-26T03:59:00Z",
+        "listed": "2025-09-18T20:07:57.76Z",
+        "isNew": false,
+        "volume": 191004417,
+        "volume24h": 1726379,
+        "odds": [
+          {
+            "label": "Flávio Bolsonaro",
+            "chance": 0.799
+          },
+          {
+            "label": "Luiz Inácio Lula da Silva",
+            "chance": 0.195
+          },
+          {
+            "label": "Other",
+            "chance": null
+          }
+        ],
+        "coveredByPin": 1968,
+        "related": [
+          "Brazil Presidential Election Second Round: Margin of Victory",
+          "Brazil Presidential Election Second Round: 1st Place in Amapá"
+        ]
+      },
+      {
+        "exchange": "Polymarket",
+        "url": "https://polymarket.com/event/next-french-presidential-election",
+        "title": "Next French Presidential Election",
+        "kind": "french-election, main-election, france, world, politics",
+        "closes": "2027-04-19T03:59:00Z",
+        "listed": "2025-11-13T23:09:35.8119Z",
+        "isNew": false,
+        "volume": 154715577,
+        "volume24h": 444709,
+        "odds": [
+          {
+            "label": "Marine Le Pen",
+            "chance": 0.464
+          },
+          {
+            "label": "Édouard Philippe",
+            "chance": 0.185
+          },
+          {
+            "label": "David Lisnard",
+            "chance": 0.127
+          },
+          {
+            "label": "Jean-Luc Mélenchon",
+            "chance": 0.105
+          }
+        ],
+        "coveredByPin": 1976,
+        "related": [
+          "Next French Presidential Election: who will advance to the 2nd round?"
+        ]
+      },
+      {
+        "exchange": "Polymarket",
+        "url": "https://polymarket.com/event/netanyahu-out-before-2027",
+        "title": "Netanyahu out by...?",
+        "kind": "geopolitics, world, middle-east, israel, politics",
+        "closes": "2027-01-01T04:59:00Z",
+        "listed": "2025-07-24T23:38:14.261Z",
+        "isNew": false,
+        "volume": 124625842,
+        "volume24h": 3550,
+        "odds": [
+          {
+            "label": "Yes",
+            "chance": 0.41
+          }
+        ],
+        "coveredByPin": 1969,
+        "related": [
+          "Will the U.S. invade Iran before 2027?",
+          "Will China invade Taiwan by end of 2026?",
+          "Iran leader end of 2026?",
+          "Xi Jinping out before 2027?",
+          "Will the US officially declare war on Iran by...?",
+          "How many different countries will Israel strike in 2026?",
+          "Mojtaba Khamenei public appearance by...?",
+          "Israel x Hamas ceasefire cancelled by...?",
+          "Will Hamas agree to disarm by...?",
+          "Israel and Indonesia normalize relations by...?",
+          "Will Hezbollah disarm by...?",
+          "Israel x Hamas Ceasefire Phase II by...?"
+        ]
+      },
+      {
+        "exchange": "Polymarket",
+        "url": "https://polymarket.com/event/venezuela-leader-end-of-2026",
+        "title": "Venezuela leader end of 2026?",
+        "kind": "trump-machado, rewards-20-4pt5-50, venezuela, trump, politics",
+        "closes": "2027-01-01T04:59:00Z",
+        "listed": "2026-01-04T18:21:09.391Z",
+        "isNew": false,
+        "volume": 98641073,
+        "volume24h": 64975,
+        "odds": [
+          {
+            "label": "Nicolás Maduro",
+            "chance": 0.764
+          },
+          {
+            "label": "Delcy Rodríguez",
+            "chance": 0.195
+          },
+          {
+            "label": "No Head of State",
+            "chance": 0.023
+          },
+          {
+            "label": "María Corina Machado",
+            "chance": 0.006
+          }
+        ],
+        "coveredByPin": 1951,
+        "related": [
+          "Clarity Act (H.R.3633) signed into law in 2026?",
+          "Iran agrees to surrender enriched uranium stockpile by...?",
+          "Will the U.S. invade Venezuela by...?",
+          "Trump out as President before 2027?",
+          "Will the US acquire part of Greenland in 2026?",
+          "NATO x Russia military clash by...?",
+          "US military action against Cuba by...?",
+          "María Corina Machado enters Venezuela by...?",
+          "Will US withdraw from NATO by...?",
+          "Russia nuclear test by...?",
+          "Epstein client list released by...?",
+          "Will the U.S. invade Cuba in 2026?"
+        ]
+      },
+      {
+        "exchange": "Polymarket",
+        "url": "https://polymarket.com/event/kharg-island-no-longer-under-iranian-control-by-march-31",
+        "title": "Kharg Island no longer under Iranian control by...?",
+        "kind": "iranian-leadership-regime, iran, mojtaba-khamenei, khamenei, geopolitics",
+        "closes": "2027-01-01T04:59:00Z",
+        "listed": "2026-03-14T00:25:34.154359Z",
+        "isNew": false,
+        "volume": 76472487,
+        "volume24h": 87285,
+        "odds": [
+          {
+            "label": "December 31",
+            "chance": 0.085
+          },
+          {
+            "label": "October 31",
+            "chance": 0.01
+          }
+        ],
+        "coveredByPin": null,
+        "related": [
+          "US announces end of Iranian blockade by...?",
+          "Israel x Iran ceasefire continues through...?",
+          "US obtains Iranian enriched uranium by...?",
+          "Will the Iranian regime fall before 2027?",
+          "Will Reza Pahlavi enter Iran by...?",
+          "US-Iran Final Nuclear Deal by…?",
+          "Bab el-Mandeb Strait effectively closed by...?",
+          "Will Reza Pahlavi lead Iran in 2026?",
+          "Iran full airspace closure by...?",
+          "Israel withdraws from Lebanon by...?",
+          "Crude Oil all time high by...?",
+          "Iran charges Hormuz fees by...?"
+        ]
+      },
+      {
+        "exchange": "Polymarket",
+        "url": "https://polymarket.com/event/will-the-us-confirm-that-aliens-exist-before-2027",
+        "title": "Will the US confirm that aliens exist by...?",
+        "kind": "aliens, politics, pop-culture, science",
+        "closes": "2027-01-01T04:59:00Z",
+        "listed": "2025-11-25T18:05:19.721Z",
+        "isNew": false,
+        "volume": 74458746,
+        "volume24h": 95918,
+        "odds": [
+          {
+            "label": "December 31",
+            "chance": 0.044
+          },
+          {
+            "label": "October 31",
+            "chance": 0.006
+          }
+        ],
+        "coveredByPin": null,
+        "related": [
+          "Largest IPO by market cap in 2026?",
+          "Human moon landing in 2026?",
+          "FDA approves Retatrutide this year?",
+          "Plague pandemic in 2026?"
+        ]
+      },
+      {
+        "exchange": "Polymarket",
+        "url": "https://polymarket.com/event/pro-football-2027-champion-20260729185915366",
+        "title": "Pro Football: 2027 Champion",
+        "kind": "sports, nfl, football, super-bowl, nfl-team-futures",
+        "closes": "2027-04-01T03:59:00Z",
+        "listed": "2026-02-09T00:41:51.439Z",
+        "isNew": false,
+        "volume": 68713063,
+        "volume24h": 50206,
+        "odds": [
+          {
+            "label": "San Francisco 49ers",
+            "chance": 0.155
+          },
+          {
+            "label": "Kansas City Chiefs",
+            "chance": 0.113
+          },
+          {
+            "label": "Buffalo Bills",
+            "chance": 0.105
+          },
+          {
+            "label": "Los Angeles Rams",
+            "chance": 0.075
+          }
+        ],
+        "coveredByPin": 1954,
+        "related": [
+          "Pro Football: 2027 NFC Champion ",
+          "Pro Football: 2027 AFC Champion "
+        ]
+      },
+      {
+        "exchange": "Polymarket",
+        "url": "https://polymarket.com/event/will-jesus-christ-return-before-2027",
+        "title": "Will Jesus Christ return before 2027?",
+        "kind": "parent-for-derivative, pop-culture",
+        "closes": "2027-01-01T04:59:00Z",
+        "listed": "2025-11-25T18:08:21.296Z",
+        "isNew": false,
+        "volume": 66600550,
+        "volume24h": 17978,
+        "odds": [
+          {
+            "label": "Yes",
+            "chance": 0.014
+          }
+        ],
+        "coveredByPin": null,
+        "related": [
+          "Will Trump acquire Greenland before 2027?"
+        ]
+      },
+      {
+        "exchange": "Polymarket",
+        "url": "https://polymarket.com/event/uefa-champions-league-2027-champion-20260701202025549",
+        "title": "UEFA Champions League: 2027 Champion",
+        "kind": "ucl, soccer, sports, champions-league, ucl-matchday",
+        "closes": "2027-06-20T03:59:00Z",
+        "listed": "2026-07-02T19:03:02.322624Z",
+        "isNew": false,
+        "volume": 58667721,
+        "volume24h": 1670434,
+        "odds": [
+          {
+            "label": "Other",
+            "chance": 0.5
+          },
+          {
+            "label": "Barcelona",
+            "chance": 0.235
+          },
+          {
+            "label": "Paris Saint-Germain",
+            "chance": 0.185
+          },
+          {
+            "label": "Arsenal",
+            "chance": 0.135
+          }
+        ],
+        "coveredByPin": 1957
+      },
+      {
+        "exchange": "Polymarket",
+        "url": "https://polymarket.com/event/ballon-dor-winner-2026",
+        "title": "Ballon d'Or Winner 2026",
+        "kind": "soccer, sports, awards, ballon-dor",
+        "closes": "2027-01-01T04:59:00Z",
+        "listed": "2025-09-22T23:39:02.010671Z",
+        "isNew": false,
+        "volume": 57160071,
+        "volume24h": 1481264,
+        "odds": [
+          {
+            "label": "Harry Kane",
+            "chance": 0.768
+          },
+          {
+            "label": "Lamine Yamal",
+            "chance": 0.172
+          },
+          {
+            "label": "Kylian Mbappé",
+            "chance": 0.042
+          },
+          {
+            "label": "Lionel Messi",
+            "chance": 0.019
+          }
+        ],
+        "coveredByPin": 1958,
+        "related": [
+          "MLS Cup Winner 2026",
+          "MLB: AL Rookie of the Year",
+          "MLB: 2026 NL MVP",
+          "MLB: 2026 AL Cy Young Winner",
+          "MLB: NL Platinum Glove Winner",
+          "MLB: NL Rookie of the Year",
+          "MLB: 2026 NL Cy Young Winner",
+          "MLB: AL Platinum Glove Winner",
+          "MLB: 2026 AL MVP ",
+          "MLS: 2026 Golden Boot Winner",
+          "MLS: 2026 Defender of the Year",
+          "Ballon d'Or Top 3 Finish 2026"
+        ]
+      },
+      {
+        "exchange": "Polymarket",
+        "url": "https://polymarket.com/event/how-many-fed-rate-cuts-in-2026",
+        "title": "How many Fed rate cuts in 2026?",
+        "kind": "rewards-200-4pt5-50, fed-rates, economic-policy, fed, business",
+        "closes": "2027-01-01T04:59:00Z",
+        "listed": "2025-09-29T22:24:45.988997Z",
+        "isNew": false,
+        "volume": 54642537,
+        "volume24h": 70894,
+        "odds": [
+          {
+            "label": "0 (0 bps)",
+            "chance": 0.97
+          },
+          {
+            "label": "1 (25 bps)",
+            "chance": 0.011
+          },
+          {
+            "label": "2 (50 bps)",
+            "chance": 0.004
+          },
+          {
+            "label": "3 (75 bps)",
+            "chance": 0.002
+          }
+        ],
+        "coveredByPin": null,
+        "related": [
+          "What will the Fed rate be at the end of 2026?",
+          "What will Fed Rate hit before 2027?",
+          "How many Fed rate hikes in 2026?",
+          "Jerome Powell out of Fed Board by…?",
+          "How low will 10-year Treasury yield get before 2027?"
+        ]
+      },
+      {
+        "exchange": "Polymarket",
+        "url": "https://polymarket.com/event/who-will-be-the-next-prime-minister-of-israel-after-the-next-election",
+        "title": "Prime Minister of Israel after the next election?",
+        "kind": "main-election, israel-election, politics, middle-east, israel",
+        "closes": "2026-10-28T03:59:00Z",
+        "listed": "2025-11-15T00:27:02.243822Z",
+        "isNew": false,
+        "volume": 50337189,
+        "volume24h": 671597,
+        "odds": [
+          {
+            "label": "Gadi Eizenkot",
+            "chance": 0.526
+          },
+          {
+            "label": "Benjamin Netanyahu",
+            "chance": 0.265
+          },
+          {
+            "label": "Naftali Bennett",
+            "chance": 0.145
+          },
+          {
+            "label": "Avigdor Lieberman",
+            "chance": 0.029
+          }
+        ],
+        "coveredByPin": 1969,
+        "related": [
+          "Israeli Legislative Election Winner",
+          "Israel Election: Likud # of seats?"
+        ]
+      },
+      {
+        "exchange": "Polymarket",
+        "url": "https://polymarket.com/event/mlb-world-series-champion-2026",
+        "title": "MLB World Series Champion 2026",
+        "kind": "sports, world-series, mlb, mlb-playoffs, baseball",
+        "closes": "2026-10-31T23:55:00Z",
+        "listed": "2026-01-21T20:45:03.607Z",
+        "isNew": false,
+        "volume": 45567162,
+        "volume24h": 65715,
+        "odds": [
+          {
+            "label": "Milwaukee Brewers",
+            "chance": 0.628
+          },
+          {
+            "label": "Tampa Bay Rays",
+            "chance": 0.371
+          },
+          {
+            "label": "Other",
+            "chance": null
+          }
+        ],
+        "coveredByPin": 1953
+      },
+      {
+        "exchange": "Polymarket",
+        "url": "https://polymarket.com/event/california-governor-election-2026",
+        "title": "California Governor Election Winner",
+        "kind": "california-midterm, governor-midterms, california-governor, elections, politics",
+        "closes": "2026-11-04T04:59:00Z",
+        "listed": "2025-10-09T23:29:47.170218Z",
+        "isNew": false,
+        "volume": 42169517,
+        "volume24h": 34652,
+        "odds": [
+          {
+            "label": "Xavier Becerra",
+            "chance": 0.966
+          },
+          {
+            "label": "Steve Hilton",
+            "chance": 0.033
+          },
+          {
+            "label": "Tom Steyer",
+            "chance": 0.002
+          },
+          {
+            "label": "Rick Caruso",
+            "chance": 0.001
+          }
+        ],
+        "coveredByPin": 1970,
+        "related": [
+          "Balance of Power: 2026 Midterms",
+          "Which party will win the House in 2026?",
+          "Which party will win the Senate in 2026?",
+          "Texas Senate Election Winner",
+          "Republican Senate seats after the 2026 midterm elections?",
+          "Maine Senate Election Winner",
+          "Alaska Governor Election Winner  ",
+          "Alaska Senate Election Winner",
+          "Wisconsin Governor Election Winner",
+          "Texas Governor Election Winner",
+          "Nevada Governor Election Winner",
+          "Ohio Governor Election Winner"
+        ]
+      },
+      {
+        "exchange": "Polymarket",
+        "url": "https://polymarket.com/event/new-stranger-things-episode-released-by-wednesday",
+        "title": "New \"Stranger Things\" episode released by...? ",
+        "kind": "pop-culture, tv, netflix, movies",
+        "closes": "2027-04-01T03:59:00Z",
+        "listed": "2026-01-05T22:17:09.989275Z",
+        "isNew": false,
+        "volume": 30906055,
+        "volume24h": 0,
+        "odds": [
+          {
+            "label": "March 31, 2027",
+            "chance": 0.055
+          },
+          {
+            "label": "December 31, 2026",
+            "chance": 0.023
+          }
+        ],
+        "coveredByPin": null
+      },
+      {
+        "exchange": "Polymarket",
+        "url": "https://polymarket.com/event/putin-out-before-2027",
+        "title": "Putin out as President of Russia by...?",
+        "kind": "putin, geopolitics, ukraine, politics, world",
+        "closes": "2027-07-01T03:59:00Z",
+        "listed": "2025-07-06T22:30:10.584Z",
+        "isNew": false,
+        "volume": 30038585,
+        "volume24h": 303868,
+        "odds": [
+          {
+            "label": "June 30, 2027",
+            "chance": 0.095
+          },
+          {
+            "label": "December 31, 2026",
+            "chance": 0.019
+          }
+        ],
+        "coveredByPin": null,
+        "related": [
+          "Russia x Ukraine ceasefire agreement by...?",
+          "Will Ukraine recapture Crimean territory by...?"
+        ]
+      },
+      {
+        "exchange": "Polymarket",
+        "url": "https://polymarket.com/event/nba-2027-champion",
+        "title": "NBA: 2027 Champion",
+        "kind": "nba-finals, nba, sports, basketball, nba-tip-off",
+        "closes": "2027-07-01T03:59:00Z",
+        "listed": "2026-05-13T20:07:53.605766Z",
+        "isNew": false,
+        "volume": 28149865,
+        "volume24h": 753544,
+        "odds": [
+          {
+            "label": "Oklahoma City Thunder",
+            "chance": 0.215
+          },
+          {
+            "label": "San Antonio Spurs",
+            "chance": 0.195
+          },
+          {
+            "label": "Philadelphia 76ers",
+            "chance": 0.11
+          },
+          {
+            "label": "New York Knicks",
+            "chance": 0.075
+          }
+        ],
+        "coveredByPin": 1955
+      },
+      {
+        "exchange": "Polymarket",
+        "url": "https://polymarket.com/event/iran-leadership-change-by",
+        "title": "Iran leadership change by...?",
+        "kind": "politics, iran, iranian-leadership-regime, geopolitics, mojtaba",
+        "closes": "2027-07-01T03:59:00Z",
+        "listed": "2026-03-09T02:58:15.361Z",
+        "isNew": false,
+        "volume": 27854925,
+        "volume24h": 190811,
+        "odds": [
+          {
+            "label": "June 30, 2027",
+            "chance": 0.25
+          },
+          {
+            "label": "December 31",
+            "chance": 0.125
+          },
+          {
+            "label": "November 30",
+            "chance": 0.075
+          },
+          {
+            "label": "October 31",
+            "chance": 0.02
+          }
+        ],
+        "coveredByPin": null
+      },
+      {
+        "exchange": "Polymarket",
+        "url": "https://polymarket.com/event/epl-2027-champion-20260701200428749",
+        "title": "EPL: 2027 Champion",
+        "kind": "EPL, soccer, sports",
+        "closes": "2027-06-15T03:59:00Z",
+        "listed": "2026-07-02T18:13:08.776718Z",
+        "isNew": false,
+        "volume": 22951158,
+        "volume24h": 155027,
+        "odds": [
+          {
+            "label": "Arsenal",
+            "chance": 0.625
+          },
+          {
+            "label": "Other",
+            "chance": 0.5
+          },
+          {
+            "label": "Manchester City",
+            "chance": 0.145
+          },
+          {
+            "label": "Chelsea",
+            "chance": 0.069
+          }
+        ],
+        "coveredByPin": null,
+        "related": [
+          "LALIGA: 2027 Champion",
+          "Bundesliga: 2027 Champion",
+          "Ligue 1: 2027 Champion"
+        ]
+      },
+      {
+        "exchange": "Polymarket",
+        "url": "https://polymarket.com/event/us-iran-ceasefire-continues-throughptptpt",
+        "title": "US-Iran ceasefire continues through...?",
+        "kind": "iran, trump, israel, military, politics",
+        "closes": "2026-10-31T23:59:00Z",
+        "listed": "2026-09-17T15:54:28Z",
+        "isNew": false,
+        "volume": 20860043,
+        "volume24h": 1601613,
+        "odds": [
+          {
+            "label": "October 22",
+            "chance": 0.867
+          },
+          {
+            "label": "October 24",
+            "chance": 0.79
+          },
+          {
+            "label": "October 28",
+            "chance": 0.745
+          },
+          {
+            "label": "October 31",
+            "chance": 0.73
+          }
+        ],
+        "coveredByPin": 1952,
+        "related": [
+          "Iran-Oman Hormuz Management Agreement by...?",
+          "Strait of Hormuz traffic returns to normal by October 31?",
+          "US-Yemen ceasefire continues through...?",
+          "Saudi Arabia military action against Yemen on...?",
+          "Israel accuses Iran/proxies of plane stabbing incident by Oct 31?",
+          "US Announces Diesel Export ban by...?",
+          "Israel military action against Beirut by...?",
+          "US reissues Iran oil sales sanction relief by...?"
+        ]
+      },
+      {
+        "exchange": "Polymarket",
+        "url": "https://polymarket.com/event/which-companies-will-be-acquired-before-2027",
+        "title": "Which companies will be acquired before 2027?",
+        "kind": "business, big-tech, prediction-markets, finance, tech",
+        "closes": "2027-01-01T04:59:00Z",
+        "listed": "2025-11-24T17:49:12.509Z",
+        "isNew": false,
+        "volume": 18385136,
+        "volume24h": 1826,
+        "odds": [
+          {
+            "label": "Viking Therapeutics",
+            "chance": 0.115
+          },
+          {
+            "label": "Perplexity AI",
+            "chance": 0.11
+          },
+          {
+            "label": "PayPal",
+            "chance": 0.1
+          },
+          {
+            "label": "MGM Resorts",
+            "chance": 0.08
+          }
+        ],
+        "coveredByPin": null,
+        "related": [
+          "Will GameStop acquire eBay?",
+          "AI bubble burst by...?",
+          "Satoshi's identity be proven by...?",
+          "Will Apple release a foldable iPhone by...?",
+          "SCOTUS accepts sports event contract case by...?     ",
+          "Next Fable Model (5.2+) released by...?",
+          "Which CEOs will be out before 2027?",
+          "Will OpenAI launch a consumer hardware product by...?",
+          "What kind of product will OpenAI announce in 2026?"
+        ]
+      },
+      {
+        "exchange": "Polymarket",
+        "url": "https://polymarket.com/event/highest-grossing-movie-in-2026",
+        "title": "Highest grossing movie in 2026?",
+        "kind": "rewards-20-4pt5-50, the-odyssey, pop-culture, movies, spider-man",
+        "closes": "2027-01-08T04:59:00Z",
+        "listed": "2025-11-12T16:58:08.812175Z",
+        "isNew": false,
+        "volume": 17763266,
+        "volume24h": 95960,
+        "odds": [
+          {
+            "label": "Spider-Man: Brand New Day",
+            "chance": 0.91
+          },
+          {
+            "label": "Avengers: Doomsday",
+            "chance": 0.092
+          },
+          {
+            "label": "Wicked: For Good",
+            "chance": 0.001
+          },
+          {
+            "label": "Wuthering Heights",
+            "chance": 0.001
+          }
+        ],
+        "coveredByPin": 1964
+      },
+      {
+        "exchange": "Polymarket",
+        "url": "https://polymarket.com/event/los-angeles-mayoral-election-117",
+        "title": "Los Angeles Mayoral Election",
+        "kind": "la, los-angeles-mayoral-election, la-mayor, mayor, politics",
+        "closes": "2026-06-03T03:59:00Z",
+        "listed": "2025-10-09T20:38:05.450894Z",
+        "isNew": false,
+        "volume": 15518679,
+        "volume24h": 82112,
+        "odds": [
+          {
+            "label": "Karen Bass",
+            "chance": 0.555
+          },
+          {
+            "label": "Nithya Raman",
+            "chance": 0.447
+          },
+          {
+            "label": "Other",
+            "chance": null
+          }
+        ],
+        "coveredByPin": null
+      },
+      {
+        "exchange": "Polymarket",
+        "url": "https://polymarket.com/event/next-prime-minister-of-sweden",
+        "title": "Next Prime Minister of Sweden",
+        "kind": "elections, world, world-elections, global-elections, sweden",
+        "closes": "2026-09-14T03:59:00Z",
+        "listed": "2026-01-19T20:34:34.381805Z",
+        "isNew": false,
+        "volume": 10357182,
+        "volume24h": 35724,
+        "odds": [
+          {
+            "label": "Magdalena Andersson",
+            "chance": 0.765
+          },
+          {
+            "label": "Ulf Kristersson",
+            "chance": 0.158
+          },
+          {
+            "label": "Ebba Busch",
+            "chance": 0.027
+          },
+          {
+            "label": "Elisabeth Thand Ringqvist",
+            "chance": 0.009
+          }
+        ],
+        "coveredByPin": null
+      },
+      {
+        "exchange": "Polymarket",
+        "url": "https://polymarket.com/event/will-metamask-launch-a-token-in-2025",
+        "title": "Will MetaMask launch a token by ___ ?",
+        "kind": "token-launch, crypto, pre-market, metamask",
+        "closes": "2027-01-01T04:59:00Z",
+        "listed": "2025-09-19T12:04:46.255214Z",
+        "isNew": false,
+        "volume": 8724353,
+        "volume24h": 51,
+        "odds": [
+          {
+            "label": "Yes",
+            "chance": 0.06
+          }
+        ],
+        "coveredByPin": null,
+        "related": [
+          "Opensea FDV above ___ one day after launch?",
+          "Puffpaw FDV above ___ one day after launch?",
+          "Will Satoshi move any Bitcoin in 2026?",
+          "Extended FDV above ___ one day after launch?",
+          "Metamask FDV above ___ one day after launch?",
+          "Pump.fun airdrop by ....? ",
+          "MegaETH airdrop by...?",
+          "StandX FDV above ___ one day after launch?",
+          "Will Opensea launch a token by ___?",
+          "Microstrategy delisted from MSCI index by...?",
+          "Ink FDV above ___ one day after launch?",
+          "OKX IPO in 2026?"
+        ]
+      },
+      {
+        "exchange": "Polymarket",
+        "url": "https://polymarket.com/event/will-base-launch-a-token-in-2025-341",
+        "title": "Will Base launch a token by ___ ?",
+        "kind": "token-launch, crypto, pre-market, base",
+        "closes": "2028-01-01T04:59:00Z",
+        "listed": "2025-09-15T15:41:29.727882Z",
+        "isNew": false,
+        "volume": 8049283,
+        "volume24h": 1044,
+        "odds": [
+          {
+            "label": "December 31, 2027",
+            "chance": 0.425
+          },
+          {
+            "label": "June 30, 2027",
+            "chance": 0.2
+          },
+          {
+            "label": "December 31, 2026",
+            "chance": 0.05
+          }
+        ],
+        "coveredByPin": null,
+        "related": [
+          "Predict.fun FDV above ___ one day after launch?",
+          "Variational FDV above ___ one day after launch?",
+          "Kraken IPO by ___ ?",
+          "Will Tempo launch a token by ___ ?",
+          "Base FDV above ___ one day after launch?",
+          "Will fomo.family launch a token by ___ ?",
+          "Will Predict.fun launch a token by ___?",
+          "Will Abstract launch a token by ___?",
+          "Will Arc launch a token by ___ ?",
+          "Hyperliquid airdrop by ....? ",
+          "Abstract FDV above ___ one day after launch?",
+          "Will Exponent launch a token by ___?"
+        ]
+      },
+      {
+        "exchange": "Polymarket",
+        "url": "https://polymarket.com/event/nba-2026-27-rookie-of-the-year-20260624161716143",
+        "title": "NBA: 2026-27 Rookie of the Year",
+        "kind": "nba, sports, basketball, rookie-of-the-year, nba-tip-off",
+        "closes": "2027-05-01T03:59:00Z",
+        "listed": "2026-06-24T16:29:39.613739Z",
+        "isNew": false,
+        "volume": 7999589,
+        "volume24h": 19534,
+        "odds": [
+          {
+            "label": "Player AA",
+            "chance": 0.5
+          },
+          {
+            "label": "Player AB",
+            "chance": 0.5
+          },
+          {
+            "label": "Player AC",
+            "chance": 0.5
+          },
+          {
+            "label": "Player AD",
+            "chance": 0.5
+          }
+        ],
+        "coveredByPin": null
+      },
+      {
+        "exchange": "Polymarket",
+        "url": "https://polymarket.com/event/indiana-enacts-data-center-moratorium-by-20260929",
+        "title": "Indiana enacts data center moratorium by...?",
+        "kind": "ai, tech, states, compute, earn-4",
+        "closes": "2029-01-01T04:59:00Z",
+        "listed": "2026-09-29T15:56:31Z",
+        "isNew": false,
+        "volume": 6085684,
+        "volume24h": 15054,
+        "odds": [
+          {
+            "label": "December 31, 2028",
+            "chance": 0.34
+          },
+          {
+            "label": "December 31, 2027",
+            "chance": 0.135
+          },
+          {
+            "label": "June 30, 2027",
+            "chance": 0.095
+          },
+          {
+            "label": "December 31, 2026",
+            "chance": 0.021
+          }
+        ],
+        "coveredByPin": null,
+        "related": [
+          "Oklahoma enacts data center moratorium by...?",
+          "Texas enacts data center moratorium by...?",
+          "Missouri enacts data center moratorium by...?",
+          "Louisiana enacts data center moratorium by...?",
+          "Ohio enacts data center moratorium by...?"
+        ]
+      },
+      {
+        "exchange": "Kalshi",
+        "url": "https://kalshi.com/markets/kxfeddecision/fed-decision-in-oct-2026-on-oct-28-2026/kxfeddecision-26oct",
+        "title": "Fed decision in Oct 2026? On Oct 28, 2026",
+        "kind": "KXFEDDECISION",
+        "closes": "2026-10-28T17:59:00Z",
+        "listed": "2025-09-29T14:00:00Z",
+        "isNew": false,
+        "volume": 6066937,
+        "volume24h": 223864,
+        "odds": [
+          {
+            "label": "Fed maintains rate",
+            "chance": 0.89
+          },
+          {
+            "label": "Hike 25bps",
+            "chance": 0.12
+          },
+          {
+            "label": "Cut >25bps",
+            "chance": 0.01
+          },
+          {
+            "label": "Cut 25bps",
+            "chance": 0.01
+          }
+        ],
+        "coveredByPin": 1678
+      },
+      {
+        "exchange": "Polymarket",
+        "url": "https://polymarket.com/event/will-russia-invade-a-nato-country-in-2025",
+        "title": "Will Russia invade a NATO country by...?",
+        "kind": "politics, world, ukraine, geopolitics, poland",
+        "closes": "2027-01-01T04:59:00Z",
+        "listed": "2025-05-28T22:16:59.523581Z",
+        "isNew": false,
+        "volume": 5522054,
+        "volume24h": 954,
+        "odds": [
+          {
+            "label": "Yes",
+            "chance": 0.045
+          }
+        ],
+        "coveredByPin": null,
+        "related": [
+          "Where will Zelenskyy and Putin meet next before 2027?",
+          "Zelenskyy out as Ukraine president by end of 2026?",
+          "Ukraine signs peace deal with Russia before 2027?",
+          "Where will Trump and Putin meet next in 2026?",
+          "Ukraine election called by...?",
+          "Russia x Ukraine peace talks by...?",
+          "Will any country leave NATO by...?",
+          "Ukraine joins NATO before 2027?",
+          "Will Zelenskyy talk to Putin by...?",
+          "U.S. nuclear test by...?",
+          "Russia x Ukraine any diplomatic meeting by...?",
+          "Russia x Ukraine Peace Combo"
+        ]
+      },
+      {
+        "exchange": "Polymarket",
+        "url": "https://polymarket.com/event/anthropic-ipo-by",
+        "title": "Anthropic IPO by __?",
+        "kind": "finance, ipo, anthropic-ipo, anthropic, ipos",
+        "closes": "2027-01-01T04:59:00Z",
+        "listed": "2026-06-01T21:08:14.753601Z",
+        "isNew": false,
+        "volume": 5210385,
+        "volume24h": 37570,
+        "odds": [
+          {
+            "label": "December 31, 2026",
+            "chance": 0.865
+          },
+          {
+            "label": "December 15, 2026",
+            "chance": 0.815
+          },
+          {
+            "label": "November 30, 2026",
+            "chance": 0.725
+          },
+          {
+            "label": "November 15, 2026",
+            "chance": 0.075
+          }
+        ],
+        "coveredByPin": null,
+        "related": [
+          "Oura IPO Closing Market Cap"
+        ]
+      },
+      {
+        "exchange": "Polymarket",
+        "url": "https://polymarket.com/event/will-samuel-alito-announce-his-retirement-by",
+        "title": "Will Samuel Alito announce his retirement by...?",
+        "kind": "politics, supreme-court, courts, alito, scotus",
+        "closes": "2027-07-01T03:59:00Z",
+        "listed": "2026-02-17T16:25:21.594Z",
+        "isNew": false,
+        "volume": 4352442,
+        "volume24h": 23914,
+        "odds": [
+          {
+            "label": "June 30, 2027",
+            "chance": 0.44
+          },
+          {
+            "label": "December 31",
+            "chance": 0.135
+          }
+        ],
+        "coveredByPin": null
+      },
+      {
+        "exchange": "Polymarket",
+        "url": "https://polymarket.com/event/billionaire-one-time-wealth-tax-passes-in-california-election-2026",
+        "title": "Billionaire one-time wealth tax passes in California election 2026?",
+        "kind": "taxes, referendum, referendums-midterms, fiscal, politics",
+        "closes": "2026-11-04T04:59:00Z",
+        "listed": "2025-10-24T19:49:02.306Z",
+        "isNew": false,
+        "volume": 3943861,
+        "volume24h": 5068,
+        "odds": [
+          {
+            "label": "Yes",
+            "chance": 0.22
+          }
+        ],
+        "coveredByPin": null
+      },
+      {
+        "exchange": "Polymarket",
+        "url": "https://polymarket.com/event/fed-rate-cut-by-629",
+        "title": "Fed rate cut by...?",
+        "kind": "fed, fed-rates, finance, economy, economic-policy",
+        "closes": "2028-01-29T04:59:00Z",
+        "listed": "2025-12-16T19:36:41.87716Z",
+        "isNew": false,
+        "volume": 3805166,
+        "volume24h": 2353,
+        "odds": [
+          {
+            "label": "July 2027 Meeting",
+            "chance": 0.51
+          },
+          {
+            "label": "June 2027 Meeting",
+            "chance": 0.3
+          },
+          {
+            "label": "April 2027 Meeting",
+            "chance": 0.295
+          },
+          {
+            "label": "March 2027 Meeting",
+            "chance": 0.145
+          }
+        ],
+        "coveredByPin": null
+      },
+      {
+        "exchange": "Polymarket",
+        "url": "https://polymarket.com/event/will-china-invade-taiwan-by-december-31-2027",
+        "title": "Will China invade Taiwan by December 31, 2027?",
+        "kind": "china, politics, world, geopolitics",
+        "closes": "2028-01-01T04:59:00Z",
+        "listed": "2026-03-17T23:32:00.623Z",
+        "isNew": false,
+        "volume": 3535805,
+        "volume24h": 1991,
+        "odds": [
+          {
+            "label": "Yes",
+            "chance": 0.095
+          }
+        ],
+        "coveredByPin": null
+      },
+      {
+        "exchange": "Polymarket",
+        "url": "https://polymarket.com/event/china-x-taiwan-military-clash-before-2027",
+        "title": "China x Taiwan military clash before 2027?",
+        "kind": "hfc, world, taiwan, foreign-policy, china",
+        "closes": "2027-01-01T04:59:00Z",
+        "listed": "2025-11-13T23:12:30.385Z",
+        "isNew": false,
+        "volume": 3486629,
+        "volume24h": 762,
+        "odds": [
+          {
+            "label": "Yes",
+            "chance": 0.037
+          }
+        ],
+        "coveredByPin": 1972,
+        "related": [
+          "Ukraine recognizes Russian sovereignty over its territory by...?",
+          "How many different countries will the US conduct military action against in 2026?",
+          "China x Japan military clash before 2027?",
+          "Lai Ching-te impeached by...?",
+          "Will China unban Bitcoin by 2027?",
+          "U.S. x Russia Nuclear deal by...?",
+          "China x Philippines military clash before 2027?",
+          "Will China blockade Taiwan in 2026?",
+          "Jimmy Lai released by...?"
+        ]
+      },
+      {
+        "exchange": "Polymarket",
+        "url": "https://polymarket.com/event/will-russia-capture-lyman-in-2025",
+        "title": "Will Russia capture Lyman by...?",
+        "kind": "geopolitics, world-affairs, politics, world, russia-capture",
+        "closes": "2027-01-01T04:59:00Z",
+        "listed": "2025-07-22T21:41:18.897452Z",
+        "isNew": false,
+        "volume": 3135547,
+        "volume24h": 1841,
+        "odds": [
+          {
+            "label": "Yes",
+            "chance": 0.065
+          }
+        ],
+        "coveredByPin": null,
+        "related": [
+          "Will Russia capture all of Stepnohirsk by...?",
+          "Will Russia capture all of Kupiansk by...?",
+          "Will Russia capture all of Kostyantynivka by...?",
+          "Which cities will Russia enter by December 31?",
+          "Will Russia capture all of Prymorske by...?",
+          "Will Russia capture all of Vovchansk by...?",
+          "Will Russia capture all of Donetsk Oblast by...?",
+          "Will Russia capture Orikhiv by...?",
+          "Will Russia capture Bilytske by...?",
+          "Will Russia capture Mala Tokmachka by...?"
+        ]
+      },
+      {
+        "exchange": "Polymarket",
+        "url": "https://polymarket.com/event/openai-ipo-by",
+        "title": "OpenAI IPO by...?",
+        "kind": "openai-ipo, ipos, big-tech, ai, finance",
+        "closes": "2027-07-01T03:59:00Z",
+        "listed": "2025-10-30T00:29:28.969Z",
+        "isNew": false,
+        "volume": 3065359,
+        "volume24h": 2184,
+        "odds": [
+          {
+            "label": "June 30, 2027",
+            "chance": 0.335
+          },
+          {
+            "label": "March 31, 2027",
+            "chance": 0.21
+          },
+          {
+            "label": "December 31, 2026",
+            "chance": 0.047
+          }
+        ],
+        "coveredByPin": null,
+        "related": [
+          "Who will be removed from Chinese Military Companies list by June 30, 2027?"
+        ]
+      },
+      {
+        "exchange": "Polymarket",
+        "url": "https://polymarket.com/event/friedrich-merz-out-as-chancellor-of-germany-before-2027",
+        "title": "Friedrich Merz out as Chancellor of Germany by...?",
+        "kind": "politics, germany, world",
+        "closes": "2027-01-01T04:59:00Z",
+        "listed": "2025-11-05T19:35:55.838Z",
+        "isNew": false,
+        "volume": 2949639,
+        "volume24h": 17243,
+        "odds": [
+          {
+            "label": "December 31, 2027",
+            "chance": 0.4
+          },
+          {
+            "label": "June 30, 2027",
+            "chance": 0.295
+          },
+          {
+            "label": "March 31, 2027",
+            "chance": 0.08
+          },
+          {
+            "label": "December 31, 2026",
+            "chance": 0.075
+          }
+        ],
+        "coveredByPin": 1977
+      },
+      {
+        "exchange": "Polymarket",
+        "url": "https://polymarket.com/event/ukraine-election-held-in-2025",
+        "title": "Ukraine election held by...?",
+        "kind": "ukraine, politics, geopolitics, foreign-policy, world",
+        "closes": "2027-02-13T04:59:00Z",
+        "listed": "2025-02-14T00:02:53.059603Z",
+        "isNew": false,
+        "volume": 2502038,
+        "volume24h": 139,
+        "odds": [
+          {
+            "label": "Yes",
+            "chance": 0.034
+          }
+        ],
+        "coveredByPin": null
+      },
+      {
+        "exchange": "Polymarket",
+        "url": "https://polymarket.com/event/bachelorette-season-22-winner",
+        "title": "Bachelorette Season 22 Winner",
+        "kind": "pop-culture, reality-tv, celebrities",
+        "closes": "2026-12-01T04:59:00Z",
+        "listed": "2026-02-24T23:52:04.077371Z",
+        "isNew": false,
+        "volume": 2468975,
+        "volume24h": 142,
+        "odds": [
+          {
+            "label": "Other (Season Cancelled)",
+            "chance": 0.91
+          },
+          {
+            "label": "Doug Mason",
+            "chance": 0.021
+          },
+          {
+            "label": "Matt Carroll",
+            "chance": 0.011
+          },
+          {
+            "label": "Michael Baba",
+            "chance": 0.009
+          }
+        ],
+        "coveredByPin": null
+      },
+      {
+        "exchange": "Polymarket",
+        "url": "https://polymarket.com/event/which-movie-has-biggest-opening-weekend-in-2026",
+        "title": "Which movie has biggest opening weekend in 2026?",
+        "kind": "the-odyssey, movies, pop-culture, spider-man",
+        "closes": "2027-02-01T04:59:00Z",
+        "listed": "2025-11-12T22:23:26.972468Z",
+        "isNew": false,
+        "volume": 2458049,
+        "volume24h": 14704,
+        "odds": [
+          {
+            "label": "Avengers: Doomsday",
+            "chance": 0.535
+          },
+          {
+            "label": "Spider-Man: Brand New Day",
+            "chance": 0.445
+          },
+          {
+            "label": "The Hunger Games: Sunrise on the Reaping",
+            "chance": 0.001
+          },
+          {
+            "label": "Dune: Messiah",
+            "chance": 0.001
+          }
+        ],
+        "coveredByPin": null
+      },
+      {
+        "exchange": "Polymarket",
+        "url": "https://polymarket.com/event/who-wins-the-senate-pending-hormuz-agreement",
+        "title": "Who wins the Senate pending Hormuz Agreement by Oct 23?",
+        "kind": "iran, senate-elections, midterms, politics, elections",
+        "closes": "2026-11-04T04:59:00Z",
+        "listed": "2026-10-11T16:51:10Z",
+        "isNew": false,
+        "volume": 2398933,
+        "volume24h": 46822,
+        "odds": [
+          {
+            "label": "No Hormuz Agreement",
+            "chance": 0.957
+          },
+          {
+            "label": "Hormuz Agreement; R Senate",
+            "chance": 0.024
+          },
+          {
+            "label": "Hormuz Agreement; D Senate",
+            "chance": 0.021
+          }
+        ],
+        "coveredByPin": null,
+        "related": [
+          "Michigan Senate Election Winner",
+          "Ohio Senate Election Winner",
+          "Who wins the Senate pending Hormuz Agreement before the midterms?",
+          "Who wins the Senate pending oil below $85 before the midterms?",
+          "Kansas Senate Election Winner",
+          "Iowa Senate Election Winner",
+          "US-Iran ceasefire continues through the midterms?",
+          "South Carolina Senate Election Winner",
+          "Nebraska Senate Election Winner  ",
+          "How many Republican Governors after the 2026 midterm elections?",
+          "Who wins the Senate pending oil above or below $80 before the midterms?",
+          "Which states will use new congressional maps in the midterms?"
+        ]
+      },
+      {
+        "exchange": "Polymarket",
+        "url": "https://polymarket.com/event/anthropic-announces-bankruptcy-by",
+        "title": "Anthropic announces bankruptcy by...?",
+        "kind": "tech, finance, business, anthropic, corporate-financials",
+        "closes": "2030-01-01T04:59:00Z",
+        "listed": "2026-09-17T22:38:03Z",
+        "isNew": false,
+        "volume": 2347351,
+        "volume24h": 145719,
+        "odds": [
+          {
+            "label": "December 31, 2029",
+            "chance": 0.195
+          },
+          {
+            "label": "December 31, 2028",
+            "chance": 0.165
+          },
+          {
+            "label": "December 31, 2027",
+            "chance": 0.095
+          }
+        ],
+        "coveredByPin": null
+      },
+      {
+        "exchange": "Polymarket",
+        "url": "https://polymarket.com/event/serbia-parliamentary-election-winner-2026",
+        "title": "Serbia Parliamentary Election Winner",
+        "kind": "serbia, politics, elections, main-election, global-elections",
+        "closes": "2026-10-25T23:59:00Z",
+        "listed": "2026-09-21T22:57:07Z",
+        "isNew": false,
+        "volume": 2289584,
+        "volume24h": 272433,
+        "odds": [
+          {
+            "label": "Aleksandar Vučić – United Serbia",
+            "chance": 0.675
+          },
+          {
+            "label": "List A",
+            "chance": 0.5
+          },
+          {
+            "label": "List B",
+            "chance": 0.5
+          },
+          {
+            "label": "List C",
+            "chance": 0.5
+          }
+        ],
+        "coveredByPin": null,
+        "related": [
+          "Next Prime Minister of Serbia?"
+        ]
+      },
+      {
+        "exchange": "Polymarket",
+        "url": "https://polymarket.com/event/macron-out-in-2025",
+        "title": "Macron out by...?",
+        "kind": "france, politics, macron, 2025-predictions, world",
+        "closes": "2027-01-01T04:59:00Z",
+        "listed": "2025-01-03T19:35:04.095066Z",
+        "isNew": false,
+        "volume": 2219695,
+        "volume24h": 7571,
+        "odds": [
+          {
+            "label": "Yes",
+            "chance": 0.05
+          }
+        ],
+        "coveredByPin": 1976,
+        "related": [
+          "French election called by...?"
+        ]
+      },
+      {
+        "exchange": "Polymarket",
+        "url": "https://polymarket.com/event/taylor-swift-pregnant-in-2025",
+        "title": "Taylor Swift pregnant by...?",
+        "kind": "music, celebrities, pop-culture, taylor-swift, pregnant",
+        "closes": "2027-01-01T04:59:00Z",
+        "listed": "2025-07-30T15:52:32.624357Z",
+        "isNew": false,
+        "volume": 2059879,
+        "volume24h": 21,
+        "odds": [
+          {
+            "label": "Yes",
+            "chance": 0.215
+          }
+        ],
+        "coveredByPin": null,
+        "related": [
+          "Next James Bond actor?",
+          "Who will attend Taylor Swift and Travis Kelce's wedding?",
+          "Who will announce Presidential run before 2027?"
+        ]
+      },
+      {
+        "exchange": "Polymarket",
+        "url": "https://polymarket.com/event/next-prime-minister-of-spain-20260625005215443",
+        "title": "Next Prime Minister of Spain?",
+        "kind": "spain, politics, elections, parliament, main-election",
+        "closes": "2028-04-01T03:59:00Z",
+        "listed": "2026-06-26T17:29:45.854411Z",
+        "isNew": false,
+        "volume": 2046453,
+        "volume24h": 22425,
+        "odds": [
+          {
+            "label": "Alberto Núñez Feijóo",
+            "chance": 0.82
+          },
+          {
+            "label": "Person AA",
+            "chance": 0.5
+          },
+          {
+            "label": "Person AB",
+            "chance": 0.5
+          },
+          {
+            "label": "Person AC",
+            "chance": 0.5
+          }
+        ],
+        "coveredByPin": null
+      },
+      {
+        "exchange": "Polymarket",
+        "url": "https://polymarket.com/event/will-mitch-mcconnell-resign-from-the-senate-before-his-term-ends",
+        "title": "Mitch McConnell steps down from Senate before his term ends?",
+        "kind": "politics, congress, senate-elections",
+        "closes": "2027-01-04T04:59:00Z",
+        "listed": "2025-10-17T21:26:50.709Z",
+        "isNew": false,
+        "volume": 1790654,
+        "volume24h": 5695,
+        "odds": [
+          {
+            "label": "Yes",
+            "chance": 0.075
+          }
+        ],
+        "coveredByPin": null
+      },
+      {
+        "exchange": "Polymarket",
+        "url": "https://polymarket.com/event/top-spotify-artist-2026",
+        "title": "Top Spotify Artist 2026",
+        "kind": "pop-culture, music, spotify",
+        "closes": "2027-02-01T04:59:00Z",
+        "listed": "2025-12-22T21:40:01.412Z",
+        "isNew": false,
+        "volume": 1743169,
+        "volume24h": 8039,
+        "odds": [
+          {
+            "label": "Bad Bunny",
+            "chance": 0.855
+          },
+          {
+            "label": "Taylor Swift",
+            "chance": 0.052
+          },
+          {
+            "label": "Drake",
+            "chance": 0.019
+          },
+          {
+            "label": "Bruno Mars",
+            "chance": 0.015
+          }
+        ],
+        "coveredByPin": 1965
+      },
+      {
+        "exchange": "Polymarket",
+        "url": "https://polymarket.com/event/next-google-gemini-pro-model-released-byptptpt",
+        "title": "Next Google Gemini Pro Model released by...?",
+        "kind": "ai, tech, gemini, google, ai-releases",
+        "closes": "2026-11-01T03:59:00Z",
+        "listed": "2026-06-01T22:56:44.54Z",
+        "isNew": false,
+        "volume": 1661369,
+        "volume24h": 4025,
+        "odds": [
+          {
+            "label": "December 31",
+            "chance": 0.105
+          },
+          {
+            "label": "November 30",
+            "chance": 0.065
+          },
+          {
+            "label": "October 31",
+            "chance": 0.036
+          },
+          {
+            "label": "October 23",
+            "chance": 0.012
+          }
+        ],
+        "coveredByPin": 1989
+      },
+      {
+        "exchange": "Polymarket",
+        "url": "https://polymarket.com/event/wnba-2026-champion-464",
+        "title": "WNBA: 2026 Champion",
+        "kind": "wnba, basketball, sports, rewards-automation-50-4pt5-50",
+        "closes": "2026-11-15T04:59:00Z",
+        "listed": "2026-04-06T16:31:00.904Z",
+        "isNew": false,
+        "volume": 1597292,
+        "volume24h": 11396,
+        "odds": [
+          {
+            "label": "Atlanta Dream",
+            "chance": 0.585
+          },
+          {
+            "label": "Golden State Valkyries",
+            "chance": 0.413
+          },
+          {
+            "label": "Other",
+            "chance": null
+          }
+        ],
+        "coveredByPin": null
+      },
+      {
+        "exchange": "Polymarket",
+        "url": "https://polymarket.com/event/openai-ipo-closing-market-cap-above",
+        "title": "OpenAI IPO closing market cap above ___ ?",
+        "kind": "finance, ipos, ai, big-tech, openai",
+        "closes": "2028-01-01T04:59:00Z",
+        "listed": "2026-01-31T00:27:25.69Z",
+        "isNew": false,
+        "volume": 1563651,
+        "volume24h": 559,
+        "odds": [
+          {
+            "label": "$800B",
+            "chance": 0.776
+          },
+          {
+            "label": "$1T",
+            "chance": 0.66
+          },
+          {
+            "label": "$1.4T",
+            "chance": 0.62
+          },
+          {
+            "label": "$1.2T",
+            "chance": 0.6
+          }
+        ],
+        "coveredByPin": null,
+        "related": [
+          "Tesla and SpaceX merger officially announced by...?",
+          "OpenAI announces another Millennium Prize solution by...?",
+          "What will OpenAI's IPO valuation be?",
+          "Will Anthropic or OpenAI IPO first?",
+          "In which month will Anthropic IPO?"
+        ]
+      },
+      {
+        "exchange": "Polymarket",
+        "url": "https://polymarket.com/event/taipei-mayor-election-winner-20260813125857100",
+        "title": "Taipei Mayor Election Winner",
+        "kind": "taiwan, politics, elections, main-election, global-elections",
+        "closes": "2026-11-29T04:59:00Z",
+        "listed": "2026-08-14T12:25:31Z",
+        "isNew": false,
+        "volume": 1546761,
+        "volume24h": 95622,
+        "odds": [
+          {
+            "label": "Chiang Wan-an",
+            "chance": 0.645
+          },
+          {
+            "label": "Other",
+            "chance": 0.5
+          },
+          {
+            "label": "Puma Shen",
+            "chance": 0.356
+          },
+          {
+            "label": "Kuo Hsi",
+            "chance": 0.001
+          }
+        ],
+        "coveredByPin": null
+      },
+      {
+        "exchange": "Polymarket",
+        "url": "https://polymarket.com/event/how-high-will-inflation-get-in-2026",
+        "title": "How high will inflation get in 2026?",
+        "kind": "inflation, macro-indicators, economy, politics",
+        "closes": "2027-02-01T04:59:00Z",
+        "listed": "2025-11-13T21:32:45.893Z",
+        "isNew": false,
+        "volume": 1495596,
+        "volume24h": 1733,
+        "odds": [
+          {
+            "label": "Above 4.5%",
+            "chance": 0.155
+          },
+          {
+            "label": "Above 5%",
+            "chance": 0.08
+          },
+          {
+            "label": "Above 6%",
+            "chance": 0.034
+          },
+          {
+            "label": "Above 8%",
+            "chance": 0.032
+          }
+        ],
+        "coveredByPin": null,
+        "related": [
+          "China Annual GDP Growth 2026"
+        ]
+      },
+      {
+        "exchange": "Polymarket",
+        "url": "https://polymarket.com/event/next-leader-out-of-power-before-2027-no-starmer-or-petro-20260630194619406",
+        "title": "Next leader out of power before 2027?",
+        "kind": "starmer, politics, geopolitics, uk-labour-leadership",
+        "closes": "2027-01-01T04:59:00Z",
+        "listed": "2026-07-01T02:18:26.879119Z",
+        "isNew": false,
+        "volume": 1429610,
+        "volume24h": 57851,
+        "odds": [
+          {
+            "label": "None before 2027",
+            "chance": 0.465
+          },
+          {
+            "label": "Netanyahu - Israel PM",
+            "chance": 0.32
+          },
+          {
+            "label": "Sánchez - Spanish PM",
+            "chance": 0.057
+          },
+          {
+            "label": "Lecornu - France PM",
+            "chance": 0.044
+          }
+        ],
+        "coveredByPin": null
+      },
+      {
+        "exchange": "Polymarket",
+        "url": "https://polymarket.com/event/israeli-forces-withdraw-from-beyond-the-litani-river-by-20260607234645733",
+        "title": "Israeli forces withdraw from beyond the Litani River by…?",
+        "kind": "israel, litani, lebanon, politics, geopolitics",
+        "closes": "2026-09-01T03:59:00Z",
+        "listed": "2026-06-08T02:23:57.0642Z",
+        "isNew": false,
+        "volume": 1405533,
+        "volume24h": 21,
+        "odds": [
+          {
+            "label": "March 31",
+            "chance": 0.195
+          },
+          {
+            "label": "December 31",
+            "chance": 0.075
+          },
+          {
+            "label": "October 31",
+            "chance": 0.01
+          }
+        ],
+        "coveredByPin": null
+      },
+      {
+        "exchange": "Polymarket",
+        "url": "https://polymarket.com/event/nhl-2027-champion-20260612185656162",
+        "title": "NHL: 2027 Champion",
+        "kind": "nhl, sports, stanley-cup, rewards-50-4pt5-20, hockey",
+        "closes": "2027-07-01T03:59:00Z",
+        "listed": "2026-06-12T19:43:46.737243Z",
+        "isNew": false,
+        "volume": 1356354,
+        "volume24h": 20794,
+        "odds": [
+          {
+            "label": "Other",
+            "chance": 0.5
+          },
+          {
+            "label": "Colorado Avalanche",
+            "chance": 0.115
+          },
+          {
+            "label": "Carolina Hurricanes",
+            "chance": 0.105
+          },
+          {
+            "label": "Edmonton Oilers",
+            "chance": 0.105
+          }
+        ],
+        "coveredByPin": 1956
+      }
+    ],
+    "thisWeek": [
+      {
+        "exchange": "Polymarket",
+        "url": "https://polymarket.com/event/brazil-presidential-election",
+        "title": "Brazil Presidential Election",
+        "kind": "politics, macro-election-2, main-election, brazil, global-elections",
+        "closes": "2026-10-26T03:59:00Z",
+        "listed": "2025-09-18T20:07:57.76Z",
+        "isNew": false,
+        "volume": 191004417,
+        "volume24h": 1726379,
+        "odds": [
+          {
+            "label": "Flávio Bolsonaro",
+            "chance": 0.799
+          },
+          {
+            "label": "Luiz Inácio Lula da Silva",
+            "chance": 0.195
+          },
+          {
+            "label": "Other",
+            "chance": null
+          }
+        ],
+        "coveredByPin": 1968,
+        "related": [
+          "Brazil Presidential Election Second Round: Margin of Victory",
+          "Brazil Presidential Election Second Round: 1st Place in Amapá",
+          "Brazil Presidential Election Second Round: 1st Place in Pará",
+          "Brazil Presidential Election Second Round: 1st Place Abroad",
+          "Brazil Presidential Election Second Round: 1st Place in Amazonas",
+          "Amazonas Governor Election Winner",
+          "Rio Grande do Norte Governor Election Winner",
+          "Acre Governor Election Winner",
+          "Who will Trump endorse for President of Brazil?",
+          "Brazil Presidential Election Second Round: Turnout",
+          "Espírito Santo Governor Election Winner ",
+          "Rio de Janeiro Governor Election Second Round: Margin of Victory"
+        ]
+      },
+      {
+        "exchange": "Polymarket",
+        "url": "https://polymarket.com/event/who-will-be-the-next-prime-minister-of-israel-after-the-next-election",
+        "title": "Prime Minister of Israel after the next election?",
+        "kind": "main-election, israel-election, politics, middle-east, israel",
+        "closes": "2026-10-28T03:59:00Z",
+        "listed": "2025-11-15T00:27:02.243822Z",
+        "isNew": false,
+        "volume": 50337189,
+        "volume24h": 671597,
+        "odds": [
+          {
+            "label": "Gadi Eizenkot",
+            "chance": 0.526
+          },
+          {
+            "label": "Benjamin Netanyahu",
+            "chance": 0.265
+          },
+          {
+            "label": "Naftali Bennett",
+            "chance": 0.145
+          },
+          {
+            "label": "Avigdor Lieberman",
+            "chance": 0.029
+          }
+        ],
+        "coveredByPin": 1969,
+        "related": [
+          "Israeli Legislative Election Winner",
+          "Israel Election: Likud # of seats?",
+          "Will Israel election happen as scheduled?",
+          "Israeli Legislative Election: 3rd Place",
+          "How many Israeli elections before government formed?",
+          "Israeli Legislative Election: 2nd Place",
+          "Israel election: will Likud lose seats?",
+          "Israel Election: Yisrael Beiteinu vote share?",
+          "Israel Election: Yashar # of seats?",
+          "Israel Election: Any Coalition Wins a Majority?",
+          "Israeli election results in a hung parliament?",
+          "Israel Election: RZP-Zehut # of seats?"
+        ]
+      },
+      {
+        "exchange": "Kalshi",
+        "url": "https://kalshi.com/markets/kxfeddecision/fed-decision-in-oct-2026-on-oct-28-2026/kxfeddecision-26oct",
+        "title": "Fed decision in Oct 2026? On Oct 28, 2026",
+        "kind": "KXFEDDECISION",
+        "closes": "2026-10-28T17:59:00Z",
+        "listed": "2025-09-29T14:00:00Z",
+        "isNew": false,
+        "volume": 6066937,
+        "volume24h": 223864,
+        "odds": [
+          {
+            "label": "Fed maintains rate",
+            "chance": 0.89
+          },
+          {
+            "label": "Hike 25bps",
+            "chance": 0.12
+          },
+          {
+            "label": "Cut >25bps",
+            "chance": 0.01
+          },
+          {
+            "label": "Cut 25bps",
+            "chance": 0.01
+          }
+        ],
+        "coveredByPin": 1678
+      },
+      {
+        "exchange": "Polymarket",
+        "url": "https://polymarket.com/event/serbia-parliamentary-election-winner-2026",
+        "title": "Serbia Parliamentary Election Winner",
+        "kind": "serbia, politics, elections, main-election, global-elections",
+        "closes": "2026-10-25T23:59:00Z",
+        "listed": "2026-09-21T22:57:07Z",
+        "isNew": false,
+        "volume": 2289584,
+        "volume24h": 272433,
+        "odds": [
+          {
+            "label": "Aleksandar Vučić – United Serbia",
+            "chance": 0.675
+          },
+          {
+            "label": "List A",
+            "chance": 0.5
+          },
+          {
+            "label": "List B",
+            "chance": 0.5
+          },
+          {
+            "label": "List C",
+            "chance": 0.5
+          }
+        ],
+        "coveredByPin": null,
+        "related": [
+          "Next Prime Minister of Serbia?",
+          "Serbia Election: Student List Vote Share?",
+          "Serbia Parliamentary Election: 3rd Place",
+          "Serbia Election: United Serbia Vote Share?",
+          "Serbia Parliamentary Election: Turnout",
+          "Serbia Parliamentary Election Vote Share Margin of Victory"
+        ]
+      },
+      {
+        "exchange": "Polymarket",
+        "url": "https://polymarket.com/event/bulgaria-presidential-election",
+        "title": "Bulgaria Presidential Election",
+        "kind": "world-elections, elections, global-elections, politics, world",
+        "closes": "2026-10-26T03:59:00Z",
+        "listed": "2026-01-19T20:20:24.477487Z",
+        "isNew": false,
+        "volume": 1306597,
+        "volume24h": 21619,
+        "odds": [
+          {
+            "label": "Iliana Iotova",
+            "chance": 0.905
+          },
+          {
+            "label": "Аndrey Gyurov",
+            "chance": 0.095
+          },
+          {
+            "label": "Nikolai Denkov",
+            "chance": 0.001
+          },
+          {
+            "label": "Blagomir Kotsev",
+            "chance": 0.001
+          }
+        ],
+        "coveredByPin": 18959,
+        "related": [
+          "Bulgaria Presidential Election First Round: Margin of Victory",
+          "Toronto Mayoral Election Winner",
+          "Bulgaria Presidential Election First Round Winner",
+          "Bulgaria Presidential Election First Round: 2nd Place"
+        ]
+      },
+      {
+        "exchange": "Polymarket",
+        "url": "https://polymarket.com/event/of-views-of-grand-theft-auto-vi-launch-trailer-on-week-1",
+        "title": "# of views of Grand Theft Auto VI Launch Trailer on week 1?",
+        "kind": "gta-vi, pop-culture, youtube, rockstar",
+        "closes": "2026-10-23T03:59:00Z",
+        "listed": "2026-10-15T14:34:22Z",
+        "isNew": false,
+        "volume": 1015290,
+        "volume24h": 243673,
+        "odds": [
+          {
+            "label": "60-80M",
+            "chance": 0.98
+          },
+          {
+            "label": "40-60M",
+            "chance": 0.021
+          },
+          {
+            "label": "80-100M",
+            "chance": 0.002
+          },
+          {
+            "label": "<40M",
+            "chance": 0.001
+          }
+        ],
+        "coveredByPin": null
+      },
+      {
+        "exchange": "Kalshi",
+        "url": "https://kalshi.com/markets/kxnextteamnba/bronny-james-next-team-before-oct-23-2026/kxnextteamnba-26bjames9",
+        "title": "Bronny James' Next Team Before Oct 23, 2026",
+        "kind": "KXNEXTTEAMNBA",
+        "closes": "2026-10-23T03:59:00Z",
+        "listed": "2026-05-13T02:25:00Z",
+        "isNew": false,
+        "volume": 604372,
+        "volume24h": 6556,
+        "odds": [
+          {
+            "label": "Los Angeles L",
+            "chance": 0.97
+          },
+          {
+            "label": "Boston",
+            "chance": 0.02
+          },
+          {
+            "label": "Philadelphia",
+            "chance": 0.02
+          },
+          {
+            "label": "Sacramento",
+            "chance": 0.02
+          }
+        ],
+        "coveredByPin": null
+      },
+      {
+        "exchange": "Kalshi",
+        "url": "https://kalshi.com/markets/kxtestmatch/south-africa-vs-australia-sa-vs-aus-oct-18/kxtestmatch-26oct180400aussa",
+        "title": "South Africa vs Australia SA vs AUS (Oct 18)",
+        "kind": "KXTESTMATCH",
+        "closes": "2026-10-25T08:00:00Z",
+        "listed": "2026-10-16T00:10:00Z",
+        "isNew": false,
+        "volume": 495162,
+        "volume24h": 216705,
+        "odds": [
+          {
+            "label": "South Africa",
+            "chance": 0.84
+          },
+          {
+            "label": "Draw/Tie",
+            "chance": 0.18
+          },
+          {
+            "label": "Australia",
+            "chance": 0.01
+          }
+        ],
+        "coveredByPin": null
+      },
+      {
+        "exchange": "Polymarket",
+        "url": "https://polymarket.com/event/nba-stephen-curry-to-leave-warriors",
+        "title": "NBA: Stephen Curry to leave Warriors?",
+        "kind": "nba, basketball, golden-state-warriors, stephen-curry, sports",
+        "closes": "2026-10-23T03:59:00Z",
+        "listed": "2026-04-28T21:11:18.039593Z",
+        "isNew": false,
+        "volume": 326646,
+        "volume24h": 1019,
+        "odds": [
+          {
+            "label": "Yes",
+            "chance": 0.001
+          }
+        ],
+        "coveredByPin": null,
+        "related": [
+          "NBA: Will Anthony Davis be traded by next season?"
+        ]
+      },
+      {
+        "exchange": "Kalshi",
+        "url": "https://kalshi.com/markets/kxmlbgame/game-1-tampa-bay-vs-milwaukee-tb-vs-mil-oct-23/kxmlbgame-26oct232000tbmil",
+        "title": "Game 1: Tampa Bay vs Milwaukee TB vs MIL (Oct 23)",
+        "kind": "KXMLBGAME",
+        "closes": "2026-10-27T00:00:00Z",
+        "listed": "2026-10-20T03:41:00Z",
+        "isNew": false,
+        "volume": 244380,
+        "volume24h": 122302,
+        "odds": [
+          {
+            "label": "Milwaukee",
+            "chance": 0.6
+          },
+          {
+            "label": "Tampa Bay",
+            "chance": 0.4
+          }
+        ],
+        "coveredByPin": null
+      },
+      {
+        "exchange": "Kalshi",
+        "url": "https://kalshi.com/markets/kxwnbagame/game-3-golden-state-vs-atlanta-golden-state-vs-atlanta-oct-22/kxwnbagame-26oct22gsatl",
+        "title": "Game 3: Golden State vs Atlanta Golden State vs Atlanta (Oct 22)",
+        "kind": "KXWNBAGAME",
+        "closes": "2026-10-25T00:00:00Z",
+        "listed": "2026-10-10T15:10:00Z",
+        "isNew": false,
+        "volume": 231709,
+        "volume24h": 179873,
+        "odds": [
+          {
+            "label": "Atlanta",
+            "chance": 0.62
+          },
+          {
+            "label": "Golden State",
+            "chance": 0.39
+          }
+        ],
+        "coveredByPin": null
+      },
+      {
+        "exchange": "Polymarket",
+        "url": "https://polymarket.com/event/next-premier-of-british-columbia",
+        "title": "Next Premier of British Columbia",
+        "kind": "canada, politics, elections, main-election, british-columbia",
+        "closes": "2026-10-24T23:59:00Z",
+        "listed": "2026-09-23T13:55:00Z",
+        "isNew": false,
+        "volume": 204578,
+        "volume24h": 17165,
+        "odds": [
+          {
+            "label": "Lorne Doerkson",
+            "chance": 0.885
+          },
+          {
+            "label": "Other",
+            "chance": 0.5
+          },
+          {
+            "label": "David Eby",
+            "chance": 0.115
+          },
+          {
+            "label": "John Rustad",
+            "chance": 0.001
+          }
+        ],
+        "coveredByPin": null,
+        "related": [
+          "British Columbia General Election Winner",
+          "British Columbia General Election: 2nd Place",
+          "Vancouver-Yaletown British Columbia Legislative Assembly Election Winner",
+          "Milton, ON Mayoral Election Winner",
+          "Vernon-Lumby British Columbia Legislative Assembly Election Winner"
+        ]
+      },
+      {
+        "exchange": "Kalshi",
+        "url": "https://kalshi.com/markets/kxcbdecisioncanada/bank-of-canada-decision-in-oct-2026/kxcbdecisioncanada-26oct",
+        "title": "Bank of Canada decision in Oct 2026?",
+        "kind": "KXCBDECISIONCANADA",
+        "closes": "2026-10-28T13:29:00Z",
+        "listed": "2025-10-13T14:00:00Z",
+        "isNew": false,
+        "volume": 158148,
+        "volume24h": 16416,
+        "odds": [
+          {
+            "label": "Hike 25bps",
+            "chance": 0.8
+          },
+          {
+            "label": "Maintains rate",
+            "chance": 0.18
+          },
+          {
+            "label": "Cut >25bps",
+            "chance": 0.01
+          },
+          {
+            "label": "Cut 25bps",
+            "chance": 0.01
+          }
+        ],
+        "coveredByPin": 18960
+      },
+      {
+        "exchange": "Polymarket",
+        "url": "https://polymarket.com/event/ottawa-mayoral-election-winner",
+        "title": "Ottawa Mayoral Election Winner",
+        "kind": "canada, world-elections, mayoral-elections, politics, elections",
+        "closes": "2026-10-27T03:59:00Z",
+        "listed": "2026-04-02T20:44:29.492549Z",
+        "isNew": false,
+        "volume": 102426,
+        "volume24h": 4502,
+        "odds": [
+          {
+            "label": "Mark Sutcliffe",
+            "chance": 0.83
+          },
+          {
+            "label": "Jeff Leiper",
+            "chance": 0.131
+          },
+          {
+            "label": "Alex Lawson",
+            "chance": 0.013
+          },
+          {
+            "label": "Neil Saravanamuttoo",
+            "chance": 0.005
+          }
+        ],
+        "coveredByPin": null,
+        "related": [
+          "Oshawa, ON Mayoral Election Winner",
+          "Mississauga Mayoral Election Winner",
+          "Stratford, ON Mayoral Election Winner",
+          "Vaughan, ON Mayoral Election Winner",
+          "Markham, ON Mayoral Election Winner",
+          "Waterloo, ON Mayoral Election Winner",
+          "Hamilton Mayoral Election",
+          "Niagara-on-the-Lake, ON Mayoral Election Winner",
+          "Thunder Bay, ON Mayoral Election Winner",
+          "Barrie, ON Mayoral Election Winner",
+          "London, ON Mayoral Election Winner",
+          "Kingston, ON Mayoral Election Winner"
+        ]
+      },
+      {
+        "exchange": "Kalshi",
+        "url": "https://kalshi.com/markets/kxfed/fed-funds-rate-after-oct-2026-meeting-on-oct-28-2026/kxfed-26oct",
+        "title": "Fed funds rate after Oct 2026 meeting? On Oct 28, 2026",
+        "kind": "KXFED",
+        "closes": "2026-10-28T17:55:00Z",
+        "listed": "2025-08-06T14:30:00Z",
+        "isNew": false,
+        "volume": 93085,
+        "volume24h": 1015,
+        "odds": [
+          {
+            "label": "Above 2.75%",
+            "chance": 0.99
+          },
+          {
+            "label": "Above 3.00%",
+            "chance": 0.99
+          },
+          {
+            "label": "Above 3.25%",
+            "chance": 0.99
+          },
+          {
+            "label": "Above 3.50%",
+            "chance": 0.99
+          }
+        ],
+        "coveredByPin": null
+      },
+      {
+        "exchange": "Polymarket",
+        "url": "https://polymarket.com/event/no-change-or-hike-25-bps-favored-on-october-27",
+        "title": "No change or Hike 25 bps favored on October 27?",
+        "kind": "fed, fomc, economy, fed-rates, derivatives",
+        "closes": "2026-10-27T12:00:00Z",
+        "listed": "2026-09-24T19:53:51Z",
+        "isNew": false,
+        "volume": 52458,
+        "volume24h": 927,
+        "odds": [
+          {
+            "label": "Yes",
+            "chance": 0.979
+          }
+        ],
+        "coveredByPin": null
+      },
+      {
+        "exchange": "Kalshi",
+        "url": "https://kalshi.com/markets/kxcopperw/copper-price-on-oct-23-2026-at-5-00-pm-edt/kxcopperw-26oct2317",
+        "title": "Copper price on Oct 23, 2026 at 5:00 PM EDT?",
+        "kind": "KXCOPPERW",
+        "closes": "2026-10-23T21:00:00Z",
+        "listed": "2026-10-16T21:00:00Z",
+        "isNew": false,
+        "volume": 43719,
+        "volume24h": 186,
+        "odds": [
+          {
+            "label": "Above $6.45",
+            "chance": 0.95
+          },
+          {
+            "label": "Above $6.48",
+            "chance": 0.95
+          },
+          {
+            "label": "Above $6.51",
+            "chance": 0.85
+          },
+          {
+            "label": "Above $6.54",
+            "chance": 0.84
+          }
+        ],
+        "coveredByPin": null
+      },
+      {
+        "exchange": "Kalshi",
+        "url": "https://kalshi.com/markets/kxbbsingle/housewife-billboard-hot-100-rank-oct-31-2026/kxbbsingle-26oct31hou",
+        "title": "\"Housewife\" · Billboard Hot 100 rank (Oct 31, 2026)",
+        "kind": "KXBBSINGLE",
+        "closes": "2026-10-26T03:59:00Z",
+        "listed": "2026-10-13T18:00:00Z",
+        "isNew": false,
+        "volume": 43419,
+        "volume24h": 5480,
+        "odds": [
+          {
+            "label": "Rank 1 to 2",
+            "chance": 0.99
+          },
+          {
+            "label": "Rank 3 to 4",
+            "chance": 0.02
+          },
+          {
+            "label": "Rank 16 to 20",
+            "chance": 0.02
+          },
+          {
+            "label": "Rank 5 to 6",
+            "chance": 0.01
+          }
+        ],
+        "coveredByPin": null
+      },
+      {
+        "exchange": "Polymarket",
+        "url": "https://polymarket.com/event/huon-valley-mayoral-election-winner-2026",
+        "title": "Huon Valley Mayoral Election Winner",
+        "kind": "mayoral, politics, australia, main-election, global-elections",
+        "closes": "2026-10-28T03:59:00Z",
+        "listed": "2026-09-03T20:18:25Z",
+        "isNew": false,
+        "volume": 30979,
+        "volume24h": 7,
+        "odds": [
+          {
+            "label": "Other",
+            "chance": 0.5
+          },
+          {
+            "label": "Abby McKibben",
+            "chance": 0.36
+          },
+          {
+            "label": "Paul Gibson",
+            "chance": 0.22
+          },
+          {
+            "label": "Mark Jessop",
+            "chance": 0.205
+          }
+        ],
+        "coveredByPin": null,
+        "related": [
+          "Clarence Mayoral Election Winner",
+          "Waratah–Wynyard Mayoral Election Winner",
+          "Hobart Lord Mayor Election Winner",
+          "Latrobe Mayoral Election Winner",
+          "Northern Midlands Mayoral Election Winner",
+          "Central Coast Mayoral Election Winner",
+          "Meander Valley Mayoral Election Winner",
+          "Launceston Mayoral Election Winner",
+          "Burnie Mayoral Election Winner",
+          "Sorell Mayoral Election Winner"
+        ]
+      },
+      {
+        "exchange": "Kalshi",
+        "url": "https://kalshi.com/markets/kxconmebolsudadvance/montevideo-city-vs-atletico-mineiro-tor-vs-atl-oct-21/kxconmebolsudadvance-26oct21toratl",
+        "title": "Montevideo City vs Atletico Mineiro TOR vs ATL (Oct 21)",
+        "kind": "KXCONMEBOLSUDADVANCE",
+        "closes": "2026-10-23T22:00:00Z",
+        "listed": "2026-10-16T17:35:00Z",
+        "isNew": false,
+        "volume": 30848,
+        "volume24h": 27010,
+        "odds": [
+          {
+            "label": "Atletico Mineiro advances",
+            "chance": 0.94
+          },
+          {
+            "label": "Montevideo City advances",
+            "chance": 0.09
+          }
+        ],
+        "coveredByPin": null
+      },
+      {
+        "exchange": "Polymarket",
+        "url": "https://polymarket.com/event/nitra-mayoral-election-winner-2026",
+        "title": "Nitra Mayoral Election Winner",
+        "kind": "mayoral, politics, slovakia, main-election, global-elections",
+        "closes": "2026-10-25T03:59:00Z",
+        "listed": "2026-08-31T18:00:44Z",
+        "isNew": false,
+        "volume": 27702,
+        "volume24h": 1630,
+        "odds": [
+          {
+            "label": "Marek Hattas",
+            "chance": 0.815
+          },
+          {
+            "label": "Other",
+            "chance": 0.5
+          },
+          {
+            "label": "Igor Kršiak",
+            "chance": 0.18
+          },
+          {
+            "label": "Marek Illéš",
+            "chance": 0.017
+          }
+        ],
+        "coveredByPin": null,
+        "related": [
+          "Prešov Mayoral Election Winner",
+          "Bratislava Mayoral Election Winner",
+          "Martin Mayoral Election Winner",
+          "Poprad Mayoral Election Winner",
+          "Bratislava Region Governor Election Winner",
+          "Trnava Mayoral Election Winner",
+          "Žilina Region Governor Election Winner",
+          "Nitra Region Governor Election Winner",
+          "Trenčín Region Governor Election Winner",
+          "Košice Mayoral Election Winner",
+          "Žilina Mayoral Election Winner",
+          "Trenčín Mayoral Election Winner"
+        ]
+      },
+      {
+        "exchange": "Kalshi",
+        "url": "https://kalshi.com/markets/kxnflrec/new-england-vs-chicago-receptions-ne-vs-chi-oct-22/kxnflrec-26oct22nechi",
+        "title": "New England vs Chicago: Receptions NE vs CHI (Oct 22)",
+        "kind": "KXNFLREC",
+        "closes": "2026-10-25T00:15:00Z",
+        "listed": "2026-10-20T01:15:00Z",
+        "isNew": false,
+        "volume": 26586,
+        "volume24h": 14397,
+        "odds": [
+          {
+            "label": "Luther Burden III: 2+",
+            "chance": 0.92
+          },
+          {
+            "label": "Colston Loveland: 2+",
+            "chance": 0.9
+          },
+          {
+            "label": "DeMario Douglas: 2+",
+            "chance": 0.84
+          },
+          {
+            "label": "A.J. Brown: 3+",
+            "chance": 0.835
+          }
+        ],
+        "coveredByPin": null
+      },
+      {
+        "exchange": "Kalshi",
+        "url": "https://kalshi.com/markets/kxsshieldmatch/tasmania-vs-victoria-tas-vs-vic-oct-18/kxsshieldmatch-26oct181930victas",
+        "title": "Tasmania vs Victoria TAS vs VIC (Oct 18)",
+        "kind": "KXSSHIELDMATCH",
+        "closes": "2026-10-25T23:30:00Z",
+        "listed": "2026-10-13T08:11:00Z",
+        "isNew": false,
+        "volume": 25324,
+        "volume24h": 15242,
+        "odds": [
+          {
+            "label": "Tasmania",
+            "chance": 0.84
+          },
+          {
+            "label": "Victoria",
+            "chance": 0.2
+          }
+        ],
+        "coveredByPin": null
+      },
+      {
+        "exchange": "Polymarket",
+        "url": "https://polymarket.com/event/clayface-opening-weekend-box-office",
+        "title": "\"Clayface\" Opening Weekend Box Office",
+        "kind": "movies, pop-culture, box-office",
+        "closes": "2026-10-26T03:59:00Z",
+        "listed": "2026-10-19T23:29:46Z",
+        "isNew": false,
+        "volume": 25119,
+        "volume24h": 18688,
+        "odds": [
+          {
+            "label": "<22m",
+            "chance": 0.485
+          },
+          {
+            "label": "25m-28m",
+            "chance": 0.24
+          },
+          {
+            "label": "22m-25m",
+            "chance": 0.215
+          },
+          {
+            "label": "28m-31m",
+            "chance": 0.046
+          }
+        ],
+        "coveredByPin": null,
+        "related": [
+          "\"Ali G: Who Iz I?\" Opening Weekend Box Office",
+          "\"Wildwood\" Opening Weekend Box Office",
+          "\"Wildwood\" Rotten Tomatoes Score?"
+        ]
+      },
+      {
+        "exchange": "Kalshi",
+        "url": "https://kalshi.com/markets/kxnextteamnba/jayson-tatum-s-next-team/kxnextteamnba-26jtatum0",
+        "title": "Jayson Tatum's Next Team",
+        "kind": "KXNEXTTEAMNBA",
+        "closes": "2026-10-23T03:59:00Z",
+        "listed": "2026-05-04T14:30:00Z",
+        "isNew": false,
+        "volume": 21577,
+        "volume24h": 251,
+        "odds": [
+          {
+            "label": "Stays with Boston or Retires",
+            "chance": 0.99
+          },
+          {
+            "label": "San Antonio",
+            "chance": 0.09
+          },
+          {
+            "label": "Cleveland",
+            "chance": 0.08
+          },
+          {
+            "label": "Portland",
+            "chance": 0.02
+          }
+        ],
+        "coveredByPin": null
+      },
+      {
+        "exchange": "Kalshi",
+        "url": "https://kalshi.com/markets/kxdebutsong/will-housewife-by-tate-mcrae-debut-1-on-the-billboard-hot-100-on-oct-31-2026/kxdebutsong-26oct31-hou",
+        "title": "Will Housewife by Tate McRae debut #1 on the Billboard Hot 100? On Oct 31, 2026",
+        "kind": "KXDEBUTSONG",
+        "closes": "2026-10-26T03:59:00Z",
+        "listed": "2026-10-07T19:25:00Z",
+        "isNew": false,
+        "volume": 20428,
+        "volume24h": 5735,
+        "odds": [
+          {
+            "label": "No",
+            "chance": 0.55
+          },
+          {
+            "label": "Yes",
+            "chance": 0.45
+          }
+        ],
+        "coveredByPin": null
+      },
+      {
+        "exchange": "Kalshi",
+        "url": "https://kalshi.com/markets/kxnhlpts/florida-vs-ottawa-points-fla-vs-ott-oct-21/kxnhlpts-26oct21flaott",
+        "title": "Florida vs Ottawa: Points FLA vs OTT (Oct 21)",
+        "kind": "KXNHLPTS",
+        "closes": "2026-10-23T23:30:00Z",
+        "listed": "2026-10-21T11:35:00Z",
+        "isNew": true,
+        "volume": 20187,
+        "volume24h": 20145,
+        "odds": [
+          {
+            "label": "Matthew Tkachuk: 1+",
+            "chance": 0.65
+          },
+          {
+            "label": "Tim Stutzle: 1+",
+            "chance": 0.64
+          },
+          {
+            "label": "Brady Tkachuk: 1+",
+            "chance": 0.61
+          },
+          {
+            "label": "Sam Reinhart: 1+",
+            "chance": 0.56
+          }
+        ],
+        "coveredByPin": null
+      },
+      {
+        "exchange": "Kalshi",
+        "url": "https://kalshi.com/markets/kx30ymortw/30-year-mortgage-rate-this-week-oct-22-2026/kx30ymortw-26oct22",
+        "title": "30-year mortgage rate this week Oct 22, 2026",
+        "kind": "KX30YMORTW",
+        "closes": "2026-10-22T15:59:00Z",
+        "listed": "2026-10-15T17:00:00Z",
+        "isNew": false,
+        "volume": 18952,
+        "volume24h": 5716,
+        "odds": [
+          {
+            "label": "Above 7.23%",
+            "chance": 0.99
+          },
+          {
+            "label": "Above 7.24%",
+            "chance": 0.99
+          },
+          {
+            "label": "Above 7.25%",
+            "chance": 0.97
+          },
+          {
+            "label": "Above 7.26%",
+            "chance": 0.965
+          }
+        ],
+        "coveredByPin": null
+      },
+      {
+        "exchange": "Kalshi",
+        "url": "https://kalshi.com/markets/kxconmebolsudgame/montevideo-city-vs-atletico-mineiro-regulation-time-moneyline-tor-vs-atl-oct-21/kxconmebolsudgame-26oct21toratl",
+        "title": "Montevideo City vs Atletico Mineiro: Regulation Time Moneyline TOR vs ATL (Oct 21)",
+        "kind": "KXCONMEBOLSUDGAME",
+        "closes": "2026-10-23T22:00:00Z",
+        "listed": "2026-10-16T17:35:00Z",
+        "isNew": false,
+        "volume": 17852,
+        "volume24h": 16817,
+        "odds": [
+          {
+            "label": "Reg Time: Atletico Mineiro",
+            "chance": 0.38
+          },
+          {
+            "label": "Reg Time: Montevideo City",
+            "chance": 0.32
+          },
+          {
+            "label": "Reg Time: Tie",
+            "chance": 0.25
+          }
+        ],
+        "coveredByPin": null
+      },
+      {
+        "exchange": "Kalshi",
+        "url": "https://kalshi.com/markets/kxnhlgoal/florida-vs-ottawa-goals-fla-vs-ott-oct-21/kxnhlgoal-26oct21flaott",
+        "title": "Florida vs Ottawa: Goals FLA vs OTT (Oct 21)",
+        "kind": "KXNHLGOAL",
+        "closes": "2026-10-23T23:30:00Z",
+        "listed": "2026-10-21T11:35:00Z",
+        "isNew": true,
+        "volume": 14657,
+        "volume24h": 14464,
+        "odds": [
+          {
+            "label": "Brady Tkachuk: 1+",
+            "chance": 0.38
+          },
+          {
+            "label": "Sam Reinhart: 1+",
+            "chance": 0.34
+          },
+          {
+            "label": "Drake Batherson: 1+",
+            "chance": 0.32
+          },
+          {
+            "label": "Tim Stutzle: 1+",
+            "chance": 0.31
+          }
+        ],
+        "coveredByPin": null
+      },
+      {
+        "exchange": "Kalshi",
+        "url": "https://kalshi.com/markets/kxranklistsongtop10/top-10-on-the-billboard-hot-100-chart-for-the-week-of-oct-31-2026-on-oct-31-2026/kxranklistsongtop10-26oct31",
+        "title": "Top 10 on the Billboard Hot 100 chart for the Week of Oct 31, 2026? On Oct 31, 2026",
+        "kind": "KXRANKLISTSONGTOP10",
+        "closes": "2026-10-26T03:59:00Z",
+        "listed": "2026-10-14T15:00:00Z",
+        "isNew": false,
+        "volume": 14611,
+        "volume24h": 11313,
+        "odds": [
+          {
+            "label": "Been By Now",
+            "chance": 0.99
+          },
+          {
+            "label": "Choosin' Texas",
+            "chance": 0.99
+          },
+          {
+            "label": "Lies",
+            "chance": 0.99
+          },
+          {
+            "label": "HOUSEWIFE",
+            "chance": 0.97
+          }
+        ],
+        "coveredByPin": null
+      },
+      {
+        "exchange": "Polymarket",
+        "url": "https://polymarket.com/event/democratic-senate-odds-on-october-23",
+        "title": "Democratic Senate odds on October 23?",
+        "kind": "midterms, politics, elections, derivatives, us-presidential-election",
+        "closes": "2026-10-23T16:00:00Z",
+        "listed": "2026-10-15T13:58:56Z",
+        "isNew": false,
+        "volume": 14404,
+        "volume24h": 2919,
+        "odds": [
+          {
+            "label": ">66%",
+            "chance": 0.52
+          },
+          {
+            "label": "64-66%",
+            "chance": 0.425
+          },
+          {
+            "label": "62-64%",
+            "chance": 0.056
+          },
+          {
+            "label": "58-60%",
+            "chance": 0.005
+          }
+        ],
+        "coveredByPin": null
+      },
+      {
+        "exchange": "Kalshi",
+        "url": "https://kalshi.com/markets/kxaprpotus/trump-s-approval-rating-on-oct-23-2026/kxaprpotus-26oct23",
+        "title": "Trump's approval rating on Oct 23, 2026?",
+        "kind": "KXAPRPOTUS",
+        "closes": "2026-10-23T15:00:00Z",
+        "listed": "2026-10-16T15:00:40Z",
+        "isNew": false,
+        "volume": 14084,
+        "volume24h": 7526,
+        "odds": [
+          {
+            "label": "38.4 to 38.6",
+            "chance": 0.3
+          },
+          {
+            "label": "38.1 to 38.3",
+            "chance": 0.25
+          },
+          {
+            "label": "38.7 to 38.9",
+            "chance": 0.16
+          },
+          {
+            "label": "37.8 to 38.0",
+            "chance": 0.15
+          }
+        ],
+        "coveredByPin": null
+      },
+      {
+        "exchange": "Kalshi",
+        "url": "https://kalshi.com/markets/kxdieseld/diesel-prices-tomorrow-october-22-2026/kxdieseld-26oct22",
+        "title": "Diesel prices tomorrow October 22, 2026",
+        "kind": "KXDIESELD",
+        "closes": "2026-10-22T03:59:00Z",
+        "listed": "2026-10-21T12:00:00Z",
+        "isNew": true,
+        "volume": 13202,
+        "volume24h": 13202,
+        "odds": [
+          {
+            "label": "Above $6.265",
+            "chance": 0.995
+          },
+          {
+            "label": "Above $6.270",
+            "chance": 0.995
+          },
+          {
+            "label": "Above $6.275",
+            "chance": 0.995
+          },
+          {
+            "label": "Above $6.280",
+            "chance": 0.995
+          }
+        ],
+        "coveredByPin": null
+      },
+      {
+        "exchange": "Kalshi",
+        "url": "https://kalshi.com/markets/kxdieselw/diesel-prices-this-week-october-26-2026/kxdieselw-26oct26",
+        "title": "Diesel prices this week October 26, 2026",
+        "kind": "KXDIESELW",
+        "closes": "2026-10-26T03:59:00Z",
+        "listed": "2026-10-19T12:00:00Z",
+        "isNew": false,
+        "volume": 12889,
+        "volume24h": 7598,
+        "odds": [
+          {
+            "label": "Above $6.12",
+            "chance": 0.92
+          },
+          {
+            "label": "Above $6.14",
+            "chance": 0.92
+          },
+          {
+            "label": "Above $6.16",
+            "chance": 0.92
+          },
+          {
+            "label": "Above $6.18",
+            "chance": 0.92
+          }
+        ],
+        "coveredByPin": null
+      },
+      {
+        "exchange": "Kalshi",
+        "url": "https://kalshi.com/markets/kxnetflixtopviewsmovie/how-many-views-will-the-1-movie-on-netflix-have-this-week-the-chart-published-on/kxnetflixtopviewsmovie-26oct26",
+        "title": "How many views will the #1 Movie on Netflix have this week? The chart published on Oct 27, 2026",
+        "kind": "KXNETFLIXTOPVIEWSMOVIE",
+        "closes": "2026-10-27T03:59:00Z",
+        "listed": "2026-10-20T21:10:00Z",
+        "isNew": false,
+        "volume": 12365,
+        "volume24h": 12354,
+        "odds": [
+          {
+            "label": "At least 9 million",
+            "chance": 0.99
+          },
+          {
+            "label": "At least 6 million",
+            "chance": 0.98
+          },
+          {
+            "label": "At least 12 million",
+            "chance": 0.68
+          },
+          {
+            "label": "At least 15 million",
+            "chance": 0.21
+          }
+        ],
+        "coveredByPin": null
+      },
+      {
+        "exchange": "Kalshi",
+        "url": "https://kalshi.com/markets/kxbrazilturnout/brazil-presidential-runoff-voter-turnout-on-oct-25-2026/kxbrazilturnout-26oct25",
+        "title": "Brazil presidential runoff: voter turnout On Oct 25, 2026",
+        "kind": "KXBRAZILTURNOUT",
+        "closes": "2026-10-25T03:59:00Z",
+        "listed": "2026-10-05T21:00:00Z",
+        "isNew": false,
+        "volume": 12358,
+        "volume24h": 1,
+        "odds": [
+          {
+            "label": "At least 119,000,000",
+            "chance": 0.98
+          },
+          {
+            "label": "At least 121,000,000",
+            "chance": 0.97
+          },
+          {
+            "label": "At least 123,000,000",
+            "chance": 0.92
+          },
+          {
+            "label": "At least 129,000,000",
+            "chance": 0.84
+          }
+        ],
+        "coveredByPin": null
+      },
+      {
+        "exchange": "Kalshi",
+        "url": "https://kalshi.com/markets/kxfeddissent/who-will-dissent-at-the-october-fed-meeting-october-2026-fomc/kxfeddissent-26oct",
+        "title": "Who will dissent at the October Fed meeting? October 2026 FOMC",
+        "kind": "KXFEDDISSENT",
+        "closes": "2026-10-28T17:59:00Z",
+        "listed": "2026-09-16T21:00:00Z",
+        "isNew": false,
+        "volume": 11526,
+        "volume24h": 399,
+        "odds": [
+          {
+            "label": "Beth Hammack",
+            "chance": 0.77
+          },
+          {
+            "label": "Lorie Logan",
+            "chance": 0.52
+          },
+          {
+            "label": "Neel Kashkari",
+            "chance": 0.43
+          },
+          {
+            "label": "Michelle Bowman",
+            "chance": 0.1
+          }
+        ],
+        "coveredByPin": null
+      },
+      {
+        "exchange": "Kalshi",
+        "url": "https://kalshi.com/markets/kxtokenusem/openrouter-ai-token-usage-in-october-october-2026-sep-28-oct-25/kxtokenusem-26oct26",
+        "title": "OpenRouter AI token usage in October October 2026 (Sep 28–Oct 25)",
+        "kind": "KXTOKENUSEM",
+        "closes": "2026-10-26T03:59:00Z",
+        "listed": "2026-09-28T16:30:00Z",
+        "isNew": false,
+        "volume": 11309,
+        "volume24h": 20,
+        "odds": [
+          {
+            "label": "Above 450T tokens",
+            "chance": 0.99
+          },
+          {
+            "label": "Above 500T tokens",
+            "chance": 0.99
+          },
+          {
+            "label": "Above 575T tokens",
+            "chance": 0.99
+          },
+          {
+            "label": "Above 600T tokens",
+            "chance": 0.99
+          }
+        ],
+        "coveredByPin": null
+      },
+      {
+        "exchange": "Kalshi",
+        "url": "https://kalshi.com/markets/kxactbluetop/who-will-be-the-top-actblue-fundraiser-on-oct-23-2026-on-oct-23-at-10-00-am-et/kxactbluetop-26oct23",
+        "title": "Who will be the top ActBlue fundraiser on Oct 23, 2026? on Oct 23 at 10:00 AM ET",
+        "kind": "KXACTBLUETOP",
+        "closes": "2026-10-23T13:59:00Z",
+        "listed": "2026-10-16T16:30:00Z",
+        "isNew": false,
+        "volume": 10536,
+        "volume24h": 5394,
+        "odds": [
+          {
+            "label": "James Talarico",
+            "chance": 0.95
+          },
+          {
+            "label": "Abdul El-Sayed",
+            "chance": 0.07
+          },
+          {
+            "label": "Jon Ossoff",
+            "chance": 0.01
+          },
+          {
+            "label": "Sherrod Brown",
+            "chance": 0.01
+          }
+        ],
+        "coveredByPin": null
+      },
+      {
+        "exchange": "Kalshi",
+        "url": "https://kalshi.com/markets/kxwnbapts/golden-state-vs-atlanta-points-gs-vs-atl-oct-21/kxwnbapts-26oct21gsatl",
+        "title": "Golden State vs Atlanta: Points GS vs ATL (Oct 21)",
+        "kind": "KXWNBAPTS",
+        "closes": "2026-10-24T00:00:00Z",
+        "listed": "2026-10-21T12:10:00Z",
+        "isNew": true,
+        "volume": 10301,
+        "volume24h": 10244,
+        "odds": [
+          {
+            "label": "Allisha Gray: 10+",
+            "chance": 0.86
+          },
+          {
+            "label": "Angel Reese: 10+",
+            "chance": 0.85
+          },
+          {
+            "label": "Rhyne Howard: 10+",
+            "chance": 0.805
+          },
+          {
+            "label": "Gabby Williams: 15+",
+            "chance": 0.73
+          }
+        ],
+        "coveredByPin": null
+      },
+      {
+        "exchange": "Kalshi",
+        "url": "https://kalshi.com/markets/kxusopencupadvance/columbus-vs-saint-louis-clb-vs-stl-oct-21/kxusopencupadvance-26oct21clbstl",
+        "title": "Columbus vs Saint Louis CLB vs STL (Oct 21)",
+        "kind": "KXUSOPENCUPADVANCE",
+        "closes": "2026-10-24T00:00:00Z",
+        "listed": "2026-10-08T00:36:00Z",
+        "isNew": false,
+        "volume": 10126,
+        "volume24h": 9474,
+        "odds": [
+          {
+            "label": "Columbus advances",
+            "chance": 0.6
+          },
+          {
+            "label": "Saint Louis advances",
+            "chance": 0.42
+          }
+        ],
+        "coveredByPin": null
+      }
+    ],
+    "newlyListed": [
+      {
+        "exchange": "Kalshi",
+        "url": "https://kalshi.com/markets/kxdpworldtour/genesis-championship-winner-2026-genesis-championship/kxdpworldtour-gec26",
+        "title": "Genesis Championship Winner 2026 Genesis Championship",
+        "kind": "KXDPWORLDTOUR",
+        "closes": "2026-11-08T00:00:00Z",
+        "listed": "2026-10-21T00:01:00Z",
+        "isNew": true,
+        "volume": 23473,
+        "volume24h": 23060,
+        "odds": [
+          {
+            "label": "Si Woo Kim",
+            "chance": 0.12
+          },
+          {
+            "label": "Eugenio Lopez-Chacarra",
+            "chance": 0.1
+          },
+          {
+            "label": "Sungjae Im",
+            "chance": 0.081
+          },
+          {
+            "label": "Daniel Hillier",
+            "chance": 0.055
+          }
+        ],
+        "coveredByPin": null
+      },
+      {
+        "exchange": "Kalshi",
+        "url": "https://kalshi.com/markets/kxworldnewsmention/what-will-the-reporters-say-during-abc-world-news-tonight-any-host-or-reporter-a/kxworldnewsmention-26oct21",
+        "title": "What will the reporters say during ABC World News Tonight? any host or reporter - ABC World News Tonight originally scheduled for October 21, 2026",
+        "kind": "KXWORLDNEWSMENTION",
+        "closes": "2026-11-04T15:00:00Z",
+        "listed": "2026-10-21T17:45:00Z",
+        "isNew": true,
+        "volume": 23283,
+        "volume24h": 23071,
+        "odds": [
+          {
+            "label": "Russia / Ukraine",
+            "chance": 0.97
+          },
+          {
+            "label": "Midterm",
+            "chance": 0.89
+          },
+          {
+            "label": "Putin",
+            "chance": 0.87
+          },
+          {
+            "label": "Witkoff",
+            "chance": 0.84
+          }
+        ],
+        "coveredByPin": null
+      },
+      {
+        "exchange": "Kalshi",
+        "url": "https://kalshi.com/markets/kxsamominf/south-africa-inflation-rate-mom-for-october-october-2026/kxsamominf-26nov18",
+        "title": "South Africa inflation rate MoM for October October 2026",
+        "kind": "KXSAMOMINF",
+        "closes": "2026-11-18T08:59:00Z",
+        "listed": "2026-10-21T17:00:00Z",
+        "isNew": true,
+        "volume": 10414,
+        "volume24h": 10401,
+        "odds": [
+          {
+            "label": "Above -0.4%",
+            "chance": 0.99
+          },
+          {
+            "label": "Above -0.2%",
+            "chance": 0.99
+          },
+          {
+            "label": "Above 0.0%",
+            "chance": 0.99
+          },
+          {
+            "label": "Above 0.4%",
+            "chance": 0.8
+          }
+        ],
+        "coveredByPin": null
+      }
+    ],
+    "problems": []
+  },
+  "publicPages": [
+    {
+      "pinId": 19328,
+      "url": "https://www.chronopin.com/pin/19328/ea-announces-bioware-s-closure-and-ends-the-next-mass-effect-project",
+      "status": 200,
+      "seconds": 0.445789,
+      "heading": "EA Announces BioWare’s Closure and Ends the Next Mass Effect Project"
+    },
+    {
+      "pinId": 19329,
+      "url": "https://www.chronopin.com/pin/19329/bae-systems-announces-weld-county-factory-expansion-and-200-plus-hires",
+      "status": 200,
+      "seconds": 0.456215,
+      "heading": "BAE Systems Announces Weld County Factory Expansion and 200-Plus Hires"
+    },
+    {
+      "pinId": 19330,
+      "url": "https://www.chronopin.com/pin/19330/amazon-schedules-austin-robotics-factory-s-us-100-million-building-phase",
+      "status": 200,
+      "seconds": 0.467992,
+      "heading": "Amazon Schedules Austin Robotics Factory’s US$100 Million Building Phase"
+    },
+    {
+      "pinId": 19331,
+      "url": "https://www.chronopin.com/pin/19331/cannondale-begins-phased-wilton-office-layoffs-affecting-143-roles",
+      "status": 200,
+      "seconds": 0.441447,
+      "heading": "Cannondale Begins Phased Wilton Office Layoffs Affecting 143 Roles"
+    },
+    {
+      "pinId": 19332,
+      "url": "https://www.chronopin.com/pin/19332/arsenal-is-favoured-for-the-2026-27-premier-league-title",
+      "status": 200,
+      "seconds": 0.585567,
+      "heading": "Arsenal Is Favoured for the 2026–27 Premier League Title",
+      "predictedVisible": true
+    },
+    {
+      "pinId": 19333,
+      "url": "https://www.chronopin.com/pin/19333/si-woo-kim-leads-an-open-genesis-championship-forecast",
+      "status": 200,
+      "seconds": 0.430983,
+      "heading": "Si Woo Kim Leads an Open Genesis Championship Forecast",
+      "predictedVisible": true
+    },
+    {
+      "pinId": 158,
+      "url": "https://www.chronopin.com/pin/158/will-humans-achieve-a-type-1-civilization-by-2100",
+      "status": 200,
+      "seconds": 0.352535,
+      "heading": "Will Humans Achieve a Type 1 Civilization by 2100?",
+      "archiveVisible": true
+    },
+    {
+      "pinId": 1678,
+      "url": "https://www.chronopin.com/pin/1678/fed-decides-whether-to-hike-rates-again-at-october-2026-fomc-meeting",
+      "status": 200,
+      "seconds": 0.538332,
+      "heading": "Fed Decides Whether to Hike Rates Again at October 2026 FOMC Meeting"
+    },
+    {
+      "pinId": 1950,
+      "url": "https://www.chronopin.com/pin/1950/americans-vote-in-the-2028-u-s-presidential-election",
+      "status": 200,
+      "seconds": 0.729635,
+      "heading": "Americans Vote in the 2028 U.S. Presidential Election"
+    },
+    {
+      "pinId": 1952,
+      "url": "https://www.chronopin.com/pin/1952/will-the-us-iran-ceasefire-last-through-october-31",
+      "status": 200,
+      "seconds": 0.476169,
+      "heading": "Will the US-Iran Ceasefire Last Through October 31?"
+    },
+    {
+      "pinId": 1953,
+      "url": "https://www.chronopin.com/pin/1953/the-2026-world-series-opens-on-23-october",
+      "status": 200,
+      "seconds": 0.43312,
+      "heading": "The 2026 World Series Opens on 23 October"
+    },
+    {
+      "pinId": 1954,
+      "url": "https://www.chronopin.com/pin/1954/super-bowl-lxi-decides-the-2026-nfl-season-at-sofi-stadium",
+      "status": 200,
+      "seconds": 0.369224,
+      "heading": "Super Bowl LXI Decides the 2026 NFL Season at SoFi Stadium"
+    },
+    {
+      "pinId": 1955,
+      "url": "https://www.chronopin.com/pin/1955/the-2027-nba-finals-crown-a-champion",
+      "status": 200,
+      "seconds": 0.438233,
+      "heading": "The 2027 NBA Finals Crown a Champion"
+    },
+    {
+      "pinId": 1956,
+      "url": "https://www.chronopin.com/pin/1956/the-2027-stanley-cup-final-decides-the-nhl-title",
+      "status": 200,
+      "seconds": 0.433318,
+      "heading": "The 2027 Stanley Cup Final Decides the NHL Title"
+    },
+    {
+      "pinId": 1957,
+      "url": "https://www.chronopin.com/pin/1957/the-2027-champions-league-final-is-played-in-madrid",
+      "status": 200,
+      "seconds": 0.395578,
+      "heading": "The 2027 Champions League Final Is Played in Madrid"
+    },
+    {
+      "pinId": 1958,
+      "url": "https://www.chronopin.com/pin/1958/the-2026-ballon-d-or-is-awarded-in-london",
+      "status": 200,
+      "seconds": 1.154532,
+      "heading": "The 2026 Ballon d'Or Is Awarded in London"
+    },
+    {
+      "pinId": 1964,
+      "url": "https://www.chronopin.com/pin/1964/the-highest-grossing-film-of-2026-is-settled-on-31-december",
+      "status": 200,
+      "seconds": 0.450441,
+      "heading": "The Highest-Grossing Film of 2026 Is Settled on 31 December"
+    },
+    {
+      "pinId": 1970,
+      "url": "https://www.chronopin.com/pin/1970/california-elects-its-next-governor",
+      "status": 200,
+      "seconds": 0.438475,
+      "heading": "California Elects Its Next Governor"
+    },
+    {
+      "pinId": 1976,
+      "url": "https://www.chronopin.com/pin/1976/france-votes-in-the-2027-presidential-election",
+      "status": 200,
+      "seconds": 0.416871,
+      "heading": "France Votes in the 2027 Presidential Election"
+    },
+    {
+      "pinId": 2827,
+      "url": "https://www.chronopin.com/pin/2827/tesla-q3-2026-us-28-046-billion-revenue-and-us-787-million-gaap-profit",
+      "status": 200,
+      "seconds": 0.478494,
+      "heading": "Tesla Q3 2026: US$28.046 Billion Revenue and US$787 Million GAAP Profit"
+    },
+    {
+      "pinId": 4013,
+      "url": "https://www.chronopin.com/pin/4013/the-2026-wnba-finals-tip-off",
+      "status": 200,
+      "seconds": 0.447255,
+      "heading": "The 2026 WNBA Finals Tip Off"
+    },
+    {
+      "pinId": 5174,
+      "url": "https://www.chronopin.com/pin/5174/brazil-holds-a-lula-vs-flavio-bolsonaro-presidential-runoff",
+      "status": 200,
+      "seconds": 0.366897,
+      "heading": "Brazil Holds a Lula vs Flávio Bolsonaro Presidential Runoff"
+    },
+    {
+      "pinId": 15638,
+      "url": "https://www.chronopin.com/pin/15638/japan-initiative-provides-up-to-us-21-billion-for-two-globalfoundries-operated-n",
+      "status": 200,
+      "seconds": 0.457623,
+      "heading": "Japan Initiative Provides Up to US$21 Billion for Two GlobalFoundries-Operated New York Fabs"
+    },
+    {
+      "pinId": 15985,
+      "url": "https://www.chronopin.com/pin/15985/cielo-cherokee-county-campus-us-2-1-billion-and-up-to-300-mw",
+      "status": 200,
+      "seconds": 0.511653,
+      "heading": "Cielo Cherokee County Campus: US$2.1 Billion and Up to 300 MW"
+    },
+    {
+      "pinId": 16017,
+      "url": "https://www.chronopin.com/pin/16017/brent-crude-oil-price-october-2026",
+      "status": 200,
+      "seconds": 0.532427,
+      "heading": "Brent Crude Oil Price — October 2026"
+    },
+    {
+      "pinId": 16408,
+      "url": "https://www.chronopin.com/pin/16408/cloudhq-plans-up-to-200-mw-across-its-msp-campus-in-chaska",
+      "status": 200,
+      "seconds": 0.431757,
+      "heading": "CloudHQ Plans Up to 200 MW Across Its MSP Campus in Chaska"
+    },
+    {
+      "pinId": 17115,
+      "url": "https://www.chronopin.com/pin/17115/antonelli-is-favoured-for-the-2026-formula1-drivers-championship",
+      "status": 200,
+      "seconds": 0.436886,
+      "heading": "Antonelli Is Favoured for the 2026 Formula1 Drivers’ Championship"
+    }
+  ],
+  "localCatchup": {
+    "scoresSaved": 0,
+    "scoresSkippedForLocalTextOrAbsentPin": 9,
+    "eventChecks": 40
+  },
+  "media": [
+    {
+      "slug": "bioware",
+      "originalUrl": "https://blog.bioware.com/wp-content/uploads/2026/10/Untitled-Design.png",
+      "source": "https://blog.bioware.com/2026/10/21/bioware-update/",
+      "credit": "BioWare / Electronic Arts",
+      "caption": "BioWare artwork accompanying the studio’s October 21, 2026 closure statement.",
+      "url": "https://chronopin.blob.core.windows.net/thumb/news-images/2026-10-21-pm/bioware-f709ae76dad4e176.webp",
+      "sha256": "f709ae76dad4e176252ff99287dc4ba643538fe42047dd127220ff3dde75f3c5",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "slug": "bae-facility",
+      "originalUrl": "https://bizwest.com/wp-content/uploads/2026/03/Danfoss-4120-Specialty-Place-Weld-CountyLongmotn-scaled.jpg",
+      "source": "https://bizwest.com/2026/10/21/bae-buys-weld-county-danfoss-facility-for-30m/",
+      "credit": "Christopher Wood / BizWest",
+      "caption": "Former Danfoss facility at Specialty Place in Weld County, acquired by BAE Systems; file photograph published in March 2026, before the announced retrofit.",
+      "url": "https://chronopin.blob.core.windows.net/thumb/news-images/2026-10-21-pm/bae-facility-201ff0ff5b93244c.webp",
+      "sha256": "201ff0ff5b93244c5b33e59be2e502a770a64617a280a82be965e91b0db97c1e",
+      "width": 1600,
+      "height": 1200
+    },
+    {
+      "slug": "cannondale-office",
+      "originalUrl": "https://s.hdnux.com/photos/01/67/54/26/31376781/3/rawImage.jpg",
+      "source": "https://www.ctinsider.com/business/article/cannondale-parent-closing-wilton-office-22487531.php",
+      "credit": "Contributed photo / CT Insider",
+      "caption": "Cycling Sports Group’s Cannondale office in Wilton, Connecticut, scheduled to close in phases through December 2027.",
+      "url": "https://chronopin.blob.core.windows.net/thumb/news-images/2026-10-21-pm/cannondale-office-700f0b2b3dae08ff.webp",
+      "sha256": "700f0b2b3dae08ffec654eecb6b53511953956900067a92ce98b3901cab3fbea",
+      "width": 920,
+      "height": 575
+    },
+    {
+      "slug": "amazon-district-map",
+      "originalUrl": "https://s.yimg.com/lo/mysterio/api/CD07D85AC1D34324254F65FF013B47420E856781B99AE76290221B1A5A2190EE/subgraphmysterio/resizefit_w960%3Bquality_80%3Bformat_webp/https%3A/media.zenfs.com/en/austin_american_statesman_hearst_articles_361/ac96e386fc3aecb051e22584220743db.jpg",
+      "source": "https://finance.yahoo.com/technology/articles/amazon-confirms-multibillion-dollar-robotics-100000856.html",
+      "credit": "Map: Ken Ellis / Houston Chronicle; source: City of Austin, via Austin American-Statesman / Yahoo Finance",
+      "caption": "Map of the broader Dog’s Head district in southeast Austin, where Amazon’s robotics facility is planned; this district outline is not the factory’s exact boundary.",
+      "url": "https://chronopin.blob.core.windows.net/thumb/news-images/2026-10-21-pm/amazon-district-map-d0afd0a240cc05be.webp",
+      "sha256": "d0afd0a240cc05be396240bec652ebe3e7d70a439b059e0d76337f6edbff9ced",
+      "width": 960,
+      "height": 637
+    },
+    {
+      "slug": "epl-market",
+      "originalUrl": "https://polymarket.com/api/og?eslug=epl-2027-champion-20260701200428749&tid=1792620465816",
+      "source": "https://polymarket.com/event/epl-2027-champion-20260701200428749",
+      "credit": "Polymarket",
+      "caption": "Premier League 2026–27 title-market preview captured October21,2026; a dated market forecast, not a final result.",
+      "url": "https://chronopin.blob.core.windows.net/thumb/news-images/2026-10-21-pm/epl-market-1b260661768d4e02.webp",
+      "sha256": "1b260661768d4e02828a8dd9636139b31878b8aa323899f647a5d8a5e076f4d2",
+      "width": 800,
+      "height": 418
+    },
+    {
+      "slug": "genesis-banner",
+      "originalUrl": "https://www.europeantour.com/api/images/image/upload/t_et__banner_375x184-2x/v1787313112/prod/vyerfordez9nqqkzz0vl",
+      "source": "https://www.europeantour.com/dpworld-tour/genesis-championship-2026/tv-schedule",
+      "credit": "DP World Tour / European Tour Productions",
+      "caption": "Woo Jeong Hills event banner on the DP World Tour’s2026 Genesis Championship coverage page; promotional course image, not a completed-tournament result.",
+      "url": "https://chronopin.blob.core.windows.net/thumb/news-images/2026-10-21-pm/genesis-banner-080a071c846a1d77.webp",
+      "sha256": "080a071c846a1d77fd43492c95cabe5d05cebea6ca80351c93e98ee221d3dd44",
+      "width": 750,
+      "height": 368
+    }
+  ],
+  "reviewMarks": [
+    5499,
+    3631,
+    6638,
+    16408
+  ],
+  "resolvedReviews": [
+    158,
+    15985
+  ],
+  "learnings": [
+    {
+      "at": "2026-10-21T22:21:00.420Z",
+      "text": "Cannondale company statement says Wilton operations wind down bymid-2027; WARN separations spanDecember21,2026–December31,2027and include remote roles. Amazon100mUSD is core/shell phase, not whole multibillion robotics project. BAE30mUSD is property purchase, not all-in manufacturing program. Preserve these distinctions in cost/date/job fields.",
+      "topic": "Project scope and workforce windows"
+    },
+    {
+      "at": "2026-10-21T22:21:00.425Z",
+      "text": "Cielo15985old1.5bheadline/summary contradicted its2.1bfield. SCGovernor andDCD support2.1b,30plannedjobs,up-to300MW,end2028; repaired all related text/date and then resolved review. CloudHQ16408currentprimary sources support200MWcampus across1–2buildings,no final application/no timeline; remove unsupported1.2b/1.0bprice conflict and explicitly mark inherited opening date unknown.",
+      "topic": "Evidence repair of held data-centre conflicts"
+    },
+    {
+      "at": "2026-10-21T22:21:00.429Z",
+      "text": "Genesis Championship Kalshi public page displayed$1,007,881volume while helpercontracts-times-price estimate was$23,473; label actual metric instead of silently calling helper estimate reported dollars. Official tournamentOct22–25overridesNov7/8administrative fallback. PremierLeague finalroundMay30,2027at16BSTdiffersfromJun14settlement buffer. Neither forecast is a confirmed winner.",
+      "topic": "Current contract volume and event onset"
+    },
+    {
+      "at": "2026-10-21T22:21:00.432Z",
+      "text": "TeslaQ3SECexhibit9914shows787mUSDGAAPnetincome vs1.697bnonGAAP; do not repeat1.7basGAAP. JavaOne2027page saysregistrationopenssoon but linksjavaone26: old live checkout does not prove2027sales. ValenciaFanFestremainingtickets are not race-grandstand inventory. Human rows preserved with exact scope marks.",
+      "topic": "Issuer profit measures and old ticket links"
+    },
+    {
+      "at": "2026-10-21T22:23:20.571Z",
+      "text": "Wayback availability API returned an accessible September23,2023capture of the exact July29,2014H+Type1civilization article. Opened/read headline and publication date before swapping only source transport on158. Preserve original author,2100forecast,unknown confidence and media; archived status200 alone is not content verification.",
+      "topic": "Recovering the persistent H+source gap"
+    }
+  ],
+  "noDeployment": true,
+  "noPostRunDatabasePull": true,
+  "completion": {
+    "id": 16,
+    "status": "ok",
+    "utcStartedDateTime": "2026-10-21T22:02:02.811Z",
+    "utcFinishedDateTime": "2026-10-21T22:30:06.582Z"
+  }
+}

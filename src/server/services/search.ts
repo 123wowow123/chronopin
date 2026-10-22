@@ -307,13 +307,14 @@ async function attachSearchedCompany(pins: Pins, query: SearchQuery) {
         : null;
   const company = await one;
   if (!company) return;
-  const [comments, follow, pinTones, productPictures, executives, parents] = await Promise.all([
+  const [comments, follow, pinTones, productPictures, executives, parents, ticker] = await Promise.all([
     Comment.forCompany(company.id, COMPANY_MOOD_COMMENTS),
     CompanyFollow.status(company.id, null),
     PinSentiment.forCompany(company.id),
     ProductPicture.forCompany(company.id),
     CompanyExecutive.forCompany(company.id),
     Company.parentChain(company.id),
+    Company.tickerOf(company.id),
   ]);
   // Pictures only for the pins with a product: each product's row shows one,
   // else the one looked up for it (0079).
@@ -324,6 +325,8 @@ async function attachSearchedCompany(pins: Pins, query: SearchQuery) {
     description: company.description,
     logoUrl: company.logoUrl,
     wikiUrl: company.wikiUrl,
+    // Its stock symbol: the panel graphs the price (StockPanel).
+    ticker,
     followerCount: follow.followerCount,
     commentCount: comments.length,
     // Its C-suite and their pay (0125); empty until looked up.

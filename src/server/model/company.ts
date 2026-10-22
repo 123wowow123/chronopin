@@ -235,6 +235,12 @@ export default class Company {
     return rows[0] || null;
   }
 
+  // The stock symbol the company trades under, or null (private or unlisted).
+  static async tickerOf(id: number): Promise<string | null> {
+    const rows = await db.query<{ tickerSymbol: string | null }>(`SELECT "tickerSymbol" FROM "Company" WHERE "id" = $1`, [id]);
+    return rows[0]?.tickerSymbol?.trim().toUpperCase() || null;
+  }
+
   // The company listed under this ticker, when only one is: several can
   // share one (Sony's divisions all trade as SONY), and then none is it.
   static async byTicker(symbol: string): Promise<CompanyRow | null> {

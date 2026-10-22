@@ -24,6 +24,8 @@ type Store = {
   background: string;
   text: string;
   border?: string;
+  // ISO countries the store serves; absent = ships worldwide.
+  countries?: string[];
 };
 
 const q = encodeURIComponent;
@@ -44,6 +46,7 @@ const STORES = {
   // (src/server/movieListing.ts).
   fandango: {
     name: 'Fandango',
+    countries: ['US'],
     host: /(^|\.)fandango\.com$/i,
     search: (s: string) => `https://www.fandango.com/search?q=${q(s)}&mode=general`,
     background: '#ff7300',
@@ -65,6 +68,7 @@ const STORES = {
   },
   mercari: {
     name: 'Mercari',
+    countries: ['US'],
     host: /(^|\.)mercari\.com$/i,
     search: (s: string) => `https://www.mercari.com/search/?keyword=${q(s)}`,
     background: '#5356ee',
@@ -95,6 +99,7 @@ const STORES = {
   },
   backmarket: {
     name: 'Back Market',
+    countries: ['US'],
     host: /(^|\.)backmarket\.com$/i,
     search: (s: string) => `https://www.backmarket.com/en-us/search?q=${q(s)}`,
     background: '#000000',
@@ -103,6 +108,7 @@ const STORES = {
   },
   swappa: {
     name: 'Swappa',
+    countries: ['US'],
     host: /(^|\.)swappa\.com$/i,
     search: (s: string) => `https://swappa.com/search?q=${q(s)}`,
     background: '#1ba94c',
@@ -146,7 +152,31 @@ export type ShopLink = {
   background?: string;
   text?: string;
   border?: string;
+  // ISO countries the link works in; absent = anywhere. The pin page shows
+  // the viewer's own country's links and folds the rest behind a "…".
+  countries?: string[];
 };
+
+// Country-code TLDs whose shops serve (essentially) that country only. A
+// plain .com is treated as worldwide.
+const CCTLD_COUNTRY: Record<string, string> = {
+  uk: 'GB', de: 'DE', fr: 'FR', it: 'IT', es: 'ES', nl: 'NL', jp: 'JP', cn: 'CN', kr: 'KR', in: 'IN', au: 'AU', ca: 'CA',
+  br: 'BR', mx: 'MX', se: 'SE', pl: 'PL', sg: 'SG', ae: 'AE', tr: 'TR', ie: 'IE', be: 'BE', at: 'AT', ch: 'CH', nz: 'NZ', za: 'ZA',
+};
+
+export function countryOfHost(url: string): string | undefined {
+  try {
+    const labels = new URL(url).hostname.toLowerCase().split('.');
+    const tld = labels[labels.length - 1];
+    if (labels.length > 1 && tld.length === 2) return CCTLD_COUNTRY[tld];
+  } catch {}
+  return undefined;
+}
+
+// Whether a link works for a viewer in this country. Unknown country or an
+// unrestricted link: yes.
+export const availableIn = (link: { countries?: string[] }, country: string | null) =>
+  !link.countries || !country || link.countries.includes(country.toUpperCase());
 
 // Ad and campaign parameters a pasted link picks up ("?utm_source=google&
 // gclid=..."): they credit someone else's campaign and say nothing about the
@@ -292,6 +322,7 @@ export function shopLinks(pin: Pick<PinJson, 'productName' | 'merchants' | 'tags
       border: store?.border,
       url: affiliateUrl(url),
       price: m.price ?? undefined,
+      countries: store?.countries ?? (countryOfHost(url) ? [countryOfHost(url)!] : undefined),
       search: false,
       amazon: isAmazonStoreUrl(url),
       ...(isEbayUrl(url) && { ebay: true }),
@@ -309,6 +340,7 @@ export function shopLinks(pin: Pick<PinJson, 'productName' | 'merchants' | 'tags
       links.push({
         store: store.name,
         url: affiliateUrl(url),
+        countries: store.countries,
         search: true,
         amazon: isAmazonStoreUrl(url),
         ...(isEbayUrl(url) && { ebay: true }),

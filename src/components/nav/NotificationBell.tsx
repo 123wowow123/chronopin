@@ -2,7 +2,7 @@
 
 import { personPath } from '@/lib/people';
 import Link from '@/components/ui/Link';
-import { useCallback, useEffect, useId, useRef, useState } from 'react';
+import { useCallback, useEffect, useId, useMemo, useRef, useState } from 'react';
 import { Icon, type IconName } from '@/components/ui/Icon';
 import { UserAvatar } from '@/components/ui/UserAvatar';
 import { api } from '@/lib/client/api';
@@ -57,6 +57,7 @@ function commentHref(n: Notification): string {
 
 // The search that opens a company's panel, where its Follow button is.
 const companyHref = (name: string) => `/search?q=${encodeURIComponent(term('company', name))}`;
+const tickerHref = (ticker: string) => `/search?q=${encodeURIComponent(term('ticker', ticker))}`;
 const userHref = (handle: string) => `/search?q=user:${encodeURIComponent(handle)}`;
 
 // A batch stands for pins the bell cannot name one by one, so it leads to the
@@ -359,17 +360,17 @@ function TradeDay({ items, day, renderRow }: { items: Notification[]; day: numbe
   ] as const;
   return (
     <div className="text-sm">
-      <button
-        type="button"
-        aria-expanded={open}
-        aria-controls={listId}
-        onClick={() => setOpen((o) => !o)}
-        className="flex w-full flex-col gap-1.5 px-4 py-2.5 text-start"
-      >
-        <span className="flex items-center justify-between gap-2 font-semibold text-ink">
+      <div className="flex w-full flex-col gap-1.5 px-4 py-2.5">
+        <button
+          type="button"
+          aria-expanded={open}
+          aria-controls={listId}
+          onClick={() => setOpen((o) => !o)}
+          className="flex items-center justify-between gap-2 text-start font-semibold text-ink"
+        >
           {dayLabel}
           <Icon name="chevron" className={`size-4 shrink-0 text-subtle transition-transform ${open ? 'rotate-180' : ''}`} />
-        </span>
+        </button>
         <span className="grid grid-cols-2 gap-2">
           {tiles.map(([key, count, all, tone]) => {
             // Collapsed: only tickers more than one person traded.
@@ -385,7 +386,8 @@ function TradeDay({ items, day, renderRow }: { items: Notification[]; day: numbe
                   {list.map(([ticker, people]) => (
                     <span key={ticker} className="flex min-w-0 items-baseline gap-1.5">
                       <span className="w-4 shrink-0 text-end tabular-nums">{people}</span>
-                      <span className="truncate font-medium text-ink">{ticker}</span>
+                      {/* The ticker searches its company: the panel shows it with its stock graph. */}
+                      <Link href={tickerHref(ticker)} className="truncate font-medium text-ink hover:underline">{ticker}</Link>
                     </span>
                   ))}
                 </span>
@@ -394,7 +396,7 @@ function TradeDay({ items, day, renderRow }: { items: Notification[]; day: numbe
             );
           })}
         </span>
-      </button>
+      </div>
       {open ? <ul id={listId} className="divide-y divide-line border-t border-line">{items.map(renderRow)}</ul> : null}
     </div>
   );
@@ -869,6 +871,29 @@ export function TradesHistoryFeed() {
     const id = window.setTimeout(load, 0);
     return () => window.clearTimeout(id);
   }, [load]);
+  // The days shown and the ticker rankings, recomputed only when the data or the span changes.
+  const { days, all, ranked } = useMemo(() => {
+    const rows = items ?? [];
+    const days = Array.from({ length: weeks * 7 }, (_, i) => ({
+      day: -i,
+      items: rows.filter((n) => n.tradeFiledDate?.slice(0, 10) === dayKey(-i)),
+    })).filter((g) => g.items.length);
+    const all = days.flatMap((g) => g.items);
+    // Per ticker: how many people traded it and the midpoint dollar value, ranked like the bell.
+    const rank = (pick: (n: Notification) => Record<string, number> | null) => {
+      const stats = new Map<string, { people: Set<string>; value: number }>();
+      for (const n of all) {
+        for (const [ticker, value] of Object.entries(pick(n) ?? {})) {
+          const st = stats.get(ticker) ?? { people: new Set<string>(), value: 0 };
+          st.people.add(n.personName ?? String(n.id));
+          st.value += value;
+          stats.set(ticker, st);
+        }
+      }
+      return [...stats].sort((a, b) => b[1].people.size - a[1].people.size || b[1].value - a[1].value);
+    };
+    return { days, all, ranked: { buys: rank((n) => n.tradeBuyValues), sells: rank((n) => n.tradeSellValues) } };
+  }, [items, weeks]);
   if (failed) return (
     <div role="alert" className="surface px-4 py-6 text-center text-sm text-subtle">
       {t('common.somethingWrong')}{' '}
@@ -876,13 +901,8 @@ export function TradesHistoryFeed() {
     </div>
   );
   if (items === null) return <div className="surface px-4 py-6 text-center text-sm text-subtle">{t('common.loading')}</div>;
-  const days = Array.from({ length: weeks * 7 }, (_, i) => ({
-    day: -i,
-    items: items.filter((n) => n.tradeFiledDate?.slice(0, 10) === dayKey(-i)),
-  })).filter((g) => g.items.length);
   if (!days.length) return <div className="surface px-4 py-10 text-center text-sm text-subtle">{t('notifications.empty')}</div>;
   const sum = (rows: Notification[], pick: (n: Notification) => number | null) => rows.reduce((total, n) => total + (pick(n) ?? 0), 0);
-  const all = days.flatMap((g) => g.items);
   const people = new Set(all.map((n) => n.personName)).size;
   const tone = { tradeBuys: 'text-success-soft ring-success/40', tradeSells: 'text-danger-soft ring-danger/40' } as const;
   const dayLabel = (day: number) =>
@@ -890,24 +910,14 @@ export function TradesHistoryFeed() {
       ? new Intl.RelativeTimeFormat(locale, { numeric: 'auto' }).format(day, 'day')
       : new Intl.DateTimeFormat(locale, { weekday: 'long' }).format(dayDate(day));
   const dateLabel = (day: number) => new Intl.DateTimeFormat(locale, { month: 'short', day: 'numeric' }).format(dayDate(day));
-  // Per ticker: how many people traded it and the midpoint dollar value, ranked like the bell.
-  const rank = (pick: (n: Notification) => Record<string, number> | null) => {
-    const stats = new Map<string, { people: Set<string>; value: number }>();
-    for (const n of all) {
-      for (const [ticker, value] of Object.entries(pick(n) ?? {})) {
-        const st = stats.get(ticker) ?? { people: new Set<string>(), value: 0 };
-        st.people.add(n.personName ?? String(n.id));
-        st.value += value;
-        stats.set(ticker, st);
-      }
-    }
-    return [...stats].sort((a, b) => b[1].people.size - a[1].people.size || b[1].value - a[1].value);
-  };
   const money = new Intl.NumberFormat(locale, { style: 'currency', currency: 'USD', notation: 'compact', maximumFractionDigits: 1 });
   const total = (values: Record<string, number> | null) => Object.values(values ?? {}).reduce((a, b) => a + b, 0);
   const weekLabel = (w: number) => new Intl.NumberFormat(locale, { style: 'unit', unit: 'week', unitDisplay: 'narrow' }).format(w);
   const chips = (tickers: string[] | null, cls: string) =>
-    tickers?.map((tk) => <span key={tk} className={`rounded-md px-1.5 py-0.5 text-[11px] font-semibold ${cls}`}>{tk}</span>);
+    tickers?.map((tk) => (
+      // Above the row's stretched person link: a ticker opens its company and stock graph.
+      <Link key={tk} href={tickerHref(tk)} className={`relative rounded-md px-1.5 py-0.5 text-[11px] font-semibold hover:underline ${cls}`}>{tk}</Link>
+    ));
   return (
     <div className="flex flex-col gap-4">
       <div role="group" aria-label={t('notifications.tradesToday')} className="surface flex gap-1 p-1">
@@ -940,8 +950,8 @@ export function TradesHistoryFeed() {
       </div>
       <div className="surface grid grid-cols-1 divide-y divide-line sm:grid-cols-2 sm:divide-x sm:divide-y-0 rtl:sm:divide-x-reverse">
         {([
-          ['tradeBuys', rank((n) => n.tradeBuyValues)],
-          ['tradeSells', rank((n) => n.tradeSellValues)],
+          ['tradeBuys', ranked.buys],
+          ['tradeSells', ranked.sells],
         ] as const).map(([key, list]) => (
           <div key={key} className="min-w-0 px-4 py-3">
             <h2 className={`mb-1.5 text-xs font-semibold tracking-wide uppercase ${tone[key].split(' ')[0]}`}>{t(`notifications.${key}`)}</h2>
@@ -950,7 +960,7 @@ export function TradesHistoryFeed() {
                 {list.slice(0, TOP_TICKERS).map(([ticker, st]) => (
                   <li key={ticker} className="flex items-baseline gap-2">
                     <span className="w-5 shrink-0 text-end text-xs tabular-nums text-subtle">{st.people.size}</span>
-                    <span className="min-w-0 flex-1 truncate font-semibold text-ink">{ticker}</span>
+                    <Link href={tickerHref(ticker)} className="min-w-0 flex-1 truncate font-semibold text-ink hover:underline">{ticker}</Link>
                     {st.value ? <span className="text-xs tabular-nums text-muted">{money.format(st.value)}</span> : null}
                   </li>
                 ))}
@@ -973,8 +983,8 @@ export function TradesHistoryFeed() {
           </header>
           <ul className="divide-y divide-line">
             {g.items.map((n) => (
-              <li key={n.id}>
-                <Link href={`${personPath(n.personName ?? '')}#trades`} className="flex items-start gap-3 px-4 py-3 text-sm hover:bg-raised/50">
+              <li key={n.id} className="relative">
+                <div className="flex items-start gap-3 px-4 py-3 text-sm hover:bg-raised/50">
                   {n.personPhotoUrl ? (
                     // eslint-disable-next-line @next/next/no-img-element -- portraits from arbitrary hosts
                     <img src={n.personPhotoUrl} alt="" loading="lazy" referrerPolicy="no-referrer" className="size-10 shrink-0 rounded-full bg-raised object-cover" />
@@ -984,7 +994,7 @@ export function TradesHistoryFeed() {
                     </span>
                   )}
                   <span className="flex min-w-0 flex-1 flex-col gap-1.5">
-                    <span className="truncate font-semibold text-ink">{n.personName}</span>
+                    <Link href={`${personPath(n.personName ?? '')}#trades`} className="truncate font-semibold text-ink after:absolute after:inset-0">{n.personName}</Link>
                     <span className="flex flex-wrap items-center gap-1">
                       {chips(n.tradeBuyTickers, 'bg-success/15 text-success-soft')}
                       {chips(n.tradeSellTickers, 'bg-danger/15 text-danger-soft')}
@@ -994,7 +1004,7 @@ export function TradesHistoryFeed() {
                     {total(n.tradeBuyValues) ? <span className={`rounded-full px-2 py-0.5 ring-1 ring-inset ${tone.tradeBuys}`}>{money.format(total(n.tradeBuyValues))}</span> : null}
                     {total(n.tradeSellValues) ? <span className={`rounded-full px-2 py-0.5 ring-1 ring-inset ${tone.tradeSells}`}>{money.format(total(n.tradeSellValues))}</span> : null}
                   </span>
-                </Link>
+                </div>
               </li>
             ))}
           </ul>

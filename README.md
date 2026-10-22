@@ -433,11 +433,6 @@ https://www.cnbc.com/2026/10/19/how-data-centers-are-reshaping-americas-aging-gr
 
 
 
-
-ensure the product buy button is working in the country your in or collapse it in ellipsis with country category
-http://localhost:3000/pin/15767/eric-bordelet-sydre-argelette-grand-cru-celebrated-worldwide-as-the-apex-of-fine
-
-
 pin thread of plane releases and specs
 https://www.cnbc.com/2026/10/20/boeing-737-max-10-certification.html
 
@@ -448,7 +443,7 @@ https://www.chronopin.com/pin/19327/lehigh-county-data-center-150-mw-facility-wi
 are they keywards in Datacenter & Infrastructure Telemetry that can be used for search pills?
 
 
-clicking stock ticker should show company and stock graph
+clicking stock ticker should search the company and show company and stock graph on the side panel
 http://localhost:3000/notifications/trades
 
 should show conflict of interest label if trade are flagged as such. thier profile should show which committies they are sitting on

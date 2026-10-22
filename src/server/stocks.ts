@@ -103,6 +103,12 @@ export async function identify(symbol: string): Promise<{ assetClass: AssetClass
   return null;
 }
 
+// identify, shared for the cache window: the graph on a company panel asks on
+// every open, and a quote ten minutes old is fine there.
+export function identifyCached(symbol: string): Promise<Awaited<ReturnType<typeof identify>>> {
+  return cached(`identify|${symbol}`, () => identify(symbol));
+}
+
 // Every daily close Nasdaq has for the symbol: the last 10 years, split-
 // adjusted. Asked as one range up to today, because a range that ends in the
 // past comes back empty (seen for 2022 and for 2023 with 2026 still in reach).

@@ -356,6 +356,8 @@ export type SearchedCompany = {
   description: string | null;
   logoUrl: string | null;
   wikiUrl: string | null;
+  // The stock symbol it trades under, if listed.
+  ticker?: string | null;
   followerCount: number;
   commentCount: number;
   mood: CommentMood | null;
