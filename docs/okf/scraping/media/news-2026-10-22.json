@@ -1,0 +1,69 @@
+{
+  "runId": 17,
+  "assets": [
+    {
+      "slug": "amazon-youth",
+      "sourceUrl": "https://assets.aboutamazon.com/cd/99/72c7f5be4e44a9cfc6a1e3f867b7/untitled-20-october-2026-at-13-50-15-5.png",
+      "credit": "Amazon / About Amazon",
+      "caption": "UK fulfilment-centre employees pictured in Amazon’s Youth Promise announcement; illustration of operations roles, not a count of new hires.",
+      "url": "https://chronopin.blob.core.windows.net/thumb/news-images/2026-10-22/amazon-youth-d0b1b890a28098c2.webp",
+      "sha256": "d0b1b890a28098c2a1e85fcec305a215403d78b7f39cc7ee015d8283fde308c6",
+      "width": 2000,
+      "height": 1125,
+      "sourcePage": "https://www.aboutamazon.com/news/company-news/amazon-youth-promise-uk"
+    },
+    {
+      "slug": "meta-logo",
+      "sourceUrl": "https://mmx.prnewswire.com/media/MS977650/Meta-Logo.jpg?id=OA3027103",
+      "credit": "Meta Platforms / PR Newswire",
+      "caption": "Meta corporate logo supplied with its October 21, 2026 results release.",
+      "url": "https://chronopin.blob.core.windows.net/thumb/news-images/2026-10-22/meta-logo-4a770b386eee6abb.webp",
+      "sha256": "4a770b386eee6abb09c8af5bf7d8a0f53d62fd0286c69c1816b794519d86db44",
+      "width": 400,
+      "height": 299
+    },
+    {
+      "slug": "ecb-market",
+      "sourceUrl": "https://kalshi.com/api-app/preview/KXCBDECISIONEU-26OCT29?width=1200&height=630",
+      "credit": "Kalshi",
+      "caption": "Kalshi preview for the October 29, 2026 ECB decision market; forecast evidence observed October 22, not a realized policy outcome.",
+      "url": "https://chronopin.blob.core.windows.net/thumb/news-images/2026-10-22/ecb-market-43b6e3207b478bc4.webp",
+      "sha256": "43b6e3207b478bc4dba1d0beceab9e35de8c9b0a16bfd2467633625b56ac6f40",
+      "width": 1200,
+      "height": 630
+    },
+    {
+      "slug": "barclays-cost-chart",
+      "sourceUrl": "https://home.barclays/content/dam/home-barclays/documents/investor-relations/ResultAnnouncements/Q32026Results/Q326-Results-Presentation.pdf",
+      "credit": "Barclays PLC",
+      "caption": "Barclays Q3 2026 presentation, slide 10: structural cost actions (£bn/£m), lagged gross efficiency savings and 2026 expected 5,000 FTE reductions. Forecast columns and consultation footnotes preserved; this is not a job-loss time series.",
+      "url": "https://chronopin.blob.core.windows.net/thumb/news-images/2026-10-22/barclays-cost-chart-1d19b37174e76cd0.webp",
+      "sha256": "1d19b37174e76cd06a37ce17ef43623daec206ba19fa2914a98ebb8e6b0656e7",
+      "width": 2000,
+      "height": 1125
+    },
+    {
+      "slug": "amazon-youth-worker",
+      "sourceUrl": "https://assets.aboutamazon.com/dims4/default/55c1e76/2147483647/strip/true/crop/1600x900+0+0/resize/1320x743!/quality/90/?url=https%3A%2F%2Fassets.aboutamazon.com%2Fda%2Ff8%2Fec00a5d54eeea370ed8f04309d4c%2Funtitled-20-october-2026-at-13-50-15-2.png",
+      "sourcePage": "https://www.aboutamazon.com/news/company-news/amazon-youth-promise-uk",
+      "credit": "Amazon / About Amazon",
+      "caption": "Amazon fulfilment-centre employee in a high-visibility vest, pictured in the UK Youth Promise announcement; illustrative employment photo, not evidence of a new-hire count.",
+      "url": "https://chronopin.blob.core.windows.net/thumb/news-images/2026-10-22/amazon-youth-worker-8145538c22c1124a.webp",
+      "sha256": "8145538c22c1124aaef9ab3a841ae53a6f9c2dc2d13d005f96c2bd55f8fd3a39",
+      "width": 1320,
+      "height": 743
+    },
+    {
+      "slug": "amazon-youth-employee",
+      "sourceUrl": "https://assets.aboutamazon.com/dims4/default/70bfbb8/2147483647/strip/true/crop/1600x900+0+0/resize/1320x743!/quality/90/?url=https%3A%2F%2Fassets.aboutamazon.com%2F90%2Fa3%2F5238a5144970bf5832df63fcc06c%2Funtitled-20-october-2026-at-13-50-15-1.png",
+      "sourcePage": "https://www.aboutamazon.com/news/company-news/amazon-youth-promise-uk",
+      "credit": "Amazon / About Amazon",
+      "caption": "Amazon fulfilment-centre employee in a high-visibility jacket, pictured in the UK Youth Promise announcement; illustrative employment photo, not evidence of a new-hire count.",
+      "url": "https://chronopin.blob.core.windows.net/thumb/news-images/2026-10-22/amazon-youth-employee-74aeebbc596ae3e9.webp",
+      "sha256": "74aeebbc596ae3e90665d916aef9cd7dc2242df4c443e19b6d77eabfbad9f8b8",
+      "width": 1320,
+      "height": 743
+    }
+  ],
+  "verification": "All six downloaded files visually inspected and public Azure copies checked by bytes, SHA256 and image decoding."
+}

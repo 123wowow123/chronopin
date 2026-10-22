@@ -163,7 +163,8 @@ async function main() {
     return;
   }
   if (!flags.prod) {
-    await db.query(`DELETE FROM "PinSiteShape"`);
+    // Only the outlines this script draws: a pin's route (scripts/routes) stays.
+    await db.query(`DELETE FROM "PinSiteShape" WHERE NOT jsonb_path_exists("geojson", '$.features[*] ? (@.properties.kind == "route")')`);
     for (const [id, shape] of result) await saveSiteShape(id, shape);
     console.log(`saved ${result.size} PinSiteShape rows locally`);
     return;

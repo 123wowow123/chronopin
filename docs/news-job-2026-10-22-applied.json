@@ -1,0 +1,1524 @@
+{
+  "runId": 17,
+  "jobId": "news",
+  "driver": "session",
+  "trigger": "manual",
+  "startedAt": "2026-10-22T14:03:34.729Z",
+  "tasks": [
+    "weekReview",
+    "freshSources",
+    "eventInfo",
+    "pinAds",
+    "holidayAds",
+    "adTranslations",
+    "personTrades",
+    "threadPredicted",
+    "breakingNews",
+    "predictionMarkets",
+    "layoffs",
+    "hiringJobCreation",
+    "modelScores",
+    "sentiment"
+  ],
+  "newPinIds": [
+    19334,
+    19335,
+    19336,
+    19337
+  ],
+  "existingContentUpdatedIds": [
+    1678,
+    1950,
+    1952,
+    1953,
+    1954,
+    1955,
+    1956,
+    1957,
+    1958,
+    1964,
+    1970,
+    1976,
+    3066,
+    3584,
+    4013,
+    4087,
+    4350,
+    5174,
+    6655,
+    16017,
+    17115,
+    18959,
+    19332
+  ],
+  "eventReadings": [
+    {
+      "pinId": 251,
+      "performers": [],
+      "ticketUrl": "https://la28.org/en/ticketing.html",
+      "lowPrice": null,
+      "highPrice": null,
+      "priceCurrency": null,
+      "availability": null,
+      "onSaleDate": null,
+      "source": "hand",
+      "sourceUrl": "https://la28.org/en/newsroom/la28-launches-global-olympic-ticket-sales.html",
+      "checkedAt": "2026-10-22T14:16:49.830Z",
+      "tiers": [],
+      "itinerary": []
+    },
+    {
+      "pinId": 2073,
+      "performers": [],
+      "ticketUrl": "https://www.rugbyworldcup.com/2027/en/tickets",
+      "lowPrice": null,
+      "highPrice": null,
+      "priceCurrency": null,
+      "availability": "InStock",
+      "onSaleDate": "2026-10-01T02:00:00.000Z",
+      "source": "hand",
+      "sourceUrl": "https://www.world.rugby/news/1002155/mens-rugby-world-cup-2027-ticketing-programme-unveiled-a-new-era-of-openness-and-inclusivity",
+      "checkedAt": "2026-10-22T14:16:49.830Z",
+      "tiers": [],
+      "itinerary": []
+    },
+    {
+      "pinId": 2074,
+      "performers": [],
+      "ticketUrl": "https://tickets.cricketworldcup.com",
+      "lowPrice": null,
+      "highPrice": null,
+      "priceCurrency": null,
+      "availability": null,
+      "onSaleDate": null,
+      "source": "hand",
+      "sourceUrl": "https://www.icc-cricket.com/tournaments/icc-cricket-world-cup-2027/news/icc-men-s-cricket-world-cup-2027-ticket-applications-surpass-one-million",
+      "checkedAt": "2026-10-22T14:16:49.830Z",
+      "tiers": [],
+      "itinerary": []
+    },
+    {
+      "pinId": 2076,
+      "performers": [
+        {
+          "name": "Team Europe",
+          "type": "PerformingGroup"
+        },
+        {
+          "name": "Team USA",
+          "type": "PerformingGroup"
+        }
+      ],
+      "ticketUrl": "https://www.rydercup.com/tickets/2027",
+      "lowPrice": null,
+      "highPrice": null,
+      "priceCurrency": null,
+      "availability": null,
+      "onSaleDate": null,
+      "source": "hand",
+      "sourceUrl": "https://www.rydercup.com/attend/ticket-information",
+      "checkedAt": "2026-10-22T14:16:49.830Z",
+      "tiers": [],
+      "itinerary": []
+    },
+    {
+      "pinId": 2274,
+      "performers": [],
+      "ticketUrl": "https://powerhouse.com.au/visit/parramatta",
+      "lowPrice": 0,
+      "highPrice": 0,
+      "priceCurrency": "AUD",
+      "availability": "InStock",
+      "onSaleDate": null,
+      "source": "hand",
+      "sourceUrl": "https://powerhouse.com.au/visit/parramatta",
+      "checkedAt": "2026-10-22T14:16:49.830Z",
+      "tiers": [
+        {
+          "note": "Free; book arrival time. Task Eternal exhibition is separately ticketed, price not found",
+          "label": "General entry (museum and 4 exhibitions)",
+          "price": 0
+        }
+      ],
+      "itinerary": []
+    },
+    {
+      "pinId": 2379,
+      "performers": [],
+      "ticketUrl": "https://www.comic-con.org/cc/badges/",
+      "lowPrice": 34,
+      "highPrice": 88,
+      "priceCurrency": "USD",
+      "availability": "PreOrder",
+      "onSaleDate": "2026-10-17T00:00:00.000Z",
+      "source": "hand",
+      "sourceUrl": "https://www.comic-con.org/cc/badges/",
+      "checkedAt": "2026-10-22T14:16:49.830Z",
+      "tiers": [
+        {
+          "note": "only with Thu-Sun badges",
+          "label": "Adult - Wednesday Preview Night",
+          "price": 67
+        },
+        {
+          "label": "Adult - Thursday",
+          "price": 88
+        },
+        {
+          "label": "Adult - Friday",
+          "price": 88
+        },
+        {
+          "label": "Adult - Saturday",
+          "price": 88
+        },
+        {
+          "label": "Adult - Sunday",
+          "price": 67
+        },
+        {
+          "label": "Junior / U.S. Military / Senior - Preview Night",
+          "price": 34
+        },
+        {
+          "label": "Junior / U.S. Military / Senior - Thursday",
+          "price": 44
+        },
+        {
+          "label": "Junior / U.S. Military / Senior - Friday",
+          "price": 44
+        },
+        {
+          "label": "Junior / U.S. Military / Senior - Saturday",
+          "price": 44
+        },
+        {
+          "label": "Junior / U.S. Military / Senior - Sunday",
+          "price": 34
+        },
+        {
+          "note": "free with paying adult",
+          "label": "Child (12 and under)",
+          "price": 0
+        }
+      ],
+      "itinerary": []
+    },
+    {
+      "pinId": 2484,
+      "performers": [],
+      "ticketUrl": "https://www.wimbledon.com/en_GB/tickets",
+      "lowPrice": null,
+      "highPrice": null,
+      "priceCurrency": null,
+      "availability": null,
+      "onSaleDate": null,
+      "source": "hand",
+      "sourceUrl": "https://www.wimbledon.com/en_GB/atoz/dates.html",
+      "checkedAt": "2026-10-22T14:16:49.830Z",
+      "tiers": [],
+      "itinerary": []
+    },
+    {
+      "pinId": 2485,
+      "performers": [],
+      "ticketUrl": "https://www.wimbledon.com/en_GB/tickets",
+      "lowPrice": null,
+      "highPrice": null,
+      "priceCurrency": null,
+      "availability": null,
+      "onSaleDate": null,
+      "source": "hand",
+      "sourceUrl": "https://www.wimbledon.com/en_GB/atoz/dates.html",
+      "checkedAt": "2026-10-22T14:16:49.830Z",
+      "tiers": [],
+      "itinerary": []
+    },
+    {
+      "pinId": 2496,
+      "performers": [],
+      "ticketUrl": "https://www.grandprix.com.au/en/tickets/",
+      "lowPrice": null,
+      "highPrice": null,
+      "priceCurrency": null,
+      "availability": "PreOrder",
+      "onSaleDate": "2026-10-06T01:00:00.000Z",
+      "source": "hand",
+      "sourceUrl": "https://www.grandprix.com.au/",
+      "checkedAt": "2026-10-22T14:16:49.830Z",
+      "tiers": [],
+      "itinerary": []
+    },
+    {
+      "pinId": 2498,
+      "performers": [],
+      "ticketUrl": "https://ticketing.formula1.com/china/",
+      "lowPrice": null,
+      "highPrice": null,
+      "priceCurrency": null,
+      "availability": "PreOrder",
+      "onSaleDate": null,
+      "source": "hand",
+      "sourceUrl": "https://ticketing.formula1.com/china/",
+      "checkedAt": "2026-10-22T14:16:49.830Z",
+      "tiers": [],
+      "itinerary": []
+    },
+    {
+      "pinId": 2499,
+      "performers": [],
+      "ticketUrl": "https://f1miamigp.com/tickets/",
+      "lowPrice": null,
+      "highPrice": null,
+      "priceCurrency": null,
+      "availability": "InStock",
+      "onSaleDate": null,
+      "source": "hand",
+      "sourceUrl": "https://f1miamigp.com/tickets/",
+      "checkedAt": "2026-10-22T14:16:49.830Z",
+      "tiers": [],
+      "itinerary": []
+    },
+    {
+      "pinId": 2500,
+      "performers": [],
+      "ticketUrl": "https://gpcanada.ca/en/2027-tickets/",
+      "lowPrice": null,
+      "highPrice": null,
+      "priceCurrency": null,
+      "availability": "PreOrder",
+      "onSaleDate": null,
+      "source": "hand",
+      "sourceUrl": "https://gpcanada.ca/en/2027-tickets/",
+      "checkedAt": "2026-10-22T14:16:49.830Z",
+      "tiers": [],
+      "itinerary": []
+    },
+    {
+      "pinId": 2501,
+      "performers": [],
+      "ticketUrl": "https://ticketing.formula1.com/monaco/",
+      "lowPrice": null,
+      "highPrice": null,
+      "priceCurrency": null,
+      "availability": "InStock",
+      "onSaleDate": "2026-10-01T00:00:00.000Z",
+      "source": "hand",
+      "sourceUrl": "https://ticketing.formula1.com/monaco/",
+      "checkedAt": "2026-10-22T14:16:49.830Z",
+      "tiers": [],
+      "itinerary": []
+    },
+    {
+      "pinId": 2503,
+      "performers": [],
+      "ticketUrl": "https://www.silverstone.co.uk/events/formula-1-british-grand-prix/tickets",
+      "lowPrice": null,
+      "highPrice": null,
+      "priceCurrency": null,
+      "availability": "InStock",
+      "onSaleDate": null,
+      "source": "hand",
+      "sourceUrl": "https://www.silverstone.co.uk/events/formula-1-british-grand-prix/tickets",
+      "checkedAt": "2026-10-22T14:16:49.830Z",
+      "tiers": [],
+      "itinerary": []
+    },
+    {
+      "pinId": 2505,
+      "performers": [],
+      "ticketUrl": "https://www.spagrandprix.com/en/billetterie",
+      "lowPrice": 90,
+      "highPrice": 1182,
+      "priceCurrency": "EUR",
+      "availability": "InStock",
+      "onSaleDate": null,
+      "source": "hand",
+      "sourceUrl": "https://www.spagrandprix.com/en/billetterie",
+      "checkedAt": "2026-10-22T14:16:49.830Z",
+      "tiers": [],
+      "itinerary": []
+    },
+    {
+      "pinId": 2508,
+      "performers": [],
+      "ticketUrl": "https://ticketing.formula1.com/madrid-spain/",
+      "lowPrice": null,
+      "highPrice": null,
+      "priceCurrency": null,
+      "availability": "InStock",
+      "onSaleDate": "2026-09-29T15:00:00.000Z",
+      "source": "hand",
+      "sourceUrl": "https://ticketing.formula1.com/madrid-spain/",
+      "checkedAt": "2026-10-22T14:16:49.830Z",
+      "tiers": [],
+      "itinerary": []
+    },
+    {
+      "pinId": 2580,
+      "performers": [],
+      "ticketUrl": null,
+      "lowPrice": null,
+      "highPrice": null,
+      "priceCurrency": null,
+      "availability": null,
+      "onSaleDate": null,
+      "source": "claude",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Theatercaf%C3%A9en",
+      "checkedAt": "2026-10-22T14:16:49.830Z",
+      "tiers": [],
+      "itinerary": []
+    },
+    {
+      "pinId": 3234,
+      "performers": [],
+      "ticketUrl": null,
+      "lowPrice": null,
+      "highPrice": null,
+      "priceCurrency": null,
+      "availability": null,
+      "onSaleDate": null,
+      "source": "claude",
+      "sourceUrl": "https://www.portofsandiego.org/projects/chula-vista-bayfront",
+      "checkedAt": "2026-10-22T14:16:49.830Z",
+      "tiers": [],
+      "itinerary": []
+    },
+    {
+      "pinId": 3325,
+      "performers": [],
+      "ticketUrl": "https://sfoutsidelands.com/tickets",
+      "lowPrice": null,
+      "highPrice": null,
+      "priceCurrency": null,
+      "availability": "PreOrder",
+      "onSaleDate": null,
+      "source": "hand",
+      "sourceUrl": "https://sfoutsidelands.com/tickets",
+      "checkedAt": "2026-10-22T14:16:49.830Z",
+      "tiers": [],
+      "itinerary": []
+    },
+    {
+      "pinId": 3434,
+      "performers": [],
+      "ticketUrl": "https://www.ciscolive.com/global/attend/registration-packages.html",
+      "lowPrice": 895,
+      "highPrice": 3595,
+      "priceCurrency": "USD",
+      "availability": "InStock",
+      "onSaleDate": "2026-10-06T09:00:00.000Z",
+      "source": "hand",
+      "sourceUrl": "https://www.ciscolive.com/global/attend/registration-packages.html",
+      "checkedAt": "2026-10-22T14:16:49.830Z",
+      "tiers": [
+        {
+          "note": "Launch sale: Full Conference $2,595 with code CL27SAVE600 until 10/31",
+          "label": "Full Conference - Advance",
+          "price": 2795
+        },
+        {
+          "label": "Full Conference - Standard",
+          "price": 2995
+        },
+        {
+          "label": "Full Conference - Late",
+          "price": 3195
+        },
+        {
+          "label": "IT Leadership - Advance",
+          "price": 3195
+        },
+        {
+          "label": "IT Leadership - Standard",
+          "price": 3395
+        },
+        {
+          "label": "IT Leadership - Late",
+          "price": 3595
+        },
+        {
+          "label": "Explorer - Advance",
+          "price": 895
+        },
+        {
+          "label": "Explorer - Standard",
+          "price": 995
+        },
+        {
+          "label": "Explorer - Late",
+          "price": 1095
+        }
+      ],
+      "itinerary": []
+    },
+    {
+      "pinId": 3538,
+      "performers": [],
+      "ticketUrl": "https://www.gplb.com/tickets",
+      "lowPrice": null,
+      "highPrice": null,
+      "priceCurrency": null,
+      "availability": null,
+      "onSaleDate": null,
+      "source": "hand",
+      "sourceUrl": "https://www.gplb.com/tickets",
+      "checkedAt": "2026-10-22T14:16:49.830Z",
+      "tiers": [],
+      "itinerary": []
+    },
+    {
+      "pinId": 4352,
+      "performers": [],
+      "ticketUrl": "https://www.coachella.com/passes",
+      "lowPrice": null,
+      "highPrice": null,
+      "priceCurrency": null,
+      "availability": "SoldOut",
+      "onSaleDate": null,
+      "source": "hand",
+      "sourceUrl": "https://www.coachella.com/passes",
+      "checkedAt": "2026-10-22T14:16:49.830Z",
+      "tiers": [],
+      "itinerary": []
+    },
+    {
+      "pinId": 4402,
+      "performers": [],
+      "ticketUrl": "https://brasil.tomorrowland.com/en/tickets/festival-tickets/",
+      "lowPrice": 635,
+      "highPrice": 9715,
+      "priceCurrency": "BRL",
+      "availability": "InStock",
+      "onSaleDate": null,
+      "source": "hand",
+      "sourceUrl": "https://brasil.tomorrowland.com/en/tickets/festival-tickets/",
+      "checkedAt": "2026-10-22T14:16:49.830Z",
+      "tiers": [],
+      "itinerary": []
+    },
+    {
+      "pinId": 4616,
+      "performers": [],
+      "ticketUrl": null,
+      "lowPrice": 0,
+      "highPrice": 0,
+      "priceCurrency": "EUR",
+      "availability": "InStock",
+      "onSaleDate": null,
+      "source": "hand",
+      "sourceUrl": "https://www.muenchen.de/en/events/oktoberfest",
+      "checkedAt": "2026-10-22T14:16:49.830Z",
+      "tiers": [
+        {
+          "label": "Festival grounds and tents entry",
+          "price": 0
+        }
+      ],
+      "itinerary": []
+    },
+    {
+      "pinId": 4706,
+      "performers": [
+        {
+          "name": "Bruno Mars",
+          "type": "Person"
+        },
+        {
+          "name": "DJ Pee .Wee",
+          "type": "Person"
+        }
+      ],
+      "ticketUrl": "https://www.livenation.hk/en/event/bruno-mars-the-romantic-tour-hong-kong-tickets-edp1692929",
+      "lowPrice": 799,
+      "highPrice": null,
+      "priceCurrency": "HKD",
+      "availability": "InStock",
+      "onSaleDate": "2026-09-24T04:00:00.000Z",
+      "source": "hand",
+      "sourceUrl": "https://www.livenation.hk/en/event/bruno-mars-the-romantic-tour-hong-kong-tickets-edp1692929",
+      "checkedAt": "2026-10-22T14:16:49.830Z",
+      "tiers": [],
+      "itinerary": []
+    },
+    {
+      "pinId": 4879,
+      "performers": [
+        {
+          "name": "Russell Dickerson",
+          "type": "Person"
+        }
+      ],
+      "ticketUrl": "https://systems.aceedu.org/pos/stores/sun-n-fun-tickets",
+      "lowPrice": null,
+      "highPrice": null,
+      "priceCurrency": null,
+      "availability": "InStock",
+      "onSaleDate": null,
+      "source": "hand",
+      "sourceUrl": "https://flysnf.org/",
+      "checkedAt": "2026-10-22T14:16:49.830Z",
+      "tiers": [],
+      "itinerary": []
+    },
+    {
+      "pinId": 4881,
+      "performers": [],
+      "ticketUrl": "https://www.goodwood.com/motorsport/festival-of-speed/tickets-and-packages/",
+      "lowPrice": null,
+      "highPrice": null,
+      "priceCurrency": null,
+      "availability": null,
+      "onSaleDate": null,
+      "source": "hand",
+      "sourceUrl": "https://www.goodwood.com/motorsport/festival-of-speed/tickets-and-packages/",
+      "checkedAt": "2026-10-22T14:16:49.830Z",
+      "tiers": [],
+      "itinerary": []
+    },
+    {
+      "pinId": 4882,
+      "performers": [],
+      "ticketUrl": "https://www.eaa.org/airventure/EAA-AirVenture-Tickets",
+      "lowPrice": null,
+      "highPrice": null,
+      "priceCurrency": null,
+      "availability": "PreOrder",
+      "onSaleDate": null,
+      "source": "hand",
+      "sourceUrl": "https://www.eaa.org/airventure/EAA-AirVenture-Tickets",
+      "checkedAt": "2026-10-22T14:16:49.830Z",
+      "tiers": [],
+      "itinerary": []
+    },
+    {
+      "pinId": 4886,
+      "performers": [],
+      "ticketUrl": "https://www.caravan-salon.com/en/For_Visitors/Tickets_and_Registration/Ticket_shop",
+      "lowPrice": null,
+      "highPrice": null,
+      "priceCurrency": null,
+      "availability": "PreOrder",
+      "onSaleDate": "2027-06-01T00:00:00.000Z",
+      "source": "hand",
+      "sourceUrl": "https://www.caravan-salon.com/en/For_Visitors/Tickets_and_Registration/Ticket_shop",
+      "checkedAt": "2026-10-22T14:16:49.830Z",
+      "tiers": [],
+      "itinerary": []
+    },
+    {
+      "pinId": 4903,
+      "performers": [],
+      "ticketUrl": "https://www.himssconference.com/register/",
+      "lowPrice": 325,
+      "highPrice": 2295,
+      "priceCurrency": "USD",
+      "availability": "InStock",
+      "onSaleDate": null,
+      "source": "hand",
+      "sourceUrl": "https://www.himssconference.com/register/",
+      "checkedAt": "2026-10-22T14:16:49.830Z",
+      "tiers": [],
+      "itinerary": []
+    },
+    {
+      "pinId": 4906,
+      "performers": [],
+      "ticketUrl": "https://megaconorlando.fanexpohq.com/",
+      "lowPrice": null,
+      "highPrice": null,
+      "priceCurrency": null,
+      "availability": "InStock",
+      "onSaleDate": null,
+      "source": "hand",
+      "sourceUrl": "https://megaconorlando.fanexpohq.com/",
+      "checkedAt": "2026-10-22T14:16:49.830Z",
+      "tiers": [],
+      "itinerary": []
+    },
+    {
+      "pinId": 4907,
+      "performers": [],
+      "ticketUrl": "https://registration.nationalrestaurantshow.com/shownra271/flow/ATT",
+      "lowPrice": 125,
+      "highPrice": 1000,
+      "priceCurrency": "USD",
+      "availability": "InStock",
+      "onSaleDate": "2026-10-01T00:00:00.000Z",
+      "source": "hand",
+      "sourceUrl": "https://www.nationalrestaurantshow.com/home/badge-pricing/",
+      "checkedAt": "2026-10-22T14:16:49.830Z",
+      "tiers": [
+        {
+          "note": "Advanced $435, Regular $485, Onsite $535",
+          "label": "Essential Badge (Early Bird, to 31 Dec 2026)",
+          "price": 385
+        },
+        {
+          "note": "Advanced $175, Regular $225, Onsite $299",
+          "label": "Expo Badge (Early Bird, to 31 Dec 2026)",
+          "price": 125
+        },
+        {
+          "note": "$750 from 6 Apr 2027",
+          "label": "Premium Badge (to 5 Apr 2027)",
+          "price": 699
+        },
+        {
+          "label": "Non-Exhibiting Supplier Expo Badge",
+          "price": 1000
+        }
+      ],
+      "itinerary": []
+    },
+    {
+      "pinId": 5028,
+      "performers": [],
+      "ticketUrl": "https://www.londonmarathonevents.co.uk/london-marathon/good-age-entry",
+      "lowPrice": null,
+      "highPrice": null,
+      "priceCurrency": null,
+      "availability": null,
+      "onSaleDate": null,
+      "source": "hand",
+      "sourceUrl": "https://www.londonmarathonevents.co.uk/london-marathon",
+      "checkedAt": "2026-10-22T14:16:49.830Z",
+      "tiers": [],
+      "itinerary": []
+    },
+    {
+      "pinId": 5030,
+      "performers": [],
+      "ticketUrl": "https://www.tcssydneymarathon.com/sign-up",
+      "lowPrice": 280,
+      "highPrice": 330,
+      "priceCurrency": "AUD",
+      "availability": "InStock",
+      "onSaleDate": "2026-09-29T00:00:00.000Z",
+      "source": "hand",
+      "sourceUrl": "https://www.tcssydneymarathon.com/sign-up",
+      "checkedAt": "2026-10-22T14:16:49.830Z",
+      "tiers": [
+        {
+          "note": "charged only if drawn in ballot",
+          "label": "Domestic entry",
+          "price": 280
+        },
+        {
+          "note": "charged only if drawn in ballot",
+          "label": "International entry",
+          "price": 330
+        }
+      ],
+      "itinerary": []
+    },
+    {
+      "pinId": 5034,
+      "performers": [],
+      "ticketUrl": "https://enter.twooceansmarathon.org.za/two-oceans-2027/entry-windows",
+      "lowPrice": 450,
+      "highPrice": 840,
+      "priceCurrency": "ZAR",
+      "availability": null,
+      "onSaleDate": null,
+      "source": "hand",
+      "sourceUrl": "https://www.twooceansmarathon.org.za/ultra-marathon/",
+      "checkedAt": "2026-10-22T14:16:49.830Z",
+      "tiers": [
+        {
+          "label": "Ultra Marathon (56km, 4 Apr) - licensed South African",
+          "price": 840
+        },
+        {
+          "note": "unlicensed pay extra R95 temporary licence",
+          "label": "Half Marathon (21.1km, 3 Apr) - South African",
+          "price": 450
+        }
+      ],
+      "itinerary": []
+    },
+    {
+      "pinId": 5035,
+      "performers": [],
+      "ticketUrl": null,
+      "lowPrice": 1200,
+      "highPrice": 4500,
+      "priceCurrency": "ZAR",
+      "availability": null,
+      "onSaleDate": null,
+      "source": "hand",
+      "sourceUrl": "https://comrades.com/2027-entry-schedule",
+      "checkedAt": "2026-10-22T14:16:49.830Z",
+      "tiers": [
+        {
+          "note": "plus Easyreg administration fee",
+          "label": "South African entrants",
+          "price": 1200
+        },
+        {
+          "note": "plus Easyreg administration fee",
+          "label": "Rest of Africa entrants",
+          "price": 2000
+        },
+        {
+          "note": "plus Easyreg administration fee",
+          "label": "International entrants",
+          "price": 4500
+        }
+      ],
+      "itinerary": []
+    },
+    {
+      "pinId": 5445,
+      "performers": [],
+      "ticketUrl": null,
+      "lowPrice": 0,
+      "highPrice": 0,
+      "priceCurrency": "USD",
+      "availability": null,
+      "onSaleDate": null,
+      "source": "hand",
+      "sourceUrl": "https://www.thepopverse.com/comics-dc-absolute-batman-fcbd-2027-matt-fraction",
+      "checkedAt": "2026-10-22T14:16:49.830Z",
+      "tiers": [
+        {
+          "label": "Free Comic Book Day (free comics at participating shops)",
+          "price": 0
+        }
+      ],
+      "itinerary": []
+    },
+    {
+      "pinId": 6512,
+      "performers": [],
+      "ticketUrl": "https://www.goodwood.com/motorsport/members-meeting/tickets-and-packages/",
+      "lowPrice": null,
+      "highPrice": null,
+      "priceCurrency": null,
+      "availability": "InStock",
+      "onSaleDate": null,
+      "source": "hand",
+      "sourceUrl": "https://www.goodwood.com/motorsport/members-meeting/tickets-and-packages/",
+      "checkedAt": "2026-10-22T14:16:49.830Z",
+      "tiers": [],
+      "itinerary": []
+    },
+    {
+      "pinId": 6513,
+      "performers": [],
+      "ticketUrl": "https://www.goodwood.com/motorsport/goodwood-revival/tickets-and-packages/",
+      "lowPrice": null,
+      "highPrice": null,
+      "priceCurrency": null,
+      "availability": "PreOrder",
+      "onSaleDate": null,
+      "source": "hand",
+      "sourceUrl": "https://www.goodwood.com/grr/event-coverage/goodwood-revival/2027-revival-dates-revealed/",
+      "checkedAt": "2026-10-22T14:16:49.830Z",
+      "tiers": [],
+      "itinerary": []
+    },
+    {
+      "pinId": 6660,
+      "performers": [],
+      "ticketUrl": "https://europe.money2020.com/pass-picker",
+      "lowPrice": null,
+      "highPrice": null,
+      "priceCurrency": null,
+      "availability": "InStock",
+      "onSaleDate": null,
+      "source": "hand",
+      "sourceUrl": "https://europe.money2020.com/",
+      "checkedAt": "2026-10-22T14:16:49.830Z",
+      "tiers": [],
+      "itinerary": []
+    }
+  ],
+  "substantiveEventChanges": [
+    4706,
+    4906,
+    4881
+  ],
+  "scoresSaved": [
+    {
+      "id": 1678,
+      "textHash": "424d6adc12c1febbd23fba4d210bf7e078f8241af67e1064a09f666e73ccde5d",
+      "sentiment": 0,
+      "product": ""
+    },
+    {
+      "id": 3066,
+      "textHash": "6e58a0529a8be341febf6bbb7ea8c14dc009e86ee06514696dc53ff819ebe85f",
+      "sentiment": 0.25,
+      "product": ""
+    },
+    {
+      "id": 4087,
+      "textHash": "6ce011871bb18e24592f9b6db787005b64ed9fdbb2c48a21f29a8bf761fece4f",
+      "sentiment": 0.1,
+      "product": ""
+    },
+    {
+      "id": 4350,
+      "textHash": "c1544833f2a50b728c63088d03147300bc3082f615336b781242a3a3c59c8456",
+      "sentiment": 0.3,
+      "product": ""
+    },
+    {
+      "id": 6655,
+      "textHash": "4a0a72e0bb0f716c570bed67a1e229634186a201b17d7cd63611896a39c3a30f",
+      "sentiment": 0.2,
+      "product": ""
+    }
+  ],
+  "scoresAllVerified": [
+    {
+      "pinId": 1678,
+      "sentiment": 0,
+      "textHash": "424d6adc12c1febbd23fba4d210bf7e078f8241af67e1064a09f666e73ccde5d",
+      "utcScoredDateTime": "2026-10-22T14:39:04.787Z",
+      "product": null,
+      "productHash": "424d6adc12c1febbd23fba4d210bf7e078f8241af67e1064a09f666e73ccde5d"
+    },
+    {
+      "pinId": 3066,
+      "sentiment": 0.25,
+      "textHash": "6e58a0529a8be341febf6bbb7ea8c14dc009e86ee06514696dc53ff819ebe85f",
+      "utcScoredDateTime": "2026-10-22T14:39:04.826Z",
+      "product": null,
+      "productHash": "6e58a0529a8be341febf6bbb7ea8c14dc009e86ee06514696dc53ff819ebe85f"
+    },
+    {
+      "pinId": 4087,
+      "sentiment": 0.1,
+      "textHash": "6ce011871bb18e24592f9b6db787005b64ed9fdbb2c48a21f29a8bf761fece4f",
+      "utcScoredDateTime": "2026-10-22T14:39:04.832Z",
+      "product": null,
+      "productHash": "6ce011871bb18e24592f9b6db787005b64ed9fdbb2c48a21f29a8bf761fece4f"
+    },
+    {
+      "pinId": 4350,
+      "sentiment": 0.3,
+      "textHash": "c1544833f2a50b728c63088d03147300bc3082f615336b781242a3a3c59c8456",
+      "utcScoredDateTime": "2026-10-22T14:39:04.836Z",
+      "product": null,
+      "productHash": "c1544833f2a50b728c63088d03147300bc3082f615336b781242a3a3c59c8456"
+    },
+    {
+      "pinId": 6655,
+      "sentiment": 0.2,
+      "textHash": "4a0a72e0bb0f716c570bed67a1e229634186a201b17d7cd63611896a39c3a30f",
+      "utcScoredDateTime": "2026-10-22T14:39:04.840Z",
+      "product": null,
+      "productHash": "4a0a72e0bb0f716c570bed67a1e229634186a201b17d7cd63611896a39c3a30f"
+    },
+    {
+      "pinId": 19334,
+      "sentiment": -0.5,
+      "textHash": "b3eef081a2cae42988791658e6d3dfad441be0aad34c9b0a769af200d290d253",
+      "utcScoredDateTime": "2026-10-22T14:12:38.211Z",
+      "product": null,
+      "productHash": "b3eef081a2cae42988791658e6d3dfad441be0aad34c9b0a769af200d290d253"
+    },
+    {
+      "pinId": 19335,
+      "sentiment": 0.45,
+      "textHash": "6812215b1c32f19bff1ddf56459e3dc097ffe6d3ef7072d3d539c29482022e06",
+      "utcScoredDateTime": "2026-10-22T14:13:26.163Z",
+      "product": null,
+      "productHash": "6812215b1c32f19bff1ddf56459e3dc097ffe6d3ef7072d3d539c29482022e06"
+    },
+    {
+      "pinId": 19336,
+      "sentiment": 0.1,
+      "textHash": "2b0564d16cb41a569f6b1f283f4ba04b74b2bd21b05ed468acef44263d29a956",
+      "utcScoredDateTime": "2026-10-22T14:14:12.513Z",
+      "product": null,
+      "productHash": "2b0564d16cb41a569f6b1f283f4ba04b74b2bd21b05ed468acef44263d29a956"
+    }
+  ],
+  "heldResearchScoreIds": [
+    15801,
+    15802,
+    15803,
+    16361,
+    16366,
+    16367,
+    16368,
+    16375
+  ],
+  "concurrentPinsExcluded": "19338 onward, created after this run’s content cutoff",
+  "adStats": {
+    "PinAd": {
+      "verified": 67,
+      "refreshed": 52,
+      "added": 1,
+      "concurrentSkipped": []
+    },
+    "ProductAd": {
+      "verified": 36,
+      "refreshed": 32,
+      "added": 0,
+      "concurrentSkipped": []
+    },
+    "HolidayAd": {
+      "verified": 176,
+      "refreshed": 61,
+      "added": 7,
+      "concurrentSkipped": []
+    }
+  },
+  "titleTranslations": {
+    "newAds": 120,
+    "refreshedExistingTitles": 75,
+    "missingOrStale": []
+  },
+  "newTrades": 0,
+  "modelScores": {
+    "publishedOn": "2026-10-20",
+    "scored": 144,
+    "awaiting": 11,
+    "newFrontierTags": 0,
+    "gap": "Solar Pro 4 appears on live Arena but helper still awaiting"
+  },
+  "health": {
+    "checked": 25,
+    "withProblems": []
+  },
+  "nativePagesVerified": [
+    {
+      "pinId": 1678,
+      "status": 200,
+      "authorId": 326
+    },
+    {
+      "pinId": 1950,
+      "status": 200,
+      "authorId": 277
+    },
+    {
+      "pinId": 1952,
+      "status": 200,
+      "authorId": 277
+    },
+    {
+      "pinId": 1953,
+      "status": 200,
+      "authorId": 277
+    },
+    {
+      "pinId": 1954,
+      "status": 200,
+      "authorId": 277
+    },
+    {
+      "pinId": 1955,
+      "status": 200,
+      "authorId": 277
+    },
+    {
+      "pinId": 1956,
+      "status": 200,
+      "authorId": 277
+    },
+    {
+      "pinId": 1957,
+      "status": 200,
+      "authorId": 277
+    },
+    {
+      "pinId": 1958,
+      "status": 200,
+      "authorId": 277
+    },
+    {
+      "pinId": 1964,
+      "status": 200,
+      "authorId": 277
+    },
+    {
+      "pinId": 1970,
+      "status": 200,
+      "authorId": 277
+    },
+    {
+      "pinId": 1976,
+      "status": 200,
+      "authorId": 277
+    },
+    {
+      "pinId": 3066,
+      "status": 200,
+      "authorId": 410
+    },
+    {
+      "pinId": 3584,
+      "status": 200,
+      "authorId": 324
+    },
+    {
+      "pinId": 4013,
+      "status": 200,
+      "authorId": 306
+    },
+    {
+      "pinId": 4087,
+      "status": 200,
+      "authorId": 416
+    },
+    {
+      "pinId": 4350,
+      "status": 200,
+      "authorId": 317
+    },
+    {
+      "pinId": 4706,
+      "status": 200,
+      "authorId": 317
+    },
+    {
+      "pinId": 4881,
+      "status": 200,
+      "authorId": 422
+    },
+    {
+      "pinId": 4906,
+      "status": 200,
+      "authorId": 422
+    },
+    {
+      "pinId": 5174,
+      "status": 200,
+      "authorId": 324
+    },
+    {
+      "pinId": 6655,
+      "status": 200,
+      "authorId": 433
+    },
+    {
+      "pinId": 16017,
+      "status": 200,
+      "authorId": 408
+    },
+    {
+      "pinId": 17115,
+      "status": 200,
+      "authorId": 277
+    },
+    {
+      "pinId": 18959,
+      "status": 200,
+      "authorId": 324
+    },
+    {
+      "pinId": 19332,
+      "status": 200,
+      "authorId": 306
+    },
+    {
+      "pinId": 19334,
+      "status": 200,
+      "authorId": 326
+    },
+    {
+      "pinId": 19335,
+      "status": 200,
+      "authorId": 326
+    },
+    {
+      "pinId": 19336,
+      "status": 200,
+      "authorId": 276
+    },
+    {
+      "pinId": 19337,
+      "status": 200,
+      "authorId": 326
+    }
+  ],
+  "publicAzureAssets": 6,
+  "gaps": [
+    "Eight held identity/capex conflicts",
+    "No verified WTI terminal settlement market; intramonth touch and helper fallbacks rejected",
+    "Spotify full financial deck inaccessible",
+    "Solar Pro 4 helper matching/freshness gap",
+    "Holiday inventory gaps; no qualifying Diwali/Nowruz replacements",
+    "Bedford total-return-swap layout unsupported"
+  ],
+  "actions": [
+    {
+      "at": "2026-10-22T14:04:00.835Z",
+      "tool": "predicted_pins",
+      "detail": "19 predicted pin(s) returned (19 unthreaded of 34 total)"
+    },
+    {
+      "at": "2026-10-22T14:05:00.420Z",
+      "tool": "person_trades_update",
+      "detail": "0 trades in 0 new filings; prod added 0"
+    },
+    {
+      "at": "2026-10-22T14:05:31.630Z",
+      "tool": "oil_commodity_markets",
+      "detail": "scanned 6 monthly contracts, created 0, updated 0, threaded 0"
+    },
+    {
+      "at": "2026-10-22T14:07:03.878Z",
+      "tool": "model_scores",
+      "detail": "11 model pin(s) still awaiting an arena score, 0 frontier pin(s) to tag"
+    },
+    {
+      "at": "2026-10-22T14:12:38.354Z",
+      "tool": "create_pin",
+      "pinId": 19334,
+      "title": "Barclays Announces About 5,000 Expected Staff Reductions in AI Efficiency Drive",
+      "detail": "@EconDesk: Verified missing major dated news/workforce event or liquid policy forecast; duplicate checks by subject and exact source returned none."
+    },
+    {
+      "at": "2026-10-22T14:13:26.337Z",
+      "tool": "create_pin",
+      "pinId": 19335,
+      "title": "Amazon Commits 30,000 UK Entry-Level Roles to Young People Through 2030",
+      "detail": "@EconDesk: Verified missing major dated news/workforce event or liquid policy forecast; duplicate checks by subject and exact source returned none."
+    },
+    {
+      "at": "2026-10-22T14:14:13.332Z",
+      "tool": "create_pin",
+      "pinId": 19336,
+      "title": "Meta Q3 2026: Revenue Rises 26% to US$64.6 Billion as Legal Charge Hits Operating Profit",
+      "detail": "@TechDesk: Verified missing major dated news/workforce event or liquid policy forecast; duplicate checks by subject and exact source returned none."
+    },
+    {
+      "at": "2026-10-22T14:14:48.392Z",
+      "tool": "create_pin",
+      "pinId": 19337,
+      "title": "Kalshi Favours an ECB Rate Hold on October 29",
+      "detail": "@EconDesk: Verified missing major dated news/workforce event or liquid policy forecast; duplicate checks by subject and exact source returned none."
+    },
+    {
+      "at": "2026-10-22T14:16:05.292Z",
+      "tool": "update_pin",
+      "pinId": 6655,
+      "title": "Barclays Q3 2026: Profit Before Tax Rises 12% to £2.3 Billion",
+      "detail": "Replace Barclays earnings preview with realised issuer Q3 results, maintaining author, publication clock and sourced historical references."
+    },
+    {
+      "at": "2026-10-22T14:16:17.788Z",
+      "tool": "update_pin",
+      "pinId": 3584,
+      "title": "Los Angeles Chooses Between Karen Bass and Nithya Raman for Mayor",
+      "detail": "Add matched mayoral-winner forecast to existing November3 runoff pin; retain confirmed election timing and parent, reject staleJune2 market metadata."
+    },
+    {
+      "at": "2026-10-22T14:16:29.976Z",
+      "tool": "update_pin",
+      "pinId": 19334,
+      "title": "Barclays Announces About 5,000 Expected Staff Reductions in AI Efficiency Drive",
+      "detail": "Detach same-day earnings parent: all-day workforce disclosure marker precedes the06:00UTCearnings pin. No earlier layoff-series parent verified."
+    },
+    {
+      "at": "2026-10-22T14:16:41.645Z",
+      "tool": "add_pin_ad",
+      "pinId": 4450,
+      "title": "UGG Euphoria Throw Blanket, Plush Faux Fur Blanket, 50\" x 70\", Grey Blue",
+      "detail": "UGG is Deckers’ own brand; its Euphoria throw is relevant original-brand merchandise for Deckers’ earnings pin. (UGG, 4.7 stars / 2342 reviews)"
+    },
+    {
+      "at": "2026-10-22T14:16:43.913Z",
+      "tool": "update_pin",
+      "pinId": 19336,
+      "title": "Meta Q3 2026: Revenue Rises 26% to US$64.6 Billion as Legal Charge Hits Operating Profit",
+      "detail": "Cite the issuer for January19charter-effective date and unannounced stock-dividend payment; preserve exact financial measures."
+    },
+    {
+      "at": "2026-10-22T14:20:02.714Z",
+      "tool": "record_event_info",
+      "detail": "Verified40researched event checks,37checkedAt-only and3semantic corrections.4706LiveNation publishes fromHKD799; endpoint normalized unknownmax to799, repaired highPrice tonull throughadminAPIand verified.4906operator2027tickets on sale toInStock;4881alertsignupalone is notPreOrder, clearedavailability. Allother existingfields preserved."
+    },
+    {
+      "at": "2026-10-22T14:20:15.008Z",
+      "tool": "update_pin",
+      "pinId": 1950,
+      "title": "Americans Vote in the 2028 U.S. Presidential Election",
+      "detail": "Refresh October22 Democratic Presidential Nominee 2028 odds and dollar volume, preserving event onset, authorship and thread; reject unrelated coveredByPin matches."
+    },
+    {
+      "at": "2026-10-22T14:20:27.243Z",
+      "tool": "update_pin",
+      "pinId": 17115,
+      "title": "Antonelli Is Favoured for the 2026 Formula1 Drivers’ Championship",
+      "detail": "Refresh October22 F1 Drivers' Champion odds and dollar volume, preserving event onset, authorship and thread; reject unrelated coveredByPin matches."
+    },
+    {
+      "at": "2026-10-22T14:20:46.995Z",
+      "tool": "update_pin",
+      "pinId": 5174,
+      "title": "Brazil Holds a Lula vs Flávio Bolsonaro Presidential Runoff",
+      "detail": "Refresh October22 Brazil Presidential Election odds and dollar volume, preserving event onset, authorship and thread; reject unrelated coveredByPin matches."
+    },
+    {
+      "at": "2026-10-22T14:21:01.366Z",
+      "tool": "update_pin",
+      "pinId": 1976,
+      "title": "France Votes in the 2027 Presidential Election",
+      "detail": "Refresh October22 Next French Presidential Election odds and dollar volume, preserving event onset, authorship and thread; reject unrelated coveredByPin matches."
+    },
+    {
+      "at": "2026-10-22T14:21:27.395Z",
+      "tool": "update_pin",
+      "pinId": 1954,
+      "title": "Super Bowl LXI Decides the 2026 NFL Season at SoFi Stadium",
+      "detail": "Refresh October22 Pro Football: 2027 Champion odds and dollar volume, preserving event onset, authorship and thread; reject unrelated coveredByPin matches."
+    },
+    {
+      "at": "2026-10-22T14:21:38.623Z",
+      "tool": "update_pin",
+      "pinId": 1957,
+      "title": "The 2027 Champions League Final Is Played in Madrid",
+      "detail": "Refresh October22 UEFA Champions League: 2027 Champion odds and dollar volume, preserving event onset, authorship and thread; reject unrelated coveredByPin matches."
+    },
+    {
+      "at": "2026-10-22T14:21:51.121Z",
+      "tool": "update_pin",
+      "pinId": 1958,
+      "title": "The 2026 Ballon d'Or Is Awarded in London",
+      "detail": "Refresh October22 Ballon d'Or Winner 2026 odds and dollar volume, preserving event onset, authorship and thread; reject unrelated coveredByPin matches."
+    },
+    {
+      "at": "2026-10-22T14:22:23.319Z",
+      "tool": "update_pin",
+      "pinId": 1953,
+      "title": "The 2026 World Series Opens on 23 October",
+      "detail": "Refresh October22 MLB World Series Champion 2026 odds and dollar volume, preserving event onset, authorship and thread; reject unrelated coveredByPin matches."
+    },
+    {
+      "at": "2026-10-22T14:22:35.362Z",
+      "tool": "update_pin",
+      "pinId": 1970,
+      "title": "California Elects Its Next Governor",
+      "detail": "Refresh October22 California Governor Election Winner odds and dollar volume, preserving event onset, authorship and thread; reject unrelated coveredByPin matches."
+    },
+    {
+      "at": "2026-10-22T14:22:47.946Z",
+      "tool": "update_pin",
+      "pinId": 1955,
+      "title": "The 2027 NBA Finals Crown a Champion",
+      "detail": "Refresh October22 NBA: 2027 Champion odds and dollar volume, preserving event onset, authorship and thread; reject unrelated coveredByPin matches."
+    },
+    {
+      "at": "2026-10-22T14:23:01.458Z",
+      "tool": "update_pin",
+      "pinId": 19332,
+      "title": "Arsenal Is Favoured for the 2026–27 Premier League Title",
+      "detail": "Refresh October22 EPL: 2027 Champion odds and dollar volume, preserving event onset, authorship and thread; reject unrelated coveredByPin matches."
+    },
+    {
+      "at": "2026-10-22T14:23:21.038Z",
+      "tool": "update_pin",
+      "pinId": 1952,
+      "title": "Will the US-Iran Ceasefire Last Through October 31?",
+      "detail": "Refresh October22 US-Iran ceasefire continues through...? odds and dollar volume, preserving event onset, authorship and thread; reject unrelated coveredByPin matches."
+    },
+    {
+      "at": "2026-10-22T14:23:28.017Z",
+      "tool": "holiday_ads_check",
+      "detail": "hanukkah premium: Ner Mitzvah Pre - Filled Menorah Oil Cup Candles, Hanukkah Ohr Lights, 100% Olive Oil with ($44.99, 4.6 stars / 1009 reviews)"
+    },
+    {
+      "at": "2026-10-22T14:23:28.020Z",
+      "tool": "holiday_ads_check",
+      "detail": "brazil-carnival value: 6 Pcs Festival Party Face Jewels, Rhinestone Face Gems, Halloween Music Festival Birthday  ($9.99, 4.6 stars / 3647 reviews)"
+    },
+    {
+      "at": "2026-10-22T14:23:28.024Z",
+      "tool": "holiday_ads_check",
+      "detail": "brazil-carnival value: Zinniday Lace Masquerade Masks for Women - 1920s Peacock Feather Venetian Mask for Hallowe ($9.99, 4.3 stars / 437 reviews)"
+    },
+    {
+      "at": "2026-10-22T14:23:28.026Z",
+      "tool": "holiday_ads_check",
+      "detail": "brazil-carnival mid: Masquerade Mask for Women Lace Eye Mask for Halloween Costume Party ($11.95, 4 stars / 958 reviews)"
+    },
+    {
+      "at": "2026-10-22T14:23:28.029Z",
+      "tool": "holiday_ads_check",
+      "detail": "brazil-carnival premium: Halloween Masquerade Masks Venetian Feather Flower ($39.99, 4.7 stars / 132 reviews)"
+    },
+    {
+      "at": "2026-10-22T14:23:28.031Z",
+      "tool": "holiday_ads_check",
+      "detail": "mardi-gras value: 24Pcs King Cake Babies, 1.2 Inch Mini Babies for Baby Shower Game ($5.49, 4.7 stars / 1335 reviews)"
+    },
+    {
+      "at": "2026-10-22T14:23:28.033Z",
+      "tool": "holiday_ads_check",
+      "detail": "mardi-gras value: 12PCS Mardi Gras Beads, Gold Beaded Necklace Stuff Set, 33\" Mardi Gras Christmas Beads Nec ($4.99, 4.6 stars / 4152 reviews)"
+    },
+    {
+      "at": "2026-10-22T14:23:28.037Z",
+      "tool": "holiday_ads_check",
+      "detail": "mardi-gras mid: Community Coffee Mardi Gras King Cake Flavored 32 Ounces, Medium Roast Ground Coffee, 32 O ($16.98, 4.6 stars / 4353 reviews)"
+    },
+    {
+      "at": "2026-10-22T14:23:28.039Z",
+      "tool": "holiday_ads_check",
+      "detail": "mardi-gras mid: 100PCS Mardi Gras Beads, Green Purple Gold Metallic Mardi Gras Beads Necklaces Accessories ($14.99, 4.7 stars / 1563 reviews)"
+    },
+    {
+      "at": "2026-10-22T14:23:28.041Z",
+      "tool": "holiday_ads_check",
+      "detail": "mardi-gras premium: Caluda's Traditional King Cake DIY Kit - Fresh Un-Iced Brioche Cake with Icing Packets, Ma ($63.99, 4.2 stars / 92 reviews)"
+    },
+    {
+      "at": "2026-10-22T14:23:28.043Z",
+      "tool": "holiday_ads_check",
+      "detail": "mardi-gras premium: 96 Pcs With 10 Styles Mardi Gras Beads Necklaces Gold Purple Green Parade Party Throw Bead ($30.99, 4.6 stars / 13 reviews)"
+    },
+    {
+      "at": "2026-10-22T14:23:32.274Z",
+      "tool": "update_pin",
+      "pinId": 1964,
+      "title": "The Highest-Grossing Film of 2026 Is Settled on 31 December",
+      "detail": "Refresh October22 Highest grossing movie in 2026? odds and dollar volume, preserving event onset, authorship and thread; reject unrelated coveredByPin matches."
+    },
+    {
+      "at": "2026-10-22T14:23:44.477Z",
+      "tool": "update_pin",
+      "pinId": 4013,
+      "title": "The 2026 WNBA Finals Tip Off",
+      "detail": "Refresh October22 WNBA: 2026 Champion odds and dollar volume, preserving event onset, authorship and thread; reject unrelated coveredByPin matches."
+    },
+    {
+      "at": "2026-10-22T14:23:59.110Z",
+      "tool": "update_pin",
+      "pinId": 1956,
+      "title": "The 2027 Stanley Cup Final Decides the NHL Title",
+      "detail": "Refresh October22 NHL: 2027 Champion odds and dollar volume, preserving event onset, authorship and thread; reject unrelated coveredByPin matches."
+    },
+    {
+      "at": "2026-10-22T14:24:14.139Z",
+      "tool": "update_pin",
+      "pinId": 18959,
+      "title": "Iotova Is Favoured as Bulgaria Opens Presidential Voting on October 25",
+      "detail": "Refresh October22 Bulgaria Presidential Election odds and dollar volume, preserving event onset, authorship and thread; reject unrelated coveredByPin matches."
+    },
+    {
+      "at": "2026-10-22T14:24:33.605Z",
+      "tool": "update_pin",
+      "pinId": 1678,
+      "title": "Fed Decides Whether to Hike Rates Again at October 2026 FOMC Meeting",
+      "detail": "Refresh October22 Fed forecast with estimated dollar metric clearly labelled; preserve actual announcement clock."
+    },
+    {
+      "at": "2026-10-22T14:24:43.952Z",
+      "tool": "remove_holiday_ad",
+      "detail": "brazil-carnival B07CTB9N9P"
+    },
+    {
+      "at": "2026-10-22T14:24:43.957Z",
+      "tool": "remove_holiday_ad",
+      "detail": "brazil-carnival B0DKBQKMC6"
+    },
+    {
+      "at": "2026-10-22T14:24:43.965Z",
+      "tool": "remove_holiday_ad",
+      "detail": "brazil-carnival B0H2ZP71CJ"
+    },
+    {
+      "at": "2026-10-22T14:24:43.970Z",
+      "tool": "remove_holiday_ad",
+      "detail": "brazil-carnival B0DQKQQKGX"
+    },
+    {
+      "at": "2026-10-22T14:24:45.637Z",
+      "tool": "update_pin",
+      "pinId": 16017,
+      "title": "Brent Crude Oil Price — October 2026",
+      "detail": "Refresh October Brent from raw contracts, preserving settlement clock and September parent. No WTI values fabricated from helper fallbacks."
+    },
+    {
+      "at": "2026-10-22T14:27:54.964Z",
+      "tool": "update_pin",
+      "pinId": 4087,
+      "title": "Hermès Q3 2026: €4.096 Billion Sales, China-Region Growth Stalls",
+      "detail": "Replace Hermès preview with exact issuer Q3/9M sales and currency bases, distinguish old H1 appendix from new results."
+    },
+    {
+      "at": "2026-10-22T14:28:46.819Z",
+      "tool": "update_pin",
+      "pinId": 3066,
+      "title": "Nestlé Q3 2026: Organic Sales Grow 4.0%, Guidance Maintained",
+      "detail": "Replace Nestlé preview with verified issuer Q3/9M sales, organic/reported distinction, Russia consolidation scope and maintained guidance."
+    },
+    {
+      "at": "2026-10-22T14:28:54.871Z",
+      "tool": "update_pin",
+      "pinId": 4350,
+      "title": "Spotify Q3 2026: 306 Million Premium Subscribers and 788 Million MAUs",
+      "detail": "Add verified issuer Q3subscriber/user results and realised status. Full deck financial values remain a specific access gap; preserve call time and historical preview context."
+    },
+    {
+      "at": "2026-10-22T14:37:02.316Z",
+      "tool": "ad_publish_verify",
+      "detail": "{\"PinAd\": {\"verified\": 67, \"refreshed\": 52, \"added\": 1, \"concurrentSkipped\": []}, \"ProductAd\": {\"verified\": 36, \"refreshed\": 32, \"added\": 0, \"concurrentSkipped\": []}, \"HolidayAd\": {\"verified\": 176, \"refreshed\": 61, \"added\": 7, \"concurrentSkipped\": []}}; local Amazon checks preserved unread listings; four generic Halloween/rave Carnival candidates rejected before replay. UGG Deckers original-brand ad, Hanukkah oil cups and six specific Mardi Gras products qualified. No Tamiya Fukuisaurus listing verified. Unreadable products preserved; one product and one holiday quality failure flagged."
+    },
+    {
+      "at": "2026-10-22T14:37:33.652Z",
+      "tool": "ad_title_translations",
+      "detail": "Wrote/read back15session translations for Deckers UGG ad, with exact current English title SHA1."
+    },
+    {
+      "at": "2026-10-22T14:38:25.642Z",
+      "tool": "ad_title_translations",
+      "detail": "Wrote and verified105session translations across15languages for7Hanukkah/Mardi Gras ads, matched byASIN thenproductionIDand exactcurrentEnglishSHA1."
+    },
+    {
+      "at": "2026-10-22T14:38:51.968Z",
+      "tool": "update_pin",
+      "pinId": 19335,
+      "title": "Amazon Commits 30,000 UK Entry-Level Roles to Young People Through 2030",
+      "detail": "Add two viewed and publicly verified Azure-hosted photos from the exact Amazon UK program page, preserving accurate illustrative captions and operator credit. [addMedia, longFormSummary]"
+    },
+    {
+      "at": "2026-10-22T14:40:23.199Z",
+      "tool": "record_sentiment",
+      "detail": "Saved and read back 5 production catch-up scores in batches <=10; verified all8 reviewed company scores against current full SHA256. Eight specific identity/capex research conflicts remain; concurrent new pins after this run’s cutoff are left for their owning workstream. No allowlist-only holds."
+    },
+    {
+      "at": "2026-10-22T14:40:48.551Z",
+      "tool": "ad_title_translations",
+      "detail": "Updated and read back 75 stale translations for five existing holiday ads after listing title refresh; matched current English SHA1 in all 15 locales."
+    }
+  ],
+  "learnings": [
+    {
+      "at": "2026-10-22T14:27:56.159Z",
+      "text": "The event-info PUT endpoint normalized an unpublished maximum to the supplied minimum for Bruno Mars pin 4706. Live Nation states only “from HKD 799”. Repaired highPrice to null through the admin API and verified all 40 saved rows. Preserve unknown maximum prices and existing event details.",
+      "topic": "Ticket minimum normalization"
+    },
+    {
+      "at": "2026-10-22T14:27:56.162Z",
+      "text": "The oil helper preview uses fallback WTI values and hardcoded historical accuracy commentary that are not current market evidence. Do not apply blindly. Raw KXWTIMONTHLY returned zero contracts; the Polymarket October WTI book is an intramonth touch contract. The 30-strike October Brent book supports a leading adjacent band of $102.99–104.99 and nearest 50% threshold $106.99; the contract remains unsettled and threaded to September.",
+      "topic": "Oil helper fallback is not evidence"
+    },
+    {
+      "at": "2026-10-22T14:27:56.165Z",
+      "text": "The model-score source initially returned 502, then succeeded: October 20 dataset, 144 scored, 11 awaiting, no new frontier tags. The live Arena text leaderboard lists Solar Pro 4 at 1388 ±5 with 23,181 votes, although the helper still lists pin 15159 as awaiting. Record this matching or dataset-freshness gap; do not substitute agent/webdev scores or another Mistral generation.",
+      "topic": "Live Arena and dataset mismatch"
+    },
+    {
+      "at": "2026-10-22T14:27:56.171Z",
+      "text": "The LA mayoral market retains June 2 end-date metadata while covering the November 3 runoff. Added its snapshot to existing pin 3584, parent 3570. For the October 29 ECB forecast, use the issuer’s 14:15 CET / 13:15 UTC decision time rather than inconsistent market-page/preview timezone labels. The public ECB volume of $63,620 differs from the helper’s $18,782 estimate.",
+      "topic": "Market metadata and official event clock"
+    },
+    {
+      "at": "2026-10-22T14:27:56.173Z",
+      "text": "Barclays slide 10 describes 5,000 expected FY2026 FTE reductions subject to consultation; its 60% support-functions figure applies to H2 actions. Amazon’s 30,000-role Youth Promise does not establish 30,000 net additional jobs; placements and AWS learners are separate measures. Removed four generic Halloween/rave Carnival candidates before production replay; retained specific Hanukkah and Mardi Gras products.",
+      "topic": "Workforce scope and repeated ad suggestions"
+    }
+  ],
+  "report": "news-job-2026-10-22.md",
+  "media": "okf/scraping/media/news-2026-10-22.json",
+  "finishedAt": "2026-10-22T14:42:34.776Z",
+  "status": "ok"
+}

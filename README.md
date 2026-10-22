@@ -447,3 +447,5 @@ are they keywards in Datacenter & Infrastructure Telemetry that can be used for 
 
 are there other things that can use geojson
 
+polling feature on pins
+user review on pin and restaurant
