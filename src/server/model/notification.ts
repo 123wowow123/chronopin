@@ -100,6 +100,27 @@ const VISIBLE_FROM = `
         AND NOT ${blockedBetween('n."userId"', 'n."actorId"')}
         AND NOT EXISTS (SELECT 1 FROM "CompanyBlock" cb WHERE cb."userId" = n."userId" AND cb."companyId" = COALESCE(n."companyId", p."companyId"))`;
 
+// The filing summary a 'trade' entry carries, read off the aliased row e (its
+// personId and tradeFiling), shared by the watcher's list and the public feed.
+const TRADE_COLUMNS = `
+               (SELECT MAX(t."filedDate")::text FROM "PersonTrade" t WHERE t."personId" = e."personId" AND t."filingId" = e."tradeFiling") AS "tradeFiledDate",
+               (SELECT COUNT(DISTINCT COALESCE(t."ticker", t."id"::text))::int FROM "PersonTrade" t WHERE t."personId" = e."personId" AND t."filingId" = e."tradeFiling") AS "tradeCount",
+               (SELECT array_agg(DISTINCT t."ticker") FILTER (WHERE t."ticker" IS NOT NULL)
+                  FROM "PersonTrade" t WHERE t."personId" = e."personId" AND t."filingId" = e."tradeFiling") AS "tradeTickers",
+               (SELECT COUNT(DISTINCT COALESCE(t."ticker", t."id"::text))::int FROM "PersonTrade" t WHERE t."personId" = e."personId" AND t."filingId" = e."tradeFiling" AND t."txType" = 'purchase') AS "tradeBuys",
+               (SELECT COUNT(DISTINCT COALESCE(t."ticker", t."id"::text))::int FROM "PersonTrade" t WHERE t."personId" = e."personId" AND t."filingId" = e."tradeFiling" AND t."txType" IN ('sale', 'partial')) AS "tradeSells",
+               (SELECT array_agg(DISTINCT t."ticker") FILTER (WHERE t."ticker" IS NOT NULL)
+                  FROM "PersonTrade" t WHERE t."personId" = e."personId" AND t."filingId" = e."tradeFiling" AND t."txType" = 'purchase') AS "tradeBuyTickers",
+               (SELECT array_agg(DISTINCT t."ticker") FILTER (WHERE t."ticker" IS NOT NULL)
+                  FROM "PersonTrade" t WHERE t."personId" = e."personId" AND t."filingId" = e."tradeFiling" AND t."txType" IN ('sale', 'partial')) AS "tradeSellTickers",
+               (SELECT COALESCE(jsonb_object_agg(v."ticker", v."value"), '{}'::jsonb) FROM (SELECT t."ticker", SUM((COALESCE(t."amountLow", 0) + COALESCE(t."amountHigh", t."amountLow", 0)) / 2)::float8 AS "value"
+                  FROM "PersonTrade" t WHERE t."personId" = e."personId" AND t."filingId" = e."tradeFiling" AND t."ticker" IS NOT NULL AND t."txType" = 'purchase' GROUP BY t."ticker") v) AS "tradeBuyValues",
+               (SELECT COALESCE(jsonb_object_agg(v."ticker", v."value"), '{}'::jsonb) FROM (SELECT t."ticker", SUM((COALESCE(t."amountLow", 0) + COALESCE(t."amountHigh", t."amountLow", 0)) / 2)::float8 AS "value"
+                  FROM "PersonTrade" t WHERE t."personId" = e."personId" AND t."filingId" = e."tradeFiling" AND t."ticker" IS NOT NULL AND t."txType" IN ('sale', 'partial') GROUP BY t."ticker") v) AS "tradeSellValues",
+               (SELECT jsonb_agg(DISTINCT jsonb_build_object('ticker', t."ticker", 'committee', c ->> 'committee', 'sector', c ->> 'sector'))
+                  FROM "PersonTrade" t CROSS JOIN LATERAL jsonb_array_elements(${CONFLICTS('t')}) c
+                  WHERE t."personId" = e."personId" AND t."filingId" = e."tradeFiling") AS "tradeConflicts"`;
+
 export type NotificationItem = {
   id: number;
   type: string;
@@ -467,23 +488,7 @@ export default class Notification {
       )
       SELECT e."id", e."type", e."pinId", e."pinTitle", e."commentId", e."commentText", e."companyId",
              e."companyName", e."companyLogoUrl", e."personName", e."personPhotoUrl", e."tradeFiling",
-               (SELECT MAX(t."filedDate")::text FROM "PersonTrade" t WHERE t."personId" = e."personId" AND t."filingId" = e."tradeFiling") AS "tradeFiledDate",
-               (SELECT COUNT(DISTINCT COALESCE(t."ticker", t."id"::text))::int FROM "PersonTrade" t WHERE t."personId" = e."personId" AND t."filingId" = e."tradeFiling") AS "tradeCount",
-               (SELECT array_agg(DISTINCT t."ticker") FILTER (WHERE t."ticker" IS NOT NULL)
-                  FROM "PersonTrade" t WHERE t."personId" = e."personId" AND t."filingId" = e."tradeFiling") AS "tradeTickers",
-               (SELECT COUNT(DISTINCT COALESCE(t."ticker", t."id"::text))::int FROM "PersonTrade" t WHERE t."personId" = e."personId" AND t."filingId" = e."tradeFiling" AND t."txType" = 'purchase') AS "tradeBuys",
-               (SELECT COUNT(DISTINCT COALESCE(t."ticker", t."id"::text))::int FROM "PersonTrade" t WHERE t."personId" = e."personId" AND t."filingId" = e."tradeFiling" AND t."txType" IN ('sale', 'partial')) AS "tradeSells",
-               (SELECT array_agg(DISTINCT t."ticker") FILTER (WHERE t."ticker" IS NOT NULL)
-                  FROM "PersonTrade" t WHERE t."personId" = e."personId" AND t."filingId" = e."tradeFiling" AND t."txType" = 'purchase') AS "tradeBuyTickers",
-               (SELECT array_agg(DISTINCT t."ticker") FILTER (WHERE t."ticker" IS NOT NULL)
-                  FROM "PersonTrade" t WHERE t."personId" = e."personId" AND t."filingId" = e."tradeFiling" AND t."txType" IN ('sale', 'partial')) AS "tradeSellTickers",
-               (SELECT COALESCE(jsonb_object_agg(v."ticker", v."value"), '{}'::jsonb) FROM (SELECT t."ticker", SUM((COALESCE(t."amountLow", 0) + COALESCE(t."amountHigh", t."amountLow", 0)) / 2)::float8 AS "value"
-                  FROM "PersonTrade" t WHERE t."personId" = e."personId" AND t."filingId" = e."tradeFiling" AND t."ticker" IS NOT NULL AND t."txType" = 'purchase' GROUP BY t."ticker") v) AS "tradeBuyValues",
-               (SELECT COALESCE(jsonb_object_agg(v."ticker", v."value"), '{}'::jsonb) FROM (SELECT t."ticker", SUM((COALESCE(t."amountLow", 0) + COALESCE(t."amountHigh", t."amountLow", 0)) / 2)::float8 AS "value"
-                  FROM "PersonTrade" t WHERE t."personId" = e."personId" AND t."filingId" = e."tradeFiling" AND t."ticker" IS NOT NULL AND t."txType" IN ('sale', 'partial') GROUP BY t."ticker") v) AS "tradeSellValues",
-               (SELECT jsonb_agg(DISTINCT jsonb_build_object('ticker', t."ticker", 'committee', c ->> 'committee', 'sector', c ->> 'sector'))
-                  FROM "PersonTrade" t CROSS JOIN LATERAL jsonb_array_elements(${CONFLICTS('t')}) c
-                  WHERE t."personId" = e."personId" AND t."filingId" = e."tradeFiling") AS "tradeConflicts",
+               ${TRADE_COLUMNS},
              e."utcCreatedDateTime", e."read", e."actor",
              e."followingBack", e."groupCount", e."groupDay",
              COALESCE(e."pinIds"[1:${MAX_BATCH_PINS}], '{}') AS "pinIds",
@@ -493,6 +498,37 @@ export default class Notification {
       ORDER BY e."utcCreatedDateTime" DESC, e."id" DESC`,
         [userId, zone, n, type ?? null],
       ),
+    );
+  }
+
+  // The public stock-trades feed, for visitors with no watch list: every
+  // filing of the past few days as one 'trade' entry per person and filing,
+  // shaped like a watcher's rows so the same panel renders them.
+  static listPublicTrades(days = 3) {
+    return db.query<NotificationItem>(
+      `
+      WITH e AS (
+        SELECT t."personId", t."filingId" AS "tradeFiling", MAX(t."filedDate") AS "filedDate",
+               MAX(t."filedDate")::timestamptz AS "utcCreatedDateTime",
+               pe."name"::text AS "personName", pe."photoUrl" AS "personPhotoUrl"
+        FROM "PersonTrade" t
+        JOIN "Person" pe ON pe."id" = t."personId"
+        WHERE t."filedDate" >= current_date - $1::int
+        GROUP BY t."personId", t."filingId", pe."name", pe."photoUrl"
+        ORDER BY MAX(t."filedDate") DESC, t."personId"
+        LIMIT 3000
+      )
+      SELECT (row_number() OVER ())::int AS "id", 'trade' AS "type", NULL::int AS "pinId", NULL::text AS "pinTitle",
+             NULL::int AS "commentId", NULL::text AS "commentText", NULL::int AS "companyId",
+             NULL::text AS "companyName", NULL::text AS "companyLogoUrl", e."personName", e."personPhotoUrl", e."tradeFiling",
+             ${TRADE_COLUMNS},
+             e."utcCreatedDateTime", true AS "read",
+             json_build_object('id', 0, 'userName', '', 'firstName', NULL, 'lastName', NULL, 'pictureUrl', NULL) AS "actor",
+             false AS "followingBack", 1 AS "groupCount", e."filedDate"::text AS "groupDay",
+             '{}'::int[] AS "pinIds", '{}'::timestamptz[] AS "pinStarts", '{}'::text[] AS "pinTitles"
+      FROM e
+      ORDER BY e."filedDate" DESC, e."personId"`,
+      [days],
     );
   }
 

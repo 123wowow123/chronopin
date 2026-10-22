@@ -20,7 +20,7 @@ import { useSession } from '@/lib/client/session';
 import { AuthLink, LogoutLink } from './AuthLink';
 import { DrawerHighlights } from './DrawerHighlights';
 import { SwitchMark, useWatchedToggle, ViewSwitch } from './NavMenu';
-import { DrawerNotifications } from './NotificationBell';
+import { DrawerNotifications, DrawerWeather } from './NotificationBell';
 import { useT } from '@/lib/client/i18n';
 import { isRtl } from '@/lib/i18n/config';
 
@@ -345,6 +345,11 @@ export function MobileDrawer({ ads = false }: { ads?: boolean }) {
               <DrawerHighlights drawerOpen={open} itemClass={itemClass} />
             </DrawerSection>
           ) : null}
+          {user ? null : (
+            <DrawerSection title={t('weather.local')} hideTitle>
+              <DrawerWeather onNavigate={() => setOpen(false)} />
+            </DrawerSection>
+          )}
           <DrawerSection title="People" hideTitle>
             {link('/people', 'users', 'People')}
           </DrawerSection>

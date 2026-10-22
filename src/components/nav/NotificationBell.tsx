@@ -377,13 +377,15 @@ function ConflictBadge({ n }: { n: Notification }) {
   );
 }
 
-function TradeDay({ items, day, renderRow }: { items: Notification[]; day: number; renderRow: (n: Notification) => React.ReactNode }) {
+function TradeDay({ items, day, renderRow, expanded }: { items: Notification[]; day: number; renderRow: (n: Notification) => React.ReactNode; expanded?: boolean }) {
   const t = useT();
   const locale = useIntlLocale();
   const dayLabel = day >= -1
     ? new Intl.RelativeTimeFormat(locale, { numeric: 'auto' }).format(day, 'day')
     : new Intl.DateTimeFormat(locale, { weekday: 'long', month: 'short', day: 'numeric' }).format(dayDate(day));
-  const [open, setOpen] = useState(false);
+  const [openState, setOpen] = useState(false);
+  // A controlled day (expanded given) has no control of its own: its group sets it.
+  const open = expanded ?? openState;
   const listId = useId();
   const sum = (pick: (n: Notification) => number | null) => items.reduce((total, n) => total + (pick(n) ?? 0), 0);
   // Tickers ranked by how many people traded them, then by total dollar value.
@@ -399,6 +401,15 @@ function TradeDay({ items, day, renderRow }: { items: Notification[]; day: numbe
     }
     return [...stats].sort((a, b) => b[1].people.size - a[1].people.size || b[1].value - a[1].value).map(([ticker, s]) => [ticker, s.people.size] as const);
   };
+  // Tickers a filing trades inside a sector one of the member's committees oversees.
+  const conflicts = new Map<string, Set<string>>();
+  for (const n of items) {
+    for (const c of n.tradeConflicts ?? []) {
+      const set = conflicts.get(c.ticker) ?? new Set<string>();
+      set.add(c.committee.split(': ')[0].replace(/^(House|Senate|Joint) (Select )?Committee on (the )?/, ''));
+      conflicts.set(c.ticker, set);
+    }
+  }
   const tiles = [
     ['tradeBuys', sum((n) => n.tradeBuys), tickers((n) => n.tradeBuyValues), 'text-success-soft ring-success/40'],
     ['tradeSells', sum((n) => n.tradeSells), tickers((n) => n.tradeSellValues), 'text-danger-soft ring-danger/40'],
@@ -406,16 +417,20 @@ function TradeDay({ items, day, renderRow }: { items: Notification[]; day: numbe
   return (
     <div className="text-sm">
       <div className="flex w-full flex-col gap-1.5 px-4 py-2.5">
-        <button
-          type="button"
-          aria-expanded={open}
-          aria-controls={listId}
-          onClick={() => setOpen((o) => !o)}
-          className="flex items-center justify-between gap-2 text-start font-semibold text-ink"
-        >
-          {dayLabel}
-          <Icon name="chevron" className={`size-4 shrink-0 text-subtle transition-transform ${open ? 'rotate-180' : ''}`} />
-        </button>
+        {expanded !== undefined ? (
+          <span className="font-semibold text-ink">{dayLabel}</span>
+        ) : (
+          <button
+            type="button"
+            aria-expanded={open}
+            aria-controls={listId}
+            onClick={() => setOpen((o) => !o)}
+            className="flex items-center justify-between gap-2 text-start font-semibold text-ink"
+          >
+            {dayLabel}
+            <Icon name="chevron" className={`size-4 shrink-0 text-subtle transition-transform ${open ? 'rotate-180' : ''}`} />
+          </button>
+        )}
         <span className="grid grid-cols-2 gap-2">
           {tiles.map(([key, count, all, tone]) => {
             // Collapsed: only tickers more than one person traded.
@@ -433,6 +448,12 @@ function TradeDay({ items, day, renderRow }: { items: Notification[]; day: numbe
                       <span className="w-4 shrink-0 text-end tabular-nums">{people}</span>
                       {/* The ticker searches its company: the panel shows it with its stock graph. */}
                       <Link href={tickerHref(ticker)} className="truncate font-medium text-ink hover:underline">{ticker}</Link>
+                      {conflicts.has(ticker) ? (
+                        <span title={`${t('notifications.conflict')}: ${[...conflicts.get(ticker)!].slice(0, 3).join(', ')}`} className="ms-auto shrink-0 text-warning-soft">
+                          <Icon name="warning" className="size-3" />
+                          <span className="sr-only">{t('notifications.conflict')}</span>
+                        </span>
+                      ) : null}
                     </span>
                   ))}
                 </span>
@@ -448,32 +469,40 @@ function TradeDay({ items, day, renderRow }: { items: Notification[]; day: numbe
 }
 
 // One collapsible block holding today's and yesterday's panes stuck together.
-function TradeGroup({ groups, renderRow }: { groups: { day: number; items: Notification[] }[]; renderRow: (n: Notification) => React.ReactNode }) {
+function TradeGroup({ groups, renderRow, href, fixed, guest }: { href: string; fixed?: boolean; guest?: boolean; groups: { day: number; items: Notification[] }[]; renderRow: (n: Notification) => React.ReactNode }) {
   const t = useT();
-  const [open, setOpen] = useState(true);
+  // Visitors see each day's totals at once; the group's one chevron expands every day.
+  const [openState, setOpen] = useState(!guest);
+  const open = fixed || openState;
   const bodyId = useId();
   return (
     <li className="text-sm">
       <div className="flex items-center gap-2 px-4 py-2.5">
-        <button
-          type="button"
-          aria-expanded={open}
-          aria-controls={bodyId}
-          onClick={() => setOpen((o) => !o)}
-          className="min-w-0 text-start font-semibold text-ink"
-        >
-          {t('notifications.tradesToday')}
-        </button>
-        <Link href="/notifications/trades" className="shrink-0 text-xs font-medium text-link">
+        {fixed ? (
+          <span className="min-w-0 font-semibold text-ink">{t('notifications.tradesToday')}</span>
+        ) : (
+          <button
+            type="button"
+            aria-expanded={open}
+            aria-controls={bodyId}
+            onClick={() => setOpen((o) => !o)}
+            className="min-w-0 text-start font-semibold text-ink"
+          >
+            {t('notifications.tradesToday')}
+          </button>
+        )}
+        <Link href={href} className="shrink-0 text-xs font-medium text-link">
           {t('notifications.tradesHistory')}
         </Link>
-        <button type="button" aria-hidden tabIndex={-1} onClick={() => setOpen((o) => !o)} className="ms-auto shrink-0">
-          <Icon name="chevron" className={`size-4 text-subtle transition-transform ${open ? 'rotate-180' : ''}`} />
-        </button>
+        {fixed ? null : (
+          <button type="button" aria-hidden tabIndex={-1} onClick={() => setOpen((o) => !o)} className="ms-auto shrink-0">
+            <Icon name="chevron" className={`size-4 text-subtle transition-transform ${open ? 'rotate-180' : ''}`} />
+          </button>
+        )}
       </div>
-      {open ? (
+      {open || guest ? (
         <div id={bodyId} className="divide-y divide-line border-t border-line">
-          {groups.map((g) => <TradeDay key={g.day} items={g.items} day={g.day} renderRow={renderRow} />)}
+          {groups.map((g) => <TradeDay key={g.day} items={g.items} day={g.day} renderRow={renderRow} expanded={guest ? open : undefined} />)}
         </div>
       ) : null}
     </li>
@@ -489,7 +518,9 @@ function NotificationItems({
   onNavigate,
   listClassName = '',
   only,
-}: ReturnType<typeof useNotificationList> & { onNavigate?: () => void; listClassName?: string; only?: Section }) {
+  guest,
+  controlled,
+}: ReturnType<typeof useNotificationList> & { onNavigate?: () => void; listClassName?: string; only?: Section; guest?: boolean; controlled?: boolean }) {
   const t = useT();
   const headingId = useId();
   if (failed) return (
@@ -498,7 +529,8 @@ function NotificationItems({
       <button type="button" className="text-link" onClick={() => void load()}>{t('common.retry')}</button>
     </div>
   );
-  if (items === null) return <div className="px-4 py-6 text-center text-sm text-subtle">{t('common.loading')}</div>;
+  if (items === null) return guest ? null : <div className="px-4 py-6 text-center text-sm text-subtle">{t('common.loading')}</div>;
+  if (items.length === 0 && guest) return null;
   if (items.length === 0) return <div className="px-4 py-6 text-center text-sm text-subtle">{t('notifications.empty')}</div>;
   const labels: Record<Section, string> = {
     following: t('notifications.following'),
@@ -507,7 +539,7 @@ function NotificationItems({
   };
   const renderRow = (n: Notification) => {
               const handle = n.actor.userName.replace(/^@+/, '');
-              const reason = reasonOf(n, t);
+              const reason = guest ? null : reasonOf(n, t);
               return (
                 <li key={n.id} className={`flex items-center gap-3 px-4 py-2.5 text-sm ${n.read ? '' : 'bg-accent/10'}`}>
                   <NotificationFace n={n} onNavigate={onNavigate} />
@@ -649,7 +681,7 @@ function NotificationItems({
     <div className={listClassName}>
       {sectionsOf(items).filter((s) => !only || s.section === only).map(({ section, items: rows }) => (
         <section key={section} aria-labelledby={`${headingId}-${section}`}>
-          <h3
+          {guest ? null : <h3
             id={`${headingId}-${section}`}
             className="sticky top-0 z-10 flex items-center justify-between border-b border-line bg-panel px-4 py-1.5 text-xs font-semibold tracking-wide text-subtle uppercase"
           >
@@ -662,11 +694,11 @@ function NotificationItems({
               ) : null}
               <span className="tabular-nums">{rows.length}</span>
             </span>
-          </h3>
+          </h3>}
           <ul className="divide-y divide-line">
             {entriesOf(rows).map((entry) =>
               entry.kind === 'trades' ? (
-                <TradeGroup key="trades" groups={entry.groups} renderRow={renderRow} />
+                <TradeGroup key="trades" groups={entry.groups} renderRow={renderRow} fixed={controlled} guest={guest} href={guest ? '/trades' : '/notifications/trades'} />
               ) : (
                 renderRow(entry.n)
               ),
@@ -770,6 +802,28 @@ function useDropdown() {
   return { open, setOpen, rootRef };
 }
 
+// The recent stock trades a visitor sees without signing in: everyone's
+// filings, on by default where a signed-in viewer must watch people first.
+function usePublicTrades(active: boolean) {
+  const [items, setItems] = useState<Notification[] | null>(null);
+  const [failed, setFailed] = useState(false);
+  const load = useCallback(async () => {
+    try {
+      const res = await api.get<{ notifications: Notification[] }>('/api/trades/recent');
+      setFailed(false);
+      setItems(res.notifications);
+    } catch {
+      setFailed(true);
+    }
+  }, []);
+  useEffect(() => {
+    if (!active) return;
+    const id = window.setTimeout(() => void load(), 0);
+    return () => window.clearTimeout(id);
+  }, [active, load]);
+  return { items, failed, pending: {}, load, followBack: async () => {} };
+}
+
 // The curated pages, as the account menu and the phone drawer list them.
 const CURATED_LINKS: { href: string; label: string; icon: IconName }[] = [
   { href: '/restaurants', label: 'Restaurants', icon: 'map' },
@@ -785,6 +839,7 @@ const CURATED_LINKS: { href: string; label: string; icon: IconName }[] = [
 // accessible even when weather or location is unavailable.
 export function WeatherButton({ className = '' }: { className?: string }) {
   const { open, setOpen, rootRef } = useDropdown();
+  const trades = usePublicTrades(open);
   const { weather } = useFormattedLocalWeather();
   const t = useT();
 
@@ -807,8 +862,9 @@ export function WeatherButton({ className = '' }: { className?: string }) {
         {weather?.now ? <span className="text-[10px] leading-none font-medium">{weather.now}</span> : null}
       </button>
       {open ? (
-        <div className="floating absolute end-0 z-50 mt-2 w-80 overflow-hidden">
+        <div className="floating absolute end-0 z-50 mt-2 max-h-[calc(100dvh-5rem)] w-80 overflow-y-auto">
           <LocalWeatherRow className={weather ? 'border-b border-line' : ''} />
+          <div className="border-b border-line empty:hidden"><NotificationItems {...trades} guest onNavigate={() => setOpen(false)} /></div>
           <ul className="pt-1.5">
             <li className="px-1.5">
               <Link href="/people" onClick={() => setOpen(false)} className="flex items-center gap-3 rounded-lg px-2.5 py-2 text-sm font-medium text-ink hover:bg-raised hover:no-underline">
@@ -830,6 +886,39 @@ export function WeatherButton({ className = '' }: { className?: string }) {
           </ul>
         </div>
       ) : null}
+    </div>
+  );
+}
+
+// The weather for visitors who are not signed in, in the phone drawer: the
+// weather row over the recent trades, which it opens in full or shuts.
+export function DrawerWeather({ onNavigate }: { onNavigate?: () => void }) {
+  const [open, setOpen] = useState(true);
+  const trades = usePublicTrades(open);
+  useEffect(() => {
+    refreshLocalWeather();
+  }, []);
+  return (
+    <div>
+      {/* The weather block is the one control: it opens every trade panel in
+          full, or shuts them all. */}
+      <div
+        role="button"
+        tabIndex={0}
+        aria-expanded={open}
+        onClick={() => setOpen((o) => !o)}
+        onKeyDown={(e) => {
+          if (e.target === e.currentTarget && (e.key === 'Enter' || e.key === ' ')) {
+            e.preventDefault();
+            setOpen((o) => !o);
+          }
+        }}
+        className={`flex cursor-pointer items-center hover:bg-raised ${open ? 'border-b border-line' : ''}`}
+      >
+        <LocalWeatherRow className="min-w-0 flex-1" />
+        <Icon name="chevron" className={`me-4 size-4 shrink-0 text-subtle transition-transform ${open ? 'rotate-180' : ''}`} />
+      </div>
+      {open ? <NotificationItems {...trades} guest controlled onNavigate={onNavigate} /> : null}
     </div>
   );
 }
@@ -908,7 +997,7 @@ const dayDate = (offset: number) => {
 
 // The /notifications/trades page: each day's buys and sells for the past two
 // weeks. Read-only, so unlike the main list it leaves the unread marks alone.
-export function TradesHistoryFeed() {
+export function TradesHistoryFeed({ everyone }: { everyone?: boolean }) {
   const t = useT();
   const locale = useIntlLocale();
   const [weeks, setWeeks] = useState(2);
@@ -917,10 +1006,10 @@ export function TradesHistoryFeed() {
   const load = useCallback(() => {
     setFailed(false);
     api
-      .get<{ notifications: Notification[] }>('/api/notifications?type=trade&limit=2000')
+      .get<{ notifications: Notification[] }>(everyone ? '/api/trades/recent?days=84' : '/api/notifications?type=trade&limit=2000')
       .then((res) => setItems(res.notifications))
       .catch(() => setFailed(true));
-  }, []);
+  }, [everyone]);
   useEffect(() => {
     const id = window.setTimeout(load, 0);
     return () => window.clearTimeout(id);
