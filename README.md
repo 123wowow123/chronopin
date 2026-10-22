@@ -449,3 +449,8 @@ are there other things that can use geojson
 
 polling feature on pins
 user review on pin and restaurant
+
+
+
+check to see if anything can be improved and increase organic visits
+https://search.google.com/search-console/performance/search-analytics?resource_id=sc-domain%3Achronopin.com

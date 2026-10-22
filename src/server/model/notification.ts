@@ -139,6 +139,8 @@ export type NotificationItem = {
   // When each of those pins happens, in the same order: what the bell needs to
   // send a batch to the one of its pins nearest where the reader already is.
   pinStarts: Date[];
+  // The titles of its newest few pins, same order: a glimpse of what a batch holds.
+  pinTitles: string[];
   actor: { id: number; userName: string; firstName: string; lastName: string; pictureUrl: string | null };
   followingBack: boolean;
 };
@@ -467,7 +469,10 @@ export default class Notification {
                -- Aggregated over the same window, so a pin and its start line up.
                array_agg("pinStart") FILTER (WHERE "pinId" IS NOT NULL)
                  OVER (PARTITION BY "groupKey" ORDER BY "utcCreatedDateTime" DESC, "id" DESC
-                       ROWS BETWEEN UNBOUNDED PRECEDING AND UNBOUNDED FOLLOWING) AS "pinStarts"
+                       ROWS BETWEEN UNBOUNDED PRECEDING AND UNBOUNDED FOLLOWING) AS "pinStarts",
+               array_agg("pinTitle") FILTER (WHERE "pinId" IS NOT NULL)
+                 OVER (PARTITION BY "groupKey" ORDER BY "utcCreatedDateTime" DESC, "id" DESC
+                       ROWS BETWEEN UNBOUNDED PRECEDING AND UNBOUNDED FOLLOWING) AS "pinTitles"
         FROM visible
         ORDER BY "groupKey", "utcCreatedDateTime" DESC, "id" DESC
       )
@@ -476,7 +481,8 @@ export default class Notification {
              "utcCreatedDateTime", "read", "actor",
              "followingBack", "groupCount", "groupDay",
              COALESCE("pinIds"[1:${MAX_BATCH_PINS}], '{}') AS "pinIds",
-             COALESCE("pinStarts"[1:${MAX_BATCH_PINS}], '{}') AS "pinStarts"
+             COALESCE("pinStarts"[1:${MAX_BATCH_PINS}], '{}') AS "pinStarts",
+             COALESCE("pinTitles"[1:3], '{}') AS "pinTitles"
       FROM entries
       ORDER BY "utcCreatedDateTime" DESC, "id" DESC
       LIMIT $3`,

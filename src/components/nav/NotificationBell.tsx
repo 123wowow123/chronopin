@@ -46,6 +46,7 @@ type Notification = {
   groupDay: string;
   pinIds: number[];
   pinStarts: string[];
+  pinTitles?: string[];
   followingBack: boolean;
   actor: { id: number; userName: string; pictureUrl?: string | null };
 };
@@ -70,7 +71,7 @@ function batchHref(n: Notification): string {
   const whose = n.type === 'company' ? term('company', n.companyName ?? '') : term('user', n.actor.userName);
   const q =
     n.pinIds.length === n.groupCount ? term('pin', n.pinIds.join(',')) : `${whose} ${term('posted', n.groupDay)}`;
-  return `/search?q=${encodeURIComponent(q)}`;
+  return `/search?q=${encodeURIComponent(q)}&sort=date`;
 }
 
 // The pins of a batch were all posted at once but happen on days of their own,
@@ -102,21 +103,46 @@ function aimBatch(n: Notification, href: string) {
   if (pin) aimAtCard(href, pin);
 }
 
+// Where a section's "See more" leads: its pins on the timeline, newest by date,
+// named by id like a batch. A section with no pins in it (trades, say) falls
+// back to its page of notifications; the cap keeps the URL a sane length.
+function sectionHref(section: Section, rows: Notification[]): string {
+  const ids = [...new Set(rows.flatMap((n) => (n.pinIds?.length ? n.pinIds : n.pinId ? [n.pinId] : [])))].slice(0, 200);
+  return ids.length ? `/search?q=${encodeURIComponent(term('pin', ids.join(',')))}&sort=date` : `/notifications?section=${section}`;
+}
+
 // Where a new-pin row leads: the pin itself, or, for a batch, the search
 // holding its pins, opened on the nearest of them.
 function PinRowLink({ n, onNavigate, children }: { n: Notification; onNavigate?: () => void; children: React.ReactNode }) {
   const href = n.groupCount > 1 ? batchHref(n) : pinPath({ id: n.pinId!, title: n.pinTitle ?? '' });
   return (
-    <Link
-      href={href}
-      className="block text-ink"
-      onClick={() => {
-        if (n.groupCount > 1) aimBatch(n, href);
-        onNavigate?.();
-      }}
-    >
-      {children}
-    </Link>
+    <>
+      <Link
+        href={href}
+        className={n.groupCount > 1 ? '-mx-2 block rounded-md px-2 py-1.5 text-ink hover:bg-raised' : 'block text-ink'}
+        onClick={() => {
+          if (n.groupCount > 1) aimBatch(n, href);
+          onNavigate?.();
+        }}
+      >
+        {children}
+      </Link>
+      {n.groupCount > 1 && n.pinTitles?.length ? (
+        <ul className="-mx-2 mt-1">
+          {n.pinTitles.slice(0, 3).map((title, i) => (
+            <li key={n.pinIds[i] ?? i}>
+              <Link
+                href={pinPath({ id: n.pinIds[i], title })}
+                className="block truncate rounded-md px-2 py-1.5 text-sm text-muted hover:bg-raised hover:text-ink"
+                onClick={onNavigate}
+              >
+                {title}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      ) : null}
+    </>
   );
 }
 
@@ -272,6 +298,7 @@ function NotificationFace({ n, onNavigate }: { n: Notification; onNavigate?: () 
 // server's newest-first order, and the sections themselves run by whichever
 // holds the newest notification, so the top of the list is still the latest.
 type Section = 'following' | 'watching' | 'yours';
+const SECTIONS: Section[] = ['following', 'watching', 'yours'];
 
 function sectionOf(type: string): Section {
   switch (type) {
@@ -461,7 +488,8 @@ function NotificationItems({
   followBack,
   onNavigate,
   listClassName = '',
-}: ReturnType<typeof useNotificationList> & { onNavigate?: () => void; listClassName?: string }) {
+  only,
+}: ReturnType<typeof useNotificationList> & { onNavigate?: () => void; listClassName?: string; only?: Section }) {
   const t = useT();
   const headingId = useId();
   if (failed) return (
@@ -619,14 +647,21 @@ function NotificationItems({
   };
   return (
     <div className={listClassName}>
-      {sectionsOf(items).map(({ section, items: rows }) => (
+      {sectionsOf(items).filter((s) => !only || s.section === only).map(({ section, items: rows }) => (
         <section key={section} aria-labelledby={`${headingId}-${section}`}>
           <h3
             id={`${headingId}-${section}`}
             className="sticky top-0 z-10 flex items-center justify-between border-b border-line bg-panel px-4 py-1.5 text-xs font-semibold tracking-wide text-subtle uppercase"
           >
             {labels[section]}
-            <span className="tabular-nums">{rows.length}</span>
+            <span className="flex items-center gap-3">
+              {onNavigate ? (
+                <Link href={sectionHref(section, rows)} className="text-xs font-medium tracking-normal text-link normal-case" onClick={onNavigate}>
+                  {t('notifications.tradesHistory')}
+                </Link>
+              ) : null}
+              <span className="tabular-nums">{rows.length}</span>
+            </span>
           </h3>
           <ul className="divide-y divide-line">
             {entriesOf(rows).map((entry) =>
@@ -852,12 +887,12 @@ export function DrawerNotifications({ className, current, onClick }: { className
 }
 
 // The /notifications page: the whole list, loaded (and marked read) on arrival.
-export function NotificationsFeed() {
+export function NotificationsFeed({ section }: { section?: string }) {
   const list = useNotificationList(true);
   return (
     <div className="surface overflow-hidden">
       <LocalWeatherRow className="border-b border-line" />
-      <NotificationItems {...list} />
+      <NotificationItems {...list} only={SECTIONS.find((x) => x === section)} />
     </div>
   );
 }
