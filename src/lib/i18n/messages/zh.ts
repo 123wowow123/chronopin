@@ -2142,6 +2142,7 @@ const zh: Messages = {
       volumeAbout: '每个区间下限与上限之和',
       topTickers: '交易最多',
       period: '{from} 至 {to} 的交易',
+      recent: '最近 2 个月',
       date: '交易日',
       filed: '申报日',
       asset: '资产',

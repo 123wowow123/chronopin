@@ -2148,6 +2148,7 @@ const fr: Messages = {
       volumeAbout: 'Somme des bornes basse et haute de chaque fourchette',
       topTickers: 'Les plus échangées',
       period: 'Opérations du {from} au {to}',
+      recent: '2 derniers mois',
       date: 'Opération',
       filed: 'Déposée',
       asset: 'Actif',

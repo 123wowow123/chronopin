@@ -1,3 +1,4 @@
+import { MonthlyTradePanels } from '@/components/person/MonthlyTradePanels';
 import { TradesTable } from '@/components/person/TradesTable';
 import { TradeWatchButton } from '@/components/person/TradeWatchButton';
 import { dateFormat } from '@/lib/format';
@@ -57,6 +58,7 @@ export function TradesSection({ personId, name, trades, summary: totals, t }: { 
               </span>
             </div>
           </div>
+          <MonthlyTradePanels trades={trades} months={2} t={t} />
           {summary.first && summary.last ? <p className="mb-2 text-xs text-subtle">{t('person.trades.period', { from: day(summary.first), to: day(summary.last) })}</p> : null}
           <TradesTable personId={personId} initial={trades} total={summary.count} />
         </>

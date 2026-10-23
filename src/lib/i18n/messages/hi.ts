@@ -2159,6 +2159,7 @@ const hi: Messages = {
       volumeAbout: 'हर सीमा के निचले और ऊपरी सिरों का योग',
       topTickers: 'सबसे अधिक कारोबार',
       period: '{from} से {to} तक के लेन-देन',
+      recent: 'पिछले 2 महीने',
       date: 'लेन-देन',
       filed: 'दाखिल',
       asset: 'संपत्ति',

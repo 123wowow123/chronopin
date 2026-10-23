@@ -2240,6 +2240,7 @@ const ru: Messages = {
       volumeAbout: 'Сумма нижних и верхних границ всех диапазонов',
       topTickers: 'Чаще всего торговались',
       period: 'Сделки с {from} по {to}',
+      recent: 'Последние 2 месяца',
       date: 'Сделка',
       filed: 'Подан',
       asset: 'Актив',

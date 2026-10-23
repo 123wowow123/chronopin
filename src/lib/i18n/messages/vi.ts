@@ -2151,6 +2151,7 @@ const vi: Messages = {
       volumeAbout: 'Tổng cận dưới và cận trên của mọi khoảng',
       topTickers: 'Giao dịch nhiều nhất',
       period: 'Giao dịch từ {from} đến {to}',
+      recent: '2 tháng qua',
       date: 'Ngày giao dịch',
       filed: 'Ngày nộp',
       asset: 'Tài sản',

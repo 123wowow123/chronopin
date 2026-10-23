@@ -2152,6 +2152,7 @@ const id: Messages = {
       volumeAbout: 'Jumlah batas bawah dan atas dari setiap rentang',
       topTickers: 'Paling banyak diperdagangkan',
       period: 'Transaksi dari {from} sampai {to}',
+      recent: '2 bulan terakhir',
       date: 'Tanggal transaksi',
       filed: 'Tanggal lapor',
       asset: 'Aset',

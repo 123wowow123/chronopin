@@ -2142,6 +2142,7 @@ const ja: Messages = {
       volumeAbout: '各範囲の下限と上限の合計',
       topTickers: '取引が多い銘柄',
       period: '{from}〜{to}の取引',
+      recent: '過去2か月',
       date: '取引日',
       filed: '提出日',
       asset: '資産',

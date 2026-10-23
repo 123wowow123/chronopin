@@ -2148,6 +2148,7 @@ const de: Messages = {
       volumeAbout: 'Summe der unteren und oberen Grenzen aller Spannen',
       topTickers: 'Am häufigsten gehandelt',
       period: 'Geschäfte vom {from} bis {to}',
+      recent: 'Letzte 2 Monate',
       date: 'Gehandelt',
       filed: 'Eingereicht',
       asset: 'Wert',

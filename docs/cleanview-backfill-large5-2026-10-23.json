@@ -1,0 +1,2866 @@
+{
+  "checkedAt": "2026-10-23",
+  "scope": "Cleanview sourcing backfill batches 16–17",
+  "outcome": {
+    "audited": 24,
+    "corrected": 17,
+    "held": 7,
+    "environmentActions": 48,
+    "azureFilesVerified": 54,
+    "nativePagesVerified": 34,
+    "unpublishedPricesCleared": 17,
+    "calculatedEnergyRowsCleared": 3,
+    "replacementMaps": 15,
+    "addedConceptDiagrams": 3,
+    "postedMapEntries": 1418,
+    "deployed": false
+  },
+  "plan": {
+    "solar-aquila-milam-tx": {
+      "patch": {
+        "title": "Aquila Solar 26INR0635: 500 MW Milam County Queue Request",
+        "description": "ERCOT identifies Aquila Solar as Ben Milam Solar 5’s 500 MW solar request at Gibson Switch 345 kV in Milam County. Its requested commercial date is November 12, 2026; the queue shows screening complete, FIS started and no interconnection agreement.",
+        "sourceUrl": null,
+        "references": [
+          {
+            "url": "https://www.ercot.com/misdownload/servlets/mirDownload?doclookupId=1281327706",
+            "title": "ERCOT GIS Report — Project Details, Aquila Solar 26INR0635",
+            "confidence": 95,
+            "publishedDate": null
+          }
+        ],
+        "longFormSummary": "<ul><li>The applicant entity is Ben Milam Solar 5; the project name does not establish Aquila Clean Energy ownership. The former $475M budget and construction claim are unsupported.<cite data-ref=\"https://www.ercot.com/misdownload/servlets/mirDownload?doclookupId=1281327706\"></cite></li><li>Timeline: November 12, 2026 is ERCOT’s projected COD, not a confirmed delivery; FIS Started / No IA warrants schedule follow-up.<cite data-ref=\"https://www.ercot.com/misdownload/servlets/mirDownload?doclookupId=1281327706\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "estimated",
+        "allDay": true,
+        "allDayStated": false,
+        "utcStartDateTime": "2026-11-12T00:00:00.000Z",
+        "dateConfidenceReasoning": "November 12, 2026 is ERCOT’s projected COD, not a confirmed delivery; FIS Started / No IA warrants schedule follow-up.",
+        "company": "Ben Milam Solar 5",
+        "companyWikiUrl": null,
+        "address": "Milam County, Texas; approximate county context, exact solar parcel not established",
+        "tags": [
+          "Cleanview",
+          "Solar",
+          "ERCOT",
+          "Milam County",
+          "Texas",
+          "Planned"
+        ]
+      },
+      "power": {
+        "megawatts": 500,
+        "kind": "generation",
+        "sourceUrl": "https://www.ercot.com/misdownload/servlets/mirDownload?doclookupId=1281327706",
+        "note": "Proposed/studied scope, not measured output or evidence of operation. ERCOT identifies Aquila Solar as Ben Milam Solar 5’s 500 MW solar request at Gibson Switch 345 kV in Milam County. Its requested commercial date is November 12, 2026; the"
+      },
+      "datacenter": null,
+      "clearEnergy": false,
+      "gaps": [
+        "Applicant ownership, exact parcel and current schedule remain unverified. No verified project gallery in the queue."
+      ]
+    },
+    "battery-cordova-rock-island-il": {
+      "patch": {
+        "title": "Cordova AG2-675: 80 MW / 320 MWh Storage Addition",
+        "description": "PJM’s June 2026 study identifies Scout Solar DevCo LLC’s Cordova request AG2-675 as an 80 MW / 320 MWh, four-hour storage addition sharing solar request AG1-462’s interconnection in Rock Island County, Illinois.",
+        "sourceUrl": "https://www.pjm.com/pjmfiles/pub/planning/project-queues/TC2/PHASE_2/AG2-675/AG2-675_imp_PHASE_2.htm",
+        "references": [
+          {
+            "url": "https://www.pjm.com/pjmfiles/pub/planning/project-queues/TC2/PHASE_2/AG2-675/AG2-675_imp_PHASE_2.htm",
+            "title": "AG2-675 Phase II System Impact Study Report",
+            "confidence": 95,
+            "publishedDate": "2026-06-03"
+          }
+        ],
+        "longFormSummary": "<ul><li>The storage request is 80 MW energy / 32 MW capacity. The former 335 MW standalone battery, 1,340 MWh, Constellation attribution and $295M are removed. The study’s combined capability/capacity totals are inconsistent and are not adopted.<cite data-ref=\"https://www.pjm.com/pjmfiles/pub/planning/project-queues/TC2/PHASE_2/AG2-675/AG2-675_imp_PHASE_2.htm\"></cite></li><li>Timeline: The event is the June 3, 2026 study release, not a confirmed 2028 commissioning.<cite data-ref=\"https://www.pjm.com/pjmfiles/pub/planning/project-queues/TC2/PHASE_2/AG2-675/AG2-675_imp_PHASE_2.htm\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "confirmed",
+        "allDay": true,
+        "allDayStated": false,
+        "utcStartDateTime": "2026-06-03T00:00:00.000Z",
+        "dateConfidenceReasoning": "The event is the June 3, 2026 study release, not a confirmed 2028 commissioning.",
+        "company": "Scout Solar DevCo LLC",
+        "companyWikiUrl": null,
+        "address": "Rock Island County, Illinois, near Cordova POI; approximate county context, not a verified battery parcel",
+        "tags": [
+          "Cleanview",
+          "Battery Storage",
+          "PJM",
+          "Rock Island County",
+          "Illinois",
+          "Planned"
+        ]
+      },
+      "power": {
+        "megawatts": 80,
+        "kind": "storage",
+        "sourceUrl": "https://www.pjm.com/pjmfiles/pub/planning/project-queues/TC2/PHASE_2/AG2-675/AG2-675_imp_PHASE_2.htm",
+        "note": "Proposed/studied scope, not measured output or evidence of operation. PJM’s June 2026 study identifies Scout Solar DevCo LLC’s Cordova request AG2-675 as an 80 MW / 320 MWh, four-hour storage addition sharing solar request AG1-462’s interco"
+      },
+      "datacenter": null,
+      "clearEnergy": false,
+      "gaps": [
+        "Resolve inconsistent combined totals with PJM and applicant; confirm parcel and COD. Study diagrams do not establish a commissioned-site photograph."
+      ]
+    },
+    "dc-archer-faribault-rice-mn": {
+      "patch": {
+        "title": "Archer Faribault: 120 MW Potential Campus in Environmental Review",
+        "description": "Faribault extended Archer’s supplemental environmental review deadline to March 31, 2027 following a June 2026 court ruling. The operator advertises 120 MW total potential power; the city describes up to 500,000 sqft on roughly 87 acres.",
+        "sourceUrl": "https://faribaultmn.gov/815/Archer-Datacenters",
+        "references": [
+          {
+            "url": "https://faribaultmn.gov/815/Archer-Datacenters",
+            "title": "Archer Datacenters | Faribault, Minnesota",
+            "confidence": 95,
+            "publishedDate": null
+          },
+          {
+            "url": "https://www.archerdatacenters.com/minneapolis",
+            "title": "Minneapolis — Archer Datacenters",
+            "confidence": 95,
+            "publishedDate": null
+          }
+        ],
+        "longFormSummary": "<ul><li>The city reports no formal development applications. Its July 7 extension seeks project-specific water, cooling and backup-generation information. The operator’s 84 acres differs from the city’s approximately 87-acre scope; 120 MW is potential total power, not verified IT load.<cite data-ref=\"https://faribaultmn.gov/815/Archer-Datacenters\"></cite></li><li>The operator’s conceptual plan and approximately 36-month power scaling are not construction or commissioning evidence. The unsupported $850M, 2027 opening, calculated energy and water estimate are removed.<cite data-ref=\"https://www.archerdatacenters.com/minneapolis\"></cite></li><li>Timeline: The confirmed milestone is the July 7, 2026 review extension; March 31, 2027 is a supplemental-review deadline, not opening.<cite data-ref=\"https://faribaultmn.gov/815/Archer-Datacenters\"></cite></li><li>Operator conceptual six-building layout south of 150th Street W and east of Acorn Trail; environmental review remains open, not construction evidence. Credit: Archer Datacenters; conceptual plan published on its Minneapolis page.<cite data-ref=\"https://www.archerdatacenters.com/minneapolis\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "confirmed",
+        "allDay": true,
+        "allDayStated": false,
+        "utcStartDateTime": "2026-07-07T00:00:00.000Z",
+        "dateConfidenceReasoning": "The confirmed milestone is the July 7, 2026 review extension; March 31, 2027 is a supplemental-review deadline, not opening.",
+        "company": "Archer Datacenters",
+        "companyWikiUrl": null,
+        "latitude": 44.370697,
+        "longitude": -93.287537,
+        "address": "150th Street W / Acorn Trail, Faribault, Minnesota; Census-geocoded intersection context, proposed site lies south/east",
+        "tags": [
+          "Cleanview",
+          "Data Center",
+          "Archer",
+          "Rice County",
+          "Minnesota",
+          "Planned"
+        ],
+        "media": [
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-large5-2026-10-23/dc-archer-faribault-rice-mn-aerial.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 1000
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-large5-2026-10-23/dc-archer-faribault-rice-mn-topo.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 1000
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-large5-2026-10-23/dc-archer-faribault-rice-mn-relief.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 1000
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-large5-2026-10-23/archer-plan.png",
+            "originalWidth": 898,
+            "originalHeight": 1410
+          }
+        ]
+      },
+      "power": {
+        "megawatts": 120,
+        "kind": "usage",
+        "sourceUrl": "https://www.archerdatacenters.com/minneapolis",
+        "note": "Operator advertises 120 MW total potential power availability, scaling over approximately 36 months. Not critical IT capacity, an energized supply or a commissioning commitment."
+      },
+      "datacenter": {
+        "acres": 87,
+        "sqft": 500000,
+        "sourceUrl": "https://faribaultmn.gov/815/Archer-Datacenters",
+        "note": "Municipal proposal upper limits: approximately 87 acres and up to 500,000 sqft. Operator says 84 acres / 120 MW potential power. Environmental review remains open."
+      },
+      "clearEnergy": true,
+      "gaps": [
+        "Reconcile municipal 87 versus operator 84 acres. Verify the supplemental review and formal applications after March 2027; no measured water or verified cooling design."
+      ],
+      "mediaReplaced": true,
+      "mediaAdded": 1
+    },
+    "dc-cloudhq-msp-bldg2-carver-mn": {
+      "delete": true,
+      "researchFinding": "The city describes a single roughly 1.5-million-sqft project at 2007 Schoolmaster Drive with preliminary approval in October 2024 and no final application/timeline. It does not establish a separately identified 100 MW Building 2, $700M budget or June 2027 COD. Hold this unsupported building split; do not duplicate campus totals into it.",
+      "sourcesChecked": [
+        "https://chaskamn.gov/841/Cloud-HQ",
+        "https://www.cloudhq.com/"
+      ],
+      "gaps": [
+        "The city describes a single roughly 1.5-million-sqft project at 2007 Schoolmaster Drive with preliminary approval in October 2024 and no final application/timeline. It does not establish a separately identified 100 MW Building 2, $700M budget or June 2027 COD. Hold this unsupported building split; do not duplicate campus totals into it."
+      ]
+    },
+    "dc-rowan-percheron-morrow-or": {
+      "patch": {
+        "title": "Rowan Percheron: 300 MW Campus, Phased Buildout Targeting 2030",
+        "description": "Rowan describes Percheron as a 300 MW, 275-acre Oregon campus with land closed in 2024 and phased buildout targeting completion by 2030. County records locate its approximately 274-acre parcel on Tower Road, south of I-84 and north of the former Boardman coal plant.",
+        "sourceUrl": "https://rowan.com/portfolio/percheron/",
+        "references": [
+          {
+            "url": "https://rowan.com/portfolio/percheron/",
+            "title": "Percheron | Rowan Digital Infrastructure",
+            "confidence": 95,
+            "publishedDate": null
+          },
+          {
+            "url": "https://www.percherondatacenter.com/about",
+            "title": "About Percheron Data Center",
+            "confidence": 95,
+            "publishedDate": null
+          },
+          {
+            "url": "https://www.oregon.gov/lcd/Commission/Documents/2023-11_Item_4_Combined.pdf",
+            "title": "Morrow County Board of Commissioners — Percheron Findings",
+            "confidence": 95,
+            "publishedDate": null
+          },
+          {
+            "url": "https://www.eia.gov/electricity/data/eia860m/xls/august_generator2026.xlsx",
+            "title": "EIA August 2026 Generator Inventory — retired Boardman plant context",
+            "confidence": 95,
+            "publishedDate": null
+          }
+        ],
+        "longFormSummary": "<ul><li>The owner’s current scope replaces the former 84 MW / $700M / 2027 narrative. 300 MW is campus capacity, not explicitly IT load. The project is inland southwest of Boardman, not Tower Road / Marine Drive.<cite data-ref=\"https://rowan.com/portfolio/percheron/\"></cite></li><li>The marker uses the retired Boardman plant’s published EIA coordinates only as nearby context; the proposed parcel lies north of it. The linked conceptual layout is not a construction photograph.<cite data-ref=\"https://www.oregon.gov/lcd/Commission/Documents/2023-11_Item_4_Combined.pdf\"></cite></li><li>Timeline: January 1 is a year-only placeholder for Rowan’s phased completion target by 2030, not a scheduled day or confirmed operation.<cite data-ref=\"https://rowan.com/portfolio/percheron/\"></cite></li><li>Historical preliminary conceptual layout of the proposed Tower Road parcel; labels show planned water and electrical infrastructure, not completed facilities. Credit: ERM / Rowan Percheron LLC; Figure 5 as published on the project site.<cite data-ref=\"https://www.percherondatacenter.com/about\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "estimated",
+        "allDay": true,
+        "allDayStated": false,
+        "utcStartDateTime": "2030-01-01T00:00:00.000Z",
+        "dateConfidenceReasoning": "January 1 is a year-only placeholder for Rowan’s phased completion target by 2030, not a scheduled day or confirmed operation.",
+        "company": "Rowan Digital Infrastructure",
+        "companyWikiUrl": null,
+        "latitude": 45.693182,
+        "longitude": -119.8088,
+        "address": "Tower Road project north of former Boardman plant, Morrow County, Oregon; marker is EIA’s nearby retired-plant context, not project parcel",
+        "tags": [
+          "Cleanview",
+          "Data Center",
+          "Rowan",
+          "Morrow County",
+          "Oregon",
+          "Planned"
+        ],
+        "media": [
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-large5-2026-10-23/dc-rowan-percheron-morrow-or-aerial.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 1000
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-large5-2026-10-23/dc-rowan-percheron-morrow-or-topo.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 1000
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-large5-2026-10-23/dc-rowan-percheron-morrow-or-relief.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 1000
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-large5-2026-10-23/percheron-map.jpg",
+            "originalWidth": 612,
+            "originalHeight": 792
+          }
+        ]
+      },
+      "power": {
+        "megawatts": 300,
+        "kind": "usage",
+        "sourceUrl": "https://rowan.com/portfolio/percheron/",
+        "note": "Proposed/studied scope, not measured output or evidence of operation. Rowan describes Percheron as a 300 MW, 275-acre Oregon campus with land closed in 2024 and phased buildout targeting completion by 2030. County records locate its approxi"
+      },
+      "datacenter": {
+        "acres": 275,
+        "sourceUrl": "https://rowan.com/portfolio/percheron/",
+        "note": "Operator campus proposal: 300 MW and 275 acres. County parcel approximately 274 acres; capacity is not identified as critical IT."
+      },
+      "clearEnergy": false,
+      "gaps": [
+        "Georeference the recorded 274-acre parcel precisely; current construction and phase-specific power/COD remain unverified."
+      ],
+      "mediaReplaced": true,
+      "mediaAdded": 1
+    },
+    "solar-alexandria-bison-clay-mn": {
+      "patch": {
+        "title": "Alexandria–Bison J3762: 430 MW Solar Request in Clay County",
+        "description": "MISO lists J3762 as a 430 MW solar request at Alexandria–Bison 345 kV in Clay County, Minnesota. The active Phase 2 request carries an August 1, 2028 in-service target; Great River Energy is the transmission owner, not verified developer.",
+        "sourceUrl": null,
+        "references": [
+          {
+            "url": "https://www.misoenergy.org/api/giqueue/getprojects",
+            "title": "MISO Generator Interconnection Queue — J3762",
+            "confidence": 95,
+            "publishedDate": null
+          }
+        ],
+        "longFormSummary": "<ul><li>The former Great River developer attribution, $420M, acreage and construction status have no support in this record.<cite data-ref=\"https://www.misoenergy.org/api/giqueue/getprojects\"></cite></li><li>Timeline: August 1, 2028 is MISO’s requested inService date, not confirmed COD.<cite data-ref=\"https://www.misoenergy.org/api/giqueue/getprojects\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "estimated",
+        "allDay": true,
+        "allDayStated": false,
+        "utcStartDateTime": "2028-08-01T00:00:00.000Z",
+        "dateConfidenceReasoning": "August 1, 2028 is MISO’s requested inService date, not confirmed COD.",
+        "company": null,
+        "companyWikiUrl": null,
+        "address": "Clay County, Minnesota; approximate county context, exact J3762 parcel pending",
+        "tags": [
+          "Cleanview",
+          "Solar",
+          "MISO",
+          "Clay County",
+          "Minnesota",
+          "Planned"
+        ]
+      },
+      "power": {
+        "megawatts": 430,
+        "kind": "generation",
+        "sourceUrl": "https://www.misoenergy.org/api/giqueue/getprojects",
+        "note": "Proposed/studied scope, not measured output or evidence of operation. MISO lists J3762 as a 430 MW solar request at Alexandria–Bison 345 kV in Clay County, Minnesota. The active Phase 2 request carries an August 1, 2028 in-service target; G"
+      },
+      "datacenter": null,
+      "clearEnergy": false,
+      "gaps": [
+        "Identify developer and parcel from applicant filings; queue has no verified project gallery or commissioning evidence."
+      ]
+    },
+    "solar-jasper-clean-jasper-in": {
+      "patch": {
+        "title": "Jasper J3931: 500 MW Solar Queue Request, September 2030 Target",
+        "description": "MISO’s active J3931 request is a 500 MW photovoltaic project in Jasper County, Indiana, targeting September 30, 2030. It is in DPP-2025 Phase 1 with POI recorded only as Other_; NIPSCO is listed as transmission owner.",
+        "sourceUrl": null,
+        "references": [
+          {
+            "url": "https://www.misoenergy.org/api/giqueue/getprojects",
+            "title": "MISO Generator Interconnection Queue — J3931",
+            "confidence": 95,
+            "publishedDate": null
+          }
+        ],
+        "longFormSummary": "<ul><li>The record does not establish the commercial name Jasper Clean Solar Center, project ownership, the former $480M budget or construction. No unrelated Dunns Bridge or Mammoth development is substituted.<cite data-ref=\"https://www.misoenergy.org/api/giqueue/getprojects\"></cite></li><li>Timeline: September 30, 2030 is the request’s inService date, not confirmed commissioning.<cite data-ref=\"https://www.misoenergy.org/api/giqueue/getprojects\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "estimated",
+        "allDay": true,
+        "allDayStated": false,
+        "utcStartDateTime": "2030-09-30T00:00:00.000Z",
+        "dateConfidenceReasoning": "September 30, 2030 is the request’s inService date, not confirmed commissioning.",
+        "company": null,
+        "companyWikiUrl": null,
+        "address": "Jasper County, Indiana; approximate county context, J3931 has no published parcel here",
+        "tags": [
+          "Cleanview",
+          "Solar",
+          "MISO",
+          "Jasper County",
+          "Indiana",
+          "Planned"
+        ]
+      },
+      "power": {
+        "megawatts": 500,
+        "kind": "generation",
+        "sourceUrl": "https://www.misoenergy.org/api/giqueue/getprojects",
+        "note": "Proposed/studied scope, not measured output or evidence of operation. MISO’s active J3931 request is a 500 MW photovoltaic project in Jasper County, Indiana, targeting September 30, 2030. It is in DPP-2025 Phase 1 with POI recorded only as"
+      },
+      "datacenter": null,
+      "clearEnergy": false,
+      "gaps": [
+        "Applicant, commercial project name and POI are unresolved; Other_ is not a substation name. No verified project gallery."
+      ]
+    },
+    "solar-johnson-nextera-johnson-ks": {
+      "patch": {
+        "title": "West Gardner GEN-2017-195: 500.4 MW Solar Queue, December 2030 Target",
+        "description": "SPP lists GEN-2017-195 as 500.4 MW solar at West Gardner 345 kV in Johnson County, Kansas, with December 1, 2030 proposed COD and IA fully executed/on-schedule status. The entry does not identify NextEra as developer.",
+        "sourceUrl": null,
+        "references": [
+          {
+            "url": "https://opsportal.spp.org/Studies/GIActive",
+            "title": "SPP Active Generator Interconnection Requests — GEN-2017-195",
+            "confidence": 95,
+            "publishedDate": null
+          }
+        ],
+        "longFormSummary": "<ul><li>The queue supports the specific request, not the former $500M, construction claim or December 2028 opening. KCPL is the transmission utility. A separate 128 MW storage request is not added to the solar rating.<cite data-ref=\"https://opsportal.spp.org/Studies/GIActive\"></cite></li><li>Timeline: December 1, 2030 is SPP’s proposed COD. Executed IA / On Schedule does not mean construction or operation.<cite data-ref=\"https://opsportal.spp.org/Studies/GIActive\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "estimated",
+        "allDay": true,
+        "allDayStated": false,
+        "utcStartDateTime": "2030-12-01T00:00:00.000Z",
+        "dateConfidenceReasoning": "December 1, 2030 is SPP’s proposed COD. Executed IA / On Schedule does not mean construction or operation.",
+        "company": null,
+        "companyWikiUrl": null,
+        "address": "Johnson County, Kansas, West Gardner POI context; exact solar parcel and applicant pending",
+        "tags": [
+          "Cleanview",
+          "Solar",
+          "SPP",
+          "Johnson County",
+          "Kansas",
+          "Planned"
+        ]
+      },
+      "power": {
+        "megawatts": 500.4,
+        "kind": "generation",
+        "sourceUrl": "https://opsportal.spp.org/Studies/GIActive",
+        "note": "Proposed/studied scope, not measured output or evidence of operation. SPP lists GEN-2017-195 as 500.4 MW solar at West Gardner 345 kV in Johnson County, Kansas, with December 1, 2030 proposed COD and IA fully executed/on-schedule status. Th"
+      },
+      "datacenter": null,
+      "clearEnergy": false,
+      "gaps": [
+        "Reconcile this older 500.4 MW queue scope with separately reported 217 MW West Gardner development before linking or merging. NextEra ownership is unverified. No verified queue project gallery."
+      ]
+    },
+    "solar-mineral-basin-clearfield-pa": {
+      "patch": {
+        "title": "Mineral Basin Solar: 401.6 MW NYISO Request Targets December 2029",
+        "description": "Swift Current lists Mineral Basin as a 402 MW solar development in Clearfield County, Pennsylvania, interconnected with NYISO. NYISO request 1080 records 401.6 MW and December 2029 requested commercial operation.",
+        "sourceUrl": null,
+        "references": [
+          {
+            "url": "https://swiftcurrentenergy.com/project/mineral-basin-solar/",
+            "title": "Mineral Basin Solar | Swift Current Energy",
+            "confidence": 95,
+            "publishedDate": null
+          },
+          {
+            "url": "https://www.nyiso.com/documents/20142/1407078/NYISO-Interconnection-Queue.xlsx",
+            "title": "NYISO Interconnection Queue — 1080 Mineral Basin Solar Power",
+            "confidence": 95,
+            "publishedDate": null
+          }
+        ],
+        "longFormSummary": "<ul><li>NYISO lists Homer City–Mainesburg 345 kV / NYSEG, with March 2029 backfeed and synchronization separately from December 2029 COD. The rounded operator 402 MW and queue 401.6 MW describe different precision, not an added project.<cite data-ref=\"https://www.nyiso.com/documents/20142/1407078/NYISO-Interconnection-Queue.xlsx\"></cite></li><li>The former PJM label, $400M and December 2027 completion claim are removed. The distinct withdrawn Mineral Basin II request 1393 is not substituted.<cite data-ref=\"https://swiftcurrentenergy.com/project/mineral-basin-solar/\"></cite></li><li>Timeline: December 1 is a month-only placeholder for NYISO’s 12-2029 requested COD, not a confirmed day; March 2029 is backfeed/synchronization.<cite data-ref=\"https://swiftcurrentenergy.com/project/mineral-basin-solar/\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "estimated",
+        "allDay": true,
+        "allDayStated": false,
+        "utcStartDateTime": "2029-12-01T00:00:00.000Z",
+        "dateConfidenceReasoning": "December 1 is a month-only placeholder for NYISO’s 12-2029 requested COD, not a confirmed day; March 2029 is backfeed/synchronization.",
+        "company": "Swift Current Energy",
+        "companyWikiUrl": null,
+        "address": "Clearfield County, Pennsylvania; approximate county context, exact Mineral Basin project boundary pending",
+        "tags": [
+          "Cleanview",
+          "Solar",
+          "NYISO",
+          "Clearfield County",
+          "Pennsylvania",
+          "Swift Current Energy",
+          "Planned"
+        ]
+      },
+      "power": {
+        "megawatts": 401.6,
+        "kind": "generation",
+        "sourceUrl": "https://www.nyiso.com/documents/20142/1407078/NYISO-Interconnection-Queue.xlsx",
+        "note": "NYISO request 1080 lists 401.6 MW summer/winter solar capability. Operator rounds to 402 MW. Proposed interconnection scope, not measured output or evidence of operation."
+      },
+      "datacenter": null,
+      "clearEnergy": false,
+      "gaps": [
+        "Confirm current financing, construction and project boundary. Operator gallery checked; no additional verified site photograph adopted."
+      ]
+    },
+    "battery-barnstable-barnstable-ma": {
+      "delete": true,
+      "researchFinding": "Search indexing identifies ISO-NE QP1543 as a 500 MW net battery request in Barnstable County at a new tap on the Canal–Jordan 342-2W line, not proof of the pin’s West Barnstable parcel. The official live table repeatedly redirects and cannot be freshly opened; the index does not establish 2,000 MWh, developer, $450M or exact site. Hold until the primary request and parcel can be read, not a finding of cancellation.",
+      "sourcesChecked": [
+        "https://irtt.iso-ne.com/reports/external",
+        "https://www.iso-ne.com/system-planning/interconnection-service/interconnection-request-queue/"
+      ],
+      "gaps": [
+        "Search indexing identifies ISO-NE QP1543 as a 500 MW net battery request in Barnstable County at a new tap on the Canal–Jordan 342-2W line, not proof of the pin’s West Barnstable parcel. The official live table repeatedly redirects and cannot be freshly opened; the index does not establish 2,000 MWh, developer, $450M or exact site. Hold until the primary request and parcel can be read, not a finding of cancellation."
+      ]
+    },
+    "battery-morocco-monroe-mi": {
+      "patch": {
+        "title": "Morocco J3994: 360 MW Monroe County Battery Queue Request",
+        "description": "MISO lists J3994 as a 360 MW battery request at 18 MOROCCO 256583 in Monroe County, Michigan, with an April 1, 2028 in-service target. The active DPP-2026 request does not publish storage energy or developer ownership.",
+        "sourceUrl": null,
+        "references": [
+          {
+            "url": "https://www.misoenergy.org/api/giqueue/getprojects",
+            "title": "MISO Generator Interconnection Queue — J3994",
+            "confidence": 95,
+            "publishedDate": null
+          }
+        ],
+        "longFormSummary": "<ul><li>METC is the transmission owner; it is not evidence of DTE project ownership. The 1,440 MWh four-hour assumption, $320M and construction claim are removed.<cite data-ref=\"https://www.misoenergy.org/api/giqueue/getprojects\"></cite></li><li>Timeline: April 1, 2028 is the queue’s requested inService date, not verified commissioning.<cite data-ref=\"https://www.misoenergy.org/api/giqueue/getprojects\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "estimated",
+        "allDay": true,
+        "allDayStated": false,
+        "utcStartDateTime": "2028-04-01T00:00:00.000Z",
+        "dateConfidenceReasoning": "April 1, 2028 is the queue’s requested inService date, not verified commissioning.",
+        "company": null,
+        "companyWikiUrl": null,
+        "address": "Monroe County, Michigan; approximate county context, exact J3994 battery parcel pending",
+        "tags": [
+          "Cleanview",
+          "Battery Storage",
+          "MISO",
+          "Monroe County",
+          "Michigan",
+          "Planned"
+        ]
+      },
+      "power": {
+        "megawatts": 360,
+        "kind": "storage",
+        "sourceUrl": "https://www.misoenergy.org/api/giqueue/getprojects",
+        "note": "Proposed/studied scope, not measured output or evidence of operation. MISO lists J3994 as a 360 MW battery request at 18 MOROCCO 256583 in Monroe County, Michigan, with an April 1, 2028 in-service target. The active DPP-2026 request does no"
+      },
+      "datacenter": null,
+      "clearEnergy": false,
+      "gaps": [
+        "Confirm applicant, MWh, study milestones and exact parcel; public queue supplies no project photographs."
+      ]
+    },
+    "dc-pointone-sanford-south-nc": {
+      "delete": true,
+      "researchFinding": "PointOne’s official Lee County page establishes one 90 MW IT / $900M first-phase building on its 430-acre CyrusOne site, already corrected as pin 16482. No opened operator evidence establishes a separate 100 MW Sanford South site, its parcel, $600M or June 2028 COD. Hold the unsupported second-campus split; do not copy the verified campus into another record.",
+      "sourcesChecked": [
+        "https://www.pointonecorp.com/leecounty",
+        "https://www.pointonecorp.com/locations"
+      ],
+      "gaps": [
+        "PointOne’s official Lee County page establishes one 90 MW IT / $900M first-phase building on its 430-acre CyrusOne site, already corrected as pin 16482. No opened operator evidence establishes a separate 100 MW Sanford South site, its parcel, $600M or June 2028 COD. Hold the unsupported second-campus split; do not copy the verified campus into another record."
+      ]
+    },
+    "battery-olive-reynolds-pulaski-in": {
+      "patch": {
+        "title": "Olive–Reynolds AH1-482: 78 MW / 312 MWh Storage Addition",
+        "description": "PJM’s June 2026 study identifies Lightsource Renewable Energy Development LLC’s AH1-482 as a 78 MW / 312 MWh, four-hour storage addition to AG1-349 solar in Pulaski County, Indiana. The 338 MW figure is combined facility capability.",
+        "sourceUrl": "https://www.pjm.com/pjmfiles/pub/planning/project-queues/TC2/PHASE_2/AH1-482/AH1-482_imp_PHASE_2.htm",
+        "references": [
+          {
+            "url": "https://www.pjm.com/pjmfiles/pub/planning/project-queues/TC2/PHASE_2/AH1-482/AH1-482_imp_PHASE_2.htm",
+            "title": "AH1-482 Phase II System Impact Study Report",
+            "confidence": 95,
+            "publishedDate": "2026-06-03"
+          }
+        ],
+        "longFormSummary": "<ul><li>The battery adds 78 MW energy and capacity to a 260 MW solar project. The former 338 MW standalone storage, 1,352 MWh, NIPSCO developer attribution and $300M are removed.<cite data-ref=\"https://www.pjm.com/pjmfiles/pub/planning/project-queues/TC2/PHASE_2/AH1-482/AH1-482_imp_PHASE_2.htm\"></cite></li><li>Timeline: The confirmed event is June 3, 2026 study publication; a 2028 basecase is not project COD.<cite data-ref=\"https://www.pjm.com/pjmfiles/pub/planning/project-queues/TC2/PHASE_2/AH1-482/AH1-482_imp_PHASE_2.htm\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "confirmed",
+        "allDay": true,
+        "allDayStated": false,
+        "utcStartDateTime": "2026-06-03T00:00:00.000Z",
+        "dateConfidenceReasoning": "The confirmed event is June 3, 2026 study publication; a 2028 basecase is not project COD.",
+        "company": "Lightsource Renewable Energy Development, LLC",
+        "companyWikiUrl": null,
+        "address": "Pulaski County, Indiana, Olive–Reynolds POI context; exact battery parcel pending",
+        "tags": [
+          "Cleanview",
+          "Battery Storage",
+          "PJM",
+          "Pulaski County",
+          "Indiana",
+          "Planned"
+        ]
+      },
+      "power": {
+        "megawatts": 78,
+        "kind": "storage",
+        "sourceUrl": "https://www.pjm.com/pjmfiles/pub/planning/project-queues/TC2/PHASE_2/AH1-482/AH1-482_imp_PHASE_2.htm",
+        "note": "Proposed/studied scope, not measured output or evidence of operation. PJM’s June 2026 study identifies Lightsource Renewable Energy Development LLC’s AH1-482 as a 78 MW / 312 MWh, four-hour storage addition to AG1-349 solar in Pulaski Count"
+      },
+      "datacenter": null,
+      "clearEnergy": false,
+      "gaps": [
+        "Applicant parcel, current construction and commissioning date remain unpublished in the opened study. No additional verified project photograph."
+      ]
+    },
+    "battery-aurora-lake-il": {
+      "patch": {
+        "title": "Aurora AH1-563: 150 MW / 600 MWh Storage Addition",
+        "description": "PJM’s June 2026 study identifies Aurora Generation, LLC’s AH1-563 as a 150 MW / 600 MWh, four-hour addition at Aurora E.C. The 1,206 MW figure is combined gas/storage capability, not standalone battery capacity.",
+        "sourceUrl": "https://www.pjm.com/pjmfiles/pub/planning/project-queues/TC2/PHASE_2/AH1-563/AH1-563_imp_PHASE_2.htm",
+        "references": [
+          {
+            "url": "https://www.pjm.com/pjmfiles/pub/planning/project-queues/TC2/PHASE_2/AH1-563/AH1-563_imp_PHASE_2.htm",
+            "title": "AH1-563 Phase II System Impact Study Report",
+            "confidence": 95,
+            "publishedDate": "2026-06-03"
+          },
+          {
+            "url": "https://www.eia.gov/electricity/data/eia860m/xls/august_generator2026.xlsx",
+            "title": "EIA August 2026 Generator Inventory — Aurora plant 55279",
+            "confidence": 95,
+            "publishedDate": null
+          }
+        ],
+        "longFormSummary": "<ul><li>The request shares AC1-109, AC1-110, AC1-111 and AG1-513. The study leaves county unspecified. EIA locates the matching Aurora Generation-operated Aurora plant in DuPage County, not Lake County; the marker represents that existing plant, not a surveyed battery parcel.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/august_generator2026.xlsx\"></cite></li><li>The former 4,824 MWh, $1.05B, Calpine attribution and December 2029 opening are removed.<cite data-ref=\"https://www.pjm.com/pjmfiles/pub/planning/project-queues/TC2/PHASE_2/AH1-563/AH1-563_imp_PHASE_2.htm\"></cite></li><li>Timeline: The confirmed milestone is the June 3, 2026 study release; no new-battery COD is established.<cite data-ref=\"https://www.pjm.com/pjmfiles/pub/planning/project-queues/TC2/PHASE_2/AH1-563/AH1-563_imp_PHASE_2.htm\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "confirmed",
+        "allDay": true,
+        "allDayStated": false,
+        "utcStartDateTime": "2026-06-03T00:00:00.000Z",
+        "dateConfidenceReasoning": "The confirmed milestone is the June 3, 2026 study release; no new-battery COD is established.",
+        "company": "Aurora Generation, LLC",
+        "companyWikiUrl": null,
+        "latitude": 41.8151,
+        "longitude": -88.2265,
+        "address": "Aurora plant 55279, DuPage County, Illinois; EIA existing-plant context, exact AH1-563 battery parcel pending",
+        "tags": [
+          "Cleanview",
+          "Battery Storage",
+          "PJM",
+          "DuPage County",
+          "Illinois",
+          "Planned"
+        ],
+        "media": [
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-large5-2026-10-23/battery-aurora-lake-il-aerial.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 1000
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-large5-2026-10-23/battery-aurora-lake-il-topo.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 1000
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-large5-2026-10-23/battery-aurora-lake-il-relief.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 1000
+          }
+        ]
+      },
+      "power": {
+        "megawatts": 150,
+        "kind": "storage",
+        "sourceUrl": "https://www.pjm.com/pjmfiles/pub/planning/project-queues/TC2/PHASE_2/AH1-563/AH1-563_imp_PHASE_2.htm",
+        "note": "Proposed/studied scope, not measured output or evidence of operation. PJM’s June 2026 study identifies Aurora Generation, LLC’s AH1-563 as a 150 MW / 600 MWh, four-hour addition at Aurora E.C. The 1,206 MW figure is combined gas/storage cap"
+      },
+      "datacenter": null,
+      "clearEnergy": false,
+      "gaps": [
+        "Verify storage parcel and corporate ownership separately; do not treat all 1,206 MW as a commissioned battery. No additional verified storage-site photo."
+      ],
+      "mediaReplaced": true,
+      "mediaAdded": 0
+    },
+    "battery-muon-fresno-ca": {
+      "delete": true,
+      "researchFinding": "No exact Muon match was found in the opened current CAISO queue. No opened CEC/Fresno applicant filing establishes this tracker-only 1,170 MW standalone battery, its parcel, 4,680 MWh, $1B or COD. Hold the unverified identity; absence from an active queue alone does not prove cancellation.",
+      "sourcesChecked": [
+        "https://www.caiso.com/documents/publicqueuereport.xlsx",
+        "https://www.fresnocountyca.gov/Departments/Public-Works-and-Planning",
+        "https://www.energy.ca.gov/powerplant"
+      ],
+      "gaps": [
+        "No exact Muon match was found in the opened current CAISO queue. No opened CEC/Fresno applicant filing establishes this tracker-only 1,170 MW standalone battery, its parcel, 4,680 MWh, $1B or COD. Hold the unverified identity; absence from an active queue alone does not prove cancellation."
+      ]
+    },
+    "dc-cielo-chisago-chisago-mn": {
+      "delete": true,
+      "researchFinding": "Historical Cielo reporting describes a 300 MW / 157-acre Chisago-area plan, but does not establish the pin’s North Branch parcel, $1.6B or 2028 COD. Chisago City’s March 24, 2026 minutes say an unnamed company withdrew its land purchase because Xcel capacity was unavailable; they do not name Cielo and cannot establish Cielo cancellation. Operator website fails DNS. Hold until company, municipality, parcel and current status can be linked.",
+      "sourcesChecked": [
+        "https://www.datacenterdynamics.com/en/news/cielo-digital-infrastructure-plans-300mw-data-center-campus-in-south-carolina/",
+        "https://www.ci.chisago.mn.us/vertical/sites/%7B4CF416A7-935D-4E3F-82DF-F3E06B5985B0%7D/uploads/CC_MINUTES_03.24.26.pdf",
+        "https://cieloinfra.com/"
+      ],
+      "gaps": [
+        "Historical Cielo reporting describes a 300 MW / 157-acre Chisago-area plan, but does not establish the pin’s North Branch parcel, $1.6B or 2028 COD. Chisago City’s March 24, 2026 minutes say an unnamed company withdrew its land purchase because Xcel capacity was unavailable; they do not name Cielo and cannot establish Cielo cancellation. Operator website fails DNS. Hold until company, municipality, parcel and current status can be linked."
+      ]
+    },
+    "dc-cielo-haines-city-polk-fl": {
+      "patch": {
+        "title": "Cielo Haines City: Conditional Water-Service Letter for Proposed Campus",
+        "description": "Haines City’s November 17, 2025 signed letter to Cielo concerns a proposed Marion Road / SR 544-E campus requesting up to 150,000 gallons per day at full buildout. The city lacked sufficient permitted water capacity; service depended on a SWFWMD permit modification.",
+        "sourceUrl": "https://thecitrustea.com/wp-content/uploads/2026/07/Cielo-Concurrence-Letter.pdf",
+        "references": [
+          {
+            "url": "https://thecitrustea.com/wp-content/uploads/2026/07/Cielo-Concurrence-Letter.pdf",
+            "title": "City of Haines City — Cielo Conditional Service-Concurrence Letter",
+            "confidence": 95,
+            "publishedDate": "2025-11-17"
+          },
+          {
+            "url": "https://www.datacenterdynamics.com/en/news/cielo-digital-infrastructure-plans-300mw-data-center-campus-in-south-carolina/",
+            "title": "Cielo Digital Infrastructure plans 300MW data center campus in South Carolina",
+            "confidence": 95,
+            "publishedDate": "2025-06-24"
+          }
+        ],
+        "longFormSummary": "<ul><li>The requested maximum includes cooling makeup and domestic use for 30 staff; it is not measured consumption or unconditional capacity. Historical June 2025 reporting describes Cielo’s Haines City plan as 300 MW / 74 acres; the letter itself supplies no power rating.<cite data-ref=\"https://thecitrustea.com/wp-content/uploads/2026/07/Cielo-Concurrence-Letter.pdf\"></cite></li><li>The US 27 / Kokomo Road location, $1.5B, December 2028 opening and closed-loop cooling assertion are removed. The water letter is not a construction approval.<cite data-ref=\"https://thecitrustea.com/wp-content/uploads/2026/07/Cielo-Concurrence-Letter.pdf\"></cite></li><li>Timeline: The confirmed event is the November 17, 2025 conditional-service letter, not campus commissioning.<cite data-ref=\"https://thecitrustea.com/wp-content/uploads/2026/07/Cielo-Concurrence-Letter.pdf\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "confirmed",
+        "allDay": true,
+        "allDayStated": false,
+        "utcStartDateTime": "2025-11-17T00:00:00.000Z",
+        "dateConfidenceReasoning": "The confirmed event is the November 17, 2025 conditional-service letter, not campus commissioning.",
+        "company": "Cielo Digital Infrastructure",
+        "companyWikiUrl": null,
+        "latitude": 28.077391,
+        "longitude": -81.550665,
+        "address": "Marion Road / SR 544-E, Haines City, Florida; Census-geocoded intersection context from signed city letter, not surveyed campus centroid",
+        "tags": [
+          "Cleanview",
+          "Data Center",
+          "Cielo",
+          "Polk County",
+          "Florida",
+          "Planned"
+        ],
+        "media": [
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-large5-2026-10-23/dc-cielo-haines-city-polk-fl-aerial.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 1000
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-large5-2026-10-23/dc-cielo-haines-city-polk-fl-topo.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 1000
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-large5-2026-10-23/dc-cielo-haines-city-polk-fl-relief.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 1000
+          }
+        ]
+      },
+      "power": {
+        "megawatts": 300,
+        "kind": "usage",
+        "sourceUrl": "https://www.datacenterdynamics.com/en/news/cielo-digital-infrastructure-plans-300mw-data-center-campus-in-south-carolina/",
+        "note": "DCD June 24, 2025 reports Cielo’s Haines City plan as 300 MW across 74 acres, citing its then-current website. Historical proposal, not verified current IT load or energized service; the November 2025 water letter states no power rating."
+      },
+      "datacenter": {
+        "waterGallonsPerDay": 150000,
+        "waterBasis": "estimated",
+        "sourceUrl": "https://thecitrustea.com/wp-content/uploads/2026/07/Cielo-Concurrence-Letter.pdf",
+        "note": "Published requested maximum, up to 150,000 gal/day at full buildout including cooling makeup and domestic use. Conditional on SWFWMD water-use permit modification; not measured consumption."
+      },
+      "clearEnergy": true,
+      "gaps": [
+        "Verify later water permit modification, site entitlements, current power plan and schedule. Operator gallery inaccessible due DNS; no substitute campus photo."
+      ],
+      "mediaReplaced": true,
+      "mediaAdded": 0
+    },
+    "dc-cielo-new-lenox-will-il": {
+      "delete": true,
+      "researchFinding": "FOIA correspondence shows Cielo researching a 1M-plus-sqft development and negotiating alternative land in 2024, not construction. The initially queried residential parcels were rejected; later Harvey/Center-area negotiations do not verify this pin’s Route 30 / Gougar location, 300 MW, $1.8B or 2028 COD. The August 10, 2026 mayor’s statement does not establish a Cielo-approved project. Hold the unverified site/capacity split; do not assign a separate 250 MW / 120-acre proposal to it.",
+      "sourcesChecked": [
+        "https://www.raysguide.com/local-community/developments/new-lenox-data-center",
+        "https://www.newlenox.net/AgendaCenter/ViewFile/Minutes/_08102026-637",
+        "https://cieloinfra.com/"
+      ],
+      "gaps": [
+        "FOIA correspondence shows Cielo researching a 1M-plus-sqft development and negotiating alternative land in 2024, not construction. The initially queried residential parcels were rejected; later Harvey/Center-area negotiations do not verify this pin’s Route 30 / Gougar location, 300 MW, $1.8B or 2028 COD. The August 10, 2026 mayor’s statement does not establish a Cielo-approved project. Hold the unverified site/capacity split; do not assign a separate 250 MW / 120-acre proposal to it."
+      ]
+    },
+    "dc-crusoe-warrenton-bldg1-warren-mo": {
+      "patch": {
+        "title": "Crusoe Warrenton Building 1: 805,000 Sqft Site-Plan Approval",
+        "description": "Warrenton approved Crusoe’s conditional use and site plan on January 20, 2026. The 337.17-acre proposal at 22151 NW Service Road includes two 805,000 sqft data-center buildings and a 40,000 sqft administration building; the record does not publish Building 1 MW.",
+        "sourceUrl": "https://ecode360.com/WA3466/document/753231245.pdf",
+        "references": [
+          {
+            "url": "https://ecode360.com/WA3466/document/753231245.pdf",
+            "title": "Warrenton Board of Aldermen — January 20, 2026 Minutes",
+            "confidence": 95,
+            "publishedDate": "2026-01-20"
+          },
+          {
+            "url": "https://dnr.mo.gov/air/business-industry/air-permits/warrenton-data-center-102026-007",
+            "title": "Missouri DNR — Warrenton Data Center, Permit 102026-007",
+            "confidence": 95,
+            "publishedDate": "2026-10-08"
+          }
+        ],
+        "longFormSummary": "<ul><li>The minutes identify Crusoe as owner/developer and describe Building 1. The permit record separately reports October 8, 2026 air-construction permit issuance; neither proves commissioned service.<cite data-ref=\"https://dnr.mo.gov/air/business-industry/air-permits/warrenton-data-center-102026-007\"></cite></li><li>The former $2B, 300 MW building rating, direct-to-chip cooling, water/energy model and June 2028 opening are removed. The minutes’ estimated 6,500 gal/day sewer flow is not a Building 1 cooling-water reading.<cite data-ref=\"https://ecode360.com/WA3466/document/753231245.pdf\"></cite></li><li>Timeline: The confirmed event is January 20, 2026 CUP/site-plan approval. No Building 1 COD is established.<cite data-ref=\"https://ecode360.com/WA3466/document/753231245.pdf\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "confirmed",
+        "allDay": true,
+        "allDayStated": false,
+        "utcStartDateTime": "2026-01-20T00:00:00.000Z",
+        "dateConfidenceReasoning": "The confirmed event is January 20, 2026 CUP/site-plan approval. No Building 1 COD is established.",
+        "company": "Crusoe Energy Systems",
+        "companyWikiUrl": null,
+        "address": "Warrenton, Warren County, Missouri; city-area marker only. Published site address: 22151 NW Service Road; exact parcel geocoding unresolved",
+        "tags": [
+          "Cleanview",
+          "Data Center",
+          "Crusoe",
+          "Warren County",
+          "Missouri",
+          "Planned"
+        ]
+      },
+      "power": "delete",
+      "datacenter": {
+        "sqft": 805000,
+        "buildings": 1,
+        "sourceUrl": "https://ecode360.com/WA3466/document/753231245.pdf",
+        "note": "One proposed data-center building in a two-building approved site plan. Total campus is 337.17 acres; no verified per-building MW, water or cooling specification."
+      },
+      "clearEnergy": true,
+      "gaps": [
+        "The current marker is explicitly town context, not the Highway W project parcel. Address/intersection geocoding returned no match; obtain city GIS/site-plan polygon before relocation. City/operator galleries checked; no verified project photograph downloaded."
+      ]
+    },
+    "battery-boson-kern-ca": {
+      "delete": true,
+      "researchFinding": "A secondary tracker associates Boson with historical CAISO request 2289 and a 1,173.5 MW hybrid, while the opened current public workbook has no exact Boson name. No opened primary historical row or Kern permit establishes this pin’s standalone 1,173 MW battery, 4,692 MWh, parcel or $1B. Hold until the historical hybrid scope/status can be verified; do not treat the secondary withdrawal label as a primary finding.",
+      "sourcesChecked": [
+        "https://www.caiso.com/documents/publicqueuereport.xlsx",
+        "https://interxdata.com/states/california/counties/kern/",
+        "https://kernplanning.com/"
+      ],
+      "gaps": [
+        "A secondary tracker associates Boson with historical CAISO request 2289 and a 1,173.5 MW hybrid, while the opened current public workbook has no exact Boson name. No opened primary historical row or Kern permit establishes this pin’s standalone 1,173 MW battery, 4,692 MWh, parcel or $1B. Hold until the historical hybrid scope/status can be verified; do not treat the secondary withdrawal label as a primary finding."
+      ]
+    },
+    "solar-sunstone-morrow-or": {
+      "patch": {
+        "title": "Sunstone Solar: 1,200 MW Approved Project Transferred to Amazon",
+        "description": "Oregon lists Sunstone as approved but not yet constructed, with up to 1,200 MW solar and 7,200 MWh storage. On June 26, 2026 the site certificate transferred to Oregon Solar 1, LLC, a wholly owned Amazon subsidiary.",
+        "sourceUrl": null,
+        "references": [
+          {
+            "url": "https://www.oregon.gov/energy/facilities/Pages/ESP.aspx",
+            "title": "Sunstone Solar Project | Oregon Department of Energy",
+            "confidence": 95,
+            "publishedDate": null
+          },
+          {
+            "url": "https://www.oregon.gov/energy/facilities/Facilities%20library/2024-05-15-ESP-ASC-Location.pdf",
+            "title": "Sunstone Figure C-1 — Vicinity Map",
+            "confidence": 95,
+            "publishedDate": "2024-05-15"
+          },
+          {
+            "url": "https://www.oregon.gov/energy/facilities/Facility%20Exhibits/SSP/2024-05-16-SSPAPPDoc25-09-ASC-Exhibit-I-Soil-Conditions.pdf",
+            "title": "Sunstone Solar Exhibit I — Soil Conditions and Construction Plans",
+            "confidence": 95,
+            "publishedDate": "2024-05-16"
+          }
+        ],
+        "longFormSummary": "<ul><li>The authorized project area is 9,442 acres inside a 10,960-acre boundary, approximately 15 miles northeast of Lexington. Up to 9.5 miles of 230 kV overhead transmission is authorized. November 18, 2027 is a construction-commencement deadline, not COD.<cite data-ref=\"https://www.oregon.gov/energy/facilities/Pages/ESP.aspx\"></cite></li><li>The marker uses the applicant erosion-control plan’s approximate coordinates, 45°35′23″N / 119°33′11″W, rather than the former Boardman/Tower Road point. The unpublished $1.15B and December 2029 commissioning are removed.<cite data-ref=\"https://www.oregon.gov/energy/facilities/Facility%20Exhibits/SSP/2024-05-16-SSPAPPDoc25-09-ASC-Exhibit-I-Soil-Conditions.pdf\"></cite></li><li>Timeline: The confirmed event is the June 26, 2026 ownership amendment, not a construction or opening date.<cite data-ref=\"https://www.oregon.gov/energy/facilities/Pages/ESP.aspx\"></cite></li><li>Applicant Sunstone vicinity map from the 2024 siting filing. Historical Pine Gate branding precedes the June 2026 Amazon transfer; not for construction. Credit: Tetra Tech / Pine Gate Renewables; applicant Figure C-1 hosted by Oregon Department of Energy.<cite data-ref=\"https://www.oregon.gov/energy/facilities/Pages/ESP.aspx\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "confirmed",
+        "allDay": true,
+        "allDayStated": false,
+        "utcStartDateTime": "2026-06-26T00:00:00.000Z",
+        "dateConfidenceReasoning": "The confirmed event is the June 26, 2026 ownership amendment, not a construction or opening date.",
+        "company": "Amazon",
+        "companyWikiUrl": "https://en.wikipedia.org/wiki/Amazon_(company)",
+        "companyId": 2,
+        "latitude": 45.589722,
+        "longitude": -119.553056,
+        "address": "Sunstone applicant construction-plan reference point, northeast of Lexington, Morrow County, Oregon; approximate site context",
+        "tags": [
+          "Cleanview",
+          "Solar",
+          "Energy Storage",
+          "Amazon",
+          "Morrow County",
+          "Oregon",
+          "Planned"
+        ],
+        "media": [
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-large5-2026-10-23/solar-sunstone-morrow-or-aerial.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 1000
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-large5-2026-10-23/solar-sunstone-morrow-or-topo.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 1000
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-large5-2026-10-23/solar-sunstone-morrow-or-relief.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 1000
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-large5-2026-10-23/sunstone-map.png",
+            "originalWidth": 1400,
+            "originalHeight": 906
+          }
+        ]
+      },
+      "power": {
+        "megawatts": 1200,
+        "kind": "generation",
+        "sourceUrl": "https://www.oregon.gov/energy/facilities/Pages/ESP.aspx",
+        "note": "Proposed/studied scope, not measured output or evidence of operation. Oregon lists Sunstone as approved but not yet constructed, with up to 1,200 MW solar and 7,200 MWh storage. On June 26, 2026 the site certificate transferred to Oregon So"
+      },
+      "datacenter": null,
+      "clearEnergy": false,
+      "gaps": [
+        "Overlaps the Sunstone record corrected earlier; retain references without inventing a unique source URL or merging records. Verify construction commencement and a published COD. No completed-project photograph exists in the opened siting page."
+      ],
+      "mediaReplaced": true,
+      "mediaAdded": 1
+    },
+    "battery-labette-labette-ks": {
+      "patch": {
+        "title": "Labette GEN-2021-006: 300 MW Battery Queue, July 2029 Target",
+        "description": "SPP lists GEN-2021-006 as 300 MW battery storage at Neosho 345 kV in Labette County, Kansas, with July 15, 2029 proposed COD and IA fully executed/on-schedule status. The queue does not identify the developer or storage MWh.",
+        "sourceUrl": null,
+        "references": [
+          {
+            "url": "https://opsportal.spp.org/Studies/GIActive",
+            "title": "SPP Active Generator Interconnection Requests — GEN-2021-006",
+            "confidence": 95,
+            "publishedDate": null
+          },
+          {
+            "url": "https://www.greatplainsenergystorage.com/",
+            "title": "Great Plains Energy Storage — Project Overview",
+            "confidence": 95,
+            "publishedDate": null
+          }
+        ],
+        "longFormSummary": "<ul><li>Plus Power’s Great Plains website instead describes a planned 200 MW, roughly 10-acre Labette project. No opened primary source proves that this is the same request; Plus Power is therefore not assigned to the 300 MW queue pin.<cite data-ref=\"https://www.greatplainsenergystorage.com/\"></cite></li><li>The former $270M, 1,200 MWh and December 2028 opening are removed. Executed IA does not establish construction or operation.<cite data-ref=\"https://opsportal.spp.org/Studies/GIActive\"></cite></li><li>Timeline: July 15, 2029 is SPP’s proposed COD, not actual commissioning.<cite data-ref=\"https://opsportal.spp.org/Studies/GIActive\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "estimated",
+        "allDay": true,
+        "allDayStated": false,
+        "utcStartDateTime": "2029-07-15T00:00:00.000Z",
+        "dateConfidenceReasoning": "July 15, 2029 is SPP’s proposed COD, not actual commissioning.",
+        "company": null,
+        "companyWikiUrl": null,
+        "address": "Labette County, Kansas, Neosho 345 kV POI context; exact GEN-2021-006 parcel unverified",
+        "tags": [
+          "Cleanview",
+          "Battery Storage",
+          "SPP",
+          "Labette County",
+          "Kansas",
+          "Planned"
+        ]
+      },
+      "power": {
+        "megawatts": 300,
+        "kind": "storage",
+        "sourceUrl": "https://opsportal.spp.org/Studies/GIActive",
+        "note": "Proposed/studied scope, not measured output or evidence of operation. SPP lists GEN-2021-006 as 300 MW battery storage at Neosho 345 kV in Labette County, Kansas, with July 15, 2029 proposed COD and IA fully executed/on-schedule status. The"
+      },
+      "datacenter": null,
+      "clearEnergy": false,
+      "gaps": [
+        "Resolve 200 MW operator / 300 MW queue identity before assigning Plus Power, acreage or project photos. Developer, MWh and current construction unverified."
+      ]
+    },
+    "battery-maddox-creek-van-wert-oh": {
+      "patch": {
+        "title": "Maddox Creek AG1-411: 100 MW / 400 MWh Storage Addition",
+        "description": "PJM’s May 2026 final study identifies Butterfly Meadows Solar Project, LLC’s AG1-411 as a 100 MW / 400 MWh, four-hour addition to 300 MW solar request AG1-410 in Van Wert County, Ohio. Combined capability is 400 MW.",
+        "sourceUrl": "https://www.pjm.com/pjmfiles/pub/planning/project-queues/TC1/FINAL/AG1-411/AG1-411_imp_FINAL.htm",
+        "references": [
+          {
+            "url": "https://www.pjm.com/pjmfiles/pub/planning/project-queues/TC1/FINAL/AG1-411/AG1-411_imp_FINAL.htm",
+            "title": "AG1-411 Final System Impact Study (Retool 2) Report",
+            "confidence": 95,
+            "publishedDate": "2026-05-14"
+          }
+        ],
+        "longFormSummary": "<ul><li>The former 400 MW standalone battery, 1,600 MWh, Enel attribution and $360M are removed. Ohio Power is the transmission owner; the request’s own storage rating is 100 MW.<cite data-ref=\"https://www.pjm.com/pjmfiles/pub/planning/project-queues/TC1/FINAL/AG1-411/AG1-411_imp_FINAL.htm\"></cite></li><li>Timeline: The confirmed milestone is May 14, 2026 release of the final Retool 2 study, not a December 2028 COD.<cite data-ref=\"https://www.pjm.com/pjmfiles/pub/planning/project-queues/TC1/FINAL/AG1-411/AG1-411_imp_FINAL.htm\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "confirmed",
+        "allDay": true,
+        "allDayStated": false,
+        "utcStartDateTime": "2026-05-14T00:00:00.000Z",
+        "dateConfidenceReasoning": "The confirmed milestone is May 14, 2026 release of the final Retool 2 study, not a December 2028 COD.",
+        "company": "Butterfly Meadows Solar Project, LLC",
+        "companyWikiUrl": null,
+        "address": "Van Wert County, Ohio, Maddox Creek–RP Mone POI context; exact battery parcel pending",
+        "tags": [
+          "Cleanview",
+          "Battery Storage",
+          "PJM",
+          "Van Wert County",
+          "Ohio",
+          "Planned"
+        ]
+      },
+      "power": {
+        "megawatts": 100,
+        "kind": "storage",
+        "sourceUrl": "https://www.pjm.com/pjmfiles/pub/planning/project-queues/TC1/FINAL/AG1-411/AG1-411_imp_FINAL.htm",
+        "note": "Proposed/studied scope, not measured output or evidence of operation. PJM’s May 2026 final study identifies Butterfly Meadows Solar Project, LLC’s AG1-411 as a 100 MW / 400 MWh, four-hour addition to 300 MW solar request AG1-410 in Van Wert"
+      },
+      "datacenter": null,
+      "clearEnergy": false,
+      "gaps": [
+        "Confirm parcel, later interconnection agreement and delivery schedule; no verified completed-project photograph."
+      ]
+    },
+    "solar-baxter-wilson-morehouse-la": {
+      "patch": {
+        "title": "Baxter Wilson–Perryville J3454: 300 MW Solar Request in Morehouse",
+        "description": "MISO lists J3454 as a 300 MW solar request in Morehouse Parish, Louisiana, at Baxter Wilson SES–Perryville 500 kV. The active Phase 2 request carries a September 1, 2028 in-service target.",
+        "sourceUrl": null,
+        "references": [
+          {
+            "url": "https://www.misoenergy.org/api/giqueue/getprojects",
+            "title": "MISO Generator Interconnection Queue — J3454",
+            "confidence": 95,
+            "publishedDate": null
+          }
+        ],
+        "longFormSummary": "<ul><li>The queue lists Entergy Mississippi as transmission owner despite the Louisiana location; this is flagged for verification, not used to infer Entergy Louisiana project ownership. The former $300M and construction claim are removed.<cite data-ref=\"https://www.misoenergy.org/api/giqueue/getprojects\"></cite></li><li>J4287 is another 300 MW request at the POI, not assumed to replace or add to J3454; the withdrawn 50 MW storage request J3452 is not this solar project.<cite data-ref=\"https://www.misoenergy.org/api/giqueue/getprojects\"></cite></li><li>Timeline: September 1, 2028 is the queue’s requested inService target, not confirmed COD.<cite data-ref=\"https://www.misoenergy.org/api/giqueue/getprojects\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "estimated",
+        "allDay": true,
+        "allDayStated": false,
+        "utcStartDateTime": "2028-09-01T00:00:00.000Z",
+        "dateConfidenceReasoning": "September 1, 2028 is the queue’s requested inService target, not confirmed COD.",
+        "company": null,
+        "companyWikiUrl": null,
+        "address": "Morehouse Parish, Louisiana; approximate parish context, exact J3454 solar parcel pending",
+        "tags": [
+          "Cleanview",
+          "Solar",
+          "MISO",
+          "Morehouse Parish",
+          "Louisiana",
+          "Planned"
+        ]
+      },
+      "power": {
+        "megawatts": 300,
+        "kind": "generation",
+        "sourceUrl": "https://www.misoenergy.org/api/giqueue/getprojects",
+        "note": "Proposed/studied scope, not measured output or evidence of operation. MISO lists J3454 as a 300 MW solar request in Morehouse Parish, Louisiana, at Baxter Wilson SES–Perryville 500 kV. The active Phase 2 request carries a September 1, 2028"
+      },
+      "datacenter": null,
+      "clearEnergy": false,
+      "gaps": [
+        "Confirm applicant, exact parcel and anomalous transmission-owner field; no verified project gallery in the queue."
+      ]
+    }
+  },
+  "results": [
+    {
+      "environment": "local",
+      "key": "solar-aquila-milam-tx",
+      "id": 16488,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Applicant ownership, exact parcel and current schedule remain unverified. No verified project gallery in the queue."
+      ]
+    },
+    {
+      "environment": "local",
+      "key": "battery-cordova-rock-island-il",
+      "id": 16489,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Resolve inconsistent combined totals with PJM and applicant; confirm parcel and COD. Study diagrams do not establish a commissioned-site photograph."
+      ]
+    },
+    {
+      "environment": "local",
+      "key": "dc-archer-faribault-rice-mn",
+      "id": 16490,
+      "action": "corrected",
+      "mediaPreserved": false,
+      "mediaReplaced": true,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Reconcile municipal 87 versus operator 84 acres. Verify the supplemental review and formal applications after March 2027; no measured water or verified cooling design."
+      ]
+    },
+    {
+      "environment": "local",
+      "key": "dc-cloudhq-msp-bldg2-carver-mn",
+      "id": 16491,
+      "action": "deleted",
+      "verifiedStatus": 404
+    },
+    {
+      "environment": "local",
+      "key": "dc-rowan-percheron-morrow-or",
+      "id": 16492,
+      "action": "corrected",
+      "mediaPreserved": false,
+      "mediaReplaced": true,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Georeference the recorded 274-acre parcel precisely; current construction and phase-specific power/COD remain unverified."
+      ]
+    },
+    {
+      "environment": "local",
+      "key": "solar-alexandria-bison-clay-mn",
+      "id": 16493,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Identify developer and parcel from applicant filings; queue has no verified project gallery or commissioning evidence."
+      ]
+    },
+    {
+      "environment": "local",
+      "key": "solar-jasper-clean-jasper-in",
+      "id": 16494,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Applicant, commercial project name and POI are unresolved; Other_ is not a substation name. No verified project gallery."
+      ]
+    },
+    {
+      "environment": "local",
+      "key": "solar-johnson-nextera-johnson-ks",
+      "id": 16495,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Reconcile this older 500.4 MW queue scope with separately reported 217 MW West Gardner development before linking or merging. NextEra ownership is unverified. No verified queue project gallery."
+      ]
+    },
+    {
+      "environment": "local",
+      "key": "solar-mineral-basin-clearfield-pa",
+      "id": 16496,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Confirm current financing, construction and project boundary. Operator gallery checked; no additional verified site photograph adopted."
+      ]
+    },
+    {
+      "environment": "local",
+      "key": "battery-barnstable-barnstable-ma",
+      "id": 16497,
+      "action": "deleted",
+      "verifiedStatus": 404
+    },
+    {
+      "environment": "local",
+      "key": "battery-morocco-monroe-mi",
+      "id": 16498,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Confirm applicant, MWh, study milestones and exact parcel; public queue supplies no project photographs."
+      ]
+    },
+    {
+      "environment": "local",
+      "key": "dc-pointone-sanford-south-nc",
+      "id": 16499,
+      "action": "deleted",
+      "verifiedStatus": 404
+    },
+    {
+      "environment": "local",
+      "key": "battery-olive-reynolds-pulaski-in",
+      "id": 16500,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Applicant parcel, current construction and commissioning date remain unpublished in the opened study. No additional verified project photograph."
+      ]
+    },
+    {
+      "environment": "local",
+      "key": "battery-aurora-lake-il",
+      "id": 16552,
+      "action": "corrected",
+      "mediaPreserved": false,
+      "mediaReplaced": true,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Verify storage parcel and corporate ownership separately; do not treat all 1,206 MW as a commissioned battery. No additional verified storage-site photo."
+      ]
+    },
+    {
+      "environment": "local",
+      "key": "battery-muon-fresno-ca",
+      "id": 16553,
+      "action": "deleted",
+      "verifiedStatus": 404
+    },
+    {
+      "environment": "local",
+      "key": "dc-cielo-chisago-chisago-mn",
+      "id": 16554,
+      "action": "deleted",
+      "verifiedStatus": 404
+    },
+    {
+      "environment": "local",
+      "key": "dc-cielo-haines-city-polk-fl",
+      "id": 16555,
+      "action": "corrected",
+      "mediaPreserved": false,
+      "mediaReplaced": true,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Verify later water permit modification, site entitlements, current power plan and schedule. Operator gallery inaccessible due DNS; no substitute campus photo."
+      ]
+    },
+    {
+      "environment": "local",
+      "key": "dc-cielo-new-lenox-will-il",
+      "id": 16556,
+      "action": "deleted",
+      "verifiedStatus": 404
+    },
+    {
+      "environment": "local",
+      "key": "dc-crusoe-warrenton-bldg1-warren-mo",
+      "id": 16557,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "The current marker is explicitly town context, not the Highway W project parcel. Address/intersection geocoding returned no match; obtain city GIS/site-plan polygon before relocation. City/operator galleries checked; no verified project photograph downloaded."
+      ]
+    },
+    {
+      "environment": "local",
+      "key": "battery-boson-kern-ca",
+      "id": 16558,
+      "action": "deleted",
+      "verifiedStatus": 404
+    },
+    {
+      "environment": "local",
+      "key": "solar-sunstone-morrow-or",
+      "id": 16559,
+      "action": "corrected",
+      "mediaPreserved": false,
+      "mediaReplaced": true,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Overlaps the Sunstone record corrected earlier; retain references without inventing a unique source URL or merging records. Verify construction commencement and a published COD. No completed-project photograph exists in the opened siting page."
+      ]
+    },
+    {
+      "environment": "local",
+      "key": "battery-labette-labette-ks",
+      "id": 16560,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Resolve 200 MW operator / 300 MW queue identity before assigning Plus Power, acreage or project photos. Developer, MWh and current construction unverified."
+      ]
+    },
+    {
+      "environment": "local",
+      "key": "battery-maddox-creek-van-wert-oh",
+      "id": 16561,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Confirm parcel, later interconnection agreement and delivery schedule; no verified completed-project photograph."
+      ]
+    },
+    {
+      "environment": "local",
+      "key": "solar-baxter-wilson-morehouse-la",
+      "id": 16562,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Confirm applicant, exact parcel and anomalous transmission-owner field; no verified project gallery in the queue."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "solar-aquila-milam-tx",
+      "id": 16488,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Applicant ownership, exact parcel and current schedule remain unverified. No verified project gallery in the queue."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "battery-cordova-rock-island-il",
+      "id": 16489,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Resolve inconsistent combined totals with PJM and applicant; confirm parcel and COD. Study diagrams do not establish a commissioned-site photograph."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "dc-archer-faribault-rice-mn",
+      "id": 16490,
+      "action": "corrected",
+      "mediaPreserved": false,
+      "mediaReplaced": true,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Reconcile municipal 87 versus operator 84 acres. Verify the supplemental review and formal applications after March 2027; no measured water or verified cooling design."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "dc-cloudhq-msp-bldg2-carver-mn",
+      "id": 16491,
+      "action": "deleted",
+      "verifiedStatus": 404
+    },
+    {
+      "environment": "prod",
+      "key": "dc-rowan-percheron-morrow-or",
+      "id": 16492,
+      "action": "corrected",
+      "mediaPreserved": false,
+      "mediaReplaced": true,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Georeference the recorded 274-acre parcel precisely; current construction and phase-specific power/COD remain unverified."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "solar-alexandria-bison-clay-mn",
+      "id": 16493,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Identify developer and parcel from applicant filings; queue has no verified project gallery or commissioning evidence."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "solar-jasper-clean-jasper-in",
+      "id": 16494,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Applicant, commercial project name and POI are unresolved; Other_ is not a substation name. No verified project gallery."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "solar-johnson-nextera-johnson-ks",
+      "id": 16495,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Reconcile this older 500.4 MW queue scope with separately reported 217 MW West Gardner development before linking or merging. NextEra ownership is unverified. No verified queue project gallery."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "solar-mineral-basin-clearfield-pa",
+      "id": 16496,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Confirm current financing, construction and project boundary. Operator gallery checked; no additional verified site photograph adopted."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "battery-barnstable-barnstable-ma",
+      "id": 16497,
+      "action": "deleted",
+      "verifiedStatus": 404
+    },
+    {
+      "environment": "prod",
+      "key": "battery-morocco-monroe-mi",
+      "id": 16498,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Confirm applicant, MWh, study milestones and exact parcel; public queue supplies no project photographs."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "dc-pointone-sanford-south-nc",
+      "id": 16499,
+      "action": "deleted",
+      "verifiedStatus": 404
+    },
+    {
+      "environment": "prod",
+      "key": "battery-olive-reynolds-pulaski-in",
+      "id": 16500,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Applicant parcel, current construction and commissioning date remain unpublished in the opened study. No additional verified project photograph."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "battery-aurora-lake-il",
+      "id": 16552,
+      "action": "corrected",
+      "mediaPreserved": false,
+      "mediaReplaced": true,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Verify storage parcel and corporate ownership separately; do not treat all 1,206 MW as a commissioned battery. No additional verified storage-site photo."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "battery-muon-fresno-ca",
+      "id": 16553,
+      "action": "deleted",
+      "verifiedStatus": 404
+    },
+    {
+      "environment": "prod",
+      "key": "dc-cielo-chisago-chisago-mn",
+      "id": 16554,
+      "action": "deleted",
+      "verifiedStatus": 404
+    },
+    {
+      "environment": "prod",
+      "key": "dc-cielo-haines-city-polk-fl",
+      "id": 16555,
+      "action": "corrected",
+      "mediaPreserved": false,
+      "mediaReplaced": true,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Verify later water permit modification, site entitlements, current power plan and schedule. Operator gallery inaccessible due DNS; no substitute campus photo."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "dc-cielo-new-lenox-will-il",
+      "id": 16556,
+      "action": "deleted",
+      "verifiedStatus": 404
+    },
+    {
+      "environment": "prod",
+      "key": "dc-crusoe-warrenton-bldg1-warren-mo",
+      "id": 16557,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "The current marker is explicitly town context, not the Highway W project parcel. Address/intersection geocoding returned no match; obtain city GIS/site-plan polygon before relocation. City/operator galleries checked; no verified project photograph downloaded."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "battery-boson-kern-ca",
+      "id": 16558,
+      "action": "deleted",
+      "verifiedStatus": 404
+    },
+    {
+      "environment": "prod",
+      "key": "solar-sunstone-morrow-or",
+      "id": 16559,
+      "action": "corrected",
+      "mediaPreserved": false,
+      "mediaReplaced": true,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Overlaps the Sunstone record corrected earlier; retain references without inventing a unique source URL or merging records. Verify construction commencement and a published COD. No completed-project photograph exists in the opened siting page."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "battery-labette-labette-ks",
+      "id": 16560,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Resolve 200 MW operator / 300 MW queue identity before assigning Plus Power, acreage or project photos. Developer, MWh and current construction unverified."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "battery-maddox-creek-van-wert-oh",
+      "id": 16561,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Confirm parcel, later interconnection agreement and delivery schedule; no verified completed-project photograph."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "solar-baxter-wilson-morehouse-la",
+      "id": 16562,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Confirm applicant, exact parcel and anomalous transmission-owner field; no verified project gallery in the queue."
+      ]
+    }
+  ],
+  "verification": {
+    "actionsVerified": 48,
+    "freshReadbacks": [
+      {
+        "environment": "local",
+        "id": 16488,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 16489,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 16490,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 16491,
+        "status": 404,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 16492,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 16493,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 16494,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 16495,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 16496,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 16497,
+        "status": 404,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 16498,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 16499,
+        "status": 404,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 16500,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 16552,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 16553,
+        "status": 404,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 16554,
+        "status": 404,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 16555,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 16556,
+        "status": 404,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 16557,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 16558,
+        "status": 404,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 16559,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 16560,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 16561,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 16562,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 16488,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 16489,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 16490,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 16491,
+        "status": 404,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 16492,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 16493,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 16494,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 16495,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 16496,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 16497,
+        "status": 404,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 16498,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 16499,
+        "status": 404,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 16500,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 16552,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 16553,
+        "status": 404,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 16554,
+        "status": 404,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 16555,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 16556,
+        "status": 404,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 16557,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 16558,
+        "status": 404,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 16559,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 16560,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 16561,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 16562,
+        "status": 200,
+        "verified": true
+      }
+    ],
+    "media": [
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-large5-2026-10-23/archer-plan.png",
+        "status": 200,
+        "bytes": 678284
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-large5-2026-10-23/battery-aurora-lake-il-aerial.jpg",
+        "status": 200,
+        "bytes": 455360
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-large5-2026-10-23/battery-aurora-lake-il-relief.jpg",
+        "status": 200,
+        "bytes": 111889
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-large5-2026-10-23/battery-aurora-lake-il-topo.jpg",
+        "status": 200,
+        "bytes": 379891
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-large5-2026-10-23/dc-archer-faribault-rice-mn-aerial.jpg",
+        "status": 200,
+        "bytes": 406122
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-large5-2026-10-23/dc-archer-faribault-rice-mn-relief.jpg",
+        "status": 200,
+        "bytes": 135162
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-large5-2026-10-23/dc-archer-faribault-rice-mn-topo.jpg",
+        "status": 200,
+        "bytes": 349960
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-large5-2026-10-23/dc-cielo-haines-city-polk-fl-aerial.jpg",
+        "status": 200,
+        "bytes": 460379
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-large5-2026-10-23/dc-cielo-haines-city-polk-fl-relief.jpg",
+        "status": 200,
+        "bytes": 90716
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-large5-2026-10-23/dc-cielo-haines-city-polk-fl-topo.jpg",
+        "status": 200,
+        "bytes": 309202
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-large5-2026-10-23/dc-rowan-percheron-morrow-or-aerial.jpg",
+        "status": 200,
+        "bytes": 295292
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-large5-2026-10-23/dc-rowan-percheron-morrow-or-relief.jpg",
+        "status": 200,
+        "bytes": 95387
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-large5-2026-10-23/dc-rowan-percheron-morrow-or-topo.jpg",
+        "status": 200,
+        "bytes": 209878
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-large5-2026-10-23/percheron-map.jpg",
+        "status": 200,
+        "bytes": 68438
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-large5-2026-10-23/solar-sunstone-morrow-or-aerial.jpg",
+        "status": 200,
+        "bytes": 238253
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-large5-2026-10-23/solar-sunstone-morrow-or-relief.jpg",
+        "status": 200,
+        "bytes": 82586
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-large5-2026-10-23/solar-sunstone-morrow-or-topo.jpg",
+        "status": 200,
+        "bytes": 173211
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-large5-2026-10-23/sunstone-map.png",
+        "status": 200,
+        "bytes": 1751745
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/r21_solar-aquila-milam-tx_aerial.jpg",
+        "status": 200,
+        "bytes": 431091
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/r21_solar-aquila-milam-tx_regional.jpg",
+        "status": 200,
+        "bytes": 123814
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/r21_solar-aquila-milam-tx_topo.jpg",
+        "status": 200,
+        "bytes": 437737
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/r22_battery-cordova-rock-island-il_aerial.jpg",
+        "status": 200,
+        "bytes": 439653
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/r22_battery-cordova-rock-island-il_regional.jpg",
+        "status": 200,
+        "bytes": 143077
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/r22_battery-cordova-rock-island-il_topo.jpg",
+        "status": 200,
+        "bytes": 406500
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/r22_battery-morocco-monroe-mi_aerial.jpg",
+        "status": 200,
+        "bytes": 533701
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/r22_battery-morocco-monroe-mi_regional.jpg",
+        "status": 200,
+        "bytes": 69958
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/r22_battery-morocco-monroe-mi_topo.jpg",
+        "status": 200,
+        "bytes": 328346
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/r22_battery-olive-reynolds-pulaski-in_aerial.jpg",
+        "status": 200,
+        "bytes": 355638
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/r22_battery-olive-reynolds-pulaski-in_regional.jpg",
+        "status": 200,
+        "bytes": 85744
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/r22_battery-olive-reynolds-pulaski-in_topo.jpg",
+        "status": 200,
+        "bytes": 374475
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/r22_solar-alexandria-bison-clay-mn_aerial.jpg",
+        "status": 200,
+        "bytes": 453452
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/r22_solar-alexandria-bison-clay-mn_regional.jpg",
+        "status": 200,
+        "bytes": 94647
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/r22_solar-alexandria-bison-clay-mn_topo.jpg",
+        "status": 200,
+        "bytes": 260866
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/r22_solar-jasper-clean-jasper-in_aerial.jpg",
+        "status": 200,
+        "bytes": 361573
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/r22_solar-jasper-clean-jasper-in_regional.jpg",
+        "status": 200,
+        "bytes": 81334
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/r22_solar-jasper-clean-jasper-in_topo.jpg",
+        "status": 200,
+        "bytes": 485861
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/r22_solar-johnson-nextera-johnson-ks_aerial.jpg",
+        "status": 200,
+        "bytes": 462632
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/r22_solar-johnson-nextera-johnson-ks_regional.jpg",
+        "status": 200,
+        "bytes": 135444
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/r22_solar-johnson-nextera-johnson-ks_topo.jpg",
+        "status": 200,
+        "bytes": 427267
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/r22_solar-mineral-basin-clearfield-pa_aerial.jpg",
+        "status": 200,
+        "bytes": 645398
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/r22_solar-mineral-basin-clearfield-pa_regional.jpg",
+        "status": 200,
+        "bytes": 235903
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/r22_solar-mineral-basin-clearfield-pa_topo.jpg",
+        "status": 200,
+        "bytes": 434987
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/r23_battery-labette-labette-ks_aerial.jpg",
+        "status": 200,
+        "bytes": 405987
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/r23_battery-labette-labette-ks_regional.jpg",
+        "status": 200,
+        "bytes": 99457
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/r23_battery-labette-labette-ks_topo.jpg",
+        "status": 200,
+        "bytes": 303324
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/r23_battery-maddox-creek-van-wert-oh_aerial.jpg",
+        "status": 200,
+        "bytes": 726510
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/r23_battery-maddox-creek-van-wert-oh_regional.jpg",
+        "status": 200,
+        "bytes": 64870
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/r23_battery-maddox-creek-van-wert-oh_topo.jpg",
+        "status": 200,
+        "bytes": 303461
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/r23_dc-crusoe-warrenton-bldg1-warren-mo_aerial.jpg",
+        "status": 200,
+        "bytes": 544062
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/r23_dc-crusoe-warrenton-bldg1-warren-mo_regional.jpg",
+        "status": 200,
+        "bytes": 243267
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/r23_dc-crusoe-warrenton-bldg1-warren-mo_topo.jpg",
+        "status": 200,
+        "bytes": 508227
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/r23_solar-baxter-wilson-morehouse-la_aerial.jpg",
+        "status": 200,
+        "bytes": 567740
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/r23_solar-baxter-wilson-morehouse-la_regional.jpg",
+        "status": 200,
+        "bytes": 89871
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/r23_solar-baxter-wilson-morehouse-la_topo.jpg",
+        "status": 200,
+        "bytes": 491638
+      }
+    ],
+    "pages": [
+      {
+        "environment": "local",
+        "id": 16488,
+        "status": 200,
+        "bytes": 307426
+      },
+      {
+        "environment": "local",
+        "id": 16489,
+        "status": 200,
+        "bytes": 313054
+      },
+      {
+        "environment": "local",
+        "id": 16490,
+        "status": 200,
+        "bytes": 328804
+      },
+      {
+        "environment": "local",
+        "id": 16492,
+        "status": 200,
+        "bytes": 327743
+      },
+      {
+        "environment": "local",
+        "id": 16493,
+        "status": 200,
+        "bytes": 305420
+      },
+      {
+        "environment": "local",
+        "id": 16494,
+        "status": 200,
+        "bytes": 306183
+      },
+      {
+        "environment": "local",
+        "id": 16495,
+        "status": 200,
+        "bytes": 306867
+      },
+      {
+        "environment": "local",
+        "id": 16496,
+        "status": 200,
+        "bytes": 314536
+      },
+      {
+        "environment": "local",
+        "id": 16498,
+        "status": 200,
+        "bytes": 305716
+      },
+      {
+        "environment": "local",
+        "id": 16500,
+        "status": 200,
+        "bytes": 313232
+      },
+      {
+        "environment": "local",
+        "id": 16552,
+        "status": 200,
+        "bytes": 318011
+      },
+      {
+        "environment": "local",
+        "id": 16555,
+        "status": 200,
+        "bytes": 326590
+      },
+      {
+        "environment": "local",
+        "id": 16557,
+        "status": 200,
+        "bytes": 321342
+      },
+      {
+        "environment": "local",
+        "id": 16559,
+        "status": 200,
+        "bytes": 315388
+      },
+      {
+        "environment": "local",
+        "id": 16560,
+        "status": 200,
+        "bytes": 310551
+      },
+      {
+        "environment": "local",
+        "id": 16561,
+        "status": 200,
+        "bytes": 312908
+      },
+      {
+        "environment": "local",
+        "id": 16562,
+        "status": 200,
+        "bytes": 307613
+      },
+      {
+        "environment": "prod",
+        "id": 16488,
+        "status": 200,
+        "bytes": 262532
+      },
+      {
+        "environment": "prod",
+        "id": 16489,
+        "status": 200,
+        "bytes": 266329
+      },
+      {
+        "environment": "prod",
+        "id": 16490,
+        "status": 200,
+        "bytes": 285503
+      },
+      {
+        "environment": "prod",
+        "id": 16492,
+        "status": 200,
+        "bytes": 280802
+      },
+      {
+        "environment": "prod",
+        "id": 16493,
+        "status": 200,
+        "bytes": 260613
+      },
+      {
+        "environment": "prod",
+        "id": 16494,
+        "status": 200,
+        "bytes": 261383
+      },
+      {
+        "environment": "prod",
+        "id": 16495,
+        "status": 200,
+        "bytes": 262277
+      },
+      {
+        "environment": "prod",
+        "id": 16496,
+        "status": 200,
+        "bytes": 272233
+      },
+      {
+        "environment": "prod",
+        "id": 16498,
+        "status": 200,
+        "bytes": 260697
+      },
+      {
+        "environment": "prod",
+        "id": 16500,
+        "status": 200,
+        "bytes": 266527
+      },
+      {
+        "environment": "prod",
+        "id": 16552,
+        "status": 200,
+        "bytes": 271210
+      },
+      {
+        "environment": "prod",
+        "id": 16555,
+        "status": 200,
+        "bytes": 283390
+      },
+      {
+        "environment": "prod",
+        "id": 16557,
+        "status": 200,
+        "bytes": 274241
+      },
+      {
+        "environment": "prod",
+        "id": 16559,
+        "status": 200,
+        "bytes": 271908
+      },
+      {
+        "environment": "prod",
+        "id": 16560,
+        "status": 200,
+        "bytes": 265539
+      },
+      {
+        "environment": "prod",
+        "id": 16561,
+        "status": 200,
+        "bytes": 266233
+      },
+      {
+        "environment": "prod",
+        "id": 16562,
+        "status": 200,
+        "bytes": 262789
+      }
+    ],
+    "postedMapCounts": {
+      "local": 1418,
+      "prod": 1418
+    },
+    "telemetry": [
+      {},
+      {},
+      {
+        "energyCleared": true,
+        "datacenterAfter": {
+          "waterGallonsPerDay": null,
+          "waterBasis": null,
+          "chips": null,
+          "chipModel": null,
+          "h100Equivalents": null,
+          "acres": 87,
+          "sqft": 500000,
+          "buildings": null,
+          "generators": null,
+          "cooling": null,
+          "powerSource": null,
+          "sourceUrl": "https://faribaultmn.gov/815/Archer-Datacenters",
+          "note": "Municipal proposal upper limits: approximately 87 acres and up to 500,000 sqft. Operator says 84 acres / 120 MW potential power. Environmental review remains open.",
+          "checkedAt": "2026-10-23T20:22:09.031Z"
+        }
+      },
+      {
+        "datacenterAfter": {
+          "waterGallonsPerDay": null,
+          "waterBasis": null,
+          "chips": null,
+          "chipModel": null,
+          "h100Equivalents": null,
+          "acres": 275,
+          "sqft": null,
+          "buildings": null,
+          "generators": null,
+          "cooling": null,
+          "powerSource": null,
+          "sourceUrl": "https://rowan.com/portfolio/percheron/",
+          "note": "Operator campus proposal: 300 MW and 275 acres. County parcel approximately 274 acres; capacity is not identified as critical IT.",
+          "checkedAt": "2026-10-23T20:22:10.686Z"
+        }
+      },
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {
+        "energyCleared": true,
+        "datacenterAfter": {
+          "waterGallonsPerDay": 150000,
+          "waterBasis": "estimated",
+          "chips": null,
+          "chipModel": null,
+          "h100Equivalents": null,
+          "acres": null,
+          "sqft": null,
+          "buildings": null,
+          "generators": null,
+          "cooling": null,
+          "powerSource": null,
+          "sourceUrl": "https://thecitrustea.com/wp-content/uploads/2026/07/Cielo-Concurrence-Letter.pdf",
+          "note": "Published requested maximum, up to 150,000 gal/day at full buildout including cooling makeup and domestic use. Conditional on SWFWMD water-use permit modification; not measured consumption.",
+          "checkedAt": "2026-10-23T20:22:15.457Z"
+        }
+      },
+      {
+        "energyCleared": true,
+        "datacenterAfter": {
+          "waterGallonsPerDay": null,
+          "waterBasis": null,
+          "chips": null,
+          "chipModel": null,
+          "h100Equivalents": null,
+          "acres": null,
+          "sqft": 805000,
+          "buildings": 1,
+          "generators": null,
+          "cooling": null,
+          "powerSource": null,
+          "sourceUrl": "https://ecode360.com/WA3466/document/753231245.pdf",
+          "note": "One proposed data-center building in a two-building approved site plan. Total campus is 337.17 acres; no verified per-building MW, water or cooling specification.",
+          "checkedAt": "2026-10-23T20:22:15.685Z"
+        }
+      },
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {
+        "energyCleared": true,
+        "datacenterAfter": {
+          "waterGallonsPerDay": null,
+          "waterBasis": null,
+          "chips": null,
+          "chipModel": null,
+          "h100Equivalents": null,
+          "acres": 87,
+          "sqft": 500000,
+          "buildings": null,
+          "generators": null,
+          "cooling": null,
+          "powerSource": null,
+          "sourceUrl": "https://faribaultmn.gov/815/Archer-Datacenters",
+          "note": "Municipal proposal upper limits: approximately 87 acres and up to 500,000 sqft. Operator says 84 acres / 120 MW potential power. Environmental review remains open.",
+          "checkedAt": "2026-10-23T20:22:29.570Z"
+        }
+      },
+      {
+        "datacenterAfter": {
+          "waterGallonsPerDay": null,
+          "waterBasis": null,
+          "chips": null,
+          "chipModel": null,
+          "h100Equivalents": null,
+          "acres": 275,
+          "sqft": null,
+          "buildings": null,
+          "generators": null,
+          "cooling": null,
+          "powerSource": null,
+          "sourceUrl": "https://rowan.com/portfolio/percheron/",
+          "note": "Operator campus proposal: 300 MW and 275 acres. County parcel approximately 274 acres; capacity is not identified as critical IT.",
+          "checkedAt": "2026-10-23T20:22:38.268Z"
+        }
+      },
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {
+        "energyCleared": true,
+        "datacenterAfter": {
+          "waterGallonsPerDay": 150000,
+          "waterBasis": "estimated",
+          "chips": null,
+          "chipModel": null,
+          "h100Equivalents": null,
+          "acres": null,
+          "sqft": null,
+          "buildings": null,
+          "generators": null,
+          "cooling": null,
+          "powerSource": null,
+          "sourceUrl": "https://thecitrustea.com/wp-content/uploads/2026/07/Cielo-Concurrence-Letter.pdf",
+          "note": "Published requested maximum, up to 150,000 gal/day at full buildout including cooling makeup and domestic use. Conditional on SWFWMD water-use permit modification; not measured consumption.",
+          "checkedAt": "2026-10-23T20:23:02.980Z"
+        }
+      },
+      {
+        "energyCleared": true,
+        "datacenterAfter": {
+          "waterGallonsPerDay": null,
+          "waterBasis": null,
+          "chips": null,
+          "chipModel": null,
+          "h100Equivalents": null,
+          "acres": null,
+          "sqft": 805000,
+          "buildings": 1,
+          "generators": null,
+          "cooling": null,
+          "powerSource": null,
+          "sourceUrl": "https://ecode360.com/WA3466/document/753231245.pdf",
+          "note": "One proposed data-center building in a two-building approved site plan. Total campus is 337.17 acres; no verified per-building MW, water or cooling specification.",
+          "checkedAt": "2026-10-23T20:23:06.955Z"
+        }
+      },
+      {},
+      {},
+      {},
+      {}
+    ]
+  },
+  "mediaEvidence": [
+    {
+      "key": "dc-archer-faribault-rice-mn",
+      "layer": "aerial",
+      "sourceUrl": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSImageryOnly/MapServer/export?bbox=-93.302537,44.360697,-93.272537,44.380697&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "sourcePage": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSImageryOnly/MapServer/export?bbox=-93.302537,44.360697,-93.272537,44.380697&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "credit": "USGS / The National Map",
+      "caption": "USGS aerial basemap centered on the sourced approximate address/reporting point; imagery may predate construction.",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/large5-2026-10-23/dc-archer-faribault-rice-mn-aerial.jpg",
+      "bytes": 406122,
+      "width": 1600,
+      "height": 1000,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-large5-2026-10-23/dc-archer-faribault-rice-mn-aerial.jpg"
+    },
+    {
+      "key": "dc-archer-faribault-rice-mn",
+      "layer": "topo",
+      "sourceUrl": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSTopo/MapServer/export?bbox=-93.319537,44.348697,-93.255537,44.392697&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "sourcePage": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSTopo/MapServer/export?bbox=-93.319537,44.348697,-93.255537,44.392697&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "credit": "USGS / The National Map",
+      "caption": "USGS topo basemap centered on the sourced approximate address/reporting point; imagery may predate construction.",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/large5-2026-10-23/dc-archer-faribault-rice-mn-topo.jpg",
+      "bytes": 349960,
+      "width": 1600,
+      "height": 1000,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-large5-2026-10-23/dc-archer-faribault-rice-mn-topo.jpg"
+    },
+    {
+      "key": "dc-archer-faribault-rice-mn",
+      "layer": "relief",
+      "sourceUrl": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSShadedReliefOnly/MapServer/export?bbox=-93.367537,44.320697,-93.207537,44.420697&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "sourcePage": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSShadedReliefOnly/MapServer/export?bbox=-93.367537,44.320697,-93.207537,44.420697&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "credit": "USGS / The National Map",
+      "caption": "USGS relief basemap centered on the sourced approximate address/reporting point; imagery may predate construction.",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/large5-2026-10-23/dc-archer-faribault-rice-mn-relief.jpg",
+      "bytes": 135162,
+      "width": 1600,
+      "height": 1000,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-large5-2026-10-23/dc-archer-faribault-rice-mn-relief.jpg"
+    },
+    {
+      "key": "dc-rowan-percheron-morrow-or",
+      "layer": "aerial",
+      "sourceUrl": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSImageryOnly/MapServer/export?bbox=-119.823800,45.683182,-119.793800,45.703182&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "sourcePage": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSImageryOnly/MapServer/export?bbox=-119.823800,45.683182,-119.793800,45.703182&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "credit": "USGS / The National Map",
+      "caption": "USGS aerial basemap centered on the sourced approximate address/reporting point; imagery may predate construction.",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/large5-2026-10-23/dc-rowan-percheron-morrow-or-aerial.jpg",
+      "bytes": 295292,
+      "width": 1600,
+      "height": 1000,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-large5-2026-10-23/dc-rowan-percheron-morrow-or-aerial.jpg"
+    },
+    {
+      "key": "dc-rowan-percheron-morrow-or",
+      "layer": "topo",
+      "sourceUrl": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSTopo/MapServer/export?bbox=-119.840800,45.671182,-119.776800,45.715182&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "sourcePage": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSTopo/MapServer/export?bbox=-119.840800,45.671182,-119.776800,45.715182&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "credit": "USGS / The National Map",
+      "caption": "USGS topo basemap centered on the sourced approximate address/reporting point; imagery may predate construction.",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/large5-2026-10-23/dc-rowan-percheron-morrow-or-topo.jpg",
+      "bytes": 209878,
+      "width": 1600,
+      "height": 1000,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-large5-2026-10-23/dc-rowan-percheron-morrow-or-topo.jpg"
+    },
+    {
+      "key": "dc-rowan-percheron-morrow-or",
+      "layer": "relief",
+      "sourceUrl": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSShadedReliefOnly/MapServer/export?bbox=-119.888800,45.643182,-119.728800,45.743182&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "sourcePage": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSShadedReliefOnly/MapServer/export?bbox=-119.888800,45.643182,-119.728800,45.743182&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "credit": "USGS / The National Map",
+      "caption": "USGS relief basemap centered on the sourced approximate address/reporting point; imagery may predate construction.",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/large5-2026-10-23/dc-rowan-percheron-morrow-or-relief.jpg",
+      "bytes": 95387,
+      "width": 1600,
+      "height": 1000,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-large5-2026-10-23/dc-rowan-percheron-morrow-or-relief.jpg"
+    },
+    {
+      "key": "battery-aurora-lake-il",
+      "layer": "aerial",
+      "sourceUrl": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSImageryOnly/MapServer/export?bbox=-88.241500,41.805100,-88.211500,41.825100&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "sourcePage": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSImageryOnly/MapServer/export?bbox=-88.241500,41.805100,-88.211500,41.825100&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "credit": "USGS / The National Map",
+      "caption": "USGS aerial basemap centered on the sourced approximate address/reporting point; imagery may predate construction.",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/large5-2026-10-23/battery-aurora-lake-il-aerial.jpg",
+      "bytes": 455360,
+      "width": 1600,
+      "height": 1000,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-large5-2026-10-23/battery-aurora-lake-il-aerial.jpg"
+    },
+    {
+      "key": "battery-aurora-lake-il",
+      "layer": "topo",
+      "sourceUrl": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSTopo/MapServer/export?bbox=-88.258500,41.793100,-88.194500,41.837100&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "sourcePage": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSTopo/MapServer/export?bbox=-88.258500,41.793100,-88.194500,41.837100&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "credit": "USGS / The National Map",
+      "caption": "USGS topo basemap centered on the sourced approximate address/reporting point; imagery may predate construction.",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/large5-2026-10-23/battery-aurora-lake-il-topo.jpg",
+      "bytes": 379891,
+      "width": 1600,
+      "height": 1000,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-large5-2026-10-23/battery-aurora-lake-il-topo.jpg"
+    },
+    {
+      "key": "battery-aurora-lake-il",
+      "layer": "relief",
+      "sourceUrl": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSShadedReliefOnly/MapServer/export?bbox=-88.306500,41.765100,-88.146500,41.865100&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "sourcePage": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSShadedReliefOnly/MapServer/export?bbox=-88.306500,41.765100,-88.146500,41.865100&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "credit": "USGS / The National Map",
+      "caption": "USGS relief basemap centered on the sourced approximate address/reporting point; imagery may predate construction.",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/large5-2026-10-23/battery-aurora-lake-il-relief.jpg",
+      "bytes": 111889,
+      "width": 1600,
+      "height": 1000,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-large5-2026-10-23/battery-aurora-lake-il-relief.jpg"
+    },
+    {
+      "key": "dc-cielo-haines-city-polk-fl",
+      "layer": "aerial",
+      "sourceUrl": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSImageryOnly/MapServer/export?bbox=-81.565665,28.067391,-81.535665,28.087391&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "sourcePage": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSImageryOnly/MapServer/export?bbox=-81.565665,28.067391,-81.535665,28.087391&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "credit": "USGS / The National Map",
+      "caption": "USGS aerial basemap centered on the sourced approximate address/reporting point; imagery may predate construction.",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/large5-2026-10-23/dc-cielo-haines-city-polk-fl-aerial.jpg",
+      "bytes": 460379,
+      "width": 1600,
+      "height": 1000,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-large5-2026-10-23/dc-cielo-haines-city-polk-fl-aerial.jpg"
+    },
+    {
+      "key": "dc-cielo-haines-city-polk-fl",
+      "layer": "topo",
+      "sourceUrl": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSTopo/MapServer/export?bbox=-81.582665,28.055391,-81.518665,28.099391&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "sourcePage": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSTopo/MapServer/export?bbox=-81.582665,28.055391,-81.518665,28.099391&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "credit": "USGS / The National Map",
+      "caption": "USGS topo basemap centered on the sourced approximate address/reporting point; imagery may predate construction.",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/large5-2026-10-23/dc-cielo-haines-city-polk-fl-topo.jpg",
+      "bytes": 309202,
+      "width": 1600,
+      "height": 1000,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-large5-2026-10-23/dc-cielo-haines-city-polk-fl-topo.jpg"
+    },
+    {
+      "key": "dc-cielo-haines-city-polk-fl",
+      "layer": "relief",
+      "sourceUrl": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSShadedReliefOnly/MapServer/export?bbox=-81.630665,28.027391,-81.470665,28.127391&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "sourcePage": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSShadedReliefOnly/MapServer/export?bbox=-81.630665,28.027391,-81.470665,28.127391&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "credit": "USGS / The National Map",
+      "caption": "USGS relief basemap centered on the sourced approximate address/reporting point; imagery may predate construction.",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/large5-2026-10-23/dc-cielo-haines-city-polk-fl-relief.jpg",
+      "bytes": 90716,
+      "width": 1600,
+      "height": 1000,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-large5-2026-10-23/dc-cielo-haines-city-polk-fl-relief.jpg"
+    },
+    {
+      "key": "solar-sunstone-morrow-or",
+      "layer": "aerial",
+      "sourceUrl": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSImageryOnly/MapServer/export?bbox=-119.568056,45.579722,-119.538056,45.599722&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "sourcePage": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSImageryOnly/MapServer/export?bbox=-119.568056,45.579722,-119.538056,45.599722&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "credit": "USGS / The National Map",
+      "caption": "USGS aerial basemap centered on the sourced approximate address/reporting point; imagery may predate construction.",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/large5-2026-10-23/solar-sunstone-morrow-or-aerial.jpg",
+      "bytes": 238253,
+      "width": 1600,
+      "height": 1000,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-large5-2026-10-23/solar-sunstone-morrow-or-aerial.jpg"
+    },
+    {
+      "key": "solar-sunstone-morrow-or",
+      "layer": "topo",
+      "sourceUrl": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSTopo/MapServer/export?bbox=-119.585056,45.567722,-119.521056,45.611722&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "sourcePage": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSTopo/MapServer/export?bbox=-119.585056,45.567722,-119.521056,45.611722&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "credit": "USGS / The National Map",
+      "caption": "USGS topo basemap centered on the sourced approximate address/reporting point; imagery may predate construction.",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/large5-2026-10-23/solar-sunstone-morrow-or-topo.jpg",
+      "bytes": 173211,
+      "width": 1600,
+      "height": 1000,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-large5-2026-10-23/solar-sunstone-morrow-or-topo.jpg"
+    },
+    {
+      "key": "solar-sunstone-morrow-or",
+      "layer": "relief",
+      "sourceUrl": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSShadedReliefOnly/MapServer/export?bbox=-119.633056,45.539722,-119.473056,45.639722&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "sourcePage": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSShadedReliefOnly/MapServer/export?bbox=-119.633056,45.539722,-119.473056,45.639722&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "credit": "USGS / The National Map",
+      "caption": "USGS relief basemap centered on the sourced approximate address/reporting point; imagery may predate construction.",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/large5-2026-10-23/solar-sunstone-morrow-or-relief.jpg",
+      "bytes": 82586,
+      "width": 1600,
+      "height": 1000,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-large5-2026-10-23/solar-sunstone-morrow-or-relief.jpg"
+    },
+    {
+      "key": "dc-archer-faribault-rice-mn",
+      "layer": "archer-plan",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/large5-2026-10-23/archer-plan.png",
+      "sourceUrl": "https://images.squarespace-cdn.com/content/v1/65c46099cf417a7b09a8b8b5/6a63fb6c-03dd-4ebb-9136-28fdbe9130d2/Screenshot+2024-11-18+at+4.18.42%E2%80%AFPM.png",
+      "sourcePage": "https://www.archerdatacenters.com/minneapolis",
+      "credit": "Archer Datacenters; conceptual plan published on its Minneapolis page",
+      "caption": "Operator conceptual six-building layout south of 150th Street W and east of Acorn Trail; environmental review remains open, not construction evidence.",
+      "bytes": 678284,
+      "width": 898,
+      "height": 1410,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-large5-2026-10-23/archer-plan.png"
+    },
+    {
+      "key": "dc-rowan-percheron-morrow-or",
+      "layer": "percheron-plan",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/large5-2026-10-23/percheron-map.jpg",
+      "sourceUrl": "https://images.squarespace-cdn.com/content/v1/64b191337cdcc66ed1ef8f2f/9c2adc73-cf8f-4344-82b6-089699b31cdc/Percheron+Figure+5+copy.jpg",
+      "sourcePage": "https://www.percherondatacenter.com/about",
+      "credit": "ERM / Rowan Percheron LLC; Figure 5 as published on the project site",
+      "caption": "Historical preliminary conceptual layout of the proposed Tower Road parcel; labels show planned water and electrical infrastructure, not completed facilities.",
+      "bytes": 68438,
+      "width": 612,
+      "height": 792,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-large5-2026-10-23/percheron-map.jpg"
+    },
+    {
+      "key": "solar-sunstone-morrow-or",
+      "layer": "sunstone-map",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/large5-2026-10-23/sunstone-map.png",
+      "sourceUrl": "https://www.oregon.gov/energy/facilities/Facilities%20library/2024-05-15-ESP-ASC-Location.pdf",
+      "sourcePage": "https://www.oregon.gov/energy/facilities/Pages/ESP.aspx",
+      "credit": "Tetra Tech / Pine Gate Renewables; applicant Figure C-1 hosted by Oregon Department of Energy",
+      "caption": "Applicant Sunstone vicinity map from the 2024 siting filing. Historical Pine Gate branding precedes the June 2026 Amazon transfer; not for construction.",
+      "bytes": 1751745,
+      "width": 1400,
+      "height": 906,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-large5-2026-10-23/sunstone-map.png"
+    }
+  ],
+  "researchNotes": [
+    "All original authors preserved. Local pin mappings were reconciled against live title, source and author before saving; historical local IDs were not trusted after the database restore.",
+    "Primary datasets read: ERCOT 26INR0635; MISO J3762/J3931/J3994/J3454; SPP GEN-2017-195 and GEN-2021-006; NYISO queue 1080; PJM AG2-675/AH1-482/AH1-563/AG1-411. EIA August 2026 existing/retired plant coordinates are context markers, not new-project parcel surveys.",
+    "Current CAISO workbook has no exact Muon/Boson name. This is not evidence of cancellation. Barnstable QP1543 appears in search indexing, but repeated official live-table redirects prevented primary read-back; parcel, MWh and applicant remain unverified.",
+    "Seventeen unpublished price estimates and three calculated energy rows were cleared in each environment. Unsupported DC cooling/water/equipment claims were removed. Haines City instead stores the published requested maximum 150,000 gal/day with estimated basis and explicit permit contingency; it is not measured use.",
+    "Five location changes required fifteen replacement USGS basemaps. Archer and Haines use Census-geocoded road intersections. Aurora uses EIA existing-plant coordinates in DuPage County; Percheron uses the nearby retired Boardman plant context while its actual parcel remains to the north; Sunstone uses the applicant construction-plan reference coordinates.",
+    "Crusoe’s exact published rural address and intersection produced no Census geocoder matches. Its existing marker is explicitly labeled city-area context pending the municipal parcel/site-plan polygon; its old Highway 47 address claim was removed.",
+    "Official gallery/linked-media checks: Archer operator supplies the conceptual six-building plan; Percheron project site supplies its historical ERM conceptual parcel layout, while an Adobe Stock picture was rejected; Sunstone ODOE supplies applicant Figure C-1, carrying historical Pine Gate branding predating the Amazon transfer. These are diagrams, not completed-site photographs. All three are credited and stored on Azure.",
+    "Chaska’s city page offers a campus concept but does not support a separate CloudHQ Building 2. No concept was copied to the held split. PointOne’s Lee County rendering/90 MW phase already belongs to corrected pin 16482; no unsupported Sanford South copy was retained.",
+    "Cielo operator domain failed DNS, including gallery/project access. Haines primary city letter was downloaded and both scanned pages inspected. Chisago City’s unnamed withdrawn purchase cannot be identified as Cielo without additional evidence. New Lenox FOIA email images were downloaded and visually inspected; they establish exploration and alternative properties, not the claimed 300 MW Route 30/Gougar site.",
+    "Swift Current’s Mineral Basin project page and county/operator Crusoe materials were checked; no additional verified project photograph was adopted. Public queues do not supply project photographs. Existing USGS images are maps with uncertain imagery dates, not evidence of construction.",
+    "Shared queue/source URLs are retained exactly in references and sourceUrl is null where needed; no synthetic URL fragments. Existing Sunstone overlap and West Gardner scope/ownership questions remain queued. No record merge or production deployment was performed.",
+    "Credit balance is not exposed by the available tools. Work stopped at a fully verified 24-record checkpoint."
+  ]
+}

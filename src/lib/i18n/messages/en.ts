@@ -2153,6 +2153,7 @@ const en = {
       volumeAbout: 'Sum of the low and high ends of every range',
       topTickers: 'Most traded',
       period: 'Trades from {from} to {to}',
+      recent: 'Last 2 months',
       date: 'Traded',
       filed: 'Filed',
       asset: 'Asset',

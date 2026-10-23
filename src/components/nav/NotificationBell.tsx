@@ -1092,9 +1092,19 @@ export function TradesHistoryFeed({ everyone, wide }: { everyone?: boolean; wide
   const total = (values: Record<string, number> | null, other?: number | null) => Object.values(values ?? {}).reduce((a, b) => a + b, other ?? 0);
   const weekLabel = (w: number) => new Intl.NumberFormat(locale, { style: 'unit', unit: 'week', unitDisplay: 'narrow' }).format(w);
   const chips = (tickers: string[] | null, cls: string) =>
-    tickers?.map((tk) => (
+    // Flagged tickers first, then alphabetical.
+    [...(tickers ?? [])].sort((a, b) => Number(conflicts.has(b)) - Number(conflicts.has(a)) || a.localeCompare(b)).map((tk) => (
       // Above the row's stretched person link: a ticker opens its company and stock graph.
-      <Link key={tk} href={tickerHref(tk)} className={`relative rounded-md px-1.5 py-0.5 text-[11px] font-semibold hover:underline ${cls}`}>{tk}</Link>
+      <Link
+        key={tk}
+        href={tickerHref(tk)}
+        title={conflicts.has(tk) ? `${t('notifications.conflict')}: ${[...conflicts.get(tk)!].slice(0, 3).join(', ')}` : undefined}
+        className={`relative inline-flex items-center gap-1 rounded-md px-1.5 py-0.5 text-[11px] font-semibold hover:underline ${cls}`}
+      >
+        {conflicts.has(tk) ? <Icon name="warning" className="size-3 shrink-0 text-warning-soft" /> : null}
+        {tk}
+        {conflicts.has(tk) ? <span className="sr-only">{t('notifications.conflict')}</span> : null}
+      </Link>
     ));
   // Holdings with no ticker (bonds, T-bills, private companies), by name.
   const assetChips = (assets: string[] | null, side: 'buy' | 'sell') =>

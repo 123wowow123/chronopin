@@ -2139,6 +2139,7 @@ const it: Messages = {
       volumeAbout: 'Somma degli estremi inferiore e superiore di ogni intervallo',
       topTickers: 'Più negoziati',
       period: 'Operazioni dal {from} al {to}',
+      recent: 'Ultimi 2 mesi',
       date: 'Operazione',
       filed: 'Presentata',
       asset: 'Titolo',

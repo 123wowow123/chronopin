@@ -2143,6 +2143,7 @@ const ko: Messages = {
       volumeAbout: '각 범위의 하한과 상한의 합계',
       topTickers: '가장 많이 거래된 종목',
       period: '{from}~{to} 거래',
+      recent: '최근 2개월',
       date: '거래일',
       filed: '제출일',
       asset: '자산',

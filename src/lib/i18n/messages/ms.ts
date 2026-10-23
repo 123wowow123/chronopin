@@ -2152,6 +2152,7 @@ const ms: Messages = {
       volumeAbout: 'Jumlah hujung bawah dan atas bagi setiap julat',
       topTickers: 'Paling banyak didagangkan',
       period: 'Dagangan dari {from} hingga {to}',
+      recent: '2 bulan lepas',
       date: 'Didagangkan',
       filed: 'Difailkan',
       asset: 'Aset',
