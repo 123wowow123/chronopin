@@ -13,9 +13,9 @@ export async function generateMetadata(): Promise<Metadata> {
 export default async function PublicTradesPage() {
   const t = await getT();
   return (
-    <div className="mx-auto max-w-2xl px-4 py-6 sm:py-10">
+    <div className="mx-auto max-w-2xl px-4 py-6 sm:py-10 lg:max-w-7xl">
       <TitleWithBack wideBack className="mb-4 sm:mb-6">{t('notifications.tradesToday')}</TitleWithBack>
-      <TradesHistoryFeed everyone />
+      <TradesHistoryFeed everyone wide />
     </div>
   );
 }

@@ -136,6 +136,7 @@ const zh: Messages = {
     trade: '<person></person> 披露了 {count} 笔新的股票交易{tickers}',
     tradeBuys: '买入',
     tradeSells: '卖出',
+    tradePeople: '人数',
     conflict: '可能存在利益冲突',
     conflictHint: '{tickers}：{committees}监管的行业',
     tradesToday: '重要股票交易',

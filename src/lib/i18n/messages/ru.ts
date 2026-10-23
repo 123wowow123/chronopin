@@ -142,6 +142,7 @@ const ru: Messages = {
     trade: '<person></person> раскрыл(а) новых сделок с акциями: {count}{tickers}',
     tradeBuys: 'Покупки',
     tradeSells: 'Продажи',
+    tradePeople: 'Люди',
     conflict: 'Возможный конфликт интересов',
     conflictHint: '{tickers}: отрасль под надзором {committees}',
     tradesToday: 'Заметные сделки с акциями',

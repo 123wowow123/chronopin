@@ -135,6 +135,7 @@ const th: Messages = {
     trade: '<person></person> เปิดเผยการซื้อขายหุ้นใหม่ {count} รายการ{tickers}',
     tradeBuys: 'ซื้อ',
     tradeSells: 'ขาย',
+    tradePeople: 'บุคคล',
     conflict: 'อาจมีผลประโยชน์ทับซ้อน',
     conflictHint: '{tickers}: อุตสาหกรรมที่ {committees} กำกับดูแล',
     tradesToday: 'การซื้อขายหุ้นที่น่าสนใจ',

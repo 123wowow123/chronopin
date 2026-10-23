@@ -136,6 +136,7 @@ const it: Messages = {
     trade: '<person></person> ha dichiarato {count} nuove operazioni in borsa{tickers}',
     tradeBuys: 'Acquisti',
     tradeSells: 'Vendite',
+    tradePeople: 'Persone',
     conflict: 'Possibile conflitto di interessi',
     conflictHint: '{tickers}: settore supervisionato da {committees}',
     tradesToday: 'Operazioni azionarie rilevanti',

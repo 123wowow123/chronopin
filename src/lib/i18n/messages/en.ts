@@ -136,6 +136,7 @@ const en = {
     trade: '<person></person> disclosed {count} new stock trades{tickers}',
     tradeBuys: 'Buys',
     tradeSells: 'Sells',
+    tradePeople: 'People',
     conflict: 'Possible conflict of interest',
     conflictHint: '{tickers}: a sector overseen by {committees}',
     tradesToday: 'Notable stock trades',

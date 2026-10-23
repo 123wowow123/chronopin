@@ -136,6 +136,7 @@ const hi: Messages = {
     trade: '<person></person> ने {count} नए शेयर लेन-देन घोषित किए{tickers}',
     tradeBuys: 'खरीद',
     tradeSells: 'बिक्री',
+    tradePeople: 'लोग',
     conflict: 'हितों के टकराव की संभावना',
     conflictHint: '{tickers}: {committees} की निगरानी वाला क्षेत्र',
     tradesToday: 'उल्लेखनीय शेयर ट्रेड',

@@ -1035,7 +1035,7 @@ export function TradesHistoryFeed({ everyone, wide }: { everyone?: boolean; wide
     return () => window.clearTimeout(id);
   }, [load]);
   // The days shown and the ticker rankings, recomputed only when the data or the span changes.
-  const { days, all, ranked } = useMemo(() => {
+  const { days, all, ranked, conflicts } = useMemo(() => {
     const rows = items ?? [];
     const days = Array.from({ length: weeks * 7 }, (_, i) => ({
       day: -i,
@@ -1055,7 +1055,16 @@ export function TradesHistoryFeed({ everyone, wide }: { everyone?: boolean; wide
       }
       return [...stats].sort((a, b) => b[1].people.size - a[1].people.size || b[1].value - a[1].value);
     };
-    return { days, all, ranked: { buys: rank((n) => n.tradeBuyValues), sells: rank((n) => n.tradeSellValues) } };
+    // Tickers a filing trades inside a sector one of the member's committees oversees.
+    const conflicts = new Map<string, Set<string>>();
+    for (const n of all) {
+      for (const c of n.tradeConflicts ?? []) {
+        const set = conflicts.get(c.ticker) ?? new Set<string>();
+        set.add(c.committee.split(': ')[0].replace(/^(House|Senate|Joint) (Select )?Committee on (the )?/, ''));
+        conflicts.set(c.ticker, set);
+      }
+    }
+    return { days, all, conflicts, ranked: { buys: rank((n) => n.tradeBuyValues), sells: rank((n) => n.tradeSellValues) } };
   }, [items, weeks]);
   if (failed) return (
     <div role="alert" className="surface px-4 py-6 text-center text-sm text-subtle">
@@ -1113,7 +1122,7 @@ export function TradesHistoryFeed({ everyone, wide }: { everyone?: boolean; wide
         ))}
         <div className="flex flex-col items-center gap-0.5 px-2 py-4">
           <span className="text-3xl font-semibold text-ink tabular-nums">{people}</span>
-          <Icon name="users" className="size-4 text-subtle" />
+          <span className="text-xs font-medium tracking-wide text-subtle uppercase">{t('notifications.tradePeople')}</span>
         </div>
       </div>
       <div className={`surface grid grid-cols-1 divide-y divide-line sm:grid-cols-2 sm:divide-x sm:divide-y-0 rtl:sm:divide-x-reverse ${wide ? 'lg:col-span-2' : ''}`}>
@@ -1124,12 +1133,17 @@ export function TradesHistoryFeed({ everyone, wide }: { everyone?: boolean; wide
           <div key={key} className="min-w-0 px-4 py-3">
             <h2 className={`mb-1.5 text-xs font-semibold tracking-wide uppercase ${tone[key].split(' ')[0]}`}>{t(`notifications.${key}`)}</h2>
             {list.length ? (
-              <ol className="flex flex-col gap-1 text-sm">
+              <ol className={`text-sm ${wide ? 'lg:columns-2 lg:gap-x-8' : ''}`}>
                 {list.slice(0, TOP_TICKERS).map(([ticker, st]) => (
-                  <li key={ticker} className="flex items-baseline gap-2">
+                  <li key={ticker} className="mb-1 flex items-baseline gap-2 break-inside-avoid">
                     <span className="w-5 shrink-0 text-end text-xs tabular-nums text-subtle">{st.people.size}</span>
-                    <Link href={tickerHref(ticker)} className="min-w-0 flex-1 truncate font-semibold text-ink hover:underline">{ticker}</Link>
-                    {st.value ? <span className="text-xs tabular-nums text-muted">{money.format(st.value)}</span> : null}
+                    <Link href={tickerHref(ticker)} className="min-w-0 truncate font-semibold text-ink hover:underline">{ticker}</Link>
+                    {conflicts.has(ticker) ? (
+                      <span title={`${t('notifications.conflict')}: ${[...conflicts.get(ticker)!].slice(0, 3).join(', ')}`} className="shrink-0 text-warning-soft">
+                        <Icon name="warning" className="size-3" />
+                      </span>
+                    ) : null}
+                    {st.value ? <span className="ms-auto text-xs tabular-nums text-muted">{money.format(st.value)}</span> : null}
                   </li>
                 ))}
               </ol>

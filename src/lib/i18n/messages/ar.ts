@@ -157,6 +157,7 @@ const ar: Messages = {
     trade: 'أفصح <person></person> عن {count} صفقات أسهم جديدة{tickers}',
     tradeBuys: 'شراء',
     tradeSells: 'بيع',
+    tradePeople: 'الأشخاص',
     conflict: 'تضارب مصالح محتمل',
     conflictHint: '{tickers}: قطاع تشرف عليه {committees}',
     tradesToday: 'صفقات أسهم بارزة',

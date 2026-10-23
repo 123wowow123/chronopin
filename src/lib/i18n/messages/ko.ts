@@ -135,6 +135,7 @@ const ko: Messages = {
     trade: '<person></person> 님이 새 주식 거래 {count}건을 공개했습니다{tickers}',
     tradeBuys: '매수',
     tradeSells: '매도',
+    tradePeople: '인원',
     conflict: '이해충돌 가능성',
     conflictHint: '{tickers}: {committees}가 감독하는 업종',
     tradesToday: '주목할 만한 주식 거래',

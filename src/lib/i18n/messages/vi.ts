@@ -135,6 +135,7 @@ const vi: Messages = {
     trade: '<person></person> đã công bố {count} giao dịch cổ phiếu mới{tickers}',
     tradeBuys: 'Mua',
     tradeSells: 'Bán',
+    tradePeople: 'Người',
     conflict: 'Có thể xung đột lợi ích',
     conflictHint: '{tickers}: ngành do {committees} giám sát',
     tradesToday: 'Giao dịch cổ phiếu đáng chú ý',

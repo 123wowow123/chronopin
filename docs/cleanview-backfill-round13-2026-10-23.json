@@ -1,0 +1,1284 @@
+{
+  "checkedAt": "2026-10-23",
+  "scope": "Cleanview sourcing backfill batch 13",
+  "outcome": {
+    "audited": 12,
+    "corrected": 7,
+    "held": 5,
+    "environmentActions": 24,
+    "azureMedia": 22,
+    "nativePages": 14,
+    "replacementMaps": 6,
+    "conceptRenderings": 1,
+    "calculatedEnergyRowsCleared": 2,
+    "postedMapCounts": {
+      "local": 1430,
+      "prod": 1430
+    },
+    "deployment": false
+  },
+  "combinedRunTotals": {
+    "audited": 36,
+    "corrected": 27,
+    "held": 9,
+    "environmentActions": 72,
+    "azureMedia": 92,
+    "nativePages": 54,
+    "replacementMaps": 39,
+    "conceptRenderings": 9,
+    "calculatedEnergyRowsCleared": 8,
+    "operatorSiteDiagrams": 2
+  },
+  "previousReport": "cleanview-backfill-large3-2026-10-23.json",
+  "plan": {
+    "battery-pinecone-yuma-az": {
+      "id": 16451,
+      "delete": true,
+      "researchFinding": "Pinecone CAISO 2203 is a tracker lead now marked withdrawn by other trackers, while Cleanview still shows April 2028. No opened primary permit/operator supports Pinecone Energy LLC, the claimed $430M, 380-acre site or 515 MW/2,060 MWh four-hour design. The cited county project URL is unverified. Current CAISO workbook lacks this Cluster 15 lead; absence alone does not prove cancellation. Hold pending actual queue/permit identity.",
+      "sourcesChecked": [
+        "https://www.caiso.com/documents/publicqueuereport.xlsx",
+        "https://interxdata.com/states/arizona/counties/yuma/",
+        "https://www.cleanview.co/power-projects/planned/battery-storage-projects/arizona/55044_storage/pinecone",
+        "https://www.yumacountyaz.gov/government/development-services/planning-and-zoning/pinecone-energy-facility"
+      ],
+      "gaps": [
+        "Pinecone CAISO 2203 is a tracker lead now marked withdrawn by other trackers, while Cleanview still shows April 2028. No opened primary permit/operator supports Pinecone Energy LLC, the claimed $430M, 380-acre site or 515 MW/2,060 MWh four-hour design. The cited county project URL is unverified. Current CAISO workbook lacks this Cluster 15 lead; absence alone does not prove cancellation. Hold pending actual queue/permit identity."
+      ]
+    },
+    "battery-brookside-forest-lewis-ny": {
+      "id": 16452,
+      "patch": {
+        "title": "Brookside Forest: 300 MW / 1,200 MWh NYISO Plan; COD December 2030",
+        "description": "NYISO’s current workbook lists Brookside Forest C26-0020, customer Brookside Forest Energy Storage LLC, as a 300 MW / 1,200 MWh four-hour proposal at the 115 kV Waters Road Station. Proposed COD is December 2030, replacing the invented end-2028 schedule and $280M budget.",
+        "sourceUrl": null,
+        "references": [
+          {
+            "url": "https://www.nyiso.com/documents/20142/1407078/NYISO-Interconnection-Queue.xlsx",
+            "title": "NYISO Interconnection Queue — current workbook, checked October 23, 2026",
+            "confidence": 95,
+            "publishedDate": null
+          }
+        ],
+        "longFormSummary": "<ul><li>Cluster Projects row 107 lists Lowville in the county/location field, NYISO Zone E, National Grid and project-status code 2. It separately gives October 2030 initial backfeed, November synchronization and December COD. The source does not establish construction underway, 180 acres or a project price.<cite data-ref=\"https://www.nyiso.com/documents/20142/1407078/NYISO-Interconnection-Queue.xlsx\"></cite></li><li>Timeline: December 1, 2030 is month-only precision, not an exact opening. The row was last updated September 30, 2026; older trackers still show September 2030. Existing Lowville map is approximate, not a verified Waters Road parcel.<cite data-ref=\"https://www.nyiso.com/documents/20142/1407078/NYISO-Interconnection-Queue.xlsx\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "estimated",
+        "allDay": true,
+        "allDayStated": false,
+        "utcStartDateTime": "2030-12-01T00:00:00.000Z",
+        "dateConfidenceReasoning": "NYISO C26-0020 proposed COD column 12-2030; month precision. Initial backfeed 10-2030 and sync 11-2030 are distinct.",
+        "company": "Brookside Forest Energy Storage LLC",
+        "companyWikiUrl": null,
+        "tags": [
+          "Cleanview",
+          "Battery",
+          "Storage",
+          "NYISO",
+          "New York",
+          "Lewis County",
+          "Lowville",
+          "Planned"
+        ]
+      },
+      "power": {
+        "megawatts": 300,
+        "kind": "storage",
+        "sourceUrl": "https://www.nyiso.com/documents/20142/1407078/NYISO-Interconnection-Queue.xlsx",
+        "note": "Proposed 300 MW / 1200 MWh, minimum full discharge duration four hours; not operating."
+      },
+      "datacenter": null,
+      "clearEnergy": false,
+      "gaps": [
+        "Verify local siting/fire permits, project-status code meaning/IA, property boundary, capex and final COD; do not label current construction from a queue row."
+      ]
+    },
+    "battery-pinopolis-berkeley-sc": {
+      "id": 16453,
+      "patch": {
+        "title": "Pinopolis Reliability: 300 MW / 1,200 MWh; Contractual COD December 2027",
+        "description": "Primary SCPSC filings establish Aypa’s 300 MW / 1,200 MWh four-hour LFP battery at Jefferies, with contractual commercial operation December 1, 2027. The January 2026 order exempts this project from the specific siting certificate; February withdrawal of that certificate application does not establish project cancellation.",
+        "sourceUrl": "https://dms.psc.sc.gov/Attachments/Order/d347427e-bc48-496b-aba1-3b5d85d4183c",
+        "references": [
+          {
+            "url": "https://dms.psc.sc.gov/Attachments/Order/d347427e-bc48-496b-aba1-3b5d85d4183c",
+            "title": "SCPSC Order No. 2026-43 — Pinopolis Declaratory Order",
+            "confidence": 95,
+            "publishedDate": "2026-01-15"
+          },
+          {
+            "url": "https://dms.psc.sc.gov/Attachments/Matter/f75a5fb7-69b7-4c8a-852c-854e784ce103",
+            "title": "Brief of Pinopolis Reliability Project LLC in Support of Petition",
+            "confidence": 95,
+            "publishedDate": "2025-12-08"
+          },
+          {
+            "url": "https://scstatehouse.gov/agendas/126j15627.pdf",
+            "title": "Joint Bond Review Committee — Jefferies Site Lease Proposal",
+            "confidence": 95,
+            "publishedDate": "2025-12-02"
+          },
+          {
+            "url": "https://dms.psc.sc.gov/Attachments/Matter/17e69683-1cca-4035-8ec3-7e96fe777c99",
+            "title": "SCPSC Directive Order No. 2026-75 — Withdrawal of Certificate Application",
+            "confidence": 95,
+            "publishedDate": "2026-02-05"
+          },
+          {
+            "url": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?SingleLine=463+Power+House+Road+Moncks+Corner+SC&f=json&outFields=%2A&maxLocations=1",
+            "title": "ArcGIS World Geocoder — 463 Power House Road, Moncks Corner, South Carolina, USA",
+            "confidence": 95,
+            "publishedDate": null
+          }
+        ],
+        "longFormSummary": "<ul><li>December brief distinguishes August 30, 2027 mechanical completion from December 1 COD and identifies the existing 115 kV Santee Cooper substation, correcting the pin’s 230 kV claim. Aypa’s Cedar Holdco/Pinopolis ownership chain is stated in the filing.<cite data-ref=\"https://dms.psc.sc.gov/Attachments/Matter/f75a5fb7-69b7-4c8a-852c-854e784ce103\"></cite></li><li>Committee packet identifies approximately 21.054 acres at 463 Power House Road with a proposed 20-year ground lease. This proposal is not evidence every lease condition is executed. The $260M project budget is unsupported and removed.<cite data-ref=\"https://scstatehouse.gov/agendas/126j15627.pdf\"></cite></li><li>Timeline: December 1, 2027 is the filed contractual target, not guaranteed actual service. Order 2026-43 grants the classification petition; Order 2026-75 closes the redundant certificate docket in light of that ruling.<cite data-ref=\"https://dms.psc.sc.gov/Attachments/Order/d347427e-bc48-496b-aba1-3b5d85d4183c\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "estimated",
+        "allDay": true,
+        "allDayStated": false,
+        "utcStartDateTime": "2027-12-01T00:00:00.000Z",
+        "dateConfidenceReasoning": "Filed contractual COD December 1, 2027; mechanical completion August 30, 2027 is separate. Target remains estimated.",
+        "company": "Pinopolis Reliability Project LLC / Aypa Power",
+        "companyWikiUrl": null,
+        "tags": [
+          "Cleanview",
+          "Battery",
+          "Storage",
+          "Aypa Power",
+          "South Carolina",
+          "Berkeley County",
+          "Moncks Corner",
+          "Planned"
+        ],
+        "latitude": 33.244526955879,
+        "longitude": -79.986659074196,
+        "address": "463 Power House Road, Moncks Corner, South Carolina, USA (approximate address point)",
+        "media": [
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round13-2026-10-23/battery-pinopolis-berkeley-sc-aerial.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 1000
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round13-2026-10-23/battery-pinopolis-berkeley-sc-topo.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 1000
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round13-2026-10-23/battery-pinopolis-berkeley-sc-relief.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 1000
+          }
+        ]
+      },
+      "power": {
+        "megawatts": 300,
+        "kind": "storage",
+        "sourceUrl": "https://dms.psc.sc.gov/Attachments/Order/d347427e-bc48-496b-aba1-3b5d85d4183c",
+        "note": "Planned 300 MW / 1200 MWh LFP, four hours. Specific siting-certificate exemption is not all-permit completion."
+      },
+      "datacenter": null,
+      "clearEnergy": false,
+      "gaps": [
+        "Verify executed ground lease, construction progress, remaining permits, capex and actual COD; 2026 certificate exemption is not an all-permit clearance."
+      ],
+      "mediaReplaced": true,
+      "mediaAdded": 0
+    },
+    "battery-savion-garner-ks": {
+      "id": 16454,
+      "delete": true,
+      "researchFinding": "The pin places Savion Garner in Gardner, Johnson County with $360M and 425 MW/1,700 MWh. SPP verifies a differently located Garner request GEN-2020-057 at Atlantic 345 kV, 424.5 MW and November 30, 2030 COD; trackers place it in Finney County. Primary queue does not name Savion, confirm Gardner/Johnson, or publish four-hour MWh/budget. Separate solar GEN-2020-058 is not a second battery. Hold the geographically/developer-unverified pin pending exact identity and parcel rather than apply distant queue capacity to its existing Gardner marker.",
+      "sourcesChecked": [
+        "https://opsportal.spp.org/Studies/GIActive",
+        "https://www.interconnection.fyi/project/spp-gen-2020-057",
+        "https://www.gardnerkansas.gov/government/departments/community-development/planning-zoning"
+      ],
+      "gaps": [
+        "The pin places Savion Garner in Gardner, Johnson County with $360M and 425 MW/1,700 MWh. SPP verifies a differently located Garner request GEN-2020-057 at Atlantic 345 kV, 424.5 MW and November 30, 2030 COD; trackers place it in Finney County. Primary queue does not name Savion, confirm Gardner/Johnson, or publish four-hour MWh/budget. Separate solar GEN-2020-058 is not a second battery. Hold the geographically/developer-unverified pin pending exact identity and parcel rather than apply distant queue capacity to its existing Gardner marker."
+      ]
+    },
+    "battery-shallow-seam-clearfield-pa": {
+      "id": 16455,
+      "patch": {
+        "title": "Shallow Seam: 400 MW / 1,600 MWh NYISO Cluster Request; March 2029 COD",
+        "description": "NYISO’s current workbook lists Shallow Seam Energy Storage LLC’s C24-233 battery as 400 MW / 1,600 MWh, four hours, at the Homer City–Mainesburg 345 kV line in Clearfield, Pennsylvania. This corrects the PJM attribution and replaces end-2028 with March 2029 COD.",
+        "sourceUrl": null,
+        "references": [
+          {
+            "url": "https://www.nyiso.com/documents/20142/1407078/NYISO-Interconnection-Queue.xlsx",
+            "title": "NYISO Interconnection Queue — current workbook, checked October 23, 2026",
+            "confidence": 95,
+            "publishedDate": null
+          }
+        ],
+        "longFormSummary": "<ul><li>Cluster Projects row 61 separates September 2028 initial backfeed, December 2028 synchronization and March 2029 proposed COD. It lists NYSEG and Zone C; a Pennsylvania address does not make every request PJM.<cite data-ref=\"https://www.nyiso.com/documents/20142/1407078/NYISO-Interconnection-Queue.xlsx\"></cite></li><li>Withdrawn sheet row 1382 identifies the earlier same-name request 1632, withdrawn May 31, 2024. It must not be confused with current cluster request C24-233. The $340M budget, reclaimed-mine construction claim and completed permits are not established.<cite data-ref=\"https://www.nyiso.com/documents/20142/1407078/NYISO-Interconnection-Queue.xlsx\"></cite></li><li>Timeline: March 1, 2029 is month-only precision. Queue-listed four-hour energy is a design proposal, not measured discharge or proof of construction. Existing county-level map requires parcel verification.<cite data-ref=\"https://www.nyiso.com/documents/20142/1407078/NYISO-Interconnection-Queue.xlsx\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "estimated",
+        "allDay": true,
+        "allDayStated": false,
+        "utcStartDateTime": "2029-03-01T00:00:00.000Z",
+        "dateConfidenceReasoning": "Current C24-233 proposed COD 03-2029; September/December 2028 backfeed/sync distinct. Month-only estimate.",
+        "company": "Shallow Seam Energy Storage LLC",
+        "companyWikiUrl": null,
+        "tags": [
+          "Cleanview",
+          "Battery",
+          "Storage",
+          "NYISO",
+          "Pennsylvania",
+          "Clearfield County",
+          "Planned"
+        ]
+      },
+      "power": {
+        "megawatts": 400,
+        "kind": "storage",
+        "sourceUrl": "https://www.nyiso.com/documents/20142/1407078/NYISO-Interconnection-Queue.xlsx",
+        "note": "C24-233 proposed 400 MW / 1600 MWh with minimum four-hour full discharge. Earlier 1632 request withdrawn."
+      },
+      "datacenter": null,
+      "clearEnergy": false,
+      "gaps": [
+        "Verify exact parcel, customer parent, local fire/siting permits, construction progress, budget and current cluster milestone/IA status."
+      ]
+    },
+    "dc-aws-boardman-morrow-or": {
+      "id": 16456,
+      "delete": true,
+      "researchFinding": "No opened primary source verifies this independently defined Airport Building 4 as 75 MW IT, $800M, 320,000 sqft or August 2027 COD. Morrow County’s real LUD-N-68-24 packet describes four roughly 215,461-sqft buildings on 106.89 acres; it does not match this tracker-sized B4. Oregon DEQ PDX-4 is an existing named facility, not proof Airport Building 4 is the same record. Preserve verified Boardman campuses; hold the unsupported per-building identity until a specific permit/phase match.",
+      "sourcesChecked": [
+        "https://www.co.morrow.or.us/sites/default/files/fileattachments/planning_commission/meeting/packets/16789/08272024_pc_packet.pdf",
+        "https://www.oregon.gov/deq/aq/cao/er/Pages/Amazon-PDX4Datacenter.aspx",
+        "https://www.portofmorrow.com/"
+      ],
+      "gaps": [
+        "No opened primary source verifies this independently defined Airport Building 4 as 75 MW IT, $800M, 320,000 sqft or August 2027 COD. Morrow County’s real LUD-N-68-24 packet describes four roughly 215,461-sqft buildings on 106.89 acres; it does not match this tracker-sized B4. Oregon DEQ PDX-4 is an existing named facility, not proof Airport Building 4 is the same record. Preserve verified Boardman campuses; hold the unsupported per-building identity until a specific permit/phase match."
+      ]
+    },
+    "dc-google-papillion-sarpy-ne": {
+      "id": 16457,
+      "delete": true,
+      "researchFinding": "Google’s primary Nebraska page verifies the Papillion campus, not a separately disclosed Building 6 of 57 MW IT, $600M and 350,000 sqft opening June 2027. The attempted municipal permit-packet download was blocked, leaving the building-specific permit link unresolved. No exact operator/permit match establishes this tracker split. Hold rather than apportion campus costs or substitute Meta Sarpy Building 6.",
+      "sourcesChecked": [
+        "https://datacenters.google/locations/nebraska/",
+        "https://www.papillion.org/AgendaCenter/ViewFile/Agenda/_07012025-569?packet=true",
+        "https://www.papillion.org/215/Planning"
+      ],
+      "gaps": [
+        "Google’s primary Nebraska page verifies the Papillion campus, not a separately disclosed Building 6 of 57 MW IT, $600M and 350,000 sqft opening June 2027. The attempted municipal permit-packet download was blocked, leaving the building-specific permit link unresolved. No exact operator/permit match establishes this tracker split. Hold rather than apportion campus costs or substitute Meta Sarpy Building 6."
+      ]
+    },
+    "dc-microsoft-columbia-douglas-wa": {
+      "id": 16458,
+      "patch": {
+        "title": "Microsoft EAT06: Two-Story Building Permit Issued October 5, 2026",
+        "description": "Douglas County’s public portal identifies Microsoft EAT06 as a two-story data-center building at 875 Urban Industrial Way, parcel 22210920004. Permit BPC-2026-041 was approved September 24 and issued October 5, 2026. It does not verify the former $650M, 57 MW IT or 260,000 sqft claims.",
+        "sourceUrl": "https://co-douglas-wa.smartgovcommunity.com/PermittingPublic/PermitLandingPagePublic/Index/262017e7-3452-41d0-8c1c-b404010c3ca1",
+        "references": [
+          {
+            "url": "https://co-douglas-wa.smartgovcommunity.com/PermittingPublic/PermitLandingPagePublic/Index/262017e7-3452-41d0-8c1c-b404010c3ca1",
+            "title": "Douglas County BPC-2026-041 — Microsoft EAT06, 2 Story Data Center",
+            "confidence": 95,
+            "publishedDate": null
+          },
+          {
+            "url": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?SingleLine=875+Urban+Industrial+Way+East+Wenatchee+WA&f=json&outFields=%2A&maxLocations=1",
+            "title": "ArcGIS World Geocoder — 875 Urban Industrial Way, East Wenatchee, Washington, USA",
+            "confidence": 95,
+            "publishedDate": null
+          }
+        ],
+        "longFormSummary": "<ul><li>Portal gives Microsoft Corporation as owner, HITT as contractor and ESD Global/Stantec as agents. E501/E502 are address suites, not a published IT-power split. Permit issuance does not mean commissioning.<cite data-ref=\"https://co-douglas-wa.smartgovcommunity.com/PermittingPublic/PermitLandingPagePublic/Index/262017e7-3452-41d0-8c1c-b404010c3ca1\"></cite></li><li>Removed capacity-scaled water and annual energy, unverified 57 MW and construction budget. The old October 2027 COD is replaced with the confirmed permit event, with exact final construction/operations schedule still open.<cite data-ref=\"https://co-douglas-wa.smartgovcommunity.com/PermittingPublic/PermitLandingPagePublic/Index/262017e7-3452-41d0-8c1c-b404010c3ca1\"></cite></li><li>Timeline: October 5, 2026 is the issued date in the county record. Map follows its published street address as an approximate campus reference, not a surveyed EAT06 building center.<cite data-ref=\"https://co-douglas-wa.smartgovcommunity.com/PermittingPublic/PermitLandingPagePublic/Index/262017e7-3452-41d0-8c1c-b404010c3ca1\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "confirmed",
+        "allDay": true,
+        "allDayStated": false,
+        "utcStartDateTime": "2026-10-05T00:00:00.000Z",
+        "dateConfidenceReasoning": "Confirmed county permit issue date October 5, 2026; not an operating date.",
+        "company": "Microsoft Corporation",
+        "companyWikiUrl": null,
+        "tags": [
+          "Cleanview",
+          "Data Centers",
+          "Microsoft",
+          "Washington",
+          "Douglas County",
+          "East Wenatchee",
+          "Permit issued"
+        ],
+        "latitude": 47.416943594542,
+        "longitude": -120.209551463001,
+        "address": "875 Urban Industrial Way, East Wenatchee, Washington, USA (approximate address point)",
+        "media": [
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round13-2026-10-23/dc-microsoft-columbia-douglas-wa-aerial.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 1000
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round13-2026-10-23/dc-microsoft-columbia-douglas-wa-topo.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 1000
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round13-2026-10-23/dc-microsoft-columbia-douglas-wa-relief.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 1000
+          }
+        ]
+      },
+      "power": "delete",
+      "datacenter": "delete",
+      "clearEnergy": true,
+      "gaps": [
+        "Verify building-specific critical IT, budget, floor area and first service; street geocode is approximate, not the final building footprint."
+      ],
+      "mediaReplaced": true,
+      "mediaAdded": 0
+    },
+    "dc-microsoft-malaga-chelan-wa": {
+      "id": 16459,
+      "patch": {
+        "title": "Microsoft Malaga EAT13: Concept Plan Verified; Separate COD and MW Unpublished",
+        "description": "Microsoft’s 2023 Malaga concept boards identify EAT12, EAT13 and EAT14. The operator overview gives only an early-2026 first-building construction target and says the other two depend on customer demand. This does not establish EAT13’s claimed May 2027 opening, $650M, 57 MW IT or 250,000 sqft.",
+        "sourceUrl": "https://local.microsoft.com/blog/malaga-datacenter-project-overview/",
+        "references": [
+          {
+            "url": "https://local.microsoft.com/blog/malaga-datacenter-project-overview/",
+            "title": "Malaga Datacenter Project Overview — Microsoft",
+            "confidence": 95,
+            "publishedDate": null
+          },
+          {
+            "url": "https://local.microsoft.com/wp-content/uploads/2023/05/Malaga-Datacenter-Townhall-Boards-ENGLISH.pdf",
+            "title": "Malaga Datacenter Townhall Boards — English",
+            "confidence": 95,
+            "publishedDate": "2023-03-29"
+          }
+        ],
+        "longFormSummary": "<ul><li>The operator explicitly separates construction completion from operation/availability. The conceptual building labels are not commissioned capacity, and no campus-wide supply agreement is divided into 57 MW blocks.<cite data-ref=\"https://local.microsoft.com/blog/malaga-datacenter-project-overview/\"></cite></li><li>Removed unsupported cost, load, floor area, water and dependent calculated energy. Operator’s published conceptual rendering is retained as campus context, not a completed EAT13 photograph. The existing Malaga-area map remains approximate pending a building-specific surveyed boundary.<cite data-ref=\"https://local.microsoft.com/blog/malaga-datacenter-project-overview/\"></cite></li><li>Timeline: March 29, 2023 is the documented community information session and concept-plan presentation, replacing the unverified 2027 COD. Current EAT13 permits and delivery timing remain open research.<cite data-ref=\"https://local.microsoft.com/blog/malaga-datacenter-project-overview/\"></cite></li><li>Microsoft Malaga campus conceptual rendering published with its 2023 project overview; campus context, not a completed EAT13 photograph. Credit: Microsoft.<cite data-ref=\"https://local.microsoft.com/blog/malaga-datacenter-project-overview/\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "confirmed",
+        "allDay": true,
+        "allDayStated": false,
+        "utcStartDateTime": "2023-03-29T00:00:00.000Z",
+        "dateConfidenceReasoning": "Confirmed March 29, 2023 community concept-plan presentation; not construction completion or EAT13 COD.",
+        "company": "Microsoft Corporation",
+        "companyWikiUrl": null,
+        "tags": [
+          "Cleanview",
+          "Data Centers",
+          "Microsoft",
+          "Washington",
+          "Chelan County",
+          "Malaga",
+          "Concept plan"
+        ],
+        "media": [
+          {
+            "id": 24456,
+            "thumbName": "ee383ce3-9b17-4425-af1d-a68bb340cffd.jpeg",
+            "thumbWidth": 1000,
+            "thumbHeight": 625,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/dc-microsoft-malaga-chelan-wa-aerial.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 1000,
+            "type": "1"
+          },
+          {
+            "id": 24457,
+            "thumbName": "3b1a06d4-6212-4566-84d2-f3ff7fd16d59.jpeg",
+            "thumbWidth": 1000,
+            "thumbHeight": 625,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/dc-microsoft-malaga-chelan-wa-topo.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 1000,
+            "type": "1"
+          },
+          {
+            "id": 24458,
+            "thumbName": "42c86216-0c1f-47fc-aeb7-a75a90aecd52.jpeg",
+            "thumbWidth": 1000,
+            "thumbHeight": 625,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/dc-microsoft-malaga-chelan-wa-corridor.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 1000,
+            "type": "1"
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round13-2026-10-23/malaga-render.jpg",
+            "originalWidth": 884,
+            "originalHeight": 496
+          }
+        ]
+      },
+      "power": "delete",
+      "datacenter": "delete",
+      "clearEnergy": true,
+      "gaps": [
+        "Verify current EAT13-specific permits, phase sequence, parcel/building center, IT, cost and delivery; operator first-phase early-2026 wording does not date EAT13."
+      ],
+      "mediaReplaced": true,
+      "mediaAdded": 1
+    },
+    "solar-galion-crawford-oh": {
+      "id": 16460,
+      "delete": true,
+      "researchFinding": "Tracker lead corresponds to Galion–South Berwick AG2-149, not a verified $450M/3,200-acre facility under construction. PJM historical Phase I lists 400 MW MFO but 314 MW energy and 52 MW capacity; current Phase II summary lacks this request and trackers mark it withdrawn. Separate Galion–Roberts/Marion projects are different requests and cannot substitute. No opened operator or OPSB project filing confirms the claimed facility or end-2028 COD. Hold pending exact current project/permit identity.",
+      "sourcesChecked": [
+        "https://www.pjm.com/pjmfiles/pub/planning/project-queues/Cluster-Reports/TC2/TC2_PH1_Executive_Summary.htm",
+        "https://www.pjm.com/pjmfiles/pub/planning/project-queues/Cluster-Reports/TC2/TC2_PH2_Executive_Summary.htm",
+        "https://www.interconnection.fyi/project/pjm-ag2-149",
+        "https://opsb.ohio.gov/"
+      ],
+      "gaps": [
+        "Tracker lead corresponds to Galion–South Berwick AG2-149, not a verified $450M/3,200-acre facility under construction. PJM historical Phase I lists 400 MW MFO but 314 MW energy and 52 MW capacity; current Phase II summary lacks this request and trackers mark it withdrawn. Separate Galion–Roberts/Marion projects are different requests and cannot substitute. No opened operator or OPSB project filing confirms the claimed facility or end-2028 COD. Hold pending exact current project/permit identity."
+      ]
+    },
+    "solar-goos-ferry-calcasieu-la": {
+      "id": 16461,
+      "patch": {
+        "title": "Goos Ferry R5088: Active 325 MW Hybrid Request; September 2027 Target",
+        "description": "MISO’s current API identifies Goos Ferry R5088 as an active 325 MW solar/battery request in Calcasieu Parish, targeting September 1, 2027. The same POI has older J1598 and other requests; none proves the pin’s $350M, 2,400 acres or Aypa ownership.",
+        "sourceUrl": null,
+        "references": [
+          {
+            "url": "https://www.misoenergy.org/api/giqueue/getprojects",
+            "title": "MISO Generator Interconnection Queue — current API, checked October 23, 2026",
+            "confidence": 95,
+            "publishedDate": null
+          }
+        ],
+        "longFormSummary": "<ul><li>R5088 has 325 MW summer/winter net, ERIS service and Entergy Louisiana as transmission owner. This is hybrid net request, not proof of 325 MW solar AC plus an unspecified separate battery allocation.<cite data-ref=\"https://www.misoenergy.org/api/giqueue/getprojects\"></cite></li><li>J1598 is a different 325 MW solar record with applicationStatus Done, studyPhase GIA, negotiated September 2026 in-service and postGIAStatus Not Started. Done is not measured operation; do not automatically add both as independent new capacity. J2292 and J2899 are also distinct requests at related POIs.<cite data-ref=\"https://www.misoenergy.org/api/giqueue/getprojects\"></cite></li><li>Timeline: September 1, 2027 follows R5088’s queue target, replacing unsupported December 2028. Whether R5088 supersedes J1598, and any developer/permit linkage, needs primary confirmation. Existing county-level marker is approximate.<cite data-ref=\"https://www.misoenergy.org/api/giqueue/getprojects\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "estimated",
+        "allDay": true,
+        "allDayStated": false,
+        "utcStartDateTime": "2027-09-01T00:00:00.000Z",
+        "dateConfidenceReasoning": "MISO R5088 inService target September 1, 2027; planned request, not actual service or proof J1598 is operating.",
+        "company": null,
+        "companyWikiUrl": null,
+        "tags": [
+          "Cleanview",
+          "Solar",
+          "Battery",
+          "Storage",
+          "MISO",
+          "Louisiana",
+          "Calcasieu Parish",
+          "Planned"
+        ]
+      },
+      "power": {
+        "megawatts": 325,
+        "kind": "generation",
+        "sourceUrl": "https://www.misoenergy.org/api/giqueue/getprojects",
+        "note": "R5088 hybrid summer/winter net request; separate solar and battery nameplate/MWh unpublished. Do not add J1598 without identity reconciliation."
+      },
+      "datacenter": null,
+      "clearEnergy": false,
+      "gaps": [
+        "Confirm R5088-to-J1598 relationship, Aypa attribution, exact parcel, hybrid MW/MWh split, budget and actual construction; do not label Done as operational."
+      ]
+    },
+    "solar-hineston-rapides-la": {
+      "id": 16462,
+      "patch": {
+        "title": "Hineston J3209: 350 MW Active MISO Request; Past Target Is Unconfirmed",
+        "description": "MISO’s current API lists Hineston J3209 as an active 350 MW solar request in Rapides Parish, with Phase 2 study and post-GIA status Not Started. Its March 1, 2026 in-service target is past and unconfirmed; no opened evidence establishes the pin’s November 2028 date, $380M or 2,600-acre build.",
+        "sourceUrl": null,
+        "references": [
+          {
+            "url": "https://www.misoenergy.org/api/giqueue/getprojects",
+            "title": "MISO Generator Interconnection Queue — current API, checked October 23, 2026",
+            "confidence": 95,
+            "publishedDate": null
+          }
+        ],
+        "longFormSummary": "<ul><li>J3209 gives Cleco as transmission owner and ERIS service. Separate Hineston J3479 is 200 MW with February 2027 target; these are not automatically one 550 MW permitted plant.<cite data-ref=\"https://www.misoenergy.org/api/giqueue/getprojects\"></cite></li><li>A nearby July 2026 Corps notice identifies Treaty Oak’s much larger Sunstripe proposal near Hineston, but no primary identifier links it to J3209. Do not borrow that applicant, 10,000-acre scope or permit as evidence for this 350 MW queue record.<cite data-ref=\"https://www.misoenergy.org/api/giqueue/getprojects\"></cite></li><li>Timeline: March 1, 2026 is retained only as MISO’s stale request target, not a claim of operation. Obtain revised schedule and exact parcel; the existing Hineston-area map is approximate.<cite data-ref=\"https://www.misoenergy.org/api/giqueue/getprojects\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "estimated",
+        "allDay": true,
+        "allDayStated": false,
+        "utcStartDateTime": "2026-03-01T00:00:00.000Z",
+        "dateConfidenceReasoning": "MISO J3209 still gives March 1, 2026 inService; stale/unconfirmed target, active Phase 2 and post-GIA Not Started. Not an actual opening.",
+        "company": null,
+        "companyWikiUrl": null,
+        "tags": [
+          "Cleanview",
+          "Solar",
+          "MISO",
+          "Louisiana",
+          "Rapides Parish",
+          "Planned"
+        ]
+      },
+      "power": {
+        "megawatts": 350,
+        "kind": "generation",
+        "sourceUrl": "https://www.misoenergy.org/api/giqueue/getprojects",
+        "note": "J3209 proposed summer/winter net 350 MW solar, not measured or energized generation."
+      },
+      "datacenter": null,
+      "clearEnergy": false,
+      "gaps": [
+        "Obtain updated queue schedule, developer, permits, budget and parcel; confirm or reject Sunstripe identity linkage before importing USACE MVN-2026-00184-WLL."
+      ]
+    }
+  },
+  "results": [
+    {
+      "environment": "local",
+      "key": "battery-pinecone-yuma-az",
+      "id": 16451,
+      "action": "deleted",
+      "verifiedStatus": 404
+    },
+    {
+      "environment": "local",
+      "key": "battery-brookside-forest-lewis-ny",
+      "id": 16452,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Verify local siting/fire permits, project-status code meaning/IA, property boundary, capex and final COD; do not label current construction from a queue row."
+      ]
+    },
+    {
+      "environment": "local",
+      "key": "battery-pinopolis-berkeley-sc",
+      "id": 16453,
+      "action": "corrected",
+      "mediaPreserved": false,
+      "mediaReplaced": true,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Verify executed ground lease, construction progress, remaining permits, capex and actual COD; 2026 certificate exemption is not an all-permit clearance."
+      ]
+    },
+    {
+      "environment": "local",
+      "key": "battery-savion-garner-ks",
+      "id": 16454,
+      "action": "deleted",
+      "verifiedStatus": 404
+    },
+    {
+      "environment": "local",
+      "key": "battery-shallow-seam-clearfield-pa",
+      "id": 16455,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Verify exact parcel, customer parent, local fire/siting permits, construction progress, budget and current cluster milestone/IA status."
+      ]
+    },
+    {
+      "environment": "local",
+      "key": "dc-aws-boardman-morrow-or",
+      "id": 16456,
+      "action": "deleted",
+      "verifiedStatus": 404
+    },
+    {
+      "environment": "local",
+      "key": "dc-google-papillion-sarpy-ne",
+      "id": 16457,
+      "action": "deleted",
+      "verifiedStatus": 404
+    },
+    {
+      "environment": "local",
+      "key": "dc-microsoft-columbia-douglas-wa",
+      "id": 16458,
+      "action": "corrected",
+      "mediaPreserved": false,
+      "mediaReplaced": true,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Verify building-specific critical IT, budget, floor area and first service; street geocode is approximate, not the final building footprint."
+      ]
+    },
+    {
+      "environment": "local",
+      "key": "dc-microsoft-malaga-chelan-wa",
+      "id": 16459,
+      "action": "corrected",
+      "mediaPreserved": false,
+      "mediaReplaced": true,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Verify current EAT13-specific permits, phase sequence, parcel/building center, IT, cost and delivery; operator first-phase early-2026 wording does not date EAT13."
+      ]
+    },
+    {
+      "environment": "local",
+      "key": "solar-galion-crawford-oh",
+      "id": 16460,
+      "action": "deleted",
+      "verifiedStatus": 404
+    },
+    {
+      "environment": "local",
+      "key": "solar-goos-ferry-calcasieu-la",
+      "id": 16461,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Confirm R5088-to-J1598 relationship, Aypa attribution, exact parcel, hybrid MW/MWh split, budget and actual construction; do not label Done as operational."
+      ]
+    },
+    {
+      "environment": "local",
+      "key": "solar-hineston-rapides-la",
+      "id": 16462,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Obtain updated queue schedule, developer, permits, budget and parcel; confirm or reject Sunstripe identity linkage before importing USACE MVN-2026-00184-WLL."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "battery-pinecone-yuma-az",
+      "id": 16451,
+      "action": "deleted",
+      "verifiedStatus": 404
+    },
+    {
+      "environment": "prod",
+      "key": "battery-brookside-forest-lewis-ny",
+      "id": 16452,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Verify local siting/fire permits, project-status code meaning/IA, property boundary, capex and final COD; do not label current construction from a queue row."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "battery-pinopolis-berkeley-sc",
+      "id": 16453,
+      "action": "corrected",
+      "mediaPreserved": false,
+      "mediaReplaced": true,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Verify executed ground lease, construction progress, remaining permits, capex and actual COD; 2026 certificate exemption is not an all-permit clearance."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "battery-savion-garner-ks",
+      "id": 16454,
+      "action": "deleted",
+      "verifiedStatus": 404
+    },
+    {
+      "environment": "prod",
+      "key": "battery-shallow-seam-clearfield-pa",
+      "id": 16455,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Verify exact parcel, customer parent, local fire/siting permits, construction progress, budget and current cluster milestone/IA status."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "dc-aws-boardman-morrow-or",
+      "id": 16456,
+      "action": "deleted",
+      "verifiedStatus": 404
+    },
+    {
+      "environment": "prod",
+      "key": "dc-google-papillion-sarpy-ne",
+      "id": 16457,
+      "action": "deleted",
+      "verifiedStatus": 404
+    },
+    {
+      "environment": "prod",
+      "key": "dc-microsoft-columbia-douglas-wa",
+      "id": 16458,
+      "action": "corrected",
+      "mediaPreserved": false,
+      "mediaReplaced": true,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Verify building-specific critical IT, budget, floor area and first service; street geocode is approximate, not the final building footprint."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "dc-microsoft-malaga-chelan-wa",
+      "id": 16459,
+      "action": "corrected",
+      "mediaPreserved": false,
+      "mediaReplaced": true,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Verify current EAT13-specific permits, phase sequence, parcel/building center, IT, cost and delivery; operator first-phase early-2026 wording does not date EAT13."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "solar-galion-crawford-oh",
+      "id": 16460,
+      "action": "deleted",
+      "verifiedStatus": 404
+    },
+    {
+      "environment": "prod",
+      "key": "solar-goos-ferry-calcasieu-la",
+      "id": 16461,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Confirm R5088-to-J1598 relationship, Aypa attribution, exact parcel, hybrid MW/MWh split, budget and actual construction; do not label Done as operational."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "solar-hineston-rapides-la",
+      "id": 16462,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Obtain updated queue schedule, developer, permits, budget and parcel; confirm or reject Sunstripe identity linkage before importing USACE MVN-2026-00184-WLL."
+      ]
+    }
+  ],
+  "verification": {
+    "actionsVerified": 24,
+    "freshReadbacks": [
+      {
+        "environment": "local",
+        "id": 16451,
+        "status": 404,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 16452,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 16453,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 16454,
+        "status": 404,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 16455,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 16456,
+        "status": 404,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 16457,
+        "status": 404,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 16458,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 16459,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 16460,
+        "status": 404,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 16461,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 16462,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 16451,
+        "status": 404,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 16452,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 16453,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 16454,
+        "status": 404,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 16455,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 16456,
+        "status": 404,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 16457,
+        "status": 404,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 16458,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 16459,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 16460,
+        "status": 404,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 16461,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 16462,
+        "status": 200,
+        "verified": true
+      }
+    ],
+    "media": [
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/battery-brookside-forest-lewis-ny-aerial.jpg",
+        "status": 200,
+        "bytes": 639479
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/battery-brookside-forest-lewis-ny-corridor.jpg",
+        "status": 200,
+        "bytes": 606729
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/battery-brookside-forest-lewis-ny-topo.jpg",
+        "status": 200,
+        "bytes": 388328
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/battery-shallow-seam-clearfield-pa-aerial.jpg",
+        "status": 200,
+        "bytes": 803743
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/battery-shallow-seam-clearfield-pa-corridor.jpg",
+        "status": 200,
+        "bytes": 605725
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/battery-shallow-seam-clearfield-pa-topo.jpg",
+        "status": 200,
+        "bytes": 505063
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-round13-2026-10-23/battery-pinopolis-berkeley-sc-aerial.jpg",
+        "status": 200,
+        "bytes": 554410
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-round13-2026-10-23/battery-pinopolis-berkeley-sc-relief.jpg",
+        "status": 200,
+        "bytes": 74867
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-round13-2026-10-23/battery-pinopolis-berkeley-sc-topo.jpg",
+        "status": 200,
+        "bytes": 344437
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-round13-2026-10-23/dc-microsoft-columbia-douglas-wa-aerial.jpg",
+        "status": 200,
+        "bytes": 382593
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-round13-2026-10-23/dc-microsoft-columbia-douglas-wa-relief.jpg",
+        "status": 200,
+        "bytes": 172951
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-round13-2026-10-23/dc-microsoft-columbia-douglas-wa-topo.jpg",
+        "status": 200,
+        "bytes": 352528
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-round13-2026-10-23/malaga-render.jpg",
+        "status": 200,
+        "bytes": 159800
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/dc-microsoft-malaga-chelan-wa-aerial.jpg",
+        "status": 200,
+        "bytes": 499727
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/dc-microsoft-malaga-chelan-wa-corridor.jpg",
+        "status": 200,
+        "bytes": 605506
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/dc-microsoft-malaga-chelan-wa-topo.jpg",
+        "status": 200,
+        "bytes": 405282
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/solar-goos-ferry-calcasieu-la-aerial.jpg",
+        "status": 200,
+        "bytes": 528684
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/solar-goos-ferry-calcasieu-la-corridor.jpg",
+        "status": 200,
+        "bytes": 513223
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/solar-goos-ferry-calcasieu-la-topo.jpg",
+        "status": 200,
+        "bytes": 552895
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/solar-hineston-rapides-la-aerial.jpg",
+        "status": 200,
+        "bytes": 662667
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/solar-hineston-rapides-la-corridor.jpg",
+        "status": 200,
+        "bytes": 457930
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/solar-hineston-rapides-la-topo.jpg",
+        "status": 200,
+        "bytes": 528790
+      }
+    ],
+    "pages": [
+      {
+        "environment": "local",
+        "id": 16452,
+        "status": 200,
+        "bytes": 310330
+      },
+      {
+        "environment": "local",
+        "id": 16453,
+        "status": 200,
+        "bytes": 325972
+      },
+      {
+        "environment": "local",
+        "id": 16455,
+        "status": 200,
+        "bytes": 311118
+      },
+      {
+        "environment": "local",
+        "id": 16458,
+        "status": 200,
+        "bytes": 321697
+      },
+      {
+        "environment": "local",
+        "id": 16459,
+        "status": 200,
+        "bytes": 324420
+      },
+      {
+        "environment": "local",
+        "id": 16461,
+        "status": 200,
+        "bytes": 310213
+      },
+      {
+        "environment": "local",
+        "id": 16462,
+        "status": 200,
+        "bytes": 308728
+      },
+      {
+        "environment": "prod",
+        "id": 16452,
+        "status": 200,
+        "bytes": 268031
+      },
+      {
+        "environment": "prod",
+        "id": 16453,
+        "status": 200,
+        "bytes": 284035
+      },
+      {
+        "environment": "prod",
+        "id": 16455,
+        "status": 200,
+        "bytes": 268603
+      },
+      {
+        "environment": "prod",
+        "id": 16458,
+        "status": 200,
+        "bytes": 279668
+      },
+      {
+        "environment": "prod",
+        "id": 16459,
+        "status": 200,
+        "bytes": 281926
+      },
+      {
+        "environment": "prod",
+        "id": 16461,
+        "status": 200,
+        "bytes": 268080
+      },
+      {
+        "environment": "prod",
+        "id": 16462,
+        "status": 200,
+        "bytes": 266202
+      }
+    ],
+    "postedMapCounts": {
+      "local": 1430,
+      "prod": 1430
+    },
+    "telemetry": [
+      {},
+      {},
+      {},
+      {
+        "energyCleared": true,
+        "datacenterAfter": null
+      },
+      {
+        "energyCleared": true,
+        "datacenterAfter": null
+      },
+      {},
+      {},
+      {},
+      {},
+      {},
+      {
+        "energyCleared": true,
+        "datacenterAfter": null
+      },
+      {
+        "energyCleared": true,
+        "datacenterAfter": null
+      },
+      {},
+      {}
+    ]
+  },
+  "mediaEvidence": [
+    {
+      "key": "battery-pinopolis-berkeley-sc",
+      "layer": "aerial",
+      "sourceUrl": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSImageryOnly/MapServer/export?bbox=-80.001659,33.234527,-79.971659,33.254527&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "sourcePage": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSImageryOnly/MapServer/export?bbox=-80.001659,33.234527,-79.971659,33.254527&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "credit": "USGS / The National Map",
+      "caption": "USGS aerial basemap centered on the sourced approximate address/reporting point; imagery may predate construction.",
+      "bytes": 554410,
+      "width": 1600,
+      "height": 1000,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round13-2026-10-23/battery-pinopolis-berkeley-sc-aerial.jpg"
+    },
+    {
+      "key": "battery-pinopolis-berkeley-sc",
+      "layer": "topo",
+      "sourceUrl": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSTopo/MapServer/export?bbox=-80.018659,33.222527,-79.954659,33.266527&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "sourcePage": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSTopo/MapServer/export?bbox=-80.018659,33.222527,-79.954659,33.266527&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "credit": "USGS / The National Map",
+      "caption": "USGS topo basemap centered on the sourced approximate address/reporting point; imagery may predate construction.",
+      "bytes": 344437,
+      "width": 1600,
+      "height": 1000,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round13-2026-10-23/battery-pinopolis-berkeley-sc-topo.jpg"
+    },
+    {
+      "key": "battery-pinopolis-berkeley-sc",
+      "layer": "relief",
+      "sourceUrl": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSShadedReliefOnly/MapServer/export?bbox=-80.066659,33.194527,-79.906659,33.294527&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "sourcePage": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSShadedReliefOnly/MapServer/export?bbox=-80.066659,33.194527,-79.906659,33.294527&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "credit": "USGS / The National Map",
+      "caption": "USGS relief basemap centered on the sourced approximate address/reporting point; imagery may predate construction.",
+      "bytes": 74867,
+      "width": 1600,
+      "height": 1000,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round13-2026-10-23/battery-pinopolis-berkeley-sc-relief.jpg"
+    },
+    {
+      "key": "dc-microsoft-columbia-douglas-wa",
+      "layer": "aerial",
+      "sourceUrl": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSImageryOnly/MapServer/export?bbox=-120.224551,47.406944,-120.194551,47.426944&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "sourcePage": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSImageryOnly/MapServer/export?bbox=-120.224551,47.406944,-120.194551,47.426944&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "credit": "USGS / The National Map",
+      "caption": "USGS aerial basemap centered on the sourced approximate address/reporting point; imagery may predate construction.",
+      "bytes": 382593,
+      "width": 1600,
+      "height": 1000,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round13-2026-10-23/dc-microsoft-columbia-douglas-wa-aerial.jpg"
+    },
+    {
+      "key": "dc-microsoft-columbia-douglas-wa",
+      "layer": "topo",
+      "sourceUrl": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSTopo/MapServer/export?bbox=-120.241551,47.394944,-120.177551,47.438944&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "sourcePage": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSTopo/MapServer/export?bbox=-120.241551,47.394944,-120.177551,47.438944&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "credit": "USGS / The National Map",
+      "caption": "USGS topo basemap centered on the sourced approximate address/reporting point; imagery may predate construction.",
+      "bytes": 352528,
+      "width": 1600,
+      "height": 1000,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round13-2026-10-23/dc-microsoft-columbia-douglas-wa-topo.jpg"
+    },
+    {
+      "key": "dc-microsoft-columbia-douglas-wa",
+      "layer": "relief",
+      "sourceUrl": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSShadedReliefOnly/MapServer/export?bbox=-120.289551,47.366944,-120.129551,47.466944&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "sourcePage": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSShadedReliefOnly/MapServer/export?bbox=-120.289551,47.366944,-120.129551,47.466944&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "credit": "USGS / The National Map",
+      "caption": "USGS relief basemap centered on the sourced approximate address/reporting point; imagery may predate construction.",
+      "bytes": 172951,
+      "width": 1600,
+      "height": 1000,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round13-2026-10-23/dc-microsoft-columbia-douglas-wa-relief.jpg"
+    },
+    {
+      "key": "dc-microsoft-malaga-chelan-wa",
+      "layer": "malaga-render",
+      "sourceUrl": "https://local.microsoft.com/wp-content/uploads/2023/04/Graphic-rendering-of-Malaga-campus.jpg",
+      "sourcePage": "https://local.microsoft.com/blog/malaga-datacenter-project-overview/",
+      "credit": "Microsoft",
+      "caption": "Microsoft Malaga campus conceptual rendering published with its 2023 project overview; campus context, not a completed EAT13 photograph.",
+      "bytes": 159800,
+      "width": 884,
+      "height": 496,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round13-2026-10-23/malaga-render.jpg"
+    }
+  ],
+  "researchNotes": [
+    "Standing content-maintenance authorization only; no application code or deployment.",
+    "NYISO Cluster Projects header distinguishes initial backfeed, synchronization and proposed COD; these columns were verified before date changes.",
+    "MISO Done is a queue application status, not proof of commercial operation.",
+    "Hineston J3209 retains only a stale, unconfirmed March 2026 queue target. USACE Sunstripe proposal has no verified J3209 linkage.",
+    "Pinopolis certificate exemption and redundant application withdrawal do not imply project cancellation or all-permit clearance.",
+    "Existing translations, company-stock associations, source wikis, unchanged coordinates and outlines were not globally re-audited.",
+    "No credit-balance meter; this is a verified 36-pin checkpoint, not a measured low-credit threshold."
+  ]
+}

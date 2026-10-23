@@ -136,6 +136,7 @@ const id: Messages = {
     trade: '<person></person> mengungkapkan {count} transaksi saham baru{tickers}',
     tradeBuys: 'Pembelian',
     tradeSells: 'Penjualan',
+    tradePeople: 'Orang',
     conflict: 'Kemungkinan konflik kepentingan',
     conflictHint: '{tickers}: sektor yang diawasi {committees}',
     tradesToday: 'Perdagangan saham penting',
