@@ -447,9 +447,11 @@ are they keywards in Datacenter & Infrastructure Telemetry that can be used for 
 
 are there other things that can use geojson
 
-polling feature on pins
-user review on pin and restaurant
+logged in user should be able to add polling feature on pins and provide the questions
 
+add user review ability on product and restaurant and etc pin on category list in the landing pages
+If there is menu on pin, photo upload capability should have rating system attached and should be able to tag menu items. tags should be able to attach to selected regions on image
+general rating for the restaurant can be provided along with ability to make comment about rating
 
 
 check to see if anything can be improved and increase organic visits

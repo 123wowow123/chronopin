@@ -1,0 +1,71 @@
+{
+  "runId": 18,
+  "verification": "Six assets downloaded, visually inspected and uploaded to Azure; each public copy checked by bytes, SHA256 and decoding.",
+  "assets": [
+    {
+      "slug": "carrier-facts",
+      "sourceUrl": "https://www.multivu.com/carrier_global_corporation/image/9419951-Infographic-2700x1080-300DPI-Updated-Text-Only.jpg",
+      "sourcePage": "https://www.prnewswire.com/news-releases/carrier-to-invest-more-than-600-million-to-expand-advanced-us-manufacturing-and-engineering-capacity-302916232.html",
+      "credit": "Carrier Global Corporation",
+      "caption": "Carrier to invest more than $600 million to expand advanced U.S. manufacturing and engineering capacity (announced investment and job targets; not realized hires)",
+      "url": "https://chronopin.blob.core.windows.net/thumb/news-images/2026-10-22-pm/carrier-facts-29f68a9d96a13bac.webp",
+      "sha256": "29f68a9d96a13bacd69007fac517c566f26ab713bb687e146d32720acd34d9be",
+      "width": 2200,
+      "height": 818
+    },
+    {
+      "slug": "carrier-render-1",
+      "sourceUrl": "https://www.multivu.com/carrier_global_corporation/image/9419951-Carrier-Rendering-1-HDR-V2-2700px.jpg",
+      "sourcePage": "https://www.prnewswire.com/news-releases/carrier-to-invest-more-than-600-million-to-expand-advanced-us-manufacturing-and-engineering-capacity-302916232.html",
+      "credit": "Carrier / Summit Consultants, Gray AES & Hillwood",
+      "caption": "Conceptual Carrier facility rendering courtesy of Summit Consultants, Gray AES & Hillwood (conceptual rendering; not a completed facility)",
+      "url": "https://chronopin.blob.core.windows.net/thumb/news-images/2026-10-22-pm/carrier-render-1-c06f5c3e14f5d306.webp",
+      "sha256": "c06f5c3e14f5d306d8f33aa9454c883766f8e80341a3d6a36bad7584ad25284a",
+      "width": 2200,
+      "height": 1254
+    },
+    {
+      "slug": "carrier-render-2",
+      "sourceUrl": "https://www.multivu.com/carrier_global_corporation/image/9419951-Rendering-Crop-3-2700x1080px-300dpi-1.jpg",
+      "sourcePage": "https://www.prnewswire.com/news-releases/carrier-to-invest-more-than-600-million-to-expand-advanced-us-manufacturing-and-engineering-capacity-302916232.html",
+      "credit": "Carrier / Summit Consultants, Gray AES & Hillwood",
+      "caption": "Conceptual Carrier facility rendering courtesy of Summit Consultants, Gray AES & Hillwood (conceptual rendering; not a completed facility)",
+      "url": "https://chronopin.blob.core.windows.net/thumb/news-images/2026-10-22-pm/carrier-render-2-9257faf517dbb0e5.webp",
+      "sha256": "9257faf517dbb0e58a80b4c7a9162166c977af93cefa55d4b6fd3146d9429fe7",
+      "width": 2200,
+      "height": 880
+    },
+    {
+      "slug": "lilly-richmond",
+      "sourceUrl": "https://mmx.prnewswire.com/media/MS2018561/Eli-Lilly-Richmond.jpg?id=OA3033528&p=medium",
+      "sourcePage": "https://www.prnewswire.com/news-releases/lilly-breaks-ground-in-richmond-to-expand-american-manufacturing-of-next-generation-cancer-medicines-advancing-its-build-out-of-10-new-us-sites-since-2020-302916266.html",
+      "credit": "Lilly Richmond – Goochland County",
+      "caption": "Lilly’s Richmond/Goochland County facility illustration published with its October 22 groundbreaking announcement; construction milestone, not an operating plant.",
+      "url": "https://chronopin.blob.core.windows.net/thumb/news-images/2026-10-22-pm/lilly-richmond-391f17ce549a3e6d.webp",
+      "sha256": "391f17ce549a3e6da077e76b4904371fa1c0c3a658bd10f010badce31c58012a",
+      "width": 500,
+      "height": 282
+    },
+    {
+      "slug": "wdc-table",
+      "sourceUrl": "https://investor.wdc.com/static-files/d4c70967-9cf8-45ff-ba15-93de77163154",
+      "credit": "Western Digital Corporation",
+      "caption": "Issuer fiscal Q1 2027 financial highlights, Exhibit 99.1 page 2. US$ millions except per-share figures; GAAP and non-GAAP columns preserved.",
+      "url": "https://chronopin.blob.core.windows.net/thumb/news-images/2026-10-22-pm/wdc-table-59149c66ac533b75.webp",
+      "sha256": "59149c66ac533b75273186e9d342d052408b9452e6e2c91067aae23ffc2c4f36",
+      "width": 1391,
+      "height": 1800
+    },
+    {
+      "slug": "taipei-chiang",
+      "sourceUrl": "https://img.taipeitimes.com/images/2026/10/21/P03-261021-009.jpg",
+      "sourcePage": "https://www.taipeitimes.com/News/taiwan/archives/2026/10/21/2003866347",
+      "credit": "Wang Yi-sung / Taipei Times",
+      "caption": "Taipei Mayor Chiang Wan-an visiting a temporary market in Beitou on October 20, 2026, as residents present green onions. Campaign-period photograph; not an election result.",
+      "url": "https://chronopin.blob.core.windows.net/thumb/news-images/2026-10-22-pm/taipei-chiang-11e0cd63af47a479.webp",
+      "sha256": "11e0cd63af47a479d63c10210e89a2556af97994ec5f20c2984319d5a49999ae",
+      "width": 945,
+      "height": 636
+    }
+  ]
+}

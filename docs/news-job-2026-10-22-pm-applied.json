@@ -1,0 +1,2026 @@
+{
+  "runId": 18,
+  "jobId": "news",
+  "driver": "session",
+  "trigger": "manual",
+  "startedAt": "2026-10-22T23:28:40.287Z",
+  "tasks": [
+    "weekReview",
+    "freshSources",
+    "eventInfo",
+    "pinAds",
+    "holidayAds",
+    "adTranslations",
+    "personTrades",
+    "threadPredicted",
+    "breakingNews",
+    "predictionMarkets",
+    "layoffs",
+    "hiringJobCreation",
+    "modelScores",
+    "sentiment"
+  ],
+  "newPinIds": [
+    19422,
+    19423,
+    19424,
+    19425
+  ],
+  "existingContentUpdatedIds": [
+    1678,
+    1950,
+    1952,
+    1953,
+    1954,
+    1955,
+    1957,
+    1958,
+    1964,
+    1970,
+    1976,
+    2979,
+    3584,
+    4013,
+    4091,
+    4450,
+    5027,
+    5174,
+    6059,
+    16017,
+    17115,
+    18959,
+    19332
+  ],
+  "dueEventReadings": [
+    {
+      "pinId": 1954,
+      "performers": [],
+      "ticketUrl": null,
+      "lowPrice": null,
+      "highPrice": null,
+      "priceCurrency": null,
+      "availability": "PreOrder",
+      "onSaleDate": null,
+      "source": "hand",
+      "sourceUrl": "https://www.sofistadium.com/events/detail/super-bowl-lxi",
+      "checkedAt": "2026-10-22T23:34:29.946Z",
+      "tiers": [],
+      "itinerary": []
+    },
+    {
+      "pinId": 1960,
+      "performers": [],
+      "ticketUrl": "https://www.abudhabigp.com/en/formula1/tickets-2026",
+      "lowPrice": null,
+      "highPrice": null,
+      "priceCurrency": null,
+      "availability": "InStock",
+      "onSaleDate": null,
+      "source": "hand",
+      "sourceUrl": "https://www.abudhabigp.com/en/",
+      "checkedAt": "2026-10-22T23:34:29.946Z",
+      "tiers": [],
+      "itinerary": []
+    },
+    {
+      "pinId": 2282,
+      "performers": [],
+      "ticketUrl": null,
+      "lowPrice": null,
+      "highPrice": null,
+      "priceCurrency": null,
+      "availability": null,
+      "onSaleDate": null,
+      "source": "hand",
+      "sourceUrl": "https://globalnews.ca/news/10925478/ontario-place-science-centre-opening/",
+      "checkedAt": "2026-10-22T23:34:29.946Z",
+      "tiers": [],
+      "itinerary": []
+    },
+    {
+      "pinId": 2318,
+      "performers": [
+        {
+          "name": "Calvin Harris",
+          "type": "Person"
+        }
+      ],
+      "ticketUrl": null,
+      "lowPrice": null,
+      "highPrice": null,
+      "priceCurrency": null,
+      "availability": null,
+      "onSaleDate": null,
+      "source": "hand",
+      "sourceUrl": "https://discover.ticketmaster.com.au/music/calvin-harris-announces-first-ever-australian-headline-tour-22018",
+      "checkedAt": "2026-10-22T23:34:29.946Z",
+      "tiers": [],
+      "itinerary": []
+    },
+    {
+      "pinId": 2319,
+      "performers": [
+        {
+          "name": "Calvin Harris",
+          "type": "Person"
+        }
+      ],
+      "ticketUrl": null,
+      "lowPrice": null,
+      "highPrice": null,
+      "priceCurrency": null,
+      "availability": null,
+      "onSaleDate": null,
+      "source": "hand",
+      "sourceUrl": "https://discover.ticketmaster.com.au/music/calvin-harris-announces-first-ever-australian-headline-tour-22018",
+      "checkedAt": "2026-10-22T23:34:29.946Z",
+      "tiers": [],
+      "itinerary": []
+    },
+    {
+      "pinId": 2320,
+      "performers": [
+        {
+          "name": "Calvin Harris",
+          "type": "Person"
+        }
+      ],
+      "ticketUrl": null,
+      "lowPrice": null,
+      "highPrice": null,
+      "priceCurrency": null,
+      "availability": null,
+      "onSaleDate": null,
+      "source": "hand",
+      "sourceUrl": "https://discover.ticketmaster.com.au/music/calvin-harris-announces-first-ever-australian-headline-tour-22018",
+      "checkedAt": "2026-10-22T23:34:29.946Z",
+      "tiers": [],
+      "itinerary": []
+    },
+    {
+      "pinId": 2321,
+      "performers": [
+        {
+          "name": "Calvin Harris",
+          "type": "Person"
+        }
+      ],
+      "ticketUrl": null,
+      "lowPrice": null,
+      "highPrice": null,
+      "priceCurrency": null,
+      "availability": null,
+      "onSaleDate": null,
+      "source": "hand",
+      "sourceUrl": "https://discover.ticketmaster.com.au/music/calvin-harris-announces-first-ever-australian-headline-tour-22018",
+      "checkedAt": "2026-10-22T23:34:29.946Z",
+      "tiers": [],
+      "itinerary": []
+    },
+    {
+      "pinId": 2381,
+      "performers": [],
+      "ticketUrl": null,
+      "lowPrice": null,
+      "highPrice": null,
+      "priceCurrency": null,
+      "availability": null,
+      "onSaleDate": null,
+      "source": "hand",
+      "sourceUrl": "https://www.edfringe.com/",
+      "checkedAt": "2026-10-22T23:34:29.946Z",
+      "tiers": [],
+      "itinerary": []
+    },
+    {
+      "pinId": 2522,
+      "performers": [
+        {
+          "name": "Tyson Fury",
+          "type": "Person"
+        },
+        {
+          "name": "Anthony Joshua",
+          "type": "Person"
+        }
+      ],
+      "ticketUrl": null,
+      "lowPrice": null,
+      "highPrice": null,
+      "priceCurrency": null,
+      "availability": null,
+      "onSaleDate": null,
+      "source": "hand",
+      "sourceUrl": "https://www.skysports.com/boxing/news/13584326/tyson-fury-vs-anthony-joshua-british-heavyweight-showdown-set-for-cardiff-s-principality-stadium-on-december-11",
+      "checkedAt": "2026-10-22T23:34:29.946Z",
+      "tiers": [],
+      "itinerary": []
+    },
+    {
+      "pinId": 2546,
+      "performers": [],
+      "ticketUrl": null,
+      "lowPrice": null,
+      "highPrice": null,
+      "priceCurrency": null,
+      "availability": null,
+      "onSaleDate": null,
+      "source": "hand",
+      "sourceUrl": "https://www.londonmuseum.org.uk/",
+      "checkedAt": "2026-10-22T23:34:29.946Z",
+      "tiers": [],
+      "itinerary": []
+    },
+    {
+      "pinId": 2547,
+      "performers": [],
+      "ticketUrl": null,
+      "lowPrice": null,
+      "highPrice": null,
+      "priceCurrency": null,
+      "availability": null,
+      "onSaleDate": null,
+      "source": "hand",
+      "sourceUrl": "https://www.guggenheim.org/press-release/abu-dhabi-announces-opening-of-guggenheim-abu-dhabi",
+      "checkedAt": "2026-10-22T23:34:29.946Z",
+      "tiers": [],
+      "itinerary": []
+    },
+    {
+      "pinId": 2548,
+      "performers": [],
+      "ticketUrl": "https://shop.smb.museum/#/tickets/time?museum_id=78&group=timeSlot",
+      "lowPrice": null,
+      "highPrice": null,
+      "priceCurrency": null,
+      "availability": "PreOrder",
+      "onSaleDate": null,
+      "source": "hand",
+      "sourceUrl": "https://www.smb.museum/en/museums-institutions/pergamonmuseum/plan-your-visit/",
+      "checkedAt": "2026-10-22T23:34:29.946Z",
+      "tiers": [],
+      "itinerary": []
+    },
+    {
+      "pinId": 2886,
+      "performers": [
+        {
+          "name": "Matt Garman",
+          "type": "Person"
+        }
+      ],
+      "ticketUrl": "https://registration.awsevents.com/flow/awsevents/reinvent2026/reg",
+      "lowPrice": 2499,
+      "highPrice": 2499,
+      "priceCurrency": "USD",
+      "availability": "InStock",
+      "onSaleDate": null,
+      "source": "hand",
+      "sourceUrl": "https://aws.amazon.com/events/reinvent/",
+      "checkedAt": "2026-10-22T23:34:29.946Z",
+      "tiers": [
+        {
+          "note": "Regular price. 10% discount for 10+ tickets purchased in a single transaction; terms apply. Early-bird pricing ended August 25.",
+          "label": "Full conference pass",
+          "price": 2499
+        }
+      ],
+      "itinerary": []
+    },
+    {
+      "pinId": 3026,
+      "performers": [],
+      "ticketUrl": null,
+      "lowPrice": null,
+      "highPrice": null,
+      "priceCurrency": null,
+      "availability": null,
+      "onSaleDate": null,
+      "source": "hand",
+      "sourceUrl": "https://www.aramcostadium.com/en",
+      "checkedAt": "2026-10-22T23:34:29.946Z",
+      "tiers": [],
+      "itinerary": []
+    },
+    {
+      "pinId": 3032,
+      "performers": [
+        {
+          "name": "Ram Velaga",
+          "type": "Person"
+        },
+        {
+          "name": "Paul Turner",
+          "type": "Person"
+        },
+        {
+          "name": "Tamar Brooks",
+          "type": "Person"
+        },
+        {
+          "name": "Joe Baguley",
+          "type": "Person"
+        }
+      ],
+      "ticketUrl": "https://event.vmware.com/flow/vmware/eotlondon26/myevent",
+      "lowPrice": 295,
+      "highPrice": 295,
+      "priceCurrency": "GBP",
+      "availability": "InStock",
+      "onSaleDate": null,
+      "source": "hand",
+      "sourceUrl": "https://event.vmware.com/flow/vmware/eotlondon26/site/page/home",
+      "checkedAt": "2026-10-22T23:34:29.946Z",
+      "tiers": [
+        {
+          "note": "Excludes VAT",
+          "label": "Registration",
+          "price": 295
+        }
+      ],
+      "itinerary": []
+    },
+    {
+      "pinId": 3034,
+      "performers": [],
+      "ticketUrl": null,
+      "lowPrice": null,
+      "highPrice": null,
+      "priceCurrency": null,
+      "availability": null,
+      "onSaleDate": null,
+      "source": "hand",
+      "sourceUrl": "https://www.vmware.com/explore",
+      "checkedAt": "2026-10-22T23:34:29.946Z",
+      "tiers": [],
+      "itinerary": []
+    },
+    {
+      "pinId": 3308,
+      "performers": [
+        {
+          "name": "Golden State Warriors",
+          "type": "PerformingGroup"
+        },
+        {
+          "name": "Memphis Grizzlies",
+          "type": "PerformingGroup"
+        }
+      ],
+      "ticketUrl": null,
+      "lowPrice": null,
+      "highPrice": null,
+      "priceCurrency": null,
+      "availability": null,
+      "onSaleDate": null,
+      "source": "hand",
+      "sourceUrl": "https://www.nbcsportsbayarea.com/nba/golden-state-warriors/2026-27-schedule-release-dates-times/1956290/",
+      "checkedAt": "2026-10-22T23:34:29.946Z",
+      "tiers": [],
+      "itinerary": []
+    },
+    {
+      "pinId": 3320,
+      "performers": [],
+      "ticketUrl": null,
+      "lowPrice": null,
+      "highPrice": null,
+      "priceCurrency": null,
+      "availability": null,
+      "onSaleDate": null,
+      "source": "hand",
+      "sourceUrl": "https://www.fox5vegas.com/2026/06/04/las-vegas-bowl-returns-with-new-years-eve-sec-matchup-allegiant-stadium/",
+      "checkedAt": "2026-10-22T23:34:29.946Z",
+      "tiers": [],
+      "itinerary": []
+    },
+    {
+      "pinId": 3409,
+      "performers": [],
+      "ticketUrl": "https://semashow.com/register",
+      "lowPrice": null,
+      "highPrice": null,
+      "priceCurrency": null,
+      "availability": "InStock",
+      "onSaleDate": null,
+      "source": "hand",
+      "sourceUrl": "https://www.semashow.com/",
+      "checkedAt": "2026-10-22T23:34:29.946Z",
+      "tiers": [],
+      "itinerary": []
+    },
+    {
+      "pinId": 3542,
+      "performers": [],
+      "ticketUrl": null,
+      "lowPrice": 0,
+      "highPrice": 0,
+      "priceCurrency": "EUR",
+      "availability": "InStock",
+      "onSaleDate": null,
+      "source": "hand",
+      "sourceUrl": "https://www.salesforce.com/fr/events/paris/",
+      "checkedAt": "2026-10-22T23:34:29.946Z",
+      "tiers": [],
+      "itinerary": []
+    },
+    {
+      "pinId": 3609,
+      "performers": [
+        {
+          "name": "Marcel Hug",
+          "type": "Person"
+        },
+        {
+          "name": "Benson Kipruto",
+          "type": "Person"
+        },
+        {
+          "name": "Hellen Obiri",
+          "type": "Person"
+        },
+        {
+          "name": "Weini Kelati",
+          "type": "Person"
+        },
+        {
+          "name": "Joe Klecker",
+          "type": "Person"
+        },
+        {
+          "name": "Conner Mantz",
+          "type": "Person"
+        },
+        {
+          "name": "Jess McClain",
+          "type": "Person"
+        },
+        {
+          "name": "Zouhair Talbi",
+          "type": "Person"
+        },
+        {
+          "name": "Sheila Chepkirui",
+          "type": "Person"
+        },
+        {
+          "name": "Catherine Debrunner",
+          "type": "Person"
+        },
+        {
+          "name": "Geoffrey Kamworor",
+          "type": "Person"
+        },
+        {
+          "name": "Tatyana McFadden",
+          "type": "Person"
+        },
+        {
+          "name": "Abdi Nageeye",
+          "type": "Person"
+        },
+        {
+          "name": "Madison de Rozario",
+          "type": "Person"
+        },
+        {
+          "name": "Daniel Romanchuk",
+          "type": "Person"
+        },
+        {
+          "name": "David Weir",
+          "type": "Person"
+        }
+      ],
+      "ticketUrl": null,
+      "lowPrice": null,
+      "highPrice": null,
+      "priceCurrency": null,
+      "availability": null,
+      "onSaleDate": null,
+      "source": "hand",
+      "sourceUrl": "https://www.nyrr.org/media-center/press-release/2026_0819_tcsnycmprofield",
+      "checkedAt": "2026-10-22T23:34:29.946Z",
+      "tiers": [],
+      "itinerary": []
+    },
+    {
+      "pinId": 3666,
+      "performers": [],
+      "ticketUrl": null,
+      "lowPrice": 0,
+      "highPrice": 0,
+      "priceCurrency": "USD",
+      "availability": "InStock",
+      "onSaleDate": null,
+      "source": "hand",
+      "sourceUrl": "https://www.timessquarenyc.org/nye/nye-faq",
+      "checkedAt": "2026-10-22T23:34:29.946Z",
+      "tiers": [],
+      "itinerary": []
+    },
+    {
+      "pinId": 4297,
+      "performers": [],
+      "ticketUrl": null,
+      "lowPrice": null,
+      "highPrice": null,
+      "priceCurrency": null,
+      "availability": null,
+      "onSaleDate": null,
+      "source": "hand",
+      "sourceUrl": "https://euronews.al/en/defense-minister-nufi-reveals-who-will-set-the-date-for-the-nato-summit-in-tirana/",
+      "checkedAt": "2026-10-22T23:34:29.946Z",
+      "tiers": [],
+      "itinerary": []
+    },
+    {
+      "pinId": 4340,
+      "performers": [],
+      "ticketUrl": "https://www.dsei.co.uk/register-your-interest",
+      "lowPrice": null,
+      "highPrice": null,
+      "priceCurrency": null,
+      "availability": null,
+      "onSaleDate": null,
+      "source": "hand",
+      "sourceUrl": "https://www.dsei.co.uk/",
+      "checkedAt": "2026-10-22T23:34:29.946Z",
+      "tiers": [],
+      "itinerary": []
+    },
+    {
+      "pinId": 4341,
+      "performers": [],
+      "ticketUrl": "https://www.dubaiairshow.aero/contact-us/",
+      "lowPrice": null,
+      "highPrice": null,
+      "priceCurrency": null,
+      "availability": null,
+      "onSaleDate": null,
+      "source": "hand",
+      "sourceUrl": "https://www.dubaiairshow.aero/",
+      "checkedAt": "2026-10-22T23:34:29.946Z",
+      "tiers": [],
+      "itinerary": []
+    },
+    {
+      "pinId": 4368,
+      "performers": [
+        {
+          "name": "Harry Styles",
+          "type": "Person"
+        }
+      ],
+      "ticketUrl": null,
+      "lowPrice": null,
+      "highPrice": null,
+      "priceCurrency": null,
+      "availability": null,
+      "onSaleDate": null,
+      "source": "hand",
+      "sourceUrl": "https://variety.com/2026/music/news/harry-styles-tour-stadium-global-2027-openers-kylie-1236856931/",
+      "checkedAt": "2026-10-22T23:34:29.946Z",
+      "tiers": [],
+      "itinerary": []
+    },
+    {
+      "pinId": 4373,
+      "performers": [
+        {
+          "url": "https://www.ticketmaster.com/oasis-tickets/artist/766720",
+          "name": "Oasis",
+          "type": "PerformingGroup"
+        }
+      ],
+      "ticketUrl": "https://www.ticketmaster.com/oasis-live-27-foxborough-massachusetts-08-10-2027/event/01006529BCAA6867",
+      "lowPrice": null,
+      "highPrice": null,
+      "priceCurrency": null,
+      "availability": "InStock",
+      "onSaleDate": null,
+      "source": "hand",
+      "sourceUrl": "https://www.ticketmaster.com/oasis-tickets/artist/766720",
+      "checkedAt": "2026-10-22T23:34:29.946Z",
+      "tiers": [],
+      "itinerary": []
+    },
+    {
+      "pinId": 4374,
+      "performers": [
+        {
+          "url": "https://oasisinet.com/live/11-09-2027-knebworth-park/",
+          "name": "Oasis",
+          "type": "PerformingGroup"
+        }
+      ],
+      "ticketUrl": null,
+      "lowPrice": 170.5,
+      "highPrice": 203.5,
+      "priceCurrency": "GBP",
+      "availability": null,
+      "onSaleDate": null,
+      "source": "hand",
+      "sourceUrl": "https://www.bbc.com/news/articles/c607lyyx3yvvo",
+      "checkedAt": "2026-10-22T23:34:29.946Z",
+      "tiers": [
+        {
+          "note": "Published starting price; ballot-only purchase links",
+          "label": "General admission",
+          "price": 170.5
+        },
+        {
+          "note": "Published starting price; ballot-only purchase links",
+          "label": "Front-standing",
+          "price": 203.5
+        }
+      ],
+      "itinerary": []
+    },
+    {
+      "pinId": 4668,
+      "performers": [],
+      "ticketUrl": null,
+      "lowPrice": 0,
+      "highPrice": 0,
+      "priceCurrency": "USD",
+      "availability": "InStock",
+      "onSaleDate": null,
+      "source": "hand",
+      "sourceUrl": "https://whitemarlinopen.com/tournament-info",
+      "checkedAt": "2026-10-22T23:34:29.946Z",
+      "tiers": [],
+      "itinerary": []
+    },
+    {
+      "pinId": 4884,
+      "performers": [],
+      "ticketUrl": null,
+      "lowPrice": null,
+      "highPrice": null,
+      "priceCurrency": null,
+      "availability": null,
+      "onSaleDate": null,
+      "source": "hand",
+      "sourceUrl": "https://sturgismotorcyclerally.com/dates/",
+      "checkedAt": "2026-10-22T23:34:29.946Z",
+      "tiers": [],
+      "itinerary": []
+    },
+    {
+      "pinId": 4885,
+      "performers": [],
+      "ticketUrl": null,
+      "lowPrice": null,
+      "highPrice": null,
+      "priceCurrency": null,
+      "availability": null,
+      "onSaleDate": null,
+      "source": "hand",
+      "sourceUrl": "https://pebblebeachconcours.net",
+      "checkedAt": "2026-10-22T23:34:29.946Z",
+      "tiers": [],
+      "itinerary": []
+    },
+    {
+      "pinId": 4887,
+      "performers": [],
+      "ticketUrl": null,
+      "lowPrice": null,
+      "highPrice": null,
+      "priceCurrency": null,
+      "availability": null,
+      "onSaleDate": null,
+      "source": "hand",
+      "sourceUrl": "https://www.iaa-mobility.com/en",
+      "checkedAt": "2026-10-22T23:34:29.946Z",
+      "tiers": [],
+      "itinerary": []
+    },
+    {
+      "pinId": 4888,
+      "performers": [],
+      "ticketUrl": null,
+      "lowPrice": null,
+      "highPrice": null,
+      "priceCurrency": null,
+      "availability": null,
+      "onSaleDate": null,
+      "source": "hand",
+      "sourceUrl": "https://www.cannesyachtingfestival.com/en-gb/",
+      "checkedAt": "2026-10-22T23:34:29.946Z",
+      "tiers": [],
+      "itinerary": []
+    },
+    {
+      "pinId": 4911,
+      "performers": [],
+      "ticketUrl": null,
+      "lowPrice": null,
+      "highPrice": null,
+      "priceCurrency": null,
+      "availability": null,
+      "onSaleDate": null,
+      "source": "hand",
+      "sourceUrl": "https://www.gencon.com/",
+      "checkedAt": "2026-10-22T23:34:29.946Z",
+      "tiers": [],
+      "itinerary": []
+    },
+    {
+      "pinId": 4912,
+      "performers": [],
+      "ticketUrl": "https://otakon.com/comingsoon/",
+      "lowPrice": null,
+      "highPrice": null,
+      "priceCurrency": null,
+      "availability": null,
+      "onSaleDate": null,
+      "source": "hand",
+      "sourceUrl": "https://www.otakon.com/",
+      "checkedAt": "2026-10-22T23:34:29.946Z",
+      "tiers": [],
+      "itinerary": []
+    },
+    {
+      "pinId": 4914,
+      "performers": [],
+      "ticketUrl": null,
+      "lowPrice": null,
+      "highPrice": null,
+      "priceCurrency": null,
+      "availability": null,
+      "onSaleDate": null,
+      "source": "hand",
+      "sourceUrl": "https://west.paxsite.com/",
+      "checkedAt": "2026-10-22T23:34:29.946Z",
+      "tiers": [],
+      "itinerary": []
+    },
+    {
+      "pinId": 4957,
+      "performers": [],
+      "ticketUrl": "https://www.itu.int/wrc-27/participation/registration/",
+      "lowPrice": null,
+      "highPrice": null,
+      "priceCurrency": null,
+      "availability": null,
+      "onSaleDate": null,
+      "source": "hand",
+      "sourceUrl": "https://www.itu.int/wrc-27/",
+      "checkedAt": "2026-10-22T23:34:29.946Z",
+      "tiers": [],
+      "itinerary": []
+    },
+    {
+      "pinId": 5851,
+      "performers": [],
+      "ticketUrl": null,
+      "lowPrice": null,
+      "highPrice": null,
+      "priceCurrency": null,
+      "availability": null,
+      "onSaleDate": null,
+      "source": "hand",
+      "sourceUrl": "https://www.prnewswire.com/news-releases/mcdonalds-and-chicago-fire-football-club-announce-landmark-stadium-naming-rights-partnership-mcdonalds-park-to-open-in-2028-as-a-new-destination-for-soccer-culture-and-community-in-chicago-302770303.html",
+      "checkedAt": "2026-10-22T23:34:29.946Z",
+      "tiers": [],
+      "itinerary": []
+    },
+    {
+      "pinId": 6355,
+      "performers": [],
+      "ticketUrl": null,
+      "lowPrice": null,
+      "highPrice": null,
+      "priceCurrency": null,
+      "availability": null,
+      "onSaleDate": null,
+      "source": "hand",
+      "sourceUrl": "https://www.bluewin.ch/en/news/collectible-watches-stolen-from-a-private-museum-in-le-locle-ne-li.3599447",
+      "checkedAt": "2026-10-22T23:34:29.946Z",
+      "tiers": [],
+      "itinerary": []
+    },
+    {
+      "pinId": 6659,
+      "performers": [],
+      "ticketUrl": null,
+      "lowPrice": null,
+      "highPrice": null,
+      "priceCurrency": null,
+      "availability": null,
+      "onSaleDate": null,
+      "source": "hand",
+      "sourceUrl": "https://www.sibos.com/about/future-sibos",
+      "checkedAt": "2026-10-22T23:34:29.946Z",
+      "tiers": [],
+      "itinerary": []
+    }
+  ],
+  "targetedTicketRepairs": [
+    2952,
+    4913
+  ],
+  "resolvedReviewPinIds": [
+    2952,
+    4913,
+    5027,
+    2979
+  ],
+  "newReviewPinIds": [
+    2318
+  ],
+  "scoresSaved": [
+    {
+      "id": 1678,
+      "textHash": "c25647e963883f6e87662e6d5fcc1fe963238d972b7c3e11cdd009de2afe58c7",
+      "sentiment": 0,
+      "product": ""
+    },
+    {
+      "id": 4013,
+      "textHash": "b771b17d8ec9344ac1ec7f4148f59d0aab2a8a869815b74b3890c71e8fd61676",
+      "sentiment": 0.1,
+      "product": ""
+    },
+    {
+      "id": 4091,
+      "textHash": "bb9bb6083f48ba1bef6814f108edce1fa269301267fce6f5f7900d7e16ed96b0",
+      "sentiment": -0.2,
+      "product": ""
+    },
+    {
+      "id": 4450,
+      "textHash": "616af22e1f46fb72bc85195e8894a1d23c4502e7cfa0ec746d85203d4c5ff94d",
+      "sentiment": 0.15,
+      "product": ""
+    },
+    {
+      "id": 5027,
+      "textHash": "64a6a8810655bf02e20574f700ddef950aefe3298a3449d0c237391532379d2d",
+      "sentiment": 0.4,
+      "product": ""
+    },
+    {
+      "id": 19338,
+      "textHash": "42dd1c8c54baa7bf5e2d6edefea7b077d0585e8c07c44019aeb2c1fd9960989e",
+      "sentiment": 0.1,
+      "product": ""
+    },
+    {
+      "id": 19339,
+      "textHash": "383f01bd0fa6d1732c8c263a34e959c1edc770285c47e27d472047b7524c2116",
+      "sentiment": 0.1,
+      "product": ""
+    },
+    {
+      "id": 19340,
+      "textHash": "a166b30a70da0f9a875d7492e7a2493b88365f17e9eba25f18cedb959231bbf1",
+      "sentiment": 0.1,
+      "product": ""
+    },
+    {
+      "id": 19341,
+      "textHash": "4936344cfd1a28046602840507459bdd77272e53db078016b826e1f80886a688",
+      "sentiment": 0.1,
+      "product": ""
+    },
+    {
+      "id": 19342,
+      "textHash": "bfe7f79c77b09caffbeaf778b6062a210149ec09376dae3b9a88f4bad503f720",
+      "sentiment": 0.1,
+      "product": ""
+    },
+    {
+      "id": 19343,
+      "textHash": "91a7f6b46a23c3496e35b1f363708fc846b1a77a2d81e3776299244140748b2b",
+      "sentiment": 0.1,
+      "product": ""
+    },
+    {
+      "id": 19344,
+      "textHash": "c8bf52b67c966efd5d0e2a99b7f5af4be3991bee7d223377bf8bade007cfefb8",
+      "sentiment": 0.1,
+      "product": ""
+    },
+    {
+      "id": 19345,
+      "textHash": "fa3cf987cad1ffbaeeda89249af35209cfbf92f15c67e808045a72be0426195f",
+      "sentiment": 0.1,
+      "product": ""
+    },
+    {
+      "id": 19346,
+      "textHash": "c62ad10738915cf3db859cab200d69ee0cf268f566f852b3160b1ca79c6bdc68",
+      "sentiment": 0.1,
+      "product": ""
+    },
+    {
+      "id": 19347,
+      "textHash": "5a9e52d1d6b39ae253496767d8da02c04eafcdb8f62f59dc9037eec7a0dbcf3b",
+      "sentiment": 0.1,
+      "product": ""
+    },
+    {
+      "id": 19348,
+      "textHash": "2f071030576857445a10d6681886df0566a2e531612c0aa9a3f63f7a88b4163e",
+      "sentiment": 0.1,
+      "product": ""
+    },
+    {
+      "id": 19349,
+      "textHash": "80b3f7e40a1bbf244d1078cc21452843b01689aef9973f1fe32c767efae75612",
+      "sentiment": 0.1,
+      "product": ""
+    },
+    {
+      "id": 19350,
+      "textHash": "cc862f20ab5cd3ad8af65679d0c6d59df9a3d6f1cc1b93c40033d818c75ed1ed",
+      "sentiment": 0.1,
+      "product": ""
+    },
+    {
+      "id": 19351,
+      "textHash": "1fa4284b0d7f299ba7c0a2ae75b81101a61c265d0b97eb48e8e6e43d5fb98437",
+      "sentiment": 0.1,
+      "product": ""
+    },
+    {
+      "id": 19352,
+      "textHash": "96d7d5e03f49167aa673883563c28c54b62fb2da66416f5af52170a88fafb076",
+      "sentiment": 0.1,
+      "product": ""
+    },
+    {
+      "id": 19353,
+      "textHash": "b8ac9d298f2b9b1a34c63976c4f2fce77017233a50c3d202d8836b3a3fedba40",
+      "sentiment": 0.1,
+      "product": ""
+    },
+    {
+      "id": 19354,
+      "textHash": "82daa33a16f77d95cb10b1a03d2c50878481ac3f5fa004b136bbcd0aa09c6cb4",
+      "sentiment": 0.1,
+      "product": ""
+    },
+    {
+      "id": 19355,
+      "textHash": "964f170eb38ae834807b0ef4838621271567ccb90da038128d35c93f8b1d09e8",
+      "sentiment": 0.1,
+      "product": ""
+    },
+    {
+      "id": 19356,
+      "textHash": "dea2e130a1bade95e972c47cbf15096203bd12ee8b636f5774814328c92c1448",
+      "sentiment": 0.1,
+      "product": ""
+    },
+    {
+      "id": 19357,
+      "textHash": "9e4b6a95c7574894ae1a90d40488a2bde6d6efe1d47c8d6c4001da1db15f6bcc",
+      "sentiment": 0.1,
+      "product": ""
+    },
+    {
+      "id": 19358,
+      "textHash": "d7e543d8567cba2e288f9861aa2059b2ddf892c834d3f10ee7e31337d6932e1d",
+      "sentiment": 0.1,
+      "product": ""
+    },
+    {
+      "id": 19359,
+      "textHash": "027a765ddf2fa4f83dfcb00b17df056cdea6f99277c55c35f767d4c0f727f10f",
+      "sentiment": 0.1,
+      "product": ""
+    },
+    {
+      "id": 19360,
+      "textHash": "95d42bdd0459bb556841c8554bffe9b7f9cd7d2a6324b7cc87458801b62a4264",
+      "sentiment": 0.1,
+      "product": ""
+    },
+    {
+      "id": 19361,
+      "textHash": "9789eb7ed8b080233bd73749437080c095a07d6e8a8bf7c1def61a14d9ca7741",
+      "sentiment": 0.1,
+      "product": ""
+    },
+    {
+      "id": 19362,
+      "textHash": "5ea0472404d9bcd70260415a44343d96fbea163c270f07d60375024020415bc7",
+      "sentiment": 0.1,
+      "product": ""
+    },
+    {
+      "id": 19363,
+      "textHash": "56a1a26df6707b63e9ab73fb0e28f2f7fd869cb06c9edb53150ed113b80f7432",
+      "sentiment": 0.1,
+      "product": ""
+    },
+    {
+      "id": 19364,
+      "textHash": "65f27b565cd7dc7dfc8b6227048b73654945526a83ae9f9f91b375da43fd2cd3",
+      "sentiment": 0.1,
+      "product": ""
+    },
+    {
+      "id": 19365,
+      "textHash": "c901d92490226d9b6ca0ea84ea7db570412dd16ebd2648bb1fb64b648affb58c",
+      "sentiment": 0.1,
+      "product": ""
+    },
+    {
+      "id": 19366,
+      "textHash": "8db46939b076808e5bdae4780fa24efc009729a48d41724bc38130b1c511fa44",
+      "sentiment": 0.1,
+      "product": ""
+    },
+    {
+      "id": 19367,
+      "textHash": "b92a830340ec4b6212c7ebc9b538531265c343dd846b606c6b4f4d76a2fd738d",
+      "sentiment": 0.1,
+      "product": ""
+    },
+    {
+      "id": 19368,
+      "textHash": "3e67a6375f79a0d7466b14d4e3baf5adc5f2a4a6dc4ba748a3bdd524f4f5eb2f",
+      "sentiment": 0.1,
+      "product": ""
+    },
+    {
+      "id": 19369,
+      "textHash": "c083b3b5292f75fc84a962c8fb2121c30029a13cd5f74603217c60bd73004307",
+      "sentiment": 0.1,
+      "product": ""
+    },
+    {
+      "id": 19370,
+      "textHash": "27a7a6c392eb419a027af80bf436ea1e9fa5f597505438d353585cdbcef9736f",
+      "sentiment": 0.1,
+      "product": ""
+    },
+    {
+      "id": 19371,
+      "textHash": "0ae0baa6da0ca2ed214160607f2f25a4bf0f5e644f749d9b79251dec2eb313f5",
+      "sentiment": 0.1,
+      "product": ""
+    },
+    {
+      "id": 19372,
+      "textHash": "4cc7b6249479f9e5de98958084c7b3992853d77f7a876dea1ca6f0c16870717f",
+      "sentiment": 0.1,
+      "product": ""
+    },
+    {
+      "id": 19373,
+      "textHash": "0368ddef27f4309e604a66210da82160f1dbb12215921203ccb18ef9e75638dc",
+      "sentiment": 0.1,
+      "product": ""
+    },
+    {
+      "id": 19374,
+      "textHash": "e9e8fa7948eb26a867ea9ca48a98b0a551fea60308271c2d328cb6956538f396",
+      "sentiment": 0.1,
+      "product": ""
+    },
+    {
+      "id": 19375,
+      "textHash": "6417f01f2b39fd7305438b715234aa9c454986d8357f539754e1d1546a8200e6",
+      "sentiment": 0.1,
+      "product": ""
+    },
+    {
+      "id": 19376,
+      "textHash": "ae644d34865194e7172cbef8ca2592614eb4394e741425b46196eaaf9553d75c",
+      "sentiment": 0.1,
+      "product": ""
+    },
+    {
+      "id": 19377,
+      "textHash": "652daee6afbd775e3cfd44a41234fb0ad3070b331c74118098ecbadd3647aa87",
+      "sentiment": 0.1,
+      "product": ""
+    },
+    {
+      "id": 19378,
+      "textHash": "c386e7da2509ba83f708dce66cfb6011504bbb678bf369131ddb23ad140f741c",
+      "sentiment": 0.1,
+      "product": ""
+    },
+    {
+      "id": 19379,
+      "textHash": "61c0ca748a77572d17f26d4119a11d9e32e8e27d5ffa607feeec657ec80c0def",
+      "sentiment": 0.1,
+      "product": ""
+    },
+    {
+      "id": 19380,
+      "textHash": "615f6612202da227b05d0fec8cf50abb4a5ffb7caa6b3ce544ca56c1028f4b06",
+      "sentiment": 0.1,
+      "product": ""
+    },
+    {
+      "id": 19381,
+      "textHash": "4c402c32a538ad1cd11c132bb79866d06d070e0cd75e537a394f41efbae79d87",
+      "sentiment": 0.1,
+      "product": ""
+    },
+    {
+      "id": 19382,
+      "textHash": "e0bdb0820e25c47638b2529b46b79e533315c409b278239471fdfb9183e89c3d",
+      "sentiment": 0.1,
+      "product": ""
+    },
+    {
+      "id": 19383,
+      "textHash": "36c3fd366056b43e81abcb1950b55c0c529f209ef80352609adf940209099e24",
+      "sentiment": 0.1,
+      "product": ""
+    },
+    {
+      "id": 19384,
+      "textHash": "07508c54201af5b5fdaac7f8078471dea321e1925501dea69ecaa868866b0c78",
+      "sentiment": 0.1,
+      "product": ""
+    },
+    {
+      "id": 19385,
+      "textHash": "e5b2af64046fc07bf81a55b3f92ab74e48f47fc980dc07b7d75a5059ce0d2d00",
+      "sentiment": 0.1,
+      "product": ""
+    },
+    {
+      "id": 19386,
+      "textHash": "de5a2ead625b1b1029411be27a499b7bfaee5f5c6120d05c44bbeedbf5fff7d8",
+      "sentiment": 0.1,
+      "product": ""
+    },
+    {
+      "id": 19387,
+      "textHash": "07cdf50b15c18e1708d2059c9a70136ca99d9fe0f146e6d1836f70514921bca9",
+      "sentiment": 0.1,
+      "product": ""
+    },
+    {
+      "id": 19388,
+      "textHash": "fbb10fbf0105ec52a34e25a80ff52c741efe0c30879d31e8f57b85703690209c",
+      "sentiment": 0.1,
+      "product": ""
+    },
+    {
+      "id": 19389,
+      "textHash": "3dc07317ae3440085f6098805fff0680e65f8a0d1c45de01165ed5e12416dcc6",
+      "sentiment": 0.1,
+      "product": ""
+    },
+    {
+      "id": 19390,
+      "textHash": "e8f799366d6bd913ac33dae79a4f266b52152214603919327b9973ed169e1136",
+      "sentiment": 0.1,
+      "product": ""
+    },
+    {
+      "id": 19391,
+      "textHash": "bc38437635be85c56994c4576a45ea991dc7daa8267f6783c7c37b12ee470636",
+      "sentiment": 0.1,
+      "product": ""
+    },
+    {
+      "id": 19392,
+      "textHash": "d9da297d110938c6b9cf0a41a33f9bf891dd702ad97529b393369007b79b717f",
+      "sentiment": 0.1,
+      "product": ""
+    },
+    {
+      "id": 19393,
+      "textHash": "8bb80c56a6065cf564e8be2e23e2bc159671081f97fdc23e6b20113a1a174c9e",
+      "sentiment": 0.1,
+      "product": ""
+    },
+    {
+      "id": 19394,
+      "textHash": "8d98a594de28806ee4ee089d5a4029a5b9b0522bcc93267f1b1a755011bdb99b",
+      "sentiment": 0.1,
+      "product": ""
+    },
+    {
+      "id": 19395,
+      "textHash": "405cf73383082ea99820891c9bf8335e968f8ade89922ca5a9981331a6501aa0",
+      "sentiment": 0.1,
+      "product": ""
+    },
+    {
+      "id": 19396,
+      "textHash": "1feba278f5ec060f30c5d0ecb605a7ee03966a15ece6401b9ed17b108e3bb47d",
+      "sentiment": 0.1,
+      "product": ""
+    },
+    {
+      "id": 19397,
+      "textHash": "92b01bcecf53d02dd19260a7ade11290f5b9a60cb0dec20af115a20e0ded38a3",
+      "sentiment": 0.1,
+      "product": ""
+    },
+    {
+      "id": 19398,
+      "textHash": "ffaa4c1a6fe08bc627e309874d1ca1ad819f8396b5a91243ac295bdce647a787",
+      "sentiment": 0.1,
+      "product": ""
+    },
+    {
+      "id": 19399,
+      "textHash": "3c7eaca4fc66ddcc916b2848cf48e10580f7eb443162355a9a1c5d2611dc5c5b",
+      "sentiment": 0.1,
+      "product": ""
+    },
+    {
+      "id": 19400,
+      "textHash": "719423cfc7a1a59b550d9feea5486460ea747553da2509a83673cca2d0b16023",
+      "sentiment": 0.1,
+      "product": ""
+    },
+    {
+      "id": 19401,
+      "textHash": "ac0b4777ae2cefbbccaacacc270745a772bbf99cc29774a32f7198058b6fd8ad",
+      "sentiment": 0.1,
+      "product": ""
+    },
+    {
+      "id": 19402,
+      "textHash": "fbe579ead8be89c051440afde22f9c5b3a738de65bf02d53458aa5f991cbe7dc",
+      "sentiment": 0.1,
+      "product": ""
+    },
+    {
+      "id": 19403,
+      "textHash": "eeb3d261ddc4b00842731ada9f5d7d363080ca9d653fc2d15289225fa21943b4",
+      "sentiment": 0.1,
+      "product": ""
+    },
+    {
+      "id": 19404,
+      "textHash": "6281bd6ad3c95ccc42b26322318583680dcd41b69c8b64d71764d0bacccbb9f2",
+      "sentiment": 0.1,
+      "product": ""
+    },
+    {
+      "id": 19405,
+      "textHash": "93e24ac6715543865f08e5952071a76306ffdccf19444a7f991fbc3bfd5fdefc",
+      "sentiment": 0.1,
+      "product": ""
+    },
+    {
+      "id": 19406,
+      "textHash": "7a00b91a1e6dc790f2b257f371d26ee6e90d06c0b49f203b6a1a4b29903570f2",
+      "sentiment": 0.1,
+      "product": ""
+    },
+    {
+      "id": 19407,
+      "textHash": "462249cfdb738f342386da08a4cc55ff0931f05718fed98dd20a6ad40fb5dae3",
+      "sentiment": 0.1,
+      "product": ""
+    },
+    {
+      "id": 19408,
+      "textHash": "ec33adf8bf4ad735f5dc4810b8bca4f3dc3bcd9b288e0c4abbfff6f7d3d99a00",
+      "sentiment": 0.1,
+      "product": ""
+    },
+    {
+      "id": 19409,
+      "textHash": "9bd3945251d739e33b37058af61374ef82b1c171b001c8df4be9f01e720a1d84",
+      "sentiment": 0.1,
+      "product": ""
+    },
+    {
+      "id": 19410,
+      "textHash": "cc7e6dba767c684c6b6fa90324503026b9a8ab934f1a29d63e696d61ce355603",
+      "sentiment": 0.1,
+      "product": ""
+    },
+    {
+      "id": 19411,
+      "textHash": "0a5adce18f18f283dd17cd34d6d4f8f88dd0356855e72f3e311d33dc84f631b1",
+      "sentiment": 0.1,
+      "product": ""
+    },
+    {
+      "id": 19412,
+      "textHash": "b14d99cb38fb5fda4df5d2665c4bc8144fcc7d9114e825262e27fe1824b7e0cc",
+      "sentiment": 0.1,
+      "product": ""
+    },
+    {
+      "id": 19413,
+      "textHash": "6661768b5f4eb7d949065f84eb1074be315f0167fadf0d093a302853f5ae093c",
+      "sentiment": 0.1,
+      "product": ""
+    },
+    {
+      "id": 19414,
+      "textHash": "568b54aa07dd61e64d642c7ca9f5189dbcaf3352b539c47ecf54d2fbf1c1e254",
+      "sentiment": 0.1,
+      "product": ""
+    },
+    {
+      "id": 19415,
+      "textHash": "ce1d4c310b8f3c591eadda821a89bcb959f7146b11924de9873275164afacb52",
+      "sentiment": 0.1,
+      "product": ""
+    },
+    {
+      "id": 19416,
+      "textHash": "282e7ea7f658a584fa2a45c0147ff6b4506896754c248a57f1f7c93b4d59cc32",
+      "sentiment": 0.1,
+      "product": ""
+    },
+    {
+      "id": 19417,
+      "textHash": "5a231275b80c7316591c263c3a52874fac1b99c7f6aa50ac7f3f0360439ae7fd",
+      "sentiment": 0.1,
+      "product": ""
+    },
+    {
+      "id": 19418,
+      "textHash": "0d251898489aefb28d7c1293db203073dc368f6c5f19f01db45eee707e0bb036",
+      "sentiment": 0.1,
+      "product": ""
+    },
+    {
+      "id": 19419,
+      "textHash": "e7bb8f40d8a08a5ac3a4a49a9620b0967577828011286c98d62eeb7a171785ad",
+      "sentiment": 0.1,
+      "product": ""
+    },
+    {
+      "id": 19420,
+      "textHash": "c7460bd0ccc0e3e69d1a0f13ee44f168e33b7c9f4fe215fb344704a863dfc036",
+      "sentiment": 0.1,
+      "product": ""
+    },
+    {
+      "id": 19421,
+      "textHash": "d4e5e5288189b31f3351ec5753786b28b6f5eafd293c4cc85d8c8a1ef21b0c69",
+      "sentiment": 0.1,
+      "product": ""
+    }
+  ],
+  "creationScoresVerified": [
+    {
+      "pinId": 19422,
+      "sentiment": 0.5,
+      "textHash": "5fd018d027c07d8baffb712a670043dc97701ce78fe026aae9ccc36462117820",
+      "utcScoredDateTime": "2026-10-22T23:40:31.687Z",
+      "product": null,
+      "productHash": "5fd018d027c07d8baffb712a670043dc97701ce78fe026aae9ccc36462117820"
+    },
+    {
+      "pinId": 19423,
+      "sentiment": 0.5,
+      "textHash": "55a907db74bddc9b0d419ef72db5758dada20077881838174498f9214d893f0f",
+      "utcScoredDateTime": "2026-10-22T23:41:04.734Z",
+      "product": null,
+      "productHash": "55a907db74bddc9b0d419ef72db5758dada20077881838174498f9214d893f0f"
+    },
+    {
+      "pinId": 19424,
+      "sentiment": 0.55,
+      "textHash": "ed04595a763f57a39cdae46faad5c46c6f6eb71ffd92863c089ca1b508a63795",
+      "utcScoredDateTime": "2026-10-22T23:41:35.541Z",
+      "product": null,
+      "productHash": "ed04595a763f57a39cdae46faad5c46c6f6eb71ffd92863c089ca1b508a63795"
+    }
+  ],
+  "remainingSentiment": [
+    {
+      "id": 15801,
+      "textHash": "22c84ba98e6c"
+    },
+    {
+      "id": 15802,
+      "textHash": "c40878743619"
+    },
+    {
+      "id": 15803,
+      "textHash": "60d33be899eb"
+    },
+    {
+      "id": 16361,
+      "textHash": "dbf88fd39233"
+    },
+    {
+      "id": 16366,
+      "textHash": "46de75a74fb2"
+    },
+    {
+      "id": 16367,
+      "textHash": "535e6a45d8e0"
+    },
+    {
+      "id": 16368,
+      "textHash": "ca58b012d910"
+    },
+    {
+      "id": 16375,
+      "textHash": "e2cbcec70ecb"
+    }
+  ],
+  "heldResearchScoreIds": [
+    15801,
+    15802,
+    15803,
+    16361,
+    16366,
+    16367,
+    16368,
+    16375
+  ],
+  "adStats": {
+    "PinAd": {
+      "verified": 67,
+      "refreshed": 6,
+      "added": 0,
+      "concurrentSkipped": []
+    },
+    "ProductAd": {
+      "verified": 36,
+      "refreshed": 1,
+      "added": 0,
+      "concurrentSkipped": []
+    },
+    "HolidayAd": {
+      "verified": 176,
+      "refreshed": 60,
+      "added": 0,
+      "concurrentSkipped": []
+    }
+  },
+  "translatedTitles": 45,
+  "missingTranslations": [],
+  "newTrades": 0,
+  "health": {
+    "checked": 25,
+    "withProblems": []
+  },
+  "marketRead": {
+    "kalshiEvents": 6894,
+    "polymarketEvents": 1500
+  },
+  "oil": {
+    "octoberContracts": 30,
+    "band": [
+      0.16999999999999998,
+      106.99,
+      108.99
+    ],
+    "nearest50": [
+      108.99,
+      0.43
+    ],
+    "estimatedDollarVolume": 83954.7073,
+    "wtiContracts": 0
+  },
+  "wtiGap": {
+    "observedAt": "2026-10-22T23:57:00Z",
+    "monthlyContracts": 0,
+    "checkedSeries": {
+      "KXWTI": {
+        "contractsReturned": 1000,
+        "cursorPresent": true,
+        "currentOctoberEvents": [
+          "KXWTI-26OCT0114",
+          "KXWTI-26OCT0214",
+          "KXWTI-26OCT0514",
+          "KXWTI-26OCT0614",
+          "KXWTI-26OCT0714",
+          "KXWTI-26OCT0814",
+          "KXWTI-26OCT0914",
+          "KXWTI-26OCT1314",
+          "KXWTI-26OCT1414",
+          "KXWTI-26OCT1514",
+          "KXWTI-26OCT1614",
+          "KXWTI-26OCT1914",
+          "KXWTI-26OCT2014",
+          "KXWTI-26OCT2114",
+          "KXWTI-26OCT2214",
+          "KXWTI-26OCT2314",
+          "KXWTI-26OCT2614"
+        ]
+      },
+      "KXWTIW": {
+        "contractsReturned": 900,
+        "cursorPresent": false,
+        "currentOctoberEvents": [
+          "KXWTIW-26OCT0214",
+          "KXWTIW-26OCT0914",
+          "KXWTIW-26OCT1614",
+          "KXWTIW-26OCT2314"
+        ]
+      },
+      "WTI": {
+        "contractsReturned": 0,
+        "cursorPresent": false,
+        "currentOctoberEvents": []
+      },
+      "WTIW": {
+        "contractsReturned": 0,
+        "cursorPresent": false,
+        "currentOctoberEvents": []
+      }
+    },
+    "conclusion": "The active daily series only extends through October26; weekly through October23. No verified October30 month-end terminal contract found. Monthly high/low/touch contracts are not substitutes."
+  },
+  "nativePagesVerified": [
+    {
+      "pinId": 19422,
+      "status": 200,
+      "authorId": 326
+    },
+    {
+      "pinId": 19423,
+      "status": 200,
+      "authorId": 305,
+      "elapsed": "10.070448"
+    },
+    {
+      "pinId": 19425,
+      "status": 200,
+      "authorId": 324,
+      "elapsed": "0.782607"
+    },
+    {
+      "pinId": 1678,
+      "status": 200,
+      "authorId": 326
+    },
+    {
+      "pinId": 1950,
+      "status": 200,
+      "authorId": 277
+    },
+    {
+      "pinId": 1952,
+      "status": 200,
+      "authorId": 277
+    },
+    {
+      "pinId": 1953,
+      "status": 200,
+      "authorId": 277
+    },
+    {
+      "pinId": 1954,
+      "status": 200,
+      "authorId": 277
+    },
+    {
+      "pinId": 1955,
+      "status": 200,
+      "authorId": 277
+    },
+    {
+      "pinId": 1957,
+      "status": 200,
+      "authorId": 277
+    },
+    {
+      "pinId": 1958,
+      "status": 200,
+      "authorId": 277
+    },
+    {
+      "pinId": 1964,
+      "status": 200,
+      "authorId": 277
+    },
+    {
+      "pinId": 1970,
+      "status": 200,
+      "authorId": 277
+    },
+    {
+      "pinId": 1976,
+      "status": 200,
+      "authorId": 277
+    },
+    {
+      "pinId": 2886,
+      "status": 200,
+      "authorId": 276
+    },
+    {
+      "pinId": 2952,
+      "status": 200,
+      "authorId": 276
+    },
+    {
+      "pinId": 2979,
+      "status": 200,
+      "authorId": 324
+    },
+    {
+      "pinId": 3584,
+      "status": 200,
+      "authorId": 324
+    },
+    {
+      "pinId": 4013,
+      "status": 200,
+      "authorId": 306
+    },
+    {
+      "pinId": 4091,
+      "status": 200,
+      "authorId": 416
+    },
+    {
+      "pinId": 4340,
+      "status": 200,
+      "authorId": 417
+    },
+    {
+      "pinId": 4341,
+      "status": 200,
+      "authorId": 417
+    },
+    {
+      "pinId": 4450,
+      "status": 200,
+      "authorId": 414
+    },
+    {
+      "pinId": 4912,
+      "status": 200,
+      "authorId": 422
+    },
+    {
+      "pinId": 4913,
+      "status": 200,
+      "authorId": 422
+    },
+    {
+      "pinId": 4957,
+      "status": 200,
+      "authorId": 1
+    },
+    {
+      "pinId": 5027,
+      "status": 200,
+      "authorId": 306
+    },
+    {
+      "pinId": 5174,
+      "status": 200,
+      "authorId": 324
+    },
+    {
+      "pinId": 6059,
+      "status": 200,
+      "authorId": 276
+    },
+    {
+      "pinId": 16017,
+      "status": 200,
+      "authorId": 408
+    },
+    {
+      "pinId": 17115,
+      "status": 200,
+      "authorId": 277
+    },
+    {
+      "pinId": 18959,
+      "status": 200,
+      "authorId": 324
+    },
+    {
+      "pinId": 19332,
+      "status": 200,
+      "authorId": 306
+    },
+    {
+      "pinId": 19424,
+      "status": 200,
+      "authorId": 276
+    }
+  ],
+  "azureAssets": 6,
+  "learnings": [
+    {
+      "at": "2026-10-22T23:42:38.883Z",
+      "text": "After pulling production, JobRun contained id 17 but its serial sequence still returned 17. Advanced the local sequence to max(id) before preparing run 18. Explicit admin row IDs do not advance serial sequences; reconcile the production JobRun sequence at close without changing pin sequences or VM services.",
+      "topic": "Manual production run identity"
+    },
+    {
+      "at": "2026-10-22T23:42:38.890Z",
+      "text": "Forty due event readings found four unsupported PreOrder labels: DSEI and Dubai interest signup, Otakon badges coming soon versus open hotel booking, and ITU delegate registration coming soon. Added AWS re:Invent’s USD 2,499 regular pass with the exact 10%-for-10+ bulk condition and the actual price-source URL. Two targeted human readings were also repaired after exact-edition evidence, preserving other fields.",
+      "topic": "Event sale status and scope"
+    },
+    {
+      "at": "2026-10-22T23:42:38.894Z",
+      "text": "Deckers fiscal Q2 2027 EPS of 2.31 includes a 0.28 IEEPA-refund benefit; annual EPS guidance includes 0.52. Kering’s net store closures are not a job-loss count. WD GAAP EPS 4.63 differs from adjusted 4.64; use the issuer reconciliation for the Sandisk gain comparison, with quarter end and results-call date kept separate.",
+      "topic": "Issuer results and accounting scope"
+    },
+    {
+      "at": "2026-10-22T23:42:38.895Z",
+      "text": "Taipei’s public October 22 winner page showed Chiang 63%, Shen 37.6% and USD 1,761,117, slightly different from the helper snapshot. Official November 28 polling day is separate from the predicted winner and from a poll favouring Shen. Brent’s 90 contracts cover historical August/September and active October. WTI monthly contracts were empty; expanded daily/weekly checks only extended through October 26/23, so no month-end terminal forecast or touch-price substitute was invented.",
+      "topic": "Market evidence and date precision"
+    },
+    {
+      "at": "2026-10-22T23:44:13.590Z",
+      "text": "During an independent deployment, a narrow authenticated read took 19.8 seconds and a native page took 11.9 seconds. Paused posting, reconciled saved event fields and resumed only after responsive reads. A later Lilly detail response stalled after HTTP 200; saved API fields matched, and a complete retry succeeded before resuming. This session performed no deploy, restart or VM build.",
+      "topic": "Production pacing and response checks"
+    },
+    {
+      "at": "2026-10-22T23:55:31.527Z",
+      "text": "The Chicago organizer PDF gives Hug 1:21:34 in its introduction and 1:21:24 later. The IPC’s October 12 results corroborate 1:21:34. World Athletics verifies the open winners; actual participants differ from registrations. Exact WNBA team recaps confirm Atlanta’s 97–71 Game 3 win and 2–1 lead despite a stale bracket page showing 1–1. Morocco’s government portal reproduces the royal ministry’s September 29 appointment statement, resolving the prior date gap without inferring it from election seats.",
+      "topic": "Resolve primary-source discrepancies with a second authority"
+    }
+  ],
+  "actions": [
+    {
+      "at": "2026-10-22T23:28:57.251Z",
+      "tool": "predicted_pins",
+      "detail": "20 predicted pin(s) returned (20 unthreaded of 35 total)"
+    },
+    {
+      "at": "2026-10-22T23:28:58.833Z",
+      "tool": "model_scores",
+      "detail": "11 model pin(s) still awaiting an arena score, 0 frontier pin(s) to tag"
+    },
+    {
+      "at": "2026-10-22T23:30:13.566Z",
+      "tool": "person_trades_update",
+      "detail": "0 trades in 0 new filings; prod added 0"
+    },
+    {
+      "at": "2026-10-22T23:32:14.086Z",
+      "tool": "oil_commodity_markets",
+      "detail": "scanned 6 monthly contracts, created 0, updated 0, threaded 0"
+    },
+    {
+      "at": "2026-10-22T23:39:54.281Z",
+      "tool": "record_event_info",
+      "detail": "Manually reviewed 40 due events and compared saved fields. Cleared four unsupported PreOrder statuses: DSEI4340 and Dubai4341 interest signup, Otakon4912 coming-soon registration versus open hotels, ITU4957 delegate registration coming soon. Added AWS2886 regular USD2499 pass and exact bulk-discount conditions. Preserved all other semantic fields; marked readings hand."
+    },
+    {
+      "at": "2026-10-22T23:40:32.672Z",
+      "tool": "create_pin",
+      "pinId": 19422,
+      "title": "Carrier Plans a Fort Worth Chiller Factory With More Than $600 Million and 1,500 Jobs",
+      "detail": "@EconDesk: Verified missing dated investment, construction, realized earnings or liquid election forecast; subject and exact-source duplicate checks passed."
+    },
+    {
+      "at": "2026-10-22T23:41:04.886Z",
+      "tool": "create_pin",
+      "pinId": 19423,
+      "title": "Lilly Breaks Ground on Its $5 Billion Richmond Medicines Plant",
+      "detail": "@HealthDesk: Verified missing dated investment, construction, realized earnings or liquid election forecast; subject and exact-source duplicate checks passed."
+    },
+    {
+      "at": "2026-10-22T23:41:35.562Z",
+      "tool": "create_pin",
+      "pinId": 19424,
+      "title": "Western Digital Reports $4.381 Billion Revenue and $4.63 GAAP EPS in Fiscal Q1 2027",
+      "detail": "@TechDesk: Verified missing dated investment, construction, realized earnings or liquid election forecast; subject and exact-source duplicate checks passed."
+    },
+    {
+      "at": "2026-10-22T23:41:56.439Z",
+      "tool": "create_pin",
+      "pinId": 19425,
+      "title": "Polymarket Favours Chiang Wan-an in Taipei’s November 28 Mayoral Election",
+      "detail": "@PoliticsDesk: Verified missing dated investment, construction, realized earnings or liquid election forecast; subject and exact-source duplicate checks passed."
+    },
+    {
+      "at": "2026-10-22T23:42:12.201Z",
+      "tool": "update_pin",
+      "pinId": 4091,
+      "title": "Kering Reports €3.345 Billion Q3 Revenue as Gucci Sales Fall 6% Comparably",
+      "detail": "Replace scheduled Kering revenue preview with realized issuer figures; preserve author/date and distinguish store closures from layoffs."
+    },
+    {
+      "at": "2026-10-22T23:43:34.437Z",
+      "tool": "update_pin",
+      "pinId": 4450,
+      "title": "Deckers Reports $1.481 Billion Q2 Sales and $2.31 EPS, Including Tariff Refunds",
+      "detail": "Save realized Deckers results, tariff-refund contribution, channel distinctions and guidance; preserve call clock, authorship and existing UGG ad."
+    },
+    {
+      "at": "2026-10-22T23:44:31.850Z",
+      "tool": "update_pin",
+      "pinId": 6059,
+      "title": "Rocket Lab Pushes Neutron's Debut Into 2026",
+      "detail": "Add October14 filed 2027 launch-delay context to historical Neutron schedule pin; no invented exact first-flight date or replacement of historical date."
+    },
+    {
+      "at": "2026-10-22T23:45:15.359Z",
+      "tool": "update_pin",
+      "pinId": 1950,
+      "title": "Americans Vote in the 2028 U.S. Presidential Election",
+      "detail": "Refresh October22 Democratic Presidential Nominee 2028 odds and dollar volume, preserving event onset, authorship and thread; reject unrelated coveredByPin matches."
+    },
+    {
+      "at": "2026-10-22T23:46:13.559Z",
+      "tool": "update_pin",
+      "pinId": 17115,
+      "title": "Antonelli Is Favoured for the 2026 Formula1 Drivers’ Championship",
+      "detail": "Refresh October22 F1 Drivers' Champion odds and dollar volume, preserving event onset, authorship and thread; reject unrelated coveredByPin matches."
+    },
+    {
+      "at": "2026-10-22T23:47:18.990Z",
+      "tool": "update_pin",
+      "pinId": 5174,
+      "title": "Brazil Holds a Lula vs Flávio Bolsonaro Presidential Runoff",
+      "detail": "Refresh October22 Brazil Presidential Election odds and dollar volume, preserving event onset, authorship and thread; reject unrelated coveredByPin matches."
+    },
+    {
+      "at": "2026-10-22T23:47:58.965Z",
+      "tool": "update_pin",
+      "pinId": 1976,
+      "title": "France Votes in the 2027 Presidential Election",
+      "detail": "Refresh October22 Next French Presidential Election odds and dollar volume, preserving event onset, authorship and thread; reject unrelated coveredByPin matches."
+    },
+    {
+      "at": "2026-10-22T23:49:10.994Z",
+      "tool": "update_pin",
+      "pinId": 1954,
+      "title": "Super Bowl LXI Decides the 2026 NFL Season at SoFi Stadium",
+      "detail": "Refresh October22 Pro Football: 2027 Champion odds and dollar volume, preserving event onset, authorship and thread; reject unrelated coveredByPin matches."
+    },
+    {
+      "at": "2026-10-22T23:49:57.814Z",
+      "tool": "update_pin",
+      "pinId": 1957,
+      "title": "The 2027 Champions League Final Is Played in Madrid",
+      "detail": "Refresh October22 UEFA Champions League: 2027 Champion odds and dollar volume, preserving event onset, authorship and thread; reject unrelated coveredByPin matches."
+    },
+    {
+      "at": "2026-10-22T23:50:44.970Z",
+      "tool": "update_pin",
+      "pinId": 1958,
+      "title": "The 2026 Ballon d'Or Is Awarded in London",
+      "detail": "Refresh October22 Ballon d'Or Winner 2026 odds and dollar volume, preserving event onset, authorship and thread; reject unrelated coveredByPin matches."
+    },
+    {
+      "at": "2026-10-22T23:51:11.358Z",
+      "tool": "update_pin",
+      "pinId": 1953,
+      "title": "The 2026 World Series Opens on 23 October",
+      "detail": "Refresh October22 MLB World Series Champion 2026 odds and dollar volume, preserving event onset, authorship and thread; reject unrelated coveredByPin matches."
+    },
+    {
+      "at": "2026-10-22T23:52:01.353Z",
+      "tool": "update_pin",
+      "pinId": 1970,
+      "title": "California Elects Its Next Governor",
+      "detail": "Refresh October22 California Governor Election Winner odds and dollar volume, preserving event onset, authorship and thread; reject unrelated coveredByPin matches."
+    },
+    {
+      "at": "2026-10-22T23:52:46.765Z",
+      "tool": "update_pin",
+      "pinId": 1955,
+      "title": "The 2027 NBA Finals Crown a Champion",
+      "detail": "Refresh October22 NBA: 2027 Champion odds and dollar volume, preserving event onset, authorship and thread; reject unrelated coveredByPin matches."
+    },
+    {
+      "at": "2026-10-22T23:53:15.075Z",
+      "tool": "update_pin",
+      "pinId": 19332,
+      "title": "Arsenal Is Favoured for the 2026–27 Premier League Title",
+      "detail": "Refresh October22 EPL: 2027 Champion odds and dollar volume, preserving event onset, authorship and thread; reject unrelated coveredByPin matches."
+    },
+    {
+      "at": "2026-10-22T23:54:34.764Z",
+      "tool": "update_pin",
+      "pinId": 1952,
+      "title": "Will the US-Iran Ceasefire Last Through October 31?",
+      "detail": "Refresh October22 US-Iran ceasefire continues through...? odds and dollar volume, preserving event onset, authorship and thread; reject unrelated coveredByPin matches."
+    },
+    {
+      "at": "2026-10-22T23:56:59.358Z",
+      "tool": "update_pin",
+      "pinId": 1964,
+      "title": "The Highest-Grossing Film of 2026 Is Settled on 31 December",
+      "detail": "Refresh October22 Highest grossing movie in 2026? odds and dollar volume, preserving event onset, authorship and thread; reject unrelated coveredByPin matches."
+    },
+    {
+      "at": "2026-10-22T23:58:02.204Z",
+      "tool": "update_pin",
+      "pinId": 4013,
+      "title": "The 2026 WNBA Finals Tip Off",
+      "detail": "Refresh October22 WNBA: 2026 Champion odds and dollar volume, preserving event onset, authorship and thread; reject unrelated coveredByPin matches."
+    },
+    {
+      "at": "2026-10-22T23:58:16.599Z",
+      "tool": "update_pin",
+      "pinId": 18959,
+      "title": "Iotova Is Favoured as Bulgaria Opens Presidential Voting on October 25",
+      "detail": "Refresh October22 Bulgaria Presidential Election odds and dollar volume, preserving event onset, authorship and thread; reject unrelated coveredByPin matches."
+    },
+    {
+      "at": "2026-10-22T23:59:08.165Z",
+      "tool": "update_pin",
+      "pinId": 1678,
+      "title": "Fed Decides Whether to Hike Rates Again at October 2026 FOMC Meeting",
+      "detail": "Refresh October22 Fed forecast with estimated dollar metric clearly labelled; preserve actual announcement clock."
+    },
+    {
+      "at": "2026-10-23T00:00:09.804Z",
+      "tool": "update_pin",
+      "pinId": 16017,
+      "title": "Brent Crude Oil Price — October 2026",
+      "detail": "Refresh October Brent from raw contracts, preserving settlement clock and September parent. No WTI values fabricated from helper fallbacks."
+    },
+    {
+      "at": "2026-10-23T00:01:04.112Z",
+      "tool": "update_pin",
+      "pinId": 3584,
+      "title": "Los Angeles Chooses Between Karen Bass and Nithya Raman for Mayor",
+      "detail": "Refresh LA mayoral runoff to Raman52%, Bass47.5% and current USD15825265 market volume; preserve November3 date, parent3570 and original author. Existing source reference retained; admin text endpoint invalidates native cache/feed."
+    },
+    {
+      "at": "2026-10-23T00:02:19.270Z",
+      "tool": "update_pin",
+      "pinId": 5027,
+      "title": "Amos Kipruto and Hawi Feysa Win the 2026 Chicago Marathon",
+      "detail": "Replace Chicago Marathon preview with all four verified winners/times; distinguish actual participants from registrations and resolve internal PDF ten-second typo through IPC corroboration."
+    },
+    {
+      "at": "2026-10-23T00:03:05.800Z",
+      "tool": "update_pin",
+      "pinId": 2979,
+      "title": "Morocco’s PAM Leads the 2026 Election With 97 of 395 Seats",
+      "detail": "Resolve exact government-formation evidence gap using dated royal ministry statement on Maroc.ma and QNA; preserve election date, original author, final seats and turnout."
+    },
+    {
+      "at": "2026-10-23T00:04:13.633Z",
+      "tool": "resolve_revisit",
+      "pinId": 5027,
+      "detail": "All four winners/times verified against organizer PDF, World Athletics and IPC. Organizer internal Hug typo reconciled to1:21:34; actual participant/registration scopes separated. Saved production content read back."
+    },
+    {
+      "at": "2026-10-23T00:05:02.512Z",
+      "tool": "resolve_revisit",
+      "pinId": 2979,
+      "detail": "Opened the dated September29 royal ministry statement on Maroc.ma and QNA corroboration. Added appointment context without changing September23 election date or final seat/turnout figures; verified saved production text."
+    },
+    {
+      "at": "2026-10-23T00:07:14.398Z",
+      "tool": "resolve_revisit",
+      "pinId": 2952,
+      "detail": "NVIDIA exact GTC Berlin2026 FAQ confirms in-person conference/workshops sold out and offers a waitlist; free keynote livestream is separate. Corrected only availability to SoldOut, preserving hand prices, speakers and links. Saved event fields and resolved production mark verified."
+    },
+    {
+      "at": "2026-10-23T00:08:20.656Z",
+      "tool": "resolve_revisit",
+      "pinId": 4913,
+      "detail": "AnimeNYC exact August26–29,2027 ticket page explicitly says single-day,4-day and ANYC+ badges coming in2027. Coming soon is not PreOrder. Cleared only availability, preserving hand details. Saved event fields and resolved production mark verified."
+    },
+    {
+      "at": "2026-10-23T00:09:29.801Z",
+      "tool": "mark_revisit",
+      "pinId": 2318,
+      "detail": "October22 run18: exact Perth Ticketmaster event page is unreadable; operator-linked Ticketmaster artist listing shows February17,2027 at18:00 while the published tour announcement and saved Perth pin2318 say February18. Obtain exact Perth checkout/operator confirmation before moving the date or adding price. Brisbane/Sydney/Melbourne exact event pages retain their own dates."
+    },
+    {
+      "at": "2026-10-23T00:14:51.929Z",
+      "tool": "ad_publish_verify",
+      "detail": "{\"PinAd\": {\"verified\": 67, \"refreshed\": 6, \"added\": 0, \"concurrentSkipped\": []}, \"ProductAd\": {\"verified\": 36, \"refreshed\": 1, \"added\": 0, \"concurrentSkipped\": []}, \"HolidayAd\": {\"verified\": 176, \"refreshed\": 60, \"added\": 0, \"concurrentSkipped\": []}}; local checks replayed serially, current identities and metadata read back."
+    },
+    {
+      "at": "2026-10-23T00:16:52.143Z",
+      "tool": "ad_title_translations",
+      "detail": "Wrote and read back45 session translations across15locales for three refreshed holiday titles (72,44,47); exact current English SHA1 verified."
+    },
+    {
+      "at": "2026-10-23T00:17:52.376Z",
+      "tool": "update_pin",
+      "pinId": 4013,
+      "title": "The 2026 WNBA Finals Tip Off",
+      "detail": "Replace stale 1–1/current Game3 preview with the official 97–71 result and 2–1 series state; preserve October17 onset, Game1 venue, author and separate championship forecast."
+    },
+    {
+      "at": "2026-10-23T00:19:06.132Z",
+      "tool": "job_run_sequence",
+      "detail": "Reconciled production JobRun serial sequence to 18 after explicit admin run IDs, advancing only to greatest current sequence/max row. No pin rows, VM build, deploy or services altered."
+    },
+    {
+      "at": "2026-10-23T00:30:22.778Z",
+      "tool": "record_sentiment",
+      "detail": "Saved and read back 89 production scores in batches <=10 with current full SHA256 verification; project profiles scored mildly positive0.1 rather than asserting realized returns. Eight known identity/capex conflicts remain; concurrent unseen texts excluded."
+    },
+    {
+      "at": "2026-10-23T00:30:44.073Z",
+      "tool": "update_pin",
+      "pinId": 19424,
+      "title": "Western Digital Reports $4.381 Billion Revenue and $4.63 GAAP EPS in Fiscal Q1 2027",
+      "detail": "Back the prior-quarter Sandisk gain/GAAP comparison with the issuer reconciliation citation; preserve title, summary, author, date and media."
+    }
+  ],
+  "report": "news-job-2026-10-22-pm.md",
+  "media": "okf/scraping/media/news-2026-10-22-pm.json",
+  "status": "ok",
+  "finishedAt": "2026-10-23T00:32:18.958Z"
+}

@@ -67,6 +67,9 @@ import { EpisodeCount } from '@/components/pin/EpisodeCount';
 import { MarketVolume } from '@/components/pin/MarketVolume';
 import { PinReferences } from '@/components/pin/PinReferences';
 import { PinPhotos } from '@/components/pin/PinPhotos';
+import { PinReviews } from '@/components/pin/PinReviews';
+import { isReviewable } from '@/lib/userReviews';
+import { restaurantMenuProfileFor } from '@/server/services/restaurantContent';
 import { PinSuggest } from '@/components/pin/PinSuggest';
 import { PinMapLoader, ThreadMapLoader } from '@/components/pin/PinMapLoader';
 import { SiteShapeKey } from '@/components/pin/SiteShapeKey';
@@ -157,6 +160,10 @@ async function PinContent({ params, searchParams }: Pick<Props, 'params' | 'sear
     notFound();
   }
   const autoplay = query?.autoplay === '1' || query?.play === '1';
+  // The dishes and drinks on the pin's menus, for tagging them on readers' photos.
+  const menuItemNames = pin.categories?.includes('Food')
+    ? [...new Set(((await restaurantMenuProfileFor(pin.sourceUrl))?.menus ?? []).flatMap((menu) => menu.items.map((item) => item.name)))]
+    : [];
   // What changed since it was posted: the pin shows the newest, and these say
   // how it got there. An event people can attend also carries its host's
   // website, performers and tickets, for the page and its Event markup.
@@ -295,7 +302,9 @@ async function PinContent({ params, searchParams }: Pick<Props, 'params' | 'sear
             <Thread pin={pin} />
           </Suspense>
 
-          <PinPhotos pinId={pin.id} />
+          {isReviewable(pin.categories) ? <PinReviews pinId={pin.id} /> : null}
+
+          <PinPhotos pinId={pin.id} menuItems={menuItemNames} />
 
           <Suspense fallback={<Comments pinId={pin.id} initialComments={[]} />}>
             <PinCommentsSection pinId={pin.id} />

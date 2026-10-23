@@ -1,5 +1,6 @@
 import * as db from '../db';
 import type { Row } from '../db';
+import type { PhotoTag } from '@/lib/userReviews';
 
 // Photos readers add to a pin from their own device (0171), apart from the
 // pin's own media. Static queries, as PinNotInterested's are.
@@ -19,6 +20,9 @@ export type PinPhotoJson = {
   width: number | null;
   height: number | null;
   caption: string | null;
+  // The reader's 1-5 rating of what the photo shows, and menu-item tags with their regions (0209).
+  stars: number | null;
+  tags: PhotoTag[];
   utcCreatedDateTime: string;
   userId: number;
   userName: string;
@@ -49,7 +53,7 @@ export type ReportedPhoto = {
 };
 
 const SELECT = `
-  SELECT "p"."id", "p"."pinId", "p"."blobName", "p"."width", "p"."height", "p"."caption",
+  SELECT "p"."id", "p"."pinId", "p"."blobName", "p"."width", "p"."height", "p"."caption", "p"."stars", "p"."tags",
          "p"."utcCreatedDateTime", "p"."userId", "u"."userName",
          ("p"."userId" = $2) AS "mine",
          EXISTS (SELECT 1 FROM "PinPhotoFlag" "f" WHERE "f"."photoId" = "p"."id" AND "f"."userId" = $2) AS "flagged",
@@ -91,11 +95,11 @@ export default class PinPhoto {
     return Number(row.n);
   }
 
-  static async create(input: { pinId: number; userId: number; blobName: string; width: number; height: number; caption?: string | null }) {
+  static async create(input: { pinId: number; userId: number; blobName: string; width: number; height: number; caption?: string | null; stars?: number | null; tags?: PhotoTag[] }) {
     const [row] = await db.query<{ id: number }>(
-      `INSERT INTO "PinPhoto" ("pinId", "userId", "blobName", "width", "height", "caption")
-       VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"`,
-      [input.pinId, input.userId, input.blobName, input.width, input.height, input.caption?.trim() || null],
+      `INSERT INTO "PinPhoto" ("pinId", "userId", "blobName", "width", "height", "caption", "stars", "tags")
+       VALUES ($1, $2, $3, $4, $5, $6, $7, $8::jsonb) RETURNING "id"`,
+      [input.pinId, input.userId, input.blobName, input.width, input.height, input.caption?.trim() || null, input.stars ?? null, JSON.stringify(input.tags ?? [])],
     );
     const [photo] = await db.query<PinPhotoJson & Row>(`${SELECT} WHERE "p"."id" = $1`, [row.id, input.userId]);
     return photo;

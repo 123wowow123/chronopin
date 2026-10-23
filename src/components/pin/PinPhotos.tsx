@@ -10,6 +10,9 @@ import { COMMENT_REACTIONS, type CommentReactionName } from '@/lib/commentReacti
 import { useT } from '@/lib/client/i18n';
 import { usePendingAction } from '@/lib/client/pendingAction';
 import { useSession } from '@/lib/client/session';
+import { Stars } from '@/components/listings/parts';
+import { PhotoTagEditor, StarInput, TagOverlay } from './ReviewParts';
+import type { PhotoTag } from '@/lib/userReviews';
 
 type PinPhotoJson = {
   id: number;
@@ -17,6 +20,8 @@ type PinPhotoJson = {
   width: number | null;
   height: number | null;
   caption: string | null;
+  stars: number | null;
+  tags: PhotoTag[];
   userName: string;
   mine: boolean;
   flagged: boolean;
@@ -45,13 +50,16 @@ const REASON_KEY = {
 // system picker offers the camera as well as the library. Adding needs a
 // signed-up user; any signed-in reader can flag a photo that is wrong, and
 // enough flags hide it.
-export function PinPhotos({ pinId }: { pinId: number }) {
+export function PinPhotos({ pinId, menuItems = [] }: { pinId: number; menuItems?: string[] }) {
   const t = useT();
   const { isLoggedIn, status } = useSession();
   const [photos, setPhotos] = useState<PinPhotoJson[]>([]);
   const [files, setFiles] = useState<File[]>([]);
   const [previews, setPreviews] = useState<string[]>([]);
   const [caption, setCaption] = useState('');
+  // The rating the chosen photos get, and (for a single photo of a pin with a menu) its menu-item tags.
+  const [stars, setStars] = useState(0);
+  const [tags, setTags] = useState<PhotoTag[]>([]);
   const [sending, setSending] = useState(false);
   const [error, setError] = useState('');
   // The grid of every photo, and the index of the one open large over it (or over the pane).
@@ -85,6 +93,8 @@ export function PinPhotos({ pinId }: { pinId: number }) {
     urls.current = next.map((file) => URL.createObjectURL(file));
     setPreviews(urls.current);
     setFiles(next);
+    setTags([]);
+    if (!next.length) setStars(0);
   }
   useEffect(
     () => () => {
@@ -119,6 +129,8 @@ export function PinPhotos({ pinId }: { pinId: number }) {
         form.set('file', remaining[0]);
         // One caption belongs to one photo.
         if (files.length === 1 && caption.trim()) form.set('caption', caption.trim());
+        if (stars) form.set('stars', String(stars));
+        if (files.length === 1 && tags.length) form.set('tags', JSON.stringify(tags));
         const created = await api.post<PinPhotoJson>(`/api/pins/${pinId}/photos`, form);
         setPhotos((list) => [created, ...list]);
         remaining.shift();
@@ -269,12 +281,22 @@ export function PinPhotos({ pinId }: { pinId: number }) {
             ) : null}
             {files.length ? (
               <form onSubmit={send} className="mb-4 space-y-2 rounded-lg bg-raised p-3">
-                <div className="grid grid-cols-3 gap-2 sm:grid-cols-4">
+                <div className={files.length === 1 && menuItems.length ? 'hidden' : 'grid grid-cols-3 gap-2 sm:grid-cols-4'}>
                   {previews.map((src) => (
                     // eslint-disable-next-line @next/next/no-img-element -- a local object URL
                     <img key={src} src={src} alt="" className="aspect-square w-full rounded-lg object-cover" />
                   ))}
                 </div>
+                <div className="space-y-1">
+                  <p className="text-xs text-subtle">{t('reviews.photoRating')}</p>
+                  <StarInput value={stars} onChange={setStars} label={t('reviews.photoRating')} disabled={sending} />
+                </div>
+                {menuItems.length ? (
+                  <div className="space-y-1">
+                    <p className="text-xs font-medium text-subtle">{t('reviews.tagHeading')}</p>
+                    {files.length === 1 ? <PhotoTagEditor src={previews[0]} items={menuItems} tags={tags} onChange={setTags} /> : <p className="text-xs text-subtle">{t('reviews.tagMany')}</p>}
+                  </div>
+                ) : null}
                 {files.length === 1 ? (
                   <label className="block text-xs text-subtle">
                     {t('photos.caption')}
@@ -411,8 +433,11 @@ function Viewer({
     <Dialog label={t('photos.heading')} onClose={onClose} bare className="w-full max-w-[min(96vw,100rem)]">
       <div className="flex min-h-0 flex-1 flex-col overflow-y-auto">
         <div className="relative flex min-h-0 shrink-0 items-center justify-center bg-black">
-          {/* eslint-disable-next-line @next/next/no-img-element -- a stored reader photo */}
-          <img src={blobUrl(photo.blobName)} alt={photo.caption || t('photos.altBy', { name: photo.userName })} className="max-h-[calc(92dvh-11rem)] max-w-full object-contain max-sm:max-h-[60dvh]" />
+          <div className="relative inline-block max-w-full">
+            {/* eslint-disable-next-line @next/next/no-img-element -- a stored reader photo */}
+            <img src={blobUrl(photo.blobName)} alt={photo.caption || t('photos.altBy', { name: photo.userName })} className="block max-h-[calc(92dvh-11rem)] max-w-full object-contain max-sm:max-h-[60dvh]" />
+            <TagOverlay tags={photo.tags ?? []} />
+          </div>
           {photos.length > 1 ? (
             <>
               <button type="button" aria-label={t('photos.prev')} onClick={() => go(-1)} className="absolute left-2 cursor-pointer rounded-full bg-black/50 p-2 text-white hover:bg-black/70">
@@ -443,6 +468,8 @@ function Viewer({
             </div>
           </div>
           {photo.caption ? meta : null}
+          {photo.stars ? <Stars value={photo.stars} className="size-4" /> : null}
+          {photo.tags?.length ? <p className="text-xs text-subtle">{t('reviews.tagged', { items: [...new Set(photo.tags.map((tag) => tag.item))].join(', ') })}</p> : null}
           {photo.hidden ? null : (
             <div role="group" aria-label={t('comments.chooseReaction')} className="flex flex-wrap gap-1 pt-1">
               {COMMENT_REACTIONS.map((r) => {

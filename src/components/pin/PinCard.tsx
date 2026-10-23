@@ -27,6 +27,7 @@ import { CompanyTicker } from './CompanyTicker';
 import { PinCardOdds } from './PinOdds';
 import { PinMediaFrame } from './PinMedia';
 import { RatingSummary } from './PinRatings';
+import { UserRatingBadge } from './UserRatingBadge';
 import { EpisodeCount } from './EpisodeCount';
 import { RefineLink } from './RefineLink';
 import { PlaceLinks } from './PlaceLinks';
@@ -319,6 +320,7 @@ export function PinCard({
         <div className={`text-sm font-medium tabular-nums ${pin.price != null && pin.price < 0 ? 'text-danger' : 'text-success'}`}>
           {pin.price ? localMoney(pin.price, pin.priceCurrency, t.locale) : null}
           {pin.restaurantPriceRange ? <span className="text-xs text-muted"><RestaurantPriceRange range={pin.restaurantPriceRange} /></span> : null}
+          <UserRatingBadge pin={pin} />
         </div>
         <div>
           {pin.searchScore != null ? (
