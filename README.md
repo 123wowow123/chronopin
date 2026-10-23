@@ -447,3 +447,25 @@ https://search.google.com/search-console/performance/search-analytics?resource_i
 
 
 ai spend publication latest predicted figures
+
+
+logged in admin should not have cookie rate limit
+
+
+https://www.chronopin.com/pin/2834/google-releases-gemini-3-8-flash-and-3-8-flash-cyber
+cost vs performacne should have reviews under it like other rubrics
+also add any energy usage figures and deployment and usage figures
+
+resolved prediction tables should be default toggled to be hidden
+https://www.chronopin.com/pin/4810/google-announces-gemini-4-argon
+
+
+pin detail share should be on top
+
+
+
+https://www.chronopin.com/pin/19608/china-eastern-flies-the-c919-s-first-commercial-flight-shanghai-to-beijing
+
+should mention main competitor products. 
+this should apply for all products
+

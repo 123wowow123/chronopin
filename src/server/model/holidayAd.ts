@@ -11,7 +11,7 @@ import HolidayAdTranslation from './holidayAdTranslation';
 // buy for one, as Amazon listings that clear a bar for reviews and brand
 // (holidayAdProblem), in the three price tiers of the holiday's own budget so
 // a tile row can show an inexpensive, a middle and an expensive choice. They
-// are served from a month before the holiday to three weeks after it
+// are served from 45 days before the holiday to a week after it
 // (src/server/model/ad.ts). The news job's holidayAds task keeps them alive
 // and stocks every holiday coming up; `npm run ads:holiday` does the same by hand.
 

@@ -497,7 +497,7 @@ price tier, price, stars and reviews), `lacking` (tiers still short, and why),
 catalog ([culturalDays.ts](../../../src/lib/culturalDays.ts): Mid-Autumn
 Festival, Lunar New Year, Diwali, Hanukkah, Halloween, Christmas...), which
 the timeline also tags with the holiday and its foods and customs. They run
-from **a month before the holiday to three weeks after** (owner, 2026-10-03),
+from **45 days before the holiday to a week after** (owner, 2026-10-23; was a month before / three weeks after),
 are stocked two weeks ahead of that, and are served first in the timeline's ad
 slots and on the pin pages of pins that fall on the holiday, three tiles at a
 time: an inexpensive, a middle and an expensive choice (the holiday's own

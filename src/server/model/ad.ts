@@ -149,7 +149,7 @@ export default class Ad {
     const sold = pickSponsoredAds(bought, seen, n, avoid);
     const room = n - sold.length;
     // One seasonal tile first, leaving room for a variety of other categories.
-    // The holiday window runs a month before to three weeks after. A pin's page
+    // The holiday window runs 45 days before to a week after. A pin's page
     // carries ads for holidays on its date regardless of the pin's topic.
     const onPinPage = PIN_SLOTS.includes(slot);
     const related = onPinPage ? new Set(pin?.day ? occurrencesOn(pin.day).map((o) => o.def.id) : []) : null;

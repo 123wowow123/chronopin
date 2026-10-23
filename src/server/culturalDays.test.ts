@@ -102,14 +102,14 @@ describe('cultural holiday dates', () => {
 });
 
 describe('the ad window', () => {
-  it('opens a month before the holiday and closes three weeks after it', () => {
-    expect(windowOffset('2026-08-26', '2026-09-25')).toEqual({ offset: -30, active: true });
-    expect(windowOffset('2026-08-25', '2026-09-25').active).toBe(false);
-    expect(windowOffset('2026-10-16', '2026-09-25').active).toBe(true);
-    expect(windowOffset('2026-10-17', '2026-09-25').active).toBe(false);
-    // Three weeks after the last day of a multi-day holiday.
-    expect(windowOffset(addDays('2026-12-05', 7 + 21), '2026-12-05', 8).active).toBe(true);
-    expect(windowOffset(addDays('2026-12-05', 7 + 22), '2026-12-05', 8).active).toBe(false);
+  it('opens 45 days before the holiday and closes a week after it', () => {
+    expect(windowOffset('2026-08-11', '2026-09-25')).toEqual({ offset: -45, active: true });
+    expect(windowOffset('2026-08-10', '2026-09-25').active).toBe(false);
+    expect(windowOffset('2026-10-02', '2026-09-25').active).toBe(true);
+    expect(windowOffset('2026-10-03', '2026-09-25').active).toBe(false);
+    // A week after the last day of a multi-day holiday.
+    expect(windowOffset(addDays('2026-12-05', 7 + 7), '2026-12-05', 8).active).toBe(true);
+    expect(windowOffset(addDays('2026-12-05', 7 + 8), '2026-12-05', 8).active).toBe(false);
   });
 
   it('lists the holidays whose window holds a day', () => {

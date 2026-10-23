@@ -20,9 +20,10 @@ export type CulturalDay = {
   traditions: CulturalTradition[];
 };
 
-// Owner, 2026-10-03: the ads "keep running 1 month before hand and 3 weeks afterwards".
-export const WINDOW_BEFORE_DAYS = 30;
-export const WINDOW_AFTER_DAYS = 21;
+// Owner, 2026-10-23: seasonal ads show 1.5 months ahead and are out of the ad
+// spots a week after the holiday ends (was 30 before / 21 after, 2026-10-03).
+export const WINDOW_BEFORE_DAYS = 45;
+export const WINDOW_AFTER_DAYS = 7;
 
 export type HolidayRule =
   // The date-holidays package's own English name for it in a country (the
@@ -843,7 +844,7 @@ export function addDays(dayKey: string, days: number): string {
 }
 
 // How far `today` is from the holiday's first day: negative before it, and
-// whether that is inside the ad window (a month before to three weeks after
+// whether that is inside the ad window (45 days before to a week after
 // its last day).
 export function windowOffset(today: string, start: string, span = 1): { offset: number; active: boolean } {
   const offset = daysBetween(start, today);

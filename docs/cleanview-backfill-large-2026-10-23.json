@@ -1,0 +1,4084 @@
+{
+  "date": "2026-10-23",
+  "scope": "Cleanview sourcing backfill, large batch 5–7",
+  "summary": {
+    "audited": 36,
+    "corrected": 30,
+    "held": 6,
+    "environmentActions": 72,
+    "azureFilesVerified": 92,
+    "nativePagesVerified": 24,
+    "postedMapCounts": {
+      "local": 1446,
+      "prod": 1446
+    },
+    "deployment": false
+  },
+  "pins": [
+    {
+      "id": 16351,
+      "key": "solar-nextera-high-spring-ok",
+      "patch": {
+        "title": "NextEra High Spring: 400 MW Solar, Target December 2027",
+        "description": "NextEra’s project overview confirms up to 400 MW solar across about 4,505 acres in Muskogee County, with operation by December 2027 subject to approvals. The earlier $550M capital estimate is not supported by this project page.",
+        "sourceUrl": "https://www.nexteraenergyresources.com/high-spring-solar/project-overview.html",
+        "references": [
+          {
+            "url": "https://www.nexteraenergyresources.com/high-spring-solar/project-overview.html",
+            "title": "High Spring Solar — Project Overview",
+            "confidence": 95,
+            "publishedDate": null
+          }
+        ],
+        "longFormSummary": "<ul><li>NextEra publishes up to 400 MW solar and approximately 4,505 acres; the map icon is explicitly representative rather than a parcel boundary.<cite data-ref=\"https://www.nexteraenergyresources.com/high-spring-solar/project-overview.html\"></cite></li><li>The $54 million figure is estimated local tax revenue over 30 years, not capital cost. Timeline: December 1, 2027 is a month-only estimated marker for the operator target, not a scheduled day.<cite data-ref=\"https://www.nexteraenergyresources.com/high-spring-solar/project-overview.html\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "estimated",
+        "allDay": true,
+        "allDayStated": false,
+        "utcStartDateTime": "2027-12-01T00:00:00.000Z",
+        "dateConfidenceReasoning": "Operator target is by December 2027 subject to approvals; December 1 is month-only precision."
+      },
+      "power": {
+        "megawatts": 400,
+        "kind": "generation",
+        "sourceUrl": "https://www.nexteraenergyresources.com/high-spring-solar/project-overview.html",
+        "note": "Proposed up-to-400 MW solar scope, not measured output."
+      },
+      "datacenter": null,
+      "clearEnergy": false,
+      "gaps": [
+        "Obtain current construction status, budget and parcel geometry."
+      ]
+    },
+    {
+      "id": 16356,
+      "key": "battery-calpine-aurora-zion-il",
+      "patch": {
+        "title": "Zion AF2-027: 50 MW Battery Uprate; 635 MW Combined Facility Output",
+        "description": "PJM’s AF2-027 facilities study specifies a 50 MW battery system at Zion, increasing the shared facility’s maximum output to 635 MW. The prior 1,206 MW “Aurora” battery identity and $850M budget are not substantiated.",
+        "sourceUrl": "https://www.pjm.com/pjmfiles/pub/planning/project-queues/facilities/af2027_fac.pdf",
+        "references": [
+          {
+            "url": "https://www.pjm.com/pjmfiles/pub/planning/project-queues/facilities/af2027_fac.pdf",
+            "title": "AF2-027 Facilities Study — PJM",
+            "confidence": 95,
+            "publishedDate": null
+          },
+          {
+            "url": "https://www.pjm.com/pjmfiles/pub/planning/project-queues/impact_studies/af2027_imp.html",
+            "title": "AF2-027 System Impact Study Report — PJM",
+            "confidence": 95,
+            "publishedDate": null
+          }
+        ],
+        "longFormSummary": "<ul><li>The facilities study describes a 50 MW storage system sharing the Zion point of interconnection with S55 and Y3-013. Combined facility output is 635 MW; 635 MW is not this battery’s standalone rating.<cite data-ref=\"https://www.pjm.com/pjmfiles/pub/planning/project-queues/facilities/af2027_fac.pdf\"></cite></li><li>The impact study identifies 21 inverters and a 50 MW uprate. No four-hour battery duration or $850 million budget is established.<cite data-ref=\"https://www.pjm.com/pjmfiles/pub/planning/project-queues/impact_studies/af2027_imp.html\"></cite></li><li>Timeline: July 1, 2029 remains an unverified legacy estimate. The study’s requested service is relative to agreement execution, not a guaranteed calendar COD.<cite data-ref=\"https://www.pjm.com/pjmfiles/pub/planning/project-queues/facilities/af2027_fac.pdf\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "estimated",
+        "allDay": true,
+        "allDayStated": false,
+        "utcStartDateTime": "2029-07-01T00:00:00.000Z",
+        "dateConfidenceReasoning": "Unverified legacy July 2029 estimate; facilities study describes 310 days after GIA execution and disclaims transmission-owner commitment."
+      },
+      "power": {
+        "megawatts": 50,
+        "kind": "storage",
+        "sourceUrl": "https://www.pjm.com/pjmfiles/pub/planning/project-queues/facilities/af2027_fac.pdf",
+        "note": "AF2-027 battery uprate only; 635 MW shared-facility output includes other projects."
+      },
+      "datacenter": null,
+      "clearEnergy": false,
+      "gaps": [
+        "Verify current AF2-027 queue status, GIA execution/COD and budget; determine whether separate Aurora draft duplicates this corrected Zion identity."
+      ]
+    },
+    {
+      "id": 16357,
+      "key": "dc-cielo-chisago-mn",
+      "patch": {
+        "title": "Cielo Chisago: Historical 300 MW Proposal; Current Project Status Unverified",
+        "description": "June 2025 reporting lists Cielo’s Chisago concept at 300 MW on 157 acres. June 2026 local reporting says the city had no current proposals and an earlier unnamed project was dropped over grid limits; a direct identity match still needs city records.",
+        "sourceUrl": "https://chisagocountypress.com/news/2026/jun/05/chisago-city-accepts-authority-for-retail-cannabis-sales-open-mic-question-on-data-centers/",
+        "references": [
+          {
+            "url": "https://chisagocountypress.com/news/2026/jun/05/chisago-city-accepts-authority-for-retail-cannabis-sales-open-mic-question-on-data-centers/",
+            "title": "Chisago City accepts authority for retail cannabis sales; open mic question on data centers",
+            "confidence": 95,
+            "publishedDate": "2026-06-05"
+          },
+          {
+            "url": "https://www.datacenterdynamics.com/en/news/cielo-digital-infrastructure-plans-300mw-data-center-campus-in-south-carolina/",
+            "title": "Cielo Digital Infrastructure plans 300MW data center campus in South Carolina",
+            "confidence": 95,
+            "publishedDate": "2025-06-24"
+          }
+        ],
+        "longFormSummary": "<ul><li>DCD reported a Cielo concept of 300 MW and 157 acres; it did not publish a Minnesota investment figure. The prior $2 billion, 250 acres and 1.6 million sqft claims are removed.<cite data-ref=\"https://www.datacenterdynamics.com/en/news/cielo-digital-infrastructure-plans-300mw-data-center-campus-in-south-carolina/\"></cite></li><li>Local council reporting describes no current proposals and an unnamed earlier inquiry abandoned due to grid limits. Do not conclusively equate that inquiry with Cielo without the city file.<cite data-ref=\"https://chisagocountypress.com/news/2026/jun/05/chisago-city-accepts-authority-for-retail-cannabis-sales-open-mic-question-on-data-centers/\"></cite></li><li>Timeline: June 30, 2028 remains an unverified legacy date, not an announced opening. Generic water and annual-energy estimates are removed.<cite data-ref=\"https://chisagocountypress.com/news/2026/jun/05/chisago-city-accepts-authority-for-retail-cannabis-sales-open-mic-question-on-data-centers/\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "estimated",
+        "allDay": true,
+        "allDayStated": false,
+        "utcStartDateTime": "2028-06-30T00:00:00.000Z",
+        "dateConfidenceReasoning": "Unverified legacy June 2028 date. Historical concept has no verified service schedule and current local reporting says no active city proposals."
+      },
+      "power": {
+        "megawatts": 300,
+        "kind": "usage",
+        "sourceUrl": "https://www.datacenterdynamics.com/en/news/cielo-digital-infrastructure-plans-300mw-data-center-campus-in-south-carolina/",
+        "note": "Historical 2025 marketed campus scope only; current utility approval/IT-load basis unverified."
+      },
+      "datacenter": {
+        "acres": 157,
+        "sourceUrl": "https://www.datacenterdynamics.com/en/news/cielo-digital-infrastructure-plans-300mw-data-center-campus-in-south-carolina/",
+        "note": "Historical Cielo marketed site scope; current active application not established. Removed unsupported sqft and capacity-scaled water."
+      },
+      "clearEnergy": true,
+      "gaps": [
+        "Cielo official domain fails DNS/502. Obtain city inquiry documents to identify abandoned project and current Cielo activity, exact parcel and COD."
+      ]
+    },
+    {
+      "id": 16358,
+      "key": "dc-cielo-haines-city-fl",
+      "patch": {
+        "title": "Cielo Haines City: 300 MW Concept Stalled by Water Capacity",
+        "description": "FOX 13’s June 2026 reporting says Haines City lacks water capacity for Cielo’s proposed data center and had no formal applications. Historical developer-site reporting gives 300 MW on 74 acres; the $1.8B budget and 2028 opening were not verified.",
+        "sourceUrl": "https://www.fox13news.com/news/haines-city-data-center-project-water-capacity-shortage",
+        "references": [
+          {
+            "url": "https://www.fox13news.com/news/haines-city-data-center-project-water-capacity-shortage",
+            "title": "Haines City data center project stalled by water capacity shortage",
+            "confidence": 95,
+            "publishedDate": "2026-06-25"
+          },
+          {
+            "url": "https://www.datacenterdynamics.com/en/news/cielo-digital-infrastructure-plans-300mw-data-center-campus-in-south-carolina/",
+            "title": "Cielo Digital Infrastructure plans 300MW data center campus in South Carolina",
+            "confidence": 95,
+            "publishedDate": "2025-06-24"
+          }
+        ],
+        "longFormSummary": "<ul><li>The inquiry concerned Marion Road and SR 544-East. City officials cited a requested 150,000 gallons/day and a pending water-permit modification; this is proposed demand, not measured use.<cite data-ref=\"https://www.fox13news.com/news/haines-city-data-center-project-water-capacity-shortage\"></cite></li><li>DCD recorded 300 MW and 74 acres from the developer website, replacing unsupported 220 acres and 1.8 million sqft. Formal zoning/environmental review still remained.<cite data-ref=\"https://www.datacenterdynamics.com/en/news/cielo-digital-infrastructure-plans-300mw-data-center-campus-in-south-carolina/\"></cite></li><li>Timeline: June 30, 2028 remains an unverified legacy estimate. The water constraint does not establish a new opening date. The unsupported $1.8 billion price is cleared.<cite data-ref=\"https://www.fox13news.com/news/haines-city-data-center-project-water-capacity-shortage\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "estimated",
+        "allDay": true,
+        "allDayStated": false,
+        "utcStartDateTime": "2028-06-30T00:00:00.000Z",
+        "dateConfidenceReasoning": "Unverified legacy June 2028 placeholder; June 2026 reporting describes a stalled utility inquiry with no formal application."
+      },
+      "power": {
+        "megawatts": 300,
+        "kind": "usage",
+        "sourceUrl": "https://www.datacenterdynamics.com/en/news/cielo-digital-infrastructure-plans-300mw-data-center-campus-in-south-carolina/",
+        "note": "Historical marketed campus capacity; not approved or energized demand."
+      },
+      "datacenter": {
+        "acres": 74,
+        "sourceUrl": "https://www.fox13news.com/news/haines-city-data-center-project-water-capacity-shortage",
+        "note": "FOX 13 reports proposed water request 150,000 gal/day and insufficient city capacity; not operating use. Historical acreage from DCD. Removed unsupported sqft and scaled water."
+      },
+      "clearEnergy": true,
+      "gaps": [
+        "Verify water-use permit, actual application and current development schedule; official developer site inaccessible."
+      ]
+    },
+    {
+      "id": 16359,
+      "key": "dc-cielo-new-lenox-il",
+      "patch": {
+        "title": "New Lenox: Mayor Says No Data Center Being Entertained; Cielo Concept Unconfirmed",
+        "description": "At the August 10, 2026 village meeting, New Lenox’s mayor denied reports that a data center was coming. Cielo’s historical 300 MW / 141-acre marketing concept does not establish an approved campus, budget or opening date.",
+        "sourceUrl": "https://www.newlenox.net/AgendaCenter/ViewFile/Minutes/_08102026-637",
+        "references": [
+          {
+            "url": "https://www.newlenox.net/AgendaCenter/ViewFile/Minutes/_08102026-637",
+            "title": "New Lenox Board of Trustees — August 10, 2026 Minutes",
+            "confidence": 95,
+            "publishedDate": "2026-08-10"
+          },
+          {
+            "url": "https://www.datacenterdynamics.com/en/news/cielo-digital-infrastructure-plans-300mw-data-center-campus-in-south-carolina/",
+            "title": "Cielo Digital Infrastructure plans 300MW data center campus in South Carolina",
+            "confidence": 95,
+            "publishedDate": "2025-06-24"
+          }
+        ],
+        "longFormSummary": "<ul><li>The official meeting minutes record the mayor saying the village was not entertaining data centers. This is the dated event represented here, not a confirmed campus opening.<cite data-ref=\"https://www.newlenox.net/AgendaCenter/ViewFile/Minutes/_08102026-637\"></cite></li><li>DCD’s 2025 report described a 300 MW, 141-acre Cielo concept. That historical marketing scope is not proof of a current approved parcel. The former $2.1 billion price and all unsupported operating/physical telemetry are removed.<cite data-ref=\"https://www.datacenterdynamics.com/en/news/cielo-digital-infrastructure-plans-300mw-data-center-campus-in-south-carolina/\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "confirmed",
+        "allDay": true,
+        "allDayStated": false,
+        "utcStartDateTime": "2026-08-10T00:00:00.000Z",
+        "dateConfidenceReasoning": "Confirmed date of official council statement, replacing an unsupported June 2028 opening estimate.",
+        "tags": [
+          "Cleanview",
+          "Data Centers",
+          "Cielo Digital Infrastructure",
+          "Illinois",
+          "Will County",
+          "Unconfirmed Proposal"
+        ]
+      },
+      "power": "delete",
+      "datacenter": "delete",
+      "clearEnergy": true,
+      "gaps": [
+        "Obtain current Cielo/village correspondence and any formal application. Do not infer permanent cancellation from the mayor statement alone; historical candidate parcels differ."
+      ]
+    },
+    {
+      "id": 16360,
+      "key": "dc-cloverleaf-bluestem-ks",
+      "patch": {
+        "title": "Cloverleaf Bluestem: Data Center Rezoning Active; Initial Power-Site Application Withdrawn",
+        "description": "Cloverleaf’s September 28, 2026 statement withdrew its initial power-generation application while keeping Bluestem’s data-center rezoning active. Its project page commits to closed-loop cooling; the prior 240 MW and $1.5B claims lack current primary support.",
+        "sourceUrl": "https://bluestemdatacenter.com/",
+        "references": [
+          {
+            "url": "https://bluestemdatacenter.com/cloverleaf-evaluating-alternative-locations-for-power-generation-facility/",
+            "title": "Cloverleaf Evaluating Alternative Locations for Power Generation Facility",
+            "confidence": 95,
+            "publishedDate": "2026-09-28"
+          },
+          {
+            "url": "https://bluestemdatacenter.com/",
+            "title": "Project Bluestem — Cloverleaf Infrastructure",
+            "confidence": 95,
+            "publishedDate": null
+          }
+        ],
+        "longFormSummary": "<ul><li>Cloverleaf is evaluating alternative generation locations. Withdrawal of the power application is not withdrawal of the data-center rezoning.<cite data-ref=\"https://bluestemdatacenter.com/cloverleaf-evaluating-alternative-locations-for-power-generation-facility/\"></cite></li><li>The developer describes closed-loop cooling with a one-time fill and office-like ongoing water use. No daily quantity, 430-acre scope or current exact budget is stated.<cite data-ref=\"https://bluestemdatacenter.com/\"></cite></li><li>Timeline: December 1, 2028 remains an unverified legacy estimate; a current service schedule is not published in these sources.<cite data-ref=\"https://bluestemdatacenter.com/cloverleaf-evaluating-alternative-locations-for-power-generation-facility/\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "estimated",
+        "allDay": true,
+        "allDayStated": false,
+        "utcStartDateTime": "2028-12-01T00:00:00.000Z",
+        "dateConfidenceReasoning": "Unverified legacy December 2028 date; current developer statement establishes permitting status, not COD."
+      },
+      "power": "delete",
+      "datacenter": {
+        "cooling": "Developer commitment to closed-loop cooling with one-time fill",
+        "sourceUrl": "https://bluestemdatacenter.com/",
+        "note": "Initial generation-site application withdrawn September 28, 2026; data-center rezoning remains active. Removed unverified acreage and water estimate."
+      },
+      "clearEnergy": true,
+      "gaps": [
+        "Verify latest county rezoning, replacement power site, capacity, exact parcel and COD.",
+        "Existing pin 16305 also covers Project Bluestem. Association-aware consolidation remains open; operator homepage used as source, dated statement retained in references."
+      ]
+    },
+    {
+      "id": 16361,
+      "key": "dc-sdc-va04-prince-william-va",
+      "patch": {
+        "title": "SDC VA-04: Reported 300 MW, 70-Acre Prince William Site",
+        "description": "DCD’s November 2025 report lists SDC VA-04 as a 70-acre, 300 MW Prince William site. It does not establish the prior $2.1B price, 120 acres, 3.53 million sqft or hardware stats incorrectly matched to STACK NVA02.",
+        "sourceUrl": "https://www.datacenterdynamics.com/en/news/sdc-capital-partners-buys-97-acres-of-data-center-zoned-land-in-virginia-for-615-million/",
+        "references": [
+          {
+            "url": "https://www.datacenterdynamics.com/en/news/sdc-capital-partners-buys-97-acres-of-data-center-zoned-land-in-virginia-for-615-million/",
+            "title": "SDC Capital Partners buys 97-acres of data center-zoned land in Virginia for $615 million",
+            "confidence": 95,
+            "publishedDate": "2025-11-07"
+          }
+        ],
+        "longFormSummary": "<ul><li>The article’s portfolio list explicitly identifies VA-04 at 70 acres/300 MW. Its $615 million purchase concerns a different 97-acre Leesburg site and is not assigned to VA-04.<cite data-ref=\"https://www.datacenterdynamics.com/en/news/sdc-capital-partners-buys-97-acres-of-data-center-zoned-land-in-virginia-for-615-million/\"></cite></li><li>The old chip/H100/generator figures were matched to STACK NVA02 and are removed. No current standalone VA-04 budget or commissioning date is established.<cite data-ref=\"https://www.datacenterdynamics.com/en/news/sdc-capital-partners-buys-97-acres-of-data-center-zoned-land-in-virginia-for-615-million/\"></cite></li><li>Timeline: August 1, 2027 remains an unverified legacy estimate. The county Wellington Glen report found during research is not a proven VA-04 identity match.<cite data-ref=\"https://www.datacenterdynamics.com/en/news/sdc-capital-partners-buys-97-acres-of-data-center-zoned-land-in-virginia-for-615-million/\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "estimated",
+        "allDay": true,
+        "allDayStated": false,
+        "utcStartDateTime": "2027-08-01T00:00:00.000Z",
+        "dateConfidenceReasoning": "Unverified legacy August 2027 estimate; historical reported portfolio listing gives no COD."
+      },
+      "power": {
+        "megawatts": 300,
+        "kind": "usage",
+        "sourceUrl": "https://www.datacenterdynamics.com/en/news/sdc-capital-partners-buys-97-acres-of-data-center-zoned-land-in-virginia-for-615-million/",
+        "note": "Reported 2025 marketed site capacity, not verified energized IT load."
+      },
+      "datacenter": {
+        "acres": 70,
+        "sourceUrl": "https://www.datacenterdynamics.com/en/news/sdc-capital-partners-buys-97-acres-of-data-center-zoned-land-in-virginia-for-615-million/",
+        "note": "Historical SDC VA-04 portfolio listing. Removed incorrectly matched STACK NVA02 chips/H100/generators/sqft, unverified cooling and scaled water."
+      },
+      "clearEnergy": true,
+      "gaps": [
+        "Operator portfolio URL inaccessible. Obtain VA-04-specific parcel/filings and schedule; do not substitute Wellington Glen or STACK NVA02."
+      ]
+    },
+    {
+      "id": 16362,
+      "key": "dc-townsite-boulder-city-nv",
+      "patch": {
+        "title": "Townsite: Federal Data Center Authorization Stayed September 1, 2026",
+        "description": "The Interior Board of Land Appeals stayed the June 26 federal authorization for Townsite’s data center on September 1, 2026. This federal parcel is separate from the 88.5-acre city-land application withdrawn in July; the old $1.2B budget is removed.",
+        "sourceUrl": "https://biologicaldiversity.org/programs/public_lands/pdfs/2026-0213-Boulder-City-Stay-Granted.pdf",
+        "references": [
+          {
+            "url": "https://biologicaldiversity.org/programs/public_lands/pdfs/2026-0213-Boulder-City-Stay-Granted.pdf",
+            "title": "IBLA 2026-0213 and 2026-0216 — Stay Granted; Appeals Consolidated and Expedited",
+            "confidence": 95,
+            "publishedDate": "2026-09-01"
+          },
+          {
+            "url": "https://www.flybouldercity.com/1174/TS2-Data-Center-Proposal-Withdrawn-76202",
+            "title": "TS2 Data Center Proposal (Withdrawn 7.6.2026) — Boulder City",
+            "confidence": 95,
+            "publishedDate": null
+          }
+        ],
+        "longFormSummary": "<ul><li>The signed IBLA order grants a stay of BLM authorization and consolidates the appeals. It is an administrative appeals order, not a final ruling cancelling the project.<cite data-ref=\"https://biologicaldiversity.org/programs/public_lands/pdfs/2026-0213-Boulder-City-Stay-Granted.pdf\"></cite></li><li>Boulder City’s page describes the earlier city-land proposal: two buildings, 167 MW peak demand and a dedicated project-funded 230kV line. Those specifications must not be assumed unchanged on the separate federal parcel.<cite data-ref=\"https://www.flybouldercity.com/1174/TS2-Data-Center-Proposal-Withdrawn-76202\"></cite></li><li>Timeline: September 1, 2026 represents the confirmed stay event. The unsupported June 2028 opening estimate, scaled water, power reading and acreage are removed.<cite data-ref=\"https://biologicaldiversity.org/programs/public_lands/pdfs/2026-0213-Boulder-City-Stay-Granted.pdf\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "confirmed",
+        "allDay": true,
+        "allDayStated": false,
+        "utcStartDateTime": "2026-09-01T00:00:00.000Z",
+        "dateConfidenceReasoning": "Confirmed date of signed IBLA stay order, replacing unverified planned-opening date.",
+        "tags": [
+          "Cleanview",
+          "Data Centers",
+          "Nevada",
+          "Clark County",
+          "Townsite",
+          "Permit Stayed"
+        ]
+      },
+      "power": "delete",
+      "datacenter": "delete",
+      "clearEnergy": true,
+      "gaps": [
+        "Verify final appeal outcome, precise federal parcel and current amended design/capacity. Existing coordinates/media are approximate and not certified to either parcel."
+      ]
+    },
+    {
+      "id": 16363,
+      "key": "solar-ashton-energy-center-nv",
+      "delete": true,
+      "gaps": [
+        "Held: historical queue 2290 reported withdrawn April 25, 2025. No primary record links the claimed Ashton identity/developer/Beatty parcel to the supplied BLM project 2021541. Current CAISO workbook has no 2290 row. Do not present it as an active permitted $2B facility."
+      ],
+      "sourcesChecked": [
+        "https://www.interconnection.fyi/project/caiso-54668",
+        "https://www.caiso.com/documents/publicqueuereport.xlsx",
+        "https://eplanning.blm.gov/eplanning-ui/project/2021541/510"
+      ],
+      "researchFinding": "Real historical queue lead is not proof of the published facility identity or a scheduled project. Restore only after primary identity/parcel evidence."
+    },
+    {
+      "id": 16364,
+      "key": "solar-intersect-aurelius-tx",
+      "patch": {
+        "title": "Aurelius Solar: ERCOT 1,124.24 MW Queue Project; Target June 2028",
+        "description": "ERCOT’s September 2026 GIS report lists Aurelius Solar (29INR0003), IP Roman LLC, at 1,124.24 MW in Deaf Smith County, with an executed interconnection agreement and June 30, 2028 projected COD. No $1.3B budget is established.",
+        "sourceUrl": "https://www.ercot.com/misdownload/servlets/mirDownload?doclookupId=1281327706",
+        "references": [
+          {
+            "url": "https://www.ercot.com/misdownload/servlets/mirDownload?doclookupId=1281327706",
+            "title": "ERCOT GIS Report — September 2026",
+            "confidence": 95,
+            "publishedDate": "2026-10-01"
+          }
+        ],
+        "longFormSummary": "<ul><li>Project Details – Large Gen row 1557 identifies the project, capacity, developer entity and Deaf Smith 345kV connection. IA execution is October 9, 2025.<cite data-ref=\"https://www.ercot.com/misdownload/servlets/mirDownload?doclookupId=1281327706\"></cite></li><li>Timeline: June 30, 2028 is the developer-projected COD reported to ERCOT, not confirmed operation. Other Aurelius wind/solar requests remain separate; no complex-wide cost is inferred.<cite data-ref=\"https://www.ercot.com/misdownload/servlets/mirDownload?doclookupId=1281327706\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "estimated",
+        "allDay": true,
+        "allDayStated": false,
+        "utcStartDateTime": "2028-06-30T00:00:00.000Z",
+        "dateConfidenceReasoning": "ERCOT September 2026 GIS report row 1557 projected COD; estimated until actual commissioning evidence."
+      },
+      "power": {
+        "megawatts": 1124.24,
+        "kind": "generation",
+        "sourceUrl": "https://www.ercot.com/misdownload/servlets/mirDownload?doclookupId=1281327706",
+        "note": "Queue solar rating for 29INR0003 only; not summed with separate Aurelius requests."
+      },
+      "datacenter": null,
+      "clearEnergy": false,
+      "gaps": [
+        "Verify parent developer relationship, construction progress, published budget and parcel/media alignment."
+      ]
+    },
+    {
+      "id": 16365,
+      "key": "solar-plum-kings-ca",
+      "patch": {
+        "title": "PLUM: CAISO 1,040 MW Solar, 520 MW Storage; Target March 2031",
+        "description": "CAISO’s current public queue lists PLUM (1968) as active in Kings County, with 1,040 MW photovoltaic and 520 MW storage, limited to 1,000 MW net to grid. Its current online target is March 19, 2031; no $1.2B budget is established.",
+        "sourceUrl": "https://www.caiso.com/documents/publicqueuereport.xlsx",
+        "references": [
+          {
+            "url": "https://www.caiso.com/documents/publicqueuereport.xlsx",
+            "title": "CAISO Public Queue Report — downloaded October 23, 2026",
+            "confidence": 95,
+            "publishedDate": null
+          }
+        ],
+        "longFormSummary": "<ul><li>Grid GenerationQueue row 204 separately records solar MW, storage MW and net export. They are not additive operating generation; the entry is a request, not proof of construction approval.<cite data-ref=\"https://www.caiso.com/documents/publicqueuereport.xlsx\"></cite></li><li>Timeline: March 19, 2031 is the current queue target, replacing March 31 precision. Developer, exact parcel and capital budget are not disclosed in this record.<cite data-ref=\"https://www.caiso.com/documents/publicqueuereport.xlsx\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "estimated",
+        "allDay": true,
+        "allDayStated": false,
+        "utcStartDateTime": "2031-03-19T00:00:00.000Z",
+        "dateConfidenceReasoning": "Current online date in CAISO queue 1968, row 204; developer target remains estimated."
+      },
+      "power": {
+        "megawatts": 1040,
+        "kind": "generation",
+        "sourceUrl": "https://www.caiso.com/documents/publicqueuereport.xlsx",
+        "note": "Queue photovoltaic rating; separate storage 520 MW, net grid export 1000 MW."
+      },
+      "datacenter": null,
+      "clearEnergy": false,
+      "gaps": [
+        "Obtain operator identity, county permits, site geometry, budget and actual construction status."
+      ]
+    },
+    {
+      "id": 16366,
+      "key": "solar-spectra-scurry-tx",
+      "patch": {
+        "title": "Spectra Solar: ERCOT 1,200 MW Proposal; Target November 16, 2028",
+        "description": "ERCOT’s September 2026 report lists Spectra Solar (28INR0486), SE DC Devco, at 1,200 MW in Scurry County, with an interconnection agreement and projected November 16, 2028 COD. The earlier $1.1B budget is unsupported.",
+        "sourceUrl": null,
+        "references": [
+          {
+            "url": "https://www.ercot.com/misdownload/servlets/mirDownload?doclookupId=1281327706",
+            "title": "ERCOT GIS Report — September 2026",
+            "confidence": 95,
+            "publishedDate": "2026-10-01"
+          }
+        ],
+        "longFormSummary": "<ul><li>Project Details – Large Gen row 1538 gives Galvani 345kV interconnection and IA signed December 29, 2025. No construction-start date or budget is populated.<cite data-ref=\"https://www.ercot.com/misdownload/servlets/mirDownload?doclookupId=1281327706\"></cite></li><li>Timeline: November 16, 2028 is projected COD, not an operational date. Third-party sites describing the project as operational misread future queue data.<cite data-ref=\"https://www.ercot.com/misdownload/servlets/mirDownload?doclookupId=1281327706\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "estimated",
+        "allDay": true,
+        "allDayStated": false,
+        "utcStartDateTime": "2028-11-16T00:00:00.000Z",
+        "dateConfidenceReasoning": "ERCOT September 2026 GIS row 1538 projected COD; no commissioning approval established."
+      },
+      "power": {
+        "megawatts": 1200,
+        "kind": "generation",
+        "sourceUrl": "https://www.ercot.com/misdownload/servlets/mirDownload?doclookupId=1281327706",
+        "note": "Queue 28INR0486 solar rating, not an operating plant."
+      },
+      "datacenter": null,
+      "clearEnergy": false,
+      "gaps": [
+        "Obtain site-specific filing and developer budget. Source field cleared because shared official report is cited in references rather than inventing project URL fragments."
+      ]
+    },
+    {
+      "id": 16367,
+      "key": "solar-wingtip-merced-ca",
+      "patch": {
+        "title": "Wingtip Solar 1: 1,176.1 MW Solar and Storage Queue Ratings; Target September 2032",
+        "description": "CAISO queue 1943 lists Wingtip Solar 1 as active in Merced County, with 1,176.1 MW each of solar and battery capacity and 1,150 MW net grid export. Its current online target is September 18, 2032, replacing the unsupported 2029 opening.",
+        "sourceUrl": null,
+        "references": [
+          {
+            "url": "https://www.caiso.com/documents/publicqueuereport.xlsx",
+            "title": "CAISO Public Queue Report — downloaded October 23, 2026",
+            "confidence": 95,
+            "publishedDate": null
+          }
+        ],
+        "longFormSummary": "<ul><li>Grid GenerationQueue row 194 gives Los Banos 500kV interconnection and executed IA. Battery and solar equipment ratings are separate and must not be summed as grid output.<cite data-ref=\"https://www.caiso.com/documents/publicqueuereport.xlsx\"></cite></li><li>Timeline: September 18, 2032 is the current queue online target, not guaranteed COD. The former $1.1 billion budget and permitting/construction claims were not verified.<cite data-ref=\"https://www.caiso.com/documents/publicqueuereport.xlsx\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "estimated",
+        "allDay": true,
+        "allDayStated": false,
+        "utcStartDateTime": "2032-09-18T00:00:00.000Z",
+        "dateConfidenceReasoning": "Current online date in CAISO active queue 1943, row 194; estimate, not confirmed operation."
+      },
+      "power": {
+        "megawatts": 1176.1,
+        "kind": "generation",
+        "sourceUrl": "https://www.caiso.com/documents/publicqueuereport.xlsx",
+        "note": "Solar equipment queue rating; storage also 1176.1 MW, net export 1150 MW."
+      },
+      "datacenter": null,
+      "clearEnergy": false,
+      "gaps": [
+        "Obtain named operator, county permit, budget and exact site; shared report cited in references with no fabricated unique URL."
+      ]
+    },
+    {
+      "id": 16368,
+      "key": "battery-quark-fresno-ca",
+      "delete": true,
+      "gaps": [
+        "Held: The published standalone 1,175 MW BESS identity is not established. Trackers instead describe Quark queue 2267 as a solar-plus-storage request with conflicting capacity summaries; no exact developer/parcel or county filing was verified."
+      ],
+      "sourcesChecked": [
+        "https://interxdata.com/states/california/counties/fresno/",
+        "https://www.caiso.com/documents/publicqueuereport.xlsx",
+        "https://www.co.fresno.ca.us/departments/public-works-planning"
+      ],
+      "researchFinding": "The published standalone 1,175 MW BESS identity is not established. Trackers instead describe Quark queue 2267 as a solar-plus-storage request with conflicting capacity summaries; no exact developer/parcel or county filing was verified."
+    },
+    {
+      "id": 16369,
+      "key": "dc-alcove-osawatomie-ks",
+      "patch": {
+        "title": "Alcove Project Catalyst: Proposed 500+ MW, 283-Acre Osawatomie Campus",
+        "description": "Alcove’s current project page describes Project Catalyst with MDH Partners: 283 acres, up to seven buildings and approximately 3.3 million square feet, scaling toward 500-plus MW. Construction could start as early as 2028 after approvals; that is not an opening date.",
+        "sourceUrl": "https://www.alcovedevelopment.com/projects/project-catalyst",
+        "references": [
+          {
+            "url": "https://www.alcovedevelopment.com/projects/project-catalyst",
+            "title": "Project Catalyst — Alcove Development",
+            "confidence": 95,
+            "publishedDate": null
+          },
+          {
+            "url": "https://www.osawatomieks.org/sites/g/files/vyhlif7581/f/uploads/project_catalyst_press_release_5.29.2026.pdf",
+            "title": "Alcove Development and City of Osawatomie — Project Catalyst Announcement",
+            "confidence": 95,
+            "publishedDate": "2026-05-29"
+          }
+        ],
+        "longFormSummary": "<ul><li>The site is at 335th Street and Osawatomie Road. The developer publishes an approximate vicinity point of 38.5198, -94.9367; it is not a surveyed corner.<cite data-ref=\"https://www.alcovedevelopment.com/projects/project-catalyst\"></cite></li><li>Current scope supersedes the former 150 MW/220 acres/900,000 sqft claims. The old $1.1 billion price and 1M gal/day water claim lack support in the opened current page and are cleared.<cite data-ref=\"https://www.alcovedevelopment.com/projects/project-catalyst\"></cite></li><li>Timeline: June 1, 2028 remains an unverified legacy COD marker. The operator describes construction as early as 2028 and applications planned late 2026, contingent on approvals.<cite data-ref=\"https://www.alcovedevelopment.com/projects/project-catalyst\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "estimated",
+        "allDay": true,
+        "allDayStated": false,
+        "utcStartDateTime": "2028-06-01T00:00:00.000Z",
+        "dateConfidenceReasoning": "Unverified legacy June 2028 COD. Current operator says construction could begin as early as 2028, not operation.",
+        "latitude": 38.5198,
+        "longitude": -94.9367,
+        "address": "335th Street and Osawatomie Road, Osawatomie, Kansas, USA",
+        "media": [
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-large-2026-10-23/dc-alcove-osawatomie-ks-aerial.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 1000
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-large-2026-10-23/dc-alcove-osawatomie-ks-topo.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 1000
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-large-2026-10-23/dc-alcove-osawatomie-ks-relief.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 1000
+          }
+        ]
+      },
+      "power": {
+        "megawatts": 500,
+        "kind": "usage",
+        "sourceUrl": "https://www.alcovedevelopment.com/projects/project-catalyst",
+        "note": "Lower bound of operator phased 500+ MW interconnection plan; not current IT load."
+      },
+      "datacenter": {
+        "acres": 283,
+        "sqft": 3300000,
+        "buildings": 7,
+        "cooling": "Operator-described air-cooled campus",
+        "sourceUrl": "https://www.alcovedevelopment.com/projects/project-catalyst",
+        "note": "Up to seven buildings/about 3.3M sqft proposed. No verified 1M gal/day demand. Removed prior unsupported water reading; map point is approximate."
+      },
+      "clearEnergy": true,
+      "gaps": [
+        "Verify actual application, water permit, phased power delivery and COD/budget; published vicinity point is not parcel geometry."
+      ],
+      "mediaReplaced": true
+    },
+    {
+      "id": 16370,
+      "key": "dc-archer-faribault-mn",
+      "patch": {
+        "title": "Archer Faribault: 120 MW Potential Power; Supplemental Environmental Work Through March 2027",
+        "description": "Archer lists an 84-acre Faribault campus with 120 MW potential power scaling over about 36 months and a 500,000-square-foot data-hall concept. Faribault records a June 2026 appeals ruling and an extension through March 2027 for supplemental environmental work.",
+        "sourceUrl": "https://www.archerdatacenters.com/minneapolis",
+        "references": [
+          {
+            "url": "https://www.archerdatacenters.com/minneapolis",
+            "title": "Minneapolis — Archer Datacenters",
+            "confidence": 95,
+            "publishedDate": null
+          },
+          {
+            "url": "https://www.faribaultmn.gov/815/Archer-Datacenters",
+            "title": "Archer Datacenters — City of Faribault",
+            "confidence": 95,
+            "publishedDate": null
+          }
+        ],
+        "longFormSummary": "<ul><li>The operator states 84 acres and 500,000 sqft data-hall capacity, replacing 130 acres/750,000 sqft. The 120 MW is potential power availability, not energized capacity.<cite data-ref=\"https://www.archerdatacenters.com/minneapolis\"></cite></li><li>The city records the June 8, 2026 appellate ruling requiring more information or an EIS, and July extension of EAW supplemental work to March 2027. This does not establish construction or COD.<cite data-ref=\"https://www.faribaultmn.gov/815/Archer-Datacenters\"></cite></li><li>Timeline: June 30, 2027 remains an unverified legacy opening estimate. The $950 million budget and generic water/cooling claims are cleared.<cite data-ref=\"https://www.faribaultmn.gov/815/Archer-Datacenters\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "estimated",
+        "allDay": true,
+        "allDayStated": false,
+        "utcStartDateTime": "2027-06-30T00:00:00.000Z",
+        "dateConfidenceReasoning": "Unverified legacy June 2027 COD. Environmental supplemental work extended to March 2027; relative power scaling does not anchor commissioning."
+      },
+      "power": {
+        "megawatts": 120,
+        "kind": "usage",
+        "sourceUrl": "https://www.archerdatacenters.com/minneapolis",
+        "note": "Total potential power availability scaling over about 36 months; not current load."
+      },
+      "datacenter": {
+        "acres": 84,
+        "sqft": 500000,
+        "sourceUrl": "https://www.archerdatacenters.com/minneapolis",
+        "note": "Conceptual data-hall area, not total campus gross floor area. Removed unsupported cooling and water estimates. City environmental review remains open."
+      },
+      "clearEnergy": true,
+      "gaps": [
+        "Obtain updated environmental decision, construction/RFS schedule, budget and exact parcel boundary."
+      ]
+    },
+    {
+      "id": 16371,
+      "key": "dc-google-lincoln-ne",
+      "patch": {
+        "title": "Google Lincoln: Data Center Online in 2026; Nebraska Investment Is Statewide",
+        "description": "Google’s current Nebraska page states that Lincoln’s data center comes online in 2026. Its $1.2 billion 2023 announcement covered Lincoln, Omaha and Papillion together, so the prior Lincoln-only $1.2B budget and 156 MW claim are removed.",
+        "sourceUrl": "https://www.datacenters.google/locations/nebraska/",
+        "references": [
+          {
+            "url": "https://www.datacenters.google/locations/nebraska/",
+            "title": "Nebraska, USA — Google Data Center Location",
+            "confidence": 95,
+            "publishedDate": null
+          }
+        ],
+        "longFormSummary": "<ul><li>Google lists Lincoln online in 2026 and more than $15 billion invested across Nebraska. Neither statewide total is a verified standalone Lincoln construction budget.<cite data-ref=\"https://www.datacenters.google/locations/nebraska/\"></cite></li><li>The operator does not publish the pin’s 156 MW IT load, 600-acre site or daily water reading here; unsupported physical/consumption figures and dependent annual energy are removed.<cite data-ref=\"https://www.datacenters.google/locations/nebraska/\"></cite></li><li>Timeline: January 1, 2026 is year-only estimated precision for the published online year, replacing a future June 2027 opening claim. Exact first-service day remains unverified.<cite data-ref=\"https://www.datacenters.google/locations/nebraska/\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "estimated",
+        "allDay": true,
+        "allDayStated": false,
+        "utcStartDateTime": "2026-01-01T00:00:00.000Z",
+        "dateConfidenceReasoning": "Google operator timeline explicitly lists Lincoln online in 2026; January 1 is year-only precision, not confirmed opening day.",
+        "tags": [
+          "Cleanview",
+          "Data Centers",
+          "Google",
+          "Nebraska",
+          "Lancaster County",
+          "Operational"
+        ]
+      },
+      "power": "delete",
+      "datacenter": "delete",
+      "clearEnergy": true,
+      "gaps": [
+        "Verify exact first-service date, site/phase capacity, parcel and independently published campus budget."
+      ]
+    },
+    {
+      "id": 16372,
+      "key": "dc-google-storey-county-nv",
+      "patch": {
+        "title": "Google Storey County: Operating Campus; Primary Sources Differ on 2020/2021 Completion",
+        "description": "Google confirms Storey County is operating. Its location page says built in 2021, while its Nevada economic-impact page says construction completed in 2020. The unsupported June 2027 opening, 174 MW and $1.2B campus price are removed.",
+        "sourceUrl": null,
+        "references": [
+          {
+            "url": "https://datacenters.google/locations/storey-county-nevada/",
+            "title": "Storey County, Nevada — Google Data Center Location",
+            "confidence": 95,
+            "publishedDate": null
+          },
+          {
+            "url": "https://economicimpact.google/state/nv/",
+            "title": "Google Economic Impact — Nevada",
+            "confidence": 95,
+            "publishedDate": null
+          },
+          {
+            "url": "https://www.datacenters.google/discover-more/photo-gallery/",
+            "title": "Google Data Centers — Photo gallery, Storey County, Nevada",
+            "confidence": 95,
+            "publishedDate": null
+          }
+        ],
+        "longFormSummary": "<ul><li>Google’s location page gives 2021 construction and more than $6B statewide investment. Its economic-impact page gives 2020 completion and primarily air-cooled design; the year discrepancy remains unresolved.<cite data-ref=\"https://datacenters.google/locations/storey-county-nevada/\"></cite></li><li>Neither source establishes 174 MW site IT load, 1,210 acres or a $1.2 billion campus budget. Statewide investment is not apportioned to this site.<cite data-ref=\"https://economicimpact.google/state/nv/\"></cite></li><li>Timeline: January 1, 2021 is year-only estimated precision using the dedicated location page; 2020 remains conflicting primary evidence. This represents the existing campus, not an invented future phase.<cite data-ref=\"https://datacenters.google/locations/storey-county-nevada/\"></cite></li><li>Google Storey County campus: two data-center buildings and generator yard in the Flowery Mountains. Operator gallery photograph, not a current construction-status claim. Credit: Google.<cite data-ref=\"https://www.datacenters.google/discover-more/photo-gallery/\"></cite></li><li>Dry coolers at Google’s Storey County campus. Operator gallery photograph; no cooling capacity or water demand inferred. Credit: Google.<cite data-ref=\"https://www.datacenters.google/discover-more/photo-gallery/\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "estimated",
+        "allDay": true,
+        "allDayStated": false,
+        "utcStartDateTime": "2021-01-01T00:00:00.000Z",
+        "dateConfidenceReasoning": "Dedicated operator page says built 2021; another Google page says completed 2020. Year placeholder remains estimated pending reconciliation.",
+        "tags": [
+          "Cleanview",
+          "Data Centers",
+          "Google",
+          "Nevada",
+          "Storey County",
+          "Operational"
+        ],
+        "media": [
+          {
+            "id": 24195,
+            "thumbName": "84741f67-3846-49b5-93fd-b1a19208dcf3.jpeg",
+            "thumbWidth": 1000,
+            "thumbHeight": 625,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/google-storey-county-nv-usgs-aerial.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 1000,
+            "type": "1"
+          },
+          {
+            "id": 24196,
+            "thumbName": "615a88e6-3870-49c8-b9b4-93af41b7db67.jpeg",
+            "thumbWidth": 1000,
+            "thumbHeight": 625,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/google-storey-county-nv-usgs-topo.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 1000,
+            "type": "1"
+          },
+          {
+            "id": 24197,
+            "thumbName": "88e5bcb1-084f-4df2-96a7-b6271cf87739.jpeg",
+            "thumbWidth": 1000,
+            "thumbHeight": 625,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/google-storey-county-nv-usgs-regional.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 1000,
+            "type": "1"
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-large-2026-10-23/google-storey-campus.jpg",
+            "originalWidth": 5280,
+            "originalHeight": 3956
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-large-2026-10-23/google-storey-dry-coolers.jpg",
+            "originalWidth": 11648,
+            "originalHeight": 7768
+          }
+        ]
+      },
+      "power": "delete",
+      "datacenter": {
+        "cooling": "Google economic-impact page describes primarily air-cooled campus",
+        "sourceUrl": "https://economicimpact.google/state/nv/",
+        "note": "Removed unsupported acreage and capacity-scaled water. Primary construction years conflict: dedicated location 2021 vs impact page 2020."
+      },
+      "clearEnergy": true,
+      "gaps": [
+        "Resolve operator 2020/2021 completion discrepancy, phase-specific capacity/budget and exact property boundary.",
+        "Existing operational campus pin7280 also covers Storey County. Duplicate/phase consolidation remains open; canonical operator URL retained in references without manufacturing a distinct URL."
+      ],
+      "mediaReplaced": true,
+      "mediaAdded": 2
+    },
+    {
+      "id": 16373,
+      "key": "dc-scannell-monticello-mn",
+      "patch": {
+        "title": "Scannell Monticello: 106-Acre Concept; Western Site Re-Guided to Housing",
+        "description": "Monticello’s official project page describes a 1.3-million-square-foot concept on 106 acres with no formal development or annexation application. In May 2026 the council re-guided about 68 western acres toward housing; about 38 eastern acres remain light industrial.",
+        "sourceUrl": "https://monticellomn.gov/754/Scannell-Technology-Park",
+        "references": [
+          {
+            "url": "https://monticellomn.gov/754/Scannell-Technology-Park",
+            "title": "Scannell Technology Park — City of Monticello",
+            "confidence": 95,
+            "publishedDate": null
+          }
+        ],
+        "longFormSummary": "<ul><li>The city distinguishes Scannell from the separate Monticello Tech/Industrial proposal. Scannell remains concept-stage; a comprehensive-plan change is not a development permit.<cite data-ref=\"https://monticellomn.gov/754/Scannell-Technology-Park\"></cite></li><li>The former 180-acre, 150 MW and $1.3 billion figures are not substantiated in this official record and are removed. Historical concept area remains identified as proposed, not approved.<cite data-ref=\"https://monticellomn.gov/754/Scannell-Technology-Park\"></cite></li><li>Timeline: June 1, 2027 remains an unverified legacy estimate. No formal annexation or development application has been received according to the city page.<cite data-ref=\"https://monticellomn.gov/754/Scannell-Technology-Park\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "estimated",
+        "allDay": true,
+        "allDayStated": false,
+        "utcStartDateTime": "2027-06-01T00:00:00.000Z",
+        "dateConfidenceReasoning": "Unverified legacy June 2027 date; official city record says concept only and no formal application."
+      },
+      "power": "delete",
+      "datacenter": {
+        "acres": 106,
+        "sqft": 1300000,
+        "sourceUrl": "https://monticellomn.gov/754/Scannell-Technology-Park",
+        "note": "Historical concept area, not approved buildable scope. May 2026 land guidance leaves about 38 acres light industrial and about 68 acres residential/mixed."
+      },
+      "clearEnergy": true,
+      "gaps": [
+        "Verify any revised Scannell concept/application after residential re-guidance, capacity, schedule and parcel boundary."
+      ]
+    },
+    {
+      "id": 16374,
+      "key": "dc-switch-citadel-storey-nv",
+      "delete": true,
+      "gaps": [
+        "Held: The operating Citadel campus is real, but this separately dated 118 MW / $1B expansion is not established by a phase-specific operator announcement. Whole-campus design figures cannot validate this tracker slice."
+      ],
+      "sourcesChecked": [
+        "https://www.switch.com/switch-tahoe-reno-data-center-now-open/",
+        "https://www.switch.com/citadel/"
+      ],
+      "researchFinding": "The operating Citadel campus is real, but this separately dated 118 MW / $1B expansion is not established by a phase-specific operator announcement. Whole-campus design figures cannot validate this tracker slice."
+    },
+    {
+      "id": 16375,
+      "key": "solar-angeleno-los-angeles-ca",
+      "patch": {
+        "title": "Angeleno Solar Farm: 1,150 MW Solar and Battery Queue Ratings; Target End-2028",
+        "description": "CAISO queue 1625 lists Angeleno as active in Los Angeles County with 1,150 MW solar and 1,150 MW battery ratings, limited to 1,150 MW net grid output. Its current target is December 31, 2028; the $1.05B budget is unsupported.",
+        "sourceUrl": null,
+        "references": [
+          {
+            "url": "https://www.caiso.com/documents/publicqueuereport.xlsx",
+            "title": "CAISO Public Queue Report — downloaded October 23, 2026",
+            "confidence": 95,
+            "publishedDate": null
+          }
+        ],
+        "longFormSummary": "<ul><li>Grid GenerationQueue row 110 records storage first and photovoltaic second. The equal ratings do not mean 2,300 MW export. Vincent 500kV is the interconnection point and IA is executed.<cite data-ref=\"https://www.caiso.com/documents/publicqueuereport.xlsx\"></cite></li><li>Timeline: December 31, 2028 is a queue estimate, not confirmed COD. The record does not publish developer, capital cost or a permitted parcel.<cite data-ref=\"https://www.caiso.com/documents/publicqueuereport.xlsx\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "estimated",
+        "allDay": true,
+        "allDayStated": false,
+        "utcStartDateTime": "2028-12-31T00:00:00.000Z",
+        "dateConfidenceReasoning": "CAISO queue 1625 current online date; estimated developer target."
+      },
+      "power": {
+        "megawatts": 1150,
+        "kind": "generation",
+        "sourceUrl": "https://www.caiso.com/documents/publicqueuereport.xlsx",
+        "note": "Photovoltaic rating; separate battery also1150 MW, net export1150 MW."
+      },
+      "datacenter": null,
+      "clearEnergy": false,
+      "gaps": [
+        "Obtain project-specific operator/county records, budget and site location; public queue evidence alone does not certify construction."
+      ]
+    },
+    {
+      "id": 16376,
+      "key": "solar-boson-kern-ca",
+      "delete": true,
+      "gaps": [
+        "Held: Historical Boson queue 2289 is reported withdrawn December 9, 2025. No primary permit links the claimed $2.1B Kern facility and parcel to that queue lead."
+      ],
+      "sourcesChecked": [
+        "https://www.interconnection.fyi/project/caiso-54632",
+        "https://www.caiso.com/documents/publicqueuereport.xlsx",
+        "https://www.kerncounty.com/government/planning-and-natural-resources/planning/notices-of-preparation"
+      ],
+      "researchFinding": "Historical Boson queue 2289 is reported withdrawn December 9, 2025. No primary permit links the claimed $2.1B Kern facility and parcel to that queue lead."
+    },
+    {
+      "id": 16377,
+      "key": "solar-intersect-ross-refugio-tx",
+      "patch": {
+        "title": "Ross Solar: 1,025.57 MW ERCOT Queue Request; Target July 2027",
+        "description": "ERCOT’s September 2026 report lists Ross Solar (26INR0155), S&S Renewables LLC, in Refugio County at 1,025.57 MW with July 31, 2027 projected COD. It does not establish the old Intersect attribution or $1.2B cost.",
+        "sourceUrl": null,
+        "references": [
+          {
+            "url": "https://www.ercot.com/misdownload/servlets/mirDownload?doclookupId=1281327706",
+            "title": "ERCOT GIS Report — September 2026",
+            "confidence": 95,
+            "publishedDate": "2026-10-01"
+          }
+        ],
+        "longFormSummary": "<ul><li>Project Details – Large Gen row 803 identifies S&amp;S Renewables and an Angstrom–Static 345kV tap. The report lists an IA but no construction start; ultimate parent/developer relationship needs verification.<cite data-ref=\"https://www.ercot.com/misdownload/servlets/mirDownload?doclookupId=1281327706\"></cite></li><li>Timeline: July 31, 2027 is projected COD, replacing June 2029. County-level map position does not prove a parcel; price is cleared.<cite data-ref=\"https://www.ercot.com/misdownload/servlets/mirDownload?doclookupId=1281327706\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "estimated",
+        "allDay": true,
+        "allDayStated": false,
+        "utcStartDateTime": "2027-07-31T00:00:00.000Z",
+        "dateConfidenceReasoning": "ERCOT September 2026 GIS row803 projected COD; remains estimated.",
+        "company": "S&S Renewables LLC",
+        "companyWikiUrl": null,
+        "tags": [
+          "Cleanview",
+          "Solar",
+          "Planned",
+          "Texas",
+          "Refugio County",
+          "ERCOT",
+          "S&S Renewables"
+        ]
+      },
+      "power": {
+        "megawatts": 1025.57,
+        "kind": "generation",
+        "sourceUrl": "https://www.ercot.com/misdownload/servlets/mirDownload?doclookupId=1281327706",
+        "note": "Queue26INR0155 solar rating; not measured generation."
+      },
+      "datacenter": null,
+      "clearEnergy": false,
+      "gaps": [
+        "Verify ultimate developer/parent without assuming Intersect, budget, current construction and exact parcel."
+      ]
+    },
+    {
+      "id": 16378,
+      "key": "solar-permian1-pecos-tx",
+      "patch": {
+        "title": "Permian I Solar: 1,125.73 MW ERCOT Request, No IA; Target June 2030",
+        "description": "ERCOT’s September 2026 report identifies Permian I Solar (31INR0018), S&S Renewables LLC, at 1,125.73 MW in Pecos County. The entry has no interconnection agreement and projects June 30, 2030 COD; the former $1.3B budget is removed.",
+        "sourceUrl": null,
+        "references": [
+          {
+            "url": "https://www.ercot.com/misdownload/servlets/mirDownload?doclookupId=1281327706",
+            "title": "ERCOT GIS Report — September 2026",
+            "confidence": 95,
+            "publishedDate": "2026-10-01"
+          }
+        ],
+        "longFormSummary": "<ul><li>Project Details – Large Gen row1781 identifies the White Baker–Bottlebrush345kV tap and a no-IA study status. Separate wind and gas requests are not added to this solar capacity.<cite data-ref=\"https://www.ercot.com/misdownload/servlets/mirDownload?doclookupId=1281327706\"></cite></li><li>Timeline: June30,2030 is a projected queue date. The original tax-agreement link was not verified as this exact project and is replaced by explicit queue references.<cite data-ref=\"https://www.ercot.com/misdownload/servlets/mirDownload?doclookupId=1281327706\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "estimated",
+        "allDay": true,
+        "allDayStated": false,
+        "utcStartDateTime": "2030-06-30T00:00:00.000Z",
+        "dateConfidenceReasoning": "ERCOT September2026 GIS row1781 projected COD; noIA, estimate only.",
+        "company": "S&S Renewables LLC",
+        "companyWikiUrl": null
+      },
+      "power": {
+        "megawatts": 1125.73,
+        "kind": "generation",
+        "sourceUrl": "https://www.ercot.com/misdownload/servlets/mirDownload?doclookupId=1281327706",
+        "note": "Queue31INR0018 solar request only; no executed IA or construction evidence."
+      },
+      "datacenter": null,
+      "clearEnergy": false,
+      "gaps": [
+        "Obtain precise developer/parcel/filings, budget and actual interconnection progress; do not treat projected2030 as guaranteed."
+      ]
+    },
+    {
+      "id": 16379,
+      "key": "solar-muon-fresno-ca",
+      "delete": true,
+      "gaps": [
+        "Held: Muon queue 2266 is a real tracker lead, but its claimed $2B facility, developer and exact parcel were not linked to an opened primary permit. Tracker equipment totals and net export differ; the cited CEQAnet record did not establish identity."
+      ],
+      "sourcesChecked": [
+        "https://www.interconnection.fyi/project/caiso-54634",
+        "https://www.caiso.com/documents/publicqueuereport.xlsx",
+        "https://ceqanet.opr.ca.gov/Project/2024060512"
+      ],
+      "researchFinding": "Muon queue 2266 is a real tracker lead, but its claimed $2B facility, developer and exact parcel were not linked to an opened primary permit. Tracker equipment totals and net export differ; the cited CEQAnet record did not establish identity."
+    },
+    {
+      "id": 16380,
+      "key": "battery-zeus-armstrong-tx",
+      "patch": {
+        "title": "Zeus Armstrong BESS: 1,043.08 MW ERCOT Request, No IA; Target 2028",
+        "description": "ERCOT’s September 2026 GIS report lists Zeus Armstrong BESS (25INR0587) in Armstrong County at 1,043.08 MW, with projected COD 2028-04-17. Study status is screening completed and FIS started, with no interconnection agreement; the former $950 million price is removed.",
+        "sourceUrl": null,
+        "references": [
+          {
+            "url": "https://www.ercot.com/misdownload/servlets/mirDownload?doclookupId=1281327706",
+            "title": "ERCOT GIS Report — September 2026",
+            "confidence": 95,
+            "publishedDate": "2026-10-01"
+          }
+        ],
+        "longFormSummary": "<ul><li>Project Details – Large Gen row 728 identifies Armstrong BESS, LLC. This is the battery request, separate from the similarly named solar request; power is storage, not generation.<cite data-ref=\"https://www.ercot.com/misdownload/servlets/mirDownload?doclookupId=1281327706\"></cite></li><li>No MWh duration, construction start or permitted parcel is established by this queue entry.<cite data-ref=\"https://www.ercot.com/misdownload/servlets/mirDownload?doclookupId=1281327706\"></cite></li><li>Timeline: 2028-04-17 is projected COD in the queue, replacing the unsupported April 30 date. It is not guaranteed operation.<cite data-ref=\"https://www.ercot.com/misdownload/servlets/mirDownload?doclookupId=1281327706\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "estimated",
+        "allDay": true,
+        "allDayStated": false,
+        "utcStartDateTime": "2028-04-17T00:00:00.000Z",
+        "dateConfidenceReasoning": "ERCOT September 2026 row 728, 25INR0587 projected COD; estimate with no IA.",
+        "company": "Armstrong BESS, LLC",
+        "companyWikiUrl": null
+      },
+      "power": {
+        "megawatts": 1043.08,
+        "kind": "storage",
+        "sourceUrl": "https://www.ercot.com/misdownload/servlets/mirDownload?doclookupId=1281327706",
+        "note": "Queue 25INR0587; battery discharge rating, no MWh duration published."
+      },
+      "datacenter": null,
+      "clearEnergy": false,
+      "gaps": [
+        "Verify parent/developer attribution, exact parcel, permitting, duration, budget and FIS/IA progress."
+      ]
+    },
+    {
+      "id": 16381,
+      "key": "battery-zeus-mitchell-tx",
+      "patch": {
+        "title": "Zeus Mitchell BESS: 1,042.94 MW ERCOT Request, No IA; Target 2029",
+        "description": "ERCOT’s September 2026 GIS report lists Zeus Mitchell BESS (25INR0589) in Mitchell County at 1,042.94 MW, with projected COD 2029-04-17. Study status is screening completed and FIS started, with no interconnection agreement; the former $950 million price is removed.",
+        "sourceUrl": null,
+        "references": [
+          {
+            "url": "https://www.ercot.com/misdownload/servlets/mirDownload?doclookupId=1281327706",
+            "title": "ERCOT GIS Report — September 2026",
+            "confidence": 95,
+            "publishedDate": "2026-10-01"
+          }
+        ],
+        "longFormSummary": "<ul><li>Project Details – Large Gen row 730 identifies Mitchell BESS. This is the battery request, separate from the similarly named solar request; power is storage, not generation.<cite data-ref=\"https://www.ercot.com/misdownload/servlets/mirDownload?doclookupId=1281327706\"></cite></li><li>Mitchell BESS II (26INR0686) is a separate queue request and must not be merged with Mitchell BESS (25INR0589). No duration or energy capacity is established here.<cite data-ref=\"https://www.ercot.com/misdownload/servlets/mirDownload?doclookupId=1281327706\"></cite></li><li>Timeline: 2029-04-17 is projected COD in the queue, replacing the unsupported April 30 date. It is not guaranteed operation.<cite data-ref=\"https://www.ercot.com/misdownload/servlets/mirDownload?doclookupId=1281327706\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "estimated",
+        "allDay": true,
+        "allDayStated": false,
+        "utcStartDateTime": "2029-04-17T00:00:00.000Z",
+        "dateConfidenceReasoning": "ERCOT September 2026 row 730, 25INR0589 projected COD; estimate with no IA.",
+        "company": "Mitchell BESS",
+        "companyWikiUrl": null
+      },
+      "power": {
+        "megawatts": 1042.94,
+        "kind": "storage",
+        "sourceUrl": "https://www.ercot.com/misdownload/servlets/mirDownload?doclookupId=1281327706",
+        "note": "Queue 25INR0589; battery discharge rating, no MWh duration published."
+      },
+      "datacenter": null,
+      "clearEnergy": false,
+      "gaps": [
+        "Verify parent/developer attribution, exact parcel, permitting, duration, budget and FIS/IA progress."
+      ]
+    },
+    {
+      "id": 16382,
+      "key": "dc-chirisa-piscataway-nj",
+      "patch": {
+        "title": "Chirisa Piscataway PNJ-01/02: 20 Acres, 90 MW Utility Plan; 2027 Delivery",
+        "description": "Chirisa’s current page lists a 20-acre Piscataway campus, 90 MW power by mid-2026 and PNJ-01/02 reserved for 2027 delivery. Utility availability is distinct from data-center delivery. The prior 2026 opening and $750M site price are unsupported.",
+        "sourceUrl": "https://chirisatechnologyparks.com/",
+        "references": [
+          {
+            "url": "https://chirisatechnologyparks.com/",
+            "title": "Chirisa Technology Parks — Piscataway PNJ-01 / -02",
+            "confidence": 95,
+            "publishedDate": null
+          },
+          {
+            "url": "https://www.prnewswire.com/news-releases/blue-owl-chirisa-technology-parks-and-powerhouse-data-centers-announce-next-phase-of-5-billion-joint-venture-development-partnership-302466950.html",
+            "title": "Blue Owl, Chirisa Technology Parks and PowerHouse Data Centers Announce Next Phase of $5 Billion Joint Venture Development Partnership",
+            "confidence": 95,
+            "publishedDate": "2025-05-28"
+          }
+        ],
+        "longFormSummary": "<ul><li>The project combines reuse of an existing shell with an adjacent two-story greenfield development. The prior 30 acres and 550,000 sqft are not supported by the current operator listing.<cite data-ref=\"https://chirisatechnologyparks.com/\"></cite></li><li>The $5 billion joint venture spans multiple developments; it is not a verified Piscataway-only construction budget. No measured daily water consumption is published here.<cite data-ref=\"https://www.prnewswire.com/news-releases/blue-owl-chirisa-technology-parks-and-powerhouse-data-centers-announce-next-phase-of-5-billion-joint-venture-development-partnership-302466950.html\"></cite></li><li>Timeline: January 1, 2027 is a year-only placeholder for reserved 2027 delivery, not an exact opening or evidence that 90 MW is energized.<cite data-ref=\"https://chirisatechnologyparks.com/\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "estimated",
+        "allDay": true,
+        "allDayStated": false,
+        "utcStartDateTime": "2027-01-01T00:00:00.000Z",
+        "dateConfidenceReasoning": "Operator lists reserved 2027 delivery; January 1 expresses year-only precision."
+      },
+      "power": {
+        "megawatts": 90,
+        "kind": "usage",
+        "sourceUrl": "https://chirisatechnologyparks.com/",
+        "note": "Planned utility power availability by mid-2026, not commissioned IT load."
+      },
+      "datacenter": {
+        "acres": 20,
+        "sourceUrl": "https://chirisatechnologyparks.com/",
+        "note": "PNJ-01/02 adaptive reuse plus adjacent two-story greenfield development. No verified floor area, cooling or daily water reading."
+      },
+      "clearEnergy": true,
+      "gaps": [
+        "Verify delivery milestone, actual energized utility/IT capacity, project budget and address/parcel."
+      ]
+    },
+    {
+      "id": 16383,
+      "key": "dc-google-omaha-ne",
+      "patch": {
+        "title": "Google Omaha Campus: Operator Gives 2022 Build Year; 2028 Expansion Unverified",
+        "description": "Google identifies its Omaha campus with a 2022 build year. Its statewide investment figures cover several Nebraska locations. The old $900M / 87 MW expansion dated June 2028 is not established by a phase-specific operator announcement.",
+        "sourceUrl": null,
+        "references": [
+          {
+            "url": "https://www.datacenters.google/locations/nebraska/",
+            "title": "Nebraska, USA — Google Data Center Location",
+            "confidence": 95,
+            "publishedDate": null
+          }
+        ],
+        "longFormSummary": "<ul><li>Google’s timeline also describes the Omaha announcement in 2022. January 1, 2022 is a year-only construction/announcement marker, not a precise first-service date.<cite data-ref=\"https://www.datacenters.google/locations/nebraska/\"></cite></li><li>The prior chip counts, H100 equivalents, five generators, 700 sqft and daily water reading have no matched primary campus evidence and are removed with the dependent calculated energy.<cite data-ref=\"https://www.datacenters.google/locations/nebraska/\"></cite></li><li>Timeline: This pin now identifies the known Omaha campus and published 2022 milestone. A separately dated 2028 expansion needs its own primary phase evidence.<cite data-ref=\"https://www.datacenters.google/locations/nebraska/\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "estimated",
+        "allDay": true,
+        "allDayStated": false,
+        "utcStartDateTime": "2022-01-01T00:00:00.000Z",
+        "dateConfidenceReasoning": "Operator says Omaha built in 2022 and lists its announcement in that year. Year placeholder, not an exact operating date.",
+        "tags": [
+          "Cleanview",
+          "Data Centers",
+          "Google",
+          "Nebraska",
+          "Douglas County"
+        ]
+      },
+      "power": "delete",
+      "datacenter": "delete",
+      "clearEnergy": true,
+      "gaps": [
+        "Resolve build versus first-service milestone and exact date; verify any independently announced 2028 expansion, site budget and hardware."
+      ]
+    },
+    {
+      "id": 16384,
+      "key": "dc-meta-aiken-sc",
+      "patch": {
+        "title": "Meta Aiken: $800M+ Campus; Spring 2027 Target and Closed-Loop Cooling",
+        "description": "Meta’s current fact sheet gives an $800 million-plus Aiken investment and closed-loop liquid cooling. South Carolina’s announcement describes a 715,000-square-foot Sage Mill campus expected operational in spring 2027. The former $1.2B / 91 MW scope is removed.",
+        "sourceUrl": null,
+        "references": [
+          {
+            "url": "https://datacenters.atmeta.com/asset/aiken-data-center-info-sheet/",
+            "title": "Meta Aiken Data Center — Information Sheet",
+            "confidence": 95,
+            "publishedDate": null
+          },
+          {
+            "url": "https://www.sccommerce.com/newsroom/meta-selects-aiken-county-first-south-carolina-data-center",
+            "title": "Meta selects Aiken County for first South Carolina data center",
+            "confidence": 95,
+            "publishedDate": "2024-08-29"
+          }
+        ],
+        "longFormSummary": "<ul><li>The cooling system is designed for no operational cooling water according to Meta. That does not establish zero total site water demand; Breezy Hill provides water and wastewater service.<cite data-ref=\"https://datacenters.atmeta.com/asset/aiken-data-center-info-sheet/\"></cite></li><li>The 137 MW of renewable projects described by Meta is off-site clean-energy addition, not published campus IT demand. The prior 450-acre area and capacity-scaled consumption lack support.<cite data-ref=\"https://datacenters.atmeta.com/asset/aiken-data-center-info-sheet/\"></cite></li><li>Timeline: April 1, 2027 is a seasonal placeholder for the state’s announced spring 2027 target, not a published exact opening day.<cite data-ref=\"https://www.sccommerce.com/newsroom/meta-selects-aiken-county-first-south-carolina-data-center\"></cite></li></ul>",
+        "price": 800000000,
+        "priceCurrency": "USD",
+        "priceLowerBound": 800000000,
+        "priceUpperBound": null,
+        "dateConfidence": "estimated",
+        "allDay": true,
+        "allDayStated": false,
+        "utcStartDateTime": "2027-04-01T00:00:00.000Z",
+        "dateConfidenceReasoning": "State announcement says spring 2027; April 1 is a seasonal estimate, not an exact COD."
+      },
+      "power": "delete",
+      "datacenter": {
+        "sqft": 715000,
+        "cooling": "Planned closed-loop liquid cooling; Meta states zero operational cooling water",
+        "sourceUrl": "https://datacenters.atmeta.com/asset/aiken-data-center-info-sheet/",
+        "note": "715,000 sqft is initial campus scope from SC Commerce. No total daily site water reading is published; zero refers to the cooling-system design."
+      },
+      "clearEnergy": true,
+      "gaps": [
+        "Verify current spring-2027 schedule, total site water demand, exact parcel, phases and utility/IT capacity.",
+        "Existing primary-source campus pin7307 overlaps this record; queue consolidation preserving authors and attachments."
+      ]
+    },
+    {
+      "id": 16385,
+      "key": "dc-meta-los-lunas-nm",
+      "patch": {
+        "title": "Meta Los Lunas: Official Budget Identifies $800M 2025 Expansion",
+        "description": "The Village of Los Lunas FY2026 budget identifies Meta’s third data-center expansion as an $800 million direct investment in 2025. Meta’s current U.S. fleet page gives $2.5 billion-plus for the entire campus, a different scope from this expansion.",
+        "sourceUrl": "https://www.loslunasnm.gov/DocumentCenter/View/15956",
+        "references": [
+          {
+            "url": "https://www.loslunasnm.gov/DocumentCenter/View/15956",
+            "title": "Village of Los Lunas — FY2026 Final Budget, page 15",
+            "confidence": 95,
+            "publishedDate": null
+          },
+          {
+            "url": "https://datacenters.atmeta.com/us-locations/",
+            "title": "Meta — U.S. Data Center Fleet",
+            "confidence": 95,
+            "publishedDate": null
+          }
+        ],
+        "longFormSummary": "<ul><li>The official budget’s printed page 15 distinguishes the 2025 expansion from cumulative community investment. It replaces the unsupported $1B expansion price.<cite data-ref=\"https://www.loslunasnm.gov/DocumentCenter/View/15956\"></cite></li><li>Neither source supports the pin’s 99 MW expansion load, 700 acres or 118,630 gallons/day. Unsupported area/cooling/water claims and dependent annual energy are removed.<cite data-ref=\"https://www.loslunasnm.gov/DocumentCenter/View/15956\"></cite></li><li>Timeline: June 1, 2027 remains an unverified legacy commissioning estimate. The budget establishes the 2025 investment announcement, not first service; an expansion-specific schedule is still needed.<cite data-ref=\"https://www.loslunasnm.gov/DocumentCenter/View/15956\"></cite></li></ul>",
+        "price": 800000000,
+        "priceCurrency": "USD",
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "estimated",
+        "allDay": true,
+        "allDayStated": false,
+        "utcStartDateTime": "2027-06-01T00:00:00.000Z",
+        "dateConfidenceReasoning": "Unverified legacy June 2027 COD; official budget verifies a 2025 expansion investment, not commissioning."
+      },
+      "power": "delete",
+      "datacenter": "delete",
+      "clearEnergy": true,
+      "gaps": [
+        "Obtain expansion-specific operator/contractor RFS date, building scope, exact parcel, IT/utility capacity and water permit; do not reuse whole-campus figures."
+      ]
+    },
+    {
+      "id": 16386,
+      "key": "dc-meta-montgomery-al",
+      "patch": {
+        "title": "Meta Montgomery: $1.5B+ Investment; Capacity and Opening Date Unpublished",
+        "description": "Meta’s current Montgomery fact sheet publishes a $1.5 billion-plus investment. It supersedes the initial $800M-plus announcement. The source does not establish the old 106 MW load, 380-acre site or June 2027 commissioning date.",
+        "sourceUrl": null,
+        "references": [
+          {
+            "url": "https://datacenters.atmeta.com/asset/montgomery-data-center-info-sheet/",
+            "title": "Meta Montgomery Data Center — Information Sheet",
+            "confidence": 95,
+            "publishedDate": null
+          },
+          {
+            "url": "https://datacenters.atmeta.com/2024/05/hello-montgomery/",
+            "title": "Hello, Montgomery!",
+            "confidence": 95,
+            "publishedDate": "2024-05-02"
+          }
+        ],
+        "longFormSummary": "<ul><li>The current fact sheet identifies Alabama Power and Montgomery Water Works and describes efficient cooling without a published daily water volume or a specified evaporative design.<cite data-ref=\"https://datacenters.atmeta.com/asset/montgomery-data-center-info-sheet/\"></cite></li><li>The initial announcement described 715,000 sqft; it is historical initial scope, not assumed to represent the larger current investment. Prior estimated daily water and calculated annual energy are cleared.<cite data-ref=\"https://datacenters.atmeta.com/2024/05/hello-montgomery/\"></cite></li><li>Timeline: June 1, 2027 remains an unverified legacy date. The current fact sheet gives no precise commissioning date, so it stays estimated.<cite data-ref=\"https://datacenters.atmeta.com/asset/montgomery-data-center-info-sheet/\"></cite></li></ul>",
+        "price": 1500000000,
+        "priceCurrency": "USD",
+        "priceLowerBound": 1500000000,
+        "priceUpperBound": null,
+        "dateConfidence": "estimated",
+        "allDay": true,
+        "allDayStated": false,
+        "utcStartDateTime": "2027-06-01T00:00:00.000Z",
+        "dateConfidenceReasoning": "Unverified legacy June 2027 COD; current operator fact sheet does not publish an exact first-service date."
+      },
+      "power": "delete",
+      "datacenter": {
+        "cooling": "Water-efficient cooling planned; specific technology unpublished in current fact sheet",
+        "sourceUrl": "https://datacenters.atmeta.com/asset/montgomery-data-center-info-sheet/",
+        "note": "No verified daily water or 380-acre area. Historic initial 715,000 sqft scope is not asserted as the current expanded campus total."
+      },
+      "clearEnergy": true,
+      "gaps": [
+        "Obtain latest phase area, schedule, exact parcel, campus power and water/cooling specifications.",
+        "Existing primary-source campus pin7290 overlaps this record; queue consolidation preserving authors and attachments."
+      ]
+    },
+    {
+      "id": 16387,
+      "key": "dc-terra-santa-clara-ca",
+      "patch": {
+        "title": "Terra San Jose: Planned Fuel-Cell Campus at 4701 North First Street",
+        "description": "Arcadis describes Terra Ventures’ planned San Jose campus with a 295,080-square-foot data-center/power structure and a separate 131,903-square-foot power structure. CPUC’s November 2025 environmental record places Terra at 4701 North First Street, San Jose, correcting the former Santa Clara city location.",
+        "sourceUrl": "https://www.arcadis.com/en/projects/north-america/united-states/nearing-net-zero",
+        "references": [
+          {
+            "url": "https://www.arcadis.com/en/projects/north-america/united-states/nearing-net-zero",
+            "title": "Near-net-zero data center campus in San Jose — Arcadis",
+            "confidence": 95,
+            "publishedDate": null
+          },
+          {
+            "url": "https://ia.cpuc.ca.gov/environment/info/esa/psb/pdfs/Vol_III_Power_the_SouthBay_FEIR_RTC_Nov2025_508_ADA.pdf",
+            "title": "Power the South Bay — Final EIR Comments and Responses, page 7-223",
+            "confidence": 95,
+            "publishedDate": "2025-11-01"
+          }
+        ],
+        "longFormSummary": "<ul><li>The Phase 1 total is 426,983 sqft including the power structures. The design uses natural-gas fuel cells, with waste heat driving absorption chillers; backup generators are eliminated in the design. These are plans, not measured operation.<cite data-ref=\"https://www.arcadis.com/en/projects/north-america/united-states/nearing-net-zero\"></cite></li><li>The map point is street-address interpolation at approximately 37.42247, -121.96475, not a surveyed parcel boundary. The old $850M, 99 MW and 12 acres are unverified and cleared.<cite data-ref=\"https://ia.cpuc.ca.gov/environment/info/esa/psb/pdfs/Vol_III_Power_the_SouthBay_FEIR_RTC_Nov2025_508_ADA.pdf\"></cite></li><li>Timeline: June 1, 2029 remains an unverified legacy COD marker. Neither designer nor CPUC record confirms commissioning.<cite data-ref=\"https://www.arcadis.com/en/projects/north-america/united-states/nearing-net-zero\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "estimated",
+        "allDay": true,
+        "allDayStated": false,
+        "utcStartDateTime": "2029-06-01T00:00:00.000Z",
+        "dateConfidenceReasoning": "Unverified legacy June 2029 COD; opened primary design and environmental sources do not publish commissioning.",
+        "latitude": 37.422473782891,
+        "longitude": -121.964752366067,
+        "address": "4701 North First Street, San Jose (Alviso), California, USA",
+        "tags": [
+          "Cleanview",
+          "Data Centers",
+          "Terra Ventures",
+          "California",
+          "Santa Clara County",
+          "San Jose",
+          "Planned"
+        ],
+        "media": [
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-large-2026-10-23/dc-terra-santa-clara-ca-aerial.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 1000
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-large-2026-10-23/dc-terra-santa-clara-ca-topo.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 1000
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-large-2026-10-23/dc-terra-santa-clara-ca-relief.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 1000
+          }
+        ]
+      },
+      "power": "delete",
+      "datacenter": {
+        "sqft": 426983,
+        "buildings": 2,
+        "cooling": "Design: fuel-cell waste heat supplies absorption chillers for part of cooling",
+        "sourceUrl": "https://www.arcadis.com/en/projects/north-america/united-states/nearing-net-zero",
+        "note": "Phase 1 total includes 295080 sqft DC/attached power structure plus131903 sqft standalone power structure. No verified IT MW, acreage or daily water consumption."
+      },
+      "clearEnergy": true,
+      "gaps": [
+        "Verify current permit/schedule, campus power, water and exact surveyed parcel; ArcGIS point is approximate street interpolation."
+      ],
+      "mediaReplaced": true
+    },
+    {
+      "id": 16388,
+      "key": "solar-bluewater-la-paz-az",
+      "delete": true,
+      "gaps": [
+        "Held: Bluewater appears in the Ranegras cumulative-project table, with MW explicitly unknown. No opened primary source establishes this pin’s 1,016 MW / $1.8B facility or parcel; queue 2292 is reported withdrawn, and the migrated BLM PDF is unavailable. A real similarly named ROW is not proof of this tracker scope."
+      ],
+      "sourcesChecked": [
+        "https://eplanning.blm.gov/public_projects/2020050/200568539/20126108/251026088/Ranegras_DEIS_and_Apps_2-4_508.pdf",
+        "https://www.interconnection.fyi/projects/state/AZ/la-paz-county",
+        "https://www.caiso.com/documents/publicqueuereport.xlsx"
+      ],
+      "researchFinding": "Bluewater appears in the Ranegras cumulative-project table, with MW explicitly unknown. No opened primary source establishes this pin’s 1,016 MW / $1.8B facility or parcel; queue 2292 is reported withdrawn, and the migrated BLM PDF is unavailable. A real similarly named ROW is not proof of this tracker scope."
+    },
+    {
+      "id": 16389,
+      "key": "solar-gravitas1-pecos-tx",
+      "patch": {
+        "title": "Gravitas I Solar: 1,124.75 MW ERCOT Request, No IA; Target June 2030",
+        "description": "ERCOT’s September 2026 report lists Gravitas I Solar (30INR0083), S&S Renewables LLC, in Pecos County at 1,124.75 MW, with projected COD June 30, 2030 and no interconnection agreement. The prior $1.3B cost is unsupported.",
+        "sourceUrl": null,
+        "references": [
+          {
+            "url": "https://www.ercot.com/misdownload/servlets/mirDownload?doclookupId=1281327706",
+            "title": "ERCOT GIS Report — September 2026",
+            "confidence": 95,
+            "publishedDate": "2026-10-01"
+          }
+        ],
+        "longFormSummary": "<ul><li>Project Details – Large Gen row 1745 is the solar request. Other similarly named gas or wind requests are separate and must not be combined.<cite data-ref=\"https://www.ercot.com/misdownload/servlets/mirDownload?doclookupId=1281327706\"></cite></li><li>Timeline: June 30, 2030 is a queue target, not confirmed operation. The prior tax-agreement URL was not proven to identify this exact project; queue references replace it.<cite data-ref=\"https://www.ercot.com/misdownload/servlets/mirDownload?doclookupId=1281327706\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "estimated",
+        "allDay": true,
+        "allDayStated": false,
+        "utcStartDateTime": "2030-06-30T00:00:00.000Z",
+        "dateConfidenceReasoning": "ERCOT September 2026 GIS row1745 projected COD; no IA, estimated.",
+        "company": "S&S Renewables LLC",
+        "companyWikiUrl": null
+      },
+      "power": {
+        "megawatts": 1124.75,
+        "kind": "generation",
+        "sourceUrl": "https://www.ercot.com/misdownload/servlets/mirDownload?doclookupId=1281327706",
+        "note": "Queue30INR0083 solar equipment request; no executed IA."
+      },
+      "datacenter": null,
+      "clearEnergy": false,
+      "gaps": [
+        "Verify exact project-specific tax/permit record, developer relationship, construction budget and parcel; track IA progress."
+      ]
+    },
+    {
+      "id": 16390,
+      "key": "solar-stanley-maricopa-az",
+      "patch": {
+        "title": "Copia Stanley: La Paz Approves 500 MW PV/BESS Permit; Operator Lists Larger Scope",
+        "description": "La Paz County approved Stanley’s conditional-use permit on January 5, 2026. Minutes describe approximately 3,962 acres and a 500 MW photovoltaic-and-battery facility. Copia’s portfolio lists 1,000 MW PV and 1,000 MW storage; these scopes remain unreconciled.",
+        "sourceUrl": "https://www.lapaz.gov/AgendaCenter/ViewFile/Minutes/_01052026-1135",
+        "references": [
+          {
+            "url": "https://www.lapaz.gov/AgendaCenter/ViewFile/Minutes/_01052026-1135",
+            "title": "La Paz County Board of Supervisors — January 5, 2026 Minutes",
+            "confidence": 95,
+            "publishedDate": "2026-01-05"
+          },
+          {
+            "url": "https://www.copiapower.com/interactive-map-collection/fyjlxcmbgh8npmc-nwhsg-937cy",
+            "title": "Stanley — Copia Power",
+            "confidence": 95,
+            "publishedDate": null
+          },
+          {
+            "url": "https://gis.blm.gov/arcgis/rest/services/Cadastral/BLM_Natl_PLSS_CadNSDI/MapServer/2/query?where=PLSSID+%3D+%27AZ140030N0120W0%27+AND+FRSTDIVNO+IN+%28%2719%27%2C%2720%27%2C%2721%27%2C%2722%27%2C%2724%27%2C%2725%27%2C%2726%27%2C%2727%27%2C%2728%27%2C%2729%27%29&outFields=PLSSID%2CFRSTDIVNO&outSR=4326&f=json",
+            "title": "BLM National PLSS CadNSDI — T3N R12W Sections 19–22 and 24–29",
+            "confidence": 95,
+            "publishedDate": null
+          }
+        ],
+        "longFormSummary": "<ul><li>The county record identifies Copia and eastern La Paz County near I-10, north of the CAP Canal. The permit’s 500 MW description does not provide a separate battery discharge rating. The former $1.9B is cleared.<cite data-ref=\"https://www.lapaz.gov/AgendaCenter/ViewFile/Minutes/_01052026-1135\"></cite></li><li>Location is the approximate center of the extent of ten named PLSS sections, derived from BLM geometry: 33.58061, -113.49076. These sections encompass more than the actual project footprint; the point is not a surveyed boundary.<cite data-ref=\"https://gis.blm.gov/arcgis/rest/services/Cadastral/BLM_Natl_PLSS_CadNSDI/MapServer/2/query?where=PLSSID+%3D+%27AZ140030N0120W0%27+AND+FRSTDIVNO+IN+%28%2719%27%2C%2720%27%2C%2721%27%2C%2722%27%2C%2724%27%2C%2725%27%2C%2726%27%2C%2727%27%2C%2728%27%2C%2729%27%29&amp;outFields=PLSSID%2CFRSTDIVNO&amp;outSR=4326&amp;f=json\"></cite></li><li>Timeline: January 5, 2026 is the verified CUP approval event, replacing the unverified December 2029 opening. Neither source confirms COD. County permit scope and larger operator portfolio are shown separately, not equated to queue2331.<cite data-ref=\"https://www.lapaz.gov/AgendaCenter/ViewFile/Minutes/_01052026-1135\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "confirmed",
+        "allDay": true,
+        "allDayStated": false,
+        "utcStartDateTime": "2026-01-05T00:00:00.000Z",
+        "dateConfidenceReasoning": "Confirmed date of county CUP approval, not commercial operation.",
+        "company": "Copia Power",
+        "companyWikiUrl": null,
+        "latitude": 33.580605335419634,
+        "longitude": -113.4907594260518,
+        "address": "T3N R12W, I-10 corridor near Cielo Azul, eastern La Paz County, Arizona, USA (approximate PLSS section-area center)",
+        "tags": [
+          "Cleanview",
+          "Solar",
+          "Battery Storage",
+          "Copia Power",
+          "Arizona",
+          "La Paz County",
+          "Permitted"
+        ],
+        "media": [
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-large-2026-10-23/solar-stanley-maricopa-az-aerial.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 1000
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-large-2026-10-23/solar-stanley-maricopa-az-topo.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 1000
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-large-2026-10-23/solar-stanley-maricopa-az-relief.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 1000
+          }
+        ]
+      },
+      "power": {
+        "megawatts": 500,
+        "kind": "generation",
+        "sourceUrl": "https://www.lapaz.gov/AgendaCenter/ViewFile/Minutes/_01052026-1135",
+        "note": "County-described500MW PV/BESS permit; not separate battery MW or measured generation."
+      },
+      "datacenter": null,
+      "clearEnergy": false,
+      "gaps": [
+        "Reconcile county500MW permit with operator1000MWPV/1000MWstorage and Maricopa trackerqueue2331; obtain final site geometry, COD and cost."
+      ],
+      "mediaReplaced": true
+    }
+  ],
+  "results": [
+    {
+      "environment": "local",
+      "key": "solar-nextera-high-spring-ok",
+      "id": 16351,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Obtain current construction status, budget and parcel geometry."
+      ]
+    },
+    {
+      "environment": "local",
+      "key": "battery-calpine-aurora-zion-il",
+      "id": 16356,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Verify current AF2-027 queue status, GIA execution/COD and budget; determine whether separate Aurora draft duplicates this corrected Zion identity."
+      ]
+    },
+    {
+      "environment": "local",
+      "key": "dc-cielo-chisago-mn",
+      "id": 16357,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Cielo official domain fails DNS/502. Obtain city inquiry documents to identify abandoned project and current Cielo activity, exact parcel and COD."
+      ]
+    },
+    {
+      "environment": "local",
+      "key": "dc-cielo-haines-city-fl",
+      "id": 16358,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Verify water-use permit, actual application and current development schedule; official developer site inaccessible."
+      ]
+    },
+    {
+      "environment": "local",
+      "key": "dc-cielo-new-lenox-il",
+      "id": 16359,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Obtain current Cielo/village correspondence and any formal application. Do not infer permanent cancellation from the mayor statement alone; historical candidate parcels differ."
+      ]
+    },
+    {
+      "environment": "local",
+      "key": "dc-cloverleaf-bluestem-ks",
+      "id": 16360,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Verify latest county rezoning, replacement power site, capacity, exact parcel and COD.",
+        "Existing pin 16305 also covers Project Bluestem. Association-aware consolidation remains open; operator homepage used as source, dated statement retained in references."
+      ]
+    },
+    {
+      "environment": "local",
+      "key": "dc-sdc-va04-prince-william-va",
+      "id": 16361,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Operator portfolio URL inaccessible. Obtain VA-04-specific parcel/filings and schedule; do not substitute Wellington Glen or STACK NVA02."
+      ]
+    },
+    {
+      "environment": "local",
+      "key": "dc-townsite-boulder-city-nv",
+      "id": 16362,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Verify final appeal outcome, precise federal parcel and current amended design/capacity. Existing coordinates/media are approximate and not certified to either parcel."
+      ]
+    },
+    {
+      "environment": "local",
+      "key": "solar-ashton-energy-center-nv",
+      "id": 16363,
+      "action": "deleted",
+      "verifiedStatus": 404
+    },
+    {
+      "environment": "local",
+      "key": "solar-intersect-aurelius-tx",
+      "id": 16364,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Verify parent developer relationship, construction progress, published budget and parcel/media alignment."
+      ]
+    },
+    {
+      "environment": "local",
+      "key": "solar-plum-kings-ca",
+      "id": 16365,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Obtain operator identity, county permits, site geometry, budget and actual construction status."
+      ]
+    },
+    {
+      "environment": "local",
+      "key": "solar-spectra-scurry-tx",
+      "id": 16366,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Obtain site-specific filing and developer budget. Source field cleared because shared official report is cited in references rather than inventing project URL fragments."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "solar-nextera-high-spring-ok",
+      "id": 16351,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Obtain current construction status, budget and parcel geometry."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "battery-calpine-aurora-zion-il",
+      "id": 16356,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Verify current AF2-027 queue status, GIA execution/COD and budget; determine whether separate Aurora draft duplicates this corrected Zion identity."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "dc-cielo-chisago-mn",
+      "id": 16357,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Cielo official domain fails DNS/502. Obtain city inquiry documents to identify abandoned project and current Cielo activity, exact parcel and COD."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "dc-cielo-haines-city-fl",
+      "id": 16358,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Verify water-use permit, actual application and current development schedule; official developer site inaccessible."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "dc-cielo-new-lenox-il",
+      "id": 16359,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Obtain current Cielo/village correspondence and any formal application. Do not infer permanent cancellation from the mayor statement alone; historical candidate parcels differ."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "dc-cloverleaf-bluestem-ks",
+      "id": 16360,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Verify latest county rezoning, replacement power site, capacity, exact parcel and COD.",
+        "Existing pin 16305 also covers Project Bluestem. Association-aware consolidation remains open; operator homepage used as source, dated statement retained in references."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "dc-sdc-va04-prince-william-va",
+      "id": 16361,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Operator portfolio URL inaccessible. Obtain VA-04-specific parcel/filings and schedule; do not substitute Wellington Glen or STACK NVA02."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "dc-townsite-boulder-city-nv",
+      "id": 16362,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Verify final appeal outcome, precise federal parcel and current amended design/capacity. Existing coordinates/media are approximate and not certified to either parcel."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "solar-ashton-energy-center-nv",
+      "id": 16363,
+      "action": "deleted",
+      "verifiedStatus": 404
+    },
+    {
+      "environment": "prod",
+      "key": "solar-intersect-aurelius-tx",
+      "id": 16364,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Verify parent developer relationship, construction progress, published budget and parcel/media alignment."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "solar-plum-kings-ca",
+      "id": 16365,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Obtain operator identity, county permits, site geometry, budget and actual construction status."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "solar-spectra-scurry-tx",
+      "id": 16366,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Obtain site-specific filing and developer budget. Source field cleared because shared official report is cited in references rather than inventing project URL fragments."
+      ]
+    },
+    {
+      "environment": "local",
+      "key": "solar-wingtip-merced-ca",
+      "id": 16367,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Obtain named operator, county permit, budget and exact site; shared report cited in references with no fabricated unique URL."
+      ]
+    },
+    {
+      "environment": "local",
+      "key": "battery-quark-fresno-ca",
+      "id": 16368,
+      "action": "deleted",
+      "verifiedStatus": 404
+    },
+    {
+      "environment": "local",
+      "key": "solar-boson-kern-ca",
+      "id": 16376,
+      "action": "deleted",
+      "verifiedStatus": 404
+    },
+    {
+      "environment": "local",
+      "key": "dc-switch-citadel-storey-nv",
+      "id": 16374,
+      "action": "deleted",
+      "verifiedStatus": 404
+    },
+    {
+      "environment": "local",
+      "key": "dc-alcove-osawatomie-ks",
+      "id": 16369,
+      "action": "corrected",
+      "mediaPreserved": false,
+      "mediaReplaced": true,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Verify actual application, water permit, phased power delivery and COD/budget; published vicinity point is not parcel geometry."
+      ]
+    },
+    {
+      "environment": "local",
+      "key": "dc-archer-faribault-mn",
+      "id": 16370,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Obtain updated environmental decision, construction/RFS schedule, budget and exact parcel boundary."
+      ]
+    },
+    {
+      "environment": "local",
+      "key": "dc-google-lincoln-ne",
+      "id": 16371,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Verify exact first-service date, site/phase capacity, parcel and independently published campus budget."
+      ]
+    },
+    {
+      "environment": "local",
+      "key": "dc-scannell-monticello-mn",
+      "id": 16373,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Verify any revised Scannell concept/application after residential re-guidance, capacity, schedule and parcel boundary."
+      ]
+    },
+    {
+      "environment": "local",
+      "key": "solar-angeleno-los-angeles-ca",
+      "id": 16375,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Obtain project-specific operator/county records, budget and site location; public queue evidence alone does not certify construction."
+      ]
+    },
+    {
+      "environment": "local",
+      "key": "solar-intersect-ross-refugio-tx",
+      "id": 16377,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Verify ultimate developer/parent without assuming Intersect, budget, current construction and exact parcel."
+      ]
+    },
+    {
+      "environment": "local",
+      "key": "solar-permian1-pecos-tx",
+      "id": 16378,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Obtain precise developer/parcel/filings, budget and actual interconnection progress; do not treat projected2030 as guaranteed."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "solar-wingtip-merced-ca",
+      "id": 16367,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Obtain named operator, county permit, budget and exact site; shared report cited in references with no fabricated unique URL."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "battery-quark-fresno-ca",
+      "id": 16368,
+      "action": "deleted",
+      "verifiedStatus": 404
+    },
+    {
+      "environment": "prod",
+      "key": "solar-boson-kern-ca",
+      "id": 16376,
+      "action": "deleted",
+      "verifiedStatus": 404
+    },
+    {
+      "environment": "prod",
+      "key": "dc-switch-citadel-storey-nv",
+      "id": 16374,
+      "action": "deleted",
+      "verifiedStatus": 404
+    },
+    {
+      "environment": "prod",
+      "key": "dc-alcove-osawatomie-ks",
+      "id": 16369,
+      "action": "corrected",
+      "mediaPreserved": false,
+      "mediaReplaced": true,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Verify actual application, water permit, phased power delivery and COD/budget; published vicinity point is not parcel geometry."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "dc-archer-faribault-mn",
+      "id": 16370,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Obtain updated environmental decision, construction/RFS schedule, budget and exact parcel boundary."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "dc-google-lincoln-ne",
+      "id": 16371,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Verify exact first-service date, site/phase capacity, parcel and independently published campus budget."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "dc-scannell-monticello-mn",
+      "id": 16373,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Verify any revised Scannell concept/application after residential re-guidance, capacity, schedule and parcel boundary."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "solar-angeleno-los-angeles-ca",
+      "id": 16375,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Obtain project-specific operator/county records, budget and site location; public queue evidence alone does not certify construction."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "solar-intersect-ross-refugio-tx",
+      "id": 16377,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Verify ultimate developer/parent without assuming Intersect, budget, current construction and exact parcel."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "solar-permian1-pecos-tx",
+      "id": 16378,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Obtain precise developer/parcel/filings, budget and actual interconnection progress; do not treat projected2030 as guaranteed."
+      ]
+    },
+    {
+      "environment": "local",
+      "key": "solar-muon-fresno-ca",
+      "id": 16379,
+      "action": "deleted",
+      "verifiedStatus": 404
+    },
+    {
+      "environment": "local",
+      "key": "solar-bluewater-la-paz-az",
+      "id": 16388,
+      "action": "deleted",
+      "verifiedStatus": 404
+    },
+    {
+      "environment": "local",
+      "key": "battery-zeus-armstrong-tx",
+      "id": 16380,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Verify parent/developer attribution, exact parcel, permitting, duration, budget and FIS/IA progress."
+      ]
+    },
+    {
+      "environment": "local",
+      "key": "battery-zeus-mitchell-tx",
+      "id": 16381,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Verify parent/developer attribution, exact parcel, permitting, duration, budget and FIS/IA progress."
+      ]
+    },
+    {
+      "environment": "local",
+      "key": "dc-chirisa-piscataway-nj",
+      "id": 16382,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Verify delivery milestone, actual energized utility/IT capacity, project budget and address/parcel."
+      ]
+    },
+    {
+      "environment": "local",
+      "key": "dc-google-omaha-ne",
+      "id": 16383,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Resolve build versus first-service milestone and exact date; verify any independently announced 2028 expansion, site budget and hardware."
+      ]
+    },
+    {
+      "environment": "local",
+      "key": "dc-meta-aiken-sc",
+      "id": 16384,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Verify current spring-2027 schedule, total site water demand, exact parcel, phases and utility/IT capacity.",
+        "Existing primary-source campus pin7307 overlaps this record; queue consolidation preserving authors and attachments."
+      ]
+    },
+    {
+      "environment": "local",
+      "key": "dc-meta-los-lunas-nm",
+      "id": 16385,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Obtain expansion-specific operator/contractor RFS date, building scope, exact parcel, IT/utility capacity and water permit; do not reuse whole-campus figures."
+      ]
+    },
+    {
+      "environment": "local",
+      "key": "dc-meta-montgomery-al",
+      "id": 16386,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Obtain latest phase area, schedule, exact parcel, campus power and water/cooling specifications.",
+        "Existing primary-source campus pin7290 overlaps this record; queue consolidation preserving authors and attachments."
+      ]
+    },
+    {
+      "environment": "local",
+      "key": "dc-terra-santa-clara-ca",
+      "id": 16387,
+      "action": "corrected",
+      "mediaPreserved": false,
+      "mediaReplaced": true,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Verify current permit/schedule, campus power, water and exact surveyed parcel; ArcGIS point is approximate street interpolation."
+      ]
+    },
+    {
+      "environment": "local",
+      "key": "solar-gravitas1-pecos-tx",
+      "id": 16389,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Verify exact project-specific tax/permit record, developer relationship, construction budget and parcel; track IA progress."
+      ]
+    },
+    {
+      "environment": "local",
+      "key": "solar-stanley-maricopa-az",
+      "id": 16390,
+      "action": "corrected",
+      "mediaPreserved": false,
+      "mediaReplaced": true,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Reconcile county500MW permit with operator1000MWPV/1000MWstorage and Maricopa trackerqueue2331; obtain final site geometry, COD and cost."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "solar-muon-fresno-ca",
+      "id": 16379,
+      "action": "deleted",
+      "verifiedStatus": 404
+    },
+    {
+      "environment": "prod",
+      "key": "solar-bluewater-la-paz-az",
+      "id": 16388,
+      "action": "deleted",
+      "verifiedStatus": 404
+    },
+    {
+      "environment": "prod",
+      "key": "battery-zeus-armstrong-tx",
+      "id": 16380,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Verify parent/developer attribution, exact parcel, permitting, duration, budget and FIS/IA progress."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "battery-zeus-mitchell-tx",
+      "id": 16381,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Verify parent/developer attribution, exact parcel, permitting, duration, budget and FIS/IA progress."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "dc-chirisa-piscataway-nj",
+      "id": 16382,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Verify delivery milestone, actual energized utility/IT capacity, project budget and address/parcel."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "dc-google-omaha-ne",
+      "id": 16383,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Resolve build versus first-service milestone and exact date; verify any independently announced 2028 expansion, site budget and hardware."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "dc-meta-aiken-sc",
+      "id": 16384,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Verify current spring-2027 schedule, total site water demand, exact parcel, phases and utility/IT capacity.",
+        "Existing primary-source campus pin7307 overlaps this record; queue consolidation preserving authors and attachments."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "dc-meta-los-lunas-nm",
+      "id": 16385,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Obtain expansion-specific operator/contractor RFS date, building scope, exact parcel, IT/utility capacity and water permit; do not reuse whole-campus figures."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "dc-meta-montgomery-al",
+      "id": 16386,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Obtain latest phase area, schedule, exact parcel, campus power and water/cooling specifications.",
+        "Existing primary-source campus pin7290 overlaps this record; queue consolidation preserving authors and attachments."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "dc-terra-santa-clara-ca",
+      "id": 16387,
+      "action": "corrected",
+      "mediaPreserved": false,
+      "mediaReplaced": true,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Verify current permit/schedule, campus power, water and exact surveyed parcel; ArcGIS point is approximate street interpolation."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "solar-gravitas1-pecos-tx",
+      "id": 16389,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Verify exact project-specific tax/permit record, developer relationship, construction budget and parcel; track IA progress."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "solar-stanley-maricopa-az",
+      "id": 16390,
+      "action": "corrected",
+      "mediaPreserved": false,
+      "mediaReplaced": true,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Reconcile county500MW permit with operator1000MWPV/1000MWstorage and Maricopa trackerqueue2331; obtain final site geometry, COD and cost."
+      ]
+    },
+    {
+      "environment": "local",
+      "key": "dc-google-storey-county-nv",
+      "id": 16372,
+      "action": "corrected",
+      "mediaPreserved": false,
+      "mediaReplaced": true,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Resolve operator 2020/2021 completion discrepancy, phase-specific capacity/budget and exact property boundary.",
+        "Existing operational campus pin7280 also covers Storey County. Duplicate/phase consolidation remains open; canonical operator URL retained in references without manufacturing a distinct URL."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "dc-google-storey-county-nv",
+      "id": 16372,
+      "action": "corrected",
+      "mediaPreserved": false,
+      "mediaReplaced": true,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Resolve operator 2020/2021 completion discrepancy, phase-specific capacity/budget and exact property boundary.",
+        "Existing operational campus pin7280 also covers Storey County. Duplicate/phase consolidation remains open; canonical operator URL retained in references without manufacturing a distinct URL."
+      ]
+    }
+  ],
+  "mediaEvidence": [
+    {
+      "key": "dc-alcove-osawatomie-ks",
+      "layer": "aerial",
+      "sourceUrl": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSImageryOnly/MapServer/export?bbox=-94.951700,38.509800,-94.921700,38.529800&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "bytes": 409820,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-large-2026-10-23/dc-alcove-osawatomie-ks-aerial.jpg"
+    },
+    {
+      "key": "dc-alcove-osawatomie-ks",
+      "layer": "topo",
+      "sourceUrl": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSTopo/MapServer/export?bbox=-94.968700,38.497800,-94.904700,38.541800&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "bytes": 397491,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-large-2026-10-23/dc-alcove-osawatomie-ks-topo.jpg"
+    },
+    {
+      "key": "dc-alcove-osawatomie-ks",
+      "layer": "relief",
+      "sourceUrl": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSShadedReliefOnly/MapServer/export?bbox=-95.016700,38.469800,-94.856700,38.569800&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "bytes": 115437,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-large-2026-10-23/dc-alcove-osawatomie-ks-relief.jpg"
+    },
+    {
+      "key": "dc-terra-santa-clara-ca",
+      "layer": "aerial",
+      "sourceUrl": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSImageryOnly/MapServer/export?bbox=-121.979752,37.412474,-121.949752,37.432474&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "bytes": 494387,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-large-2026-10-23/dc-terra-santa-clara-ca-aerial.jpg"
+    },
+    {
+      "key": "dc-terra-santa-clara-ca",
+      "layer": "topo",
+      "sourceUrl": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSTopo/MapServer/export?bbox=-121.996752,37.400474,-121.932752,37.444474&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "bytes": 409127,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-large-2026-10-23/dc-terra-santa-clara-ca-topo.jpg"
+    },
+    {
+      "key": "dc-terra-santa-clara-ca",
+      "layer": "relief",
+      "sourceUrl": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSShadedReliefOnly/MapServer/export?bbox=-122.044752,37.372474,-121.884752,37.472474&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "bytes": 104335,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-large-2026-10-23/dc-terra-santa-clara-ca-relief.jpg"
+    },
+    {
+      "key": "solar-stanley-maricopa-az",
+      "layer": "aerial",
+      "sourceUrl": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSImageryOnly/MapServer/export?bbox=-113.505759,33.570605,-113.475759,33.590605&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "bytes": 471968,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-large-2026-10-23/solar-stanley-maricopa-az-aerial.jpg"
+    },
+    {
+      "key": "solar-stanley-maricopa-az",
+      "layer": "topo",
+      "sourceUrl": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSTopo/MapServer/export?bbox=-113.522759,33.558605,-113.458759,33.602605&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "bytes": 115655,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-large-2026-10-23/solar-stanley-maricopa-az-topo.jpg"
+    },
+    {
+      "key": "solar-stanley-maricopa-az",
+      "layer": "relief",
+      "sourceUrl": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSShadedReliefOnly/MapServer/export?bbox=-113.570759,33.530605,-113.410759,33.630605&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "bytes": 58122,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-large-2026-10-23/solar-stanley-maricopa-az-relief.jpg"
+    },
+    {
+      "key": "dc-google-storey-county-nv",
+      "layer": "operator-photo",
+      "sourceUrl": "https://www.gstatic.com/marketing-cms/assets/images/ba/e7/e53922424cd0a95d735d28376ea1/usa-sparks-davidson-2024-0211.JPG",
+      "sourcePage": "https://www.datacenters.google/discover-more/photo-gallery/",
+      "credit": "Google",
+      "caption": "Google Storey County campus: two data-center buildings and generator yard in the Flowery Mountains. Operator gallery photograph, not a current construction-status claim. Credit: Google.",
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-large-2026-10-23/google-storey-campus.jpg",
+      "bytes": 17506304
+    },
+    {
+      "key": "dc-google-storey-county-nv",
+      "layer": "operator-photo",
+      "sourceUrl": "https://www.gstatic.com/marketing-cms/assets/images/d5/76/072d381c49eb9383168e9817eb0a/usa-sparks-davidson-0500.jpg",
+      "sourcePage": "https://www.datacenters.google/discover-more/photo-gallery/",
+      "credit": "Google",
+      "caption": "Dry coolers at Google’s Storey County campus. Operator gallery photograph; no cooling capacity or water demand inferred. Credit: Google.",
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-large-2026-10-23/google-storey-dry-coolers.jpg",
+      "bytes": 7715086
+    }
+  ],
+  "verification": {
+    "actionsVerified": 72,
+    "freshReadbacks": [
+      {
+        "environment": "local",
+        "id": 16351,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 16356,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 16357,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 16358,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 16359,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 16360,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 16361,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 16362,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 16363,
+        "status": 404,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 16364,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 16365,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 16366,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 16351,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 16356,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 16357,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 16358,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 16359,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 16360,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 16361,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 16362,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 16363,
+        "status": 404,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 16364,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 16365,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 16366,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 16367,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 16368,
+        "status": 404,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 16376,
+        "status": 404,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 16374,
+        "status": 404,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 16369,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 16370,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 16371,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 16373,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 16375,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 16377,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 16378,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 16367,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 16368,
+        "status": 404,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 16376,
+        "status": 404,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 16374,
+        "status": 404,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 16369,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 16370,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 16371,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 16373,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 16375,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 16377,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 16378,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 16379,
+        "status": 404,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 16388,
+        "status": 404,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 16380,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 16381,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 16382,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 16383,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 16384,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 16385,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 16386,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 16387,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 16389,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 16390,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 16379,
+        "status": 404,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 16388,
+        "status": 404,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 16380,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 16381,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 16382,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 16383,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 16384,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 16385,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 16386,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 16387,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 16389,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 16390,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 16372,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 16372,
+        "status": 200,
+        "verified": true
+      }
+    ],
+    "media": [
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/angeleno-solar-los-angeles-ca-usgs-aerial.jpg",
+        "status": 200,
+        "bytes": 754647
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/angeleno-solar-los-angeles-ca-usgs-regional.jpg",
+        "status": 200,
+        "bytes": 527329
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/angeleno-solar-los-angeles-ca-usgs-topo.jpg",
+        "status": 200,
+        "bytes": 213564
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/archer-faribault-mn-usgs-aerial.jpg",
+        "status": 200,
+        "bytes": 658775
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/archer-faribault-mn-usgs-regional.jpg",
+        "status": 200,
+        "bytes": 613162
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/archer-faribault-mn-usgs-topo.jpg",
+        "status": 200,
+        "bytes": 354430
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/calpine-aurora-zion-il-usgs-aerial.jpg",
+        "status": 200,
+        "bytes": 675211
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/calpine-aurora-zion-il-usgs-regional.jpg",
+        "status": 200,
+        "bytes": 541469
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/calpine-aurora-zion-il-usgs-topo.jpg",
+        "status": 200,
+        "bytes": 330288
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/chirisa-piscataway-nj-usgs-aerial.jpg",
+        "status": 200,
+        "bytes": 471097
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/chirisa-piscataway-nj-usgs-regional.jpg",
+        "status": 200,
+        "bytes": 761768
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/chirisa-piscataway-nj-usgs-topo.jpg",
+        "status": 200,
+        "bytes": 247185
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cielo-chisago-mn-usgs-aerial.jpg",
+        "status": 200,
+        "bytes": 554232
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cielo-chisago-mn-usgs-regional.jpg",
+        "status": 200,
+        "bytes": 623576
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cielo-chisago-mn-usgs-topo.jpg",
+        "status": 200,
+        "bytes": 299589
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cielo-haines-city-fl-usgs-aerial.jpg",
+        "status": 200,
+        "bytes": 559151
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cielo-haines-city-fl-usgs-regional.jpg",
+        "status": 200,
+        "bytes": 613895
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cielo-haines-city-fl-usgs-topo.jpg",
+        "status": 200,
+        "bytes": 372177
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cielo-new-lenox-il-usgs-aerial.jpg",
+        "status": 200,
+        "bytes": 653913
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cielo-new-lenox-il-usgs-regional.jpg",
+        "status": 200,
+        "bytes": 695202
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cielo-new-lenox-il-usgs-topo.jpg",
+        "status": 200,
+        "bytes": 395552
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-large-2026-10-23/dc-alcove-osawatomie-ks-aerial.jpg",
+        "status": 200,
+        "bytes": 409820
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-large-2026-10-23/dc-alcove-osawatomie-ks-relief.jpg",
+        "status": 200,
+        "bytes": 115437
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-large-2026-10-23/dc-alcove-osawatomie-ks-topo.jpg",
+        "status": 200,
+        "bytes": 397491
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-large-2026-10-23/dc-terra-santa-clara-ca-aerial.jpg",
+        "status": 200,
+        "bytes": 494387
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-large-2026-10-23/dc-terra-santa-clara-ca-relief.jpg",
+        "status": 200,
+        "bytes": 104335
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-large-2026-10-23/dc-terra-santa-clara-ca-topo.jpg",
+        "status": 200,
+        "bytes": 409127
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-large-2026-10-23/google-storey-campus.jpg",
+        "status": 200,
+        "bytes": 17506304
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-large-2026-10-23/google-storey-dry-coolers.jpg",
+        "status": 200,
+        "bytes": 7715086
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-large-2026-10-23/solar-stanley-maricopa-az-aerial.jpg",
+        "status": 200,
+        "bytes": 471968
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-large-2026-10-23/solar-stanley-maricopa-az-relief.jpg",
+        "status": 200,
+        "bytes": 58122
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-large-2026-10-23/solar-stanley-maricopa-az-topo.jpg",
+        "status": 200,
+        "bytes": 115655
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cloverleaf-bluestem-ks-usgs-aerial.jpg",
+        "status": 200,
+        "bytes": 420372
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cloverleaf-bluestem-ks-usgs-regional.jpg",
+        "status": 200,
+        "bytes": 613945
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cloverleaf-bluestem-ks-usgs-topo.jpg",
+        "status": 200,
+        "bytes": 271026
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/google-lincoln-ne-usgs-aerial.jpg",
+        "status": 200,
+        "bytes": 683375
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/google-lincoln-ne-usgs-regional.jpg",
+        "status": 200,
+        "bytes": 731036
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/google-lincoln-ne-usgs-topo.jpg",
+        "status": 200,
+        "bytes": 357527
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/google-omaha-ne-usgs-aerial.jpg",
+        "status": 200,
+        "bytes": 641902
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/google-omaha-ne-usgs-regional.jpg",
+        "status": 200,
+        "bytes": 807239
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/google-omaha-ne-usgs-topo.jpg",
+        "status": 200,
+        "bytes": 414031
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/google-storey-county-nv-usgs-aerial.jpg",
+        "status": 200,
+        "bytes": 265209
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/google-storey-county-nv-usgs-regional.jpg",
+        "status": 200,
+        "bytes": 439153
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/google-storey-county-nv-usgs-topo.jpg",
+        "status": 200,
+        "bytes": 175108
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/gravitas1-solar-pecos-tx-usgs-aerial.jpg",
+        "status": 200,
+        "bytes": 600572
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/gravitas1-solar-pecos-tx-usgs-regional.jpg",
+        "status": 200,
+        "bytes": 661144
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/gravitas1-solar-pecos-tx-usgs-topo.jpg",
+        "status": 200,
+        "bytes": 138693
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/intersect-aurelius-tx-usgs-aerial.jpg",
+        "status": 200,
+        "bytes": 627678
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/intersect-aurelius-tx-usgs-regional.jpg",
+        "status": 200,
+        "bytes": 464527
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/intersect-aurelius-tx-usgs-topo.jpg",
+        "status": 200,
+        "bytes": 366023
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/intersect-ross-refugio-tx-usgs-aerial.jpg",
+        "status": 200,
+        "bytes": 613065
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/intersect-ross-refugio-tx-usgs-regional.jpg",
+        "status": 200,
+        "bytes": 557227
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/intersect-ross-refugio-tx-usgs-topo.jpg",
+        "status": 200,
+        "bytes": 313260
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/meta-aiken-sc-usgs-aerial.jpg",
+        "status": 200,
+        "bytes": 598854
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/meta-aiken-sc-usgs-regional.jpg",
+        "status": 200,
+        "bytes": 778959
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/meta-aiken-sc-usgs-topo.jpg",
+        "status": 200,
+        "bytes": 348405
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/meta-los-lunas-nm-usgs-aerial.jpg",
+        "status": 200,
+        "bytes": 585350
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/meta-los-lunas-nm-usgs-regional.jpg",
+        "status": 200,
+        "bytes": 550453
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/meta-los-lunas-nm-usgs-topo.jpg",
+        "status": 200,
+        "bytes": 293539
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/meta-montgomery-al-usgs-aerial.jpg",
+        "status": 200,
+        "bytes": 623957
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/meta-montgomery-al-usgs-regional.jpg",
+        "status": 200,
+        "bytes": 715907
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/meta-montgomery-al-usgs-topo.jpg",
+        "status": 200,
+        "bytes": 351472
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/nextera-high-spring-ok-usgs-aerial.jpg",
+        "status": 200,
+        "bytes": 443100
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/nextera-high-spring-ok-usgs-regional.jpg",
+        "status": 200,
+        "bytes": 433149
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/nextera-high-spring-ok-usgs-topo.jpg",
+        "status": 200,
+        "bytes": 212855
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/permian1-solar-pecos-tx-usgs-aerial.jpg",
+        "status": 200,
+        "bytes": 729143
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/permian1-solar-pecos-tx-usgs-regional.jpg",
+        "status": 200,
+        "bytes": 658920
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/permian1-solar-pecos-tx-usgs-topo.jpg",
+        "status": 200,
+        "bytes": 338547
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/plum-solar-kings-ca-usgs-aerial.jpg",
+        "status": 200,
+        "bytes": 578174
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/plum-solar-kings-ca-usgs-regional.jpg",
+        "status": 200,
+        "bytes": 437684
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/plum-solar-kings-ca-usgs-topo.jpg",
+        "status": 200,
+        "bytes": 270322
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/scannell-monticello-mn-usgs-aerial.jpg",
+        "status": 200,
+        "bytes": 557881
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/scannell-monticello-mn-usgs-regional.jpg",
+        "status": 200,
+        "bytes": 615090
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/scannell-monticello-mn-usgs-topo.jpg",
+        "status": 200,
+        "bytes": 320163
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/sdc-va04-prince-william-va-usgs-aerial.jpg",
+        "status": 200,
+        "bytes": 660222
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/sdc-va04-prince-william-va-usgs-regional.jpg",
+        "status": 200,
+        "bytes": 797725
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/sdc-va04-prince-william-va-usgs-topo.jpg",
+        "status": 200,
+        "bytes": 451180
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/spectra-solar-scurry-tx-usgs-aerial.jpg",
+        "status": 200,
+        "bytes": 656565
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/spectra-solar-scurry-tx-usgs-regional.jpg",
+        "status": 200,
+        "bytes": 602756
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/spectra-solar-scurry-tx-usgs-topo.jpg",
+        "status": 200,
+        "bytes": 344380
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/townsite-boulder-city-nv-usgs-aerial.jpg",
+        "status": 200,
+        "bytes": 581370
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/townsite-boulder-city-nv-usgs-regional.jpg",
+        "status": 200,
+        "bytes": 468948
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/townsite-boulder-city-nv-usgs-topo.jpg",
+        "status": 200,
+        "bytes": 376982
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/wingtip-solar-merced-ca-usgs-aerial.jpg",
+        "status": 200,
+        "bytes": 614189
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/wingtip-solar-merced-ca-usgs-regional.jpg",
+        "status": 200,
+        "bytes": 406862
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/wingtip-solar-merced-ca-usgs-topo.jpg",
+        "status": 200,
+        "bytes": 360649
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/zeus-armstrong-bess-tx-usgs-aerial.jpg",
+        "status": 200,
+        "bytes": 340841
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/zeus-armstrong-bess-tx-usgs-regional.jpg",
+        "status": 200,
+        "bytes": 473808
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/zeus-armstrong-bess-tx-usgs-topo.jpg",
+        "status": 200,
+        "bytes": 144187
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/zeus-mitchell-bess-tx-usgs-aerial.jpg",
+        "status": 200,
+        "bytes": 663882
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/zeus-mitchell-bess-tx-usgs-regional.jpg",
+        "status": 200,
+        "bytes": 598916
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/zeus-mitchell-bess-tx-usgs-topo.jpg",
+        "status": 200,
+        "bytes": 333793
+      }
+    ],
+    "pages": [
+      {
+        "environment": "local",
+        "id": 16351,
+        "status": 200,
+        "bytes": 312355
+      },
+      {
+        "environment": "local",
+        "id": 16356,
+        "status": 200,
+        "bytes": 320576
+      },
+      {
+        "environment": "local",
+        "id": 16359,
+        "status": 200,
+        "bytes": 320314
+      },
+      {
+        "environment": "local",
+        "id": 16364,
+        "status": 200,
+        "bytes": 310524
+      },
+      {
+        "environment": "local",
+        "id": 16369,
+        "status": 200,
+        "bytes": 329153
+      },
+      {
+        "environment": "local",
+        "id": 16370,
+        "status": 200,
+        "bytes": 327686
+      },
+      {
+        "environment": "local",
+        "id": 16371,
+        "status": 200,
+        "bytes": 316210
+      },
+      {
+        "environment": "local",
+        "id": 16372,
+        "status": 200,
+        "bytes": 328909
+      },
+      {
+        "environment": "local",
+        "id": 16380,
+        "status": 200,
+        "bytes": 310386
+      },
+      {
+        "environment": "local",
+        "id": 16384,
+        "status": 200,
+        "bytes": 323961
+      },
+      {
+        "environment": "local",
+        "id": 16387,
+        "status": 200,
+        "bytes": 327256
+      },
+      {
+        "environment": "local",
+        "id": 16390,
+        "status": 200,
+        "bytes": 318961
+      },
+      {
+        "environment": "prod",
+        "id": 16351,
+        "status": 200,
+        "bytes": 270034
+      },
+      {
+        "environment": "prod",
+        "id": 16356,
+        "status": 200,
+        "bytes": 277654
+      },
+      {
+        "environment": "prod",
+        "id": 16359,
+        "status": 200,
+        "bytes": 277418
+      },
+      {
+        "environment": "prod",
+        "id": 16364,
+        "status": 200,
+        "bytes": 267872
+      },
+      {
+        "environment": "prod",
+        "id": 16369,
+        "status": 200,
+        "bytes": 286680
+      },
+      {
+        "environment": "prod",
+        "id": 16370,
+        "status": 200,
+        "bytes": 284843
+      },
+      {
+        "environment": "prod",
+        "id": 16371,
+        "status": 200,
+        "bytes": 274046
+      },
+      {
+        "environment": "prod",
+        "id": 16372,
+        "status": 200,
+        "bytes": 286616
+      },
+      {
+        "environment": "prod",
+        "id": 16380,
+        "status": 200,
+        "bytes": 267767
+      },
+      {
+        "environment": "prod",
+        "id": 16384,
+        "status": 200,
+        "bytes": 281763
+      },
+      {
+        "environment": "prod",
+        "id": 16387,
+        "status": 200,
+        "bytes": 284606
+      },
+      {
+        "environment": "prod",
+        "id": 16390,
+        "status": 200,
+        "bytes": 276732
+      }
+    ],
+    "postedMapCounts": {
+      "local": 1446,
+      "prod": 1446
+    },
+    "telemetry": [
+      {},
+      {},
+      {
+        "energyCleared": true,
+        "datacenterAfter": {
+          "waterGallonsPerDay": null,
+          "waterBasis": null,
+          "chips": null,
+          "chipModel": null,
+          "h100Equivalents": null,
+          "acres": 157,
+          "sqft": null,
+          "buildings": null,
+          "generators": null,
+          "cooling": null,
+          "powerSource": null,
+          "sourceUrl": "https://www.datacenterdynamics.com/en/news/cielo-digital-infrastructure-plans-300mw-data-center-campus-in-south-carolina/",
+          "note": "Historical Cielo marketed site scope; current active application not established. Removed unsupported sqft and capacity-scaled water.",
+          "checkedAt": "2026-10-23T15:15:51.787Z"
+        }
+      },
+      {
+        "energyCleared": true,
+        "datacenterAfter": {
+          "waterGallonsPerDay": null,
+          "waterBasis": null,
+          "chips": null,
+          "chipModel": null,
+          "h100Equivalents": null,
+          "acres": 74,
+          "sqft": null,
+          "buildings": null,
+          "generators": null,
+          "cooling": null,
+          "powerSource": null,
+          "sourceUrl": "https://www.fox13news.com/news/haines-city-data-center-project-water-capacity-shortage",
+          "note": "FOX 13 reports proposed water request 150,000 gal/day and insufficient city capacity; not operating use. Historical acreage from DCD. Removed unsupported sqft and scaled water.",
+          "checkedAt": "2026-10-23T15:15:52.104Z"
+        }
+      },
+      {
+        "energyCleared": true,
+        "datacenterAfter": null
+      },
+      {
+        "energyCleared": true,
+        "datacenterAfter": {
+          "waterGallonsPerDay": null,
+          "waterBasis": null,
+          "chips": null,
+          "chipModel": null,
+          "h100Equivalents": null,
+          "acres": null,
+          "sqft": null,
+          "buildings": null,
+          "generators": null,
+          "cooling": "Developer commitment to closed-loop cooling with one-time fill",
+          "powerSource": null,
+          "sourceUrl": "https://bluestemdatacenter.com/",
+          "note": "Initial generation-site application withdrawn September 28, 2026; data-center rezoning remains active. Removed unverified acreage and water estimate.",
+          "checkedAt": "2026-10-23T15:16:20.904Z"
+        }
+      },
+      {
+        "energyCleared": true,
+        "datacenterAfter": {
+          "waterGallonsPerDay": null,
+          "waterBasis": null,
+          "chips": null,
+          "chipModel": null,
+          "h100Equivalents": null,
+          "acres": 70,
+          "sqft": null,
+          "buildings": null,
+          "generators": null,
+          "cooling": null,
+          "powerSource": null,
+          "sourceUrl": "https://www.datacenterdynamics.com/en/news/sdc-capital-partners-buys-97-acres-of-data-center-zoned-land-in-virginia-for-615-million/",
+          "note": "Historical SDC VA-04 portfolio listing. Removed incorrectly matched STACK NVA02 chips/H100/generators/sqft, unverified cooling and scaled water.",
+          "checkedAt": "2026-10-23T15:16:21.146Z"
+        }
+      },
+      {
+        "energyCleared": true,
+        "datacenterAfter": null
+      },
+      {},
+      {},
+      {},
+      {},
+      {
+        "energyCleared": true,
+        "datacenterAfter": {
+          "waterGallonsPerDay": null,
+          "waterBasis": null,
+          "chips": null,
+          "chipModel": null,
+          "h100Equivalents": null,
+          "acres": 283,
+          "sqft": 3300000,
+          "buildings": 7,
+          "generators": null,
+          "cooling": "Operator-described air-cooled campus",
+          "powerSource": null,
+          "sourceUrl": "https://www.alcovedevelopment.com/projects/project-catalyst",
+          "note": "Up to seven buildings/about 3.3M sqft proposed. No verified 1M gal/day demand. Removed prior unsupported water reading; map point is approximate.",
+          "checkedAt": "2026-10-23T15:20:29.977Z"
+        }
+      },
+      {
+        "energyCleared": true,
+        "datacenterAfter": {
+          "waterGallonsPerDay": null,
+          "waterBasis": null,
+          "chips": null,
+          "chipModel": null,
+          "h100Equivalents": null,
+          "acres": 84,
+          "sqft": 500000,
+          "buildings": null,
+          "generators": null,
+          "cooling": null,
+          "powerSource": null,
+          "sourceUrl": "https://www.archerdatacenters.com/minneapolis",
+          "note": "Conceptual data-hall area, not total campus gross floor area. Removed unsupported cooling and water estimates. City environmental review remains open.",
+          "checkedAt": "2026-10-23T15:20:30.148Z"
+        }
+      },
+      {
+        "energyCleared": true,
+        "datacenterAfter": null
+      },
+      {
+        "energyCleared": true,
+        "datacenterAfter": {
+          "waterGallonsPerDay": null,
+          "waterBasis": null,
+          "chips": null,
+          "chipModel": null,
+          "h100Equivalents": null,
+          "acres": null,
+          "sqft": null,
+          "buildings": null,
+          "generators": null,
+          "cooling": "Google economic-impact page describes primarily air-cooled campus",
+          "powerSource": null,
+          "sourceUrl": "https://economicimpact.google/state/nv/",
+          "note": "Removed unsupported acreage and capacity-scaled water. Primary construction years conflict: dedicated location 2021 vs impact page 2020.",
+          "checkedAt": "2026-10-23T15:33:16.248Z"
+        }
+      },
+      {
+        "energyCleared": true,
+        "datacenterAfter": {
+          "waterGallonsPerDay": null,
+          "waterBasis": null,
+          "chips": null,
+          "chipModel": null,
+          "h100Equivalents": null,
+          "acres": 106,
+          "sqft": 1300000,
+          "buildings": null,
+          "generators": null,
+          "cooling": null,
+          "powerSource": null,
+          "sourceUrl": "https://monticellomn.gov/754/Scannell-Technology-Park",
+          "note": "Historical concept area, not approved buildable scope. May 2026 land guidance leaves about 38 acres light industrial and about 68 acres residential/mixed.",
+          "checkedAt": "2026-10-23T15:21:06.847Z"
+        }
+      },
+      {},
+      {},
+      {},
+      {},
+      {},
+      {
+        "energyCleared": true,
+        "datacenterAfter": {
+          "waterGallonsPerDay": null,
+          "waterBasis": null,
+          "chips": null,
+          "chipModel": null,
+          "h100Equivalents": null,
+          "acres": 20,
+          "sqft": null,
+          "buildings": null,
+          "generators": null,
+          "cooling": null,
+          "powerSource": null,
+          "sourceUrl": "https://chirisatechnologyparks.com/",
+          "note": "PNJ-01/02 adaptive reuse plus adjacent two-story greenfield development. No verified floor area, cooling or daily water reading.",
+          "checkedAt": "2026-10-23T15:30:28.534Z"
+        }
+      },
+      {
+        "energyCleared": true,
+        "datacenterAfter": null
+      },
+      {
+        "energyCleared": true,
+        "datacenterAfter": {
+          "waterGallonsPerDay": null,
+          "waterBasis": null,
+          "chips": null,
+          "chipModel": null,
+          "h100Equivalents": null,
+          "acres": null,
+          "sqft": 715000,
+          "buildings": null,
+          "generators": null,
+          "cooling": "Planned closed-loop liquid cooling; Meta states zero operational cooling water",
+          "powerSource": null,
+          "sourceUrl": "https://datacenters.atmeta.com/asset/aiken-data-center-info-sheet/",
+          "note": "715,000 sqft is initial campus scope from SC Commerce. No total daily site water reading is published; zero refers to the cooling-system design.",
+          "checkedAt": "2026-10-23T15:30:48.383Z"
+        }
+      },
+      {
+        "energyCleared": true,
+        "datacenterAfter": null
+      },
+      {
+        "energyCleared": true,
+        "datacenterAfter": {
+          "waterGallonsPerDay": null,
+          "waterBasis": null,
+          "chips": null,
+          "chipModel": null,
+          "h100Equivalents": null,
+          "acres": null,
+          "sqft": null,
+          "buildings": null,
+          "generators": null,
+          "cooling": "Water-efficient cooling planned; specific technology unpublished in current fact sheet",
+          "powerSource": null,
+          "sourceUrl": "https://datacenters.atmeta.com/asset/montgomery-data-center-info-sheet/",
+          "note": "No verified daily water or 380-acre area. Historic initial 715,000 sqft scope is not asserted as the current expanded campus total.",
+          "checkedAt": "2026-10-23T15:31:06.862Z"
+        }
+      },
+      {
+        "energyCleared": true,
+        "datacenterAfter": {
+          "waterGallonsPerDay": null,
+          "waterBasis": null,
+          "chips": null,
+          "chipModel": null,
+          "h100Equivalents": null,
+          "acres": null,
+          "sqft": 426983,
+          "buildings": 2,
+          "generators": null,
+          "cooling": "Design: fuel-cell waste heat supplies absorption chillers for part of cooling",
+          "powerSource": null,
+          "sourceUrl": "https://www.arcadis.com/en/projects/north-america/united-states/nearing-net-zero",
+          "note": "Phase 1 total includes 295080 sqft DC/attached power structure plus131903 sqft standalone power structure. No verified IT MW, acreage or daily water consumption.",
+          "checkedAt": "2026-10-23T15:31:09.449Z"
+        }
+      },
+      {},
+      {},
+      {},
+      {},
+      {
+        "energyCleared": true,
+        "datacenterAfter": {
+          "waterGallonsPerDay": null,
+          "waterBasis": null,
+          "chips": null,
+          "chipModel": null,
+          "h100Equivalents": null,
+          "acres": 157,
+          "sqft": null,
+          "buildings": null,
+          "generators": null,
+          "cooling": null,
+          "powerSource": null,
+          "sourceUrl": "https://www.datacenterdynamics.com/en/news/cielo-digital-infrastructure-plans-300mw-data-center-campus-in-south-carolina/",
+          "note": "Historical Cielo marketed site scope; current active application not established. Removed unsupported sqft and capacity-scaled water.",
+          "checkedAt": "2026-10-23T15:16:27.941Z"
+        }
+      },
+      {
+        "energyCleared": true,
+        "datacenterAfter": {
+          "waterGallonsPerDay": null,
+          "waterBasis": null,
+          "chips": null,
+          "chipModel": null,
+          "h100Equivalents": null,
+          "acres": 74,
+          "sqft": null,
+          "buildings": null,
+          "generators": null,
+          "cooling": null,
+          "powerSource": null,
+          "sourceUrl": "https://www.fox13news.com/news/haines-city-data-center-project-water-capacity-shortage",
+          "note": "FOX 13 reports proposed water request 150,000 gal/day and insufficient city capacity; not operating use. Historical acreage from DCD. Removed unsupported sqft and scaled water.",
+          "checkedAt": "2026-10-23T15:16:30.740Z"
+        }
+      },
+      {
+        "energyCleared": true,
+        "datacenterAfter": null
+      },
+      {
+        "energyCleared": true,
+        "datacenterAfter": {
+          "waterGallonsPerDay": null,
+          "waterBasis": null,
+          "chips": null,
+          "chipModel": null,
+          "h100Equivalents": null,
+          "acres": null,
+          "sqft": null,
+          "buildings": null,
+          "generators": null,
+          "cooling": "Developer commitment to closed-loop cooling with one-time fill",
+          "powerSource": null,
+          "sourceUrl": "https://bluestemdatacenter.com/",
+          "note": "Initial generation-site application withdrawn September 28, 2026; data-center rezoning remains active. Removed unverified acreage and water estimate.",
+          "checkedAt": "2026-10-23T15:16:36.334Z"
+        }
+      },
+      {
+        "energyCleared": true,
+        "datacenterAfter": {
+          "waterGallonsPerDay": null,
+          "waterBasis": null,
+          "chips": null,
+          "chipModel": null,
+          "h100Equivalents": null,
+          "acres": 70,
+          "sqft": null,
+          "buildings": null,
+          "generators": null,
+          "cooling": null,
+          "powerSource": null,
+          "sourceUrl": "https://www.datacenterdynamics.com/en/news/sdc-capital-partners-buys-97-acres-of-data-center-zoned-land-in-virginia-for-615-million/",
+          "note": "Historical SDC VA-04 portfolio listing. Removed incorrectly matched STACK NVA02 chips/H100/generators/sqft, unverified cooling and scaled water.",
+          "checkedAt": "2026-10-23T15:16:39.538Z"
+        }
+      },
+      {
+        "energyCleared": true,
+        "datacenterAfter": null
+      },
+      {},
+      {},
+      {},
+      {},
+      {
+        "energyCleared": true,
+        "datacenterAfter": {
+          "waterGallonsPerDay": null,
+          "waterBasis": null,
+          "chips": null,
+          "chipModel": null,
+          "h100Equivalents": null,
+          "acres": 283,
+          "sqft": 3300000,
+          "buildings": 7,
+          "generators": null,
+          "cooling": "Operator-described air-cooled campus",
+          "powerSource": null,
+          "sourceUrl": "https://www.alcovedevelopment.com/projects/project-catalyst",
+          "note": "Up to seven buildings/about 3.3M sqft proposed. No verified 1M gal/day demand. Removed prior unsupported water reading; map point is approximate.",
+          "checkedAt": "2026-10-23T15:21:22.468Z"
+        }
+      },
+      {
+        "energyCleared": true,
+        "datacenterAfter": {
+          "waterGallonsPerDay": null,
+          "waterBasis": null,
+          "chips": null,
+          "chipModel": null,
+          "h100Equivalents": null,
+          "acres": 84,
+          "sqft": 500000,
+          "buildings": null,
+          "generators": null,
+          "cooling": null,
+          "powerSource": null,
+          "sourceUrl": "https://www.archerdatacenters.com/minneapolis",
+          "note": "Conceptual data-hall area, not total campus gross floor area. Removed unsupported cooling and water estimates. City environmental review remains open.",
+          "checkedAt": "2026-10-23T15:21:28.514Z"
+        }
+      },
+      {
+        "energyCleared": true,
+        "datacenterAfter": null
+      },
+      {
+        "energyCleared": true,
+        "datacenterAfter": {
+          "waterGallonsPerDay": null,
+          "waterBasis": null,
+          "chips": null,
+          "chipModel": null,
+          "h100Equivalents": null,
+          "acres": null,
+          "sqft": null,
+          "buildings": null,
+          "generators": null,
+          "cooling": "Google economic-impact page describes primarily air-cooled campus",
+          "powerSource": null,
+          "sourceUrl": "https://economicimpact.google/state/nv/",
+          "note": "Removed unsupported acreage and capacity-scaled water. Primary construction years conflict: dedicated location 2021 vs impact page 2020.",
+          "checkedAt": "2026-10-23T15:33:49.493Z"
+        }
+      },
+      {
+        "energyCleared": true,
+        "datacenterAfter": {
+          "waterGallonsPerDay": null,
+          "waterBasis": null,
+          "chips": null,
+          "chipModel": null,
+          "h100Equivalents": null,
+          "acres": 106,
+          "sqft": 1300000,
+          "buildings": null,
+          "generators": null,
+          "cooling": null,
+          "powerSource": null,
+          "sourceUrl": "https://monticellomn.gov/754/Scannell-Technology-Park",
+          "note": "Historical concept area, not approved buildable scope. May 2026 land guidance leaves about 38 acres light industrial and about 68 acres residential/mixed.",
+          "checkedAt": "2026-10-23T15:22:08.226Z"
+        }
+      },
+      {},
+      {},
+      {},
+      {},
+      {},
+      {
+        "energyCleared": true,
+        "datacenterAfter": {
+          "waterGallonsPerDay": null,
+          "waterBasis": null,
+          "chips": null,
+          "chipModel": null,
+          "h100Equivalents": null,
+          "acres": 20,
+          "sqft": null,
+          "buildings": null,
+          "generators": null,
+          "cooling": null,
+          "powerSource": null,
+          "sourceUrl": "https://chirisatechnologyparks.com/",
+          "note": "PNJ-01/02 adaptive reuse plus adjacent two-story greenfield development. No verified floor area, cooling or daily water reading.",
+          "checkedAt": "2026-10-23T15:31:18.940Z"
+        }
+      },
+      {
+        "energyCleared": true,
+        "datacenterAfter": null
+      },
+      {
+        "energyCleared": true,
+        "datacenterAfter": {
+          "waterGallonsPerDay": null,
+          "waterBasis": null,
+          "chips": null,
+          "chipModel": null,
+          "h100Equivalents": null,
+          "acres": null,
+          "sqft": 715000,
+          "buildings": null,
+          "generators": null,
+          "cooling": "Planned closed-loop liquid cooling; Meta states zero operational cooling water",
+          "powerSource": null,
+          "sourceUrl": "https://datacenters.atmeta.com/asset/aiken-data-center-info-sheet/",
+          "note": "715,000 sqft is initial campus scope from SC Commerce. No total daily site water reading is published; zero refers to the cooling-system design.",
+          "checkedAt": "2026-10-23T15:31:24.433Z"
+        }
+      },
+      {
+        "energyCleared": true,
+        "datacenterAfter": null
+      },
+      {
+        "energyCleared": true,
+        "datacenterAfter": {
+          "waterGallonsPerDay": null,
+          "waterBasis": null,
+          "chips": null,
+          "chipModel": null,
+          "h100Equivalents": null,
+          "acres": null,
+          "sqft": null,
+          "buildings": null,
+          "generators": null,
+          "cooling": "Water-efficient cooling planned; specific technology unpublished in current fact sheet",
+          "powerSource": null,
+          "sourceUrl": "https://datacenters.atmeta.com/asset/montgomery-data-center-info-sheet/",
+          "note": "No verified daily water or 380-acre area. Historic initial 715,000 sqft scope is not asserted as the current expanded campus total.",
+          "checkedAt": "2026-10-23T15:31:29.570Z"
+        }
+      },
+      {
+        "energyCleared": true,
+        "datacenterAfter": {
+          "waterGallonsPerDay": null,
+          "waterBasis": null,
+          "chips": null,
+          "chipModel": null,
+          "h100Equivalents": null,
+          "acres": null,
+          "sqft": 426983,
+          "buildings": 2,
+          "generators": null,
+          "cooling": "Design: fuel-cell waste heat supplies absorption chillers for part of cooling",
+          "powerSource": null,
+          "sourceUrl": "https://www.arcadis.com/en/projects/north-america/united-states/nearing-net-zero",
+          "note": "Phase 1 total includes 295080 sqft DC/attached power structure plus131903 sqft standalone power structure. No verified IT MW, acreage or daily water consumption.",
+          "checkedAt": "2026-10-23T15:31:36.689Z"
+        }
+      },
+      {},
+      {}
+    ]
+  },
+  "limitations": [
+    "No live account-credit meter was available; this is a verified 36-pin checkpoint, not a claim that account credit is low.",
+    "Eleven legacy commissioning dates remain explicitly unverified estimates; no source found confirming those dates.",
+    "Shared official report URLs are cited in references; sourceUrl is null where reuse conflicts with source uniqueness. No synthetic unique fragments were introduced.",
+    "Existing source wikis, translations, stock associations, outlines, and unmodified map positions were not globally re-audited.",
+    "Overlapping campus/project records remain queued for association-aware consolidation."
+  ]
+}
