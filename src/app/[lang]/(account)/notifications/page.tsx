@@ -14,14 +14,13 @@ export async function generateMetadata(): Promise<Metadata> {
 
 // Where the mobile drawer's Notifications row leads; wide screens have the
 // bell's panel in the navbar.
-export default async function NotificationsPage({ searchParams }: { searchParams: Promise<{ section?: string }> }) {
-  const { section } = await searchParams;
+export default async function NotificationsPage() {
   await requireViewer('/notifications');
   const t = await getT();
   return (
     <div data-wide className="mx-auto max-w-2xl px-4 py-6 sm:py-10 lg:max-w-7xl">
       <TitleWithBack wideBack className="mb-4 sm:mb-6">{t('notifications.title')}</TitleWithBack>
-      <NotificationsFeed section={section} />
+      <NotificationsFeed />
     </div>
   );
 }

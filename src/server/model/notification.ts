@@ -117,6 +117,14 @@ const TRADE_COLUMNS = `
                   FROM "PersonTrade" t WHERE t."personId" = e."personId" AND t."filingId" = e."tradeFiling" AND t."ticker" IS NOT NULL AND t."txType" = 'purchase' GROUP BY t."ticker") v) AS "tradeBuyValues",
                (SELECT COALESCE(jsonb_object_agg(v."ticker", v."value"), '{}'::jsonb) FROM (SELECT t."ticker", SUM((COALESCE(t."amountLow", 0) + COALESCE(t."amountHigh", t."amountLow", 0)) / 2)::float8 AS "value"
                   FROM "PersonTrade" t WHERE t."personId" = e."personId" AND t."filingId" = e."tradeFiling" AND t."ticker" IS NOT NULL AND t."txType" IN ('sale', 'partial') GROUP BY t."ticker") v) AS "tradeSellValues",
+               (SELECT array_agg(DISTINCT t."asset") FILTER (WHERE t."asset" IS NOT NULL)
+                  FROM "PersonTrade" t WHERE t."personId" = e."personId" AND t."filingId" = e."tradeFiling" AND t."ticker" IS NULL AND t."txType" = 'purchase') AS "tradeBuyAssets",
+               (SELECT SUM((COALESCE(t."amountLow", 0) + COALESCE(t."amountHigh", t."amountLow", 0)) / 2)::float8
+                  FROM "PersonTrade" t WHERE t."personId" = e."personId" AND t."filingId" = e."tradeFiling" AND t."ticker" IS NULL AND t."txType" = 'purchase') AS "tradeBuyOtherValue",
+               (SELECT array_agg(DISTINCT t."asset") FILTER (WHERE t."asset" IS NOT NULL)
+                  FROM "PersonTrade" t WHERE t."personId" = e."personId" AND t."filingId" = e."tradeFiling" AND t."ticker" IS NULL AND t."txType" IN ('sale', 'partial')) AS "tradeSellAssets",
+               (SELECT SUM((COALESCE(t."amountLow", 0) + COALESCE(t."amountHigh", t."amountLow", 0)) / 2)::float8
+                  FROM "PersonTrade" t WHERE t."personId" = e."personId" AND t."filingId" = e."tradeFiling" AND t."ticker" IS NULL AND t."txType" IN ('sale', 'partial')) AS "tradeSellOtherValue",
                (SELECT jsonb_agg(DISTINCT jsonb_build_object('ticker', t."ticker", 'committee', c ->> 'committee', 'sector', c ->> 'sector'))
                   FROM "PersonTrade" t CROSS JOIN LATERAL jsonb_array_elements(${CONFLICTS('t')}) c
                   WHERE t."personId" = e."personId" AND t."filingId" = e."tradeFiling") AS "tradeConflicts"`;
@@ -146,6 +154,12 @@ export type NotificationItem = {
   // Per-ticker dollar value (midpoint of the disclosed range) in this filing.
   tradeBuyValues: Record<string, number> | null;
   tradeSellValues: Record<string, number> | null;
+  // What the filing holds that has no ticker (bonds, T-bills, private companies):
+  // the asset names, and their summed dollar value, per side.
+  tradeBuyAssets: string[] | null;
+  tradeSellAssets: string[] | null;
+  tradeBuyOtherValue: number | null;
+  tradeSellOtherValue: number | null;
   // Tickers in this filing that sit in a sector one of the member's committees oversees.
   tradeConflicts: { ticker: string; committee: string; sector: string }[] | null;
   utcCreatedDateTime: Date;

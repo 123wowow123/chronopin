@@ -39,6 +39,10 @@ type Notification = {
   tradeSellTickers: string[] | null;
   tradeBuyValues: Record<string, number> | null;
   tradeSellValues: Record<string, number> | null;
+  tradeBuyAssets: string[] | null;
+  tradeSellAssets: string[] | null;
+  tradeBuyOtherValue: number | null;
+  tradeSellOtherValue: number | null;
   tradeConflicts: { ticker: string; committee: string; sector: string }[] | null;
   utcCreatedDateTime: string;
   read: boolean;
@@ -104,11 +108,11 @@ function aimBatch(n: Notification, href: string) {
 }
 
 // Where a section's "See more" leads: its pins on the timeline, newest by date,
-// named by id like a batch. A section with no pins in it (trades, say) falls
-// back to its page of notifications; the cap keeps the URL a sane length.
-function sectionHref(section: Section, rows: Notification[]): string {
+// named by id like a batch. A section with no pins in it (trades, say) has no
+// link; the cap keeps the URL a sane length.
+function sectionHref(rows: Notification[]): string | null {
   const ids = [...new Set(rows.flatMap((n) => (n.pinIds?.length ? n.pinIds : n.pinId ? [n.pinId] : [])))].slice(0, 200);
-  return ids.length ? `/search?q=${encodeURIComponent(term('pin', ids.join(',')))}&sort=date` : `/notifications?section=${section}`;
+  return ids.length ? `/search?q=${encodeURIComponent(term('pin', ids.join(',')))}&sort=date` : null;
 }
 
 // Where a new-pin row leads: the pin itself, or, for a batch, the search
@@ -298,7 +302,6 @@ function NotificationFace({ n, onNavigate }: { n: Notification; onNavigate?: () 
 // server's newest-first order, and the sections themselves run by whichever
 // holds the newest notification, so the top of the list is still the latest.
 type Section = 'following' | 'watching' | 'yours';
-const SECTIONS: Section[] = ['following', 'watching', 'yours'];
 
 function sectionOf(type: string): Section {
   switch (type) {
@@ -508,11 +511,11 @@ function TradeGroup({ groups, renderRow, href, fixed, guest, wide }: { wide?: bo
   );
 }
 
-// The full page's list on a wide screen: as many columns of rows as fit,
+// The full page's list on a wide screen: up to two columns of rows,
 // a few rows filling the width, the trades group across all. The list is pulled a pixel past
 // the card so the last row and column draw no border against its edge.
 const WIDE_LIST =
-  'divide-y divide-line lg:-mb-px lg:-me-px lg:grid lg:grid-cols-[repeat(auto-fit,minmax(24rem,1fr))] lg:divide-y-0 lg:[&>li]:border-b lg:[&>li]:border-e lg:[&>li]:border-line';
+  'divide-y divide-line lg:-mb-px lg:-me-px lg:grid lg:grid-cols-[repeat(auto-fit,minmax(max(24rem,45%),1fr))] lg:divide-y-0 lg:[&>li]:border-b lg:[&>li]:border-e lg:[&>li]:border-line';
 
 function NotificationItems({
   items,
@@ -693,8 +696,8 @@ function NotificationItems({
           >
             {labels[section]}
             <span className="flex items-center gap-3">
-              {onNavigate ? (
-                <Link href={sectionHref(section, rows)} className="text-xs font-medium tracking-normal text-link normal-case" onClick={onNavigate}>
+              {onNavigate && sectionHref(rows) ? (
+                <Link href={sectionHref(rows)!} className="text-xs font-medium tracking-normal text-link normal-case" onClick={onNavigate}>
                   {t('notifications.tradesHistory')}
                 </Link>
               ) : null}
@@ -965,7 +968,9 @@ export function NotificationBell({ className = '' }: { className?: string }) {
       {open ? (
         <div className="floating absolute end-0 z-50 mt-2 w-80 overflow-hidden">
           <LocalWeatherRow className="border-b border-line" />
-          <div className="border-b border-line px-4 py-2.5 text-sm font-semibold text-ink">{t('notifications.title')}</div>
+          <Link href="/notifications" onClick={() => setOpen(false)} className="block border-b border-line px-4 py-2.5 text-sm font-semibold text-ink hover:bg-raised hover:no-underline">
+            {t('notifications.title')}
+          </Link>
           <NotificationItems {...list} listClassName="max-h-96 overflow-auto" onNavigate={() => setOpen(false)} />
         </div>
       ) : null}
@@ -991,12 +996,12 @@ export function DrawerNotifications({ className, current, onClick }: { className
 }
 
 // The /notifications page: the whole list, loaded (and marked read) on arrival.
-export function NotificationsFeed({ section }: { section?: string }) {
+export function NotificationsFeed() {
   const list = useNotificationList(true);
   return (
     <div className="surface overflow-hidden">
       <LocalWeatherRow className="border-b border-line" />
-      <NotificationItems {...list} wide only={SECTIONS.find((x) => x === section)} />
+      <NotificationItems {...list} wide />
     </div>
   );
 }
@@ -1012,7 +1017,7 @@ const dayDate = (offset: number) => {
 
 // The /notifications/trades page: each day's buys and sells for the past two
 // weeks. Read-only, so unlike the main list it leaves the unread marks alone.
-export function TradesHistoryFeed({ everyone }: { everyone?: boolean }) {
+export function TradesHistoryFeed({ everyone, wide }: { everyone?: boolean; wide?: boolean }) {
   const t = useT();
   const locale = useIntlLocale();
   const [weeks, setWeeks] = useState(2);
@@ -1069,16 +1074,21 @@ export function TradesHistoryFeed({ everyone }: { everyone?: boolean }) {
       : new Intl.DateTimeFormat(locale, { weekday: 'long' }).format(dayDate(day));
   const dateLabel = (day: number) => new Intl.DateTimeFormat(locale, { month: 'short', day: 'numeric' }).format(dayDate(day));
   const money = new Intl.NumberFormat(locale, { style: 'currency', currency: 'USD', notation: 'compact', maximumFractionDigits: 1 });
-  const total = (values: Record<string, number> | null) => Object.values(values ?? {}).reduce((a, b) => a + b, 0);
+  const total = (values: Record<string, number> | null, other?: number | null) => Object.values(values ?? {}).reduce((a, b) => a + b, other ?? 0);
   const weekLabel = (w: number) => new Intl.NumberFormat(locale, { style: 'unit', unit: 'week', unitDisplay: 'narrow' }).format(w);
   const chips = (tickers: string[] | null, cls: string) =>
     tickers?.map((tk) => (
       // Above the row's stretched person link: a ticker opens its company and stock graph.
       <Link key={tk} href={tickerHref(tk)} className={`relative rounded-md px-1.5 py-0.5 text-[11px] font-semibold hover:underline ${cls}`}>{tk}</Link>
     ));
+  // Holdings with no ticker (bonds, T-bills, private companies), by name.
+  const assetChips = (assets: string[] | null) =>
+    assets?.map((a) => (
+      <span key={a} title={a} className="rounded-md bg-raised px-1.5 py-0.5 text-[11px] font-medium text-muted">{a}</span>
+    ));
   return (
-    <div className="flex flex-col gap-4">
-      <div role="group" aria-label={t('notifications.tradesToday')} className="surface flex gap-1 p-1">
+    <div className={wide ? 'flex flex-col gap-4 lg:grid lg:grid-cols-3 lg:items-start' : 'flex flex-col gap-4'}>
+      <div role="group" aria-label={t('notifications.tradesToday')} className={`surface flex gap-1 p-1 ${wide ? 'lg:col-span-3' : ''}`}>
         {HISTORY_WEEKS.map((w) => (
           <button
             key={w}
@@ -1091,7 +1101,7 @@ export function TradesHistoryFeed({ everyone }: { everyone?: boolean }) {
           </button>
         ))}
       </div>
-      <div className="surface grid grid-cols-3 divide-x divide-line rtl:divide-x-reverse">
+      <div className={`surface grid grid-cols-3 divide-x divide-line rtl:divide-x-reverse ${wide ? 'lg:col-span-1' : ''}`}>
         {([
           ['tradeBuys', sum(all, (n) => n.tradeBuys)],
           ['tradeSells', sum(all, (n) => n.tradeSells)],
@@ -1106,7 +1116,7 @@ export function TradesHistoryFeed({ everyone }: { everyone?: boolean }) {
           <Icon name="users" className="size-4 text-subtle" />
         </div>
       </div>
-      <div className="surface grid grid-cols-1 divide-y divide-line sm:grid-cols-2 sm:divide-x sm:divide-y-0 rtl:sm:divide-x-reverse">
+      <div className={`surface grid grid-cols-1 divide-y divide-line sm:grid-cols-2 sm:divide-x sm:divide-y-0 rtl:sm:divide-x-reverse ${wide ? 'lg:col-span-2' : ''}`}>
         {([
           ['tradeBuys', ranked.buys],
           ['tradeSells', ranked.sells],
@@ -1130,16 +1140,16 @@ export function TradesHistoryFeed({ everyone }: { everyone?: boolean }) {
         ))}
       </div>
       {days.map((g) => (
-        <section key={g.day} className="surface overflow-hidden">
+        <section key={g.day} className={`surface overflow-hidden ${wide ? 'lg:col-span-3' : ''}`}>
           <header className="flex items-baseline justify-between gap-2 border-b border-line bg-raised/40 px-4 py-2.5">
             <h2 className="font-semibold text-ink capitalize">{dayLabel(g.day)}</h2>
             <span className="flex items-center gap-3 text-xs tabular-nums text-subtle">
-              <span className="text-success-soft">{t('notifications.tradeBuys')} {sum(g.items, (n) => n.tradeBuys)} · {money.format(sum(g.items, (n) => total(n.tradeBuyValues)))}</span>
-              <span className="text-danger-soft">{t('notifications.tradeSells')} {sum(g.items, (n) => n.tradeSells)} · {money.format(sum(g.items, (n) => total(n.tradeSellValues)))}</span>
+              <span className="text-success-soft">{t('notifications.tradeBuys')} {sum(g.items, (n) => n.tradeBuys)} · {money.format(sum(g.items, (n) => total(n.tradeBuyValues, n.tradeBuyOtherValue)))}</span>
+              <span className="text-danger-soft">{t('notifications.tradeSells')} {sum(g.items, (n) => n.tradeSells)} · {money.format(sum(g.items, (n) => total(n.tradeSellValues, n.tradeSellOtherValue)))}</span>
               <span>{dateLabel(g.day)}</span>
             </span>
           </header>
-          <ul className="divide-y divide-line">
+          <ul className={wide ? WIDE_LIST : 'divide-y divide-line'}>
             {g.items.map((n) => (
               <li key={n.id} className="relative">
                 <div className="flex items-start gap-3 px-4 py-3 text-sm hover:bg-raised/50">
@@ -1156,12 +1166,14 @@ export function TradesHistoryFeed({ everyone }: { everyone?: boolean }) {
                     <span className="flex flex-wrap items-center gap-1">
                       {chips(n.tradeBuyTickers, 'bg-success/15 text-success-soft')}
                       {chips(n.tradeSellTickers, 'bg-danger/15 text-danger-soft')}
+                      {assetChips(n.tradeBuyAssets)}
+                      {assetChips(n.tradeSellAssets)}
                     </span>
                     <ConflictBadge n={n} />
                   </span>
                   <span className="flex shrink-0 gap-1.5 text-xs font-semibold tabular-nums">
-                    {total(n.tradeBuyValues) ? <span className={`rounded-full px-2 py-0.5 ring-1 ring-inset ${tone.tradeBuys}`}>{money.format(total(n.tradeBuyValues))}</span> : null}
-                    {total(n.tradeSellValues) ? <span className={`rounded-full px-2 py-0.5 ring-1 ring-inset ${tone.tradeSells}`}>{money.format(total(n.tradeSellValues))}</span> : null}
+                    {total(n.tradeBuyValues, n.tradeBuyOtherValue) ? <span className={`rounded-full px-2 py-0.5 ring-1 ring-inset ${tone.tradeBuys}`}>{money.format(total(n.tradeBuyValues, n.tradeBuyOtherValue))}</span> : null}
+                    {total(n.tradeSellValues, n.tradeSellOtherValue) ? <span className={`rounded-full px-2 py-0.5 ring-1 ring-inset ${tone.tradeSells}`}>{money.format(total(n.tradeSellValues, n.tradeSellOtherValue))}</span> : null}
                   </span>
                 </div>
               </li>
