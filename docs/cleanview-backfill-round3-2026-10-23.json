@@ -1,0 +1,1579 @@
+{
+  "checkedAt": "2026-10-23",
+  "scope": "Cleanview backfill batch 3; 12 existing pin identities, production/current local IDs 16322 and 16328–16338.",
+  "outcome": {
+    "correctedPins": 12,
+    "softDeletedHeldPins": 0,
+    "environmentActionsVerified": 24,
+    "azureImagesDownloaded": 36,
+    "imagesPreserved": 30,
+    "imagesReplaced": 6,
+    "nativePagesVerified": 8,
+    "localMappedCount": 1452,
+    "productionMappedCount": 1452,
+    "deployment": false
+  },
+  "plan": {
+    "solar-nextera-singer-solar-la": {
+      "patch": {
+        "title": "NextEra Singer Solar: 200–300 MW Source Discrepancy; $350M Published Investment",
+        "description": "NextEra’s Singer website advertises up to 200 MW and $350 million investment, while EIA lists a 300 MW unit planned for March 2027. These published scopes need reconciliation; the earlier $145 million figure is removed.",
+        "sourceUrl": "https://www.nexteraenergyresources.com/singer-solar.html",
+        "references": [
+          {
+            "url": "https://www.nexteraenergyresources.com/singer-solar.html",
+            "title": "NextEra Energy Resources — Singer Solar",
+            "confidence": 95,
+            "publishedDate": null
+          },
+          {
+            "url": "https://www.nexteraenergyresources.com/singer-solar/project-overview.html",
+            "title": "Singer Solar — Project Overview",
+            "confidence": 95,
+            "publishedDate": null
+          },
+          {
+            "url": "https://www.eia.gov/electricity/monthly/epm_table_grapher.php?t=epmt_6_05",
+            "title": "EIA Electric Power Monthly — Table 6.5 Planned Generating Capacity Additions",
+            "confidence": 95,
+            "publishedDate": null
+          }
+        ],
+        "longFormSummary": "<ul><li>NextEra’s project site describes up to 200 MW in Beauregard Parish and publishes $350 million project investment. Its overview gives about 1,970 acres.<cite data-ref=\"https://www.nexteraenergyresources.com/singer-solar.html\"></cite></li><li>EIA lists Singer Solar plant 69299, unit 4519, at 300 MW with planned March 2027 completion. This differs from the operator’s 200 MW scope.<cite data-ref=\"https://www.eia.gov/electricity/monthly/epm_table_grapher.php?t=epmt_6_05\"></cite></li><li>Timeline: March 1, 2027 represents EIA’s month-only target. The operator overview’s as-early-as-January-2026 target is stale and does not prove operation.<cite data-ref=\"https://www.nexteraenergyresources.com/singer-solar/project-overview.html\"></cite></li></ul>",
+        "price": 350000000,
+        "priceCurrency": "USD",
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "estimated",
+        "allDay": true,
+        "allDayStated": false,
+        "utcStartDateTime": "2027-03-01T00:00:00.000Z",
+        "dateConfidenceReasoning": "EIA planned-additions table lists Singer Solar for March 2027. March 1 is month precision, not a scheduled commissioning day; operator’s January 2026 target is older and requires reconciliation."
+      },
+      "power": {
+        "megawatts": 200,
+        "kind": "generation",
+        "sourceUrl": "https://www.nexteraenergyresources.com/singer-solar.html",
+        "note": "Current operator-advertised up-to-200 MW scope. EIA lists 300 MW; scope discrepancy unresolved."
+      },
+      "datacenter": null,
+      "clearEnergy": true,
+      "gaps": [
+        "Reconcile operator 200 MW/$350M scope against EIA 300 MW/March 2027 unit; verify actual construction/COD and parcel."
+      ]
+    },
+    "dc-aligned-pit01-shippingport-pa": {
+      "patch": {
+        "title": "Aligned Project Phoenix: Announced 2 GW Shippingport Campus; $10B Regional Investment",
+        "description": "Aligned’s September 10, 2026 groundbreaking announcement describes a 2 GW campus across three facilities in Shippingport. Its $10 billion figure is estimated regional economic investment, not a disclosed construction budget for the former 264 MW tracker scope.",
+        "sourceUrl": "https://aligneddc.com/press-release/project-phoenix-data-center-shippingport-pa/",
+        "references": [
+          {
+            "url": "https://aligneddc.com/press-release/project-phoenix-data-center-shippingport-pa/",
+            "title": "Aligned Data Centers and Shippingport Community Mark Revitalization of Legacy Energy Site with Groundbreaking of 2 GW “Project Phoenix” Campus",
+            "confidence": 95,
+            "publishedDate": "2026-09-10"
+          }
+        ],
+        "longFormSummary": "<ul><li>Aligned announced groundbreaking on a 2 GW, three-facility Project Phoenix campus at Shippingport Industrial Park in September 2026.<cite data-ref=\"https://aligneddc.com/press-release/project-phoenix-data-center-shippingport-pa/\"></cite></li><li>The developer says dedicated onsite power will serve the campus, adjacent to the former coal station being redeveloped for natural-gas generation.<cite data-ref=\"https://aligneddc.com/press-release/project-phoenix-data-center-shippingport-pa/\"></cite></li><li>The announcement describes approximately $10 billion in regional economic investment, not an itemized campus construction cost. The single project-price field is cleared.<cite data-ref=\"https://aligneddc.com/press-release/project-phoenix-data-center-shippingport-pa/\"></cite></li><li>Timeline: no commercial-operation date is published in the announcement. January 1, 2028 remains an explicitly unverified legacy estimated placeholder.<cite data-ref=\"https://aligneddc.com/press-release/project-phoenix-data-center-shippingport-pa/\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "estimated",
+        "allDay": true,
+        "allDayStated": false,
+        "utcStartDateTime": "2028-01-01T00:00:00.000Z",
+        "dateConfidenceReasoning": "Unverified legacy 2028 year placeholder. Opened September 10, 2026 announcement confirms groundbreaking but provides no COD. Do not treat January 1 as scheduled service."
+      },
+      "power": {
+        "megawatts": 2000,
+        "kind": "usage",
+        "sourceUrl": "https://aligneddc.com/press-release/project-phoenix-data-center-shippingport-pa/",
+        "note": "Developer-announced 2 GW campus scope; operating load and per-phase IT allocations not published."
+      },
+      "datacenter": {
+        "buildings": 3,
+        "cooling": "Closed-loop cooling; developer states zero water for operational cooling",
+        "powerSource": "Dedicated onsite power; adjacent natural-gas energy campus redevelopment",
+        "sourceUrl": "https://aligneddc.com/press-release/project-phoenix-data-center-shippingport-pa/",
+        "note": "Announced 2 GW campus. $10B is regional economic investment, not a verified campus construction budget. No daily water figure published."
+      },
+      "clearEnergy": true,
+      "gaps": [
+        "Obtain phased capacity and service schedule, project-only budget, exact site boundaries and tenant."
+      ]
+    },
+    "dc-cloudhq-ord-mount-prospect-il": {
+      "patch": {
+        "title": "CloudHQ ORD Mount Prospect: 252 MW Listed IT Capacity; $2.5B Announced Investment",
+        "description": "CloudHQ lists 252 MW critical IT load and 1.7 million square feet for ORD, while its overview describes configurations up to 300 MW. ComEd’s 2022 release gives a $2.5 billion announced investment; a fixed current service date remains unverified.",
+        "sourceUrl": "https://cloudhq.com/campus/ord-campus/",
+        "references": [
+          {
+            "url": "https://cloudhq.com/campus/ord-campus/",
+            "title": "ORD Campus — CloudHQ",
+            "confidence": 95,
+            "publishedDate": null
+          },
+          {
+            "url": "https://www.nasdaq.com/press-release/comed-cloudhq-break-ground-on-new-hyperscale-data-center-in-mount-prospect-2022-08-23",
+            "title": "ComEd, CloudHQ Break Ground on New Hyperscale Data Center in Mount Prospect",
+            "confidence": 95,
+            "publishedDate": "2022-08-23"
+          }
+        ],
+        "longFormSummary": "<ul><li>CloudHQ’s specification table lists 252 MW critical IT load and 1.7 million square feet; its overview separately says up to 300 MW. Final configured capacity needs confirmation.<cite data-ref=\"https://cloudhq.com/campus/ord-campus/\"></cite></li><li>ComEd’s August 2022 announcement gives $2.5 billion investment and an onsite utility substation at the former United Airlines headquarters.<cite data-ref=\"https://www.nasdaq.com/press-release/comed-cloudhq-break-ground-on-new-hyperscale-data-center-in-mount-prospect-2022-08-23\"></cite></li><li>The map center is corrected to the operator’s published 42.03501, -87.95370 coordinates; imagery is regenerated for that location.<cite data-ref=\"https://cloudhq.com/campus/ord-campus/\"></cite></li><li>Timeline: the operator gives RFS within 20 months without a fixed reference date. June 1, 2027 remains an unverified legacy estimated placeholder, not a date calculated from this check.<cite data-ref=\"https://cloudhq.com/campus/ord-campus/\"></cite></li></ul>",
+        "price": 2500000000,
+        "priceCurrency": "USD",
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "estimated",
+        "allDay": true,
+        "allDayStated": false,
+        "utcStartDateTime": "2027-06-01T00:00:00.000Z",
+        "dateConfidenceReasoning": "Legacy June 1, 2027 estimate unverified. Current operator says RFS within 20 months without an anchor; do not compute a new COD from the observation date.",
+        "latitude": 42.03501,
+        "longitude": -87.9537,
+        "address": "CloudHQ ORD Campus, former United Airlines headquarters, Mount Prospect, Illinois; operator-published map center",
+        "media": [
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-backfill3-2026-10-23/dc-cloudhq-ord-mount-prospect-il-aerial.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 1000
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-backfill3-2026-10-23/dc-cloudhq-ord-mount-prospect-il-topo.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 1000
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-backfill3-2026-10-23/dc-cloudhq-ord-mount-prospect-il-relief.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 1000
+          }
+        ]
+      },
+      "power": {
+        "megawatts": 252,
+        "kind": "usage",
+        "sourceUrl": "https://cloudhq.com/campus/ord-campus/",
+        "note": "Operator specification-table critical IT capacity; overview separately describes up to 300 MW."
+      },
+      "datacenter": {
+        "sqft": 1700000,
+        "powerSource": "ComEd grid and onsite substation",
+        "sourceUrl": "https://cloudhq.com/campus/ord-campus/",
+        "note": "252 MW table vs up-to-300 MW overview. Current footprint stated as 1.7M sq ft; historical budget announced $2.5B. Acreage/building count require latest-plan reconciliation."
+      },
+      "clearEnergy": true,
+      "gaps": [
+        "Resolve 252/300 MW specifications, current buildings/acreage and anchored RFS date; historical $2.5B is not a final outturn cost."
+      ],
+      "mediaReplaced": true
+    },
+    "dc-google-cannoli-van-buren-mi": {
+      "patch": {
+        "title": "Google Project Cannoli: 1 GW Site Plan Approved in Van Buren Township",
+        "description": "Michigan’s PSC conditionally approved Google/DTE service contracts on October 1, 2026. Local reporting documents October 14 final site-plan approval for a 1 GW, 282.2-acre Google campus, correcting the older 231 MW scope and unsupported $2 billion price.",
+        "sourceUrl": "https://www.michigan.gov/mpsc/consumer/be-informed/tips/data-center-and-electric-service",
+        "references": [
+          {
+            "url": "https://www.michigan.gov/mpsc/consumer/be-informed/tips/data-center-and-electric-service",
+            "title": "Case No. U-22058, DTE Electric’s Application for Approval of Special Contracts with Google LLC",
+            "confidence": 95,
+            "publishedDate": null
+          },
+          {
+            "url": "https://bellevilleareaindependent.com/project-cannoli-data-center-gets-the-go-ahead-during-oct-14-planning-meeting/",
+            "title": "Project Cannoli data center gets the go-ahead during Oct. 14 planning meeting",
+            "confidence": 95,
+            "publishedDate": "2026-10-21"
+          }
+        ],
+        "longFormSummary": "<ul><li>MPSC conditionally approved DTE/Google service contracts October 1; its decision concerns electric service and customer protections, not local land-use approval.<cite data-ref=\"https://www.michigan.gov/mpsc/consumer/be-informed/tips/data-center-and-electric-service\"></cite></li><li>The October 21 local report describes final site-plan approval on October 14 for a 1 GW Google facility on 282.2 acres, comprising three processing buildings, an office and two network buildings.<cite data-ref=\"https://bellevilleareaindependent.com/project-cannoli-data-center-gets-the-go-ahead-during-oct-14-planning-meeting/\"></cite></li><li>The reviewed sources do not publish a total campus budget. The earlier $2 billion amount and unsupported cooling/water estimates are removed.<cite data-ref=\"https://bellevilleareaindependent.com/project-cannoli-data-center-gets-the-go-ahead-during-oct-14-planning-meeting/\"></cite></li><li>Timeline: December 1, 2027 remains an estimated legacy target pending a verified current service schedule; no exact COD is established by these sources.<cite data-ref=\"https://www.michigan.gov/mpsc/consumer/be-informed/tips/data-center-and-electric-service\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "estimated",
+        "allDay": true,
+        "allDayStated": false,
+        "utcStartDateTime": "2027-12-01T00:00:00.000Z",
+        "dateConfidenceReasoning": "Legacy December 2027 target remains unverified by the opened MPSC brief and final-plan report; day 1 is not a promised energization day.",
+        "tags": [
+          "Cleanview",
+          "Data Centers",
+          "Planned",
+          "Google",
+          "Panattoni",
+          "Michigan",
+          "MISO"
+        ]
+      },
+      "power": {
+        "megawatts": 1000,
+        "kind": "usage",
+        "sourceUrl": "https://bellevilleareaindependent.com/project-cannoli-data-center-gets-the-go-ahead-during-oct-14-planning-meeting/",
+        "note": "Reported final site-plan scope; not measured operating demand or Google-funded renewable-resource total."
+      },
+      "datacenter": {
+        "acres": 282.2,
+        "buildings": 6,
+        "powerSource": "DTE Electric; conditionally approved service contracts",
+        "sourceUrl": "https://www.michigan.gov/mpsc/consumer/be-informed/tips/data-center-and-electric-service",
+        "note": "Six structures include three data-processing, one office and two network-service buildings. 1 GW site-plan figure per October 21 reporting; operational consumption not published."
+      },
+      "clearEnergy": true,
+      "gaps": [
+        "Obtain utility contract schedule, current approved water/cooling design, total cost and exact parcel coordinates."
+      ]
+    },
+    "dc-prime-phoenix-avondale-az": {
+      "patch": {
+        "title": "Prime Phoenix Avondale: 240 MW IT Campus, Five Buildings, $3B+ Investment",
+        "description": "Prime announced construction of the first three buildings of its five-building, 240 MW IT Phoenix campus in May 2026. The developer release describes more than $3 billion investment; unrelated Stream Phoenix chip figures have been removed.",
+        "sourceUrl": "https://primedatacenters.com/news/prime-data-centers-breaks-ground-on-three-buildings-at-its-240mw-phoenix-campus-advancing-3billion-dollar-investment-in-avondale/",
+        "references": [
+          {
+            "url": "https://primedatacenters.com/news/prime-data-centers-breaks-ground-on-three-buildings-at-its-240mw-phoenix-campus-advancing-3billion-dollar-investment-in-avondale/",
+            "title": "Prime Data Centers Breaks Ground on Three Buildings at its 240MW Campus in Phoenix, Advancing $3B Investment in Avondale",
+            "confidence": 95,
+            "publishedDate": "2026-05-21"
+          },
+          {
+            "url": "https://primedatacenters.com/locations/phoenix/",
+            "title": "Phoenix Data Centers — Prime Data Centers",
+            "confidence": 95,
+            "publishedDate": null
+          }
+        ],
+        "longFormSummary": "<ul><li>Prime’s campus covers 66.5 acres, five buildings and approximately 1.3 million square feet, totaling 240 MW critical IT capacity.<cite data-ref=\"https://primedatacenters.com/news/prime-data-centers-breaks-ground-on-three-buildings-at-its-240mw-phoenix-campus-advancing-3billion-dollar-investment-in-avondale/\"></cite></li><li>The first three buildings are secured by an unnamed hyperscaler; Prime does not identify that tenant. Each building is 48 MW critical IT.<cite data-ref=\"https://primedatacenters.com/news/prime-data-centers-breaks-ground-on-three-buildings-at-its-240mw-phoenix-campus-advancing-3billion-dollar-investment-in-avondale/\"></cite></li><li>The release describes more than $3 billion investment and closed-loop cooling designed for zero process-water use. The earlier Stream Phoenix chip/generator match is unrelated and removed.<cite data-ref=\"https://primedatacenters.com/news/prime-data-centers-breaks-ground-on-three-buildings-at-its-240mw-phoenix-campus-advancing-3billion-dollar-investment-in-avondale/\"></cite></li><li>Timeline: construction began in May 2026; the release does not give COD. December 31, 2026 remains an unverified legacy estimated placeholder.<cite data-ref=\"https://primedatacenters.com/news/prime-data-centers-breaks-ground-on-three-buildings-at-its-240mw-phoenix-campus-advancing-3billion-dollar-investment-in-avondale/\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": "USD",
+        "priceLowerBound": 3000000000,
+        "priceUpperBound": null,
+        "dateConfidence": "estimated",
+        "allDay": true,
+        "allDayStated": false,
+        "utcStartDateTime": "2026-12-31T00:00:00.000Z",
+        "dateConfidenceReasoning": "Unverified legacy December 31, 2026 estimate. May 21, 2026 release confirms groundbreaking, not data-hall operation; commissioned substation phase is not campus COD.",
+        "tags": [
+          "Cleanview",
+          "Data Centers",
+          "Under Construction",
+          "Prime Data Centers",
+          "Arizona",
+          "Signed Tenant"
+        ]
+      },
+      "power": {
+        "megawatts": 240,
+        "kind": "usage",
+        "sourceUrl": "https://primedatacenters.com/news/prime-data-centers-breaks-ground-on-three-buildings-at-its-240mw-phoenix-campus-advancing-3billion-dollar-investment-in-avondale/",
+        "note": "Planned campus critical IT load; 144 MW first-three-building phase is not proof of operation."
+      },
+      "datacenter": {
+        "acres": 66.5,
+        "sqft": 1300000,
+        "buildings": 5,
+        "cooling": "Closed-loop air and liquid; zero process-water use design",
+        "powerSource": "SRP; dedicated onsite substation",
+        "sourceUrl": "https://primedatacenters.com/news/prime-data-centers-breaks-ground-on-three-buildings-at-its-240mw-phoenix-campus-advancing-3billion-dollar-investment-in-avondale/",
+        "note": "Removed wrongly matched Stream Phoenix AI-chip and generator stats. Five-building design; first three buildings leased to unnamed hyperscaler."
+      },
+      "clearEnergy": true,
+      "gaps": [
+        "Verify actual data-hall RFS/COD and commissioning status; do not infer tenant or chips from another Phoenix operator."
+      ]
+    },
+    "dc-terawulf-muskie-catlettsburg-ky": {
+      "patch": {
+        "title": "TeraWulf Muskie at EastPark: Proposed 1 GW Power Agreement; First Service October 2028",
+        "description": "Muskie is TeraWulf’s EastPark campus near Grayson, not a verified 250 MW Catlettsburg facility. Kentucky Power’s October fact sheet describes an amended 1 GW agreement awaiting PSC approval, ramping from 100 MW in October 2028 to full service in October 2029.",
+        "sourceUrl": "https://www.kentuckypower.com/lib/docs/company/about/MDC_Power_Fact_Sheet_Oct_2026.pdf",
+        "references": [
+          {
+            "url": "https://www.kentuckypower.com/lib/docs/company/about/MDC_Power_Fact_Sheet_Oct_2026.pdf",
+            "title": "Muskie Data Campus Power Fact Sheet — October 2026",
+            "confidence": 95,
+            "publishedDate": "2026-10-01"
+          },
+          {
+            "url": "https://www.sec.gov/Archives/edgar/data/1083301/000162828026064757/wulf-20261001.htm",
+            "title": "TeraWulf Inc. — Form 8-K, October 5, 2026",
+            "confidence": 95,
+            "publishedDate": "2026-10-05"
+          },
+          {
+            "url": "https://www.muskiedatacampus.com/",
+            "title": "Muskie Data Campus",
+            "confidence": 95,
+            "publishedDate": null
+          }
+        ],
+        "longFormSummary": "<ul><li>Kentucky Power identifies Muskie at EastPark in Boyd and Greenup counties. The October 1 amendment increases contracted scope to 1,000 MW, subject to PSC approval; original agreement remains in force until approval.<cite data-ref=\"https://www.kentuckypower.com/lib/docs/company/about/MDC_Power_Fact_Sheet_Oct_2026.pdf\"></cite></li><li>Timeline: proposed service begins at 100 MW in October 2028, reaching 1,000 MW by October 2029, subject to approvals and construction. October 1 is a month-only placeholder.<cite data-ref=\"https://www.kentuckypower.com/lib/docs/company/about/MDC_Power_Fact_Sheet_Oct_2026.pdf\"></cite></li><li>The issuer’s filing confirms the first 500 MW phase ramps in 2028 and the second phase is accelerated from 2030 to 2029.<cite data-ref=\"https://www.sec.gov/Archives/edgar/data/1083301/000162828026064757/wulf-20261001.htm\"></cite></li><li>The operator describes an approximately 285-acre campus. No verified campus construction budget is published in these opened sources; the earlier $1.5B figure is cleared.<cite data-ref=\"https://www.muskiedatacampus.com/\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "estimated",
+        "allDay": true,
+        "allDayStated": false,
+        "utcStartDateTime": "2028-10-01T00:00:00.000Z",
+        "dateConfidenceReasoning": "Kentucky Power October 2026 fact sheet targets first 100 MW in October 2028 and full 1,000 MW October 2029, conditional on approvals/construction. Day 1 is month precision.",
+        "address": "Muskie Data Campus, EastPark Industrial Park, Boyd/Greenup counties near Grayson, Kentucky; map position approximate",
+        "latitude": 38.40017631,
+        "longitude": -82.79634195,
+        "tags": [
+          "Cleanview",
+          "Data Centers",
+          "Planned",
+          "TeraWulf",
+          "Kentucky",
+          "PJM"
+        ],
+        "media": [
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-backfill3-2026-10-23/dc-terawulf-muskie-catlettsburg-ky-aerial.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 1000
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-backfill3-2026-10-23/dc-terawulf-muskie-catlettsburg-ky-topo.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 1000
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-backfill3-2026-10-23/dc-terawulf-muskie-catlettsburg-ky-relief.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 1000
+          }
+        ]
+      },
+      "power": {
+        "megawatts": 1000,
+        "kind": "usage",
+        "sourceUrl": "https://www.kentuckypower.com/lib/docs/company/about/MDC_Power_Fact_Sheet_Oct_2026.pdf",
+        "note": "Proposed amended service ceiling pending PSC approval, not current load; first 100 MW targeted October 2028."
+      },
+      "datacenter": {
+        "acres": 285,
+        "powerSource": "Kentucky Power regional grid; amended contract subject to PSC approval",
+        "sourceUrl": "https://www.kentuckypower.com/lib/docs/company/about/MDC_Power_Fact_Sheet_Oct_2026.pdf",
+        "note": "EastPark campus, not Catlettsburg. Acreage per operator approximately 285; other filings use different controlled-land scope. Exact parcel boundary not certified."
+      },
+      "clearEnergy": true,
+      "gaps": [
+        "Verify amended agreement approval and exact parcel boundary. Approximate EastPark point from US Data Centers Tracker, consistent with operator location, replaces wrong former area; imagery regenerated."
+      ],
+      "mediaReplaced": true
+    },
+    "dc-vantage-co21-aurora-co": {
+      "patch": {
+        "title": "Vantage Trident at Windler: Aurora Proposal Under Review; Capacity and Budget Unverified",
+        "description": "Trident is a real Vantage proposal at E-470 and East 48th Avenue in Aurora, with local reporting documenting plan review and resident opposition. The earlier 250 MW capacity and $1.5 billion construction cost were not established by the opened records.",
+        "sourceUrl": "https://www.coloradopolitics.com/2026/09/23/aurora-residents-gather-to-share-data-center-concerns/",
+        "references": [
+          {
+            "url": "https://www.coloradopolitics.com/2026/09/23/aurora-residents-gather-to-share-data-center-concerns/",
+            "title": "Aurora residents claim they were blindsided by proposed data center",
+            "confidence": 95,
+            "publishedDate": "2026-09-23"
+          },
+          {
+            "url": "https://baxtel.com/campus/vantage-trident-at-windler-campus",
+            "title": "Vantage: Trident at Windler Campus",
+            "confidence": 95,
+            "publishedDate": null
+          }
+        ],
+        "longFormSummary": "<ul><li>September 2026 local reporting identifies Vantage’s Trident application in Aurora and says a third city review was underway. The proposal is near the northwest corner of E-470 and East 48th Avenue.<cite data-ref=\"https://www.coloradopolitics.com/2026/09/23/aurora-residents-gather-to-share-data-center-concerns/\"></cite></li><li>Published building and area figures conflict across the opened reporting and campus directory. No fixed capacity, generator count or precise building area is asserted here.<cite data-ref=\"https://www.coloradopolitics.com/2026/09/23/aurora-residents-gather-to-share-data-center-concerns/\"></cite></li><li>Baxtel lists a first-building target in 2028 with expansion through 2029. This is directory reporting, not a verified operator commitment.<cite data-ref=\"https://baxtel.com/campus/vantage-trident-at-windler-campus\"></cite></li><li>Timeline: January 1, 2028 is a year-only estimated first-building placeholder. The prior December 2027 date and unsupported $1.5B price are removed.<cite data-ref=\"https://baxtel.com/campus/vantage-trident-at-windler-campus\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "estimated",
+        "allDay": true,
+        "allDayStated": false,
+        "utcStartDateTime": "2028-01-01T00:00:00.000Z",
+        "dateConfidenceReasoning": "Baxtel lists first building in 2028 and expansion through 2029. January 1 is a low-precision estimated directory target, not operator-confirmed COD; primary permit schedule still needed."
+      },
+      "power": "delete",
+      "datacenter": "delete",
+      "clearEnergy": true,
+      "gaps": [
+        "Aurora development-portal link returned 404/login. Obtain case DA-1707-46 current approved plan, MW, cost, generator count and operator COD. Do not turn resident claims into verified capacity."
+      ]
+    },
+    "solar-clearway-mosey-nv": {
+      "patch": {
+        "title": "Clearway Mosey: Proposed 500 MW Solar and Up to 850 MW Battery Storage in Nevada",
+        "description": "The federal permitting dashboard describes Mosey as 500 MW solar with up to 850 MW battery storage in Pahrump Valley. These are proposed capacities under environmental review; the previous 544 MW scope and $1.25 billion budget were not substantiated.",
+        "sourceUrl": "https://www.permits.performance.gov/permitting-project/fast-41-covered-projects/mosey-solar-project",
+        "references": [
+          {
+            "url": "https://www.permits.performance.gov/permitting-project/fast-41-covered-projects/mosey-solar-project",
+            "title": "Mosey Solar Project — Federal Permitting Dashboard",
+            "confidence": 95,
+            "publishedDate": null
+          },
+          {
+            "url": "https://www.blm.gov/sites/default/files/docs/2024-10/BLM_NV_SNDO_Mosey-Trout-Canyon-POD.pdf",
+            "title": "Mosey Solar Project — Plan of Development",
+            "confidence": 95,
+            "publishedDate": null
+          }
+        ],
+        "longFormSummary": "<ul><li>The federal dashboard describes 500 MW solar and up to 850 MW storage on approximately 3,568 acres of BLM land in Pahrump Valley, with a connection to Trout Canyon Substation.<cite data-ref=\"https://www.permits.performance.gov/permitting-project/fast-41-covered-projects/mosey-solar-project\"></cite></li><li>The BLM plan identifies Renew Development HoldCo LLC, care of Clearway Energy Group. Federal environmental review is not a construction or operating permit.<cite data-ref=\"https://www.blm.gov/sites/default/files/docs/2024-10/BLM_NV_SNDO_Mosey-Trout-Canyon-POD.pdf\"></cite></li><li>A verified project budget or exact commercial-operation date was not found in these sources. The earlier $1.25 billion estimate is cleared.<cite data-ref=\"https://www.permits.performance.gov/permitting-project/fast-41-covered-projects/mosey-solar-project\"></cite></li><li>Timeline: June 1, 2029 remains an unverified legacy estimated placeholder; permitting milestone dates must not be substituted for COD.<cite data-ref=\"https://www.permits.performance.gov/permitting-project/fast-41-covered-projects/mosey-solar-project\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "estimated",
+        "allDay": true,
+        "allDayStated": false,
+        "utcStartDateTime": "2029-06-01T00:00:00.000Z",
+        "dateConfidenceReasoning": "Unverified legacy June 2029 estimate. Opened federal permitting/project records establish proposed scope and review, not COD."
+      },
+      "power": {
+        "megawatts": 500,
+        "kind": "generation",
+        "sourceUrl": "https://www.permits.performance.gov/permitting-project/fast-41-covered-projects/mosey-solar-project",
+        "note": "Proposed solar capacity; separate up-to-850 MW battery scope not added to generation."
+      },
+      "datacenter": null,
+      "clearEnergy": true,
+      "gaps": [
+        "Confirm current federal approval, construction schedule, COD, cost and surveyed project coordinates."
+      ]
+    },
+    "solar-dominion-randolph-va": {
+      "patch": {
+        "title": "Dominion Randolph Solar: 800 MW, Phased Completion 2030–2032",
+        "description": "Dominion’s current Randolph page gives 800 MW, construction as early as January 2028 and completion phases from 2030 to 2032. A historical $800M–$1.6B estimate replaces the unsupported single $1.2B figure without claiming a current final budget.",
+        "sourceUrl": "https://www.dominionenergy.com/about/delivering-energy/solar-energy-projects/virginia-solar-projects/randolph",
+        "references": [
+          {
+            "url": "https://www.dominionenergy.com/about/delivering-energy/solar-energy-projects/virginia-solar-projects/randolph",
+            "title": "Randolph Solar — Dominion Energy",
+            "confidence": 95,
+            "publishedDate": null
+          },
+          {
+            "url": "https://virginiabusiness.com/charlotte-county-approves-va-s-largest-solar-farm/",
+            "title": "Charlotte County approves Va.’s largest solar farm",
+            "confidence": 95,
+            "publishedDate": "2022-08-29"
+          }
+        ],
+        "longFormSummary": "<ul><li>Dominion identifies an 800 MW Charlotte County project acquired from SolUnesco.<cite data-ref=\"https://www.dominionenergy.com/about/delivering-energy/solar-energy-projects/virginia-solar-projects/randolph\"></cite></li><li>Timeline: construction could begin as early as January 2028, with completion in phases from 2030 to 2032. January 1, 2030 marks the beginning of the completion window, not a fixed commissioning day.<cite data-ref=\"https://www.dominionenergy.com/about/delivering-energy/solar-energy-projects/virginia-solar-projects/randolph\"></cite></li><li>August 2022 reporting gave a project estimate of $800 million–$1.6 billion. The range is historical and must not be treated as a final current cost.<cite data-ref=\"https://virginiabusiness.com/charlotte-county-approves-va-s-largest-solar-farm/\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": "USD",
+        "priceLowerBound": 800000000,
+        "priceUpperBound": 1600000000,
+        "dateConfidence": "estimated",
+        "allDay": true,
+        "allDayStated": false,
+        "utcStartDateTime": "2030-01-01T00:00:00.000Z",
+        "dateConfidenceReasoning": "Current Dominion operator page gives phased completion 2030–2032. January 1, 2030 is a year-only placeholder for initial completion; January 2028 is construction, not COD."
+      },
+      "power": {
+        "megawatts": 800,
+        "kind": "generation",
+        "sourceUrl": "https://www.dominionenergy.com/about/delivering-energy/solar-energy-projects/virginia-solar-projects/randolph",
+        "note": "Planned whole-project solar capacity; phased completion 2030–2032."
+      },
+      "datacenter": null,
+      "clearEnergy": false,
+      "gaps": [
+        "Current total capital budget, phase capacities, exact commissioning days and parcel geometry remain unverified."
+      ]
+    },
+    "solar-edf-macadamia-nc": {
+      "patch": {
+        "title": "EDF Macadamia Solar: 484 MW Washington County Project, Expected in 2028",
+        "description": "EDF’s project directory and the Advanced Energy United project profile identify Macadamia as a 484 MW Washington County, North Carolina development expected in 2028. A verified $550 million budget and March-specific COD were not found.",
+        "sourceUrl": "https://unlockingadvancedenergy.com/nc/",
+        "references": [
+          {
+            "url": "https://unlockingadvancedenergy.com/nc/",
+            "title": "North Carolina — Unlocking Advanced Energy: Macadamia Solar Project",
+            "confidence": 95,
+            "publishedDate": null
+          },
+          {
+            "url": "https://www.edf-re.com/projects/",
+            "title": "Projects — EDF power solutions North America",
+            "confidence": 95,
+            "publishedDate": null
+          },
+          {
+            "url": "https://www.ncuc.gov/industries/elecmerch.aspx",
+            "title": "Electric Merchant Plants — North Carolina Utilities Commission",
+            "confidence": 95,
+            "publishedDate": null
+          }
+        ],
+        "longFormSummary": "<ul><li>The project profile identifies EDF’s 484 MW solar development in Washington County and a 2028 operational target.<cite data-ref=\"https://unlockingadvancedenergy.com/nc/\"></cite></li><li>EDF’s current directory also lists Macadamia Solar Project at 484 MW for 2028. The NCUC merchant-plant register identifies Macadamia Solar LLC as EMP-119.<cite data-ref=\"https://www.edf-re.com/projects/\"></cite></li><li>Timeline: January 1, 2028 is a year-only placeholder, replacing unsupported March precision. The earlier $550 million cost is cleared because these sources do not disclose a budget.<cite data-ref=\"https://unlockingadvancedenergy.com/nc/\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "estimated",
+        "allDay": true,
+        "allDayStated": false,
+        "utcStartDateTime": "2028-01-01T00:00:00.000Z",
+        "dateConfidenceReasoning": "EDF directory and Advanced Energy United profile list 2028; January 1 is year-only estimated precision, not a scheduled day."
+      },
+      "power": {
+        "megawatts": 484,
+        "kind": "generation",
+        "sourceUrl": "https://www.edf-re.com/projects/",
+        "note": "Published planned solar scope, not current operating output."
+      },
+      "datacenter": null,
+      "clearEnergy": false,
+      "gaps": [
+        "EDF project-specific URL currently exposes directory shell; obtain current certificate/ISA amendments, exact COD, budget and site coordinates."
+      ]
+    },
+    "solar-invenergy-high-noon-wi": {
+      "patch": {
+        "title": "High Noon Solar: 300 MW Solar and 165 MW Battery Storage, Expected in 2027",
+        "description": "MGE’s operator announcement describes High Noon in Columbia County as 300 MW solar and 165 MW battery storage, with service expected in 2027. The previously shown $650 million total and September-specific service date need current scope-specific evidence.",
+        "sourceUrl": "https://www.mgeenergy.com/news/articles/mge-to-add-more-solar-with-high-noon-solar-energy-center",
+        "references": [
+          {
+            "url": "https://www.mgeenergy.com/news/articles/mge-to-add-more-solar-with-high-noon-solar-energy-center",
+            "title": "MGE to Add More Solar with High Noon Solar Energy Center",
+            "confidence": 95,
+            "publishedDate": null
+          },
+          {
+            "url": "https://www.mge.com/smart-energy/clean-energy/solar-energy",
+            "title": "Solar Energy — Madison Gas and Electric",
+            "confidence": 95,
+            "publishedDate": null
+          }
+        ],
+        "longFormSummary": "<ul><li>MGE will own 30 MW solar and 16.5 MW battery storage; We Energies and Wisconsin Public Service own the remaining 270 MW solar and 148.5 MW storage.<cite data-ref=\"https://www.mgeenergy.com/news/articles/mge-to-add-more-solar-with-high-noon-solar-energy-center\"></cite></li><li>These ownership shares correspond to a whole-project 300 MW solar array and 165 MW storage system, not 300 MW of battery storage.<cite data-ref=\"https://www.mgeenergy.com/news/articles/mge-to-add-more-solar-with-high-noon-solar-energy-center\"></cite></li><li>Timeline: MGE expects service in 2027. January 1 is a year-only estimated placeholder. The single $650 million project price is cleared pending verified full-project cost.<cite data-ref=\"https://www.mge.com/smart-energy/clean-energy/solar-energy\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "estimated",
+        "allDay": true,
+        "allDayStated": false,
+        "utcStartDateTime": "2027-01-01T00:00:00.000Z",
+        "dateConfidenceReasoning": "MGE announcement and current solar-project page say expected service in 2027. January 1 is year-only precision; September day/month not established."
+      },
+      "power": {
+        "megawatts": 300,
+        "kind": "generation",
+        "sourceUrl": "https://www.mgeenergy.com/news/articles/mge-to-add-more-solar-with-high-noon-solar-energy-center",
+        "note": "Whole-project solar capacity; separate 165 MW battery capacity is retained in text, not conflated with generation."
+      },
+      "datacenter": null,
+      "clearEnergy": false,
+      "gaps": [
+        "Obtain current all-in solar/battery budget, phase-specific COD and exact site/media alignment."
+      ]
+    },
+    "solar-pine-gate-sunstone-or": {
+      "patch": {
+        "title": "Amazon’s Sunstone Solar: 1,200 MW Solar and Up to 7,200 MWh Storage Approval",
+        "description": "Oregon’s regulator identifies Amazon subsidiary Oregon Solar 1 LLC as Sunstone’s certificate holder after a June 26, 2026 ownership amendment. The approved, not-yet-constructed project has up to 1,200 MW solar and 7,200 MWh storage; construction deadline is not COD.",
+        "sourceUrl": "https://www.oregon.gov/energy/facilities/Pages/ESP.aspx",
+        "references": [
+          {
+            "url": "https://www.oregon.gov/energy/facilities/Pages/ESP.aspx",
+            "title": "Sunstone Solar Project — Oregon Department of Energy",
+            "confidence": 95,
+            "publishedDate": null
+          }
+        ],
+        "longFormSummary": "<ul><li>The approved design authorizes up to 1,200 MW solar generation and 7,200 MWh battery storage in Morrow County. MWh is energy capacity, not battery discharge MW.<cite data-ref=\"https://www.oregon.gov/energy/facilities/Pages/ESP.aspx\"></cite></li><li>The regulator records a June 26, 2026 amendment transferring ownership to Oregon Solar 1 LLC, an Amazon subsidiary, replacing the prior Pine Gate attribution.<cite data-ref=\"https://www.oregon.gov/energy/facilities/Pages/ESP.aspx\"></cite></li><li>The site certificate requires construction to start by November 18, 2027. That deadline is not an operating date.<cite data-ref=\"https://www.oregon.gov/energy/facilities/Pages/ESP.aspx\"></cite></li><li>Timeline: no verified COD or total budget is stated on this regulator page. December 1, 2027 remains an unverified legacy estimated placeholder; the unsupported $1.8 billion price is removed.<cite data-ref=\"https://www.oregon.gov/energy/facilities/Pages/ESP.aspx\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "estimated",
+        "allDay": true,
+        "allDayStated": false,
+        "utcStartDateTime": "2027-12-01T00:00:00.000Z",
+        "dateConfidenceReasoning": "Unverified legacy December 2027 COD placeholder. ODOE gives November 18, 2027 construction-start deadline only, not COD; project remains approved but not yet constructed.",
+        "company": "Amazon",
+        "companyId": 2,
+        "companyWikiUrl": "https://en.wikipedia.org/wiki/Amazon_(company)",
+        "tags": [
+          "Cleanview",
+          "Solar",
+          "Storage",
+          "Battery",
+          "Planned",
+          "Amazon",
+          "Oregon"
+        ]
+      },
+      "power": {
+        "megawatts": 1200,
+        "kind": "generation",
+        "sourceUrl": "https://www.oregon.gov/energy/facilities/Pages/ESP.aspx",
+        "note": "Authorized maximum solar generation; storage energy is up to 7,200 MWh, discharge MW not established here."
+      },
+      "datacenter": null,
+      "clearEnergy": false,
+      "gaps": [
+        "Obtain Amazon build/COD schedule, published investment and storage MW; verify exact parcel boundary against regulator map."
+      ]
+    }
+  },
+  "results": [
+    {
+      "environment": "local",
+      "key": "solar-nextera-singer-solar-la",
+      "id": 16322,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Reconcile operator 200 MW/$350M scope against EIA 300 MW/March 2027 unit; verify actual construction/COD and parcel."
+      ]
+    },
+    {
+      "environment": "local",
+      "key": "dc-aligned-pit01-shippingport-pa",
+      "id": 16328,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Obtain phased capacity and service schedule, project-only budget, exact site boundaries and tenant."
+      ]
+    },
+    {
+      "environment": "local",
+      "key": "dc-cloudhq-ord-mount-prospect-il",
+      "id": 16329,
+      "action": "corrected",
+      "mediaPreserved": false,
+      "mediaReplaced": true,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Resolve 252/300 MW specifications, current buildings/acreage and anchored RFS date; historical $2.5B is not a final outturn cost."
+      ]
+    },
+    {
+      "environment": "local",
+      "key": "dc-google-cannoli-van-buren-mi",
+      "id": 16330,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Obtain utility contract schedule, current approved water/cooling design, total cost and exact parcel coordinates."
+      ]
+    },
+    {
+      "environment": "local",
+      "key": "dc-prime-phoenix-avondale-az",
+      "id": 16331,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Verify actual data-hall RFS/COD and commissioning status; do not infer tenant or chips from another Phoenix operator."
+      ]
+    },
+    {
+      "environment": "local",
+      "key": "dc-terawulf-muskie-catlettsburg-ky",
+      "id": 16332,
+      "action": "corrected",
+      "mediaPreserved": false,
+      "mediaReplaced": true,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Verify amended agreement approval and exact parcel boundary. Approximate EastPark point from US Data Centers Tracker, consistent with operator location, replaces wrong former area; imagery regenerated."
+      ]
+    },
+    {
+      "environment": "local",
+      "key": "dc-vantage-co21-aurora-co",
+      "id": 16333,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Aurora development-portal link returned 404/login. Obtain case DA-1707-46 current approved plan, MW, cost, generator count and operator COD. Do not turn resident claims into verified capacity."
+      ]
+    },
+    {
+      "environment": "local",
+      "key": "solar-clearway-mosey-nv",
+      "id": 16334,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Confirm current federal approval, construction schedule, COD, cost and surveyed project coordinates."
+      ]
+    },
+    {
+      "environment": "local",
+      "key": "solar-dominion-randolph-va",
+      "id": 16335,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Current total capital budget, phase capacities, exact commissioning days and parcel geometry remain unverified."
+      ]
+    },
+    {
+      "environment": "local",
+      "key": "solar-edf-macadamia-nc",
+      "id": 16336,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "EDF project-specific URL currently exposes directory shell; obtain current certificate/ISA amendments, exact COD, budget and site coordinates."
+      ]
+    },
+    {
+      "environment": "local",
+      "key": "solar-invenergy-high-noon-wi",
+      "id": 16337,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Obtain current all-in solar/battery budget, phase-specific COD and exact site/media alignment."
+      ]
+    },
+    {
+      "environment": "local",
+      "key": "solar-pine-gate-sunstone-or",
+      "id": 16338,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Obtain Amazon build/COD schedule, published investment and storage MW; verify exact parcel boundary against regulator map."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "solar-nextera-singer-solar-la",
+      "id": 16322,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Reconcile operator 200 MW/$350M scope against EIA 300 MW/March 2027 unit; verify actual construction/COD and parcel."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "dc-aligned-pit01-shippingport-pa",
+      "id": 16328,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Obtain phased capacity and service schedule, project-only budget, exact site boundaries and tenant."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "dc-cloudhq-ord-mount-prospect-il",
+      "id": 16329,
+      "action": "corrected",
+      "mediaPreserved": false,
+      "mediaReplaced": true,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Resolve 252/300 MW specifications, current buildings/acreage and anchored RFS date; historical $2.5B is not a final outturn cost."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "dc-google-cannoli-van-buren-mi",
+      "id": 16330,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Obtain utility contract schedule, current approved water/cooling design, total cost and exact parcel coordinates."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "dc-prime-phoenix-avondale-az",
+      "id": 16331,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Verify actual data-hall RFS/COD and commissioning status; do not infer tenant or chips from another Phoenix operator."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "dc-terawulf-muskie-catlettsburg-ky",
+      "id": 16332,
+      "action": "corrected",
+      "mediaPreserved": false,
+      "mediaReplaced": true,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Verify amended agreement approval and exact parcel boundary. Approximate EastPark point from US Data Centers Tracker, consistent with operator location, replaces wrong former area; imagery regenerated."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "dc-vantage-co21-aurora-co",
+      "id": 16333,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Aurora development-portal link returned 404/login. Obtain case DA-1707-46 current approved plan, MW, cost, generator count and operator COD. Do not turn resident claims into verified capacity."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "solar-clearway-mosey-nv",
+      "id": 16334,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Confirm current federal approval, construction schedule, COD, cost and surveyed project coordinates."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "solar-dominion-randolph-va",
+      "id": 16335,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Current total capital budget, phase capacities, exact commissioning days and parcel geometry remain unverified."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "solar-edf-macadamia-nc",
+      "id": 16336,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "EDF project-specific URL currently exposes directory shell; obtain current certificate/ISA amendments, exact COD, budget and site coordinates."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "solar-invenergy-high-noon-wi",
+      "id": 16337,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Obtain current all-in solar/battery budget, phase-specific COD and exact site/media alignment."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "solar-pine-gate-sunstone-or",
+      "id": 16338,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Obtain Amazon build/COD schedule, published investment and storage MW; verify exact parcel boundary against regulator map."
+      ]
+    }
+  ],
+  "verification": {
+    "freshReadbacks": [
+      {
+        "environment": "local",
+        "id": 16322,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 16328,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 16329,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 16330,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 16331,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 16332,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 16333,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 16334,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 16335,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 16336,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 16337,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 16338,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 16322,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 16328,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 16329,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 16330,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 16331,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 16332,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 16333,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 16334,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 16335,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 16336,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 16337,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 16338,
+        "verified": true
+      }
+    ],
+    "media": [
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/aligned-pit01-shippingport-pa-usgs-aerial.jpg",
+        "status": 200,
+        "bytes": 605899
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/aligned-pit01-shippingport-pa-usgs-regional.jpg",
+        "status": 200,
+        "bytes": 556319
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/aligned-pit01-shippingport-pa-usgs-topo.jpg",
+        "status": 200,
+        "bytes": 317964
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-backfill3-2026-10-23/dc-cloudhq-ord-mount-prospect-il-aerial.jpg",
+        "status": 200,
+        "bytes": 610856
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-backfill3-2026-10-23/dc-cloudhq-ord-mount-prospect-il-relief.jpg",
+        "status": 200,
+        "bytes": 103562
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-backfill3-2026-10-23/dc-cloudhq-ord-mount-prospect-il-topo.jpg",
+        "status": 200,
+        "bytes": 478721
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-backfill3-2026-10-23/dc-terawulf-muskie-catlettsburg-ky-aerial.jpg",
+        "status": 200,
+        "bytes": 575063
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-backfill3-2026-10-23/dc-terawulf-muskie-catlettsburg-ky-relief.jpg",
+        "status": 200,
+        "bytes": 280143
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-backfill3-2026-10-23/dc-terawulf-muskie-catlettsburg-ky-topo.jpg",
+        "status": 200,
+        "bytes": 489040
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/clearway-mosey-nv-usgs-aerial.jpg",
+        "status": 200,
+        "bytes": 315048
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/clearway-mosey-nv-usgs-regional.jpg",
+        "status": 200,
+        "bytes": 190707
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/clearway-mosey-nv-usgs-topo.jpg",
+        "status": 200,
+        "bytes": 70126
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/dominion-randolph-va-usgs-aerial.jpg",
+        "status": 200,
+        "bytes": 524848
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/dominion-randolph-va-usgs-relief.jpg",
+        "status": 200,
+        "bytes": 79706
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/dominion-randolph-va-usgs-topo.jpg",
+        "status": 200,
+        "bytes": 276346
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/edf-macadamia-nc-usgs-aerial.jpg",
+        "status": 200,
+        "bytes": 413015
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/edf-macadamia-nc-usgs-relief.jpg",
+        "status": 200,
+        "bytes": 56850
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/edf-macadamia-nc-usgs-topo.jpg",
+        "status": 200,
+        "bytes": 306892
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/google-cannoli-van-buren-mi-usgs-aerial.jpg",
+        "status": 200,
+        "bytes": 522028
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/google-cannoli-van-buren-mi-usgs-relief.jpg",
+        "status": 200,
+        "bytes": 65632
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/google-cannoli-van-buren-mi-usgs-topo.jpg",
+        "status": 200,
+        "bytes": 270379
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/invenergy-high-noon-wi-usgs-aerial.jpg",
+        "status": 200,
+        "bytes": 340612
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/invenergy-high-noon-wi-usgs-relief.jpg",
+        "status": 200,
+        "bytes": 59801
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/invenergy-high-noon-wi-usgs-topo.jpg",
+        "status": 200,
+        "bytes": 176988
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/nextera-singer-solar-la-usgs-aerial.jpg",
+        "status": 200,
+        "bytes": 527259
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/nextera-singer-solar-la-usgs-relief.jpg",
+        "status": 200,
+        "bytes": 65957
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/nextera-singer-solar-la-usgs-topo.jpg",
+        "status": 200,
+        "bytes": 272709
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/pine-gate-sunstone-or-usgs-aerial.jpg",
+        "status": 200,
+        "bytes": 249484
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/pine-gate-sunstone-or-usgs-relief.jpg",
+        "status": 200,
+        "bytes": 59136
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/pine-gate-sunstone-or-usgs-topo.jpg",
+        "status": 200,
+        "bytes": 165624
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/prime-phoenix-avondale-az-usgs-aerial.jpg",
+        "status": 200,
+        "bytes": 393994
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/prime-phoenix-avondale-az-usgs-relief.jpg",
+        "status": 200,
+        "bytes": 62852
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/prime-phoenix-avondale-az-usgs-topo.jpg",
+        "status": 200,
+        "bytes": 106334
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/vantage-co21-aurora-co-usgs-aerial.jpg",
+        "status": 200,
+        "bytes": 304945
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/vantage-co21-aurora-co-usgs-relief.jpg",
+        "status": 200,
+        "bytes": 57389
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/vantage-co21-aurora-co-usgs-topo.jpg",
+        "status": 200,
+        "bytes": 161360
+      }
+    ],
+    "pages": [
+      {
+        "environment": "local",
+        "id": 16329,
+        "status": 200,
+        "bytes": 332291
+      },
+      {
+        "environment": "local",
+        "id": 16331,
+        "status": 200,
+        "bytes": 337447
+      },
+      {
+        "environment": "local",
+        "id": 16332,
+        "status": 200,
+        "bytes": 326311
+      },
+      {
+        "environment": "local",
+        "id": 16338,
+        "status": 200,
+        "bytes": 318377
+      },
+      {
+        "environment": "prod",
+        "id": 16329,
+        "status": 200,
+        "bytes": 289166
+      },
+      {
+        "environment": "prod",
+        "id": 16331,
+        "status": 200,
+        "bytes": 293815
+      },
+      {
+        "environment": "prod",
+        "id": 16332,
+        "status": 200,
+        "bytes": 283471
+      },
+      {
+        "environment": "prod",
+        "id": 16338,
+        "status": 200,
+        "bytes": 276278
+      }
+    ],
+    "actionsVerified": 24,
+    "telemetry": [
+      {
+        "energyCleared": true
+      },
+      {
+        "energyCleared": true,
+        "datacenterAfter": {
+          "waterGallonsPerDay": null,
+          "waterBasis": null,
+          "chips": null,
+          "chipModel": null,
+          "h100Equivalents": null,
+          "acres": null,
+          "sqft": null,
+          "buildings": 3,
+          "generators": null,
+          "cooling": "Closed-loop cooling; developer states zero water for operational cooling",
+          "powerSource": "Dedicated onsite power; adjacent natural-gas energy campus redevelopment",
+          "sourceUrl": "https://aligneddc.com/press-release/project-phoenix-data-center-shippingport-pa/",
+          "note": "Announced 2 GW campus. $10B is regional economic investment, not a verified campus construction budget. No daily water figure published.",
+          "checkedAt": "2026-10-23T14:31:48.065Z"
+        }
+      },
+      {
+        "energyCleared": true,
+        "datacenterAfter": {
+          "waterGallonsPerDay": null,
+          "waterBasis": null,
+          "chips": null,
+          "chipModel": null,
+          "h100Equivalents": null,
+          "acres": null,
+          "sqft": 1700000,
+          "buildings": null,
+          "generators": null,
+          "cooling": null,
+          "powerSource": "ComEd grid and onsite substation",
+          "sourceUrl": "https://cloudhq.com/campus/ord-campus/",
+          "note": "252 MW table vs up-to-300 MW overview. Current footprint stated as 1.7M sq ft; historical budget announced $2.5B. Acreage/building count require latest-plan reconciliation.",
+          "checkedAt": "2026-10-23T14:31:51.278Z"
+        }
+      },
+      {
+        "energyCleared": true,
+        "datacenterAfter": {
+          "waterGallonsPerDay": null,
+          "waterBasis": null,
+          "chips": null,
+          "chipModel": null,
+          "h100Equivalents": null,
+          "acres": 282.2,
+          "sqft": null,
+          "buildings": 6,
+          "generators": null,
+          "cooling": null,
+          "powerSource": "DTE Electric; conditionally approved service contracts",
+          "sourceUrl": "https://www.michigan.gov/mpsc/consumer/be-informed/tips/data-center-and-electric-service",
+          "note": "Six structures include three data-processing, one office and two network-service buildings. 1 GW site-plan figure per October 21 reporting; operational consumption not published.",
+          "checkedAt": "2026-10-23T14:31:51.484Z"
+        }
+      },
+      {
+        "energyCleared": true,
+        "datacenterAfter": {
+          "waterGallonsPerDay": null,
+          "waterBasis": null,
+          "chips": null,
+          "chipModel": null,
+          "h100Equivalents": null,
+          "acres": 66.5,
+          "sqft": 1300000,
+          "buildings": 5,
+          "generators": null,
+          "cooling": "Closed-loop air and liquid; zero process-water use design",
+          "powerSource": "SRP; dedicated onsite substation",
+          "sourceUrl": "https://primedatacenters.com/news/prime-data-centers-breaks-ground-on-three-buildings-at-its-240mw-phoenix-campus-advancing-3billion-dollar-investment-in-avondale/",
+          "note": "Removed wrongly matched Stream Phoenix AI-chip and generator stats. Five-building design; first three buildings leased to unnamed hyperscaler.",
+          "checkedAt": "2026-10-23T14:31:51.742Z"
+        }
+      },
+      {
+        "energyCleared": true,
+        "datacenterAfter": {
+          "waterGallonsPerDay": null,
+          "waterBasis": null,
+          "chips": null,
+          "chipModel": null,
+          "h100Equivalents": null,
+          "acres": 285,
+          "sqft": null,
+          "buildings": null,
+          "generators": null,
+          "cooling": null,
+          "powerSource": "Kentucky Power regional grid; amended contract subject to PSC approval",
+          "sourceUrl": "https://www.kentuckypower.com/lib/docs/company/about/MDC_Power_Fact_Sheet_Oct_2026.pdf",
+          "note": "EastPark campus, not Catlettsburg. Acreage per operator approximately 285; other filings use different controlled-land scope. Exact parcel boundary not certified.",
+          "checkedAt": "2026-10-23T14:31:53.527Z"
+        }
+      },
+      {
+        "energyCleared": true,
+        "datacenterAfter": null
+      },
+      {
+        "energyCleared": true
+      },
+      {},
+      {},
+      {},
+      {},
+      {
+        "energyCleared": true
+      },
+      {
+        "energyCleared": true,
+        "datacenterAfter": {
+          "waterGallonsPerDay": null,
+          "waterBasis": null,
+          "chips": null,
+          "chipModel": null,
+          "h100Equivalents": null,
+          "acres": null,
+          "sqft": null,
+          "buildings": 3,
+          "generators": null,
+          "cooling": "Closed-loop cooling; developer states zero water for operational cooling",
+          "powerSource": "Dedicated onsite power; adjacent natural-gas energy campus redevelopment",
+          "sourceUrl": "https://aligneddc.com/press-release/project-phoenix-data-center-shippingport-pa/",
+          "note": "Announced 2 GW campus. $10B is regional economic investment, not a verified campus construction budget. No daily water figure published.",
+          "checkedAt": "2026-10-23T14:32:23.227Z"
+        }
+      },
+      {
+        "energyCleared": true,
+        "datacenterAfter": {
+          "waterGallonsPerDay": null,
+          "waterBasis": null,
+          "chips": null,
+          "chipModel": null,
+          "h100Equivalents": null,
+          "acres": null,
+          "sqft": 1700000,
+          "buildings": null,
+          "generators": null,
+          "cooling": null,
+          "powerSource": "ComEd grid and onsite substation",
+          "sourceUrl": "https://cloudhq.com/campus/ord-campus/",
+          "note": "252 MW table vs up-to-300 MW overview. Current footprint stated as 1.7M sq ft; historical budget announced $2.5B. Acreage/building count require latest-plan reconciliation.",
+          "checkedAt": "2026-10-23T14:32:36.082Z"
+        }
+      },
+      {
+        "energyCleared": true,
+        "datacenterAfter": {
+          "waterGallonsPerDay": null,
+          "waterBasis": null,
+          "chips": null,
+          "chipModel": null,
+          "h100Equivalents": null,
+          "acres": 282.2,
+          "sqft": null,
+          "buildings": 6,
+          "generators": null,
+          "cooling": null,
+          "powerSource": "DTE Electric; conditionally approved service contracts",
+          "sourceUrl": "https://www.michigan.gov/mpsc/consumer/be-informed/tips/data-center-and-electric-service",
+          "note": "Six structures include three data-processing, one office and two network-service buildings. 1 GW site-plan figure per October 21 reporting; operational consumption not published.",
+          "checkedAt": "2026-10-23T14:32:38.863Z"
+        }
+      },
+      {
+        "energyCleared": true,
+        "datacenterAfter": {
+          "waterGallonsPerDay": null,
+          "waterBasis": null,
+          "chips": null,
+          "chipModel": null,
+          "h100Equivalents": null,
+          "acres": 66.5,
+          "sqft": 1300000,
+          "buildings": 5,
+          "generators": null,
+          "cooling": "Closed-loop air and liquid; zero process-water use design",
+          "powerSource": "SRP; dedicated onsite substation",
+          "sourceUrl": "https://primedatacenters.com/news/prime-data-centers-breaks-ground-on-three-buildings-at-its-240mw-phoenix-campus-advancing-3billion-dollar-investment-in-avondale/",
+          "note": "Removed wrongly matched Stream Phoenix AI-chip and generator stats. Five-building design; first three buildings leased to unnamed hyperscaler.",
+          "checkedAt": "2026-10-23T14:32:41.629Z"
+        }
+      },
+      {
+        "energyCleared": true,
+        "datacenterAfter": {
+          "waterGallonsPerDay": null,
+          "waterBasis": null,
+          "chips": null,
+          "chipModel": null,
+          "h100Equivalents": null,
+          "acres": 285,
+          "sqft": null,
+          "buildings": null,
+          "generators": null,
+          "cooling": null,
+          "powerSource": "Kentucky Power regional grid; amended contract subject to PSC approval",
+          "sourceUrl": "https://www.kentuckypower.com/lib/docs/company/about/MDC_Power_Fact_Sheet_Oct_2026.pdf",
+          "note": "EastPark campus, not Catlettsburg. Acreage per operator approximately 285; other filings use different controlled-land scope. Exact parcel boundary not certified.",
+          "checkedAt": "2026-10-23T14:32:53.498Z"
+        }
+      },
+      {
+        "energyCleared": true,
+        "datacenterAfter": null
+      },
+      {
+        "energyCleared": true
+      },
+      {},
+      {},
+      {},
+      {}
+    ]
+  },
+  "mediaEvidence": [
+    {
+      "key": "dc-cloudhq-ord-mount-prospect-il",
+      "layer": "aerial",
+      "sourceUrl": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSImageryOnly/MapServer/export?bbox=-87.968700,42.025010,-87.938700,42.045010&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/backfill3-2026-10-23/dc-cloudhq-ord-mount-prospect-il-aerial.jpg",
+      "bytes": 610856,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-backfill3-2026-10-23/dc-cloudhq-ord-mount-prospect-il-aerial.jpg"
+    },
+    {
+      "key": "dc-cloudhq-ord-mount-prospect-il",
+      "layer": "topo",
+      "sourceUrl": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSTopo/MapServer/export?bbox=-87.985700,42.013010,-87.921700,42.057010&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/backfill3-2026-10-23/dc-cloudhq-ord-mount-prospect-il-topo.jpg",
+      "bytes": 478721,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-backfill3-2026-10-23/dc-cloudhq-ord-mount-prospect-il-topo.jpg"
+    },
+    {
+      "key": "dc-cloudhq-ord-mount-prospect-il",
+      "layer": "relief",
+      "sourceUrl": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSShadedReliefOnly/MapServer/export?bbox=-88.033700,41.985010,-87.873700,42.085010&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/backfill3-2026-10-23/dc-cloudhq-ord-mount-prospect-il-relief.jpg",
+      "bytes": 103562,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-backfill3-2026-10-23/dc-cloudhq-ord-mount-prospect-il-relief.jpg"
+    },
+    {
+      "key": "dc-terawulf-muskie-catlettsburg-ky",
+      "layer": "aerial",
+      "sourceUrl": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSImageryOnly/MapServer/export?bbox=-82.811342,38.390176,-82.781342,38.410176&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/backfill3-2026-10-23/dc-terawulf-muskie-catlettsburg-ky-aerial.jpg",
+      "bytes": 575063,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-backfill3-2026-10-23/dc-terawulf-muskie-catlettsburg-ky-aerial.jpg"
+    },
+    {
+      "key": "dc-terawulf-muskie-catlettsburg-ky",
+      "layer": "topo",
+      "sourceUrl": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSTopo/MapServer/export?bbox=-82.828342,38.378176,-82.764342,38.422176&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/backfill3-2026-10-23/dc-terawulf-muskie-catlettsburg-ky-topo.jpg",
+      "bytes": 489040,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-backfill3-2026-10-23/dc-terawulf-muskie-catlettsburg-ky-topo.jpg"
+    },
+    {
+      "key": "dc-terawulf-muskie-catlettsburg-ky",
+      "layer": "relief",
+      "sourceUrl": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSShadedReliefOnly/MapServer/export?bbox=-82.876342,38.350176,-82.716342,38.450176&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/backfill3-2026-10-23/dc-terawulf-muskie-catlettsburg-ky-relief.jpg",
+      "bytes": 280143,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-backfill3-2026-10-23/dc-terawulf-muskie-catlettsburg-ky-relief.jpg"
+    }
+  ]
+}

@@ -1,0 +1,1542 @@
+{
+  "checkedAt": "2026-10-23",
+  "scope": "Cleanview sourcing backfill batch 4; existing pins 16339–16350 in local and production.",
+  "outcome": {
+    "correctedPins": 12,
+    "softDeletedHeldPins": 0,
+    "environmentActionsVerified": 24,
+    "nativePagesVerified": 8,
+    "azureImagesDownloaded": 37,
+    "originalImagesPreserved": 33,
+    "mapImagesReplaced": 3,
+    "operatorPhotosAdded": 1,
+    "calculatedEnergyRowsClearedPerEnvironment": 5,
+    "localMappedCount": 1452,
+    "productionMappedCount": 1452,
+    "deployment": false
+  },
+  "plan": {
+    "solar-revolve-bouse-az": {
+      "patch": {
+        "title": "ENGIE Bouse Solar and Storage: 1,000 MW Development Sold by Revolve",
+        "description": "Revolve’s June 2024 announcement identifies Bouse as a 1,000 MW solar and storage development sold to ENGIE in January 2023. The prior $1.5B budget and separate 1,010 MW solar / 1,011 MW battery readings are not established by this source.",
+        "sourceUrl": "https://revolve-renewablepower.com/revolve-receives-us3-4-million-bouse-solar-and-storage-project-milestone-payment/",
+        "references": [
+          {
+            "url": "https://revolve-renewablepower.com/revolve-receives-us3-4-million-bouse-solar-and-storage-project-milestone-payment/",
+            "title": "Revolve Receives US$3.4 million Bouse Solar and Storage Project Milestone Payment",
+            "confidence": 95,
+            "publishedDate": "2024-06-10"
+          }
+        ],
+        "longFormSummary": "<ul><li>ENGIE acquired Bouse in January 2023; its interconnection-study milestone was completed in June 2024. The former developer describes about 6,155 acres of BLM land in La Paz County, 27 miles east of Quartzsite.<cite data-ref=\"https://revolve-renewablepower.com/revolve-receives-us3-4-million-bouse-solar-and-storage-project-milestone-payment/\"></cite></li><li>Timeline: no COD is stated. December 1, 2033 remains an unverified legacy estimate. Separate solar AC and battery MW require current ENGIE/BLM filings; unsupported price and power readings are removed.<cite data-ref=\"https://revolve-renewablepower.com/revolve-receives-us3-4-million-bouse-solar-and-storage-project-milestone-payment/\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "estimated",
+        "allDay": true,
+        "allDayStated": false,
+        "utcStartDateTime": "2033-12-01T00:00:00.000Z",
+        "dateConfidenceReasoning": "Unverified legacy December 2033 placeholder; the opened seller announcement establishes ownership and interconnection progress, not COD.",
+        "company": "ENGIE",
+        "companyId": 15323,
+        "companyWikiUrl": "https://en.wikipedia.org/wiki/Engie",
+        "tags": [
+          "Cleanview",
+          "Solar",
+          "Storage",
+          "Battery",
+          "Planned",
+          "ENGIE",
+          "Arizona",
+          "La Paz County",
+          "WECC"
+        ]
+      },
+      "power": "delete",
+      "datacenter": null,
+      "clearEnergy": false,
+      "gaps": [
+        "Obtain current ENGIE/BLM design, solar AC and battery MW/MWh, budget, COD and exact parcel; 1,000 MW seller shorthand does not establish the old separate 1,010/1,011 MW readings."
+      ]
+    },
+    "battery-rwe-fourth-quarter-md": {
+      "patch": {
+        "title": "RWE Fourth Quarter BESS: 300 MW, Four-Hour Storage; Operations Target 2028",
+        "description": "RWE identifies Fourth Quarter as a 300 MW, four-hour battery project at the retired Dickerson station, with operations anticipated in 2028. The earlier February 2030 date and $400M budget are unsupported by the opened project page.",
+        "sourceUrl": "https://americas.rwe.com/our-energy/storage/storage-projects-and-locations/fourth-quarter-bess/",
+        "references": [
+          {
+            "url": "https://americas.rwe.com/our-energy/storage/storage-projects-and-locations/fourth-quarter-bess/",
+            "title": "Fourth Quarter BESS — RWE",
+            "confidence": 95,
+            "publishedDate": null
+          },
+          {
+            "url": "https://www.pscmaryland.com/wp-content/uploads/2026/03/MD-PSC-Receives-Applications-for-Tx-Energy-Storage-under-NGEA_03032026.pdf",
+            "title": "Maryland PSC Receives Applications for Transmission Energy Storage",
+            "confidence": 95,
+            "publishedDate": "2026-03-03"
+          }
+        ],
+        "longFormSummary": "<ul><li>The developer describes a brownfield project at Dickerson in Montgomery County. The PSC application list identifies lithium iron phosphate batteries and Pepco interconnection.<cite data-ref=\"https://www.pscmaryland.com/wp-content/uploads/2026/03/MD-PSC-Receives-Applications-for-Tx-Energy-Storage-under-NGEA_03032026.pdf\"></cite></li><li>Four hours at 300 MW implies 1,200 MWh nominal duration-capacity product; this is an arithmetic interpretation, not a separately guaranteed usable energy figure.<cite data-ref=\"https://americas.rwe.com/our-energy/storage/storage-projects-and-locations/fourth-quarter-bess/\"></cite></li><li>Timeline: January 1, 2028 is year-only precision for the operator target. Project tax-revenue estimates are not construction costs; the unsupported $400M price is cleared.<cite data-ref=\"https://americas.rwe.com/our-energy/storage/storage-projects-and-locations/fourth-quarter-bess/\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "estimated",
+        "allDay": true,
+        "allDayStated": false,
+        "utcStartDateTime": "2028-01-01T00:00:00.000Z",
+        "dateConfidenceReasoning": "RWE anticipates operations in 2028; January 1 is a year-only placeholder, not a scheduled commissioning day."
+      },
+      "power": {
+        "megawatts": 300,
+        "kind": "storage",
+        "sourceUrl": "https://americas.rwe.com/our-energy/storage/storage-projects-and-locations/fourth-quarter-bess/",
+        "note": "Planned 300 MW, four-hour BESS; not operating output."
+      },
+      "datacenter": null,
+      "clearEnergy": false,
+      "gaps": [
+        "Verify approval outcome, current construction schedule, total budget, usable MWh and exact battery parcel."
+      ]
+    },
+    "dc-avaio-appomattox-va": {
+      "patch": {
+        "title": "AVAIO Hercules: 50 MW First-Phase Power in 2027; 1 GW Long-Term Power Plan",
+        "description": "AVAIO’s current Appomattox page describes a 436-acre campus, with 300 MW grid power and 700 MW behind-the-meter baseload planned. Its homepage lists 50 MW first-phase power in 2027; the historical $3B announcement covered a 452-acre acquisition plan.",
+        "sourceUrl": "https://www.avaiodigital.com/developments/appomattox-virginia",
+        "references": [
+          {
+            "url": "https://www.avaiodigital.com/developments/appomattox-virginia",
+            "title": "Hercules | Appomattox, Virginia — AVAIO Digital",
+            "confidence": 95,
+            "publishedDate": null
+          },
+          {
+            "url": "https://www.avaiodigital.com/updates/avaio-digital-to-build-3-billion-data-center-campus-on-452-acres-in-appomattox-county-virginia",
+            "title": "AVAIO Digital to Build $3 Billion Data Center Campus on 452 Acres in Appomattox County, Virginia",
+            "confidence": 95,
+            "publishedDate": "2024-12-10"
+          },
+          {
+            "url": "https://www.avaiodigital.com/",
+            "title": "AVAIO Digital — Sites and Locations",
+            "confidence": 95,
+            "publishedDate": null
+          }
+        ],
+        "longFormSummary": "<ul><li>The current operator location is 267 Industrial Park Lane, at published coordinates 37.374914, -78.848595, with 436 acres. This supersedes the old pin location and acquisition acreage.<cite data-ref=\"https://www.avaiodigital.com/developments/appomattox-virginia\"></cite></li><li>The 1,000 MW total baseload plan is supply scope, not confirmed critical IT load. The homepage identifies 50 MW for phase one.<cite data-ref=\"https://www.avaiodigital.com/\"></cite></li><li>The $3 billion figure is the historical announced campus investment, not actual spending. Timeline: initial power in 2027; January 1 is year precision. Full buildout COD remains unverified.<cite data-ref=\"https://www.avaiodigital.com/updates/avaio-digital-to-build-3-billion-data-center-campus-on-452-acres-in-appomattox-county-virginia\"></cite></li></ul>",
+        "price": 3000000000,
+        "priceCurrency": "USD",
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "estimated",
+        "allDay": true,
+        "allDayStated": false,
+        "utcStartDateTime": "2027-01-01T00:00:00.000Z",
+        "dateConfidenceReasoning": "Operator targets initial power in 2027, with 50 MW first phase on homepage. January 1 is year-only estimated precision; energization is not full-campus completion.",
+        "latitude": 37.374914,
+        "longitude": -78.848595,
+        "address": "267 Industrial Park Lane, Appomattox, Virginia, USA",
+        "media": [
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-backfill4-2026-10-23/dc-avaio-appomattox-va-aerial.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 1000
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-backfill4-2026-10-23/dc-avaio-appomattox-va-topo.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 1000
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-backfill4-2026-10-23/dc-avaio-appomattox-va-relief.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 1000
+          }
+        ]
+      },
+      "power": {
+        "megawatts": 50,
+        "kind": "usage",
+        "sourceUrl": "https://www.avaiodigital.com/",
+        "note": "Operator homepage first-phase baseload power target in 2027; full supply plan is 300 MW grid plus 700 MW BTM, not verified IT load."
+      },
+      "datacenter": {
+        "acres": 436,
+        "powerSource": "Operator plan: 300 MW grid via Dominion/CVEC and 700 MW behind-the-meter baseload",
+        "sourceUrl": "https://www.avaiodigital.com/developments/appomattox-virginia",
+        "note": "Current operator acreage replaces 452-acre historical acquisition scope. Removed capacity-scaled water estimate; power supply is not critical IT capacity."
+      },
+      "clearEnergy": true,
+      "gaps": [
+        "Verify approved final transmission capacity, BTM permits/fuel, full-campus buildout dates and updated budget; published point is not a certified parcel boundary."
+      ],
+      "mediaReplaced": true
+    },
+    "dc-digital-realty-moores-chapel-nc": {
+      "patch": {
+        "title": "Digital Realty Moores Chapel: Up to 400 MW IT; 156-Acre Charlotte Campus",
+        "description": "Digital Realty’s earnings release establishes up to 400 MW IT capacity for its Charlotte land acquisition. City planning records describe 156.23 acres and up to 3 million square feet; the $160M land purchase is not a total campus budget.",
+        "sourceUrl": "https://investor.digitalrealty.com/news-releases/news-release-details/digital-realty-reports-fourth-quarter-2024-results",
+        "references": [
+          {
+            "url": "https://investor.digitalrealty.com/news-releases/news-release-details/digital-realty-reports-fourth-quarter-2024-results",
+            "title": "Digital Realty Reports Fourth Quarter 2024 Results",
+            "confidence": 95,
+            "publishedDate": "2025-02-13"
+          },
+          {
+            "url": "https://www.charlottenc.gov/files/sharedassets/city/v/1/growth-and-development/planning-and-zoning/rezoning/documents/2024-petitions/final-staff-analysis/2024_144_fsa.pdf",
+            "title": "Rezoning Petition 2024-144 — Final Staff Analysis",
+            "confidence": 95,
+            "publishedDate": "2025-05-19"
+          },
+          {
+            "url": "https://www.wfae.org/energy-environment/2026-08-21/halfway-through-the-charlotte-data-center-moratorium-the-city-still-has-questions?_amp=true",
+            "title": "Data centers are not priorities over citizens: Charlotte mulls policy as moratorium ticks away",
+            "confidence": 95,
+            "publishedDate": "2026-08-21"
+          }
+        ],
+        "longFormSummary": "<ul><li>The issuer disclosed a $160 million purchase of 156 acres supporting up to 400 MW IT. The former $2.5 billion whole-project cost is removed.<cite data-ref=\"https://investor.digitalrealty.com/news-releases/news-release-details/digital-realty-reports-fourth-quarter-2024-results\"></cite></li><li>City staff analysis describes up to 3 million square feet and two development phases, with closed-loop cooling. Two phases do not alone establish building count.<cite data-ref=\"https://www.charlottenc.gov/files/sharedassets/city/v/1/growth-and-development/planning-and-zoning/rezoning/documents/2024-petitions/final-staff-analysis/2024_144_fsa.pdf\"></cite></li><li>WFAE reports the project under construction and a planned 35,000 gallons/day water figure. This is reported planned demand, not measured use.<cite data-ref=\"https://www.wfae.org/energy-environment/2026-08-21/halfway-through-the-charlotte-data-center-moratorium-the-city-still-has-questions?_amp=true\"></cite></li><li>Timeline: June 1, 2028 remains an unverified legacy estimated date; the opened issuer and planning records do not publish COD.<cite data-ref=\"https://investor.digitalrealty.com/news-releases/news-release-details/digital-realty-reports-fourth-quarter-2024-results\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "estimated",
+        "allDay": true,
+        "allDayStated": false,
+        "utcStartDateTime": "2028-06-01T00:00:00.000Z",
+        "dateConfidenceReasoning": "Unverified legacy June 2028 estimate; opened issuer/planning records establish scope, not a commissioning date."
+      },
+      "power": {
+        "megawatts": 400,
+        "kind": "usage",
+        "sourceUrl": "https://investor.digitalrealty.com/news-releases/news-release-details/digital-realty-reports-fourth-quarter-2024-results",
+        "note": "Issuer states land can support up to 400 MW IT; not current operating load."
+      },
+      "datacenter": {
+        "acres": 156.23,
+        "sqft": 3000000,
+        "cooling": "Closed-loop cooling required in city staff analysis",
+        "sourceUrl": "https://www.charlottenc.gov/files/sharedassets/city/v/1/growth-and-development/planning-and-zoning/rezoning/documents/2024-petitions/final-staff-analysis/2024_144_fsa.pdf",
+        "note": "156.23-acre planning scope; up to 3M sqft is permitted scope. WFAE reports planned 35,000 gal/day; removed capacity-scaled estimate. Building count not inferred from two phases."
+      },
+      "clearEnergy": true,
+      "gaps": [
+        "Obtain current first-service/COD schedule, campus capital budget, approved water specifications and precise parcel alignment."
+      ]
+    },
+    "dc-google-spade-new-florence-mo": {
+      "patch": {
+        "title": "Google New Florence: New Data Center Within $15B Missouri Infrastructure Investment",
+        "description": "Google’s May 20, 2026 release confirms its New Florence data center within a $15 billion Missouri infrastructure investment. That statewide commitment does not establish this campus’s standalone budget, 600–1,200 MW IT load, acreage or operating date.",
+        "sourceUrl": "https://storage.googleapis.com/gweb-uniblog-publish-prod/documents/Press_Release__Google_Deepens_Missouri_Roots.pdf",
+        "references": [
+          {
+            "url": "https://storage.googleapis.com/gweb-uniblog-publish-prod/documents/Press_Release__Google_Deepens_Missouri_Roots.pdf",
+            "title": "Google Deepens Missouri Roots with New Data Center, Energy, and Community Investments",
+            "confidence": 95,
+            "publishedDate": "2026-05-20"
+          }
+        ],
+        "longFormSummary": "<ul><li>Google announced a new data center in New Florence, Montgomery County. The $15 billion figure applies to Missouri infrastructure investment, including the campus.<cite data-ref=\"https://storage.googleapis.com/gweb-uniblog-publish-prod/documents/Press_Release__Google_Deepens_Missouri_Roots.pdf\"></cite></li><li>The release discusses over 1 GW of contracted new generation and over 500 MW of additional capacity through Ameren. These supply commitments are not campus IT-load specifications.<cite data-ref=\"https://storage.googleapis.com/gweb-uniblog-publish-prod/documents/Press_Release__Google_Deepens_Missouri_Roots.pdf\"></cite></li><li>Timeline: January 1, 2028 remains an unverified legacy estimate. Unsupported power, acreage, capacity-scaled water and calculated annual energy are removed pending site-specific filings.<cite data-ref=\"https://storage.googleapis.com/gweb-uniblog-publish-prod/documents/Press_Release__Google_Deepens_Missouri_Roots.pdf\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "estimated",
+        "allDay": true,
+        "allDayStated": false,
+        "utcStartDateTime": "2028-01-01T00:00:00.000Z",
+        "dateConfidenceReasoning": "Unverified legacy 2028 year placeholder. Official May 2026 investment announcement does not state first-service or campus-completion date."
+      },
+      "power": "delete",
+      "datacenter": {
+        "powerSource": "Ameren partnership described in Google Missouri announcement",
+        "sourceUrl": "https://storage.googleapis.com/gweb-uniblog-publish-prod/documents/Press_Release__Google_Deepens_Missouri_Roots.pdf",
+        "note": "No site IT load, acreage or daily water quantity established in opened primary announcement. Statewide generation commitments are not campus demand."
+      },
+      "clearEnergy": true,
+      "gaps": [
+        "Obtain county site plan, campus-specific MW/acreage, COD and budget; $15B state commitment cannot be treated as campus cost."
+      ]
+    },
+    "dc-google-tembo-cheyenne-wy": {
+      "patch": {
+        "title": "Google Cheyenne Tembo: 2.7 GW Resource Mix; First Energy Service Late 2027",
+        "description": "Black Hills’ October 6, 2026 agreements describe 2.7 GW of resources including reserve margins, with Google taking service in late 2027 and reaching peak load in 2030. This is not 2.7 GW of verified IT load or a disclosed $17B campus budget.",
+        "sourceUrl": "https://ir.blackhillscorp.com/news-releases/news-release-details/black-hills-corp-executes-definitive-agreements-serve-googles",
+        "references": [
+          {
+            "url": "https://ir.blackhillscorp.com/news-releases/news-release-details/black-hills-corp-executes-definitive-agreements-serve-googles",
+            "title": "Black Hills Corp. Executes Definitive Agreements to Serve Google’s Planned Data Center in Cheyenne, Wyoming",
+            "confidence": 95,
+            "publishedDate": "2026-10-06"
+          }
+        ],
+        "longFormSummary": "<ul><li>The supply plan combines up to 590 MW grid service and approximately 2.1 GW third-party microgrid resources; it includes reserves. The 564 MW of new Black Hills generation is part of the 590 MW, not additive.<cite data-ref=\"https://ir.blackhillscorp.com/news-releases/news-release-details/black-hills-corp-executes-definitive-agreements-serve-googles\"></cite></li><li>Black Hills plans $1.8 billion generation investment. Google provided $399 million refundable equipment advances; neither establishes campus capital cost.<cite data-ref=\"https://ir.blackhillscorp.com/news-releases/news-release-details/black-hills-corp-executes-definitive-agreements-serve-googles\"></cite></li><li>Timeline: December 1, 2027 is an estimated late-year marker for first service, not a source-stated day. Load ramps to 2030; the former 2031 completion estimate is a different milestone.<cite data-ref=\"https://ir.blackhillscorp.com/news-releases/news-release-details/black-hills-corp-executes-definitive-agreements-serve-googles\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "estimated",
+        "allDay": true,
+        "allDayStated": false,
+        "utcStartDateTime": "2027-12-01T00:00:00.000Z",
+        "dateConfidenceReasoning": "Black Hills targets late-2027 first energy service and peak load in 2030. December 1 is an estimated seasonal marker, not an exact commissioning day."
+      },
+      "power": {
+        "megawatts": 590,
+        "kind": "usage",
+        "sourceUrl": "https://ir.blackhillscorp.com/news-releases/news-release-details/black-hills-corp-executes-definitive-agreements-serve-googles",
+        "note": "Up-to-590 MW grid-connected energy service component only; total resource mix including reserves is 2.7 GW, not verified campus IT load."
+      },
+      "datacenter": {
+        "powerSource": "Up to 590 MW grid service (564 MW new generation plus 26 MW market/tariff energy) and about 2.1 GW third-party microgrid resources",
+        "sourceUrl": "https://ir.blackhillscorp.com/news-releases/news-release-details/black-hills-corp-executes-definitive-agreements-serve-googles",
+        "note": "Removed unverified acreage and capacity-scaled daily water estimate. Resource mix includes reserves; not a published critical IT load."
+      },
+      "clearEnergy": true,
+      "gaps": [
+        "Verify county amended site plan/acreage, critical IT load, phase-specific service dates and campus-only budget."
+      ]
+    },
+    "dc-prometheus-atlas-evanston-wy": {
+      "patch": {
+        "title": "Prometheus Evanston: 1.25 GW Initial Campus Plan; Conditional Use Permit Approved",
+        "description": "Prometheus’s June 2026 announcement gives its 506-acre Evanston campus 1.25 GW initial capacity and a path to 5 GW. A separate August power-facility recommendation was not final approval; the prior 250 MW / $2B tracker scope is superseded.",
+        "sourceUrl": "https://www.prometheushyperscale.com/news/prometheus-hyperscale-secures-unanimous-conditional-use-permit-approval-from-uinta-county-commissioners",
+        "references": [
+          {
+            "url": "https://www.prometheushyperscale.com/news/prometheus-hyperscale-secures-unanimous-conditional-use-permit-approval-from-uinta-county-commissioners",
+            "title": "Prometheus Hyperscale Secures Unanimous Conditional Use Permit Approval from Uinta County Commissioners",
+            "confidence": 95,
+            "publishedDate": "2026-06-17"
+          },
+          {
+            "url": "https://www.prometheushyperscale.com/news/uinta-county-planning-and-zoning-commission-unanimously-recommends-approval-of-permits-for-prometheus-hyperscales-on-site-power-facility-site",
+            "title": "Uinta County Planning and Zoning Commission Unanimously Recommends Approval of Permits for Prometheus Hyperscale’s On-Site Power Facility Site",
+            "confidence": 95,
+            "publishedDate": "2026-08-27"
+          },
+          {
+            "url": "https://www.prometheushyperscale.com/news/bernard-looney-appointed-chairman",
+            "title": "Bernard Looney Appointed Chairman of the Board of Directors at Prometheus Hyperscale",
+            "confidence": 95,
+            "publishedDate": "2024-11-24"
+          }
+        ],
+        "longFormSummary": "<ul><li>The developer reports county campus approval on June 16, 2026, a fully islanded natural-gas microgrid and closed-loop liquid cooling. Its current 506-acre design differs from historical 640-acre publicity.<cite data-ref=\"https://www.prometheushyperscale.com/news/prometheus-hyperscale-secures-unanimous-conditional-use-permit-approval-from-uinta-county-commissioners\"></cite></li><li>The developer historically announced a $10 billion flagship project, replacing the unsupported $2 billion figure; that older estimate is not a current final budget.<cite data-ref=\"https://www.prometheushyperscale.com/news/bernard-looney-appointed-chairman\"></cite></li><li>Timeline: construction was anticipated within six months of final permitting, followed by 48–60 months of phased buildout. June 1, 2030 remains an unverified legacy estimate, not a date calculable without final-permit timing.<cite data-ref=\"https://www.prometheushyperscale.com/news/prometheus-hyperscale-secures-unanimous-conditional-use-permit-approval-from-uinta-county-commissioners\"></cite></li></ul>",
+        "price": 10000000000,
+        "priceCurrency": "USD",
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "estimated",
+        "allDay": true,
+        "allDayStated": false,
+        "utcStartDateTime": "2030-06-01T00:00:00.000Z",
+        "dateConfidenceReasoning": "Unverified legacy June 2030 date. Operator publishes relative construction/buildout durations contingent on final permitting, not a fixed COD."
+      },
+      "power": {
+        "megawatts": 1250,
+        "kind": "usage",
+        "sourceUrl": "https://www.prometheushyperscale.com/news/prometheus-hyperscale-secures-unanimous-conditional-use-permit-approval-from-uinta-county-commissioners",
+        "note": "Announced initial campus capacity; eventual 5 GW pathway is not initial operating load."
+      },
+      "datacenter": {
+        "acres": 506,
+        "cooling": "Developer-described closed-loop liquid cooling",
+        "powerSource": "Proposed fully islanded onsite natural-gas engines/turbines; no public-grid draw",
+        "sourceUrl": "https://www.prometheushyperscale.com/news/prometheus-hyperscale-secures-unanimous-conditional-use-permit-approval-from-uinta-county-commissioners",
+        "note": "Removed generic water estimate. June campus CUP differs from separate August power-site recommendation; final generation approval needs verification."
+      },
+      "clearEnergy": true,
+      "gaps": [
+        "Verify final power-site approvals, construction start, initial service date, exact parcel and current investment estimate."
+      ]
+    },
+    "solar-cypress-steel-river-ar": {
+      "patch": {
+        "title": "Cypress Creek Steel River: 2.46 GW Solar, 2.94 GWh Storage; $4.5B+ Project",
+        "description": "Cypress Creek’s current Steel River page lists 2.46 GW solar, 2.94 GWh battery storage and $4.5B-plus private investment. July 2026 groundbreaking covered the first two phases; all three phases are targeted in service by 2029.",
+        "sourceUrl": "https://cypresscreekenergy.com/steel-river-energy-center/",
+        "references": [
+          {
+            "url": "https://cypresscreekenergy.com/steel-river-energy-center/",
+            "title": "Steel River Energy Center — Cypress Creek",
+            "confidence": 95,
+            "publishedDate": null
+          },
+          {
+            "url": "https://cypresscreekenergy.com/news/steel-river-groundbreaking/",
+            "title": "Cypress Creek and Google Break Ground on America’s Largest Solar Project",
+            "confidence": 95,
+            "publishedDate": "2026-07-14"
+          }
+        ],
+        "longFormSummary": "<ul><li>The project page gives the full complex scope, correcting a 500 MW tracker slice. July’s rounded release describes 2.5 GWdc solar and 2.9 GWh storage; the solar figure is DC nameplate, not an AC export rating.<cite data-ref=\"https://cypresscreekenergy.com/steel-river-energy-center/\"></cite></li><li>The first two phases total 1.6 GWdc solar and 1.9 GWh storage under a Google PPA. A July 14, 2026 event marked their construction start.<cite data-ref=\"https://cypresscreekenergy.com/news/steel-river-groundbreaking/\"></cite></li><li>Timeline: all three phases are expected in service by 2029. January 1, 2029 is year-only precision, not a scheduled COD. The $4.5 billion lower bound applies to the whole complex.<cite data-ref=\"https://cypresscreekenergy.com/steel-river-energy-center/\"></cite></li><li>Photo: Steel River site vegetation and support posts; credit Cypress Creek Energy, via its project page. This is a construction-stage aerial, not an operating array.<cite data-ref=\"https://cypresscreekenergy.com/steel-river-energy-center/\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": "USD",
+        "priceLowerBound": 4500000000,
+        "priceUpperBound": null,
+        "dateConfidence": "estimated",
+        "allDay": true,
+        "allDayStated": false,
+        "utcStartDateTime": "2029-01-01T00:00:00.000Z",
+        "dateConfidenceReasoning": "Operator targets all three phases in service by 2029; January 1 is year-only estimated precision, not a fixed commissioning day.",
+        "media": [
+          {
+            "id": 24122,
+            "thumbName": "4343afa2-de9c-444b-a871-0879bb182303.jpeg",
+            "thumbWidth": 1000,
+            "thumbHeight": 625,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cypress-steel-river-ar-usgs-aerial.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 1000,
+            "type": "1"
+          },
+          {
+            "id": 24123,
+            "thumbName": "26049653-b537-4536-9457-b02d7130cc41.jpeg",
+            "thumbWidth": 1000,
+            "thumbHeight": 625,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cypress-steel-river-ar-usgs-topo.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 1000,
+            "type": "1"
+          },
+          {
+            "id": 24124,
+            "thumbName": "13d5560a-567f-4443-80b1-55c89b80b14f.jpeg",
+            "thumbWidth": 1000,
+            "thumbHeight": 625,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cypress-steel-river-ar-usgs-regional.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 1000,
+            "type": "1"
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-backfill4-2026-10-23/steel-river-operator-aerial.jpg",
+            "originalWidth": 1024,
+            "originalHeight": 457
+          }
+        ]
+      },
+      "power": {
+        "megawatts": 2460,
+        "kind": "generation",
+        "sourceUrl": "https://cypresscreekenergy.com/steel-river-energy-center/",
+        "note": "Whole-complex solar DC nameplate (July release rounds to 2.5 GWdc), not AC export or battery discharge capacity."
+      },
+      "datacenter": null,
+      "clearEnergy": false,
+      "gaps": [
+        "Obtain phase-specific COD and AC export ratings, storage discharge MW and precise site boundaries; project images/one-pager checked but not globally imported."
+      ],
+      "mediaReplaced": true,
+      "mediaExpanded": true
+    },
+    "solar-doral-bourbon-tennyson-ks": {
+      "patch": {
+        "title": "Doral Tennyson Creek: 300 MW Solar; Issuer Targets 2029 with 800 MWh Storage",
+        "description": "Doral’s U.S. solar-storage page lists Tennyson Creek at 300 MW solar. Its April 2026 issuer presentation gives 374 MWp / 800 MWh and a 2029 COD target; DC peak capacity and battery energy are distinct from solar AC generation.",
+        "sourceUrl": "https://doral-llc.com/solution/battery-storage-2/",
+        "references": [
+          {
+            "url": "https://doral-llc.com/solution/battery-storage-2/",
+            "title": "Solar + Storage — Doral Renewables",
+            "confidence": 95,
+            "publishedDate": null
+          },
+          {
+            "url": "https://doral-energy.com/wp-content/uploads/2026/05/DORAL-Earnings-Presentation-2025_eng_20.4.26-%D7%9E%D7%95%D7%A0%D7%92%D7%A9.pdf",
+            "title": "Doral 2025 Earnings Presentation — April 20, 2026",
+            "confidence": 95,
+            "publishedDate": "2026-04-20"
+          }
+        ],
+        "longFormSummary": "<ul><li>The U.S. operator page identifies Tennyson Creek as a 300 MW Kansas solar and storage project; its project-specific link returned a server error.<cite data-ref=\"https://doral-llc.com/solution/battery-storage-2/\"></cite></li><li>The issuer pipeline table labels capacity MWp/MWh and lists 374/800 with COD 2029. This replaces unsupported September 2028 precision. These figures are not additive MW.<cite data-ref=\"https://doral-energy.com/wp-content/uploads/2026/05/DORAL-Earnings-Presentation-2025_eng_20.4.26-%D7%9E%D7%95%D7%A0%D7%92%D7%A9.pdf\"></cite></li><li>Timeline: January 1, 2029 is year-only precision. The previous $450 million price is cleared; the issuer’s financial tables are in ILS and do not verify that USD figure.<cite data-ref=\"https://doral-energy.com/wp-content/uploads/2026/05/DORAL-Earnings-Presentation-2025_eng_20.4.26-%D7%9E%D7%95%D7%A0%D7%92%D7%A9.pdf\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "estimated",
+        "allDay": true,
+        "allDayStated": false,
+        "utcStartDateTime": "2029-01-01T00:00:00.000Z",
+        "dateConfidenceReasoning": "Issuer April 2026 presentation targets 2029; January 1 is year-only estimated precision. Older chamber page differs; current detailed developer/permit timeline needs reconciliation."
+      },
+      "power": {
+        "megawatts": 300,
+        "kind": "generation",
+        "sourceUrl": "https://doral-llc.com/solution/battery-storage-2/",
+        "note": "U.S. operator solar generation scope; issuer separately lists 374 MWp DC and 800 MWh storage."
+      },
+      "datacenter": null,
+      "clearEnergy": false,
+      "gaps": [
+        "Project page returned HTTP 500. Verify current county agreements/exemptions, 2029 schedule, DC/AC scope, budget and exact parcel; chamber page/search versions have conflicting 2028/2029 dates."
+      ]
+    },
+    "solar-doral-vista-sands-wi": {
+      "patch": {
+        "title": "Doral Vista Sands: 1.3 GW Solar Approval; Issuer Targets 2029–2030",
+        "description": "Wisconsin’s PSC describes 1,315.6 MWac solar plus 300 MW storage, with final decision issued January 16, 2025. Doral’s April 2026 presentation targets 2029–2030, later than the regulator’s historical end-2028 schedule; the operator announces nearly $2B investment.",
+        "sourceUrl": "https://vistasandssolar.com/",
+        "references": [
+          {
+            "url": "https://psc.wi.gov/Pages/CommissionActions/CasePages/VistaSandsSolarProject.aspx",
+            "title": "Vista Sands Solar Project — Public Service Commission of Wisconsin",
+            "confidence": 95,
+            "publishedDate": null
+          },
+          {
+            "url": "https://vistasandssolar.com/",
+            "title": "Vista Sands Solar Farm — Doral Renewables",
+            "confidence": 95,
+            "publishedDate": null
+          },
+          {
+            "url": "https://doral-energy.com/wp-content/uploads/2026/05/DORAL-Earnings-Presentation-2025_eng_20.4.26-%D7%9E%D7%95%D7%A0%D7%92%D7%A9.pdf",
+            "title": "Doral 2025 Earnings Presentation — April 20, 2026",
+            "confidence": 95,
+            "publishedDate": "2026-04-20"
+          }
+        ],
+        "longFormSummary": "<ul><li>PSC’s page contains design variants: 1,315.6 MWac in its overview and 1,310.4 MWac in revised application text. Both are about 1.3 GW; obtain the final approved/current design to reconcile precision.<cite data-ref=\"https://psc.wi.gov/Pages/CommissionActions/CasePages/VistaSandsSolarProject.aspx\"></cite></li><li>The developer describes about 9,500 acres and nearly $2 billion capital investment. This is an approximate announced estimate, replacing the unsupported $1.5 billion figure.<cite data-ref=\"https://vistasandssolar.com/\"></cite></li><li>The issuer lists 1,446 MWp DC and 2029–2030 COD. Timeline: January 1, 2029 is a year-only start-of-window marker, replacing legacy December 2028; older PSC schedule remains historical.<cite data-ref=\"https://doral-energy.com/wp-content/uploads/2026/05/DORAL-Earnings-Presentation-2025_eng_20.4.26-%D7%9E%D7%95%D7%A0%D7%92%D7%A9.pdf\"></cite></li></ul>",
+        "price": 2000000000,
+        "priceCurrency": "USD",
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "estimated",
+        "allDay": true,
+        "allDayStated": false,
+        "utcStartDateTime": "2029-01-01T00:00:00.000Z",
+        "dateConfidenceReasoning": "April 2026 issuer presentation targets 2029–2030; PSC final-decision summary records historical end-2028 completion. January 1, 2029 is an estimated year marker, not a scheduled commissioning day."
+      },
+      "power": {
+        "megawatts": 1315.6,
+        "kind": "generation",
+        "sourceUrl": "https://psc.wi.gov/Pages/CommissionActions/CasePages/VistaSandsSolarProject.aspx",
+        "note": "PSC application overview solar AC scope, about 1.3 GW. Same page revised text gives 1,310.4 MWac; final/current precise rating remains to reconcile."
+      },
+      "datacenter": null,
+      "clearEnergy": false,
+      "gaps": [
+        "Reconcile PSC design variants, current 300 MW battery inclusion and 1,446 MWp issuer design; obtain latest construction report, exact phase COD and parcel boundaries.",
+        "Existing pin 15889 also covers Vista Sands and owns the PSC source URL for this author. Keep its native identity intact; consolidation, thread and association review remains open. This update uses the opened operator project homepage, with PSC retained as a reference."
+      ]
+    },
+    "solar-invenergy-burt-ne": {
+      "patch": {
+        "title": "Invenergy Beeline Solar in Burt County: 250 MW First Project; Target Q4 2028",
+        "description": "Invenergy’s February 2025 factsheet identifies Beeline in Burt County as a proposed 250 MW solar project targeting Q4 2028 operation. This replaces the prior single 500 MW / $700M tracker presentation; larger county permit scope needs phase-specific reconciliation.",
+        "sourceUrl": "https://assets.contentstack.io/v3/assets/blt1b4c58e01961ab11/blt10f3898f2ca1fb82/67a12162c0a3738518408c75/INV_ProjectFactSheet_Beeline_Solar_Feb_2025.pdf?branch=production",
+        "references": [
+          {
+            "url": "https://assets.contentstack.io/v3/assets/blt1b4c58e01961ab11/blt10f3898f2ca1fb82/67a12162c0a3738518408c75/INV_ProjectFactSheet_Beeline_Solar_Feb_2025.pdf?branch=production",
+            "title": "Beeline Solar Energy Center — Invenergy Project Fact Sheet",
+            "confidence": 95,
+            "publishedDate": "2025-02-03"
+          }
+        ],
+        "longFormSummary": "<ul><li>The developer factsheet describes 250 MW solar generation, development through 2026, construction during 2026–2028 and operation in Q4 2028.<cite data-ref=\"https://assets.contentstack.io/v3/assets/blt1b4c58e01961ab11/blt10f3898f2ca1fb82/67a12162c0a3738518408c75/INV_ProjectFactSheet_Beeline_Solar_Feb_2025.pdf?branch=production\"></cite></li><li>Its $110 million figure combines lifetime local tax revenue and landowner payments, not construction capital. No $700 million project budget is established.<cite data-ref=\"https://assets.contentstack.io/v3/assets/blt1b4c58e01961ab11/blt10f3898f2ca1fb82/67a12162c0a3738518408c75/INV_ProjectFactSheet_Beeline_Solar_Feb_2025.pdf?branch=production\"></cite></li><li>Timeline: October 1, 2028 is quarter-only estimated precision. The operator project site currently redirects to a generic homepage, so the downloaded factsheet is retained as the specific source.<cite data-ref=\"https://assets.contentstack.io/v3/assets/blt1b4c58e01961ab11/blt10f3898f2ca1fb82/67a12162c0a3738518408c75/INV_ProjectFactSheet_Beeline_Solar_Feb_2025.pdf?branch=production\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "estimated",
+        "allDay": true,
+        "allDayStated": false,
+        "utcStartDateTime": "2028-10-01T00:00:00.000Z",
+        "dateConfidenceReasoning": "February 2025 developer factsheet targets Q4 2028; October 1 is quarter-only precision, not a scheduled day. Current phase schedule needs confirmation."
+      },
+      "power": {
+        "megawatts": 250,
+        "kind": "generation",
+        "sourceUrl": "https://assets.contentstack.io/v3/assets/blt1b4c58e01961ab11/blt10f3898f2ca1fb82/67a12162c0a3738518408c75/INV_ProjectFactSheet_Beeline_Solar_Feb_2025.pdf?branch=production",
+        "note": "Developer factsheet proposed solar project/first phase; larger 500 MW combined phased permit scope must not be presented as commissioned solar output."
+      },
+      "datacenter": null,
+      "clearEnergy": false,
+      "gaps": [
+        "Verify current county CUP and full 500 MW generation/storage phase allocation, updated budget and Q4 2028 schedule; retain source factsheet because operator site redirects."
+      ]
+    },
+    "solar-nextera-west-gardner-ks": {
+      "patch": {
+        "title": "NextEra West Gardner: Up to 217 MW Solar, 128 MW Storage; $320M Investment",
+        "description": "NextEra’s current project page lists up to 217 MW solar and 128 MW battery storage across Johnson and Douglas counties. Its published $320 million project investment replaces $500 million; the former 320 MW solar figure is an older design.",
+        "sourceUrl": "https://www.nexteraenergyresources.com/west-gardner-solar.html",
+        "references": [
+          {
+            "url": "https://www.nexteraenergyresources.com/west-gardner-solar.html",
+            "title": "West Gardner Solar Project — NextEra Energy Resources",
+            "confidence": 95,
+            "publishedDate": null
+          }
+        ],
+        "longFormSummary": "<ul><li>The operator describes a proposed solar and battery development in both Johnson and Douglas counties, Kansas, with up to 217 MW solar and 128 MW storage.<cite data-ref=\"https://www.nexteraenergyresources.com/west-gardner-solar.html\"></cite></li><li>NextEra publishes $320 million project investment. This estimate is distinct from the old 320 MW solar rating; neither storage duration nor MWh is specified.<cite data-ref=\"https://www.nexteraenergyresources.com/west-gardner-solar.html\"></cite></li><li>Timeline: September 1, 2028 remains an unverified legacy estimated date; the opened operator page does not state COD. The project-overview subpage was blocked during follow-up.<cite data-ref=\"https://www.nexteraenergyresources.com/west-gardner-solar.html\"></cite></li></ul>",
+        "price": 320000000,
+        "priceCurrency": "USD",
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "estimated",
+        "allDay": true,
+        "allDayStated": false,
+        "utcStartDateTime": "2028-09-01T00:00:00.000Z",
+        "dateConfidenceReasoning": "Unverified legacy September 2028 estimate; current primary project page establishes revised scope and investment, not commissioning."
+      },
+      "power": {
+        "megawatts": 217,
+        "kind": "generation",
+        "sourceUrl": "https://www.nexteraenergyresources.com/west-gardner-solar.html",
+        "note": "Current operator up-to-217 MW solar scope; separate 128 MW battery rating remains in text."
+      },
+      "datacenter": null,
+      "clearEnergy": false,
+      "gaps": [
+        "Obtain current permitting/design documents, exact parcel, storage duration and COD; operator overview subpage returned access-block page."
+      ]
+    }
+  },
+  "results": [
+    {
+      "environment": "local",
+      "key": "solar-revolve-bouse-az",
+      "id": 16339,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Obtain current ENGIE/BLM design, solar AC and battery MW/MWh, budget, COD and exact parcel; 1,000 MW seller shorthand does not establish the old separate 1,010/1,011 MW readings."
+      ]
+    },
+    {
+      "environment": "local",
+      "key": "battery-rwe-fourth-quarter-md",
+      "id": 16340,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Verify approval outcome, current construction schedule, total budget, usable MWh and exact battery parcel."
+      ]
+    },
+    {
+      "environment": "local",
+      "key": "dc-avaio-appomattox-va",
+      "id": 16341,
+      "action": "corrected",
+      "mediaPreserved": false,
+      "mediaReplaced": true,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Verify approved final transmission capacity, BTM permits/fuel, full-campus buildout dates and updated budget; published point is not a certified parcel boundary."
+      ]
+    },
+    {
+      "environment": "local",
+      "key": "dc-digital-realty-moores-chapel-nc",
+      "id": 16342,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Obtain current first-service/COD schedule, campus capital budget, approved water specifications and precise parcel alignment."
+      ]
+    },
+    {
+      "environment": "local",
+      "key": "dc-google-spade-new-florence-mo",
+      "id": 16343,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Obtain county site plan, campus-specific MW/acreage, COD and budget; $15B state commitment cannot be treated as campus cost."
+      ]
+    },
+    {
+      "environment": "local",
+      "key": "dc-google-tembo-cheyenne-wy",
+      "id": 16344,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Verify county amended site plan/acreage, critical IT load, phase-specific service dates and campus-only budget."
+      ]
+    },
+    {
+      "environment": "local",
+      "key": "dc-prometheus-atlas-evanston-wy",
+      "id": 16345,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Verify final power-site approvals, construction start, initial service date, exact parcel and current investment estimate."
+      ]
+    },
+    {
+      "environment": "local",
+      "key": "solar-cypress-steel-river-ar",
+      "id": 16346,
+      "action": "corrected",
+      "mediaPreserved": false,
+      "mediaReplaced": true,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Obtain phase-specific COD and AC export ratings, storage discharge MW and precise site boundaries; project images/one-pager checked but not globally imported."
+      ]
+    },
+    {
+      "environment": "local",
+      "key": "solar-doral-bourbon-tennyson-ks",
+      "id": 16347,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Project page returned HTTP 500. Verify current county agreements/exemptions, 2029 schedule, DC/AC scope, budget and exact parcel; chamber page/search versions have conflicting 2028/2029 dates."
+      ]
+    },
+    {
+      "environment": "local",
+      "key": "solar-doral-vista-sands-wi",
+      "id": 16348,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Reconcile PSC design variants, current 300 MW battery inclusion and 1,446 MWp issuer design; obtain latest construction report, exact phase COD and parcel boundaries.",
+        "Existing pin 15889 also covers Vista Sands and owns the PSC source URL for this author. Keep its native identity intact; consolidation, thread and association review remains open. This update uses the opened operator project homepage, with PSC retained as a reference."
+      ]
+    },
+    {
+      "environment": "local",
+      "key": "solar-invenergy-burt-ne",
+      "id": 16349,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Verify current county CUP and full 500 MW generation/storage phase allocation, updated budget and Q4 2028 schedule; retain source factsheet because operator site redirects."
+      ]
+    },
+    {
+      "environment": "local",
+      "key": "solar-nextera-west-gardner-ks",
+      "id": 16350,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Obtain current permitting/design documents, exact parcel, storage duration and COD; operator overview subpage returned access-block page."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "solar-revolve-bouse-az",
+      "id": 16339,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Obtain current ENGIE/BLM design, solar AC and battery MW/MWh, budget, COD and exact parcel; 1,000 MW seller shorthand does not establish the old separate 1,010/1,011 MW readings."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "battery-rwe-fourth-quarter-md",
+      "id": 16340,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Verify approval outcome, current construction schedule, total budget, usable MWh and exact battery parcel."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "dc-avaio-appomattox-va",
+      "id": 16341,
+      "action": "corrected",
+      "mediaPreserved": false,
+      "mediaReplaced": true,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Verify approved final transmission capacity, BTM permits/fuel, full-campus buildout dates and updated budget; published point is not a certified parcel boundary."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "dc-digital-realty-moores-chapel-nc",
+      "id": 16342,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Obtain current first-service/COD schedule, campus capital budget, approved water specifications and precise parcel alignment."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "dc-google-spade-new-florence-mo",
+      "id": 16343,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Obtain county site plan, campus-specific MW/acreage, COD and budget; $15B state commitment cannot be treated as campus cost."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "dc-google-tembo-cheyenne-wy",
+      "id": 16344,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Verify county amended site plan/acreage, critical IT load, phase-specific service dates and campus-only budget."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "dc-prometheus-atlas-evanston-wy",
+      "id": 16345,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Verify final power-site approvals, construction start, initial service date, exact parcel and current investment estimate."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "solar-cypress-steel-river-ar",
+      "id": 16346,
+      "action": "corrected",
+      "mediaPreserved": false,
+      "mediaReplaced": true,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Obtain phase-specific COD and AC export ratings, storage discharge MW and precise site boundaries; project images/one-pager checked but not globally imported."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "solar-doral-bourbon-tennyson-ks",
+      "id": 16347,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Project page returned HTTP 500. Verify current county agreements/exemptions, 2029 schedule, DC/AC scope, budget and exact parcel; chamber page/search versions have conflicting 2028/2029 dates."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "solar-doral-vista-sands-wi",
+      "id": 16348,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Reconcile PSC design variants, current 300 MW battery inclusion and 1,446 MWp issuer design; obtain latest construction report, exact phase COD and parcel boundaries.",
+        "Existing pin 15889 also covers Vista Sands and owns the PSC source URL for this author. Keep its native identity intact; consolidation, thread and association review remains open. This update uses the opened operator project homepage, with PSC retained as a reference."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "solar-invenergy-burt-ne",
+      "id": 16349,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Verify current county CUP and full 500 MW generation/storage phase allocation, updated budget and Q4 2028 schedule; retain source factsheet because operator site redirects."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "solar-nextera-west-gardner-ks",
+      "id": 16350,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Obtain current permitting/design documents, exact parcel, storage duration and COD; operator overview subpage returned access-block page."
+      ]
+    }
+  ],
+  "verification": {
+    "freshReadbacks": [
+      {
+        "environment": "local",
+        "id": 16339,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 16340,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 16341,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 16342,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 16343,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 16344,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 16345,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 16346,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 16347,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 16348,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 16349,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 16350,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 16339,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 16340,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 16341,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 16342,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 16343,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 16344,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 16345,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 16346,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 16347,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 16348,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 16349,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 16350,
+        "verified": true
+      }
+    ],
+    "media": [
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-backfill4-2026-10-23/dc-avaio-appomattox-va-aerial.jpg",
+        "status": 200,
+        "bytes": 448319
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-backfill4-2026-10-23/dc-avaio-appomattox-va-relief.jpg",
+        "status": 200,
+        "bytes": 181074
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-backfill4-2026-10-23/dc-avaio-appomattox-va-topo.jpg",
+        "status": 200,
+        "bytes": 509148
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-backfill4-2026-10-23/steel-river-operator-aerial.jpg",
+        "status": 200,
+        "bytes": 109866
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cypress-steel-river-ar-usgs-aerial.jpg",
+        "status": 200,
+        "bytes": 372766
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cypress-steel-river-ar-usgs-regional.jpg",
+        "status": 200,
+        "bytes": 322118
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cypress-steel-river-ar-usgs-topo.jpg",
+        "status": 200,
+        "bytes": 178313
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/digital-realty-moores-chapel-nc-usgs-aerial.jpg",
+        "status": 200,
+        "bytes": 542424
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/digital-realty-moores-chapel-nc-usgs-regional.jpg",
+        "status": 200,
+        "bytes": 690108
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/digital-realty-moores-chapel-nc-usgs-topo.jpg",
+        "status": 200,
+        "bytes": 348533
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/doral-bourbon-tennyson-ks-usgs-aerial.jpg",
+        "status": 200,
+        "bytes": 295875
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/doral-bourbon-tennyson-ks-usgs-regional.jpg",
+        "status": 200,
+        "bytes": 399267
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/doral-bourbon-tennyson-ks-usgs-topo.jpg",
+        "status": 200,
+        "bytes": 180293
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/doral-vista-sands-wi-usgs-aerial.jpg",
+        "status": 200,
+        "bytes": 250871
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/doral-vista-sands-wi-usgs-regional.jpg",
+        "status": 200,
+        "bytes": 352253
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/doral-vista-sands-wi-usgs-topo.jpg",
+        "status": 200,
+        "bytes": 83403
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/google-spade-new-florence-mo-usgs-aerial.jpg",
+        "status": 200,
+        "bytes": 471729
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/google-spade-new-florence-mo-usgs-regional.jpg",
+        "status": 200,
+        "bytes": 439923
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/google-spade-new-florence-mo-usgs-topo.jpg",
+        "status": 200,
+        "bytes": 233658
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/google-tembo-cheyenne-wy-usgs-aerial.jpg",
+        "status": 200,
+        "bytes": 337445
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/google-tembo-cheyenne-wy-usgs-regional.jpg",
+        "status": 200,
+        "bytes": 359444
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/google-tembo-cheyenne-wy-usgs-topo.jpg",
+        "status": 200,
+        "bytes": 182743
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/invenergy-burt-ne-usgs-aerial.jpg",
+        "status": 200,
+        "bytes": 280663
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/invenergy-burt-ne-usgs-regional.jpg",
+        "status": 200,
+        "bytes": 321842
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/invenergy-burt-ne-usgs-topo.jpg",
+        "status": 200,
+        "bytes": 107858
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/nextera-west-gardner-ks-usgs-aerial.jpg",
+        "status": 200,
+        "bytes": 354749
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/nextera-west-gardner-ks-usgs-regional.jpg",
+        "status": 200,
+        "bytes": 430767
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/nextera-west-gardner-ks-usgs-topo.jpg",
+        "status": 200,
+        "bytes": 174720
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/prometheus-atlas-evanston-wy-usgs-aerial.jpg",
+        "status": 200,
+        "bytes": 594900
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/prometheus-atlas-evanston-wy-usgs-regional.jpg",
+        "status": 200,
+        "bytes": 467141
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/prometheus-atlas-evanston-wy-usgs-topo.jpg",
+        "status": 200,
+        "bytes": 362446
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/revolve-bouse-az-usgs-aerial.jpg",
+        "status": 200,
+        "bytes": 406248
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/revolve-bouse-az-usgs-relief.jpg",
+        "status": 200,
+        "bytes": 58177
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/revolve-bouse-az-usgs-topo.jpg",
+        "status": 200,
+        "bytes": 104252
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/rwe-fourth-quarter-md-usgs-aerial.jpg",
+        "status": 200,
+        "bytes": 528249
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/rwe-fourth-quarter-md-usgs-regional.jpg",
+        "status": 200,
+        "bytes": 539090
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/rwe-fourth-quarter-md-usgs-topo.jpg",
+        "status": 200,
+        "bytes": 273672
+      }
+    ],
+    "pages": [
+      {
+        "environment": "local",
+        "id": 16341,
+        "status": 200,
+        "bytes": 333913
+      },
+      {
+        "environment": "local",
+        "id": 16344,
+        "status": 200,
+        "bytes": 329728
+      },
+      {
+        "environment": "local",
+        "id": 16346,
+        "status": 200,
+        "bytes": 327509
+      },
+      {
+        "environment": "local",
+        "id": 16350,
+        "status": 200,
+        "bytes": 319993
+      },
+      {
+        "environment": "prod",
+        "id": 16341,
+        "status": 200,
+        "bytes": 290505
+      },
+      {
+        "environment": "prod",
+        "id": 16344,
+        "status": 200,
+        "bytes": 287132
+      },
+      {
+        "environment": "prod",
+        "id": 16346,
+        "status": 200,
+        "bytes": 285560
+      },
+      {
+        "environment": "prod",
+        "id": 16350,
+        "status": 200,
+        "bytes": 278067
+      }
+    ],
+    "actionsVerified": 24,
+    "telemetry": [
+      {},
+      {},
+      {
+        "energyCleared": true,
+        "datacenterAfter": {
+          "waterGallonsPerDay": null,
+          "waterBasis": null,
+          "chips": null,
+          "chipModel": null,
+          "h100Equivalents": null,
+          "acres": 436,
+          "sqft": null,
+          "buildings": null,
+          "generators": null,
+          "cooling": null,
+          "powerSource": "Operator plan: 300 MW grid via Dominion/CVEC and 700 MW behind-the-meter baseload",
+          "sourceUrl": "https://www.avaiodigital.com/developments/appomattox-virginia",
+          "note": "Current operator acreage replaces 452-acre historical acquisition scope. Removed capacity-scaled water estimate; power supply is not critical IT capacity.",
+          "checkedAt": "2026-10-23T14:44:38.975Z"
+        }
+      },
+      {
+        "energyCleared": true,
+        "datacenterAfter": {
+          "waterGallonsPerDay": null,
+          "waterBasis": null,
+          "chips": null,
+          "chipModel": null,
+          "h100Equivalents": null,
+          "acres": 156.23,
+          "sqft": 3000000,
+          "buildings": null,
+          "generators": null,
+          "cooling": "Closed-loop cooling required in city staff analysis",
+          "powerSource": null,
+          "sourceUrl": "https://www.charlottenc.gov/files/sharedassets/city/v/1/growth-and-development/planning-and-zoning/rezoning/documents/2024-petitions/final-staff-analysis/2024_144_fsa.pdf",
+          "note": "156.23-acre planning scope; up to 3M sqft is permitted scope. WFAE reports planned 35,000 gal/day; removed capacity-scaled estimate. Building count not inferred from two phases.",
+          "checkedAt": "2026-10-23T14:44:39.163Z"
+        }
+      },
+      {
+        "energyCleared": true,
+        "datacenterAfter": {
+          "waterGallonsPerDay": null,
+          "waterBasis": null,
+          "chips": null,
+          "chipModel": null,
+          "h100Equivalents": null,
+          "acres": null,
+          "sqft": null,
+          "buildings": null,
+          "generators": null,
+          "cooling": null,
+          "powerSource": "Ameren partnership described in Google Missouri announcement",
+          "sourceUrl": "https://storage.googleapis.com/gweb-uniblog-publish-prod/documents/Press_Release__Google_Deepens_Missouri_Roots.pdf",
+          "note": "No site IT load, acreage or daily water quantity established in opened primary announcement. Statewide generation commitments are not campus demand.",
+          "checkedAt": "2026-10-23T14:44:39.433Z"
+        }
+      },
+      {
+        "energyCleared": true,
+        "datacenterAfter": {
+          "waterGallonsPerDay": null,
+          "waterBasis": null,
+          "chips": null,
+          "chipModel": null,
+          "h100Equivalents": null,
+          "acres": null,
+          "sqft": null,
+          "buildings": null,
+          "generators": null,
+          "cooling": null,
+          "powerSource": "Up to 590 MW grid service (564 MW new generation plus 26 MW market/tariff energy) and about 2.1 GW third-party microgrid resources",
+          "sourceUrl": "https://ir.blackhillscorp.com/news-releases/news-release-details/black-hills-corp-executes-definitive-agreements-serve-googles",
+          "note": "Removed unverified acreage and capacity-scaled daily water estimate. Resource mix includes reserves; not a published critical IT load.",
+          "checkedAt": "2026-10-23T14:44:39.709Z"
+        }
+      },
+      {
+        "energyCleared": true,
+        "datacenterAfter": {
+          "waterGallonsPerDay": null,
+          "waterBasis": null,
+          "chips": null,
+          "chipModel": null,
+          "h100Equivalents": null,
+          "acres": 506,
+          "sqft": null,
+          "buildings": null,
+          "generators": null,
+          "cooling": "Developer-described closed-loop liquid cooling",
+          "powerSource": "Proposed fully islanded onsite natural-gas engines/turbines; no public-grid draw",
+          "sourceUrl": "https://www.prometheushyperscale.com/news/prometheus-hyperscale-secures-unanimous-conditional-use-permit-approval-from-uinta-county-commissioners",
+          "note": "Removed generic water estimate. June campus CUP differs from separate August power-site recommendation; final generation approval needs verification.",
+          "checkedAt": "2026-10-23T14:44:39.917Z"
+        }
+      },
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {
+        "energyCleared": true,
+        "datacenterAfter": {
+          "waterGallonsPerDay": null,
+          "waterBasis": null,
+          "chips": null,
+          "chipModel": null,
+          "h100Equivalents": null,
+          "acres": 436,
+          "sqft": null,
+          "buildings": null,
+          "generators": null,
+          "cooling": null,
+          "powerSource": "Operator plan: 300 MW grid via Dominion/CVEC and 700 MW behind-the-meter baseload",
+          "sourceUrl": "https://www.avaiodigital.com/developments/appomattox-virginia",
+          "note": "Current operator acreage replaces 452-acre historical acquisition scope. Removed capacity-scaled water estimate; power supply is not critical IT capacity.",
+          "checkedAt": "2026-10-23T14:46:04.137Z"
+        }
+      },
+      {
+        "energyCleared": true,
+        "datacenterAfter": {
+          "waterGallonsPerDay": null,
+          "waterBasis": null,
+          "chips": null,
+          "chipModel": null,
+          "h100Equivalents": null,
+          "acres": 156.23,
+          "sqft": 3000000,
+          "buildings": null,
+          "generators": null,
+          "cooling": "Closed-loop cooling required in city staff analysis",
+          "powerSource": null,
+          "sourceUrl": "https://www.charlottenc.gov/files/sharedassets/city/v/1/growth-and-development/planning-and-zoning/rezoning/documents/2024-petitions/final-staff-analysis/2024_144_fsa.pdf",
+          "note": "156.23-acre planning scope; up to 3M sqft is permitted scope. WFAE reports planned 35,000 gal/day; removed capacity-scaled estimate. Building count not inferred from two phases.",
+          "checkedAt": "2026-10-23T14:46:07.906Z"
+        }
+      },
+      {
+        "energyCleared": true,
+        "datacenterAfter": {
+          "waterGallonsPerDay": null,
+          "waterBasis": null,
+          "chips": null,
+          "chipModel": null,
+          "h100Equivalents": null,
+          "acres": null,
+          "sqft": null,
+          "buildings": null,
+          "generators": null,
+          "cooling": null,
+          "powerSource": "Ameren partnership described in Google Missouri announcement",
+          "sourceUrl": "https://storage.googleapis.com/gweb-uniblog-publish-prod/documents/Press_Release__Google_Deepens_Missouri_Roots.pdf",
+          "note": "No site IT load, acreage or daily water quantity established in opened primary announcement. Statewide generation commitments are not campus demand.",
+          "checkedAt": "2026-10-23T14:46:10.839Z"
+        }
+      },
+      {
+        "energyCleared": true,
+        "datacenterAfter": {
+          "waterGallonsPerDay": null,
+          "waterBasis": null,
+          "chips": null,
+          "chipModel": null,
+          "h100Equivalents": null,
+          "acres": null,
+          "sqft": null,
+          "buildings": null,
+          "generators": null,
+          "cooling": null,
+          "powerSource": "Up to 590 MW grid service (564 MW new generation plus 26 MW market/tariff energy) and about 2.1 GW third-party microgrid resources",
+          "sourceUrl": "https://ir.blackhillscorp.com/news-releases/news-release-details/black-hills-corp-executes-definitive-agreements-serve-googles",
+          "note": "Removed unverified acreage and capacity-scaled daily water estimate. Resource mix includes reserves; not a published critical IT load.",
+          "checkedAt": "2026-10-23T14:46:13.655Z"
+        }
+      },
+      {
+        "energyCleared": true,
+        "datacenterAfter": {
+          "waterGallonsPerDay": null,
+          "waterBasis": null,
+          "chips": null,
+          "chipModel": null,
+          "h100Equivalents": null,
+          "acres": 506,
+          "sqft": null,
+          "buildings": null,
+          "generators": null,
+          "cooling": "Developer-described closed-loop liquid cooling",
+          "powerSource": "Proposed fully islanded onsite natural-gas engines/turbines; no public-grid draw",
+          "sourceUrl": "https://www.prometheushyperscale.com/news/prometheus-hyperscale-secures-unanimous-conditional-use-permit-approval-from-uinta-county-commissioners",
+          "note": "Removed generic water estimate. June campus CUP differs from separate August power-site recommendation; final generation approval needs verification.",
+          "checkedAt": "2026-10-23T14:46:16.236Z"
+        }
+      },
+      {},
+      {},
+      {},
+      {},
+      {}
+    ]
+  },
+  "mediaEvidence": [
+    {
+      "key": "dc-avaio-appomattox-va",
+      "layer": "aerial",
+      "sourceUrl": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSImageryOnly/MapServer/export?bbox=-78.863595,37.364914,-78.833595,37.384914&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/backfill4-2026-10-23/dc-avaio-appomattox-va-aerial.jpg",
+      "bytes": 448319,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-backfill4-2026-10-23/dc-avaio-appomattox-va-aerial.jpg"
+    },
+    {
+      "key": "dc-avaio-appomattox-va",
+      "layer": "topo",
+      "sourceUrl": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSTopo/MapServer/export?bbox=-78.880595,37.352914,-78.816595,37.396914&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/backfill4-2026-10-23/dc-avaio-appomattox-va-topo.jpg",
+      "bytes": 509148,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-backfill4-2026-10-23/dc-avaio-appomattox-va-topo.jpg"
+    },
+    {
+      "key": "dc-avaio-appomattox-va",
+      "layer": "relief",
+      "sourceUrl": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSShadedReliefOnly/MapServer/export?bbox=-78.928595,37.324914,-78.768595,37.424914&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/backfill4-2026-10-23/dc-avaio-appomattox-va-relief.jpg",
+      "bytes": 181074,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-backfill4-2026-10-23/dc-avaio-appomattox-va-relief.jpg"
+    },
+    {
+      "key": "solar-cypress-steel-river-ar",
+      "layer": "operator-construction-aerial",
+      "sourceUrl": "https://cypresscreekenergy.com/wp-content/uploads/2026/07/Responsible-Development-SRA-1024x457.jpg",
+      "sourcePage": "https://cypresscreekenergy.com/steel-river-energy-center/",
+      "credit": "Cypress Creek Energy",
+      "caption": "Site vegetation and support posts during development; operator-identified Steel River aerial",
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-backfill4-2026-10-23/steel-river-operator-aerial.jpg",
+      "bytes": 109866
+    }
+  ],
+  "researchNotes": [
+    "Visually checked Beeline factsheet Q4 2028 timeline, Charlotte staff analysis map/scope and Doral issuer pipeline table (page 19).",
+    "Doral issuer pipeline labels MWp/MWh; Tennyson 374/800 and 2029, Vista Sands 1446 MWp and 2029–2030.",
+    "Existing Vista Sands pin 15889 uses PSC source URL; 16348 uses opened operator homepage. Duplicate consolidation remains unresolved.",
+    "Beeline operator subdomain redirects to generic homepage; downloaded operator factsheet is the supporting source.",
+    "Tennyson operator project-specific link returned HTTP 500; storage overview and issuer presentation used.",
+    "NextEra West Gardner overview subpage returned access-block page on follow-up; project homepage was opened and gives 217 MW solar/128 MW storage/$320M.",
+    "AVAIO exterior render URLs failed in web fetcher; operator point used for regenerated USGS context.",
+    "Steel River official construction aerial downloaded using plain curl, visually inspected and public Azure bytes verified."
+  ]
+}
