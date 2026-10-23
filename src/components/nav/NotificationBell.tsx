@@ -1097,9 +1097,9 @@ export function TradesHistoryFeed({ everyone, wide }: { everyone?: boolean; wide
       <Link key={tk} href={tickerHref(tk)} className={`relative rounded-md px-1.5 py-0.5 text-[11px] font-semibold hover:underline ${cls}`}>{tk}</Link>
     ));
   // Holdings with no ticker (bonds, T-bills, private companies), by name.
-  const assetChips = (assets: string[] | null) =>
+  const assetChips = (assets: string[] | null, side: 'buy' | 'sell') =>
     assets?.map((a) => (
-      <span key={a} title={a} className="rounded-md bg-raised px-1.5 py-0.5 text-[11px] font-medium text-muted">{a}</span>
+      <span key={a} title={`${side === 'buy' ? t('notifications.tradeBuys') : t('notifications.tradeSells')}: ${a}`} className={`max-w-full whitespace-nowrap rounded-md px-1.5 py-0.5 text-[11px] font-medium ring-1 ring-inset ${side === 'buy' ? 'bg-success/10 text-success-soft ring-success/30' : 'bg-danger/10 text-danger-soft ring-danger/30'}`}>{a}</span>
     ));
   return (
     <div className={wide ? 'flex flex-col gap-4 lg:grid lg:grid-cols-3 lg:items-start' : 'flex flex-col gap-4'}>
@@ -1182,18 +1182,18 @@ export function TradesHistoryFeed({ everyone, wide }: { everyone?: boolean; wide
                     </span>
                   )}
                   <span className="flex min-w-0 flex-1 flex-col gap-1.5">
-                    <Link href={`${personPath(n.personName ?? '')}#trades`} className="truncate font-semibold text-ink after:absolute after:inset-0">{n.personName}</Link>
-                    <span className="flex flex-wrap items-center gap-1">
-                      {chips(n.tradeBuyTickers, 'bg-success/15 text-success-soft')}
-                      {chips(n.tradeSellTickers, 'bg-danger/15 text-danger-soft')}
-                      {assetChips(n.tradeBuyAssets)}
-                      {assetChips(n.tradeSellAssets)}
+                    <span className="flex items-start justify-between gap-3">
+                      <Link href={`${personPath(n.personName ?? '')}#trades`} className="min-w-0 truncate font-semibold text-ink after:absolute after:inset-0">{n.personName}</Link>
+                      <span className="flex shrink-0 gap-1.5 text-xs font-semibold tabular-nums">
+                      {total(n.tradeBuyValues, n.tradeBuyOtherValue) ? <span className={`rounded-full px-2 py-0.5 ring-1 ring-inset ${tone.tradeBuys}`}>{money.format(total(n.tradeBuyValues, n.tradeBuyOtherValue))}</span> : null}
+                      {total(n.tradeSellValues, n.tradeSellOtherValue) ? <span className={`rounded-full px-2 py-0.5 ring-1 ring-inset ${tone.tradeSells}`}>{money.format(total(n.tradeSellValues, n.tradeSellOtherValue))}</span> : null}
+                      </span>
                     </span>
+                    {n.tradeBuyTickers?.length ? <span className="flex flex-wrap items-center gap-1">{chips(n.tradeBuyTickers, 'bg-success/15 text-success-soft')}</span> : null}
+                    {n.tradeBuyAssets?.length ? <span className="flex flex-wrap items-center gap-1">{assetChips(n.tradeBuyAssets, 'buy')}</span> : null}
+                    {n.tradeSellTickers?.length ? <span className="flex flex-wrap items-center gap-1">{chips(n.tradeSellTickers, 'bg-danger/15 text-danger-soft')}</span> : null}
+                    {n.tradeSellAssets?.length ? <span className="flex flex-wrap items-center gap-1">{assetChips(n.tradeSellAssets, 'sell')}</span> : null}
                     <ConflictBadge n={n} />
-                  </span>
-                  <span className="flex shrink-0 gap-1.5 text-xs font-semibold tabular-nums">
-                    {total(n.tradeBuyValues, n.tradeBuyOtherValue) ? <span className={`rounded-full px-2 py-0.5 ring-1 ring-inset ${tone.tradeBuys}`}>{money.format(total(n.tradeBuyValues, n.tradeBuyOtherValue))}</span> : null}
-                    {total(n.tradeSellValues, n.tradeSellOtherValue) ? <span className={`rounded-full px-2 py-0.5 ring-1 ring-inset ${tone.tradeSells}`}>{money.format(total(n.tradeSellValues, n.tradeSellOtherValue))}</span> : null}
                   </span>
                 </div>
               </li>

@@ -1,0 +1,3444 @@
+{
+  "checkedAt": "2026-10-23",
+  "scope": "Cleanview sourcing backfill batches 14–15",
+  "outcome": {
+    "audited": 24,
+    "corrected": 19,
+    "held": 5,
+    "environmentActions": 48,
+    "azureMedia": 60,
+    "nativePages": 38,
+    "replacementMaps": 27,
+    "conceptRenderings": 1,
+    "operatorSiteDiagrams": 2,
+    "calculatedEnergyRowsCleared": 6,
+    "unpublishedPricesCleared": 15,
+    "postedMapCounts": {
+      "local": 1425,
+      "prod": 1425
+    },
+    "deployment": false
+  },
+  "plan": {
+    "solar-rocky-run-portage-wi": {
+      "id": 16464,
+      "delete": true,
+      "researchFinding": "Three primary MISO solar requests (J2099, J2107, J2185) each show 399.04 MW at Rocky Run–Werner West, Portage, and February 15, 2028 negotiated dates. No evidence uniquely links this Doral-branded 399 MW pin to one request. The similarly named Dominion Rocky Run is in Virginia. Hold the unverified identity, not a claim that all three requests were cancelled.",
+      "sourcesChecked": [
+        "https://www.misoenergy.org/api/giqueue/getprojects",
+        "https://apps.psc.wi.gov/",
+        "https://www.dominionenergy.com/about/delivering-energy/solar-energy-projects/virginia-solar-projects/rocky-run"
+      ],
+      "gaps": [
+        "Three primary MISO solar requests (J2099, J2107, J2185) each show 399.04 MW at Rocky Run–Werner West, Portage, and February 15, 2028 negotiated dates. No evidence uniquely links this Doral-branded 399 MW pin to one request. The similarly named Dominion Rocky Run is in Virginia. Hold the unverified identity, not a claim that all three requests were cancelled."
+      ]
+    },
+    "battery-conastone-harford-md": {
+      "id": 16465,
+      "patch": {
+        "title": "Oystercatcher / Conastone Storage: 500 MW Proposal Not Selected in Maryland Round 1",
+        "description": "Maryland did not select Cardinal Energy Storage East’s 500 MW Oystercatcher proposal for the first storage award round on October 1, 2026. The six-hour proposal is near BGE’s Conastone substation in Harford County; a later round remains possible.",
+        "sourceUrl": "https://psc.maryland.gov/news/2026/maryland-public-service-commission-announces-first-round-energy-storage-awards/",
+        "references": [
+          {
+            "url": "https://psc.maryland.gov/news/2026/maryland-public-service-commission-announces-first-round-energy-storage-awards/",
+            "title": "Maryland Public Service Commission Announces First-Round Energy Storage Awards",
+            "confidence": 95,
+            "publishedDate": "2026-10-01"
+          },
+          {
+            "url": "https://psc.maryland.gov/news/2026/maryland-public-service-commission-invites-comments-on-next-generation-act-transmission-connected-energy-storage-proposals-round-1/",
+            "title": "Maryland PSC Invites Comments on Next Generation Act Transmission-Connected Energy Storage Proposals – Round 1",
+            "confidence": 95,
+            "publishedDate": null
+          },
+          {
+            "url": "https://www.pjm.com/pjmfiles/pub/planning/project-queues/TC2/PHASE_2/AH1-725/AH1-725_imp_PHASE_2.htm",
+            "title": "AH1-725 Phase II System Impact Study Report",
+            "confidence": 95,
+            "publishedDate": "2026-06-03"
+          }
+        ],
+        "longFormSummary": "<ul><li>The commission cited project ranking, cost-effectiveness and ratepayer impacts, and invited participation in Round 2. This was an award decision, not a construction approval or a finding that the project cannot proceed.<cite data-ref=\"https://psc.maryland.gov/news/2026/maryland-public-service-commission-announces-first-round-energy-storage-awards/\"></cite></li><li>The PSC identifies Cardinal Energy Storage East, LLC, lithium-ion technology, 500 MW and six hours. The old $420M budget and 2,000 MWh are removed. PJM prints an inconsistent 30,000 MWh alongside six hours; that figure is not adopted.<cite data-ref=\"https://psc.maryland.gov/news/2026/maryland-public-service-commission-invites-comments-on-next-generation-act-transmission-connected-energy-storage-proposals-round-1/\"></cite></li><li>Timeline: The event is the confirmed October 1, 2026 award decision; the former November 2028 COD has no verified support.<cite data-ref=\"https://psc.maryland.gov/news/2026/maryland-public-service-commission-announces-first-round-energy-storage-awards/\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "confirmed",
+        "allDay": true,
+        "allDayStated": false,
+        "utcStartDateTime": "2026-10-01T00:00:00.000Z",
+        "dateConfidenceReasoning": "The event is the confirmed October 1, 2026 award decision; the former November 2028 COD has no verified support.",
+        "company": "Cardinal Energy Storage East, LLC",
+        "companyWikiUrl": null,
+        "address": "Approximate location in northwestern Harford County, Maryland, near Conastone Substation"
+      },
+      "power": {
+        "megawatts": 500,
+        "kind": "storage",
+        "sourceUrl": "https://psc.maryland.gov/news/2026/maryland-public-service-commission-announces-first-round-energy-storage-awards/",
+        "note": "Sourced proposal/study scope; not measured output or evidence of operation. Maryland did not select Cardinal Energy Storage East’s 500 MW Oystercatcher proposal for the first storage award round on October 1, 2026. The six-hour proposal is near BGE’s Conastone subst"
+      },
+      "datacenter": null,
+      "clearEnergy": false,
+      "gaps": [
+        "Resolve PJM’s 30,000 MWh / six-hour inconsistency with the applicant; current site design and future award participation remain unverified.",
+        "Official source/gallery checked; no additional verified project photograph unless listed in media evidence. Exact commissioning status and parcel need follow-up where only a proposal or queue is cited."
+      ]
+    },
+    "battery-marysville-madison-oh": {
+      "id": 16466,
+      "patch": {
+        "title": "Oak Run Marysville–Flatlick Storage: Two 150 MW / 600 MWh Requests",
+        "description": "PJM’s June 2026 studies identify Oak Run Solar Project, LLC’s two storage requests, AG2-106 and AG2-107, at Marysville–Flatlick in Madison County, Ohio. Each specifies 150 MW of capacity rights and 600 MWh; 800 MW is the combined facility capability.",
+        "sourceUrl": "https://www.pjm.com/pjmfiles/pub/planning/project-queues/TC2/PHASE_2/AG2-106/AG2-106_imp_PHASE_2.htm",
+        "references": [
+          {
+            "url": "https://www.pjm.com/pjmfiles/pub/planning/project-queues/TC2/PHASE_2/AG2-106/AG2-106_imp_PHASE_2.htm",
+            "title": "AG2-106 Phase II System Impact Study Report",
+            "confidence": 95,
+            "publishedDate": "2026-06-03"
+          },
+          {
+            "url": "https://www.pjm.com/pjmfiles/pub/planning/project-queues/TC2/PHASE_2/AG2-107/AG2-107_imp_PHASE_2.htm",
+            "title": "AG2-107 Phase II System Impact Study Report",
+            "confidence": 95,
+            "publishedDate": "2026-06-03"
+          }
+        ],
+        "longFormSummary": "<ul><li>AG2-106 is a capacity-only addition to AG1-125/126; AG2-107 adds to those projects plus AG2-106. Both list zero incremental energy MW, 150 MW capacity and four-hour/600 MWh batteries. Combined storage scope is 300 MW / 1,200 MWh, not an 800 MW / 3,200 MWh standalone battery.<cite data-ref=\"https://www.pjm.com/pjmfiles/pub/planning/project-queues/TC2/PHASE_2/AG2-107/AG2-107_imp_PHASE_2.htm\"></cite></li><li>The studies establish proposed interconnection scope, not construction or a firm COD. The $680M estimate is removed.<cite data-ref=\"https://www.pjm.com/pjmfiles/pub/planning/project-queues/TC2/PHASE_2/AG2-106/AG2-106_imp_PHASE_2.htm\"></cite></li><li>Timeline: The pin marks publication of the June 3, 2026 studies. Their 2028 basecase is not a commissioning date; the former December 2029 COD is removed.<cite data-ref=\"https://www.pjm.com/pjmfiles/pub/planning/project-queues/TC2/PHASE_2/AG2-106/AG2-106_imp_PHASE_2.htm\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "confirmed",
+        "allDay": true,
+        "allDayStated": false,
+        "utcStartDateTime": "2026-06-03T00:00:00.000Z",
+        "dateConfidenceReasoning": "The pin marks publication of the June 3, 2026 studies. Their 2028 basecase is not a commissioning date; the former December 2029 COD is removed.",
+        "company": "Oak Run Solar Project, LLC",
+        "companyWikiUrl": null,
+        "address": "Approximate location in Madison County, Ohio; exact Oak Run storage parcel pending"
+      },
+      "power": {
+        "megawatts": 300,
+        "kind": "storage",
+        "sourceUrl": "https://www.pjm.com/pjmfiles/pub/planning/project-queues/TC2/PHASE_2/AG2-106/AG2-106_imp_PHASE_2.htm",
+        "note": "Sourced proposal/study scope; not measured output or evidence of operation. PJM’s June 2026 studies identify Oak Run Solar Project, LLC’s two storage requests, AG2-106 and AG2-107, at Marysville–Flatlick in Madison County, Ohio. Each specifies 150 MW of capacity rig"
+      },
+      "datacenter": null,
+      "clearEnergy": false,
+      "gaps": [
+        "Reconcile with any existing Oak Run campus pin before a future merge; current construction and commissioning schedule remain unverified.",
+        "Official source/gallery checked; no additional verified project photograph unless listed in media evidence. Exact commissioning status and parcel need follow-up where only a proposal or queue is cited."
+      ]
+    },
+    "battery-midas-clark-nv": {
+      "id": 16467,
+      "delete": true,
+      "researchFinding": "Midas Energy Storage appears as tracker-only CISO lead 55014_storage, but no opened developer or Nevada docket establishes this 518 MW Apex site, NV Energy ownership, 2,072 MWh or COD. No exact Midas match in the public CAISO workbook or August EIA generator file. Absence from those lists alone is not proof of cancellation.",
+      "sourcesChecked": [
+        "https://www.caiso.com/documents/publicqueuereport.xlsx",
+        "https://www.eia.gov/electricity/data/eia860m/xls/august_generator2026.xlsx",
+        "https://puc.nv.gov/Dockets/Detail_24/24-07015/"
+      ],
+      "gaps": [
+        "Midas Energy Storage appears as tracker-only CISO lead 55014_storage, but no opened developer or Nevada docket establishes this 518 MW Apex site, NV Energy ownership, 2,072 MWh or COD. No exact Midas match in the public CAISO workbook or August EIA generator file. Absence from those lists alone is not proof of cancellation."
+      ]
+    },
+    "battery-sherburne-meeker-mn": {
+      "id": 16468,
+      "patch": {
+        "title": "Sherburne CO Battery Request J4194: 500 MW in Meeker, Status Conflict",
+        "description": "MISO lists a 500 MW battery request J4194 in Meeker County at SHERBURNE CO, with December 31, 2028 in-service target. Its Active label conflicts with a June 11, 2026 withdrawnDate field; construction and developer ownership are unresolved.",
+        "sourceUrl": null,
+        "references": [
+          {
+            "url": "https://www.misoenergy.org/api/giqueue/getprojects",
+            "title": "MISO Generator Interconnection Queue — J4194",
+            "confidence": 95,
+            "publishedDate": null
+          }
+        ],
+        "longFormSummary": "<ul><li>Northern States Power is the listed transmission owner, not proof of project ownership. The source has contradictory status fields; the old Xcel-developer, 2,000 MWh and $430M claims are removed.<cite data-ref=\"https://www.misoenergy.org/api/giqueue/getprojects\"></cite></li><li>Timeline: December 31, 2028 is only MISO’s requested inService field. Active and withdrawnDate conflict; this is not a confirmed completion schedule.<cite data-ref=\"https://www.misoenergy.org/api/giqueue/getprojects\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "estimated",
+        "allDay": true,
+        "allDayStated": false,
+        "utcStartDateTime": "2028-12-31T00:00:00.000Z",
+        "dateConfidenceReasoning": "December 31, 2028 is only MISO’s requested inService field. Active and withdrawnDate conflict; this is not a confirmed completion schedule.",
+        "company": null,
+        "companyWikiUrl": null,
+        "address": "Approximate location in Meeker County, Minnesota; exact J4194 storage parcel pending",
+        "tags": [
+          "Battery Storage",
+          "Cleanview",
+          "MISO",
+          "Meeker County",
+          "Minnesota",
+          "Planned"
+        ]
+      },
+      "power": {
+        "megawatts": 500,
+        "kind": "storage",
+        "sourceUrl": "https://www.misoenergy.org/api/giqueue/getprojects",
+        "note": "Sourced proposal/study scope; not measured output or evidence of operation. MISO lists a 500 MW battery request J4194 in Meeker County at SHERBURNE CO, with December 31, 2028 in-service target. Its Active label conflicts with a June 11, 2026 withdrawnDate field; con"
+      },
+      "datacenter": null,
+      "clearEnergy": false,
+      "gaps": [
+        "MISO must clarify Active versus withdrawnDate 2026-06-11; applicant, MWh and exact Meeker parcel are unpublished in the opened record.",
+        "Official source/gallery checked; no additional verified project photograph unless listed in media evidence. Exact commissioning status and parcel need follow-up where only a proposal or queue is cited."
+      ]
+    },
+    "dc-ameresco-nas-lemoore-kings-ca": {
+      "id": 16469,
+      "patch": {
+        "title": "Ameresco / CyrusOne NAS Lemoore: 100 MW Data Center and Energy Plan",
+        "description": "Ameresco, CyrusOne and the U.S. Navy announced a 100 MW AI data-center and onsite-energy project at NAS Lemoore. The first portion is expected in 2027; agreements were still being finalized in the announcement.",
+        "sourceUrl": null,
+        "references": [
+          {
+            "url": "https://www.ameresco.com/portfolio-item/nas-lemoore-data-center-energy-project/",
+            "title": "NAS Lemoore Data Center Energy Project | Ameresco",
+            "confidence": 95,
+            "publishedDate": null
+          }
+        ],
+        "longFormSummary": "<ul><li>Onsite generation serves the data center; a separate base microgrid includes engine generators, controls and upgrades. The source does not identify 100 MW as critical IT capacity, publish a $750M cost, or confirm a PG&amp;E feed voltage.<cite data-ref=\"https://www.ameresco.com/portfolio-item/nas-lemoore-data-center-energy-project/\"></cite></li><li>Timeline: January 1 is a year-only placeholder for the first portion expected online in 2027; it does not mean full-campus commissioning on that date.<cite data-ref=\"https://www.ameresco.com/portfolio-item/nas-lemoore-data-center-energy-project/\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "estimated",
+        "allDay": true,
+        "allDayStated": false,
+        "utcStartDateTime": "2027-01-01T00:00:00.000Z",
+        "dateConfidenceReasoning": "January 1 is a year-only placeholder for the first portion expected online in 2027; it does not mean full-campus commissioning on that date.",
+        "company": "Ameresco / CyrusOne",
+        "companyWikiUrl": null,
+        "latitude": 36.313518,
+        "longitude": -119.923404,
+        "address": "NAS Lemoore, Kings County, California; base-level context point, not an identified data-center parcel",
+        "media": [
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-large4-2026-10-23/dc-ameresco-nas-lemoore-kings-ca-aerial.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 1000
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-large4-2026-10-23/dc-ameresco-nas-lemoore-kings-ca-topo.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 1000
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-large4-2026-10-23/dc-ameresco-nas-lemoore-kings-ca-relief.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 1000
+          }
+        ]
+      },
+      "power": {
+        "megawatts": 100,
+        "kind": "usage",
+        "sourceUrl": "https://www.ameresco.com/portfolio-item/nas-lemoore-data-center-energy-project/",
+        "note": "Sourced proposal/study scope; not measured output or evidence of operation. Ameresco, CyrusOne and the U.S. Navy announced a 100 MW AI data-center and onsite-energy project at NAS Lemoore. The first portion is expected in 2027; agreements were still being finalized"
+      },
+      "datacenter": null,
+      "clearEnergy": false,
+      "gaps": [
+        "Reconcile overlap with the previously corrected NAS Lemoore/Lyra-related records; project-specific footprint and current contract/construction milestones remain unverified.",
+        "Official source/gallery checked; no additional verified project photograph unless listed in media evidence. Exact commissioning status and parcel need follow-up where only a proposal or queue is cited.",
+        "Save API identified existing NAS Lemoore pin 16301 citing this exact operator URL. SourceUrl cleared, exact URL retained in references; overlap queued for editorial merge rather than inventing a URL fragment."
+      ],
+      "mediaReplaced": true,
+      "mediaAdded": 0
+    },
+    "dc-jay-androscoggin-franklin-me": {
+      "id": 16470,
+      "patch": {
+        "title": "Jay Androscoggin Mill Data Center Plan Put on Hold After Sentinel Withdrawal",
+        "description": "Jay’s town manager said on June 11, 2026 that Sentinel did not intend to proceed with the Androscoggin Mill data-center proposal. JGT2 was talking to other parties; future plans were undetermined.",
+        "sourceUrl": "https://www.centralmaine.com/2026/06/11/plan-for-data-center-in-jay-suffers-setback-2-2/",
+        "references": [
+          {
+            "url": "https://www.centralmaine.com/2026/06/11/plan-for-data-center-in-jay-suffers-setback-2-2/",
+            "title": "Plan for $550M data center in Jay on hold, official says",
+            "confidence": 95,
+            "publishedDate": "2026-06-11"
+          }
+        ],
+        "longFormSummary": "<ul><li>The Sun Journal’s firsthand report attributes the status to the town manager and identifies the prior partnership as a $550M proposal. The former $650M construction claim, 82 MW IT rating, floor area and November 2027 opening are removed.<cite data-ref=\"https://www.centralmaine.com/2026/06/11/plan-for-data-center-in-jay-suffers-setback-2-2/\"></cite></li><li>Timeline: The pin marks the town manager’s June 11, 2026 statement that the proposal was on hold, not an opening date.<cite data-ref=\"https://www.centralmaine.com/2026/06/11/plan-for-data-center-in-jay-suffers-setback-2-2/\"></cite></li></ul>",
+        "price": 550000000,
+        "priceCurrency": "USD",
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "confirmed",
+        "allDay": true,
+        "allDayStated": false,
+        "utcStartDateTime": "2026-06-11T00:00:00.000Z",
+        "dateConfidenceReasoning": "The pin marks the town manager’s June 11, 2026 statement that the proposal was on hold, not an opening date.",
+        "company": "JGT2 Redevelopment",
+        "companyWikiUrl": null,
+        "latitude": 44.504958,
+        "longitude": -70.238549,
+        "address": "Former Androscoggin Mill, Riley Road, Jay, Maine; approximate mill-site context",
+        "tags": [
+          "Central Maine Power",
+          "Cleanview",
+          "Data Center",
+          "Franklin County",
+          "ISO-NE",
+          "Maine",
+          "On hold"
+        ],
+        "media": [
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-large4-2026-10-23/dc-jay-androscoggin-franklin-me-aerial.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 1000
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-large4-2026-10-23/dc-jay-androscoggin-franklin-me-topo.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 1000
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-large4-2026-10-23/dc-jay-androscoggin-franklin-me-relief.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 1000
+          }
+        ]
+      },
+      "power": "delete",
+      "datacenter": null,
+      "clearEnergy": false,
+      "gaps": [
+        "The $550M is the reported historical proposal value, not committed expenditure. A replacement operator, renewed project and current power rating are unverified.",
+        "Official source/gallery checked; no additional verified project photograph unless listed in media evidence. Exact commissioning status and parcel need follow-up where only a proposal or queue is cited."
+      ],
+      "mediaReplaced": true,
+      "mediaAdded": 0
+    },
+    "dc-pnj-middlesex-nj": {
+      "id": 16471,
+      "patch": {
+        "title": "Chirisa Piscataway PNJ-01/02: 90 MW Utility Plan; 2027 Delivery",
+        "description": "Chirisa lists a 20-acre Piscataway campus with 90 MW of power by mid-2026 and PNJ-01/02 reserved for 2027 delivery. The utility-power plan does not establish 90 MW of IT capacity or energized service.",
+        "sourceUrl": null,
+        "references": [
+          {
+            "url": "https://chirisatechnologyparks.com/",
+            "title": "Chirisa Technology Parks — Piscataway PNJ-01 / -02",
+            "confidence": 95,
+            "publishedDate": null
+          }
+        ],
+        "longFormSummary": "<ul><li>The operator describes reuse of an existing building shell and an adjacent two-story greenfield development. It does not publish 450,000 sqft, a $750M site cost, daily water consumption or the stated grid voltages.<cite data-ref=\"https://chirisatechnologyparks.com/\"></cite></li><li>Timeline: January 1 is a year-only placeholder for reserved 2027 delivery; mid-2026 power availability is a separate milestone.<cite data-ref=\"https://chirisatechnologyparks.com/\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "estimated",
+        "allDay": true,
+        "allDayStated": false,
+        "utcStartDateTime": "2027-01-01T00:00:00.000Z",
+        "dateConfidenceReasoning": "January 1 is a year-only placeholder for reserved 2027 delivery; mid-2026 power availability is a separate milestone.",
+        "company": "Chirisa Technology Parks",
+        "companyWikiUrl": null,
+        "address": "Approximate location in Piscataway, Middlesex County, New Jersey; exact PNJ parcel pending",
+        "tags": [
+          "Cleanview",
+          "Data Center",
+          "Middlesex County",
+          "New Jersey",
+          "PJM",
+          "Planned"
+        ]
+      },
+      "power": {
+        "megawatts": 90,
+        "kind": "usage",
+        "sourceUrl": "https://chirisatechnologyparks.com/",
+        "note": "Sourced proposal/study scope; not measured output or evidence of operation. Chirisa lists a 20-acre Piscataway campus with 90 MW of power by mid-2026 and PNJ-01/02 reserved for 2027 delivery. The utility-power plan does not establish 90 MW of IT capacity or energize"
+      },
+      "datacenter": {
+        "acres": 20,
+        "sourceUrl": "https://chirisatechnologyparks.com/",
+        "note": "Operator’s 20-acre campus; 90 MW utility-power plan. Floor area, water and cooling are not established."
+      },
+      "clearEnergy": true,
+      "gaps": [
+        "Overlaps the Piscataway campus corrected in batches 5–7. Source URL left null and exact operator URL retained in references; no record merge performed. Exact parcel and current energized power need verification.",
+        "Official source/gallery checked; no additional verified project photograph unless listed in media evidence. Exact commissioning status and parcel need follow-up where only a proposal or queue is cited."
+      ]
+    },
+    "dc-prologis-zanker-bldg4-santa-clara-ca": {
+      "id": 16472,
+      "patch": {
+        "title": "Prologis STEM Park Building D Concept: 99 MW Utility / 72 MW IT",
+        "description": "San José’s October 2025 staff memorandum includes Prologis’s conceptual Building D: a phase-two, two-story 421,100 sqft data center with 99 MW utility power and 72 MW IT load. It is a concept at the Zanker Road / Highway 237 campus, not an operating building.",
+        "sourceUrl": "https://sanjose.legistar.com/View.ashx?M=F&ID=14917877&GUID=45941F3A-0A60-42A1-8F04-B09281C6E2F3",
+        "references": [
+          {
+            "url": "https://sanjose.legistar.com/View.ashx?M=F&ID=14917877&GUID=45941F3A-0A60-42A1-8F04-B09281C6E2F3",
+            "title": "25-1212 Memorandum — Attachment A: Prologis Conceptual Site Development Plan",
+            "confidence": 95,
+            "publishedDate": "2025-10-27"
+          }
+        ],
+        "longFormSummary": "<ul><li>Attachment A names the four data centers A–D. This pin is recast around documented Building D rather than treating the tracker label “Building 4” as an approved address. The overall campus concept is 396 MW utility power plus separate manufacturing space.<cite data-ref=\"https://sanjose.legistar.com/View.ashx?M=F&amp;ID=14917877&amp;GUID=45941F3A-0A60-42A1-8F04-B09281C6E2F3\"></cite></li><li>The memorandum concerns selecting a developer and negotiating a development agreement. It does not establish a Building D permit, June 2028 opening or $800M budget. The initial 250 MW PG&amp;E supply plan is campus-wide.<cite data-ref=\"https://sanjose.legistar.com/View.ashx?M=F&amp;ID=14917877&amp;GUID=45941F3A-0A60-42A1-8F04-B09281C6E2F3\"></cite></li><li>Timeline: The event is the October 27, 2025 staff memorandum and its concept plan. No Building D commissioning date is established.<cite data-ref=\"https://sanjose.legistar.com/View.ashx?M=F&amp;ID=14917877&amp;GUID=45941F3A-0A60-42A1-8F04-B09281C6E2F3\"></cite></li><li>Prologis STEM Park conceptual site-development plan from Attachment A, showing Buildings A–D and separate manufacturing; not construction evidence. Credit: Prologis / City of San José, October 2025 memorandum Attachment A.<cite data-ref=\"https://sanjose.legistar.com/View.ashx?M=F&amp;ID=14917877&amp;GUID=45941F3A-0A60-42A1-8F04-B09281C6E2F3\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "confirmed",
+        "allDay": true,
+        "allDayStated": false,
+        "utcStartDateTime": "2025-10-27T00:00:00.000Z",
+        "dateConfidenceReasoning": "The event is the October 27, 2025 staff memorandum and its concept plan. No Building D commissioning date is established.",
+        "company": "Prologis",
+        "companyWikiUrl": "https://en.wikipedia.org/wiki/Prologis",
+        "latitude": 37.423,
+        "longitude": -121.943,
+        "address": "Zanker Road near Highway 237, San José, California; approximate STEM Park campus context, not surveyed Building D coordinates",
+        "media": [
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-large4-2026-10-23/dc-prologis-zanker-bldg4-santa-clara-ca-aerial.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 1000
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-large4-2026-10-23/dc-prologis-zanker-bldg4-santa-clara-ca-topo.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 1000
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-large4-2026-10-23/dc-prologis-zanker-bldg4-santa-clara-ca-relief.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 1000
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-large4-2026-10-23/prologis-embedded-0.jpg",
+            "originalWidth": 1408,
+            "originalHeight": 1088
+          }
+        ]
+      },
+      "power": {
+        "megawatts": 99,
+        "kind": "usage",
+        "sourceUrl": "https://sanjose.legistar.com/View.ashx?M=F&ID=14917877&GUID=45941F3A-0A60-42A1-8F04-B09281C6E2F3",
+        "note": "Sourced proposal/study scope; not measured output or evidence of operation. San José’s October 2025 staff memorandum includes Prologis’s conceptual Building D: a phase-two, two-story 421,100 sqft data center with 99 MW utility power and 72 MW IT load. It is a concep"
+      },
+      "datacenter": {
+        "sqft": 421100,
+        "buildings": 1,
+        "powerSource": "Proposed PG&E supply; initial 250 MW plan is campus-wide",
+        "sourceUrl": "https://sanjose.legistar.com/View.ashx?M=F&ID=14917877&GUID=45941F3A-0A60-42A1-8F04-B09281C6E2F3",
+        "note": "Conceptual Building D: 99 MW utility power, 72 MW IT; phase 2. No verified water, cooling or commissioned equipment."
+      },
+      "clearEnergy": true,
+      "gaps": [
+        "Validate later agreements and entitlements; the legacy numerical building label is not an operator address. Building D is supported only as a phase-two concept in Attachment A.",
+        "Official source/gallery checked; no additional verified project photograph unless listed in media evidence. Exact commissioning status and parcel need follow-up where only a proposal or queue is cited.",
+        "Attachment A summary gives 421,100 sqft per building, while individual building labels round to 421,000 sqft; telemetry uses the summary figure.",
+        "The API restores Prologis’s company wiki link when saving its exact company name; the matching existing company link is retained."
+      ],
+      "mediaReplaced": true,
+      "mediaAdded": 1
+    },
+    "solar-clover-rawlings-charlotte-va": {
+      "id": 16473,
+      "patch": {
+        "title": "Clover–Rawlings AG2-077: 200 MW Solar Uprate to 700 MW Combined",
+        "description": "PJM’s June 2026 study identifies Dominion’s AG2-077 as a 200 MW solar addition in Charlotte County sharing AF2-042’s interconnection. Combined capability is 700 MW; the incremental request is 200 MW.",
+        "sourceUrl": "https://www.pjm.com/pjmfiles/pub/planning/project-queues/TC2/PHASE_2/AG2-077/AG2-077_imp_PHASE_2.htm",
+        "references": [
+          {
+            "url": "https://www.pjm.com/pjmfiles/pub/planning/project-queues/TC2/PHASE_2/AG2-077/AG2-077_imp_PHASE_2.htm",
+            "title": "AG2-077 Phase II System Impact Study Report",
+            "confidence": 95,
+            "publishedDate": "2026-06-03"
+          }
+        ],
+        "longFormSummary": "<ul><li>The study distinguishes 200 MW energy and 120 MW capacity uprate from 700 MW total facility capability and 420 MW total capacity. It does not substantiate the former $840M cost, 5,500 acres or construction claim.<cite data-ref=\"https://www.pjm.com/pjmfiles/pub/planning/project-queues/TC2/PHASE_2/AG2-077/AG2-077_imp_PHASE_2.htm\"></cite></li><li>Timeline: The pin marks the June 3, 2026 study publication. The 2028 basecase and network-upgrade dates do not establish a project COD.<cite data-ref=\"https://www.pjm.com/pjmfiles/pub/planning/project-queues/TC2/PHASE_2/AG2-077/AG2-077_imp_PHASE_2.htm\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "confirmed",
+        "allDay": true,
+        "allDayStated": false,
+        "utcStartDateTime": "2026-06-03T00:00:00.000Z",
+        "dateConfidenceReasoning": "The pin marks the June 3, 2026 study publication. The 2028 basecase and network-upgrade dates do not establish a project COD.",
+        "company": "Virginia Electric and Power Company (Dominion Energy Virginia)",
+        "companyWikiUrl": null,
+        "address": "Approximate location in Charlotte County, Virginia; AG2-077 shares AF2-042 interconnection"
+      },
+      "power": {
+        "megawatts": 200,
+        "kind": "generation",
+        "sourceUrl": "https://www.pjm.com/pjmfiles/pub/planning/project-queues/TC2/PHASE_2/AG2-077/AG2-077_imp_PHASE_2.htm",
+        "note": "Sourced proposal/study scope; not measured output or evidence of operation. PJM’s June 2026 study identifies Dominion’s AG2-077 as a 200 MW solar addition in Charlotte County sharing AF2-042’s interconnection. Combined capability is 700 MW; the incremental request i"
+      },
+      "datacenter": null,
+      "clearEnergy": false,
+      "gaps": [
+        "The earlier AF2-042 study uses Halifax County; this uprate study uses Charlotte County. Exact combined site boundary and independent commercial project name need reconciliation.",
+        "Official source/gallery checked; no additional verified project photograph unless listed in media evidence. Exact commissioning status and parcel need follow-up where only a proposal or queue is cited."
+      ]
+    },
+    "solar-monte-cristo-1-esmeralda-nv": {
+      "id": 16474,
+      "delete": true,
+      "researchFinding": "Indexed BLM material suggests a Monte Cristo application (NVNV105864011), but the old direct PDF URL now returns registry HTML, and no opened project-specific document uniquely establishes this 523 MW Phase 1, its site or claimed dates. No exact match in the valid same-day public CAISO queue or August EIA workbook. Do not substitute the unrelated Texas wind project or Nevada lithium mine solar field.",
+      "sourcesChecked": [
+        "https://www.caiso.com/documents/publicqueuereport.xlsx",
+        "https://eplanning.blm.gov/eplanning-ui/project/2026842/510",
+        "https://eplanning.blm.gov/public_projects/2022371/200538533/20125356/251025336/Solar%20PEIS%20ROD_Vol%201_Final%2012.19.2024.pdf"
+      ],
+      "gaps": [
+        "Indexed BLM material suggests a Monte Cristo application (NVNV105864011), but the old direct PDF URL now returns registry HTML, and no opened project-specific document uniquely establishes this 523 MW Phase 1, its site or claimed dates. No exact match in the valid same-day public CAISO queue or August EIA workbook. Do not substitute the unrelated Texas wind project or Nevada lithium mine solar field."
+      ]
+    },
+    "solar-sandy-bayou-mississippi-ar": {
+      "id": 16475,
+      "patch": {
+        "title": "Sandy Bayou Solar Request J2696: 500 MW, April 2027 Queue Target",
+        "description": "MISO lists J2696 as a 500 MW solar request at Sandy Bayou in Mississippi County, Arkansas, with April 15, 2027 requested in-service date and Phase 2 study status. The record does not establish developer ownership or construction.",
+        "sourceUrl": null,
+        "references": [
+          {
+            "url": "https://www.misoenergy.org/api/giqueue/getprojects",
+            "title": "MISO Generator Interconnection Queue — J2696",
+            "confidence": 95,
+            "publishedDate": null
+          },
+          {
+            "url": "https://adeq.state.ar.us/home/pdssql/p_facil_details.aspx?AFIN=4701081",
+            "title": "Arkansas DEQ — Entergy Arkansas / Sandy Bayou Substation, AFIN 47-01081",
+            "confidence": 95,
+            "publishedDate": null
+          }
+        ],
+        "longFormSummary": "<ul><li>J2696 is distinct from the 440 MW J1858 request at the same POI; capacities are not added. Entergy Arkansas is the transmission owner, not verified developer. The old $600M and acreage are removed.<cite data-ref=\"https://www.misoenergy.org/api/giqueue/getprojects\"></cite></li><li>Timeline: April 15, 2027 is MISO’s inService target, not confirmed COD. Phase 2 / Not Started does not establish construction.<cite data-ref=\"https://www.misoenergy.org/api/giqueue/getprojects\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "estimated",
+        "allDay": true,
+        "allDayStated": false,
+        "utcStartDateTime": "2027-04-15T00:00:00.000Z",
+        "dateConfidenceReasoning": "April 15, 2027 is MISO’s inService target, not confirmed COD. Phase 2 / Not Started does not establish construction.",
+        "company": null,
+        "companyWikiUrl": null,
+        "latitude": 35.613312,
+        "longitude": -89.961249,
+        "address": "Sandy Bayou substation, Osceola, Arkansas; POI context from Arkansas DEQ, not the solar parcel",
+        "media": [
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-large4-2026-10-23/solar-sandy-bayou-mississippi-ar-aerial.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 1000
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-large4-2026-10-23/solar-sandy-bayou-mississippi-ar-topo.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 1000
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-large4-2026-10-23/solar-sandy-bayou-mississippi-ar-relief.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 1000
+          }
+        ]
+      },
+      "power": {
+        "megawatts": 500,
+        "kind": "generation",
+        "sourceUrl": "https://www.misoenergy.org/api/giqueue/getprojects",
+        "note": "Sourced proposal/study scope; not measured output or evidence of operation. MISO lists J2696 as a 500 MW solar request at Sandy Bayou in Mississippi County, Arkansas, with April 15, 2027 requested in-service date and Phase 2 study status. The record does not establi"
+      },
+      "datacenter": null,
+      "clearEnergy": false,
+      "gaps": [
+        "Exact solar parcel, applicant and current project schedule need confirmation. Substation location is contextual only.",
+        "Official source/gallery checked; no additional verified project photograph unless listed in media evidence. Exact commissioning status and parcel need follow-up where only a proposal or queue is cited."
+      ],
+      "mediaReplaced": true,
+      "mediaAdded": 0
+    },
+    "solar-smalling-richland-la": {
+      "id": 16476,
+      "patch": {
+        "title": "Smalling Solar Request J2519: 600 MW, October 2026 Queue Target",
+        "description": "MISO lists a 600 MW solar request J2519 at Smalling in Richland Parish, Louisiana, with October 31, 2026 inService date, Phase 2 study and Not Started post-GIA status. This is a queue target, not proof of imminent operation.",
+        "sourceUrl": null,
+        "references": [
+          {
+            "url": "https://www.misoenergy.org/api/giqueue/getprojects",
+            "title": "MISO Generator Interconnection Queue — J2519",
+            "confidence": 95,
+            "publishedDate": null
+          }
+        ],
+        "longFormSummary": "<ul><li>The source does not establish the old Entergy Louisiana developer attribution, $720M, acreage or voltage. It lists Entergy Mississippi as transmission owner despite a Louisiana location; this anomaly is retained as a research gap.<cite data-ref=\"https://www.misoenergy.org/api/giqueue/getprojects\"></cite></li><li>Timeline: October 31, 2026 is the queue’s requested inService date. It remains unconfirmed and may be stale given the Phase 2 / Not Started fields.<cite data-ref=\"https://www.misoenergy.org/api/giqueue/getprojects\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "estimated",
+        "allDay": true,
+        "allDayStated": false,
+        "utcStartDateTime": "2026-10-31T00:00:00.000Z",
+        "dateConfidenceReasoning": "October 31, 2026 is the queue’s requested inService date. It remains unconfirmed and may be stale given the Phase 2 / Not Started fields.",
+        "company": null,
+        "companyWikiUrl": null,
+        "address": "Approximate location in Richland Parish, Louisiana; exact J2519 solar parcel pending"
+      },
+      "power": {
+        "megawatts": 600,
+        "kind": "generation",
+        "sourceUrl": "https://www.misoenergy.org/api/giqueue/getprojects",
+        "note": "Sourced proposal/study scope; not measured output or evidence of operation. MISO lists a 600 MW solar request J2519 at Smalling in Richland Parish, Louisiana, with October 31, 2026 inService date, Phase 2 study and Not Started post-GIA status. This is a queue target"
+      },
+      "datacenter": null,
+      "clearEnergy": false,
+      "gaps": [
+        "Verify actual schedule, applicant, exact Richland parcel and anomalous transmission-owner field; no inference of commercial service.",
+        "Official source/gallery checked; no additional verified project photograph unless listed in media evidence. Exact commissioning status and parcel need follow-up where only a proposal or queue is cited."
+      ]
+    },
+    "battery-clinton-clinton-mo": {
+      "id": 16477,
+      "patch": {
+        "title": "Stillwell–Clinton Battery Request GEN-2025-SR1: 400 MW Surplus Service",
+        "description": "SPP lists a 400 MW battery surplus-service request on the Stillwell–Clinton 161 kV line, targeting March 7, 2027. The study shares an existing solar interconnection’s 400 MW export limit; it does not establish a standalone Clinton County project.",
+        "sourceUrl": null,
+        "references": [
+          {
+            "url": "https://opsportal.spp.org/Studies/GIActive",
+            "title": "SPP Generator Interconnection Active Request Listing — GEN-2025-SR1",
+            "confidence": 95,
+            "publishedDate": null
+          },
+          {
+            "url": "https://opsportal.spp.org/documents/studies/files/2025_Generation_Studies/REP2253_SPP_Surplus_Interconnection_Service_Impact_Study_GEN-2025-SR1_TechnicalReport_r1.pdf",
+            "title": "Surplus Impact Study GEN-2025-SR1 — Technical Report REP-2253",
+            "confidence": 95,
+            "publishedDate": null
+          }
+        ],
+        "longFormSummary": "<ul><li>The study reports 475 MW DC / 418 MW AC equipment for the battery, with 400 MW surplus interconnection service. Combined solar-plus-battery injection may not exceed 400 MW. Queue status is IA FULLY EXECUTED/ON SCHEDULE; that is not confirmation of construction.<cite data-ref=\"https://opsportal.spp.org/documents/studies/files/2025_Generation_Studies/REP2253_SPP_Surplus_Interconnection_Service_Impact_Study_GEN-2025-SR1_TechnicalReport_r1.pdf\"></cite></li><li>SPP’s location field says Clinton, Missouri and is not sufficient to label it Clinton County. The former county point, $350M, 1,600 MWh and Evergy ownership are removed.<cite data-ref=\"https://opsportal.spp.org/Studies/GIActive\"></cite></li><li>Timeline: March 7, 2027 is SPP’s proposed COD; no actual commissioning is established.<cite data-ref=\"https://opsportal.spp.org/Studies/GIActive\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "estimated",
+        "allDay": true,
+        "allDayStated": false,
+        "utcStartDateTime": "2027-03-07T00:00:00.000Z",
+        "dateConfidenceReasoning": "March 7, 2027 is SPP’s proposed COD; no actual commissioning is established.",
+        "company": null,
+        "companyWikiUrl": null,
+        "latitude": 38.368633,
+        "longitude": -93.778269,
+        "address": "Clinton, Henry County, Missouri; city-level context for Stillwell–Clinton POI, exact battery parcel unverified",
+        "tags": [
+          "Battery Storage",
+          "Cleanview",
+          "Henry County",
+          "Missouri",
+          "Planned",
+          "SPP"
+        ],
+        "media": [
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-large4-2026-10-23/battery-clinton-clinton-mo-aerial.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 1000
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-large4-2026-10-23/battery-clinton-clinton-mo-topo.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 1000
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-large4-2026-10-23/battery-clinton-clinton-mo-relief.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 1000
+          }
+        ]
+      },
+      "power": {
+        "megawatts": 400,
+        "kind": "storage",
+        "sourceUrl": "https://opsportal.spp.org/Studies/GIActive",
+        "note": "Sourced proposal/study scope; not measured output or evidence of operation. SPP lists a 400 MW battery surplus-service request on the Stillwell–Clinton 161 kV line, targeting March 7, 2027. The study shares an existing solar interconnection’s 400 MW export limit; it"
+      },
+      "datacenter": null,
+      "clearEnergy": false,
+      "gaps": [
+        "Confirm parcel/county from applicant filing; the queue location can be a town. Identify developer and MWh separately from utility and equipment MW.",
+        "Official source/gallery checked; no additional verified project photograph unless listed in media evidence. Exact commissioning status and parcel need follow-up where only a proposal or queue is cited."
+      ],
+      "mediaReplaced": true,
+      "mediaAdded": 0
+    },
+    "battery-heritage-wake-brunswick-va": {
+      "id": 16478,
+      "patch": {
+        "title": "Heritage–Wake AG2-571: 100 MW / 400 MWh Storage Addition",
+        "description": "PJM identifies Zeus storage, LLC’s AG2-571 in Brunswick County as a 100 MW / 400 MWh addition to the 400 MW solar request AG2-570. The 500 MW figure is combined facility capability.",
+        "sourceUrl": "https://www.pjm.com/pjmfiles/pub/planning/project-queues/TC2/PHASE_2/AG2-571/AG2-571_imp_PHASE_2.htm",
+        "references": [
+          {
+            "url": "https://www.pjm.com/pjmfiles/pub/planning/project-queues/TC2/PHASE_2/AG2-571/AG2-571_imp_PHASE_2.htm",
+            "title": "AG2-571 Phase II System Impact Study Report",
+            "confidence": 95,
+            "publishedDate": "2026-06-03"
+          }
+        ],
+        "longFormSummary": "<ul><li>The battery request adds 100 MW energy and 40 MW capacity; combined capability is 500 MW with 140 MW capacity. It is a four-hour/400 MWh proposal. The prior 500 MW standalone storage, 2,000 MWh, Dominion developer and $425M claims are removed.<cite data-ref=\"https://www.pjm.com/pjmfiles/pub/planning/project-queues/TC2/PHASE_2/AG2-571/AG2-571_imp_PHASE_2.htm\"></cite></li><li>Timeline: The pin marks the June 3, 2026 study release. Neither its 2028 basecase nor a transmission-upgrade date is an established COD.<cite data-ref=\"https://www.pjm.com/pjmfiles/pub/planning/project-queues/TC2/PHASE_2/AG2-571/AG2-571_imp_PHASE_2.htm\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "confirmed",
+        "allDay": true,
+        "allDayStated": false,
+        "utcStartDateTime": "2026-06-03T00:00:00.000Z",
+        "dateConfidenceReasoning": "The pin marks the June 3, 2026 study release. Neither its 2028 basecase nor a transmission-upgrade date is an established COD.",
+        "company": "Zeus storage, LLC",
+        "companyWikiUrl": null,
+        "address": "Approximate location in Brunswick County, Virginia; exact AG2-571 storage parcel pending"
+      },
+      "power": {
+        "megawatts": 100,
+        "kind": "storage",
+        "sourceUrl": "https://www.pjm.com/pjmfiles/pub/planning/project-queues/TC2/PHASE_2/AG2-571/AG2-571_imp_PHASE_2.htm",
+        "note": "Sourced proposal/study scope; not measured output or evidence of operation. PJM identifies Zeus storage, LLC’s AG2-571 in Brunswick County as a 100 MW / 400 MWh addition to the 400 MW solar request AG2-570. The 500 MW figure is combined facility capability."
+      },
+      "datacenter": null,
+      "clearEnergy": false,
+      "gaps": [
+        "Applicant site map, current status and commissioning date remain unverified.",
+        "Official source/gallery checked; no additional verified project photograph unless listed in media evidence. Exact commissioning status and parcel need follow-up where only a proposal or queue is cited."
+      ]
+    },
+    "battery-jupiter-middlesex-ma": {
+      "id": 16479,
+      "patch": {
+        "title": "Jupiter Mystic QP1143: 500 MW / 2,000 MWh Study Approval",
+        "description": "ISO New England’s August 29, 2023 letter identifies Jupiter’s QP1143 Singleton battery proposal at Mystic as 500 MW / 2,000 MWh and records no significant adverse effect under its review. This historical study is not evidence the plant is operating.",
+        "sourceUrl": "https://www.iso-ne.com/static-assets/documents/2023/08/qp_1143_i_3_9_letter_jup_23_g02_t02_es_23_t56.pdf",
+        "references": [
+          {
+            "url": "https://www.iso-ne.com/static-assets/documents/2023/08/qp_1143_i_3_9_letter_jup_23_g02_t02_es_23_t56.pdf",
+            "title": "Queue Position 1143 (QP 1143) 500 MW Singleton BESS Project — Proposed Plan Applications",
+            "confidence": 95,
+            "publishedDate": "2023-08-29"
+          }
+        ],
+        "longFormSummary": "<ul><li>The letter’s May 31, 2026 projected in-service date is now past. A current 508 MW tracker value, December 2028 COD and $450M budget are unverified. The separately documented 700 MW Trimount facility is not automatically substituted without an explicit queue-ID link.<cite data-ref=\"https://www.iso-ne.com/static-assets/documents/2023/08/qp_1143_i_3_9_letter_jup_23_g02_t02_es_23_t56.pdf\"></cite></li><li>Timeline: The confirmed event is the August 29, 2023 ISO review letter. Its projected May 2026 service date is historical and not an actual opening.<cite data-ref=\"https://www.iso-ne.com/static-assets/documents/2023/08/qp_1143_i_3_9_letter_jup_23_g02_t02_es_23_t56.pdf\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "confirmed",
+        "allDay": true,
+        "allDayStated": false,
+        "utcStartDateTime": "2023-08-29T00:00:00.000Z",
+        "dateConfidenceReasoning": "The confirmed event is the August 29, 2023 ISO review letter. Its projected May 2026 service date is historical and not an actual opening.",
+        "company": "Jupiter Power LLC",
+        "companyWikiUrl": null,
+        "latitude": 42.391871,
+        "longitude": -71.066378,
+        "address": "Mystic generating-station area, Everett/Boston, Massachusetts; approximate POI context, exact Singleton parcel unverified",
+        "tags": [
+          "Battery Storage",
+          "Cleanview",
+          "Eversource",
+          "ISO-NE",
+          "Massachusetts",
+          "Middlesex County",
+          "Planned"
+        ],
+        "media": [
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-large4-2026-10-23/battery-jupiter-middlesex-ma-aerial.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 1000
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-large4-2026-10-23/battery-jupiter-middlesex-ma-topo.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 1000
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-large4-2026-10-23/battery-jupiter-middlesex-ma-relief.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 1000
+          }
+        ]
+      },
+      "power": {
+        "megawatts": 500,
+        "kind": "storage",
+        "sourceUrl": "https://www.iso-ne.com/static-assets/documents/2023/08/qp_1143_i_3_9_letter_jup_23_g02_t02_es_23_t56.pdf",
+        "note": "Sourced proposal/study scope; not measured output or evidence of operation. ISO New England’s August 29, 2023 letter identifies Jupiter’s QP1143 Singleton battery proposal at Mystic as 500 MW / 2,000 MWh and records no significant adverse effect under its review. Th"
+      },
+      "datacenter": null,
+      "clearEnergy": false,
+      "gaps": [
+        "Refresh QP1143 status via ISO-NE IRTT, which redirects in automated fetches; reconcile any 508 MW revision and proposed Trimount identity with explicit primary evidence.",
+        "Official source/gallery checked; no additional verified project photograph unless listed in media evidence. Exact commissioning status and parcel need follow-up where only a proposal or queue is cited."
+      ],
+      "mediaReplaced": true,
+      "mediaAdded": 0
+    },
+    "battery-reed-meadow-clark-nv": {
+      "id": 16480,
+      "delete": true,
+      "researchFinding": "Reed Meadow appears as tracker lead 54870_storage but no opened primary Nevada filing or developer page ties a 566 MW / 2,264 MWh battery to Apex/Harry Allen. No exact match in the current public CAISO workbook or August EIA generator workbook. Queue absence is not itself evidence the project was cancelled.",
+      "sourcesChecked": [
+        "https://www.caiso.com/documents/publicqueuereport.xlsx",
+        "https://www.eia.gov/electricity/data/eia860m/xls/august_generator2026.xlsx",
+        "https://puc.nv.gov/Dockets/Detail_24-03014/"
+      ],
+      "gaps": [
+        "Reed Meadow appears as tracker lead 54870_storage but no opened primary Nevada filing or developer page ties a 566 MW / 2,264 MWh battery to Apex/Harry Allen. No exact match in the current public CAISO workbook or August EIA generator workbook. Queue absence is not itself evidence the project was cancelled."
+      ]
+    },
+    "dc-blox-grassmere-davidson-tn": {
+      "id": 16481,
+      "patch": {
+        "title": "DC BLOX Nashville Grassmere: 10 MW Proposal in Evaluation",
+        "description": "DC BLOX’s current Grassmere page describes one 69,200 sqft, 10 MW building and says construction begins upon approval. Its Nashville project remains in evaluation; the former 50 MW construction claim is removed.",
+        "sourceUrl": "https://www.dcblox.com/nashville-data-center/",
+        "references": [
+          {
+            "url": "https://www.dcblox.com/nashville-data-center/",
+            "title": "DC BLOX Nashville Data Center — Grassmere Business Park",
+            "confidence": 95,
+            "publishedDate": null
+          }
+        ],
+        "longFormSummary": "<ul><li>The operator describes a local data-network facility and closed-loop recirculating cooling. It does not publish a firm opening date, $280M project cost, Tier III certification or measured water use for this site.<cite data-ref=\"https://www.dcblox.com/nashville-data-center/\"></cite></li><li>Timeline: June 30, 2027 is retained only as an unverified legacy placeholder because the current operator page publishes no opening date. The project is in evaluation; do not treat this as a forecast.<cite data-ref=\"https://www.dcblox.com/nashville-data-center/\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "estimated",
+        "allDay": true,
+        "allDayStated": false,
+        "utcStartDateTime": "2027-06-30T00:00:00.000Z",
+        "dateConfidenceReasoning": "June 30, 2027 is retained only as an unverified legacy placeholder because the current operator page publishes no opening date. The project is in evaluation; do not treat this as a forecast.",
+        "company": "DC BLOX",
+        "companyWikiUrl": null,
+        "latitude": 36.086435,
+        "longitude": -86.749008,
+        "address": "648 Grassmere Park, Nashville, Tennessee; approximate address point",
+        "media": [
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-large4-2026-10-23/dc-blox-grassmere-davidson-tn-aerial.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 1000
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-large4-2026-10-23/dc-blox-grassmere-davidson-tn-topo.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 1000
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-large4-2026-10-23/dc-blox-grassmere-davidson-tn-relief.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 1000
+          }
+        ]
+      },
+      "power": {
+        "megawatts": 10,
+        "kind": "usage",
+        "sourceUrl": "https://www.dcblox.com/nashville-data-center/",
+        "note": "Sourced proposal/study scope; not measured output or evidence of operation. DC BLOX’s current Grassmere page describes one 69,200 sqft, 10 MW building and says construction begins upon approval. Its Nashville project remains in evaluation; the former 50 MW construct"
+      },
+      "datacenter": {
+        "sqft": 69200,
+        "buildings": 1,
+        "cooling": "Proposed closed-loop recirculating water cooling",
+        "sourceUrl": "https://www.dcblox.com/nashville-data-center/",
+        "note": "Current operator scope is a single 10 MW building; evaluation phase, construction contingent on approval. No verified daily water reading."
+      },
+      "clearEnergy": true,
+      "gaps": [
+        "Replace legacy COD only when a sourced milestone is available. Municipal moratorium, property acquisition and litigation outcomes need a dedicated current docket review.",
+        "Official source/gallery checked; no additional verified project photograph unless listed in media evidence. Exact commissioning status and parcel need follow-up where only a proposal or queue is cited."
+      ],
+      "mediaReplaced": true,
+      "mediaAdded": 0
+    },
+    "dc-pointone-lee-county-nc": {
+      "id": 16482,
+      "patch": {
+        "title": "PointOne / CyrusOne Lee County Phase One: 90 MW IT, $900M, Early 2028",
+        "description": "PointOne’s Lee County page specifies one 90 MW IT building for CyrusOne on a 430-acre site, a $900M first-phase investment, fall-2026 construction start and early-2028 operation target. Future campus phases depend on power upgrades.",
+        "sourceUrl": "https://www.pointonecorp.com/leecounty",
+        "references": [
+          {
+            "url": "https://www.pointonecorp.com/leecounty",
+            "title": "Lee County, N.C. — PointOne Data Centers",
+            "confidence": 95,
+            "publishedDate": null
+          },
+          {
+            "url": "https://www.pointonecorp.com/locations",
+            "title": "PointOne Data Center Locations",
+            "confidence": 95,
+            "publishedDate": null
+          }
+        ],
+        "longFormSummary": "<ul><li>The developer identifies CEMC and NCEMC as power-planning partners and utility supply; the previous Duke Energy attribution and 131 MW rating are removed. The site uses closed-loop cooling; the operator projects about 1,100 gallons/day for ordinary building needs, not a measured cooling consumption rate.<cite data-ref=\"https://www.pointonecorp.com/leecounty\"></cite></li><li>Timeline: January 1, 2028 is an approximate early-2028 target placeholder. No exact service date or actual construction completion is confirmed.<cite data-ref=\"https://www.pointonecorp.com/leecounty\"></cite></li><li>PointOne’s Raleigh / Lee County conceptual rendering, as displayed on its locations page; not a completed-building photograph. Credit: PointOne Data Centers.<cite data-ref=\"https://www.pointonecorp.com/locations\"></cite></li></ul>",
+        "price": 900000000,
+        "priceCurrency": "USD",
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "estimated",
+        "allDay": true,
+        "allDayStated": false,
+        "utcStartDateTime": "2028-01-01T00:00:00.000Z",
+        "dateConfidenceReasoning": "January 1, 2028 is an approximate early-2028 target placeholder. No exact service date or actual construction completion is confirmed.",
+        "company": "PointOne / CyrusOne",
+        "companyWikiUrl": null,
+        "address": "Approximate location in the reported project area; exact parcel pending",
+        "tags": [
+          "CEMC",
+          "Cleanview",
+          "CyrusOne",
+          "Data Center",
+          "Hyperscale",
+          "Lee County",
+          "North Carolina",
+          "Planned"
+        ],
+        "media": [
+          {
+            "id": 24525,
+            "thumbName": "d610e39d-ad03-46d7-9819-388c71d47355.jpeg",
+            "thumbWidth": 1000,
+            "thumbHeight": 625,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/r21_dc-pointone-lee-county-nc_aerial.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 1000,
+            "type": "1"
+          },
+          {
+            "id": 24526,
+            "thumbName": "41b6a7ce-a6c6-4989-9687-72f61eb728ef.jpeg",
+            "thumbWidth": 1000,
+            "thumbHeight": 625,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/r21_dc-pointone-lee-county-nc_topo.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 1000,
+            "type": "1"
+          },
+          {
+            "id": 24527,
+            "thumbName": "88ea147b-d1d1-4e10-ab5f-834c9521f552.jpeg",
+            "thumbWidth": 1000,
+            "thumbHeight": 625,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/r21_dc-pointone-lee-county-nc_regional.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 1000,
+            "type": "1"
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-large4-2026-10-23/lee-render.png",
+            "originalWidth": 1536,
+            "originalHeight": 1024
+          }
+        ]
+      },
+      "power": {
+        "megawatts": 90,
+        "kind": "usage",
+        "sourceUrl": "https://www.pointonecorp.com/leecounty",
+        "note": "Sourced proposal/study scope; not measured output or evidence of operation. PointOne’s Lee County page specifies one 90 MW IT building for CyrusOne on a 430-acre site, a $900M first-phase investment, fall-2026 construction start and early-2028 operation target. Futu"
+      },
+      "datacenter": {
+        "acres": 430,
+        "buildings": 1,
+        "cooling": "Proposed sealed closed-loop cooling",
+        "powerSource": "Utility supplied; CEMC / NCEMC planning partners",
+        "sourceUrl": "https://www.pointonecorp.com/leecounty",
+        "note": "430 acres is whole-site scope; one 90 MW IT Phase One building. Operator projects roughly 1,100 gal/day ordinary building use; not a measured reading."
+      },
+      "clearEnergy": true,
+      "gaps": [
+        "Verify exact Lower Moncure Road parcel and current groundbreaking. Operator water estimate is described in text, not stored as measured telemetry.",
+        "Official source/gallery checked; no additional verified project photograph unless listed in media evidence. Exact commissioning status and parcel need follow-up where only a proposal or queue is cited."
+      ],
+      "mediaReplaced": true,
+      "mediaAdded": 1
+    },
+    "dc-sabey-butte-silver-bow-mt": {
+      "id": 16483,
+      "patch": {
+        "title": "Sabey Butte Proposal: 50 MW Initial Power, 200 MW Expansion Concept",
+        "description": "Butte-Silver Bow’s linked impact-committee site describes Sabey’s Montana Connections proposal as 50 MW initial utility power with possible growth to 200 MW, on 606.5 acres under a purchase-and-sale agreement. A six-month due-diligence extension was granted in February 2026.",
+        "sourceUrl": "https://www.co.silverbow.mt.us/3468/Ad--Hoc-Data-Center-Impact-Committee",
+        "references": [
+          {
+            "url": "https://www.co.silverbow.mt.us/3468/Ad--Hoc-Data-Center-Impact-Committee",
+            "title": "Ad-Hoc Data Center Impact Committee — Butte-Silver Bow",
+            "confidence": 95,
+            "publishedDate": null
+          },
+          {
+            "url": "https://www.buttedatacenterinfo.com/",
+            "title": "Butte Data Center Impact Committee — Proposed Project",
+            "confidence": 95,
+            "publishedDate": null
+          }
+        ],
+        "longFormSummary": "<ul><li>The committee describes the project as still in due diligence and identifies NorthWestern Energy. Its February extension ended around August; the opened page does not establish a later closing or current construction. A proposed billion-dollar scale is discussed, but a firm approved budget is not adopted.<cite data-ref=\"https://www.buttedatacenterinfo.com/\"></cite></li><li>The unsupported $300M, 50 MW IT classification and evaporative cooling claim are removed. Initial utility capacity is distinct from IT load and future campus build-out.<cite data-ref=\"https://www.co.silverbow.mt.us/3468/Ad--Hoc-Data-Center-Impact-Committee\"></cite></li><li>Timeline: The event is the confirmed February 11, 2026 due-diligence extension, not a December 2027 opening.<cite data-ref=\"https://www.co.silverbow.mt.us/3468/Ad--Hoc-Data-Center-Impact-Committee\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "confirmed",
+        "allDay": true,
+        "allDayStated": false,
+        "utcStartDateTime": "2026-02-11T00:00:00.000Z",
+        "dateConfidenceReasoning": "The event is the confirmed February 11, 2026 due-diligence extension, not a December 2027 opening.",
+        "company": "Sabey Data Centers",
+        "companyWikiUrl": "https://en.wikipedia.org/wiki/Sabey_Data_Centers",
+        "address": "Approximate location in Montana Connections Park, Butte-Silver Bow, Montana; campus boundary pending"
+      },
+      "power": {
+        "megawatts": 50,
+        "kind": "usage",
+        "sourceUrl": "https://www.co.silverbow.mt.us/3468/Ad--Hoc-Data-Center-Impact-Committee",
+        "note": "Sourced proposal/study scope; not measured output or evidence of operation. Butte-Silver Bow’s linked impact-committee site describes Sabey’s Montana Connections proposal as 50 MW initial utility power with possible growth to 200 MW, on 606.5 acres under a purchase-"
+      },
+      "datacenter": {
+        "acres": 606.5,
+        "powerSource": "Proposed NorthWestern Energy supply",
+        "sourceUrl": "https://www.buttedatacenterinfo.com/",
+        "note": "Whole-site due-diligence proposal: 50 MW initial utility power and possible 200 MW expansion. No published IT, cooling or measured water rating."
+      },
+      "clearEnergy": true,
+      "gaps": [
+        "Check the post-August 11, 2026 agreement/closing status and current power contract before treating development as active construction.",
+        "Official source/gallery checked; no additional verified project photograph unless listed in media evidence. Exact commissioning status and parcel need follow-up where only a proposal or queue is cited."
+      ]
+    },
+    "dc-teton-trinity-williams-nd": {
+      "id": 16484,
+      "patch": {
+        "title": "Teton Digital Trinity 1: 100 MW Dry Fork Proposal, $200M-Plus Estimate",
+        "description": "Teton’s February 2025 presentation filed with Williams County describes 30 MW first phase and 100 MW-plus ultimate liquid-cooled project in Dry Fork Township, with a $200M-plus estimate. The county approved its data-center appeal on February 18; the storage appeal was excluded.",
+        "sourceUrl": "https://williamsnd.civicweb.net/document/177085/Teton%20Digital%20-%20Dry%20Fork%20Data%20Center%20One%20Pager.pdf",
+        "references": [
+          {
+            "url": "https://williamsnd.civicweb.net/document/177085/Teton%20Digital%20-%20Dry%20Fork%20Data%20Center%20One%20Pager.pdf",
+            "title": "Trinity 1 — 100MW+ Liquid Cooled Data Center Project",
+            "confidence": 95,
+            "publishedDate": "2025-02-01"
+          },
+          {
+            "url": "https://williamsnd.civicweb.net/document/177538/",
+            "title": "Williams County Board of Commissioners — February 18, 2025 Minutes",
+            "confidence": 95,
+            "publishedDate": "2025-02-18"
+          },
+          {
+            "url": "https://williamsnd.civicweb.net/document/177024/New%20Bergstrom%20Teton%20Digital%20-%20Memo%20to%20BoCC.pdf?handle=03D5A87DC4794223B412E21F67BD1D7D",
+            "title": "Teton Digital CUP Application Denial Appeal — Staff Memorandum",
+            "confidence": 95,
+            "publishedDate": "2025-02-11"
+          },
+          {
+            "url": "https://gis.blm.gov/arcgis/rest/services/Cadastral/BLM_Natl_PLSS_CadNSDI/MapServer/2/query?f=json&where=FRSTDIVID%3D%27ND051550N0950W0SN040%27&outFields=PLSSID%2CFRSTDIVID%2CFRSTDIVNO&outSR=4326",
+            "title": "BLM National PLSS — Section 4, T155N R95W, North Dakota",
+            "confidence": 95,
+            "publishedDate": null
+          }
+        ],
+        "longFormSummary": "<ul><li>The presentation budgets $45M Phase I and $155M Phase II and describes a company-built 100 MW substation. The old $450M and Aurum ownership are unsupported. It proposes a 25-acre subdivision from an approximately 80-acre parent site.<cite data-ref=\"https://williamsnd.civicweb.net/document/177085/Teton%20Digital%20-%20Dry%20Fork%20Data%20Center%20One%20Pager.pdf\"></cite></li><li>The staff memo identifies S½ NW¼ Section 4, T155N R95W, parcel 12-155-95-00-04-039. The corrected context point approximates that legal description using BLM section geometry; it is not a surveyed subdivision boundary.<cite data-ref=\"https://williamsnd.civicweb.net/document/177024/New%20Bergstrom%20Teton%20Digital%20-%20Memo%20to%20BoCC.pdf?handle=03D5A87DC4794223B412E21F67BD1D7D\"></cite></li><li>The February 18 action allowed the data-center appeal; it was not a battery approval or proof of final CUP, construction or operation.<cite data-ref=\"https://williamsnd.civicweb.net/document/177538/\"></cite></li><li>Timeline: October 1, 2026 is a Q3/Q4-2026 phase-two target placeholder from the February 2025 presentation. The target is unverified; Phase I’s Q3/Q4-2025 target is past, not proof of service.<cite data-ref=\"https://williamsnd.civicweb.net/document/177085/Teton%20Digital%20-%20Dry%20Fork%20Data%20Center%20One%20Pager.pdf\"></cite></li><li>Trinity 1 applicant’s site-context diagram showing proposed 25-acre subdivision and MWEC substation; historical February 2025 proposal, not verified construction. Credit: Teton Digital / Williams County February 2025 filing; underlying aerial map as credited in source.<cite data-ref=\"https://williamsnd.civicweb.net/document/177085/Teton%20Digital%20-%20Dry%20Fork%20Data%20Center%20One%20Pager.pdf\"></cite></li></ul>",
+        "price": 200000000,
+        "priceCurrency": "USD",
+        "priceLowerBound": 200000000,
+        "priceUpperBound": null,
+        "dateConfidence": "estimated",
+        "allDay": true,
+        "allDayStated": false,
+        "utcStartDateTime": "2026-10-01T00:00:00.000Z",
+        "dateConfidenceReasoning": "October 1, 2026 is a Q3/Q4-2026 phase-two target placeholder from the February 2025 presentation. The target is unverified; Phase I’s Q3/Q4-2025 target is past, not proof of service.",
+        "company": "Teton Digital, LLC",
+        "companyWikiUrl": null,
+        "latitude": 48.27873,
+        "longitude": -102.909464,
+        "address": "S½ NW¼ Section 4, T155N R95W, Dry Fork Township, Williams County, ND; approximate legal-description context point",
+        "tags": [
+          "Bitcoin Mining",
+          "Cleanview",
+          "Data Center",
+          "MWEC",
+          "North Dakota",
+          "Planned",
+          "Williams County"
+        ],
+        "media": [
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-large4-2026-10-23/dc-teton-trinity-williams-nd-aerial.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 1000
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-large4-2026-10-23/dc-teton-trinity-williams-nd-topo.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 1000
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-large4-2026-10-23/dc-teton-trinity-williams-nd-relief.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 1000
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-large4-2026-10-23/trinity-embedded-0.jpg",
+            "originalWidth": 1983,
+            "originalHeight": 968
+          }
+        ]
+      },
+      "power": {
+        "megawatts": 100,
+        "kind": "usage",
+        "sourceUrl": "https://williamsnd.civicweb.net/document/177085/Teton%20Digital%20-%20Dry%20Fork%20Data%20Center%20One%20Pager.pdf",
+        "note": "Sourced proposal/study scope; not measured output or evidence of operation. Teton’s February 2025 presentation filed with Williams County describes 30 MW first phase and 100 MW-plus ultimate liquid-cooled project in Dry Fork Township, with a $200M-plus estimate. The"
+      },
+      "datacenter": {
+        "acres": 25,
+        "cooling": "Proposed liquid/immersion cooling",
+        "powerSource": "Proposed adjacent MWEC supply and new company-built substation",
+        "sourceUrl": "https://williamsnd.civicweb.net/document/177085/Teton%20Digital%20-%20Dry%20Fork%20Data%20Center%20One%20Pager.pdf",
+        "note": "25-acre proposed subdivision; 30 MW first phase, 100 MW+ later phase. No verified daily water use or IT-only capacity."
+      },
+      "clearEnergy": true,
+      "gaps": [
+        "The $200M is a published estimate with a plus qualifier, not final expenditure. Verify final CUP, phase delivery and precise subdivided parcel.",
+        "Official source/gallery checked; no additional verified project photograph unless listed in media evidence. Exact commissioning status and parcel need follow-up where only a proposal or queue is cited."
+      ],
+      "mediaReplaced": true,
+      "mediaAdded": 1
+    },
+    "solar-cargas-ouachita-la": {
+      "id": 16485,
+      "delete": true,
+      "researchFinding": "MISO has two separate 500 MW solar requests (J2704 and J2708) at Cargas, Ouachita, both targeting April 15, 2027. The pin lacks a request ID or applicant evidence that selects one, and neither record establishes Entergy Louisiana ownership. Hold the unverified single-project identity; do not add the two into an invented 1 GW campus.",
+      "sourcesChecked": [
+        "https://www.misoenergy.org/api/giqueue/getprojects",
+        "https://oppj.org/planning-and-zoning/"
+      ],
+      "gaps": [
+        "MISO has two separate 500 MW solar requests (J2704 and J2708) at Cargas, Ouachita, both targeting April 15, 2027. The pin lacks a request ID or applicant evidence that selects one, and neither record establishes Entergy Louisiana ownership. Hold the unverified single-project identity; do not add the two into an invented 1 GW campus."
+      ]
+    },
+    "solar-coffey-hecate-coffey-ks": {
+      "id": 16486,
+      "patch": {
+        "title": "Hecate Otter Creek Solar: 1 GW / $1B Coffey County Proposal",
+        "description": "Hecate’s actual Coffey County proposal is Otter Creek Solar: 1 GW, potentially in two phases, about 8,500 leased acres west of Burlington and a published approximately $1B private investment plan. It is proposed, not confirmed under construction.",
+        "sourceUrl": "https://www.ottercreeksolarfarm.com/",
+        "references": [
+          {
+            "url": "https://www.ottercreeksolarfarm.com/",
+            "title": "Otter Creek Solar — Hecate Energy",
+            "confidence": 95,
+            "publishedDate": null
+          },
+          {
+            "url": "https://ottercreeksolarfarm.com/assets/pdf/OTTERCREEK-openhouse-boards-may2024F.pdf",
+            "title": "Otter Creek Solar Farm — May 2024 Open House Boards",
+            "confidence": 95,
+            "publishedDate": "2024-05-09"
+          }
+        ],
+        "longFormSummary": "<ul><li>Hecate held its informational open house May 9, 2024. The source does not substantiate a standalone 500 MW project or December 2028 COD. The nearby SPP 500 MW Wolf Creek–Benton request is not assumed to be Hecate without an applicant link.<cite data-ref=\"https://www.ottercreeksolarfarm.com/\"></cite></li><li>The website says about four miles west of Burlington; its overview says three miles. Map location is approximate regional context, not a surveyed project polygon. Published acreage is leased land; panel coverage would be smaller.<cite data-ref=\"https://ottercreeksolarfarm.com/assets/pdf/OTTERCREEK-openhouse-boards-may2024F.pdf\"></cite></li><li>Timeline: The confirmed event is Hecate’s May 9, 2024 informational open house. A current COD is not published.<cite data-ref=\"https://www.ottercreeksolarfarm.com/\"></cite></li></ul>",
+        "price": 1000000000,
+        "priceCurrency": "USD",
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "confirmed",
+        "allDay": true,
+        "allDayStated": false,
+        "utcStartDateTime": "2024-05-09T00:00:00.000Z",
+        "dateConfidenceReasoning": "The confirmed event is Hecate’s May 9, 2024 informational open house. A current COD is not published.",
+        "company": "Hecate Energy",
+        "companyWikiUrl": null,
+        "latitude": 38.2245,
+        "longitude": -95.835,
+        "address": "West of Burlington, Coffey County, Kansas; approximate Otter Creek proposal area from operator overview map",
+        "tags": [
+          "Cleanview",
+          "Coffey County",
+          "Hecate Energy",
+          "Kansas",
+          "Planned",
+          "Solar"
+        ],
+        "media": [
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-large4-2026-10-23/solar-coffey-hecate-coffey-ks-aerial.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 1000
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-large4-2026-10-23/solar-coffey-hecate-coffey-ks-topo.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 1000
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-large4-2026-10-23/solar-coffey-hecate-coffey-ks-relief.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 1000
+          }
+        ]
+      },
+      "power": {
+        "megawatts": 1000,
+        "kind": "generation",
+        "sourceUrl": "https://www.ottercreeksolarfarm.com/",
+        "note": "Sourced proposal/study scope; not measured output or evidence of operation. Hecate’s actual Coffey County proposal is Otter Creek Solar: 1 GW, potentially in two phases, about 8,500 leased acres west of Burlington and a published approximately $1B private investment"
+      },
+      "datacenter": null,
+      "clearEnergy": false,
+      "gaps": [
+        "County solar moratorium and current permitting require a current county order review. Do not infer a 500 MW first phase, queue identity or revised schedule from the total. Official page images include unrelated Upshur Texas solar; no borrowed site photograph.",
+        "Official source/gallery checked; no additional verified project photograph unless listed in media evidence. Exact commissioning status and parcel need follow-up where only a proposal or queue is cited."
+      ],
+      "mediaReplaced": true,
+      "mediaAdded": 0
+    },
+    "solar-hoodini-yuma-az": {
+      "id": 16487,
+      "patch": {
+        "title": "HOODINI Hybrid Queue 1663: 459.54 MW Solar / 450 MW Storage",
+        "description": "CAISO’s current public queue lists active HOODINI request 1663 in Yuma County with 459.54 MW photovoltaic and 450 MW storage, limited to 450 MW net export, at SDG&E’s Hoodoo Wash 500 kV switchyard. Current requested date is December 31, 2031.",
+        "sourceUrl": null,
+        "references": [
+          {
+            "url": "https://www.caiso.com/documents/publicqueuereport.xlsx",
+            "title": "CAISO Public Interconnection Queue — HOODINI 1663",
+            "confidence": 95,
+            "publishedDate": null
+          }
+        ],
+        "longFormSummary": "<ul><li>The workbook identifies SDG&amp;E as the utility, not APS. It does not establish the former NextEra ownership, construction status, $440M budget or storage MWh. Solar equipment capacity and the combined export limit are distinct.<cite data-ref=\"https://www.caiso.com/documents/publicqueuereport.xlsx\"></cite></li><li>Timeline: December 31, 2031 is the current queue’s requested date, not a guaranteed commissioning date; the prior December 2028 estimate is replaced.<cite data-ref=\"https://www.caiso.com/documents/publicqueuereport.xlsx\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "estimated",
+        "allDay": true,
+        "allDayStated": false,
+        "utcStartDateTime": "2031-12-31T00:00:00.000Z",
+        "dateConfidenceReasoning": "December 31, 2031 is the current queue’s requested date, not a guaranteed commissioning date; the prior December 2028 estimate is replaced.",
+        "company": null,
+        "companyWikiUrl": null,
+        "address": "Approximate location in the reported project area; exact parcel pending",
+        "tags": [
+          "Arizona",
+          "Battery Storage",
+          "CAISO",
+          "Cleanview",
+          "Planned",
+          "SDG&E",
+          "Solar",
+          "Yuma County"
+        ]
+      },
+      "power": {
+        "megawatts": 459.54,
+        "kind": "generation",
+        "sourceUrl": "https://www.caiso.com/documents/publicqueuereport.xlsx",
+        "note": "Sourced proposal/study scope; not measured output or evidence of operation. CAISO’s current public queue lists active HOODINI request 1663 in Yuma County with 459.54 MW photovoltaic and 450 MW storage, limited to 450 MW net export, at SDG&E’s Hoodoo Wash 500 kV swit"
+      },
+      "datacenter": null,
+      "clearEnergy": false,
+      "gaps": [
+        "Verify applicant, precise site and later hybrid milestones. The power row represents photovoltaic component capacity; storage/export limits remain explicit in text.",
+        "Official source/gallery checked; no additional verified project photograph unless listed in media evidence. Exact commissioning status and parcel need follow-up where only a proposal or queue is cited."
+      ]
+    }
+  },
+  "results": [
+    {
+      "environment": "local",
+      "key": "solar-rocky-run-portage-wi",
+      "id": 16464,
+      "action": "deleted",
+      "verifiedStatus": 404
+    },
+    {
+      "environment": "local",
+      "key": "battery-conastone-harford-md",
+      "id": 16465,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Resolve PJM’s 30,000 MWh / six-hour inconsistency with the applicant; current site design and future award participation remain unverified.",
+        "Official source/gallery checked; no additional verified project photograph unless listed in media evidence. Exact commissioning status and parcel need follow-up where only a proposal or queue is cited."
+      ]
+    },
+    {
+      "environment": "local",
+      "key": "battery-marysville-madison-oh",
+      "id": 16466,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Reconcile with any existing Oak Run campus pin before a future merge; current construction and commissioning schedule remain unverified.",
+        "Official source/gallery checked; no additional verified project photograph unless listed in media evidence. Exact commissioning status and parcel need follow-up where only a proposal or queue is cited."
+      ]
+    },
+    {
+      "environment": "local",
+      "key": "battery-midas-clark-nv",
+      "id": 16467,
+      "action": "deleted",
+      "verifiedStatus": 404
+    },
+    {
+      "environment": "local",
+      "key": "battery-sherburne-meeker-mn",
+      "id": 16468,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "MISO must clarify Active versus withdrawnDate 2026-06-11; applicant, MWh and exact Meeker parcel are unpublished in the opened record.",
+        "Official source/gallery checked; no additional verified project photograph unless listed in media evidence. Exact commissioning status and parcel need follow-up where only a proposal or queue is cited."
+      ]
+    },
+    {
+      "environment": "local",
+      "key": "dc-ameresco-nas-lemoore-kings-ca",
+      "id": 16469,
+      "action": "corrected",
+      "mediaPreserved": false,
+      "mediaReplaced": true,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Reconcile overlap with the previously corrected NAS Lemoore/Lyra-related records; project-specific footprint and current contract/construction milestones remain unverified.",
+        "Official source/gallery checked; no additional verified project photograph unless listed in media evidence. Exact commissioning status and parcel need follow-up where only a proposal or queue is cited.",
+        "Save API identified existing NAS Lemoore pin 16301 citing this exact operator URL. SourceUrl cleared, exact URL retained in references; overlap queued for editorial merge rather than inventing a URL fragment."
+      ]
+    },
+    {
+      "environment": "local",
+      "key": "dc-jay-androscoggin-franklin-me",
+      "id": 16470,
+      "action": "corrected",
+      "mediaPreserved": false,
+      "mediaReplaced": true,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "The $550M is the reported historical proposal value, not committed expenditure. A replacement operator, renewed project and current power rating are unverified.",
+        "Official source/gallery checked; no additional verified project photograph unless listed in media evidence. Exact commissioning status and parcel need follow-up where only a proposal or queue is cited."
+      ]
+    },
+    {
+      "environment": "local",
+      "key": "dc-pnj-middlesex-nj",
+      "id": 16471,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Overlaps the Piscataway campus corrected in batches 5–7. Source URL left null and exact operator URL retained in references; no record merge performed. Exact parcel and current energized power need verification.",
+        "Official source/gallery checked; no additional verified project photograph unless listed in media evidence. Exact commissioning status and parcel need follow-up where only a proposal or queue is cited."
+      ]
+    },
+    {
+      "environment": "local",
+      "key": "dc-prologis-zanker-bldg4-santa-clara-ca",
+      "id": 16472,
+      "action": "corrected",
+      "mediaPreserved": false,
+      "mediaReplaced": true,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Validate later agreements and entitlements; the legacy numerical building label is not an operator address. Building D is supported only as a phase-two concept in Attachment A.",
+        "Official source/gallery checked; no additional verified project photograph unless listed in media evidence. Exact commissioning status and parcel need follow-up where only a proposal or queue is cited.",
+        "Attachment A summary gives 421,100 sqft per building, while individual building labels round to 421,000 sqft; telemetry uses the summary figure.",
+        "The API restores Prologis’s company wiki link when saving its exact company name; the matching existing company link is retained."
+      ]
+    },
+    {
+      "environment": "local",
+      "key": "solar-clover-rawlings-charlotte-va",
+      "id": 16473,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "The earlier AF2-042 study uses Halifax County; this uprate study uses Charlotte County. Exact combined site boundary and independent commercial project name need reconciliation.",
+        "Official source/gallery checked; no additional verified project photograph unless listed in media evidence. Exact commissioning status and parcel need follow-up where only a proposal or queue is cited."
+      ]
+    },
+    {
+      "environment": "local",
+      "key": "solar-monte-cristo-1-esmeralda-nv",
+      "id": 16474,
+      "action": "deleted",
+      "verifiedStatus": 404
+    },
+    {
+      "environment": "local",
+      "key": "solar-sandy-bayou-mississippi-ar",
+      "id": 16475,
+      "action": "corrected",
+      "mediaPreserved": false,
+      "mediaReplaced": true,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Exact solar parcel, applicant and current project schedule need confirmation. Substation location is contextual only.",
+        "Official source/gallery checked; no additional verified project photograph unless listed in media evidence. Exact commissioning status and parcel need follow-up where only a proposal or queue is cited."
+      ]
+    },
+    {
+      "environment": "local",
+      "key": "solar-smalling-richland-la",
+      "id": 16476,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Verify actual schedule, applicant, exact Richland parcel and anomalous transmission-owner field; no inference of commercial service.",
+        "Official source/gallery checked; no additional verified project photograph unless listed in media evidence. Exact commissioning status and parcel need follow-up where only a proposal or queue is cited."
+      ]
+    },
+    {
+      "environment": "local",
+      "key": "battery-clinton-clinton-mo",
+      "id": 16477,
+      "action": "corrected",
+      "mediaPreserved": false,
+      "mediaReplaced": true,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Confirm parcel/county from applicant filing; the queue location can be a town. Identify developer and MWh separately from utility and equipment MW.",
+        "Official source/gallery checked; no additional verified project photograph unless listed in media evidence. Exact commissioning status and parcel need follow-up where only a proposal or queue is cited."
+      ]
+    },
+    {
+      "environment": "local",
+      "key": "battery-heritage-wake-brunswick-va",
+      "id": 16478,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Applicant site map, current status and commissioning date remain unverified.",
+        "Official source/gallery checked; no additional verified project photograph unless listed in media evidence. Exact commissioning status and parcel need follow-up where only a proposal or queue is cited."
+      ]
+    },
+    {
+      "environment": "local",
+      "key": "battery-jupiter-middlesex-ma",
+      "id": 16479,
+      "action": "corrected",
+      "mediaPreserved": false,
+      "mediaReplaced": true,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Refresh QP1143 status via ISO-NE IRTT, which redirects in automated fetches; reconcile any 508 MW revision and proposed Trimount identity with explicit primary evidence.",
+        "Official source/gallery checked; no additional verified project photograph unless listed in media evidence. Exact commissioning status and parcel need follow-up where only a proposal or queue is cited."
+      ]
+    },
+    {
+      "environment": "local",
+      "key": "battery-reed-meadow-clark-nv",
+      "id": 16480,
+      "action": "deleted",
+      "verifiedStatus": 404
+    },
+    {
+      "environment": "local",
+      "key": "dc-blox-grassmere-davidson-tn",
+      "id": 16481,
+      "action": "corrected",
+      "mediaPreserved": false,
+      "mediaReplaced": true,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Replace legacy COD only when a sourced milestone is available. Municipal moratorium, property acquisition and litigation outcomes need a dedicated current docket review.",
+        "Official source/gallery checked; no additional verified project photograph unless listed in media evidence. Exact commissioning status and parcel need follow-up where only a proposal or queue is cited."
+      ]
+    },
+    {
+      "environment": "local",
+      "key": "dc-pointone-lee-county-nc",
+      "id": 16482,
+      "action": "corrected",
+      "mediaPreserved": false,
+      "mediaReplaced": true,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Verify exact Lower Moncure Road parcel and current groundbreaking. Operator water estimate is described in text, not stored as measured telemetry.",
+        "Official source/gallery checked; no additional verified project photograph unless listed in media evidence. Exact commissioning status and parcel need follow-up where only a proposal or queue is cited."
+      ]
+    },
+    {
+      "environment": "local",
+      "key": "dc-sabey-butte-silver-bow-mt",
+      "id": 16483,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Check the post-August 11, 2026 agreement/closing status and current power contract before treating development as active construction.",
+        "Official source/gallery checked; no additional verified project photograph unless listed in media evidence. Exact commissioning status and parcel need follow-up where only a proposal or queue is cited."
+      ]
+    },
+    {
+      "environment": "local",
+      "key": "dc-teton-trinity-williams-nd",
+      "id": 16484,
+      "action": "corrected",
+      "mediaPreserved": false,
+      "mediaReplaced": true,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "The $200M is a published estimate with a plus qualifier, not final expenditure. Verify final CUP, phase delivery and precise subdivided parcel.",
+        "Official source/gallery checked; no additional verified project photograph unless listed in media evidence. Exact commissioning status and parcel need follow-up where only a proposal or queue is cited."
+      ]
+    },
+    {
+      "environment": "local",
+      "key": "solar-cargas-ouachita-la",
+      "id": 16485,
+      "action": "deleted",
+      "verifiedStatus": 404
+    },
+    {
+      "environment": "local",
+      "key": "solar-coffey-hecate-coffey-ks",
+      "id": 16486,
+      "action": "corrected",
+      "mediaPreserved": false,
+      "mediaReplaced": true,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "County solar moratorium and current permitting require a current county order review. Do not infer a 500 MW first phase, queue identity or revised schedule from the total. Official page images include unrelated Upshur Texas solar; no borrowed site photograph.",
+        "Official source/gallery checked; no additional verified project photograph unless listed in media evidence. Exact commissioning status and parcel need follow-up where only a proposal or queue is cited."
+      ]
+    },
+    {
+      "environment": "local",
+      "key": "solar-hoodini-yuma-az",
+      "id": 16487,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Verify applicant, precise site and later hybrid milestones. The power row represents photovoltaic component capacity; storage/export limits remain explicit in text.",
+        "Official source/gallery checked; no additional verified project photograph unless listed in media evidence. Exact commissioning status and parcel need follow-up where only a proposal or queue is cited."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "solar-rocky-run-portage-wi",
+      "id": 16464,
+      "action": "deleted",
+      "verifiedStatus": 404
+    },
+    {
+      "environment": "prod",
+      "key": "battery-conastone-harford-md",
+      "id": 16465,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Resolve PJM’s 30,000 MWh / six-hour inconsistency with the applicant; current site design and future award participation remain unverified.",
+        "Official source/gallery checked; no additional verified project photograph unless listed in media evidence. Exact commissioning status and parcel need follow-up where only a proposal or queue is cited."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "battery-marysville-madison-oh",
+      "id": 16466,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Reconcile with any existing Oak Run campus pin before a future merge; current construction and commissioning schedule remain unverified.",
+        "Official source/gallery checked; no additional verified project photograph unless listed in media evidence. Exact commissioning status and parcel need follow-up where only a proposal or queue is cited."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "battery-midas-clark-nv",
+      "id": 16467,
+      "action": "deleted",
+      "verifiedStatus": 404
+    },
+    {
+      "environment": "prod",
+      "key": "battery-sherburne-meeker-mn",
+      "id": 16468,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "MISO must clarify Active versus withdrawnDate 2026-06-11; applicant, MWh and exact Meeker parcel are unpublished in the opened record.",
+        "Official source/gallery checked; no additional verified project photograph unless listed in media evidence. Exact commissioning status and parcel need follow-up where only a proposal or queue is cited."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "dc-ameresco-nas-lemoore-kings-ca",
+      "id": 16469,
+      "action": "corrected",
+      "mediaPreserved": false,
+      "mediaReplaced": true,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Reconcile overlap with the previously corrected NAS Lemoore/Lyra-related records; project-specific footprint and current contract/construction milestones remain unverified.",
+        "Official source/gallery checked; no additional verified project photograph unless listed in media evidence. Exact commissioning status and parcel need follow-up where only a proposal or queue is cited.",
+        "Save API identified existing NAS Lemoore pin 16301 citing this exact operator URL. SourceUrl cleared, exact URL retained in references; overlap queued for editorial merge rather than inventing a URL fragment."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "dc-jay-androscoggin-franklin-me",
+      "id": 16470,
+      "action": "corrected",
+      "mediaPreserved": false,
+      "mediaReplaced": true,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "The $550M is the reported historical proposal value, not committed expenditure. A replacement operator, renewed project and current power rating are unverified.",
+        "Official source/gallery checked; no additional verified project photograph unless listed in media evidence. Exact commissioning status and parcel need follow-up where only a proposal or queue is cited."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "dc-pnj-middlesex-nj",
+      "id": 16471,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Overlaps the Piscataway campus corrected in batches 5–7. Source URL left null and exact operator URL retained in references; no record merge performed. Exact parcel and current energized power need verification.",
+        "Official source/gallery checked; no additional verified project photograph unless listed in media evidence. Exact commissioning status and parcel need follow-up where only a proposal or queue is cited."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "dc-prologis-zanker-bldg4-santa-clara-ca",
+      "id": 16472,
+      "action": "corrected",
+      "mediaPreserved": false,
+      "mediaReplaced": true,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Validate later agreements and entitlements; the legacy numerical building label is not an operator address. Building D is supported only as a phase-two concept in Attachment A.",
+        "Official source/gallery checked; no additional verified project photograph unless listed in media evidence. Exact commissioning status and parcel need follow-up where only a proposal or queue is cited.",
+        "Attachment A summary gives 421,100 sqft per building, while individual building labels round to 421,000 sqft; telemetry uses the summary figure.",
+        "The API restores Prologis’s company wiki link when saving its exact company name; the matching existing company link is retained."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "solar-clover-rawlings-charlotte-va",
+      "id": 16473,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "The earlier AF2-042 study uses Halifax County; this uprate study uses Charlotte County. Exact combined site boundary and independent commercial project name need reconciliation.",
+        "Official source/gallery checked; no additional verified project photograph unless listed in media evidence. Exact commissioning status and parcel need follow-up where only a proposal or queue is cited."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "solar-monte-cristo-1-esmeralda-nv",
+      "id": 16474,
+      "action": "deleted",
+      "verifiedStatus": 404
+    },
+    {
+      "environment": "prod",
+      "key": "solar-sandy-bayou-mississippi-ar",
+      "id": 16475,
+      "action": "corrected",
+      "mediaPreserved": false,
+      "mediaReplaced": true,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Exact solar parcel, applicant and current project schedule need confirmation. Substation location is contextual only.",
+        "Official source/gallery checked; no additional verified project photograph unless listed in media evidence. Exact commissioning status and parcel need follow-up where only a proposal or queue is cited."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "solar-smalling-richland-la",
+      "id": 16476,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Verify actual schedule, applicant, exact Richland parcel and anomalous transmission-owner field; no inference of commercial service.",
+        "Official source/gallery checked; no additional verified project photograph unless listed in media evidence. Exact commissioning status and parcel need follow-up where only a proposal or queue is cited."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "battery-clinton-clinton-mo",
+      "id": 16477,
+      "action": "corrected",
+      "mediaPreserved": false,
+      "mediaReplaced": true,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Confirm parcel/county from applicant filing; the queue location can be a town. Identify developer and MWh separately from utility and equipment MW.",
+        "Official source/gallery checked; no additional verified project photograph unless listed in media evidence. Exact commissioning status and parcel need follow-up where only a proposal or queue is cited."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "battery-heritage-wake-brunswick-va",
+      "id": 16478,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Applicant site map, current status and commissioning date remain unverified.",
+        "Official source/gallery checked; no additional verified project photograph unless listed in media evidence. Exact commissioning status and parcel need follow-up where only a proposal or queue is cited."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "battery-jupiter-middlesex-ma",
+      "id": 16479,
+      "action": "corrected",
+      "mediaPreserved": false,
+      "mediaReplaced": true,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Refresh QP1143 status via ISO-NE IRTT, which redirects in automated fetches; reconcile any 508 MW revision and proposed Trimount identity with explicit primary evidence.",
+        "Official source/gallery checked; no additional verified project photograph unless listed in media evidence. Exact commissioning status and parcel need follow-up where only a proposal or queue is cited."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "battery-reed-meadow-clark-nv",
+      "id": 16480,
+      "action": "deleted",
+      "verifiedStatus": 404
+    },
+    {
+      "environment": "prod",
+      "key": "dc-blox-grassmere-davidson-tn",
+      "id": 16481,
+      "action": "corrected",
+      "mediaPreserved": false,
+      "mediaReplaced": true,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Replace legacy COD only when a sourced milestone is available. Municipal moratorium, property acquisition and litigation outcomes need a dedicated current docket review.",
+        "Official source/gallery checked; no additional verified project photograph unless listed in media evidence. Exact commissioning status and parcel need follow-up where only a proposal or queue is cited."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "dc-pointone-lee-county-nc",
+      "id": 16482,
+      "action": "corrected",
+      "mediaPreserved": false,
+      "mediaReplaced": true,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Verify exact Lower Moncure Road parcel and current groundbreaking. Operator water estimate is described in text, not stored as measured telemetry.",
+        "Official source/gallery checked; no additional verified project photograph unless listed in media evidence. Exact commissioning status and parcel need follow-up where only a proposal or queue is cited."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "dc-sabey-butte-silver-bow-mt",
+      "id": 16483,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Check the post-August 11, 2026 agreement/closing status and current power contract before treating development as active construction.",
+        "Official source/gallery checked; no additional verified project photograph unless listed in media evidence. Exact commissioning status and parcel need follow-up where only a proposal or queue is cited."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "dc-teton-trinity-williams-nd",
+      "id": 16484,
+      "action": "corrected",
+      "mediaPreserved": false,
+      "mediaReplaced": true,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "The $200M is a published estimate with a plus qualifier, not final expenditure. Verify final CUP, phase delivery and precise subdivided parcel.",
+        "Official source/gallery checked; no additional verified project photograph unless listed in media evidence. Exact commissioning status and parcel need follow-up where only a proposal or queue is cited."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "solar-cargas-ouachita-la",
+      "id": 16485,
+      "action": "deleted",
+      "verifiedStatus": 404
+    },
+    {
+      "environment": "prod",
+      "key": "solar-coffey-hecate-coffey-ks",
+      "id": 16486,
+      "action": "corrected",
+      "mediaPreserved": false,
+      "mediaReplaced": true,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "County solar moratorium and current permitting require a current county order review. Do not infer a 500 MW first phase, queue identity or revised schedule from the total. Official page images include unrelated Upshur Texas solar; no borrowed site photograph.",
+        "Official source/gallery checked; no additional verified project photograph unless listed in media evidence. Exact commissioning status and parcel need follow-up where only a proposal or queue is cited."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "solar-hoodini-yuma-az",
+      "id": 16487,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Verify applicant, precise site and later hybrid milestones. The power row represents photovoltaic component capacity; storage/export limits remain explicit in text.",
+        "Official source/gallery checked; no additional verified project photograph unless listed in media evidence. Exact commissioning status and parcel need follow-up where only a proposal or queue is cited."
+      ]
+    }
+  ],
+  "verification": {
+    "actionsVerified": 48,
+    "freshReadbacks": [
+      {
+        "environment": "local",
+        "id": 16464,
+        "status": 404,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 16465,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 16466,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 16467,
+        "status": 404,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 16468,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 16469,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 16470,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 16471,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 16472,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 16473,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 16474,
+        "status": 404,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 16475,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 16476,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 16477,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 16478,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 16479,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 16480,
+        "status": 404,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 16481,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 16482,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 16483,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 16484,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 16485,
+        "status": 404,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 16486,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 16487,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 16464,
+        "status": 404,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 16465,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 16466,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 16467,
+        "status": 404,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 16468,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 16469,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 16470,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 16471,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 16472,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 16473,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 16474,
+        "status": 404,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 16475,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 16476,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 16477,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 16478,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 16479,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 16480,
+        "status": 404,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 16481,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 16482,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 16483,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 16484,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 16485,
+        "status": 404,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 16486,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 16487,
+        "status": 200,
+        "verified": true
+      }
+    ],
+    "media": [
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-large4-2026-10-23/battery-clinton-clinton-mo-aerial.jpg",
+        "status": 200,
+        "bytes": 608955
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-large4-2026-10-23/battery-clinton-clinton-mo-relief.jpg",
+        "status": 200,
+        "bytes": 100409
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-large4-2026-10-23/battery-clinton-clinton-mo-topo.jpg",
+        "status": 200,
+        "bytes": 449317
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-large4-2026-10-23/battery-jupiter-middlesex-ma-aerial.jpg",
+        "status": 200,
+        "bytes": 524550
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-large4-2026-10-23/battery-jupiter-middlesex-ma-relief.jpg",
+        "status": 200,
+        "bytes": 134916
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-large4-2026-10-23/battery-jupiter-middlesex-ma-topo.jpg",
+        "status": 200,
+        "bytes": 582688
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-large4-2026-10-23/dc-ameresco-nas-lemoore-kings-ca-aerial.jpg",
+        "status": 200,
+        "bytes": 205631
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-large4-2026-10-23/dc-ameresco-nas-lemoore-kings-ca-relief.jpg",
+        "status": 200,
+        "bytes": 56588
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-large4-2026-10-23/dc-ameresco-nas-lemoore-kings-ca-topo.jpg",
+        "status": 200,
+        "bytes": 118762
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-large4-2026-10-23/dc-blox-grassmere-davidson-tn-aerial.jpg",
+        "status": 200,
+        "bytes": 599840
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-large4-2026-10-23/dc-blox-grassmere-davidson-tn-relief.jpg",
+        "status": 200,
+        "bytes": 179393
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-large4-2026-10-23/dc-blox-grassmere-davidson-tn-topo.jpg",
+        "status": 200,
+        "bytes": 579731
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-large4-2026-10-23/dc-jay-androscoggin-franklin-me-aerial.jpg",
+        "status": 200,
+        "bytes": 538918
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-large4-2026-10-23/dc-jay-androscoggin-franklin-me-relief.jpg",
+        "status": 200,
+        "bytes": 182701
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-large4-2026-10-23/dc-jay-androscoggin-franklin-me-topo.jpg",
+        "status": 200,
+        "bytes": 435782
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-large4-2026-10-23/dc-prologis-zanker-bldg4-santa-clara-ca-aerial.jpg",
+        "status": 200,
+        "bytes": 435288
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-large4-2026-10-23/dc-prologis-zanker-bldg4-santa-clara-ca-relief.jpg",
+        "status": 200,
+        "bytes": 113910
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-large4-2026-10-23/dc-prologis-zanker-bldg4-santa-clara-ca-topo.jpg",
+        "status": 200,
+        "bytes": 454128
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-large4-2026-10-23/dc-teton-trinity-williams-nd-aerial.jpg",
+        "status": 200,
+        "bytes": 298030
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-large4-2026-10-23/dc-teton-trinity-williams-nd-relief.jpg",
+        "status": 200,
+        "bytes": 122163
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-large4-2026-10-23/dc-teton-trinity-williams-nd-topo.jpg",
+        "status": 200,
+        "bytes": 377250
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-large4-2026-10-23/lee-render.png",
+        "status": 200,
+        "bytes": 3140937
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-large4-2026-10-23/prologis-embedded-0.jpg",
+        "status": 200,
+        "bytes": 350330
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-large4-2026-10-23/solar-coffey-hecate-coffey-ks-aerial.jpg",
+        "status": 200,
+        "bytes": 344283
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-large4-2026-10-23/solar-coffey-hecate-coffey-ks-relief.jpg",
+        "status": 200,
+        "bytes": 78671
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-large4-2026-10-23/solar-coffey-hecate-coffey-ks-topo.jpg",
+        "status": 200,
+        "bytes": 280999
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-large4-2026-10-23/solar-sandy-bayou-mississippi-ar-aerial.jpg",
+        "status": 200,
+        "bytes": 262436
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-large4-2026-10-23/solar-sandy-bayou-mississippi-ar-relief.jpg",
+        "status": 200,
+        "bytes": 82033
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-large4-2026-10-23/solar-sandy-bayou-mississippi-ar-topo.jpg",
+        "status": 200,
+        "bytes": 275018
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-large4-2026-10-23/trinity-embedded-0.jpg",
+        "status": 200,
+        "bytes": 256334
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-r20-battery-conastone-harford-md-aerial.jpg",
+        "status": 200,
+        "bytes": 499375
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-r20-battery-conastone-harford-md-corridor.jpg",
+        "status": 200,
+        "bytes": 339592
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-r20-battery-conastone-harford-md-topo.jpg",
+        "status": 200,
+        "bytes": 467928
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-r20-battery-marysville-madison-oh-aerial.jpg",
+        "status": 200,
+        "bytes": 525902
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-r20-battery-marysville-madison-oh-corridor.jpg",
+        "status": 200,
+        "bytes": 259575
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-r20-battery-marysville-madison-oh-topo.jpg",
+        "status": 200,
+        "bytes": 318395
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-r20-battery-sherburne-meeker-mn-aerial.jpg",
+        "status": 200,
+        "bytes": 486124
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-r20-battery-sherburne-meeker-mn-corridor.jpg",
+        "status": 200,
+        "bytes": 364619
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-r20-battery-sherburne-meeker-mn-topo.jpg",
+        "status": 200,
+        "bytes": 394130
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-r20-dc-pnj-middlesex-nj-aerial.jpg",
+        "status": 200,
+        "bytes": 663670
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-r20-dc-pnj-middlesex-nj-corridor.jpg",
+        "status": 200,
+        "bytes": 318269
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-r20-dc-pnj-middlesex-nj-topo.jpg",
+        "status": 200,
+        "bytes": 648648
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-r20-solar-clover-rawlings-charlotte-va-aerial.jpg",
+        "status": 200,
+        "bytes": 560409
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-r20-solar-clover-rawlings-charlotte-va-corridor.jpg",
+        "status": 200,
+        "bytes": 503616
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-r20-solar-clover-rawlings-charlotte-va-topo.jpg",
+        "status": 200,
+        "bytes": 509137
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-r20-solar-smalling-richland-la-aerial.jpg",
+        "status": 200,
+        "bytes": 483486
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-r20-solar-smalling-richland-la-corridor.jpg",
+        "status": 200,
+        "bytes": 510599
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-r20-solar-smalling-richland-la-topo.jpg",
+        "status": 200,
+        "bytes": 455698
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/r21_battery-heritage-wake-brunswick-va_aerial.jpg",
+        "status": 200,
+        "bytes": 398817
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/r21_battery-heritage-wake-brunswick-va_regional.jpg",
+        "status": 200,
+        "bytes": 209380
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/r21_battery-heritage-wake-brunswick-va_topo.jpg",
+        "status": 200,
+        "bytes": 509651
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/r21_dc-pointone-lee-county-nc_aerial.jpg",
+        "status": 200,
+        "bytes": 538742
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/r21_dc-pointone-lee-county-nc_regional.jpg",
+        "status": 200,
+        "bytes": 221428
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/r21_dc-pointone-lee-county-nc_topo.jpg",
+        "status": 200,
+        "bytes": 490530
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/r21_dc-sabey-butte-silver-bow-mt_aerial.jpg",
+        "status": 200,
+        "bytes": 415519
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/r21_dc-sabey-butte-silver-bow-mt_regional.jpg",
+        "status": 200,
+        "bytes": 285209
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/r21_dc-sabey-butte-silver-bow-mt_topo.jpg",
+        "status": 200,
+        "bytes": 404703
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/r21_solar-hoodini-yuma-az_aerial.jpg",
+        "status": 200,
+        "bytes": 423291
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/r21_solar-hoodini-yuma-az_regional.jpg",
+        "status": 200,
+        "bytes": 136869
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/r21_solar-hoodini-yuma-az_topo.jpg",
+        "status": 200,
+        "bytes": 275847
+      }
+    ],
+    "pages": [
+      {
+        "environment": "local",
+        "id": 16465,
+        "status": 200,
+        "bytes": 327715
+      },
+      {
+        "environment": "local",
+        "id": 16466,
+        "status": 200,
+        "bytes": 321049
+      },
+      {
+        "environment": "local",
+        "id": 16468,
+        "status": 200,
+        "bytes": 307688
+      },
+      {
+        "environment": "local",
+        "id": 16469,
+        "status": 200,
+        "bytes": 310239
+      },
+      {
+        "environment": "local",
+        "id": 16470,
+        "status": 200,
+        "bytes": 314954
+      },
+      {
+        "environment": "local",
+        "id": 16471,
+        "status": 200,
+        "bytes": 313700
+      },
+      {
+        "environment": "local",
+        "id": 16472,
+        "status": 200,
+        "bytes": 330433
+      },
+      {
+        "environment": "local",
+        "id": 16473,
+        "status": 200,
+        "bytes": 315305
+      },
+      {
+        "environment": "local",
+        "id": 16475,
+        "status": 200,
+        "bytes": 311862
+      },
+      {
+        "environment": "local",
+        "id": 16476,
+        "status": 200,
+        "bytes": 307611
+      },
+      {
+        "environment": "local",
+        "id": 16477,
+        "status": 200,
+        "bytes": 314452
+      },
+      {
+        "environment": "local",
+        "id": 16478,
+        "status": 200,
+        "bytes": 314596
+      },
+      {
+        "environment": "local",
+        "id": 16479,
+        "status": 200,
+        "bytes": 315215
+      },
+      {
+        "environment": "local",
+        "id": 16481,
+        "status": 200,
+        "bytes": 322166
+      },
+      {
+        "environment": "local",
+        "id": 16482,
+        "status": 200,
+        "bytes": 328692
+      },
+      {
+        "environment": "local",
+        "id": 16483,
+        "status": 200,
+        "bytes": 325156
+      },
+      {
+        "environment": "local",
+        "id": 16484,
+        "status": 200,
+        "bytes": 346068
+      },
+      {
+        "environment": "local",
+        "id": 16486,
+        "status": 200,
+        "bytes": 318059
+      },
+      {
+        "environment": "local",
+        "id": 16487,
+        "status": 200,
+        "bytes": 307780
+      },
+      {
+        "environment": "prod",
+        "id": 16465,
+        "status": 200,
+        "bytes": 284099
+      },
+      {
+        "environment": "prod",
+        "id": 16466,
+        "status": 200,
+        "bytes": 277711
+      },
+      {
+        "environment": "prod",
+        "id": 16468,
+        "status": 200,
+        "bytes": 264702
+      },
+      {
+        "environment": "prod",
+        "id": 16469,
+        "status": 200,
+        "bytes": 267689
+      },
+      {
+        "environment": "prod",
+        "id": 16470,
+        "status": 200,
+        "bytes": 272202
+      },
+      {
+        "environment": "prod",
+        "id": 16471,
+        "status": 200,
+        "bytes": 270681
+      },
+      {
+        "environment": "prod",
+        "id": 16472,
+        "status": 200,
+        "bytes": 287188
+      },
+      {
+        "environment": "prod",
+        "id": 16473,
+        "status": 200,
+        "bytes": 272491
+      },
+      {
+        "environment": "prod",
+        "id": 16475,
+        "status": 200,
+        "bytes": 269398
+      },
+      {
+        "environment": "prod",
+        "id": 16476,
+        "status": 200,
+        "bytes": 265168
+      },
+      {
+        "environment": "prod",
+        "id": 16477,
+        "status": 200,
+        "bytes": 271733
+      },
+      {
+        "environment": "prod",
+        "id": 16478,
+        "status": 200,
+        "bytes": 271678
+      },
+      {
+        "environment": "prod",
+        "id": 16479,
+        "status": 200,
+        "bytes": 272950
+      },
+      {
+        "environment": "prod",
+        "id": 16481,
+        "status": 200,
+        "bytes": 278338
+      },
+      {
+        "environment": "prod",
+        "id": 16482,
+        "status": 200,
+        "bytes": 284922
+      },
+      {
+        "environment": "prod",
+        "id": 16483,
+        "status": 200,
+        "bytes": 281918
+      },
+      {
+        "environment": "prod",
+        "id": 16484,
+        "status": 200,
+        "bytes": 301966
+      },
+      {
+        "environment": "prod",
+        "id": 16486,
+        "status": 200,
+        "bytes": 275033
+      },
+      {
+        "environment": "prod",
+        "id": 16487,
+        "status": 200,
+        "bytes": 265495
+      }
+    ],
+    "postedMapCounts": {
+      "local": 1425,
+      "prod": 1425
+    },
+    "telemetry": [
+      {},
+      {},
+      {},
+      {},
+      {},
+      {
+        "energyCleared": true,
+        "datacenterAfter": {
+          "waterGallonsPerDay": null,
+          "waterBasis": null,
+          "chips": null,
+          "chipModel": null,
+          "h100Equivalents": null,
+          "acres": 20,
+          "sqft": null,
+          "buildings": null,
+          "generators": null,
+          "cooling": null,
+          "powerSource": null,
+          "sourceUrl": "https://chirisatechnologyparks.com/",
+          "note": "Operator’s 20-acre campus; 90 MW utility-power plan. Floor area, water and cooling are not established.",
+          "checkedAt": "2026-10-23T20:02:29.491Z"
+        }
+      },
+      {
+        "energyCleared": true,
+        "datacenterAfter": {
+          "waterGallonsPerDay": null,
+          "waterBasis": null,
+          "chips": null,
+          "chipModel": null,
+          "h100Equivalents": null,
+          "acres": null,
+          "sqft": 421100,
+          "buildings": 1,
+          "generators": null,
+          "cooling": null,
+          "powerSource": "Proposed PG&E supply; initial 250 MW plan is campus-wide",
+          "sourceUrl": "https://sanjose.legistar.com/View.ashx?M=F&ID=14917877&GUID=45941F3A-0A60-42A1-8F04-B09281C6E2F3",
+          "note": "Conceptual Building D: 99 MW utility power, 72 MW IT; phase 2. No verified water, cooling or commissioned equipment.",
+          "checkedAt": "2026-10-23T20:02:55.951Z"
+        }
+      },
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {
+        "energyCleared": true,
+        "datacenterAfter": {
+          "waterGallonsPerDay": null,
+          "waterBasis": null,
+          "chips": null,
+          "chipModel": null,
+          "h100Equivalents": null,
+          "acres": null,
+          "sqft": 69200,
+          "buildings": 1,
+          "generators": null,
+          "cooling": "Proposed closed-loop recirculating water cooling",
+          "powerSource": null,
+          "sourceUrl": "https://www.dcblox.com/nashville-data-center/",
+          "note": "Current operator scope is a single 10 MW building; evaluation phase, construction contingent on approval. No verified daily water reading.",
+          "checkedAt": "2026-10-23T20:03:04.252Z"
+        }
+      },
+      {
+        "energyCleared": true,
+        "datacenterAfter": {
+          "waterGallonsPerDay": null,
+          "waterBasis": null,
+          "chips": null,
+          "chipModel": null,
+          "h100Equivalents": null,
+          "acres": 430,
+          "sqft": null,
+          "buildings": 1,
+          "generators": null,
+          "cooling": "Proposed sealed closed-loop cooling",
+          "powerSource": "Utility supplied; CEMC / NCEMC planning partners",
+          "sourceUrl": "https://www.pointonecorp.com/leecounty",
+          "note": "430 acres is whole-site scope; one 90 MW IT Phase One building. Operator projects roughly 1,100 gal/day ordinary building use; not a measured reading.",
+          "checkedAt": "2026-10-23T20:03:06.335Z"
+        }
+      },
+      {
+        "energyCleared": true,
+        "datacenterAfter": {
+          "waterGallonsPerDay": null,
+          "waterBasis": null,
+          "chips": null,
+          "chipModel": null,
+          "h100Equivalents": null,
+          "acres": 606.5,
+          "sqft": null,
+          "buildings": null,
+          "generators": null,
+          "cooling": null,
+          "powerSource": "Proposed NorthWestern Energy supply",
+          "sourceUrl": "https://www.buttedatacenterinfo.com/",
+          "note": "Whole-site due-diligence proposal: 50 MW initial utility power and possible 200 MW expansion. No published IT, cooling or measured water rating.",
+          "checkedAt": "2026-10-23T20:03:18.957Z"
+        }
+      },
+      {
+        "energyCleared": true,
+        "datacenterAfter": {
+          "waterGallonsPerDay": null,
+          "waterBasis": null,
+          "chips": null,
+          "chipModel": null,
+          "h100Equivalents": null,
+          "acres": 25,
+          "sqft": null,
+          "buildings": null,
+          "generators": null,
+          "cooling": "Proposed liquid/immersion cooling",
+          "powerSource": "Proposed adjacent MWEC supply and new company-built substation",
+          "sourceUrl": "https://williamsnd.civicweb.net/document/177085/Teton%20Digital%20-%20Dry%20Fork%20Data%20Center%20One%20Pager.pdf",
+          "note": "25-acre proposed subdivision; 30 MW first phase, 100 MW+ later phase. No verified daily water use or IT-only capacity.",
+          "checkedAt": "2026-10-23T20:03:21.796Z"
+        }
+      },
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {
+        "energyCleared": true,
+        "datacenterAfter": {
+          "waterGallonsPerDay": null,
+          "waterBasis": null,
+          "chips": null,
+          "chipModel": null,
+          "h100Equivalents": null,
+          "acres": 20,
+          "sqft": null,
+          "buildings": null,
+          "generators": null,
+          "cooling": null,
+          "powerSource": null,
+          "sourceUrl": "https://chirisatechnologyparks.com/",
+          "note": "Operator’s 20-acre campus; 90 MW utility-power plan. Floor area, water and cooling are not established.",
+          "checkedAt": "2026-10-23T20:03:47.072Z"
+        }
+      },
+      {
+        "energyCleared": true,
+        "datacenterAfter": {
+          "waterGallonsPerDay": null,
+          "waterBasis": null,
+          "chips": null,
+          "chipModel": null,
+          "h100Equivalents": null,
+          "acres": null,
+          "sqft": 421100,
+          "buildings": 1,
+          "generators": null,
+          "cooling": null,
+          "powerSource": "Proposed PG&E supply; initial 250 MW plan is campus-wide",
+          "sourceUrl": "https://sanjose.legistar.com/View.ashx?M=F&ID=14917877&GUID=45941F3A-0A60-42A1-8F04-B09281C6E2F3",
+          "note": "Conceptual Building D: 99 MW utility power, 72 MW IT; phase 2. No verified water, cooling or commissioned equipment.",
+          "checkedAt": "2026-10-23T20:03:55.781Z"
+        }
+      },
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {
+        "energyCleared": true,
+        "datacenterAfter": {
+          "waterGallonsPerDay": null,
+          "waterBasis": null,
+          "chips": null,
+          "chipModel": null,
+          "h100Equivalents": null,
+          "acres": null,
+          "sqft": 69200,
+          "buildings": 1,
+          "generators": null,
+          "cooling": "Proposed closed-loop recirculating water cooling",
+          "powerSource": null,
+          "sourceUrl": "https://www.dcblox.com/nashville-data-center/",
+          "note": "Current operator scope is a single 10 MW building; evaluation phase, construction contingent on approval. No verified daily water reading.",
+          "checkedAt": "2026-10-23T20:04:30.540Z"
+        }
+      },
+      {
+        "energyCleared": true,
+        "datacenterAfter": {
+          "waterGallonsPerDay": null,
+          "waterBasis": null,
+          "chips": null,
+          "chipModel": null,
+          "h100Equivalents": null,
+          "acres": 430,
+          "sqft": null,
+          "buildings": 1,
+          "generators": null,
+          "cooling": "Proposed sealed closed-loop cooling",
+          "powerSource": "Utility supplied; CEMC / NCEMC planning partners",
+          "sourceUrl": "https://www.pointonecorp.com/leecounty",
+          "note": "430 acres is whole-site scope; one 90 MW IT Phase One building. Operator projects roughly 1,100 gal/day ordinary building use; not a measured reading.",
+          "checkedAt": "2026-10-23T20:04:36.466Z"
+        }
+      },
+      {
+        "energyCleared": true,
+        "datacenterAfter": {
+          "waterGallonsPerDay": null,
+          "waterBasis": null,
+          "chips": null,
+          "chipModel": null,
+          "h100Equivalents": null,
+          "acres": 606.5,
+          "sqft": null,
+          "buildings": null,
+          "generators": null,
+          "cooling": null,
+          "powerSource": "Proposed NorthWestern Energy supply",
+          "sourceUrl": "https://www.buttedatacenterinfo.com/",
+          "note": "Whole-site due-diligence proposal: 50 MW initial utility power and possible 200 MW expansion. No published IT, cooling or measured water rating.",
+          "checkedAt": "2026-10-23T20:04:39.113Z"
+        }
+      },
+      {
+        "energyCleared": true,
+        "datacenterAfter": {
+          "waterGallonsPerDay": null,
+          "waterBasis": null,
+          "chips": null,
+          "chipModel": null,
+          "h100Equivalents": null,
+          "acres": 25,
+          "sqft": null,
+          "buildings": null,
+          "generators": null,
+          "cooling": "Proposed liquid/immersion cooling",
+          "powerSource": "Proposed adjacent MWEC supply and new company-built substation",
+          "sourceUrl": "https://williamsnd.civicweb.net/document/177085/Teton%20Digital%20-%20Dry%20Fork%20Data%20Center%20One%20Pager.pdf",
+          "note": "25-acre proposed subdivision; 30 MW first phase, 100 MW+ later phase. No verified daily water use or IT-only capacity.",
+          "checkedAt": "2026-10-23T20:04:46.506Z"
+        }
+      },
+      {},
+      {}
+    ]
+  },
+  "mediaEvidence": [
+    {
+      "key": "dc-ameresco-nas-lemoore-kings-ca",
+      "layer": "aerial",
+      "sourceUrl": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSImageryOnly/MapServer/export?bbox=-119.938404,36.303518,-119.908404,36.323518&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "sourcePage": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSImageryOnly/MapServer/export?bbox=-119.938404,36.303518,-119.908404,36.323518&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "credit": "USGS / The National Map",
+      "caption": "USGS aerial basemap centered on the sourced approximate address/reporting point; imagery may predate construction.",
+      "bytes": 205631,
+      "width": 1600,
+      "height": 1000,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-large4-2026-10-23/dc-ameresco-nas-lemoore-kings-ca-aerial.jpg"
+    },
+    {
+      "key": "dc-ameresco-nas-lemoore-kings-ca",
+      "layer": "topo",
+      "sourceUrl": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSTopo/MapServer/export?bbox=-119.955404,36.291518,-119.891404,36.335518&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "sourcePage": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSTopo/MapServer/export?bbox=-119.955404,36.291518,-119.891404,36.335518&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "credit": "USGS / The National Map",
+      "caption": "USGS topo basemap centered on the sourced approximate address/reporting point; imagery may predate construction.",
+      "bytes": 118762,
+      "width": 1600,
+      "height": 1000,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-large4-2026-10-23/dc-ameresco-nas-lemoore-kings-ca-topo.jpg"
+    },
+    {
+      "key": "dc-ameresco-nas-lemoore-kings-ca",
+      "layer": "relief",
+      "sourceUrl": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSShadedReliefOnly/MapServer/export?bbox=-120.003404,36.263518,-119.843404,36.363518&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "sourcePage": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSShadedReliefOnly/MapServer/export?bbox=-120.003404,36.263518,-119.843404,36.363518&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "credit": "USGS / The National Map",
+      "caption": "USGS relief basemap centered on the sourced approximate address/reporting point; imagery may predate construction.",
+      "bytes": 56588,
+      "width": 1600,
+      "height": 1000,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-large4-2026-10-23/dc-ameresco-nas-lemoore-kings-ca-relief.jpg"
+    },
+    {
+      "key": "dc-jay-androscoggin-franklin-me",
+      "layer": "aerial",
+      "sourceUrl": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSImageryOnly/MapServer/export?bbox=-70.253549,44.494958,-70.223549,44.514958&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "sourcePage": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSImageryOnly/MapServer/export?bbox=-70.253549,44.494958,-70.223549,44.514958&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "credit": "USGS / The National Map",
+      "caption": "USGS aerial basemap centered on the sourced approximate address/reporting point; imagery may predate construction.",
+      "bytes": 538918,
+      "width": 1600,
+      "height": 1000,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-large4-2026-10-23/dc-jay-androscoggin-franklin-me-aerial.jpg"
+    },
+    {
+      "key": "dc-jay-androscoggin-franklin-me",
+      "layer": "topo",
+      "sourceUrl": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSTopo/MapServer/export?bbox=-70.270549,44.482958,-70.206549,44.526958&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "sourcePage": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSTopo/MapServer/export?bbox=-70.270549,44.482958,-70.206549,44.526958&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "credit": "USGS / The National Map",
+      "caption": "USGS topo basemap centered on the sourced approximate address/reporting point; imagery may predate construction.",
+      "bytes": 435782,
+      "width": 1600,
+      "height": 1000,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-large4-2026-10-23/dc-jay-androscoggin-franklin-me-topo.jpg"
+    },
+    {
+      "key": "dc-jay-androscoggin-franklin-me",
+      "layer": "relief",
+      "sourceUrl": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSShadedReliefOnly/MapServer/export?bbox=-70.318549,44.454958,-70.158549,44.554958&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "sourcePage": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSShadedReliefOnly/MapServer/export?bbox=-70.318549,44.454958,-70.158549,44.554958&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "credit": "USGS / The National Map",
+      "caption": "USGS relief basemap centered on the sourced approximate address/reporting point; imagery may predate construction.",
+      "bytes": 182701,
+      "width": 1600,
+      "height": 1000,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-large4-2026-10-23/dc-jay-androscoggin-franklin-me-relief.jpg"
+    },
+    {
+      "key": "dc-prologis-zanker-bldg4-santa-clara-ca",
+      "layer": "aerial",
+      "sourceUrl": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSImageryOnly/MapServer/export?bbox=-121.958000,37.413000,-121.928000,37.433000&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "sourcePage": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSImageryOnly/MapServer/export?bbox=-121.958000,37.413000,-121.928000,37.433000&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "credit": "USGS / The National Map",
+      "caption": "USGS aerial basemap centered on the sourced approximate address/reporting point; imagery may predate construction.",
+      "bytes": 435288,
+      "width": 1600,
+      "height": 1000,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-large4-2026-10-23/dc-prologis-zanker-bldg4-santa-clara-ca-aerial.jpg"
+    },
+    {
+      "key": "dc-prologis-zanker-bldg4-santa-clara-ca",
+      "layer": "topo",
+      "sourceUrl": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSTopo/MapServer/export?bbox=-121.975000,37.401000,-121.911000,37.445000&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "sourcePage": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSTopo/MapServer/export?bbox=-121.975000,37.401000,-121.911000,37.445000&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "credit": "USGS / The National Map",
+      "caption": "USGS topo basemap centered on the sourced approximate address/reporting point; imagery may predate construction.",
+      "bytes": 454128,
+      "width": 1600,
+      "height": 1000,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-large4-2026-10-23/dc-prologis-zanker-bldg4-santa-clara-ca-topo.jpg"
+    },
+    {
+      "key": "dc-prologis-zanker-bldg4-santa-clara-ca",
+      "layer": "relief",
+      "sourceUrl": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSShadedReliefOnly/MapServer/export?bbox=-122.023000,37.373000,-121.863000,37.473000&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "sourcePage": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSShadedReliefOnly/MapServer/export?bbox=-122.023000,37.373000,-121.863000,37.473000&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "credit": "USGS / The National Map",
+      "caption": "USGS relief basemap centered on the sourced approximate address/reporting point; imagery may predate construction.",
+      "bytes": 113910,
+      "width": 1600,
+      "height": 1000,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-large4-2026-10-23/dc-prologis-zanker-bldg4-santa-clara-ca-relief.jpg"
+    },
+    {
+      "key": "solar-sandy-bayou-mississippi-ar",
+      "layer": "aerial",
+      "sourceUrl": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSImageryOnly/MapServer/export?bbox=-89.976249,35.603312,-89.946249,35.623312&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "sourcePage": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSImageryOnly/MapServer/export?bbox=-89.976249,35.603312,-89.946249,35.623312&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "credit": "USGS / The National Map",
+      "caption": "USGS aerial basemap centered on the sourced approximate address/reporting point; imagery may predate construction.",
+      "bytes": 262436,
+      "width": 1600,
+      "height": 1000,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-large4-2026-10-23/solar-sandy-bayou-mississippi-ar-aerial.jpg"
+    },
+    {
+      "key": "solar-sandy-bayou-mississippi-ar",
+      "layer": "topo",
+      "sourceUrl": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSTopo/MapServer/export?bbox=-89.993249,35.591312,-89.929249,35.635312&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "sourcePage": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSTopo/MapServer/export?bbox=-89.993249,35.591312,-89.929249,35.635312&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "credit": "USGS / The National Map",
+      "caption": "USGS topo basemap centered on the sourced approximate address/reporting point; imagery may predate construction.",
+      "bytes": 275018,
+      "width": 1600,
+      "height": 1000,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-large4-2026-10-23/solar-sandy-bayou-mississippi-ar-topo.jpg"
+    },
+    {
+      "key": "solar-sandy-bayou-mississippi-ar",
+      "layer": "relief",
+      "sourceUrl": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSShadedReliefOnly/MapServer/export?bbox=-90.041249,35.563312,-89.881249,35.663312&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "sourcePage": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSShadedReliefOnly/MapServer/export?bbox=-90.041249,35.563312,-89.881249,35.663312&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "credit": "USGS / The National Map",
+      "caption": "USGS relief basemap centered on the sourced approximate address/reporting point; imagery may predate construction.",
+      "bytes": 82033,
+      "width": 1600,
+      "height": 1000,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-large4-2026-10-23/solar-sandy-bayou-mississippi-ar-relief.jpg"
+    },
+    {
+      "key": "battery-clinton-clinton-mo",
+      "layer": "aerial",
+      "sourceUrl": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSImageryOnly/MapServer/export?bbox=-93.793269,38.358633,-93.763269,38.378633&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "sourcePage": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSImageryOnly/MapServer/export?bbox=-93.793269,38.358633,-93.763269,38.378633&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "credit": "USGS / The National Map",
+      "caption": "USGS aerial basemap centered on the sourced approximate address/reporting point; imagery may predate construction.",
+      "bytes": 608955,
+      "width": 1600,
+      "height": 1000,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-large4-2026-10-23/battery-clinton-clinton-mo-aerial.jpg"
+    },
+    {
+      "key": "battery-clinton-clinton-mo",
+      "layer": "topo",
+      "sourceUrl": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSTopo/MapServer/export?bbox=-93.810269,38.346633,-93.746269,38.390633&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "sourcePage": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSTopo/MapServer/export?bbox=-93.810269,38.346633,-93.746269,38.390633&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "credit": "USGS / The National Map",
+      "caption": "USGS topo basemap centered on the sourced approximate address/reporting point; imagery may predate construction.",
+      "bytes": 449317,
+      "width": 1600,
+      "height": 1000,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-large4-2026-10-23/battery-clinton-clinton-mo-topo.jpg"
+    },
+    {
+      "key": "battery-clinton-clinton-mo",
+      "layer": "relief",
+      "sourceUrl": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSShadedReliefOnly/MapServer/export?bbox=-93.858269,38.318633,-93.698269,38.418633&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "sourcePage": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSShadedReliefOnly/MapServer/export?bbox=-93.858269,38.318633,-93.698269,38.418633&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "credit": "USGS / The National Map",
+      "caption": "USGS relief basemap centered on the sourced approximate address/reporting point; imagery may predate construction.",
+      "bytes": 100409,
+      "width": 1600,
+      "height": 1000,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-large4-2026-10-23/battery-clinton-clinton-mo-relief.jpg"
+    },
+    {
+      "key": "battery-jupiter-middlesex-ma",
+      "layer": "aerial",
+      "sourceUrl": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSImageryOnly/MapServer/export?bbox=-71.081378,42.381871,-71.051378,42.401871&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "sourcePage": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSImageryOnly/MapServer/export?bbox=-71.081378,42.381871,-71.051378,42.401871&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "credit": "USGS / The National Map",
+      "caption": "USGS aerial basemap centered on the sourced approximate address/reporting point; imagery may predate construction.",
+      "bytes": 524550,
+      "width": 1600,
+      "height": 1000,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-large4-2026-10-23/battery-jupiter-middlesex-ma-aerial.jpg"
+    },
+    {
+      "key": "battery-jupiter-middlesex-ma",
+      "layer": "topo",
+      "sourceUrl": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSTopo/MapServer/export?bbox=-71.098378,42.369871,-71.034378,42.413871&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "sourcePage": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSTopo/MapServer/export?bbox=-71.098378,42.369871,-71.034378,42.413871&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "credit": "USGS / The National Map",
+      "caption": "USGS topo basemap centered on the sourced approximate address/reporting point; imagery may predate construction.",
+      "bytes": 582688,
+      "width": 1600,
+      "height": 1000,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-large4-2026-10-23/battery-jupiter-middlesex-ma-topo.jpg"
+    },
+    {
+      "key": "battery-jupiter-middlesex-ma",
+      "layer": "relief",
+      "sourceUrl": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSShadedReliefOnly/MapServer/export?bbox=-71.146378,42.341871,-70.986378,42.441871&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "sourcePage": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSShadedReliefOnly/MapServer/export?bbox=-71.146378,42.341871,-70.986378,42.441871&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "credit": "USGS / The National Map",
+      "caption": "USGS relief basemap centered on the sourced approximate address/reporting point; imagery may predate construction.",
+      "bytes": 134916,
+      "width": 1600,
+      "height": 1000,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-large4-2026-10-23/battery-jupiter-middlesex-ma-relief.jpg"
+    },
+    {
+      "key": "dc-blox-grassmere-davidson-tn",
+      "layer": "aerial",
+      "sourceUrl": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSImageryOnly/MapServer/export?bbox=-86.764008,36.076435,-86.734008,36.096435&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "sourcePage": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSImageryOnly/MapServer/export?bbox=-86.764008,36.076435,-86.734008,36.096435&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "credit": "USGS / The National Map",
+      "caption": "USGS aerial basemap centered on the sourced approximate address/reporting point; imagery may predate construction.",
+      "bytes": 599840,
+      "width": 1600,
+      "height": 1000,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-large4-2026-10-23/dc-blox-grassmere-davidson-tn-aerial.jpg"
+    },
+    {
+      "key": "dc-blox-grassmere-davidson-tn",
+      "layer": "topo",
+      "sourceUrl": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSTopo/MapServer/export?bbox=-86.781008,36.064435,-86.717008,36.108435&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "sourcePage": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSTopo/MapServer/export?bbox=-86.781008,36.064435,-86.717008,36.108435&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "credit": "USGS / The National Map",
+      "caption": "USGS topo basemap centered on the sourced approximate address/reporting point; imagery may predate construction.",
+      "bytes": 579731,
+      "width": 1600,
+      "height": 1000,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-large4-2026-10-23/dc-blox-grassmere-davidson-tn-topo.jpg"
+    },
+    {
+      "key": "dc-blox-grassmere-davidson-tn",
+      "layer": "relief",
+      "sourceUrl": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSShadedReliefOnly/MapServer/export?bbox=-86.829008,36.036435,-86.669008,36.136435&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "sourcePage": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSShadedReliefOnly/MapServer/export?bbox=-86.829008,36.036435,-86.669008,36.136435&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "credit": "USGS / The National Map",
+      "caption": "USGS relief basemap centered on the sourced approximate address/reporting point; imagery may predate construction.",
+      "bytes": 179393,
+      "width": 1600,
+      "height": 1000,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-large4-2026-10-23/dc-blox-grassmere-davidson-tn-relief.jpg"
+    },
+    {
+      "key": "dc-teton-trinity-williams-nd",
+      "layer": "aerial",
+      "sourceUrl": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSImageryOnly/MapServer/export?bbox=-102.924464,48.268730,-102.894464,48.288730&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "sourcePage": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSImageryOnly/MapServer/export?bbox=-102.924464,48.268730,-102.894464,48.288730&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "credit": "USGS / The National Map",
+      "caption": "USGS aerial basemap centered on the sourced approximate address/reporting point; imagery may predate construction.",
+      "bytes": 298030,
+      "width": 1600,
+      "height": 1000,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-large4-2026-10-23/dc-teton-trinity-williams-nd-aerial.jpg"
+    },
+    {
+      "key": "dc-teton-trinity-williams-nd",
+      "layer": "topo",
+      "sourceUrl": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSTopo/MapServer/export?bbox=-102.941464,48.256730,-102.877464,48.300730&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "sourcePage": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSTopo/MapServer/export?bbox=-102.941464,48.256730,-102.877464,48.300730&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "credit": "USGS / The National Map",
+      "caption": "USGS topo basemap centered on the sourced approximate address/reporting point; imagery may predate construction.",
+      "bytes": 377250,
+      "width": 1600,
+      "height": 1000,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-large4-2026-10-23/dc-teton-trinity-williams-nd-topo.jpg"
+    },
+    {
+      "key": "dc-teton-trinity-williams-nd",
+      "layer": "relief",
+      "sourceUrl": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSShadedReliefOnly/MapServer/export?bbox=-102.989464,48.228730,-102.829464,48.328730&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "sourcePage": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSShadedReliefOnly/MapServer/export?bbox=-102.989464,48.228730,-102.829464,48.328730&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "credit": "USGS / The National Map",
+      "caption": "USGS relief basemap centered on the sourced approximate address/reporting point; imagery may predate construction.",
+      "bytes": 122163,
+      "width": 1600,
+      "height": 1000,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-large4-2026-10-23/dc-teton-trinity-williams-nd-relief.jpg"
+    },
+    {
+      "key": "solar-coffey-hecate-coffey-ks",
+      "layer": "aerial",
+      "sourceUrl": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSImageryOnly/MapServer/export?bbox=-95.850000,38.214500,-95.820000,38.234500&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "sourcePage": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSImageryOnly/MapServer/export?bbox=-95.850000,38.214500,-95.820000,38.234500&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "credit": "USGS / The National Map",
+      "caption": "USGS aerial basemap centered on the sourced approximate address/reporting point; imagery may predate construction.",
+      "bytes": 344283,
+      "width": 1600,
+      "height": 1000,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-large4-2026-10-23/solar-coffey-hecate-coffey-ks-aerial.jpg"
+    },
+    {
+      "key": "solar-coffey-hecate-coffey-ks",
+      "layer": "topo",
+      "sourceUrl": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSTopo/MapServer/export?bbox=-95.867000,38.202500,-95.803000,38.246500&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "sourcePage": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSTopo/MapServer/export?bbox=-95.867000,38.202500,-95.803000,38.246500&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "credit": "USGS / The National Map",
+      "caption": "USGS topo basemap centered on the sourced approximate address/reporting point; imagery may predate construction.",
+      "bytes": 280999,
+      "width": 1600,
+      "height": 1000,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-large4-2026-10-23/solar-coffey-hecate-coffey-ks-topo.jpg"
+    },
+    {
+      "key": "solar-coffey-hecate-coffey-ks",
+      "layer": "relief",
+      "sourceUrl": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSShadedReliefOnly/MapServer/export?bbox=-95.915000,38.174500,-95.755000,38.274500&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "sourcePage": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSShadedReliefOnly/MapServer/export?bbox=-95.915000,38.174500,-95.755000,38.274500&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "credit": "USGS / The National Map",
+      "caption": "USGS relief basemap centered on the sourced approximate address/reporting point; imagery may predate construction.",
+      "bytes": 78671,
+      "width": 1600,
+      "height": 1000,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-large4-2026-10-23/solar-coffey-hecate-coffey-ks-relief.jpg"
+    },
+    {
+      "key": "dc-pointone-lee-county-nc",
+      "layer": "lee-render",
+      "sourceUrl": "https://cdn.prod.website-files.com/678a047a5532bbee9a126439/6a56554c05e61ae5d09e33ac_PointOne%20-%20DUR3%20Campus%20-%20Engry%20View%202%5B29%5D.png",
+      "sourcePage": "https://www.pointonecorp.com/locations",
+      "credit": "PointOne Data Centers",
+      "caption": "PointOne’s Raleigh / Lee County conceptual rendering, as displayed on its locations page; not a completed-building photograph.",
+      "bytes": 3140937,
+      "width": 1536,
+      "height": 1024,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-large4-2026-10-23/lee-render.png"
+    },
+    {
+      "key": "dc-prologis-zanker-bldg4-santa-clara-ca",
+      "layer": "prologis-plan",
+      "sourceUrl": "https://sanjose.legistar.com/View.ashx?M=F&ID=14917877&GUID=45941F3A-0A60-42A1-8F04-B09281C6E2F3",
+      "sourcePage": "https://sanjose.legistar.com/View.ashx?M=F&ID=14917877&GUID=45941F3A-0A60-42A1-8F04-B09281C6E2F3",
+      "credit": "Prologis / City of San José, October 2025 memorandum Attachment A",
+      "caption": "Prologis STEM Park conceptual site-development plan from Attachment A, showing Buildings A–D and separate manufacturing; not construction evidence.",
+      "bytes": 350330,
+      "width": 1408,
+      "height": 1088,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-large4-2026-10-23/prologis-embedded-0.jpg"
+    },
+    {
+      "key": "dc-teton-trinity-williams-nd",
+      "layer": "trinity-plan",
+      "sourceUrl": "https://williamsnd.civicweb.net/document/177085/Teton%20Digital%20-%20Dry%20Fork%20Data%20Center%20One%20Pager.pdf",
+      "sourcePage": "https://williamsnd.civicweb.net/document/177085/Teton%20Digital%20-%20Dry%20Fork%20Data%20Center%20One%20Pager.pdf",
+      "credit": "Teton Digital / Williams County February 2025 filing; underlying aerial map as credited in source",
+      "caption": "Trinity 1 applicant’s site-context diagram showing proposed 25-acre subdivision and MWEC substation; historical February 2025 proposal, not verified construction.",
+      "bytes": 256334,
+      "width": 1983,
+      "height": 968,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-large4-2026-10-23/trinity-embedded-0.jpg"
+    }
+  ],
+  "researchNotes": [
+    "Content maintenance under standing authorization. No application changes, build, restart or production deployment.",
+    "PJM MFO is total facility output, MWE is the incremental energy request in these studies and MWC is capacity rights; none is battery MWh. Used explicit storage specifications and related requests.",
+    "Historical regulatory/study/public-information events replace unsupported CODs for Oystercatcher, Oak Run, Jay, Prologis, Clover–Rawlings, Heritage–Wake, Jupiter, Sabey and Otter Creek. These dates are not opening dates.",
+    "MISO J4194 has applicationStatus Active and withdrawnDate 2026-06-11; do not silently classify it as either operating or cancelled. The queue provides no developer identity.",
+    "SPP GEN-2025-SR1 is surplus storage sharing an existing solar 400 MW export limit. Study equipment is 475 MW DC / 418 MW AC, distinct from requested 400 MW service. Clinton is a queue location, not proof of Clinton County.",
+    "CAISO HOODINI 1663: 450 MW storage, 459.54 MW PV, 450 MW net export, SDGE, December 31, 2031. Power row represents the solar component; do not sum hybrid capacities into export.",
+    "Location markers are sourced/qualified context points. Trinity uses BLM Section 4 T155N R95W geometry and S-half NW-quarter approximation; this is not a surveyed 25-acre subdivision. Other new points use operator/county maps, a regulator POI or address/city geocodes, not final site boundaries.",
+    "Official galleries and linked project documents checked. PointOne render is labelled conceptual. Prologis and Teton diagrams are embedded originals from opened primary PDFs. NAS Lemoore/Chirisa downloads were blocked or returned thin shells; no unrelated stock photo substituted. Butte committee images were decorative and Otter Creek boards include an unrelated Upshur Texas solar photo, neither used as site photography.",
+    "PJM Phase II studies, SPP active listing and report, fresh MISO API, valid same-day CAISO/EIA workbooks and ISO-NE QP1143 approval letter inspected. Later direct CAISO download hit certificate validation; EIA XLSX URL returned HTML, so neither was counted as a fresh workbook. BLM old PDF URL returned registry HTML, leaving the exact Monte Cristo Phase 1 identity unresolved.",
+    "No globally refreshed translations, source wikis, stock associations, unchanged outlines or retained approximate coordinates. API auto-linked the exact Prologis/Sabey company names to their matching company wiki URLs; those links were retained.",
+    "No credit balance is available; this checkpoint does not claim a measured low-credit threshold."
+  ],
+  "heldSourceFetchChecks": [
+    {
+      "url": "https://apps.psc.wi.gov/",
+      "httpStatus": "404",
+      "curlCode": 0,
+      "bytes": 2453
+    },
+    {
+      "url": "https://eplanning.blm.gov/eplanning-ui/project/2026842/510",
+      "httpStatus": "200",
+      "curlCode": 0,
+      "bytes": 125806
+    },
+    {
+      "url": "https://eplanning.blm.gov/public_projects/2022371/200538533/20125356/251025336/Solar%20PEIS%20ROD_Vol%201_Final%2012.19.2024.pdf",
+      "httpStatus": "200",
+      "curlCode": 0,
+      "bytes": 145451
+    },
+    {
+      "url": "https://oppj.org/planning-and-zoning/",
+      "httpStatus": "404",
+      "curlCode": 0,
+      "bytes": 0
+    },
+    {
+      "url": "https://puc.nv.gov/Dockets/Detail_24-03014/",
+      "httpStatus": "404",
+      "curlCode": 0,
+      "bytes": 31089
+    },
+    {
+      "url": "https://puc.nv.gov/Dockets/Detail_24/24-07015/",
+      "httpStatus": "404",
+      "curlCode": 0,
+      "bytes": 31205
+    },
+    {
+      "url": "https://www.caiso.com/documents/publicqueuereport.xlsx",
+      "httpStatus": "000",
+      "curlCode": 60,
+      "bytes": 0
+    },
+    {
+      "url": "https://www.dominionenergy.com/about/delivering-energy/solar-energy-projects/virginia-solar-projects/rocky-run",
+      "httpStatus": "200",
+      "curlCode": 0,
+      "bytes": 197454
+    },
+    {
+      "url": "https://www.eia.gov/electricity/data/eia860m/xls/august_generator2026.xlsx",
+      "httpStatus": "200",
+      "curlCode": 0,
+      "bytes": 55913
+    },
+    {
+      "url": "https://www.misoenergy.org/api/giqueue/getprojects",
+      "httpStatus": "200",
+      "curlCode": 0,
+      "bytes": 2325931
+    }
+  ]
+}
