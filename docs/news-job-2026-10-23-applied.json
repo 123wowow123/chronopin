@@ -1,0 +1,1796 @@
+{
+  "runId": 19,
+  "jobId": "news",
+  "driver": "session",
+  "trigger": "manual",
+  "startedAt": "2026-10-23T13:09:35.859Z",
+  "newPinIds": [
+    19529,
+    19530,
+    19531
+  ],
+  "existingContentUpdatedIds": [
+    18460,
+    16017,
+    2857,
+    3181,
+    4451
+  ],
+  "dueEventReadings": [
+    {
+      "pinId": 3553,
+      "changes": [],
+      "reading": {
+        "performers": [],
+        "ticketUrl": null,
+        "lowPrice": null,
+        "highPrice": null,
+        "priceCurrency": null,
+        "tiers": [],
+        "itinerary": [],
+        "availability": null,
+        "onSaleDate": null,
+        "source": "session",
+        "sourceUrl": "https://www.salesforce.com/tdx/form-save-date-tdx27/",
+        "checkedAt": "2026-10-23T13:21:53.619Z"
+      },
+      "pagesRead": 2
+    },
+    {
+      "pinId": 2954,
+      "changes": [],
+      "reading": {
+        "performers": [],
+        "ticketUrl": null,
+        "lowPrice": null,
+        "highPrice": null,
+        "priceCurrency": null,
+        "tiers": [],
+        "itinerary": [],
+        "availability": null,
+        "onSaleDate": null,
+        "source": "session",
+        "sourceUrl": "https://www.nvidia.com/gtc/",
+        "checkedAt": "2026-10-23T13:21:53.816Z"
+      },
+      "pagesRead": 3
+    },
+    {
+      "pinId": 2109,
+      "changes": [],
+      "reading": {
+        "performers": [],
+        "ticketUrl": null,
+        "lowPrice": null,
+        "highPrice": null,
+        "priceCurrency": null,
+        "tiers": [],
+        "itinerary": [],
+        "availability": null,
+        "onSaleDate": null,
+        "source": "session",
+        "sourceUrl": "https://www.mwcbarcelona.com/",
+        "checkedAt": "2026-10-23T13:21:55.804Z"
+      },
+      "pagesRead": 3
+    },
+    {
+      "pinId": 3337,
+      "changes": [],
+      "reading": {
+        "performers": [
+          {
+            "name": "San Diego Padres",
+            "type": "PerformingGroup"
+          },
+          {
+            "name": "Arizona Diamondbacks",
+            "type": "PerformingGroup"
+          }
+        ],
+        "ticketUrl": null,
+        "lowPrice": null,
+        "highPrice": null,
+        "priceCurrency": null,
+        "tiers": [],
+        "itinerary": [],
+        "availability": null,
+        "onSaleDate": null,
+        "source": "session",
+        "sourceUrl": "https://www.mlb.com/press-release/padres-2027-schedule",
+        "checkedAt": "2026-10-23T13:21:57.856Z"
+      },
+      "pagesRead": 1
+    },
+    {
+      "pinId": 3418,
+      "changes": [],
+      "reading": {
+        "performers": [],
+        "ticketUrl": null,
+        "lowPrice": null,
+        "highPrice": null,
+        "priceCurrency": null,
+        "tiers": [],
+        "itinerary": [],
+        "availability": null,
+        "onSaleDate": null,
+        "source": "session",
+        "sourceUrl": "https://www.nabshow.com/las-vegas/",
+        "checkedAt": "2026-10-23T13:21:59.961Z"
+      },
+      "pagesRead": 3
+    },
+    {
+      "pinId": 3450,
+      "changes": [],
+      "reading": {
+        "performers": [],
+        "ticketUrl": "https://edclasvegas.frontgatetickets.com/",
+        "lowPrice": 399.99,
+        "highPrice": 599.99,
+        "priceCurrency": "USD",
+        "tiers": [
+          {
+            "note": "Announced starting price, venue release May 19, 2026.",
+            "label": "One-weekend GA",
+            "price": 399.99
+          },
+          {
+            "note": "Announced starting price, venue release May 19, 2026.",
+            "label": "Two-weekend GA",
+            "price": 599.99
+          }
+        ],
+        "itinerary": [],
+        "availability": "InStock",
+        "onSaleDate": null,
+        "source": "session",
+        "sourceUrl": "https://www.lvms.com/media/news/edc-las-vegas-introduces-new-dusk-till-dawn-2027-day-festival-concept-spanning-two-consecutive-weekends.html",
+        "checkedAt": "2026-10-23T13:22:02.009Z"
+      },
+      "pagesRead": 2
+    },
+    {
+      "pinId": 3317,
+      "changes": [],
+      "reading": {
+        "performers": [],
+        "ticketUrl": "https://www.letsdothis.com/us/o/82706/checkout/ticket?preferred=true&eventId=268210&occurrenceId=21111176959&utm_source=website&utm_medium=organic&utm_campaign=general-ticket-selection&utm_organiser_id=82706&login=skipped",
+        "lowPrice": 69,
+        "highPrice": 69,
+        "priceCurrency": "USD",
+        "tiers": [
+          {
+            "note": "Includes processing fees. VIP add-on is separate; later releases are not current prices.",
+            "label": "Current release — 12k registration",
+            "price": 69
+          }
+        ],
+        "itinerary": [],
+        "availability": "InStock",
+        "onSaleDate": null,
+        "source": "session",
+        "sourceUrl": "https://www.baytobreakers.com/12k",
+        "checkedAt": "2026-10-23T13:22:04.170Z"
+      },
+      "pagesRead": 3
+    },
+    {
+      "pinId": 3429,
+      "changes": [],
+      "reading": {
+        "performers": [],
+        "ticketUrl": null,
+        "lowPrice": null,
+        "highPrice": null,
+        "priceCurrency": null,
+        "tiers": [],
+        "itinerary": [],
+        "availability": null,
+        "onSaleDate": null,
+        "source": "session",
+        "sourceUrl": "https://www.googlecloudevents.com/next-vegas",
+        "checkedAt": "2026-10-23T13:22:06.128Z"
+      },
+      "pagesRead": 3
+    },
+    {
+      "pinId": 3557,
+      "changes": [],
+      "reading": {
+        "performers": [],
+        "ticketUrl": null,
+        "lowPrice": null,
+        "highPrice": null,
+        "priceCurrency": null,
+        "tiers": [],
+        "itinerary": [],
+        "availability": null,
+        "onSaleDate": null,
+        "source": "session",
+        "sourceUrl": "https://www.salesforce.com/connections/join-the-list/",
+        "checkedAt": "2026-10-23T13:22:08.191Z"
+      },
+      "pagesRead": 3
+    },
+    {
+      "pinId": 2483,
+      "changes": [],
+      "reading": {
+        "performers": [],
+        "ticketUrl": "https://tickets.rolandgarros.com/en/",
+        "lowPrice": null,
+        "highPrice": null,
+        "priceCurrency": null,
+        "tiers": [],
+        "itinerary": [],
+        "availability": null,
+        "onSaleDate": null,
+        "source": "session",
+        "sourceUrl": "https://www.rolandgarros.com/en-us/",
+        "checkedAt": "2026-10-23T13:22:10.227Z"
+      },
+      "pagesRead": 2
+    },
+    {
+      "pinId": 2482,
+      "changes": [],
+      "reading": {
+        "performers": [],
+        "ticketUrl": "https://tickets.rolandgarros.com/en/",
+        "lowPrice": null,
+        "highPrice": null,
+        "priceCurrency": null,
+        "tiers": [],
+        "itinerary": [],
+        "availability": null,
+        "onSaleDate": null,
+        "source": "session",
+        "sourceUrl": "https://www.rolandgarros.com/en-us/",
+        "checkedAt": "2026-10-23T13:22:12.315Z"
+      },
+      "pagesRead": 2
+    },
+    {
+      "pinId": 3540,
+      "changes": [
+        "future registration notice is not PreOrder"
+      ],
+      "reading": {
+        "performers": [],
+        "ticketUrl": "https://www.anime-expo.org/ax/register/",
+        "lowPrice": null,
+        "highPrice": null,
+        "priceCurrency": null,
+        "tiers": [],
+        "itinerary": [],
+        "availability": null,
+        "onSaleDate": null,
+        "source": "session",
+        "sourceUrl": "https://www.anime-expo.org/2026/07/10/anime-expo-2026-wraps-its-35th-edition-with-attendees-from-over-65-countries-and-over-1400-hours-of-programming/",
+        "checkedAt": "2026-10-23T13:22:14.480Z"
+      },
+      "pagesRead": 3
+    },
+    {
+      "pinId": 3334,
+      "changes": [
+        "future registration notice is not PreOrder"
+      ],
+      "reading": {
+        "performers": [],
+        "ticketUrl": null,
+        "lowPrice": null,
+        "highPrice": null,
+        "priceCurrency": null,
+        "tiers": [],
+        "itinerary": [],
+        "availability": null,
+        "onSaleDate": null,
+        "source": "session",
+        "sourceUrl": "https://www.salesforce.com/dreamforce/faq/",
+        "checkedAt": "2026-10-23T13:22:16.504Z"
+      },
+      "pagesRead": 3
+    },
+    {
+      "pinId": 1953,
+      "changes": [
+        "official Game1 teams"
+      ],
+      "reading": {
+        "performers": [
+          {
+            "name": "Milwaukee Brewers",
+            "type": "PerformingGroup"
+          },
+          {
+            "name": "Tampa Bay Rays",
+            "type": "PerformingGroup"
+          }
+        ],
+        "ticketUrl": "https://www.mlb.com/postseason/tickets",
+        "lowPrice": null,
+        "highPrice": null,
+        "priceCurrency": null,
+        "tiers": [],
+        "itinerary": [],
+        "availability": null,
+        "onSaleDate": null,
+        "source": "session",
+        "sourceUrl": "https://www.mlb.com/news/2026-mlb-playoff-and-world-series-schedule",
+        "checkedAt": "2026-10-23T13:22:18.596Z"
+      },
+      "pagesRead": 3
+    },
+    {
+      "pinId": 1958,
+      "changes": [],
+      "reading": {
+        "performers": [],
+        "ticketUrl": null,
+        "lowPrice": null,
+        "highPrice": null,
+        "priceCurrency": null,
+        "tiers": [],
+        "itinerary": [],
+        "availability": null,
+        "onSaleDate": null,
+        "source": "session",
+        "sourceUrl": "https://kalshi.com/markets/kxballondor/who-will-win-the-ballon-dor-in-2026/kxballondor-26",
+        "checkedAt": "2026-10-23T13:22:20.701Z"
+      },
+      "pagesRead": 3
+    },
+    {
+      "pinId": 3033,
+      "changes": [],
+      "reading": {
+        "performers": [
+          {
+            "name": "Paul Turner",
+            "type": "Person"
+          },
+          {
+            "name": "Chris McCain",
+            "type": "Person"
+          },
+          {
+            "name": "Purnima Padmanabhan",
+            "type": "Person"
+          }
+        ],
+        "ticketUrl": null,
+        "lowPrice": null,
+        "highPrice": null,
+        "priceCurrency": null,
+        "tiers": [],
+        "itinerary": [],
+        "availability": null,
+        "onSaleDate": null,
+        "source": "session",
+        "sourceUrl": "https://event.vmware.com/flow/vmware/eotdc26/site/page/home",
+        "checkedAt": "2026-10-23T13:22:22.825Z"
+      },
+      "pagesRead": 3
+    },
+    {
+      "pinId": 1959,
+      "changes": [],
+      "reading": {
+        "performers": [],
+        "ticketUrl": null,
+        "lowPrice": null,
+        "highPrice": null,
+        "priceCurrency": null,
+        "tiers": [],
+        "itinerary": [],
+        "availability": null,
+        "onSaleDate": null,
+        "source": "session",
+        "sourceUrl": "https://kalshi.com/markets/kxheisman/heisman-trophy-winner/kxheisman-27",
+        "checkedAt": "2026-10-23T13:22:24.893Z"
+      },
+      "pagesRead": 3
+    },
+    {
+      "pinId": 2521,
+      "changes": [
+        "venue On Sale Now; remove rescheduled Pyfer/Nickal"
+      ],
+      "reading": {
+        "performers": [
+          {
+            "name": "Charles Oliveira",
+            "type": "Person"
+          },
+          {
+            "name": "Diego Lopes",
+            "type": "Person"
+          },
+          {
+            "name": "Alex Pereira",
+            "type": "Person"
+          },
+          {
+            "name": "Sergei Pavlovich",
+            "type": "Person"
+          },
+          {
+            "name": "Brandon Moreno",
+            "type": "Person"
+          },
+          {
+            "name": "Charles Johnson",
+            "type": "Person"
+          }
+        ],
+        "ticketUrl": "https://www.axs.com/events/1583428/ufc-335-tickets",
+        "lowPrice": null,
+        "highPrice": null,
+        "priceCurrency": null,
+        "tiers": [],
+        "itinerary": [],
+        "availability": "InStock",
+        "onSaleDate": null,
+        "source": "session",
+        "sourceUrl": "https://www.t-mobilearena.com/events/detail/ufc-335",
+        "checkedAt": "2026-10-23T13:22:26.986Z"
+      },
+      "pagesRead": 3
+    },
+    {
+      "pinId": 3798,
+      "changes": [],
+      "reading": {
+        "performers": [],
+        "ticketUrl": "https://www.seawheeze.com/event-information/registration/",
+        "lowPrice": null,
+        "highPrice": null,
+        "priceCurrency": null,
+        "tiers": [],
+        "itinerary": [],
+        "availability": null,
+        "onSaleDate": null,
+        "source": "session",
+        "sourceUrl": "https://www.seawheeze.com/",
+        "checkedAt": "2026-10-23T13:22:29.468Z"
+      },
+      "pagesRead": 3
+    },
+    {
+      "pinId": 3875,
+      "changes": [],
+      "reading": {
+        "performers": [],
+        "ticketUrl": null,
+        "lowPrice": 150,
+        "highPrice": 150,
+        "priceCurrency": "USD",
+        "tiers": [],
+        "itinerary": [],
+        "availability": "SoldOut",
+        "onSaleDate": null,
+        "source": "session",
+        "sourceUrl": "https://www.afterdarktour.nike.com/en/la",
+        "checkedAt": "2026-10-23T13:22:31.204Z"
+      },
+      "pagesRead": 3
+    },
+    {
+      "pinId": 3871,
+      "changes": [],
+      "reading": {
+        "performers": [],
+        "ticketUrl": null,
+        "lowPrice": 1800,
+        "highPrice": 1800,
+        "priceCurrency": "PHP",
+        "tiers": [],
+        "itinerary": [],
+        "availability": "SoldOut",
+        "onSaleDate": null,
+        "source": "session",
+        "sourceUrl": "https://www.afterdarktour.nike.com/en/manila",
+        "checkedAt": "2026-10-23T13:22:33.267Z"
+      },
+      "pagesRead": 3
+    },
+    {
+      "pinId": 3865,
+      "changes": [],
+      "reading": {
+        "performers": [],
+        "ticketUrl": null,
+        "lowPrice": 2500,
+        "highPrice": 2500,
+        "priceCurrency": "INR",
+        "tiers": [],
+        "itinerary": [],
+        "availability": "SoldOut",
+        "onSaleDate": null,
+        "source": "session",
+        "sourceUrl": "https://www.afterdarktour.nike.com/en/mumbai",
+        "checkedAt": "2026-10-23T13:22:35.402Z"
+      },
+      "pagesRead": 3
+    },
+    {
+      "pinId": 4015,
+      "changes": [],
+      "reading": {
+        "performers": [],
+        "ticketUrl": "https://www.ticketmaster.com/2026-nwsl-championship-presented-by-google-washington-district-of-columbia-11-21-2026/event/15006516DC0B17DC?CAMEFROM=CFC_DC_UNITED_WEB_AUDI_FIELD",
+        "lowPrice": null,
+        "highPrice": null,
+        "priceCurrency": null,
+        "tiers": [],
+        "itinerary": [],
+        "availability": "InStock",
+        "onSaleDate": null,
+        "source": "session",
+        "sourceUrl": "https://audifield.com/event/2026-nwsl-championship-presented-by-google-pixel/",
+        "checkedAt": "2026-10-23T13:22:37.466Z"
+      },
+      "pagesRead": 3
+    },
+    {
+      "pinId": 14240,
+      "changes": [],
+      "reading": {
+        "performers": [],
+        "ticketUrl": null,
+        "lowPrice": null,
+        "highPrice": null,
+        "priceCurrency": null,
+        "tiers": [],
+        "itinerary": [],
+        "availability": null,
+        "onSaleDate": null,
+        "source": "session",
+        "sourceUrl": "https://english.beijing.gov.cn/whatson/events/forum/202609/t20260930_4886674.html",
+        "checkedAt": "2026-10-23T13:22:39.618Z"
+      },
+      "pagesRead": 3
+    },
+    {
+      "pinId": 7649,
+      "changes": [],
+      "reading": {
+        "performers": [],
+        "ticketUrl": null,
+        "lowPrice": 0,
+        "highPrice": 0,
+        "priceCurrency": "JPY",
+        "tiers": [],
+        "itinerary": [],
+        "availability": "InStock",
+        "onSaleDate": null,
+        "source": "session",
+        "sourceUrl": "https://pannofes.jp/event/makuhari2026/",
+        "checkedAt": "2026-10-23T13:22:41.666Z"
+      },
+      "pagesRead": 3
+    },
+    {
+      "pinId": 7592,
+      "changes": [],
+      "reading": {
+        "performers": [],
+        "ticketUrl": null,
+        "lowPrice": null,
+        "highPrice": null,
+        "priceCurrency": null,
+        "tiers": [],
+        "itinerary": [],
+        "availability": null,
+        "onSaleDate": null,
+        "source": "session",
+        "sourceUrl": "https://www.worldchocolatemasters.com/final-2026",
+        "checkedAt": "2026-10-23T13:22:43.758Z"
+      },
+      "pagesRead": 3
+    },
+    {
+      "pinId": 7630,
+      "changes": [],
+      "reading": {
+        "performers": [],
+        "ticketUrl": "https://www.salon-du-chocolat.com/en/paris/practical-info/buy-my-ticket",
+        "lowPrice": null,
+        "highPrice": null,
+        "priceCurrency": null,
+        "tiers": [],
+        "itinerary": [],
+        "availability": "InStock",
+        "onSaleDate": null,
+        "source": "session",
+        "sourceUrl": "https://www.salon-du-chocolat.com/en/paris",
+        "checkedAt": "2026-10-23T13:22:45.858Z"
+      },
+      "pagesRead": 3
+    },
+    {
+      "pinId": 7623,
+      "changes": [],
+      "reading": {
+        "performers": [
+          {
+            "name": "Edward Lee",
+            "type": "Person"
+          }
+        ],
+        "ticketUrl": null,
+        "lowPrice": null,
+        "highPrice": null,
+        "priceCurrency": null,
+        "tiers": [],
+        "itinerary": [],
+        "availability": null,
+        "onSaleDate": null,
+        "source": "session",
+        "sourceUrl": "https://newshub.medianet.com.au/2026/08/hong-kong-wine-dine-festival-returns-this-autumn/166941/",
+        "checkedAt": "2026-10-23T13:22:47.954Z"
+      },
+      "pagesRead": 3
+    },
+    {
+      "pinId": 7648,
+      "changes": [],
+      "reading": {
+        "performers": [],
+        "ticketUrl": null,
+        "lowPrice": 0,
+        "highPrice": 0,
+        "priceCurrency": "JPY",
+        "tiers": [],
+        "itinerary": [],
+        "availability": "InStock",
+        "onSaleDate": null,
+        "source": "session",
+        "sourceUrl": "https://number.bunshun.jp/ud/pressrelease/6a5889271262179c88000001",
+        "checkedAt": "2026-10-23T13:22:50.050Z"
+      },
+      "pagesRead": 3
+    },
+    {
+      "pinId": 7652,
+      "changes": [],
+      "reading": {
+        "performers": [],
+        "ticketUrl": null,
+        "lowPrice": 0,
+        "highPrice": 0,
+        "priceCurrency": "JPY",
+        "tiers": [],
+        "itinerary": [],
+        "availability": "InStock",
+        "onSaleDate": null,
+        "source": "session",
+        "sourceUrl": "https://pannofes.jp/event/minamioosawa2026/",
+        "checkedAt": "2026-10-23T13:22:52.149Z"
+      },
+      "pagesRead": 3
+    },
+    {
+      "pinId": 7609,
+      "changes": [
+        "published USD/BBD event and combo prices, linked booking"
+      ],
+      "reading": {
+        "performers": [],
+        "ticketUrl": "https://www.foodandrum.com/events/",
+        "lowPrice": 100,
+        "highPrice": 250,
+        "priceCurrency": "USD",
+        "tiers": [
+          {
+            "note": "November6 18:00; BDS200 / USD100.",
+            "label": "Rum Route",
+            "price": 100
+          },
+          {
+            "note": "November7 04:00; Copacabana; BDS250 / USD125.",
+            "label": "Rise & Rum",
+            "price": 125
+          },
+          {
+            "note": "November8 19:00; CARIFESTA House; BDS350 / USD175.",
+            "label": "Liquid Gold",
+            "price": 175
+          },
+          {
+            "note": "Combined package; BDS500 / USD250.",
+            "label": "Rise & Rum + Liquid Gold combo",
+            "price": 250
+          }
+        ],
+        "itinerary": [],
+        "availability": "InStock",
+        "onSaleDate": null,
+        "source": "session",
+        "sourceUrl": "https://www.foodandrum.com/events/",
+        "checkedAt": "2026-10-23T13:22:54.244Z"
+      },
+      "pagesRead": 3
+    },
+    {
+      "pinId": 7608,
+      "changes": [],
+      "reading": {
+        "performers": [],
+        "ticketUrl": null,
+        "lowPrice": 3500,
+        "highPrice": 5000,
+        "priceCurrency": "JPY",
+        "tiers": [
+          {
+            "note": "November6,17:00–19:30; tax included.",
+            "label": "Premium Night",
+            "price": 3500
+          },
+          {
+            "note": "10:00–13:30; tax included.",
+            "label": "November7 first session",
+            "price": 5000
+          },
+          {
+            "note": "14:30–18:00; tax included.",
+            "label": "November7 second session",
+            "price": 5000
+          }
+        ],
+        "itinerary": [],
+        "availability": null,
+        "onSaleDate": null,
+        "source": "session",
+        "sourceUrl": "https://prtimes.jp/main/html/rd/p/000000328.000119996.html",
+        "checkedAt": "2026-10-23T13:22:56.357Z"
+      },
+      "pagesRead": 3
+    },
+    {
+      "pinId": 7627,
+      "changes": [],
+      "reading": {
+        "performers": [],
+        "ticketUrl": "https://internationalcheesefestival.com/tickets-2/?lang=en",
+        "lowPrice": null,
+        "highPrice": null,
+        "priceCurrency": null,
+        "tiers": [],
+        "itinerary": [],
+        "availability": null,
+        "onSaleDate": null,
+        "source": "session",
+        "sourceUrl": "https://gff.co.uk/for-producers/world-cheese-awards/",
+        "checkedAt": "2026-10-23T13:22:58.461Z"
+      },
+      "pagesRead": 3
+    },
+    {
+      "pinId": 13925,
+      "changes": [],
+      "reading": {
+        "performers": [],
+        "ticketUrl": null,
+        "lowPrice": null,
+        "highPrice": null,
+        "priceCurrency": null,
+        "tiers": [],
+        "itinerary": [],
+        "availability": null,
+        "onSaleDate": null,
+        "source": "session",
+        "sourceUrl": "https://sherbeth.it/",
+        "checkedAt": "2026-10-23T13:23:00.546Z"
+      },
+      "pagesRead": 3
+    },
+    {
+      "pinId": 7631,
+      "changes": [],
+      "reading": {
+        "performers": [
+          {
+            "name": "Nicola Antonacci",
+            "type": "Person"
+          }
+        ],
+        "ticketUrl": null,
+        "lowPrice": 0,
+        "highPrice": 0,
+        "priceCurrency": "EUR",
+        "tiers": [],
+        "itinerary": [],
+        "availability": "InStock",
+        "onSaleDate": null,
+        "source": "session",
+        "sourceUrl": "https://www.eurochocolate.com/perugia2026/",
+        "checkedAt": "2026-10-23T13:23:02.651Z"
+      },
+      "pagesRead": 3
+    },
+    {
+      "pinId": 13975,
+      "changes": [],
+      "reading": {
+        "performers": [],
+        "ticketUrl": null,
+        "lowPrice": null,
+        "highPrice": null,
+        "priceCurrency": null,
+        "tiers": [],
+        "itinerary": [],
+        "availability": null,
+        "onSaleDate": null,
+        "source": "session",
+        "sourceUrl": "https://www.infobae.com/inhouse/2026/08/31/dia-nacional-del-helado-artesanal-las-claves-de-un-sector-que-busca-crecer-y-aumentar-el-consumo-de-cara-al-proximo-verano/",
+        "checkedAt": "2026-10-23T13:23:04.728Z"
+      },
+      "pagesRead": 3
+    },
+    {
+      "pinId": 7625,
+      "changes": [],
+      "reading": {
+        "performers": [],
+        "ticketUrl": "https://sakematsuri.sg/pages/tickets-sake-matsuri-2026",
+        "lowPrice": 50,
+        "highPrice": 128,
+        "priceCurrency": "SGD",
+        "tiers": [
+          {
+            "note": "Until October31; GST included.",
+            "label": "Early Bird",
+            "price": 50
+          },
+          {
+            "note": "GST included.",
+            "label": "Regular",
+            "price": 60
+          },
+          {
+            "note": "Full day; GST included.",
+            "label": "VIP",
+            "price": 128
+          }
+        ],
+        "itinerary": [],
+        "availability": "InStock",
+        "onSaleDate": null,
+        "source": "session",
+        "sourceUrl": "https://sakematsuri.sg/",
+        "checkedAt": "2026-10-23T13:23:06.828Z"
+      },
+      "pagesRead": 3
+    },
+    {
+      "pinId": 7651,
+      "changes": [],
+      "reading": {
+        "performers": [],
+        "ticketUrl": null,
+        "lowPrice": 0,
+        "highPrice": 0,
+        "priceCurrency": "JPY",
+        "tiers": [
+          {
+            "note": "Selected times in the bakery area will be charged; the paid price is not published.",
+            "label": "General admission",
+            "price": 0
+          }
+        ],
+        "itinerary": [],
+        "availability": null,
+        "onSaleDate": null,
+        "source": "session",
+        "sourceUrl": "https://pannofes.jp/event/umekitakouen2026/",
+        "checkedAt": "2026-10-23T13:23:08.926Z"
+      },
+      "pagesRead": 3
+    },
+    {
+      "pinId": 7643,
+      "changes": [
+        "exact-edition venue BUY TICKETS"
+      ],
+      "reading": {
+        "performers": [],
+        "ticketUrl": "https://www.ticketmaster.co.uk/scottish-national-whisky-festival-tickets/artist/5417900",
+        "lowPrice": null,
+        "highPrice": null,
+        "priceCurrency": null,
+        "tiers": [],
+        "itinerary": [],
+        "availability": "InStock",
+        "onSaleDate": null,
+        "source": "session",
+        "sourceUrl": "https://swg3.tv/events/2027/january/scottish-national-whisky-festival-2027/",
+        "checkedAt": "2026-10-23T13:23:11.027Z"
+      },
+      "pagesRead": 3
+    },
+    {
+      "pinId": 14168,
+      "changes": [],
+      "reading": {
+        "performers": [],
+        "ticketUrl": null,
+        "lowPrice": null,
+        "highPrice": null,
+        "priceCurrency": null,
+        "tiers": [],
+        "itinerary": [],
+        "availability": null,
+        "onSaleDate": null,
+        "source": "session",
+        "sourceUrl": "https://cnevpost.com/2026/09/24/next-beijing-auto-show-mar-27-apr-5-2027/",
+        "checkedAt": "2026-10-23T13:23:13.135Z"
+      },
+      "pagesRead": 3
+    }
+  ],
+  "targetedEventReadings": [
+    {
+      "performers": [],
+      "ticketUrl": "https://events.leapevents.com/tickets/PAXUnplugged2026-2379rtfbwe",
+      "lowPrice": 26.25,
+      "highPrice": 60.9,
+      "priceCurrency": "USD",
+      "tiers": [
+        {
+          "note": "Current checkout:50USD+5service+5%tax; shipping extra. Adult3-day122.84USD is sold out.",
+          "label": "Friday Badge",
+          "price": 57.75
+        },
+        {
+          "note": "Current checkout:53USD+5service+5%tax; shipping extra.",
+          "label": "Saturday Badge",
+          "price": 60.9
+        },
+        {
+          "note": "Current checkout:50USD+5service+5%tax; shipping extra.",
+          "label": "Sunday Badge",
+          "price": 57.75
+        },
+        {
+          "note": "Ages7–12;45USD+5service+5%tax; shipping extra.",
+          "label": "3 Day Kids Badge",
+          "price": 52.5
+        },
+        {
+          "note": "Ages7–12;20USD+5service+5%tax.",
+          "label": "Friday Kids Badge",
+          "price": 26.25
+        },
+        {
+          "note": "Ages7–12;20USD+5service+5%tax.",
+          "label": "Saturday Kids Badge",
+          "price": 26.25
+        },
+        {
+          "note": "Ages7–12;20USD+5service+5%tax.",
+          "label": "Sunday Kids Badge",
+          "price": 26.25
+        },
+        {
+          "note": "Free with a paid adult; proof of age required.",
+          "label": "Children6and younger",
+          "price": 0
+        }
+      ],
+      "itinerary": [],
+      "availability": "InStock",
+      "onSaleDate": null,
+      "source": "hand",
+      "sourceUrl": "https://events.leapevents.com/tickets/PAXUnplugged2026-2379rtfbwe",
+      "checkedAt": "2026-10-23T13:27:26.045Z"
+    },
+    {
+      "performers": [],
+      "ticketUrl": "https://gdc.informafestivals.com/2027/registrations/Attendee",
+      "lowPrice": 125,
+      "highPrice": 1249,
+      "priceCurrency": "USD",
+      "tiers": [
+        {
+          "note": "Early rate through December11,23:59PT; limited meeting access.",
+          "label": "Business Hall ONLY",
+          "price": 125
+        },
+        {
+          "note": "Early rate; Tue–Thu; excludes Business Hall and main program.",
+          "label": "Festival Hall ONLY",
+          "price": 175
+        },
+        {
+          "note": "Early rate through December11,23:59PT.",
+          "label": "Festival",
+          "price": 549
+        },
+        {
+          "note": "Early rate; premium onsite pass.",
+          "label": "Game Changer",
+          "price": 1249
+        },
+        {
+          "note": "Application-based eligibility; fewer than50 full-time employees and other conditions apply.",
+          "label": "Indie OR Start-Up",
+          "price": 299
+        },
+        {
+          "note": "Accredited educational email and full-time status required.",
+          "label": "Academic",
+          "price": 299
+        }
+      ],
+      "itinerary": [],
+      "availability": "InStock",
+      "onSaleDate": null,
+      "source": "hand",
+      "sourceUrl": "https://gdconf.com/passes-pricing/",
+      "checkedAt": "2026-10-23T13:27:04.030Z"
+    }
+  ],
+  "resolvedRevisitPinIds": [
+    4893,
+    4897
+  ],
+  "sentiments": [
+    {
+      "pinId": 2346,
+      "sentiment": 0.6,
+      "textHash": "36abe71d49ca202711be8e5bb955c2d5772bb244d04fe2f4e171337d94889a25",
+      "utcScoredDateTime": "2026-10-23T13:28:38.248Z",
+      "product": "A350",
+      "productHash": "36abe71d49ca202711be8e5bb955c2d5772bb244d04fe2f4e171337d94889a25"
+    },
+    {
+      "pinId": 2857,
+      "sentiment": 0,
+      "textHash": "1cde61f4ff38066d8e57e4b3dd0bfa93341d1f6753ebcc151619661abd0b3a60",
+      "utcScoredDateTime": "2026-10-23T13:37:22.385Z",
+      "product": null,
+      "productHash": "1cde61f4ff38066d8e57e4b3dd0bfa93341d1f6753ebcc151619661abd0b3a60"
+    },
+    {
+      "pinId": 4451,
+      "sentiment": 0,
+      "textHash": "cecad63578f71689191cf35a3df90878cfb4ee545dfd1c3d809063dcf4b1e39a",
+      "utcScoredDateTime": "2026-10-23T13:34:14.336Z",
+      "product": null,
+      "productHash": "cecad63578f71689191cf35a3df90878cfb4ee545dfd1c3d809063dcf4b1e39a"
+    },
+    {
+      "pinId": 19529,
+      "sentiment": 0.5,
+      "textHash": "aa8ecb81ae5525f7e76071887cbee436d1157a9f110dc4a0ca280c3fde85ff61",
+      "utcScoredDateTime": "2026-10-23T13:20:44.592Z",
+      "product": null,
+      "productHash": "aa8ecb81ae5525f7e76071887cbee436d1157a9f110dc4a0ca280c3fde85ff61"
+    },
+    {
+      "pinId": 19530,
+      "sentiment": -0.6,
+      "textHash": "9e743f827874fe42850626fdedad5c59eae40a4a4d4c02f8ebae9bd4d1dd5682",
+      "utcScoredDateTime": "2026-10-23T13:20:49.509Z",
+      "product": null,
+      "productHash": "9e743f827874fe42850626fdedad5c59eae40a4a4d4c02f8ebae9bd4d1dd5682"
+    }
+  ],
+  "remainingSentiment": [
+    {
+      "id": 15801,
+      "textHash": "22c84ba98e6c"
+    },
+    {
+      "id": 15802,
+      "textHash": "c40878743619"
+    },
+    {
+      "id": 15803,
+      "textHash": "60d33be899eb"
+    },
+    {
+      "id": 16361,
+      "textHash": "dbf88fd39233"
+    },
+    {
+      "id": 16366,
+      "textHash": "46de75a74fb2"
+    },
+    {
+      "id": 16367,
+      "textHash": "535e6a45d8e0"
+    },
+    {
+      "id": 16368,
+      "textHash": "ca58b012d910"
+    },
+    {
+      "id": 16375,
+      "textHash": "e2cbcec70ecb"
+    }
+  ],
+  "adTranslationAudit": {
+    "PinAd": {
+      "rows": 68,
+      "working": 59,
+      "missing": []
+    },
+    "HolidayAd": {
+      "rows": 179,
+      "working": 172,
+      "missing": []
+    }
+  },
+  "newPinAds": [
+    {
+      "id": 68,
+      "pinId": 6348,
+      "asin": "B0B916HCXN",
+      "url": "https://www.amazon.com/dp/B0B916HCXN",
+      "title": "Citizen Men's Eco-Drive Weekender Garrison Field Watch",
+      "brand": "CITIZEN",
+      "price": 236,
+      "rating": 4.5,
+      "reviewCount": 8703,
+      "status": "ok",
+      "problem": null,
+      "checkedDateTime": "2026-10-23T13:34:14.000Z",
+      "utcCreatedDateTime": "2026-10-23T13:34:37.752Z",
+      "urgency": null,
+      "image": "https://m.media-amazon.com/images/I/71IK6zNgDuL._AC_SL300_.jpg"
+    }
+  ],
+  "newHolidayAds": [
+    {
+      "id": 183,
+      "holiday": "lunar-new-year",
+      "asin": "B09KNWR5ZX",
+      "url": "https://www.amazon.com/dp/B09KNWR5ZX",
+      "title": "Lunar New Year - 2027 Year of the Goat Bow Boxes - Set of 12",
+      "brand": "Big Dot of Happiness",
+      "price": 14.99,
+      "rating": 4.5,
+      "reviewCount": 36,
+      "image": "https://m.media-amazon.com/images/I/718K3vr4VCL._AC_SL300_.jpg",
+      "tier": "value",
+      "status": "ok",
+      "problem": null,
+      "checkedDateTime": "2026-10-23T13:27:26.235Z",
+      "utcCreatedDateTime": "2026-10-23T13:30:43.155Z",
+      "urgency": null
+    },
+    {
+      "id": 184,
+      "holiday": "lunar-new-year",
+      "asin": "B07ZTTZ3Q8",
+      "url": "https://www.amazon.com/dp/B07ZTTZ3Q8",
+      "title": "Big Dot of Happiness Chinese New Year - Treat Box Party Favors - 2027 Year of the Goat Goodie Gable Boxes - Set of 12",
+      "brand": "Big Dot of Happiness",
+      "price": 15.99,
+      "rating": 4.7,
+      "reviewCount": 34,
+      "image": "https://m.media-amazon.com/images/I/81xXSBJU+VL._AC_SL300_.jpg",
+      "tier": "mid",
+      "status": "ok",
+      "problem": null,
+      "checkedDateTime": "2026-10-23T13:27:29.896Z",
+      "utcCreatedDateTime": "2026-10-23T13:30:45.207Z",
+      "urgency": null
+    },
+    {
+      "id": 185,
+      "holiday": "lunar-new-year",
+      "asin": "B0GGP28FNG",
+      "url": "https://www.amazon.com/dp/B0GGP28FNG",
+      "title": "Lunar New Year Fruit & Chocolate Gift Box – Fresh Premium Fruit with Artisan Chocolates, Chinese New Year Gift Basket for Family, Friends & Corporate Gifting",
+      "brand": "A Gift Inside",
+      "price": 38.5,
+      "rating": 4.8,
+      "reviewCount": 5,
+      "image": "https://m.media-amazon.com/images/I/8125Ybx0UIL._AC_SL300_.jpg",
+      "tier": "premium",
+      "status": "ok",
+      "problem": null,
+      "checkedDateTime": "2026-10-23T13:27:41.647Z",
+      "utcCreatedDateTime": "2026-10-23T13:30:47.259Z",
+      "urgency": null
+    }
+  ],
+  "translationCount": 75,
+  "tradeChecks": {
+    "house": {
+      "filings": 0,
+      "trades": 0,
+      "unmatched": [],
+      "failed": []
+    },
+    "senate": {
+      "error": "SyntaxError: Unexpected token '<', \"<HTML><HEA\"... is not valid JSON"
+    },
+    "executive": {
+      "filings": 0,
+      "trades": 0,
+      "unmatched": [],
+      "failed": [
+        "Bryan Bedford BC33926D1346296F85258D86003449A3: all transaction line(s) unreadable (scanned report or unknown layout) - not stored, https://extapps2.oge.gov/201/Presiden.nsf/PAS+Index/BC33926D1346296F85258D86003449A3/$FILE/Bryan-Bedford-11.03.2025-278T.pdf"
+      ]
+    }
+  },
+  "media": [
+    {
+      "key": "hyundai-illinois",
+      "file": "hyundai-site.png",
+      "imageSourceUrl": "https://www.hyundaitranslead.com/wp-content/uploads/Channahon_Exterior_lr-700x441.png",
+      "sourceUrl": "https://www.hyundaitranslead.com/hyundai-translead-expands-planned-illinois-investment-and-increases-job-commitment/",
+      "credit": "Hyundai Translead",
+      "caption": "Operator-published exterior view of its Illinois manufacturing site; the new 3,750-job commitment is planned, not a completed hiring count.",
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/news-images/2026-10-23/hyundai-illinois-9169bd694d34f035.webp",
+      "sha256": "9169bd694d34f03550f13ff03e6c63d6b4d510f72ebabb9b5c62239190d6d166",
+      "width": 700,
+      "height": 441
+    },
+    {
+      "key": "serbia-announcement",
+      "file": "serbia-gov.webp",
+      "imageSourceUrl": "https://www.srbija.gov.rs/extimages/en/287/136/main_webp_auto_generated_vucic090926.webp",
+      "sourceUrl": "https://www.srbija.gov.rs/vest/en/287130/president-of-republic-calls-parliamentary-elections-for-25-october.php",
+      "credit": "Government of the Republic of Serbia",
+      "caption": "Aleksandar Vučić in the government’s September 9, 2026 election-announcement coverage; historical campaign context, not an election result.",
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/news-images/2026-10-23/serbia-announcement-d396b3d2d340e051.webp",
+      "sha256": "d396b3d2d340e051f8bd5e117e89ba723df52fedd0e94390ef8aeb87b7bc3c8c",
+      "width": 800,
+      "height": 533
+    },
+    {
+      "key": "serbia-market",
+      "file": "serbia-market.png",
+      "imageSourceUrl": "https://polymarket.com/api/og?eslug=serbia-parliamentary-election-winner-2026&tid=1792761349885",
+      "sourceUrl": "https://polymarket.com/event/serbia-parliamentary-election-winner-2026",
+      "credit": "Polymarket",
+      "caption": "October 23, 2026 forecast card. Rounded display differs slightly from the raw market snapshot; probabilities are not confirmed results.",
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/news-images/2026-10-23/serbia-market-bf4ad6234781f6ec.webp",
+      "sha256": "bf4ad6234781f6ec395b107f3dfe1ac97a5d897fac6c46f56d8c992ec7d0ed0d",
+      "width": 800,
+      "height": 418
+    },
+    {
+      "key": "flutter-layoffs",
+      "file": "flutter-aol.jpg",
+      "imageSourceUrl": "https://hermes.media.transform.aol.com/285c3ff6d91ad8a487983f3b5c3d38f6d16af13c/w_1200,c_scale,f_auto,q_auto/https://hermes.media.static.aol.com/media/2026/10/20/a18d06d7-971e-32aa-9439-1c12e96bd558/2e23b6d4-c1ee-468a-9e47-899be5c2931e.jpg",
+      "sourceUrl": "https://www.aol.com/articles/betting-giant-flutter-cut-1-111156000.html",
+      "credit": "Evening Standard via AOL; photographer not specified in accessible page",
+      "caption": "Editorial image accompanying October 20 reporting on Flutter’s UK and Ireland restructuring; not a photograph of a specific redundancy notification.",
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/news-images/2026-10-23/flutter-layoffs-244ad23eee97cb86.webp",
+      "sha256": "244ad23eee97cb86a85dbaeed3a2eecedec65b22725522c6b4a9c8511c4859d6",
+      "width": 1200,
+      "height": 782
+    }
+  ],
+  "notes": [
+    "Senate source unreadable after retry; zero activity not asserted.",
+    "No deploy or post-run sync."
+  ],
+  "finishedAt": "2026-10-23T13:39:55.974Z",
+  "status": "ok",
+  "actions": [
+    {
+      "at": "2026-10-23T13:11:02.537Z",
+      "tool": "predicted_pins",
+      "detail": "20 predicted pin(s) returned (20 unthreaded of 36 total)"
+    },
+    {
+      "at": "2026-10-23T13:14:14.367Z",
+      "tool": "admin_update_pin",
+      "pinId": 18460,
+      "title": "Bank of Russia Holds Its Key Rate at 14%, Matching the Market Forecast",
+      "detail": "Official October 23 decision confirms 14% hold; preserve historical forecast and dated evidence."
+    },
+    {
+      "at": "2026-10-23T13:14:25.549Z",
+      "tool": "model_scores",
+      "detail": "10 model pin(s) still awaiting an arena score, 0 frontier pin(s) to tag"
+    },
+    {
+      "at": "2026-10-23T13:20:44.620Z",
+      "tool": "create_pin",
+      "pinId": 19529,
+      "title": "Hyundai Translead Raises Illinois Plan to $600 Million and 3,750 Jobs",
+      "detail": "@EconDesk: Primary-source expansion adds 1,250 planned manufacturing jobs beyond original commitment; no matching venue or source pin exists."
+    },
+    {
+      "at": "2026-10-23T13:20:49.516Z",
+      "tool": "create_pin",
+      "pinId": 19530,
+      "title": "Flutter Notifies Staff of Up to 1,400 UK and Ireland Job Cuts",
+      "detail": "@EconDesk: Previously unpinned significant redundancy round, independently reported and verified against exact SEC notification date and restructuring charge range."
+    },
+    {
+      "at": "2026-10-23T13:20:56.667Z",
+      "tool": "create_pin",
+      "pinId": 19531,
+      "title": "Vučić’s List Is Favoured in Serbia’s October 25 Parliamentary Election",
+      "detail": "@PoliticsDesk: High-volume, near-term parliamentary forecast with verified polling date and contract semantics; no existing subject/source or appropriate earlier thread pin."
+    },
+    {
+      "at": "2026-10-23T13:21:53.710Z",
+      "tool": "admin_event_info",
+      "pinId": 3553,
+      "detail": "Read exact-edition pages; preserved existing semantic fields and refreshed checkedAt."
+    },
+    {
+      "at": "2026-10-23T13:21:55.756Z",
+      "tool": "admin_event_info",
+      "pinId": 2954,
+      "detail": "Read exact-edition pages; preserved existing semantic fields and refreshed checkedAt."
+    },
+    {
+      "at": "2026-10-23T13:21:57.809Z",
+      "tool": "admin_event_info",
+      "pinId": 2109,
+      "detail": "Read exact-edition pages; preserved existing semantic fields and refreshed checkedAt."
+    },
+    {
+      "at": "2026-10-23T13:21:59.911Z",
+      "tool": "admin_event_info",
+      "pinId": 3337,
+      "detail": "Read exact-edition pages; preserved existing semantic fields and refreshed checkedAt."
+    },
+    {
+      "at": "2026-10-23T13:22:01.960Z",
+      "tool": "admin_event_info",
+      "pinId": 3418,
+      "detail": "Read exact-edition pages; preserved existing semantic fields and refreshed checkedAt."
+    },
+    {
+      "at": "2026-10-23T13:22:04.063Z",
+      "tool": "admin_event_info",
+      "pinId": 3450,
+      "detail": "Read exact-edition pages; preserved existing semantic fields and refreshed checkedAt."
+    },
+    {
+      "at": "2026-10-23T13:22:06.081Z",
+      "tool": "admin_event_info",
+      "pinId": 3317,
+      "detail": "Read exact-edition pages; preserved existing semantic fields and refreshed checkedAt."
+    },
+    {
+      "at": "2026-10-23T13:22:08.144Z",
+      "tool": "admin_event_info",
+      "pinId": 3429,
+      "detail": "Read exact-edition pages; preserved existing semantic fields and refreshed checkedAt."
+    },
+    {
+      "at": "2026-10-23T13:22:10.178Z",
+      "tool": "admin_event_info",
+      "pinId": 3557,
+      "detail": "Read exact-edition pages; preserved existing semantic fields and refreshed checkedAt."
+    },
+    {
+      "at": "2026-10-23T13:22:12.256Z",
+      "tool": "admin_event_info",
+      "pinId": 2483,
+      "detail": "Read exact-edition pages; preserved existing semantic fields and refreshed checkedAt."
+    },
+    {
+      "at": "2026-10-23T13:22:14.432Z",
+      "tool": "admin_event_info",
+      "pinId": 2482,
+      "detail": "Read exact-edition pages; preserved existing semantic fields and refreshed checkedAt."
+    },
+    {
+      "at": "2026-10-23T13:22:16.454Z",
+      "tool": "admin_event_info",
+      "pinId": 3540,
+      "detail": "future registration notice is not PreOrder"
+    },
+    {
+      "at": "2026-10-23T13:22:18.544Z",
+      "tool": "admin_event_info",
+      "pinId": 3334,
+      "detail": "future registration notice is not PreOrder"
+    },
+    {
+      "at": "2026-10-23T13:22:20.642Z",
+      "tool": "admin_event_info",
+      "pinId": 1953,
+      "detail": "official Game1 teams"
+    },
+    {
+      "at": "2026-10-23T13:22:22.738Z",
+      "tool": "admin_event_info",
+      "pinId": 1958,
+      "detail": "Read exact-edition pages; preserved existing semantic fields and refreshed checkedAt."
+    },
+    {
+      "at": "2026-10-23T13:22:24.840Z",
+      "tool": "admin_event_info",
+      "pinId": 3033,
+      "detail": "Read exact-edition pages; preserved existing semantic fields and refreshed checkedAt."
+    },
+    {
+      "at": "2026-10-23T13:22:26.935Z",
+      "tool": "admin_event_info",
+      "pinId": 1959,
+      "detail": "Read exact-edition pages; preserved existing semantic fields and refreshed checkedAt."
+    },
+    {
+      "at": "2026-10-23T13:22:29.059Z",
+      "tool": "admin_event_info",
+      "pinId": 2521,
+      "detail": "venue On Sale Now; remove rescheduled Pyfer/Nickal"
+    },
+    {
+      "at": "2026-10-23T13:22:31.142Z",
+      "tool": "admin_event_info",
+      "pinId": 3798,
+      "detail": "Read exact-edition pages; preserved existing semantic fields and refreshed checkedAt."
+    },
+    {
+      "at": "2026-10-23T13:22:33.222Z",
+      "tool": "admin_event_info",
+      "pinId": 3875,
+      "detail": "Read exact-edition pages; preserved existing semantic fields and refreshed checkedAt."
+    },
+    {
+      "at": "2026-10-23T13:22:35.342Z",
+      "tool": "admin_event_info",
+      "pinId": 3871,
+      "detail": "Read exact-edition pages; preserved existing semantic fields and refreshed checkedAt."
+    },
+    {
+      "at": "2026-10-23T13:22:37.418Z",
+      "tool": "admin_event_info",
+      "pinId": 3865,
+      "detail": "Read exact-edition pages; preserved existing semantic fields and refreshed checkedAt."
+    },
+    {
+      "at": "2026-10-23T13:22:39.572Z",
+      "tool": "admin_event_info",
+      "pinId": 4015,
+      "detail": "Read exact-edition pages; preserved existing semantic fields and refreshed checkedAt."
+    },
+    {
+      "at": "2026-10-23T13:22:41.617Z",
+      "tool": "admin_event_info",
+      "pinId": 14240,
+      "detail": "Read exact-edition pages; preserved existing semantic fields and refreshed checkedAt."
+    },
+    {
+      "at": "2026-10-23T13:22:43.711Z",
+      "tool": "admin_event_info",
+      "pinId": 7649,
+      "detail": "Read exact-edition pages; preserved existing semantic fields and refreshed checkedAt."
+    },
+    {
+      "at": "2026-10-23T13:22:45.811Z",
+      "tool": "admin_event_info",
+      "pinId": 7592,
+      "detail": "Read exact-edition pages; preserved existing semantic fields and refreshed checkedAt."
+    },
+    {
+      "at": "2026-10-23T13:22:47.907Z",
+      "tool": "admin_event_info",
+      "pinId": 7630,
+      "detail": "Read exact-edition pages; preserved existing semantic fields and refreshed checkedAt."
+    },
+    {
+      "at": "2026-10-23T13:22:50.003Z",
+      "tool": "admin_event_info",
+      "pinId": 7623,
+      "detail": "Read exact-edition pages; preserved existing semantic fields and refreshed checkedAt."
+    },
+    {
+      "at": "2026-10-23T13:22:52.100Z",
+      "tool": "admin_event_info",
+      "pinId": 7648,
+      "detail": "Read exact-edition pages; preserved existing semantic fields and refreshed checkedAt."
+    },
+    {
+      "at": "2026-10-23T13:22:54.197Z",
+      "tool": "admin_event_info",
+      "pinId": 7652,
+      "detail": "Read exact-edition pages; preserved existing semantic fields and refreshed checkedAt."
+    },
+    {
+      "at": "2026-10-23T13:22:56.301Z",
+      "tool": "admin_event_info",
+      "pinId": 7609,
+      "detail": "published USD/BBD event and combo prices, linked booking"
+    },
+    {
+      "at": "2026-10-23T13:22:58.412Z",
+      "tool": "admin_event_info",
+      "pinId": 7608,
+      "detail": "Read exact-edition pages; preserved existing semantic fields and refreshed checkedAt."
+    },
+    {
+      "at": "2026-10-23T13:23:00.498Z",
+      "tool": "admin_event_info",
+      "pinId": 7627,
+      "detail": "Read exact-edition pages; preserved existing semantic fields and refreshed checkedAt."
+    },
+    {
+      "at": "2026-10-23T13:23:02.600Z",
+      "tool": "admin_event_info",
+      "pinId": 13925,
+      "detail": "Read exact-edition pages; preserved existing semantic fields and refreshed checkedAt."
+    },
+    {
+      "at": "2026-10-23T13:23:04.681Z",
+      "tool": "admin_event_info",
+      "pinId": 7631,
+      "detail": "Read exact-edition pages; preserved existing semantic fields and refreshed checkedAt."
+    },
+    {
+      "at": "2026-10-23T13:23:06.781Z",
+      "tool": "admin_event_info",
+      "pinId": 13975,
+      "detail": "Read exact-edition pages; preserved existing semantic fields and refreshed checkedAt."
+    },
+    {
+      "at": "2026-10-23T13:23:08.878Z",
+      "tool": "admin_event_info",
+      "pinId": 7625,
+      "detail": "Read exact-edition pages; preserved existing semantic fields and refreshed checkedAt."
+    },
+    {
+      "at": "2026-10-23T13:23:10.978Z",
+      "tool": "admin_event_info",
+      "pinId": 7651,
+      "detail": "Read exact-edition pages; preserved existing semantic fields and refreshed checkedAt."
+    },
+    {
+      "at": "2026-10-23T13:23:13.088Z",
+      "tool": "admin_event_info",
+      "pinId": 7643,
+      "detail": "exact-edition venue BUY TICKETS"
+    },
+    {
+      "at": "2026-10-23T13:23:15.175Z",
+      "tool": "admin_event_info",
+      "pinId": 14168,
+      "detail": "Read exact-edition pages; preserved existing semantic fields and refreshed checkedAt."
+    },
+    {
+      "at": "2026-10-23T13:24:38.782Z",
+      "tool": "admin_update_pin",
+      "pinId": 16017,
+      "title": "Brent Crude Oil Price — October 2026",
+      "detail": "Refresh dated modal strike distribution and explicitly estimated dollar volume; retain prior-month parent and historical snapshots."
+    },
+    {
+      "at": "2026-10-23T13:26:18.825Z",
+      "tool": "admin_update_pin",
+      "pinId": 2857,
+      "title": "Microsoft FY27 Q1 Earnings Release and Conference Call",
+      "detail": "Replace inherited estimate with opened issuer schedule; preserve original author and existing sources/media."
+    },
+    {
+      "at": "2026-10-23T13:26:27.600Z",
+      "tool": "admin_update_pin",
+      "pinId": 4451,
+      "title": "Crocs Schedules Its Q3 2026 Earnings Call for October 29",
+      "detail": "Replace inherited estimate with opened issuer schedule; preserve original author and existing sources/media."
+    },
+    {
+      "at": "2026-10-23T13:26:29.737Z",
+      "tool": "admin_update_pin",
+      "pinId": 3181,
+      "title": "Hershey Reports Q3 2026 Results",
+      "detail": "Replace inherited estimate with opened issuer schedule; preserve original author and existing sources/media."
+    },
+    {
+      "at": "2026-10-23T13:26:51.231Z",
+      "tool": "admin_event_info",
+      "pinId": 4897,
+      "detail": "October23: opened exact2027 registration landing and issuer pass/pricing page. Replaced inherited99–1149USD with current125–1249 onsite early-rate tiers, including299 eligibility-based passes. Excluded649USD remote Vault-only subscription; source URL and author preserved. Production readback verified before resolution."
+    },
+    {
+      "at": "2026-10-23T13:27:23.934Z",
+      "tool": "admin_event_info",
+      "pinId": 4897,
+      "detail": "October23: opened exact2027 registration landing and issuer pass/pricing page. Replaced inherited99–1149USD with current125–1249 onsite early-rate tiers, including299 eligibility-based passes. Excluded649USD remote Vault-only subscription; source URL and author preserved. Production readback verified before resolution."
+    },
+    {
+      "at": "2026-10-23T13:27:25.991Z",
+      "tool": "resolve_revisit",
+      "pinId": 4897,
+      "detail": "October23: opened exact2027 registration landing and issuer pass/pricing page. Replaced inherited99–1149USD with current125–1249 onsite early-rate tiers, including299 eligibility-based passes. Excluded649USD remote Vault-only subscription; source URL and author preserved. Production readback verified before resolution."
+    },
+    {
+      "at": "2026-10-23T13:27:28.083Z",
+      "tool": "admin_event_info",
+      "pinId": 4893,
+      "detail": "October23: rendered exact PAX2026 Leap checkout, resolving stale cached marketing prices and duplicate old kids tiles. Current available adult singles57.75/60.90/57.75USD; kids7–12 singles26.25,3day52.50; under7freewithadult. Adult3day122.84soldout excluded from available price range. Fees/tax included, shipping extra. Verified production readback before closing mark."
+    },
+    {
+      "at": "2026-10-23T13:27:30.096Z",
+      "tool": "resolve_revisit",
+      "pinId": 4893,
+      "detail": "October23: rendered exact PAX2026 Leap checkout, resolving stale cached marketing prices and duplicate old kids tiles. Current available adult singles57.75/60.90/57.75USD; kids7–12 singles26.25,3day52.50; under7freewithadult. Adult3day122.84soldout excluded from available price range. Fees/tax included, shipping extra. Verified production readback before closing mark."
+    },
+    {
+      "at": "2026-10-23T13:27:41.649Z",
+      "tool": "holiday_ads_check",
+      "detail": "brazil-carnival value: Sparkling Pink Hair Face Glitter Stick,Waterproof Holographic Chameleon Pink Body Glitter  ($9.99, 4.6 stars / 1316 reviews)"
+    },
+    {
+      "at": "2026-10-23T13:27:41.652Z",
+      "tool": "holiday_ads_check",
+      "detail": "brazil-carnival value: Coddsmz Women Feather Masquerade Mask Venetian Party Mask Mardi Gras Masks Princess Fancy  ($9.99, 4.4 stars / 834 reviews)"
+    },
+    {
+      "at": "2026-10-23T13:27:41.655Z",
+      "tool": "holiday_ads_check",
+      "detail": "brazil-carnival mid: MYSEUNI New Blue and Black Masquerade Mask for Women with Feathers - Womens Mascarade Vene ($16.98, 4.5 stars / 622 reviews)"
+    },
+    {
+      "at": "2026-10-23T13:27:41.656Z",
+      "tool": "holiday_ads_check",
+      "detail": "lunar-new-year value: 20pcs Luxurious Chinese New Year Red Envelopes, Chinese Traditional Hong Bao Red Envelope  ($9.99, 4.8 stars / 229 reviews)"
+    },
+    {
+      "at": "2026-10-23T13:27:41.658Z",
+      "tool": "holiday_ads_check",
+      "detail": "lunar-new-year value: Lunar New Year - 2027 Year of the Goat Bow Boxes - Set of 12 ($14.99, 4.5 stars / 36 reviews)"
+    },
+    {
+      "at": "2026-10-23T13:27:41.659Z",
+      "tool": "holiday_ads_check",
+      "detail": "lunar-new-year mid: BINBE 66 Pcs Chinese New Year Red Envelopes 2026 Hong Bao Paper Gift Money Envelopes 6 Des ($16.99, 4.7 stars / 174 reviews)"
+    },
+    {
+      "at": "2026-10-23T13:27:41.661Z",
+      "tool": "holiday_ads_check",
+      "detail": "lunar-new-year mid: Big Dot of Happiness Chinese New Year - Treat Box Party Favors - 2027 Year of the Goat Goo ($15.99, 4.7 stars / 34 reviews)"
+    },
+    {
+      "at": "2026-10-23T13:27:41.662Z",
+      "tool": "holiday_ads_check",
+      "detail": "lunar-new-year premium: Lunar New Year Fruit & Chocolate Gift Box – Fresh Premium Fruit with Artisan Chocolates, C ($38.5, 4.8 stars / 5 reviews)"
+    },
+    {
+      "at": "2026-10-23T13:27:51.001Z",
+      "tool": "oil_commodity_markets",
+      "detail": "scanned 6 monthly contracts, created 0, updated 0, threaded 0"
+    },
+    {
+      "at": "2026-10-23T13:28:34.603Z",
+      "tool": "admin_ad_refresh",
+      "detail": "PinAd: verified 60 locally researched listing rows through paced admin upsert, including broken statuses."
+    },
+    {
+      "at": "2026-10-23T13:28:36.190Z",
+      "tool": "admin_update_pin",
+      "pinId": 4451,
+      "title": "Crocs Schedules Its Q3 2026 Earnings Call for October 29",
+      "detail": "Align summary with issuer-confirmed October29 call; keep original guidance as guidance rather than realized results."
+    },
+    {
+      "at": "2026-10-23T13:28:40.378Z",
+      "tool": "admin_ad_refresh",
+      "detail": "ProductAd: verified 35 locally researched listing rows through paced admin upsert, including broken statuses."
+    },
+    {
+      "at": "2026-10-23T13:29:56.745Z",
+      "tool": "remove_holiday_ad",
+      "detail": "brazil-carnival B0HC9DV45J"
+    },
+    {
+      "at": "2026-10-23T13:29:56.751Z",
+      "tool": "remove_holiday_ad",
+      "detail": "brazil-carnival B07J5TPT4Y"
+    },
+    {
+      "at": "2026-10-23T13:29:56.755Z",
+      "tool": "remove_holiday_ad",
+      "detail": "brazil-carnival B0CB7ZG82Y"
+    },
+    {
+      "at": "2026-10-23T13:29:56.759Z",
+      "tool": "remove_holiday_ad",
+      "detail": "lunar-new-year B0BNZRWHRS"
+    },
+    {
+      "at": "2026-10-23T13:29:56.764Z",
+      "tool": "remove_holiday_ad",
+      "detail": "lunar-new-year B0BLNK2Z9T"
+    },
+    {
+      "at": "2026-10-23T13:30:41.150Z",
+      "tool": "admin_ad_refresh",
+      "detail": "HolidayAd: verified 66 locally researched listing rows through paced admin upsert, including broken statuses."
+    },
+    {
+      "at": "2026-10-23T13:30:43.150Z",
+      "tool": "admin_holiday_ad_add",
+      "detail": "Lunar New Year: Lunar New Year - 2027 Year of the Goat Bow Boxes - Set of 12 (Big Dot of Happiness, 4.5stars/36reviews)"
+    },
+    {
+      "at": "2026-10-23T13:30:45.201Z",
+      "tool": "admin_holiday_ad_add",
+      "detail": "Lunar New Year: Big Dot of Happiness Chinese New Year - Treat Box Party Favors - 2027 Year of the Goat Goodie Gable Boxes - Set of 12 (Big Dot of Happiness, 4.7stars/34reviews)"
+    },
+    {
+      "at": "2026-10-23T13:30:47.255Z",
+      "tool": "admin_holiday_ad_add",
+      "detail": "Lunar New Year: Lunar New Year Fruit & Chocolate Gift Box – Fresh Premium Fruit with Artisan Chocolates, Chinese New Year Gift Basket for Family, Friends & Corporate Gifting (A Gift Inside, 4.8stars/5reviews)"
+    },
+    {
+      "at": "2026-10-23T13:32:12.691Z",
+      "tool": "admin_ad_translations",
+      "detail": "60 session-written HolidayAd titles (IDs84,183,184,185 ×15 locales), exact current English SHA1 and saved readback verified."
+    },
+    {
+      "at": "2026-10-23T13:34:14.085Z",
+      "tool": "add_pin_ad",
+      "pinId": 6348,
+      "title": "Citizen Men's Eco-Drive Weekender Garrison Field Watch",
+      "detail": "Second fetched Citizen variant as a trusted adjacent watch product; must pass current Amazon US buy-box and review quality gate. (CITIZEN, 4.5 stars / 8703 reviews)"
+    },
+    {
+      "at": "2026-10-23T13:34:14.380Z",
+      "tool": "admin_sentiment",
+      "detail": "Verified 2 catch-up scores: Airbus2346 +0.6/A350 and Crocs4451 0/no product. Full current text SHA256 checked; Crocs initial stale text refused and refreshed after summary update."
+    },
+    {
+      "at": "2026-10-23T13:35:05.525Z",
+      "tool": "admin_pin_ad_add",
+      "pinId": 6348,
+      "detail": "Added Citizen B0B916HCXN after unavailable first alternative; current236USD,4.5stars/8703reviews, verified15 session-written translations and production save. Rolex search supplied no qualifying Amazon.com product listing."
+    },
+    {
+      "at": "2026-10-23T13:35:44.533Z",
+      "tool": "admin_update_pin",
+      "pinId": 2857,
+      "title": "Microsoft FY27 Q1 Earnings Release and Conference Call",
+      "detail": "Remove superseded no-announcement assertions so all visible text agrees with the current official earnings schedule."
+    },
+    {
+      "at": "2026-10-23T13:35:46.683Z",
+      "tool": "admin_update_pin",
+      "pinId": 3181,
+      "title": "Hershey Reports Q3 2026 Results",
+      "detail": "Remove superseded no-announcement assertions so all visible text agrees with the current official earnings schedule."
+    },
+    {
+      "at": "2026-10-23T13:35:49.134Z",
+      "tool": "admin_update_pin",
+      "pinId": 4451,
+      "title": "Crocs Schedules Its Q3 2026 Earnings Call for October 29",
+      "detail": "Remove superseded no-announcement assertions so all visible text agrees with the current official earnings schedule."
+    },
+    {
+      "at": "2026-10-23T13:37:23.003Z",
+      "tool": "admin_sentiment",
+      "detail": "Scored and readback-verified Microsoft2857 0 after schedule/description correction; 3catch-up scores plus2creation-time scores verified this run."
+    }
+  ],
+  "learnings": [
+    {
+      "at": "2026-10-23T13:37:23.311Z",
+      "text": "October23 PAX2026 direct rendered Leap checkout confirms adult single days USD57.75/60.90/57.75, kids7–12 USD26.25 single or52.50 three-day; adult3day122.84 sold out. Cached web/marketing tiles retained earlier52.50/55.65 and conflicting47.25 kids values. Save current checkout scope with fees/tax and shipping caveat; never silently mix snapshots. GDC2027 current onsite early tiers125–1249 verified against exact2027 registration landing; Vault-only649 is not admission.",
+      "topic": "Exact checkout beats stale price tiles"
+    },
+    {
+      "at": "2026-10-23T13:37:23.358Z",
+      "text": "Hyundai Translead October22 body states total600mUSD and3750 planned full-time positions, incremental150m/1250 from a thirdshift. Its scrape metadata description incorrectly refers to Lytx; body wins. Flutter SEC8-K verifies employee notifications October20, up-to1400 redundancies and80–90m pre-tax costs; not1400 completed departures or annual savings. Serbia forecast is most seats, not automatic premiership; October25 polling is distinct from March2027 fallback.",
+      "topic": "Primary announcement body and notification date"
+    },
+    {
+      "at": "2026-10-23T13:37:23.405Z",
+      "text": "October23 Brent raw30strike book implies leading adjacent108.99–110.99USD/bbl band; nearest50%threshold108.99 at53%. Estimated turnover88276.95USD is contracts times lastprice, not160204.94 contracts as dollars. WTI monthly0contracts; oil helper still proposes unsupported fallback WTI and historical IDs-1, so preview only. Arena October22 dataset145scored/10awaiting/0frontiertags, while live text leaderboard hasSolarPro4 at1387±5/24453votes: matcher freshness gap persists. Full SHA256 rejected one Crocs score during the session’s own description update; refreshed text and verified lightweight save.",
+      "topic": "Market and score source checks"
+    },
+    {
+      "at": "2026-10-23T13:37:23.451Z",
+      "text": "October23 combined personTrades fails at Senate eFD JSONparse because the response is HTML. Isolated House and executive checks each0new readable filings; Senate still fails after fresh agreement/cookie and redirect-following retry. Replayed25recent known filings to production,0added/0missing. Opened Bedford’s278-T: twoJPMorgan total-return swaps with unavailable value and5mnotional each; retain unsupported-layout gap, never turn notional into an asset value or invent ordinary transaction type.",
+      "topic": "Trade-source failures are not zero activity"
+    }
+  ]
+}

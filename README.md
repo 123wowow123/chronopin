@@ -444,3 +444,6 @@ are there other things that can use geojson
 
 check to see if anything can be improved and increase organic visits
 https://search.google.com/search-console/performance/search-analytics?resource_id=sc-domain%3Achronopin.com
+
+
+ai spend publication latest predicted figures

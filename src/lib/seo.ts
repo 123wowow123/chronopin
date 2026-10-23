@@ -78,6 +78,7 @@ export function pinMetadata(pin: PinJson, locale: Locale = DEFAULT_LOCALE, offer
 // a product or a release that merely involves a sport or a musician. A show
 // has a doors time, which a music product or album release (all day) lacks.
 const EVENT_CATEGORIES = ['Conference', 'Festival'];
+const PRIVATE_EVENT_TAGS = ['Wedding', 'Engagement'];
 const NOT_EVENT_CATEGORIES = [
   'Business', 'Finance', 'Economy', 'Law', 'Justice', 'Labour', 'Policy', 'Architecture', 'Property', 'Retail', 'Fashion',
   'Electronics', 'Audio', 'Movie', 'TV', 'Anime', 'Gaming',
@@ -90,6 +91,10 @@ const NOT_EVENT_CATEGORIES = [
 export function isAttendableEvent(pin: PinJson): boolean {
   const hasPlace = !!pin.address || (pin.latitude != null && pin.longitude != null);
   if (!hasPlace) {
+    return false;
+  }
+  // A private ceremony is not open to the public, whatever its category.
+  if (pin.tags?.some((t) => PRIVATE_EVENT_TAGS.includes(t.name))) {
     return false;
   }
   const categories = pin.categories ?? [];
