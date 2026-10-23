@@ -872,11 +872,11 @@ export function WeatherButton({ className = '' }: { className?: string }) {
       </button>
       {open ? (
         <div className="floating absolute end-0 z-50 mt-2 flex max-h-[calc(100dvh-5rem)] w-80 flex-col overflow-hidden">
-          <LocalWeatherRow className={`shrink-0 ${weather ? 'border-b border-line' : ''}`} />
+          <LocalWeatherRow className="shrink-0" />
           {/* Only what is under the weather row scrolls, as under the bell's heading. */}
           <div className="min-h-0 overflow-y-auto">
-          <div className="border-b border-line empty:hidden"><NotificationItems {...trades} guest onNavigate={() => setOpen(false)} /></div>
-          <ul className="pt-1.5">
+          <div className="peer border-b border-line empty:hidden"><NotificationItems {...trades} guest onNavigate={() => setOpen(false)} /></div>
+          <ul className={`pt-1.5 ${weather ? 'peer-empty:border-t peer-empty:border-line' : ''}`}>
             <li className="px-1.5">
               <Link href="/people" onClick={() => setOpen(false)} className="flex items-center gap-3 rounded-lg px-2.5 py-2 text-sm font-medium text-ink hover:bg-raised hover:no-underline">
                 <Icon name="users" className="size-4 text-muted" />
