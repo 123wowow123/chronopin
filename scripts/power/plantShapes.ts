@@ -22,7 +22,7 @@ type Ring = Pt[];
 type El = { type: 'way' | 'relation'; id: number; tags?: Record<string, string>; geometry?: { lat: number; lon: number }[]; members?: { role: string; geometry?: { lat: number; lon: number }[] }[] };
 
 const words = (s: string) => s.toLowerCase().normalize('NFKD').replace(/[^a-z0-9]+/g, ' ').trim().split(' ').filter(Boolean);
-const GENERIC = new Set(['power', 'plant', 'station', 'solar', 'farm', 'park', 'nuclear', 'generating', 'generation', 'hydro', 'hydroelectric', 'dam', 'energy', 'project', 'the', 'of', 'and', 'unit', 'units', 'phase', 'facility', 'center', 'centre']);
+const GENERIC = new Set(['power', 'plant', 'station', 'solar', 'farm', 'park', 'nuclear', 'generating', 'generation', 'hydro', 'hydroelectric', 'dam', 'energy', 'project', 'the', 'of', 'and', 'unit', 'units', 'phase', 'facility', 'center', 'centre', 'llc', 'inc', 'csg', 'lp']);
 
 // Whether an OSM plant is the pin's own: it shares a distinctive name word with the
 // pin's title, and carries no one-character designator ("B", "2") the title lacks
@@ -31,7 +31,7 @@ function sameName(title: string, name: string | undefined) {
   if (!name) return false;
   const t = new Set(words(title));
   const w = words(name).filter((x) => !GENERIC.has(x));
-  if (!w.some((x) => x.length > 1 && t.has(x))) return false;
+  if (!w.length || w.filter((x) => t.has(x)).length / w.length < 0.6) return false;
   return w.filter((x) => x.length === 1 || /^\d+$/.test(x)).every((x) => t.has(x));
 }
 

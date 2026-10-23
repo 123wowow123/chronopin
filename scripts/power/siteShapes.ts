@@ -163,8 +163,9 @@ async function main() {
     return;
   }
   if (!flags.prod) {
-    // Only the outlines this script draws: a pin's route (scripts/routes) stays.
-    await db.query(`DELETE FROM "PinSiteShape" WHERE NOT jsonb_path_exists("geojson", '$.features[*] ? (@.properties.kind == "route")')`);
+    // Only the outlines this script draws: a pin's route (scripts/routes) and a
+    // power plant's OpenStreetMap outline (scripts/power/plantShapes.ts) stay.
+    await db.query(`DELETE FROM "PinSiteShape" WHERE "source" <> 'OpenStreetMap' AND NOT jsonb_path_exists("geojson", '$.features[*] ? (@.properties.kind == "route")')`);
     for (const [id, shape] of result) await saveSiteShape(id, shape);
     console.log(`saved ${result.size} PinSiteShape rows locally`);
     return;
