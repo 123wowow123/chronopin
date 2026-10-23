@@ -263,7 +263,7 @@ export function NavMenu() {
             <Icon name="chevron" className={`size-3.5 text-subtle transition-transform duration-300 ${accountOpen ? 'rotate-180' : 'group-hover/acct:translate-y-0.5 motion-reduce:group-hover/acct:translate-y-0'}`} />
           </button>
           {accountOpen ? (
-            <div className="floating absolute end-0 z-50 mt-2 w-60 overflow-hidden">
+            <div className="floating absolute end-0 z-50 mt-2 max-h-[calc(100dvh-5rem)] w-60 overflow-y-auto">
               <SignedInAs userName={user.userName} pictureUrl={user.pictureUrl} />
               <div className="px-1.5">
                 <WatchedRow onToggle={() => setAccountOpen(false)} />

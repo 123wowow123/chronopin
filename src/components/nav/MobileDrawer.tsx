@@ -346,7 +346,7 @@ export function MobileDrawer({ ads = false }: { ads?: boolean }) {
             </DrawerSection>
           ) : null}
           {user ? null : (
-            <DrawerSection title={t('weather.local')} hideTitle>
+            <DrawerSection title={t('weather.local')} hideTitle className="contents">
               <DrawerWeather onNavigate={() => setOpen(false)} />
             </DrawerSection>
           )}

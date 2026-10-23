@@ -1,6 +1,9 @@
 import type { Metadata } from 'next';
 import { requireViewer } from '@/server/guard';
 import Follow, { FOLLOWING_PAGE_SIZE } from '@/server/model/follow';
+import CompanyFollow from '@/server/model/companyFollow';
+import { toJson } from '@/lib/types';
+import { FollowingCompanies, type FollowedCompany } from '../FollowingCompanies';
 import { FollowingList } from '../FollowingList';
 import { ProfileTabs } from '../ProfileTabs';
 import { getT } from '@/lib/i18n/server';
@@ -16,7 +19,7 @@ export async function generateMetadata(): Promise<Metadata> {
 // The people you follow, a tab of the profile.
 export default async function FollowingPage() {
   const user = await requireViewer('/profile/following');
-  const [following, t] = await Promise.all([Follow.listFollowing(user.id), getT()]);
+  const [following, companies, t] = await Promise.all([Follow.listFollowing(user.id), CompanyFollow.listFollowing(user.id), getT()]);
   return (
     <div className="mx-auto max-w-2xl px-4 py-6 sm:py-10 lg:max-w-5xl">
       <ProfileTabs current="/profile/following" />
@@ -25,7 +28,10 @@ export default async function FollowingPage() {
         {t('profile.followingIntro')}
         {following.total ? <span className="ms-2 font-medium text-muted tabular-nums">{following.total}</span> : null}
       </p>
-      <FollowingList userId={user.id} initial={following} pageSize={FOLLOWING_PAGE_SIZE} />
+      <div className="space-y-8">
+        <FollowingList userId={user.id} initial={following} pageSize={FOLLOWING_PAGE_SIZE} />
+        <FollowingCompanies initial={toJson<FollowedCompany[]>(companies)} />
+      </div>
     </div>
   );
 }

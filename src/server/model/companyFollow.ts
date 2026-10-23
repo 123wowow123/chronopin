@@ -70,6 +70,20 @@ export default class CompanyFollow {
     await Notification.createForCompanyFollowers({ pinId, companyId, authorId }, query);
   }
 
+  // The companies userId follows, newest follow first, for the profile page's
+  // Following tab.
+  static async listFollowing(userId: number) {
+    return db.query<{ id: number; name: string; logoUrl: string | null }>(
+      `
+      SELECT c."id", c."name"::text AS "name", c."logoUrl"
+      FROM "CompanyFollow" f
+      JOIN "Company" c ON c."id" = f."companyId"
+      WHERE f."userId" = $1 AND f."utcDeletedDateTime" IS NULL
+      ORDER BY f."id" DESC`,
+      [userId],
+    );
+  }
+
   // Every live company follow, oldest first, for backup:data.
   static async getAll() {
     return db.query(`

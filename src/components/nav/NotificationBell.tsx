@@ -862,8 +862,10 @@ export function WeatherButton({ className = '' }: { className?: string }) {
         {weather?.now ? <span className="text-[10px] leading-none font-medium">{weather.now}</span> : null}
       </button>
       {open ? (
-        <div className="floating absolute end-0 z-50 mt-2 max-h-[calc(100dvh-5rem)] w-80 overflow-y-auto">
-          <LocalWeatherRow className={weather ? 'border-b border-line' : ''} />
+        <div className="floating absolute end-0 z-50 mt-2 flex max-h-[calc(100dvh-5rem)] w-80 flex-col overflow-hidden">
+          <LocalWeatherRow className={`shrink-0 ${weather ? 'border-b border-line' : ''}`} />
+          {/* Only what is under the weather row scrolls, as under the bell's heading. */}
+          <div className="min-h-0 overflow-y-auto">
           <div className="border-b border-line empty:hidden"><NotificationItems {...trades} guest onNavigate={() => setOpen(false)} /></div>
           <ul className="pt-1.5">
             <li className="px-1.5">
@@ -884,6 +886,7 @@ export function WeatherButton({ className = '' }: { className?: string }) {
               </li>
             ))}
           </ul>
+          </div>
         </div>
       ) : null}
     </div>
@@ -899,9 +902,11 @@ export function DrawerWeather({ onNavigate }: { onNavigate?: () => void }) {
     refreshLocalWeather();
   }, []);
   return (
-    <div>
+    <>
       {/* The weather block is the one control: it opens every trade panel in
-          full, or shuts them all. */}
+          full, or shuts them all. It sticks under the drawer's head while the
+          rest scrolls, so its section is `contents` and the nav is what it
+          sticks within. */}
       <div
         role="button"
         tabIndex={0}
@@ -913,13 +918,17 @@ export function DrawerWeather({ onNavigate }: { onNavigate?: () => void }) {
             setOpen((o) => !o);
           }
         }}
-        className={`flex cursor-pointer items-center hover:bg-raised ${open ? 'border-b border-line' : ''}`}
+        className={`sticky top-[52px] z-10 flex cursor-pointer items-center border-t border-line bg-header px-2 pt-2.5 pb-1 hover:bg-raised ${open ? 'border-b' : ''}`}
       >
         <LocalWeatherRow className="min-w-0 flex-1" />
         <Icon name="chevron" className={`me-4 size-4 shrink-0 text-subtle transition-transform ${open ? 'rotate-180' : ''}`} />
       </div>
-      {open ? <NotificationItems {...trades} guest controlled onNavigate={onNavigate} /> : null}
-    </div>
+      {open ? (
+        <div className="px-2 pb-2.5">
+          <NotificationItems {...trades} guest controlled onNavigate={onNavigate} />
+        </div>
+      ) : null}
+    </>
   );
 }
 
