@@ -7,15 +7,21 @@
 //
 //   npx tsx scripts/power/plantShapes.ts --dry                 matching only
 //   npx tsx scripts/power/plantShapes.ts --tags Solar,Nuclear  local database
+//   npx tsx scripts/power/plantShapes.ts --restore             saved copies back into the database
+//
+// Each saved shape is also kept as .scrape/plant-shapes/<pinId>.json (git-ignored),
+// so rows lost from the table can be restored without asking Overpass again.
 
 import '../env';
+import fs from 'node:fs';
 import { parseArgs } from 'node:util';
 import * as db from '@/server/db';
 import { roundCoords, type PinSiteShapeJson, type SiteFeature } from '@/lib/siteShape';
 import { saveSiteShape } from '@/server/model/pinSiteShape';
 
-const { values: flags } = parseArgs({ options: { dry: { type: 'boolean', default: false }, tags: { type: 'string', default: 'Solar,Nuclear,Hydropower' }, limit: { type: 'string' } } });
+const { values: flags } = parseArgs({ options: { dry: { type: 'boolean', default: false }, tags: { type: 'string', default: 'Solar,Nuclear,Hydropower' }, limit: { type: 'string' }, restore: { type: 'boolean', default: false } } });
 const MATCH_M = 1000;
+const KEEP = '.scrape/plant-shapes/';
 const SOURCE_OF: Record<string, string[]> = { Solar: ['solar'], Nuclear: ['nuclear'], Hydropower: ['hydro'] };
 type Pt = [number, number];
 type Ring = Pt[];
@@ -68,7 +74,20 @@ async function overpass(lat: number, lon: number): Promise<El[]> {
   throw new Error('Overpass failed');
 }
 
+async function restore() {
+  let n = 0;
+  for (const f of fs.existsSync(KEEP) ? fs.readdirSync(KEEP).filter((x) => x.endsWith('.json')) : []) {
+    const id = Number(f.replace('.json', ''));
+    const [pin] = await db.query(`SELECT 1 FROM "Pin" WHERE "id" = $1 AND "utcDeletedDateTime" IS NULL`, [id]);
+    if (!pin) continue;
+    await saveSiteShape(id, JSON.parse(fs.readFileSync(KEEP + f, 'utf8')));
+    n++;
+  }
+  console.log(`restored ${n} shapes`);
+}
+
 async function main() {
+  if (flags.restore) return restore();
   const tags = flags.tags!.split(',').map((t) => t.trim()).filter((t) => SOURCE_OF[t]);
   const pins = await db.query<{ id: number; title: string; tag: string; lat: number; lon: number }>(
     `SELECT DISTINCT ON (p."id") p."id", p."title", t."name"::text AS "tag", ST_Y(p."location"::geometry) AS "lat", ST_X(p."location"::geometry) AS "lon"
@@ -104,7 +123,11 @@ async function main() {
     const shape: PinSiteShapeJson = { geojson: { type: 'FeatureCollection', features }, source: 'OpenStreetMap', sourceUrl: `https://www.openstreetmap.org/${first.type}/${first.id}` };
     matched++;
     console.log(pin.id, pin.title.slice(0, 60), '|', first.tags?.name ?? first.id, features.length);
-    if (!flags.dry) await saveSiteShape(pin.id, shape);
+    if (!flags.dry) {
+      await saveSiteShape(pin.id, shape);
+      fs.mkdirSync(KEEP, { recursive: true });
+      fs.writeFileSync(`${KEEP}${pin.id}.json`, JSON.stringify(shape));
+    }
   }
   console.log(`${matched} of ${todo.length} pins ${flags.dry ? 'would get' : 'got'} outlines`);
 }

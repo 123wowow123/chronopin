@@ -957,7 +957,7 @@ async function Thread({ pin }: { pin: PinJson }) {
         </Link>
       </div>
       <ThreadSuggestion pinId={pin.id} />
-      {stops.length > 1 ? <ThreadMapLoader stops={stops} currentId={pin.id} backHref={pinPath(pin)} /> : null}
+      {new Set(stops.map((s) => `${s.latitude.toFixed(4)},${s.longitude.toFixed(4)}`)).size > 1 ? <ThreadMapLoader stops={stops} currentId={pin.id} backHref={pinPath(pin)} /> : null}
       <ThreadList
         key={pin.id}
         current={Math.max(0, pins.findIndex((p) => p.id === pin.id))}
