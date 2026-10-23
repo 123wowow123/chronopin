@@ -11,6 +11,8 @@ import { formatAmountRange, type TradeRow } from '@/lib/trades';
 
 // How many more rows one click on "More" loads.
 const BATCH = 100;
+// Rows shown before the rest are collapsed behind "Show all".
+const PREVIEW = 10;
 
 // A person's disclosed trades, newest first: the first rows arrive with the page, the
 // rest are fetched a batch at a time, so a person with thousands costs nothing up front.
@@ -18,6 +20,8 @@ export function TradesTable({ personId, initial, total }: { personId: number; in
   const t = useT();
   const [rows, setRows] = useState(initial);
   const [loading, setLoading] = useState(false);
+  const [expanded, setExpanded] = useState(false);
+  const shown = expanded ? rows : rows.slice(0, PREVIEW);
   const intl = INTL_LOCALES[t.locale];
   const day = (iso: string) => dateFormat(intl, { dateStyle: 'medium', timeZone: 'UTC' }).format(new Date(`${iso}T00:00:00Z`));
 
@@ -50,7 +54,7 @@ export function TradesTable({ personId, initial, total }: { personId: number; in
             </tr>
           </thead>
           <tbody>
-            {rows.map((tr) => {
+            {shown.map((tr) => {
               const url = safeUrl(tr.sourceUrl);
               return (
                 <tr key={tr.id} className="border-t border-line align-top">
@@ -87,19 +91,32 @@ export function TradesTable({ personId, initial, total }: { personId: number; in
           </tbody>
         </table>
       </div>
-      {rows.length < total ? (
+      {!expanded && total > PREVIEW ? (
         <div className="mt-3 flex justify-center">
-          <button
-            type="button"
-            onClick={more}
-            disabled={loading}
-            aria-busy={loading}
-            className="rounded-full bg-field px-5 py-2 text-sm font-medium text-ink ring-1 ring-line ring-inset hover:bg-raised disabled:opacity-60"
-          >
-            {t('person.more')} · {total - rows.length}
+          <button type="button" onClick={() => setExpanded(true)} className="rounded-full bg-field px-5 py-2 text-sm font-medium text-ink ring-1 ring-line ring-inset hover:bg-raised">
+            {t('person.trades.showMore', { count: total })}
           </button>
         </div>
-      ) : null}
+      ) : (
+        <div className="mt-3 flex justify-center gap-2">
+          {rows.length < total ? (
+            <button
+              type="button"
+              onClick={more}
+              disabled={loading}
+              aria-busy={loading}
+              className="rounded-full bg-field px-5 py-2 text-sm font-medium text-ink ring-1 ring-line ring-inset hover:bg-raised disabled:opacity-60"
+            >
+              {t('person.more')} · {total - rows.length}
+            </button>
+          ) : null}
+          {expanded ? (
+            <button type="button" onClick={() => setExpanded(false)} className="rounded-full bg-field px-5 py-2 text-sm font-medium text-ink ring-1 ring-line ring-inset hover:bg-raised">
+              {t('common.showLess')}
+            </button>
+          ) : null}
+        </div>
+      )}
     </>
   );
 }
