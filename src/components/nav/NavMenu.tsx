@@ -27,7 +27,7 @@ type MenuGroup = { title?: string; items: MenuItem[] };
 // (SignedInAs) is that link, since it already names the account they belong to.
 function accountGroups(isAdmin: boolean): MenuGroup[] {
   const groups: MenuGroup[] = [
-    { items: [{ href: '/listings', label: 'nav.listings', icon: 'tag' }, { href: '/people', label: 'People', icon: 'users' }] },
+    { items: [{ href: '/listings', label: 'nav.listings', icon: 'tag' }, { href: '/people', label: 'People', icon: 'users' }, { href: '/trades', label: 'notifications.tradesToday', icon: 'trending-up' }] },
     { title: 'Curated', items: [{ href: '/restaurants', label: 'Restaurants', icon: 'map' }, { href: '/travel', label: 'Travel', icon: 'globe' }, { href: '/activities', label: 'Activities', icon: 'compass' }, { href: '/products', label: 'Products', icon: 'cart' }, { href: '/cars', label: 'Cars', icon: 'car' }, { href: '/music', label: 'Music', icon: 'music' }] },
   ];
   if (isAdmin) groups.push({ items: [{ href: '/admin/views', label: 'nav.admin', icon: 'shield' }] });
