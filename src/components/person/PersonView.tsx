@@ -124,11 +124,11 @@ export function PersonView({
 
   // Where the page jumps to, in the order it runs.
   const nav = [
-    committees.length ? { id: 'committees', label: t('person.committees.title') } : null,
+    { id: 'phases', label: t('person.octagon.title') },
     years.length ? { id: 'earnings', label: t('person.earnings') } : null,
     trades.length ? { id: 'trades', label: t('person.trades.title') } : null,
+    committees.length ? { id: 'committees', label: t('person.committees.title') } : null,
     campaigns.length ? { id: 'campaign', label: t('person.campaign.title') } : null,
-    { id: 'phases', label: t('person.octagon.title') },
     contributions.length ? { id: 'laws', label: lawsHeading } : null,
     meter ? { id: 'record', label: t('person.matters') } : null,
     profile.properties.length ? { id: 'property', label: t('person.properties') } : null,
@@ -251,9 +251,11 @@ export function PersonView({
       ) : null}
 
       <div className="mt-12 flex flex-col gap-14">
-        {/* Earnings, a tile a year, directly under the main pane. */}
-        {committees.length ? <CommitteesSection seats={committees} t={t} /> : null}
+        <Section id="phases" title={t('person.octagon.title')} count={phases.length} about={t('person.octagon.about', { name: profile.name })}>
+          <OctagonChart phases={phases} refs={profile.refs} />
+        </Section>
 
+        {/* Earnings, a tile a year, directly under the main pane. */}
         {years.length ? (
           <section id="earnings" aria-labelledby="earnings-heading" className="scroll-mt-20">
             <EarningsRow
@@ -307,11 +309,9 @@ export function PersonView({
 
         {trades.length ? <TradesSection personId={profile.id} name={profile.name} trades={trades} summary={tradeSummary} t={t} /> : null}
 
-        {campaigns.length ? <CampaignSection campaigns={campaigns} name={profile.name} t={t} /> : null}
+        {committees.length ? <CommitteesSection seats={committees} t={t} /> : null}
 
-        <Section id="phases" title={t('person.octagon.title')} count={phases.length} about={t('person.octagon.about', { name: profile.name })}>
-          <OctagonChart phases={phases} refs={profile.refs} />
-        </Section>
+        {campaigns.length ? <CampaignSection campaigns={campaigns} name={profile.name} t={t} /> : null}
 
         {contributions.length ? (
           <Section id="laws" title={lawsHeading} count={contributions.length}>

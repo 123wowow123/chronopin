@@ -12,7 +12,7 @@ import { formatAmountRange, type TradeRow } from '@/lib/trades';
 // How many more rows one click on "More" loads.
 const BATCH = 100;
 // Rows shown before the rest are collapsed behind "Show all".
-const PREVIEW = 10;
+const PREVIEW = 5;
 
 // A person's disclosed trades, newest first: the first rows arrive with the page, the
 // rest are fetched a batch at a time, so a person with thousands costs nothing up front.
