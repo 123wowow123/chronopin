@@ -1,0 +1,1382 @@
+{
+  "checkedAt": "2026-10-23",
+  "scope": "Cleanview backfill batch 2; 12 existing pin identities, production/current local IDs 16310–16321.",
+  "outcome": {
+    "correctedPins": 11,
+    "softDeletedHeldPins": 1,
+    "environmentActionsVerified": 24,
+    "retainedAzureImagesDownloaded": 33,
+    "nativePagesVerified": 8,
+    "localMappedCount": 1452,
+    "productionMappedCount": 1452
+  },
+  "plan": {
+    "dc-related-digital-cheyenne-wy": {
+      "patch": {
+        "title": "Related Digital Cheyenne: Up to 420 MW Campus; $1.2B First Phase",
+        "description": "Related Digital lists a 115-acre Cheyenne campus with up to 420 MW capacity and an initial 88 MW critical-IT building for CoreWeave. The published $1.2 billion investment applies to the first phase, not the entire campus.",
+        "sourceUrl": "https://www.related-digital.com/wyoming",
+        "references": [
+          {
+            "url": "https://www.related-digital.com/wyoming",
+            "title": "Cheyenne, Wyoming — Related Digital",
+            "confidence": 95,
+            "publishedDate": null
+          },
+          {
+            "url": "https://www.related-digital.com/news/12-billion-data-center-breaks-ground-in-cheyenne-promises-water-free-operations",
+            "title": "$1.2 billion data center breaks ground in Cheyenne, promises water-free operations",
+            "confidence": 95,
+            "publishedDate": "2025-10-07"
+          }
+        ],
+        "longFormSummary": "<ul><li>The campus is planned for up to 420 MW; phase one is a 184,000-square-foot building with 88 MW of critical IT capacity for CoreWeave.<cite data-ref=\"https://www.related-digital.com/wyoming\"></cite></li><li>The developer describes $1.2 billion of first-phase investment and high-efficiency air-cooled chillers with nominal domestic water use.<cite data-ref=\"https://www.related-digital.com/wyoming\"></cite></li><li>Timeline: October 2025 coverage anticipated building the initial facility over the next year. The November 1, 2026 date remains a legacy estimated placeholder; no exact commissioning date was verified.<cite data-ref=\"https://www.related-digital.com/news/12-billion-data-center-breaks-ground-in-cheyenne-promises-water-free-operations\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "estimated",
+        "allDay": true,
+        "allDayStated": false,
+        "utcStartDateTime": "2026-11-01T00:00:00.000Z",
+        "dateConfidenceReasoning": "Legacy November 1, 2026 placeholder. October 2025 coverage anticipates first-phase construction over the next year but current operator page does not establish COD; actual first service remains a research gap.",
+        "tags": [
+          "Cleanview",
+          "Data Centers",
+          "Under Construction",
+          "Related Digital",
+          "Wyoming",
+          "CoreWeave",
+          "Signed Tenant"
+        ]
+      },
+      "power": {
+        "megawatts": 420,
+        "kind": "usage",
+        "sourceUrl": "https://www.related-digital.com/wyoming",
+        "note": "Planned campus ceiling; initial CoreWeave building is 88 MW critical IT, not full operating load."
+      },
+      "datacenter": {
+        "acres": 115,
+        "sqft": 184000,
+        "cooling": "High-efficiency air-cooled chillers",
+        "powerSource": "Black Hills utility supply",
+        "note": "184,000 sq ft applies to first phase only; campus up to 420 MW. $1.2B is phase-one investment. Measured daily water use not published.",
+        "sourceUrl": "https://www.related-digital.com/wyoming"
+      },
+      "clearEnergy": true,
+      "gaps": [
+        "Verify actual first-phase COD, campus-wide capital cost and exact parcel; existing map coordinates were not moved."
+      ]
+    },
+    "dc-stargate-lighthouse-vantage-wi": {
+      "patch": {
+        "title": "Vantage Lighthouse: 902 MW Critical IT, Four Buildings, $15B+ Wisconsin Campus",
+        "description": "Vantage’s Lighthouse campus in Port Washington is planned for 902 MW of critical IT capacity across four buildings, with completion in 2028. WEC’s September 2026 presentation describes $15 billion-plus of investment and construction underway.",
+        "sourceUrl": "https://vantage-dc.com/data-center-locations/north-america/port-washington-wisconsin",
+        "references": [
+          {
+            "url": "https://vantage-dc.com/data-center-locations/north-america/port-washington-wisconsin",
+            "title": "Port Washington, Wisconsin — Vantage Data Centers",
+            "confidence": 95,
+            "publishedDate": null
+          },
+          {
+            "url": "https://www.sec.gov/Archives/edgar/data/783325/000078332526000099/a092026septemberfinal002.htm",
+            "title": "WEC Energy Group — September 2026 Investor Presentation",
+            "confidence": 95,
+            "publishedDate": null
+          }
+        ],
+        "longFormSummary": "<ul><li>Vantage advertises 902 MW of critical IT across four buildings, 672 acres and 2.5 million square feet. The earlier 1,172 MW upper figure is removed.<cite data-ref=\"https://vantage-dc.com/data-center-locations/north-america/port-washington-wisconsin\"></cite></li><li>WEC’s September 2026 investor presentation describes the four buildings as under construction and identifies the OpenAI/Oracle Stargate partnership and expected investment above $15 billion.<cite data-ref=\"https://www.sec.gov/Archives/edgar/data/783325/000078332526000099/a092026septemberfinal002.htm\"></cite></li><li>Timeline: Vantage gives completion in 2028, not an exact first-service date. January 1 is a year-only estimated placeholder for that completion window.<cite data-ref=\"https://vantage-dc.com/data-center-locations/north-america/port-washington-wisconsin\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": "USD",
+        "priceLowerBound": 15000000000,
+        "priceUpperBound": null,
+        "dateConfidence": "estimated",
+        "allDay": true,
+        "allDayStated": false,
+        "utcStartDateTime": "2028-01-01T00:00:00.000Z",
+        "dateConfidenceReasoning": "Vantage operator campus page says completed in 2028. January 1 represents year-only precision; no exact energization or first-service day is asserted.",
+        "tags": [
+          "Cleanview",
+          "Data Centers",
+          "Under Construction",
+          "Vantage Data Centers",
+          "Wisconsin",
+          "OpenAI",
+          "Oracle",
+          "Signed Tenant"
+        ]
+      },
+      "power": {
+        "megawatts": 902,
+        "kind": "usage",
+        "sourceUrl": "https://vantage-dc.com/data-center-locations/north-america/port-washington-wisconsin",
+        "note": "Planned campus critical IT capacity, not 1,172 MW and not current operating demand."
+      },
+      "datacenter": {
+        "acres": 672,
+        "sqft": 2500000,
+        "buildings": 4,
+        "cooling": "Closed-loop chiller system",
+        "note": "Operator campus scope: four buildings and 902 MW critical IT. Exact daily water use not established by current opened operator page.",
+        "sourceUrl": "https://vantage-dc.com/data-center-locations/north-america/port-washington-wisconsin"
+      },
+      "clearEnergy": true,
+      "gaps": [
+        "First-service date remains unverified; campus completion in 2028 is not an energization date. Existing source-wiki/site-shape records were not certified in this batch."
+      ]
+    },
+    "dc-terawulf-justified-campus-ky": {
+      "patch": {
+        "title": "TeraWulf Justified: 482 MW Electric Service, 401 MW IT Plan, $4.0–4.5B Investment",
+        "description": "TeraWulf’s Justified campus in Hawesville has PSC-approved electric service up to 482 MW and a 20-year Anthropic lease for approximately 401 MW of critical IT capacity. Initial service is expected in H2 2027, ramping to full IT capacity in early 2028.",
+        "sourceUrl": "https://www.globenewswire.com/news-release/2026/08/24/3349687/0/en/kentucky-psc-approves-482-mw-power-agreement-for-terawulf-s-justified-data-campus.html",
+        "references": [
+          {
+            "url": "https://www.globenewswire.com/news-release/2026/08/24/3349687/0/en/kentucky-psc-approves-482-mw-power-agreement-for-terawulf-s-justified-data-campus.html",
+            "title": "Kentucky PSC Approves 482 MW Power Agreement for TeraWulf’s Justified Data Campus",
+            "confidence": 95,
+            "publishedDate": "2026-08-24"
+          },
+          {
+            "url": "https://www.globenewswire.com/news-release/2026/07/06/3322382/0/en/TeraWulf-Announces-Anthropic-Lease-at-Justified-Data-Campus-and-Sale-of-Majority-Interest-in-Abernathy-Joint-Venture-to-Fluidstack.html",
+            "title": "TeraWulf Announces Anthropic Lease at Justified Data Campus and Sale of Majority Interest in Abernathy Joint Venture to Fluidstack",
+            "confidence": 95,
+            "publishedDate": "2026-07-06"
+          }
+        ],
+        "longFormSummary": "<ul><li>TeraWulf reports PSC approval of a retail electric-service agreement for up to 482 MW at the former Century Aluminum Hawesville smelter, supplied through Big Rivers and Kenergy.<cite data-ref=\"https://www.globenewswire.com/news-release/2026/08/24/3349687/0/en/kentucky-psc-approves-482-mw-power-agreement-for-terawulf-s-justified-data-campus.html\"></cite></li><li>Estimated investment is $4.0–4.5 billion for site development and initial data halls, excluding customers’ computing equipment.<cite data-ref=\"https://www.globenewswire.com/news-release/2026/08/24/3349687/0/en/kentucky-psc-approves-482-mw-power-agreement-for-terawulf-s-justified-data-campus.html\"></cite></li><li>Anthropic’s 20-year lease covers approximately 401 MW of critical IT load. Electric-service capacity and IT capacity are different measures.<cite data-ref=\"https://www.globenewswire.com/news-release/2026/07/06/3322382/0/en/TeraWulf-Announces-Anthropic-Lease-at-Justified-Data-Campus-and-Sale-of-Majority-Interest-in-Abernathy-Joint-Venture-to-Fluidstack.html\"></cite></li><li>Timeline: initial capacity in H2 2027, ramping to 401 MW by early 2028. July 1 is an estimated half-year placeholder.<cite data-ref=\"https://www.globenewswire.com/news-release/2026/07/06/3322382/0/en/TeraWulf-Announces-Anthropic-Lease-at-Justified-Data-Campus-and-Sale-of-Majority-Interest-in-Abernathy-Joint-Venture-to-Fluidstack.html\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": "USD",
+        "priceLowerBound": 4000000000,
+        "priceUpperBound": 4500000000,
+        "dateConfidence": "estimated",
+        "allDay": true,
+        "allDayStated": false,
+        "utcStartDateTime": "2027-07-01T00:00:00.000Z",
+        "dateConfidenceReasoning": "TeraWulf July 6, 2026 release targets initial capacity H2 2027 and full 401 MW IT capacity early 2028. July 1 is half-year precision, not a promised delivery day.",
+        "tags": [
+          "Cleanview",
+          "Data Centers",
+          "Planned",
+          "TeraWulf",
+          "Anthropic",
+          "Signed Tenant",
+          "Kentucky",
+          "MISO"
+        ]
+      },
+      "power": {
+        "megawatts": 482,
+        "kind": "usage",
+        "sourceUrl": "https://www.globenewswire.com/news-release/2026/08/24/3349687/0/en/kentucky-psc-approves-482-mw-power-agreement-for-terawulf-s-justified-data-campus.html",
+        "note": "Approved maximum electric service; 401 MW critical IT plan is a separate metric."
+      },
+      "datacenter": {
+        "powerSource": "Big Rivers Electric / Kenergy; PSC-approved up-to-482 MW electric service",
+        "note": "Brownfield redevelopment of former Century Aluminum Hawesville smelter. 401 MW critical IT is distinct from 482 MW electric service. Water and acreage not verified in these releases.",
+        "sourceUrl": "https://www.globenewswire.com/news-release/2026/08/24/3349687/0/en/kentucky-psc-approves-482-mw-power-agreement-for-terawulf-s-justified-data-campus.html"
+      },
+      "clearEnergy": true,
+      "gaps": [
+        "Confirm detailed construction status, parcel boundary and current water/acreage specifications."
+      ]
+    },
+    "dc-thor-equities-augusta-mi": {
+      "patch": {
+        "title": "Augusta Township Data Center Rezoning Rejected by Voters on August 4, 2026",
+        "description": "Augusta Township voters rejected the data-center rezoning, 2,314–269, in the August 4, 2026 primary. The proposed $1 billion development’s former 2028 opening claim and unverified 100 MW figure are removed.",
+        "sourceUrl": "https://electionresults.ewashtenaw.org/electionreporting/aug2026/index.jsp",
+        "references": [
+          {
+            "url": "https://electionresults.ewashtenaw.org/electionreporting/aug2026/index.jsp",
+            "title": "Official Election Results — August 4, 2026 Primary Election",
+            "confidence": 95,
+            "publishedDate": null
+          },
+          {
+            "url": "https://www.wemu.org/wemu-news/2026-08-05/augusta-township-voters-overturn-data-center-rezoning",
+            "title": "Augusta Township voters overturn data center rezoning",
+            "confidence": 95,
+            "publishedDate": "2026-08-05"
+          },
+          {
+            "url": "https://augustatownship.org/wp-content/uploads/2025/05/Data_Center_Review.pdf",
+            "title": "Augusta Township Data Center Rezoning — Land Use and Conditional Zoning Analysis",
+            "confidence": 95,
+            "publishedDate": "2025-05-19"
+          }
+        ],
+        "longFormSummary": "<ul><li>Official results record 2,314 No votes (89.59%) and 269 Yes votes on the Augusta Township zoning referendum.<cite data-ref=\"https://electionresults.ewashtenaw.org/electionreporting/aug2026/index.jsp\"></cite></li><li>WEMU reports that the vote overturned the rezoning for a proposed $1 billion data center. Rejection of this rezoning is not proof the developer withdrew every possible future proposal.<cite data-ref=\"https://www.wemu.org/wemu-news/2026-08-05/augusta-township-voters-overturn-data-center-rezoning\"></cite></li><li>The township’s May 2025 review identifies JDS Equities II LLC as applicant and describes the requested conditional rezoning. No verified operating-power capacity is stated here.<cite data-ref=\"https://augustatownship.org/wp-content/uploads/2025/05/Data_Center_Review.pdf\"></cite></li><li>Timeline: August 4, 2026 is the confirmed referendum date. The prior June 2028 opening date is removed because the enabling rezoning was rejected.<cite data-ref=\"https://electionresults.ewashtenaw.org/electionreporting/aug2026/index.jsp\"></cite></li></ul>",
+        "price": 1000000000,
+        "priceCurrency": "USD",
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "confirmed",
+        "allDay": true,
+        "allDayStated": false,
+        "utcStartDateTime": "2026-08-04T00:00:00.000Z",
+        "dateConfidenceReasoning": "Confirmed August 4, 2026 referendum event date, backed by official results. This pin now records the zoning rejection, not a speculative facility COD.",
+        "tags": [
+          "Cleanview",
+          "Data Centers",
+          "Denied",
+          "Thor Equities",
+          "Michigan",
+          "Referendum"
+        ]
+      },
+      "power": "delete",
+      "datacenter": "delete",
+      "clearEnergy": true,
+      "gaps": [
+        "Verify whether Thor/JDS has filed any new proposal since the referendum. $1B is a reported proposal estimate, not money spent. Existing geographic position is approximate."
+      ]
+    },
+    "solar-ameren-reform-callaway-mo": {
+      "patch": {
+        "title": "Ameren Reform: 250 MW Missouri Solar Project Approved; Target Q4 2028",
+        "description": "Missouri’s PSC granted Ameren a certificate for the 250 MW Reform solar project in Callaway County on May 13, 2026. Ameren’s May investor presentation targets service in Q4 2028, correcting the earlier September placeholder.",
+        "sourceUrl": "https://psc.mo.gov/Electric/PSC_Grants_CCN_for_Ameren_Missouri_Energy_Generation_Project_-_pr-26-71",
+        "references": [
+          {
+            "url": "https://psc.mo.gov/Electric/PSC_Grants_CCN_for_Ameren_Missouri_Energy_Generation_Project_-_pr-26-71",
+            "title": "PSC Grants CCN for Ameren Missouri Energy Generation Project",
+            "confidence": 95,
+            "publishedDate": "2026-05-13"
+          },
+          {
+            "url": "https://s21.q4cdn.com/448935352/files/doc_events/2026/May/18/AGA-Financial-Forum-2026-vFINAL_.pdf",
+            "title": "Ameren — AGA Financial Forum 2026",
+            "confidence": 95,
+            "publishedDate": "2026-05-18"
+          }
+        ],
+        "longFormSummary": "<ul><li>The PSC approved a 250 MW solar facility on Ameren-owned property in Callaway County, including a new 345 kV Odyssey Switching Station, case EA-2025-0239.<cite data-ref=\"https://psc.mo.gov/Electric/PSC_Grants_CCN_for_Ameren_Missouri_Energy_Generation_Project_-_pr-26-71\"></cite></li><li>The published approval does not disclose a total construction budget; the price field remains empty.<cite data-ref=\"https://psc.mo.gov/Electric/PSC_Grants_CCN_for_Ameren_Missouri_Energy_Generation_Project_-_pr-26-71\"></cite></li><li>Timeline: Ameren’s May 2026 investor table lists Q4 2028 in-service. October 1 is the first day of that quarter used as an estimated placeholder.<cite data-ref=\"https://s21.q4cdn.com/448935352/files/doc_events/2026/May/18/AGA-Financial-Forum-2026-vFINAL_.pdf\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "estimated",
+        "allDay": true,
+        "allDayStated": false,
+        "utcStartDateTime": "2028-10-01T00:00:00.000Z",
+        "dateConfidenceReasoning": "Ameren May 2026 AGA presentation lists Reform anticipated in-service Q4 2028; October 1 is quarter precision, not an exact COD."
+      },
+      "power": {
+        "megawatts": 250,
+        "kind": "generation",
+        "sourceUrl": "https://psc.mo.gov/Electric/PSC_Grants_CCN_for_Ameren_Missouri_Energy_Generation_Project_-_pr-26-71",
+        "note": "PSC-approved design capacity; planned in-service Q4 2028."
+      },
+      "datacenter": null,
+      "clearEnergy": false,
+      "gaps": [
+        "Current detailed construction schedule, total published cost and parcel coordinates still require verification."
+      ]
+    },
+    "solar-clearway-royal-slope-wa": {
+      "patch": {
+        "title": "Clearway Royal Slope: 260 MW Solar and 260 MW / 1,040 MWh Storage in Washington",
+        "description": "Clearway and Grant PUD signed 20-year solar and storage agreements for Royal Slope. Grant PUD’s packet specifies 260 MW solar and 260 MW / 1,040 MWh storage, with contractual commencement no earlier than March 31, 2028.",
+        "sourceUrl": "https://www.clearwayenergygroup.com/press-releases/clearway-signs-power-purchase-agreement-and-energy-storage-agreement-totaling-520-mw-with-public-utility-district-of-grant-county/",
+        "references": [
+          {
+            "url": "https://www.clearwayenergygroup.com/press-releases/clearway-signs-power-purchase-agreement-and-energy-storage-agreement-totaling-520-mw-with-public-utility-district-of-grant-county/",
+            "title": "Clearway Signs Power Purchase Agreement and Energy Storage Agreement Totaling 520 MW with Public Utility District of Grant County",
+            "confidence": 95,
+            "publishedDate": "2025-10-30"
+          },
+          {
+            "url": "https://www.grantpud.org/ru/block/documents/68e984086c405-2025-10-14-commission-meeting-packet.pdf",
+            "title": "Grant PUD — October 14, 2025 Commission Meeting Packet",
+            "confidence": 95,
+            "publishedDate": "2025-10-14"
+          },
+          {
+            "url": "https://www.grantpud.org/generation/",
+            "title": "Grant PUD: Generation",
+            "confidence": 95,
+            "publishedDate": null
+          }
+        ],
+        "longFormSummary": "<ul><li>Clearway’s October 2025 announcement identifies 260 MW solar and 260 MW storage in Grant County, each under a 20-year agreement with Grant PUD.<cite data-ref=\"https://www.clearwayenergygroup.com/press-releases/clearway-signs-power-purchase-agreement-and-energy-storage-agreement-totaling-520-mw-with-public-utility-district-of-grant-county/\"></cite></li><li>The commission packet specifies four-hour storage, 1,040 MWh. Solar generation and battery discharge are separate capacities and must not be added as 520 MW of solar.<cite data-ref=\"https://www.grantpud.org/ru/block/documents/68e984086c405-2025-10-14-commission-meeting-packet.pdf\"></cite></li><li>Timeline: contractual commencement is no earlier than March 31, 2028; this is a lower-bound target, not confirmed energization.<cite data-ref=\"https://www.grantpud.org/ru/block/documents/68e984086c405-2025-10-14-commission-meeting-packet.pdf\"></cite></li><li>Grant PUD’s current project summary anticipates November 2026 groundbreaking and early 2028 generation. A total construction cost is not disclosed in these records.<cite data-ref=\"https://www.grantpud.org/generation/\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "estimated",
+        "allDay": true,
+        "allDayStated": false,
+        "utcStartDateTime": "2028-03-31T00:00:00.000Z",
+        "dateConfidenceReasoning": "Grant PUD October 2025 packet gives commencement no earlier than March 31, 2028. Preserve as an estimated lower-bound contract target, not a scheduled COD."
+      },
+      "power": {
+        "megawatts": 260,
+        "kind": "generation",
+        "sourceUrl": "https://www.clearwayenergygroup.com/press-releases/clearway-signs-power-purchase-agreement-and-energy-storage-agreement-totaling-520-mw-with-public-utility-district-of-grant-county/",
+        "note": "260 MW solar; separate 260 MW / 1,040 MWh battery. One-row power field records solar generation only."
+      },
+      "datacenter": null,
+      "clearEnergy": false,
+      "gaps": [
+        "Exact delivery day and total capital cost remain unpublished; one PinPower row cannot represent both generation and storage without conflation."
+      ]
+    },
+    "solar-clenera-co-bar-complex-az": {
+      "patch": {
+        "title": "Clēnera CO Bar: 1,211 MW Solar, 4,000 MWh Storage, $2.900–3.045B Investment",
+        "description": "Enlight’s CO Bar complex in Arizona comprises five projects with 1,211 MW solar and 4,000 MWh storage. Its June 2026 financing release gives $2.900–3.045 billion total investment and phased operation from H2 2027 through H1 2028.",
+        "sourceUrl": "https://enlightenergy.com/wp-content/uploads/2026/06/Enlight-Reaches-Financial-Close-for-CO-Bar.pdf",
+        "references": [
+          {
+            "url": "https://enlightenergy.com/wp-content/uploads/2026/06/Enlight-Reaches-Financial-Close-for-CO-Bar.pdf",
+            "title": "Enlight Reaches Financial Close for CO Bar Complex, Securing Approximately $2.6 Billion in Debt Financing for Its Largest Project to Date",
+            "confidence": 95,
+            "publishedDate": "2026-06-25"
+          },
+          {
+            "url": "https://www.globenewswire.com/news-release/2026/02/02/3230211/0/en/Enlight-Reaches-Final-Development-Milestones-for-CO-Bar-Its-Largest-Project-to-Date.html",
+            "title": "Enlight Reaches Final Development Milestones for CO Bar, Its Largest Project to Date",
+            "confidence": 95,
+            "publishedDate": "2026-02-02"
+          }
+        ],
+        "longFormSummary": "<ul><li>The five-stage complex combines 1,211 MW solar and 4,000 MWh storage; its shared AC interconnection is 1 GW. These are distinct measures.<cite data-ref=\"https://www.globenewswire.com/news-release/2026/02/02/3230211/0/en/Enlight-Reaches-Final-Development-Milestones-for-CO-Bar-Its-Largest-Project-to-Date.html\"></cite></li><li>June financing disclosure gives total investment of $2.900–3.045 billion and approximately $2.6 billion debt commitments. Debt commitments are not an additional construction cost.<cite data-ref=\"https://enlightenergy.com/wp-content/uploads/2026/06/Enlight-Reaches-Financial-Close-for-CO-Bar.pdf\"></cite></li><li>Timeline: phased operation is expected H2 2027 to H1 2028. July 1, 2027 represents the start of the initial half-year window, replacing unsupported August precision.<cite data-ref=\"https://enlightenergy.com/wp-content/uploads/2026/06/Enlight-Reaches-Financial-Close-for-CO-Bar.pdf\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": "USD",
+        "priceLowerBound": 2900000000,
+        "priceUpperBound": 3045000000,
+        "dateConfidence": "estimated",
+        "allDay": true,
+        "allDayStated": false,
+        "utcStartDateTime": "2027-07-01T00:00:00.000Z",
+        "dateConfidenceReasoning": "Enlight June 25, 2026 release: commercial operations in phases H2 2027 through H1 2028. July 1, 2027 is a half-year placeholder, not an exact first-service date."
+      },
+      "power": {
+        "megawatts": 1211,
+        "kind": "generation",
+        "sourceUrl": "https://www.globenewswire.com/news-release/2026/02/02/3230211/0/en/Enlight-Reaches-Final-Development-Milestones-for-CO-Bar-Its-Largest-Project-to-Date.html",
+        "note": "Published total solar capacity; 1 GW AC interconnection and 4 GWh storage are separate measures."
+      },
+      "datacenter": null,
+      "clearEnergy": false,
+      "gaps": [
+        "Precise stage-by-stage commissioning days and exact site/media alignment remain unverified."
+      ]
+    },
+    "solar-doral-mammoth-solar-complex-in": {
+      "patch": {
+        "title": "Doral Mammoth Solar: 900 MWac Phases Near Commercial Operation in October 2026",
+        "description": "Doral’s October 7, 2026 release celebrates imminent commercial operation of Mammoth South, Central I and Central II, totaling 900 MWac. It does not confirm the previously displayed October 15 COD or substantiate a $1.5 billion cost for these phases.",
+        "sourceUrl": "https://www.prnewswire.com/news-releases/doral-renewables-celebrates-commercialization-of-the-remaining-900-mw-of-mammoth-solar-302901715.html",
+        "references": [
+          {
+            "url": "https://www.prnewswire.com/news-releases/doral-renewables-celebrates-commercialization-of-the-remaining-900-mw-of-mammoth-solar-302901715.html",
+            "title": "Doral Renewables Celebrates Commercialization of the Remaining 900 MW of Mammoth Solar",
+            "confidence": 95,
+            "publishedDate": "2026-10-07"
+          }
+        ],
+        "longFormSummary": "<ul><li>Mammoth South, Central I and Central II total 900 MWac, within the wider Mammoth complex described by Doral as 1.3 GW.<cite data-ref=\"https://www.prnewswire.com/news-releases/doral-renewables-celebrates-commercialization-of-the-remaining-900-mw-of-mammoth-solar-302901715.html\"></cite></li><li>The October 7 announcement describes their operation as imminent and the three phases as constructed over 18 months. It does not certify an exact commissioning day.<cite data-ref=\"https://www.prnewswire.com/news-releases/doral-renewables-celebrates-commercialization-of-the-remaining-900-mw-of-mammoth-solar-302901715.html\"></cite></li><li>Timeline: October 2026 is an estimated launch window inferred from the imminent-operation release. October 1 is a month-only placeholder; October 7 is the release date, not COD.<cite data-ref=\"https://www.prnewswire.com/news-releases/doral-renewables-celebrates-commercialization-of-the-remaining-900-mw-of-mammoth-solar-302901715.html\"></cite></li><li>No project cost for these three phases is published in this release; the prior $1.5 billion price is cleared pending scope-specific evidence.<cite data-ref=\"https://www.prnewswire.com/news-releases/doral-renewables-celebrates-commercialization-of-the-remaining-900-mw-of-mammoth-solar-302901715.html\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "estimated",
+        "allDay": true,
+        "allDayStated": false,
+        "utcStartDateTime": "2026-10-01T00:00:00.000Z",
+        "dateConfidenceReasoning": "Doral October 7, 2026 release says imminent commercial operation, without a COD day. October 2026 is an estimated window; day 1 is a month placeholder, not confirmed operation.",
+        "tags": [
+          "Cleanview",
+          "Solar",
+          "Under Construction",
+          "Doral Renewables",
+          "Indiana",
+          "PJM"
+        ]
+      },
+      "power": {
+        "megawatts": 900,
+        "kind": "generation",
+        "sourceUrl": "https://www.prnewswire.com/news-releases/doral-renewables-celebrates-commercialization-of-the-remaining-900-mw-of-mammoth-solar-302901715.html",
+        "note": "Combined three remaining phases, 900 MWac; release describes imminent COD, not measured output."
+      },
+      "datacenter": null,
+      "clearEnergy": false,
+      "gaps": [
+        "Actual COD may since have occurred; obtain a phase-specific operational confirmation and published cost."
+      ]
+    },
+    "solar-invenergy-koshkonong-solar-energy-center-wi": {
+      "patch": {
+        "title": "Koshkonong: 300 MW Solar Expected in 2026; 165 MW Battery Expected in 2027",
+        "description": "Koshkonong’s solar and battery have separate delivery windows: MGE expects solar in 2026 and battery storage in 2027. Its ownership shares and WEC’s annual-report table distinguish utility-owned capacity from whole-project capacity.",
+        "sourceUrl": "https://www.mge.com/smart-energy/clean-energy/solar-energy",
+        "references": [
+          {
+            "url": "https://www.mge.com/smart-energy/clean-energy/solar-energy",
+            "title": "Solar Energy — Madison Gas and Electric",
+            "confidence": 95,
+            "publishedDate": null
+          },
+          {
+            "url": "https://wecenergygroup.com/invest/annualreports/wec2025-annual-report.pdf",
+            "title": "WEC Energy Group — 2025 Annual Report",
+            "confidence": 95,
+            "publishedDate": null
+          }
+        ],
+        "longFormSummary": "<ul><li>MGE describes a 300 MW solar array in Christiana and Deerfield, Dane County, and ownership of 30 MW solar plus 16.5 MW storage.<cite data-ref=\"https://www.mge.com/smart-energy/clean-energy/solar-energy\"></cite></li><li>WEC’s annual-report table lists its utilities’ 90% interests as 270 MW solar and 149 MW battery. Those are ownership shares, not total project capacity.<cite data-ref=\"https://wecenergygroup.com/invest/annualreports/wec2025-annual-report.pdf\"></cite></li><li>Timeline: MGE and WEC’s annual report separate solar in 2026 from battery service in 2027. The December 1, 2026 date remains a year-level placeholder for solar only; no exact day was verified.<cite data-ref=\"https://www.mge.com/smart-energy/clean-energy/solar-energy\"></cite></li><li>The annual-report amounts are construction work in progress, not a published all-in project budget. The earlier $649 million price is cleared pending scope reconciliation.<cite data-ref=\"https://wecenergygroup.com/invest/annualreports/wec2025-annual-report.pdf\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "estimated",
+        "allDay": true,
+        "allDayStated": false,
+        "utcStartDateTime": "2026-12-01T00:00:00.000Z",
+        "dateConfidenceReasoning": "Current MGE page expects solar in 2026 and batteries in 2027. Existing December 1 is an estimated placeholder within the published solar year, not an exact COD; battery timing is separate."
+      },
+      "power": {
+        "megawatts": 300,
+        "kind": "generation",
+        "sourceUrl": "https://www.mge.com/smart-energy/clean-energy/solar-energy",
+        "note": "Whole-project solar capacity. Battery storage is separate 165 MW scope, expected 2027; do not label 300 MW as storage."
+      },
+      "datacenter": null,
+      "clearEnergy": false,
+      "gaps": [
+        "Exact solar COD, battery commissioning schedule and current full-project cost remain unverified. WEC overview collapses timing; annual-report and MGE phase-specific dates used here."
+      ]
+    },
+    "solar-invenergy-tip-top-nm": {
+      "patch": {
+        "title": "Invenergy Tip Top Solar: 110 MW, $200M Investment, Target End-2026",
+        "description": "Invenergy’s current Tip Top Solar page lists a 110 MW solar facility under construction in Lea County, New Mexico, with $200 million capital investment and commercial operation expected by end-2026. Earlier state reporting described a 220 MW plan; storage is a separate project.",
+        "sourceUrl": "https://tiptopsolar.invenergy.com/",
+        "references": [
+          {
+            "url": "https://tiptopsolar.invenergy.com/",
+            "title": "Tip Top Solar Energy Center",
+            "confidence": 95,
+            "publishedDate": null
+          },
+          {
+            "url": "https://www.dws.state.nm.us/Portals/0/DM/LMI/lmr_Oct_19.pdf",
+            "title": "New Mexico Labor Market Review — October 2019",
+            "confidence": 95,
+            "publishedDate": "2019-10-01"
+          }
+        ],
+        "longFormSummary": "<ul><li>Invenergy currently publishes 110 MW solar capacity, $200 million capital investment and active construction with Conductor Power.<cite data-ref=\"https://tiptopsolar.invenergy.com/\"></cite></li><li>The 2019 New Mexico labor report described a 220 MW plan with an earlier 2022 target. That historical plan does not establish the scope currently being built.<cite data-ref=\"https://www.dws.state.nm.us/Portals/0/DM/LMI/lmr_Oct_19.pdf\"></cite></li><li>Timeline: Invenergy expects commercial operations by end-2026. December 1 is a month-level placeholder, not a published commissioning day.<cite data-ref=\"https://tiptopsolar.invenergy.com/\"></cite></li><li>The solar project is not labeled as 220 MW of battery storage. A separate Tip Top storage filing requires its own scope and evidence.<cite data-ref=\"https://tiptopsolar.invenergy.com/\"></cite></li></ul>",
+        "price": 200000000,
+        "priceCurrency": "USD",
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "estimated",
+        "allDay": true,
+        "allDayStated": false,
+        "utcStartDateTime": "2026-12-01T00:00:00.000Z",
+        "dateConfidenceReasoning": "Current Invenergy project site targets commercial operations by end-2026. December 1 is an estimated month placeholder; no exact day stated."
+      },
+      "power": {
+        "megawatts": 110,
+        "kind": "generation",
+        "sourceUrl": "https://tiptopsolar.invenergy.com/",
+        "note": "Current developer solar scope; historical 220 MW plan and separate battery project are not this reading."
+      },
+      "datacenter": null,
+      "clearEnergy": true,
+      "gaps": [
+        "Reconcile historical 220 MW EIA/nameplate scope with current 110 MW operator scope; verify exact parcel and commissioning."
+      ]
+    },
+    "solar-nextera-excelsior-energy-center-ny": {
+      "patch": {
+        "title": "Excelsior Energy Center: 280 MW Solar, 20 MW Storage Approval; November 2026 Target",
+        "description": "Excelsior’s operator documents announce construction of the 280 MW Byron solar facility from April 2025. New York’s siting report records 20 MW storage approval and a historical $345 million estimate; its amended interconnection schedule targets November 2026 commercial operation.",
+        "sourceUrl": "https://www.excelsiorenergycenter.com/project-documents",
+        "references": [
+          {
+            "url": "https://www.excelsiorenergycenter.com/project-documents",
+            "title": "Article 10 Project Documents — Excelsior Energy Center",
+            "confidence": 95,
+            "publishedDate": null
+          },
+          {
+            "url": "https://dps.ny.gov/system/files/documents/2023/07/dps-2022-2023-annual-report-7.13.23.pdf",
+            "title": "New York Department of Public Service — 2022–2023 Annual Report",
+            "confidence": 95,
+            "publishedDate": "2023-07-13"
+          },
+          {
+            "url": "https://nyisoviewer.etariff.biz/viewerdoclibrary/Filing/Filing5332/5332FilingSections/FID5332%20Amnd%20LGIA%20Exelsior%20Energy%20SA2689%20cln%20PUBLIC_37300.htm",
+            "title": "NYISO Service Agreement No. 2689 — Amended LGIA for Excelsior Energy Center",
+            "confidence": 95,
+            "publishedDate": null
+          }
+        ],
+        "longFormSummary": "<ul><li>The operator’s pre-construction notice says construction of the 280 MW facility in Byron, Genesee County, would begin about April 3, 2025.<cite data-ref=\"https://www.excelsiorenergycenter.com/project-documents\"></cite></li><li>New York’s annual report records April 2022 approval for 280 MW solar plus 20 MW storage and attributes the $345 million estimate to the county economic-development center. This is a historical estimate, not a verified final cost.<cite data-ref=\"https://dps.ny.gov/system/files/documents/2023/07/dps-2022-2023-annual-report-7.13.23.pdf\"></cite></li><li>Timeline: the amended LGIA milestone table lists commercial operation in November 2026. November 1 preserves month-only precision, not a scheduled day.<cite data-ref=\"https://nyisoviewer.etariff.biz/viewerdoclibrary/Filing/Filing5332/5332FilingSections/FID5332%20Amnd%20LGIA%20Exelsior%20Energy%20SA2689%20cln%20PUBLIC_37300.htm\"></cite></li></ul>",
+        "price": 345000000,
+        "priceCurrency": "USD",
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "estimated",
+        "allDay": true,
+        "allDayStated": false,
+        "utcStartDateTime": "2026-11-01T00:00:00.000Z",
+        "dateConfidenceReasoning": "NYISO amended LGIA milestone 31 lists Commercial Operation Date November 2026. November 1 is an estimated month placeholder; operational completion not yet verified."
+      },
+      "power": {
+        "megawatts": 280,
+        "kind": "generation",
+        "sourceUrl": "https://www.excelsiorenergycenter.com/project-documents",
+        "note": "Solar generation capacity; separate 20 MW storage approval must not make the 280 MW row storage."
+      },
+      "datacenter": null,
+      "clearEnergy": false,
+      "gaps": [
+        "Verify final battery construction scope, latest COD and cost changes since the historical $345M estimate."
+      ]
+    },
+    "solar-nextera-sedgwick-solar-ks": {
+      "delete": true,
+      "reason": "Unverified tracker pin identity after deep search: SPP GEN-2017-220 is a real 201.6 MW record, but no opened source links it to the pin’s NextEra name, Clearwater intersection, 2,000 acres or moratorium claims. Branch Line’s filed 130 MWAC scope is different and must not be substituted. Hold until project identity and parcel are established.",
+      "sources": [
+        "https://opsportal.spp.org/Studies/GISummary",
+        "https://opsportal.spp.org/documents/studies/files/2017_Generation_Studies/Modification%20Report%20GEN-2017-220.pdf",
+        "https://www.wichita.gov/DocumentCenter/View/37444/10_Attachment_J_Decommissioning_and_Reclamation_Plan-PDF",
+        "https://www.sedgwick.gov/communications/news-releases/this-week-in-sedgwick-county-aug-5-2026/"
+      ],
+      "researchLead": "SPP GEN-2017-220: 201.6 MW, commercial-operation status, COD column October 15, 2026. Not enough to identify the existing NextEra Sedgwick pin."
+    }
+  },
+  "results": [
+    {
+      "environment": "local",
+      "key": "dc-related-digital-cheyenne-wy",
+      "id": 16310,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Verify actual first-phase COD, campus-wide capital cost and exact parcel; existing map coordinates were not moved."
+      ]
+    },
+    {
+      "environment": "local",
+      "key": "dc-stargate-lighthouse-vantage-wi",
+      "id": 16311,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "First-service date remains unverified; campus completion in 2028 is not an energization date. Existing source-wiki/site-shape records were not certified in this batch."
+      ]
+    },
+    {
+      "environment": "local",
+      "key": "dc-terawulf-justified-campus-ky",
+      "id": 16312,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Confirm detailed construction status, parcel boundary and current water/acreage specifications."
+      ]
+    },
+    {
+      "environment": "local",
+      "key": "dc-thor-equities-augusta-mi",
+      "id": 16313,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Verify whether Thor/JDS has filed any new proposal since the referendum. $1B is a reported proposal estimate, not money spent. Existing geographic position is approximate."
+      ]
+    },
+    {
+      "environment": "local",
+      "key": "solar-ameren-reform-callaway-mo",
+      "id": 16314,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Current detailed construction schedule, total published cost and parcel coordinates still require verification."
+      ]
+    },
+    {
+      "environment": "local",
+      "key": "solar-clearway-royal-slope-wa",
+      "id": 16315,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Exact delivery day and total capital cost remain unpublished; one PinPower row cannot represent both generation and storage without conflation."
+      ]
+    },
+    {
+      "environment": "local",
+      "key": "solar-clenera-co-bar-complex-az",
+      "id": 16316,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Precise stage-by-stage commissioning days and exact site/media alignment remain unverified."
+      ]
+    },
+    {
+      "environment": "local",
+      "key": "solar-doral-mammoth-solar-complex-in",
+      "id": 16317,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Actual COD may since have occurred; obtain a phase-specific operational confirmation and published cost."
+      ]
+    },
+    {
+      "environment": "local",
+      "key": "solar-invenergy-koshkonong-solar-energy-center-wi",
+      "id": 16318,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Exact solar COD, battery commissioning schedule and current full-project cost remain unverified. WEC overview collapses timing; annual-report and MGE phase-specific dates used here."
+      ]
+    },
+    {
+      "environment": "local",
+      "key": "solar-invenergy-tip-top-nm",
+      "id": 16319,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Reconcile historical 220 MW EIA/nameplate scope with current 110 MW operator scope; verify exact parcel and commissioning."
+      ]
+    },
+    {
+      "environment": "local",
+      "key": "solar-nextera-excelsior-energy-center-ny",
+      "id": 16320,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Verify final battery construction scope, latest COD and cost changes since the historical $345M estimate."
+      ]
+    },
+    {
+      "environment": "local",
+      "key": "solar-nextera-sedgwick-solar-ks",
+      "id": 16321,
+      "action": "deleted",
+      "verifiedStatus": 404
+    },
+    {
+      "environment": "prod",
+      "key": "dc-related-digital-cheyenne-wy",
+      "id": 16310,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Verify actual first-phase COD, campus-wide capital cost and exact parcel; existing map coordinates were not moved."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "dc-stargate-lighthouse-vantage-wi",
+      "id": 16311,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "First-service date remains unverified; campus completion in 2028 is not an energization date. Existing source-wiki/site-shape records were not certified in this batch."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "dc-terawulf-justified-campus-ky",
+      "id": 16312,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Confirm detailed construction status, parcel boundary and current water/acreage specifications."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "dc-thor-equities-augusta-mi",
+      "id": 16313,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Verify whether Thor/JDS has filed any new proposal since the referendum. $1B is a reported proposal estimate, not money spent. Existing geographic position is approximate."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "solar-ameren-reform-callaway-mo",
+      "id": 16314,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Current detailed construction schedule, total published cost and parcel coordinates still require verification."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "solar-clearway-royal-slope-wa",
+      "id": 16315,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Exact delivery day and total capital cost remain unpublished; one PinPower row cannot represent both generation and storage without conflation."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "solar-clenera-co-bar-complex-az",
+      "id": 16316,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Precise stage-by-stage commissioning days and exact site/media alignment remain unverified."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "solar-doral-mammoth-solar-complex-in",
+      "id": 16317,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Actual COD may since have occurred; obtain a phase-specific operational confirmation and published cost."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "solar-invenergy-koshkonong-solar-energy-center-wi",
+      "id": 16318,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Exact solar COD, battery commissioning schedule and current full-project cost remain unverified. WEC overview collapses timing; annual-report and MGE phase-specific dates used here."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "solar-invenergy-tip-top-nm",
+      "id": 16319,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Reconcile historical 220 MW EIA/nameplate scope with current 110 MW operator scope; verify exact parcel and commissioning."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "solar-nextera-excelsior-energy-center-ny",
+      "id": 16320,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Verify final battery construction scope, latest COD and cost changes since the historical $345M estimate."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "solar-nextera-sedgwick-solar-ks",
+      "id": 16321,
+      "action": "deleted",
+      "verifiedStatus": 404
+    }
+  ],
+  "verification": {
+    "media": [
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/ameren-reform-callaway-mo-usgs-aerial.jpg",
+        "status": 200,
+        "bytes": 523624
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/ameren-reform-callaway-mo-usgs-relief.jpg",
+        "status": 200,
+        "bytes": 82592
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/ameren-reform-callaway-mo-usgs-topo.jpg",
+        "status": 200,
+        "bytes": 227777
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/clearway-royal-slope-wa-usgs-aerial.jpg",
+        "status": 200,
+        "bytes": 365508
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/clearway-royal-slope-wa-usgs-relief.jpg",
+        "status": 200,
+        "bytes": 56504
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/clearway-royal-slope-wa-usgs-topo.jpg",
+        "status": 200,
+        "bytes": 209768
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/clenera-co-bar-complex-az-usgs-aerial.jpg",
+        "status": 200,
+        "bytes": 596597
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/clenera-co-bar-complex-az-usgs-relief.jpg",
+        "status": 200,
+        "bytes": 96641
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/clenera-co-bar-complex-az-usgs-topo.jpg",
+        "status": 200,
+        "bytes": 244866
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/doral-mammoth-solar-complex-in-usgs-aerial.jpg",
+        "status": 200,
+        "bytes": 324613
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/doral-mammoth-solar-complex-in-usgs-relief.jpg",
+        "status": 200,
+        "bytes": 55576
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/doral-mammoth-solar-complex-in-usgs-topo.jpg",
+        "status": 200,
+        "bytes": 241152
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/invenergy-koshkonong-solar-energy-center-wi-usgs-aerial.jpg",
+        "status": 200,
+        "bytes": 278047
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/invenergy-koshkonong-solar-energy-center-wi-usgs-relief.jpg",
+        "status": 200,
+        "bytes": 58338
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/invenergy-koshkonong-solar-energy-center-wi-usgs-topo.jpg",
+        "status": 200,
+        "bytes": 159467
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/invenergy-tip-top-nm-usgs-aerial.jpg",
+        "status": 200,
+        "bytes": 547828
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/invenergy-tip-top-nm-usgs-relief.jpg",
+        "status": 200,
+        "bytes": 67227
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/invenergy-tip-top-nm-usgs-topo.jpg",
+        "status": 200,
+        "bytes": 146095
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/nextera-excelsior-energy-center-ny-usgs-aerial.jpg",
+        "status": 200,
+        "bytes": 417534
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/nextera-excelsior-energy-center-ny-usgs-relief.jpg",
+        "status": 200,
+        "bytes": 57612
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/nextera-excelsior-energy-center-ny-usgs-topo.jpg",
+        "status": 200,
+        "bytes": 213637
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/related-digital-cheyenne-wy-usgs-aerial.jpg",
+        "status": 200,
+        "bytes": 544719
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/related-digital-cheyenne-wy-usgs-relief.jpg",
+        "status": 200,
+        "bytes": 62251
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/related-digital-cheyenne-wy-usgs-topo.jpg",
+        "status": 200,
+        "bytes": 263664
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/stargate-lighthouse-vantage-wi-usgs-aerial.jpg",
+        "status": 200,
+        "bytes": 454824
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/stargate-lighthouse-vantage-wi-usgs-relief.jpg",
+        "status": 200,
+        "bytes": 74103
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/stargate-lighthouse-vantage-wi-usgs-topo.jpg",
+        "status": 200,
+        "bytes": 286473
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/terawulf-justified-campus-ky-usgs-aerial.jpg",
+        "status": 200,
+        "bytes": 383963
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/terawulf-justified-campus-ky-usgs-relief.jpg",
+        "status": 200,
+        "bytes": 81566
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/terawulf-justified-campus-ky-usgs-topo.jpg",
+        "status": 200,
+        "bytes": 335498
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/thor-equities-augusta-mi-usgs-aerial.jpg",
+        "status": 200,
+        "bytes": 498125
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/thor-equities-augusta-mi-usgs-relief.jpg",
+        "status": 200,
+        "bytes": 62961
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/thor-equities-augusta-mi-usgs-topo.jpg",
+        "status": 200,
+        "bytes": 249698
+      }
+    ],
+    "pages": [
+      {
+        "environment": "local",
+        "id": 16311,
+        "status": 200,
+        "bytes": 326110
+      },
+      {
+        "environment": "local",
+        "id": 16313,
+        "status": 200,
+        "bytes": 324447
+      },
+      {
+        "environment": "local",
+        "id": 16318,
+        "status": 200,
+        "bytes": 320647
+      },
+      {
+        "environment": "local",
+        "id": 16319,
+        "status": 200,
+        "bytes": 320351
+      },
+      {
+        "environment": "prod",
+        "id": 16311,
+        "status": 200,
+        "bytes": 283705
+      },
+      {
+        "environment": "prod",
+        "id": 16313,
+        "status": 200,
+        "bytes": 281624
+      },
+      {
+        "environment": "prod",
+        "id": 16318,
+        "status": 200,
+        "bytes": 278599
+      },
+      {
+        "environment": "prod",
+        "id": 16319,
+        "status": 200,
+        "bytes": 277998
+      }
+    ],
+    "actionsVerified": 24,
+    "telemetry": [
+      {
+        "energyCleared": true,
+        "datacenterAfter": {
+          "waterGallonsPerDay": null,
+          "waterBasis": null,
+          "chips": null,
+          "chipModel": null,
+          "h100Equivalents": null,
+          "acres": 115,
+          "sqft": 184000,
+          "buildings": null,
+          "generators": null,
+          "cooling": "High-efficiency air-cooled chillers",
+          "powerSource": "Black Hills utility supply",
+          "sourceUrl": "https://www.related-digital.com/wyoming",
+          "note": "184,000 sq ft applies to first phase only; campus up to 420 MW. $1.2B is phase-one investment. Measured daily water use not published.",
+          "checkedAt": "2026-10-23T14:19:27.264Z"
+        }
+      },
+      {
+        "energyCleared": true,
+        "datacenterAfter": {
+          "waterGallonsPerDay": null,
+          "waterBasis": null,
+          "chips": null,
+          "chipModel": null,
+          "h100Equivalents": null,
+          "acres": 672,
+          "sqft": 2500000,
+          "buildings": 4,
+          "generators": null,
+          "cooling": "Closed-loop chiller system",
+          "powerSource": null,
+          "sourceUrl": "https://vantage-dc.com/data-center-locations/north-america/port-washington-wisconsin",
+          "note": "Operator campus scope: four buildings and 902 MW critical IT. Exact daily water use not established by current opened operator page.",
+          "checkedAt": "2026-10-23T14:19:27.472Z"
+        }
+      },
+      {
+        "energyCleared": true,
+        "datacenterAfter": {
+          "waterGallonsPerDay": null,
+          "waterBasis": null,
+          "chips": null,
+          "chipModel": null,
+          "h100Equivalents": null,
+          "acres": null,
+          "sqft": null,
+          "buildings": null,
+          "generators": null,
+          "cooling": null,
+          "powerSource": "Big Rivers Electric / Kenergy; PSC-approved up-to-482 MW electric service",
+          "sourceUrl": "https://www.globenewswire.com/news-release/2026/08/24/3349687/0/en/kentucky-psc-approves-482-mw-power-agreement-for-terawulf-s-justified-data-campus.html",
+          "note": "Brownfield redevelopment of former Century Aluminum Hawesville smelter. 401 MW critical IT is distinct from 482 MW electric service. Water and acreage not verified in these releases.",
+          "checkedAt": "2026-10-23T14:19:27.729Z"
+        }
+      },
+      {
+        "energyCleared": true,
+        "datacenterAfter": null
+      },
+      {},
+      {},
+      {},
+      {},
+      {},
+      {
+        "energyCleared": true
+      },
+      {},
+      {
+        "energyCleared": true,
+        "datacenterAfter": {
+          "waterGallonsPerDay": null,
+          "waterBasis": null,
+          "chips": null,
+          "chipModel": null,
+          "h100Equivalents": null,
+          "acres": 115,
+          "sqft": 184000,
+          "buildings": null,
+          "generators": null,
+          "cooling": "High-efficiency air-cooled chillers",
+          "powerSource": "Black Hills utility supply",
+          "sourceUrl": "https://www.related-digital.com/wyoming",
+          "note": "184,000 sq ft applies to first phase only; campus up to 420 MW. $1.2B is phase-one investment. Measured daily water use not published.",
+          "checkedAt": "2026-10-23T14:19:32.711Z"
+        }
+      },
+      {
+        "energyCleared": true,
+        "datacenterAfter": {
+          "waterGallonsPerDay": null,
+          "waterBasis": null,
+          "chips": null,
+          "chipModel": null,
+          "h100Equivalents": null,
+          "acres": 672,
+          "sqft": 2500000,
+          "buildings": 4,
+          "generators": null,
+          "cooling": "Closed-loop chiller system",
+          "powerSource": null,
+          "sourceUrl": "https://vantage-dc.com/data-center-locations/north-america/port-washington-wisconsin",
+          "note": "Operator campus scope: four buildings and 902 MW critical IT. Exact daily water use not established by current opened operator page.",
+          "checkedAt": "2026-10-23T14:19:35.574Z"
+        }
+      },
+      {
+        "energyCleared": true,
+        "datacenterAfter": {
+          "waterGallonsPerDay": null,
+          "waterBasis": null,
+          "chips": null,
+          "chipModel": null,
+          "h100Equivalents": null,
+          "acres": null,
+          "sqft": null,
+          "buildings": null,
+          "generators": null,
+          "cooling": null,
+          "powerSource": "Big Rivers Electric / Kenergy; PSC-approved up-to-482 MW electric service",
+          "sourceUrl": "https://www.globenewswire.com/news-release/2026/08/24/3349687/0/en/kentucky-psc-approves-482-mw-power-agreement-for-terawulf-s-justified-data-campus.html",
+          "note": "Brownfield redevelopment of former Century Aluminum Hawesville smelter. 401 MW critical IT is distinct from 482 MW electric service. Water and acreage not verified in these releases.",
+          "checkedAt": "2026-10-23T14:19:38.622Z"
+        }
+      },
+      {
+        "energyCleared": true,
+        "datacenterAfter": null
+      },
+      {},
+      {},
+      {},
+      {},
+      {},
+      {
+        "energyCleared": true
+      },
+      {}
+    ]
+  },
+  "artifacts": ".scrape/prod-batches/cleanview-2026-10-14/audit/backfill2-2026-10-23",
+  "deployment": false,
+  "researchNotes": {
+    "sedgwick": {
+      "disposition": "Hold original tracker identity; do not transplant a real but unnamed queue record onto this pin.",
+      "verifiedLead": "SPP GEN-2017-220: 201.6 MW, Sedgwick County, Buffalo Flats 345kV, IA FULLY EXECUTED/COMMERCIAL OPERATION; COD column October 15, 2026.",
+      "identityGap": "Neither the SPP study nor queue names NextEra, establishes the former Clearwater intersection, or links the 202 MW Cleanview label to this row. Branch Line’s filed 130 MWAC / 170 MWDC scope differs.",
+      "queries": [
+        "Sedgwick Solar Kansas NextEra project 202 MW",
+        "Sedgwick Solar -site:reddit.com -site:cleanview.co",
+        "Sedgwick Solar NextEra permit",
+        "GEN-2017-220 site.spp.org",
+        "Branch Line Solar NextEra",
+        "Sedgwick County solar denial August 2026"
+      ],
+      "openedEvidence": [
+        "https://opsportal.spp.org/Studies/GISummary",
+        "https://opsportal.spp.org/documents/studies/files/2017_Generation_Studies/Modification%20Report%20GEN-2017-220.pdf",
+        "https://www.wichita.gov/DocumentCenter/View/37444/10_Attachment_J_Decommissioning_and_Reclamation_Plan-PDF",
+        "https://www.sedgwick.gov/communications/news-releases/this-week-in-sedgwick-county-aug-5-2026/"
+      ]
+    },
+    "pdfChecks": "Rendered and visually checked WEC annual-report page F-67: ownership-share capacity and phase-specific expected dates; CWIP is not total project cost. Read Ameren and CO Bar primary PDF tables, preserving ranges and phase distinctions.",
+    "blockedSources": [
+      "Vantage October 2025 release: plain curl 403 and web timeout; used opened current campus page and WEC September 2026 SEC presentation.",
+      "Enlight financing PDF: plain curl 403, readable through web PDF tool.",
+      "Excelsior operator homepage exposes little text; used opened project-documents page, NY DPS report and amended NYISO LGIA."
+    ]
+  },
+  "remainingLimitations": [
+    "Cheyenne exact first-service date remains unverified; legacy November 1 estimate is explicitly disclosed.",
+    "Mammoth October window is inferred from the October 7 imminent-operation announcement; actual COD needs confirmation.",
+    "Koshkonong published solar timing is 2026, battery 2027; the retained December 1 solar date is an estimated placeholder, not source-stated day.",
+    "Lighthouse 2028 is a campus completion window, not a verified first-energization date.",
+    "Existing coordinates/media were preserved, not certified against parcel geometry; exact positions remain research gaps.",
+    "Existing translations, source wikis and site outlines were not globally re-audited.",
+    "Broader Rounds 7–59 backfill and fresh lead research remain open. Next untouched early pin: Singer Solar 16322, then 16328 onward."
+  ],
+  "finalReadback": [
+    {
+      "environment": "local",
+      "id": 16310,
+      "finalReadVerified": true,
+      "authorMediaVerified": true
+    },
+    {
+      "environment": "local",
+      "id": 16311,
+      "finalReadVerified": true,
+      "authorMediaVerified": true
+    },
+    {
+      "environment": "local",
+      "id": 16312,
+      "finalReadVerified": true,
+      "authorMediaVerified": true
+    },
+    {
+      "environment": "local",
+      "id": 16313,
+      "finalReadVerified": true,
+      "authorMediaVerified": true
+    },
+    {
+      "environment": "local",
+      "id": 16314,
+      "finalReadVerified": true,
+      "authorMediaVerified": true
+    },
+    {
+      "environment": "local",
+      "id": 16315,
+      "finalReadVerified": true,
+      "authorMediaVerified": true
+    },
+    {
+      "environment": "local",
+      "id": 16316,
+      "finalReadVerified": true,
+      "authorMediaVerified": true
+    },
+    {
+      "environment": "local",
+      "id": 16317,
+      "finalReadVerified": true,
+      "authorMediaVerified": true
+    },
+    {
+      "environment": "local",
+      "id": 16318,
+      "finalReadVerified": true,
+      "authorMediaVerified": true
+    },
+    {
+      "environment": "local",
+      "id": 16319,
+      "finalReadVerified": true,
+      "authorMediaVerified": true
+    },
+    {
+      "environment": "local",
+      "id": 16320,
+      "finalReadVerified": true,
+      "authorMediaVerified": true
+    },
+    {
+      "environment": "local",
+      "id": 16321,
+      "deleted": true
+    },
+    {
+      "environment": "prod",
+      "id": 16310,
+      "finalReadVerified": true,
+      "authorMediaVerified": true
+    },
+    {
+      "environment": "prod",
+      "id": 16311,
+      "finalReadVerified": true,
+      "authorMediaVerified": true
+    },
+    {
+      "environment": "prod",
+      "id": 16312,
+      "finalReadVerified": true,
+      "authorMediaVerified": true
+    },
+    {
+      "environment": "prod",
+      "id": 16313,
+      "finalReadVerified": true,
+      "authorMediaVerified": true
+    },
+    {
+      "environment": "prod",
+      "id": 16314,
+      "finalReadVerified": true,
+      "authorMediaVerified": true
+    },
+    {
+      "environment": "prod",
+      "id": 16315,
+      "finalReadVerified": true,
+      "authorMediaVerified": true
+    },
+    {
+      "environment": "prod",
+      "id": 16316,
+      "finalReadVerified": true,
+      "authorMediaVerified": true
+    },
+    {
+      "environment": "prod",
+      "id": 16317,
+      "finalReadVerified": true,
+      "authorMediaVerified": true
+    },
+    {
+      "environment": "prod",
+      "id": 16318,
+      "finalReadVerified": true,
+      "authorMediaVerified": true
+    },
+    {
+      "environment": "prod",
+      "id": 16319,
+      "finalReadVerified": true,
+      "authorMediaVerified": true
+    },
+    {
+      "environment": "prod",
+      "id": 16320,
+      "finalReadVerified": true,
+      "authorMediaVerified": true
+    },
+    {
+      "environment": "prod",
+      "id": 16321,
+      "deleted": true
+    }
+  ]
+}

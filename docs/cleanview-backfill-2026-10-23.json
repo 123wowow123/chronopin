@@ -1,0 +1,1208 @@
+{
+  "checkedAt": "2026-10-23",
+  "scope": "First 12-pin sourcing/backfill batch: production IDs 16300–16309 and Lighthouse building splits 17085/17086. Broader backlog remains open.",
+  "plan": {
+    "battery-sb-energy-lyra-storage-tx": {
+      "patch": {
+        "title": "Lyra Storage: 500 MW Battery Queue Project in Borden County, Texas",
+        "description": "ERCOT lists Lyra Storage, queue 26INR0636, as a 500 MW Borden County project. Its published planning target is November 12, 2026; current delivery, owner and cost need further verification.",
+        "sourceUrl": "https://www.ercot.com/files/docs/2025/10/27/EIR-Oncor-and-AEPSC-Drill-Hole-to-Sand-Lake-to-Solstice-765-kV-Line-Project-Status-Update-RPG-Oct-2025.pdf",
+        "references": [
+          {
+            "url": "https://www.ercot.com/files/docs/2025/10/27/EIR-Oncor-and-AEPSC-Drill-Hole-to-Sand-Lake-to-Solstice-765-kV-Line-Project-Status-Update-RPG-Oct-2025.pdf",
+            "title": "EIR Oncor and AEPSC Drill Hole to Sand Lake to Solstice 765-kV Line Project Status Update — RPG October 2025",
+            "confidence": 95,
+            "publishedDate": null
+          }
+        ],
+        "price": null,
+        "priceCurrency": null,
+        "longFormSummary": "<ul><li>ERCOT’s planning appendix identifies Lyra Storage as queue 26INR0636: 500 MW in Borden County, Texas.<cite data-ref=\"https://www.ercot.com/files/docs/2025/10/27/EIR-Oncor-and-AEPSC-Drill-Hole-to-Sand-Lake-to-Solstice-765-kV-Line-Project-Status-Update-RPG-Oct-2025.pdf\"></cite></li><li>Timeline: the October 2025 planning presentation gives a projected COD of November 12, 2026. This is a planning target, not evidence of energization.<cite data-ref=\"https://www.ercot.com/files/docs/2025/10/27/EIR-Oncor-and-AEPSC-Drill-Hole-to-Sand-Lake-to-Solstice-765-kV-Line-Project-Status-Update-RPG-Oct-2025.pdf\"></cite></li><li>The cited ERCOT record does not establish the owner, project cost or storage duration; previous unsupported financing and duration claims have been removed.<cite data-ref=\"https://www.ercot.com/files/docs/2025/10/27/EIR-Oncor-and-AEPSC-Drill-Hole-to-Sand-Lake-to-Solstice-765-kV-Line-Project-Status-Update-RPG-Oct-2025.pdf\"></cite></li></ul>",
+        "dateConfidence": "estimated",
+        "allDay": true,
+        "allDayStated": false,
+        "utcStartDateTime": "2026-11-12T00:00:00.000Z",
+        "dateConfidenceReasoning": "ERCOT October 2025 planning appendix, page 12: projected COD 11/12/2026 for 26INR0636. Estimated historical queue target; current delivery needs confirmation.",
+        "company": null,
+        "companyId": null,
+        "companyWikiUrl": null,
+        "tags": [
+          "Cleanview",
+          "Storage",
+          "Battery",
+          "Planned",
+          "Texas",
+          "ERCOT"
+        ]
+      },
+      "gaps": [
+        "PUCT Lyra BESS SGIA 35077_2225_1531568.PDF found but blocked by plain curl (403); SB Energy subsidiary list alone does not establish this queue project’s ownership. Verify current queue, owner, duration, exact parcel and COD."
+      ],
+      "power": {
+        "megawatts": 500,
+        "kind": "storage",
+        "sourceUrl": "https://www.ercot.com/files/docs/2025/10/27/EIR-Oncor-and-AEPSC-Drill-Hole-to-Sand-Lake-to-Solstice-765-kV-Line-Project-Status-Update-RPG-Oct-2025.pdf",
+        "note": "ERCOT planning queue 26INR0636; proposed maximum capacity, not operational capacity."
+      }
+    },
+    "dc-ameresco-cyrusone-nas-lemoore-ca": {
+      "patch": {
+        "title": "Ameresco–CyrusOne NAS Lemoore: Proposed 100 MW AI Data Center and Energy Infrastructure",
+        "description": "Ameresco, CyrusOne and the U.S. Navy plan a 100 MW AI data center at NAS Lemoore, with onsite generation and a naval-base microgrid. First delivery is expected in 2027; the operator page does not publish a project cost.",
+        "sourceUrl": "https://www.ameresco.com/portfolio-item/nas-lemoore-data-center-energy-project/",
+        "references": [
+          {
+            "url": "https://www.ameresco.com/portfolio-item/nas-lemoore-data-center-energy-project/",
+            "title": "NAS Lemoore Data Center Energy Project",
+            "confidence": 95,
+            "publishedDate": null
+          }
+        ],
+        "price": null,
+        "priceCurrency": null,
+        "longFormSummary": "<ul><li>The proposed 100 MW AI data center is a partnership involving Ameresco, CyrusOne and the U.S. Navy at NAS Lemoore, California.<cite data-ref=\"https://www.ameresco.com/portfolio-item/nas-lemoore-data-center-energy-project/\"></cite></li><li>Dedicated onsite generation would support the data center; the naval installation would receive a microgrid, engine generators, controls and infrastructure upgrades.<cite data-ref=\"https://www.ameresco.com/portfolio-item/nas-lemoore-data-center-energy-project/\"></cite></li><li>Timeline: Ameresco expects the first portion online in 2027 on land leased from the Department of Defense. The page says development agreements are being finalized.<cite data-ref=\"https://www.ameresco.com/portfolio-item/nas-lemoore-data-center-energy-project/\"></cite></li><li>A total investment is not published on this page; the earlier $1 billion amount is removed.<cite data-ref=\"https://www.ameresco.com/portfolio-item/nas-lemoore-data-center-energy-project/\"></cite></li></ul>",
+        "dateConfidence": "estimated",
+        "allDay": true,
+        "allDayStated": false,
+        "utcStartDateTime": "2027-01-01T00:00:00.000Z",
+        "dateConfidenceReasoning": "Ameresco states first portion expected online in 2027. January 1 is a year-only placeholder, not a promised day."
+      },
+      "gaps": [
+        "Exact parcel and current contracting/construction status require confirmation."
+      ],
+      "power": {
+        "megawatts": 100,
+        "kind": "usage",
+        "sourceUrl": "https://www.ameresco.com/portfolio-item/nas-lemoore-data-center-energy-project/",
+        "note": "Proposed AI data center capacity per Ameresco."
+      }
+    },
+    "dc-applied-digital-adair-ia": {
+      "patch": {
+        "title": "Applied Digital Adair County Data Center Proposal: Current Delivery Unverified",
+        "description": "Adair County’s April 2024 minutes document discussion of Applied Digital’s data center proposal. The opening date, current project scope and investment remain unverified; September 2026 reporting says no developer had approached the county with current plans.",
+        "sourceUrl": "https://adaircounty.iowa.gov/files/meetings/2024-04-24_minutes_5812.pdf",
+        "references": [
+          {
+            "url": "https://adaircounty.iowa.gov/files/meetings/2024-04-24_minutes_5812.pdf",
+            "title": "Adair County Board of Supervisors — April 24, 2024 minutes",
+            "confidence": 95,
+            "publishedDate": null
+          },
+          {
+            "url": "https://westerniowatoday.com/2026/09/23/adair-county-supervisors-hold-public-hearing-on-data-center-ordinance/",
+            "title": "Adair County Supervisors Hold Public Hearing on Data Center Ordinance",
+            "confidence": 95,
+            "publishedDate": "2026-09-23"
+          }
+        ],
+        "price": null,
+        "priceCurrency": null,
+        "longFormSummary": "<ul><li>County minutes record discussion of Applied Digital’s proposed data center during the April 24, 2024 setback-ordinance hearing.<cite data-ref=\"https://adaircounty.iowa.gov/files/meetings/2024-04-24_minutes_5812.pdf\"></cite></li><li>Supervisors debated effects on neighbors and farmland. These minutes support a proposal, not a construction start or operating facility.<cite data-ref=\"https://adaircounty.iowa.gov/files/meetings/2024-04-24_minutes_5812.pdf\"></cite></li><li>September 23, 2026 local reporting says supervisors had received no current developer plans for a county data center.<cite data-ref=\"https://westerniowatoday.com/2026/09/23/adair-county-supervisors-hold-public-hearing-on-data-center-ordinance/\"></cite></li><li>Timeline: the previous September 2027 tracker date is retained only as an unverified estimated placeholder pending current developer or county evidence. The claimed $1.5 billion cost and 200 MW capacity are not established by these opened records.<cite data-ref=\"https://adaircounty.iowa.gov/files/meetings/2024-04-24_minutes_5812.pdf\"></cite></li></ul>",
+        "dateConfidence": "estimated",
+        "allDay": true,
+        "allDayStated": false,
+        "dateConfidenceReasoning": "Unverified legacy tracker placeholder: September 2027. Opened April 2024 county minutes establish a proposal but no COD; September 2026 reporting raises current-status uncertainty. Do not treat as a confirmed opening."
+      },
+      "gaps": [
+        "Current status conflicts with legacy proposal: obtain developer response and October 14, 2026 ordinance outcome; confirm capacity, COD and parcel. Existing map/media are not newly site-verified."
+      ],
+      "power": "delete"
+    },
+    "dc-applied-digital-polaris-forge-1-nd": {
+      "patch": {
+        "title": "Applied Digital Polaris Forge 1: 250 MW Operating, 400 MW Contracted IT Capacity",
+        "description": "Applied Digital reported 250 MW of operational critical IT capacity at Polaris Forge 1 in Ellendale on October 2, 2026. The full contracted deployment is 400 MW; the first 50 MW phase reached service on October 27, 2025.",
+        "sourceUrl": "https://ir.applieddigital.com/news-events/press-releases/detail/161/applied-digital-brings-an-additional-75-mw-of-ai",
+        "references": [
+          {
+            "url": "https://ir.applieddigital.com/news-events/press-releases/detail/161/applied-digital-brings-an-additional-75-mw-of-ai",
+            "title": "Applied Digital Brings an Additional 75 MW of AI Infrastructure Online at Polaris Forge 1",
+            "confidence": 95,
+            "publishedDate": null
+          },
+          {
+            "url": "https://ir.applieddigital.com/news-events/press-releases/detail/133/applied-digital-achieves-ready-for-service-for-phase-1-at",
+            "title": "Applied Digital Achieves Ready for Service for Phase 1 at Polaris Forge 1 Building 1 for CoreWeave",
+            "confidence": 95,
+            "publishedDate": "2025-10-27"
+          }
+        ],
+        "price": null,
+        "priceCurrency": null,
+        "longFormSummary": "<ul><li>On October 2, 2026, Applied Digital completed the second 75 MW phase of Building 2, bringing the campus to 250 MW of operational critical IT load.<cite data-ref=\"https://ir.applieddigital.com/news-events/press-releases/detail/161/applied-digital-brings-an-additional-75-mw-of-ai\"></cite></li><li>The fully leased campus is contracted for 400 MW at full buildout; operational load and planned buildout are different measures.<cite data-ref=\"https://ir.applieddigital.com/news-events/press-releases/detail/161/applied-digital-brings-an-additional-75-mw-of-ai\"></cite></li><li>Timeline: the first 50 MW phase reached service on October 27, 2025. Later buildings have separate delivery dates; March 2026 was not the campus’s initial service date.<cite data-ref=\"https://ir.applieddigital.com/news-events/press-releases/detail/133/applied-digital-achieves-ready-for-service-for-phase-1-at\"></cite></li><li>The earlier release identifies CoreWeave as the tenant. Its approximately $11 billion anticipated lease revenue is not a construction cost.<cite data-ref=\"https://ir.applieddigital.com/news-events/press-releases/detail/133/applied-digital-achieves-ready-for-service-for-phase-1-at\"></cite></li></ul>",
+        "dateConfidence": "confirmed",
+        "allDay": true,
+        "allDayStated": false,
+        "utcStartDateTime": "2025-10-27T00:00:00.000Z",
+        "dateConfidenceReasoning": "Applied Digital October 27, 2025 release confirms first 50 MW phase Ready for Service on that date; campus delivery is phased. October 2, 2026 release confirms 250 MW then operating.",
+        "tags": [
+          "Cleanview",
+          "Data Centers",
+          "Operating",
+          "Under Construction",
+          "Applied Digital",
+          "CoreWeave",
+          "Signed Tenant",
+          "North Dakota"
+        ]
+      },
+      "gaps": [
+        "Full 400 MW completion date and current campus capital cost remain unverified."
+      ],
+      "power": {
+        "megawatts": 250,
+        "kind": "usage",
+        "sourceUrl": "https://ir.applieddigital.com/news-events/press-releases/detail/161/applied-digital-brings-an-additional-75-mw-of-ai",
+        "note": "Operational critical IT capacity on October 2, 2026; 400 MW contracted buildout is not current operation."
+      }
+    },
+    "dc-avaio-taurus-hub-ms": {
+      "patch": {
+        "title": "AVAIO Taurus: $6 Billion Campus, Initial 116 MW Phase in Brandon, Mississippi",
+        "description": "AVAIO’s Taurus campus in Brandon has a published $6 billion investment and initial 116 MW phase. Its current project listing gives Q3 2027 energization, later than the first-half 2027 target in its September 2025 announcement.",
+        "sourceUrl": "https://www.avaiodigital.com/updates/avaio-digital-breaks-ground-on-6-billion-brandon-data-center-campus-leading-mississippi-contractor-begins-site-work",
+        "references": [
+          {
+            "url": "https://www.avaiodigital.com/updates/avaio-digital-breaks-ground-on-6-billion-brandon-data-center-campus-leading-mississippi-contractor-begins-site-work",
+            "title": "AVAIO Digital Breaks Ground on $6 Billion Brandon Data Center Campus; Leading Mississippi Contractor Begins Site Work",
+            "confidence": 95,
+            "publishedDate": null
+          },
+          {
+            "url": "https://www.avaiodigital.com/projects",
+            "title": "Projects — Explore AVAIO’s 2027–2028 Deliverable Projects",
+            "confidence": 95,
+            "publishedDate": null
+          }
+        ],
+        "price": 6000000000,
+        "priceCurrency": "USD",
+        "longFormSummary": "<ul><li>AVAIO’s September 10, 2025 announcement records site work beginning on a $6 billion, 329-acre Taurus campus with Yates Construction.<cite data-ref=\"https://www.avaiodigital.com/updates/avaio-digital-breaks-ground-on-6-billion-brandon-data-center-campus-leading-mississippi-contractor-begins-site-work\"></cite></li><li>The first phase comprises over 600,000 square feet and 116 MW. An electric-service agreement with Entergy was executed in August 2025.<cite data-ref=\"https://www.avaiodigital.com/updates/avaio-digital-breaks-ground-on-6-billion-brandon-data-center-campus-leading-mississippi-contractor-begins-site-work\"></cite></li><li>Timeline: the announcement targeted first-half 2027 delivery; the current operator listing gives Q3 2027 energization. July 1 represents the start of that quarter, not a scheduled day.<cite data-ref=\"https://www.avaiodigital.com/projects\"></cite></li></ul>",
+        "dateConfidence": "estimated",
+        "allDay": true,
+        "allDayStated": false,
+        "utcStartDateTime": "2027-07-01T00:00:00.000Z",
+        "dateConfidenceReasoning": "Checked October 23, 2026: current AVAIO project listing gives 116 MW energized Q3 2027, superseding older H1 2027 announcement. July 1 is quarter-only placeholder."
+      },
+      "gaps": [
+        "Exact site coordinates and phased full-campus delivery still require parcel-level verification."
+      ],
+      "power": {
+        "megawatts": 116,
+        "kind": "usage",
+        "sourceUrl": "https://www.avaiodigital.com/projects",
+        "note": "Initial phase advertised energized Q3 2027."
+      }
+    },
+    "dc-cloverleaf-project-bluestem-ks": {
+      "patch": {
+        "title": "Cloverleaf Project Bluestem: Kansas Data Center Rezoning Active; Power-Plant Application Withdrawn",
+        "description": "Cloverleaf said on September 28, 2026 that its Project Bluestem data center rezoning remained active while it withdrew the initial application for a separate power-generation facility. Final capacity, investment and delivery date require verification.",
+        "sourceUrl": "https://bluestemdatacenter.com/cloverleaf-evaluating-alternative-locations-for-power-generation-facility/",
+        "references": [
+          {
+            "url": "https://bluestemdatacenter.com/cloverleaf-evaluating-alternative-locations-for-power-generation-facility/",
+            "title": "Cloverleaf Evaluating Alternative Locations for Power Generation Facility",
+            "confidence": 95,
+            "publishedDate": null
+          },
+          {
+            "url": "https://bluestemdatacenter.com/faqs/",
+            "title": "FAQs — Project Bluestem",
+            "confidence": 95,
+            "publishedDate": null
+          }
+        ],
+        "price": null,
+        "priceCurrency": null,
+        "longFormSummary": "<ul><li>Cloverleaf withdrew its initial generation-facility application on September 28, 2026 while evaluating other sites. Its data center rezoning application remained active.<cite data-ref=\"https://bluestemdatacenter.com/cloverleaf-evaluating-alternative-locations-for-power-generation-facility/\"></cite></li><li>The project is near Tonganoxie Business Park in Leavenworth County. The FAQ says Evergy is studying available capacity and describes grid supply.<cite data-ref=\"https://bluestemdatacenter.com/faqs/\"></cite></li><li>The FAQ’s statement that no formal applications had been submitted is older than the September 2026 update and should not be read as current status.<cite data-ref=\"https://bluestemdatacenter.com/faqs/\"></cite></li><li>Timeline: no COD is stated in these opened operator records. The legacy December 2028 date remains only an unverified estimated tracker placeholder; no fixed capacity or cost is asserted here.<cite data-ref=\"https://bluestemdatacenter.com/cloverleaf-evaluating-alternative-locations-for-power-generation-facility/\"></cite></li></ul>",
+        "dateConfidence": "estimated",
+        "allDay": true,
+        "allDayStated": false,
+        "dateConfidenceReasoning": "December 2028 is an unverified legacy tracker placeholder, not a COD confirmed by Cloverleaf. September 28, 2026 update supports active data center rezoning only."
+      },
+      "gaps": [
+        "Obtain current county rezoning filing, final capacity, COD, tenant and exact site; 600–1,200 MW range is not established by these operator records."
+      ],
+      "power": "delete"
+    },
+    "dc-crane-pdx01-hillsboro-or": {
+      "patch": {
+        "title": "Crane Forest Grove Campus: 100+ MW Plan; $275.26M Qualified-Property Investment",
+        "description": "Crane advertises a 100+ MW Forest Grove campus near Hillsboro. A June 2025 city enterprise-zone contract records $275,259,195 of estimated qualified-property investment; this is a disclosed investment scope, not a verified all-in campus cost.",
+        "sourceUrl": "https://www.cranedc.com/data-centers/oregon-data-center",
+        "references": [
+          {
+            "url": "https://www.cranedc.com/data-centers/oregon-data-center",
+            "title": "Data Centers: Oregon — Crane Data Centers",
+            "confidence": 95,
+            "publishedDate": null
+          },
+          {
+            "url": "https://www.forestgrove-or.gov/DocumentCenter/View/2881/250605---Enterprise-Zone-Contract---Heather-Street-Owner-LLC---Crane-Data-Centers-Inc---City-of-Forest-Grove",
+            "title": "City of Forest Grove Enterprise Zone Property Tax Abatement Contract No. 25-001",
+            "confidence": 95,
+            "publishedDate": "2025-06-04"
+          }
+        ],
+        "price": 275259195,
+        "priceCurrency": "USD",
+        "longFormSummary": "<ul><li>Crane’s campus page advertises 100+ MW capacity. PDX01 has two 24 MW phases; PDX02 is approximately 48 MW.<cite data-ref=\"https://www.cranedc.com/data-centers/oregon-data-center\"></cite></li><li>The June 2025 Forest Grove contract identifies estimated qualified-property investment of $275,259,195 and tax lot 153050001300. This figure is not presented as an all-in campus construction budget.<cite data-ref=\"https://www.forestgrove-or.gov/DocumentCenter/View/2881/250605---Enterprise-Zone-Contract---Heather-Street-Owner-LLC---Crane-Data-Centers-Inc---City-of-Forest-Grove\"></cite></li><li>Timeline: the operator page advertises Q3 2026 ready for service, which has passed. No commissioning announcement was verified; the existing December 31, 2026 date remains an unverified placeholder rather than an operator-stated revised COD.<cite data-ref=\"https://www.cranedc.com/data-centers/oregon-data-center\"></cite></li></ul>",
+        "dateConfidence": "estimated",
+        "allDay": true,
+        "allDayStated": false,
+        "dateConfidenceReasoning": "Operator advertises Q3 2026 ready for service, now past; actual commissioning or revised COD not verified. Existing December 31, 2026 is a legacy estimated placeholder, not a revised operator target."
+      },
+      "gaps": [
+        "Obtain commissioning or revised schedule, confirm coordinate against filed parcel and distinguish qualified investment from total campus budget."
+      ],
+      "power": {
+        "megawatts": 100,
+        "kind": "usage",
+        "sourceUrl": "https://www.cranedc.com/data-centers/oregon-data-center",
+        "note": "Operator advertises 100+ MW campus capacity; 100 is a lower bound, not measured operating demand."
+      }
+    },
+    "dc-metrobloks-southfield-mi": {
+      "patch": {
+        "title": "Metrobloks Southfield DTW-D: 89 MW Critical IT Plan; Investment Estimates Conflict",
+        "description": "Metrobloks currently advertises 89 MW of critical IT capacity for DTW-D at 27500 Inkster Road, Southfield. Earlier approval reporting described 100 MW total power and conflicting $500 million and $1.5 billion investment estimates.",
+        "sourceUrl": "https://www.metrobloks.com/sites/detroit",
+        "references": [
+          {
+            "url": "https://www.metrobloks.com/sites/detroit",
+            "title": "Detroit — DTW-D — Metrobloks",
+            "confidence": 95,
+            "publishedDate": null
+          },
+          {
+            "url": "https://planetdetroit.org/2025/12/southfield-data-center-approval/",
+            "title": "Southfield greenlights divisive data center",
+            "confidence": 95,
+            "publishedDate": "2025-12-16"
+          }
+        ],
+        "price": null,
+        "priceCurrency": null,
+        "longFormSummary": "<ul><li>Metrobloks lists DTW-D at 27500 Inkster Road with 89 MW critical IT capacity, one building with two floors and DTE/ITC power infrastructure.<cite data-ref=\"https://www.metrobloks.com/sites/detroit\"></cite></li><li>Approval reporting describes 100 MW power demand. Critical IT load and facility power differ; the two numbers should not be treated as equivalent.<cite data-ref=\"https://planetdetroit.org/2025/12/southfield-data-center-approval/\"></cite></li><li>Planet Detroit reports a $1.5 billion two-phase estimate and $500 million in the presentation deck, explicitly noting the discrepancy. The single numeric price is cleared pending reconciliation.<cite data-ref=\"https://planetdetroit.org/2025/12/southfield-data-center-approval/\"></cite></li><li>Timeline: the operator page says coming soon without an opening date. June 2027 remains an unverified legacy estimated placeholder.<cite data-ref=\"https://www.metrobloks.com/sites/detroit\"></cite></li></ul>",
+        "dateConfidence": "estimated",
+        "allDay": true,
+        "allDayStated": false,
+        "dateConfidenceReasoning": "Operator says coming soon without a COD. June 2027 is an unverified legacy tracker placeholder; requires developer confirmation."
+      },
+      "gaps": [
+        "Resolve $500M/$1.5B scope discrepancy, current COD and differing acreage/floor-area figures; map coordinates not newly parcel-verified."
+      ],
+      "power": {
+        "megawatts": 89,
+        "kind": "usage",
+        "sourceUrl": "https://www.metrobloks.com/sites/detroit",
+        "note": "Advertised critical IT capacity; prior 100 MW reporting concerns facility power, not the same metric."
+      }
+    },
+    "dc-microsoft-alviso-milpitas-san-jose-ca": {
+      "patch": {
+        "title": "Microsoft San Jose Data Center: Up to 99 MW at 1657 Alviso-Milpitas Road",
+        "description": "The California Energy Commission identifies Microsoft’s two-building San Jose project at 1657 Alviso-Milpitas Road, with a maximum electrical load of 99 MW and estimated load of 77 MW. A verified total project budget and COD remain unavailable.",
+        "sourceUrl": "https://www.energy.ca.gov/powerplant/backup-generating-system/san-jose-data-center",
+        "references": [
+          {
+            "url": "https://www.energy.ca.gov/powerplant/backup-generating-system/san-jose-data-center",
+            "title": "San Jose Data Center — California Energy Commission",
+            "confidence": 95,
+            "publishedDate": null
+          }
+        ],
+        "price": null,
+        "priceCurrency": null,
+        "longFormSummary": "<ul><li>CEC docket 19-SPPE-04 identifies Microsoft as owner of the two-building project at 1657 Alviso-Milpitas Road.<cite data-ref=\"https://www.energy.ca.gov/powerplant/backup-generating-system/san-jose-data-center\"></cite></li><li>The CEC describes up to 99 MW maximum electrical load, with an estimated 77 MW inclusive of IT, ancillary equipment and other facility loads.<cite data-ref=\"https://www.energy.ca.gov/powerplant/backup-generating-system/san-jose-data-center\"></cite></li><li>The published design includes an onsite 115 kV substation supplied from PG&amp;E’s adjacent Los Esteros Substation.<cite data-ref=\"https://www.energy.ca.gov/powerplant/backup-generating-system/san-jose-data-center\"></cite></li><li>The CEC lists a Small Power Plant Exemption, which is not proof of operational status. The earlier $73.2 million land figure is removed from the total-project price field.<cite data-ref=\"https://www.energy.ca.gov/powerplant/backup-generating-system/san-jose-data-center\"></cite></li><li>Timeline: no COD is published on this CEC page. June 2028 remains only an unverified legacy estimated tracker placeholder.<cite data-ref=\"https://www.energy.ca.gov/powerplant/backup-generating-system/san-jose-data-center\"></cite></li></ul>",
+        "dateConfidence": "estimated",
+        "allDay": true,
+        "allDayStated": false,
+        "dateConfidenceReasoning": "June 2028 is an unverified legacy tracker placeholder. CEC project page provides permitting and design information but no COD."
+      },
+      "gaps": [
+        "Verify current city addendum, generator design, construction/COD, full project cost and coordinates; prior land acquisition cost was not a campus construction cost."
+      ],
+      "power": {
+        "megawatts": 99,
+        "kind": "usage",
+        "sourceUrl": "https://www.energy.ca.gov/powerplant/backup-generating-system/san-jose-data-center",
+        "note": "CEC design maximum load, not operating demand; CEC estimates 77 MW facility load."
+      }
+    },
+    "dc-qts-cedar-rapids-ia": {
+      "patch": {
+        "title": "QTS Cedar Rapids: Planned $10 Billion, Seven-Building Data Center Campus",
+        "description": "QTS’s August 8, 2025 announcement describes a planned $10 billion campus with seven data center buildings on 612 acres in Big Cedar Industrial Center. The announcement does not publish power capacity or a service date.",
+        "sourceUrl": "https://qtsdatacenters.com/?jet_download=a61fdd80da7828f0eb7422da99880b5dd80f2b64",
+        "references": [
+          {
+            "url": "https://qtsdatacenters.com/?jet_download=a61fdd80da7828f0eb7422da99880b5dd80f2b64",
+            "title": "QTS Announces New, World-Class Data Center Campus in Cedar Rapids",
+            "confidence": 95,
+            "publishedDate": null
+          }
+        ],
+        "price": 10000000000,
+        "priceCurrency": "USD",
+        "longFormSummary": "<ul><li>QTS announced a planned $10 billion investment in Cedar Rapids on August 8, 2025, comprising seven data center buildings across 612 acres.<cite data-ref=\"https://qtsdatacenters.com/?jet_download=a61fdd80da7828f0eb7422da99880b5dd80f2b64\"></cite></li><li>QTS identifies Alliant Energy as its utility partner and describes water-free cooling for the campus.<cite data-ref=\"https://qtsdatacenters.com/?jet_download=a61fdd80da7828f0eb7422da99880b5dd80f2b64\"></cite></li><li>The announcement does not substantiate the earlier 1,100 MW figure, so it is removed rather than presented as a confirmed specification.<cite data-ref=\"https://qtsdatacenters.com/?jet_download=a61fdd80da7828f0eb7422da99880b5dd80f2b64\"></cite></li><li>Timeline: no commercial-operation date is stated in this release. December 2027 remains an unverified legacy estimated tracker placeholder, pending a current utility or operator schedule.<cite data-ref=\"https://qtsdatacenters.com/?jet_download=a61fdd80da7828f0eb7422da99880b5dd80f2b64\"></cite></li></ul>",
+        "dateConfidence": "estimated",
+        "allDay": true,
+        "allDayStated": false,
+        "dateConfidenceReasoning": "December 2027 is an unverified legacy tracker placeholder. QTS August 8, 2025 announcement establishes investment and scope but does not state COD."
+      },
+      "gaps": [
+        "Resolve reported power-capacity differences using current utility contract/filings; confirm phased COD, current construction status and parcel coordinates."
+      ],
+      "power": "delete"
+    },
+    "dc-vantage-stargate-lighthouse-bldg-1-wi": {
+      "delete": true,
+      "reason": "Unverified tracker-only split: standalone 293 MW, $1.8B and building-specific COD not supported by opened operator campus page. Retain campus pin 16311.",
+      "sources": [
+        "https://vantage-dc.com/data-center-locations/north-america/port-washington-wisconsin"
+      ]
+    },
+    "dc-vantage-stargate-lighthouse-bldg-4-wi": {
+      "delete": true,
+      "reason": "Unverified tracker-only split: standalone 293 MW, $1.8B and building-specific COD not supported by opened operator campus page. Retain campus pin 16311.",
+      "sources": [
+        "https://vantage-dc.com/data-center-locations/north-america/port-washington-wisconsin"
+      ]
+    }
+  },
+  "results": [
+    {
+      "environment": "local",
+      "key": "battery-sb-energy-lyra-storage-tx",
+      "id": 16300,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "PUCT Lyra BESS SGIA 35077_2225_1531568.PDF found but blocked by plain curl (403); SB Energy subsidiary list alone does not establish this queue project’s ownership. Verify current queue, owner, duration, exact parcel and COD."
+      ]
+    },
+    {
+      "environment": "local",
+      "key": "dc-ameresco-cyrusone-nas-lemoore-ca",
+      "id": 16301,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Exact parcel and current contracting/construction status require confirmation."
+      ]
+    },
+    {
+      "environment": "local",
+      "key": "dc-applied-digital-adair-ia",
+      "id": 16302,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Current status conflicts with legacy proposal: obtain developer response and October 14, 2026 ordinance outcome; confirm capacity, COD and parcel. Existing map/media are not newly site-verified."
+      ]
+    },
+    {
+      "environment": "local",
+      "key": "dc-applied-digital-polaris-forge-1-nd",
+      "id": 16303,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Full 400 MW completion date and current campus capital cost remain unverified."
+      ]
+    },
+    {
+      "environment": "local",
+      "key": "dc-avaio-taurus-hub-ms",
+      "id": 16304,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Exact site coordinates and phased full-campus delivery still require parcel-level verification."
+      ]
+    },
+    {
+      "environment": "local",
+      "key": "dc-cloverleaf-project-bluestem-ks",
+      "id": 16305,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Obtain current county rezoning filing, final capacity, COD, tenant and exact site; 600–1,200 MW range is not established by these operator records."
+      ]
+    },
+    {
+      "environment": "local",
+      "key": "dc-crane-pdx01-hillsboro-or",
+      "id": 16306,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Obtain commissioning or revised schedule, confirm coordinate against filed parcel and distinguish qualified investment from total campus budget."
+      ]
+    },
+    {
+      "environment": "local",
+      "key": "dc-metrobloks-southfield-mi",
+      "id": 16307,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Resolve $500M/$1.5B scope discrepancy, current COD and differing acreage/floor-area figures; map coordinates not newly parcel-verified."
+      ]
+    },
+    {
+      "environment": "local",
+      "key": "dc-microsoft-alviso-milpitas-san-jose-ca",
+      "id": 16308,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Verify current city addendum, generator design, construction/COD, full project cost and coordinates; prior land acquisition cost was not a campus construction cost."
+      ]
+    },
+    {
+      "environment": "local",
+      "key": "dc-qts-cedar-rapids-ia",
+      "id": 16309,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Resolve reported power-capacity differences using current utility contract/filings; confirm phased COD, current construction status and parcel coordinates."
+      ]
+    },
+    {
+      "environment": "local",
+      "key": "dc-vantage-stargate-lighthouse-bldg-1-wi",
+      "id": 17085,
+      "action": "deleted",
+      "verifiedStatus": 404
+    },
+    {
+      "environment": "local",
+      "key": "dc-vantage-stargate-lighthouse-bldg-4-wi",
+      "id": 17086,
+      "action": "deleted",
+      "verifiedStatus": 404
+    },
+    {
+      "environment": "prod",
+      "key": "battery-sb-energy-lyra-storage-tx",
+      "id": 16300,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "PUCT Lyra BESS SGIA 35077_2225_1531568.PDF found but blocked by plain curl (403); SB Energy subsidiary list alone does not establish this queue project’s ownership. Verify current queue, owner, duration, exact parcel and COD."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "dc-ameresco-cyrusone-nas-lemoore-ca",
+      "id": 16301,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Exact parcel and current contracting/construction status require confirmation."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "dc-applied-digital-adair-ia",
+      "id": 16302,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Current status conflicts with legacy proposal: obtain developer response and October 14, 2026 ordinance outcome; confirm capacity, COD and parcel. Existing map/media are not newly site-verified."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "dc-applied-digital-polaris-forge-1-nd",
+      "id": 16303,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Full 400 MW completion date and current campus capital cost remain unverified."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "dc-avaio-taurus-hub-ms",
+      "id": 16304,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Exact site coordinates and phased full-campus delivery still require parcel-level verification."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "dc-cloverleaf-project-bluestem-ks",
+      "id": 16305,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Obtain current county rezoning filing, final capacity, COD, tenant and exact site; 600–1,200 MW range is not established by these operator records."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "dc-crane-pdx01-hillsboro-or",
+      "id": 16306,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Obtain commissioning or revised schedule, confirm coordinate against filed parcel and distinguish qualified investment from total campus budget."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "dc-metrobloks-southfield-mi",
+      "id": 16307,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Resolve $500M/$1.5B scope discrepancy, current COD and differing acreage/floor-area figures; map coordinates not newly parcel-verified."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "dc-microsoft-alviso-milpitas-san-jose-ca",
+      "id": 16308,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Verify current city addendum, generator design, construction/COD, full project cost and coordinates; prior land acquisition cost was not a campus construction cost."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "dc-qts-cedar-rapids-ia",
+      "id": 16309,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Resolve reported power-capacity differences using current utility contract/filings; confirm phased COD, current construction status and parcel coordinates."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "dc-vantage-stargate-lighthouse-bldg-1-wi",
+      "id": 17085,
+      "action": "deleted",
+      "verifiedStatus": 404
+    },
+    {
+      "environment": "prod",
+      "key": "dc-vantage-stargate-lighthouse-bldg-4-wi",
+      "id": 17086,
+      "action": "deleted",
+      "verifiedStatus": 404
+    }
+  ],
+  "telemetry": [
+    {
+      "environment": "local",
+      "id": 16302,
+      "action": "cleared unsupported energy calculation",
+      "verifiedStatus": 204
+    },
+    {
+      "environment": "local",
+      "id": 16303,
+      "action": "cleared unsupported energy calculation",
+      "verifiedStatus": 204
+    },
+    {
+      "environment": "local",
+      "id": 16305,
+      "action": "cleared unsupported energy calculation",
+      "verifiedStatus": 204
+    },
+    {
+      "environment": "local",
+      "id": 16307,
+      "action": "cleared unsupported energy calculation",
+      "verifiedStatus": 204
+    },
+    {
+      "environment": "local",
+      "id": 16309,
+      "action": "cleared unsupported energy calculation",
+      "verifiedStatus": 204
+    },
+    {
+      "environment": "local",
+      "id": 16302,
+      "action": "cleared unsupported datacenter stats",
+      "verifiedStatus": 204,
+      "after": null
+    },
+    {
+      "environment": "local",
+      "id": 16305,
+      "action": "cleared unsupported datacenter stats",
+      "verifiedStatus": 204,
+      "after": null
+    },
+    {
+      "environment": "local",
+      "id": 16307,
+      "action": "replaced unsupported datacenter stats",
+      "verifiedStatus": 200,
+      "after": {
+        "waterGallonsPerDay": null,
+        "waterBasis": null,
+        "chips": null,
+        "chipModel": null,
+        "h100Equivalents": null,
+        "acres": null,
+        "sqft": null,
+        "buildings": 1,
+        "generators": null,
+        "cooling": "Liquid-to-the-chip cooling",
+        "powerSource": "ITC/DTE power infrastructure",
+        "sourceUrl": "https://www.metrobloks.com/sites/detroit",
+        "note": "Operator advertises 89 MW critical IT. Legacy water estimate, acreage and floor area removed pending scope reconciliation.",
+        "checkedAt": "2026-10-23T13:58:10.438Z"
+      }
+    },
+    {
+      "environment": "local",
+      "id": 16309,
+      "action": "replaced unsupported datacenter stats",
+      "verifiedStatus": 200,
+      "after": {
+        "waterGallonsPerDay": null,
+        "waterBasis": null,
+        "chips": null,
+        "chipModel": null,
+        "h100Equivalents": null,
+        "acres": 612,
+        "sqft": null,
+        "buildings": 7,
+        "generators": null,
+        "cooling": "Water-free cooling",
+        "powerSource": "Alliant Energy utility partnership",
+        "sourceUrl": "https://qtsdatacenters.com/?jet_download=a61fdd80da7828f0eb7422da99880b5dd80f2b64",
+        "note": "QTS August 8, 2025 announcement. Removed Google Cedar Rapids cluster chip counts and cooling data wrongly attached to QTS; operating water volume not published.",
+        "checkedAt": "2026-10-23T13:58:10.482Z"
+      }
+    },
+    {
+      "environment": "prod",
+      "id": 16302,
+      "action": "cleared unsupported energy calculation",
+      "verifiedStatus": 204
+    },
+    {
+      "environment": "prod",
+      "id": 16303,
+      "action": "cleared unsupported energy calculation",
+      "verifiedStatus": 204
+    },
+    {
+      "environment": "prod",
+      "id": 16305,
+      "action": "cleared unsupported energy calculation",
+      "verifiedStatus": 204
+    },
+    {
+      "environment": "prod",
+      "id": 16307,
+      "action": "cleared unsupported energy calculation",
+      "verifiedStatus": 204
+    },
+    {
+      "environment": "prod",
+      "id": 16309,
+      "action": "cleared unsupported energy calculation",
+      "verifiedStatus": 204
+    },
+    {
+      "environment": "prod",
+      "id": 16302,
+      "action": "cleared unsupported datacenter stats",
+      "verifiedStatus": 204,
+      "after": null
+    },
+    {
+      "environment": "prod",
+      "id": 16305,
+      "action": "cleared unsupported datacenter stats",
+      "verifiedStatus": 204,
+      "after": null
+    },
+    {
+      "environment": "prod",
+      "id": 16307,
+      "action": "replaced unsupported datacenter stats",
+      "verifiedStatus": 200,
+      "after": {
+        "waterGallonsPerDay": null,
+        "waterBasis": null,
+        "chips": null,
+        "chipModel": null,
+        "h100Equivalents": null,
+        "acres": null,
+        "sqft": null,
+        "buildings": 1,
+        "generators": null,
+        "cooling": "Liquid-to-the-chip cooling",
+        "powerSource": "ITC/DTE power infrastructure",
+        "sourceUrl": "https://www.metrobloks.com/sites/detroit",
+        "note": "Operator advertises 89 MW critical IT. Legacy water estimate, acreage and floor area removed pending scope reconciliation.",
+        "checkedAt": "2026-10-23T13:58:14.598Z"
+      }
+    },
+    {
+      "environment": "prod",
+      "id": 16309,
+      "action": "replaced unsupported datacenter stats",
+      "verifiedStatus": 200,
+      "after": {
+        "waterGallonsPerDay": null,
+        "waterBasis": null,
+        "chips": null,
+        "chipModel": null,
+        "h100Equivalents": null,
+        "acres": 612,
+        "sqft": null,
+        "buildings": 7,
+        "generators": null,
+        "cooling": "Water-free cooling",
+        "powerSource": "Alliant Energy utility partnership",
+        "sourceUrl": "https://qtsdatacenters.com/?jet_download=a61fdd80da7828f0eb7422da99880b5dd80f2b64",
+        "note": "QTS August 8, 2025 announcement. Removed Google Cedar Rapids cluster chip counts and cooling data wrongly attached to QTS; operating water volume not published.",
+        "checkedAt": "2026-10-23T13:58:15.254Z"
+      }
+    }
+  ],
+  "artifacts": ".scrape/prod-batches/cleanview-2026-10-14/audit/backfill-2026-10-23",
+  "localMappingCorrections": {
+    "reason": "Local IDs had become stale; all 12 identities matched by current title and source URL against live records before writing.",
+    "idsNowMatchProduction": true
+  },
+  "deployment": false,
+  "remainingLimitations": [
+    "Six unsupported legacy COD placeholders remain explicitly estimated and described as unverified because Pin.utcStartDateTime is NOT NULL. No invented replacement dates.",
+    "Coordinates were preserved; exact parcels and USGS imagery alignment still require independent verification. Existing images are not new site-identification evidence.",
+    "Legacy datacenter/energy/source-wiki/site-shape data outside the specifically corrected rows are not certified by this batch.",
+    "Campus pin 16311 was retained but its 902–1172 MW range, source URL and delivery still need a separate correction against the opened current 902 MW / 2028 Vantage page.",
+    "Original URL triage counts are historical, not fresh global totals. New state-page lead publication and remaining backfill have not been completed."
+  ],
+  "verification": {
+    "media": [
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/ameresco-cyrusone-nas-lemoore-ca-usgs-aerial.jpg",
+        "status": 200,
+        "bytes": 348767
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/ameresco-cyrusone-nas-lemoore-ca-usgs-relief.jpg",
+        "status": 200,
+        "bytes": 52301
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/ameresco-cyrusone-nas-lemoore-ca-usgs-topo.jpg",
+        "status": 200,
+        "bytes": 106382
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/applied-digital-adair-ia-usgs-aerial.jpg",
+        "status": 200,
+        "bytes": 333984
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/applied-digital-adair-ia-usgs-relief.jpg",
+        "status": 200,
+        "bytes": 71892
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/applied-digital-adair-ia-usgs-topo.jpg",
+        "status": 200,
+        "bytes": 179347
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/applied-digital-polaris-forge-1-nd-usgs-aerial.jpg",
+        "status": 200,
+        "bytes": 399000
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/applied-digital-polaris-forge-1-nd-usgs-relief.jpg",
+        "status": 200,
+        "bytes": 54944
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/applied-digital-polaris-forge-1-nd-usgs-topo.jpg",
+        "status": 200,
+        "bytes": 216479
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/avaio-taurus-hub-ms-usgs-aerial.jpg",
+        "status": 200,
+        "bytes": 725861
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/avaio-taurus-hub-ms-usgs-relief.jpg",
+        "status": 200,
+        "bytes": 90440
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/avaio-taurus-hub-ms-usgs-topo.jpg",
+        "status": 200,
+        "bytes": 436413
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cloverleaf-project-bluestem-ks-usgs-aerial.jpg",
+        "status": 200,
+        "bytes": 346001
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cloverleaf-project-bluestem-ks-usgs-relief.jpg",
+        "status": 200,
+        "bytes": 62370
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cloverleaf-project-bluestem-ks-usgs-topo.jpg",
+        "status": 200,
+        "bytes": 202488
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/crane-pdx01-hillsboro-or-usgs-aerial.jpg",
+        "status": 200,
+        "bytes": 687844
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/crane-pdx01-hillsboro-or-usgs-relief.jpg",
+        "status": 200,
+        "bytes": 65485
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/crane-pdx01-hillsboro-or-usgs-topo.jpg",
+        "status": 200,
+        "bytes": 343606
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/metrobloks-southfield-mi-usgs-aerial.jpg",
+        "status": 200,
+        "bytes": 713062
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/metrobloks-southfield-mi-usgs-relief.jpg",
+        "status": 200,
+        "bytes": 82032
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/metrobloks-southfield-mi-usgs-topo.jpg",
+        "status": 200,
+        "bytes": 419900
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/microsoft-alviso-milpitas-san-jose-ca-usgs-aerial.jpg",
+        "status": 200,
+        "bytes": 465845
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/microsoft-alviso-milpitas-san-jose-ca-usgs-relief.jpg",
+        "status": 200,
+        "bytes": 76413
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/microsoft-alviso-milpitas-san-jose-ca-usgs-topo.jpg",
+        "status": 200,
+        "bytes": 291118
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/qts-cedar-rapids-ia-usgs-aerial.jpg",
+        "status": 200,
+        "bytes": 240813
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/qts-cedar-rapids-ia-usgs-relief.jpg",
+        "status": 200,
+        "bytes": 55934
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/qts-cedar-rapids-ia-usgs-topo.jpg",
+        "status": 200,
+        "bytes": 162775
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/sb-energy-lyra-storage-tx-usgs-aerial.jpg",
+        "status": 200,
+        "bytes": 649948
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/sb-energy-lyra-storage-tx-usgs-relief.jpg",
+        "status": 200,
+        "bytes": 73025
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/sb-energy-lyra-storage-tx-usgs-topo.jpg",
+        "status": 200,
+        "bytes": 252394
+      }
+    ],
+    "pages": [
+      {
+        "environment": "local",
+        "id": 16304,
+        "status": 200,
+        "bytes": 331768
+      },
+      {
+        "environment": "local",
+        "id": 16307,
+        "status": 200,
+        "bytes": 328319
+      },
+      {
+        "environment": "local",
+        "id": 16309,
+        "status": 200,
+        "bytes": 332398
+      },
+      {
+        "environment": "prod",
+        "id": 16304,
+        "status": 200,
+        "bytes": 288228
+      },
+      {
+        "environment": "prod",
+        "id": 16307,
+        "status": 200,
+        "bytes": 284431
+      },
+      {
+        "environment": "prod",
+        "id": 16309,
+        "status": 200,
+        "bytes": 288963
+      }
+    ],
+    "actionsVerified": 24,
+    "telemetry": [
+      {
+        "environment": "local",
+        "id": 16302,
+        "action": "cleared unsupported energy calculation",
+        "verifiedStatus": 204
+      },
+      {
+        "environment": "local",
+        "id": 16303,
+        "action": "cleared unsupported energy calculation",
+        "verifiedStatus": 204
+      },
+      {
+        "environment": "local",
+        "id": 16305,
+        "action": "cleared unsupported energy calculation",
+        "verifiedStatus": 204
+      },
+      {
+        "environment": "local",
+        "id": 16307,
+        "action": "cleared unsupported energy calculation",
+        "verifiedStatus": 204
+      },
+      {
+        "environment": "local",
+        "id": 16309,
+        "action": "cleared unsupported energy calculation",
+        "verifiedStatus": 204
+      },
+      {
+        "environment": "local",
+        "id": 16302,
+        "action": "cleared unsupported datacenter stats",
+        "verifiedStatus": 204,
+        "after": null
+      },
+      {
+        "environment": "local",
+        "id": 16305,
+        "action": "cleared unsupported datacenter stats",
+        "verifiedStatus": 204,
+        "after": null
+      },
+      {
+        "environment": "local",
+        "id": 16307,
+        "action": "replaced unsupported datacenter stats",
+        "verifiedStatus": 200,
+        "after": {
+          "waterGallonsPerDay": null,
+          "waterBasis": null,
+          "chips": null,
+          "chipModel": null,
+          "h100Equivalents": null,
+          "acres": null,
+          "sqft": null,
+          "buildings": 1,
+          "generators": null,
+          "cooling": "Liquid-to-the-chip cooling",
+          "powerSource": "ITC/DTE power infrastructure",
+          "sourceUrl": "https://www.metrobloks.com/sites/detroit",
+          "note": "Operator advertises 89 MW critical IT. Legacy water estimate, acreage and floor area removed pending scope reconciliation.",
+          "checkedAt": "2026-10-23T13:58:10.438Z"
+        }
+      },
+      {
+        "environment": "local",
+        "id": 16309,
+        "action": "replaced unsupported datacenter stats",
+        "verifiedStatus": 200,
+        "after": {
+          "waterGallonsPerDay": null,
+          "waterBasis": null,
+          "chips": null,
+          "chipModel": null,
+          "h100Equivalents": null,
+          "acres": 612,
+          "sqft": null,
+          "buildings": 7,
+          "generators": null,
+          "cooling": "Water-free cooling",
+          "powerSource": "Alliant Energy utility partnership",
+          "sourceUrl": "https://qtsdatacenters.com/?jet_download=a61fdd80da7828f0eb7422da99880b5dd80f2b64",
+          "note": "QTS August 8, 2025 announcement. Removed Google Cedar Rapids cluster chip counts and cooling data wrongly attached to QTS; operating water volume not published.",
+          "checkedAt": "2026-10-23T13:58:10.482Z"
+        }
+      },
+      {
+        "environment": "prod",
+        "id": 16302,
+        "action": "cleared unsupported energy calculation",
+        "verifiedStatus": 204
+      },
+      {
+        "environment": "prod",
+        "id": 16303,
+        "action": "cleared unsupported energy calculation",
+        "verifiedStatus": 204
+      },
+      {
+        "environment": "prod",
+        "id": 16305,
+        "action": "cleared unsupported energy calculation",
+        "verifiedStatus": 204
+      },
+      {
+        "environment": "prod",
+        "id": 16307,
+        "action": "cleared unsupported energy calculation",
+        "verifiedStatus": 204
+      },
+      {
+        "environment": "prod",
+        "id": 16309,
+        "action": "cleared unsupported energy calculation",
+        "verifiedStatus": 204
+      },
+      {
+        "environment": "prod",
+        "id": 16302,
+        "action": "cleared unsupported datacenter stats",
+        "verifiedStatus": 204,
+        "after": null
+      },
+      {
+        "environment": "prod",
+        "id": 16305,
+        "action": "cleared unsupported datacenter stats",
+        "verifiedStatus": 204,
+        "after": null
+      },
+      {
+        "environment": "prod",
+        "id": 16307,
+        "action": "replaced unsupported datacenter stats",
+        "verifiedStatus": 200,
+        "after": {
+          "waterGallonsPerDay": null,
+          "waterBasis": null,
+          "chips": null,
+          "chipModel": null,
+          "h100Equivalents": null,
+          "acres": null,
+          "sqft": null,
+          "buildings": 1,
+          "generators": null,
+          "cooling": "Liquid-to-the-chip cooling",
+          "powerSource": "ITC/DTE power infrastructure",
+          "sourceUrl": "https://www.metrobloks.com/sites/detroit",
+          "note": "Operator advertises 89 MW critical IT. Legacy water estimate, acreage and floor area removed pending scope reconciliation.",
+          "checkedAt": "2026-10-23T13:58:14.598Z"
+        }
+      },
+      {
+        "environment": "prod",
+        "id": 16309,
+        "action": "replaced unsupported datacenter stats",
+        "verifiedStatus": 200,
+        "after": {
+          "waterGallonsPerDay": null,
+          "waterBasis": null,
+          "chips": null,
+          "chipModel": null,
+          "h100Equivalents": null,
+          "acres": 612,
+          "sqft": null,
+          "buildings": 7,
+          "generators": null,
+          "cooling": "Water-free cooling",
+          "powerSource": "Alliant Energy utility partnership",
+          "sourceUrl": "https://qtsdatacenters.com/?jet_download=a61fdd80da7828f0eb7422da99880b5dd80f2b64",
+          "note": "QTS August 8, 2025 announcement. Removed Google Cedar Rapids cluster chip counts and cooling data wrongly attached to QTS; operating water volume not published.",
+          "checkedAt": "2026-10-23T13:58:15.254Z"
+        }
+      }
+    ]
+  }
+}
