@@ -471,7 +471,7 @@ function TradeDay({ items, day, renderRow, expanded }: { items: Notification[]; 
 // One collapsible block holding today's and yesterday's panes stuck together.
 function TradeGroup({ groups, renderRow, href, fixed, guest }: { href: string; fixed?: boolean; guest?: boolean; groups: { day: number; items: Notification[] }[]; renderRow: (n: Notification) => React.ReactNode }) {
   const t = useT();
-  // Visitors see each day's totals at once; the group's one chevron expands every day.
+  // The group's one chevron expands every day; days carry no chevron of their own.
   const [openState, setOpen] = useState(!guest);
   const open = fixed || openState;
   const bodyId = useId();
@@ -500,11 +500,10 @@ function TradeGroup({ groups, renderRow, href, fixed, guest }: { href: string; f
           </button>
         )}
       </div>
-      {open || guest ? (
-        <div id={bodyId} className="divide-y divide-line border-t border-line">
-          {groups.map((g) => <TradeDay key={g.day} items={g.items} day={g.day} renderRow={renderRow} expanded={guest ? open : undefined} />)}
-        </div>
-      ) : null}
+      {/* Collapsed, each day still shows its buy and sell totals. */}
+      <div id={bodyId} className="divide-y divide-line border-t border-line">
+        {groups.map((g) => <TradeDay key={g.day} items={g.items} day={g.day} renderRow={renderRow} expanded={open} />)}
+      </div>
     </li>
   );
 }

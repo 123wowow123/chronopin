@@ -1,7 +1,6 @@
 import type { Metadata } from 'next';
 import { TitleWithBack } from '@/components/nav/BackToMenu';
 import { NotificationsFeed } from '@/components/nav/NotificationBell';
-import Link from '@/components/ui/Link';
 import { requireViewer } from '@/server/guard';
 import { getT } from '@/lib/i18n/server';
 
@@ -22,9 +21,6 @@ export default async function NotificationsPage({ searchParams }: { searchParams
   return (
     <div className="mx-auto max-w-2xl px-4 py-6 sm:py-10">
       <TitleWithBack wideBack className="mb-4 sm:mb-6">{t('notifications.title')}</TitleWithBack>
-      <p className="mb-4 text-sm">
-        <Link href="/profile/following">{t('profile.following')} →</Link>
-      </p>
       <NotificationsFeed section={section} />
     </div>
   );
