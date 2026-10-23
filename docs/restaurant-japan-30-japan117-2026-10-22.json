@@ -1,0 +1,3275 @@
+{
+  "batch": 117,
+  "checkedAt": "2026-10-22",
+  "entries": [
+    {
+      "existing": true,
+      "pin": {
+        "id": 15900,
+        "parentId": null,
+        "title": "THE CITY BAKERY — JR Nagoya Takashimaya Opens in Nagoya Station",
+        "description": "Planned November 12 opening in Takashimaya’s 1F Delicious Court, with branch-announced products and published opening-day hours.",
+        "sourceUrl": "https://prtimes.jp/main/html/rd/p/000000508.000047031.html#the-city-bakery",
+        "longFormSummary": "<p>Planned November 12 opening in Takashimaya’s 1F Delicious Court, with branch-announced products and published opening-day hours.<cite data-ref=\"https://prtimes.jp/main/html/rd/p/000000508.000047031.html\"></cite></p><p>October 15, 2026 landlord announcement confirms November 12 for this named counter; the first day begins at 10:00. Future date remains subject to change.</p>",
+        "address": "1F North Block Delicious Court, JR Nagoya Takashimaya, 1-1-4 Meieki, Nakamura-ku, Nagoya",
+        "location": "SRID=4326;POINT(136.868547 35.176708)",
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "price": null,
+        "priceCurrency": null,
+        "tip": null,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "October 15, 2026 landlord announcement confirms November 12 for this named counter; the first day begins at 10:00. Future date remains subject to change.",
+        "utcStartDateTime": "2026-11-12T00:00:00.000Z",
+        "utcEndDateTime": null,
+        "allDay": true,
+        "userId": 372,
+        "utcCreatedDateTime": "2026-10-16T03:08:58.707Z",
+        "utcUpdatedDateTime": null,
+        "utcDeletedDateTime": null,
+        "companyId": null,
+        "sourceStartDateTime": null,
+        "sourceEndDateTime": null,
+        "originalStartDate": null,
+        "delayReasoning": null,
+        "episodeCount": null,
+        "episodeStatus": null,
+        "marketVolume": null,
+        "marketVolumeAt": null,
+        "allDayStated": true,
+        "productName": "THE CITY BAKERY — JR Nagoya Takashimaya"
+      },
+      "content": {
+        "profile": {
+          "menu": {
+            "name": "THE CITY BAKERY — JR Nagoya Takashimaya",
+            "menus": [
+              {
+                "url": "https://prtimes.jp/main/html/rd/p/000000508.000047031.html",
+                "note": "Original announced croissant/coffee assortment preserved. Retailer October 22 release now confirms pretzel croissant ¥454 inclusive; coffee price and full final roster remain unpublished. Price evidence: https://prtimes.jp/main/html/rd/p/000000513.000047031.html. Original menu/source retained; new priced limited opening bundle is managed separately.",
+                "items": [
+                  {
+                    "name": "Pretzel croissant",
+                    "price": 454,
+                    "note": "Tax-inclusive retailer-announced price for the exact JR Nagoya Takashimaya counter; checked October 22. Launch stock and final assortment require confirmation. No other branch menu borrowed. Japanese published name: プレッツェルクロワッサン. Price source: https://prtimes.jp/main/html/rd/p/000000513.000047031.html"
+                  },
+                  {
+                    "name": "Coffee",
+                    "priceLabel": "Price not published"
+                  }
+                ],
+                "label": "Announced branch launch assortment",
+                "coverage": "sample",
+                "currency": "JPY"
+              }
+            ],
+            "specials": [],
+            "checkedAt": "2026-10-22",
+            "pinSourceUrl": "https://prtimes.jp/main/html/rd/p/000000508.000047031.html#the-city-bakery"
+          },
+          "tile": {
+            "day": "2026-11-12",
+            "kind": "opening",
+            "name": "THE CITY BAKERY — JR Nagoya Takashimaya",
+            "slug": "citybakery-new",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-22/batch117-the-city-bakery-2-0685717125659a53.webp",
+            "address": "1F North Block Delicious Court, JR Nagoya Takashimaya, 1-1-4 Meieki, Nakamura-ku, Nagoya",
+            "cuisine": "Bakery / café",
+            "checkedAt": "2026-10-22",
+            "imageNote": "Pretzel croissant — retailer-supplied photograph for the exact JR Nagoya Takashimaya launch assortment; promotional product example, not completed venue or guaranteed stock.",
+            "priceRange": "",
+            "regionSlug": "nagoya",
+            "websiteUrl": "https://thecitybakery.jp/",
+            "description": "Planned November 12 opening in Takashimaya’s 1 F Delicious Court, with branch-announced products and published opening-day hours.",
+            "imageCredit": "JR Nagoya Takashimaya / THE CITY BAKERY",
+            "recognition": "",
+            "neighborhood": "Nagoya Station",
+            "imageSourceUrl": "https://prtimes.jp/main/html/rd/p/000000513.000047031.html",
+            "openingConfirmed": true
+          },
+          "details": {
+            "name": "THE CITY BAKERY — JR Nagoya Takashimaya",
+            "phone": null,
+            "checkedAt": "2026-10-22",
+            "websiteUrl": "https://thecitybakery.jp/",
+            "openingHours": [
+              {
+                "days": "Service",
+                "hours": "07:30–20:00; opening day November 12 starts 10:00"
+              },
+              {
+                "days": "Closed days",
+                "hours": "Follow the department store"
+              }
+            ],
+            "pinSourceUrl": "https://prtimes.jp/main/html/rd/p/000000508.000047031.html#the-city-bakery",
+            "detailsSourceUrl": "https://thecitybakery.jp/",
+            "additionalSources": [
+              {
+                "url": "https://prtimes.jp/main/html/rd/p/000000508.000047031.html",
+                "label": "Research evidence"
+              },
+              {
+                "url": "https://prtimes.jp/main/html/rd/p/000000508.000047031.html",
+                "label": "Research evidence"
+              },
+              {
+                "label": "October 22 exact branch launch prices, bundles and stock conditions",
+                "url": "https://prtimes.jp/main/html/rd/p/000000513.000047031.html"
+              }
+            ],
+            "hoursNote": "Exact operator shop list corroborates regular 07:30–20:00 and November 12 opening 10:00. Source: https://thecitybakery.jp/shop . Department-store closures apply. Direct branch phone, final coffee price and completed venue gallery remain unpublished. November 12 opening bundle is a paid limited menu, not an inferred discount. Tax-inclusive retailer-announced price for the exact JR Nagoya Takashimaya counter; checked October 22. Launch stock and final assortment require confirmation. No other branch menu borrowed."
+          },
+          "pinSourceUrl": "https://prtimes.jp/main/html/rd/p/000000508.000047031.html#the-city-bakery"
+        },
+        "enabled": true
+      },
+      "expectedBefore": {
+        "content": {
+          "menu": {
+            "name": "THE CITY BAKERY — JR Nagoya Takashimaya",
+            "menus": [
+              {
+                "url": "https://prtimes.jp/main/html/rd/p/000000508.000047031.html",
+                "note": "New counter with an eat-in area. The landlord explicitly names the pretzel croissant and coffee; no named additional products or prices are confirmed for launch. Operator current news and shop list do not yet list this branch. Exact full launch roster, prices, direct phone and completed branch gallery remain unpublished. Operator/landlord images are accurately labelled as illustrative, not completed venue photographs. No verified opening discount or dated promotion found.",
+                "items": [
+                  {
+                    "name": "Pretzel croissant",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Coffee",
+                    "priceLabel": "Price not published"
+                  }
+                ],
+                "label": "Announced branch launch assortment",
+                "coverage": "sample",
+                "currency": "JPY"
+              }
+            ],
+            "specials": [],
+            "checkedAt": "2026-10-15",
+            "pinSourceUrl": "https://prtimes.jp/main/html/rd/p/000000508.000047031.html#the-city-bakery"
+          },
+          "tile": {
+            "day": "2026-11-12",
+            "kind": "opening",
+            "name": "THE CITY BAKERY — JR Nagoya Takashimaya",
+            "slug": "citybakery-new",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-15/citybakery-new-2-5976d230727712c3.webp",
+            "address": "1F North Block Delicious Court, JR Nagoya Takashimaya, 1-1-4 Meieki, Nakamura-ku, Nagoya",
+            "cuisine": "Bakery / café",
+            "checkedAt": "2026-10-15",
+            "imageNote": "Planned THE CITY BAKERY counter image supplied for this opening; illustrative, not a completed-branch photograph",
+            "priceRange": "",
+            "regionSlug": "nagoya",
+            "websiteUrl": "https://thecitybakery.jp/",
+            "description": "Planned November 12 opening in Takashimaya’s 1F Delicious Court, with branch-announced products and published opening-day hours.",
+            "imageCredit": "JR Nagoya Takashimaya",
+            "recognition": "",
+            "neighborhood": "Nagoya Station",
+            "imageSourceUrl": "https://prtimes.jp/main/html/rd/p/000000508.000047031.html",
+            "openingConfirmed": true
+          },
+          "details": {
+            "name": "THE CITY BAKERY — JR Nagoya Takashimaya",
+            "phone": null,
+            "checkedAt": "2026-10-15",
+            "websiteUrl": "https://thecitybakery.jp/",
+            "openingHours": [
+              {
+                "days": "Service",
+                "hours": "07:30–20:00; opening day November 12 starts 10:00"
+              },
+              {
+                "days": "Closed days",
+                "hours": "Follow the department store"
+              }
+            ],
+            "pinSourceUrl": "https://prtimes.jp/main/html/rd/p/000000508.000047031.html#the-city-bakery",
+            "detailsSourceUrl": "https://thecitybakery.jp/",
+            "additionalSources": [
+              {
+                "url": "https://prtimes.jp/main/html/rd/p/000000508.000047031.html",
+                "label": "Research evidence"
+              },
+              {
+                "url": "https://prtimes.jp/main/html/rd/p/000000508.000047031.html",
+                "label": "Research evidence"
+              }
+            ]
+          },
+          "pinSourceUrl": "https://prtimes.jp/main/html/rd/p/000000508.000047031.html#the-city-bakery"
+        }
+      },
+      "photos": [
+        {
+          "originalUrl": "https://prcdn.freetls.fastly.net/release_image/47031/513/47031-513-8b6ec70b6856b51518c4660f93b2c84b-3900x3799.jpg?width=1950&height=1350&quality=85%2C65&format=jpeg&auto=webp&fit=bounds&bg-color=fff",
+          "sourcePage": "https://prtimes.jp/main/html/rd/p/000000513.000047031.html",
+          "credit": "JR Nagoya Takashimaya / THE CITY BAKERY",
+          "note": "Opening set — bag, mug and bagel examples — retailer-supplied photograph for the exact JR Nagoya Takashimaya launch assortment; promotional product example, not completed venue or guaranteed stock.",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-22/batch117-the-city-bakery-1-22b006e7cc2ef0e4.webp",
+          "sha256": "22b006e7cc2ef0e4cd3061fd3db1c35c8243365c5944f6142f0ba740ab47f187",
+          "width": 1386,
+          "height": 1350
+        },
+        {
+          "originalUrl": "https://prcdn.freetls.fastly.net/release_image/47031/513/47031-513-eeddac20edb284186e3240f27eff93cc-2000x1333.jpg?width=1950&height=1350&quality=85%2C65&format=jpeg&auto=webp&fit=bounds&bg-color=fff",
+          "sourcePage": "https://prtimes.jp/main/html/rd/p/000000513.000047031.html",
+          "credit": "JR Nagoya Takashimaya / THE CITY BAKERY",
+          "note": "Pretzel croissant — retailer-supplied photograph for the exact JR Nagoya Takashimaya launch assortment; promotional product example, not completed venue or guaranteed stock.",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-22/batch117-the-city-bakery-2-0685717125659a53.webp",
+          "sha256": "0685717125659a532fcf56361dc5774a02c4b4da473fe400efca1c2888c78604",
+          "width": 1600,
+          "height": 1067
+        }
+      ],
+      "special": {
+        "regionSlug": "nagoya",
+        "enabled": true,
+        "profile": {
+          "pinSourceUrl": "https://prtimes.jp/main/html/rd/p/000000508.000047031.html#the-city-bakery",
+          "name": "THE CITY BAKERY — JR Nagoya Takashimaya",
+          "checkedAt": "2026-10-22",
+          "address": "1F North Block Delicious Court, JR Nagoya Takashimaya, 1-1-4 Meieki, Nakamura-ku, Nagoya",
+          "neighborhood": "Nagoya Station",
+          "websiteUrl": "https://thecitybakery.jp/",
+          "menus": [
+            {
+              "label": "November 12 opening bundle",
+              "url": "https://prtimes.jp/main/html/rd/p/000000513.000047031.html",
+              "currency": "JPY",
+              "coverage": "published",
+              "note": "Exact branch-only launch bundle; no discount percentage or component valuation asserted. All contents beyond the named bag, mug and bagel examples remain unpublished.",
+              "items": [
+                {
+                  "name": "オープン記念セット — THE CITY BAKERY",
+                  "price": 3520,
+                  "note": "Tax inclusive. Includes eco bag, mug and bagel assortment; exact bread varieties/counts and other contents unpublished. November 12 only;30 sets total; one set per person; while allocation lasts."
+                },
+                {
+                  "name": "ベーグル（セット内・種類と数量未公表）",
+                  "priceLabel": "Included in ¥3,520 opening set; no standalone price published",
+                  "note": "Only bagels explicitly named as food in set text. Do not infer the pictured cookie or coffee packets as guaranteed contents."
+                }
+              ]
+            }
+          ],
+          "specials": [
+            {
+              "kind": "other",
+              "title": "November 12 opening bundle — ¥3,520",
+              "description": "JR Nagoya Takashimaya-only opening set with eco bag, mug and bagel assortment. Limited 30 sets; one per person, while stock lasts. Other contents/varieties are unannounced.",
+              "sourceUrl": "https://prtimes.jp/main/html/rd/p/000000513.000047031.html",
+              "validFrom": "2026-11-12",
+              "validThrough": "2026-11-12",
+              "limitedTime": true,
+              "discounted": false,
+              "menuLabel": "November 12 opening bundle",
+              "schedule": "November 12 only, 10:00–20:00 JST, subject to stock.",
+              "conditions": [
+                "Tax-inclusive price per set.",
+                "30 sets total; one set per person.",
+                "No discount relative to ordinary prices claimed.",
+                "Exact bagel varieties/counts and other contents not published.",
+                "Opening day starts 10:00; normal 07:30 opening does not apply that day."
+              ],
+              "availability": {
+                "windows": [
+                  {
+                    "days": [
+                      4
+                    ],
+                    "start": "10:00",
+                    "end": "20:00"
+                  }
+                ]
+              }
+            }
+          ],
+          "photo": {
+            "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-22/batch117-the-city-bakery-1-22b006e7cc2ef0e4.webp",
+            "alt": "Opening set — bag, mug and bagel examples — retailer-supplied photograph for the exact JR Nagoya Takashimaya launch assortment; promotional product example, not completed venue or guaranteed stock.",
+            "credit": "JR Nagoya Takashimaya / THE CITY BAKERY",
+            "sourceUrl": "https://prtimes.jp/main/html/rd/p/000000513.000047031.html",
+            "originalUrl": "https://prcdn.freetls.fastly.net/release_image/47031/513/47031-513-8b6ec70b6856b51518c4660f93b2c84b-3900x3799.jpg?width=1950&height=1350&quality=85%2C65&format=jpeg&auto=webp&fit=bounds&bg-color=fff",
+            "checkedAt": "2026-10-22"
+          }
+        }
+      }
+    },
+    {
+      "existing": true,
+      "pin": {
+        "id": 15901,
+        "parentId": null,
+        "title": "PAUL — JR Nagoya Takashimaya Opens in Nagoya Station",
+        "description": "Planned November 12 opening in Takashimaya’s 1F Delicious Court, with branch-announced products and published opening-day hours.",
+        "sourceUrl": "https://prtimes.jp/main/html/rd/p/000000508.000047031.html#paul",
+        "longFormSummary": "<p>Planned November 12 opening in Takashimaya’s 1F Delicious Court, with branch-announced products and published opening-day hours.<cite data-ref=\"https://prtimes.jp/main/html/rd/p/000000508.000047031.html\"></cite></p><p>October 15, 2026 landlord announcement confirms November 12 for this named counter; the first day begins at 10:00. Future date remains subject to change.</p>",
+        "address": "1F North Block Delicious Court, JR Nagoya Takashimaya, 1-1-4 Meieki, Nakamura-ku, Nagoya",
+        "location": "SRID=4326;POINT(136.868547 35.176708)",
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "price": null,
+        "priceCurrency": null,
+        "tip": null,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "October 15, 2026 landlord announcement confirms November 12 for this named counter; the first day begins at 10:00. Future date remains subject to change.",
+        "utcStartDateTime": "2026-11-12T00:00:00.000Z",
+        "utcEndDateTime": null,
+        "allDay": true,
+        "userId": 372,
+        "utcCreatedDateTime": "2026-10-16T03:09:52.414Z",
+        "utcUpdatedDateTime": null,
+        "utcDeletedDateTime": null,
+        "companyId": null,
+        "sourceStartDateTime": null,
+        "sourceEndDateTime": null,
+        "originalStartDate": null,
+        "delayReasoning": null,
+        "episodeCount": null,
+        "episodeStatus": null,
+        "marketVolume": null,
+        "marketVolumeAt": null,
+        "allDayStated": true,
+        "productName": "PAUL — JR Nagoya Takashimaya"
+      },
+      "content": {
+        "profile": {
+          "menu": {
+            "name": "PAUL — JR Nagoya Takashimaya",
+            "menus": [
+              {
+                "url": "https://prtimes.jp/main/html/rd/p/000000508.000047031.html",
+                "note": "Original named croissant and baguette preview preserved with unpublished prices. These are not assumed to be the two named specialty pastries or the five breads in the opening bundle. October 22 specialty prices and separate bundle conditions are now sourced: https://prtimes.jp/main/html/rd/p/000000513.000047031.html",
+                "items": [
+                  {
+                    "name": "Croissant",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Baguette",
+                    "priceLabel": "Price not published"
+                  }
+                ],
+                "label": "Announced branch launch assortment",
+                "coverage": "sample",
+                "currency": "JPY"
+              },
+              {
+                "label": "October 22 branch-exclusive pastry preview",
+                "url": "https://prtimes.jp/main/html/rd/p/000000513.000047031.html",
+                "currency": "JPY",
+                "coverage": "published",
+                "note": "Tax-inclusive retailer-announced price for the exact JR Nagoya Takashimaya counter; checked October 22. Launch stock and final assortment require confirmation. No other branch menu borrowed.",
+                "items": [
+                  {
+                    "name": "パルミエ・ショコ・リュクス",
+                    "price": 994,
+                    "note": "JR Nagoya Takashimaya exclusive; chocolate-coated palmier with nuts and rusk topping. No offer expiry or per-item quota published."
+                  },
+                  {
+                    "name": "クロワッサン・ブリュレ",
+                    "price": 648,
+                    "note": "JR Nagoya Takashimaya exclusive; fresh-cream custard and caramelized finish. Not a price for every plain croissant."
+                  }
+                ]
+              }
+            ],
+            "specials": [],
+            "checkedAt": "2026-10-22",
+            "pinSourceUrl": "https://prtimes.jp/main/html/rd/p/000000508.000047031.html#paul"
+          },
+          "tile": {
+            "day": "2026-11-12",
+            "kind": "opening",
+            "name": "PAUL — JR Nagoya Takashimaya",
+            "slug": "paul-new",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-22/batch117-paul-4-baa18d4451096c74.webp",
+            "address": "1F North Block Delicious Court, JR Nagoya Takashimaya, 1-1-4 Meieki, Nakamura-ku, Nagoya",
+            "cuisine": "Bakery",
+            "checkedAt": "2026-10-22",
+            "imageNote": "Palmiers choco luxe (left) and croissant brulee (right) — retailer-supplied photograph for the exact JR Nagoya Takashimaya launch assortment; promotional product example, not completed venue or guaranteed stock.",
+            "priceRange": "",
+            "regionSlug": "nagoya",
+            "websiteUrl": "https://www.pauljapan.com/",
+            "description": "Planned November 12 opening in Takashimaya’s 1 F Delicious Court, with branch-announced products and published opening-day hours.",
+            "imageCredit": "JR Nagoya Takashimaya / PAUL",
+            "recognition": "",
+            "neighborhood": "Nagoya Station",
+            "imageSourceUrl": "https://prtimes.jp/main/html/rd/p/000000513.000047031.html",
+            "openingConfirmed": true
+          },
+          "details": {
+            "name": "PAUL — JR Nagoya Takashimaya",
+            "phone": null,
+            "checkedAt": "2026-10-22",
+            "websiteUrl": "https://www.pauljapan.com/",
+            "openingHours": [
+              {
+                "days": "Service",
+                "hours": "07:30–20:00; opening day November 12 starts 10:00"
+              },
+              {
+                "days": "Closed days",
+                "hours": "Follow the department store"
+              }
+            ],
+            "pinSourceUrl": "https://prtimes.jp/main/html/rd/p/000000508.000047031.html#paul",
+            "detailsSourceUrl": "https://www.pauljapan.com/",
+            "additionalSources": [
+              {
+                "url": "https://prtimes.jp/main/html/rd/p/000000508.000047031.html",
+                "label": "Research evidence"
+              },
+              {
+                "url": "https://prtimes.jp/main/html/rd/p/000000508.000047031.html",
+                "label": "Research evidence"
+              },
+              {
+                "label": "October 22 exact branch launch prices, bundles and stock conditions",
+                "url": "https://prtimes.jp/main/html/rd/p/000000513.000047031.html"
+              }
+            ],
+            "hoursNote": "Retailer explicitly supports 07:30–20:00 for this new counter, with November 12 first-day 10:00 opening. Department-store closures apply. Direct branch phone and completed venue gallery remain unpublished. Croissant/baguette prices stay unconfirmed; specialty pastries and paid launch bundle have separate verified prices. Tax-inclusive retailer-announced price for the exact JR Nagoya Takashimaya counter; checked October 22. Launch stock and final assortment require confirmation. No other branch menu borrowed."
+          },
+          "pinSourceUrl": "https://prtimes.jp/main/html/rd/p/000000508.000047031.html#paul"
+        },
+        "enabled": true
+      },
+      "expectedBefore": {
+        "content": {
+          "menu": {
+            "name": "PAUL — JR Nagoya Takashimaya",
+            "menus": [
+              {
+                "url": "https://prtimes.jp/main/html/rd/p/000000508.000047031.html",
+                "note": "New PAUL counter, distinct from Canal Doors. Landlord explicitly names croissants and baguettes; illustrative assortment does not establish individual additional dishes. Current operator news/menu/store list checked; exact launch prices not published. Exact full launch roster, prices, direct phone and completed branch gallery remain unpublished. Operator/landlord images are accurately labelled as illustrative, not completed venue photographs. No verified opening discount or dated promotion found.",
+                "items": [
+                  {
+                    "name": "Croissant",
+                    "priceLabel": "Price not published"
+                  },
+                  {
+                    "name": "Baguette",
+                    "priceLabel": "Price not published"
+                  }
+                ],
+                "label": "Announced branch launch assortment",
+                "coverage": "sample",
+                "currency": "JPY"
+              }
+            ],
+            "specials": [],
+            "checkedAt": "2026-10-15",
+            "pinSourceUrl": "https://prtimes.jp/main/html/rd/p/000000508.000047031.html#paul"
+          },
+          "tile": {
+            "day": "2026-11-12",
+            "kind": "opening",
+            "name": "PAUL — JR Nagoya Takashimaya",
+            "slug": "paul-new",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-15/paul-new-3-a3c4ecc8818ebccc.webp",
+            "address": "1F North Block Delicious Court, JR Nagoya Takashimaya, 1-1-4 Meieki, Nakamura-ku, Nagoya",
+            "cuisine": "Bakery",
+            "checkedAt": "2026-10-15",
+            "imageNote": "Illustrative PAUL product assortment supplied for this branch announcement; not a guaranteed full launch roster",
+            "priceRange": "",
+            "regionSlug": "nagoya",
+            "websiteUrl": "https://www.pauljapan.com/",
+            "description": "Planned November 12 opening in Takashimaya’s 1F Delicious Court, with branch-announced products and published opening-day hours.",
+            "imageCredit": "JR Nagoya Takashimaya / PAUL",
+            "recognition": "",
+            "neighborhood": "Nagoya Station",
+            "imageSourceUrl": "https://prtimes.jp/main/html/rd/p/000000508.000047031.html",
+            "openingConfirmed": true
+          },
+          "details": {
+            "name": "PAUL — JR Nagoya Takashimaya",
+            "phone": null,
+            "checkedAt": "2026-10-15",
+            "websiteUrl": "https://www.pauljapan.com/",
+            "openingHours": [
+              {
+                "days": "Service",
+                "hours": "07:30–20:00; opening day November 12 starts 10:00"
+              },
+              {
+                "days": "Closed days",
+                "hours": "Follow the department store"
+              }
+            ],
+            "pinSourceUrl": "https://prtimes.jp/main/html/rd/p/000000508.000047031.html#paul",
+            "detailsSourceUrl": "https://www.pauljapan.com/",
+            "additionalSources": [
+              {
+                "url": "https://prtimes.jp/main/html/rd/p/000000508.000047031.html",
+                "label": "Research evidence"
+              },
+              {
+                "url": "https://prtimes.jp/main/html/rd/p/000000508.000047031.html",
+                "label": "Research evidence"
+              }
+            ]
+          },
+          "pinSourceUrl": "https://prtimes.jp/main/html/rd/p/000000508.000047031.html#paul"
+        }
+      },
+      "photos": [
+        {
+          "originalUrl": "https://prcdn.freetls.fastly.net/release_image/47031/513/47031-513-c0714fe3ee7294000d1f972eae1406c7-2159x2517.jpg?width=1950&height=1350&quality=85%2C65&format=jpeg&auto=webp&fit=bounds&bg-color=fff",
+          "sourcePage": "https://prtimes.jp/main/html/rd/p/000000513.000047031.html",
+          "credit": "JR Nagoya Takashimaya / PAUL",
+          "note": "Opening set — original tote and five breads — retailer-supplied photograph for the exact JR Nagoya Takashimaya launch assortment; promotional product example, not completed venue or guaranteed stock.",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-22/batch117-paul-3-273212414ee45bc7.webp",
+          "sha256": "273212414ee45bc70869b2f580fdc8759a0435129aa11c21c33f9b4ed702f369",
+          "width": 1158,
+          "height": 1350
+        },
+        {
+          "originalUrl": "https://prcdn.freetls.fastly.net/release_image/47031/513/47031-513-7fcd81d06ff20e9df891874857a056ef-3900x2600.jpg?width=1950&height=1350&quality=85%2C65&format=jpeg&auto=webp&fit=bounds&bg-color=fff",
+          "sourcePage": "https://prtimes.jp/main/html/rd/p/000000513.000047031.html",
+          "credit": "JR Nagoya Takashimaya / PAUL",
+          "note": "Palmiers choco luxe (left) and croissant brulee (right) — retailer-supplied photograph for the exact JR Nagoya Takashimaya launch assortment; promotional product example, not completed venue or guaranteed stock.",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-22/batch117-paul-4-baa18d4451096c74.webp",
+          "sha256": "baa18d4451096c7474369fb11dc9e8f1ccaeab9870b29e81d02b6de09ca27883",
+          "width": 1600,
+          "height": 1067
+        }
+      ],
+      "special": {
+        "regionSlug": "nagoya",
+        "enabled": true,
+        "profile": {
+          "pinSourceUrl": "https://prtimes.jp/main/html/rd/p/000000508.000047031.html#paul",
+          "name": "PAUL — JR Nagoya Takashimaya",
+          "checkedAt": "2026-10-22",
+          "address": "1F North Block Delicious Court, JR Nagoya Takashimaya, 1-1-4 Meieki, Nakamura-ku, Nagoya",
+          "neighborhood": "Nagoya Station",
+          "websiteUrl": "https://www.pauljapan.com/",
+          "menus": [
+            {
+              "label": "November 12–17 opening bundle",
+              "url": "https://prtimes.jp/main/html/rd/p/000000513.000047031.html",
+              "currency": "JPY",
+              "coverage": "published",
+              "note": "Exact branch exclusive.50 sets stated without a daily qualifier; do not multiply quota by 6 days or infer a first-day-only sale.",
+              "items": [
+                {
+                  "name": "オープン記念セット — PAUL",
+                  "price": 3300,
+                  "note": "Tax inclusive. Original tote and five breads. November 12–17;50 sets total as published, not 50 per day. Limit 3 sets per person; while stock lasts. Named bread varieties not published."
+                },
+                {
+                  "name": "パン5種（セット内・種類未公表）",
+                  "priceLabel": "Included in ¥3,300 opening set; no standalone price published",
+                  "note": "Five kinds explicitly stated, exact names unpublished. Do not assume ordinary croissant/baguette or pictured assortment guarantees the final five breads."
+                }
+              ]
+            }
+          ],
+          "specials": [
+            {
+              "kind": "other",
+              "title": "November 12–17 opening bundle — ¥3,300",
+              "description": "JR Nagoya Takashimaya-only original tote and five-bread set.50 sets stated for campaign, not daily; limit 3 sets per person. While stock lasts.",
+              "sourceUrl": "https://prtimes.jp/main/html/rd/p/000000513.000047031.html",
+              "validFrom": "2026-11-12",
+              "validThrough": "2026-11-17",
+              "limitedTime": true,
+              "discounted": false,
+              "menuLabel": "November 12–17 opening bundle",
+              "schedule": "November 12 10:00–20:00; November 13–17 07:30–20:00 JST; subject to stock.",
+              "conditions": [
+                "Tax-inclusive price per set.",
+                "50 sets total as published; no daily replenishment inferred.",
+                "Limit 3 sets per person.",
+                "Exact five breads unpublished.",
+                "Opening day 10:00; subsequent regular opening 07:30."
+              ],
+              "availability": {
+                "windows": [
+                  {
+                    "days": [
+                      4
+                    ],
+                    "start": "10:00",
+                    "end": "20:00"
+                  },
+                  {
+                    "days": [
+                      5,
+                      6,
+                      0,
+                      1,
+                      2
+                    ],
+                    "start": "07:30",
+                    "end": "20:00"
+                  }
+                ]
+              }
+            }
+          ],
+          "photo": {
+            "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-22/batch117-paul-3-273212414ee45bc7.webp",
+            "alt": "Opening set — original tote and five breads — retailer-supplied photograph for the exact JR Nagoya Takashimaya launch assortment; promotional product example, not completed venue or guaranteed stock.",
+            "credit": "JR Nagoya Takashimaya / PAUL",
+            "sourceUrl": "https://prtimes.jp/main/html/rd/p/000000513.000047031.html",
+            "originalUrl": "https://prcdn.freetls.fastly.net/release_image/47031/513/47031-513-c0714fe3ee7294000d1f972eae1406c7-2159x2517.jpg?width=1950&height=1350&quality=85%2C65&format=jpeg&auto=webp&fit=bounds&bg-color=fff",
+            "checkedAt": "2026-10-22"
+          }
+        }
+      }
+    },
+    {
+      "existing": true,
+      "pin": {
+        "id": 15902,
+        "parentId": null,
+        "title": "le suprême — JR Nagoya Takashimaya renewal Opens in Nagoya Station",
+        "description": "Planned November 12 renewal in Takashimaya’s 1F Delicious Court, with branch-announced products and published opening-day hours.",
+        "sourceUrl": "https://prtimes.jp/main/html/rd/p/000000508.000047031.html#le-supreme",
+        "longFormSummary": "<p>Planned November 12 renewal in Takashimaya’s 1F Delicious Court, with branch-announced products and published opening-day hours.<cite data-ref=\"https://prtimes.jp/main/html/rd/p/000000508.000047031.html\"></cite></p><p>October 15, 2026 landlord announcement confirms November 12 for this named counter; the first day begins at 10:00. Future date remains subject to change.</p>",
+        "address": "1F North Block Delicious Court, JR Nagoya Takashimaya, 1-1-4 Meieki, Nakamura-ku, Nagoya",
+        "location": "SRID=4326;POINT(136.868547 35.176708)",
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "price": null,
+        "priceCurrency": null,
+        "tip": null,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "October 15, 2026 landlord announcement confirms November 12 for this named counter; the first day begins at 10:00. Future date remains subject to change.",
+        "utcStartDateTime": "2026-11-12T00:00:00.000Z",
+        "utcEndDateTime": null,
+        "allDay": true,
+        "userId": 372,
+        "utcCreatedDateTime": "2026-10-16T03:11:05.076Z",
+        "utcUpdatedDateTime": null,
+        "utcDeletedDateTime": null,
+        "companyId": null,
+        "sourceStartDateTime": null,
+        "sourceEndDateTime": null,
+        "originalStartDate": null,
+        "delayReasoning": null,
+        "episodeCount": null,
+        "episodeStatus": null,
+        "marketVolume": null,
+        "marketVolumeAt": null,
+        "allDayStated": true,
+        "productName": "le suprême — JR Nagoya Takashimaya renewal"
+      },
+      "content": {
+        "profile": {
+          "menu": {
+            "name": "le suprême — JR Nagoya Takashimaya renewal",
+            "menus": [
+              {
+                "url": "https://prtimes.jp/main/html/rd/p/000000508.000047031.html",
+                "note": "Existing Anpan name preserved; retailer October 22 now confirms ¥281 inclusive. Original B 1-to 1 F renewal context retained. New product and priced one-day renewal bundle documented separately; no full final assortment or original historic opening inferred. Source: https://prtimes.jp/main/html/rd/p/000000513.000047031.html",
+                "items": [
+                  {
+                    "name": "Anpan",
+                    "price": 281,
+                    "note": "Tax-inclusive retailer-announced price for the exact JR Nagoya Takashimaya counter; checked October 22. Launch stock and final assortment require confirmation. No other branch menu borrowed. Japanese published name: あんぱん. Source: https://prtimes.jp/main/html/rd/p/000000513.000047031.html"
+                  }
+                ],
+                "label": "Announced branch launch assortment",
+                "coverage": "sample",
+                "currency": "JPY"
+              },
+              {
+                "label": "October 22 relocation/renewal assortment preview",
+                "url": "https://prtimes.jp/main/html/rd/p/000000513.000047031.html",
+                "currency": "JPY",
+                "coverage": "published",
+                "note": "Tax-inclusive retailer-announced price for the exact JR Nagoya Takashimaya counter; checked October 22. Launch stock and final assortment require confirmation. No other branch menu borrowed. This is the existing counter relocating from B 1; do not infer an original brand or branch founding date from the zone reopening. No new Pin or Specials membership created in this pass.",
+                "items": [
+                  {
+                    "name": "ほうじ茶マロン",
+                    "price": 508,
+                    "note": "One item; hojicha-flavored bean paste and chestnut croissant, tax inclusive. No final availability duration published."
+                  },
+                  {
+                    "name": "リニューアルオープン記念セット — le suprême",
+                    "price": 3240,
+                    "note": "Tax inclusive, six breads and a knife. November 12 only;100 sets total; limit 2 per person, while stock lasts. Exact bread names unpublished. Documented priced launch menu; not claimed to be discounted against a component total."
+                  }
+                ]
+              }
+            ],
+            "specials": [],
+            "checkedAt": "2026-10-22",
+            "pinSourceUrl": "https://prtimes.jp/main/html/rd/p/000000508.000047031.html#le-supreme"
+          },
+          "tile": {
+            "day": "2026-11-12",
+            "kind": "opening",
+            "name": "le suprême — JR Nagoya Takashimaya renewal",
+            "slug": "supreme-new",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-22/batch117-le-supreme-7-14ff0bc2a233faa4.webp",
+            "address": "1F North Block Delicious Court, JR Nagoya Takashimaya, 1-1-4 Meieki, Nakamura-ku, Nagoya",
+            "cuisine": "Bakery",
+            "checkedAt": "2026-10-22",
+            "imageNote": "Anpan — retailer-supplied photograph for the exact JR Nagoya Takashimaya launch assortment; promotional product example, not completed venue or guaranteed stock.",
+            "priceRange": "",
+            "regionSlug": "nagoya",
+            "websiteUrl": "https://www.jr-takashimaya.co.jp/",
+            "description": "Planned November 12 renewal in Takashimaya’s 1 F Delicious Court, with branch-announced products and published opening-day hours.",
+            "imageCredit": "JR Nagoya Takashimaya / le supreme",
+            "recognition": "",
+            "neighborhood": "Nagoya Station",
+            "imageSourceUrl": "https://prtimes.jp/main/html/rd/p/000000513.000047031.html",
+            "openingConfirmed": true
+          },
+          "details": {
+            "name": "le suprême — JR Nagoya Takashimaya renewal",
+            "phone": null,
+            "checkedAt": "2026-10-22",
+            "websiteUrl": "https://www.jr-takashimaya.co.jp/",
+            "openingHours": [
+              {
+                "days": "Service",
+                "hours": "10:00–20:00, including opening day November 12"
+              },
+              {
+                "days": "Closed days",
+                "hours": "Follow the department store"
+              }
+            ],
+            "pinSourceUrl": "https://prtimes.jp/main/html/rd/p/000000508.000047031.html#le-supreme",
+            "detailsSourceUrl": "https://www.jr-takashimaya.co.jp/",
+            "additionalSources": [
+              {
+                "url": "https://prtimes.jp/main/html/rd/p/000000508.000047031.html",
+                "label": "Research evidence"
+              },
+              {
+                "url": "https://prtimes.jp/main/html/rd/p/000000508.000047031.html",
+                "label": "Research evidence"
+              },
+              {
+                "label": "October 22 exact branch launch prices, bundles and stock conditions",
+                "url": "https://prtimes.jp/main/html/rd/p/000000513.000047031.html"
+              }
+            ],
+            "hoursNote": "Exact retailer notice specifies 10:00–20:00 for le suprême, including November 12; do not apply other counters’07:30 opening. This is a B 1-to 1 Frelocation/renewal; original Pin and author preserved. Exact historic first-service chronology and completed new-counter photographs remain follow-ups. New anpan/hojicha prices and the one-day paid renewal set are sourced from October 22 notice."
+          },
+          "pinSourceUrl": "https://prtimes.jp/main/html/rd/p/000000508.000047031.html#le-supreme"
+        },
+        "enabled": true
+      },
+      "expectedBefore": {
+        "content": {
+          "menu": {
+            "name": "le suprême — JR Nagoya Takashimaya renewal",
+            "menus": [
+              {
+                "url": "https://prtimes.jp/main/html/rd/p/000000508.000047031.html",
+                "note": "Renewal/relocation of the existing Takashimaya bakery, not a new brand. Current landlord lists the old B1 counter; November announcement specifies new 1F Delicious Court. Anpan is explicitly named; old main-store prices and product list not borrowed. No standalone operator site located after research. Exact full launch roster, prices, direct phone and completed branch gallery remain unpublished. Operator/landlord images are accurately labelled as illustrative, not completed venue photographs. No verified opening discount or dated promotion found.",
+                "items": [
+                  {
+                    "name": "Anpan",
+                    "priceLabel": "Price not published"
+                  }
+                ],
+                "label": "Announced branch launch assortment",
+                "coverage": "sample",
+                "currency": "JPY"
+              }
+            ],
+            "specials": [],
+            "checkedAt": "2026-10-15",
+            "pinSourceUrl": "https://prtimes.jp/main/html/rd/p/000000508.000047031.html#le-supreme"
+          },
+          "tile": {
+            "day": "2026-11-12",
+            "kind": "opening",
+            "name": "le suprême — JR Nagoya Takashimaya renewal",
+            "slug": "supreme-new",
+            "image": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-15/supreme-new-4-883b4e9d71fc2826.webp",
+            "address": "1F North Block Delicious Court, JR Nagoya Takashimaya, 1-1-4 Meieki, Nakamura-ku, Nagoya",
+            "cuisine": "Bakery",
+            "checkedAt": "2026-10-15",
+            "imageNote": "Illustrative planned le supreme counter image supplied for this renewal; completed venue gallery not yet published",
+            "priceRange": "",
+            "regionSlug": "nagoya",
+            "websiteUrl": "https://www.jr-takashimaya.co.jp/",
+            "description": "Planned November 12 renewal in Takashimaya’s 1F Delicious Court, with branch-announced products and published opening-day hours.",
+            "imageCredit": "JR Nagoya Takashimaya / le supreme",
+            "recognition": "",
+            "neighborhood": "Nagoya Station",
+            "imageSourceUrl": "https://prtimes.jp/main/html/rd/p/000000508.000047031.html",
+            "openingConfirmed": true
+          },
+          "details": {
+            "name": "le suprême — JR Nagoya Takashimaya renewal",
+            "phone": null,
+            "checkedAt": "2026-10-15",
+            "websiteUrl": "https://www.jr-takashimaya.co.jp/",
+            "openingHours": [
+              {
+                "days": "Service",
+                "hours": "10:00–20:00, including opening day November 12"
+              },
+              {
+                "days": "Closed days",
+                "hours": "Follow the department store"
+              }
+            ],
+            "pinSourceUrl": "https://prtimes.jp/main/html/rd/p/000000508.000047031.html#le-supreme",
+            "detailsSourceUrl": "https://www.jr-takashimaya.co.jp/",
+            "additionalSources": [
+              {
+                "url": "https://prtimes.jp/main/html/rd/p/000000508.000047031.html",
+                "label": "Research evidence"
+              },
+              {
+                "url": "https://prtimes.jp/main/html/rd/p/000000508.000047031.html",
+                "label": "Research evidence"
+              }
+            ]
+          },
+          "pinSourceUrl": "https://prtimes.jp/main/html/rd/p/000000508.000047031.html#le-supreme"
+        }
+      },
+      "photos": [
+        {
+          "originalUrl": "https://prcdn.freetls.fastly.net/release_image/47031/513/47031-513-2e9dcf94ab4c94020dad6aeff84b0986-3900x3421.jpg?width=1950&height=1350&quality=85%2C65&format=jpeg&auto=webp&fit=bounds&bg-color=fff",
+          "sourcePage": "https://prtimes.jp/main/html/rd/p/000000513.000047031.html",
+          "credit": "JR Nagoya Takashimaya / le supreme",
+          "note": "Renewal set — six breads and knife — retailer-supplied photograph for the exact JR Nagoya Takashimaya launch assortment; promotional product example, not completed venue or guaranteed stock.",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-22/batch117-le-supreme-5-6191a755644c2bc2.webp",
+          "sha256": "6191a755644c2bc2339ff10975f951a480e08b52f56dca11a56f2ac1753b32e8",
+          "width": 1539,
+          "height": 1350
+        },
+        {
+          "originalUrl": "https://prcdn.freetls.fastly.net/release_image/47031/513/47031-513-c15c939561bf959373f922ff2ec9fecc-1280x720.jpg?width=1950&height=1350&quality=85%2C75&format=jpeg&auto=webp&fit=bounds&bg-color=fff",
+          "sourcePage": "https://prtimes.jp/main/html/rd/p/000000513.000047031.html",
+          "credit": "JR Nagoya Takashimaya / le supreme",
+          "note": "Hojicha marron — retailer-supplied photograph for the exact JR Nagoya Takashimaya launch assortment; promotional product example, not completed venue or guaranteed stock.",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-22/batch117-le-supreme-6-20346899f117e0cf.webp",
+          "sha256": "20346899f117e0cf96be3015b3d64536016ff4242e6716fee58e1ddb7fa566d8",
+          "width": 1280,
+          "height": 720
+        },
+        {
+          "originalUrl": "https://prcdn.freetls.fastly.net/release_image/47031/513/47031-513-d6215b54b9f692ecc47976b0e436a966-3900x3900.jpg?width=1950&height=1350&quality=85%2C65&format=jpeg&auto=webp&fit=bounds&bg-color=fff",
+          "sourcePage": "https://prtimes.jp/main/html/rd/p/000000513.000047031.html",
+          "credit": "JR Nagoya Takashimaya / le supreme",
+          "note": "Anpan — retailer-supplied photograph for the exact JR Nagoya Takashimaya launch assortment; promotional product example, not completed venue or guaranteed stock.",
+          "url": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-22/batch117-le-supreme-7-14ff0bc2a233faa4.webp",
+          "sha256": "14ff0bc2a233faa46c5f7e5ddca1b566cbec85478ce4cfb581b123428dac4c4f",
+          "width": 1350,
+          "height": 1350
+        }
+      ]
+    }
+  ],
+  "counts": {
+    "newPins": 0,
+    "existingProfiles": 3,
+    "ordinaryMenuItems": 9,
+    "newOrdinaryMenuRows": 4,
+    "pricesResolved": 2,
+    "offers": 2,
+    "offerMenuItems": 4,
+    "photos": 7,
+    "newMemberships": 2,
+    "shortfallReduction": 0,
+    "verifiedMemberships": 643,
+    "remainingShortfall": 117
+  },
+  "researchNotes": [
+    "Three existing Nagoya pins enriched from retailer October22notice, distinct from earlier October15source. Original authors, pin text/dates and existing menus/photos preserved. No new restaurant or standalone consumable-product Pin/PinDining created.",
+    "Five existing ordinary rows retained; pretzel croissant now¥454and anpan¥281. Four new ordinary rows: PAULtwo specialty pastries, le suprême hojicha marron and one-day renewal set. Four offer-menu rows describe two paid bundles and their explicitly unnamed food components. No pictured variety inferred as final entitlement.",
+    "Two Specials profiles are dated paid launch menus with limitedTime true and discounted false. No fabricated savings, percentage or gift valuation. CITY30setsoneDay/oneperperson; PAUL50setswithoutdaily qualifier/threeperperson throughNov17. All prices tax inclusive.",
+    "Schedule uses exact opening-day10:00and normal07:30hours for CITY/PAUL. PAUL’s Thursday window only appliesNov12inside its validity; Fri–Tueopens07:30. le suprêmealways10:00; its renewalset retained as sourced ordinary dated preview, no additional Specials membership pending historic chronology follow-up.",
+    "Seven actual retailer product photographs downloaded via plaincurl, decoded and visually reviewed; names matched adjacent source captions. All are labelled exact-counter promotional examples, not completed rooms/guaranteed stock. Existing gallery preserved; representative ordinary cards and bundle cards use relevant photos.",
+    "Checked operator directories, retailerfloorpage, linked menus and source galleries. CITYoperator agreesexactTakashimayahours; nevertransfer toLACHIC. PAULstorepagefound; retailfloorreader timedout. Fullfinal launchmenus, coffeebaseprices, breadvarieties, actualbranchgalleriesandphonesremainunpublished.",
+    "Other-city research: SapporoRINownmenu/identityandSapporo-enemptygalleryheld; stale2025TeineYakisobanotrevived. KyotoTHISISMATCHAofficialearlyDecemberlaunch/teaserandInstagramchecked; namedmenu/priceandfinishedbranchgalleryunpublished, no newpinthispass. TokyoTottsuanAsakusabashisourcesconflictNov6/10/13, withheld."
+  ],
+  "held": [
+    {
+      "name": "THIS IS MATCHA — Kyoto Yodobashi",
+      "sourceUrl": "https://www.nanasgreentea.com/blogs/news/tim_20261015",
+      "reason": "Official earlyDecemberfirstbranch atKyotoYodobashi1F; teaserandInstagramchecked, no verified namedlaunchmenu/prices or completedbranchphoto. Do notcopyparentnanasmenu. Tabelog listingholdisnotclosureevidenceagainstfutureprimaryannouncement."
+    },
+    {
+      "name": "Tottsuan — Asakusabashi",
+      "sourceUrl": "https://tokyo-gurume.com/asakusabashi-nikuju-tottsuan-open/",
+      "reason": "LocalNov6, TabelogNov10andemployerNov13conflict; originalservicechronologyunresolved. ManagedGurunavi textcontainscopiedIkebukurocategory; exactbranchdate/roommenunotassumed."
+    },
+    {
+      "name": "RIN Sapporo / Sapporo-en",
+      "sourceUrl": "https://tabelog.com/hokkaido/A0101/A010103/1086269/",
+      "reason": "RIN formerQpremisesidentity/ownlaunchmenu/galleryunresolved; Sapporo-enmanageddateNov19andhoursverifiedbutnomenu/gallery. NoToky o/Kyotomenuborrowing."
+    },
+    {
+      "name": "le suprême original branch chronology and final launch stock",
+      "sourceUrl": "https://prtimes.jp/main/html/rd/p/000000513.000047031.html",
+      "reason": "ExistingB1counterrelocates/renews1FNov12; originalPin/datepreservedthispass. Needexacthistoricfirstserviceandcompletednewcountergallery.100-setoneDayrenewalofferrecordedwithmenuconditionsbutnotnewSpecialsmembershipthispass."
+    }
+  ],
+  "readerEvidence": [
+    {
+      "url": "https://thecitybakery.jp/shop",
+      "htmlSha256": "ae8c77721f70175b8ea0c0efe375ff63df00bf40079d21d4ea11798690539baa"
+    },
+    {
+      "url": "https://www.instagram.com/thisismatcha_jp/",
+      "htmlSha256": "0533ccfe7d778ef84be3200da9a5ea5281298989ea4eb5441326736f0fbe020a"
+    },
+    {
+      "url": "https://www.nanasgreentea.com/blogs/news/tim_20261015",
+      "htmlSha256": "b8eb35a56f0943ec49857c627523fbf6a1eb3c33eb080ae255aaee95a7f2afbf"
+    },
+    {
+      "url": "https://tabelog.com/en/kyoto/A2601/A260101/26045957/",
+      "htmlSha256": "4f844da4a479e80952d1bf76887cd7d269b5346f75406d1a26ba6b8f28649ec1"
+    },
+    {
+      "url": "https://www.nanasgreentea.com/pages/thisismatcha",
+      "htmlSha256": "0c59bb01524420589dbc9bb9610d2e0397c6b4151df7775b745d0622a15b5617"
+    },
+    {
+      "url": "https://www.pauljapan.com/",
+      "htmlSha256": "d42bed00959fa3ad556eb592513a5b6421e711a792f63a75939b8f473e8b297a"
+    },
+    {
+      "url": "https://www.pauljapan.com/shop/",
+      "htmlSha256": "289a8ae859f8d865814e8fd049c9925b68062753ce11c2fdf58078ce762342ea"
+    },
+    {
+      "url": "https://chamonix-cakes.com/kaiten-ab0uasvia8gicm2bno/",
+      "htmlSha256": "22983e7408a018e9fc74e1a071f5d939c4b27627c3ebfd9e6d35b81c77ae531b"
+    },
+    {
+      "url": "https://mogtrip.jp/newopen-2026/",
+      "htmlSha256": "3e340327333bb3539a7152a6b12403d4b434cdbcdc75d47eacdb0ce7b68d517e"
+    },
+    {
+      "url": "https://tabelog.com/en/hokkaido/A0101/A010103/1086269/",
+      "htmlSha256": "abeec74acda09885771087c5b6e4b6c97cdff0e86d761065b376bb965cc6e326"
+    },
+    {
+      "url": "https://prtimes.jp/main/html/rd/p/000000513.000047031.html",
+      "htmlSha256": "d2bc686c3fca0b92bad8b2f9aab0c0d20cf3a9728ecc5fbfe58f2002cff4a711"
+    },
+    {
+      "url": "https://prtimes.jp/main/html/rd/p/000000508.000047031.html",
+      "htmlSha256": "1bc90e2900b5f9f07518626f22dc2822979ec5ba3ccd41a6c4af4e5e47d6724d"
+    },
+    {
+      "url": "https://tokyo-gurume.com/asakusabashi-nikuju-tottsuan-open/",
+      "htmlSha256": "c958508ea8b0ff0d78ff5a79583821f15d3843275b3b9f6f4009cd02f276bf39"
+    },
+    {
+      "url": "https://tabelog.com/en/tokyo/A1311/A131103/13327470/",
+      "htmlSha256": "8e2be5e18d614bf7cc60a48f0db70a56dc28702b94efe94d4075de592ea23fe6"
+    }
+  ],
+  "publicationStatus": {
+    "local": "saved and publicly verified",
+    "production": "saved and publicly verified",
+    "publicHttpsVerified": true
+  },
+  "verification": {
+    "local": {
+      "profiles": [
+        {
+          "pinId": 15900,
+          "sourceUrl": "https://prtimes.jp/main/html/rd/p/000000508.000047031.html#the-city-bakery",
+          "name": "THE CITY BAKERY — JR Nagoya Takashimaya",
+          "contentId": 1580,
+          "contentRevision": 2,
+          "verifiedGalleryLinks": 2,
+          "publicPinStatus": 200,
+          "apiBase": "http://localhost:3000",
+          "publicBase": "http://localhost:3000"
+        },
+        {
+          "pinId": 15901,
+          "sourceUrl": "https://prtimes.jp/main/html/rd/p/000000508.000047031.html#paul",
+          "name": "PAUL — JR Nagoya Takashimaya",
+          "contentId": 1581,
+          "contentRevision": 2,
+          "verifiedGalleryLinks": 2,
+          "publicPinStatus": 200,
+          "apiBase": "http://localhost:3000",
+          "publicBase": "http://localhost:3000"
+        },
+        {
+          "pinId": 15902,
+          "sourceUrl": "https://prtimes.jp/main/html/rd/p/000000508.000047031.html#le-supreme",
+          "name": "le suprême — JR Nagoya Takashimaya renewal",
+          "contentId": 1582,
+          "contentRevision": 3,
+          "verifiedGalleryLinks": 3,
+          "publicPinStatus": 200,
+          "apiBase": "http://localhost:3000",
+          "publicBase": "http://localhost:3000"
+        }
+      ],
+      "guides": [
+        {
+          "pinId": 15900,
+          "region": "nagoya",
+          "view": "upcoming",
+          "neighborhood": "Nagoya Station",
+          "nativeTitleAndImage": true,
+          "hrefs": [
+            "/pin/15900/the-city-bakery-jr-nagoya-takashimaya-opens-in-nagoya-station"
+          ],
+          "browserFiltered": false,
+          "publicBase": "http://localhost:3000",
+          "guideStatus": 200,
+          "offers": []
+        },
+        {
+          "pinId": 15900,
+          "region": "nagoya",
+          "view": "discounts",
+          "neighborhood": "Nagoya Station",
+          "nativeTitleAndImage": true,
+          "hrefs": [
+            "/pin/15900/the-city-bakery-jr-nagoya-takashimaya-opens-in-nagoya-station"
+          ],
+          "browserFiltered": false,
+          "publicBase": "http://localhost:3000",
+          "guideStatus": 200,
+          "offers": [
+            {
+              "id": "https://prtimes.jp/main/html/rd/p/000000508.000047031.html#the-city-bakery#0",
+              "name": "THE CITY BAKERY — JR Nagoya Takashimaya",
+              "neighborhood": "Nagoya Station",
+              "address": "1F North Block Delicious Court, JR Nagoya Takashimaya, 1-1-4 Meieki, Nakamura-ku, Nagoya",
+              "restaurantHref": "/pin/15900/the-city-bakery-jr-nagoya-takashimaya-opens-in-nagoya-station",
+              "checkedAt": "2026-10-22",
+              "special": {
+                "kind": "other",
+                "title": "November 12 opening bundle — ¥3,520",
+                "schedule": "November 12 only, 10:00–20:00 JST, subject to stock.",
+                "menuLabel": "November 12 opening bundle",
+                "sourceUrl": "https://prtimes.jp/main/html/rd/p/000000513.000047031.html",
+                "validFrom": "2026-11-12",
+                "conditions": [
+                  "Tax-inclusive price per set.",
+                  "30 sets total; one set per person.",
+                  "No discount relative to ordinary prices claimed.",
+                  "Exact bagel varieties/counts and other contents not published.",
+                  "Opening day starts 10:00; normal 07:30 opening does not apply that day."
+                ],
+                "discounted": false,
+                "description": "JR Nagoya Takashimaya-only opening set with eco bag, mug and bagel assortment. Limited 30 sets; one per person, while stock lasts. Other contents/varieties are unannounced.",
+                "limitedTime": true,
+                "availability": {
+                  "windows": [
+                    {
+                      "end": "20:00",
+                      "days": [
+                        4
+                      ],
+                      "start": "10:00"
+                    }
+                  ]
+                },
+                "validThrough": "2026-11-12"
+              },
+              "venueKey": "prtimes.jp/main/html/rd/p/000000508.000047031.html#the-city-bakery",
+              "photo": {
+                "alt": "Opening set — bag, mug and bagel examples — retailer-supplied photograph for the exact JR Nagoya Takashimaya launch assortment; promotional product example, not completed venue or guaranteed stock.",
+                "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-22/batch117-the-city-bakery-1-22b006e7cc2ef0e4.webp",
+                "credit": "JR Nagoya Takashimaya / THE CITY BAKERY",
+                "checkedAt": "2026-10-22",
+                "sourceUrl": "https://prtimes.jp/main/html/rd/p/000000513.000047031.html",
+                "originalUrl": "https://prcdn.freetls.fastly.net/release_image/47031/513/47031-513-8b6ec70b6856b51518c4660f93b2c84b-3900x3799.jpg?width=1950&height=1350&quality=85%2C65&format=jpeg&auto=webp&fit=bounds&bg-color=fff"
+              },
+              "menu": {
+                "url": "https://prtimes.jp/main/html/rd/p/000000513.000047031.html",
+                "note": "Exact branch-only launch bundle; no discount percentage or component valuation asserted. All contents beyond the named bag, mug and bagel examples remain unpublished.",
+                "items": [
+                  {
+                    "name": "オープン記念セット — THE CITY BAKERY",
+                    "note": "Tax inclusive. Includes eco bag, mug and bagel assortment; exact bread varieties/counts and other contents unpublished. November 12 only;30 sets total; one set per person; while allocation lasts.",
+                    "price": 3520
+                  },
+                  {
+                    "name": "ベーグル（セット内・種類と数量未公表）",
+                    "note": "Only bagels explicitly named as food in set text. Do not infer the pictured cookie or coffee packets as guaranteed contents.",
+                    "priceLabel": "Included in ¥3,520 opening set; no standalone price published"
+                  }
+                ],
+                "label": "November 12 opening bundle",
+                "coverage": "published",
+                "currency": "JPY"
+              },
+              "startsAt": "2026-11-12T01:00:00.000Z",
+              "end": "20:00"
+            }
+          ]
+        },
+        {
+          "pinId": 15901,
+          "region": "nagoya",
+          "view": "upcoming",
+          "neighborhood": "Nagoya Station",
+          "nativeTitleAndImage": true,
+          "hrefs": [
+            "/pin/15901/paul-jr-nagoya-takashimaya-opens-in-nagoya-station"
+          ],
+          "browserFiltered": false,
+          "publicBase": "http://localhost:3000",
+          "guideStatus": 200,
+          "offers": []
+        },
+        {
+          "pinId": 15901,
+          "region": "nagoya",
+          "view": "discounts",
+          "neighborhood": "Nagoya Station",
+          "nativeTitleAndImage": true,
+          "hrefs": [
+            "/pin/15901/paul-jr-nagoya-takashimaya-opens-in-nagoya-station"
+          ],
+          "browserFiltered": false,
+          "publicBase": "http://localhost:3000",
+          "guideStatus": 200,
+          "offers": [
+            {
+              "id": "https://prtimes.jp/main/html/rd/p/000000508.000047031.html#paul#0",
+              "name": "PAUL — JR Nagoya Takashimaya",
+              "neighborhood": "Nagoya Station",
+              "address": "1F North Block Delicious Court, JR Nagoya Takashimaya, 1-1-4 Meieki, Nakamura-ku, Nagoya",
+              "restaurantHref": "/pin/15901/paul-jr-nagoya-takashimaya-opens-in-nagoya-station",
+              "checkedAt": "2026-10-22",
+              "special": {
+                "kind": "other",
+                "title": "November 12–17 opening bundle — ¥3,300",
+                "schedule": "November 12 10:00–20:00; November 13–17 07:30–20:00 JST; subject to stock.",
+                "menuLabel": "November 12–17 opening bundle",
+                "sourceUrl": "https://prtimes.jp/main/html/rd/p/000000513.000047031.html",
+                "validFrom": "2026-11-12",
+                "conditions": [
+                  "Tax-inclusive price per set.",
+                  "50 sets total as published; no daily replenishment inferred.",
+                  "Limit 3 sets per person.",
+                  "Exact five breads unpublished.",
+                  "Opening day 10:00; subsequent regular opening 07:30."
+                ],
+                "discounted": false,
+                "description": "JR Nagoya Takashimaya-only original tote and five-bread set.50 sets stated for campaign, not daily; limit 3 sets per person. While stock lasts.",
+                "limitedTime": true,
+                "availability": {
+                  "windows": [
+                    {
+                      "end": "20:00",
+                      "days": [
+                        4
+                      ],
+                      "start": "10:00"
+                    },
+                    {
+                      "end": "20:00",
+                      "days": [
+                        5,
+                        6,
+                        0,
+                        1,
+                        2
+                      ],
+                      "start": "07:30"
+                    }
+                  ]
+                },
+                "validThrough": "2026-11-17"
+              },
+              "venueKey": "prtimes.jp/main/html/rd/p/000000508.000047031.html#paul",
+              "photo": {
+                "alt": "Opening set — original tote and five breads — retailer-supplied photograph for the exact JR Nagoya Takashimaya launch assortment; promotional product example, not completed venue or guaranteed stock.",
+                "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-22/batch117-paul-3-273212414ee45bc7.webp",
+                "credit": "JR Nagoya Takashimaya / PAUL",
+                "checkedAt": "2026-10-22",
+                "sourceUrl": "https://prtimes.jp/main/html/rd/p/000000513.000047031.html",
+                "originalUrl": "https://prcdn.freetls.fastly.net/release_image/47031/513/47031-513-c0714fe3ee7294000d1f972eae1406c7-2159x2517.jpg?width=1950&height=1350&quality=85%2C65&format=jpeg&auto=webp&fit=bounds&bg-color=fff"
+              },
+              "menu": {
+                "url": "https://prtimes.jp/main/html/rd/p/000000513.000047031.html",
+                "note": "Exact branch exclusive.50 sets stated without a daily qualifier; do not multiply quota by 6 days or infer a first-day-only sale.",
+                "items": [
+                  {
+                    "name": "オープン記念セット — PAUL",
+                    "note": "Tax inclusive. Original tote and five breads. November 12–17;50 sets total as published, not 50 per day. Limit 3 sets per person; while stock lasts. Named bread varieties not published.",
+                    "price": 3300
+                  },
+                  {
+                    "name": "パン5種（セット内・種類未公表）",
+                    "note": "Five kinds explicitly stated, exact names unpublished. Do not assume ordinary croissant/baguette or pictured assortment guarantees the final five breads.",
+                    "priceLabel": "Included in ¥3,300 opening set; no standalone price published"
+                  }
+                ],
+                "label": "November 12–17 opening bundle",
+                "coverage": "published",
+                "currency": "JPY"
+              },
+              "startsAt": "2026-11-12T01:00:00.000Z",
+              "end": "20:00"
+            }
+          ]
+        },
+        {
+          "pinId": 15902,
+          "region": "nagoya",
+          "view": "upcoming",
+          "neighborhood": "Nagoya Station",
+          "nativeTitleAndImage": true,
+          "hrefs": [
+            "/pin/15902/le-supreme-jr-nagoya-takashimaya-renewal-opens-in-nagoya-station"
+          ],
+          "browserFiltered": false,
+          "publicBase": "http://localhost:3000",
+          "guideStatus": 200,
+          "offers": []
+        }
+      ]
+    },
+    "production": {
+      "profiles": [
+        {
+          "pinId": 15900,
+          "sourceUrl": "https://prtimes.jp/main/html/rd/p/000000508.000047031.html#the-city-bakery",
+          "name": "THE CITY BAKERY — JR Nagoya Takashimaya",
+          "contentId": 1580,
+          "contentRevision": 2,
+          "verifiedGalleryLinks": 2,
+          "publicPinStatus": 200,
+          "apiBase": "https://www.chronopin.com",
+          "publicBase": "https://www.chronopin.com"
+        },
+        {
+          "pinId": 15901,
+          "sourceUrl": "https://prtimes.jp/main/html/rd/p/000000508.000047031.html#paul",
+          "name": "PAUL — JR Nagoya Takashimaya",
+          "contentId": 1581,
+          "contentRevision": 2,
+          "verifiedGalleryLinks": 2,
+          "publicPinStatus": 200,
+          "apiBase": "https://www.chronopin.com",
+          "publicBase": "https://www.chronopin.com"
+        },
+        {
+          "pinId": 15902,
+          "sourceUrl": "https://prtimes.jp/main/html/rd/p/000000508.000047031.html#le-supreme",
+          "name": "le suprême — JR Nagoya Takashimaya renewal",
+          "contentId": 1582,
+          "contentRevision": 3,
+          "verifiedGalleryLinks": 3,
+          "publicPinStatus": 200,
+          "apiBase": "https://www.chronopin.com",
+          "publicBase": "https://www.chronopin.com"
+        }
+      ],
+      "guides": [
+        {
+          "pinId": 15900,
+          "region": "nagoya",
+          "view": "upcoming",
+          "neighborhood": "Nagoya Station",
+          "nativeTitleAndImage": true,
+          "hrefs": [
+            "/pin/15900/the-city-bakery-jr-nagoya-takashimaya-opens-in-nagoya-station"
+          ],
+          "browserFiltered": false,
+          "publicBase": "https://www.chronopin.com",
+          "guideStatus": 200,
+          "offers": []
+        },
+        {
+          "pinId": 15900,
+          "region": "nagoya",
+          "view": "discounts",
+          "neighborhood": "Nagoya Station",
+          "nativeTitleAndImage": true,
+          "hrefs": [
+            "/pin/15900/the-city-bakery-jr-nagoya-takashimaya-opens-in-nagoya-station"
+          ],
+          "browserFiltered": false,
+          "publicBase": "https://www.chronopin.com",
+          "guideStatus": 200,
+          "offers": [
+            {
+              "id": "https://prtimes.jp/main/html/rd/p/000000508.000047031.html#the-city-bakery#0",
+              "name": "THE CITY BAKERY — JR Nagoya Takashimaya",
+              "neighborhood": "Nagoya Station",
+              "address": "1F North Block Delicious Court, JR Nagoya Takashimaya, 1-1-4 Meieki, Nakamura-ku, Nagoya",
+              "restaurantHref": "/pin/15900/the-city-bakery-jr-nagoya-takashimaya-opens-in-nagoya-station",
+              "checkedAt": "2026-10-22",
+              "special": {
+                "kind": "other",
+                "title": "November 12 opening bundle — ¥3,520",
+                "schedule": "November 12 only, 10:00–20:00 JST, subject to stock.",
+                "menuLabel": "November 12 opening bundle",
+                "sourceUrl": "https://prtimes.jp/main/html/rd/p/000000513.000047031.html",
+                "validFrom": "2026-11-12",
+                "conditions": [
+                  "Tax-inclusive price per set.",
+                  "30 sets total; one set per person.",
+                  "No discount relative to ordinary prices claimed.",
+                  "Exact bagel varieties/counts and other contents not published.",
+                  "Opening day starts 10:00; normal 07:30 opening does not apply that day."
+                ],
+                "discounted": false,
+                "description": "JR Nagoya Takashimaya-only opening set with eco bag, mug and bagel assortment. Limited 30 sets; one per person, while stock lasts. Other contents/varieties are unannounced.",
+                "limitedTime": true,
+                "availability": {
+                  "windows": [
+                    {
+                      "end": "20:00",
+                      "days": [
+                        4
+                      ],
+                      "start": "10:00"
+                    }
+                  ]
+                },
+                "validThrough": "2026-11-12"
+              },
+              "venueKey": "prtimes.jp/main/html/rd/p/000000508.000047031.html#the-city-bakery",
+              "photo": {
+                "alt": "Opening set — bag, mug and bagel examples — retailer-supplied photograph for the exact JR Nagoya Takashimaya launch assortment; promotional product example, not completed venue or guaranteed stock.",
+                "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-22/batch117-the-city-bakery-1-22b006e7cc2ef0e4.webp",
+                "credit": "JR Nagoya Takashimaya / THE CITY BAKERY",
+                "checkedAt": "2026-10-22",
+                "sourceUrl": "https://prtimes.jp/main/html/rd/p/000000513.000047031.html",
+                "originalUrl": "https://prcdn.freetls.fastly.net/release_image/47031/513/47031-513-8b6ec70b6856b51518c4660f93b2c84b-3900x3799.jpg?width=1950&height=1350&quality=85%2C65&format=jpeg&auto=webp&fit=bounds&bg-color=fff"
+              },
+              "menu": {
+                "url": "https://prtimes.jp/main/html/rd/p/000000513.000047031.html",
+                "note": "Exact branch-only launch bundle; no discount percentage or component valuation asserted. All contents beyond the named bag, mug and bagel examples remain unpublished.",
+                "items": [
+                  {
+                    "name": "オープン記念セット — THE CITY BAKERY",
+                    "note": "Tax inclusive. Includes eco bag, mug and bagel assortment; exact bread varieties/counts and other contents unpublished. November 12 only;30 sets total; one set per person; while allocation lasts.",
+                    "price": 3520
+                  },
+                  {
+                    "name": "ベーグル（セット内・種類と数量未公表）",
+                    "note": "Only bagels explicitly named as food in set text. Do not infer the pictured cookie or coffee packets as guaranteed contents.",
+                    "priceLabel": "Included in ¥3,520 opening set; no standalone price published"
+                  }
+                ],
+                "label": "November 12 opening bundle",
+                "coverage": "published",
+                "currency": "JPY"
+              },
+              "startsAt": "2026-11-12T01:00:00.000Z",
+              "end": "20:00"
+            }
+          ]
+        },
+        {
+          "pinId": 15901,
+          "region": "nagoya",
+          "view": "upcoming",
+          "neighborhood": "Nagoya Station",
+          "nativeTitleAndImage": true,
+          "hrefs": [
+            "/pin/15901/paul-jr-nagoya-takashimaya-opens-in-nagoya-station"
+          ],
+          "browserFiltered": false,
+          "publicBase": "https://www.chronopin.com",
+          "guideStatus": 200,
+          "offers": []
+        },
+        {
+          "pinId": 15901,
+          "region": "nagoya",
+          "view": "discounts",
+          "neighborhood": "Nagoya Station",
+          "nativeTitleAndImage": true,
+          "hrefs": [
+            "/pin/15901/paul-jr-nagoya-takashimaya-opens-in-nagoya-station"
+          ],
+          "browserFiltered": false,
+          "publicBase": "https://www.chronopin.com",
+          "guideStatus": 200,
+          "offers": [
+            {
+              "id": "https://prtimes.jp/main/html/rd/p/000000508.000047031.html#paul#0",
+              "name": "PAUL — JR Nagoya Takashimaya",
+              "neighborhood": "Nagoya Station",
+              "address": "1F North Block Delicious Court, JR Nagoya Takashimaya, 1-1-4 Meieki, Nakamura-ku, Nagoya",
+              "restaurantHref": "/pin/15901/paul-jr-nagoya-takashimaya-opens-in-nagoya-station",
+              "checkedAt": "2026-10-22",
+              "special": {
+                "kind": "other",
+                "title": "November 12–17 opening bundle — ¥3,300",
+                "schedule": "November 12 10:00–20:00; November 13–17 07:30–20:00 JST; subject to stock.",
+                "menuLabel": "November 12–17 opening bundle",
+                "sourceUrl": "https://prtimes.jp/main/html/rd/p/000000513.000047031.html",
+                "validFrom": "2026-11-12",
+                "conditions": [
+                  "Tax-inclusive price per set.",
+                  "50 sets total as published; no daily replenishment inferred.",
+                  "Limit 3 sets per person.",
+                  "Exact five breads unpublished.",
+                  "Opening day 10:00; subsequent regular opening 07:30."
+                ],
+                "discounted": false,
+                "description": "JR Nagoya Takashimaya-only original tote and five-bread set.50 sets stated for campaign, not daily; limit 3 sets per person. While stock lasts.",
+                "limitedTime": true,
+                "availability": {
+                  "windows": [
+                    {
+                      "end": "20:00",
+                      "days": [
+                        4
+                      ],
+                      "start": "10:00"
+                    },
+                    {
+                      "end": "20:00",
+                      "days": [
+                        5,
+                        6,
+                        0,
+                        1,
+                        2
+                      ],
+                      "start": "07:30"
+                    }
+                  ]
+                },
+                "validThrough": "2026-11-17"
+              },
+              "venueKey": "prtimes.jp/main/html/rd/p/000000508.000047031.html#paul",
+              "photo": {
+                "alt": "Opening set — original tote and five breads — retailer-supplied photograph for the exact JR Nagoya Takashimaya launch assortment; promotional product example, not completed venue or guaranteed stock.",
+                "src": "https://chronopin.blob.core.windows.net/thumb/restaurant-images/japan-2026-10-22/batch117-paul-3-273212414ee45bc7.webp",
+                "credit": "JR Nagoya Takashimaya / PAUL",
+                "checkedAt": "2026-10-22",
+                "sourceUrl": "https://prtimes.jp/main/html/rd/p/000000513.000047031.html",
+                "originalUrl": "https://prcdn.freetls.fastly.net/release_image/47031/513/47031-513-c0714fe3ee7294000d1f972eae1406c7-2159x2517.jpg?width=1950&height=1350&quality=85%2C65&format=jpeg&auto=webp&fit=bounds&bg-color=fff"
+              },
+              "menu": {
+                "url": "https://prtimes.jp/main/html/rd/p/000000513.000047031.html",
+                "note": "Exact branch exclusive.50 sets stated without a daily qualifier; do not multiply quota by 6 days or infer a first-day-only sale.",
+                "items": [
+                  {
+                    "name": "オープン記念セット — PAUL",
+                    "note": "Tax inclusive. Original tote and five breads. November 12–17;50 sets total as published, not 50 per day. Limit 3 sets per person; while stock lasts. Named bread varieties not published.",
+                    "price": 3300
+                  },
+                  {
+                    "name": "パン5種（セット内・種類未公表）",
+                    "note": "Five kinds explicitly stated, exact names unpublished. Do not assume ordinary croissant/baguette or pictured assortment guarantees the final five breads.",
+                    "priceLabel": "Included in ¥3,300 opening set; no standalone price published"
+                  }
+                ],
+                "label": "November 12–17 opening bundle",
+                "coverage": "published",
+                "currency": "JPY"
+              },
+              "startsAt": "2026-11-12T01:00:00.000Z",
+              "end": "20:00"
+            }
+          ]
+        },
+        {
+          "pinId": 15902,
+          "region": "nagoya",
+          "view": "upcoming",
+          "neighborhood": "Nagoya Station",
+          "nativeTitleAndImage": true,
+          "hrefs": [
+            "/pin/15902/le-supreme-jr-nagoya-takashimaya-renewal-opens-in-nagoya-station"
+          ],
+          "browserFiltered": false,
+          "publicBase": "https://www.chronopin.com",
+          "guideStatus": 200,
+          "offers": []
+        }
+      ]
+    }
+  },
+  "verifiedGuideCounts": {
+    "local": [
+      {
+        "city": "fukuoka",
+        "view": "upcoming",
+        "count": 9,
+        "ids": [
+          "15410",
+          "15411",
+          "15415",
+          "15424",
+          "15425",
+          "15426",
+          "15914",
+          "15924",
+          "18421"
+        ],
+        "verifiedAtUtc": "2026-10-23T04:36:29.805669+00:00"
+      },
+      {
+        "city": "fukuoka",
+        "view": "new",
+        "count": 25,
+        "ids": [
+          "15398",
+          "15399",
+          "15400",
+          "15401",
+          "15409",
+          "15412",
+          "15414",
+          "15421",
+          "15422",
+          "15423",
+          "15427",
+          "15428",
+          "15969",
+          "16026",
+          "16027",
+          "16078",
+          "16290",
+          "16291",
+          "16292",
+          "16326",
+          "17625",
+          "18418",
+          "18506",
+          "18534",
+          "18536"
+        ],
+        "verifiedAtUtc": "2026-10-23T04:36:29.816114+00:00"
+      },
+      {
+        "city": "fukuoka",
+        "view": "top",
+        "count": 30,
+        "ids": [
+          "15402",
+          "15403",
+          "15404",
+          "15405",
+          "15406",
+          "15407",
+          "15408",
+          "15413",
+          "15416",
+          "15417",
+          "15418",
+          "15419",
+          "15420",
+          "15429",
+          "18132",
+          "18133",
+          "18134",
+          "18147",
+          "18148",
+          "18149",
+          "18150",
+          "18176",
+          "18279",
+          "18280",
+          "18281",
+          "18289",
+          "18291",
+          "18293",
+          "18295",
+          "18296"
+        ],
+        "verifiedAtUtc": "2026-10-23T04:36:29.827353+00:00"
+      },
+      {
+        "city": "fukuoka",
+        "view": "discounts",
+        "count": 36,
+        "ids": [
+          "http://raisindor.jp/",
+          "https://010bld.com/gohgan/",
+          "https://333sanmitomatoramen.com/store/%e5%a4%a9%e7%a5%9e%e5%a4%a7%e5%90%8d%e6%9c%ac%e5%ba%97/",
+          "https://and-gallery.com/#hukuoka",
+          "https://cene.tokyo/collections/fukuoka-open",
+          "https://fukuoka-orientalhotel.com/restaurant/linksquare/",
+          "https://fukuokaseahawk.hiltonjapan.co.jp/restaurants/clouds",
+          "https://fukuokaseahawk.hiltonjapan.co.jp/restaurants/seala",
+          "https://kanzan.net/imuri/",
+          "https://kusiyatubame.owst.jp/",
+          "https://le-bistro-aki.com/",
+          "https://onefukuoka-building.jp/shop/55",
+          "https://prtimes.jp/main/html/rd/p/000000060.000179076.html",
+          "https://prtimes.jp/main/html/rd/p/000000064.000152670.html",
+          "https://prtimes.jp/main/html/rd/p/000000170.000101757.html",
+          "https://pukutoco.com/sumomo-bakery-1007open/",
+          "https://pukutoco.com/sumomobakery-akasaka1019open/",
+          "https://tabelog.com/en/fukuoka/A4001/A400102/40074846/",
+          "https://toeihotel-fukuoka.com/restaurant/bistro_atrie/",
+          "https://www.eggsnthingsjapan.com/hakata/",
+          "https://www.f-sunpalace.com/restaurant/lagoon/",
+          "https://www.fuk.hotelokura.co.jp/restaurant/lechampdor/",
+          "https://www.gate-hotel.jp/fukuoka/rb/agfukuoka.html",
+          "https://www.ginzalion.jp/shop/brand/yebisubar/onefukuokabldg.html",
+          "https://www.hiramatsurestaurant.jp/hiramatsu-hakata/",
+          "https://www.hiramatsurestaurant.jp/kubotsu/",
+          "https://www.hotelnikko-fukuoka.com/restaurant/celebrites/",
+          "https://www.hotelnikko-fukuoka.com/restaurant/serena/",
+          "https://www.hotpepper.jp/strJ001276550/",
+          "https://www.kys-newotani.co.jp/hakata/restaurant/castillian-bar/",
+          "https://www.orec.co.jp/greenlab-fukuoka/",
+          "https://www.pochi-ito.com/",
+          "https://www.princehotels.co.jp/momochihama/restaurant/yocaterrace/",
+          "https://www.quil-fait-bon.com/pages/fukuoka",
+          "https://www.recent-hotel.com/restaurant/",
+          "https://www.tenchika.com/shop/h_b_antique/"
+        ],
+        "verifiedAtUtc": "2026-10-23T04:36:29.852208+00:00"
+      },
+      {
+        "city": "osaka",
+        "view": "upcoming",
+        "count": 11,
+        "ids": [
+          "15432",
+          "15445",
+          "15447",
+          "15448",
+          "15449",
+          "15458",
+          "15913",
+          "15925",
+          "16023",
+          "16079",
+          "17168"
+        ],
+        "verifiedAtUtc": "2026-10-23T04:36:30.974706+00:00"
+      },
+      {
+        "city": "osaka",
+        "view": "new",
+        "count": 31,
+        "ids": [
+          "15431",
+          "15435",
+          "15436",
+          "15437",
+          "15438",
+          "15439",
+          "15446",
+          "15451",
+          "15452",
+          "15453",
+          "15454",
+          "15455",
+          "15456",
+          "15457",
+          "15975",
+          "17108",
+          "17109",
+          "17110",
+          "17111",
+          "17112",
+          "17622",
+          "17623",
+          "17626",
+          "18303",
+          "18304",
+          "18420",
+          "18424",
+          "18449",
+          "18504",
+          "18554",
+          "18555"
+        ],
+        "verifiedAtUtc": "2026-10-23T04:36:30.984103+00:00"
+      },
+      {
+        "city": "osaka",
+        "view": "top",
+        "count": 30,
+        "ids": [
+          "15430",
+          "15433",
+          "15434",
+          "15440",
+          "15441",
+          "15442",
+          "15443",
+          "15444",
+          "15450",
+          "15971",
+          "18135",
+          "18136",
+          "18137",
+          "18151",
+          "18152",
+          "18153",
+          "18154",
+          "18166",
+          "18168",
+          "18224",
+          "18228",
+          "18271",
+          "18272",
+          "18273",
+          "18274",
+          "18275",
+          "18276",
+          "18277",
+          "18278",
+          "18287"
+        ],
+        "verifiedAtUtc": "2026-10-23T04:36:31.001739+00:00"
+      },
+      {
+        "city": "osaka",
+        "view": "discounts",
+        "count": 30,
+        "ids": [
+          "https://and-gallery.com/#nanba",
+          "https://conrad-osaka.hiltonjapan.co.jp/restaurants/40skybar",
+          "https://conrad-osaka.hiltonjapan.co.jp/restaurants/atmos",
+          "https://cross-osaka.orixhotelsandresorts.com/#restaurant",
+          "https://csm-cafe.ltr-online.com/lp/csm-cafe-s022",
+          "https://doubletree-osaka-castle.hiltonjapan.co.jp/restaurants/lounge-bar-sen",
+          "https://doubletree-osaka-castle.hiltonjapan.co.jp/restaurants/restaurant-sen",
+          "https://gabuchiki.com/news/view/308",
+          "https://icosaka.com/offer/pierre_autumnmenu/",
+          "https://jblm2024.wixsite.com/fujiyama-tokyo/%E8%A4%87%E8%A3%BD-namba-osaka",
+          "https://k-coeur.com/restaurant/",
+          "https://labaie.ritzcarltonosaka.com/",
+          "https://osaka.ekimaru.com/shopguide/detail/103",
+          "https://osaka.hiltonjapan.co.jp/plans/restaurants/other/myplace-happyhour",
+          "https://patinahotels.com/osaka/drink-and-dine/p72",
+          "https://prtimes.jp/main/html/rd/p/000000001.000192433.html/",
+          "https://prtimes.jp/main/html/rd/p/000000033.000027700.html",
+          "https://splendido.ritzcarltonosaka.com/",
+          "https://takemon-fukahire.com/",
+          "https://www.agneldor.com/",
+          "https://www.daimaru.co.jp/shinsaibashi/restaurant/cucina-bella.html",
+          "https://www.gate-hotel.jp/osaka/rb/aosaka.html",
+          "https://www.gate-hotel.jp/osaka/rb/peaks.html",
+          "https://www.hiramatsurestaurant.jp/hiramatsu-lafete/",
+          "https://www.hiramatsurestaurant.jp/hiramatsu-lemidi/",
+          "https://www.hotpepper.jp/strJ004661366/",
+          "https://www.labecasse1990.com/",
+          "https://www.quil-fait-bon.com/pages/grand-front-osaka",
+          "https://www.regine.stregisosaka.com/",
+          "https://www.y-unico.jp/"
+        ],
+        "verifiedAtUtc": "2026-10-23T04:36:31.028399+00:00"
+      },
+      {
+        "city": "kyoto",
+        "view": "upcoming",
+        "count": 12,
+        "ids": [
+          "15483",
+          "15499",
+          "15500",
+          "15909",
+          "15910",
+          "15911",
+          "15912",
+          "15922",
+          "15931",
+          "16323",
+          "17169",
+          "18448"
+        ],
+        "verifiedAtUtc": "2026-10-23T04:36:31.416007+00:00"
+      },
+      {
+        "city": "kyoto",
+        "view": "new",
+        "count": 33,
+        "ids": [
+          "15460",
+          "15461",
+          "15462",
+          "15463",
+          "15464",
+          "15465",
+          "15466",
+          "15467",
+          "15468",
+          "15469",
+          "15470",
+          "15471",
+          "15472",
+          "15473",
+          "15474",
+          "15475",
+          "15476",
+          "15477",
+          "15478",
+          "15479",
+          "15480",
+          "15481",
+          "15482",
+          "15489",
+          "15490",
+          "15491",
+          "15492",
+          "15493",
+          "15494",
+          "15495",
+          "15498",
+          "18025",
+          "18026"
+        ],
+        "verifiedAtUtc": "2026-10-23T04:36:31.424662+00:00"
+      },
+      {
+        "city": "kyoto",
+        "view": "top",
+        "count": 30,
+        "ids": [
+          "15459",
+          "15484",
+          "15485",
+          "15486",
+          "15487",
+          "15488",
+          "15496",
+          "15497",
+          "15501",
+          "15973",
+          "18052",
+          "18060",
+          "18061",
+          "18098",
+          "18099",
+          "18117",
+          "18119",
+          "18155",
+          "18156",
+          "18170",
+          "18171",
+          "18173",
+          "18191",
+          "18193",
+          "18194",
+          "18209",
+          "18210",
+          "18211",
+          "18212",
+          "18213"
+        ],
+        "verifiedAtUtc": "2026-10-23T04:36:31.433763+00:00"
+      },
+      {
+        "city": "kyoto",
+        "view": "discounts",
+        "count": 35,
+        "ids": [
+          "https://cenci-kyoto.com/",
+          "https://droit-kyoto.jp/",
+          "https://hotelfauchonkyoto.com/ja/gourmet/fauchon-salon-de-the-kyoto/",
+          "https://kyoto.hiltonjapan.co.jp/restaurants/teori",
+          "https://www.hiramatsurestaurant.jp/hiramatsu-kodaiji/",
+          "https://www.hiramatsurestaurant.jp/la-luce/",
+          "https://www.instagram.com/jbowl_ritsumeikan_mae/",
+          "https://www.keihanhotels-resorts.co.jp/kyoto-centuryhotel/topics/happyhour-2/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/011/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/012/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/013/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/014/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/015/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/016/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/017/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/018/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/019/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/020/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/022/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/023/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/026/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/028/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/031/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/033/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/039/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/040/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/042/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/043/",
+          "https://www.next-hero-kyoto.com/%E3%81%9F%E3%81%93%EF%BC%98%E5%BA%97%E8%88%97%E6%83%85%E5%A0%B1/",
+          "https://www.princess-kyoto.co.jp/restaurant/ambercourt/",
+          "https://www.princess-kyoto.co.jp/restaurant/darley/",
+          "https://www.princess-kyoto.co.jp/restaurant/hisuien/",
+          "https://www.princess-kyoto.co.jp/restaurant/hoen/",
+          "https://www.princess-kyoto.co.jp/restaurant/sagano/",
+          "https://www.quil-fait-bon.com/pages/kyoto"
+        ],
+        "verifiedAtUtc": "2026-10-23T04:36:31.454771+00:00"
+      },
+      {
+        "city": "nagoya",
+        "view": "upcoming",
+        "count": 11,
+        "ids": [
+          "15510",
+          "15512",
+          "15517",
+          "15518",
+          "15521",
+          "15522",
+          "15900",
+          "15901",
+          "15902",
+          "16075",
+          "16080"
+        ],
+        "verifiedAtUtc": "2026-10-23T04:36:31.469145+00:00"
+      },
+      {
+        "city": "nagoya",
+        "view": "new",
+        "count": 31,
+        "ids": [
+          "15509",
+          "15511",
+          "15515",
+          "15516",
+          "15519",
+          "15520",
+          "15898",
+          "15899",
+          "15915",
+          "15916",
+          "15917",
+          "15918",
+          "15919",
+          "15920",
+          "15921",
+          "15932",
+          "15964",
+          "15965",
+          "16020",
+          "16021",
+          "16022",
+          "16076",
+          "16294",
+          "16295",
+          "16767",
+          "16771",
+          "16800",
+          "17107",
+          "17166",
+          "17167",
+          "18045"
+        ],
+        "verifiedAtUtc": "2026-10-23T04:36:31.485612+00:00"
+      },
+      {
+        "city": "nagoya",
+        "view": "top",
+        "count": 30,
+        "ids": [
+          "15502",
+          "15503",
+          "15504",
+          "15505",
+          "15506",
+          "15507",
+          "15508",
+          "15513",
+          "15514",
+          "15523",
+          "15524",
+          "15972",
+          "16024",
+          "18044",
+          "18100",
+          "18101",
+          "18121",
+          "18138",
+          "18192",
+          "18195",
+          "18196",
+          "18214",
+          "18215",
+          "18216",
+          "18217",
+          "18218",
+          "18219",
+          "18220",
+          "18221",
+          "18223"
+        ],
+        "verifiedAtUtc": "2026-10-23T04:36:31.512209+00:00"
+      },
+      {
+        "city": "nagoya",
+        "view": "discounts",
+        "count": 34,
+        "ids": [
+          "https://and-gallery.com/#nagoya",
+          "https://csm-cafe.ltr-online.com/lp/csm-cafe-s017",
+          "https://french-kitamura.jp/",
+          "https://kinzan.nagoya/archives/news/2853/",
+          "https://kobekangroup.com/shop/obanzai_kabtoya/",
+          "https://lebeurrenoisettetokyo.com/nagoya/",
+          "https://nagoya.hiltonjapan.co.jp/restaurants/hideaway3-3",
+          "https://nagoya.hiltonjapan.co.jp/restaurants/inplace3-3",
+          "https://nagoya.hiltonjapan.co.jp/restaurants/ouchou",
+          "https://nagoya.parco.jp/shop/detail/?cd=009191",
+          "https://prtimes.jp/main/html/rd/p/000000004.000116722.html",
+          "https://prtimes.jp/main/html/rd/p/000000508.000047031.html#paul",
+          "https://prtimes.jp/main/html/rd/p/000000508.000047031.html#the-city-bakery",
+          "https://prtimes.jp/main/html/rd/p/000004440.000018505.html",
+          "https://reconnaissance-nagoya.com/",
+          "https://tabelog.com/en/aichi/A2301/A230110/23089382/",
+          "https://thetowerhotel.jp/restaurant/",
+          "https://www.anacrowneplaza-nagoya.jp/pages/restaurant_gardencourt",
+          "https://www.anacrowneplaza-nagoya.jp/pages/restaurant_karin",
+          "https://www.anacrowneplaza-nagoya.jp/pages/restaurant_stargate",
+          "https://www.anacrowneplaza-nagoya.jp/pages/restaurant_winglounge",
+          "https://www.associa.com/nma/restaurant/pergola/",
+          "https://www.centralpark.co.jp/shop/sharecafe/",
+          "https://www.espacionagoya.com/restaurant-bar/the-bar-castle/",
+          "https://www.hiramatsurestaurant.jp/aubergedelill-nagoya/",
+          "https://www.hotpepper.jp/strJ004698778/",
+          "https://www.hotpepper.jp/strJ004699003/",
+          "https://www.kochuten.jp/",
+          "https://www.komeda.co.jp/shop/detail.html?id=1215",
+          "https://www.lafloraison-t.jp/",
+          "https://www.livingroom-skybar.com/",
+          "https://www.princehotels.co.jp/nagoya/restaurant/skydining/",
+          "https://www.quil-fait-bon.com/pages/nagoya-sakae",
+          "https://www.thekawabunnagoya.com/thekawabunnagoya/restaurant/"
+        ],
+        "verifiedAtUtc": "2026-10-23T04:36:31.649540+00:00"
+      },
+      {
+        "city": "tokyo",
+        "view": "upcoming",
+        "count": 15,
+        "ids": [
+          "15526",
+          "15538",
+          "15541",
+          "15544",
+          "15546",
+          "15555",
+          "15556",
+          "15557",
+          "15923",
+          "15929",
+          "15930",
+          "17106",
+          "17621",
+          "18722",
+          "18835"
+        ],
+        "verifiedAtUtc": "2026-10-23T04:36:33.050104+00:00"
+      },
+      {
+        "city": "tokyo",
+        "view": "new",
+        "count": 32,
+        "ids": [
+          "15527",
+          "15539",
+          "15540",
+          "15551",
+          "15552",
+          "15553",
+          "15554",
+          "15558",
+          "15966",
+          "15967",
+          "15968",
+          "16289",
+          "16325",
+          "17170",
+          "17171",
+          "17172",
+          "17173",
+          "17628",
+          "18027",
+          "18043",
+          "18051",
+          "18058",
+          "18102",
+          "18103",
+          "18300",
+          "18301",
+          "18302",
+          "18422",
+          "18444",
+          "18445",
+          "18446",
+          "18447"
+        ],
+        "verifiedAtUtc": "2026-10-23T04:36:33.060354+00:00"
+      },
+      {
+        "city": "tokyo",
+        "view": "top",
+        "count": 30,
+        "ids": [
+          "15525",
+          "15528",
+          "15529",
+          "15530",
+          "15531",
+          "15532",
+          "15533",
+          "15534",
+          "15535",
+          "15536",
+          "15537",
+          "15542",
+          "15543",
+          "15545",
+          "15547",
+          "15548",
+          "15549",
+          "15550",
+          "15559",
+          "15560",
+          "15561",
+          "15562",
+          "15903",
+          "15974",
+          "18122",
+          "18123",
+          "18140",
+          "18141",
+          "18157",
+          "18158"
+        ],
+        "verifiedAtUtc": "2026-10-23T04:36:33.072494+00:00"
+      },
+      {
+        "city": "tokyo",
+        "view": "discounts",
+        "count": 40,
+        "ids": [
+          "https://and-gallery.com/#ikebukuro",
+          "https://and-gallery.com/#yurakucho",
+          "https://cocco.eastone.co.jp/shop/gotanda",
+          "https://cocco.eastone.co.jp/shop/kameido",
+          "https://conrad-tokyo.hiltonjapan.co.jp/restaurants/cerise",
+          "https://conrad-tokyo.hiltonjapan.co.jp/restaurants/chinablue",
+          "https://conrad-tokyo.hiltonjapan.co.jp/restaurants/twentyeight",
+          "https://csm-cafe.ltr-online.com/lp/csm-cafe-s012",
+          "https://gourmetpress.net/1488798/",
+          "https://miabocca.eastone.co.jp/shop/Ikebukuro",
+          "https://miabocca.eastone.co.jp/shop/Shakujii-park",
+          "https://miabocca.eastone.co.jp/shop/Shinjuku-takasimaya",
+          "https://mimimi-jiyugaoka.com/#floor1",
+          "https://onodera-group.com/kaitensushi-ikebukuro/",
+          "https://prtimes.jp/main/html/rd/p/000000009.000161200.html",
+          "https://prtimes.jp/main/html/rd/p/000000048.000152772.html",
+          "https://prtimes.jp/main/html/rd/p/000000196.000049183.html",
+          "https://prtimes.jp/main/html/rd/p/000000356.000048489.html",
+          "https://prtimes.jp/main/html/rd/p/000000592.000071323.html",
+          "https://prtimes.jp/main/html/rd/p/000004178.000003860.html",
+          "https://salvatore.jp/restaurant/asagaya/",
+          "https://sarabethsrestaurants.jp/location/omotesando/",
+          "https://sarabethsrestaurants.jp/location/shinagawa/",
+          "https://sarabethsrestaurants.jp/location/shinjuku/",
+          "https://sarabethsrestaurants.jp/location/tokyo/",
+          "https://shibakoen.bar-shinkai.com/",
+          "https://store-info.skylark.co.jp/syabuyo/map/198490/",
+          "https://tabelog.com/en/tokyo/A1303/A130301/13198692/",
+          "https://tokyo.hiltonjapan.co.jp/restaurants/st_georges_bar",
+          "https://www.andaztokyo.jp/restaurants/jp/thetavern-grill-lounge",
+          "https://www.herofield.com/bbq/tokyoprince/",
+          "https://www.hiramatsurestaurant.jp/jardindessens-tokyo/",
+          "https://www.mesm.jp/en/eat-drink/chefs-theatre.html",
+          "https://www.newotani.co.jp/tokyo/restaurant/gardenlounge/",
+          "https://www.quil-fait-bon.com/pages/aoyama",
+          "https://www.quil-fait-bon.com/pages/grand-maison-ginza",
+          "https://www.quil-fait-bon.com/pages/shinjuku",
+          "https://www.quil-fait-bon.com/pages/tokyo-dome-city",
+          "https://www.quil-fait-bon.com/pages/tokyo-skytree-town-solamachi",
+          "https://www.sunamo.jp/floor/shop_detail.html?UC=1_028"
+        ],
+        "verifiedAtUtc": "2026-10-23T04:36:33.095368+00:00"
+      },
+      {
+        "city": "sapporo",
+        "view": "upcoming",
+        "count": 10,
+        "ids": [
+          "15569",
+          "15570",
+          "15571",
+          "15597",
+          "15926",
+          "15970",
+          "18047",
+          "18054",
+          "18810",
+          "19423"
+        ],
+        "verifiedAtUtc": "2026-10-23T04:36:33.459801+00:00"
+      },
+      {
+        "city": "sapporo",
+        "view": "new",
+        "count": 34,
+        "ids": [
+          "15568",
+          "15580",
+          "15586",
+          "15587",
+          "15588",
+          "15589",
+          "15590",
+          "15591",
+          "15592",
+          "15595",
+          "15596",
+          "16293",
+          "16296",
+          "17103",
+          "17104",
+          "17105",
+          "17624",
+          "17627",
+          "18028",
+          "18029",
+          "18030",
+          "18031",
+          "18048",
+          "18049",
+          "18055",
+          "18056",
+          "18057",
+          "18104",
+          "18105",
+          "18124",
+          "18125",
+          "18305",
+          "18306",
+          "19422"
+        ],
+        "verifiedAtUtc": "2026-10-23T04:36:33.470948+00:00"
+      },
+      {
+        "city": "sapporo",
+        "view": "top",
+        "count": 30,
+        "ids": [
+          "15563",
+          "15564",
+          "15565",
+          "15566",
+          "15567",
+          "15572",
+          "15573",
+          "15574",
+          "15575",
+          "15576",
+          "15577",
+          "15578",
+          "15579",
+          "15581",
+          "15582",
+          "15583",
+          "15584",
+          "15585",
+          "15593",
+          "15594",
+          "15598",
+          "15599",
+          "15600",
+          "15601",
+          "15602",
+          "15603",
+          "15604",
+          "15605",
+          "15606",
+          "15607"
+        ],
+        "verifiedAtUtc": "2026-10-23T04:36:33.481333+00:00"
+      },
+      {
+        "city": "sapporo",
+        "view": "discounts",
+        "count": 34,
+        "ids": [
+          "https://anan.fuji-tatsu.co.jp/shop/sapporo-sinoro/",
+          "https://chocottosushi-kiwami.owst.jp/",
+          "https://cocco.eastone.co.jp/shop/kitahachijo",
+          "https://cocco.eastone.co.jp/shop/kitaichijo",
+          "https://cocco.eastone.co.jp/shop/kotoniekimae",
+          "https://cocco.eastone.co.jp/shop/miyanosawa",
+          "https://cocco.eastone.co.jp/shop/shindohigashi",
+          "https://cocco.eastone.co.jp/shop/souen",
+          "https://grand1934.com/restaurant/garden-dining-waraku/",
+          "https://grand1934.com/restaurant/kokaku/",
+          "https://grand1934.com/restaurant/lobby-lounge-mizar/",
+          "https://grand1934.com/restaurant/northern-terrace-diner/",
+          "https://grand1934.com/restaurant/old-saloon1934/",
+          "https://miabocca.eastone.co.jp/shop/Kita2jo",
+          "https://miabocca.eastone.co.jp/shop/Kotoni-station",
+          "https://miabocca.eastone.co.jp/shop/Sapporo-station",
+          "https://miabocca.eastone.co.jp/shop/atsubetsuminami",
+          "https://miabocca.eastone.co.jp/shop/sapporoduo",
+          "https://michiru.dkdining.com/sapporo/",
+          "https://prtimes.jp/main/html/rd/p/000000010.000134951.html",
+          "https://store-info.skylark.co.jp/syabuyo/map/198489/",
+          "https://www.anahisapporosusukino.com/restaurants/verde/",
+          "https://www.hyatt.com/hyatt-centric/ja-JP/ctsct-hyatt-centric-sapporo/dining",
+          "https://www.jrhotels.co.jp/tower/restaurant/skyj/",
+          "https://www.keioplaza-sapporo.co.jp/restaurants/akizu/",
+          "https://www.keioplaza-sapporo.co.jp/restaurants/crossvault/",
+          "https://www.keioplaza-sapporo.co.jp/restaurants/glass/",
+          "https://www.keioplaza-sapporo.co.jp/restaurants/miyama/",
+          "https://www.keioplaza-sapporo.co.jp/restaurants/yamanami/",
+          "https://www.princehotels.co.jp/sapporo/restaurant/alldaydininggrandeur",
+          "https://www.princehotels.co.jp/sapporo/restaurant/fuyojo",
+          "https://www.princehotels.co.jp/sapporo/restaurant/katsura",
+          "https://www.princehotels.co.jp/sapporo/restaurant/top_prince",
+          "https://www.tokyuhotels.co.jp/sapporostream/restaurant/splish/plan/angel_devil/index.html"
+        ],
+        "verifiedAtUtc": "2026-10-23T04:36:33.509581+00:00"
+      }
+    ],
+    "production": [
+      {
+        "city": "fukuoka",
+        "view": "upcoming",
+        "count": 9,
+        "ids": [
+          "15410",
+          "15411",
+          "15415",
+          "15424",
+          "15425",
+          "15426",
+          "15914",
+          "15924",
+          "18421"
+        ],
+        "verifiedAtUtc": "2026-10-23T04:40:34.163715+00:00"
+      },
+      {
+        "city": "fukuoka",
+        "view": "new",
+        "count": 25,
+        "ids": [
+          "15398",
+          "15399",
+          "15400",
+          "15401",
+          "15409",
+          "15412",
+          "15414",
+          "15421",
+          "15422",
+          "15423",
+          "15427",
+          "15428",
+          "15969",
+          "16026",
+          "16027",
+          "16078",
+          "16290",
+          "16291",
+          "16292",
+          "16326",
+          "17625",
+          "18418",
+          "18506",
+          "18534",
+          "18536"
+        ],
+        "verifiedAtUtc": "2026-10-23T04:41:17.025560+00:00"
+      },
+      {
+        "city": "fukuoka",
+        "view": "top",
+        "count": 30,
+        "ids": [
+          "15402",
+          "15403",
+          "15404",
+          "15405",
+          "15406",
+          "15407",
+          "15408",
+          "15413",
+          "15416",
+          "15417",
+          "15418",
+          "15419",
+          "15420",
+          "15429",
+          "18132",
+          "18133",
+          "18134",
+          "18147",
+          "18148",
+          "18149",
+          "18150",
+          "18176",
+          "18279",
+          "18280",
+          "18281",
+          "18289",
+          "18291",
+          "18293",
+          "18295",
+          "18296"
+        ],
+        "verifiedAtUtc": "2026-10-23T04:41:40.967068+00:00"
+      },
+      {
+        "city": "fukuoka",
+        "view": "discounts",
+        "count": 36,
+        "ids": [
+          "http://raisindor.jp/",
+          "https://010bld.com/gohgan/",
+          "https://333sanmitomatoramen.com/store/%e5%a4%a9%e7%a5%9e%e5%a4%a7%e5%90%8d%e6%9c%ac%e5%ba%97/",
+          "https://and-gallery.com/#hukuoka",
+          "https://cene.tokyo/collections/fukuoka-open",
+          "https://fukuoka-orientalhotel.com/restaurant/linksquare/",
+          "https://fukuokaseahawk.hiltonjapan.co.jp/restaurants/clouds",
+          "https://fukuokaseahawk.hiltonjapan.co.jp/restaurants/seala",
+          "https://kanzan.net/imuri/",
+          "https://kusiyatubame.owst.jp/",
+          "https://le-bistro-aki.com/",
+          "https://onefukuoka-building.jp/shop/55",
+          "https://prtimes.jp/main/html/rd/p/000000060.000179076.html",
+          "https://prtimes.jp/main/html/rd/p/000000064.000152670.html",
+          "https://prtimes.jp/main/html/rd/p/000000170.000101757.html",
+          "https://pukutoco.com/sumomo-bakery-1007open/",
+          "https://pukutoco.com/sumomobakery-akasaka1019open/",
+          "https://tabelog.com/en/fukuoka/A4001/A400102/40074846/",
+          "https://toeihotel-fukuoka.com/restaurant/bistro_atrie/",
+          "https://www.eggsnthingsjapan.com/hakata/",
+          "https://www.f-sunpalace.com/restaurant/lagoon/",
+          "https://www.fuk.hotelokura.co.jp/restaurant/lechampdor/",
+          "https://www.gate-hotel.jp/fukuoka/rb/agfukuoka.html",
+          "https://www.ginzalion.jp/shop/brand/yebisubar/onefukuokabldg.html",
+          "https://www.hiramatsurestaurant.jp/hiramatsu-hakata/",
+          "https://www.hiramatsurestaurant.jp/kubotsu/",
+          "https://www.hotelnikko-fukuoka.com/restaurant/celebrites/",
+          "https://www.hotelnikko-fukuoka.com/restaurant/serena/",
+          "https://www.hotpepper.jp/strJ001276550/",
+          "https://www.kys-newotani.co.jp/hakata/restaurant/castillian-bar/",
+          "https://www.orec.co.jp/greenlab-fukuoka/",
+          "https://www.pochi-ito.com/",
+          "https://www.princehotels.co.jp/momochihama/restaurant/yocaterrace/",
+          "https://www.quil-fait-bon.com/pages/fukuoka",
+          "https://www.recent-hotel.com/restaurant/",
+          "https://www.tenchika.com/shop/h_b_antique/"
+        ],
+        "verifiedAtUtc": "2026-10-23T04:41:57.468966+00:00"
+      },
+      {
+        "city": "osaka",
+        "view": "upcoming",
+        "count": 11,
+        "ids": [
+          "15432",
+          "15445",
+          "15447",
+          "15448",
+          "15449",
+          "15458",
+          "15913",
+          "15925",
+          "16023",
+          "16079",
+          "17168"
+        ],
+        "verifiedAtUtc": "2026-10-23T04:42:14.712395+00:00"
+      },
+      {
+        "city": "osaka",
+        "view": "new",
+        "count": 31,
+        "ids": [
+          "15431",
+          "15435",
+          "15436",
+          "15437",
+          "15438",
+          "15439",
+          "15446",
+          "15451",
+          "15452",
+          "15453",
+          "15454",
+          "15455",
+          "15456",
+          "15457",
+          "15975",
+          "17108",
+          "17109",
+          "17110",
+          "17111",
+          "17112",
+          "17622",
+          "17623",
+          "17626",
+          "18303",
+          "18304",
+          "18420",
+          "18424",
+          "18449",
+          "18504",
+          "18554",
+          "18555"
+        ],
+        "verifiedAtUtc": "2026-10-23T04:42:18.364075+00:00"
+      },
+      {
+        "city": "osaka",
+        "view": "top",
+        "count": 30,
+        "ids": [
+          "15430",
+          "15433",
+          "15434",
+          "15440",
+          "15441",
+          "15442",
+          "15443",
+          "15444",
+          "15450",
+          "15971",
+          "18135",
+          "18136",
+          "18137",
+          "18151",
+          "18152",
+          "18153",
+          "18154",
+          "18166",
+          "18168",
+          "18224",
+          "18228",
+          "18271",
+          "18272",
+          "18273",
+          "18274",
+          "18275",
+          "18276",
+          "18277",
+          "18278",
+          "18287"
+        ],
+        "verifiedAtUtc": "2026-10-23T04:42:33.126232+00:00"
+      },
+      {
+        "city": "osaka",
+        "view": "discounts",
+        "count": 30,
+        "ids": [
+          "https://and-gallery.com/#nanba",
+          "https://conrad-osaka.hiltonjapan.co.jp/restaurants/40skybar",
+          "https://conrad-osaka.hiltonjapan.co.jp/restaurants/atmos",
+          "https://cross-osaka.orixhotelsandresorts.com/#restaurant",
+          "https://csm-cafe.ltr-online.com/lp/csm-cafe-s022",
+          "https://doubletree-osaka-castle.hiltonjapan.co.jp/restaurants/lounge-bar-sen",
+          "https://doubletree-osaka-castle.hiltonjapan.co.jp/restaurants/restaurant-sen",
+          "https://gabuchiki.com/news/view/308",
+          "https://icosaka.com/offer/pierre_autumnmenu/",
+          "https://jblm2024.wixsite.com/fujiyama-tokyo/%E8%A4%87%E8%A3%BD-namba-osaka",
+          "https://k-coeur.com/restaurant/",
+          "https://labaie.ritzcarltonosaka.com/",
+          "https://osaka.ekimaru.com/shopguide/detail/103",
+          "https://osaka.hiltonjapan.co.jp/plans/restaurants/other/myplace-happyhour",
+          "https://patinahotels.com/osaka/drink-and-dine/p72",
+          "https://prtimes.jp/main/html/rd/p/000000001.000192433.html/",
+          "https://prtimes.jp/main/html/rd/p/000000033.000027700.html",
+          "https://splendido.ritzcarltonosaka.com/",
+          "https://takemon-fukahire.com/",
+          "https://www.agneldor.com/",
+          "https://www.daimaru.co.jp/shinsaibashi/restaurant/cucina-bella.html",
+          "https://www.gate-hotel.jp/osaka/rb/aosaka.html",
+          "https://www.gate-hotel.jp/osaka/rb/peaks.html",
+          "https://www.hiramatsurestaurant.jp/hiramatsu-lafete/",
+          "https://www.hiramatsurestaurant.jp/hiramatsu-lemidi/",
+          "https://www.hotpepper.jp/strJ004661366/",
+          "https://www.labecasse1990.com/",
+          "https://www.quil-fait-bon.com/pages/grand-front-osaka",
+          "https://www.regine.stregisosaka.com/",
+          "https://www.y-unico.jp/"
+        ],
+        "verifiedAtUtc": "2026-10-23T04:43:19.431473+00:00"
+      },
+      {
+        "city": "kyoto",
+        "view": "upcoming",
+        "count": 12,
+        "ids": [
+          "15483",
+          "15499",
+          "15500",
+          "15909",
+          "15910",
+          "15911",
+          "15912",
+          "15922",
+          "15931",
+          "16323",
+          "17169",
+          "18448"
+        ],
+        "verifiedAtUtc": "2026-10-23T04:43:36.741968+00:00"
+      },
+      {
+        "city": "kyoto",
+        "view": "new",
+        "count": 33,
+        "ids": [
+          "15460",
+          "15461",
+          "15462",
+          "15463",
+          "15464",
+          "15465",
+          "15466",
+          "15467",
+          "15468",
+          "15469",
+          "15470",
+          "15471",
+          "15472",
+          "15473",
+          "15474",
+          "15475",
+          "15476",
+          "15477",
+          "15478",
+          "15479",
+          "15480",
+          "15481",
+          "15482",
+          "15489",
+          "15490",
+          "15491",
+          "15492",
+          "15493",
+          "15494",
+          "15495",
+          "15498",
+          "18025",
+          "18026"
+        ],
+        "verifiedAtUtc": "2026-10-23T04:43:39.112802+00:00"
+      },
+      {
+        "city": "kyoto",
+        "view": "top",
+        "count": 30,
+        "ids": [
+          "15459",
+          "15484",
+          "15485",
+          "15486",
+          "15487",
+          "15488",
+          "15496",
+          "15497",
+          "15501",
+          "15973",
+          "18052",
+          "18060",
+          "18061",
+          "18098",
+          "18099",
+          "18117",
+          "18119",
+          "18155",
+          "18156",
+          "18170",
+          "18171",
+          "18173",
+          "18191",
+          "18193",
+          "18194",
+          "18209",
+          "18210",
+          "18211",
+          "18212",
+          "18213"
+        ],
+        "verifiedAtUtc": "2026-10-23T04:45:43.505602+00:00"
+      },
+      {
+        "city": "kyoto",
+        "view": "discounts",
+        "count": 35,
+        "ids": [
+          "https://cenci-kyoto.com/",
+          "https://droit-kyoto.jp/",
+          "https://hotelfauchonkyoto.com/ja/gourmet/fauchon-salon-de-the-kyoto/",
+          "https://kyoto.hiltonjapan.co.jp/restaurants/teori",
+          "https://www.hiramatsurestaurant.jp/hiramatsu-kodaiji/",
+          "https://www.hiramatsurestaurant.jp/la-luce/",
+          "https://www.instagram.com/jbowl_ritsumeikan_mae/",
+          "https://www.keihanhotels-resorts.co.jp/kyoto-centuryhotel/topics/happyhour-2/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/011/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/012/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/013/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/014/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/015/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/016/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/017/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/018/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/019/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/020/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/022/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/023/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/026/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/028/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/031/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/033/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/039/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/040/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/042/",
+          "https://www.kyoto-station-building.co.jp/restaurant_cafe/043/",
+          "https://www.next-hero-kyoto.com/%E3%81%9F%E3%81%93%EF%BC%98%E5%BA%97%E8%88%97%E6%83%85%E5%A0%B1/",
+          "https://www.princess-kyoto.co.jp/restaurant/ambercourt/",
+          "https://www.princess-kyoto.co.jp/restaurant/darley/",
+          "https://www.princess-kyoto.co.jp/restaurant/hisuien/",
+          "https://www.princess-kyoto.co.jp/restaurant/hoen/",
+          "https://www.princess-kyoto.co.jp/restaurant/sagano/",
+          "https://www.quil-fait-bon.com/pages/kyoto"
+        ],
+        "verifiedAtUtc": "2026-10-23T04:45:44.155569+00:00"
+      },
+      {
+        "city": "nagoya",
+        "view": "upcoming",
+        "count": 11,
+        "ids": [
+          "15510",
+          "15512",
+          "15517",
+          "15518",
+          "15521",
+          "15522",
+          "15900",
+          "15901",
+          "15902",
+          "16075",
+          "16080"
+        ],
+        "verifiedAtUtc": "2026-10-23T04:45:44.370950+00:00"
+      },
+      {
+        "city": "nagoya",
+        "view": "new",
+        "count": 31,
+        "ids": [
+          "15509",
+          "15511",
+          "15515",
+          "15516",
+          "15519",
+          "15520",
+          "15898",
+          "15899",
+          "15915",
+          "15916",
+          "15917",
+          "15918",
+          "15919",
+          "15920",
+          "15921",
+          "15932",
+          "15964",
+          "15965",
+          "16020",
+          "16021",
+          "16022",
+          "16076",
+          "16294",
+          "16295",
+          "16767",
+          "16771",
+          "16800",
+          "17107",
+          "17166",
+          "17167",
+          "18045"
+        ],
+        "verifiedAtUtc": "2026-10-23T04:45:44.673421+00:00"
+      },
+      {
+        "city": "nagoya",
+        "view": "top",
+        "count": 30,
+        "ids": [
+          "15502",
+          "15503",
+          "15504",
+          "15505",
+          "15506",
+          "15507",
+          "15508",
+          "15513",
+          "15514",
+          "15523",
+          "15524",
+          "15972",
+          "16024",
+          "18044",
+          "18100",
+          "18101",
+          "18121",
+          "18138",
+          "18192",
+          "18195",
+          "18196",
+          "18214",
+          "18215",
+          "18216",
+          "18217",
+          "18218",
+          "18219",
+          "18220",
+          "18221",
+          "18223"
+        ],
+        "verifiedAtUtc": "2026-10-23T04:45:44.935306+00:00"
+      },
+      {
+        "city": "nagoya",
+        "view": "discounts",
+        "count": 34,
+        "ids": [
+          "https://and-gallery.com/#nagoya",
+          "https://csm-cafe.ltr-online.com/lp/csm-cafe-s017",
+          "https://french-kitamura.jp/",
+          "https://kinzan.nagoya/archives/news/2853/",
+          "https://kobekangroup.com/shop/obanzai_kabtoya/",
+          "https://lebeurrenoisettetokyo.com/nagoya/",
+          "https://nagoya.hiltonjapan.co.jp/restaurants/hideaway3-3",
+          "https://nagoya.hiltonjapan.co.jp/restaurants/inplace3-3",
+          "https://nagoya.hiltonjapan.co.jp/restaurants/ouchou",
+          "https://nagoya.parco.jp/shop/detail/?cd=009191",
+          "https://prtimes.jp/main/html/rd/p/000000004.000116722.html",
+          "https://prtimes.jp/main/html/rd/p/000000508.000047031.html#paul",
+          "https://prtimes.jp/main/html/rd/p/000000508.000047031.html#the-city-bakery",
+          "https://prtimes.jp/main/html/rd/p/000004440.000018505.html",
+          "https://reconnaissance-nagoya.com/",
+          "https://tabelog.com/en/aichi/A2301/A230110/23089382/",
+          "https://thetowerhotel.jp/restaurant/",
+          "https://www.anacrowneplaza-nagoya.jp/pages/restaurant_gardencourt",
+          "https://www.anacrowneplaza-nagoya.jp/pages/restaurant_karin",
+          "https://www.anacrowneplaza-nagoya.jp/pages/restaurant_stargate",
+          "https://www.anacrowneplaza-nagoya.jp/pages/restaurant_winglounge",
+          "https://www.associa.com/nma/restaurant/pergola/",
+          "https://www.centralpark.co.jp/shop/sharecafe/",
+          "https://www.espacionagoya.com/restaurant-bar/the-bar-castle/",
+          "https://www.hiramatsurestaurant.jp/aubergedelill-nagoya/",
+          "https://www.hotpepper.jp/strJ004698778/",
+          "https://www.hotpepper.jp/strJ004699003/",
+          "https://www.kochuten.jp/",
+          "https://www.komeda.co.jp/shop/detail.html?id=1215",
+          "https://www.lafloraison-t.jp/",
+          "https://www.livingroom-skybar.com/",
+          "https://www.princehotels.co.jp/nagoya/restaurant/skydining/",
+          "https://www.quil-fait-bon.com/pages/nagoya-sakae",
+          "https://www.thekawabunnagoya.com/thekawabunnagoya/restaurant/"
+        ],
+        "verifiedAtUtc": "2026-10-23T04:45:59.346353+00:00"
+      },
+      {
+        "city": "tokyo",
+        "view": "upcoming",
+        "count": 15,
+        "ids": [
+          "15526",
+          "15538",
+          "15541",
+          "15544",
+          "15546",
+          "15555",
+          "15556",
+          "15557",
+          "15923",
+          "15929",
+          "15930",
+          "17106",
+          "17621",
+          "18722",
+          "18835"
+        ],
+        "verifiedAtUtc": "2026-10-23T04:46:09.116099+00:00"
+      },
+      {
+        "city": "tokyo",
+        "view": "new",
+        "count": 32,
+        "ids": [
+          "15527",
+          "15539",
+          "15540",
+          "15551",
+          "15552",
+          "15553",
+          "15554",
+          "15558",
+          "15966",
+          "15967",
+          "15968",
+          "16289",
+          "16325",
+          "17170",
+          "17171",
+          "17172",
+          "17173",
+          "17628",
+          "18027",
+          "18043",
+          "18051",
+          "18058",
+          "18102",
+          "18103",
+          "18300",
+          "18301",
+          "18302",
+          "18422",
+          "18444",
+          "18445",
+          "18446",
+          "18447"
+        ],
+        "verifiedAtUtc": "2026-10-23T04:46:09.334401+00:00"
+      },
+      {
+        "city": "tokyo",
+        "view": "top",
+        "count": 30,
+        "ids": [
+          "15525",
+          "15528",
+          "15529",
+          "15530",
+          "15531",
+          "15532",
+          "15533",
+          "15534",
+          "15535",
+          "15536",
+          "15537",
+          "15542",
+          "15543",
+          "15545",
+          "15547",
+          "15548",
+          "15549",
+          "15550",
+          "15559",
+          "15560",
+          "15561",
+          "15562",
+          "15903",
+          "15974",
+          "18122",
+          "18123",
+          "18140",
+          "18141",
+          "18157",
+          "18158"
+        ],
+        "verifiedAtUtc": "2026-10-23T04:46:09.599106+00:00"
+      },
+      {
+        "city": "tokyo",
+        "view": "discounts",
+        "count": 40,
+        "ids": [
+          "https://and-gallery.com/#ikebukuro",
+          "https://and-gallery.com/#yurakucho",
+          "https://cocco.eastone.co.jp/shop/gotanda",
+          "https://cocco.eastone.co.jp/shop/kameido",
+          "https://conrad-tokyo.hiltonjapan.co.jp/restaurants/cerise",
+          "https://conrad-tokyo.hiltonjapan.co.jp/restaurants/chinablue",
+          "https://conrad-tokyo.hiltonjapan.co.jp/restaurants/twentyeight",
+          "https://csm-cafe.ltr-online.com/lp/csm-cafe-s012",
+          "https://gourmetpress.net/1488798/",
+          "https://miabocca.eastone.co.jp/shop/Ikebukuro",
+          "https://miabocca.eastone.co.jp/shop/Shakujii-park",
+          "https://miabocca.eastone.co.jp/shop/Shinjuku-takasimaya",
+          "https://mimimi-jiyugaoka.com/#floor1",
+          "https://onodera-group.com/kaitensushi-ikebukuro/",
+          "https://prtimes.jp/main/html/rd/p/000000009.000161200.html",
+          "https://prtimes.jp/main/html/rd/p/000000048.000152772.html",
+          "https://prtimes.jp/main/html/rd/p/000000196.000049183.html",
+          "https://prtimes.jp/main/html/rd/p/000000356.000048489.html",
+          "https://prtimes.jp/main/html/rd/p/000000592.000071323.html",
+          "https://prtimes.jp/main/html/rd/p/000004178.000003860.html",
+          "https://salvatore.jp/restaurant/asagaya/",
+          "https://sarabethsrestaurants.jp/location/omotesando/",
+          "https://sarabethsrestaurants.jp/location/shinagawa/",
+          "https://sarabethsrestaurants.jp/location/shinjuku/",
+          "https://sarabethsrestaurants.jp/location/tokyo/",
+          "https://shibakoen.bar-shinkai.com/",
+          "https://store-info.skylark.co.jp/syabuyo/map/198490/",
+          "https://tabelog.com/en/tokyo/A1303/A130301/13198692/",
+          "https://tokyo.hiltonjapan.co.jp/restaurants/st_georges_bar",
+          "https://www.andaztokyo.jp/restaurants/jp/thetavern-grill-lounge",
+          "https://www.herofield.com/bbq/tokyoprince/",
+          "https://www.hiramatsurestaurant.jp/jardindessens-tokyo/",
+          "https://www.mesm.jp/en/eat-drink/chefs-theatre.html",
+          "https://www.newotani.co.jp/tokyo/restaurant/gardenlounge/",
+          "https://www.quil-fait-bon.com/pages/aoyama",
+          "https://www.quil-fait-bon.com/pages/grand-maison-ginza",
+          "https://www.quil-fait-bon.com/pages/shinjuku",
+          "https://www.quil-fait-bon.com/pages/tokyo-dome-city",
+          "https://www.quil-fait-bon.com/pages/tokyo-skytree-town-solamachi",
+          "https://www.sunamo.jp/floor/shop_detail.html?UC=1_028"
+        ],
+        "verifiedAtUtc": "2026-10-23T04:46:10.442826+00:00"
+      },
+      {
+        "city": "sapporo",
+        "view": "upcoming",
+        "count": 10,
+        "ids": [
+          "15569",
+          "15570",
+          "15571",
+          "15597",
+          "15926",
+          "15970",
+          "18047",
+          "18054",
+          "18810",
+          "19427"
+        ],
+        "verifiedAtUtc": "2026-10-23T04:46:18.450142+00:00"
+      },
+      {
+        "city": "sapporo",
+        "view": "new",
+        "count": 34,
+        "ids": [
+          "15568",
+          "15580",
+          "15586",
+          "15587",
+          "15588",
+          "15589",
+          "15590",
+          "15591",
+          "15592",
+          "15595",
+          "15596",
+          "16293",
+          "16296",
+          "17103",
+          "17104",
+          "17105",
+          "17624",
+          "17627",
+          "18028",
+          "18029",
+          "18030",
+          "18031",
+          "18048",
+          "18049",
+          "18055",
+          "18056",
+          "18057",
+          "18104",
+          "18105",
+          "18124",
+          "18125",
+          "18305",
+          "18306",
+          "19426"
+        ],
+        "verifiedAtUtc": "2026-10-23T04:46:18.784877+00:00"
+      },
+      {
+        "city": "sapporo",
+        "view": "top",
+        "count": 30,
+        "ids": [
+          "15563",
+          "15564",
+          "15565",
+          "15566",
+          "15567",
+          "15572",
+          "15573",
+          "15574",
+          "15575",
+          "15576",
+          "15577",
+          "15578",
+          "15579",
+          "15581",
+          "15582",
+          "15583",
+          "15584",
+          "15585",
+          "15593",
+          "15594",
+          "15598",
+          "15599",
+          "15600",
+          "15601",
+          "15602",
+          "15603",
+          "15604",
+          "15605",
+          "15606",
+          "15607"
+        ],
+        "verifiedAtUtc": "2026-10-23T04:46:19.036276+00:00"
+      },
+      {
+        "city": "sapporo",
+        "view": "discounts",
+        "count": 34,
+        "ids": [
+          "https://anan.fuji-tatsu.co.jp/shop/sapporo-sinoro/",
+          "https://chocottosushi-kiwami.owst.jp/",
+          "https://cocco.eastone.co.jp/shop/kitahachijo",
+          "https://cocco.eastone.co.jp/shop/kitaichijo",
+          "https://cocco.eastone.co.jp/shop/kotoniekimae",
+          "https://cocco.eastone.co.jp/shop/miyanosawa",
+          "https://cocco.eastone.co.jp/shop/shindohigashi",
+          "https://cocco.eastone.co.jp/shop/souen",
+          "https://grand1934.com/restaurant/garden-dining-waraku/",
+          "https://grand1934.com/restaurant/kokaku/",
+          "https://grand1934.com/restaurant/lobby-lounge-mizar/",
+          "https://grand1934.com/restaurant/northern-terrace-diner/",
+          "https://grand1934.com/restaurant/old-saloon1934/",
+          "https://miabocca.eastone.co.jp/shop/Kita2jo",
+          "https://miabocca.eastone.co.jp/shop/Kotoni-station",
+          "https://miabocca.eastone.co.jp/shop/Sapporo-station",
+          "https://miabocca.eastone.co.jp/shop/atsubetsuminami",
+          "https://miabocca.eastone.co.jp/shop/sapporoduo",
+          "https://michiru.dkdining.com/sapporo/",
+          "https://prtimes.jp/main/html/rd/p/000000010.000134951.html",
+          "https://store-info.skylark.co.jp/syabuyo/map/198489/",
+          "https://www.anahisapporosusukino.com/restaurants/verde/",
+          "https://www.hyatt.com/hyatt-centric/ja-JP/ctsct-hyatt-centric-sapporo/dining",
+          "https://www.jrhotels.co.jp/tower/restaurant/skyj/",
+          "https://www.keioplaza-sapporo.co.jp/restaurants/akizu/",
+          "https://www.keioplaza-sapporo.co.jp/restaurants/crossvault/",
+          "https://www.keioplaza-sapporo.co.jp/restaurants/glass/",
+          "https://www.keioplaza-sapporo.co.jp/restaurants/miyama/",
+          "https://www.keioplaza-sapporo.co.jp/restaurants/yamanami/",
+          "https://www.princehotels.co.jp/sapporo/restaurant/alldaydininggrandeur",
+          "https://www.princehotels.co.jp/sapporo/restaurant/fuyojo",
+          "https://www.princehotels.co.jp/sapporo/restaurant/katsura",
+          "https://www.princehotels.co.jp/sapporo/restaurant/top_prince",
+          "https://www.tokyuhotels.co.jp/sapporostream/restaurant/splish/plan/angel_devil/index.html"
+        ],
+        "verifiedAtUtc": "2026-10-23T04:46:19.541726+00:00"
+      }
+    ]
+  },
+  "verifiedAtUtc": "2026-10-23T04:46:40.630639+00:00",
+  "scheduleVerification": {
+    "checks": 23,
+    "evidence": [
+      {
+        "name": "THE CITY BAKERY — JR Nagoya Takashimaya",
+        "boundaries": [
+          [
+            "2026-11-11T18:00:00+09:00",
+            false
+          ],
+          [
+            "2026-11-12T07:30:00+09:00",
+            false
+          ],
+          [
+            "2026-11-12T09:59:59+09:00",
+            false
+          ],
+          [
+            "2026-11-12T10:00:00+09:00",
+            true
+          ],
+          [
+            "2026-11-12T19:59:59+09:00",
+            true
+          ],
+          [
+            "2026-11-12T20:00:00+09:00",
+            false
+          ],
+          [
+            "2026-11-13T10:00:00+09:00",
+            false
+          ]
+        ],
+        "nextStart": {
+          "startsAt": "2026-11-12T01:00:00.000Z",
+          "end": "20:00"
+        },
+        "quotaNotInventory": "The calendar does not guarantee remaining limited stock."
+      },
+      {
+        "name": "PAUL — JR Nagoya Takashimaya",
+        "boundaries": [
+          [
+            "2026-11-11T18:00:00+09:00",
+            false
+          ],
+          [
+            "2026-11-12T07:30:00+09:00",
+            false
+          ],
+          [
+            "2026-11-12T09:59:59+09:00",
+            false
+          ],
+          [
+            "2026-11-12T10:00:00+09:00",
+            true
+          ],
+          [
+            "2026-11-12T19:59:59+09:00",
+            true
+          ],
+          [
+            "2026-11-12T20:00:00+09:00",
+            false
+          ],
+          [
+            "2026-11-13T07:29:59+09:00",
+            false
+          ],
+          [
+            "2026-11-13T07:30:00+09:00",
+            true
+          ],
+          [
+            "2026-11-15T08:00:00+09:00",
+            true
+          ],
+          [
+            "2026-11-17T19:59:59+09:00",
+            true
+          ],
+          [
+            "2026-11-17T20:00:00+09:00",
+            false
+          ],
+          [
+            "2026-11-18T07:30:00+09:00",
+            false
+          ]
+        ],
+        "nextStart": {
+          "startsAt": "2026-11-12T01:00:00.000Z",
+          "end": "20:00"
+        },
+        "quotaNotInventory": "The calendar does not guarantee remaining limited stock."
+      }
+    ]
+  }
+}

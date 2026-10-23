@@ -1,8 +1,8 @@
 # Japan restaurant target audit — October 16, 2026
 
-Target: **30 distinct eligible restaurants in every tab of every city**. **641 verified memberships; 117 still missing**. This target remains incomplete; surplus in another tab does not offset a shortage.
+Target: **30 distinct eligible restaurants in every tab of every city**. **643 verified memberships; 117 still missing**. This target remains incomplete; surplus in another tab does not offset a shortage.
 
-**Batch 116 published and publicly verified (October 22, 2026):** Added **Tomoe Sushi — Sapporo Tanukikoji** (local 19423 / production 19427), with an operator-managed **November 21 opening**, **18 menu/detail rows** and **one credited Azure photograph of the exact host building**. The ¥16,000 Nagi course retains its named sections, variable recommendations and advertised 17-item/11-nigiri description; included components are not individually priced or treated as à-la-carte orders. The ¥2,000 private-room fee is per room. Exterior photo is explicitly labelled host building, with capture date unpublished; completed 5 Fvenue/food gallery remains queued. General hours and narrower two-hour course window stay distinct; no invented Special, phone or dining score. Exact profiles, every public menu row, photo credits and native Coming soon title/image links verified locally/production. All 24 sections agree at **641 memberships / 117 missing**; Sapporo Coming soon **10/30**, reducing its shortage by one. Odashi menu/gallery and YUI/SHINOYA chronology holds recorded. Production push/deploy explicitly requested. [Research](restaurant-japan-round2-2026-10-22.md). [Batch evidence](restaurant-japan-30-japan116-2026-10-22.json).
+**Batch 117 published and publicly verified (October 22, 2026):** Enriched the existing Nagoya Takashimaya CITY BAKERY, PAUL and le suprême pins (15900–15902) from the new October 22 retailer announcement. Retained five ordinary menu rows, added four, resolved two missing prices, and saved two paid opening bundles with four offer-menu rows. Seven credited Azure product photos supplement all three original galleries. CITY’s ¥3,520 bundle is November 12 only; PAUL’s ¥3,300 bundle is November 12–17. Limited-time menus are explicitly not discounts; no inferred bundle varieties, daily stock or savings. Original pins, dates, authors and media are preserved. Exact profiles, all 13 public menu rows, photo credits and five native title/image guide links passed in both environments; 23 schedule assertions passed. All 24 sections agree at **643 memberships / 117 missing**; Nagoya Specials is **34/30**. Under-target sections remain queued with specific source gaps. [Research](restaurant-japan-round3-2026-10-22.md). [Batch evidence](restaurant-japan-30-japan117-2026-10-22.json).
 
 All 24 local and public production guide counts agree. Batches 88–110 now have complete public HTTPS verification; earlier timeout checkpoints below are historical.
 
@@ -11,7 +11,7 @@ All 24 local and public production guide counts agree. Batches 88–110 now have
 | Fukuoka | 9/30 | 25/30 | 30/30 | 36/30 |
 | Osaka | 11/30 | 31/30 | 30/30 | 30/30 |
 | Kyoto | 12/30 | 33/30 | 30/30 | 35/30 |
-| Nagoya | 11/30 | 31/30 | 30/30 | 32/30 |
+| Nagoya | 11/30 | 31/30 | 30/30 | 34/30 |
 | Tokyo | 15/30 | 32/30 | 30/30 | 40/30 |
 | Sapporo | 10/30 | 34/30 | 30/30 | 34/30 |
 
@@ -34,7 +34,7 @@ All 24 local and public production guide counts agree. Batches 88–110 now have
 | Nagoya | Coming soon | 11 | 11 | 30 | 19 |
 | Nagoya | Just opened | 31 | 31 | 30 | 0 |
 | Nagoya | Top restaurants | 30 | 30 | 30 | 0 |
-| Nagoya | Specials | 32 | 32 | 30 | 0 |
+| Nagoya | Specials | 34 | 34 | 30 | 0 |
 | Tokyo | Coming soon | 15 | 15 | 30 | 15 |
 | Tokyo | Just opened | 32 | 32 | 30 | 0 |
 | Tokyo | Top restaurants | 30 | 30 | 30 | 0 |
