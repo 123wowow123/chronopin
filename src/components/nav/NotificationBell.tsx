@@ -377,7 +377,7 @@ function ConflictBadge({ n }: { n: Notification }) {
   );
 }
 
-function TradeDay({ items, day, renderRow, expanded }: { items: Notification[]; day: number; renderRow: (n: Notification) => React.ReactNode; expanded?: boolean }) {
+function TradeDay({ items, day, renderRow, expanded, wide }: { items: Notification[]; day: number; renderRow: (n: Notification) => React.ReactNode; expanded?: boolean; wide?: boolean }) {
   const t = useT();
   const locale = useIntlLocale();
   const dayLabel = day >= -1
@@ -437,12 +437,12 @@ function TradeDay({ items, day, renderRow, expanded }: { items: Notification[]; 
             const list = open ? all : all.filter(([, people]) => people > 1);
             return (
             <span key={key} className={`flex min-w-0 flex-col rounded-lg bg-field px-2.5 py-1.5 ring-1 ring-inset ${count ? tone : 'text-subtle ring-line'}`}>
-              <span className="flex items-baseline justify-between gap-2 text-xs font-medium">
-                {t(`notifications.${key}`)}
-                <span className="text-base font-semibold tabular-nums">{count}</span>
+              <span className={`flex items-baseline justify-between gap-2 font-medium ${wide ? 'text-sm' : 'text-xs'}`}>
+                <span className={wide ? 'relative -top-0.5' : undefined}>{t(`notifications.${key}`)}</span>
+                <span className={`font-semibold tabular-nums ${wide ? 'text-lg' : 'text-base'}`}>{count}</span>
               </span>
               {list.length ? (
-                <span className="mt-0.5 grid grid-cols-1 text-[11px] text-muted">
+                <span className={`mt-0.5 grid grid-cols-1 text-muted ${wide ? 'gap-x-6 gap-y-0.5 text-sm sm:grid-cols-2' : 'text-[11px]'}`}>
                   {list.map(([ticker, people]) => (
                     <span key={ticker} className="flex min-w-0 items-baseline gap-1.5">
                       <span className="w-4 shrink-0 text-end tabular-nums">{people}</span>
@@ -463,20 +463,20 @@ function TradeDay({ items, day, renderRow, expanded }: { items: Notification[]; 
           })}
         </span>
       </div>
-      {open ? <ul id={listId} className="divide-y divide-line border-t border-line">{items.map(renderRow)}</ul> : null}
+      {open ? <ul id={listId} className={`border-t border-line ${wide ? WIDE_LIST : 'divide-y divide-line'}`}>{items.map(renderRow)}</ul> : null}
     </div>
   );
 }
 
 // One collapsible block holding today's and yesterday's panes stuck together.
-function TradeGroup({ groups, renderRow, href, fixed, guest }: { href: string; fixed?: boolean; guest?: boolean; groups: { day: number; items: Notification[] }[]; renderRow: (n: Notification) => React.ReactNode }) {
+function TradeGroup({ groups, renderRow, href, fixed, guest, wide }: { wide?: boolean; href: string; fixed?: boolean; guest?: boolean; groups: { day: number; items: Notification[] }[]; renderRow: (n: Notification) => React.ReactNode }) {
   const t = useT();
   // The group's one chevron expands every day; days carry no chevron of their own.
   const [openState, setOpen] = useState(!guest);
   const open = fixed || openState;
   const bodyId = useId();
   return (
-    <li className="text-sm">
+    <li className="text-sm lg:col-span-full">
       <div className="flex items-center gap-2 px-4 py-2.5">
         {fixed ? (
           <span className="min-w-0 font-semibold text-ink">{t('notifications.tradesToday')}</span>
@@ -502,11 +502,17 @@ function TradeGroup({ groups, renderRow, href, fixed, guest }: { href: string; f
       </div>
       {/* Collapsed, each day still shows its buy and sell totals. */}
       <div id={bodyId} className="divide-y divide-line border-t border-line">
-        {groups.map((g) => <TradeDay key={g.day} items={g.items} day={g.day} renderRow={renderRow} expanded={open} />)}
+        {groups.map((g) => <TradeDay key={g.day} items={g.items} day={g.day} renderRow={renderRow} expanded={open} wide={wide} />)}
       </div>
     </li>
   );
 }
+
+// The full page's list on a wide screen: as many columns of rows as fit,
+// a few rows filling the width, the trades group across all. The list is pulled a pixel past
+// the card so the last row and column draw no border against its edge.
+const WIDE_LIST =
+  'divide-y divide-line lg:-mb-px lg:-me-px lg:grid lg:grid-cols-[repeat(auto-fit,minmax(24rem,1fr))] lg:divide-y-0 lg:[&>li]:border-b lg:[&>li]:border-e lg:[&>li]:border-line';
 
 function NotificationItems({
   items,
@@ -519,7 +525,8 @@ function NotificationItems({
   only,
   guest,
   controlled,
-}: ReturnType<typeof useNotificationList> & { onNavigate?: () => void; listClassName?: string; only?: Section; guest?: boolean; controlled?: boolean }) {
+  wide,
+}: ReturnType<typeof useNotificationList> & { onNavigate?: () => void; listClassName?: string; only?: Section; guest?: boolean; controlled?: boolean; wide?: boolean }) {
   const t = useT();
   const headingId = useId();
   if (failed) return (
@@ -599,11 +606,11 @@ function NotificationItems({
                               ] as const
                             ).map(([key, count, tickers, tone]) => (
                               <span key={key} className={`flex min-w-0 flex-col rounded-lg bg-field px-2.5 py-1.5 ring-1 ring-inset ${count ? tone : 'text-subtle ring-line'}`}>
-                                <span className="flex items-baseline justify-between gap-2 text-xs font-medium">
-                                  {t(`notifications.${key}`)}
-                                  <span className="text-base font-semibold tabular-nums">{count ?? 0}</span>
+                                <span className={`flex items-center justify-between gap-2 leading-none font-medium ${wide ? 'text-sm' : 'text-xs'}`}>
+                                  <span className={wide ? 'relative -top-0.5' : undefined}>{t(`notifications.${key}`)}</span>
+                                  <span className={`font-semibold leading-none tabular-nums ${wide ? 'text-lg' : 'text-base'}`}>{count ?? 0}</span>
                                 </span>
-                                {tickers?.length ? <span className="truncate text-[11px] text-muted">{tickers.slice(0, 4).join(', ')}</span> : null}
+                                {tickers?.length ? <span className={`truncate text-muted ${wide ? 'text-xs' : 'text-[11px]'}`}>{tickers.slice(0, 4).join(', ')}</span> : null}
                               </span>
                             ))}
                           </span>
@@ -694,10 +701,10 @@ function NotificationItems({
               <span className="tabular-nums">{rows.length}</span>
             </span>
           </h3>}
-          <ul className="divide-y divide-line">
+          <ul className={wide ? WIDE_LIST : 'divide-y divide-line'}>
             {entriesOf(rows).map((entry) =>
               entry.kind === 'trades' ? (
-                <TradeGroup key="trades" groups={entry.groups} renderRow={renderRow} fixed={controlled} guest={guest} href={guest ? '/trades' : '/notifications/trades'} />
+                <TradeGroup key="trades" wide={wide} groups={entry.groups} renderRow={renderRow} fixed={controlled} guest={guest} href={guest ? '/trades' : '/notifications/trades'} />
               ) : (
                 renderRow(entry.n)
               ),
@@ -989,7 +996,7 @@ export function NotificationsFeed({ section }: { section?: string }) {
   return (
     <div className="surface overflow-hidden">
       <LocalWeatherRow className="border-b border-line" />
-      <NotificationItems {...list} only={SECTIONS.find((x) => x === section)} />
+      <NotificationItems {...list} wide only={SECTIONS.find((x) => x === section)} />
     </div>
   );
 }

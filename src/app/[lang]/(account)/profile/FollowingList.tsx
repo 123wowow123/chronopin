@@ -1,7 +1,6 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
-import { FollowButton } from '@/components/pin/FollowButton';
 import { UserAvatar } from '@/components/ui/UserAvatar';
 import { api } from '@/lib/client/api';
 import { useT } from '@/lib/client/i18n';
@@ -9,6 +8,35 @@ import Link from '@/components/ui/Link';
 
 type Followed = { id: number; userName: string; pictureUrl: string | null };
 export type FollowingPage = { following: Followed[]; total: number; next: number | null };
+
+// Unfollow with a plain button (the follow pill only shows its Unfollow label
+// on hover), left in place as Follow so a slip can be undone.
+function UnfollowButton({ userId, userName }: { userId: number; userName: string }) {
+  const t = useT();
+  const [following, setFollowing] = useState(true);
+  const [busy, setBusy] = useState(false);
+  async function toggle() {
+    setBusy(true);
+    try {
+      if (following) await api.delete(`/api/users/${userId}/follow`);
+      else await api.post(`/api/users/${userId}/follow`);
+      setFollowing(!following);
+    } finally {
+      setBusy(false);
+    }
+  }
+  return (
+    <button
+      type="button"
+      onClick={toggle}
+      disabled={busy}
+      title={t(following ? 'follow.unfollowName' : 'follow.followName', { name: userName })}
+      className={`btn rounded-full px-4 py-1.5 ${following ? 'btn-secondary hover:text-danger-soft' : 'btn-primary'}`}
+    >
+      {t(following ? 'follow.unfollow' : 'follow.follow')}
+    </button>
+  );
+}
 
 // How long the filter waits for a pause in the typing.
 const FILTER_DELAY_MS = 250;
@@ -75,14 +103,14 @@ export function FollowingList({ userId, initial, pageSize }: { userId: number; i
       ) : null}
 
       {shown ? (
-        <ul className="surface divide-y divide-line lg:grid lg:grid-cols-2 lg:divide-y-0 lg:[&>li]:border-b lg:[&>li]:border-line [&>li:last-child]:border-b-0 lg:[&>li:nth-last-child(2):nth-child(odd)]:border-b-0">
+        <ul className="surface divide-y divide-line lg:grid lg:grid-cols-2 lg:[&>li:only-child]:col-span-2 lg:divide-y-0 lg:[&>li]:border-b lg:[&>li]:border-line [&>li:last-child]:border-b-0 lg:[&>li:nth-last-child(2):nth-child(odd)]:border-b-0">
           {page.following.map((u) => (
             <li key={u.id} className="flex items-center gap-3 px-4 py-3">
               <UserAvatar userName={u.userName} pictureUrl={u.pictureUrl} className="size-9 text-base" />
               <Link href={`/search?q=user:${encodeURIComponent(u.userName.replace(/^@/, ''))}`} className="min-w-0 flex-1 truncate font-semibold text-ink hover:text-link hover:no-underline">
                 {u.userName}
               </Link>
-              <FollowButton userId={u.id} userName={u.userName} following />
+              <UnfollowButton userId={u.id} userName={u.userName} />
             </li>
           ))}
         </ul>

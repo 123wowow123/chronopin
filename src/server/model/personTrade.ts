@@ -145,6 +145,17 @@ export default class PersonTrade {
     return rows[0];
   }
 
+  // The people whose trades this user watches, newest watch first.
+  static async listWatchedBy(userId: number) {
+    return db.query<{ id: number; name: string; slug: string; photoUrl: string | null }>(
+      `SELECT pe."id", pe."name", pe."slug", pe."photoUrl"
+       FROM "PersonTradeWatch" w JOIN "Person" pe ON pe."id" = w."personId"
+       WHERE w."userId" = $1 AND w."utcDeletedDateTime" IS NULL
+       ORDER BY w."utcCreatedDateTime" DESC`,
+      [userId],
+    );
+  }
+
   // Watching every person's trades (0190).
   static async watchAll(userId: number) {
     const rows = await db.query(

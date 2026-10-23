@@ -68,6 +68,20 @@ export default class ThreadWatch {
     });
   }
 
+  // The threads this reader watches, newest watch first, each named by the
+  // pin it was watched from.
+  static async listFor(userId: number) {
+    return db.query<{ id: number; title: string; thumb: string | null }>(
+      `SELECT p."id", p."title", (SELECT CASE WHEN m."type" = 'video' THEN m."thumbName" ELSE COALESCE(m."originalUrl", m."thumbName") END
+         FROM "PinMedium" pm JOIN "Medium" m ON m."id" = pm."mediumId"
+         WHERE pm."pinId" = p."id" AND pm."utcDeletedDateTime" IS NULL
+         ORDER BY pm."weight" DESC, m."id" LIMIT 1) AS "thumb" FROM "ThreadWatch" w JOIN "Pin" p ON p."id" = w."pinId"
+       WHERE w."userId" = $1 AND p."utcDeletedDateTime" IS NULL
+       ORDER BY w."utcCreatedDateTime" DESC`,
+      [userId],
+    );
+  }
+
   // Every thread watch, for backup:data.
   static getAll() {
     return db.query(`SELECT "userId", "pinId", "utcCreatedDateTime" FROM "ThreadWatch" ORDER BY "utcCreatedDateTime", "userId", "pinId"`);

@@ -44,6 +44,18 @@ export default class CompanyFollow {
     return { changed: !!rows.length };
   }
 
+  // The companies this user follows, newest follow first.
+  static async listFor(userId: number) {
+    return db.query<{ id: number; name: string; logoUrl: string | null; tickerSymbol: string | null }>(
+      `
+      SELECT c."id", c."name", c."logoUrl", c."tickerSymbol"
+      FROM "CompanyFollow" f JOIN "Company" c ON c."id" = f."companyId"
+      WHERE f."userId" = $1 AND f."utcDeletedDateTime" IS NULL
+      ORDER BY f."utcCreatedDateTime" DESC, f."id" DESC`,
+      [userId],
+    );
+  }
+
   // How many people follow this company, and whether the viewer is one of
   // them. Without a viewer (signed out) `following` is false.
   static async status(companyId: number, viewerId: number | null | undefined): Promise<CompanyFollowStatus> {

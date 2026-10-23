@@ -423,6 +423,8 @@ political figure in other countries
 do 6am/6pm job on prod using this session
 
 
+need manage notification and following page to unfollow easily
+
 
 datacenter
 https://www.cnbc.com/2026/10/19/how-data-centers-are-reshaping-americas-aging-grid-pine-island-minnesota-google.html

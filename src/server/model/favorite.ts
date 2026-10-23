@@ -62,6 +62,20 @@ export default class Favorite extends PinUserLink {
     return `${rows[0].count}:${rows[0].changed ? new Date(rows[0].changed).getTime() : 0}`;
   }
 
+  // The pins this user watches, newest watch first, up to `limit`.
+  static async listPinsFor(userId: number, limit = 100) {
+    return db.query<{ id: number; title: string; thumb: string | null }>(
+      `SELECT p."id", p."title", (SELECT CASE WHEN m."type" = 'video' THEN m."thumbName" ELSE COALESCE(m."originalUrl", m."thumbName") END
+         FROM "PinMedium" pm JOIN "Medium" m ON m."id" = pm."mediumId"
+         WHERE pm."pinId" = p."id" AND pm."utcDeletedDateTime" IS NULL
+         ORDER BY pm."weight" DESC, m."id" LIMIT 1) AS "thumb" FROM "Favorite" f JOIN "Pin" p ON p."id" = f."pinId"
+       WHERE f."userId" = $1 AND f."utcDeletedDateTime" IS NULL AND p."utcDeletedDateTime" IS NULL
+       ORDER BY COALESCE(f."utcUpdatedDateTime", f."utcCreatedDateTime") DESC
+       LIMIT $2`,
+      [userId, limit],
+    );
+  }
+
   // Which of these pins this user watches. Answers the whole of a page at
   // once, so a page of cards can be cached with no viewer in it.
   static async watchedAmong(userId: number, pinIds: number[]): Promise<number[]> {

@@ -7,7 +7,7 @@ import { useT } from '@/lib/client/i18n';
 
 const TABS = [
   { href: '/profile', label: 'account.profile' },
-  { href: '/profile/following', label: 'profile.following' },
+  { href: '/profile/notifications', label: 'notifications.title' },
   { href: '/profile/blocked', label: 'profile.blocked' },
   { href: '/profile/preferences', label: 'profile.preferences' },
   { href: '/profile/ads', label: 'profile.ads' },
