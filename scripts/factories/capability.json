@@ -75,7 +75,8 @@
             "title": "Bayer to invest 2.2 billion U.S. dollars in new manufacturing site in the United States",
             "publishedDate": "2026-10-02",
             "quote": "2.2 billion U.S. dollars"
-          }
+          },
+          "key": "investment"
         },
         {
           "label": "Permanent jobs",
@@ -86,7 +87,8 @@
             "title": "Bayer to invest 2.2 billion U.S. dollars in new manufacturing site in the United States",
             "publishedDate": "2026-10-02",
             "quote": "around 600 high-value jobs"
-          }
+          },
+          "key": "employment"
         },
         {
           "label": "Module targets",
@@ -97,6 +99,54 @@
             "title": "Bayer to invest 2.2 billion U.S. dollars in new manufacturing site in the United States",
             "publishedDate": "2026-10-02",
             "quote": "expected to become operational in 2031"
+          },
+          "key": "timeline"
+        },
+        {
+          "key": "products",
+          "label": "Products and processes",
+          "value": "Drug-substance and drug-product manufacturing; oncology, cardiovascular and renal-care medicines.",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.bayer.com/en-us/united-states/news-and-stories/2026/new-pharmas-manufacturing-site",
+            "title": "Bayer to invest 2.2 billion U.S. dollars in new manufacturing site in the United States",
+            "publishedDate": "2026-10-02",
+            "quote": "combine drug substance and drug product manufacturing"
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Campus investment announced",
+          "date": "2026-10-02",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.bayer.com/en-us/united-states/news-and-stories/2026/new-pharmas-manufacturing-site",
+            "title": "Bayer to invest 2.2 billion U.S. dollars in new manufacturing site in the United States",
+            "publishedDate": "2026-10-02",
+            "quote": "October 2, 2026"
+          }
+        },
+        {
+          "label": "Drug-substance module operations",
+          "date": "2031",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.bayer.com/en-us/united-states/news-and-stories/2026/new-pharmas-manufacturing-site",
+            "title": "Bayer to invest 2.2 billion U.S. dollars in new manufacturing site in the United States",
+            "publishedDate": "2026-10-02",
+            "quote": "expected to become operational in 2031"
+          }
+        },
+        {
+          "label": "Drug-product module",
+          "date": "2034",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.bayer.com/en-us/united-states/news-and-stories/2026/new-pharmas-manufacturing-site",
+            "title": "Bayer to invest 2.2 billion U.S. dollars in new manufacturing site in the United States",
+            "publishedDate": "2026-10-02",
+            "quote": "planned to follow in 2034"
           }
         }
       ]
@@ -186,7 +236,8 @@
             "title": "SK hynix Holds Groundbreaking Ceremony for HBM Production Base in Indiana, “Beginning a New Future for US-Korea AI”",
             "publishedDate": "2026-08-28",
             "quote": "a total expected investment of over $4 billion"
-          }
+          },
+          "key": "investment"
         },
         {
           "label": "Operating workforce",
@@ -197,11 +248,72 @@
             "title": "SK hynix Holds Groundbreaking Ceremony for HBM Production Base in Indiana, “Beginning a New Future for US-Korea AI”",
             "publishedDate": "2026-08-28",
             "quote": "approximately 1,000 personnel"
-          }
+          },
+          "key": "employment"
         },
         {
           "label": "Readiness targets",
           "value": "Cleanroom October 2028; HBM mass production in H2 2029.",
+          "basis": "planned",
+          "source": {
+            "url": "https://news.skhynix.com/en/groundbreaking-ceremony-in-indiana/",
+            "title": "SK hynix Holds Groundbreaking Ceremony for HBM Production Base in Indiana, “Beginning a New Future for US-Korea AI”",
+            "publishedDate": "2026-08-28",
+            "quote": "mass production of next-generation HBM in the second half of 2029"
+          },
+          "key": "timeline"
+        },
+        {
+          "key": "siteArea",
+          "label": "Site size",
+          "value": "133.5 acres; site area, not building floor area.",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.skhynix.com/westlafayette.IN/",
+            "title": "SK hynix West Lafayette",
+            "publishedDate": null,
+            "quote": "133.5 ac Site"
+          }
+        },
+        {
+          "key": "products",
+          "label": "Products and processes",
+          "value": "HBM advanced packaging and testing, plus an R&D testbed; wafers produced in Korea.",
+          "basis": "planned",
+          "source": {
+            "url": "https://news.skhynix.com/en/groundbreaking-ceremony-in-indiana/",
+            "title": "SK hynix Holds Groundbreaking Ceremony for HBM Production Base in Indiana, “Beginning a New Future for US-Korea AI”",
+            "publishedDate": "2026-08-28",
+            "quote": "advanced packaging and testing"
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Groundbreaking ceremony",
+          "date": "2026-08-27",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://news.skhynix.com/en/groundbreaking-ceremony-in-indiana/",
+            "title": "SK hynix Holds Groundbreaking Ceremony for HBM Production Base in Indiana, “Beginning a New Future for US-Korea AI”",
+            "publishedDate": "2026-08-28",
+            "quote": "on the 27th(local time)"
+          }
+        },
+        {
+          "label": "Cleanroom ready",
+          "date": "October 2028",
+          "basis": "planned",
+          "source": {
+            "url": "https://news.skhynix.com/en/groundbreaking-ceremony-in-indiana/",
+            "title": "SK hynix Holds Groundbreaking Ceremony for HBM Production Base in Indiana, “Beginning a New Future for US-Korea AI”",
+            "publishedDate": "2026-08-28",
+            "quote": "open its cleanroom by October 2028"
+          }
+        },
+        {
+          "label": "HBM mass production",
+          "date": "Second half of 2029",
           "basis": "planned",
           "source": {
             "url": "https://news.skhynix.com/en/groundbreaking-ceremony-in-indiana/",
@@ -297,7 +409,8 @@
             "title": "Governor Spanberger, Avio USA Break Ground on $500 Million Manufacturing Facility in Pittsylvania Creating 1,500 Jobs",
             "publishedDate": "2026-09-29",
             "quote": "new $500 million manufacturing facility"
-          }
+          },
+          "key": "investment"
         },
         {
           "label": "Floor area",
@@ -308,11 +421,84 @@
             "title": "AVIO USA BREAKS GROUND IN VIRGINIA ON FIRST U.S. SOLID ROCKET MOTOR FACILITY, STRENGTHENING DEFENSE SUPPLY CHAIN AND CREATING OVER 1,000 JOBS",
             "publishedDate": "2026-09-29",
             "quote": "approximately 900,000-square-foot"
-          }
+          },
+          "key": "floorArea"
         },
         {
           "label": "Production target",
           "value": "Construction completion late 2028; production anticipated early 2029.",
+          "basis": "planned",
+          "source": {
+            "url": "https://aviousa.com/groundbreaking",
+            "title": "AVIO USA BREAKS GROUND IN VIRGINIA ON FIRST U.S. SOLID ROCKET MOTOR FACILITY, STRENGTHENING DEFENSE SUPPLY CHAIN AND CREATING OVER 1,000 JOBS",
+            "publishedDate": "2026-09-29",
+            "quote": "production anticipated to begin in early 2029"
+          },
+          "key": "timeline"
+        },
+        {
+          "key": "employment",
+          "label": "Employment",
+          "value": "Roughly 1,500 technical jobs expected; this is not a current employee count.",
+          "basis": "planned",
+          "source": {
+            "url": "https://aviousa.com/groundbreaking",
+            "title": "AVIO USA BREAKS GROUND IN VIRGINIA ON FIRST U.S. SOLID ROCKET MOTOR FACILITY, STRENGTHENING DEFENSE SUPPLY CHAIN AND CREATING OVER 1,000 JOBS",
+            "publishedDate": "2026-09-29",
+            "quote": "roughly 1,500 high-quality technical jobs"
+          }
+        },
+        {
+          "key": "capacity",
+          "label": "Production capacity",
+          "value": "Thousands of solid rocket motors annually; exact unit count not published.",
+          "basis": "planned",
+          "source": {
+            "url": "https://aviousa.com/groundbreaking",
+            "title": "AVIO USA BREAKS GROUND IN VIRGINIA ON FIRST U.S. SOLID ROCKET MOTOR FACILITY, STRENGTHENING DEFENSE SUPPLY CHAIN AND CREATING OVER 1,000 JOBS",
+            "publishedDate": "2026-09-29",
+            "quote": "thousands of solid rocket motors annually"
+          }
+        },
+        {
+          "key": "products",
+          "label": "Products and processes",
+          "value": "Solid rocket motors for U.S. tactical missile programs and multiple defense customers.",
+          "basis": "planned",
+          "source": {
+            "url": "https://aviousa.com/groundbreaking",
+            "title": "AVIO USA BREAKS GROUND IN VIRGINIA ON FIRST U.S. SOLID ROCKET MOTOR FACILITY, STRENGTHENING DEFENSE SUPPLY CHAIN AND CREATING OVER 1,000 JOBS",
+            "publishedDate": "2026-09-29",
+            "quote": "solid rocket motors"
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Groundbreaking",
+          "date": "2026-09-29",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://aviousa.com/groundbreaking",
+            "title": "AVIO USA BREAKS GROUND IN VIRGINIA ON FIRST U.S. SOLID ROCKET MOTOR FACILITY, STRENGTHENING DEFENSE SUPPLY CHAIN AND CREATING OVER 1,000 JOBS",
+            "publishedDate": "2026-09-29",
+            "quote": "Sept. 29, 2026"
+          }
+        },
+        {
+          "label": "Construction completion",
+          "date": "Late 2028",
+          "basis": "planned",
+          "source": {
+            "url": "https://aviousa.com/groundbreaking",
+            "title": "AVIO USA BREAKS GROUND IN VIRGINIA ON FIRST U.S. SOLID ROCKET MOTOR FACILITY, STRENGTHENING DEFENSE SUPPLY CHAIN AND CREATING OVER 1,000 JOBS",
+            "publishedDate": "2026-09-29",
+            "quote": "completed by late 2028"
+          }
+        },
+        {
+          "label": "Production begins",
+          "date": "Early 2029",
           "basis": "planned",
           "source": {
             "url": "https://aviousa.com/groundbreaking",
@@ -408,7 +594,8 @@
             "title": "U. S. Steel Breaks Ground on $475 Million Quench and Tempering Facility at Fairfield Tubular Operations",
             "publishedDate": "2026-09-21",
             "quote": "new $475 million Quench and Tempering (Q&T) facility"
-          }
+          },
+          "key": "investment"
         },
         {
           "label": "Permanent jobs",
@@ -419,11 +606,61 @@
             "title": "U. S. Steel Breaks Ground on $475 Million Quench and Tempering Facility at Fairfield Tubular Operations",
             "publishedDate": "2026-09-21",
             "quote": "about 250 permanent jobs"
-          }
+          },
+          "key": "employment"
         },
         {
           "label": "Completion target",
           "value": "2029, with no precise day published.",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.ussteel.com/es/media/newsroom-details/-/blogs/u-s-steel-breaks-ground-on-475-million-quench-and-tempering-facility-at-fairfield-tubular-operations",
+            "title": "U. S. Steel Breaks Ground on $475 Million Quench and Tempering Facility at Fairfield Tubular Operations",
+            "publishedDate": "2026-09-21",
+            "quote": "expected to be completed in 2029"
+          },
+          "key": "timeline"
+        },
+        {
+          "key": "floorArea",
+          "label": "Building size",
+          "value": "Approximately 400,000 square feet of new Q&T manufacturing space.",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.constructionequipmentguide.com/u-s-steel-breaks-ground-on-its-new-475m-fairfield-tubular-facility/72469",
+            "title": "U. S. Steel Breaks Ground On Its New $475M Fairfield Tubular Facility",
+            "publishedDate": "2026-10-09",
+            "quote": "approximately 400,000 sq. ft. of new manufacturing space"
+          }
+        },
+        {
+          "key": "products",
+          "label": "Products and processes",
+          "value": "Quenching and tempering of tubular steel products for energy exploration and production.",
+          "basis": "planned",
+          "source": {
+            "url": "https://www.ussteel.com/es/media/newsroom-details/-/blogs/u-s-steel-breaks-ground-on-475-million-quench-and-tempering-facility-at-fairfield-tubular-operations",
+            "title": "U. S. Steel Breaks Ground on $475 Million Quench and Tempering Facility at Fairfield Tubular Operations",
+            "publishedDate": "2026-09-21",
+            "quote": "a two-stage heat-treatment process"
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Ceremonial groundbreaking",
+          "date": "2026-09-21",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.ussteel.com/es/media/newsroom-details/-/blogs/u-s-steel-breaks-ground-on-475-million-quench-and-tempering-facility-at-fairfield-tubular-operations",
+            "title": "U. S. Steel Breaks Ground on $475 Million Quench and Tempering Facility at Fairfield Tubular Operations",
+            "publishedDate": "2026-09-21",
+            "quote": "September 21, 2026"
+          }
+        },
+        {
+          "label": "Q&T facility completion",
+          "date": "2029",
           "basis": "planned",
           "source": {
             "url": "https://www.ussteel.com/es/media/newsroom-details/-/blogs/u-s-steel-breaks-ground-on-475-million-quench-and-tempering-facility-at-fairfield-tubular-operations",
@@ -519,7 +756,8 @@
             "title": "L3Harris Opens Next‑Generation Solid Rocket Motor Facility to Boost Production Capacity",
             "publishedDate": "2026-10-20",
             "quote": "double current capacity"
-          }
+          },
+          "key": "capacity"
         },
         {
           "label": "Production scope",
@@ -530,6 +768,32 @@
             "title": "L3Harris Opens Next‑Generation Solid Rocket Motor Facility to Boost Production Capacity",
             "publishedDate": "2026-10-20",
             "quote": "support production for the U.S. Army’s Guided Multiple Launch Rocket System (GMLRS)"
+          },
+          "key": "products"
+        },
+        {
+          "key": "floorArea",
+          "label": "Building size",
+          "value": "60,000 square feet for the new factory; excludes the broader Camden campus.",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.axios.com/2026/10/22/l3harris-gmlrs-motors-arkansas-factory",
+            "title": "L3Harris opens robotic rocket motor factory in Arkansas",
+            "publishedDate": "2026-10-22",
+            "quote": "60,000-square-foot factory"
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Factory ribbon cutting",
+          "date": "2026-10-20",
+          "basis": "demonstrated",
+          "source": {
+            "url": "https://www.l3harris.com/newsroom/press-release/2026/10/l3harris-opens-next-generation-solid-rocket-motor-facility-boost",
+            "title": "L3Harris Opens Next‑Generation Solid Rocket Motor Facility to Boost Production Capacity",
+            "publishedDate": "2026-10-20",
+            "quote": "Oct. 20, 2026"
           }
         }
       ]
@@ -612,7 +876,8 @@
             "title": "Novelis Produces First Coil at Greenfield Aluminum Rolling and Recycling Plant in Alabama",
             "publishedDate": "2026-10-07",
             "quote": "its $5 billion aluminum recycling and rolling plant"
-          }
+          },
+          "key": "investment"
         },
         {
           "label": "Design capacity",
@@ -623,7 +888,8 @@
             "title": "Novelis Produces First Coil at Greenfield Aluminum Rolling and Recycling Plant in Alabama",
             "publishedDate": "2026-10-07",
             "quote": "600 kilotonnes of annual rolled aluminum capacity"
-          }
+          },
+          "key": "capacity"
         },
         {
           "label": "Commercial shipments",
@@ -634,17 +900,55 @@
             "title": "Novelis Produces First Coil at Greenfield Aluminum Rolling and Recycling Plant in Alabama",
             "publishedDate": "2026-10-07",
             "quote": "on track to begin in the second quarter of 2027"
+          },
+          "key": "timeline"
+        },
+        {
+          "key": "employment",
+          "label": "Employment",
+          "value": "Up to 1,000 new jobs at full operation; hiring is not verified as complete.",
+          "basis": "planned",
+          "source": {
+            "url": "https://investors.novelis.com/news-events/press-releases/detail/1427/novelis-produces-first-coil-at-greenfield-aluminum-rolling-and-recycling-plant-in-alabama",
+            "title": "Novelis Produces First Coil at Greenfield Aluminum Rolling and Recycling Plant in Alabama",
+            "publishedDate": "2026-10-07",
+            "quote": "up to 1,000 new jobs"
           }
         },
         {
-          "label": "Commissioning milestone",
-          "value": "First cold-mill coil reported October 7, 2026.",
+          "key": "products",
+          "label": "Products and processes",
+          "value": "Rolled aluminum for beverage packaging, automotive and specialty markets; integrated recycling.",
+          "basis": "planned",
+          "source": {
+            "url": "https://investors.novelis.com/news-events/press-releases/detail/1427/novelis-produces-first-coil-at-greenfield-aluminum-rolling-and-recycling-plant-in-alabama",
+            "title": "Novelis Produces First Coil at Greenfield Aluminum Rolling and Recycling Plant in Alabama",
+            "publishedDate": "2026-10-07",
+            "quote": "beverage packaging, automotive and specialty product markets"
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "label": "First cold-mill coil reported",
+          "date": "2026-10-07",
           "basis": "demonstrated",
           "source": {
             "url": "https://investors.novelis.com/news-events/press-releases/detail/1427/novelis-produces-first-coil-at-greenfield-aluminum-rolling-and-recycling-plant-in-alabama",
             "title": "Novelis Produces First Coil at Greenfield Aluminum Rolling and Recycling Plant in Alabama",
             "publishedDate": "2026-10-07",
             "quote": "has produced the first coil on the cold mill"
+          }
+        },
+        {
+          "label": "Customer qualification and commercial shipments",
+          "date": "Second quarter of 2027",
+          "basis": "planned",
+          "source": {
+            "url": "https://investors.novelis.com/news-events/press-releases/detail/1427/novelis-produces-first-coil-at-greenfield-aluminum-rolling-and-recycling-plant-in-alabama",
+            "title": "Novelis Produces First Coil at Greenfield Aluminum Rolling and Recycling Plant in Alabama",
+            "publishedDate": "2026-10-07",
+            "quote": "on track to begin in the second quarter of 2027"
           }
         }
       ]

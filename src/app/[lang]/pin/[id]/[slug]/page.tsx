@@ -1,3 +1,5 @@
+import { PinFactoryBuildout } from '@/components/pin/PinFactoryBuildout';
+import { hasFactoryBuildout, hasFactoryRubric } from '@/lib/pinFactory';
 import Anchor from '@/components/ui/Anchor';
 import type { Metadata } from 'next';
 import Link from '@/components/ui/Link';
@@ -210,7 +212,7 @@ async function PinContent({ params, searchParams }: Pick<Props, 'params' | 'sear
   // The tags follow whatever the aside shows above them; first in the column they need no gap.
   // An AI model pin gets the cost/quality chart; the chart asks for its own data.
   const modelChart = !!pin.categories?.includes('AI') || !!pin.tags?.some((tag) => tag.name === 'AI Models');
-  const tagsClass = (pin.latitude != null && pin.longitude != null) || gameInfo || taste || perf || carPerf || gasCarPerf || aircraftPerf || videoPerf || llmPerf || dining || factory || hotel || modelChart ? 'mt-4' : '';
+  const tagsClass = (pin.latitude != null && pin.longitude != null) || gameInfo || taste || perf || carPerf || gasCarPerf || aircraftPerf || videoPerf || llmPerf || dining || hasFactoryBuildout(factory) || hasFactoryRubric(factory) || hotel || modelChart ? 'mt-4' : '';
 
   const isPredicted = isPredictedPin(pin);
   const altSet = new Set(alternateNames.map((a) => a.name.toLowerCase()));
@@ -282,6 +284,7 @@ async function PinContent({ params, searchParams }: Pick<Props, 'params' | 'sear
           {aircraftPerf ? <PinAircraftPerf perf={aircraftPerf} t={t} locale={t.locale} evidence={pinEvidence(pin)} className="mt-4" /> : null}
           {videoPerf ? <PinVideoPerf perf={videoPerf} t={t} locale={t.locale} evidence={pinEvidence(pin)} className="mt-4" /> : null}
           {llmPerf ? <PinLlmPerf perf={llmPerf} t={t} locale={t.locale} evidence={pinEvidence(pin)} className="mt-4" /> : null}
+          {factory ? <PinFactoryBuildout factory={factory} t={t} className="mt-4" /> : null}
           {factory ? <PinFactory factory={factory} t={t} className="mt-4" /> : null}
           {dining ? <PinDining dining={dining} t={t} locale={t.locale} evidence={pinEvidence(pin)} className="mt-4" /> : null}
           {hotel ? (

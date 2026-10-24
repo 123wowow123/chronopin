@@ -1,0 +1,112 @@
+{
+  "date": "2026-10-24",
+  "trigger": "Owner reported deployment; replayed prepared profiles.",
+  "environment": "production",
+  "baseUrl": "https://www.chronopin.com",
+  "apiProfiles": [
+    {
+      "key": "bayer",
+      "pinId": 19702,
+      "status": "verified",
+      "checkedAt": "2026-10-24T22:16:07.491Z"
+    },
+    {
+      "key": "skhynix",
+      "pinId": 19703,
+      "status": "verified",
+      "checkedAt": "2026-10-24T22:16:08.449Z"
+    },
+    {
+      "key": "avio",
+      "pinId": 19704,
+      "status": "verified",
+      "checkedAt": "2026-10-24T22:16:09.224Z"
+    },
+    {
+      "key": "fairfield",
+      "pinId": 19705,
+      "status": "verified",
+      "checkedAt": "2026-10-24T22:16:09.612Z"
+    },
+    {
+      "key": "l3harris",
+      "pinId": 19706,
+      "status": "verified",
+      "checkedAt": "2026-10-24T22:16:10.036Z"
+    },
+    {
+      "key": "novelis",
+      "pinId": 19707,
+      "status": "verified",
+      "checkedAt": "2026-10-24T22:16:10.615Z"
+    }
+  ],
+  "preservedFields": [
+    "title",
+    "description",
+    "sourceUrl",
+    "longFormSummary",
+    "utcStartDateTime",
+    "utcEndDateTime",
+    "price",
+    "priceCurrency",
+    "user",
+    "media",
+    "references"
+  ],
+  "deploymentPerformed": false,
+  "browser": {
+    "results": [
+      {
+        "key": "bayer",
+        "id": 19702,
+        "url": "https://www.chronopin.com/pin/19702/bayer-announces-a-2-2-billion-pharmaceutical-campus-in-new-albany",
+        "status": 200,
+        "radar": true,
+        "citations": 5
+      },
+      {
+        "key": "skhynix",
+        "id": 19703,
+        "url": "https://www.chronopin.com/pin/19703/sk-hynix-breaks-ground-on-its-over-4-billion-indiana-hbm-packaging-plant",
+        "status": 200,
+        "radar": true,
+        "citations": 6
+      },
+      {
+        "key": "avio",
+        "id": 19704,
+        "url": "https://www.chronopin.com/pin/19704/avio-breaks-ground-on-its-500-million-virginia-rocket-motor-plant",
+        "status": 200,
+        "radar": true,
+        "citations": 6
+      },
+      {
+        "key": "fairfield",
+        "id": 19705,
+        "url": "https://www.chronopin.com/pin/19705/u-s-steel-breaks-ground-on-fairfield-s-475-million-quench-and-tempering-facility",
+        "status": 200,
+        "radar": true,
+        "citations": 6
+      },
+      {
+        "key": "l3harris",
+        "id": 19706,
+        "url": "https://www.chronopin.com/pin/19706/l3harris-opens-camden-s-arsenal-of-freedom-rocket-motor-factory",
+        "status": 200,
+        "radar": true,
+        "citations": 5
+      },
+      {
+        "key": "novelis",
+        "id": 19707,
+        "url": "https://www.chronopin.com/pin/19707/novelis-produces-the-first-coil-at-its-5-billion-bay-minette-aluminum-plant",
+        "status": 200,
+        "radar": true,
+        "citations": 6
+      }
+    ],
+    "phonePanelFits": true,
+    "issues": []
+  }
+}

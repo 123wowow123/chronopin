@@ -1,0 +1,189 @@
+{
+  "checkedAt": "2026-10-24",
+  "catalog": "scripts/factories/capability.json",
+  "profiles": [
+    {
+      "key": "bayer",
+      "localPinId": 19643,
+      "productionPinId": 19702,
+      "populatedMetricCategories": [
+        "investment",
+        "employment",
+        "timeline",
+        "products"
+      ],
+      "milestoneCount": 3,
+      "scoredAxisCount": 2
+    },
+    {
+      "key": "skhynix",
+      "localPinId": 19644,
+      "productionPinId": 19703,
+      "populatedMetricCategories": [
+        "investment",
+        "employment",
+        "timeline",
+        "siteArea",
+        "products"
+      ],
+      "milestoneCount": 3,
+      "scoredAxisCount": 3
+    },
+    {
+      "key": "avio",
+      "localPinId": 19645,
+      "productionPinId": 19704,
+      "populatedMetricCategories": [
+        "investment",
+        "floorArea",
+        "timeline",
+        "employment",
+        "capacity",
+        "products"
+      ],
+      "milestoneCount": 3,
+      "scoredAxisCount": 3
+    },
+    {
+      "key": "fairfield",
+      "localPinId": 19646,
+      "productionPinId": 19705,
+      "populatedMetricCategories": [
+        "investment",
+        "employment",
+        "timeline",
+        "floorArea",
+        "products"
+      ],
+      "milestoneCount": 2,
+      "scoredAxisCount": 3
+    },
+    {
+      "key": "l3harris",
+      "localPinId": 19647,
+      "productionPinId": 19706,
+      "populatedMetricCategories": [
+        "capacity",
+        "products",
+        "floorArea"
+      ],
+      "milestoneCount": 1,
+      "scoredAxisCount": 3
+    },
+    {
+      "key": "novelis",
+      "localPinId": 19648,
+      "productionPinId": 19707,
+      "populatedMetricCategories": [
+        "investment",
+        "capacity",
+        "timeline",
+        "employment",
+        "products"
+      ],
+      "milestoneCount": 2,
+      "scoredAxisCount": 2
+    }
+  ],
+  "localApiVerification": [
+    {
+      "key": "bayer",
+      "pinId": 19643,
+      "status": "verified",
+      "checkedAt": "2026-10-24T22:30:20.574Z"
+    },
+    {
+      "key": "skhynix",
+      "pinId": 19644,
+      "status": "verified",
+      "checkedAt": "2026-10-24T22:30:20.626Z"
+    },
+    {
+      "key": "avio",
+      "pinId": 19645,
+      "status": "verified",
+      "checkedAt": "2026-10-24T22:30:20.660Z"
+    },
+    {
+      "key": "fairfield",
+      "pinId": 19646,
+      "status": "verified",
+      "checkedAt": "2026-10-24T22:30:20.694Z"
+    },
+    {
+      "key": "l3harris",
+      "pinId": 19647,
+      "status": "verified",
+      "checkedAt": "2026-10-24T22:30:20.720Z"
+    },
+    {
+      "key": "novelis",
+      "pinId": 19648,
+      "status": "verified",
+      "checkedAt": "2026-10-24T22:30:20.748Z"
+    }
+  ],
+  "localBrowserVerification": {
+    "results": [
+      {
+        "key": "bayer",
+        "id": 19643,
+        "cards": 4,
+        "radarVisible": false,
+        "milestones": 3,
+        "status": 200
+      },
+      {
+        "key": "skhynix",
+        "id": 19644,
+        "cards": 5,
+        "radarVisible": true,
+        "milestones": 3,
+        "status": 200
+      },
+      {
+        "key": "avio",
+        "id": 19645,
+        "cards": 6,
+        "radarVisible": true,
+        "milestones": 3,
+        "status": 200
+      },
+      {
+        "key": "fairfield",
+        "id": 19646,
+        "cards": 5,
+        "radarVisible": true,
+        "milestones": 2,
+        "status": 200
+      },
+      {
+        "key": "l3harris",
+        "id": 19647,
+        "cards": 3,
+        "radarVisible": true,
+        "milestones": 1,
+        "status": 200
+      },
+      {
+        "key": "novelis",
+        "id": 19648,
+        "cards": 5,
+        "radarVisible": false,
+        "milestones": 2,
+        "status": 200
+      }
+    ],
+    "phonePanelFits": true,
+    "japanese": true,
+    "issues": []
+  },
+  "productionReplay": "Pending deployment of the updated factory API; production profiles left unchanged during this update.",
+  "schemaMigrationRequired": false,
+  "deployed": false,
+  "validation": {
+    "focusedTests": 41,
+    "typecheck": "passed",
+    "targetedLint": "passed"
+  }
+}

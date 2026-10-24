@@ -2,12 +2,48 @@ import { describe, it, expect, vi } from 'vitest';
 import { readFileSync } from 'node:fs';
 vi.mock('../db', () => ({ query: vi.fn() }));
 import { factoryProblem } from './pinFactory';
-import { factoryScores, isFactoryScore, hasFactoryScores } from '@/lib/pinFactory';
+import { FACTORY_KEYS, factoryScores, isFactoryScore, hasFactoryScores, hasFactoryRubric } from '@/lib/pinFactory';
 import type { FactoryProfile } from '@/lib/pinFactory';
 const catalog = JSON.parse(readFileSync('scripts/factories/capability.json', 'utf8')) as { key: string; profile: FactoryProfile }[];
 const valid = () => structuredClone(catalog[0].profile);
 
 describe('factory evidence contract', () => {
+  it('shows the rubric only from three filled axes, counting a valid zero score', () => {
+    const p = valid();
+    for (const a of Object.values(p.axes)) a.score = null;
+    expect(hasFactoryRubric(null)).toBe(false);
+    expect(hasFactoryRubric(p)).toBe(false);
+    for (const [index, key] of FACTORY_KEYS.entries()) {
+      p.axes[key].score = index === 0 ? 0 : 3;
+      expect(hasFactoryRubric(p)).toBe(index >= 2);
+    }
+  });
+  it('validates buildout categories and preserves backwards-compatible payloads', () => {
+    const p = valid();
+    p.metrics[0].key = 'investment';
+    p.metrics.push({ ...p.metrics[0] });
+    expect(factoryProblem(p)).toMatch(/Duplicate factory metric/);
+    p.metrics.pop();
+    for (const m of p.metrics) delete m.key;
+    delete p.milestones;
+    expect(factoryProblem(p)).toEqual(p);
+  });
+  it('requires sourced milestones and distinguishes real events from future targets', () => {
+    const p = valid();
+    const source = p.metrics[0].source;
+    p.milestones = [{ label: 'Announcement', date: '2026-10-02', basis: 'demonstrated', source }];
+    expect(factoryProblem(p)).toEqual(p);
+    p.milestones[0].date = '2027-01-01';
+    expect(factoryProblem(p)).toMatch(/future/);
+    p.milestones[0].basis = 'planned';
+    expect(factoryProblem(p)).toEqual(p);
+    p.milestones[0].date = '2027-02-30';
+    expect(factoryProblem(p)).toMatch(/real/);
+    p.milestones[0].date = 'Second half of 2029';
+    expect(factoryProblem(p)).toEqual(p);
+    p.milestones[0].source = { ...source, url: 'javascript:alert(1)' };
+    expect(factoryProblem(p)).toMatch(/source/);
+  });
   it('accepts the researched catalog and keeps missing figures null', () => {
     expect(catalog).toHaveLength(6);
     for (const { profile } of catalog) {

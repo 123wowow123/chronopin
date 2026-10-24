@@ -28,7 +28,7 @@ async function run() {
     const pin = await call('GET', `/api/pins/${id}`);
     if (pin.title !== e.title || pin.sourceUrl !== e.sourceUrl) throw Error(`${e.key}: pin identity changed; refusing write.`);
     const cited = new Set([pin.sourceUrl, ...pin.references.map((r: { url: string }) => r.url)]);
-    for (const source of [...Object.values(profile.axes).flatMap(a => [...a.sources, ...(a.benchmark?.sources ?? [])]), ...profile.metrics.map(m => m.source)]) {
+    for (const source of [...Object.values(profile.axes).flatMap(a => [...a.sources, ...(a.benchmark?.sources ?? [])]), ...profile.metrics.map(m => m.source), ...(profile.milestones ?? []).map(m => m.source)]) {
       if (!cited.has(source.url)) throw Error(`${e.key}: scoring source must first be added to the pin references/wiki: ${source.url}`);
     }
     const before = await call('GET', `/api/pins/${id}/factory`);

@@ -1,5 +1,5 @@
 import * as db from '../db';
-import { FACTORY_KEYS, FACTORY_RUBRIC_YEAR, FACTORY_STATUSES, isFactoryScore, type FactoryEvidence, type FactoryProfile, type PinFactoryJson } from '@/lib/pinFactory';
+import { FACTORY_KEYS, FACTORY_METRIC_KEYS, FACTORY_RUBRIC_YEAR, FACTORY_STATUSES, isFactoryScore, type FactoryEvidence, type FactoryMetricKey, type FactoryProfile, type PinFactoryJson } from '@/lib/pinFactory';
 
 const day = (v: unknown): v is string => typeof v === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(v) && !Number.isNaN(Date.parse(v)) && new Date(v).toISOString().slice(0, 10) === v;
 const text = (v: unknown, max: number): v is string => typeof v === 'string' && v.trim().length > 0 && v.length <= max;
@@ -40,13 +40,31 @@ export function factoryProblem(input: unknown): FactoryProfile | string {
   }
   if (!Array.isArray(input.metrics) || input.metrics.length > 12) return 'metrics must be a list of at most 12 sourced figures.';
   const metrics: FactoryProfile['metrics'] = [];
+  const metricKeys = new Set<FactoryMetricKey>();
   for (const m of input.metrics) {
     if (!record(m) || !text(m.label, 100) || !text(m.value, 500) || !['planned', 'demonstrated'].includes(String(m.basis)) || !evidence(m.source)) return 'Each metric needs a label, value with units, planned/demonstrated basis and source.';
     if (input.status === 'announced' && m.basis === 'demonstrated') return 'An announced factory cannot claim demonstrated metrics.';
     if (m.source.publishedDate && m.source.publishedDate > assessmentDate) return 'Metric evidence cannot postdate the assessment.';
-    metrics.push({ label: m.label, value: m.value, basis: m.basis as 'planned' | 'demonstrated', source: m.source });
+    if (m.key !== undefined && !FACTORY_METRIC_KEYS.includes(m.key as FactoryMetricKey)) return 'Invalid factory metric key.';
+    const key = m.key as FactoryMetricKey | undefined;
+    if (key && metricKeys.has(key)) return `Duplicate factory metric: ${key}. Combine figures with the same scope in one field.`;
+    if (key) metricKeys.add(key);
+    metrics.push({ ...(key ? { key } : {}), label: m.label, value: m.value, basis: m.basis as 'planned' | 'demonstrated', source: m.source });
   }
-  return { sector: input.sector.trim(), status: input.status as FactoryProfile['status'], assessmentDate: input.assessmentDate, rubricYear: input.rubricYear, source: input.source as FactoryProfile['source'], axes, metrics };
+  let milestones: FactoryProfile['milestones'];
+  if (input.milestones !== undefined) {
+    if (!Array.isArray(input.milestones) || input.milestones.length > 12) return 'milestones must be a list of at most 12 sourced events.';
+    milestones = [];
+    for (const m of input.milestones) {
+      if (!record(m) || !text(m.label, 100) || !text(m.date, 100) || !['planned', 'demonstrated'].includes(String(m.basis)) || !evidence(m.source)) return 'Each milestone needs a label, date or time window, basis and source.';
+      if (/^\d{4}-\d{2}-\d{2}$/.test(m.date) && !day(m.date)) return 'A milestone day must be a real YYYY-MM-DD date.';
+      if (m.basis === 'demonstrated' && /^\d{4}-\d{2}-\d{2}$/.test(m.date) && m.date > assessmentDate) return 'A demonstrated milestone cannot be in the future.';
+      if (m.source.publishedDate && m.source.publishedDate > assessmentDate) return 'Milestone evidence cannot postdate the assessment.';
+      // An announcement itself is an observed event even for a still-planned factory.
+      milestones.push({ label: m.label, date: m.date, basis: m.basis as 'planned' | 'demonstrated', source: m.source });
+    }
+  }
+  return { sector: input.sector.trim(), status: input.status as FactoryProfile['status'], assessmentDate: input.assessmentDate, rubricYear: input.rubricYear, source: input.source as FactoryProfile['source'], axes, metrics, ...(milestones ? { milestones } : {}) };
 }
 
 export async function factoryForPin(pinId: number): Promise<PinFactoryJson | null> {
