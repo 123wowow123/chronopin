@@ -9,6 +9,7 @@
 //   npx tsx scripts/routes/osmLine.ts --kind powerline --relation 123 --pins 4947 --dry
 
 import '../env';
+import fs from 'node:fs';
 import { parseArgs } from 'node:util';
 import { roundCoords, type PinSiteShapeJson, type SiteFeature } from '@/lib/siteShape';
 import { saveSiteShape, siteShapeForPin } from '@/server/model/pinSiteShape';
@@ -87,7 +88,7 @@ async function main() {
   const before = lines.reduce((n, l) => n + l.length, 0);
   const after = slim.reduce((n, l) => n + l.length, 0);
   const first = els[0];
-  console.log(`${els.map((e) => `${e.type}/${e.id} ${e.tags?.name ?? ''}`).join('; ')}: ${lines.length} ways, ${before} -> ${after} points (${Math.round(JSON.stringify(slim).length / 1024)} KB)`);
+  console.log(`${els.length > 4 ? `${els.length} elements (${first.tags?.name ?? first.id}...)` : els.map((e) => `${e.type}/${e.id} ${e.tags?.name ?? ''}`).join('; ')}: ${lines.length} ways, ${before} -> ${after} points (${Math.round(JSON.stringify(slim).length / 1024)} KB)`);
   const feature: SiteFeature = {
     type: 'Feature',
     geometry: slim.length === 1 ? { type: 'LineString', coordinates: roundCoords(slim[0]) } : { type: 'MultiLineString', coordinates: roundCoords(slim) },
@@ -103,6 +104,8 @@ async function main() {
       sourceUrl: old?.sourceUrl && old.source !== 'OpenStreetMap' ? old.sourceUrl : `https://www.openstreetmap.org/${first.type}/${first.id}`,
     };
     await saveSiteShape(pinId, shape);
+    fs.mkdirSync('.scrape/line-shapes', { recursive: true });
+    fs.writeFileSync(`.scrape/line-shapes/${pinId}-${kind}.json`, JSON.stringify(shape));
   }
   console.log(`saved for pins ${pinIds.join(', ')}`);
 }
