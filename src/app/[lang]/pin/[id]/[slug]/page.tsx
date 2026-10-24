@@ -60,8 +60,8 @@ import { contentForSource } from '@/server/model/restaurantContent';
 import { StoreLogo } from '@/components/pin/StoreLogo';
 import { streamingService, watchOrder } from '@/lib/streaming';
 import { isWordmark, StreamingLogo } from '@/components/pin/StreamingLogo';
-import { AdColumn, AdRow } from '@/components/ads/AdBlock';
-import { AdsenseBanner, AdsenseColumn } from '@/components/ads/AdsensePanel';
+import { AdRow } from '@/components/ads/AdBlock';
+import { AdsenseBanner } from '@/components/ads/AdsensePanel';
 import { adsenseAllowed } from '@/lib/adsense';
 import { ageOn } from '@/lib/ads';
 import { ShopButtons } from '@/components/pin/ShopButtons';
@@ -272,6 +272,7 @@ async function PinContent({ params, searchParams }: Pick<Props, 'params' | 'sear
           ) : null}
 
           {gameInfo ? <PinGameInfo info={gameInfo} t={t} className="mt-4" /> : null}
+          <PinModelChart pinId={pin.id} has={modelChart} className="mt-4" />
           {taste ? <PinTaste taste={taste} t={t} locale={t.locale} evidence={pinEvidence(pin)} className="mt-4" /> : null}
           {perf ? <PinPerf perf={perf} t={t} locale={t.locale} className="mt-4" /> : null}
           {carPerf ? <PinCarPerf perf={carPerf} t={t} locale={t.locale} evidence={pinEvidence(pin)} className="mt-4" /> : null}
@@ -290,7 +291,6 @@ async function PinContent({ params, searchParams }: Pick<Props, 'params' | 'sear
               className="mt-4"
             />
           ) : null}
-          <PinModelChart pinId={pin.id} has={modelChart} className="mt-4" />
 
           {/* Beside the pin on wide screens, under its map, game facts, taste
               profile and car performance rubric; after them on phones. */}
@@ -322,8 +322,6 @@ async function PinContent({ params, searchParams }: Pick<Props, 'params' | 'sear
             <PinCommentsSection pinId={pin.id} />
           </Suspense>
 
-          {/* The tall space the side column leaves under the comments. */}
-          {ads['pin-side'] ? google['pin-side'] ? <AdsenseColumn unit={google['pin-side']} className="mt-6" /> : <AdColumn pinId={pin.id} className="mt-6" /> : null}
         </aside>
 
         {/* Across the foot of the page: a Google banner, when the admin has given it a unit. */}
@@ -335,6 +333,8 @@ async function PinContent({ params, searchParams }: Pick<Props, 'params' | 'sear
         <div data-pin-main-end className="min-w-0 lg:col-start-1 lg:row-start-2 lg:-mt-4 [&>:first-child]:mt-0">
           <PinReferences pinId={pin.id} authorId={pin.user?.id ?? pin.userId} evidence={pinEvidence(pin)} sourceReasoning={pin.dateConfidenceReasoning} dateRanges={pinDateRanges(pin, timeZone)} timeZone={timeZone} />
           <PinSuggest pinId={pin.id} />
+          {/* Fills the space the taller side column leaves under the left one. */}
+          {ads['pin-strip'] ? <AdRow slot="pin-strip" pinId={pin.id} count={4} className="mt-6" /> : null}
         </div>
       </div>
 

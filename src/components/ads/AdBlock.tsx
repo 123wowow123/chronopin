@@ -412,9 +412,9 @@ export function SponsoredLabel() {
 // One row of ads across the content: between the timeline's days (three on
 // a desktop, two on a tablet, one on a phone) or under a pin's tags (two
 // beside the pin, stacked on a phone). `className` places it.
-export function AdRow({ slot, pinId, className = '' }: { slot: 'timeline-row' | 'pin-strip'; pinId?: number; className?: string }) {
+export function AdRow({ slot, pinId, count, className = '' }: { slot: 'timeline-row' | 'pin-strip'; pinId?: number; count?: number; className?: string }) {
   const t = useT();
-  const { ref, ads } = useAds(slot, pinId);
+  const { ref, ads } = useAds(slot, pinId, count);
   const text = useAdText();
   if (!ads) return <div ref={ref} aria-hidden className={`h-px ${className}`} />;
   if (!ads.length) return null;
