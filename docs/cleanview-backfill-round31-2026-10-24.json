@@ -1,0 +1,3516 @@
+{
+  "checkedAt": "2026-10-24",
+  "scope": "Cleanview sourcing backfill round 31",
+  "outcome": {
+    "audited": 24,
+    "corrected": 16,
+    "held": 8,
+    "environmentActions": 48,
+    "azureFilesVerified": 47,
+    "newAzureFilesLinked": 23,
+    "replacementMaps": 16,
+    "galleryAssets": 7,
+    "nativePagesVerified": 32,
+    "sourceWikis": 23,
+    "companyWikisPerEnvironment": {
+      "local": 11,
+      "prod": 11
+    },
+    "postedMapEntries": 1377,
+    "mappedLiveNotYetAudited": 1070,
+    "deployed": false
+  },
+  "costEvidence": [],
+  "plan": {
+    "battery-hecate-norfolk-ma": {
+      "patch": {
+        "title": "Hecate Medway Energy Center: September 2026 FERC Complaint",
+        "description": "Hecate Energy Medway Energy Center LLC joined a September 30, 2026 complaint and waiver request concerning ISO New England interconnection deadlines. CME describes an earlier staged Medway proposal starting at 300 MW; current commissioning remains unverified.",
+        "sourceUrl": "https://public-inspection.federalregister.gov/2026-21364.pdf",
+        "references": [
+          {
+            "url": "https://public-inspection.federalregister.gov/2026-21364.pdf",
+            "title": "FERC — EL26-112-000 notice on comment periods",
+            "confidence": 95,
+            "publishedDate": "2026-10-19"
+          },
+          {
+            "url": "https://cme-energy.com/projects/medway-energy-center/",
+            "title": "CME Energy — Medway Energy Center",
+            "confidence": 95,
+            "publishedDate": null
+          }
+        ],
+        "longFormSummary": "<ul><li>The FERC notice names the legal applicant and describes an October 20 deadline to execute an LGIA, file it unexecuted or withdraw. It does not establish the applicant’s ultimate decision or commercial operation. Removed invented HecateGrid branding, $310M and exact future COD.<cite data-ref=\"https://public-inspection.federalregister.gov/2026-21364.pdf\"></cite></li><li>CME describes a 300–740 MW staged concept with a first 300 MW / 1,200 MWh stage. Its old 2026/2027 schedule and land-option chronology are not verified current milestones. Native MW is cleared pending current phase scope. ISO’s anonymous Norfolk request 1238 is not explicitly mapped to this legal entity here; the separate operating Medway Grid plant is not this proposal.<cite data-ref=\"https://cme-energy.com/projects/medway-energy-center/\"></cite></li><li>Timeline: Confirmed complaint filing date reported by FERC, not a commissioning date.<cite data-ref=\"https://public-inspection.federalregister.gov/2026-21364.pdf\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "confirmed",
+        "allDay": true,
+        "allDayStated": false,
+        "utcStartDateTime": "2026-09-30T00:00:00.000Z",
+        "dateConfidenceReasoning": "Confirmed complaint filing date reported by FERC, not a commissioning date.",
+        "originalStartDate": null,
+        "delayReasoning": null,
+        "company": "Hecate Energy",
+        "companyWikiUrl": null,
+        "address": "Medway, Norfolk County, Massachusetts; city-center context only, not verified battery parcel",
+        "tags": [
+          "Cleanview",
+          "Battery Storage"
+        ],
+        "latitude": 42.140282,
+        "longitude": -71.398039,
+        "media": [
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round31-2026-10-24/battery-hecate-norfolk-ma-topo.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 1000
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round31-2026-10-24/battery-hecate-norfolk-ma-relief.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 1000
+          }
+        ]
+      },
+      "power": "delete",
+      "datacenter": null,
+      "clearEnergy": false,
+      "gaps": [
+        "Resolve FERC complaint outcome, explicit queue mapping, current phase capacity/MWh, site control, permits, COD and published construction budget. No verified project-specific gallery photo found; CME download blocks direct retrieval."
+      ],
+      "mediaReplaced": true,
+      "mediaAdded": 0
+    },
+    "battery-lite-brite-suffolk-ma": {
+      "patch": {
+        "title": "Lite Brite QP 1148: 300 MW / 1,200 MWh Request; May 2028 Target",
+        "description": "ISO New England’s January 6, 2025 reliability letter identifies Flatiron’s Lite Brite Storage request in Boston at 300 MW discharge, 150 MW charging and 1,200 MWh, targeting May 26, 2028. The local 200 MW planning proposal has a different stated scope.",
+        "sourceUrl": "https://www.iso-ne.com/static-assets/documents/100019/queue_position_1148_qp_1148_battery_project_i_3_9_letter_fla_24_g01_fla_24_t01_es_24_t45.pdf",
+        "references": [
+          {
+            "url": "https://www.iso-ne.com/static-assets/documents/100019/queue_position_1148_qp_1148_battery_project_i_3_9_letter_fla_24_g01_fla_24_t01_es_24_t45.pdf",
+            "title": "ISO New England — QP 1148 Battery Project I.3.9 letter",
+            "confidence": 95,
+            "publishedDate": "2025-01-06"
+          },
+          {
+            "url": "https://irtt.iso-ne.com/reports/external",
+            "title": "ISO New England — current interconnection requests",
+            "confidence": 95,
+            "publishedDate": null
+          },
+          {
+            "url": "https://www.vhb.com/news/flatiron-battery-energy-storage-system-initiates-planning-review/",
+            "title": "VHB — Flatiron BESS initiates planning review",
+            "confidence": 95,
+            "publishedDate": "2024-09-30"
+          }
+        ],
+        "longFormSummary": "<ul><li>ISO’s I.3.9 finding of no significant adverse reliability effect is expressly not approval under other tariff provisions or a local construction permit. The current queue retains the May 26, 2028 proposed date. Removed unsupported $320M construction cost and 2029 COD.<cite data-ref=\"https://www.iso-ne.com/static-assets/documents/100019/queue_position_1148_qp_1148_battery_project_i_3_9_letter_fla_24_g01_fla_24_t01_es_24_t45.pdf\"></cite></li><li>VHB describes the local 35 Electric Avenue, Brighton proposal as 200 MW. That planning scope is not silently equated with the 300 MW ISO request. Native 300 MW follows the explicitly identified request, not an approved as-built facility. City page has a proposal attachment; no verified completed-project photograph found.<cite data-ref=\"https://www.vhb.com/news/flatiron-battery-energy-storage-system-initiates-planning-review/\"></cite></li><li>Timeline: ISO proposed in-service date, also current queue target; future requested date, not confirmed operation.<cite data-ref=\"https://www.iso-ne.com/static-assets/documents/100019/queue_position_1148_qp_1148_battery_project_i_3_9_letter_fla_24_g01_fla_24_t01_es_24_t45.pdf\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "estimated",
+        "allDay": true,
+        "allDayStated": false,
+        "utcStartDateTime": "2028-05-26T00:00:00.000Z",
+        "dateConfidenceReasoning": "ISO proposed in-service date, also current queue target; future requested date, not confirmed operation.",
+        "originalStartDate": null,
+        "delayReasoning": null,
+        "company": "Flatiron Energy",
+        "companyWikiUrl": null,
+        "address": "35 Electric Avenue, Brighton, Boston, Massachusetts; address-context point, not surveyed battery footprint",
+        "tags": [
+          "Cleanview",
+          "Battery Storage"
+        ],
+        "latitude": 42.356552235948,
+        "longitude": -71.154957996288,
+        "media": [
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round31-2026-10-24/battery-lite-brite-suffolk-ma-topo.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 1000
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round31-2026-10-24/battery-lite-brite-suffolk-ma-relief.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 1000
+          }
+        ]
+      },
+      "power": {
+        "megawatts": 300,
+        "kind": "storage",
+        "sourceUrl": "https://www.iso-ne.com/static-assets/documents/100019/queue_position_1148_qp_1148_battery_project_i_3_9_letter_fla_24_g01_fla_24_t01_es_24_t45.pdf",
+        "note": "Published project/request capacity, not measured output. ISO New England’s January 6, 2025 reliability letter identifies Flatiron’s Lite Brite Storage request in Boston at 300 MW discharge, 150 MW charging and 1,200 MWh, targeting May 26"
+      },
+      "datacenter": null,
+      "clearEnergy": false,
+      "gaps": [
+        "Reconcile local 200 MW planning scope with 300 MW ISO request, verify permits, current schedule, construction budget and gallery attachment."
+      ],
+      "mediaReplaced": true,
+      "mediaAdded": 0
+    },
+    "battery-moler-colfel-east-feliciana-la": {
+      "patch": {
+        "title": "East Feliciana S1142: 300 MW Storage Request; August 2027 Target",
+        "description": "MISO lists active request S1142, 300 MW battery storage in East Feliciana Parish, Louisiana, in its DPP 2026 cycle. The requested in-service date is August 20, 2027; Entergy Louisiana is the transmission owner, not an established developer.",
+        "sourceUrl": null,
+        "references": [
+          {
+            "url": "https://www.misoenergy.org/api/giqueue/getprojects",
+            "title": "MISO generator interconnection queue — S1142",
+            "confidence": 95,
+            "publishedDate": null
+          }
+        ],
+        "longFormSummary": "<ul><li>Queue entry is January 30, 2026; service type SIS. A queue request is not a local permit or operating project. Removed $300M, 1,200 MWh/four-hour design, developer attribution and unsupported approval claims. The queue does not publish a construction budget, developer or final storage parcel.<cite data-ref=\"https://www.misoenergy.org/api/giqueue/getprojects\"></cite></li><li>Timeline: MISO requested in-service date August 20, 2027; not commercial-operation confirmation.<cite data-ref=\"https://www.misoenergy.org/api/giqueue/getprojects\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "estimated",
+        "allDay": true,
+        "allDayStated": false,
+        "utcStartDateTime": "2027-08-20T00:00:00.000Z",
+        "dateConfidenceReasoning": "MISO requested in-service date August 20, 2027; not commercial-operation confirmation.",
+        "originalStartDate": null,
+        "delayReasoning": null,
+        "company": null,
+        "companyWikiUrl": null,
+        "address": "Retained approximate county/project-area marker; exact project parcel unverified",
+        "tags": [
+          "Cleanview",
+          "Battery Storage"
+        ]
+      },
+      "power": {
+        "megawatts": 300,
+        "kind": "storage",
+        "sourceUrl": "https://www.misoenergy.org/api/giqueue/getprojects",
+        "note": "Published project/request capacity, not measured output. MISO lists active request S1142, 300 MW battery storage in East Feliciana Parish, Louisiana, in its DPP 2026 cycle. The requested in-service date is August 20, 2027; Entergy Louisi"
+      },
+      "datacenter": null,
+      "clearEnergy": false,
+      "gaps": [
+        "Identify applicant, project-specific parcel/gallery, duration, local approvals and construction budget. Do not confuse separate solar requests at the same interconnection."
+      ]
+    },
+    "battery-thetford-tuscola-mi": {
+      "patch": {
+        "title": "Tuscola J4016: 300 MW Storage Request; December 2029 Target",
+        "description": "MISO lists active J4016, a 300 MW battery request in Tuscola County, Michigan, at the Atlanta–Thetford [Karn] 138 kV connection. Its requested in-service date is December 30, 2029; developer ownership is not identified.",
+        "sourceUrl": null,
+        "references": [
+          {
+            "url": "https://www.misoenergy.org/api/giqueue/getprojects",
+            "title": "MISO generator interconnection queue — J4016",
+            "confidence": 95,
+            "publishedDate": null
+          }
+        ],
+        "longFormSummary": "<ul><li>Queue entry is May 20, 2025, study cycle DPP 2026; ITC is the transmission owner. Removed unsupported DTE ownership, case U-21650, $300M, 1,200 MWh and exact 2028 operation. Other Thetford-named proposals are not automatically this request. No published project construction budget or verified project gallery established.<cite data-ref=\"https://www.misoenergy.org/api/giqueue/getprojects\"></cite></li><li>Timeline: MISO requested in-service date, not confirmed construction or operation.<cite data-ref=\"https://www.misoenergy.org/api/giqueue/getprojects\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "estimated",
+        "allDay": true,
+        "allDayStated": false,
+        "utcStartDateTime": "2029-12-30T00:00:00.000Z",
+        "dateConfidenceReasoning": "MISO requested in-service date, not confirmed construction or operation.",
+        "originalStartDate": null,
+        "delayReasoning": null,
+        "company": null,
+        "companyWikiUrl": null,
+        "address": "Retained approximate county/project-area marker; exact project parcel unverified",
+        "tags": [
+          "Cleanview",
+          "Battery Storage"
+        ]
+      },
+      "power": {
+        "megawatts": 300,
+        "kind": "storage",
+        "sourceUrl": "https://www.misoenergy.org/api/giqueue/getprojects",
+        "note": "Published project/request capacity, not measured output. MISO lists active J4016, a 300 MW battery request in Tuscola County, Michigan, at the Atlanta–Thetford [Karn] 138 kV connection. Its requested in-service date is December 30, 2029;"
+      },
+      "datacenter": null,
+      "clearEnergy": false,
+      "gaps": [
+        "Verify developer, exact battery parcel, duration, project-specific permit, cost and official gallery."
+      ]
+    },
+    "dc-cloudhq-ord-cook-il": {
+      "delete": true,
+      "researchFinding": "Unresolved CloudHQ ORD Building 2 split. Current operator page publishes 252 MW total critical IT and 1.7M sqft for the campus, not this standalone 252 MW/$1.5B building. Village annual-report leads indicate a changed two-building plan, but exact documents return 404 and no opened building-specific plan establishes this allocation. Hold the unsupported split and preserve campus 16329 unchanged; no campus cancellation inferred.",
+      "sourcesChecked": [
+        "https://cloudhq.com/campus/ord-campus/",
+        "https://www.mountprospect.org/home/showpublisheddocument/21352/639058130258370000",
+        "https://www.mountprospect.org/home/showpublisheddocument/21522/639090041924700000"
+      ],
+      "gaps": [
+        "Unresolved CloudHQ ORD Building 2 split. Current operator page publishes 252 MW total critical IT and 1.7M sqft for the campus, not this standalone 252 MW/$1.5B building. Village annual-report leads indicate a changed two-building plan, but exact documents return 404 and no opened building-specific plan establishes this allocation. Hold the unsupported split and preserve campus 16329 unchanged; no campus cancellation inferred."
+      ]
+    },
+    "solar-goldfinch-mason-ky": {
+      "patch": {
+        "title": "Goldfinch Solar: 250 MW Final Retool Study Published May 2026",
+        "description": "PJM’s May 14, 2026 final retool study identifies Goldfinch Solar LLC’s AF2-111 request in Mason County, Kentucky, at 250 MW energy and 150 MW capacity. Geronimo Power describes Goldfinch as an in-development solar project.",
+        "sourceUrl": "https://www.pjm.com/pjmfiles/pub/planning/project-queues/TC1/FINAL/AF2-111/AF2-111_imp_FINAL.htm",
+        "references": [
+          {
+            "url": "https://www.pjm.com/pjmfiles/pub/planning/project-queues/TC1/FINAL/AF2-111/AF2-111_imp_FINAL.htm",
+            "title": "PJM — Goldfinch AF2-111 final retool study",
+            "confidence": 95,
+            "publishedDate": "2026-05-14"
+          },
+          {
+            "url": "https://geronimopower.com/in-development/goldfinch-solar/",
+            "title": "Geronimo Power — Goldfinch Solar",
+            "confidence": 95,
+            "publishedDate": null
+          }
+        ],
+        "longFormSummary": "<ul><li>The study connects to the North Clark County–Hugh L. Spurlock 345 kV line and does not establish construction or COD. Removed unsupported $275M construction budget and exact 2028 date. Geronimo’s older anticipated 2025 schedule is stale, not proof of operation. Company follows the current operator name.<cite data-ref=\"https://www.pjm.com/pjmfiles/pub/planning/project-queues/TC1/FINAL/AF2-111/AF2-111_imp_FINAL.htm\"></cite></li><li>Operator describes roughly 2,000 acres. No sourced latest project construction estimate found; a third-party $280M listing is not accepted as primary construction-cost evidence. Official gallery candidate was a logo, not a site photograph.<cite data-ref=\"https://geronimopower.com/in-development/goldfinch-solar/\"></cite></li><li>Timeline: Confirmed final retool study release date, not commercial operation.<cite data-ref=\"https://www.pjm.com/pjmfiles/pub/planning/project-queues/TC1/FINAL/AF2-111/AF2-111_imp_FINAL.htm\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "confirmed",
+        "allDay": true,
+        "allDayStated": false,
+        "utcStartDateTime": "2026-05-14T00:00:00.000Z",
+        "dateConfidenceReasoning": "Confirmed final retool study release date, not commercial operation.",
+        "originalStartDate": null,
+        "delayReasoning": null,
+        "company": "Geronimo Power",
+        "companyWikiUrl": null,
+        "address": "Retained approximate county/project-area marker; exact project parcel unverified",
+        "tags": [
+          "Cleanview",
+          "Solar"
+        ]
+      },
+      "power": {
+        "megawatts": 250,
+        "kind": "generation",
+        "sourceUrl": "https://www.pjm.com/pjmfiles/pub/planning/project-queues/TC1/FINAL/AF2-111/AF2-111_imp_FINAL.htm",
+        "note": "Published project/request capacity, not measured output. PJM’s May 14, 2026 final retool study identifies Goldfinch Solar LLC’s AF2-111 request in Mason County, Kentucky, at 250 MW energy and 150 MW capacity. Geronimo Power describes Gol"
+      },
+      "datacenter": null,
+      "clearEnergy": false,
+      "gaps": [
+        "Verify latest permits, actual schedule, precise project footprint and construction budget; no verified project photograph found."
+      ]
+    },
+    "solar-hawkeye-clinton-ia": {
+      "patch": {
+        "title": "Hawkeye Solar II: 250 MW Plan; March 2028 Target",
+        "description": "EIA’s September 2026 inventory identifies Hawkeye Solar II plant 70258 at 250 MW with March 2028 planned operation and regulatory approvals pending. It is separate from the 200 MW Hawkeye Solar entry within Ranger’s broader Clinton County development.",
+        "sourceUrl": null,
+        "references": [
+          {
+            "url": "https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx",
+            "title": "EIA — September 2026 planned generating additions",
+            "confidence": 95,
+            "publishedDate": "2026-10-23"
+          },
+          {
+            "url": "https://www.hawkeyesolarproject.com/",
+            "title": "Hawkeye Solar — Ranger Power project",
+            "confidence": 95,
+            "publishedDate": null
+          },
+          {
+            "url": "https://www.clintoncounty-ia.gov/files/meetings/2026-03-23_agenda_board_of_supervisors_24526.pdf",
+            "title": "Clinton County — March 23, 2026 supervisors agenda",
+            "confidence": 95,
+            "publishedDate": "2026-03-23"
+          }
+        ],
+        "longFormSummary": "<ul><li>The 250 MW H2SLR generator is not the entire 450 MW program. EIA status L means not under construction with regulatory approvals pending. The county agenda’s road-use item describes 450 MW broader scope; an agenda is not an executed resolution. Removed unsupported $270M budget and May 2028 exact COD.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>Native marker is EIA’s shared plant reporting point, not an independently surveyed Phase II footprint. Michigan utility projects also named Hawkeye have unrelated costs and must not supply this Iowa project’s price. Operator tax benefits are not construction cost; no specific gallery image established.<cite data-ref=\"https://www.hawkeyesolarproject.com/\"></cite></li><li>Timeline: EIA planned month March 2028; day 1 is a month placeholder, not a published exact COD.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "estimated",
+        "allDay": true,
+        "allDayStated": false,
+        "utcStartDateTime": "2028-03-01T00:00:00.000Z",
+        "dateConfidenceReasoning": "EIA planned month March 2028; day 1 is a month placeholder, not a published exact COD.",
+        "originalStartDate": null,
+        "delayReasoning": null,
+        "company": "Ranger Power",
+        "companyWikiUrl": null,
+        "address": "Hawkeye Solar II EIA plant 70258 reporting point, Clinton County, Iowa; shared reporting context, not surveyed phase boundary",
+        "tags": [
+          "Cleanview",
+          "Solar"
+        ],
+        "latitude": 41.835204,
+        "longitude": -90.69966,
+        "media": [
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round31-2026-10-24/solar-hawkeye-clinton-ia-topo.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 1000
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round31-2026-10-24/solar-hawkeye-clinton-ia-relief.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 1000
+          }
+        ]
+      },
+      "power": {
+        "megawatts": 250,
+        "kind": "generation",
+        "sourceUrl": "https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx",
+        "note": "Published project/request capacity, not measured output. EIA’s September 2026 inventory identifies Hawkeye Solar II plant 70258 at 250 MW with March 2028 planned operation and regulatory approvals pending. It is separate from the 200 MW"
+      },
+      "datacenter": null,
+      "clearEnergy": false,
+      "gaps": [
+        "Verify phase-specific current permitting, project footprint, construction schedule and published construction budget; official project-photo gap remains."
+      ],
+      "mediaReplaced": true,
+      "mediaAdded": 0
+    },
+    "solar-hintonville-perry-ms": {
+      "patch": {
+        "title": "Hintonville J2999: 250 MW Solar Request Remains in Study",
+        "description": "MISO identifies J2999 as an active 250 MW solar request in Perry County, Mississippi, at Hintonville. It entered the queue September 15, 2022 and remains a DPP 2022 Phase 2 study request; post-GIA status is Not Started.",
+        "sourceUrl": null,
+        "references": [
+          {
+            "url": "https://www.misoenergy.org/api/giqueue/getprojects",
+            "title": "MISO generator interconnection queue — J2999",
+            "confidence": 95,
+            "publishedDate": null
+          }
+        ],
+        "longFormSummary": "<ul><li>The old September 15, 2025 requested service date has passed and is not proof of operation. Removed unsupported Origis ownership, $260M budget and finalized environmental/interconnection claims. The record does not establish a developer, final parcel, construction cost or project gallery. Withdrawn J3447 at Purvis–Hintonville is a separate request.<cite data-ref=\"https://www.misoenergy.org/api/giqueue/getprojects\"></cite></li><li>Timeline: Confirmed queue-entry date; expired requested in-service date is not used as realized COD.<cite data-ref=\"https://www.misoenergy.org/api/giqueue/getprojects\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "confirmed",
+        "allDay": true,
+        "allDayStated": false,
+        "utcStartDateTime": "2022-09-15T00:00:00.000Z",
+        "dateConfidenceReasoning": "Confirmed queue-entry date; expired requested in-service date is not used as realized COD.",
+        "originalStartDate": null,
+        "delayReasoning": null,
+        "company": null,
+        "companyWikiUrl": null,
+        "address": "Retained approximate county/project-area marker; exact project parcel unverified",
+        "tags": [
+          "Cleanview",
+          "Solar"
+        ]
+      },
+      "power": {
+        "megawatts": 250,
+        "kind": "generation",
+        "sourceUrl": "https://www.misoenergy.org/api/giqueue/getprojects",
+        "note": "Published project/request capacity, not measured output. MISO identifies J2999 as an active 250 MW solar request in Perry County, Mississippi, at Hintonville. It entered the queue September 15, 2022 and remains a DPP 2022 Phase 2 study r"
+      },
+      "datacenter": null,
+      "clearEnergy": false,
+      "gaps": [
+        "Identify applicant and final parcel; verify current schedule, permits, construction budget and a project-specific gallery."
+      ]
+    },
+    "solar-milford-phase-2-beaver-ut": {
+      "patch": {
+        "title": "Milford Solar Phase II: 310 MW; September 2027 EIA Target",
+        "description": "EIA lists Milford Solar Phase II plant 69930 at 310 MW, under construction at no more than 50% complete in its September 2026 inventory, with September 2027 planned operation. LADWP’s 2025 power-sales filing identifies Longroad as the project owner and builder.",
+        "sourceUrl": null,
+        "references": [
+          {
+            "url": "https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx",
+            "title": "EIA — September 2026 planned generating additions",
+            "confidence": 95,
+            "publishedDate": "2026-10-23"
+          },
+          {
+            "url": "https://cityclerk.lacity.org/onlinedocs/2025/25-0555_misc_5-14-25.pdf",
+            "title": "LADWP — Milford Solar Phase II power-sales agreement board letter",
+            "confidence": 95,
+            "publishedDate": "2025-04-21"
+          }
+        ],
+        "longFormSummary": "<ul><li>Longroad ownership follows the dated power-sales filing, replacing unsupported PacifiCorp attribution. The 30-year power agreement and customer shares are not construction cost. Removed unsupported $330M and December 2027 exact COD. EIA status U is a dated construction-progress report, not present-day completion.<cite data-ref=\"https://cityclerk.lacity.org/onlinedocs/2025/25-0555_misc_5-14-25.pdf\"></cite></li><li>Native point follows EIA reporting coordinates, not a surveyed array boundary. Project construction budget was not established in opened operator/utility/registry sources; no unrelated Milford wind photos used.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>Timeline: EIA planned month September 2027; day 1 is a month placeholder, not exact commissioning.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "estimated",
+        "allDay": true,
+        "allDayStated": false,
+        "utcStartDateTime": "2027-09-01T00:00:00.000Z",
+        "dateConfidenceReasoning": "EIA planned month September 2027; day 1 is a month placeholder, not exact commissioning.",
+        "originalStartDate": null,
+        "delayReasoning": null,
+        "company": "Longroad Energy",
+        "companyWikiUrl": null,
+        "address": "Milford Solar Phase II EIA plant 69930 reporting point, Beaver County, Utah; not surveyed array boundary",
+        "tags": [
+          "Cleanview",
+          "Solar"
+        ],
+        "latitude": 38.522442,
+        "longitude": -113.0148,
+        "media": [
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round31-2026-10-24/solar-milford-phase-2-beaver-ut-topo.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 1000
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round31-2026-10-24/solar-milford-phase-2-beaver-ut-relief.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 1000
+          }
+        ]
+      },
+      "power": {
+        "megawatts": 310,
+        "kind": "generation",
+        "sourceUrl": "https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx",
+        "note": "Published project/request capacity, not measured output. EIA lists Milford Solar Phase II plant 69930 at 310 MW, under construction at no more than 50% complete in its September 2026 inventory, with September 2027 planned operation. LADW"
+      },
+      "datacenter": null,
+      "clearEnergy": false,
+      "gaps": [
+        "Verify current ownership after the dated Longroad filing, latest construction/COD, phase-specific construction budget and an independently labelled gallery."
+      ],
+      "mediaReplaced": true,
+      "mediaAdded": 0
+    },
+    "dc-applied-digital-polaris-forge2-b1-nd": {
+      "patch": {
+        "title": "Polaris Forge 2 Building 1: 150 MW Planned Critical IT Load",
+        "description": "Applied Digital’s October 2025 investor presentation identifies Polaris Forge 2 Building 1 in Harwood at 150 MW critical IT load. Its October 7, 2026 update still describes Polaris Forge 2 as under construction and anticipates initial campus operations by year end.",
+        "sourceUrl": "https://ir.applieddigital.com/sec-filings/all-sec-filings/content/0001144879-25-000076/0001144879-25-000076.pdf",
+        "references": [
+          {
+            "url": "https://ir.applieddigital.com/sec-filings/all-sec-filings/content/0001144879-25-000076/0001144879-25-000076.pdf",
+            "title": "Applied Digital — October 2025 issuer presentation and filing",
+            "confidence": 95,
+            "publishedDate": "2025-10-22"
+          },
+          {
+            "url": "https://ir.applieddigital.com/sec-filings/all-sec-filings/content/0001144879-26-000057/apldq127earningsrelease.htm",
+            "title": "Applied Digital Reports Fiscal First Quarter 2027 Results",
+            "confidence": 95,
+            "publishedDate": "2026-10-07"
+          }
+        ],
+        "longFormSummary": "<ul><li>Corrected 140 MW to the issuer’s explicitly labelled Building 1 150 MW design. The 300 MW campus, 200 MW initially contracted load and phased deliveries are distinct scopes. The current release does not verify operation of this building. Removed unsupported $900M building budget, precise December 15 COD and modeled annual energy/water/hardware metrics.<cite data-ref=\"https://ir.applieddigital.com/sec-filings/all-sec-filings/content/0001144879-25-000076/0001144879-25-000076.pdf\"></cite></li><li>Campus investment, financing notes and multi-year lease revenue do not establish a Building 1 construction cost. Marker moved from Fargo center to explicitly qualified Harwood city context pending a verified building parcel. Official presentation contains campus-level construction imagery; it is not proof of completed Building 1.<cite data-ref=\"https://ir.applieddigital.com/sec-filings/all-sec-filings/content/0001144879-26-000057/apldq127earningsrelease.htm\"></cite></li><li>Timeline: Confirmed issuer filing/presentation milestone identifying Building 1; 2026 delivery and year-end initial campus operation remain targets.<cite data-ref=\"https://ir.applieddigital.com/sec-filings/all-sec-filings/content/0001144879-25-000076/0001144879-25-000076.pdf\"></cite></li><li>Applied Digital investor presentation page 4 identifies Polaris Forge 2 Building 1 at 150 MW. Campus-level construction context; not an operating Building 1 photograph. Credit: Applied Digital Corporation, October 2025 issuer presentation.<cite data-ref=\"https://ir.applieddigital.com/sec-filings/all-sec-filings/content/0001144879-25-000076/0001144879-25-000076.pdf\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "confirmed",
+        "allDay": true,
+        "allDayStated": false,
+        "utcStartDateTime": "2025-10-22T00:00:00.000Z",
+        "dateConfidenceReasoning": "Confirmed issuer filing/presentation milestone identifying Building 1; 2026 delivery and year-end initial campus operation remain targets.",
+        "originalStartDate": null,
+        "delayReasoning": null,
+        "company": "Applied Digital Corporation",
+        "companyWikiUrl": null,
+        "address": "Harwood, Cass County, North Dakota; city-center context only, not verified Polaris Forge 2 building footprint",
+        "tags": [
+          "Cleanview",
+          "Data Center"
+        ],
+        "latitude": 46.981244,
+        "longitude": -96.8795,
+        "media": [
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round31-2026-10-24/dc-applied-digital-polaris-forge2-b1-nd-topo.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 1000
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round31-2026-10-24/dc-applied-digital-polaris-forge2-b1-nd-relief.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 1000
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round31-2026-10-24/pf2-issuer-plan.jpg",
+            "originalWidth": 1546,
+            "originalHeight": 2000
+          }
+        ]
+      },
+      "power": {
+        "megawatts": 150,
+        "kind": "usage",
+        "sourceUrl": "https://ir.applieddigital.com/sec-filings/all-sec-filings/content/0001144879-25-000076/0001144879-25-000076.pdf",
+        "note": "Published project/request capacity, not measured output. Applied Digital’s October 2025 investor presentation identifies Polaris Forge 2 Building 1 in Harwood at 150 MW critical IT load. Its October 7, 2026 update still describes Polaris"
+      },
+      "datacenter": {
+        "buildings": 1,
+        "sourceUrl": "https://ir.applieddigital.com/sec-filings/all-sec-filings/content/0001144879-25-000076/0001144879-25-000076.pdf",
+        "note": "One planned Building 1, 150 MW design critical IT load; campus area and financing not allocated to the building. No verified daily water, hardware or generator counts."
+      },
+      "clearEnergy": true,
+      "gaps": [
+        "Obtain exact Building 1 parcel, latest readiness/COD, building construction budget and independently labelled as-built gallery."
+      ],
+      "mediaReplaced": true,
+      "mediaAdded": 1
+    },
+    "dc-google-springboard-b2-muskogee-ok": {
+      "delete": true,
+      "researchFinding": "Unverified Google Springboard Building 2 split. Opened June 2025 county draft identifies Acacia House Group LLC and up to four incentive phases, each anticipating approximately 300,000 sqft and at least $1B real/personal-property investment. It does not explicitly identify Google, this Building 2, 118 MW, $600M or exact 2028 COD. Hold until an opened building/phase filing resolves mapping; no broader campus cancellation inferred.",
+      "sourcesChecked": [
+        "https://muskogee.okcounties.org/media/view/springboard_data_data_center_project_plan_6-30-25_2969.pdf",
+        "https://www.google.com/about/datacenters/locations/muskogee/"
+      ],
+      "gaps": [
+        "Unverified Google Springboard Building 2 split. Opened June 2025 county draft identifies Acacia House Group LLC and up to four incentive phases, each anticipating approximately 300,000 sqft and at least $1B real/personal-property investment. It does not explicitly identify Google, this Building 2, 118 MW, $600M or exact 2028 COD. Hold until an opened building/phase filing resolves mapping; no broader campus cancellation inferred."
+      ]
+    },
+    "dc-qts-york-county-dc2-sc": {
+      "delete": true,
+      "researchFinding": "QTS York DC2 identity requires an accessible labelled primary plan. Current operator and February 2026 community presentation confirm a nine-building, three-phase $8B-plus campus, not the tracker’s 67 MW/$450M DC2 allocation. Search indexes a USACE plan labelled DC2, but the exact PDF and URL variants return 403 when opened/downloaded; no placeholder or campus total is accepted as building evidence. Hold pending recovery of that plan and current building-specific schedule/budget; this does not cancel the QTS campus.",
+      "sourcesChecked": [
+        "https://q.com/data-centers/york/",
+        "https://q.com/wp-content/uploads/2026/02/QTS-York_Community-Event-.pdf",
+        "https://www.sac.usace.army.mil/Portals/43/docs/regulatory/jds/August_2024/SAC-2023-00211_York_County_Data_Center.pdf?ver=ZoPw5rmRt7NMDYCCUTmprA%3D%3D"
+      ],
+      "gaps": [
+        "QTS York DC2 identity requires an accessible labelled primary plan. Current operator and February 2026 community presentation confirm a nine-building, three-phase $8B-plus campus, not the tracker’s 67 MW/$450M DC2 allocation. Search indexes a USACE plan labelled DC2, but the exact PDF and URL variants return 403 when opened/downloaded; no placeholder or campus total is accepted as building evidence. Hold pending recovery of that plan and current building-specific schedule/budget; this does not cancel the QTS campus."
+      ]
+    },
+    "battery-brambleton-goose-creek-va": {
+      "patch": {
+        "title": "Brambleton–Goose Creek AH1-727: 425 MW Storage Study",
+        "description": "PJM’s June 3, 2026 Phase II study identifies Cardinal Energy Storage East LLC in Loudoun County, Virginia: 425 MW / 2,550 MWh six-hour grid-charging storage request.",
+        "sourceUrl": "https://www.pjm.com/pjmfiles/pub/planning/project-queues/TC2/PHASE_2/AH1-727/AH1-727_imp_PHASE_2.htm",
+        "references": [
+          {
+            "url": "https://www.pjm.com/pjmfiles/pub/planning/project-queues/TC2/PHASE_2/AH1-727/AH1-727_imp_PHASE_2.htm",
+            "title": "PJM — AH1-727 Phase II system impact study",
+            "confidence": 95,
+            "publishedDate": "2026-06-03"
+          }
+        ],
+        "longFormSummary": "<ul><li>The study names Cardinal Energy Storage East LLC; removed unsupported utility/fictitious developer attribution and modeled construction price. Published network-upgrade estimates are not a whole-project construction budget. Study/base-case year is not a COD or local permit.<cite data-ref=\"https://www.pjm.com/pjmfiles/pub/planning/project-queues/TC2/PHASE_2/AH1-727/AH1-727_imp_PHASE_2.htm\"></cite></li><li>Native power follows the 425 MW requested energy/storage addition. Published storage energy is 2,550 MWh, distinguishing six-hour design from an assumed four hours. Exact battery parcel and official site photo remain unverified; retained marker is county context.<cite data-ref=\"https://www.pjm.com/pjmfiles/pub/planning/project-queues/TC2/PHASE_2/AH1-727/AH1-727_imp_PHASE_2.htm\"></cite></li><li>Timeline: Confirmed Phase II study publication, not construction or commissioning.<cite data-ref=\"https://www.pjm.com/pjmfiles/pub/planning/project-queues/TC2/PHASE_2/AH1-727/AH1-727_imp_PHASE_2.htm\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "confirmed",
+        "allDay": true,
+        "allDayStated": false,
+        "utcStartDateTime": "2026-06-03T00:00:00.000Z",
+        "dateConfidenceReasoning": "Confirmed Phase II study publication, not construction or commissioning.",
+        "originalStartDate": null,
+        "delayReasoning": null,
+        "company": "Cardinal Energy Storage East LLC",
+        "companyWikiUrl": null,
+        "address": "Retained approximate county/project-area marker; exact project parcel unverified",
+        "tags": [
+          "Cleanview",
+          "Battery Storage"
+        ]
+      },
+      "power": {
+        "megawatts": 425,
+        "kind": "storage",
+        "sourceUrl": "https://www.pjm.com/pjmfiles/pub/planning/project-queues/TC2/PHASE_2/AH1-727/AH1-727_imp_PHASE_2.htm",
+        "note": "Published project/request capacity, not measured output. PJM’s June 3, 2026 Phase II study identifies Cardinal Energy Storage East LLC in Loudoun County, Virginia: 425 MW / 2,550 MWh six-hour grid-charging storage request."
+      },
+      "datacenter": null,
+      "clearEnergy": false,
+      "gaps": [
+        "Verify final parcel, current applicant/permits and schedule, whole-project construction budget and official gallery; interconnection upgrade costs remain separate."
+      ]
+    },
+    "battery-rogers-road-carson-va": {
+      "patch": {
+        "title": "Rogers Road–Carson AG2-339: 85 MW Storage Study",
+        "description": "PJM’s June 3, 2026 Phase II study identifies Cassius Blue Solar LLC in Sussex County, Virginia: 85 MW / 340 MWh storage addition; 479 MW is total facility scope, not this battery rating.",
+        "sourceUrl": "https://www.pjm.com/pjmfiles/pub/planning/project-queues/TC2/PHASE_2/AG2-339/AG2-339_imp_PHASE_2.htm",
+        "references": [
+          {
+            "url": "https://www.pjm.com/pjmfiles/pub/planning/project-queues/TC2/PHASE_2/AG2-339/AG2-339_imp_PHASE_2.htm",
+            "title": "PJM — AG2-339 Phase II system impact study",
+            "confidence": 95,
+            "publishedDate": "2026-06-03"
+          }
+        ],
+        "longFormSummary": "<ul><li>The study names Cassius Blue Solar LLC; removed unsupported utility/fictitious developer attribution and modeled construction price. Published network-upgrade estimates are not a whole-project construction budget. Study/base-case year is not a COD or local permit.<cite data-ref=\"https://www.pjm.com/pjmfiles/pub/planning/project-queues/TC2/PHASE_2/AG2-339/AG2-339_imp_PHASE_2.htm\"></cite></li><li>Native power follows the 85 MW requested energy/storage addition. The study lists 479 MW total facility MFO and 85 MW added energy/capacity; the scopes are not interchangeable. Exact battery parcel and official site photo remain unverified; retained marker is county context.<cite data-ref=\"https://www.pjm.com/pjmfiles/pub/planning/project-queues/TC2/PHASE_2/AG2-339/AG2-339_imp_PHASE_2.htm\"></cite></li><li>Timeline: Confirmed Phase II study publication, not construction or commissioning.<cite data-ref=\"https://www.pjm.com/pjmfiles/pub/planning/project-queues/TC2/PHASE_2/AG2-339/AG2-339_imp_PHASE_2.htm\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "confirmed",
+        "allDay": true,
+        "allDayStated": false,
+        "utcStartDateTime": "2026-06-03T00:00:00.000Z",
+        "dateConfidenceReasoning": "Confirmed Phase II study publication, not construction or commissioning.",
+        "originalStartDate": null,
+        "delayReasoning": null,
+        "company": "Cassius Blue Solar LLC",
+        "companyWikiUrl": null,
+        "address": "Retained approximate county/project-area marker; exact project parcel unverified",
+        "tags": [
+          "Cleanview",
+          "Battery Storage"
+        ]
+      },
+      "power": {
+        "megawatts": 85,
+        "kind": "storage",
+        "sourceUrl": "https://www.pjm.com/pjmfiles/pub/planning/project-queues/TC2/PHASE_2/AG2-339/AG2-339_imp_PHASE_2.htm",
+        "note": "Published project/request capacity, not measured output. PJM’s June 3, 2026 Phase II study identifies Cassius Blue Solar LLC in Sussex County, Virginia: 85 MW / 340 MWh storage addition; 479 MW is total facility scope, not this battery r"
+      },
+      "datacenter": null,
+      "clearEnergy": false,
+      "gaps": [
+        "Verify final parcel, current applicant/permits and schedule, whole-project construction budget and official gallery; interconnection upgrade costs remain separate."
+      ]
+    },
+    "battery-surry-skiffes-creek-va": {
+      "patch": {
+        "title": "Surry–Skiffes Creek AH1-716: 650 MW Storage Study",
+        "description": "PJM’s June 3, 2026 Phase II study identifies Cardinal Energy Storage East LLC in James City County, Virginia: 650 MW / 3,900 MWh six-hour grid-charging storage request.",
+        "sourceUrl": "https://www.pjm.com/pjmfiles/pub/planning/project-queues/TC2/PHASE_2/AH1-716/AH1-716_imp_PHASE_2.htm",
+        "references": [
+          {
+            "url": "https://www.pjm.com/pjmfiles/pub/planning/project-queues/TC2/PHASE_2/AH1-716/AH1-716_imp_PHASE_2.htm",
+            "title": "PJM — AH1-716 Phase II system impact study",
+            "confidence": 95,
+            "publishedDate": "2026-06-03"
+          }
+        ],
+        "longFormSummary": "<ul><li>The study names Cardinal Energy Storage East LLC; removed unsupported utility/fictitious developer attribution and modeled construction price. Published network-upgrade estimates are not a whole-project construction budget. Study/base-case year is not a COD or local permit.<cite data-ref=\"https://www.pjm.com/pjmfiles/pub/planning/project-queues/TC2/PHASE_2/AH1-716/AH1-716_imp_PHASE_2.htm\"></cite></li><li>Native power follows the 650 MW requested energy/storage addition. Published storage energy is 3,900 MWh, distinguishing six-hour design from an assumed four hours. Exact battery parcel and official site photo remain unverified; retained marker is county context.<cite data-ref=\"https://www.pjm.com/pjmfiles/pub/planning/project-queues/TC2/PHASE_2/AH1-716/AH1-716_imp_PHASE_2.htm\"></cite></li><li>Timeline: Confirmed Phase II study publication, not construction or commissioning.<cite data-ref=\"https://www.pjm.com/pjmfiles/pub/planning/project-queues/TC2/PHASE_2/AH1-716/AH1-716_imp_PHASE_2.htm\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "confirmed",
+        "allDay": true,
+        "allDayStated": false,
+        "utcStartDateTime": "2026-06-03T00:00:00.000Z",
+        "dateConfidenceReasoning": "Confirmed Phase II study publication, not construction or commissioning.",
+        "originalStartDate": null,
+        "delayReasoning": null,
+        "company": "Cardinal Energy Storage East LLC",
+        "companyWikiUrl": null,
+        "address": "Retained approximate county/project-area marker; exact project parcel unverified",
+        "tags": [
+          "Cleanview",
+          "Battery Storage"
+        ]
+      },
+      "power": {
+        "megawatts": 650,
+        "kind": "storage",
+        "sourceUrl": "https://www.pjm.com/pjmfiles/pub/planning/project-queues/TC2/PHASE_2/AH1-716/AH1-716_imp_PHASE_2.htm",
+        "note": "Published project/request capacity, not measured output. PJM’s June 3, 2026 Phase II study identifies Cardinal Energy Storage East LLC in James City County, Virginia: 650 MW / 3,900 MWh six-hour grid-charging storage request."
+      },
+      "datacenter": null,
+      "clearEnergy": false,
+      "gaps": [
+        "Verify final parcel, current applicant/permits and schedule, whole-project construction budget and official gallery; interconnection upgrade costs remain separate."
+      ]
+    },
+    "battery-lewis-run-pierce-brook-pa": {
+      "patch": {
+        "title": "Lewis Run–Pierce Brook AH1-589: Listed Withdrawn in May 2026",
+        "description": "The May 29, 2026 ISO New England/PJM coordination report lists AH1-589 at Lewis Run–Pierce Brook as withdrawn. Its table distinguishes 410 MW total facility scope from 170 MW energy and capacity for the storage request.",
+        "sourceUrl": "https://www.iso-ne.com/static-assets/documents/100035/2026-05-29_ipsac_a03_ipsac_queue_interconnection_studies.pdf",
+        "references": [
+          {
+            "url": "https://www.iso-ne.com/static-assets/documents/100035/2026-05-29_ipsac_a03_ipsac_queue_interconnection_studies.pdf",
+            "title": "ISO New England — May 2026 IPSAC queue/interconnection studies",
+            "confidence": 95,
+            "publishedDate": "2026-05-29"
+          }
+        ],
+        "longFormSummary": "<ul><li>Removed unsupported 410 MW battery rating, Allegheny Clean Storage ownership, AF1-210 citation, $410M budget and future COD. Native 170 MW follows the report’s energy request, not combined facility size. The reporting date is not an independently established withdrawal date. No broader facility cancellation is inferred.<cite data-ref=\"https://www.iso-ne.com/static-assets/documents/100035/2026-05-29_ipsac_a03_ipsac_queue_interconnection_studies.pdf\"></cite></li><li>Timeline: Confirmed report date showing Withdrawn status, not the precise withdrawal date or COD.<cite data-ref=\"https://www.iso-ne.com/static-assets/documents/100035/2026-05-29_ipsac_a03_ipsac_queue_interconnection_studies.pdf\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "confirmed",
+        "allDay": true,
+        "allDayStated": false,
+        "utcStartDateTime": "2026-05-29T00:00:00.000Z",
+        "dateConfidenceReasoning": "Confirmed report date showing Withdrawn status, not the precise withdrawal date or COD.",
+        "originalStartDate": null,
+        "delayReasoning": null,
+        "company": null,
+        "companyWikiUrl": null,
+        "address": "Retained approximate county/project-area marker; exact project parcel unverified",
+        "tags": [
+          "Cleanview",
+          "Battery Storage"
+        ]
+      },
+      "power": {
+        "megawatts": 170,
+        "kind": "storage",
+        "sourceUrl": "https://www.iso-ne.com/static-assets/documents/100035/2026-05-29_ipsac_a03_ipsac_queue_interconnection_studies.pdf",
+        "note": "Published project/request capacity, not measured output. The May 29, 2026 ISO New England/PJM coordination report lists AH1-589 at Lewis Run–Pierce Brook as withdrawn. Its table distinguishes 410 MW total facility scope from 170 MW energ"
+      },
+      "datacenter": null,
+      "clearEnergy": false,
+      "gaps": [
+        "Verify withdrawal timing, developer and whether a replacement request exists; exact battery parcel, construction budget and project gallery unverified."
+      ]
+    },
+    "dc-cielo-des-moines-ia": {
+      "delete": true,
+      "researchFinding": "Cielo Des Moines tracker identity unresolved: 150 MW/$1.1B entry cannot yet be tied to an opened project-specific operator or city filing. Local reporting describes a different 500 MW, seven-building South Des Moines proposal; a tracker lead links an unrelated South Carolina article. No phase mapping or published 150 MW construction budget established. Hold pending primary site/phase filing, not cancellation of the broader reported proposal.",
+      "sourcesChecked": [
+        "https://cielodigital.com/",
+        "https://www.dsm.city/"
+      ],
+      "gaps": [
+        "Cielo Des Moines tracker identity unresolved: 150 MW/$1.1B entry cannot yet be tied to an opened project-specific operator or city filing. Local reporting describes a different 500 MW, seven-building South Des Moines proposal; a tracker lead links an unrelated South Carolina article. No phase mapping or published 150 MW construction budget established. Hold pending primary site/phase filing, not cancellation of the broader reported proposal."
+      ]
+    },
+    "dc-cyrusone-sangamon-bldg-3-il": {
+      "delete": true,
+      "researchFinding": "Unverified CyrusOne Sangamon Building 3 split. Opened county project page, staff report and parcel map support the Talkington/Thayer Road campus, not a separately labelled 159 MW/$1.2B Building 3. Shared approximately $500M campus figures cannot be allocated to a tracker building. Hold until a labelled primary building plan establishes identity, capacity, cost and schedule; no campus cancellation inferred.",
+      "sourcesChecked": [
+        "https://sangamonil.gov/departments/a-c/county-board/proposed-cyrusone-data-center",
+        "https://sangamonil.gov/Portals/0/Departments/County%20Board/Docs/DataCenter/Merged%20Staff%20Report.pdf"
+      ],
+      "gaps": [
+        "Unverified CyrusOne Sangamon Building 3 split. Opened county project page, staff report and parcel map support the Talkington/Thayer Road campus, not a separately labelled 159 MW/$1.2B Building 3. Shared approximately $500M campus figures cannot be allocated to a tracker building. Hold until a labelled primary building plan establishes identity, capacity, cost and schedule; no campus cancellation inferred."
+      ]
+    },
+    "dc-rowan-bauxite-iii-bldg-1-md": {
+      "delete": true,
+      "researchFinding": "Unverified Rowan Bauxite III Building 1 split. Opened Rowan and Maryland environmental pages distinguish Bauxite I/II/III and give combined campus scopes, not a 56 MW/$450M III Building 1. Building 1 topping-out reports concern Bauxite I and must not be borrowed; Bauxite III campus financing is not a building budget. Hold pending opened building-specific mapping/permit; retained Bauxite II 16399 remains unchanged.",
+      "sourcesChecked": [
+        "https://rowan.com/portfolio/bauxite-i-ii-iii/",
+        "https://mde.maryland.gov/datacenters/Pages/FrederickDataCenter.aspx"
+      ],
+      "gaps": [
+        "Unverified Rowan Bauxite III Building 1 split. Opened Rowan and Maryland environmental pages distinguish Bauxite I/II/III and give combined campus scopes, not a 56 MW/$450M III Building 1. Building 1 topping-out reports concern Bauxite I and must not be borrowed; Bauxite III campus financing is not a building budget. Hold pending opened building-specific mapping/permit; retained Bauxite II 16399 remains unchanged."
+      ]
+    },
+    "dc-security-land-baltimore-md": {
+      "patch": {
+        "title": "Woodlawn Data Center: Security Land’s 150 MW Proposal",
+        "description": "WMAR’s December 2025 reporting identifies Security Land and Development LP’s proposed 150 MW data center at 1500 Woodlawn Drive on 42 acres, with a separate five-acre BGE substation. The proposal is not verified as operating.",
+        "sourceUrl": "https://www.wmar2news.com/news/region/baltimore-county/controversial-proposed-data-center-up-for-debate-in-woodlawn",
+        "references": [
+          {
+            "url": "https://www.wmar2news.com/news/region/baltimore-county/controversial-proposed-data-center-up-for-debate-in-woodlawn",
+            "title": "Controversial proposed data center up for debate in Woodlawn",
+            "confidence": 95,
+            "publishedDate": "2025-12-03"
+          },
+          {
+            "url": "https://www.thebanner.com/economy/growth-development/baltimore-county-data-center-moratorium-EVIJFJDL5VGCDNC22K52NQBMGI/",
+            "title": "Baltimore County approves data center moratorium",
+            "confidence": 95,
+            "publishedDate": "2026-02-02"
+          }
+        ],
+        "longFormSummary": "<ul><li>Native 150 MW is reported proposed facility demand, not measured IT load. Removed unsupported $950M budget, exact future opening and modeled annual energy/water/hardware counts. The February 2026 moratorium is a later county policy event, not automatic cancellation or approval of this application; current disposition needs verification.<cite data-ref=\"https://www.wmar2news.com/news/region/baltimore-county/controversial-proposed-data-center-up-for-debate-in-woodlawn\"></cite></li><li>The 42 acres describe the shared property, not an independently surveyed building footprint. Marker is the reported street-address context. No opened published construction budget established; official applicant photo gallery and current permitting remain research gaps.<cite data-ref=\"https://www.wmar2news.com/news/region/baltimore-county/controversial-proposed-data-center-up-for-debate-in-woodlawn\"></cite></li><li>Timeline: Confirmed local report date for the proposal; not commercial operation.<cite data-ref=\"https://www.wmar2news.com/news/region/baltimore-county/controversial-proposed-data-center-up-for-debate-in-woodlawn\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "confirmed",
+        "allDay": true,
+        "allDayStated": false,
+        "utcStartDateTime": "2025-12-03T00:00:00.000Z",
+        "dateConfidenceReasoning": "Confirmed local report date for the proposal; not commercial operation.",
+        "originalStartDate": null,
+        "delayReasoning": null,
+        "company": "Security Land and Development LP",
+        "companyWikiUrl": null,
+        "address": "1500 Woodlawn Drive, Gwynn Oak/Woodlawn, Baltimore County, Maryland; address context, not surveyed data hall footprint",
+        "tags": [
+          "Cleanview",
+          "Data Center"
+        ],
+        "latitude": 39.308134936405,
+        "longitude": -76.739187835129,
+        "media": [
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round31-2026-10-24/dc-security-land-baltimore-md-topo.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 1000
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round31-2026-10-24/dc-security-land-baltimore-md-relief.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 1000
+          }
+        ]
+      },
+      "power": {
+        "megawatts": 150,
+        "kind": "usage",
+        "sourceUrl": "https://www.wmar2news.com/news/region/baltimore-county/controversial-proposed-data-center-up-for-debate-in-woodlawn",
+        "note": "Published project/request capacity, not measured output. WMAR’s December 2025 reporting identifies Security Land and Development LP’s proposed 150 MW data center at 1500 Woodlawn Drive on 42 acres, with a separate five-acre BGE substatio"
+      },
+      "datacenter": {
+        "sourceUrl": "https://www.wmar2news.com/news/region/baltimore-county/controversial-proposed-data-center-up-for-debate-in-woodlawn",
+        "note": "Reported proposed 150 MW facility demand at a 42-acre property; no verified IT-only load, building count, daily water or hardware inventory."
+      },
+      "clearEnergy": true,
+      "gaps": [
+        "Verify current county policy/permit disposition, final building scope, construction schedule and published construction budget; applicant gallery not found."
+      ],
+      "mediaReplaced": true,
+      "mediaAdded": 0
+    },
+    "solar-duane-arnold-clean-ia": {
+      "patch": {
+        "title": "Pleasant Creek / Duane Arnold Solar I: 50 MW Operating Since March 2024",
+        "description": "Alliant Energy states that the first 50 MW of Pleasant Creek Solar, formerly Duane Arnold Solar, began operating in March 2024. A separate 150 MW began operating in December 2024; the combined 200 MW property is not a 400 MW first phase.",
+        "sourceUrl": "https://www.alliantenergy.com/our-energy/solar/iowa-solar/pleasant-creek-solar",
+        "references": [
+          {
+            "url": "https://www.alliantenergy.com/our-energy/solar/iowa-solar/pleasant-creek-solar",
+            "title": "Alliant Energy — Pleasant Creek Solar",
+            "confidence": 95,
+            "publishedDate": null
+          },
+          {
+            "url": "https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx",
+            "title": "EIA — monthly operating generator inventory",
+            "confidence": 95,
+            "publishedDate": null
+          }
+        ],
+        "longFormSummary": "<ul><li>Corrected Phase I capacity from 400 MW to 50 MW and developer to Alliant Energy following acquisition from NextEra. Removed unsupported $420M construction price, future COD and conflation with Alliant’s 400 MW Iowa portfolio. A portfolio budget is not a phase construction cost.<cite data-ref=\"https://www.alliantenergy.com/our-energy/solar/iowa-solar/pleasant-creek-solar\"></cite></li><li>The operator reports about 1,100 acres for the combined property and publishes gallery photographs from 2024. Those photos are property context and are not independently identified as the operating first phase. Original nuclear-plant marker replaced with EIA plant 67140 reporting point; both phases share this reporting context.<cite data-ref=\"https://www.alliantenergy.com/our-energy/solar/iowa-solar/pleasant-creek-solar\"></cite></li><li>Timeline: Operator specifies March 2024 first-phase operation; day 1 is a month placeholder, not a verified exact opening day.<cite data-ref=\"https://www.alliantenergy.com/our-energy/solar/iowa-solar/pleasant-creek-solar\"></cite></li><li>Alliant Energy’s 2024 gallery shows the combined Pleasant Creek / Duane Arnold Solar property and construction. The pictured area is not independently identified as the first 50 MW phase. Credit: Alliant Energy, Pleasant Creek / Duane Arnold Solar gallery.<cite data-ref=\"https://www.alliantenergy.com/our-energy/solar/iowa-solar/pleasant-creek-solar\"></cite></li><li>Alliant Energy’s 2024 gallery shows the combined Pleasant Creek / Duane Arnold Solar property and construction. The pictured area is not independently identified as the first 50 MW phase. Credit: Alliant Energy, Pleasant Creek / Duane Arnold Solar gallery.<cite data-ref=\"https://www.alliantenergy.com/our-energy/solar/iowa-solar/pleasant-creek-solar\"></cite></li><li>Alliant Energy’s 2024 gallery shows the combined Pleasant Creek / Duane Arnold Solar property and construction. The pictured area is not independently identified as the first 50 MW phase. Credit: Alliant Energy, Pleasant Creek / Duane Arnold Solar gallery.<cite data-ref=\"https://www.alliantenergy.com/our-energy/solar/iowa-solar/pleasant-creek-solar\"></cite></li><li>Alliant Energy’s 2024 gallery shows the combined Pleasant Creek / Duane Arnold Solar property and construction. The pictured area is not independently identified as the first 50 MW phase. Credit: Alliant Energy, Pleasant Creek / Duane Arnold Solar gallery.<cite data-ref=\"https://www.alliantenergy.com/our-energy/solar/iowa-solar/pleasant-creek-solar\"></cite></li><li>Alliant Energy’s 2024 gallery shows the combined Pleasant Creek / Duane Arnold Solar property and construction. The pictured area is not independently identified as the first 50 MW phase. Credit: Alliant Energy, Pleasant Creek / Duane Arnold Solar gallery.<cite data-ref=\"https://www.alliantenergy.com/our-energy/solar/iowa-solar/pleasant-creek-solar\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "estimated",
+        "allDay": true,
+        "allDayStated": false,
+        "utcStartDateTime": "2024-03-01T00:00:00.000Z",
+        "dateConfidenceReasoning": "Operator specifies March 2024 first-phase operation; day 1 is a month placeholder, not a verified exact opening day.",
+        "originalStartDate": null,
+        "delayReasoning": null,
+        "company": "Alliant Energy",
+        "companyWikiUrl": null,
+        "address": "Pleasant Creek Unit 1, EIA plant 67140 reporting point, Linn County, Iowa; shared reporting context, not surveyed phase boundary",
+        "tags": [
+          "Cleanview",
+          "Solar"
+        ],
+        "latitude": 42.104396,
+        "longitude": -91.78258,
+        "media": [
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round31-2026-10-24/solar-duane-arnold-clean-ia-topo.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 1000
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round31-2026-10-24/solar-duane-arnold-clean-ia-relief.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 1000
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round31-2026-10-24/duane-da-10-24-1.jpg",
+            "originalWidth": 1000,
+            "originalHeight": 753
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round31-2026-10-24/duane-da-10-24-2.jpg",
+            "originalWidth": 1000,
+            "originalHeight": 713
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round31-2026-10-24/duane-das1.jpg",
+            "originalWidth": 1000,
+            "originalHeight": 750
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round31-2026-10-24/duane-das2.jpg",
+            "originalWidth": 1000,
+            "originalHeight": 750
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round31-2026-10-24/duane-das3.jpg",
+            "originalWidth": 1000,
+            "originalHeight": 750
+          }
+        ]
+      },
+      "power": {
+        "megawatts": 50,
+        "kind": "generation",
+        "sourceUrl": "https://www.alliantenergy.com/our-energy/solar/iowa-solar/pleasant-creek-solar",
+        "note": "Published project/request capacity, not measured output. Alliant Energy states that the first 50 MW of Pleasant Creek Solar, formerly Duane Arnold Solar, began operating in March 2024. A separate 150 MW began operating in December 2024;"
+      },
+      "datacenter": null,
+      "clearEnergy": false,
+      "gaps": [
+        "Obtain phase-specific site boundary, construction budget and independently labelled Phase I photos; combined-property gallery remains scope-qualified."
+      ],
+      "mediaReplaced": true,
+      "mediaAdded": 5
+    },
+    "solar-obsidian-solar-center-or": {
+      "patch": {
+        "title": "Obsidian Solar Center: 400 MW Plan; December 2028 EIA Target",
+        "description": "EIA’s September 2026 inventory lists Obsidian Solar Center plant 63488 at 400 MW with December 2028 planned operation and regulatory approvals pending. The operator describes a Fort Rock-area solar project with an approved optional battery component.",
+        "sourceUrl": null,
+        "references": [
+          {
+            "url": "https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx",
+            "title": "EIA — September 2026 planned generating additions",
+            "confidence": 95,
+            "publishedDate": "2026-10-23"
+          },
+          {
+            "url": "https://www.obsidiansolarcenter.com/project-description.html",
+            "title": "Obsidian Solar Center — project description",
+            "confidence": 95,
+            "publishedDate": null
+          },
+          {
+            "url": "https://www.obsidiansolarcenter.com/uploads/1/1/7/7/117766420/obsidian_-_fort_rock_development_summary_3-2023.pdf",
+            "title": "Obsidian Solar Center — Fort Rock development summary",
+            "confidence": 95,
+            "publishedDate": null
+          }
+        ],
+        "longFormSummary": "<ul><li>The operator factsheet distinguishes 400 MW AC from up to 520 MW DC and up to 50 MW / 250 MWh flow batteries. Native power is solar generation only; no battery size added to it. The older Q3 2026 factsheet target is superseded here by EIA’s later reporting snapshot, not treated as completed operation.<cite data-ref=\"https://www.obsidiansolarcenter.com/uploads/1/1/7/7/117766420/obsidian_-_fort_rock_development_summary_3-2023.pdf\"></cite></li><li>Removed unsupported $440M construction price. Retirement/decommissioning guarantees are not a construction budget. Operator factsheet’s Black Cap photo is explicitly another illustrative project, not this site; only its labelled proposed Obsidian site plan is eligible. Exact 2025 amended-certificate URL returned 404, so its indexed deadline is left unverified.<cite data-ref=\"https://www.obsidiansolarcenter.com/uploads/1/1/7/7/117766420/obsidian_-_fort_rock_development_summary_3-2023.pdf\"></cite></li><li>Timeline: EIA planned month December 2028; day 1 is a month placeholder, not exact realized COD.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>Operator factsheet includes the labelled proposed Obsidian array/site plan. Its lower Black Cap photograph is explicitly an illustrative different project, not the proposed Obsidian site. The factsheet’s old Q3 2026 target is superseded by later EIA planning data. Credit: Obsidian Renewables, published Fort Rock development summary.<cite data-ref=\"https://www.obsidiansolarcenter.com/uploads/1/1/7/7/117766420/obsidian_-_fort_rock_development_summary_3-2023.pdf\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "estimated",
+        "allDay": true,
+        "allDayStated": false,
+        "utcStartDateTime": "2028-12-01T00:00:00.000Z",
+        "dateConfidenceReasoning": "EIA planned month December 2028; day 1 is a month placeholder, not exact realized COD.",
+        "originalStartDate": null,
+        "delayReasoning": null,
+        "company": "Obsidian Renewables",
+        "companyWikiUrl": null,
+        "address": "Obsidian Solar Center EIA plant 63488 reporting point near Fort Rock, Lake County, Oregon; not surveyed array boundary",
+        "tags": [
+          "Cleanview",
+          "Solar"
+        ],
+        "latitude": 43.312167,
+        "longitude": -120.8218,
+        "media": [
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round31-2026-10-24/solar-obsidian-solar-center-or-topo.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 1000
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round31-2026-10-24/solar-obsidian-solar-center-or-relief.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 1000
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round31-2026-10-24/obsidian-proposed-plan.jpg",
+            "originalWidth": 1500,
+            "originalHeight": 2000
+          }
+        ]
+      },
+      "power": {
+        "megawatts": 400,
+        "kind": "generation",
+        "sourceUrl": "https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx",
+        "note": "Published project/request capacity, not measured output. EIA’s September 2026 inventory lists Obsidian Solar Center plant 63488 at 400 MW with December 2028 planned operation and regulatory approvals pending. The operator describes a For"
+      },
+      "datacenter": null,
+      "clearEnergy": false,
+      "gaps": [
+        "Recover signed latest amended site certificate, reconcile final battery design and schedule, verify construction budget and actual project photography."
+      ],
+      "mediaReplaced": true,
+      "mediaAdded": 1
+    },
+    "solar-rich-road-solar-ny": {
+      "delete": true,
+      "researchFinding": "Duplicate of already corrected Rich Road Solar 16599 (earlier large round 7). NYPA’s September 28 announcement, identical 240 MW scope and EIA plant 68264 establish the same Canton project; the draft’s $290M/EDF-only/exact future date do not establish another project. Preserve canonical 16599 unchanged, with its sourced majority ownership and 2029 target. Project FAQ mixes Ridge View/Niagara text, so its ambiguous $400M is not accepted as matched cost evidence.",
+      "sourcesChecked": [
+        "https://www.nypa.gov/News/Press-Releases/2026/20260928-solar",
+        "https://www.edf-re.com/project/rich-road-solar",
+        "https://www.richroadsolar.com/faq/",
+        "https://www.chronopin.com/api/pins/16599"
+      ],
+      "gaps": [
+        "Duplicate held; canonical construction start/COD and matched published cost still need future verification."
+      ]
+    },
+    "solar-starfire-mountain-ky": {
+      "delete": true,
+      "researchFinding": "Duplicate of retained Starfire Mountain Solar 18389; no independently established separate 410 MW/$450M project. EIA plant 68369 STMO lists a single 410 MW request, September 2029 plan and pending approvals. Existing canonical’s $1B/Phase I language may conflate the broader 810 MW program and requires a separate targeted correction; it is not certified by this duplicate hold. Preserve 18389 unchanged and queue its phase/cost/date audit. Operator exact URLs return 404.",
+      "sourcesChecked": [
+        "https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx",
+        "https://brightnightpower.com/starfire/",
+        "https://www.chronopin.com/api/pins/18389"
+      ],
+      "gaps": [
+        "Duplicate of retained Starfire Mountain Solar 18389; no independently established separate 410 MW/$450M project. EIA plant 68369 STMO lists a single 410 MW request, September 2029 plan and pending approvals. Existing canonical’s $1B/Phase I language may conflate the broader 810 MW program and requires a separate targeted correction; it is not certified by this duplicate hold. Preserve 18389 unchanged and queue its phase/cost/date audit. Operator exact URLs return 404."
+      ]
+    }
+  },
+  "results": [
+    {
+      "environment": "local",
+      "key": "battery-hecate-norfolk-ma",
+      "id": 17043,
+      "action": "corrected",
+      "mediaPreserved": false,
+      "mediaReplaced": true,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Resolve FERC complaint outcome, explicit queue mapping, current phase capacity/MWh, site control, permits, COD and published construction budget. No verified project-specific gallery photo found; CME download blocks direct retrieval."
+      ]
+    },
+    {
+      "environment": "local",
+      "key": "battery-lite-brite-suffolk-ma",
+      "id": 17044,
+      "action": "corrected",
+      "mediaPreserved": false,
+      "mediaReplaced": true,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Reconcile local 200 MW planning scope with 300 MW ISO request, verify permits, current schedule, construction budget and gallery attachment."
+      ]
+    },
+    {
+      "environment": "local",
+      "key": "battery-moler-colfel-east-feliciana-la",
+      "id": 17045,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Identify applicant, project-specific parcel/gallery, duration, local approvals and construction budget. Do not confuse separate solar requests at the same interconnection."
+      ]
+    },
+    {
+      "environment": "local",
+      "key": "battery-thetford-tuscola-mi",
+      "id": 17046,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Verify developer, exact battery parcel, duration, project-specific permit, cost and official gallery."
+      ]
+    },
+    {
+      "environment": "local",
+      "key": "dc-cloudhq-ord-cook-il",
+      "id": 17047,
+      "action": "deleted",
+      "verifiedStatus": 404
+    },
+    {
+      "environment": "local",
+      "key": "solar-goldfinch-mason-ky",
+      "id": 17048,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Verify latest permits, actual schedule, precise project footprint and construction budget; no verified project photograph found."
+      ]
+    },
+    {
+      "environment": "local",
+      "key": "solar-hawkeye-clinton-ia",
+      "id": 17049,
+      "action": "corrected",
+      "mediaPreserved": false,
+      "mediaReplaced": true,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Verify phase-specific current permitting, project footprint, construction schedule and published construction budget; official project-photo gap remains."
+      ]
+    },
+    {
+      "environment": "local",
+      "key": "solar-hintonville-perry-ms",
+      "id": 17050,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Identify applicant and final parcel; verify current schedule, permits, construction budget and a project-specific gallery."
+      ]
+    },
+    {
+      "environment": "local",
+      "key": "solar-milford-phase-2-beaver-ut",
+      "id": 17051,
+      "action": "corrected",
+      "mediaPreserved": false,
+      "mediaReplaced": true,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Verify current ownership after the dated Longroad filing, latest construction/COD, phase-specific construction budget and an independently labelled gallery."
+      ]
+    },
+    {
+      "environment": "local",
+      "key": "dc-applied-digital-polaris-forge2-b1-nd",
+      "id": 17052,
+      "action": "corrected",
+      "mediaPreserved": false,
+      "mediaReplaced": true,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Obtain exact Building 1 parcel, latest readiness/COD, building construction budget and independently labelled as-built gallery."
+      ]
+    },
+    {
+      "environment": "local",
+      "key": "dc-google-springboard-b2-muskogee-ok",
+      "id": 17053,
+      "action": "deleted",
+      "verifiedStatus": 404
+    },
+    {
+      "environment": "local",
+      "key": "dc-qts-york-county-dc2-sc",
+      "id": 17054,
+      "action": "deleted",
+      "verifiedStatus": 404
+    },
+    {
+      "environment": "local",
+      "key": "battery-brambleton-goose-creek-va",
+      "id": 17055,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Verify final parcel, current applicant/permits and schedule, whole-project construction budget and official gallery; interconnection upgrade costs remain separate."
+      ]
+    },
+    {
+      "environment": "local",
+      "key": "battery-rogers-road-carson-va",
+      "id": 17057,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Verify final parcel, current applicant/permits and schedule, whole-project construction budget and official gallery; interconnection upgrade costs remain separate."
+      ]
+    },
+    {
+      "environment": "local",
+      "key": "battery-surry-skiffes-creek-va",
+      "id": 17058,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Verify final parcel, current applicant/permits and schedule, whole-project construction budget and official gallery; interconnection upgrade costs remain separate."
+      ]
+    },
+    {
+      "environment": "local",
+      "key": "battery-lewis-run-pierce-brook-pa",
+      "id": 17056,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Verify withdrawal timing, developer and whether a replacement request exists; exact battery parcel, construction budget and project gallery unverified."
+      ]
+    },
+    {
+      "environment": "local",
+      "key": "dc-cielo-des-moines-ia",
+      "id": 17059,
+      "action": "deleted",
+      "verifiedStatus": 404
+    },
+    {
+      "environment": "local",
+      "key": "dc-cyrusone-sangamon-bldg-3-il",
+      "id": 17060,
+      "action": "deleted",
+      "verifiedStatus": 404
+    },
+    {
+      "environment": "local",
+      "key": "dc-rowan-bauxite-iii-bldg-1-md",
+      "id": 17061,
+      "action": "deleted",
+      "verifiedStatus": 404
+    },
+    {
+      "environment": "local",
+      "key": "dc-security-land-baltimore-md",
+      "id": 17062,
+      "action": "corrected",
+      "mediaPreserved": false,
+      "mediaReplaced": true,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Verify current county policy/permit disposition, final building scope, construction schedule and published construction budget; applicant gallery not found."
+      ]
+    },
+    {
+      "environment": "local",
+      "key": "solar-duane-arnold-clean-ia",
+      "id": 17063,
+      "action": "corrected",
+      "mediaPreserved": false,
+      "mediaReplaced": true,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Obtain phase-specific site boundary, construction budget and independently labelled Phase I photos; combined-property gallery remains scope-qualified."
+      ]
+    },
+    {
+      "environment": "local",
+      "key": "solar-obsidian-solar-center-or",
+      "id": 17064,
+      "action": "corrected",
+      "mediaPreserved": false,
+      "mediaReplaced": true,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Recover signed latest amended site certificate, reconcile final battery design and schedule, verify construction budget and actual project photography."
+      ]
+    },
+    {
+      "environment": "local",
+      "key": "solar-rich-road-solar-ny",
+      "id": 17065,
+      "action": "deleted",
+      "verifiedStatus": 404
+    },
+    {
+      "environment": "local",
+      "key": "solar-starfire-mountain-ky",
+      "id": 17066,
+      "action": "deleted",
+      "verifiedStatus": 404
+    },
+    {
+      "environment": "prod",
+      "key": "battery-hecate-norfolk-ma",
+      "id": 17043,
+      "action": "corrected",
+      "mediaPreserved": false,
+      "mediaReplaced": true,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Resolve FERC complaint outcome, explicit queue mapping, current phase capacity/MWh, site control, permits, COD and published construction budget. No verified project-specific gallery photo found; CME download blocks direct retrieval."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "battery-lite-brite-suffolk-ma",
+      "id": 17044,
+      "action": "corrected",
+      "mediaPreserved": false,
+      "mediaReplaced": true,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Reconcile local 200 MW planning scope with 300 MW ISO request, verify permits, current schedule, construction budget and gallery attachment."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "battery-moler-colfel-east-feliciana-la",
+      "id": 17045,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Identify applicant, project-specific parcel/gallery, duration, local approvals and construction budget. Do not confuse separate solar requests at the same interconnection."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "battery-thetford-tuscola-mi",
+      "id": 17046,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Verify developer, exact battery parcel, duration, project-specific permit, cost and official gallery."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "dc-cloudhq-ord-cook-il",
+      "id": 17047,
+      "action": "deleted",
+      "verifiedStatus": 404
+    },
+    {
+      "environment": "prod",
+      "key": "solar-goldfinch-mason-ky",
+      "id": 17048,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Verify latest permits, actual schedule, precise project footprint and construction budget; no verified project photograph found."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "solar-hawkeye-clinton-ia",
+      "id": 17049,
+      "action": "corrected",
+      "mediaPreserved": false,
+      "mediaReplaced": true,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Verify phase-specific current permitting, project footprint, construction schedule and published construction budget; official project-photo gap remains."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "solar-hintonville-perry-ms",
+      "id": 17050,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Identify applicant and final parcel; verify current schedule, permits, construction budget and a project-specific gallery."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "solar-milford-phase-2-beaver-ut",
+      "id": 17051,
+      "action": "corrected",
+      "mediaPreserved": false,
+      "mediaReplaced": true,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Verify current ownership after the dated Longroad filing, latest construction/COD, phase-specific construction budget and an independently labelled gallery."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "dc-applied-digital-polaris-forge2-b1-nd",
+      "id": 17052,
+      "action": "corrected",
+      "mediaPreserved": false,
+      "mediaReplaced": true,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Obtain exact Building 1 parcel, latest readiness/COD, building construction budget and independently labelled as-built gallery."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "dc-google-springboard-b2-muskogee-ok",
+      "id": 17053,
+      "action": "deleted",
+      "verifiedStatus": 404
+    },
+    {
+      "environment": "prod",
+      "key": "dc-qts-york-county-dc2-sc",
+      "id": 17054,
+      "action": "deleted",
+      "verifiedStatus": 404
+    },
+    {
+      "environment": "prod",
+      "key": "battery-brambleton-goose-creek-va",
+      "id": 17055,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Verify final parcel, current applicant/permits and schedule, whole-project construction budget and official gallery; interconnection upgrade costs remain separate."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "battery-rogers-road-carson-va",
+      "id": 17057,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Verify final parcel, current applicant/permits and schedule, whole-project construction budget and official gallery; interconnection upgrade costs remain separate."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "battery-surry-skiffes-creek-va",
+      "id": 17058,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Verify final parcel, current applicant/permits and schedule, whole-project construction budget and official gallery; interconnection upgrade costs remain separate."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "battery-lewis-run-pierce-brook-pa",
+      "id": 17056,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Verify withdrawal timing, developer and whether a replacement request exists; exact battery parcel, construction budget and project gallery unverified."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "dc-cielo-des-moines-ia",
+      "id": 17059,
+      "action": "deleted",
+      "verifiedStatus": 404
+    },
+    {
+      "environment": "prod",
+      "key": "dc-cyrusone-sangamon-bldg-3-il",
+      "id": 17060,
+      "action": "deleted",
+      "verifiedStatus": 404
+    },
+    {
+      "environment": "prod",
+      "key": "dc-rowan-bauxite-iii-bldg-1-md",
+      "id": 17061,
+      "action": "deleted",
+      "verifiedStatus": 404
+    },
+    {
+      "environment": "prod",
+      "key": "dc-security-land-baltimore-md",
+      "id": 17062,
+      "action": "corrected",
+      "mediaPreserved": false,
+      "mediaReplaced": true,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Verify current county policy/permit disposition, final building scope, construction schedule and published construction budget; applicant gallery not found."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "solar-duane-arnold-clean-ia",
+      "id": 17063,
+      "action": "corrected",
+      "mediaPreserved": false,
+      "mediaReplaced": true,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Obtain phase-specific site boundary, construction budget and independently labelled Phase I photos; combined-property gallery remains scope-qualified."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "solar-obsidian-solar-center-or",
+      "id": 17064,
+      "action": "corrected",
+      "mediaPreserved": false,
+      "mediaReplaced": true,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Recover signed latest amended site certificate, reconcile final battery design and schedule, verify construction budget and actual project photography."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "solar-rich-road-solar-ny",
+      "id": 17065,
+      "action": "deleted",
+      "verifiedStatus": 404
+    },
+    {
+      "environment": "prod",
+      "key": "solar-starfire-mountain-ky",
+      "id": 17066,
+      "action": "deleted",
+      "verifiedStatus": 404
+    }
+  ],
+  "verification": {
+    "actionsVerified": 48,
+    "freshReadbacks": [
+      {
+        "environment": "local",
+        "id": 17043,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 17044,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 17045,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 17046,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 17047,
+        "status": 404,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 17048,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 17049,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 17050,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 17051,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 17052,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 17053,
+        "status": 404,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 17054,
+        "status": 404,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 17055,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 17057,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 17058,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 17056,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 17059,
+        "status": 404,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 17060,
+        "status": 404,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 17061,
+        "status": 404,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 17062,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 17063,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 17064,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 17065,
+        "status": 404,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 17066,
+        "status": 404,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 17043,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 17044,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 17045,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 17046,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 17047,
+        "status": 404,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 17048,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 17049,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 17050,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 17051,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 17052,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 17053,
+        "status": 404,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 17054,
+        "status": 404,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 17055,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 17057,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 17058,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 17056,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 17059,
+        "status": 404,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 17060,
+        "status": 404,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 17061,
+        "status": 404,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 17062,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 17063,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 17064,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 17065,
+        "status": 404,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 17066,
+        "status": 404,
+        "verified": true
+      }
+    ],
+    "media": [
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/battery-brambleton-goose-creek-va-aerial.jpg",
+        "status": 200,
+        "bytes": 549207
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/battery-brambleton-goose-creek-va-regional.jpg",
+        "status": 200,
+        "bytes": 240501
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/battery-brambleton-goose-creek-va-topo.jpg",
+        "status": 200,
+        "bytes": 605934
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/battery-lewis-run-pierce-brook-pa-aerial.jpg",
+        "status": 200,
+        "bytes": 681125
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/battery-lewis-run-pierce-brook-pa-regional.jpg",
+        "status": 200,
+        "bytes": 269383
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/battery-lewis-run-pierce-brook-pa-topo.jpg",
+        "status": 200,
+        "bytes": 482558
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/battery-moler-colfel-east-feliciana-la-aerial.jpg",
+        "status": 200,
+        "bytes": 428739
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/battery-moler-colfel-east-feliciana-la-regional.jpg",
+        "status": 200,
+        "bytes": 175085
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/battery-moler-colfel-east-feliciana-la-topo.jpg",
+        "status": 200,
+        "bytes": 444291
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/battery-rogers-road-carson-va-aerial.jpg",
+        "status": 200,
+        "bytes": 479890
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/battery-rogers-road-carson-va-regional.jpg",
+        "status": 200,
+        "bytes": 165874
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/battery-rogers-road-carson-va-topo.jpg",
+        "status": 200,
+        "bytes": 511909
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/battery-surry-skiffes-creek-va-aerial.jpg",
+        "status": 200,
+        "bytes": 228827
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/battery-surry-skiffes-creek-va-regional.jpg",
+        "status": 200,
+        "bytes": 135778
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/battery-surry-skiffes-creek-va-topo.jpg",
+        "status": 200,
+        "bytes": 363073
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/battery-thetford-tuscola-mi-aerial.jpg",
+        "status": 200,
+        "bytes": 491312
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/battery-thetford-tuscola-mi-regional.jpg",
+        "status": 200,
+        "bytes": 109563
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/battery-thetford-tuscola-mi-topo.jpg",
+        "status": 200,
+        "bytes": 334803
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-round31-2026-10-24/battery-hecate-norfolk-ma-relief.jpg",
+        "status": 200,
+        "bytes": 154011
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-round31-2026-10-24/battery-hecate-norfolk-ma-topo.jpg",
+        "status": 200,
+        "bytes": 511497
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-round31-2026-10-24/battery-lite-brite-suffolk-ma-relief.jpg",
+        "status": 200,
+        "bytes": 152179
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-round31-2026-10-24/battery-lite-brite-suffolk-ma-topo.jpg",
+        "status": 200,
+        "bytes": 627719
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-round31-2026-10-24/dc-applied-digital-polaris-forge2-b1-nd-relief.jpg",
+        "status": 200,
+        "bytes": 80819
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-round31-2026-10-24/dc-applied-digital-polaris-forge2-b1-nd-topo.jpg",
+        "status": 200,
+        "bytes": 220593
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-round31-2026-10-24/dc-security-land-baltimore-md-relief.jpg",
+        "status": 200,
+        "bytes": 167981
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-round31-2026-10-24/dc-security-land-baltimore-md-topo.jpg",
+        "status": 200,
+        "bytes": 542940
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-round31-2026-10-24/duane-da-10-24-1.jpg",
+        "status": 200,
+        "bytes": 189153
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-round31-2026-10-24/duane-da-10-24-2.jpg",
+        "status": 200,
+        "bytes": 174678
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-round31-2026-10-24/duane-das1.jpg",
+        "status": 200,
+        "bytes": 202605
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-round31-2026-10-24/duane-das2.jpg",
+        "status": 200,
+        "bytes": 173190
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-round31-2026-10-24/duane-das3.jpg",
+        "status": 200,
+        "bytes": 215904
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-round31-2026-10-24/obsidian-proposed-plan.jpg",
+        "status": 200,
+        "bytes": 397867
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-round31-2026-10-24/pf2-issuer-plan.jpg",
+        "status": 200,
+        "bytes": 181057
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-round31-2026-10-24/solar-duane-arnold-clean-ia-relief.jpg",
+        "status": 200,
+        "bytes": 130502
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-round31-2026-10-24/solar-duane-arnold-clean-ia-topo.jpg",
+        "status": 200,
+        "bytes": 403824
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-round31-2026-10-24/solar-hawkeye-clinton-ia-relief.jpg",
+        "status": 200,
+        "bytes": 75820
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-round31-2026-10-24/solar-hawkeye-clinton-ia-topo.jpg",
+        "status": 200,
+        "bytes": 208790
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-round31-2026-10-24/solar-milford-phase-2-beaver-ut-relief.jpg",
+        "status": 200,
+        "bytes": 69891
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-round31-2026-10-24/solar-milford-phase-2-beaver-ut-topo.jpg",
+        "status": 200,
+        "bytes": 125891
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-round31-2026-10-24/solar-obsidian-solar-center-or-relief.jpg",
+        "status": 200,
+        "bytes": 65026
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-round31-2026-10-24/solar-obsidian-solar-center-or-topo.jpg",
+        "status": 200,
+        "bytes": 105458
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/solar-goldfinch-mason-ky-aerial.jpg",
+        "status": 200,
+        "bytes": 487054
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/solar-goldfinch-mason-ky-regional.jpg",
+        "status": 200,
+        "bytes": 335847
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/solar-goldfinch-mason-ky-topo.jpg",
+        "status": 200,
+        "bytes": 552340
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/solar-hintonville-perry-ms-aerial.jpg",
+        "status": 200,
+        "bytes": 621011
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/solar-hintonville-perry-ms-regional.jpg",
+        "status": 200,
+        "bytes": 206541
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/solar-hintonville-perry-ms-topo.jpg",
+        "status": 200,
+        "bytes": 571090
+      }
+    ],
+    "pages": [
+      {
+        "environment": "local",
+        "id": 17043,
+        "status": 200,
+        "bytes": 311193
+      },
+      {
+        "environment": "local",
+        "id": 17044,
+        "status": 200,
+        "bytes": 313346
+      },
+      {
+        "environment": "local",
+        "id": 17045,
+        "status": 200,
+        "bytes": 303996
+      },
+      {
+        "environment": "local",
+        "id": 17046,
+        "status": 200,
+        "bytes": 304010
+      },
+      {
+        "environment": "local",
+        "id": 17048,
+        "status": 200,
+        "bytes": 314376
+      },
+      {
+        "environment": "local",
+        "id": 17049,
+        "status": 200,
+        "bytes": 304797
+      },
+      {
+        "environment": "local",
+        "id": 17050,
+        "status": 200,
+        "bytes": 303724
+      },
+      {
+        "environment": "local",
+        "id": 17051,
+        "status": 200,
+        "bytes": 308566
+      },
+      {
+        "environment": "local",
+        "id": 17052,
+        "status": 200,
+        "bytes": 326586
+      },
+      {
+        "environment": "local",
+        "id": 17055,
+        "status": 200,
+        "bytes": 311866
+      },
+      {
+        "environment": "local",
+        "id": 17057,
+        "status": 200,
+        "bytes": 311201
+      },
+      {
+        "environment": "local",
+        "id": 17058,
+        "status": 200,
+        "bytes": 311583
+      },
+      {
+        "environment": "local",
+        "id": 17056,
+        "status": 200,
+        "bytes": 309409
+      },
+      {
+        "environment": "local",
+        "id": 17062,
+        "status": 200,
+        "bytes": 320321
+      },
+      {
+        "environment": "local",
+        "id": 17063,
+        "status": 200,
+        "bytes": 337732
+      },
+      {
+        "environment": "local",
+        "id": 17064,
+        "status": 200,
+        "bytes": 317153
+      },
+      {
+        "environment": "prod",
+        "id": 17043,
+        "status": 200,
+        "bytes": 267676
+      },
+      {
+        "environment": "prod",
+        "id": 17044,
+        "status": 200,
+        "bytes": 270289
+      },
+      {
+        "environment": "prod",
+        "id": 17045,
+        "status": 200,
+        "bytes": 260806
+      },
+      {
+        "environment": "prod",
+        "id": 17046,
+        "status": 200,
+        "bytes": 260796
+      },
+      {
+        "environment": "prod",
+        "id": 17048,
+        "status": 200,
+        "bytes": 270886
+      },
+      {
+        "environment": "prod",
+        "id": 17049,
+        "status": 200,
+        "bytes": 262289
+      },
+      {
+        "environment": "prod",
+        "id": 17050,
+        "status": 200,
+        "bytes": 260931
+      },
+      {
+        "environment": "prod",
+        "id": 17051,
+        "status": 200,
+        "bytes": 265513
+      },
+      {
+        "environment": "prod",
+        "id": 17052,
+        "status": 200,
+        "bytes": 282650
+      },
+      {
+        "environment": "prod",
+        "id": 17055,
+        "status": 200,
+        "bytes": 268124
+      },
+      {
+        "environment": "prod",
+        "id": 17057,
+        "status": 200,
+        "bytes": 267572
+      },
+      {
+        "environment": "prod",
+        "id": 17058,
+        "status": 200,
+        "bytes": 267989
+      },
+      {
+        "environment": "prod",
+        "id": 17056,
+        "status": 200,
+        "bytes": 266211
+      },
+      {
+        "environment": "prod",
+        "id": 17062,
+        "status": 200,
+        "bytes": 276486
+      },
+      {
+        "environment": "prod",
+        "id": 17063,
+        "status": 200,
+        "bytes": 290741
+      },
+      {
+        "environment": "prod",
+        "id": 17064,
+        "status": 200,
+        "bytes": 273930
+      }
+    ],
+    "postedMapCounts": {
+      "local": 1377,
+      "prod": 1377
+    },
+    "telemetry": [
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {
+        "energyCleared": true,
+        "datacenterAfter": {
+          "waterGallonsPerDay": null,
+          "waterBasis": null,
+          "chips": null,
+          "chipModel": null,
+          "h100Equivalents": null,
+          "acres": null,
+          "sqft": null,
+          "buildings": 1,
+          "generators": null,
+          "cooling": null,
+          "powerSource": null,
+          "sourceUrl": "https://ir.applieddigital.com/sec-filings/all-sec-filings/content/0001144879-25-000076/0001144879-25-000076.pdf",
+          "note": "One planned Building 1, 150 MW design critical IT load; campus area and financing not allocated to the building. No verified daily water, hardware or generator counts.",
+          "checkedAt": "2026-10-24T16:55:00.026Z"
+        }
+      },
+      {},
+      {},
+      {},
+      {},
+      {
+        "energyCleared": true,
+        "datacenterAfter": {
+          "waterGallonsPerDay": null,
+          "waterBasis": null,
+          "chips": null,
+          "chipModel": null,
+          "h100Equivalents": null,
+          "acres": null,
+          "sqft": null,
+          "buildings": null,
+          "generators": null,
+          "cooling": null,
+          "powerSource": null,
+          "sourceUrl": "https://www.wmar2news.com/news/region/baltimore-county/controversial-proposed-data-center-up-for-debate-in-woodlawn",
+          "note": "Reported proposed 150 MW facility demand at a 42-acre property; no verified IT-only load, building count, daily water or hardware inventory.",
+          "checkedAt": "2026-10-24T16:55:01.636Z"
+        }
+      },
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {
+        "energyCleared": true,
+        "datacenterAfter": {
+          "waterGallonsPerDay": null,
+          "waterBasis": null,
+          "chips": null,
+          "chipModel": null,
+          "h100Equivalents": null,
+          "acres": null,
+          "sqft": null,
+          "buildings": 1,
+          "generators": null,
+          "cooling": null,
+          "powerSource": null,
+          "sourceUrl": "https://ir.applieddigital.com/sec-filings/all-sec-filings/content/0001144879-25-000076/0001144879-25-000076.pdf",
+          "note": "One planned Building 1, 150 MW design critical IT load; campus area and financing not allocated to the building. No verified daily water, hardware or generator counts.",
+          "checkedAt": "2026-10-24T16:57:18.617Z"
+        }
+      },
+      {},
+      {},
+      {},
+      {},
+      {
+        "energyCleared": true,
+        "datacenterAfter": {
+          "waterGallonsPerDay": null,
+          "waterBasis": null,
+          "chips": null,
+          "chipModel": null,
+          "h100Equivalents": null,
+          "acres": null,
+          "sqft": null,
+          "buildings": null,
+          "generators": null,
+          "cooling": null,
+          "powerSource": null,
+          "sourceUrl": "https://www.wmar2news.com/news/region/baltimore-county/controversial-proposed-data-center-up-for-debate-in-woodlawn",
+          "note": "Reported proposed 150 MW facility demand at a 42-acre property; no verified IT-only load, building count, daily water or hardware inventory.",
+          "checkedAt": "2026-10-24T16:59:34.012Z"
+        }
+      },
+      {},
+      {}
+    ]
+  },
+  "wikiVerification": {
+    "local": {
+      "pinsVerifiedUnchanged": 37,
+      "sourceUrls": 32,
+      "readySourceWikis": 32,
+      "staleSummaries": 0,
+      "gaps": [],
+      "companyWikisVerified": 11
+    },
+    "prod": {
+      "pinsVerifiedUnchanged": 37,
+      "sourceUrls": 32,
+      "readySourceWikis": 32,
+      "staleSummaries": 0,
+      "gaps": [],
+      "companyWikisVerified": 11
+    }
+  },
+  "retainedCounterpartVerification": [
+    {
+      "environment": "local",
+      "id": 16329,
+      "verifiedUnchanged": true
+    },
+    {
+      "environment": "local",
+      "id": 16399,
+      "verifiedUnchanged": true
+    },
+    {
+      "environment": "local",
+      "id": 18389,
+      "verifiedUnchanged": true
+    },
+    {
+      "environment": "local",
+      "id": 16599,
+      "verifiedUnchanged": true
+    },
+    {
+      "environment": "prod",
+      "id": 16329,
+      "verifiedUnchanged": true
+    },
+    {
+      "environment": "prod",
+      "id": 16399,
+      "verifiedUnchanged": true
+    },
+    {
+      "environment": "prod",
+      "id": 18389,
+      "verifiedUnchanged": true
+    },
+    {
+      "environment": "prod",
+      "id": 16599,
+      "verifiedUnchanged": true
+    }
+  ],
+  "mediaEvidence": [
+    {
+      "key": "battery-hecate-norfolk-ma",
+      "layer": "topo",
+      "sourceUrl": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSTopo/MapServer/export?bbox=-71.430039,42.118282,-71.366039,42.162282&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "sourcePage": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSTopo/MapServer/export?bbox=-71.430039,42.118282,-71.366039,42.162282&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "credit": "USGS / The National Map",
+      "caption": "USGS topo basemap centered on the sourced approximate address/reporting point; imagery may predate construction.",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round31-2026-10-24/battery-hecate-norfolk-ma-topo.jpg",
+      "bytes": 511497,
+      "width": 1600,
+      "height": 1000,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round31-2026-10-24/battery-hecate-norfolk-ma-topo.jpg"
+    },
+    {
+      "key": "battery-hecate-norfolk-ma",
+      "layer": "relief",
+      "sourceUrl": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSShadedReliefOnly/MapServer/export?bbox=-71.478039,42.090282,-71.318039,42.190282&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "sourcePage": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSShadedReliefOnly/MapServer/export?bbox=-71.478039,42.090282,-71.318039,42.190282&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "credit": "USGS / The National Map",
+      "caption": "USGS relief basemap centered on the sourced approximate address/reporting point; imagery may predate construction.",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round31-2026-10-24/battery-hecate-norfolk-ma-relief.jpg",
+      "bytes": 154011,
+      "width": 1600,
+      "height": 1000,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round31-2026-10-24/battery-hecate-norfolk-ma-relief.jpg"
+    },
+    {
+      "key": "battery-lite-brite-suffolk-ma",
+      "layer": "topo",
+      "sourceUrl": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSTopo/MapServer/export?bbox=-71.186958,42.334552,-71.122958,42.378552&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "sourcePage": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSTopo/MapServer/export?bbox=-71.186958,42.334552,-71.122958,42.378552&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "credit": "USGS / The National Map",
+      "caption": "USGS topo basemap centered on the sourced approximate address/reporting point; imagery may predate construction.",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round31-2026-10-24/battery-lite-brite-suffolk-ma-topo.jpg",
+      "bytes": 627719,
+      "width": 1600,
+      "height": 1000,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round31-2026-10-24/battery-lite-brite-suffolk-ma-topo.jpg"
+    },
+    {
+      "key": "battery-lite-brite-suffolk-ma",
+      "layer": "relief",
+      "sourceUrl": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSShadedReliefOnly/MapServer/export?bbox=-71.234958,42.306552,-71.074958,42.406552&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "sourcePage": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSShadedReliefOnly/MapServer/export?bbox=-71.234958,42.306552,-71.074958,42.406552&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "credit": "USGS / The National Map",
+      "caption": "USGS relief basemap centered on the sourced approximate address/reporting point; imagery may predate construction.",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round31-2026-10-24/battery-lite-brite-suffolk-ma-relief.jpg",
+      "bytes": 152179,
+      "width": 1600,
+      "height": 1000,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round31-2026-10-24/battery-lite-brite-suffolk-ma-relief.jpg"
+    },
+    {
+      "key": "solar-hawkeye-clinton-ia",
+      "layer": "topo",
+      "sourceUrl": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSTopo/MapServer/export?bbox=-90.731660,41.813204,-90.667660,41.857204&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "sourcePage": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSTopo/MapServer/export?bbox=-90.731660,41.813204,-90.667660,41.857204&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "credit": "USGS / The National Map",
+      "caption": "USGS topo basemap centered on the sourced approximate address/reporting point; imagery may predate construction.",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round31-2026-10-24/solar-hawkeye-clinton-ia-topo.jpg",
+      "bytes": 208790,
+      "width": 1600,
+      "height": 1000,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round31-2026-10-24/solar-hawkeye-clinton-ia-topo.jpg"
+    },
+    {
+      "key": "solar-hawkeye-clinton-ia",
+      "layer": "relief",
+      "sourceUrl": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSShadedReliefOnly/MapServer/export?bbox=-90.779660,41.785204,-90.619660,41.885204&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "sourcePage": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSShadedReliefOnly/MapServer/export?bbox=-90.779660,41.785204,-90.619660,41.885204&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "credit": "USGS / The National Map",
+      "caption": "USGS relief basemap centered on the sourced approximate address/reporting point; imagery may predate construction.",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round31-2026-10-24/solar-hawkeye-clinton-ia-relief.jpg",
+      "bytes": 75820,
+      "width": 1600,
+      "height": 1000,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round31-2026-10-24/solar-hawkeye-clinton-ia-relief.jpg"
+    },
+    {
+      "key": "solar-milford-phase-2-beaver-ut",
+      "layer": "topo",
+      "sourceUrl": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSTopo/MapServer/export?bbox=-113.046800,38.500442,-112.982800,38.544442&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "sourcePage": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSTopo/MapServer/export?bbox=-113.046800,38.500442,-112.982800,38.544442&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "credit": "USGS / The National Map",
+      "caption": "USGS topo basemap centered on the sourced approximate address/reporting point; imagery may predate construction.",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round31-2026-10-24/solar-milford-phase-2-beaver-ut-topo.jpg",
+      "bytes": 125891,
+      "width": 1600,
+      "height": 1000,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round31-2026-10-24/solar-milford-phase-2-beaver-ut-topo.jpg"
+    },
+    {
+      "key": "solar-milford-phase-2-beaver-ut",
+      "layer": "relief",
+      "sourceUrl": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSShadedReliefOnly/MapServer/export?bbox=-113.094800,38.472442,-112.934800,38.572442&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "sourcePage": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSShadedReliefOnly/MapServer/export?bbox=-113.094800,38.472442,-112.934800,38.572442&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "credit": "USGS / The National Map",
+      "caption": "USGS relief basemap centered on the sourced approximate address/reporting point; imagery may predate construction.",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round31-2026-10-24/solar-milford-phase-2-beaver-ut-relief.jpg",
+      "bytes": 69891,
+      "width": 1600,
+      "height": 1000,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round31-2026-10-24/solar-milford-phase-2-beaver-ut-relief.jpg"
+    },
+    {
+      "key": "dc-applied-digital-polaris-forge2-b1-nd",
+      "layer": "topo",
+      "sourceUrl": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSTopo/MapServer/export?bbox=-96.911500,46.959244,-96.847500,47.003244&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "sourcePage": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSTopo/MapServer/export?bbox=-96.911500,46.959244,-96.847500,47.003244&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "credit": "USGS / The National Map",
+      "caption": "USGS topo basemap centered on the sourced approximate address/reporting point; imagery may predate construction.",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round31-2026-10-24/dc-applied-digital-polaris-forge2-b1-nd-topo.jpg",
+      "bytes": 220593,
+      "width": 1600,
+      "height": 1000,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round31-2026-10-24/dc-applied-digital-polaris-forge2-b1-nd-topo.jpg"
+    },
+    {
+      "key": "dc-applied-digital-polaris-forge2-b1-nd",
+      "layer": "relief",
+      "sourceUrl": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSShadedReliefOnly/MapServer/export?bbox=-96.959500,46.931244,-96.799500,47.031244&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "sourcePage": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSShadedReliefOnly/MapServer/export?bbox=-96.959500,46.931244,-96.799500,47.031244&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "credit": "USGS / The National Map",
+      "caption": "USGS relief basemap centered on the sourced approximate address/reporting point; imagery may predate construction.",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round31-2026-10-24/dc-applied-digital-polaris-forge2-b1-nd-relief.jpg",
+      "bytes": 80819,
+      "width": 1600,
+      "height": 1000,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round31-2026-10-24/dc-applied-digital-polaris-forge2-b1-nd-relief.jpg"
+    },
+    {
+      "key": "dc-security-land-baltimore-md",
+      "layer": "topo",
+      "sourceUrl": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSTopo/MapServer/export?bbox=-76.771188,39.286135,-76.707188,39.330135&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "sourcePage": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSTopo/MapServer/export?bbox=-76.771188,39.286135,-76.707188,39.330135&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "credit": "USGS / The National Map",
+      "caption": "USGS topo basemap centered on the sourced approximate address/reporting point; imagery may predate construction.",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round31-2026-10-24/dc-security-land-baltimore-md-topo.jpg",
+      "bytes": 542940,
+      "width": 1600,
+      "height": 1000,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round31-2026-10-24/dc-security-land-baltimore-md-topo.jpg"
+    },
+    {
+      "key": "dc-security-land-baltimore-md",
+      "layer": "relief",
+      "sourceUrl": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSShadedReliefOnly/MapServer/export?bbox=-76.819188,39.258135,-76.659188,39.358135&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "sourcePage": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSShadedReliefOnly/MapServer/export?bbox=-76.819188,39.258135,-76.659188,39.358135&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "credit": "USGS / The National Map",
+      "caption": "USGS relief basemap centered on the sourced approximate address/reporting point; imagery may predate construction.",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round31-2026-10-24/dc-security-land-baltimore-md-relief.jpg",
+      "bytes": 167981,
+      "width": 1600,
+      "height": 1000,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round31-2026-10-24/dc-security-land-baltimore-md-relief.jpg"
+    },
+    {
+      "key": "solar-duane-arnold-clean-ia",
+      "layer": "topo",
+      "sourceUrl": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSTopo/MapServer/export?bbox=-91.814580,42.082396,-91.750580,42.126396&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "sourcePage": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSTopo/MapServer/export?bbox=-91.814580,42.082396,-91.750580,42.126396&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "credit": "USGS / The National Map",
+      "caption": "USGS topo basemap centered on the sourced approximate address/reporting point; imagery may predate construction.",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round31-2026-10-24/solar-duane-arnold-clean-ia-topo.jpg",
+      "bytes": 403824,
+      "width": 1600,
+      "height": 1000,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round31-2026-10-24/solar-duane-arnold-clean-ia-topo.jpg"
+    },
+    {
+      "key": "solar-duane-arnold-clean-ia",
+      "layer": "relief",
+      "sourceUrl": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSShadedReliefOnly/MapServer/export?bbox=-91.862580,42.054396,-91.702580,42.154396&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "sourcePage": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSShadedReliefOnly/MapServer/export?bbox=-91.862580,42.054396,-91.702580,42.154396&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "credit": "USGS / The National Map",
+      "caption": "USGS relief basemap centered on the sourced approximate address/reporting point; imagery may predate construction.",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round31-2026-10-24/solar-duane-arnold-clean-ia-relief.jpg",
+      "bytes": 130502,
+      "width": 1600,
+      "height": 1000,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round31-2026-10-24/solar-duane-arnold-clean-ia-relief.jpg"
+    },
+    {
+      "key": "solar-obsidian-solar-center-or",
+      "layer": "topo",
+      "sourceUrl": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSTopo/MapServer/export?bbox=-120.853800,43.290167,-120.789800,43.334167&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "sourcePage": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSTopo/MapServer/export?bbox=-120.853800,43.290167,-120.789800,43.334167&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "credit": "USGS / The National Map",
+      "caption": "USGS topo basemap centered on the sourced approximate address/reporting point; imagery may predate construction.",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round31-2026-10-24/solar-obsidian-solar-center-or-topo.jpg",
+      "bytes": 105458,
+      "width": 1600,
+      "height": 1000,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round31-2026-10-24/solar-obsidian-solar-center-or-topo.jpg"
+    },
+    {
+      "key": "solar-obsidian-solar-center-or",
+      "layer": "relief",
+      "sourceUrl": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSShadedReliefOnly/MapServer/export?bbox=-120.901800,43.262167,-120.741800,43.362167&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "sourcePage": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSShadedReliefOnly/MapServer/export?bbox=-120.901800,43.262167,-120.741800,43.362167&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "credit": "USGS / The National Map",
+      "caption": "USGS relief basemap centered on the sourced approximate address/reporting point; imagery may predate construction.",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round31-2026-10-24/solar-obsidian-solar-center-or-relief.jpg",
+      "bytes": 65026,
+      "width": 1600,
+      "height": 1000,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round31-2026-10-24/solar-obsidian-solar-center-or-relief.jpg"
+    },
+    {
+      "key": "solar-duane-arnold-clean-ia",
+      "layer": "gallery-da-10-24-1",
+      "sourceUrl": "https://www.alliantenergy.com/-/media/alliant/galleries/duanearnoldsolar/da-10-24-1.jpg?sc_lang=en",
+      "sourcePage": "https://www.alliantenergy.com/our-energy/solar/iowa-solar/pleasant-creek-solar",
+      "credit": "Alliant Energy, Pleasant Creek / Duane Arnold Solar gallery",
+      "caption": "Alliant Energy’s 2024 gallery shows the combined Pleasant Creek / Duane Arnold Solar property and construction. The pictured area is not independently identified as the first 50 MW phase.",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round31-2026-10-24/duane-da-10-24-1.jpg",
+      "bytes": 189153,
+      "width": 1000,
+      "height": 753,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round31-2026-10-24/duane-da-10-24-1.jpg"
+    },
+    {
+      "key": "solar-duane-arnold-clean-ia",
+      "layer": "gallery-da-10-24-2",
+      "sourceUrl": "https://www.alliantenergy.com/-/media/alliant/galleries/duanearnoldsolar/da-10-24-2.jpg?sc_lang=en",
+      "sourcePage": "https://www.alliantenergy.com/our-energy/solar/iowa-solar/pleasant-creek-solar",
+      "credit": "Alliant Energy, Pleasant Creek / Duane Arnold Solar gallery",
+      "caption": "Alliant Energy’s 2024 gallery shows the combined Pleasant Creek / Duane Arnold Solar property and construction. The pictured area is not independently identified as the first 50 MW phase.",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round31-2026-10-24/duane-da-10-24-2.jpg",
+      "bytes": 174678,
+      "width": 1000,
+      "height": 713,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round31-2026-10-24/duane-da-10-24-2.jpg"
+    },
+    {
+      "key": "solar-duane-arnold-clean-ia",
+      "layer": "gallery-das1",
+      "sourceUrl": "https://www.alliantenergy.com/-/media/alliant/galleries/duanearnoldsolar/das1.jpg?sc_lang=en",
+      "sourcePage": "https://www.alliantenergy.com/our-energy/solar/iowa-solar/pleasant-creek-solar",
+      "credit": "Alliant Energy, Pleasant Creek / Duane Arnold Solar gallery",
+      "caption": "Alliant Energy’s 2024 gallery shows the combined Pleasant Creek / Duane Arnold Solar property and construction. The pictured area is not independently identified as the first 50 MW phase.",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round31-2026-10-24/duane-das1.jpg",
+      "bytes": 202605,
+      "width": 1000,
+      "height": 750,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round31-2026-10-24/duane-das1.jpg"
+    },
+    {
+      "key": "solar-duane-arnold-clean-ia",
+      "layer": "gallery-das2",
+      "sourceUrl": "https://www.alliantenergy.com/-/media/alliant/galleries/duanearnoldsolar/das2.jpg?sc_lang=en",
+      "sourcePage": "https://www.alliantenergy.com/our-energy/solar/iowa-solar/pleasant-creek-solar",
+      "credit": "Alliant Energy, Pleasant Creek / Duane Arnold Solar gallery",
+      "caption": "Alliant Energy’s 2024 gallery shows the combined Pleasant Creek / Duane Arnold Solar property and construction. The pictured area is not independently identified as the first 50 MW phase.",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round31-2026-10-24/duane-das2.jpg",
+      "bytes": 173190,
+      "width": 1000,
+      "height": 750,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round31-2026-10-24/duane-das2.jpg"
+    },
+    {
+      "key": "solar-duane-arnold-clean-ia",
+      "layer": "gallery-das3",
+      "sourceUrl": "https://www.alliantenergy.com/-/media/alliant/galleries/duanearnoldsolar/das3.jpg?sc_lang=en",
+      "sourcePage": "https://www.alliantenergy.com/our-energy/solar/iowa-solar/pleasant-creek-solar",
+      "credit": "Alliant Energy, Pleasant Creek / Duane Arnold Solar gallery",
+      "caption": "Alliant Energy’s 2024 gallery shows the combined Pleasant Creek / Duane Arnold Solar property and construction. The pictured area is not independently identified as the first 50 MW phase.",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round31-2026-10-24/duane-das3.jpg",
+      "bytes": 215904,
+      "width": 1000,
+      "height": 750,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round31-2026-10-24/duane-das3.jpg"
+    },
+    {
+      "key": "dc-applied-digital-polaris-forge2-b1-nd",
+      "layer": "official-plan",
+      "sourceUrl": "https://ir.applieddigital.com/sec-filings/all-sec-filings/content/0001144879-25-000076/0001144879-25-000076.pdf",
+      "sourcePage": "https://ir.applieddigital.com/sec-filings/all-sec-filings/content/0001144879-25-000076/0001144879-25-000076.pdf",
+      "credit": "Applied Digital Corporation, October 2025 issuer presentation",
+      "caption": "Applied Digital investor presentation page 4 identifies Polaris Forge 2 Building 1 at 150 MW. Campus-level construction context; not an operating Building 1 photograph.",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round31-2026-10-24/pf2-issuer-plan.jpg",
+      "derivedFromPdf": true,
+      "bytes": 181057,
+      "width": 1546,
+      "height": 2000,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round31-2026-10-24/pf2-issuer-plan.jpg"
+    },
+    {
+      "key": "solar-obsidian-solar-center-or",
+      "layer": "official-plan",
+      "sourceUrl": "https://www.obsidiansolarcenter.com/uploads/1/1/7/7/117766420/obsidian_-_fort_rock_development_summary_3-2023.pdf",
+      "sourcePage": "https://www.obsidiansolarcenter.com/uploads/1/1/7/7/117766420/obsidian_-_fort_rock_development_summary_3-2023.pdf",
+      "credit": "Obsidian Renewables, published Fort Rock development summary",
+      "caption": "Operator factsheet includes the labelled proposed Obsidian array/site plan. Its lower Black Cap photograph is explicitly an illustrative different project, not the proposed Obsidian site. The factsheet’s old Q3 2026 target is superseded by later EIA planning data.",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round31-2026-10-24/obsidian-proposed-plan.jpg",
+      "derivedFromPdf": true,
+      "bytes": 397867,
+      "width": 1500,
+      "height": 2000,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round31-2026-10-24/obsidian-proposed-plan.jpg"
+    }
+  ],
+  "sourceChecks": [
+    {
+      "key": "pjm-brambleton",
+      "url": "https://www.pjm.com/pjmfiles/pub/planning/project-queues/TC2/PHASE_2/AH1-727/AH1-727_imp_PHASE_2.htm",
+      "finalUrl": "https://www.pjm.com/pjmfiles/pub/planning/project-queues/TC2/PHASE_2/AH1-727/AH1-727_imp_PHASE_2.htm",
+      "status": 200,
+      "bytes": 618498,
+      "file": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round31-2026-10-24/pjm-brambleton.html",
+      "title": "AH1-727 Phase II System Impact Study Report"
+    },
+    {
+      "key": "pjm-lewis",
+      "url": "https://www.pjm.com/pjmfiles/pub/planning/project-queues/TC2/PHASE_2/AH1-589/AH1-589_imp_PHASE_2.htm",
+      "finalUrl": "https://www.pjm.com/pjmfiles/pub/planning/project-queues/TC2/PHASE_2/AH1-589/AH1-589_imp_PHASE_2.htm",
+      "status": 404,
+      "bytes": 103,
+      "file": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round31-2026-10-24/pjm-lewis.html",
+      "title": ""
+    },
+    {
+      "key": "pjm-rogers",
+      "url": "https://www.pjm.com/pjmfiles/pub/planning/project-queues/TC2/PHASE_2/AG2-339/AG2-339_imp_PHASE_2.htm",
+      "finalUrl": "https://www.pjm.com/pjmfiles/pub/planning/project-queues/TC2/PHASE_2/AG2-339/AG2-339_imp_PHASE_2.htm",
+      "status": 200,
+      "bytes": 12380457,
+      "file": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round31-2026-10-24/pjm-rogers.html",
+      "title": "AG2-339 Phase II System Impact Study Report"
+    },
+    {
+      "key": "pjm-surry",
+      "url": "https://www.pjm.com/pjmfiles/pub/planning/project-queues/TC2/PHASE_2/AH1-716/AH1-716_imp_PHASE_2.htm",
+      "finalUrl": "https://www.pjm.com/pjmfiles/pub/planning/project-queues/TC2/PHASE_2/AH1-716/AH1-716_imp_PHASE_2.htm",
+      "status": 200,
+      "bytes": 2756343,
+      "file": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round31-2026-10-24/pjm-surry.html",
+      "title": "AH1-716 Phase II System Impact Study Report"
+    },
+    {
+      "key": "pjm-goldfinch",
+      "url": "https://www.pjm.com/pjmfiles/pub/planning/project-queues/TC1/FINAL/AF2-111/AF2-111_imp_FINAL.htm",
+      "finalUrl": "https://www.pjm.com/pjmfiles/pub/planning/project-queues/TC1/FINAL/AF2-111/AF2-111_imp_FINAL.htm",
+      "status": 200,
+      "bytes": 503432,
+      "file": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round31-2026-10-24/pjm-goldfinch.html",
+      "title": "AF2-111 Final System Impact Study (Retool 2) Report"
+    },
+    {
+      "key": "goldfinch",
+      "url": "https://geronimopower.com/in-development/goldfinch-solar/",
+      "finalUrl": "https://geronimopower.com/in-development/goldfinch-solar/",
+      "status": 200,
+      "bytes": 217934,
+      "file": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round31-2026-10-24/goldfinch.html",
+      "title": "Goldfinch Solar Project Progresses Clean Energy in Kentucky"
+    },
+    {
+      "key": "hawkeye",
+      "url": "https://www.hawkeyesolarproject.com/",
+      "finalUrl": "https://www.hawkeyesolarproject.com/",
+      "status": 200,
+      "bytes": 985791,
+      "file": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round31-2026-10-24/hawkeye.html",
+      "title": "Hawkeye Solar"
+    },
+    {
+      "key": "hawkeye-road",
+      "url": "https://www.clintoncounty-ia.gov/files/meetings/2026-03-23_agenda_board_of_supervisors_24526.pdf",
+      "finalUrl": "https://www.clintoncounty-ia.gov/files/meetings/2026-03-23_agenda_board_of_supervisors_24526.pdf",
+      "status": 200,
+      "bytes": 349604,
+      "file": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round31-2026-10-24/hawkeye-road.pdf"
+    },
+    {
+      "key": "milford-ppa",
+      "url": "https://cityclerk.lacity.org/onlinedocs/2025/25-0555_misc_5-14-25.pdf",
+      "finalUrl": "https://cityclerk.lacity.org/onlinedocs/2025/25-0555_misc_5-14-25.pdf",
+      "status": 200,
+      "bytes": 1094878,
+      "file": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round31-2026-10-24/milford-ppa.pdf"
+    },
+    {
+      "key": "pf2-issuer",
+      "url": "https://d1io3yog0oux5.cloudfront.net/_2e49e9f307b7b88512e7bdef89746ec8/appliedblockchaininc/db/2905/27257/pdf/APLD_INV_FinalPresentation_10.21.25.pdf",
+      "finalUrl": "https://d1io3yog0oux5.cloudfront.net/_2e49e9f307b7b88512e7bdef89746ec8/appliedblockchaininc/db/2905/27257/pdf/APLD_INV_FinalPresentation_10.21.25.pdf",
+      "status": 403,
+      "bytes": 243,
+      "file": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round31-2026-10-24/pf2-issuer.html",
+      "title": ""
+    },
+    {
+      "key": "qts-plan",
+      "url": "https://www.sac.usace.army.mil/Portals/43/docs/regulatory/jds/August_2024/SAC-2023-00211_York_County_Data_Center.pdf?ver=ZoPw5rmRt7NMDYCCUTmprA%3D%3D",
+      "finalUrl": "https://www.sac.usace.army.mil/Portals/43/docs/regulatory/jds/August_2024/SAC-2023-00211_York_County_Data_Center.pdf?ver=ZoPw5rmRt7NMDYCCUTmprA%3D%3D",
+      "status": 403,
+      "bytes": 530,
+      "file": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round31-2026-10-24/qts-plan.html",
+      "title": "Access Denied"
+    },
+    {
+      "key": "cloudhq",
+      "url": "https://cloudhq.com/campus/ord-campus/",
+      "finalUrl": "https://cloudhq.com/campus/ord-campus/",
+      "status": 200,
+      "bytes": 188810,
+      "file": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round31-2026-10-24/cloudhq.html",
+      "title": "CloudHQ ORD Campus"
+    },
+    {
+      "key": "sangamon",
+      "url": "https://sangamonil.gov/departments/a-c/county-board/proposed-cyrusone-data-center",
+      "finalUrl": "https://sangamonil.gov/departments/a-c/county-board/proposed-cyrusone-data-center",
+      "status": 200,
+      "bytes": 254583,
+      "file": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round31-2026-10-24/sangamon.html",
+      "title": "Proposed CyrusOne Data Center"
+    },
+    {
+      "key": "rowan",
+      "url": "https://rowan.com/portfolio/bauxite-i-ii-iii/",
+      "finalUrl": "https://rowan.com/portfolio/bauxite-i-ii-iii/",
+      "status": 200,
+      "bytes": 121141,
+      "file": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round31-2026-10-24/rowan.html",
+      "title": "Bauxite I, II & III | Hyperscale Data Center Campus | Maryland"
+    },
+    {
+      "key": "rowan-mde",
+      "url": "https://mde.maryland.gov/datacenters/Pages/FrederickDataCenter.aspx",
+      "finalUrl": "https://mde.maryland.gov/datacenters/Pages/FrederickDataCenter.aspx",
+      "status": 200,
+      "bytes": 78153,
+      "file": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round31-2026-10-24/rowan-mde.html",
+      "title": "Frederick Data Center Sampling/Reports"
+    },
+    {
+      "key": "obsidian",
+      "url": "https://www.obsidiansolarcenter.com/",
+      "finalUrl": "https://www.obsidiansolarcenter.com/",
+      "status": 200,
+      "bytes": 31675,
+      "file": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round31-2026-10-24/obsidian.html",
+      "title": "Home"
+    },
+    {
+      "key": "obsidian-cert",
+      "url": "https://www.obsidiansolarcenter.com/uploads/1/1/7/7/117766420/osc_efsc_site_cert_02.25.22.pdf",
+      "finalUrl": "https://www.obsidiansolarcenter.com/uploads/1/1/7/7/117766420/osc_efsc_site_cert_02.25.22.pdf",
+      "status": 200,
+      "bytes": 1042841,
+      "file": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round31-2026-10-24/obsidian-cert.pdf"
+    },
+    {
+      "key": "richroad",
+      "url": "https://www.richroadsolar.com/",
+      "finalUrl": "https://www.richroadsolar.com/",
+      "status": 200,
+      "bytes": 40402,
+      "file": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round31-2026-10-24/richroad.html",
+      "title": "Home - Rich Road Solar"
+    },
+    {
+      "key": "richroad-faq",
+      "url": "https://www.richroadsolar.com/faq/",
+      "finalUrl": "https://www.richroadsolar.com/faq/",
+      "status": 200,
+      "bytes": 116821,
+      "file": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round31-2026-10-24/richroad-faq.html",
+      "title": "FAQ - Rich Road Solar"
+    },
+    {
+      "key": "duane-county",
+      "url": "https://www.linncountyiowa.gov/DocumentCenter/View/20552/Next-Era-Energy-Duane-Arnold-Solar-I_II-BOS-Presentation-8-29-22",
+      "finalUrl": "https://www.linncountyiowa.gov/DocumentCenter/View/20552/Next-Era-Energy-Duane-Arnold-Solar-I_II-BOS-Presentation-8-29-22",
+      "status": 403,
+      "bytes": 5485,
+      "file": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round31-2026-10-24/duane-county.html",
+      "title": "Attention Required! | Cloudflare"
+    },
+    {
+      "key": "qts-current",
+      "url": "https://q.com/data-centers/york/",
+      "finalUrl": "https://q.com/data-centers/york/",
+      "status": 200,
+      "bytes": 494949,
+      "file": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round31-2026-10-24/qts-current.html",
+      "title": "QTS York County Data Center"
+    },
+    {
+      "key": "qts-county",
+      "url": "https://www.yorkcountysc.gov/1313/Data-Centers",
+      "finalUrl": "https://www.yorkcountysc.gov/1313/Data-Centers",
+      "status": 403,
+      "bytes": 5485,
+      "file": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round31-2026-10-24/qts-county.html",
+      "title": "Attention Required! | Cloudflare"
+    },
+    {
+      "key": "obsidian-facts",
+      "url": "https://www.obsidiansolarcenter.com/uploads/1/1/7/7/117766420/obsidian_-_fort_rock_development_summary_3-2023.pdf",
+      "finalUrl": "https://www.obsidiansolarcenter.com/uploads/1/1/7/7/117766420/obsidian_-_fort_rock_development_summary_3-2023.pdf",
+      "status": 200,
+      "bytes": 224627,
+      "file": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round31-2026-10-24/obsidian-facts.pdf"
+    },
+    {
+      "key": "cloudhq-city",
+      "url": "https://www.mountprospect.org/home/showpublisheddocument/21352/639058130258370000",
+      "finalUrl": "https://www.mountprospect.org/home/showpublisheddocument/21352/639058130258370000",
+      "status": 404,
+      "bytes": 147102,
+      "file": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round31-2026-10-24/cloudhq-city.html",
+      "title": "Mount Prospect, IL"
+    },
+    {
+      "key": "cloudhq-annual",
+      "url": "https://www.mountprospect.org/home/showpublisheddocument/21522/639090041924700000",
+      "finalUrl": "https://www.mountprospect.org/home/showpublisheddocument/21522/639090041924700000",
+      "status": 404,
+      "bytes": 147102,
+      "file": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round31-2026-10-24/cloudhq-annual.html",
+      "title": "Mount Prospect, IL"
+    },
+    {
+      "key": "sangamon-plan",
+      "url": "https://sangamonil.gov/Portals/0/Departments/County%20Board/Docs/DataCenter/DistanceToHouses.pdf",
+      "finalUrl": "https://sangamonil.gov/Portals/0/Departments/County%20Board/Docs/DataCenter/DistanceToHouses.pdf",
+      "status": 200,
+      "bytes": 454562,
+      "file": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round31-2026-10-24/sangamon-plan.pdf"
+    },
+    {
+      "key": "sangamon-report",
+      "url": "https://sangamonil.gov/Portals/0/Departments/County%20Board/Docs/DataCenter/Merged%20Staff%20Report.pdf",
+      "finalUrl": "https://sangamonil.gov/Portals/0/Departments/County%20Board/Docs/DataCenter/Merged%20Staff%20Report.pdf",
+      "status": 200,
+      "bytes": 1077442,
+      "file": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round31-2026-10-24/sangamon-report.pdf"
+    },
+    {
+      "key": "duane-operating",
+      "url": "https://www.alliantenergy.com/our-energy/solar/iowa-solar/pleasant-creek-solar",
+      "finalUrl": "https://www.alliantenergy.com/our-energy/solar/iowa-solar/pleasant-creek-solar",
+      "status": 200,
+      "bytes": 63543,
+      "file": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round31-2026-10-24/duane-operating.html",
+      "title": "Alliant Energy - Pleasant Creek Solar Project"
+    },
+    {
+      "key": "woodlawn-news",
+      "url": "https://www.wmar2news.com/news/region/baltimore-county/controversial-proposed-data-center-up-for-debate-in-woodlawn",
+      "finalUrl": "https://www.wmar2news.com/news/region/baltimore-county/controversial-proposed-data-center-up-for-debate-in-woodlawn",
+      "status": 200,
+      "bytes": 92243,
+      "file": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round31-2026-10-24/woodlawn-news.html",
+      "title": "Controversial proposed data center up for debate in Woodlawn"
+    },
+    {
+      "key": "woodlawn-moratorium",
+      "url": "https://www.thebanner.com/economy/growth-development/baltimore-county-data-center-moratorium-EVIJFJDL5VGCDNC22K52NQBMGI/",
+      "finalUrl": "https://www.thebanner.com/economy/growth-development/baltimore-county-data-center-moratorium-EVIJFJDL5VGCDNC22K52NQBMGI/",
+      "status": 200,
+      "bytes": 557912,
+      "file": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round31-2026-10-24/woodlawn-moratorium.html",
+      "title": "Baltimore County approves data center moratorium - The Banner"
+    },
+    {
+      "key": "obsidian-description",
+      "url": "https://www.obsidiansolarcenter.com/project-description.html",
+      "finalUrl": "https://www.obsidiansolarcenter.com/project-description.html",
+      "status": 200,
+      "bytes": 31258,
+      "file": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round31-2026-10-24/obsidian-description.html",
+      "title": "Project Description"
+    },
+    {
+      "key": "lite-map",
+      "url": "https://www.bostonplans.org/getattachment/ba2f5af3-bcd8-4436-80b3-f16641d1a8ee/",
+      "finalUrl": "https://www.bostonplans.org/getattachment/ba2f5af3-bcd8-4436-80b3-f16641d1a8ee/",
+      "status": 200,
+      "bytes": 56055,
+      "file": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round31-2026-10-24/lite-map.html",
+      "title": ""
+    },
+    {
+      "key": "qts-project",
+      "url": "https://qtsdatacenters.com/data-centers/charlotte/",
+      "finalUrl": "http://q.com/data-centers/charlotte/",
+      "status": 403,
+      "bytes": 146,
+      "file": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round31-2026-10-24/qts-project.html",
+      "title": "403 Forbidden"
+    },
+    {
+      "key": "nypa-richroad",
+      "url": "https://www.nypa.gov/News/Press-Releases/2026/20260928-solar",
+      "openedVia": "web.run",
+      "status": 200
+    },
+    {
+      "key": "eia-operating",
+      "url": "https://www.eia.gov/electricity/data/eia860m/",
+      "openedVia": "web.run and cached August workbook",
+      "status": 200
+    },
+    {
+      "key": "obsidian-second-cert",
+      "url": "https://www.oregon.gov/energy/facilities-safety/facilities/Facilities%20library/2025-06-13-Second-Amended-Site-Certificate-Signed-2025-06-13.pdf",
+      "finalUrl": "https://www.oregon.gov/energy/facilities-safety/facilities/Facilities%20library/2025-06-13-Second-Amended-Site-Certificate-Signed-2025-06-13.pdf",
+      "status": 404,
+      "bytes": 72147,
+      "file": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round31-2026-10-24/obsidian-second-cert.html",
+      "title": "Energy : Welcome to the Oregon Department of Energy's Website : State of Oregon"
+    },
+    {
+      "key": "lite-vhb",
+      "url": "https://www.vhb.com/news/flatiron-battery-energy-storage-system-initiates-planning-review/",
+      "finalUrl": "https://www.vhb.com/news/flatiron-battery-energy-storage-system-initiates-planning-review/",
+      "status": 200,
+      "bytes": 60582,
+      "file": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round31-2026-10-24/lite-vhb.html",
+      "title": "News | Flatiron Battery Energy Storage Initiates Planning Review | VHB"
+    },
+    {
+      "key": "pf2-issuer-pdf",
+      "url": "https://ir.applieddigital.com/sec-filings/all-sec-filings/content/0001144879-25-000076/0001144879-25-000076.pdf",
+      "finalUrl": "https://ir.applieddigital.com/sec-filings/all-sec-filings/content/0001144879-25-000076/0001144879-25-000076.pdf",
+      "status": 200,
+      "bytes": 4711040,
+      "file": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round31-2026-10-24/pf2-issuer-pdf.pdf"
+    },
+    {
+      "key": "miso",
+      "url": "https://www.misoenergy.org/api/giqueue/getprojects",
+      "finalUrl": "https://www.misoenergy.org/api/giqueue/getprojects",
+      "status": 200,
+      "bytes": 2328349,
+      "file": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round31-2026-10-24/miso.html",
+      "title": ""
+    },
+    {
+      "key": "eia-current",
+      "url": "https://www.eia.gov/electricity/monthly/epm_table_grapher.php?t=table_6_05",
+      "finalUrl": "https://www.eia.gov/electricity/monthly/epm_table_grapher.php?t=table_6_05",
+      "status": 200,
+      "bytes": 2440938,
+      "file": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round31-2026-10-24/eia-current.html",
+      "title": "Electric Power Monthly - U.S. Energy Information Administration (EIA)"
+    },
+    {
+      "key": "lite-iso",
+      "url": "https://www.iso-ne.com/static-assets/documents/100019/queue_position_1148_qp_1148_battery_project_i_3_9_letter_fla_24_g01_fla_24_t01_es_24_t45.pdf",
+      "finalUrl": "https://www.iso-ne.com/static-assets/documents/100019/queue_position_1148_qp_1148_battery_project_i_3_9_letter_fla_24_g01_fla_24_t01_es_24_t45.pdf",
+      "status": 200,
+      "bytes": 131772,
+      "file": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round31-2026-10-24/lite-iso.pdf"
+    },
+    {
+      "key": "medway",
+      "url": "https://cme-energy.com/projects/medway-energy-center/",
+      "finalUrl": "https://cme-energy.com/projects/medway-energy-center/",
+      "status": 403,
+      "bytes": 1084,
+      "file": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round31-2026-10-24/medway.html",
+      "title": "403 Forbidden"
+    },
+    {
+      "key": "ferc-medway",
+      "url": "https://public-inspection.federalregister.gov/2026-21364.pdf",
+      "finalUrl": "https://public-inspection.federalregister.gov/2026-21364.pdf",
+      "status": 200,
+      "bytes": 208983,
+      "file": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round31-2026-10-24/ferc-medway.pdf"
+    },
+    {
+      "key": "original-17043",
+      "url": "https://www.hecategrid.com/projects/norfolk-storage",
+      "finalUrl": "https://www.hecategrid.com/projects/norfolk-storage",
+      "status": 403,
+      "bytes": 4553,
+      "file": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round31-2026-10-24/original-17043.html",
+      "title": "Attention Required! | Cloudflare"
+    },
+    {
+      "key": "original-17044",
+      "url": "https://www.flatiron.energy/projects/lite-brite",
+      "finalUrl": "https://www.flatiron.energy/projects/lite-brite",
+      "status": 404,
+      "bytes": 906,
+      "file": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round31-2026-10-24/original-17044.html",
+      "title": "404 - Page not found"
+    },
+    {
+      "key": "original-17045",
+      "url": "https://www.lpsc.louisiana.gov/dockets/moler-colfel-bess",
+      "finalUrl": "https://www.lpsc.louisiana.gov/dockets/moler-colfel-bess",
+      "status": 404,
+      "bytes": 0,
+      "file": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round31-2026-10-24/original-17045.html",
+      "title": ""
+    },
+    {
+      "key": "original-17046",
+      "url": "https://www.michigan.gov/mpsc/dockets/thetford-bess",
+      "finalUrl": "https://www.michigan.gov/mpsc/dockets/thetford-bess",
+      "status": 403,
+      "bytes": 408,
+      "file": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round31-2026-10-24/original-17046.html",
+      "title": "Access Denied"
+    },
+    {
+      "key": "original-17047",
+      "url": "https://www.cloudhq.com/portfolio/chicago-ord-building-2",
+      "finalUrl": "https://www.cloudhq.com/portfolio/chicago-ord-building-2",
+      "status": 403,
+      "bytes": 146,
+      "file": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round31-2026-10-24/original-17047.html",
+      "title": "403 Forbidden"
+    },
+    {
+      "key": "original-17048",
+      "url": "https://psc.ky.gov/case/detail/2024-goldfinch-solar",
+      "finalUrl": "https://psc.ky.gov/Home/Error",
+      "status": 200,
+      "bytes": 366,
+      "file": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round31-2026-10-24/original-17048.html",
+      "title": "Error"
+    },
+    {
+      "key": "original-17049",
+      "url": "https://iub.iowa.gov/dockets/hawkeye-solar",
+      "finalUrl": "https://iuc.iowa.gov/dockets/hawkeye-solar",
+      "status": 404,
+      "bytes": 185814,
+      "file": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round31-2026-10-24/original-17049.html",
+      "title": "Please accept our apologies. We can't find that page. | Iowa Utilities Commission"
+    },
+    {
+      "key": "original-17050",
+      "url": "https://www.psc.ms.gov/dockets/hintonville-solar",
+      "finalUrl": "https://www.psc.ms.gov/dockets/hintonville-solar",
+      "status": 404,
+      "bytes": 28246,
+      "file": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round31-2026-10-24/original-17050.html",
+      "title": "Page not found | MISSISSIPPI PUBLIC SERVICE COMMISSION"
+    },
+    {
+      "key": "original-17051",
+      "url": "https://psc.utah.gov/electric/dockets/milford-solar-2",
+      "finalUrl": "https://psc.utah.gov/electric/dockets/milford-solar-2",
+      "status": 403,
+      "bytes": 146,
+      "file": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round31-2026-10-24/original-17051.html",
+      "title": "403 Forbidden"
+    },
+    {
+      "key": "original-17052",
+      "url": "https://applieddigital.com/campuses/polaris-forge-2-building-1",
+      "finalUrl": "https://www.applieddigital.com/campuses/polaris-forge-2-building-1",
+      "status": 404,
+      "bytes": 20847,
+      "file": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round31-2026-10-24/original-17052.html",
+      "title": "Not Found - Applied Digital Corporation (APLD)"
+    },
+    {
+      "key": "original-17053",
+      "url": "https://www.google.com/about/datacenters/locations/muskogee/building-2",
+      "finalUrl": "https://about.google/datacenters/locations/muskogee/building-2",
+      "status": 404,
+      "bytes": 1602,
+      "file": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round31-2026-10-24/original-17053.html",
+      "title": "Error 404 (Not Found)!!1"
+    },
+    {
+      "key": "original-17054",
+      "url": "https://www.qtsdatacenters.com/data-centers/york-county-dc2",
+      "finalUrl": "http://q.com/data-centers/york-county-dc2",
+      "status": 403,
+      "bytes": 146,
+      "file": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round31-2026-10-24/original-17054.html",
+      "title": "403 Forbidden"
+    },
+    {
+      "key": "original-17055",
+      "url": "https://www.loudouncleanpower.com/projects/brambleton-goose-creek",
+      "error": "HTTPSConnectionPool(host='www.loudouncleanpower.com', port=443): Max retries exceeded with url: /projects/brambleton-goose-creek (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x1369bcf10>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))"
+    },
+    {
+      "key": "original-17056",
+      "url": "https://www.alleghenycleanstorage.com/projects/lewis-run",
+      "error": "HTTPSConnectionPool(host='www.alleghenycleanstorage.com', port=443): Max retries exceeded with url: /projects/lewis-run (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x1369baa90>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))"
+    },
+    {
+      "key": "original-17057",
+      "url": "https://www.carsonenergy.com/projects/rogers-road-storage",
+      "finalUrl": "https://www.carsonenergy.com/projects/rogers-road-storage",
+      "status": 200,
+      "bytes": 114,
+      "file": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round31-2026-10-24/original-17057.html",
+      "title": ""
+    },
+    {
+      "key": "original-17058",
+      "url": "https://www.dominionenergy.com/projects/surry-skiffes-creek-storage",
+      "finalUrl": "https://www.dominionenergy.com/projects/surry-skiffes-creek-storage",
+      "status": 404,
+      "bytes": 197502,
+      "file": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round31-2026-10-24/original-17058.html",
+      "title": "Page Not Found | Dominion Energy"
+    },
+    {
+      "key": "original-17059",
+      "url": "https://www.cielodigital.com/campuses/des-moines",
+      "error": "HTTPSConnectionPool(host='www.cielodigital.com', port=443): Max retries exceeded with url: /campuses/des-moines (Caused by SSLError(SSLEOFError(8, 'EOF occurred in violation of protocol (_ssl.c:1002)')))"
+    },
+    {
+      "key": "original-17060",
+      "url": "https://cyrusone.com/campuses/sangamon-building-3",
+      "finalUrl": "https://www.cyrusone.com/campuses/sangamon-building-3",
+      "status": 404,
+      "bytes": 63574,
+      "file": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round31-2026-10-24/original-17060.html",
+      "title": "Error 404 | Page not found"
+    },
+    {
+      "key": "original-17061",
+      "url": "https://www.rowan.digital/campuses/bauxite-iii-building-1",
+      "finalUrl": "http://rowan.com/campuses/bauxite-iii-building-1",
+      "status": 403,
+      "bytes": 1084,
+      "file": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round31-2026-10-24/original-17061.html",
+      "title": "403 Forbidden"
+    },
+    {
+      "key": "original-17062",
+      "url": "https://www.securitylanddev.com/projects/baltimore-hyperscale",
+      "error": "HTTPSConnectionPool(host='www.securitylanddev.com', port=443): Max retries exceeded with url: /projects/baltimore-hyperscale (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x1369bd8d0>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))"
+    },
+    {
+      "key": "original-17063",
+      "url": "https://www.nexteraenergyresources.com/duane-arnold-solar",
+      "finalUrl": "https://www.nexteraenergyresources.com/duane-arnold-solar",
+      "status": 200,
+      "bytes": 1161,
+      "file": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round31-2026-10-24/original-17063.html",
+      "title": ""
+    },
+    {
+      "key": "original-17064",
+      "url": "https://www.obsidianrenewables.com/projects/obsidian-solar-center",
+      "finalUrl": "https://www.obsidianrenewables.com/projects/obsidian-solar-center",
+      "status": 404,
+      "bytes": 53953,
+      "file": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round31-2026-10-24/original-17064.html",
+      "title": "Page not found - Obsidian Renewables"
+    },
+    {
+      "key": "original-17065",
+      "url": "https://www.edf-re.com/project/rich-road-solar",
+      "finalUrl": "https://www.edf-re.com/project/rich-road-solar/",
+      "status": 200,
+      "bytes": 86624,
+      "file": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round31-2026-10-24/original-17065.html",
+      "title": "Rich Road Solar - EDF power solutions North America"
+    },
+    {
+      "key": "original-17066",
+      "url": "https://brightnightpower.com/projects/starfire-mountain-solar",
+      "finalUrl": "https://brightnightpower.com/projects/starfire-mountain-solar",
+      "status": 404,
+      "bytes": 33075,
+      "file": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round31-2026-10-24/original-17066.html",
+      "title": "Page not found – BrightNight"
+    },
+    {
+      "key": "lite-boston",
+      "url": "https://www.bostonplans.org/projects/development-projects/35-electric-avenue",
+      "finalUrl": "https://www.bostonplans.org/projects/development-projects/35-electric-avenue",
+      "status": 200,
+      "bytes": 97146,
+      "file": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round31-2026-10-24/lite-boston.html",
+      "title": "35 Electric Avenue | Bostonplans.org"
+    },
+    {
+      "key": "lewis-withdrawn",
+      "url": "https://www.iso-ne.com/static-assets/documents/100035/2026-05-29_ipsac_a03_ipsac_queue_interconnection_studies.pdf",
+      "finalUrl": "https://www.iso-ne.com/static-assets/documents/100035/2026-05-29_ipsac_a03_ipsac_queue_interconnection_studies.pdf",
+      "status": 200,
+      "bytes": 450903,
+      "file": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round31-2026-10-24/lewis-withdrawn.pdf"
+    },
+    {
+      "key": "pf2-issuer-html",
+      "url": "https://ir.applieddigital.com/sec-filings/all-sec-filings/content/0001144879-25-000076/apld_invxfinalpresentati.htm",
+      "finalUrl": "https://ir.applieddigital.com/sec-filings/all-sec-filings/content/0001144879-25-000076/apld_invxfinalpresentati.htm",
+      "status": 200,
+      "bytes": 39560,
+      "file": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round31-2026-10-24/pf2-issuer-html.html",
+      "title": "apld_invxfinalpresentati"
+    },
+    {
+      "key": "pf2-latest",
+      "url": "https://ir.applieddigital.com/sec-filings/all-sec-filings/content/0001144879-26-000057/apldq127earningsrelease.htm",
+      "finalUrl": "https://ir.applieddigital.com/sec-filings/all-sec-filings/content/0001144879-26-000057/apldq127earningsrelease.htm",
+      "status": 200,
+      "bytes": 344102,
+      "file": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round31-2026-10-24/pf2-latest.html",
+      "title": "Document"
+    },
+    {
+      "key": "pf2-website",
+      "url": "https://applieddigital.com/campuses/polaris-forge-2/",
+      "finalUrl": "https://www.applieddigital.com/campuses/polaris-forge-2",
+      "status": 404,
+      "bytes": 20847,
+      "file": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round31-2026-10-24/pf2-website.html",
+      "title": "Not Found - Applied Digital Corporation (APLD)"
+    },
+    {
+      "key": "obsidian-oregon",
+      "url": "https://www.oregon.gov/energy/facilities-safety/facilities/Pages/OSC.aspx",
+      "finalUrl": "https://www.oregon.gov/energy/facilities-safety/facilities/Pages/OSC.aspx",
+      "status": 404,
+      "bytes": 72000,
+      "file": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round31-2026-10-24/obsidian-oregon.html",
+      "title": "Energy : Welcome to the Oregon Department of Energy's Website : State of Oregon"
+    },
+    {
+      "key": "richroad-nypa",
+      "url": "https://www.nypa.gov/News/Press-Releases/2026/20260928-solar",
+      "error": "HTTPSConnectionPool(host='www.nypa.gov', port=443): Max retries exceeded with url: /News/Press-Releases/2026/20260928-solar (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate in certificate chain (_ssl.c:1002)')))"
+    },
+    {
+      "key": "cielo",
+      "url": "https://cielodigital.com/",
+      "error": "HTTPSConnectionPool(host='cielodigital.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLEOFError(8, 'EOF occurred in violation of protocol (_ssl.c:1002)')))"
+    },
+    {
+      "key": "starfire",
+      "url": "https://brightnightpower.com/starfire/",
+      "finalUrl": "https://brightnightpower.com/app/uploads/2022/02/Starfire.jpg",
+      "status": 200,
+      "bytes": 2323751,
+      "file": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round31-2026-10-24/starfire.html",
+      "title": ""
+    },
+    {
+      "key": "starfire-alt",
+      "url": "https://brightnightpower.com/starfire-renewable-energy-center/",
+      "finalUrl": "https://brightnightpower.com/starfire-renewable-energy-center/",
+      "status": 404,
+      "bytes": 33075,
+      "file": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round31-2026-10-24/starfire-alt.html",
+      "title": "Page not found – BrightNight"
+    },
+    {
+      "key": "duane-alliant",
+      "url": "https://www.alliantenergy.com/alliantenergynews/newscenter/2024/03/19-iowasolar",
+      "finalUrl": "https://www.alliantenergy.com/alliantenergynews/newscenter/2024/03/19-iowasolar",
+      "status": 404,
+      "bytes": 53012,
+      "file": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round31-2026-10-24/duane-alliant.html",
+      "title": "Alliant Energy - 404"
+    },
+    {
+      "key": "isoqueue",
+      "url": "https://irtt.iso-ne.com/reports/external",
+      "finalUrl": "https://irtt.iso-ne.com/reports/external?AspxAutoDetectCookieSupport=1",
+      "status": 200,
+      "bytes": 3670837,
+      "file": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round31-2026-10-24/isoqueue.html",
+      "title": "ISO-New England IRTT"
+    },
+    {
+      "key": "eia-september",
+      "url": "https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx",
+      "status": 200,
+      "bytes": 14013970,
+      "file": "eia-september2026.xlsx"
+    }
+  ],
+  "researchNotes": [
+    "Current September 2026 EIA-860M workbook was downloaded and read, released October 23. Relevant capacity/status/month/coordinates match the prior August snapshot. September workbook is cited directly; published month is not an exact COD. NYPA project-specific 2029 Rich Road timeline supersedes older inventory forecast, already saved on canonical 16599.",
+    "Sixteen unsupported tracker prices were cleared. No unambiguous matched construction budget was verified for these corrected scopes. PJM network upgrades, portfolio/campus totals, financing, lease revenue, tax benefits, decommissioning obligations and unrelated projects are not substituted. Rich Road FAQ’s $400M is rejected because the same page mixes Ridge View/Niagara/Hartland/Newfane geography and unrelated storage scope; duplicate 17065 is held, canonical 16599 retained.",
+    "Nine original marker corrections were prepared; Rich Road was subsequently found to duplicate canonical 16599. Eight live pins received 16 replacement maps; its two extra uploaded maps remain unused. Five Alliant gallery photographs show the combined Pleasant Creek property/construction, not independently identified Phase I. Issuer/factsheet pages are proposed or campus-level evidence, not as-built images. The Obsidian factsheet explicitly labels the Black Cap photograph as a different illustrative facility.",
+    "Plain curl verified all seven gallery original downloads; source PDF pages were rendered to JPEG and credited. Current public Azure files were checked, including original bytes for new uploads. No pin image was added to Git.",
+    "The API derives companyWikiUrl from a linked company when an explicit pin-level URL is null. Verification checks the company identity and internal company wiki readback; it does not require that derived display URL to remain null or claim fresh independent research of every corporate fact.",
+    "MISO and ISO shared source-wiki coverage was preserved and selected current rows appended. Source-index reconciliation is guarded against concurrent pin content changes and audited. Earlier pins sharing refreshed source wikis are verified unchanged. All current corrected-pin citations and internal company wikis are read back; inaccessible held-identity sources remain research gaps, not placeholder live wikis.",
+    "Exact USACE York County DC2 plan returns 403 in direct, web-reader and alternate-path attempts despite a search-indexed labelled plan. CloudHQ village reports and latest Obsidian signed amendment exact URL return 404. NYPA HTTPS page was opened substantively in web retrieval while direct TLS verification fails. Original CME download is blocked but substantive page was opened with web retrieval.",
+    "Canonical Starfire 18389 still needs a targeted phase/cost/date correction: $1B broader 810 MW program must not be allocated to its 410 MW EIA scope, and September 2029 inventory target conflicts with its old date. This round preserves it and documents the follow-up. No application code, deployment, production build or restart."
+  ]
+}

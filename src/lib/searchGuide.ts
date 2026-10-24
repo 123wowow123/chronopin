@@ -90,7 +90,8 @@ export const SEARCH_GUIDE: SearchGuideGroup[] = [
 
 export const SEARCH_GUIDE_RULES: { title: string; body: string; examples: string[] }[] = [
   { title: 'Different fields narrow', body: 'Each extra field in a query must also match, so this company and this tag.', examples: ['company:Nintendo tag:Gaming'] },
-  { title: 'The same field widens', body: 'Several values of one field match either.', examples: ['company:Nintendo company:Sony'] },
+  { title: 'The same field widens', body: 'Several values of one field, except tags, match either.', examples: ['company:Nintendo company:Sony'] },
+  { title: 'Tags all apply', body: 'Tags side by side must all be carried, and an explicit AND between them says the same. Use OR to match either.', examples: ['tag:"AI Models" tag:Predicted', 'tag:"AI Models" AND tag:Predicted', 'tag:Anime OR tag:Gaming'] },
   { title: 'OR joins groups', body: 'A standalone OR between two groups of terms returns what either group matches.', examples: ['tag:Predicted posted:today OR tag:Predicted updated:>=2026-10-17'] },
   { title: 'Free text', body: 'Anything that is not a term searches the pin text.', examples: ['iphone', 'company:Apple iphone'] },
   { title: 'Quoting', body: 'Quote values with spaces. Single quotes, whole-term quotes and smart quotes work too, and an unclosed quote runs to the end of the query.', examples: ['company:"Electronic Arts"', "company:'Electronic Arts'", '"company:Electronic Arts"'] },

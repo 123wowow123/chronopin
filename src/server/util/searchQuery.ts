@@ -39,6 +39,11 @@
 // reads days as an exact one does: all-day pins by UTC date, timed ones by the
 // viewer's.
 //
+// Tags side by side (tag:"AI Models" tag:Predicted) must all be carried; an
+// explicit AND between them says the same. Several values of other fields
+// still match any of them. OR splits the query into groups first, so AND binds
+// tighter than OR.
+//
 // holiday: takes a holiday or special day by name (holiday:Halloween,
 // holiday:"Mid-Autumn Festival", holiday:"National Peanut Day"): the pins
 // starting on any of its days, the way date: reads them, in every year the
@@ -361,6 +366,10 @@ export function joinSearchQuery(parts: QueryPart[]): string {
 // A standalone OR between two groups of terms, as a word of its own.
 const OR_WORD = /(?<=^|\s)OR(?=\s|$)/;
 
+// A standalone AND or OR between terms, as a word of its own. AND is optional
+// (tags side by side already all apply); OR starts a new group.
+const OPERATOR_WORD = /(?<=^|\s)(OR|AND)(?=\s|$)/;
+
 export function parseSearchQuery(searchText: string | null | undefined): SearchQuery {
   // The parts split at every OR into groups; the merged query reads them all.
   const groups: QueryPart[][] = [[]];
@@ -371,8 +380,13 @@ export function parseSearchQuery(searchText: string | null | undefined): SearchQ
       all.push(part);
       continue;
     }
-    part.raw.split(OR_WORD).forEach((piece, index) => {
-      if (index > 0) groups.push([]);
+    // split() with a capture group keeps the operators: text, op, text, ...
+    // An AND only says what tags side by side already mean, so it is dropped.
+    part.raw.split(OPERATOR_WORD).forEach((piece, index) => {
+      if (index % 2 === 1) {
+        if (piece === 'OR') groups.push([]);
+        return;
+      }
       groups[groups.length - 1].push({ kind: 'text', raw: piece });
       all.push({ kind: 'text', raw: piece });
     });

@@ -473,3 +473,15 @@ all ai model thread should have prediction pins if possible
 
 
 Not started: wildfire perimeters (a new map-shape kind, with its key text in all 16 languages) and election district boundaries.
+
+
+AI should use not use TechDesk but AIDesk
+
+
+this should be done
+
+Missing rivals: the 7 food and drink rivals with no single sourced launch (Trolli, Kwality Wall's, both Häagen-Dazs lines, the Mini Cup, Amul and Henry Weston's) have no pin. The Tesla Model 3 (China) and the A321 weren't attempted.
+
+
+tag:Predicted AND updated:>=yesterday OR tag:Predicted AND posted:today
+and add product release filter

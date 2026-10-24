@@ -1337,13 +1337,13 @@ export function searchClauses(filter: SearchFilter) {
       const bounds = filter.delays.map(({ op, unit, value }) => `${DELAY_AMOUNT[unit]} ${RATING_OPS[op]} ${add(value)}::numeric`);
       where.push(`("Pin"."originalStartDate" IS NOT NULL AND "Pin"."utcStartDateTime" IS NOT NULL AND ${START_DAY} > "Pin"."originalStartDate" AND ${bounds.join(' AND ')})`);
     }
-    // Any of these tags (PinTagView: the form's, its categories, the prose's
-    // and the awards').
-    if (filter.tags.length) {
-      const curated = filter.tags.some((tag) => tag.toLowerCase() === 'curated');
-      const predicted = filter.tags.some((tag) => tag.toLowerCase() === 'predicted');
-      const expandedTags = expandTagGroups(filter.tags);
-      where.push(`(EXISTS (SELECT 1 FROM "PinTagView" AS "tagged" WHERE "tagged"."pinId" = "Pin"."id" AND ("tagged"."name" = ANY(${add(expandedTags ?? filter.tags)}::citext[])${expandedTags ? '' : ` OR "tagged"."name"::text ~* ANY(${add(tagGroupPatterns(filter.tags))}::text[])`}))${curated ? ` OR ${CURATED}` : ''}${predicted ? ` OR ${predictedPinOf('Pin')}` : ''})`);
+    // Every one of these tags (PinTagView: the form's, its categories, the
+    // prose's and the awards'), each its own check.
+    for (const tag of filter.tags) {
+      const expanded = expandTagGroups([tag]);
+      const curated = tag.toLowerCase() === 'curated';
+      const predicted = tag.toLowerCase() === 'predicted';
+      where.push(`(EXISTS (SELECT 1 FROM "PinTagView" AS "tagged" WHERE "tagged"."pinId" = "Pin"."id" AND ("tagged"."name" = ANY(${add(expanded ?? [tag])}::citext[])${expanded ? '' : ` OR "tagged"."name"::text ~* ANY(${add(tagGroupPatterns([tag]))}::text[])`}))${curated ? ` OR ${CURATED}` : ''}${predicted ? ` OR ${predictedPinOf('Pin')}` : ''})`);
     }
     // None of these (-tag:), each read as a tag: term is, so leaving out an
     // award body leaves out every year of it.

@@ -2146,5 +2146,162 @@
         "quote": "Paraphrase: Inside China Auto's review, recorded days before Jiyue collapsed, calls the 07 a very decent car from a brand that should not have been the one to fail."
       }
     ]
+  },
+  {
+    "pinId": 19648,
+    "rubricYear": 2026,
+    "scores": {
+      "range": 3.5,
+      "charging": 3.5,
+      "acceleration": 3,
+      "assistance": 3,
+      "space": 3,
+      "value": 4,
+      "kidsFriendly": null
+    },
+    "basis": "Variant: 007 RWD, 75 kWh LFP, from RMB 209,900. Range 688 km CLTC (3.5); 800 V, +500 km in 15 min (3.5); 0-100 5.6 s (3); highway navigation assist at launch, LiDAR/dual Orin on higher trims (3); wheelbase 2,928 mm (3); undercuts Model 3/Xiaomi SU7 class with 800 V and Nvidia hardware (4); kids null: ISOFIX/rear child features not found. Reviews cover the AWD/dual-motor car.",
+    "sourceUrl": "https://cnevpost.com/2023/12/28/zeekr-officially-launches-007-sedan/",
+    "reviews": [
+      {
+        "url": "https://carnewschina.com/2024/05/02/sunday-china-drive-zeekr-007-fast-and-luxurious/",
+        "title": "Sunday China Drive | Zeekr 007: fast and luxurious (Smart AWD test car)",
+        "publishedDate": "2024-05-02",
+        "quote": "“This car drives like a European car,” I said while driving. “Yes, we had the team from Lotus tune this car for us,” the Zeekr representative next to me responded."
+      },
+      {
+        "url": "https://www.carsales.com.au/editorial/details/zeekr-007-2024-review-146819/",
+        "title": "Zeekr 007 2024 Review (carsales, China drive, dual-motor)",
+        "publishedDate": "2024-07-16",
+        "quote": "The 2024 Zeekr 007 delivers ride quality almost as smooth as a James Bond pick-up line, even when the road gets significantly broken up."
+      }
+    ]
+  },
+  {
+    "pinId": 19649,
+    "rubricYear": 2026,
+    "scores": {
+      "range": 5,
+      "charging": null,
+      "acceleration": 2,
+      "assistance": null,
+      "space": 3,
+      "value": 5,
+      "kidsFriendly": null
+    },
+    "basis": "Variant: S7 EREV from RMB 149,900 (1.5 L extender, 18.99 kWh, 1,040 km combined CLTC = 5). 0-100 7.6 s (2). Wheelbase 2,900 mm (3). Undercuts Tesla Model Y at RMB 263,900 (5). Charging, assist and kids null: not published in sources checked. Reviews are of the export BEV S07 (AU/UK), not the EREV; used for character only.",
+    "sourceUrl": "https://cnevpost.com/2023/06/26/deepal-launches-s7/",
+    "reviews": [
+      {
+        "url": "https://www.carsales.com.au/editorial/details/deepal-s07-2025-review-148335",
+        "title": "Deepal S07 2025 Review (carsales, Australian-market BEV)",
+        "publishedDate": "2025-01-06",
+        "quote": "there are tech quirks and on the road it lacks the dynamic polish increasingly being expected of the best in the electric car universe."
+      },
+      {
+        "url": "https://www.electrifying.com/reviews/deepal-reviews/s07/",
+        "title": "Deepal S07 Review (Electrifying, UK-market BEV)",
+        "publishedDate": "2025-09-17",
+        "quote": "the S07 can’t yet match the best for ride, handling, charging speeds and range."
+      },
+      {
+        "url": "https://www.which.co.uk/news/article/what-i-learned-when-test-driving-the-changan-deepal-s07-ajSxq8w0V5gn",
+        "title": "What I learned when test driving the Changan Deepal S07 (Which?, UK-market BEV)",
+        "publishedDate": "2025-09-26",
+        "quote": "The Deepal’s lane-assist also impressed me, as did the adaptive cruise control system, which is easy to set up and works well to slow you down for traffic."
+      },
+      {
+        "url": "https://thedriven.io/2025/12/04/deepal-s07-review-good-looks-can-be-deceiving/",
+        "title": "Deepal S07 review: Good looks can be deceiving (The Driven, Australian-market BEV)",
+        "publishedDate": "2025-12-04",
+        "quote": "After a while I found the front seats felt flat and unsupportive, becoming uncomfortable on longer trips."
+      }
+    ]
+  },
+  {
+    "pinId": 19650,
+    "rubricYear": 2026,
+    "scores": {
+      "range": 3.5,
+      "charging": 4.5,
+      "acceleration": 3.5,
+      "assistance": 4,
+      "space": 4.5,
+      "value": 3,
+      "kidsFriendly": null
+    },
+    "basis": "Variant: i8 Pro, 90.1 kWh, 670 km CLTC (3.5). 5C charging: 5C x 90.1 kWh = about 450 kW (4.5, computed, peak not stated in sources). 0-100 4.5 s (3.5). VLA/MindVLA with LiDAR, VLA driver from Aug on AD Max (4). Wheelbase 3,050 mm six-seat, air suspension (4.5). Priced near Onvo L90 at RMB 279,900 (3). Kids null: Pro lacks the fridge and rear screens; ISOFIX not verified. Only 2 reviews found.",
+    "sourceUrl": "https://cnevpost.com/2025/07/17/li-auto-starts-pre-orders-i8/",
+    "reviews": [
+      {
+        "url": "https://carnewschina.com/2025/08/16/sunday-china-drive-li-auto-i8-three-row-electric-suv-with-mpv-like-design/",
+        "title": "Sunday China Drive | Li Auto i8: three-row electric SUV with MPV-like design",
+        "publishedDate": "2025-08-16",
+        "quote": "In urban driving, adaptive damping helps the vehicle absorb broken pavement and speed bumps, though sharper ridges remain noticeable compared with traditional luxury SUVs."
+      },
+      {
+        "url": "https://en.42how.com/2025/07/30/li-auto-i8-launches-is-vla-the-future-of-driving/",
+        "title": "LI Auto i8 Launches: Is VLA the Future of Driving? (42HOW, company-invited launch test ride)",
+        "publishedDate": "2025-07-30",
+        "quote": "During our test ride, we found that this new “state guest chauffeur” standard is not just talk."
+      }
+    ]
+  },
+  {
+    "pinId": 19651,
+    "rubricYear": 2026,
+    "scores": {
+      "range": 2,
+      "charging": null,
+      "acceleration": null,
+      "assistance": 2,
+      "space": 3,
+      "value": 4.5,
+      "kidsFriendly": null
+    },
+    "basis": "Variant: C10 BEV 52.9 kWh, 410 km CLTC (2), from RMB 128,800. Charging and 0-100 not in sources read (null). Base trim has no LiDAR, Leapmotor Pilot L2 (2); LiDAR+Orin X only on top trims. Wheelbase 2,825 mm (3). Undercuts rivals (RMB 128,800 vs pre-sale 155,800+) (4.5). Kids null. Reviews are of export BEV (69.9 kWh) and REEV.",
+    "sourceUrl": "https://cnevpost.com/2024/01/10/leapmotor-begins-c10-pre-sales-china/",
+    "reviews": [
+      {
+        "url": "https://motoringnz.com/tested/2024/12/24/leapmotor-c10-road-test-review-welcome-to-byte-club",
+        "title": "Leapmotor C10 road test review: Welcome to byte club (Motoring NZ, NZ-market BEV)",
+        "publishedDate": "2024-12-24",
+        "quote": "The outputs are good enough for brisk acceleration, but it isn’t especially rapid."
+      },
+      {
+        "url": "https://www.carsales.com.au/editorial/details/leapmotor-c10-2025-review-148550",
+        "title": "Leapmotor C10 Design 2025 Review (carsales, Australian-market BEV)",
+        "publishedDate": "2025-01-30",
+        "quote": "a gold star to the Maserati engineers responsible for the C10’s suspension tune, which handled a mix of driving conditions with ease."
+      },
+      {
+        "url": "https://autoexpress.co.uk/leapmotor/c10",
+        "title": "Leapmotor C10 review (Auto Express, UK-market, includes REEV)",
+        "publishedDate": "2025-04-04",
+        "quote": "the car rolls in corners and dives under heavy braking, while that ultra-light steering lacks any feel."
+      }
+    ]
+  },
+  {
+    "pinId": 19652,
+    "rubricYear": 2026,
+    "scores": {
+      "range": 5,
+      "charging": null,
+      "acceleration": 1.5,
+      "assistance": null,
+      "space": 4,
+      "value": 4,
+      "kidsFriendly": null
+    },
+    "basis": "Variant: M7 RWD EREV, 40 kWh, 1,100 km combined (5), from RMB 319,800. 0-100 7.8 s (1.5). Six seats, wheelbase 2,820 mm (4, six-seat rule). Priced under the Li L9 it was compared with (4). Charging, assist and kids null: not published in sources read. Reviews are of export Seres 7 (AWD and RE-EV).",
+    "sourceUrl": "https://carnewschina.com/2022/07/04/aito-m7-launched-in-china-with-449-hp-and-starting-price-of-47780-usd/",
+    "reviews": [
+      {
+        "url": "https://www.drivearabia.com/news/2024/07/01/first-drive-2024-seres-7-in-the-uae/",
+        "title": "First Drive: 2024 Seres 7 in the UAE (Drive Arabia, AWD export version of the M7)",
+        "publishedDate": "2024-07-01",
+        "quote": "The suspension is also tuned towards comfort, soaking up bumps nicely."
+      }
+    ]
   }
 ]

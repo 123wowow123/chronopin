@@ -447,3 +447,18 @@ describe('datacenter telemetry bounds (water:, chips:, acres:, sqft:, generators
     expect(hasFilters(parseSearchQuery('chips:>=100k'))).toBe(true);
   });
 });
+
+describe('AND between tags', () => {
+  it('reads tags side by side and joined by AND the same, keeping AND out of the free text', () => {
+    const joined = parseSearchQuery('tag:"AI Models" AND tag:Predicted');
+    expect(joined.tags).toEqual(['AI Models', 'Predicted']);
+    expect(joined.text).toBe('');
+    expect(parseSearchQuery('tag:"AI Models" tag:Predicted').tags).toEqual(joined.tags);
+  });
+
+  it('binds tighter than OR', () => {
+    const q = parseSearchQuery('tag:A AND tag:B OR tag:C');
+    expect(q.alternatives?.[0].tags).toEqual(['A', 'B']);
+    expect(q.alternatives?.[1].tags).toEqual(['C']);
+  });
+});
