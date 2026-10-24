@@ -81,10 +81,12 @@ async function main() {
   const quakes = await fetchQuakes();
   console.log(`${quakes.length} earthquakes of M${flags['min-mag']}+ in ${flags.feed}`);
   const token = flags['dry-run'] ? '' : await signIn(flags.base);
+  const local = /^https?:\/\/(localhost|127\.0\.0\.1)/.test(flags.base);
   let made = 0;
   for (const q of quakes.sort((a, b) => a.properties.time - b.properties.time)) {
     const body = pinBody(q);
-    const [existing] = await db.query<{ id: number }>(`SELECT "id" FROM "Pin" WHERE "sourceUrl" = $1 AND "utcDeletedDateTime" IS NULL LIMIT 1`, [body.sourceUrl]);
+    // The local database says nothing about another server's pins: there the route's duplicate-sourceUrl refusal does the skipping.
+    const [existing] = local ? await db.query<{ id: number }>(`SELECT "id" FROM "Pin" WHERE "sourceUrl" = $1 AND "utcDeletedDateTime" IS NULL LIMIT 1`, [body.sourceUrl]) : [];
     console.log(`${body.utcStartDateTime.slice(0, 16)} ${body.title}${existing ? ` [pin ${existing.id}]` : ''}`);
     if (existing || flags['dry-run']) continue;
     const response = await fetch(`${flags.base}/api/pins`, { method: 'POST', headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${token}` }, body: JSON.stringify(body) });

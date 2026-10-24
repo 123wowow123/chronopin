@@ -469,3 +469,4 @@ https://www.chronopin.com/pin/19608/china-eastern-flies-the-c919-s-first-commerc
 should mention main competitor products. 
 this should apply for all products
 
+all ai model thread should have prediction pins if possible

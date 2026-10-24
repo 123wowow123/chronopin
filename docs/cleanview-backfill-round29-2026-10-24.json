@@ -1,0 +1,2556 @@
+{
+  "checkedAt": "2026-10-24",
+  "scope": "Cleanview sourcing backfill round29",
+  "outcome": {
+    "audited": 13,
+    "coreBatchAudited": 12,
+    "coreCorrected": 6,
+    "canonicalCounterpartsEnriched": 1,
+    "corrected": 7,
+    "held": 6,
+    "environmentActions": 26,
+    "azureFilesVerified": 30,
+    "nativePagesVerified": 14,
+    "unpublishedPricesCleared": 6,
+    "sourcedPhasePricesAdded": 1,
+    "calculatedEnergyRowsCleared": 3,
+    "replacementMaps": 9,
+    "addedPhotoPlacements": 5,
+    "addedRenderingPlacements": 3,
+    "addedDiagramPlacements": 1,
+    "postedMapEntries": 1388,
+    "deployed": false
+  },
+  "plan": {
+    "solar-steel-river-solar-phase-3-arkansas": {
+      "patch": {
+        "title": "Steel River Solar Phase 3: 500 MW EIA Plan, July 2030 Target",
+        "description": "EIA August 2026 lists Cypress Creek’s Steel River Solar Phase 3, plant 70399, with 500 MW SRSP3 solar and separate 250 MW SRSB3 battery, under construction at most 50% complete and planned for July 2030. Operator whole-program timing instead targets all three phases by 2029.",
+        "sourceUrl": null,
+        "references": [
+          {
+            "url": "https://www.eia.gov/electricity/data/eia860m/xls/august_generator2026.xlsx",
+            "title": "EIA August 2026 planned generators — Steel River Solar Phase 3, plant 70399",
+            "confidence": 95,
+            "publishedDate": null
+          },
+          {
+            "url": "https://cypresscreekenergy.com/steel-river-energy-center/",
+            "title": "Steel River Energy Center — Cypress Creek",
+            "confidence": 95,
+            "publishedDate": null
+          },
+          {
+            "url": "https://cypresscreekenergy.com/news/steel-river-groundbreaking/",
+            "title": "Cypress Creek and Google Break Ground on America’s Largest Solar Project",
+            "confidence": 95,
+            "publishedDate": "2026-07-14"
+          },
+          {
+            "url": "https://cypresscreekenergy.com/news/steel-river-financing/",
+            "title": "Cypress Creek Energy Secures $3.5 Billion to Advance One of America’s Largest Solar and Storage Projects",
+            "confidence": 95,
+            "publishedDate": "2026-06-11"
+          }
+        ],
+        "longFormSummary": "<ul><li>Native 500 MW is Phase 3 solar nameplate, excluding the separate battery and operator DC totals. July 2026 groundbreaking and $3.5B financing cover the first two phases, not a separate confirmed Phase 3 construction milestone or budget. Operator $4.5B-plus applies to the whole program; no phase solar-only budget verifies $550M.<cite data-ref=\"https://cypresscreekenergy.com/steel-river-energy-center/\"></cite></li><li>Former MISO J1693 is a withdrawn 50 MW battery at Maynard 115 kV in Chippewa County, Minnesota, not this Arkansas phase. The shared EIA reporting point is not a Phase 3 surveyed centroid; operator schematic shows separate phase areas around Wilson/Marie. Existing phase/campus/battery pins are not additive independent projects.<cite data-ref=\"https://www.misoenergy.org/api/giqueue/getprojects\"></cite></li><li>Timeline: EIA July 2030 planned month; day 1 is a placeholder, not guaranteed COD. Operator all-phase 2029 target conflicts and remains explicit.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/august_generator2026.xlsx\"></cite></li><li>Cypress Creek’s identified Steel River construction-stage aerial showing vegetation and support posts. Broader program context; not independently labelled Phase 3 or an operating array. Credit: Cypress Creek Energy.<cite data-ref=\"https://cypresscreekenergy.com/steel-river-energy-center/\"></cite></li><li>Cypress Creek schematic showing distinct Steel River phase areas near Wilson and Marie. General program geography, not surveyed Phase 3 parcel boundaries. Credit: Cypress Creek Energy.<cite data-ref=\"https://cypresscreekenergy.com/steel-river-energy-center/\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "estimated",
+        "allDay": true,
+        "allDayStated": false,
+        "utcStartDateTime": "2030-07-01 T 00:00:00.000 Z",
+        "dateConfidenceReasoning": "EIA July 2030 planned month; day 1 is a placeholder, not guaranteed COD. Operator all-phase 2029 target conflicts and remains explicit.",
+        "company": "Cypress Creek Energy",
+        "companyWikiUrl": null,
+        "latitude": 35.578637,
+        "longitude": -90.09763,
+        "address": "Steel River EIA plant 70399 reporting point, Mississippi County, Arkansas; shared program reporting context, not a surveyed Phase 3 footprint",
+        "tags": [
+          "Cleanview",
+          "Solar",
+          "Cypress Creek Energy",
+          "Mississippi County",
+          "Arkansas",
+          "Under construction"
+        ],
+        "media": [
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round29-2026-10-24/solar-steel-river-solar-phase-3-arkansas-aerial.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 1000
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round29-2026-10-24/solar-steel-river-solar-phase-3-arkansas-topo.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 1000
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round29-2026-10-24/solar-steel-river-solar-phase-3-arkansas-relief.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 1000
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round29-2026-10-24/steel-phase3-aerial.jpg",
+            "originalWidth": 1024,
+            "originalHeight": 457
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round29-2026-10-24/steel-phase3-map.jpg",
+            "originalWidth": 864,
+            "originalHeight": 576
+          }
+        ]
+      },
+      "power": {
+        "megawatts": 500,
+        "kind": "generation",
+        "sourceUrl": "https://www.eia.gov/electricity/data/eia860m/xls/august_generator2026.xlsx",
+        "note": "EIA plant 70399 SRSP3 solar 500 MW nameplate only; separate 250 MW SRSB3 battery excluded. Planned/under-construction scope, not measured generation."
+      },
+      "datacenter": null,
+      "clearEnergy": false,
+      "gaps": [
+        "Resolve operator 2029 versus EIA Phase 3 July 2030, exact phase footprint and solar-only construction budget. Gallery aerial/map are broader program context, not separately phase-labelled."
+      ],
+      "mediaReplaced": true,
+      "mediaAdded": 2
+    },
+    "battery-mosey-nevada": {
+      "delete": true,
+      "researchFinding": "Duplicate of retained Mosey hybrid pins 15896/16334. Federal dashboard supports Clearway’s proposed 500 MW solar plus up to 850 MW storage under environmental review, not completed approval. CAISO 2148 lists solar 537.0067 MW, battery 543.856 MW and 500 MW export, June 27, 2029 target, distinct from federal proposal scope. Original Nevada docket path 404; $530M, 537 MW battery-only rating, 2,148 MW h/four-hour and final review are unsupported. Hold redundant tracker identity; preserve counterparts unchanged, flag their older schedules for follow-up, and do not infer cancellation or merge automatically.",
+      "sourcesChecked": [
+        "https://www.permits.performance.gov/permitting-project/fast-41-covered-projects/mosey-solar-project",
+        "https://public-inspection.federalregister.gov/2026-15270.pdf",
+        "https://www.caiso.com/documents/publicqueuereport.xlsx",
+        "https://www.chronopin.com/api/pins/15896",
+        "https://www.chronopin.com/api/pins/16334"
+      ],
+      "gaps": [
+        "Duplicate of retained Mosey hybrid pins 15896/16334. Federal dashboard supports Clearway’s proposed 500 MW solar plus up to 850 MW storage under environmental review, not completed approval. CAISO 2148 lists solar 537.0067 MW, battery 543.856 MW and 500 MW export, June 27, 2029 target, distinct from federal proposal scope. Original Nevada docket path 404; $530M, 537 MW battery-only rating, 2,148 MW h/four-hour and final review are unsupported. Hold redundant tracker identity; preserve counterparts unchanged, flag their older schedules for follow-up, and do not infer cancellation or merge automatically."
+      ]
+    },
+    "battery-power-pinecone-arizona": {
+      "delete": true,
+      "researchFinding": "Unverified Pinecone tracker identity, same unresolved lead as held 16451. Current CAISO workbook has no exact Pinecone/2203 row; August 2026 EIA has no exact project match. Tracker withdrawal/active claims conflict and do not independently substantiate Pinecone Clean Energy Storage LLC, 515 MW/2,060 MW h,$510M, Yuma permit or exact parcel. County URL 403 is an access gap, not a cancellation finding. Hold pending opened primary queue history, permit or operator identity; do not substitute similarly named Florida Pinecone solar.",
+      "sourcesChecked": [
+        "https://www.caiso.com/documents/publicqueuereport.xlsx",
+        "https://www.eia.gov/electricity/data/eia860m/xls/august_generator2026.xlsx",
+        "https://www.yumacountyaz.gov/government/development-services/planning-zoning/pinecone-bess",
+        "https://www.cleanview.co/power-projects/planned/battery-storage-projects/arizona/55044_storage/pinecone"
+      ],
+      "gaps": [
+        "Unverified Pinecone tracker identity, same unresolved lead as held 16451. Current CAISO workbook has no exact Pinecone/2203 row; August 2026 EIA has no exact project match. Tracker withdrawal/active claims conflict and do not independently substantiate Pinecone Clean Energy Storage LLC, 515 MW/2,060 MW h,$510M, Yuma permit or exact parcel. County URL 403 is an access gap, not a cancellation finding. Hold pending opened primary queue history, permit or operator identity; do not substitute similarly named Florida Pinecone solar."
+      ]
+    },
+    "battery-power-reed-meadow-nevada": {
+      "delete": true,
+      "researchFinding": "Unverified Reed Meadow tracker identity, same unresolved lead as held 16480. Trackers associate CAISO 2245/565.77 MW with withdrawn status, but current primary workbook lacks an exact row and no opened Nevada filing or developer site verifies the claimed standalone 566 MW/2,264 MW h,$560M, Apex/HarryAllen site, applicant or approval. Original PUC docket path 404. Queue absence alone is not cancellation. Hold until primary historical queue/permit identity and geography can be established; do not promote tracker withdrawal into a cancelled-project claim.",
+      "sourcesChecked": [
+        "https://www.caiso.com/documents/publicqueuereport.xlsx",
+        "https://www.eia.gov/electricity/data/eia860m/xls/august_generator2026.xlsx",
+        "https://puc.nv.gov/Dockets/Detail_24-reed-meadow"
+      ],
+      "gaps": [
+        "Unverified Reed Meadow tracker identity, same unresolved lead as held 16480. Trackers associate CAISO 2245/565.77 MW with withdrawn status, but current primary workbook lacks an exact row and no opened Nevada filing or developer site verifies the claimed standalone 566 MW/2,264 MW h,$560M, Apex/HarryAllen site, applicant or approval. Original PUC docket path 404. Queue absence alone is not cancellation. Hold until primary historical queue/permit identity and geography can be established; do not promote tracker withdrawal into a cancelled-project claim."
+      ]
+    },
+    "battery-silver-star-solar-nevada": {
+      "delete": true,
+      "researchFinding": "Duplicate of retained Silver Star hybrid pin 15940. Current LRE page proposes 650 MW solar/500 MW battery with 2029 operation target; federal material has 650 MW battery and a broader$1B estimate, while CAISO 2142 lists 516.7638 MW solar and 516.7638 MW battery/500 MW export with December 1, 2028 target. These scope/schedule conflicts are explicit follow-up for 15940, not proof of a second 517 MW battery-only project. No standalone$510M or 2,068 MW h budget/design verified. Hold redundant tracker identity, preserve 15940 unchanged and do not infer cancellation or automatically merge.",
+      "sourcesChecked": [
+        "https://www.lreus.com/projects/silver-star-solar/",
+        "https://www.permits.performance.gov/permitting-project/fast-41-covered-projects/silver-star-solar",
+        "https://www.caiso.com/documents/publicqueuereport.xlsx",
+        "https://www.chronopin.com/api/pins/15940"
+      ],
+      "gaps": [
+        "Duplicate of retained Silver Star hybrid pin 15940. Current LRE page proposes 650 MW solar/500 MW battery with 2029 operation target; federal material has 650 MW battery and a broader$1B estimate, while CAISO 2142 lists 516.7638 MW solar and 516.7638 MW battery/500 MW export with December 1, 2028 target. These scope/schedule conflicts are explicit follow-up for 15940, not proof of a second 517 MW battery-only project. No standalone$510M or 2,068 MW h budget/design verified. Hold redundant tracker identity, preserve 15940 unchanged and do not infer cancellation or automatically merge."
+      ]
+    },
+    "dc-crusoe-warrenton-building-1-missouri": {
+      "delete": true,
+      "researchFinding": "Duplicate of independently verified Warrenton Building 1 pin 16557. January 20, 2026 city minutes approve two 805,000 sqft buildings at 22151 NW Service Road; tracker’s 300 MW, $2B and independent construction-start/COD claims are not verified. Original county path 521. Hold duplicate; retain 16557 and enrich that canonical first-building record with sourced Phase 1 real-property construction estimate 4,398,033,569 USD from city cost/benefit plan, excluding equipment. No automatic merge or campus cancellation.",
+      "sourcesChecked": [
+        "https://ecode360.com/WA3466/document/753231245.pdf",
+        "https://www.warrenton-mo.org/wp-content/uploads/2026/03/Plan-Cost-Benefit-Analysis-Crusoe-Data-Center.pdf",
+        "https://www.chronopin.com/api/pins/16557"
+      ],
+      "gaps": [
+        "Duplicate of independently verified Warrenton Building 1 pin 16557. January 20, 2026 city minutes approve two 805,000 sqft buildings at 22151 NW Service Road; tracker’s 300 MW, $2B and independent construction-start/COD claims are not verified. Original county path 521. Hold duplicate; retain 16557 and enrich that canonical first-building record with sourced Phase 1 real-property construction estimate 4,398,033,569 USD from city cost/benefit plan, excluding equipment. No automatic merge or campus cancellation."
+      ]
+    },
+    "dc-databank-slc6-bluffdale-ut": {
+      "patch": {
+        "title": "DataBank SLC6: 22 MW Critical IT; 2022 Opening Announcement",
+        "description": "DataBank’s Q425V1 datasheet specifies 22 MW critical IT and 88,250 sqft raised floor at 14870 S Pony Express Road. Its September 26, 2022 announcement described 11 MW initially available with another 11 MW planned; this was an existing facility, not a new 20 MW expansion due in 2027.",
+        "sourceUrl": "https://www.databank.com/resources/press-releases/databank-announces-opening-of-sixth-salt-lake-city-area-data-center/",
+        "references": [
+          {
+            "url": "https://www.databank.com/resources/press-releases/databank-announces-opening-of-sixth-salt-lake-city-area-data-center/",
+            "title": "DataBank Announces Opening of Sixth Salt Lake City Area Data Center",
+            "confidence": 95,
+            "publishedDate": "2022-09-26"
+          },
+          {
+            "url": "https://www.databank.com/wp-content/uploads/2025/11/SLC6-datasheet.pdf",
+            "title": "DataBank SLC6 facility datasheet — Q425V1",
+            "confidence": 95,
+            "publishedDate": null
+          },
+          {
+            "url": "https://www.databank.com/data-centers/salt-lake-city/granite-point-campus/slc6/",
+            "title": "DataBank SLC6 — Granite Point facility and gallery",
+            "confidence": 95,
+            "publishedDate": null
+          },
+          {
+            "url": "https://www.databank.com/events/databanks-slc6-data-center-grand-opening/",
+            "title": "DataBank’s SLC6 Data Center Grand Opening — December 1, 2022 event",
+            "confidence": 95,
+            "publishedDate": null
+          }
+        ],
+        "longFormSummary": "<ul><li>Native 22 MW is current published critical IT, not measured total draw or proof that all 22 MW operated in September 2022. Datasheet 88,250 sqft is raised floor; release 171,000 sqft building/100,000 sqft raised floor are earlier reported scopes. Shared 66 MW substation/23-acre campus are not SLC6-only quantities.<cite data-ref=\"https://www.databank.com/wp-content/uploads/2025/11/SLC6-datasheet.pdf\"></cite></li><li>Chronology conflict preserved: Q425 datasheet says opened 2023, while September 2022 release announces opening with halls expectedOctober and initial ceremony slatedNovember 15; current event page listsDecember 1, 2022. Saved event is the dated September 26 announcement, not a silently chosen actual COD. Removed $120M, 20 MW, 85,000 sqft and estimated water/energy. No SLC6-only construction budget established.<cite data-ref=\"https://www.databank.com/resources/press-releases/databank-announces-opening-of-sixth-salt-lake-city-area-data-center/\"></cite></li><li>Timeline: Confirmed operator opening-announcement date; Q425 datasheet says 2023 and original hall/ceremony schedules differ. Exact realized commissioning requires reconciliation.<cite data-ref=\"https://www.databank.com/resources/press-releases/databank-announces-opening-of-sixth-salt-lake-city-area-data-center/\"></cite></li><li>Architectural exterior rendering in DataBank’s SLC6 gallery; conceptual appearance, not proof of completed construction. Credit: DataBank.<cite data-ref=\"https://www.databank.com/data-centers/salt-lake-city/granite-point-campus/slc6/\"></cite></li><li>SLC6 rooftop construction photo from DataBank’s facility gallery; photo date not specified and no completed capacity inferred. Credit: DataBank.<cite data-ref=\"https://www.databank.com/data-centers/salt-lake-city/granite-point-campus/slc6/\"></cite></li><li>SLC6 roof equipment photo from DataBank’s gallery; no equipment count or output inferred. Credit: DataBank.<cite data-ref=\"https://www.databank.com/data-centers/salt-lake-city/granite-point-campus/slc6/\"></cite></li><li>Architectural SLC6 exterior rendering from DataBank’s facility gallery; not an as-built photograph. Credit: DataBank.<cite data-ref=\"https://www.databank.com/data-centers/salt-lake-city/granite-point-campus/slc6/\"></cite></li><li>SLC6 exterior with unfinished surrounding ground, published with the September 2022 opening announcement. The image does not independently establish full 22 MW energization. Credit: DataBank.<cite data-ref=\"https://www.databank.com/resources/press-releases/databank-announces-opening-of-sixth-salt-lake-city-area-data-center/\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "confirmed",
+        "allDay": true,
+        "allDayStated": false,
+        "utcStartDateTime": "2022-09-26 T 00:00:00.000 Z",
+        "dateConfidenceReasoning": "Confirmed operator opening-announcement date; Q425 datasheet says 2023 and original hall/ceremony schedules differ. Exact realized commissioning requires reconciliation.",
+        "company": "DataBank",
+        "companyWikiUrl": null,
+        "latitude": 40.480079620059,
+        "longitude": -111.903580152063,
+        "address": "14870 S Pony Express Road, Bluffdale, Utah; Census-geocoded operator datasheet address, approximate street-address context",
+        "tags": [
+          "Cleanview",
+          "Data Center",
+          "DataBank",
+          "Salt Lake County",
+          "Utah"
+        ],
+        "media": [
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round29-2026-10-24/dc-databank-slc6-bluffdale-ut-aerial.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 1000
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round29-2026-10-24/dc-databank-slc6-bluffdale-ut-topo.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 1000
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round29-2026-10-24/dc-databank-slc6-bluffdale-ut-relief.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 1000
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round29-2026-10-24/SLC6-DC-Hero.2.jpg",
+            "originalWidth": 3000,
+            "originalHeight": 1200
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round29-2026-10-24/SLC6-Right-A.jpg",
+            "originalWidth": 732,
+            "originalHeight": 414
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round29-2026-10-24/SLC6-Right-B.jpg",
+            "originalWidth": 732,
+            "originalHeight": 414
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round29-2026-10-24/SLC6-Bottom.jpg",
+            "originalWidth": 2100,
+            "originalHeight": 732
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round29-2026-10-24/SLC6-September-2022.jpg",
+            "originalWidth": 4032,
+            "originalHeight": 3024
+          }
+        ]
+      },
+      "power": {
+        "megawatts": 22,
+        "kind": "usage",
+        "sourceUrl": "https://www.databank.com/resources/press-releases/databank-announces-opening-of-sixth-salt-lake-city-area-data-center/",
+        "note": "Q425V1 operator specification:22 MW critical IT, not total facility draw.2022 opening release described 11 MW initial and 11 MW future; full 22 MW service date unverified."
+      },
+      "datacenter": {
+        "sqft": 88250,
+        "buildings": 1,
+        "cooling": "Operator Q425V1 datasheet: N+1 cooling design; no measured daily water consumption published",
+        "sourceUrl": "https://www.databank.com/wp-content/uploads/2025/11/SLC6-datasheet.pdf",
+        "note": "88,250 sqft is raised floor, not gross building size.22 MW is current critical IT;2022 release 11 MW initial/11 MW future is separate chronology. Shared 66 MW substation excluded."
+      },
+      "clearEnergy": true,
+      "gaps": [
+        "Reconcile 2022 opening release/event versus 2023 datasheet wording, current full 22 MW energization date and exact building centroid. Published construction cost remains unverified. Official gallery includes renders and construction photos, labelled separately."
+      ],
+      "mediaReplaced": true,
+      "mediaAdded": 5
+    },
+    "dc-flexential-hillsboro-4-or": {
+      "patch": {
+        "title": "Flexential Hillsboro 4: 18 MW Facility; Real Estate Acquired in May 2026",
+        "description": "Flexential’s May 28, 2026 release announces acquisition of Hillsboro 4 and 5 real estate. Hillsboro 4 at 4915 NE Starr Boulevard is 138,000 sqft, 18 MW and fully leased. Current facility specifications independently identify 18 MW critical UPS load; it is separate from 36 MW Hillsboro 5.",
+        "sourceUrl": "https://www.flexential.com/resources/press-release/flexential-secures-strategic-real-estate-ownership-hillsboro-oregon",
+        "references": [
+          {
+            "url": "https://www.flexential.com/resources/press-release/flexential-secures-strategic-real-estate-ownership-hillsboro-oregon",
+            "title": "Flexential Secures Strategic Real Estate Ownership in Hillsboro, Oregon, with Acquisition of Two Data Center Properties",
+            "confidence": 95,
+            "publishedDate": "2026-05-28"
+          },
+          {
+            "url": "https://www.flexential.com/data-centers/or/portland/hillsboro4-data-center",
+            "title": "Portland – Hillsboro 4 data center — Flexential",
+            "confidence": 95,
+            "publishedDate": null
+          },
+          {
+            "url": "https://www.flexential.com/resources/data-sheet/portland-or-hillsboro-4-data-center",
+            "title": "Flexential Portland – Hillsboro 4 facility datasheet",
+            "confidence": 95,
+            "publishedDate": null
+          },
+          {
+            "url": "https://www.flexential.com/data-centers/design",
+            "title": "Flexential — Data Center Design and Architecture",
+            "confidence": 95,
+            "publishedDate": null
+          }
+        ],
+        "longFormSummary": "<ul><li>Native 18 MW follows building critical UPS rating. Release 138,000 sqft and current design-page 138,009 sqft are rounded/precise variants; datasheet quick-facts 158,000 sqft conflicts with its own initial-build 138,000 sqft. Native sqft follows latest dated release, not silently treating every figure as the same scope. Additional campus capacity is not assigned to this building.<cite data-ref=\"https://www.flexential.com/resources/press-release/flexential-secures-strategic-real-estate-ownership-hillsboro-oregon\"></cite></li><li>Operator publishes N+2 cooling, hot-aisle containment, designPUE 1.4 and WUE 0 claim; these are design/marketing specifications, not measured absolute daily water. Removed modeled 36 MW, $250M, wrong address and future-opening claim. Acquisition price and building-only construction cost are unpublished in opened sources; portfolio$800M financing is not substituted.<cite data-ref=\"https://www.flexential.com/data-centers/or/portland/hillsboro4-data-center\"></cite></li><li>Timeline: Confirmed real-estate acquisition announcement for existing Hillsboro 4/5 facilities, not exact first commissioning or a new construction start.<cite data-ref=\"https://www.flexential.com/resources/press-release/flexential-secures-strategic-real-estate-ownership-hillsboro-oregon\"></cite></li><li>Operator-identified Hillsboro 4 exterior at 4915 NE Starr Boulevard; photographed commissioning date and current measured load are not specified. Credit: Flexential.<cite data-ref=\"https://www.flexential.com/data-centers/design\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "confirmed",
+        "allDay": true,
+        "allDayStated": false,
+        "utcStartDateTime": "2026-05-28 T 00:00:00.000 Z",
+        "dateConfidenceReasoning": "Confirmed real-estate acquisition announcement for existing Hillsboro 4/5 facilities, not exact first commissioning or a new construction start.",
+        "company": "Flexential",
+        "companyWikiUrl": null,
+        "latitude": 45.555177221799,
+        "longitude": -122.939055619267,
+        "address": "4915 NE Starr Boulevard, Hillsboro, Oregon; Esri point-address match to operator facility address after Census no-match, not a surveyed footprint",
+        "tags": [
+          "Cleanview",
+          "Data Center",
+          "Flexential",
+          "Washington County",
+          "Oregon"
+        ],
+        "media": [
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round29-2026-10-24/dc-flexential-hillsboro-4-or-aerial.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 1000
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round29-2026-10-24/dc-flexential-hillsboro-4-or-topo.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 1000
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round29-2026-10-24/dc-flexential-hillsboro-4-or-relief.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 1000
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round29-2026-10-24/flexential-hil4.jpg",
+            "originalWidth": 800,
+            "originalHeight": 419
+          }
+        ]
+      },
+      "power": {
+        "megawatts": 18,
+        "kind": "usage",
+        "sourceUrl": "https://www.flexential.com/resources/press-release/flexential-secures-strategic-real-estate-ownership-hillsboro-oregon",
+        "note": "Operator building-specific 18 MW critical UPS load for Hillsboro 4, not Hillsboro 5’s 36 MW or shared future-campus capacity."
+      },
+      "datacenter": {
+        "sqft": 138000,
+        "buildings": 1,
+        "cooling": "Operator: N+2 cooling and hot-aisle containment; design PUE 1.4/WUE 0 are claims, not measured daily water",
+        "sourceUrl": "https://www.flexential.com/data-centers/or/portland/hillsboro4-data-center",
+        "note": "138,000 sqft follows May 2026 release; old datasheet 158,000 sqft conflicts.18 MW critical UPS is building-specific. Shared 20-acre two-property acquisition excluded."
+      },
+      "clearEnergy": true,
+      "gaps": [
+        "Reconcile 138,000/138,009 versus 158,000 sqft scope, actual original commissioning and published building-only construction/acquisition price. Operator pages/PDFs direct 403 but web research opened content; identified operator image downloads successfully."
+      ],
+      "mediaReplaced": true,
+      "mediaAdded": 1
+    },
+    "dc-switch-citadel-tahoe-reno-building-3-nv": {
+      "patch": {
+        "title": "Switch Tahoe Reno 3: Independently Named Site-Development Project",
+        "description": "Switch’s November 9, 2022 issuer results explicitly name site development for TAHOE RENO 3, alongside construction of RENO 2. An earlier operator announcement independently names third-building site preparation. This substantiates the real building identity, but not this tracker’s 120 MW, $850M or June 2027 completion.",
+        "sourceUrl": null,
+        "references": [
+          {
+            "url": "https://www.sec.gov/Archives/edgar/data/1710583/000171058322000045/exhibit991pressreleasedate.htm",
+            "title": "Switch Announces Third Quarter 2022 Financial Results",
+            "confidence": 95,
+            "publishedDate": "2022-11-09"
+          },
+          {
+            "url": "https://www.switch.com/switch-breaks-ground-on-second-and-third-tahoe-reno-data-centers-following-multi-megawatt-expansions-with-global-e-commerce-and-semiconductor-clients/",
+            "title": "Switch Breaks Ground on Second and Third Tahoe Reno Data Centers Following Multi-Megawatt Expansions with Global E-Commerce and Semiconductor Clients",
+            "confidence": 95,
+            "publishedDate": null
+          },
+          {
+            "url": "https://switchdotcom.s3-sites.data.switch.com/media/brochures/SW_Electronic-Sales-Brochure.pdf",
+            "title": "Switch electronic sales brochure — historical campus planning table",
+            "confidence": 95,
+            "publishedDate": null
+          },
+          {
+            "url": "https://www.switch.com/tahoe-reno/",
+            "title": "Switch Tahoe Reno — current Citadel campus page",
+            "confidence": 95,
+            "publishedDate": null
+          }
+        ],
+        "longFormSummary": "<ul><li>Issuer reports$65.3M quarterly Citadel capex spanning RENO 2 construction and RENO 3 site development; it is neither a standalone RENO 3 budget nor total lifetime cost. Historical brochure lists up-to 621,292 sqft/80 MVA for RENO 3, not 120 MW critical IT. County-hosted market report indexed 935,000 sqft but now 404. Conflicting historical scope is not adopted as installed floor area or power.<cite data-ref=\"https://www.sec.gov/Archives/edgar/data/1710583/000171058322000045/exhibit991pressreleasedate.htm\"></cite></li><li>Native power removed; only independently named building count retained. Current multi-gigawatt campus marketing and generic gallery do not prove this building’s commissioning or tier certificate. The operator expansion rendering is shared campus context, not an as-built photo of RENO 3. Original municipal path 404; exact parcel/building centroid, latest specifications and construction cost remain gaps.<cite data-ref=\"https://www.switch.com/tahoe-reno/\"></cite></li><li>Timeline: Confirmed issuer-report publication naming RENO 3 site development, not COD. Original future completion and current operation remain unverified.<cite data-ref=\"https://www.sec.gov/Archives/edgar/data/1710583/000171058322000045/exhibit991pressreleasedate.htm\"></cite></li><li>Citadel expansion rendering accompanying the operator announcement naming RENO2 construction and RENO3 site preparation. Shared campus concept, not an as-built RENO3 photograph or parcel plan. Credit: Switch.<cite data-ref=\"https://www.switch.com/switch-breaks-ground-on-second-and-third-tahoe-reno-data-centers-following-multi-megawatt-expansions-with-global-e-commerce-and-semiconductor-clients/\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "confirmed",
+        "allDay": true,
+        "allDayStated": false,
+        "utcStartDateTime": "2022-11-09 T 00:00:00.000 Z",
+        "dateConfidenceReasoning": "Confirmed issuer-report publication naming RENO 3 site development, not COD. Original future completion and current operation remain unverified.",
+        "company": "Switch, Inc.",
+        "companyWikiUrl": "https://en.wikipedia.org/wiki/Switch_(company)",
+        "address": "Citadel campus, Storey County, Nevada; retained approximate campus-area point, not a verified TAHOE RENO 3 building centroid",
+        "tags": [
+          "Cleanview",
+          "Data Center",
+          "Switch",
+          "Storey County",
+          "Nevada",
+          "Planned"
+        ],
+        "media": [
+          {
+            "id": 25463,
+            "thumbName": "5654926d-858f-479e-bdae-fb3312990ed3.jpeg",
+            "thumbWidth": 1000,
+            "thumbHeight": 625,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/lead-dc-switch-citadel-tahoe-reno-building-3-nv-aerial.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 1000,
+            "type": "1"
+          },
+          {
+            "id": 25464,
+            "thumbName": "1be54261-c7ab-42de-a58d-ece606a7ea6a.jpeg",
+            "thumbWidth": 1000,
+            "thumbHeight": 625,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/lead-dc-switch-citadel-tahoe-reno-building-3-nv-topo.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 1000,
+            "type": "1"
+          },
+          {
+            "id": 25465,
+            "thumbName": "1487aeab-9044-4f05-ab28-2850b0100d31.jpeg",
+            "thumbWidth": 1000,
+            "thumbHeight": 625,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/lead-dc-switch-citadel-tahoe-reno-building-3-nv-regional.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 1000,
+            "type": "1"
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round29-2026-10-24/switch-expansion.jpg",
+            "originalWidth": 3840,
+            "originalHeight": 2160
+          }
+        ]
+      },
+      "power": "delete",
+      "datacenter": {
+        "buildings": 1,
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1710583/000171058322000045/exhibit991pressreleasedate.htm",
+        "note": "One independently named TAHOE RENO 3 project. Historical area/MVA scopes conflict; no verified current MW, gross area, measured water or installed generator count."
+      },
+      "clearEnergy": true,
+      "gaps": [
+        "Obtain latest building-specific permit, exact centroid, gross area/MW and actual commissioning. No RENO 3-only construction budget; older shared quarterly capex and company financing excluded. Gallery rendering is campus context only."
+      ],
+      "mediaReplaced": true,
+      "mediaAdded": 1
+    },
+    "solar-energy-coffey-solar-kansas": {
+      "patch": {
+        "title": "Coffey GEN-2021-096: 500 MW Solar Request, December 2030 Target",
+        "description": "SPP’s current active queue lists GEN-2021-096, 500 MW solar at Wolf Creek–Benton 345 kV in Coffey County, Kansas, targeting December 1, 2030 with IA fully executed/on-schedule status. The queue does not publish a developer or exact project parcel.",
+        "sourceUrl": null,
+        "references": [
+          {
+            "url": "https://opsportal.spp.org/Studies/GIActive",
+            "title": "SPP Active Generator Interconnection Requests — GEN-2021-096",
+            "confidence": 95,
+            "publishedDate": null
+          },
+          {
+            "url": "https://ottercreeksolarfarm.com/",
+            "title": "Hecate Energy — Otter Creek Solar Farm proposal",
+            "confidence": 95,
+            "publishedDate": null
+          }
+        ],
+        "longFormSummary": "<ul><li>Hecate’s separately named Otter Creek proposal is 1 GW, potentially two phases, with$1B private infrastructure plan on about 8,500 acres west of Burlington. An explicit mapping of this 500 MW queue request to an Otter Creek phase was not established. Keep request separate from retained program pin 16486; do not divide its$1B budget or infer Hecate ownership merely from county/capacity.<cite data-ref=\"https://ottercreeksolarfarm.com/\"></cite></li><li>Removed invented Coffey CleanSolar name,$550M, county permit and 2028 COD. Original KCC project path 404. Executed interconnection status is not local siting permission, actual construction or service. Exact developer, budget and parcel remain research gaps.<cite data-ref=\"https://opsportal.spp.org/Studies/GIActive\"></cite></li><li>Timeline: SPP proposed COD, not confirmed operation. Earlier requested date is not actual service.<cite data-ref=\"https://opsportal.spp.org/Studies/GIActive\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "estimated",
+        "allDay": true,
+        "allDayStated": false,
+        "utcStartDateTime": "2030-12-01 T 00:00:00.000 Z",
+        "dateConfidenceReasoning": "SPP proposed COD, not confirmed operation. Earlier requested date is not actual service.",
+        "company": null,
+        "companyWikiUrl": null,
+        "address": "Coffey County, Kansas; retained approximate county/project-area point, not an Otter Creek phase parcel or Wolf Creek–Benton line-tap coordinate",
+        "tags": [
+          "Cleanview",
+          "Solar",
+          "SPP",
+          "Coffey County",
+          "Kansas",
+          "Planned"
+        ]
+      },
+      "power": {
+        "megawatts": 500,
+        "kind": "generation",
+        "sourceUrl": "https://opsportal.spp.org/Studies/GIActive",
+        "note": "SPP GEN-2021-096 solar 500 MW request; executed IA/on schedule, not measured operation. No explicit Hecate/Otter Creek mapping established."
+      },
+      "datacenter": null,
+      "clearEnergy": false,
+      "gaps": [
+        "Verify applicant and any explicit Otter Creek phase/queue mapping, local permits, solar-only budget and official project-specific gallery. Do not conflate county proposal with anonymous queue identity."
+      ]
+    },
+    "solar-johnson-solar-kansas": {
+      "delete": true,
+      "researchFinding": "Duplicate of retained corrected West Gardner pin 16495. Current SPP GEN-2017-195 is 500.4 MW solar in JohnsonCounty, Kansas at WestGardner 345 kV, IA fully executed/on schedule and December 1, 2030 target. Queue does not substantiate NextEra as developer or county CUP. Original KCC project path 404; $550M and claimed independent Johnson Solar identity unsupported. Hold redundant tracker pin, preserve 16495 unchanged and do not infer cancellation or automatically merge.",
+      "sourcesChecked": [
+        "https://opsportal.spp.org/Studies/GIActive",
+        "https://www.chronopin.com/api/pins/16495",
+        "https://kcc.ks.gov/dockets/2024-johnson-solar-development"
+      ],
+      "gaps": [
+        "Duplicate of retained corrected West Gardner pin 16495. Current SPP GEN-2017-195 is 500.4 MW solar in JohnsonCounty, Kansas at WestGardner 345 kV, IA fully executed/on schedule and December 1, 2030 target. Queue does not substantiate NextEra as developer or county CUP. Original KCC project path 404; $550M and claimed independent Johnson Solar identity unsupported. Hold redundant tracker pin, preserve 16495 unchanged and do not infer cancellation or automatically merge."
+      ]
+    },
+    "solar-west-memphis-keo-500-kv-arkansas": {
+      "patch": {
+        "title": "West Memphis–Keo J1060: 500 MW Solar Request, Construction Reported",
+        "description": "MISO’s current queue identifies J1060 at the West Memphis–Keo 500 kV line tap in St. Francis County, Arkansas: 500 MW solar, GIA-stage processing done and post-GIA status Under Construction. The old negotiated May 1, 2023 in-service target is not proof of realized operation.",
+        "sourceUrl": null,
+        "references": [
+          {
+            "url": "https://www.misoenergy.org/api/giqueue/getprojects",
+            "title": "MISO generator interconnection queue — J1060 West Memphis–Keo 500 kV",
+            "confidence": 95,
+            "publishedDate": null
+          }
+        ],
+        "longFormSummary": "<ul><li>Original J1766 instead identifies a withdrawn 20 MW h ybrid in FallonCounty, Montana at KeystoneXL pumping-station 115 kV. That withdrawal is unrelated to the Arkansas request. Remove unsupported Invenergy attribution,$550M and future 2028 opening. Status Done refers to queue processing, not operating status; post-GIA field separately reports construction.<cite data-ref=\"https://www.misoenergy.org/api/giqueue/getprojects\"></cite></li><li>Saved milestone follows MISO’s August 19, 2020 completed-processing date. Current queue 500 MW summer/winter capacity differs from older 450 MW study cases; no exact branded operator/plant or parcel match was verified, so no EIA operating date or inferred owner is substituted. Existing other WestMemphis requests are not automatically merged.<cite data-ref=\"https://www.misoenergy.org/api/giqueue/getprojects\"></cite></li><li>Timeline: MISO recorded completed-processing date, not commercial operation or agreement-signature day. Negotiated May 2023 target is stale and not claimed as realized.<cite data-ref=\"https://www.misoenergy.org/api/giqueue/getprojects\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "estimated",
+        "allDay": true,
+        "allDayStated": false,
+        "utcStartDateTime": "2020-08-19 T 00:00:00.000 Z",
+        "dateConfidenceReasoning": "MISO recorded completed-processing date, not commercial operation or agreement-signature day. Negotiated May 2023 target is stale and not claimed as realized.",
+        "company": null,
+        "companyWikiUrl": null,
+        "address": "St. Francis County, Arkansas; retained approximate county/project-area marker, not verified J1060 solar parcel or exact line-tap point",
+        "tags": [
+          "Cleanview",
+          "Solar",
+          "MISO",
+          "St. Francis County",
+          "Arkansas",
+          "Under construction"
+        ]
+      },
+      "power": {
+        "megawatts": 500,
+        "kind": "generation",
+        "sourceUrl": "https://www.misoenergy.org/api/giqueue/getprojects",
+        "note": "MISO J1060 solar request 500 MW current summer/winter capacity; post-GIA field reports Under Construction. Not verified operating output."
+      },
+      "datacenter": null,
+      "clearEnergy": false,
+      "gaps": [
+        "Verify public applicant/brand, exact parcel, latest capacity/construction and realized COD. No name-matched construction cost or project-specific official photo established; interconnection status is not operation."
+      ]
+    },
+    "dc-crusoe-warrenton-bldg1-warren-mo": {
+      "patch": {
+        "price": 4398033569,
+        "priceCurrency": "USD",
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "references": [
+          {
+            "url": "https://ecode360.com/WA3466/document/753231245.pdf",
+            "title": "Warrenton Board of Aldermen — January 20, 2026 Minutes",
+            "confidence": 95,
+            "publishedDate": "2026-01-20"
+          },
+          {
+            "url": "https://dnr.mo.gov/air/business-industry/air-permits/warrenton-data-center-102026-007",
+            "title": "Missouri DNR — Warrenton Data Center, Permit 102026-007",
+            "confidence": 95,
+            "publishedDate": "2026-10-08"
+          },
+          {
+            "url": "https://www.warrenton-mo.org/wp-content/uploads/2026/03/Plan-Cost-Benefit-Analysis-Crusoe-Data-Center.pdf",
+            "title": "Warrenton DC Owner 1 LLC — Industrial Development Plan and Cost/Benefit Analysis",
+            "confidence": 95,
+            "publishedDate": null
+          }
+        ],
+        "longFormSummary": "<ul><li>The minutes identify Crusoe as owner/developer and describe Building 1. The permit record separately reports October 8, 2026 air-construction permit issuance; neither proves commissioned service.<cite data-ref=\"https://dnr.mo.gov/air/business-industry/air-permits/warrenton-data-center-102026-007\"></cite></li><li>The former $2B, 300 MW building rating, direct-to-chip cooling, water/energy model and June 2028 opening are removed. The minutes’ estimated 6,500 gal/day sewer flow is not a Building 1 cooling-water reading.<cite data-ref=\"https://ecode360.com/WA3466/document/753231245.pdf\"></cite></li><li>Timeline: The confirmed event is January 20, 2026 CUP/site-plan approval. No Building 1 COD is established.<cite data-ref=\"https://ecode360.com/WA3466/document/753231245.pdf\"></cite></li><li>Phase 1 real-property construction estimate, AttachmentB assumption 4: “approximately $4,398,033,569 in real property improvements”. Native USD price covers first-building/administration/infrastructure construction only, excluding separately estimated equipment and recurring replacements; not the $85B bond ceiling. Plan assumptions do not oblige completion.<cite data-ref=\"https://www.warrenton-mo.org/wp-content/uploads/2026/03/Plan-Cost-Benefit-Analysis-Crusoe-Data-Center.pdf\"></cite></li></ul>",
+        "title": "Crusoe Warrenton Building 1: 805,000 Sqft Site-Plan Approval"
+      },
+      "power": null,
+      "datacenter": null,
+      "clearEnergy": false,
+      "gaps": [
+        "Phase 1 real-property estimate is distinct from initial equipment, replacements and campus bond authorization. Verify any later phase-specific construction estimate; other main/native fields remain unchanged."
+      ],
+      "counterpartPriceOnly": true
+    }
+  },
+  "results": [
+    {
+      "environment": "local",
+      "key": "solar-steel-river-solar-phase-3-arkansas",
+      "id": 17012,
+      "action": "corrected",
+      "mediaPreserved": false,
+      "mediaReplaced": true,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Resolve operator 2029 versus EIA Phase 3 July 2030, exact phase footprint and solar-only construction budget. Gallery aerial/map are broader program context, not separately phase-labelled."
+      ]
+    },
+    {
+      "environment": "local",
+      "key": "battery-mosey-nevada",
+      "id": 17014,
+      "action": "deleted",
+      "verifiedStatus": 404
+    },
+    {
+      "environment": "local",
+      "key": "battery-power-pinecone-arizona",
+      "id": 17015,
+      "action": "deleted",
+      "verifiedStatus": 404
+    },
+    {
+      "environment": "local",
+      "key": "battery-power-reed-meadow-nevada",
+      "id": 17016,
+      "action": "deleted",
+      "verifiedStatus": 404
+    },
+    {
+      "environment": "local",
+      "key": "battery-silver-star-solar-nevada",
+      "id": 17017,
+      "action": "deleted",
+      "verifiedStatus": 404
+    },
+    {
+      "environment": "local",
+      "key": "dc-crusoe-warrenton-building-1-missouri",
+      "id": 17018,
+      "action": "deleted",
+      "verifiedStatus": 404
+    },
+    {
+      "environment": "local",
+      "key": "dc-databank-slc6-bluffdale-ut",
+      "id": 17019,
+      "action": "corrected",
+      "mediaPreserved": false,
+      "mediaReplaced": true,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Reconcile 2022 opening release/event versus 2023 datasheet wording, current full 22 MW energization date and exact building centroid. Published construction cost remains unverified. Official gallery includes renders and construction photos, labelled separately."
+      ]
+    },
+    {
+      "environment": "local",
+      "key": "dc-flexential-hillsboro-4-or",
+      "id": 17020,
+      "action": "corrected",
+      "mediaPreserved": false,
+      "mediaReplaced": true,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Reconcile 138,000/138,009 versus 158,000 sqft scope, actual original commissioning and published building-only construction/acquisition price. Operator pages/PDFs direct 403 but web research opened content; identified operator image downloads successfully."
+      ]
+    },
+    {
+      "environment": "local",
+      "key": "dc-switch-citadel-tahoe-reno-building-3-nv",
+      "id": 17021,
+      "action": "corrected",
+      "mediaPreserved": false,
+      "mediaReplaced": true,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Obtain latest building-specific permit, exact centroid, gross area/MW and actual commissioning. No RENO 3-only construction budget; older shared quarterly capex and company financing excluded. Gallery rendering is campus context only."
+      ]
+    },
+    {
+      "environment": "local",
+      "key": "solar-energy-coffey-solar-kansas",
+      "id": 17022,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Verify applicant and any explicit Otter Creek phase/queue mapping, local permits, solar-only budget and official project-specific gallery. Do not conflate county proposal with anonymous queue identity."
+      ]
+    },
+    {
+      "environment": "local",
+      "key": "solar-johnson-solar-kansas",
+      "id": 17024,
+      "action": "deleted",
+      "verifiedStatus": 404
+    },
+    {
+      "environment": "local",
+      "key": "solar-west-memphis-keo-500-kv-arkansas",
+      "id": 17025,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Verify public applicant/brand, exact parcel, latest capacity/construction and realized COD. No name-matched construction cost or project-specific official photo established; interconnection status is not operation."
+      ]
+    },
+    {
+      "environment": "local",
+      "key": "dc-crusoe-warrenton-bldg1-warren-mo",
+      "id": 16557,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Phase 1 real-property estimate is distinct from initial equipment, replacements and campus bond authorization. Verify any later phase-specific construction estimate; other main/native fields remain unchanged."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "solar-steel-river-solar-phase-3-arkansas",
+      "id": 17012,
+      "action": "corrected",
+      "mediaPreserved": false,
+      "mediaReplaced": true,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Resolve operator 2029 versus EIA Phase 3 July 2030, exact phase footprint and solar-only construction budget. Gallery aerial/map are broader program context, not separately phase-labelled."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "battery-mosey-nevada",
+      "id": 17014,
+      "action": "deleted",
+      "verifiedStatus": 404
+    },
+    {
+      "environment": "prod",
+      "key": "battery-power-pinecone-arizona",
+      "id": 17015,
+      "action": "deleted",
+      "verifiedStatus": 404
+    },
+    {
+      "environment": "prod",
+      "key": "battery-power-reed-meadow-nevada",
+      "id": 17016,
+      "action": "deleted",
+      "verifiedStatus": 404
+    },
+    {
+      "environment": "prod",
+      "key": "battery-silver-star-solar-nevada",
+      "id": 17017,
+      "action": "deleted",
+      "verifiedStatus": 404
+    },
+    {
+      "environment": "prod",
+      "key": "dc-crusoe-warrenton-building-1-missouri",
+      "id": 17018,
+      "action": "deleted",
+      "verifiedStatus": 404
+    },
+    {
+      "environment": "prod",
+      "key": "dc-databank-slc6-bluffdale-ut",
+      "id": 17019,
+      "action": "corrected",
+      "mediaPreserved": false,
+      "mediaReplaced": true,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Reconcile 2022 opening release/event versus 2023 datasheet wording, current full 22 MW energization date and exact building centroid. Published construction cost remains unverified. Official gallery includes renders and construction photos, labelled separately."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "dc-flexential-hillsboro-4-or",
+      "id": 17020,
+      "action": "corrected",
+      "mediaPreserved": false,
+      "mediaReplaced": true,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Reconcile 138,000/138,009 versus 158,000 sqft scope, actual original commissioning and published building-only construction/acquisition price. Operator pages/PDFs direct 403 but web research opened content; identified operator image downloads successfully."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "dc-switch-citadel-tahoe-reno-building-3-nv",
+      "id": 17021,
+      "action": "corrected",
+      "mediaPreserved": false,
+      "mediaReplaced": true,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Obtain latest building-specific permit, exact centroid, gross area/MW and actual commissioning. No RENO 3-only construction budget; older shared quarterly capex and company financing excluded. Gallery rendering is campus context only."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "solar-energy-coffey-solar-kansas",
+      "id": 17022,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Verify applicant and any explicit Otter Creek phase/queue mapping, local permits, solar-only budget and official project-specific gallery. Do not conflate county proposal with anonymous queue identity."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "solar-johnson-solar-kansas",
+      "id": 17024,
+      "action": "deleted",
+      "verifiedStatus": 404
+    },
+    {
+      "environment": "prod",
+      "key": "solar-west-memphis-keo-500-kv-arkansas",
+      "id": 17025,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Verify public applicant/brand, exact parcel, latest capacity/construction and realized COD. No name-matched construction cost or project-specific official photo established; interconnection status is not operation."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "dc-crusoe-warrenton-bldg1-warren-mo",
+      "id": 16557,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Phase 1 real-property estimate is distinct from initial equipment, replacements and campus bond authorization. Verify any later phase-specific construction estimate; other main/native fields remain unchanged."
+      ]
+    }
+  ],
+  "verification": {
+    "actionsVerified": 26,
+    "freshReadbacks": [
+      {
+        "environment": "local",
+        "id": 17012,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 17014,
+        "status": 404,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 17015,
+        "status": 404,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 17016,
+        "status": 404,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 17017,
+        "status": 404,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 17018,
+        "status": 404,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 17019,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 17020,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 17021,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 17022,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 17024,
+        "status": 404,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 17025,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 16557,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 17012,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 17014,
+        "status": 404,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 17015,
+        "status": 404,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 17016,
+        "status": 404,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 17017,
+        "status": 404,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 17018,
+        "status": 404,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 17019,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 17020,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 17021,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 17022,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 17024,
+        "status": 404,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 17025,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 16557,
+        "status": 200,
+        "verified": true
+      }
+    ],
+    "media": [
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-round29-2026-10-24/SLC6-Bottom.jpg",
+        "status": 200,
+        "bytes": 722541
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-round29-2026-10-24/SLC6-DC-Hero.2.jpg",
+        "status": 200,
+        "bytes": 982356
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-round29-2026-10-24/SLC6-Right-A.jpg",
+        "status": 200,
+        "bytes": 331313
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-round29-2026-10-24/SLC6-Right-B.jpg",
+        "status": 200,
+        "bytes": 247248
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-round29-2026-10-24/SLC6-September-2022.jpg",
+        "status": 200,
+        "bytes": 3054806
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-round29-2026-10-24/dc-databank-slc6-bluffdale-ut-aerial.jpg",
+        "status": 200,
+        "bytes": 607768
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-round29-2026-10-24/dc-databank-slc6-bluffdale-ut-relief.jpg",
+        "status": 200,
+        "bytes": 186064
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-round29-2026-10-24/dc-databank-slc6-bluffdale-ut-topo.jpg",
+        "status": 200,
+        "bytes": 479948
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-round29-2026-10-24/dc-flexential-hillsboro-4-or-aerial.jpg",
+        "status": 200,
+        "bytes": 462725
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-round29-2026-10-24/dc-flexential-hillsboro-4-or-relief.jpg",
+        "status": 200,
+        "bytes": 105568
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-round29-2026-10-24/dc-flexential-hillsboro-4-or-topo.jpg",
+        "status": 200,
+        "bytes": 378334
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-round29-2026-10-24/flexential-hil4.jpg",
+        "status": 200,
+        "bytes": 68773
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-round29-2026-10-24/solar-steel-river-solar-phase-3-arkansas-aerial.jpg",
+        "status": 200,
+        "bytes": 261291
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-round29-2026-10-24/solar-steel-river-solar-phase-3-arkansas-relief.jpg",
+        "status": 200,
+        "bytes": 72334
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-round29-2026-10-24/solar-steel-river-solar-phase-3-arkansas-topo.jpg",
+        "status": 200,
+        "bytes": 176246
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-round29-2026-10-24/steel-phase3-aerial.jpg",
+        "status": 200,
+        "bytes": 109866
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-round29-2026-10-24/steel-phase3-map.jpg",
+        "status": 200,
+        "bytes": 31998
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-round29-2026-10-24/switch-expansion.jpg",
+        "status": 200,
+        "bytes": 418363
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/lead-dc-switch-citadel-tahoe-reno-building-3-nv-aerial.jpg",
+        "status": 200,
+        "bytes": 346669
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/lead-dc-switch-citadel-tahoe-reno-building-3-nv-regional.jpg",
+        "status": 200,
+        "bytes": 229616
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/lead-dc-switch-citadel-tahoe-reno-building-3-nv-topo.jpg",
+        "status": 200,
+        "bytes": 312729
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/lead-solar-energy-coffey-solar-kansas-aerial.jpg",
+        "status": 200,
+        "bytes": 348264
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/lead-solar-energy-coffey-solar-kansas-regional.jpg",
+        "status": 200,
+        "bytes": 117129
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/lead-solar-energy-coffey-solar-kansas-topo.jpg",
+        "status": 200,
+        "bytes": 370361
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/lead-solar-west-memphis-keo-500-kv-arkansas-aerial.jpg",
+        "status": 200,
+        "bytes": 396426
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/lead-solar-west-memphis-keo-500-kv-arkansas-regional.jpg",
+        "status": 200,
+        "bytes": 93280
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/lead-solar-west-memphis-keo-500-kv-arkansas-topo.jpg",
+        "status": 200,
+        "bytes": 415488
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/r23_dc-crusoe-warrenton-bldg1-warren-mo_aerial.jpg",
+        "status": 200,
+        "bytes": 544062
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/r23_dc-crusoe-warrenton-bldg1-warren-mo_regional.jpg",
+        "status": 200,
+        "bytes": 243267
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/r23_dc-crusoe-warrenton-bldg1-warren-mo_topo.jpg",
+        "status": 200,
+        "bytes": 508227
+      }
+    ],
+    "pages": [
+      {
+        "environment": "local",
+        "id": 17012,
+        "status": 200,
+        "bytes": 329420
+      },
+      {
+        "environment": "local",
+        "id": 17019,
+        "status": 200,
+        "bytes": 354463
+      },
+      {
+        "environment": "local",
+        "id": 17020,
+        "status": 200,
+        "bytes": 340244
+      },
+      {
+        "environment": "local",
+        "id": 17021,
+        "status": 200,
+        "bytes": 333623
+      },
+      {
+        "environment": "local",
+        "id": 17022,
+        "status": 200,
+        "bytes": 312653
+      },
+      {
+        "environment": "local",
+        "id": 17025,
+        "status": 200,
+        "bytes": 311992
+      },
+      {
+        "environment": "local",
+        "id": 16557,
+        "status": 200,
+        "bytes": 325161
+      },
+      {
+        "environment": "prod",
+        "id": 17012,
+        "status": 200,
+        "bytes": 287143
+      },
+      {
+        "environment": "prod",
+        "id": 17019,
+        "status": 200,
+        "bytes": 310704
+      },
+      {
+        "environment": "prod",
+        "id": 17020,
+        "status": 200,
+        "bytes": 296509
+      },
+      {
+        "environment": "prod",
+        "id": 17021,
+        "status": 200,
+        "bytes": 289706
+      },
+      {
+        "environment": "prod",
+        "id": 17022,
+        "status": 200,
+        "bytes": 270150
+      },
+      {
+        "environment": "prod",
+        "id": 17025,
+        "status": 200,
+        "bytes": 269510
+      },
+      {
+        "environment": "prod",
+        "id": 16557,
+        "status": 200,
+        "bytes": 282854
+      }
+    ],
+    "postedMapCounts": {
+      "local": 1388,
+      "prod": 1388
+    },
+    "telemetry": [
+      {},
+      {},
+      {
+        "energyCleared": true,
+        "datacenterAfter": {
+          "waterGallonsPerDay": null,
+          "waterBasis": null,
+          "chips": null,
+          "chipModel": null,
+          "h100Equivalents": null,
+          "acres": null,
+          "sqft": 88250,
+          "buildings": 1,
+          "generators": null,
+          "cooling": "Operator Q425V1 datasheet: N+1 cooling design; no measured daily water consumption published",
+          "powerSource": null,
+          "sourceUrl": "https://www.databank.com/wp-content/uploads/2025/11/SLC6-datasheet.pdf",
+          "note": "88,250 sqft is raised floor, not gross building size.22 MW is current critical IT;2022 release 11 MW initial/11 MW future is separate chronology. Shared 66 MW substation excluded.",
+          "checkedAt": "2026-10-24T14:53:52.172Z"
+        }
+      },
+      {
+        "energyCleared": true,
+        "datacenterAfter": {
+          "waterGallonsPerDay": null,
+          "waterBasis": null,
+          "chips": null,
+          "chipModel": null,
+          "h100Equivalents": null,
+          "acres": null,
+          "sqft": 138000,
+          "buildings": 1,
+          "generators": null,
+          "cooling": "Operator: N+2 cooling and hot-aisle containment; design PUE 1.4/WUE 0 are claims, not measured daily water",
+          "powerSource": null,
+          "sourceUrl": "https://www.flexential.com/data-centers/or/portland/hillsboro4-data-center",
+          "note": "138,000 sqft follows May 2026 release; old datasheet 158,000 sqft conflicts.18 MW critical UPS is building-specific. Shared 20-acre two-property acquisition excluded.",
+          "checkedAt": "2026-10-24T14:53:53.400Z"
+        }
+      },
+      {
+        "energyCleared": true,
+        "datacenterAfter": {
+          "waterGallonsPerDay": null,
+          "waterBasis": null,
+          "chips": null,
+          "chipModel": null,
+          "h100Equivalents": null,
+          "acres": null,
+          "sqft": null,
+          "buildings": 1,
+          "generators": null,
+          "cooling": null,
+          "powerSource": null,
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1710583/000171058322000045/exhibit991pressreleasedate.htm",
+          "note": "One independently named TAHOE RENO 3 project. Historical area/MVA scopes conflict; no verified current MW, gross area, measured water or installed generator count.",
+          "checkedAt": "2026-10-24T14:56:03.136Z"
+        }
+      },
+      {},
+      {},
+      {},
+      {},
+      {
+        "energyCleared": true,
+        "datacenterAfter": {
+          "waterGallonsPerDay": null,
+          "waterBasis": null,
+          "chips": null,
+          "chipModel": null,
+          "h100Equivalents": null,
+          "acres": null,
+          "sqft": 88250,
+          "buildings": 1,
+          "generators": null,
+          "cooling": "Operator Q425V1 datasheet: N+1 cooling design; no measured daily water consumption published",
+          "powerSource": null,
+          "sourceUrl": "https://www.databank.com/wp-content/uploads/2025/11/SLC6-datasheet.pdf",
+          "note": "88,250 sqft is raised floor, not gross building size.22 MW is current critical IT;2022 release 11 MW initial/11 MW future is separate chronology. Shared 66 MW substation excluded.",
+          "checkedAt": "2026-10-24T14:58:03.270Z"
+        }
+      },
+      {
+        "energyCleared": true,
+        "datacenterAfter": {
+          "waterGallonsPerDay": null,
+          "waterBasis": null,
+          "chips": null,
+          "chipModel": null,
+          "h100Equivalents": null,
+          "acres": null,
+          "sqft": 138000,
+          "buildings": 1,
+          "generators": null,
+          "cooling": "Operator: N+2 cooling and hot-aisle containment; design PUE 1.4/WUE 0 are claims, not measured daily water",
+          "powerSource": null,
+          "sourceUrl": "https://www.flexential.com/data-centers/or/portland/hillsboro4-data-center",
+          "note": "138,000 sqft follows May 2026 release; old datasheet 158,000 sqft conflicts.18 MW critical UPS is building-specific. Shared 20-acre two-property acquisition excluded.",
+          "checkedAt": "2026-10-24T14:59:15.601Z"
+        }
+      },
+      {
+        "energyCleared": true,
+        "datacenterAfter": {
+          "waterGallonsPerDay": null,
+          "waterBasis": null,
+          "chips": null,
+          "chipModel": null,
+          "h100Equivalents": null,
+          "acres": null,
+          "sqft": null,
+          "buildings": 1,
+          "generators": null,
+          "cooling": null,
+          "powerSource": null,
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1710583/000171058322000045/exhibit991pressreleasedate.htm",
+          "note": "One independently named TAHOE RENO 3 project. Historical area/MVA scopes conflict; no verified current MW, gross area, measured water or installed generator count.",
+          "checkedAt": "2026-10-24T15:00:05.961Z"
+        }
+      },
+      {},
+      {}
+    ]
+  },
+  "retainedCounterpartVerification": [
+    {
+      "environment": "local",
+      "id": 15896,
+      "verified": true,
+      "unchangedFields": [
+        "title",
+        "description",
+        "longFormSummary",
+        "userId",
+        "sourceUrl",
+        "references",
+        "media",
+        "latitude",
+        "longitude",
+        "dateConfidence",
+        "utcStartDateTime",
+        "price",
+        "company"
+      ]
+    },
+    {
+      "environment": "local",
+      "id": 15940,
+      "verified": true,
+      "unchangedFields": [
+        "title",
+        "description",
+        "longFormSummary",
+        "userId",
+        "sourceUrl",
+        "references",
+        "media",
+        "latitude",
+        "longitude",
+        "dateConfidence",
+        "utcStartDateTime",
+        "price",
+        "company"
+      ]
+    },
+    {
+      "environment": "local",
+      "id": 16334,
+      "verified": true,
+      "unchangedFields": [
+        "title",
+        "description",
+        "longFormSummary",
+        "userId",
+        "sourceUrl",
+        "references",
+        "media",
+        "latitude",
+        "longitude",
+        "dateConfidence",
+        "utcStartDateTime",
+        "price",
+        "company"
+      ]
+    },
+    {
+      "environment": "local",
+      "id": 15989,
+      "verified": true,
+      "unchangedFields": [
+        "title",
+        "description",
+        "longFormSummary",
+        "userId",
+        "sourceUrl",
+        "references",
+        "media",
+        "latitude",
+        "longitude",
+        "dateConfidence",
+        "utcStartDateTime",
+        "price",
+        "company"
+      ]
+    },
+    {
+      "environment": "local",
+      "id": 16486,
+      "verified": true,
+      "unchangedFields": [
+        "title",
+        "description",
+        "longFormSummary",
+        "userId",
+        "sourceUrl",
+        "references",
+        "media",
+        "latitude",
+        "longitude",
+        "dateConfidence",
+        "utcStartDateTime",
+        "price",
+        "company"
+      ]
+    },
+    {
+      "environment": "local",
+      "id": 16495,
+      "verified": true,
+      "unchangedFields": [
+        "title",
+        "description",
+        "longFormSummary",
+        "userId",
+        "sourceUrl",
+        "references",
+        "media",
+        "latitude",
+        "longitude",
+        "dateConfidence",
+        "utcStartDateTime",
+        "price",
+        "company"
+      ]
+    },
+    {
+      "environment": "local",
+      "id": 16346,
+      "verified": true,
+      "unchangedFields": [
+        "title",
+        "description",
+        "longFormSummary",
+        "userId",
+        "sourceUrl",
+        "references",
+        "media",
+        "latitude",
+        "longitude",
+        "dateConfidence",
+        "utcStartDateTime",
+        "price",
+        "company"
+      ]
+    },
+    {
+      "environment": "local",
+      "id": 16431,
+      "verified": true,
+      "unchangedFields": [
+        "title",
+        "description",
+        "longFormSummary",
+        "userId",
+        "sourceUrl",
+        "references",
+        "media",
+        "latitude",
+        "longitude",
+        "dateConfidence",
+        "utcStartDateTime",
+        "price",
+        "company"
+      ]
+    },
+    {
+      "environment": "local",
+      "id": 17008,
+      "verified": true,
+      "unchangedFields": [
+        "title",
+        "description",
+        "longFormSummary",
+        "userId",
+        "sourceUrl",
+        "references",
+        "media",
+        "latitude",
+        "longitude",
+        "dateConfidence",
+        "utcStartDateTime",
+        "price",
+        "company"
+      ]
+    },
+    {
+      "environment": "local",
+      "id": 17010,
+      "verified": true,
+      "unchangedFields": [
+        "title",
+        "description",
+        "longFormSummary",
+        "userId",
+        "sourceUrl",
+        "references",
+        "media",
+        "latitude",
+        "longitude",
+        "dateConfidence",
+        "utcStartDateTime",
+        "price",
+        "company"
+      ]
+    },
+    {
+      "environment": "prod",
+      "id": 15896,
+      "verified": true,
+      "unchangedFields": [
+        "title",
+        "description",
+        "longFormSummary",
+        "userId",
+        "sourceUrl",
+        "references",
+        "media",
+        "latitude",
+        "longitude",
+        "dateConfidence",
+        "utcStartDateTime",
+        "price",
+        "company"
+      ]
+    },
+    {
+      "environment": "prod",
+      "id": 15940,
+      "verified": true,
+      "unchangedFields": [
+        "title",
+        "description",
+        "longFormSummary",
+        "userId",
+        "sourceUrl",
+        "references",
+        "media",
+        "latitude",
+        "longitude",
+        "dateConfidence",
+        "utcStartDateTime",
+        "price",
+        "company"
+      ]
+    },
+    {
+      "environment": "prod",
+      "id": 16334,
+      "verified": true,
+      "unchangedFields": [
+        "title",
+        "description",
+        "longFormSummary",
+        "userId",
+        "sourceUrl",
+        "references",
+        "media",
+        "latitude",
+        "longitude",
+        "dateConfidence",
+        "utcStartDateTime",
+        "price",
+        "company"
+      ]
+    },
+    {
+      "environment": "prod",
+      "id": 15989,
+      "verified": true,
+      "unchangedFields": [
+        "title",
+        "description",
+        "longFormSummary",
+        "userId",
+        "sourceUrl",
+        "references",
+        "media",
+        "latitude",
+        "longitude",
+        "dateConfidence",
+        "utcStartDateTime",
+        "price",
+        "company"
+      ]
+    },
+    {
+      "environment": "prod",
+      "id": 16486,
+      "verified": true,
+      "unchangedFields": [
+        "title",
+        "description",
+        "longFormSummary",
+        "userId",
+        "sourceUrl",
+        "references",
+        "media",
+        "latitude",
+        "longitude",
+        "dateConfidence",
+        "utcStartDateTime",
+        "price",
+        "company"
+      ]
+    },
+    {
+      "environment": "prod",
+      "id": 16495,
+      "verified": true,
+      "unchangedFields": [
+        "title",
+        "description",
+        "longFormSummary",
+        "userId",
+        "sourceUrl",
+        "references",
+        "media",
+        "latitude",
+        "longitude",
+        "dateConfidence",
+        "utcStartDateTime",
+        "price",
+        "company"
+      ]
+    },
+    {
+      "environment": "prod",
+      "id": 16346,
+      "verified": true,
+      "unchangedFields": [
+        "title",
+        "description",
+        "longFormSummary",
+        "userId",
+        "sourceUrl",
+        "references",
+        "media",
+        "latitude",
+        "longitude",
+        "dateConfidence",
+        "utcStartDateTime",
+        "price",
+        "company"
+      ]
+    },
+    {
+      "environment": "prod",
+      "id": 16431,
+      "verified": true,
+      "unchangedFields": [
+        "title",
+        "description",
+        "longFormSummary",
+        "userId",
+        "sourceUrl",
+        "references",
+        "media",
+        "latitude",
+        "longitude",
+        "dateConfidence",
+        "utcStartDateTime",
+        "price",
+        "company"
+      ]
+    },
+    {
+      "environment": "prod",
+      "id": 17008,
+      "verified": true,
+      "unchangedFields": [
+        "title",
+        "description",
+        "longFormSummary",
+        "userId",
+        "sourceUrl",
+        "references",
+        "media",
+        "latitude",
+        "longitude",
+        "dateConfidence",
+        "utcStartDateTime",
+        "price",
+        "company"
+      ]
+    },
+    {
+      "environment": "prod",
+      "id": 17010,
+      "verified": true,
+      "unchangedFields": [
+        "title",
+        "description",
+        "longFormSummary",
+        "userId",
+        "sourceUrl",
+        "references",
+        "media",
+        "latitude",
+        "longitude",
+        "dateConfidence",
+        "utcStartDateTime",
+        "price",
+        "company"
+      ]
+    }
+  ],
+  "canonicalCostVerification": [
+    {
+      "environment": "local",
+      "id": 16557,
+      "priceVerified": true,
+      "unchangedMainFields": [
+        "title",
+        "description",
+        "userId",
+        "sourceUrl",
+        "media",
+        "latitude",
+        "longitude",
+        "address",
+        "utcStartDateTime",
+        "dateConfidence",
+        "company"
+      ],
+      "unchangedNativeEndpoints": [
+        "/power",
+        "/datacenter",
+        "/energy"
+      ]
+    },
+    {
+      "environment": "prod",
+      "id": 16557,
+      "priceVerified": true,
+      "unchangedMainFields": [
+        "title",
+        "description",
+        "userId",
+        "sourceUrl",
+        "media",
+        "latitude",
+        "longitude",
+        "address",
+        "utcStartDateTime",
+        "dateConfidence",
+        "company"
+      ],
+      "unchangedNativeEndpoints": [
+        "/power",
+        "/datacenter",
+        "/energy"
+      ]
+    }
+  ],
+  "mediaEvidence": [
+    {
+      "key": "solar-steel-river-solar-phase-3-arkansas",
+      "layer": "aerial",
+      "sourceUrl": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSImageryOnly/MapServer/export?bbox=-90.112630,35.568637,-90.082630,35.588637&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "sourcePage": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSImageryOnly/MapServer/export?bbox=-90.112630,35.568637,-90.082630,35.588637&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "credit": "USGS / The National Map",
+      "caption": "USGS aerial basemap centered on the sourced approximate address/reporting point; imagery may predate construction.",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round29-2026-10-24/solar-steel-river-solar-phase-3-arkansas-aerial.jpg",
+      "bytes": 261291,
+      "width": 1600,
+      "height": 1000,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round29-2026-10-24/solar-steel-river-solar-phase-3-arkansas-aerial.jpg"
+    },
+    {
+      "key": "solar-steel-river-solar-phase-3-arkansas",
+      "layer": "topo",
+      "sourceUrl": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSTopo/MapServer/export?bbox=-90.129630,35.556637,-90.065630,35.600637&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "sourcePage": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSTopo/MapServer/export?bbox=-90.129630,35.556637,-90.065630,35.600637&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "credit": "USGS / The National Map",
+      "caption": "USGS topo basemap centered on the sourced approximate address/reporting point; imagery may predate construction.",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round29-2026-10-24/solar-steel-river-solar-phase-3-arkansas-topo.jpg",
+      "bytes": 176246,
+      "width": 1600,
+      "height": 1000,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round29-2026-10-24/solar-steel-river-solar-phase-3-arkansas-topo.jpg"
+    },
+    {
+      "key": "solar-steel-river-solar-phase-3-arkansas",
+      "layer": "relief",
+      "sourceUrl": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSShadedReliefOnly/MapServer/export?bbox=-90.177630,35.528637,-90.017630,35.628637&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "sourcePage": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSShadedReliefOnly/MapServer/export?bbox=-90.177630,35.528637,-90.017630,35.628637&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "credit": "USGS / The National Map",
+      "caption": "USGS relief basemap centered on the sourced approximate address/reporting point; imagery may predate construction.",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round29-2026-10-24/solar-steel-river-solar-phase-3-arkansas-relief.jpg",
+      "bytes": 72334,
+      "width": 1600,
+      "height": 1000,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round29-2026-10-24/solar-steel-river-solar-phase-3-arkansas-relief.jpg"
+    },
+    {
+      "key": "dc-databank-slc6-bluffdale-ut",
+      "layer": "aerial",
+      "sourceUrl": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSImageryOnly/MapServer/export?bbox=-111.918580,40.470080,-111.888580,40.490080&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "sourcePage": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSImageryOnly/MapServer/export?bbox=-111.918580,40.470080,-111.888580,40.490080&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "credit": "USGS / The National Map",
+      "caption": "USGS aerial basemap centered on the sourced approximate address/reporting point; imagery may predate construction.",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round29-2026-10-24/dc-databank-slc6-bluffdale-ut-aerial.jpg",
+      "bytes": 607768,
+      "width": 1600,
+      "height": 1000,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round29-2026-10-24/dc-databank-slc6-bluffdale-ut-aerial.jpg"
+    },
+    {
+      "key": "dc-databank-slc6-bluffdale-ut",
+      "layer": "topo",
+      "sourceUrl": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSTopo/MapServer/export?bbox=-111.935580,40.458080,-111.871580,40.502080&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "sourcePage": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSTopo/MapServer/export?bbox=-111.935580,40.458080,-111.871580,40.502080&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "credit": "USGS / The National Map",
+      "caption": "USGS topo basemap centered on the sourced approximate address/reporting point; imagery may predate construction.",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round29-2026-10-24/dc-databank-slc6-bluffdale-ut-topo.jpg",
+      "bytes": 479948,
+      "width": 1600,
+      "height": 1000,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round29-2026-10-24/dc-databank-slc6-bluffdale-ut-topo.jpg"
+    },
+    {
+      "key": "dc-databank-slc6-bluffdale-ut",
+      "layer": "relief",
+      "sourceUrl": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSShadedReliefOnly/MapServer/export?bbox=-111.983580,40.430080,-111.823580,40.530080&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "sourcePage": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSShadedReliefOnly/MapServer/export?bbox=-111.983580,40.430080,-111.823580,40.530080&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "credit": "USGS / The National Map",
+      "caption": "USGS relief basemap centered on the sourced approximate address/reporting point; imagery may predate construction.",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round29-2026-10-24/dc-databank-slc6-bluffdale-ut-relief.jpg",
+      "bytes": 186064,
+      "width": 1600,
+      "height": 1000,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round29-2026-10-24/dc-databank-slc6-bluffdale-ut-relief.jpg"
+    },
+    {
+      "key": "dc-flexential-hillsboro-4-or",
+      "layer": "aerial",
+      "sourceUrl": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSImageryOnly/MapServer/export?bbox=-122.954056,45.545177,-122.924056,45.565177&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "sourcePage": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSImageryOnly/MapServer/export?bbox=-122.954056,45.545177,-122.924056,45.565177&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "credit": "USGS / The National Map",
+      "caption": "USGS aerial basemap centered on the sourced approximate address/reporting point; imagery may predate construction.",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round29-2026-10-24/dc-flexential-hillsboro-4-or-aerial.jpg",
+      "bytes": 462725,
+      "width": 1600,
+      "height": 1000,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round29-2026-10-24/dc-flexential-hillsboro-4-or-aerial.jpg"
+    },
+    {
+      "key": "dc-flexential-hillsboro-4-or",
+      "layer": "topo",
+      "sourceUrl": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSTopo/MapServer/export?bbox=-122.971056,45.533177,-122.907056,45.577177&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "sourcePage": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSTopo/MapServer/export?bbox=-122.971056,45.533177,-122.907056,45.577177&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "credit": "USGS / The National Map",
+      "caption": "USGS topo basemap centered on the sourced approximate address/reporting point; imagery may predate construction.",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round29-2026-10-24/dc-flexential-hillsboro-4-or-topo.jpg",
+      "bytes": 378334,
+      "width": 1600,
+      "height": 1000,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round29-2026-10-24/dc-flexential-hillsboro-4-or-topo.jpg"
+    },
+    {
+      "key": "dc-flexential-hillsboro-4-or",
+      "layer": "relief",
+      "sourceUrl": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSShadedReliefOnly/MapServer/export?bbox=-123.019056,45.505177,-122.859056,45.605177&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "sourcePage": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSShadedReliefOnly/MapServer/export?bbox=-123.019056,45.505177,-122.859056,45.605177&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "credit": "USGS / The National Map",
+      "caption": "USGS relief basemap centered on the sourced approximate address/reporting point; imagery may predate construction.",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round29-2026-10-24/dc-flexential-hillsboro-4-or-relief.jpg",
+      "bytes": 105568,
+      "width": 1600,
+      "height": 1000,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round29-2026-10-24/dc-flexential-hillsboro-4-or-relief.jpg"
+    },
+    {
+      "key": "solar-steel-river-solar-phase-3-arkansas",
+      "layer": "operator-aerial",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round29-2026-10-24/steel-phase3-aerial.jpg",
+      "sourceUrl": "https://cypresscreekenergy.com/wp-content/uploads/2026/07/Responsible-Development-SRA-1024x457.jpg",
+      "sourcePage": "https://cypresscreekenergy.com/steel-river-energy-center/",
+      "credit": "Cypress Creek Energy",
+      "caption": "Cypress Creek’s identified Steel River construction-stage aerial showing vegetation and support posts. Broader program context; not independently labelled Phase 3 or an operating array.",
+      "bytes": 109866,
+      "width": 1024,
+      "height": 457,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round29-2026-10-24/steel-phase3-aerial.jpg"
+    },
+    {
+      "key": "solar-steel-river-solar-phase-3-arkansas",
+      "layer": "operator-map",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round29-2026-10-24/steel-phase3-map.jpg",
+      "sourceUrl": "https://cypresscreekenergy.com/wp-content/uploads/2026/06/Steel-River-Simple-Map.jpg",
+      "sourcePage": "https://cypresscreekenergy.com/steel-river-energy-center/",
+      "credit": "Cypress Creek Energy",
+      "caption": "Cypress Creek schematic showing distinct Steel River phase areas near Wilson and Marie. General program geography, not surveyed Phase 3 parcel boundaries.",
+      "bytes": 31998,
+      "width": 864,
+      "height": 576,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round29-2026-10-24/steel-phase3-map.jpg"
+    },
+    {
+      "key": "dc-databank-slc6-bluffdale-ut",
+      "layer": "operator-SLC6-DC-Hero",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round29-2026-10-24/SLC6-DC-Hero.2.jpg",
+      "sourceUrl": "https://www.databank.com/wp-content/uploads/2022/05/SLC6-DC-Hero.2.jpg",
+      "sourcePage": "https://www.databank.com/data-centers/salt-lake-city/granite-point-campus/slc6/",
+      "credit": "DataBank",
+      "caption": "Architectural exterior rendering in DataBank’s SLC6 gallery; conceptual appearance, not proof of completed construction.",
+      "bytes": 982356,
+      "width": 3000,
+      "height": 1200,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round29-2026-10-24/SLC6-DC-Hero.2.jpg"
+    },
+    {
+      "key": "dc-databank-slc6-bluffdale-ut",
+      "layer": "operator-SLC6-Right-A",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round29-2026-10-24/SLC6-Right-A.jpg",
+      "sourceUrl": "https://www.databank.com/wp-content/uploads/2022/05/SLC6-Right-A.jpg",
+      "sourcePage": "https://www.databank.com/data-centers/salt-lake-city/granite-point-campus/slc6/",
+      "credit": "DataBank",
+      "caption": "SLC6 rooftop construction photo from DataBank’s facility gallery; photo date not specified and no completed capacity inferred.",
+      "bytes": 331313,
+      "width": 732,
+      "height": 414,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round29-2026-10-24/SLC6-Right-A.jpg"
+    },
+    {
+      "key": "dc-databank-slc6-bluffdale-ut",
+      "layer": "operator-SLC6-Right-B",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round29-2026-10-24/SLC6-Right-B.jpg",
+      "sourceUrl": "https://www.databank.com/wp-content/uploads/2022/05/SLC6-Right-B.jpg",
+      "sourcePage": "https://www.databank.com/data-centers/salt-lake-city/granite-point-campus/slc6/",
+      "credit": "DataBank",
+      "caption": "SLC6 roof equipment photo from DataBank’s gallery; no equipment count or output inferred.",
+      "bytes": 247248,
+      "width": 732,
+      "height": 414,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round29-2026-10-24/SLC6-Right-B.jpg"
+    },
+    {
+      "key": "dc-databank-slc6-bluffdale-ut",
+      "layer": "operator-SLC6-Bottom",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round29-2026-10-24/SLC6-Bottom.jpg",
+      "sourceUrl": "https://www.databank.com/wp-content/uploads/2022/05/SLC6-Bottom.jpg",
+      "sourcePage": "https://www.databank.com/data-centers/salt-lake-city/granite-point-campus/slc6/",
+      "credit": "DataBank",
+      "caption": "Architectural SLC6 exterior rendering from DataBank’s facility gallery; not an as-built photograph.",
+      "bytes": 722541,
+      "width": 2100,
+      "height": 732,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round29-2026-10-24/SLC6-Bottom.jpg"
+    },
+    {
+      "key": "dc-databank-slc6-bluffdale-ut",
+      "layer": "operator-opening-photo",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round29-2026-10-24/SLC6-September-2022.jpg",
+      "sourceUrl": "https://www.databank.com/wp-content/uploads/2022/09/SLC6-September-2022.jpg",
+      "sourcePage": "https://www.databank.com/resources/press-releases/databank-announces-opening-of-sixth-salt-lake-city-area-data-center/",
+      "credit": "DataBank",
+      "caption": "SLC6 exterior with unfinished surrounding ground, published with the September 2022 opening announcement. The image does not independently establish full 22 MW energization.",
+      "bytes": 3054806,
+      "width": 4032,
+      "height": 3024,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round29-2026-10-24/SLC6-September-2022.jpg"
+    },
+    {
+      "key": "dc-flexential-hillsboro-4-or",
+      "layer": "operator-exterior",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round29-2026-10-24/flexential-hil4.jpg",
+      "sourceUrl": "https://www.flexential.com/sites/default/files/image/2024-06/Hillsboro%204.jpg",
+      "sourcePage": "https://www.flexential.com/data-centers/design",
+      "credit": "Flexential",
+      "caption": "Operator-identified Hillsboro 4 exterior at 4915 NE Starr Boulevard; photographed commissioning date and current measured load are not specified.",
+      "bytes": 68773,
+      "width": 800,
+      "height": 419,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round29-2026-10-24/flexential-hil4.jpg"
+    },
+    {
+      "key": "dc-switch-citadel-tahoe-reno-building-3-nv",
+      "layer": "operator-campus-rendering",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round29-2026-10-24/switch-expansion.jpg",
+      "sourceUrl": "https://www.switch.com/wp-content/uploads/2020/11/Citadel_Expansion_PR_Large-v2.jpeg",
+      "sourcePage": "https://www.switch.com/switch-breaks-ground-on-second-and-third-tahoe-reno-data-centers-following-multi-megawatt-expansions-with-global-e-commerce-and-semiconductor-clients/",
+      "credit": "Switch",
+      "caption": "Citadel expansion rendering accompanying the operator announcement naming RENO2 construction and RENO3 site preparation. Shared campus concept, not an as-built RENO3 photograph or parcel plan.",
+      "bytes": 418363,
+      "width": 3840,
+      "height": 2160,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round29-2026-10-24/switch-expansion.jpg"
+    }
+  ],
+  "gallerySourceChecks": [
+    {
+      "url": "https://cypresscreekenergy.com/wp-content/uploads/2026/07/Responsible-Development-SRA-1024x457.jpg",
+      "bytes": 109866,
+      "sha256": "bbe6caaf42b3828da4da04978942c4350f69e4c42fe4991869a3315b4b64d71e",
+      "plainCurl": true
+    },
+    {
+      "url": "https://cypresscreekenergy.com/wp-content/uploads/2026/06/Steel-River-Simple-Map.jpg",
+      "bytes": 31998,
+      "sha256": "00c26922e7752153a3f9c494228453309cf41eaa4e8bfb8e0ef887f13e656044",
+      "plainCurl": true
+    },
+    {
+      "url": "https://www.databank.com/wp-content/uploads/2022/05/SLC6-DC-Hero.2.jpg",
+      "bytes": 982356,
+      "sha256": "5a2b3e2ec04e82eceac5a039acf6bd685d9b37aea3ab5e2d42c3385d36a6bdc0",
+      "plainCurl": true
+    },
+    {
+      "url": "https://www.databank.com/wp-content/uploads/2022/05/SLC6-Right-A.jpg",
+      "bytes": 331313,
+      "sha256": "a41167e54ad410724dd067eb723f61f39aa5c9f07e21e5fa353975e8042019e3",
+      "plainCurl": true
+    },
+    {
+      "url": "https://www.databank.com/wp-content/uploads/2022/05/SLC6-Right-B.jpg",
+      "bytes": 247248,
+      "sha256": "10a674b69f4ff8fa41a64f025c96779e11385edb68bd59c9036a8a9d5b7b9ba3",
+      "plainCurl": true
+    },
+    {
+      "url": "https://www.databank.com/wp-content/uploads/2022/05/SLC6-Bottom.jpg",
+      "bytes": 722541,
+      "sha256": "788faa9e3cad2832a3a3effd4b7640510b22e4b425a95811a519dcf253118005",
+      "plainCurl": true
+    },
+    {
+      "url": "https://www.databank.com/wp-content/uploads/2022/09/SLC6-September-2022.jpg",
+      "bytes": 3054806,
+      "sha256": "8a57d3ed6c2cac01fca8a894dc18b6f3e75fbfa9f363f3e20f26f1fe57ba2d46",
+      "plainCurl": true
+    },
+    {
+      "url": "https://www.flexential.com/sites/default/files/image/2024-06/Hillsboro%204.jpg",
+      "bytes": 68773,
+      "sha256": "deab2b9c68d7ff99326b2fb75262acf96b07098f83401b1fd102753aa95ad9ab",
+      "plainCurl": true
+    },
+    {
+      "url": "https://www.switch.com/wp-content/uploads/2020/11/Citadel_Expansion_PR_Large-v2.jpeg",
+      "bytes": 418363,
+      "sha256": "75d533e6ae269dcadcc44242417e8d3356cbcf1490a2c1a494f97d7009d9bc30",
+      "plainCurl": true
+    }
+  ],
+  "costEvidence": {
+    "checkedAt": "2026-10-24",
+    "pinId": 16557,
+    "price": 4398033569,
+    "priceCurrency": "USD",
+    "scope": "Phase1 real-property improvements: first data center building, administrative building and surrounding infrastructure; excludes equipment, replacements and Phase2",
+    "url": "https://www.warrenton-mo.org/wp-content/uploads/2026/03/Plan-Cost-Benefit-Analysis-Crusoe-Data-Center.pdf",
+    "section": "AttachmentB assumption4, PDFpage11",
+    "quote": "approximately $4,398,033,569 in real property improvements",
+    "access": "Official HTTPS PDF web text extraction, checked in preceding round; same-day evidence carried forward. Direct download challenge persists; no later phase-specific construction estimate located."
+  },
+  "sourceChecks": [
+    {
+      "key": "miso",
+      "url": "https://www.misoenergy.org/api/giqueue/getprojects",
+      "status": 200,
+      "bytes": 2328349,
+      "pdf": false,
+      "finalUrl": "https://www.misoenergy.org/api/giqueue/getprojects"
+    },
+    {
+      "key": "spp",
+      "url": "https://opsportal.spp.org/Studies/GIActive",
+      "status": 200,
+      "bytes": 772782,
+      "pdf": false,
+      "finalUrl": "https://opsportal.spp.org/Studies/GIActive"
+    },
+    {
+      "key": "slc6",
+      "url": "https://www.databank.com/data-centers/salt-lake-city/slc6/",
+      "status": 200,
+      "bytes": 133683,
+      "pdf": false,
+      "finalUrl": "https://www.databank.com/data-centers/salt-lake-city/granite-point-campus/slc6/"
+    },
+    {
+      "key": "slc6-opening",
+      "url": "https://www.databank.com/resources/press-releases/databank-announces-opening-of-sixth-salt-lake-city-area-data-center/",
+      "status": 200,
+      "bytes": 126558,
+      "pdf": false,
+      "finalUrl": "https://www.databank.com/resources/press-releases/databank-announces-opening-of-sixth-salt-lake-city-area-data-center/"
+    },
+    {
+      "key": "flexential-release",
+      "url": "https://www.flexential.com/resources/press-release/flexential-secures-strategic-real-estate-ownership-hillsboro-oregon",
+      "status": 403,
+      "bytes": 5842,
+      "pdf": false,
+      "finalUrl": "https://www.flexential.com/resources/press-release/flexential-secures-strategic-real-estate-ownership-hillsboro-oregon"
+    },
+    {
+      "key": "flexential-hil4",
+      "url": "https://www.flexential.com/data-centers/portland-hillsboro-4",
+      "status": 403,
+      "bytes": 5604,
+      "pdf": false,
+      "finalUrl": "https://www.flexential.com/data-centers/portland-hillsboro-4"
+    },
+    {
+      "key": "silver",
+      "url": "https://www.lreus.com/projects/silver-star-solar/",
+      "status": 403,
+      "bytes": 1084,
+      "pdf": false,
+      "finalUrl": "https://www.lreus.com/projects/silver-star-solar/"
+    },
+    {
+      "key": "mosey-register",
+      "url": "https://public-inspection.federalregister.gov/2026-15270.pdf",
+      "status": 200,
+      "bytes": 283091,
+      "pdf": true,
+      "finalUrl": "https://public-inspection.federalregister.gov/2026-15270.pdf"
+    },
+    {
+      "key": "steel",
+      "url": "https://cypresscreekenergy.com/steel-river-energy-center/",
+      "status": 403,
+      "bytes": 146,
+      "pdf": false,
+      "finalUrl": "https://cypresscreekenergy.com/steel-river-energy-center/"
+    },
+    {
+      "key": "switch-county",
+      "url": "https://cms5.revize.com/revize/storeycounty/2023%20Storey%20BoE%20Packet.pdf",
+      "status": 404,
+      "bytes": 0,
+      "pdf": false,
+      "finalUrl": "https://cms5.revize.com/revize/storeycounty/2023%20Storey%20BoE%20Packet.pdf"
+    },
+    {
+      "key": "switch",
+      "url": "https://www.switch.com/tahoe-reno/",
+      "status": 403,
+      "bytes": 146,
+      "pdf": false,
+      "finalUrl": "https://www.switch.com/tahoe-reno/"
+    },
+    {
+      "key": "coffey",
+      "url": "https://ottercreeksolarfarm.com/",
+      "status": 200,
+      "bytes": 13638,
+      "pdf": false,
+      "finalUrl": "https://ottercreeksolarfarm.com/"
+    },
+    {
+      "key": "original-17012",
+      "url": "https://www.misoenergy.org/planning/generator-interconnection/GI_Queue/J1693",
+      "status": 200,
+      "bytes": 152032,
+      "pdf": false,
+      "finalUrl": "https://www.misoenergy.org/planning/transmission-planning/mtep"
+    },
+    {
+      "key": "original-17014",
+      "url": "https://puc.nv.gov/Dockets/Detail_24-mosey-storage",
+      "status": 404,
+      "bytes": 31178,
+      "pdf": false,
+      "finalUrl": "https://www.puc.nv.gov/Dockets/Detail_24-mosey-storage"
+    },
+    {
+      "key": "original-17015",
+      "url": "https://www.yumacountyaz.gov/government/development-services/planning-zoning/pinecone-bess",
+      "status": 403,
+      "bytes": 497,
+      "pdf": false,
+      "finalUrl": "https://www.yumacountyaz.gov/government/development-services/planning-zoning/pinecone-bess"
+    },
+    {
+      "key": "original-17016",
+      "url": "https://puc.nv.gov/Dockets/Detail_24-reed-meadow",
+      "status": 404,
+      "bytes": 31205,
+      "pdf": false,
+      "finalUrl": "https://www.puc.nv.gov/Dockets/Detail_24-reed-meadow"
+    },
+    {
+      "key": "original-17017",
+      "url": "https://www.nyecounty.gov/agenda-center/2024-silver-star-bess",
+      "error": "ConnectionError"
+    },
+    {
+      "key": "original-17018",
+      "url": "https://warrencountygov.com/commission-minutes/2024-crusoe-building-1-development",
+      "status": 521,
+      "bytes": 7046,
+      "pdf": false,
+      "finalUrl": "https://warrencountygov.com/commission-minutes/2024-crusoe-building-1-development"
+    },
+    {
+      "key": "original-17019",
+      "url": "https://www.bluffdale.com/AgendaCenter/ViewFile/Item/2024-databank-slc6",
+      "status": 404,
+      "bytes": 0,
+      "pdf": false,
+      "finalUrl": "https://www.bluffdale.com/AgendaCenter/ViewFile/Item/2024-databank-slc6"
+    },
+    {
+      "key": "original-17020",
+      "url": "https://www.hillsboro-oregon.gov/departments/community-development/planning/projects/2024-flexential-hillsboro-4",
+      "status": 403,
+      "bytes": 529,
+      "pdf": false,
+      "finalUrl": "https://www.hillsboro-oregon.gov/departments/community-development/planning/projects/2024-flexential-hillsboro-4"
+    },
+    {
+      "key": "original-17021",
+      "url": "https://www.storeycounty.org/government/departments/community_development/planning/projects/2024-switch-citadel-bldg3",
+      "status": 404,
+      "bytes": 0,
+      "pdf": false,
+      "finalUrl": "https://www.storeycounty.org/government/departments/community_development/planning/projects/2024-switch-citadel-bldg3"
+    },
+    {
+      "key": "original-17022",
+      "url": "https://kcc.ks.gov/dockets/2024-coffey-solar-project",
+      "status": 404,
+      "bytes": 51112,
+      "pdf": false,
+      "finalUrl": "https://www.kcc.ks.gov/dockets/2024-coffey-solar-project"
+    },
+    {
+      "key": "original-17024",
+      "url": "https://kcc.ks.gov/dockets/2024-johnson-solar-development",
+      "status": 404,
+      "bytes": 51112,
+      "pdf": false,
+      "finalUrl": "https://www.kcc.ks.gov/dockets/2024-johnson-solar-development"
+    },
+    {
+      "key": "original-17025",
+      "url": "https://www.misoenergy.org/planning/generator-interconnection/GI_Queue/J1766",
+      "status": 200,
+      "bytes": 152032,
+      "pdf": false,
+      "finalUrl": "https://www.misoenergy.org/planning/transmission-planning/mtep"
+    },
+    {
+      "key": "slc6-sheet",
+      "url": "https://www.databank.com/wp-content/uploads/2025/11/SLC6-datasheet.pdf",
+      "status": 200,
+      "bytes": 1401651,
+      "pdf": true,
+      "finalUrl": "https://www.databank.com/wp-content/uploads/2025/11/SLC6-datasheet.pdf"
+    },
+    {
+      "key": "slc6-event",
+      "url": "https://www.databank.com/events/databanks-slc6-data-center-grand-opening/",
+      "status": 200,
+      "bytes": 114840,
+      "pdf": false,
+      "finalUrl": "https://www.databank.com/events/databanks-slc6-data-center-grand-opening/"
+    },
+    {
+      "key": "flexential-current",
+      "url": "https://www.flexential.com/data-centers/or/portland/hillsboro4-data-center",
+      "status": 403,
+      "bytes": 5667,
+      "pdf": false,
+      "finalUrl": "https://www.flexential.com/data-centers/or/portland/hillsboro4-data-center"
+    },
+    {
+      "key": "switch-results",
+      "url": "https://www.sec.gov/Archives/edgar/data/1710583/000171058322000045/exhibit991pressreleasedate.htm",
+      "status": 403,
+      "bytes": 4819,
+      "pdf": false,
+      "finalUrl": "https://www.sec.gov/Archives/edgar/data/1710583/000171058322000045/exhibit991pressreleasedate.htm"
+    },
+    {
+      "key": "switch-brochure",
+      "url": "https://switchdotcom.s3-sites.data.switch.com/media/brochures/SW_Electronic-Sales-Brochure.pdf",
+      "status": 200,
+      "bytes": 25835040,
+      "pdf": true,
+      "finalUrl": "https://switchdotcom.s3-sites.data.switch.com/media/brochures/SW_Electronic-Sales-Brochure.pdf"
+    },
+    {
+      "key": "switch-gallery",
+      "url": "https://www.switch.com/galleries/",
+      "status": 403,
+      "bytes": 146,
+      "pdf": false,
+      "finalUrl": "https://www.switch.com/galleries/"
+    },
+    {
+      "key": "mosey-dashboard",
+      "url": "https://www.permits.performance.gov/permitting-project/fast-41-covered-projects/mosey-solar-project",
+      "status": 403,
+      "bytes": 480,
+      "pdf": false,
+      "finalUrl": "https://www.permits.performance.gov/permitting-project/fast-41-covered-projects/mosey-solar-project"
+    },
+    {
+      "key": "silver-dashboard",
+      "url": "https://www.permits.performance.gov/permitting-project/fast-41-covered-projects/silver-star-solar",
+      "status": 403,
+      "bytes": 478,
+      "pdf": false,
+      "finalUrl": "https://www.permits.performance.gov/permitting-project/fast-41-covered-projects/silver-star-solar"
+    },
+    {
+      "key": "flexential-sheet",
+      "url": "https://www.flexential.com/system/files/file/2023-10/Flexential-Hillsboro-4%20Data-Center-Data-Sheet-hvc.PDF",
+      "status": 403,
+      "bytes": 5812,
+      "pdf": false
+    },
+    {
+      "key": "flexential-sheet-current",
+      "url": "https://www.flexential.com/resources/data-sheet/portland-or-hillsboro-4-data-center",
+      "status": 403,
+      "bytes": 5694,
+      "pdf": false
+    },
+    {
+      "key": "flexential-design",
+      "url": "https://www.flexential.com/data-centers/design",
+      "status": 403,
+      "bytes": 5540,
+      "pdf": false
+    },
+    {
+      "key": "switch-groundbreak",
+      "url": "https://www.switch.com/switch-breaks-ground-on-second-and-third-tahoe-reno-data-centers-following-multi-megawatt-expansions-with-global-e-commerce-and-semiconductor-clients/",
+      "status": 403,
+      "bytes": 146,
+      "pdf": false
+    },
+    {
+      "key": "switch-photos",
+      "url": "https://www.switch.com/photos/",
+      "status": 403,
+      "bytes": 146,
+      "pdf": false
+    },
+    {
+      "file": "SLC6-DC-Hero.2.jpg",
+      "url": "https://www.databank.com/wp-content/uploads/2022/05/SLC6-DC-Hero.2.jpg",
+      "status": 200,
+      "bytes": 982356
+    },
+    {
+      "file": "SLC6-Right-A.jpg",
+      "url": "https://www.databank.com/wp-content/uploads/2022/05/SLC6-Right-A.jpg",
+      "status": 200,
+      "bytes": 331313
+    },
+    {
+      "file": "SLC6-Right-B.jpg",
+      "url": "https://www.databank.com/wp-content/uploads/2022/05/SLC6-Right-B.jpg",
+      "status": 200,
+      "bytes": 247248
+    },
+    {
+      "file": "SLC6-Bottom.jpg",
+      "url": "https://www.databank.com/wp-content/uploads/2022/05/SLC6-Bottom.jpg",
+      "status": 200,
+      "bytes": 722541
+    },
+    {
+      "file": "SLC6-September-2022.jpg",
+      "url": "https://www.databank.com/wp-content/uploads/2022/09/SLC6-September-2022.jpg",
+      "status": 200,
+      "bytes": 3054806
+    }
+  ],
+  "researchNotes": [
+    "Audited the next twelve mapped records, plus a price-only correction to retained canonical Warrenton Building 1 pin 16557. Six core records corrected, six duplicate/unsupported identities soft-deleted and held, one canonical cost correction: thirteen records and 26 environment actions. Initial title/source/author identities matched; stale local IDs reconciled, immediate pre-write reads guarded writes, backups retained and original authors preserved. No new pins or automatic merges. Draft/held catalogs and posted maps synchronized.",
+    "Steel River Phase 3: EIA plant 70399 distinguishes 500 MW SRSP3 solar from 250 MW SRSB3 battery, under construction at most 50% complete, planned July 2030. Native 500 MW is solar only. Operator whole-program 2029 target conflicts. July 2026 groundbreaking and$3.5 B financing concern first two phases, not a separate Phase 3 milestone/budget; whole-program$4.5 B+ not divided. Former MISO J1693 is withdrawn 50 MWMinnesota battery. Shared EIA reporting point replaces wrong location, explicitly not Phase 3 surveyed centroid. Program aerial/map added with scope qualifications. Existing phases/campus/battery pins unchanged.",
+    "Mosey 17014 held as duplicate of 15896/16334. Federal proposal is 500 MW solar plus up to 850 MW battery with environmental review in progress; CAISO 2148 separately reports 537.0067 MW solar/543.856 MW battery/500 MW export and June 27, 2029 target. These are differing proposal/request scopes, not proof of standalone 537 MW battery. Original Nevada path 404; $530 M,2,148 MW h/four-hour and completed-review claims unsupported. Retained records unchanged; older schedules remain explicit follow-up, not freshly certified.",
+    "Pinecone 17015 held for same unresolved lead as previously held 16451. Current CAISO workbook has no exact Pinecone/2203 row; EIA has no exact project. Tracker active/withdrawn claims conflict without an opened primary permit, applicant, parcel or historical queue record verifying 515 MW/2,060 MW h,$510 M and approved Yuma BESS. County 403 is an access gap. Neither absence nor tracker withdrawal is promoted to cancellation, and unrelated Florida solar is not substituted.",
+    "Reed Meadow 17016 held for same unresolved lead as previously held 16480. Trackers associate CAISO 2245 with 565.77 MW and withdrawn status, but current primary workbook has no exact row and original PUC path 404. No primary filing/developer source establishes claimed applicant,566 MW/2,264 MW h,$560 M, Apex/HarryAllen site or approval. Historical primary queue/permit identity remains a specific gap; no cancellation claim.",
+    "Silver Star 17017 held as duplicate of 15940. Current LRE publishes 650 MW solar/500 MW battery with 2029 target, federal material has 650 MW battery and broader$1 B estimate, while CAISO 2142 has 516.7638 MW solar and battery,500 MW export, December 1, 2028. Existing 15940’s older federal scope remains unchanged with specific reconciliation gap; not certified against newer operator wording. No second 517 MW battery, standalone$510 M or 2,068 MW h verified. Operator gallery uses Rabbitbrush photograph, a different project; not adopted as Silver Star photo.",
+    "Warrenton duplicate 17018 held because city minutes independently substantiate same first building as 16557. Original county URL 521; invented 300 MW,$2 B and separate construction/COD claims not verified. Canonical 16557 enriched with city AttachmentB assumption 4 real-property construction estimate 4,398,033,569 USD for Phase 1 first building, administration and infrastructure. Equipment, replacements and$85 B bond ceiling excluded. Same-day official HTTPS cost-plan evidence from round 28 reused; direct-download challenge remains. No later phase-specific real-property estimate found. Only price/currency, source reference and explanatory summary added; title/description/location/date/author/media/native metrics verified unchanged.",
+    "SLC6: current Q425V1 PDF supports 22 MW critical IT,88,250 sqft raised floor,14870 Pony Express andN+1 cooling/power. September 26, 2022 release announces opening with 11 MW initial/11 MW future,171,000 sqft building and 100,000 sqft raised floor; halls then expectedOctober and ceremonyNovember 15. Current event page saysDecember 1, 2022, while Q425 datasheet says opened 2023. Saved confirmed September 26 announcement, not a silent exact COD choice. Native 22 MW is current published critical IT, not measured draw or proof all 22 MW operated in 2022. Native sqft is raised floor. Removed 20 MW,$120 M,85,000 sqft and modeled water/energy; construction-only budget remains unpublished.",
+    "SLC6 media/location: Census-geocoded branch address replaces wrong 14890/area point, qualified as street-address context. Official gallery checked and five originals added: three actual construction/equipment/exterior photos and two architectural renderings. Renderings explicitly labelled, photo dates/capacities not inferred visually. Shared 66 MW substation and 23-acre campus are not building-only quantities. The form-linked new datasheet was not substituted for downloaded public Q425V1.",
+    "Hillsboro 4: May 28, 2026 operator announcement verifies acquisition of existing Hillsboro 4/5 real estate; Hillsboro 4 at 4915 NE Starr is 18 MW and 138,000 sqft, fully leased. Current facility page specifies 18 MW critical UPS, N+2 cooling and hot-aisle containment. Native 18 MW excludes 36 MW Hillsboro 5 and future shared campus scope. Latest release 138,000 sqft versus design-page 138,009 sqft is rounding; datasheet 158,000 sqft quick-facts conflicts with its own 138,000 sqft initial-build description, recorded as gap. DesignPUE 1.4/WUE 0 are operator claims, not measured daily water. Removed$250 M,36 MW and future-opening claim; acquisition and construction prices remain unpublished. Portfolio$800 M financing not assigned to this facility.",
+    "Hillsboro 4 gallery/access: operator pages/PDFs direct 403, but web retrieval opened the release, facility specs, datasheet and design gallery. Correctly identified operator image downloaded with plain curl and visibly labels 4915. Added exterior with credit. Esri point-address match used after Census no-match, not asserted surveyed footprint. Nearby Hillsboro 1/3/5 photos and regional gallery stand-ins rejected.",
+    "SwitchRENO 3: independently named by operator third-building site-preparation announcement and November 9, 2022 issuer results, so retained as real project. Saved confirmed issuer-report milestone, not June 2027 COD or current commissioning. $65.3 M quarterly Citadel capex spans RENO 2 and RENO 3 site work, not RENO 3 construction budget. Historical downloaded brochure plans 621,292 sqft/80 MVA forRENO 3, while county-hosted indexed report said 935,000 sqft and now 404. No conversion of MVA to MW or conflicted floor area adopted. Native 120 MW removed; building count 1 retained, modeled water/energy cleared. Current multi-gigawatt campus marketing is not building-specific rating/tier evidence. Original municipal path 404.",
+    "Switch gallery: official photos page checked via web, direct 403; generic image labels do not identifyRENO 3. The expansion announcement’s original illustration downloaded 200 and is explicitly a shared-campus rendering, not as-built RENO 3 photo or parcel plan. Brochure, program video/current campus gallery and design press checked; no independently labelled currentRENO 3 facility photo established. Retained point qualified as campus-area context, exact building centroid still gap.",
+    "Coffey 17022 corrected to independently verified anonymous SPP GEN-2021-096 request:500 MW solar at Wolf Creek–Benton 345 kV, December 1, 2030 target, IA fully executed/on schedule. Hecate’s separately named Otter Creek proposal is 1 GW/potentially two phases,$1 B/about 8,500 acres. No explicit queue-to-phase mapping established; do not merge with retained 16486 or prorate its budget. Removed invented Coffey branding,$550 M, Hecate attribution/local permit and 2028 COD. Queue agreement is not siting permission or operation. Marker remains explicitly coarse county/request context; official Otter Creek photos not borrowed for an unmapped request.",
+    "Johnson 17024 held as duplicate of corrected 16495. Fresh SPP GEN-2017-195 supports 500.4 MW solar, Johnson County, West Gardner 345 kV, December 1, 2030, IA fully executed/on schedule. Queue does not identify NextEra or county CUP. Original KCC path 404; no$550 M budget or second independent JohnsonSolar identity. Retained 16495 unchanged; no cancellation or automatic merge.",
+    "West Memphis–Keo 17025 corrected to MISO J1060:500 MW solar, St. FrancisAR, queue processingDone/GIA, post-GIAUnder Construction. Original J1766 is withdrawn 20 MW h ybrid in Fallon County, Montana, unrelated. Saved August 19, 2020 recorded processing-completion milestone; stale negotiated May 1, 2023 in-service is not realized COD. Older study 450 MW differs from latest summer/winter 500 MW; no branded operator/EIA parcel match assumed. Removed Invenergy,$550 M and future 2028 opening. Done is not operation. Exact applicant/site/current construction and cost remain gaps; nearby line-tap requests not merged.",
+    "Switch company identity: API generic-name row returned an unrelated generic Wikipedia link. Used independently verified legal name Switch, Inc. and opened company-specific Wikipedia article, preserving the operator identity without accepting the generic link. Costs: researched exact project/phase budgets; six core corrected prices remain null where source scope did not establish one. Added one canonical Phase 1 real-property estimate with USD currency, verbatim quote and source, no FX conversion. Loan facilities, quarterly shared capex, whole-program investment and bond ceilings remain separate. Original prices are not retained merely because source pages return 200.",
+    "Media/verification: three location changes required nine replacement USGS maps. Added nine gallery placements: five photographs, three architectural/program renderings and one phase schematic. Nine unique original source URLs passed fresh plain curl byte checks; all 18 new Azure files publicly byte-verified before reference changes. Basemaps may predate construction and do not establish surveyed footprints. Verified 26 actions,30 currentAzurefiles,14 nativepages,20 unchanged-counterpart checks and two canonical price checks preserving unrelated fields/native metrics. Posted maps now 1,388 entries each. No deployment, restart, production build or application-code edits."
+  ]
+}
