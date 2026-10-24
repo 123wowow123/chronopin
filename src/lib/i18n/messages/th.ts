@@ -1254,6 +1254,9 @@ const th: Messages = {
     summary: '{caption}: {value}',
   },
   reserved: {
+    proposed: 'เสนอแล้ว',
+    inProgress: 'อยู่ระหว่างดำเนินการ',
+    completed: 'เสร็จสมบูรณ์',
     thread: 'เธรด',
     predicted: 'การคาดการณ์',
     new: 'ใหม่',

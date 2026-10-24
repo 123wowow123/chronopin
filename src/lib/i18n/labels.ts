@@ -17,7 +17,7 @@ export function categoryLabel(t: Translator, name: string): string {
 // whatever it was typed as.
 export function tagLabel(t: Translator, tag: { name: string; kind?: string }): string {
   const kind = tag.kind ?? tagKind(tag.name);
-  const reserved = kind === 'reserved' ? reservedTag(tag.name) : undefined;
+  const reserved = reservedTag(tag.name);
   if (reserved) return t.dynamic(`reserved.${reserved.key}`, reserved.name);
   return kind === 'category' ? categoryLabel(t, tag.name) : tag.name;
 }

@@ -1267,6 +1267,9 @@ const vi: Messages = {
   // suggestions as tags do without being anyone's (RESERVED_TAGS in
   // src/lib/tags.ts). The search terms behind them stay English.
   reserved: {
+    proposed: 'Đề xuất',
+    inProgress: 'Đang triển khai',
+    completed: 'Hoàn thành',
     thread: 'Chuỗi',
     predicted: 'Dự đoán',
     new: 'Mới',

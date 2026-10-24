@@ -1255,6 +1255,9 @@ const pt: Messages = {
     summary: '{caption}: {value}',
   },
   reserved: {
+    proposed: 'Proposto',
+    inProgress: 'Em andamento',
+    completed: 'Concluído',
     thread: 'Thread',
     predicted: 'Previsto',
     new: 'Novo',

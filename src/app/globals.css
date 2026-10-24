@@ -67,6 +67,7 @@
   --color-future: #6aa5e8;
   /* The tag filter's heading and pill, apart from the sliders' amber and blue. */
   --color-tags: oklch(74% 0.12 182);
+  --color-construction: var(--color-violet-300);
   /* A company's sentiment graph: its pins' news and its comments. Checked as a
      pair for colour-blind separation and contrast on the panel, per theme. */
   --color-tone-news: #4f92df;
@@ -156,6 +157,7 @@
   --color-past: #8f5f12;
   --color-future: #1f5eb0;
   --color-tags: var(--color-teal-700);
+  --color-construction: var(--color-violet-700);
   --color-tone-news: #1f5eb0;
   --color-tone-comments: #b4531c;
 

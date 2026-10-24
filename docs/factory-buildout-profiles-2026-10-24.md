@@ -19,10 +19,12 @@ The existing JSON profile/API now supports optional metric category keys and mil
 
 ## Validation and deployment status
 
-All six updated profiles were saved through the local factory API and read back exactly. Replay verification confirmed unchanged pin authors, text, dates, costs, references and media. Browser checks passed for all six pages, including the independent factual/radar thresholds, source links, stage highlight and timelines, plus phone layout and a Japanese phone page. Typecheck, targeted lint and 41 focused/regression tests passed.
+All six updated profiles were saved through the local factory API and, after the owner reported deployment, through the production API, then read back exactly. Replay verification confirmed unchanged pin authors, text, dates, costs, references and media. Browser checks passed for all six pages, including the independent factual/radar thresholds, source links, stage highlight and timelines, plus phone layout and a Japanese phone page. Typecheck, targeted lint and 41 focused/regression tests passed.
 
-No deployment, production migration, restart or production profile write was performed for this update. After deployment of the updated API, replay `npx tsx scripts/factories/capability.ts --apply --base https://www.chronopin.com`; the older API drops the new optional fields and must not be used for this catalog.
+After the owner reported deployment, replayed `npx tsx scripts/factories/capability.ts --apply --base https://www.chronopin.com`. All six updated profiles, including metric keys and sourced milestones, matched on GET. Production pins 19702–19707 now carry the factual buildout profiles. No deployment, migration, build or restart was performed by this session.
 
 - [API contract](okf/api/factory-capability.md)
 - [Source-backed catalog](../scripts/factories/capability.json)
 - [Verification record](research/factory-buildout-profiles-2026-10-24.json)
+
+Production browser verification passed for all six native pages: 4/5/6/5/3/5 factual cards respectively, sourced timelines, a single reported-stage highlight, four visible radars, and hidden Bayer/Novelis radars. Phone layout and the Japanese phone page passed with no browser exceptions.

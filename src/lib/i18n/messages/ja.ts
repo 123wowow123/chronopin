@@ -1258,6 +1258,9 @@ const ja: Messages = {
     summary: '{caption}：{value}',
   },
   reserved: {
+    proposed: '計画中',
+    inProgress: '工事中',
+    completed: '完成',
     thread: 'スレッド',
     predicted: '予測',
     new: '新着',

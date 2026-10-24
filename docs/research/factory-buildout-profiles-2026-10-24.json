@@ -178,12 +178,106 @@
     "japanese": true,
     "issues": []
   },
-  "productionReplay": "Pending deployment of the updated factory API; production profiles left unchanged during this update.",
+  "productionReplay": "After owner reported deployment, all six updated profiles were PUT/GET-verified against the catalog. Authors, text, dates, costs, references and media remained unchanged.",
   "schemaMigrationRequired": false,
   "deployed": false,
   "validation": {
     "focusedTests": 41,
     "typecheck": "passed",
     "targetedLint": "passed"
+  },
+  "productionApiVerification": [
+    {
+      "key": "bayer",
+      "pinId": 19702,
+      "status": "verified",
+      "checkedAt": "2026-10-24T23:38:46.598Z"
+    },
+    {
+      "key": "skhynix",
+      "pinId": 19703,
+      "status": "verified",
+      "checkedAt": "2026-10-24T23:38:47.954Z"
+    },
+    {
+      "key": "avio",
+      "pinId": 19704,
+      "status": "verified",
+      "checkedAt": "2026-10-24T23:38:59.078Z"
+    },
+    {
+      "key": "fairfield",
+      "pinId": 19705,
+      "status": "verified",
+      "checkedAt": "2026-10-24T23:39:33.199Z"
+    },
+    {
+      "key": "l3harris",
+      "pinId": 19706,
+      "status": "verified",
+      "checkedAt": "2026-10-24T23:39:34.651Z"
+    },
+    {
+      "key": "novelis",
+      "pinId": 19707,
+      "status": "verified",
+      "checkedAt": "2026-10-24T23:39:35.154Z"
+    }
+  ],
+  "deployedBy": "Owner reported deployment; this session performed content API writes only.",
+  "productionBrowserVerification": {
+    "results": [
+      {
+        "key": "bayer",
+        "id": 19702,
+        "cards": 4,
+        "radarVisible": false,
+        "milestones": 3,
+        "status": 200
+      },
+      {
+        "key": "skhynix",
+        "id": 19703,
+        "cards": 5,
+        "radarVisible": true,
+        "milestones": 3,
+        "status": 200
+      },
+      {
+        "key": "avio",
+        "id": 19704,
+        "cards": 6,
+        "radarVisible": true,
+        "milestones": 3,
+        "status": 200
+      },
+      {
+        "key": "fairfield",
+        "id": 19705,
+        "cards": 5,
+        "radarVisible": true,
+        "milestones": 2,
+        "status": 200
+      },
+      {
+        "key": "l3harris",
+        "id": 19706,
+        "cards": 3,
+        "radarVisible": true,
+        "milestones": 1,
+        "status": 200
+      },
+      {
+        "key": "novelis",
+        "id": 19707,
+        "cards": 5,
+        "radarVisible": false,
+        "milestones": 2,
+        "status": 200
+      }
+    ],
+    "phonePanelFits": true,
+    "japanese": true,
+    "issues": []
   }
 }

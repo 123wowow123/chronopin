@@ -1321,6 +1321,9 @@ const ru: Messages = {
     summary: '{caption}: {value}',
   },
   reserved: {
+    proposed: 'Предложено',
+    inProgress: 'В процессе',
+    completed: 'Завершено',
     thread: 'Цепочка',
     predicted: 'Прогноз',
     new: 'Новое',

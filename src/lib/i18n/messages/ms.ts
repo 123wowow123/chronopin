@@ -1268,6 +1268,9 @@ const ms: Messages = {
   // suggestions as tags do without being anyone's (RESERVED_TAGS in
   // src/lib/tags.ts). The search terms behind them stay English.
   reserved: {
+    proposed: 'Dicadangkan',
+    inProgress: 'Sedang dilaksanakan',
+    completed: 'Selesai',
     thread: 'Utas',
     predicted: 'Diramalkan',
     new: 'Baharu',

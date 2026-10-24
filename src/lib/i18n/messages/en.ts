@@ -1269,6 +1269,9 @@ const en = {
   // src/lib/tags.ts). The search terms behind them stay English.
   reserved: {
     thread: 'Thread',
+    proposed: 'Proposed',
+    inProgress: 'In Progress',
+    completed: 'Completed',
     predicted: 'Predicted',
     new: 'New',
     updated: 'Updated',

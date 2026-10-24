@@ -2,7 +2,7 @@
 
 import { useT } from '@/lib/client/i18n';
 import { categoryLabel, tagLabel } from '@/lib/i18n/labels';
-import { isReserved, reservedTag, type PinTagJson, type ReservedTag } from '@/lib/tags';
+import { isReserved, isStoredSiteTag, reservedTag, RESERVED_TAGS, type PinTagJson, type ReservedTag } from '@/lib/tags';
 import { RefineLink } from './RefineLink';
 
 // The pin's tags as chips, each a search for the pins sharing it (a tag: term,
@@ -33,6 +33,8 @@ export function PinTags({ tags, categories, branching = false, className = '' }:
       reservedChips.push({ name: tag.name, label: tagLabel(t, tag), reserved });
     }
   }
+
+  reservedChips.sort((a, b) => RESERVED_TAGS.indexOf(a.reserved) - RESERVED_TAGS.indexOf(b.reserved));
 
   // Categories next
   for (const name of categories ?? []) {
@@ -67,7 +69,9 @@ export function PinTags({ tags, categories, branching = false, className = '' }:
               value={tag.name}
               title={t('pin.showTagged', { name: tag.label })}
               className={`inline-flex items-center rounded-full border px-2.5 py-1 text-xs font-medium transition-colors hover:no-underline ${
-                tag.reserved
+                isStoredSiteTag(tag.name)
+                  ? 'border-dashed border-construction/50 bg-construction/10 text-construction hover:border-construction hover:bg-construction/20 hover:text-construction'
+                  : tag.reserved
                   ? 'border-dashed border-tags/50 bg-tags/10 text-tags hover:border-tags hover:bg-tags/20 hover:text-tags'
                   : 'border-line bg-field text-muted hover:bg-raised hover:text-ink'
               }`}

@@ -39,6 +39,11 @@ export type TagGroup = TagCount & { members?: TagGroup[] };
 export const MAX_TAG_LENGTH = 80;
 export const MAX_TAGS = 20;
 
+// Reviewed site statuses are stored as topic rows; unlike derived filters,
+// they must survive normal create/edit saves and backfills.
+export const CONSTRUCTION_STATUS_TAGS = ['Proposed', 'In Progress', 'Completed'] as const;
+export const isStoredSiteTag = (name: string): boolean => CONSTRUCTION_STATUS_TAGS.some((status) => status.toLowerCase() === name.toLowerCase());
+
 // Words that make a name an award: any body, ceremony or prize.
 const AWARD_WORD = /\b(awards?|prize|prix|oscars?|emmys?|grammys?|tonys?|golden globes?|baftas?|annies?|razzies?|medal|trophy|laureates?)\b|\bfilm festival\b|\baward festival\b/i;
 
@@ -46,6 +51,7 @@ const AWARD_WORD = /\b(awards?|prize|prix|oscars?|emmys?|grammys?|tonys?|golden 
 const NOMINEE = /\bnominee$/i;
 
 export function tagKind(name: string): TagKind {
+  if (isStoredSiteTag(name)) return 'topic';
   if (isReserved(name)) return 'reserved';
   if (isCategory(name)) return 'category';
   if (NOMINEE.test(name)) return 'nomination';
@@ -203,7 +209,9 @@ export const UPDATED_WITHIN_MS = 24 * 60 * 60 * 1000;
 // tags, marked as the site's, and picking one writes the term the search
 // already understands (src/lib/searchTerms.ts) rather than an ordinary tag: term.
 //
-// Nobody can tag a pin one of these names: PinTag drops them on the way in
+// Derived filters cannot be typed onto pins. The stored construction statuses
+// are the exception: their reviewed evidence is held in ordinary topic rows.
+// Other reserved names: PinTag drops them on the way in
 // (src/server/model/pinTag.ts), so what a reserved name filters by is always
 // the site's own answer and never a curator's typing.
 export type ReservedTag = {
@@ -219,6 +227,8 @@ export type ReservedTag = {
   value: string;
   // For mw: and cost:, the floor the pill sets (megawatts, US dollars).
   min?: number;
+  // Evidence-backed site metadata, persisted rather than derived.
+  stored?: boolean;
   icon: 'thread' | 'shield' | 'sparkle' | 'clock' | 'bolt' | 'tag';
 };
 
@@ -234,6 +244,7 @@ const STORED_LEVEL: Record<string, string> = { unverified: 'unknown' };
 // in, which is their own and not their counts'.
 export const RESERVED_TAGS: ReservedTag[] = [
   { key: 'thread', name: THREAD_TAG, field: 'tag', value: THREAD_TAG, icon: 'thread' },
+  ...CONSTRUCTION_STATUS_TAGS.map((name): ReservedTag => ({ key: name === 'In Progress' ? 'inProgress' : name.toLowerCase(), name, field: 'tag', value: name, icon: 'tag', stored: true })),
   { key: 'predicted', name: PREDICTED_TAG, field: 'tag', value: PREDICTED_TAG, icon: 'sparkle' },
   { key: 'new', name: NEW_TAG, field: 'posted', value: 'today', icon: 'clock' },
   { key: 'updated', name: UPDATED_TAG, field: 'updated', value: '>=yesterday', icon: 'clock' },

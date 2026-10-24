@@ -1258,6 +1258,9 @@ const ko: Messages = {
     summary: '{caption}: {value}',
   },
   reserved: {
+    proposed: '제안됨',
+    inProgress: '진행 중',
+    completed: '완료',
     thread: '스레드',
     predicted: '예측됨',
     new: '새 글',

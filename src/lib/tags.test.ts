@@ -1,6 +1,9 @@
 import { describe, expect, it } from 'vitest';
 import {
   THREAD_TAG,
+  CONSTRUCTION_STATUS_TAGS,
+  RESERVED_TAGS,
+  isStoredSiteTag,
   autoTags,
   awardTag,
   awardTagsInText,
@@ -91,6 +94,18 @@ describe('tagKind', () => {
 });
 
 describe('reserved filters', () => {
+  it('places stored construction statuses directly after Thread and keeps them searchable as tags', () => {
+    expect(RESERVED_TAGS.slice(0, 4).map((r) => r.name)).toEqual(['Thread', ...CONSTRUCTION_STATUS_TAGS]);
+    for (const name of CONSTRUCTION_STATUS_TAGS) {
+      expect(isStoredSiteTag(name.toLowerCase())).toBe(true);
+      expect(reservedTag(name)).toMatchObject({ field: 'tag', value: name, stored: true });
+      expect(tagKind(name)).toBe('topic');
+    }
+    expect(reservedPicked({ tags: ['Completed', 'thread', 'In Progress', 'Proposed'], confidences: [], confidenceBands: [] }))
+      .toEqual(['Thread', 'Proposed', 'In Progress', 'Completed']);
+    expect(reservedSuggestions('in pro').map((r) => r.name)).toContain('In Progress');
+  });
+
   it('writes the term a pick stands for', () => {
     expect(reservedTag('Thread')).toMatchObject({ field: 'tag', value: 'Thread' });
     expect(reservedTag('Predicted')).toMatchObject({ field: 'tag', value: 'Predicted', icon: 'sparkle' });

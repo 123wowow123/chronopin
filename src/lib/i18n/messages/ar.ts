@@ -1543,6 +1543,9 @@ const ar: Messages = {
   // suggestions as tags do without being anyone's (RESERVED_TAGS in
   // src/lib/tags.ts). The search terms behind them stay English.
   reserved: {
+    proposed: 'مقترح',
+    inProgress: 'قيد التنفيذ',
+    completed: 'مكتمل',
     thread: 'سلسلة',
     predicted: 'المتوقعة',
     new: 'جديد',

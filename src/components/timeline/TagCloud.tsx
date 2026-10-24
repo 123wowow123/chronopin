@@ -13,7 +13,7 @@ import { useScrollLock } from '@/lib/client/scrollLock';
 import { refineQuery, removeFields, removeTerm, term } from '@/lib/searchTerms';
 import { DRAG_QUERY_EVENT, pinnedQueries, recentQueries, recordQuery, recordRecentQuery, sharedQueries, togglePinnedQuery } from '@/lib/savedQueries';
 import { isCategory } from '@/lib/categories';
-import { cloudTags, groupSelection, groupTags, isReserved, reservedPicked, reservedTag, reservedValues, RESERVED_TAGS, type TagCount, type TagGroup } from '@/lib/tags';
+import { cloudTags, groupSelection, groupTags, isReserved, isStoredSiteTag, reservedPicked, reservedTag, reservedValues, RESERVED_TAGS, type TagCount, type TagGroup } from '@/lib/tags';
 import { parseSearchQuery } from '@/server/util/searchQuery';
 import { leaveDrawerForCloud, onOpenTagCloud } from '@/lib/client/controlsDrawer';
 import { mergedSection, useInDrawerPanel, useMergedPanel } from './FloatingControls';
@@ -397,12 +397,14 @@ function ReservedFilters({
           }}
           title={`${t('tagCloud.reservedTitle', { name: filter.label })}\n${t('tagCloud.pins', { count: filter.count })}`}
           className={`inline-flex shrink-0 items-center whitespace-nowrap rounded-full border border-dashed transition-colors ${large ? 'gap-1.5 px-3 py-1 text-sm' : 'gap-1 px-1.5 py-0.5 text-[11px]'} ${
-            on(filter.name) ? 'border-accent/60 bg-accent/15 text-link' : 'border-line text-muted hover:border-tint/40 hover:text-ink'
+            isStoredSiteTag(filter.name)
+              ? on(filter.name) ? 'border-construction bg-construction/20 text-construction' : 'border-construction/50 bg-construction/10 text-construction hover:border-construction hover:bg-construction/20'
+              : on(filter.name) ? 'border-accent/60 bg-accent/15 text-link' : 'border-line text-muted hover:border-tint/40 hover:text-ink'
           }`}
         >
           <Icon name={filter.icon} className={`shrink-0 ${large ? 'size-4' : 'size-3'}`} />
           {filter.label}
-          <span className="text-subtle tabular-nums">
+          <span className={`${isStoredSiteTag(filter.name) ? 'text-current opacity-80' : 'text-subtle'} tabular-nums`}>
             {filter.count}
             <span className="sr-only"> {t('tagCloud.pinsWord', { count: filter.count })}</span>
           </span>
@@ -812,8 +814,8 @@ function TagCloudView({
   // the tags people wrote.
   // The cloud always has its tags: the whole timeline's, with those the search has no pins for dimmed.
   const written = useMemo(() => {
-    const here = new Map((counts ?? []).filter((t) => t.kind !== 'reserved').map((t) => [t.name.toLowerCase(), t]));
-    const base = (baseline ?? []).filter((t) => t.kind !== 'reserved');
+    const here = new Map((counts ?? []).filter((t) => t.kind !== 'reserved' && !isReserved(t.name)).map((t) => [t.name.toLowerCase(), t]));
+    const base = (baseline ?? []).filter((t) => t.kind !== 'reserved' && !isReserved(t.name));
     if (!base.length) return [...here.values()];
     const merged = base.map((t) => here.get(t.name.toLowerCase()) ?? { ...t, dim: true });
     const known = new Set(base.map((t) => t.name.toLowerCase()));

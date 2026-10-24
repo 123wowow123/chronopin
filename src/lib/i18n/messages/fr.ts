@@ -1264,6 +1264,9 @@ const fr: Messages = {
     summary: '{caption} : {value}',
   },
   reserved: {
+    proposed: 'Proposé',
+    inProgress: 'En cours',
+    completed: 'Terminé',
     thread: 'Fil',
     predicted: 'Prévu',
     new: 'Nouveau',

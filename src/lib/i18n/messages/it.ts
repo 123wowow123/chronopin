@@ -1255,6 +1255,9 @@ const it: Messages = {
     summary: '{caption}: {value}',
   },
   reserved: {
+    proposed: 'Proposto',
+    inProgress: 'In corso',
+    completed: 'Completato',
     thread: 'Thread',
     predicted: 'Previsto',
     new: 'Nuovo',

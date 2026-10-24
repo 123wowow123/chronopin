@@ -13,7 +13,7 @@ import { DINING_KEYS, DINING_STRONG, type DiningAxis } from '@/lib/pinDining';
 import { HOTEL_KEYS, HOTEL_STRONG, type HotelAxis } from '@/lib/pinHotel';
 import { usdPriceSql } from '@/lib/currency';
 import { cityOf, countryOf } from '@/lib/city';
-import { NEW_TAG, PREDICTED_TAG, reservedName, UPDATED_TAG, UPDATED_WITHIN_MS, tagGroupPatterns, type TagCount } from '@/lib/tags';
+import { NEW_TAG, PREDICTED_TAG, RESERVED_TAGS, reservedName, reservedTag, UPDATED_TAG, UPDATED_WITHIN_MS, tagGroupPatterns, type TagCount } from '@/lib/tags';
 import { CONFIDENCE_BANDS, CONFIDENCE_BARS, type ConfidenceBand } from '@/lib/referenceConfidence';
 import { PLACE_TEXT_SCORE, SEMANTIC_ALONE_SCORE, TITLE_TEXT_SCORE, isCjkText, looksLikePlaceText, placePatterns, typedTextPatterns, typedWordPatterns, wholeWordPattern } from '../util/placeMatch';
 import type { NearFilter } from '../util/nearFilter';
@@ -637,7 +637,7 @@ async function countReserved(from: string, where: string[], params: unknown[], c
       )}
       SELECT 'tag' AS "field", "tg"."name"::text AS "value", COUNT(DISTINCT "hits"."id")::integer AS "count"
       FROM "hits"
-        INNER JOIN "PinTagView" AS "tg" ON "tg"."pinId" = "hits"."id" AND "tg"."kind" = 'reserved' AND "tg"."name" <> '${PREDICTED_TAG}'::citext
+        INNER JOIN "PinTagView" AS "tg" ON "tg"."pinId" = "hits"."id" AND ("tg"."kind" = 'reserved' OR "tg"."name" IN ('Proposed'::citext, 'In Progress'::citext, 'Completed'::citext)) AND "tg"."name" <> '${PREDICTED_TAG}'::citext
       GROUP BY "tg"."name"
       UNION ALL
       SELECT 'tag' AS "field", '${PREDICTED_TAG}' AS "value", COUNT(DISTINCT "hits"."id")::integer AS "count"
@@ -682,10 +682,10 @@ async function countReserved(from: string, where: string[], params: unknown[], c
     // A bucket is CONFIDENCE_BANDS' own index (the bars' gaps in order), and
     // a name the site no longer reserves (a tag left in the view) is dropped.
     const band = row.field === 'band' ? CONFIDENCE_BANDS[Number(row.value)]?.band : null;
-    const name = row.field === 'tag' ? row.value : reservedName(row.field, band ?? row.value);
+    const name = row.field === 'tag' ? reservedTag(row.value)?.name : reservedName(row.field, band ?? row.value);
     if (name) counted.set(name, (counted.get(name) ?? 0) + row.count);
   }
-  return [...counted].map(([name, count]) => ({ name, kind: 'reserved' as const, count }));
+  return RESERVED_TAGS.filter((tag) => counted.has(tag.name)).map(({ name }) => ({ name, kind: 'reserved' as const, count: counted.get(name)! }));
 }
 
 // How well the rest of a pin's thread is sourced: the mean confidence of the

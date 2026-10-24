@@ -1258,6 +1258,9 @@ const zh: Messages = {
     summary: '{caption}：{value}',
   },
   reserved: {
+    proposed: '拟建',
+    inProgress: '在建',
+    completed: '已建成',
     thread: '串',
     predicted: '预测',
     new: '新',

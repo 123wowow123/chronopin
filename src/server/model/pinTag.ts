@@ -4,7 +4,7 @@
 // writing: PinTagView derives them, and so is the "Thread" tag a pin in a
 // thread carries (0056), which is a fact about two pins. See src/lib/tags.ts.
 
-import { autoTags, isReserved, tagKind, uniqueTags, type TagCount, type TagSource } from '@/lib/tags';
+import { autoTags, isReserved, isStoredSiteTag, tagKind, uniqueTags, type TagCount, type TagSource } from '@/lib/tags';
 import * as db from '../db';
 import { wordStartPattern } from '../util/searchQuery';
 
@@ -21,10 +21,11 @@ export const inCategories = (param: string) =>
 // Replaces the pin's tags from this source with these names: its categories,
 // or the rest. True when they changed.
 async function replace(pinId: number, source: Stored, names: string[], categories = false): Promise<boolean> {
-  // A reserved name is the site's own filter (RESERVED_TAGS), never a row: a
+  // Derived reserved names are site filters, never rows. Reviewed construction
+  // statuses are stored site metadata and must survive ordinary edits. A
   // stored "Thread" would outrank the derived one, and a stored "Estimated"
   // would stand in the cloud beside the confidence filter of that name.
-  const wanted = uniqueTags(names).filter((name) => !isReserved(name) && (tagKind(name) === 'category') === categories);
+  const wanted = uniqueTags(names).filter((name) => (!isReserved(name) || isStoredSiteTag(name)) && (tagKind(name) === 'category') === categories);
   const scope = `"pinId" = $1 AND "source" = $2 AND ("kind" = 'category') = $3`;
   const stored = await db.query<{ name: string }>(`SELECT "name"::text AS "name" FROM "PinTag" WHERE ${scope} ORDER BY "id"`, [pinId, source, categories]);
   // Categories keep their order: the first is the pin's main one.
@@ -111,7 +112,7 @@ export default class PinTag {
       SELECT min("tg"."name"::text) AS "name", min("tg"."kind") AS "kind", COUNT(DISTINCT "Pin"."id")::integer AS "count"
       FROM "PinTagView" AS "tg"
         INNER JOIN "Pin" ON "Pin"."id" = "tg"."pinId" AND "Pin"."utcDeletedDateTime" IS NULL
-      WHERE "tg"."name"::text ~* $1 AND "tg"."kind" <> 'reserved' AND "tg"."name" NOT IN ('Predicted'::citext, 'New'::citext, 'Updated'::citext)
+      WHERE "tg"."name"::text ~* $1 AND "tg"."kind" <> 'reserved' AND "tg"."name" NOT IN ('Predicted'::citext, 'New'::citext, 'Updated'::citext, 'Proposed'::citext, 'In Progress'::citext, 'Completed'::citext)
       GROUP BY "tg"."name"
       ORDER BY 3 DESC, 1
       LIMIT $2`,
@@ -147,7 +148,7 @@ export default class PinTag {
       WITH ${ctes.map((cte) => `${cte},\n      `).join('')}"hits" AS (
         SELECT DISTINCT "tg"."name", "tg"."kind", "Pin"."id" AS "pinId"
         ${from}
-          INNER JOIN "PinTagView" AS "tg" ON "tg"."pinId" = "Pin"."id" AND "tg"."kind" <> 'reserved' AND "tg"."name" NOT IN ('Predicted'::citext, 'New'::citext, 'Updated'::citext)
+          INNER JOIN "PinTagView" AS "tg" ON "tg"."pinId" = "Pin"."id" AND "tg"."kind" <> 'reserved' AND "tg"."name" NOT IN ('Predicted'::citext, 'New'::citext, 'Updated'::citext, 'Proposed'::citext, 'In Progress'::citext, 'Completed'::citext)
         WHERE ${where.join('\n          AND ')}
       ),
       "counts" AS (
