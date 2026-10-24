@@ -308,6 +308,16 @@ export type ShopClickRow = {
 // plan page, unless a curator stored a listing on the same host.
 const MODEL_PLANS: { company: RegExp; store: string; url: string; background: string; text: string; border?: string }[] = [
   { company: /^(spacexai|xai|x\.ai)$/i, store: 'Grok', url: 'https://grok.com/#subscribe', background: '#000000', text: '#ffffff', border: '#8a8a8a' },
+  { company: /^anthropic$/i, store: 'Claude', url: 'https://claude.ai/upgrade', background: '#d97757', text: '#000000' },
+  { company: /^openai$/i, store: 'ChatGPT', url: 'https://chatgpt.com/#pricing', background: '#10a37f', text: '#000000' },
+  { company: /^google( deepmind)?$/i, store: 'Gemini', url: 'https://one.google.com/explore-plan/gemini-advanced', background: '#1a73e8', text: '#ffffff' },
+  { company: /^alibaba/i, store: 'Qwen', url: 'https://chat.qwen.ai', background: '#615ced', text: '#ffffff' },
+  { company: /^z\.ai$/i, store: 'Z.ai', url: 'https://chat.z.ai', background: '#000000', text: '#ffffff', border: '#8a8a8a' },
+  { company: /^meta$/i, store: 'Meta AI', url: 'https://www.meta.ai', background: '#0866ff', text: '#ffffff' },
+  { company: /^mistral ai$/i, store: 'Le Chat', url: 'https://chat.mistral.ai/upgrade', background: '#fa5310', text: '#000000' },
+  { company: /^deepseek$/i, store: 'DeepSeek', url: 'https://chat.deepseek.com', background: '#4d6bfe', text: '#ffffff' },
+  { company: /^moonshot ai$/i, store: 'Kimi', url: 'https://www.kimi.com', background: '#000000', text: '#ffffff', border: '#8a8a8a' },
+  { company: /^microsoft$/i, store: 'Copilot', url: 'https://copilot.microsoft.com', background: '#0f6cbd', text: '#ffffff' },
 ];
 
 function modelPlanLink(pin: Pick<PinJson, 'tags'> & { company?: string | null }): ShopLink | undefined {
