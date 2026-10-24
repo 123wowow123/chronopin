@@ -20,7 +20,7 @@ into its instructions, so changing this page changes the next run.
 | Job | Default time | Tasks | New pins / updates per run |
 | --- | --- | --- | --- |
 | `midnight` - maintenance and new pins | 00:00 America/Los_Angeles | Keep pins right: [revisits](#revisits), [pinHealth](#pinhealth), [thinPins](#thinpins), [personCampaigns](#personcampaigns), [restaurantRegions](#restaurantregions). Find new events: [trends](#trends), [thinCategories](#thincategories), [trendingCategories](#trendingcategories), [commentTopics](#commenttopics), [localEvents](#localevents). Beats: [fortune100](#fortune100), [layoffs](#layoffs) | 100 / 250 |
-| `news` - morning and evening check | 06:00 and 18:00 America/Los_Angeles | Keep pins right: [weekReview](#weekreview), [freshSources](#freshsources), [eventInfo](#eventinfo), [pinAds](#pinads), [holidayAds](#holidayads), [personTrades](#persontrades), [threadPredicted](#threadpredicted). Find new events: [breakingNews](#breakingnews), [predictionMarkets](#predictionmarkets). Beats: [layoffs](#layoffs), [hiringJobCreation](#hiringjobcreation). Scores: [modelScores](#modelscores), [sentiment](#sentiment) | 100 / 250 |
+| `news` - morning and evening check | 06:00 and 18:00 America/Los_Angeles | Keep pins right: [weekReview](#weekreview), [freshSources](#freshsources), [eventInfo](#eventinfo), [pinAds](#pinads), [holidayAds](#holidayads), [personTrades](#persontrades), [threadPredicted](#threadpredicted). Find new events: [breakingNews](#breakingnews), [predictionMarkets](#predictionmarkets), [earthquakes](#earthquakes). Beats: [layoffs](#layoffs), [hiringJobCreation](#hiringjobcreation). Scores: [modelScores](#modelscores), [sentiment](#sentiment) | 100 / 250 |
 | `monthly` - low-confidence re-check | 03:00 America/Los_Angeles on the 1st of each month | Keep pins right: [lowConfidence](#lowconfidence) | 0 / 250 |
 | `weekly` - products page refresh | 04:00 America/Los_Angeles every Monday | Keep pins right: [products](#products) | 0 / 100 |
 
@@ -605,6 +605,26 @@ first: breaking news is often an update to an existing pin.
 **Traps.** Something that already happened today with nothing ahead is
 worth a pin only if it is major; a story with a dated next step (a vote, a
 hearing, a deadline) is usually the better pin.
+
+### earthquakes
+
+Added 2026-10-24 (owner: keep the earthquake pins current).
+
+**Reads** USGS's significant-earthquake GeoJSON feed,
+`https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/significant_day.geojson`
+(use `significant_week` when a run was missed), with `web_fetch`.
+**Does** pin each quake of magnitude 5.5 or more as @QuakeDesk, the way
+`npm run earthquakes` does ([scripts/events/earthquakes.ts](../../../scripts/events/earthquakes.ts)):
+title `M 6.9 earthquake strikes near <place>`, start = the origin time
+(`dateConfidence: 'confirmed'`), the epicentre as latitude/longitude, category
+`Disaster`, `sourceUrl` = the quake's USGS event page (`properties.url`, unique per
+quake), and a description of magnitude, depth, the PAGER alert level, felt
+reports and any tsunami flag. `find_pins` on the event page first: a quake
+already pinned is skipped. An aftershock in the same hour as a larger quake is
+its own pin only if USGS lists it as significant.
+**Traps.** USGS revises magnitude and time for a day or two after an event; do not
+re-date an existing pin for a revision of a few tenths. USGS has no photos, so
+add media only when a credited one exists (a USGS ShakeMap is public domain).
 
 ### predictionMarkets
 

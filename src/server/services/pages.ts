@@ -26,12 +26,14 @@ import { tasteForPin } from '../model/pinTaste';
 import { carPerfForPin } from '../model/pinCarPerf';
 import { gasCarPerfForPin } from '../model/pinGasCarPerf';
 import { aircraftPerfForPin } from '../model/pinAircraftPerf';
+import { videoPerfForPin } from '../model/pinVideoPerf';
 import { diningForPin } from '../model/pinDining';
 import { hotelForPin } from '../model/pinHotel';
 import type { PinTasteJson } from '@/lib/pinTaste';
 import type { PinCarPerfJson } from '@/lib/pinCarPerf';
 import type { PinGasCarPerfJson } from '@/lib/pinGasCarPerf';
 import type { PinAircraftPerfJson } from '@/lib/pinAircraftPerf';
+import type { PinVideoPerfJson } from '@/lib/pinVideoPerf';
 import type { PinDiningJson } from '@/lib/pinDining';
 import type { PinHotelJson } from '@/lib/pinHotel';
 import type { PinCandidateJson } from '@/lib/candidates';
@@ -338,6 +340,14 @@ export async function pinAircraftPerf(id: number): Promise<PinAircraftPerfJson |
   cacheLife('hours');
   cacheTag(TAGS.pin(id));
   return aircraftPerfForPin(id);
+}
+
+// An AI video model pin's rubric, or null when it has none.
+export async function pinVideoPerf(id: number): Promise<PinVideoPerfJson | null> {
+  'use cache';
+  cacheLife('hours');
+  cacheTag(TAGS.pin(id));
+  return videoPerfForPin(id);
 }
 
 // A restaurant pin's dining rubric, or null when it has none.

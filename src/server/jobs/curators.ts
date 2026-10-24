@@ -28,6 +28,7 @@ export const CURATORS: Record<string, string> = {
   '@LawDesk': 'courts and crime: trials, verdicts, rulings',
   '@RetailDesk': 'retail: store openings, closures, e-commerce',
   '@EnergyDesk': 'energy: reserves, power plants, pipelines',
+  '@QuakeDesk': 'earthquakes (USGS significant feed)',
 };
 
 const bare = (handle: string) => handle.trim().replace(/^@/, '').toLowerCase();

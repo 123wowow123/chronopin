@@ -1,3 +1,12 @@
+---
+type: Reference
+title: Course, pipeline and power-line shapes on pin maps
+description: How circuit routes, pipelines, power lines and power-plant outlines are drawn on pin maps (PinSiteShape), where each comes from, the traps found, and the GeoJSON export and earthquake importer added alongside.
+resource: ../../../scripts/routes/osmLine.ts
+tags: [scraping, maps, geojson, openstreetmap, routes, power]
+generated: { by: claude-code/claude-sonnet-5-5, at: 2026-10-24T16:00:00Z }
+---
+
 # Course and circuit lines on pin maps (PinSiteShape kind 'route')
 
 - F1 circuits: scripts/routes/raceCircuits.ts, from bacinger/f1-circuits (OpenStreetMap), 30 pins, 2026-10-22.

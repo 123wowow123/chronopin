@@ -1,0 +1,2186 @@
+{
+  "checkedAt": "2026-10-24",
+  "scope": "Source and company wiki backfill for all 281 live corrected pins found in the Cleanview backfill reports, through round 29.",
+  "outcome": {
+    "pinsVerifiedPerEnvironment": 281,
+    "rawCitationUrls": 399,
+    "normalizedSourceUrls": 397,
+    "readySourceWikisPerEnvironment": 393,
+    "newSourceWikisPerEnvironment": 385,
+    "existingSourceWikisRefreshedPerEnvironment": 8,
+    "companyWikisRebuiltPerEnvironment": 174,
+    "currentPinSourceLinksPerEnvironment": 580,
+    "readyPinSourceLinksPerEnvironment": 576,
+    "previousPinSourceLinksPerEnvironment": 704,
+    "staleSummariesAfterVerification": 0,
+    "unresolvedSourceUrls": 4,
+    "pinContentPreserved": true,
+    "authorsPreserved": true,
+    "deployed": false
+  },
+  "verification": {
+    "local": {
+      "pinsVerifiedUnchanged": 281,
+      "sourceUrls": 397,
+      "readySourceWikis": 393,
+      "staleSummaries": 0,
+      "gaps": [
+        {
+          "url": "https://www.nexteraenergyresources.com/west-gardner-solar.html",
+          "status": "pending",
+          "wikiVersion": 0,
+          "reason": "Source remains inaccessible or returns no substantive project content after direct, browser and web-reader retries."
+        },
+        {
+          "url": "https://www.osawatomieks.org/sites/g/files/vyhlif7581/f/uploads/project_catalyst_press_release_5.29.2026.pdf",
+          "status": "pending",
+          "wikiVersion": 0,
+          "reason": "Source remains inaccessible or returns no substantive project content after direct, browser and web-reader retries."
+        },
+        {
+          "url": "https://www.digipowerx.com/press-releases/og0n0rt3f2g3yxexdps5s9yq",
+          "status": "pending",
+          "wikiVersion": 0,
+          "reason": "Source remains inaccessible or returns no substantive project content after direct, browser and web-reader retries."
+        },
+        {
+          "url": "https://ndpublicnotices.newzgroup.com/NDLegals/2025/395355-2025-07-07_1001.pdf",
+          "status": "pending",
+          "wikiVersion": 0,
+          "reason": "Source remains inaccessible or returns no substantive project content after direct, browser and web-reader retries."
+        }
+      ],
+      "companyWikisVerified": 174
+    },
+    "prod": {
+      "pinsVerifiedUnchanged": 281,
+      "sourceUrls": 397,
+      "readySourceWikis": 393,
+      "staleSummaries": 0,
+      "gaps": [
+        {
+          "url": "https://www.nexteraenergyresources.com/west-gardner-solar.html",
+          "status": "pending",
+          "wikiVersion": 0,
+          "reason": "HTTP 404 from direct, browser or web-reader checks; recover original publication or verify a replacement source before writing a wiki.",
+          "pinIds": [
+            16350
+          ]
+        },
+        {
+          "url": "https://www.osawatomieks.org/sites/g/files/vyhlif7581/f/uploads/project_catalyst_press_release_5.29.2026.pdf",
+          "status": "pending",
+          "wikiVersion": 0,
+          "reason": "HTTP 404 from direct, browser or web-reader checks; recover original publication or verify a replacement source before writing a wiki.",
+          "pinIds": [
+            16369
+          ]
+        },
+        {
+          "url": "https://www.digipowerx.com/press-releases/og0n0rt3f2g3yxexdps5s9yq",
+          "status": "pending",
+          "wikiVersion": 0,
+          "reason": "Direct and browser reads expose only a loading shell/title. Substantive release text unavailable; the separate OTC-hosted Form 8-K has a verified wiki.",
+          "pinIds": [
+            16420
+          ]
+        },
+        {
+          "url": "https://ndpublicnotices.newzgroup.com/NDLegals/2025/395355-2025-07-07_1001.pdf",
+          "status": "pending",
+          "wikiVersion": 0,
+          "reason": "HTTP 404 from direct, browser or web-reader checks; recover original publication or verify a replacement source before writing a wiki.",
+          "pinIds": [
+            16444
+          ]
+        }
+      ],
+      "companyWikisVerified": 174
+    }
+  },
+  "unresolvedSources": [
+    {
+      "url": "https://www.nexteraenergyresources.com/west-gardner-solar.html",
+      "status": "pending",
+      "wikiVersion": 0,
+      "reason": "HTTP 404 from direct, browser or web-reader checks; recover original publication or verify a replacement source before writing a wiki.",
+      "pinIds": [
+        16350
+      ]
+    },
+    {
+      "url": "https://www.osawatomieks.org/sites/g/files/vyhlif7581/f/uploads/project_catalyst_press_release_5.29.2026.pdf",
+      "status": "pending",
+      "wikiVersion": 0,
+      "reason": "HTTP 404 from direct, browser or web-reader checks; recover original publication or verify a replacement source before writing a wiki.",
+      "pinIds": [
+        16369
+      ]
+    },
+    {
+      "url": "https://www.digipowerx.com/press-releases/og0n0rt3f2g3yxexdps5s9yq",
+      "status": "pending",
+      "wikiVersion": 0,
+      "reason": "Direct and browser reads expose only a loading shell/title. Substantive release text unavailable; the separate OTC-hosted Form 8-K has a verified wiki.",
+      "pinIds": [
+        16420
+      ]
+    },
+    {
+      "url": "https://ndpublicnotices.newzgroup.com/NDLegals/2025/395355-2025-07-07_1001.pdf",
+      "status": "pending",
+      "wikiVersion": 0,
+      "reason": "HTTP 404 from direct, browser or web-reader checks; recover original publication or verify a replacement source before writing a wiki.",
+      "pinIds": [
+        16444
+      ]
+    }
+  ],
+  "pins": [
+    16300,
+    16301,
+    16302,
+    16303,
+    16304,
+    16305,
+    16306,
+    16307,
+    16308,
+    16309,
+    16310,
+    16311,
+    16312,
+    16313,
+    16314,
+    16315,
+    16316,
+    16317,
+    16318,
+    16319,
+    16320,
+    16322,
+    16328,
+    16329,
+    16330,
+    16331,
+    16332,
+    16333,
+    16334,
+    16335,
+    16336,
+    16337,
+    16338,
+    16339,
+    16340,
+    16341,
+    16342,
+    16343,
+    16344,
+    16345,
+    16346,
+    16347,
+    16348,
+    16349,
+    16350,
+    16351,
+    16356,
+    16357,
+    16358,
+    16359,
+    16360,
+    16361,
+    16362,
+    16364,
+    16365,
+    16366,
+    16367,
+    16369,
+    16370,
+    16371,
+    16372,
+    16373,
+    16375,
+    16377,
+    16378,
+    16380,
+    16381,
+    16382,
+    16383,
+    16384,
+    16385,
+    16386,
+    16387,
+    16389,
+    16390,
+    16391,
+    16393,
+    16394,
+    16395,
+    16396,
+    16397,
+    16398,
+    16399,
+    16400,
+    16401,
+    16404,
+    16405,
+    16406,
+    16407,
+    16408,
+    16409,
+    16410,
+    16411,
+    16412,
+    16413,
+    16415,
+    16418,
+    16419,
+    16420,
+    16421,
+    16422,
+    16423,
+    16424,
+    16426,
+    16428,
+    16429,
+    16430,
+    16431,
+    16432,
+    16433,
+    16434,
+    16435,
+    16436,
+    16438,
+    16439,
+    16440,
+    16441,
+    16442,
+    16443,
+    16444,
+    16446,
+    16447,
+    16448,
+    16449,
+    16452,
+    16453,
+    16455,
+    16458,
+    16459,
+    16461,
+    16462,
+    16465,
+    16466,
+    16468,
+    16469,
+    16470,
+    16471,
+    16472,
+    16473,
+    16475,
+    16476,
+    16477,
+    16478,
+    16479,
+    16481,
+    16482,
+    16483,
+    16484,
+    16486,
+    16487,
+    16488,
+    16489,
+    16490,
+    16492,
+    16493,
+    16494,
+    16495,
+    16496,
+    16498,
+    16500,
+    16552,
+    16555,
+    16557,
+    16559,
+    16560,
+    16561,
+    16562,
+    16563,
+    16564,
+    16565,
+    16566,
+    16567,
+    16568,
+    16570,
+    16572,
+    16573,
+    16574,
+    16575,
+    16576,
+    16577,
+    16578,
+    16580,
+    16581,
+    16582,
+    16583,
+    16584,
+    16585,
+    16586,
+    16587,
+    16588,
+    16592,
+    16593,
+    16594,
+    16597,
+    16598,
+    16599,
+    16600,
+    16601,
+    16602,
+    16603,
+    16604,
+    16606,
+    16608,
+    16609,
+    16610,
+    16611,
+    16613,
+    16614,
+    16615,
+    16616,
+    16621,
+    16626,
+    16630,
+    16633,
+    16636,
+    16640,
+    16643,
+    16646,
+    16653,
+    16657,
+    16660,
+    16663,
+    16666,
+    16668,
+    16672,
+    16675,
+    16678,
+    16681,
+    16683,
+    16684,
+    16691,
+    16699,
+    16702,
+    16706,
+    16711,
+    16718,
+    16724,
+    16736,
+    16743,
+    16747,
+    16761,
+    16764,
+    16766,
+    16774,
+    16777,
+    16794,
+    16798,
+    16802,
+    16806,
+    16860,
+    16863,
+    16867,
+    16871,
+    16886,
+    16892,
+    16895,
+    16897,
+    16901,
+    16903,
+    16916,
+    16921,
+    16927,
+    16932,
+    16936,
+    16956,
+    16960,
+    16968,
+    16982,
+    16985,
+    16991,
+    16996,
+    17001,
+    17005,
+    17008,
+    17010,
+    17012,
+    17019,
+    17020,
+    17021,
+    17022,
+    17025
+  ],
+  "companyIds": [
+    2,
+    3,
+    46,
+    9145,
+    10161,
+    10164,
+    10178,
+    10184,
+    13191,
+    13322,
+    15085,
+    15087,
+    15090,
+    15097,
+    15098,
+    15100,
+    15101,
+    15107,
+    15120,
+    15125,
+    15133,
+    15150,
+    15163,
+    15212,
+    15214,
+    15217,
+    15218,
+    15249,
+    15259,
+    15271,
+    15295,
+    15299,
+    15305,
+    15306,
+    15307,
+    15313,
+    15318,
+    15323,
+    15344,
+    15349,
+    15351,
+    15363,
+    15366,
+    16119,
+    16123,
+    16126,
+    16127,
+    16130,
+    16131,
+    16141,
+    16143,
+    16148,
+    16161,
+    16174,
+    16179,
+    16181,
+    16185,
+    16186,
+    16187,
+    16189,
+    16190,
+    16193,
+    16195,
+    16204,
+    16207,
+    16211,
+    16217,
+    16219,
+    16221,
+    16226,
+    16229,
+    16238,
+    16239,
+    16241,
+    16265,
+    16283,
+    16289,
+    16299,
+    16301,
+    16303,
+    16381,
+    16387,
+    16405,
+    16416,
+    16418,
+    16428,
+    16430,
+    16518,
+    18709,
+    18803,
+    19816,
+    19818,
+    19819,
+    19830,
+    19831,
+    19838,
+    19839,
+    19840,
+    19848,
+    19851,
+    19852,
+    19855,
+    19859,
+    19874,
+    19875,
+    19879,
+    19880,
+    19881,
+    19882,
+    19883,
+    19884,
+    19885,
+    19887,
+    19889,
+    19890,
+    19891,
+    19892,
+    19893,
+    19896,
+    19897,
+    19899,
+    19902,
+    19903,
+    19906,
+    19908,
+    19910,
+    19911,
+    19915,
+    19916,
+    19920,
+    19922,
+    19925,
+    19926,
+    19929,
+    19930,
+    19932,
+    19933,
+    19937,
+    19939,
+    19940,
+    19941,
+    19944,
+    19946,
+    19948,
+    19949,
+    19950,
+    19955,
+    19957,
+    19965,
+    19968,
+    19969,
+    19971,
+    19973,
+    19978,
+    19979,
+    19986,
+    19987,
+    19989,
+    19993,
+    19994,
+    19995,
+    19997,
+    19999,
+    20003,
+    20006,
+    20007,
+    20008,
+    20009,
+    20013,
+    20014,
+    20015,
+    20018,
+    20024,
+    20025
+  ],
+  "sourceWikis": [
+    {
+      "url": "https://www.ercot.com/files/docs/2025/10/27/EIR-Oncor-and-AEPSC-Drill-Hole-to-Sand-Lake-to-Solstice-765-kV-Line-Project-Status-Update-RPG-Oct-2025.pdf",
+      "title": "Lyra Storage: 500 MW Battery Queue Project in Borden County, Texas"
+    },
+    {
+      "url": "https://adaircounty.iowa.gov/files/meetings/2024-04-24_minutes_5812.pdf",
+      "title": "Applied Digital Adair County Data Center Proposal: Current Delivery Unverified"
+    },
+    {
+      "url": "https://westerniowatoday.com/2026/09/23/adair-county-supervisors-hold-public-hearing-on-data-center-ordinance/",
+      "title": "Adair County Supervisors Hold Public Hearing on Data Center Ordinance | Western Iowa Today 96.5 KSOM KS 95.7 - News for Atlantic, Audubon, Harlan, Red Oak and Western Iowa"
+    },
+    {
+      "url": "https://ir.applieddigital.com/news-events/press-releases/detail/161/applied-digital-brings-an-additional-75-mw-of-ai",
+      "title": "Applied Digital Brings an Additional 75 MW of AI Infrastructure Online at Polaris Forge 1 :: Applied Digital Corporation (APLD)"
+    },
+    {
+      "url": "https://ir.applieddigital.com/news-events/press-releases/detail/133/applied-digital-achieves-ready-for-service-for-phase-1-at",
+      "title": "Applied Digital Achieves Ready for Service for Phase 1 at Polaris Forge 1 Building 1 for CoreWeave :: Applied Digital Corporation (APLD)"
+    },
+    {
+      "url": "https://www.avaiodigital.com/updates/avaio-digital-breaks-ground-on-6-billion-brandon-data-center-campus-leading-mississippi-contractor-begins-site-work",
+      "title": "AVAIO Digital Breaks Ground on $6 Billion Brandon Data Center Campus; Leading Mississippi Contractor Begins Site Work"
+    },
+    {
+      "url": "https://www.avaiodigital.com/projects",
+      "title": "Projects"
+    },
+    {
+      "url": "https://bluestemdatacenter.com/cloverleaf-evaluating-alternative-locations-for-power-generation-facility/",
+      "title": "Cloverleaf Evaluating Alternative Locations for Power Generation Facility - Project Bluestem"
+    },
+    {
+      "url": "https://www.forestgrove-or.gov/DocumentCenter/View/2881/250605---Enterprise-Zone-Contract---Heather-Street-Owner-LLC---Crane-Data-Centers-Inc---City-of-Forest-Grove",
+      "title": "City of Forest Grove Enterprise Zone Property Tax Abatement Contract No. 25-001"
+    },
+    {
+      "url": "https://www.cranedc.com/data-centers/oregon-data-center",
+      "title": "Data Centers: Oregon | Crane Data Centers"
+    },
+    {
+      "url": "https://www.metrobloks.com/sites/detroit",
+      "title": "metrobloks"
+    },
+    {
+      "url": "https://planetdetroit.org/2025/12/southfield-data-center-approval/",
+      "title": "Southfield greenlights divisive data center – Planet Detroit"
+    },
+    {
+      "url": "https://www.energy.ca.gov/powerplant/backup-generating-system/san-jose-data-center",
+      "title": "San Jose Data Center | California Energy Commission"
+    },
+    {
+      "url": "https://qtsdatacenters.com/?jet_download=a61fdd80da7828f0eb7422da99880b5dd80f2b64",
+      "title": "QTS Cedar Rapids: Planned $10 Billion, Seven-Building Data Center Campus"
+    },
+    {
+      "url": "https://www.related-digital.com/wyoming",
+      "title": "Vertically integrated data center development"
+    },
+    {
+      "url": "https://www.related-digital.com/news/12-billion-data-center-breaks-ground-in-cheyenne-promises-water-free-operations",
+      "title": "Related Digital | Data Centers Done Right"
+    },
+    {
+      "url": "https://vantage-dc.com/data-center-locations/north-america/port-washington-wisconsin",
+      "title": "Port Washington, Wisconsin - Vantage Data Centers"
+    },
+    {
+      "url": "https://electionresults.ewashtenaw.org/electionreporting/aug2026/index.jsp",
+      "title": "Election"
+    },
+    {
+      "url": "https://www.wemu.org/wemu-news/2026-08-05/augusta-township-voters-overturn-data-center-rezoning",
+      "title": "Augusta Township voters overturn data center rezoning | WEMU-FM"
+    },
+    {
+      "url": "https://augustatownship.org/wp-content/uploads/2025/05/Data_Center_Review.pdf",
+      "title": "Augusta Township Data Center Rezoning — Land Use and Conditional Zoning Analysis"
+    },
+    {
+      "url": "https://psc.mo.gov/Electric/PSC_Grants_CCN_for_Ameren_Missouri_Energy_Generation_Project_-_pr-26-71",
+      "title": "PSC Grants CCN for Ameren Missouri Energy Generation Project - pr-26-71 | Missouri Public Service Commission"
+    },
+    {
+      "url": "https://s21.q4cdn.com/448935352/files/doc_events/2026/May/18/AGA-Financial-Forum-2026-vFINAL_.pdf",
+      "title": "Ameren — AGA Financial Forum 2026"
+    },
+    {
+      "url": "https://www.grantpud.org/ru/block/documents/68e984086c405-2025-10-14-commission-meeting-packet.pdf",
+      "title": "Grant PUD — October 14, 2025 Commission Meeting Packet"
+    },
+    {
+      "url": "https://www.grantpud.org/generation/",
+      "title": "Grant PUD: Generation"
+    },
+    {
+      "url": "https://www.prnewswire.com/news-releases/doral-renewables-celebrates-commercialization-of-the-remaining-900-mw-of-mammoth-solar-302901715.html",
+      "title": "Doral Renewables Celebrates Commercialization of the Remaining 900 MW of Mammoth Solar"
+    },
+    {
+      "url": "https://wecenergygroup.com/invest/annualreports/wec2025-annual-report.pdf",
+      "title": "WEC Energy Group — 2025 Annual Report"
+    },
+    {
+      "url": "https://tiptopsolar.invenergy.com/",
+      "title": "Tip Top Solar Energy Center"
+    },
+    {
+      "url": "https://www.excelsiorenergycenter.com/project-documents",
+      "title": "Excelsior Energy Center   » Article 10 Project Documents"
+    },
+    {
+      "url": "https://dps.ny.gov/system/files/documents/2023/07/dps-2022-2023-annual-report-7.13.23.pdf",
+      "title": "New York Department of Public Service — 2022–2023 Annual Report"
+    },
+    {
+      "url": "https://nyisoviewer.etariff.biz/viewerdoclibrary/Filing/Filing5332/5332FilingSections/FID5332%20Amnd%20LGIA%20Exelsior%20Energy%20SA2689%20cln%20PUBLIC_37300.htm",
+      "title": "NYISO Service Agreement No. 2689 — Amended LGIA for Excelsior Energy Center"
+    },
+    {
+      "url": "https://www.nexteraenergyresources.com/singer-solar.html",
+      "title": "NextEra Energy Resources | Singer Solar"
+    },
+    {
+      "url": "https://www.eia.gov/electricity/monthly/epm_table_grapher.php?t=epmt_6_05",
+      "title": "Electric Power Monthly - U.S. Energy Information Administration (EIA)"
+    },
+    {
+      "url": "https://www.nexteraenergyresources.com/singer-solar/project-overview.html",
+      "title": "NextEra Energy Resources | Singer Solar | Project"
+    },
+    {
+      "url": "https://aligneddc.com/press-release/project-phoenix-data-center-shippingport-pa/",
+      "title": "Project Phoenix Data Center Campus Breaks Ground | Aligned"
+    },
+    {
+      "url": "https://cloudhq.com/campus/ord-campus/",
+      "title": "CloudHQ ORD Campus"
+    },
+    {
+      "url": "https://www.michigan.gov/mpsc/consumer/be-informed/tips/data-center-and-electric-service",
+      "title": "Case No. U-22058, DTE Electric’s Application for Approval of Special Contracts with Google LLC"
+    },
+    {
+      "url": "https://www.kentuckypower.com/lib/docs/company/about/MDC_Power_Fact_Sheet_Oct_2026.pdf",
+      "title": "TeraWulf Muskie at EastPark: Proposed 1 GW Power Agreement; First Service October 2028"
+    },
+    {
+      "url": "https://www.coloradopolitics.com/2026/09/23/aurora-residents-gather-to-share-data-center-concerns/",
+      "title": "Aurora residents gather to oppose data center near them"
+    },
+    {
+      "url": "https://baxtel.com/campus/vantage-trident-at-windler-campus",
+      "title": "Vantage: Trident at Windler Campus Data Center Campus"
+    },
+    {
+      "url": "https://www.dominionenergy.com/about/delivering-energy/solar-energy-projects/virginia-solar-projects/randolph",
+      "title": "Randolph | Dominion Energy"
+    },
+    {
+      "url": "https://virginiabusiness.com/charlotte-county-approves-va-s-largest-solar-farm/",
+      "title": "Charlotte County approves Va.’s largest solar farm - Virginia Business"
+    },
+    {
+      "url": "https://unlockingadvancedenergy.com/nc/",
+      "title": "North Carolina - Unlocking Advanced Energy"
+    },
+    {
+      "url": "https://www.oregon.gov/energy/facilities/Pages/ESP.aspx",
+      "title": "Energy : Sunstone Solar Project : Facilities : State of Oregon"
+    },
+    {
+      "url": "https://revolve-renewablepower.com/revolve-receives-us3-4-million-bouse-solar-and-storage-project-milestone-payment/",
+      "title": "Revolve Receives US$3.4 million Bouse Solar and Storage Project Milestone Payment - Revolve Renewable Power"
+    },
+    {
+      "url": "https://americas.rwe.com/our-energy/storage/storage-projects-and-locations/fourth-quarter-bess/",
+      "title": "Fourth Quarter BESS strengthens Maryland grid | RWE In The Americas"
+    },
+    {
+      "url": "https://www.avaiodigital.com/developments/appomattox-virginia",
+      "title": "Appomattox, Virginia Campus | AVAIO Digital"
+    },
+    {
+      "url": "https://www.avaiodigital.com/updates/avaio-digital-to-build-3-billion-data-center-campus-on-452-acres-in-appomattox-county-virginia",
+      "title": "AVAIO Digital to Build $3 Billion Data Center Campus on 452 Acres in Appomattox County, Virginia"
+    },
+    {
+      "url": "https://www.charlottenc.gov/files/sharedassets/city/v/1/growth-and-development/planning-and-zoning/rezoning/documents/2024-petitions/final-staff-analysis/2024_144_fsa.pdf",
+      "title": "Rezoning Petition 2024-144 — Final Staff Analysis"
+    },
+    {
+      "url": "https://www.wfae.org/energy-environment/2026-08-21/halfway-through-the-charlotte-data-center-moratorium-the-city-still-has-questions?_amp=true",
+      "title": "'Data centers are not priorities over citizens': Charlotte mulls policy as moratorium ticks away | WFAE 90.7 - Charlotte's NPR News Source"
+    },
+    {
+      "url": "https://storage.googleapis.com/gweb-uniblog-publish-prod/documents/Press_Release__Google_Deepens_Missouri_Roots.pdf",
+      "title": "Google New Florence: New Data Center Within $15B Missouri Infrastructure Investment"
+    },
+    {
+      "url": "https://www.prometheushyperscale.com/news/prometheus-hyperscale-secures-unanimous-conditional-use-permit-approval-from-uinta-county-commissioners",
+      "title": "Prometheus Hyperscale Secures Unanimous Conditional Use Permit Approval from Uinta County Commissioners | PrometheusHyperscale"
+    },
+    {
+      "url": "https://cypresscreekenergy.com/steel-river-energy-center/",
+      "title": "Steel River Energy Center — Cypress Creek"
+    },
+    {
+      "url": "https://cypresscreekenergy.com/news/steel-river-groundbreaking/",
+      "title": "Cypress Creek and Google Break Ground on America’s Largest Solar Project"
+    },
+    {
+      "url": "https://doral-llc.com/solution/battery-storage-2/",
+      "title": "SOLAR+STORAGE |"
+    },
+    {
+      "url": "https://doral-energy.com/wp-content/uploads/2026/05/DORAL-Earnings-Presentation-2025_eng_20.4.26-%D7%9E%D7%95%D7%A0%D7%92%D7%A9.pdf",
+      "title": "Doral 2025 Earnings Presentation — April 20, 2026"
+    },
+    {
+      "url": "https://psc.wi.gov/Pages/CommissionActions/CasePages/VistaSandsSolarProject.aspx",
+      "title": "PSC\r\n            \r\n            \r\n            Vista Sands Solar Project"
+    },
+    {
+      "url": "https://vistasandssolar.com/",
+      "title": "Home | Vista Sands Solar"
+    },
+    {
+      "url": "https://assets.contentstack.io/v3/assets/blt1b4c58e01961ab11/blt10f3898f2ca1fb82/67a12162c0a3738518408c75/INV_ProjectFactSheet_Beeline_Solar_Feb_2025.pdf?branch=production",
+      "title": "Invenergy Beeline Solar in Burt County: 250 MW First Project; Target Q4 2028"
+    },
+    {
+      "url": "https://www.nexteraenergyresources.com/high-spring-solar/project-overview.html",
+      "title": "NextEra Energy Resources | High Spring Solar | Project"
+    },
+    {
+      "url": "https://www.pjm.com/pjmfiles/pub/planning/project-queues/facilities/af2027_fac.pdf",
+      "title": "Zion AF2-027: 50 MW Battery Uprate; 635 MW Combined Facility Output"
+    },
+    {
+      "url": "https://www.pjm.com/pjmfiles/pub/planning/project-queues/impact_studies/af2027_imp.html",
+      "title": "AF2-027 System Impact Study Report"
+    },
+    {
+      "url": "https://www.fox13news.com/news/haines-city-data-center-project-water-capacity-shortage",
+      "title": "Haines City data center project stalled by water capacity shortage | FOX 13 Tampa Bay"
+    },
+    {
+      "url": "https://www.flybouldercity.com/1174/TS2-Data-Center-Proposal-Withdrawn-76202",
+      "title": "TS2 Data Center Proposal (Withdrawn 7.6.2026) | Boulder City, NV - Official Website"
+    },
+    {
+      "url": "https://biologicaldiversity.org/programs/public_lands/pdfs/2026-0213-Boulder-City-Stay-Granted.pdf",
+      "title": "Townsite: Federal Data Center Authorization Stayed September 1, 2026"
+    },
+    {
+      "url": "https://www.alcovedevelopment.com/projects/project-catalyst",
+      "title": "Project Catalyst · Osawatomie, KS · Alcove Development"
+    },
+    {
+      "url": "https://www.archerdatacenters.com/minneapolis",
+      "title": "Minneapolis — Archer Datacenters"
+    },
+    {
+      "url": "https://faribaultmn.gov/815/Archer-Datacenters",
+      "title": "Archer Datacenters | Faribault, MN"
+    },
+    {
+      "url": "https://www.datacenters.google/locations/nebraska/",
+      "title": "Nebraska, USA â Google Data Center Location"
+    },
+    {
+      "url": "https://datacenters.google/locations/storey-county-nevada/",
+      "title": "Storey County, Nevada â Google Data Center Location"
+    },
+    {
+      "url": "https://www.loslunasnm.gov/DocumentCenter/View/15956",
+      "title": "Meta Los Lunas: Official Budget Identifies $800M 2025 Expansion"
+    },
+    {
+      "url": "https://datacenters.atmeta.com/2024/05/hello-montgomery/",
+      "title": "Hello, Montgomery! - Meta Data Centers"
+    },
+    {
+      "url": "https://www.arcadis.com/en/projects/north-america/united-states/nearing-net-zero",
+      "title": "Near-net-zero data center campus in San Jose | Project | Arcadis"
+    },
+    {
+      "url": "https://www.lapaz.gov/AgendaCenter/ViewFile/Minutes/_01052026-1135",
+      "title": "Copia Stanley: La Paz Approves 500 MW PV/BESS Permit; Operator Lists Larger Scope"
+    },
+    {
+      "url": "https://sites.google.com/view/ccwel-resources/",
+      "title": "CCWEL Resources"
+    },
+    {
+      "url": "https://rowan.com/portfolio/bauxite-i-ii-iii/",
+      "title": "Bauxite I, II & III | Hyperscale Data Center Campus | Maryland"
+    },
+    {
+      "url": "https://www.aboutamazon.com/news/company-news/amazon-25-billion-mississippi-data-centers",
+      "title": "Amazon to invest $25 billion in Mississippi data centers"
+    },
+    {
+      "url": "https://blog.google/innovation-and-ai/infrastructure-and-cloud/global-network/alabama-investment-june-2026/",
+      "title": "Google expands Alabama data center campus, funds community efforts"
+    },
+    {
+      "url": "https://datacenters.google/locations/alabama/",
+      "title": "Jackson County, Alabama â Google Data Center Location"
+    },
+    {
+      "url": "https://cdn.snco.gov/ludev/document/Data%20Centers/CU-26-203%20Compass%20Datacenters%20SW%2085th%20St/August28thUpdate/Operations%20Plan%20-%20Revised.pdf",
+      "title": "Compass Datacenters — Revised Operations Plan"
+    },
+    {
+      "url": "https://menlo-digital.com/portfolio/md-phx1-phoenix/",
+      "title": "MD-PHX1 (Phoenix) – Menlo Digital"
+    },
+    {
+      "url": "https://www.pjm.com/pjmfiles/pub/planning/project-queues/TC2/PHASE_2/AG2-163/AG2-163_imp_PHASE_2.htm",
+      "title": "AG2-163 Phase II System Impact Study Report"
+    },
+    {
+      "url": "https://brightnightpower.com/about-us/news-insights/brightnight-hosts-groundbreaking-ceremony-for-pioneer-clean-energy-center-in-yuma-county-arizona/",
+      "title": "BrightNight Hosts Groundbreaking Ceremony for Pioneer Clean Energy Center in Yuma County, Arizona – BrightNight"
+    },
+    {
+      "url": "https://www.phoenix.gov/content/dam/phoenix/cityclerksite/city-council-meeting-files/2026/3-25-26%20Formal%20Agenda-FINAL.pdf",
+      "title": "Phoenix City Council Formal Agenda — Item 80, Aligned Behrend Waiver"
+    },
+    {
+      "url": "https://ir.applieddigital.com/sec-filings/all-sec-filings/content/0001144879-26-000057/apldq127earningsrelease.htm",
+      "title": "Document"
+    },
+    {
+      "url": "https://www.avaiodigital.com/updates/avaio-digital-announces-new-large-scale-ai-ready-data-center-and-power-campus-in-little-rock-arkansas",
+      "title": "AVAIO Digital Announces New Large-Scale AI-Ready Data Center and Power Campus in Little Rock, Arkansas"
+    },
+    {
+      "url": "https://www.avaiodigital.com/developments/little-rock-arkansas",
+      "title": "Little Rock, Arkansas Campus | AVAIO Digital"
+    },
+    {
+      "url": "https://www.powerhousedata.com/data-center/powerhouse-charlotte",
+      "title": "PowerHouse Charlotte"
+    },
+    {
+      "url": "https://www.eastwhiteland.org/Planning%20&%20Development/Sentinel%2C%20Green%20Fig%20Data%20Center%20on%20Swedesford%20Road/%212026/Data%20Center%20Approvals%20Matrix%20for%20Web%2009.30.26.pdf?t=202609301511150",
+      "title": "Data Center Approvals Matrix — October 2026"
+    },
+    {
+      "url": "https://public-inspection.federalregister.gov/2025-15163.pdf",
+      "title": "TVA Hillsboro Solar Final EIS — Record of Decision"
+    },
+    {
+      "url": "https://efiling.energy.ca.gov/GetDocument.aspx?tn=272803&DocumentContentId=120539",
+      "title": "Darden Monthly Compliance Report No. 15 — August 2026"
+    },
+    {
+      "url": "https://assets.montgomerycountymd.gov/files/2026-05/CU24-13.a.A-Exhibit-4-a-Final-Statement-of-Case-and-Operations.pdf",
+      "title": "Atmosphere DC Dickerson — Final Statement of Case and Operations"
+    },
+    {
+      "url": "https://www.wwcowa.gov/government/community_development/amazon_data_center.php",
+      "title": "Amazon Data Center"
+    },
+    {
+      "url": "https://www.wwcowa.gov/document_center/commdev/Projects/Amazon/AWS%20Wallula%20Gap%20FAQs-7.17.pdf?t=202609141209470",
+      "title": "AWS Wallula Gap FAQs — Amazon-provided, county-hosted"
+    },
+    {
+      "url": "https://epaper.inforum.com/infinity/article_popover_share.aspx?guid=6973a600-6210-45a1-945d-0b2aec59ae57&share=true",
+      "title": "Coal Creek: Proposed Data-Center Park Demand Up to 300 MW; Budget Unpublished"
+    },
+    {
+      "url": "https://www.rockinst.org/blog/updates-on-the-cloud-more-moratoriums-on-data-centers/",
+      "title": "Updates on the Cloud: More Moratoriums on Data Centers | Rockefeller Institute of Government"
+    },
+    {
+      "url": "https://brightnightpower.com/pepper-hammock-community/",
+      "title": "Pepper Hammock- Community – BrightNight"
+    },
+    {
+      "url": "https://www.terraform.com/news-press/terraform-power-announces-acquisition-of-1-56-gw-solar-project-from-hexagon-energy-in-lee-county-illinois/",
+      "title": "TERRAFORM POWER ANNOUNCES ACQUISITION OF 1.56 GW SOLAR PROJECT FROM HEXAGON ENERGY IN LEE COUNTY, ILLINOIS - TerraForm Power Operating, LLC"
+    },
+    {
+      "url": "https://scstatehouse.gov/agendas/126j15627.pdf",
+      "title": "Joint Bond Review Committee — Jefferies Site Lease Proposal"
+    },
+    {
+      "url": "https://dms.psc.sc.gov/Attachments/Order/d347427e-bc48-496b-aba1-3b5d85d4183c",
+      "title": "Pinopolis Reliability: 300 MW / 1,200 MWh; Contractual COD December 2027"
+    },
+    {
+      "url": "https://co-douglas-wa.smartgovcommunity.com/PermittingPublic/PermitLandingPagePublic/Index/262017e7-3452-41d0-8c1c-b404010c3ca1",
+      "title": "Douglas County, WA Public Portal"
+    },
+    {
+      "url": "https://psc.maryland.gov/news/2026/maryland-public-service-commission-announces-first-round-energy-storage-awards/",
+      "title": "Maryland Public Service Commission Announces First-Round Energy Storage Awards - Maryland Public Service Commission"
+    },
+    {
+      "url": "https://psc.maryland.gov/news/2026/maryland-public-service-commission-invites-comments-on-next-generation-act-transmission-connected-energy-storage-proposals-round-1/",
+      "title": "Maryland Public Service Commission Invites Comments on Next Generation Act Transmission-Connected Energy Storage Proposals – Round 1 - Maryland Public Service Commission"
+    },
+    {
+      "url": "https://www.pjm.com/pjmfiles/pub/planning/project-queues/TC2/PHASE_2/AG2-107/AG2-107_imp_PHASE_2.htm",
+      "title": "AG2-107 Phase II System Impact Study Report"
+    },
+    {
+      "url": "https://www.pjm.com/pjmfiles/pub/planning/project-queues/TC2/PHASE_2/AG2-106/AG2-106_imp_PHASE_2.htm",
+      "title": "AG2-106 Phase II System Impact Study Report"
+    },
+    {
+      "url": "https://sanjose.legistar.com/View.ashx?M=F&ID=14917877&GUID=45941F3A-0A60-42A1-8F04-B09281C6E2F3",
+      "title": "Prologis STEM Park Building D Concept: 99 MW Utility / 72 MW IT"
+    },
+    {
+      "url": "https://www.pjm.com/pjmfiles/pub/planning/project-queues/TC2/PHASE_2/AG2-077/AG2-077_imp_PHASE_2.htm",
+      "title": "AG2-077 Phase II System Impact Study Report"
+    },
+    {
+      "url": "https://opsportal.spp.org/documents/studies/files/2025_Generation_Studies/REP2253_SPP_Surplus_Interconnection_Service_Impact_Study_GEN-2025-SR1_TechnicalReport_r1.pdf",
+      "title": "Surplus Impact Study GEN-2025-SR1 — Technical Report REP-2253"
+    },
+    {
+      "url": "https://www.pjm.com/pjmfiles/pub/planning/project-queues/TC2/PHASE_2/AG2-571/AG2-571_imp_PHASE_2.htm",
+      "title": "AG2-571 Phase II System Impact Study Report"
+    },
+    {
+      "url": "https://www.iso-ne.com/static-assets/documents/2023/08/qp_1143_i_3_9_letter_jup_23_g02_t02_es_23_t56.pdf",
+      "title": "Jupiter Mystic QP1143: 500 MW / 2,000 MWh Study Approval"
+    },
+    {
+      "url": "https://williamsnd.civicweb.net/document/177085/Teton%20Digital%20-%20Dry%20Fork%20Data%20Center%20One%20Pager.pdf",
+      "title": "Teton Digital Trinity 1: 100 MW Dry Fork Proposal, $200M-Plus Estimate"
+    },
+    {
+      "url": "https://williamsnd.civicweb.net/document/177024/New%20Bergstrom%20Teton%20Digital%20-%20Memo%20to%20BoCC.pdf?handle=03D5A87DC4794223B412E21F67BD1D7D",
+      "title": "Teton Digital CUP Application Denial Appeal — Staff Memorandum"
+    },
+    {
+      "url": "https://www.percherondatacenter.com/about",
+      "title": "About — Percheron Data Center"
+    },
+    {
+      "url": "https://www.pjm.com/pjmfiles/pub/planning/project-queues/TC2/PHASE_2/AH1-482/AH1-482_imp_PHASE_2.htm",
+      "title": "AH1-482 Phase II System Impact Study Report"
+    },
+    {
+      "url": "https://dnr.mo.gov/air/business-industry/air-permits/warrenton-data-center-102026-007",
+      "title": "Warrenton Data Center, 102026-007 | Missouri Department of Natural Resources"
+    },
+    {
+      "url": "https://ecode360.com/WA3466/document/753231245.pdf",
+      "title": "Warrenton Board of Aldermen — January 20, 2026 meeting"
+    },
+    {
+      "url": "https://www.greatplainsenergystorage.com/",
+      "title": "Great Plains Energy Storage"
+    },
+    {
+      "url": "https://www.pjm.com/pjmfiles/pub/planning/project-queues/TC1/FINAL/AG1-411/AG1-411_imp_FINAL.htm",
+      "title": "AG1-411 Final System Impact Study (Retool 2) Report"
+    },
+    {
+      "url": "https://www.pjm.com/pjmfiles/pub/planning/project-queues/TC1/FINAL/AF2-319/AF2-319_imp_FINAL.htm",
+      "title": "AF2-319 Final System Impact Study (Retool 2) Report"
+    },
+    {
+      "url": "https://efiling.energy.ca.gov/GetDocument.aspx?DocumentContentId=120571&tn=272831",
+      "title": "Prologis Silver Creek: 99 MW Total-Load Proposal Filed with CEC"
+    },
+    {
+      "url": "https://www.pjm.com/-/media/DotCom/committees-groups/committees/mc/2024/20241216-web/20241216-item-05c---legal-report.ashx",
+      "title": "PJM Members Committee — December 16, 2024 Legal Report"
+    },
+    {
+      "url": "https://www.consumersenergy.com/news-releases/news-release-details/2025/01/29/consumers-energy-and-hecate-energy-break-ground-on-360-mw-sunfish-solar-2-renewable-energy-project",
+      "title": "Consumers Energy and Hecate Energy Break Ground on 360 MW Sunfish Solar 2 Renewable Energy Project | Consumers Energy"
+    },
+    {
+      "url": "https://spp.org/documents/76715/20260514_4876_balko%20energy%20storage%20surplus%20gia_er26-2526.pdf",
+      "title": "SPP Filing — Balko Energy Storage Surplus GIA"
+    },
+    {
+      "url": "https://a4c61d3d-5169-4963-b201-82c743ab335a.usrfiles.com/ugd/a4c61d_68b57ad551714876be50150707eba4c4.pdf",
+      "title": "CENTRA MSP1: 8.1 MW Critical Capacity, Phases in 2026–2027"
+    },
+    {
+      "url": "https://www.centradigital.com/data-centers/msp1",
+      "title": "Minneapolis 1 | CENTRA Digital"
+    },
+    {
+      "url": "https://www.govinfo.gov/content/pkg/USCOURTS-tnmd-3_26-cv-01143/pdf/USCOURTS-tnmd-3_26-cv-01143-0.pdf",
+      "title": "U.S. District Court — DCB Nashville v. Metropolitan Government, Document 28"
+    },
+    {
+      "url": "https://www.databank.com/data-centers/denver/centennial-campus/centennial/",
+      "title": "Centennial Data Center at Denver’s Centennial Campus"
+    },
+    {
+      "url": "https://www.dcblox.com/wp-content/uploads/2024/06/DC-BLOX-hyperscale-data-center.pdf",
+      "title": "DC BLOX Birmingham BHM1-B: 40 MW Critical / 60 MW Gross Proposal"
+    },
+    {
+      "url": "https://phoenix.legistar.com/View.ashx?GUID=74141990-EF5C-4F71-A85F-49024142BE6A&ID=15658879&M=F",
+      "title": "5C Binding Waiver — Additional Information / Exhibit A"
+    },
+    {
+      "url": "https://www.pantheragrid.com/projects/hillsboro-solar-in-lawrence-county-alabama/",
+      "title": "Hillsboro Solar - Panthera Grid Partners"
+    },
+    {
+      "url": "https://www.cyrusone.com/data-centers/north-america/totowa-nj-nym2",
+      "title": "Totowa, NJ: NYM2 | CyrusOne"
+    },
+    {
+      "url": "https://epd.georgia.gov/document/document/pa1123-4/download",
+      "title": "Aligned ATL-01 Lithia Springs: Air-Permit Review in 2023"
+    },
+    {
+      "url": "https://aligneddc.com/press-release/aligned-energy-breaks-ground-on-second-salt-lake-metro-data-center/",
+      "title": "Aligned Breaks Ground on Second Salt Lake Metro Data Center - Aligned Data Centers"
+    },
+    {
+      "url": "https://www.cnmv.es/webservices/verdocumento/ver?t=%7Bbc593021-c325-41b5-b7dc-f4aeef741d49%7D",
+      "title": "Iberdrola Results September 2026 — United States Avangrid"
+    },
+    {
+      "url": "https://aligneddc.com/press-release/aligned-data-centers-expands-into-pacific-northwest-with-new-hillsboro-campus-to-support-hyperscale-large-enterprise-demand/",
+      "title": "Aligned Data Centers Expands into Pacific Northwest with New Hillsboro Campus to Support Hyperscale & Large Enterprise Demand - Aligned Data Centers"
+    },
+    {
+      "url": "https://mde.maryland.gov/programs/permits/AirManagementPermits/Documents/Public-Review/Alt%20NSPS/AlignedDataCentersAirPermittoConstructApplication.pdf",
+      "title": "Aligned IAD04 Frederick: July 2024 Air-Permit Application"
+    },
+    {
+      "url": "https://avantus.com/news/Avantus-Secures-Over-525-Million-to-Advance-Aratina2-Solar-and-Storage-Project-in-Southern-California",
+      "title": "Avantus Secures Over $525 Million to Advance Aratina 2 Solar and Storage Project in Southern California | Avantus"
+    },
+    {
+      "url": "https://www.prnewswire.com/news-releases/oci-energy-and-cps-energy-break-ground-on-alamo-city-battery-energy-storage-project-302776807.html",
+      "title": "OCI Energy and CPS Energy break ground on Alamo City Battery Energy Storage Project"
+    },
+    {
+      "url": "https://www.acgov.org/cda/planning/landuseprojects/documents/FinalAramisVol2/AramisSolar_FinalEIR_Volume-II.pdf",
+      "title": "Aramis Solar Energy Generation and Storage Project — Final EIR Volume II"
+    },
+    {
+      "url": "https://aligneddc.com/wp-content/uploads/2025/09/ALI_ChicagoIIBldgSpecs241015.pdf",
+      "title": "Aligned ORD-02: 36 MW, 228,768 Sqft Operator Specification"
+    },
+    {
+      "url": "https://aligneddc.com/press-release/aligned-to-expand-dallas-fort-worth-metro-area-campus-with-second-hyperscale-data-center/",
+      "title": "Aligned to Expand Dallas-Fort Worth Metro Area Campus with Second Hyperscale Data Center - Aligned Data Centers"
+    },
+    {
+      "url": "https://aligneddc.com/press-release/aligned-energy-completes-phase-one-of-ashburn-data-center-campus/",
+      "title": "Aligned Completes Phase One of Ashburn Data Center Campus - Aligned Data Centers"
+    },
+    {
+      "url": "https://aligneddc.com/press-release/aligned-data-centers-expands-north-american-footprint-with-new-hyperscale-campus-in-northeast-ohio/",
+      "title": "Aligned Data Centers Expands North American Footprint with New Hyperscale Campus in Northeast Ohio - Aligned Data Centers"
+    },
+    {
+      "url": "https://www.aes-hawaii.com/hawaii/project/waiawa-phase-2-solar-storage",
+      "title": "Waiawa Phase 2 Solar + Storage | AES Hawai‘i"
+    },
+    {
+      "url": "https://www.pressreporter.com/issues/2026-02-03/pages/8/",
+      "title": "February  3, 2026 Issue, Page 8 of 13 | Lamesa Press-Reporter"
+    },
+    {
+      "url": "https://efiling.energy.ca.gov/GetDocument.aspx?DocumentContentId=103485&tn=266435",
+      "title": "CEC October 8, 2025 backup materials — Athos storage environmental addendum"
+    },
+    {
+      "url": "https://aligneddc.com/blog/aligned-tops-out-its-second-ashburn-va-hyperscale-data-center/",
+      "title": "Aligned Tops Out Its Second Ashburn, VA Hyperscale Data Center - Aligned Data Centers"
+    },
+    {
+      "url": "https://aligneddc.com/press-release/aligned-data-centers-expands-presence-in-northern-virginia-with-new-sterling-hyperscale-campus/",
+      "title": "Aligned Data Centers Expands Presence in Northern Virginia with New Sterling Hyperscale Campus - Aligned Data Centers"
+    },
+    {
+      "url": "https://kwbg.com/iowa-utilities-board-issues-electric-generating-certificate-for-grand-junction-solar-battery-storage-project/",
+      "title": "Iowa Utilities Board Issues Electric Generating Certificate for Grand Junction Solar, Battery Storage Project – KWBG Radio | Boone, Iowa"
+    },
+    {
+      "url": "https://cdn.misoenergy.org/MTEP23%20Chapter%204%20-%20Reliability%20Studies631230.pdf",
+      "title": "MISO MTEP23 Chapter 4 — New Fauna 345 kV Sub for Flora Solar J1679"
+    },
+    {
+      "url": "https://www.energystorageconsultants.com/advisory/Portfolio-Sale-PVS-Teaser-9-2026.pdf",
+      "title": "Palladium / Fractal — Projects Indigo and Allthorn, September 2026 teaser"
+    },
+    {
+      "url": "https://www.energystorageconsultants.com/palladium-portfolio-sale-ercot-south-pv-bess/",
+      "title": "Palladium Portfolio Sale – ERCOT South PV+S - Fractal Energy Storage Consultants"
+    },
+    {
+      "url": "https://interchange.puc.texas.gov/Documents/35077_2007_1447749.PDF",
+      "title": "Anatole Battery: 200 MW at POI; June 2027 Queue Target"
+    },
+    {
+      "url": "https://www.anatoleenergystorage.com/",
+      "title": "Home | Anatole Renewable Energy"
+    },
+    {
+      "url": "https://lewisbuilds.com/projects/phx-07-2-data-center-2/",
+      "title": "PHX 07-2 data center in Phoenix"
+    },
+    {
+      "url": "https://aligneddc.com/press-release/aligned-breaks-ground-on-project-caprock/",
+      "title": "Texas Data Center Campus in Hale County: Project Caprock"
+    },
+    {
+      "url": "https://www.pjm.com/pjmfiles/pub/planning/project-queues/TC2/PHASE_1/AG2-330/AG2-330_imp_PHASE_1.htm",
+      "title": "PJM Phase I System Impact Study — Dumont–Greentown AG2-330"
+    },
+    {
+      "url": "https://aligneddc.com/press-release/aligned-expands-phoenix-footprint-with-new-hyperscale-data-center/",
+      "title": "Aligned Expands Phoenix Campus, Adding Fourth Data Center for Hyperscale Growth"
+    },
+    {
+      "url": "https://www.shell.com/investors/results-and-reporting/annual-report/_jcr_content/root/main/section_2113846431/link_list/links/item6.stream/1773292256746/543dfa9bd532f695e4cc282b0e19080eb2e61f00/additional-information-ar25.pdf",
+      "title": "Shell Annual Report 2025 — Additional Information: Group subsidiaries"
+    },
+    {
+      "url": "https://www.pjm.com/pjmfiles/pub/planning/project-queues/TC2/PHASE_2/AG2-660/AG2-660_imp_PHASE_2.htm",
+      "title": "PJM Phase II System Impact Study — Nelson–Electric Junction AG2-660"
+    },
+    {
+      "url": "https://ir.applieddigital.com/news-events/press-releases/detail/61/applied-digital-hosts-landmark-ribbon-cutting-celebrating",
+      "title": "Applied Digital Hosts Landmark Ribbon Cutting Celebrating the Energization of its 180MW Facility in Ellendale, North Dakota :: Applied Digital Corporation (APLD)"
+    },
+    {
+      "url": "https://cypresscreekenergy.com/news/steel-river-financing/",
+      "title": "Cypress Creek Energy Secures $3.5 Billion to Advance One of America’s Largest Solar and Storage Projects"
+    },
+    {
+      "url": "https://www.databank.com/resources/press-releases/databank-further-expands-capacity-in-slc5-data-center-in-salt-lake-city/",
+      "title": "DataBank Further Expands Capacity in SLC5 Data Center in Salt Lake City"
+    },
+    {
+      "url": "https://www.databank.com/wp-content/uploads/2025/11/SLC5-datasheet.pdf",
+      "title": "DataBank SLC5 — Q425V1 facility datasheet"
+    },
+    {
+      "url": "https://www.databank.com/data-centers/salt-lake-city/slc5/",
+      "title": "DataBank SLC5 — Granite Point Campus"
+    },
+    {
+      "url": "https://www.cve.com/projects/databank/",
+      "title": "CVE — DataBank construction project"
+    },
+    {
+      "url": "https://www.warrenton-mo.org/wp-content/uploads/2026/03/Plan-Cost-Benefit-Analysis-Crusoe-Data-Center.pdf",
+      "title": "Warrenton DC Owner 1 LLC — Industrial Development Plan and Cost/Benefit Analysis"
+    },
+    {
+      "url": "https://www.flexential.com/resources/press-release/flexential-secures-strategic-real-estate-ownership-hillsboro-oregon",
+      "title": "Flexential Secures Strategic Real Estate Ownership in Hillsboro, Oregon"
+    },
+    {
+      "url": "https://www.flexential.com/data-centers/or/portland/hillsboro4-data-center",
+      "title": "Flexential Portland — Hillsboro 4 data center"
+    },
+    {
+      "url": "https://www.flexential.com/resources/data-sheet/portland-or-hillsboro-4-data-center",
+      "title": "Flexential Portland — Hillsboro 4 datasheet"
+    },
+    {
+      "url": "https://www.flexential.com/data-centers/design",
+      "title": "Flexential — Data Center Design and Architecture"
+    },
+    {
+      "url": "https://www.lreus.com/projects/alisa-solar/",
+      "title": "Leeward Renewable Energy — Alisa Solar"
+    },
+    {
+      "url": "https://www.lreus.com/wp-content/uploads/2026/01/AlisaSolar-FactSheet_Jan2026.pdf",
+      "title": "Alisa Solar — January 2026 project fact sheet"
+    },
+    {
+      "url": "https://www.pjm.com/pjmfiles/pub/planning/project-queues/TC2/PHASE_2/AG2-545/AG2-545_imp_PHASE_2.htm",
+      "title": "PJM Phase II System Impact Study — Silver Lake AG2-545"
+    },
+    {
+      "url": "https://q.com/data-centers/hillsboro-2/",
+      "title": "QTS Hillsboro 2 campus"
+    },
+    {
+      "url": "https://www.energystar.gov/buildings/certified-data-centers",
+      "title": "ENERGY STAR certified data centers — HIL2 Hillsboro DC3"
+    },
+    {
+      "url": "https://q.com/data-centers/hillsboro-3/",
+      "title": "QTS Hillsboro 3 campus"
+    },
+    {
+      "url": "https://www.databank.com/resources/press-releases/databank-announces-opening-of-sixth-salt-lake-city-area-data-center/",
+      "title": "DataBank Announces Opening of Sixth Salt Lake City Area Data Center"
+    },
+    {
+      "url": "https://www.databank.com/wp-content/uploads/2025/11/SLC6-datasheet.pdf",
+      "title": "DataBank SLC6 — Q425V1 facility datasheet"
+    },
+    {
+      "url": "https://www.databank.com/data-centers/salt-lake-city/granite-point-campus/slc6/",
+      "title": "DataBank SLC6 — Granite Point Campus"
+    },
+    {
+      "url": "https://www.databank.com/events/databanks-slc6-data-center-grand-opening/",
+      "title": "DataBank’s SLC6 Data Center Grand Opening"
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/1710583/000171058322000045/exhibit991pressreleasedate.htm",
+      "title": "Switch Announces Third Quarter 2022 Financial Results"
+    },
+    {
+      "url": "https://www.switch.com/switch-breaks-ground-on-second-and-third-tahoe-reno-data-centers-following-multi-megawatt-expansions-with-global-e-commerce-and-semiconductor-clients/",
+      "title": "Switch Breaks Ground on Second and Third Tahoe Reno Data Centers"
+    },
+    {
+      "url": "https://switchdotcom.s3-sites.data.switch.com/media/brochures/SW_Electronic-Sales-Brochure.pdf",
+      "title": "Switch electronic sales brochure — historical campus plans"
+    },
+    {
+      "url": "https://www.switch.com/tahoe-reno/",
+      "title": "Switch Tahoe Reno — The Citadel Campus"
+    },
+    {
+      "url": "https://www.ercot.com/misdownload/servlets/mirDownload?doclookupId=1281327706",
+      "title": "ERCOT September 2026 Generator Interconnection Status — selected records"
+    },
+    {
+      "url": "https://www.eia.gov/electricity/data/eia860m/xls/august_generator2026.xlsx",
+      "title": "EIA August 2026 Generator Inventory — selected audited plants"
+    },
+    {
+      "url": "https://www.caiso.com/documents/publicqueuereport.xlsx",
+      "title": "CAISO Public Queue — selected audited positions"
+    },
+    {
+      "url": "https://www.misoenergy.org/api/giqueue/getprojects",
+      "title": "MISO Generator Interconnection Queue — selected audited requests"
+    },
+    {
+      "url": "https://opsportal.spp.org/Studies/GIActive",
+      "title": "SPP Active Generator Interconnection Requests — selected audited rows"
+    },
+    {
+      "url": "https://www.clearwayenergygroup.com/press-releases/clearway-signs-power-purchase-agreement-and-energy-storage-agreement-totaling-520-mw-with-public-utility-district-of-grant-county/",
+      "title": "Clearway Signs Power Purchase Agreement and Energy Storage Agreement Totaling 520 MW with Public Utility District of Grant County - Clearway Energy"
+    },
+    {
+      "url": "https://www.nasdaq.com/press-release/comed-cloudhq-break-ground-on-new-hyperscale-data-center-in-mount-prospect-2022-08-23",
+      "title": "ComEd, CloudHQ Break Ground on New Hyperscale Data Center in Mount Prospect | Nasdaq"
+    },
+    {
+      "url": "https://www.newlenox.net/AgendaCenter/ViewFile/Minutes/_08102026-637",
+      "title": "New Lenox: Mayor Says No Data Center Being Entertained; Cielo Concept Unconfirmed"
+    },
+    {
+      "url": "https://economicimpact.google/state/nv/",
+      "title": "Google Economic Impact | State detail: Nevada - Google - Google Economic Impact"
+    },
+    {
+      "url": "https://monticellomn.gov/754/Scannell-Technology-Park",
+      "title": "Scannell Technology Park | Monticello, MN"
+    },
+    {
+      "url": "https://datacenters.atmeta.com/asset/aiken-data-center-info-sheet/",
+      "title": "Meta Aiken Data Center — Information Sheet"
+    },
+    {
+      "url": "https://www.sccommerce.com/newsroom/meta-selects-aiken-county-first-south-carolina-data-center",
+      "title": "Meta selects Aiken County for first South Carolina data center | South Carolina Department of Commerce"
+    },
+    {
+      "url": "https://datacenters.atmeta.com/us-locations/",
+      "title": "United States - Meta Data Centers"
+    },
+    {
+      "url": "https://datacenters.atmeta.com/asset/montgomery-data-center-info-sheet/",
+      "title": "Meta Montgomery Data Center — Information Sheet"
+    },
+    {
+      "url": "https://www.aboutamazon.com/news/aws/aws-10-billion-investment-mississippi",
+      "title": "AWS plans to invest $10 billion in Mississippi"
+    },
+    {
+      "url": "https://ctmirror.org/2026/04/15/tale-of-a-defeated-ct-data-center/",
+      "title": "Opinion: Tale of a defeated data center in CT"
+    },
+    {
+      "url": "https://q.com/data-centers/denver/",
+      "title": "Denver - QTS Data Centers"
+    },
+    {
+      "url": "https://icc.illinois.gov/api/web-management/documents/downloads/public/ESP/2025-02-28%20Staff%20Presentation.pdf",
+      "title": "Nelson–Electric Junction: 1,200 MW MFO Is Not a Verified 4,800 MWh Battery"
+    },
+    {
+      "url": "https://www.chaskamn.gov/841/Cloud-HQ",
+      "title": "Cloud HQ | Chaska, MN - Official Website"
+    },
+    {
+      "url": "https://missouripartnership.com/google-announces-1-billion-data-center-in-kansas-city-missouri/",
+      "title": "Google Announces $1 Billion Data Center In Kansas City, Missouri - Missouri Partnership"
+    },
+    {
+      "url": "https://assets.nebius.com/assets/86625727-9e66-46c1-af79-c27d57434e3c/25-25580-1_Nebius%2520Group%2520N.V._6-K.pdf%3Fcache-buster%3D2025-09-08T21%3A23%3A09.625Z",
+      "title": "Nebius Group — Form6-K, commercial agreement with Microsoft"
+    },
+    {
+      "url": "https://www.snco.gov/ludev/data_center.php",
+      "title": "Data Center Development · Land Use & Development (Shawnee County, Kansas)"
+    },
+    {
+      "url": "https://www.lreus.com/wp-content/uploads/2026/10/Big-Plain-Facts-8.26.pdf",
+      "title": "Big Plain Solar — Project Fact Sheet"
+    },
+    {
+      "url": "https://brightnightpower.com/pioneer/",
+      "title": "Pioneer - Community – BrightNight"
+    },
+    {
+      "url": "https://www.phoenix.gov/content/dam/phoenix/cityclerksite/city-council-meeting-files/2026/3-25-26%20Formal%20Results-FINAL.pdf",
+      "title": "Aligned Behrend Phoenix: March 2026 Waiver Approved; IT Capacity Unverified"
+    },
+    {
+      "url": "https://www.eastwhiteland.org/government/departments/planning_development/sentinel,_green_fig_data_center_on_swedesford_road.php",
+      "title": "Sentinel, Green Fig Data Center on Swedesford Road"
+    },
+    {
+      "url": "https://urbangridco.com/projects/hillsboro-solar-in-lawrence-county-alabama/",
+      "title": "Hillsboro Solar - Panthera Grid Partners"
+    },
+    {
+      "url": "https://areviapower.com/wp-content/uploads/2024/09/ROD-Press-Release.pdf",
+      "title": "Libra Solar: 700 MW Solar + 700 MW / 2,800 MWh Battery; Over $2.33B"
+    },
+    {
+      "url": "https://areviapower.com/june-6-2024-press-release/",
+      "title": "June 6, 2024 Press Release – Arevia Power"
+    },
+    {
+      "url": "https://www.energy.ca.gov/powerplant/solar-photovoltaic-pv-battery-energy-storage/darden-clean-energy-project",
+      "title": "Darden Clean Energy Project | California Energy Commission"
+    },
+    {
+      "url": "https://atmosphere-dc.com/data-centers/dickerson-md/",
+      "title": "Dickerson, MD – Atmosphere Data Centers"
+    },
+    {
+      "url": "https://dms.psc.sc.gov/Attachments/Matter/f75a5fb7-69b7-4c8a-852c-854e784ce103",
+      "title": "Brief of Pinopolis Reliability Project LLC in Support of Petition"
+    },
+    {
+      "url": "https://dms.psc.sc.gov/Attachments/Matter/17e69683-1cca-4035-8ec3-7e96fe777c99",
+      "title": "SCPSC Directive Order No. 2026-75 — Withdrawal of Certificate Application"
+    },
+    {
+      "url": "https://local.microsoft.com/wp-content/uploads/2023/05/Malaga-Datacenter-Townhall-Boards-ENGLISH.pdf",
+      "title": "Malaga Datacenter Townhall Boards — English"
+    },
+    {
+      "url": "https://local.microsoft.com/blog/malaga-datacenter-project-overview/",
+      "title": "Malaga datacenter project overview - Microsoft Local"
+    },
+    {
+      "url": "https://www.dcblox.com/nashville-data-center/",
+      "title": "Nashville Data Center Project"
+    },
+    {
+      "url": "https://www.pointonecorp.com/leecounty",
+      "title": "Lee County, N.C."
+    },
+    {
+      "url": "https://www.buttedatacenterinfo.com/",
+      "title": "Home | Butte Data Center Impact Committee"
+    },
+    {
+      "url": "https://www.co.silverbow.mt.us/3468/Ad--Hoc-Data-Center-Impact-Committee",
+      "title": "Ad- Hoc Data Center Impact Committee | City and County of Butte-Silver Bow, MT"
+    },
+    {
+      "url": "https://williamsnd.civicweb.net/document/177538/",
+      "title": "Board of County Commissioners - Feb 18 2025 - Minutes - Html"
+    },
+    {
+      "url": "https://ottercreeksolarfarm.com/assets/pdf/OTTERCREEK-openhouse-boards-may2024F.pdf",
+      "title": "Otter Creek Solar Farm — May 2024 Open House Boards"
+    },
+    {
+      "url": "https://www.pjm.com/pjmfiles/pub/planning/project-queues/TC2/PHASE_2/AG2-675/AG2-675_imp_PHASE_2.htm",
+      "title": "AG2-675 Phase II System Impact Study Report"
+    },
+    {
+      "url": "https://rowan.com/portfolio/percheron/",
+      "title": "Percheron | Hyperscale Data Center Campus | Pacific Northwest"
+    },
+    {
+      "url": "https://swiftcurrentenergy.com/project/mineral-basin-solar/",
+      "title": "Mineral Basin Solar - Swift Current Energy"
+    },
+    {
+      "url": "https://www.pjm.com/pjmfiles/pub/planning/project-queues/TC2/PHASE_2/AH1-563/AH1-563_imp_PHASE_2.htm",
+      "title": "AH1-563 Phase II System Impact Study Report"
+    },
+    {
+      "url": "https://www.nottinghamsolarproject.com/home",
+      "title": "Nottingham Solar"
+    },
+    {
+      "url": "https://www.pjm.com/pjmfiles/pub/planning/project-queues/TC1/FINAL/AF2-226/AF2-226_imp_FINAL.htm",
+      "title": "AF2-226 Final System Impact Study (Retool 2) Report"
+    },
+    {
+      "url": "https://www.energy.ca.gov/powerplant/backup-generating-system/silver-creek-backup-generating-facility-scbgf",
+      "title": "Silver Creek Backup Generating Facility (SCBGF) | California Energy Commission"
+    },
+    {
+      "url": "https://www.oakrunsolarproject.com/",
+      "title": "Home | Oak Run Solar Project"
+    },
+    {
+      "url": "https://opsb.ohio.gov/cases/22-0549-el-bgn",
+      "title": "22-0549-EL-BGN: Oak Run Solar"
+    },
+    {
+      "url": "https://opsb.ohio.gov/news/opsb-approves-oak-run-solar-project%2Bin-madison-county",
+      "title": "OPSB approves Oak Run Solar Project in Madison County"
+    },
+    {
+      "url": "https://www.sunfishsolar2.com/about/",
+      "title": "About | Hecate Sunfish Solar 2"
+    },
+    {
+      "url": "https://www.coresite.com/en-us/data-centers/denver/de3-construction",
+      "title": "DE3 Construction"
+    },
+    {
+      "url": "https://www.radius-dc.com/location/nashville",
+      "title": "Nashville Data Center | RadiusDC Location"
+    },
+    {
+      "url": "https://www.databank.com/resources/press-releases/databank-purchases-building-and-land-at-den2-data-center/",
+      "title": "DataBank Buys Building and Land at DEN2"
+    },
+    {
+      "url": "https://www.databank.com/data-centers/minneapolis/brooklyn-park-campus/brooklyn-park/",
+      "title": "Brooklyn Park Data Center Minneapolis"
+    },
+    {
+      "url": "https://www.databank.com/data-centers/minneapolis/msp3/",
+      "title": "Brooklyn Park Campus Data Center in Minneapolis"
+    },
+    {
+      "url": "https://www.dcblox.com/hyperscale-data-centers/",
+      "title": "Hyperscale Data Center Locations in the US - DC BLOX"
+    },
+    {
+      "url": "https://www.richroadsolar.com/about-the-project/",
+      "title": "About - Rich Road Solar"
+    },
+    {
+      "url": "https://phoenix.legistar.com/LegislationDetail.aspx?GUID=AD2D3068-38AE-4F84-9D46-596BBAE09D18&ID=8120953&Options=&Search=",
+      "title": "City of Phoenix - File #: 26-1460"
+    },
+    {
+      "url": "https://www.hostdime.com/new-orlando-data-center",
+      "title": "Orlando Data Center | SuperNova | HostDime"
+    },
+    {
+      "url": "https://aligneddc.com/salt-lake-city-data-centers/",
+      "title": "Scalable & Adaptive Data Centers in Salt Lake City, Utah | Aligned"
+    },
+    {
+      "url": "https://avantus.com/news/Avantus-Aratina1-Project-Officially-Online",
+      "title": "Avantusâ Aratina 1 Project Officially Online, Generating Enough Clean, Reliable Energy to Power 105,000 California Homes | Avantus"
+    },
+    {
+      "url": "https://www.aratinasolar.com/",
+      "title": "Aratina Solar Center"
+    },
+    {
+      "url": "https://aligneddc.com/wp-content/uploads/2025/09/ALI_ChicagoBldgSpecs241015.pdf",
+      "title": "Aligned ORD-01: 36 MW Operator Specification, 220,000 Sqft"
+    },
+    {
+      "url": "https://aligneddc.com/dallas-data-centers/",
+      "title": "Sustainable, AI-Ready Data Centers in Dallas Fort Worth | Aligned"
+    },
+    {
+      "url": "https://aligneddc.com/press-release/aligned-energy-expands-its-dallas-data-center-campus/",
+      "title": "Aligned Expands Its Dallas Data Center Campus - Aligned Data Centers"
+    },
+    {
+      "url": "https://aligneddc.com/hillsboro-data-centers/",
+      "title": "Scalable and Adaptive Data Centers in Hillsboro, Oregon | Aligned"
+    },
+    {
+      "url": "https://aligneddc.com/maryland-data-centers/",
+      "title": "Adaptive Data Centers in Frederick County, Maryland | Aligned"
+    },
+    {
+      "url": "https://www.advanced-power.com/home/projects",
+      "title": "Advanced Power | Clean Energy Projects  » Advanced Power"
+    },
+    {
+      "url": "https://www.adamscreeksolarproject.com/",
+      "title": "Home | Adams Creek Solar Project"
+    },
+    {
+      "url": "https://www.entergy.com/news/entergy-arkansas-announces-enhanced-partnership-at-google-west-memphis-campus-delivering-at-least-500m-in-new-savings-for-all-customers",
+      "title": "Entergy Arkansas announces enhanced partnership at Google West Memphis campus, delivering at least $500M in new savings for all customers - Entergy"
+    },
+    {
+      "url": "https://www.transgridenergy.com/projects/",
+      "title": "Projects | TransGrid Energy"
+    },
+    {
+      "url": "https://aligneddc.com/chicago-data-centers/",
+      "title": "Chicago Data Centers | Aligned"
+    },
+    {
+      "url": "https://aligneddc.com/wp-content/uploads/2025/10/Aligned-Ashburn-Case-Study.pdf",
+      "title": "Aligned Ashburn Data Center Campus — Case Study"
+    },
+    {
+      "url": "https://aligneddc.com/northeast-ohio-data-centers/",
+      "title": "Northeast Ohio Data Centers | Aligned"
+    },
+    {
+      "url": "https://slcprdwordpressstorage.blob.core.windows.net/wordpressdata/2024/10/10-17-24_50.pdf",
+      "title": "Athos I and II: 450 MW Solar Operating Since 2022"
+    },
+    {
+      "url": "https://aligneddc.com/northern-virginia-data-centers/",
+      "title": "Northern Virginia Data Centers | Aligned"
+    },
+    {
+      "url": "https://greenecountynewsonline.com/2026/08/14/gj-solar-project-is-back-on-track/",
+      "title": "GJ solar project is back on track - Greene County News Online"
+    },
+    {
+      "url": "https://www.aldrinenergystorage.com/",
+      "title": "Vesper Energy — Aldrin Energy Storage current project scope"
+    },
+    {
+      "url": "https://aligneddc.com/phoenix-data-centers/",
+      "title": "Scalable and Adaptive Data Centers in Phoenix, AZ | Aligned"
+    },
+    {
+      "url": "https://aligneddc.com/abernathy-tx-data-center/",
+      "title": "Aligned Abernathy: Built for Scale in Northwest Texas"
+    },
+    {
+      "url": "https://www.longroadenergy.com/portfolio/allium-solar/",
+      "title": "Allium Solar and Energy Storage System Project — Longroad Energy"
+    },
+    {
+      "url": "https://assets.nebius.com/assets/e59fb92e-9027-473a-8cac-04f9d2e9ea9a/Shareholder%20Letter%20Q4%202025.pdf",
+      "title": "Nebius Group — Q4 2025 shareholder letter"
+    },
+    {
+      "url": "https://ir.applieddigital.com/sec-filings/all-sec-filings/content/0001144879-23-000079/applieddigitalannouncesene.htm",
+      "title": "Applied Digital Announces Energizing of Facility in Ellendale, North Dakota"
+    },
+    {
+      "url": "https://ir.applieddigital.com/sec-filings/all-sec-filings/content/0001144879-26-000059/apld-20260831.htm",
+      "title": "Applied Digital Form 10-Q — quarter ended August 31, 2026"
+    },
+    {
+      "url": "https://www.globenewswire.com/news-release/2022/03/29/2411932/0/en/Aligned-Expands-Phoenix-Campus-Adding-Fourth-Data-Center-for-Hyperscale-Growth.html",
+      "title": "Aligned Expands Phoenix Campus, Adding Fourth Data Center for Hyperscale Growth"
+    },
+    {
+      "url": "https://ottercreeksolarfarm.com/",
+      "title": "Otter Creek Solar Farm — Hecate Energy"
+    },
+    {
+      "url": "https://greenbeltrenewables.com/projects/",
+      "title": "Greenbelt Renewables — Projects"
+    },
+    {
+      "url": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?SingleLine=463+Power+House+Road+Moncks+Corner+SC&f=json&outFields=%2A&maxLocations=1",
+      "title": "ArcGIS World Geocoder — 463 Power House Road Moncks Corner SC"
+    },
+    {
+      "url": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?SingleLine=13+S+Bacton+Hill+Road+Malvern+PA&f=json&outFields=%2A&maxLocations=1",
+      "title": "ArcGIS World Geocoder — 13 S Bacton Hill Road Malvern PA"
+    },
+    {
+      "url": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?SingleLine=Southwest85th+Street+and+Southwest+Burlingame+Road+Topeka+Kansas&f=json&outFields=Match_addr%2CAddr_type%2CSubregion&maxLocations=1",
+      "title": "ArcGIS World Geocoder — Southwest85th Street and Southwest Burlingame Road Topeka Kansas"
+    },
+    {
+      "url": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?SingleLine=11220+University+City+Boulevard+Charlotte+NC&f=json&outFields=%2A&maxLocations=1",
+      "title": "ArcGIS World Geocoder — 11220 University City Boulevard Charlotte NC"
+    },
+    {
+      "url": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?SingleLine=3151+W+Behrend+Drive+Phoenix+AZ&f=json&outFields=%2A&maxLocations=1",
+      "title": "ArcGIS World Geocoder — 3151 W Behrend Drive Phoenix AZ"
+    },
+    {
+      "url": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?SingleLine=1160+N+Gun+Club+Rd+Aurora+Colorado+80018&f=json&outFields=Match_addr%2CAddr_type&maxLocations=1",
+      "title": "ArcGIS World Geocoder — 1160 N Gun Club Rd Aurora Colorado 80018"
+    },
+    {
+      "url": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?SingleLine=4801+East+Thistle+Landing+Drive+Phoenix+AZ85044&f=json&outFields=Match_addr%2CAddr_type%2CSubregion&maxLocations=1",
+      "title": "ArcGIS World Geocoder — 4801 East Thistle Landing Drive Phoenix AZ85044"
+    },
+    {
+      "url": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?SingleLine=875+Urban+Industrial+Way+East+Wenatchee+WA&f=json&outFields=%2A&maxLocations=1",
+      "title": "ArcGIS World Geocoder — 875 Urban Industrial Way East Wenatchee WA"
+    },
+    {
+      "url": "https://www.hostdime.com/about/press",
+      "title": "Press Kit | HostDime"
+    },
+    {
+      "url": "https://www.hostdime.com/blog/year-in-review/",
+      "title": "HostDime 2020 Year in Review"
+    },
+    {
+      "url": "https://nebius.com/newsroom/nebius-accelerates-us-expansion-adding-up-to-300-mw-capacity-at-new-data-center-in-new-jersey",
+      "title": "Nebius accelerates US expansion, adding up to 300 MW capacity at new data center in New Jersey"
+    },
+    {
+      "url": "https://mde.maryland.gov/datacenters/Pages/FrederickDataCenter.aspx",
+      "title": "Frederick Data Center Sampling/Reports"
+    },
+    {
+      "url": "https://www.lreus.com/projects/big-plain-solar/",
+      "title": "Big Plain Solar - Leeward Renewable Energy"
+    },
+    {
+      "url": "https://www.eastwhiteland.org/Planning%20&%20Development/Sentinel%2C%20Green%20Fig%20Data%20Center%20on%20Swedesford%20Road/Water%20Supply%20Agreement%20%20Aqua-Sentinel%2010.7.26.pdf?t=202610071238590",
+      "title": "Water Supply Agreement — Aqua Pennsylvania and Sentinel Green Fig"
+    },
+    {
+      "url": "https://www.aldrinenergystorage.com/faq",
+      "title": "Aldrin Energy Storage — FAQ"
+    },
+    {
+      "url": "https://www.ameresco.com/portfolio-item/nas-lemoore-data-center-energy-project/",
+      "title": "NAS Lemoore Data Center Energy Project | Ameresco"
+    },
+    {
+      "url": "https://www.copiapower.com/interactive-map-collection/fyjlxcmbgh8npmc-nwhsg-937cy",
+      "title": "Stanley — Copia Power"
+    },
+    {
+      "url": "https://ulstercleanenergy.com/",
+      "title": "Ulster County Clean Energy – Proposed battery energy storage system project in the Town of Ulster."
+    },
+    {
+      "url": "https://www.townofulster.ny.gov/wp-content/uploads/2026-04-01_Alcazar-BESS-Project_Final-DEIS-Scope.pdf",
+      "title": "Town of Ulster — Alcazar Energy Storage Project Final Scope"
+    },
+    {
+      "url": "https://www.radius-dc.com/newsroom-and-events/radiusdc-breaks-ground-on-largest-data-center-in-nashville",
+      "title": "RadiusDC Breaks Ground on Largest Data Center in Nashville  | RadiusDC"
+    },
+    {
+      "url": "https://www.radius-dc.com/insights-resources/nashville-tennessee",
+      "title": "Nashville, Tennessee | Radius DC"
+    },
+    {
+      "url": "https://www.wwcowa.gov/document_center/commdev/Projects/Amazon/SDP26-01%20SEPA26-05%20Site%20Plan%202026.08.21.pdf?t=202609161454190",
+      "title": "Amazon SDP26-01 / SEPA26-05 Site Plan — August 21, 2026"
+    },
+    {
+      "url": "https://www.edf-re.com/projects/",
+      "title": "EDF power solutions NA Energy Projects | Solar, wind, and storage"
+    },
+    {
+      "url": "https://www.ncuc.gov/industries/elecmerch.aspx",
+      "title": "NCUC: Electric Merchant Plants"
+    },
+    {
+      "url": "https://www.aratinasolar.com/site-map",
+      "title": "Site Map — Aratina Solar Center"
+    },
+    {
+      "url": "https://www.ercot.com/files/docs/2025/12/01/14.1-25RPG025-AEP-Texas-CPS-Energy-Oncor-and-CNP-Texas-765-kV-STEP-Eastern-Backbone-Project.pdf",
+      "title": "ERCOT Independent Review — Texas 765-kV STEP Eastern Backbone"
+    },
+    {
+      "url": "https://aligneddc.com/blog/innovation-takes-root-aligned-opens-new-data-center-hq-in-dfw/",
+      "title": "Innovation Takes Root: Aligned Opens New Data Center & HQ in DFW - Aligned Data Centers"
+    },
+    {
+      "url": "https://cloudhq.com/campus/msp-campus/",
+      "title": "CloudHQ MSP Campus"
+    },
+    {
+      "url": "https://www.dcblox.com/wp-content/uploads/2026/04/DC-BLOX-Birmingham-AL-Community-Overview-04-2026.pdf",
+      "title": "DC BLOX Birmingham Community Overview — April 2026"
+    },
+    {
+      "url": "https://governor.sc.gov/news/2025-06/cielo-digital-infrastructure-selects-cherokee-county-first-south-carolina-development",
+      "title": "Cielo Digital Infrastructure selects Cherokee County for first South Carolina development project | S.C. Governor Henry McMaster"
+    },
+    {
+      "url": "https://www.prometheushyperscale.com/news/uinta-county-planning-and-zoning-commission-unanimously-recommends-approval-of-permits-for-prometheus-hyperscales-on-site-power-facility-site",
+      "title": "Uinta County Planning and Zoning Commission Unanimously Recommends Approval of Permits for Prometheus Hyperscale's On-Site Power Facility Site | PrometheusHyperscale"
+    },
+    {
+      "url": "https://www.prometheushyperscale.com/news/bernard-looney-appointed-chairman",
+      "title": "Bernard Looney Appointed Chairman of the Board of Directors at Prometheus Hyperscale | PrometheusHyperscale"
+    },
+    {
+      "url": "https://puc.nv.gov/uploadedFiles/pucnvgov/Content/Utilities/Electric/NewProposedGenerationJuly2025.pdf",
+      "title": "PUCN New and Proposed Generation — Arida 21-03016"
+    },
+    {
+      "url": "https://opsportal.spp.org/documents/studies/files/2022_Generation_Studies/GEN-2022-130%20FS.pdf",
+      "title": "GEN-2022-130 Facility Study — 200 MW Battery/Storage, Sebastian County"
+    },
+    {
+      "url": "https://aligneddc.com/press-release/aligned-data-centers-opens-ultra-efficient-data-center-in-plano/",
+      "title": "Aligned | Aligned Data Centers Opens Ultra-Efficient Data Center in Plano|Aligned | Aligned Data Centers Opens Ultra-Efficient Data Center in Plano"
+    },
+    {
+      "url": "https://www.coresite.com/hubfs/-website-documents/DE3-docs/CoreSite_Timeline_DE3.pdf",
+      "title": "CoreSite DE3 — Project Timeline"
+    },
+    {
+      "url": "https://www.pscmaryland.com/wp-content/uploads/2026/03/MD-PSC-Receives-Applications-for-Tx-Energy-Storage-under-NGEA_03032026.pdf",
+      "title": "Maryland PSC Receives Applications for Transmission Energy Storage"
+    },
+    {
+      "url": "https://bellevilleareaindependent.com/project-cannoli-data-center-gets-the-go-ahead-during-oct-14-planning-meeting/",
+      "title": "Project Cannoli data center gets the go-ahead during Oct. 14 planning meeting | The Belleville Independent"
+    },
+    {
+      "url": "https://doral-llc.com/projects/mammoth-central-solar/",
+      "title": "Mammoth Central Solar |"
+    },
+    {
+      "url": "https://www.datacenters.google/discover-more/photo-gallery/",
+      "title": "Photo gallery â Google Data Centers"
+    },
+    {
+      "url": "https://www.americanrepartners.com/properties/powerhouse-charlotte",
+      "title": "PowerHouse Charlotte"
+    },
+    {
+      "url": "https://efiling.energy.ca.gov/Lists/DocketLog.aspx?docketnumber=26-SPPE-02",
+      "title": "California Energy Commission : Docket Log"
+    },
+    {
+      "url": "https://www.anatoleenergystorage.com/regional-business-partnership",
+      "title": "Anatole — Regional Business Partnership"
+    },
+    {
+      "url": "https://lydianenergy.com/projects/",
+      "title": "Projects | Lydian"
+    },
+    {
+      "url": "https://lydianenergy.com/news/lydian-energy-announces-689-million-financing-for-solar-and-battery-storage-projects/",
+      "title": "Lydian Energy Announces $689 Million Financing for Solar and Battery Storage Projects | Lydian"
+    },
+    {
+      "url": "https://datacenters.google/kansas-city-missouri/",
+      "title": "Kansas City, Missouri â Google Data Center Location"
+    },
+    {
+      "url": "https://aligneddc.com/atlanta-data-centers/",
+      "title": "Atlanta Data Centers | Aligned Data Centers"
+    },
+    {
+      "url": "https://bluestemdatacenter.com/",
+      "title": "Home - Project Bluestem"
+    },
+    {
+      "url": "https://www.pjm.com/pjmfiles/pub/planning/project-queues/TC2/PHASE_2/AH1-725/AH1-725_imp_PHASE_2.htm",
+      "title": "AH1-725 Phase II System Impact Study Report"
+    },
+    {
+      "url": "https://www.sunraycer.com/portfolio/albatross",
+      "title": "Albatross | Sunraycer Portfolio"
+    },
+    {
+      "url": "https://www.oregon.gov/energy/facilities/Facilities%20library/2024-05-15-ESP-ASC-Location.pdf",
+      "title": "Sunstone Figure C-1 — Vicinity Map"
+    },
+    {
+      "url": "https://www.oregon.gov/energy/facilities/Facility%20Exhibits/SSP/2024-05-16-SSPAPPDoc25-09-ASC-Exhibit-I-Soil-Conditions.pdf",
+      "title": "Sunstone Solar Exhibit I — Soil Conditions and Construction Plans"
+    },
+    {
+      "url": "https://www.centralmaine.com/2026/06/11/plan-for-data-center-in-jay-suffers-setback-2-2/",
+      "title": "Plan for $550M data center in Jay on hold, official says"
+    },
+    {
+      "url": "https://www.aol.com/articles/tonawanda-ai-data-center-project-212054000.html",
+      "title": "Tonawanda AI data center project delayed amid ongoing debate - AOL"
+    },
+    {
+      "url": "https://spectrumlocalnews.com/nys/buffalo/news/2026/06/01/public-hearing-set-on-proposed-data-center-at-former-tonawanda-coke-plant",
+      "title": "Data center proposal at former Tonawanda Coke site on hold"
+    },
+    {
+      "url": "https://bluestemdatacenter.com/faqs/",
+      "title": "FAQs - Project Bluestem"
+    },
+    {
+      "url": "https://sbenergy.com/energy-projects/",
+      "title": "SB Energy — Energy Projects / Athos"
+    },
+    {
+      "url": "https://greenecountynewsonline.com/2024/04/24/supervisors-hear-future-of-gj-solar-project/",
+      "title": "Supervisors hear future of GJ solar project - Greene County News Online"
+    },
+    {
+      "url": "https://adeq.state.ar.us/home/pdssql/p_facil_details.aspx?AFIN=4701081",
+      "title": "Facility Details - Permit Data System (PDS) | DEQ"
+    },
+    {
+      "url": "https://www.muskiedatacampus.com/",
+      "title": "Muskie Data Campus"
+    },
+    {
+      "url": "https://rowan.com/quinbrooks-rowan-digital-infrastructure-secures-975-million-financing-for-hyperscale-campus-in-maryland/",
+      "title": "Quinbrook’s Rowan Digital Infrastructure Secures $975 Million Financing for Hyperscale Campus in Maryland - Rowan Digital Infrastructure"
+    },
+    {
+      "url": "https://chisagocountypress.com/news/2026/jun/05/chisago-city-accepts-authority-for-retail-cannabis-sales-open-mic-question-on-data-centers/",
+      "title": "Chisago County Press"
+    },
+    {
+      "url": "https://5c.ai/datacenters",
+      "title": "Next-Gen AI Data Centers | 5C"
+    },
+    {
+      "url": "https://www.ocienergy.com/projects-under-development/",
+      "title": "Projects - Under development - OCI Energy"
+    },
+    {
+      "url": "https://public-inspection.federalregister.gov/2026-00823.pdf",
+      "title": "FERC Combined Notice of Filings #1 — ER26-1030-000 AEPTX-Abeja interconnection filing"
+    },
+    {
+      "url": "https://www.pointonecorp.com/locations",
+      "title": "PointOne Data Center Locations"
+    },
+    {
+      "url": "https://enlightenergy.com/wp-content/uploads/2026/06/Enlight-Reaches-Financial-Close-for-CO-Bar.pdf",
+      "title": "Clēnera CO Bar: 1,211 MW Solar, 4,000 MWh Storage, $2.900–3.045B Investment"
+    },
+    {
+      "url": "https://aligneddc.com/case-studies/brownfield-redevelopment-perkins-township-ohio/",
+      "title": "Brownfield Redevelopment in Perkins Township: NEO-01"
+    },
+    {
+      "url": "https://aligneddc.com/press-release/Aligned-launches-chicago-hyperscale-data-center-campus-and-breaks-ground-on-second-adjacent-facility/",
+      "title": "Aligned Launches Chicago Hyperscale Data Center Campus and Breaks Ground on Second Adjacent Facility - Aligned Data Centers"
+    },
+    {
+      "url": "https://rainbowenergycenter.com/what-we-do/generation/",
+      "title": "Generation - Rainbow Energy Center - Coal Creek Station"
+    },
+    {
+      "url": "https://www.pantheragrid.com/projects/spring-valley-solar-in-colbert-county-alabama/",
+      "title": "Spring Valley Solar - Panthera Grid Partners"
+    },
+    {
+      "url": "https://www.avaiodigital.com/",
+      "title": "AVAIO Digital"
+    },
+    {
+      "url": "https://www.richroadsolar.com/wp-content/uploads/RichRoadSolar-FinalSitingPermit09-24-2024Signed.pdf",
+      "title": "Rich Road Solar Final Siting Permit — ORES 22-00031"
+    },
+    {
+      "url": "https://www.centradigital.com/post/centra-breaks-ground-on-msp1",
+      "title": "CENTRA Breaks Ground on MSP1"
+    },
+    {
+      "url": "https://www.oregon.gov/lcd/Commission/Documents/2023-11_Item_4_Combined.pdf",
+      "title": "Morrow County Board of Commissioners — Percheron Findings"
+    },
+    {
+      "url": "https://uptimeinstitute.com/component/tierachievement/datacenter/cmh-ii-phase-1/1069",
+      "title": "Uptime Institute"
+    },
+    {
+      "url": "https://www.waterfordct.org/DocumentCenter/View/4463/Data-Center-Project-backup-21523",
+      "title": "Waterford — Proposed Host Data Centers Project, February2023"
+    },
+    {
+      "url": "https://www.entergy.com/renewable-energy",
+      "title": "Renewable energy - Entergy"
+    },
+    {
+      "url": "https://www.blm.gov/sites/default/files/docs/2024-10/BLM_NV_SNDO_Mosey-Trout-Canyon-POD.pdf",
+      "title": "Mosey Solar Project — Plan of Development"
+    },
+    {
+      "url": "https://www.prnewswire.com/news-releases/blue-owl-chirisa-technology-parks-and-powerhouse-data-centers-announce-next-phase-of-5-billion-joint-venture-development-partnership-302466950.html",
+      "title": "Blue Owl, Chirisa Technology Parks and PowerHouse Data Centers Announce Next Phase of $5 Billion Joint Venture Development Partnership"
+    },
+    {
+      "url": "https://aligneddc.com/press-release/aligned-energy-experiencing-rapid-growth-announces-new-100-megawatt-salt-lake-city-data-center/",
+      "title": "Aligned Announces New 100 Megawatt Salt Lake City Data Center"
+    },
+    {
+      "url": "https://gis.blm.gov/arcgis/rest/services/Cadastral/BLM_Natl_PLSS_CadNSDI/MapServer/2/query?where=PLSSID+%3D+%27AZ140030N0120W0%27+AND+FRSTDIVNO+IN+%28%2719%27%2C%2720%27%2C%2721%27%2C%2722%27%2C%2724%27%2C%2725%27%2C%2726%27%2C%2727%27%2C%2728%27%2C%2729%27%29&outFields=PLSSID%2CFRSTDIVNO&outSR=4326&f=json",
+      "title": "BLM National PLSS CadNSDI — T3N R12W Sections 19–22 and 24–29"
+    },
+    {
+      "url": "https://gis.blm.gov/arcgis/rest/services/Cadastral/BLM_Natl_PLSS_CadNSDI/MapServer/2/query?f=json&where=FRSTDIVID%3D%27ND051550N0950W0SN040%27&outFields=PLSSID%2CFRSTDIVID%2CFRSTDIVNO&outSR=4326",
+      "title": "BLM National PLSS — Section 4, T155N R95W, North Dakota"
+    },
+    {
+      "url": "https://www.acgov.org/cda/planning/landuseprojects/documents/NOD_AlamedaCountyClerk_21031011291_stamped.pdf",
+      "title": "Aramis Solar Energy Generation and Storage Project — Notices of Determination"
+    },
+    {
+      "url": "https://thecitrustea.com/wp-content/uploads/2026/07/Cielo-Concurrence-Letter.pdf",
+      "title": "Haines City — Cielo water and sewer concurrence letter"
+    },
+    {
+      "url": "https://www.oakrunsolarproject.com/_files/ugd/f1832c_8cec75e08ca14646ba2908fc7ba2523b.pdf",
+      "title": "Oak Run Solar Project — preliminary site plan"
+    },
+    {
+      "url": "https://www.nyiso.com/documents/20142/1407078/NYISO-Interconnection-Queue.xlsx",
+      "title": "NYISO Interconnection Queue — Alcazar 2 records"
+    },
+    {
+      "url": "https://www.datacenterdynamics.com/en/news/rowan-secures-12bn-for-maryland-data-center-campus-build-out/",
+      "title": "Rowan secures $1.2bn for Maryland data center campus build-out - DCD"
+    },
+    {
+      "url": "https://townoflysander.org/sites/default/files/2026-04/data_storage_moratorium_ll_no._4_docx.pdf",
+      "title": "Town of Lysander — Local Law 4 of 2026"
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/1553023/000110465915049287/a15-14256_10ex99d1.htm",
+      "title": "CyrusOne Announces Closing of Cervalis Acquisition"
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/1553023/000110465915030860/a15-10124_1ex2d1.htm",
+      "title": "CyrusOne–Cervalis merger agreement"
+    },
+    {
+      "url": "https://www.nyserda.ny.gov/All-Programs/Energy-Storage-Program/Developers-and-Contractors/Bulk-Storage-Incentives/Bid-Proposal-Map",
+      "title": "ISCRFP25-1 Step Two Bid Proposal Map | NYSERDA"
+    },
+    {
+      "url": "https://www.mge.com/smart-energy/clean-energy/solar-energy",
+      "title": "Solar Energy - Madison Gas and Electric"
+    },
+    {
+      "url": "https://www.datacenterdynamics.com/en/news/sdc-capital-partners-buys-97-acres-of-data-center-zoned-land-in-virginia-for-615-million/",
+      "title": "SDC Capital Partners buys 97-acres of data center-zoned land in Virginia for $615 million - DCD"
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/783325/000078332526000099/a092026septemberfinal002.htm",
+      "title": "WEC Energy Group — September 2026 investor presentation"
+    },
+    {
+      "url": "https://www.globenewswire.com/news-release/2026/08/24/3349687/0/en/kentucky-psc-approves-482-mw-power-agreement-for-terawulf-s-justified-data-campus.html",
+      "title": "Kentucky PSC Approves 482 MW Power Agreement for TeraWulf’s Justified Data Campus"
+    },
+    {
+      "url": "https://www.globenewswire.com/news-release/2026/07/06/3322382/0/en/TeraWulf-Announces-Anthropic-Lease-at-Justified-Data-Campus-and-Sale-of-Majority-Interest-in-Abernathy-Joint-Venture-to-Fluidstack.html",
+      "title": "TeraWulf Announces Anthropic Lease at Justified Data Campus and Sale of Majority Interest in Abernathy Joint Venture to Fluidstack"
+    },
+    {
+      "url": "https://www.datacenterdynamics.com/en/news/cielo-digital-infrastructure-plans-300mw-data-center-campus-in-south-carolina/",
+      "title": "Cielo Digital Infrastructure plans 300MW data center campus in South Carolina - DCD"
+    },
+    {
+      "url": "https://ir.fluenceenergy.com/node/10621/pdf",
+      "title": "Fluence Supplies Energy Storage Technology for BrightNight and Cordelio Power's 1,200 MWh Pioneer Storage Project in Arizona"
+    },
+    {
+      "url": "https://kspublicnotices.newzgroup.com/KSLegals/2026/34054-2026-01-15_1002.pdf",
+      "title": "Sumner County Resolution 2026-03 — published legal notice"
+    },
+    {
+      "url": "https://primedatacenters.com/news/prime-data-centers-breaks-ground-on-three-buildings-at-its-240mw-phoenix-campus-advancing-3billion-dollar-investment-in-avondale/",
+      "title": "Prime Data Centers Breaks Ground on Three Buildings at its 240MW Campus in Phoenix, Advancing $3B Investment in Avondale - Prime Data Centers"
+    },
+    {
+      "url": "https://primedatacenters.com/locations/phoenix/",
+      "title": "Phoenix Data Centers - Prime Data Centers"
+    },
+    {
+      "url": "https://www.mgeenergy.com/news/articles/mge-to-add-more-solar-with-high-noon-solar-energy-center",
+      "title": "MGE to Add More Solar with High Noon Solar Energy Center - MGE Energy, Inc. - Madison, Wisconsin"
+    },
+    {
+      "url": "https://www.dws.state.nm.us/Portals/0/DM/LMI/lmr_Oct_19.pdf",
+      "title": "New Mexico Labor Market Review — October 2019"
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/1083301/000162828026064757/wulf-20261001.htm",
+      "title": "TeraWulf Form 8-K — October 2026"
+    },
+    {
+      "url": "https://investor.digitalrealty.com/news-releases/news-release-details/digital-realty-reports-fourth-quarter-2024-results",
+      "title": "Digital Realty Reports Fourth Quarter 2024 Results | Thu, 02/13/2025 - 08:00"
+    },
+    {
+      "url": "https://www.datacenterdynamics.com/en/news/smr-developer-deep-atomic-proposes-nuclear-powered-ai-data-center-at-idaho-national-lab/",
+      "title": "SMR developer Deep Atomic proposes nuclear-powered AI data center at Idaho National Lab - DCD"
+    },
+    {
+      "url": "https://ia.cpuc.ca.gov/environment/info/esa/psb/pdfs/Vol_III_Power_the_SouthBay_FEIR_RTC_Nov2025_508_ADA.pdf",
+      "title": "LS Power Grid California's Power the Bay Project Final EIR"
+    },
+    {
+      "url": "https://www.globenewswire.com/news-release/2026/02/02/3230211/0/en/Enlight-Reaches-Final-Development-Milestones-for-CO-Bar-Its-Largest-Project-to-Date.html",
+      "title": "Enlight Reaches Final Development Milestones for CO Bar, Its Largest Project to Date"
+    },
+    {
+      "url": "https://www.federalregister.gov/documents/2026/04/08/2026-06773/spring-valley-ii-solar-final-environmental-impact-statement",
+      "title": "Spring Valley II Solar Final Environmental Impact Statement"
+    },
+    {
+      "url": "https://www.nypa.gov/News/Press-Releases/2026/20260928-solar",
+      "title": "https://www.nypa.gov/News/Press-Releases/2026/20260928-solar"
+    },
+    {
+      "url": "https://www.datacenterdynamics.com/en/news/aligned-breaks-ground-on-data-center-in-phoenix-arizona/",
+      "title": "Aligned breaks ground on data center in Phoenix, Arizona - DCD"
+    },
+    {
+      "url": "https://ir.blackhillscorp.com/news-releases/news-release-details/black-hills-corp-executes-definitive-agreements-serve-googles",
+      "title": "Black Hills Corp. Executes Definitive Agreements to Serve Google’s Planned Data Center in Cheyenne, Wyoming | Black Hills Service Company, LLC"
+    },
+    {
+      "url": "https://www.permits.performance.gov/permitting-project/fast-41-covered-projects/mosey-solar-project",
+      "title": "Mosey Solar Project | Permitting Dashboard"
+    },
+    {
+      "url": "https://www.nyserda.ny.gov/-/media/Project/Nyserda/Files/Programs/Energy-Storage/Bulk-Storage-Incentives/Alcazar_Att_B_Public_Project_Summary.pdf",
+      "title": "Alcazar Energy Storage Project — NYSERDA public project summary"
+    },
+    {
+      "url": "https://chirisatechnologyparks.com/",
+      "title": "Chirisa Technology Parks — locations"
+    },
+    {
+      "url": "https://www.otcmarkets.com/filing/conv_pdf?guid=5JC-k6AKM5fCsch&id=19424204",
+      "title": "Digi Power X — Form 8-K filed May 8, 2026"
+    },
+    {
+      "url": "https://www.greenecounty.iowa.gov/docview.aspx?docid=21487&doctype=agendaDoc",
+      "title": "Greene County Board of Supervisors — April 22, 2024 agenda"
+    },
+    {
+      "url": "https://www.groveport.org/AgendaCenter/ViewFile/Minutes/_07022018-71",
+      "title": "Groveport Planning and Zoning Commission — July 2, 2018 minutes"
+    },
+    {
+      "url": "https://ne-edgedatacenters.com/",
+      "title": "NE Edge — proposed Millstone campus"
+    }
+  ],
+  "method": {
+    "sourceWrites": "Authenticated /api/admin/source-wikis with codex/session provenance; existing ready entries rewritten only after snapshot and version check.",
+    "companyWrites": "Authenticated POST /api/companies/:id/wiki, followed by Markdown readback. Compiles stored company facts; no claim of independently refreshing every corporate fact.",
+    "citationIndex": "Guarded content-only PostgreSQL transaction synchronized PinSource with current sourceUrl and PinReference, removed obsolete associations and acknowledged existing researched summaries. Before/after changes recorded in AdminAudit. Used to avoid the general table API after-write listener, which would invoke source fetching and model-driven pin rewrites. No application code, deployment, restart, resize or build.",
+    "sharedSources": "ERCOT, EIA, CAISO, MISO and SPP entries preserve raw field labels and separate status, dates, MW, MWh, AC/DC and shared facilities. EIA earlier source coverage retained. NYISO Alcazar requests indexed separately.",
+    "evidence": "Saved primary documents, fresh direct source reads, local browser export, OCR of scanned PDFs and web-reader retries. Source-specific selected coverage is explicitly labeled.",
+    "verification": "Read current pin and /sources for every scoped pin in both environments. Exact current link-set comparison, ready/nonempty wiki checks, zero stale summaries, unchanged title/description/long summary/references/source/author/company/date/confidence/media/price."
+  },
+  "artifacts": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/wiki-backfill-2026-10-24",
+  "limitations": [
+    "Four exact cited URLs lack substantive retrievable source content; left pending with specific research reasons.",
+    "Wiki coverage is scoped to citations of the corrected live pins in the saved backfill reports, not every untouched Cleanview lead or the whole database.",
+    "Source wikis index selected verified facts; long reports and portfolio pages are not claimed to be comprehensively summarized."
+  ]
+}

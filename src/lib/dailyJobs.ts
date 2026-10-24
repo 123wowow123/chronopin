@@ -118,6 +118,11 @@ export const TASKS = {
     label: 'Prediction markets',
     summary: 'Scrape prediction markets for interesting events and monthly Brent & WTI commodity prices; create predicted pins, make them into threads, and after price realization add reasoning of final value and why prediction was missed or on point.',
   },
+  earthquakes: {
+    group: 'discover',
+    label: 'Earthquakes',
+    summary: "Pin the significant earthquakes (M5.5 and up) USGS has recorded since the last run, as @QuakeDesk, and skip any already pinned.",
+  },
   thinCategories: {
     group: 'discover',
     label: 'Thin categories',
@@ -245,7 +250,7 @@ export const DEFAULT_DAILY_JOBS: DailyJobsSetting = {
       // new rounds and updates existing pins twice a day (owner, 2026-10-15).
       // Hiring, new roles and job-creating investment follow the same twice-daily
       // discovery and maintenance cadence.
-      tasks: ['weekReview', 'freshSources', 'eventInfo', 'pinAds', 'holidayAds', 'adTranslations', 'personTrades', 'threadPredicted', 'breakingNews', 'predictionMarkets', 'layoffs', 'hiringJobCreation', 'modelScores', 'sentiment'],
+      tasks: ['weekReview', 'freshSources', 'eventInfo', 'pinAds', 'holidayAds', 'adTranslations', 'personTrades', 'threadPredicted', 'breakingNews', 'predictionMarkets', 'earthquakes', 'layoffs', 'hiringJobCreation', 'modelScores', 'sentiment'],
       driver: 'auto',
       maxNewPins: MAX_NEW_PINS,
       maxUpdates: MAX_UPDATES,
@@ -293,7 +298,7 @@ export function withDefaultJobs(setting: DailyJobsSetting): DailyJobsSetting {
   let changed = false;
   const jobs = setting.jobs.flatMap((job): JobSetting[] => {
     if (job.id === 'ad-translations') { changed = true; return []; }
-    const required: TaskId[] = job.id === 'news' ? ['adTranslations', 'layoffs', 'hiringJobCreation', 'personTrades'] : job.id === 'midnight' ? ['adTranslations', 'personCampaigns'] : [];
+    const required: TaskId[] = job.id === 'news' ? ['adTranslations', 'layoffs', 'hiringJobCreation', 'personTrades', 'earthquakes'] : job.id === 'midnight' ? ['adTranslations', 'personCampaigns'] : [];
     if (required.some((task) => !job.tasks.includes(task))) {
       changed = true;
       return [{ ...job, tasks: TASK_IDS.filter((task) => required.includes(task) || job.tasks.includes(task)) }];
