@@ -11,7 +11,7 @@ import { api } from '@/lib/client/api';
 import { hrefKeepingDate, hrefNearDay } from '@/lib/client/returnSpot';
 import { useScrollLock } from '@/lib/client/scrollLock';
 import { refineQuery, removeFields, removeTerm, term } from '@/lib/searchTerms';
-import { pinnedQueries, recentQueries, recordQuery, recordRecentQuery, sharedQueries, togglePinnedQuery } from '@/lib/savedQueries';
+import { DRAG_QUERY_EVENT, pinnedQueries, recentQueries, recordQuery, recordRecentQuery, sharedQueries, togglePinnedQuery } from '@/lib/savedQueries';
 import { isCategory } from '@/lib/categories';
 import { cloudTags, groupSelection, groupTags, isReserved, reservedPicked, reservedTag, reservedValues, RESERVED_TAGS, type TagCount, type TagGroup } from '@/lib/tags';
 import { parseSearchQuery } from '@/server/util/searchQuery';
@@ -468,6 +468,25 @@ function SavedQueries({ current, onOpen, className = '', placesOnly = false }: {
     window.addEventListener('pointerup', end);
     window.addEventListener('pointercancel', end);
   };
+  // The search box's selected filters dragged here: the same copy and zone, and a drop pins them (never unpins).
+  useEffect(() => {
+    const on = (event: Event) => {
+      const { q, x, y, drop } = (event as CustomEvent).detail || {};
+      if (!q) return;
+      const r = zone.current?.getBoundingClientRect();
+      const inside = !!r && x >= r.left - 10 && x <= r.right + 10 && y >= r.top - 10 && y <= r.bottom + 10;
+      if (drop) {
+        setDrag(null);
+        setOver(false);
+        if (inside && !pinnedQueries().includes(q)) togglePin(q);
+        return;
+      }
+      setDrag({ q, x, y });
+      setOver(inside);
+    };
+    window.addEventListener(DRAG_QUERY_EVENT, on);
+    return () => window.removeEventListener(DRAG_QUERY_EVENT, on);
+  }, []);
   useEffect(() => {
     setRecent(recentQueries());
     setPinned(pinnedQueries());

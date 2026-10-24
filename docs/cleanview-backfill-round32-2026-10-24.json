@@ -1,0 +1,1801 @@
+{
+  "checkedAt": "2026-10-24",
+  "scope": "Cleanview sourcing backfill round 32",
+  "outcome": {
+    "audited": 12,
+    "corrected": 7,
+    "held": 5,
+    "environmentActions": 24,
+    "azureFilesVerified": 22,
+    "nativePagesVerified": 14,
+    "replacementMaps": 6,
+    "galleryPlacements": 7,
+    "uniqueNewAzureFiles": 10,
+    "sourceWikis": 10,
+    "companyWikisPerEnvironment": {
+      "local": 4,
+      "prod": 4
+    },
+    "postedMapEntries": 1372,
+    "mappedLiveNotYetAudited": 1058,
+    "deployed": false
+  },
+  "costEvidence": [],
+  "rejectedCostScopes": [
+    {
+      "url": "https://cypresscreekenergy.com/steel-river-energy-center/",
+      "quote": "$4.5B+ Private Capital",
+      "reason": "Whole-program investment, not individual battery phase construction cost"
+    },
+    {
+      "url": "https://cypresscreekenergy.com/news/steel-river-financing/",
+      "quote": "$3.5 billion in financing",
+      "reason": "Financing of first two hybrid phases together, not a battery construction budget"
+    },
+    {
+      "url": "https://cdn.misoenergy.org/20260211%20SSPM%20Item%2004b%20Review%20of%20Proposed%20Reliability%20Projects%20AR740736.pdf",
+      "quote": "$39.9M",
+      "reason": "Shared Campbell switching-station project, not either 625 MW solar plant"
+    }
+  ],
+  "plan": {
+    "battery-jefferson-greentown-765kv-in": {
+      "patch": {
+        "title": "Jefferson–Greentown AG2-331: 200 MW / 2,000 MWh; Tracker Lists Withdrawn",
+        "description": "PJM’s October 29, 2025 Phase I study identifies Cobia Solar LLC’s 200 MW / 2,000 MWh, ten-hour storage addition in Decatur County, Indiana. The 715 MW figure is combined facility capability. GridTracker’s later listing reports the request withdrawn.",
+        "sourceUrl": "https://www.pjm.com/pjmfiles/pub/planning/project-queues/TC2/PHASE_1/AG2-331/AG2-331_imp_PHASE_1.htm",
+        "references": [
+          {
+            "url": "https://www.pjm.com/pjmfiles/pub/planning/project-queues/TC2/PHASE_1/AG2-331/AG2-331_imp_PHASE_1.htm",
+            "title": "PJM — AG2-331 Phase I System Impact Study",
+            "publishedDate": "2025-10-29",
+            "confidence": 95
+          },
+          {
+            "url": "https://www.interconnection.fyi/project/pjm-ag2-331",
+            "title": "GridTracker — Jefferson-Greentown AG2-331 queue record",
+            "publishedDate": null,
+            "confidence": 85
+          }
+        ],
+        "longFormSummary": "<ul><li>The study specifies 200 MW energy and 156 MW capacity added to AG2-162/164/219, with total facility capability 715 MW and 249 MW capacity. It is not a 715 MW battery or 2,860 MWh four-hour design. Replaced fictitious Greentown Clean Power ownership and AF2-088 citation; removed unsupported $700M construction budget.<cite data-ref=\"https://www.pjm.com/pjmfiles/pub/planning/project-queues/TC2/PHASE_1/AG2-331/AG2-331_imp_PHASE_1.htm\"></cite></li><li>Opened GridTracker record lists Withdrawn, November 27, 2025, CIW. The request is absent from the June 2026 Phase II request list. Current primary queue export requires authorization (401), so the exact withdrawal date is attributed to this secondary record and remains a primary-document follow-up. The historical study date is not a commissioning date or proof of a currently active proposal.<cite data-ref=\"https://www.interconnection.fyi/project/pjm-ag2-331\"></cite></li><li>PJM’s roughly $57.5M cost allocation concerns interconnection/network upgrades, not whole battery construction. Exact battery parcel, project-specific gallery and a matched construction budget were not established; retained marker is coarse county context.<cite data-ref=\"https://www.pjm.com/pjmfiles/pub/planning/project-queues/TC2/PHASE_1/AG2-331/AG2-331_imp_PHASE_1.htm\"></cite></li><li>Timeline: Confirmed Phase I study release date. Later GridTracker withdrawal is explicitly attributed; precise primary withdrawal confirmation remains pending. No future COD is asserted.<cite data-ref=\"https://www.pjm.com/pjmfiles/pub/planning/project-queues/TC2/PHASE_1/AG2-331/AG2-331_imp_PHASE_1.htm\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "Confirmed Phase I study release date. Later GridTracker withdrawal is explicitly attributed; precise primary withdrawal confirmation remains pending. No future COD is asserted.",
+        "utcStartDateTime": "2025-10-29T00:00:00.000Z",
+        "originalStartDate": null,
+        "delayReasoning": null,
+        "company": "Cobia Solar LLC",
+        "companyWikiUrl": null,
+        "address": "Retained approximate county/project-area context; exact project parcel unverified",
+        "allDay": true,
+        "allDayStated": false,
+        "tags": [
+          "Cleanview",
+          "Battery Storage"
+        ]
+      },
+      "power": {
+        "megawatts": 200,
+        "kind": "storage",
+        "sourceUrl": "https://www.pjm.com/pjmfiles/pub/planning/project-queues/TC2/PHASE_1/AG2-331/AG2-331_imp_PHASE_1.htm",
+        "note": "Published 200 MW storage request/design; not measured output or evidence of operation."
+      },
+      "clearEnergy": false,
+      "gaps": [
+        "Recover current primary queue/withdrawal record, exact parcel, published project construction budget and site imagery. Do not interpret the 2028 study model as COD."
+      ]
+    },
+    "battery-south-platte-morgan-co": {
+      "patch": {
+        "title": "South Platte Storage: 250 MW; June 2027 EIA Target",
+        "description": "EIA’s September 2026 inventory lists South Platte Storage plant 70053, generator SP250, at 250 MW in Morgan County, Colorado, under construction at no more than 50% complete and planned for June 2027. Operator is South Platte Storage LLC.",
+        "sourceUrl": null,
+        "references": [
+          {
+            "url": "https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx",
+            "title": "EIA — September 2026 generator inventory",
+            "publishedDate": "2026-10-23",
+            "confidence": 95
+          },
+          {
+            "url": "https://mbrweb.ferc.gov/SearchlkpFERCAsset/Index?page=46",
+            "title": "FERC market-based rate asset registry — South Platte Storage",
+            "publishedDate": null,
+            "confidence": 95
+          }
+        ],
+        "longFormSummary": "<ul><li>This is separate from the 150 MW South Platte Solar plant 69972 and its associated storage/program scopes. Removed fictitious Platte Valley Clean Storage attribution, unsupported $260M construction cost, assumed 1,000 MWh and finalized permitting/interconnection claims. No unambiguous current parent-company/project-phase cost or battery duration was established.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>FERC’s asset row reports July 2027, while the newer EIA inventory reports June 2027. Both are planned dates, not operation. Native 250 MW follows EIA and marker moves to its reporting coordinates; that point is not a surveyed battery footprint. Official project-specific gallery was not located; water-storage projects with the same name are unrelated.<cite data-ref=\"https://mbrweb.ferc.gov/SearchlkpFERCAsset/Index?page=46\"></cite></li><li>Timeline: EIA planned month June 2027; day 1 is a month placeholder, not a published exact commissioning day. Older FERC asset record reports July 2027.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "EIA planned month June 2027; day 1 is a month placeholder, not a published exact commissioning day. Older FERC asset record reports July 2027.",
+        "utcStartDateTime": "2027-06-01T00:00:00.000Z",
+        "originalStartDate": null,
+        "delayReasoning": null,
+        "company": "South Platte Storage, LLC",
+        "companyWikiUrl": null,
+        "address": "South Platte Storage EIA plant 70053 reporting point, Morgan County, Colorado; not surveyed battery footprint",
+        "allDay": true,
+        "allDayStated": false,
+        "tags": [
+          "Cleanview",
+          "Battery Storage"
+        ],
+        "latitude": 40.12,
+        "longitude": -103.42,
+        "media": [
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round32-2026-10-24/battery-south-platte-morgan-co-topo.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 1000
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round32-2026-10-24/battery-south-platte-morgan-co-relief.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 1000
+          }
+        ]
+      },
+      "power": {
+        "megawatts": 250,
+        "kind": "storage",
+        "sourceUrl": "https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx",
+        "note": "Published 250 MW storage request/design; not measured output or evidence of operation."
+      },
+      "clearEnergy": false,
+      "gaps": [
+        "Verify current parent ownership, final footprint, latest construction/schedule, MWh and published construction budget; project-specific gallery remains unlocated."
+      ],
+      "mediaReplaced": true,
+      "mediaAdded": 0
+    },
+    "battery-steel-river-phase-2-ar": {
+      "patch": {
+        "title": "Steel River Phase 2 Storage: 250 MW; July 2029 EIA Target",
+        "description": "EIA’s September 2026 inventory identifies Steel River Solar Phase 2, plant 70398, with 250 MW battery SRSB2 and a separate 500 MW solar generator. It reports construction no more than 50% complete and July 2029 planned operation.",
+        "sourceUrl": null,
+        "references": [
+          {
+            "url": "https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx",
+            "title": "EIA — September 2026 Steel River generator inventory",
+            "publishedDate": "2026-10-23",
+            "confidence": 95
+          },
+          {
+            "url": "https://cypresscreekenergy.com/steel-river-energy-center/",
+            "title": "Cypress Creek — Steel River Energy Center",
+            "publishedDate": null,
+            "confidence": 95
+          },
+          {
+            "url": "https://cypresscreekenergy.com/news/steel-river-financing/",
+            "title": "Cypress Creek — Steel River financing",
+            "publishedDate": "2026-06-11",
+            "confidence": 95
+          },
+          {
+            "url": "https://cypresscreekenergy.com/news/steel-river-groundbreaking/",
+            "title": "Cypress Creek and Google break ground on Steel River",
+            "publishedDate": "2026-07-14",
+            "confidence": 95
+          }
+        ],
+        "longFormSummary": "<ul><li>Native 250 MW refers only to battery SRSB2; the 500 MW solar unit is a separate component, not additional battery power. Removed unsupported $250M battery-only construction price, exact old COD and assumed 1,000 MWh. Old MISO J1825 is withdrawn Indiana solar, not this Arkansas storage phase.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>Operator current page gives whole-program 2.46 GW solar, 2.94 GWh storage, $4.5B-plus private capital and all-phase 2029 target. Its June release’s $3.5B financing covers the first two hybrid phases together. Neither figure is a separately published battery-phase construction budget and neither is divided or prorated. EIA’s Phase 3 July 2030 target conflicts with operator all-phase 2029; both scopes remain explicit.<cite data-ref=\"https://cypresscreekenergy.com/steel-river-energy-center/\"></cite></li><li>The July 14 ceremony and Google PPA cover the first two phases; they do not independently prove Phase 3 construction. Current operator branding is Cypress Creek Energy; EIA’s reporting operator remains Cypress Creek Renewables. Shared EIA location is reporting context, not distinct battery-plot boundaries. Added imagery is labelled whole-program or first-two-phase context.<cite data-ref=\"https://cypresscreekenergy.com/news/steel-river-groundbreaking/\"></cite></li><li>Timeline: EIA planned month July 2029; day 1 is a month placeholder. Operator expects all phases by 2029, an unresolved discrepancy for Phase 3.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>Cypress Creek’s Steel River project page shows installation work. Whole-program context; this photograph does not independently identify a Phase 2 or Phase 3 battery parcel or installed battery units. Credit: Cypress Creek Energy, Steel River Energy Center.<cite data-ref=\"https://cypresscreekenergy.com/steel-river-energy-center/\"></cite></li><li>Operator-labelled Steel River construction aerial showing support-post rows. Whole-program solar construction context, not a separately identified battery phase. Credit: Cypress Creek Energy, Steel River Energy Center.<cite data-ref=\"https://cypresscreekenergy.com/steel-river-energy-center/\"></cite></li><li>Operator’s schematic distinguishes Steel River Phases 1, 2 and 3 around Wilson and Marie. Planning/location diagram; shared EIA reporting point is not a surveyed phase centroid. Credit: Cypress Creek Energy, Steel River Energy Center.<cite data-ref=\"https://cypresscreekenergy.com/steel-river-energy-center/\"></cite></li><li>July 14, 2026 groundbreaking celebrates Steel River’s first two hybrid phases. It is a ceremonial program photograph, not completed storage or a Phase 3 groundbreaking. Credit: Cypress Creek Energy / Google, July 14, 2026 Steel River groundbreaking.<cite data-ref=\"https://cypresscreekenergy.com/news/steel-river-groundbreaking/\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "EIA planned month July 2029; day 1 is a month placeholder. Operator expects all phases by 2029, an unresolved discrepancy for Phase 3.",
+        "utcStartDateTime": "2029-07-01T00:00:00.000Z",
+        "originalStartDate": null,
+        "delayReasoning": null,
+        "company": "Cypress Creek Renewables LLC",
+        "companyWikiUrl": null,
+        "address": "Steel River Phase 2 EIA plant 70398 shared reporting point, Mississippi County, Arkansas; not independently surveyed battery parcel",
+        "allDay": true,
+        "allDayStated": false,
+        "tags": [
+          "Cleanview",
+          "Battery Storage"
+        ],
+        "latitude": 35.578637,
+        "longitude": -90.09763,
+        "media": [
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round32-2026-10-24/battery-steel-river-phase-2-ar-topo.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 1000
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round32-2026-10-24/battery-steel-river-phase-2-ar-relief.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 1000
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round32-2026-10-24/steel-install.jpg",
+            "originalWidth": 1266,
+            "originalHeight": 1026
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round32-2026-10-24/steel-aerial.jpg",
+            "originalWidth": 1024,
+            "originalHeight": 457
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round32-2026-10-24/steel-map.jpg",
+            "originalWidth": 864,
+            "originalHeight": 576
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round32-2026-10-24/steel-ceremony.jpg",
+            "originalWidth": 540,
+            "originalHeight": 304
+          }
+        ]
+      },
+      "power": {
+        "megawatts": 250,
+        "kind": "storage",
+        "sourceUrl": "https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx",
+        "note": "Published 250 MW storage request/design; not measured output or evidence of operation."
+      },
+      "clearEnergy": false,
+      "gaps": [
+        "Verify phase-specific battery MWh, precise footprint, separate construction budget and actual commissioning; resolve EIA/whole-program schedule and storage-design differences. Whole-project photos do not establish this phase’s battery installation."
+      ],
+      "mediaReplaced": true,
+      "mediaAdded": 4
+    },
+    "battery-steel-river-phase-3-ar": {
+      "patch": {
+        "title": "Steel River Phase 3 Storage: 250 MW; July 2030 EIA Target",
+        "description": "EIA’s September 2026 inventory identifies Steel River Solar Phase 3, plant 70399, with 250 MW battery SRSB3 and a separate 500 MW solar generator. It reports construction no more than 50% complete and July 2030 planned operation.",
+        "sourceUrl": null,
+        "references": [
+          {
+            "url": "https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx",
+            "title": "EIA — September 2026 Steel River generator inventory",
+            "publishedDate": "2026-10-23",
+            "confidence": 95
+          },
+          {
+            "url": "https://cypresscreekenergy.com/steel-river-energy-center/",
+            "title": "Cypress Creek — Steel River Energy Center",
+            "publishedDate": null,
+            "confidence": 95
+          },
+          {
+            "url": "https://cypresscreekenergy.com/news/steel-river-financing/",
+            "title": "Cypress Creek — Steel River financing",
+            "publishedDate": "2026-06-11",
+            "confidence": 95
+          },
+          {
+            "url": "https://cypresscreekenergy.com/news/steel-river-groundbreaking/",
+            "title": "Cypress Creek and Google break ground on Steel River",
+            "publishedDate": "2026-07-14",
+            "confidence": 95
+          }
+        ],
+        "longFormSummary": "<ul><li>Native 250 MW refers only to battery SRSB3; the 500 MW solar unit is a separate component, not additional battery power. Removed unsupported $250M battery-only construction price, exact old COD and assumed 1,000 MWh. Old MISO J1890 is Louisiana solar, not this Arkansas storage phase.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>Operator current page gives whole-program 2.46 GW solar, 2.94 GWh storage, $4.5B-plus private capital and all-phase 2029 target. Its June release’s $3.5B financing covers the first two hybrid phases together. Neither figure is a separately published battery-phase construction budget and neither is divided or prorated. EIA’s Phase 3 July 2030 target conflicts with operator all-phase 2029; both scopes remain explicit.<cite data-ref=\"https://cypresscreekenergy.com/steel-river-energy-center/\"></cite></li><li>The July 14 ceremony and Google PPA cover the first two phases; they do not independently prove Phase 3 construction. Current operator branding is Cypress Creek Energy; EIA’s reporting operator remains Cypress Creek Renewables. Shared EIA location is reporting context, not distinct battery-plot boundaries. Added imagery is labelled whole-program or first-two-phase context.<cite data-ref=\"https://cypresscreekenergy.com/news/steel-river-groundbreaking/\"></cite></li><li>Timeline: EIA planned month July 2030; day 1 is a month placeholder. Operator expects all phases by 2029, an unresolved discrepancy for Phase 3.<cite data-ref=\"https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx\"></cite></li><li>Cypress Creek’s Steel River project page shows installation work. Whole-program context; this photograph does not independently identify a Phase 2 or Phase 3 battery parcel or installed battery units. Credit: Cypress Creek Energy, Steel River Energy Center.<cite data-ref=\"https://cypresscreekenergy.com/steel-river-energy-center/\"></cite></li><li>Operator-labelled Steel River construction aerial showing support-post rows. Whole-program solar construction context, not a separately identified battery phase. Credit: Cypress Creek Energy, Steel River Energy Center.<cite data-ref=\"https://cypresscreekenergy.com/steel-river-energy-center/\"></cite></li><li>Operator’s schematic distinguishes Steel River Phases 1, 2 and 3 around Wilson and Marie. Planning/location diagram; shared EIA reporting point is not a surveyed phase centroid. Credit: Cypress Creek Energy, Steel River Energy Center.<cite data-ref=\"https://cypresscreekenergy.com/steel-river-energy-center/\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "EIA planned month July 2030; day 1 is a month placeholder. Operator expects all phases by 2029, an unresolved discrepancy for Phase 3.",
+        "utcStartDateTime": "2030-07-01T00:00:00.000Z",
+        "originalStartDate": null,
+        "delayReasoning": null,
+        "company": "Cypress Creek Renewables LLC",
+        "companyWikiUrl": null,
+        "address": "Steel River Phase 3 EIA plant 70399 shared reporting point, Mississippi County, Arkansas; not independently surveyed battery parcel",
+        "allDay": true,
+        "allDayStated": false,
+        "tags": [
+          "Cleanview",
+          "Battery Storage"
+        ],
+        "latitude": 35.578637,
+        "longitude": -90.09763,
+        "media": [
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round32-2026-10-24/battery-steel-river-phase-3-ar-topo.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 1000
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round32-2026-10-24/battery-steel-river-phase-3-ar-relief.jpg",
+            "originalWidth": 1600,
+            "originalHeight": 1000
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round32-2026-10-24/steel-install.jpg",
+            "originalWidth": 1266,
+            "originalHeight": 1026
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round32-2026-10-24/steel-aerial.jpg",
+            "originalWidth": 1024,
+            "originalHeight": 457
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round32-2026-10-24/steel-map.jpg",
+            "originalWidth": 864,
+            "originalHeight": 576
+          }
+        ]
+      },
+      "power": {
+        "megawatts": 250,
+        "kind": "storage",
+        "sourceUrl": "https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx",
+        "note": "Published 250 MW storage request/design; not measured output or evidence of operation."
+      },
+      "clearEnergy": false,
+      "gaps": [
+        "Verify phase-specific battery MWh, precise footprint, separate construction budget and actual commissioning; resolve EIA/whole-program schedule and storage-design differences. Whole-project photos do not establish this phase’s battery installation."
+      ],
+      "mediaReplaced": true,
+      "mediaAdded": 3
+    },
+    "dc-google-jackson-county-bldg-4-al": {
+      "delete": true,
+      "researchFinding": "Unverified Google Jackson County Building 4 split within retained campus 16410. Opened Google June 15, 2026 announcement and full PDF establish a $1.5B 2026–2027 campus expansion on the operating Widows Creek site, not a separately labelled 150 MW/$1B Building 4 or its COD. No opened building-specific plan/permit resolves this tracker allocation. Hold the unsupported split; preserve 16410 and do not infer cancellation of the campus.",
+      "sourcesChecked": [
+        "https://blog.google/innovation-and-ai/infrastructure-and-cloud/global-network/alabama-investment-june-2026/",
+        "https://storage.googleapis.com/gweb-uniblog-publish-prod/documents/Google_Strengthens_Alabama_Presence.pdf",
+        "https://www.chronopin.com/api/pins/16410"
+      ],
+      "gaps": [
+        "Unverified Google Jackson County Building 4 split within retained campus 16410. Opened Google June 15, 2026 announcement and full PDF establish a $1.5B 2026–2027 campus expansion on the operating Widows Creek site, not a separately labelled 150 MW/$1B Building 4 or its COD. No opened building-specific plan/permit resolves this tracker allocation. Hold the unsupported split; preserve 16410 and do not infer cancellation of the campus."
+      ]
+    },
+    "dc-google-west-memphis-bldg-3-ar": {
+      "delete": true,
+      "researchFinding": "Unverified Google West Memphis Building 3 tracker split. Opened Google October 2, 2025 state investment announcement and Entergy October 19, 2026 expansion/service release support a real campus and expanded power-service agreement, but do not label this Building 3, assign 118 MW/$750M or confirm its exact delivery date. Regional $4B investment, $600M utility resource upgrades and customer savings are different scopes. Hold pending a labelled building filing; no campus cancellation inferred.",
+      "sourcesChecked": [
+        "https://blog.google/company-news/inside-google/company-announcements/google-american-innovation-arkansas/",
+        "https://www.entergy.com/news/entergy-arkansas-announces-enhanced-partnership-at-google-west-memphis-campus-delivering-at-least-500m-in-new-savings-for-all-customers"
+      ],
+      "gaps": [
+        "Unverified Google West Memphis Building 3 tracker split. Opened Google October 2, 2025 state investment announcement and Entergy October 19, 2026 expansion/service release support a real campus and expanded power-service agreement, but do not label this Building 3, assign 118 MW/$750M or confirm its exact delivery date. Regional $4B investment, $600M utility resource upgrades and customer savings are different scopes. Hold pending a labelled building filing; no campus cancellation inferred."
+      ]
+    },
+    "dc-google-west-memphis-bldg-5-ar": {
+      "delete": true,
+      "researchFinding": "Unverified Google West Memphis Building 5 tracker split. Opened Google October 2, 2025 state investment announcement and Entergy October 19, 2026 expansion/service release support a real campus and expanded power-service agreement, but do not label this Building 5, assign 118 MW/$750M or confirm its exact delivery date. Regional $4B investment, $600M utility resource upgrades and customer savings are different scopes. Hold pending a labelled building filing; no campus cancellation inferred.",
+      "sourcesChecked": [
+        "https://blog.google/company-news/inside-google/company-announcements/google-american-innovation-arkansas/",
+        "https://www.entergy.com/news/entergy-arkansas-announces-enhanced-partnership-at-google-west-memphis-campus-delivering-at-least-500m-in-new-savings-for-all-customers"
+      ],
+      "gaps": [
+        "Unverified Google West Memphis Building 5 tracker split. Opened Google October 2, 2025 state investment announcement and Entergy October 19, 2026 expansion/service release support a real campus and expanded power-service agreement, but do not label this Building 5, assign 118 MW/$750M or confirm its exact delivery date. Regional $4B investment, $600M utility resource upgrades and customer savings are different scopes. Hold pending a labelled building filing; no campus cancellation inferred."
+      ]
+    },
+    "dc-meta-montgomery-bldg-6-al": {
+      "delete": true,
+      "researchFinding": "Unverified Meta Montgomery Building 6 split. Meta May 2024 and September 23, 2025 releases describe the campus and two added buildings, with nearly 1.3M sqft and more than $1.5B total investment. They do not identify a sixth building, 40 MW, $350M building budget or November 2027 opening. Hold pending an opened labelled building plan; retain already corrected campus 16386 unchanged, without dividing campus totals or borrowing Huntsville figures.",
+      "sourcesChecked": [
+        "https://datacenters.atmeta.com/2024/05/hello-montgomery/",
+        "https://datacenters.atmeta.com/2025/09/montgomery-were-growing/",
+        "https://datacenters.atmeta.com/us-locations/",
+        "https://www.chronopin.com/api/pins/16386"
+      ],
+      "gaps": [
+        "Unverified Meta Montgomery Building 6 split. Meta May 2024 and September 23, 2025 releases describe the campus and two added buildings, with nearly 1.3M sqft and more than $1.5B total investment. They do not identify a sixth building, 40 MW, $350M building budget or November 2027 opening. Hold pending an opened labelled building plan; retain already corrected campus 16386 unchanged, without dividing campus totals or borrowing Huntsville figures."
+      ]
+    },
+    "solar-galion-south-berwick-oh": {
+      "patch": {
+        "title": "Galion–South Berwick AG2-149: 314 MW Solar; Tracker Lists Withdrawn",
+        "description": "PJM’s October 29, 2025 Phase I study identifies Wombat Solar LLC’s AG2-149 solar request in Crawford County, Ohio: 314 MW energy and 52 MW capacity, within a 400 MW combined facility. GridTracker’s later queue record lists it withdrawn.",
+        "sourceUrl": "https://www.pjm.com/pjmfiles/pub/planning/project-queues/TC2/PHASE_1/AG2-149/AG2-149_imp_PHASE_1.htm",
+        "references": [
+          {
+            "url": "https://www.pjm.com/pjmfiles/pub/planning/project-queues/TC2/PHASE_1/AG2-149/AG2-149_imp_PHASE_1.htm",
+            "title": "PJM — AG2-149 Phase I System Impact Study",
+            "publishedDate": "2025-10-29",
+            "confidence": 95
+          },
+          {
+            "url": "https://www.interconnection.fyi/project/pjm-ag2-149",
+            "title": "GridTracker — Galion-South Berwick AG2-149 queue record",
+            "publishedDate": null,
+            "confidence": 85
+          }
+        ],
+        "longFormSummary": "<ul><li>The solar addition shares its connection with storage request AG2-148. A 400 MW combined MFO is not 400 MW of solar in AG2-149. Removed invented Buckeye Clean Solar ownership, unsupported OPSB case/approval, $420M construction budget, 2,800 acres and modeled annual energy. The study does not constitute local permission or operation.<cite data-ref=\"https://www.pjm.com/pjmfiles/pub/planning/project-queues/TC2/PHASE_1/AG2-149/AG2-149_imp_PHASE_1.htm\"></cite></li><li>Opened GridTracker record reports Withdrawn on November 27, 2025, CIW; the request does not appear in PJM’s June 2026 Phase II list. Exact withdrawal timing still needs the primary queue record, whose export returned 401. Do not use an old future COD as if the request remains active or cancel other Wombat proposals solely from this queue status.<cite data-ref=\"https://www.interconnection.fyi/project/pjm-ag2-149\"></cite></li><li>Approximately $97.6M in study cost allocations is transmission/interconnection scope, not total project construction. Wombat’s former project homepage now redirects to generic Geenex pages; unlabelled corporate solar photography is not accepted as a verified Crawford project gallery. Retained marker is coarse county context.<cite data-ref=\"https://www.pjm.com/pjmfiles/pub/planning/project-queues/TC2/PHASE_1/AG2-149/AG2-149_imp_PHASE_1.htm\"></cite></li><li>Timeline: Confirmed Phase I study release, not COD. Later withdrawal status/date is explicitly attributed to GridTracker pending a recovered primary record.<cite data-ref=\"https://www.pjm.com/pjmfiles/pub/planning/project-queues/TC2/PHASE_1/AG2-149/AG2-149_imp_PHASE_1.htm\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "Confirmed Phase I study release, not COD. Later withdrawal status/date is explicitly attributed to GridTracker pending a recovered primary record.",
+        "utcStartDateTime": "2025-10-29T00:00:00.000Z",
+        "originalStartDate": null,
+        "delayReasoning": null,
+        "company": "Wombat Solar LLC",
+        "companyWikiUrl": null,
+        "address": "Retained approximate county/project-area context; exact project parcel unverified",
+        "allDay": true,
+        "allDayStated": false,
+        "tags": [
+          "Cleanview",
+          "Solar"
+        ]
+      },
+      "power": {
+        "megawatts": 314,
+        "kind": "generation",
+        "sourceUrl": "https://www.pjm.com/pjmfiles/pub/planning/project-queues/TC2/PHASE_1/AG2-149/AG2-149_imp_PHASE_1.htm",
+        "note": "Published 314 MW solar request/design; not measured output or evidence of operation."
+      },
+      "clearEnergy": false,
+      "gaps": [
+        "Recover primary withdrawal record and current local/project disposition, final parcel and matched construction budget; no project-specific gallery found after operator redirect."
+      ]
+    },
+    "solar-independence-ises-powerline-ar": {
+      "delete": true,
+      "researchFinding": "Independence–ISES 625 MW tracker mapping is ambiguous. Current MISO queue has two distinct 625 MW Jackson County solar requests, J2261 and J2262, at Independence–ISES–Powerline Road; February 11, 2026 MISO planning report explicitly confirms each has a GIA and a shared Campbell switching-station project. Original lead has no request identifier and September 2028 can match either negotiated month. No evidence establishes an Entergy-owned $650M standalone project or maps this pin to one request. Hold until identity resolves; $39.9M shared switching-station cost is not either solar project’s budget and queue Done is not operation.",
+      "sourcesChecked": [
+        "https://www.misoenergy.org/api/giqueue/getprojects",
+        "https://cdn.misoenergy.org/20260211%20SSPM%20Item%2004b%20Review%20of%20Proposed%20Reliability%20Projects%20AR740736.pdf"
+      ],
+      "gaps": [
+        "Independence–ISES 625 MW tracker mapping is ambiguous. Current MISO queue has two distinct 625 MW Jackson County solar requests, J2261 and J2262, at Independence–ISES–Powerline Road; February 11, 2026 MISO planning report explicitly confirms each has a GIA and a shared Campbell switching-station project. Original lead has no request identifier and September 2028 can match either negotiated month. No evidence establishes an Entergy-owned $650M standalone project or maps this pin to one request. Hold until identity resolves; $39.9M shared switching-station cost is not either solar project’s budget and queue Done is not operation."
+      ]
+    },
+    "solar-split-rock-white-sd": {
+      "patch": {
+        "title": "Split Rock–White (WAPA) 345 kV J3964: 490 MW Solar Request; 2030 Target",
+        "description": "MISO lists J3964 as an active 490 MW solar interconnection request in Brookings County, South Dakota, in DPP 2025 Phase 1. Its requested in-service date is 2030-01-31. The queue does not identify developer ownership or a final array parcel.",
+        "sourceUrl": null,
+        "references": [
+          {
+            "url": "https://www.misoenergy.org/api/giqueue/getprojects",
+            "title": "MISO generator interconnection queue — J3964",
+            "publishedDate": null,
+            "confidence": 95
+          }
+        ],
+        "longFormSummary": "<ul><li>Corrected request identity and target date; removed unsupported Prairie Sun Renewables ownership, $520M construction price, local permit claims, acreage and modeled annual generation. A separate Brookings County 490 MW request is not automatically this Split Rock–White request.<cite data-ref=\"https://www.misoenergy.org/api/giqueue/getprojects\"></cite></li><li>Transmission-owner/line names do not establish developer ownership. Active Phase 1 is a study status, not operation. Third-party labels calling active queues operational or treating a proposed service date as an actual opening are rejected. No matched project construction budget or independently labelled official site gallery found; retained marker remains approximate county context.<cite data-ref=\"https://www.misoenergy.org/api/giqueue/getprojects\"></cite></li><li>Timeline: MISO requested future in-service date; not confirmed construction or commercial operation.<cite data-ref=\"https://www.misoenergy.org/api/giqueue/getprojects\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "MISO requested future in-service date; not confirmed construction or commercial operation.",
+        "utcStartDateTime": "2030-01-31T00:00:00.000Z",
+        "originalStartDate": null,
+        "delayReasoning": null,
+        "company": null,
+        "companyWikiUrl": null,
+        "address": "Retained approximate county/project-area context; exact project parcel unverified",
+        "allDay": true,
+        "allDayStated": false,
+        "tags": [
+          "Cleanview",
+          "Solar"
+        ]
+      },
+      "power": {
+        "megawatts": 490,
+        "kind": "generation",
+        "sourceUrl": "https://www.misoenergy.org/api/giqueue/getprojects",
+        "note": "Published 490 MW solar request/design; not measured output or evidence of operation."
+      },
+      "clearEnergy": false,
+      "gaps": [
+        "Identify applicant, exact project parcel, permits, published construction budget and verified project gallery; do not treat queue status as operation."
+      ]
+    },
+    "solar-stone-lake-gardner-park-wi": {
+      "patch": {
+        "title": "Stone Lake–Gardner Park 345 kV J3975: 416.5 MW Solar Request; 2030 Target",
+        "description": "MISO lists J3975 as an active 416.5 MW solar interconnection request in Rusk County, Wisconsin, in DPP 2025 Phase 1. Its requested in-service date is 2030-02-20. The queue does not identify developer ownership or a final array parcel.",
+        "sourceUrl": null,
+        "references": [
+          {
+            "url": "https://www.misoenergy.org/api/giqueue/getprojects",
+            "title": "MISO generator interconnection queue — J3975",
+            "publishedDate": null,
+            "confidence": 95
+          }
+        ],
+        "longFormSummary": "<ul><li>Corrected request identity and target date; removed unsupported Badger State Renewables ownership, $440M construction price, local permit claims, acreage and modeled annual generation. Native 416.5 MW uses the queue’s unrounded rating rather than 417 MW.<cite data-ref=\"https://www.misoenergy.org/api/giqueue/getprojects\"></cite></li><li>Transmission-owner/line names do not establish developer ownership. Active Phase 1 is a study status, not operation. Third-party labels calling active queues operational or treating a proposed service date as an actual opening are rejected. No matched project construction budget or independently labelled official site gallery found; retained marker remains approximate county context.<cite data-ref=\"https://www.misoenergy.org/api/giqueue/getprojects\"></cite></li><li>Timeline: MISO requested future in-service date; not confirmed construction or commercial operation.<cite data-ref=\"https://www.misoenergy.org/api/giqueue/getprojects\"></cite></li></ul>",
+        "price": null,
+        "priceCurrency": null,
+        "priceLowerBound": null,
+        "priceUpperBound": null,
+        "dateConfidence": "estimated",
+        "dateConfidenceReasoning": "MISO requested future in-service date; not confirmed construction or commercial operation.",
+        "utcStartDateTime": "2030-02-20T00:00:00.000Z",
+        "originalStartDate": null,
+        "delayReasoning": null,
+        "company": null,
+        "companyWikiUrl": null,
+        "address": "Retained approximate county/project-area context; exact project parcel unverified",
+        "allDay": true,
+        "allDayStated": false,
+        "tags": [
+          "Cleanview",
+          "Solar"
+        ]
+      },
+      "power": {
+        "megawatts": 416.5,
+        "kind": "generation",
+        "sourceUrl": "https://www.misoenergy.org/api/giqueue/getprojects",
+        "note": "Published 416.5 MW solar request/design; not measured output or evidence of operation."
+      },
+      "clearEnergy": false,
+      "gaps": [
+        "Identify applicant, exact project parcel, permits, published construction budget and verified project gallery; do not treat queue status as operation."
+      ]
+    }
+  },
+  "results": [
+    {
+      "environment": "local",
+      "key": "battery-jefferson-greentown-765kv-in",
+      "id": 17067,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Recover current primary queue/withdrawal record, exact parcel, published project construction budget and site imagery. Do not interpret the 2028 study model as COD."
+      ]
+    },
+    {
+      "environment": "local",
+      "key": "battery-south-platte-morgan-co",
+      "id": 17068,
+      "action": "corrected",
+      "mediaPreserved": false,
+      "mediaReplaced": true,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Verify current parent ownership, final footprint, latest construction/schedule, MWh and published construction budget; project-specific gallery remains unlocated."
+      ]
+    },
+    {
+      "environment": "local",
+      "key": "battery-steel-river-phase-2-ar",
+      "id": 17069,
+      "action": "corrected",
+      "mediaPreserved": false,
+      "mediaReplaced": true,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Verify phase-specific battery MWh, precise footprint, separate construction budget and actual commissioning; resolve EIA/whole-program schedule and storage-design differences. Whole-project photos do not establish this phase’s battery installation."
+      ]
+    },
+    {
+      "environment": "local",
+      "key": "battery-steel-river-phase-3-ar",
+      "id": 17070,
+      "action": "corrected",
+      "mediaPreserved": false,
+      "mediaReplaced": true,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Verify phase-specific battery MWh, precise footprint, separate construction budget and actual commissioning; resolve EIA/whole-program schedule and storage-design differences. Whole-project photos do not establish this phase’s battery installation."
+      ]
+    },
+    {
+      "environment": "local",
+      "key": "dc-google-jackson-county-bldg-4-al",
+      "id": 17071,
+      "action": "deleted",
+      "verifiedStatus": 404
+    },
+    {
+      "environment": "local",
+      "key": "dc-google-west-memphis-bldg-3-ar",
+      "id": 17072,
+      "action": "deleted",
+      "verifiedStatus": 404
+    },
+    {
+      "environment": "local",
+      "key": "dc-google-west-memphis-bldg-5-ar",
+      "id": 17073,
+      "action": "deleted",
+      "verifiedStatus": 404
+    },
+    {
+      "environment": "local",
+      "key": "dc-meta-montgomery-bldg-6-al",
+      "id": 17074,
+      "action": "deleted",
+      "verifiedStatus": 404
+    },
+    {
+      "environment": "local",
+      "key": "solar-galion-south-berwick-oh",
+      "id": 17075,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Recover primary withdrawal record and current local/project disposition, final parcel and matched construction budget; no project-specific gallery found after operator redirect."
+      ]
+    },
+    {
+      "environment": "local",
+      "key": "solar-independence-ises-powerline-ar",
+      "id": 17076,
+      "action": "deleted",
+      "verifiedStatus": 404
+    },
+    {
+      "environment": "local",
+      "key": "solar-split-rock-white-sd",
+      "id": 17077,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Identify applicant, exact project parcel, permits, published construction budget and verified project gallery; do not treat queue status as operation."
+      ]
+    },
+    {
+      "environment": "local",
+      "key": "solar-stone-lake-gardner-park-wi",
+      "id": 17078,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Identify applicant, exact project parcel, permits, published construction budget and verified project gallery; do not treat queue status as operation."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "battery-jefferson-greentown-765kv-in",
+      "id": 17067,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Recover current primary queue/withdrawal record, exact parcel, published project construction budget and site imagery. Do not interpret the 2028 study model as COD."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "battery-south-platte-morgan-co",
+      "id": 17068,
+      "action": "corrected",
+      "mediaPreserved": false,
+      "mediaReplaced": true,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Verify current parent ownership, final footprint, latest construction/schedule, MWh and published construction budget; project-specific gallery remains unlocated."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "battery-steel-river-phase-2-ar",
+      "id": 17069,
+      "action": "corrected",
+      "mediaPreserved": false,
+      "mediaReplaced": true,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Verify phase-specific battery MWh, precise footprint, separate construction budget and actual commissioning; resolve EIA/whole-program schedule and storage-design differences. Whole-project photos do not establish this phase’s battery installation."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "battery-steel-river-phase-3-ar",
+      "id": 17070,
+      "action": "corrected",
+      "mediaPreserved": false,
+      "mediaReplaced": true,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Verify phase-specific battery MWh, precise footprint, separate construction budget and actual commissioning; resolve EIA/whole-program schedule and storage-design differences. Whole-project photos do not establish this phase’s battery installation."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "dc-google-jackson-county-bldg-4-al",
+      "id": 17071,
+      "action": "deleted",
+      "verifiedStatus": 404
+    },
+    {
+      "environment": "prod",
+      "key": "dc-google-west-memphis-bldg-3-ar",
+      "id": 17072,
+      "action": "deleted",
+      "verifiedStatus": 404
+    },
+    {
+      "environment": "prod",
+      "key": "dc-google-west-memphis-bldg-5-ar",
+      "id": 17073,
+      "action": "deleted",
+      "verifiedStatus": 404
+    },
+    {
+      "environment": "prod",
+      "key": "dc-meta-montgomery-bldg-6-al",
+      "id": 17074,
+      "action": "deleted",
+      "verifiedStatus": 404
+    },
+    {
+      "environment": "prod",
+      "key": "solar-galion-south-berwick-oh",
+      "id": 17075,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Recover primary withdrawal record and current local/project disposition, final parcel and matched construction budget; no project-specific gallery found after operator redirect."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "solar-independence-ises-powerline-ar",
+      "id": 17076,
+      "action": "deleted",
+      "verifiedStatus": 404
+    },
+    {
+      "environment": "prod",
+      "key": "solar-split-rock-white-sd",
+      "id": 17077,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Identify applicant, exact project parcel, permits, published construction budget and verified project gallery; do not treat queue status as operation."
+      ]
+    },
+    {
+      "environment": "prod",
+      "key": "solar-stone-lake-gardner-park-wi",
+      "id": 17078,
+      "action": "corrected",
+      "mediaPreserved": true,
+      "mediaReplaced": false,
+      "authorPreserved": true,
+      "fieldsVerified": true,
+      "gaps": [
+        "Identify applicant, exact project parcel, permits, published construction budget and verified project gallery; do not treat queue status as operation."
+      ]
+    }
+  ],
+  "verification": {
+    "actionsVerified": 24,
+    "freshReadbacks": [
+      {
+        "environment": "local",
+        "id": 17067,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 17068,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 17069,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 17070,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 17071,
+        "status": 404,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 17072,
+        "status": 404,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 17073,
+        "status": 404,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 17074,
+        "status": 404,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 17075,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 17076,
+        "status": 404,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 17077,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "local",
+        "id": 17078,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 17067,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 17068,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 17069,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 17070,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 17071,
+        "status": 404,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 17072,
+        "status": 404,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 17073,
+        "status": 404,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 17074,
+        "status": 404,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 17075,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 17076,
+        "status": 404,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 17077,
+        "status": 200,
+        "verified": true
+      },
+      {
+        "environment": "prod",
+        "id": 17078,
+        "status": 200,
+        "verified": true
+      }
+    ],
+    "media": [
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/battery-jefferson-greentown-765kv-in-aerial.jpg",
+        "status": 200,
+        "bytes": 581850
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/battery-jefferson-greentown-765kv-in-regional.jpg",
+        "status": 200,
+        "bytes": 172018
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/battery-jefferson-greentown-765kv-in-topo.jpg",
+        "status": 200,
+        "bytes": 462309
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-round32-2026-10-24/battery-south-platte-morgan-co-relief.jpg",
+        "status": 200,
+        "bytes": 96749
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-round32-2026-10-24/battery-south-platte-morgan-co-topo.jpg",
+        "status": 200,
+        "bytes": 219787
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-round32-2026-10-24/battery-steel-river-phase-2-ar-relief.jpg",
+        "status": 200,
+        "bytes": 72334
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-round32-2026-10-24/battery-steel-river-phase-2-ar-topo.jpg",
+        "status": 200,
+        "bytes": 176246
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-round32-2026-10-24/battery-steel-river-phase-3-ar-relief.jpg",
+        "status": 200,
+        "bytes": 72334
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-round32-2026-10-24/battery-steel-river-phase-3-ar-topo.jpg",
+        "status": 200,
+        "bytes": 176246
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-round32-2026-10-24/steel-aerial.jpg",
+        "status": 200,
+        "bytes": 109866
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-round32-2026-10-24/steel-ceremony.jpg",
+        "status": 200,
+        "bytes": 53428
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-round32-2026-10-24/steel-install.jpg",
+        "status": 200,
+        "bytes": 200239
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/cleanview-round32-2026-10-24/steel-map.jpg",
+        "status": 200,
+        "bytes": 31998
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/solar-galion-south-berwick-oh-aerial.jpg",
+        "status": 200,
+        "bytes": 438719
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/solar-galion-south-berwick-oh-regional.jpg",
+        "status": 200,
+        "bytes": 150933
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/solar-galion-south-berwick-oh-topo.jpg",
+        "status": 200,
+        "bytes": 335654
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/solar-split-rock-white-sd-aerial.jpg",
+        "status": 200,
+        "bytes": 606897
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/solar-split-rock-white-sd-regional.jpg",
+        "status": 200,
+        "bytes": 106383
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/solar-split-rock-white-sd-topo.jpg",
+        "status": 200,
+        "bytes": 397862
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/solar-stone-lake-gardner-park-wi-aerial.jpg",
+        "status": 200,
+        "bytes": 508140
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/solar-stone-lake-gardner-park-wi-regional.jpg",
+        "status": 200,
+        "bytes": 154834
+      },
+      {
+        "url": "https://chronopin.blob.core.windows.net/thumb/solar-stone-lake-gardner-park-wi-topo.jpg",
+        "status": 200,
+        "bytes": 445855
+      }
+    ],
+    "pages": [
+      {
+        "environment": "local",
+        "id": 17067,
+        "status": 200,
+        "bytes": 319145
+      },
+      {
+        "environment": "local",
+        "id": 17068,
+        "status": 200,
+        "bytes": 309327
+      },
+      {
+        "environment": "local",
+        "id": 17069,
+        "status": 200,
+        "bytes": 335998
+      },
+      {
+        "environment": "local",
+        "id": 17070,
+        "status": 200,
+        "bytes": 330941
+      },
+      {
+        "environment": "local",
+        "id": 17075,
+        "status": 200,
+        "bytes": 318478
+      },
+      {
+        "environment": "local",
+        "id": 17077,
+        "status": 200,
+        "bytes": 304930
+      },
+      {
+        "environment": "local",
+        "id": 17078,
+        "status": 200,
+        "bytes": 305313
+      },
+      {
+        "environment": "prod",
+        "id": 17067,
+        "status": 200,
+        "bytes": 275440
+      },
+      {
+        "environment": "prod",
+        "id": 17068,
+        "status": 200,
+        "bytes": 265814
+      },
+      {
+        "environment": "prod",
+        "id": 17069,
+        "status": 200,
+        "bytes": 291870
+      },
+      {
+        "environment": "prod",
+        "id": 17070,
+        "status": 200,
+        "bytes": 287491
+      },
+      {
+        "environment": "prod",
+        "id": 17075,
+        "status": 200,
+        "bytes": 274794
+      },
+      {
+        "environment": "prod",
+        "id": 17077,
+        "status": 200,
+        "bytes": 261947
+      },
+      {
+        "environment": "prod",
+        "id": 17078,
+        "status": 200,
+        "bytes": 262247
+      }
+    ],
+    "postedMapCounts": {
+      "local": 1372,
+      "prod": 1372
+    },
+    "telemetry": [
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {}
+    ]
+  },
+  "wikiVerification": {
+    "local": {
+      "pinsVerifiedUnchanged": 39,
+      "sourceUrls": 24,
+      "readySourceWikis": 24,
+      "staleSummaries": 0,
+      "gaps": [],
+      "companyWikisVerified": 4
+    },
+    "prod": {
+      "pinsVerifiedUnchanged": 39,
+      "sourceUrls": 24,
+      "readySourceWikis": 24,
+      "staleSummaries": 0,
+      "gaps": [],
+      "companyWikisVerified": 4
+    }
+  },
+  "retainedCounterpartVerification": [
+    {
+      "environment": "local",
+      "id": 15885,
+      "verifiedUnchanged": true
+    },
+    {
+      "environment": "local",
+      "id": 16346,
+      "verifiedUnchanged": true
+    },
+    {
+      "environment": "local",
+      "id": 16386,
+      "verifiedUnchanged": true
+    },
+    {
+      "environment": "local",
+      "id": 16410,
+      "verifiedUnchanged": true
+    },
+    {
+      "environment": "local",
+      "id": 16431,
+      "verifiedUnchanged": true
+    },
+    {
+      "environment": "local",
+      "id": 17008,
+      "verifiedUnchanged": true
+    },
+    {
+      "environment": "local",
+      "id": 17010,
+      "verifiedUnchanged": true
+    },
+    {
+      "environment": "local",
+      "id": 17012,
+      "verifiedUnchanged": true
+    },
+    {
+      "environment": "prod",
+      "id": 15885,
+      "verifiedUnchanged": true
+    },
+    {
+      "environment": "prod",
+      "id": 16346,
+      "verifiedUnchanged": true
+    },
+    {
+      "environment": "prod",
+      "id": 16386,
+      "verifiedUnchanged": true
+    },
+    {
+      "environment": "prod",
+      "id": 16410,
+      "verifiedUnchanged": true
+    },
+    {
+      "environment": "prod",
+      "id": 16431,
+      "verifiedUnchanged": true
+    },
+    {
+      "environment": "prod",
+      "id": 17008,
+      "verifiedUnchanged": true
+    },
+    {
+      "environment": "prod",
+      "id": 17010,
+      "verifiedUnchanged": true
+    },
+    {
+      "environment": "prod",
+      "id": 17012,
+      "verifiedUnchanged": true
+    }
+  ],
+  "mediaEvidence": [
+    {
+      "key": "battery-south-platte-morgan-co",
+      "layer": "topo",
+      "sourceUrl": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSTopo/MapServer/export?bbox=-103.452000,40.098000,-103.388000,40.142000&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "sourcePage": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSTopo/MapServer/export?bbox=-103.452000,40.098000,-103.388000,40.142000&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "credit": "USGS / The National Map",
+      "caption": "USGS topo basemap centered on the sourced approximate address/reporting point; imagery may predate construction.",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round32-2026-10-24/battery-south-platte-morgan-co-topo.jpg",
+      "bytes": 219787,
+      "width": 1600,
+      "height": 1000,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round32-2026-10-24/battery-south-platte-morgan-co-topo.jpg"
+    },
+    {
+      "key": "battery-south-platte-morgan-co",
+      "layer": "relief",
+      "sourceUrl": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSShadedReliefOnly/MapServer/export?bbox=-103.500000,40.070000,-103.340000,40.170000&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "sourcePage": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSShadedReliefOnly/MapServer/export?bbox=-103.500000,40.070000,-103.340000,40.170000&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "credit": "USGS / The National Map",
+      "caption": "USGS relief basemap centered on the sourced approximate address/reporting point; imagery may predate construction.",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round32-2026-10-24/battery-south-platte-morgan-co-relief.jpg",
+      "bytes": 96749,
+      "width": 1600,
+      "height": 1000,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round32-2026-10-24/battery-south-platte-morgan-co-relief.jpg"
+    },
+    {
+      "key": "battery-steel-river-phase-2-ar",
+      "layer": "topo",
+      "sourceUrl": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSTopo/MapServer/export?bbox=-90.129630,35.556637,-90.065630,35.600637&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "sourcePage": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSTopo/MapServer/export?bbox=-90.129630,35.556637,-90.065630,35.600637&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "credit": "USGS / The National Map",
+      "caption": "USGS topo basemap centered on the sourced approximate address/reporting point; imagery may predate construction.",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round32-2026-10-24/battery-steel-river-phase-2-ar-topo.jpg",
+      "bytes": 176246,
+      "width": 1600,
+      "height": 1000,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round32-2026-10-24/battery-steel-river-phase-2-ar-topo.jpg"
+    },
+    {
+      "key": "battery-steel-river-phase-2-ar",
+      "layer": "relief",
+      "sourceUrl": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSShadedReliefOnly/MapServer/export?bbox=-90.177630,35.528637,-90.017630,35.628637&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "sourcePage": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSShadedReliefOnly/MapServer/export?bbox=-90.177630,35.528637,-90.017630,35.628637&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "credit": "USGS / The National Map",
+      "caption": "USGS relief basemap centered on the sourced approximate address/reporting point; imagery may predate construction.",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round32-2026-10-24/battery-steel-river-phase-2-ar-relief.jpg",
+      "bytes": 72334,
+      "width": 1600,
+      "height": 1000,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round32-2026-10-24/battery-steel-river-phase-2-ar-relief.jpg"
+    },
+    {
+      "key": "battery-steel-river-phase-3-ar",
+      "layer": "topo",
+      "sourceUrl": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSTopo/MapServer/export?bbox=-90.129630,35.556637,-90.065630,35.600637&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "sourcePage": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSTopo/MapServer/export?bbox=-90.129630,35.556637,-90.065630,35.600637&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "credit": "USGS / The National Map",
+      "caption": "USGS topo basemap centered on the sourced approximate address/reporting point; imagery may predate construction.",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round32-2026-10-24/battery-steel-river-phase-3-ar-topo.jpg",
+      "bytes": 176246,
+      "width": 1600,
+      "height": 1000,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round32-2026-10-24/battery-steel-river-phase-3-ar-topo.jpg"
+    },
+    {
+      "key": "battery-steel-river-phase-3-ar",
+      "layer": "relief",
+      "sourceUrl": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSShadedReliefOnly/MapServer/export?bbox=-90.177630,35.528637,-90.017630,35.628637&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "sourcePage": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSShadedReliefOnly/MapServer/export?bbox=-90.177630,35.528637,-90.017630,35.628637&bboxSR=4326&imageSR=4326&size=1600,1000&format=jpg&f=image",
+      "credit": "USGS / The National Map",
+      "caption": "USGS relief basemap centered on the sourced approximate address/reporting point; imagery may predate construction.",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round32-2026-10-24/battery-steel-river-phase-3-ar-relief.jpg",
+      "bytes": 72334,
+      "width": 1600,
+      "height": 1000,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round32-2026-10-24/battery-steel-river-phase-3-ar-relief.jpg"
+    },
+    {
+      "key": "battery-steel-river-phase-2-ar",
+      "layer": "steel-install",
+      "sourceUrl": "https://cypresscreekenergy.com/wp-content/uploads/2026/09/SteelRiver_Installs-27-scaled-e1788988848640.jpg",
+      "sourcePage": "https://cypresscreekenergy.com/steel-river-energy-center/",
+      "credit": "Cypress Creek Energy, Steel River Energy Center",
+      "caption": "Cypress Creek’s Steel River project page shows installation work. Whole-program context; this photograph does not independently identify a Phase 2 or Phase 3 battery parcel or installed battery units.",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round32-2026-10-24/steel-install.jpg",
+      "bytes": 200239,
+      "width": 1266,
+      "height": 1026,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round32-2026-10-24/steel-install.jpg"
+    },
+    {
+      "key": "battery-steel-river-phase-2-ar",
+      "layer": "steel-aerial",
+      "sourceUrl": "https://cypresscreekenergy.com/wp-content/uploads/2026/07/Responsible-Development-SRA-1024x457.jpg",
+      "sourcePage": "https://cypresscreekenergy.com/steel-river-energy-center/",
+      "credit": "Cypress Creek Energy, Steel River Energy Center",
+      "caption": "Operator-labelled Steel River construction aerial showing support-post rows. Whole-program solar construction context, not a separately identified battery phase.",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round32-2026-10-24/steel-aerial.jpg",
+      "bytes": 109866,
+      "width": 1024,
+      "height": 457,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round32-2026-10-24/steel-aerial.jpg"
+    },
+    {
+      "key": "battery-steel-river-phase-2-ar",
+      "layer": "steel-map",
+      "sourceUrl": "https://cypresscreekenergy.com/wp-content/uploads/2026/06/Steel-River-Simple-Map.jpg",
+      "sourcePage": "https://cypresscreekenergy.com/steel-river-energy-center/",
+      "credit": "Cypress Creek Energy, Steel River Energy Center",
+      "caption": "Operator’s schematic distinguishes Steel River Phases 1, 2 and 3 around Wilson and Marie. Planning/location diagram; shared EIA reporting point is not a surveyed phase centroid.",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round32-2026-10-24/steel-map.jpg",
+      "bytes": 31998,
+      "width": 864,
+      "height": 576,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round32-2026-10-24/steel-map.jpg"
+    },
+    {
+      "key": "battery-steel-river-phase-3-ar",
+      "layer": "steel-install",
+      "sourceUrl": "https://cypresscreekenergy.com/wp-content/uploads/2026/09/SteelRiver_Installs-27-scaled-e1788988848640.jpg",
+      "sourcePage": "https://cypresscreekenergy.com/steel-river-energy-center/",
+      "credit": "Cypress Creek Energy, Steel River Energy Center",
+      "caption": "Cypress Creek’s Steel River project page shows installation work. Whole-program context; this photograph does not independently identify a Phase 2 or Phase 3 battery parcel or installed battery units.",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round32-2026-10-24/steel-install.jpg",
+      "bytes": 200239,
+      "width": 1266,
+      "height": 1026,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round32-2026-10-24/steel-install.jpg"
+    },
+    {
+      "key": "battery-steel-river-phase-3-ar",
+      "layer": "steel-aerial",
+      "sourceUrl": "https://cypresscreekenergy.com/wp-content/uploads/2026/07/Responsible-Development-SRA-1024x457.jpg",
+      "sourcePage": "https://cypresscreekenergy.com/steel-river-energy-center/",
+      "credit": "Cypress Creek Energy, Steel River Energy Center",
+      "caption": "Operator-labelled Steel River construction aerial showing support-post rows. Whole-program solar construction context, not a separately identified battery phase.",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round32-2026-10-24/steel-aerial.jpg",
+      "bytes": 109866,
+      "width": 1024,
+      "height": 457,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round32-2026-10-24/steel-aerial.jpg"
+    },
+    {
+      "key": "battery-steel-river-phase-3-ar",
+      "layer": "steel-map",
+      "sourceUrl": "https://cypresscreekenergy.com/wp-content/uploads/2026/06/Steel-River-Simple-Map.jpg",
+      "sourcePage": "https://cypresscreekenergy.com/steel-river-energy-center/",
+      "credit": "Cypress Creek Energy, Steel River Energy Center",
+      "caption": "Operator’s schematic distinguishes Steel River Phases 1, 2 and 3 around Wilson and Marie. Planning/location diagram; shared EIA reporting point is not a surveyed phase centroid.",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round32-2026-10-24/steel-map.jpg",
+      "bytes": 31998,
+      "width": 864,
+      "height": 576,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round32-2026-10-24/steel-map.jpg"
+    },
+    {
+      "key": "battery-steel-river-phase-2-ar",
+      "layer": "steel-ceremony",
+      "sourceUrl": "https://cypresscreekenergy.com/wp-content/uploads/2026/07/SR-Groundbreaking-540x304.jpg",
+      "sourcePage": "https://cypresscreekenergy.com/news/steel-river-groundbreaking/",
+      "credit": "Cypress Creek Energy / Google, July 14, 2026 Steel River groundbreaking",
+      "caption": "July 14, 2026 groundbreaking celebrates Steel River’s first two hybrid phases. It is a ceremonial program photograph, not completed storage or a Phase 3 groundbreaking.",
+      "localFile": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round32-2026-10-24/steel-ceremony.jpg",
+      "bytes": 53428,
+      "width": 540,
+      "height": 304,
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/cleanview-round32-2026-10-24/steel-ceremony.jpg"
+    }
+  ],
+  "sourceChecks": [
+    {
+      "key": "pjm-phase1",
+      "url": "https://www.pjm.com/pjmfiles/pub/planning/project-queues/Cluster-Reports/TC2/TC2_PH1_Executive_Summary.htm",
+      "finalUrl": "https://www.pjm.com/pjmfiles/pub/planning/project-queues/Cluster-Reports/TC2/TC2_PH1_Executive_Summary.htm",
+      "status": 200,
+      "bytes": 2070457,
+      "file": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round32-2026-10-24/pjm-phase1.html",
+      "title": "Transition Cycle 2"
+    },
+    {
+      "key": "pjm-phase2",
+      "url": "https://www.pjm.com/pjmfiles/pub/planning/project-queues/Cluster-Reports/TC2/TC2_PH2_Executive_Summary.htm",
+      "finalUrl": "https://www.pjm.com/pjmfiles/pub/planning/project-queues/Cluster-Reports/TC2/TC2_PH2_Executive_Summary.htm",
+      "status": 200,
+      "bytes": 3968810,
+      "file": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round32-2026-10-24/pjm-phase2.html",
+      "title": "Transition Cycle 2"
+    },
+    {
+      "key": "pjm-jefferson-phase1",
+      "url": "https://www.pjm.com/pjmfiles/pub/planning/project-queues/TC2/PHASE_1/AG2-331/AG2-331_imp_PHASE_1.htm",
+      "finalUrl": "https://www.pjm.com/pjmfiles/pub/planning/project-queues/TC2/PHASE_1/AG2-331/AG2-331_imp_PHASE_1.htm",
+      "status": 200,
+      "bytes": 5205545,
+      "file": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round32-2026-10-24/pjm-jefferson-phase1.html",
+      "title": "AG2-331 Phase I Study Report"
+    },
+    {
+      "key": "pjm-galion-phase1",
+      "url": "https://www.pjm.com/pjmfiles/pub/planning/project-queues/TC2/PHASE_1/AG2-149/AG2-149_imp_PHASE_1.htm",
+      "finalUrl": "https://www.pjm.com/pjmfiles/pub/planning/project-queues/TC2/PHASE_1/AG2-149/AG2-149_imp_PHASE_1.htm",
+      "status": 200,
+      "bytes": 3028096,
+      "file": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round32-2026-10-24/pjm-galion-phase1.html",
+      "title": "AG2-149 Phase I Study Report"
+    },
+    {
+      "key": "google-alabama-release",
+      "url": "https://blog.google/innovation-and-ai/infrastructure-and-cloud/global-network/alabama-investment-june-2026/",
+      "finalUrl": "https://blog.google/innovation-and-ai/infrastructure-and-cloud/global-network/alabama-investment-june-2026/",
+      "status": 200,
+      "bytes": 388646,
+      "file": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round32-2026-10-24/google-alabama-release.html",
+      "title": "Google expands Alabama data center campus, funds community efforts"
+    },
+    {
+      "key": "google-arkansas-release",
+      "url": "https://blog.google/company-news/inside-google/company-announcements/google-american-innovation-arkansas/",
+      "finalUrl": "https://blog.google/company-news/inside-google/company-announcements/google-american-innovation-arkansas/",
+      "status": 200,
+      "bytes": 393430,
+      "file": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round32-2026-10-24/google-arkansas-release.html",
+      "title": "Google announces new $4 billion investment in Arkansas"
+    },
+    {
+      "key": "entergy-expansion",
+      "url": "https://www.entergy.com/news/entergy-arkansas-announces-enhanced-partnership-at-google-west-memphis-campus-delivering-at-least-500m-in-new-savings-for-all-customers",
+      "finalUrl": "https://www.entergy.com/news/entergy-arkansas-announces-enhanced-partnership-at-google-west-memphis-campus-delivering-at-least-500m-in-new-savings-for-all-customers",
+      "status": 200,
+      "bytes": 119632,
+      "file": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round32-2026-10-24/entergy-expansion.html",
+      "title": "Entergy Arkansas announces enhanced partnership at Google West Memphis campus, delivering at least $500M in new savings for all customers - Entergy"
+    },
+    {
+      "key": "meta-original",
+      "url": "https://datacenters.atmeta.com/2024/05/hello-montgomery/",
+      "finalUrl": "https://datacenters.atmeta.com/2024/05/hello-montgomery/",
+      "status": 200,
+      "bytes": 107392,
+      "file": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round32-2026-10-24/meta-original.html",
+      "title": "Hello, Montgomery! - Meta Data Centers"
+    },
+    {
+      "key": "meta-current",
+      "url": "https://datacenters.atmeta.com/us-locations/",
+      "finalUrl": "https://datacenters.atmeta.com/us-locations/",
+      "status": 200,
+      "bytes": 143037,
+      "file": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round32-2026-10-24/meta-current.html",
+      "title": "United States - Meta Data Centers"
+    },
+    {
+      "key": "steel-swift",
+      "url": "https://swiftcurrentenergy.com/swift-current-energy-completes-sale-of-2-9-gwh-storage-and-2-5-gw-solar-facility-to-cypress-creek-renewables/",
+      "finalUrl": "https://swiftcurrentenergy.com/swift-current-energy-completes-sale-of-2-9-gwh-storage-and-2-5-gw-solar-facility-to-cypress-creek-renewables/",
+      "status": 200,
+      "bytes": 111392,
+      "file": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round32-2026-10-24/steel-swift.html",
+      "title": "Swift Current Energy Completes Sale of 2.9 GWh Storage and 2.5 GW Solar Facility to Cypress Creek Renewables - Swift Current Energy"
+    },
+    {
+      "key": "eia",
+      "url": "https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx",
+      "finalUrl": "https://www.eia.gov/electricity/data/eia860m/xls/september_generator2026.xlsx",
+      "status": 200,
+      "bytes": 14013970,
+      "file": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round32-2026-10-24/eia.xlsx"
+    },
+    {
+      "key": "miso",
+      "url": "https://www.misoenergy.org/api/giqueue/getprojects",
+      "finalUrl": "https://www.misoenergy.org/api/giqueue/getprojects",
+      "status": 200,
+      "bytes": 2328349,
+      "file": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round32-2026-10-24/miso.html",
+      "title": ""
+    },
+    {
+      "key": "pjm-galion",
+      "url": "https://www.pjm.com/pjmfiles/pub/planning/project-queues/TC2/PHASE_2/AG2-149/AG2-149_imp_PHASE_2.htm",
+      "finalUrl": "https://www.pjm.com/pjmfiles/pub/planning/project-queues/TC2/PHASE_2/AG2-149/AG2-149_imp_PHASE_2.htm",
+      "status": 404,
+      "bytes": 103,
+      "file": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round32-2026-10-24/pjm-galion.html",
+      "title": ""
+    },
+    {
+      "key": "pjm-jefferson-old",
+      "url": "https://www.pjm.com/pub/planning/project-queues/impact_studies/ag2331_imp.pdf",
+      "finalUrl": "https://www.pjm.com/pjmfiles/pub/planning/project-queues/impact_studies/ag2331_imp.pdf",
+      "status": 404,
+      "bytes": 103,
+      "file": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round32-2026-10-24/pjm-jefferson-old.html",
+      "title": ""
+    },
+    {
+      "key": "pjm-queue",
+      "url": "https://www.pjm.com/pub/planning/project-queues/Queues-Planning.xlsx",
+      "finalUrl": "https://www.pjm.com/pjmfiles/pub/planning/project-queues/Queues-Planning.xlsx",
+      "status": 404,
+      "bytes": 103,
+      "file": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round32-2026-10-24/pjm-queue.html",
+      "title": ""
+    },
+    {
+      "key": "google-jackson",
+      "url": "https://datacenters.google/locations/jackson-county/",
+      "finalUrl": "https://datacenters.google/locations/jackson-county/",
+      "status": 404,
+      "bytes": 1586,
+      "file": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round32-2026-10-24/google-jackson.html",
+      "title": "Error 404 (Not Found)!!1"
+    },
+    {
+      "key": "google-westmemphis",
+      "url": "https://datacenters.google/locations/west-memphis/",
+      "finalUrl": "https://datacenters.google/locations/west-memphis/",
+      "status": 404,
+      "bytes": 1584,
+      "file": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round32-2026-10-24/google-westmemphis.html",
+      "title": "Error 404 (Not Found)!!1"
+    },
+    {
+      "key": "meta-montgomery",
+      "url": "https://datacenters.atmeta.com/locations/montgomery/",
+      "finalUrl": "https://datacenters.atmeta.com/locations/montgomery/",
+      "status": 404,
+      "bytes": 68022,
+      "file": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round32-2026-10-24/meta-montgomery.html",
+      "title": "Page not found - Meta Data Centers"
+    },
+    {
+      "key": "ferc-southplatte",
+      "url": "https://mbrweb.ferc.gov/SearchlkpFERCAsset/Index?page=46",
+      "finalUrl": "https://mbrweb.ferc.gov/SearchlkpFERCAsset/Index?page=46",
+      "status": 200,
+      "bytes": 82813,
+      "file": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round32-2026-10-24/ferc-southplatte.html",
+      "title": "MBR | Index"
+    },
+    {
+      "key": "original-17067",
+      "url": "https://www.greentowncleanpower.com/projects/jefferson-greentown-storage",
+      "error": "HTTPSConnectionPool(host='www.greentowncleanpower.com', port=443): Max retries exceeded with url: /projects/jefferson-greentown-storage (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x105dca590>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))"
+    },
+    {
+      "key": "original-17068",
+      "url": "https://www.plattevalleyenergy.com/projects/south-platte-storage",
+      "error": "HTTPSConnectionPool(host='www.plattevalleyenergy.com', port=443): Max retries exceeded with url: /projects/south-platte-storage (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x105dbb150>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))"
+    },
+    {
+      "key": "original-17069",
+      "url": "https://www.ccrenew.com/projects/steel-river-storage-phase-2",
+      "finalUrl": "https://www.ccrenew.com/projects/steel-river-storage-phase-2",
+      "status": 404,
+      "bytes": 5890,
+      "file": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round32-2026-10-24/original-17069.html",
+      "title": "Site Not Configured | 404 Not Found"
+    },
+    {
+      "key": "original-17070",
+      "url": "https://www.ccrenew.com/projects/steel-river-storage-phase-3",
+      "finalUrl": "https://www.ccrenew.com/projects/steel-river-storage-phase-3",
+      "status": 404,
+      "bytes": 5890,
+      "file": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round32-2026-10-24/original-17070.html",
+      "title": "Site Not Configured | 404 Not Found"
+    },
+    {
+      "key": "original-17071",
+      "url": "https://datacenters.google/locations/jackson-county/building-4",
+      "finalUrl": "https://datacenters.google/locations/jackson-county/building-4",
+      "status": 404,
+      "bytes": 1596,
+      "file": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round32-2026-10-24/original-17071.html",
+      "title": "Error 404 (Not Found)!!1"
+    },
+    {
+      "key": "original-17072",
+      "url": "https://www.google.com/about/datacenters/locations/west-memphis-building-3/",
+      "finalUrl": "https://about.google/datacenters/locations/west-memphis-building-3/",
+      "status": 404,
+      "bytes": 1607,
+      "file": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round32-2026-10-24/original-17072.html",
+      "title": "Error 404 (Not Found)!!1"
+    },
+    {
+      "key": "original-17073",
+      "url": "https://datacenters.google/locations/west-memphis/building-5",
+      "finalUrl": "https://datacenters.google/locations/west-memphis/building-5",
+      "status": 404,
+      "bytes": 1594,
+      "file": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round32-2026-10-24/original-17073.html",
+      "title": "Error 404 (Not Found)!!1"
+    },
+    {
+      "key": "original-17074",
+      "url": "https://datacenters.atmeta.com/montgomery/building-6",
+      "finalUrl": "https://datacenters.atmeta.com/montgomery/building-6",
+      "status": 404,
+      "bytes": 68022,
+      "file": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round32-2026-10-24/original-17074.html",
+      "title": "Page not found - Meta Data Centers"
+    },
+    {
+      "key": "original-17075",
+      "url": "https://www.buckeyecleansolar.com/projects/galion-south-berwick",
+      "error": "HTTPSConnectionPool(host='www.buckeyecleansolar.com', port=443): Max retries exceeded with url: /projects/galion-south-berwick (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x105d8e190>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))"
+    },
+    {
+      "key": "original-17076",
+      "url": "https://www.entergy-arkansas.com/projects/independence-ises-solar",
+      "finalUrl": "https://www.entergyarkansas.com/projects/independence-ises-solar",
+      "status": 403,
+      "bytes": 146,
+      "file": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round32-2026-10-24/original-17076.html",
+      "title": "403 Forbidden"
+    },
+    {
+      "key": "original-17077",
+      "url": "https://www.prairiesunenergy.com/projects/split-rock-white",
+      "error": "HTTPSConnectionPool(host='www.prairiesunenergy.com', port=443): Max retries exceeded with url: /projects/split-rock-white (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x105d8fad0>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))"
+    },
+    {
+      "key": "original-17078",
+      "url": "https://www.badgerstaterenewables.com/projects/stone-lake-gardner-park",
+      "error": "HTTPSConnectionPool(host='www.badgerstaterenewables.com', port=443): Max retries exceeded with url: /projects/stone-lake-gardner-park (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x105dc9490>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))"
+    },
+    {
+      "key": "steel-current",
+      "url": "https://cypresscreekenergy.com/steel-river-energy-center/",
+      "finalUrl": "https://cypresscreekenergy.com/steel-river-energy-center/",
+      "status": 200,
+      "bytes": 132341,
+      "file": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round32-2026-10-24/steel-current.html",
+      "title": "Steel River Energy Center | Cypress Creek"
+    },
+    {
+      "key": "steel-finance",
+      "url": "https://cypresscreekenergy.com/news/steel-river-financing/",
+      "finalUrl": "https://cypresscreekenergy.com/news/steel-river-financing/",
+      "status": 200,
+      "bytes": 110831,
+      "file": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round32-2026-10-24/steel-finance.html",
+      "title": "Cypress Creek Energy Secures $3.5 Billion to Advance One of America’s Largest Solar and Storage Projects | Cypress Creek"
+    },
+    {
+      "key": "steel-groundbreaking",
+      "url": "https://cypresscreekenergy.com/news/steel-river-groundbreaking/",
+      "finalUrl": "https://cypresscreekenergy.com/news/steel-river-groundbreaking/",
+      "status": 200,
+      "bytes": 106353,
+      "file": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round32-2026-10-24/steel-groundbreaking.html",
+      "title": "Cypress Creek and Google Break Ground on America's Largest Solar Project | Cypress Creek"
+    },
+    {
+      "key": "steel-pager",
+      "url": "https://cypresscreekenergy.com/wp-content/uploads/2026/07/OnePager_Steel-River_7-21-2026.pdf",
+      "finalUrl": "https://cypresscreekenergy.com/wp-content/uploads/2026/07/OnePager_Steel-River_7-21-2026.pdf",
+      "status": 200,
+      "bytes": 1515692,
+      "file": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round32-2026-10-24/steel-pager.pdf"
+    },
+    {
+      "key": "meta-expansion",
+      "url": "https://datacenters.atmeta.com/2025/09/montgomery-were-growing/",
+      "finalUrl": "https://datacenters.atmeta.com/2025/09/montgomery-were-growing/",
+      "status": 200,
+      "bytes": 87977,
+      "file": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round32-2026-10-24/meta-expansion.html",
+      "title": "Montgomery, we’re growing! - Meta Data Centers"
+    },
+    {
+      "key": "google-alabama-pdf",
+      "url": "https://storage.googleapis.com/gweb-uniblog-publish-prod/documents/Google_Strengthens_Alabama_Presence.pdf",
+      "finalUrl": "https://storage.googleapis.com/gweb-uniblog-publish-prod/documents/Google_Strengthens_Alabama_Presence.pdf",
+      "status": 200,
+      "bytes": 94233,
+      "file": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round32-2026-10-24/google-alabama-pdf.pdf"
+    },
+    {
+      "key": "independence-miso-report",
+      "url": "https://cdn.misoenergy.org/20260211%20SSPM%20Item%2004b%20Review%20of%20Proposed%20Reliability%20Projects%20AR740736.pdf",
+      "finalUrl": "https://cdn.misoenergy.org/20260211%20SSPM%20Item%2004b%20Review%20of%20Proposed%20Reliability%20Projects%20AR740736.pdf",
+      "status": 200,
+      "bytes": 2210505,
+      "file": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round32-2026-10-24/independence-miso-report.pdf"
+    },
+    {
+      "key": "jefferson-tracker",
+      "url": "https://www.interconnection.fyi/project/pjm-ag2-331",
+      "finalUrl": "https://www.interconnection.fyi/project/pjm-ag2-331",
+      "status": 200,
+      "bytes": 172042,
+      "file": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round32-2026-10-24/jefferson-tracker.html",
+      "title": "Jefferson-Greentown 765 kV (AG2-331) — PJM Interconnection Queue — Decatur County, IN"
+    },
+    {
+      "key": "galion-tracker",
+      "url": "https://www.interconnection.fyi/project/pjm-ag2-149",
+      "finalUrl": "https://www.interconnection.fyi/project/pjm-ag2-149",
+      "status": 200,
+      "bytes": 172493,
+      "file": "/Users/ianflynn/chronopin/.scrape/prod-batches/cleanview-2026-10-14/audit/round32-2026-10-24/galion-tracker.html",
+      "title": "Galion-South Berwick 345 kV (AG2-149) — PJM Interconnection Queue — Crawford County, OH"
+    }
+  ],
+  "researchNotes": [
+    "Opened PJM Phase I studies were released October 29, 2025: Cobia AG2-331 is 200 MW/2,000 MWh/ten-hour storage added within a 715 MW combined facility; Wombat AG2-149 is 314 MW solar within 400 MW combined solar/storage capability. Neither request is in the June 2026 Phase II request list. Opened GridTracker records report November 27, 2025 withdrawal/CIW for each. This later status is explicitly attributed to secondary records; exact primary withdrawal confirmation remains a follow-up because current export returns 401. Native dates mark the verified historical study publication, not withdrawal day or future COD.",
+    "South Platte plant 70053/SP250 is 250 MW battery, EIA September 2026 status U and June 2027 plan. FERC asset registry has an older July 2027 month. It is distinct from 150 MW South Platte Solar plant 69972; no unsupported phase/parent identity or duration is inferred. Water-storage projects and reservoir cost studies with the same name are unrelated.",
+    "Steel River Phase 2/3 are independent storage generator records SRSB2/SRSB3 at 250 MW each, paired with separate 500 MW solar records. Current EIA reporting targets July 2029/July 2030, while current operator page targets all phases by 2029. Phase 3 conflict remains explicit; July 2026 ceremony and Google PPA cover the first two phases only. Native company keeps the EIA/legal Cypress Creek Renewables identity, with current Cypress Creek Energy branding explained.",
+    "Seven unsupported construction prices were cleared; no matched current construction budget was verified for these scopes. Study network-upgrade allocations are not whole project costs. Steel River $4.5B-plus capital is whole-program; $3.5B financing covers first two hybrid phases together. The $39.9M Campbell switching-station project is shared infrastructure for two distinct 625 MW solar requests, not a budget for either generating plant. No division, phase prorating or FX conversion.",
+    "Independence lead lacks a request identifier, and both J2261 and J2262 match 625 MW/Jackson County/September 2028 negotiated month. Opened February 2026 MISO planning report confirms two projects and a shared switching station. Hold avoids arbitrarily assigning a tracker lead or treating queue Done as commercial operation.",
+    "Google Jackson County Building 4, Google West Memphis Buildings 3/5 and Meta Montgomery Building 6 lack opened building-specific mapping, capacity, cost or COD evidence. Opened campus releases support real wider developments, not those tracker allocations. Meta/Jackson canonical pins and existing Steel River component/campus pins remain unchanged; holds do not mean cancellation of campuses.",
+    "Official gallery/link checks added two whole-program Steel River construction photos and a phase-location schematic to each storage pin, plus the first-two-phase ceremony on Phase 2. Captions distinguish shared solar/program context from a completed or separately identified battery installation. Three moved markers received six USGS maps at EIA reporting coordinates, not surveyed battery plots. Seven gallery placements reuse four original public Azure files; ten unique new files were uploaded. Plain curl original bytes and public blob bytes were verified; no pin images added to Git.",
+    "Wombat’s former project homepage redirects to generic Geenex content; unlabelled corporate imagery was not used as a project gallery. No independently labelled South Platte, anonymous MISO or Cobia site gallery was established after project/developer/filing searches. Original invented operator URLs were dead/blocked. Exact gallery and parcel gaps remain recorded.",
+    "Shared MISO and September EIA wiki coverage was preserved and new selected rows appended. All ten cited source wikis and affected internal company wikis were updated/read back on both environments. Shared-source pins were included in guarded citation reconciliation and unchanged-content checks. Internal company wiki rebuilds use stored facts and do not claim fresh independent verification of every corporate fact.",
+    "No application-code changes, deployment, production build or restart. Existing unrelated workspace edits were preserved."
+  ]
+}

@@ -4,6 +4,9 @@
 import { api } from '@/lib/client/api';
 import { hasFilters, parseSearchQuery } from '@/server/util/searchQuery';
 
+// Fired by the search box while its selected filters are dragged out: { q, x, y, drop } (drop on release).
+export const DRAG_QUERY_EVENT = 'chronopin:drag-query';
+
 const KEY = 'chronopin_combo_queries';
 const KEEP = 12;
 

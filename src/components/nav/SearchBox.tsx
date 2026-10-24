@@ -13,6 +13,7 @@ import { useTimeZone } from '@/lib/client/timeZone';
 import { formatDayKey, formatStart } from '@/lib/format';
 import { OCTAGON_AXES } from '@/lib/people';
 import { hasTerm, term } from '@/lib/searchTerms';
+import { DRAG_QUERY_EVENT } from '@/lib/savedQueries';
 import { addEscape, removeEscape } from '@/lib/client/escapeStack';
 import { CLOUD_QUERY_EVENT, HELD_QUERY_EVENT, isTagCloudOpen, TAG_CLOUD_EVENT } from '@/lib/client/tagCloudOpen';
 import { ADD_TERM_EVENT, DRAG_TERM_EVENT } from '@/components/timeline/WordCloud';
@@ -969,6 +970,35 @@ export function SearchBox() {
         // A press on the box itself, not an item or button, types something new
         // after the items.
         onMouseDown={(event) => {
+          // Pressing inside a selection and dragging carries its filters to
+          // the pin icon in the tag cloud's saved searches.
+          const held = (event.target as Element).closest<HTMLElement>('[data-at]');
+          if (sel && event.button === 0 && held && coverage(sel, Number(held.dataset.at), held.dataset.raw ?? '')) {
+            event.preventDefault();
+            const q = rangeText(sel).trim().replace(/\s+/g, ' ');
+            const from = { x: event.clientX, y: event.clientY };
+            let live = false;
+            const send = (e: MouseEvent, drop: boolean) => window.dispatchEvent(new CustomEvent(DRAG_QUERY_EVENT, { detail: { q, x: e.clientX, y: e.clientY, drop } }));
+            const move = (e: MouseEvent) => {
+              if (!live && Math.hypot(e.clientX - from.x, e.clientY - from.y) < 6) return;
+              live = true;
+              send(e, false);
+            };
+            const up = (e: MouseEvent) => {
+              document.removeEventListener('mousemove', move);
+              document.removeEventListener('mouseup', up);
+              if (live) {
+                send(e, true);
+                // The click that follows a drag is not a press on the box.
+                const stop = (c: Event) => c.stopPropagation();
+                document.addEventListener('click', stop, { capture: true, once: true });
+                setTimeout(() => document.removeEventListener('click', stop, true), 0);
+              } else setRange(null);
+            };
+            document.addEventListener('mousemove', move);
+            document.addEventListener('mouseup', up);
+            return;
+          }
           setRange(null);
           if ((event.target as Element).closest('button')) return;
           const pressed = inputRef.current;
