@@ -211,7 +211,7 @@ A draft is ready to save when:
 - 3 media reached by best effort, with at least 1 video and at least 1 picture among them; fewer, or no video, only when every source was tried, with what was tried noted.
 - A game pin carries its aggregated ratings, its maturity rating with content descriptors and its supported platforms, each read from a fetched page (see [Game facts](#decision-rules)).
 - A prediction-market pin says what its markets have traded, in dollars, next to the odds it quotes.
-- An AI model release pin (language or video model) is tagged `AI Models` and titled with the model name first, so the modelRubrics task finds it; it ends up with a rubric, verified reviews (3 is the target, not a floor: cost vs. quality outranks the count) and, for a video model, spec tables (stage 12).
+- An AI model release pin (language or video model) is tagged `AI Models` and titled with the model name first, so the modelRubrics task finds it; it ends up with a rubric, at least 3 verified reviews and, for a video model, spec tables (stage 12).
 - The `longFormSummary` is an HTML bulleted list whose every point cites what backs it.
 - The pin passes the [value test](#principles) (principle 9). Its summary is original synthesis from more than one source and gives context beyond the source page; no sentence is lifted from the source except a short, attributed quote; and it is not interchangeable with a sibling pin in the same batch.
 - A model or product pin carries the maker's main results table (`<h3>Benchmarks</h3>` + `<table>`) when one is published.
