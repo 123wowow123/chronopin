@@ -1,0 +1,71 @@
+import { describe, it, expect, vi } from 'vitest';
+import { readFileSync } from 'node:fs';
+vi.mock('../db', () => ({ query: vi.fn() }));
+import { factoryProblem } from './pinFactory';
+import { factoryScores, isFactoryScore, hasFactoryScores } from '@/lib/pinFactory';
+import type { FactoryProfile } from '@/lib/pinFactory';
+const catalog = JSON.parse(readFileSync('scripts/factories/capability.json', 'utf8')) as { key: string; profile: FactoryProfile }[];
+const valid = () => structuredClone(catalog[0].profile);
+
+describe('factory evidence contract', () => {
+  it('accepts the researched catalog and keeps missing figures null', () => {
+    expect(catalog).toHaveLength(6);
+    for (const { profile } of catalog) {
+      expect(factoryProblem(profile)).toEqual(profile);
+      expect(factoryScores(profile).scale).toBeNull();
+      expect(factoryScores(profile).efficiency).toBeNull();
+      expect(hasFactoryScores(profile)).toBe(true);
+    }
+  });
+  it('requires all six axes but allows a useful all-unknown research profile', () => {
+    const p = valid();
+    for (const a of Object.values(p.axes)) Object.assign(a, { score: null, basis: 'unknown', sources: [] });
+    expect(factoryProblem(p)).toEqual(p);
+    expect(hasFactoryScores(p)).toBe(false);
+    expect(factoryProblem({ ...p, axes: { ...p.axes, scale: undefined } })).toMatch(/scale/);
+  });
+  it('does not accept a score without evidence or substitute missing evidence for zero', () => {
+    const p = valid(); p.axes.technical.sources = [];
+    expect(factoryProblem(p)).toMatch(/evidence/);
+    p.axes.technical.score = 0; p.axes.technical.basis = 'unknown';
+    expect(factoryProblem(p)).toMatch(/evidence/);
+    expect(isFactoryScore(0)).toBe(true);
+    for (const bad of [5.5, -1, 2.1, NaN, Infinity, '4', undefined]) expect(isFactoryScore(bad)).toBe(false);
+  });
+  it('rejects unverified status, invalid days, missing sectors and unsupported editions', () => {
+    expect(factoryProblem({ ...valid(), status: 'opened' })).toMatch(/status/);
+    expect(factoryProblem({ ...valid(), sector: '' })).toMatch(/sector/);
+    expect(factoryProblem({ ...valid(), assessmentDate: '2026-02-30' })).toMatch(/real/);
+    expect(factoryProblem({ ...valid(), rubricYear: 2027 })).toMatch(/rubricYear/);
+    expect(factoryProblem(null)).toMatch(/object/);
+  });
+  it('distinguishes installed capability from announcements and future metrics', () => {
+    const p = valid(); p.axes.technical.basis = 'demonstrated';
+    expect(factoryProblem(p)).toMatch(/announced/);
+    p.axes.technical.basis = 'planned'; p.metrics[0].basis = 'demonstrated';
+    expect(factoryProblem(p)).toMatch(/announced/);
+  });
+  it('requires a real comparison cohort for scale and efficiency', () => {
+    const p = valid();
+    p.axes.scale = { ...structuredClone(p.axes.technical), score: 5 };
+    expect(factoryProblem(p)).toMatch(/benchmark/);
+    p.axes.scale.benchmark = { cohortSize: 4, description: 'Four comparable factories', sources: p.axes.technical.sources };
+    expect(factoryProblem(p)).toMatch(/five/);
+    p.axes.scale.benchmark.cohortSize = 5;
+    expect(factoryProblem(p)).toEqual(p);
+  });
+  it('rejects evidence from after the assessment date', () => {
+    const p = valid(); p.axes.technical.sources[0].publishedDate = '2026-10-25';
+    expect(factoryProblem(p)).toMatch(/postdate/);
+  });
+  it('requires exact-source metadata and safe HTTPS citation links', () => {
+    for (const url of ['http://example.com', 'javascript:alert(1)', 'https://user:password@example.com']) {
+      const p = valid(); p.axes.technical.sources[0].url = url;
+      expect(factoryProblem(p)).toMatch(/HTTPS/);
+    }
+    const p = valid(); p.axes.technical.sources[0].publishedDate = '2026-02-30';
+    expect(factoryProblem(p)).toMatch(/dates/);
+    p.axes.technical.sources[0].publishedDate = null; p.axes.technical.sources[0].quote = 'x'.repeat(301);
+    expect(factoryProblem(p)).toMatch(/300/);
+  });
+});

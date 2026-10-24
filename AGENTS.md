@@ -16,6 +16,14 @@ Owner instruction, 2026-10-13: apply routine, researched daily-job pin updates w
 
 Owner instruction, 2026-10-24: pins about something built (pipelines, power plants, dams, bridges, tunnels, railways, terminals, towers, stadiums, data centres and other construction or energy projects) should carry a `price` and `priceCurrency`. Research a sourced figure (opened HTTPS source, verbatim quote) in the currency the source states, with no FX conversion; match the figure to the pin's own event (a phase takes the phase cost) and take the most recent estimate. Collapses, demolitions, rescues, approvals with no budget and anything with no published cost stay null; never invent one. Save through the admin API and record the source in the pin's references or wiki. The extraction prompt in `src/server/extract/systemPrompt.ts` carries the same rule.
 
+## Construction project status tags
+
+Owner instruction, 2026-10-24: construction and energy-project pins should carry one sourced status tag: `Proposed`, `In Progress` or `Completed`. Match the pin's unit/phase and milestone: plans and approvals before verified physical work are Proposed; construction/refurbishment/testing/commissioning underway is In Progress; explicitly finished/opened/commercially operating scope is Completed. Completing an announcement, loan or approval does not complete construction. A first coil, reactor criticality or grid test does not alone prove full completion. Never infer completion from an elapsed target date. Preserve other tags and authors. Exclude non-construction accidents, closures, sales and monitored storage; document unsupported, cancelled or halted status rather than forcing a tag. Apply through authenticated admin APIs in both environments and synchronize research/replay catalogs.
+
+## Power plant generation information
+
+Owner reminder, 2026-10-24: power plant pins must include sourced generation information in the native `PinPower` fields (`kind: 'generation'`), saved and verified through `PUT /api/pins/:id/power` locally and in production. Match capacity to the unit, phase and historical period; distinguish net/gross electrical MW from thermal MW and annual energy in MWh/GWh. Include published annual output when available. Explain whether capacity is historical, operating or proposed, especially on accident, shutdown, storage and restart pins; a retired unit's rating must not imply current generation. Preserve sources in references/wiki and keep replay scripts synchronized.
+
 ## Deploying to production
 
 Never deploy, restart, resize or build on the production VM (20.109.175.187) unless the user has asked for that deploy in this conversation, in words. Editing code, committing and pushing are not a request to deploy, and approval for one deploy does not cover the next.

@@ -1,0 +1,666 @@
+{
+  "checkedAt": "2026-10-24",
+  "media": {
+    "site": {
+      "type": 1,
+      "originalUrl": "https://chronopin.blob.core.windows.net/thumb/three-mile-island-2026-10-24-doe-site.png",
+      "authorName": "U.S. Department of Energy",
+      "authorUrl": "https://www.energy.gov/ne/articles/5-facts-know-about-three-mile-island"
+    },
+    "training": {
+      "type": 1,
+      "originalUrl": "https://chronopin.blob.core.windows.net/thumb/three-mile-island-2026-10-24-operators.jpg",
+      "authorName": "Constellation Energy",
+      "authorUrl": "https://www.constellationenergy.com/about/locations/crane-clean-energy-center.html"
+    }
+  },
+  "sources": {
+    "unit1": [
+      "https://world-nuclear.org/nuclear-reactor-database/details/Three-Mile-Island-1",
+      "Three Mile Island 1",
+      "Commercial operation: 2 September 1974. Permanent shutdown: 20 September 2019."
+    ],
+    "unit2": [
+      "https://world-nuclear.org/nuclear-reactor-database/details/Three-Mile-Island-2",
+      "Three Mile Island 2",
+      "Commercial operation: 30 December 1978. Permanent shutdown: 28 March 1979."
+    ],
+    "costs": [
+      "https://tmia.com/corp.historyTMI",
+      "A Corporate History of Three Mile Island",
+      "TMI-1 entered service in September 1974 for $400 million. TMI-2 construction cost $700 million."
+    ],
+    "accident": [
+      "https://www.energy.gov/ne/articles/5-facts-know-about-three-mile-island",
+      "5 Facts to Know About Three Mile Island",
+      "Equipment failure and operator error caused a partial meltdown at Unit 2 on March 28, 1979; regulatory training and emergency-planning changes followed."
+    ],
+    "smithsonian": [
+      "https://americanhistory.si.edu/tmi/tmi11.htm",
+      "Three Mile Island: The Inside Story — Five Score Years of Nuclear Power",
+      "Unit 1 was permitted to return to service in October 1985. Unit 2 was placed in post-defueling monitored storage in 1993."
+    ],
+    "cleanup": [
+      "https://world-nuclear.org/information-library/safety-and-security/safety-of-plants/three-mile-island-accident",
+      "Three Mile Island Accident",
+      "Unit 1 restarted in October 1985. Unit 2 cleanup ended in December 1993 before monitored storage; this did not restore the damaged unit to operation."
+    ],
+    "dep": [
+      "https://www.pa.gov/agencies/dep/dep-regions/southcentral-regional-office/crane-clean-energy-center-ccec",
+      "Crane Clean Energy Center (CCEC)",
+      "Unit 1 shut down September 20, 2019. The planned restart applies to Unit 1 and requires regulatory reviews."
+    ],
+    "announcement": [
+      "https://www.constellationenergy.com/news/2024/Constellation-to-Launch-Crane-Clean-Energy-Center-Restoring-Jobs-and-Carbon-Free-Power-to-The-Grid.html",
+      "Constellation to Launch Crane Clean Energy Center, Restoring Jobs and Carbon-Free Power to The Grid",
+      "September 20, 2024: Constellation announced a 20-year Microsoft power agreement enabling the proposed 835 MW Unit 1 restart. The original target was 2028."
+    ],
+    "capex": [
+      "https://www.constellationenergy.com/news/2024/Constellation-Reports-Third-Quarter-2024-Results.html",
+      "Constellation Reports Third Quarter 2024 Results",
+      "The company estimated approximately $1.6 billion in capital expenditures to restart Crane."
+    ],
+    "progress": [
+      "https://investors.constellationenergy.com/news-releases/news-release-details/constellation-reports-second-quarter-2026-results",
+      "Constellation Reports Second Quarter 2026 Results",
+      "August 6, 2026: Constellation reported FERC approval for transferring capacity interconnection rights and an NRC fuel license amendment; it still targeted 2027 operations."
+    ],
+    "operator": [
+      "https://www.constellationenergy.com/about/locations/crane-clean-energy-center.html",
+      "Crane Clean Energy Center",
+      "The operator expects readiness for service in 2027, subject to approvals. Unit 1 is independent of accident-damaged Unit 2. The official photo library includes operator training photographs."
+    ],
+    "loan": [
+      "https://www.energy.gov/articles/energy-Department-closes-loan-restart-nuclear-power-plant-pennsylvania",
+      "Energy Department Closes Loan to Restart Nuclear Power Plant in Pennsylvania",
+      "November 18, 2025: DOE closed a $1 billion loan to help finance the 835 MW Crane restart, subject to licensing approvals."
+    ]
+  },
+  "events": [
+    {
+      "key": "opening",
+      "title": "Three Mile Island Unit 1 Begins Commercial Operation",
+      "date": "1974-09-02",
+      "source": "unit1",
+      "price": 400000000,
+      "description": "Unit 1 begins commercial operation on Three Mile Island in Pennsylvania, following construction that began in 1968.",
+      "body": "<p>This is Unit 1, the reactor later renamed Crane Clean Energy Center. The reactor database distinguishes its June 1974 grid connection from its September 2 commercial start.<cite data-ref=\"https://world-nuclear.org/nuclear-reactor-database/details/Three-Mile-Island-1\"></cite></p><p>Historical construction cost: USD 400 million. Three Mile Island Alert reports “at a cost of  $400 million”; this is the original unit cost in stated dollars, without inflation or currency conversion.<cite data-ref=\"https://tmia.com/corp.historyTMI\"></cite></p>",
+      "refs": [
+        {
+          "url": "https://world-nuclear.org/nuclear-reactor-database/details/Three-Mile-Island-1",
+          "title": "Three Mile Island 1",
+          "confidence": 95,
+          "reasoning": "Commercial Operation: Monday, 2 September 1974.",
+          "startDate": "1974-09-02"
+        },
+        {
+          "url": "https://tmia.com/corp.historyTMI",
+          "title": "A Corporate History of Three Mile Island",
+          "confidence": 95,
+          "reasoning": "Historical Unit 1 construction cost quote: “at a cost of  $400 million”."
+        }
+      ],
+      "constructionStatus": "Completed"
+    },
+    {
+      "key": "unit2",
+      "title": "Three Mile Island Unit 2 Begins Commercial Operation",
+      "date": "1978-12-30",
+      "source": "unit2",
+      "price": 700000000,
+      "description": "Three Mile Island’s second reactor enters commercial service, less than three months before its 1979 accident.",
+      "body": "<p>The reactor database dates first grid connection to April 21, 1978 and commercial operation to December 30, 1978.<cite data-ref=\"https://world-nuclear.org/nuclear-reactor-database/details/Three-Mile-Island-2\"></cite></p><p>Historical construction cost: USD 700 million. Three Mile Island Alert states “TMI-2 was built at a cost to rate payers of $700 million”. This is construction cost, excluding subsequent cleanup.<cite data-ref=\"https://tmia.com/corp.historyTMI\"></cite></p>",
+      "refs": [
+        {
+          "url": "https://world-nuclear.org/nuclear-reactor-database/details/Three-Mile-Island-2",
+          "title": "Three Mile Island 2",
+          "confidence": 95,
+          "reasoning": "Commercial Operation: Saturday, 30 December 1978.",
+          "startDate": "1978-12-30"
+        },
+        {
+          "url": "https://tmia.com/corp.historyTMI",
+          "title": "A Corporate History of Three Mile Island",
+          "confidence": 95,
+          "reasoning": "Unit 2 construction cost quote: “TMI-2 was built at a cost to rate payers of $700 million”."
+        }
+      ],
+      "constructionStatus": "Completed"
+    },
+    {
+      "key": "accident",
+      "title": "Three Mile Island Unit 2 Suffers a Partial Meltdown",
+      "date": "1979-03-28",
+      "source": "accident",
+      "description": "Equipment failures and operator errors cause inadequate core cooling and a partial meltdown in Unit 2, permanently ending that reactor’s operation.",
+      "body": "<p>A relief valve remained open while instrumentation misled operators about its state. Loss of coolant and inadequate circulation damaged the core. DOE describes subsequent changes to operator training, emergency planning and equipment requirements.<cite data-ref=\"https://www.energy.gov/ne/articles/5-facts-know-about-three-mile-island\"></cite></p><p>The accident damaged Unit 2. The later Crane restart project concerns the separate Unit 1 reactor.<cite data-ref=\"https://www.constellationenergy.com/about/locations/crane-clean-energy-center.html\"></cite></p>",
+      "refs": [
+        {
+          "url": "https://www.energy.gov/ne/articles/5-facts-know-about-three-mile-island",
+          "title": "5 Facts to Know About Three Mile Island",
+          "confidence": 95,
+          "reasoning": "DOE dates the accident March 28, 1979.",
+          "startDate": "1979-03-28",
+          "publishedDate": "2022-05-04"
+        },
+        {
+          "url": "https://www.constellationenergy.com/about/locations/crane-clean-energy-center.html",
+          "title": "Crane Clean Energy Center",
+          "confidence": 95,
+          "reasoning": "Distinguishes the independent Unit 1 restart from damaged Unit 2."
+        }
+      ],
+      "constructionStatus": null
+    },
+    {
+      "key": "return",
+      "title": "Three Mile Island Unit 1 Returns to Service After Six-Year Shutdown",
+      "date": "1985-10-01",
+      "estimated": true,
+      "source": "smithsonian",
+      "description": "The undamaged Unit 1 returns to service in October 1985 after extended regulatory proceedings, modifications and retraining.",
+      "body": "<p>The Smithsonian chronology places permission to return to service in October 1985; the World Nuclear Association also dates the restart to that month. Unit 1 had been shut for refueling when Unit 2’s accident occurred.<cite data-ref=\"https://americanhistory.si.edu/tmi/tmi11.htm\"></cite><cite data-ref=\"https://world-nuclear.org/information-library/safety-and-security/safety-of-plants/three-mile-island-accident\"></cite></p><p>October 1 is a month-only timeline anchor, not a verified restart day. No separate published budget for this return-to-service event was established.</p>",
+      "refs": [
+        {
+          "url": "https://americanhistory.si.edu/tmi/tmi11.htm",
+          "title": "Three Mile Island: The Inside Story — Five Score Years of Nuclear Power",
+          "confidence": 95,
+          "reasoning": "Chronology states October 1985; the exact day is not supplied.",
+          "startDate": "1985-10-01"
+        },
+        {
+          "url": "https://world-nuclear.org/information-library/safety-and-security/safety-of-plants/three-mile-island-accident",
+          "title": "Three Mile Island Accident",
+          "confidence": 95,
+          "reasoning": "Corroborates restart in October 1985."
+        }
+      ],
+      "constructionStatus": "Completed"
+    },
+    {
+      "key": "storage",
+      "title": "Three Mile Island Unit 2 Enters Post-Defueling Monitored Storage",
+      "date": "1993-12-01",
+      "estimated": true,
+      "source": "cleanup",
+      "description": "Unit 2 moves into monitored storage in December 1993 after the initial accident cleanup; decommissioning remains a separate, later process.",
+      "body": "<p>The cleanup removed damaged fuel and processed contaminated water. World Nuclear Association dates the transition to post-defueling monitored storage to December 1993. Monitored storage did not mean the site was fully decommissioned or Unit 2 restored to operation.<cite data-ref=\"https://world-nuclear.org/information-library/safety-and-security/safety-of-plants/three-mile-island-accident\"></cite></p><p>December 1 represents month-level evidence; an exact transition day is not established. No construction price is assigned to this storage milestone.</p>",
+      "refs": [
+        {
+          "url": "https://world-nuclear.org/information-library/safety-and-security/safety-of-plants/three-mile-island-accident",
+          "title": "Three Mile Island Accident",
+          "confidence": 95,
+          "reasoning": "Dates post-defueling monitored storage to December 1993; exact day unspecified.",
+          "startDate": "1993-12-01"
+        }
+      ],
+      "constructionStatus": null
+    },
+    {
+      "key": "closure",
+      "title": "Three Mile Island Unit 1 Shuts Down for Economic Reasons",
+      "date": "2019-09-20",
+      "source": "dep",
+      "description": "Unit 1 shuts down on September 20, 2019, ending electricity generation at Three Mile Island until any future approved restart.",
+      "body": "<p>Pennsylvania DEP records September 20, 2019 as the Unit 1 shutdown date. Constellation’s later restart announcement says the retirement was economic.<cite data-ref=\"https://www.pa.gov/agencies/dep/dep-regions/southcentral-regional-office/crane-clean-energy-center-ccec\"></cite><cite data-ref=\"https://www.constellationenergy.com/news/2024/Constellation-to-Launch-Crane-Clean-Energy-Center-Restoring-Jobs-and-Carbon-Free-Power-to-The-Grid.html\"></cite></p><p>This closure was separate from the 1979 accident that permanently disabled Unit 2. The closure event has no construction price.</p>",
+      "refs": [
+        {
+          "url": "https://www.pa.gov/agencies/dep/dep-regions/southcentral-regional-office/crane-clean-energy-center-ccec",
+          "title": "Crane Clean Energy Center (CCEC)",
+          "confidence": 95,
+          "reasoning": "Explicitly dates Unit 1 shutdown September 20, 2019.",
+          "startDate": "2019-09-20"
+        },
+        {
+          "url": "https://www.constellationenergy.com/news/2024/Constellation-to-Launch-Crane-Clean-Energy-Center-Restoring-Jobs-and-Carbon-Free-Power-to-The-Grid.html",
+          "title": "Constellation to Launch Crane Clean Energy Center, Restoring Jobs and Carbon-Free Power to The Grid",
+          "confidence": 95,
+          "reasoning": "Says Unit 1 shut for economic reasons exactly five years before September 20, 2024.",
+          "startDate": "2019-09-20",
+          "publishedDate": "2024-09-20"
+        }
+      ],
+      "constructionStatus": null
+    },
+    {
+      "key": "agreement",
+      "title": "Microsoft Deal Launches Three Mile Island Unit 1 Restart Plan",
+      "date": "2024-09-20",
+      "source": "announcement",
+      "price": 1600000000,
+      "description": "Constellation announces a 20-year Microsoft power agreement and plans to restart Unit 1 as Crane Clean Energy Center, restoring about 835 MW.",
+      "body": "<p>The September 20 announcement originally targeted 2028. This pin dates the agreement and restart plan; it does not claim electricity generation resumed that day.<cite data-ref=\"https://www.constellationenergy.com/news/2024/Constellation-to-Launch-Crane-Clean-Energy-Center-Restoring-Jobs-and-Carbon-Free-Power-to-The-Grid.html\"></cite></p><p>Restart capital estimate: USD 1.6 billion. Constellation’s results state “approximately $1.6 billion of cash from operations for capital expenditures necessary to restart the plant”. The separate USD 1 billion DOE loan is financing, not the total project cost.<cite data-ref=\"https://www.constellationenergy.com/news/2024/Constellation-Reports-Third-Quarter-2024-Results.html\"></cite></p>",
+      "refs": [
+        {
+          "url": "https://www.constellationenergy.com/news/2024/Constellation-to-Launch-Crane-Clean-Energy-Center-Restoring-Jobs-and-Carbon-Free-Power-to-The-Grid.html",
+          "title": "Constellation to Launch Crane Clean Energy Center, Restoring Jobs and Carbon-Free Power to The Grid",
+          "confidence": 95,
+          "reasoning": "Announcement explicitly dated September 20, 2024.",
+          "startDate": "2024-09-20",
+          "publishedDate": "2024-09-20"
+        },
+        {
+          "url": "https://www.constellationenergy.com/news/2024/Constellation-Reports-Third-Quarter-2024-Results.html",
+          "title": "Constellation Reports Third Quarter 2024 Results",
+          "confidence": 95,
+          "reasoning": "Restart capex quote: “approximately $1.6 billion of cash from operations for capital expenditures necessary to restart the plant”."
+        }
+      ],
+      "constructionStatus": "Proposed"
+    },
+    {
+      "key": "progress",
+      "title": "Constellation Reports Crane Restart Interconnection and Fuel-License Milestones",
+      "date": "2026-08-06",
+      "source": "progress",
+      "price": 1600000000,
+      "description": "Constellation reports FERC approval for an interconnection-rights transfer and NRC approval of a fuel-license amendment while maintaining its 2027 restart target.",
+      "body": "<p>The August 6 results report these regulatory milestones. The date here is the dated company report, not an inferred date for either individual approval. These steps do not constitute final permission to restart.<cite data-ref=\"https://investors.constellationenergy.com/news-releases/news-release-details/constellation-reports-second-quarter-2026-results\"></cite></p><p>The overall Unit 1 restoration budget is USD 1.6 billion, rather than a new budget for these approvals: “approximately $1.6 billion of cash from operations for capital expenditures necessary to restart the plant”.<cite data-ref=\"https://www.constellationenergy.com/news/2024/Constellation-Reports-Third-Quarter-2024-Results.html\"></cite></p>",
+      "refs": [
+        {
+          "url": "https://investors.constellationenergy.com/news-releases/news-release-details/constellation-reports-second-quarter-2026-results",
+          "title": "Constellation Reports Second Quarter 2026 Results",
+          "confidence": 95,
+          "reasoning": "Issuer results published August 6, 2026.",
+          "startDate": "2026-08-06",
+          "publishedDate": "2026-08-06"
+        },
+        {
+          "url": "https://www.constellationenergy.com/news/2024/Constellation-Reports-Third-Quarter-2024-Results.html",
+          "title": "Constellation Reports Third Quarter 2024 Results",
+          "confidence": 95,
+          "reasoning": "Overall restart budget, not incremental approval spending: “approximately $1.6 billion of cash from operations for capital expenditures necessary to restart the plant”."
+        }
+      ],
+      "constructionStatus": "In Progress"
+    }
+  ],
+  "environments": [
+    {
+      "base": "http://127.0.0.1:3000",
+      "pins": [
+        {
+          "id": 19635,
+          "title": "Three Mile Island Unit 1 Begins Commercial Operation",
+          "kind": "new-event",
+          "date": "1974-09-02T00:00:00.000Z",
+          "price": 400000000,
+          "priceCurrency": "USD",
+          "power": {
+            "megawatts": 792,
+            "kind": "generation",
+            "source": "hand",
+            "sourceUrl": "https://world-nuclear.org/nuclear-reactor-database/details/Three-Mile-Island-1",
+            "note": "Unit 1: 1974 reference net electrical rating, 792 MWe (WNA/IAEA PRIS historical table). Calendar-1974 electricity supplied: 2,450.20 GWh. Historical capacity, not current output.",
+            "checkedAt": "2026-10-24T19:32:12.485Z"
+          }
+        },
+        {
+          "id": 19636,
+          "title": "Three Mile Island Unit 2 Begins Commercial Operation",
+          "kind": "new-event",
+          "parentId": 19635,
+          "date": "1978-12-30T00:00:00.000Z",
+          "price": 700000000,
+          "priceCurrency": "USD",
+          "power": {
+            "megawatts": 880,
+            "kind": "generation",
+            "source": "hand",
+            "sourceUrl": "https://world-nuclear.org/nuclear-reactor-database/details/Three-Mile-Island-2",
+            "note": "Unit 2: 880 MWe net; 959 MWe gross. Calendar-1978 electricity supplied: 636.50 GWh. Permanent shutdown March 28, 1979. Historical rating, not present generation.",
+            "checkedAt": "2026-10-24T19:32:12.544Z"
+          }
+        },
+        {
+          "id": 19637,
+          "title": "Three Mile Island Unit 2 Suffers a Partial Meltdown",
+          "kind": "new-event",
+          "parentId": 19636,
+          "date": "1979-03-28T00:00:00.000Z",
+          "price": null,
+          "priceCurrency": null,
+          "power": {
+            "megawatts": 880,
+            "kind": "generation",
+            "source": "hand",
+            "sourceUrl": "https://world-nuclear.org/nuclear-reactor-database/details/Three-Mile-Island-2",
+            "note": "Unit 2 historical pre-accident rating: 880 MWe net, 959 MWe gross. Permanently shut March 28, 1979; no ongoing generation. Calendar-1979 electricity supplied before closure: 1,318.10 GWh.",
+            "checkedAt": "2026-10-24T19:32:12.598Z"
+          }
+        },
+        {
+          "id": 19638,
+          "title": "Three Mile Island Unit 1 Returns to Service After Six-Year Shutdown",
+          "kind": "new-event",
+          "parentId": 19637,
+          "date": "1985-10-01T00:00:00.000Z",
+          "price": null,
+          "priceCurrency": null,
+          "power": {
+            "megawatts": 776,
+            "kind": "generation",
+            "source": "hand",
+            "sourceUrl": "https://world-nuclear.org/nuclear-reactor-database/details/Three-Mile-Island-1",
+            "note": "Unit 1: 1985 reference net electrical rating, 776 MWe. Calendar-1985 electricity supplied: 811.66 GWh, reflecting the late-year return. Historical rating, not the later 835 MW restart project.",
+            "checkedAt": "2026-10-24T19:32:12.673Z"
+          }
+        },
+        {
+          "id": 19639,
+          "title": "Three Mile Island Unit 2 Enters Post-Defueling Monitored Storage",
+          "kind": "new-event",
+          "parentId": 19638,
+          "date": "1993-12-01T00:00:00.000Z",
+          "price": null,
+          "priceCurrency": null,
+          "power": {
+            "megawatts": 880,
+            "kind": "generation",
+            "source": "hand",
+            "sourceUrl": "https://world-nuclear.org/nuclear-reactor-database/details/Three-Mile-Island-2",
+            "note": "Unit 2 former net generating capacity: 880 MWe (959 MWe gross). Permanently shut in 1979. This 1993 monitored-storage event has no operating generation; this is historical reactor capacity, not storage power.",
+            "checkedAt": "2026-10-24T19:32:12.723Z"
+          }
+        },
+        {
+          "id": 19640,
+          "title": "Three Mile Island Unit 1 Shuts Down for Economic Reasons",
+          "kind": "new-event",
+          "parentId": 19639,
+          "date": "2019-09-20T00:00:00.000Z",
+          "price": null,
+          "priceCurrency": null,
+          "power": {
+            "megawatts": 819,
+            "kind": "generation",
+            "source": "hand",
+            "sourceUrl": "https://world-nuclear.org/nuclear-reactor-database/details/Three-Mile-Island-1",
+            "note": "Unit 1: 2019 reference net electrical rating, 819 MWe; calendar-2019 electricity supplied 5,214.02 GWh. Shutdown September 20, 2019. No generation after that closure pending an approved restart.",
+            "checkedAt": "2026-10-24T19:32:12.778Z"
+          }
+        },
+        {
+          "id": 19641,
+          "title": "Microsoft Deal Launches Three Mile Island Unit 1 Restart Plan",
+          "kind": "new-event",
+          "parentId": 19640,
+          "date": "2024-09-20T00:00:00.000Z",
+          "price": 1600000000,
+          "priceCurrency": "USD",
+          "power": {
+            "megawatts": 835,
+            "kind": "generation",
+            "source": "hand",
+            "sourceUrl": "https://www.constellationenergy.com/about/locations/crane-clean-energy-center.html",
+            "note": "Proposed Unit 1/Crane restart: 835 MW electrical generation capacity, per Constellation. Target 2027, subject to approvals; not operating output as of October 24, 2026. Excludes damaged Unit 2.",
+            "checkedAt": "2026-10-24T19:32:12.851Z"
+          }
+        },
+        {
+          "id": 5958,
+          "title": "DOE Closes a US$1 Billion Loan to Restart Constellation's Crane Nuclear Plant",
+          "kind": "linked-existing",
+          "parentId": 19641,
+          "date": "2025-11-18T00:00:00.000Z",
+          "price": 1600000000,
+          "priceCurrency": "USD",
+          "power": {
+            "megawatts": 835,
+            "kind": "generation",
+            "source": "hand",
+            "sourceUrl": "https://www.constellationenergy.com/about/locations/crane-clean-energy-center.html",
+            "note": "Proposed Unit 1/Crane restart: 835 MW electrical generation capacity, per Constellation. Target 2027, subject to approvals; not operating output as of October 24, 2026. Excludes damaged Unit 2.",
+            "checkedAt": "2026-10-24T19:32:12.926Z"
+          }
+        },
+        {
+          "id": 19642,
+          "title": "Constellation Reports Crane Restart Interconnection and Fuel-License Milestones",
+          "kind": "new-event",
+          "parentId": 5958,
+          "date": "2026-08-06T00:00:00.000Z",
+          "price": 1600000000,
+          "priceCurrency": "USD",
+          "power": {
+            "megawatts": 835,
+            "kind": "generation",
+            "source": "hand",
+            "sourceUrl": "https://www.constellationenergy.com/about/locations/crane-clean-energy-center.html",
+            "note": "Proposed Unit 1/Crane restart: 835 MW electrical generation capacity, per Constellation. Target 2027, subject to approvals; not operating output as of October 24, 2026. Excludes damaged Unit 2.",
+            "checkedAt": "2026-10-24T19:32:13.011Z"
+          }
+        },
+        {
+          "id": 2628,
+          "title": "Crane Clean Energy Center Targets 2027 Restart",
+          "kind": "updated-existing",
+          "parentId": 19642,
+          "date": "2027-12-31T00:00:00.000Z",
+          "price": 1600000000,
+          "priceCurrency": "USD",
+          "power": {
+            "megawatts": 835,
+            "kind": "generation",
+            "source": "hand",
+            "sourceUrl": "https://www.constellationenergy.com/about/locations/crane-clean-energy-center.html",
+            "note": "Proposed Unit 1/Crane restart: 835 MW electrical generation capacity, per Constellation. Target 2027, subject to approvals; not operating output as of October 24, 2026. Excludes damaged Unit 2.",
+            "checkedAt": "2026-10-24T19:32:13.077Z"
+          }
+        },
+        {
+          "id": 5960,
+          "title": "Crane Clean Energy Center — proposed restart (2027 target)",
+          "kind": "updated-existing",
+          "parentId": 19642,
+          "date": "2027-12-31T00:00:00.000Z",
+          "price": 1600000000,
+          "priceCurrency": "USD",
+          "power": {
+            "megawatts": 835,
+            "kind": "generation",
+            "source": "hand",
+            "sourceUrl": "https://www.constellationenergy.com/about/locations/crane-clean-energy-center.html",
+            "note": "Proposed Unit 1/Crane restart: 835 MW electrical generation capacity, per Constellation. Target 2027, subject to approvals; not operating output as of October 24, 2026. Excludes damaged Unit 2.",
+            "checkedAt": "2026-10-24T19:32:13.139Z"
+          }
+        }
+      ],
+      "rootId": 19635,
+      "verifiedCount": 11
+    },
+    {
+      "base": "https://www.chronopin.com",
+      "pins": [
+        {
+          "id": 19694,
+          "title": "Three Mile Island Unit 1 Begins Commercial Operation",
+          "kind": "new-event",
+          "date": "1974-09-02T00:00:00.000Z",
+          "price": 400000000,
+          "priceCurrency": "USD",
+          "power": {
+            "megawatts": 792,
+            "kind": "generation",
+            "source": "hand",
+            "sourceUrl": "https://world-nuclear.org/nuclear-reactor-database/details/Three-Mile-Island-1",
+            "note": "Unit 1: 1974 reference net electrical rating, 792 MWe (WNA/IAEA PRIS historical table). Calendar-1974 electricity supplied: 2,450.20 GWh. Historical capacity, not current output.",
+            "checkedAt": "2026-10-24T19:32:14.622Z"
+          }
+        },
+        {
+          "id": 19695,
+          "title": "Three Mile Island Unit 2 Begins Commercial Operation",
+          "kind": "new-event",
+          "parentId": 19694,
+          "date": "1978-12-30T00:00:00.000Z",
+          "price": 700000000,
+          "priceCurrency": "USD",
+          "power": {
+            "megawatts": 880,
+            "kind": "generation",
+            "source": "hand",
+            "sourceUrl": "https://world-nuclear.org/nuclear-reactor-database/details/Three-Mile-Island-2",
+            "note": "Unit 2: 880 MWe net; 959 MWe gross. Calendar-1978 electricity supplied: 636.50 GWh. Permanent shutdown March 28, 1979. Historical rating, not present generation.",
+            "checkedAt": "2026-10-24T19:32:15.984Z"
+          }
+        },
+        {
+          "id": 19696,
+          "title": "Three Mile Island Unit 2 Suffers a Partial Meltdown",
+          "kind": "new-event",
+          "parentId": 19695,
+          "date": "1979-03-28T00:00:00.000Z",
+          "price": null,
+          "priceCurrency": null,
+          "power": {
+            "megawatts": 880,
+            "kind": "generation",
+            "source": "hand",
+            "sourceUrl": "https://world-nuclear.org/nuclear-reactor-database/details/Three-Mile-Island-2",
+            "note": "Unit 2 historical pre-accident rating: 880 MWe net, 959 MWe gross. Permanently shut March 28, 1979; no ongoing generation. Calendar-1979 electricity supplied before closure: 1,318.10 GWh.",
+            "checkedAt": "2026-10-24T19:32:18.301Z"
+          }
+        },
+        {
+          "id": 19697,
+          "title": "Three Mile Island Unit 1 Returns to Service After Six-Year Shutdown",
+          "kind": "new-event",
+          "parentId": 19696,
+          "date": "1985-10-01T00:00:00.000Z",
+          "price": null,
+          "priceCurrency": null,
+          "power": {
+            "megawatts": 776,
+            "kind": "generation",
+            "source": "hand",
+            "sourceUrl": "https://world-nuclear.org/nuclear-reactor-database/details/Three-Mile-Island-1",
+            "note": "Unit 1: 1985 reference net electrical rating, 776 MWe. Calendar-1985 electricity supplied: 811.66 GWh, reflecting the late-year return. Historical rating, not the later 835 MW restart project.",
+            "checkedAt": "2026-10-24T19:32:29.694Z"
+          }
+        },
+        {
+          "id": 19698,
+          "title": "Three Mile Island Unit 2 Enters Post-Defueling Monitored Storage",
+          "kind": "new-event",
+          "parentId": 19697,
+          "date": "1993-12-01T00:00:00.000Z",
+          "price": null,
+          "priceCurrency": null,
+          "power": {
+            "megawatts": 880,
+            "kind": "generation",
+            "source": "hand",
+            "sourceUrl": "https://world-nuclear.org/nuclear-reactor-database/details/Three-Mile-Island-2",
+            "note": "Unit 2 former net generating capacity: 880 MWe (959 MWe gross). Permanently shut in 1979. This 1993 monitored-storage event has no operating generation; this is historical reactor capacity, not storage power.",
+            "checkedAt": "2026-10-24T19:33:10.881Z"
+          }
+        },
+        {
+          "id": 19699,
+          "title": "Three Mile Island Unit 1 Shuts Down for Economic Reasons",
+          "kind": "new-event",
+          "parentId": 19698,
+          "date": "2019-09-20T00:00:00.000Z",
+          "price": null,
+          "priceCurrency": null,
+          "power": {
+            "megawatts": 819,
+            "kind": "generation",
+            "source": "hand",
+            "sourceUrl": "https://world-nuclear.org/nuclear-reactor-database/details/Three-Mile-Island-1",
+            "note": "Unit 1: 2019 reference net electrical rating, 819 MWe; calendar-2019 electricity supplied 5,214.02 GWh. Shutdown September 20, 2019. No generation after that closure pending an approved restart.",
+            "checkedAt": "2026-10-24T19:33:52.599Z"
+          }
+        },
+        {
+          "id": 19700,
+          "title": "Microsoft Deal Launches Three Mile Island Unit 1 Restart Plan",
+          "kind": "new-event",
+          "parentId": 19699,
+          "date": "2024-09-20T00:00:00.000Z",
+          "price": 1600000000,
+          "priceCurrency": "USD",
+          "power": {
+            "megawatts": 835,
+            "kind": "generation",
+            "source": "hand",
+            "sourceUrl": "https://www.constellationenergy.com/about/locations/crane-clean-energy-center.html",
+            "note": "Proposed Unit 1/Crane restart: 835 MW electrical generation capacity, per Constellation. Target 2027, subject to approvals; not operating output as of October 24, 2026. Excludes damaged Unit 2.",
+            "checkedAt": "2026-10-24T19:34:01.016Z"
+          }
+        },
+        {
+          "id": 5958,
+          "title": "DOE Closes a US$1 Billion Loan to Restart Constellation's Crane Nuclear Plant",
+          "kind": "linked-existing",
+          "parentId": 19700,
+          "date": "2025-11-18T00:00:00.000Z",
+          "price": 1600000000,
+          "priceCurrency": "USD",
+          "power": {
+            "megawatts": 835,
+            "kind": "generation",
+            "source": "hand",
+            "sourceUrl": "https://www.constellationenergy.com/about/locations/crane-clean-energy-center.html",
+            "note": "Proposed Unit 1/Crane restart: 835 MW electrical generation capacity, per Constellation. Target 2027, subject to approvals; not operating output as of October 24, 2026. Excludes damaged Unit 2.",
+            "checkedAt": "2026-10-24T19:34:47.039Z"
+          }
+        },
+        {
+          "id": 19701,
+          "title": "Constellation Reports Crane Restart Interconnection and Fuel-License Milestones",
+          "kind": "new-event",
+          "parentId": 5958,
+          "date": "2026-08-06T00:00:00.000Z",
+          "price": 1600000000,
+          "priceCurrency": "USD",
+          "power": {
+            "megawatts": 835,
+            "kind": "generation",
+            "source": "hand",
+            "sourceUrl": "https://www.constellationenergy.com/about/locations/crane-clean-energy-center.html",
+            "note": "Proposed Unit 1/Crane restart: 835 MW electrical generation capacity, per Constellation. Target 2027, subject to approvals; not operating output as of October 24, 2026. Excludes damaged Unit 2.",
+            "checkedAt": "2026-10-24T19:35:26.810Z"
+          }
+        },
+        {
+          "id": 2628,
+          "title": "Crane Clean Energy Center Targets 2027 Restart",
+          "kind": "updated-existing",
+          "parentId": 19701,
+          "date": "2027-12-31T00:00:00.000Z",
+          "price": 1600000000,
+          "priceCurrency": "USD",
+          "power": {
+            "megawatts": 835,
+            "kind": "generation",
+            "source": "hand",
+            "sourceUrl": "https://www.constellationenergy.com/about/locations/crane-clean-energy-center.html",
+            "note": "Proposed Unit 1/Crane restart: 835 MW electrical generation capacity, per Constellation. Target 2027, subject to approvals; not operating output as of October 24, 2026. Excludes damaged Unit 2.",
+            "checkedAt": "2026-10-24T19:36:20.067Z"
+          }
+        },
+        {
+          "id": 5960,
+          "title": "Crane Clean Energy Center — proposed restart (2027 target)",
+          "kind": "updated-existing",
+          "parentId": 19701,
+          "date": "2027-12-31T00:00:00.000Z",
+          "price": 1600000000,
+          "priceCurrency": "USD",
+          "power": {
+            "megawatts": 835,
+            "kind": "generation",
+            "source": "hand",
+            "sourceUrl": "https://www.constellationenergy.com/about/locations/crane-clean-energy-center.html",
+            "note": "Proposed Unit 1/Crane restart: 835 MW electrical generation capacity, per Constellation. Target 2027, subject to approvals; not operating output as of October 24, 2026. Excludes damaged Unit 2.",
+            "checkedAt": "2026-10-24T19:37:22.647Z"
+          }
+        }
+      ],
+      "rootId": 19694,
+      "verifiedCount": 11
+    }
+  ]
+}

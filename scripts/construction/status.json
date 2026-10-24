@@ -1,0 +1,1150 @@
+{
+  "checkedAt": "2026-10-24",
+  "semantics": "Status of the construction/refurbishment phase represented by the pin, at its milestone or latest sourced check. Completion of an announcement, financing or approval is not project completion. Historical opening/return pins retain Completed even if the facility later shuts. Shutdown, accident, sale and storage events are excluded unless they explicitly begin a physical refurbishment phase.",
+  "environments": [
+    {
+      "base": "http://127.0.0.1:3000",
+      "pins": [
+        {
+          "id": 19649,
+          "title": "Palisades Begins Commercial Operation",
+          "status": "Completed",
+          "evidence": "Commercial operation begins. This dates the original generating unit, before the later shutdown and recovery described in this thread.",
+          "sourceUrl": "https://world-nuclear.org/nuclear-reactor-database/details/PALISADES",
+          "verified": true
+        },
+        {
+          "id": 19652,
+          "title": "DOE Closes Palisades Restart Loan Guarantee",
+          "status": "Proposed",
+          "evidence": "DOE closes financing of up to USD 1.52 billion. The loan amount is not represented as the total project cost.",
+          "sourceUrl": "https://content.govdelivery.com/accounts/USDOELPO/bulletins/3bc929b",
+          "verified": true
+        },
+        {
+          "id": 19653,
+          "title": "Palisades Returns from Decommissioning to Operations Status",
+          "status": "In Progress",
+          "evidence": "The regulatory status changes after licensing approvals. This authorizes the restart process, not a completed return to electricity production.",
+          "sourceUrl": "https://holtecinternational.com/hh-40-18/",
+          "verified": true
+        },
+        {
+          "id": 19654,
+          "title": "Palisades Begins Loading Fuel for Its Proposed Restart",
+          "status": "In Progress",
+          "evidence": "Holtec begins reactor fuel loading, with testing and startup steps still ahead.",
+          "sourceUrl": "https://holtecinternational.com/hh-47-17/",
+          "verified": true
+        },
+        {
+          "id": 19655,
+          "title": "Holtec Recovers Tilted Fuel Assembly at Palisades",
+          "status": "In Progress",
+          "evidence": "Holtec reports retrieval of the tilted assembly and transfer to the spent-fuel pool, removing a significant restart obstacle.",
+          "sourceUrl": "https://holtecinternational.com/hh-41-24/",
+          "verified": true
+        },
+        {
+          "id": 5506,
+          "title": "Palisades Restart Remains Conditional After Fuel-Assembly Recovery",
+          "status": "In Progress",
+          "evidence": "No completed generating restart is verified. March 31 is the existing contract-backstop timeline marker, not an announced restart day; Holtec reported fuel recovery October 21.",
+          "sourceUrl": "https://www.neimagazine.com/?p=107732",
+          "verified": true
+        },
+        {
+          "id": 19656,
+          "title": "Duane Arnold Begins Commercial Operation",
+          "status": "Completed",
+          "evidence": "Commercial operation begins. This dates the original generating unit, before the later shutdown and recovery described in this thread.",
+          "sourceUrl": "https://world-nuclear.org/nuclear-reactor-database/details/Duane-Arnold-1",
+          "verified": true
+        },
+        {
+          "id": 19658,
+          "title": "Google and NextEra Announce Duane Arnold Restart Agreement",
+          "status": "Proposed",
+          "evidence": "A 25-year Google agreement supports the proposed 615 MW restoration, targeted for full operation in the first quarter of 2029.",
+          "sourceUrl": "https://www.investor.nexteraenergy.com/news-and-events/news-releases/2025/10-27-2025-203948689",
+          "verified": true
+        },
+        {
+          "id": 19659,
+          "title": "DOE Closes Up-to-$1.9 Billion Loan for Duane Arnold Restart",
+          "status": "Proposed",
+          "evidence": "The financing closes September 8, according to the dated DOE release. This is not total capital cost or permission to generate.",
+          "sourceUrl": "https://www.energy.gov/articles/energy-department-closes-19-billion-loan-restart-duane-arnold-nuclear-plant",
+          "verified": true
+        },
+        {
+          "id": 5517,
+          "title": "Duane Arnold Targets Full Operation by First Quarter 2029",
+          "status": "Proposed",
+          "evidence": "The operator retains a Q1 2029 target, conditional on NRC approval. March 31 is a quarter-end timeline anchor, not a scheduled startup day.",
+          "sourceUrl": "https://www.nexteraenergy.com/duane-arnold-energy-center/faq.html",
+          "verified": true
+        },
+        {
+          "id": 19660,
+          "title": "Browns Ferry Unit 1 Begins Commercial Operation",
+          "status": "Completed",
+          "evidence": "Commercial operation begins. This dates the original generating unit, before the later shutdown and recovery described in this thread.",
+          "sourceUrl": "https://world-nuclear.org/nuclear-reactor-database/details/Browns-Ferry-1",
+          "verified": true
+        },
+        {
+          "id": 19662,
+          "title": "Browns Ferry Unit 2 Returns After Six-Year Shutdown",
+          "status": "Completed",
+          "evidence": "Unit 2 returns in May 1991, ahead of Units 3 and 1. The reactor database supplies the May 24 grid/restart marker.",
+          "sourceUrl": "https://world-nuclear.org/nuclear-reactor-database/details/Browns-Ferry-2",
+          "verified": true
+        },
+        {
+          "id": 19663,
+          "title": "Browns Ferry Unit 3 Returns After Ten-Year Shutdown",
+          "status": "Completed",
+          "evidence": "Unit 3 returns in November 1995. Day 1 follows the database marker and month-only issuer account; it is not asserted as an exact commercial restart day.",
+          "sourceUrl": "https://world-nuclear.org/nuclear-reactor-database/details/Browns-Ferry-3",
+          "verified": true
+        },
+        {
+          "id": 19664,
+          "title": "TVA Approves Browns Ferry Unit 1 Recovery",
+          "status": "Proposed",
+          "evidence": "TVA’s board approves returning Unit 1, idle since 1985. May 1 is a month-only anchor.",
+          "sourceUrl": "https://lakeinfo.tva.gov/web/sites/brownsferry.htm",
+          "verified": true
+        },
+        {
+          "id": 19665,
+          "title": "Browns Ferry Unit 1 Returns to Commercial Operation After 22 Years",
+          "status": "Completed",
+          "evidence": "Commercial operation returns August 1, after pre-commercial operations began June 2. The September 2008 Inspector General review reports approximately USD 1.84 billion project cost through FY2007, with subsequent credits described separately.",
+          "sourceUrl": "https://stocklight.com/stocks/us/nyse-tvc/tennessee-valley-authority-pref/annual-reports/nyse-tvc-2008-10K-081252497.pdf",
+          "verified": true
+        },
+        {
+          "id": 19666,
+          "title": "Sequoyah Unit 1 Begins Commercial Operation",
+          "status": "Completed",
+          "evidence": "Commercial operation begins. This dates the original generating unit, before the later shutdown and recovery described in this thread.",
+          "sourceUrl": "https://world-nuclear.org/nuclear-reactor-database/details/Sequoyah-1",
+          "verified": true
+        },
+        {
+          "id": 19667,
+          "title": "Sequoyah Unit 2 Begins Commercial Operation",
+          "status": "Completed",
+          "evidence": "The second unit enters commercial service before TVA’s subsequent station recovery period.",
+          "sourceUrl": "https://world-nuclear.org/nuclear-reactor-database/details/Sequoyah-2",
+          "verified": true
+        },
+        {
+          "id": 19669,
+          "title": "Sequoyah Unit 2 Returns During TVA Nuclear Recovery",
+          "status": "Completed",
+          "evidence": "The original TVA records place Unit 2’s return in May 1988; an exact day is not claimed.",
+          "sourceUrl": "https://stocklight.com/stocks/us/nyse-tvc/tennessee-valley-authority-pref/annual-reports/nyse-tvc-2008-10K-081252497.pdf",
+          "verified": true
+        },
+        {
+          "id": 19670,
+          "title": "Sequoyah Unit 1 Returns During TVA Nuclear Recovery",
+          "status": "Completed",
+          "evidence": "Unit 1 returns in November 1988, completing Sequoyah’s recovery from the 1985 shutdown. Day 1 is a month-only anchor.",
+          "sourceUrl": "https://www.archives.gov/files/records-mgmt/rcs/schedules/independent-agencies/rg-0142/n1-142-89-016_sf115.pdf",
+          "verified": true
+        },
+        {
+          "id": 19671,
+          "title": "Kashiwazaki-Kariwa Unit 6 Begins Commercial Operation",
+          "status": "Completed",
+          "evidence": "Commercial operation begins. This dates the original generating unit, before the later shutdown and recovery described in this thread.",
+          "sourceUrl": "https://world-nuclear.org/nuclear-reactor-database/details/Kashiwazaki-Kariwa-6",
+          "verified": true
+        },
+        {
+          "id": 19673,
+          "title": "TEPCO Starts Kashiwazaki-Kariwa Unit 6 Reactor After Nearly 14 Years",
+          "status": "In Progress",
+          "evidence": "Control-rod withdrawal begins the reactor restart; a control-rod monitoring alarm interrupts the process January 22. This is separate from commercial return.",
+          "sourceUrl": "https://www.world-nuclear-news.org/articles/kashiwazaki-kariwa-6-resumes-commercial-operation",
+          "verified": true
+        },
+        {
+          "id": 19674,
+          "title": "Kashiwazaki-Kariwa Unit 6 Resumes Commercial Operation",
+          "status": "Completed",
+          "evidence": "TEPCO resumes commercial operation at 16:00 Japan time after regulatory inspection certificates. Net rating 1,315 MWe; 1,356 MWe is gross.",
+          "sourceUrl": "https://www.tepco.co.jp/en/hd/newsroom/press/archives/2026/pdf/260416e0101.pdf",
+          "verified": true
+        },
+        {
+          "id": 19675,
+          "title": "Onagawa Unit 2 Begins Commercial Operation",
+          "status": "Completed",
+          "evidence": "Commercial operation begins. This dates the original generating unit, before the later shutdown and recovery described in this thread.",
+          "sourceUrl": "https://world-nuclear.org/nuclear-reactor-database/details/Onagawa-2",
+          "verified": true
+        },
+        {
+          "id": 19677,
+          "title": "Onagawa Unit 2 Begins Its Post-Fukushima Reactor Restart",
+          "status": "In Progress",
+          "evidence": "Reactor startup begins after safety upgrades; subsequent checks and equipment interruptions precede sustained commercial return.",
+          "sourceUrl": "https://www.genanshin.jp/english/report/restart_operations/onagawa_2.html",
+          "verified": true
+        },
+        {
+          "id": 19678,
+          "title": "Onagawa Unit 2 Reconnects to the Grid",
+          "status": "In Progress",
+          "evidence": "Power generation and grid connection resume at 18:00 Japan time; commercial service remains a later milestone.",
+          "sourceUrl": "https://www.tohoku-epco.co.jp/english/press/__icsFiles/afieldfile/2024/11/15/1245885.pdf",
+          "verified": true
+        },
+        {
+          "id": 19679,
+          "title": "Onagawa Unit 2 Returns to Commercial Operation",
+          "status": "Completed",
+          "evidence": "Commercial operation resumes at 16:00 Japan time after final checks. Electrical rating is 796 MWe net / 825 MWe gross.",
+          "sourceUrl": "https://www.tohoku-epco.co.jp/english/press/__icsFiles/afieldfile/2024/12/26/1246004.pdf",
+          "verified": true
+        },
+        {
+          "id": 19680,
+          "title": "Shimane Unit 2 Begins Commercial Operation",
+          "status": "Completed",
+          "evidence": "Commercial operation begins. This dates the original generating unit, before the later shutdown and recovery described in this thread.",
+          "sourceUrl": "https://world-nuclear.org/nuclear-reactor-database/details/Shimane-2",
+          "verified": true
+        },
+        {
+          "id": 19682,
+          "title": "Shimane Unit 2 Restarts Its Reactor After Nearly 13 Years",
+          "status": "In Progress",
+          "evidence": "The reactor starts at 15:00 Japan time and reaches criticality at 16:50. Reactor startup is distinct from grid reconnection and commercial service.",
+          "sourceUrl": "https://www.world-nuclear-news.org/articles/shimane-2-restarts-after-13-years-being-offline",
+          "verified": true
+        },
+        {
+          "id": 19683,
+          "title": "Shimane Unit 2 Resumes Grid Generation",
+          "status": "In Progress",
+          "evidence": "Chugoku’s results distinguish this generator synchronization from the December 7 reactor startup and January 10 commercial return.",
+          "sourceUrl": "https://www.energia.co.jp/e/ir/info/pdf/ir6-71.pdf",
+          "verified": true
+        },
+        {
+          "id": 19684,
+          "title": "Shimane Unit 2 Resumes Commercial Operation",
+          "status": "Completed",
+          "evidence": "The operator confirms commercial return after receipt of the regulator’s inspection certificate. Net electrical rating 789 MWe; gross 820 MWe.",
+          "sourceUrl": "https://www.energia.co.jp/e/ir/info/pdf/ir6-71.pdf",
+          "verified": true
+        },
+        {
+          "id": 19685,
+          "title": "Bruce A Unit 1 Begins Commercial Operation",
+          "status": "Completed",
+          "evidence": "Commercial operation begins. This dates the original generating unit, before the later shutdown and recovery described in this thread.",
+          "sourceUrl": "https://world-nuclear.org/nuclear-reactor-database/details/BRUCE-1",
+          "verified": true
+        },
+        {
+          "id": 19688,
+          "title": "Bruce Power Agrees to Refurbish and Restart Units 1 and 2",
+          "status": "Proposed",
+          "evidence": "The Ontario agreement supports refurbishment and restart. Only 2005 is established in this history; January 1 is an estimated year anchor.",
+          "sourceUrl": "https://www.brucepower.com/about-us/history/",
+          "verified": true
+        },
+        {
+          "id": 19689,
+          "title": "Bruce A Unit 1 Reconnects After Fifteen-Year Layup",
+          "status": "In Progress",
+          "evidence": "Unit 1 supplies the grid following refurbishment; subsequent commercial-service milestones remain separate.",
+          "sourceUrl": "https://world-nuclear.org/nuclear-reactor-database/details/BRUCE-1",
+          "verified": true
+        },
+        {
+          "id": 19690,
+          "title": "Bruce A Unit 2 Reconnects After Seventeen-Year Layup",
+          "status": "In Progress",
+          "evidence": "Unit 2 returns to the grid, bringing the pair back after lengthy layups.",
+          "sourceUrl": "https://world-nuclear.org/nuclear-reactor-database/details/BRUCE-2",
+          "verified": true
+        },
+        {
+          "id": 19691,
+          "title": "Bruce A Completes the Two-Unit Restart Programme",
+          "status": "Completed",
+          "evidence": "Both refurbished units reach commercial service by November 2012. This pin covers the combined programme; day 1 is a month-level anchor.",
+          "sourceUrl": "https://world-nuclear.org/Information-Library/Country-Profiles/countries-A-F/Canada-Nuclear-Power",
+          "verified": true
+        },
+        {
+          "id": 19692,
+          "title": "Metsamor Unit 2 Begins Commercial Operation",
+          "status": "Completed",
+          "evidence": "Commercial operation begins. This dates the original generating unit, before the later shutdown and recovery described in this thread.",
+          "sourceUrl": "https://world-nuclear.org/nuclear-reactor-database/details/ARMENIAN-2",
+          "verified": true
+        },
+        {
+          "id": 19694,
+          "title": "Armenia Decides to Restart Metsamor Unit 2 Amid an Energy Crisis",
+          "status": "Proposed",
+          "evidence": "A severe energy shortage leads to a restart decision. Only the year is established; January 1 is an estimated timeline anchor.",
+          "sourceUrl": "https://world-nuclear.org/information-library/country-profiles/countries-a-f/armenia",
+          "verified": true
+        },
+        {
+          "id": 19695,
+          "title": "Metsamor Unit 2 Restarts After Six-and-a-Half-Year Closure",
+          "status": "Completed",
+          "evidence": "The operator dates Unit 2’s restart to November 5. Unit 1 remains shut; later uprates and life extensions are different projects.",
+          "sourceUrl": "https://armeniannpp.am/en/info/noroutyounner/haek-i-veracnoundy.html",
+          "verified": true
+        },
+        {
+          "id": 19696,
+          "title": "Embalse Begins Commercial Operation",
+          "status": "Completed",
+          "evidence": "Commercial operation begins. This dates the original generating unit, before the later shutdown and recovery described in this thread.",
+          "sourceUrl": "https://world-nuclear.org/nuclear-reactor-database/details/EMBALSE",
+          "verified": true
+        },
+        {
+          "id": 19697,
+          "title": "Embalse Shuts for Reactor Retubing and Life Extension",
+          "status": "In Progress",
+          "evidence": "The CANDU unit enters a multiyear programme including fuel-channel and steam-generator replacement.",
+          "sourceUrl": "https://ifnec.org/ifnec/upload/docs/application/pdf/2019-11/marcelo_salvatore_-_argentina.pdf",
+          "verified": true
+        },
+        {
+          "id": 19698,
+          "title": "Embalse Achieves Criticality After Three-Year Refurbishment",
+          "status": "In Progress",
+          "evidence": "The refurbished reactor reaches criticality, followed by testing and power ascension before commercial return.",
+          "sourceUrl": "https://lmdiario.com.ar/contenido/122989/vuelve-a-funcionar-la-central-nuclear-de-embalse",
+          "verified": true
+        },
+        {
+          "id": 19699,
+          "title": "Embalse Resumes Commercial Operation After Life Extension",
+          "status": "Completed",
+          "evidence": "Commercial service returns after several months of tests; regulator reports 683 MW gross following uprating, distinct from historical net reference ratings.",
+          "sourceUrl": "https://www.world-nuclear-news.org/Articles/Embalse-plant-returns-to-service",
+          "verified": true
+        },
+        {
+          "id": 19700,
+          "title": "Maanshan Unit 1 Begins Commercial Operation",
+          "status": "Completed",
+          "evidence": "Commercial operation begins. This dates the original generating unit, before the later shutdown and recovery described in this thread.",
+          "sourceUrl": "https://world-nuclear.org/nuclear-reactor-database/details/MAANSHAN-1",
+          "verified": true
+        },
+        {
+          "id": 19701,
+          "title": "Maanshan Unit 2 Begins Commercial Operation",
+          "status": "Completed",
+          "evidence": "The second pressurized-water reactor enters commercial service.",
+          "sourceUrl": "https://world-nuclear.org/nuclear-reactor-database/details/MAANSHAN-2",
+          "verified": true
+        },
+        {
+          "id": 19702,
+          "title": "Taipower Submits Maanshan Restart and Licence-Renewal Application",
+          "status": "Proposed",
+          "evidence": "The regulator receives the application; submission does not authorize generation.",
+          "sourceUrl": "https://www.nusc.gov.tw/%E6%A0%B8%E5%AE%89%E7%AE%A1%E5%88%B6/%E6%A0%B8%E9%9B%BB%E5%BB%A0%E5%86%8D%E9%81%8B%E8%BD%89%E5%AF%A9%E6%9F%A5%E7%AE%A1%E5%88%B6/%E7%AE%A1%E5%88%B6%E5%8B%95%E6%85%8B/%E6%9C%80%E6%96%B0%E6%B6%88%E6%81%AF/%E6%A0%B8%E4%B8%89%E5%BB%A0--3_50001_50003_50107_50109.html",
+          "verified": true
+        },
+        {
+          "id": 19703,
+          "title": "Taiwan Completes Review of Maanshan Restart Plan",
+          "status": "Proposed",
+          "evidence": "The restart-plan review is completed; onsite verification, aging, seismic and other requirements remain before operating permission.",
+          "sourceUrl": "https://www.nusc.gov.tw/newsdetail/headline/7675.html",
+          "verified": true
+        },
+        {
+          "id": 19704,
+          "title": "Maanshan Restart Discussed for 2028 at the Earliest",
+          "status": "Proposed",
+          "evidence": "Reporting describes a conditional earliest-year prospect. December 31 is an estimated year marker; neither unit is treated as already restarted.",
+          "sourceUrl": "https://www.abc.net.au/news/2026-10-09/taiwan-restart-nuclear-power-plants-locals-response/107229114",
+          "verified": true
+        },
+        {
+          "id": 19705,
+          "title": "Kuosheng Unit 1 Begins Commercial Operation",
+          "status": "Completed",
+          "evidence": "Commercial operation begins. This dates the original generating unit, before the later shutdown and recovery described in this thread.",
+          "sourceUrl": "https://world-nuclear.org/nuclear-reactor-database/details/KUOSHENG-1",
+          "verified": true
+        },
+        {
+          "id": 19706,
+          "title": "Kuosheng Unit 2 Begins Commercial Operation",
+          "status": "Completed",
+          "evidence": "The second boiling-water reactor enters commercial service.",
+          "sourceUrl": "https://world-nuclear.org/nuclear-reactor-database/details/KUOSHENG-2",
+          "verified": true
+        },
+        {
+          "id": 19708,
+          "title": "Taiwan Reopens the Path to a Kuosheng Nuclear Restart",
+          "status": "Proposed",
+          "evidence": "The economics ministry approves feasibility work in November 2025; this is a policy/project step, not authority to operate. Day 1 is a month-only anchor.",
+          "sourceUrl": "https://world-nuclear.org/information-library/country-profiles/others/nuclear-power-in-taiwan",
+          "verified": true
+        },
+        {
+          "id": 19709,
+          "title": "Kuosheng Restart Planning Continues as Taiwan Revisits Nuclear Power",
+          "status": "Proposed",
+          "evidence": "September reporting discusses Kuosheng alongside Maanshan. Sources conflict on whether Kuosheng formally filed a restart application in March; this pin records the dated planning report, not a verified regulatory submission or operating approval.",
+          "sourceUrl": "https://focustaiwan.tw/politics/202609030007",
+          "verified": true
+        },
+        {
+          "id": 19710,
+          "title": "Kori Unit 2 Begins Commercial Operation",
+          "status": "Completed",
+          "evidence": "Commercial operation begins. This dates the original generating unit, before the later shutdown and recovery described in this thread.",
+          "sourceUrl": "https://world-nuclear.org/nuclear-reactor-database/details/KORI-2",
+          "verified": true
+        },
+        {
+          "id": 19712,
+          "title": "South Korea Approves Continued Operation of Kori Unit 2",
+          "status": "In Progress",
+          "evidence": "The regulator approves operation through 2033 in November 2025; day 1 is an estimated month anchor and does not date the eventual restart.",
+          "sourceUrl": "https://www.world-nuclear-news.org/articles/south-korean-reactor-restarts-after-three-year-outage",
+          "verified": true
+        },
+        {
+          "id": 19713,
+          "title": "Kori Unit 2 Restarts After Three-Year Licence-Renewal Shutdown",
+          "status": "Completed",
+          "evidence": "KHNP reports operation resumes after a 35-month facility-improvement project. This pin uses the historical database’s 640 MWe net rating; contemporary reporting gives approximately 685 MWe without establishing an equivalent net rating.",
+          "sourceUrl": "https://www.world-nuclear-news.org/articles/south-korean-reactor-restarts-after-three-year-outage",
+          "verified": true
+        },
+        {
+          "id": 19635,
+          "title": "Three Mile Island Unit 1 Begins Commercial Operation",
+          "status": "Completed",
+          "evidence": "Unit 1 begins commercial operation on Three Mile Island in Pennsylvania, following construction that began in 1968.",
+          "sourceUrl": "https://world-nuclear.org/nuclear-reactor-database/details/Three-Mile-Island-1",
+          "verified": true
+        },
+        {
+          "id": 19636,
+          "title": "Three Mile Island Unit 2 Begins Commercial Operation",
+          "status": "Completed",
+          "evidence": "Three Mile Island’s second reactor enters commercial service, less than three months before its 1979 accident.",
+          "sourceUrl": "https://world-nuclear.org/nuclear-reactor-database/details/Three-Mile-Island-2",
+          "verified": true
+        },
+        {
+          "id": 19638,
+          "title": "Three Mile Island Unit 1 Returns to Service After Six-Year Shutdown",
+          "status": "Completed",
+          "evidence": "The undamaged Unit 1 returns to service in October 1985 after extended regulatory proceedings, modifications and retraining.",
+          "sourceUrl": "https://americanhistory.si.edu/tmi/tmi11.htm",
+          "verified": true
+        },
+        {
+          "id": 19641,
+          "title": "Microsoft Deal Launches Three Mile Island Unit 1 Restart Plan",
+          "status": "Proposed",
+          "evidence": "Constellation announces a 20-year Microsoft power agreement and plans to restart Unit 1 as Crane Clean Energy Center, restoring about 835 MW.",
+          "sourceUrl": "https://www.constellationenergy.com/news/2024/Constellation-to-Launch-Crane-Clean-Energy-Center-Restoring-Jobs-and-Carbon-Free-Power-to-The-Grid.html",
+          "verified": true
+        },
+        {
+          "id": 5958,
+          "title": "DOE Closes a US$1 Billion Loan to Restart Constellation's Crane Nuclear Plant",
+          "status": "In Progress",
+          "evidence": "Crane restoration is under way but generating restart remains conditional; completing a loan or regulatory step does not complete the restart.",
+          "sourceUrl": "https://www.constellationenergy.com/about/locations/crane-clean-energy-center.html",
+          "verified": true
+        },
+        {
+          "id": 19642,
+          "title": "Constellation Reports Crane Restart Interconnection and Fuel-License Milestones",
+          "status": "In Progress",
+          "evidence": "Constellation reports FERC approval for an interconnection-rights transfer and NRC approval of a fuel-license amendment while maintaining its 2027 restart target.",
+          "sourceUrl": "https://investors.constellationenergy.com/news-releases/news-release-details/constellation-reports-second-quarter-2026-results",
+          "verified": true
+        },
+        {
+          "id": 2628,
+          "title": "Crane Clean Energy Center Targets 2027 Restart",
+          "status": "In Progress",
+          "evidence": "Crane restoration is under way but generating restart remains conditional; completing a loan or regulatory step does not complete the restart.",
+          "sourceUrl": "https://www.constellationenergy.com/about/locations/crane-clean-energy-center.html",
+          "verified": true
+        },
+        {
+          "id": 5960,
+          "title": "Crane Clean Energy Center — proposed restart (2027 target)",
+          "status": "In Progress",
+          "evidence": "Crane restoration is under way but generating restart remains conditional; completing a loan or regulatory step does not complete the restart.",
+          "sourceUrl": "https://www.constellationenergy.com/about/locations/crane-clean-energy-center.html",
+          "verified": true
+        },
+        {
+          "id": 19643,
+          "title": "Bayer Announces a $2.2 Billion Pharmaceutical Campus in New Albany",
+          "status": "Proposed",
+          "evidence": "Published project announcement; physical construction not established.",
+          "sourceUrl": "https://www.bayer.com/en-us/united-states/news-and-stories/2026/new-pharmas-manufacturing-site",
+          "verified": true
+        },
+        {
+          "id": 19644,
+          "title": "SK hynix Breaks Ground on Its Over-$4 Billion Indiana HBM Packaging Plant",
+          "status": "In Progress",
+          "evidence": "Groundbreaking or commissioning; full project completion not established. First coil is not full commercial opening.",
+          "sourceUrl": "https://news.skhynix.com/en/groundbreaking-ceremony-in-indiana/",
+          "verified": true
+        },
+        {
+          "id": 19645,
+          "title": "Avio Breaks Ground on Its $500 Million Virginia Rocket-Motor Plant",
+          "status": "In Progress",
+          "evidence": "Groundbreaking or commissioning; full project completion not established. First coil is not full commercial opening.",
+          "sourceUrl": "https://aviousa.com/groundbreaking",
+          "verified": true
+        },
+        {
+          "id": 19646,
+          "title": "U.S. Steel Breaks Ground on Fairfield’s $475 Million Quench-and-Tempering Facility",
+          "status": "In Progress",
+          "evidence": "Groundbreaking or commissioning; full project completion not established. First coil is not full commercial opening.",
+          "sourceUrl": "https://www.ussteel.com/es/media/newsroom-details/-/blogs/u-s-steel-breaks-ground-on-475-million-quench-and-tempering-facility-at-fairfield-tubular-operations",
+          "verified": true
+        },
+        {
+          "id": 19647,
+          "title": "L3Harris Opens Camden’s Arsenal of Freedom Rocket-Motor Factory",
+          "status": "Completed",
+          "evidence": "Opened factory construction scope is complete; production ramp/capability is assessed separately.",
+          "sourceUrl": "https://www.l3harris.com/newsroom/press-release/2026/10/l3harris-opens-next-generation-solid-rocket-motor-facility-boost",
+          "verified": true
+        },
+        {
+          "id": 19648,
+          "title": "Novelis Produces the First Coil at Its $5 Billion Bay Minette Aluminum Plant",
+          "status": "In Progress",
+          "evidence": "Groundbreaking or commissioning; full project completion not established. First coil is not full commercial opening.",
+          "sourceUrl": "https://investors.novelis.com/news-events/press-releases/detail/1427/novelis-produces-first-coil-at-greenfield-aluminum-rolling-and-recycling-plant-in-alabama",
+          "verified": true
+        }
+      ],
+      "verifiedCount": 68,
+      "counts": {
+        "Proposed": 14,
+        "In Progress": 22,
+        "Completed": 32
+      },
+      "publicSamples": [
+        {
+          "id": 19643,
+          "status": "Proposed",
+          "publicVerified": true
+        },
+        {
+          "id": 19644,
+          "status": "In Progress",
+          "publicVerified": true
+        },
+        {
+          "id": 19647,
+          "status": "Completed",
+          "publicVerified": true
+        }
+      ]
+    },
+    {
+      "base": "https://www.chronopin.com",
+      "pins": [
+        {
+          "id": 19708,
+          "title": "Palisades Begins Commercial Operation",
+          "status": "Completed",
+          "evidence": "Commercial operation begins. This dates the original generating unit, before the later shutdown and recovery described in this thread.",
+          "sourceUrl": "https://world-nuclear.org/nuclear-reactor-database/details/PALISADES",
+          "verified": true
+        },
+        {
+          "id": 19713,
+          "title": "DOE Closes Palisades Restart Loan Guarantee",
+          "status": "Proposed",
+          "evidence": "DOE closes financing of up to USD 1.52 billion. The loan amount is not represented as the total project cost.",
+          "sourceUrl": "https://content.govdelivery.com/accounts/USDOELPO/bulletins/3bc929b",
+          "verified": true
+        },
+        {
+          "id": 19716,
+          "title": "Palisades Returns from Decommissioning to Operations Status",
+          "status": "In Progress",
+          "evidence": "The regulatory status changes after licensing approvals. This authorizes the restart process, not a completed return to electricity production.",
+          "sourceUrl": "https://holtecinternational.com/hh-40-18/",
+          "verified": true
+        },
+        {
+          "id": 19719,
+          "title": "Palisades Begins Loading Fuel for Its Proposed Restart",
+          "status": "In Progress",
+          "evidence": "Holtec begins reactor fuel loading, with testing and startup steps still ahead.",
+          "sourceUrl": "https://holtecinternational.com/hh-47-17/",
+          "verified": true
+        },
+        {
+          "id": 19722,
+          "title": "Holtec Recovers Tilted Fuel Assembly at Palisades",
+          "status": "In Progress",
+          "evidence": "Holtec reports retrieval of the tilted assembly and transfer to the spent-fuel pool, removing a significant restart obstacle.",
+          "sourceUrl": "https://holtecinternational.com/hh-41-24/",
+          "verified": true
+        },
+        {
+          "id": 5506,
+          "title": "Palisades Restart Remains Conditional After Fuel-Assembly Recovery",
+          "status": "In Progress",
+          "evidence": "No completed generating restart is verified. March 31 is the existing contract-backstop timeline marker, not an announced restart day; Holtec reported fuel recovery October 21.",
+          "sourceUrl": "https://www.neimagazine.com/?p=107732",
+          "verified": true
+        },
+        {
+          "id": 19711,
+          "title": "Duane Arnold Begins Commercial Operation",
+          "status": "Completed",
+          "evidence": "Commercial operation begins. This dates the original generating unit, before the later shutdown and recovery described in this thread.",
+          "sourceUrl": "https://world-nuclear.org/nuclear-reactor-database/details/Duane-Arnold-1",
+          "verified": true
+        },
+        {
+          "id": 19717,
+          "title": "Google and NextEra Announce Duane Arnold Restart Agreement",
+          "status": "Proposed",
+          "evidence": "A 25-year Google agreement supports the proposed 615 MW restoration, targeted for full operation in the first quarter of 2029.",
+          "sourceUrl": "https://www.investor.nexteraenergy.com/news-and-events/news-releases/2025/10-27-2025-203948689",
+          "verified": true
+        },
+        {
+          "id": 19721,
+          "title": "DOE Closes Up-to-$1.9 Billion Loan for Duane Arnold Restart",
+          "status": "Proposed",
+          "evidence": "The financing closes September 8, according to the dated DOE release. This is not total capital cost or permission to generate.",
+          "sourceUrl": "https://www.energy.gov/articles/energy-department-closes-19-billion-loan-restart-duane-arnold-nuclear-plant",
+          "verified": true
+        },
+        {
+          "id": 5517,
+          "title": "Duane Arnold Targets Full Operation by First Quarter 2029",
+          "status": "Proposed",
+          "evidence": "The operator retains a Q1 2029 target, conditional on NRC approval. March 31 is a quarter-end timeline anchor, not a scheduled startup day.",
+          "sourceUrl": "https://www.nexteraenergy.com/duane-arnold-energy-center/faq.html",
+          "verified": true
+        },
+        {
+          "id": 19712,
+          "title": "Browns Ferry Unit 1 Begins Commercial Operation",
+          "status": "Completed",
+          "evidence": "Commercial operation begins. This dates the original generating unit, before the later shutdown and recovery described in this thread.",
+          "sourceUrl": "https://world-nuclear.org/nuclear-reactor-database/details/Browns-Ferry-1",
+          "verified": true
+        },
+        {
+          "id": 19718,
+          "title": "Browns Ferry Unit 2 Returns After Six-Year Shutdown",
+          "status": "Completed",
+          "evidence": "Unit 2 returns in May 1991, ahead of Units 3 and 1. The reactor database supplies the May 24 grid/restart marker.",
+          "sourceUrl": "https://world-nuclear.org/nuclear-reactor-database/details/Browns-Ferry-2",
+          "verified": true
+        },
+        {
+          "id": 19720,
+          "title": "Browns Ferry Unit 3 Returns After Ten-Year Shutdown",
+          "status": "Completed",
+          "evidence": "Unit 3 returns in November 1995. Day 1 follows the database marker and month-only issuer account; it is not asserted as an exact commercial restart day.",
+          "sourceUrl": "https://world-nuclear.org/nuclear-reactor-database/details/Browns-Ferry-3",
+          "verified": true
+        },
+        {
+          "id": 19723,
+          "title": "TVA Approves Browns Ferry Unit 1 Recovery",
+          "status": "Proposed",
+          "evidence": "TVA’s board approves returning Unit 1, idle since 1985. May 1 is a month-only anchor.",
+          "sourceUrl": "https://lakeinfo.tva.gov/web/sites/brownsferry.htm",
+          "verified": true
+        },
+        {
+          "id": 19726,
+          "title": "Browns Ferry Unit 1 Returns to Commercial Operation After 22 Years",
+          "status": "Completed",
+          "evidence": "Commercial operation returns August 1, after pre-commercial operations began June 2. The September 2008 Inspector General review reports approximately USD 1.84 billion project cost through FY2007, with subsequent credits described separately.",
+          "sourceUrl": "https://stocklight.com/stocks/us/nyse-tvc/tennessee-valley-authority-pref/annual-reports/nyse-tvc-2008-10K-081252497.pdf",
+          "verified": true
+        },
+        {
+          "id": 19724,
+          "title": "Sequoyah Unit 1 Begins Commercial Operation",
+          "status": "Completed",
+          "evidence": "Commercial operation begins. This dates the original generating unit, before the later shutdown and recovery described in this thread.",
+          "sourceUrl": "https://world-nuclear.org/nuclear-reactor-database/details/Sequoyah-1",
+          "verified": true
+        },
+        {
+          "id": 19727,
+          "title": "Sequoyah Unit 2 Begins Commercial Operation",
+          "status": "Completed",
+          "evidence": "The second unit enters commercial service before TVA’s subsequent station recovery period.",
+          "sourceUrl": "https://world-nuclear.org/nuclear-reactor-database/details/Sequoyah-2",
+          "verified": true
+        },
+        {
+          "id": 19733,
+          "title": "Sequoyah Unit 2 Returns During TVA Nuclear Recovery",
+          "status": "Completed",
+          "evidence": "The original TVA records place Unit 2’s return in May 1988; an exact day is not claimed.",
+          "sourceUrl": "https://stocklight.com/stocks/us/nyse-tvc/tennessee-valley-authority-pref/annual-reports/nyse-tvc-2008-10K-081252497.pdf",
+          "verified": true
+        },
+        {
+          "id": 19736,
+          "title": "Sequoyah Unit 1 Returns During TVA Nuclear Recovery",
+          "status": "Completed",
+          "evidence": "Unit 1 returns in November 1988, completing Sequoyah’s recovery from the 1985 shutdown. Day 1 is a month-only anchor.",
+          "sourceUrl": "https://www.archives.gov/files/records-mgmt/rcs/schedules/independent-agencies/rg-0142/n1-142-89-016_sf115.pdf",
+          "verified": true
+        },
+        {
+          "id": 19725,
+          "title": "Kashiwazaki-Kariwa Unit 6 Begins Commercial Operation",
+          "status": "Completed",
+          "evidence": "Commercial operation begins. This dates the original generating unit, before the later shutdown and recovery described in this thread.",
+          "sourceUrl": "https://world-nuclear.org/nuclear-reactor-database/details/Kashiwazaki-Kariwa-6",
+          "verified": true
+        },
+        {
+          "id": 19732,
+          "title": "TEPCO Starts Kashiwazaki-Kariwa Unit 6 Reactor After Nearly 14 Years",
+          "status": "In Progress",
+          "evidence": "Control-rod withdrawal begins the reactor restart; a control-rod monitoring alarm interrupts the process January 22. This is separate from commercial return.",
+          "sourceUrl": "https://www.world-nuclear-news.org/articles/kashiwazaki-kariwa-6-resumes-commercial-operation",
+          "verified": true
+        },
+        {
+          "id": 19735,
+          "title": "Kashiwazaki-Kariwa Unit 6 Resumes Commercial Operation",
+          "status": "Completed",
+          "evidence": "TEPCO resumes commercial operation at 16:00 Japan time after regulatory inspection certificates. Net rating 1,315 MWe; 1,356 MWe is gross.",
+          "sourceUrl": "https://www.tepco.co.jp/en/hd/newsroom/press/archives/2026/pdf/260416e0101.pdf",
+          "verified": true
+        },
+        {
+          "id": 19728,
+          "title": "Onagawa Unit 2 Begins Commercial Operation",
+          "status": "Completed",
+          "evidence": "Commercial operation begins. This dates the original generating unit, before the later shutdown and recovery described in this thread.",
+          "sourceUrl": "https://world-nuclear.org/nuclear-reactor-database/details/Onagawa-2",
+          "verified": true
+        },
+        {
+          "id": 19734,
+          "title": "Onagawa Unit 2 Begins Its Post-Fukushima Reactor Restart",
+          "status": "In Progress",
+          "evidence": "Reactor startup begins after safety upgrades; subsequent checks and equipment interruptions precede sustained commercial return.",
+          "sourceUrl": "https://www.genanshin.jp/english/report/restart_operations/onagawa_2.html",
+          "verified": true
+        },
+        {
+          "id": 19737,
+          "title": "Onagawa Unit 2 Reconnects to the Grid",
+          "status": "In Progress",
+          "evidence": "Power generation and grid connection resume at 18:00 Japan time; commercial service remains a later milestone.",
+          "sourceUrl": "https://www.tohoku-epco.co.jp/english/press/__icsFiles/afieldfile/2024/11/15/1245885.pdf",
+          "verified": true
+        },
+        {
+          "id": 19741,
+          "title": "Onagawa Unit 2 Returns to Commercial Operation",
+          "status": "Completed",
+          "evidence": "Commercial operation resumes at 16:00 Japan time after final checks. Electrical rating is 796 MWe net / 825 MWe gross.",
+          "sourceUrl": "https://www.tohoku-epco.co.jp/english/press/__icsFiles/afieldfile/2024/12/26/1246004.pdf",
+          "verified": true
+        },
+        {
+          "id": 19738,
+          "title": "Shimane Unit 2 Begins Commercial Operation",
+          "status": "Completed",
+          "evidence": "Commercial operation begins. This dates the original generating unit, before the later shutdown and recovery described in this thread.",
+          "sourceUrl": "https://world-nuclear.org/nuclear-reactor-database/details/Shimane-2",
+          "verified": true
+        },
+        {
+          "id": 19743,
+          "title": "Shimane Unit 2 Restarts Its Reactor After Nearly 13 Years",
+          "status": "In Progress",
+          "evidence": "The reactor starts at 15:00 Japan time and reaches criticality at 16:50. Reactor startup is distinct from grid reconnection and commercial service.",
+          "sourceUrl": "https://www.world-nuclear-news.org/articles/shimane-2-restarts-after-13-years-being-offline",
+          "verified": true
+        },
+        {
+          "id": 19746,
+          "title": "Shimane Unit 2 Resumes Grid Generation",
+          "status": "In Progress",
+          "evidence": "Chugoku’s results distinguish this generator synchronization from the December 7 reactor startup and January 10 commercial return.",
+          "sourceUrl": "https://www.energia.co.jp/e/ir/info/pdf/ir6-71.pdf",
+          "verified": true
+        },
+        {
+          "id": 19749,
+          "title": "Shimane Unit 2 Resumes Commercial Operation",
+          "status": "Completed",
+          "evidence": "The operator confirms commercial return after receipt of the regulator’s inspection certificate. Net electrical rating 789 MWe; gross 820 MWe.",
+          "sourceUrl": "https://www.energia.co.jp/e/ir/info/pdf/ir6-71.pdf",
+          "verified": true
+        },
+        {
+          "id": 19739,
+          "title": "Bruce A Unit 1 Begins Commercial Operation",
+          "status": "Completed",
+          "evidence": "Commercial operation begins. This dates the original generating unit, before the later shutdown and recovery described in this thread.",
+          "sourceUrl": "https://world-nuclear.org/nuclear-reactor-database/details/BRUCE-1",
+          "verified": true
+        },
+        {
+          "id": 19747,
+          "title": "Bruce Power Agrees to Refurbish and Restart Units 1 and 2",
+          "status": "Proposed",
+          "evidence": "The Ontario agreement supports refurbishment and restart. Only 2005 is established in this history; January 1 is an estimated year anchor.",
+          "sourceUrl": "https://www.brucepower.com/about-us/history/",
+          "verified": true
+        },
+        {
+          "id": 19750,
+          "title": "Bruce A Unit 1 Reconnects After Fifteen-Year Layup",
+          "status": "In Progress",
+          "evidence": "Unit 1 supplies the grid following refurbishment; subsequent commercial-service milestones remain separate.",
+          "sourceUrl": "https://world-nuclear.org/nuclear-reactor-database/details/BRUCE-1",
+          "verified": true
+        },
+        {
+          "id": 19752,
+          "title": "Bruce A Unit 2 Reconnects After Seventeen-Year Layup",
+          "status": "In Progress",
+          "evidence": "Unit 2 returns to the grid, bringing the pair back after lengthy layups.",
+          "sourceUrl": "https://world-nuclear.org/nuclear-reactor-database/details/BRUCE-2",
+          "verified": true
+        },
+        {
+          "id": 19755,
+          "title": "Bruce A Completes the Two-Unit Restart Programme",
+          "status": "Completed",
+          "evidence": "Both refurbished units reach commercial service by November 2012. This pin covers the combined programme; day 1 is a month-level anchor.",
+          "sourceUrl": "https://world-nuclear.org/Information-Library/Country-Profiles/countries-A-F/Canada-Nuclear-Power",
+          "verified": true
+        },
+        {
+          "id": 19745,
+          "title": "Metsamor Unit 2 Begins Commercial Operation",
+          "status": "Completed",
+          "evidence": "Commercial operation begins. This dates the original generating unit, before the later shutdown and recovery described in this thread.",
+          "sourceUrl": "https://world-nuclear.org/nuclear-reactor-database/details/ARMENIAN-2",
+          "verified": true
+        },
+        {
+          "id": 19751,
+          "title": "Armenia Decides to Restart Metsamor Unit 2 Amid an Energy Crisis",
+          "status": "Proposed",
+          "evidence": "A severe energy shortage leads to a restart decision. Only the year is established; January 1 is an estimated timeline anchor.",
+          "sourceUrl": "https://world-nuclear.org/information-library/country-profiles/countries-a-f/armenia",
+          "verified": true
+        },
+        {
+          "id": 19754,
+          "title": "Metsamor Unit 2 Restarts After Six-and-a-Half-Year Closure",
+          "status": "Completed",
+          "evidence": "The operator dates Unit 2’s restart to November 5. Unit 1 remains shut; later uprates and life extensions are different projects.",
+          "sourceUrl": "https://armeniannpp.am/en/info/noroutyounner/haek-i-veracnoundy.html",
+          "verified": true
+        },
+        {
+          "id": 19753,
+          "title": "Embalse Begins Commercial Operation",
+          "status": "Completed",
+          "evidence": "Commercial operation begins. This dates the original generating unit, before the later shutdown and recovery described in this thread.",
+          "sourceUrl": "https://world-nuclear.org/nuclear-reactor-database/details/EMBALSE",
+          "verified": true
+        },
+        {
+          "id": 19756,
+          "title": "Embalse Shuts for Reactor Retubing and Life Extension",
+          "status": "In Progress",
+          "evidence": "The CANDU unit enters a multiyear programme including fuel-channel and steam-generator replacement.",
+          "sourceUrl": "https://ifnec.org/ifnec/upload/docs/application/pdf/2019-11/marcelo_salvatore_-_argentina.pdf",
+          "verified": true
+        },
+        {
+          "id": 19759,
+          "title": "Embalse Achieves Criticality After Three-Year Refurbishment",
+          "status": "In Progress",
+          "evidence": "The refurbished reactor reaches criticality, followed by testing and power ascension before commercial return.",
+          "sourceUrl": "https://lmdiario.com.ar/contenido/122989/vuelve-a-funcionar-la-central-nuclear-de-embalse",
+          "verified": true
+        },
+        {
+          "id": 19762,
+          "title": "Embalse Resumes Commercial Operation After Life Extension",
+          "status": "Completed",
+          "evidence": "Commercial service returns after several months of tests; regulator reports 683 MW gross following uprating, distinct from historical net reference ratings.",
+          "sourceUrl": "https://www.world-nuclear-news.org/Articles/Embalse-plant-returns-to-service",
+          "verified": true
+        },
+        {
+          "id": 19757,
+          "title": "Maanshan Unit 1 Begins Commercial Operation",
+          "status": "Completed",
+          "evidence": "Commercial operation begins. This dates the original generating unit, before the later shutdown and recovery described in this thread.",
+          "sourceUrl": "https://world-nuclear.org/nuclear-reactor-database/details/MAANSHAN-1",
+          "verified": true
+        },
+        {
+          "id": 19760,
+          "title": "Maanshan Unit 2 Begins Commercial Operation",
+          "status": "Completed",
+          "evidence": "The second pressurized-water reactor enters commercial service.",
+          "sourceUrl": "https://world-nuclear.org/nuclear-reactor-database/details/MAANSHAN-2",
+          "verified": true
+        },
+        {
+          "id": 19764,
+          "title": "Taipower Submits Maanshan Restart and Licence-Renewal Application",
+          "status": "Proposed",
+          "evidence": "The regulator receives the application; submission does not authorize generation.",
+          "sourceUrl": "https://www.nusc.gov.tw/%E6%A0%B8%E5%AE%89%E7%AE%A1%E5%88%B6/%E6%A0%B8%E9%9B%BB%E5%BB%A0%E5%86%8D%E9%81%8B%E8%BD%89%E5%AF%A9%E6%9F%A5%E7%AE%A1%E5%88%B6/%E7%AE%A1%E5%88%B6%E5%8B%95%E6%85%8B/%E6%9C%80%E6%96%B0%E6%B6%88%E6%81%AF/%E6%A0%B8%E4%B8%89%E5%BB%A0--3_50001_50003_50107_50109.html",
+          "verified": true
+        },
+        {
+          "id": 19767,
+          "title": "Taiwan Completes Review of Maanshan Restart Plan",
+          "status": "Proposed",
+          "evidence": "The restart-plan review is completed; onsite verification, aging, seismic and other requirements remain before operating permission.",
+          "sourceUrl": "https://www.nusc.gov.tw/newsdetail/headline/7675.html",
+          "verified": true
+        },
+        {
+          "id": 19770,
+          "title": "Maanshan Restart Discussed for 2028 at the Earliest",
+          "status": "Proposed",
+          "evidence": "Reporting describes a conditional earliest-year prospect. December 31 is an estimated year marker; neither unit is treated as already restarted.",
+          "sourceUrl": "https://www.abc.net.au/news/2026-10-09/taiwan-restart-nuclear-power-plants-locals-response/107229114",
+          "verified": true
+        },
+        {
+          "id": 19758,
+          "title": "Kuosheng Unit 1 Begins Commercial Operation",
+          "status": "Completed",
+          "evidence": "Commercial operation begins. This dates the original generating unit, before the later shutdown and recovery described in this thread.",
+          "sourceUrl": "https://world-nuclear.org/nuclear-reactor-database/details/KUOSHENG-1",
+          "verified": true
+        },
+        {
+          "id": 19761,
+          "title": "Kuosheng Unit 2 Begins Commercial Operation",
+          "status": "Completed",
+          "evidence": "The second boiling-water reactor enters commercial service.",
+          "sourceUrl": "https://world-nuclear.org/nuclear-reactor-database/details/KUOSHENG-2",
+          "verified": true
+        },
+        {
+          "id": 19766,
+          "title": "Taiwan Reopens the Path to a Kuosheng Nuclear Restart",
+          "status": "Proposed",
+          "evidence": "The economics ministry approves feasibility work in November 2025; this is a policy/project step, not authority to operate. Day 1 is a month-only anchor.",
+          "sourceUrl": "https://world-nuclear.org/information-library/country-profiles/others/nuclear-power-in-taiwan",
+          "verified": true
+        },
+        {
+          "id": 19769,
+          "title": "Kuosheng Restart Planning Continues as Taiwan Revisits Nuclear Power",
+          "status": "Proposed",
+          "evidence": "September reporting discusses Kuosheng alongside Maanshan. Sources conflict on whether Kuosheng formally filed a restart application in March; this pin records the dated planning report, not a verified regulatory submission or operating approval.",
+          "sourceUrl": "https://focustaiwan.tw/politics/202609030007",
+          "verified": true
+        },
+        {
+          "id": 19765,
+          "title": "Kori Unit 2 Begins Commercial Operation",
+          "status": "Completed",
+          "evidence": "Commercial operation begins. This dates the original generating unit, before the later shutdown and recovery described in this thread.",
+          "sourceUrl": "https://world-nuclear.org/nuclear-reactor-database/details/KORI-2",
+          "verified": true
+        },
+        {
+          "id": 19771,
+          "title": "South Korea Approves Continued Operation of Kori Unit 2",
+          "status": "In Progress",
+          "evidence": "The regulator approves operation through 2033 in November 2025; day 1 is an estimated month anchor and does not date the eventual restart.",
+          "sourceUrl": "https://www.world-nuclear-news.org/articles/south-korean-reactor-restarts-after-three-year-outage",
+          "verified": true
+        },
+        {
+          "id": 19772,
+          "title": "Kori Unit 2 Restarts After Three-Year Licence-Renewal Shutdown",
+          "status": "Completed",
+          "evidence": "KHNP reports operation resumes after a 35-month facility-improvement project. This pin uses the historical database’s 640 MWe net rating; contemporary reporting gives approximately 685 MWe without establishing an equivalent net rating.",
+          "sourceUrl": "https://www.world-nuclear-news.org/articles/south-korean-reactor-restarts-after-three-year-outage",
+          "verified": true
+        },
+        {
+          "id": 19694,
+          "title": "Three Mile Island Unit 1 Begins Commercial Operation",
+          "status": "Completed",
+          "evidence": "Unit 1 begins commercial operation on Three Mile Island in Pennsylvania, following construction that began in 1968.",
+          "sourceUrl": "https://world-nuclear.org/nuclear-reactor-database/details/Three-Mile-Island-1",
+          "verified": true
+        },
+        {
+          "id": 19695,
+          "title": "Three Mile Island Unit 2 Begins Commercial Operation",
+          "status": "Completed",
+          "evidence": "Three Mile Island’s second reactor enters commercial service, less than three months before its 1979 accident.",
+          "sourceUrl": "https://world-nuclear.org/nuclear-reactor-database/details/Three-Mile-Island-2",
+          "verified": true
+        },
+        {
+          "id": 19697,
+          "title": "Three Mile Island Unit 1 Returns to Service After Six-Year Shutdown",
+          "status": "Completed",
+          "evidence": "The undamaged Unit 1 returns to service in October 1985 after extended regulatory proceedings, modifications and retraining.",
+          "sourceUrl": "https://americanhistory.si.edu/tmi/tmi11.htm",
+          "verified": true
+        },
+        {
+          "id": 19700,
+          "title": "Microsoft Deal Launches Three Mile Island Unit 1 Restart Plan",
+          "status": "Proposed",
+          "evidence": "Constellation announces a 20-year Microsoft power agreement and plans to restart Unit 1 as Crane Clean Energy Center, restoring about 835 MW.",
+          "sourceUrl": "https://www.constellationenergy.com/news/2024/Constellation-to-Launch-Crane-Clean-Energy-Center-Restoring-Jobs-and-Carbon-Free-Power-to-The-Grid.html",
+          "verified": true
+        },
+        {
+          "id": 5958,
+          "title": "DOE Closes a US$1 Billion Loan to Restart Constellation's Crane Nuclear Plant",
+          "status": "In Progress",
+          "evidence": "Crane restoration is under way but generating restart remains conditional; completing a loan or regulatory step does not complete the restart.",
+          "sourceUrl": "https://www.constellationenergy.com/about/locations/crane-clean-energy-center.html",
+          "verified": true
+        },
+        {
+          "id": 19701,
+          "title": "Constellation Reports Crane Restart Interconnection and Fuel-License Milestones",
+          "status": "In Progress",
+          "evidence": "Constellation reports FERC approval for an interconnection-rights transfer and NRC approval of a fuel-license amendment while maintaining its 2027 restart target.",
+          "sourceUrl": "https://investors.constellationenergy.com/news-releases/news-release-details/constellation-reports-second-quarter-2026-results",
+          "verified": true
+        },
+        {
+          "id": 2628,
+          "title": "Crane Clean Energy Center Targets 2027 Restart",
+          "status": "In Progress",
+          "evidence": "Crane restoration is under way but generating restart remains conditional; completing a loan or regulatory step does not complete the restart.",
+          "sourceUrl": "https://www.constellationenergy.com/about/locations/crane-clean-energy-center.html",
+          "verified": true
+        },
+        {
+          "id": 5960,
+          "title": "Crane Clean Energy Center — proposed restart (2027 target)",
+          "status": "In Progress",
+          "evidence": "Crane restoration is under way but generating restart remains conditional; completing a loan or regulatory step does not complete the restart.",
+          "sourceUrl": "https://www.constellationenergy.com/about/locations/crane-clean-energy-center.html",
+          "verified": true
+        },
+        {
+          "id": 19702,
+          "title": "Bayer Announces a $2.2 Billion Pharmaceutical Campus in New Albany",
+          "status": "Proposed",
+          "evidence": "Published project announcement; physical construction not established.",
+          "sourceUrl": "https://www.bayer.com/en-us/united-states/news-and-stories/2026/new-pharmas-manufacturing-site",
+          "verified": true
+        },
+        {
+          "id": 19703,
+          "title": "SK hynix Breaks Ground on Its Over-$4 Billion Indiana HBM Packaging Plant",
+          "status": "In Progress",
+          "evidence": "Groundbreaking or commissioning; full project completion not established. First coil is not full commercial opening.",
+          "sourceUrl": "https://news.skhynix.com/en/groundbreaking-ceremony-in-indiana/",
+          "verified": true
+        },
+        {
+          "id": 19704,
+          "title": "Avio Breaks Ground on Its $500 Million Virginia Rocket-Motor Plant",
+          "status": "In Progress",
+          "evidence": "Groundbreaking or commissioning; full project completion not established. First coil is not full commercial opening.",
+          "sourceUrl": "https://aviousa.com/groundbreaking",
+          "verified": true
+        },
+        {
+          "id": 19705,
+          "title": "U.S. Steel Breaks Ground on Fairfield’s $475 Million Quench-and-Tempering Facility",
+          "status": "In Progress",
+          "evidence": "Groundbreaking or commissioning; full project completion not established. First coil is not full commercial opening.",
+          "sourceUrl": "https://www.ussteel.com/es/media/newsroom-details/-/blogs/u-s-steel-breaks-ground-on-475-million-quench-and-tempering-facility-at-fairfield-tubular-operations",
+          "verified": true
+        },
+        {
+          "id": 19706,
+          "title": "L3Harris Opens Camden’s Arsenal of Freedom Rocket-Motor Factory",
+          "status": "Completed",
+          "evidence": "Opened factory construction scope is complete; production ramp/capability is assessed separately.",
+          "sourceUrl": "https://www.l3harris.com/newsroom/press-release/2026/10/l3harris-opens-next-generation-solid-rocket-motor-facility-boost",
+          "verified": true
+        },
+        {
+          "id": 19707,
+          "title": "Novelis Produces the First Coil at Its $5 Billion Bay Minette Aluminum Plant",
+          "status": "In Progress",
+          "evidence": "Groundbreaking or commissioning; full project completion not established. First coil is not full commercial opening.",
+          "sourceUrl": "https://investors.novelis.com/news-events/press-releases/detail/1427/novelis-produces-first-coil-at-greenfield-aluminum-rolling-and-recycling-plant-in-alabama",
+          "verified": true
+        }
+      ],
+      "verifiedCount": 68,
+      "counts": {
+        "Proposed": 14,
+        "In Progress": 22,
+        "Completed": 32
+      },
+      "publicSamples": [
+        {
+          "id": 19702,
+          "status": "Proposed",
+          "publicVerified": true
+        },
+        {
+          "id": 19703,
+          "status": "In Progress",
+          "publicVerified": true
+        },
+        {
+          "id": 19706,
+          "status": "Completed",
+          "publicVerified": true
+        }
+      ]
+    }
+  ]
+}

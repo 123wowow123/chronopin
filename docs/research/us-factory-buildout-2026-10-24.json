@@ -1,0 +1,894 @@
+{
+  "checkedAt": "2026-10-24",
+  "scope": "Six missing US factory construction, announcement, commissioning and opening milestones; researched batch, not an exhaustive US inventory.",
+  "results": [
+    {
+      "environment": "local",
+      "key": "bayer",
+      "id": 19643,
+      "url": "http://127.0.0.1:3000/pin/19643/bayer-announces-a-2-2-billion-pharmaceutical-campus-in-new-albany",
+      "title": "Bayer Announces a $2.2 Billion Pharmaceutical Campus in New Albany",
+      "price": 2200000000,
+      "priceCurrency": "USD",
+      "author": "@HealthDesk",
+      "verified": true,
+      "constructionStatus": "Proposed"
+    },
+    {
+      "environment": "local",
+      "key": "skhynix",
+      "id": 19644,
+      "url": "http://127.0.0.1:3000/pin/19644/sk-hynix-breaks-ground-on-its-over-4-billion-indiana-hbm-packaging-plant",
+      "title": "SK hynix Breaks Ground on Its Over-$4 Billion Indiana HBM Packaging Plant",
+      "price": 4000000000,
+      "priceCurrency": "USD",
+      "author": "@TechDesk",
+      "verified": true,
+      "constructionStatus": "In Progress"
+    },
+    {
+      "environment": "local",
+      "key": "avio",
+      "id": 19645,
+      "url": "http://127.0.0.1:3000/pin/19645/avio-breaks-ground-on-its-500-million-virginia-rocket-motor-plant",
+      "title": "Avio Breaks Ground on Its $500 Million Virginia Rocket-Motor Plant",
+      "price": 500000000,
+      "priceCurrency": "USD",
+      "author": "@EconDesk",
+      "verified": true,
+      "constructionStatus": "In Progress"
+    },
+    {
+      "environment": "local",
+      "key": "fairfield",
+      "id": 19646,
+      "url": "http://127.0.0.1:3000/pin/19646/u-s-steel-breaks-ground-on-fairfield-s-475-million-quench-and-tempering-facility",
+      "title": "U.S. Steel Breaks Ground on Fairfield\u2019s $475 Million Quench-and-Tempering Facility",
+      "price": 475000000,
+      "priceCurrency": "USD",
+      "author": "@EconDesk",
+      "verified": true,
+      "constructionStatus": "In Progress"
+    },
+    {
+      "environment": "local",
+      "key": "l3harris",
+      "id": 19647,
+      "url": "http://127.0.0.1:3000/pin/19647/l3harris-opens-camden-s-arsenal-of-freedom-rocket-motor-factory",
+      "title": "L3Harris Opens Camden\u2019s Arsenal of Freedom Rocket-Motor Factory",
+      "price": null,
+      "priceCurrency": null,
+      "author": "@EconDesk",
+      "verified": true,
+      "constructionStatus": "Completed"
+    },
+    {
+      "environment": "local",
+      "key": "novelis",
+      "id": 19648,
+      "url": "http://127.0.0.1:3000/pin/19648/novelis-produces-the-first-coil-at-its-5-billion-bay-minette-aluminum-plant",
+      "title": "Novelis Produces the First Coil at Its $5 Billion Bay Minette Aluminum Plant",
+      "price": 5000000000,
+      "priceCurrency": "USD",
+      "author": "@EconDesk",
+      "verified": true,
+      "constructionStatus": "In Progress"
+    },
+    {
+      "environment": "production",
+      "key": "bayer",
+      "id": 19702,
+      "url": "https://www.chronopin.com/pin/19702/bayer-announces-a-2-2-billion-pharmaceutical-campus-in-new-albany",
+      "title": "Bayer Announces a $2.2 Billion Pharmaceutical Campus in New Albany",
+      "price": 2200000000,
+      "priceCurrency": "USD",
+      "author": "@HealthDesk",
+      "verified": true,
+      "constructionStatus": "Proposed"
+    },
+    {
+      "environment": "production",
+      "key": "skhynix",
+      "id": 19703,
+      "url": "https://www.chronopin.com/pin/19703/sk-hynix-breaks-ground-on-its-over-4-billion-indiana-hbm-packaging-plant",
+      "title": "SK hynix Breaks Ground on Its Over-$4 Billion Indiana HBM Packaging Plant",
+      "price": 4000000000,
+      "priceCurrency": "USD",
+      "author": "@TechDesk",
+      "verified": true,
+      "constructionStatus": "In Progress"
+    },
+    {
+      "environment": "production",
+      "key": "avio",
+      "id": 19704,
+      "url": "https://www.chronopin.com/pin/19704/avio-breaks-ground-on-its-500-million-virginia-rocket-motor-plant",
+      "title": "Avio Breaks Ground on Its $500 Million Virginia Rocket-Motor Plant",
+      "price": 500000000,
+      "priceCurrency": "USD",
+      "author": "@EconDesk",
+      "verified": true,
+      "constructionStatus": "In Progress"
+    },
+    {
+      "environment": "production",
+      "key": "fairfield",
+      "id": 19705,
+      "url": "https://www.chronopin.com/pin/19705/u-s-steel-breaks-ground-on-fairfield-s-475-million-quench-and-tempering-facility",
+      "title": "U.S. Steel Breaks Ground on Fairfield\u2019s $475 Million Quench-and-Tempering Facility",
+      "price": 475000000,
+      "priceCurrency": "USD",
+      "author": "@EconDesk",
+      "verified": true,
+      "constructionStatus": "In Progress"
+    },
+    {
+      "environment": "production",
+      "key": "l3harris",
+      "id": 19706,
+      "url": "https://www.chronopin.com/pin/19706/l3harris-opens-camden-s-arsenal-of-freedom-rocket-motor-factory",
+      "title": "L3Harris Opens Camden\u2019s Arsenal of Freedom Rocket-Motor Factory",
+      "price": null,
+      "priceCurrency": null,
+      "author": "@EconDesk",
+      "verified": true,
+      "constructionStatus": "Completed"
+    },
+    {
+      "environment": "production",
+      "key": "novelis",
+      "id": 19707,
+      "url": "https://www.chronopin.com/pin/19707/novelis-produces-the-first-coil-at-its-5-billion-bay-minette-aluminum-plant",
+      "title": "Novelis Produces the First Coil at Its $5 Billion Bay Minette Aluminum Plant",
+      "price": 5000000000,
+      "priceCurrency": "USD",
+      "author": "@EconDesk",
+      "verified": true,
+      "constructionStatus": "In Progress"
+    }
+  ],
+  "pins": [
+    {
+      "key": "bayer",
+      "userName": "@HealthDesk",
+      "pin": {
+        "title": "Bayer Announces a $2.2 Billion Pharmaceutical Campus in New Albany",
+        "description": "Bayer plans a modular Ohio campus with about 600 jobs. Drug-substance operations target 2031, followed by a drug-product module in 2034.",
+        "sourceUrl": "https://www.bayer.com/en-us/united-states/news-and-stories/2026/new-pharmas-manufacturing-site",
+        "utcStartDateTime": "2026-10-02T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "Confirmed 2026-10-02 announcement. Future production targets in the summary are forecasts, not the pin date.",
+        "company": "Bayer",
+        "categories": [
+          "Business",
+          "Infrastructure",
+          "Health"
+        ],
+        "tags": [
+          "U.S. factory buildout",
+          "Manufacturing",
+          "Factory construction",
+          "Ohio"
+        ],
+        "address": "New Albany International Business Park, New Albany, Ohio, United States",
+        "price": 2200000000,
+        "priceCurrency": "USD",
+        "parentId": null,
+        "sentiment": 0.55,
+        "productLine": "",
+        "references": [
+          {
+            "url": "https://www.bayer.com/en-us/united-states/news-and-stories/2026/new-pharmas-manufacturing-site",
+            "title": "Bayer to invest 2.2 billion U.S. dollars in new manufacturing site in the United States",
+            "publishedDate": "2026-10-02",
+            "confidence": 95,
+            "reasoning": "Cost evidence: \u201cplans to invest 2.2 billion U.S. dollars\u201d. Whole new campus commitment; do not allocate the entire amount to either individual module."
+          },
+          {
+            "url": "https://newalbanybusiness.org/news/2026/10/bayer-announces-life-sciences-investment-in-the-new-albany-international-business-park/",
+            "title": "Bayer Announces $2.2B Life Sciences Investment in the New Albany International Business Park",
+            "publishedDate": "2026-10-02",
+            "confidence": 95,
+            "reasoning": "City economic-development announcement verifies location and 600 planned jobs."
+          },
+          {
+            "url": "https://www.manufacturingdive.com/news/bayer-to-invest-2b-ohio-pharmaceutical-facility-new-albany/832237/",
+            "title": "Bayer to invest $2.2B in Ohio pharmaceutical facility",
+            "publishedDate": "2026-10-06",
+            "confidence": 95,
+            "reasoning": "Independent trade reporting and explicitly labelled Bayer campus rendering."
+          }
+        ],
+        "media": [
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/factory-buildout/2026-10-24/bayer-rendering-22293281940c5d1c.webp",
+            "originalWidth": 1200,
+            "originalHeight": 675
+          }
+        ],
+        "longFormSummary": "<ul><li>The October 2 announcement covers a new modular pharmaceutical campus supporting oncology, cardiovascular and renal care. Its drug-substance module targets 2031 and drug-product module 2034; these are planned dates.<cite data-ref=\"https://www.bayer.com/en-us/united-states/news-and-stories/2026/new-pharmas-manufacturing-site\"></cite></li><li>The city confirms the business-park location and approximately 600 planned jobs. An exact factory parcel has not been established here; coordinates are left unset rather than marking the separate training center.<cite data-ref=\"https://newalbanybusiness.org/news/2026/10/bayer-announces-life-sciences-investment-in-the-new-albany-international-business-park/\"></cite></li><li>Independent trade coverage confirms the budget and phases. The photograph supplied with the announcement is a rendering.<cite data-ref=\"https://www.manufacturingdive.com/news/bayer-to-invest-2b-ohio-pharmaceutical-facility-new-albany/832237/\"></cite></li><li>Published project-cost evidence: \u201cplans to invest 2.2 billion U.S. dollars\u201d The numeric cost uses the source currency without conversion.<cite data-ref=\"https://www.bayer.com/en-us/united-states/news-and-stories/2026/new-pharmas-manufacturing-site\"></cite></li><li>Rendering of Bayer\u2019s planned New Albany pharmaceutical manufacturing campus; not a completed building. Credit: Bayer, via Manufacturing Dive.<cite data-ref=\"https://www.manufacturingdive.com/news/bayer-to-invest-2b-ohio-pharmaceutical-facility-new-albany/832237/\"></cite></li></ul>",
+        "sourceWikis": [
+          {
+            "url": "https://www.bayer.com/en-us/united-states/news-and-stories/2026/new-pharmas-manufacturing-site",
+            "title": "Bayer to invest 2.2 billion U.S. dollars in new manufacturing site in the United States",
+            "generatedBy": "openai/session",
+            "wiki": {
+              "title": "Bayer to invest 2.2 billion U.S. dollars in new manufacturing site in the United States",
+              "summary": "Cost evidence: \u201cplans to invest 2.2 billion U.S. dollars\u201d. Whole new campus commitment; do not allocate the entire amount to either individual module.",
+              "body": "The October 2 announcement covers a new modular pharmaceutical campus supporting oncology, cardiovascular and renal care. Its drug-substance module targets 2031 and drug-product module 2034; these are planned dates.\n\nPublished project-cost evidence: \u201cplans to invest 2.2 billion U.S. dollars\u201d The numeric cost uses the source currency without conversion.",
+              "tags": [
+                "Manufacturing",
+                "United States"
+              ],
+              "lastModified": "2026-10-02"
+            }
+          },
+          {
+            "url": "https://newalbanybusiness.org/news/2026/10/bayer-announces-life-sciences-investment-in-the-new-albany-international-business-park/",
+            "title": "Bayer Announces $2.2B Life Sciences Investment in the New Albany International Business Park",
+            "generatedBy": "openai/session",
+            "wiki": {
+              "title": "Bayer Announces $2.2B Life Sciences Investment in the New Albany International Business Park",
+              "summary": "City economic-development announcement verifies location and 600 planned jobs.",
+              "body": "The city confirms the business-park location and approximately 600 planned jobs. An exact factory parcel has not been established here; coordinates are left unset rather than marking the separate training center.",
+              "tags": [
+                "Manufacturing",
+                "United States"
+              ],
+              "lastModified": "2026-10-02"
+            }
+          },
+          {
+            "url": "https://www.manufacturingdive.com/news/bayer-to-invest-2b-ohio-pharmaceutical-facility-new-albany/832237/",
+            "title": "Bayer to invest $2.2B in Ohio pharmaceutical facility",
+            "generatedBy": "openai/session",
+            "wiki": {
+              "title": "Bayer to invest $2.2B in Ohio pharmaceutical facility",
+              "summary": "Independent trade reporting and explicitly labelled Bayer campus rendering.",
+              "body": "Independent trade coverage confirms the budget and phases. The photograph supplied with the announcement is a rendering.\n\nRendering of Bayer\u2019s planned New Albany pharmaceutical manufacturing campus; not a completed building. Credit: Bayer, via Manufacturing Dive.",
+              "tags": [
+                "Manufacturing",
+                "United States"
+              ],
+              "lastModified": "2026-10-06"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "key": "skhynix",
+      "userName": "@TechDesk",
+      "pin": {
+        "title": "SK hynix Breaks Ground on Its Over-$4 Billion Indiana HBM Packaging Plant",
+        "description": "The West Lafayette project targets a cleanroom by October 2028 and HBM mass production in the second half of 2029, with about 1,000 operating staff.",
+        "sourceUrl": "https://news.skhynix.com/en/groundbreaking-ceremony-in-indiana/",
+        "utcStartDateTime": "2026-08-27T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "Confirmed 2026-08-27 reported milestone. Future production targets in the summary are forecasts, not the pin date.",
+        "company": "SK hynix",
+        "categories": [
+          "Business",
+          "Infrastructure",
+          "Semiconductors",
+          "AI"
+        ],
+        "tags": [
+          "U.S. factory buildout",
+          "Manufacturing",
+          "Factory construction",
+          "Indiana"
+        ],
+        "address": "North of Kalberer Road, between Yeager Road and Salisbury Street, West Lafayette, Indiana, United States",
+        "price": 4000000000,
+        "priceCurrency": "USD",
+        "parentId": null,
+        "sentiment": 0.55,
+        "productLine": "",
+        "references": [
+          {
+            "url": "https://news.skhynix.com/en/groundbreaking-ceremony-in-indiana/",
+            "title": "SK hynix Holds Groundbreaking Ceremony for HBM Production Base in Indiana, \u201cBeginning a New Future for US-Korea AI\u201d",
+            "publishedDate": "2026-08-28",
+            "confidence": 95,
+            "reasoning": "Cost evidence: \u201ca total expected investment of over $4 billion\u201d. Latest detailed operator release; August27 local ceremony, October2028 cleanroom and H2 2029 mass production."
+          },
+          {
+            "url": "https://www.skhynix.com/westlafayette.IN/",
+            "title": "SK hynix West Lafayette",
+            "publishedDate": null,
+            "confidence": 95,
+            "reasoning": "Older operator project homepage; its H2 2028 operations target differs from the updated August 2026 production schedule."
+          },
+          {
+            "url": "https://wlmoves.com/project/lane-closure-yeager-road/",
+            "title": "Lane Closure \u2013 Yeager Road",
+            "publishedDate": "2026-02-17",
+            "confidence": 95,
+            "reasoning": "City road-project notice places the SK hynix construction site north of Kalberer Road on Yeager Road; intersection used only as site-area context."
+          }
+        ],
+        "media": [
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/factory-buildout/2026-10-24/skhynix-1-47d613f9d531f354.webp",
+            "originalWidth": 1600,
+            "originalHeight": 900
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/factory-buildout/2026-10-24/skhynix-2-93e4a7528d70c59f.webp",
+            "originalWidth": 1600,
+            "originalHeight": 900
+          }
+        ],
+        "latitude": 40.46790698565,
+        "longitude": -86.924575998878,
+        "longFormSummary": "<ul><li>The company reports its ceremony occurred August 27 local time, before the August 28 Korean release. The facility will package and test wafers made in Korea, alongside an advanced-packaging R&amp;D testbed.<cite data-ref=\"https://news.skhynix.com/en/groundbreaking-ceremony-in-indiana/\"></cite></li><li>The updated release targets cleanroom readiness in October 2028 and mass production in H2 2029. About 1,000 operating staff are distinct from 7,000 direct and indirect jobs.<cite data-ref=\"https://news.skhynix.com/en/groundbreaking-ceremony-in-indiana/\"></cite></li><li>The older project homepage still advertises H2 2028 operations; the later detailed production schedule takes precedence.<cite data-ref=\"https://www.skhynix.com/westlafayette.IN/\"></cite></li><li>City project information places site work north of Kalberer on Yeager Road. The marker is the nearby road intersection as site-area context, not a surveyed building centroid or the Purdue ceremony venue.<cite data-ref=\"https://wlmoves.com/project/lane-closure-yeager-road/\"></cite></li><li>Published project-cost evidence: \u201ca total expected investment of over $4 billion\u201d The numeric cost uses the source currency without conversion; US$4 billion records a disclosed floor, not an exact final cost.<cite data-ref=\"https://news.skhynix.com/en/groundbreaking-ceremony-in-indiana/\"></cite></li><li>August 27, 2026 West Lafayette groundbreaking ceremony at Purdue; not a completed factory. Credit: SK hynix.<cite data-ref=\"https://news.skhynix.com/en/groundbreaking-ceremony-in-indiana/\"></cite></li><li>August 27, 2026 West Lafayette groundbreaking ceremony at Purdue; not a completed factory. Credit: SK hynix.<cite data-ref=\"https://news.skhynix.com/en/groundbreaking-ceremony-in-indiana/\"></cite></li></ul>",
+        "sourceWikis": [
+          {
+            "url": "https://news.skhynix.com/en/groundbreaking-ceremony-in-indiana/",
+            "title": "SK hynix Holds Groundbreaking Ceremony for HBM Production Base in Indiana, \u201cBeginning a New Future for US-Korea AI\u201d",
+            "generatedBy": "openai/session",
+            "wiki": {
+              "title": "SK hynix Holds Groundbreaking Ceremony for HBM Production Base in Indiana, \u201cBeginning a New Future for US-Korea AI\u201d",
+              "summary": "Cost evidence: \u201ca total expected investment of over $4 billion\u201d. Latest detailed operator release; August27 local ceremony, October2028 cleanroom and H2 2029 mass production.",
+              "body": "The company reports its ceremony occurred August 27 local time, before the August 28 Korean release. The facility will package and test wafers made in Korea, alongside an advanced-packaging R&D testbed.\n\nThe updated release targets cleanroom readiness in October 2028 and mass production in H2 2029. About 1,000 operating staff are distinct from 7,000 direct and indirect jobs.\n\nPublished project-cost evidence: \u201ca total expected investment of over $4 billion\u201d The numeric cost uses the source currency without conversion; US$4 billion records a disclosed floor, not an exact final cost.\n\nAugust 27, 2026 West Lafayette groundbreaking ceremony at Purdue; not a completed factory. Credit: SK hynix.\n\nAugust 27, 2026 West Lafayette groundbreaking ceremony at Purdue; not a completed factory. Credit: SK hynix.",
+              "tags": [
+                "Manufacturing",
+                "United States"
+              ],
+              "lastModified": "2026-08-28"
+            }
+          },
+          {
+            "url": "https://www.skhynix.com/westlafayette.IN/",
+            "title": "SK hynix West Lafayette",
+            "generatedBy": "openai/session",
+            "wiki": {
+              "title": "SK hynix West Lafayette",
+              "summary": "Older operator project homepage; its H2 2028 operations target differs from the updated August 2026 production schedule.",
+              "body": "The older project homepage still advertises H2 2028 operations; the later detailed production schedule takes precedence.",
+              "tags": [
+                "Manufacturing",
+                "United States"
+              ],
+              "lastModified": null
+            }
+          },
+          {
+            "url": "https://wlmoves.com/project/lane-closure-yeager-road/",
+            "title": "Lane Closure \u2013 Yeager Road",
+            "generatedBy": "openai/session",
+            "wiki": {
+              "title": "Lane Closure \u2013 Yeager Road",
+              "summary": "City road-project notice places the SK hynix construction site north of Kalberer Road on Yeager Road; intersection used only as site-area context.",
+              "body": "City project information places site work north of Kalberer on Yeager Road. The marker is the nearby road intersection as site-area context, not a surveyed building centroid or the Purdue ceremony venue.",
+              "tags": [
+                "Manufacturing",
+                "United States"
+              ],
+              "lastModified": "2026-02-17"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "key": "avio",
+      "userName": "@EconDesk",
+      "pin": {
+        "title": "Avio Breaks Ground on Its $500 Million Virginia Rocket-Motor Plant",
+        "description": "The roughly 900,000-square-foot Hurt plant targets completion in late 2028 and production in early 2029, with about 1,500 technical jobs planned.",
+        "sourceUrl": "https://aviousa.com/groundbreaking",
+        "utcStartDateTime": "2026-09-29T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "Confirmed 2026-09-29 reported milestone. Future production targets in the summary are forecasts, not the pin date.",
+        "company": "Avio USA",
+        "categories": [
+          "Business",
+          "Infrastructure",
+          "Aerospace",
+          "Defense"
+        ],
+        "tags": [
+          "U.S. factory buildout",
+          "Manufacturing",
+          "Factory construction",
+          "Virginia"
+        ],
+        "address": "Southern Virginia Multimodal Park, Hurt, Pittsylvania County, Virginia, United States",
+        "price": 500000000,
+        "priceCurrency": "USD",
+        "parentId": null,
+        "sentiment": 0.55,
+        "productLine": "",
+        "references": [
+          {
+            "url": "https://www.governor.virginia.gov/newsroom/news-releases/2026/september-releases/name-1124207-en.html",
+            "title": "Governor Spanberger, Avio USA Break Ground on $500 Million Manufacturing Facility in Pittsylvania Creating 1,500 Jobs",
+            "publishedDate": "2026-09-29",
+            "confidence": 95,
+            "reasoning": "Cost evidence: \u201cnew $500 million manufacturing facility\u201d. Same-day state statement identifies project cost and Southern Virginia Multimodal Park."
+          },
+          {
+            "url": "https://aviousa.com/groundbreaking",
+            "title": "AVIO USA BREAKS GROUND IN VIRGINIA ON FIRST U.S. SOLID ROCKET MOTOR FACILITY, STRENGTHENING DEFENSE SUPPLY CHAIN AND CREATING OVER 1,000 JOBS",
+            "publishedDate": "2026-09-29",
+            "confidence": 95,
+            "reasoning": "Operator release gives updated 900,000sqft, roughly1500jobs, late2028 completion and early2029 production targets."
+          }
+        ],
+        "media": [
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/factory-buildout/2026-10-24/avio-cba9e45b91186c36.webp",
+            "originalWidth": 1280,
+            "originalHeight": 854
+          }
+        ],
+        "longFormSummary": "<ul><li>Avio\u2019s first U.S. manufacturing plant is planned for thousands of tactical solid rocket motors annually. HITT leads construction, with completion targeted for late 2028 and production early in 2029.<cite data-ref=\"https://aviousa.com/groundbreaking\"></cite></li><li>The September operator release gives about 900,000 square feet and roughly 1,500 expected technical jobs. These are projections, not completed hiring or current output.<cite data-ref=\"https://aviousa.com/groundbreaking\"></cite></li><li>Virginia\u2019s same-day announcement supports the $500 million project scale. No exact building centroid was verified, so the pin identifies the industrial park without guessed coordinates.<cite data-ref=\"https://www.governor.virginia.gov/newsroom/news-releases/2026/september-releases/name-1124207-en.html\"></cite></li><li>Published project-cost evidence: \u201cnew $500 million manufacturing facility\u201d The numeric cost uses the source currency without conversion.<cite data-ref=\"https://www.governor.virginia.gov/newsroom/news-releases/2026/september-releases/name-1124207-en.html\"></cite></li><li>September 29, 2026 groundbreaking for the Hurt, Virginia solid rocket motor plant. Credit: Avio USA.<cite data-ref=\"https://aviousa.com/groundbreaking\"></cite></li></ul>",
+        "sourceWikis": [
+          {
+            "url": "https://aviousa.com/groundbreaking",
+            "title": "AVIO USA BREAKS GROUND IN VIRGINIA ON FIRST U.S. SOLID ROCKET MOTOR FACILITY, STRENGTHENING DEFENSE SUPPLY CHAIN AND CREATING OVER 1,000 JOBS",
+            "generatedBy": "openai/session",
+            "wiki": {
+              "title": "AVIO USA BREAKS GROUND IN VIRGINIA ON FIRST U.S. SOLID ROCKET MOTOR FACILITY, STRENGTHENING DEFENSE SUPPLY CHAIN AND CREATING OVER 1,000 JOBS",
+              "summary": "Operator release gives updated 900,000sqft, roughly1500jobs, late2028 completion and early2029 production targets.",
+              "body": "Avio\u2019s first U.S. manufacturing plant is planned for thousands of tactical solid rocket motors annually. HITT leads construction, with completion targeted for late 2028 and production early in 2029.\n\nThe September operator release gives about 900,000 square feet and roughly 1,500 expected technical jobs. These are projections, not completed hiring or current output.\n\nSeptember 29, 2026 groundbreaking for the Hurt, Virginia solid rocket motor plant. Credit: Avio USA.",
+              "tags": [
+                "Manufacturing",
+                "United States"
+              ],
+              "lastModified": "2026-09-29"
+            }
+          },
+          {
+            "url": "https://www.governor.virginia.gov/newsroom/news-releases/2026/september-releases/name-1124207-en.html",
+            "title": "Governor Spanberger, Avio USA Break Ground on $500 Million Manufacturing Facility in Pittsylvania Creating 1,500 Jobs",
+            "generatedBy": "openai/session",
+            "wiki": {
+              "title": "Governor Spanberger, Avio USA Break Ground on $500 Million Manufacturing Facility in Pittsylvania Creating 1,500 Jobs",
+              "summary": "Cost evidence: \u201cnew $500 million manufacturing facility\u201d. Same-day state statement identifies project cost and Southern Virginia Multimodal Park.",
+              "body": "Virginia\u2019s same-day announcement supports the $500 million project scale. No exact building centroid was verified, so the pin identifies the industrial park without guessed coordinates.\n\nPublished project-cost evidence: \u201cnew $500 million manufacturing facility\u201d The numeric cost uses the source currency without conversion.",
+              "tags": [
+                "Manufacturing",
+                "United States"
+              ],
+              "lastModified": "2026-09-29"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "key": "fairfield",
+      "userName": "@EconDesk",
+      "pin": {
+        "title": "U.S. Steel Breaks Ground on Fairfield\u2019s $475 Million Quench-and-Tempering Facility",
+        "description": "The Alabama tubular-products expansion targets completion in 2029, with approximately 250 permanent jobs and 600 construction jobs at peak.",
+        "sourceUrl": "https://www.ussteel.com/es/media/newsroom-details/-/blogs/u-s-steel-breaks-ground-on-475-million-quench-and-tempering-facility-at-fairfield-tubular-operations",
+        "utcStartDateTime": "2026-09-21T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "Confirmed 2026-09-21 reported milestone. Future production targets in the summary are forecasts, not the pin date.",
+        "company": "United States Steel Corporation",
+        "categories": [
+          "Business",
+          "Infrastructure",
+          "Energy"
+        ],
+        "tags": [
+          "U.S. factory buildout",
+          "Manufacturing",
+          "Factory construction",
+          "Alabama"
+        ],
+        "address": "5700 Valley Road, Fairfield, Alabama, United States",
+        "price": 475000000,
+        "priceCurrency": "USD",
+        "parentId": null,
+        "sentiment": 0.55,
+        "productLine": "",
+        "references": [
+          {
+            "url": "https://www.ussteel.com/es/media/newsroom-details/-/blogs/u-s-steel-breaks-ground-on-475-million-quench-and-tempering-facility-at-fairfield-tubular-operations",
+            "title": "U. S. Steel Breaks Ground on $475 Million Quench and Tempering Facility at Fairfield Tubular Operations",
+            "publishedDate": "2026-09-21",
+            "confidence": 95,
+            "reasoning": "Cost evidence: \u201cnew $475 million Quench and Tempering (Q&T) facility\u201d. Q&T-only project cost excludes the separate $75M thread-line project."
+          },
+          {
+            "url": "https://www.constructionequipmentguide.com/u-s-steel-breaks-ground-on-its-new-475m-fairfield-tubular-facility/72469",
+            "title": "U. S. Steel Breaks Ground On Its New $475M Fairfield Tubular Facility",
+            "publishedDate": "2026-10-09",
+            "confidence": 95,
+            "reasoning": "Trade report supplies 400000sqft expansion scope and U.S.Steel ceremony photograph."
+          },
+          {
+            "url": "https://www.gem.wiki/U.S._Steel_Fairfield_plant",
+            "title": "U.S. Steel Fairfield plant",
+            "publishedDate": null,
+            "confidence": 95,
+            "reasoning": "Campus address and coordinates: 5700 Valley Road, 33.480697,-86.937854. Not the exact Q&T building centroid."
+          }
+        ],
+        "media": [
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/factory-buildout/2026-10-24/fairfield-fc1a695c4013e01d.webp",
+            "originalWidth": 1200,
+            "originalHeight": 799
+          }
+        ],
+        "latitude": 33.480697,
+        "longitude": -86.937854,
+        "longFormSummary": "<ul><li>September 21 was a ceremonial groundbreaking for the heat-treatment expansion. The company targets 2029 completion; 250 permanent positions and roughly 600 peak construction jobs are separate workforce measures.<cite data-ref=\"https://www.ussteel.com/es/media/newsroom-details/-/blogs/u-s-steel-breaks-ground-on-475-million-quench-and-tempering-facility-at-fairfield-tubular-operations\"></cite></li><li>The $475 million belongs to the Q&amp;T project. The separately announced $75 million Premium Thread Line is not added to this pin\u2019s budget.<cite data-ref=\"https://www.ussteel.com/es/media/newsroom-details/-/blogs/u-s-steel-breaks-ground-on-475-million-quench-and-tempering-facility-at-fairfield-tubular-operations\"></cite></li><li>Trade coverage identifies the Q&amp;T addition as about 400,000 square feet and supplies the credited ceremony photograph.<cite data-ref=\"https://www.constructionequipmentguide.com/u-s-steel-breaks-ground-on-its-new-475m-fairfield-tubular-facility/72469\"></cite></li><li>The marker identifies the existing Fairfield works at 5700 Valley Road. It is campus context, not a surveyed centroid of the new heat-treatment building.<cite data-ref=\"https://www.gem.wiki/U.S._Steel_Fairfield_plant\"></cite></li><li>Published project-cost evidence: \u201cnew $475 million Quench and Tempering (Q&amp;T) facility\u201d The numeric cost uses the source currency without conversion.<cite data-ref=\"https://www.ussteel.com/es/media/newsroom-details/-/blogs/u-s-steel-breaks-ground-on-475-million-quench-and-tempering-facility-at-fairfield-tubular-operations\"></cite></li><li>Image accompanying coverage of the Fairfield quench-and-tempering expansion; construction milestone, not 2029 completion. Credit: U. S. Steel, via Construction Equipment Guide.<cite data-ref=\"https://www.constructionequipmentguide.com/u-s-steel-breaks-ground-on-its-new-475m-fairfield-tubular-facility/72469\"></cite></li></ul>",
+        "sourceWikis": [
+          {
+            "url": "https://www.ussteel.com/es/media/newsroom-details/-/blogs/u-s-steel-breaks-ground-on-475-million-quench-and-tempering-facility-at-fairfield-tubular-operations",
+            "title": "U. S. Steel Breaks Ground on $475 Million Quench and Tempering Facility at Fairfield Tubular Operations",
+            "generatedBy": "openai/session",
+            "wiki": {
+              "title": "U. S. Steel Breaks Ground on $475 Million Quench and Tempering Facility at Fairfield Tubular Operations",
+              "summary": "Cost evidence: \u201cnew $475 million Quench and Tempering (Q&T) facility\u201d. Q&T-only project cost excludes the separate $75M thread-line project.",
+              "body": "September 21 was a ceremonial groundbreaking for the heat-treatment expansion. The company targets 2029 completion; 250 permanent positions and roughly 600 peak construction jobs are separate workforce measures.\n\nThe $475 million belongs to the Q&T project. The separately announced $75 million Premium Thread Line is not added to this pin\u2019s budget.\n\nPublished project-cost evidence: \u201cnew $475 million Quench and Tempering (Q&T) facility\u201d The numeric cost uses the source currency without conversion.",
+              "tags": [
+                "Manufacturing",
+                "United States"
+              ],
+              "lastModified": "2026-09-21"
+            }
+          },
+          {
+            "url": "https://www.constructionequipmentguide.com/u-s-steel-breaks-ground-on-its-new-475m-fairfield-tubular-facility/72469",
+            "title": "U. S. Steel Breaks Ground On Its New $475M Fairfield Tubular Facility",
+            "generatedBy": "openai/session",
+            "wiki": {
+              "title": "U. S. Steel Breaks Ground On Its New $475M Fairfield Tubular Facility",
+              "summary": "Trade report supplies 400000sqft expansion scope and U.S.Steel ceremony photograph.",
+              "body": "Trade coverage identifies the Q&T addition as about 400,000 square feet and supplies the credited ceremony photograph.\n\nImage accompanying coverage of the Fairfield quench-and-tempering expansion; construction milestone, not 2029 completion. Credit: U. S. Steel, via Construction Equipment Guide.",
+              "tags": [
+                "Manufacturing",
+                "United States"
+              ],
+              "lastModified": "2026-10-09"
+            }
+          },
+          {
+            "url": "https://www.gem.wiki/U.S._Steel_Fairfield_plant",
+            "title": "U.S. Steel Fairfield plant",
+            "generatedBy": "openai/session",
+            "wiki": {
+              "title": "U.S. Steel Fairfield plant",
+              "summary": "Campus address and coordinates: 5700 Valley Road, 33.480697,-86.937854. Not the exact Q&T building centroid.",
+              "body": "The marker identifies the existing Fairfield works at 5700 Valley Road. It is campus context, not a surveyed centroid of the new heat-treatment building.",
+              "tags": [
+                "Manufacturing",
+                "United States"
+              ],
+              "lastModified": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "key": "l3harris",
+      "userName": "@EconDesk",
+      "pin": {
+        "title": "L3Harris Opens Camden\u2019s Arsenal of Freedom Rocket-Motor Factory",
+        "description": "The October 20 opening adds a facility designed to double current GMLRS motor capacity. Its standalone cost is not published in the opened operator release.",
+        "sourceUrl": "https://www.l3harris.com/newsroom/press-release/2026/10/l3harris-opens-next-generation-solid-rocket-motor-facility-boost",
+        "utcStartDateTime": "2026-10-20T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "Confirmed 2026-10-20 reported milestone. Future production targets in the summary are forecasts, not the pin date.",
+        "company": "L3Harris Technologies",
+        "categories": [
+          "Business",
+          "Infrastructure",
+          "Defense",
+          "Aerospace"
+        ],
+        "tags": [
+          "U.S. factory buildout",
+          "Manufacturing",
+          "Factory construction",
+          "Arkansas"
+        ],
+        "address": "Highland Industrial Park, Camden, Arkansas, United States",
+        "price": null,
+        "priceCurrency": null,
+        "parentId": null,
+        "sentiment": 0.55,
+        "productLine": "",
+        "references": [
+          {
+            "url": "https://www.l3harris.com/newsroom/press-release/2026/10/l3harris-opens-next-generation-solid-rocket-motor-facility-boost",
+            "title": "L3Harris Opens Next\u2011Generation Solid Rocket Motor Facility to Boost Production Capacity",
+            "publishedDate": "2026-10-20",
+            "confidence": 95,
+            "reasoning": "Operator confirms October20 opening, GMLRS role and designed capacity increase. The $216M agreement spans Camden, Orange County and Huntsville, not this factory alone."
+          },
+          {
+            "url": "https://investors.l3harris.com/news/news-details/2026/L3Harris-Opens-NextGeneration-Solid-Rocket-Motor-Facility-to-Boost-Production-Capacity/default.aspx",
+            "title": "L3Harris Opens Next\u2011Generation Solid Rocket Motor Facility to Boost Production Capacity",
+            "publishedDate": "2026-10-20",
+            "confidence": 95,
+            "reasoning": "Issuer investor-relations mirror confirms scope and exact ribbon-cutting image. Building-only cost remains unpublished."
+          }
+        ],
+        "media": [
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/factory-buildout/2026-10-24/l3harris-5bb615c5f6c0da0e.webp",
+            "originalWidth": 1220,
+            "originalHeight": 684
+          }
+        ],
+        "longFormSummary": "<ul><li>The new facility centralizes GMLRS solid rocket motor production and was designed to double current capacity. Opening does not establish that doubled output has already been achieved.<cite data-ref=\"https://www.l3harris.com/newsroom/press-release/2026/10/l3harris-opens-next-generation-solid-rocket-motor-facility-boost\"></cite></li><li>The disclosed $216 million cooperative agreement also covers Virginia facilities and Alabama upgrades. It is not a Camden-building construction price, so price and currency remain null.<cite data-ref=\"https://www.l3harris.com/newsroom/press-release/2026/10/l3harris-opens-next-generation-solid-rocket-motor-facility-boost\"></cite></li><li>The operator distinguishes this factory from other ongoing Camden expansions. No exact new-building footprint or parcel point was established; the industrial-park location is retained without guessed coordinates.<cite data-ref=\"https://investors.l3harris.com/news/news-details/2026/L3Harris-Opens-NextGeneration-Solid-Rocket-Motor-Facility-to-Boost-Production-Capacity/default.aspx\"></cite></li><li>October 20, 2026 ribbon cutting at the Arsenal of Freedom solid rocket motor facility in Camden. Credit: L3Harris Technologies.<cite data-ref=\"https://www.l3harris.com/newsroom/press-release/2026/10/l3harris-opens-next-generation-solid-rocket-motor-facility-boost\"></cite></li></ul>",
+        "sourceWikis": [
+          {
+            "url": "https://www.l3harris.com/newsroom/press-release/2026/10/l3harris-opens-next-generation-solid-rocket-motor-facility-boost",
+            "title": "L3Harris Opens Next\u2011Generation Solid Rocket Motor Facility to Boost Production Capacity",
+            "generatedBy": "openai/session",
+            "wiki": {
+              "title": "L3Harris Opens Next\u2011Generation Solid Rocket Motor Facility to Boost Production Capacity",
+              "summary": "Operator confirms October20 opening, GMLRS role and designed capacity increase. The $216M agreement spans Camden, Orange County and Huntsville, not this factory alone.",
+              "body": "The new facility centralizes GMLRS solid rocket motor production and was designed to double current capacity. Opening does not establish that doubled output has already been achieved.\n\nThe disclosed $216 million cooperative agreement also covers Virginia facilities and Alabama upgrades. It is not a Camden-building construction price, so price and currency remain null.\n\nOctober 20, 2026 ribbon cutting at the Arsenal of Freedom solid rocket motor facility in Camden. Credit: L3Harris Technologies.",
+              "tags": [
+                "Manufacturing",
+                "United States"
+              ],
+              "lastModified": "2026-10-20"
+            }
+          },
+          {
+            "url": "https://investors.l3harris.com/news/news-details/2026/L3Harris-Opens-NextGeneration-Solid-Rocket-Motor-Facility-to-Boost-Production-Capacity/default.aspx",
+            "title": "L3Harris Opens Next\u2011Generation Solid Rocket Motor Facility to Boost Production Capacity",
+            "generatedBy": "openai/session",
+            "wiki": {
+              "title": "L3Harris Opens Next\u2011Generation Solid Rocket Motor Facility to Boost Production Capacity",
+              "summary": "Issuer investor-relations mirror confirms scope and exact ribbon-cutting image. Building-only cost remains unpublished.",
+              "body": "The operator distinguishes this factory from other ongoing Camden expansions. No exact new-building footprint or parcel point was established; the industrial-park location is retained without guessed coordinates.",
+              "tags": [
+                "Manufacturing",
+                "United States"
+              ],
+              "lastModified": "2026-10-20"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "key": "novelis",
+      "userName": "@EconDesk",
+      "pin": {
+        "title": "Novelis Produces the First Coil at Its $5 Billion Bay Minette Aluminum Plant",
+        "description": "The Alabama rolling and recycling mill reaches a commissioning milestone; customer qualification and commercial shipments remain targeted for Q2 2027.",
+        "sourceUrl": "https://investors.novelis.com/news-events/press-releases/detail/1427/novelis-produces-first-coil-at-greenfield-aluminum-rolling-and-recycling-plant-in-alabama",
+        "utcStartDateTime": "2026-10-07T00:00:00Z",
+        "allDay": true,
+        "allDayStated": true,
+        "dateConfidence": "confirmed",
+        "dateConfidenceReasoning": "Confirmed 2026-10-07 reported milestone. Future production targets in the summary are forecasts, not the pin date.",
+        "company": "Novelis",
+        "categories": [
+          "Business",
+          "Infrastructure"
+        ],
+        "tags": [
+          "U.S. factory buildout",
+          "Manufacturing",
+          "Factory construction",
+          "Alabama"
+        ],
+        "address": "49700 Rabun Road, Bay Minette, Alabama, United States",
+        "price": 5000000000,
+        "priceCurrency": "USD",
+        "parentId": null,
+        "sentiment": 0.55,
+        "productLine": "",
+        "references": [
+          {
+            "url": "https://investors.novelis.com/news-events/press-releases/detail/1427/novelis-produces-first-coil-at-greenfield-aluminum-rolling-and-recycling-plant-in-alabama",
+            "title": "Novelis Produces First Coil at Greenfield Aluminum Rolling and Recycling Plant in Alabama",
+            "publishedDate": "2026-10-07",
+            "confidence": 95,
+            "reasoning": "Cost evidence: \u201cits $5 billion aluminum recycling and rolling plant\u201d. Latest operator milestone and Q2 2027 shipment target."
+          },
+          {
+            "url": "https://novelis.com/locations/bay-minette/",
+            "title": "Bay Minette, Alabama, USA",
+            "publishedDate": null,
+            "confidence": 95,
+            "reasoning": "Operator address49700RabunRoad, $5B investment and600kt designed capacity. Older commissioning target is not proof of commercial opening."
+          }
+        ],
+        "media": [
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/factory-buildout/2026-10-24/novelis-1-214d7845c4f01202.webp",
+            "originalWidth": 400,
+            "originalHeight": 300
+          },
+          {
+            "type": 1,
+            "originalUrl": "https://chronopin.blob.core.windows.net/thumb/factory-buildout/2026-10-24/novelis-2-b914499a3e28af01.webp",
+            "originalWidth": 400,
+            "originalHeight": 225
+          }
+        ],
+        "latitude": 30.949428747695,
+        "longitude": -87.762258307907,
+        "longFormSummary": "<ul><li>The October 7 report marks the first cold-mill coil. Assets needed for commercial shipments are still commissioning, with customer qualification and shipments targeted for Q2 2027.<cite data-ref=\"https://investors.novelis.com/news-events/press-releases/detail/1427/novelis-produces-first-coil-at-greenfield-aluminum-rolling-and-recycling-plant-in-alabama\"></cite></li><li>At full operation, Novelis expects 600 kilotonnes of annual rolled-aluminum capacity and up to 1,000 new jobs. First coil does not establish that full capacity or commercial sales have begun.<cite data-ref=\"https://investors.novelis.com/news-events/press-releases/detail/1427/novelis-produces-first-coil-at-greenfield-aluminum-rolling-and-recycling-plant-in-alabama\"></cite></li><li>The location page lists 49700 Rabun Road. Its older H2 2026 commissioning window is distinct from the newer commercial-shipment target. The geocoded street address supplies site context, not a surveyed mill footprint.<cite data-ref=\"https://novelis.com/locations/bay-minette/\"></cite></li><li>Published project-cost evidence: \u201cits $5 billion aluminum recycling and rolling plant\u201d The numeric cost uses the source currency without conversion.<cite data-ref=\"https://investors.novelis.com/news-events/press-releases/detail/1427/novelis-produces-first-coil-at-greenfield-aluminum-rolling-and-recycling-plant-in-alabama\"></cite></li><li>First-coil commissioning milestone at Bay Minette; commercial shipments targeted for Q2 2027. Credit: Novelis / PR Newswire.<cite data-ref=\"https://investors.novelis.com/news-events/press-releases/detail/1427/novelis-produces-first-coil-at-greenfield-aluminum-rolling-and-recycling-plant-in-alabama\"></cite></li><li>First-coil commissioning milestone at Bay Minette; commercial shipments targeted for Q2 2027. Credit: Novelis / PR Newswire.<cite data-ref=\"https://investors.novelis.com/news-events/press-releases/detail/1427/novelis-produces-first-coil-at-greenfield-aluminum-rolling-and-recycling-plant-in-alabama\"></cite></li></ul>",
+        "sourceWikis": [
+          {
+            "url": "https://investors.novelis.com/news-events/press-releases/detail/1427/novelis-produces-first-coil-at-greenfield-aluminum-rolling-and-recycling-plant-in-alabama",
+            "title": "Novelis Produces First Coil at Greenfield Aluminum Rolling and Recycling Plant in Alabama",
+            "generatedBy": "openai/session",
+            "wiki": {
+              "title": "Novelis Produces First Coil at Greenfield Aluminum Rolling and Recycling Plant in Alabama",
+              "summary": "Cost evidence: \u201cits $5 billion aluminum recycling and rolling plant\u201d. Latest operator milestone and Q2 2027 shipment target.",
+              "body": "The October 7 report marks the first cold-mill coil. Assets needed for commercial shipments are still commissioning, with customer qualification and shipments targeted for Q2 2027.\n\nAt full operation, Novelis expects 600 kilotonnes of annual rolled-aluminum capacity and up to 1,000 new jobs. First coil does not establish that full capacity or commercial sales have begun.\n\nPublished project-cost evidence: \u201cits $5 billion aluminum recycling and rolling plant\u201d The numeric cost uses the source currency without conversion.\n\nFirst-coil commissioning milestone at Bay Minette; commercial shipments targeted for Q2 2027. Credit: Novelis / PR Newswire.\n\nFirst-coil commissioning milestone at Bay Minette; commercial shipments targeted for Q2 2027. Credit: Novelis / PR Newswire.",
+              "tags": [
+                "Manufacturing",
+                "United States"
+              ],
+              "lastModified": "2026-10-07"
+            }
+          },
+          {
+            "url": "https://novelis.com/locations/bay-minette/",
+            "title": "Bay Minette, Alabama, USA",
+            "generatedBy": "openai/session",
+            "wiki": {
+              "title": "Bay Minette, Alabama, USA",
+              "summary": "Operator address49700RabunRoad, $5B investment and600kt designed capacity. Older commissioning target is not proof of commercial opening.",
+              "body": "The location page lists 49700 Rabun Road. Its older H2 2026 commissioning window is distinct from the newer commercial-shipment target. The geocoded street address supplies site context, not a surveyed mill footprint.",
+              "tags": [
+                "Manufacturing",
+                "United States"
+              ],
+              "lastModified": null
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "media": [
+    {
+      "key": "skhynix-1",
+      "file": "skhynix-1.img",
+      "sourceUrl": "https://d18r0a86za96sg.cloudfront.net/wp-content/uploads/2026/08/28103221/01_%EB%AF%B8%EA%B5%AD-AI-%ED%98%81%EC%8B%A0%EC%9D%98-%EC%83%88-%EA%B1%B0%EC%A0%90-SK%ED%95%98%EC%9D%B4%EB%8B%89%EC%8A%A4-%EC%9D%B8%EB%94%94%EC%95%A0%EB%82%98-%ED%8C%B9-%EC%B2%AB-%EC%82%BD-%EB%9C%A8%EB%8B%A4_%EA%B8%B0%ED%83%80_%EC%9D%B4%EB%AF%B8%EC%A7%80_story_2026.jpg",
+      "sourcePageUrl": "https://news.skhynix.com/en/groundbreaking-ceremony-in-indiana/",
+      "credit": "SK hynix",
+      "caption": "August 27, 2026 West Lafayette groundbreaking ceremony at Purdue; not a completed factory.",
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/factory-buildout/2026-10-24/skhynix-1-47d613f9d531f354.webp",
+      "sha256": "47d613f9d531f3545262f82ac6588fa9293e5a3d1dd2ff512efddf8d146e67ca",
+      "width": 1600,
+      "height": 900
+    },
+    {
+      "key": "skhynix-2",
+      "file": "skhynix-2.img",
+      "sourceUrl": "https://d18r0a86za96sg.cloudfront.net/wp-content/uploads/2026/08/28104245/Groundbreaking-Ceremony-in-Indiana-photo-2-2026.jpg",
+      "sourcePageUrl": "https://news.skhynix.com/en/groundbreaking-ceremony-in-indiana/",
+      "credit": "SK hynix",
+      "caption": "August 27, 2026 West Lafayette groundbreaking ceremony at Purdue; not a completed factory.",
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/factory-buildout/2026-10-24/skhynix-2-93e4a7528d70c59f.webp",
+      "sha256": "93e4a7528d70c59f0e32d06bf4fd57e19989847e62a3d135080c33e67dc8e555",
+      "width": 1600,
+      "height": 900
+    },
+    {
+      "key": "avio",
+      "file": "avio.img",
+      "sourceUrl": "https://images.squarespace-cdn.com/content/v1/6ab54bf48584550320810f60/a24eee83-577b-4990-b89a-798c3c656a39/Avio-092926-2.JPEG",
+      "sourcePageUrl": "https://aviousa.com/groundbreaking",
+      "credit": "Avio USA",
+      "caption": "September 29, 2026 groundbreaking for the Hurt, Virginia solid rocket motor plant.",
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/factory-buildout/2026-10-24/avio-cba9e45b91186c36.webp",
+      "sha256": "cba9e45b91186c360cfcd884e36d4ee311f563a8d6973cbf5cd30ed220cc58c4",
+      "width": 1280,
+      "height": 854
+    },
+    {
+      "key": "novelis-1",
+      "file": "novelis-1.img",
+      "sourceUrl": "https://mmx.prnewswire.com/media/MS2004206/InsideNovelis-1.jpg?id=OA2992288",
+      "sourcePageUrl": "https://investors.novelis.com/news-events/press-releases/detail/1427/novelis-produces-first-coil-at-greenfield-aluminum-rolling-and-recycling-plant-in-alabama",
+      "credit": "Novelis / PR Newswire",
+      "caption": "First-coil commissioning milestone at Bay Minette; commercial shipments targeted for Q2 2027.",
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/factory-buildout/2026-10-24/novelis-1-214d7845c4f01202.webp",
+      "sha256": "214d7845c4f0120206b0fc024b5e7368f6fece58aa69750462eaac5f7a4b90d2",
+      "width": 400,
+      "height": 300
+    },
+    {
+      "key": "novelis-2",
+      "file": "novelis-2.img",
+      "sourceUrl": "https://mmx.prnewswire.com/media/MS2004205/InsideNovelis-2.jpg?id=OA2992287",
+      "sourcePageUrl": "https://investors.novelis.com/news-events/press-releases/detail/1427/novelis-produces-first-coil-at-greenfield-aluminum-rolling-and-recycling-plant-in-alabama",
+      "credit": "Novelis / PR Newswire",
+      "caption": "First-coil commissioning milestone at Bay Minette; commercial shipments targeted for Q2 2027.",
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/factory-buildout/2026-10-24/novelis-2-b914499a3e28af01.webp",
+      "sha256": "b914499a3e28af0195395c817e5375edb1ec19de4daa5cc95f69e57838535102",
+      "width": 400,
+      "height": 225
+    },
+    {
+      "key": "bayer-rendering",
+      "file": "bayer-rendering.img",
+      "sourceUrl": "https://imgproxy.divecdn.com/urdPOq-RMyhXrinuRL41MgOa3ZnIsfwbGRqgit4hWUs/g:ce/rs:fill:1200:675:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS8xOTIwXzIwMjYtMDE2OC5qcGc=.webp",
+      "sourcePageUrl": "https://www.manufacturingdive.com/news/bayer-to-invest-2b-ohio-pharmaceutical-facility-new-albany/832237/",
+      "credit": "Bayer, via Manufacturing Dive",
+      "caption": "Rendering of Bayer\u2019s planned New Albany pharmaceutical manufacturing campus; not a completed building.",
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/factory-buildout/2026-10-24/bayer-rendering-22293281940c5d1c.webp",
+      "sha256": "22293281940c5d1c58d21987a3aae1818abee7b15002e72b4891a3b5ebba19e2",
+      "width": 1200,
+      "height": 675
+    },
+    {
+      "key": "l3harris",
+      "file": "l3harris.img",
+      "sourceUrl": "https://www.l3harris.com/sites/default/files/2026-10/arsenal-of-freedom-ribbon-cutting.jpg",
+      "sourcePageUrl": "https://www.l3harris.com/newsroom/press-release/2026/10/l3harris-opens-next-generation-solid-rocket-motor-facility-boost",
+      "credit": "L3Harris Technologies",
+      "caption": "October 20, 2026 ribbon cutting at the Arsenal of Freedom solid rocket motor facility in Camden.",
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/factory-buildout/2026-10-24/l3harris-5bb615c5f6c0da0e.webp",
+      "sha256": "5bb615c5f6c0da0e2d03dcf3580c0d02f082381ee70093afd55363b287369110",
+      "width": 1220,
+      "height": 684
+    },
+    {
+      "key": "fairfield",
+      "file": "fairfield.img",
+      "sourceUrl": "https://dmt55mxnkgbz2.cloudfront.net/1205x0_s3-72469-S-AL-US-STEEL-FAIR-2_jpeg.jpg",
+      "sourcePageUrl": "https://www.constructionequipmentguide.com/u-s-steel-breaks-ground-on-its-new-475m-fairfield-tubular-facility/72469",
+      "credit": "U. S. Steel, via Construction Equipment Guide",
+      "caption": "Image accompanying coverage of the Fairfield quench-and-tempering expansion; construction milestone, not 2029 completion.",
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/factory-buildout/2026-10-24/fairfield-fc1a695c4013e01d.webp",
+      "sha256": "fc1a695c4013e01dbe4075994a4caed9d01b99478ed8c9f2779535d6d2eca2d9",
+      "width": 1200,
+      "height": 799
+    }
+  ],
+  "duplicatePins": [
+    2903,
+    19423,
+    15638,
+    16354,
+    19422
+  ],
+  "gaps": [
+    "Bayer: exact factory parcel/coordinates and construction start day not established; announcement date is confirmed, 2031/2034 module dates are targets. Operator HTML403; city page and Manufacturing Dive rendering independently checked.",
+    "SK hynix: intersection marker is site-area context, not surveyed centroid. Homepage H2 2028 operations conflicts with newer August28 release specifying October2028 cleanroom and H2 2029 mass production. Project/construction galleries checked; maintenance image and stale schedule not used as fresh proof. Further permit/litigation audit remains outside this milestone batch.",
+    "Avio: exact plant parcel point not verified. Use September operator900000sqft/1500jobs projections rather than older February860000sqft/1000jobs. Completion late2028 and production early2029 are targets.",
+    "Fairfield: existing works coordinates only, not new building centroid; $475M Q&T excludes $75M Premium Thread Line. Ceremony photograph, not a completed-plant photograph.",
+    "L3Harris: exact new-building footprint and standalone budget unpublished. $216M covers three locations; not attributed to one factory. Investor mirror403/plain BusinessWire media download failed; direct operator photo downloaded with plain curl.",
+    "Novelis: first cold-mill coil is a commissioning milestone, not full commercial opening. Latest Oct7 release targets Q2 2027 shipments. Old homepage H2 2026 commissioning and17B cans differ in scope/timing from latest release; not silently treated as current shipment capacity. Address point is site context."
+  ],
+  "validation": {
+    "environmentCreateActions": 12,
+    "metadataCorrections": 4,
+    "nativePages": 12,
+    "azureFiles": 8,
+    "sourceWikis": 30,
+    "codeChanges": false,
+    "deployed": false
+  }
+}

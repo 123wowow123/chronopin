@@ -1,3 +1,4 @@
+import { factoryForPin } from '../model/pinFactory';
 // Data for server-rendered pages, cached with Cache Components. Every function
 // here returns plain JSON (no model instances), keyed by its arguments. Those
 // that return pins take the page's language, and swap in the pins'
@@ -555,4 +556,12 @@ export async function pinComments(id: number) {
   cacheTag(TAGS.pin(id));
   const { default: Comment } = await import('../model/comment');
   return toJson<import('@/lib/types').CommentJson[]>(await Comment.getByPinId(id));
+}
+
+// A factory capability profile; missing axes remain explicit research gaps.
+export async function pinFactory(id: number) {
+  'use cache';
+  cacheLife('hours');
+  cacheTag(TAGS.pin(id));
+  return factoryForPin(id);
 }

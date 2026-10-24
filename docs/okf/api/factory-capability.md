@@ -1,0 +1,30 @@
+# Factory capability profiles
+
+`GET`, `PUT`, `DELETE /api/pins/:id/factory` store a `PinFactory` profile independently of a pin's title, author, dates, media and construction price. Reads of deleted/nonexistent pins return 404; a live pin without a profile returns 204. Writes require the pin author or an administrator. A `session` assessment cannot overwrite a `hand` assessment (409). PUT replaces the full profile and expires the pin page immediately; omission does not silently erase individual fields.
+
+A profile contains `sector`, `status`, `assessmentDate` (YYYY-MM-DD), `rubricYear` (2026), `source` (`session` or `hand`), `axes`, and `metrics`. Every axis has `{ score, basis, reasoning, sources }`. Scores are 0–5 in half steps or null. Basis is `planned`, `demonstrated`, or `unknown`; null scores require `unknown` and a specific gap in reasoning. Scored axes require at least one source with an opened HTTPS URL, exact title, publishedDate (YYYY-MM-DD or null), and a verbatim quote of at most 300 characters. All six axes must be supplied. All-null profiles are permitted to document research gaps; they display the gaps without a radar.
+
+`metrics` is a list of up to twelve `{ label, value, basis, source }` entries: retain units, scope and forecast/actual wording in the value. Investment remains in `Pin.price`/`priceCurrency`; metrics can repeat it with evidence. Floor area and job counts are factual context, not proxies for production scale or workforce-development quality. No overall score is calculated.
+
+## 2026 criteria
+
+These are editorial capability assessments, not audits or certifications. Compare only within the stated manufacturing sector and year. Scores describe the pin's project/phase, as known on the assessment date, not the operator's worldwide capabilities. Half steps require reasoning explaining the intermediate evidence. Unknown is never zero; 0 needs positive evidence of the lowest anchor. A marketing adjective alone cannot establish a score.
+
+| Axis | 1 | 2 | 3 | 4 | 5 |
+|---|---|---|---|---|---|
+| Production scale | At or below 20th percentile | 40th percentile | 60th percentile | 80th percentile | Above 80th percentile |
+| Automation | Named isolated automated operation | Multiple named automated steps | Linked automated handling/process control in a production flow | Integrated line with automated inspection/feedback | Independently documented end-to-end adaptive operation |
+| Technical capability | Basic single conversion/assembly step | Named established production process | Specialized named process or integrated production stages | Quantified advanced tolerances/process specification exceeding a cited sector baseline | Independently demonstrated sector frontier against a cited baseline |
+| Resource efficiency | At or below 20th percentile | 40th percentile | 60th percentile | 80th percentile | Above 80th percentile |
+| Supply-chain contribution | Added local capacity, no critical step identified | Named domestic step/customer chain | Named import substitution, bottleneck step or explicit new merchant supplier | Quantified bottleneck relief or substantial diversification against a cited baseline | Independently demonstrated removal of a critical single-source dependency |
+| Workforce development | Explicit internal training program | Named external training/recruitment partnership or training facility | Defined apprenticeship/credential pathway with curriculum | Published participation/completion and placement outcomes | Independently evaluated sustained outcomes and progression |
+
+For scored scale or efficiency, `axes.<key>.benchmark` is required: `{ cohortSize, description, sources }`, with at least five facilities and the same citation format. For scale, the benchmark must cite a comparable cohort (at least five facilities), product, capacity units, reference year and calculation. Use the percentile bands (0–20, >20–40, >40–60, >60–80, >80–100); zero requires documented zero production capacity. A raw output figure without a defensible cohort remains a metric and the score stays null. Resource efficiency uses the same bands with higher scores for lower consumption/emissions per comparable unit of output, with equivalent system boundaries; installed solar or recycling capability alone is insufficient. Zero on other axes requires explicit absence of the capability in a source; silence remains null. A 0.5 score needs evidence between documented absence and the first anchor, never a guess from missing disclosure.
+
+A planned score applies exactly the same anchors to a documented design or program and is visibly labelled **Planned**. It does not assert that the capability is installed, productive, compliant or efficient. Demonstrated scores require specific installed/achieved evidence; an opening ceremony alone cannot prove throughput. Status is independent: `announced`, `construction`, `commissioning`, `production`, `offline`. An announced factory cannot have demonstrated scores or metrics. Commissioning may demonstrate a first product while capacity and commercial shipments remain planned. Offline status never implies current output.
+
+## Initial catalog and replay
+
+`scripts/factories/capability.json` holds six sourced assessments with local and production IDs, exact pin titles/source URLs and references. `npx tsx scripts/factories/capability.ts` validates/dry-runs locally; add `--apply` to PUT and GET-verify. Use `--base https://www.chronopin.com` only after the factory API/schema have been deployed. Credentials come from `ADMIN_EMAIL` and `ADMIN_PASSWORD`, without logging them. Identity, hand-entered profiles and content/media preservation are checked before writes. There is no automatic deployment or database migration on production.
+
+Initial profiles intentionally leave production-scale and resource-efficiency scores null: no comparable peer cohort or output-normalized consumption figures was established. Sparse radars can have only two scored axes; missing axes are labelled, omitted from the polygon and explained under evidence. The scores must not be interpreted as a complete ranking.
