@@ -380,7 +380,7 @@ function ConflictBadge({ n }: { n: Notification }) {
   );
 }
 
-function TradeDay({ items, day, renderRow, expanded, wide }: { items: Notification[]; day: number; renderRow: (n: Notification) => React.ReactNode; expanded?: boolean; wide?: boolean }) {
+function TradeDay({ items, day, renderRow, expanded, wide, onNavigate }: { items: Notification[]; day: number; renderRow: (n: Notification) => React.ReactNode; expanded?: boolean; wide?: boolean; onNavigate?: () => void }) {
   const t = useT();
   const locale = useIntlLocale();
   const dayLabel = day >= -1
@@ -450,7 +450,7 @@ function TradeDay({ items, day, renderRow, expanded, wide }: { items: Notificati
                     <span key={ticker} className="flex min-w-0 items-baseline gap-1.5">
                       <span className="w-4 shrink-0 text-end tabular-nums">{people}</span>
                       {/* The ticker searches its company: the panel shows it with its stock graph. */}
-                      <Link href={tickerHref(ticker)} className="truncate font-medium text-ink hover:underline">{ticker}</Link>
+                      <Link href={tickerHref(ticker)} onClick={onNavigate} className="truncate font-medium text-ink hover:underline">{ticker}</Link>
                       {conflicts.has(ticker) ? (
                         <span title={`${t('notifications.conflict')}: ${[...conflicts.get(ticker)!].slice(0, 3).join(', ')}`} className="ms-auto shrink-0 text-warning-soft">
                           <Icon name="warning" className="size-3" />
@@ -472,7 +472,7 @@ function TradeDay({ items, day, renderRow, expanded, wide }: { items: Notificati
 }
 
 // One collapsible block holding today's and yesterday's panes stuck together.
-function TradeGroup({ groups, renderRow, href, fixed, guest, wide }: { wide?: boolean; href: string; fixed?: boolean; guest?: boolean; groups: { day: number; items: Notification[] }[]; renderRow: (n: Notification) => React.ReactNode }) {
+function TradeGroup({ groups, renderRow, href, fixed, guest, wide, onNavigate }: { onNavigate?: () => void; wide?: boolean; href: string; fixed?: boolean; guest?: boolean; groups: { day: number; items: Notification[] }[]; renderRow: (n: Notification) => React.ReactNode }) {
   const t = useT();
   // The group's one chevron expands every day; days carry no chevron of their own.
   const [openState, setOpen] = useState(!guest);
@@ -494,7 +494,7 @@ function TradeGroup({ groups, renderRow, href, fixed, guest, wide }: { wide?: bo
             {t('notifications.tradesToday')}
           </button>
         )}
-        <Link href={href} className="shrink-0 text-xs font-medium text-link">
+        <Link href={href} onClick={onNavigate} className="shrink-0 text-xs font-medium text-link">
           {t('notifications.tradesHistory')}
         </Link>
         {fixed ? null : (
@@ -505,7 +505,7 @@ function TradeGroup({ groups, renderRow, href, fixed, guest, wide }: { wide?: bo
       </div>
       {/* Collapsed, each day still shows its buy and sell totals. */}
       <div id={bodyId} className="divide-y divide-line border-t border-line">
-        {groups.map((g) => <TradeDay key={g.day} items={g.items} day={g.day} renderRow={renderRow} expanded={open} wide={wide} />)}
+        {groups.map((g) => <TradeDay key={g.day} items={g.items} day={g.day} renderRow={renderRow} expanded={open} wide={wide} onNavigate={onNavigate} />)}
       </div>
     </li>
   );
@@ -707,7 +707,7 @@ function NotificationItems({
           <ul className={wide ? WIDE_LIST : 'divide-y divide-line'}>
             {entriesOf(rows).map((entry) =>
               entry.kind === 'trades' ? (
-                <TradeGroup key="trades" wide={wide} groups={entry.groups} renderRow={renderRow} fixed={controlled} guest={guest} href={guest ? '/trades' : '/notifications/trades'} />
+                <TradeGroup key="trades" wide={wide} onNavigate={onNavigate} groups={entry.groups} renderRow={renderRow} fixed={controlled} guest={guest} href={guest ? '/trades' : '/notifications/trades'} />
               ) : (
                 renderRow(entry.n)
               ),
@@ -911,7 +911,7 @@ export function WeatherButton({ className = '' }: { className?: string }) {
 // The weather for visitors who are not signed in, in the phone drawer: the
 // weather row over the recent trades, which it opens in full or shuts.
 export function DrawerWeather({ onNavigate }: { onNavigate?: () => void }) {
-  const [open, setOpen] = useState(true);
+  const [open, setOpen] = useState(false);
   const trades = usePublicTrades(open);
   useEffect(() => {
     refreshLocalWeather();
