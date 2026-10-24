@@ -163,6 +163,11 @@ export const TASKS = {
     label: 'Arena scores for AI models',
     summary: "Check the AI model pins whose model has a price but no LMArena score yet, and tag 'Frontier Model' on the ones the arena has since scored that lead their year's cost/quality line.",
   },
+  modelRubrics: {
+    group: 'scores',
+    label: 'Rubrics, reviews and spec tables for AI models',
+    summary: 'For each new AI language-model or video-model release pin, research its published specs and independent reviews, then save its six-axis rubric (and, for video models, its spec tables).',
+  },
   sentiment: {
     group: 'scores',
     label: 'Refresh sentiment',
@@ -250,7 +255,7 @@ export const DEFAULT_DAILY_JOBS: DailyJobsSetting = {
       // new rounds and updates existing pins twice a day (owner, 2026-10-15).
       // Hiring, new roles and job-creating investment follow the same twice-daily
       // discovery and maintenance cadence.
-      tasks: ['weekReview', 'freshSources', 'eventInfo', 'pinAds', 'holidayAds', 'adTranslations', 'personTrades', 'threadPredicted', 'breakingNews', 'predictionMarkets', 'earthquakes', 'layoffs', 'hiringJobCreation', 'modelScores', 'sentiment'],
+      tasks: ['weekReview', 'freshSources', 'eventInfo', 'pinAds', 'holidayAds', 'adTranslations', 'personTrades', 'threadPredicted', 'breakingNews', 'predictionMarkets', 'earthquakes', 'layoffs', 'hiringJobCreation', 'modelScores', 'modelRubrics', 'sentiment'],
       driver: 'auto',
       maxNewPins: MAX_NEW_PINS,
       maxUpdates: MAX_UPDATES,
@@ -294,11 +299,12 @@ export function withDefaultJobs(setting: DailyJobsSetting): DailyJobsSetting {
   // Fold the short-lived separate translation job into the existing daily
   // runs, including saved settings from before this task was introduced.
   // Add the owner-requested twice-daily layoff and hiring beats, and the
-  // person stock-trades update (2026-10-16), to saved news jobs too.
+  // person stock-trades update (2026-10-16) and the model rubrics, reviews and
+  // spec tables (2026-10-24), to saved news jobs too.
   let changed = false;
   const jobs = setting.jobs.flatMap((job): JobSetting[] => {
     if (job.id === 'ad-translations') { changed = true; return []; }
-    const required: TaskId[] = job.id === 'news' ? ['adTranslations', 'layoffs', 'hiringJobCreation', 'personTrades', 'earthquakes'] : job.id === 'midnight' ? ['adTranslations', 'personCampaigns'] : [];
+    const required: TaskId[] = job.id === 'news' ? ['adTranslations', 'layoffs', 'hiringJobCreation', 'personTrades', 'earthquakes', 'modelRubrics'] : job.id === 'midnight' ? ['adTranslations', 'personCampaigns'] : [];
     if (required.some((task) => !job.tasks.includes(task))) {
       changed = true;
       return [{ ...job, tasks: TASK_IDS.filter((task) => required.includes(task) || job.tasks.includes(task)) }];

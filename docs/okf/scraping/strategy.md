@@ -58,7 +58,8 @@ records every profile, new review sources and remaining research gaps.
 | 9 | **Entries** | page headings | A release-notes or changelog page's dated entries, one pin each | yes | [Enrichment](enrichment.md#release-notes-pages) |
 | 10 | **Review** | draft pin | A pin that meets the [quality bar](#quality-bar) | no | below |
 | 11 | **Save** | draft pin + stocks + tags + categories | `POST /api/pins` (sources, wikis, summary and duplicate checks follow from the save) | no | [Scraping API](../api/scraping-api.md) |
-| 12 | **Persist** | database | `npm run backup:data` so the seed data keeps it | no | - |
+| 12 | **Model rubric** (AI model release pins) | saved pin | A six-axis rubric with independent reviews (`PinLlmPerf`, or `PinVideoPerf` plus spec tables for a video model), by the "Language model rubric" / "Video model rubric" sections below. Needs research the scrape cannot do keyless, so the **modelRubrics task of the 6am/6pm news job** picks every new AI Models release pin up; by hand, `PUT /api/pins/:id/llm-performance` or `/video-performance` (+ `/performance` tables) as the author or an admin | yes | [modelRubrics](daily-jobs.md#modelrubrics) |
+| 13 | **Persist** | database | `npm run backup:data` so the seed data keeps it | no | - |
 
 A `market` source carries one more reading through the save: the dollars traded on every market the pin links, stored on the pin by stage 11 and refreshed afterwards (see [How much money is on a market](#decision-rules)).
 
@@ -210,6 +211,7 @@ A draft is ready to save when:
 - 3 media reached by best effort, with at least 1 video and at least 1 picture among them; fewer, or no video, only when every source was tried, with what was tried noted.
 - A game pin carries its aggregated ratings, its maturity rating with content descriptors and its supported platforms, each read from a fetched page (see [Game facts](#decision-rules)).
 - A prediction-market pin says what its markets have traded, in dollars, next to the odds it quotes.
+- An AI model release pin (language or video model) is tagged `AI Models` and titled with the model name first, so the modelRubrics task finds it; it ends up with a rubric, verified reviews (3 is the target, not a floor: cost vs. quality outranks the count) and, for a video model, spec tables (stage 12).
 - The `longFormSummary` is an HTML bulleted list whose every point cites what backs it.
 - The pin passes the [value test](#principles) (principle 9). Its summary is original synthesis from more than one source and gives context beyond the source page; no sentence is lifted from the source except a short, attributed quote; and it is not interchangeable with a sibling pin in the same batch.
 - A model or product pin carries the maker's main results table (`<h3>Benchmarks</h3>` + `<table>`) when one is published.

@@ -487,3 +487,17 @@ tag:Predicted AND updated:>=yesterday OR tag:Predicted AND posted:today
 and add product release filter
 
 pin popular product mainland chinese people like
+
+
+add sentiment pane on product pin detail
+next to reviews?
+
+
+https://www.chronopin.com/search?q=user%3ATechDesk
+recomend other users that you might be interested in base on this user
+
+
+create production production knowlege graph what supliers good coming in and output of company going out and consumed
+
+
+pin factory buildout in US

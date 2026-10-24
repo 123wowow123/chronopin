@@ -20,7 +20,7 @@ into its instructions, so changing this page changes the next run.
 | Job | Default time | Tasks | New pins / updates per run |
 | --- | --- | --- | --- |
 | `midnight` - maintenance and new pins | 00:00 America/Los_Angeles | Keep pins right: [revisits](#revisits), [pinHealth](#pinhealth), [thinPins](#thinpins), [personCampaigns](#personcampaigns), [restaurantRegions](#restaurantregions). Find new events: [trends](#trends), [thinCategories](#thincategories), [trendingCategories](#trendingcategories), [commentTopics](#commenttopics), [localEvents](#localevents). Beats: [fortune100](#fortune100), [layoffs](#layoffs) | 100 / 250 |
-| `news` - morning and evening check | 06:00 and 18:00 America/Los_Angeles | Keep pins right: [weekReview](#weekreview), [freshSources](#freshsources), [eventInfo](#eventinfo), [pinAds](#pinads), [holidayAds](#holidayads), [personTrades](#persontrades), [threadPredicted](#threadpredicted). Find new events: [breakingNews](#breakingnews), [predictionMarkets](#predictionmarkets), [earthquakes](#earthquakes). Beats: [layoffs](#layoffs), [hiringJobCreation](#hiringjobcreation). Scores: [modelScores](#modelscores), [sentiment](#sentiment) | 100 / 250 |
+| `news` - morning and evening check | 06:00 and 18:00 America/Los_Angeles | Keep pins right: [weekReview](#weekreview), [freshSources](#freshsources), [eventInfo](#eventinfo), [pinAds](#pinads), [holidayAds](#holidayads), [personTrades](#persontrades), [threadPredicted](#threadpredicted). Find new events: [breakingNews](#breakingnews), [predictionMarkets](#predictionmarkets), [earthquakes](#earthquakes). Beats: [layoffs](#layoffs), [hiringJobCreation](#hiringjobcreation). Scores: [modelScores](#modelscores), [modelRubrics](#modelrubrics), [sentiment](#sentiment) | 100 / 250 |
 | `monthly` - low-confidence re-check | 03:00 America/Los_Angeles on the 1st of each month | Keep pins right: [lowConfidence](#lowconfidence) | 0 / 250 |
 | `weekly` - products page refresh | 04:00 America/Los_Angeles every Monday | Keep pins right: [products](#products) | 0 / 100 |
 
@@ -981,6 +981,19 @@ by hand.
 (it led when it shipped). A model that is not on OpenRouter has no price and
 is neither awaiting nor tagged; the tool does not guess. When the arena
 returns nothing the tool errors rather than reporting every pin as awaiting.
+
+
+### modelRubrics
+
+**Reads** `model_rubric_gaps` (a few pins per call, newest first): AI model release pins (tag `AI Models`, dated today or earlier, not predicted, not retirements and not image, speech or live models) that have no rubric yet (`PinLlmPerf` for a language model, `PinVideoPerf` for an AI video model: Seedance, Sora, Kling, Veo, Grok Imagine, Wan, Hailuo and the like) or, for a video model, no spec tables (`PinPerf`). Each comes with its `kind`, what it `needs` and its author.
+**Does** for each pin, in this order, one at a time:
+1. `get_pin` for what the pin covers and its references, then research with `web_fetch` and `web_search` by the rules in [strategy.md](strategy.md) ("Language model rubric", "Video model rubric", "Which results table"): the model **as launched**, scored on its published figures (maker page, docs, Artificial Analysis, API providers), `null` for what was not published then, never borrowed from a sibling model or from today's price.
+2. Aim for 3 (up to 6) independent reviews of **this** model from pages opened in this run (a target, not a floor: owner, 2026-10-24, "cost vs. quality should be above rubrics" - stop at what is well sourced and record the shortfall in `basis`, never pad with weak, relayed or unopened pages): exact title, ISO `publishedDate` or null, a verbatim quote up to 300 characters; string-match each quote against the page text before sending it, and drop what fails. Prefer tech press and genuine hands-on tests; a vendor or reseller page counts only when it is a real test and `basis` says so. Fewer than 3 is recorded in `basis`.
+3. `save_model_rubric` with the six scores for the kind, `basis` (the figures, versions and disputes, at most 1000 characters) and `sourceUrl` (the maker's page opened in this run). It saves here and, when the run writes to production, there as the pin's author.
+4. A video model also gets `save_model_tables`: a "specs as launched" table (maker, release, resolution, clip length, audio, input types and limits, access, API price with currency and unit) and, where published, a pricing or leaderboard table, each with its own `sourceUrl`. Only published figures; a disputed one names its source in the cell.
+A pin that is not a release (an announcement whose release pin carries the rubric, a feature update, a family pin whose flagship is scored: say which in `basis`) goes in `skip` on the next call and a `record_learning` note.
+**When.** In the news job just after modelScores (owner, 2026-10-24: "add this strategy to scrapper and 6am/pm job"), so a model pinned by the scrapes or the news run gets its rubric by the next check. Limit: about five pins a run; the queue clears over a few runs.
+**Traps.** Artificial Analysis rebases its index and its live pages show today's lower numbers: use the figure published at launch and name the version. openai.com is Cloudflare-walled (use developers.openai.com, press and Artificial Analysis); VentureBeat and Medium often block curl, so use the page only if it opened. A rubric set by hand is never overwritten. Never invent a review, a score or a spec to fill an axis.
 
 
 ## adTranslations
