@@ -15,3 +15,12 @@
 - Prod: scripts/power/plantShapesProd.ts finds each pin by the local sourceUrl and upserts via /api/admin/db/PinSiteShape; 21 sent 2026-10-23 (Gibson Solar 16597 has no sourceUrl, skipped). Check local and prod titles agree first.
 - Overpass was down or timing out for part of 2026-10-23 (main server hung, overpass.kumi.systems and mail.ru mirror dead). The smaller plant-only query ran 690 pins in minutes with no errors once it recovered.
 - Per-pin source wikis were not changed: an outline is a map layer, not a fact the wiki states.
+
+## Pipelines and power lines (PinSiteShape kinds 'pipeline', 'powerline')
+
+- Kinds added 2026-10-23 (siteShape.ts, PinMap.tsx, pin.siteKey.* in all 16 locales): drawn as plain lines, without the start/finish dots and km markers a 'route' gets. 'powerline' has no data yet.
+- scripts/routes/osmLine.ts takes OSM way/relation ids by hand (`--kind pipeline --relation N --way a,b --pins ...`), simplifies the geometry (Douglas-Peucker, --tol 0.0005) and adds the line to the pin's existing shape. Copies are kept in .scrape/line-shapes/ (git-ignored).
+- Found by exact name (`["name"="..."]`, fast); regex name searches over the planet time out on the public Overpass server.
+- On local and prod 2026-10-23: Colonial Pipeline (252 ways, Houston to NJ, 126 KB) pin 2472; Nord Stream 2 (relation 16489915) pin 2637; Saudi East-West/Petroline oil ways 54729631, 1044430260, 799372434 on pins 5538 and 2999 (2999 is an Aramco earnings pin whose title names the pipeline). The gas-tagged parallel way 1495004023 was left out.
+- Not mapped in OSM under those names: Greenlink West (4947; "Greenlink" matches a Scottish bus route and an Irish trail), Plains Line 901, the Sable/Santa Ynez/Las Flores lines. Most Sable pins sit at courthouses, so a pipeline there would mislead.
+- Push to prod: `plantShapesProd.ts --dir .scrape/line-shapes`.

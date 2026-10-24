@@ -3,6 +3,7 @@
 // as scripts/power/siteShapes.ts --prod does; a pin with no single match there is skipped.
 //
 //   npx tsx scripts/power/plantShapesProd.ts --dry
+//   npx tsx scripts/power/plantShapesProd.ts --dir .scrape/line-shapes   pipelines and power lines (scripts/routes/osmLine.ts)
 //   npx tsx scripts/power/plantShapesProd.ts
 
 import '../env';
@@ -16,6 +17,7 @@ const { values: flags } = parseArgs({
   options: {
     dry: { type: 'boolean', default: false },
     base: { type: 'string' },
+    dir: { type: 'string', default: '.scrape/plant-shapes/' },
   },
 });
 const BASE = (flags.base ?? 'https://www.chronopin.com').replace(/\/$/, '');
@@ -61,11 +63,11 @@ async function main() {
   const token = await signIn();
   const check = await call('GET', '/api/admin/db/PinSiteShape?limit=1', token);
   if (check.status !== 200) throw new Error(`PinSiteShape is not on the server yet (${check.status}): deploy migration 0203 first.`);
-  const dir = '.scrape/plant-shapes/';
+  const dir = flags.dir!.replace(/\/?$/, '/');
   const rows: any[] = [];
   const problems: string[] = [];
   for (const f of readdirSync(dir).filter((x) => x.endsWith('.json'))) {
-    const id = Number(f.replace('.json', ''));
+    const id = parseInt(f, 10);
     const [pin] = await db.query<{ title: string; sourceUrl: string | null }>(`SELECT "title", "sourceUrl" FROM "Pin" WHERE "id" = $1 AND "utcDeletedDateTime" IS NULL`, [id]);
     if (!pin?.sourceUrl) { problems.push(`${id}: no local pin or sourceUrl, skipped`); continue; }
     const found = await call('GET', `/api/admin/db/Pin?sourceUrl=${encodeURIComponent(pin.sourceUrl)}&utcDeletedDateTime.null=true&limit=5`, token);
