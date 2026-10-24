@@ -1042,7 +1042,7 @@ export function TradesHistoryFeed({ everyone, wide }: { everyone?: boolean; wide
     return () => window.clearTimeout(id);
   }, [load]);
   // The days shown and the ticker rankings, recomputed only when the data or the span changes.
-  const { days, all, ranked, conflicts } = useMemo(() => {
+  const { days, all, ranked, assets, conflicts } = useMemo(() => {
     const rows = items ?? [];
     const days = Array.from({ length: weeks * 7 }, (_, i) => ({
       day: -i,
@@ -1071,7 +1071,19 @@ export function TradesHistoryFeed({ everyone, wide }: { everyone?: boolean; wide
         conflicts.set(c.ticker, set);
       }
     }
-    return { days, all, conflicts, ranked: { buys: rank((n) => n.tradeBuyValues), sells: rank((n) => n.tradeSellValues) } };
+    // Holdings with no ticker, by name: how many people traded each, most first.
+    const rankAssets = (pick: (n: Notification) => string[] | null) => {
+      const stats = new Map<string, Set<string>>();
+      for (const n of all) {
+        for (const a of pick(n) ?? []) stats.set(a, (stats.get(a) ?? new Set<string>()).add(n.personName ?? String(n.id)));
+      }
+      return [...stats].sort((a, b) => b[1].size - a[1].size || a[0].localeCompare(b[0])).map(([name, people]) => name + (people.size > 1 ? ` ×${people.size}` : ''));
+    };
+    return {
+      days, all, conflicts,
+      ranked: { buys: rank((n) => n.tradeBuyValues), sells: rank((n) => n.tradeSellValues) },
+      assets: { buys: rankAssets((n) => n.tradeBuyAssets), sells: rankAssets((n) => n.tradeSellAssets) },
+    };
   }, [items, weeks]);
   if (failed) return (
     <div role="alert" className="surface px-4 py-6 text-center text-sm text-subtle">
@@ -1110,7 +1122,7 @@ export function TradesHistoryFeed({ everyone, wide }: { everyone?: boolean; wide
   // Holdings with no ticker (bonds, T-bills, private companies), by name.
   const assetChips = (assets: string[] | null, side: 'buy' | 'sell') =>
     assets?.map((a) => (
-      <span key={a} title={`${side === 'buy' ? t('notifications.tradeBuys') : t('notifications.tradeSells')}: ${a}`} className={`max-w-full whitespace-nowrap rounded-md px-1.5 py-0.5 text-[11px] font-medium ring-1 ring-inset ${side === 'buy' ? 'bg-success/10 text-success-soft ring-success/30' : 'bg-danger/10 text-danger-soft ring-danger/30'}`}>{a}</span>
+      <span key={a} title={`${side === 'buy' ? t('notifications.tradeBuys') : t('notifications.tradeSells')}: ${a}`} className={`min-w-0 max-w-full break-words rounded-md px-1.5 py-0.5 text-[11px] font-medium ring-1 ring-inset ${side === 'buy' ? 'bg-success/10 text-success-soft ring-success/30' : 'bg-danger/10 text-danger-soft ring-danger/30'}`}>{a}</span>
     ));
   return (
     <div className={wide ? 'flex flex-col gap-4 lg:grid lg:grid-cols-3 lg:items-start' : 'flex flex-col gap-4'}>
@@ -1144,9 +1156,9 @@ export function TradesHistoryFeed({ everyone, wide }: { everyone?: boolean; wide
       </div>
       <div className={`surface grid grid-cols-1 divide-y divide-line sm:grid-cols-2 sm:divide-x sm:divide-y-0 rtl:sm:divide-x-reverse ${wide ? 'lg:col-span-2' : ''}`}>
         {([
-          ['tradeBuys', ranked.buys],
-          ['tradeSells', ranked.sells],
-        ] as const).map(([key, list]) => (
+          ['tradeBuys', ranked.buys, assets.buys, 'buy'],
+          ['tradeSells', ranked.sells, assets.sells, 'sell'],
+        ] as const).map(([key, list, other, side]) => (
           <div key={key} className="min-w-0 px-4 py-3">
             <h2 className={`mb-1.5 text-xs font-semibold tracking-wide uppercase ${tone[key].split(' ')[0]}`}>{t(`notifications.${key}`)}</h2>
             {list.length ? (
@@ -1164,12 +1176,13 @@ export function TradesHistoryFeed({ everyone, wide }: { everyone?: boolean; wide
                   </li>
                 ))}
               </ol>
-            ) : (
+            ) : allTickers && other.length ? null : (
               <span className="text-sm text-subtle">—</span>
             )}
+            {allTickers && other.length ? <div className={`flex flex-wrap gap-1 ${list.length ? 'mt-2 border-t border-line pt-2' : ''}`}>{assetChips(other, side)}</div> : null}
           </div>
         ))}
-        {ranked.buys.length > TOP_TICKERS || ranked.sells.length > TOP_TICKERS ? (
+        {ranked.buys.length > TOP_TICKERS || ranked.sells.length > TOP_TICKERS || assets.buys.length || assets.sells.length ? (
           <button
             type="button"
             aria-expanded={allTickers}
