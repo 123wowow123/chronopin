@@ -756,6 +756,8 @@ const ko: Messages = {
       substation: '변전소',
       power: '발전 설비',
       route: '경로',
+      pipeline: '파이프라인',
+      powerline: '송전선',
       caption: '윤곽 작성',
     },
     distanceAway: '{distance} 거리',

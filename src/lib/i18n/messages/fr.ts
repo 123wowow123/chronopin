@@ -756,6 +756,8 @@ const fr: Messages = {
       substation: 'Sous-stations',
       power: 'Production d’électricité',
       route: 'Itinéraire',
+      pipeline: 'Pipeline',
+      powerline: 'Ligne électrique',
       caption: 'Contours tracés par',
     },
     distanceAway: 'à {distance} d’ici',

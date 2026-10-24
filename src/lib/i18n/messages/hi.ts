@@ -759,6 +759,8 @@ const hi: Messages = {
       substation: 'सबस्टेशन',
       power: 'बिजली उत्पादन',
       route: 'मार्ग',
+      pipeline: 'पाइपलाइन',
+      powerline: 'बिजली लाइन',
       caption: 'रूपरेखा तैयार करने वाले',
     },
     distanceAway: '{distance} दूर',

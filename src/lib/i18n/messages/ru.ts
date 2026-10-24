@@ -765,6 +765,8 @@ const ru: Messages = {
       substation: 'Подстанции',
       power: 'Выработка электроэнергии',
       route: 'Маршрут',
+      pipeline: 'Трубопровод',
+      powerline: 'ЛЭП',
       caption: 'Контуры составлены',
     },
     distanceAway: '{distance} от вас',

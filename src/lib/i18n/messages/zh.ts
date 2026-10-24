@@ -757,6 +757,8 @@ const zh: Messages = {
       substation: '变电站',
       power: '发电设施',
       route: '路线',
+      pipeline: '管道',
+      powerline: '输电线',
       caption: '轮廓绘制方',
     },
     distanceAway: '距您 {distance}',

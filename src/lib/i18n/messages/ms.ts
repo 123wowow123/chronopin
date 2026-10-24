@@ -761,6 +761,8 @@ const ms: Messages = {
       substation: 'Pencawang',
       power: 'Penjanaan kuasa',
       route: 'Laluan',
+      pipeline: 'Saluran paip',
+      powerline: 'Talian kuasa',
       caption: 'Garis luar dipetakan oleh',
     },
     distanceAway: '{distance} jauhnya',

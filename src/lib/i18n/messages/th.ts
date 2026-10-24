@@ -753,6 +753,8 @@ const th: Messages = {
       substation: 'สถานีไฟฟ้าย่อย',
       power: 'การผลิตไฟฟ้า',
       route: 'เส้นทาง',
+      pipeline: 'ท่อส่ง',
+      powerline: 'สายส่งไฟฟ้า',
       caption: 'ผู้ร่างโครงร่าง',
     },
     distanceAway: 'ห่างออกไป {distance}',

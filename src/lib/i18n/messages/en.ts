@@ -761,6 +761,8 @@ const en = {
       substation: 'Substations',
       power: 'Power generation',
       route: 'Route',
+      pipeline: 'Pipeline',
+      powerline: 'Power line',
       caption: 'Outlines traced by',
     },
     distanceAway: '{distance} away',

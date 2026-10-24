@@ -760,6 +760,8 @@ const vi: Messages = {
       substation: 'Trạm biến áp',
       power: 'Phát điện',
       route: 'Tuyến đường',
+      pipeline: 'Đường ống',
+      powerline: 'Đường dây điện',
       caption: 'Đường viền do',
     },
     distanceAway: 'Cách {distance}',

@@ -756,6 +756,8 @@ const es: Messages = {
       substation: 'Subestaciones',
       power: 'Generación de energía',
       route: 'Ruta',
+      pipeline: 'Tubería',
+      powerline: 'Línea eléctrica',
       caption: 'Contornos trazados por',
     },
     distanceAway: 'a {distance} de distancia',

@@ -761,6 +761,8 @@ const id: Messages = {
       substation: 'Gardu induk',
       power: 'Pembangkit listrik',
       route: 'Rute',
+      pipeline: 'Pipa',
+      powerline: 'Saluran listrik',
       caption: 'Garis tepi dipetakan oleh',
     },
     distanceAway: '{distance} dari sini',

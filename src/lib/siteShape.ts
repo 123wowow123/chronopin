@@ -1,7 +1,7 @@
 // A pin's mapped outlines (PinSiteShape, 0203): a data centre's campus boundary
-// and its parts, or a course or line as a 'route', drawn on the pin page's map.
+// and its parts, a course as a 'route', or a pipeline or power line, drawn on the pin page's map.
 
-export const SITE_KINDS = ['site', 'building', 'cooling', 'generator', 'substation', 'power', 'route'] as const;
+export const SITE_KINDS = ['site', 'building', 'cooling', 'generator', 'substation', 'power', 'pipeline', 'powerline', 'route'] as const;
 export type SiteKind = (typeof SITE_KINDS)[number];
 
 // What a route feature may say about its course: a circuit's length, altitude
@@ -28,6 +28,8 @@ export const SITE_STYLE: Record<SiteKind, { color: string; fill: number; dash?: 
   generator: { color: '#ea580c', fill: 0.55 },
   substation: { color: '#ca8a04', fill: 0.5 },
   power: { color: '#16a34a', fill: 0.5 },
+  pipeline: { color: '#78350f', fill: 0 },
+  powerline: { color: '#475569', fill: 0, dash: '2 5' },
   route: { color: '#e11d48', fill: 0 },
 };
 

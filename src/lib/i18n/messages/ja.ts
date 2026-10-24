@@ -756,6 +756,8 @@ const ja: Messages = {
       substation: '変電所',
       power: '発電設備',
       route: 'ルート',
+      pipeline: 'パイプライン',
+      powerline: '送電線',
       caption: '輪郭の作成元',
     },
     distanceAway: 'ここから{distance}',

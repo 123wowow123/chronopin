@@ -830,6 +830,8 @@ const ar: Messages = {
       substation: 'محطات فرعية',
       power: 'توليد الطاقة',
       route: 'المسار',
+      pipeline: 'خط أنابيب',
+      powerline: 'خط كهرباء',
       caption: 'المخططات من إعداد',
     },
     distanceAway: 'على بُعد {distance}',

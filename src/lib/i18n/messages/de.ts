@@ -756,6 +756,8 @@ const de: Messages = {
       substation: 'Umspannwerke',
       power: 'Stromerzeugung',
       route: 'Strecke',
+      pipeline: 'Pipeline',
+      powerline: 'Stromleitung',
       caption: 'Umrisse erfasst von',
     },
     distanceAway: '{distance} entfernt',
