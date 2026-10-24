@@ -12,6 +12,10 @@ This block is written and re-added by `next dev` — verify at `node_modules/nex
 
 Owner instruction, 2026-10-13: apply routine, researched daily-job pin updates without asking for confirmation again. This includes sentiment scores, event/ticket readings and verified factual or date corrections, including pins whose authors are outside the job's hardcoded curator allowlist. Use the authenticated admin APIs when the curator helper refuses; preserve the original author. Verify current text hashes before scoring, preserve existing event details when a fresh reading supplies none, and resolve review marks only after verifying the saved changes. Queue genuine research gaps or conflicting evidence with a specific reason, not merely an allowlist mismatch. See docs/okf/scraping/daily-jobs.md. This standing authorization concerns content maintenance; production deployment still requires the explicit request below.
 
+## Construction and energy project costs
+
+Owner instruction, 2026-10-24: pins about something built (pipelines, power plants, dams, bridges, tunnels, railways, terminals, towers, stadiums, data centres and other construction or energy projects) should carry a `price` and `priceCurrency`. Research a sourced figure (opened HTTPS source, verbatim quote) in the currency the source states, with no FX conversion; match the figure to the pin's own event (a phase takes the phase cost) and take the most recent estimate. Collapses, demolitions, rescues, approvals with no budget and anything with no published cost stay null; never invent one. Save through the admin API and record the source in the pin's references or wiki. The extraction prompt in `src/server/extract/systemPrompt.ts` carries the same rule.
+
 ## Deploying to production
 
 Never deploy, restart, resize or build on the production VM (20.109.175.187) unless the user has asked for that deploy in this conversation, in words. Editing code, committing and pushing are not a request to deploy, and approval for one deploy does not cover the next.

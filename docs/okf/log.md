@@ -1,5 +1,8 @@
 # Update Log
 
+## 2026-10-24
+* **Update:** Completed production news run21:2new pins, Brent refresh,41event readings,25scores,75ad translations and1traditionalholiday ad. [Report](../news-job-2026-10-24.md); [learnings](scraping/learnings.md).
+
 ## 2026-10-20
 * **Update**: [PinPower](/tables/pin-power.md) gained `kind` (generation, usage, storage); [Fields](/scraping/fields.md) and [Learnings](/scraping/learnings.md) carry the scraping rules, the title backfill and the prod push (1,454 rows on prod).
 

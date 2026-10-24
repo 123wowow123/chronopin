@@ -15,6 +15,17 @@ Entry format: `## YYYY-MM-DD - <job>`, then `* **Learned**`, `* **Feedback**` (o
 
 
 
+
+## 2026-10-24 - Production news run21, morning round
+
+* **Done:**2newpins19614/19615; Brent16017 refreshed;41distinct events verified;25sentiments,75adtranslations and1traditional ad;25filings/190transactions reconciled.
+* **Learned — Pella staged closure and WARN dates:** October24: NorthCarolina WARN202600055 gives133jobs and January31permanent closure; WFDD reports firstdischarges as earlyDecember3 and finaldepartures endJanuary. Company production-throughDecember3 is not all133employees leavingthatday. Pin stagedwinddown Dec3–Jan31, distinguish2019capitalplan from shutdowncost, and use actualReidsville plantphoto rather than unrelatedsite.
+* **Learned — Toronto forecast and native prediction identity:** October24 Toronto publicmarket and originalOGcard agree Chow66%,Bradford34%,USD676496volume, unlike stale88%search snippets. City election fact sheet and local voting guide establish Oct26 10:00–20:00EDT; forecast outcome remains estimated. No earliernative mayoral-cycle parent found. API reserves Predicted tag; estimated market-sourced pins receive derivedbadge.
+* **Learned — Exact concert allocation beats tour markup:** October24 LiveNation Japan aggregate markup saysInStock, while exact Jan4Nagoya and Jan28Tokyo allocations areSOLDOUT. Read date rows and all-ticket restrictions; save sold-out published facevalues with scope, verify DJ Pee.Wee support, and do not infer availability foronecity from another. Preserved existing details when freshreading suppliednone.
+* **Learned — Holiday suggestions and refreshed title translations:** October24 auto-stocker offered generic Carnival crafts/rave masks, a sesame latte and2026year-specific envelopes for upcoming2027LunarNewYear. Removed7beforeproduction; retained actual blacksesame ingredient forDongzhi tangyuan. Four existingEnglish listingtitles changed and one newad required75currenthash translations. Reaudit allworking ads after replay; original transient ST40imagefailure disappeared on recheck and bothoriginals downloaded, so preserve media.
+* **Feedback:** Standing authorization covers researched content corrections, including other authors and hand event readings; no deployment requested.
+* **Changed:** [Run report](../../news-job-2026-10-24.md), applied ledger and media manifest; exact-date ticket and holiday quality rules were applied without code changes.
+
 ## 2026-10-20 - Power kind: generation, usage, storage (PinPower.kind)
 
 * **Done:** Added `PinPower.kind` (0200, 0201), the pin-page labels, separate map totals (MW generated / used / stored), `power:` search and tag pills. Audit of the 795 existing rows found 10 wrong kinds (hydrogen electrolysers, a smelter and an EV-battery plant filed as generation; a coal plant, fuel-cell deals, a gravity-storage plant and a solar hybrid filed wrongly the other way) and 659 pins with a stated capacity but no row (376 "MWac/MWdc/MWp" solar titles the 0196 regex missed, plus pins added since). All fixed locally and on prod (1,454 rows: 627 generation, 426 storage, 401 usage).

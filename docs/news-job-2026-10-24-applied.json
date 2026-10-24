@@ -1,0 +1,1328 @@
+{
+  "runId": 21,
+  "date": "2026-10-24",
+  "production": true,
+  "created": [
+    19614,
+    19615
+  ],
+  "updated": [
+    16017
+  ],
+  "eventReadings": [
+    {
+      "pinId": 2517,
+      "changes": [],
+      "reading": {
+        "performers": [],
+        "ticketUrl": null,
+        "lowPrice": null,
+        "highPrice": null,
+        "priceCurrency": null,
+        "tiers": [],
+        "itinerary": [],
+        "availability": null,
+        "onSaleDate": null,
+        "source": "session",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Yas_Marina_Circuit",
+        "checkedAt": "2026-10-24T14:03:38.266Z"
+      },
+      "pagesRead": 3
+    },
+    {
+      "pinId": 2079,
+      "changes": [],
+      "reading": {
+        "performers": [],
+        "ticketUrl": null,
+        "lowPrice": null,
+        "highPrice": null,
+        "priceCurrency": null,
+        "tiers": [],
+        "itinerary": [],
+        "availability": null,
+        "onSaleDate": null,
+        "source": "session",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Super_Bowl_LXII",
+        "checkedAt": "2026-10-24T14:03:38.423Z"
+      },
+      "pagesRead": 3
+    },
+    {
+      "pinId": 252,
+      "changes": [],
+      "reading": {
+        "performers": [],
+        "ticketUrl": null,
+        "lowPrice": null,
+        "highPrice": null,
+        "priceCurrency": null,
+        "tiers": [],
+        "itinerary": [],
+        "availability": "PreOrder",
+        "onSaleDate": null,
+        "source": "session",
+        "sourceUrl": "https://www.uefa.com/euro2028/news/02a0-1f55506ebc73-bd595aa88468-1000--uefa-euro-2028-puts-fans-first-with-fair-and-transparent-/",
+        "checkedAt": "2026-10-24T14:03:40.475Z"
+      },
+      "pagesRead": 3
+    },
+    {
+      "pinId": 2158,
+      "changes": [],
+      "reading": {
+        "performers": [],
+        "ticketUrl": null,
+        "lowPrice": null,
+        "highPrice": null,
+        "priceCurrency": null,
+        "tiers": [],
+        "itinerary": [],
+        "availability": "PreOrder",
+        "onSaleDate": null,
+        "source": "session",
+        "sourceUrl": "https://la28.org/en/newsroom/la28-announces-tickets-and-hospitality-packages-go-on-sale-for-olympic-games-in-2026-and-paralympic-games-in-2027.html",
+        "checkedAt": "2026-10-24T14:03:42.545Z"
+      },
+      "pagesRead": 3
+    },
+    {
+      "pinId": 15257,
+      "changes": [],
+      "reading": {
+        "performers": [],
+        "ticketUrl": null,
+        "lowPrice": null,
+        "highPrice": null,
+        "priceCurrency": null,
+        "tiers": [],
+        "itinerary": [],
+        "availability": null,
+        "onSaleDate": null,
+        "source": "session",
+        "sourceUrl": "https://www.carlelo.com/news/maruti-victoris-launched-price-starts-at-rs-105-lakh",
+        "checkedAt": "2026-10-24T14:03:44.630Z"
+      },
+      "pagesRead": 3
+    },
+    {
+      "pinId": 2159,
+      "changes": [],
+      "reading": {
+        "performers": [],
+        "ticketUrl": null,
+        "lowPrice": null,
+        "highPrice": null,
+        "priceCurrency": null,
+        "tiers": [],
+        "itinerary": [],
+        "availability": null,
+        "onSaleDate": null,
+        "source": "session",
+        "sourceUrl": "https://en.wikipedia.org/wiki/2028_Men's_T20_World_Cup",
+        "checkedAt": "2026-10-24T14:03:46.669Z"
+      },
+      "pagesRead": 2
+    },
+    {
+      "pinId": 2160,
+      "changes": [],
+      "reading": {
+        "performers": [],
+        "ticketUrl": null,
+        "lowPrice": null,
+        "highPrice": null,
+        "priceCurrency": null,
+        "tiers": [],
+        "itinerary": [],
+        "availability": null,
+        "onSaleDate": null,
+        "source": "session",
+        "sourceUrl": "https://en.wikipedia.org/wiki/2030_Commonwealth_Games",
+        "checkedAt": "2026-10-24T14:03:48.829Z"
+      },
+      "pagesRead": 2
+    },
+    {
+      "pinId": 2161,
+      "changes": [],
+      "reading": {
+        "performers": [],
+        "ticketUrl": null,
+        "lowPrice": null,
+        "highPrice": null,
+        "priceCurrency": null,
+        "tiers": [],
+        "itinerary": [],
+        "availability": null,
+        "onSaleDate": null,
+        "source": "session",
+        "sourceUrl": "https://en.wikipedia.org/wiki/2032_Summer_Paralympics",
+        "checkedAt": "2026-10-24T14:03:50.961Z"
+      },
+      "pagesRead": 3
+    },
+    {
+      "pinId": 2162,
+      "changes": [],
+      "reading": {
+        "performers": [],
+        "ticketUrl": null,
+        "lowPrice": null,
+        "highPrice": null,
+        "priceCurrency": null,
+        "tiers": [],
+        "itinerary": [],
+        "availability": null,
+        "onSaleDate": null,
+        "source": "session",
+        "sourceUrl": "https://en.wikipedia.org/wiki/2034_Winter_Olympics",
+        "checkedAt": "2026-10-24T14:03:52.988Z"
+      },
+      "pagesRead": 2
+    },
+    {
+      "pinId": 4361,
+      "changes": [
+        "Exact January4 Nagoya show is SOLD OUT; replaced aggregate tour InStock markup. Preserved sold-out face values and published tax scope; verified DJ Pee.Wee support."
+      ],
+      "reading": {
+        "performers": [
+          {
+            "name": "Bruno Mars",
+            "type": "Person"
+          },
+          {
+            "name": "Anderson .Paak (DJ Pee .Wee)",
+            "type": "Person"
+          }
+        ],
+        "ticketUrl": null,
+        "lowPrice": 11800,
+        "highPrice": 149800,
+        "priceCurrency": "JPY",
+        "tiers": [
+          {
+            "note": "Published tax-inclusive face value; January4 Nagoya allocation sold out. Not a currently purchasable offer.",
+            "label": "VIP GOLD",
+            "price": 149800
+          },
+          {
+            "note": "Published tax-inclusive face value; January4 Nagoya allocation sold out. Not a currently purchasable offer.",
+            "label": "VIP SILVER",
+            "price": 52800
+          },
+          {
+            "note": "Published tax-inclusive face value; January4 Nagoya allocation sold out. Not a currently purchasable offer.",
+            "label": "SS reserved",
+            "price": 29800
+          },
+          {
+            "note": "Published tax-inclusive face value; January4 Nagoya allocation sold out. Not a currently purchasable offer.",
+            "label": "S reserved",
+            "price": 18800
+          },
+          {
+            "note": "Published tax-inclusive face value; January4 Nagoya allocation sold out. Not a currently purchasable offer.",
+            "label": "A reserved",
+            "price": 14800
+          },
+          {
+            "note": "Published tax-inclusive face value; January4 Nagoya allocation sold out. Not a currently purchasable offer.",
+            "label": "B reserved",
+            "price": 11800
+          }
+        ],
+        "itinerary": [],
+        "availability": "SoldOut",
+        "onSaleDate": null,
+        "source": "hand",
+        "sourceUrl": "https://www.livenationhip.co.jp/all-events/bruno-mars-tickets-ae147754",
+        "checkedAt": "2026-10-24T14:03:55.058Z"
+      },
+      "pagesRead": 3
+    },
+    {
+      "pinId": 4362,
+      "changes": [],
+      "reading": {
+        "performers": [],
+        "ticketUrl": null,
+        "lowPrice": null,
+        "highPrice": null,
+        "priceCurrency": null,
+        "tiers": [],
+        "itinerary": [],
+        "availability": null,
+        "onSaleDate": null,
+        "source": "session",
+        "sourceUrl": "https://www.livenation.kr/en/event/bruno-mars-the-romantic-tour-seoul-tickets-edp1693110",
+        "checkedAt": "2026-10-24T14:03:57.146Z"
+      },
+      "pagesRead": 3
+    },
+    {
+      "pinId": 4699,
+      "changes": [],
+      "reading": {
+        "performers": [],
+        "ticketUrl": null,
+        "lowPrice": null,
+        "highPrice": null,
+        "priceCurrency": null,
+        "tiers": [],
+        "itinerary": [],
+        "availability": null,
+        "onSaleDate": null,
+        "source": "session",
+        "sourceUrl": "https://www.livenationhip.co.jp/all-events/bruno-mars-tickets-ae147754",
+        "checkedAt": "2026-10-24T14:03:59.334Z"
+      },
+      "pagesRead": 3
+    },
+    {
+      "pinId": 4704,
+      "changes": [],
+      "reading": {
+        "performers": [],
+        "ticketUrl": null,
+        "lowPrice": null,
+        "highPrice": null,
+        "priceCurrency": null,
+        "tiers": [],
+        "itinerary": [],
+        "availability": null,
+        "onSaleDate": null,
+        "source": "session",
+        "sourceUrl": "https://www.livenation.asia/bruno-mars-tickets-adp147754",
+        "checkedAt": "2026-10-24T14:04:01.436Z"
+      },
+      "pagesRead": 3
+    },
+    {
+      "pinId": 4439,
+      "changes": [],
+      "reading": {
+        "performers": [],
+        "ticketUrl": null,
+        "lowPrice": null,
+        "highPrice": null,
+        "priceCurrency": null,
+        "tiers": [],
+        "itinerary": [],
+        "availability": null,
+        "onSaleDate": null,
+        "source": "session",
+        "sourceUrl": "https://sneakerness.com/events/milan-2026/",
+        "checkedAt": "2026-10-24T14:04:04.071Z"
+      },
+      "pagesRead": 2
+    },
+    {
+      "pinId": 4576,
+      "changes": [],
+      "reading": {
+        "performers": [],
+        "ticketUrl": null,
+        "lowPrice": null,
+        "highPrice": null,
+        "priceCurrency": null,
+        "tiers": [],
+        "itinerary": [],
+        "availability": null,
+        "onSaleDate": null,
+        "source": "session",
+        "sourceUrl": "https://meetings.ccamlr.org/en/ccamlr-45",
+        "checkedAt": "2026-10-24T14:04:06.118Z"
+      },
+      "pagesRead": 3
+    },
+    {
+      "pinId": 4663,
+      "changes": [],
+      "reading": {
+        "performers": [],
+        "ticketUrl": "https://bisbees.catchstat.com/",
+        "lowPrice": null,
+        "highPrice": null,
+        "priceCurrency": null,
+        "tiers": [],
+        "itinerary": [],
+        "availability": "InStock",
+        "onSaleDate": null,
+        "source": "session",
+        "sourceUrl": "https://www.bisbees.com/tournaments/bisbees-black-blue/schedule",
+        "checkedAt": "2026-10-24T14:04:08.173Z"
+      },
+      "pagesRead": 3
+    },
+    {
+      "pinId": 4657,
+      "changes": [],
+      "reading": {
+        "performers": [],
+        "ticketUrl": null,
+        "lowPrice": null,
+        "highPrice": null,
+        "priceCurrency": null,
+        "tiers": [],
+        "itinerary": [],
+        "availability": null,
+        "onSaleDate": null,
+        "source": "session",
+        "sourceUrl": "https://www.wto.org/english/news_e/news26_e/fish_01may26_382_e.htm",
+        "checkedAt": "2026-10-24T14:04:13.837Z"
+      },
+      "pagesRead": 3
+    },
+    {
+      "pinId": 4365,
+      "changes": [],
+      "reading": {
+        "performers": [
+          {
+            "name": "Harry Styles",
+            "type": "Person"
+          }
+        ],
+        "ticketUrl": "https://www.ticketmaster.com/harry-styles-together-together-harryween-new-york-new-york-10-31-2026/event/3B00643506DA83DE",
+        "lowPrice": null,
+        "highPrice": null,
+        "priceCurrency": null,
+        "tiers": [],
+        "itinerary": [],
+        "availability": null,
+        "onSaleDate": null,
+        "source": "session",
+        "sourceUrl": "https://www.ticketmaster.com/harry-styles-tickets/artist/2366444",
+        "checkedAt": "2026-10-24T14:04:17.804Z"
+      },
+      "pagesRead": 3
+    },
+    {
+      "pinId": 4586,
+      "changes": [],
+      "reading": {
+        "performers": [],
+        "ticketUrl": null,
+        "lowPrice": null,
+        "highPrice": null,
+        "priceCurrency": null,
+        "tiers": [],
+        "itinerary": [],
+        "availability": null,
+        "onSaleDate": null,
+        "source": "session",
+        "sourceUrl": "https://www.iccat.int/en/Meetings.html",
+        "checkedAt": "2026-10-24T14:04:21.964Z"
+      },
+      "pagesRead": 2
+    },
+    {
+      "pinId": 4612,
+      "changes": [],
+      "reading": {
+        "performers": [],
+        "ticketUrl": null,
+        "lowPrice": null,
+        "highPrice": null,
+        "priceCurrency": null,
+        "tiers": [],
+        "itinerary": [],
+        "availability": null,
+        "onSaleDate": null,
+        "source": "session",
+        "sourceUrl": "https://www.beaujolais.com/en/a-world-for-every-beaujolais/nouveau-by-beaujolais/",
+        "checkedAt": "2026-10-24T14:04:24.298Z"
+      },
+      "pagesRead": 2
+    },
+    {
+      "pinId": 4366,
+      "changes": [],
+      "reading": {
+        "performers": [
+          {
+            "name": "Harry Styles",
+            "type": "Person"
+          }
+        ],
+        "ticketUrl": "https://www.ticketmaster.com.au/harry-styles-together-together-docklands-27-11-2026/event/25006436CFC6E40D",
+        "lowPrice": null,
+        "highPrice": null,
+        "priceCurrency": null,
+        "tiers": [],
+        "itinerary": [],
+        "availability": "SoldOut",
+        "onSaleDate": null,
+        "source": "session",
+        "sourceUrl": "https://www.ticketmaster.com.au/harry-styles-tickets/artist/2366444",
+        "checkedAt": "2026-10-24T14:04:26.528Z"
+      },
+      "pagesRead": 3
+    },
+    {
+      "pinId": 4591,
+      "changes": [],
+      "reading": {
+        "performers": [],
+        "ticketUrl": null,
+        "lowPrice": null,
+        "highPrice": null,
+        "priceCurrency": null,
+        "tiers": [],
+        "itinerary": [],
+        "availability": null,
+        "onSaleDate": null,
+        "source": "session",
+        "sourceUrl": "https://meetings.wcpfc.int/meetings/wcpfc23",
+        "checkedAt": "2026-10-24T14:04:28.631Z"
+      },
+      "pagesRead": 1
+    },
+    {
+      "pinId": 4336,
+      "changes": [],
+      "reading": {
+        "performers": [],
+        "ticketUrl": null,
+        "lowPrice": null,
+        "highPrice": null,
+        "priceCurrency": null,
+        "tiers": [],
+        "itinerary": [],
+        "availability": null,
+        "onSaleDate": null,
+        "source": "session",
+        "sourceUrl": "https://www.reaganfoundation.org/reagan-institute/centers/peace-through-strength/program/reagan-national-defense-forum-original",
+        "checkedAt": "2026-10-24T14:04:30.637Z"
+      },
+      "pagesRead": 3
+    },
+    {
+      "pinId": 4337,
+      "changes": [],
+      "reading": {
+        "performers": [],
+        "ticketUrl": null,
+        "lowPrice": null,
+        "highPrice": null,
+        "priceCurrency": null,
+        "tiers": [],
+        "itinerary": [],
+        "availability": null,
+        "onSaleDate": null,
+        "source": "session",
+        "sourceUrl": "https://www.airshow.com.cn/Category_1216/Index.aspx",
+        "checkedAt": "2026-10-24T14:04:32.732Z"
+      },
+      "pagesRead": 2
+    },
+    {
+      "pinId": 4570,
+      "changes": [],
+      "reading": {
+        "performers": [],
+        "ticketUrl": null,
+        "lowPrice": null,
+        "highPrice": null,
+        "priceCurrency": null,
+        "tiers": [],
+        "itinerary": [],
+        "availability": null,
+        "onSaleDate": null,
+        "source": "session",
+        "sourceUrl": "https://irish-presidency.consilium.europa.eu/media/qkfmfrbw/2026_06_15-_indicative-calendar-ie-presidency.pdf",
+        "checkedAt": "2026-10-24T14:04:35.495Z"
+      },
+      "pagesRead": 3
+    },
+    {
+      "pinId": 4671,
+      "changes": [],
+      "reading": {
+        "performers": [],
+        "ticketUrl": null,
+        "lowPrice": null,
+        "highPrice": null,
+        "priceCurrency": null,
+        "tiers": [],
+        "itinerary": [],
+        "availability": null,
+        "onSaleDate": null,
+        "source": "session",
+        "sourceUrl": "https://www.narafestival.com/ice_en/",
+        "checkedAt": "2026-10-24T14:04:37.342Z"
+      },
+      "pagesRead": 3
+    },
+    {
+      "pinId": 4620,
+      "changes": [],
+      "reading": {
+        "performers": [],
+        "ticketUrl": null,
+        "lowPrice": null,
+        "highPrice": null,
+        "priceCurrency": null,
+        "tiers": [],
+        "itinerary": [],
+        "availability": null,
+        "onSaleDate": null,
+        "source": "session",
+        "sourceUrl": "https://www.un.org/bbnjagreement/en",
+        "checkedAt": "2026-10-24T14:04:39.312Z"
+      },
+      "pagesRead": 3
+    },
+    {
+      "pinId": 4672,
+      "changes": [],
+      "reading": {
+        "performers": [],
+        "ticketUrl": null,
+        "lowPrice": null,
+        "highPrice": null,
+        "priceCurrency": null,
+        "tiers": [],
+        "itinerary": [],
+        "availability": null,
+        "onSaleDate": null,
+        "source": "session",
+        "sourceUrl": "https://tayrivers.org/conservation-code/",
+        "checkedAt": "2026-10-24T14:04:41.543Z"
+      },
+      "pagesRead": 3
+    },
+    {
+      "pinId": 4867,
+      "changes": [],
+      "reading": {
+        "performers": [],
+        "ticketUrl": "https://ticketseicma.it/en/",
+        "lowPrice": 7,
+        "highPrice": 21.5,
+        "priceCurrency": "EUR",
+        "tiers": [
+          {
+            "note": "€20 after September 15 launch offer plus published €1.50 fixed booking fee; verify final checkout.",
+            "label": "Standard admission",
+            "price": 21.5
+          },
+          {
+            "note": "From 13:30 on public days November 5–8; booking fees may apply.",
+            "label": "Afternoon adult",
+            "price": 14
+          },
+          {
+            "note": "From 13:30 on public days; booking fees may apply.",
+            "label": "Afternoon children 4–13",
+            "price": 7
+          },
+          {
+            "note": "Registered school group with required documentation.",
+            "label": "School admission",
+            "price": 15
+          },
+          {
+            "note": "Public days only.",
+            "label": "Children 0–3",
+            "price": 0
+          }
+        ],
+        "itinerary": [],
+        "availability": "InStock",
+        "onSaleDate": null,
+        "source": "session",
+        "sourceUrl": "https://ticketseicma.it/en/",
+        "checkedAt": "2026-10-24T14:04:43.712Z"
+      },
+      "pagesRead": 2
+    },
+    {
+      "pinId": 5125,
+      "changes": [],
+      "reading": {
+        "performers": [],
+        "ticketUrl": null,
+        "lowPrice": null,
+        "highPrice": null,
+        "priceCurrency": null,
+        "tiers": [],
+        "itinerary": [],
+        "availability": null,
+        "onSaleDate": null,
+        "source": "session",
+        "sourceUrl": "https://www.yacht.de/en/regatta/races/golden-globe-race-2026-sail-like-it-s-1968-experience-it-like-it-s-2026/",
+        "checkedAt": "2026-10-24T14:04:53.430Z"
+      },
+      "pagesRead": 3
+    },
+    {
+      "pinId": 5092,
+      "changes": [],
+      "reading": {
+        "performers": [],
+        "ticketUrl": "https://buyer.cantonfair.org.cn/register/buyer/email?source_type=16",
+        "lowPrice": 0,
+        "highPrice": 0,
+        "priceCurrency": "CNY",
+        "tiers": [],
+        "itinerary": [],
+        "availability": null,
+        "onSaleDate": null,
+        "source": "session",
+        "sourceUrl": "https://olachina.org/the-140th-canton-fair/",
+        "checkedAt": "2026-10-24T14:04:55.430Z"
+      },
+      "pagesRead": 2
+    },
+    {
+      "pinId": 5102,
+      "changes": [],
+      "reading": {
+        "performers": [],
+        "ticketUrl": "https://rsvp.withgoogle.com/events/android-dev-summit-bayview/forms/registration",
+        "lowPrice": null,
+        "highPrice": null,
+        "priceCurrency": null,
+        "tiers": [],
+        "itinerary": [],
+        "availability": null,
+        "onSaleDate": null,
+        "source": "session",
+        "sourceUrl": "https://9to5google.com/2026/09/25/android-dev-summit-android-18/",
+        "checkedAt": "2026-10-24T14:04:57.574Z"
+      },
+      "pagesRead": 3
+    },
+    {
+      "pinId": 5124,
+      "changes": [],
+      "reading": {
+        "performers": [],
+        "ticketUrl": null,
+        "lowPrice": 0,
+        "highPrice": 0,
+        "priceCurrency": "EUR",
+        "tiers": [],
+        "itinerary": [],
+        "availability": "InStock",
+        "onSaleDate": null,
+        "source": "session",
+        "sourceUrl": "https://carnetsvanille.com/en/route-du-rhum-in-saint-malo/",
+        "checkedAt": "2026-10-24T14:04:59.593Z"
+      },
+      "pagesRead": 2
+    },
+    {
+      "pinId": 5093,
+      "changes": [],
+      "reading": {
+        "performers": [],
+        "ticketUrl": "https://f1saopaulo.com.br/en/",
+        "lowPrice": 495,
+        "highPrice": 4680,
+        "priceCurrency": "BRL",
+        "tiers": [
+          {
+            "note": "Full price; subject to availability.",
+            "label": "Sector G",
+            "price": 990
+          },
+          {
+            "note": "Eligibility must be verified.",
+            "label": "Sector G half-price",
+            "price": 495
+          },
+          {
+            "note": "Full price; subject to availability.",
+            "label": "Sector A",
+            "price": 1590
+          },
+          {
+            "note": "Eligibility must be verified.",
+            "label": "Sector A half-price",
+            "price": 795
+          },
+          {
+            "note": "Covered grandstand; full price.",
+            "label": "Sector H",
+            "price": 2850
+          },
+          {
+            "note": "Covered grandstand; eligibility required.",
+            "label": "Sector H half-price",
+            "price": 1425
+          },
+          {
+            "note": "Covered grandstand with food included; full price only.",
+            "label": "Sector D",
+            "price": 4680
+          }
+        ],
+        "itinerary": [],
+        "availability": null,
+        "onSaleDate": null,
+        "source": "session",
+        "sourceUrl": "https://f1saopaulo.com.br/en/noticias/f1-sao-paulo-gp-last-chance-to-attend-this-years-race-at-interlagos/",
+        "checkedAt": "2026-10-24T14:05:01.651Z"
+      },
+      "pagesRead": 2
+    },
+    {
+      "pinId": 4986,
+      "changes": [],
+      "reading": {
+        "performers": [
+          {
+            "name": "Riley Green",
+            "type": "Person"
+          },
+          {
+            "name": "Sarah McLachlan",
+            "type": "Person"
+          },
+          {
+            "name": "James Barker Band",
+            "type": "PerformingGroup"
+          }
+        ],
+        "ticketUrl": null,
+        "lowPrice": null,
+        "highPrice": null,
+        "priceCurrency": null,
+        "tiers": [],
+        "itinerary": [],
+        "availability": null,
+        "onSaleDate": null,
+        "source": "session",
+        "sourceUrl": "https://ca.billboard.com/music/music-news/riley-green-grey-cup-halftime",
+        "checkedAt": "2026-10-24T14:05:03.720Z"
+      },
+      "pagesRead": 2
+    },
+    {
+      "pinId": 4983,
+      "changes": [],
+      "reading": {
+        "performers": [
+          {
+            "name": "The Founders ROCK™",
+            "type": "PerformingGroup"
+          }
+        ],
+        "ticketUrl": "https://www.fintechfestival.sg/registration",
+        "lowPrice": 250,
+        "highPrice": 6000,
+        "priceCurrency": "SGD",
+        "tiers": [
+          {
+            "note": "All conference stages, MeetUp and After Hours.",
+            "label": "Delegate Pass",
+            "price": 1500
+          },
+          {
+            "note": "Senior leaders/C-suite; includes November16–17 Insights2040 and executive access.",
+            "label": "Executive Pass",
+            "price": 6000
+          },
+          {
+            "note": "Startup incorporated in last five years.",
+            "label": "Startup Pass",
+            "price": 650
+          },
+          {
+            "note": "Restricted meeting and exhibition access.",
+            "label": "MeetUp Pass",
+            "price": 380
+          },
+          {
+            "note": "Online only; no in-person admission.",
+            "label": "Livestream Pass",
+            "price": 250
+          },
+          {
+            "note": "Eligible official institutions.",
+            "label": "Policy Pass",
+            "price": 0
+          },
+          {
+            "note": "Current eligible staff/students.",
+            "label": "Academic Pass",
+            "price": 0
+          },
+          {
+            "note": "Exhibition and three stages; upgrades required for additional access.",
+            "label": "Trade Visitor Pass",
+            "price": 0
+          },
+          {
+            "note": "Editorial accreditation required.",
+            "label": "Media Pass",
+            "price": 0
+          },
+          {
+            "note": "Per pass; minimum three.",
+            "label": "Delegate group 3–5",
+            "price": 1050
+          },
+          {
+            "note": "Per pass; minimum six.",
+            "label": "Delegate group 6–9",
+            "price": 880
+          },
+          {
+            "note": "Per pass; minimum ten.",
+            "label": "Delegate group 10+",
+            "price": 800
+          }
+        ],
+        "itinerary": [],
+        "availability": "InStock",
+        "onSaleDate": null,
+        "source": "session",
+        "sourceUrl": "https://www.fintechfestival.sg/registration",
+        "checkedAt": "2026-10-24T14:05:05.848Z"
+      },
+      "pagesRead": 3
+    },
+    {
+      "pinId": 5106,
+      "changes": [],
+      "reading": {
+        "performers": [],
+        "ticketUrl": null,
+        "lowPrice": null,
+        "highPrice": null,
+        "priceCurrency": null,
+        "tiers": [],
+        "itinerary": [],
+        "availability": null,
+        "onSaleDate": null,
+        "source": "session",
+        "sourceUrl": "https://www.thailandhighlights.com/thailand/loy-krathong-festival",
+        "checkedAt": "2026-10-24T14:05:14.204Z"
+      },
+      "pagesRead": 2
+    },
+    {
+      "pinId": 5031,
+      "changes": [],
+      "reading": {
+        "performers": [],
+        "ticketUrl": "https://www.valenciaciudaddelrunning.com/en/marathon/info-registration-2026/",
+        "lowPrice": 200,
+        "highPrice": 200,
+        "priceCurrency": "EUR",
+        "tiers": [],
+        "itinerary": [],
+        "availability": "SoldOut",
+        "onSaleDate": null,
+        "source": "session",
+        "sourceUrl": "https://www.visitvalencia.com/en/events-valencia/enjoy-trinidad-alfonso-zurich-marathon",
+        "checkedAt": "2026-10-24T14:05:19.050Z"
+      },
+      "pagesRead": 2
+    },
+    {
+      "pinId": 253,
+      "changes": [],
+      "reading": {
+        "performers": [],
+        "ticketUrl": null,
+        "lowPrice": null,
+        "highPrice": null,
+        "priceCurrency": null,
+        "tiers": [],
+        "itinerary": [],
+        "availability": null,
+        "onSaleDate": null,
+        "source": "session",
+        "sourceUrl": "https://en.wikipedia.org/wiki/2030_Winter_Olympics",
+        "checkedAt": "2026-10-24T14:05:22.446Z"
+      },
+      "pagesRead": 3
+    },
+    {
+      "pinId": 256,
+      "changes": [],
+      "reading": {
+        "performers": [],
+        "ticketUrl": null,
+        "lowPrice": null,
+        "highPrice": null,
+        "priceCurrency": null,
+        "tiers": [],
+        "itinerary": [],
+        "availability": null,
+        "onSaleDate": null,
+        "source": "session",
+        "sourceUrl": "https://en.wikipedia.org/wiki/2032_Summer_Olympics",
+        "checkedAt": "2026-10-24T14:05:23.904Z"
+      },
+      "pagesRead": 3
+    }
+  ],
+  "targetedEventReadings": {
+    "4699": {
+      "performers": [
+        {
+          "name": "Bruno Mars",
+          "type": "Person"
+        },
+        {
+          "name": "Anderson .Paak (DJ Pee .Wee)",
+          "type": "Person"
+        }
+      ],
+      "ticketUrl": null,
+      "lowPrice": 11800,
+      "highPrice": 149800,
+      "priceCurrency": "JPY",
+      "tiers": [
+        {
+          "note": "Published tax-inclusive common face value; January28 Tokyo allocation SOLD OUT. Not a currently purchasable offer. Venue-specific additions are not priced here.",
+          "label": "VIP GOLD",
+          "price": 149800
+        },
+        {
+          "note": "Published tax-inclusive common face value; January28 Tokyo allocation SOLD OUT. Not a currently purchasable offer. Venue-specific additions are not priced here.",
+          "label": "VIP SILVER",
+          "price": 52800
+        },
+        {
+          "note": "Published tax-inclusive common face value; January28 Tokyo allocation SOLD OUT. Not a currently purchasable offer. Venue-specific additions are not priced here.",
+          "label": "SS reserved",
+          "price": 29800
+        },
+        {
+          "note": "Published tax-inclusive common face value; January28 Tokyo allocation SOLD OUT. Not a currently purchasable offer. Venue-specific additions are not priced here.",
+          "label": "S reserved",
+          "price": 18800
+        },
+        {
+          "note": "Published tax-inclusive common face value; January28 Tokyo allocation SOLD OUT. Not a currently purchasable offer. Venue-specific additions are not priced here.",
+          "label": "A reserved",
+          "price": 14800
+        },
+        {
+          "note": "Published tax-inclusive common face value; January28 Tokyo allocation SOLD OUT. Not a currently purchasable offer. Venue-specific additions are not priced here.",
+          "label": "B reserved",
+          "price": 11800
+        }
+      ],
+      "itinerary": [],
+      "availability": "SoldOut",
+      "onSaleDate": null,
+      "source": "hand",
+      "sourceUrl": "https://www.livenationhip.co.jp/all-events/bruno-mars-tickets-ae147754",
+      "checkedAt": "2026-10-24T14:09:18.957Z"
+    },
+    "5200": {
+      "performers": [],
+      "ticketUrl": "https://www.messe-ticket.de/SWM_SHOP/Spiel2026",
+      "lowPrice": 16,
+      "highPrice": 67,
+      "priceCurrency": "EUR",
+      "tiers": [
+        {
+          "note": "From August5; earlybird expired. Published current2026face value, not a guarantee of inventory for a particular day; online-only sales.",
+          "label": "Normal day ticket",
+          "price": 25
+        },
+        {
+          "note": "Children under4 enter free. Published current2026face value, not a guarantee of inventory for a particular day; online-only sales.",
+          "label": "Child day ticket (4–12)",
+          "price": 16
+        },
+        {
+          "note": "Eligibility proof required. Published current2026face value, not a guarantee of inventory for a particular day; online-only sales.",
+          "label": "Reduced day ticket",
+          "price": 22
+        },
+        {
+          "note": "2adults and up to3children aged4–12; group total, not per person. Published current2026face value, not a guarantee of inventory for a particular day; online-only sales.",
+          "label": "Family day ticket",
+          "price": 67
+        },
+        {
+          "note": "Board-game industry proof required; earlyentry and business access. Published current2026face value, not a guarantee of inventory for a particular day; online-only sales.",
+          "label": "Business visitor",
+          "price": 46
+        }
+      ],
+      "itinerary": [],
+      "availability": null,
+      "onSaleDate": null,
+      "source": "hand",
+      "sourceUrl": "https://www.spiel-essen.de/en/visit/tickets-opening-hours",
+      "checkedAt": "2026-10-24T14:12:18.053Z"
+    }
+  },
+  "sentiments": [
+    {
+      "id": 16747,
+      "textHash": "d19cbe4db336",
+      "sentiment": 0.45,
+      "product": ""
+    },
+    {
+      "id": 16761,
+      "textHash": "10a0afc71f97",
+      "sentiment": 0.1,
+      "product": ""
+    },
+    {
+      "id": 16764,
+      "textHash": "c02c5150ca55",
+      "sentiment": 0.1,
+      "product": ""
+    },
+    {
+      "id": 16766,
+      "textHash": "d36b28033559",
+      "sentiment": 0.1,
+      "product": ""
+    },
+    {
+      "id": 16774,
+      "textHash": "539b51c39e0a",
+      "sentiment": 0.35,
+      "product": ""
+    },
+    {
+      "id": 16777,
+      "textHash": "8136b1031c68",
+      "sentiment": 0.2,
+      "product": ""
+    },
+    {
+      "id": 16794,
+      "textHash": "854421923a4b",
+      "sentiment": 0,
+      "product": ""
+    },
+    {
+      "id": 16798,
+      "textHash": "0beeebd9b5f4",
+      "sentiment": 0.1,
+      "product": ""
+    },
+    {
+      "id": 16806,
+      "textHash": "19ee81346630",
+      "sentiment": 0.1,
+      "product": ""
+    },
+    {
+      "id": 16860,
+      "textHash": "a7d10f8e493d",
+      "sentiment": 0.2,
+      "product": ""
+    },
+    {
+      "id": 16863,
+      "textHash": "7477bd739291",
+      "sentiment": 0.2,
+      "product": ""
+    },
+    {
+      "id": 16867,
+      "textHash": "1713d0118bb1",
+      "sentiment": 0.15,
+      "product": ""
+    },
+    {
+      "id": 16871,
+      "textHash": "806b09bb4a43",
+      "sentiment": 0.2,
+      "product": ""
+    },
+    {
+      "id": 16886,
+      "textHash": "cf64b176e82b",
+      "sentiment": 0.3,
+      "product": ""
+    },
+    {
+      "id": 16892,
+      "textHash": "caa197868a95",
+      "sentiment": 0.35,
+      "product": ""
+    },
+    {
+      "id": 16895,
+      "textHash": "1db4faaa5e77",
+      "sentiment": 0.1,
+      "product": ""
+    },
+    {
+      "id": 16897,
+      "textHash": "3a9d40360ada",
+      "sentiment": 0.15,
+      "product": ""
+    },
+    {
+      "id": 16901,
+      "textHash": "59189642d4b0",
+      "sentiment": 0.1,
+      "product": ""
+    },
+    {
+      "id": 16903,
+      "textHash": "42f13f5afdf8",
+      "sentiment": 0.1,
+      "product": ""
+    },
+    {
+      "id": 16916,
+      "textHash": "5cd426234966",
+      "sentiment": 0.1,
+      "product": ""
+    },
+    {
+      "id": 16921,
+      "textHash": "34c2bde148c0",
+      "sentiment": 0.1,
+      "product": ""
+    },
+    {
+      "id": 16927,
+      "textHash": "c9df26525080",
+      "sentiment": 0.3,
+      "product": ""
+    },
+    {
+      "id": 16932,
+      "textHash": "2ebf21505953",
+      "sentiment": 0.15,
+      "product": ""
+    },
+    {
+      "id": 16936,
+      "textHash": "9282a7ebde72",
+      "sentiment": 0.15,
+      "product": ""
+    },
+    {
+      "id": 16956,
+      "textHash": "91b06b90c041",
+      "sentiment": 0.2,
+      "product": ""
+    }
+  ],
+  "remainingSentiment": [
+    {
+      "id": 15801,
+      "textHash": "22c84ba98e6c"
+    },
+    {
+      "id": 15802,
+      "textHash": "c40878743619"
+    },
+    {
+      "id": 15803,
+      "textHash": "60d33be899eb"
+    }
+  ],
+  "adRefresh": {
+    "ads": 6,
+    "products": 3,
+    "holiday": 77
+  },
+  "newHolidayAd": 186,
+  "rejectedLocalHolidayAds": [
+    187,
+    188,
+    189,
+    190,
+    191,
+    192,
+    193
+  ],
+  "translationCount": 75,
+  "translationAudit": {
+    "PinAd": {
+      "rows": 68,
+      "working": 60,
+      "missing": []
+    },
+    "HolidayAd": {
+      "rows": 180,
+      "working": 173,
+      "missing": []
+    }
+  },
+  "tradeVerification": {
+    "filings": 25,
+    "rows": 190,
+    "missing": []
+  },
+  "nativePages": [
+    {
+      "id": 19614,
+      "title": "Pella Begins Its Reidsville Plant Wind-Down, Affecting 133 Jobs",
+      "status": 200,
+      "media": [
+        "https://chronopin.blob.core.windows.net/thumb/news-images/2026-10-24/pella-reidsville-937dfd20a16948fc.webp"
+      ]
+    },
+    {
+      "id": 19615,
+      "title": "Chow Is Favoured as Toronto Votes for Mayor on October 26",
+      "status": 200,
+      "media": [
+        "https://chronopin.blob.core.windows.net/thumb/news-images/2026-10-24/toronto-forecast-d520fd21ebf1a748.webp"
+      ]
+    },
+    {
+      "id": 16017,
+      "title": "Brent Crude Oil Price — October 2026",
+      "status": 200,
+      "media": [
+        "https://chronopin.blob.core.windows.net/thumb/news/2026-10-16/brent-343d60b8c3f05699.webp"
+      ]
+    }
+  ],
+  "media": [
+    {
+      "key": "pella-reidsville",
+      "sourceUrl": "https://businessnc.com/pella-shutting-down-rockingham-county-manufacturing-site-133-to-lose-jobs/",
+      "credit": "Business North Carolina; photographer not separately identified on the opened page",
+      "caption": "Pella Reidsville Operations at 310 Rockingham Drive, identified by the publisher and the visible site sign; photograph published October 19, 2026.",
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/news-images/2026-10-24/pella-reidsville-937dfd20a16948fc.webp",
+      "sha256": "937dfd20a16948fcb88590e002188944d697286c66f9f5f772b3f3a8bd6d8a26",
+      "width": 1600,
+      "height": 1200
+    },
+    {
+      "key": "toronto-forecast",
+      "sourceUrl": "https://polymarket.com/event/toronto-mayoral-election-winner-545",
+      "credit": "Polymarket, October 24, 2026 snapshot",
+      "caption": "October 24 market card: Olivia Chow 66%, Brad Bradford 34%, event volume US$676,496. Forecast probabilities are not vote shares or election results.",
+      "blobUrl": "https://chronopin.blob.core.windows.net/thumb/news-images/2026-10-24/toronto-forecast-d520fd21ebf1a748.webp",
+      "sha256": "d520fd21ebf1a7489431dd1882af11194e93513a4ad6e3432a99fcd2ba042d3e",
+      "width": 800,
+      "height": 418
+    }
+  ],
+  "learnings": [
+    [
+      "Pella staged closure and WARN dates",
+      "October24: NorthCarolina WARN202600055 gives133jobs and January31permanent closure; WFDD reports firstdischarges as earlyDecember3 and finaldepartures endJanuary. Company production-throughDecember3 is not all133employees leavingthatday. Pin stagedwinddown Dec3–Jan31, distinguish2019capitalplan from shutdowncost, and use actualReidsville plantphoto rather than unrelatedsite."
+    ],
+    [
+      "Toronto forecast and native prediction identity",
+      "October24 Toronto publicmarket and originalOGcard agree Chow66%,Bradford34%,USD676496volume, unlike stale88%search snippets. City election fact sheet and local voting guide establish Oct26 10:00–20:00EDT; forecast outcome remains estimated. No earliernative mayoral-cycle parent found. API reserves Predicted tag; estimated market-sourced pins receive derivedbadge."
+    ],
+    [
+      "Exact concert allocation beats tour markup",
+      "October24 LiveNation Japan aggregate markup saysInStock, while exact Jan4Nagoya and Jan28Tokyo allocations areSOLDOUT. Read date rows and all-ticket restrictions; save sold-out published facevalues with scope, verify DJ Pee.Wee support, and do not infer availability foronecity from another. Preserved existing details when freshreading suppliednone."
+    ],
+    [
+      "Holiday suggestions and refreshed title translations",
+      "October24 auto-stocker offered generic Carnival crafts/rave masks, a sesame latte and2026year-specific envelopes for upcoming2027LunarNewYear. Removed7beforeproduction; retained actual blacksesame ingredient forDongzhi tangyuan. Four existingEnglish listingtitles changed and one newad required75currenthash translations. Reaudit allworking ads after replay; original transient ST40imagefailure disappeared on recheck and bothoriginals downloaded, so preserve media."
+    ]
+  ]
+}

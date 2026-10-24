@@ -18,9 +18,17 @@
 
 ## Pipelines and power lines (PinSiteShape kinds 'pipeline', 'powerline')
 
-- Kinds added 2026-10-23 (siteShape.ts, PinMap.tsx, pin.siteKey.* in all 16 locales): drawn as plain lines, without the start/finish dots and km markers a 'route' gets. 'powerline' has no data yet.
+- Kinds added 2026-10-23 (siteShape.ts, PinMap.tsx, pin.siteKey.* in all 16 locales): drawn as plain lines, without the start/finish dots and km markers a 'route' gets. 'powerline' first got data 2026-10-24 (below).
 - scripts/routes/osmLine.ts takes OSM way/relation ids by hand (`--kind pipeline --relation N --way a,b --pins ...`), simplifies the geometry (Douglas-Peucker, --tol 0.0005) and adds the line to the pin's existing shape. Copies are kept in .scrape/line-shapes/ (git-ignored).
 - Found by exact name (`["name"="..."]`, fast); regex name searches over the planet time out on the public Overpass server.
 - On local and prod 2026-10-23: Colonial Pipeline (252 ways, Houston to NJ, 126 KB) pin 2472; Nord Stream 2 (relation 16489915) pin 2637; Saudi East-West/Petroline oil ways 54729631, 1044430260, 799372434 on pins 5538 and 2999 (2999 is an Aramco earnings pin whose title names the pipeline). The gas-tagged parallel way 1495004023 was left out.
 - Not mapped in OSM under those names: Greenlink West (4947; "Greenlink" matches a Scottish bus route and an Irish trail), Plains Line 901, the Sable/Santa Ynez/Las Flores lines. Most Sable pins sit at courthouses, so a pipeline there would mislead.
 - Push to prod: `plantShapesProd.ts --dir .scrape/line-shapes`.
+- Power lines, 2026-10-24: Micron Clay (pin 18232, local + prod) draws the five named 345 kV circuits that meet at National Grid's Clay substation: Pannell - Clay (ways 20110539, 107706688), Clay - Edic (107706693, 158779954), Volney - Clay 345kV (169147803), Clay - Nine Mile Point 1 (169147808), Clay - Independence (169147812, 173874053, 173874055, 173874060). The pin's eight new underground 345 kV laterals are proposed, not built, and are not in OSM, so they are not drawn; the line is the existing grid feeding the campus. Names were looked up with exact `["name"="..."]` clauses (a regex `name~` over a bbox ran for minutes and got nothing).
+- Greenlink West (4947) still has no OSM line to draw.
+
+## GeoJSON beyond site shapes (2026-10-24)
+
+- `GET /api/pins.geojson` (src/app/api/pins.geojson/route.ts): the located pins as GeoJSON points ([lon, lat], properties title/url/address/categories/start/end/megawatts), with the same q/from/to/created_within/f/show filters as /api/pins/map and open CORS. Not localized.
+- `npm run earthquakes` (scripts/events/earthquakes.ts): USGS "significant" GeoJSON feed -> one confirmed 'Disaster' pin per quake of M5.5+ (--min-mag, --feed), sourced to its USGS event page, posted through POST /api/pins as a curator. Dry-run only so far: no pins posted, and no photos (USGS publishes none), so a posted pin would be thin until media is added.
+- Not started: wildfire perimeters (NIFC/FIRMS GeoJSON would need a new SiteKind plus pin.siteKey.* in all 16 locales), election district boundaries.

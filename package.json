@@ -65,6 +65,7 @@
     "media:video-thumbs": "tsx scripts/media/videoThumbs.ts",
     "media:screen": "tsx scripts/media/screenDetails.ts",
     "media:manga-scores": "tsx scripts/media/mangaScores.ts",
+    "earthquakes": "tsx scripts/events/earthquakes.ts",
     "launches:upcoming": "tsx scripts/launches/upcoming.ts",
     "tv:premieres": "tsx scripts/tv/premieres.ts",
     "health:trials": "tsx scripts/health/trials.ts",
