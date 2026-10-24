@@ -138,7 +138,7 @@ const vi: Messages = {
     tradePeople: 'Người',
     conflict: 'Có thể xung đột lợi ích',
     conflictHint: '{tickers}: ngành do {committees} giám sát',
-    tradesToday: 'Giao dịch cổ phiếu đáng chú ý',
+    tradesToday: 'Giao dịch đáng chú ý',
     tradesHistory: 'Xem thêm',
     whyTrade: 'Bạn đang theo dõi giao dịch của {name}',
     whyWatch: 'Một ghim bạn đang quan sát',

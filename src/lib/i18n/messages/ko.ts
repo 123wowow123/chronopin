@@ -138,7 +138,7 @@ const ko: Messages = {
     tradePeople: '인원',
     conflict: '이해충돌 가능성',
     conflictHint: '{tickers}: {committees}가 감독하는 업종',
-    tradesToday: '주목할 만한 주식 거래',
+    tradesToday: '주목할 만한 거래',
     tradesHistory: '더 보기',
     whyTrade: '{name} 님의 거래를 지켜보는 중',
     whyWatch: '관심 핀',

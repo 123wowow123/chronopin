@@ -145,7 +145,7 @@ const ru: Messages = {
     tradePeople: 'Люди',
     conflict: 'Возможный конфликт интересов',
     conflictHint: '{tickers}: отрасль под надзором {committees}',
-    tradesToday: 'Заметные сделки с акциями',
+    tradesToday: 'Заметные сделки',
     tradesHistory: 'Ещё',
     whyTrade: 'Вы следите за сделками {name}',
     whyWatch: 'Отслеживаемый вами пин',

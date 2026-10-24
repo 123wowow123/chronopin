@@ -138,7 +138,7 @@ const th: Messages = {
     tradePeople: 'บุคคล',
     conflict: 'อาจมีผลประโยชน์ทับซ้อน',
     conflictHint: '{tickers}: อุตสาหกรรมที่ {committees} กำกับดูแล',
-    tradesToday: 'การซื้อขายหุ้นที่น่าสนใจ',
+    tradesToday: 'การซื้อขายที่น่าสนใจ',
     tradesHistory: 'ดูเพิ่มเติม',
     whyTrade: 'คุณกำลังติดตามการซื้อขายของ {name}',
     whyWatch: 'หมุดที่คุณติดตาม',

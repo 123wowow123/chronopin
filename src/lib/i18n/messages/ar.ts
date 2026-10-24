@@ -160,7 +160,7 @@ const ar: Messages = {
     tradePeople: 'الأشخاص',
     conflict: 'تضارب مصالح محتمل',
     conflictHint: '{tickers}: قطاع تشرف عليه {committees}',
-    tradesToday: 'صفقات أسهم بارزة',
+    tradesToday: 'صفقات بارزة',
     tradesHistory: 'عرض المزيد',
     whyTrade: 'أنت تتابع صفقات {name}',
     whyWatch: 'دبوس تراقبه',

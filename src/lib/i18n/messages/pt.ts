@@ -139,7 +139,7 @@ const pt: Messages = {
     tradePeople: 'Pessoas',
     conflict: 'Possível conflito de interesses',
     conflictHint: '{tickers}: setor supervisionado por {committees}',
-    tradesToday: 'Negociações de ações notáveis',
+    tradesToday: 'Negociações notáveis',
     tradesHistory: 'Ver mais',
     whyTrade: 'Você acompanha as operações de {name}',
     whyWatch: 'Um pin que você acompanha',

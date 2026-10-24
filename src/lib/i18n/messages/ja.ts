@@ -138,7 +138,7 @@ const ja: Messages = {
     tradePeople: '人数',
     conflict: '利益相反の可能性',
     conflictHint: '{tickers}：{committees}が所管する業種',
-    tradesToday: '注目の株式取引',
+    tradesToday: '注目の取引',
     tradesHistory: 'もっと見る',
     whyTrade: '{name}の取引を通知中',
     whyWatch: 'ウォッチ中のピン',

@@ -138,7 +138,7 @@ const es: Messages = {
     tradePeople: 'Personas',
     conflict: 'Posible conflicto de intereses',
     conflictHint: '{tickers}: sector supervisado por {committees}',
-    tradesToday: 'Operaciones bursátiles destacadas',
+    tradesToday: 'Operaciones destacadas',
     tradesHistory: 'Ver más',
     whyTrade: 'Sigues las operaciones de {name}',
     whyWatch: 'Un pin que sigues',

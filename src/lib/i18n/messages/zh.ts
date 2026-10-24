@@ -139,7 +139,7 @@ const zh: Messages = {
     tradePeople: '人数',
     conflict: '可能存在利益冲突',
     conflictHint: '{tickers}：{committees}监管的行业',
-    tradesToday: '重要股票交易',
+    tradesToday: '重要交易',
     tradesHistory: '查看更多',
     whyTrade: '你在关注 {name} 的交易',
     whyWatch: '你关注的图钉',

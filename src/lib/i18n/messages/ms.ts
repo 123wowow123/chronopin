@@ -139,7 +139,7 @@ const ms: Messages = {
     tradePeople: 'Orang',
     conflict: 'Kemungkinan konflik kepentingan',
     conflictHint: '{tickers}: sektor yang diawasi {committees}',
-    tradesToday: 'Dagangan saham ketara',
+    tradesToday: 'Dagangan ketara',
     tradesHistory: 'Lihat lagi',
     whyTrade: 'Anda memantau dagangan {name}',
     whyWatch: 'Pin yang anda tonton',
