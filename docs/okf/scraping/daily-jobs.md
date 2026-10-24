@@ -623,8 +623,11 @@ reports and any tsunami flag. `find_pins` on the event page first: a quake
 already pinned is skipped. An aftershock in the same hour as a larger quake is
 its own pin only if USGS lists it as significant.
 **Traps.** USGS revises magnitude and time for a day or two after an event; do not
-re-date an existing pin for a revision of a few tenths. USGS has no photos, so
-add media only when a credited one exists (a USGS ShakeMap is public domain).
+re-date an existing pin for a revision of a few tenths. USGS has no photos, but
+every significant quake has a ShakeMap: open the quake's `properties.detail` URL
+and attach `products.shakemap[0].contents` `download/intensity.jpg`, `pga.jpg` and
+`pgv.jpg` (their `url`s) as the pin's media, credited to USGS (a US-government
+work); the app makes the thumbs. A quake with no ShakeMap yet gets a pin without media.
 
 ### predictionMarkets
 

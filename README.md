@@ -470,3 +470,6 @@ should mention main competitor products.
 this should apply for all products
 
 all ai model thread should have prediction pins if possible
+
+
+Not started: wildfire perimeters (a new map-shape kind, with its key text in all 16 languages) and election district boundaries.
